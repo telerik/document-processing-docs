@@ -14,10 +14,22 @@ function expandNavigation(url) {
         }
 
         node.set("selected", true);
+        
+        var navigationElement = $("#page-nav");		
+		navigationElement.scrollTop(0);
+		var selectedNodeTopOffset = this.findByUid(node.uid).offset().top;
+		var scrollOffset = localStorage.getItem('ScrollOffset');		
+		if(scrollOffset != null){			
+			navigationElement.scrollTop(selectedNodeTopOffset- parseInt(scrollOffset));
+		}
+		else{
+			navigationElement.scrollTop(selectedNodeTopOffset - navigationElement.height()/2);
+		}
 
         this.unbind("dataBound", arguments.callee);
     }
 }
+
 
 function navigationTemplate(root) {
     return function(data) {
@@ -45,57 +57,43 @@ function navigationTemplate(root) {
 function preventParentSelection(e) {
     if (this.dataItem(e.node).hasChildren) {
         e.preventDefault();
-        this.toggle(e.node);
+        this.toggle(e.node);		
     }
+    
+    var offset = $(e.node).offset().top;
+    localStorage.setItem('ScrollOffset',offset);
+}
+
+function onExpand(e) {
+	var item = this.dataItem(e.node);
+	
+	if(!item.hasChildren)
+	{
+		var elementTop = $(e.node).offset().top;
+		var treeScrollTop = $("#page-nav").scrollTop();
+
+		var treeTop = $("#page-nav").offset().top;
+		
+		console.log("elementTop " + elementTop);
+		console.log("treeScrollTop " + treeScrollTop);
+		console.log("treeTop " + treeTop);
+		
+		$("#page-nav").animate({
+			scrollTop: ((treeScrollTop + elementTop) - treeTop) / 2
+		});
+	}
 }
 
 $(function(){
-
-    $("pre[lang]").each(function() {
-       if (this.parentNode.className.indexOf("k-content") >= 0) {
-           return;
-       }
-
-       var langs = $(this).nextUntil(":not(pre)", "pre").add(this);
-
-       var tabs = $.map(langs, function(item) {
-          return $("<li>").text($(item).attr("lang"));
-       });
-
-       tabs[0].addClass("k-state-active");
-
-       var tabstrip = $("<div>")
-                       .insertBefore(this)
-                       .append($("<ul>").append(tabs))
-                       .append(langs);
-
-       langs.wrap("<div>");
-
-       tabstrip.kendoTabStrip({
-           animation: false
-       });
-    });
-
-    var codeSampleMapper = {
-        'C#': 'cs',
-        'VB.NET' : 'vb',
-        'AppBuilder' : 'js',
-        'JavaScript' : 'js',
-        'C++' : 'cpp',
-        'C' : 'c',
-        'Objective-C' : 'm',
-        'Java' : 'java',
-    }
-
-    // Enable prettyprint support. We need to map lang="JavaScript" to class="lang-js" in order to start proper pretty print lexer.
-    $("pre").each(function(index){
-        var langExtension = codeSampleMapper[$(this).attr('lang')];
-        $(this).addClass('lang-' + langExtension).addClass("prettyprint");
-    });
+    $("pre").addClass("prettyprint");
 
     prettyPrint();
 
-    $("#markdown-toc").each(function() {
+    $("#markdown-toc")
+        .on("click", "a", function() {
+            $(".section > ul").hide();
+        })
+    .each(function() {
         var ul = $("<ul>");
 
         $("#page-article h2").each(function() {
@@ -133,4 +131,24 @@ $(function(){
 
         ul.appendTo(this);
     });
+});
+
+$(function(){
+    $(".toggle-nav").click(function() {
+        $("#page-search").removeClass("search-visibility");
+        $("#page-inner-content").removeClass("move-inner-content");
+        $("#page-nav").toggleClass("nav-visibility");
+    });
+});
+
+$(function(){
+    $(".show-search").click(function() {
+        $("#page-nav").removeClass("nav-visibility");
+        $("#page-search").toggleClass("search-visibility");
+        $("#page-inner-content").toggleClass("move-inner-content");
+    });
+});
+
+$(function(){
+    $('#toYear').text((new Date).getFullYear());
 });

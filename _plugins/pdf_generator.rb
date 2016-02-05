@@ -120,4 +120,3 @@ LATEX_FOOTER = "\\end{document}"
     end
 =end
 end
-

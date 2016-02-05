@@ -34,6 +34,7 @@ module Jekyll
                         if index == segments.size - 1
                             item['position'] = page.data['position'] if page.data['position']
                             item['text'] = page.data['title']
+                            item['spriteCssClass'] = 'article'
                         else
                             path = segments[0..index].join('/')
                             navigation_entry =  @navigation.find { |key, value| path =~ key }
