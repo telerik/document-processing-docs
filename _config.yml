@@ -26,7 +26,7 @@ defaults:
 # The google services configuration
 google_analytics: UA-111455-1
 google_tag_manager: GTM-6X92
-google_custom_search: '001595215763381649090:jt1stbj813w'
+google_custom_search: '001864970385031653096:jbj5mwde74q'
 
 ## Do not edit below this line
 safe: false
