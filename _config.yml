@@ -1,6 +1,6 @@
 # The public documentation URL, used for sitemap.xml
-url: "http://docs.telerik.com/devtools/dpl"
-site_name: DPL
+url: "http://docs.telerik.com/devtools/document-processing"
+site_name: DocumentProcessing
 # Exclude files which should not be in the output
 exclude: [README.md,Gemfile,Gemfile.lock,_assetsApi]
 
@@ -9,7 +9,7 @@ navigation:
 
 
 ## The application virtual path
-baseurl: "/devtools/dpl"
+baseurl: "/devtools/document-processing"
 
 ## Assign layout and category per different paths
 defaults:
