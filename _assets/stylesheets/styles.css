@@ -55,18 +55,14 @@ a img {
 #logo-bar a,
 #logo-bar-sl a {
 	display: inline-block;
-	background: url('../images/telerik_logo_wpf.png') 0 center no-repeat;
-	height: 33px;
+	background: url('../images/telerik_logo_dpl.png') 0 center no-repeat;
+	height: 36px;
 	color: #fff;
-	width: 236px;
+	width: 320px;
 }
 
 #logo-bar span {
 	display: none;
-}
-
-#logo-bar-sl a{
-	background: url('../images/telerik_logo_sl.png') 0 center no-repeat;
 }
 
 #logo-bar-sl span {
