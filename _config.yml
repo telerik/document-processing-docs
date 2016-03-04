@@ -6,7 +6,66 @@ exclude: [README.md,Gemfile,Gemfile.lock,_assetsApi]
 
 navigation:
 ## List your directory names and order here, like this:
-
+    libraries:
+        title: Libraries
+        position: 3
+    "*overview":
+        title: Overview
+        position: 1
+    "*getting-started":
+        title: Getting Started
+        position: 2
+    "*general-information":
+        title: General Information
+        position: 2
+    "*changes-and-backward-compatibility":
+        title: Changes and Backward Compatibility
+        position: 3
+## RadWordsProcessing Start
+    "*radwordsprocessing":
+        title: RadWordsProcessing
+    libraries/radwordsprocessing/model:
+        title: Model
+        position: 4
+    libraries/radwordsprocessing/formats-and-conversion:
+        title: Formats and Conversion
+        position: 5
+    libraries/radwordsprocessing/editing:
+        title: Features
+        position: 6
+    libraries/radwordsprocessing/concepts:
+        title: Concepts
+        position: 7
+    libraries/radwordsprocessing/formats-and-conversion/docx:
+        title: Docx
+        position: 1
+    libraries/radwordsprocessing/formats-and-conversion/rtf:
+        title: Rtf
+        position: 2
+    libraries/radwordsprocessing/formats-and-conversion/html:
+        title: Html
+        position: 3
+    libraries/radwordsprocessing/formats-and-conversion/pdf:
+        title: Pdf
+        position: 4	
+    libraries/radwordsprocessing/formats-and-conversion/plain-text:
+        title: Plain text
+        position: 5
+    libraries/radwordsprocessing/concepts/fields:
+        title: Fields
+        position: 0		
+## RadSpreadStreamProcessing Start
+    "*radspreadstreamprocessing":
+        title: RadSpreadStreamProcessing
+## RadSpreadProcessing Start
+    "*radspreadprocessing":
+        title: RadSpreadProcessing
+## RadPdfProcessing Start
+    "*radpdfprocessing":
+        title: RadPdfProcessing    
+## RadZipLibrary Start
+    "*radziplibrary":
+        title: RadZipLibrary
 
 ## The application virtual path
 baseurl: "/devtools/document-processing"
