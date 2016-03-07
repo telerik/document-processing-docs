@@ -47,7 +47,7 @@ The twelve color types above are used for creating __ThemableColor__ objects. Th
 __Example 1__ demonstrates how to create a __ThemeColorScheme__ object. Note that the example passes a name and twelve colors to the constructor. Every color has a comment next to it, so you can see its corresponding __ThemeColorType__.
         
 
-#### __[C#] Example 1: Create a __ThemeColorScheme__ Object__
+#### __[C#] Example 1: Create a ThemeColorScheme Object__
 
 {{region radwordsprocessing-concepts-document-themes_0}}
     ThemeColorScheme colorScheme = new ThemeColorScheme(

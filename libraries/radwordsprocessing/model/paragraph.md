@@ -194,7 +194,7 @@ The code snippet from __Example 7__  adds a floating image to an existing paragr
 {{endregion}}
 
 
-For more information about __ImageInline__ element, you can read [this article]({%slug radwordsprocessing-model-floatingimage%}).
+For more information about __FloatingImage__ element, you can read [this article]({%slug radwordsprocessing-model-floatingimage%}).
 
 
 ### Adding a TabStop

@@ -57,7 +57,7 @@ The resulting __RadFlowDocument__ can be used like any code-generated document.
 
 ## Export
 
-In order to export a document to HTML you can use the overloads of the__HtmlFormatProvider.Export=()__ method.
+In order to export a document to HTML you can use the overloads of the __HtmlFormatProvider.Export()__ method.
         
 
 __Example 3__ shows how to use the HtmlFormatProvider to export an instance of RadFlowDocument to a file:
