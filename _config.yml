@@ -21,6 +21,9 @@ navigation:
     "*changes-and-backward-compatibility":
         title: Changes and Backward Compatibility
         position: 3
+    "*howto":
+        title: How To
+        position: 100
 ## RadWordsProcessing Start
     "*radwordsprocessing":
         title: RadWordsProcessing
@@ -62,7 +65,25 @@ navigation:
         title: RadSpreadProcessing
 ## RadPdfProcessing Start
     "*radpdfprocessing":
-        title: RadPdfProcessing    
+        title: RadPdfProcessing   
+    libraries/radpdfprocessing/model:
+        title: Model
+        position: 4
+    libraries/radpdfprocessing/formats-and-conversion:
+        title: Formats and Conversion
+        position: 5
+    libraries/radpdfprocessing/formats-and-conversion/pdf:
+        title: Pdf
+        position: 0
+    libraries/radpdfprocessing/formats-and-conversion/plain-text:
+        title: Plain text
+        position: 0
+    libraries/radpdfprocessing/editing:
+        title: Editing
+        position: 6
+    libraries/radpdfprocessing/concepts:
+        title: Concepts
+        position: 7		
 ## RadZipLibrary Start
     "*radziplibrary":
         title: RadZipLibrary
