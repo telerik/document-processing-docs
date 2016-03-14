@@ -11,15 +11,13 @@ position: 0
 # Overview
 
 
-![Rad Words Processing Logo 02](images/RadWordsProcessing_Logo_02.png)
-
 Thank you for choosing Telerik __RadWordsProcessing__!
       
 
 ## 
 
 RadWordsProcessing is a processing library that allows to create, load, modify and export documents to a variety of formats.
-        ![Rad Words Processing Overview 02](images/RadWordsProcessing_Overview_02.png)
+        ![Rad Words Processing Overview 02](images/RadWordsProcessing_Overview_01.png)
 
 Some of the features are:
         
