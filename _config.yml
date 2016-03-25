@@ -5,10 +5,21 @@ site_name: DocumentProcessing
 exclude: [README.md,Gemfile,Gemfile.lock,_assetsApi]
 
 navigation:
+## Common Start
+
 ## List your directory names and order here, like this:
+    installation-and-deployment:
+        title: Installation and Deployment
+        position: 4
     libraries:
         title: Libraries
-        position: 3
+        position: 6
+    licensing:
+        title: Licensing
+        position: 5		
+    for-more-help:
+        title: For More Help
+        position: 100
     "*overview":
         title: Overview
         position: 1
