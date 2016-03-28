@@ -27,7 +27,7 @@ __TextFragment__ is a content element that can be added in the __Content__ colle
 __Example 1__ shows how you can initialize a TextFragment object and add it to a previously defined container.
         
 
-#### __[C#] Example 1: Create TextFragment and add it to container.__
+#### __[C#] Example 1: Create TextFragment and add it to container__
 
 {{region radpdfprocessing-model-textfragment_0}}
     TextFragment fragment = new TextFragment();

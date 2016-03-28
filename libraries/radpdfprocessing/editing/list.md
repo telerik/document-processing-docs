@@ -35,13 +35,13 @@ Each List contains a __ListLevelCollection__ where the presentation of each list
 
 The code snippet from __Example 1__ shows how to create a list with NumberedParentheses template.
 
-#### __[C#] Example 1: Create Numbered Parentheses List Template Type__
+#### __[C#] Example 1: Create numbered parentheses list template type__
 
 {{region radpdfprocessing-editing-list_0}}
 	List numberedParenthesesList = new List(ListTemplateType.NumberedParentheses);
 {{endregion}}
 
-#### __[VB.NET] Example 1: Create Numbered Parentheses List Template Type__
+#### __[VB.NET] Example 1: Create numbered parentheses list template type__
 
 {{region radpdfprocessing-editing-list_1}}
 	Dim numberedParenthesesList = New List(ListTemplateType.NumberedParentheses)
@@ -73,7 +73,7 @@ When you need to create a custom List, you should define the presentation of eac
 
 __Example 2__ shows how to create an empty list and add two custom list levels to its __ListLevelsCollection__. Level 0 has a bullet which displays its current numbering as two digit number with a leading zero. Level 1 displays a checkbox as a bullet symbol for all of the corresponding list items. Additionally, each of the levels defines custom values for the __LeftIndent__, __ForegroundColor__ and __IndentAfterBullet__ properties. 
 
-#### __[C#] Example 2: Create Custom List Levels__
+#### __[C#] Example 2: Create custom list levels__
 
 {{region radpdfprocessing-editing-list_2}}
 	List list = new List();
@@ -91,7 +91,7 @@ __Example 2__ shows how to create an empty list and add two custom list levels t
 	levelOne.BulletNumberingFormat = new TextBulletNumberingFormat((indexer) => "☑");
 {{endregion}}
 
-#### __[VB.NET] Example 2: Create Custom List Levels__
+#### __[VB.NET] Example 2: Create custom list levels__
 
 {{region radpdfprocessing-editing-list_3}}
 	Dim list = New List()
@@ -122,7 +122,7 @@ If you require using a text bullet, you may use __TextBulletNumberingFormat__ cl
 
 The following code snippet shows how to create the bullets of a numbered hierarchical list using __TextBulletNumberingFormat__ class:
 
-#### __[C#] Example 3: Create Custom Text Numbering Bullet__
+#### __[C#] Example 3: Create custom text numbering bullet__
 
 {{region radpdfprocessing-editing-list_4}}
 	List list = new List();
@@ -148,7 +148,7 @@ The following code snippet shows how to create the bullets of a numbered hierarc
 	}
 {{endregion}}
 
-#### __[VB.NET] Example 3: Create Custom Text Numbering Bullet__
+#### __[VB.NET] Example 3: Create custom text numbering bullet__
 
 {{region radpdfprocessing-editing-list_5}}
 	 Dim list = New List()
@@ -182,7 +182,7 @@ In order to use lists with __RadFixedDocumentEditor__, you should first add them
 
 __Example 4__ shows how to create a list with __RadFixedDocumentEditor__ and insert a single item for each of the list levels. The appearance of the list is from the values in the predefined __ListTemplateType__ enumeration
 
-#### __[C#] Example 4: Using Lists with RadFixedDocumentEditor__
+#### __[C#] Example 4: Using lists with RadFixedDocumentEditor__
 
 {{region radpdfprocessing-editing-list_6}}
 	using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
@@ -199,7 +199,7 @@ __Example 4__ shows how to create a list with __RadFixedDocumentEditor__ and ins
 	}
 {{endregion}}
 
-#### __[VB.NET] Example 4: Using Lists with RadFixedDocumentEditor__
+#### __[VB.NET] Example 4: Using lists with RadFixedDocumentEditor__
 
 {{region radpdfprocessing-editing-list_7}}
 	Using editor As New RadFixedDocumentEditor(document)
@@ -228,7 +228,7 @@ As the __Block__ class has __Bullet__ and __IndentAfterBullet__ properties you c
 The following code snippet shows how to create __List__ with __BulletDefault__ template and set the bullet of the first list level to a Block:
 
 
-#### __[C#] Example 5: Using Lists with Block Class__
+#### __[C#] Example 5: Using lists with Block class__
 
 {{region radpdfprocessing-editing-list_8}}
 	List list = new List(ListTemplateType.BulletDefault);
@@ -237,7 +237,7 @@ The following code snippet shows how to create __List__ with __BulletDefault__ t
 	block.InsertText("Sample block text.");
 {{endregion}}
 
-#### __[VB.NET] Example 5: Using Lists with Block Class__
+#### __[VB.NET] Example 5: Using lists with Block class__
 
 {{region radpdfprocessing-editing-list_8}}
 	Private Sub UsingListsWithBlockClass()

@@ -40,7 +40,7 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 Here is how to create a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and insert some text content with the help of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
         
 
-#### __[C#] Example 1: Create RadFlowDocument Programmatically__
+#### __[C#] Example 1: Create RadFlowDocument programmatically__
 
 {{region radwordsprocessing-getting-started_0}}
     RadFlowDocument document = new RadFlowDocument();
@@ -80,7 +80,6 @@ More information about the supported formats and features can be found [here]({%
 # See Also
 
 * [Model]({%slug radwordsprocessing-model%})
-
 * [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%})
 
 

@@ -32,7 +32,7 @@ All inline-level elements in a __RadFlowDocument__ need to be placed within anot
 __Example 1__ shows how to create a __Break__ element and add it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
         
 
-#### __[C#] Example 1: Create Break__
+#### __[C#] Example 1: Create break__
 
 {{region radwordsprocessing-model-break_0}}
     Break br = new Break(document);
@@ -105,7 +105,5 @@ __Example 4__ shows how you can insert a Break through __RadFlowDocumentEditor__
 # See Also
 
  * [Model]({%slug radwordsprocessing-model%})
-
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
-
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})

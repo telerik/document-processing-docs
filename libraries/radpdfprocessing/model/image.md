@@ -27,7 +27,7 @@ __Image__ is a content element that can be added in the __Content__ collection o
 __Example 1__ shows how to initialize an Image object and add it to a previously defined container.
         
 
-#### __[C#] Example 1: Create Image__
+#### __[C#] Example 1: Create image__
 
 {{region radpdfprocessing-model-image_0}}
     Image image = new Image();
@@ -39,7 +39,7 @@ __Example 1__ shows how to initialize an Image object and add it to a previously
 __Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__ to create a new image and insert it into the respective container.
         
 
-#### __[C#] Example 2: Add Image to container__
+#### __[C#] Example 2: Add image to container__
 
 {{region radpdfprocessing-model-image_1}}
     Image image = container.Content.AddImage();

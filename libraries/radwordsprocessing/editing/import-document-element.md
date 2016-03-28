@@ -40,7 +40,7 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 
 The **DocumentElementImporter** class exposes the Import&lt;T&gt;() method, which is used to prepare a document element from the source document for import into the target document. **Example 2** demonstrates how you could work with this method, using the **DocumentElementImporter** instance, created in [Example 1](#example1).
 
-#### __[C#] Example 2: Import a Document Element__
+#### __[C#] Example 2: Import a document element__
 
 {{region radwordsprocessing-editing-import-document-element_1}}
 
@@ -101,5 +101,4 @@ In **Table 1** is described the behavior of the Import&lt;T&gt;() method of **Do
 # See Also
 
 * [Document Model]({%slug radwordsprocessing-model%})
-
 * [Clone and Merge]({%slug radwordsprocessing-editing-clone-and-merge%})

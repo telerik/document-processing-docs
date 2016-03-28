@@ -39,7 +39,7 @@ Creating a __PermissionRange__ requires to pass an instance of the __PermissionR
 __Example 1__ demonstrates how to create permission credentials for a single user specified by email and a permission range in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
 
 
-#### __[C#] Example 1: Add PermissionRange to Paragraph__
+#### __[C#] Example 1: Add PermissionRange to paragraph__
 
 {{region radwordsprocessing-model-permissionranget_0}}
 	PermissionRangeCredentials jane = new PermissionRangeCredentials("Jane.Doe@telerik.com");
@@ -84,7 +84,7 @@ __ProtectionMode__ exposes the following members:
 
 __Example 3__ shows how to protect and unprotect a document using the various overloads of the methods.
 
-#### __[C#] Example 3: Protect and Unprotect Document Through RadFlowDocumentEditor__
+#### __[C#] Example 3: Protect and unprotect document through RadFlowDocumentEditor__
 
 {{region radwordsprocessing-model-permissionranget_2}}
     editor.Protect(String.Empty);
@@ -102,7 +102,7 @@ __Example 3__ shows how to protect and unprotect a document using the various ov
 
 __RadFlowDocument__ exposes a property of type __ProtectionSettings__ - ProtectionSettings. Enforcing protection directly through the document is possible by setting the  __Enforced__ property as demonstrated in __Example 4__.
 
-#### __[C#] Example 4: Enforce Protection Through RadFlowDocument__
+#### __[C#] Example 4: Enforce protection through RadFlowDocument__
 
 {{region radwordsprocessing-model-permissionranget_3}}
     document.ProtectionSettings.Enforced = true;

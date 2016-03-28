@@ -37,7 +37,5 @@ __FieldCharacter__ has a __FieldInfo__ property, which points to its associated 
 # See Also
 
  * [FieldCharacter API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_fields_fieldcharacter.html)
-
  * [Fields]({%slug radwordsprocessing-concepts-fields%})
-
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

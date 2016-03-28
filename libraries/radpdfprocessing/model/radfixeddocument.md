@@ -79,7 +79,7 @@ __Example 3__ creates a page and adds it to the document created in [__Example 1
 
 Since Q2 2015 you can merge PDF documents out-of-the-box with the Merge() method of __RadFixedDocument__. This method appends the source document to the current instance of __RadFixedDocument__.
 
-#### __[C#] Example 4: Merge Documents__
+#### __[C#] Example 4: Merge documents__
 
 {{region radpdfprocessing-model-radfixeddocument_3}}
 	document.Merge(source);

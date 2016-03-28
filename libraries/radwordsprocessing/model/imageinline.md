@@ -27,7 +27,7 @@ __ImageInline__ element is an inline-level flow content element intended to cont
 __Example 1__ demonstrates how you can create an ImageInline and add it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}):
         
 
-#### __[C#] Example 1: Create an ImageInline and Insert it in a Paragraph__
+#### __[C#] Example 1: Create an image inline and insert it in a paragraph__
 
 {{region radwordsprocessing-model-imageinline_0}}
     ImageInline imageInline = new ImageInline(document);
@@ -42,7 +42,7 @@ __Example 1__ demonstrates how you can create an ImageInline and add it to a [Pa
 You can add an image at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. Here is how to add an ImageInline at the beginning of a paragraph:
         
 
-#### __[C#] Example 2: Add an ImageInline to a Specific Position__
+#### __[C#] Example 2: Add an image inline to a specific position__
 
 {{region radwordsprocessing-model-imageinline_1}}
     ImageInline imageInline = new ImageInline(document);
@@ -65,7 +65,7 @@ You can also use the __AddImageInline()__ method of the __Inlines__ collection o
 Inserting __ImageInline__ element in RadFlowDocument can also be achieved with [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
         
 
-#### __[C#] Example 4: Insert an ImageInline Using RadFlowDocumentEditor__
+#### __[C#] Example 4: Insert an image inline using RadFlowDocumentEditor__
 
 {{region radwordsprocessing-model-imageinline_3}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
@@ -122,9 +122,6 @@ This section explains the behavior of the __Size__ property of The __Image__ obj
 # See Also
 
  * [ImageInline API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_shapes_imageinline.html)
-
  * [Document model]({%slug radwordsprocessing-model%})
-
  * [FloatingImage]({%slug radwordsprocessing-model-floatingimage%})
-
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

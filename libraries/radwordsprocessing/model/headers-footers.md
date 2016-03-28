@@ -40,7 +40,7 @@ Headers and Footers are properties of the __Section__ element and each Section c
 Headers of all __HeaderFooterType__ types can be created using the code snippet in __Example 1__:
         
 
-#### __[C#] Example 1: Create a Header__
+#### __[C#] Example 1: Create a header__
 
 {{region radwordsprocessing-model-headers-footers_0}}
     RadFlowDocument document = new RadFlowDocument();
@@ -56,7 +56,7 @@ Headers of all __HeaderFooterType__ types can be created using the code snippet 
 Footers can be created using the code snippet from __Example 2__:
         
 
-#### __[C#] Example 2: Create a Footer__
+#### __[C#] Example 2: Create a footer__
 
 {{region radwordsprocessing-model-headers-footers_1}}
     RadFlowDocument document = new RadFlowDocument();
@@ -77,7 +77,7 @@ Footers can be created using the code snippet from __Example 2__:
 You can obtain the Headers and Footers in a Section through the __Default__, __Even__ and __First__ properties of its __Headers__ or __Footers__ property. For example, if you want to get the default Header element of a Section element, you can use the following line of code:
         
 
-#### __[C#] Example 3: Get the Default Header of a Section__
+#### __[C#] Example 3: Get the default header of a section__
 
 {{region radwordsprocessing-model-headers-footers_2}}
     Header defaultHeader = section.Headers.Default;
@@ -88,7 +88,7 @@ You can obtain the Headers and Footers in a Section through the __Default__, __E
 Similarly to the Header, the Footer element can be obtained as follows:
         
 
-#### __[C#] Example 4: Get the Default Footer of a Section__
+#### __[C#] Example 4: Get the default footer of a section__
 
 {{region radwordsprocessing-model-headers-footers_3}}
     Footer defaultFooter = section.Footers.Default;
@@ -102,7 +102,7 @@ Similarly to the Header, the Footer element can be obtained as follows:
 __Example 5__ demonstrates how to add different headers for odd and even pages:
         
 
-#### __[C#] Example 5: Add Headers for Even and Odd Pages__
+#### __[C#] Example 5: Add headers for even and odd pages__
 
 {{region radwordsprocessing-model-headers-footers_4}}
     RadFlowDocument document = new RadFlowDocument();
@@ -141,9 +141,6 @@ Information on the types of watermarks and their use is available in the [Waterm
 # See Also
 
  * [HeaderFooterBase API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_headerfooterbase.html)
-
  * [Document model]({%slug radwordsprocessing-model%})
-
  * [Section]({%slug radwordsprocessing-model-section%})
-
  * [Watermark]({%slug radwordsprocessing-concepts-watermark%})

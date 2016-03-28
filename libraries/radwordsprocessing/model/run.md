@@ -24,7 +24,7 @@ __Run__ element is an inline-level flow content element intended to contain a ru
 The code in __Example 1__ creates a __Run__ element and adds it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
         
 
-#### __[C#] Example 1: Create and Add a Run to a Paragraph__
+#### __[C#] Example 1: Create and add a run to a paragraph__
 
 {{region radwordsprocessing-model-run_0}}
     Run run = new Run(document);
@@ -39,7 +39,7 @@ The code in __Example 1__ creates a __Run__ element and adds it to a [Paragraph]
 You can add a run at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. __Example 2__ demonstrates how to add a run at the beginning of a paragraph.
         
 
-#### __[C#] Example 2: Create and add a Run at a Specific Index of a Paragraph's Inlines Collection__
+#### __[C#] Example 2: Create and add a run at a specific index of a paragraph's Inlines collection__
 
 {{region radwordsprocessing-model-run_1}}
     Run run = new Run(document);
@@ -51,7 +51,7 @@ You can add a run at a specific index in the __Inlines__ collection of a paragra
 You can also use the __AddRun()__ method of the __Inlines__ collection of a paragraph. The method creates a new __Run__ instance, adds it to the container and returns it:
         
 
-#### __[C#] Example 3: Create and add a Run to a Paragraph__
+#### __[C#] Example 3: Create and add a run to a paragraph__
 
 {{region radwordsprocessing-model-run_2}}
     // Adds an empty run.
@@ -66,7 +66,7 @@ You can also use the __AddRun()__ method of the __Inlines__ collection of a para
 Inserting text in the document can also be achieved with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class:
         
 
-#### __[C#] Example 4: Insert a Run Using RadFlowDocumentEditor__
+#### __[C#] Example 4: Insert a run using RadFlowDocumentEditor__
 
 {{region radwordsprocessing-model-run_3}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
@@ -137,9 +137,6 @@ The Run exposes several properties that allow you to customize how it is rendere
 # See Also
 
  * [Run API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_run.html)
-
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
-
  * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})
-
  * [Document Themes]({%slug radwordsprocessing-concepts-document-themes%})

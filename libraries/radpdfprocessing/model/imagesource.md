@@ -48,7 +48,7 @@ With the __EncodedImageData__ class you can create an __ImageSource__ with encod
 __Example 2__ demonstrates how you can create an __ImageSource__ using the __EncodedImageData__ class.
         
 
-#### __[C#] Example 2: Create ImageSource from Encoded Image Data__
+#### __[C#] Example 2: Create ImageSource from EncodedImageData__
 {{region radpdfprocessing-model-imagesource_2}}
 	EncodedImageData imageData = new EncodedImageData(imageBytes, 8, 655, 983, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.DCTDecode });
 	ImageSource imageSource = new ImageSource(imageData);
@@ -76,7 +76,7 @@ The ImageSource class exposes two methods, which could help you get the data fro
 __RadPdfProcessing__ exposes an extension method allowing you to convert every BitmapSource to an ImageSource that can be used for the creation of [Image]({%slug radpdfprocessing-model-image%}) elements. __Example 3__ shows how you can use the ToImageSource() extension method over a previously created bitmap.
         
 
-#### __[C#] Example 3: Create ImageSource with Extension Method__
+#### __[C#] Example 3: Create ImageSource with extension method__
 
 {{region radpdfprocessing-model-imagesource_1}}
     BitmapImage bitmap = new BitmapImage();

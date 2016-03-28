@@ -48,7 +48,7 @@ Using __TableCell__'s __Blocks__ property you can easily add one or several __IB
 __Example 2__ shows how to create a cell with a single [Block]({%slug radpdfprocessing-editing-block%}) in it.
         
 
-#### __[C#] Example 2: Add Content to TableCell__
+#### __[C#] Example 2: Add content to TableCell__
 
 {{region radpdfprocessing-editing-tablecell_1}}
     Block block = firstCell.Blocks.AddBlock();
@@ -81,7 +81,7 @@ You can easily change the cell's presentation by using the following properties:
 __Example 3__ demonstrates how to set locally the cell properties to a specific cell. This helps achieve different appearance for this cell by changing its borders and background. Additionally, the cell will span onto two rows and two columns.
         
 
-#### __[C#] Example 1: Change TableCell Appearance__
+#### __[C#] Example 1: Change TableCell appearance__
 
 {{region radpdfprocessing-editing-tablecell_2}}
     firstCell.RowSpan = 2;
@@ -95,7 +95,7 @@ __Example 3__ demonstrates how to set locally the cell properties to a specific 
 The result from __Example 3__ is illustrated on __Figure 1__.
         
 
-#### Figure 1: TableCell Appearance
+#### Figure 1: TableCell 
 ![Rad Pdf Processing Editing Table Cell 01](images/RadPdfProcessing_Editing_TableCell_01.png)
 
 # See Also

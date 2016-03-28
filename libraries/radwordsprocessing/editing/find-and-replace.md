@@ -33,7 +33,7 @@ Finding all instances of a string and replacing it with another can be achieved 
 __Example 1__ shows how to create a __RadFlowDocumentEditor__ instance and use it to replace all matches of the word "code" with the phrase "source code".
 
 
-#### __[C#] Example 1: Replace Text__
+#### __[C#] Example 1: Replace text__
 
 {{region radwordsprocessing-editing-mail-merge_0}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
@@ -56,7 +56,7 @@ __RadFlowDocumentEditor__ gives you the ability to format all occurrences of a s
 __Example 2__ shows how to apply a red highlight color to all occurrences of the word "alert".
 
 
-#### __[C#] Example 2: Replace Character Properties__
+#### __[C#] Example 2: Replace character properties__
 
 {{region radwordsprocessing-editing-mail-merge_0}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);

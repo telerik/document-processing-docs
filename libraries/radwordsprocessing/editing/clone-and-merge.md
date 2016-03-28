@@ -25,7 +25,7 @@ position: 0
 __RadWordsProcessing__ allows you to merge two __RadFlowDocument__ instance using the __Merge()__ method overloads. The document to which you wish to add content is called *target* and the document from which you wish to take the content is called *source*.
         
 
-#### __[C#] Example 1: Merge Two Instances of RadFlowDocument__
+#### __[C#] Example 1: Merge two instances of RadFlowDocument__
 
 {{region radwordsprocessing-editing-clone-and-merge_0}}
     RadFlowDocument target = new RadFlowDocument();
@@ -57,7 +57,7 @@ The __MergeOptions__ parameter can be passed as an argument to the __Merge()__ m
 __Example 2__ shows how to merge documents by specifying the __MergeOptions__ parameter.
         
 
-#### __[C#] Example 2: Merge Documents With MergeOptions__
+#### __[C#] Example 2: Merge documents with MergeOptions__
 
 {{region radwordsprocessing-editing-clone-and-merge_1}}
     RadFlowDocument target = new RadFlowDocument();
@@ -108,7 +108,7 @@ The __Clone()__ method has two overloads:
 * __Clone(RadFlowDocument)__: Creates a deep copy of the element and associates it with the provided __RadFlowDocument__. This allows cloned elements to be added to the element tree of the provided RadFlowDocument at a later time and is convenient if you want to "move" an element from one document to another.
             
 
-#### __[C#] Example 4: Clone a Section__
+#### __[C#] Example 4: Clone a section__
 
 {{region radwordsprocessing-editing-clone-and-merge_3}}
     Section clonedSection = section.Clone(radFlowDocument);
@@ -131,5 +131,4 @@ The following styling objects also implement the __Clone()__ method, which can b
 # See Also
 
  * [Document model]({%slug radwordsprocessing-model%})
-
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})

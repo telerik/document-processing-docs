@@ -32,7 +32,7 @@ The __Hyperlink__ field exposes the following properties:
 The suggested way to insert hyperlink is by using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The __InsertHyperlink()__ method accepts the hyperlink text, URI, IsAnchor value and tooltip as parameters. The code in __Example 1__ shows how to insert a hyperlink to *www.telerik.com*:
         
 
-#### __[C#] Example 1: Insert a Hyperlink__
+#### __[C#] Example 1: Insert a hyperlink__
 
 {{region radwordsprocessing-concepts-hyperlinks_0}}
     editor.InsertHyperlink("telerik", "http://www.telerik.com", false, "Telerik site");
@@ -42,7 +42,7 @@ The suggested way to insert hyperlink is by using [RadFlowDocumentEditor]({%slug
 
 The result looks like shown in __Figure 1__.
 
-#### Figure 1: Hyperlink Inserted in a Document
+#### Figure 1: Hyperlink inserted in a document
 ![Rad Words Processing Concepts Hyperlinks 01](images/RadWordsProcessing_Concepts_Hyperlinks_01.png)
 
 >tipThe  __InsertHyperlink()__ method also automatically applies the Hyperlink style to the result fragment of the inserted  field. More information about styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
@@ -51,7 +51,7 @@ The result looks like shown in __Figure 1__.
 Hyperlinks can also point to a [Bookmark]({%slug radwordsprocessing-model-bookmark%}) inside the document. __Example 2__ how to create a document containing a bookmark and a hyperlink pointing to that bookmark.
         
 
-#### __[C#] Example 2: Insert a Hyperlink Pointing to a Bookmark__
+#### __[C#] Example 2: Insert a hyperlink pointing to a bookmark__
 
 {{region radwordsprocessing-concepts-hyperlinks_1}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
@@ -68,13 +68,11 @@ Hyperlinks can also point to a [Bookmark]({%slug radwordsprocessing-model-bookma
 
 The result of the above snippet is illustrated in __Figure 2__.
 
-#### Figure 2: Hyperlink and Bookmark in a Document
+#### Figure 2: Hyperlink and bookmark in a document
   ![Rad Words Processing Concepts Hyperlinks 02](images/RadWordsProcessing_Concepts_Hyperlinks_02.png)
 
 # See Also
 
  * [Fields]({%slug radwordsprocessing-concepts-fields%})
-
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
-
  * [Bookmark]({%slug radwordsprocessing-model-bookmark%})

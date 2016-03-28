@@ -86,7 +86,7 @@ A style can contain one or more of five different sets of style properties, depe
 A style should be added to __RadFlowDocument__'s style repository in order to be further applied to elements and participate in style properties evaluation process. For example, the code from __Example 1__ creates a table style and adds it to the style repository.
         
 
-#### __[C#] Example 1: Create a Table Style and Add it to the Style Repository__
+#### __[C#] Example 1: Create a table style and add it to the style repository__
 
 {{region radwordsprocessing-concepts-styles_0}}
     Style tableStyle = new Style("TableStyle", StyleType.Table);
@@ -121,7 +121,7 @@ Built-in styles are commonly used styles, which are predefined for convenience. 
 [BuiltInStyleNames](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_styles_builtInstylenames.html) static class contains properties and methods for getting the IDs of all built-in styles. __Example 2__ shows how to get the ID of the "Heading 1" built-in style.
         
 
-#### __[C#] Example 2: Get the ID of a Built-In Style__
+#### __[C#] Example 2: Get the ID of a built-in style__
 
 {{region radwordsprocessing-concepts-styles_1}}
     string heading1StyleId = BuiltInStyleNames.GetHeadingStyleIdByIndex(1);
@@ -243,13 +243,8 @@ Linked styles can be based on other linked styles or on paragraph styles.
 # See Also
 
  * [Styles API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_styles_style.html)
-
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
-
  * [Run]({%slug radwordsprocessing-model-run%})
-
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
-
  * [Table]({%slug radwordsprocessing-model-table%})[BuiltInStyleNames](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_styles_builtInstylenames.html)
-
  * [Lists]({%slug radwordsprocessing-concepts-lists%})

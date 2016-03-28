@@ -37,7 +37,7 @@ The suggested way to insert field is to use the __InsertField()__ method of [Rad
 **Example 1** shows how to create a document with a single __Date__ field using __RadFlowDocumenteditor__:
         
 
-#### __[C#] Example 1: Create a Document containing a Date Field Using RadFlowDocumentEditor__
+#### __[C#] Example 1: Create a document containing a Date field using RadFlowDocumentEditor__
 
 {{region radwordsprocessing-concepts-fields_0}}
     RadFlowDocument document = new RadFlowDocument();
@@ -50,7 +50,7 @@ The suggested way to insert field is to use the __InsertField()__ method of [Rad
 You can also create and insert all the parts of the field manually by creating a __FieldInfo__ instance and adding all the inlines to the document structure. **Example 2** demonstrates how to achieve the same result as in **Example 1**.
         
 
-#### __[C#] Example 2: Create a Document containing a Date Field Using the RadDocument Model and FieldInfo__
+#### __[C#] Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo__
 
 {{region radwordsprocessing-concepts-fields_1}}
     // Create a document with paragraph            
@@ -94,7 +94,7 @@ If the field type is not one of the above, the result will not be updated and th
 Updating a single field is done with the __UpdateField()__ method of the __FieldInfo__ class as demonstrated in **Example 3**.
         
 
-#### __[C#] Example 3: Update a Field__
+#### __[C#] Example 3: Update a field__
 
 {{region radwordsprocessing-concepts-fields_2}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
@@ -111,7 +111,7 @@ Updating a single field is done with the __UpdateField()__ method of the __Field
 
 All fields in the document can be updated using __UpdateFields()__ of __RadFlowDocument__. **Example 4** shows how to use this method.        
 
-#### __[C#] Example 4: Update All Fields in a Document__
+#### __[C#] Example 4: Update all fields in a document__
 
 {{region radwordsprocessing-concepts-fields_3}}
     RadFlowDocument document = new RadFlowDocument();
@@ -159,7 +159,7 @@ Fields can also be nested in each other. If there are nested fields inside the c
 **Example 5** creates a field, which will be evaluated to appropriate greeting based on the time of the day.
         
 
-#### __[C#] Example 5: Create a Nested Field__
+#### __[C#] Example 5: Create a nested field__
 
 {{region radwordsprocessing-concepts-fields_4}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
@@ -228,7 +228,5 @@ When exporting documents to DOCX format you can use the __IsDirty__ property of 
 # See Also
 
  * [Document model]({%slug radwordsprocessing-model%})
-
  * [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%})
-
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

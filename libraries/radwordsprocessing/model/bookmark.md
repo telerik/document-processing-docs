@@ -24,7 +24,7 @@ A __Bookmark__ refers to a location in the document and has a unique name, which
 __Example 1__ shows how to create a __Bookmark__ and add its BookmarkRangeStart and BookmarkRangeEnd elements in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}):
         
 
-#### __[C#] Example 1: Add а Bookmark to а Paragraph__
+#### __[C#] Example 1: Add а bookmark to а paragraph__
 
 {{region radwordsprocessing-model-bookmark_0}}
     Bookmark bookmark = new Bookmark(document, "MyBookmark");
@@ -41,7 +41,7 @@ Note, that the paragraph should belong to the same document that is passed to th
 Inserting a __Bookmark__ in the document can also be done with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class like shown in __Example 2__:
         
 
-#### __[C#] Example 2: Insert а Bookmark using RadFlowDocumentEditor__
+#### __[C#] Example 2: Insert а bookmark using RadFlowDocumentEditor__
 
 {{region radwordsprocessing-model-bookmark_1}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
@@ -61,7 +61,7 @@ You can remove an inserted __Bookmark__ by using __RadFlowDocumentEditor__'s __D
 __Example 3__ demonstrates how you can delete the bookmark created in __Example 2__.
         
 
-#### __[C#] Example 2: Delete Bookmark using RadFlowDocumentEditor__
+#### __[C#] Example 2: Delete bookmark using RadFlowDocumentEditor__
 
 {{region radwordsprocessing-model-bookmark_2}}
     editor.DeleteBookmark("MyBookmark");
@@ -72,5 +72,4 @@ __Example 3__ demonstrates how you can delete the bookmark created in __Example 
 # See Also
 
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
-
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

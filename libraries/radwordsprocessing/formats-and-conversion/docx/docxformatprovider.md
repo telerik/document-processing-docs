@@ -30,7 +30,7 @@ In order to import a docx document, you need to use the __Import()__ method of _
 The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a docx document from a file.
         
 
-#### __[C#] Example 1: Import Document From a File__
+#### __[C#] Example 1: Import document from a file__
 
 {{region radwordsprocessing-formats-and-conversion-docx-docxformatprovider_0}}
     DocxFormatProvider provider = new DocxFormatProvider();
@@ -45,7 +45,7 @@ The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a do
 And here is how you can import a document from byte array containing the docx document:
         
 
-#### __[C#] Example 2: Import Document From a Byte Array__
+#### __[C#] Example 2: Import document from a byte array__
 {{region radwordsprocessing-formats-and-conversion-docx-docxformatprovider_1}}
     DocxFormatProvider provider = new DocxFormatProvider();
     RadFlowDocument document = provider.Import(input);
@@ -63,7 +63,7 @@ In order to export a document to docx, you need to use the __Export()__ method o
 __Example 3__ shows how to use __DocxFormatProvider__ to export __RadFlowDocument__ to a file.
         
 
-#### __[C#] Example 3: Export a Document to a File__
+#### __[C#] Example 3: Export a document to a file__
 {{region radwordsprocessing-formats-and-conversion-docx-docxformatprovider_2}}
     DocxFormatProvider provider = new DocxFormatProvider();
     using (Stream output = File.OpenWrite("Sample.docx"))
@@ -77,7 +77,7 @@ __Example 3__ shows how to use __DocxFormatProvider__ to export __RadFlowDocumen
 You can also export the document to a byte array and preserve it in a database.
         
 
-#### __[C#] Example 4: Export a Document to a Byte Array__
+#### __[C#] Example 4: Export a document to a byte array__
 {{region radwordsprocessing-formats-and-conversion-docx-docxformatprovider_3}}
     DocxFormatProvider provider = new DocxFormatProvider();
 

@@ -29,7 +29,7 @@ Paragraphs can be added as a child of a [BlockContainer](http://www.telerik.com/
 The code snippet from __Example 1__ creates and inserts a __Paragraph__ in a __Section__.
         
 
-#### __C# Example 1: Insert Paragraph in Section__
+#### __C# Example 1: Insert paragraph in section__
 
 {{region radwordsprocessing-model-paragraph_0}}
     Paragraph paragraph = new Paragraph(document);
@@ -44,7 +44,7 @@ The code snippet from __Example 1__ creates and inserts a __Paragraph__ in a __S
 You can add a paragraph at a specific index in the __Blocks__ collection of a __BlockContainer__ using the __Insert()__ method. In __Example 2__ is demonstrated how to add a paragraph at the beginning of a section.
         
 
-#### __C# Example 2: Insert a Paragraph at a Specific Position of the Blocks Collection__
+#### __C# Example 2: Insert a paragraph at a specific position of the Blocks collection__
 
 {{region radwordsprocessing-model-paragraph_1}}
     Paragraph paragraph = new Paragraph(document);
@@ -56,7 +56,7 @@ You can add a paragraph at a specific index in the __Blocks__ collection of a __
 You can also use the __AddParagraph()__ method of the __Blocks__ collection of a __BlockContainer__. The method creates a new __Paragraph__ instance, adds it to the container and returns it.
         
 
-#### __C# Example 3: Create a New Paragraph and Add it to a Section__
+#### __C# Example 3: Create a new paragraph and add it to a section__
 
 {{region radwordsprocessing-model-paragraph_2}}
     Paragraph paragraph = section.Blocks.AddParagraph();
@@ -67,7 +67,7 @@ You can also use the __AddParagraph()__ method of the __Blocks__ collection of a
 Inserting a new __Paragraph__ in the document can also be achieved with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
         
 
-#### __C#  Example 4: Insert a Paragraph Using the RadFlowDocumentEditor Class__
+#### __C#  Example 4: Insert a paragraph using the RadFlowDocumentEditor__
 
 {{region radwordsprocessing-model-paragraph_3}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
@@ -155,7 +155,7 @@ You can add inline elements to a __Paragraph__ instance.
 In __Example 5__ is illustrated how to add a run to an existing paragraph.
             
 
-#### __C# Example 5: Insert Run in a Paragraph__
+#### __C# Example 5: Insert run in a paragraph__
 
 {{region radwordsprocessing-model-paragraph_4}}
     Run run = paragraph.Inlines.AddRun();
@@ -171,7 +171,7 @@ For more information about __Run__ element, you can read [this article]({%slug r
 __Example 6__ adds an inline image to an existing paragraph.
             
 
-#### __C# Example 6: Insert ImageInline__
+#### __C# Example 6: Insert image inline__
 
 {{region radwordsprocessing-model-paragraph_5}}
     ImageInline imageInline = paragraph.Inlines.AddImageInline();
@@ -187,7 +187,7 @@ For more information about __ImageInline__ element, you can read [this article](
 The code snippet from __Example 7__  adds a floating image to an existing paragraph.
             
 
-#### __C# Example 7: Add FloatingImage__
+#### __C# Example 7: Add floating image__
 
 {{region radwordsprocessing-model-paragraph_6}}
     FloatingImage floatingImage = paragraph.Inlines.AddFloatingImage();
@@ -213,11 +213,7 @@ You can refer to the [TabStop article]({%slug radwordsprocessing-concepts-tabsto
 # See Also
 
  * [Paragraph API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_paragraph.html)
-
  * [Section]({%slug radwordsprocessing-model-section%})
-
  * [TableCell]({%slug radwordsprocessing-model-tablecell%})
-
  * [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})
-
  * [Run]({%slug radwordsprocessing-model-run%})

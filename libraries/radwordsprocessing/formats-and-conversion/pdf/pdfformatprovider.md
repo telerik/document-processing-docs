@@ -33,7 +33,7 @@ In order to export a document to PDF you need to use the __Export()__ method of 
 The code snippet in __Example 1__ shows how to create a __PdfFormatProvider__ instance and use it to export __RadFlowDocument__ to a file.
         
 
-#### __[C#] Example 1: Export to PDF File__
+#### __[C#] Example 1: Export to PDF file__
 {{region  radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
 	PdfFormatProvider provider = new PdfFormatProvider();
 	using (Stream output = File.OpenWrite("sample.pdf"))

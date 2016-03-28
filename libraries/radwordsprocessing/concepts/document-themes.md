@@ -47,7 +47,7 @@ The twelve color types above are used for creating __ThemableColor__ objects. Th
 __Example 1__ demonstrates how to create a __ThemeColorScheme__ object. Note that the example passes a name and twelve colors to the constructor. Every color has a comment next to it, so you can see its corresponding __ThemeColorType__.
         
 
-#### __[C#] Example 1: Create a ThemeColorScheme Object__
+#### __[C#] Example 1: Create a ThemeColorScheme object__
 
 {{region radwordsprocessing-concepts-document-themes_0}}
     ThemeColorScheme colorScheme = new ThemeColorScheme(
@@ -89,7 +89,7 @@ There are several ways to create a __ThemableColor__ object:
 In order to create colors that depend on the current document theme, you need to use __ThemableColor__ objects. 
         
 
-#### __[C#] Example 2: Create a ThemableColor Object__
+#### __[C#] Example 2: Create a ThemableColor object__
 
 {{region radwordsprocessing-concepts-document-themes_1}}
     ThemableColor themableColor = new ThemableColor(ThemeColorType.Accent1);
@@ -132,7 +132,7 @@ In order to use the document theme's fonts you need to use __ThemableFontFamily_
 When you need to create a font that depends on the current document theme, you need to use __ThemableFontFamily__ objects. 
         
 
-#### __[C#] Example 4: Create a ThemableFontFamily Object__
+#### __[C#] Example 4: Create a ThemableFontFamily object__
 
 {{region radwordsprocessing-concepts-document-themes_3}}
     ThemableFontFamily themableFont = new ThemableFontFamily(ThemeFontType.Major);
@@ -145,7 +145,7 @@ When you need to create a font that depends on the current document theme, you n
 Now that you have a color and a font schemes, you can create a new __DocumentTheme__. You need to specify a name and pass the already created color and font schemes.
         
 
-#### __[C#] Example 5: Create a DocumentTheme Object__
+#### __[C#] Example 5: Create a DocumentTheme object__
 
 {{region radwordsprocessing-concepts-document-themes_4}}
     DocumentTheme theme = new DocumentTheme("Mine", colorScheme, fontScheme);
@@ -156,7 +156,7 @@ Now that you have a color and a font schemes, you can create a new __DocumentThe
 There are a number of predefined color and font schemes. You can find them in a static class called [PredefinedThemeSchemes](http://www.telerik.com/help/wpf/t_telerik_windows_documents_spreadsheet_theming_predefinedthemeschemes.html). The class exposes the properties __ColorSchemes__ and __FontSchemes__ that hold all predefined schemes.
         
 
-#### __[C#] Example 6: Using a Predefined Scheme__
+#### __[C#] Example 6: Using a predefined scheme__
 
 {{region radwordsprocessing-concepts-document-themes_5}}
     DocumentTheme theme1 = new DocumentTheme("From Predefined schemes", PredefinedThemeSchemes.ColorSchemes[0], PredefinedThemeSchemes.FontSchemes[5]);
@@ -167,7 +167,7 @@ There are a number of predefined color and font schemes. You can find them in a 
 Changing the current document theme is as easy as setting a single property.
         
 
-#### __[C#] Example 7: Change the Document Theme__
+#### __[C#] Example 7: Change the document theme__
 
 {{region radwordsprocessing-concepts-document-themes_6}}
     RadFlowDocument document = new RadFlowDocument();
@@ -181,7 +181,7 @@ Changing the current document theme is as easy as setting a single property.
 In order to get the actual value from __ThemableColor__ or __ThemableFontFamily__, you need to call the __GetActualValue()__ method on the corresponding object.
         
 
-#### __[C#] Example 8: Get Actual Value From ThemableColor__
+#### __[C#] Example 8: Get actual value from ThemableColor__
 
 {{region radwordsprocessing-concepts-document-themes_7}}
     Color actualColor = themableColor.GetActualValue(theme);
@@ -190,7 +190,7 @@ In order to get the actual value from __ThemableColor__ or __ThemableFontFamily_
 
 
 
-#### __[C#] Example 9: Get Actual Value From ThemableFont__
+#### __[C#] Example 9: Get actual value from ThemableFont__
 
 {{region radwordsprocessing-concepts-document-themes_8}}
     var actualFont = themableFont.GetActualValue(theme);
@@ -203,5 +203,4 @@ In order to get the actual value from __ThemableColor__ or __ThemableFontFamily_
 # See Also
 
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
-
  * [Styles]({%slug radwordsprocessing-concepts-styles%})

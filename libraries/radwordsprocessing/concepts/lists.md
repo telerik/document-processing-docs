@@ -98,7 +98,7 @@ In order to add one of the list templates to the document, you need to pass a __
 __Example 1__ adds a default bulleted list to a predefined RadFlowDocument.
         
 
-#### __[C#] Example 1: Add List Template__
+#### __[C#] Example 1: Add list template__
 
 {{region radwordsprocessing-concepts-lists_0}}
     List list = document.Lists.Add(ListTemplateType.BulletDefault);
@@ -126,7 +126,7 @@ The next tutorial will get you through the creation of a list.
 1. Create a __List__ object and associate it with the document by adding it to the __Lists__ collection.
             
 
-	#### __[C#] Step 3: Create List__
+	#### __[C#] Step 3: Create list__
 	
 	{{region radwordsprocessing-concepts-lists_2}}
 	    List list = new List();
@@ -139,7 +139,7 @@ The next tutorial will get you through the creation of a list.
 1. Iterate over the collection of __Levels__ the list has.
             
 
-	#### __[C#] Step 4: Iterate Levels__
+	#### __[C#] Step 4: Iterate levels__
 	
 	{{region radwordsprocessing-concepts-lists_3}}
 	    for (int level = 0; level < list.Levels.Count; ++level)
@@ -150,7 +150,7 @@ The next tutorial will get you through the creation of a list.
 1. Specify some properties for each level.
             
 
-	#### __[C#] Step 5: Customize ListLevels__
+	#### __[C#] Step 5: Customize list levels__
 	
 	{{region radwordsprocessing-concepts-lists_4}}
 	    bool isEven = (level % 2) == 0;
@@ -175,7 +175,7 @@ The tutorial in the [previous section](#create-a-list) demonstrates how you can 
 __Example 6__ demonstrates how you can apply the list created in Steps 1-4 above.
         
 
-#### __[C#] Example 6: Apply List__
+#### __[C#] Example 6: Apply list__
 
 {{region radwordsprocessing-concepts-lists_5}}
     for (int level = 0; level < list.Levels.Count; level++)

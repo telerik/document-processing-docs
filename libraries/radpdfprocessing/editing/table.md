@@ -37,7 +37,7 @@ Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-table
 __Example 1__ shows how to generate a simple table with two rows and three columns with some sample text in each table cell.
         
 
-#### __[C#] Example 1: Create Simple Table__
+#### __[C#] Example 1: Create simple table__
 
 {{region radpdfprocessing-editing-table_0}}
     Table table = new Table();
@@ -99,7 +99,7 @@ __Еxample 2__ shows how to use the __DefaultCellProperties__ of a table
 The result of the snippet in __Example 2__ is demonstrated on __Figure 2__.
         
 
-#### Figure 2: Result of DefaultCellProperties Modification
+#### Figure 2: Result of DefaultCellProperties modification
 ![Rad Pdf Processing Editing Table 03](images/RadPdfProcessing_Editing_Table_03.png)
 
 ## Modifying a Table
@@ -129,7 +129,7 @@ There are several factors that affect tables measuring calculations. Some of the
 __Example 3__ demonstrates how border calculations occur with different __BorderCollapse__ option. The code in this example creates an empty table and sets default cell padding and red table border with thickness 10 to it.
         
 
-#### __[C#] Example 3: Create Table with Red Border__
+#### __[C#] Example 3: Create table with red border__
 
 {{region radpdfprocessing-editing-table_2}}
     Table table = new Table();
@@ -143,7 +143,7 @@ __Example 3__ demonstrates how border calculations occur with different __Border
 __Example 4__ adds a single row with two cells to the table from __Example 3__. The first cell has a green border with thickness 5 while the second cell has a blue border with thickness 3.
         
 
-#### __[C#] Example 4: Add Green and Blue Cells__
+#### __[C#] Example 4: Add green and blue cells__
 
 {{region radpdfprocessing-editing-table_3}}
     TableRow tableRow = table.Rows.AddTableRow();
@@ -164,7 +164,7 @@ __Example 4__ adds a single row with two cells to the table from __Example 3__. 
 __Figure 3__ shows the table from Example 3 and 4 with BorderCollapse property set to Collapse - all borders are drawn so that their middle lines coincide.
         
 
-#### __[C#] Example 5: Collapse Border__
+#### __[C#] Example 5: Collapse border__
 
 {{region radpdfprocessing-editing-table_4}}
     table.BorderCollapse = BorderCollapse.Collapse;
@@ -172,13 +172,13 @@ __Figure 3__ shows the table from Example 3 and 4 with BorderCollapse property s
 
 
 
-#### Figure 3: Collapse Border
+#### Figure 3: Collapsed border
 ![Rad Pdf Processing Editing Table 04](images/RadPdfProcessing_Editing_Table_04.png)
 
 __Figure 4__ shows the same table with BorderCollapse property set to Separate - all borders are drawn so that their outer contour coincide.
         
 
-#### __[C#] Example 6: Separate Border__
+#### __[C#] Example 6: Separate border__
 
 {{region radpdfprocessing-editing-table_5}}
     table.BorderCollapse = BorderCollapse.Separate;
@@ -186,7 +186,7 @@ __Figure 4__ shows the same table with BorderCollapse property set to Separate -
 
 
 
-#### Figure 4: Separate Border
+#### Figure 4: Separated border
 ![Rad Pdf Processing Editing Table 05](images/RadPdfProcessing_Editing_Table_05.png)
 
 ## Drawing Table with RadFixedDocumentEditor
@@ -197,7 +197,7 @@ When a table is generated, it could be inserted in the PDF document using the __
 __Example 7__ generates a simple table with two cells.
         
 
-#### __[C#] Example 7: Create Table__
+#### __[C#] Example 7: Create table__
 
 {{region radpdfprocessing-editing-table_6}}
     Table table = new Table();
@@ -219,7 +219,7 @@ __Example 7__ generates a simple table with two cells.
 __Example 8__ inserts the table from __Example 7__ in a RadFixedDocumentEditor and specifies the table layout type to AutoFit.
         
 
-#### __[C#] Example 8: Insert AutoFit Table__
+#### __[C#] Example 8: Insert AutoFit table__
 
 {{region radpdfprocessing-editing-table_7}}
     RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document);
@@ -232,13 +232,13 @@ __Example 8__ inserts the table from __Example 7__ in a RadFixedDocumentEditor a
 The result is that the table width is exactly as needed for fitting the cells content as visible in __Figure 5__.
         
 
-#### Figure 5: AutoFit Table
+#### Figure 5: AutoFit table
 ![Rad Pdf Processing Editing Table 06](images/RadPdfProcessing_Editing_Table_06.png)
 
 Specifying FixedWidth layout option produces different results.
         
 
-#### __[C#] Example 9: Insert FixedWidth Table__
+#### __[C#] Example 9: Insert FixedWidth table__
 
 {{region radpdfprocessing-editing-table_8}}
     table.LayoutType = TableLayoutType.FixedWidth;
@@ -247,7 +247,7 @@ Specifying FixedWidth layout option produces different results.
 
 
 
-#### Figure 6: FixedWidth Table
+#### Figure 6: FixedWidth table
 ![Rad Pdf Processing Editing Table 07](images/RadPdfProcessing_Editing_Table_07.png)
 
 ## Drawing Table with FixedContentEditor
@@ -258,7 +258,7 @@ When in need of more customization options, you can use the __DrawTable()__ meth
 __Example 10__ shows how to draw a rotated table with the help of FixedContentEditor.
         
 
-#### __[C#] Example 10: Draw Rotated Table__
+#### __[C#] Example 10: Draw rotated table__
 
 {{region radpdfprocessing-editing-table_9}}
     Table table = GenerateSampleTable();
@@ -277,7 +277,7 @@ __Example 10__ shows how to draw a rotated table with the help of FixedContentEd
 As a result, on __Figure 7__ you can see a 45-degree rotated table similar to the one on Figure 5.
         
 
-#### Figure 7: FixedWidth Table
+#### Figure 7: FixedWidth table
 ![Rad Pdf Processing Editing Table 08](images/RadPdfProcessing_Editing_Table_08.png)
 
 # See Also

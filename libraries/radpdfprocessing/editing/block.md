@@ -25,7 +25,7 @@ The most common usage of __Block__ is to draw flowing content. Similarly to [Fix
 Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achieved with one of the overloads of the __Insert()__ method. __Example 1__ shows a simple insert by passing a string to the method.
             
 
-#### __[C#] Example 1: Insert Text__
+#### __[C#] Example 1: Insert text__
 
 {{region radpdfprocessing-editing-block_0}}
     Block block = new Block();
@@ -37,7 +37,7 @@ Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achie
 __Example 2__ demonstrates how to insert text with a specific font family.
             
 
-#### __[C#] Example 2: Insert Text with Arial FontFamily__
+#### __[C#] Example 2: Insert text with Arial font family__
 
 {{region radpdfprocessing-editing-block_1}}
     block.InsertText(new FontFamily("Arial"), "Text");
@@ -52,7 +52,7 @@ __Example 2__ demonstrates how to insert text with a specific font family.
 Inserting a line break results in the next element starting on a new line. The action is achieved with the __InsertLineBreak()__ method as shown in __Example 3__.
             
 
-#### __[C#] Example 3: Break the Line__
+#### __[C#] Example 3: Break the line__
 
 {{region radpdfprocessing-editing-block_3}}
     block.InsertLineBreak();
@@ -163,7 +163,7 @@ A Block can be drawn to the content using the __Draw()__ method. The method acce
 __Example 4__ demonstrates how to draw a block.
         
 
-#### __[C#] Example 4: Draw Block__
+#### __[C#] Example 4: Draw block__
 
 {{region radpdfprocessing-editing-block_4}}
     Rect boundingRect = new Rect(new Point(0, 0), new Size(200, 300));
@@ -186,7 +186,7 @@ Calling the overload accepting available size measures the block in that specifi
 __Example 5__ creates a Block with the text "Hello RadPdfProcessing!" and measures it.
         
 
-#### __[C#] Example 5: Measure Block__
+#### __[C#] Example 5: Measure block__
 
 {{region radpdfprocessing-editing-block_5}}
     Block block = new Block();
@@ -203,7 +203,7 @@ The __Split()__ method of a Block returns a new Block with the same properties. 
 
 The code in __Example 6__ splits a block in two. The first will contains text "Hello" and the second – "RadPdfProcessing!".
         
-#### __[C#] Example 6: Split Block__
+#### __[C#] Example 6: Split block__
 
 {{region radpdfprocessing-editing-block_6}}
 	Block helloBlock = new Block();

@@ -27,7 +27,7 @@ __TableCell__ element is a __BlockContainer__ element and defines a cell of cont
 You can use the code snippet from __Example 1__ to create a __TableCell__ and add it in a [TableRow]({%slug radwordsprocessing-model-tablerow%}).
         
 
-#### __[C#] Example 1: Create a TableCell Object and add it to a TableRow__
+#### __[C#] Example 1: Create a TableCell object and add it to a TableRow__
 
 {{region radwordsprocessing-model-tablecell_0}}
     TableCell cell = new TableCell(document);
@@ -39,7 +39,7 @@ You can use the code snippet from __Example 1__ to create a __TableCell__ and ad
 To create a __TableCell__ and add it in the document tree in the same time, you can use the __AddTableCell()__ method.
         
 
-#### __[C#] Example 2: Create a TableCell and add it to a TableRow in the Same Time__
+#### __[C#] Example 2: Create a TableCell and add it to a TableRow in the same time__
 
 {{region radwordsprocessing-model-tablecell_1}}
     TableRow row = table.Rows.AddTableRow();
@@ -113,7 +113,7 @@ The __TableCell__ element exposes several properties that allow you to customize
 __Example 3__ demonstrates how to add a __Paragraph__ to a __TableCell__.
             
 
-#### __[C#] Example 3: Add a Paragraph to a TableCell__
+#### __[C#] Example 3: Add a paragraph to a TableCell__
 
 
 {{region radwordsprocessing-model-tablecell_2}}
@@ -128,9 +128,6 @@ Through the __BlockCollection__ property of the __TableCell__ element you can ad
 # See Also
 
  * [TableCell API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_tablecell.html)
-
  * [Document model]({%slug radwordsprocessing-model%})
-
  * [Table]({%slug radwordsprocessing-model-table%})
-
  * [TableRow]({%slug radwordsprocessing-model-tablerow%})

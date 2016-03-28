@@ -49,7 +49,7 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 The page can then be edited through a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) instance. __Example 2__ creates an editor and adds a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) to the page object created in __Example 1__.
         
 
-#### __[C#] Example 2: Add Text__
+#### __[C#] Example 2: Add text__
 
 {{region radpdfprocessing-getting-started_1}}
     FixedContentEditor editor = new FixedContentEditor(page);

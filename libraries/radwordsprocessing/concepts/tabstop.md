@@ -76,7 +76,7 @@ Excluding the default constructor, the __TabStopCollection__ class exposes an ov
 
 In __Example 2__ is illustrated how to insert items in the __TabStopCollection__ created in [Example 1](#example1). Keep in mind that due to the fact that this collection is immutable, the __Insert()__ method will return a **new instance** of the class.
 
-#### __[C#] Example 2: Insert Item in a TabStopCollection__
+#### __[C#] Example 2: Insert item in a TabStopCollection__
 {{region radwordsprocessing-concepts-tabstops_1}}
 	TabStopCollection collection = collection.Insert(new TabStop(Unit.InchToDip(4)))
                                              .Insert(new TabStop(Unit.InchToDip(5.5), TabStopType.Right));

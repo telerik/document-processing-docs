@@ -30,7 +30,7 @@ Tables can be added as a child of a [BlockContainer](http://www.telerik.com/help
 The code snippet from __Example 1__ creates and inserts a Table to a Section.
         
 
-#### __[C#] Example 1: Create and Insert a Table to a Section__
+#### __[C#] Example 1: Create and insert a table to a section__
 
 {{region radwordsprocessing-model-table_0}}
     Table emptyTable = new Table(document); // Table object with 0 rows and 0 columns.
@@ -48,7 +48,7 @@ The code snippet from __Example 1__ creates and inserts a Table to a Section.
 You can add a table at a specific index in the __Blocks__ collection of a __BlockContainer__ using the __Insert()__ method. __Example 2__ shows how to add a table at the beginning of a section.
         
 
-#### __[C#] Example 2: Insert a Table at a Specific Index__
+#### __[C#] Example 2: Insert a table at a specific index__
 
 {{region radwordsprocessing-model-table_1}}
     Table table = new Table(document, 10, 5);
@@ -60,7 +60,7 @@ You can add a table at a specific index in the __Blocks__ collection of a __Bloc
 You can also use the __AddTable()__ method of the __Blocks__ collection of a __BlockContainer__. The method creates a new __Table__ instance, adds it to the container and returns it.
         
 
-#### __[C#] Example 3: Insert a new Table to a Container__
+#### __[C#] Example 3: Insert a new table to a container__
 
 {{region radwordsprocessing-model-table_2}}
     Table table = section.Blocks.AddTable();
@@ -71,7 +71,7 @@ You can also use the __AddTable()__ method of the __Blocks__ collection of a __B
 Inserting a new __Table__ in the document can also be achieved with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
         
 
-#### __[C#] Example 4: Insert a Table Using RadFlowDocumentEditor__
+#### __[C#] Example 4: Insert a table using RadFlowDocumentEditor__
 
 {{region radwordsprocessing-model-table_3}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
@@ -145,7 +145,7 @@ __Properties__ exposes several properties that allow you to customize the layout
 __Example 5__ demonstrates how to add a __Table__ with 5 rows and 10 columns to a __RadFlowDocument__.
             
 
-#### __[C#] Example 5: Create a Table With Content and add it to a RadFlowDocument__
+#### __[C#] Example 5: Create a table with content and add it to a RadFlowDocument__
 
 {{region radwordsprocessing-model-table_4}}
     RadFlowDocument document = new RadFlowDocument();
@@ -175,11 +175,7 @@ __Example 5__ demonstrates how to add a __Table__ with 5 rows and 10 columns to 
 # See Also
 
  * [Table API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_table.html)
-
  * [Section]({%slug radwordsprocessing-model-section%})
-
  * [TableRow]({%slug radwordsprocessing-model-tablerow%})
-
  * [TableCell]({%slug radwordsprocessing-model-tablecell%})
-
  * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})

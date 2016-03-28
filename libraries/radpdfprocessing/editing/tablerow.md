@@ -44,7 +44,7 @@ In order to manipulate the cells in a row you can use TableRow's __Cells__ prope
 __Example 2__ shows how to add two cells in a row and get the cells count.
         
 
-#### __[C#] Example 2: Access Cells in a TableRow__
+#### __[C#] Example 2: Access cells in a TableRow__
 
 {{region radpdfprocessing-editing-tablerow_1}}
     TableCell firstCell = tableRow.Cells.AddTableCell();

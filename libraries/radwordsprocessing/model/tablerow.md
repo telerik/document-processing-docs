@@ -27,7 +27,7 @@ __TableRow__ is a flow document element that defines a row within a [Table]({%sl
 You can use the code snippet from __Example 1__ to create a __TableRow__ and add it in a __Table__.
         
 
-#### __[C#] Example 1: Create a TableRow and Add it to a Table__
+#### __[C#] Example 1: Create a TableRow and add it to a table__
 
 {{region radwordsprocessing-model-tablerow_0}}
     TableRow row = new TableRow(document);
@@ -39,7 +39,7 @@ You can use the code snippet from __Example 1__ to create a __TableRow__ and add
 In order to create a __TableRow__ and add it in the document tree in the same time, you can use the __AddTableRow()__ method of the [Rows](http://www.telerik.com/help/wpf/p_telerik_windows_documents_flow_model_table_rows.html) collection property of the table.
         
 
-#### __[C#] Example 2: Create a TableRow and Add it to a Table in the Same Time__
+#### __[C#] Example 2: Create a TableRow and add it to a table in the same time__
 
 {{region radwordsprocessing-model-tablerow_1}}
     TableRow row = table.Rows.AddTableRow();
@@ -87,7 +87,7 @@ The __TableRow__ element exposes several properties that allow you to customize 
 __Example 3__ shows how to add a number of __TableCell__ elements in a TableRow.
             
 
-#### __[C#] Example 3: Add TableCell Objects to a TableRow__
+#### __[C#] Example 3: Add TableCell objects to a TableRow__
 
 {{region radwordsprocessing-model-tablerow_2}}
     TableRow row = table.Rows.AddTableRow();
@@ -105,9 +105,6 @@ __Example 3__ shows how to add a number of __TableCell__ elements in a TableRow.
 # See Also
 
  * [TableRow API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_tablerow.html)
-
  * [Table]({%slug radwordsprocessing-model-table%})
-
  * [TableCell]({%slug radwordsprocessing-model-tablecell%})
-
  * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})

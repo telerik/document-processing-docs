@@ -30,7 +30,7 @@ You could merge documents at a specific position using the InsertDocument() meth
 
 **Example 1** demonstrates how to use the InsertDocument() method.
 
-#### __[C#] Example 1: Insert Source Document into Target Document__
+#### __[C#] Example 1: Insert source document into target document__
 
 {{region radwordsprocessing-editing-insert-documents_0}}
 
@@ -93,9 +93,6 @@ You could merge documents at a specific position using the InsertDocument() meth
 # See Also
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
-
 * [Clone and Merge]({%slug radwordsprocessing-editing-clone-and-merge%})
-
 * [Section]({%slug radwordsprocessing-model-section%})
-
 * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

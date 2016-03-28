@@ -41,7 +41,7 @@ __Link__ exposes the following properties:
 * __Destination__: A destination to be displayed when the annotation is activated. __Example 1__ demonstrates how you can create a Link using a previously created __Destination__ and add the Link in RadFixedPage's Annotations collection.
             
 
-	#### __[C#] Example 1: Add Link to Destination__
+	#### __[C#] Example 1: Add link to destination__
 	
 	{{region radpdfprocessing-model-annotations-and-destinations_0}}
 	    Link linkWithDestination = new Link(destination);
@@ -53,7 +53,7 @@ __Link__ exposes the following properties:
 * __Action__: An action to be performed when the annotation is activated. __Example 2__ demonstrates how you can create a Link using a previously created __Action__ and add the Link in RadFixedPage's Annotations collection.
             
 
-	#### __[C#] Example 2: Add Link with Action__
+	#### __[C#] Example 2: Add link with action__
 	
 	{{region radpdfprocessing-model-annotations-and-destinations_1}}
 	    Link linkWithAction = new Link(action);
@@ -105,7 +105,7 @@ The __Destination__ class itself only exposes a __Page__ property specifying the
 __Example 3__ shows how you can create a Location object, associate it with a Link and add it to a RadFixedPage.
         
 
-#### __[C#] Example 3: Add Link with Location__
+#### __[C#] Example 3: Add link with location__
 
 {{region radpdfprocessing-model-annotations-and-destinations_2}}
     Location location = new Location();
@@ -140,7 +140,7 @@ The abstract __Action__ class defines a behavior for an annotation. Action is in
 __Example 4__ demonstrates how to create an action of type __GoToAction__, associate it with a Link and add it to a RadFixedPage. The *location* object can be of type Location like the one in __Example 3__.
         
 
-#### __[C#] Example 4: Add Link with Action__
+#### __[C#] Example 4: Add link with action__
 
 {{region radpdfprocessing-model-annotations-and-destinations_3}}
     GoToAction goToAction = new GoToAction();

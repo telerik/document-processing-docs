@@ -27,7 +27,7 @@ In order to import an HTML document you can use the overloads of the __HtmlForma
 __Example 1__ shows how to use HtmlFormatProvider to import an HTML document from a file.
         
 
-#### __[C#] Example 1: Import HTML File__
+#### __[C#] Example 1: Import HTML file__
 
 {{region radwordsprocessing-formats-and-conversion-html-htmlformatprovider_0}}
     using (Stream input = File.Create(@"Sample.html"))
@@ -42,7 +42,7 @@ __Example 1__ shows how to use HtmlFormatProvider to import an HTML document fro
 __Example 2__ shows how you can import an HTML string.
         
 
-#### __[C#] Example 2: Import HTML String__
+#### __[C#] Example 2: Import HTML string__
 
 {{region radwordsprocessing-formats-and-conversion-html-htmlformatprovider_1}}
     string html = "<p>hello world!</p>";
@@ -63,7 +63,7 @@ In order to export a document to HTML you can use the overloads of the __HtmlFor
 __Example 3__ shows how to use the HtmlFormatProvider to export an instance of RadFlowDocument to a file:
         
 
-#### __[C#] Example 3: Export HTML to File__
+#### __[C#] Example 3: Export HTML to file__
 
 {{region radwordsprocessing-formats-and-conversion-html-htmlformatprovider_2}}
     HtmlFormatProvider provider = new HtmlFormatProvider();
@@ -79,7 +79,7 @@ __Example 3__ shows how to use the HtmlFormatProvider to export an instance of R
 You can also export the document to a string variable like shown in __Example 4__.
         
 
-#### __[C#] Example 4: Export HTML to String__
+#### __[C#] Example 4: Export HTML to string__
 
 {{region radwordsprocessing-formats-and-conversion-html-htmlformatprovider_3}}
     RadFlowDocument document = CreateRadFlowDocument();

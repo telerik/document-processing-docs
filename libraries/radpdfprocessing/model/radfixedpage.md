@@ -39,7 +39,7 @@ __RadFixedPage__ exposes the following properties:
 __Example 1__ demonstrates how to create a new __RadFixedPage__ instance and add it to the __Pages__ collection of __RadFixedDocument__.
         
 
-#### __[C#] Example 1: Create RadFixedPage and add it to a document.__
+#### __[C#] Example 1: Create RadFixedPage and add it to a document__
 
 {{region radpdfprocessing-model-radfixedpage_0}}
     RadFixedDocument document = new RadFixedDocument();

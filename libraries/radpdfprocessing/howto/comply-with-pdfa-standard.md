@@ -80,7 +80,7 @@ The __PdfFormatProvider__ class allows to export a __RadFixedDocument__ to PDF a
 
 To comply with one of the versions of the standard, you need to specify __ComplianceLevel__ different from __None__. The snippet in __Example 1__ shows how this can be achieved. 
 
-#### __[C#] Example 1: Export PDF/A Compliant Document__
+#### __[C#] Example 1: Export PDF/A compliant document__
 
 {{region radpdfprocessing-howto-comply-with-pdfa-standard_0}}
 	PdfFormatProvider provider = new PdfFormatProvider();

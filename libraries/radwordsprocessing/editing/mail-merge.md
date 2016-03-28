@@ -23,7 +23,7 @@ Merge fields are a type of [Fields]({%slug radwordsprocessing-concepts-fields%})
 The code snippet in __Example 1__ shows how to initialize a RadFlodDocumentEditor instance and insert a merge field.
         
 
-#### __[C#] Example 1: Insert a Merge Field__
+#### __[C#] Example 1: Insert a merge field__
 
 {{region radwordsprocessing-editing-mail-merge_0}}
     RadFlowDocument document = new RadFlowDocument();
@@ -36,7 +36,7 @@ The code snippet in __Example 1__ shows how to initialize a RadFlodDocumentEdito
 Additionally, a field can be added to a Paragraph manually by creating a __FieldInfo__ instance and placing its start, code, separator, result and end in the block. __Example 2__ shows the manual approach for adding a merge field.
         
 
-#### __[C#] Example 2: Add a Merge Field Manually__
+#### __[C#] Example 2: Add a merge field manually__
 
 {{region radwordsprocessing-editing-mail-merge_1}}
     FieldInfo field = new FieldInfo(document);
@@ -61,7 +61,7 @@ During the operation, each MergeField is replaced with the corresponding informa
 Example 3 shows a simple example data source.
         
 
-#### __[C#] Example 3: Sample Data Source__
+#### __[C#] Example 3: Sample data source__
 
 {{region radwordsprocessing-editing-mail-merge_2}}
     List<MailMergeRecord> mailMergeDataSource = new List<MailMergeRecord>()
@@ -84,7 +84,7 @@ Example 3 shows a simple example data source.
 __Example 4__ performs the mail merge operation over a previously defined template document using the data source from __Example 3__.
         
 
-#### __[C#] Example 4: Perform Mail Merge__
+#### __[C#] Example 4: Perform mail merge__
 
 {{region radwordsprocessing-editing-mail-merge_3}}
     RadFlowDocument mailMergeResult = document.MailMerge(mailMergeDataSource);
@@ -95,7 +95,5 @@ __Example 4__ performs the mail merge operation over a previously defined templa
 # See Also
 
  * [Fields]({%slug radwordsprocessing-concepts-fields%})
-
  * [Merge Field]({%slug radwordsprocessing-concepts-merge-field%})
-
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})

@@ -46,7 +46,7 @@ The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-pos
 __Example 2__ demonstrates how you can create а FixedContentEditor with a specific initial position.
         
 
-#### __[C#] Example 2: Create FixedContentEditor with Specific Position__
+#### __[C#] Example 2: Create FixedContentEditor with specific position__
 
 {{region radpdfprocessing-editing-fixedcontenteditor_1}}
     FixedContentEditor editor = new FixedContentEditor(contentRootElement, initialPosition);
@@ -87,7 +87,7 @@ __Figure 1__ shows the result of __Example 3__.
 __Example 4__ shows how you can use the __Block__ object to draw a paragraph.
             
 
-#### __[C#] Example 4: Insert Paragraph__
+#### __[C#] Example 4: Insert paragraph__
 
 {{region radpdfprocessing-editing-fixedcontenteditor_3}}
     Block block = new Block();
@@ -122,7 +122,7 @@ __FixedContentEditor__ provides several overloads for inserting an [Image]({%slu
 __Example 5__ shows how you can add an image created from a Stream.
             
 
-#### __[C#] Example 5: Insert Image__
+#### __[C#] Example 5: Insert image__
 
 {{region radpdfprocessing-editing-fixedcontenteditor_4}}
     using (Stream stream = this.GetResourceStream("Telerik_logo.jpg"))
@@ -133,7 +133,7 @@ __Example 5__ shows how you can add an image created from a Stream.
 
 
 
-#### Figure 3: Image Result
+#### Figure 3: Image result
 ![Rad Pdf Processing Editing Fixed Content Editor 04](images/RadPdfProcessing_Editing_FixedContentEditor_04.png)
 
 ### Inserting Geometries
@@ -151,7 +151,7 @@ The following methods can be used to insert different [Geometries]({%slug radpdf
 __Example 6__ shows how you can add an ellipse using one of FixedContentEditor's methods.
             
 
-#### __[C#] Example 6: Insert Ellipse__
+#### __[C#] Example 6: Insert ellipse__
 
 {{region radpdfprocessing-editing-fixedcontenteditor_5}}
     editor.DrawEllipse(new Point(250, 70), 136, 48);
@@ -175,7 +175,7 @@ When the returned __IDisposable__ object from the __PushClipping()__ method is d
 When a new clipping is pushed, it is set as a clipping to the current clipping in the editor. __Example 7__ shows how a clipping can be pushed.
             
 
-#### __[C#] Example 7: Push Clipping__
+#### __[C#] Example 7: Push clipping__
 
 {{region radpdfprocessing-editing-fixedcontenteditor_6}}
     string visibleText = "The last word in this text is";
@@ -195,7 +195,7 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
 __Figure 4__ shows the result of __Example 7__.
             
 
-#### Figure 4: Clipping Result
+#### Figure 4: Clipping result
 ![Rad Pdf Processing Editing Fixed Content Editor 03](images/RadPdfProcessing_Editing_FixedContentEditor_03.png)
 
 ### Inserting Table
@@ -206,7 +206,7 @@ __FixedContentEditor__ exposes __DrawTable()__ method, which allows you to easil
 __Example 8__ generates a table and draws it in some fixed size.
             
 
-#### __[C#] Example 8: Insert Table__
+#### __[C#] Example 8: Insert table__
 
 {{region radpdfprocessing-editing-fixedcontenteditor_8}}
     Table table = new Table();
@@ -229,7 +229,7 @@ __Example 8__ generates a table and draws it in some fixed size.
     editor.DrawTable(table, new Size(180, double.PositiveInfinity));
 {{endregion}}
 
-#### The Table created in Example 8
+#### The table created in Example 8
 ![Rad Pdf Processing Editing Fixed Content Editor 06](images/RadPdfProcessing_Editing_FixedContentEditor_06.png)
 
 More detailed information about tables is available in the [Table]({%slug radpdfprocessing-editing-table%}) documentation article.
@@ -242,7 +242,7 @@ The [Position]({%slug radpdfprocessing-concepts-position%}) property exposed by 
 The code in __Example 9__ shows how to manipulate the position of the inserted content elements and __Figure 5__ shows the result of the code.
         
 
-#### __[C#] Example 9: Scale and Rotate Content__
+#### __[C#] Example 9: Scale and rotate content__
 
 {{region radpdfprocessing-editing-fixedcontenteditor_7}}
     editor.Position.Scale(1.5, 0.5);
@@ -257,7 +257,7 @@ The code in __Example 9__ shows how to manipulate the position of the inserted c
 
 
 
-#### Figure 5: Positioning Result
+#### Figure 5: Positioning result
 ![Rad Pdf Processing Editing Fixed Content Editor 05](images/RadPdfProcessing_Editing_FixedContentEditor_05.png)
 
         

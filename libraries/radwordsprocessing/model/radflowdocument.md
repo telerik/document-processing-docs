@@ -88,7 +88,7 @@ The Sections property of the document is of type __SectionCollection__ and allow
 Alternatively, you could create a section by passing to its constructor the document it should be associated with.
             
 
-#### __[C#] Example 3: Create a Section__
+#### __[C#] Example 3: Create a section__
 
 {{region radwordsprocessing-model-radflowdocument_2}}
     Section section = new Section(document);
@@ -101,7 +101,7 @@ Alternatively, you could create a section by passing to its constructor the docu
 You can merge a __RadFlowDocument__ within another document by using the __Merge()__ method and pass the source document as a parameter to it:
             
 
-#### __[C#] Example 4: Merge Documents__
+#### __[C#] Example 4: Merge documents__
 
 {{region radwordsprocessing-model-radflowdocument_3}}
     document.Merge(sourceDocument);
@@ -118,7 +118,7 @@ Additionally, you have the opportunity to specify the __MergeOptions__ which con
     * __RenameSourceStyle__: If a conflict between styles with the same IDs appears, the style of the __source__ document is renamed and used.
                     
 
-#### __[C#] Example 5: Merge Documents Using MergeOptions__
+#### __[C#] Example 5: Merge documents using MergeOptions__
 
 {{region radwordsprocessing-model-radflowdocument_4}}
     MergeOptions mergeOptions = new MergeOptions();
@@ -137,7 +137,7 @@ __RadFlowDocument__ exposes an __UpdateFields()__ method which allows you to upd
 The snippet from __Example 6__ shows how all fields in a document can be updated simultaneously.
             
 
-#### __[C#] Example 6: Update All Fields in a Document__
+#### __[C#] Example 6: Update all fields in a document__
 
 {{region radwordsprocessing-model-radflowdocument_5}}
     document.UpdateFields();
@@ -148,9 +148,6 @@ The snippet from __Example 6__ shows how all fields in a document can be updated
 # See Also
 
  * [RadFlowDocument API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_radflowdocument.html)
-
  * [Document model]({%slug radwordsprocessing-model%})
-
  * [Section]({%slug radwordsprocessing-model-section%})
-
  * [Styles]({%slug radwordsprocessing-concepts-styles%})

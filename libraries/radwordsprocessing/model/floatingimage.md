@@ -26,7 +26,7 @@ __FloatingImage__ is an inline-level anchor flow document element linked with a 
 __Example 1__ shows how to create a FloatingImage and add it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
         
 
-#### __[C#] Example 1: Create a FloatingImage and Insert it in a Paragraph__
+#### __[C#] Example 1: Create a floating image and insert it in a paragraph__
 
 {{region radwordsprocessing-model-floatingimage_0}}
     FloatingImage floatingImage = new FloatingImage(document);
@@ -41,7 +41,7 @@ __Example 1__ shows how to create a FloatingImage and add it to a [Paragraph]({%
 You can add an image at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. Here is how to add a FloatingImage at the beginning of a paragraph:
         
 
-#### __[C#] Example 2: Add a FloatingImage to a Specific Position__
+#### __[C#] Example 2: Add a floating image to a specific position__
 
 {{region radwordsprocessing-model-floatingimage_1}}
     FloatingImage floatingImage = new FloatingImage(document);
@@ -64,7 +64,7 @@ You can also use the __AddFloatingImage()__ method of the __Inlines__ collection
 Inserting __FloatingImage__ element in RadFlowDocument can also be achieved with [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
         
 
-#### __[C#] Example 4: Insert a FloatingImage Using RadFlowDocumentEditor__
+#### __[C#] Example 4: Insert a floating image using RadFlowDocumentEditor__
 
 {{region radwordsprocessing-model-floatingimage_3}}
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
@@ -151,9 +151,6 @@ This section explains the behavior of the  __Size__ property of The __Image__ ob
 # See Also
 
  * [FloatingImage API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_shapes_floatingimage.html)
-
  * [Document model]({%slug radwordsprocessing-model%})
-
  * [ImageInline]({%slug radwordsprocessing-model-imageinline%})
-
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

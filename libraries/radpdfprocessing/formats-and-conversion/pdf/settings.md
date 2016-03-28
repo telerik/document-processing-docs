@@ -27,7 +27,7 @@ The event is fired when a user password is needed to open the document. The pass
 __Example 1__ shows how you can create a __PdfImportSettings__ object and assign it to a PdfFormatProvider.
         
 
-#### __[C#] Example 1: Import Settings__
+#### __[C#] Example 1: Import settings__
 
 {{region radpdfprocessing-formats-and-conversion-pdf-settings_0}}
     PdfFormatProvider provider = new PdfFormatProvider();
@@ -77,7 +77,7 @@ The default value is __None__. For more information on PDF/A compliance, check t
 __Example 2__ shows how you can create a __PdfExportSettings__ object and assign it to a PdfFormatProvider.
         
 
-#### __[C#] Example 2: Export Settings__
+#### __[C#] Example 2: Export settings__
 
 {{region radpdfprocessing-formats-and-conversion-pdf-settings_1}}
     PdfFormatProvider provider = new PdfFormatProvider();

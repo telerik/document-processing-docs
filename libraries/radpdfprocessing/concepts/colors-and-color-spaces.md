@@ -167,7 +167,7 @@ The __TilingBase__ class is inherited from the following classes:
 Since the __TilingBase__ class implements the __IContentRootElement__ interface like [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}), the content of the tiling can be modified using the __FixedContentEditor__ class. __Example 4__ shows how a tiling pattern can be created.
             
 
-#### __[C#] Example 4: Create Tiling__
+#### __[C#] Example 4: Create tiling__
 
 {{region radpdfprocessing-concepts-colors-and-color-spaces_2}}
     FixedContentEditor containerEditor = new FixedContentEditor(container);

@@ -74,7 +74,7 @@ The first section of a document starts as soon as a content is inserted to the e
 Adding an additional section is achieved with the __InsertSectionBreak()__ method as demonstrated in __Example 2__.
             
 
-#### __[C#] Example 2: Start a Section__
+#### __[C#] Example 2: Start a section__
 
 {{region radpdfprocessing-editing-radfixeddocumenteditor_1}}
     editor.InsertSectionBreak();
@@ -87,7 +87,7 @@ Adding an additional section is achieved with the __InsertSectionBreak()__ metho
 ### Starting New Page
 All pages that have the same __SectionProperties__ are part of the current section. To start a new page, you can use the following code:
 
-#### __[C#] Example 3: Start new Page__
+#### __[C#] Example 3: Start new page__
 {{region radpdfprocessing-editing-radfixeddocumenteditor_7}}
 	editor.InsertPageBreak();
 {{endregion}}
@@ -133,7 +133,7 @@ The first paragraph is created as soon as content is inserted in the editor. You
 In order to start a new paragraph, use the code in __Example 4__.
             
 
-#### __[C#] Example 4: Start a Paragraph__
+#### __[C#] Example 4: Start a paragraph__
 
 {{region radpdfprocessing-editing-radfixeddocumenteditor_2}}
     editor.InsertParagraph();
@@ -184,7 +184,7 @@ The character properties that are responsible for the look of the runs are liste
 There are a number of overloads that insert a run. The code snippet in __Example 5__ inserts new runs with specific font family, style and weight.
                 
 
-#### __[C#] Example 5: Insert Run__
+#### __[C#] Example 5: Insert run__
 
 {{region radpdfprocessing-editing-radfixeddocumenteditor_3}}
     editor.InsertRun("text");
@@ -200,7 +200,7 @@ There are a number of overloads that insert a run. The code snippet in __Example
 The code in __Example 6__ inserts a new run and a line break after it.
                 
 
-#### __[C#] Example 6: Insert Run and Break Line__
+#### __[C#] Example 6: Insert run and line break__
 
 {{region radpdfprocessing-editing-radfixeddocumenteditor_4}}
     editor.InsertLine("Line of text");
@@ -217,7 +217,7 @@ Image inline is a combination of an [ImageSource]({%slug radpdfprocessing-model-
 
 You can insert image inline using one of the following methods:
          
-#### __[C#] Example 7: Insert ImageInline__    
+#### __[C#] Example 7: Insert image__    
    
 {{region radpdfprocessing-editing-radfixeddocumenteditor_8}}
 	editor.InsertImageInline(imageSource);
@@ -229,7 +229,7 @@ You can insert image inline using one of the following methods:
 The __Table__ class implements the __IBlockElement__ interface and an instance of this class can be easily inserted as a new block in the document. You could insert the table using the __InsertTable()__ method like illustrated in __Example 8__. __RadFixedDocumentEditor__ takes care for positioning, measuring and splitting the table onto pages.
         
 
-#### __[C#] Example 8: Insert Table__
+#### __[C#] Example 8: Insert table__
 
 {{region radpdfprocessing-editing-radfixeddocumenteditor_5}}
     editor.InsertTable(table);
@@ -241,7 +241,7 @@ For more detailed information on tables, check the [Table]({%slug radpdfprocessi
 
 The [IBlockElement](http://docs.telerik.com/devtools/wpf/api/html/t_telerik_windows_documents_fixed_model_editing_flow_iblockelement.htm) interface allows you to easily draw and split some block content onto pages. The interface is implemented by [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table%}) classes. You can easily add some block element instance with RadFixedDocumentEditor using the InsertBlock() method like illustrated in __Example 9__.
 
-#### __[C#] Example 9: Insert Block Element__
+#### __[C#] Example 9: Insert Block element__
 
 {{region radpdfprocessing-editing-radfixeddocumenteditor_6}}
 	editor.InsertBlock(blockElement);
@@ -254,7 +254,7 @@ You can easily insert list items with __RadFixedDocumentEditor__. The first thin
 
 The following code snippet shows how to add a new list to __RadFixedDocumentEditor’s ListCollection__ and after that insert a paragraph with the corresponding list properties:
 
-#### __[C#] Example 10: Insert List__
+#### __[C#] Example 10: Insert list__
 {{region radpdfprocessing-editing-radfixeddocumenteditor_8}}
 	List list = editor.Lists.AddList(ListTemplateType.NumberedDefault);
 	editor.ParagraphProperties.ListId = list.Id;

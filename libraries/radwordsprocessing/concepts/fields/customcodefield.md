@@ -48,7 +48,7 @@ Here are some commonly used fields. The complete list of field codes and the swi
 **Example 1** shows how to insert a __PAGE__ field representing the current page number in the document.
             
 
-#### __[C#] Example 1: Insert PAGE Field__
+#### __[C#] Example 1: Insert PAGE field__
 
 {{region radwordsprocessing-concepts-customcodefield_0}}
     editor.InsertField("PAGE  \\* ROMAN", "VII");
@@ -64,7 +64,7 @@ The __\* ROMAN__ is general formatting switch that formats a numeric result usin
 **Example 2** demonstrates how a combination of __PAGE__ and __NUMPAGES__ fields can be inserted to show which is the current page as well as the total page count in the document.
             
 
-#### __[C#] Example 2: Insert NUMPAGES Field__
+#### __[C#] Example 2: Insert NUMPAGES field__
 
 {{region radwordsprocessing-concepts-customcodefield_1}}
     editor.InsertText("Page ");
@@ -80,7 +80,7 @@ The __\* ROMAN__ is general formatting switch that formats a numeric result usin
 In ** Example 3** is demonstrated how to insert __AUTHOR__ field showing the name of the author of the document.
             
 
-#### __[C#]  Example 3: Insert AUTHOR Field__
+#### __[C#]  Example 3: Insert AUTHOR field__
 
 {{region radwordsprocessing-concepts-customcodefield_3}}
     editor.InsertField("AUTHOR  \\* Upper", "JOHN DOE");
@@ -96,7 +96,7 @@ The __\* Upper__ switch will convert all letters in the result to uppercase.
 **Example 4** shows how to insert a table of contents (TOC) field.
             
 
-#### __[C#]  Example 4: Insert Table of Contents Field__
+#### __[C#]  Example 4: Insert Table of Contents field__
 
 {{region radwordsprocessing-concepts-customcodefield_4}}
     FieldInfo tocField = editor.InsertField("TOC \\o \"1-3\" \\h \\z \\u", "result");
@@ -126,7 +126,5 @@ The __IsDirty__ property is set so that the TOC field is updated when the docume
 # See Also
 
  * [Fields]({%slug radwordsprocessing-concepts-fields%})
-
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
-
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
