@@ -74,6 +74,48 @@ navigation:
 ## RadSpreadProcessing Start
     "*radspreadprocessing":
         title: RadSpreadProcessing
+    libraries/radspreadprocessing/working-with-workbooks:
+        title: Workbooks
+        position: 3
+    libraries/radspreadprocessing/working-with-worksheets:
+        title: Worksheets
+        position: 4
+    libraries/radspreadprocessing/working-with-rows-and-columns:
+        title: Rows and Columns
+        position: 5
+    libraries/radspreadprocessing/working-with-cells:
+        title: Cells
+        position: 6
+    libraries/radspreadprocessing/formats-and-conversion:
+        title: Formats and Conversion
+        position: 7
+    libraries/radspreadprocessing/features:
+        title: Features
+        position: 8
+    libraries/radspreadprocessing/formats-and-conversion/xlsx:
+        title: Xlsx
+        position: 2
+    libraries/radspreadprocessing/formats-and-conversion/pdf:
+        title: Pdf
+        position: 3
+    libraries/radspreadprocessing/formats-and-conversion/csv:
+        title: Csv
+        position: 4
+    libraries/radspreadprocessing/formats-and-conversion/txt:
+        title: Txt
+        position: 5
+    libraries/radspreadprocessing/features/fill-data-automatically:
+        title: Fill Data Automatically
+        position: 0
+    libraries/radspreadprocessing/features/formulas:
+        title: Formulas
+        position: 1
+    libraries/radspreadprocessing/features/protection:
+        title: Protection
+        position: 2
+    libraries/radspreadprocessing/features/styling:
+        title: Styling
+        position: 3
 ## RadPdfProcessing Start
     "*radpdfprocessing":
         title: RadPdfProcessing   
