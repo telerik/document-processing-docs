@@ -56,8 +56,21 @@ In order to customize the way a column appears, you could use one of the followi
 	}
 {{endregion}}
 
+In some cases you may need to skip several columns and start filling the data in the next one. The [**IWorksheetExporter**]({%slug %}) interface declares a method that allows you to implement such scenario. **Example 3** shows how to skip 5 columns.
+
+#### **[C#] Example 3: Skip columns**
+
+{{region [ADD NAME]}}
+
+	worksheet.SkipColumns(5);
+	using (IColumnExporter column = worksheet.CreateColumnExporter())
+	{
+	    column.SetHidden(true); // The sixth (F) column will be hidden.
+	}
+{{endregion}}
+
 # See Also
 
-* Rows
-* Cells
-* Worksheets
+* [Rows]({%slug %})
+* [Cells]({%slug %})
+* [Worksheets]({%slug %})

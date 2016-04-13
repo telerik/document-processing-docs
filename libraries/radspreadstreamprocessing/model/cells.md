@@ -5,7 +5,7 @@ description: Cells
 slug: radspreadstreamprocessing-model-cells
 tags: cell
 published: True
-position: 0
+position: 5
 ---
 
 # Cells
@@ -71,9 +71,7 @@ In order to allow you setting a formula as a value of a cell, ICellExporter defi
 {{endregion}}
 
 
-### Set a Format
-
-Another method, exposed by **ICellExporter** - SetFormat() - enables you to change the appearance of a cell. The SetFomat() method accepts an argument of type SpreadCellFormat [API REF]. For more details on how you could use the different format settings, please check [this article]({%slug %})
+>All formulas should be set in InvariantCulture. For example, the decimal separator should be “.”, the list separator should be “,”.
 
 
 ### Merge Cells
@@ -88,6 +86,64 @@ Another method, exposed by **ICellExporter** - SetFormat() - enables you to chan
 	   worksheet.MergeCells(3, 3, 10, 10);  
 	}
 {{endregion}}
+
+>The merged cell range has the formatting and value of the top left cell of the range.
+
+### Set a Format
+
+Another method, exposed by **ICellExporter** - SetFormat() - enables you to change the appearance of a cell. The SetFomat() method accepts an argument of type SpreadCellFormat [API REF]. The next list describes the properties exposed by SpreadCellFormat:
+
+
+- Number Format
+	
+	- **NumberFormat**: Gets or sets the number format.
+
+- Alignment properties
+	
+	- **HorizontalAlignment**: Gets or sets the horizontal alignment. The property is of type [SpreadHorizontalAlignment][API REF].
+	
+	- **VerticalAlignment**: Gets or sets the vertical alignment. The property is of type [SpreadVerticalAlignment][API REF].
+	
+	- **Indent**: Gets or sets the indent.
+	
+	- **WrapText**: Gets or sets a value indicating if the text in a cell should be line-wrapped within the cell.
+
+- Font properties
+	
+	- **ForeColor**: Gets or sets the fore color. The property is of type [SpreadThemableColor][API REF].
+	
+	- **FontFamily**: Gets or sets the font family. The property is of type [SpreadThemableFontFamily][API REF].
+	
+	- **FontSize**: Gets or sets the size of the font.
+	
+	- **IsBold**: Gets or sets a value indicating whether the text is bold.
+	
+	- **IsItalic**: Gets or sets a value indicating whether the text is italic.
+	
+	- **Underline**: Gets or sets the underline type. The property is of type [SpreadUnderlineType][API REF].
+
+- Border properties
+	
+	- **LeftBorder**: Gets or sets the left border. The property is of type [SpreadBorder][API REF].
+	
+	- **RightBorder**: Gets or sets the right border. The property is of type [SpreadBorder][API REF].
+	
+	- **TopBorder**: Gets or sets the top border. The property is of type [SpreadBorder][API REF].
+	
+	- **BottomBorder**: Gets or sets the bottom border. The property is of type [SpreadBorder][API REF].
+	
+	- **DiagonalUpBorder**: Gets or sets the diagonal up border. The property is of type [SpreadBorder][API REF].
+		
+	- **DiagonalDownBorder**: Gets or sets the diagonal down border. The property is of type [SpreadBorder][API REF].
+
+- Fill properties
+	
+	- **Fill**: Gets or sets the fill. The property could be of type [SpreadGradientFill][API REF] or [SpreadPatternFill][API REF].
+
+In addition to the listed properties, the SpreadCellFormat class allows you to set a style to a cell. For more information on cell styles, check [this topic]({%slug %})
+
+A SpreadCellFormat instance could be applied on multiple cells. However, if a property of the format changes, the new setting s will be applied to the cells formatted after the modification.
+
 
 # See Also
 

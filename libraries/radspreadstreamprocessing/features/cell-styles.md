@@ -1,21 +1,17 @@
 ---
-title: Formatting Cells
-page_title: Formatting Cells
-description: Formatting Cells
-slug: radspreadstreamprocessing-features-styling-formatting-cells
-tags: formatting, cell, styles
+title: Cell Styles
+page_title: Cell Styles
+description: Cell Styles
+slug: radspreadstreamprocessing-features-styling-cell-styles
+tags: cell, styles
 published: True
 position: 1
 ---
 
-# Cell Formats
-
-
-
-
 # Cell Styles
 
-A cell style is a predefined set of formatting options, such as cell borders, fonts, font sizes and number formats. Using cell styles allows you to apply multiple format options in one step and also offers an easy approach to achieve consistency in cell formatting. **RadSpreadStreamProcessing** offers a number of built-in cell styles that you can modify or apply directly. Its API allows you to duplicate an existing style or create a new one according to your preferences.
+A cell style is a predefined set of formatting options, such as cell borders, fonts, font sizes and number formats. Using cell styles allows you to apply multiple format options in one step and also offers an easy approach to achieve consistency in cell formatting. When a style is updated, all the cells that has already applied this style will be updated with the new value. 
+
 
 ## Cell Style Properties
 
@@ -95,6 +91,9 @@ When you apply a style to a cell with locally set properties, the end result is 
 {{endregion}}
 
 Through the API you can add, modify or remove styles from the **CellStyles** collection of [IWorkbookExporter]({%slug %}).
+
+
+>If you would like to set a particular property of a cell, you could do it through the [cell format]({%slug %}).
 
 ## Create a Style
 

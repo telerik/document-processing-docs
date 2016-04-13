@@ -9,3 +9,5 @@ position: 0
 ---
 
 # Support
+
+You can contact Telerik Support with a technical question using your account: http://www.telerik.com/account/support-tickets/available-support-list.aspx.

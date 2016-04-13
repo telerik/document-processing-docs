@@ -35,7 +35,6 @@ A concrete instance of IRowExporter could be created through the CreateRowExport
 
 >IRowExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
-
 In order to customize the way a row appears, you could use one of the following methods:
 
 * **SetWidthInPixels()**: Sets the row width in pixels.
@@ -51,14 +50,28 @@ In order to customize the way a row appears, you could use one of the following 
 
 {{region [ADD NAME]}}
 
-	using (IColumnExporter column = worksheet.CreateColumnExporter())
+	using (IRowExporter row = worksheet.CreateRowExporter())
 	{
-		column.SetWidthInPixels(100);
+		row.SetHeightInPixels(200);
+	}
+{{endregion}}
+
+
+In some cases you may need to skip several rows and start filling the data in the next one. The [**IWorksheetExporter**]({%slug %}) interface declares a method that allows you to implement such scenario. **Example 3** shows how to skip 5 rows.
+
+#### **[C#] Example 3: Skip rows**
+
+{{region [ADD NAME]}}
+
+	worksheet.SkipRows(5);
+	using (IRowExporter row = worksheet.CreateRowExporter())
+	{
+	    row.SetHidden(true); // The sixth row will be hidden.
 	}
 {{endregion}}
 
 # See Also
 
-* Rows
-* Cells
-* Worksheets
+* [Columns]({%slug %})
+* [Cells]({%slug %})
+* [Worksheets]({%slug %})
