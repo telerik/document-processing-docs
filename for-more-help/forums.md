@@ -9,3 +9,6 @@ position: 1
 ---
 
 # Forums
+
+The Telerik Product Forums, [http://www.telerik.com/community/forums.aspx](http://www.telerik.com/community/forums.aspx) , provide a place where you can communicate and consult with other people who use Telerik products.
+
