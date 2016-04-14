@@ -10,7 +10,7 @@ module Jekyll
 		page = context.environments.first["page"]
 		folderNames = page["dir"].split('/')
 		
-		suiteNames = context.registers[:site].config["platforms"].clone
+		platformNames = context.registers[:site].config["platforms"].clone
 		pageSuiteNames = page["platforms"]
 		nonSlFolders = context.registers[:site].config["non-sl-folders"]
 		result = String.new
@@ -18,14 +18,14 @@ module Jekyll
 		if (folderNames & ["libraries"]).any?
 			unless pageSuiteNames.nil?
 				splittedNames = pageSuiteNames.split(',')
-				suiteNames = suiteNames.select {|suite| splittedNames.any? {|name| suite.downcase.include?(name)}}
+				platformNames = platformNames.select {|suite| splittedNames.any? {|name| suite.downcase.include?(name)}}
 			end
 			
 			if pageSuiteNames.nil? && (folderNames & nonSlFolders).any?
-				suiteNames.reject!{|suite| suite.downcase.include?("silverlight")}
+				platformNames.reject!{|suite| suite.downcase.include?("silverlight")}
 			end
 		
-			suiteNames.each_with_index do |suite, index|				
+			platformNames.each_with_index do |suite, index|				
 				if index != 0
 					result += "<span class='separator'> | </span>"
 				end
@@ -38,3 +38,4 @@ module Jekyll
   end
 end
 
+Liquid::Template.register_tag('platforms', Jekyll::PlatformsTag)
