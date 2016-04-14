@@ -172,6 +172,11 @@ defaults:
 google_tag_manager: GTM-6X92
 google_custom_search: '001864970385031653096:jbj5mwde74q'
 
+# in articles use as shown below: 
+
+# Folders not supporting Silverlight:
+non-sl-folders: ["radpdfprocessing", "radspreadstreamprocessing"]
+
 ## Do not edit below this line
 safe: false
 markdown: MarkdownProcessor

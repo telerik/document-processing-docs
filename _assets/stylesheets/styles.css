@@ -26,6 +26,16 @@ a img {
     border-width: 0;
 }
 
+/* Supported Platforms Styles */
+
+.platforms {
+    font-size: 15px;
+    left: 380px;
+    position: absolute;
+    top: 10px;
+    z-index: 100;
+}
+
 /* Header */
 
 #page-header {
