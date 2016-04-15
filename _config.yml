@@ -38,6 +38,8 @@ navigation:
     "*howto":
         title: How To
         position: 100
+    "*features":
+        title: Features
 ## RadWordsProcessing Start
     "*radwordsprocessing":
         title: RadWordsProcessing
@@ -78,7 +80,6 @@ navigation:
         title: Model
         position: 3
     libraries/radspreadstreamprocessing/features:
-        title: Features
         position: 5
     libraries/radspreadstreamprocessing/features/styling:
         title: Styling
@@ -173,12 +174,12 @@ google_tag_manager: GTM-6X92
 google_custom_search: '001864970385031653096:jbj5mwde74q'
 
 # Available for name: 
-platforms: ["UI for WPF", "UI for ASP.Net AJAX", "UI for WinForms", "UI for Silverlight"]
+platforms: ["UI for WPF", "UI for ASP.NET AJAX", "UI for WinForms", "UI for Silverlight"]
 # in articles use as shown below: 
 # platforms: wpf, ajax, winforms, silverlight
 
 # Folders not supporting Silverlight:
-non-sl-folders: ["radpdfprocessing", "radspreadstreamprocessing"]
+non-sl-folders: ["radwordsprocessing", "radspreadstreamprocessing"]
 
 ## Do not edit below this line
 safe: false

@@ -6,6 +6,7 @@ slug: radziplibrary-zipextensions
 tags: zip, extensions
 published: True
 position: 5
+platforms: wpf, ajax
 ---
 
 # Zip Extensions
