@@ -39,10 +39,8 @@ layout: index
     </div>
 	
 	<a id="page-edit-link" class="btn btn-action" href="https://github.com/telerik/dpl-docs/edit/master{{ page.url | replace: '.html','' }}.md">Edit this page</a>
-	
-	{% platforms Available for: %}
-	
     <div id="page-article">
+		{% platforms Available for: %}
         <article>
             {{ content }}
         </article>

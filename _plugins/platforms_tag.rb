@@ -32,7 +32,7 @@ module Jekyll
 				result += "<span class='platform'>#{suite}</span>"
 			end
 			
-			"<div class='platforms'>#{@text} #{result}</div>"
+			"<div class='platforms'><div>#{@text} #{result}</div></div>"
 		end
     end
   end

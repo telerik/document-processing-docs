@@ -30,11 +30,35 @@ a img {
 
 .platforms {
     font-size: 15px;
-    left: 380px;
-    position: absolute;
-    top: 10px;
-    z-index: 100;
+    padding: 10px 0 0 3em;
+	max-width: 930px;
 }
+
+.platforms:after {
+    border-bottom: 2px solid #ebecee;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 5px;
+    position: relative;
+    width: 100%;
+}
+
+.platforms span.platform {
+	color: #00b312;
+}
+
+.platforms span.separator {
+	color: #d9d9d9;
+}
+
+.platforms span:first-child {
+    margin-left: 15px;
+}
+
+.separator {
+    margin: 10px;
+} 
 
 /* Header */
 
@@ -809,19 +833,20 @@ header, nav, section, article, aside, footer {
     min-height: 24px;
     min-width: 24px;
 } 
+/* Responsive styles */
 
 @media (max-width: 1200px) {
     #page-nav {
-       width: 30%; 
+       width: 25%; 
     }
     
     #markdown-toc,
     #page-article { 
-        width: 70%; 
+        width: 75%; 
     }
     
     #page-search {
-        left: 30%;
+        left: 25%;
     }
 
     .btn.pricing-btn {
@@ -833,7 +858,22 @@ header, nav, section, article, aside, footer {
     }
 }
 
-/* Responsive styles */
+@media (max-width: 1200px) and (min-width: 1000px) {
+	.platforms {
+		width: 70%;
+	}
+}
+
+@media (max-width: 1000px) {
+    .platforms {
+		margin-right: 1em;
+	}
+	
+	#page-edit-link {
+		display: none;
+	}
+} 
+
 @media (max-width:800px) {
     body {
         min-width: initial;

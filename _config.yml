@@ -173,7 +173,7 @@ defaults:
 google_tag_manager: GTM-6X92
 google_custom_search: '001864970385031653096:jbj5mwde74q'
 
-# Available for name: 
+# Available for names: 
 platforms: ["UI for WPF", "UI for ASP.NET AJAX", "UI for WinForms", "UI for Silverlight"]
 # in articles use as shown below: 
 # platforms: wpf, ajax, winforms, silverlight
