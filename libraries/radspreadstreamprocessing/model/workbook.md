@@ -2,7 +2,7 @@
 title: Workbook
 page_title: Workbook
 description: Workbook
-slug: radspreadstreamprocessing-workbook
+slug: radspreadstreamprocessing-model-workbook
 tags: workbook
 published: True
 position: 1
@@ -12,25 +12,35 @@ position: 1
 
 This article will help you get familiar with the concept of a workbook and its features.
 
+* [What is a Workbook](#what-is-a-workbook)
+
+* [IWorkbookExporter Interface](#iworkbookexporter-interface)
+
+* [Using IWorkbookExporter](#using-iworkbookexporter)
+
+
 ## What is a Workbook?
 
-The workbook is the primary document that you use to retrieve, manipulate and store data. The workbook can also be described as a collection of worksheets, where a worksheet is in turn defined as a collection of cells organized in rows and columns. Each workbook contains, at least, one worksheet and often holds several sheets with related information.
+The workbook is the primary document that you use to manipulate and store data. The workbook can also be described as a collection of worksheets, where a worksheet is in turn defined as a collection of cells organized in rows and columns. Each workbook contains, at least, one worksheet and often holds several sheets with related information.
 
-The workbook is designed to hold together multiple worksheets in order to allow efficient organization and consolidation of data. Typically, a workbook has a single theme, responsible for its look, and contains worksheets with related data. 
+The workbook is designed to hold together multiple worksheets in order to allow efficient organization and consolidation of data. Typically, a workbook contains worksheets with related data. 
 
 
 ## IWorkbookExporter Interface
 
-In **RadSpreadStreamProcessing**, the workbook is represented by the [**IWorkbookExporter** interface][API REF]. This interface defines members for managing the worksheets and saving the workbook. In addition, each implementation of IWorkbookExporter allows you to access the cell styles of the workbook.
+In **RadSpreadStreamProcessing**, the workbook is represented by the [**IWorkbookExporter** interface][API REF]. This interface defines members for adding [worksheets]({%slug radspreadstreamprocessing-model-worksheet%}) and accessing the cell styles of the workbook. 
 
+**IWorkbookExporter** is responsible for exporting a workbook. Due to the specifics of the different file formats, different concrete instances of this interface take care about the creation and export of a document. 
 
-**IWorkbookExporter** represents a workbook that will be exported to one of the supported file formats. A concrete instance of this interface could be created through the **CreateWorkbookExporter()** method of [SpreadExporter][API REF]. The first parameter of the CreateWorkbookExporter() method specifies the file format that will be used to save the document and the second one represents the stream in which the document will be saved. 
+## Using IWorkbookExporter
+
+You can obtain an instance of IWorkbookExporter through the **CreateWorkbookExporter()** method of [SpreadExporter][API REF]. The first parameter of the CreateWorkbookExporter() method specifies the file format that will be used to save the document and the second one represents the stream in which the document will be saved. 
 
 The code from **Example 1** creates an empty workbook and exports it to an XLSX file.
 
 #### **[C#] Example 1: Create IWorkbookExporter**
 
-{{region [ADD NAME]}}
+{{region radspreadstreamprocessing-model-workbook_0}}
 	
 	using (FileStream stream = File.OpenWrite("sample.xlsx"))
 	{
@@ -46,10 +56,10 @@ The code from **Example 1** creates an empty workbook and exports it to an XLSX 
 	}
 {{endregion}}
 
->IWorkbookExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. The best way to ensure this is handled properly is to wrap it in a *using* statement.
+>IWorkbookExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
 
 # See Also
 
-* [Worksheets]({%slug %})
+* [Worksheets]({%slug radspreadstreamprocessing-model-worksheet%})
 * [SpreadCellStyle API Reference][API REF]

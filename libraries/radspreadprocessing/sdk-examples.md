@@ -34,6 +34,3 @@ The [Telerik XAML SDK repository](https://github.com/telerik/xaml-sdk/tree/mast
 	-  Check if all used fonts in a Workbook are registered in the FontsRepository before exporting to PDF.
 	-  Register the missing fonts using the WCF service from RegisterAndExportPdfFonts.Web project.
 	-  Export the Workbook to PDF after all fonts are registered.
-
-
->You can also check the [SDK Samples Browser]({%slug sdk-samples-browser%}) that provides a more convenient approach in exploring and executing the examples in the Telerik XAML SDK repository. The SDK Samples Browser application is available for download from [this link](http://demos.telerik.com/xaml-sdkbrowser/).

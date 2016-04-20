@@ -12,7 +12,7 @@ position: 2
 
 
 
-The [Telerik SDK repository](https://github.com/telerik/xaml-sdk/tree/master/) provides additional demos for the document processing libraries. The examples demonstrate many specific user case scenarios, that might be really helpful. In this article you can find the complete list of all SDK examples for __RadPdfProcessing__.
+The [Telerik XAML SDK repository](https://github.com/telerik/xaml-sdk/tree/master/) provides additional demos for the document processing libraries. The examples demonstrate many specific user case scenarios, that might be really helpful. In this article you can find the complete list of all SDK examples for __RadPdfProcessing__.
       
 
 ## List of all RadPdfProcessing SDK examples:
@@ -30,6 +30,3 @@ The [Telerik SDK repository](https://github.com/telerik/xaml-sdk/tree/master/)�
 	* The third approach inserts a black and white image using EncodedImageData class. This allows you to achieve maximum lossless compression by exporting the image data with BitsPerComponent equal to 1 and FlateDecode filter. As the encoded image data is exported as it is, the PdfFormatProvider.ExportSettings.ImageQuality value is ignored in this case as well.
             
 * [__Export UI Element__](https://github.com/telerik/xaml-sdk/tree/master/PdfProcessing/ExportUIElement): ﻿In this sample is demonstrated how you can use the RadPdfProcessing library to export UI elements to PDF. The example uses the [UIElement class](https://msdn.microsoft.com/en-us/library/system.windows.uielement(v=vs.110).aspx), which is specific for the WPF platform. 
-
-
->You can also check the [SDK Samples Browser](%slug sdk-samples-browser%) that provides a more convenient approach in exploring and executing the examples in the Telerik XAML SDK repository. The SDK Samples Browser application is available for download from [this link](http://demos.telerik.com/xaml-sdkbrowser/).

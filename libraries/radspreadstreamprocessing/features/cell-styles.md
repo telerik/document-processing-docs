@@ -78,22 +78,22 @@ In addition to the properties above, the SpreadCellStyle class exposes five Bool
 - ApplyProtection
 
 
-When you apply a style to a cell with locally set properties, the end result is an addition of the style properties to the cell's local properties. The end result of such an addition of styles depends on which elements (groups) of the style have been selected as being part of the style. You can select a group to be part of the style by setting the appropriate property to *true*.
+When you apply a style to a cell with locally set properties, the end result is an addition of the style properties to the cell's local properties. The end result of such an addition of styles depends on which elements (groups) of the style have been selected as being applied when using the particular style. You can select a group to be applied along with the style by setting the appropriate property to *true*.
 
 **Example 1** shows what applying the Number group looks like.
 
 #### **[C#] Example 1: Get a built-in style and apply a number group**
 
-{{region [ADD NAME]}}
+{{region radspreadstreamprocessing-features-styling-cell-styles_0}}
 	
 	SpreadCellStyle style = workbook.CellStyles.GetByName("Good");
 	style.ApplyNumberFormat = true;
 {{endregion}}
 
-Through the API you can add, modify or remove styles from the **CellStyles** collection of [IWorkbookExporter]({%slug %}).
+Through the API you can add, modify or remove styles from the **CellStyles** collection of [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}).
 
 
->If you would like to set a particular property of a cell, you could do it through the [cell format]({%slug %}).
+>If you would like to set a particular property of a cell, you could do it through the [cell format]({%slug radspreadstreamprocessing-model-cells%}#set-a-format).
 
 ## Create a Style
 
@@ -101,7 +101,7 @@ Creating a new style is pretty straight-forward. All you have to do is invoke th
 
 #### **[C#] Example 2: Create SpreadCellStyle and apply it to a cell**
 
-{{region [ADD NAME]}}
+{{region radspreadstreamprocessing-features-styling-cell-styles_1}}
 
 	SpreadBorder border = new SpreadBorder(SpreadBorderStyle.Thick, new SpreadThemableColor(new SpreadColor(255, 0, 0)));
 	SpreadCellStyle style = workbook.CellStyles.Add("MyStyle");
@@ -138,25 +138,14 @@ Modifying a style is even easier than creating one. All you need to do is retrie
 
 #### **[C#] Example 3: Modify a built-in style**
 
-{{region [ADD NAME]}}
+{{region radspreadstreamprocessing-features-styling-cell-styles_2}}
 
 	SpreadCellStyle style = workbook.CellStyles.GetByName("Bad"); 
 	style.IsBold = true;
 {{endregion}}
 
-## Remove a Style
-
-Removing a style is as easy as removing an object from a list, you simply invoke the **Remove()** method, which returns a Boolean value. If such style exists in the collection, the method will return true.
-
-
-#### **[C#] Example 4: Remove a built-in style**
-
-{{region [ADD NAME]}}
-
-	bool isRemoved = workbook.CellStyles.Remove("Bad"); 
-{{endregion}}
 
 # See Also
 
-* Cells
-* Workbook
+* [Cells]({%slug radspreadstreamprocessing-model-cells%})
+* [Workbook]({%slug radspreadstreamprocessing-model-workbook%})
