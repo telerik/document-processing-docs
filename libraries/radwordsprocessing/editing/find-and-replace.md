@@ -73,4 +73,4 @@ __Example 2__ shows how to apply a red highlight color to all occurrences of the
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
  * [CharacterProperties]({%slug radwordsprocessing-concepts-style-properties%}) 
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) 
- * [RadFlowDocumentEditor API Reference](http://docs.telerik.com/devtools/wpf/api/html/T_Telerik_Windows_Documents_Flow_Model_Editing_RadFlowDocumentEditor.htm)
+ * [RadFlowDocumentEditor API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Editing_RadFlowDocumentEditor.htm)

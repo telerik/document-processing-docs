@@ -17,17 +17,17 @@ __ImageSource__ represents a single, constant set of pixels at a certain size. I
 
 ## Creating an ImageSource
 
-The ImageSource class has several public constructor overloads and can be created from a [Stream](http://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx), [BitmapSource](http://msdn.microsoft.com/en-us/library/system.windows.media.imaging.bitmapsource(v=vs.110).aspx) object or using the [__EncodedImageData__](http://docs.telerik.com/devtools/wpf/api/html/T_Telerik_Windows_Documents_Fixed_Model_Resources_EncodedImageData.htm) class:
+The ImageSource class has several public constructor overloads and can be created from a [Stream](http://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx), [BitmapSource](http://msdn.microsoft.com/en-us/library/system.windows.media.imaging.bitmapsource(v=vs.110).aspx) object or using the [__EncodedImageData__](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Resources_EncodedImageData.htm) class:
 
 * __public ImageSource(Stream stream)__: Creates an __ImageSource__ object from a stream that contains image.
 
-* __public ImageSource(Stream stream, FormatProviders.Pdf.Export.ImageQuality imageQuality)__: Creates an __ImageSource__ object from a stream and allows you to specify the image quality through the [ImageQuality enumeration](http://docs.telerik.com/devtools/wpf/api/html/T_Telerik_Windows_Documents_Fixed_FormatProviders_Pdf_Export_ImageQuality.htm). More information about the ImageQuality and its behavior is available in [this article]({%slug radpdfprocessing-concepts-imagequality%}).
+* __public ImageSource(Stream stream, FormatProviders.Pdf.Export.ImageQuality imageQuality)__: Creates an __ImageSource__ object from a stream and allows you to specify the image quality through the [ImageQuality enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_FormatProviders_Pdf_Export_ImageQuality.htm). More information about the ImageQuality and its behavior is available in [this article]({%slug radpdfprocessing-concepts-imagequality%}).
 
 * __public ImageSource(BitmapSource bitmapSource)__: Creates a new __ImageSource__ object from a BitmapSource object.
 
 * __public ImageSource(BitmapSource bitmapSource, FormatProviders.Pdf.Export.ImageQuality imageQuality)__: Creates an __ImageSource__ instance from a BitmapSource object and allows you to specify the image quality.
 
-* __public ImageSource(EncodedImageData imageSourceInfo)__: Initializes a new instance of __ImageSource__ using the  [EncodedImageData class](http://docs.telerik.com/devtools/wpf/api/html/T_Telerik_Windows_Documents_Fixed_Model_Resources_EncodedImageData.htm).
+* __public ImageSource(EncodedImageData imageSourceInfo)__: Initializes a new instance of __ImageSource__ using the  [EncodedImageData class](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Resources_EncodedImageData.htm).
         
 
 __Example 1__ illustrates how you can create an ImageSource using a __FileStream__.
@@ -92,4 +92,4 @@ __RadPdfProcessing__ exposes an extension method allowing you to convert every B
 # See Also
 
  * [Image]({%slug radpdfprocessing-model-image%})
- * [ImageSource API Reference](http://docs.telerik.com/devtools/wpf/api/html/T_Telerik_Windows_Documents_Fixed_Model_Resources_ImageSource.htm)
+ * [ImageSource API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Resources_ImageSource.htm)

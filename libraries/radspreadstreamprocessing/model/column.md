@@ -25,7 +25,7 @@ A column is a group of cells that are vertically stacked and appear on the same 
 
 ## IColumnExporter Interface
 
-In **RadSpreadStreamProcessing**, a column could be exported through the **IColumnExporter** interface [API REF]. It defines several methods allowing you to change the appearance of a column.
+In **RadSpreadStreamProcessing**, a column could be exported through the [**IColumnExporter** interface](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_IColumnExporter.htm). It defines several methods allowing you to change the appearance of a column.
 
 ### Using IColumnExporter
 

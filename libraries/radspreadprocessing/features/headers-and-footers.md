@@ -50,7 +50,7 @@ This article aims to present the Headers and Footers API in **RadSpreadprocessin
 * **ScaleWithDocument**: A *boolean* value, indicating whether headers and footers should be scaled using the **ScaleFactor** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}) when being rendered. When ScaleWithDocument is set to *false*, then headers and footers are always rendered at 100% scale.
 
 
-* **AlignWithPageMargins**: A *boolean* value, indicating whether headers and footers should align with the left and right margins according to the value of the **Margins** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). When AlignWithPageMargins value is set to *false*, headers and footers are aligned with the left and right margins according to the value of the **NormalMargins** static property of [PageMargins][API REF]. 
+* **AlignWithPageMargins**: A *boolean* value, indicating whether headers and footers should align with the left and right margins according to the value of the **Margins** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). When AlignWithPageMargins value is set to *false*, headers and footers are aligned with the left and right margins according to the value of the **NormalMargins** static property of [PageMargins](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_Printing_PageMargins.htm). 
 
 
 * **Header**: Represents the default header content. When DifferentOddAndEvenPages is set to *true* then Header property represents the header content of the *odd* pages only. The property is of type [HeaderFooterContent](#headerfootercontent).
@@ -162,7 +162,7 @@ The following list describes all valid uses of the ampersand symbol sequences. I
 	settings.Footer.CenterSection.Text = "Page &P of &N";
 {{endregion}}
 
-**Figure 2** shows how the document will look like after applying the settings demonstrated in **Example XXX**.
+**Figure 2** shows how the document will look like after applying the settings demonstrated in **Example 3**.
 
 #### **Figure 2: Evaluated fields in header and footer**
 ![](images/RadSpreadProcessing_Features_Headers_and_Footers_02.png)
@@ -171,13 +171,13 @@ The following list describes all valid uses of the ampersand symbol sequences. I
 
 ## Header/Footer Margins
 
-In order to control the vertical positioning of the headers and footers on the page, you can use the **Margins** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). Within the [PageMargins][API REF] class, there are two properties that define headers and footers positioning:
+In order to control the vertical positioning of the headers and footers on the page, you can use the **Margins** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). Within the [PageMargins class](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_Printing_PageMargins.htm), there are two properties that define headers and footers positioning:
 
 * **Header**: This margin defines the distance between the Header and the top page side. The default value is 0.3 inches.
 
 * **Footer**: This margin defines the distance between the Footer and the bottom page side. The default value is 0.3 inches.
 
-**Example XXX** shows how you could set the margins of a worksheet using the predefined NormalMargins of PageMargins for the page margins, 0 inches for the footer margin and 1 inch for the header.
+**Example 4** shows how you could set the margins of a worksheet using the predefined NormalMargins of PageMargins for the page margins, 0 inches for the footer margin and 1 inch for the header.
 
 
 #### **[C#] Example 4: Setting margins to header/footer**

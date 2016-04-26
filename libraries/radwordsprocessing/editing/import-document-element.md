@@ -24,7 +24,7 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 
 * **targetDocument**: The **RadFlowDocument** instance for which the elements will be prepared for inserting.
 * **sourceDocument**: The **RadFlowDocument** from where the elements will be imported.
-* **conflictingStylesResolutionMode**: Represents the resolution mode, which will be used if a style conflict appears during the style repositories merging. Could be set to one of the values of the [ConflictingStylesResolutionMode enumeration]( http://docs.telerik.com/devtools/wpf/api/html/T_Telerik_Windows_Documents_Flow_Model_ConflictingStylesResolutionMode.htm).
+* **conflictingStylesResolutionMode**: Represents the resolution mode, which will be used if a style conflict appears during the style repositories merging. Could be set to one of the values of the [ConflictingStylesResolutionMode enumeration]( http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_ConflictingStylesResolutionMode.htm).
 
 <a name="example1"><a/>
 #### __[C#] Example 1: Create DocumentElementImporter__

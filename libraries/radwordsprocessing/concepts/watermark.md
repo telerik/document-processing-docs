@@ -19,7 +19,7 @@ Watermarks are text or pictures that appear behind document content and often id
 
 The class representing a watermark is __Watermark__ and exposes the following properties:
 
-* __WatermarkType:__ The type of the watermark, described with the [WatermarkType](http://docs.telerik.com/devtools/wpf/api/html/t_telerik_windows_documents_flow_model_watermarks_watermarktype.htm) enumeration.
+* __WatermarkType:__ The type of the watermark, described with the [WatermarkType](http://docs.telerik.com/devtools/document-processing/api/html/t_telerik_windows_documents_flow_model_watermarks_watermarktype.htm) enumeration.
 	* __Image:__ Watermark containing an image.
 	* __Text:__ Watermark containing text.
 	

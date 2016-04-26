@@ -78,5 +78,5 @@ The resulting document can be opened in any application which supports PDF docum
         
 ## See Also
 
-* [PdfFormatProvider API Reference](http://docs.telerik.com/devtools/wpf/api/html/T_Telerik_Windows_Documents_Fixed_FormatProviders_Pdf_PdfFormatProvider.htm)
+* [PdfFormatProvider API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_FormatProviders_Pdf_PdfFormatProvider.htm)
 * [Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})

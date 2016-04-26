@@ -23,9 +23,9 @@ A cell style is represented by the **SpreadCellStyle** class. The properties of 
 
 - Alignment group
 	
-	- **HorizontalAlignment**: Gets or sets the horizontal alignment. The property is of type [SpreadHorizontalAlignment][API REF].
+	- **HorizontalAlignment**: Gets or sets the horizontal alignment. The property is of type [SpreadHorizontalAlignment](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadHorizontalAlignment.htm).
 	
-	- **VerticalAlignment**: Gets or sets the vertical alignment. The property is of type [SpreadVerticalAlignment][API REF].
+	- **VerticalAlignment**: Gets or sets the vertical alignment. The property is of type [SpreadVerticalAlignment](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadVerticalAlignment.htm).
 	
 	- **Indent**: Gets or sets the indent.
 	
@@ -33,9 +33,9 @@ A cell style is represented by the **SpreadCellStyle** class. The properties of 
 
 - Font group
 	
-	- **ForeColor**: Gets or sets the fore color. The property is of type [SpreadThemableColor][API REF].
+	- **ForeColor**: Gets or sets the fore color. The property is of type [SpreadThemableColor](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadThemableColor.htm).
 	
-	- **FontFamily**: Gets or sets the font family. The property is of type [SpreadThemableFontFamily][API REF].
+	- **FontFamily**: Gets or sets the font family. The property is of type [SpreadThemableFontFamily](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadThemableFontFamily.htm).
 	
 	- **FontSize**: Gets or sets the size of the font.
 	
@@ -43,25 +43,25 @@ A cell style is represented by the **SpreadCellStyle** class. The properties of 
 	
 	- **IsItalic**: Gets or sets a value indicating whether the text is italic.
 	
-	- **Underline**: Gets or sets the underline type. The property is of type [SpreadUnderlineType][API REF].
+	- **Underline**: Gets or sets the underline type. The property is of type [SpreadUnderlineType](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadUnderlineType.htm).
 
 - Border group
 	
-	- **LeftBorder**: Gets or sets the left border. The property is of type [SpreadBorder][API REF].
+	- **LeftBorder**: Gets or sets the left border. The property is of type [SpreadBorder](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
 	
-	- **RightBorder**: Gets or sets the right border. The property is of type [SpreadBorder][API REF].
+	- **RightBorder**: Gets or sets the right border. The property is of type [SpreadBorder](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
 	
-	- **TopBorder**: Gets or sets the top border. The property is of type [SpreadBorder][API REF].
+	- **TopBorder**: Gets or sets the top border. The property is of type [SpreadBorder](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
 	
-	- **BottomBorder**: Gets or sets the bottom border. The property is of type [SpreadBorder][API REF].
+	- **BottomBorder**: Gets or sets the bottom border. The property is of type [SpreadBorder](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
 	
-	- **DiagonalUpBorder**: Gets or sets the diagonal up border. The property is of type [SpreadBorder][API REF].
+	- **DiagonalUpBorder**: Gets or sets the diagonal up border. The property is of type [SpreadBorder](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
 		
-	- **DiagonalDownBorder**: Gets or sets the diagonal down border. The property is of type [SpreadBorder][API REF].
+	- **DiagonalDownBorder**: Gets or sets the diagonal down border. The property is of type [SpreadBorder](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
 
 - Fill group
 	
-	- **Fill**: Gets or sets the fill. The property could be of type [SpreadGradientFill][API REF] or [SpreadPatternFill][API REF].
+	- **Fill**: Gets or sets the fill. The property could be of type [SpreadGradientFill](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadGradientFill.htm) or [SpreadPatternFill](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadPatternFill.htm).
 
 In addition to the properties above, the SpreadCellStyle class exposes five Boolean properties that indicate whether the groups above will be applied:
 
