@@ -36,6 +36,9 @@ Through the Worksheet's __WorksheetPageSetup__ property you may change the follo
             
 
 * __Margins__: Specify the sizes of the page margins.
+
+
+* __HeaderFooterSettings__: Allows you specify a header and/or a footer for a worksheet. For more information on how to achieve this, please check the [Headers and Footers topic]({%slug radspreadprocessing-features-headers-and-footers%}).
             
 
 * __PageOrder__: Specify whether the page order should be "Down, then over" or "Over, then down".
