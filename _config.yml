@@ -8,6 +8,9 @@ navigation:
 ## Common Start
 
 ## List your directory names and order here, like this:
+    api:
+        title: API Reference
+        position: 100
     installation-and-deployment:
         title: Installation and Deployment
         position: 4

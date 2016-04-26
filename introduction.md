@@ -39,3 +39,10 @@ Telerik Document Processing features the following components:
 
 * [RadZipLibrary]({%slug radziplibrary-overview%}): Compress and decompress ZIP files.
 
+
+## Licensing
+
+Telerik Document Processing is available as part of DevCraft, UI for ASP.NET AJAX, UI for ASP.NET MVC, UI for WPF, UI for WinForms and UI for Silverlight. The libraries are subject of the license under which you've obtained the assemblies.
+
+Learn more on how to start using Telerik Document Processing in the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) topic.
+
