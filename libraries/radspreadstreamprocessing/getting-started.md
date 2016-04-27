@@ -24,17 +24,6 @@ In order to use RadSpreadStreamProcessing in your project, you will need to add 
 
 * **Telerik.Documents.SpreadsheetStreaming**
 
-## Supported Formats
-
-With RadSpreadStreamProcessing you can create XLSX and CSV files. All you have to do is to specify the desired format when creating a workbook with the CreateWorkbookExporter() method. **Example 1** demonstrates how this could be achieved.
-
-#### **Example 1: Specify export format**
-
-{{region #region radspreadstreamprocessing-getting-started_0}}
-
-	IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream);     
-{{endregion}}
-
 
 ## Create a Spreadsheet Document
 
@@ -47,19 +36,19 @@ When creating a document with **RadSpreadStremProcessing**, you should have in m
 
 2. Create a Worksheet
 
-3. Create Columns [optional]
+3. Create Columns (optional)
 
 4. Create Rows (a worksheet must contain at least one row)
 
-5. Create Cells [optional]
+5. Create Cells (optional)
 
-6. Merge Cells [optional]
+6. Merge Cells (optional)
 
 **Example 2** shows how you could create a simple document.
 
-#### **Example 2: Create a document**
+#### **Example 1: Create a document**
 
-{{region #region radspreadstreamprocessing-getting-started_1}}
+{{region radspreadstreamprocessing-getting-started_0}}
 	using (FileStream stream = File.OpenWrite("sample.xlsx"))
 	{
 	    using (IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream))
@@ -113,7 +102,7 @@ When creating a document with **RadSpreadStremProcessing**, you should have in m
 	}
 {{endregion}}
 
-**Figure 1** shows the result of executing the code from **Example 2**.
+**Figure 1** shows the result of executing the code from **Example 1**.
 
 #### Figure 1: The document created in Example 2
 ![](images/SpreadStreamProcessing-GettingStarted_01.png)
