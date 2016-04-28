@@ -388,7 +388,7 @@ Table Styles
 <td>
 Yes
 </td>
-<td></td>
+<td>Only BorderStyle.Single.</td>
 </tr>
 <tr>
 <td>
