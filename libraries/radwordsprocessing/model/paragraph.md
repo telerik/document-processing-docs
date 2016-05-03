@@ -23,7 +23,7 @@ The __Paragraph__ class allows you to separate the content into paragraphs. It i
 
 ## Inserting a Paragraph
 
-Paragraphs can be added as a child of a [BlockContainer](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_blockcontainerbase.html) element – [Section]({%slug radwordsprocessing-model-section%}), [TableCell]({%slug radwordsprocessing-model-tablecell%}), [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%}), through the __Blocks__ collection.
+Paragraphs can be added as a child of a [BlockContainer](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_BlockContainerBase.htm) element – [Section]({%slug radwordsprocessing-model-section%}), [TableCell]({%slug radwordsprocessing-model-tablecell%}), [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%}), through the __Blocks__ collection.
         
 
 The code snippet from __Example 1__ creates and inserts a __Paragraph__ in a __Section__.
@@ -212,7 +212,7 @@ You can refer to the [TabStop article]({%slug radwordsprocessing-concepts-tabsto
 
 # See Also
 
- * [Paragraph API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_paragraph.html)
+ * [Paragraph API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Paragraph.htm)
  * [Section]({%slug radwordsprocessing-model-section%})
  * [TableCell]({%slug radwordsprocessing-model-tablecell%})
  * [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})

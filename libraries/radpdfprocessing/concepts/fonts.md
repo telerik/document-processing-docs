@@ -16,8 +16,8 @@ __RadPdfProcessing__ uses fonts represented by __FontBase__ objects to specify t
       
 
 ## Standard Fonts
+There are 14 standard fonts that are not embedded in the document when you use them. These fonts can be accessed through the [FontsRepository](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Fonts_FontsRepository.htm) class and are listed below.
 
-There are 14 standard fonts that are not embedded in the document when you use them. These fonts can be accessed through the [FontsRepository](http://www.telerik.com/help/wpf/t_telerik_windows_documents_fixed_model_fonts_fontsrepository.html) class and are listed below.
         
 
 * Helvetica
@@ -79,6 +79,6 @@ __Example 2__ shows how to create a font using the FontsRepository.
 
 
 # See Also
-
- * [FontsRepository](http://www.telerik.com/help/wpf/t_telerik_windows_documents_fixed_model_fonts_fontsrepository.html)
+ * [FontsRepository](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Fonts_FontsRepository.htm)
  * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
+

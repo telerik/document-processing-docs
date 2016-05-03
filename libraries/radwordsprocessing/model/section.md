@@ -73,7 +73,7 @@ The __Section__ exposes several properties that allow you to customize the layou
 
 
 
-* __PageSize__: Specifies the size of the pages in the section. The width and height are in device independent pixels (1/96 inch). The __PaperTypeConverter__ class and the [PaperTypes](http://www.telerik.com/help/wpf/t_telerik_windows_documents_model_papertypes.html) enumeration provide convenient API and predefined sizes out of the box.
+* __PageSize__: Specifies the size of the pages in the section. The width and height are in device independent pixels (1/96 inch). The __PaperTypeConverter__ class and the [PaperTypes](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Model_PaperTypes.htm) enumeration provide convenient API and predefined sizes out of the box.
             
 	
 	#### __[C#] Example 5: Change page size of a section__
@@ -132,7 +132,7 @@ The __Section__ exposes several properties that allow you to customize the layou
 
 ### Adding Elements to a Section
 
-__Section__ derives [BlockContainerBase](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_blockcontainerbase.html), inheriting Blocks property of BlockCollection type. You can add [Paragraph]({%slug radwordsprocessing-model-paragraph%}) and [Table]({%slug radwordsprocessing-model-table%}) objects to that collection.
+__Section__ derives [BlockContainerBase](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_BlockContainerBase.htm), inheriting Blocks property of BlockCollection type. You can add [Paragraph]({%slug radwordsprocessing-model-paragraph%}) and [Table]({%slug radwordsprocessing-model-table%}) objects to that collection.
         
 
 #### __[C#] Example 7: Add elements to a section__
@@ -154,7 +154,7 @@ The __Section__ can be rotated in order to visualize its pages in Portrait or La
 
 # See Also
 
- * [Section API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_section.html)
+ * [Section API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Section.htm)
  * [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
  * [Table]({%slug radwordsprocessing-model-table%})

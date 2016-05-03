@@ -12,7 +12,7 @@ position: 4
 
 
 
-__RadFlowDocument__ includes repository of [Style](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_styles_style.html) objects which contain sets of character, paragraph or table [style properties]({%slug radwordsprocessing-concepts-style-properties%}). They provide rich editing capabilities with consistent look over different content inside the document. Styles allow formatting properties to be stored and managed independently from the content. [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) keeps its styles in __StyleRepository__ object accessible through the __RadFlowDocument.StyleRepository__ property.
+__RadFlowDocument__ includes repository of [Style](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Style.htm) objects which contain sets of character, paragraph or table [style properties]({%slug radwordsprocessing-concepts-style-properties%}). They provide rich editing capabilities with consistent look over different content inside the document. Styles allow formatting properties to be stored and managed independently from the content. [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) keeps its styles in __StyleRepository__ object accessible through the __RadFlowDocument.StyleRepository__ property.
       
 
 * [Style Class Overview](#style-class-overview)
@@ -37,7 +37,7 @@ The class containing the styling structure is called __Style__. Each style conta
 * __Id__: The ID of the style. All styles in a __StyleRepository__ should have unique IDs. This property cannot be set after adding the style in a __StyleRepository__, in such situations *InvalidOperationException* is thrown.
             
 
-* __StyleType__: The [type](#style-types) of the style, described with [StyleType](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_styles_styletype.html) enumeration. It can be __Character__, __Paragraph__ or __Table__ and determines the types of document elements to which the style is applied.
+* __StyleType__: The [type](#style-types) of the style, described with [StyleType enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_StyleType.htm). It can be __Character__, __Paragraph__ or __Table__ and determines the types of document elements to which the style is applied.
             
 
 * __Name__: The name of the style, which can be used in an application's user interface.
@@ -118,7 +118,7 @@ Default style is a style which, according to its style type, is applied to objec
 Built-in styles are commonly used styles, which are predefined for convenience. They have to be explicitly added to the style repository before usage using the __StyleRepository.AddBuiltInStyle()__ method.
         
 
-[BuiltInStyleNames](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_styles_builtInstylenames.html) static class contains properties and methods for getting the IDs of all built-in styles. __Example 2__ shows how to get the ID of the "Heading 1" built-in style.
+[BuiltInStyleNames](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_BuiltInStyleNames.htm) static class contains properties and methods for getting the IDs of all built-in styles. __Example 2__ shows how to get the ID of the "Heading 1" built-in style.
         
 
 #### __[C#] Example 2: Get the ID of a built-in style__
@@ -242,9 +242,10 @@ Linked styles can be based on other linked styles or on paragraph styles.
 
 # See Also
 
- * [Styles API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_styles_style.html)
+ * [Styles API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Style.htm)
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
  * [Run]({%slug radwordsprocessing-model-run%})
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
- * [Table]({%slug radwordsprocessing-model-table%})[BuiltInStyleNames](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_styles_builtInstylenames.html)
+ * [Table]({%slug radwordsprocessing-model-table%})
+ * [BuiltInStyleNames API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_BuiltInStyleNames.htm)
  * [Lists]({%slug radwordsprocessing-concepts-lists%})

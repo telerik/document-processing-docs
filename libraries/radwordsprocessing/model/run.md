@@ -136,7 +136,7 @@ The Run exposes several properties that allow you to customize how it is rendere
 
 # See Also
 
- * [Run API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_run.html)
+ * [Run API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Run.htm)
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
  * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})
  * [Document Themes]({%slug radwordsprocessing-concepts-document-themes%})

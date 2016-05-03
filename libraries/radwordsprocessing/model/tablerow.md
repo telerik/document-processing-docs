@@ -36,7 +36,7 @@ You can use the code snippet from __Example 1__ to create a __TableRow__ and add
 
 
 
-In order to create a __TableRow__ and add it in the document tree in the same time, you can use the __AddTableRow()__ method of the [Rows](http://www.telerik.com/help/wpf/p_telerik_windows_documents_flow_model_table_rows.html) collection property of the table.
+In order to create a __TableRow__ and add it in the document tree in the same time, you can use the __AddTableRow()__ method of the [Rows](http://docs.telerik.com/devtools/document-processing/api/html/P_Telerik_Windows_Documents_Flow_Model_Table_Rows.htm) collection property of the table.
         
 
 #### __[C#] Example 2: Create a TableRow and add it to a table in the same time__
@@ -104,7 +104,7 @@ __Example 3__ shows how to add a number of __TableCell__ elements in a TableRow.
 
 # See Also
 
- * [TableRow API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_tablerow.html)
+ * [TableRow API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_TableRow.htm)
  * [Table]({%slug radwordsprocessing-model-table%})
  * [TableCell]({%slug radwordsprocessing-model-tablecell%})
  * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})

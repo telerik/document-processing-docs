@@ -140,7 +140,7 @@ Information on the types of watermarks and their use is available in the [Waterm
 
 # See Also
 
- * [HeaderFooterBase API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_headerfooterbase.html)
+ * [HeaderFooterBase API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_HeaderFooterBase.htm)
  * [Document model]({%slug radwordsprocessing-model%})
  * [Section]({%slug radwordsprocessing-model-section%})
  * [Watermark]({%slug radwordsprocessing-concepts-watermark%})

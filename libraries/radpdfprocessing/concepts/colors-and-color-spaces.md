@@ -69,7 +69,7 @@ Gradient provides a smooth transition between colors across an area which is pai
 
 * __Background__: __SimpleColor__ object representing the background color.
 
-* __GradientStops__: A collection of [GradientStop](http://www.telerik.com/help/wpf/t_telerik_windows_documents_fixed_model_colorspaces_gradientstop.html) objects representing the gradient stops collection.
+* __GradientStops__: A collection of [GradientStop](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_ColorSpaces_GradientStop.htm) objects representing the gradient stops collection.
                 
 
 The __Gradient__ class is inherited by the following classes:
@@ -150,7 +150,7 @@ A tiling pattern consists of a small graphical figure called a pattern cell. Pai
 
 * __Position__: The position of the tiling pattern.               
 
-* __TilingType__: Property of type [TilingType](http://www.telerik.com/help/wpf/t_telerik_windows_documents_fixed_model_colorspaces_tilingtype.html) that represents the tiling type.The possible values are:
+* __TilingType__: Property of type [TilingType](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_ColorSpaces_TilingType.htm) that represents the tiling type.The possible values are:
 	 * __AllowSmallDistortion__: Pattern cells are spaces consistently. To achieve this, the pattern cell might be slightly distorted by making small adjustments to the __HorizontalSpacing__ and __VerticalSpacing__.
 	 * __NoDistortion__: Pattern cells are not distorted, but the spacing between pattern cells may vary. This achieves the spacing requested by __HorizontalSpacing__ and __VerticalSpacing__ on average, but not necessarily for each individual pattern cell.
 	 * __FastTiling__: Pattern cells are spaced consistently as in __AllowSmallDistortion__ type but with additional distortion permitted to enable a more efficient painting.

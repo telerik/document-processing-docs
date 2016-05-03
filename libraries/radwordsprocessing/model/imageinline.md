@@ -121,7 +121,7 @@ This section explains the behavior of the __Size__ property of The __Image__ obj
 
 # See Also
 
- * [ImageInline API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_shapes_imageinline.html)
+ * [ImageInline API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Shapes_ImageInline.htm)
  * [Document model]({%slug radwordsprocessing-model%})
  * [FloatingImage]({%slug radwordsprocessing-model-floatingimage%})
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

@@ -122,12 +122,12 @@ __Example 3__ demonstrates how to add a __Paragraph__ to a __TableCell__.
 
 
 
-Through the __BlockCollection__ property of the __TableCell__ element you can add a __Table__ or any other [BlockBase](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_blockbase.html) element.
+Through the __BlockCollection__ property of the __TableCell__ element you can add a __Table__ or any other [BlockBase](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_BlockBase.htm) element.
             
 
 # See Also
 
- * [TableCell API Reference](http://www.telerik.com/help/wpf/t_telerik_windows_documents_flow_model_tablecell.html)
+ * [TableCell API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_TableCell.htm)
  * [Document model]({%slug radwordsprocessing-model%})
  * [Table]({%slug radwordsprocessing-model-table%})
  * [TableRow]({%slug radwordsprocessing-model-tablerow%})

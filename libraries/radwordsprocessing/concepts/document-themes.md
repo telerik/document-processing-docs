@@ -153,7 +153,7 @@ Now that you have a color and a font schemes, you can create a new __DocumentThe
 
 
 
-There are a number of predefined color and font schemes. You can find them in a static class called [PredefinedThemeSchemes](http://www.telerik.com/help/wpf/t_telerik_windows_documents_spreadsheet_theming_predefinedthemeschemes.html). The class exposes the properties __ColorSchemes__ and __FontSchemes__ that hold all predefined schemes.
+There are a number of predefined color and font schemes. You can find them in a static class called [PredefinedThemeSchemes](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Theming_PredefinedThemeSchemes.htm). The class exposes the properties __ColorSchemes__ and __FontSchemes__ that hold all predefined schemes.
         
 
 #### __[C#] Example 6: Using a predefined scheme__

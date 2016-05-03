@@ -29,7 +29,7 @@ This article aims to present the WorksheetPageSetup API and demonstrate how to u
 Through the Worksheet's __WorksheetPageSetup__ property you may change the following worksheet's page setup properties:
         
 
-* __PaperType__: Specify paper type using the [PaperType](http://www.telerik.com/help/wpf/t_telerik_windows_documents_model_papertypes.html) enumeration.
+* __PaperType__: Specify paper type using the [PaperTypes enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Model_PaperTypes.htm).
             
 
 * __PageOrientation__: Specify whether the page orientation should be Portrait or Landscape.
