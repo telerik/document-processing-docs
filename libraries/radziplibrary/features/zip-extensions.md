@@ -39,7 +39,7 @@ With the __ZipFile__ class you could take advantage of static methods, which wil
 
 ## The DotNetPlatformManager class
 
-This class implements the [IPlatformManager](http://docs.telerik.com/devtools/silverlight/api/html/T_Telerik_Windows_Zip_IPlatformManager.htm) interface, which provides platform-specific operations. In the general case you won't need to implement new platform managers, as this default implementation already take advantage of the current platform (.NET Framework) as much as possible.
+This class implements the [IPlatformManager](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Zip_IPlatformManager.htm) interface, which provides platform-specific operations. In the general case you won't need to implement new platform managers, as this default implementation already take advantage of the current platform (.NET Framework) as much as possible.
 
 ### Properties
 
