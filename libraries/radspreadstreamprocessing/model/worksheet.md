@@ -27,11 +27,11 @@ A worksheet is a collection of cells organized in rows and columns. It is the wo
 
 ## IWorksheetExporter Interface
 
-In **RadSpreadStreamProcessing**, a worksheet could be exported through the [**IWorksheetExporter** interface](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_IWorksheetExporter.htm). This interface defines members that allows you create and skip rows or columns as well as merge cells. 
+In **RadSpreadStreamProcessing**, a worksheet could be exported through the [**IWorksheetExporter** interface](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_IWorksheetExporter.htm). This interface defines members that allows you create and skip rows or columns as well as merge cells. 
 
 ### Using IWorksheetExporter
 
-A concrete instance of IWorksheetExporter could be created through the CreateWorksheetExporter() method of [IWorkbookExporter]({slug radspreadstreamprocessing-model-workbook}). **Example 1** demonstrates how you can add a worksheet to a workbook.
+A concrete instance of IWorksheetExporter could be created through the CreateWorksheetExporter() method of [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}). **Example 1** demonstrates how you can add a worksheet to a workbook.
 
 #### **[C#] Example 1: Create IWorksheetExporter**
 

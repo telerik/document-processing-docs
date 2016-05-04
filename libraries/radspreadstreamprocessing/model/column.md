@@ -25,11 +25,11 @@ A column is a group of cells that are vertically stacked and appear on the same 
 
 ## IColumnExporter Interface
 
-In **RadSpreadStreamProcessing**, a column could be exported through the [**IColumnExporter** interface](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_IColumnExporter.htm). It defines several methods allowing you to change the appearance of a column.
+In **RadSpreadStreamProcessing**, a column could be exported through the [**IColumnExporter** interface](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_IColumnExporter.htm). It defines several methods allowing you to change the appearance of a column.
 
 ### Using IColumnExporter
 
-A concrete instance of IColumnExporter could be created through the CreateColumnExporter() method of [IWorksheetExporter]({slug radspreadstreamprocessing-model-worksheet}). **Example 1** demonstrates how you can add a column to a worksheet.
+A concrete instance of IColumnExporter could be created through the CreateColumnExporter() method of [IWorksheetExporter]({%slug radspreadstreamprocessing-model-worksheet%}). **Example 1** demonstrates how you can add a column to a worksheet.
 
 #### **[C#] Example 1: Create IColumnExporter**
 

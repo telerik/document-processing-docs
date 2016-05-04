@@ -1,14 +1,14 @@
 ---
-title: Pdf Export
-page_title: Pdf Export
-description: Pdf Export
+title: PDF Export
+page_title: PDF Export
+description: PDF Export
 slug: pdf-export
 tags: pdf-export
 published: True
 position: 3
 ---
 
-# Pdf Export
+# PDF Export
 
 The libraries included in **Telerik Document Processing** allow you to create, modify and export PDF documents, as well as convert a document from different file format to PDF.
 
@@ -30,9 +30,9 @@ You can import and export a document through the respective methods of the **Pdf
 
 >The **PdfFormatProvider** class of RadPdfProcessing resides in the **Telerik.Windows.Documents.Fixed.FormatProviders.Pdf namespace**. For more information on how to work with this provider, please read [this topic]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
-## Convert a Flow Document to PDF
+## Convert a Document to PDF
 
-In scenarios where you need to convert a document from another file format to PDF, you could take advantage of the capabilities of **RadWordsProcessing**. This library allows you to import documents from the most common rich text formats as well as plain text and export them to PDF. All the supported document formats are listed in the [Formats and Conversion section]({%slug radwordsprocessing-formats-and-conversion%}). 
+In scenarios where you need to convert a document from another file format to PDF, you could take advantage of the capabilities of **RadWordsProcessing**. This library allows you to import documents from the most common rich text formats (Docx, HTML, RTF) as well as plain text and export them to PDF. All the supported document formats and the corresponding format providers are listed in the [Formats and Conversion section]({%slug radwordsprocessing-formats-and-conversion%}). 
 
 In order to use the **PdfFormatProvider** of **RadWordsProcessing**, you should add a reference to  the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf** assembly.
 
@@ -40,7 +40,7 @@ In order to use the **PdfFormatProvider** of **RadWordsProcessing**, you should 
 
 ## Convert a Spreadsheet Document to PDF
 
-While the discussed so far libraries allow working with text documents, with RadSpreadProcessing you can create, import and export tabular data. This library supports the most common file formats for storing spreadsheet documents. All of them are listed in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
+While the so far discussed libraries allow working with text documents, with RadSpreadProcessing you can create, import and export tabular data. This library supports the most common file formats for storing spreadsheet documents - Xlsx, CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
 
 In order to enable the export to PDF in RadSpreadProcessing, you will need to add a reference to the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf** assembly.
 

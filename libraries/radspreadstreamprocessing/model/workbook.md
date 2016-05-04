@@ -28,13 +28,13 @@ The workbook is designed to hold together multiple worksheets in order to allow 
 
 ## IWorkbookExporter Interface
 
-In **RadSpreadStreamProcessing**, the workbook is represented by the [**IWorkbookExporter** interface](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_IWorkbookExporter.htm). This interface defines members for adding [worksheets]({%slug radspreadstreamprocessing-model-worksheet%}) and accessing the cell styles of the workbook. 
+In **RadSpreadStreamProcessing**, the workbook is represented by the [**IWorkbookExporter** interface](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_IWorkbookExporter.htm). This interface defines members for adding [worksheets]({%slug radspreadstreamprocessing-model-worksheet%}) and accessing the cell styles of the workbook. 
 
 **IWorkbookExporter** is responsible for exporting a workbook. Due to the specifics of the different file formats, different concrete instances of this interface take care about the creation and export of a document. 
 
 ## Using IWorkbookExporter
 
-You can obtain an instance of IWorkbookExporter through the **CreateWorkbookExporter()** method of [SpreadExporter](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadExporter.htm). The first parameter of the CreateWorkbookExporter() method specifies the file format that will be used to save the document and the second one represents the stream in which the document will be saved. 
+You can obtain an instance of IWorkbookExporter through the **CreateWorkbookExporter()** method of [SpreadExporter](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadExporter.htm). The first parameter of the CreateWorkbookExporter() method specifies the file format that will be used to save the document and the second one represents the stream in which the document will be saved. 
 
 The code from **Example 1** creates an empty workbook and exports it to an XLSX file.
 
@@ -62,4 +62,4 @@ The code from **Example 1** creates an empty workbook and exports it to an XLSX 
 # See Also
 
 * [Worksheets]({%slug radspreadstreamprocessing-model-worksheet%})
-* [SpreadCellStyle API Reference](docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadCellStyle.htm)
+* [SpreadCellStyle API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadCellStyle.htm)
