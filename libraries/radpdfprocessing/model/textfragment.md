@@ -19,6 +19,7 @@ __TextFragment__ is content element that represents а single-line text object.
 
 * [Modifying a TextFragment](#modifying-a-textfragment)
 
+
 ## Inserting a TextFragment
 
 __TextFragment__ is a content element that can be added in the __Content__ collection of a __IContainerElement__ such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches that can be adopted.
@@ -110,7 +111,41 @@ TextFragment exposes the following properties that can modify the look of the re
             
 
 * __Stroke__: The color that is used to stroke text. The default value is Black.
+                        
+
+* __StrokeThickness__: The width of the stroke line.
             
+
+* __StrokeLineCap__: Specifies the shape, which is used at the ends of open paths, used to draw a letter, when they are stroked.
+            
+
+	* __Flat__: Flat line cap.
+	
+	* __Round__: Round line cap.
+
+	* __Square__: Square line cap.
+                
+
+* __StrokeLineJoin__: Specifies the shape to be used at the corners of paths that are stroked. Join styles are significant only at the points where consecutive segments of a path connect at an angle.
+            
+
+	* __Bevel__: Produces a diagonal corner.
+	            
+	
+	* __Miter__: Produces a sharp corner. If the segments meet at too sharp angle, a bevel join is used instead.
+	            
+	
+	* __Round__: Produces a smooth, circular arc between the lines.
+                
+
+* __StrokeDashArray__: The pattern of dashes and gaps used to stroke paths.
+            
+
+* __StrokeDashOffset__: The distance from the start of a line to the beginning of a dash pattern.
+            
+
+* __MiterLimit__: The limit of the thickness of the join on a mitered corner.
+
 
 * __Text__: Represents the text that is drawn.
             
