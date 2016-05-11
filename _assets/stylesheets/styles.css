@@ -85,7 +85,7 @@ a img {
    /*  margin-bottom: 1.717em; */
     margin-left: 1.833em;
     margin-top: 1.617em; 
-	width: 375px;
+	width: 404px;
 }
 
 #logo-bar a, 
@@ -200,7 +200,7 @@ a img {
     padding: 0;
     right: 514px;
     text-align: right;
-    left: 30%;
+    left: 34%;
 }
 
 #page-search.search-visibility {
@@ -848,7 +848,7 @@ header, nav, section, article, aside, footer {
     }
     
     #page-search {
-        left: 400px;
+        left: 425px;
 		right: 377px;
     }
 

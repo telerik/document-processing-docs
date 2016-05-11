@@ -10,7 +10,7 @@ position: 0
 
 # Introduction
 
-<image src="\images/document_processing_logo.png" style="min-width:287px;width: 30%;" alt="Telerik Document Processing logo" />
+<image src="\images/document_processing_logo.png" style="min-width:404px;width: 30%;" alt="Telerik Document Processing logo" />
 
 Welcome to __Telerik Document Processing__!
 
