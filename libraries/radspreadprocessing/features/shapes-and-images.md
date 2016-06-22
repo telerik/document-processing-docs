@@ -101,7 +101,7 @@ In order to create an instance of __FloatingImage__ you need the worksheet in wh
 #### __[C#] Example 1: Create FloatingImage__
 
 {{region radspreadprocessing-features-shapes-and-images_0}}
-    Worksheet worksheet = this.radSpreadsheet.ActiveWorksheet;
+    Worksheet worksheet = workbook.ActiveWorksheet;
     FloatingImage image = new FloatingImage(worksheet, new CellIndex(7, 1), 35, 10);
 {{endregion}}
 
