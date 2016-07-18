@@ -62,7 +62,7 @@ You could merge documents at a specific position using the InsertDocument() meth
 	</tr>
 	<tr>
 		<td>Insert the source document between runs. Source document contains multiple sections.</td>
-		<td>All of the blocks in the source document’s first section will be inserted at the current editor position. All the next sections from the source document will be inserted as well as separate sections. The last section in the result document will have section properties of the section from the target document where the editor position is when the InsertDocument() method is invoked.</td>
+		<td>All of the blocks in the source document’s first section will be inserted at the current editor position. All the next sections from the source document will be inserted as separate sections. The last section in the result document will have section properties of the section from the target document where the editor position is when the InsertDocument() method is invoked.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document at the beginning of the target document. Source document contains single section.</td>
@@ -70,7 +70,7 @@ You could merge documents at a specific position using the InsertDocument() meth
 	</tr>
 	<tr>
 		<td>Insert the source document at the beginning of the target document. Source document contains multiple sections.</td>
-		<td>All of the blocks in the source document’s first section will be inserted at the specific location. The whole next sections from the source document will be inserted as well as separate sections. The last section in the result document will have section properties of the insert target section.</td>
+		<td>All of the blocks in the source document’s first section will be inserted at the specific location. The whole next sections from the source document will be inserted as separate sections. The last section in the result document will have section properties of the insert target section.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document at the end of the target document. Source document contains single section.</td>
@@ -81,7 +81,7 @@ You could merge documents at a specific position using the InsertDocument() meth
 		<td>Same as the above.</td>
 	</tr>
 	<tr>
-		<td>Insert the source document in a table cell.</td>
+		<td>Insert the source document in a table cell and the source document contains multiple sections.</td>
 		<td>An <b>InvalidOperationException</b> is thrown.</td>
 	</tr>
 	<tr>
