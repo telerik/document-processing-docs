@@ -174,7 +174,8 @@ defaults:
 
 # The google services configuration
 google_tag_manager: GTM-6X92
-google_custom_search: '001864970385031653096:jbj5mwde74q'
+google_analytics: UA-111455-1
+google_custom_search: '001595215763381649090:dzdv3_di-fm'
 
 # Available for names: 
 platforms: ["UI for ASP.NET AJAX", "UI for ASP.NET MVC", "UI for WPF", "UI for WinForms", "UI for Silverlight"]
