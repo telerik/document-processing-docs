@@ -172,6 +172,9 @@ defaults:
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
 # "foo": "Bar"
 
+# Feedback Form Google Sheet ID
+ff-sheet-id: 1HHlD_amgJPEh0GFobTkhTb9WBL9YbcKaYmlq-fCJb14
+
 # The google services configuration
 google_tag_manager: GTM-6X92
 google_analytics: UA-111455-1
