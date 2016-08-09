@@ -24,7 +24,6 @@ All you have to do in order to use __PdfFormatProvider__ is add references to th
 * Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll
 * Telerik.Windows.Documents.Fixed.dll
 
-
 ## Export
 
 In order to export a document to PDF you need to use the __Export()__ method of __PdfFormatProvider__.
@@ -32,6 +31,7 @@ In order to export a document to PDF you need to use the __Export()__ method of 
 
 The code snippet in __Example 1__ shows how to create a __PdfFormatProvider__ instance and use it to export __RadFlowDocument__ to a file.
         
+>The PdfFormatProvider class of RadWordsProcessing is located in the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf namespace**.
 
 #### __[C#] Example 1: Export to PDF file__
 {{region  radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
