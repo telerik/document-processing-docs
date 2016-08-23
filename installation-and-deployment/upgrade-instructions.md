@@ -14,7 +14,7 @@ Telerik Document Processing is part of several Telerik bundles and could be upgr
 
 Starting from Q1 2016, the Document Processing Libraries are built separately from any other component that comes with the different suites. Thus, they have their own version, which may differ with the version of the other assemblies in the particular suite. 
 
-Another change in the version of Telerik Document Processing is that from R3 2016, only assemblies with version number ending with .40 suffix are distributed. The libraries are built only for .NET 4.0. They doesn't contain code specific for .NET 4.5, thus an additional version is not needed.
+Another change in the version of Telerik Document Processing is that from R3 2016, only assemblies with a version number ending with .40 suffix are distributed. The libraries are built only for .NET 4.0. They don't contain code specific for .NET 4.5, thus an additional version is not needed.
 
 The changes are synced between the controls that have a dependency on Telerik Document Processing and while the referenced files are from the same release, they should work as expected regardless of the version distinction. 
 
