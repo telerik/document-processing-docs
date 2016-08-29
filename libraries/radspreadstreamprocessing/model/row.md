@@ -47,7 +47,7 @@ In order to customize the way a row appears, you could use one of the following 
 
 * **SetHeightInPixels()**: Sets the row height in pixels.
 
-* **SetHeightInPoints ()**: Sets the row height in characters count.
+* **SetHeightInPoints()**: Sets the row height in points.
 
 * **SetOutlineLevel()**: Sets the row outline level. The outline level is used when grouping rows. To group several rows, they should have the same OutlineLevel and if you would like to create nested grouping, you can use different levels for the outer and for the nested rows. 
 
