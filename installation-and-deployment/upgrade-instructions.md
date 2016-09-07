@@ -14,7 +14,7 @@ Telerik Document Processing is part of several Telerik bundles and could be upgr
 
 >Starting from Q1 2016, the Document Processing assemblies have an assembly version which may differ from the assembly version of the other assemblies in the particular suite. 
 >
->Starting from R3 2016, only assemblies with a version number ending with .40 suffix are distributed. The libraries don't contain code specific for .NET 4.5, thus an additional version is not needed.
+>Starting from R3 2016, only assemblies with a version number ending with .40 suffix are distributed. The libraries don't contain code specific for .NET Framework 4.5, thus an additional version is not needed.
 >
 >The changes are synced between the controls that have a dependency on Telerik Document Processing and while the referenced files are from the same release, they should work as expected regardless of the version distinction. 
 

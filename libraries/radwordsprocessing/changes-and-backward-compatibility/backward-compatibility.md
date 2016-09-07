@@ -23,4 +23,4 @@ Assemblies with a version number ending with .45 suffix are **not** distributed.
 
 ### What to do now
 
-Use the assemblies with a version number ending with .40 suffix. The library doesn't contain code specific for .NET 4.5, thus an additional version is not needed.
+Use the assemblies with a version number ending with .40 suffix. The library doesn't contain code specific for .NET Framework 4.5, thus an additional version is not needed.
