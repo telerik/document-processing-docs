@@ -3,16 +3,28 @@ title: Backwards Compatibility
 page_title: Backwards Compatibility
 description: Backwards Compatibility
 slug: radspreadprocessing-backwards-compatibility
-tags: backwards,compatibility
+tags: backward,compatibility
 published: True
 position: 1
 ---
 
-# Backwards Compatibility
+# Backward Compatibility
 
 
 
 This article will list the breaking changes and how they can be fixed when upgrading from a specific version of the controls to the next one.
+
+## What's Different in 2016 R3  
+
+
+### Changed
+
+Assemblies with a version number ending with .45 suffix are **not** distributed.
+
+### What to do now
+
+Use the assemblies with a version number ending with .40 suffix. The library doesn't contain code specific for .NET Framework 4.5, thus an additional version is not needed.
+
 
 ## What's Different in 2016 Q1
 
