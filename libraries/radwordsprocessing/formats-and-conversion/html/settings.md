@@ -132,6 +132,9 @@ Specifies whether the exported document should be indented (formatted with space
 This property is used to control how images are exported. The available options are as external file or as embedded images.
             
 > When an image with Uri source is imported, the ImageSource property of the Image contains object of type UriImageSource. Hence, the image is always exported with URI and the __ImagesExportMode__ property is not respected. If you need this property to be respected, you could convert the **UriImageSource** object to __ImageSource__.
+          
+<p>
+>When working with relative URI, the import/export functionalities only preserve the path to the image and do not modify it.
 
 ### ImagesFolderPath
 

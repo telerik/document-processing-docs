@@ -14,6 +14,23 @@ position: 1
 
 This article lists the breaking changes and how they can be fixed when upgrading from a specific version of the controls to another.
 
+## What's Different in 2016 R3  
+
+
+### Changed
+
+Assemblies with a version number ending with .45 suffix are **not** distributed.
+
+### What to do now
+
+Use the assemblies with a version number ending with .40 suffix. The library doesn't contain code specific for .NET Framework 4.5, thus an additional version is not needed.
+
+
+### Changed
+
+Telerik.Windows.Documents.Fixed.Model.RadFixedDocument::Merge() doesn't remove the content from the source document after appending it to the targeted one.
+
+
 ## What's Different in 2015 Q1      
 
 

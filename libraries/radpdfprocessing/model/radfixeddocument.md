@@ -76,16 +76,24 @@ __Example 3__ creates a page and adds it to the document created in [__Example 1
     document.Pages.Add(page);
 {{endregion}}
 
+**Example 4** shows you how you could obtain a copy of a RadFixedDocument.
 
-Since Q2 2015 you can merge PDF documents out-of-the-box with the Merge() method of __RadFixedDocument__. This method appends the source document to the current instance of __RadFixedDocument__.
+#### __[C#] Example 4: Clone a document__
 
-#### __[C#] Example 4: Merge documents__
+{{region radpdfprocessing-model-radfixeddocument_5}}
+	RadFixedDocument clonedDocument = originalDocument.Clone();
+{{endregion}}
 
-{{region radpdfprocessing-model-radfixeddocument_3}}
+
+You can merge PDF documents out-of-the-box with the Merge() method of __RadFixedDocument__. This method clones the source document and appends it to the current instance of __RadFixedDocument__.
+
+#### __[C#] Example 5: Merge documents__
+
+{{region radpdfprocessing-model-radfixeddocument_4}}
 	document.Merge(source);
 {{endregion}}
 
-The code from __Example 4__ will merge the document created in [__Example 1__](#example1) with another __RadFixedDocument__.
+The code from __Example 5__ merges the document created in [__Example 1__](#example1) with another __RadFixedDocument__.
 
 ## Document Information
 
@@ -95,7 +103,7 @@ __RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocum
 * __Title__: The title of the document.
 * __Description__: Text that describes the content of the document.
 
-#### __[C#] Example 5: Set DocumentInfo__
+#### __[C#] Example 6: Set DocumentInfo__
 
 {{region radpdfprocessing-model-radfixeddocument_3}}
 	document.DocumentInfo.Author = "Jane Doe";
