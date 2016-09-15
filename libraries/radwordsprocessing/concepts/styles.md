@@ -34,7 +34,7 @@ __RadFlowDocument__ includes repository of [Style](http://docs.telerik.com/devto
 The class containing the styling structure is called __Style__. Each style contains the following properties:
         
 
-* __Id__: The ID of the style. All styles in a __StyleRepository__ should have unique IDs. This property cannot be set after adding the style in a __StyleRepository__, in such situations *InvalidOperationException* is thrown.
+* __Id__: The ID of the style. All styles in a __StyleRepository__ should have unique IDs. This property cannot be set after adding the style in a __StyleRepository__, in such situations *InvalidOperationException* is thrown. The value of this property will be associated with the StyleId property of the corresponding document element.
             
 
 * __StyleType__: The [type](#style-types) of the style, described with [StyleType enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_StyleType.htm). It can be __Character__, __Paragraph__ or __Table__ and determines the types of document elements to which the style is applied.
