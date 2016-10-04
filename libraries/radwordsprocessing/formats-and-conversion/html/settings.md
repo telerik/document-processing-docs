@@ -237,7 +237,7 @@ __Example 3__ demonstrates how you can create export settings.
 
 
 
-# See Also
+## See Also
 
  * [Styles]({%slug radwordsprocessing-concepts-styles%})
  * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})

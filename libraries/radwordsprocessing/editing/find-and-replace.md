@@ -68,7 +68,7 @@ __Example 2__ shows how to apply a red highlight color to all occurrences of the
 
 
 
-# See Also
+## See Also
 
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
  * [CharacterProperties]({%slug radwordsprocessing-concepts-style-properties%}) 

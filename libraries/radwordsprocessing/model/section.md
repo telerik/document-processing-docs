@@ -152,7 +152,7 @@ The __Section__ can be rotated in order to visualize its pages in Portrait or La
 	section.Rotate(PageOrientation.Landscape);
 {{endregion}}
 
-# See Also
+## See Also
 
  * [Section API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Section.htm)
  * [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})

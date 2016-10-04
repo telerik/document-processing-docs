@@ -129,6 +129,6 @@ The following code-snippet illustrates how to remove the created in [Example 4](
 	paragraph.TabStops = paragraph.TabStops.Remove(tabStop);
 {{endregion}}
 
-# See Also
+## See Also
 
 * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

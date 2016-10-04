@@ -210,7 +210,7 @@ In __Example 8__ it is demonstrated how to add a tab stop to the paragraph's col
 
 You can refer to the [TabStop article]({%slug radwordsprocessing-concepts-tabstop%}) for more details about this element.
 
-# See Also
+## See Also
 
  * [Paragraph API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Paragraph.htm)
  * [Section]({%slug radwordsprocessing-model-section%})

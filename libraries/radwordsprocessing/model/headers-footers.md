@@ -138,7 +138,7 @@ Information on the types of watermarks and their use is available in the [Waterm
 
 
 
-# See Also
+## See Also
 
  * [HeaderFooterBase API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_HeaderFooterBase.htm)
  * [Document model]({%slug radwordsprocessing-model%})

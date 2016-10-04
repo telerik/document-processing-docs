@@ -639,7 +639,7 @@ Following is a list of all available style properties and their default values:
 
 </table>
 
-# See Also
+## See Also
 
  * [Styles]({%slug radwordsprocessing-concepts-styles%})
  * [IStyleProperty<T> API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Core_IStyleProperty_1.htm)

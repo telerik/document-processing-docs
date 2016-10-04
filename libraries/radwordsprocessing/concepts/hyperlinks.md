@@ -71,7 +71,7 @@ The result of the above snippet is illustrated in __Figure 2__.
 #### Figure 2: Hyperlink and bookmark in a document
   ![Rad Words Processing Concepts Hyperlinks 02](images/RadWordsProcessing_Concepts_Hyperlinks_02.png)
 
-# See Also
+## See Also
 
  * [Fields]({%slug radwordsprocessing-concepts-fields%})
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

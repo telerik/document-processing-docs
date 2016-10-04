@@ -172,7 +172,7 @@ __Example 5__ demonstrates how to add a __Table__ with 5 rows and 10 columns to 
 
 
 
-# See Also
+## See Also
 
  * [Table API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Table.htm)
  * [Section]({%slug radwordsprocessing-model-section%})

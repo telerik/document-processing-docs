@@ -102,7 +102,7 @@ __Example 3__ shows how to add a number of __TableCell__ elements in a TableRow.
 
 
 
-# See Also
+## See Also
 
  * [TableRow API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_TableRow.htm)
  * [Table]({%slug radwordsprocessing-model-table%})

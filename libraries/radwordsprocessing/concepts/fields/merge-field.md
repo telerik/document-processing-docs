@@ -62,7 +62,7 @@ __Example 2__ shows a possible use of merge field's switches.
 {{endregion}}
 
 
-# See Also
+## See Also
 
  * [Fields]({%slug radwordsprocessing-concepts-fields%})
  * [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})

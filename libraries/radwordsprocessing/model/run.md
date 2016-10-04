@@ -134,7 +134,7 @@ The Run exposes several properties that allow you to customize how it is rendere
     * __Pattern__: Indicates the underline pattern. *This is a Style property.*
      
 
-# See Also
+## See Also
 
  * [Run API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Run.htm)
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

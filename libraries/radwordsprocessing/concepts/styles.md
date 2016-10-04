@@ -240,7 +240,7 @@ Linked styles can be based on other linked styles or on paragraph styles.
     * Character properties inherit the character properties from the base linked character style.
                     
 
-# See Also
+## See Also
 
  * [Styles API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Style.htm)
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})

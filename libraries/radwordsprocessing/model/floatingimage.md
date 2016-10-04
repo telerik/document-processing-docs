@@ -148,7 +148,7 @@ This section explains the behavior of the  __Size__ property of The __Image__ ob
 
 
 
-# See Also
+## See Also
 
  * [FloatingImage API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Shapes_FloatingImage.htm)
  * [Document model]({%slug radwordsprocessing-model%})

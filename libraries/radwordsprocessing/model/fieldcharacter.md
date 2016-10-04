@@ -34,7 +34,7 @@ These are the possible __FieldCharacterTypes__
 __FieldCharacter__ has a __FieldInfo__ property, which points to its associated [FieldInfo]({%slug radwordsprocessing-concepts-fields%}) object.
         
 
-# See Also
+## See Also
 
  * [FieldCharacter API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Fields_FieldCharacter.htm)
  * [Fields]({%slug radwordsprocessing-concepts-fields%})
