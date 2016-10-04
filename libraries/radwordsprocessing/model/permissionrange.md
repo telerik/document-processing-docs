@@ -41,7 +41,7 @@ __Example 1__ demonstrates how to create permission credentials for a single use
 
 #### __[C#] Example 1: Add PermissionRange to paragraph__
 
-{{region radwordsprocessing-model-permissionranget_0}}
+{{region cs-radwordsprocessing-model-permissionrange_0}}
 	PermissionRangeCredentials jane = new PermissionRangeCredentials("Jane.Doe@telerik.com");
 	PermissionRange range = new PermissionRange(document, jane);
 	
@@ -59,14 +59,13 @@ __Example 2__ demonstrates how to specify that a __TableCell__ can be edited by 
 
 #### __[C#] Example 2: Insert PermissionRange for TableCell__
 
-{{region radwordsprocessing-model-permissionranget_0}}
-    Table table = editor.InsertTable();
-    TableRow row = table.Rows.AddTableRow();
-    TableCell cell = row.Cells.AddTableCell();
-    cell.Blocks.AddParagraph().Inlines.AddRun("Hello");
-
-    PermissionRangeCredentials everyone = new PermissionRangeCredentials(EditingGroup.Everyone);
-    PermissionRange range = editor.InsertPermissionRange(everyone, cell);
+{{region cs-radwordsprocessing-model-permissionrange_0}}
+	PermissionRangeCredentials jane = new PermissionRangeCredentials("Jane.Doe@telerik.com");
+	PermissionRange range = new PermissionRange(document, jane);
+	
+	paragraph.Inlines.Add(range.Start);
+	paragraph.Inlines.Add(new Run(document) { Text = "protected text" });
+	paragraph.Inlines.Add(range.End);
 {{endregion}}
 
 
@@ -86,13 +85,13 @@ __Example 3__ shows how to protect and unprotect a document using the various ov
 
 #### __[C#] Example 3: Protect and unprotect document through RadFlowDocumentEditor__
 
-{{region radwordsprocessing-model-permissionranget_2}}
-    editor.Protect(String.Empty);
-    if (editor.Unprotect(string.Empty))
-    {
-        editor.Protect("p4ssw0rd", ProtectionMode.AllowComments);
-    }
-    editor.Unprotect();
+{{region cs-radwordsprocessing-model-permissionrange_2}}
+	editor.Protect(String.Empty);
+	if (editor.Unprotect(string.Empty))
+	{
+	    editor.Protect("s3cr3tp4ssw0rd", ProtectionMode.AllowComments);
+	}
+	editor.Unprotect();
 {{endregion}}
 
 
@@ -104,8 +103,8 @@ __RadFlowDocument__ exposes a property of type __ProtectionSettings__ - Protecti
 
 #### __[C#] Example 4: Enforce protection through RadFlowDocument__
 
-{{region radwordsprocessing-model-permissionranget_3}}
-    document.ProtectionSettings.Enforced = true;
+{{region cs-radwordsprocessing-model-permissionrange_3}}
+	document.ProtectionSettings.Enforced = true;
 {{endregion}}
 
 The settings provide a number of other modification options, including changing the algorithm used to protect the document with one of the predefined in the __ProtectionAlgorithmNames__ enumeration.
