@@ -88,13 +88,13 @@ A style should be added to __RadFlowDocument__'s style repository in order to be
 
 #### __[C#] Example 1: Create a table style and add it to the style repository__
 
-{{region radwordsprocessing-concepts-styles_0}}
-    Style tableStyle = new Style("TableStyle", StyleType.Table);
-    tableStyle.Name = "Table Style";
-    tableStyle.TableProperties.Borders.LocalValue = new TableBorders(new Border(1, BorderStyle.Single, new ThemableColor(Colors.Blue)));
-    tableStyle.TableProperties.Alignment.LocalValue = Alignment.Center;
-    tableStyle.TableCellProperties.VerticalAlignment.LocalValue = VerticalAlignment.Center;
-    document.StyleRepository.Add(tableStyle);
+{{region cs-radwordsprocessing-concepts-styles_0}}
+	Style tableStyle = new Style("TableStyle", StyleType.Table);
+	tableStyle.Name = "Table Style";
+	tableStyle.TableProperties.Borders.LocalValue = new TableBorders(new Border(1, BorderStyle.Single, new ThemableColor(Colors.Blue)));
+	tableStyle.TableProperties.Alignment.LocalValue = Alignment.Center;
+	tableStyle.TableCellProperties.VerticalAlignment.LocalValue = VerticalAlignment.Center;
+	document.StyleRepository.Add(tableStyle);
 {{endregion}}
 
 
@@ -123,9 +123,9 @@ Built-in styles are commonly used styles, which are predefined for convenience. 
 
 #### __[C#] Example 2: Get the ID of a built-in style__
 
-{{region radwordsprocessing-concepts-styles_1}}
-    string heading1StyleId = BuiltInStyleNames.GetHeadingStyleIdByIndex(1);
-    Style heading1Style = document.StyleRepository.AddBuiltInStyle(heading1StyleId);
+{{region cs-radwordsprocessing-concepts-styles_1}}
+	string heading1StyleId = BuiltInStyleNames.GetHeadingStyleIdByIndex(1);
+	Style heading1Style = document.StyleRepository.AddBuiltInStyle(heading1StyleId);
 {{endregion}}
 
 

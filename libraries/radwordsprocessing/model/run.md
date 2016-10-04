@@ -26,9 +26,9 @@ The code in __Example 1__ creates a __Run__ element and adds it to a [Paragraph]
 
 #### __[C#] Example 1: Create and add a run to a paragraph__
 
-{{region radwordsprocessing-model-run_0}}
-    Run run = new Run(document);
-    paragraph.Inlines.Add(run);
+{{region cs-radwordsprocessing-model-run_0}}
+	Run run = new Run(document);
+	paragraph.Inlines.Add(run);
 {{endregion}}
 
 
@@ -41,9 +41,9 @@ You can add a run at a specific index in the __Inlines__ collection of a paragra
 
 #### __[C#] Example 2: Create and add a run at a specific index of a paragraph's Inlines collection__
 
-{{region radwordsprocessing-model-run_1}}
-    Run run = new Run(document);
-    paragraph.Inlines.Insert(0, run);
+{{region cs-radwordsprocessing-model-run_1}}
+	Run run = new Run(document);
+	paragraph.Inlines.Insert(0, run);
 {{endregion}}
 
 
@@ -53,12 +53,12 @@ You can also use the __AddRun()__ method of the __Inlines__ collection of a para
 
 #### __[C#] Example 3: Create and add a run to a paragraph__
 
-{{region radwordsprocessing-model-run_2}}
-    // Adds an empty run.
-    Run run1 = paragraph.Inlines.AddRun();
-
-    // Adds a run and set the text to the text property.
-    Run run2 = paragraph.Inlines.AddRun("The text.");
+{{region cs-radwordsprocessing-model-run_2}}
+	// Adds an empty run.
+	Run run1 = paragraph.Inlines.AddRun();
+	
+	// Adds a run and set the text to the text property.
+	Run run2 = paragraph.Inlines.AddRun("The text.");
 {{endregion}}
 
 
@@ -68,14 +68,14 @@ Inserting text in the document can also be achieved with the [RadFlowDocumentEdi
 
 #### __[C#] Example 4: Insert a run using RadFlowDocumentEditor__
 
-{{region radwordsprocessing-model-run_3}}
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-
-    // Adds new run to the document
-    Run run1 = editor.InsertText("First run ");
-
-    // Adds new run and starts new paragraph
-    Run run2 = editor.InsertLine("Second run");
+{{region cs-radwordsprocessing-model-run_3}}
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
+	
+	// Adds new run to the document
+	Run run1 = editor.InsertText("First run ");
+	
+	// Adds new run and starts new paragraph
+	Run run2 = editor.InsertLine("Second run");
 {{endregion}}
 
 

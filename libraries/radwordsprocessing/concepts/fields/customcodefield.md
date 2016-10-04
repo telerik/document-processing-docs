@@ -50,8 +50,8 @@ Here are some commonly used fields. The complete list of field codes and the swi
 
 #### __[C#] Example 1: Insert PAGE field__
 
-{{region radwordsprocessing-concepts-customcodefield_0}}
-    editor.InsertField("PAGE  \\* ROMAN", "VII");
+{{region cs-radwordsprocessing-concepts-customcodefield_0}}
+	editor.InsertField("PAGE  \\* ROMAN", "VII");
 {{endregion}}
 
 
@@ -66,11 +66,11 @@ The __\* ROMAN__ is general formatting switch that formats a numeric result usin
 
 #### __[C#] Example 2: Insert NUMPAGES field__
 
-{{region radwordsprocessing-concepts-customcodefield_1}}
-    editor.InsertText("Page ");
-    editor.InsertField("PAGE", "3");
-    editor.InsertText(" of ");
-    editor.InsertField("NUMPAGES", "5");
+{{region cs-radwordsprocessing-concepts-customcodefield_1}}
+	editor.InsertText("Page ");
+	editor.InsertField("PAGE", "3");
+	editor.InsertText(" of ");
+	editor.InsertField("NUMPAGES", "5");
 {{endregion}}
 
 
@@ -82,8 +82,8 @@ In ** Example 3** is demonstrated how to insert __AUTHOR__ field showing the nam
 
 #### __[C#]  Example 3: Insert AUTHOR field__
 
-{{region radwordsprocessing-concepts-customcodefield_3}}
-    editor.InsertField("AUTHOR  \\* Upper", "JOHN DOE");
+{{region cs-radwordsprocessing-concepts-customcodefield_3}}
+	editor.InsertField("AUTHOR  \\* Upper", "JOHN DOE");
 {{endregion}}
 
 
@@ -98,9 +98,9 @@ The __\* Upper__ switch will convert all letters in the result to uppercase.
 
 #### __[C#]  Example 4: Insert Table of Contents field__
 
-{{region radwordsprocessing-concepts-customcodefield_4}}
-    FieldInfo tocField = editor.InsertField("TOC \\o \"1-3\" \\h \\z \\u", "result");
-    tocField.IsDirty = true;
+{{region cs-radwordsprocessing-concepts-customcodefield_4}}
+	FieldInfo tocField = editor.InsertField("TOC \\o \"1-3\" \\h \\z \\u", "result");
+	tocField.IsDirty = true;
 {{endregion}}
 
 

@@ -32,9 +32,9 @@ __Example 1__ demonstrates how you can insert a merge field.
 
 #### __[C#] Example 1: Insert merge field__
 
-{{region radwordsprocessing-concepts-merge-field_0}}
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-    editor.InsertField("MERGEFIELD First_Name", "Nancy Davolio");
+{{region cs-radwordsprocessing-concepts-merge-field_0}}
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
+	editor.InsertField("MERGEFIELD First_Name", "Nancy Davolio");
 {{endregion}}
 
 
@@ -57,8 +57,8 @@ __Example 2__ shows a possible use of merge field's switches.
 
 #### __[C#] Example 2: Insert merge field with switches__
 
-{{region radwordsprocessing-concepts-merge-field_1}}
-    editor.InsertField("MERGEFIELD First_Name \\b \"Mr. \" \\f \". \"", "");
+{{region cs-radwordsprocessing-concepts-merge-field_1}}
+	editor.InsertField("MERGEFIELD First_Name \\b \"Mr. \" \\f \". \"", "");
 {{endregion}}
 
 

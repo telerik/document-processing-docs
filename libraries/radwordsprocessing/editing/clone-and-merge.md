@@ -27,12 +27,12 @@ __RadWordsProcessing__ allows you to merge two __RadFlowDocument__ instance usin
 
 #### __[C#] Example 1: Merge two instances of RadFlowDocument__
 
-{{region radwordsprocessing-editing-clone-and-merge_0}}
-    RadFlowDocument target = new RadFlowDocument();
-    RadFlowDocument source = new RadFlowDocument();
-    //...
-    // target will contain merged content and styles.
-    target.Merge(source);
+{{region cs-radwordsprocessing-editing-clone-and-merge_0}}
+	RadFlowDocument target = new RadFlowDocument();
+	RadFlowDocument source = new RadFlowDocument();
+	//...
+	// target will contain merged content and styles.
+	target.Merge(source);
 {{endregion}}
 
 
@@ -59,15 +59,15 @@ __Example 2__ shows how to merge documents by specifying the __MergeOptions__ pa
 
 #### __[C#] Example 2: Merge documents with MergeOptions__
 
-{{region radwordsprocessing-editing-clone-and-merge_1}}
-    RadFlowDocument target = new RadFlowDocument();
-    RadFlowDocument source = new RadFlowDocument();
-    //...
-    MergeOptions mergeOptions = new MergeOptions()
-    {
-        ConflictingStylesResolutionMode = ConflictingStylesResolutionMode.RenameSourceStyle
-    };
-    target.Merge(source, mergeOptions);
+{{region cs-radwordsprocessing-editing-clone-and-merge_1}}
+	RadFlowDocument target = new RadFlowDocument();
+	RadFlowDocument source = new RadFlowDocument();
+	//...
+	MergeOptions mergeOptions = new MergeOptions()
+	{
+	    ConflictingStylesResolutionMode = ConflictingStylesResolutionMode.RenameSourceStyle
+	};
+	target.Merge(source, mergeOptions);
 {{endregion}}
 
 
@@ -80,8 +80,8 @@ __RadFlowDocument__ provides a __Clone()__ method, which creates a deep copy of 
 
 #### __[C#] Example 3: Clone a RadFlowDocument__
 
-{{region radwordsprocessing-editing-clone-and-merge_2}}
-    RadFlowDocument clonedDocument = document.Clone();
+{{region cs-radwordsprocessing-editing-clone-and-merge_2}}
+	RadFlowDocument clonedDocument = document.Clone();
 {{endregion}}
 
 
@@ -110,8 +110,8 @@ The __Clone()__ method has two overloads:
 
 #### __[C#] Example 4: Clone a section__
 
-{{region radwordsprocessing-editing-clone-and-merge_3}}
-    Section clonedSection = section.Clone(radFlowDocument);
+{{region cs-radwordsprocessing-editing-clone-and-merge_3}}
+	Section clonedSection = section.Clone(radFlowDocument);
 {{endregion}}
 
 >tip With the **DocumentElementImporter** class you could import a document element from one document (source) and insert it into another (target). For more details, please see [this article]({%slug radwordsprocessing-editing-import-document-element%}).

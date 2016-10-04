@@ -22,10 +22,10 @@ Document variables provide a mechanism to store information in the document in a
 
 #### __[C#] Example 1: Add document variable record__
 
-{{region radwordsprocessing-concepts-document-variables_0}}
-    RadFlowDocument document = new RadFlowDocument();
-    document.DocumentVariables["Job"] = "Software Engineer";
-    document.DocumentVariables.Add("Name", "Nancy Davolio");
+{{region cs-radwordsprocessing-concepts-document-variables_0}}
+	RadFlowDocument document = new RadFlowDocument();
+	document.DocumentVariables["Job"] = "Software Engineer";
+	document.DocumentVariables.Add("Name", "Nancy Davolio");
 {{endregion}}
 
 
@@ -41,8 +41,8 @@ Removing defined variables can be achieved by using the __Remove()__ method of t
 
 #### __[C#] Example 2: Remove document variable record__
 
-{{region radwordsprocessing-concepts-document-variables_1}}
-    document.DocumentVariables.Remove("Job");     
+{{region cs-radwordsprocessing-concepts-document-variables_1}}
+	document.DocumentVariables.Remove("Job");
 {{endregion}}
 
 
@@ -62,8 +62,8 @@ A __DocumentVariable__ field can be inserted through [RadFlowDocumentEditor]({%s
 
 #### __[C#] Example 3: Insert document variable field__
 
-{{region radwordsprocessing-concepts-document-variables_2}}
-    editor.InsertField("DOCVARIABLE Name", "Nancy Davolio");
+{{region cs-radwordsprocessing-concepts-document-variables_2}}
+	editor.InsertField("DOCVARIABLE Name", "Nancy Davolio");
 {{endregion}}
 
 

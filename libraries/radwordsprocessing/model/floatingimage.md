@@ -28,9 +28,9 @@ __Example 1__ shows how to create a FloatingImage and add it to a [Paragraph]({%
 
 #### __[C#] Example 1: Create a floating image and insert it in a paragraph__
 
-{{region radwordsprocessing-model-floatingimage_0}}
-    FloatingImage floatingImage = new FloatingImage(document);
-    paragraph.Inlines.Add(floatingImage);
+{{region cs-radwordsprocessing-model-floatingimage_0}}
+	FloatingImage floatingImage = new FloatingImage(document);
+	paragraph.Inlines.Add(floatingImage);
 {{endregion}}
 
 
@@ -43,9 +43,9 @@ You can add an image at a specific index in the __Inlines__ collection of a para
 
 #### __[C#] Example 2: Add a floating image to a specific position__
 
-{{region radwordsprocessing-model-floatingimage_1}}
-    FloatingImage floatingImage = new FloatingImage(document);
-    paragraph.Inlines.Insert(0, floatingImage);
+{{region cs-radwordsprocessing-model-floatingimage_1}}
+	FloatingImage floatingImage = new FloatingImage(document);
+	paragraph.Inlines.Insert(0, floatingImage);
 {{endregion}}
 
 
@@ -55,8 +55,8 @@ You can also use the __AddFloatingImage()__ method of the __Inlines__ collection
 
 #### __[C#] Example 3: Using AddFloatingImage() method__
 
-{{region radwordsprocessing-model-floatingimage_2}}
-    FloatingImage floatingImage = paragraph.Inlines.AddFloatingImage();
+{{region cs-radwordsprocessing-model-floatingimage_2}}
+	FloatingImage floatingImage = paragraph.Inlines.AddFloatingImage();
 {{endregion}}
 
 
@@ -66,13 +66,13 @@ Inserting __FloatingImage__ element in RadFlowDocument can also be achieved with
 
 #### __[C#] Example 4: Insert a floating image using RadFlowDocumentEditor__
 
-{{region radwordsprocessing-model-floatingimage_3}}
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-
-    using (Stream stream = this.GetResourceStream("Telerik_logo.png"))
-    {
-        editor.InsertFloatingImage(stream, "png", new Size(118, 28));
-    }
+{{region cs-radwordsprocessing-model-floatingimage_3}}
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+	
+	using (Stream stream = this.GetResourceStream("Telerik_logo.png"))
+	{
+	    editor.InsertFloatingImage(stream, "png", new Size(118, 28));
+	}
 {{endregion}}
 
 

@@ -42,10 +42,10 @@ Here is how to create a [RadFlowDocument]({%slug radwordsprocessing-model-radflo
 
 #### __[C#] Example 1: Create RadFlowDocument programmatically__
 
-{{region radwordsprocessing-getting-started_0}}
-    RadFlowDocument document = new RadFlowDocument();
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.InsertText("Hello world!");
+{{region cs-radwordsprocessing-getting-started_0}}
+	RadFlowDocument document = new RadFlowDocument();
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+	editor.InsertText("Hello world!");
 {{endregion}}
 
 
@@ -64,12 +64,12 @@ Exporting the document to Docx file can be achieved with the [DocxFormatProvider
 
 #### __[C#] Example 2: Export RadFlowDocument to Docx__
 
-{{region radwordsprocessing-getting-started_1}}
-    using (Stream output = new FileStream("output.docx", FileMode.OpenOrCreate))
-    {
-        DocxFormatProvider provider = new DocxFormatProvider();
-        provider.Export(document, output);
-    }
+{{region cs-radwordsprocessing-getting-started_1}}
+	using (Stream output = new FileStream("output.docx", FileMode.OpenOrCreate))
+	{
+	    DocxFormatProvider provider = new DocxFormatProvider();
+	    provider.Export(document, output);
+	}
 {{endregion}}
 
 
