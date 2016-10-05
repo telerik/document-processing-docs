@@ -24,7 +24,7 @@ __Table__ element is a __Block__ element that provides a grid-based organization
 
 ## Inserting a Table
 
-Tables can be added as a child of a [BlockContainer](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_BlockContainerBase.htm) element – [Section]({%slug radwordsprocessing-model-section%}), [TableCell]({%slug radwordsprocessing-model-tablecell%}), [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%}), through the __Blocks__ collection.
+When creating an instance of the Table class, you should pass the document that the table belongs to as a parameter to the constructor. Tables can be added as a child of a [BlockContainer](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_BlockContainerBase.htm) element – [Section]({%slug radwordsprocessing-model-section%}), [TableCell]({%slug radwordsprocessing-model-tablecell%}), [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%}), through the __Blocks__ collection. 
         
 
 The code snippet from __Example 1__ creates and inserts a Table to a Section.

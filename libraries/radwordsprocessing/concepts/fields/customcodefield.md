@@ -77,7 +77,7 @@ The __\* ROMAN__ is general formatting switch that formats a numeric result usin
 
 ### Inserting AUTHOR Field
 
-In ** Example 3** is demonstrated how to insert __AUTHOR__ field showing the name of the author of the document.
+In **Example 3** is demonstrated how to insert __AUTHOR__ field showing the name of the author of the document.
             
 
 #### __[C#]  Example 3: Insert AUTHOR field__
@@ -88,7 +88,7 @@ In ** Example 3** is demonstrated how to insert __AUTHOR__ field showing the nam
 
 
 
-The __\* Upper__ switch will convert all letters in the result to uppercase.
+The __\\\\\* Upper__ switch will convert all letters in the result to uppercase.
             
 
 ### Inserting Table of Contents Field

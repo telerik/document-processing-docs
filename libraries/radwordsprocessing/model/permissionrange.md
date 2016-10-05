@@ -42,12 +42,13 @@ __Example 1__ demonstrates how to create permission credentials for a single use
 #### __[C#] Example 1: Add PermissionRange to paragraph__
 
 {{region cs-radwordsprocessing-model-permissionrange_0}}
-	PermissionRangeCredentials jane = new PermissionRangeCredentials("Jane.Doe@telerik.com");
-	PermissionRange range = new PermissionRange(document, jane);
+	Table table = editor.InsertTable();
+	TableRow row = table.Rows.AddTableRow();
+	TableCell cell = row.Cells.AddTableCell();
+	cell.Blocks.AddParagraph().Inlines.AddRun("Hello");
 	
-	paragraph.Inlines.Add(range.Start);
-	paragraph.Inlines.Add(new Run(document) { Text = "protected text" });
-	paragraph.Inlines.Add(range.End);
+	PermissionRangeCredentials everyone = new PermissionRangeCredentials(EditingGroup.Everyone);
+	PermissionRange range = editor.InsertPermissionRange(everyone, cell);
 {{endregion}}
 
 The paragraph should belong to the same document that is passed to the constructor of the __PermissionRange__ object, otherwise an exception is thrown.
@@ -59,13 +60,14 @@ __Example 2__ demonstrates how to specify that a __TableCell__ can be edited by 
 
 #### __[C#] Example 2: Insert PermissionRange for TableCell__
 
-{{region cs-radwordsprocessing-model-permissionrange_0}}
-	PermissionRangeCredentials jane = new PermissionRangeCredentials("Jane.Doe@telerik.com");
-	PermissionRange range = new PermissionRange(document, jane);
+{{region cs-radwordsprocessing-model-permissionrange_1}}
+	Table table = editor.InsertTable();
+	TableRow row = table.Rows.AddTableRow();
+	TableCell cell = row.Cells.AddTableCell();
+	cell.Blocks.AddParagraph().Inlines.AddRun("Hello");
 	
-	paragraph.Inlines.Add(range.Start);
-	paragraph.Inlines.Add(new Run(document) { Text = "protected text" });
-	paragraph.Inlines.Add(range.End);
+	PermissionRangeCredentials everyone = new PermissionRangeCredentials(EditingGroup.Everyone);
+	PermissionRange range = editor.InsertPermissionRange(everyone, cell);
 {{endregion}}
 
 

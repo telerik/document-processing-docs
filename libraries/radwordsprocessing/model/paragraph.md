@@ -70,7 +70,7 @@ Inserting a new __Paragraph__ in the document can also be achieved with the [Rad
 #### __C#  Example 4: Insert a paragraph using the RadFlowDocumentEditor__
 
 {{region cs-radwordsprocessing-model-paragraph_3}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(GetDocument());
 	Paragraph paragraph = editor.InsertParagraph();
 {{endregion}}
 

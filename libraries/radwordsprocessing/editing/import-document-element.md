@@ -5,7 +5,7 @@ description: Import Document Element
 slug: radwordsprocessing-editing-import-document-element
 tags: import, document, element
 published: True
-position: 3
+position: 2
 ---
 
 # Import Document Element

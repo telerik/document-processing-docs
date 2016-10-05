@@ -114,24 +114,24 @@ The next tutorial will get you through the creation of a list.
 1. Define a new __RadFlowDocument__ and add a __Section__ in it.
             
 
-#### __[C#] Step 2: Create RadFlowDocument__
-
-{{region cs-radwordsprocessing-concepts-lists_1}}
-	RadFlowDocument document = new RadFlowDocument();
-	Section section = document.Sections.AddSection();
-{{endregion}}
+	#### __[C#] Step 1: Create RadFlowDocument__
+	
+	{{region cs-radwordsprocessing-concepts-lists_1}}
+		RadFlowDocument document = new RadFlowDocument();
+		Section section = document.Sections.AddSection();
+	{{endregion}}
 
 
 
 1. Create a __List__ object and associate it with the document by adding it to the __Lists__ collection.
             
 
-	#### __[C#] Step 3: Create list__
+	#### __[C#] Step 2: Create list__
 	
 	{{region cs-radwordsprocessing-concepts-lists_2}}
-	List list = new List();
-	document.Lists.Add(list); // Adding the list in the document.
-{{endregion}}
+		List list = new List();
+		document.Lists.Add(list); // Adding the list in the document.
+	{{endregion}}
 	
 	In this case, the default __HybridMultilevel__ type of list would be created.
             
@@ -139,30 +139,30 @@ The next tutorial will get you through the creation of a list.
 1. Iterate over the collection of __Levels__ the list has.
             
 
-	#### __[C#] Step 4: Iterate levels__
+	#### __[C#] Step 3: Iterate levels__
 	
 	{{region cs-radwordsprocessing-concepts-lists_3}}
-	for (int level = 0; level < list.Levels.Count; ++level)
-{{endregion}}
+		for (int level = 0; level < list.Levels.Count; ++level)
+	{{endregion}}
 
 
 
 1. Specify some properties for each level.
             
 
-	#### __[C#] Step 5: Customize list levels__
+	#### __[C#] Step 4: Customize list levels__
 	
 	{{region cs-radwordsprocessing-concepts-lists_4}}
-	bool isEven = (level % 2) == 0;
-	
-	list.Levels[level].StartIndex = 1;
-	// We set Decimal numbering style to a list level if it is even level, otherwise Bullet.
-	list.Levels[level].NumberingStyle = isEven ? NumberingStyle.Decimal : NumberingStyle.Bullet;
-	// Accordingly to the above rule, we set the corresponding NumberTextFormat.
-	list.Levels[level].NumberTextFormat = isEven ? "%" + (level + 1) + "." : "o";
-	// Set the desired indentation of the ListLevel can be done through its ParagraphProperties:
-	list.Levels[level].ParagraphProperties.LeftIndent.LocalValue = 48 + (level * 24);
-{{endregion}}
+		bool isEven = (level % 2) == 0;
+		
+		list.Levels[level].StartIndex = 1;
+		// We set Decimal numbering style to a list level if it is even level, otherwise Bullet.
+		list.Levels[level].NumberingStyle = isEven ? NumberingStyle.Decimal : NumberingStyle.Bullet;
+		// Accordingly to the above rule, we set the corresponding NumberTextFormat.
+		list.Levels[level].NumberTextFormat = isEven ? "%" + (level + 1) + "." : "o";
+		// Set the desired indentation of the ListLevel can be done through its ParagraphProperties:
+		list.Levels[level].ParagraphProperties.LeftIndent.LocalValue = 48 + (level * 24);
+	{{endregion}}
 	
 	With this step the list is ready-to-use.
             

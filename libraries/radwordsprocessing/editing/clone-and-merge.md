@@ -114,7 +114,7 @@ The __Clone()__ method has two overloads:
 	Section clonedSection = section.Clone(radFlowDocument);
 {{endregion}}
 
->tip With the **DocumentElementImporter** class you could import a document element from one document (source) and insert it into another (target). For more details, please see [this article]({%slug radwordsprocessing-editing-import-document-element%}).
+>tip With the **DocumentElementImporter** class you can import a document element from one document (source) and insert it into another (target). For more details, check [this article]({%slug radwordsprocessing-editing-import-document-element%}).
 
 
 ## Cloning Other Objects

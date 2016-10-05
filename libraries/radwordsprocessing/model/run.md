@@ -57,7 +57,7 @@ You can also use the __AddRun()__ method of the __Inlines__ collection of a para
 	// Adds an empty run.
 	Run run1 = paragraph.Inlines.AddRun();
 	
-	// Adds a run and set the text to the text property.
+	// Adds a run and sets the text to the text property.
 	Run run2 = paragraph.Inlines.AddRun("The text.");
 {{endregion}}
 
@@ -69,12 +69,12 @@ Inserting text in the document can also be achieved with the [RadFlowDocumentEdi
 #### __[C#] Example 4: Insert a run using RadFlowDocumentEditor__
 
 {{region cs-radwordsprocessing-model-run_3}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(GetDocument());
 	
-	// Adds new run to the document
+	// Adds a new run to the document.
 	Run run1 = editor.InsertText("First run ");
 	
-	// Adds new run and starts new paragraph
+	// Adds a new run and starts a new paragraph.
 	Run run2 = editor.InsertLine("Second run");
 {{endregion}}
 
