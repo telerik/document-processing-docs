@@ -88,11 +88,14 @@ __Example 3__ shows how to protect and unprotect a document using the various ov
 #### __[C#] Example 3: Protect and unprotect document through RadFlowDocumentEditor__
 
 {{region cs-radwordsprocessing-model-permissionrange_2}}
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
 	editor.Protect(String.Empty);
+	
 	if (editor.Unprotect(string.Empty))
 	{
 	    editor.Protect("s3cr3tp4ssw0rd", ProtectionMode.AllowComments);
 	}
+	
 	editor.Unprotect();
 {{endregion}}
 

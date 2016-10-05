@@ -101,6 +101,7 @@ __Example 1__ adds a default bulleted list to a predefined RadFlowDocument.
 #### __[C#] Example 1: Add list template__
 
 {{region cs-radwordsprocessing-concepts-lists_0}}
+	            
 	List list = document.Lists.Add(ListTemplateType.BulletDefault);
 {{endregion}}
 
@@ -117,6 +118,7 @@ The next tutorial will get you through the creation of a list.
 	#### __[C#] Step 1: Create RadFlowDocument__
 	
 	{{region cs-radwordsprocessing-concepts-lists_1}}
+		            
 		RadFlowDocument document = new RadFlowDocument();
 		Section section = document.Sections.AddSection();
 	{{endregion}}
@@ -129,6 +131,7 @@ The next tutorial will get you through the creation of a list.
 	#### __[C#] Step 2: Create list__
 	
 	{{region cs-radwordsprocessing-concepts-lists_2}}
+		            
 		List list = new List();
 		document.Lists.Add(list); // Adding the list in the document.
 	{{endregion}}
@@ -142,6 +145,7 @@ The next tutorial will get you through the creation of a list.
 	#### __[C#] Step 3: Iterate levels__
 	
 	{{region cs-radwordsprocessing-concepts-lists_3}}
+		    
 		for (int level = 0; level < list.Levels.Count; ++level)
 	{{endregion}}
 
@@ -153,6 +157,7 @@ The next tutorial will get you through the creation of a list.
 	#### __[C#] Step 4: Customize list levels__
 	
 	{{region cs-radwordsprocessing-concepts-lists_4}}
+		                
 		bool isEven = (level % 2) == 0;
 		
 		list.Levels[level].StartIndex = 1;

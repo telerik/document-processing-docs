@@ -30,6 +30,7 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 #### __[C#] Example 1: Create DocumentElementImporter__
 
 {{region cs-radwordsprocessing-editing-import-document-element_0}}
+	            
 	DocumentElementImporter importer = new DocumentElementImporter(targetDocument, sourceDocument, ConflictingStylesResolutionMode.UseTargetStyle);
 {{endregion}}
 
@@ -42,6 +43,7 @@ The **DocumentElementImporter** class exposes the Import&lt;T&gt;() method, whic
 #### __[C#] Example 2: Import a document element__
 
 {{region cs-radwordsprocessing-editing-import-document-element_1}}
+	            
 	Run run = targetDocument.EnumerateChildrenOfType<Run>().First();
 	Run importedRun = importer.Import<Run>(run);
 {{endregion}}

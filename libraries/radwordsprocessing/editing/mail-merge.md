@@ -26,6 +26,7 @@ The code snippet in __Example 1__ shows how to initialize a RadFlodDocumentEdito
 #### __[C#] Example 1: Insert a merge field__
 
 {{region cs-radwordsprocessing-editing-mail-merge_0}}
+	            
 	RadFlowDocument document = CreateDocument();
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
 	editor.InsertField("MERGEFIELD FirstName", "");
@@ -39,8 +40,9 @@ Additionally, a field can be added to a Paragraph manually by creating a __Field
 #### __[C#] Example 2: Add a merge field manually__
 
 {{region cs-radwordsprocessing-editing-mail-merge_1}}
+	            
 	FieldInfo field = new FieldInfo(document);
-	
+	            
 	paragraph.Inlines.Add(field.Start);
 	paragraph.Inlines.AddRun("MERGEFIELD LastName");
 	paragraph.Inlines.Add(field.Separator);
@@ -64,6 +66,7 @@ Example 3 shows a simple example data source.
 #### __[C#] Example 3: Sample data source__
 
 {{region cs-radwordsprocessing-editing-mail-merge_2}}
+	        
 	List<MailMergeRecord> mailMergeDataSource = new List<MailMergeRecord>()
 	{
 	    new MailMergeRecord()
@@ -87,6 +90,7 @@ __Example 4__ performs the mail merge operation over a previously defined templa
 #### __[C#] Example 4: Perform mail merge__
 
 {{region cs-radwordsprocessing-editing-mail-merge_3}}
+	    
 	RadFlowDocument mailMergeResult = document.MailMerge(mailMergeDataSource);
 {{endregion}}
 

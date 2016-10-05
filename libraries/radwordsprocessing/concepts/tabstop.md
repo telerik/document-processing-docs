@@ -61,12 +61,13 @@ Excluding the default constructor, the __TabStopCollection__ class exposes an ov
 #### __[C#] Example 1: Create a TabStopCollection__
 
 {{region cs-radwordsprocessing-concepts-tabstops_0}}
+	            
 	List<TabStop> tabStops = new List<TabStop>();
 	tabStops.Add(new TabStop(Unit.InchToDip(1), TabStopType.Left));
 	tabStops.Add(new TabStop(Unit.InchToDip(2), TabStopType.Center, TabStopLeader.Dot));
 	tabStops.Add(new TabStop(Unit.InchToDip(3), TabStopType.Right, TabStopLeader.Hyphen));
 	tabStops.Add(new TabStop(Unit.InchToDip(5.5), TabStopType.Bar));
-	
+	            
 	TabStopCollection collection = new TabStopCollection(tabStops);
 {{endregion}}
 
@@ -77,8 +78,9 @@ In __Example 2__ is illustrated how to insert items in the __TabStopCollection__
 
 #### __[C#] Example 2: Insert item in a TabStopCollection__
 {{region cs-radwordsprocessing-concepts-tabstops_1}}
+	            
 	collection = collection.Insert(new TabStop(Unit.InchToDip(4)))
-	                                            .Insert(new TabStop(Unit.InchToDip(5.5), TabStopType.Right));
+	                       .Insert(new TabStop(Unit.InchToDip(5.5), TabStopType.Right));
 {{endregion}}
 
 

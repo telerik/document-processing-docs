@@ -30,6 +30,7 @@ __RadFlowDocumentEditor__ is always associated with a single document, which it 
 #### __[C#] Example 1: Create a RadFlowDocumentEditor__
 
 {{region cs-radwordsprocessing-editing-radflowdocumenteditor_0}}
+	            
 	RadFlowDocument document = this.CreateDocument();
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
 {{endregion}}
@@ -53,6 +54,7 @@ The code from __Example 2__ demonstrates how to position the editor after the se
 #### __[C#] Example 2: Changing the position of RadFlowDocumentEditor__
 
 {{region cs-radwordsprocessing-editing-radflowdocumenteditor_2}}
+	            
 	Paragraph firstParagraph = document.EnumerateChildrenOfType<Paragraph>().First();
 	editor.MoveToInlineEnd(firstParagraph.Inlines[1]);
 {{endregion}}
@@ -93,6 +95,7 @@ The code in __Example 4__ inserts a run containing a new line.
 #### __[C#] Example 4: Insert a run with a new line__
 
 {{region cs-radwordsprocessing-editing-radflowdocumenteditor_4}}
+	        
 	editor.InsertText("First" + Environment.NewLine + "Second");
 {{endregion}}
 
@@ -114,6 +117,7 @@ You can start a new [Paragraph]({%slug radwordsprocessing-model-paragraph%}) wit
 #### __[C#] Example 5: Insert a paragraph__
 
 {{region cs-radwordsprocessing-editing-radflowdocumenteditor_5}}
+	        
 	editor.InsertText("First paragraph");
 	editor.InsertParagraph();
 	editor.InsertText("Second paragraph");
@@ -154,6 +158,7 @@ It automatically applies "Hyperlink" built-in style to the inserted hyperlink if
 #### __[C#] Example 7: Insert a hyperlink__
 
 {{region cs-radwordsprocessing-editing-radflowdocumenteditor_6}}
+	            
 	editor.InsertHyperlink("telerik", "http://www.telerik.com", false, "Telerik site");
 {{endregion}}
 
@@ -174,10 +179,11 @@ __Example 8__ shows how to add page numbering in the header of a document:
 #### __[C#] Example 8: Add page numbering in a header__
 
 {{region cs-radwordsprocessing-editing-radflowdocumenteditor_7}}
+	        
 	// Create header and move the editor
 	Header header = document.Sections[0].Headers.Add();
 	editor.MoveToParagraphStart(header.Blocks.AddParagraph());
-	
+	            
 	editor.InsertText("Page ");
 	editor.InsertField("PAGE", "1");
 	editor.InsertText(" of ");
@@ -215,6 +221,7 @@ __Example 9__ shows how an image can be inserted using a stream:
 #### __[C#] Example 9: Insert an image from a Stream__
 
 {{region cs-radwordsprocessing-editing-radflowdocumenteditor_9}}
+	        
 	editor.InsertText("Image:");
 	using (Stream stream = this.GetResourceStream("Telerik_logo.png"))
 	{
@@ -247,9 +254,10 @@ Here is how to insert a table with the "TableGrid" built-in style:
 #### __[C#] Example 10: Insert a table with a style__
 
 {{region cs-radwordsprocessing-editing-radflowdocumenteditor_10}}
+	            
 	document.StyleRepository.AddBuiltInStyle(BuiltInStyleNames.TableGridStyleId);
 	editor.TableFormatting.StyleId = BuiltInStyleNames.TableGridStyleId;
-	
+	            
 	editor.InsertText("Before table.");
 	editor.InsertTable(2, 4);
 	editor.InsertText("After table.");
@@ -282,6 +290,7 @@ Formatting options are most useful when inserting multiple elements that should 
 #### __[C#] Example 11: Insert content with specified styles__
 
 {{region cs-radwordsprocessing-editing-radflowdocumenteditor_11}}
+	        
 	// Set code block formatting
 	var codeFont = new ThemableFontFamily(new FontFamily("Consolas"));
 	editor.CharacterFormatting.FontFamily.LocalValue = codeFont;

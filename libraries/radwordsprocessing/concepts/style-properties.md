@@ -77,6 +77,7 @@ __Example 1__ is an example for equivalent getting of a value with CLR property 
 #### __[C#] Example 1: Get a value__
 
 {{region cs-radwordsprocessing-concepts-style-properties_0}}
+	            
 	bool keepOnOnePageActualValueShorthand = paragraph.KeepOnOnePage;
 	bool keepOnOnePageActualValue = paragraph.Properties.KeepOnOnePage.GetActualValue().Value;
 {{endregion}}
@@ -88,6 +89,7 @@ __Example 2__ is an example for an equivalent setting of a value with CLR proper
 #### __[C#] Example 2: Set a value__
 
 {{region cs-radwordsprocessing-concepts-style-properties_1}}
+	            
 	paragraph.KeepOnOnePage = true;
 	paragraph.Properties.KeepOnOnePage.LocalValue = true;
 {{endregion}}
@@ -105,6 +107,7 @@ __Example 3__ illustrates how to get the local value of a style property in a st
 #### __[C#] Example 3: Get the local value__
 
 {{region cs-radwordsprocessing-concepts-style-properties_2}}
+	        
 	bool? keepOnOnePage = style.ParagraphProperties.KeepOnOnePage.LocalValue;
 {{endregion}}
 
@@ -116,6 +119,7 @@ __Example 4__ shows how to get the actual value of style property in style.
 #### __[C#] Example 4: Get the actual value__
 
 {{region cs-radwordsprocessing-concepts-style-properties_3}}
+	            
 	bool keepOnOnePage = style.ParagraphProperties.KeepOnOnePage.GetActualValue().Value;
 {{endregion}}
 

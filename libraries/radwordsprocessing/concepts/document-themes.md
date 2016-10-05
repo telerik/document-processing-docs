@@ -50,6 +50,7 @@ __Example 1__ demonstrates how to create a __ThemeColorScheme__ object. Note tha
 #### __[C#] Example 1: Create a ThemeColorScheme object__
 
 {{region cs-radwordsprocessing-concepts-document-themes_0}}
+	            
 	ThemeColorScheme colorScheme = new ThemeColorScheme(
 	    "Mine",
 	    Colors.Black,     // background 1
@@ -92,6 +93,7 @@ In order to create colors that depend on the current document theme, you need to
 #### __[C#] Example 2: Create a ThemableColor object__
 
 {{region cs-radwordsprocessing-concepts-document-themes_1}}
+	        
 	ThemableColor themableColor = new ThemableColor(ThemeColorType.Accent1);
 {{endregion}}
 
@@ -112,6 +114,7 @@ The code in __Example 3__ illustrates how to create a __ThemeFontScheme__ object
 #### __[C#] Example 3: Create a ThemeFontScheme__
 
 {{region cs-radwordsprocessing-concepts-document-themes_2}}
+		            
 		ThemeFontScheme fontScheme = new ThemeFontScheme(
 		    "Mine",
 		    "Times New Roman",   // Major
@@ -135,6 +138,7 @@ When you need to create a font that depends on the current document theme, you n
 #### __[C#] Example 4: Create a ThemableFontFamily object__
 
 {{region cs-radwordsprocessing-concepts-document-themes_3}}
+	            
 	ThemableFontFamily themableFont = new ThemableFontFamily(ThemeFontType.Major);
 {{endregion}}
 
@@ -148,6 +152,7 @@ Now that you have a color and a font schemes, you can create a new __DocumentThe
 #### __[C#] Example 5: Create a DocumentTheme object__
 
 {{region cs-radwordsprocessing-concepts-document-themes_4}}
+	            
 	DocumentTheme theme = new DocumentTheme("Mine", colorScheme, fontScheme);
 {{endregion}}
 
@@ -159,6 +164,7 @@ There are a number of predefined color and font schemes. You can find them in a 
 #### __[C#] Example 6: Using a predefined scheme__
 
 {{region cs-radwordsprocessing-concepts-document-themes_5}}
+	        
 	DocumentTheme theme1 = new DocumentTheme("From Predefined schemes", PredefinedThemeSchemes.ColorSchemes[0], PredefinedThemeSchemes.FontSchemes[5]);
 {{endregion}}
 
@@ -185,7 +191,7 @@ In order to get the actual value from __ThemableColor__ or __ThemableFontFamily_
 
 {{region cs-radwordsprocessing-concepts-document-themes_7}}
 	Color actualColor = themableColor.GetActualValue(theme);
-	// the actual color is the same as Accent1 color of the colorScheme
+	// The actual color is the same as Accent1 color of the colorScheme.
 {{endregion}}
 
 
@@ -194,7 +200,7 @@ In order to get the actual value from __ThemableColor__ or __ThemableFontFamily_
 
 {{region cs-radwordsprocessing-concepts-document-themes_8}}
 	var actualFont = themableFont.GetActualValue(theme);
-	// the actualFont is the same as the Major font of the fontScheme
+	// The actualFont is the same as the Major font of the fontScheme.
 {{endregion}}
 
 

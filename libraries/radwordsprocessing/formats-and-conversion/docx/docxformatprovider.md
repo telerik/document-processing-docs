@@ -33,6 +33,7 @@ The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a do
 #### __[C#] Example 1: Import document from a file__
 
 {{region cs-radwordsprocessing-formats-and-conversion-docx-docxformatprovider_0}}
+	            
 	DocxFormatProvider provider = new DocxFormatProvider();
 	using (Stream input = File.OpenRead("Sample.docx"))
 	{
@@ -47,6 +48,7 @@ And here is how you can import a document from byte array containing the docx do
 
 #### __[C#] Example 2: Import document from a byte array__
 {{region cs-radwordsprocessing-formats-and-conversion-docx-docxformatprovider_1}}
+	            
 	DocxFormatProvider provider = new DocxFormatProvider();
 	RadFlowDocument document = provider.Import(input);
 {{endregion}}
@@ -65,6 +67,7 @@ __Example 3__ shows how to use __DocxFormatProvider__ to export __RadFlowDocumen
 
 #### __[C#] Example 3: Export a document to a file__
 {{region cs-radwordsprocessing-formats-and-conversion-docx-docxformatprovider_2}}
+	    
 	DocxFormatProvider provider = new DocxFormatProvider();
 	using (Stream output = File.OpenWrite("Sample.docx"))
 	{
@@ -80,7 +83,7 @@ You can also export the document to a byte array and preserve it in a database.
 #### __[C#] Example 4: Export a document to a byte array__
 {{region cs-radwordsprocessing-formats-and-conversion-docx-docxformatprovider_3}}
 	DocxFormatProvider provider = new DocxFormatProvider();
-	
+	        
 	RadFlowDocument document = CreateRadFlowDocument();
 	byte[] output = provider.Export(document);
 {{endregion}}

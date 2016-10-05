@@ -44,6 +44,7 @@ __Example 2__ shows how you can insert a previously created __Comment__ object i
 #### __[C#] Example 2: Insert previously created comment__
 
 {{region cs-radwordsprocessing-model-comment_1}}
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
 	editor.InsertComment(comment);
 {{endregion}}
 

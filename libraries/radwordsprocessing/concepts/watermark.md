@@ -45,6 +45,7 @@ __Example 1__ demonstrates the creation of a text watermark.
 #### __[C#] Example 1: Create text watermark__
 
 {{region cs-radwordsprocessing-concepts-watermark_0}}
+	            
 	TextWatermarkSettings settings = new TextWatermarkSettings()
 	{
 	    Angle = 12,
@@ -55,7 +56,7 @@ __Example 1__ demonstrates the creation of a text watermark.
 	    ForegroundColor = Colors.Red,
 	    Text = "DRAFT"
 	};
-	
+	            
 	Watermark textWatermark = new Watermark(settings);
 {{endregion}}
 
@@ -66,6 +67,7 @@ Creating image watermark is very similar to creating a text one. __Example 2__ s
 #### __[C#] Example 2: Create image watermark__
 
 {{region cs-radwordsprocessing-concepts-watermark_1}}
+	    
 	Watermark imageWatermark = new Watermark(new ImageWatermarkSettings()
 	{
 	    Angle = 45,

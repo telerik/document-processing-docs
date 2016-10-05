@@ -35,6 +35,7 @@ The suggested way to insert hyperlink is by using [RadFlowDocumentEditor]({%slug
 #### __[C#] Example 1: Insert a hyperlink__
 
 {{region cs-radwordsprocessing-concepts-hyperlinks_0}}
+	            
 	editor.InsertHyperlink("telerik", "http://www.telerik.com", false, "Telerik site");
 {{endregion}}
 
@@ -54,12 +55,13 @@ Hyperlinks can also point to a [Bookmark]({%slug radwordsprocessing-model-bookma
 #### __[C#] Example 2: Insert a hyperlink pointing to a bookmark__
 
 {{region cs-radwordsprocessing-concepts-hyperlinks_1}}
+	            
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	
+	            
 	// Insert bookmark.
 	editor.InsertBookmark("DocumentStart");
 	editor.InsertLine("Hello word!");
-	
+	            
 	// Insert hyperlink pointing to the bookmark.
 	editor.InsertHyperlink("Go to start", "DocumentStart", true, "Document start");
 {{endregion}}

@@ -40,6 +40,7 @@ The suggested way to insert field is to use the __InsertField()__ method of [Rad
 #### __[C#] Example 1: Create a document containing a Date field using RadFlowDocumentEditor__
 
 {{region cs-radwordsprocessing-concepts-fields_0}}
+	            
 	RadFlowDocument document = new RadFlowDocument();
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
 	editor.InsertField("DATE", "10/11/2012");
@@ -53,13 +54,14 @@ You can also create and insert all the parts of the field manually by creating a
 #### __[C#] Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo__
 
 {{region cs-radwordsprocessing-concepts-fields_1}}
+	            
 	// Create a document with a paragraph.
 	RadFlowDocument document = new RadFlowDocument();
 	Paragraph paragraph = document.Sections.AddSection().Blocks.AddParagraph();
 	
 	// Create the field info.
 	FieldInfo field = new FieldInfo(document);
-	
+	            
 	// Create and add all the inlines to the paragraph.
 	paragraph.Inlines.Add(field.Start);
 	paragraph.Inlines.AddRun("AUTHOR");
@@ -97,6 +99,7 @@ Updating a single field is done with the __UpdateField()__ method of the __Field
 #### __[C#] Example 3: Update a field__
 
 {{region cs-radwordsprocessing-concepts-fields_2}}
+	            
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
 	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "result");
 	Console.WriteLine(fieldInfo.GetResult()); // Output: result
@@ -114,10 +117,11 @@ All fields in the document can be updated using __UpdateFields()__ of __RadFlowD
 #### __[C#] Example 4: Update all fields in a document__
 
 {{region cs-radwordsprocessing-concepts-fields_3}}
+	            
 	RadFlowDocument document = new RadFlowDocument();
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
 	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "result");
-	
+	        
 	Console.WriteLine(fieldInfo.GetResult()); // Output: result
 	document.UpdateFields();
 	Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
@@ -162,14 +166,15 @@ Fields can also be nested in each other. If there are nested fields inside the c
 #### __[C#] Example 5: Create a nested field__
 
 {{region cs-radwordsprocessing-concepts-fields_4}}
+	            
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	
+	            
 	// Create an outer field with empty code fragment.
 	FieldInfo outerFieldInfo = editor.InsertField(string.Empty, "if field result");
-	
+	            
 	// Move the editor after the field start character.
 	editor.MoveToInlineEnd(outerFieldInfo.Start);
-	
+	        
 	// Create a code fragment with a nested TIME field.
 	editor.InsertText("IF ");
 	editor.InsertField("TIME \\@ HH", "time field result");

@@ -33,10 +33,11 @@ You could merge documents at a specific position using the InsertDocument() meth
 #### __[C#] Example 1: Insert source document into target document__
 
 {{region cs-radwordsprocessing-editing-insert-documents_0}}
+	            
 	InsertDocumentOptions options = new InsertDocumentOptions();
 	options.ConflictingStylesResolutionMode = ConflictingStylesResolutionMode.UseTargetStyle;
 	options.InsertLastParagraphMarker = true;
-	
+	            
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(targetDocument);
 	editor.InsertDocument(sourceDocument, options);
 {{endregion}}

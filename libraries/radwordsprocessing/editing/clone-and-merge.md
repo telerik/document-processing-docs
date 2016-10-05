@@ -28,6 +28,7 @@ __RadWordsProcessing__ allows you to merge two __RadFlowDocument__ instance usin
 #### __[C#] Example 1: Merge two instances of RadFlowDocument__
 
 {{region cs-radwordsprocessing-editing-clone-and-merge_0}}
+	            
 	RadFlowDocument target = new RadFlowDocument();
 	RadFlowDocument source = new RadFlowDocument();
 	//...
@@ -60,6 +61,7 @@ __Example 2__ shows how to merge documents by specifying the __MergeOptions__ pa
 #### __[C#] Example 2: Merge documents with MergeOptions__
 
 {{region cs-radwordsprocessing-editing-clone-and-merge_1}}
+	            
 	RadFlowDocument target = new RadFlowDocument();
 	RadFlowDocument source = new RadFlowDocument();
 	//...
@@ -81,6 +83,7 @@ __RadFlowDocument__ provides a __Clone()__ method, which creates a deep copy of 
 #### __[C#] Example 3: Clone a RadFlowDocument__
 
 {{region cs-radwordsprocessing-editing-clone-and-merge_2}}
+	        
 	RadFlowDocument clonedDocument = document.Clone();
 {{endregion}}
 
