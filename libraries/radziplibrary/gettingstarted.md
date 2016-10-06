@@ -37,7 +37,8 @@ The code snippet from __Example 1__ demonstrates how to open existing Zip archiv
 
 #### __[C#] Example 1: Open archive__
 
-{{region radziplibrary-gettingstarted_16}}
+{{region cs-radziplibrary-gettingstarted_0}}
+	            
 	using (Stream stream = File.Open("test.zip", FileMode.Open))
 	{
 	    using (ZipArchive archive = new ZipArchive(stream))
@@ -51,11 +52,11 @@ The code snippet from __Example 1__ demonstrates how to open existing Zip archiv
 
 #### __[VB.NET] Example 1: Open archive__
 
-{{region radziplibrary-gettingstarted_16}}
+{{region vb-radziplibrary-gettingstarted_0}}
 	Using stream As Stream = File.Open("test.zip", FileMode.Open)
-		Using archive As New ZipArchive(stream)
-			' Display the list of the files in the selected zip file using the ZipArchive.Entries property.
-		End Using
+	    Using archive As New ZipArchive(stream)
+	        ' Display the list of the files in the selected zip file using the ZipArchive.Entries property.
+	    End Using
 	End Using
 {{endregion}}
 
@@ -70,7 +71,8 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
 
 #### __[C#] Example 2: Create archive__
 
-{{region radziplibrary-gettingstarted_17}}
+{{region cs-radziplibrary-gettingstarted_1}}
+	    
 	using (Stream stream = File.Open("test.zip", FileMode.Create))
 	{
 	    using (ZipArchive archive = new ZipArchive(stream, ZipArchiveMode.Create, false, null))
@@ -89,15 +91,15 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
 
 #### __[VB.NET] Example 2: Create archive__
 
-{{region radziplibrary-gettingstarted_17}}
+{{region vb-radziplibrary-gettingstarted_1}}
 	Using stream As Stream = File.Open("test.zip", FileMode.Create)
-		Using archive As New ZipArchive(stream, ZipArchiveMode.Create, False, Nothing)
-			Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
-				Dim writer As New StreamWriter(entry.Open())
-				writer.WriteLine("Hello world!")
-				writer.Flush()
-			End Using
-		End Using
+	    Using archive As New ZipArchive(stream, ZipArchiveMode.Create, False, Nothing)
+	        Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
+	            Dim writer As New StreamWriter(entry.Open())
+	            writer.WriteLine("Hello world!")
+	            writer.Flush()
+	        End Using
+	    End Using
 	End Using
 {{endregion}}
 
@@ -109,6 +111,7 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
 >Do not close the stream opened by the __ZipArchiveEntry.Open()__ method. Otherwise the result is unpredictable.
           
 
-# See Also
+
+## See Also
 
  * [Update ZipArchive]({%slug radziplibrary-update-ziparchive%})

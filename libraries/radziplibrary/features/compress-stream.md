@@ -60,7 +60,8 @@ You can create a compressed stream by initializing a new instance of the __Compr
 
 #### __[C#] Example 1: Write to compressed stream__
 
-{{region radziplibrary-compress-stream_0}}
+{{region cs-radziplibrary-compress-stream_0}}
+	            
 	using (CompressedStream compressedStream = new CompressedStream(outputStream, StreamOperationMode.Write, new DeflateSettings()))
 	{
 	    // write to compressed stream
@@ -71,9 +72,9 @@ You can create a compressed stream by initializing a new instance of the __Compr
 
 #### __[VB.NET] Example 1: Write to compressed stream__
 
-{{region radziplibrary-compress-stream_0}}
+{{region vb-radziplibrary-compress-stream_0}}
 	Using compressedStream As New CompressedStream(outputStream, StreamOperationMode.Write, New DeflateSettings())
-		' write to compressed stream
+	    ' write to compressed stream
 	End Using
 {{endregion}}
 
@@ -84,7 +85,8 @@ If you want to compress a specific stream (*inputStream*), you need to copy it t
 
 #### __[C#] Example 2: Write stream to compressed stream__
 
-{{region radziplibrary-compress-stream_1}}
+{{region cs-radziplibrary-compress-stream_1}}
+	    
 	using (CompressedStream compressedStream = new CompressedStream(outputStream, StreamOperationMode.Write, new DeflateSettings()))
 	{
 	    inputStream.CopyTo(compressedStream);
@@ -96,10 +98,10 @@ If you want to compress a specific stream (*inputStream*), you need to copy it t
 
 #### __[VB.NET] Example 2: Write stream to compressed stream__
 
-{{region radziplibrary-compress-stream_1}}
+{{region vb-radziplibrary-compress-stream_1}}
 	Using compressedStream As New CompressedStream(outputStream, StreamOperationMode.Write, New DeflateSettings())
-		inputStream.CopyTo(compressedStream)
-		compressedStream.Flush()
+	    inputStream.CopyTo(compressedStream)
+	    compressedStream.Flush()
 	End Using
 {{endregion}}
 
@@ -112,7 +114,8 @@ Decompressing a stream is just as simple as compressing it. All you need to do i
 
 #### __[C#] Example 3: Decompressed stream__
 
-{{region radziplibrary-compress-stream_2}}
+{{region cs-radziplibrary-compress-stream_2}}
+	            
 	using (CompressedStream compressedStream = new CompressedStream(inputStream, StreamOperationMode.Read, new DeflateSettings()))
 	{
 	    compressedStream.CopyTo(outputStream);
@@ -123,9 +126,9 @@ Decompressing a stream is just as simple as compressing it. All you need to do i
 
 #### __[VB.NET] Example 3: Decompressed stream__
 
-{{region radziplibrary-compress-stream_2}}
+{{region vb-radziplibrary-compress-stream_2}}
 	Using compressedStream As New CompressedStream(inputStream, StreamOperationMode.Read, New DeflateSettings())
-		compressedStream.CopyTo(outputStream)
+	    compressedStream.CopyTo(outputStream)
 	End Using
 {{endregion}}
 
@@ -148,7 +151,7 @@ CompressedStream derives from the Stream class and therefore it supports all its
 * __Length__: The uncompressed size of the stream.
             
 
-# See Also
+## See Also
 
  * [Protect ZipArchive]({%slug radziplibrary-protect-ziparchive%})
  * [Compression Settings]({%slug radziplibrary-compression-settings%})

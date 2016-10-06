@@ -63,7 +63,7 @@ This class implements the [IPlatformManager](http://docs.telerik.com/devtools/do
 * __bool IsEncodingSupported(Encoding encoding)__: Indicates whether specified encoding is supported for this platform. <returns>true if encoding is allowed in the ZIP file.
 
 
-# See Also
+## See Also
 
 * [Compression Settings]({%slug radziplibrary-compression-settings%})
 * [Compress Stream]({%slug radziplibrary-compress-stream%})
