@@ -37,7 +37,7 @@ Internally there are many mechanisms used to lower the number of calculations, b
 
 #### __[C#] Example 1: Suspend layout updates__
 
-{{region radspreadprocessing-performance_0}}
+{{region cs-radspreadprocessing-performance_0}}
     Workbook workbook = new Workbook();
     workbook.SuspendLayoutUpdate();
     // The code, which generates the document
@@ -51,7 +51,7 @@ Note that if an exception is thrown between the two method calls, the resuming o
 
 #### __[C#] Example 2: Suspend layout updates in UndoScope__
 
-{{region radspreadprocessing-performance_1}}
+{{region cs-radspreadprocessing-performance_1}}
     Workbook workbook = new Workbook();
     using (new UpdateScope(workbook.SuspendLayoutUpdate, workbook.ResumeLayoutUpdate))
     {
@@ -68,7 +68,7 @@ Preserving information about the steps in the undo stack is usually not a time c
 
 #### __[C#] Example 3: Combine steps in undo group__
 
-{{region radspreadprocessing-performance_2}}
+{{region cs-radspreadprocessing-performance_2}}
     Workbook workbook = new Workbook();
     workbook.History.BeginUndoGroup();
     // The code which generates the document
@@ -82,7 +82,7 @@ Note that if an exception is thrown between the two method calls, the ending of 
 
 #### __[C#] Example 4: Combine steps in undo group using UndoScope__
 
-{{region radspreadprocessing-performance_3}}
+{{region cs-radspreadprocessing-performance_3}}
     Workbook workbook = new Workbook();
     using (new UpdateScope(workbook.History.BeginUndoGroup, workbook.History.EndUndoGroup))
     {
@@ -99,7 +99,7 @@ As you already know from the [Reduce the Number of Undo Steps section](#reduce-t
 
 #### __[C#] Example 5: Disable history__
 
-{{region radspreadprocessing-performance_4}}
+{{region cs-radspreadprocessing-performance_4}}
     workbook.History.IsEnabled = false;
     // The code which generates the document
     workbook.History.IsEnabled = true;
@@ -112,7 +112,7 @@ If an exception is thrown before enabling the history, it will not be enabled an
 
 #### __[C#] Example 6: Disable and enable history using UndoScope__
 
-{{region radspreadprocessing-performance_5}}
+{{region cs-radspreadprocessing-performance_5}}
     using (new UpdateScope(
         () => { workbook.History.IsEnabled = false; },
         () => { workbook.History.IsEnabled = true; }))

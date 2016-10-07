@@ -100,7 +100,7 @@ In order to create an instance of __FloatingImage__ you need the worksheet in wh
 
 #### __[C#] Example 1: Create FloatingImage__
 
-{{region radspreadprocessing-features-shapes-and-images_0}}
+{{region cs-radspreadprocessing-features-shapes-and-images_0}}
     Worksheet worksheet = workbook.ActiveWorksheet;
     FloatingImage image = new FloatingImage(worksheet, new CellIndex(7, 1), 35, 10);
 {{endregion}}
@@ -112,7 +112,7 @@ The next step is to configure the other properties of the image as needed.
 
 #### __[C#] Example 2: Configure image properties__
 
-{{region radspreadprocessing-features-shapes-and-images_01}}
+{{region cs-radspreadprocessing-features-shapes-and-images_01}}
     FileStream stream = File.Open(filePath, FileMode.Open);
 
     using (stream)
@@ -132,7 +132,7 @@ Insert the image into the collection of shapes of the worksheet.  Note that the 
 
 #### __[C#] Example 3: Add image to worksheet__
 
-{{region radspreadprocessing-features-shapes-and-images_02}}
+{{region cs-radspreadprocessing-features-shapes-and-images_02}}
 	 worksheet.Shapes.Add(image);
 {{endregion}}
 
@@ -148,7 +148,7 @@ __Example 4__ demonstrates how you can remove the image added in __Example 3__.
 
 #### __[C#] Example 4: Delete shape__
 
-{{region radspreadprocessing-features-shapes-and-images_03}}
+{{region cs-radspreadprocessing-features-shapes-and-images_03}}
     worksheet.Shapes.Remove(image);
 {{endregion}}
 
@@ -164,7 +164,7 @@ After the initial values of the properties of the shapes have been assigned, the
 	
 	#### __[C#] Example 5: Move image__
 	
-	{{region radspreadprocessing-features-shapes-and-images_04}}
+	{{region cs-radspreadprocessing-features-shapes-and-images_04}}
 	    image.CellIndex = new CellIndex(4, 5);
 	    image.OffsetX = 10;
 	    image.OffsetY = 10;
@@ -175,7 +175,7 @@ After the initial values of the properties of the shapes have been assigned, the
 	
 	#### __[C#] Example 6: Change width and height__
 	
-	{{region radspreadprocessing-features-shapes-and-images_05}}
+	{{region cs-radspreadprocessing-features-shapes-and-images_05}}
 	    image.Width -= 50;
 	    image.Height += 50;
 	{{endregion}}
@@ -191,7 +191,7 @@ After the initial values of the properties of the shapes have been assigned, the
 
 	#### __[C#] Example 7: Set width and whether lock aspect ratio is respected__
 	
-	{{region radspreadprocessing-features-shapes-and-images_08}}
+	{{region cs-radspreadprocessing-features-shapes-and-images_08}}
 	    image.SetWidth(false, 330);
 	    image.SetHeight(true, 45);
 	{{endregion}}
@@ -203,7 +203,7 @@ After the initial values of the properties of the shapes have been assigned, the
 	
 	#### __[C#] Example 8: Rotate__
 	
-	{{region radspreadprocessing-features-shapes-and-images_06}}
+	{{region cs-radspreadprocessing-features-shapes-and-images_06}}
 	    image.RotationAngle = 40;
 	{{endregion}}
 	
@@ -214,7 +214,7 @@ After the initial values of the properties of the shapes have been assigned, the
 	
 	#### __[C#] Example 9: Flip__
 	
-	{{region radspreadprocessing-features-shapes-and-images_07}}
+	{{region cs-radspreadprocessing-features-shapes-and-images_07}}
 	    image.IsHorizontallyFlipped = true;
 	{{endregion}}
 

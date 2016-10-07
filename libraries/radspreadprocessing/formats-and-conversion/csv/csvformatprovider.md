@@ -25,7 +25,7 @@ __Example 1__ shows how to import a CSV file using a __FileStream__. The code as
 
 #### __[C#] Example 1: Import CSV file__
 
-{{region radspreadprocessing-formats-and-conversion-csv-csvformatprovider_0}}
+{{region cs-radspreadprocessing-formats-and-conversion-csv-csvformatprovider_0}}
     string fileName = "FileName.csv";
     if (!File.Exists(fileName))
     {
@@ -50,7 +50,7 @@ __Example 2__ demonstrates how to export an existing Workbook to a CSV file. The
 
 #### __[C#] Example 2: Export CSV file__
 
-{{region radspreadprocessing-formats-and-conversion-csv-csvformatprovider_1}}
+{{region cs-radspreadprocessing-formats-and-conversion-csv-csvformatprovider_1}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
 

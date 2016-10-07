@@ -29,7 +29,7 @@ __Example 1__ creates a workbook from scratch and adds a single worksheet to it.
 
 #### __[C#] Example 1: Create a workbook and add a worksheet to it__
 
-{{region radspreadprocessing-working-with-worksheets-add-remove-worksheets_0}}
+{{region cs-radspreadprocessing-working-with-worksheets-add-remove-worksheets_0}}
     Workbook workbook = new Workbook();
     Worksheet newWorksheet = workbook.Worksheets.Add();
 {{endregion}}
@@ -46,7 +46,7 @@ __Example 2__ creates a workbook and adds four worksheets. All worksheets are wi
 
 #### __[C#] Example 2: Add and remove worksheets__
 
-{{region radspreadprocessing-working-with-worksheets-add-remove-worksheets_1}}
+{{region cs-radspreadprocessing-working-with-worksheets-add-remove-worksheets_1}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add(); // Sheet1
     Worksheet secondWorksheet = workbook.Worksheets.Add(); // Sheet2

@@ -22,7 +22,7 @@ __Example 1__ illustrates how to retrieve worksheets that have already been adde
 
 #### __[C#] Example 1: Retrieve worksheet__
 
-{{region radspreadprocessing-working-with-worksheets-iterate-through-worksheets_0}}
+{{region cs-radspreadprocessing-working-with-worksheets-iterate-through-worksheets_0}}
     Workbook workbook = new Workbook();
 
     WorksheetCollection worksheets = workbook.Worksheets;
@@ -40,7 +40,7 @@ __Example 2__ creates a new workbook with three worksheets. The code further ite
 
 #### __[C#] Example 2: Iterate worksheets__
 
-{{region radspreadprocessing-working-with-worksheets-iterate-through-worksheets_1}}
+{{region cs-radspreadprocessing-working-with-worksheets-iterate-through-worksheets_1}}
     Workbook workbook = new Workbook();
 
     workbook.Worksheets.Add();

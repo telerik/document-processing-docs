@@ -33,7 +33,7 @@ The __RowSelection__ class exposes __CanInsert()__ and __Insert()__ methods that
 
 #### __[C#] Example 1: Insert rows__
 
-{{region radspreadprocessing-working-with-rows-and-columns-insert-and-remove_0}}
+{{region cs-radspreadprocessing-working-with-rows-and-columns-insert-and-remove_0}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -59,7 +59,7 @@ The __RowSelection__ class exposes a __Remove()__ method that performs the remov
 
 #### __[C#] Example 2: Remove rows__
 
-{{region radspreadprocessing-working-with-rows-and-columns-insert-and-remove_1}}
+{{region cs-radspreadprocessing-working-with-rows-and-columns-insert-and-remove_1}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -82,7 +82,7 @@ The __ColumnSelection__ class exposes __CanInsert()__ and __Insert()__ methods t
 
 #### __[C#] Example 3: Insert columns__
 
-{{region radspreadprocessing-working-with-rows-and-columns-insert-and-remove_2}}
+{{region cs-radspreadprocessing-working-with-rows-and-columns-insert-and-remove_2}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -108,7 +108,7 @@ The __ColumnSelection__ class exposes a __Remove()__ method that executes the re
 
 #### __[C#] Example 4: Remove columns__
 
-{{region radspreadprocessing-working-with-rows-and-columns-insert-and-remove_3}}
+{{region cs-radspreadprocessing-working-with-rows-and-columns-insert-and-remove_3}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 

@@ -25,7 +25,7 @@ __Example 1__ creates a new workbook with a single worksheet and assigns some sa
 
 #### __[C#] Example 1: Copy selected cells__
 
-{{region radspreadprocessing-features-clipboard-support_0}}
+{{region cs-radspreadprocessing-features-clipboard-support_0}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -73,7 +73,7 @@ __Example 2__ creates a new workbook with an empty worksheet. Further, the examp
 
 #### __[C#] Example 2: Copy all__
 
-{{region radspreadprocessing-features-clipboard-support_1}}
+{{region cs-radspreadprocessing-features-clipboard-support_1}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -93,7 +93,7 @@ Using different __PasteType__, however, produces different output. __Example 3__
 
 #### __[C#] Example 3: Paste using PasteType.Values__
 
-{{region radspreadprocessing-features-clipboard-support_2}}
+{{region cs-radspreadprocessing-features-clipboard-support_2}}
     PasteOptions pasteOptionsValues = new PasteOptions(PasteType.Values);
     worksheet.Cells[2, 0].Paste(worksheetFragment, pasteOptionsValues);
 {{endregion}}
@@ -108,7 +108,7 @@ __Example 4__ combines the Value and Formats paste types and preserves both the 
 
 #### __[C#] Example 4: Combine Values and Formats PasteType__
 
-{{region radspreadprocessing-features-clipboard-support_3}}
+{{region cs-radspreadprocessing-features-clipboard-support_3}}
     PasteOptions valuesAndFormatting = new PasteOptions(PasteType.Formulas | PasteType.Formats);
     worksheet.Cells[3, 0].Paste(worksheetFragment, valuesAndFormatting);
 {{endregion}}

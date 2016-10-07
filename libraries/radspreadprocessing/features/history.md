@@ -32,7 +32,7 @@ __Example 1__ enables the history of a workbook.
 
 #### __[C#] Example 1: Enable history__
 
-{{region radspreadprocessing-features-history_2}}
+{{region cs-radspreadprocessing-features-history_2}}
     Workbook workbook = new Workbook();
     workbook.History.IsEnabled = true;
 {{endregion}}
@@ -49,7 +49,7 @@ __Example 2__ creates a new workbook with a single worksheet and sets the value 
 
 #### __[C#] Example 2: Perform undo and redo__
 
-{{region radspreadprocessing-features-history_0}}
+{{region cs-radspreadprocessing-features-history_0}}
     Workbook workbook = new Workbook();
     workbook.History.IsEnabled = true;
     Worksheet worksheet = workbook.Worksheets.Add();
@@ -73,7 +73,7 @@ __Example 3__ demonstrates how to create an undo group.
 
 #### __[C#] Example 3: Create undo group__
 
-{{region radspreadprocessing-features-history_1}}
+{{region cs-radspreadprocessing-features-history_1}}
     Workbook workbook = new Workbook();
     workbook.History.IsEnabled = true;
     Worksheet worksheet = workbook.Worksheets.Add();
@@ -101,7 +101,7 @@ __Example 4__ clears the history of a workbook.
 
 #### __[C#] Example 4: Clear history__
 
-{{region radspreadprocessing-features-history_3}}
+{{region cs-radspreadprocessing-features-history_3}}
     workbook.History.Clear();
 {{endregion}}
 

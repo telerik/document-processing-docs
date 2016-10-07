@@ -53,7 +53,7 @@ __Example 1__ shows how to register a function class ArgumentsFunction, inherito
 
 #### __[C#] Example 1: Register custom function__
 
-{{region radspreadprocessing-features-formulas-custom-functions_0}}
+{{region cs-radspreadprocessing-features-formulas-custom-functions_0}}
     FunctionManager.RegisterFunction(new ArgumentsFunction());
 {{endregion}}
 
@@ -131,7 +131,7 @@ __Example 2__ creates an instance of ArgumentConversionRules:
 
 #### __[C#] Example 2: Create ArgumentConversionRules__
 
-{{region radspreadprocessing-features-formulas-custom-functions_1}}
+{{region cs-radspreadprocessing-features-formulas-custom-functions_1}}
     public static readonly ArgumentConversionRules BoolFunctionConversion = new ArgumentConversionRules(
                 emptyIndirectArgument: ArgumentInterpretation.Ignore,
                 textNumberDirectArgument: ArgumentInterpretation.TreatAsError,
@@ -199,7 +199,7 @@ __Example 3__ shows how to create an instance of FunctionInfo class.
 
 #### __[C#] Example 3: Create FunctionInfo__
 
-{{region radspreadprocessing-features-formulas-custom-functions_2}}
+{{region cs-radspreadprocessing-features-formulas-custom-functions_2}}
     string functionName = "ADD";
 
     string description = "Adds all the numbers in range of cells.";
@@ -233,7 +233,7 @@ __Example 4__ shows how to create the 'ARGUMENTS' function.
 
 #### __[C#] Example 4: Create ARGUMENTS function__
 
-{{region radspreadprocessing-features-formulas-custom-functions_3}}
+{{region cs-radspreadprocessing-features-formulas-custom-functions_3}}
 	
     public class Arguments : FunctionBase
     {
@@ -294,7 +294,7 @@ __Example 5__ shows how to create the 'E' function.
 
 #### __[C#] Example 5: Create E function__
 
-{{region radspreadprocessing-features-formulas-custom-functions_4}}
+{{region cs-radspreadprocessing-features-formulas-custom-functions_4}}
     public class E : FunctionBase
     {
         public static readonly string FunctionName = "E";

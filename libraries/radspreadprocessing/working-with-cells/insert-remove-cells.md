@@ -31,7 +31,7 @@ The __CellSelection__ class exposes an __Insert()__ method that takes one argume
 
 #### __[C#] Example 1: Insert cells__
 
-{{region radspreadprocessing-working-with-cells-insert-remove-cells_0}}
+{{region cs-radspreadprocessing-working-with-cells-insert-remove-cells_0}}
 	
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
@@ -61,7 +61,7 @@ The __CellSelection__ class exposes a __Remove()__ method that takes one argumen
 
 #### __[C#] Example 2: Remove cells__
 
-{{region radspreadprocessing-working-with-cells-insert-remove-cells_1}}
+{{region cs-radspreadprocessing-working-with-cells-insert-remove-cells_1}}
 	
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();

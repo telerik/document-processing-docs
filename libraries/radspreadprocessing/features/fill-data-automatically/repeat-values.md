@@ -37,7 +37,7 @@ __Example 1__ illustrates how the contents of column *A* can be copied to the re
 
 #### __[C#] Example 1: Fill right__
 
-{{region radspreadprocessing-features-fill-data-automatically-repeat-values_0}}
+{{region cs-radspreadprocessing-features-fill-data-automatically-repeat-values_0}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
     Worksheet activeWorksheet = workbook.ActiveWorksheet;
@@ -67,7 +67,7 @@ __Example 2__ invokes the __FillData()__ method with __FillDirection Down__ for 
 
 #### __[C#] Example 2: Fill down__
 
-{{region radspreadprocessing-features-fill-data-automatically-repeat-values_1}}
+{{region cs-radspreadprocessing-features-fill-data-automatically-repeat-values_1}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
     Worksheet activeWorksheet = workbook.ActiveWorksheet;

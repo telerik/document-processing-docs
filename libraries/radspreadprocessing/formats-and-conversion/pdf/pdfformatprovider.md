@@ -38,7 +38,7 @@ __Example 1__ shows how to use __PdfFormatProvider__ to export a Workbook to a f
 
 #### __[C#] Example 1: PdfFormatProvider export example__
 
-{{region radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
+{{region cs-radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
     PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
     using (Stream output = GetFileStream())
     {
@@ -52,7 +52,7 @@ __Example 1__ shows how to use __PdfFormatProvider__ to export a Workbook to a f
 The result from the export method is a document that can be opened in any application that supports PDF documents.
         
 #### __[C#] Example 2: Export to RadFixedDocument__
-{{region  radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
+{{region cs-radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
     Workbook workbook = CreateSampleWorkbook();
 
     PdfFormatProvider provider = new PdfFormatProvider();

@@ -32,7 +32,7 @@ This article aims to present the Headers and Footers API in **RadSpreadprocessin
 
 
 #### **[C#] Example 1: Get HeaderFooterSettings**
-{{region radspreadprocessing-features-headers-and-footers_0}}
+{{region cs-radspreadprocessing-features-headers-and-footers_0}}
 
 	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
 {{endregion}}
@@ -93,7 +93,7 @@ The **HeaderFooterSection** class defines the content of a particular header/foo
 
 #### **[C#] Example 2: Set a content to a header/footer section**
 
-{{region radspreadprocessing-features-headers-and-footers_1}}
+{{region cs-radspreadprocessing-features-headers-and-footers_1}}
 
 	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
 	settings.Header.RightSection.Text = "Printed by Telerik";
@@ -155,7 +155,7 @@ The following list describes all valid uses of the ampersand symbol sequences. I
 
 #### **[C#] Example 3: Insert fields in header/footer**
 
-{{region radspreadprocessing-features-headers-and-footers_2}}
+{{region cs-radspreadprocessing-features-headers-and-footers_2}}
 
 	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
 	settings.Header.RightSection.Text = "Printed by Telerik on &D";
@@ -182,7 +182,7 @@ In order to control the vertical positioning of the headers and footers on the p
 
 #### **[C#] Example 4: Setting margins to header/footer**
 
-{{region radspreadprocessing-features-headers-and-footers_3}}
+{{region cs-radspreadprocessing-features-headers-and-footers_3}}
 	PageMargins normalMargins = PageMargins.NormalMargins;
 	worksheet.WorksheetPageSetup.Margins = new PageMargins(normalMargins.Left, normalMargins.Top, normalMargins.Right, normalMargins.Bottom, Unit.DipToInch(0), Unit.DipToInch(1));
 {{endregion}}

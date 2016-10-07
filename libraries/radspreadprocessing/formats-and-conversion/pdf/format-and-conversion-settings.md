@@ -36,7 +36,7 @@ __Example 1__ shows how to export the Entire Workbook without ignoring the __Pri
 
 #### __[C#] Example 1: Export entire workbook__
 
-{{region radspreadprocessing-formats-and-conversion-pdf-settings_0}}
+{{region cs-radspreadprocessing-formats-and-conversion-pdf-settings_0}}
     PdfFormatProvider provider = new PdfFormatProvider();
     provider.ExportSettings = new PdfExportSettings(ExportWhat.EntireWorkbook, false);
 {{endregion}}
@@ -48,7 +48,7 @@ __Example 2__ shows how to export only two selected ranges from the active works
 
 #### __[C#] Example 2: Export selection__
 
-{{region radspreadprocessing-formats-and-conversion-pdf-settings_1}}
+{{region cs-radspreadprocessing-formats-and-conversion-pdf-settings_1}}
     CellRange[] rangesToExport = new CellRange[]
     {
         new CellRange(2, 3, 10, 15),
@@ -68,7 +68,7 @@ Another export option is to specify settings specific to the PDF format to the e
 
 #### __[C#] Example 3: Export PDF/A compliant document__
 
-{{region radspreadprocessing-formats-and-conversion-pdf-settings_2}}
+{{region cs-radspreadprocessing-formats-and-conversion-pdf-settings_2}}
     PdfFormatProvider provider = new PdfFormatProvider();
 
     Fixed.PdfExportSettings fileSettings = new Fixed.PdfExportSettings();

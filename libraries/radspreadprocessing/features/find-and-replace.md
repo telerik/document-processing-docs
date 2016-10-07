@@ -53,7 +53,7 @@ __Example 1__ creates a new workbook with two empty worksheets and assigns sampl
 
 #### __[C#] Example 1: Perform find an find all__
 
-{{region radspreadprocessing-features-find-and-replace_0}}
+{{region cs-radspreadprocessing-features-find-and-replace_0}}
     Workbook workbook = new Workbook();
     Worksheet worksheet1 = workbook.Worksheets.Add();
     Worksheet worksheet2 = workbook.Worksheets.Add();
@@ -92,7 +92,7 @@ __Example 2__ creates a workbook from scratch with two empty worksheets and adds
 
 #### __[C#] Example 2: Perform replace and replace all__
 
-{{region radspreadprocessing-features-find-and-replace_1}}
+{{region cs-radspreadprocessing-features-find-and-replace_1}}
     Workbook workbook = new Workbook();
     Worksheet worksheet1 = workbook.Worksheets.Add();
     Worksheet worksheet2 = workbook.Worksheets.Add();

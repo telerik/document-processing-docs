@@ -37,7 +37,7 @@ __Example 1__ shows how to retrieve and change the hidden state of several rows 
 
 #### __[C#] Example 1: Change row hidden state__
 
-{{region radspreadprocessing-working-with-rows-and-columns-hiding_0}}
+{{region cs-radspreadprocessing-working-with-rows-and-columns-hiding_0}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -62,7 +62,7 @@ __Example 2__ shows how you can set the width of a group of columns and it would
 
 #### __[C#] Example 2: Change column width__
 
-{{region radspreadprocessing-working-with-rows-and-columns-hiding_1}}
+{{region cs-radspreadprocessing-working-with-rows-and-columns-hiding_1}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -80,7 +80,7 @@ __Example 3__ demonstrates this by hiding a row, autofitting it and then checkin
 
 #### __[C#] Example 3: Auto fit on hidden rows__
 
-{{region radspreadprocessing-working-with-rows-and-columns-hiding_2}}
+{{region cs-radspreadprocessing-working-with-rows-and-columns-hiding_2}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 

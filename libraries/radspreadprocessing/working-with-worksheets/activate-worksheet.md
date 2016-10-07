@@ -25,7 +25,7 @@ __Example 1__ creates a new workbook from scratch and subscribes to its __Active
 
 #### __[C#] Example 1: Change active sheet__
 
-{{region radspreadprocessing-working-with-worksheets-activate-worksheet_0}}
+{{region cs-radspreadprocessing-working-with-worksheets-activate-worksheet_0}}
     public void ActivateWorksheetDemo()
     {
         Workbook workbook = new Workbook();

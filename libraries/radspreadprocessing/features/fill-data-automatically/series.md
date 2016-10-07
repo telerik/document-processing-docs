@@ -49,7 +49,7 @@ __Example 1__ creates a new worksheet that has the value *1* in cell *A1* and *3
 
 #### __[C#] Example 1: Fill linear series__
 
-{{region radspreadprocessing-features-fill-data-automatically-series_0}}
+{{region cs-radspreadprocessing-features-fill-data-automatically-series_0}}
 	
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
@@ -80,7 +80,7 @@ __Example 2__ shows how to use __FillDataSeriesLinearTrend()__ to continue serie
 
 #### __[C#] Example 2: Fill linear trend series__
 
-{{region radspreadprocessing-features-fill-data-automatically-series_1}}
+{{region cs-radspreadprocessing-features-fill-data-automatically-series_1}}
 	
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
@@ -120,7 +120,7 @@ __Example 3__ shows how to use the __FillDataSeriesExponential()__ method to con
 
 #### __[C#] Example 3: Fill exponential series__
 
-{{region radspreadprocessing-features-fill-data-automatically-series_2}}
+{{region cs-radspreadprocessing-features-fill-data-automatically-series_2}}
 	
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
@@ -151,7 +151,7 @@ __Example 4__ shows how to use the __FillDataSeriesLinearTrend()__ method to con
 
 #### __[C#] Example 4: Exponential trend series__
 
-{{region radspreadprocessing-features-fill-data-automatically-series_3}}
+{{region cs-radspreadprocessing-features-fill-data-automatically-series_3}}
 	
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
@@ -190,7 +190,7 @@ __Example 5__ shows how to construct series that use *5/28/2013* as a starting p
 
 #### __[C#] Example 5: Fill date series__
 
-{{region radspreadprocessing-features-fill-data-automatically-series_4}}
+{{region cs-radspreadprocessing-features-fill-data-automatically-series_4}}
 	
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
@@ -284,7 +284,7 @@ __Example 6__ shows how to use the __FillDataSeriesAuto()__ method for initial v
 
 #### __[C#] Example 6: Auto fill__
 
-{{region radspreadprocessing-features-fill-data-automatically-series_5}}
+{{region cs-radspreadprocessing-features-fill-data-automatically-series_5}}
 	
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
@@ -309,7 +309,7 @@ __Example 7__ demonstrates the behavior of the __FillDataSeriesAuto()__ method. 
 
 #### __[C#] Example 7: Auto fill reversed direction__
 
-{{region radspreadprocessing-features-fill-data-automatically-series_6}}
+{{region cs-radspreadprocessing-features-fill-data-automatically-series_6}}
 	
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();

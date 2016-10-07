@@ -21,15 +21,18 @@ __Example 1__ illustrates how to copy a specific worksheet from a source Workboo
 
 
 #### __[C#] Example 1: Copy worksheet__
-{{region radspreadprocessing-working-with-worksheets-copy-worksheet_0}}
+{{region cs-radspreadprocessing-working-with-worksheets-copy-worksheet_0}}
     Worksheet clonedSheet = target.Worksheets.Add();
     clonedSheet.CopyFrom(source.Sheets[0] as Worksheet);
 {{endregion}}
 
 
 #### __[VB.NET] Example 1: Copy worksheet__
+
+{{region vb-radspreadprocessing-working-with-worksheets-copy-worksheet_2}}
     Dim clonedSheet As Worksheet = target.Worksheets.Add()
     clonedSheet.CopyFrom(TryCast(source.Sheets(0), Worksheet))
+{{endregion}}
 
 
 >If the sheet that you're copying is in a document where a [DocumentTheme]({%slug radspreadprocessing-features-styling-document-themes%}) has been applied, the theme will not be copied. Themes are information preserved in the __Workbook__ and you may need to transfer them additionally.
@@ -41,7 +44,7 @@ __Example 2__ demonstrates a slightly more complex scenario in which a sheet is 
         
 
 #### __[C#] Example 2: Copy to existing workbook__
-{{region radspreadprocessing-working-with-worksheets-copy-worksheet_1}}
+{{region cs-radspreadprocessing-working-with-worksheets-copy-worksheet_1}}
 	bool containsSameName = false;
 	
 	foreach (var worksheet in targetWorkbook.Worksheets)
@@ -67,6 +70,8 @@ __Example 2__ demonstrates a slightly more complex scenario in which a sheet is 
 
 
 #### __[VB.NET] Example 2: Copy to existing workbook__
+
+{{region vb-radspreadprocessing-working-with-worksheets-copy-worksheet_3}}
     Dim containsSameName As Boolean = False
 
     For Each worksheet As var In targetWorkbook.Worksheets
@@ -83,6 +88,7 @@ __Example 2__ demonstrates a slightly more complex scenario in which a sheet is 
         clonedSheet.CopyFrom(sheetToClone)
         clonedSheet.Name = sheetToClone.Name
     End If
+{{endregion}}
 
 
 ## See Also

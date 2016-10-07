@@ -39,7 +39,7 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
 
 #### __[C#] Example 1: Register provider__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
+{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
     WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsxFormatProvider());
 {{endregion}}
 
@@ -47,7 +47,7 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
 
 #### __[VB.NET] Example 1: Register provider__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
+{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
 	 WorkbookFormatProvidersManager.RegisterFormatProvider(New XlsxFormatProvider())
 {{endregion}}
 
@@ -59,7 +59,7 @@ You can also unregister format providers using the UnregisterFormatProvider() me
 
 #### __[C#] Example 2: Unregister provider__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
+{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
     IWorkbookFormatProvider provider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider");
     if (provider != null)
     {
@@ -71,7 +71,7 @@ You can also unregister format providers using the UnregisterFormatProvider() me
 
 #### __[VB.NET] Example 2: Unregister provider__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
+{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
     Dim provider As IWorkbookFormatProvider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider")
     If provider IsNot Nothing Then
         WorkbookFormatProvidersManager.UnregisterFormatProvider(provider)
@@ -87,7 +87,7 @@ __Example 3__ demonstrates how to present the user with an OpenFileDialog and tr
 
 #### __[C#] Example 3: Import a file using OpenFileDialog__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
+{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
 	Workbook workbook;
     OpenFileDialog openFileDialog = new OpenFileDialog();
     if (openFileDialog.ShowDialog() == true)
@@ -111,7 +111,7 @@ __Example 3__ demonstrates how to present the user with an OpenFileDialog and tr
 
 #### __[VB.NET] Example 3: Import a file using OpenFileDialog__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
+{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
     Dim workbook As New Workbook
     Dim openFileDialog As New OpenFileDialog()
     openFileDialog.Filter = FileDialogsHelper.GetOpenFileDialogFilter()
@@ -144,7 +144,7 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 
 #### __[C#] Example 4: Save a file using SaveFileDialog__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
+{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
     SaveFileDialog saveFileDialog = new SaveFileDialog();
 
     if (saveFileDialog.ShowDialog() == true)
@@ -161,7 +161,7 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 
 #### __[VB.NET] Example 4: Save a file using SaveFileDialog__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
+{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
     Dim saveFileDialog As New SaveFileDialog()
     saveFileDialog.Filter = FileDialogsHelper.GetSaveFileDialogFilter()
 

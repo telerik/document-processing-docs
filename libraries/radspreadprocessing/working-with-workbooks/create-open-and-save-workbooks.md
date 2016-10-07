@@ -28,7 +28,7 @@ The fact that __RadSpreadProcessing__ is completely decoupled from UI enables nu
 
 #### __[C#] Example 1: Create a workbook and add a worksheet to it__
 
-{{region radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_0}}
+{{region cs-radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_0}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 {{endregion}}
@@ -42,7 +42,7 @@ __RadSpreadProcessing__ allows you to easily import a workbook from a number of 
 
 #### __[C#] Example 2: Download and import xlsx file__
 
-{{region radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_1}}
+{{region cs-radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_1}}
     const string FilePath = @"http://localhost:54352/Resourses/SampleFile.xlsx";
     WebClient webClient = new WebClient();
 
@@ -68,7 +68,7 @@ __RadSpreadProcessing__ also allows you to save a workbook into a csv, txt and x
 
 #### __[C#] Example 3: Save csv file__
 
-{{region radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_3}}
+{{region cs-radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_3}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
 
@@ -87,7 +87,7 @@ For security purposes accessing files in Silverlight can be achieved only throug
 
 #### __[C#] Example 4: Save csv file using SaveFileDialog__
 
-{{region radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_2}}
+{{region cs-radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_2}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
 

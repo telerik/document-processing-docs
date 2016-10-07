@@ -89,7 +89,7 @@ __Example 1__ demonstrates how to add and use defined names. The code creates a 
 
 #### __[C#] Example 1: Add and use names__
 
-{{region radspreadprocessing-features-named-ranges_0}}
+{{region cs-radspreadprocessing-features-named-ranges_0}}
     Workbook workbook = new Workbook();
     Worksheet sheet1 = workbook.Worksheets.Add();
 
@@ -121,7 +121,7 @@ __Example 2__ shows how to remove one of the names added in __Example 1__.
 
 #### __[C#] Example 2: Remove name__
 
-{{region radspreadprocessing-features-named-ranges_1}}
+{{region cs-radspreadprocessing-features-named-ranges_1}}
     workbook.Names.Remove("CorporateTax");
     sheet1.Names.Remove("GrossProfit");
 {{endregion}}

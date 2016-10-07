@@ -57,7 +57,7 @@ __Example 1__ creates a hyperlink to a web address.
 
 #### __[C#] Example 1: Create link to web address__
 
-{{region radspreadprocessing-features-hyperlink_0}}
+{{region cs-radspreadprocessing-features-hyperlink_0}}
     HyperlinkInfo webAddres = HyperlinkInfo.CreateHyperlink("http://telerik.com", "Telerik");
 {{endregion}}
 
@@ -68,7 +68,7 @@ __Example 2__ creates a hyperlink to a cell range somewhere in the document.
 
 #### __[C#] Example 2: Create link to place in the document__
 
-{{region radspreadprocessing-features-hyperlink_1}}
+{{region cs-radspreadprocessing-features-hyperlink_1}}
     HyperlinkInfo inDocument = HyperlinkInfo.CreateInDocumentHyperlink("A1:B3", "Go to A1:B3");
 {{endregion}}
 
@@ -79,7 +79,7 @@ __Example 3__ create a hyperlink to an email address.
 
 #### __[C#] Example 3: Create link to email address__
 
-{{region radspreadprocessing-features-hyperlink_2}}
+{{region cs-radspreadprocessing-features-hyperlink_2}}
     HyperlinkInfo mailto = HyperlinkInfo.CreateMailtoHyperlink("someOne@someCompany.com", "someSubject", "Mail to someOne");
 {{endregion}}
 
@@ -95,7 +95,7 @@ __Example 4__ assigns the hyperlink created in __Example 1__ to A1.
 
 #### __[C#] Example 4: Add hyperlink__
 
-{{region radspreadprocessing-features-hyperlink_3}}
+{{region cs-radspreadprocessing-features-hyperlink_3}}
     CellIndex a1Index = new CellIndex(0, 0);
     SpreadsheetHyperlink spreadsheetHyperlink = worksheet.Hyperlinks.Add(a1Index, webAddres);
 {{endregion}}
@@ -112,7 +112,7 @@ __Example 5__ defines two indexes and then a cell range out of those indexes.
 
 #### __[C#] Example 5: Define cell range__
 
-{{region radspreadprocessing-features-hyperlink_4}}
+{{region cs-radspreadprocessing-features-hyperlink_4}}
     CellIndex a1Index = new CellIndex(0, 0);
     CellIndex b3Index = new CellIndex(2, 1);
     CellRange a1b3Range = new CellRange(a1Index, b3Index);
@@ -125,7 +125,7 @@ __Example 5__ defines two indexes and then a cell range out of those indexes.
 
 #### __[C#] Example 6: Get hyperlinks in cell range__
 
-{{region radspreadprocessing-features-hyperlink_5}}
+{{region cs-radspreadprocessing-features-hyperlink_5}}
     IEnumerable<SpreadsheetHyperlink> containingHyperlinks = worksheet.Hyperlinks.GetContainingHyperlinks(a1b3Range);
 {{endregion}}
 
@@ -139,7 +139,7 @@ __Example 5__ defines two indexes and then a cell range out of those indexes.
 
 #### __[C#] Example 7: Get hyperlinks intersecting with cell range__
 
-{{region radspreadprocessing-features-hyperlink_6}}
+{{region cs-radspreadprocessing-features-hyperlink_6}}
     IEnumerable<SpreadsheetHyperlink> intersectingHyperlinks = worksheet.Hyperlinks.GetIntersectingHyperlinks(a1b3Range);
 {{endregion}}
 
@@ -150,7 +150,7 @@ __Example 5__ defines two indexes and then a cell range out of those indexes.
 
 #### __[C#] Example 8: Get last hyperlink intersecting with cell range__
 
-{{region radspreadprocessing-features-hyperlink_7}}
+{{region cs-radspreadprocessing-features-hyperlink_7}}
     bool canGetHyperlink = worksheet.Hyperlinks.TryGetHyperlink(a1Index, out spreadsheetHyperlink);
 {{endregion}}
 
@@ -164,7 +164,7 @@ __Example 5__ defines two indexes and then a cell range out of those indexes.
 
 #### __[C#] Example 9: Get hyperlink exactly matching cell range__
 
-{{region radspreadprocessing-features-hyperlink_8}}
+{{region cs-radspreadprocessing-features-hyperlink_8}}
     bool canGetHyperlinkExact = worksheet.Hyperlinks.TryGetHyperlinkExact(a1b3Range, out spreadsheetHyperlink);
 {{endregion}}
 
@@ -180,7 +180,7 @@ __Example 10__ removes a hyperlink.
 
 #### __[C#] Example 10: Remove hyperlink__
 
-{{region radspreadprocessing-features-hyperlink_9}}
+{{region cs-radspreadprocessing-features-hyperlink_9}}
     SpreadsheetHyperlink spreadsheetHyperlink;
     if (worksheet.Hyperlinks.TryGetHyperlink(a1Index, out spreadsheetHyperlink))
     {

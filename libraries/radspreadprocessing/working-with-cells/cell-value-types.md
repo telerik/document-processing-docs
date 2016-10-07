@@ -52,7 +52,7 @@ __Example 1__ sets the Value of cell A1 to "Total".
 
 #### __[C#] Example 1: Set string value__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_16}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_16}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -69,7 +69,7 @@ __Example 2__ creates a NumberCellValue with value 3.14 and assigns it to cell A
 
 #### __[C#] Example 2: Create NumberCellValue__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_5}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_5}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -87,7 +87,7 @@ __Example 3__ retrieves the value created in Example 2.
 
 #### __[C#] Example 3: Retrieve cell value__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_17}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_17}}
     RangePropertyValue<ICellValue> rangeValue = worksheet.Cells[0, 0].GetValue();
     ICellValue value = rangeValue.Value;
 {{endregion}}
@@ -116,7 +116,7 @@ __Example 4__ clears the value of cell A1.
 
 #### __[C#] Example 4: Clear value__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_1}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_1}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     worksheet.Cells[0, 0].ClearValue();
@@ -134,7 +134,7 @@ __Example 5__ sets the values of cells A1 and B1 to true and false BooleanCellVa
 
 #### __[C#] Example 5: Set boolean value__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_2}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_2}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     worksheet.Cells[0, 0].SetValue(true);
@@ -151,7 +151,7 @@ __Example 6__ illustrates how to create a BooleanCellValue using the CellValueFa
 
 #### __[C#] Example 6: Create a BooleanCellValue using CellValueFactory__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_3}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_3}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     ICellValue booleanCellValueTrue = CellValueFactory.Create(true);
@@ -175,7 +175,7 @@ __Example 7__ shows how to set the value of cell A1 to 1.23.
 
 #### __[C#] Example 7: Set number cell value__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_4}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_4}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     worksheet.Cells[0, 0].SetValue("1.23");
@@ -191,7 +191,7 @@ __Example 8__ sets the value of cell A1 to 6 October 1987 (in culture "en-US"). 
 
 #### __[C#] Example 8: Set date as number cell value__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_8}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_8}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     worksheet.Cells[0, 0].SetValue("10/06/1987");
@@ -221,7 +221,7 @@ __Example 9__ shows how you can create a formula that refers to another cell.
 
 #### __[C#] Example 9: Create formula referring to another cell__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_13}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_13}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     worksheet.Cells[0, 0].SetValue("=A2");
@@ -240,7 +240,7 @@ __Example 10__ illustrates the use of the SUM built-in function.
 
 #### __[C#] Example 10: Use built-in function__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_14}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_14}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     worksheet.Cells[0, 0].SetValue("=SUM(A2, 3)");
@@ -256,7 +256,7 @@ __Example 11__ creates a FormulaCellValue using the CellValueFactory class.
 
 #### __[C#] Example 11: Create FormulaCellValue__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_18}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_18}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     CellIndex cellIndex = new CellIndex(0, 0);
@@ -275,7 +275,7 @@ __Example 12__ shows how you can use the method.
 
 
 #### __[C#] Example 12: Create FormulaCellValue through SetValueAsFormula()__
-{{region radspreadprocessing-working-with-cells-cell-value-types_22}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_22}}
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellIndex cellIndex = new CellIndex(0, 0);
@@ -298,7 +298,7 @@ __Example 13__ sets the value of cell A1 to the string "some test".
 
 #### __[C#] Example 13: Set TextCellValue__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_19}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_19}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     worksheet.Cells[0, 0].SetValue("some text");
@@ -314,7 +314,7 @@ __Example 14__ enters the string "=1+2" into a cell, however, because of the app
 
 #### __[C#] Example 14: Explicitly apply text value type__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_20}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_20}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     worksheet.Cells[0, 0].SetFormat(new CellValueFormat("@"));
@@ -328,7 +328,7 @@ The same result could be achieved using the __Create()__ method of the __CellVal
 
 #### __[C#] Example 15: Creates TextCellValue__
 
-{{region radspreadprocessing-working-with-cells-cell-value-types_21}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_21}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
     CellIndex cellIndex = new CellIndex(0, 0);
@@ -346,7 +346,7 @@ If you are sure that the value is a string and need to create a text cell value,
 __Example 16__ shows how to utilize the __SetValueAsText()__ method.
 
 #### __[C#] Example 16: Creates TextCellValue through SetValueAsText__
-{{region radspreadprocessing-working-with-cells-cell-value-types_23}}
+{{region cs-radspreadprocessing-working-with-cells-cell-value-types_23}}
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellIndex cellIndex = new CellIndex(0, 0);

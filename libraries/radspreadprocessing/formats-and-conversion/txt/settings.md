@@ -34,7 +34,7 @@ __Example 1__ shows how to create and specify a particular setting to a TxtForma
 
 #### __[C#] Example 1: Use TxtSettings__
 
-{{region radspreadprocessing-formats-and-conversion-Txt-settings_0}}
+{{region cs-radspreadprocessing-formats-and-conversion-Txt-settings_0}}
     TxtFormatProvider provider = new TxtFormatProvider();
     provider.Settings.Delimiter = ';';
     provider.Settings.Quote = '^';

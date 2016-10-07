@@ -25,7 +25,7 @@ __Example 1__ shows how to import a txt file using a FileStream. The sample inst
 
 #### __[C#] Example 1: Import TXT file__
 
-{{region radspreadprocessing-formats-and-conversion-txt-txtformatprovider_0}}
+{{region cs-radspreadprocessing-formats-and-conversion-txt-txtformatprovider_0}}
     Workbook workbook;
     IWorkbookFormatProvider formatProvider = new TxtFormatProvider();
 
@@ -44,7 +44,7 @@ __Example 2__ demonstrates how to export an existing Workbook to a TXT file. The
 
 #### __[C#] Example 2: Export TXT file__
 
-{{region radspreadprocessing-formats-and-conversion-txt-txtformatprovider_1}}
+{{region cs-radspreadprocessing-formats-and-conversion-txt-txtformatprovider_1}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
 

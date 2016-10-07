@@ -73,7 +73,7 @@ In order to fit the print content better, we use the Worksheet's page setup and 
 
 #### __[C#] Example 1: Use WorksheetPageSetup__
 
-{{region radspreadprocessing-features-worksheetpagesetup_0}}
+{{region cs-radspreadprocessing-features-worksheetpagesetup_0}}
     WorksheetPageSetup pageSetup = workbook.ActiveWorksheet.WorksheetPageSetup;
 
     pageSetup.PaperType = PaperTypes.A4;
@@ -115,7 +115,7 @@ The example shown in __Figure 3__ demonstrates how to use Worksheet's print area
 
 #### __[C#] Example 2: Set PrintArea__
 
-{{region radspreadprocessing-features-worksheetpagesetup_1}}
+{{region cs-radspreadprocessing-features-worksheetpagesetup_1}}
     PrintArea printArea = workbook.ActiveWorksheet.WorksheetPageSetup.PrintArea;
 
     printArea.SetPrintArea(new CellRange[]
@@ -173,7 +173,7 @@ In order to separate semantically-correct the print data onto several pages, we 
 
 #### __[C#] Example 3: Insert PageBreaks__
 
-{{region radspreadprocessing-features-worksheetpagesetup_2}}
+{{region cs-radspreadprocessing-features-worksheetpagesetup_2}}
     PageBreaks pageBreaks = workbook.ActiveWorksheet.WorksheetPageSetup.PageBreaks;
 
     pageBreaks.TryInsertHorizontalPageBreak(5, 0);

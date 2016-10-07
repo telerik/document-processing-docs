@@ -37,7 +37,7 @@ __Example 1__ creates a workbook from scratch and adds a worksheet. Further, the
 
 #### __[C#] Example 1: Set formula__
 
-{{region radspreadprocessing-features-formulas_0}}
+{{region cs-radspreadprocessing-features-formulas_0}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
     workbook.ActiveWorksheet.Cells[0, 0].SetValue("=3+4");
@@ -53,7 +53,7 @@ A closer look at the value of cell A1 will reveal that the two methods __GetValu
 
 #### __[C#] Example 2: Get formula value__
 
-{{region radspreadprocessing-features-formulas_1}}
+{{region cs-radspreadprocessing-features-formulas_1}}
     FormulaCellValue formulaCellValue = workbook.ActiveWorksheet.Cells[0, 0].GetValue().Value as FormulaCellValue;
     if (formulaCellValue != null)
     {

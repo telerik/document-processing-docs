@@ -26,7 +26,7 @@ The document model offers multiple ways to create a __CellSelection__ object. Th
 
 #### __[C#] Example 1: Create CellSelection using CellIndex__
 
-{{region radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_0}}
+{{region cs-radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_0}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -38,7 +38,7 @@ The document model offers multiple ways to create a __CellSelection__ object. Th
 
 #### __[C#] Example 2: Create CellSelection using CellRange__
 
-{{region radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_1}}
+{{region cs-radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_1}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -49,7 +49,7 @@ The document model offers multiple ways to create a __CellSelection__ object. Th
 
 #### __[C#] Example 3: Create CellSelection using multiple CellRange objects__
 
-{{region radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_2}}
+{{region cs-radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_2}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -62,7 +62,7 @@ The document model offers multiple ways to create a __CellSelection__ object. Th
 
 #### __[C#] Example 4: Create CellSelection using two CellIndex instances that specify a CellRange__
 
-{{region radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_3}}
+{{region cs-radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_3}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -74,7 +74,7 @@ The document model offers multiple ways to create a __CellSelection__ object. Th
 
 #### __[C#] Example 5:  Create CellSelection using two integers that indicate the CellIndex__
 
-{{region radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_4}}
+{{region cs-radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_4}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 
@@ -84,7 +84,7 @@ The document model offers multiple ways to create a __CellSelection__ object. Th
 
 #### __[C#] Example 6: Create CellSelection using four integers that specify the CellRange__
 
-{{region radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_5}}
+{{region cs-radspreadprocessing-working-with-cells-accessing-cells-of-worksheet_5}}
     Workbook workbook = new Workbook();
     Worksheet worksheet = workbook.Worksheets.Add();
 

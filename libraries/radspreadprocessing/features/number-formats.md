@@ -92,7 +92,7 @@ __Example 1__ demonstrates how to apply scientific format to cell *A1* and perce
 
 #### __[C#] Example 1: Apply format__
 
-{{region radspreadprocessing-features-number-formats_0}}
+{{region cs-radspreadprocessing-features-number-formats_0}}
     public void ApplyFormat()
     {
         Workbook workbook = new Workbook();
@@ -124,7 +124,7 @@ __Example 2__ demonstrates how to get the __Number__ format of cell *A1* and cel
 
 #### __[C#] Example 2: Get number format__
 
-{{region radspreadprocessing-features-number-formats_1}}
+{{region cs-radspreadprocessing-features-number-formats_1}}
     public void GetFormat()
     {
         Workbook workbook = new Workbook();

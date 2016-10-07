@@ -98,7 +98,7 @@ __Example 1__ shows what including the __Number__ group looks like.
 
 #### __[C#] Example 1: Include Number group in CellStyle__
 
-{{region radspreadprocessing-features-styling-cell-styles_0}}
+{{region cs-radspreadprocessing-features-styling-cell-styles_0}}
     Workbook workbook = new Workbook();
     CellStyle tempStyle = workbook.Styles["Bad"];
     tempStyle.IncludeNumber = true;
@@ -119,7 +119,7 @@ __Example 2__ creates a new style and applies it to cell *A1*.
 
 #### __[C#] Example 2: Create a style__
 
-{{region radspreadprocessing-features-styling-cell-styles_1}}
+{{region cs-radspreadprocessing-features-styling-cell-styles_1}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
 
@@ -158,7 +158,7 @@ __Example 3__ obtains the *Bad* style from the styles collection of a workbook a
 
 #### __[C#] Example 3: Modify a style__
 
-{{region radspreadprocessing-features-styling-cell-styles_2}}
+{{region cs-radspreadprocessing-features-styling-cell-styles_2}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
 
@@ -181,7 +181,7 @@ You can also remove a style from the __Styles__ collection. It is as easy as rem
         
 #### __[C#] Example 4: Remove a style__
 
-{{region radspreadprocessing-features-styling-cell-styles_3}}
+{{region cs-radspreadprocessing-features-styling-cell-styles_3}}
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
 
