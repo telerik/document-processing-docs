@@ -99,9 +99,9 @@ __Example 1__ shows what including the __Number__ group looks like.
 #### __[C#] Example 1: Include Number group in CellStyle__
 
 {{region cs-radspreadprocessing-features-styling-cell-styles_0}}
-    Workbook workbook = new Workbook();
-    CellStyle tempStyle = workbook.Styles["Bad"];
-    tempStyle.IncludeNumber = true;
+	Workbook workbook = new Workbook();
+	CellStyle tempStyle = workbook.Styles["Bad"];
+	tempStyle.IncludeNumber = true;
 {{endregion}}
 
 
@@ -120,30 +120,30 @@ __Example 2__ creates a new style and applies it to cell *A1*.
 #### __[C#] Example 2: Create a style__
 
 {{region cs-radspreadprocessing-features-styling-cell-styles_1}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-
-    CellStyle cellStyle = workbook.Styles.Add("My style", CellStyleCategory.Custom);
-
-    cellStyle.BeginUpdate();
-
-    CellBorder border = new CellBorder(CellBorderStyle.DashDotDot, new ThemableColor(Colors.Red));
-    cellStyle.LeftBorder = border;
-    cellStyle.TopBorder = border;
-    cellStyle.RightBorder = border;
-    cellStyle.BottomBorder = border;
-
-    ThemableColor patternColor = new ThemableColor(ThemeColorType.Accent1);
-    ThemableColor backgroundColor = new ThemableColor(ThemeColorType.Accent5, ColorShadeType.Shade2);
-    IFill fill = new PatternFill(PatternType.Gray75Percent, patternColor, backgroundColor);
-    cellStyle.Fill = fill;
-
-    cellStyle.HorizontalAlignment = RadHorizontalAlignment.Left;
-    cellStyle.VerticalAlignment = RadVerticalAlignment.Center;
-
-    cellStyle.EndUpdate();
-
-    workbook.ActiveWorksheet.Cells[0, 0].SetStyleName("My style");
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
+	
+	CellStyle cellStyle = workbook.Styles.Add("My style", CellStyleCategory.Custom);
+	
+	cellStyle.BeginUpdate();
+	
+	CellBorder border = new CellBorder(CellBorderStyle.DashDotDot, new ThemableColor(Colors.Red));
+	cellStyle.LeftBorder = border;
+	cellStyle.TopBorder = border;
+	cellStyle.RightBorder = border;
+	cellStyle.BottomBorder = border;
+	
+	ThemableColor patternColor = new ThemableColor(ThemeColorType.Accent1);
+	ThemableColor backgroundColor = new ThemableColor(ThemeColorType.Accent5, ColorShadeType.Shade2);
+	IFill fill = new PatternFill(PatternType.Gray75Percent, patternColor, backgroundColor);
+	cellStyle.Fill = fill;
+	
+	cellStyle.HorizontalAlignment = RadHorizontalAlignment.Left;
+	cellStyle.VerticalAlignment = RadVerticalAlignment.Center;
+	
+	cellStyle.EndUpdate();
+	
+	workbook.ActiveWorksheet.Cells[0, 0].SetStyleName("My style");
 {{endregion}}
 
 
@@ -159,18 +159,18 @@ __Example 3__ obtains the *Bad* style from the styles collection of a workbook a
 #### __[C#] Example 3: Modify a style__
 
 {{region cs-radspreadprocessing-features-styling-cell-styles_2}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-
-    CellStyle style = workbook.Styles["Bad"];
-
-    style.BeginUpdate();
-
-    style.Fill = new PatternFill(PatternType.DiagonalCrosshatch, Colors.Red, Colors.Transparent);
-    style.FontSize = UnitHelper.PointToDip(20);
-    style.ForeColor = new ThemableColor(Colors.Black);
-
-    style.EndUpdate();
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
+	
+	CellStyle style = workbook.Styles["Bad"];
+	
+	style.BeginUpdate();
+	
+	style.Fill = new PatternFill(PatternType.DiagonalCrosshatch, Colors.Red, Colors.Transparent);
+	style.FontSize = UnitHelper.PointToDip(20);
+	style.ForeColor = new ThemableColor(Colors.Black);
+	
+	style.EndUpdate();
 {{endregion}}
 
 
@@ -182,22 +182,22 @@ You can also remove a style from the __Styles__ collection. It is as easy as rem
 #### __[C#] Example 4: Remove a style__
 
 {{region cs-radspreadprocessing-features-styling-cell-styles_3}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-
-    if (workbook.Styles.Remove("Bad"))
-    {
-        Debug.WriteLine("Style removed");
-    }
-    else
-    {
-        Debug.WriteLine("The style does not exist");
-    }
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
+	
+	if (workbook.Styles.Remove("Bad"))
+	{
+	    Debug.WriteLine("Style removed");
+	}
+	else
+	{
+	    Debug.WriteLine("The style does not exist");
+	}
 {{endregion}}
 
 
 
-# See Also
+## See Also
 
  * [Document Themes]({%slug radspreadprocessing-features-styling-document-themes%})
  * [Whats is a Workbook?]({%slug radspreadprocessing-working-wtih-workbooks-what-is-workbook%})

@@ -29,13 +29,12 @@ __Example 1__ constructs a worksheet that will be used as a starting point in th
 #### __[C#] Example 1: Construct worksheet__
 
 {{region cs-radspreadprocessing-features-merge-unmerge-cells_8}}
-
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-    worksheet.Cells[0, 0].SetValue("A1");
-    worksheet.Cells[1, 0].SetValue("A2");
-    worksheet.Cells[0, 1].SetValue("B1");
-    worksheet.Cells[1, 1].SetValue("B2");
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	worksheet.Cells[0, 0].SetValue("A1");
+	worksheet.Cells[1, 0].SetValue("A2");
+	worksheet.Cells[0, 1].SetValue("B1");
+	worksheet.Cells[1, 1].SetValue("B2");
 {{endregion}}
 
 
@@ -52,13 +51,12 @@ __Example 2__ illustrates how to perform a merge operation on the cell region *A
 #### __[C#] Example 2: Perform merge operation__
 
 {{region cs-radspreadprocessing-features-merge-unmerge-cells_0}}
-
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-    CellIndex A1Cell = new CellIndex(0, 0);
-    CellIndex B2Cell = new CellIndex(1, 1);
-
-    worksheet.Cells[A1Cell, B2Cell].Merge();
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	CellIndex A1Cell = new CellIndex(0, 0);
+	CellIndex B2Cell = new CellIndex(1, 1);
+	
+	worksheet.Cells[A1Cell, B2Cell].Merge();
 {{endregion}}
 
 
@@ -81,13 +79,11 @@ __Example 3__ illustrates how to perform a merge operation on the cell region *A
 #### __[C#] Example 3: Perform merge across__
 
 {{region cs-radspreadprocessing-features-merge-unmerge-cells_1}}
-	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-    CellIndex A1Cell = new CellIndex(0, 0);
-    CellIndex B2Cell = new CellIndex(1, 1);
-    worksheet.Cells[A1Cell, B2Cell].MergeAcross();
-	
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	CellIndex A1Cell = new CellIndex(0, 0);
+	CellIndex B2Cell = new CellIndex(1, 1);
+	worksheet.Cells[A1Cell, B2Cell].MergeAcross();
 {{endregion}}
 
 
@@ -110,13 +106,11 @@ __Example 4__ merges across the region *A1:B2* and then performs another merge o
 #### __[C#] Example 4: Intersect cell range with merged cell range__
 
 {{region cs-radspreadprocessing-features-merge-unmerge-cells_2}}
-	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-    CellIndex B2Cell = new CellIndex(1, 1);
-    CellIndex C3Cell = new CellIndex(2, 2);
-    worksheet.Cells[B2Cell, C3Cell].Merge();
-	
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	CellIndex B2Cell = new CellIndex(1, 1);
+	CellIndex C3Cell = new CellIndex(2, 2);
+	worksheet.Cells[B2Cell, C3Cell].Merge();
 {{endregion}}
 
 
@@ -146,8 +140,8 @@ __Example 5__ checks if cell A1 is in a merged region.
 #### __[C#] Example 5: Check if cell is in merged cell range__
 
 {{region cs-radspreadprocessing-features-merge-unmerge-cells_3}}
-    CellIndex A1CellIndex = new CellIndex(0, 0);
-    bool isA1merged = worksheet.Cells.GetIsMerged(A1CellIndex);
+	CellIndex A1CellIndex = new CellIndex(0, 0);
+	bool isA1merged = worksheet.Cells.GetIsMerged(A1CellIndex);
 {{endregion}}
 
 
@@ -163,9 +157,9 @@ __Example 6__ shows how to use TryGetContainingMergedRange() method.
 #### __[C#] Example 6: Try get merged cell range__
 
 {{region cs-radspreadprocessing-features-merge-unmerge-cells_4}}
-    CellIndex A1CellIndex = new CellIndex(0, 0);
-    CellRange mergedCellRange;
-    bool canGetContainingMergedCellRange = worksheet.Cells.TryGetContainingMergedRange(A1CellIndex, out mergedCellRange);
+	CellIndex A1CellIndex = new CellIndex(0, 0);
+	CellRange mergedCellRange;
+	bool canGetContainingMergedCellRange = worksheet.Cells.TryGetContainingMergedRange(A1CellIndex, out mergedCellRange);
 {{endregion}}
 
 
@@ -181,10 +175,10 @@ __Example 7__ shows how to use GetContainingMergedRanges() method.
 #### __[C#] Example 7: Get all containing merged ranges in a range__
 
 {{region cs-radspreadprocessing-features-merge-unmerge-cells_5}}
-    CellIndex A1CellIndex = new CellIndex(0, 0);
-    CellIndex N33CellIndex = new CellIndex(32, 13);
-    CellRange A1N33CellRange = new CellRange(A1CellIndex, N33CellIndex);
-    IEnumerable<CellRange> containingMergedCellRanges = worksheet.Cells.GetContainingMergedRanges(A1N33CellRange);
+	CellIndex A1CellIndex = new CellIndex(0, 0);
+	CellIndex N33CellIndex = new CellIndex(32, 13);
+	CellRange A1N33CellRange = new CellRange(A1CellIndex, N33CellIndex);
+	IEnumerable<CellRange> containingMergedCellRanges = worksheet.Cells.GetContainingMergedRanges(A1N33CellRange);
 {{endregion}}
 
 
@@ -200,9 +194,9 @@ __Example 8__ shows how to get all merged ranges in a worksheet.
 #### __[C#] Example 8: Get all merged ranges__
 
 {{region cs-radspreadprocessing-features-merge-unmerge-cells_6}}
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-    IEnumerable<CellRange> mergedCellRanges = worksheet.Cells.GetMergedCellRanges();
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	IEnumerable<CellRange> mergedCellRanges = worksheet.Cells.GetMergedCellRanges();
 {{endregion}}
 
 
@@ -221,10 +215,10 @@ __Example 9__ invokes the __Unmerge()__ method for the region *B2:D4* of the wor
 #### __[C#] Example 9: Unmerge cells__
 
 {{region cs-radspreadprocessing-features-merge-unmerge-cells_7}}
-    CellIndex B2CellIndex = new CellIndex(1, 1);
-    CellIndex D4CellIndex = new CellIndex(3, 3);
-    CellRange B2D4CellSelection = new CellRange(B2CellIndex, D4CellIndex);
-    worksheet.Cells[B2D4CellSelection].Unmerge();
+	CellIndex B2CellIndex = new CellIndex(1, 1);
+	CellIndex D4CellIndex = new CellIndex(3, 3);
+	CellRange B2D4CellSelection = new CellRange(B2CellIndex, D4CellIndex);
+	worksheet.Cells[B2D4CellSelection].Unmerge();
 {{endregion}}
 
 

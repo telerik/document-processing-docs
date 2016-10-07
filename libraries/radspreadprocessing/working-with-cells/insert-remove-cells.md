@@ -32,18 +32,16 @@ The __CellSelection__ class exposes an __Insert()__ method that takes one argume
 #### __[C#] Example 1: Insert cells__
 
 {{region cs-radspreadprocessing-working-with-cells-insert-remove-cells_0}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    CellRange range = new CellRange(1, 1, 10, 10);
-    CellSelection selection = worksheet.Cells[range];
-
-    if (selection.CanInsertOrRemove(range, ShiftType.Right))
-    {
-        selection.Insert(InsertShiftType.Right);
-    }
+	CellRange range = new CellRange(1, 1, 10, 10);
+	CellSelection selection = worksheet.Cells[range];
 	
+	if (selection.CanInsertOrRemove(range, ShiftType.Right))
+	{
+	    selection.Insert(InsertShiftType.Right);
+	}
 {{endregion}}
 
 
@@ -62,18 +60,16 @@ The __CellSelection__ class exposes a __Remove()__ method that takes one argumen
 #### __[C#] Example 2: Remove cells__
 
 {{region cs-radspreadprocessing-working-with-cells-insert-remove-cells_1}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    CellRange range = new CellRange(1, 1, 10, 10);
-    CellSelection selection = worksheet.Cells[range];
-
-    if (selection.CanInsertOrRemove(range, ShiftType.Up))
-    {
-        selection.Remove(RemoveShiftType.Up);
-    }
+	CellRange range = new CellRange(1, 1, 10, 10);
+	CellSelection selection = worksheet.Cells[range];
 	
+	if (selection.CanInsertOrRemove(range, ShiftType.Up))
+	{
+	    selection.Remove(RemoveShiftType.Up);
+	}
 {{endregion}}
 
 

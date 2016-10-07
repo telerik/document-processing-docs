@@ -35,19 +35,19 @@ __Example 1__ shows how to import an xlsx file using a FileStream. The code assu
 #### __[C#] Example 1: Import Xlsx file__
 
 {{region cs-radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider_0}}
-    string fileName = "SampleFile.xlsx";
-    if (!File.Exists(fileName))
-    {
-        throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
-    }
-
-    Workbook workbook;
-    IWorkbookFormatProvider formatProvider = new XlsxFormatProvider();
-
-    using (FileStream input = new FileStream(fileName, FileMode.Open))
-    {
-        workbook = formatProvider.Import(input);
-    }
+	string fileName = "SampleFile.xlsx";
+	if (!File.Exists(fileName))
+	{
+	    throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
+	}
+	
+	Workbook workbook;
+	IWorkbookFormatProvider formatProvider = new XlsxFormatProvider();
+	
+	using (Stream input = new FileStream(fileName, FileMode.Open))
+	{
+	    workbook = formatProvider.Import(input);
+	}
 {{endregion}}
 
 
@@ -60,16 +60,16 @@ __Example 2__ demonstrates how to export an existing Workbook to an xlsx file. T
 #### __[C#] Example 2: Export Xlsx file__
 
 {{region cs-radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider_1}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-    string fileName = "SampleFile.xlsx";
-
-    IWorkbookFormatProvider formatProvider = new XlsxFormatProvider();
-
-    using (FileStream output = new FileStream(fileName, FileMode.Create))
-    {
-        formatProvider.Export(workbook, output);
-    }
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
+	string fileName = "SampleFile.xlsx";
+	
+	IWorkbookFormatProvider formatProvider = new XlsxFormatProvider();
+	
+	using (Stream output = new FileStream(fileName, FileMode.Create))
+	{
+	    formatProvider.Export(workbook, output);
+	}
 {{endregion}}
 
 

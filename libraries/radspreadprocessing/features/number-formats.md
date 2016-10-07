@@ -93,19 +93,19 @@ __Example 1__ demonstrates how to apply scientific format to cell *A1* and perce
 #### __[C#] Example 1: Apply format__
 
 {{region cs-radspreadprocessing-features-number-formats_0}}
-    public void ApplyFormat()
-    {
-        Workbook workbook = new Workbook();
-        Worksheet worksheet = workbook.Worksheets.Add();
-
-        CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-        CellValueFormat scientificFormat = new CellValueFormat("0.00E+00");
-        cellSelectionA1.SetFormat(scientificFormat);
-
-        CellSelection cellSelectionA2B3 = worksheet.Cells[new CellRange(new CellIndex(1, 0), new CellIndex(2, 1))];
-        CellValueFormat percentageFormat = new CellValueFormat("0.00%");
-        cellSelectionA2B3.SetFormat(percentageFormat);
-    }
+	public void ApplyFormat()
+	{
+	    Workbook workbook = new Workbook();
+	    Worksheet worksheet = workbook.Worksheets.Add();
+	
+	    CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
+	    CellValueFormat scientificFormat = new CellValueFormat("0.00E+00");
+	    cellSelectionA1.SetFormat(scientificFormat);
+	
+	    CellSelection cellSelectionA2B3 = worksheet.Cells[new CellRange(new CellIndex(1, 0), new CellIndex(2, 1))];
+	    CellValueFormat percentageFormat = new CellValueFormat("0.00%");
+	    cellSelectionA2B3.SetFormat(percentageFormat);
+	}
 {{endregion}}
 
 
@@ -125,17 +125,17 @@ __Example 2__ demonstrates how to get the __Number__ format of cell *A1* and cel
 #### __[C#] Example 2: Get number format__
 
 {{region cs-radspreadprocessing-features-number-formats_1}}
-    public void GetFormat()
-    {
-        Workbook workbook = new Workbook();
-        Worksheet worksheet = workbook.Worksheets.Add();
-
-        CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-        CellSelection cellSelectionA2B3 = worksheet.Cells[new CellRange(new CellIndex(1, 0), new CellIndex(2, 1))];
-
-        CellValueFormat cellSelectioA1Format = cellSelectionA1.GetFormat().Value;
-        CellValueFormat cellSelectioA2Format = cellSelectionA2B3.GetFormat().Value;
-    }
+	public void GetFormat()
+	{
+	    Workbook workbook = new Workbook();
+	    Worksheet worksheet = workbook.Worksheets.Add();
+	
+	    CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
+	    CellSelection cellSelectionA2B3 = worksheet.Cells[new CellRange(new CellIndex(1, 0), new CellIndex(2, 1))];
+	
+	    CellValueFormat cellSelectioA1Format = cellSelectionA1.GetFormat().Value;
+	    CellValueFormat cellSelectioA2Format = cellSelectionA2B3.GetFormat().Value;
+	}
 {{endregion}}
 
 

@@ -39,12 +39,12 @@ __Example 1__ shows how to use __PdfFormatProvider__ to export a Workbook to a f
 #### __[C#] Example 1: PdfFormatProvider export example__
 
 {{region cs-radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
-    PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
-    using (Stream output = GetFileStream())
-    {
-        Workbook workbook = CreateSampleWorkbook();
-        pdfFormatProvider.Export(workbook, output);
-    }
+	PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
+	using (Stream output = GetFileStream())
+	{
+	    Workbook workbook = CreateSampleWorkbook();
+	    pdfFormatProvider.Export(workbook, output);
+	}
 {{endregion}}
 
 
@@ -53,10 +53,10 @@ The result from the export method is a document that can be opened in any applic
         
 #### __[C#] Example 2: Export to RadFixedDocument__
 {{region cs-radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
-    Workbook workbook = CreateSampleWorkbook();
-
-    PdfFormatProvider provider = new PdfFormatProvider();
-    RadFixedDocument fixedDocument = provider.ExportToFixedDocument(workbook);
+	Workbook workbook = CreateSampleWorkbook();
+	
+	PdfFormatProvider provider = new PdfFormatProvider();
+	RadFixedDocument fixedDocument = provider.ExportToFixedDocument(workbook);
 {{endregion}}
 
 >tip __RadFixedDocument__ is the base class of the __RadPdfProcessing__ library. Additional information on the library and its functionality can be found [here]({%slug radpdfprocessing-overview%}).

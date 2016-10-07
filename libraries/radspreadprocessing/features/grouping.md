@@ -81,11 +81,11 @@ The other option is to use the Group method exposed by the row/column selection 
 #### __[VB.NET] Example 2: Grouping columns using the group method__
 
 {{region vb-radspreadprocessing-features-grouping_7}}
-    Dim workbook = New Workbook()
-    Dim worksheet = workbook.Worksheets.Add()
-
-    worksheet.Columns(0, 3).Group()
-    worksheet.Columns(1, 2).Group()
+	Dim workbook = New Workbook()
+	Dim worksheet = workbook.Worksheets.Add()
+	
+	worksheet.Columns(0, 3).Group()
+	worksheet.Columns(1, 2).Group()
 {{endregion}}
 
 __Figure 2__ shows the result of both approaches.
@@ -106,15 +106,15 @@ The following code snippets exemplify the two approaches to make these changes i
 #### __[C#] Example 3: Ungrouping columns using ouline level__
 
 {{region cs-radspreadprocessing-features-grouping_2}}
-	worksheet.Rows[0, 1].ClearOutlineLevel();
-	worksheet.Rows[4, 6].SetOutlineLevel(1);
+	worksheet.Rows[0, 1].Ungroup();
+	worksheet.Rows[4, 6].Ungroup();
 {{endregion}}
 
 #### __[VB.NET] Example 3: Ungrouping columns using ouline level__
 
 {{region vb-radspreadprocessing-features-grouping_8}}
-    worksheet.Rows(0, 1).Ungroup()
-    worksheet.Rows(4, 6).Ungroup()
+	worksheet.Rows(0, 1).Ungroup()
+	worksheet.Rows(4, 6).Ungroup()
 {{endregion}}
 
 You can achieve the same result with the code in __Example 4__.
@@ -122,15 +122,15 @@ You can achieve the same result with the code in __Example 4__.
 #### __[C#] Example 4: Ungrouping columns using the ungroup method__
 
 {{region cs-radspreadprocessing-features-grouping_3}}
-	worksheet.Rows[0, 1].Ungroup();
-	worksheet.Rows[4, 6].Ungroup();
+	worksheet.Rows[0, 1].ClearOutlineLevel();
+	worksheet.Rows[4, 6].SetOutlineLevel(1);
 {{endregion}}
 
 #### __[VB.NET] Example 4: Ungrouping columns using the ungroup method__
 
 {{region vb-radspreadprocessing-features-grouping_9}}
-    worksheet.Rows(0, 1).ClearOutlineLevel()
-    worksheet.Rows(4, 6).SetOutlineLevel(1)
+	worksheet.Rows(0, 1).ClearOutlineLevel()
+	worksheet.Rows(4, 6).SetOutlineLevel(1)
 {{endregion}}
 
 ## Getting the Outline Level
@@ -172,9 +172,7 @@ Both properties have a default value of true. The following snippet shows how to
 #### __[C#] Example 6: Setting the position of the summary column to left__
 
 {{region cs-radspreadprocessing-features-grouping_5}}
-
-    worksheet.GroupingProperties.SummaryColumnIsToRight = false;
-
+	worksheet.GroupingProperties.SummaryColumnIsToRight = false;
 {{endregion}}
 
 #### __[VB.NET] Example 6: Setting the position of the summary column to left__
@@ -188,7 +186,7 @@ Both properties have a default value of true. The following snippet shows how to
 #### Figure 5: Left summary column
 ![](images/RadSpreadProcessing_Features_Grouping_05.png)
 
-# See Also
+## See Also
 
 * [Filtering]({%slug radspreadprocessing-features-filtering%})
 * [Sorting]({%slug radspreadprocessing-features-sorting%})

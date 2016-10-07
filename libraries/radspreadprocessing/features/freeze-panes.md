@@ -80,7 +80,7 @@ The result illustrated in __Figure 3__ can be achieved with the code from __Exam
 
 #### __[C#] Example 1: Freezing panes__
 {{region cs-radspreadprocessing-features-freeze-panes_01}}
-    CellIndex fixedPaneTopLeftCellIndex = new CellIndex(2, 2);
+	CellIndex fixedPaneTopLeftCellIndex = new CellIndex(2, 2);
 	CellIndex scrollableTopLeftCellIndex = new CellIndex(5, 8);
 	workbook.ActiveWorksheet.ViewState.FreezePanes(fixedPaneTopLeftCellIndex, 1, 4, scrollableTopLeftCellIndex);
 {{endregion}}
@@ -145,6 +145,6 @@ Another option is to set the Pane property of the ViewState to null.
 	workbook.ActiveWorksheet.ViewState.Pane = null;
 {{endregion}}
 
-# See Also
+## See Also
 
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})

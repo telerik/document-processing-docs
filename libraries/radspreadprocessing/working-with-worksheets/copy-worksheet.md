@@ -22,16 +22,16 @@ __Example 1__ illustrates how to copy a specific worksheet from a source Workboo
 
 #### __[C#] Example 1: Copy worksheet__
 {{region cs-radspreadprocessing-working-with-worksheets-copy-worksheet_0}}
-    Worksheet clonedSheet = target.Worksheets.Add();
-    clonedSheet.CopyFrom(source.Sheets[0] as Worksheet);
+	Worksheet clonedSheet = target.Worksheets.Add();
+	clonedSheet.CopyFrom(source.Sheets[0] as Worksheet);
 {{endregion}}
 
 
 #### __[VB.NET] Example 1: Copy worksheet__
 
 {{region vb-radspreadprocessing-working-with-worksheets-copy-worksheet_2}}
-    Dim clonedSheet As Worksheet = target.Worksheets.Add()
-    clonedSheet.CopyFrom(TryCast(source.Sheets(0), Worksheet))
+	Dim clonedSheet As Worksheet = target.Worksheets.Add()
+	clonedSheet.CopyFrom(TryCast(source.Sheets(0), Worksheet))
 {{endregion}}
 
 
@@ -72,22 +72,22 @@ __Example 2__ demonstrates a slightly more complex scenario in which a sheet is 
 #### __[VB.NET] Example 2: Copy to existing workbook__
 
 {{region vb-radspreadprocessing-working-with-worksheets-copy-worksheet_3}}
-    Dim containsSameName As Boolean = False
-
-    For Each worksheet As var In targetWorkbook.Worksheets
-        If worksheet.Name = sheetToClone.Name Then
-            containsSameName = True
-            Exit For
-        End If
-    Next
-
-    If containsSameName Then
-        targetWorkbook.Worksheets(sheetToClone.Name).CopyFrom(sheetToClone)
-    Else
-        Dim clonedSheet As Worksheet = targetWorkbook.Worksheets.Add()
-        clonedSheet.CopyFrom(sheetToClone)
-        clonedSheet.Name = sheetToClone.Name
-    End If
+	Dim containsSameName As Boolean = False
+	
+	For Each worksheet As var In targetWorkbook.Worksheets
+	    If worksheet.Name = sheetToClone.Name Then
+	        containsSameName = True
+	        Exit For
+	    End If
+	Next
+	
+	If containsSameName Then
+	    targetWorkbook.Worksheets(sheetToClone.Name).CopyFrom(sheetToClone)
+	Else
+	    Dim clonedSheet As Worksheet = targetWorkbook.Worksheets.Add()
+	    clonedSheet.CopyFrom(sheetToClone)
+	    clonedSheet.Name = sheetToClone.Name
+	End If
 {{endregion}}
 
 

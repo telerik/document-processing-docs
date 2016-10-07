@@ -33,7 +33,6 @@ This article aims to present the Headers and Footers API in **RadSpreadprocessin
 
 #### **[C#] Example 1: Get HeaderFooterSettings**
 {{region cs-radspreadprocessing-features-headers-and-footers_0}}
-
 	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
 {{endregion}}
 
@@ -94,7 +93,6 @@ The **HeaderFooterSection** class defines the content of a particular header/foo
 #### **[C#] Example 2: Set a content to a header/footer section**
 
 {{region cs-radspreadprocessing-features-headers-and-footers_1}}
-
 	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
 	settings.Header.RightSection.Text = "Printed by Telerik";
 	settings.Footer.CenterSection.Text = "RadSpreadProcessing";
@@ -156,7 +154,6 @@ The following list describes all valid uses of the ampersand symbol sequences. I
 #### **[C#] Example 3: Insert fields in header/footer**
 
 {{region cs-radspreadprocessing-features-headers-and-footers_2}}
-
 	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
 	settings.Header.RightSection.Text = "Printed by Telerik on &D";
 	settings.Footer.CenterSection.Text = "Page &P of &N";
@@ -189,7 +186,7 @@ In order to control the vertical positioning of the headers and footers on the p
 
 The [Unit class](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Media_Unit.htm), used in **Example 4** provides convenient methods that can help you convert a value between different measurement units.
 
-# See Also
+## See Also
 
 * [Worksheets]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
 

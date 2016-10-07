@@ -29,9 +29,9 @@ __Example 1__ creates a workbook with a single worksheet before setting the valu
 #### __[C#] Example 1: Set reference value__
 
 {{region cs-radspreadprocessing-features-formulas-cell-references_0}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-    workbook.ActiveWorksheet.Cells[0, 2].SetValue("=A1+B1");
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
+	workbook.ActiveWorksheet.Cells[0, 2].SetValue("=A1+B1");
 {{endregion}}
 
 
@@ -45,12 +45,12 @@ __Example 2__ adds a worksheet to the workbook and renames the newly created ins
 #### __[C#] Example 2: Set reference value from another sheet__
 
 {{region cs-radspreadprocessing-features-formulas-cell-references_1}}
-    workbook.Worksheets.Add();
-    Worksheet sheet1 = workbook.Worksheets[0];
-    Worksheet samsWorksheet = workbook.Worksheets[1];
-    samsWorksheet.Name = "Sam'sWorksheet";
-
-    sheet1.Cells[0, 0].SetValue("='Sam''sWorksheet'!B2");
+	workbook.Worksheets.Add();
+	Worksheet sheet1 = workbook.Worksheets[0];
+	Worksheet samsWorksheet = workbook.Worksheets[1];
+	samsWorksheet.Name = "Sam'sWorksheet";
+	
+	sheet1.Cells[0, 0].SetValue("='Sam''sWorksheet'!B2");
 {{endregion}}
 
 
@@ -64,8 +64,8 @@ __Example 3__ demonstrates how to add a reference to a whole cell range.
 #### __[C#] Example 3: Set reference to cell range__
 
 {{region cs-radspreadprocessing-features-formulas-cell-references_2}}
-    sheet1.Cells[2, 2].SetValue("=SUM(A1:B2)");
-    samsWorksheet.Cells[0, 0].SetValue("=PRODUCT(D3:F5)");
+	sheet1.Cells[2, 2].SetValue("=SUM(A1:B2)");
+	samsWorksheet.Cells[0, 0].SetValue("=PRODUCT(D3:F5)");
 {{endregion}}
 
 
@@ -96,7 +96,7 @@ In certain cases, the newly created value might relate to a cell that goes beyon
 A mixed cell reference specifies its row as absolute and its column as relative or vice versa. Upon copy/paste mixed cell references keep their absolute part unchanged and translate only the relative part. For instance, if B1 contains the value =SUM(A$1:A1) and we paste the value in the range B1:B5, each of the newly produced values will hold the sum of all cells in the column A between A1 and the current row. Note that if you move the contents of B1 to a cell in another column, say E2, the new value will translate the columns of both references =SUM(D$1:D2).
             
 
-# See Also
+## See Also
 
  * [Activate a Worksheet]({%slug radspreadprocessing-working-with-worksheets-activate-worksheet%})
  * [Errors]({%slug radspreadprocessing-features-formulas-errors%})

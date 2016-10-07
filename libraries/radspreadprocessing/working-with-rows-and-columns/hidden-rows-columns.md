@@ -38,19 +38,19 @@ __Example 1__ shows how to retrieve and change the hidden state of several rows 
 #### __[C#] Example 1: Change row hidden state__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-hiding_0}}
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    RowSelection rowSelection = worksheet.Rows[5, 7];
-    RangePropertyValue<bool> rowsHiddenState = rowSelection.GetHidden();
-    if (!rowsHiddenState.IsIndeterminate && !rowsHiddenState.Value)
-    {
-        rowSelection.SetHidden(true);
-    }
-    else
-    {
-        rowSelection.ClearHidden();
-    }
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	
+	RowSelection rowSelection = worksheet.Rows[5, 7];
+	RangePropertyValue<bool> rowsHiddenState = rowSelection.GetHidden();
+	if (!rowsHiddenState.IsIndeterminate && !rowsHiddenState.Value)
+	{
+	    rowSelection.SetHidden(true);
+	}
+	else
+	{
+	    rowSelection.ClearHidden();
+	}
 {{endregion}}
 
 
@@ -63,13 +63,13 @@ __Example 2__ shows how you can set the width of a group of columns and it would
 #### __[C#] Example 2: Change column width__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-hiding_1}}
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    ColumnSelection columnSelection = worksheet.Columns[5, 7];
-    columnSelection.SetWidth(new ColumnWidth(0, true));
-
-    bool hiddenState = columnSelection.GetHidden().Value;
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	
+	ColumnSelection columnSelection = worksheet.Columns[5, 7];
+	columnSelection.SetWidth(new ColumnWidth(0, true));
+	
+	bool hiddenState = columnSelection.GetHidden().Value;
 {{endregion}}
 
 ## Relationship with the AutoFit Method
@@ -81,15 +81,15 @@ __Example 3__ demonstrates this by hiding a row, autofitting it and then checkin
 #### __[C#] Example 3: Auto fit on hidden rows__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-hiding_2}}
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    RowSelection rowSelection = worksheet.Rows[3];
-    rowSelection.SetHidden(true);
-
-    rowSelection.AutoFitHeight();
-
-    bool hiddenState = rowSelection.GetHidden().Value;
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	
+	RowSelection rowSelection = worksheet.Rows[3];
+	rowSelection.SetHidden(true);
+	
+	rowSelection.AutoFitHeight();
+	
+	bool hiddenState = rowSelection.GetHidden().Value;
 {{endregion}}
 
 

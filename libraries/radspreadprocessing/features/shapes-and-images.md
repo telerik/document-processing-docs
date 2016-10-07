@@ -101,8 +101,8 @@ In order to create an instance of __FloatingImage__ you need the worksheet in wh
 #### __[C#] Example 1: Create FloatingImage__
 
 {{region cs-radspreadprocessing-features-shapes-and-images_0}}
-    Worksheet worksheet = workbook.ActiveWorksheet;
-    FloatingImage image = new FloatingImage(worksheet, new CellIndex(7, 1), 35, 10);
+	Worksheet worksheet = workbook.ActiveWorksheet;
+	FloatingImage image = new FloatingImage(worksheet, new CellIndex(7, 1), 35, 10);
 {{endregion}}
 
 
@@ -113,16 +113,16 @@ The next step is to configure the other properties of the image as needed.
 #### __[C#] Example 2: Configure image properties__
 
 {{region cs-radspreadprocessing-features-shapes-and-images_01}}
-    FileStream stream = File.Open(filePath, FileMode.Open);
-
-    using (stream)
-    {
-        image.ImageSource = new Telerik.Windows.Documents.Media.ImageSource(stream, "png");
-    }
-
-    image.Width = 330;
-    image.Height = 45;
-    image.RotationAngle = 20;
+	Stream stream = File.Open(filePath, FileMode.Open);
+	
+	using (stream)
+	{
+	    image.ImageSource = new Telerik.Windows.Documents.Media.ImageSource(stream, "png");
+	}
+	
+	image.Width = 330;
+	image.Height = 45;
+	image.RotationAngle = 20;
 {{endregion}}
 
 
@@ -133,7 +133,7 @@ Insert the image into the collection of shapes of the worksheet.  Note that the 
 #### __[C#] Example 3: Add image to worksheet__
 
 {{region cs-radspreadprocessing-features-shapes-and-images_02}}
-	 worksheet.Shapes.Add(image);
+	worksheet.Shapes.Add(image);
 {{endregion}}
 
 
@@ -149,7 +149,7 @@ __Example 4__ demonstrates how you can remove the image added in __Example 3__.
 #### __[C#] Example 4: Delete shape__
 
 {{region cs-radspreadprocessing-features-shapes-and-images_03}}
-    worksheet.Shapes.Remove(image);
+	worksheet.Shapes.Remove(image);
 {{endregion}}
 
 
@@ -165,9 +165,9 @@ After the initial values of the properties of the shapes have been assigned, the
 	#### __[C#] Example 5: Move image__
 	
 	{{region cs-radspreadprocessing-features-shapes-and-images_04}}
-	    image.CellIndex = new CellIndex(4, 5);
-	    image.OffsetX = 10;
-	    image.OffsetY = 10;
+		image.CellIndex = new CellIndex(4, 5);
+		image.OffsetX = 10;
+		image.OffsetY = 10;
 	{{endregion}}
 
 * Changing the shape's width and height
@@ -176,8 +176,8 @@ After the initial values of the properties of the shapes have been assigned, the
 	#### __[C#] Example 6: Change width and height__
 	
 	{{region cs-radspreadprocessing-features-shapes-and-images_05}}
-	    image.Width -= 50;
-	    image.Height += 50;
+		image.Width -= 50;
+		image.Height += 50;
 	{{endregion}}
 	
 	The Width and Height properties do not take the LockAspectRatio property into account. If you would like more control on whether the aspect ratio of the shape should be observed, you can also use the following methods.
@@ -192,9 +192,9 @@ After the initial values of the properties of the shapes have been assigned, the
 	#### __[C#] Example 7: Set width and whether lock aspect ratio is respected__
 	
 	{{region cs-radspreadprocessing-features-shapes-and-images_08}}
-	    image.SetWidth(false, 330);
-	    image.SetHeight(true, 45);
-	{{endregion}}
+	image.SetWidth(false, 330);
+	image.SetHeight(true, 45);
+{{endregion}}
 	
 	These two methods will be further explained in the next section.
 
@@ -204,8 +204,8 @@ After the initial values of the properties of the shapes have been assigned, the
 	#### __[C#] Example 8: Rotate__
 	
 	{{region cs-radspreadprocessing-features-shapes-and-images_06}}
-	    image.RotationAngle = 40;
-	{{endregion}}
+	image.RotationAngle = 40;
+{{endregion}}
 	
 	The rotation angle of the shape can affect the __CellIndexM__ property and the offset. The relationship between these properties is described in more detail in the next section of this article.
         
@@ -215,8 +215,8 @@ After the initial values of the properties of the shapes have been assigned, the
 	#### __[C#] Example 9: Flip__
 	
 	{{region cs-radspreadprocessing-features-shapes-and-images_07}}
-	    image.IsHorizontallyFlipped = true;
-	{{endregion}}
+	image.IsHorizontallyFlipped = true;
+{{endregion}}
 
 
 

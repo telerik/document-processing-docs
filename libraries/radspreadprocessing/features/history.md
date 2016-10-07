@@ -33,8 +33,8 @@ __Example 1__ enables the history of a workbook.
 #### __[C#] Example 1: Enable history__
 
 {{region cs-radspreadprocessing-features-history_2}}
-    Workbook workbook = new Workbook();
-    workbook.History.IsEnabled = true;
+	Workbook workbook = new Workbook();
+	workbook.History.IsEnabled = true;
 {{endregion}}
 
 
@@ -50,15 +50,15 @@ __Example 2__ creates a new workbook with a single worksheet and sets the value 
 #### __[C#] Example 2: Perform undo and redo__
 
 {{region cs-radspreadprocessing-features-history_0}}
-    Workbook workbook = new Workbook();
-    workbook.History.IsEnabled = true;
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    worksheet.Cells[0, 0].SetValue("First cell value");
-    worksheet.Cells[0, 0].SetValue("Second cell value");
-
-    workbook.History.Undo();
-    workbook.History.Redo();
+	Workbook workbook = new Workbook();
+	workbook.History.IsEnabled = true;
+	Worksheet worksheet = workbook.Worksheets.Add();
+	
+	worksheet.Cells[0, 0].SetValue("First cell value");
+	worksheet.Cells[0, 0].SetValue("Second cell value");
+	
+	workbook.History.Undo();
+	workbook.History.Redo();
 {{endregion}}
 
 
@@ -74,19 +74,19 @@ __Example 3__ demonstrates how to create an undo group.
 #### __[C#] Example 3: Create undo group__
 
 {{region cs-radspreadprocessing-features-history_1}}
-    Workbook workbook = new Workbook();
-    workbook.History.IsEnabled = true;
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    workbook.History.BeginUndoGroup();
-
-    worksheet.Cells[0, 0].SetValue(15);
-    worksheet.Cells[0, 0].SetFormat(new CellValueFormat("0.00"));
-
-    workbook.History.EndUndoGroup();
-
-    workbook.History.Undo();
-    workbook.History.Redo();
+	Workbook workbook = new Workbook();
+	workbook.History.IsEnabled = true;
+	Worksheet worksheet = workbook.Worksheets.Add();
+	
+	workbook.History.BeginUndoGroup();
+	
+	worksheet.Cells[0, 0].SetValue(15);
+	worksheet.Cells[0, 0].SetFormat(new CellValueFormat("0.00"));
+	
+	workbook.History.EndUndoGroup();
+	
+	workbook.History.Undo();
+	workbook.History.Redo();
 {{endregion}}
 
 
@@ -102,7 +102,7 @@ __Example 4__ clears the history of a workbook.
 #### __[C#] Example 4: Clear history__
 
 {{region cs-radspreadprocessing-features-history_3}}
-    workbook.History.Clear();
+	workbook.History.Clear();
 {{endregion}}
 
 

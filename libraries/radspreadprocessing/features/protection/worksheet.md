@@ -29,13 +29,12 @@ __Example 1__ sets the __IsLocked__ property of cell A1 to false and protects th
 #### __[C#] Example 1: Protect a Worksheet__
 
 {{region cs-radspreadprocessing-features-protection-worksheet_0}}
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    worksheet.Cells[0, 0].SetIsLocked(false);
-
-    worksheet.Protect("telerik", WorksheetProtectionOptions.Default);
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
+	worksheet.Cells[0, 0].SetIsLocked(false);
+	
+	worksheet.Protect("telerik", WorksheetProtectionOptions.Default);
 {{endregion}}
 
 
@@ -49,12 +48,11 @@ __Example 2__ demonstrates how to unprotect a worksheet.
 #### __[C#] Example 2: Unprotect a Worksheet__
 
 {{region cs-radspreadprocessing-features-protection-worksheet_1}}
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-    worksheet.Protect("telerik", WorksheetProtectionOptions.Default);
-
-    worksheet.Unprotect("telerik");
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	worksheet.Protect("telerik", WorksheetProtectionOptions.Default);
 	
+	worksheet.Unprotect("telerik");
 {{endregion}}
 
 
@@ -73,11 +71,10 @@ __Example 3__ demonstrates how to protect a worksheet using WorksheetProtectionO
 #### __[C#] Example 3: Protect Worksheet with WorksheetProtectionOptions__
 
 {{region cs-radspreadprocessing-features-protection-worksheet_2}}
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-    WorksheetProtectionOptions options = new WorksheetProtectionOptions(allowInsertRows: true, allowDeleteRows: true);
-    worksheet.Protect("telerik", options);
-	
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	WorksheetProtectionOptions options = new WorksheetProtectionOptions(allowInsertRows: true, allowDeleteRows: true);
+	worksheet.Protect("telerik", options);
 {{endregion}}
 
 
@@ -93,7 +90,7 @@ The __WorksheetProtectionOptions__ class exposes the following options:
 
 * Delete rows
 
-# See Also
+## See Also
 
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
  * [Workbook Protection]({%slug radspreadprocessing-features-protection-workbook%})

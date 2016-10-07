@@ -50,16 +50,14 @@ __Example 1__ creates a new worksheet that has the value *1* in cell *A1* and *3
 #### __[C#] Example 1: Fill linear series__
 
 {{region cs-radspreadprocessing-features-fill-data-automatically-series_0}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    worksheet.Cells[0, 0].SetValue(1);
-    worksheet.Cells[0, 1].SetValue(3);
-
-    CellRange range = new CellRange(0, 0, 0, 5);
-    worksheet.Cells[range].FillDataSeriesLinear(CellOrientation.Horizontal, 2);
+	worksheet.Cells[0, 0].SetValue(1);
+	worksheet.Cells[0, 1].SetValue(3);
 	
+	CellRange range = new CellRange(0, 0, 0, 5);
+	worksheet.Cells[range].FillDataSeriesLinear(CellOrientation.Horizontal, 2);
 {{endregion}}
 
 
@@ -81,19 +79,17 @@ __Example 2__ shows how to use __FillDataSeriesLinearTrend()__ to continue serie
 #### __[C#] Example 2: Fill linear trend series__
 
 {{region cs-radspreadprocessing-features-fill-data-automatically-series_1}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    worksheet.Cells[0, 0].SetValue(1);
-    worksheet.Cells[0, 1].SetValue(8);
-    worksheet.Cells[0, 2].SetValue(3);
-    worksheet.Cells[0, 3].SetValue(10);
-    worksheet.Cells[0, 4].SetValue(5);
-
-    CellRange range = new CellRange(0, 0, 0, 9);
-    worksheet.Cells[range].FillDataSeriesLinearTrend(CellOrientation.Horizontal);
+	worksheet.Cells[0, 0].SetValue(1);
+	worksheet.Cells[0, 1].SetValue(8);
+	worksheet.Cells[0, 2].SetValue(3);
+	worksheet.Cells[0, 3].SetValue(10);
+	worksheet.Cells[0, 4].SetValue(5);
 	
+	CellRange range = new CellRange(0, 0, 0, 9);
+	worksheet.Cells[range].FillDataSeriesLinearTrend(CellOrientation.Horizontal);
 {{endregion}}
 
 
@@ -121,16 +117,14 @@ __Example 3__ shows how to use the __FillDataSeriesExponential()__ method to con
 #### __[C#] Example 3: Fill exponential series__
 
 {{region cs-radspreadprocessing-features-fill-data-automatically-series_2}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    worksheet.Cells[0, 0].SetValue(1);
-    worksheet.Cells[0, 1].SetValue(3);
-
-    CellRange range = new CellRange(0, 0, 0, 5);
-    worksheet.Cells[range].FillDataSeriesExponential(CellOrientation.Horizontal, 4);
+	worksheet.Cells[0, 0].SetValue(1);
+	worksheet.Cells[0, 1].SetValue(3);
 	
+	CellRange range = new CellRange(0, 0, 0, 5);
+	worksheet.Cells[range].FillDataSeriesExponential(CellOrientation.Horizontal, 4);
 {{endregion}}
 
 
@@ -152,18 +146,16 @@ __Example 4__ shows how to use the __FillDataSeriesLinearTrend()__ method to con
 #### __[C#] Example 4: Exponential trend series__
 
 {{region cs-radspreadprocessing-features-fill-data-automatically-series_3}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    worksheet.Cells[0, 0].SetValue(1);
-    worksheet.Cells[0, 1].SetValue(5);
-    worksheet.Cells[0, 2].SetValue(2);
-    worksheet.Cells[0, 3].SetValue(9);
-
-    CellRange range = new CellRange(0, 0, 0, 5);
-    worksheet.Cells[range].FillDataSeriesExponentialTrend(CellOrientation.Horizontal);
+	worksheet.Cells[0, 0].SetValue(1);
+	worksheet.Cells[0, 1].SetValue(5);
+	worksheet.Cells[0, 2].SetValue(2);
+	worksheet.Cells[0, 3].SetValue(9);
 	
+	CellRange range = new CellRange(0, 0, 0, 5);
+	worksheet.Cells[range].FillDataSeriesExponentialTrend(CellOrientation.Horizontal);
 {{endregion}}
 
 
@@ -191,15 +183,13 @@ __Example 5__ shows how to construct series that use *5/28/2013* as a starting p
 #### __[C#] Example 5: Fill date series__
 
 {{region cs-radspreadprocessing-features-fill-data-automatically-series_4}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    worksheet.Cells[0, 0].SetValue(new DateTime(2013, 5, 28));
-
-    CellRange range = new CellRange(0, 0, 0, 9);
-    worksheet.Cells[range].FillDataSeriesDate(CellOrientation.Horizontal, DateUnitType.Weekday, 2);
+	worksheet.Cells[0, 0].SetValue(new DateTime(2013, 5, 28));
 	
+	CellRange range = new CellRange(0, 0, 0, 9);
+	worksheet.Cells[range].FillDataSeriesDate(CellOrientation.Horizontal, DateUnitType.Weekday, 2);
 {{endregion}}
 
 
@@ -285,15 +275,13 @@ __Example 6__ shows how to use the __FillDataSeriesAuto()__ method for initial v
 #### __[C#] Example 6: Auto fill__
 
 {{region cs-radspreadprocessing-features-fill-data-automatically-series_5}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    worksheet.Cells[0, 0].SetValue("1st");
-
-    CellRange range = new CellRange(0, 0, 0, 5);
-    worksheet.Cells[range].FillDataSeriesAuto(CellOrientation.Horizontal, true);
+	worksheet.Cells[0, 0].SetValue("1st");
 	
+	CellRange range = new CellRange(0, 0, 0, 5);
+	worksheet.Cells[range].FillDataSeriesAuto(CellOrientation.Horizontal, true);
 {{endregion}}
 
 
@@ -310,15 +298,13 @@ __Example 7__ demonstrates the behavior of the __FillDataSeriesAuto()__ method. 
 #### __[C#] Example 7: Auto fill reversed direction__
 
 {{region cs-radspreadprocessing-features-fill-data-automatically-series_6}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
 	
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-
-    worksheet.Cells[0, 5].SetValue("6th");
-
-    CellRange range = new CellRange(0, 5, 0, 0);
-    worksheet.Cells[range].FillDataSeriesAuto(CellOrientation.Horizontal, true);
+	worksheet.Cells[0, 5].SetValue("6th");
 	
+	CellRange range = new CellRange(0, 5, 0, 0);
+	worksheet.Cells[range].FillDataSeriesAuto(CellOrientation.Horizontal, true);
 {{endregion}}
 
 
@@ -329,7 +315,7 @@ __Figure 9__ demonstrates the result of __Example 7__.
 #### Figure 8: Auto fill reversed direction
 ![Rad Spread Processing Features Fill Data Automatically Series 09](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_09.png)
 
-# See Also
+## See Also
 
  * [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
  * [Repeat Values]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%})

@@ -29,11 +29,10 @@ __Example 1__ illustrates how to create a workbook from scratch and protect it u
 #### __[C#] Example 1: Password-protect a Workbook__
 
 {{region cs-radspreadprocessing-features-protection-workbook_0}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-
-    workbook.Protect("telerik");
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
 	
+	workbook.Protect("telerik");
 {{endregion}}
 
 
@@ -49,18 +48,17 @@ __Example 2__ demonstrates how to unprotect a workbook.
 #### __[C#] Example 2: Unprotect a Workbook__
 
 {{region cs-radspreadprocessing-features-protection-workbook_1}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-
-    workbook.Protect("telerik");
-
-    workbook.Unprotect("telerik");
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
 	
+	workbook.Protect("telerik");
+	
+	workbook.Unprotect("telerik");
 {{endregion}}
 
 
 
-# See Also
+## See Also
 
  * [Whats is a Workbook?]({%slug radspreadprocessing-working-wtih-workbooks-what-is-workbook%})
  * [Worksheet Protection]({%slug radspreadprocessing-features-protection-worksheet%})
