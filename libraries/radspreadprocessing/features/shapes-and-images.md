@@ -192,9 +192,9 @@ After the initial values of the properties of the shapes have been assigned, the
 	#### __[C#] Example 7: Set width and whether lock aspect ratio is respected__
 	
 	{{region cs-radspreadprocessing-features-shapes-and-images_08}}
-	image.SetWidth(false, 330);
-	image.SetHeight(true, 45);
-{{endregion}}
+		image.SetWidth(false, 330);
+		image.SetHeight(true, 45);
+	{{endregion}}
 	
 	These two methods will be further explained in the next section.
 
@@ -204,8 +204,8 @@ After the initial values of the properties of the shapes have been assigned, the
 	#### __[C#] Example 8: Rotate__
 	
 	{{region cs-radspreadprocessing-features-shapes-and-images_06}}
-	image.RotationAngle = 40;
-{{endregion}}
+		image.RotationAngle = 40;
+	{{endregion}}
 	
 	The rotation angle of the shape can affect the __CellIndexM__ property and the offset. The relationship between these properties is described in more detail in the next section of this article.
         
@@ -215,8 +215,8 @@ After the initial values of the properties of the shapes have been assigned, the
 	#### __[C#] Example 9: Flip__
 	
 	{{region cs-radspreadprocessing-features-shapes-and-images_07}}
-	image.IsHorizontallyFlipped = true;
-{{endregion}}
+		image.IsHorizontallyFlipped = true;
+	{{endregion}}
 
 
 

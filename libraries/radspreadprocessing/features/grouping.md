@@ -103,14 +103,14 @@ The following code snippets exemplify the two approaches to make these changes i
 ![](images/RadSpreadProcessing_Features_Grouping_03.png)
 
 
-#### __[C#] Example 3: Ungrouping columns using ouline level__
+#### __[C#] Example 3: Ungrouping columns using the ungroup method__
 
 {{region cs-radspreadprocessing-features-grouping_2}}
 	worksheet.Rows[0, 1].Ungroup();
 	worksheet.Rows[4, 6].Ungroup();
 {{endregion}}
 
-#### __[VB.NET] Example 3: Ungrouping columns using ouline level__
+#### __[VB.NET] Example 3: Ungrouping columns using the ungroup method__
 
 {{region vb-radspreadprocessing-features-grouping_8}}
 	worksheet.Rows(0, 1).Ungroup()
@@ -119,14 +119,14 @@ The following code snippets exemplify the two approaches to make these changes i
 
 You can achieve the same result with the code in __Example 4__.
 
-#### __[C#] Example 4: Ungrouping columns using the ungroup method__
+#### __[C#] Example 4: Ungrouping columns using outline level__
 
 {{region cs-radspreadprocessing-features-grouping_3}}
 	worksheet.Rows[0, 1].ClearOutlineLevel();
 	worksheet.Rows[4, 6].SetOutlineLevel(1);
 {{endregion}}
 
-#### __[VB.NET] Example 4: Ungrouping columns using the ungroup method__
+#### __[VB.NET] Example 4: Ungrouping columns using outline level__
 
 {{region vb-radspreadprocessing-features-grouping_9}}
 	worksheet.Rows(0, 1).ClearOutlineLevel()

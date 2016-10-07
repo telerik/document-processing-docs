@@ -193,10 +193,8 @@ __Example 2__ shows how to create a custom filter.
 #### __[C#] Example 2: Create CustomFilter__
 
 {{region cs-radspreadprocessing-features-filtering_1}}
-	CustomFilterCriteria critera1 =
-	new CustomFilterCriteria(ComparisonOperator.EqualsTo, "Test string");
-	CustomFilterCriteria critera2 =
-	new CustomFilterCriteria(ComparisonOperator.GreaterThan, "-5");
+	CustomFilterCriteria critera1 = new CustomFilterCriteria(ComparisonOperator.EqualsTo, "Test string");
+	CustomFilterCriteria critera2 = new CustomFilterCriteria(ComparisonOperator.GreaterThan, "-5");
 	CustomFilter filter = new CustomFilter(0, critera1, LogicalOperator.Or, critera2);
 {{endregion}}
 

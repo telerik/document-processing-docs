@@ -168,7 +168,7 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 	If saveFileDialog.ShowDialog() = True Then
 	    Dim extension As String = Path.GetExtension(saveFileDialog.SafeFileName)
 	    Using output As Stream = saveFileDialog.OpenFile()
-	        WorkbookFormatProvidersManager.Export(editor.Owner.Workbook, extension, output)
+	        WorkbookFormatProvidersManager.Export(workbook, extension, output)
 	    End Using
 	End If
 {{endregion}}
