@@ -346,7 +346,7 @@ __Example 15__ enters the string "=1+2" into a cell, however, because of the app
 The same result could be achieved using the __Create()__ method of the __CellValueFactory__ class. __Example 16__ enters the string "=1+2" into a cell and applies cell value format.
         
 
-#### __[C#] Example 16: Creates TextCellValue__
+#### __[C#] Example 16: Create TextCellValue__
 
 {{region cs-radspreadprocessing-working-with-cells-cell-value-types_15}}
 	Workbook workbook = new Workbook();
@@ -365,7 +365,7 @@ If you are sure that the value is a string and need to create a text cell value,
 
 __Example 17__ shows how to utilize the __SetValueAsText()__ method.
 
-#### __[C#] Example 17: Creates TextCellValue through SetValueAsText__
+#### __[C#] Example 17: Create TextCellValue through SetValueAsText__
 {{region cs-radspreadprocessing-working-with-cells-cell-value-types_16}}
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
