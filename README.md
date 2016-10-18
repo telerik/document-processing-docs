@@ -63,7 +63,7 @@ There are two ways you can contribute to the public Telerik Document Processing 
 
 You can generate a static web site from the Telerik Document Processing the documentation and browse it locally.
 
-For the WPF documentaion:
+For the Telerik Document Processing documentaion:
 
  1. Clone the repository `git clone git@github.com:telerik/document-processing-docs.git`
  2. Run `bundle install` (you must have ruby and bundler installed beforehand)
