@@ -37,7 +37,8 @@ __Example 1__ demonstrates how to create DeflateSettings.
 
 #### __[C#] Example 1: Create DeflateSettings__
 
-{{region radziplibrary-compression-settings_0}}
+{{region cs-radziplibrary-compression-settings_0}}
+	            
 	DeflateSettings compressionSettings = new DeflateSettings();
 	compressionSettings.CompressionLevel = CompressionLevel.Best;
 	compressionSettings.HeaderType = CompressedStreamHeader.ZLib;
@@ -47,7 +48,7 @@ __Example 1__ demonstrates how to create DeflateSettings.
 
 #### __[VB.NET] Example 1: Create DeflateSettings__
 
-{{region radziplibrary-compression-settings_0}}
+{{region vb-radziplibrary-compression-settings_0}}
 	Dim compressionSettings As New DeflateSettings()
 	compressionSettings.CompressionLevel = CompressionLevel.Best
 	compressionSettings.HeaderType = CompressedStreamHeader.ZLib
@@ -85,7 +86,8 @@ The configurable parameters of the __LzmaSettings__ class are as follows:
 
 #### __[C#] Example 2: Create LzmaSettings__
 
-{{region radziplibrary-compression-settings_1}}
+{{region cs-radziplibrary-compression-settings_1}}
+	            
 	LzmaSettings compressionSettings = new LzmaSettings();
 	compressionSettings.DictionarySize = 23;
 	compressionSettings.FastBytes = 32;
@@ -99,7 +101,7 @@ The configurable parameters of the __LzmaSettings__ class are as follows:
 
 #### __[VB.NET] Example 2: Create LzmaSettings__
 
-{{region radziplibrary-compression-settings_1}}
+{{region vb-radziplibrary-compression-settings_1}}
 	Dim compressionSettings As New LzmaSettings()
 	compressionSettings.DictionarySize = 23
 	compressionSettings.FastBytes = 32
@@ -118,7 +120,7 @@ Store settings are used to just store the data using no compression.
 
 #### __[C#] Example 3: Create StoreSettings__
 
-{{region radziplibrary-compression-settings_2}}
+{{region cs-radziplibrary-compression-settings_2}}
 	StoreSettings compressionSettings = new StoreSettings();
 {{endregion}}
 
@@ -126,11 +128,11 @@ Store settings are used to just store the data using no compression.
 
 #### __[VB.NET] Example 3: Create StoreSettings__
 
-{{region radziplibrary-compression-settings_2}}
+{{region vb-radziplibrary-compression-settings_2}}
 	Dim compressionSettings As New StoreSettings()
 {{endregion}}
 
 
-# See Also
+## See Also
 
  * [Compressing a Stream]({%slug radziplibrary-compress-stream%})

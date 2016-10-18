@@ -33,7 +33,8 @@ __DefaultEncryptionSettings__ has a __Password__ property of type string, which 
 
 #### __[C#] Example 1: Create a password-protected ZIP archive__
 
-{{region radziplibrary-protect-ziparchive_0}}
+{{region cs-radziplibrary-protect-ziparchive_0}}
+	            
 	using (Stream stream = File.Open("test.zip", FileMode.Create))
 	{
 	    DefaultEncryptionSettings encryptionSettings = new DefaultEncryptionSettings();
@@ -44,7 +45,7 @@ __DefaultEncryptionSettings__ has a __Password__ property of type string, which 
 	        {
 	            StreamWriter writer = new StreamWriter(entry.Open());
 	            writer.WriteLine("Hello world!");
-				writer.Flush();
+	            writer.Flush();
 	        }
 	    }
 	}
@@ -54,17 +55,17 @@ __DefaultEncryptionSettings__ has a __Password__ property of type string, which 
 
 #### __[VB.NET] Example 1: Create a password-protected ZIP archive__
 
-{{region radziplibrary-protect-ziparchive_0}}
+{{region vb-radziplibrary-protect-ziparchive_0}}
 	Using stream As Stream = File.Open("test.zip", FileMode.Create)
-		Dim encryptionSettings As New DefaultEncryptionSettings()
-		encryptionSettings.Password = "password"
-		Using archive As New ZipArchive(stream, ZipArchiveMode.Create, False, Nothing, Nothing, encryptionSettings)
-			Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
-				Dim writer As New StreamWriter(entry.Open())
-				writer.WriteLine("Hello world!")
-				writer.Flush()
-			End Using
-		End Using
+	    Dim encryptionSettings As New DefaultEncryptionSettings()
+	    encryptionSettings.Password = "password"
+	    Using archive As New ZipArchive(stream, ZipArchiveMode.Create, False, Nothing, Nothing, encryptionSettings)
+	        Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
+	            Dim writer As New StreamWriter(entry.Open())
+	            writer.WriteLine("Hello world!")
+	            writer.Flush()
+	        End Using
+	    End Using
 	End Using
 {{endregion}}
 
@@ -80,31 +81,30 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
 
 #### __[C#] Example 2: Open and read a password-protected ZIP archive__
 
-{{region radziplibrary-protect-ziparchive_1}}
-
+{{region cs-radziplibrary-protect-ziparchive_1}}
+	    
 	using (Stream stream = File.Open("test.zip", FileMode.Open))
 	{
 	    DefaultEncryptionSettings encryptionSettings = new DefaultEncryptionSettings();
 	    encryptionSettings.Password = "password";
 	    using (ZipArchive archive = new ZipArchive(stream, ZipArchiveMode.Read, false, null, null, encryptionSettings))
-	    {	                    
-	        // Display the list of the files in the selected zip file using the ZipArchive.Entries property.	                    
+	    {
+	        // Display the list of the files in the selected zip file using the ZipArchive.Entries property. 
 	    }
-	}	
+	}
 {{endregion}}
 
 
 
 #### __[VB.NET] Example 2: Open and read a password-protected ZIP archive__
 
-{{region radziplibrary-protect-ziparchive_1}}
-
+{{region vb-radziplibrary-protect-ziparchive_1}}
 	Using stream As Stream = File.Open("test.zip", FileMode.Open)
-		Dim encryptionSettings As New DefaultEncryptionSettings()
-		encryptionSettings.Password = "password"
-		Using archive As New ZipArchive(stream, ZipArchiveMode.Read, False, Nothing, Nothing, encryptionSettings)
-				' Display the list of the files in the selected zip file using the ZipArchive.Entries property. 
-		End Using
+	    Dim encryptionSettings As New DefaultEncryptionSettings()
+	    encryptionSettings.Password = "password"
+	    Using archive As New ZipArchive(stream, ZipArchiveMode.Read, False, Nothing, Nothing, encryptionSettings)
+	        ' Display the list of the files in the selected zip file using the ZipArchive.Entries property. 
+	    End Using
 	End Using
 {{endregion}}
 
@@ -113,7 +113,7 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
 >tipYou must always dispose of the ZIP archive object when all operations that use it are competed. Telerik Support recommends that you declare and instantiate the ZIP archive object in a using statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
           
 
-# See Also
+## See Also
 
  * [Getting Started]({%slug radziplibrary-gettingstarted%})
  * [Update ZipArchive]({%slug radziplibrary-update-ziparchive%})
