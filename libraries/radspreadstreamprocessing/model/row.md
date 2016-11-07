@@ -35,7 +35,6 @@ A concrete instance of IRowExporter could be created through the CreateRowExport
 
 
 {{region cs-radspreadstreamprocessing-model-rows_0}}
-
 	using (IRowExporter row = worksheet.CreateRowExporter())
 	{
 	}
@@ -57,10 +56,9 @@ In order to customize the way a row appears, you could use one of the following 
 #### **[C#] Example 2: Set properties to IRowExporter**
 
 {{region cs-radspreadstreamprocessing-model-rows_1}}
-
 	using (IRowExporter row = worksheet.CreateRowExporter())
 	{
-		row.SetHeightInPixels(200);
+	    row.SetHeightInPixels(200);
 	}
 {{endregion}}
 
@@ -73,7 +71,6 @@ In some cases you may need to skip several rows and start filling the data in th
 #### **[C#] Example 3: Skip rows**
 
 {{region cs-radspreadstreamprocessing-model-rows_2}}
-
 	worksheet.SkipRows(5);
 	using (IRowExporter row = worksheet.CreateRowExporter())
 	{
