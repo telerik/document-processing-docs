@@ -35,7 +35,7 @@ A concrete instance of ICellExporter could be created through the **CreateCellEx
 #### **[C#] Example 1: Using ICellExporter**
 
 
-{{region radspreadstreamprocessing-model-cells_0}}
+{{region cs-radspreadstreamprocessing-model-cells_0}}
 	using (ICellExporter cell = row.CreateCellExporter()) 
 	{ 
 	}
@@ -58,7 +58,7 @@ The **SetValue()** method exposes several overloads allowing you to set values f
 
 #### **[C#] Example 2: Setting a value to a cell**
 
-{{region radspreadstreamprocessing-model-cells_1}}
+{{region cs-radspreadstreamprocessing-model-cells_1}}
 	using (ICellExporter cell = row.CreateCellExporter()) 
 	{ 
 	    cell.SetValue(123.456); 
@@ -72,7 +72,7 @@ In order to allow you setting a formula as a value of a cell, ICellExporter defi
 
 #### **[C#] Example 4: Setting a formula to a cell**
 
-{{region radspreadstreamprocessing-model-cells_3}}
+{{region cs-radspreadstreamprocessing-model-cells_3}}
 	using (ICellExporter cell = row.CreateCellExporter()) 
 	{ 
 	    cell.SetFormula("=Sum(A1, B2)");  
@@ -91,7 +91,7 @@ In some cases you may need to skip several cells and start filling the data in t
 
 #### **[C#] Example 3: Skip cells**
 
-{{region radspreadstreamprocessing-model-cells_2}}
+{{region cs-radspreadstreamprocessing-model-cells_2}}
 
 	row.SkipCells(5);
 	using (ICellExporter cell = row.CreateCellExporter())
@@ -110,7 +110,7 @@ In some cases you may need to skip several cells and start filling the data in t
 
 #### **[C#] Example 5: Merge cells**
 
-{{region radspreadstreamprocessing-model-cells_4}}
+{{region cs-radspreadstreamprocessing-model-cells_4}}
 	using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("Sheet 1")) 
 	{ 
 	   worksheet.MergeCells(3, 3, 10, 10);  
@@ -172,7 +172,7 @@ Another method, exposed by **ICellExporter** - SetFormat() - enables you to chan
 	
 
 #### **[C#] Example 6: Format cells**
-{{region radspreadstreamprocessing-model-cells_5}}
+{{region cs-radspreadstreamprocessing-model-cells_5}}
 
 	SpreadBorder border = new SpreadBorder(SpreadBorderStyle.Thick, new SpreadThemableColor(new SpreadColor(255, 0, 0)));
 	

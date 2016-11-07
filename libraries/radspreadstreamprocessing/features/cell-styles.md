@@ -84,7 +84,7 @@ When you apply a style to a cell with locally set properties, the end result is 
 
 #### **[C#] Example 1: Get a built-in style and apply a number group**
 
-{{region radspreadstreamprocessing-features-styling-cell-styles_0}}
+{{region cs-radspreadstreamprocessing-features-styling-cell-styles_0}}
 	
 	SpreadCellStyle style = workbook.CellStyles.GetByName("Good");
 	style.ApplyNumberFormat = true;
@@ -101,7 +101,7 @@ Creating a new style is pretty straight-forward. All you have to do is invoke th
 
 #### **[C#] Example 2: Create SpreadCellStyle and apply it to a cell**
 
-{{region radspreadstreamprocessing-features-styling-cell-styles_1}}
+{{region cs-radspreadstreamprocessing-features-styling-cell-styles_1}}
 
 	SpreadBorder border = new SpreadBorder(SpreadBorderStyle.Thick, new SpreadThemableColor(new SpreadColor(255, 0, 0)));
 	SpreadCellStyle style = workbook.CellStyles.Add("MyStyle");
@@ -138,7 +138,7 @@ Modifying a style is even easier than creating one. All you need to do is retrie
 
 #### **[C#] Example 3: Modify a built-in style**
 
-{{region radspreadstreamprocessing-features-styling-cell-styles_2}}
+{{region cs-radspreadstreamprocessing-features-styling-cell-styles_2}}
 
 	SpreadCellStyle style = workbook.CellStyles.GetByName("Bad"); 
 	style.IsBold = true;
