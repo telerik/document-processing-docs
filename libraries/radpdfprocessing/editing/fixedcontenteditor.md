@@ -288,7 +288,7 @@ __FixedContentEditor__ has some properties and methods that affect how it will b
 * __RestoreProperties()__: Restores both text and graphic properties.
             
 
-# See Also
+## See Also
 
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [Block]({%slug radpdfprocessing-editing-block%})

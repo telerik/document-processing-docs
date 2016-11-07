@@ -106,7 +106,7 @@ You can modify a __Path__ element using the properties the class exposes. The pr
 * __Geometry__: The shape to be drawn. More information about geometries is available [here]({%slug radpdfprocessing-concepts-geometry%}).
             
 
-# See Also
+## See Also
 
  * [Geometry]({%slug radpdfprocessing-concepts-geometry%})
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})

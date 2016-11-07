@@ -215,7 +215,9 @@ The code in __Example 6__ splits a block in two. The first will contains text "H
 	Size size = block.Measure(helloSize);
 	Block secondBlock = block.Split();
 {{endregion}}
-# See Also
+
+
+## See Also
 
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [TextFragment]({%slug radpdfprocessing-model-textfragment%})

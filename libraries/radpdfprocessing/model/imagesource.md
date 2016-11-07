@@ -91,7 +91,7 @@ __RadPdfProcessing__ exposes an extension method allowing you to convert every B
 
 >The code from __Example 3__ won't compile in Silverlight due to differences in the BitmapImage API for this platform. You could pass the image as a stream to the SetSource() method of BitmapImage instead.
 
-# See Also
+## See Also
 
  * [Image]({%slug radpdfprocessing-model-image%})
  * [ImageSource API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Resources_ImageSource.htm)

@@ -113,7 +113,7 @@ __RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocum
 
 >Currently the DocumentInfo property is for export purposes only and meta information about documents is stripped when importing.
 
-# See Also
+## See Also
 
 * [RadFixedDocument API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_RadFixedDocument.htm)
 * [Model]({%slug radpdfprocessing-model-general-information%})

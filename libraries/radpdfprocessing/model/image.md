@@ -62,7 +62,7 @@ You can modify an __Image__ element using the properties the class exposes. The 
 * __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the __IContainerElement__.
             
 
-# See Also
+## See Also
 
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})

@@ -280,7 +280,7 @@ As a result, on __Figure 7__ you can see a 45-degree rotated table similar to th
 #### Figure 7: FixedWidth table
 ![Rad Pdf Processing Editing Table 08](images/RadPdfProcessing_Editing_Table_08.png)
 
-# See Also
+## See Also
 
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})

@@ -25,7 +25,7 @@ This article explains the structure of __RadPdfProcessing__'s document model.
 __RadFixedDocument__ represents a tree of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) where the fixed content is hosted. The diagram below describes the composition of the fixed content. The document elements are denoted in black and collections - in orange.
         ![Rad Pdf Processing Model 02](images/RadPdfProcessing_Model_02.png)
 
-# See Also
+## See Also
 
  * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})

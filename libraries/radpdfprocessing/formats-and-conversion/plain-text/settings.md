@@ -54,6 +54,6 @@ The __Export()__ method of **TextFormatProvider** allows you to pass a **TextFor
 {{endregion}}
 
 
-# See Also
+## See Also
 
 * [Using TextFormatProvider]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%})

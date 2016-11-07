@@ -37,7 +37,7 @@ __Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocume
 {{endregion}}
 
 
-# See Also
+## See Also
 
 * [Plain text]({%slug radpdfprocessing-formats-and-conversion-plain-text-text%})
 * [TextFormatProvider Settings]({%slug radpdfprocessing-formats-and-conversion-plain-text-settings%})

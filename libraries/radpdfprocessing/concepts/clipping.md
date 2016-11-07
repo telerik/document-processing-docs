@@ -52,6 +52,6 @@ __Example 2__ demonstrates how to clip an image using the Clipping created in __
 
 
 
-# See Also
+## See Also
 
  * [Geometry]({%slug radpdfprocessing-concepts-geometry%})

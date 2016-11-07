@@ -98,7 +98,7 @@ The result from __Example 3__ is illustrated on __Figure 1__.
 #### Figure 1: TableCell 
 ![Rad Pdf Processing Editing Table Cell 01](images/RadPdfProcessing_Editing_TableCell_01.png)
 
-# See Also
+## See Also
 
  * [Table]({%slug radpdfprocessing-editing-table%})
  * [TableRow]({%slug radpdfprocessing-editing-tablerow%})

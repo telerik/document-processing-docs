@@ -255,7 +255,7 @@ The following code snippet shows how to create __List__ with __BulletDefault__ t
 ![](images/RadPdfProcessing_Editing_List_06.png)
 
 
-# See Also
+## See Also
 
 * [Block]({%slug radpdfprocessing-editing-block%})
 * [Table]({%slug radpdfprocessing-editing-table%})

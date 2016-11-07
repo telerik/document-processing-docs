@@ -158,7 +158,7 @@ __Example 4__ demonstrates how to create an action of type __GoToAction__, assoc
 
 
 
-# See Also
+## See Also
 
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [AnnotationType API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_AnnotationType.htm)
