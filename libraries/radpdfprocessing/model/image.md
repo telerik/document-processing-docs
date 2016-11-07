@@ -29,9 +29,9 @@ __Example 1__ shows how to initialize an Image object and add it to a previously
 
 #### __[C#] Example 1: Create image__
 
-{{region radpdfprocessing-model-image_0}}
-    Image image = new Image();
-    container.Content.Add(image);
+{{region cs-radpdfprocessing-model-image_0}}
+	Image image = new Image();
+	container.Content.Add(image);
 {{endregion}}
 
 
@@ -41,9 +41,9 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 #### __[C#] Example 2: Add image to container__
 
-{{region radpdfprocessing-model-image_1}}
-    Image image = container.Content.AddImage();
-    Image imageWithSource = container.Content.AddImage(imageSource);
+{{region cs-radpdfprocessing-model-image_1}}
+	Image image = container.Content.AddImage();
+	Image imageWithSource = container.Content.AddImage(imageSource);
 {{endregion}}
 
 

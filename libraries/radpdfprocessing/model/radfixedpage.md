@@ -41,10 +41,10 @@ __Example 1__ demonstrates how to create a new __RadFixedPage__ instance and add
 
 #### __[C#] Example 1: Create RadFixedPage and add it to a document__
 
-{{region radpdfprocessing-model-radfixedpage_0}}
-    RadFixedDocument document = new RadFixedDocument();
-    RadFixedPage page = new RadFixedPage();
-    document.Pages.Add(page);
+{{region cs-radpdfprocessing-model-radfixedpage_0}}
+	RadFixedDocument document = new RadFixedDocument();
+	RadFixedPage page = new RadFixedPage();
+	document.Pages.Add(page);
 {{endregion}}
 
 
@@ -64,9 +64,9 @@ __Example 2__ shows how to add a previously created ContentElement in a __RadFix
 
 #### __[C#] Example 2: Add content element to RadFixedPage__
 
-{{region radpdfprocessing-model-radfixedpage_1}}
-    RadFixedPage page = new RadFixedPage();
-    page.Content.Add(contentElement);
+{{region cs-radpdfprocessing-model-radfixedpage_1}}
+	RadFixedPage page = new RadFixedPage();
+	page.Content.Add(contentElement);
 {{endregion}}
 
 
@@ -84,9 +84,9 @@ __Example 3__ shows how to add a previously created annotation in a __RadFixedPa
 
 #### __[C#] Example 3: Add annotation to RadFixedPage__
 
-{{region radpdfprocessing-model-radfixedpage_2}}
-    RadFixedPage page = new RadFixedPage();
-    page.Annotations.Add(annotation);
+{{region cs-radpdfprocessing-model-radfixedpage_2}}
+	RadFixedPage page = new RadFixedPage();
+	page.Annotations.Add(annotation);
 {{endregion}}
 
 
@@ -104,10 +104,10 @@ __Example 4__ shows how you can change the __Rotation__ and __Size__ properties 
 
 #### __[C#] Example 4: Add annotation to RadFixedPage__
 
-{{region radpdfprocessing-model-radfixedpage_3}}
-    RadFixedPage page = new RadFixedPage();
-    page.Rotation = Rotation.Rotate270;
-    page.Size = new Size(792, 1128);
+{{region cs-radpdfprocessing-model-radfixedpage_3}}
+	RadFixedPage page = new RadFixedPage();
+	page.Rotation = Rotation.Rotate270;
+	page.Size = new Size(792, 1128);
 {{endregion}}
 
 

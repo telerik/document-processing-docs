@@ -41,8 +41,8 @@ __Example 1__ shows how you can create a new __RadFixedDocument__ instance.
 
 #### __[C#] Example 1: Create RadFixedDocument__
 
-{{region radpdfprocessing-model-radfixeddocument_0}}
-    RadFixedDocument document = new RadFixedDocument();
+{{region cs-radpdfprocessing-model-radfixeddocument_0}}
+	RadFixedDocument document = new RadFixedDocument();
 {{endregion}}
 
 
@@ -57,8 +57,8 @@ __Example 2__ adds a page to the document created in [__Example 1__](#example1).
 
 #### __[C#] Example 2: Add page to RadFixedDocument__
 
-{{region radpdfprocessing-model-radfixeddocument_1}}
-    RadFixedPage page = document.Pages.AddPage();
+{{region cs-radpdfprocessing-model-radfixeddocument_1}}
+	RadFixedPage page = document.Pages.AddPage();
 {{endregion}}
 
 
@@ -71,16 +71,16 @@ __Example 3__ creates a page and adds it to the document created in [__Example 1
 
 #### __[C#] Example 3: Create and add a page to RadFixedDocument__
 
-{{region radpdfprocessing-model-radfixeddocument_2}}
-    RadFixedPage page = new RadFixedPage();
-    document.Pages.Add(page);
+{{region cs-radpdfprocessing-model-radfixeddocument_2}}
+	RadFixedPage page = new RadFixedPage();
+	document.Pages.Add(page);
 {{endregion}}
 
 **Example 4** shows you how you could obtain a copy of a RadFixedDocument.
 
 #### __[C#] Example 4: Clone a document__
 
-{{region radpdfprocessing-model-radfixeddocument_5}}
+{{region cs-radpdfprocessing-model-radfixeddocument_5}}
 	RadFixedDocument clonedDocument = originalDocument.Clone();
 {{endregion}}
 
@@ -89,7 +89,7 @@ You can merge PDF documents out-of-the-box with the Merge() method of __RadFixed
 
 #### __[C#] Example 5: Merge documents__
 
-{{region radpdfprocessing-model-radfixeddocument_4}}
+{{region cs-radpdfprocessing-model-radfixeddocument_4}}
 	document.Merge(source);
 {{endregion}}
 
@@ -105,7 +105,7 @@ __RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocum
 
 #### __[C#] Example 6: Set DocumentInfo__
 
-{{region radpdfprocessing-model-radfixeddocument_3}}
+{{region cs-radpdfprocessing-model-radfixeddocument_3}}
 	document.DocumentInfo.Author = "Jane Doe";
 	document.DocumentInfo.Title = "RadFixedDocument";
 	document.DocumentInfo.Description = "This document is intended to explain the RadFixedDocument class from the RadPdfProcessing library";

@@ -36,8 +36,8 @@ __Example 1__ demonstrates how a RadFixedDocumentEditor instance can be created.
 
 #### __[C#] Example 1: Create RadFixedDocumentEditor__
 
-{{region radpdfprocessing-editing-radfixeddocumenteditor_0}}
-    RadFixedDocumentEditor editor = new RadFixedDocumentEditor(radFixedDocument);
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_0}}
+	RadFixedDocumentEditor editor = new RadFixedDocumentEditor(radFixedDocument);
 {{endregion}}
 
 
@@ -76,8 +76,8 @@ Adding an additional section is achieved with the __InsertSectionBreak()__ metho
 
 #### __[C#] Example 2: Start a section__
 
-{{region radpdfprocessing-editing-radfixeddocumenteditor_1}}
-    editor.InsertSectionBreak();
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_1}}
+	editor.InsertSectionBreak();
 {{endregion}}
 
 
@@ -88,7 +88,7 @@ Adding an additional section is achieved with the __InsertSectionBreak()__ metho
 All pages that have the same __SectionProperties__ are part of the current section. To start a new page, you can use the following code:
 
 #### __[C#] Example 3: Start new page__
-{{region radpdfprocessing-editing-radfixeddocumenteditor_7}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_2}}
 	editor.InsertPageBreak();
 {{endregion}}
 
@@ -135,8 +135,8 @@ In order to start a new paragraph, use the code in __Example 4__.
 
 #### __[C#] Example 4: Start a paragraph__
 
-{{region radpdfprocessing-editing-radfixeddocumenteditor_2}}
-    editor.InsertParagraph();
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_3}}
+	editor.InsertParagraph();
 {{endregion}}
 
 
@@ -186,9 +186,9 @@ There are a number of overloads that insert a run. The code snippet in __Example
 
 #### __[C#] Example 5: Insert run__
 
-{{region radpdfprocessing-editing-radfixeddocumenteditor_3}}
-    editor.InsertRun("text");
-    editor.InsertRun(fontFamily, "text");
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_4}}
+	editor.InsertRun("text");
+	editor.InsertRun(fontFamily, "text");
 {{endregion}}
 
 
@@ -202,8 +202,8 @@ The code in __Example 6__ inserts a new run and a line break after it.
 
 #### __[C#] Example 6: Insert run and line break__
 
-{{region radpdfprocessing-editing-radfixeddocumenteditor_4}}
-    editor.InsertLine("Line of text");
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_5}}
+	editor.InsertLine("Line of text");
 {{endregion}}
 
 
@@ -219,7 +219,7 @@ You can insert image inline using one of the following methods:
          
 #### __[C#] Example 7: Insert image__    
    
-{{region radpdfprocessing-editing-radfixeddocumenteditor_8}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_6}}
 	editor.InsertImageInline(imageSource);
 	editor.InsertImageInline(imageSource, size);
 {{endregion}}
@@ -231,8 +231,8 @@ The __Table__ class implements the __IBlockElement__ interface and an instance o
 
 #### __[C#] Example 8: Insert table__
 
-{{region radpdfprocessing-editing-radfixeddocumenteditor_5}}
-    editor.InsertTable(table);
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_7}}
+	editor.InsertTable(table);
 {{endregion}}     
 
 For more detailed information on tables, check the [Table]({%slug radpdfprocessing-editing-table%}) documentation article.
@@ -243,7 +243,7 @@ The [IBlockElement](http://docs.telerik.com/devtools/document-processing/api/htm
 
 #### __[C#] Example 9: Insert Block element__
 
-{{region radpdfprocessing-editing-radfixeddocumenteditor_6}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_8}}
 	editor.InsertBlock(blockElement);
 {{endregion}}
 
@@ -255,7 +255,7 @@ You can easily insert list items with __RadFixedDocumentEditor__. The first thin
 The following code snippet shows how to add a new list to __RadFixedDocumentEditor’s ListCollection__ and after that insert a paragraph with the corresponding list properties:
 
 #### __[C#] Example 10: Insert list__
-{{region radpdfprocessing-editing-radfixeddocumenteditor_8}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_9}}
 	List list = editor.Lists.AddList(ListTemplateType.NumberedDefault);
 	editor.ParagraphProperties.ListId = list.Id;
 	editor.ParagraphProperties.ListLevel = 0;

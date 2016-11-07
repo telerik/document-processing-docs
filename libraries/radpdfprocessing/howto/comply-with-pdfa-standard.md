@@ -82,7 +82,7 @@ To comply with one of the versions of the standard, you need to specify __Compli
 
 #### __[C#] Example 1: Export PDF/A compliant document__
 
-{{region radpdfprocessing-howto-comply-with-pdfa-standard_0}}
+{{region cs-radpdfprocessing-howto-comply-with-pdfa-standard_0}}
 	PdfFormatProvider provider = new PdfFormatProvider();
 	
 	PdfExportSettings settings = new PdfExportSettings();

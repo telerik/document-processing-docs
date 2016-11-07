@@ -27,9 +27,9 @@ Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achie
 
 #### __[C#] Example 1: Insert text__
 
-{{region radpdfprocessing-editing-block_0}}
-    Block block = new Block();
-    block.InsertText("Text");
+{{region cs-radpdfprocessing-editing-block_0}}
+	Block block = new Block();
+	block.InsertText("Text");
 {{endregion}}
 
 
@@ -39,8 +39,8 @@ __Example 2__ demonstrates how to insert text with a specific font family.
 
 #### __[C#] Example 2: Insert text with Arial font family__
 
-{{region radpdfprocessing-editing-block_1}}
-    block.InsertText(new FontFamily("Arial"), "Text");
+{{region cs-radpdfprocessing-editing-block_1}}
+	block.InsertText(new FontFamily("Arial"), "Text");
 {{endregion}}
 
 
@@ -54,8 +54,8 @@ Inserting a line break results in the next element starting on a new line. The a
 
 #### __[C#] Example 3: Break the line__
 
-{{region radpdfprocessing-editing-block_3}}
-    block.InsertLineBreak();
+{{region cs-radpdfprocessing-editing-block_3}}
+	block.InsertLineBreak();
 {{endregion}}
 
 
@@ -165,9 +165,9 @@ __Example 4__ demonstrates how to draw a block.
 
 #### __[C#] Example 4: Draw block__
 
-{{region radpdfprocessing-editing-block_4}}
-    Rect boundingRect = new Rect(new Point(0, 0), new Size(200, 300));
-    block.Draw(fixedContentEditor, boundingRect);
+{{region cs-radpdfprocessing-editing-block_4}}
+	Rect boundingRect = new Rect(new Point(0, 0), new Size(200, 300));
+	block.Draw(fixedContentEditor, boundingRect);
 {{endregion}}
 
 
@@ -188,10 +188,10 @@ __Example 5__ creates a Block with the text "Hello RadPdfProcessing!" and measur
 
 #### __[C#] Example 5: Measure block__
 
-{{region radpdfprocessing-editing-block_5}}
-    Block block = new Block();
-    block.InsertText("Hello RadPdfProcessing!");
-    Size size = block.Measure();
+{{region cs-radpdfprocessing-editing-block_5}}
+	Block block = new Block();
+	block.InsertText("Hello RadPdfProcessing!");
+	Size size = block.Measure();
 {{endregion}}
 
 
@@ -205,7 +205,7 @@ The code in __Example 6__ splits a block in two. The first will contains text "H
         
 #### __[C#] Example 6: Split block__
 
-{{region radpdfprocessing-editing-block_6}}
+{{region cs-radpdfprocessing-editing-block_6}}
 	Block helloBlock = new Block();
 	helloBlock.InsertText("Hello");
 	Size helloSize = helloBlock.Measure();

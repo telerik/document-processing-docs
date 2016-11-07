@@ -28,9 +28,9 @@ __Example 1__ demonstrates how you can create a Clipping element and assign a __
 
 #### __[C#] Example 1: Create clipping__
 
-{{region radpdfprocessing-concepts-clipping_0}}
-    Clipping clipping = new Clipping();
-    clipping.Clip = new RectangleGeometry(new Rect(5, 5, 50, 50));
+{{region cs-radpdfprocessing-concepts-clipping_0}}
+	Clipping clipping = new Clipping();
+	clipping.Clip = new RectangleGeometry(new Rect(5, 5, 50, 50));
 {{endregion}}
 
 
@@ -45,9 +45,9 @@ __Example 2__ demonstrates how to clip an image using the Clipping created in __
 
 #### __[C#] Example 2: Use clipping__
 
-{{region radpdfprocessing-concepts-clipping_1}}
-    Image image = container.Content.AddImage(imageSource);
-    image.Clipping = clipping;
+{{region cs-radpdfprocessing-concepts-clipping_1}}
+	Image image = container.Content.AddImage(imageSource);
+	image.Clipping = clipping;
 {{endregion}}
 
 

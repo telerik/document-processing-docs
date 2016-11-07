@@ -29,10 +29,10 @@ __Example 1__ shows how you can create a Path, assign a predefined Geometry to i
 
 #### __[C#] Example 1: Create Path and add it to container__
 
-{{region radpdfprocessing-model-path_0}}
-    Path path = new Path();
-    path.Geometry = geometry;
-    container.Content.Add(path); 
+{{region cs-radpdfprocessing-model-path_0}}
+	Path path = new Path();
+	path.Geometry = geometry;
+	container.Content.Add(path);
 {{endregion}}
 
 
@@ -42,9 +42,9 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 #### __[C#] Example 2: Add Path to container__
 
-{{region radpdfprocessing-model-path_1}}
-    Path path = container.Content.AddPath();
-    path.Geometry = geometry;
+{{region cs-radpdfprocessing-model-path_1}}
+	Path path = container.Content.AddPath();
+	path.Geometry = geometry;
 {{endregion}}
 
 

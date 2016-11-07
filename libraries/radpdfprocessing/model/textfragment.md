@@ -30,9 +30,9 @@ __Example 1__ shows how you can initialize a TextFragment object and add it to a
 
 #### __[C#] Example 1: Create TextFragment and add it to container__
 
-{{region radpdfprocessing-model-textfragment_0}}
-    TextFragment fragment = new TextFragment();
-    container.Content.Add(fragment);
+{{region cs-radpdfprocessing-model-textfragment_0}}
+	TextFragment fragment = new TextFragment();
+	container.Content.Add(fragment);
 {{endregion}}
 
 
@@ -42,9 +42,9 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 #### __[C#] Example 2: Add TextFragment to container__
 
-{{region radpdfprocessing-model-textfragment_1}}
-    TextFragment textFragment = container.Content.AddTextFragment();
-    TextFragment textFragmentWithText = container.Content.AddTextFragment("Text");
+{{region cs-radpdfprocessing-model-textfragment_1}}
+	TextFragment textFragment = container.Content.AddTextFragment();
+	TextFragment textFragmentWithText = container.Content.AddTextFragment("Text");
 {{endregion}}
 
 

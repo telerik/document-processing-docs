@@ -29,9 +29,9 @@ The code snippet in __Example 1__ shows how to create a table and add a single r
 
 #### __[C#] Example 1: Create TableRow__
 
-{{region radpdfprocessing-editing-tablerow_0}}
-    Table table = new Table();
-    TableRow tableRow = table.Rows.AddTableRow();
+{{region cs-radpdfprocessing-editing-tablerow_0}}
+	Table table = new Table();
+	TableRow tableRow = table.Rows.AddTableRow();
 {{endregion}}
 
 
@@ -46,10 +46,10 @@ __Example 2__ shows how to add two cells in a row and get the cells count.
 
 #### __[C#] Example 2: Access cells in a TableRow__
 
-{{region radpdfprocessing-editing-tablerow_1}}
-    TableCell firstCell = tableRow.Cells.AddTableCell();
-    TableCell secondCell = tableRow.Cells.AddTableCell();
-    int cellsInRowCount = tableRow.Cells.Count;
+{{region cs-radpdfprocessing-editing-tablerow_1}}
+	TableCell firstCell = tableRow.Cells.AddTableCell();
+	TableCell secondCell = tableRow.Cells.AddTableCell();
+	int cellsInRowCount = tableRow.Cells.Count;
 {{endregion}}
 
 

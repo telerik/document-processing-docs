@@ -32,9 +32,9 @@ The constructor of the **TextFormatProviderSettings** class has two overloads:
 **Example 1** shows how to create and specify a particular setting.
 
 #### **[C#] Example 1: Create TextFormatProviderSettings**
-{{region radpdfprocessing-formats-and-conversion-plain-text-settings_0}}
-
-	TextFormatProviderSettings settings = new TextFormatProviderSettings("/r/n","*Page {0}*");
+{{region cs-radpdfprocessing-formats-and-conversion-plain-text-settings_0}}
+	           
+	TextFormatProviderSettings settings = new TextFormatProviderSettings("/r/n", "*Page {0}*");
 {{endregion}}
 
 
@@ -45,12 +45,12 @@ The __Export()__ method of **TextFormatProvider** allows you to pass a **TextFor
 
 #### **[C#] Example 2: Apply TextFormatProviderSettings**
 
-{{region radpdfprocessing-formats-and-conversion-plain-text-settings_1}}
-
+{{region cs-radpdfprocessing-formats-and-conversion-plain-text-settings_1}}
+	           
 	RadFixedDocument document = CreateRadFixedDocument();
-
-    TextFormatProvider provider = new TextFormatProvider();
-    string text = provider.Export(document, settings);
+	
+	TextFormatProvider provider = new TextFormatProvider();
+	string text = provider.Export(document, settings);
 {{endregion}}
 
 

@@ -43,9 +43,9 @@ __Link__ exposes the following properties:
 
 	#### __[C#] Example 1: Add link to destination__
 	
-	{{region radpdfprocessing-model-annotations-and-destinations_0}}
-	    Link linkWithDestination = new Link(destination);
-	    page.Annotations.Add(linkWithDestination);
+	{{region cs-radpdfprocessing-model-annotations-and-destinations_0}}
+		Link linkWithDestination = new Link(destination);
+		page.Annotations.Add(linkWithDestination);
 	{{endregion}}
 
 
@@ -55,9 +55,9 @@ __Link__ exposes the following properties:
 
 	#### __[C#] Example 2: Add link with action__
 	
-	{{region radpdfprocessing-model-annotations-and-destinations_1}}
-	    Link linkWithAction = new Link(action);
-	    page.Annotations.Add(linkWithAction);
+	{{region cs-radpdfprocessing-model-annotations-and-destinations_1}}
+		Link linkWithAction = new Link(action);
+		page.Annotations.Add(linkWithAction);
 	{{endregion}}
 
 
@@ -107,15 +107,15 @@ __Example 3__ shows how you can create a Location object, associate it with a Li
 
 #### __[C#] Example 3: Add link with location__
 
-{{region radpdfprocessing-model-annotations-and-destinations_2}}
-    Location location = new Location();
-    location.Left = 225;
-    location.Top = 500;
-    location.Zoom = 4;
-    location.Page = secondPage;
-
-    var link = firstPage.Annotations.AddLink(location);
-    link.Rect = new Rect(10, 10, 50, 50);
+{{region cs-radpdfprocessing-model-annotations-and-destinations_2}}
+	Location location = new Location();
+	location.Left = 225;
+	location.Top = 500;
+	location.Zoom = 4;
+	location.Page = secondPage;
+	
+	var link = firstPage.Annotations.AddLink(location);
+	link.Rect = new Rect(10, 10, 50, 50);
 {{endregion}}
 
 
@@ -142,18 +142,18 @@ __Example 4__ demonstrates how to create an action of type __GoToAction__, assoc
 
 #### __[C#] Example 4: Add link with action__
 
-{{region radpdfprocessing-model-annotations-and-destinations_3}}
-    GoToAction goToAction = new GoToAction();
-    goToAction.Destination = location;
-
-    var goToLink = firstPage.Annotations.AddLink(goToAction);
-    goToLink.Rect = new Rect(10, 10, 50, 50);
-
-    UriAction uriAction = new UriAction();
-    uriAction.Uri = new Uri(@"http://www.telerik.com");
-
-    var uriLink = firstPage.Annotations.AddLink(uriAction);
-    uriLink.Rect = new Rect(70, 10, 50, 50);
+{{region cs-radpdfprocessing-model-annotations-and-destinations_3}}
+	GoToAction goToAction = new GoToAction();
+	goToAction.Destination = location;
+	
+	var goToLink = firstPage.Annotations.AddLink(goToAction);
+	goToLink.Rect = new Rect(10, 10, 50, 50);
+	
+	UriAction uriAction = new UriAction();
+	uriAction.Uri = new Uri(@"http://www.telerik.com");
+	
+	var uriLink = firstPage.Annotations.AddLink(uriAction);
+	uriLink.Rect = new Rect(70, 10, 50, 50);
 {{endregion}}
 
 

@@ -30,7 +30,7 @@ __Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocume
 
 #### __[C#] Example 1: Export RadFixedDocument to string__
 
-{{region radpdfprocessing-formats-and-conversion-plain-text-tеxtformatprovider_0}}
+{{region cs-radpdfprocessing-formats-and-conversion-plain-text-textformatprovider_0}}
 	TextFormatProvider provider = new TextFormatProvider();
 	RadFixedDocument document = CreateRadFixedDocument();
 	string documentContent = provider.Export(document);

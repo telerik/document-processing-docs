@@ -34,8 +34,8 @@ __FixedContentEditor__ is always associated to a single __IContentRootElement__ 
 
 #### __[C#] Example 1: Create FixedContentEditor__
 
-{{region radpdfprocessing-editing-fixedcontenteditor_0}}
-    FixedContentEditor editor = new FixedContentEditor(contentRootElement);
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_0}}
+	FixedContentEditor editor = new FixedContentEditor(contentRootElement);
 {{endregion}}
 
 
@@ -48,8 +48,8 @@ __Example 2__ demonstrates how you can create а FixedContentEditor with a speci
 
 #### __[C#] Example 2: Create FixedContentEditor with specific position__
 
-{{region radpdfprocessing-editing-fixedcontenteditor_1}}
-    FixedContentEditor editor = new FixedContentEditor(contentRootElement, initialPosition);
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_1}}
+	FixedContentEditor editor = new FixedContentEditor(contentRootElement, initialPosition);
 {{endregion}}
 
 
@@ -66,8 +66,8 @@ Inserting а [TextFragment]({%slug radpdfprocessing-model-textfragment%}) can be
 
 #### __[C#] Example 3: Insert TextFragment__
 
-{{region radpdfprocessing-editing-fixedcontenteditor_2}}
-    editor.DrawText("First text fragment.");
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_2}}
+	editor.DrawText("First text fragment.");
 {{endregion}}
 
 
@@ -89,11 +89,11 @@ __Example 4__ shows how you can use the __Block__ object to draw a paragraph.
 
 #### __[C#] Example 4: Insert paragraph__
 
-{{region radpdfprocessing-editing-fixedcontenteditor_3}}
-    Block block = new Block();
-    block.InsertText("First sentence.");
-    block.InsertText("Second sentence.");
-    editor.DrawBlock(block);
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_3}}
+	Block block = new Block();
+	block.InsertText("First sentence.");
+	block.InsertText("Second sentence.");
+	editor.DrawBlock(block);
 {{endregion}}
 
 
@@ -124,11 +124,11 @@ __Example 5__ shows how you can add an image created from a Stream.
 
 #### __[C#] Example 5: Insert image__
 
-{{region radpdfprocessing-editing-fixedcontenteditor_4}}
-    using (Stream stream = this.GetResourceStream("Telerik_logo.jpg"))
-    {
-        editor.DrawImage(stream, new Size(118, 28));
-    }
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_4}}
+	using (Stream stream = this.GetResourceStream("Telerik_logo.jpg"))
+	{
+	    editor.DrawImage(stream, new Size(118, 28));
+	}
 {{endregion}}
 
 
@@ -153,8 +153,8 @@ __Example 6__ shows how you can add an ellipse using one of FixedContentEditor's
 
 #### __[C#] Example 6: Insert ellipse__
 
-{{region radpdfprocessing-editing-fixedcontenteditor_5}}
-    editor.DrawEllipse(new Point(250, 70), 136, 48);
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_5}}
+	editor.DrawEllipse(new Point(250, 70), 136, 48);
 {{endregion}}
 
 
@@ -177,17 +177,17 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
 
 #### __[C#] Example 7: Push clipping__
 
-{{region radpdfprocessing-editing-fixedcontenteditor_6}}
-    string visibleText = "The last word in this text is";
-    string text = string.Format("{0} clipped.", visibleText); //The last word in this text is clipped.
-    Block block = new Block();
-    block.InsertText(visibleText);
-    Size visisibleTextSize = block.Measure();
-
-    using (editor.PushClipping(new Rect(new Point(0, 0), visisibleTextSize)))
-    {
-        editor.DrawText(text);
-    }
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_6}}
+	string visibleText = "The last word in this text is";
+	string text = string.Format("{0} clipped.", visibleText); //The last word in this text is clipped.
+	Block block = new Block();
+	block.InsertText(visibleText);
+	Size visisibleTextSize = block.Measure();
+	
+	using (editor.PushClipping(new Rect(new Point(0, 0), visisibleTextSize)))
+	{
+	    editor.DrawText(text);
+	}
 {{endregion}}
 
 
@@ -208,25 +208,25 @@ __Example 8__ generates a table and draws it in some fixed size.
 
 #### __[C#] Example 8: Insert table__
 
-{{region radpdfprocessing-editing-fixedcontenteditor_8}}
-    Table table = new Table();
-    Border border = new Border();
-    table.DefaultCellProperties.Borders = new TableCellBorders(border, border, border, border);
-    table.DefaultCellProperties.Padding = new Thickness(10);
-    TableRow firstRow = table.Rows.AddTableRow();
-    firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("First cell");
-    firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Second cell");
-    firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Third cell");
-    TableRow secondRow = table.Rows.AddTableRow();
-    secondRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Forth cell");
-    secondRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Fifth cell");
-    secondRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Sixth cell");
-
-    RadFixedDocument document = new RadFixedDocument();
-    RadFixedPage page = document.Pages.AddPage();
-    FixedContentEditor editor = new FixedContentEditor(page);
-    editor.Position.Translate(10, 10);
-    editor.DrawTable(table, new Size(180, double.PositiveInfinity));
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_8}}
+	Table table = new Table();
+	Border border = new Border();
+	table.DefaultCellProperties.Borders = new TableCellBorders(border, border, border, border);
+	table.DefaultCellProperties.Padding = new Thickness(10);
+	TableRow firstRow = table.Rows.AddTableRow();
+	firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("First cell");
+	firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Second cell");
+	firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Third cell");
+	TableRow secondRow = table.Rows.AddTableRow();
+	secondRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Forth cell");
+	secondRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Fifth cell");
+	secondRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Sixth cell");
+	
+	RadFixedDocument document = new RadFixedDocument();
+	RadFixedPage page = document.Pages.AddPage();
+	FixedContentEditor editor = new FixedContentEditor(page);
+	editor.Position.Translate(10, 10);
+	editor.DrawTable(table, new Size(180, double.PositiveInfinity));
 {{endregion}}
 
 #### The table created in Example 8
@@ -244,15 +244,15 @@ The code in __Example 9__ shows how to manipulate the position of the inserted c
 
 #### __[C#] Example 9: Scale and rotate content__
 
-{{region radpdfprocessing-editing-fixedcontenteditor_7}}
-    editor.Position.Scale(1.5, 0.5);
-    editor.Position.Rotate(10);
-    editor.DrawText("Image:");
-    editor.Position.Translate(0, 20);
-    using (Stream stream = this.GetResourceStream("Telerik_logo.jpg"))
-    {
-        editor.DrawImage(stream, new Size(118, 28));
-    }
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_7}}
+	editor.Position.Scale(1.5, 0.5);
+	editor.Position.Rotate(10);
+	editor.DrawText("Image:");
+	editor.Position.Translate(0, 20);
+	using (Stream stream = this.GetResourceStream("Telerik_logo.jpg"))
+	{
+	    editor.DrawImage(stream, new Size(118, 28));
+	}
 {{endregion}}
 
 
