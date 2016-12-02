@@ -29,15 +29,15 @@ __Example 1__ shows how you can create a __PdfImportSettings__ object and assign
 
 #### __[C#] Example 1: Import settings__
 
-{{region radpdfprocessing-formats-and-conversion-pdf-settings_0}}
-    PdfFormatProvider provider = new PdfFormatProvider();
-    PdfImportSettings settings = new PdfImportSettings();
-    settings.UserPasswordNeeded += (s, a) =>
-    {
-        a.Password = "D0cum3ntP4ssw0rd";
-    };
-
-    provider.ImportSettings = settings;
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_0}}
+	PdfFormatProvider provider = new PdfFormatProvider();
+	PdfImportSettings settings = new PdfImportSettings();
+	settings.UserPasswordNeeded += (s, a) =>
+	{
+	    a.Password = "D0cum3ntP4ssw0rd";
+	};
+	
+	provider.ImportSettings = settings;
 {{endregion}}
 
 
@@ -79,14 +79,15 @@ __Example 2__ shows how you can create a __PdfExportSettings__ object and assign
 
 #### __[C#] Example 2: Export settings__
 
-{{region radpdfprocessing-formats-and-conversion-pdf-settings_1}}
-    PdfFormatProvider provider = new PdfFormatProvider();
-    PdfExportSettings settings = new PdfExportSettings();
-    settings.IsEncrypted = true;
-    settings.UserPassword = "D0cum3ntP4ssw0rd";
-    settings.ComplianceLevel = PdfComplianceLevel.PdfA2B;
-
-    provider.ExportSettings = settings;
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
+	PdfFormatProvider provider = new PdfFormatProvider();
+	PdfExportSettings settings = new PdfExportSettings();
+	settings.IsEncrypted = true;
+	settings.UserPassword = "D0cum3ntP4ssw0rd";
+	settings.ImageQuality = ImageQuality.Medium;
+	settings.ComplianceLevel = PdfComplianceLevel.PdfA2B;
+	
+	provider.ExportSettings = settings;
 {{endregion}}
 
 

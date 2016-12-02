@@ -34,9 +34,9 @@ In order to specify the default **ImageQuality** value when exporting to PDF, yo
 
 #### __[C#] Example 1: Set a default value for all images in a document__
 
-{{region radpdfprocessing-concepts-imagequality_0}}
+{{region cs-radpdfprocessing-concepts-imagequality_0}}
 	PdfExportSettings settings = new PdfExportSettings();
-    settings.ImageQuality = ImageQuality.Medium;
+	settings.ImageQuality = ImageQuality.Medium;
 {{endregion}}
 
 
@@ -46,7 +46,7 @@ If you need some particular image to be exported with a different **ImageQuality
 
 #### __[C#] Example 2: Set the image quality of an image__
 
-{{region radpdfprocessing-concepts-imagequality_1}}
+{{region cs-radpdfprocessing-concepts-imagequality_1}}
 	ImageSource imageSource = new ImageSource(bitmap, ImageQuality.Medium);
 {{endregion}}
 
@@ -62,7 +62,7 @@ When **ImageQuality** of an image is set to **High**, **RadPdfProcessing** inter
 
 > JPEG2000 images in **RadPdfProcessing** can be inserted only with **ImageQuality.High**. Exporting them with lower ImageQuality value requires decoding JPEG2000 files, which is currently unsupported by the library. 
 
-# See also
+## See also
 
 * [ImageQuality API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_FormatProviders_Pdf_Export_ImageQuality.htm)
 * [ImageSource]({%slug radpdfprocessing-model-imagesource%})

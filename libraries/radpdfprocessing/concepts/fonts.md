@@ -50,8 +50,8 @@ __Example 1__ demonstrates how you can use the RegisterFont() method.
 
 #### __[C#] Example 1: Register font__
 
-{{region radpdfprocessing-concepts-fonts_0}}
-    FontsRepository.RegisterFont(fontFamily, fontStyle, fontWeight, data);
+{{region cs-radpdfprocessing-concepts-fonts_0}}
+	FontsRepository.RegisterFont(fontFamily, fontStyle, fontWeight, data);
 {{endregion}}
 
 
@@ -66,9 +66,9 @@ __Example 2__ shows how to create a font using the FontsRepository.
 
 #### __[C#] Example 2: Create FontBase__
 
-{{region radpdfprocessing-concepts-fonts_1}}
-    FontBase font;
-    bool success = FontsRepository.TryCreateFont(fontFamily, fontStyle, fontWeight, out font);
+{{region cs-radpdfprocessing-concepts-fonts_1}}
+	FontBase font;
+	bool success = FontsRepository.TryCreateFont(fontFamily, fontStyle, fontWeight, out font);
 {{endregion}}
 
 
@@ -78,7 +78,7 @@ __Example 2__ shows how to create a font using the FontsRepository.
 
 
 
-# See Also
+## See Also
  * [FontsRepository](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Fonts_FontsRepository.htm)
  * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
 

@@ -35,11 +35,11 @@ __Example 1__ illustrates how you can create an ImageSource using a __FileStream
 
 #### __[C#] Example 1: Create ImageSource from Stream__
 
-{{region radpdfprocessing-model-imagesource_0}}
-    using (FileStream source = File.Open(filename, FileMode.Open))
-    {
-        ImageSource imageSource = new ImageSource(source);
-    }
+{{region cs-radpdfprocessing-model-imagesource_0}}
+	using (FileStream source = File.Open(filename, FileMode.Open))
+	{
+	    ImageSource imageSource = new ImageSource(source);
+	}
 {{endregion}}
 
 
@@ -49,7 +49,7 @@ __Example 2__ demonstrates how you can create an __ImageSource__ using the __Enc
         
 
 #### __[C#] Example 2: Create ImageSource from EncodedImageData__
-{{region radpdfprocessing-model-imagesource_2}}
+{{region cs-radpdfprocessing-model-imagesource_2}}
 	EncodedImageData imageData = new EncodedImageData(imageBytes, 8, 655, 983, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.DCTDecode });
 	ImageSource imageSource = new ImageSource(imageData);
 {{endregion}}
@@ -78,18 +78,20 @@ __RadPdfProcessing__ exposes an extension method allowing you to convert every B
 
 #### __[C#] Example 3: Create ImageSource with extension method__
 
-{{region radpdfprocessing-model-imagesource_1}}
-    BitmapImage bitmap = new BitmapImage();
-    bitmap.BeginInit();
-    bitmap.UriSource = new Uri(filename, UriKind.RelativeOrAbsolute);
-    bitmap.EndInit();
-
-    ImageSource imageSource = bitmap.ToImageSource();
+{{region cs-radpdfprocessing-model-imagesource_1}}
+	BitmapImage bitmap = new BitmapImage();
+	bitmap.BeginInit();
+	bitmap.UriSource = new Uri(filename, UriKind.RelativeOrAbsolute);
+	bitmap.EndInit();
+	
+	ImageSource imageSource = bitmap.ToImageSource();
+	
+	return imageSource;
 {{endregion}}
 
 >The code from __Example 3__ won't compile in Silverlight due to differences in the BitmapImage API for this platform. You could pass the image as a stream to the SetSource() method of BitmapImage instead.
 
-# See Also
+## See Also
 
  * [Image]({%slug radpdfprocessing-model-image%})
  * [ImageSource API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Resources_ImageSource.htm)

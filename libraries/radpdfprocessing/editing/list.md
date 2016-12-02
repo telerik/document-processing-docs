@@ -37,13 +37,13 @@ The code snippet from __Example 1__ shows how to create a list with NumberedPare
 
 #### __[C#] Example 1: Create numbered parentheses list template type__
 
-{{region radpdfprocessing-editing-list_0}}
+{{region cs-radpdfprocessing-editing-list_0}}
 	List numberedParenthesesList = new List(ListTemplateType.NumberedParentheses);
 {{endregion}}
 
 #### __[VB.NET] Example 1: Create numbered parentheses list template type__
 
-{{region radpdfprocessing-editing-list_1}}
+{{region vb-radpdfprocessing-editing-list_1}}
 	Dim numberedParenthesesList = New List(ListTemplateType.NumberedParentheses)
 {{endregion}}
 
@@ -75,12 +75,12 @@ __Example 2__ shows how to create an empty list and add two custom list levels t
 
 #### __[C#] Example 2: Create custom list levels__
 
-{{region radpdfprocessing-editing-list_2}}
+{{region cs-radpdfprocessing-editing-list_2}}
 	List list = new List();
 	
 	ListLevel levelZero = list.Levels.AddListLevel();
 	levelZero.ParagraphProperties.LeftIndent = 30;
-	levelZero.CharacterProperties.ForegroundColor = new RgbColor(100, 100, 100); 
+	levelZero.CharacterProperties.ForegroundColor = new RgbColor(100, 100, 100);
 	levelZero.IndentAfterBullet = 5;
 	levelZero.BulletNumberingFormat = new TextBulletNumberingFormat((indexer) => string.Format("{0:D2}.", indexer.GetCurrentIndex(0)));
 	
@@ -93,7 +93,7 @@ __Example 2__ shows how to create an empty list and add two custom list levels t
 
 #### __[VB.NET] Example 2: Create custom list levels__
 
-{{region radpdfprocessing-editing-list_3}}
+{{region vb-radpdfprocessing-editing-list_3}}
 	Dim list = New List()
 	
 	Dim levelZero = list.Levels.AddListLevel()
@@ -124,7 +124,7 @@ The following code snippet shows how to create the bullets of a numbered hierarc
 
 #### __[C#] Example 3: Create custom text numbering bullet__
 
-{{region radpdfprocessing-editing-list_4}}
+{{region cs-radpdfprocessing-editing-list_4}}
 	List list = new List();
 	
 	for (int i = 0; i < 3; i++)
@@ -135,39 +135,40 @@ The following code snippet shows how to create the bullets of a numbered hierarc
 	    int currentLevelIndex = i;
 	
 	    level.BulletNumberingFormat = new TextBulletNumberingFormat((indexer) =>
+	    {
+	        StringBuilder builder = new StringBuilder();
+	
+	        for (int levelIndex = 0; levelIndex <= currentLevelIndex; levelIndex++)
 	        {
-	            StringBuilder builder = new StringBuilder();
+	            builder.AppendFormat("{0}.", indexer.GetCurrentIndex(levelIndex));
+	        }
 	
-	            for (int levelIndex = 0; levelIndex <= currentLevelIndex; levelIndex++)
-	            {
-	                builder.AppendFormat("{0}.", indexer.GetCurrentIndex(levelIndex));
-	            }
-	
-	            return builder.ToString();
-	        });
+	        return builder.ToString();
+	    });
 	}
 {{endregion}}
 
 #### __[VB.NET] Example 3: Create custom text numbering bullet__
 
-{{region radpdfprocessing-editing-list_5}}
-	 Dim list = New List()
-		For i = 0 To 2
-		
-		    Dim level = list.Levels.AddListLevel()
-		    level.ParagraphProperties.LeftIndent = (i + 1) * 20
-		    level.IndentAfterBullet = 10
-		    Dim currentLevelIndex As Integer = i
-		
-		    level.BulletNumberingFormat = New TextBulletNumberingFormat(Function(indexer)
-		                                                                    Dim builder = New StringBuilder()
-		                                                                    For levelIndex = 0 To currentLevelIndex
-		                                                                        builder.AppendFormat("{0}.", indexer.GetCurrentIndex(levelIndex))
-		                                                                    Next
-		
-		                                                                    Return builder.ToString()
-		                                                                End Function)
-		Next
+{{region vb-radpdfprocessing-editing-list_5}}
+	Dim list = New List()
+	For i = 0 To 2
+	
+	    Dim level = list.Levels.AddListLevel()
+	    level.ParagraphProperties.LeftIndent = (i + 1) * 20
+	    level.IndentAfterBullet = 10
+	    Dim currentLevelIndex As Integer = i
+	
+	    level.BulletNumberingFormat = New TextBulletNumberingFormat(Function(indexer)
+	
+	                                                                    Dim builder = New StringBuilder()
+	                                                                    For levelIndex = 0 To currentLevelIndex
+	                                                                        builder.AppendFormat("{0}.", indexer.GetCurrentIndex(levelIndex))
+	                                                                    Next
+	
+	                                                                    Return builder.ToString()
+	                                                                End Function)
+	Next
 {{endregion}}
 
 When using the list created in __Example 3__ its bullets will look as shown in __Figure 4__.
@@ -184,7 +185,7 @@ __Example 4__ shows how to create a list with __RadFixedDocumentEditor__ and ins
 
 #### __[C#] Example 4: Using lists with RadFixedDocumentEditor__
 
-{{region radpdfprocessing-editing-list_6}}
+{{region cs-radpdfprocessing-editing-list_6}}
 	using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
 	{
 	    List list = editor.Lists.AddList(ListTemplateType.NumberedDefault);
@@ -201,7 +202,7 @@ __Example 4__ shows how to create a list with __RadFixedDocumentEditor__ and ins
 
 #### __[VB.NET] Example 4: Using lists with RadFixedDocumentEditor__
 
-{{region radpdfprocessing-editing-list_7}}
+{{region vb-radpdfprocessing-editing-list_7}}
 	Using editor As New RadFixedDocumentEditor(document)
 	    Dim list = editor.Lists.AddList(ListTemplateType.NumberedDefault)
 	    editor.ParagraphProperties.ListId = list.Id
@@ -230,7 +231,7 @@ The following code snippet shows how to create __List__ with __BulletDefault__ t
 
 #### __[C#] Example 5: Using lists with Block class__
 
-{{region radpdfprocessing-editing-list_8}}
+{{region cs-radpdfprocessing-editing-list_8}}
 	List list = new List(ListTemplateType.BulletDefault);
 	Block block = new Block();
 	block.SetBullet(list, 0);
@@ -239,7 +240,7 @@ The following code snippet shows how to create __List__ with __BulletDefault__ t
 
 #### __[VB.NET] Example 5: Using lists with Block class__
 
-{{region radpdfprocessing-editing-list_8}}
+{{region vb-radpdfprocessing-editing-list_9}}
 	Private Sub UsingListsWithBlockClass()
 	    Dim list = New List(ListTemplateType.BulletDefault)
 	    Dim block = New Block()
@@ -254,7 +255,7 @@ The following code snippet shows how to create __List__ with __BulletDefault__ t
 ![](images/RadPdfProcessing_Editing_List_06.png)
 
 
-# See Also
+## See Also
 
 * [Block]({%slug radpdfprocessing-editing-block%})
 * [Table]({%slug radpdfprocessing-editing-table%})

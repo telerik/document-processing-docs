@@ -37,12 +37,11 @@ __Example 1__ shows how to use PdfFormatProvider to import a PDF document from a
 
 #### __[C#] Example 1: Import PDF file__
 
-{{region radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
-
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
 	PdfFormatProvider provider = new PdfFormatProvider();
 	using (Stream stream = File.OpenRead("sample.pdf"))
 	{
-	    document = provider.Import(stream);
+	    RadFixedDocument document = provider.Import(stream);
 	
 	    // Do your work with the document inside the using statement.
 	}
@@ -63,13 +62,13 @@ __Example 2__ shows how to use the __Export()__ method of __PdfFormatProvider__ 
 
 #### __[C#] Example 2: Export PDF file__
 
-{{region radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
-    PdfFormatProvider provider = new PdfFormatProvider();
-    using (Stream output = File.OpenWrite("sample.pdf"))
-    {
-        RadFixedDocument document = CreateRadFixedDocument();
-        provider.Export(document, output);
-    }
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
+	PdfFormatProvider provider = new PdfFormatProvider();
+	using (Stream output = File.OpenWrite("sample.pdf"))
+	{
+	    RadFixedDocument document = CreateRadFixedDocument();
+	    provider.Export(document, output);
+	}
 {{endregion}}
 
 

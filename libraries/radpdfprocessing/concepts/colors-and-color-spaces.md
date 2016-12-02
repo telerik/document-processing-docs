@@ -41,10 +41,10 @@ __Example 1__ demonstrates how you can create an RgbColor and assign it as Fill 
 
 #### __[C#] Example 1: Create RgbColor__
 
-{{region radpdfprocessing-concepts-colors-and-color-spaces_0}}
-    RgbColor magenta = new RgbColor(255, 0, 255);
-    Path path = new Path();
-    path.Fill = magenta;
+{{region cs-radpdfprocessing-concepts-colors-and-color-spaces_0}}
+	RgbColor magenta = new RgbColor(255, 0, 255);
+	Path path = new Path();
+	path.Fill = magenta;
 {{endregion}}
 
 
@@ -83,15 +83,15 @@ The __Gradient__ class is inherited by the following classes:
 	
 	#### __[C#] Example 2: Create LinearGradient__
 	
-	{{region radpdfprocessing-concepts-colors-and-color-spaces_1}}
-	    FixedContentEditor containerEditor = new FixedContentEditor(container);
-	
-	    LinearGradient linearGradient = new LinearGradient(new Point(0, 0), new Point(30, 30));
-	    linearGradient.GradientStops.Add(new GradientStop(new RgbColor(0, 207, 0), 0));
-	    linearGradient.GradientStops.Add(new GradientStop(new RgbColor(0, 102, 204), 1));
-	
-	    containerEditor.GraphicProperties.FillColor = linearGradient;
-	    containerEditor.DrawRectangle(new Rect(10, 10, 48, 29));
+	{{region cs-radpdfprocessing-concepts-colors-and-color-spaces_1}}
+		FixedContentEditor containerEditor = new FixedContentEditor(container);
+		
+		LinearGradient linearGradient = new LinearGradient(new Point(0, 0), new Point(30, 30));
+		linearGradient.GradientStops.Add(new GradientStop(new RgbColor(0, 207, 0), 0));
+		linearGradient.GradientStops.Add(new GradientStop(new RgbColor(0, 102, 204), 1));
+		
+		containerEditor.GraphicProperties.FillColor = linearGradient;
+		containerEditor.DrawRectangle(new Rect(10, 10, 48, 29));
 	{{endregion}}
 	
 	
@@ -114,8 +114,7 @@ The __Gradient__ class is inherited by the following classes:
 	
 	#### __[C#] Example 3: Create RadialGradient__
 	
-	{{region radpdfprocessing-concepts-colors-and-color-spaces_3}}
-	
+	{{region cs-radpdfprocessing-concepts-colors-and-color-spaces_3}}
 		FixedContentEditor containerEditor = new FixedContentEditor(container);
 		
 		RadialGradient radialGradient = new RadialGradient(new Point(40, 40), new Point(40, 40), 0, 30);
@@ -169,17 +168,17 @@ Since the __TilingBase__ class implements the __IContentRootElement__ interface 
 
 #### __[C#] Example 4: Create tiling__
 
-{{region radpdfprocessing-concepts-colors-and-color-spaces_2}}
-    FixedContentEditor containerEditor = new FixedContentEditor(container);
-
-    Tiling tiling = new Tiling(new Rect(0, 0, 10, 10));
-    FixedContentEditor tilingEditor = new FixedContentEditor(tiling);
-    tilingEditor.GraphicProperties.IsStroked = false;
-    tilingEditor.GraphicProperties.FillColor = new RgbColor(128, 28, 43);
-    tilingEditor.DrawRectangle(new Rect(2, 2, 5, 7));
-
-    containerEditor.GraphicProperties.FillColor = tiling;
-    containerEditor.DrawCircle(new Point(30, 30), 20);
+{{region cs-radpdfprocessing-concepts-colors-and-color-spaces_2}}
+	FixedContentEditor containerEditor = new FixedContentEditor(container);
+	
+	Tiling tiling = new Tiling(new Rect(0, 0, 10, 10));
+	FixedContentEditor tilingEditor = new FixedContentEditor(tiling);
+	tilingEditor.GraphicProperties.IsStroked = false;
+	tilingEditor.GraphicProperties.FillColor = new RgbColor(128, 28, 43);
+	tilingEditor.DrawRectangle(new Rect(2, 2, 5, 7));
+	
+	containerEditor.GraphicProperties.FillColor = tiling;
+	containerEditor.DrawCircle(new Point(30, 30), 20);
 {{endregion}}
 
 
@@ -190,7 +189,7 @@ The tiling created in __Example 4__ is shown in __Figure 3__.
 #### Figure 3: Tiling
 ![Rad Pdf Processing Concepts Colors And Color Spaces 02](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_02.png)
 
-# See Also
+## See Also
 
  * [Path]({%slug radpdfprocessing-model-path%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
