@@ -27,7 +27,7 @@ __Example 1__ demonstrates how to export a __RadFlowDocument__ instance to PDF a
 
 #### __[C#] Example 1: Export PDF/A compliant document__
 
-{{region radwordsprocessing-formats-and-conversion-pdf-settings_0}}
+{{region cs-radwordsprocessing-formats-and-conversion-pdf-settings_0}}
 	PdfFormatProvider provider = new PdfFormatProvider();
 	PdfExportSettings settings = new PdfExportSettings();
 	settings.ComplianceLevel = Fixed.PdfComplianceLevel.PdfA2B;
@@ -58,7 +58,7 @@ __Example 2__ shows how to register a custom *ChineseCountingConverter* class in
 
 #### __[C#] Example 2: Register numbering style converter__
 
-{{region radwordsprocessing-formats-and-conversion-pdf-settings_1}}
+{{region cs-radwordsprocessing-formats-and-conversion-pdf-settings_1}}
 	provider.ExportSettings.ExtensibilityManager.RegisterNumberingStyleConverter(NumberingStyle.ChineseCounting, new ChineseCountingConverter());
 {{endregion}}
 

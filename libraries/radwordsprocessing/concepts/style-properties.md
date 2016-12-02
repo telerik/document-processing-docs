@@ -76,9 +76,10 @@ __Example 1__ is an example for equivalent getting of a value with CLR property 
 
 #### __[C#] Example 1: Get a value__
 
-{{region radwordsprocessing-concepts-style-properties_0}}
-    bool keepOnOnePageActualValueShorthand = paragraph.KeepOnOnePage;
-    bool keepOnOnePageActualValue = paragraph.Properties.KeepOnOnePage.GetActualValue().Value;
+{{region cs-radwordsprocessing-concepts-style-properties_0}}
+	            
+	bool keepOnOnePageActualValueShorthand = paragraph.KeepOnOnePage;
+	bool keepOnOnePageActualValue = paragraph.Properties.KeepOnOnePage.GetActualValue().Value;
 {{endregion}}
 
 
@@ -87,9 +88,10 @@ __Example 2__ is an example for an equivalent setting of a value with CLR proper
 
 #### __[C#] Example 2: Set a value__
 
-{{region radwordsprocessing-concepts-style-properties_1}}
-    paragraph.KeepOnOnePage = true;
-    paragraph.Properties.KeepOnOnePage.LocalValue = true;
+{{region cs-radwordsprocessing-concepts-style-properties_1}}
+	            
+	paragraph.KeepOnOnePage = true;
+	paragraph.Properties.KeepOnOnePage.LocalValue = true;
 {{endregion}}
 
 
@@ -104,7 +106,8 @@ __Example 3__ illustrates how to get the local value of a style property in a st
 
 #### __[C#] Example 3: Get the local value__
 
-{{region radwordsprocessing-concepts-style-properties_2}}
+{{region cs-radwordsprocessing-concepts-style-properties_2}}
+	        
 	bool? keepOnOnePage = style.ParagraphProperties.KeepOnOnePage.LocalValue;
 {{endregion}}
 
@@ -115,8 +118,9 @@ __Example 4__ shows how to get the actual value of style property in style.
 
 #### __[C#] Example 4: Get the actual value__
 
-{{region radwordsprocessing-concepts-style-properties_3}}
-    bool keepOnOnePage = style.ParagraphProperties.KeepOnOnePage.GetActualValue().Value;
+{{region cs-radwordsprocessing-concepts-style-properties_3}}
+	            
+	bool keepOnOnePage = style.ParagraphProperties.KeepOnOnePage.GetActualValue().Value;
 {{endregion}}
 
 
@@ -131,8 +135,8 @@ The code in __Example 5__ illustrates how to get the default value for a style p
 
 #### __[C#] Example 5: Get the default value__
 
-{{region radwordsprocessing-concepts-style-properties_4}}
-    bool keepOnOnePageDefaultValue = Paragraph.KeepOnOnePagePropertyDefinition.DefaultValue.Value;
+{{region cs-radwordsprocessing-concepts-style-properties_4}}
+	bool keepOnOnePageDefaultValue = Paragraph.KeepOnOnePagePropertyDefinition.DefaultValue.Value;
 {{endregion}}
 
 
@@ -639,7 +643,7 @@ Following is a list of all available style properties and their default values:
 
 </table>
 
-# See Also
+## See Also
 
  * [Styles]({%slug radwordsprocessing-concepts-styles%})
  * [IStyleProperty<T> API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Core_IStyleProperty_1.htm)

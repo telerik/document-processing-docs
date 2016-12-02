@@ -35,9 +35,9 @@ __Example 1__ shows how to create a __RadFlowDocumentEditor__ instance and use i
 
 #### __[C#] Example 1: Replace text__
 
-{{region radwordsprocessing-editing-mail-merge_0}}
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.ReplaceText("code", "source code", true, true);
+{{region cs-radwordsprocessing-editing-find-and-replace_0}}
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+	editor.ReplaceText("code", "source code", true, true);
 {{endregion}}
 
 
@@ -58,17 +58,17 @@ __Example 2__ shows how to apply a red highlight color to all occurrences of the
 
 #### __[C#] Example 2: Replace character properties__
 
-{{region radwordsprocessing-editing-mail-merge_0}}
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.ReplaceStyling("text", new Action<CharacterProperties>((properties) =>
-    {
-        properties.HighlightColor.LocalValue = Colors.Red;
-    }));
+{{region cs-radwordsprocessing-editing-find-and-replace_1}}
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+	editor.ReplaceStyling("text", new Action<CharacterProperties>((properties) =>
+	{
+	    properties.HighlightColor.LocalValue = Colors.Red;
+	}));
 {{endregion}}
 
 
 
-# See Also
+## See Also
 
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
  * [CharacterProperties]({%slug radwordsprocessing-concepts-style-properties%}) 

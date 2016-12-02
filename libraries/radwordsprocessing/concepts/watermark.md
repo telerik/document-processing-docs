@@ -44,19 +44,20 @@ __Example 1__ demonstrates the creation of a text watermark.
 
 #### __[C#] Example 1: Create text watermark__
 
-{{region radwordsprocessing-concepts-watermark_0}}
-
-    TextWatermarkSettings settings = new TextWatermarkSettings()
-    {
-        Angle = 12,
-        Width = 200,
-        Height = 300,
-        Opacity = 0.4,
-        FontFamily = new FontFamily("Verdana"),
-        ForegroundColor = Colors.Red,
-        Text = "DRAFT"
-    };
-    Watermark textWatermark = new Watermark(settings);
+{{region cs-radwordsprocessing-concepts-watermark_0}}
+	            
+	TextWatermarkSettings settings = new TextWatermarkSettings()
+	{
+	    Angle = 12,
+	    Width = 200,
+	    Height = 300,
+	    Opacity = 0.4,
+	    FontFamily = new FontFamily("Verdana"),
+	    ForegroundColor = Colors.Red,
+	    Text = "DRAFT"
+	};
+	            
+	Watermark textWatermark = new Watermark(settings);
 {{endregion}}
 
 
@@ -65,14 +66,15 @@ Creating image watermark is very similar to creating a text one. __Example 2__ s
 
 #### __[C#] Example 2: Create image watermark__
 
-{{region radwordsprocessing-concepts-watermark_1}}
-    Watermark imageWatermark = new Watermark(new ImageWatermarkSettings()
-    {
-        Angle = 45,
-        Width = 50,
-        Height = 75,
-        ImageSource = new Telerik.Windows.Documents.Media.ImageSource(imageStream, "png")
-    });
+{{region cs-radwordsprocessing-concepts-watermark_1}}
+	    
+	Watermark imageWatermark = new Watermark(new ImageWatermarkSettings()
+	{
+	    Angle = 45,
+	    Width = 50,
+	    Height = 75,
+	    ImageSource = new Telerik.Windows.Documents.Media.ImageSource(imageStream, "png")
+	});
 {{endregion}}
 
 
@@ -86,9 +88,9 @@ __Example 3__ demonstrates how you can add the watermark created in __Example 1_
 
 #### __[C#] Example 3: Add watermark to header__
 
-{{region radwordsprocessing-concepts-watermark_2}}
-    Header header = document.Sections.First().Headers.Add(HeaderFooterType.Default);
-    header.Watermarks.Add(textWatermark);
+{{region cs-radwordsprocessing-concepts-watermark_2}}
+	Header header = document.Sections.First().Headers.Add(HeaderFooterType.Default);
+	header.Watermarks.Add(textWatermark);
 {{endregion}}
 
 >tipBy default, if header is omitted for a __Section__ other than the first one, it is inherited from the previous __Section__. The watermark set in __Example 3__ will be implicitly inherited by all sections following the first one since watermarks are preserved in the header.
@@ -101,13 +103,13 @@ __Example 4__ demonstrates how to set the watermark created in __Example 2__ thr
 
 #### __[C#] Example 4: Set watermark with RadFlowDocumentEditor__
 
-{{region radwordsprocessing-concepts-watermark_3}}
-    Section section = editor.Document.Sections.AddSection();
-    editor.SetWatermark(imageWatermark, section, HeaderFooterType.First);
+{{region cs-radwordsprocessing-concepts-watermark_3}}
+	Section section = editor.Document.Sections.AddSection();
+	editor.SetWatermark(imageWatermark, section, HeaderFooterType.First);
 {{endregion}}
 
 
-# See Also
+## See Also
 
  * [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

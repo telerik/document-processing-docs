@@ -100,8 +100,9 @@ __Example 1__ adds a default bulleted list to a predefined RadFlowDocument.
 
 #### __[C#] Example 1: Add list template__
 
-{{region radwordsprocessing-concepts-lists_0}}
-    List list = document.Lists.Add(ListTemplateType.BulletDefault);
+{{region cs-radwordsprocessing-concepts-lists_0}}
+	            
+	List list = document.Lists.Add(ListTemplateType.BulletDefault);
 {{endregion}}
 
 
@@ -114,23 +115,25 @@ The next tutorial will get you through the creation of a list.
 1. Define a new __RadFlowDocument__ and add a __Section__ in it.
             
 
-#### __[C#] Step 2: Create RadFlowDocument__
-
-{{region radwordsprocessing-concepts-lists_1}}
-    RadFlowDocument document = new RadFlowDocument();
-    Section section = document.Sections.AddSection();
-{{endregion}}
+	#### __[C#] Step 1: Create RadFlowDocument__
+	
+	{{region cs-radwordsprocessing-concepts-lists_1}}
+		            
+		RadFlowDocument document = new RadFlowDocument();
+		Section section = document.Sections.AddSection();
+	{{endregion}}
 
 
 
 1. Create a __List__ object and associate it with the document by adding it to the __Lists__ collection.
             
 
-	#### __[C#] Step 3: Create list__
+	#### __[C#] Step 2: Create list__
 	
-	{{region radwordsprocessing-concepts-lists_2}}
-	    List list = new List();
-	    document.Lists.Add(list); // Adding the list in the document.
+	{{region cs-radwordsprocessing-concepts-lists_2}}
+		            
+		List list = new List();
+		document.Lists.Add(list); // Adding the list in the document.
 	{{endregion}}
 	
 	In this case, the default __HybridMultilevel__ type of list would be created.
@@ -139,10 +142,11 @@ The next tutorial will get you through the creation of a list.
 1. Iterate over the collection of __Levels__ the list has.
             
 
-	#### __[C#] Step 4: Iterate levels__
+	#### __[C#] Step 3: Iterate levels__
 	
-	{{region radwordsprocessing-concepts-lists_3}}
-	    for (int level = 0; level < list.Levels.Count; ++level)
+	{{region cs-radwordsprocessing-concepts-lists_3}}
+		    
+		for (int level = 0; level < list.Levels.Count; ++level)
 	{{endregion}}
 
 
@@ -150,18 +154,19 @@ The next tutorial will get you through the creation of a list.
 1. Specify some properties for each level.
             
 
-	#### __[C#] Step 5: Customize list levels__
+	#### __[C#] Step 4: Customize list levels__
 	
-	{{region radwordsprocessing-concepts-lists_4}}
-	    bool isEven = (level % 2) == 0;
-	
-	    list.Levels[level].StartIndex = 1;
-	    // We set Decimal numbering style to a list level if it is even level, otherwise Bullet.
-	    list.Levels[level].NumberingStyle = isEven ? NumberingStyle.Decimal : NumberingStyle.Bullet;
-	    // Accordingly to the above rule, we set the corresponding NumberTextFormat.
-	    list.Levels[level].NumberTextFormat = isEven ? "%" + (level + 1) + "." : "o";
-	    // Set the desired indentation of the ListLevel can be done through its ParagraphProperties:
-	    list.Levels[level].ParagraphProperties.LeftIndent.LocalValue = 48 + (level * 24);
+	{{region cs-radwordsprocessing-concepts-lists_4}}
+		                
+		bool isEven = (level % 2) == 0;
+		
+		list.Levels[level].StartIndex = 1;
+		// We set Decimal numbering style to a list level if it is even level, otherwise Bullet.
+		list.Levels[level].NumberingStyle = isEven ? NumberingStyle.Decimal : NumberingStyle.Bullet;
+		// Accordingly to the above rule, we set the corresponding NumberTextFormat.
+		list.Levels[level].NumberTextFormat = isEven ? "%" + (level + 1) + "." : "o";
+		// Set the desired indentation of the ListLevel can be done through its ParagraphProperties:
+		list.Levels[level].ParagraphProperties.LeftIndent.LocalValue = 48 + (level * 24);
 	{{endregion}}
 	
 	With this step the list is ready-to-use.
@@ -177,14 +182,14 @@ __Example 6__ demonstrates how you can apply the list created in Steps 1-4 above
 
 #### __[C#] Example 6: Apply list__
 
-{{region radwordsprocessing-concepts-lists_5}}
-    for (int level = 0; level < list.Levels.Count; level++)
-    {
-        Paragraph paragrah = section.Blocks.AddParagraph();
-        paragrah.Inlines.AddRun(string.Format("ListLevel: {0}", level + 1));
-        paragrah.ListId = list.Id;
-        paragrah.ListLevel = level;
-    }
+{{region cs-radwordsprocessing-concepts-lists_5}}
+	for (int level = 0; level < list.Levels.Count; level++)
+	{
+	    Paragraph paragrah = section.Blocks.AddParagraph();
+	    paragrah.Inlines.AddRun(string.Format("ListLevel: {0}", level + 1));
+	    paragrah.ListId = list.Id;
+	    paragrah.ListLevel = level;
+	}
 {{endregion}}
 
 
@@ -193,7 +198,7 @@ __Example 6__ demonstrates how you can apply the list created in Steps 1-4 above
 
 ![Rad Words Processing Concepts Lists 01](images/RadWordsProcessing_Concepts_Lists_01.png)
 
-# See Also
+## See Also
 
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
 

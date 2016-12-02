@@ -60,14 +60,14 @@ Excluding the default constructor, the __TabStopCollection__ class exposes an ov
 <a name="example1"><a/>
 #### __[C#] Example 1: Create a TabStopCollection__
 
-{{region radwordsprocessing-concepts-tabstops_0}}
-
+{{region cs-radwordsprocessing-concepts-tabstops_0}}
+	            
 	List<TabStop> tabStops = new List<TabStop>();
 	tabStops.Add(new TabStop(Unit.InchToDip(1), TabStopType.Left));
 	tabStops.Add(new TabStop(Unit.InchToDip(2), TabStopType.Center, TabStopLeader.Dot));
 	tabStops.Add(new TabStop(Unit.InchToDip(3), TabStopType.Right, TabStopLeader.Hyphen));
 	tabStops.Add(new TabStop(Unit.InchToDip(5.5), TabStopType.Bar));
-	
+	            
 	TabStopCollection collection = new TabStopCollection(tabStops);
 {{endregion}}
 
@@ -77,9 +77,10 @@ Excluding the default constructor, the __TabStopCollection__ class exposes an ov
 In __Example 2__ is illustrated how to insert items in the __TabStopCollection__ created in [Example 1](#example1). Keep in mind that due to the fact that this collection is immutable, the __Insert()__ method will return a **new instance** of the class.
 
 #### __[C#] Example 2: Insert item in a TabStopCollection__
-{{region radwordsprocessing-concepts-tabstops_1}}
-	TabStopCollection collection = collection.Insert(new TabStop(Unit.InchToDip(4)))
-                                             .Insert(new TabStop(Unit.InchToDip(5.5), TabStopType.Right));
+{{region cs-radwordsprocessing-concepts-tabstops_1}}
+	            
+	collection = collection.Insert(new TabStop(Unit.InchToDip(4)))
+	                       .Insert(new TabStop(Unit.InchToDip(5.5), TabStopType.Right));
 {{endregion}}
 
 
@@ -88,7 +89,7 @@ In __Example 2__ is illustrated how to insert items in the __TabStopCollection__
 The snippet below shows how to remove an item from the __TabStopCollection__ created in [Example 1](#example1). Keep in mind that due to the fact that this collection is immutable, the Remove() method will return new instance of the class.
 
 #### __[C#] Example 3: Remove item from a TabStopCollection__
-{{region radwordsprocessing-concepts-tabstops_2}}
+{{region cs-radwordsprocessing-concepts-tabstops_2}}
 	TabStop tabStopToRemove = collection.First();
 	collection = collection.Remove(tabStopToRemove);
 {{endregion}}
@@ -108,6 +109,8 @@ The code from __Example 4__ demonstrates how to create a tab stop.
 
 {{region radwordsprocessing-concepts-tabstops_3}}
 	ТabStop tabStop = new TabStop(Unit.InchToDip(2), TabStopType.Center);
+{{region cs-radwordsprocessing-concepts-tabstops_3}}
+	TabStop tabStop = new TabStop(Unit.InchToDip(2), TabStopType.Center);
 {{endregion}}
 
 ### Adding a TabStop
@@ -116,8 +119,8 @@ __Example 5__ shows how to add the tab stop created in [Example 1](#example1) to
 
 #### __[C#] Example 5: Insert a TabStop__
 
-{{region radwordsprocessing-concepts-tabstops_4}}
-	paragraph.TabStops = paragraph.TabStops.Insert(tabStop);
+{{region cs-radwordsprocessing-concepts-tabstops_4}}
+	paragraph.TabStops = paragraph.TabStops.Remove(tabStop);
 {{endregion}}
 
 ### Remove a TabStop
@@ -126,10 +129,10 @@ The following code-snippet illustrates how to remove the created in [Example 4](
 
 #### __[C#] Example 5: Remove a TabStop__
 
-{{region radwordsprocessing-concepts-tabstops_5}}
-	paragraph.TabStops = paragraph.TabStops.Insert(tabStop);
+{{region cs-radwordsprocessing-concepts-tabstops_5}}
+	paragraph.TabStops = paragraph.TabStops.Remove(tabStop);
 {{endregion}}
 
-# See Also
+## See Also
 
 * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

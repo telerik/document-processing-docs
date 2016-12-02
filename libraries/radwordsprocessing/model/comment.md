@@ -26,11 +26,11 @@ __Example 1__ shows how to create a __Comment__ and add its CommentRangeStart an
 
 #### __[C#] Example 1: Add a comment to a paragraph__
 
-{{region radwordsprocessing-model-comment_0}}
-    Comment comment = document.Comments.AddComment();
-    paragraph.Inlines.Add(comment.CommentRangeStart);
-    paragraph.Inlines.AddRun("text");
-    paragraph.Inlines.Add(comment.CommentRangeEnd);
+{{region cs-radwordsprocessing-model-comment_0}}
+	Comment comment = document.Comments.AddComment();
+	paragraph.Inlines.Add(comment.CommentRangeStart);
+	paragraph.Inlines.AddRun("text");
+	paragraph.Inlines.Add(comment.CommentRangeEnd);
 {{endregion}}
 
 
@@ -43,8 +43,9 @@ __Example 2__ shows how you can insert a previously created __Comment__ object i
 
 #### __[C#] Example 2: Insert previously created comment__
 
-{{region radwordsprocessing-model-comment_1}}
-    editor.InsertComment(comment);
+{{region cs-radwordsprocessing-model-comment_1}}
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
+	editor.InsertComment(comment);
 {{endregion}}
 
 
@@ -54,11 +55,11 @@ __Example 3__ demonstrates how you can use another overload of __RadFlowDocument
 
 #### __[C#] Example 3: Insert comment around run__
 
-{{region radwordsprocessing-model-comment_2}}
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-
-    Run run = editor.InsertText("text");
-    editor.InsertComment("My sample comment.", run, run);
+{{region cs-radwordsprocessing-model-comment_2}}
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
+	
+	Run run = editor.InsertText("text");
+	editor.InsertComment("My sample comment.", run, run);
 {{endregion}}
 
 
@@ -83,14 +84,14 @@ __Example 4__ shows how you can add a Table to a Comment.
 
 #### __[C#] Example 4: Add blocks to a comment__
 
-{{region radwordsprocessing-model-comment_3}}
-    Paragraph paragraph = comment.Blocks.AddParagraph();
-    Table table = comment.Blocks.AddTable();
+{{region cs-radwordsprocessing-model-comment_3}}
+	Paragraph paragraph = comment.Blocks.AddParagraph();
+	Table table = comment.Blocks.AddTable();
 {{endregion}}
 
 
 
-# See Also
+## See Also
 
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

@@ -32,12 +32,12 @@ The code from __Example 1__ shows how to use __RtfFormatProvider__ to import an 
 
 #### __[C#] Example 1: Import document from a file__
 
-{{region radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_0}}
-    RtfFormatProvider provider = new RtfFormatProvider();
-    using (Stream input = File.OpenRead("Sample.rtf"))
-    {
-        RadFlowDocument document = provider.Import(input);
-    }
+{{region cs-radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_0}}
+	RtfFormatProvider provider = new RtfFormatProvider();
+	using (Stream input = File.OpenRead("Sample.rtf"))
+	{
+	    RadFlowDocument document = provider.Import(input);
+	}
 {{endregion}}
 
 
@@ -47,9 +47,9 @@ And here is how you can import a document from string containing the RTF documen
 
 #### __[C#] Example 2: Import document from a string__
 
-{{region radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_1}}
-    RtfFormatProvider provider = new RtfFormatProvider();
-    RadFlowDocument document = provider.Import(input);
+{{region cs-radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_1}}
+	RtfFormatProvider provider = new RtfFormatProvider();
+	RadFlowDocument document = provider.Import(input);
 {{endregion}}
 
 
@@ -67,13 +67,13 @@ __Example 3__ shows how to use __RtfFormatProvider__ to export __RadFlowDocument
 
 #### __[C#] Example 3: Export a document to a file__
 
-{{region radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_2}}
-    RtfFormatProvider provider = new RtfFormatProvider();
-    using (Stream output = File.Create("sample.rtf"))
-    {
-        RadFlowDocument document = CreateRadFlowDocument();
-        provider.Export(document, output);
-    }
+{{region cs-radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_2}}
+	RtfFormatProvider provider = new RtfFormatProvider();
+	using (Stream output = File.Create("sample.rtf"))
+	{
+	    RadFlowDocument document = CreateRadFlowDocument();
+	    provider.Export(document, output);
+	}
 {{endregion}}
 
 
@@ -83,10 +83,10 @@ You can also export the document to a string and preserve it in a database.
 
 #### __[C#] Example 4: Export a document to a string__
 
-{{region radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_3}}
-    RtfFormatProvider provider = new RtfFormatProvider();
-    RadFlowDocument document = CreateRadFlowDocument();
-    string output = provider.Export(document);
+{{region cs-radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_3}}
+	RtfFormatProvider provider = new RtfFormatProvider();
+	RadFlowDocument document = CreateRadFlowDocument();
+	string output = provider.Export(document);
 {{endregion}}
 
 

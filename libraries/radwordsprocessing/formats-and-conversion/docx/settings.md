@@ -42,12 +42,12 @@ __Example 1__ shows how you can create and specify particular export settings to
 
 #### __[C#] Example 1: Create DocxExportSettings__
 
-{{region radwordsprocessing-formats-and-conversion-docx-settings_0}}
-    DocxFormatProvider provider = new DocxFormatProvider();
-    DocxExportSettings exportSettings = new DocxExportSettings();
-    exportSettings.AutoUpdateFields = true;
-    exportSettings.InvalidDocumentAction = InvalidDocumentAction.ThrowException;
-    provider.ExportSettings = exportSettings;
+{{region cs-radwordsprocessing-formats-and-conversion-docx-settings_0}}
+	DocxFormatProvider provider = new DocxFormatProvider();
+	DocxExportSettings exportSettings = new DocxExportSettings();
+	exportSettings.AutoUpdateFields = true;
+	exportSettings.InvalidDocumentAction = InvalidDocumentAction.ThrowException;
+	provider.ExportSettings = exportSettings;
 {{endregion}}
 
 

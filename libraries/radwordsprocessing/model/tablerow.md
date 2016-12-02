@@ -29,9 +29,9 @@ You can use the code snippet from __Example 1__ to create a __TableRow__ and add
 
 #### __[C#] Example 1: Create a TableRow and add it to a table__
 
-{{region radwordsprocessing-model-tablerow_0}}
-    TableRow row = new TableRow(document);
-    table.Rows.Add(row);
+{{region cs-radwordsprocessing-model-tablerow_0}}
+	TableRow row = new TableRow(document);
+	table.Rows.Add(row);
 {{endregion}}
 
 
@@ -41,8 +41,8 @@ In order to create a __TableRow__ and add it in the document tree in the same ti
 
 #### __[C#] Example 2: Create a TableRow and add it to a table in the same time__
 
-{{region radwordsprocessing-model-tablerow_1}}
-    TableRow row = table.Rows.AddTableRow();
+{{region cs-radwordsprocessing-model-tablerow_1}}
+	TableRow row = table.Rows.AddTableRow();
 {{endregion}}
 
 
@@ -89,20 +89,20 @@ __Example 3__ shows how to add a number of __TableCell__ elements in a TableRow.
 
 #### __[C#] Example 3: Add TableCell objects to a TableRow__
 
-{{region radwordsprocessing-model-tablerow_2}}
-    TableRow row = table.Rows.AddTableRow();
-
-    for (int i = 0; i < row.Table.GridColumnsCount; i++)
-    {
-        TableCell cell = row.Cells.AddTableCell();
-        cell.Blocks.AddParagraph().Inlines.AddRun(string.Format("Cell 0, {0}", i));
-        cell.PreferredWidth = new TableWidthUnit(50);
-    }
+{{region cs-radwordsprocessing-model-tablerow_2}}
+	TableRow row = table.Rows.AddTableRow();
+	
+	for (int i = 0; i < row.Table.GridColumnsCount; i++)
+	{
+	    TableCell cell = row.Cells.AddTableCell();
+	    cell.Blocks.AddParagraph().Inlines.AddRun(string.Format("Cell 0, {0}", i));
+	    cell.PreferredWidth = new TableWidthUnit(50);
+	}
 {{endregion}}
 
 
 
-# See Also
+## See Also
 
  * [TableRow API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_TableRow.htm)
  * [Table]({%slug radwordsprocessing-model-table%})

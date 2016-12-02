@@ -39,10 +39,11 @@ The suggested way to insert field is to use the __InsertField()__ method of [Rad
 
 #### __[C#] Example 1: Create a document containing a Date field using RadFlowDocumentEditor__
 
-{{region radwordsprocessing-concepts-fields_0}}
-    RadFlowDocument document = new RadFlowDocument();
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.InsertField("DATE", "10/11/2012");
+{{region cs-radwordsprocessing-concepts-fields_0}}
+	            
+	RadFlowDocument document = new RadFlowDocument();
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+	editor.InsertField("DATE", "10/11/2012");
 {{endregion}}
 
 
@@ -52,20 +53,21 @@ You can also create and insert all the parts of the field manually by creating a
 
 #### __[C#] Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo__
 
-{{region radwordsprocessing-concepts-fields_1}}
-    // Create a document with paragraph            
-    RadFlowDocument document = new RadFlowDocument();
-    Paragraph paragraph = document.Sections.AddSection().Blocks.AddParagraph();
-
-    // Create the field info
-    FieldInfo field = new FieldInfo(document);
-
-    // Create and add all the inlines to the paragraph.
-    paragraph.Inlines.Add(field.Start);
-    paragraph.Inlines.AddRun("AUTHOR");
-    paragraph.Inlines.Add(field.Separator);
-    paragraph.Inlines.AddRun("John Doe");
-    paragraph.Inlines.Add(field.End);
+{{region cs-radwordsprocessing-concepts-fields_1}}
+	            
+	// Create a document with a paragraph.
+	RadFlowDocument document = new RadFlowDocument();
+	Paragraph paragraph = document.Sections.AddSection().Blocks.AddParagraph();
+	
+	// Create the field info.
+	FieldInfo field = new FieldInfo(document);
+	            
+	// Create and add all the inlines to the paragraph.
+	paragraph.Inlines.Add(field.Start);
+	paragraph.Inlines.AddRun("AUTHOR");
+	paragraph.Inlines.Add(field.Separator);
+	paragraph.Inlines.AddRun("John Doe");
+	paragraph.Inlines.Add(field.End);
 {{endregion}}
 
 
@@ -96,12 +98,13 @@ Updating a single field is done with the __UpdateField()__ method of the __Field
 
 #### __[C#] Example 3: Update a field__
 
-{{region radwordsprocessing-concepts-fields_2}}
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-    FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "result");
-    Console.WriteLine(fieldInfo.GetResult()); // Output: result
-    fieldInfo.UpdateField();
-    Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
+{{region cs-radwordsprocessing-concepts-fields_2}}
+	            
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
+	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "result");
+	Console.WriteLine(fieldInfo.GetResult()); // Output: result
+	fieldInfo.UpdateField();
+	Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
 {{endregion}}
 
 
@@ -113,14 +116,15 @@ All fields in the document can be updated using __UpdateFields()__ of __RadFlowD
 
 #### __[C#] Example 4: Update all fields in a document__
 
-{{region radwordsprocessing-concepts-fields_3}}
-    RadFlowDocument document = new RadFlowDocument();
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "result");
-
-    Console.WriteLine(fieldInfo.GetResult()); // Output: result
-    document.UpdateFields();
-    Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
+{{region cs-radwordsprocessing-concepts-fields_3}}
+	            
+	RadFlowDocument document = new RadFlowDocument();
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "result");
+	        
+	Console.WriteLine(fieldInfo.GetResult()); // Output: result
+	document.UpdateFields();
+	Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
 {{endregion}}
 
 
@@ -161,22 +165,23 @@ Fields can also be nested in each other. If there are nested fields inside the c
 
 #### __[C#] Example 5: Create a nested field__
 
-{{region radwordsprocessing-concepts-fields_4}}
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-
-    // Create an outer field with empty code fragment
-    FieldInfo outerFieldInfo = editor.InsertField(string.Empty, "if field result");
-
-    // Move the editor after the field start character
-    editor.MoveToInlineEnd(outerFieldInfo.Start);
-
-    // Create the a code fragment with a nested TIME field
-    editor.InsertText("IF ");
-    editor.InsertField("TIME \\@ HH", "time field result");
-    editor.InsertText(" < 12 \"Good morning!\" \"Good afternoon!\"");
-
-    outerFieldInfo.UpdateField();
-    Console.WriteLine(outerFieldInfo.GetResult()); // Output: Good afternoon!
+{{region cs-radwordsprocessing-concepts-fields_4}}
+	            
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
+	            
+	// Create an outer field with empty code fragment.
+	FieldInfo outerFieldInfo = editor.InsertField(string.Empty, "if field result");
+	            
+	// Move the editor after the field start character.
+	editor.MoveToInlineEnd(outerFieldInfo.Start);
+	        
+	// Create a code fragment with a nested TIME field.
+	editor.InsertText("IF ");
+	editor.InsertField("TIME \\@ HH", "time field result");
+	editor.InsertText(" < 12 \"Good morning!\" \"Good afternoon!\"");
+	
+	outerFieldInfo.UpdateField();
+	Console.WriteLine(outerFieldInfo.GetResult()); // Output: Good afternoon!
 {{endregion}}
 
 ![Rad Words Processing Concepts Fields 02](images/RadWordsProcessing_Concepts_Fields_02.png)
@@ -225,7 +230,7 @@ __FieldInfo__ exposes several properties and methods for working with fields:
 When exporting documents to DOCX format you can use the __IsDirty__ property of an individual fields or the __AutoUpdateFields__ property of the export settings of the __DocxFormatProvider__, which will cause the consumer to update the fields when the document is opened. More information about the export settings of the provider is available [here]({%slug radwordsprocessing-formats-and-conversion-docx-settings%}).
         
 
-# See Also
+## See Also
 
  * [Document model]({%slug radwordsprocessing-model%})
  * [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%})

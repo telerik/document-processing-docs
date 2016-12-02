@@ -5,7 +5,7 @@ description: Import Document Element
 slug: radwordsprocessing-editing-import-document-element
 tags: import, document, element
 published: True
-position: 3
+position: 2
 ---
 
 # Import Document Element
@@ -29,8 +29,8 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 <a name="example1"><a/>
 #### __[C#] Example 1: Create DocumentElementImporter__
 
-{{region radwordsprocessing-editing-import-document-element_0}}
-
+{{region cs-radwordsprocessing-editing-import-document-element_0}}
+	            
 	DocumentElementImporter importer = new DocumentElementImporter(targetDocument, sourceDocument, ConflictingStylesResolutionMode.UseTargetStyle);
 {{endregion}}
 
@@ -42,8 +42,8 @@ The **DocumentElementImporter** class exposes the Import&lt;T&gt;() method, whic
 
 #### __[C#] Example 2: Import a document element__
 
-{{region radwordsprocessing-editing-import-document-element_1}}
-
+{{region cs-radwordsprocessing-editing-import-document-element_1}}
+	            
 	Run run = targetDocument.EnumerateChildrenOfType<Run>().First();
 	Run importedRun = importer.Import<Run>(run);
 {{endregion}}
@@ -98,7 +98,7 @@ In **Table 1** is described the behavior of the Import&lt;T&gt;() method of **Do
 
 </table>
 
-# See Also
+## See Also
 
 * [Document Model]({%slug radwordsprocessing-model%})
 * [Clone and Merge]({%slug radwordsprocessing-editing-clone-and-merge%})

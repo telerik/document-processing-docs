@@ -34,7 +34,7 @@ The code snippet in __Example 1__ shows how to create a __PdfFormatProvider__ in
 >The PdfFormatProvider class of RadWordsProcessing is located in the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf namespace**.
 
 #### __[C#] Example 1: Export to PDF file__
-{{region  radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
+{{region cs-radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
 	PdfFormatProvider provider = new PdfFormatProvider();
 	using (Stream output = File.OpenWrite("sample.pdf"))
 	{
@@ -51,11 +51,11 @@ __Example 2__ demonstrates how to export the contents of a __RadFlowDocument__ t
 
 
 #### __[C#] Example 2: Export to RadFixedDocument__
-{{region  radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
-    RadFlowDocument document = CreateRadFlowDocument();
-
-    PdfFormatProvider provider = new PdfFormatProvider();
-    RadFixedDocument fixedDocument = provider.ExportToFixedDocument(document);
+{{region cs-radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
+	RadFlowDocument document = CreateRadFlowDocument();
+	
+	PdfFormatProvider provider = new PdfFormatProvider();
+	RadFixedDocument fixedDocument = provider.ExportToFixedDocument(document);
 {{endregion}}
 
 

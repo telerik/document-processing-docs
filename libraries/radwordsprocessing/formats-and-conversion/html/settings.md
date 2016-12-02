@@ -54,22 +54,22 @@ __Example 1__ shows how you can create and apply specific import settings.
             
 
 #### __[C#] Example 1: Create HtmlImportSettings__
-{{region radwordsprocessing-formats-and-conversion-html-settings_0}}
-    HtmlFormatProvider provider = new HtmlFormatProvider();
-    HtmlImportSettings importSettings = new HtmlImportSettings();
-
-    importSettings.GenericFonts.Serif = new ThemableFontFamily("Baskerville");
-
-    byte[] data = this.GetImageData();
-    provider.ImportSettings.LoadFromUri += (s, e) =>
-    {
-        if (e.Uri == "test.jpg")
-        {
-            e.SetData(data);
-        }
-    };
-
-    provider.ImportSettings = importSettings;
+{{region cs-radwordsprocessing-formats-and-conversion-html-settings_0}}
+	HtmlFormatProvider provider = new HtmlFormatProvider();
+	HtmlImportSettings importSettings = new HtmlImportSettings();
+	
+	importSettings.GenericFonts.Serif = new ThemableFontFamily("Baskerville");
+	
+	byte[] data = this.GetImageData();
+	provider.ImportSettings.LoadFromUri += (s, e) =>
+	{
+	    if (e.Uri == "test.jpg")
+	    {
+	        e.SetData(data);
+	    }
+	};
+	
+	provider.ImportSettings = importSettings;
 {{endregion}}
 
 > With Q3 2015 the __UriImageSource__ class has been introduced and it is not necessary to subscribe to the LoadFromUri event when you want to import an image with URI. 
@@ -93,8 +93,7 @@ The **UriImageSource** objects are always exported as images with URI as their s
 
 #### __[C#] Example 2: Convert UriImageSource to ImageSource__
 
-{{region radwordsprocessing-formats-and-conversion-html-settings_2}}
-
+{{region cs-radwordsprocessing-formats-and-conversion-html-settings_2}}
 	UriImageSource uriImageSource = imageInline.Image.ImageSource as UriImageSource;
 	if (uriImageSource != null)
 	{
@@ -218,7 +217,7 @@ __Example 3__ demonstrates how you can create export settings.
 
 #### __[C#] Example 3: Create HtmlExportSettings__
 
-{{region radwordsprocessing-formats-and-conversion-html-settings_1}}
+{{region cs-radwordsprocessing-formats-and-conversion-html-settings_1}}
 	HtmlFormatProvider provider = new HtmlFormatProvider();
 	HtmlExportSettings exportSettings = new HtmlExportSettings();
 	
@@ -233,7 +232,7 @@ __Example 3__ demonstrates how you can create export settings.
 	    e.Handled = true;
 	    e.Title = "Test image";
 	    e.ExportSize = true;
-	    e.AlternativeText = "You will see this text if the image is not loaded";               
+	    e.AlternativeText = "You will see this text if the image is not loaded";
 	};
 	
 	provider.ExportSettings = exportSettings;
@@ -241,7 +240,7 @@ __Example 3__ demonstrates how you can create export settings.
 
 
 
-# See Also
+## See Also
 
  * [Styles]({%slug radwordsprocessing-concepts-styles%})
  * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})

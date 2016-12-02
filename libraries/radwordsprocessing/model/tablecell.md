@@ -29,9 +29,9 @@ You can use the code snippet from __Example 1__ to create a __TableCell__ and ad
 
 #### __[C#] Example 1: Create a TableCell object and add it to a TableRow__
 
-{{region radwordsprocessing-model-tablecell_0}}
-    TableCell cell = new TableCell(document);
-    row.Cells.Add(cell);
+{{region cs-radwordsprocessing-model-tablecell_0}}
+	TableCell cell = new TableCell(document);
+	row.Cells.Add(cell);
 {{endregion}}
 
 
@@ -41,9 +41,9 @@ To create a __TableCell__ and add it in the document tree in the same time, you 
 
 #### __[C#] Example 2: Create a TableCell and add it to a TableRow in the same time__
 
-{{region radwordsprocessing-model-tablecell_1}}
-    TableRow row = table.Rows.AddTableRow();
-    TableCell cell = row.Cells.AddTableCell();
+{{region cs-radwordsprocessing-model-tablecell_1}}
+	TableRow row = table.Rows.AddTableRow();
+	TableCell cell = row.Cells.AddTableCell();
 {{endregion}}
 
 
@@ -116,8 +116,8 @@ __Example 3__ demonstrates how to add a __Paragraph__ to a __TableCell__.
 #### __[C#] Example 3: Add a paragraph to a TableCell__
 
 
-{{region radwordsprocessing-model-tablecell_2}}
-    Paragraph paragraph = cell.Blocks.AddParagraph();
+{{region cs-radwordsprocessing-model-tablecell_2}}
+	Paragraph paragraph = cell.Blocks.AddParagraph();
 {{endregion}}
 
 
@@ -125,7 +125,7 @@ __Example 3__ demonstrates how to add a __Paragraph__ to a __TableCell__.
 Through the __BlockCollection__ property of the __TableCell__ element you can add a __Table__ or any other [BlockBase](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_BlockBase.htm) element.
             
 
-# See Also
+## See Also
 
  * [TableCell API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_TableCell.htm)
  * [Document model]({%slug radwordsprocessing-model%})

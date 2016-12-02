@@ -61,7 +61,7 @@ Relationships between document elements can be additionally traversed using:
 * [EnumerateChildrenOfType<T>](http://docs.telerik.com/devtools/document-processing/api/html/M_Telerik_Windows_Documents_Flow_Model_DocumentElementBase_EnumerateChildrenOfType__1.htm) method. This method can be used to recursively traverse document tree and return all children of given type __T__.
                 
 
-# See Also
+## See Also
 
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
  * [RadFlowDocument API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_RadFlowDocument.htm)
