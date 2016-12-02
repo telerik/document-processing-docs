@@ -37,11 +37,11 @@ Internally there are many mechanisms used to lower the number of calculations, b
 
 #### __[C#] Example 1: Suspend layout updates__
 
-{{region radspreadprocessing-performance_0}}
-    Workbook workbook = new Workbook();
-    workbook.SuspendLayoutUpdate();
-    // The code, which generates the document
-    workbook.ResumeLayoutUpdate();
+{{region cs-radspreadprocessing-performance_0}}
+	Workbook workbook = new Workbook();
+	workbook.SuspendLayoutUpdate();
+	// The code which generates the document
+	workbook.ResumeLayoutUpdate();
 {{endregion}}
 
 
@@ -51,12 +51,12 @@ Note that if an exception is thrown between the two method calls, the resuming o
 
 #### __[C#] Example 2: Suspend layout updates in UndoScope__
 
-{{region radspreadprocessing-performance_1}}
-    Workbook workbook = new Workbook();
-    using (new UpdateScope(workbook.SuspendLayoutUpdate, workbook.ResumeLayoutUpdate))
-    {
-        // The code which generates the document
-    }
+{{region cs-radspreadprocessing-performance_1}}
+	Workbook workbook = new Workbook();
+	using (new UpdateScope(workbook.SuspendLayoutUpdate, workbook.ResumeLayoutUpdate))
+	{
+	    // The code which generates the document
+	}
 {{endregion}}
 
 
@@ -68,11 +68,11 @@ Preserving information about the steps in the undo stack is usually not a time c
 
 #### __[C#] Example 3: Combine steps in undo group__
 
-{{region radspreadprocessing-performance_2}}
-    Workbook workbook = new Workbook();
-    workbook.History.BeginUndoGroup();
-    // The code which generates the document
-    workbook.History.EndUndoGroup();
+{{region cs-radspreadprocessing-performance_2}}
+	Workbook workbook = new Workbook();
+	workbook.History.BeginUndoGroup();
+	// The code which generates the document
+	workbook.History.EndUndoGroup();
 {{endregion}}
 
 
@@ -82,12 +82,12 @@ Note that if an exception is thrown between the two method calls, the ending of 
 
 #### __[C#] Example 4: Combine steps in undo group using UndoScope__
 
-{{region radspreadprocessing-performance_3}}
-    Workbook workbook = new Workbook();
-    using (new UpdateScope(workbook.History.BeginUndoGroup, workbook.History.EndUndoGroup))
-    {
-        // The code which generates the document
-    }
+{{region cs-radspreadprocessing-performance_3}}
+	Workbook workbook = new Workbook();
+	using (new UpdateScope(workbook.History.BeginUndoGroup, workbook.History.EndUndoGroup))
+	{
+	    // The code which generates the document
+	}
 {{endregion}}
 
 
@@ -99,10 +99,10 @@ As you already know from the [Reduce the Number of Undo Steps section](#reduce-t
 
 #### __[C#] Example 5: Disable history__
 
-{{region radspreadprocessing-performance_4}}
-    workbook.History.IsEnabled = false;
-    // The code which generates the document
-    workbook.History.IsEnabled = true;
+{{region cs-radspreadprocessing-performance_4}}
+	workbook.History.IsEnabled = false;
+	// The code which generates the document
+	workbook.History.IsEnabled = true;
 {{endregion}}
 
 
@@ -112,13 +112,13 @@ If an exception is thrown before enabling the history, it will not be enabled an
 
 #### __[C#] Example 6: Disable and enable history using UndoScope__
 
-{{region radspreadprocessing-performance_5}}
-    using (new UpdateScope(
-        () => { workbook.History.IsEnabled = false; },
-        () => { workbook.History.IsEnabled = true; }))
-    {
-        // The code which generates the document
-    }
+{{region cs-radspreadprocessing-performance_5}}
+	using (new UpdateScope(
+	    () => { workbook.History.IsEnabled = false; },
+	    () => { workbook.History.IsEnabled = true; }))
+	{
+	    // The code which generates the document
+	}
 {{endregion}}
 
 
@@ -159,7 +159,7 @@ The easiest way to achieve this is by using the __SetValue()__ overload with the
 More information regarding cell value types is available in the [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) article.
 
 
-# See Also
+## See Also
 
  * [History]({%slug radspreadprocessing-features-history%})
 

@@ -73,13 +73,13 @@ In order to fit the print content better, we use the Worksheet's page setup and 
 
 #### __[C#] Example 1: Use WorksheetPageSetup__
 
-{{region radspreadprocessing-features-worksheetpagesetup_0}}
-    WorksheetPageSetup pageSetup = workbook.ActiveWorksheet.WorksheetPageSetup;
-
-    pageSetup.PaperType = PaperTypes.A4;
-    pageSetup.PageOrientation = PageOrientation.Landscape;
-    pageSetup.ScaleFactor = new Size(0.9, 0.9);
-    pageSetup.CenterHorizontally = true;
+{{region cs-radspreadprocessing-features-worksheetpagesetup_0}}
+	WorksheetPageSetup pageSetup = workbook.ActiveWorksheet.WorksheetPageSetup;
+	
+	pageSetup.PaperType = PaperTypes.A4;
+	pageSetup.PageOrientation = PageOrientation.Landscape;
+	pageSetup.ScaleFactor = new Size(0.9, 0.9);
+	pageSetup.CenterHorizontally = true;
 {{endregion}}
 
 
@@ -115,14 +115,14 @@ The example shown in __Figure 3__ demonstrates how to use Worksheet's print area
 
 #### __[C#] Example 2: Set PrintArea__
 
-{{region radspreadprocessing-features-worksheetpagesetup_1}}
-    PrintArea printArea = workbook.ActiveWorksheet.WorksheetPageSetup.PrintArea;
-
-    printArea.SetPrintArea(new CellRange[]
-    {
-        new CellRange(0, 0, 4, 8),
-        new CellRange(1, 1, 25, 3)
-    });
+{{region cs-radspreadprocessing-features-worksheetpagesetup_1}}
+	PrintArea printArea = workbook.ActiveWorksheet.WorksheetPageSetup.PrintArea;
+	
+	printArea.SetPrintArea(new CellRange[]
+	{
+	    new CellRange(0, 0, 4, 8),
+	    new CellRange(1, 1, 25, 3)
+	});
 {{endregion}}
 
 
@@ -173,16 +173,16 @@ In order to separate semantically-correct the print data onto several pages, we 
 
 #### __[C#] Example 3: Insert PageBreaks__
 
-{{region radspreadprocessing-features-worksheetpagesetup_2}}
-    PageBreaks pageBreaks = workbook.ActiveWorksheet.WorksheetPageSetup.PageBreaks;
-
-    pageBreaks.TryInsertHorizontalPageBreak(5, 0);
-    pageBreaks.TryInsertHorizontalPageBreak(8, 0);
-    pageBreaks.TryInsertHorizontalPageBreak(11, 0);
-    pageBreaks.TryInsertHorizontalPageBreak(14, 0);
-    pageBreaks.TryInsertHorizontalPageBreak(17, 0);
-    pageBreaks.TryInsertHorizontalPageBreak(20, 0);
-    pageBreaks.TryInsertHorizontalPageBreak(23, 0);
+{{region cs-radspreadprocessing-features-worksheetpagesetup_2}}
+	PageBreaks pageBreaks = workbook.ActiveWorksheet.WorksheetPageSetup.PageBreaks;
+	
+	pageBreaks.TryInsertHorizontalPageBreak(5, 0);
+	pageBreaks.TryInsertHorizontalPageBreak(8, 0);
+	pageBreaks.TryInsertHorizontalPageBreak(11, 0);
+	pageBreaks.TryInsertHorizontalPageBreak(14, 0);
+	pageBreaks.TryInsertHorizontalPageBreak(17, 0);
+	pageBreaks.TryInsertHorizontalPageBreak(20, 0);
+	pageBreaks.TryInsertHorizontalPageBreak(23, 0);
 {{endregion}}
 
 

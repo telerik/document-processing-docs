@@ -37,10 +37,10 @@ __Example 1__ creates a workbook from scratch and adds a worksheet. Further, the
 
 #### __[C#] Example 1: Set formula__
 
-{{region radspreadprocessing-features-formulas_0}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-    workbook.ActiveWorksheet.Cells[0, 0].SetValue("=3+4");
+{{region cs-radspreadprocessing-features-formulas_0}}
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
+	workbook.ActiveWorksheet.Cells[0, 0].SetValue("=3+4");
 {{endregion}}
 
 
@@ -53,31 +53,31 @@ A closer look at the value of cell A1 will reveal that the two methods __GetValu
 
 #### __[C#] Example 2: Get formula value__
 
-{{region radspreadprocessing-features-formulas_1}}
-    FormulaCellValue formulaCellValue = workbook.ActiveWorksheet.Cells[0, 0].GetValue().Value as FormulaCellValue;
-    if (formulaCellValue != null)
-    {
-        RadExpression expression = formulaCellValue.Value;
-        //expression is AdditionExpression with operands 3 and 4
-
-        CellValueFormat format = workbook.ActiveWorksheet.Cells[0, 0].GetFormat().Value;
-        string valueAsString = formulaCellValue.GetValueAsString(format);
-        //valueAsString = "=3+4"
-
-        string resultValueAsString = formulaCellValue.GetResultValueAsString(format);
-        //resultAsString = "7"
-
-        CellValueType valueType = formulaCellValue.ValueType;
-        //valueType = Formula
-
-        CellValueType resultValueType = formulaCellValue.ResultValueType;
-        //resultValueType = Number
-    }
+{{region cs-radspreadprocessing-features-formulas_1}}
+	FormulaCellValue formulaCellValue = workbook.ActiveWorksheet.Cells[0, 0].GetValue().Value as FormulaCellValue;
+	if (formulaCellValue != null)
+	{
+	    RadExpression expression = formulaCellValue.Value;
+	    //expression is AdditionExpression with operands 3 and 4
+	
+	    CellValueFormat format = workbook.ActiveWorksheet.Cells[0, 0].GetFormat().Value;
+	    string valueAsString = formulaCellValue.GetValueAsString(format);
+	    //valueAsString = "=3+4"
+	
+	    string resultValueAsString = formulaCellValue.GetResultValueAsString(format);
+	    //resultAsString = "7"
+	
+	    CellValueType valueType = formulaCellValue.ValueType;
+	    //valueType = Formula
+	
+	    CellValueType resultValueType = formulaCellValue.ResultValueType;
+	    //resultValueType = Number
+	}
 {{endregion}}
 
 
 
-# See Also
+## See Also
 
  * [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
  * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})

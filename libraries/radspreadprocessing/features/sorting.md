@@ -110,8 +110,8 @@ __Example 1__ shows how to create a __ValuesSortCondition__.
 
 #### __[C#] Example 1: Create ValuesSortCondition__
 
-{{region radspreadprocessing-features-sorting_0}}
-    ValuesSortCondition condition = new ValuesSortCondition(0, SortOrder.Ascending);
+{{region cs-radspreadprocessing-features-sorting_0}}
+	ValuesSortCondition condition = new ValuesSortCondition(0, SortOrder.Ascending);
 {{endregion}}
 
 
@@ -132,8 +132,8 @@ __Example 2__ shows how to create a CustomValuesSortCondition.
 
 #### __[C#] Example 2: Create CustomValuesSortCondition__
 
-{{region radspreadprocessing-features-sorting_1}}
-    CustomValuesSortCondition condition = new CustomValuesSortCondition(0, new string[] { "regular", "1 day", "2 days", "express" }, SortOrder.Ascending);
+{{region cs-radspreadprocessing-features-sorting_1}}
+	CustomValuesSortCondition condition = new CustomValuesSortCondition(0, new string[] { "regular", "1 day", "2 days", "express" }, SortOrder.Ascending);
 {{endregion}}
 
 
@@ -151,8 +151,8 @@ __Example 3__ demonstrates how to create a __ForeColorSortCondition__. This cond
 
 #### __[C#] Example 3: Create ForeColorSortCondition__
 
-{{region radspreadprocessing-features-sorting_2}}
-    ForeColorSortCondition condition = new ForeColorSortCondition(0, new ThemableColor(Colors.Red), SortOrder.Ascending);
+{{region cs-radspreadprocessing-features-sorting_2}}
+	ForeColorSortCondition condition = new ForeColorSortCondition(0, new ThemableColor(Colors.Red), SortOrder.Ascending);
 {{endregion}}
 
 
@@ -167,8 +167,8 @@ __Example 4__ shows how to create a __FillColorSortCondition__.
 
 #### __[C#] Example 4: Create FillColorSortCondition__
 
-{{region radspreadprocessing-features-sorting_3}}
-    FillColorSortCondition condition = new FillColorSortCondition(0, PatternFill.CreateSolidFill(Color.FromArgb(255, 181, 18, 27)), SortOrder.Ascending);
+{{region cs-radspreadprocessing-features-sorting_3}}
+	FillColorSortCondition condition = new FillColorSortCondition(0, PatternFill.CreateSolidFill(Color.FromArgb(255, 181, 18, 27)), SortOrder.Ascending);
 {{endregion}}
 
 
@@ -192,12 +192,12 @@ __Example 5__ shows how to create three sorting conditions.
 
 #### __[C#] Example 5: Create Conditions__
 
-{{region radspreadprocessing-features-sorting_4}}
-    Worksheet worksheet = workbook.ActiveWorksheet;
-
-    CustomValuesSortCondition condition1 = new CustomValuesSortCondition(5, new string[] { "regular", "1 day", "2 days", "express" }, SortOrder.Ascending);
-    FillColorSortCondition condition2 = new FillColorSortCondition(7, PatternFill.CreateSolidFill(Color.FromArgb(255, 181, 18, 27)), SortOrder.Ascending);
-    FillColorSortCondition condition3 = new FillColorSortCondition(7, PatternFill.CreateSolidFill(Color.FromArgb(255, 94, 151, 50)), SortOrder.Ascending);
+{{region cs-radspreadprocessing-features-sorting_4}}
+	Worksheet worksheet = workbook.ActiveWorksheet;
+	
+	CustomValuesSortCondition condition1 = new CustomValuesSortCondition(5, new string[] { "regular", "1 day", "2 days", "express" }, SortOrder.Ascending);
+	FillColorSortCondition condition2 = new FillColorSortCondition(7, PatternFill.CreateSolidFill(Color.FromArgb(255, 181, 18, 27)), SortOrder.Ascending);
+	FillColorSortCondition condition3 = new FillColorSortCondition(7, PatternFill.CreateSolidFill(Color.FromArgb(255, 94, 151, 50)), SortOrder.Ascending);
 {{endregion}}
 
 
@@ -207,8 +207,8 @@ Further, __Example 6__ shows how to apply the sorting conditions through the __S
 
 #### __[C#] Example 6: Set conditions through SortState__
 
-{{region radspreadprocessing-features-sorting_5}}
-    worksheet.SortState.Set(new CellRange(3, 0, 17, 7), condition1, condition2, condition3);
+{{region cs-radspreadprocessing-features-sorting_5}}
+	worksheet.SortState.Set(new CellRange(3, 0, 17, 7), condition1, condition2, condition3);
 {{endregion}}
 
 
@@ -218,8 +218,8 @@ Alternatively, __Example 7__ shows how to apply the sorting conditions through t
 
 #### __[C#] Example 7: Set conditions through selection__
 
-{{region radspreadprocessing-features-sorting_6}}
-    worksheet.Cells[3, 0, 17, 7].Sort(condition1, condition2, condition3);
+{{region cs-radspreadprocessing-features-sorting_6}}
+	worksheet.Cells[3, 0, 17, 7].Sort(condition1, condition2, condition3);
 {{endregion}}
 
 
@@ -240,12 +240,12 @@ __Example 8__ shows how to clear the sorting.
 
 #### __[C#] Example 8: Clear sorting__
 
-{{region radspreadprocessing-features-sorting_7}}
-    worksheet.SortState.Clear();
+{{region cs-radspreadprocessing-features-sorting_7}}
+	worksheet.SortState.Clear();
 {{endregion}}
 
 
 
-# See Also
+## See Also
 
  * [Filtering]({%slug radspreadprocessing-features-filtering%})

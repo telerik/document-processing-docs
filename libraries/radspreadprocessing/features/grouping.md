@@ -43,50 +43,50 @@ There are two available options when grouping. The first option is to simply ass
 
 #### __[C#] Example 1: Grouping columns using outline level__
 
-{{region radspreadprocessing-features-grouping_0}}
+{{region cs-radspreadprocessing-features-grouping_0}}
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
 	worksheet.Columns[0].SetOutlineLevel(1);
 	worksheet.Columns[1, 2].SetOutlineLevel(2);
 	worksheet.Columns[3].SetOutlineLevel(1);
-{{#endregion}}
+{{endregion}}
 
 
 #### __[VB.NET] Example 1: Grouping columns using outline level__
 
-{{region radspreadprocessing-features-grouping_6}}
+{{region vb-radspreadprocessing-features-grouping_6}}
 	Dim workbook = New Workbook()
 	Dim worksheet = workbook.Worksheets.Add()
 	
 	worksheet.Columns(0).SetOutlineLevel(1)
 	worksheet.Columns(1, 2).SetOutlineLevel(2)
 	worksheet.Columns(3).SetOutlineLevel(1)
-{{#endregion}}
+{{endregion}}
 
 The other option is to use the Group method exposed by the row/column selection classes.
 
 #### __[C#] Example 2: Grouping columns using the group method__
 
-{{region radspreadprocessing-features-grouping_1}}
+{{region cs-radspreadprocessing-features-grouping_1}}
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
 	worksheet.Columns[0, 3].Group();
 	worksheet.Columns[1, 2].Group();
-{{#endregion}}
+{{endregion}}
 
 
 
 #### __[VB.NET] Example 2: Grouping columns using the group method__
 
-{{region radspreadprocessing-features-grouping_7}}
-    Dim workbook = New Workbook()
-    Dim worksheet = workbook.Worksheets.Add()
-
-    worksheet.Columns(0, 3).Group()
-    worksheet.Columns(1, 2).Group()
-{{#endregion}}
+{{region vb-radspreadprocessing-features-grouping_7}}
+	Dim workbook = New Workbook()
+	Dim worksheet = workbook.Worksheets.Add()
+	
+	worksheet.Columns(0, 3).Group()
+	worksheet.Columns(1, 2).Group()
+{{endregion}}
 
 __Figure 2__ shows the result of both approaches.
 
@@ -99,39 +99,39 @@ As with grouping, ungrouping can be done both through setting the outline level 
 
 The following code snippets exemplify the two approaches to make these changes in a file.
 
-### Figure 3: Ungrouping result 
+#### Figure 3: Ungrouping result 
 ![](images/RadSpreadProcessing_Features_Grouping_03.png)
 
 
-#### __[C#] Example 3: Ungrouping columns using ouline level__
+#### __[C#] Example 3: Ungrouping columns using the ungroup method__
 
-{{region radspreadprocessing-features-grouping_2}}
-	worksheet.Rows[0, 1].ClearOutlineLevel();
-	worksheet.Rows[4, 6].SetOutlineLevel(1);
-{{#endregion}}
+{{region cs-radspreadprocessing-features-grouping_2}}
+	worksheet.Rows[0, 1].Ungroup();
+	worksheet.Rows[4, 6].Ungroup();
+{{endregion}}
 
-#### __[VB.NET] Example 3: Ungrouping columns using ouline level__
+#### __[VB.NET] Example 3: Ungrouping columns using the ungroup method__
 
-{{region radspreadprocessing-features-grouping_8}}
-    worksheet.Rows(0, 1).Ungroup()
-    worksheet.Rows(4, 6).Ungroup()
-{{#endregion}}
+{{region vb-radspreadprocessing-features-grouping_8}}
+	worksheet.Rows(0, 1).Ungroup()
+	worksheet.Rows(4, 6).Ungroup()
+{{endregion}}
 
 You can achieve the same result with the code in __Example 4__.
 
-#### __[C#] Example 4: Ungrouping columns using the ungroup method__
+#### __[C#] Example 4: Ungrouping columns using outline level__
 
-{{region radspreadprocessing-features-grouping_3}}
-	worksheet.Rows[0, 1].Ungroup();
-	worksheet.Rows[4, 6].Ungroup();
-{{#endregion}}
+{{region cs-radspreadprocessing-features-grouping_3}}
+	worksheet.Rows[0, 1].ClearOutlineLevel();
+	worksheet.Rows[4, 6].SetOutlineLevel(1);
+{{endregion}}
 
-#### __[VB.NET] Example 4: Ungrouping columns using the ungroup method__
+#### __[VB.NET] Example 4: Ungrouping columns using outline level__
 
-{{region radspreadprocessing-features-grouping_9}}
-    worksheet.Rows(0, 1).ClearOutlineLevel()
-    worksheet.Rows(4, 6).SetOutlineLevel(1)
-{{#endregion}}
+{{region vb-radspreadprocessing-features-grouping_9}}
+	worksheet.Rows(0, 1).ClearOutlineLevel()
+	worksheet.Rows(4, 6).SetOutlineLevel(1)
+{{endregion}}
 
 ## Getting the Outline Level
 
@@ -140,17 +140,17 @@ You can get the outline level of a row/column or a group of rows/columns using t
 
 #### __[C#] Example 5: Getting the OutlineLevel__
 
-{{region radspreadprocessing-features-grouping_4}}
+{{region cs-radspreadprocessing-features-grouping_4}}
 	RangePropertyValue<int> outlineLevelRangeValue = worksheet.Rows[0, 1].GetOutlineLevel();
 	int outLineLevel = outlineLevelRangeValue.Value;
-{{#endregion}}
+{{endregion}}
 
 #### __[VB.NET] Example 5: Getting the OutlineLevel__
 
-{{region radspreadprocessing-features-grouping_10}}
+{{region vb-radspreadprocessing-features-grouping_10}}
 	Dim outlineLevelRangeValue As RangePropertyValue(Of Integer) = worksheet.Rows(0, 1).GetOutlineLevel()
 	Dim outLineLevel As Integer = outlineLevelRangeValue.Value
-{{#endregion}}
+{{endregion}}
 
 ## Setting the Position of the Summary Row or Column
 
@@ -171,24 +171,22 @@ Both properties have a default value of true. The following snippet shows how to
 
 #### __[C#] Example 6: Setting the position of the summary column to left__
 
-{{region radspreadprocessing-features-grouping_5}}
-
-    worksheet.GroupingProperties.SummaryColumnIsToRight = false;
-
-{{#endregion}}
+{{region cs-radspreadprocessing-features-grouping_5}}
+	worksheet.GroupingProperties.SummaryColumnIsToRight = false;
+{{endregion}}
 
 #### __[VB.NET] Example 6: Setting the position of the summary column to left__
 
-{{region radspreadprocessing-features-grouping_11}}
+{{region vb-radspreadprocessing-features-grouping_11}}
 
 	worksheet.GroupingProperties.SummaryColumnIsToRight = False
 
-{{#endregion}}
+{{endregion}}
 
 #### Figure 5: Left summary column
 ![](images/RadSpreadProcessing_Features_Grouping_05.png)
 
-# See Also
+## See Also
 
 * [Filtering]({%slug radspreadprocessing-features-filtering%})
 * [Sorting]({%slug radspreadprocessing-features-sorting%})

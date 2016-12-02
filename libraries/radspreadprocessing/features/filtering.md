@@ -127,15 +127,15 @@ __Example 1__ shows how to create a __ValuesCollectionFilter__.
 
 #### __[C#] Example 1: Create ValuesCollectionFilter__
 
-{{region radspreadprocessing-features-filtering_0}}
-    IEnumerable<string> stringItems = new List<string>() { "test", "1%", "1.0" };
-    IEnumerable<DateGroupItem> dateItems = new List<DateGroupItem>()
-    {
-        new DateGroupItem(2013),
-        new DateGroupItem(2014, 3)
-    };
-
-    ValuesCollectionFilter filter = new ValuesCollectionFilter(0, stringItems, dateItems, true);
+{{region cs-radspreadprocessing-features-filtering_0}}
+	IEnumerable<string> stringItems = new List<string>() { "test", "1%", "1.0" };
+	IEnumerable<DateGroupItem> dateItems = new List<DateGroupItem>()
+	{
+	    new DateGroupItem(2013),
+	    new DateGroupItem(2014, 3)
+	};
+	
+	ValuesCollectionFilter filter = new ValuesCollectionFilter(0, stringItems, dateItems, true);
 {{endregion}}
 
 
@@ -192,10 +192,10 @@ __Example 2__ shows how to create a custom filter.
 
 #### __[C#] Example 2: Create CustomFilter__
 
-{{region radspreadprocessing-features-filtering_1}}
-    CustomFilterCriteria critera1 = new CustomFilterCriteria(ComparisonOperator.EqualsTo, "Test string");
-    CustomFilterCriteria critera2 = new CustomFilterCriteria(ComparisonOperator.GreaterThan, "-5");
-    CustomFilter filter = new CustomFilter(0, critera1, LogicalOperator.Or, critera2);
+{{region cs-radspreadprocessing-features-filtering_1}}
+	CustomFilterCriteria critera1 = new CustomFilterCriteria(ComparisonOperator.EqualsTo, "Test string");
+	CustomFilterCriteria critera2 = new CustomFilterCriteria(ComparisonOperator.GreaterThan, "-5");
+	CustomFilter filter = new CustomFilter(0, critera1, LogicalOperator.Or, critera2);
 {{endregion}}
 
 
@@ -234,8 +234,8 @@ __Example 3__ shows how to create a top filter.
 
 #### __[C#] Example 3: Create TopFilter__
 
-{{region radspreadprocessing-features-filtering_2}}
-    TopFilter filter = new TopFilter(0, TopFilterType.BottomPercent, 30);
+{{region cs-radspreadprocessing-features-filtering_2}}
+	TopFilter filter = new TopFilter(0, TopFilterType.BottomPercent, 30);
 {{endregion}}
 
 
@@ -259,8 +259,8 @@ __Example 4__ demonstrates how to create a dynamic filter.
 
 #### __[C#] Example 4: Create DynamicFilter__
 
-{{region radspreadprocessing-features-filtering_3}}
-    DynamicFilter filter = new DynamicFilter(0, DynamicFilterType.LastWeek);
+{{region cs-radspreadprocessing-features-filtering_3}}
+	DynamicFilter filter = new DynamicFilter(0, DynamicFilterType.LastWeek);
 {{endregion}}
 
 
@@ -283,9 +283,9 @@ __Example 5__ demonstrates how to create a fore color filter.
 
 #### __[C#] Example 5: Create ForeColorFilter__
 
-{{region radspreadprocessing-features-filtering_4}}
-    ThemableColor color = new ThemableColor(Colors.Red);
-    ForeColorFilter filter = new ForeColorFilter(0, color);
+{{region cs-radspreadprocessing-features-filtering_4}}
+	ThemableColor color = new ThemableColor(Colors.Red);
+	ForeColorFilter filter = new ForeColorFilter(0, color);
 {{endregion}}
 
 
@@ -309,9 +309,9 @@ __Example 6__ shows hot to create a fill color filter.
 
 #### __[C#] Example 6: Create FillColorFilter__
 
-{{region radspreadprocessing-features-filtering_5}}
-    IFill fill = new PatternFill(PatternType.Solid, Colors.Red, Colors.Red);
-    FillColorFilter filter = new FillColorFilter(0, fill);
+{{region cs-radspreadprocessing-features-filtering_5}}
+	IFill fill = new PatternFill(PatternType.Solid, Colors.Red, Colors.Red);
+	FillColorFilter filter = new FillColorFilter(0, fill);
 {{endregion}}
 
 
@@ -329,11 +329,11 @@ In order to set a filter on a range, you need to follow the steps below:
 	
 	#### __[C#] Example 7: Set FilterRange__
 	
-	{{region radspreadprocessing-features-filtering_6}}
-	    Worksheet worksheet = workbook.ActiveWorksheet;
-	
-	    CellRange filterRange = new CellRange(0, 1, 5, 2);
-	    worksheet.Filter.FilterRange = filterRange;
+	{{region cs-radspreadprocessing-features-filtering_6}}
+		Worksheet worksheet = workbook.ActiveWorksheet;
+		
+		CellRange filterRange = new CellRange(0, 1, 5, 2);
+		worksheet.Filter.FilterRange = filterRange;
 	{{endregion}}
 
 
@@ -343,8 +343,8 @@ In order to set a filter on a range, you need to follow the steps below:
 	
 	#### __[C#] Example 8: Create DynamicFilter__
 	
-	{{region radspreadprocessing-features-filtering_7}}
-	    DynamicFilter filter = new DynamicFilter(1, DynamicFilterType.AboveAverage);
+	{{region cs-radspreadprocessing-features-filtering_7}}
+		DynamicFilter filter = new DynamicFilter(1, DynamicFilterType.AboveAverage);
 	{{endregion}}
 	
 	The relative index specified in the constructor is 1, which means that the filter will be set on the second column of the range, that is, column C.
@@ -355,8 +355,8 @@ In order to set a filter on a range, you need to follow the steps below:
 
 	#### __[C#] Example 9: Set Filter__
 	
-	{{region radspreadprocessing-features-filtering_8}}
-	    worksheet.Filter.SetFilter(filter);
+	{{region cs-radspreadprocessing-features-filtering_8}}
+		worksheet.Filter.SetFilter(filter);
 	{{endregion}}
 	
 	
@@ -364,11 +364,12 @@ In order to set a filter on a range, you need to follow the steps below:
 	Alternatively, you can set the filter through the cell selection like in __Example 10__. This approach will automatically set the filter range anew.
         
 
-#### __[C#] Example 10: Set filter through selection__
+	#### __[C#] Example 10: Set filter through selection__
+	
+	{{region cs-radspreadprocessing-features-filtering_9}}
 
-{{region radspreadprocessing-features-filtering_9}}
-    worksheet.Cells[filterRange].Filter(filter);
-{{endregion}}
+		worksheet.Cells[filterRange].Filter(filter);
+	{{endregion}}
 
 
 
@@ -385,8 +386,8 @@ When a filter is set it is automatically applied. The application of a filter ha
 
 #### __[C#] Example 11: Set FilterRange__
 
-{{region radspreadprocessing-features-filtering_10}}
-    worksheet.Filter.ReapplyFilter(1);
+{{region cs-radspreadprocessing-features-filtering_10}}
+	worksheet.Filter.ReapplyFilter(1);
 {{endregion}}
 
 
@@ -413,8 +414,8 @@ As is the case with the __ReapplyFilter()__ method, you can remove a filter by i
 
 #### __[C#] Example 12: Remove filter__
 
-{{region radspreadprocessing-features-filtering_11}}
-    bool success = worksheet.Filter.RemoveFilter(1);
+{{region cs-radspreadprocessing-features-filtering_11}}
+	bool success = worksheet.Filter.RemoveFilter(1);
 {{endregion}}
 
 
@@ -425,7 +426,7 @@ In order to remove all applied filters at once use the __ClearFilters()__ method
 Setting the __FilteredRange__ property to null without removing the filters beforehand will automatically remove them.
         
 
-# See Also
+## See Also
 
  * [Sorting]({%slug radspreadprocessing-features-sorting%})
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})

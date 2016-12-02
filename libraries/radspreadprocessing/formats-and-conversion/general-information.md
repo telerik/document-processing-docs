@@ -54,6 +54,6 @@ The document model of RadSpreadProcessing also contains a __WorkbookFormatProvid
 The *Formats and Conversion* section contains three separate articles dedicated on each of the format providers and one article that illustrates how to work with the [WorkbookFormatProvidersManager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%}) class.
       
 
-# See Also
+## See Also
 
  * [Activate a Worksheet]({%slug radspreadprocessing-working-with-worksheets-activate-worksheet%})

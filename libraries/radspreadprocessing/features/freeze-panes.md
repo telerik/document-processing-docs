@@ -79,8 +79,8 @@ If the top left cell indices of the fixed pane and of the scrollable pane are no
 The result illustrated in __Figure 3__ can be achieved with the code from __Example 1__.
 
 #### __[C#] Example 1: Freezing panes__
-{{region radspreadprocessing-features-freeze-panes_01}}
-    CellIndex fixedPaneTopLeftCellIndex = new CellIndex(2, 2);
+{{region cs-radspreadprocessing-features-freeze-panes_01}}
+	CellIndex fixedPaneTopLeftCellIndex = new CellIndex(2, 2);
 	CellIndex scrollableTopLeftCellIndex = new CellIndex(5, 8);
 	workbook.ActiveWorksheet.ViewState.FreezePanes(fixedPaneTopLeftCellIndex, 1, 4, scrollableTopLeftCellIndex);
 {{endregion}}
@@ -90,7 +90,7 @@ The result illustrated in __Figure 3__ can be achieved with the code from __Exam
 If you would like to create a vertical or horizontal split, all you need to do is specify either the row count or the column count to be equal to zero.
 
 #### __[C#] Example 2: Vertical split__
-{{region radspreadprocessing-features-freeze-panes_02}}
+{{region cs-radspreadprocessing-features-freeze-panes_02}}
 	CellIndex fixedPaneTopLeftCellIndex = new CellIndex(2, 2);
 	workbook.ActiveWorksheet.ViewState.FreezePanes(fixedPaneTopLeftCellIndex, 0, 4);
 {{endregion}}
@@ -120,7 +120,7 @@ The state from __Figure 3__ can be achieved with the code from __Example 3__.
 
 
 #### __[C#] Example 3: Freeze panes through the Pane class__
-{{region radspreadprocessing-features-freeze-panes_03}}
+{{region cs-radspreadprocessing-features-freeze-panes_03}}
 	CellIndex scrollableTopLeftCellIndex = new CellIndex(5, 8);
 	Pane pane = new Pane(scrollableTopLeftCellIndex, 4, 1, ViewportPaneType.Scrollable);
 	workbook.ActiveWorksheet.ViewState.Pane = pane;
@@ -134,17 +134,17 @@ In order to unfreeze the panes of the worksheet, you need to use the same method
 
 
 #### __[C#] Example 4: Unfreezing panes__
-{{region radspreadprocessing-features-freeze-panes_04}}
+{{region cs-radspreadprocessing-features-freeze-panes_04}}
 	workbook.ActiveWorksheet.ViewState.FreezePanes(0, 0);
 {{endregion}}
 
 Another option is to set the Pane property of the ViewState to null.
 
 #### __[C#] Example 4: Unfreezing panes through the Pane class__
-{{region radspreadprocessing-features-freeze-panes_05}}
+{{region cs-radspreadprocessing-features-freeze-panes_05}}
 	workbook.ActiveWorksheet.ViewState.Pane = null;
 {{endregion}}
 
-# See Also
+## See Also
 
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})

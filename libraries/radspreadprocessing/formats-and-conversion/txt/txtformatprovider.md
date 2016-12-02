@@ -25,14 +25,14 @@ __Example 1__ shows how to import a txt file using a FileStream. The sample inst
 
 #### __[C#] Example 1: Import TXT file__
 
-{{region radspreadprocessing-formats-and-conversion-txt-txtformatprovider_0}}
-    Workbook workbook;
-    IWorkbookFormatProvider formatProvider = new TxtFormatProvider();
-
-    using (FileStream input = new FileStream(fileName, FileMode.Open))
-    {
-        workbook = formatProvider.Import(input);
-    }
+{{region cs-radspreadprocessing-formats-and-conversion-txt-txtformatprovider_0}}
+	Workbook workbook;
+	IWorkbookFormatProvider formatProvider = new TxtFormatProvider();
+	
+	using (Stream input = new FileStream(fileName, FileMode.Open))
+	{
+	    workbook = formatProvider.Import(input);
+	}
 {{endregion}}
 
 
@@ -44,17 +44,17 @@ __Example 2__ demonstrates how to export an existing Workbook to a TXT file. The
 
 #### __[C#] Example 2: Export TXT file__
 
-{{region radspreadprocessing-formats-and-conversion-txt-txtformatprovider_1}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-
-    string fileName = "SampleFile.txt";
-    IWorkbookFormatProvider formatProvider = new TxtFormatProvider();
-
-    using (FileStream output = new FileStream(fileName, FileMode.Create))
-    {
-        formatProvider.Export(workbook, output);
-    }
+{{region cs-radspreadprocessing-formats-and-conversion-txt-txtformatprovider_1}}
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
+	
+	string fileName = "SampleFile.txt";
+	IWorkbookFormatProvider formatProvider = new TxtFormatProvider();
+	
+	using (Stream output = new FileStream(fileName, FileMode.Create))
+	{
+	    formatProvider.Export(workbook, output);
+	}
 {{endregion}}
 
 

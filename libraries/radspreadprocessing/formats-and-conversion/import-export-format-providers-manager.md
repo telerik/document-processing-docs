@@ -39,16 +39,16 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
 
 #### __[C#] Example 1: Register provider__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
-    WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsxFormatProvider());
+{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
+	WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsxFormatProvider());
 {{endregion}}
 
 
 
 #### __[VB.NET] Example 1: Register provider__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
-	 WorkbookFormatProvidersManager.RegisterFormatProvider(New XlsxFormatProvider())
+{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
+	WorkbookFormatProvidersManager.RegisterFormatProvider(New XlsxFormatProvider())
 {{endregion}}
 
 
@@ -59,23 +59,23 @@ You can also unregister format providers using the UnregisterFormatProvider() me
 
 #### __[C#] Example 2: Unregister provider__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
-    IWorkbookFormatProvider provider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider");
-    if (provider != null)
-    {
-        WorkbookFormatProvidersManager.UnregisterFormatProvider(provider);
-    }
+{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
+	IWorkbookFormatProvider provider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider");
+	if (provider != null)
+	{
+	    WorkbookFormatProvidersManager.UnregisterFormatProvider(provider);
+	}
 {{endregion}}
 
 
 
 #### __[VB.NET] Example 2: Unregister provider__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
-    Dim provider As IWorkbookFormatProvider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider")
-    If provider IsNot Nothing Then
-        WorkbookFormatProvidersManager.UnregisterFormatProvider(provider)
-    End If
+{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
+	Dim provider As IWorkbookFormatProvider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider")
+	If provider IsNot Nothing Then
+	    WorkbookFormatProvidersManager.UnregisterFormatProvider(provider)
+	End If
 {{endregion}}
 
 ## Import
@@ -87,44 +87,43 @@ __Example 3__ demonstrates how to present the user with an OpenFileDialog and tr
 
 #### __[C#] Example 3: Import a file using OpenFileDialog__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
-	Workbook workbook;
-    OpenFileDialog openFileDialog = new OpenFileDialog();
-    if (openFileDialog.ShowDialog() == true)
-    {
-        try
-        {
-            string extension = Path.GetExtension(openFileDialog.SafeFileName);
-            using (Stream input = openFileDialog.OpenFile())
-            {
-                workbook = WorkbookFormatProvidersManager.Import(extension, input);
-            }
-        }
-        catch (IOException ex)
-        {
-            throw new IOException("The file cannot be opened. It might be locked by another application.", ex);
-        }
-    }
+{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
+	OpenFileDialog openFileDialog = new OpenFileDialog();
+	openFileDialog.Filter = Telerik.Windows.Controls.Spreadsheet.Utilities.FileDialogsHelper.GetOpenFileDialogFilter();
+	if (openFileDialog.ShowDialog() == true)
+	{
+	    try
+	    {
+	        string extension = Path.GetExtension(openFileDialog.SafeFileName);
+	        using (Stream input = openFileDialog.OpenFile())
+	        {
+	            workbook = WorkbookFormatProvidersManager.Import(extension, input);
+	        }
+	    }
+	    catch (IOException ex)
+	    {
+	        throw new IOException("The file cannot be opened. It might be locked by another application.", ex);
+	    }
+	}
 {{endregion}}
 
 
 
 #### __[VB.NET] Example 3: Import a file using OpenFileDialog__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
-    Dim workbook As New Workbook
-    Dim openFileDialog As New OpenFileDialog()
-    openFileDialog.Filter = FileDialogsHelper.GetOpenFileDialogFilter()
-    If openFileDialog.ShowDialog() = True Then
-        Try
-            Dim extension As String = Path.GetExtension(openFileDialog.FileName)
-            Using input As Stream = openFileDialog.OpenFile()
-                workbook = WorkbookFormatProvidersManager.Import(extension, input)
-            End Using
-        Catch ex As IOException
-            Throw New IOException("The file cannot be opened. It might be locked by another application.", ex)
-        End Try
-    End If
+{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
+	Dim openFileDialog As New OpenFileDialog()
+	openFileDialog.Filter = FileDialogsHelper.GetOpenFileDialogFilter()
+	If openFileDialog.ShowDialog() = True Then
+	    Try
+	        Dim extension As String = Path.GetExtension(openFileDialog.GetFileName())
+	        Using input As Stream = openFileDialog.OpenFileStream()
+	            editor.Owner.Workbook = WorkbookFormatProvidersManager.Import(extension, input)
+	        End Using
+	    Catch ex As IOException
+	        Throw New IOException("The file cannot be opened. It might be locked by another application.", ex)
+	    End Try
+	End If
 {{endregion}}
 
 
@@ -144,33 +143,34 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 
 #### __[C#] Example 4: Save a file using SaveFileDialog__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
-    SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-    if (saveFileDialog.ShowDialog() == true)
-    {
-        string extension = Path.GetExtension(saveFileDialog.SafeFileName);
-        using (Stream output = saveFileDialog.OpenFile())
-        {
-            WorkbookFormatProvidersManager.Export(workbook, extension, output);
-        }
-    }
+{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
+	SaveFileDialog saveFileDialog = new SaveFileDialog();
+	saveFileDialog.Filter = Telerik.Windows.Controls.Spreadsheet.Utilities.FileDialogsHelper.GetSaveFileDialogFilter();
+	
+	if (saveFileDialog.ShowDialog() == true)
+	{
+	    string extension = Path.GetExtension(saveFileDialog.SafeFileName);
+	    using (Stream output = saveFileDialog.OpenFile())
+	    {
+	        WorkbookFormatProvidersManager.Export(workbook, extension, output);
+	    }
+	}
 {{endregion}}
 
 
 
 #### __[VB.NET] Example 4: Save a file using SaveFileDialog__
 
-{{region radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
-    Dim saveFileDialog As New SaveFileDialog()
-    saveFileDialog.Filter = FileDialogsHelper.GetSaveFileDialogFilter()
-
-    If saveFileDialog.ShowDialog() = True Then
-        Dim extension As String = Path.GetExtension(saveFileDialog.SafeFileName)
-        Using output As Stream = saveFileDialog.OpenFile()
-            WorkbookFormatProvidersManager.Export(workbook, extension, output)
-        End Using
-    End If
+{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
+	Dim saveFileDialog As New SaveFileDialog()
+	saveFileDialog.Filter = FileDialogsHelper.GetSaveFileDialogFilter()
+	
+	If saveFileDialog.ShowDialog() = True Then
+	    Dim extension As String = Path.GetExtension(saveFileDialog.SafeFileName)
+	    Using output As Stream = saveFileDialog.OpenFile()
+	        WorkbookFormatProvidersManager.Export(workbook, extension, output)
+	    End Using
+	End If
 {{endregion}}
 
 

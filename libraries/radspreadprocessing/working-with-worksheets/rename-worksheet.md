@@ -51,10 +51,10 @@ __Example 1__ creates a new workbook, adds a single worksheet to it and renames 
 
 #### __[C#] Example 1: Create and rename a worksheet__
 
-{{region radspreadprocessing-working-with-worksheets-rename-worksheet_0}}
-    Workbook workbook = new Workbook();
-    Worksheet worksheet = workbook.Worksheets.Add();
-    worksheet.Name = "Sam's Worksheet";
+{{region cs-radspreadprocessing-working-with-worksheets-rename-worksheet_0}}
+	Workbook workbook = new Workbook();
+	Worksheet worksheet = workbook.Worksheets.Add();
+	worksheet.Name = "Sam's Worksheet";
 {{endregion}}
 
 
@@ -63,24 +63,24 @@ __Example 2__ creates a new workbook and adds two worksheets to it. The snippet 
         
 #### __[C#] Example 2: Rename a worksheet__
 
-{{region radspreadprocessing-working-with-worksheets-rename-worksheet_1}}
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-    workbook.Worksheets.Add();
-
-    string newWorksheetName = "July's Worksheet";
-    int indexOfWorksheetToRename = 0;
-
-    int index = workbook.Worksheets.IndexOf(newWorksheetName);
-
-    if (index == -1 || index == indexOfWorksheetToRename)
-    {
-        workbook.Worksheets[indexOfWorksheetToRename].Name = newWorksheetName;
-    }
-    else
-    {
-        // There already exists worksheet with this name
-    }
+{{region cs-radspreadprocessing-working-with-worksheets-rename-worksheet_1}}
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
+	workbook.Worksheets.Add();
+	
+	string newWorksheetName = "July's Worksheet";
+	int indexOfWorksheetToRename = 0;
+	
+	int index = workbook.Worksheets.IndexOf(newWorksheetName);
+	
+	if (index == -1 || index == indexOfWorksheetToRename)
+	{
+	    workbook.Worksheets[indexOfWorksheetToRename].Name = newWorksheetName;
+	}
+	else
+	{
+	    // There already exists worksheet with this name
+	}
 {{endregion}}
 
 
