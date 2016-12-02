@@ -40,8 +40,7 @@ The code from **Example 1** creates an empty workbook and exports it to an XLSX 
 
 #### **[C#] Example 1: Create IWorkbookExporter**
 
-{{region radspreadstreamprocessing-model-workbook_0}}
-	
+{{region cs-radspreadstreamprocessing-model-workbook_0}}
 	using (FileStream stream = File.OpenWrite("sample.xlsx"))
 	{
 	    using (IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream))

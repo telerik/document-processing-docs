@@ -32,11 +32,10 @@ You can create an instance of the IWorksheetViewExporter interface using the cor
 
 #### **[C#] Example 1: Create IWorksheetViewExporter instance**
 
-{{region radspreadstreamprocessing-features-worksheet-view-exporter_0}}
-
+{{region cs-radspreadstreamprocessing-features-worksheet-view-exporter_0}}
 	using (IWorksheetViewExporter worksheetView = worksheetExporter.CreateWorksheetViewExporter())
 	{
-		// ...
+	    // ...
 	}
 {{endregion}}
 
@@ -52,15 +51,13 @@ With the IWorksheetViewExporter interface you can set the first visible cell. Th
 
 #### **[C#] Example 2: Export a document with first visible cell C5**
 
-{{region radspreadstreamprocessing-features-worksheet-view-exporter_1}}
-
+{{region cs-radspreadstreamprocessing-features-worksheet-view-exporter_1}}
 	using (IWorksheetExporter worksheetExporter = workbookExporter.CreateWorksheetExporter("Sheet 1"))
 	{
 	    using (IWorksheetViewExporter worksheetView = worksheetExporter.CreateWorksheetViewExporter())
 	    {
 	        worksheetView.SetFirstVisibleCell(4, 2);
 	    }
-	
 	    // Fill the worksheet.
 	}
 {{endregion}}
@@ -72,17 +69,15 @@ IWorksheetViewExporter defines methods that allow you apply selection to the exp
 
 #### **[C#] Example 3: Export a document with applied multiple selection ranges**
 
-{{region radspreadstreamprocessing-features-worksheet-view-exporter_2}}
-
-	using (IWorksheetExporter worksheet = workbookExporter.CreateWorksheetExporter("Sheet 1"))
+{{region cs-radspreadstreamprocessing-features-worksheet-view-exporter_2}}
+	using (IWorksheetExporter worksheetExporter = workbookExporter.CreateWorksheetExporter("Sheet 1"))
 	{
-	    using (IWorksheetViewExporter worksheetView = worksheet.CreateWorksheetViewExporter())
+	    using (IWorksheetViewExporter worksheetView = worksheetExporter.CreateWorksheetViewExporter())
 	    {
 	        worksheetView.AddSelectionRange(2, 2, 5, 5);
 	        worksheetView.AddSelectionRange(4, 4, 8, 8);
 	        worksheetView.AddSelectionRange(3, 3, 10, 10);
 	    }
-	
 	    // Fill the worksheet.
 	}
 {{endregion}}
@@ -90,8 +85,7 @@ IWorksheetViewExporter defines methods that allow you apply selection to the exp
 
 #### **[C#] Example 4: Export a document with selection range and specified active cell of the selection**
 
-{{region radspreadstreamprocessing-features-worksheet-view-exporter_3}}
-
+{{region cs-radspreadstreamprocessing-features-worksheet-view-exporter_3}}
 	using (IWorksheetExporter worksheet = workbookExporter.CreateWorksheetExporter("Sheet 1"))
 	{
 	    using (IWorksheetViewExporter worksheetView = worksheet.CreateWorksheetViewExporter())
@@ -99,8 +93,7 @@ IWorksheetViewExporter defines methods that allow you apply selection to the exp
 	        worksheetView.AddSelectionRange(2, 2, 5, 5);
 	        worksheetView.SetActiveSelectionCell(3, 3);
 	    }
-	
-	    // Fill the worksheet.
+	    // Fill the worksheet with data.
 	}
 {{endregion}}
 
@@ -114,7 +107,7 @@ You can apply a scale factor to the exported document.
 
 #### **[C#] Example 5: Set scale factor**
 
-{{region radspreadstreamprocessing-features-worksheet-view-exporter_4}}
+{{region cs-radspreadstreamprocessing-features-worksheet-view-exporter_4}}
 	worksheetView.SetScaleFactor(0.5);
 {{endregion}}
 
@@ -125,7 +118,7 @@ IWorksheetViewExporter enables you to set whether the resultant document should 
 
 #### **[C#] Example 6: Hide grid lines and row/column headers**
 
-{{region radspreadstreamprocessing-features-worksheet-view-exporter_5}}
+{{region cs-radspreadstreamprocessing-features-worksheet-view-exporter_5}}
 	worksheetView.SetShouldShowGridLines(false);
 	worksheetView.SetShouldShowRowColumnHeaders(false);
 {{endregion}}
@@ -137,7 +130,7 @@ You can freeze panes in the spreadsheet document using the SetFreezePanes() meth
 
 #### **[C#] Example 7: Set freeze panes**
 
-{{region radspreadstreamprocessing-features-worksheet-view-exporter_6}}
+{{region cs-radspreadstreamprocessing-features-worksheet-view-exporter_6}}
 	worksheetView.SetFreezePanes(4, 6);
 {{endregion}}
 
@@ -148,7 +141,7 @@ An overload of the SetFreezePanes() method enables you to change the first visib
 
 #### **[C#] Example 8: Set freeze panes and change the first visible cell of the scrollable pane**
 
-{{region radspreadstreamprocessing-features-worksheet-view-exporter_7}}
+{{region cs-radspreadstreamprocessing-features-worksheet-view-exporter_7}}
 	worksheetView.SetFreezePanes(4, 6, 10, 10);
 {{endregion}}
 
