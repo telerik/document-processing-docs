@@ -44,9 +44,9 @@ A concrete instance of IColumnExporter could be created through the CreateColumn
 
 In order to customize the way a column appears, you could use one of the following methods:
 
-* **SetWidthInPixels()**: Sets the column width in pixels.*
+* **SetWidthInPixels()**: Sets the column width in pixels.
 
-* **SetWidthInCharacters()**: Sets the column width in characters count.*
+* **SetWidthInCharacters()**: Sets the column width in characters count.
 
 * **SetOutlineLevel()**: Sets the column outline level. The outline level is used when grouping columns. To group several columns, they should have the same OutlineLevel and if you would like to create nested grouping, you can use different levels for the outer and for the nested columns. 
 
