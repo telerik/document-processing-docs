@@ -62,6 +62,8 @@ In order to customize the way a row appears, you could use one of the following 
 	}
 {{endregion}}
 
+\* Due to the specifics of the library, RadSpreadStreamProcessing doesn't support auto fitting the height of the rows.
+
 ### Skip Rows
 
 The rows in a document are exported one by one from top to bottom starting from the one with index 0. In order to export a row with a bigger index, you will need to export all the previous rows or skip them.

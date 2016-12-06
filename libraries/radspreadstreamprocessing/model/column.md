@@ -62,6 +62,8 @@ In order to customize the way a column appears, you could use one of the followi
 	}
 {{endregion}}
 
+\* Due to the specifics of the library, RadSpreadStreamProcessing doesn't support auto fitting the width of the columns.
+
 ### Skip Columns
 
 The columns in a document are exported one by one from left to right starting from the one with index 0. In order to export a column with a bigger index, you will need to export all the previous columns or skip them.
