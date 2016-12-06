@@ -44,9 +44,9 @@ A concrete instance of IRowExporter could be created through the CreateRowExport
 
 In order to customize the way a row appears, you could use one of the following methods:
 
-* **SetHeightInPixels()**: Sets the row height in pixels.
+* **SetHeightInPixels()**: Sets the row height in pixels.*
 
-* **SetHeightInPoints()**: Sets the row height in points.
+* **SetHeightInPoints()**: Sets the row height in points.*
 
 * **SetOutlineLevel()**: Sets the row outline level. The outline level is used when grouping rows. To group several rows, they should have the same OutlineLevel and if you would like to create nested grouping, you can use different levels for the outer and for the nested rows. 
 
@@ -61,6 +61,8 @@ In order to customize the way a row appears, you could use one of the following 
 	    row.SetHeightInPixels(200);
 	}
 {{endregion}}
+
+\* Due to the specifics of the library, RadSpreadStreamProcessing doesn't support auto fitting the height of the rows.
 
 ### Skip Rows
 
