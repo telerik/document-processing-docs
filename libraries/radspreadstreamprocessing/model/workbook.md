@@ -55,10 +55,23 @@ The code from **Example 1** creates an empty workbook and exports it to an XLSX 
 	}
 {{endregion}}
 
+__Append content to the opened stream__
+
+The __CreateWorkbookExporter__ method creates a new workbook which overrides the content of the stream if it's not empty. You can change that by using the second overload of the CreateWorkbookExporter method and pass the export mode explicitly. You can do that via the last parameter of the method (exportMode) which is of type __SpreadExportMode__. SpreadExportMode is an enum that exposes two constants - __Create__ and __Append__. The default export mode is Create which overrides the stream's content. If you set the export mode to __Append__, an existing workbook from the stream will be opened if there is any content in it. Then you can append the new content to it.
+
+#### **[C#] Example 2: Create IWorkbookExporter and append the content from the stream**
+
+{{region cs-radspreadstreamprocessing-model-workbook_1}}
+	IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream, SpreadExportMode.Append));
+{{endregion}}
+
+>tip The Аppend mode is not supported in Xamarin.
+
+<!-- -->
+
 >IWorkbookExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
-
-# See Also
+## See Also
 
 * [Worksheets]({%slug radspreadstreamprocessing-model-worksheet%})
 * [SpreadCellStyle API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadCellStyle.htm)
