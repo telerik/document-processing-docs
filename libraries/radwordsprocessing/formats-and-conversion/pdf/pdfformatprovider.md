@@ -10,10 +10,7 @@ position: 2
 
 # Using PdfFormatProvider
 
-
-
-__PdfFormatProvider__ makes it easy to import and export __RadFlowDocument__ to PDF format, preserving the entire document structure and formatting.
-      
+RadWordsProcessing provides a __PdfFormatProvider__ class that allows you to export a __RadFlowDocument__ to PDF.      
 
 All you have to do in order to use __PdfFormatProvider__ is add references to the assemblies listed below:
       
