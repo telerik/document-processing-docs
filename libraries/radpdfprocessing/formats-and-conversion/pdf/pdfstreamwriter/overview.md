@@ -44,7 +44,7 @@ There are several classes responsible for writing the different parts of a PDF f
 * **PdfStreamWriterSettings**: Provides options for customizing the exported PDF file. An instance of this class can be obtained through the Settings property of **PdfStreamWriter**. The provided customization properties are **DocumentInfo**, **ImageQuality** and **WriteAnnotations**.
 
 
-* **PdfPageStreamWriter**: This class is responsible for writing the PDF page content to the PDF file Stream. An instance of this class can be created by calling the **BeginPage()** method of **PdfStreamWriter**.
+* **PdfPageStreamWriter**: This class is responsible for writing the PDF page content to the PDF file stream. An instance of this class can be created by calling the **BeginPage()** method of **PdfStreamWriter**.
 
 	* **WriteContent() methods**: The WriteContent() methods of PdfPageStreamWriter allow you to write content to the current PDF page Stream. There are two overloads allowing to add content either from PdfPageSource or RadFixedPage.
 
