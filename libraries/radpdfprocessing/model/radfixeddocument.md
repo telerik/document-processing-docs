@@ -99,7 +99,7 @@ The code from __Example 5__ merges the document created in [__Example 1__](#exam
 
 __RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocumentInfo__, intended to hold additional information about the document. The __RadFixedDocumentInfo__ class allows to set the following properties:
 
-* __Auto__: The author of the document.
+* __Author__: The author of the document.
 * __Title__: The title of the document.
 * __Description__: Text that describes the content of the document.
 
