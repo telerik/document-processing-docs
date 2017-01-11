@@ -31,7 +31,6 @@ The API of PDF Stream Processing helps you achieve the following scenarios when 
 
 - Merge and position content from existing PDF pages and generated RadFixedPage instances onto a single page in the newly written PDF file stream.
 
->In addition to the high performance and low memory footprint, when using PdfStreamWriter, you can rely that the new API will preserve unmodified the existing PDF pages without losing any existing content. 
 
 ## PDF Stream Processing Structure
 
@@ -57,7 +56,7 @@ There are several classes responsible for writing the different parts of a PDF f
 
 RadPdfProcessing provides two options for import and export - using PDF Stream Processing and through the PdfFormatProvider class. This section describes the benefits of the two approaches in different scenarios. 
 
-If you need to import a PDF document in order to add content to it and save it back, you can take advantage of the PDF Stream Processing mechanism. Choosing this approach, you will gain a great performance with minimal memory usage as well as a warranty that the existing content will be preserved no matter of the PDF features used in your document. 
+If you need to import a PDF document in order to add content to it and save it back, you can take advantage of the PDF Stream Processing mechanism. Choosing this approach, you will gain a great performance with minimal memory usage as well as support for the majority of the PDF format features. 
 
 >An important thing to note is that, due to its specifics, PDF Stream Processing doesn't support encrypted documents. If your document is using some sort of encryption, you should work with PdfFormatProvider. When such a document is passed to PDF Stream Processing, the PdfFileSource class throws a NotSupportedEncryptionException to notify you.
 

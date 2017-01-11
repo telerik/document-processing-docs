@@ -10,16 +10,11 @@ position: 1
 
 # Overview
 
-The PdfStreamWriter class enables you to write file content directly to a Stream. This is the root element of the Pdf Stream Processing functionality.
+The PdfStreamWriter class enables you to write file content directly to a Stream. This is the root element of the Pdf Stream Processing functionality used when exporting a PDF document.
 
 ## Create a PdfStreamWriter Instance
 
-
 To create an object of type PdfSteamWriter, you should pass it the Stream of the file, which you would like to work with, as a constructor parameter.
-
- 
-
->PdfStreamWriter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content might not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a using statement. 
 
 #### **Example 1: Instantiate PdfStreamWriter**
 
@@ -31,7 +26,9 @@ To create an object of type PdfSteamWriter, you should pass it the Stream of the
 	}
 {{endregion}}
 
-PdfStreamWriter exposes also an additional overload, which allows you to leave the stream you are working with open by passing **true** as a value for its second parameter (leaveStreamOpen).
+PdfStreamWriter exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the writer instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
+
+>PdfStreamWriter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content might not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a using statement. 
 
 ## PdfStreamWriter Members
 
