@@ -181,12 +181,15 @@ google_analytics: UA-111455-1
 google_custom_search: '001595215763381649090:dzdv3_di-fm'
 
 # Available for names: 
-platforms: ["UI for ASP.NET AJAX", "UI for ASP.NET MVC", "UI for WPF", "UI for WinForms", "UI for Silverlight"]
+platforms: ["UI for ASP.NET AJAX", "UI for ASP.NET MVC", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin"]
 # in articles use as shown below: 
-# platforms: ajax, mvc, wpf, winforms, silverlight
+# platforms: ajax, mvc, wpf, winforms, silverlight, xamarin
 
 # Folders not supporting Silverlight:
 non-sl-folders: ["radwordsprocessing", "radspreadstreamprocessing"]
+
+# Folders not supporting Xamarin:
+non-xamarin-folders: ["radwordsprocessing", "radspreadprocessing", "radpdfprocessing"]
 
 ## Do not edit below this line
 safe: false
