@@ -13,6 +13,8 @@ module Jekyll
 		platformNames = context.registers[:site].config["platforms"].clone
 		pageSuiteNames = page["platforms"]
 		nonSlFolders = context.registers[:site].config["non-sl-folders"]
+		nonXamarinFolders = context.registers[:site].config["non-xamarin-folders"]
+		
 		result = String.new
 		
 		if (folderNames & ["libraries"]).any?
@@ -21,8 +23,14 @@ module Jekyll
 				platformNames = platformNames.select {|suite| splittedNames.any? {|name| suite.downcase.include?(name)}}
 			end
 			
-			if pageSuiteNames.nil? && (folderNames & nonSlFolders).any?
-				platformNames.reject!{|suite| suite.downcase.include?("silverlight")}
+			if pageSuiteNames.nil?
+				if (folderNames & nonSlFolders).any?
+					platformNames.reject!{|suite| suite.downcase.include?("silverlight")}
+				end
+				
+				if (folderNames & nonXamarinFolders).any?
+					platformNames.reject!{|suite| suite.downcase.include?("xamarin")}
+				end
 			end
 		
 			platformNames.each_with_index do |suite, index|				
