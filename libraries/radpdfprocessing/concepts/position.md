@@ -94,8 +94,8 @@ __Example 2__ shows how transformations overwrite the previous transformations o
 
 {{region cs-radpdfprocessing-concepts-position_1}}
 	SimplePosition simplePosition = new SimplePosition();
-	simplePosition.Translate(20, 20); // Translates the position by (30, 30).
-	simplePosition.Translate(30, 30); // Translates the position by (20, 20) overwriting the previous translations.
+	simplePosition.Translate(20, 20); // Translates the position by (20, 20).
+	simplePosition.Translate(30, 30); // Translates the position by (30, 30) overwriting the previous translations.
 {{endregion}}
 
 
