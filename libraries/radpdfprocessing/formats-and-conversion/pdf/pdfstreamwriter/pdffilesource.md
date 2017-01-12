@@ -28,7 +28,7 @@ To create an instance of PdfFileSource, you should pass a **FileStream** object,
 
 PdfFileSource exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the PdfFileSource instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
 
->PdfFileSource inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it.
+>PdfFileSource inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. The best way to ensure this is handled properly is to wrap it in a using statement. 
 
 ### Members
 
@@ -46,7 +46,7 @@ PdfFileSource exposes the **Pages** property, which is of type [PdfPageSource]({
 	}
 {{endregion}}
  
->You can use the indexer of the Pages property to obtain a specific page of the document and, using [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}), split it in a separate file.
+>You can use the indexer of the Pages property to obtain a specific page of the document and split it. Then, you can save the separated page using [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}).
 
 ## See Also
 
