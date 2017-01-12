@@ -55,7 +55,7 @@ The code from **Example 1** creates an empty workbook and exports it to an XLSX 
 	}
 {{endregion}}
 
-__Append Content to the Opened Stream__
+### Append Content to an Existing Document 
 
 The __CreateWorkbookExporter__ method creates a new workbook which overrides the content of the document contained in the stream if it's not empty. You can change that by using the second overload of the CreateWorkbookExporter method and pass the export mode explicitly. You can do that via the last parameter of the method (exportMode) which is of type __SpreadExportMode__. SpreadExportMode is an enum that exposes two constants - __Create__ and __Append__. The default export mode is Create, which overrides the stream's content. If you set the export mode to __Append__, an existing workbook from the stream will be opened if there is any content in it. Then you can append the new content to the already existing document.
 
