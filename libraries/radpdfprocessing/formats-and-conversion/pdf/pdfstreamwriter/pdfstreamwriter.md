@@ -2,23 +2,23 @@
 title: PdfStreamWriter
 page_title: PdfStreamWriter
 description: PdfStreamWriter
-slug: radpdfprocessing-formats-and-conversion-pdf-pdf-stream-processing-pdfstreamwriter
+slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter
 tags: pdf,stream,writer
 published: True
-position: 1
+position: 2
 ---
 
 # Overview
 
-The PdfStreamWriter class enables you to write file content directly to a Stream. This is the root element of the Pdf Stream Processing functionality used when exporting a PDF document.
+The **PdfStreamWriter** class enables you to write file content directly to a Stream. This is the root element of the streaming mechanism used when exporting a PDF document.
 
 ## Create a PdfStreamWriter Instance
 
 To create an object of type PdfSteamWriter, you should pass it the Stream of the file, which you would like to work with, as a constructor parameter.
 
-#### **Example 1: Instantiate PdfStreamWriter**
+#### **[C#] Example 1: Instantiate PdfStreamWriter**
 
-{{region}}
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_0}}
 
 	using (PdfStreamWriter writer = new PdfStreamWriter(File.OpenWrite(resultDocument)))
 	{
@@ -26,7 +26,7 @@ To create an object of type PdfSteamWriter, you should pass it the Stream of the
 	}
 {{endregion}}
 
-PdfStreamWriter exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the writer instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
+**PdfStreamWriter** exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the writer instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
 
 >PdfStreamWriter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content might not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a using statement. 
 
@@ -35,39 +35,39 @@ PdfStreamWriter exposes also an additional overload, which allows you to keep th
 The members of the class allow you to set several properties of the document you are working with as well as generate and write new pages.
 
 * **BeginPage()**: The BeginPage() method returns an instance of the **PdfPageStreamWriter** class, which is responsible to draw the content of the page. More information about this class is available in the [PdfPageStreamWriter article](). The overloads of BeginPage() allow you to pass the size and the [Rotation](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Data_Rotation.htm) of the page.
-
-#### **Example 2: Insert a new page into a document**
-
-{{region}}
-
-	using (PdfStreamWriter writer = new PdfStreamWriter(File.OpenWrite(resultDocument)))
-	{
-		Size size = new Size(700,1200);
-		Rotation rotation = Rotation.Rotate270;
-
-		using (PdfPageStreamWriter pageWriter = fileWriter.BeginPage(size, rotation))
-        {
-			// Use the pageWriter object to fill the content of the page.
+	
+	#### **[C#] Example 2: Insert a new page into a document**
+	
+	{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_1}}
+	
+		using (PdfStreamWriter writer = new PdfStreamWriter(File.OpenWrite(resultDocument)))
+		{
+			Size size = new Size(700,1200);
+			Rotation rotation = Rotation.Rotate270;
+	
+			using (PdfPageStreamWriter pageWriter = fileWriter.BeginPage(size, rotation))
+	        {
+				// Use the pageWriter object to fill the content of the page.
+			}
 		}
-	}
-{{endregion}}
+	{{endregion}}
 
 * **WritePage()**: The WritePage() methods enable you to pass an already constructed page object. With the different overloads, you can pass an instance of [**RadFixedPage**]() and [**PdfPageStreamWriter**]().
-
-#### **Example 3: Insert an already generated page into a document**
-
-{{region}}
-
-	using (PdfStreamWriter writer = new PdfStreamWriter(File.OpenWrite(resultDocument)))
-	{
-		RadFixedPage page = this.GeneratePage();
-		writer.WritePage(page);
-	}
-{{endregion}}
+	
+	#### **[C#] Example 3: Insert an already generated page into a document**
+	
+	{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_2}}
+	
+		using (PdfStreamWriter writer = new PdfStreamWriter(File.OpenWrite(resultDocument)))
+		{
+			RadFixedPage page = this.GeneratePage();
+			writer.WritePage(page);
+		}
+	{{endregion}}
 
 ### Settings of PdfStreamWriter
 
-Through the Settings property of PdfStreamWriter you can control the way the document is exported. The following list describes the available properties:
+Through the **Settings property** of PdfStreamWriter you can control the way the document is exported. The following list describes the available properties:
 
 * **DocumentInfo**: A property of type [RadFixedDocumentInfo](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_RadFixedDocumentInfo.htm), intended to hold additional information about the document. The RadFixedDocumentInfo class allows you to set the title, author and description of the document.
 
@@ -78,6 +78,6 @@ Through the Settings property of PdfStreamWriter you can control the way the doc
 
 ## See Also
 
-* Pdf Stream Processing Overview
-* PdfPageStreamWriter
-* RadFixedPage
+* [Pdf Stream Writer Overview]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})
+* [PdfPageStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})

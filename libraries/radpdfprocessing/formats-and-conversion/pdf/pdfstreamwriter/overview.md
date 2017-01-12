@@ -1,8 +1,8 @@
 ---
 title: Overview
-page_title: Pdf Stream Processing - Overview
-description: Pdf Stream Processing - Overview
-slug: radpdfprocessing-formats-and-conversion-pdf-pdfstream-processing-overview
+page_title: Pdf Stream Writer - Overview
+description: Pdf Stream Writer - Overview
+slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview
 tags: pdf,stream,writer
 published: True
 position: 0
@@ -10,16 +10,16 @@ position: 0
 
 # Overview
 
-This article explains the PDF Stream Processing functionality - how it works and how you can use it.
+This article explains the PDF Stream Writer functionality - how it works and how you can use it.
 
 
-## What is PDF Stream Processing?
+## What is PdfStreamWriter?
 
-PDF Stream Processing is a functionality that provides option for exporting PDF files with unmatched performance and minimized memory footprint. 
+The API of PdfStreamWriter exposes a functionality that provides option for exporting PDF files with unmatched performance and minimized memory footprint. 
 
 The key for the memory efficiency is that the writer writes the PDF content directly to a stream without creating and preserving the PDF document model in the memory. The performance efficiency is achieved by reading PDF page content from existing PDF files without decoding or parsing the existing page content. The read content is then written unmodified directly into the new file stream. Although the existing PDF page content is not modified, it may be positioned differently into the new PDF file as well as combined with some other existing or newly generated PDF page content. 
 
-The API of PDF Stream Processing helps you achieve the following scenarios when creating the pages of the new PDF file:
+PdfStreamWriter can help you achieve the following scenarios when creating the pages of the new PDF file:
 
 - Merge pages from different PDF documents.
 
@@ -32,7 +32,7 @@ The API of PDF Stream Processing helps you achieve the following scenarios when 
 - Merge and position content from existing PDF pages and generated RadFixedPage instances onto a single page in the newly written PDF file stream.
 
 
-## PDF Stream Processing Structure
+## PdfStreamWriter Structure
 
 There are several classes responsible for writing the different parts of a PDF file.
 
@@ -52,17 +52,18 @@ There are several classes responsible for writing the different parts of a PDF f
 * **PdfPageSource**: A class representing the page content of an existing PDF file. Instances of this class can be obtained using the **Pages** property of **PdfFileSource**.
 
 
-## PDF Stream Processing or PdfFormatProvider?
+## PdfStreamWriter or PdfFormatProvider?
 
-RadPdfProcessing provides two options for import and export - using PDF Stream Processing and through the PdfFormatProvider class. This section describes the benefits of the two approaches in different scenarios. 
+**RadPdfProcessing** provides two options for import and export - using **PdfStreamWriter** and through the **PdfFormatProvider** class. This section describes the benefits of the two approaches in different scenarios. 
 
-If you need to import a PDF document in order to add content to it and save it back, you can take advantage of the PDF Stream Processing mechanism. Choosing this approach, you will gain a great performance with minimal memory usage as well as support for the majority of the PDF format features. 
+If you need to import a PDF document in order to add content to it and save it back, you can take advantage of the **PdfStreamWriter** API. Choosing this approach, you will gain a great performance with minimal memory usage as well as support for the majority of the PDF format features. 
 
->An important thing to note is that, due to its specifics, PDF Stream Processing doesn't support encrypted documents. If your document is using some sort of encryption, you should work with PdfFormatProvider. When such a document is passed to PDF Stream Processing, the PdfFileSource class throws a NotSupportedEncryptionException to notify you.
+>An important thing to note is that, due to its specifics, **PdfStreamWriter** doesn't support **encrypted** documents. If your document is using some sort of encryption, you should work with **PdfFormatProvider**. When such a document is passed to PdfStreamWriter, the PdfFileSource class throws a NotSupportedEncryptionException to notify you.
 
-If the scenario requires you to read or modify the existing page content, you should use PdfFormatProvider to parse the required data. When working with PDF Stream Processing, the existing page content is preserved unmodified and you are only allowed to add elements below or above the existing content. 
+If the scenario requires you to read or modify the existing page content, you should use **PdfFormatProvider** to parse the required data. When working with **PdfStreamWriter**, the existing page content is preserved unmodified and you are only allowed to add elements below or above the existing content. 
 
 ## See Also
 
-* PdfFormatProvider
-* 
+* [Features]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-features%})
+* [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+* [PdfStreamWriter Class]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%})

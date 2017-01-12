@@ -2,24 +2,24 @@
 title: PdfFileSource
 page_title: PdfFileSource
 description: PdfFileSource
-slug: radpdfprocessing-formats-and-conversion-pdf-pdf-stream-processing-pdffilesource
+slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource
 tags: pdf,stream,file,source
 published: True
-position: 2
+position: 4
 ---
 
 # Overview
 
-The PdfFileSource class represents the content of an existing PDF file.
+The **PdfFileSource** class represents the content of an existing PDF file.
 
 ## Using PdfFileSource
 
 ### Create an Instance
 
-To create an instance of PdfFileSource, you should pass a FileStream object, containing the PDF document, to the constructor of the class.
+To create an instance of PdfFileSource, you should pass a **FileStream** object, containing the PDF document, to the constructor of the class.
 
-#### **Example 1: Create a PdfFileSource**
-{{region}}
+#### **[C#] Example 1: Create a PdfFileSource**
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource_0}}
 	using (PdfFileSource fileSource = new PdfFileSource(File.OpenRead(path)))
 	{
 		// ...
@@ -32,10 +32,10 @@ PdfFileSource exposes also an additional overload, which allows you to keep the 
 
 ### Members
 
-PdfFileSource exposes the Pages property, which is of type [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdf-stream-processing-pdfpagesource%})[] and allows you access the pages of the imported document.
+PdfFileSource exposes the **Pages** property, which is of type [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%})[] and allows you access the pages of the imported document.
 
-#### **Example 2: Iterate the pages of a document**
-{{region}}
+#### **[C#] Example 2: Iterate the pages of a document**
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource_1}}
 	
 	using (PdfFileSource fileSource = new PdfFileSource(File.OpenRead(path)))
 	{
@@ -45,10 +45,11 @@ PdfFileSource exposes the Pages property, which is of type [PdfPageSource]({%slu
 	    }
 	}
 {{endregion}}
-
+ 
+>You can use the indexer of the Pages property to obtain a specific page of the document and, using [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}), split it in a separate file.
 
 ## See Also
 
-* Pdf Stream Processing Overview
-* PdfPageStreamWriter
-* RadFixedPage
+* [Pdf Stream Writer Overview]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})
+* [PdfPageStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
