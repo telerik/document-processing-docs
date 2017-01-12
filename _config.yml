@@ -144,6 +144,12 @@ navigation:
     libraries/radpdfprocessing/formats-and-conversion/pdf:
         title: Pdf
         position: 0
+    libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider:
+        title: Pdf Format Provider
+        position: 1
+    libraries/radpdfprocessing/formats-and-conversion/pdf/pdfstreamwriter:
+        title: Pdf Stream Writer
+        position: 2
     libraries/radpdfprocessing/formats-and-conversion/plain-text:
         title: Plain text
         position: 0
