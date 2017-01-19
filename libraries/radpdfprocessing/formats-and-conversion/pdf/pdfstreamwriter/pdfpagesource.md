@@ -31,8 +31,6 @@ An instance of the PdfPageSource class can be obtained using the **Pages** prope
 	}
 {{endregion}}
 
-PdfPageSource exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the PdfPageSource instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
-
 ### Members
 
 PdfPageSource exposes the two properties to give you information about the pages - **Size** and **Orientation**. 
