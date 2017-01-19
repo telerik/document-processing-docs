@@ -35,8 +35,6 @@ An instance of the PdfPageStreamWriter class can be obtained using the **BeginPa
 	}
 {{endregion}}
 
-PdfStreamWriter exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the writer instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
-
 >PdfPageStreamWriter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. The best way to ensure this is handled properly is to wrap it in a *using* statement. 
 
 ### PdfPageStreamWriter Members
