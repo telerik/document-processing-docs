@@ -99,6 +99,8 @@ A style should be added to __RadFlowDocument__'s style repository in order to be
 {{endregion}}
 
 
+>If a style is not added to the StyleRepository, applying it to a document element would not take any effect.
+
 
 ## Default Styles
 
