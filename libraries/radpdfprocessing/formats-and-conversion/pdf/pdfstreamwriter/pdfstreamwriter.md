@@ -45,7 +45,7 @@ The members of the class allow you to set several properties of the document you
 			Size size = new Size(700,1200);
 			Rotation rotation = Rotation.Rotate270;
 	
-			using (PdfPageStreamWriter pageWriter = fileWriter.BeginPage(size, rotation))
+			using (PdfPageStreamWriter pageWriter = writer.BeginPage(size, rotation))
 	        {
 				// Use the pageWriter object to fill the content of the page.
 			}

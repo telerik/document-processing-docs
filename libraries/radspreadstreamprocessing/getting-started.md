@@ -22,8 +22,8 @@ This article will get you started in using the **RadSpreadStreamProcessing** lib
 
 In order to use RadSpreadStreamProcessing in your project, you will need to add a reference to:
 
-* **Telerik.Documents.SpreadsheetStreaming**
-
+* **Telerik.Documents.SpreadsheetStreaming.dll**
+* **Telerik.Windows.Zip.dll**
 
 ## Create a Spreadsheet Document
 

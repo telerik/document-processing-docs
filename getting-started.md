@@ -13,7 +13,7 @@ position: 2
 
 Telerik Document Processing includes a set of cross-platform libraries that let you import and export content between different formats and work with archive files. The needed assemblies come with the installation (automated and manual) of several of the Telerik suites and in the internal builds archive where the latter is available. More information about the suites that include Telerik Document Processing and how to install them is available in the [Installing on Your Computer article]({%slug installation-installing-on-your-computer%}). 
 
-The libraries support .NET 4 and .NET 4.5, so depending on the target framework of your project, you need to take the assembly from the *Bin40* or *Bin45* folder respectively.
+>The libraries support .NET 4 and .NET 4.5.
 
 * **Telerik.Windows.Documents.Core.dll**: The main assembly from the Telerik document processing libraries. You always need it when you intend to use the library.
 

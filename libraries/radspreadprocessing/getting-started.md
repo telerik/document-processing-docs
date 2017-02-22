@@ -88,7 +88,7 @@ The __RadSpreadProcessing__ library supports a variety of formats to which you c
 	}
 {{endregion}}
 
-
+>More information about the import and export functionalities of RadSpreadProcessing is available in the [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-general-information%}).
 
 ## Using RadSpreadsheet
 

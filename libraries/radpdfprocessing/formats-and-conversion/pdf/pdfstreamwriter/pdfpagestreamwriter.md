@@ -28,12 +28,13 @@ An instance of the PdfPageStreamWriter class can be obtained using the **BeginPa
 		Size size = new Size(700,1200);
 		Rotation rotation = Rotation.Rotate270;
 
-		using (PdfPageStreamWriter pageWriter = fileWriter.BeginPage(size, rotation))
+		using (PdfPageStreamWriter pageWriter = writer.BeginPage(size, rotation))
         {
 			// Use the pageWriter object to fill the content of the page.
 		}
 	}
 {{endregion}}
+
 
 >You can find an example on how to use the PdfPageStreamWriter class in the [Manipulate Pages](https://github.com/telerik/xaml-sdk/tree/master/PdfProcessing/ManipulatePages) example in the XAML SDK repository on GitHub.
 
