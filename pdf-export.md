@@ -48,7 +48,7 @@ In order to enable the export to PDF in RadSpreadProcessing, you will need to ad
 
 # See Also
 
-* [Getting Started with Telerik Document Processing]({%slug getting-started%})
+* [Getting Started with Telerik Document Processing]({%slug radpdfprocessing-getting-started%})
 * [RadPdfProcessing]([%slug radpdfprocessing-overview%])
 * [RadWordsProcessing]([%slug radwordsprocessing-overview%])
 * [RadSpreadProcessing]([%slug radspreadprocessing-overview%])
