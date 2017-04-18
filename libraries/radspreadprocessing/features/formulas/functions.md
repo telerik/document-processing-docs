@@ -10,8 +10,6 @@ position: 3
 
 # Functions
 
-
-
 The document model provides a number of built-in functions that you can use in formula values.
       
 
@@ -594,7 +592,11 @@ Uses an index to choose a value from a reference or array</td></tr><tr><td>
 
 LOOKUP</td><td>
 
-Looks up values in a vector or array</td></tr></table>
+Looks up values in a vector or array</td></tr><tr><td>
+
+CHOOSE</td><td>
+
+Returns one of a list of values, depending on the value of a supplied index number</td></tr></table>
 <table><tr><th>
 
 Math and Trigonometry Functions</th><th></th></tr><tr><td>
@@ -943,4 +945,8 @@ Finds one text value within another (not case-sensitive)</td></tr><tr><td>
 
 UPPER</td><td>
 
-Converts text to uppercase</td></tr></table>
+Converts text to uppercase</td></tr><tr><td>
+
+TRIM</td><td>
+
+Removes duplicate spaces, and spaces at the start and end of a text string. The TRIM function doesn't remove nonbreaking space character.</td></tr></table>
