@@ -943,10 +943,10 @@ SEARCH</td><td>
 
 Finds one text value within another (not case-sensitive)</td></tr><tr><td>
 
-UPPER</td><td>
-
-Converts text to uppercase</td></tr><tr><td>
-
 TRIM</td><td>
 
-Removes duplicate spaces, and spaces at the start and end of a text string. The TRIM function doesn't remove nonbreaking space character.</td></tr></table>
+Removes duplicate spaces, and spaces at the start and end of a text string. The TRIM function doesn't remove nonbreaking space character.</td></tr><tr><td>
+
+UPPER</td><td>
+
+Converts text to uppercase</td></tr></table>
