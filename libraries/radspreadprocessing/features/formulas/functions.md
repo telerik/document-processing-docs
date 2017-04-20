@@ -582,6 +582,10 @@ Returns a logical exclusive OR of all arguments</td></tr></table>
 
 Lookup and Reference Functions</th><th></th></tr><tr><td>
 
+CHOOSE</td><td>
+
+Returns one of a list of values, depending on the value of a supplied index number</td></tr><tr><td>
+
 HYPERLINK</td><td>
 
 Creates a shortcut or jump that opens a document stored on a network server, an intranet, or the Internet</td></tr><tr><td>
@@ -592,11 +596,7 @@ Uses an index to choose a value from a reference or array</td></tr><tr><td>
 
 LOOKUP</td><td>
 
-Looks up values in a vector or array</td></tr><tr><td>
-
-CHOOSE</td><td>
-
-Returns one of a list of values, depending on the value of a supplied index number</td></tr></table>
+Looks up values in a vector or array</td></tr></table>
 <table><tr><th>
 
 Math and Trigonometry Functions</th><th></th></tr><tr><td>
