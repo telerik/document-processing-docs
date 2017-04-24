@@ -191,7 +191,7 @@ __Example 5__ demonstrates how to draw a block.
 >importantEvery block can be drawn only once. Otherwise, an exception will be thrown.
           
 
-## Measure Block Size
+## Measuring Block Size
 
 Measuring a Block can be achieved with one of the overloads of the __Measure()__ method. Invoking the method without a parameter will return the desired size of the elements in the block and set the block's __DesiredSize__ property. The method is handy when you want to determine the size of the Block.
         
@@ -212,7 +212,7 @@ __Example 6__ creates a Block with the text "Hello RadPdfProcessing!" and measur
 
 
 
-## Split a Block
+## Splitting a Block
 
 The __Split()__ method of a Block returns a new Block with the same properties. The resulting block contains all pending elements that do not fit in the current block, based on the result of the last measure call.
         
