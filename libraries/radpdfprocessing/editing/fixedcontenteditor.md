@@ -234,6 +234,20 @@ __Example 8__ generates a table and draws it in some fixed size.
 
 More detailed information about tables is available in the [Table]({%slug radpdfprocessing-editing-table%}) documentation article.
 
+
+### Inserting Forms
+
+With the FixedContentEditor class you can insert a Form (Form-XObject) element. 
+
+#### __[C#] Example 9: Insert a form__
+{{region cs-radpdfprocessing-editing-fixedcontenteditor_9}}
+	editor.DrawForm(formSource);
+{{endregion}}
+
+There are two more overloads of DrawForm() that enables you to pass the size that should be used for the form.
+
+>For more information on how to create a form, check the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource%}) articles.
+
 ## Positioning
 
 The [Position]({%slug radpdfprocessing-concepts-position%}) property exposed by __FixedContentEditor__ provides an easy way to manipulate the position of inserted content elements.
