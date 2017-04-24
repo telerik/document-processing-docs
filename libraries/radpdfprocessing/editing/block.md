@@ -17,7 +17,7 @@ __Block__ is a utility class that is intended to arrange the elements added to i
 
 ## Add and Modify Content
 
-The most common usage of __Block__ is to draw flowing content. Similarly to [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}), a block can contains images, graphics or text. The same Block instance can only be drawn once.
+The most common usage of __Block__ is to draw flowing content. Similarly to [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}), a block can contain images, graphics or text. The same Block instance can only be drawn once.
         
 
 ### Inserting Text
