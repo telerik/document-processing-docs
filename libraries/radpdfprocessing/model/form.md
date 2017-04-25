@@ -10,14 +10,13 @@ position: 6
 
 # Form
 
-
-
 __Form__ is a content element, which contains a form source and represents a Form XObject. The Form XObjects enables you to describe objects (text, images, vector elements, etc.) within a PDF file and reuse this content among the document.
       
 
 * [Creating and Inserting a Form](#creating-and-inserting-a-form)
 
 * [Form Properties](#form-properties)
+
 
 ## Creating and Inserting a Form
 
@@ -66,7 +65,7 @@ You can modify a __Form__ element using the properties the class exposes. The pr
 
 * __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) of the form inside the __IContainerElement__.
 
-* __Parent__: Allows you obtain the parent page of the form.
+* __Parent__: Allows you to obtain the parent page of the form.
 
 ## See Also
 

@@ -175,10 +175,6 @@ The __Block__ class has some properties and methods that affect how it will be r
 
 A Block can be drawn to the content using the __Draw()__ method. The method accepts as a parameter a __Rectangle__, specifying the desired size and position relatively to the editor of the element.
         
-
-__Example 5__ demonstrates how to draw a block.
-        
-
 #### __[C#] Example 5: Draw block__
 
 {{region cs-radpdfprocessing-editing-block_4}}
