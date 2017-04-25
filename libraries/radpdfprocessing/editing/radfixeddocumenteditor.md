@@ -29,6 +29,8 @@ The __RadFixedDocumentEditor__ class allows you create a [RadFixedDocument]({%sl
 
 * [Lists](#lists)
 
+* [Forms](#forms)
+
 ## Creating RadFixedDocumentEditor
 
 __Example 1__ demonstrates how a RadFixedDocumentEditor instance can be created.
@@ -263,6 +265,19 @@ The following code snippet shows how to add a new list to __RadFixedDocumentEdit
 {{endregion}}
 
 More detailed information about lists is available in the [List documentation article]({%slug  radpdfprocessing-editing-list%}).
+
+### Forms
+
+With the RadFixedDocumentEditor class you can insert a Form (Form-XObject) element. 
+
+#### __[C#] Example 11: Insert a form__
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_9}}
+	editor.InsertFormInline(formSource);
+{{endregion}}
+
+There is an additional overload of InsertFormInline() that enables you to pass the size that should be used for the form.
+
+>For more information on how to create a form, check the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource%}) articles.
 
 
 ## See Also

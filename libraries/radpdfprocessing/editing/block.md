@@ -12,7 +12,7 @@ position: 0
 
 
 
-__Block__ is a utility class that is intended to arrange the elements added to it in a flow-like manner. It can be used for measuring, drawing, and splitting of __FixedContentElements__.
+The __Block__ class is intended to arrange the elements added to it in a flow-like manner. It can be used for measuring, drawing, and splitting of __FixedContentElements__.
       
 
 ## Add and Modify Content
@@ -88,6 +88,22 @@ Information on images in the context of the library is available in the [ImageSo
 * block.**InsertRectangle**(rectangle);
                 
 
+### Inserting Form-XObject Elements
+
+The Form (or also known as Form-XObject) is an object that can contain PDF content and can be sheared among the document. The Block class exposes the **InsertForm()** method that allows you insert a FormSource object in the document. 
+
+#### __[C#] Example 4: Insert a form__
+
+{{region cs-radpdfprocessing-editing-block_7}}
+	block.InsertForm(simpleForm);
+{{endregion}}
+
+There are two more overloads of InsertForm() that enables you to pass the size that should be used for the form.
+
+
+>For more information on how to create a form, check the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource%}) articles.
+
+
 ### Changing Current Styles
 
 The __Block__ class has some properties and methods that affect how it will be rendered:
@@ -159,11 +175,7 @@ The __Block__ class has some properties and methods that affect how it will be r
 
 A Block can be drawn to the content using the __Draw()__ method. The method accepts as a parameter a __Rectangle__, specifying the desired size and position relatively to the editor of the element.
         
-
-__Example 4__ demonstrates how to draw a block.
-        
-
-#### __[C#] Example 4: Draw block__
+#### __[C#] Example 5: Draw block__
 
 {{region cs-radpdfprocessing-editing-block_4}}
 	Rect boundingRect = new Rect(new Point(0, 0), new Size(200, 300));
@@ -175,7 +187,7 @@ __Example 4__ demonstrates how to draw a block.
 >importantEvery block can be drawn only once. Otherwise, an exception will be thrown.
           
 
-## Measure Block Size
+## Measuring Block Size
 
 Measuring a Block can be achieved with one of the overloads of the __Measure()__ method. Invoking the method without a parameter will return the desired size of the elements in the block and set the block's __DesiredSize__ property. The method is handy when you want to determine the size of the Block.
         
@@ -183,10 +195,10 @@ Measuring a Block can be achieved with one of the overloads of the __Measure()__
 Calling the overload accepting available size measures the block in that specific size. Additionally to setting the __DesiredSize__ property, it sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
         
 
-__Example 5__ creates a Block with the text "Hello RadPdfProcessing!" and measures it.
+__Example 6__ creates a Block with the text "Hello RadPdfProcessing!" and measures it.
         
 
-#### __[C#] Example 5: Measure block__
+#### __[C#] Example 6: Measure block__
 
 {{region cs-radpdfprocessing-editing-block_5}}
 	Block block = new Block();
@@ -196,14 +208,14 @@ __Example 5__ creates a Block with the text "Hello RadPdfProcessing!" and measur
 
 
 
-## Split a Block
+## Splitting a Block
 
 The __Split()__ method of a Block returns a new Block with the same properties. The resulting block contains all pending elements that do not fit in the current block, based on the result of the last measure call.
         
 
-The code in __Example 6__ splits a block in two. The first will contains text "Hello" and the second – "RadPdfProcessing!".
+The code in __Example 7__ splits a block in two. The first will contains text "Hello" and the second – "RadPdfProcessing!".
         
-#### __[C#] Example 6: Split block__
+#### __[C#] Example 7: Split block__
 
 {{region cs-radpdfprocessing-editing-block_6}}
 	Block helloBlock = new Block();
