@@ -10,8 +10,6 @@ position: 3
 
 # Functions
 
-
-
 The document model provides a number of built-in functions that you can use in formula values.
       
 
@@ -584,6 +582,10 @@ Returns a logical exclusive OR of all arguments</td></tr></table>
 
 Lookup and Reference Functions</th><th></th></tr><tr><td>
 
+CHOOSE</td><td>
+
+Returns one of a list of values, depending on the value of a supplied index number</td></tr><tr><td>
+
 HYPERLINK</td><td>
 
 Creates a shortcut or jump that opens a document stored on a network server, an intranet, or the Internet</td></tr><tr><td>
@@ -940,6 +942,10 @@ Returns the rightmost characters from a text value</td></tr><tr><td>
 SEARCH</td><td>
 
 Finds one text value within another (not case-sensitive)</td></tr><tr><td>
+
+TRIM</td><td>
+
+Removes duplicate spaces, and spaces at the start and end of a text string. The TRIM function doesn't remove non-breaking space characters</td></tr><tr><td>
 
 UPPER</td><td>
 
