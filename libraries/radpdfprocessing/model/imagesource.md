@@ -46,14 +46,20 @@ __Example 1__ illustrates how you can create an ImageSource using a __FileStream
 With the __EncodedImageData__ class you can create an __ImageSource__ with encoded image data. This way the image quality will not be reduced on import.
 
 __Example 2__ demonstrates how you can create an __ImageSource__ using the __EncodedImageData__ class.
-        
 
 #### __[C#] Example 2: Create ImageSource from EncodedImageData__
-{{region cs-radpdfprocessing-model-imagesource_2}}
+{{region cs-radpdfprocessing-model-imagesource_1}}
 	EncodedImageData imageData = new EncodedImageData(imageBytes, 8, 655, 983, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.DCTDecode });
 	ImageSource imageSource = new ImageSource(imageData);
 {{endregion}}
 
+With the __EncodedImageData__ class you can also create an __ImageSource__ with encoded image data and set its transparency. The __EncodedImageData__ class provides a second constructor overload where you can set the alpha-channel bytes of the image as a second constructor parameter in order to apply transparency to this image.
+
+#### __[C#] Example 3: Create ImageSource from EncodedImageData with transparency__
+{{region cs-radpdfprocessing-model-imagesource_2}}
+	EncodedImageData imageData = new EncodedImageData(imageBytes, alphaChannelBytes, 8, imageWidth, imageHeight, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.FlateDecode });
+	ImageSource imageSource = new ImageSource(imageData);
+{{endregion}}
 ## Properties
 
 The properties exposed by the **ImageSource** class are as follows:
@@ -73,12 +79,12 @@ The ImageSource class exposes two methods, which could help you get the data fro
 
 ## Extensions
 
-__RadPdfProcessing__ exposes an extension method allowing you to convert every BitmapSource to an ImageSource that can be used for the creation of [Image]({%slug radpdfprocessing-model-image%}) elements. __Example 3__ shows how you can use the ToImageSource() extension method over a previously created bitmap.
+__RadPdfProcessing__ exposes an extension method allowing you to convert every BitmapSource to an ImageSource that can be used for the creation of [Image]({%slug radpdfprocessing-model-image%}) elements. __Example 4__ shows how you can use the ToImageSource() extension method over a previously created bitmap.
         
 
-#### __[C#] Example 3: Create ImageSource with extension method__
+#### __[C#] Example 4: Create ImageSource with extension method__
 
-{{region cs-radpdfprocessing-model-imagesource_1}}
+{{region cs-radpdfprocessing-model-imagesource_3}}
 	BitmapImage bitmap = new BitmapImage();
 	bitmap.BeginInit();
 	bitmap.UriSource = new Uri(filename, UriKind.RelativeOrAbsolute);
