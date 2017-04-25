@@ -53,11 +53,11 @@ __Example 2__ demonstrates how you can create an __ImageSource__ using the __Enc
 	ImageSource imageSource = new ImageSource(imageData);
 {{endregion}}
 
-With the __EncodedImageData__ class you can also create an __ImageSource__ with encoded image data and set its transparency. The __EncodedImageData__ class provides second constructor where you can set byte[] alphaChannelBytes as a second parameter in order to set the transparency of the image.
+With the __EncodedImageData__ class you can also create an __ImageSource__ with encoded image data and set its transparency. The __EncodedImageData__ class provides a second constructor overload where you can set the alpha-channel bytes of the image as a second constructor parameter in order to apply transparency to this image.
 
 #### __[C#] Example 3: Create ImageSource from EncodedImageData with transparency__
 {{region cs-radpdfprocessing-model-imagesource_2}}
-	EncodedImageData imageData = new EncodedImageData(imageBytes, alphaChannelBytes, 8, source.PixelWidth, source.PixelHeight, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.FlateDecode });
+	EncodedImageData imageData = new EncodedImageData(imageBytes, alphaChannelBytes, 8, imageWidth, imageHeight, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.FlateDecode });
 	ImageSource imageSource = new ImageSource(imageData);
 {{endregion}}
 ## Properties
