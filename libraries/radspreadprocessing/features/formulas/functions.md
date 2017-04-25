@@ -945,7 +945,7 @@ Finds one text value within another (not case-sensitive)</td></tr><tr><td>
 
 TRIM</td><td>
 
-Removes duplicate spaces, and spaces at the start and end of a text string. The TRIM function doesn't remove nonbreaking space character</td></tr><tr><td>
+Removes duplicate spaces, and spaces at the start and end of a text string. The TRIM function doesn't remove non-breaking space characters</td></tr><tr><td>
 
 UPPER</td><td>
 
