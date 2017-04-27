@@ -138,6 +138,10 @@ navigation:
     libraries/radpdfprocessing/model:
         title: Model
         position: 4
+    libraries/radpdfprocessing/model/interactive-forms:
+        title: Interactive Forms
+    libraries/radpdfprocessing/model/interactive-forms/form-fields	:
+        title: Form Fields
     libraries/radpdfprocessing/formats-and-conversion:
         title: Formats and Conversion
         position: 5

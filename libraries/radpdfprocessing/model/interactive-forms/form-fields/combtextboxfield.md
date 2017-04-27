@@ -1,0 +1,57 @@
+---
+title: CombTextBoxField 
+page_title: CombTextBoxField 
+description: CombTextBoxField 
+slug: radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield
+tags: combtextboxfield
+published: True
+---
+
+# CombTextBoxField class
+
+This article describes the following topics:
+
+* [CombTextBoxField Class Overview](#overview)
+
+* [CombTextBoxField Class Properties](#properties)
+* 
+
+## Overview
+
+This class corresponds to FormFieldType.CombTextBox enum value and represents a text input data container which restricts its text to some specific length and the characters are equally distributed through the field appearance length. 
+
+## Properties
+
+CombTextBoxField provides the following properties:
+
+* **Value**: Gets or sets the current text value of the field.
+
+* **DefaultValue**: Gets or sets the default value used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) is reset to its default values.
+
+* **Widgets**: The collection of Widget annotations which represent the field on the PDF pages. The widgets are created by using the collection's **AddWidget()** method and can be removed by using the **Remove()** method. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
+
+* **MaxLengthOfInputCharacters**:Integer value specifying the number of characters that may be inputted.
+
+#### **[C#] Example 1: Create a CombTextBoxField and add it to a page**
+{{region radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield_0}}
+
+	CombTextBoxField combTextBoxField = new CombTextBoxField("SampleCombTextBox")
+	{
+	    MaxLengthOfInputCharacters = 4,
+	    DefaultValue = "2017",
+	    Value = "2017",
+	};
+	
+	VariableContentWidget widget = combTextBoxField.Widgets.AddWidget();
+	widget.Rect = new Rect(new Size(250, 50));
+	
+	document.AcroForm.FormFields.Add(combTextBoxField);
+	document.Pages[0].Annotations.Add(widget);
+
+{{endregion}}
+
+
+## See Also
+
+* [Form Field]({%slug radpdfprocessing-model-interactive-forms-form-fields %})
+* [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets %})
