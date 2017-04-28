@@ -4,7 +4,6 @@ page_title: SignatureField
 description: SignatureField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-signaturefield
 tags: signaturefield
-published: True
 ---
 
 
@@ -24,19 +23,45 @@ This class corresponds to FormFieldType.Signature enum value and represents a pl
 
 ## Properties
 
-SignitureField provides the following properties:
+SignatureField provides the following properties:
 
 * **Signature**: Gets or sets the Signature value. 
 	* Setting this property will sign the document during export. At this point, signing with multiple signatures is not supported.
 	* To validate a signature, you can use the Validate() and TryValidate() methods. Note, that the validation requires that the stream, from which the document is imported, to be opened. The validation is performed for the current field, and against the state of the document in the moment of importing.
 
-* **Widgets**: The collection of Widget annotations which represent the field on the PDF pages. The widgets are created by using the collection AddWidget method and may be removed by using the collection Remove method. As the widget collection implements IEnumerable interface the available widget instances may be iterated.
+    > More information on how you can digitally sign a document is available in the [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) topic.
+
+* **Widgets**: The collection of Widget annotations which represent the field on the PDF pages. The widgets can be added and removed from the collection using the collection's **AddWidget()** and **Remove()** methods respectively. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
 
 
+#### **[C#] Example 1: Create a SignatureField and add it to a page**
+{{region radpdfprocessing-model-interactive-forms-form-fields-signaturefield_0}}
 
-
+	SignatureField signatureField = new SignatureField("SampleSignature");
+	signatureField.Signature = new Signature(certificate);
+	
+	SignatureWidget widget = signatureField.Widgets.AddWidget();
+	widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
+	widget.Border = new AnnotationBorder(100, AnnotationBorderStyle.Solid, null);
+	
+	// Create a Form object to define the appearance you would like for the signature field.
+	Form form = new Form();
+	form.FormSource = new FormSource();
+	form.FormSource.Size = new Size(120, 120);
+	
+	FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
+	formEditor.DrawCircle(new Point(50, 50), 20);
+	formEditor.DrawText("Sample Signature");
+	
+	// Add the FormSource object to the widget of the field.
+	widget.Content.NormalContentSource = form.FormSource;
+	
+	page.Annotations.Add(widget);
+	document.AcroForm.FormFields.Add(signatureField);
+{{endregion}}
 
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets%})
+* [Signature API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_DigitalSignatures_Signature.htm)
