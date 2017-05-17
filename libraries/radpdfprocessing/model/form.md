@@ -41,7 +41,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 {{region cs-radpdfprocessing-model-form_1}}
 	Form form = container.Content.AddForm();
-	Form formWithSource = container.Content.AddImage(formSource);
+	Form formWithSource = container.Content.AddForm(formSource);
 {{endregion}}
 
 

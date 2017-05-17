@@ -18,7 +18,7 @@ This article describes the following topics:
 
 ## Overview
 
-This class corresponds to FormFieldType.Signature enum value and represents a placeholder where some digital signature information is preserved. 
+This class corresponds to FormFieldType.Signature enum value and represents a placeholder which preserves the digital signature information. 
 
 
 ## Properties
@@ -31,7 +31,7 @@ SignatureField provides the following properties:
 
     > More information on how you can digitally sign a document is available in the [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) topic.
 
-* **Widgets**: The collection of Widget annotations which represent the field on the PDF pages. The widgets can be added and removed from the collection using the collection's **AddWidget()** and **Remove()** methods respectively. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
+* **Widgets**: The collection of Widget annotations, which represent the field on the PDF pages. The widgets can be added and removed from the collection using the collection's **AddWidget()** and **Remove()** methods respectively. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
 
 
 #### **[C#] Example 1: Create a SignatureField and add it to a page**

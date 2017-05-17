@@ -14,7 +14,7 @@ This article describes the following topics:
 * [CombTextBoxField Class Overview](#overview)
 
 * [CombTextBoxField Class Properties](#properties)
-* 
+
 
 ## Overview
 
@@ -30,7 +30,7 @@ CombTextBoxField provides the following properties:
 
 * **Widgets**: The collection of Widget annotations which represent the field on the PDF pages. The widgets are created by using the collection's **AddWidget()** method and can be removed by using the **Remove()** method. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
 
-* **MaxLengthOfInputCharacters**:Integer value specifying the number of characters that may be inputted.
+* **MaxLengthOfInputCharacters**: Integer value specifying the number of characters that can be inputted.
 
 #### **[C#] Example 1: Create a CombTextBoxField and add it to a page**
 {{region radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield_0}}

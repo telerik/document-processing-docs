@@ -19,7 +19,7 @@ This article describes the following topics:
 
 ## Overview
 
-The RadioButtonField class corresponds to FormFieldType.RadioButton enum value and represents a group of radio button options. The user may select at most one option from the group. 
+The RadioButtonField class corresponds to FormFieldType.RadioButton enum value and represents a group of radio button options. The user can select at most one option from the group. 
 
 
 ## Properties

@@ -13,20 +13,20 @@ The form fields are the data containers responsible for preserving separate piec
 
 ## FormField Class
 
-FormField class is the base class for all fields. Instances of this class may be found by iterating in the FormFieldCollection of[AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%}). 
+FormField class is the base class for all fields. Instances of this class may be found by iterating in the FormFieldCollection of [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%}). 
 
 
 ## FormField Properties
 
 The FormField class provides the following properties:
 
-* **FieldType**: Provides the FormFieldType of the specifying field instance. This property may be used to easily recognize the type of the concrete field and this way easily cast the instance to the concrete FormField class inheritor.
+* **FieldType**: Provides the FormFieldType of the specifying field instance. This property can be used to easily recognize the type of the concrete field and easily cast the instance to the concrete FormField class inheritor.
 
-* **Name**: provides the name of the field. Each field should have a unique name when added to a FormFieldCollection of an AcroForm.
+* **Name**: Provides the name of the field. Each field should have a unique name when added to a FormFieldCollection of an AcroForm.
 
 * **UserInterfaceName**: Provides name used by the UI when referencing the field. Usually shown in a tooltip when hovering the field representation on the page. Also shown in error messages related to field error calculations.
 
-* **MappingName**: name used when exporting the field data from the document.
+* **MappingName**: Name used when exporting the field data from the document.
 
 * **IsReadOnly**: Boolean value indicating whether the field should be threated as read-only in a PDF viewer UI.
 
@@ -34,7 +34,7 @@ The FormField class provides the following properties:
 
 * **ShouldBeSkipped**: Boolean value indicating whether the field should be skipped when submitting the form.
 
-* **TextProperties**: represents a VariableTextProperties instance used when creating Widget for visualizing the concrete field. These properties are used to dynamically construct the Widget appearance when it contains some text content.
+* **TextProperties**: Represents a VariableTextProperties instance used when creating Widget for visualizing the concrete field. These properties are used to dynamically construct the Widget appearance when it contains some text content.
 
 
 ## FormField Types

@@ -5,7 +5,7 @@ description: Widgets
 slug: radpdfprocessing-model-interactive-forms-widgets 
 tags: widgets 
 published: True
-position: 5
+position: 2
 ---
 
 # Widgets
@@ -25,7 +25,7 @@ This topic describes what the widgets represent and what are the different types
 
 ## Overview
 
-Widget annotations are used for visual representation of some [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) value on a PDF page. There are different widget annotations depending on the type of content that they should visualize. All Widget annotations are created from the FormField class inheritor Widgets property through the AddWidget method in the corresponding Widgets collection.
+Widget annotations are used for visual representation of some [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) value on a PDF page. There are different widget annotations depending on the type of content that they should visualize. All Widget annotations are created from the FormField class inheritor Widgets property through the **AddWidget()** method in the corresponding Widgets collection.
 
 ## Defining Widget Content
 
@@ -48,7 +48,7 @@ All widgets have two type of content properties:
 
 Widget is the base class for all widgets. It provides common properties for all widgets and has WidgetContentType property, which helps you to recognize the concrete widget type and cast the base class instance to get the concrete widget inheritor. 
 
-All widgets are created using the the Widgets collection of the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) class inheritors . Using the **AddWidget()** and **Remove()** methods, you can respectively add or remove a widget from the collection. As the widget collection implements the **IEnumerable** interface, you can iterate all the available in the FormField instance widgets.
+All widgets are created using the the Widgets collection of the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) class inheritors. Using the **AddWidget()** and **Remove()** methods, you can respectively add or remove a widget from the collection. As the widget collection implements the **IEnumerable** interface, you can iterate all the available in the FormField instance widgets.
 
 
 
@@ -61,7 +61,7 @@ All widgets are created using the the Widgets collection of the [FormField]({%sl
 
 >Don't forget to specify the size of the widget. Otherwise, it won't be visualized in the PDF document.
 
-**Example 2** demonstrates how to iterate the Widgets collection of a [TexBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) instance. Additionally, the code shows you how to add a widget to the Annotations collection of a RadFixedPage. Note, that you must add each widget to this collection so it can be visualized on the PDF page.
+**Example 2** demonstrates how to iterate the Widgets collection of a [TexBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) instance. Additionally, the code shows you how to add a widget to the Annotations collection of a RadFixedPage. Note, that you must add each widget to this collection so it can be visualized on the PDF page. Otherwise, the element will not be shown on the page.
 
 #### **[C#] Example 2: Iterating the widgets in the FormField's collection**
 
