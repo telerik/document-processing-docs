@@ -19,7 +19,7 @@ Interactive forms in PDF format are also known as AcroForm. The AcroForm class i
 The AcroForm class provides the following properties:
 
 
-* **FormFields**: The collection of all [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields %}) instances.  You can use the collection **indexer** to get a FormField instance by name. The **Add()**, **Remove()** and **Contains()** methods allow you to modify the FormFields collection. Additionally, the FormFieldCollection class implements  the **IEnumerable<FormField>** interface, allowing you to iterate all fields in the collection.
+* **FormFields**: This property is of type [FormFieldCollection]({%slug radpdfprocessing-model-interactive-forms-formfieldcollection%}) and represents the collection of all [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields %}) instances.  You can use the collection **indexer** to get a FormField instance by name. The **Add()**, **Remove()** and **Contains()** methods allow you to modify the FormFields collection. Additionally, the FormFieldCollection class implements  the **IEnumerable<FormField>** interface, allowing you to iterate all fields in the collection.
  
 	>Each FormField has a **unique name** in this collection and you cannot add two fields with the same name.
 
@@ -29,5 +29,6 @@ The AcroForm class provides the following properties:
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
+* [FormFieldCollection class]({%slug radpdfprocessing-model-interactive-forms-formfieldcollection%})
 * [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets%})
 
