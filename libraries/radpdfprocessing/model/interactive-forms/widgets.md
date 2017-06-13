@@ -46,7 +46,7 @@ All widgets have two type of content properties:
 
 ## Widget Class
 
-Widget is the base class for all widgets. It provides common properties for all widgets and has WidgetContentType property, which helps you to recognize the concrete widget type and cast the base class instance to get the concrete widget inheritor. 
+The Widget class is inheritor of [Annotation]({%slug radpdfprocessing-model-annotations-and-destinations%}) and is the base class for all widgets. It provides common properties for all widgets and has WidgetContentType property, which helps you to recognize the concrete widget type and cast the base class instance to get the concrete widget inheritor. 
 
 All widgets are created using the the Widgets collection of the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) class inheritors. Using the **AddWidget()** and **Remove()** methods, you can respectively add or remove a widget from the collection. As the widget collection implements the **IEnumerable** interface, you can iterate all the available in the FormField instance widgets.
 
@@ -73,7 +73,7 @@ All widgets are created using the the Widgets collection of the [FormField]({%sl
 {{endregion}}
 
 
->The Widget class inherits from Annotation. It is important to add each annotation to the Annotations collection of RadFixedPage.
+>The Widget class inherits from [Annotation]({%slug radpdfprocessing-model-annotations-and-destinations%}). It is important to add each annotation to the Annotations collection of RadFixedPage.
 
 
 ## Widget Properties
@@ -91,6 +91,8 @@ The Widget class provides the following common widget properties and methods:
 * **RecalculateContent()**: This method is used to recalculate the AnnotationContentSource properties, so that their content corresponds to the [Dynamic appearance properties]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}) of the widget. 
  
 	>If you modify the [VariableTextProperties]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}#variabletextproperties-class) and the [DynamicAppearanceCharacteristics]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}#dynamicappearancecharacteristics-class) properties and do not call the **RecalculateContent()** method, the changes will not be visually displayed when viewing the file as the AnnotationContentSource properties are with higher priority.
+
+The inherited from the Annotation class property **IsPrintable** is set to *true* for the widgets by default. If you want to exclude a widget from the document when printing, you can set its **IsPrintable** property to *false*. 
 
 ## Widget Types
 

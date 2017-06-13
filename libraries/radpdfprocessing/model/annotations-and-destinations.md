@@ -20,6 +20,10 @@ The abstract __Annotation__ element associates an object with a location on a [R
 
 * __Type__: Property of type [AnnotationType](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_AnnotationType.htm), which determines the type of the annotation. The only supported type is __Link__.
           
+* **Border**: Represents the annotation borders. This property is of type [AnnotationBorder](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_AnnotationBorder.htm).
+
+* **IsPrintable**: A boolean value that indicates whether the annotation instance should be visualized when printing the document. When set to *false*, the annotation won't appear when the document is printed. 
+
 
 This article will get you familiar with the following concepts:
       
