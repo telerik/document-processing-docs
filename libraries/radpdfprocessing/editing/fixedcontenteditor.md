@@ -293,10 +293,10 @@ The Widget annotations allow you visualize the content of a FormField. With the 
 The [Position]({%slug radpdfprocessing-concepts-position%}) property exposed by __FixedContentEditor__ provides an easy way to manipulate the position of inserted content elements.
         
 
-The code in __Example 9__ shows how to manipulate the position of the inserted content elements and __Figure 5__ shows the result of the code.
+The code in __Example 12__ shows how to manipulate the position of the inserted content elements and __Figure 5__ shows the result of the code.
         
 
-#### __[C#] Example 9: Scale and rotate content__
+#### __[C#] Example 12: Scale and rotate content__
 
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_7}}
 	editor.Position.Scale(1.5, 0.5);
