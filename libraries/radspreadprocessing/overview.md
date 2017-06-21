@@ -34,10 +34,10 @@ Some of the features which you can use are:
 * [Data Validation]({%slug radspreadprocessing-features-data-validation%})
 
 
-* [Filtering]({%slug radspreadprocessing-features-Filtering%})
+* [Filtering]({%slug radspreadprocessing-features-filtering%})
 
 
 * [Grouping]({%slug radspreadprocessing-features-grouping%})
 
 
-* Sorting
+* [Sorting]({%slug radspreadprocessing-features-sorting%})
