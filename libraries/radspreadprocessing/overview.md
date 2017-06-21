@@ -22,11 +22,22 @@ __RadSpreadProcessing__ is a document processing library that enables your appli
 Some of the features which you can use are:
         
 
-* Import/export to different spreadsheet formats.
+* Import/export to different spreadsheet formats. Check the [Formats and Conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}) section for more information on this topic.
             
 
-* More than 100 built-in formulas.
+* More than 200 built-in [formulas]({%slug radspreadprocessing-features-formulas-functions%}).
             
 
 * Powerful and easy-to-use API.
+
             
+* [Data Validation]({%slug radspreadprocessing-features-data-validation%})
+
+
+* [Filtering]({%slug radspreadprocessing-features-Filtering%})
+
+
+* [Grouping]({%slug radspreadprocessing-features-grouping%})
+
+
+* Sorting
