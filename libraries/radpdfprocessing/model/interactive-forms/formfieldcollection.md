@@ -10,19 +10,13 @@ position: 2
 
 # FormFieldCollection
 
-This class holds a collection of [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instances, assigned to the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) of the document. The collection exposes useful properties and methods allowing you to access, add or remove the form fields in a document.
+This class holds a collection of [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instances, assigned to the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) of the document. The collection exposes useful [properties](#properties) and [methods](#methods) allowing you to access, add or remove the form fields in a document.
 
-This article contains the following sections:
-
-* [FormFieldCollection Properties](#properties)
-* [FormFieldCollection Methods](#methods)
-
-
-## FormFieldCollection Properties
+## Properties
 
 The FormFieldCollection class exposes an **indexer** and a **Count** property allowing you to respectively get a [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instance by its name or get the number of all form fields in the document. 
 
-## FormFieldCollection Methods
+## Methods
 
 There are methods allowing you to easily construct a form field and add it to the collection. Any of those methods accepts a string parameter representing the **unique name** of the form field. The generated field is then returned from the method so you can customize it if needed. Here is a list of all the methods:
 
