@@ -25,13 +25,13 @@ This article covers the following topics:
 
 ## What is Digital Signature?
 
-The digital signature feature enables you to sign and validate PDF document. A signature confirms that the document content originated from the signer and has not been modified in any way.
+The digital signature feature enables you to sign and validate a PDF document. A signature confirms that the document content originated from the signer and has not been modified in any way.
 
-In the PDF document model, the validation is performed per signature. For a valid signed document is considered one that has not been changed after the signing and all of its certificates have valid trusted root certificate.
+In the PDF document model, the validation is performed per signature. A signed document is considered valid when it has not been changed after the signing and all of its certificates have a valid trusted root certificate.
 
 ## Signing a Document
 
-The signing is done through the Signature object. The constructor of the Signature class takes a [X509Certificate2](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2(v=vs.110).aspx) object as a parameter. This is the certificate that will be used to sign the PDF document.
+The signing is done through the **Signature** object. The constructor of the Signature class takes a [X509Certificate2](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2(v=vs.110).aspx) object as a parameter. This is the certificate that will be used to sign the PDF document.
 
 #### **[C#] Example 1: Create a Signature object**
 
@@ -51,7 +51,7 @@ When instantiated, the signature should be added to the document content using t
 	signatureField.Signature = signature;
 {{endregion}}
 
-In addition, to create a signature, which has a visual representation, you will need to associate a Widget annotation with the signed [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) through the Widget constructor. The widget will also need a [FormSource]({%slug radpdfprocessing-model-formsource%}) object to be applied to its Content.NormalContentSource property. A FormSource could be filled with data using the FixedContentEditor.
+In addition, to create a signature, which has a visual representation, you will need to associate a **Widget** annotation with the signed [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) through the Widget constructor. The widget will also need a [FormSource]({%slug radpdfprocessing-model-formsource%}) object to be applied to its Content.NormalContentSource property. A FormSource could be filled with data using the FixedContentEditor.
 
 >important When saving a document that is digitally signed, the stream used to export the document must support reading.
 
