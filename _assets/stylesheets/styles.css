@@ -120,12 +120,6 @@ a img {
     display: inline-block;
 }
 
-#logo-bar a img,
-#logo-bar-sl a img {
-    height: auto;
-    width: 100%;
-} 
-
 #logo-bar-sl span {
 	display: none;
 }
@@ -741,7 +735,8 @@ a.footer-links:hover {
 
 .logo {
     font-size: 14px; 
-    height: 30px;
+    height: 40px;
+    width: 330px;
     display: inline-block;
     vertical-align: top;
 }
