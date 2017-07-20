@@ -36,6 +36,7 @@
 @media (max-width: 1200px) {
 	#page-article {
 		padding-left: 0;
+		padding-right: 0; 
 	}
 	
 		#page-article article {
