@@ -35,7 +35,7 @@ The supported formats require to follow different patterns when writing a docume
 
 Writing the document content finishes once the [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}) instance is disposed.
 
-# See Also
+## See Also
 
 * [Getting Started]({%slug radspreadstreamprocessing-getting-started%})
 * [Workbook]({%slug radspreadstreamprocessing-model-workbook%})

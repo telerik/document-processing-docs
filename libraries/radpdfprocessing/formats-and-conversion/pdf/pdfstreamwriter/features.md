@@ -24,6 +24,6 @@ Since the current **PdfStreamWriter** API provides methods for merging separate 
 
 Also, destinations leading to other pages are not preserved with the current version, except from the cases when they lead to the same page or to a previously merged page.
 
-# See Also
+## See Also
 
 * [PdfStreamWriter Overview]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})

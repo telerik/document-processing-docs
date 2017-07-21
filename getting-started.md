@@ -78,7 +78,7 @@ You can find more information on working with the Telerik Document Processing li
 
     * [Getting started with RadZipLibrary]({%slug radziplibrary-gettingstarted%})
 
-# See Also
+## See Also
 
 * [System Requirements]({%slug installation-system-requirements%})
 * [Installing on Your Computer]({%slug installation-installing-on-your-computer%})

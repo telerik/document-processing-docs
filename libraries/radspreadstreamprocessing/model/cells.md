@@ -202,7 +202,7 @@ In addition to the listed properties, the SpreadCellFormat class allows you to s
 A SpreadCellFormat instance could be applied on multiple cells. However, if a property of the format changes, the new settings will be applied to the cells formatted after the modification.
 
 
-# See Also
+## See Also
 
 * [Rows]({%slug radspreadstreamprocessing-model-rows%})
 * [Columns]({%slug radspreadstreamprocessing-model-columns%})

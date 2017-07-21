@@ -50,7 +50,7 @@ Supported Development Tools and Environments:
 * Hard disk: up to 1.5 GB of available space may be required
 
 
-# See Also
+## See Also
 
  * [Installing Telerik Document Processing]({%slug installation-installing-on-your-computer%})
 

@@ -46,7 +46,7 @@ In order to enable the export to PDF in RadSpreadProcessing, you will need to ad
 
 >The **PdfFormatProvider** class of RadSpreadProcessing resides in the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf namespace**. For more information on how to work with this provider, please read [this topic]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
-# See Also
+## See Also
 
 * [Getting Started with Telerik Document Processing]({%slug getting-started%})
 * [RadPdfProcessing]([%slug radpdfprocessing-overview%])
