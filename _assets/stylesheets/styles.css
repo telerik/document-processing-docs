@@ -625,6 +625,13 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     letter-spacing: -0.04em; 
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 400; 
+    line-height: 1.2em; 
+    margin-top: 30px; 
+    margin-bottom: 12px; 
+}
+
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
     padding-left: 25px;
     margin-left: -25px;
@@ -636,14 +643,6 @@ h4 a:hover, h5 a:hover, h6 a:hover {
     text-decoration: none;
     background: transparent url(../images/anchor.png) no-repeat 0px 50%;
 }
-
-h1,h2,h3,h4,h5,h6 {
-    font-weight: 400; 
-    line-height: 1.2em; 
-    margin-top: 30px; 
-    margin-bottom: 12px; 
-}
-
 h1 {
     font-size: 34px;
 }
@@ -662,6 +661,9 @@ h3 {
 h4 {
     font-size: 16px;
     font-weight: 500;
+    /*we leave green color here for now */
+    color: #00b312;
+    letter-spacing: 0; 
 }
 
 h5 {
