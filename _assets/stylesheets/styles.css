@@ -987,10 +987,6 @@ header, nav, section, article, aside, footer {
       bottom: -8px; 
     }	
 
-    div#page-inner-content {
-        bottom: 0;
-    }
-
     #page-article {
         width: 100%;
         margin-left: 0;
@@ -1030,9 +1026,24 @@ header, nav, section, article, aside, footer {
         padding: 0 3.83em 0 0;    
     }
 
+    div#page-inner-content {
+        bottom: 0;
+    }
+    
     footer {
         display: none;
     }
+}
+
+@media (max-width: 450px) {
+	#logo-bar, 
+	#logo-bar-sl {
+		position: absolute;
+	}
+	
+	#page-header .show-search {
+		display:none;
+	}	
 }
 
 /* START Theme Palette Color Element Styles */
@@ -1528,18 +1539,6 @@ header, nav, section, article, aside, footer {
  .detailsDIV table td {
   padding: 4px 16px 4px 16px!important;
 }
-
-@media (max-width: 450px) {
-	#logo-bar, 
-	#logo-bar-sl {
-		position: absolute;
-	}
-	
-	#page-header .show-search {
-		display:none;
-	}	
-}
-
 
 /* END Kendo Grid Nova Theme CSS*/
 
