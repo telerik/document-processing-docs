@@ -40,6 +40,11 @@ The following assemblies are required in order to be able to export to Xlsx and 
 * __Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll__
 * __Telerik.Windows.Zip.dll__
             
+To describe different colors, shapes and other properties, **RadSpreadProcessing** depends on the listed below .NET assemblies, which you should also refer in your project:
+
+* **WindowsBase.dll**
+* **PresentationCore.dll**
+* **PresentationFramework.dll**
 
 ## Creating a Workbook
 

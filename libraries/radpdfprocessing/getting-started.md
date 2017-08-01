@@ -31,6 +31,12 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 * __Telerik.Windows.Documents.Fixed.dll__
 * __Telerik.Windows.Zip.dll__
             
+To describe different colors, shapes and other properties, **RadPdfProcessing** depends on the listed below .NET assemblies, which you should also refer in your project:
+
+* **WindowsBase.dll**
+* **PresentationCore.dll**
+* **PresentationFramework.dll**
+
 
 ## Creating a Document
 

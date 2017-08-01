@@ -20,10 +20,15 @@ This article will get you started in using the **RadSpreadStreamProcessing** lib
 
 ## Assembly References
 
-In order to use RadSpreadStreamProcessing in your project, you will need to add a reference to:
+In order to use **RadSpreadStreamProcessing** in your project, you will need to add a reference to:
 
 * **Telerik.Documents.SpreadsheetStreaming.dll**
 * **Telerik.Windows.Zip.dll**
+
+To describe different colors, shapes and other properties, **RadSpreadStreamProcessing** depends on the listed below .NET assemblies, which you should also refer in your project:
+
+* **WindowsBase.dll**
+* **PresentationFramework.dll**
 
 ## Create a Spreadsheet Document
 
