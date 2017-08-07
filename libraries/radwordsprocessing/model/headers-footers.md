@@ -34,7 +34,11 @@ Headers and Footers are properties of the __Section__ element and each Section c
 >
 > * __RadFlowDocument.HasDifferentEvenOddPageHeadersFooters__: If set to true, __Even__ header/footer is used for even document pages. If set to false (which is the default), __Even__ header/footer is not respected.
 >
-> * __Section.HasDifferentFirstPageHeaderFooter__: if set to true, __First__ header/footer is used for the first page of the section. If set to false (which is the default), __First__ header/footer is not respected.
+> * __Section.HasDifferentFirstPageHeaderFooter__: If set to true, __First__ header/footer is used for the first page of the section. If set to false (which is the default), __First__ header/footer is not respected.
+>
+> * __Section.HeaderTopMargin__: Gets or sets the top margin of the header. The value is in device independent pixels (1/96 inch).
+>
+> * __Section.FooterBottomMargin__: Gets or sets the bottom margin of the footer. The value is in device independent pixels (1/96 inch).
               
 
 Headers of all __HeaderFooterType__ types can be created using the code snippet in __Example 1__:
