@@ -43,6 +43,7 @@ __Example 2__ demonstrates how to insert text with a specific font family.
 	block.InsertText(new FontFamily("Arial"), "Text");
 {{endregion}}
 
+There is an additional overload of the InsertText() method enabling you to specify the font family, font style and font weight for the text which you would like to insert.
 
 >The '\r' and '\n' characters don't have the usual meaning of "go to next line" when they are inserted into a PDF document and you cannot simply insert text containing these characters to produce multiline text. Instead, you should insert a line break.
 
