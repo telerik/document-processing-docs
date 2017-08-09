@@ -45,7 +45,7 @@ In order to use the **PdfFormatProvider** of **RadWordsProcessing**, you should 
 
 #### [C#] Example 1: HTML to PDF conversion
 
-{{region pdf-export_0}}
+{{region radwordsprocessing-pdf-export_0}}
 
 	string htmlContent = "<!DOCTYPE html><html><body><p>Hello, world!</p></body></html>";
 	
