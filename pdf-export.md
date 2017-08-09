@@ -38,6 +38,27 @@ In order to use the **PdfFormatProvider** of **RadWordsProcessing**, you should 
 
 >The **PdfFormatProvider** class of RadWordsProcessing resides in the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf namespace**. For more information on how to work with this provider, please read [this topic]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
+
+### Convert HTML to PDF
+
+**Example 1** demonstrates how you can convert an HTML string to a PDF document. The [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) and [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) classes of [RadWordsProcessing]({%slug radwordsprocessing-overview%}) are used to import/export the [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance. 
+
+#### [C#] Example 1: HTML to PDF conversion
+
+{{region pdf-export_0}}
+
+	string htmlContent = "<!DOCTYPE html><html><body><p>Hello, world!</p></body></html>";
+	
+    Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider htmlProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider();
+	// Create a document instance from the content.
+    RadFlowDocument document = htmlProvider.Import(htmlContent);
+
+    Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider pdfProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
+
+	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
+    byte[] pdfBytes = pdfProvider.Export(document);
+{{endregion}}
+
 ## Convert a Spreadsheet Document to PDF
 
 While the so far discussed libraries allow working with text documents, with RadSpreadProcessing you can create, import and export tabular data. This library supports the most common file formats for storing spreadsheet documents - Xlsx, CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
