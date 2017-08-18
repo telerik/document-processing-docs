@@ -26,6 +26,8 @@ This is why the elements in **RadSpreadStreamProcessing** must be created and di
 
 The supported formats require to follow different patterns when writing a document and because each element is written in the stream once you are done with it instead of writing the whole document at once, the desired format must be specified when you start creating the document. In other words, when instantiating [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}).
 
+>As of R3 2017, the encoding used to export **CSV** documents is **UTF-8 with BOM**.
+
 #### **Example 1: Specify export format**
 
 {{region radspreadstreamprocessing-export_0}}
