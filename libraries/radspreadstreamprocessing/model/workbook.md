@@ -69,7 +69,7 @@ The __CreateWorkbookExporter__ method creates a new workbook which overrides the
 
 >IWorkbookExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
-In the spreadsheet documents, the names of the sheets are unique. If you try to add a sheet with a name that is already present in the workbook, you will get an **ArgumentException**. This is where the **GetSheetInfos()** method comes in handy. The method returns information about the sheets currently present in the workbook (imported or added). It's useful to use before appending worksheet to existing workbook, to check whether a particular sheet name is available (not already present in the document). **Example 3** demonstrates how you can use it.
+In the spreadsheet documents, the names of the sheets are unique. If you try to add a sheet with a name that is already present in the workbook, you will get an **ArgumentException**. This is where the **GetSheetInfos()** method comes in handy. The method returns information about the sheets currently present in the workbook (imported or added). It could be used to check whether a particular sheet name is available (not already present) when appending a worksheet to an existing workbook. **Example 3** demonstrates how you can use it.
 
 #### **[C#] Example 3: Using IWorkbookExporter.GetSheetInfos()**
 
