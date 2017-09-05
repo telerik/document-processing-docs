@@ -1,1 +1,28 @@
-[{"Name":"Generate Document","ExampleInfo":{"Name":"Generate Document","ProjectPath":"C:\\temp\\sdk\\SpreadStreamProcessing\\GenerateDocument\\GenerateDocument.csproj","ReadmePath":"C:\\temp\\sdk\\SpreadStreamProcessing\\GenerateDocument\\readme.md","DirectoryName":"GenerateDocument","ExampleFileNames":["GenerateDocument.csproj","App.config","Program.cs","readme.md"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadStreamProcessing/GenerateDocument/","Description":"This project demonstrates how to use RadSpreadStreamProcessing to generate document from scratch and export it to a file.","KeyWords":"Generate Document,  create,report,save,export,stream,console,xlsx,csv"}]
+[
+  {
+    "Name": "Generate Document",
+    "ExampleInfo": {
+      "Name": "Generate Document",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\SpreadStreamProcessing\\GenerateDocument\\GenerateDocument.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\SpreadStreamProcessing\\GenerateDocument\\readme.md",
+      "DirectoryName": "GenerateDocument",
+      "ExampleFileNames": [ "GenerateDocument.csproj", "App.config", "Program.cs" ]
+    },
+    "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/SpreadStreamProcessing/GenerateDocument/",
+    "Description": "This project demonstrates how to use RadSpreadStreamProcessing to generate document from scratch and export it to a file.",
+    "KeyWords": "Generate Document,  create,report,save,export,stream,console,xlsx,csv"
+  },
+  {
+    "Name": "Append Worksheet To Existing Workbook",
+    "ExampleInfo": {
+      "Name": "Append Worksheet To Existing Workbook",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\SpreadStreamProcessing\\AppendWorksheetToExistingWorkbook\\AppendWorksheetToExistingWorkbook.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\SpreadStreamProcessing\\AppendWorksheetToExistingWorkbook\\readme.md",
+      "DirectoryName": "AppendWorksheetToExistingWorkbook",
+      "ExampleFileNames": [ "AppendWorksheetToExistingWorkbook.csproj", "Program.cs" ]
+    },
+    "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/SpreadStreamProcessing/AppendWorksheetToExistingWorkbook/",
+    "Description": "This project demonstrates how to use RadSpreadStreamProcessing to generate document from scratch and export it to a file.",
+    "KeyWords": "Append Worksheet To Existing Workbook,  append,report,save,export,stream,xlsx,csv"
+  }
+]

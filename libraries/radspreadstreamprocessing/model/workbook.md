@@ -84,7 +84,7 @@ In the spreadsheet documents, the names of the sheets are unique. If you try to 
 
 Since the CSV format doesn't have the concept for multiple sheets, invoking GetSheetInfos() for a CSV document returns an empty collection.
 
->You can find a runnable example showing how to append a worksheet to an existing workbook in the [SDK repository](https://github.com/telerik/xaml-sdk/tree/master/SpreadStreamProcessing/AppendWorksheetToExistingWorkbook) on GitHub.
+>You can find a runnable example showing how to append a worksheet to an existing workbook in the [SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/SpreadStreamProcessing/AppendWorksheetToExistingWorkbook) on GitHub.
 
 ## See Also
 

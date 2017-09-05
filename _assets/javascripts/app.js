@@ -231,7 +231,7 @@ function convertApiLinkToCDNLink(url, fileName){
 	 var contentsIndex = url.indexOf('contents');
 	 var rootDir = url.substring(contentsIndex + 9); 
 	 
-	 return "https://cdn.rawgit.com/telerik/xaml-sdk/master/" + rootDir + fileName;
+	 return "https://cdn.rawgit.com/telerik/document-processing-sdk/master/" + rootDir + fileName;
 }	
 
 function getCodeInPlainText(theURL, fileName){
@@ -302,7 +302,7 @@ function getGitHubFolderUrl(exampleInfo){
 	var rootDir = exampleInfo.GitHubPath.substring(masterIndex + 9);  
 	var dirName = exampleInfo.ExampleInfo.DirectoryName;
 
-	var result ="<a href='https://github.com/telerik/xaml-sdk/tree/master/" + rootDir +"/' target='_blank'>" +dirName+ "</a>";
+	var result ="<a href='https://github.com/telerik/document-processing-sdk/tree/master/" + rootDir +"/' target='_blank'>" +dirName+ "</a>";
 	return result;
 }
 

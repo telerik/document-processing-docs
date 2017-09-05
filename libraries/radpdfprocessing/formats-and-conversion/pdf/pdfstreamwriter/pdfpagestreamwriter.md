@@ -36,7 +36,7 @@ An instance of the PdfPageStreamWriter class can be obtained using the **BeginPa
 {{endregion}}
 
 
->You can find an example on how to use the PdfPageStreamWriter class in the [Manipulate Pages](https://github.com/telerik/xaml-sdk/tree/master/PdfProcessing/ManipulatePages) example in the XAML SDK repository on GitHub.
+>You can find an example on how to use the PdfPageStreamWriter class in the [Manipulate Pages](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) example in the XAML SDK repository on GitHub.
 
 PdfStreamWriter exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the writer instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
 
