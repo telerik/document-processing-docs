@@ -75,7 +75,7 @@ The ImageSource class exposes two methods, which could help you get the data fro
 * __BitmapSource GetBitmapSource()__: Gets the BitmapSource of the image.
 * __EncodedImageData GetEncodedImageData()__: Returns the encoded image data. This method can be used if you need to directly export the images from the PDF document.
 
->tip This [example in our SDK repository](https://github.com/telerik/xaml-sdk/tree/master/PdfProcessing/CreateDocumentWithImages) demonstrates how to insert JPEG and JPEG2000 images in a PDF document without requiring that you decode the images on import. This way the exported images will not be re-encoded and their image quality will be preserved.
+>tip This [example in our SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateDocumentWithImages) demonstrates how to insert JPEG and JPEG2000 images in a PDF document without requiring that you decode the images on import. This way the exported images will not be re-encoded and their image quality will be preserved.
 
 ## Extensions
 

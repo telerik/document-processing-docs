@@ -62,14 +62,29 @@ The __CreateWorkbookExporter__ method creates a new workbook which overrides the
 #### **[C#] Example 2: Create IWorkbookExporter and append the content from the stream**
 
 {{region cs-radspreadstreamprocessing-model-workbook_1}}
-	IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream, SpreadExportMode.Append));
+	IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream, SpreadExportMode.Append);
 {{endregion}}
 
 >tip The Аppend mode is not supported in Xamarin.
 
-<!-- -->
-
 >IWorkbookExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
+
+In the spreadsheet documents, the names of the sheets are unique. If you try to add a sheet with a name that is already present in the workbook, you will get an **ArgumentException**. This is where the **GetSheetInfos()** method comes in handy. The method returns information about the sheets currently present in the workbook (imported or added). It could be used to check whether a particular sheet name is available (not already present) when appending a worksheet to an existing workbook. **Example 3** demonstrates how you can use it.
+
+#### **[C#] Example 3: Using IWorkbookExporter.GetSheetInfos()**
+
+{{region cs-radspreadstreamprocessing-model-workbook_2}}
+
+	using (IWorkbookExporter workbookExporter = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream))
+	{
+	    IEnumerable<SheetInfo> sheetInfos = workbookExporter.GetSheetInfos();
+	    string firstNameSheet = sheetInfos.First().Name;
+	}
+{{endregion}}
+
+Since the CSV format doesn't have the concept for multiple sheets, invoking GetSheetInfos() for a CSV document returns an empty collection.
+
+>You can find a runnable example showing how to append a worksheet to an existing workbook in the [SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/SpreadStreamProcessing/AppendWorksheetToExistingWorkbook) on GitHub.
 
 ## See Also
 

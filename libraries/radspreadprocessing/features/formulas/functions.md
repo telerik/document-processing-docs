@@ -39,6 +39,11 @@ DAY</td><td>
 
 Converts a serial number to a day of the month</td></tr><tr><td>
 
+
+DAYS</td><td>
+
+Returns the number of days between two dates</td></tr><tr><td>
+
 HOUR</td><td>
 
 Converts a serial number to an hour</td></tr><tr><td>
@@ -586,6 +591,10 @@ CHOOSE</td><td>
 
 Returns one of a list of values, depending on the value of a supplied index number</td></tr><tr><td>
 
+HLOOKUP</td><td>
+
+Looks in the top row of an array and returns the value of the specified cell</td></tr><tr><td>
+
 HYPERLINK</td><td>
 
 Creates a shortcut or jump that opens a document stored on a network server, an intranet, or the Internet</td></tr><tr><td>
@@ -596,10 +605,21 @@ Uses an index to choose a value from a reference or array</td></tr><tr><td>
 
 LOOKUP</td><td>
 
-Looks up values in a vector or array</td></tr></table>
-<table><tr><th>
+Looks up values in a vector or array</td></tr><tr><td>
 
-Math and Trigonometry Functions</th><th></th></tr><tr><td>
+MATCH</td><td>
+
+Returns the relative position of an item in an array that matches a specified value in a specified order</td></tr><tr><td>
+
+VLOOKUP</td><td>
+
+Looks in the first column of an array and moves across the row to return the value of the specified cell. By default, the table must be sorted in an ascending order</td></tr>
+
+
+</table>
+
+<table>
+<th>Math and Trigonometry Functions</th><th></th></tr><tr><td>
 
 ABS</td><td>
 
