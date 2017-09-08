@@ -33,8 +33,8 @@ PdfStreamWriter can help you achieve the following scenarios when creating the p
 
 > The XAML SDK repository on GitHub contains examples showing the capabilities of PdfStreamWriter: 
 > 
-> - The [PdfStreamWriterPerformance](https://api.github.com/repos/telerik/xaml-sdk/contents/PdfProcessing/PdfStreamWriterPerformance/) sample shows the performance you can achieve using PdfStreamWriter
-> - The [Manipulate Pages](https://api.github.com/repos/telerik/xaml-sdk/contents/PdfProcessing/ManipulatePages/) example shows different use cases of PdfStreamWriter
+> - The [PdfStreamWriterPerformance](https://api.github.com/repos/telerik/document-processing-sdk/contents/PdfProcessing/PdfStreamWriterPerformance/) sample shows the performance you can achieve using PdfStreamWriter
+> - The [Manipulate Pages](https://api.github.com/repos/telerik/document-processing-sdk/contents/PdfProcessing/ManipulatePages/) example shows different use cases of PdfStreamWriter
 
 ## PdfStreamWriter Structure
 
