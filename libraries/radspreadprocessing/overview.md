@@ -10,16 +10,11 @@ position: 0
 
 # Overview
 
-
 Thank you for choosing Telerik **RadSpreadProcessing**.
-      
-
-## 
 
 This library enables you to work with spreadsheet documents – create ones from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
-        ![Rad Spread Processing Overview 01](images/RadSpreadProcessing_Overview_01.png)
 
-
+![Rad Spread Processing Overview 01](images/RadSpreadProcessing_Overview_01.png)
 
 **RadSpreadProcessing** comes with support for:
 
@@ -45,7 +40,7 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * [**Number Formats**]({%slug radspreadprocessing-features-number-formats%}): Enable you to format the data in the cells so it can be easily readable.
 
-* **Copy/Paste**: Add or [copy worksheets]({%slug radspreadprocessing-working-with-worksheets-copy-worksheet%}) within or across workbooks. Of course, [copy and paste of cells]({%slug radspreadprocessing-features-clipboard-support%}) is supported as well.
+* **Copy/Paste**: Add or [copy worksheets]({%slug radspreadprocessing-working-with-worksheets-copy-worksheet%}) within or across workbooks. Of course, [copying and pasting of cells]({%slug radspreadprocessing-features-clipboard-support%}) is supported as well.
 
 * [**Data Validation**]({%slug radspreadprocessing-features-data-validation%}): Enables you to control the type of data or the values that users enter into a cell. Different data validation rules are available, including list, number, date, text length or custom rules.
 
@@ -67,7 +62,7 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * [**History**]({%slug radspreadprocessing-features-history%}): The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. Each worksheet has its own history stack.
 
-### Supported formats: 
+## Supported formats: 
 
 * [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
 
@@ -77,3 +72,8 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only)
  
+## See Also
+
+* [Getting Started]({%slug radspreadprocessing-getting-started%})
+* [What is a Workbook]({%slug radspreadprocessing-working-wtih-workbooks-what-is-workbook%})
+* [What is a Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
