@@ -16,7 +16,7 @@ Thank you for choosing Telerik **RadSpreadProcessing**.
 
 ## 
 
-This library enables you to work with spreadsheet documents – create ones from scratch, modify existing documents or convert between the most common spreadsheet formats. The generated workbook you can save to a local file, stream, or stream it to the client browser.
+This library enables you to work with spreadsheet documents – create ones from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
         ![Rad Spread Processing Overview 01](images/RadSpreadProcessing_Overview_01.png)
 
 
@@ -35,7 +35,7 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * [**Formulas**]({%slug radspreadprocessing-features-formulas-general-information%}): The library comes with more than 200 built-in functions. The API enables you to easily plug custom ones as well.
 
-* [**Named ranges**]({%slug radspreadprocessing-features-named-ranges%}): You can use the named ranges in workbook and worksheet levels.
+* [**Named ranges**]({%slug radspreadprocessing-features-named-ranges%}): You can use the named ranges on workbook and worksheet levels.
 
 * [**Styling**]({%slug radspreadprocessing-features-styling-cell-styles%}): You can apply styles to the cells. The API allows you to duplicate one of the predefined styles or create a new one according to your preferences.
 
@@ -47,7 +47,7 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * **Copy/Paste**: Add or [copy worksheets]({%slug radspreadprocessing-working-with-worksheets-copy-worksheet%}) within or across workbooks. Of course, [copy and paste of cells]({%slug radspreadprocessing-features-clipboard-support%}) is supported as well.
 
-* [**Data Validation**]({%slug radspreadprocessing-features-data-validation%}): Enables you to control the type of data or the values that users enter into a cell.
+* [**Data Validation**]({%slug radspreadprocessing-features-data-validation%}): Enables you to control the type of data or the values that users enter into a cell. Different data validation rules are available, including list, number, date, text length or custom rules.
 
 * [**Filtering**]({%slug radspreadprocessing-features-filtering%}) worksheet data.		
 
