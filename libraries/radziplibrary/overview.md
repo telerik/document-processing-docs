@@ -12,24 +12,20 @@ position: 0
 
 ## 
 
-Have you ever wondered how to increase the responsiveness of your applications by compressing the data that you send over the internet? With __RadZipLibrary__ you can compress data like images, docx or pdf files and send them over the wire. Thus, you will achieve fast and secure transactions. 
+Have you ever wondered how to increase the responsiveness of your applications by compressing the data that you send over the internet? With __RadZipLibrary__ you can compress data like images, DOCX or PDF files and send them over the wire. Thus, you will achieve fast and secure transactions. 
 
 ![Zip Library Overview 01](images/ZipLibrary_Overview_01.png)
 
 This is a list with short descriptions of the top-of-the-line features of Telerik's __Zip Library__ control:
         
 
-* __Easy to use API__: The __Zip Library__ exposes flexible and easy API to provide you with full control over the compressed data.
-            
+* **Easy to use API**: The library exposes flexible and easy API to provide you with full control over the compressed data. The [extension methods]({%slug radziplibrary-zipextensions%}) allow you to implement the most common scenarios in a single line of code, like creating zip file from folder or extracting it.
 
-* __Load or create ZIP files__: You can load data from existing __ZIP__ files, create new ones and edit ZIPs that can be used by other applications. You can also create ZIP files in memory or add data to ZIP file from stream.
-            
+* **Load or create ZIP files**: You can load data from existing ZIP files, create new ones and edit ZIPs that can be used by other applications. You can also create ZIP files in memory or add data to ZIP file from stream.
 
-* __Store your data in the Isolated Storage__: You can store the compressed data in the Isolated Storage.
-            
+* [**Compress a stream**]({%slug radziplibrary-compress-stream%}): **RadZipLibrary** can significantly facilitate your efforts in compressing a stream, for example to send it over the internet.
 
-* __Support for large files__: The __Zip Library__ works seamlessly with large files.
+* **Support for large files**: The **Zip Library** works seamlessly with large files (over 4GB).
             
-
-* __Support for encryption__: You can protect your ZIP file with password for more security.
+* **Support for [encryption]({%slug radziplibrary-protect-ziparchive%})**: You can protect your ZIP file with password for more security.
             
