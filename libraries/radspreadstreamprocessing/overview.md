@@ -26,13 +26,31 @@ The key for the memory efficiency is that the spread streaming library writes th
 
 Some of the features you can take advantage of are:
 
-* Export to XLSX or CSV files
+* [Export]({%slug radspreadstreamprocessing-export%}) to XLSX or CSV files
+
 * Writing directly into a stream
-* Append new worksheets to existing ones
-* Grouping
-* [Styling]({%slug radspreadstreamprocessing-features-styling-cell-styles%}) and [formatting cells]({%slug radspreadstreamprocessing-model-cells%}#set-a-format)
-* Hidden [rows]({%slug radspreadstreamprocessing-model-rows%}) and [columns]({%slug radspreadstreamprocessing-model-columns%})
-* [Freezing panes]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#freeze-panes)
+
+* **Append** new worksheets to existing workbook
+
+* **Grouping**: Helps you organize data in sections, to be able to show and hide the currently relevant chunks.
+
+* **Hidden [rows]({%slug radspreadstreamprocessing-model-rows%}) and [columns]({%slug radspreadstreamprocessing-model-columns%})**: The API allows you to set the hidden state of each row or column.
+
+* [**Cell formatting**]({%slug radspreadstreamprocessing-model-cells%}#set-a-format): A number of properties enabling you to apply the desired look to a cell.
+
+* [**Cell styles**]({%slug radspreadstreamprocessing-features-styling-cell-styles%}): Using cell styles allows you to apply multiple format options in one step and also offers an easy approach to achieve consistency in cell formatting.
+
+* [**Merge cells**]({%slug radspreadstreamprocessing-model-cells%}#merge-cells): You have the ability to merge two or more adjacent cells into a single cell that spans over 
+multiple rows and columns.
+
+* **Controlling the view state of a sheet:**
+	* [Setting scale factor]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#scale-a-document)
+	* [Control over the selection and the active cell]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#add-selection-to-a-document)
+	* [Show/hide gridlines]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#hide-grid-lines-and-row-or-column-headers)
+	* [Show/hide row and column headers]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#ide-grid-lines-and-row-or-column-headers)
+	* [Freezing panes]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#freeze-panes): Keep part of the worksheet always visible while scrolling.
+	* [Changing the first visible cell]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#change-the-first-visible-cell): when you would like to show a particular part of the sheet to the user on opening the document in a viewer.
+	
 
 ## RadSpreadStreamProcessing vs. RadSpreadProcessing
 
