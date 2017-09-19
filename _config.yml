@@ -41,8 +41,7 @@ navigation:
     "*howto":
         title: How To
         position: 100
-    "*features":
-        title: Features
+  
 ## RadWordsProcessing Start
     "*radwordsprocessing":
         title: RadWordsProcessing
@@ -51,13 +50,13 @@ navigation:
         position: 4
     libraries/radwordsprocessing/formats-and-conversion:
         title: Formats and Conversion
-        position: 5
+        position: 7
     libraries/radwordsprocessing/editing:
         title: Features
-        position: 6
+        position: 5
     libraries/radwordsprocessing/concepts:
         title: Concepts
-        position: 7
+        position: 6
     libraries/radwordsprocessing/formats-and-conversion/docx:
         title: Docx
         position: 1
@@ -82,8 +81,9 @@ navigation:
     libraries/radspreadstreamprocessing/model:
         title: Model
         position: 3
-    libraries/radspreadstreamprocessing/features:
-        position: 5
+    libraries/radspreadstreamprocessing/features:   
+        title: Features
+        position: 4
     libraries/radspreadstreamprocessing/features/styling:
         title: Styling
         position: 0
@@ -104,10 +104,10 @@ navigation:
         position: 6
     libraries/radspreadprocessing/formats-and-conversion:
         title: Formats and Conversion
-        position: 7
+        position: 8
     libraries/radspreadprocessing/features:
         title: Features
-        position: 8
+        position: 7
     libraries/radspreadprocessing/formats-and-conversion/xlsx:
         title: Xlsx
         position: 2
@@ -138,13 +138,16 @@ navigation:
     libraries/radpdfprocessing/model:
         title: Model
         position: 4
+    libraries/radpdfprocessing/features:
+        title: Features
+        position: 6
     libraries/radpdfprocessing/model/interactive-forms:
         title: Interactive Forms
     libraries/radpdfprocessing/model/interactive-forms/form-fields	:
         title: Form Fields
     libraries/radpdfprocessing/formats-and-conversion:
         title: Formats and Conversion
-        position: 5
+        position: 7
     libraries/radpdfprocessing/formats-and-conversion/pdf:
         title: Pdf
         position: 0
@@ -159,14 +162,16 @@ navigation:
         position: 0
     libraries/radpdfprocessing/editing:
         title: Editing
-        position: 6
+        position: 9
     libraries/radpdfprocessing/concepts:
         title: Concepts
-        position: 7		
+        position: 5		
 ## RadZipLibrary Start
     "*radziplibrary":
         title: RadZipLibrary
-
+    libraries/radziplibrary/features:
+        title: Features
+        position: 5
 ## The application virtual path
 baseurl: "/devtools/document-processing"
 
