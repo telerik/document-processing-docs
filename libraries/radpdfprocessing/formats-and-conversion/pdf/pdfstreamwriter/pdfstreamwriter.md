@@ -77,8 +77,8 @@ Through the **Settings property** of PdfStreamWriter you can control the way the
 
 > The XAML SDK repository on GitHub contains examples showing the capabilities of PdfStreamWriter: 
 > 
-> - The [PdfStreamWriterPerformance](https://api.github.com/repos/telerik/document-processing-sdk/contents/PdfProcessing/PdfStreamWriterPerformance/) sample shows the performance you can achieve using PdfStreamWriter
-> - The [Manipulate Pages](https://api.github.com/repos/telerik/document-processing-sdk/contents/PdfProcessing/ManipulatePages/) example shows different use cases of PdfStreamWriter
+> - The [PdfStreamWriterPerformance](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/PdfStreamWriterPerformance) sample shows the performance you can achieve using PdfStreamWriter
+> - The [Manipulate Pages](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) example shows different use cases of PdfStreamWriter
 
 
 ## See Also
