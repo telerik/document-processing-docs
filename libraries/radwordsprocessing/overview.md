@@ -24,11 +24,11 @@ Thank you for choosing Telerik __RadWordsProcessing__!
 ## Model
 The model of **RadWordsProcessing** includes:
             
-* [**Sections**]({%slug radwordsprocessing-model-section%}): You can customize the sections using the properties exposed by the corresponding class. The library provides support for customizing the headers, footers and watermarks for a section as well.
+* [**Sections**]({%slug radwordsprocessing-model-section%}): You can customize the sections using the properties exposed by the corresponding class. The library provides support for customizing the headers, footers, and watermarks for a section as well.
 
 * [**Paragraphs**]({%slug radwordsprocessing-model-paragraph%}): The properties and methods related to paragraphs enable you to change its collection of inlines and appearance.
 
-* [**Tables**]({%slug radwordsprocessing-model-table%}): An API for inserting, editing and removing tables. You can also change their rows, cells, appearance and content.
+* [**Tables**]({%slug radwordsprocessing-model-table%}): An API for inserting, editing and removing tables. You can also change their rows, cells, appearance, and content.
 
 * **Inlines**:
 	* [Runs]({%slug radwordsprocessing-model-run%})
@@ -36,11 +36,11 @@ The model of **RadWordsProcessing** includes:
 	* [Fields]({%slug radwordsprocessing-concepts-fields%}): Merge fields, Document Variables and custom code fields, enabling you to insert any fields using its code representation.
 	* [Breaks]({%slug radwordsprocessing-model-break%}): Support for different types of breaks, so you can achieve the desired layout.
 	* [Bookmarks]({%slug radwordsprocessing-model-bookmark%}): Inserting, modifying and removing bookmarks.
-	* [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlinks%}): You can work with hyperlinks pointing to a web site or to a bookmark inside the document.
+	* [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlinks%}): You can work with hyperlinks pointing to a website or to a bookmark inside the document.
 	* [Tab stops]({%slug radwordsprocessing-concepts-tabstop%}): Working with a tab stops collection for each paragraph.
 
 * [**Styles**]({%slug radwordsprocessing-concepts-styles%})
-	* The document model includes repository of Style objects which contain sets of character, paragraph or table style properties.
+	* The document model includes a repository of Style objects which contain sets of character, paragraph or table style properties.
 	* The API allows you create custom styles and use them throughout the document.
 	* [List styles]({%slug radwordsprocessing-concepts-lists%}).
 
@@ -48,7 +48,7 @@ The model of **RadWordsProcessing** includes:
 
 * [**Mail Merge**]({%slug radwordsprocessing-editing-mail-merge%}): Provides ability to produce personalized documents from a template holding fixed content merged with variable data from a data source (database or any other collection of data items).
 
-* [**Merge documents**]({%slug radwordsprocessing-editing-insert-documents%}): Insert a document into another one at a desired position, controlling the way the styles of both are merged.
+* [**Merge documents**]({%slug radwordsprocessing-editing-insert-documents%}): Insert a document into another one at the desired position, controlling the way the styles of both are merged.
 
 * [**Import of document elements**]({%slug radwordsprocessing-editing-import-document-element%}): Import a document element from one document into another.
 
@@ -64,7 +64,7 @@ The model of **RadWordsProcessing** includes:
 	* **Character formatting**: Font size, font color, font name, bold, italic, underline, etc.
 	* **Paragraph formatting**: Line spacing, alignment, indentation, spacing before and after, etc.
 	* **Table formatting**: Enables you to change the alignment, borders, shading, spacing and padding, and more.
-	* **Modifying the section properties** to adjust the page size, orientation, margins, headers and footers, etc.
+	* **Modifying the section properties** to adjust the page size, orientation, margins, headers, and footers, etc.
 
 
 ## Supported formats:
