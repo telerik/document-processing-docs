@@ -53,7 +53,7 @@ The document model of the library provides support for:
 
 * [**Merge documents**]({%slug radpdfprocessing-model-radfixeddocument%}) and [**document pages**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}).
 
-* [**PdfFileStream**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}): The API exposes a functionality that provides option for exporting PDF files with unmatched performance and minimized memory footprint. Extremely useful when you need to add some content to existing document, merge or split documents.
+* [**PdfStreamWriter**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}): The API exposes a functionality that provides option for exporting PDF files with unmatched performance and minimized memory footprint. Extremely useful when you need to add some content to existing document, merge or split documents.
 
-* [**Import of PDF and export to PDF and plain text**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdf%})
+* [**Import of PDF and export to PDF and plain text**]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%})
 
