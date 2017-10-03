@@ -40,8 +40,7 @@ Some of the features you can take advantage of are:
 
 * [**Cell styles**]({%slug radspreadstreamprocessing-features-styling-cell-styles%}): Using cell styles allows you to apply multiple format options in one step and also offers an easy approach to achieve consistency in cell formatting.
 
-* [**Merge cells**]({%slug radspreadstreamprocessing-model-cells%}#merge-cells): You have the ability to merge two or more adjacent cells into a single cell that spans over 
-multiple rows and columns.
+* [**Merge cells**]({%slug radspreadstreamprocessing-model-cells%}#merge-cells): You have the ability to merge two or more adjacent cells into a single cell that spans over multiple rows and columns.
 
 * **Controlling the view state of a sheet:**
 	* [Setting scale factor]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#scale-a-document)
