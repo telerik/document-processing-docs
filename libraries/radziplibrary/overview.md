@@ -10,8 +10,6 @@ position: 0
 
 # Overview
 
-## 
-
 Have you ever wondered how to increase the responsiveness of your applications by compressing the data that you send over the internet? With __RadZipLibrary__ you can compress data like images, DOCX or PDF files and send them over the wire. Thus, you will achieve fast and secure transactions. 
 
 ![Zip Library Overview 01](images/ZipLibrary_Overview_01.png)

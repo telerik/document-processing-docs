@@ -10,12 +10,6 @@ position: 0
 
 # Overview
 
-
-Thank you for choosing Telerik __RadWordsProcessing__!
-      
-
-## 
-
 **RadWordsProcessing** is a processing library that allows to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.
 
    ![Rad Words Processing Overview 02](images/RadWordsProcessing_Overview_01.png)
@@ -64,7 +58,7 @@ The model of **RadWordsProcessing** includes:
 	* **Character formatting**: Font size, font color, font name, bold, italic, underline, etc.
 	* **Paragraph formatting**: Line spacing, alignment, indentation, spacing before and after, etc.
 	* **Table formatting**: Enables you to change the alignment, borders, shading, spacing and padding, and more.
-	* **Modifying the section properties** to adjust the page size, orientation, margins, headers, and footers, etc.
+	* **Modifying the section properties** to adjust the page size, orientation, margins, headers and footers, etc.
 
 
 ## Supported formats:

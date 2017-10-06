@@ -10,8 +10,6 @@ position: 0
 
 # Overview
 
-Thank you for choosing Telerik **RadSpreadStreamProcessing**!
-
 This article briefly explains the specifics of **RadSpreadStreamProcessing** - what is spread streaming, how it works compared to the RadSpreadProcessing library and when to use it.
 
 ![](images/SpreadStreamProcessing-Overview_01.png)

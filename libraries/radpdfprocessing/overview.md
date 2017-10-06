@@ -10,11 +10,6 @@ position: 0
 
 # Overview
 
-Thank you for choosing Telerik __RadPdfProcessing__!
-      
-
-## 
-
 __RadPdfProcessing__ is a processing library that allows creating, import and export PDF documents.
 ![Rad Pdf Processing Overview 01](images/RadPdfProcessing_Overview_WPF_01.PNG)
 
@@ -55,5 +50,5 @@ The document model of the library provides support for:
 
 * [**PdfStreamWriter**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}): The API exposes a functionality that provides option for exporting PDF files with unmatched performance and minimized memory footprint. Extremely useful when you need to add some content to existing document, merge or split documents.
 
-* [**Import of PDF and export to PDF and plain text**]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%})
+* [**Import of PDF and export to PDF and plain text**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdf%})
 
