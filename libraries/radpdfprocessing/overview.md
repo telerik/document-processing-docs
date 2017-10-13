@@ -10,7 +10,7 @@ position: 0
 
 # Overview
 
-__RadPdfProcessing__ is a processing library that allows creating, import and export PDF documents.
+__RadPdfProcessing__ is a processing library that allows creation, import and export of PDF documents.
 ![Rad Pdf Processing Overview 01](images/RadPdfProcessing_Overview_WPF_01.PNG)
 
 

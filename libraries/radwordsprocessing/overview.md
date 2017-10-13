@@ -10,7 +10,7 @@ position: 0
 
 # Overview
 
-**RadWordsProcessing** is a processing library that allows to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.
+**RadWordsProcessing** is a processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.
 
    ![Rad Words Processing Overview 02](images/RadWordsProcessing_Overview_01.png)
 
