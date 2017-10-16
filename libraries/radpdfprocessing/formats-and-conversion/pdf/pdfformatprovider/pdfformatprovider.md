@@ -21,6 +21,8 @@ In order to use the format provider, you need to add references to the following
 * Telerik.Windows.Documents.Fixed.dll
 * Telerik.Windows.Zip.dll
           
+	  
+The PdfFormatProvider class of RadPdfProcessing is located in the **Telerik.Windows.Documents.Fixed.FormatProviders.Pdf** namespace.
 
 ## Import
 
