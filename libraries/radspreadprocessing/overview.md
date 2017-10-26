@@ -44,7 +44,7 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * [**Filtering**]({%slug radspreadprocessing-features-filtering%}) worksheet data.		
 
-* [**Sorting**]({%slug radspreadprocessing-features-filtering%}) the data in the worksheet.	
+* [**Sorting**]({%slug radspreadprocessing-features-sorting%}) the data in the worksheet.	
 
 * [**Find and replace data**]({%slug radspreadprocessing-features-find-and-replace%}).
 
