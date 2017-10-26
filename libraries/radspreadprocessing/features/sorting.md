@@ -29,7 +29,7 @@ This article describes what is sorting and how to work with it through the docum
 
 * [ForeColorSortCondition](#forecolorsortcondition)
 
-* [ForeColorSortCondition](#forecolorsortcondition)
+* [FillColorSortCondition](#fillcolorsortcondition)
 
 * [Setting Sorting Conditions](#setting-sorting-conditions)
 
