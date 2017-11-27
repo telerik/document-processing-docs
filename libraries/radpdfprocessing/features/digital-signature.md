@@ -68,12 +68,12 @@ In addition, to create a signature, which has a visual representation, you will 
 	// The name of the signature must be unique.
 	string signatureName = "SampleSignature";
 	
-	// This is the From XObject element that represents the contents of the signature field.
+	// This is the Form XObject element that represents the contents of the signature field.
 	Form form = new Form(); 
 	form.FormSource = new FormSource();
 	form.FormSource.Size = new Size(120, 120);
 	
-	// We will use the editor to fill the From XObject.
+	// We will use the editor to fill the Form XObject.
 	FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
 	formEditor.DrawCircle(new Point(50, 50), 20);
 	formEditor.DrawText(signatureName);
