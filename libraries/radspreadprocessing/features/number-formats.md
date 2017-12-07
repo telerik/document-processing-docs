@@ -67,7 +67,7 @@ If you need to specify the number of digits after the decimal separator, you can
 #### Figure 2: Number format
 ![Rad Spread Processing Features Number Formatting 02](images/RadSpreadProcessing_Features_Number_Formatting_02.png)
 
-The format string applied in __Figure 1__ is __#,##0.00__.
+The format string applied in __Figure 2__ is __#,##0.00__.
         
 
 __Number__ formatting is not restricted to number values. The following example illustrates how to apply a format to text values. Column *A* in the worksheet below contains the textual representation of the numbers 1-5:
