@@ -57,7 +57,7 @@ There are two main differences between the libraries.
 
 ## When to Use RadSpreadStreamProcessing
 
-You can use the spread stream processing to create and export large amount of data with a low memory footprint and great performance. You can also append data to already existing document stream.
+You can use the __RadSpreadStreamProcessing__ library to create and export __large amount of data__ with a low memory footprint and great performance. You can also append data to already existing document stream. The generated document can be exported directly to a file on the file system or to a stream (for example, to send it to the client).
 
 ## See Also
 
