@@ -37,7 +37,7 @@ The signing is done through the **Signature** object. The constructor of the Sig
 
 {{region radpdfprocessing-features-digital-signature_0}}
 
-	X509Certificate2 certificate = new X509Certificate2(certificateFilePath, password);
+	System.Security.Cryptography.X509Certificates.X509Certificate2 certificate = new System.Security.Cryptography.X509Certificates.X509Certificate2(certificateFilePath, password);
 	Signature signature = new Signature(certificate);
 {{endregion}}
 
@@ -47,8 +47,8 @@ When instantiated, the signature should be added to the document content using t
 
 {{region radpdfprocessing-features-digital-signature_1}}
 
-	SignatureField signatureField = new SignatureField(signatureName);
-	signatureField.Signature = signature;
+    SignatureField signatureField = new SignatureField("Signature Name");
+    signatureField.Signature = signature;
 {{endregion}}
 
 In addition, to create a signature, which has a visual representation, you will need to associate a **Widget** annotation with the signed [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) through the Widget constructor. The widget will also need a [FormSource]({%slug radpdfprocessing-model-formsource%}) object to be applied to its Content.NormalContentSource property. A FormSource could be filled with data using the FixedContentEditor.
@@ -62,37 +62,43 @@ In addition, to create a signature, which has a visual representation, you will 
 
 {{region radpdfprocessing-features-digital-signature_2}}
 
-	// Define the certificate which will be used for the signing.
-	X509Certificate2 certificate = new X509Certificate2(certificateFilePath, certificateFilePassword);
-	
-	// The name of the signature must be unique.
-	string signatureName = "SampleSignature";
-	
-	// This is the Form XObject element that represents the contents of the signature field.
-	Form form = new Form(); 
-	form.FormSource = new FormSource();
-	form.FormSource.Size = new Size(120, 120);
-	
-	// We will use the editor to fill the Form XObject.
-	FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
-	formEditor.DrawCircle(new Point(50, 50), 20);
-	formEditor.DrawText(signatureName);
-	
-	// The Signature object is added to a signature field, so we can add a visualization to it.
-	SignatureField signatureField = new SignatureField(signatureName);
-	signatureField.Signature = new Signature(certificate);
-	
-	// The widget contains the Form XObject and defines the appearance of the signature field.
-	SignatureWidget widget = signatureField.Widgets.AddWidget();
-	widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
-	widget.Border = new AnnotationBorder(100, AnnotationBorderStyle.Solid, null);
-	widget.Content.NormalContentSource = form.FormSource;
-	
-	// The Widget class inherits from Annotation. And, as any other annotation, must be added to the respective collection of the page.
-	page.Annotations.Add(widget);
-	document.AcroForm.FormFields.Add(signatureField);
-	            
-	this.Export(document);
+    // Define the certificate which will be used for the signing.
+    System.Security.Cryptography.X509Certificates.X509Certificate2 certificate = new System.Security.Cryptography.X509Certificates.X509Certificate2(certificateFilePath, certificateFilePassword);
+
+    // The name of the signature must be unique.
+    string signatureName = "SampleSignature";
+
+    // This is the Form XObject element that represents the contents of the signature field.
+    Form form = new Form();
+    form.FormSource = new FormSource();
+    form.FormSource.Size = new Size(120, 120);
+
+    // We will use the editor to fill the Form XObject.
+    FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
+    formEditor.DrawCircle(new Point(50, 50), 20);
+    formEditor.DrawText(signatureName);
+
+    // The Signature object is added to a signature field, so we can add a visualization to it.
+    SignatureField signatureField = new SignatureField(signatureName);
+    signatureField.Signature = new Signature(certificate);
+
+    // The widget contains the Form XObject and defines the appearance of the signature field.
+    SignatureWidget widget = signatureField.Widgets.AddWidget();
+    widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
+    widget.Border = new AnnotationBorder(100, AnnotationBorderStyle.Solid, null);
+    widget.Content.NormalContentSource = form.FormSource;
+
+    // The Widget class inherits from Annotation. And, as any other annotation, must be added to the respective collection of the page.
+
+    RadFixedDocument document = new RadFixedDocument();
+    RadFixedPage page = document.Pages.AddPage();
+    page.Annotations.Add(widget);
+    document.AcroForm.FormFields.Add(signatureField);
+
+    using (Stream stream = File.OpenWrite("signed.pdf"))
+    {
+        new PdfFormatProvider().Export(document, stream);
+    }
 {{endregion}}
 
 
@@ -131,45 +137,47 @@ The Signature class exposes two methods allowing you to validate a signature:
 
 
 {{region radpdfprocessing-features-digital-signature_3}}
-	RadFixedDocument document = new PdfFormatProvider().Import(stream);
-	
-	string validationStatus;
-	
-	// For simplicity, the example handles only the first signature.
-	SignatureField firstSignatureField = document.AcroForm.FormFields.FirstOrDefault(field => field.FieldType == FormFieldType.Signature) as SignatureField;
-	if (firstSignatureField != null && firstSignatureField.Signature != null)
-	{
-	    SignatureValidationProperties properties = new SignatureValidationProperties();
-	    properties.Chain.ChainPolicy.VerificationFlags = verificationFlags;
-	
-	    SignatureValidationResult validationResult;
-	    if (firstSignatureField.Signature.TryValidate(properties, out validationResult))
-	    {
-	        if (!validationResult.IsDocumentModified)
-	        {
-	            if (validationResult.IsCertificateValid)
-	            {
-	                validationStatus = "Valid";
-	            }
-	            else
-	            {
-	                validationStatus = "Unknown";
-	            }
-	        }
-	        else
-	        {
-	            validationStatus = "Invalid";
-	        }
-	    }
-	    else
-	    {
-	        validationStatus = "Invalid";
-	    }
-	}
-	else
-	{
-	    validationStatus = "None";
-	}
+
+    RadFixedDocument document = new PdfFormatProvider().Import(stream); // The stream containing the document
+
+    string validationStatus;
+
+    // For simplicity, the example handles only the first signature.
+    SignatureField firstSignatureField = document.AcroForm.FormFields.FirstOrDefault(field => field.FieldType == FormFieldType.Signature) as SignatureField;
+    if (firstSignatureField != null && firstSignatureField.Signature != null)
+    {
+        SignatureValidationProperties properties = new SignatureValidationProperties();
+        System.Security.Cryptography.X509Certificates.X509VerificationFlags verificationFlags = System.Security.Cryptography.X509Certificates.X509VerificationFlags.IgnoreInvalidName;
+        properties.Chain.ChainPolicy.VerificationFlags = verificationFlags;
+
+        SignatureValidationResult validationResult;
+        if (firstSignatureField.Signature.TryValidate(properties, out validationResult))
+        {
+            if (!validationResult.IsDocumentModified)
+            {
+                if (validationResult.IsCertificateValid)
+                {
+                    validationStatus = "Valid";
+                }
+                else
+                {
+                    validationStatus = "Unknown";
+                }
+            }
+            else
+            {
+                validationStatus = "Invalid";
+            }
+        }
+        else
+        {
+            validationStatus = "Invalid";
+        }
+    }
+    else
+    {
+        validationStatus = "None";
+    }
 {{endregion}}
 
 ## Limitations
