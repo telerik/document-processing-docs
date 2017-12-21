@@ -14,10 +14,7 @@ body, html {
 body {
     color: #555;
     font: 400 14px Arial, Helvetica, sans-serif;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
 }
 
 a img {
@@ -40,7 +37,10 @@ footer {
     border-bottom: 1px solid #eff0f1;
     color: #4d4f52;
     background: #ffffff;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 42042;
 }
 .TK-Hat::after {
