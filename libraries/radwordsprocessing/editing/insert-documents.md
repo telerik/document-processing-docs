@@ -26,7 +26,7 @@ You could merge documents at a specific position using the InsertDocument() meth
 	
 		* [**ConflictingStylesResolutionMode**](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_ConflictingStylesResolutionMode.htm): Determines how conflicts between styles should be resolved (rename the style of the source or keep the target settings). The default value is *RenameSourceStyle*.
 
-		* **InsertLastParagraphMarker**: Determines whether the last paragraph marker (last paragraph formatting) should be inserted. If the value is *true*, then a new paragraph with the same formatting will be inserted. Otherwise, only the inlines from that paragraph will be inserted. The default value is *true*.
+		* **InsertLastParagraphMarker**: Determines whether the last paragraph marker (last paragraph formatting symbol) should be inserted. If the value is *true*, then a new paragraph with the same formatting will be inserted. Otherwise, only the inlines from that paragraph will be inserted. The default value is *true*.
 
 **Example 1** demonstrates how to use the InsertDocument() method.
 
