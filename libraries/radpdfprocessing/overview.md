@@ -46,6 +46,8 @@ The document model of the library provides support for:
 
 * [**Password Protection**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings)
 
+* Support for documents encrypted with **Encryption Algorithm 4 (RC4/AES-128)** 
+
 * [**Merge documents**]({%slug radpdfprocessing-model-radfixeddocument%}) and [**document pages**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}).
 
 * [**PdfStreamWriter**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}): The API exposes a functionality that provides option for exporting PDF files with unmatched performance and minimized memory footprint. Extremely useful when you need to add some content to existing document, merge or split documents.
