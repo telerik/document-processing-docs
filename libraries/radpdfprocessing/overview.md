@@ -46,7 +46,7 @@ The document model of the library provides support for:
 
 * [**Password Protection**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings)
 
-* Support for documents encrypted with **Encryption Algorithm 4 (RC4)** 
+* Support for documents encrypted with **Encryption Algorithm 4 (RC4/AES-128)** 
 
 * [**Merge documents**]({%slug radpdfprocessing-model-radfixeddocument%}) and [**document pages**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}).
 
