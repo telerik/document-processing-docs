@@ -26,7 +26,7 @@ __RadSpreadProcessing__'s document model allows you to easily open and save file
 
           
 
-The document model exposes three format providers that work with each of the formats above: __XlsxFormatProvider__, __CsvFormatProvider__ and __TxtFormatProvider__. All of them implement the __IWorkbookFormatProvider__ interface and, thus, share a common API that enables import and export of files. To conform to the interface each of the providers implements two methods that, respectively, turn a stream into a workbook and save the contents of the workbook into a stream:
+The document model exposes four format providers that work with each of the formats above: __XlsxFormatProvider__, __CsvFormatProvider__, __PdfFormatProvider__ and __TxtFormatProvider__. All of them implement the __IWorkbookFormatProvider__ interface and, thus, share a common API that enables import and export of files. To conform to the interface each of the providers implements two methods that, respectively, turn a stream into a workbook and save the contents of the workbook into a stream:
       
 
 * Workbook Import(Stream input)
@@ -51,7 +51,7 @@ The document model of RadSpreadProcessing also contains a __WorkbookFormatProvid
 
 * public static void Export(Workbook workbook, string extension, Stream output)
 
-The *Formats and Conversion* section contains three separate articles dedicated on each of the format providers and one article that illustrates how to work with the [WorkbookFormatProvidersManager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%}) class.
+The *Formats and Conversion* section contains four separate folders dedicated on each of the format providers and one article that illustrates how to work with the [WorkbookFormatProvidersManager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%}) class.
       
 
 ## See Also
