@@ -41,7 +41,7 @@ __Example 1__ shows how to use __PdfFormatProvider__ to export a Workbook to a f
 {{region cs-radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
 
     PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
-    using (Stream output = File.OpenWrite("Sample.xlsx"))
+    using (Stream output = File.OpenWrite("Sample.pdf"))
     {
         Workbook workbook = CreateSampleWorkbook(); // The CreateSampleWorkbook() method generates a sample spreadsheet document. Use your Workbook object here.
         pdfFormatProvider.Export(workbook, output);
