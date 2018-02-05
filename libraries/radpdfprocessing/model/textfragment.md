@@ -74,7 +74,7 @@ TextFragment exposes the following properties that can modify the look of the re
 * __Font__: The font that is used to draw the text.
             
 
-* __FontSize__: The font size.
+* __FontSize__: The font size. The measurement unit used for font size is [DIP](https://en.wikipedia.org/wiki/Device-independent_pixel). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Media_Unit.htm) class.
             
 
 * __RenderingMode__: Enumeration representing the way the text should be rendered. It can have on of the following values:
