@@ -37,7 +37,7 @@ There are 14 standard fonts that are not embedded in the document when you use t
 
 ## Embedded Fonts
 
-All fonts, which are not included in the 14 standard ones should be embedded in the PDF document. Otherwise, the result when the document is rendered is unpredictable. In __RadPdfProcessing__ you have the ability to embed fonts.
+All fonts, which are not included in the 14 standard ones should be embedded in the PDF document. Otherwise, the result when the document is rendered is unpredictable. In __RadPdfProcessing__ you have the ability to embed fonts following the approaches described below.
         
 
 ### Registering a Font
