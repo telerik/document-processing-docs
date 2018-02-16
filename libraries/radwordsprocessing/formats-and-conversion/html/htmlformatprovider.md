@@ -69,7 +69,7 @@ __Example 3__ shows how to use the HtmlFormatProvider to export an instance of R
 	HtmlFormatProvider provider = new HtmlFormatProvider();
 	using (Stream output = File.Create("Sample.html"))
 	{
-	    RadFlowDocument document = CreateRadFlowDocument();
+	    RadFlowDocument document = CreateRadFlowDocument(); // The CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
 	    provider.Export(document, output);
 	}
 {{endregion}}
@@ -82,7 +82,7 @@ You can also export the document to a string variable like shown in __Example 4_
 #### __[C#] Example 4: Export HTML to string__
 
 {{region cs-radwordsprocessing-formats-and-conversion-html-htmlformatprovider_3}}
-	RadFlowDocument document = CreateRadFlowDocument();
+	RadFlowDocument document = CreateRadFlowDocument(); // The CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
 	HtmlFormatProvider provider = new HtmlFormatProvider();
 	string html = provider.Export(document);
 {{endregion}}
