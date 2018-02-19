@@ -49,7 +49,7 @@ In order to modify the way content is exported, you can set the __ExportSettings
 
 __IsEncrypted__
 
-This property specifies if the document should be encrypted. The default value is False.
+This property specifies if the document should be encrypted. The default value is *False*. The encryption algorithm used when exporting encrypted documents is **RC4**.
 
 >This setting is ignored when __ComplianceLevel__ differs from __None__ as PDF/A compliant documents do not allow encryption.
 
