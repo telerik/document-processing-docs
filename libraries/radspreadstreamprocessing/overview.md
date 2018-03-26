@@ -51,9 +51,10 @@ Some of the features you can take advantage of are:
 
 ## RadSpreadStreamProcessing vs. RadSpreadProcessing
 
-There are two main differences between the libraries.
+There are several main differences between the libraries.
 * __RadSpreadStreamProcessing__ can be used only to create documents and append data to existing ones. On the other hand you can use the __RadSpreadProcessing__ also for reading and modifying the content of documents.
 * __RadSpreadStreamProcessing__ writes directly into a stream, unlike [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) which creates models for the elements in the document. This is why the memory used with the spread streaming library is significantly lower than when using __RadSpreadProcessing__.
+* __RadSpreadStreamProcessing__ does not perform any formula or other layout-related calculations which makes its file generation performance much better compared to __RadSpreadProcessing__.
 
 ## When to Use RadSpreadStreamProcessing
 
