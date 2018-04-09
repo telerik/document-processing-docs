@@ -42,7 +42,7 @@ The main characteristics of worksheets can be summarized in the following list:
 		CellRange result = worksheet.GetUsedCellRange(new IPropertyDefinition[] { CellPropertyDefinitions.ValueProperty });
 	{{endregion}}
 
-            
+	>More information and examples of working with the used cell range of a worksheet are available in the [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}) topic.
 
 * __Collection of Hyperlinks__: Each worksheet can contain numerous hyperlinks to web pages, particular cells in the workbook or email addresses. More information on the topic is available in the [Hyperlink]({%slug radspreadprocessing-features-hyperlink%}) article.
             
