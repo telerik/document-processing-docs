@@ -330,7 +330,7 @@ __Example 5__ shows how to create the 'E' function.
 
 
 
->tip You can download a runnable project of the previous and several other examples of custom functions from our online SDK repository [here](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/CustomFunctions).
+>tip You can download a runnable project of the previous and several other examples of custom functions from our online SDK repository [here](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions).
           
 
 ## See Also
