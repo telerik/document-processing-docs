@@ -28,7 +28,7 @@ To create an instance of PdfFileSource, you should pass a **FileStream** object,
 
 PdfFileSource exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the PdfFileSource instance by passing **true** as a value for the second constructor parameter (*leaveStreamOpen*).
 
-An additional option you can use is the overload that accepts a parameter of type [**PdfImportSettings**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings). This overload enables you to handle encrypted documents.
+An additional option you can use is the overload that accepts a parameter of type [**PdfImportSettings**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings). This overload enables you to handle  password encrypted documents.
 
 #### **[C#] Example 2: Open encrypted document**
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource_2}}
