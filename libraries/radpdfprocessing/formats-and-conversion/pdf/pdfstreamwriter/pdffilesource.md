@@ -26,7 +26,29 @@ To create an instance of PdfFileSource, you should pass a **FileStream** object,
 	}
 {{endregion}}
 
-PdfFileSource exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the PdfFileSource instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
+PdfFileSource exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the PdfFileSource instance by passing **true** as a value for the second constructor parameter (*leaveStreamOpen*).
+
+An additional option you can use is the overload that accepts a parameter of type [**PdfImportSettings**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings). This overload enables you to handle encrypted documents.
+
+#### **[C#] Example 2: Open encrypted document**
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource_2}}
+	
+	public void ReadDocument(string path)
+	{
+	    PdfImportSettings settings = new PdfImportSettings();
+	    settings.UserPasswordNeeded += Settings_UserPasswordNeeded;
+	
+	    using (PdfFileSource fileSource = new PdfFileSource(File.OpenRead(path)))
+	    {
+	        // ...
+	    }
+	}
+	
+	private void Settings_UserPasswordNeeded(object sender, PasswordNeededEventArgs e)
+	{
+	    e.Password = "pass";
+	}
+{{endregion}}
 
 >PdfFileSource inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. The best way to ensure this is handled properly is to wrap it in a using statement. 
 
@@ -34,7 +56,7 @@ PdfFileSource exposes also an additional overload, which allows you to keep the 
 
 PdfFileSource exposes the **Pages** property, which is of type [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%})[] and allows you access the pages of the imported document.
 
-#### **[C#] Example 2: Iterate the pages of a document**
+#### **[C#] Example 3: Iterate the pages of a document**
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource_1}}
 	
 	using (PdfFileSource fileSource = new PdfFileSource(File.OpenRead(path)))

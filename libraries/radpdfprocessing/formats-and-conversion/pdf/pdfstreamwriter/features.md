@@ -19,7 +19,6 @@ Since the current **PdfStreamWriter** API provides methods for merging separate 
 - Article threads
 - Named destinations
 - Document metadata
-- Document encryption
 
 
 Also, destinations leading to other pages are not preserved with the current version, except from the cases when they lead to the same page or to a previously merged page.

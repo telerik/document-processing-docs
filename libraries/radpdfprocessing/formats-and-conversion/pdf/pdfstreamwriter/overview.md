@@ -62,7 +62,6 @@ There are several classes responsible for writing the different parts of a PDF f
 
 If you need to import a PDF document in order to add content to it and save it back, you can take advantage of the **PdfStreamWriter** API. Choosing this approach, you will gain a great performance with minimal memory usage as well as support for the majority of the PDF format features. 
 
->An important thing to note is that, due to its specifics, **PdfStreamWriter** doesn't support **encrypted** documents. If your document is using some sort of encryption, you should work with **PdfFormatProvider**. When such a document is passed to PdfStreamWriter, the PdfFileSource class throws a NotSupportedEncryptionException to notify you.
 
 If the scenario requires you to read or modify the existing page content, you should use **PdfFormatProvider** to parse the required data. When working with **PdfStreamWriter**, the existing page content is preserved unmodified and you are only allowed to add elements below or above the existing content. 
 
