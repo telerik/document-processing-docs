@@ -53,6 +53,12 @@ Through the Worksheet's __WorksheetPageSetup__ property you may change the follo
 * __ScaleFactor__: Specify the scale factor to print with value in the range from 50% to 400%.
             
 
+* __FitToPagesTall__: Holds the number of pages tall the worksheet will be scaled to when it's printed. The default value is 1.
+
+* __FitToPagesWide__: The number of pages wide the worksheet will be scaled to when it's printed. The default value is 1.
+
+* __FitToPages__: Allows you to specify whether the worksheet will be scaled according to a number of pages. If the value of this property is *true*, the worksheet will be scaled according to the **FitToPagesWide** and **FitToPagesTall** values. Otherwise, it will be scaled according to the **ScaleFactor** value. 
+
 * __PrintOptions__: Specify print options such as whether to print gridlines or row and column headings.
             
 
@@ -79,6 +85,8 @@ In order to fit the print content better, we use the Worksheet's page setup and 
 	pageSetup.PaperType = PaperTypes.A4;
 	pageSetup.PageOrientation = PageOrientation.Landscape;
 	pageSetup.ScaleFactor = new Size(0.9, 0.9);
+	pageSetup.FitToPages = true;
+	pageSetup.FitToPagesTall = 3;
 	pageSetup.CenterHorizontally = true;
 {{endregion}}
 
