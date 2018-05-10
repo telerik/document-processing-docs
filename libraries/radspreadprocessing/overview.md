@@ -56,7 +56,7 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * **[Auto fill]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}) and [Series]({%slug radspreadprocessing-features-fill-data-automatically-series%})**: Fill cells automatically with data following a specific pattern.	
 
-* [**Page Setup**]({%slug radspreadprocessing-features-worksheetpagesetup%}): Set and get header and footer settings and apply various page setup options like paper size, orientation, scaling, margins, breaks, etc. Apply print settings.		
+* [**Page Setup**]({%slug radspreadprocessing-features-worksheetpagesetup%}): Set and get header and footer settings and apply various page setup options like paper size, orientation, automatic scaling, margins, breaks, etc. Apply print settings.		
 
 * [**History**]({%slug radspreadprocessing-features-history%}): The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. Each worksheet has its own history stack.
 
