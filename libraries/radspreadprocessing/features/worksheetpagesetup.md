@@ -51,6 +51,12 @@ Through the Worksheet's __WorksheetPageSetup__ property you can change the follo
             
 
 * __ScaleFactor__: Specify the scale factor to print with value in the range from 50% to 400%. 
+	
+	 In case you need to calculate the custom scale factor in order for the worksheet to fit in a specific number of pages when printed, you can use the methods provided by the **PageScaleFactorCalculator** static class:
+
+	- **CalculateScaleAccordingToFitToPages(Worksheet worksheet)**: Calculates the maximum scale factor that can be set to a worksheet in order for it to fit into the number of pages specified in the FitToPagesWide and FitToPagesTall properties.
+	
+	- **CalculateScaleAccordingToFitToPages(Worksheet worksheet, IEnumerable&lt;CellRange&gt; includedRanges)**:  Calculates the maximum scale factor that can be set to a worksheet in order for the **specified ranges** to fit into the number of pages specified in the FitToPagesWide and FitToPagesTall properties.
             
 
 * __FitToPagesTall__: Specify the number of pages tall the worksheet will be scaled to when it's printed. The default value is 1.
