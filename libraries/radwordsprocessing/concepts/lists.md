@@ -39,7 +39,8 @@ The class containing the structure corresponding to a list is __List__ and expos
             
 
 * __MultilevelType__: The type of the list, described with the [MultilevelType enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Lists_MultilevelType.htm). It defines the behavior of the list.
-            
+
+> To insert commonly used types of lists like **bullet** or **numbered** lists, [list templates](#list-templates) can be used.
 
 ## List Types
 
