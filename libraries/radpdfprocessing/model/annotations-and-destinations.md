@@ -36,7 +36,7 @@ This article will get you familiar with the following concepts:
 
 ## Link
 
-The __Link__ class inherits the abstract __Annotation__ class and is the only supported type of annotation in the document model. Link annotations represent either a hypertext link to a destination elsewhere in the document or an action to be performed. For this reason, there are two separate constructors in the [Link class](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_Link.htm) - one requiring a __Destination__ object and one requiring an __Action__ object.
+The __Link__ class inherits the abstract __Annotation__ class. Link annotations represent either a hypertext link to a destination elsewhere in the document or an action to be performed. For this reason, there are two separate constructors in the [Link class](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_Link.htm) - one requiring a __Destination__ object and one requiring an __Action__ object.
         
 
 __Link__ exposes the following properties:
