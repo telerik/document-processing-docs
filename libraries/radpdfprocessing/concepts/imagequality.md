@@ -39,6 +39,7 @@ In order to specify the default **ImageQuality** value when exporting to PDF, yo
 	settings.ImageQuality = ImageQuality.Medium;
 {{endregion}}
 
+> `PdfExportSettings.ImageQuality` property doesn't affect the quality of the images imported from a PDF document. Such images are preserved using `EncodedImageData` (see [ImageQuality and EncodedImageData Class](#imagequality-and-encodedimagedata-class)). `PdfExportSettings.ImageQuality` only affects the export quality of images created using an image stream or a `BitmapSource`.
 
 ### Specify the Image Quality of an Image
 
