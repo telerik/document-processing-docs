@@ -55,7 +55,7 @@ The __AutoFilter__ class exposes the following public members:
 * __FilterRange__: Property of type __CellRange__. Represents the range to which a filter is currently applied. The worksheet can have only one range filtered at a time. If filtering is not applied, the filtered range is __null__.
             
 
-* __void SetFilters(IEnumerable<IFilter> filters)__: Sets multiple filters on the filtered range and applies them.
+* __void SetFilters(IEnumerable&lt;IFilter&gt; filters)__: Sets multiple filters on the filtered range and applies them.
             
 
 * __void SetFilter(IFilter filter)__: Sets a single filter on the filtered range and applies it.
