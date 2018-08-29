@@ -12,7 +12,7 @@ position: 8
 
 
 
-__ImageInline__ element is an inline-level flow content element intended to contain an image object.
+__ImageInline__ element is an inline-level flow content element intended to contain an image object. The supported image extensions are JPG, JPEG, PNG, BMP, TIFF, TIF, GIF, ICON, WMF and EMF.
       
 
 * [Inserting an ImageInline](#inserting-an-imageinline)
