@@ -12,7 +12,7 @@ position: 9
 
 
 
-__FloatingImage__ is an inline-level anchor flow document element linked with a floating image object.
+__FloatingImage__ is an inline-level anchor flow document element linked with a floating image object. The supported image extensions are JPG, JPEG, PNG, BMP, TIFF, TIF, GIF, ICON, WMF and EMF.
       
 
 * [Inserting a FloatingImage](#inserting-a-floatingimage)
