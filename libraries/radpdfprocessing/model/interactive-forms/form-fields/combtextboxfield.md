@@ -44,7 +44,8 @@ CombTextBoxField provides the following properties:
 	
 	VariableContentWidget widget = combTextBoxField.Widgets.AddWidget();
 	widget.Rect = new Rect(new Size(250, 50));
-	
+    widget.RecalculateContent();
+
 	document.AcroForm.FormFields.Add(combTextBoxField);
 	document.Pages[0].Annotations.Add(widget);
 

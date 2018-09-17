@@ -51,7 +51,8 @@ ListBoxField provides the following properties:
 	
 	VariableContentWidget widget = listBoxField.Widgets.AddWidget();
 	widget.Rect = new Rect(100, 100, 200, 200);
-	
+    widget.RecalculateContent();
+
 	document.AcroForm.FormFields.Add(listBoxField);
 	document.Pages[0].Annotations.Add(widget);
 {{endregion}}

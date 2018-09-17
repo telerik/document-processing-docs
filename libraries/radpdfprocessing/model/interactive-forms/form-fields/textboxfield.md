@@ -57,6 +57,7 @@ TextBoxField exposes the following properties:
 	
 	VariableContentWidget widget = textField.Widgets.AddWidget();
 	widget.Rect = new Rect(new Size(250, 50));
+    widget.RecalculateContent();
 	
 	document.AcroForm.FormFields.Add(textField);
 	document.Pages[0].Annotations.Add(widget);

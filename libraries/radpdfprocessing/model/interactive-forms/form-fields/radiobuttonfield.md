@@ -52,6 +52,7 @@ RadioButtonField provides the following properties:
 	foreach (RadioButtonWidget widget in radioButtonField.Widgets)
 	{
 	    document.Pages[0].Annotations.Add(widget);
+		widget.RecalculateContent();
 	}
 {{endregion}}
 

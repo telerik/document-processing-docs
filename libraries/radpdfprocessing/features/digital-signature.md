@@ -87,6 +87,7 @@ In addition, to create a signature, which has a visual representation, you will 
     widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
     widget.Border = new AnnotationBorder(100, AnnotationBorderStyle.Solid, null);
     widget.Content.NormalContentSource = form.FormSource;
+	widget.RecalculateContent();
 
     // The Widget class inherits from Annotation. And, as any other annotation, must be added to the respective collection of the page.
 
