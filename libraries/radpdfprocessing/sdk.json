@@ -3,8 +3,8 @@
     "Name": "Create Document With Images",
     "ExampleInfo": {
       "Name": "Create Document With Images",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreateDocumentWithImages\\CreateDocumentWithImages.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreateDocumentWithImages\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreateDocumentWithImages\\CreateDocumentWithImages.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreateDocumentWithImages\\ReadMe.md",
       "DirectoryName": "CreateDocumentWithImages",
       "ExampleFileNames": [ "CreateDocumentWithImages.csproj", "DocumentGenerator.cs", "Program.cs" ]
     },
@@ -12,12 +12,25 @@
     "Description": "This example demonstrates how to create RadFixedDocument containing images and export it with different ImageQuality. In GenerateDocumentContent() method you can see different ways of inserting images allowing you to control the exported image quality and size:\r\n - The first approach inserts the images by simply passing the image file stream in ImageSource constructor. This way the images will be exported with different image quality depending on PdfFormatProvider.ExportSettings. When the ImageQuality is set to High then PdfProcessing automatically detects if the image is JPEG or JPEG2000 and the image is inserted in the PDF file as it is which guarantees fast export with maximum image quality.\r\n - The second approach inserts the images by passing image file stream and ImageQuality enumeration value in the ImageSource's constructor. This way the images will be always exported with the specified image quality ignoring PdfFormatProvider.ExportSettings.\r\n - The third approach inserts black and white image using EncodedImageData class. This allows you to achieve maximum lossless compression by exporting the image data with BitsPerComponent equal to 1 and FlateDecode filter. As the encoded image data is exported as it is, the PdfFormatProvider.ExportSettings.ImageQuality value is ignored in this case as well.",
     "KeyWords": "Create Document With Images,  create,scratch,prepare,data,imagesource,image,quality,insert,save,export"
   },
+    {
+    "Name": "Create PDF document using RadFixedDocumentEditor",
+    "ExampleInfo": {
+      "Name": "Create PDF document using RadFixedDocumentEditor",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreatePdfUsingRadFixedDocumentEditor\\CreatePdfUsingRadFixedDocumentEditor.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreatePdfUsingRadFixedDocumentEditor\\Readme.md",
+      "DirectoryName": "CreatePdfUsingRadFixedDocumentEditor",
+      "ExampleFileNames": [ "CreatePdfUsingRadFixedDocumentEditor.csproj", "ContentGenerator.cs", "Product.cs" ]
+    },
+    "GitHubPath": "https://api.github.com/repositories/100286140/contents/PdfProcessing/CreatePdfUsingRadFixedDocumentEditor/",
+    "Description": "This demo shows how to generate a PDF file with RadFixedDocumentEditor in a flow-like manner. The example exports two similar PDF documents - one using only Standard PDF fonts and other using fonts from the machine, which are embedded in the PDF file. More information about the different types of fonts is available at https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/fonts.",
+    "KeyWords": "Create Document With RadFixedDocumentEditor,  create,scratch,prepare,data,editor,insert,save,export"
+  },
   {
     "Name": "Create Interactive forms",
     "ExampleInfo": {
       "Name": "Create Interactive forms",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreateInteractiveForms\\CreateInteractiveForms.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreateInteractiveForms\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreateInteractiveForms\\CreateInteractiveForms.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\CreateInteractiveForms\\ReadMe.md",
       "DirectoryName": "CreateInteractiveForms",
       "ExampleFileNames": [ "CreateInteractiveForms.csproj", "Program.cs", "ReadMe.md" ]
     },
@@ -29,8 +42,8 @@
     "Name": "Export UI Element (WPF)",
     "ExampleInfo": {
       "Name": "Export UI Element",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ExportUIElement\\ExportUIElement_WPF.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ExportUIElement\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ExportUIElement\\ExportUIElement_WPF.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ExportUIElement\\ReadMe.md",
       "DirectoryName": "ExportUIElement",
       "ExampleFileNames": [ "ExportUIElement_WPF.csproj", "App.xaml", "App.xaml.cs", "Example.xaml", "Example.xaml.cs", "MainWindow.xaml", "MainWindow.xaml.cs", "Models\\PlotInfo.cs", "PdfExport\\ExportHelper.cs", "PdfExport\\PdfRenderer.cs", "PdfExport\\ConcreteRenderers\\BorderRenderer.cs", "PdfExport\\ConcreteRenderers\\EllipseRenderer.cs", "PdfExport\\ConcreteRenderers\\FrameworkElementRenderer.cs", "PdfExport\\ConcreteRenderers\\ImageRenderer.cs", "PdfExport\\ConcreteRenderers\\LineRenderer.cs", "PdfExport\\ConcreteRenderers\\PanelRenderer.cs", "PdfExport\\ConcreteRenderers\\RectangleRenderer.cs", "PdfExport\\ConcreteRenderers\\ShapeRenderer.cs", "PdfExport\\ConcreteRenderers\\TextBlockRenderer.cs", "PdfExport\\ConcreteRenderers\\TextBoxRenderer.cs", "PdfExport\\ConcreteRenderers\\TextRenderer.cs", "PdfExport\\ConcreteRenderers\\UIElementRendererBase.cs", "PdfExport\\Miscellaneous\\CompositeDisposableObject.cs", "PdfExport\\Miscellaneous\\DisposableOpacity.cs", "PdfExport\\Miscellaneous\\MathHelper.cs", "PdfExport\\Miscellaneous\\PdfColorHelper.cs", "PdfExport\\Miscellaneous\\PdfGeometryHelper.cs", "PdfExport\\Miscellaneous\\PdfRenderContext.cs", "ViewModels\\MainViewModel.cs" ]
     },
@@ -42,8 +55,8 @@
     "Name": "Export UI Element (Silverlight)",
     "ExampleInfo": {
       "Name": "Export UI Element (Silverlight)",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ExportUIElement\\ExportUIElement_SL.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ExportUIElement\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ExportUIElement\\ExportUIElement_SL.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ExportUIElement\\ReadMe.md",
       "DirectoryName": "ExportUIElement (Silverlight)",
       "ExampleFileNames": [ "ExportUIElement_SL.csproj", "App_SL.xaml", "App_SL.xaml.cs", "Example.xaml", "Example.xaml.cs", "MainPage.xaml", "MainPage.xaml.cs", "Models\\PlotInfo.cs", "PdfExport\\ExportHelper.cs", "PdfExport\\PdfRenderer.cs", "PdfExport\\ConcreteRenderers\\BorderRenderer.cs", "PdfExport\\ConcreteRenderers\\EllipseRenderer.cs", "PdfExport\\ConcreteRenderers\\FrameworkElementRenderer.cs", "PdfExport\\ConcreteRenderers\\ImageRenderer.cs", "PdfExport\\ConcreteRenderers\\LineRenderer.cs", "PdfExport\\ConcreteRenderers\\PanelRenderer.cs", "PdfExport\\ConcreteRenderers\\PathRenderer.cs", "PdfExport\\ConcreteRenderers\\RectangleRenderer.cs", "PdfExport\\ConcreteRenderers\\TextBlockRenderer.cs", "PdfExport\\ConcreteRenderers\\TextBoxRenderer.cs", "PdfExport\\ConcreteRenderers\\TextRenderer.cs", "PdfExport\\ConcreteRenderers\\UIElementRendererBase.cs", "PdfExport\\Miscellaneous\\CompositeDisposableObject.cs", "PdfExport\\Miscellaneous\\DisposableOpacity.cs", "PdfExport\\Miscellaneous\\MathHelper.cs", "PdfExport\\Miscellaneous\\PdfColorHelper.cs", "PdfExport\\Miscellaneous\\PdfGeometryHelper.cs", "PdfExport\\Miscellaneous\\PdfRenderContext.cs", "ViewModels\\MainViewModel.cs" ]
     },
@@ -55,8 +68,8 @@
     "Name": "Generate Document",
     "ExampleInfo": {
       "Name": "Generate Document",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\GenerateDocument\\GenerateDocument.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\GenerateDocument\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\GenerateDocument\\GenerateDocument.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\GenerateDocument\\ReadMe.md",
       "DirectoryName": "GenerateDocument",
       "ExampleFileNames": [ "GenerateDocument.csproj", "DocumentGenerator.cs", "Program.cs" ]
     },
@@ -68,8 +81,8 @@
     "Name": "Generate Document (Silverlight)",
     "ExampleInfo": {
       "Name": "Generate Document (Silverlight)",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\GenerateDocument\\GenerateDocument_SL.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\GenerateDocument\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\GenerateDocument\\GenerateDocument_SL.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\GenerateDocument\\ReadMe.md",
       "DirectoryName": "GenerateDocument (Silverlight)",
       "ExampleFileNames": [ "GenerateDocument_SL.csproj", "App_SL.xaml", "App_SL.xaml.cs", "DelegateCommand.cs", "ExampleViewModel_SL.cs", "FileHelper.cs", "MainPage.xaml", "MainPage.xaml.cs" ]
     },
@@ -81,21 +94,21 @@
     "Name": "Manipulate Pages",
     "ExampleInfo": {
       "Name": "Manipulate Pages",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ManipulatePages\\ManipulatePages.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ManipulatePages\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ManipulatePages\\ManipulatePages.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ManipulatePages\\ReadMe.md",
       "DirectoryName": "ManipulatePages",
       "ExampleFileNames": [ "ManipulatePages.csproj", "Program.cs", "ReadMe.md" ]
     },
     "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/PdfProcessing/ManipulatePages/",
-    "Description": "This project demonstrates how to use PdfStreamWriter class in order to manipulate PDF pages. The project shows several use-case scenario examples in 4 separate methods as follows:\n - MergeDifferentDocumentsPages - this method merges all pages from several PDF documents with different PDF page content. All page content is preserved unmodified after the merge operation, even when the original file contains currently not supported by RadPdfProcessing model PDF features (such us sound, video and 3D interactive content).\n - SplitDocumentPages - this method splits the pages of a multi-paged PDF file and saves them as separate single-paged PDF files.\n - FitAndPositionMultiplePagesOnSinglePage - this method gets a multi-paged PDF file and creates a new PDF file from its pages by scaling and positioning each 4 consecutive pages from the original file to a single page in the result file.\n - PrependAndAppendPageContent - this method gets a multi-paged PDF file and creates new PDF file from its pages by adding newly generated page content below and above the existing page content.\n\nIn the end, the demo opens the result folder with the newly created PDF files.",
+    "Description": "This project demonstrates how to use PdfStreamWriter class in order to manipulate PDF pages. The project shows several use-case scenario examples in 4 separate methods as follows:\n - MergeDifferentDocumentsPages - this method merges all pages from several PDF documents with different PDF page content. All page content is preserved unmodified after the merge operation, even when the original file contains Releasely not supported by RadPdfProcessing model PDF features (such us sound, video and 3D interactive content).\n - SplitDocumentPages - this method splits the pages of a multi-paged PDF file and saves them as separate single-paged PDF files.\n - FitAndPositionMultiplePagesOnSinglePage - this method gets a multi-paged PDF file and creates a new PDF file from its pages by scaling and positioning each 4 consecutive pages from the original file to a single page in the result file.\n - PrependAndAppendPageContent - this method gets a multi-paged PDF file and creates new PDF file from its pages by adding newly generated page content below and above the existing page content.\n\nIn the end, the demo opens the result folder with the newly created PDF files.",
     "KeyWords": "Manipulate Pages,  merge,split,prepend,append,add,page,content,generate,PDF,stream,processing"
   },
   {
     "Name": "Modify Form Values",
     "ExampleInfo": {
       "Name": "Modify Form Values",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ModifyForms\\ModifyFormValues.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ModifyForms\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ModifyForms\\ModifyFormValues.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\ModifyForms\\ReadMe.md",
       "DirectoryName": "ModifyForms",
       "ExampleFileNames": [ "ModifyFormValues.csproj", "InteractiveForms.pdf", "Program.cs" ]
     },
@@ -107,8 +120,8 @@
     "Name": "PdfStreamWriter Performance",
     "ExampleInfo": {
       "Name": "PdfStreamWriter Performance",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfStreamWriterPerformance\\PdfStreamWriterPerformance.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfStreamWriterPerformance\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfStreamWriterPerformance\\PdfStreamWriterPerformance.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfStreamWriterPerformance\\ReadMe.md",
       "DirectoryName": "PdfStreamWriterPerformance",
       "ExampleFileNames": [ "PdfStreamWriterPerformance.csproj", "Program.cs" ]
     },
@@ -120,8 +133,8 @@
     "Name": "Pdf Viewer Integration (WPF)",
     "ExampleInfo": {
       "Name": "Pdf Viewer Integration (WPF)",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfViewerIntegration\\PdfViewerIntegration_WPF.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfViewerIntegration\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfViewerIntegration\\PdfViewerIntegration_WPF.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfViewerIntegration\\ReadMe.md",
       "DirectoryName": "PdfViewerIntegration (WPF)",
       "ExampleFileNames": [ "PdfViewerIntegration_WPF.csproj", "App.config", "App.xaml", "App.xaml.cs", "ExampleViewModel.cs", "MainWindow.xaml", "MainWindow.xaml.cs" ]
     },
@@ -133,8 +146,8 @@
     "Name": "Pdf Viewer Integration",
     "ExampleInfo": {
       "Name": "Pdf Viewer Integration (Silverlight)",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfViewerIntegration\\PdfViewerIntegration_SL.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfViewerIntegration\\ReadMe.md",
+      "ProjectPath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfViewerIntegration\\PdfViewerIntegration_SL.csproj",
+      "ReadmePath": "C:\\Work\\WPF_Scrum\\Release\\SDK\\Examples\\DocumentProcessing\\PdfProcessing\\PdfViewerIntegration\\ReadMe.md",
       "DirectoryName": "PdfViewerIntegration  (Silverlight)",
       "ExampleFileNames": [ "PdfViewerIntegration_SL.csproj", "App_SL.xaml", "App_SL.xaml.cs", "ExampleViewModel.cs", "MainPage.xaml", "MainPage.xaml.cs" ]
     },
