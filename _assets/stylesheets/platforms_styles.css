@@ -1,0 +1,50 @@
+/* Supported Platforms Styles */
+
+.platforms {
+    font-size: 15px;
+    padding: 10px 0 0 3em;
+	max-width: calc(100% - 170px - 3em);
+}
+
+.platforms:after {
+    border-bottom: 2px solid #ebecee;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 5px;
+    position: relative;
+    width: 100%;
+	max-width: 930px;
+}
+
+.platforms span.platform {
+	color: #00b312;
+}
+
+.platforms span.separator {
+	color: #d9d9d9;
+}
+
+.platforms span:first-child {
+    margin-left: 15px;
+}
+
+.separator {
+    margin: 10px;
+} 
+
+@media (max-width: 1200px) {
+	#page-article {
+		padding-left: 0;
+		padding-right: 0; 
+	}
+	
+		#page-article article {
+			padding: 15px 1em 0;
+		}
+
+	.platforms {
+		padding: 10px 0 0 1em;
+		max-width: calc(100% - 170px);
+	} 
+}
