@@ -5,7 +5,7 @@ description: Trial License Limitations in Telerik Document Processing
 slug: trial-license-limitations
 tags: license,trial,limitations
 published: True
-position: 2
+position: 3
 ---
 
 # Trial License Limitations

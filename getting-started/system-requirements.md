@@ -5,7 +5,7 @@ description: System Requirements
 slug: installation-system-requirements
 tags: system,requirements
 published: True
-position: 0
+position: 2
 ---
 
 # System Requirements

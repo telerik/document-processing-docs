@@ -1,11 +1,11 @@
 ---
-title: Getting Started
-page_title: Getting Started
+title: Overview
+page_title: Overview
 description: Getting Started with Telerik Document Processing
 slug: getting-started
 tags: getting-started
 published: True
-position: 2
+position: 1
 ---
 
 # Getting Started with Telerik Document Processing

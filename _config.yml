@@ -14,15 +14,21 @@ navigation:
     installation-and-deployment:
         title: Installation and Deployment
         position: 4
+    upgrade:
+        title: Upgrade
+        position: 5
+    distribution-and-licensing:
+        title: Distribution and Licensing
+        position: 6  
+    integration:
+        title: Integration
+        position: 7
     libraries:
         title: Libraries
-        position: 6
-    licensing:
-        title: Licensing
-        position: 5		
+        position: 8	
     for-more-help:
         title: For More Help
-        position: 100
+        position: 10
     "*overview":
         title: Overview
         position: 1
