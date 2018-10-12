@@ -14,15 +14,21 @@ navigation:
     installation-and-deployment:
         title: Installation and Deployment
         position: 4
+    upgrade:
+        title: Upgrade
+        position: 5
+    distribution-and-licensing:
+        title: Distribution and Licensing
+        position: 6  
+    integration:
+        title: Integration
+        position: 7
     libraries:
         title: Libraries
-        position: 6
-    licensing:
-        title: Licensing
-        position: 5		
+        position: 8	
     for-more-help:
         title: For More Help
-        position: 100
+        position: 10
     "*overview":
         title: Overview
         position: 1
@@ -181,7 +187,7 @@ defaults:
     scope:
         path: ""
     values:
-        layout: "page"
+        layout: "documentation"
         category: "default"
 
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
@@ -193,12 +199,45 @@ ff-sheet-id: 1HHlD_amgJPEh0GFobTkhTb9WBL9YbcKaYmlq-fCJb14
 # The google services configuration
 google_tag_manager: GTM-6X92
 google_analytics: UA-111455-1
-google_custom_search: '001595215763381649090:dzdv3_di-fm'
+gcs_engine: '001595215763381649090:dzdv3_di-fm'
+gcs_api_key: 'AIzaSyC_1zrkB9jMkIDAJ6VBYGilbhOWEFZqQKA'
+
+edit_repo_url: https://github.com/telerik/dpl-docs/edit/master
 
 # Available for names: 
 platforms: ["UI for ASP.NET AJAX", "UI for ASP.NET MVC", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin"]
 # in articles use as shown below: 
 # platforms: ajax, mvc, wpf, winforms, silverlight, xamarin
+platform: dpl
+download: https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate
+nav:
+  "Demos": http://www.telerik.com/support/demos
+  "About": http://www.telerik.com/devcraft
+  "Pricing": https://www.telerik.com/telerik-document-processing#Editions
+
+footer:
+-
+  title: "Getting Started"
+  links:
+    "Getting Started": https://docs.telerik.com/devtools/document-processing/getting-started
+-
+  title: "Support Resources"
+  links: 
+    "Documentation": https://docs.telerik.com/devtools/document-processing/introduction
+-
+  title: "Community"
+  links:
+    "Forums": https://www.telerik.com/forums/telerik-document-processing
+    "Blogs": https://www.telerik.com/blogs/.net
+    "Document Processing Feedback Portal": https://feedback.telerik.com/Project/184
+  
+footer_social: 
+    facebook: https://www.facebook.com/Telerik/
+    youtube: https://www.youtube.com/user/TelerikInc
+    linkedin: https://www.linkedin.com/showcase/telerik/ 
+    twitter: https://twitter.com/Telerik/ 
+
+api_reference_url: "api/"
 
 # Folders not supporting Silverlight:
 non-sl-folders: ["radwordsprocessing", "radspreadstreamprocessing"]
