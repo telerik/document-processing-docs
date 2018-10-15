@@ -15,10 +15,6 @@ position: 4
 __Image__ is a content element, which contains an image source and represents an image.
       
 
-* [Inserting an Image](#Inserting_an_Image)
-
-* [Modifying an Image](#Modifying_an_Image)
-
 ## Inserting an Image
 
 __Image__ is a content element that can be added in the __Content__ collection of a __IContainerElement__ such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches which you can use to achieve that.
@@ -51,7 +47,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 >tipThere are other methods that allow adding an image to a document by passing image size, format and source. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
           
 
-## Modifying an Image
+## Working With an Image
 
 You can modify an __Image__ element using the properties the class exposes. The properties are listed below.
         
@@ -61,9 +57,20 @@ You can modify an __Image__ element using the properties the class exposes. The 
 * __Height__: The height of the image.
 * __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the __IContainerElement__.
             
+The Image class exposes also the **GetBitmapSource()** method, enabling you to obtain a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) instance representing the image.
+
+#### __[C#] Example 3: Obtain BitmapSource__
+
+{{region cs-radpdfprocessing-model-image_2}}
+
+	BitmapSource source = image.GetBitmapSource();
+{{endregion}}
+
 
 ## See Also
 
+ 
+ * [ImageSource]({%slug radpdfprocessing-model-imagesource%})
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [Position]({%slug radpdfprocessing-concepts-position%})
