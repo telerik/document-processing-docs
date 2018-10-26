@@ -239,6 +239,10 @@ footer_social:
 
 api_reference_url: "api/"
 
+sdk_examples: "sdk.json"
+sdk_repo_path: "https://github.com/telerik/document-processing-sdk/tree/master/"
+sdk_cdn_path: "https://cdn.rawgit.com/telerik/document-processing-sdk/master/"
+
 # Folders not supporting Silverlight:
 non-sl-folders: ["radwordsprocessing", "radspreadstreamprocessing"]
 
