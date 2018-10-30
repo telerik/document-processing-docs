@@ -58,7 +58,7 @@ You could merge documents at a specific position using the InsertDocument() meth
 	</tr>
 	<tr>
 		<td>Insert the source document between runs. Source document contains a single section.</td>
-		<td>All of the blocks (Paragraphs and Tables) in the source document’s section will be inserted at the specific location. The section properties will be omitted. This means if the target document page orientation is <i>portrait</i> and the source is <i>landscape</i>, the result document will have <i>portrait</i> orientation. </td>
+		<td>All of the blocks (Paragraphs and Tables) in the source document’s section will be inserted at the specific location. The section properties will be omitted. This means if the target document page orientation is portrait and the source is landscape, the result document will have portrait orientation. </td>
 	</tr>
 	<tr>
 		<td>Insert the source document between runs. Source document contains multiple sections.</td>
@@ -66,7 +66,7 @@ You could merge documents at a specific position using the InsertDocument() meth
 	</tr>
 	<tr>
 		<td>Insert the source document at the beginning of the target document. Source document contains single section.</td>
-		<td>All of the blocks in the source document’s section will be inserted at the specific location. The section properties will be omitted. This means if the target document page orientation is <i>portrait</i> and the source is <i>landscape</i>, the result document will have <i>portrait</i> orientation.</td>
+		<td>All of the blocks in the source document’s section will be inserted at the specific location. The section properties will be omitted. This means if the target document page orientation is portrait and the source is landscape, the result document will have portrait orientation.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document at the beginning of the target document. Source document contains multiple sections.</td>
@@ -74,7 +74,7 @@ You could merge documents at a specific position using the InsertDocument() meth
 	</tr>
 	<tr>
 		<td>Insert the source document at the end of the target document. Source document contains single section.</td>
-		<td>All of the blocks in the source document’s section will be inserted at the specific location. The section properties will be omitted. This means if the target document page orientation is <i>portrait</i> and the source is <i>landscape</i>, the result document will have <i>portrait</i> orientation.</td>
+		<td>All of the blocks in the source document’s section will be inserted at the specific location. The section properties will be omitted. This means if the target document page orientation is portrait and the source is landscape, the result document will have portrait orientation.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document at the end of the target document. Source document contains multiple sections.</td>

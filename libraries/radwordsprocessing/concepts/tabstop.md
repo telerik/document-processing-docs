@@ -107,8 +107,6 @@ The code from __Example 4__ demonstrates how to create a tab stop.
 <a name="example4"><a/>
 #### __[C#] Example 4: Create a TabStop__
 
-{{region radwordsprocessing-concepts-tabstops_3}}
-	ТabStop tabStop = new TabStop(Unit.InchToDip(2), TabStopType.Center);
 {{region cs-radwordsprocessing-concepts-tabstops_3}}
 	TabStop tabStop = new TabStop(Unit.InchToDip(2), TabStopType.Center);
 {{endregion}}

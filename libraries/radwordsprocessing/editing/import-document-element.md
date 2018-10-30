@@ -72,12 +72,12 @@ In **Table 1** is described the behavior of the Import&lt;T&gt;() method of **Do
 	</tr>
 
 	<tr>
-		<td>Invoke Import() method with a paragraph, which contains unpaired annotation marker <i>(e.g. there is a Bookmark, which is spanned between two paragraphs, one of which is passed as a parameter)</i>.</td>
+		<td>Invoke Import() method with a paragraph, which contains unpaired annotation marker (e.g. there is a Bookmark, which is spanned between two paragraphs, one of which is passed as a parameter).</td>
 		<td>Returns the paragraph and all its inlines cloned. <b>The unpaired annotation marker is cleared.</b></td>
 	</tr>
 
 	<tr>
-		<td>Invoke Import() method with a section, which contains paragraphs which contain by their side unpaired annotations <i>(e.g. there is a Bookmark, which is spanned between two paragraphs and their parent section is passed as a parameter)</i>.</td>
+		<td>Invoke Import() method with a section, which contains paragraphs which contain by their side unpaired annotations (e.g. there is a Bookmark, which is spanned between two paragraphs and their parent section is passed as a parameter).</td>
 		<td>Returns the section and all its children cloned. The annotation markers are not cleared.</td>
 	</tr>
 
