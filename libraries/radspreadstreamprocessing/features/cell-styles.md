@@ -61,7 +61,7 @@ A cell style is represented by the **SpreadCellStyle** class. The properties of 
 
 - Fill group
 	
-	- **Fill**: Gets or sets the fill. The property could be of type [SpreadGradientFill](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.html) or [SpreadPatternFill](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadPatternFill.htm).
+	- **Fill**: Gets or sets the fill. The property could be of type [SpreadGradientFill](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.html) or [SpreadPatternFill](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.html).
 
 In addition to the properties above, the SpreadCellStyle class exposes five Boolean properties that indicate whether the groups above will be applied:
 

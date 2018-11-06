@@ -34,7 +34,7 @@ To create an object of type PdfSteamWriter, you should pass it the Stream of the
 
 The members of the class allow you to set several properties of the document you are working with as well as generate and write new pages.
 
-* **BeginPage()**: The BeginPage() method returns an instance of the **PdfPageStreamWriter** class, which is responsible to draw the content of the page. More information about this class is available in the [PdfPageStreamWriter article](). The overloads of BeginPage() allow you to pass the size and the [Rotation](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Data_Rotation.htm) of the page.
+* **BeginPage()**: The BeginPage() method returns an instance of the **PdfPageStreamWriter** class, which is responsible to draw the content of the page. More information about this class is available in the [PdfPageStreamWriter article](). The overloads of BeginPage() allow you to pass the size and the [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) of the page.
 	
 	#### **[C#] Example 2: Insert a new page into a document**
 	
@@ -69,7 +69,7 @@ The members of the class allow you to set several properties of the document you
 
 Through the **Settings property** of PdfStreamWriter you can control the way the document is exported. The following list describes the available properties:
 
-* **DocumentInfo**: A property of type [RadFixedDocumentInfo](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_RadFixedDocumentInfo.htm), intended to hold additional information about the document. The RadFixedDocumentInfo class allows you to set the title, author and description of the document.
+* **DocumentInfo**: A property of type [RadFixedDocumentInfo](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.RadFixedDocumentInfo.html), intended to hold additional information about the document. The RadFixedDocumentInfo class allows you to set the title, author and description of the document.
 
 * **ImageQuality**: This property is of type [ImageQuality]({%slug radpdfprocessing-concepts-imagequality%}) and gets or sets the default image quality when exporting images to PDF. The default value is *High*. The value of this property is overridden when specifying the ImageQuality in ImageSource constructor or when creating [ImageSource]({%slug radpdfprocessing-model-imagesource%}) from EncodedImageData. The quality of the images reflects the size of the PDF file. The higher the quality, the bigger the document size is.
 

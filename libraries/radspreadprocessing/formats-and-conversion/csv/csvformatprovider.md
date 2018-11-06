@@ -66,5 +66,5 @@ __Example 2__ demonstrates how to export an existing Workbook to a CSV file. The
 
 ## See Also
 
-* [IWorkbookFormatProvider API Reference](https://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_FormatProviders_IWorkbookFormatProvider.htm)
-* [CsvFormatProvider API Reference](https://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_FormatProviders_TextBased_Csv_CsvFormatProvider.htm)
+* [IWorkbookFormatProvider API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider.html)
+* [CsvFormatProvider API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv.CsvFormatProvider.html)
