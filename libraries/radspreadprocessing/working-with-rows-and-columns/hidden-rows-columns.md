@@ -96,5 +96,5 @@ __Example 3__ demonstrates this by hiding a row, autofitting it and then checkin
 ## See Also
 
 * [Resizing Rows and Columns]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%})
-* [ColumnSelection API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_ColumnSelection.htm)
-* [RowSelection API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_RowSelection.htm)
+* [ColumnSelection API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.ColumnSelection.html)
+* [RowSelection API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.RowSelection.html)

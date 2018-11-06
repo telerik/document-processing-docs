@@ -213,7 +213,7 @@ The result of __Example 5__ is demonstrated in __Figure 1__.
 The __Fill__ property uses an __IFill__ object for getting and setting its property value. The document model supports two types of fills that are represented through the __PatternFill__ and __GradientFill__ classes, both of which conform to the __IFill__ interface.
         
 
-As its name suggests, the __PatternFill__ object is used to fill the background of a region of cells using a repeated pattern of shapes. To create a PatternFill instance, you need to specify the type of the pattern, the background color and pattern color of the fill. You can choose between [eighteen types of patterns](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_PatternType.htm), such as HorizontalStripe, DiagonalCrossHatch, Gray75Percent and many more. The PatternFill object also allows you to set the background of a cell to a solid color.
+As its name suggests, the __PatternFill__ object is used to fill the background of a region of cells using a repeated pattern of shapes. To create a PatternFill instance, you need to specify the type of the pattern, the background color and pattern color of the fill. You can choose between [eighteen types of patterns](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.PatternType.html), such as HorizontalStripe, DiagonalCrossHatch, Gray75Percent and many more. The PatternFill object also allows you to set the background of a cell to a solid color.
         
 
 __Example 6__ creates two PatternFill objects with a DiagonalStripe and Solid PatternType respectively.
@@ -239,7 +239,7 @@ The result of __Example 6__ is illustrated in __Figure 2__.
 #### Figure 2: Applied PatternFill
 ![Rad Spread Processing Working With Cells Get Set Clear Properties 02](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_02.png)
 
-The __GradientFill__ is used to set the background of a region of cells to a gradual blending of two colors. To create a GradientFill, you need to specify a [GradientType](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_GradientType.htm) and the two colors that will blend.
+The __GradientFill__ is used to set the background of a region of cells to a gradual blending of two colors. To create a GradientFill, you need to specify a [GradientType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.GradientType.html) and the two colors that will blend.
         
 
 __Example 7__ assigns the region A1:F1 a smooth horizontal green gradient.
@@ -285,5 +285,5 @@ In addition to the __GetIndent()__, __SetIndent()__ and __ClearIndent()__ method
 ## See Also
 
  * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
- * [PatternType Enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_PatternType.htm)
- * [GradientType Enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_GradientType.htm)
+ * [PatternType Enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.PatternType.html)
+ * [GradientType Enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.GradientType.html)

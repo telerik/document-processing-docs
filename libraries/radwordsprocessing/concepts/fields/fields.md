@@ -26,7 +26,7 @@ Here is how simple page field looks like inside the document:
 
 ![Rad Words Processing Concepts Fields 01](images/RadWordsProcessing_Concepts_Fields_01.png)
 
-In the document object model Fields are represented by the [Field](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Fields_Field.htm) abstract class, which holds references to the __Start__, __Separate__ and __End__ field characters that are related to the field.
+In the document object model Fields are represented by the [Field](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Fields.Field.html) abstract class, which holds references to the __Start__, __Separate__ and __End__ field characters that are related to the field.
       
 
 ## Inserting Fields

@@ -38,7 +38,7 @@ The class containing the structure corresponding to a list is __List__ and expos
 * __Levels__: Represents a collection of [ListLevel](#listlevel-overview) objects. Every list can contain up to 9 levels.
             
 
-* __MultilevelType__: The type of the list, described with the [MultilevelType enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Lists_MultilevelType.htm). It defines the behavior of the list.
+* __MultilevelType__: The type of the list, described with the [MultilevelType enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Lists.MultilevelType.html). It defines the behavior of the list.
 
 > To insert commonly used types of lists like **bullet** or **numbered** lists, [list templates](#list-templates) can be used.
 
@@ -58,7 +58,7 @@ The type of the list is used by an application to determine the user interface b
 
 ## ListLevel Overview
 
-[ListLevel](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Lists_ListLevel.htm) is the class containing the structure of the list levels. It describes a set of properties, which specify the appearance and behavior of the associated numbered paragraph.
+[ListLevel](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Lists.ListLevel.html) is the class containing the structure of the list levels. It describes a set of properties, which specify the appearance and behavior of the associated numbered paragraph.
         
 
 * __StartIndex__: Specifies the starting number of a ListLevel. The value should be equal or greater than 0.
@@ -70,7 +70,7 @@ The type of the list is used by an application to determine the user interface b
 * __NumberTextFormat__: Specifies the number format string for a list level.
             
 
-* __NumberingStyle__: The numbering style of a list level, described with the [NumberingStyle enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Lists_NumberingStyle.htm) . It can be a number, bullet, letter, etc. The default value is __NumberingStyle.Bullet__.
+* __NumberingStyle__: The numbering style of a list level, described with the [NumberingStyle enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Lists.NumberingStyle.html) . It can be a number, bullet, letter, etc. The default value is __NumberingStyle.Bullet__.
             
 
 * __IsLegal__: Specifies if all inherited number formats should be displayed as NumberingStyle.Decimal format. If the value is true, then all numbering levels in the current ListLevel shall be converted to their corresponding decimal values. If the value is false, they shall be displayed in the string format set by the NumberTextFormat property.
@@ -90,7 +90,7 @@ The type of the list is used by an application to determine the user interface b
 
 ## List Templates
 
-There are a set of commonly used lists which are predefined for convenience and are called list templates. All available templates are within the [ListTemplateType enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Lists_ListTemplateType.htm).
+There are a set of commonly used lists which are predefined for convenience and are called list templates. All available templates are within the [ListTemplateType enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Lists.ListTemplateType.html).
         
 
 In order to add one of the list templates to the document, you need to pass a __ListTemplateType__ value to the __ListCollection.Add()__ method. This would add the required template to the document and return the resulting list.

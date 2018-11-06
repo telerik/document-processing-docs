@@ -66,4 +66,4 @@ SignatureField provides the following properties:
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets%})
-* [Signature API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_DigitalSignatures_Signature.htm)
+* [Signature API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.Signature.html)

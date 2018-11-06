@@ -18,9 +18,9 @@ The abstract __Annotation__ element associates an object with a location on a [R
 * __Rect__: The rectangle, which defines the location of the annotation on the page.
           
 
-* __Type__: Property of type [AnnotationType](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_AnnotationType.htm), which determines the type of the annotation. The only supported type is __Link__.
+* __Type__: Property of type [AnnotationType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html), which determines the type of the annotation. The only supported type is __Link__.
           
-* **Border**: Represents the annotation borders. This property is of type [AnnotationBorder](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_AnnotationBorder.htm).
+* **Border**: Represents the annotation borders. This property is of type [AnnotationBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationBorder.html).
 
 * **IsPrintable**: A boolean value that indicates whether the annotation instance should be visualized when printing the document. When set to *false*, the annotation won't appear when the document is printed. 
 
@@ -36,7 +36,7 @@ This article will get you familiar with the following concepts:
 
 ## Link
 
-The __Link__ class inherits the abstract __Annotation__ class. Link annotations represent either a hypertext link to a destination elsewhere in the document or an action to be performed. For this reason, there are two separate constructors in the [Link class](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_Link.htm) - one requiring a __Destination__ object and one requiring an __Action__ object.
+The __Link__ class inherits the abstract __Annotation__ class. Link annotations represent either a hypertext link to a destination elsewhere in the document or an action to be performed. For this reason, there are two separate constructors in the [Link class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html) - one requiring a __Destination__ object and one requiring an __Action__ object.
         
 
 __Link__ exposes the following properties:
@@ -165,5 +165,5 @@ __Example 4__ demonstrates how to create an action of type __GoToAction__, assoc
 ## See Also
 
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
- * [AnnotationType API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_AnnotationType.htm)
- * [Link API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Annotations_Link.htm)
+ * [AnnotationType API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html)
+ * [Link API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html)

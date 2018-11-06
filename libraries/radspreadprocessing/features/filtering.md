@@ -251,7 +251,7 @@ The dynamic filter is a filter which shows or hides the rows in the column it fi
 Other than the members of the __IFilter__ interface, the __DynamicFilter__ class exposes only one property specific to it:
         
 
-* __DynamicFilterType__: The type of the dynamic filter, which determines what condition the filter should use to filter the column it is assigned to. The dynamic filter type can be used from the values of the [DynamicFilterType enumaration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_Filtering_DynamicFilterType.htm).
+* __DynamicFilterType__: The type of the dynamic filter, which determines what condition the filter should use to filter the column it is assigned to. The dynamic filter type can be used from the values of the [DynamicFilterType enumaration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Filtering.DynamicFilterType.html).
             
 
 __Example 4__ demonstrates how to create a dynamic filter.

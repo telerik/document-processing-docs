@@ -147,7 +147,7 @@ The snippet from __Example 6__ shows how all fields in a document can be updated
 
 ## See Also
 
- * [RadFlowDocument API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_RadFlowDocument.htm)
+ * [RadFlowDocument API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.RadFlowDocument.html)
  * [Document model]({%slug radwordsprocessing-model%})
  * [Section]({%slug radwordsprocessing-model-section%})
  * [Styles]({%slug radwordsprocessing-concepts-styles%})
