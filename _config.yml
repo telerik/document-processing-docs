@@ -250,6 +250,7 @@ non-sl-folders: ["radwordsprocessing", "radspreadstreamprocessing"]
 non-xamarin-folders: ["radwordsprocessing", "radspreadprocessing", "radpdfprocessing"]
 
 ## Do not edit below this line
+skip_tabbed_code: true
 safe: false
 markdown: MarkdownProcessor
 kramdown:
