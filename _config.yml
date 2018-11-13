@@ -203,6 +203,7 @@ gcs_engine: '001595215763381649090:dzdv3_di-fm'
 gcs_api_key: 'AIzaSyC_1zrkB9jMkIDAJ6VBYGilbhOWEFZqQKA'
 
 edit_repo_url: https://github.com/telerik/dpl-docs/edit/master
+product: "Telerik Document Processing"
 
 # Available for names: 
 platforms: ["UI for ASP.NET AJAX", "UI for ASP.NET MVC", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin"]
