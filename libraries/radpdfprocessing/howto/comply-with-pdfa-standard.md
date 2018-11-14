@@ -44,7 +44,7 @@ Its objective is to ensure that documents content can be searched and re-purpose
 * Unicode character maps
 * Language specification.
 
-> __RadPdfProcessing__ does not support PDF/A-1a level of compliance.
+> __RadPdfProcessing__ does not support PDF/A-1a and PDF/A-1b levels of compliance.
 
 ### PDF/A-2
 
