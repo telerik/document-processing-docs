@@ -118,7 +118,7 @@ __Example 5__ shows how to add the tab stop created in [Example 1](#example1) to
 #### __[C#] Example 5: Insert a TabStop__
 
 {{region cs-radwordsprocessing-concepts-tabstops_4}}
-	paragraph.TabStops = paragraph.TabStops.Remove(tabStop);
+	paragraph.TabStops = paragraph.TabStops.Insert(tabStop);
 {{endregion}}
 
 ### Remove a TabStop
