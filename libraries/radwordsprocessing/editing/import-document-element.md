@@ -44,7 +44,7 @@ The **DocumentElementImporter** class exposes the Import&lt;T&gt;() method, whic
 
 {{region cs-radwordsprocessing-editing-import-document-element_1}}
 	            
-	Run run = targetDocument.EnumerateChildrenOfType<Run>().First();
+	Run run = sourceDocument.EnumerateChildrenOfType<Run>().First();
 	Run importedRun = importer.Import<Run>(run);
 {{endregion}}
 
