@@ -284,7 +284,7 @@ When you use the insert methods of the __RadFlowDocumentEditor__ the editor crea
 * __TableFormatting__: This formatting is applied to all newly created __Table__ elements.
             
 
-Formatting options are most useful when inserting multiple elements that should have consistent styling. For example, the code  from __Example 13__ inserts multiple paragraphs with no spacing between them and with text (Runs) in "Consolas" font:
+Formatting options are most useful when inserting multiple elements that should have consistent styling. For example, the code  from __Example 11__ inserts multiple paragraphs with no spacing between them and with text (Runs) in "Consolas" font:
         
 
 #### __[C#] Example 11: Insert content with specified styles__
