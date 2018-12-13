@@ -32,7 +32,7 @@ The code snippet in __Example 1__ shows how to create a __PdfFormatProvider__ in
 
 #### __[C#] Example 1: Export to PDF file__
 {{region cs-radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
-	PdfFormatProvider provider = new PdfFormatProvider();
+	Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
 	using (Stream output = File.OpenWrite("sample.pdf"))
 	{
 	    RadFlowDocument document = CreateRadFlowDocument();
@@ -51,7 +51,7 @@ __Example 2__ demonstrates how to export the contents of a __RadFlowDocument__ t
 {{region cs-radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
 	RadFlowDocument document = CreateRadFlowDocument();
 	
-	PdfFormatProvider provider = new PdfFormatProvider();
+	Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
 	RadFixedDocument fixedDocument = provider.ExportToFixedDocument(document);
 {{endregion}}
 
