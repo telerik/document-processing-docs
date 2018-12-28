@@ -123,7 +123,7 @@ ArgumentConversionRules has the following properties:
 * __ArrayArgument__: The ArrayArgumentInterpretaion.
             
 
-The value of these properties are from the enumerations [ArgumentInterpretation](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Expressions_Functions_ArgumentInterpretation.htm) and [ArrayArgumentInterpretation](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Expressions_Functions_ArrayArgumentInterpretation.htm) and they are set through the constructor of __ArgumentConversionRules__. The default values of these interpretations in the constructor are accordingly __ArgumentInterpretation.UseAsIs__ and __ArrayArgumentInterpretation.UseFirstElement__.
+The value of these properties are from the enumerations [ArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArgumentInterpretation.html) and [ArrayArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArrayArgumentInterpretation.html) and they are set through the constructor of __ArgumentConversionRules__. The default values of these interpretations in the constructor are accordingly __ArgumentInterpretation.UseAsIs__ and __ArrayArgumentInterpretation.UseFirstElement__.
         
 
 __Example 2__ creates an instance of ArgumentConversionRules:
@@ -336,6 +336,6 @@ __Example 5__ shows how to create the 'E' function.
 ## See Also
 
  * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
- * [ArgumentInterpretation](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Expressions_Functions_ArgumentInterpretation.htm)
- * [ArrayArgumentInterpretation](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Expressions_Functions_ArrayArgumentInterpretation.htm)
+ * [ArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArgumentInterpretation.html)
+ * [ArrayArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArrayArgumentInterpretation.html)
  * [CustomFunctions SDK](https://github.com/telerik/xaml-sdk)

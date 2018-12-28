@@ -53,7 +53,8 @@ ComboBoxField provides the following properties:
 	
 	VariableContentWidget widget = comboBoxField.Widgets.AddWidget();
 	widget.Rect = new Rect(100, 100, 200, 30);
-	
+	widget.RecalculateContent();
+		
 	document.AcroForm.FormFields.Add(comboBoxField);
 	document.Pages[0].Annotations.Add(widget);
 {{endregion}}

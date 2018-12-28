@@ -39,23 +39,25 @@ SignatureField provides the following properties:
 
 	SignatureField signatureField = new SignatureField("SampleSignature");
 	signatureField.Signature = new Signature(certificate);
-	
+
 	SignatureWidget widget = signatureField.Widgets.AddWidget();
 	widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
 	widget.Border = new AnnotationBorder(100, AnnotationBorderStyle.Solid, null);
-	
+
 	// Create a Form object to define the appearance you would like for the signature field.
 	Form form = new Form();
 	form.FormSource = new FormSource();
 	form.FormSource.Size = new Size(120, 120);
-	
+
 	FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
 	formEditor.DrawCircle(new Point(50, 50), 20);
 	formEditor.DrawText("Sample Signature");
-	
+
 	// Add the FormSource object to the widget of the field.
 	widget.Content.NormalContentSource = form.FormSource;
-	
+	widget.RecalculateContent();
+
+	RadFixedPage page = document.Pages.Last();
 	page.Annotations.Add(widget);
 	document.AcroForm.FormFields.Add(signatureField);
 {{endregion}}
@@ -64,4 +66,4 @@ SignatureField provides the following properties:
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets%})
-* [Signature API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_DigitalSignatures_Signature.htm)
+* [Signature API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.Signature.html)

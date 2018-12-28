@@ -18,7 +18,7 @@ This article explains how to use the ImageQuality enumeration to change the expo
 
 ## Overview
 
-The [ImageQuality enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_FormatProviders_Pdf_Export_ImageQuality.htm) allows you to control the quality of the images when exporting to PDF. Possible values for this property are High, Medium, and Low. Since Q1 2016, the **default value of ImageQuality is High**.
+The [ImageQuality enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.ImageQuality.html) allows you to control the quality of the images when exporting to PDF. Possible values for this property are High, Medium, and Low. Since Q1 2016, the **default value of ImageQuality is High**.
 
 
 ## Using ImageQuality
@@ -39,6 +39,7 @@ In order to specify the default **ImageQuality** value when exporting to PDF, yo
 	settings.ImageQuality = ImageQuality.Medium;
 {{endregion}}
 
+> `PdfExportSettings.ImageQuality` property doesn't affect the quality of the images imported from a PDF document. Such images are preserved using `EncodedImageData` (see [ImageQuality and EncodedImageData Class](#imagequality-and-encodedimagedata-class)). `PdfExportSettings.ImageQuality` only affects the export quality of images created using an image stream or a `BitmapSource`.
 
 ### Specify the Image Quality of an Image
 
@@ -53,7 +54,7 @@ If you need some particular image to be exported with a different **ImageQuality
 
 ### ImageQuality and EncodedImageData Class
 
-When you construct an **ImageSource** object with [EncodedImageData](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Resources_EncodedImageData.htm), the image is inserted in the PDF file as it is, without decoding and re-encoding the image data. As **RadPdfProcessing** does not process the image data in this case, the **PdfExportSettings.ImageQuality** property is not used for this specific image and setting a value won’t take effect.
+When you construct an **ImageSource** object with [EncodedImageData](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Resources.EncodedImageData.html), the image is inserted in the PDF file as it is, without decoding and re-encoding the image data. As **RadPdfProcessing** does not process the image data in this case, the **PdfExportSettings.ImageQuality** property is not used for this specific image and setting a value won’t take effect.
 
 
 ### ImageQuality.High With JPEG and JPEG2000 Images
@@ -64,6 +65,6 @@ When **ImageQuality** of an image is set to **High**, **RadPdfProcessing** inter
 
 ## See also
 
-* [ImageQuality API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_FormatProviders_Pdf_Export_ImageQuality.htm)
+* [ImageQuality API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.ImageQuality.html)
 * [ImageSource]({%slug radpdfprocessing-model-imagesource%})
 * [PdfExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})

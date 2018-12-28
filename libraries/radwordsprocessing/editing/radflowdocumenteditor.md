@@ -284,7 +284,7 @@ When you use the insert methods of the __RadFlowDocumentEditor__ the editor crea
 * __TableFormatting__: This formatting is applied to all newly created __Table__ elements.
             
 
-Formatting options are most useful when inserting multiple elements that should have consistent styling. For example, the code  from __Example 13__ inserts multiple paragraphs with no spacing between them and with text (Runs) in "Consolas" font:
+Formatting options are most useful when inserting multiple elements that should have consistent styling. For example, the code  from __Example 11__ inserts multiple paragraphs with no spacing between them and with text (Runs) in "Consolas" font:
         
 
 #### __[C#] Example 11: Insert content with specified styles__
@@ -308,6 +308,6 @@ Formatting options are most useful when inserting multiple elements that should 
 
 ## See Also
 
- * [RadFlowDocumentEditor API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Editing_RadFlowDocumentEditor.htm)
- * [RadFlowDocument API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_RadFlowDocument.htm)
+ * [RadFlowDocumentEditor API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor.html)
+ * [RadFlowDocument API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.RadFlowDocument.html)
  * [Document model]({%slug radwordsprocessing-model%})

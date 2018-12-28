@@ -37,7 +37,7 @@ The [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-works
 
 ## Working With a Filtered Range
 
-This section describes how you can obtain only the cells that have particular property applied to them and ignore the others. Often, the property that we are interested in is the value of a cell. With the **GetUsedCellRange()** method of [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) you can pass an IEnumerable&lt;[IPropertyDefinition](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_PropertySystem_IPropertyDefinition_1.htm)&gt; object to get the used cell range, holding only the cells with specific property definitions. **Example 2** demonstrates how to get the used cell range of cells with value and iterate it to process each value.
+This section describes how you can obtain only the cells that have particular property applied to them and ignore the others. Often, the property that we are interested in is the value of a cell. With the **GetUsedCellRange()** method of [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) you can pass an IEnumerable&lt;[IPropertyDefinition](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.IPropertyDefinition-1.html)&gt; object to get the used cell range, holding only the cells with specific property definitions. **Example 2** demonstrates how to get the used cell range of cells with value and iterate it to process each value.
 
 #### __[C#] Example 2: Obtain and iterate a filtered UsedCellRange__
 
@@ -55,7 +55,7 @@ This section describes how you can obtain only the cells that have particular pr
 
 >tip For more information on working with the values of the cells, check the [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) topics.
 
-Following is a list of the property definitions defined by the [CellPropertyDefinitions class](https://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_PropertySystem_CellPropertyDefinitions.htm), which you can use to filter the used cell range:
+Following is a list of the property definitions defined by the [CellPropertyDefinitions class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.CellPropertyDefinitions.html), which you can use to filter the used cell range:
 
 * **AllPropertyDefinitions**: Gets all property definitions. It has the same behavior as the UsedCellRange property - no filtering is applied to the range.
 * **BottomBorderProperty**: Gets all cells that have defined a bottom border.

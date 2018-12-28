@@ -97,7 +97,7 @@ The __TableCell__ element exposes several properties that allow you to customize
 
 * __VerticalAlignment__: Specifies the vertical alignment of the cell's content. This property cannot be derived from a style.
 
-* __TextDirection__: Specifies the direction of the text in the cell. It could have one of the values of the [TextDirection enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_TextDirection.htm). This property cannot be derived from a style.
+* __TextDirection__: Specifies the direction of the text in the cell. It could have one of the values of the [TextDirection enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.TextDirection.html). This property cannot be derived from a style.
             
 
 * __GridColumnIndex__: Represents the column index of the cell in the table grid.
@@ -122,12 +122,12 @@ __Example 3__ demonstrates how to add a __Paragraph__ to a __TableCell__.
 
 
 
-Through the __BlockCollection__ property of the __TableCell__ element you can add a __Table__ or any other [BlockBase](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_BlockBase.htm) element.
+Through the __BlockCollection__ property of the __TableCell__ element you can add a __Table__ or any other [BlockBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.BlockBase.html) element.
             
 
 ## See Also
 
- * [TableCell API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_TableCell.htm)
+ * [TableCell API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.TableCell.html)
  * [Document model]({%slug radwordsprocessing-model%})
  * [Table]({%slug radwordsprocessing-model-table%})
  * [TableRow]({%slug radwordsprocessing-model-tablerow%})

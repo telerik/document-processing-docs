@@ -46,15 +46,15 @@ PdfStreamWriter exposes also an additional overload, which allows you to keep th
 
 The members of the class allow you to set several properties of the document page you are working with as well as write new content.
 
-* **Rotation**: A read-only property of type [Rotation](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Data_Rotation.htm). Keeps the information about the rotation of the currently generated page. 
+* **Rotation**: A read-only property of type [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html). Keeps the information about the rotation of the currently generated page. 
 
 * **Size**: A read-only property of type [Size](https://msdn.microsoft.com/en-us/library/system.windows.size(v=vs.110).aspx). Keeps the information about the size of the currently generated page. 
 
 * **WriteContent()**: This method enables you to write content to the currently written PDF page Stream. There are two overloads allowing to add content either from [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}) or [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
 
-* **ContentPosition**: A property of type [IPosition](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Data_IPosition.htm#!) allowing you to specify the position of the next page content written with WriteContent() method.
+* **ContentPosition**: A property of type [IPosition](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.IPosition.html) allowing you to specify the position of the next page content written with WriteContent() method.
 
-* **SaveContentPosition()**: With this method you can save current [IPosition](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Data_IPosition.htm#!) values. The method returns IDisposable object that restores the current position when disposed.
+* **SaveContentPosition()**: With this method you can save current [IPosition](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.IPosition.html) values. The method returns IDisposable object that restores the current position when disposed.
 
 
 

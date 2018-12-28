@@ -40,7 +40,7 @@ __Example 1__ shows how to use __PdfFormatProvider__ to export a Workbook to a f
 
 {{region cs-radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider_0}}
 
-    PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
+    Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider pdfFormatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
     using (Stream output = File.OpenWrite("Sample.pdf"))
     {
         Workbook workbook = CreateSampleWorkbook(); // The CreateSampleWorkbook() method generates a sample spreadsheet document. Use your Workbook object here.
@@ -56,7 +56,7 @@ The result from the export method is a document that can be opened in any applic
 {{region cs-radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
 	Workbook workbook = CreateSampleWorkbook();
 	
-	PdfFormatProvider provider = new PdfFormatProvider();
+	Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
 	RadFixedDocument fixedDocument = provider.ExportToFixedDocument(workbook);
 {{endregion}}
 

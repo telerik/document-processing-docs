@@ -42,7 +42,8 @@ CheckBoxField provides the following properties:
 	
 	TwoStatesButtonWidget widget = checkBoxField.Widgets.AddWidget();
 	widget.Rect = new Rect(100, 100, 20, 20);
-	
+	widget.RecalculateContent();
+
 	document.AcroForm.FormFields.Add(checkBoxField);
 	document.Pages[0].Annotations.Add(widget);
 {{endregion}}

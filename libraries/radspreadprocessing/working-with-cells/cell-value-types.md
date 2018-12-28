@@ -222,7 +222,7 @@ __Example 9__ sets the value of cell A1 to 6 October 1987 (in culture "en-US"). 
 Contained double value:   32056      
 Applied format:   m/d/yyyy
 
-If you later access the value of the cell applied in **Example 9**, you will get its double representation - 32056. To obtain the date that this value represents, you can use the **ConvertDoubleToDateTime()** of the [FormatHelper](https://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Formatting_FormatHelper.htm) class to convert the raw number to a date or the **GetValueAsString()** method, which will return the date as a string. Both approaches are demonstrated in **Example 10**.
+If you later access the value of the cell applied in **Example 9**, you will get its double representation - 32056. To obtain the date that this value represents, you can use the **ConvertDoubleToDateTime()** of the [FormatHelper](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Formatting.FormatHelper.html) class to convert the raw number to a date or the **GetValueAsString()** method, which will return the date as a string. Both approaches are demonstrated in **Example 10**.
         
 #### __[C#] Example 10: Get date value__
 

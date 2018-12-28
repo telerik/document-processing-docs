@@ -39,7 +39,8 @@ PushButtonField provides a single property called **Widgets**. It represents the
 	
 	widget.TextProperties.FontSize = 20;
 	widget.TextProperties.Fill = new RgbColor(0, 0, 0);
-	
+    widget.RecalculateContent();
+
 	document.AcroForm.FormFields.Add(pushButtonField);
 	document.Pages[0].Annotations.Add(widget);
 {{endregion}}

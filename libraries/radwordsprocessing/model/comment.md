@@ -76,7 +76,7 @@ The __Comment__ class exposes several properties which allow you to customize in
 
 ## Operating with a Comment
 
-Comment derives BlockContainerBase [BlockContainerBase](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_BlockContainerBase.htm), inheriting Blocks property of BlockCollection type. You can add [Paragraph]({%slug radwordsprocessing-model-paragraph%}) and [Table]({%slug radwordsprocessing-model-table%}) objects to that collection.
+Comment derives BlockContainerBase [BlockContainerBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.BlockContainerBase.html), inheriting Blocks property of BlockCollection type. You can add [Paragraph]({%slug radwordsprocessing-model-paragraph%}) and [Table]({%slug radwordsprocessing-model-table%}) objects to that collection.
         
 
 __Example 4__ shows how you can add a Table to a Comment.

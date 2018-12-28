@@ -115,7 +115,7 @@ __RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocum
 
 ## See Also
 
-* [RadFixedDocument API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_RadFixedDocument.htm)
+* [RadFixedDocument API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.RadFixedDocument.html)
 * [Model]({%slug radpdfprocessing-model-general-information%})
 * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
 * [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%})

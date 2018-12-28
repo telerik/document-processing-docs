@@ -87,6 +87,7 @@ In addition, to create a signature, which has a visual representation, you will 
     widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
     widget.Border = new AnnotationBorder(100, AnnotationBorderStyle.Solid, null);
     widget.Content.NormalContentSource = form.FormSource;
+    widget.RecalculateContent();
 
     // The Widget class inherits from Annotation. And, as any other annotation, must be added to the respective collection of the page.
 
@@ -95,7 +96,7 @@ In addition, to create a signature, which has a visual representation, you will 
     page.Annotations.Add(widget);
     document.AcroForm.FormFields.Add(signatureField);
 
-    using (Stream stream = File.OpenWrite("signed.pdf"))
+    using (Stream stream = File.Open("signed.pdf", FileMode.OpenOrCreate))
     {
         new PdfFormatProvider().Export(document, stream);
     }
@@ -124,10 +125,10 @@ The Signature class exposes two methods allowing you to validate a signature:
 	*  **Chain**: Gets or sets the chain used to validate the certificate that signed the digital signature. It is of type [X509Chain](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509chain(v=vs.110).aspx).
 	*  **ChainStatusFlags**: Gets or sets the chain status flags which describes the used signature certificate as invalid. It is of type [X509ChainStatusFlags](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509chainstatusflags(v=vs.110).aspx).
 	
-	Validate() returns object of type [SignatureValidationResult](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_DigitalSignatures_SignatureValidationResult.htm).
+	Validate() returns object of type [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html).
 
 
-* **TryValidate()**: This method returns a boolean value indicating whether the validation succeeded or not. There are two overloads of this method. The first one accepts an out parameter containing a [SignatureValidationResult](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_DigitalSignatures_SignatureValidationResult.htm) object and second one allows you to also pass **SignatureValidationProperties**.
+* **TryValidate()**: This method returns a boolean value indicating whether the validation succeeded or not. There are two overloads of this method. The first one accepts an out parameter containing a [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html) object and second one allows you to also pass **SignatureValidationProperties**.
 
 >important Note, that the validation requires that the stream, from which the document is imported, to be opened. The validation is performed for the current field, and against the state of the document in the moment of importing.
 
@@ -200,4 +201,4 @@ There are few limitations related to the usage of digital signature in RadPdfPro
 * [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})
 * [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
-* [Signature API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_DigitalSignatures_Signature.htm)
+* [Signature API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.Signature.html)

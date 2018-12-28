@@ -24,7 +24,7 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 
 * **targetDocument**: The **RadFlowDocument** instance for which the elements will be prepared for inserting.
 * **sourceDocument**: The **RadFlowDocument** from where the elements will be imported.
-* **conflictingStylesResolutionMode**: Represents the resolution mode, which will be used if a style conflict appears during the style repositories merging. Could be set to one of the values of the [ConflictingStylesResolutionMode enumeration]( http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_ConflictingStylesResolutionMode.htm).
+* **conflictingStylesResolutionMode**: Represents the resolution mode, which will be used if a style conflict appears during the style repositories merging. Could be set to one of the values of the [ConflictingStylesResolutionMode enumeration]( https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.ConflictingStylesResolutionMode.html).
 
 <a name="example1"><a/>
 #### __[C#] Example 1: Create DocumentElementImporter__
@@ -44,7 +44,7 @@ The **DocumentElementImporter** class exposes the Import&lt;T&gt;() method, whic
 
 {{region cs-radwordsprocessing-editing-import-document-element_1}}
 	            
-	Run run = targetDocument.EnumerateChildrenOfType<Run>().First();
+	Run run = sourceDocument.EnumerateChildrenOfType<Run>().First();
 	Run importedRun = importer.Import<Run>(run);
 {{endregion}}
 
@@ -72,12 +72,12 @@ In **Table 1** is described the behavior of the Import&lt;T&gt;() method of **Do
 	</tr>
 
 	<tr>
-		<td>Invoke Import() method with a paragraph, which contains unpaired annotation marker <i>(e.g. there is a Bookmark, which is spanned between two paragraphs, one of which is passed as a parameter)</i>.</td>
+		<td>Invoke Import() method with a paragraph, which contains unpaired annotation marker (e.g. there is a Bookmark, which is spanned between two paragraphs, one of which is passed as a parameter).</td>
 		<td>Returns the paragraph and all its inlines cloned. <b>The unpaired annotation marker is cleared.</b></td>
 	</tr>
 
 	<tr>
-		<td>Invoke Import() method with a section, which contains paragraphs which contain by their side unpaired annotations <i>(e.g. there is a Bookmark, which is spanned between two paragraphs and their parent section is passed as a parameter)</i>.</td>
+		<td>Invoke Import() method with a section, which contains paragraphs which contain by their side unpaired annotations (e.g. there is a Bookmark, which is spanned between two paragraphs and their parent section is passed as a parameter).</td>
 		<td>Returns the section and all its children cloned. The annotation markers are not cleared.</td>
 	</tr>
 

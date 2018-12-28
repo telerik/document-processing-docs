@@ -19,7 +19,7 @@ The __TabStop__ class is immutable, meaning you should set its properties when i
 
 * __Position__: The position of the tab stop. The value is in device independent pixels (1/96 inch).
 
-* __Type__: The type of the tab stop, defines the behavior of the tab stop. All possibilities are described with the [TabStopType enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_TabStopType.htm):
+* __Type__: The type of the tab stop, defines the behavior of the tab stop. All possibilities are described with the [TabStopType enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.TabStopType.html):
 
 	* __Left__: The text following the tab stop will be left aligned with respect to the tab stop position. This is the *default* value.
 	* __Center__: The text following the tab stop will be centered around the tab stop position. 
@@ -28,7 +28,7 @@ The __TabStop__ class is immutable, meaning you should set its properties when i
 	* __Bar__: A vertical bar is shown at the tab position.
 	* __Clear__: Clears an inherited tab stop.
 
-* __Leader__: Specifies the character which shall be used to fill the space in front of a tab. All possibilities are described with the [TabStopLeader enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_TabStopLeader.htm):
+* __Leader__: Specifies the character which shall be used to fill the space in front of a tab. All possibilities are described with the [TabStopLeader enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.TabStopLeader.html):
 
 	* __None__: The space before the tab will be left empty. This is the default value.
 	* __Dot__: The space before the tab will be filled with dots.
@@ -107,8 +107,6 @@ The code from __Example 4__ demonstrates how to create a tab stop.
 <a name="example4"><a/>
 #### __[C#] Example 4: Create a TabStop__
 
-{{region radwordsprocessing-concepts-tabstops_3}}
-	ТabStop tabStop = new TabStop(Unit.InchToDip(2), TabStopType.Center);
 {{region cs-radwordsprocessing-concepts-tabstops_3}}
 	TabStop tabStop = new TabStop(Unit.InchToDip(2), TabStopType.Center);
 {{endregion}}
@@ -120,7 +118,7 @@ __Example 5__ shows how to add the tab stop created in [Example 1](#example1) to
 #### __[C#] Example 5: Insert a TabStop__
 
 {{region cs-radwordsprocessing-concepts-tabstops_4}}
-	paragraph.TabStops = paragraph.TabStops.Remove(tabStop);
+	paragraph.TabStops = paragraph.TabStops.Insert(tabStop);
 {{endregion}}
 
 ### Remove a TabStop

@@ -26,7 +26,7 @@ __Style property__ is part of the style system, used to hold information about a
 
 ## Style Property Implementation Overview
 
-Style properties are exposed through [IStyleProperty<T> interface](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Core_IStyleProperty_1.htm), which contains the following properties and methods:
+Style properties are exposed through [IStyleProperty<T> interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStyleProperty-1.html), which contains the following properties and methods:
         
 
 * __LocalValue__: Used to get or set the local value. If it is not set, the value is __null__.
@@ -41,7 +41,7 @@ Style properties are exposed through [IStyleProperty<T> interface](http://docs.t
 * __ClearValue()__: Clears the local value.
             
 
-* __PropertyDefinition__: The [property definition](#style-property-definitions) is exposed through the [IStylePropertyDefinition interface]( http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Core_IStylePropertyDefinition.htm) and specifies some details for the style property as:
+* __PropertyDefinition__: The [property definition](#style-property-definitions) is exposed through the [IStylePropertyDefinition interface]( https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStylePropertyDefinition.html) and specifies some details for the style property as:
             
 
     * __PropertyName__: Returns the name of the style property.
@@ -60,7 +60,7 @@ Style property definition is represented by the __StylePropertyDefinition<T>__ c
 
 * __PropertyName__: Specifies the name of the style property.       
 * __DefaultValue__: Specifies the default value of the style property.           
-* __StylePropertyType__: Specifies the type of the style property as [StylePropertyType enumeration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Core_StylePropertyType.htm).
+* __StylePropertyType__: Specifies the type of the style property as [StylePropertyType enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.StylePropertyType.html).
 * __Validation__: Used to determine if a value is valid for the style property associated with this style property definition.
             
 
@@ -646,5 +646,5 @@ Following is a list of all available style properties and their default values:
 ## See Also
 
  * [Styles]({%slug radwordsprocessing-concepts-styles%})
- * [IStyleProperty<T> API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Core_IStyleProperty_1.htm)
- * [IStylePropertyDefinition API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Styles_Core_IStylePropertyDefinition.htm)
+ * [IStyleProperty<T> API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStyleProperty-1.html)
+ * [IStylePropertyDefinition API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStylePropertyDefinition.html)

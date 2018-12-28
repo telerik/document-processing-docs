@@ -33,7 +33,7 @@ __RadFixedPage__ exposes the following properties:
 * __Content__: The content elements collection.
 * __Annotations__: Collection that contains all [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%}) in the RadFixedPage.
 * __Size__: Property of type Size representing the size of the page.
-* __Rotation__: Property of type [Rotation](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Fixed_Model_Data_Rotation.htm) representing the page rotation.
+* __Rotation__: Property of type [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) representing the page rotation.
             
 
 __Example 1__ demonstrates how to create a new __RadFixedPage__ instance and add it to the __Pages__ collection of __RadFixedDocument__.

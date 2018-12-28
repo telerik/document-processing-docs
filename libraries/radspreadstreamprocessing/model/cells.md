@@ -25,7 +25,7 @@ A cell is the basic data unit in a worksheet. Cells are organized in rows and co
 
 ## ICellExporter Interface
 
-In **RadSpreadStreamProcessing**, a cell could be exported through the [**ICellExporter** interface](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_ICellExporter.htm). It defines several methods allowing you to set different values and formats to a cell.
+In **RadSpreadStreamProcessing**, a cell could be exported through the [**ICellExporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.ICellExporter.html). It defines several methods allowing you to set different values and formats to a cell.
 
 ## Using ICellExporter
 
@@ -122,7 +122,7 @@ In some cases you may need to skip several cells and start filling the data in t
 
 ### Set a Format
 
-Another method, exposed by **ICellExporter** - SetFormat() - enables you to change the appearance of a cell. The SetFomat() method accepts an argument of type [SpreadCellFormat](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadCellFormat.htm). The next list describes the properties exposed by SpreadCellFormat:
+Another method, exposed by **ICellExporter** - SetFormat() - enables you to change the appearance of a cell. The SetFomat() method accepts an argument of type [SpreadCellFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadCellFormat.html). The next list describes the properties exposed by SpreadCellFormat:
 
 
 - Number Format
@@ -131,9 +131,9 @@ Another method, exposed by **ICellExporter** - SetFormat() - enables you to chan
 
 - Alignment properties
 	
-	- **HorizontalAlignment**: Gets or sets the horizontal alignment. The property is of type [SpreadHorizontalAlignment](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadHorizontalAlignment.htm).
+	- **HorizontalAlignment**: Gets or sets the horizontal alignment. The property is of type [SpreadHorizontalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.html).
 	
-	- **VerticalAlignment**: Gets or sets the vertical alignment. The property is of type [SpreadVerticalAlignment](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadVerticalAlignment.htm).
+	- **VerticalAlignment**: Gets or sets the vertical alignment. The property is of type [SpreadVerticalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment.html).
 	
 	- **Indent**: Gets or sets the indent.
 	
@@ -141,9 +141,9 @@ Another method, exposed by **ICellExporter** - SetFormat() - enables you to chan
 
 - Font properties
 	
-	- **ForeColor**: Gets or sets the fore color. The property is of type [SpreadThemableColor](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadThemableColor.htm).
+	- **ForeColor**: Gets or sets the fore color. The property is of type [SpreadThemableColor](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.html).
 	
-	- **FontFamily**: Gets or sets the font family. The property is of type [SpreadThemableFontFamily](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadThemableFontFamily.htm).
+	- **FontFamily**: Gets or sets the font family. The property is of type [SpreadThemableFontFamily](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.html).
 	
 	- **FontSize**: Gets or sets the size of the font.
 	
@@ -151,21 +151,21 @@ Another method, exposed by **ICellExporter** - SetFormat() - enables you to chan
 	
 	- **IsItalic**: Gets or sets a value indicating whether the text is italic.
 	
-	- **Underline**: Gets or sets the underline type. The property is of type [SpreadUnderlineType](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadUnderlineType.htm).
+	- **Underline**: Gets or sets the underline type. The property is of type [SpreadUnderlineType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadUnderlineType.html).
 
 - Border properties
 	
-	- **LeftBorder**: Gets or sets the left border. The property is of type [SpreadBorder](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
+	- **LeftBorder**: Gets or sets the left border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 	
-	- **RightBorder**: Gets or sets the right border. The property is of type [SpreadBorder](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
+	- **RightBorder**: Gets or sets the right border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 	
-	- **TopBorder**: Gets or sets the top border. The property is of type [SpreadBorder](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
+	- **TopBorder**: Gets or sets the top border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 	
-	- **BottomBorder**: Gets or sets the bottom border. The property is of type [SpreadBorder](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
+	- **BottomBorder**: Gets or sets the bottom border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 	
-	- **DiagonalUpBorder**: Gets or sets the diagonal up border. The property is of type [SpreadBorder](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
+	- **DiagonalUpBorder**: Gets or sets the diagonal up border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 		
-	- **DiagonalDownBorder**: Gets or sets the diagonal down border. The property is of type [SpreadBorder](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_SpreadBorder.htm).
+	- **DiagonalDownBorder**: Gets or sets the diagonal down border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 
 - Fill properties
 	

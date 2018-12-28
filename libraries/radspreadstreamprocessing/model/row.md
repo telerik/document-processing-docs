@@ -25,7 +25,7 @@ Rows in the terms of a spreadsheet document are groups of cells that are on the 
 
 ## IRowExporter Interface
 
-In **RadSpreadStreamProcessing**, a row could be exported through the [**IRowExporter** interface](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Documents_SpreadsheetStreaming_IRowExporter.htm). It defines several methods allowing you to add cells to a row or change its appearance.
+In **RadSpreadStreamProcessing**, a row could be exported through the [**IRowExporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.IRowExporter.html). It defines several methods allowing you to add cells to a row or change its appearance.
 
 ### Using IRowExporter
 

@@ -55,7 +55,7 @@ The __AutoFilter__ class exposes the following public members:
 * __FilterRange__: Property of type __CellRange__. Represents the range to which a filter is currently applied. The worksheet can have only one range filtered at a time. If filtering is not applied, the filtered range is __null__.
             
 
-* __void SetFilters(IEnumerable<IFilter> filters)__: Sets multiple filters on the filtered range and applies them.
+* __void SetFilters(IEnumerable&lt;IFilter&gt; filters)__: Sets multiple filters on the filtered range and applies them.
             
 
 * __void SetFilter(IFilter filter)__: Sets a single filter on the filtered range and applies it.
@@ -251,7 +251,7 @@ The dynamic filter is a filter which shows or hides the rows in the column it fi
 Other than the members of the __IFilter__ interface, the __DynamicFilter__ class exposes only one property specific to it:
         
 
-* __DynamicFilterType__: The type of the dynamic filter, which determines what condition the filter should use to filter the column it is assigned to. The dynamic filter type can be used from the values of the [DynamicFilterType enumaration](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Spreadsheet_Model_Filtering_DynamicFilterType.htm).
+* __DynamicFilterType__: The type of the dynamic filter, which determines what condition the filter should use to filter the column it is assigned to. The dynamic filter type can be used from the values of the [DynamicFilterType enumaration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Filtering.DynamicFilterType.html).
             
 
 __Example 4__ demonstrates how to create a dynamic filter.

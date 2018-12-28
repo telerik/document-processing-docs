@@ -12,7 +12,7 @@ position: 9
 
 
 
-__FloatingImage__ is an inline-level anchor flow document element linked with a floating image object.
+__FloatingImage__ is an inline-level anchor flow document element linked with a floating image object. The supported image extensions are JPG, JPEG, PNG, BMP, TIFF, TIF, GIF, ICON, WMF and EMF.
       
 
 * [Inserting a FloatingImage](#inserting-a-floatingimage)
@@ -150,7 +150,7 @@ This section explains the behavior of the  __Size__ property of The __Image__ ob
 
 ## See Also
 
- * [FloatingImage API Reference](http://docs.telerik.com/devtools/document-processing/api/html/T_Telerik_Windows_Documents_Flow_Model_Shapes_FloatingImage.htm)
+ * [FloatingImage API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Shapes.FloatingImage.html)
  * [Document model]({%slug radwordsprocessing-model%})
  * [ImageInline]({%slug radwordsprocessing-model-imageinline%})
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

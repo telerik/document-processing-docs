@@ -241,7 +241,7 @@ For more detailed information on tables, check the [Table]({%slug radpdfprocessi
         
 ## Block Elements
 
-The [IBlockElement](http://docs.telerik.com/devtools/document-processing/api/html/t_telerik_windows_documents_fixed_model_editing_flow_iblockelement.htm) interface allows you to easily draw and split some block content onto pages. The interface is implemented by [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table%}) classes. You can easily add some block element instance with RadFixedDocumentEditor using the InsertBlock() method like illustrated in __Example 9__.
+The [IBlockElement](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.IBlockElement.html) interface allows you to easily draw and split some block content onto pages. The interface is implemented by [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table%}) classes. You can easily add some block element instance with RadFixedDocumentEditor using the InsertBlock() method like illustrated in __Example 9__.
 
 #### __[C#] Example 9: Insert Block element__
 
