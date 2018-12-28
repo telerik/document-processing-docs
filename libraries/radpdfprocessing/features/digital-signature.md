@@ -87,7 +87,7 @@ In addition, to create a signature, which has a visual representation, you will 
     widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
     widget.Border = new AnnotationBorder(100, AnnotationBorderStyle.Solid, null);
     widget.Content.NormalContentSource = form.FormSource;
-	widget.RecalculateContent();
+    widget.RecalculateContent();
 
     // The Widget class inherits from Annotation. And, as any other annotation, must be added to the respective collection of the page.
 
@@ -96,7 +96,7 @@ In addition, to create a signature, which has a visual representation, you will 
     page.Annotations.Add(widget);
     document.AcroForm.FormFields.Add(signatureField);
 
-    using (Stream stream = File.OpenWrite("signed.pdf"))
+    using (Stream stream = File.Open("signed.pdf", FileMode.OpenOrCreate))
     {
         new PdfFormatProvider().Export(document, stream);
     }
