@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-charts-using-charts
 tags: chart, insert, remove
 published: True
 position: 2
+platforms: ajax, mvc, wpf, winforms
 ---
 
 # Using Charts

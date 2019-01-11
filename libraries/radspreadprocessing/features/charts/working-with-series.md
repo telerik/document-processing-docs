@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-charts-working-with-series
 tags: series, insert, remove
 published: True
 position: 3
+platforms: ajax, mvc, wpf, winforms
 ---
 
 # Working with Series

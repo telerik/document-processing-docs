@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-charts
 tags: chart
 published: True
 position: 1
+platforms: ajax, mvc, wpf, winforms
 ---
 
 # Charts

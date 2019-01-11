@@ -81,7 +81,7 @@ navigation:
     libraries/radwordsprocessing/concepts/fields:
         title: Fields
         position: 0		
-## RadSpreadStreamProcessing Start
+## RadSpreadStreamProcessing Start 
     "*radspreadstreamprocessing":
         title: RadSpreadStreamProcessing
     libraries/radspreadstreamprocessing/model:
@@ -126,18 +126,22 @@ navigation:
     libraries/radspreadprocessing/formats-and-conversion/txt:
         title: Txt
         position: 5
+        
+    libraries/radspreadprocessing/features/charts:
+        title: Charts
+        position: 0
     libraries/radspreadprocessing/features/fill-data-automatically:
         title: Fill Data Automatically
-        position: 0
+        position: 1
     libraries/radspreadprocessing/features/formulas:
         title: Formulas
-        position: 1
+        position: 2
     libraries/radspreadprocessing/features/protection:
         title: Protection
-        position: 2
+        position: 3
     libraries/radspreadprocessing/features/styling:
         title: Styling
-        position: 3
+        position: 4
 ## RadPdfProcessing Start
     "*radpdfprocessing":
         title: RadPdfProcessing   
