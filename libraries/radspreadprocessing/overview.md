@@ -18,6 +18,8 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}): API for insertion, positioning and deletion of images in worksheets.		
 
+* [**Charts**]({%slug radspreadprocessing-features-charts%})
+
 * [**Hyperlinks**]({%slug radspreadprocessing-features-hyperlink%}): The API enables you to add, remove, edit and search for hyperlinks in the worksheets of the document.
 
 * [**Workbook Protection**]({%slug radspreadprocessing-features-protection-workbook%}): Prevents the users from modifying the workbook by adding, removing, renaming or reordering sheets.	

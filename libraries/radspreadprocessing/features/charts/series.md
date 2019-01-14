@@ -1,11 +1,11 @@
 ---
-title: Working with Series
-page_title: Working with Series
+title: Series
+page_title: Series
 description: Working with Series
-slug: radspreadprocessing-features-charts-working-with-series
+slug: radspreadprocessing-features-charts-series
 tags: series, insert, remove
 published: True
-position: 3
+position: 4
 platforms: ajax, mvc, wpf, winforms
 ---
 
@@ -48,7 +48,7 @@ To better illustrate how you can change the series of a chart, let's take the sa
 
 #### [C#] Example 1: Add and remove series from a chart
 
-{{region}}
+{{region radspreadprocessing-features-charts-working-with-series_0}}
 	
 	// The worksheet contains a chart of type bar.
 	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
@@ -75,7 +75,7 @@ The same methods for adding and removing series can be accessed through the conc
 
 #### [C#] Example 2: Add series to a chart using concrete SeriesGroup object
 
-{{region}}
+{{region radspreadprocessing-features-charts-working-with-series_1}}
 	
 	BarSeriesGroup chartComponent = chart.SeriesGroups.First() as BarSeriesGroup; BarSeries newSeries = chartComponent.Series.Add(categoriesData, valuesData, chartTitle);
 {{endregion}}
@@ -87,7 +87,7 @@ You can access the **Series** property of the **SeriesGroup** object contained i
 
 #### [C#] Example 3: Iterate series
 
-{{region}}
+{{region radspreadprocessing-features-charts-working-with-series_2}}
 	
 	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
 	SeriesGroup seriesGroup = chart.SeriesGroups.First();
@@ -114,7 +114,7 @@ You can modify the properties of the base class for all series - SeriesBase.
 
 #### [C#] Example 4: Change series
 
-{{region}}
+{{region radspreadprocessing-features-charts-working-with-series_3}}
 	
 	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
 	SeriesGroup seriesGroup = chart.SeriesGroups.First();
