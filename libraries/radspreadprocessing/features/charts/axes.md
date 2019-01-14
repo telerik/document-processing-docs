@@ -24,7 +24,7 @@ Refer to the scenario from **Figure 1**. The chart shown there has two axes: a d
 ![](images/SpreadProcessing-Features-Charts-Axes_1.png)
 
 #### [C#] Example 1: Axes properties
-{{region}}
+{{region radspreadprocessing-features-charts-axes_0}}
 
 	DocumentChart chart = new FloatingChartShape(worksheet, new CellIndex(0,0), new CellRange(1, 1, 5, 2), ChartType.Column).Chart;
 	
@@ -50,23 +50,9 @@ Refer to the scenario from **Figure 1**. The chart shown there has two axes: a d
 RadSpreadProcessing allows you to replace the axis of a chart with a new object. This is achieved through the **PrimaryAxes** and **SecondaryAxes** properties of **DocumentChart**.
 
 #### [C#] Example 2: Replace axis 
-{{region}}
+{{region radspreadprocessing-features-charts-axes_1}}
 	
 	DocumentChart chart = new FloatingChartShape(worksheet, new CellIndex(0, 0), new CellRange(1, 1, 5, 2), ChartType.Column).Chart;
 	chart.PrimaryAxes.CategoryAxis = new DateAxis();
 {{endregion}}
 
-
-If you would like to move the vertical axis, for example, from the left to the right side of the chart, you would have to edit its **Crosses** property as shown in **Example 3**.
-
-#### [C#] Example 2: Move axis 
-{{region}}
-	
-	DocumentChart chart = new FloatingChartShape(worksheet, new CellIndex(0, 0), new CellRange(1, 1, 5, 2), ChartType.Column).Chart;
-	Axis valAxis = chart.PrimaryAxes.ValueAxis;
-	
-	valAxis.Crosses = AxisCrossType.Max;
-{{endregion}}
-
-#### Figure 2: Chart after moving its axis from the left to the right side
-![](images/SpreadProcessing-Features-Charts-Axes_2.png)

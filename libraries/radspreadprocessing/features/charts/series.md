@@ -115,12 +115,63 @@ You can modify the properties of the base class for all series - SeriesBase.
 #### [C#] Example 4: Change series
 
 {{region radspreadprocessing-features-charts-working-with-series_3}}
-	
+		
 	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
 	SeriesGroup seriesGroup = chart.SeriesGroups.First();
 	SeriesBase firstSeries = seriesGroup.Series.First();
-	
-	firstSeries.Title = new TextTitle("New title");
-	firstSeries.Values = new WorksheetFormulaChartData(worksheet, new CellRange(2, 3, 5, 3));
 
+	firstSeries.Title = new TextTitle("New title");
+	firstSeries.Values = new WorkbookFormulaChartData(worksheet, new CellRange(2, 3, 5, 3));
 {{endregion}}
+
+
+## SeriesGroup Class and Properties Related to Specific Series Types
+
+There are properties defined on SeriesGroup level. The SeriesGroup base class represents a group of series and is inherited by the classes holding specific types of series. In addition to the SeriesType and Series properties, which give you access to the type of the series and the series collection respectively, there are properties implemented in the inheritors. The additional properties are specific for a type of series and give you control over the appearance of the series in the group.
+
+* The **BarSeriesGroup** object contains the **BarDirection** property specific to it. The **BarDirection** property is of Type **BarDirection** and its possible values are **BarDirection.Bar** and **BarDirection.Column**. Setting the BarDirection to **Bar** results in a **bar chart (horizontal)** and setting it to **Column** results in a **column chart (vertical)**;
+
+* **DoughnutSeriesGroup** defines the **HoleSizePercent** property. This property enables you to get or set the size of the hole of the doughnut relative to the size of the doughnut. *The value of the property is limited to values between 0 and 90*.
+
+
+## Series Grouping
+
+Some series groups (Bar, Line and Area) implement the **ISupportGrouping** interface. It defines the **Grouping** property which is of type **SeriesGrouping** enum. The enum contains the following members: **SeriesGrouping.Standard**, **SeriesGrouping.Stacked** and **SeriesGrouping.PercentStacked**. For the Bar chart, the Standard grouping results in a clustered chart. See the following examples for what the results of different grouping looks like.
+
+#### Figure 3: Sample data
+![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_3.png)
+
+#### Example 5: Creating standard/clustered bar chart with vertical orientation
+
+{{region radspreadprocessing-features-charts-working-with-series_4}}
+	
+	FloatingChartShape chartShape = worksheet.Shapes.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
+	(chartShape.Chart.SeriesGroups.First() as ISupportGrouping).Grouping = SeriesGrouping.Standard;
+{{endregion}}
+
+#### Figure 4: Standard/clustered bar chart with vertical orientation
+![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_4.png)
+
+#### Example 6: Creating stacked bar chart with vertical orientation
+
+{{region radspreadprocessing-features-charts-working-with-series_5}}
+	
+	FloatingChartShape chartShape = worksheet.Shapes.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
+	(chartShape.Chart.SeriesGroups.First() as ISupportGrouping).Grouping = SeriesGrouping.Stacked;
+{{endregion}}
+
+#### Figure 5: Stacked bar chart with vertical orientation
+![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_5.png)
+
+
+#### Example 7: Creating percent-stacked bar chart with vertical orientation
+
+{{region radspreadprocessing-features-charts-working-with-series_6}}
+	
+	FloatingChartShape chartShape = worksheet.Shapes.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
+	(chartShape.Chart.SeriesGroups.First() as ISupportGrouping).Grouping = SeriesGrouping.PercentStacked;
+{{endregion}}
+
+#### Figure 6: Percent-stacked bar chart with vertical orientation
+![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_6.png)
+

@@ -77,7 +77,7 @@ This is the object representing the chart itself and contains the following prop
 
 * **Legend**: Represents the legend of the chart.
 
-Has a Clone() method.
+Also, a **Clone()** method is exposed, which creates a deep copy of the object.
 
 You can create a simple DocumentChart object, which is empty and then set the desired values manually.
 
@@ -112,7 +112,7 @@ The chart can then be used to replace the chart in an existing **FloatingChartSh
 	worksheet.Shapes.Add(chartShape);
 {{endregion}}
 
-#For more on Series, see 5.1.2. Refer to 5.1.4 for description of the axes objects of the chart.
+>noteFor more on Series, the [Series]({%slug radspreadprocessing-features-charts-series%}) help topic. Refer to [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}) for description of the axes objects of the chart.
 
 The initial data and the resulting chart are shown in **Figure 1**.
 

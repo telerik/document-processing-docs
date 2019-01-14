@@ -28,7 +28,7 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 - Workbook **Workbook**: Gets the workbook that the formula refers to get the chart data.
 
 #### [C#] Example 1: Using IChartData
-{{region}}
+{{region radspreadprocessing-features-charts-chart-data_0}}
 
 	DocumentChart chart = new DocumentChart();
 	
@@ -36,7 +36,7 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 	
 	StringChartData barCategoryData = new StringChartData(new List<string> { "category 1", "category 2", "category 3" });
 	NumericChartData barValueData = new NumericChartData(new List<double> { 1, 2, 3 });
-	FormulaChartData barSeriesTitle = new WorksheetFormulaChartData(worksheet, "Sheet1!A1");
+	FormulaChartData barSeriesTitle = new WorkbookFormulaChartData(workbook, "Sheet1!A1");
 	
 	barSeriesGroup.Series.Add(barCategoryData, barValueData, new FormulaTitle(barSeriesTitle));
 

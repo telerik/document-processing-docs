@@ -19,24 +19,27 @@ You can access and set the **Title** property of the **DocumentChart** object, w
 
 #### [C#] Example 1: Setting the title of a chart to a string
 
-{{region}}
+{{region radspreadprocessing-features-charts-title-and-legend_0}}
 	
-	DocumentChart chart = new FloatingChartShape(worksheet, new CellIndex(0, 0), new CellRange(1, 1, 5, 2), ChartType.Column, ChartType.Pie).Chart;
-	
-	chart.Title = new TextTitle("Text title");
+	FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(0, 4), new CellRange(1, 1, 5, 2), ChartType.Pie)
+	{
+		Width = 460,
+		Height = 250
+	};
+	DocumentChart chart = chartShape.Chart;
 
+	chart.Title = new TextTitle("Text title");
 {{endregion}}
 
 
 #### [C#] Example 1: Setting the title of a series to a CellRange
 
-{{region}}
+{{region radspreadprocessing-features-charts-title-and-legend_1}}
 	
 	BarSeriesGroup columnGroup = chart.SeriesGroups.First() as BarSeriesGroup;
 	SeriesBase firstSeries = columnGroup.Series.First();
-	
-	firstSeries.Title = new FormulaTitle(new WorksheetFormulaChartData(worksheet, new CellRange(0, 0, 0, 1)));
 
+	firstSeries.Title = new FormulaTitle(new WorkbookFormulaChartData(worksheet, new CellRange(0, 0, 0, 1)));
 {{endregion}}
 
 #### Figure 1: Chart title
@@ -50,7 +53,7 @@ The charts use a legend to help users to understand the data plotted on the char
 The legend of the chart can be added or edited through the **Legend** property of the **DocumentChart** object. The property is of type **Legend**. The **Legend** type contains one property: **LegendPosition** of type **LegendPosition**, which is an enumeration with four members: **Top**, **Bottom**, **Left** and **Right**. The actual entries of the legend are constructed by the titles of the series.
 
 #### [C#] Example 3: Adding a chart legend
-{{region}}
+{{region radspreadprocessing-features-charts-title-and-legend_2}}
 
 	chart.Legend = new Legend();
 	chart.Legend.Position = LegendPosition.Left;

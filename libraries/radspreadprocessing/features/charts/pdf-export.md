@@ -29,7 +29,7 @@ The [**PdfFormatProvider**]({%slug radspreadprocessing-formats-and-conversion-pd
 
 #### [C#] Example 1: Implementing a renderer
 
-{{region}}
+{{region radspreadprocessing-features-charts-pdf-export_0}}
 	
 	public class WpfPdfChartImageRenderer : IPdfChartRenderer
 	{
@@ -68,7 +68,7 @@ When you have the renderer implemented, you will need to assign it to the PdfFor
 
 #### [C#] Example 2: Registering the renderer
 
-{{region}}
+{{region radspreadprocessing-features-charts-pdf-export_1}}
 	
 	PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
 	pdfFormatProvider.ExportSettings.ChartRenderer = new WpfPdfChartImageRenderer();
