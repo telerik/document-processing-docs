@@ -27,6 +27,7 @@ You can access and set the **Title** property of the **DocumentChart** object, w
 
 {{endregion}}
 
+
 #### [C#] Example 1: Setting the title of a series to a CellRange
 
 {{region}}
@@ -38,6 +39,10 @@ You can access and set the **Title** property of the **DocumentChart** object, w
 
 {{endregion}}
 
+#### Figure 1: Chart title
+![](images/SpreadProcessing-Features-ChartTitle_1.png)
+
+
 ## Legend
 
 The charts use a legend to help users to understand the data plotted on the chart. 
@@ -48,5 +53,8 @@ The legend of the chart can be added or edited through the **Legend** property o
 {{region}}
 
 	chart.Legend = new Legend();
-	chart.Legend.LegendPosition = LegendPosition.Left;
+	chart.Legend.Position = LegendPosition.Left;
 {{endregion}}
+
+#### Figure 2: Chart legend
+![](images/SpreadProcessing-Features-ChartLegend_1.png)

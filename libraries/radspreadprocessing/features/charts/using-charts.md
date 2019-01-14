@@ -35,6 +35,8 @@ The FloatingChartShape class exposes the following constructors, which parse the
 
 Once you have created a FloatingChartShape, you can insert it in the document through the Add() method of worksheet's Shapes property.
 
+>Make sure that you have set the size of the FloatingChartShape object. Otherwise, it will be inserted in the worksheet with zero size and will be invisible.
+
 #### [C#] Example 1: Create a chart through FloatingChartShape and add it to a worksheet
 
 {{region}}
