@@ -13,14 +13,6 @@ position: 7
 
 
 __TableCell__ element is a __BlockContainer__ element and defines a cell of content within a [Table]({%slug radwordsprocessing-model-table%}). It contains __Block__ elements such as [Paragraph]({%slug radwordsprocessing-model-paragraph%}) and [Table]({%slug radwordsprocessing-model-table%}).
-      
-
-* [Inserting a TableCell](#inserting-a-tablecell)
-
-* [Modifying a TableCell](#modifying-a-tablecell)
-
-* [Operating with a TableCell](#operating-with-a-tablecell)
-
 
 ## Inserting a TableCell
 
