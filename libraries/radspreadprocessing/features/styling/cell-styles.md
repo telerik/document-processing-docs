@@ -18,14 +18,6 @@ A cell style is a predefined set of formatting options, such as cell borders, fo
 >You can create cell styles that depend on the current document theme. Such styles are updated automatically when you change the selected document theme. You can read more about document themes and dependent cell styles in the [Document Themes]({%slug radspreadprocessing-features-styling-document-themes%}) article.
         
 
-* [Cell Style Properties](#cell-style-properties)
-
-* [Create Cell Style](#create-cell-style)
-
-* [Modify Cell Style](#modify-cell-style)
-
-* [Remove Cell Style](#remove-cell-style)
-
 ## Cell Style Properties
 
 A cell style is represented by the __CellStyle__ class. The properties of the class can be categorized into five groups: number, alignment, font, border and fill. Following are all properties distributed in their corresponding groups:
@@ -173,13 +165,34 @@ __Example 3__ obtains the *Bad* style from the styles collection of a workbook a
 	style.EndUpdate();
 {{endregion}}
 
+## Copy Existing Cell Style
 
+The API enables you to copy the properties of an existing style so you can modify it according to your preferences while keeping the original style untouched.
+
+#### __[C#] Example 4: Copy an existing style and modify its properties__
+
+{{region cs-radspreadprocessing-features-styling-cell-styles_4}}
+
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add();
+
+	CellStyle originalStyle = workbook.Styles["Good"];
+
+	CellStyle customStyle = workbook.Styles.Add("My good style", CellStyleCategory.Custom);
+
+	customStyle.BeginUpdate();
+	
+	customStyle.CopyPropertiesFrom(originalStyle);
+	customStyle.Fill = new PatternFill(PatternType.Solid, Colors.LightSkyBlue, Colors.Transparent);
+	
+	customStyle.EndUpdate();
+{{endregion}}
 
 ## Remove Cell Style
 
 You can also remove a style from the __Styles__ collection. It is as easy as removing an object from a list, you simply invoke the __Remove()__ method, which returns a Boolean value. If such style exist in the collection, the method will return *true*.
         
-#### __[C#] Example 4: Remove a style__
+#### __[C#] Example 5: Remove a style__
 
 {{region cs-radspreadprocessing-features-styling-cell-styles_3}}
 	Workbook workbook = new Workbook();
