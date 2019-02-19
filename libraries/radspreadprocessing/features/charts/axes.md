@@ -56,3 +56,25 @@ RadSpreadProcessing allows you to replace the axis of a chart with a new object.
 	chart.PrimaryAxes.CategoryAxis = new DateAxis();
 {{endregion}}
 
+
+## Changing the Appearance of the Axes
+
+You can customize the way the axes in the chart look like. The API of SpreadProcessing enables you to change the fill and width of the outline of an axis and its major gridlines.
+
+#### [C#] Example 3: Customize the major gridlines and outline of an axis
+{{region radspreadprocessing-features-charts-axes_2}}
+
+    FloatingChartShape chartShape = new FloatingChartShape(workbook.ActiveWorksheet, new CellIndex(2, 7), new CellRange(0, 0, 4, 3), ChartType.Column)
+    {
+        Width = 480,
+        Height = 288,
+    };
+    chartShape.Chart.PrimaryAxes.ValueAxis.Outline.Fill = new SolidFill(new ThemableColor(Colors.LightBlue));
+    chartShape.Chart.PrimaryAxes.ValueAxis.Outline.Width = 5;
+
+    chartShape.Chart.PrimaryAxes.ValueAxis.MajorGridlines.Outline.Fill = new SolidFill(new ThemableColor(Colors.LightGray));
+    chartShape.Chart.PrimaryAxes.ValueAxis.MajorGridlines.Outline.Width = 2;
+{{endregion}}
+
+#### Figure 2: Custom appearance
+![](images/SpreadProcessing-Features-Charts-Axes_3.png)

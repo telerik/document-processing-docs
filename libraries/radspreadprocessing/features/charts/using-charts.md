@@ -61,7 +61,30 @@ The result of executing the code in **Example 1** would look like in **Figure 1*
 #### Figure 1: 
 ![](images/SpreadProcessing-Features-UsingCharts_1.png)
 
-The Chart property of FloatingChartShape holds an object of type DocumentChart.
+The Chart property of FloatingChartShape holds an object of type [DocumentChart](#documentchart).
+
+### Changing the Appearance of FloatingChartShape
+
+The FloatingChartShape class exposes properties allowing you to customize how the shape looks like. You can control the outline of the shape as well as its fill.
+
+#### [C#] Example 2: Customize the fill and outline of FloatingChartShape
+{{region}}
+
+    FloatingChartShape chartShape = new FloatingChartShape(workbook.ActiveWorksheet, new CellIndex(2, 7), new CellRange(0, 0, 4, 3), ChartType.Column)
+    {
+        Width = 480,
+        Height = 288,
+    };
+
+    chartShape.Outline.Fill = new SolidFill(new ThemableColor(Colors.SlateGray));
+    chartShape.Outline.Width = 5;
+    chartShape.Fill = new SolidFill(new ThemableColor(Colors.Cornsilk));
+{{endregion}}
+
+The result of executing the code in **Example 2** over a cell range containing sample data would look like in **Figure 2**.
+
+#### Figure 2: 
+![](images/SpreadProcessing-Features-UsingCharts_2.png)
 
 ## DocumentChart 
 
@@ -81,7 +104,7 @@ Also, a **Clone()** method is exposed, which creates a deep copy of the object.
 
 You can create a simple DocumentChart object, which is empty and then set the desired values manually.
 
-#### [C#] Example 2: Creating an empty chart and setting its values manually
+#### [C#] Example 3: Creating an empty chart and setting its values manually
 
 {{region}}
 
@@ -103,7 +126,7 @@ You can create a simple DocumentChart object, which is empty and then set the de
 
 The chart can then be used to replace the chart in an existing **FloatingChartShape**.
 
-#### [C#] Example 3: Add the DocumentChart to a worksheet
+#### [C#] Example 4: Add the DocumentChart to a worksheet
 
 {{region}}
 
@@ -127,7 +150,7 @@ The ShapeCollection (Shapes property of Worksheet) exposes two overloads which c
 
 You can access the Charts collection of the Shape collection of the Worksheet instance and enumerate the Charts.
 
-#### [C#] Example 4: Iterate all the charts in a worksheet
+#### [C#] Example 5: Iterate all the charts in a worksheet
 
 {{region}}
 
