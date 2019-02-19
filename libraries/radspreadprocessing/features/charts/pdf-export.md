@@ -21,7 +21,7 @@ The IPdfChartRenderer interface defines members for classes which will be used b
 
 ## ChartModelToImageConverter Class
 
-The **ChartModelToImageConverter** object is readily available in the **Telerik.Windows.Controls.Spreadsheet** assembly and uses internally the [**RadChartView**](https://docs.telerik.com/devtools/wpf/controls/radchartview/overview) control to visualize the chart and create an image. This class exposes the **GetBitmapSourceFromChartModel()** method which converts a chart object to an image and can be used to draw the image in the PDF document.
+The **ChartModelToImageConverter** object is readily available in the **Telerik.Windows.Controls.Spreadsheet** assembly and uses internally the [**RadChartView**](https://docs.telerik.com/devtools/wpf/controls/radchartview/overview) control to visualize the chart and create an image. This class exposes the **GetBitmapSourceFromFloatingChartShape()** method which converts a chart shape object to an image and can be used to draw the image in the PDF document.
 
 ## Implementing Export to PDF in Your Application
 
@@ -31,37 +31,37 @@ The [**PdfFormatProvider**]({%slug radspreadprocessing-formats-and-conversion-pd
 
 {{region radspreadprocessing-features-charts-pdf-export_0}}
 	
-	public class WpfPdfChartImageRenderer : IPdfChartRenderer
-	{
-	    private readonly ChartModelToImageConverter chartToImageConverter;
-	
-	    public WpfPdfChartImageRenderer()
-	    {
-	        this.chartToImageConverter = new ChartModelToImageConverter();
-	    }
-	
-	    // This is the method which will be called when the internal logic of the PdfFormatProvider reaches a chart which has to be rendered.
-	    public void RenderChart(FixedContentEditor editor, DocumentChart chart, DocumentTheme theme, Size chartSize)
-	    {
-	        // The ChartModelToImageConverter object is readily available in the Telerik.Windows.Controls.Spreadsheet assembly and
-	        // uses internally the RadChartView control to visualize the chart and create an image.
-	        BitmapSource source = this.chartToImageConverter.GetBitmapSourceFromChartModel(chart, theme, chartSize);
-	
-	        // The editor draws the image in the PDF.
-	        editor.DrawImage(this.StreamFromBitmapSource(source));
-	    }
-	
-	    public Stream StreamFromBitmapSource(BitmapSource writeBmp)
-	    {
-	        Stream bmp = new MemoryStream();
-	
-	        BitmapEncoder enc = new BmpBitmapEncoder();
-	        enc.Frames.Add(BitmapFrame.Create(writeBmp));
-	        enc.Save(bmp);
-	
-	        return bmp;
-	    }
-	}
+ 	public class WpfPdfChartImageRenderer : IPdfChartRenderer
+    {
+        private readonly ChartModelToImageConverter chartToImageConverter;
+
+        public WpfPdfChartImageRenderer()
+        {
+            this.chartToImageConverter = new ChartModelToImageConverter();
+        }
+
+        // This is the method which will be called when the internal logic of the PdfFormatProvider reaches a chart which has to be rendered.
+        public void RenderChart(FixedContentEditor editor, FloatingChartShape chartShape)
+        {
+            // The ChartModelToImageConverter object is readily available in the Telerik.Windows.Controls.Spreadsheet assembly and
+            // uses internally the RadChartView control to visualize the chart and create an image.
+            BitmapSource source = this.chartToImageConverter.GetBitmapSourceFromFloatingChartShape(chartShape);
+
+            // The editor draws the image in the PDF.
+            editor.DrawImage(this.StreamFromBitmapSource(source));
+        }
+
+        public Stream StreamFromBitmapSource(BitmapSource writeBmp)
+        {
+            Stream bmp = new MemoryStream();
+
+            BitmapEncoder enc = new BmpBitmapEncoder();
+            enc.Frames.Add(BitmapFrame.Create(writeBmp));
+            enc.Save(bmp);
+
+            return bmp;
+        }
+    }
 {{endregion}}
 
 When you have the renderer implemented, you will need to assign it to the PdfFormatProvider instance through the **ChartRenderer** property of its [ExportSettings]({%slug radspreadprocessing-format-and-conversion-pdf-settings%}). 

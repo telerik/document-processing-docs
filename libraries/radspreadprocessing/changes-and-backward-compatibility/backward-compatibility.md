@@ -14,6 +14,19 @@ position: 1
 
 This article will list the breaking changes and how they can be fixed when upgrading from a specific version of the controls to the next one.
 
+## What's Different in 2019 R1 SP1
+
+### Changed
+
+**IPdfChartRenderer** now uses **FloatingChartShape** instead of **DocumentChart**. FloatingChartShape contains UI information for chart like Width/Height/Outline/Fill.
+
+### Changed
+
+The method **GetBitmapSourceFromChartModel()** in **ChartModelToImageConverter** is **deleted**. 
+
+### What to do now
+
+You can now use **GetBitmapSourceFromFloatingChartShape** methods which accepts **FloatingChartShape** instead of **DocumentChart**. There is an example in our SDK repository showing a possible approach: [Export Chart](https://github.com/telerik/document-processing-sdk/tree/master/SpreadProcessing/ExportChart).
 
 ## What's Different in 2018 R2
 
