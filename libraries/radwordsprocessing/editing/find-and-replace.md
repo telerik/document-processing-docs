@@ -37,7 +37,8 @@ __Example 1__ shows how to create a __RadFlowDocumentEditor__ instance and use i
 
 {{region cs-radwordsprocessing-editing-find-and-replace_0}}
 
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document); // document is an instance of the RadFlowDocument class		editor.ReplaceText("code", "source code", true, true);
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document); // document is an instance of the RadFlowDocument class
+	editor.ReplaceText("code", "source code", true, true);
 {{endregion}}
 
 
