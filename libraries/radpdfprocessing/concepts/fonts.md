@@ -58,7 +58,7 @@ __Example 1__ demonstrates how you can use the RegisterFont() method.
 
 ### Creating a Font
 
-Each registered font can be obtained from the font repository as __FontBase__ object and applied to a [TextFragment]({%slug radpdfprocessing-model-textfragment%}).
+>tipEach registered font can be obtained from the font repository as __FontBase__ object and applied to a __[TextFragment]({%slug radpdfprocessing-model-textfragment%})__ through its __Font__ property.
             
 
 __Example 2__ shows how to create a font using the FontsRepository.
