@@ -30,14 +30,14 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 #### [C#] Example 1: Using IChartData
 {{region radspreadprocessing-features-charts-chart-data_0}}
 
-	DocumentChart chart = new DocumentChart();
-	
-	BarSeriesGroup barSeriesGroup = new BarSeriesGroup();
-	
-	StringChartData barCategoryData = new StringChartData(new List<string> { "category 1", "category 2", "category 3" });
-	NumericChartData barValueData = new NumericChartData(new List<double> { 1, 2, 3 });
-	FormulaChartData barSeriesTitle = new WorkbookFormulaChartData(workbook, "Sheet1!A1");
-	
-	barSeriesGroup.Series.Add(barCategoryData, barValueData, new FormulaTitle(barSeriesTitle));
+    BarSeriesGroup barSeriesGroup = new BarSeriesGroup();
 
+    StringChartData barCategoryData = new StringChartData(new List<string> { "category 1", "category 2", "category 3" });
+    NumericChartData barValueData = new NumericChartData(new List<double> { 1, 2, 3 });
+    FormulaChartData barSeriesTitle = new WorkbookFormulaChartData(workbook, "Sheet1!A1");
+
+    barSeriesGroup.Series.Add(barCategoryData, barValueData, new FormulaTitle(barSeriesTitle));
+
+    DocumentChart chart = new DocumentChart();
+    chart.SeriesGroups.Add(barSeriesGroup);
 {{endregion}}
