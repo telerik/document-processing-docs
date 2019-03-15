@@ -45,15 +45,21 @@ __Example 2__ demonstrates how to insert text with a specific font family.
 
 There is an additional overload of the InsertText() method enabling you to specify the font family, font style and font weight for the text which you would like to insert.
 
+#### __[C#] Example 3: Insert styled text__
+
+{{region cs-radpdfprocessing-editing-block_8}}
+	block.InsertText(new FontFamily("Arial"), FontStyles.Italic, FontWeights.Bold, "Text");
+{{endregion}}
+
 >The '\r' and '\n' characters don't have the usual meaning of "go to next line" when they are inserted into a PDF document and you cannot simply insert text containing these characters to produce multiline text. Instead, you should insert a line break.
 
 
 ### Inserting Line Break
 
-Inserting a line break results in the next element starting on a new line. The action is achieved with the __InsertLineBreak()__ method as shown in __Example 3__.
+Inserting a line break results in the next element starting on a new line. The action is achieved with the __InsertLineBreak()__ method as shown in __Example 4__.
             
 
-#### __[C#] Example 3: Break the line__
+#### __[C#] Example 4: Break the line__
 
 {{region cs-radpdfprocessing-editing-block_3}}
 	block.InsertLineBreak();
@@ -93,7 +99,7 @@ Information on images in the context of the library is available in the [ImageSo
 
 The Form (or also known as Form-XObject) is an object that can contain PDF content and can be sheared among the document. The Block class exposes the **InsertForm()** method that allows you insert a FormSource object in the document. 
 
-#### __[C#] Example 4: Insert a form__
+#### __[C#] Example 5: Insert a form__
 
 {{region cs-radpdfprocessing-editing-block_7}}
 	block.InsertForm(simpleForm);
@@ -196,10 +202,10 @@ Measuring a Block can be achieved with one of the overloads of the __Measure()__
 Calling the overload accepting available size measures the block in that specific size. Additionally to setting the __DesiredSize__ property, it sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
         
 
-__Example 6__ creates a Block with the text "Hello RadPdfProcessing!" and measures it.
+__Example 7__ creates a Block with the text "Hello RadPdfProcessing!" and measures it.
         
 
-#### __[C#] Example 6: Measure block__
+#### __[C#] Example 7: Measure block__
 
 {{region cs-radpdfprocessing-editing-block_5}}
 	Block block = new Block();
@@ -214,9 +220,9 @@ __Example 6__ creates a Block with the text "Hello RadPdfProcessing!" and measur
 The __Split()__ method of a Block returns a new Block with the same properties. The resulting block contains all pending elements that do not fit in the current block, based on the result of the last measure call.
         
 
-The code in __Example 7__ splits a block in two. The first will contains text "Hello" and the second – "RadPdfProcessing!".
+The code in __Example 8__ splits a block in two. The first will contains text "Hello" and the second – "RadPdfProcessing!".
         
-#### __[C#] Example 7: Split block__
+#### __[C#] Example 8: Split block__
 
 {{region cs-radpdfprocessing-editing-block_6}}
 	Block helloBlock = new Block();
