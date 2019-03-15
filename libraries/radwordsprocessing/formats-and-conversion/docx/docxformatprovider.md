@@ -34,7 +34,7 @@ The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a do
 
 {{region cs-radwordsprocessing-formats-and-conversion-docx-docxformatprovider_0}}
 	            
-	DocxFormatProvider provider = new DocxFormatProvider();
+	Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
 	using (Stream input = File.OpenRead("Sample.docx"))
 	{
 	    RadFlowDocument document = provider.Import(input);
@@ -49,7 +49,7 @@ And here is how you can import a document from byte array containing the docx do
 #### __[C#] Example 2: Import document from a byte array__
 {{region cs-radwordsprocessing-formats-and-conversion-docx-docxformatprovider_1}}
 	            
-	DocxFormatProvider provider = new DocxFormatProvider();
+	Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
 	RadFlowDocument document = provider.Import(input);
 {{endregion}}
 
@@ -68,10 +68,10 @@ __Example 3__ shows how to use __DocxFormatProvider__ to export __RadFlowDocumen
 #### __[C#] Example 3: Export a document to a file__
 {{region cs-radwordsprocessing-formats-and-conversion-docx-docxformatprovider_2}}
 	    
-	DocxFormatProvider provider = new DocxFormatProvider();
+	Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
 	using (Stream output = File.OpenWrite("Sample.docx"))
 	{
-	    RadFlowDocument document = CreateRadFlowDocument();
+	    RadFlowDocument document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
 	    provider.Export(document, output);
 	}
 {{endregion}}
@@ -82,9 +82,9 @@ You can also export the document to a byte array and preserve it in a database.
 
 #### __[C#] Example 4: Export a document to a byte array__
 {{region cs-radwordsprocessing-formats-and-conversion-docx-docxformatprovider_3}}
-	DocxFormatProvider provider = new DocxFormatProvider();
+	Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
 	        
-	RadFlowDocument document = CreateRadFlowDocument();
+	RadFlowDocument document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
 	byte[] output = provider.Export(document);
 {{endregion}}
 
