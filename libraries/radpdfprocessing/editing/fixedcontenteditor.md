@@ -15,18 +15,6 @@ position: 4
 __FixedContentEditor__ is utility class that is intended to simplify the process of creating and editing the content of an __IContentRootElement__ such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
       
 
-The current article will get you familiar with the following topics:
-      
-
-* [Creating FixedContentEditor](#creating-fixedcontenteditor)
-
-* [Inserting Elements](#inserting-elements)
-
-* [Positioning](#positioning)
-
-* [Changing Current Styles](#changing-current-styles)
-
-
 ## Creating FixedContentEditor
 
 __FixedContentEditor__ is always associated to a single __IContentRootElement__ which it takes as a constructor parameter when it is created. __Example 1__ shows how you can create an editor.
