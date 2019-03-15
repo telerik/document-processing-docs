@@ -31,8 +31,8 @@ __Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocume
 #### __[C#] Example 1: Export RadFixedDocument to string__
 
 {{region cs-radpdfprocessing-formats-and-conversion-plain-text-textformatprovider_0}}
-	TextFormatProvider provider = new TextFormatProvider();
-	RadFixedDocument document = CreateRadFixedDocument();
+	Telerik.Windows.Documents.Fixed.FormatProviders.Text.TextFormatProvider provider = new Telerik.Windows.Documents.Fixed.FormatProviders.Text.TextFormatProvider();
+	RadFixedDocument document = CreateRadFixedDocument();// CreateRadFixedDocument() is a custom method that creates a simple instance of RadFixedDocument. You can replace it with the instance you would like to export. 
 	string documentContent = provider.Export(document);
 {{endregion}}
 
