@@ -39,7 +39,7 @@ Once you have created a FloatingChartShape, you can insert it in the document th
 
 #### [C#] Example 1: Create a chart through FloatingChartShape and add it to a worksheet
 
-{{region}}
+{{region radspreadprocessing-features-charts-using-charts_0}}
 	
 	FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(6, 4), new CellRange(1, 1, 5, 2), ChartType.Column)
 	{
@@ -68,7 +68,7 @@ The Chart property of FloatingChartShape holds an object of type [DocumentChart]
 The FloatingChartShape class exposes properties allowing you to customize how the shape looks like. You can control the outline of the shape as well as its fill.
 
 #### [C#] Example 2: Customize the fill and outline of FloatingChartShape
-{{region}}
+{{region radspreadprocessing-features-charts-using-charts_1}}
 
     FloatingChartShape chartShape = new FloatingChartShape(workbook.ActiveWorksheet, new CellIndex(2, 7), new CellRange(0, 0, 4, 3), ChartType.Column)
     {
@@ -106,7 +106,7 @@ You can create a simple DocumentChart object, which is empty and then set the de
 
 #### [C#] Example 3: Creating an empty chart and setting its values manually
 
-{{region}}
+{{region radspreadprocessing-features-charts-using-charts_2}}
 
 	DocumentChart chart = new DocumentChart();
 	// Fill the chart with data
@@ -128,7 +128,7 @@ The chart can then be used to replace the chart in an existing **FloatingChartSh
 
 #### [C#] Example 4: Add the DocumentChart to a worksheet
 
-{{region}}
+{{region radspreadprocessing-features-charts-using-charts_3}}
 
 	chartShape.Chart = chart;
 	
@@ -152,7 +152,7 @@ You can access the Charts collection of the Shape collection of the Worksheet in
 
 #### [C#] Example 5: Iterate all the charts in a worksheet
 
-{{region}}
+{{region radspreadprocessing-features-charts-using-charts_4}}
 
 	foreach (FloatingChartShape chartShape in worksheet.Shapes.Charts)
 	{
