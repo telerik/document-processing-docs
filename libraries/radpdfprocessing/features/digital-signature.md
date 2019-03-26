@@ -62,44 +62,51 @@ In addition, to create a signature, which has a visual representation, you will 
 
 {{region radpdfprocessing-features-digital-signature_2}}
 
-    // Define the certificate which will be used for the signing.
-    System.Security.Cryptography.X509Certificates.X509Certificate2 certificate = new System.Security.Cryptography.X509Certificates.X509Certificate2(certificateFilePath, certificateFilePassword);
+	// Define the certificate which will be used for the signing.
+	System.Security.Cryptography.X509Certificates.X509Certificate2 certificate = new System.Security.Cryptography.X509Certificates.X509Certificate2(certificateFilePath, certificateFilePassword);
 
-    // The name of the signature must be unique.
-    string signatureName = "SampleSignature";
+	// The name of the signature must be unique.
+	string signatureName = "SampleSignature";
 
-    // This is the Form XObject element that represents the contents of the signature field.
-    Form form = new Form();
-    form.FormSource = new FormSource();
-    form.FormSource.Size = new Size(120, 120);
+	// This is the Form XObject element that represents the contents of the signature field. 
+	Form form = new Form();
+	form.FormSource = new FormSource();
+	form.FormSource.Size = new Size(220, 220);
 
-    // We will use the editor to fill the Form XObject.
-    FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
-    formEditor.DrawCircle(new Point(50, 50), 20);
-    formEditor.DrawText(signatureName);
+	// We will use the editor to fill the Form XObject. 
+	FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
+	form.Position.Translate(10, 10);
+	formEditor.DrawCircle(new Point(50, 50), 20);
+	formEditor.DrawText(signatureName);
 
-    // The Signature object is added to a signature field, so we can add a visualization to it.
-    SignatureField signatureField = new SignatureField(signatureName);
-    signatureField.Signature = new Signature(certificate);
+	// The Signature object is added to a signature field, so we can add a visualization to it. 
+	SignatureField signatureField = new SignatureField(signatureName);
+	signatureField.Signature = new Signature(certificate);
 
-    // The widget contains the Form XObject and defines the appearance of the signature field.
-    SignatureWidget widget = signatureField.Widgets.AddWidget();
-    widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
-    widget.Border = new AnnotationBorder(100, AnnotationBorderStyle.Solid, null);
-    widget.Content.NormalContentSource = form.FormSource;
-    widget.RecalculateContent();
+	// The widget contains the Form XObject and defines the appearance of the signature field. 
+	SignatureWidget widget = signatureField.Widgets.AddWidget();
+	widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
+	widget.Border = new AnnotationBorder(10, AnnotationBorderStyle.Solid, null);
+	widget.Content.NormalContentSource = form.FormSource;
+	widget.RecalculateContent();
 
-    // The Widget class inherits from Annotation. And, as any other annotation, must be added to the respective collection of the page.
+	// The Widget class inherits from Annotation. And, as any other annotation, must be added to the respective collection of the page. 
 
-    RadFixedDocument document = new RadFixedDocument();
-    RadFixedPage page = document.Pages.AddPage();
-    page.Annotations.Add(widget);
-    document.AcroForm.FormFields.Add(signatureField);
+	RadFixedDocument document = new RadFixedDocument();
+	RadFixedPage page = document.Pages.AddPage();
+	page.Annotations.Add(widget);
 
-    using (Stream stream = File.Open("signed.pdf", FileMode.OpenOrCreate))
-    {
-        new PdfFormatProvider().Export(document, stream);
-    }
+	var editor = new FixedContentEditor(page);
+	editor.Position.Translate(200, 400);
+	editor.DrawForm(form.FormSource);
+	document.AcroForm.FormFields.Add(signatureField);
+	widget.RecalculateContent();
+	widget.AppearanceCharacteristics.Background = new Telerik.Windows.Documents.Fixed.Model.ColorSpaces.RgbColor(255, 0, 0);
+
+	using (Stream stream = File.OpenWrite("signed.pdf"))
+	{
+	    new PdfFormatProvider().Export(document, stream);
+	}
 {{endregion}}
 
 
