@@ -14,15 +14,7 @@ position: 1
 
  __RadSpreadprocessing__ contains a __WorkbookFormatProvidersManager__ class that allows you to specify a set of format providers and import or export files letting the manager choose the appropriate format provider. The class also exposes methods that return all registered providers and supported file extensions.
       
-
-* [Registering Unregistering Format Providers](#registering-and-unregistering-format-providers)
-
-* [Import](#import)
-
-* [Export](#export)
-
-* [Retrieve Registered Providers and Supported Extensions](#retrieve-registered-providers-and-supported-extensions)
-
+      
 ## Registering and Unregistering Format Providers
 
 The __WorkbookFormatProvidersManager__ class contains two methods that allow you to register and unregister format providers respectively. The manager has the csv and txt format providers registered by default. The snippet in __Example 1__ illustrates how to register the xlsx format provider.
@@ -180,5 +172,5 @@ You can achieve the same result through using the __SaveFile__ command. In fact,
 
 ## Retrieve Registered Providers and Supported Extensions
 
-The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the GetProviderByName() static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __xGetSupportedExtensions()__ that returns an IEnumeable of the currently supported file extensions.
+The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the GetProviderByName() static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __GetSupportedExtensions()__ that returns an IEnumeable of the currently supported file extensions.
 
