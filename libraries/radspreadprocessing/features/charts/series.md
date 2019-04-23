@@ -153,7 +153,7 @@ You can modify the properties of the base class for all series - SeriesBase.
 
 ## SeriesGroup Class and Properties Related to Specific Series Types
 
-There are properties defined on SeriesGroup level. The SeriesGroup base class represents a group of series and is inherited by the classes holding specific types of series. In addition to the **SeriesType** and **Series** properties, which give you access to the type of the series and the series collection respectively, there are properties implemented in the inheritors. The additional properties are specific for a type of series and give you control over the appearance of all the series in the group.
+There are properties defined on SeriesGroup level. The SeriesGroup base class represents a group of series and is inherited by the classes holding specific types of series. In addition to the **SeriesType** and **Series** properties, which give you access to the type of the series and the series collection respectively, there are properties implemented in the inheritors. The additional properties are specific for the type of series and give you control over the appearance of all the series in the group.
 
 ### BarSeriesGroup
 
@@ -186,11 +186,11 @@ These properties enable you to control the options for each of the series indepe
 - **Marker**: Represents the marker of the series. It is of type **Marker**.
 
 - **ScatterStyle**: Determines the style of the scatter series. It is of type ScatterStyle and can have the following values:
-    -  **None**: The points on the scatter chart are not be connected with straight lines and markers are not drawn.
-    - **Line**: The points on the scatter chart are connected with straight lines but markers aren't drawn.
+    -  **None**: The points on the scatter chart are not connected with straight lines and markers are not drawn.
+    - **Line**: The points on the scatter chart are connected with straight lines but markers are not drawn.
     - **LineMarker**: The points on the scatter chart are connected with straight lines and markers are drawn.
     - **Marker**: The points on the scatter chart are not connected with lines and markers are drawn.
-    - **Smooth**: The points on the scatter chart are connected with smoothed lines and markers aren't drawn.
+    - **Smooth**: The points on the scatter chart are connected with smoothed lines but markers are not drawn.
     - **SmoothMarker**: The points on the scatter chart are connected with smoothed lines and markers are drawn.
 
 #### **[C#] Example 5: Customize the appearance of ScatterSeries**
