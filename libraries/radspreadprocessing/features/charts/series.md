@@ -118,7 +118,7 @@ You can access the **Series** property of the **SeriesGroup** object contained i
 	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
 	SeriesGroup seriesGroup = chart.SeriesGroups.First();
 	
-	foreach (SeriesBase series in seriesGroup.Series)
+	foreach (CategorySeriesBase series in seriesGroup.Series.Where(s => s is CategorySeriesBase))
 	{
 	    if (series.Categories.ChartDataType == ChartDataType.Formula)
 	    {
@@ -144,7 +144,7 @@ You can modify the properties of the base class for all series - SeriesBase.
 		
 	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
 	SeriesGroup seriesGroup = chart.SeriesGroups.First();
-	SeriesBase firstSeries = seriesGroup.Series.First();
+	CategorySeriesBase firstSeries = seriesGroup.Series.Where(s => s is CategorySeriesBase).First() as CategorySeriesBase;
 
 	firstSeries.Title = new TextTitle("New title");
 	firstSeries.Values = new WorkbookFormulaChartData(worksheet, new CellRange(2, 3, 5, 3));
