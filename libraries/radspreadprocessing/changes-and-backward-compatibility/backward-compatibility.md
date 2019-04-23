@@ -14,6 +14,16 @@ position: 1
 
 This article will list the breaking changes and how they can be fixed when upgrading from a specific version of the controls to the next one.
 
+## What's Different in 2019 R2
+
+### Changed
+
+**Values** and **Categories** properties are moved from **SeriesBase** to **CategorySeriesBase** class.
+
+### What to do now
+
+Use the properties exposed in **CategorySeriesBase**.
+
 ## What's Different in 2019 R1 SP1
 
 ### Changed
