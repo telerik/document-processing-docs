@@ -44,3 +44,7 @@ When the installation completes, the Telerik Document Processing assemblies will
 ## UI for Silverlight
 
 [Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
+
+## UI for Xamarin
+
+[Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/system-requirements)
