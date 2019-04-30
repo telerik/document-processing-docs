@@ -25,3 +25,5 @@ __UI for WinForms__: [http://www.telerik.com/purchase/license-agreement/winforms
 
 
 __UI for Silverlight__: [http://www.telerik.com/purchase/license-agreement/silverlight-dlw-s](http://www.telerik.com/purchase/license-agreement/silverlight-dlw-s)
+
+**UI fo Xamarin**:[https://www.telerik.com/purchase/license-agreement/ui-for-xamarin](https://www.telerik.com/purchase/license-agreement/ui-for-xamarin)

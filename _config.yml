@@ -252,7 +252,7 @@ sdk_cdn_path: "https://cdn.rawgit.com/telerik/document-processing-sdk/master/"
 non-sl-folders: ["radwordsprocessing", "radspreadstreamprocessing"]
 
 # Folders not supporting Xamarin:
-non-xamarin-folders: ["radwordsprocessing", "radspreadprocessing", "radpdfprocessing"]
+non-xamarin-folders: ["radwordsprocessing", "radspreadprocessing"]
 
 ## Do not edit below this line
 skip_tabbed_code: true

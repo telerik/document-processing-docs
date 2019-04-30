@@ -20,6 +20,7 @@ This article describes the following topics:
 
 This class corresponds to FormFieldType.Signature enum value and represents a placeholder which preserves the digital signature information. 
 
+>In PdfProcessing for Xamarin you can add SignatureField but can not sign or import signed documents.
 
 ## Properties
 
