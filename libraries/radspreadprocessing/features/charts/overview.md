@@ -45,7 +45,15 @@ The line chart shows the category data distributed on the horizontal axis and al
 | ----------------------- |:--------------:| -------------------:|
 | ![](images/SpreadProcessing-Features-Charts_7.png) | ![](images/SpreadProcessing-Features-Charts_8.png) | ![](images/SpreadProcessing-Features-Charts_9.png)|
 
+### Scatter and Bubble Charts
 
+Scatter and bubble charts provide you with a convenient way to display a lot of related data in a single chart. In scatter charts, the x-axis displays one numeric field and the y-axis displays another. This type of plotting the data makes it easy to see the relationship between the two values for all the items in the chart.
+
+In a bubble chart, a third numeric field determines the size of the data points represented as bubbles.
+
+| Scatter     | Bubble    | 
+| ----------- |:----------| 
+| ![](images/SpreadProcessing-Features-Charts_19.png) | ![](images/SpreadProcessing-Features-Charts_18.png) |
 
 ### Pie and Doughnut Charts
 	
