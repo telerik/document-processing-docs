@@ -1,24 +1,19 @@
 ---
-title: Add and Remove Worksheets
-page_title: Add and Remove Worksheets
-description: Add and Remove Worksheets
+title: Add, Remove and Reorder Worksheets
+page_title: Add, Remove and Reorder Worksheets
+description: Add, Remove and Reorder Worksheets
 slug: radspreadprocessing-working-with-worksheets-add-remove-worksheets
-tags: add,and,remove,worksheets
+tags: add,and,remove,worksheets, move, reorder
 published: True
 position: 1
 ---
 
-# Add and Remove Worksheets
+# Add, Remove and Reorder Worksheets
 
 
 
-This article demonstrates how to add and remove worksheets from a workbook.
+This article demonstrates how to add, remove and reorder worksheets inside a workbook.
       
-
-* [Add Worksheets](#add-worksheets)
-
-* [Remove Worksheets](#remove-worksheets)
-
 ## Add Worksheets
 
 Adding a new worksheet to a workbook can be easily achieved through its __Worksheets__ collection. The collection exposes an __Add()__ method that does not take arguments and returns the instance of the newly created worksheet. By default worksheets are assigned the first available name in the sequence Sheet1, Sheet2, Sheet3… You can easily change the name of the worksheet through the __Worksheet.Name__ property. More information about renaming a worksheet is available in the [Rename a Worksheet]({%slug radspreadprocessing-working-with-worksheets-rename-worksheet%}) article.
@@ -60,3 +55,19 @@ __Example 2__ creates a workbook and adds four worksheets. All worksheets are wi
 {{endregion}}
 
 
+## Reorder Worksheets
+
+If you would like to change the order the worksheets appear inside the workbook, you can use the **Move()** method of the **Sheets** collection. The method allows you to move one or more consecutive sheets to a specified position. In **Example 3**, you can see how you can insert 4 sheets and move the last one to the first position in the collection. When the workbook is visualized, the fourth sheet will be the first one visible in the sheet tabs.
+
+#### __[C#] Example 3: Add and reorder worksheets__
+
+{{region cs-radspreadprocessing-working-with-worksheets-add-remove-worksheets_2}}
+	Workbook workbook = new Workbook();
+	workbook.Worksheets.Add(); // Sheet1
+	workbook.Worksheets.Add(); // Sheet2
+	workbook.Worksheets.Add(); // Sheet3
+	workbook.Worksheets.Add(); // Sheet4
+	
+	workbook.Sheets.Move(3, 1, 0); // Move the fourth sheet to the first place
+
+{{endregion}}
