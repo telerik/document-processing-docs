@@ -229,7 +229,8 @@ footer:
   title: "Support Resources"
   links: 
     "Documentation": https://docs.telerik.com/devtools/document-processing/introduction
--
+    "GitHub SDK Repository": https://github.com/telerik/document-processing-sdk
+-   
   title: "Community"
   links:
     "Forums": https://www.telerik.com/forums/telerik-document-processing
