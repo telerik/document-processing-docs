@@ -12,9 +12,9 @@ position: 0
 
 Welcome to __Telerik Document Processing__!
 
-Telerik Document Processing is a bundle of UI-independent, cross-platform libraries enabling you to process the most commonly used flow, fixed and spreadsheet document formats. The components allow to create documents, import, modify and export them without external dependencies.
+Telerik Document Processing is a bundle of UI-independent, cross-platform libraries enabling you to process the most commonly used flow, fixed and spreadsheet document formats. The components allow to create, import, modify and export documents, without external dependencies, and supporting the following file formats:
 
-In the **.NET Framework** implementation, the following file formats are supported:
+In the **.NET Framework** implementation:
 
 * CSV
 * DOCX
