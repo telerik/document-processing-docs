@@ -14,6 +14,8 @@ This article briefly explains the specifics of **RadSpreadStreamProcessing** - w
 
 ![](images/SpreadStreamProcessing-Overview_01.png)
 
+>You can find the example from the image above in our official demos. It can be checked online using the [example](https://demos.telerik.com/aspnet-mvc/spreadstreamprocessing) for UI for ASP.NET MVC.
+
 ## What is Spread Streaming?
 
 Spread streaming is a document processing paradigm that allows you to create big spreadsheet documents with great performance and minimal memory footprint. 
