@@ -41,8 +41,8 @@ __Example 1__ shows how to import an xlsx file using a FileStream. The code assu
 	    throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
 	}
 	
-	Workbook workbook;
-	IWorkbookFormatProvider formatProvider = new XlsxFormatProvider();
+	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
+	IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 	
 	using (Stream input = new FileStream(fileName, FileMode.Open))
 	{
@@ -60,11 +60,11 @@ __Example 2__ demonstrates how to export an existing Workbook to an xlsx file. T
 #### __[C#] Example 2: Export Xlsx file__
 
 {{region cs-radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider_1}}
-	Workbook workbook = new Workbook();
+	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
 	workbook.Worksheets.Add();
 	string fileName = "SampleFile.xlsx";
 	
-	IWorkbookFormatProvider formatProvider = new XlsxFormatProvider();
+	IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 	
 	using (Stream output = new FileStream(fileName, FileMode.Create))
 	{
