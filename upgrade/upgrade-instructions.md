@@ -32,7 +32,7 @@ Telerik Document Processing is part of several Telerik bundles and could be upgr
 
 ## UI for WPF
 
-[Upgrading Telerik UI for WPF](http://docs.telerik.com/devtools/wpf/installation-and-deployment/upgrading-instructions/installation-upgrading-from-trial-to-developer-license-wpf.html)
+[Upgrading Telerik UI for WPF](https://docs.telerik.com/devtools/wpf/upgrade/installation-upgrading-from-trial-to-developer-license-wpf)
 
 
 ## UI for WinForms
