@@ -16,7 +16,7 @@ Depending on the scenario, you could take advantage of the different functionali
 
 * [Create a PDF Document From Scratch](#create-a-pdf-document-from-scratch)
 
-* [Convert a Flow Document to PDF](#convert-a-flow-document-to-pdf)
+* [Convert a Document to PDF](#convert-a-document-to-pdf)
 
 * [Convert a Spreadsheet Document to PDF](#convert-a-spreadsheet-document-to-pdf)
 
