@@ -44,9 +44,7 @@ The document model of the library provides support for:
 
 * [**Text and Graphic properties**]({%slug radpdfprocessing-editing-text-and-graphic-properties%}): Provide options for changing the properties of the different elements in the document elements so you can achieve a unique look.
 
-* [**Password Protection**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings)
-
-* Support for documents encrypted with **Encryption Algorithm 4 (RC4/AES-128)** 
+* [**Password Protection**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings): Support for documents encrypted with **Encryption Algorithm 4 (RC4/AES-128)** 
 
 * [**Merge documents**]({%slug radpdfprocessing-model-radfixeddocument%}) and [**document pages**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}).
 
