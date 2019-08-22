@@ -104,7 +104,7 @@ RadFixedPage's API provides you with the ability to modify its properties.
 __Example 4__ shows how you can change the __Rotation__ and __Size__ properties of a __RadFixedPage__.
             
 
-#### __[C#] Example 4: Add annotation to RadFixedPage__
+#### __[C#] Example 4: Change properties of a RadFixedPage__
 
 {{region cs-radpdfprocessing-model-radfixedpage_3}}
 	RadFixedPage page = new RadFixedPage();
