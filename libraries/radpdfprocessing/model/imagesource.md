@@ -97,7 +97,7 @@ __RadPdfProcessing__ exposes an extension method allowing you to convert every B
 	return imageSource;
 {{endregion}}
 
->The code from __Example 3__ won't compile in Silverlight due to differences in the BitmapImage API for this platform. You could pass the image as a stream to the SetSource() method of BitmapImage instead.
+>The code from __Example 4__ won't compile in Silverlight due to differences in the BitmapImage API for this platform. You could pass the image as a stream to the SetSource() method of BitmapImage instead.
 
 ## See Also
 
