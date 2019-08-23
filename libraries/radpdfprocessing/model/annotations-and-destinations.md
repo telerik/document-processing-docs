@@ -66,7 +66,7 @@ __Link__ exposes the following properties:
 
 
 
->importantIn __Example 1__, the *action* object should be from the Telerik.Windows.Documents.Fixed.Model.Actions.Action type.
+>importantIn __Example 2__, the *action* object should be from the Telerik.Windows.Documents.Fixed.Model.Actions.Action type.
               
 
 ## Destination
