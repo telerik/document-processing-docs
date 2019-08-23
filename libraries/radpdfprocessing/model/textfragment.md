@@ -15,7 +15,7 @@ position: 3
 __TextFragment__ is content element that represents а single-line text object.
       
 
-* [Inserting a TextFragment](#Inserting_a_TextFragment)
+* [Inserting a TextFragment](#inserting-a-textfragment)
 
 * [Modifying a TextFragment](#modifying-a-textfragment)
 
