@@ -60,6 +60,7 @@ With the __EncodedImageData__ class you can also create an __ImageSource__ with 
 	EncodedImageData imageData = new EncodedImageData(imageBytes, alphaChannelBytes, 8, imageWidth, imageHeight, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.FlateDecode });
 	ImageSource imageSource = new ImageSource(imageData);
 {{endregion}}
+
 ## Properties
 
 The properties exposed by the **ImageSource** class are as follows:
