@@ -66,7 +66,7 @@ You can modify a __Path__ element using the properties the class exposes. The pr
 * __IsFilled__: Specifies whether the path should be filled.
             
 
-* __IsStroked__: Specified whether the path should be stroked.
+* __IsStroked__: Specifies whether the path should be stroked.
             
 
 * __StrokeThickness__: The width of the stroke outline.
