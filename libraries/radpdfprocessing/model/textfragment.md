@@ -80,7 +80,7 @@ TextFragment exposes the following properties that can modify the look of the re
 * __RenderingMode__: Enumeration representing the way the text should be rendered. It can have on of the following values:
             
 
-	* __Fill__: Fill text.
+	* __Fill__: Fill text (the default value).
 	            
 	
 	* __Stroke__: Stroke text.
@@ -101,7 +101,7 @@ TextFragment exposes the following properties that can modify the look of the re
 	* __FillStrokeAndAddToClippingPath__: Fill, then stroke text and add to path for clipping
 	            
 	
-	* __AddToClippingPath__: Add text to path for clipping. The default value for this property is __Fill__.
+	* __AddToClippingPath__: Add text to path for clipping.
             
 
 * __TextRise__: Specifies the distance, in unscaled text space units, to move the baseline up or down from its default location.
