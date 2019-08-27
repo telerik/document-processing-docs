@@ -210,9 +210,9 @@ edit_repo_url: https://github.com/telerik/dpl-docs/edit/master
 product: "Telerik Document Processing"
 
 # Available for names: 
-platforms: ["UI for ASP.NET AJAX", "UI for ASP.NET MVC", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin"]
+platforms: ["UI for ASP.NET AJAX", "UI for ASP.NET MVC", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin", "UI for ASP.NET Core"]
 # in articles use as shown below: 
-# platforms: ajax, mvc, wpf, winforms, silverlight, xamarin
+# platforms: ajax, mvc, wpf, winforms, silverlight, xamarin, netcore
 platform: dpl
 download: https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate
 nav:
@@ -253,7 +253,10 @@ sdk_cdn_path: "https://cdn.rawgit.com/telerik/document-processing-sdk/master/"
 non-sl-folders: ["radwordsprocessing", "radspreadstreamprocessing"]
 
 # Folders not supporting Xamarin:
-non-xamarin-folders: ["radwordsprocessing", "radspreadprocessing"]
+non-xamarin-folders: ["radspreadprocessing"]
+
+# Folders not supporting .NET Core:
+non-netcore-folders: ["radspreadprocessing"]
 
 ## Do not edit below this line
 skip_tabbed_code: true
