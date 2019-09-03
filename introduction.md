@@ -14,8 +14,6 @@ Welcome to __Telerik Document Processing__!
 
 Telerik Document Processing is a bundle of UI-independent, cross-platform libraries enabling you to process the most commonly used flow, fixed and spreadsheet document formats. The components allow to create, import, modify and export documents, without external dependencies, and supporting the following file formats:
 
-In the **.NET Framework** implementation:
-
 * CSV
 * DOCX
 * HTML
@@ -24,13 +22,10 @@ In the **.NET Framework** implementation:
 * TXT
 * XLSX
 * ZIP
+ 
+>**.NET Standard** and **.NET Core** compatible versions are available for the Telerik Document Processing libraries. Their assemblies can be downloaded from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)** and **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** suites respectively.
 
-In the **.NET Standard** implementation, the following file formats are currently supported:
-
-* CSV
-* XLSX
-* PDF
-* ZIP
+>RadSpreadProcessing is the only one that is still available for the full .NET Framework only. Please, share your scenario and what features you would need from **SpreadProcessing for .NET Core** in the public item related to its implementation at [https://feedback.telerik.com/document-processing/1356226](https://feedback.telerik.com/document-processing/1356226).
 
 ## Libraries
 
