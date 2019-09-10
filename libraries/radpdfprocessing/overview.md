@@ -34,6 +34,8 @@ The document model of the library provides support for:
 
 * [**Clipping**]({%slug radpdfprocessing-concepts-clipping%}): You can define the outline of other content elements like images and paths.
 
+* [**Bookmarks (Outlines)**]({%slug radpdfprocessing-features-bookmarks%}): Add, remove or modify the bookmarks in a PDF document.
+
 * [**Annotations**]({%slug radpdfprocessing-model-annotations-and-destinations%}): Associate an object with a location on a page of the PDF document.
 
 * [**Destinations**]({%slug radpdfprocessing-model-annotations-and-destinations%}): Defines a particular view of a document.
