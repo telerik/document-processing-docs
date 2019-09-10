@@ -21,7 +21,7 @@ This is the class representing a single bookmark inside the model of PdfProcessi
 
 * **Destination**: Gets the destination to be displayed when this bookmark item is activated. For more information on how to work with destinations, check the [Destination]({%slug radpdfprocessing-model-annotations-and-destinations%}#destination) help topic.
 
-* **NamedDestination**: Gets the named destination to be displayed when this bookmark item is activated.
+* **NamedDestination**: Gets the named destination to be displayed when this bookmark item is activated. Check the [Named Destinations]({%slug radpdfprocessing-model-named-destinations%}) topic for more details about these objects.
 
 * **TextStyle**: Gets or sets the style characteristics for displaying the bookmark item's text. This property is of type **BookmarkItemStyles**. This type is a set of flags and can have the following values: **Normal**, **Italic** and/or **Bold**.
 
@@ -102,5 +102,6 @@ In case you need to iterate all the bookmarks in a document, keep in mind that e
 ## See Also
 
 * [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%})
+* [Named Destinations]({%slug radpdfprocessing-model-named-destinations%})
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
 * [BookmarkItem API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Navigation.BookmarkItem.html)
