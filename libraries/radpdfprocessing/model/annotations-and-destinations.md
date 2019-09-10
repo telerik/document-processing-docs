@@ -52,10 +52,12 @@ __Link__ exposes the following properties:
 		page.Annotations.Add(linkWithDestination);
 	{{endregion}}
 
+* **NamedDestination**: A named destination associated with the link.
 
 
 * __Action__: An action to be performed when the annotation is activated. __Example 2__ demonstrates how you can create a Link using a previously created __Action__ and add the Link in RadFixedPage's Annotations collection.
             
+
 
 	#### __[C#] Example 2: Add link with action__
 	
@@ -132,6 +134,7 @@ The abstract __Action__ class defines a behavior for an annotation. Action is in
 * __GoToAction__: Associates the action with a __Destination__. The GoToAction class exposes the following properties:
 
 	* __Destination__: The associated destination.
+	* __NamedDestination__: The associated named destination.
 	                
 
 * __UriAction__: Associates the action with an Uri. The UriAction class exposes the following properties:
