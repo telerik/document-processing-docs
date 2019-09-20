@@ -45,7 +45,7 @@ The **BookmarkItem** class exposes several constructor overloads which enable yo
 {{region radpdfprocessing-features-bookmarks_0}}
 
     Location location = new Location();
-    location.Page = document.Pages[0]
+    location.Page = document.Pages[0];
     location.Left = 10;
     location.Top = 10;
     BookmarkItem bookmark = new BookmarkItem("Title", location);
