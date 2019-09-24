@@ -5,7 +5,7 @@ description: Getting Started with Telerik Document Processing
 slug: getting-started
 tags: getting-started
 published: True
-position: 1
+position: 0
 ---
 
 # Getting Started with Telerik Document Processing
