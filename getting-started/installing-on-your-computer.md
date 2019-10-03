@@ -18,6 +18,11 @@ Telerik Document Processing is part of several Telerik bundles and is installed 
 >
 >The changes are synced between the controls that have a dependency on Telerik Document Processing and while the referenced files are from the same release, they should work as expected regardless of the version distinction. 
 
+## UI for ASP.NET Core
+
+[Download and Installation of Document Processing Libraries](https://docs.telerik.com/aspnet-core/getting-started/installation/document-processing)
+
+The libraries can be used through the available NuGet packages.
 
 ## UI for ASP.NET AJAX
 
