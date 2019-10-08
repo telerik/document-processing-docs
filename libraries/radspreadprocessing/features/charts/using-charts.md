@@ -33,7 +33,7 @@ The FloatingChartShape class exposes the following constructors, which parse the
 	* *seriesRangesOrientation*: A value indicating whether the series of the chart will refer to vertical or horizontal ranges or the direction will be determined automatically.
 	* *chartTypes*: The types of chart that will be created. **Passing more than one type will create a combo chart.**
 
-> **WARNING**: The number of chartTypes must be no more than the number of columns inside the chartDataRange minus one (the first column is used to populate the X axis), otherwise you will get a exception of type **System.NullReferenceException**.
+	>The number of chartTypes must be no more than the number of columns inside the chartDataRange minus one (the first column is used to populate the X axis), otherwise you will get an exception of type **System.NullReferenceException**.
 
 Once you have created a FloatingChartShape, you can insert it in the document through the Add() method of worksheet's Shapes property.
 
