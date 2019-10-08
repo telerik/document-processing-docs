@@ -30,7 +30,7 @@ __Example 1__ shows how to use HtmlFormatProvider to import an HTML document fro
 #### __[C#] Example 1: Import HTML file__
 
 {{region cs-radwordsprocessing-formats-and-conversion-html-htmlformatprovider_0}}
-	using (Stream input = File.Create(@"Sample.html"))
+	using (Stream input = File.OpenRead(@"Sample.html"))
 	{
 	    Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider();
 	    RadFlowDocument document = provider.Import(input);
