@@ -27,13 +27,16 @@ When the installation completes, the Telerik Document Processing assemblies will
 2. UI for ASP.NET MVC - [Installing Telerik UI for ASP.NET MVC](http://docs.telerik.com/kendo-ui/aspnet-mvc/introduction#installation). 
 When the installation completes, the Telerik Document Processing assemblies will be available in the *AdditionalLibraries* sub-folder.
 
-3. UI for WPF - [Installing Telerik UI for WPF](http://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
+3. UI for ASP.NET Core - [Installing Telerik UI for ASP.NET Core](https://docs.telerik.com/aspnet-core/getting-started/installation/document-processing). 
+The libraries can be used through the available NuGet packages.
 
-4. UI for Silverlight - [Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
+4. UI for WPF - [Installing Telerik UI for WPF](http://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
 
-5. UI for WinForms - [Installing Telerik UI for WinForms](http://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer)
+5. UI for Silverlight - [Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
 
-6. UI for Xamarin - [Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/system-requirements)
+6. UI for WinForms - [Installing Telerik UI for WinForms](http://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer)
+
+7. UI for Xamarin - [Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/system-requirements)
 
 ## Creating Application with Visual Studio
 
@@ -55,6 +58,14 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 * __Telerik.Windows.Documents.Core.dll__
 * __Telerik.Windows.Documents.Flow.dll__
 * __Telerik.Windows.Zip.dll__
+* __Telerik.Windows.Documents.Flow.Model__
+* __Telerik.Windows.Documents.Flow.Model.Editing__
+
+Since we are going to export to a Docx and PDF file later in this example, we will also need to reference the below assemblies:
+* __Telerik.Windows.Documents.Flow.FormatProviders.Docx__
+* __Telerik.Windows.Documents.Flow.FormatProviders.Pdf__
+
+> Please note that for .NET Core, the references don't contain "Windows" in the assembly names.
 
 #### __[C#] Example 1: Create RadFlowDocument__
 
@@ -67,16 +78,10 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 #### __[VB.NET] Example 1: Create RadFlowDocument__
 
 {{region cs-radwordsprocessing-getting-started_0}}
-        Dim document As RadFlowDocument = New RadFlowDocument()
-        Dim editor As RadFlowDocumentEditor = New RadFlowDocumentEditor(document)
-        editor.InsertText("Hello world!")
+    Dim document As RadFlowDocument = New RadFlowDocument()
+    Dim editor As RadFlowDocumentEditor = New RadFlowDocumentEditor(document)
+    editor.InsertText("Hello world!")
 {{endregion}}
-
-You need to add 'using' directive to the following namespaces:
-        
-
-* Telerik.Windows.Documents.Flow.Model
-* Telerik.Windows.Documents.Flow.Model.Editing
 
 ### Exporting RadFlowDocument to Docx
 
@@ -88,7 +93,7 @@ Exporting the document to docx file can be achieved with the [DocxFormatProvider
 {{region cs-radwordsprocessing-getting-started_1}}
 	using (Stream output = new FileStream("output.docx", FileMode.OpenOrCreate))
 	{
-	    DocxFormatProvider provider = new DocxFormatProvider();
+	    Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
 	    provider.Export(document, output);
 	}
 {{endregion}}
@@ -97,10 +102,10 @@ Exporting the document to docx file can be achieved with the [DocxFormatProvider
 #### __[VB.NET] Example 2: Export RadFlowDocument to Docx__
 
 {{region cs-radwordsprocessing-getting-started_0}}
-        Using output As Stream = New FileStream("output.docx", FileMode.OpenOrCreate)
-            Dim provider As DocxFormatProvider = New DocxFormatProvider()
-            provider.Export(document, output)
-        End Using
+	Using output As Stream = New FileStream("output.docx", FileMode.OpenOrCreate)
+        Dim provider As Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider = New Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider()
+        provider.Export(document, output)
+    End Using
 {{endregion}}
 
 
@@ -113,7 +118,7 @@ If you want to export the same document to a PDF format you will need to use [Pd
 {{region cs-radpdfprocessing-getting-started_2}}
 	using (Stream output = File.OpenWrite("Output.pdf"))
     {
-		PdfFormatProvider providerPDF = new PdfFormatProvider();
+		Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider providerPDF = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
         providerPDF.Export(document, output);
 	}
 {{endregion}}
@@ -121,10 +126,10 @@ If you want to export the same document to a PDF format you will need to use [Pd
 #### __[VB.NET] Example 2: Export RadFlowDocument to Docx__
 
 {{region cs-radwordsprocessing-getting-started_0}}
-        Using output As Stream = File.OpenWrite("Output.pdf")
-            Dim providerPDF As PdfFormatProvider = New PdfFormatProvider()
-            providerPDF.Export(document, output)
-        End Using
+	Using output As Stream = File.OpenWrite("Output.pdf")
+        Dim providerPDF As Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider = New Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider()
+        providerPDF.Export(document, output)
+    End Using
 {{endregion}}
 
 
