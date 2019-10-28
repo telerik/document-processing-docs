@@ -28,7 +28,7 @@ Integration and Upgrades
 * [Upgrade Instructions]({% slug installation-upgrade-instructions %})
 
 Additional Tools and Resources
-* [Document and Processing SDK](https://github.com/telerik/document-processing-sdk)
+* [Document Processing SDK examples](https://github.com/telerik/document-processing-sdk)
 
 Getting started articles
 
