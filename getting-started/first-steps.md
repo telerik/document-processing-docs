@@ -58,28 +58,26 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 * __Telerik.Windows.Documents.Core.dll__
 * __Telerik.Windows.Documents.Flow.dll__
 * __Telerik.Windows.Zip.dll__
-* __Telerik.Windows.Documents.Flow.Model__
-* __Telerik.Windows.Documents.Flow.Model.Editing__
 
 Since we are going to export to a Docx and PDF file later in this example, we will also need to reference the below assemblies:
-* __Telerik.Windows.Documents.Flow.FormatProviders.Docx__
-* __Telerik.Windows.Documents.Flow.FormatProviders.Pdf__
+* __Telerik.Windows.Documents.Flow.FormatProviders.Docx.dll__
+* __Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll__
 
 > Please note that for .NET Core, the references don't contain "Windows" in the assembly names.
 
 #### __[C#] Example 1: Create RadFlowDocument__
 
 {{region cs-radwordsprocessing-getting-started_0}}
-	RadFlowDocument document = new RadFlowDocument();
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = new Telerik.Windows.Documents.Flow.Model.RadFlowDocument();
+	Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor editor = new Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor(document);
 	editor.InsertText("Hello world!");
 {{endregion}}
 
 #### __[VB.NET] Example 1: Create RadFlowDocument__
 
 {{region cs-radwordsprocessing-getting-started_0}}
-    Dim document As RadFlowDocument = New RadFlowDocument()
-    Dim editor As RadFlowDocumentEditor = New RadFlowDocumentEditor(document)
+    Dim document As Telerik.Windows.Documents.Flow.Model.RadFlowDocument = New Telerik.Windows.Documents.Flow.Model.RadFlowDocument()
+    Dim editor As Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor = New Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor(document)
     editor.InsertText("Hello world!")
 {{endregion}}
 
