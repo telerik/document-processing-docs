@@ -5,7 +5,7 @@ description: Installing Telerik Document Processing on Your Computer
 slug: installation-installing-on-your-computer
 tags: installing,document,processing
 published: True
-position: 3
+position: 5
 ---
 
 # Installing on Your Computer
