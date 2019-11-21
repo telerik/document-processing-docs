@@ -43,7 +43,7 @@ __RectangleGeometry__ represents a two-dimensional rectangle. The class exposes 
 * __Rect__: The dimensions of the rectangle.
             
 
-__Example 1__ shows hot to create a RectangleGeometry.
+__Example 1__ shows how to create a RectangleGeometry.
         
 
 #### __[C#] Example 1: Create RectangleGeometry__
