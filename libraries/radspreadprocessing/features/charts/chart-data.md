@@ -40,4 +40,7 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 
     DocumentChart chart = new DocumentChart();
     chart.SeriesGroups.Add(barSeriesGroup);
+    
+    // Add the chart to the worksheet
+    worksheet.Shapes.Add(chartShape); 
 {{endregion}}
