@@ -16,13 +16,21 @@ This topic describes the system requirements needed by Telerik Document Processi
 ## Supported Operating Systems
 
 Windows 10
+
 Windows 8, 8.1
+
 Windows 7
+
 Windows Vista
+
 Windows Server 2008
+
 Windows Server 2008 R2
+
 Windows XP SP2, SP3
+
 Windows 2000 SP4 + KB 891861*
+
 Windows Server 2003 (excluding IA-64)
 
 
