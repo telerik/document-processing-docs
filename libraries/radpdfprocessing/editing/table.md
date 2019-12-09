@@ -13,6 +13,7 @@ position: 3
 
 
 The __Table__ class helps you easily create tabular data content. All you need to do is define the table content and pass a Table instance to a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) or a [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}). From then on, these editors are responsible for positioning, measuring, drawing and splitting the table onto pages.
+
 ![Rad Pdf Processing Editing Table 01](images/RadPdfProcessing_Editing_Table_01.png)
 
 This article aims to present the table-related API in __RadPdfProcessing__. It contains the following sections:

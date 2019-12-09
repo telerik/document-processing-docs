@@ -34,7 +34,7 @@ These properties are used to hold the current graphics control parameters. The f
 
 * __StrokeDashOffset__: The dash array for graphic elements. The property is of type `double`.
 
-* __StrokeDashArray__: The stroke dash array for graphic elements. The property is of type `IEnumerable&lt;double&gt;`.
+* __StrokeDashArray__: The stroke dash array for graphic elements. The property is of type `IEnumerable<double>`.
 
 * __StrokeLineJoin__: The stroke line join for graphic elements. The property is of type [LineJoin](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Graphics.LineJoin.html).
 
