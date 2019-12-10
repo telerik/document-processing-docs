@@ -143,10 +143,10 @@ __Example 2__ creates a new style and applies it to cell *A1*.
 ## Modify Cell Style
 
 Modifying a style is even easier than creating one. All you need to do is retrieve the style from the __Styles__ collection and set the properties you need.
-        
+
 
 __Example 3__ obtains the *Bad* style from the styles collection of a workbook and modifies it.
-        
+
 
 #### __[C#] Example 3: Modify a style__
 
@@ -213,4 +213,4 @@ You can also remove a style from the __Styles__ collection. It is as easy as rem
 ## See Also
 
  * [Document Themes]({%slug radspreadprocessing-features-styling-document-themes%})
- * [Whats is a Workbook?]({%slug radspreadprocessing-working-wtih-workbooks-what-is-workbook%})
+ * [Whats is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})

@@ -13,9 +13,10 @@ position: 1
 
 
 Below you can find list with all features that are supported by PdfFormatProvider export.
-      
 
-## 
+> Please note, due to the operating system decoupling, the .NET Standard framework does not provide APIs for getting the **image properties**. Thus, in order to export them a custom implementation of the [**ImagePropertiesResolver**]({%slug radspreadprocessing-cross-platform%}) interface have to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager. 
+
+##
 <table><tr><td>
 
 Feature
