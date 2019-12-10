@@ -13,6 +13,8 @@ platforms: ajax, mvc, wpf, winforms
 
 The charts enable you to summarize the data in your spreadsheet document and make it easily readable and understandable. With RadSpreadProcessing you can add, remove and manipulate chart objects in your spreadsheet documents.
 
+> At this point, the charts are not supported for .NET Standard.
+
 ## Supported Chart Types
 
 ### Column Charts
