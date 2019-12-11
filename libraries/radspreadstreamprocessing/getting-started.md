@@ -5,7 +5,7 @@ description: Getting Started
 slug: radspreadstreamprocessing-getting-started
 tags: getting started
 published: True
-position: 2
+position: 1
 ---
 
 # Getting Started
