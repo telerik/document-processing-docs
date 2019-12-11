@@ -74,14 +74,14 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
         SpreadExtensibilityManager.ImagePropertiesResolver = imagePropertiesResolver;
     {{endregion}}
 
-* **TextMeasurer**: Gets or sets a *FlowTextMeasurerBase* instance used to provide text measuring. The TextMeasurer has a *SimpleTextMeasurer* as a default value, which provides basic functionality for text measuring.
+* **TextMeasurer**: Gets or sets a *SpreadTextMeasurerBase* instance used to provide text measuring. The TextMeasurer has a *SimpleTextMeasurer* as a default value, which provides basic functionality for text measuring.
 
-    **Example 3** shows how to set a custom implementation inheriting the FlowTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager
+    **Example 3** shows how to set a custom implementation inheriting the SpreadTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager
 
-    #### **[C#] Example 3: Set custom implementation inheriting the FlowTextMeasurerBase abstract class**
+    #### **[C#] Example 3: Set custom implementation inheriting the SpreadTextMeasurerBase abstract class**
     {{region cs-radspreadprocessing-cross-platform_2}}
 
-        FlowTextMeasurerBase customTextMeasurer = new TextInfo();
+        SpreadTextMeasurerBase customTextMeasurer = new TextInfo();
         SpreadExtensibilityManager.TextMeasurer = customTextMeasurer;
     {{endregion}}
     
