@@ -43,18 +43,18 @@ The [Limitations in .Net Standard](#limitations-in-net-standard) require some ad
 
 The new **SpreadExtensibilityManager** class is exposing two properties:
 
-* **ImagePropertiesResolver**: Gets or sets a specific *IImagePropertiesResolver* implementation.
+* **ImagePropertiesResolver**: Gets or sets an *ImagePropertiesResolverBase* instance used to resolve image properties.
 
-    > .NET Standard specification does not provide APIs for getting the image properties. Thus, in order to export them a custom implementation of the ImagePropertiesResolver interface have to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager. Please, keep in mind this properties resolver does not have a default implementation.
+    > .NET Standard specification does not define APIs for getting the image properties. Thus, in order to export them a custom implementation inheriting the ImagePropertiesResolverBase abstract class have to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager. Please, keep in mind this properties resolver does not have a default implementation.
 
-    **Example 1** shows how you can create a custom implementation of the IImagePropertiesResolver interface in Windows environment.
+    **Example 1** shows how you can create a custom implementation inheriting the ImagePropertiesResolverBase abstract class in Windows environment.
 
-    #### **[C#] Example 1: Windows Example: Creating custom class implementing the IImagePropertiesResolver interface**
+    #### **[C#] Example 1: Windows Example: Creating custom implementation inheriting the ImagePropertiesResolverBase abstract class**
     {{region cs-radspreadprocessing-cross-platform_0}}
 
-        public class ImageInfo : IImagePropertiesResolver
+        public class ImageInfo : ImagePropertiesResolverBase
         {
-            public Size GetImageSize(byte[] imageData)
+            public override Size GetImageSize(byte[] imageData)
             {
                 MemoryStream stream = new MemoryStream(imageData);
                 using (var image = new System.Drawing.Bitmap(stream))
@@ -65,24 +65,24 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
         }
     {{endregion}}
 
-    **Example 2** shows how to set the custom implementation of the IImagePropertiesResolver interface to the ImagePropertiesResolver property of the SpreadExtensibilityManager.
+    **Example 2** shows how to set the custom implementation inheriting the ImagePropertiesResolverBase abstract class to the ImagePropertiesResolver property of the SpreadExtensibilityManager.
 
-    #### **[C#] Example 2: Set the custom implementation of the IImagePropertiesResolver interface**
+    #### **[C#] Example 2: Set the custom implementation inheriting the ImagePropertiesResolverBase abstract class**
     {{region cs-radspreadprocessing-cross-platform_1}}
 
-        IImagePropertiesResolver imagePropertiesResolver = new ImageInfo();
+        ImagePropertiesResolverBase imagePropertiesResolver = new ImageInfo();
         SpreadExtensibilityManager.ImagePropertiesResolver = imagePropertiesResolver;
     {{endregion}}
 
-* **TextMeasurer**: Gets or sets a specific *IFlowTextMeasurer* implementation. The TextMeasurer has a *SimpleTextMeasurer* as a default value, which provides basic functionality for text measuring.
+* **TextMeasurer**: Gets or sets a *FlowTextMeasurerBase* instance used to provide text measuring. The TextMeasurer has a *SimpleTextMeasurer* as a default value, which provides basic functionality for text measuring.
 
-    **Example 3** shows how to set a custom implementation of the IFlowTextMeasurer interface to the TextMeasurer property of the SpreadExtensibilityManager
+    **Example 3** shows how to set a custom implementation inheriting the FlowTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager
 
-    #### **[C#] Example 3: Set custom implementation of the IFlowTextMeasurer interface**
+    #### **[C#] Example 3: Set custom implementation inheriting the FlowTextMeasurerBase abstract class**
     {{region cs-radspreadprocessing-cross-platform_2}}
 
-        IFlowTextMeasurer flowTextMeasurer = new TextInfo();
-        SpreadExtensibilityManager.TextMeasurer = flowTextMeasurer;
+        FlowTextMeasurerBase customTextMeasurer = new TextInfo();
+        SpreadExtensibilityManager.TextMeasurer = customTextMeasurer;
     {{endregion}}
     
     >tip The TextMeasurer must have a value. Otherwise, an exception is thrown.
@@ -92,7 +92,7 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
 #### Additional settings required
 
 Some functionalities require additional settings to be done:
-* Exporting images when exporting a Workbook to a PDF format requires a custom implementation of the ImagePropertiesResolver interface to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
+* Exporting images when exporting a Workbook to a PDF format requires a custom implementation inheriting the ImagePropertiesResolverBase abstract class to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
 
 #### Currently not supported
 At this point, the charts are not supported for .NET Standard.
