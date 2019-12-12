@@ -45,14 +45,6 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 		<td><b>Telerik.Documents.Spreadsheet.dll</b></td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Windows.Documents.Spreadsheet.dll</b></td>
-		<td><b>Telerik.Documents.Spreadsheet.dll</b></td>
-	</tr>
-	<tr>
-	    <td><b>Telerik.Windows.Documents.Spreadsheet.dll</b></td>
-		<td><b>Telerik.Documents.Spreadsheet.dll</b></td>
-	</tr>
-	<tr>
 	    <td colspan="2">&nbsp;</td>
 	</tr>
     <tr>
