@@ -12,14 +12,7 @@ position: 1
 
 
 
-This article will get you started in using the __RadPdfProcessing__ library. It contains the following sections:
-      
-
-* [Assembly References](#assembly-references)
-
-* [Creating a Document](#creating-a-document)
-
-* [Exporting to PDF](#exporting-to-pdf)
+This article will get you started in using the __RadPdfProcessing__ library. 
 
 
 ## Assembly References

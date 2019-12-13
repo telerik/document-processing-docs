@@ -28,7 +28,7 @@ In the .NET Framework version of PdfProcessing, scenarios like reading fonts are
 
 ### New APIs
 
-The [Limitations in .Net Standard](#limitations-in-net-standard) require some additional settings to be done, therefore, the **RadPdfProcessing** library exposes a FixedExtensibilityManager class used for providing extensibility mechanisms.
+The [limitations in .Net Standard](#limitations-in-net-standard) require some additional settings to be done, therefore, the **RadPdfProcessing** library exposes a FixedExtensibilityManager class used for providing extensibility mechanisms.
 
 #### FixedExtensibilityManager class
 
@@ -36,7 +36,7 @@ The new **FixedExtensibilityManager** class is exposing one property:
 
 * **FontsProvider**: Gets or sets a *FontsProviderBase* instance used to provide missing fonts.
 
-    > .NET Standard specification does not define APIs for getting specific fonts. PdfProcessing needs to have access to the font data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you will need to provide an implementation of the FontsProviderBase abstract class and set this implementation to the FontsProvider property of FixedExtensibilityManager.
+    >note .NET Standard specification does not define APIs for getting specific fonts. PdfProcessing needs to have access to the font data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you will need to provide an implementation of the FontsProviderBase abstract class and set this implementation to the FontsProvider property of FixedExtensibilityManager.
     
     >important If the FontsProvider property is not set, a default font will be used when exporting the document.
 
@@ -81,12 +81,15 @@ The new **FixedExtensibilityManager** class is exposing one property:
 ## Limitations in .Net Standard
 
 ### Additional settings required
+
 Some functionalities require additional settings to be done:
+
 * In order to export specific fonts, the FontsProvider property inside the FixedExtensibilityManager have to be set.
 
 ### Currently not supported
-Referencing .Net Standard binaries you can add SignatureField but can not sign or import signed documents.
 
+Referencing .Net Standard binaries you can add SignatureField but can not sign or import signed documents.
+ 
 ## See Also
 
  * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
