@@ -24,7 +24,7 @@ In order to use the model of the **RadPdfProcessing** library in your cross-plat
 
 ## What's New
 
-Developing a cross-platform project requires some code changes to be made in order to be compatible with all the environments.
+In the .NET Framework version of PdfProcessing, scenarios like reading fonts are something that comes out of the box. However, the .NET Standard doesn't specify APIs to provide this functionality built in the library, so there are some differences in both versions of PdfProcessing.
 
 ### New APIs
 
