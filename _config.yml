@@ -252,6 +252,12 @@ sdk_cdn_path: "https://cdn.rawgit.com/telerik/document-processing-sdk/master/"
 # Folders not supporting Silverlight:
 non-sl-folders: ["radwordsprocessing", "radspreadstreamprocessing"]
 
+# Folders not supporting Xamarin:
+non-xamarin-folders: ["radspreadprocessing"]
+
+# Folders not supporting .NET Core:
+non-netcore-folders: ["radspreadprocessing"]
+
 ## Do not edit below this line
 skip_tabbed_code: true
 safe: false
