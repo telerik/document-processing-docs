@@ -11,15 +11,10 @@ position: 2
 # Cross-Platform Support
 
 **Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of binaries built against the .NET Core & .NET Standard which you can reference in an application.
-* [Assembly References](#assembly-references)
-
-* [What's New](#whats-new)
-
-* [Limitations in .Net Standard](#limitations-in-net-standard)
 
 ## Assembly References
 
-In order to use the model of the **RadSpreadProcessing** library in your Cross-platform project, you need to add references to the following **.Net Standard** assemblies:
+In order to use the model of the **RadSpreadProcessing** library in your cross-platform project, you need to add references to the following **.Net Standard** assemblies:
 
 * **Telerik.Documents.Core.dll**
 * **Telerik.Documents.Spreadsheet.dll**
@@ -31,9 +26,11 @@ The following assemblies are required in order to be able to export to Xlsx and 
 * **Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll**
 * **Telerik.Zip.dll**
 
-> Please note that for .NET Framework & .NET Core compatibility pack projects, the references contain "Windows" in their assembly names (e.g. **Telerik.Windows.Documents.Core.dll**)
+> Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 
 ## What's New
+
+In the .NET Framework version of SpreadProcessing, scenarios like text measuring and exporting images to PDF are something that comes out of the box. However, the .NET Standard doesn't specify APIs to provide these functionalities built in the library, so there are some differences in both versions of SpreadProcessing.
 
 ### New APIs
 
@@ -45,9 +42,11 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
 
 * **ImagePropertiesResolver**: Gets or sets an *ImagePropertiesResolverBase* instance used to resolve image properties.
 
-    > .NET Standard specification does not define APIs for getting the image properties. Thus, in order to export them a custom implementation inheriting the ImagePropertiesResolverBase abstract class have to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager. Please, keep in mind this properties resolver does not have a default implementation.
-
-    **Example 1** shows how you can create a custom implementation inheriting the ImagePropertiesResolverBase abstract class in Windows environment.
+    > .NET Standard specification does not define APIs for getting the image properties.
+    SpreadProcessing needs to have access to GDI+ basic graphics functionality.
+    Thats why, to allow the library to get the image properties in order to export them a custom implementation inheriting the ImagePropertiesResolverBase abstract class have to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
+    
+    >important If the ImagePropertiesResolver property is not set, an exception is thrown.
 
     #### **[C#] Example 1: Windows Example: Creating custom implementation inheriting the ImagePropertiesResolverBase abstract class**
     {{region cs-radspreadprocessing-cross-platform_0}}
@@ -64,8 +63,6 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
             }
         }
     {{endregion}}
-
-    **Example 2** shows how to set the custom implementation inheriting the ImagePropertiesResolverBase abstract class to the ImagePropertiesResolver property of the SpreadExtensibilityManager.
 
     #### **[C#] Example 2: Set the custom implementation inheriting the ImagePropertiesResolverBase abstract class**
     {{region cs-radspreadprocessing-cross-platform_1}}
@@ -89,12 +86,12 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
 
 ## Limitations in .Net Standard
 
-#### Additional settings required
+### Additional settings required
 
 Some functionalities require additional settings to be done:
 * Exporting images when exporting a Workbook to a PDF format requires a custom implementation inheriting the ImagePropertiesResolverBase abstract class to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
 
-#### Currently not supported
+### Currently not supported
 At this point, the charts are not supported for .NET Standard.
 
 ## See Also
