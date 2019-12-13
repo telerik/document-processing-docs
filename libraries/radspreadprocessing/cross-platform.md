@@ -82,8 +82,7 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
         SpreadExtensibilityManager.TextMeasurer = customTextMeasurer;
     {{endregion}}
     
-    >tip The TextMeasurer must have a value. Otherwise, an exception is thrown.
-
+    
 ## Limitations in .Net Standard
 
 ### Additional settings required
