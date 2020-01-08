@@ -55,9 +55,9 @@ When creating a document with **RadSpreadStreаmProcessing**, you should have in
 
 6. Merge Cells (optional)
 
-**Example 2** shows how you could create a simple document.
+**Example 1** shows how you could create a simple document.
 
-#### **Example 1: Create a document**
+#### [C#] **Example 1: Create a document**
 
 {{region radspreadstreamprocessing-getting-started_0}}
 	using (FileStream stream = File.OpenWrite("sample.xlsx"))
