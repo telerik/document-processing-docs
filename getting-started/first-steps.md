@@ -134,7 +134,7 @@ If you want to export the same document to a PDF format you will need to use [Pd
 Run the project and you should see something like this:
 #### __Figure 2: The final result__
 
-![Main window with RadGridView](images/FinalResult.png)
+![Main window with RadGridView](images/result.png)
 
 ## Next Steps
 
