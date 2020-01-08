@@ -5,7 +5,7 @@ description: Getting Started
 slug: radspreadstreamprocessing-getting-started
 tags: getting started
 published: True
-position: 2
+position: 1
 ---
 
 # Getting Started
@@ -20,15 +20,21 @@ This article will get you started in using the **RadSpreadStreamProcessing** lib
 
 ## Assembly References
 
-In order to use **RadSpreadStreamProcessing** in your project, you will need to add a reference to:
+In order to use **RadSpreadStreamProcessing** in your project, you will need to add the references listed below.
 
-* **Telerik.Documents.SpreadsheetStreaming.dll**
-* **Telerik.Windows.Zip.dll**
+* For **.NET Framework**:
 
-To describe different colors, shapes and other properties, **RadSpreadStreamProcessing** depends on the listed below .NET assemblies, which you should also refer in your project:
+	* **Telerik.Documents.SpreadsheetStreaming.dll**
+	* **Telerik.Windows.Zip.dll**
 
-* **WindowsBase.dll**
-* **PresentationFramework.dll**
+	To describe different colors, shapes and other properties, **RadSpreadStreamProcessing** depends on the listed below .NET assemblies, which you should also refer in your project:
+
+	* **WindowsBase.dll**
+	* **PresentationFramework.dll**
+	
+* For **.NET Standard**:
+	* **Telerik.Documents.SpreadsheetStreaming.dll**
+	* **Telerik.Zip.dll**
 
 ## Create a Spreadsheet Document
 
@@ -49,9 +55,9 @@ When creating a document with **RadSpreadStreаmProcessing**, you should have in
 
 6. Merge Cells (optional)
 
-**Example 2** shows how you could create a simple document.
+**Example 1** shows how you could create a simple document.
 
-#### **Example 1: Create a document**
+#### [C#] **Example 1: Create a document**
 
 {{region radspreadstreamprocessing-getting-started_0}}
 	using (FileStream stream = File.OpenWrite("sample.xlsx"))

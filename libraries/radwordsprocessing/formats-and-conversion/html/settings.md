@@ -59,17 +59,16 @@ __Example 1__ shows how you can create and apply specific import settings.
 	HtmlImportSettings importSettings = new HtmlImportSettings();
 	
 	importSettings.GenericFonts.Serif = new ThemableFontFamily("Baskerville");
+	provider.ImportSettings = importSettings;
 	
 	byte[] data = this.GetImageData();
 	provider.ImportSettings.LoadFromUri += (s, e) =>
 	{
-	    if (e.Uri == "test.jpg")
+	    if (e.Uri == "test.jpg") // (e.Uri == "mystyle.css")
 	    {
 	        e.SetData(data);
 	    }
 	};
-	
-	provider.ImportSettings = importSettings;
 {{endregion}}
 
 > With Q3 2015 the __UriImageSource__ class has been introduced and it is not necessary to subscribe to the LoadFromUri event when you want to import an image with URI. 

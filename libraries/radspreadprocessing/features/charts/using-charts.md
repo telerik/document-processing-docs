@@ -31,7 +31,9 @@ The FloatingChartShape class exposes the following constructors, which parse the
 	* *cellIndex*: The cell index where the top left corner of the shape is positioned.
 	* *chartDataRange*: The range containing the chart data.
 	* *seriesRangesOrientation*: A value indicating whether the series of the chart will refer to vertical or horizontal ranges or the direction will be determined automatically.
-	* *chartTypes*: The types of chart that will be created. Passing more than one type will create a combo chart.
+	* *chartTypes*: The types of chart that will be created. **Passing more than one type will create a combo chart.**
+
+	>The number of chartTypes must be no more than the number of columns inside the chartDataRange minus one (the first column is used to populate the X axis), otherwise you will get an exception of type **System.NullReferenceException**.
 
 Once you have created a FloatingChartShape, you can insert it in the document through the Add() method of worksheet's Shapes property.
 
@@ -63,11 +65,30 @@ The result of executing the code in **Example 1** would look like in **Figure 1*
 
 The Chart property of FloatingChartShape holds an object of type [DocumentChart](#documentchart).
 
+#### [C#] Example 2: Create a combo (Column and Line) chart through FloatingChartShape and add it to a worksheet
+
+{{region radspreadprocessing-features-charts-using-charts_5}}
+	
+	FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(0, 5), new CellRange(0, 0, 12, 3), new[] { ChartType.Line, ChartType.Line, ChartType.Column })
+        {
+	    Width = 400,
+	    Height = 250
+	};
+	
+	worksheet.Shapes.Add(chartShape);
+
+{{endregion}}
+
+The result of executing the code in **Example 2** would look like in **Figure 2**.
+
+#### Figure 2: 
+![](images/SpreadProcessing-Features-UsingCharts_3.png)
+
 ### Changing the Appearance of FloatingChartShape
 
 The FloatingChartShape class exposes properties allowing you to customize how the shape looks like. You can control the outline of the shape as well as its fill.
 
-#### [C#] Example 2: Customize the fill and outline of FloatingChartShape
+#### [C#] Example 3: Customize the fill and outline of FloatingChartShape
 {{region radspreadprocessing-features-charts-using-charts_1}}
 
     FloatingChartShape chartShape = new FloatingChartShape(workbook.ActiveWorksheet, new CellIndex(2, 7), new CellRange(0, 0, 4, 3), ChartType.Column)
@@ -81,9 +102,9 @@ The FloatingChartShape class exposes properties allowing you to customize how th
     chartShape.Fill = new SolidFill(new ThemableColor(Colors.Cornsilk));
 {{endregion}}
 
-The result of executing the code in **Example 2** over a cell range containing sample data would look like in **Figure 2**.
+The result of executing the code in **Example 3** over a cell range containing sample data would look like in **Figure 3**.
 
-#### Figure 2: 
+#### Figure 3: 
 ![](images/SpreadProcessing-Features-UsingCharts_2.png)
 
 ## DocumentChart 
@@ -104,7 +125,7 @@ Also, a **Clone()** method is exposed, which creates a deep copy of the object.
 
 You can create a simple DocumentChart object, which is empty and then set the desired values manually.
 
-#### [C#] Example 3: Creating an empty chart and setting its values manually
+#### [C#] Example 4: Creating an empty chart and setting its values manually
 
 {{region radspreadprocessing-features-charts-using-charts_2}}
 
@@ -126,7 +147,7 @@ You can create a simple DocumentChart object, which is empty and then set the de
 
 The chart can then be used to replace the chart in an existing **FloatingChartShape**.
 
-#### [C#] Example 4: Add the DocumentChart to a worksheet
+#### [C#] Example 5: Add the DocumentChart to a worksheet
 
 {{region radspreadprocessing-features-charts-using-charts_3}}
 
@@ -150,7 +171,7 @@ The ShapeCollection (Shapes property of Worksheet) exposes two overloads which c
 
 You can access the Charts collection of the Shape collection of the Worksheet instance and enumerate the Charts.
 
-#### [C#] Example 5: Iterate all the charts in a worksheet
+#### [C#] Example 6: Iterate all the charts in a worksheet
 
 {{region radspreadprocessing-features-charts-using-charts_4}}
 

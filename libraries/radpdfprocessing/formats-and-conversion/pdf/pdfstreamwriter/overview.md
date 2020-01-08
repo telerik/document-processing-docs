@@ -15,11 +15,11 @@ This article explains the PDF Stream Writer functionality - how it works and how
 
 ## What is PdfStreamWriter?
 
-The API of PdfStreamWriter exposes a functionality that provides option for exporting PDF files with unmatched performance and minimized memory footprint. 
+The API of __PdfStreamWriter__ exposes a functionality that provides option for exporting PDF files with unmatched performance and minimized memory footprint. 
 
 The key for the memory efficiency is that the writer writes the PDF content directly to a stream without creating and preserving the PDF document model in the memory. The performance efficiency is achieved by reading PDF page content from existing PDF files without decoding or parsing the existing page content. The read content is then written unmodified directly into the new file stream. Although the existing PDF page content is not modified, it may be positioned differently into the new PDF file as well as combined with some other existing or newly generated PDF page content. 
 
-PdfStreamWriter can help you achieve the following scenarios when creating the pages of the new PDF file:
+__PdfStreamWriter__ can help you achieve the following scenarios when creating the pages of the new PDF file:
 
 - Merge pages from different PDF documents.
 
