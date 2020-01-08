@@ -21,20 +21,19 @@ Telerik Document Processing includes a set of cross-platform libraries that let 
 
 * **Telerik.Windows.Documents.Flow.FormatProviders.Pdf**: Allows exporting of flow documents (DOCX, RTF) to PDF.
 
-* **Telerik.Windows.Documents.Spreadsheet.dll**: The main assembly for the spreadsheet processing. It is needed for processing XLSX, CSV, TXT documents.
-
 * **Telerik.Documents.SpreadsheetStreaming.dll**: The main assembly for generating huge spreadsheet files using minimum resources.
+
+* **Telerik.Windows.Documents.Spreadsheet.dll**: The main assembly for the spreadsheet processing. It is needed for processing XLSX, CSV, TXT documents.
 
 * **Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll**: This assembly is needed for processing XLSX documents.
 
-* **Telerik.Windows.Documents.Fixed.dll**: This assembly is needed for processing PDF documents.
-
 * **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll**: This assembly is needed for processing PDF documents.
+
+* **Telerik.Windows.Documents.Fixed.dll**: This assembly is needed for processing PDF documents.
 
 * **Telerik.Windows.Zip.dll**: Needed for working with zipped formats (DOCX, XLSX) and PDF. It is the main assembly of the ([Telerik Zip Library]({%slug radziplibrary-overview%})).
 
 * **Telerik.Windows.Zip.Extensions.dll**: Extends **Telerik.Windows.Zip** assembly with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})).
-
 
 You can find more information on working with the Telerik Document Processing libraries in the following articles:
 
