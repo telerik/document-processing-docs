@@ -45,7 +45,7 @@ As we are going to review a UI-Independent example we will use a console project
 1. Open Microsoft Visual Studio and create a new console project
 
 #### __Figure 1: Go to File > New > Project > Console App (.Net Framework) > Next > Create__
-![Create Console Project](images/VisualStudio_NewProject_Console3.gif "Create new Console Project")
+![Create Console Project](images/VisualStudio_NewProject_Console3.gif)
 
 ## Add a Teleik Document Processing Library to a Project
 
@@ -134,7 +134,7 @@ If you want to export the same document to a PDF format you will need to use [Pd
 Run the project and you should see something like this:
 #### __Figure 2: The final result__
 
-![Main window with RadGridView](images/FinalResult.png "Exported files")
+![Main window with RadGridView](images/FinalResult.png)
 
 ## Next Steps
 
