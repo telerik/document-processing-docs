@@ -210,9 +210,9 @@ edit_repo_url: https://github.com/telerik/dpl-docs/edit/master
 product: "Telerik Document Processing"
 
 # Available for names: 
-platforms: ["UI for ASP.NET AJAX", "UI for ASP.NET MVC", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin", "UI for ASP.NET Core"]
+platforms: ["UI for ASP.NET Core", "UI for ASP.NET MVC", "UI for ASP.NET AJAX", "UI for Blazor", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin",]
 # in articles use as shown below: 
-# platforms: ajax, mvc, wpf, winforms, silverlight, xamarin, netcore
+# platforms: netcore, mvc, ajax, blazor, wpf, winforms, silverlight, xamarin
 platform: dpl
 download: https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate
 nav:
