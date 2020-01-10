@@ -2,7 +2,7 @@
 title: What is a Workbook?
 page_title: What is a Workbook?
 description: What is a Workbook?
-slug: radspreadprocessing-working-wtih-workbooks-what-is-workbook
+slug: radspreadprocessing-working-with-workbooks-what-is-workbook
 tags: what,is,a,workbook?
 published: True
 position: 0

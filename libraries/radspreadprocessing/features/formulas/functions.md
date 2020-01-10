@@ -951,6 +951,10 @@ LOWER</td><td>
 
 Converts text to lowercase</td></tr><tr><td>
 
+MID</td><td>
+
+Returns the substring of a text, starting at a specified position and with a specified length</td></tr><tr><td>
+
 REPT</td><td>
 
 Repeats text a given number of times</td></tr><tr><td>

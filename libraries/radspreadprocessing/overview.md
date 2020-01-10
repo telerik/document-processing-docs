@@ -16,13 +16,13 @@ This library enables you to work with spreadsheet documents – create ones from
 
 **RadSpreadProcessing** comes with support for:
 
-* [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}): API for insertion, positioning and deletion of images in worksheets.		
+* [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}): API for insertion, positioning and deletion of images in worksheets.
 
 * [**Charts**]({%slug radspreadprocessing-features-charts%})
 
 * [**Hyperlinks**]({%slug radspreadprocessing-features-hyperlink%}): The API enables you to add, remove, edit and search for hyperlinks in the worksheets of the document.
 
-* [**Workbook Protection**]({%slug radspreadprocessing-features-protection-workbook%}): Prevents the users from modifying the workbook by adding, removing, renaming or reordering sheets.	
+* [**Workbook Protection**]({%slug radspreadprocessing-features-protection-workbook%}): Prevents the users from modifying the workbook by adding, removing, renaming or reordering sheets.
 
 * [**Worksheet protection**]({%slug radspreadprocessing-features-protection-worksheet%}): Restricts the user from modifying the content and structure of the worksheet. Additionally, the model offers protection options that let you choose a set of commands that will be available to the user when protection is enabled.
 
@@ -44,31 +44,31 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * [**Data Validation**]({%slug radspreadprocessing-features-data-validation%}): Enables you to control the type of data or the values that users enter into a cell. Different data validation rules are available, including list, number, date, text length or custom rules.
 
-* [**Filtering**]({%slug radspreadprocessing-features-filtering%}) worksheet data.		
+* [**Filtering**]({%slug radspreadprocessing-features-filtering%}) worksheet data.
 
-* [**Sorting**]({%slug radspreadprocessing-features-sorting%}) the data in the worksheet.	
+* [**Sorting**]({%slug radspreadprocessing-features-sorting%}) the data in the worksheet.
 
 * [**Find and replace data**]({%slug radspreadprocessing-features-find-and-replace%}).
 
 * [**Freeze Panes**]({%slug radspreadprocessing-features-freeze-panes%}): Keep part of the worksheet visible at all times when scrolling.
 
 * [**Hidden rows and columns**]({%slug radspreadprocessing-working-with-rows-and-columns-hiding%}): The API of the workbook model allows you to set the hidden state of each row or column.
-		
+
 * [**Merge and unmerge cells**]({%slug radspreadprocessing-features-merge-unmerge-cells%}): You have the ability to merge two or more adjacent cells into a single cell that spans over multiple rows and columns.
 
-* **[Auto fill]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}) and [Series]({%slug radspreadprocessing-features-fill-data-automatically-series%})**: Fill cells automatically with data following a specific pattern.	
+* **[Auto fill]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}) and [Series]({%slug radspreadprocessing-features-fill-data-automatically-series%})**: Fill cells automatically with data following a specific pattern.
 
-* [**Page Setup**]({%slug radspreadprocessing-features-worksheetpagesetup%}): Set and get header and footer settings and apply various page setup options like paper size, orientation, automatic scaling, margins, breaks, etc. Apply print settings.		
+* [**Page Setup**]({%slug radspreadprocessing-features-worksheetpagesetup%}): Set and get header and footer settings and apply various page setup options like paper size, orientation, automatic scaling, margins, breaks, etc. Apply print settings.
 
 * [**History**]({%slug radspreadprocessing-features-history%}): The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. Each worksheet has its own history stack.
 
-## Supported formats: 
+## Supported formats:
 
 * [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
 
-* [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}) 
+* [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})
 
-* [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}) 
+* [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
 
 * [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only)
  
@@ -76,5 +76,5 @@ This library enables you to work with spreadsheet documents – create ones from
 ## See Also
 
 * [Getting Started]({%slug radspreadprocessing-getting-started%})
-* [What is a Workbook]({%slug radspreadprocessing-working-wtih-workbooks-what-is-workbook%})
+* [What is a Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
 * [What is a Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
