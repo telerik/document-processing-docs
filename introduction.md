@@ -23,7 +23,7 @@ Telerik Document Processing is a bundle of UI-independent, cross-platform librar
 * XLSX
 * ZIP
  
->**.NET Standard** and **.NET Core** compatible versions are available for the Telerik Document Processing libraries. Their assemblies can be downloaded from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)** and **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** suites respectively.
+>**.NET Standard** and **.NET Core** compatible versions are available for the Telerik Document Processing libraries. Their assemblies can be downloaded from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)**, **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** and **[UI for Blazor](https://www.telerik.com/blazor-ui)** suites respectively.
 
 >RadSpreadProcessing is the only one that is still available for the full .NET Framework only. Please, share your scenario and what features you would need from **SpreadProcessing for .NET Core** in the public item related to its implementation at [https://feedback.telerik.com/document-processing/1356226](https://feedback.telerik.com/document-processing/1356226).
 
@@ -44,7 +44,7 @@ Telerik Document Processing features the following components:
 
 ## Licensing
 
->Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight**. A part of the libraries is included in  as well. The libraries are subject of the license under which you've obtained the assemblies.
+>Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight**. A part of the libraries is included in  as well. The libraries are subject of the license under which you've obtained the assemblies.
 
 Learn more on how to start using Telerik Document Processing in the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) topic.
 
