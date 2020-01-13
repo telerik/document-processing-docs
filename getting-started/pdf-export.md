@@ -20,7 +20,7 @@ Depending on the scenario, you could take advantage of the different functionali
 
 * [Convert a Spreadsheet Document to PDF](#convert-a-spreadsheet-document-to-pdf)
 
->important **.NET Standard** specification does not define APIs for getting specific fonts. The PdfFormatProvider needs to have access to the font data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you will need to provide an implementation of the FontsProviderBase abstract class and set this implementation to the FontsProvider property of FixedExtensibilityManager. For detailed information, check [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
+>important The **.NET Standard** specification does not define APIs for getting specific fonts. **PdfFormatProvider** needs to have access to the font data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you will need to provide an implementation of the **FontsProviderBase** abstract class and set this implementation to the **FontsProvider** property of **FixedExtensibilityManager**. For detailed information, check the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
 
 
 ## Create a PDF Document From Scratch
