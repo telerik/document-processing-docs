@@ -33,6 +33,8 @@ In order to use __PdfFormatProvider__ you need to add references to the assembli
 
 ## Export
 
+>important The **.NET Standard** specification does not define APIs for getting specific fonts. **PdfFormatProvider** needs to have access to the font data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you will need to provide an implementation of the **FontsProviderBase** abstract class and set this implementation to the **FontsProvider** property of **FixedExtensibilityManager**. For detailed information, check the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
+
 __Example 1__ shows how to use __PdfFormatProvider__ to export a Workbook to a file.
         
 
