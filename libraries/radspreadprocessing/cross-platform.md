@@ -93,7 +93,8 @@ Some functionalities require additional settings to be done:
 * Exporting images when exporting a Workbook to a PDF format requires a custom implementation inheriting the ImagePropertiesResolverBase abstract class to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
 
 ### Currently not supported
-At this point, the charts are not supported for .NET Standard.
+ - At this point, the charts are not supported for .NET Standard.
+ - When exporting to PDF, **PNG** images are **not** supported for .NET Standard. Due to framework limitations, **only JPEG and JPEG2000 are supported**.
 
 ## See Also
 

@@ -88,7 +88,8 @@ Some functionalities require additional settings to be done:
 
 ### Currently not supported
 
-Referencing .Net Standard binaries you can add SignatureField but can not sign or import signed documents.
+ - Referencing .Net Standard binaries you can add SignatureField but can not sign or import signed documents.
+ - **PNG** images are **not** supported. Due to framework limitations, **only JPEG and JPEG2000 are supported**.
  
 ## See Also
 
