@@ -73,7 +73,7 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
 
 * **TextMeasurer**: Gets or sets a *SpreadTextMeasurerBase* instance used to provide text measuring. The TextMeasurer has a *SimpleTextMeasurer* as a default value.
 
-    >Note The SimpleTextMeasurer provides basic functionality for text measuring and it is not expected to be an all-purpose measurer.
+    > The SimpleTextMeasurer provides basic functionality for text measuring and it is not expected to be an all-purpose measurer.
 
     **Example 3** shows how to set a custom implementation inheriting the SpreadTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager
 
