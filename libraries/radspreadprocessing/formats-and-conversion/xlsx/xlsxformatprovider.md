@@ -57,7 +57,7 @@ __Example 1__ shows how to import an xlsx file using a FileStream. The code assu
 __Example 2__ demonstrates how to export an existing Workbook to an xlsx file. The snippet creates a new workbook with a single worksheet. Further, the example creates an __XlsxFormatProvider__ and invokes its __Export()__ method. Note that the __Export()__ method accepts a parameter of type __Stream__ so you can work with any of its inheritors.
         
 
-#### __[C#] Example 2: Export spreadsheet document to XLSX file__
+#### __[C#] Example 2: Export spreadsheet document to Xlsx file__
 
 {{region cs-radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider_1}}
 	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
