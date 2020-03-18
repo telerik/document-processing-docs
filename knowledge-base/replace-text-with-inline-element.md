@@ -33,25 +33,23 @@ Introducing a way to replace text with other document elements.
 
 To achieve this we will iterate the document elements of type [Run](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/model/run) and will compare their text with the desired string. If there is a match we will store the Run index and we will insert the desired element (in our example: [Break](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/model/break)) on this specific index in the **Inlines** collection. Finally we will remove the Run.
 
-#### __[C#]__
-{{region cs-kb-replace-text-with-inline-element-1}}
+```` C#
+RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+editor.InsertText("First line");
+editor.InsertText("NewLine");
+editor.InsertText("Second line");
 
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.InsertText("First line");
-    editor.InsertText("NewLine");
-    editor.InsertText("Second line");
-
-    foreach (Run run in document.EnumerateChildrenOfType<Run>().ToList())
+foreach (Run run in document.EnumerateChildrenOfType<Run>().ToList())
+{
+    if (run.Text == "NewLine")
     {
-        if (run.Text == "NewLine")
-        {
-            Paragraph paragraph = run.Paragraph;
-            int childIndex = paragraph.Inlines.IndexOf(run);
+        Paragraph paragraph = run.Paragraph;
+        int childIndex = paragraph.Inlines.IndexOf(run);
 
-            Break br = new Break(document);
-            br.BreakType = BreakType.LineBreak;
-            paragraph.Inlines.Insert(childIndex, br);
-            paragraph.Inlines.Remove(run);
-        }
+        Break br = new Break(document);
+        br.BreakType = BreakType.LineBreak;
+        paragraph.Inlines.Insert(childIndex, br);
+        paragraph.Inlines.Remove(run);
     }
-{{endregion}}
+}
+````
