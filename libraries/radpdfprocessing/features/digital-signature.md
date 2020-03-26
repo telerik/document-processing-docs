@@ -190,6 +190,8 @@ The Signature class exposes two methods allowing you to validate a signature:
     }
 {{endregion}}
 
+>To evaluate a certificate as trusted one, it must be added to the [trusted certificates on your machine](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
+
 ## Limitations
 
 There are few limitations related to the usage of digital signature in RadPdfProcessing.
