@@ -15,10 +15,10 @@ res_type: kb
 
 ## Problem  
 
-You need to create a console application using the latest .Net Core version. In this case the assemblies for WPF or WinForms version would not work because they depend on assemblies available in the Desktop compatibility pack. You may get an exception that the PresentationCore or System.Windows.Size assemblies are missing as well.  
+You need to create a console application using the latest .Net Core version. In this case the assemblies for WPF or WinForms would not work because they depend on assemblies available in the Desktop compatibility pack. You may get an exception that the **PresentationCore** or **System.Windows.Size** assemblies are missing as well.  
  
 
 ## Solution
 
-When you need to use a console application, reference the .Net Standard assemblies. They do not depend on the Windows types. The .Net standard assemblies do not have the word Windows in their names. Here is how you can download them: [NuGet packages](https://docs.telerik.com/devtools/document-processing/getting-started/Installation/nuget-packages)
+When you need to create a console application, reference the .Net Standard assemblies. They do not depend on the Windows types. The .Net standard assemblies do not have the word Windows in their names. They are available as : [NuGet packages](https://docs.telerik.com/devtools/document-processing/getting-started/Installation/nuget-packages)
 
