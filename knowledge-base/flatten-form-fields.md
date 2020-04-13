@@ -32,7 +32,7 @@ How to flatten [Form Fields]({%slug radpdfprocessing-model-interactive-forms-for
 
 ## Solution
 
-This could be achieved iterating the [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})`s [Annotations]({%slug radpdfprocessing-model-annotations-and-destinations%}) and if the type of the annotation is [Widget]({%slug radpdfprocessing-model-interactive-forms-widgets %}) to flatten its appearance.
+This could be achieved by iterating the [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})`s [Annotations]({%slug radpdfprocessing-model-annotations-and-destinations%}) and if the type of the annotation is [Widget]({%slug radpdfprocessing-model-interactive-forms-widgets %}) to flatten its appearance.
 
 ```` C#
 public static void FlattenFormFields(RadFixedDocument document)
