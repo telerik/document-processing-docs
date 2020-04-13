@@ -36,7 +36,7 @@ How to export RadFixedPage to TIFF file.
 
 ## Solution
 
-To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/overview) control form the [UI for WPF](https://docs.telerik.com/devtools/wpf/introduction) suite to create images from the RadFixedDocument pages using the **ThumbnailFactory** class.
+To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/overview) control form the [UI for WPF](https://docs.telerik.com/devtools/wpf/introduction) suite to create images from the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) pages using the **ThumbnailFactory** class.
 
 ```` C#
 byte[] data = GetDocumentData();
