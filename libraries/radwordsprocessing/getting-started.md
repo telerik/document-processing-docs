@@ -51,6 +51,20 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 	    <td colspan="2">&nbsp;</td>
 	</tr>
 	<tr>
+        <td colspan="2">If you need to export documents to PDF format, you will need to refer the following assemblies:</td> 
+    </tr>
+	<tr>
+	    <td><b>Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</b></td>
+		<td><b>Telerik.Documents.Flow.FormatProviders.Pdf.dll</b></td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Windows.Documents.Fixed.dll</b></td>
+		<td><b>Telerik.Documents.Fixed.dll</b></td>
+	</tr>
+	<tr>
+	    <td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
         <td colspan="2">To describe different colors, shapes and other properties, <b>RadWordsProcessing</b> depends on the listed below .NET assemblies, which you should also refer in your project:</td> 
     </tr>
     <tr>
