@@ -10,8 +10,6 @@ position: 1
 
 # Getting Started
 
-
-
 __RadZipLibrary__ allows you to load data from existing ZIP archives or create and edit ZIPs that can be used by other applications. You can also create ZIP archives in memory or use a stream to get data and add it to a ZIP archive.
       
 
@@ -25,10 +23,24 @@ The ZIP archive is represented by __ZipArchive__ class. It can be used in 3 mode
           
 
 * __Update__: Allows update of the existing ZIP archive. In this mode you can add new entries, read and update existing entries.
-          
 
->In order to use __RadZipLibrary__ in your application, you need to add a reference to the __Telerik.Windows.Zip__ assembly.
-                
+## Assembly References
+
+>The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**). 
+
+<table>
+<thead>
+	<tr>
+		<th>.NET Framework </th>
+		<th>.NET Standard-compatible</th>
+	</tr>
+</thead>
+	<tr>
+	    <td><b>Telerik.Windows.Zip.dll</b></td>
+		<td><b>Telerik.Zip.dll</b></td>
+	</tr>
+</tbody>
+</table>                
 
 ## Open Zip Archive
 

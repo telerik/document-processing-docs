@@ -23,23 +23,64 @@ This tutorial will take you through the creation of a sample application that us
 
 ## Assembly References
 
+>The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radwordsprocessing-cross-platform%}) article.
+
 Here is a list of assemblies that contain the __RadWordsProcessing__ functionality and need to be referenced in your project:
-        
 
-* **Telerik.Windows.Documents.Core.dll**
-* **Telerik.Windows.Documents.Flow.dll**
-* **Telerik.Windows.Zip.dll**
-
-If you need to export documents to PDF format, you will need to refer the following assemblies:
-
-* **Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll** 
-* **Telerik.Windows.Documents.Fixed.dll**
-            
-To describe different colors, shapes and other properties, **RadWordsProcessing** depends on the listed below .NET assemblies, which you should also refer in your project:
-
-* **WindowsBase.dll**
-* **PresentationCore.dll**
-* **PresentationFramework.dll**
+<table>
+<thead>
+	<tr>
+		<th>.NET Framework </th>
+		<th>.NET Standard-compatible</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><b>Telerik.Windows.Documents.Core.dll</b></td>
+		<td><b>Telerik.Documents.Core.dll</b></td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Windows.Documents.Flow.dll</b></td>
+		<td><b>Telerik.Documents.Flow.dll</b></td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Windows.Zip.dll</b></td>
+		<td><b>Telerik.Zip.dll</b></td>
+	</tr>
+	<tr>
+	    <td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+        <td colspan="2">If you need to export documents to PDF format, you will need to refer the following assemblies:</td> 
+    </tr>
+	<tr>
+	    <td><b>Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll</b></td>
+		<td><b>Telerik.Documents.Flow.FormatProviders.Pdf.dll</b></td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Windows.Documents.Fixed.dll</b></td>
+		<td><b>Telerik.Documents.Fixed.dll</b></td>
+	</tr>
+	<tr>
+	    <td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+        <td colspan="2">To describe different colors, shapes and other properties, <b>RadWordsProcessing</b> depends on the listed below .NET assemblies, which you should also refer in your project:</td> 
+    </tr>
+    <tr>
+	    <td><b>WindowsBase.dll</b></td>
+		<td><b>-</b></td>
+	</tr>
+	<tr>
+	    <td><b>PresentationCore.dll</b></td>
+		<td><b>-</b></td>
+	</tr>
+	<tr>
+	    <td><b>PresentationFramework.dll</b></td>
+		<td><b>-</b></td>
+	</tr>
+</tbody>
+</table>
 
 ## Creating RadFlowDocument from Code
 

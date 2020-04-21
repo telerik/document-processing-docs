@@ -44,7 +44,7 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 	    <td colspan="2">&nbsp;</td>
 	</tr>
 	<tr>
-        <td colspan="2">To describe different colors, shapes and other properties, RadPdfProcessing depends on the listed below .NET assemblies, which you should also refer in your project:</td> 
+        <td colspan="2">To describe different colors, shapes and other properties, <b>RadPdfProcessing</b> depends on the listed below .NET assemblies, which you should also refer in your project:</td> 
     </tr>
     <tr>
 	    <td><b>WindowsBase.dll</b></td>
