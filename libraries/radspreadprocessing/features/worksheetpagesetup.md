@@ -149,10 +149,6 @@ Through WorksheetPageSetup's __PageBreaks__ property you can manipulate the page
 
 * __TryInsertHorizontalPageBreak()__: Tries to insert a horizontal page break at some specific index. Returns true when a page break is inserted.
             
-
-* __TryInsertHorizontalPageBreak()__: Tries to insert a horizontal page break at some specific index. Returns true when a page break is inserted.
-            
-
 * __TryInsertVerticalPageBreak()__: Tries to insert a vertical page break at some specific index. Returns true when a page break is inserted.
             
 

@@ -20,21 +20,42 @@ This article will get you started in using the **RadSpreadStreamProcessing** lib
 
 ## Assembly References
 
+>The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**).
+
 In order to use **RadSpreadStreamProcessing** in your project, you will need to add the references listed below.
 
-* For **.NET Framework**:
-
-	* **Telerik.Documents.SpreadsheetStreaming.dll**
-	* **Telerik.Windows.Zip.dll**
-
-	To describe different colors, shapes and other properties, **RadSpreadStreamProcessing** depends on the listed below .NET assemblies, which you should also refer in your project:
-
-	* **WindowsBase.dll**
-	* **PresentationFramework.dll**
-	
-* For **.NET Standard**:
-	* **Telerik.Documents.SpreadsheetStreaming.dll**
-	* **Telerik.Zip.dll**
+<table>
+<thead>
+	<tr>
+		<th>.NET Framework </th>
+		<th>.NET Standard-compatible</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><b>Telerik.Documents.SpreadsheetStreaming.dll</b></td>
+		<td><b>Telerik.Documents.SpreadsheetStreaming.dll</b></td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Windows.Zip.dll</b></td>
+		<td><b>Telerik.Zip.dll</b></td>
+	</tr>
+	<tr>
+	    <td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+        <td colspan="2">To describe different colors, shapes and other properties, <b>RadSpreadStreamProcessing</b> depends on the listed below .NET assemblies, which you should also refer in your project:</td> 
+    </tr>
+    <tr>
+	    <td><b>WindowsBase.dll</b></td>
+		<td><b>-</b></td>
+	</tr>
+	<tr>
+	    <td><b>PresentationFramework.dll</b></td>
+		<td><b>-</b></td>
+	</tr>
+</tbody>
+</table>
 
 ## Create a Spreadsheet Document
 

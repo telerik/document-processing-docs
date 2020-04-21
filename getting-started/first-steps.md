@@ -24,19 +24,22 @@ Telerik Document Processing is part of several Telerik bundles and is installed 
 1. UI for ASP.NET AJAX - [Installing Telerik UI for ASP.NET AJAX](http://docs.telerik.com/devtools/aspnet-ajax/installation/which-file-do-i-need-to-install). 
 When the installation completes, the Telerik Document Processing assemblies will be available in the *AdditionalLibraries* sub-folder.
 
-2. UI for ASP.NET MVC - [Installing Telerik UI for ASP.NET MVC](http://docs.telerik.com/kendo-ui/aspnet-mvc/introduction#installation). 
+1. UI for ASP.NET MVC - [Installing Telerik UI for ASP.NET MVC](http://docs.telerik.com/kendo-ui/aspnet-mvc/introduction#installation). 
 When the installation completes, the Telerik Document Processing assemblies will be available in the *AdditionalLibraries* sub-folder.
 
-3. UI for ASP.NET Core - [Installing Telerik UI for ASP.NET Core](https://docs.telerik.com/aspnet-core/getting-started/installation/document-processing). 
+1. UI for ASP.NET Core - [Installing Telerik UI for ASP.NET Core](https://docs.telerik.com/aspnet-core/getting-started/installation/document-processing). 
 The libraries can be used through the available NuGet packages.
 
-4. UI for WPF - [Installing Telerik UI for WPF](http://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
+1. UI for Blazor - [Installing Telerik UI for Blazor](https://docs.telerik.com/blazor-ui/common-features/document-processing). 
+The libraries can be used through the available NuGet packages.
 
-5. UI for Silverlight - [Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
+1. UI for WPF - [Installing Telerik UI for WPF](http://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
 
-6. UI for WinForms - [Installing Telerik UI for WinForms](http://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer)
+1. UI for Silverlight - [Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
 
-7. UI for Xamarin - [Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/system-requirements)
+1. UI for WinForms - [Installing Telerik UI for WinForms](http://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer)
+
+1. UI for Xamarin - [Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/system-requirements)
 
 ## Creating Application with Visual Studio
 
@@ -45,7 +48,7 @@ As we are going to review a UI-Independent example we will use a console project
 1. Open Microsoft Visual Studio and create a new console project
 
 #### __Figure 1: Go to File > New > Project > Console App (.Net Framework) > Next > Create__
-![Create Console Project](images/VisualStudio_NewProject_Console3.gif)
+![Create Console Project](images/VisualStudio_NewProject_Console3.gif "Create new Console Project")
 
 ## Add a Teleik Document Processing Library to a Project
 
@@ -134,7 +137,7 @@ If you want to export the same document to a PDF format you will need to use [Pd
 Run the project and you should see something like this:
 #### __Figure 2: The final result__
 
-![Main window with RadGridView](images/FinalResult.png)
+![Exported files](images/FinalResult.png "Exported files")
 
 ## Next Steps
 

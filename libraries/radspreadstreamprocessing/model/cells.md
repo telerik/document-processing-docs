@@ -197,10 +197,48 @@ Another method, exposed by **ICellExporter** - SetFormat() - enables you to chan
 	
 	cell.SetFormat(cellFormat);
 {{endregion}}
+
 In addition to the listed properties, the SpreadCellFormat class allows you to set a style to a cell. For more information on cell styles, check [this topic]({%slug radspreadstreamprocessing-features-styling-cell-styles%})
 
-A SpreadCellFormat instance could be applied on multiple cells. However, if a property of the format changes, the new settings will be applied to the cells formatted after the modification.
+#### **[C#] Example 7: Set the value format to string, date or a number**
 
+{{region cs-radspreadstreamprocessing-model-cells_6}}
+	using (ICellExporter cell = row.CreateCellExporter())
+	{
+		SpreadCellFormat format = new SpreadCellFormat()
+		{
+			NumberFormat = "@",
+			IsBold = true
+		};
+		cell.SetFormat(format);
+		cell.SetValue("test");
+	}
+
+	using (ICellExporter cell = row.CreateCellExporter())
+	{
+		SpreadCellFormat format = new SpreadCellFormat()
+		{
+			NumberFormat = "dd/mm/yyyy",
+			IsBold = true
+		};
+		cell.SetFormat(format);
+		cell.SetValue(DateTime.Now.ToOADate());
+	}
+
+	using (ICellExporter cell = row.CreateCellExporter())
+	{
+		SpreadCellFormat format = new SpreadCellFormat()
+		{
+			NumberFormat = "#,##0.00",
+			IsBold = true
+		};
+		cell.SetFormat(format);
+		cell.SetValue(42370.12);
+	}
+
+{{endregion}}
+
+A SpreadCellFormat instance could be applied on multiple cells. However, if a property of the format changes, the new settings will be applied to the cells formatted after the modification.
 
 ## See Also
 

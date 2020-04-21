@@ -73,7 +73,7 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
 
 * **TextMeasurer**: Gets or sets a *SpreadTextMeasurerBase* instance used to provide text measuring. The TextMeasurer has a *SimpleTextMeasurer* as a default value.
 
-    >Note The SimpleTextMeasurer provides basic functionality for text measuring and it is not expected to be an all-purpose measurer.
+    > The SimpleTextMeasurer provides basic functionality for text measuring and it is not expected to be an all-purpose measurer.
 
     **Example 3** shows how to set a custom implementation inheriting the SpreadTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager
 
@@ -93,7 +93,8 @@ Some functionalities require additional settings to be done:
 * Exporting images when exporting a Workbook to a PDF format requires a custom implementation inheriting the ImagePropertiesResolverBase abstract class to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
 
 ### Currently not supported
-At this point, the charts are not supported for .NET Standard.
+ - At this point, the charts are not supported for .NET Standard.
+ - When exporting to PDF, **PNG** images are **not** supported for .NET Standard. Due to framework limitations, **only JPEG and JPEG2000 are supported**.
 
 ## See Also
 

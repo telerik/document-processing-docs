@@ -36,6 +36,12 @@ When the installation completes, the Telerik Document Processing assemblies will
 
 When the installation completes, the Telerik Document Processing assemblies will be available in the *spreadsheet* sub-folder.
 
+## UI for Blazor
+
+[Download and Installation of Document Processing Libraries](https://docs.telerik.com/blazor-ui/common-features/document-processing)
+
+The libraries can be used through the available NuGet packages.
+
 ## UI for WPF
 
 [Installing Telerik UI for WPF](http://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
