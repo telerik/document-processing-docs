@@ -21,7 +21,7 @@ res_type: kb
 	<tr>
 		<td>2020.1.310</td>
 		<td>RadPdfProcessing</td>
-		<td rowspan="2">[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)</td>
+		<td rowspan="2"><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
 	<tr>
 	    <td>2020.1.309</td>
@@ -41,6 +41,7 @@ To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/
 #### __C#__
 
 {{region  kb-export-radfixedpage-to-image1}}
+
 	byte[] data = GetDocumentData();
 		
 	RadPdfViewer pdfViewer = new RadPdfViewer();

@@ -21,7 +21,7 @@ res_type: kb
 	<tr>
 		<td>2020.1.316</td>
 		<td>RadPdfProcessing</td>
-		<td>[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)</td>
+		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
 </tbody>
 </table>
@@ -37,6 +37,7 @@ This functionality could be achieved by creating a custom class implementing [IB
 #### __C#__
 
 {{region kb-create-custom-image-bullets1}}
+
 	RadFixedDocument document = new RadFixedDocument();
 
 	Table table = new Table();
@@ -62,9 +63,10 @@ This functionality could be achieved by creating a custom class implementing [IB
  
 {{endregion}}
 
-#### __C#__
+#### __C#__ Create custom image numbering bullet
 
 {{region kb-create-custom-image-bullets2}}
+
 	private List GetCustomBullet()
 	{
 		List list = new List();
@@ -96,4 +98,26 @@ This functionality could be achieved by creating a custom class implementing [IB
 		return list;
 	}
 
+{{endregion}}
+
+#### __C#__ Creating a custom class implementing IBulletNumberingFormat
+
+{{region kb-create-custom-image-bullets2}}
+
+	internal class CustomBullet : IBulletNumberingFormat
+    {
+        private readonly Func<IListLevelsIndexer, Image> getBullet;
+
+        public CustomBullet(Func<IListLevelsIndexer, Image> getBullet)
+        {
+            this.getBullet = getBullet;
+        }
+
+        public PositionContentElement GetBulletNumberingElement(IListLevelsIndexer listLevelsIndexer)
+        {
+            Image positionContentElement = this.getBullet(listLevelsIndexer);
+            return positionContentElement;
+        }
+    }
+	
 {{endregion}}

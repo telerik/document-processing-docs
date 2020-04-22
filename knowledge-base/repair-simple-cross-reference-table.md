@@ -21,7 +21,7 @@ res_type: kb
 	<tr>
 		<td>2020.1.316</td>
 		<td>RadPdfProcessing</td>
-		<td>[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)</td>
+		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
 </tbody>
 </table>
@@ -39,6 +39,7 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 #### __C#__
 
 {{region kb-repair-simple-cross-reference-table1}}
+
 	RadFixedDocument document;
 
 	string filePath = "add-the-path-to-your-file";
@@ -55,52 +56,52 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 {{endregion}}
 
 
-#### __C#__
+#### __C#__ Repair Document With Simple Cross-Reference Table
 
 {{region kb-repair-simple-cross-reference-table2}}
 
-public MemoryStream RepairDocumentWithSimpleCrossReferenceTable(Stream corruptedPdfFile)
-{
-	string xrefKeyword = "xref";
-	long xrefIndex = corruptedPdfFile.IndexOf(xrefKeyword);
-	corruptedPdfFile.Seek(0, SeekOrigin.Begin);
-	MemoryStream repairedDocument = new MemoryStream();
-	corruptedPdfFile.CopyTo(repairedDocument);
-
-	corruptedPdfFile.Seek(xrefIndex, SeekOrigin.Begin);
-	corruptedPdfFile.ReadLine();
-	string line = corruptedPdfFile.ReadLine();
-	string[] tokens = line.Split(' ');
-	string secondToken = tokens[1].Trim();
-	int numberOfObjects = int.Parse(secondToken);
-	corruptedPdfFile.ReadLine();
-	long nextLinePosition = corruptedPdfFile.Position;
-
-	for (int pdfId = 1; pdfId < numberOfObjects; pdfId++)
+	public MemoryStream RepairDocumentWithSimpleCrossReferenceTable(Stream corruptedPdfFile)
 	{
-		repairedDocument.Seek(nextLinePosition, SeekOrigin.Begin);
-		long pdfOffset = corruptedPdfFile.IndexOf(string.Format("{0} 0 obj", pdfId));
-		repairedDocument.Write(string.Format("{0} 00000 n", pdfOffset.ToString().PadLeft(10, '0')));
+		string xrefKeyword = "xref";
+		long xrefIndex = corruptedPdfFile.IndexOf(xrefKeyword);
+		corruptedPdfFile.Seek(0, SeekOrigin.Begin);
+		MemoryStream repairedDocument = new MemoryStream();
+		corruptedPdfFile.CopyTo(repairedDocument);
 
-		corruptedPdfFile.Seek(nextLinePosition, SeekOrigin.Begin);
+		corruptedPdfFile.Seek(xrefIndex, SeekOrigin.Begin);
 		corruptedPdfFile.ReadLine();
-		nextLinePosition = corruptedPdfFile.Position;
+		string line = corruptedPdfFile.ReadLine();
+		string[] tokens = line.Split(' ');
+		string secondToken = tokens[1].Trim();
+		int numberOfObjects = int.Parse(secondToken);
+		corruptedPdfFile.ReadLine();
+		long nextLinePosition = corruptedPdfFile.Position;
+
+		for (int pdfId = 1; pdfId < numberOfObjects; pdfId++)
+		{
+			repairedDocument.Seek(nextLinePosition, SeekOrigin.Begin);
+			long pdfOffset = corruptedPdfFile.IndexOf(string.Format("{0} 0 obj", pdfId));
+			repairedDocument.Write(string.Format("{0} 00000 n", pdfOffset.ToString().PadLeft(10, '0')));
+
+			corruptedPdfFile.Seek(nextLinePosition, SeekOrigin.Begin);
+			corruptedPdfFile.ReadLine();
+			nextLinePosition = corruptedPdfFile.Position;
+		}
+
+		long startXrefPosition = corruptedPdfFile.IndexOf("startxref");
+		corruptedPdfFile.Seek(startXrefPosition, SeekOrigin.Begin);
+		corruptedPdfFile.ReadLine();
+		long xrefOffsetPosition = corruptedPdfFile.Position;
+		string corruptedOffset = corruptedPdfFile.ReadLine();
+		repairedDocument.Seek(xrefOffsetPosition, SeekOrigin.Begin);
+		repairedDocument.Write(xrefIndex.ToString().PadRight(corruptedOffset.Length));
+
+		return repairedDocument;
 	}
-
-	long startXrefPosition = corruptedPdfFile.IndexOf("startxref");
-	corruptedPdfFile.Seek(startXrefPosition, SeekOrigin.Begin);
-	corruptedPdfFile.ReadLine();
-	long xrefOffsetPosition = corruptedPdfFile.Position;
-	string corruptedOffset = corruptedPdfFile.ReadLine();
-	repairedDocument.Seek(xrefOffsetPosition, SeekOrigin.Begin);
-	repairedDocument.Write(xrefIndex.ToString().PadRight(corruptedOffset.Length));
-
-	return repairedDocument;
-}
 
 {{endregion}}
 
-#### __C#__
+#### __C#__ Extensions class providing some static methods used in RepairDocumentWithSimpleCrossReferenceTable method
 
 {{region kb-repair-simple-cross-reference-table3}}
 

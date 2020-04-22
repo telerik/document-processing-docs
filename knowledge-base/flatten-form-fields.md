@@ -21,7 +21,7 @@ res_type: kb
 	<tr>
 		<td>2020.1.316</td>
 		<td>RadPdfProcessing</td>
-		<td>[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)</td>
+		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
 </tbody>
 </table>
@@ -37,6 +37,7 @@ This could be achieved by iterating the [RadFixedPage]({%slug radpdfprocessing-m
 #### __C#__
 
 {{region kb-flatten-form-fields1}}
+
 	public static void FlattenFormFields(RadFixedDocument document)
 	{
 		foreach (RadFixedPage page in document.Pages)

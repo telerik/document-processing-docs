@@ -21,7 +21,7 @@ res_type: kb
 	<tr>
 		<td>2020.1.310</td>
 		<td>RadWordsProcessing</td>
-		<td>[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)</td>
+		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
 </tbody>
 </table>

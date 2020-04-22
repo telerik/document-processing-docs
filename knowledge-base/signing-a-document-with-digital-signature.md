@@ -21,7 +21,7 @@ res_type: kb
 	<tr>
 		<td>2020.1.310</td>
 		<td>RadPdfProcessing</td>
-		<td>[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)</td>
+		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
 </tbody>
 </table>
@@ -32,7 +32,7 @@ How to sign a document with a digital signature using [FixedContentEditor]({%slu
 
 ## Solution
 
-In order to sign a **PDF** file with the [PdfProcessing]({%slug radpdfprocessing-overview%}) library, you need an instance of the _System.Security.Cryptography.X509Certificates.[X509Certificate2](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificate2)_ class. One of the ways for creating such an instance is to provide a path to a PFX file and a password in an X509Certificate2 constructor as in the provided example.
+In order to sign a **PDF** file with the [PdfProcessing]({%slug radpdfprocessing-overview%}) library, you need an instance of the _System.Security.Cryptography.X509Certificates.[X509Certificate2](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificate2)_ class. One way to create such an instance is to provide the path to a PFX file and the password in an X509Certificate2 constructor, as in the provided example.
 
 #### __C#__
 
