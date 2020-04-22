@@ -59,7 +59,7 @@ You can modify an __Image__ element using the properties the class exposes. The 
             
 The Image class exposes also the **GetBitmapSource()** method, enabling you to obtain a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) instance representing the image.
 
->  The GetBitmapSource() method is not available in PdfProcessing for Xamarin.
+>  The GetBitmapSource() method is not available in the .NET Standard version of the PdfProcessing binaries.
 
 #### __[C#] Example 3: Obtain BitmapSource__
 

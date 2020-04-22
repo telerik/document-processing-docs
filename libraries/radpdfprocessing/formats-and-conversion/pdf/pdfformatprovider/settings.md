@@ -61,6 +61,8 @@ __ImageQuality__
 
 The **ImageQuality** property specifies the quality with which images are exported to PDF. More information about how it works is available in [this article]({%slug radpdfprocessing-concepts-imagequality%}).
 
+>note .NET Standard specification does not define APIs for converting images or scaling their quality. Thats why, to allow the library to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class and set this implementation to the **JpegImageConverter** property of the of **FixedExtensibilityManager**. For more information check the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) help article.
+
 __ComplianceLevel__
 
 Specifies the PDF/A compliance level. It can have one of the following values: 

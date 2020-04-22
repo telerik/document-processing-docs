@@ -36,7 +36,7 @@ The [limitations in .Net Standard](#limitations-in-net-standard) require some ad
 
 #### FixedExtensibilityManager class
 
-The new **FixedExtensibilityManager** class is exposing two properties:
+The new **FixedExtensibilityManager** class is exposing the following properties:
 
 * **FontsProvider**: Gets or sets a *FontsProviderBase* instance used to provide missing fonts.
 
@@ -83,8 +83,7 @@ The new **FixedExtensibilityManager** class is exposing two properties:
 
 * **JpegImageConverter**: Gets or sets a *JpegImageConverterBase* instance used to provide a Jpeg converted image data.
 
-    >note .NET Standard specification does not define APIs for converting images or scaling their quality. PdfProcessing can export only Jpeg images. Thats why, to allow the library to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to 
-    provide an implementation of the JpegImageConverterBase abstract class and set this implementation to the JpegImageConverter property of the of FixedExtensibilityManager.
+    >note .NET Standard specification does not define APIs for converting images or scaling their quality. Thats why, to allow the library to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the JpegImageConverterBase abstract class and set this implementation to the JpegImageConverter property of the of FixedExtensibilityManager.
         
     >important If the JpegImageConverter property is not set, the default implementation of the JpegImageConverter class will be used when exporting the document.
 
@@ -150,7 +149,6 @@ Some functionalities require additional settings to be done:
 ### Currently not supported
 
  - Referencing .Net Standard binaries you can add SignatureField but can not sign or import signed documents.
- - **PNG** images are **not** supported. Due to framework limitations, **only JPEG and JPEG2000 are supported**.
  
 ## See Also
 

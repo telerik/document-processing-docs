@@ -66,15 +66,9 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	    <td><b>Telerik.Windows.Zip.dll</b></td>
 		<td><b>Telerik.Zip.dll</b></td>
 	</tr>
-		<tr>
-	    <td colspan="2">&nbsp;</td>
-	</tr>
-	<tr>
-        <td colspan="2">When export to PDF format to export images different than <b>Jpeg</b> and <b>Jpeg2000</b> or ImageQuality different than High you will need to add references to the following assemblies:</td> 
-    </tr>
 	<tr>
 	    <td><b>-</b></td>
-		<td><b>Telerik.Documents.ImageUtils.dll</b></td>
+		<td><b>Telerik.Documents.ImageUtils.dll*</b></td>
 	</tr>
 	<tr>
 	    <td colspan="2">&nbsp;</td>
@@ -96,6 +90,8 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	</tr>
 </tbody>
 </table>
+
+* When export to PDF format to export images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High.
 
 ## Creating a Workbook
 
