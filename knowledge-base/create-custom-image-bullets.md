@@ -34,60 +34,66 @@ How to create a custom [ListLevel](https://docs.telerik.com/devtools/document-pr
 
 This functionality could be achieved by creating a custom class implementing [IBulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.IBulletNumberingFormat.html) and passing it to [BulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html#collapsible-Telerik_Windows_Documents_Fixed_Model_Editing_Lists_ListLevel_BulletNumberingFormat) property of the [ListLevel](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html) class.
 
-```` C#
-RadFixedDocument document = new RadFixedDocument();
+#### __C#__
 
-Table table = new Table();
-TableRow firstRow = table.Rows.AddTableRow();
-TableCell tableCell = firstRow.Cells.AddTableCell();
+{{region kb-create-custom-image-bullets1}}
+	RadFixedDocument document = new RadFixedDocument();
 
-List list = this.GetCustomBullet();
+	Table table = new Table();
+	TableRow firstRow = table.Rows.AddTableRow();
+	TableCell tableCell = firstRow.Cells.AddTableCell();
 
-Block block1 = tableCell.Blocks.AddBlock();
-block1.SetBullet(list, 0);
-block1.InsertText("Sample block text 1");
+	List list = this.GetCustomBullet();
 
-Block block2 = tableCell.Blocks.AddBlock();
-block2.SetBullet(list, 0);
-block2.InsertText("Sample block text 2");
+	Block block1 = tableCell.Blocks.AddBlock();
+	block1.SetBullet(list, 0);
+	block1.InsertText("Sample block text 1");
 
-Block block3 = tableCell.Blocks.AddBlock();
-block3.SetBullet(list, 0);
-block3.InsertText("Sample block text 3");
+	Block block2 = tableCell.Blocks.AddBlock();
+	block2.SetBullet(list, 0);
+	block2.InsertText("Sample block text 2");
 
-RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document);
-editor.InsertTable(table);
-````
+	Block block3 = tableCell.Blocks.AddBlock();
+	block3.SetBullet(list, 0);
+	block3.InsertText("Sample block text 3");
 
-```` C#
-private List GetCustomBullet()
-{
-	List list = new List();
+	RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document);
+	editor.InsertTable(table);
+ 
+{{endregion}}
 
-	for (int i = 0; i < 3; i++)
+#### __C#__
+
+{{region kb-create-custom-image-bullets2}}
+	private List GetCustomBullet()
 	{
-		ListLevel level = list.Levels.AddListLevel();
-		level.ParagraphProperties.FirstLineIndent = -72;
-		level.ParagraphProperties.LeftIndent = 0;
-		int currentLevelIndex = i;
+		List list = new List();
 
-		level.BulletNumberingFormat = new CustomBullet((indexer) =>
+		for (int i = 0; i < 3; i++)
 		{
-			Image image = new Image();
+			ListLevel level = list.Levels.AddListLevel();
+			level.ParagraphProperties.FirstLineIndent = -72;
+			level.ParagraphProperties.LeftIndent = 0;
+			int currentLevelIndex = i;
 
-			for (int levelIndex = 0; levelIndex <= currentLevelIndex; levelIndex++)
+			level.BulletNumberingFormat = new CustomBullet((indexer) =>
 			{
-				image = new Image() { Width = 25, Height = 25 };
-				using (Stream stream = new FileStream($"Images/Image{indexer.GetCurrentIndex(levelIndex)}.png", FileMode.Open))
-				{
-					image.ImageSource = new Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource(stream);
-				}
-			}
+				Image image = new Image();
 
-			return image;
-		});
+				for (int levelIndex = 0; levelIndex <= currentLevelIndex; levelIndex++)
+				{
+					image = new Image() { Width = 25, Height = 25 };
+					using (Stream stream = new FileStream($"Images/Image{indexer.GetCurrentIndex(levelIndex)}.png", FileMode.Open))
+					{
+						image.ImageSource = new Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource(stream);
+					}
+				}
+
+				return image;
+			});
+		}
+
+		return list;
 	}
 
-	return list;
-}
-````
+{{endregion}}

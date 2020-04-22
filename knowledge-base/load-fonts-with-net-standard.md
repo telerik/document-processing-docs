@@ -21,17 +21,20 @@ The __RadPdfProcessing__ version for .NET standard does not look for the fonts o
 
 Manually register the fonts in your application. 
 
-```` C#
-var fontData = File.ReadAllBytes(@"..\..\..\Roboto-Bold.TTF");
-FontsRepository.RegisterFont(new FontFamily("Roboto"), FontStyles.Normal, FontWeights.Bold, fontData);
+#### __C#__
 
-Block block = new Block();
+{{region kb-load-fonts-with-net-standard1}}
+    var fontData = File.ReadAllBytes(@"..\..\..\Roboto-Bold.TTF");
+    FontsRepository.RegisterFont(new FontFamily("Roboto"), FontStyles.Normal, FontWeights.Bold, fontData);
 
-block.InsertText(new FontFamily("Roboto"), FontStyles.Normal, FontWeights.Bold, "Text");
-editor.Position.Translate(100, 100);
-editor.DrawBlock(block);
+    Block block = new Block();
 
-````
+    block.InsertText(new FontFamily("Roboto"), FontStyles.Normal, FontWeights.Bold, "Text");
+    editor.Position.Translate(100, 100);
+    editor.DrawBlock(block);
+
+
+{{endregion}}
 
 
 

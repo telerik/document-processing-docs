@@ -36,22 +36,29 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 
 > The provided solution, however, can handle only simple cases in which the document contains a single XREF table.
 
-```` C#
-RadFixedDocument document;
+#### __C#__
 
-string filePath = "add-the-path-to-your-file";
+{{region kb-repair-simple-cross-reference-table1}}
+	RadFixedDocument document;
 
-using (Stream originalFile = File.OpenRead(filePath))
-{
-	MemoryStream repairedDocument = this.RepairDocumentWithSimpleCrossReferenceTable(originalFile);
-	using (repairedDocument)
+	string filePath = "add-the-path-to-your-file";
+
+	using (Stream originalFile = File.OpenRead(filePath))
 	{
-		document = new PdfFormatProvider().Import(repairedDocument);
+		MemoryStream repairedDocument = this.RepairDocumentWithSimpleCrossReferenceTable(originalFile);
+		using (repairedDocument)
+		{
+			document = new PdfFormatProvider().Import(repairedDocument);
+		}
 	}
-}
-````
 
-```` C#
+{{endregion}}
+
+
+#### __C#__
+
+{{region kb-repair-simple-cross-reference-table2}}
+
 public MemoryStream RepairDocumentWithSimpleCrossReferenceTable(Stream corruptedPdfFile)
 {
 	string xrefKeyword = "xref";
@@ -90,113 +97,119 @@ public MemoryStream RepairDocumentWithSimpleCrossReferenceTable(Stream corrupted
 
 	return repairedDocument;
 }
-````
 
-```` C#
-public static class PdfStreamExtensions
-{
-	private const byte LineFeed = (byte)'\n';
-	private const byte CarriageReturn = (byte)'\r';
-	private static readonly Encoding PdfEncoding = Encoding.UTF8;
+{{endregion}}
 
-	public static void Write(this Stream stream, string text)
+#### __C#__
+
+{{region kb-repair-simple-cross-reference-table3}}
+
+	public static class PdfStreamExtensions
 	{
-		byte[] bytes = PdfEncoding.GetBytes(text);
-		stream.Write(bytes, 0, bytes.Length);
-	}
+		private const byte LineFeed = (byte)'\n';
+		private const byte CarriageReturn = (byte)'\r';
+		private static readonly Encoding PdfEncoding = Encoding.UTF8;
 
-	public static long IndexOf(this Stream stream, string text)
-	{
-		byte[] bytes = PdfEncoding.GetBytes(text);
-
-		return stream.IndexOf(bytes);
-	}
-
-	public static long IndexOf(this Stream stream, byte[] byteSequence)
-	{
-		stream.Seek(0, SeekOrigin.Begin);
-
-		int byteSequenceIndexToCheck = 0;
-
-		while (!IsEndOfStream(stream))
+		public static void Write(this Stream stream, string text)
 		{
-			byte b = (byte)stream.ReadByte();
+			byte[] bytes = PdfEncoding.GetBytes(text);
+			stream.Write(bytes, 0, bytes.Length);
+		}
 
-			if (b.Equals(byteSequence[byteSequenceIndexToCheck]))
+		public static long IndexOf(this Stream stream, string text)
+		{
+			byte[] bytes = PdfEncoding.GetBytes(text);
+
+			return stream.IndexOf(bytes);
+		}
+
+		public static long IndexOf(this Stream stream, byte[] byteSequence)
+		{
+			stream.Seek(0, SeekOrigin.Begin);
+
+			int byteSequenceIndexToCheck = 0;
+
+			while (!IsEndOfStream(stream))
 			{
-				byteSequenceIndexToCheck++;
-			}
-			else if (byteSequenceIndexToCheck != 0)
-			{
-				stream.Seek(-byteSequenceIndexToCheck, SeekOrigin.Current);
-				byteSequenceIndexToCheck = 0;
+				byte b = (byte)stream.ReadByte();
+
+				if (b.Equals(byteSequence[byteSequenceIndexToCheck]))
+				{
+					byteSequenceIndexToCheck++;
+				}
+				else if (byteSequenceIndexToCheck != 0)
+				{
+					stream.Seek(-byteSequenceIndexToCheck, SeekOrigin.Current);
+					byteSequenceIndexToCheck = 0;
+				}
+
+				if (byteSequenceIndexToCheck == byteSequence.Length)
+				{
+					long oldPosition = stream.Position;
+					stream.Seek(-(byteSequence.Length + 1), SeekOrigin.Current);
+					byte previousByte = (byte)stream.ReadByte();
+					stream.Seek(oldPosition , SeekOrigin.Begin);
+
+					if (previousByte == 10 || previousByte == 13 || previousByte == 20)
+					{
+						break;
+					}
+					else
+					{
+						byteSequenceIndexToCheck = 0;
+					}
+				}
 			}
 
 			if (byteSequenceIndexToCheck == byteSequence.Length)
 			{
-				long oldPosition = stream.Position;
-				stream.Seek(-(byteSequence.Length + 1), SeekOrigin.Current);
-				byte previousByte = (byte)stream.ReadByte();
-				stream.Seek(oldPosition , SeekOrigin.Begin);
+				long startPosition = stream.Position - byteSequenceIndexToCheck;
 
-				if (previousByte == 10 || previousByte == 13 || previousByte == 20)
+				return startPosition;
+			}
+			else
+			{
+				return -1;
+			}
+		}
+
+		public static string ReadLine(this Stream stream)
+		{
+			StringBuilder stringBuilder = new StringBuilder();
+			byte b;
+			while (!IsEndOfStream(stream) && !IsLineFeed(b = (byte)stream.ReadByte()))
+			{
+				if (b != CarriageReturn)
+				{
+					stringBuilder.Append((char)b);
+				}
+				else if (!IsEndOfStream(stream) && !IsLineFeed(b = stream.Peek()))
 				{
 					break;
 				}
-				else
-				{
-					byteSequenceIndexToCheck = 0;
-				}
 			}
+
+			return stringBuilder.ToString();
 		}
 
-		if (byteSequenceIndexToCheck == byteSequence.Length)
+		public static byte Peek(this Stream stream)
 		{
-			long startPosition = stream.Position - byteSequenceIndexToCheck;
+			byte b = (byte)stream.ReadByte();
+			stream.Seek(-1, SeekOrigin.Current);
 
-			return startPosition;
+			return b;
 		}
-		else
+
+		private static bool IsLineFeed(byte b)
 		{
-			return -1;
+			return b == LineFeed;
 		}
-	}
 
-	public static string ReadLine(this Stream stream)
-	{
-		StringBuilder stringBuilder = new StringBuilder();
-		byte b;
-		while (!IsEndOfStream(stream) && !IsLineFeed(b = (byte)stream.ReadByte()))
+		private static bool IsEndOfStream(Stream stream)
 		{
-			if (b != CarriageReturn)
-			{
-				stringBuilder.Append((char)b);
-			}
-			else if (!IsEndOfStream(stream) && !IsLineFeed(b = stream.Peek()))
-			{
-				break;
-			}
+			return stream.Position >= stream.Length;
 		}
-
-		return stringBuilder.ToString();
 	}
 
-	public static byte Peek(this Stream stream)
-	{
-		byte b = (byte)stream.ReadByte();
-		stream.Seek(-1, SeekOrigin.Current);
+{{endregion}}
 
-		return b;
-	}
-
-	private static bool IsLineFeed(byte b)
-	{
-		return b == LineFeed;
-	}
-
-	private static bool IsEndOfStream(Stream stream)
-	{
-		return stream.Position >= stream.Length;
-	}
-}
-````

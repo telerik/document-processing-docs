@@ -38,38 +38,41 @@ How to export RadFixedPage to TIFF file.
 
 To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/overview) control form the [UI for WPF](https://docs.telerik.com/devtools/wpf/introduction) suite to create images from the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) pages using the **ThumbnailFactory** class.
 
-```` C#
-byte[] data = GetDocumentData();
-    
-RadPdfViewer pdfViewer = new RadPdfViewer();
+#### __C#__
 
-PdfFormatProvider provider = new PdfFormatProvider(new MemoryStream(data), FormatProviderSettings.ReadAllAtOnce);
-pdfViewer.Document = provider.Import();
+{{region  kb-export-radfixedpage-to-image1}}
+	byte[] data = GetDocumentData();
+		
+	RadPdfViewer pdfViewer = new RadPdfViewer();
 
-int pageNumber = 0;
-RadFixedPage page = pdfViewer.Document.Pages[pageNumber];
+	PdfFormatProvider provider = new PdfFormatProvider(new MemoryStream(data), FormatProviderSettings.ReadAllAtOnce);
+	pdfViewer.Document = provider.Import();
 
-ThumbnailFactory factory = new ThumbnailFactory();
+	int pageNumber = 0;
+	RadFixedPage page = pdfViewer.Document.Pages[pageNumber];
 
-ImageSource imageSource = factory.CreateThumbnail(page, page.Size);
+	ThumbnailFactory factory = new ThumbnailFactory();
 
-Image image = new Image();
-image.Source = imageSource;
+	ImageSource imageSource = factory.CreateThumbnail(page, page.Size);
 
-Grid container = new Grid();
-container.Background = Brushes.White;
-container.Children.Add(image);
-container.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
-container.Arrange(new Rect(new Point(0, 0), container.DesiredSize));
+	Image image = new Image();
+	image.Source = imageSource;
 
-RenderTargetBitmap bitmap = new RenderTargetBitmap((int)PageLayoutHelper.GetActualWidth(page), (int)PageLayoutHelper.GetActualHeight(page), 96, 96, PixelFormats.Pbgra32);
-bitmap.Render(container);
+	Grid container = new Grid();
+	container.Background = Brushes.White;
+	container.Children.Add(image);
+	container.Measure(new Size(double.PositiveInfinity, double.PositiveInfinity));
+	container.Arrange(new Rect(new Point(0, 0), container.DesiredSize));
 
-string exportedFileName = "Exported.tiff";
-using (FileStream fileStream = new FileStream(exportedFileName, FileMode.Create))
-{
-    BitmapEncoder encoder = new TiffBitmapEncoder();
-    encoder.Frames.Add(BitmapFrame.Create(bitmap));
-    encoder.Save(fileStream);
-}
-````
+	RenderTargetBitmap bitmap = new RenderTargetBitmap((int)PageLayoutHelper.GetActualWidth(page), (int)PageLayoutHelper.GetActualHeight(page), 96, 96, PixelFormats.Pbgra32);
+	bitmap.Render(container);
+
+	string exportedFileName = "Exported.tiff";
+	using (FileStream fileStream = new FileStream(exportedFileName, FileMode.Create))
+	{
+		BitmapEncoder encoder = new TiffBitmapEncoder();
+		encoder.Frames.Add(BitmapFrame.Create(bitmap));
+		encoder.Save(fileStream);
+	}
+
+{{endregion}}

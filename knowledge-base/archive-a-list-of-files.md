@@ -21,33 +21,35 @@ You need to create an archive from a list of files.
 
 Use [RadZipLibrary]({%slug radziplibrary-overview%}) to create and export the archive.
 
-```` C#
-List<string> fileNames = new List<string>();
+#### __C#__
 
-fileNames.Add(@"..\..\text.txt");
-fileNames.Add(@"..\..\text1.txt");
-fileNames.Add(@"..\..\text2.txt");
+{{region kb-archive-a-list-of-files1}}
+    List<string> fileNames = new List<string>();
 
-string zipFileName = @"..\..\Result.zip";
+    fileNames.Add(@"..\..\text.txt");
+    fileNames.Add(@"..\..\text1.txt");
+    fileNames.Add(@"..\..\text2.txt");
 
-using (Stream stream = File.Open(zipFileName, FileMode.Create))
-{
-    using (ZipArchive archive = new ZipArchive(stream, ZipArchiveMode.Create, leaveOpen: true, entryNameEncoding: null))
+    string zipFileName = @"..\..\Result.zip";
+
+    using (Stream stream = File.Open(zipFileName, FileMode.Create))
     {
-        foreach (var file in fileNames)
+        using (ZipArchive archive = new ZipArchive(stream, ZipArchiveMode.Create, leaveOpen: true, entryNameEncoding: null))
         {
-            using (ZipArchiveEntry entry = archive.CreateEntry(file))
+            foreach (var file in fileNames)
             {
-                var entryStream = entry.Open();
-                FileStream fs = new FileStream(file, FileMode.Open);
-                fs.CopyTo(entryStream);
-                entryStream.Flush();
+                using (ZipArchiveEntry entry = archive.CreateEntry(file))
+                {
+                    var entryStream = entry.Open();
+                    FileStream fs = new FileStream(file, FileMode.Open);
+                    fs.CopyTo(entryStream);
+                    entryStream.Flush();
 
-                fs.Close();
-                fs.Dispose();
+                    fs.Close();
+                    fs.Dispose();
+                }
             }
         }
     }
-}
 
-````
+{{endregion}}

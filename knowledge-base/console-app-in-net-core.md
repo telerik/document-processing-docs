@@ -20,5 +20,5 @@ You need to create a console application using the latest .Net Core version. In 
 
 ## Solution
 
-When you need to create a console application, reference the .Net Standard assemblies. They do not depend on the Windows types. The .Net standard assemblies do not have the word Windows in their names. They are available as : [NuGet packages](https://docs.telerik.com/devtools/document-processing/getting-started/Installation/nuget-packages)
+When you need to create a console application, reference the .Net Standard assemblies. They do not depend on the Windows types. The .Net standard assemblies do not have the word Windows in their names. They are available as: [NuGet packages](https://docs.telerik.com/devtools/document-processing/getting-started/Installation/nuget-packages)
 

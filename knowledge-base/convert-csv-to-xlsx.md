@@ -19,14 +19,14 @@ Th below example shows how you can easily convert a CSV file to XLSX format.
 
 ## Solution
 
-Use the SpreadProcessing library to convert the file. 
+Use the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library to convert the file. 
 
 #### __C# Convert CSV to XLSX__
 
 {{region kb-convert-to-xlsx1}}
     static void Main(string[] args)
     {
-        string fileName = @"..\..\FileName.csv";
+        string fileName = @"..\\..\FileName.csv";
         if (!File.Exists(fileName))
         {
             throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
@@ -41,7 +41,7 @@ Use the SpreadProcessing library to convert the file.
         }
 
 
-        string resultFile = @"..\..\ResultFile.xlsx";
+        string resultFile = @"..\\..\ResultFile.xlsx";
 
         var formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
