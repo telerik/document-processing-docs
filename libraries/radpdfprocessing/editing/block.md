@@ -196,9 +196,8 @@ A Block can be drawn to the content using the __Draw()__ method. The method acce
 
 ## Measuring Block Size
 
-Measuring a Block can be achieved with one of the overloads of the __Measure()__ method. Invoking the method without a parameter will return the desired size of the elements in the block and set the block's __DesiredSize__ property. The method is handy when you want to determine the size of the Block.
+Measuring a Block can be achieved with one of the overloads of the __Measure()__ method. Invoking the method without a parameter will return the desired size of the elements in the block and set the block's __DesiredSize__ property. The method is handy when you want to determine the size of the Block. When you want to wrap the text or you page has a limited space make sure to pass the available size to the method. 
         
-
 Calling the overload accepting available size measures the block in that specific size. Additionally to setting the __DesiredSize__ property, it sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
         
 
