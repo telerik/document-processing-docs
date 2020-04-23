@@ -143,6 +143,7 @@ __RadSpreadsheet__ is a UI control part of the Telerik UI for WPF/Silverlight su
 
 ## See Also
 
+ * [Using Telerik Document Processing First Steps]({%slug getting-started-first-steps%})
  * [Whats is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
  * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
