@@ -55,20 +55,23 @@ __Example 1__ shows how you can create and apply specific import settings.
 
 #### __[C#] Example 1: Create HtmlImportSettings__
 {{region cs-radwordsprocessing-formats-and-conversion-html-settings_0}}
-	HtmlFormatProvider provider = new HtmlFormatProvider();
-	HtmlImportSettings importSettings = new HtmlImportSettings();
-	
-	importSettings.GenericFonts.Serif = new ThemableFontFamily("Baskerville");
-	provider.ImportSettings = importSettings;
-	
-	byte[] data = this.GetImageData();
-	provider.ImportSettings.LoadFromUri += (s, e) =>
-	{
-	    if (e.Uri == "test.jpg") // (e.Uri == "mystyle.css")
-	    {
-	        e.SetData(data);
-	    }
-	};
+
+    HtmlFormatProvider provider = new HtmlFormatProvider();
+    HtmlImportSettings importSettings = new HtmlImportSettings();
+
+    importSettings.GenericFonts.Serif = new ThemableFontFamily("Baskerville");
+
+    provider.ImportSettings.LoadFromUri += (s, e) =>
+    {
+        // Load the data representing the resource
+        System.Net.WebClient webClient = new System.Net.WebClient();
+        byte[] data = webClient.DownloadData(e.Uri);
+
+        // Pass the loaded data to the arguments
+        e.SetData(data);
+    };
+
+    provider.ImportSettings = importSettings;
 {{endregion}}
 
 > With Q3 2015 the __UriImageSource__ class has been introduced and it is not necessary to subscribe to the LoadFromUri event when you want to import an image with URI. 
