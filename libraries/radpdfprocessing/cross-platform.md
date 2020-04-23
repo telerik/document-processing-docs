@@ -84,8 +84,10 @@ The new **FixedExtensibilityManager** class is exposing the following properties
 * **JpegImageConverter**: Gets or sets a *JpegImageConverterBase* instance used to provide a Jpeg converted image data.
 
     >note .NET Standard specification does not define APIs for converting images or scaling their quality. Thats why, to allow the library to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the JpegImageConverterBase abstract class and set this implementation to the JpegImageConverter property of the of FixedExtensibilityManager.
-        
-    >important If the JpegImageConverter property is not set, the default implementation of the JpegImageConverter class will be used when exporting the document.
+      
+    >important If the JpegImageConverter property is not set, an exception is thrown.
+    
+    The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document.
 
     #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
         {{region cs-radpdfprocessing-cross-platform_3}}
@@ -130,7 +132,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
             }
         {{endregion}}
 
-    #### **[C#] Example 5: Set the custom implementation inheriting the FontsProviderBase abstract class**
+    #### **[C#] Example 5: Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
         {{region cs-radpdfprocessing-cross-platform_3}}
 
             JpegImageConverterBase customJpegImageConverter = new CustomJpegImageConverter();

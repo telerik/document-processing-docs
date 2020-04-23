@@ -35,7 +35,7 @@ In order to use __PdfFormatProvider__ you need to add references to the assembli
 
 >note The **.NET Standard** specification does not define APIs for getting specific fonts. **PdfFormatProvider** needs to have access to the font data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you will need to provide an implementation of the **FontsProviderBase** abstract class and set this implementation to the **FontsProvider** property of **FixedExtensibilityManager**. For detailed information, check the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
 
->note  **PNG** images are **not** supported for **.NET Standard**. Due to framework limitations, **only JPEG and JPEG2000 are supported**.
+>note  In order to export images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
 
 
 __Example 1__ shows how to use __PdfFormatProvider__ to export a Workbook to a file.

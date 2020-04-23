@@ -26,6 +26,10 @@ The following assemblies are required in order to be able to export to Xlsx and 
 * **Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll**
 * **Telerik.Zip.dll**
 
+To export to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High you will need to add references to the following **.Net Standard** assembly:
+
+* **Telerik.Documents.ImageUtils.dll**
+
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 
 ## What's New
@@ -38,17 +42,24 @@ The [Limitations in .Net Standard](#limitations-in-net-standard) require some ad
 
 #### SpreadExtensibilityManager class
 
-The new **SpreadExtensibilityManager** class is exposing two properties:
+The new **SpreadExtensibilityManager** class is exposing the following properties:
 
 * **ImagePropertiesResolver**: Gets or sets an *ImagePropertiesResolverBase* instance used to resolve image properties.
 
-    > .NET Standard specification does not define APIs for getting the image properties.
-    SpreadProcessing needs to have access to GDI+ basic graphics functionality.
-    Thats why, to allow the library to get the image properties in order to export them a custom implementation inheriting the ImagePropertiesResolverBase abstract class have to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
+    > .NET Standard specification does not define APIs for getting the image properties. SpreadProcessing needs to have access to GDI+ basic graphics functionality. Thats why, to allow the library to get the image properties in order to export them an implementation inheriting the ImagePropertiesResolverBase abstract class have to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
     
     >important If the ImagePropertiesResolver property is not set, an exception is thrown.
 
-    #### **[C#] Example 1: Windows Example: Creating custom implementation inheriting the ImagePropertiesResolverBase abstract class**
+    The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the ImagePropertiesResolver class that could be used when exporting the document.
+
+    #### **[C#] Example 1: Set the default implementation of the ImagePropertiesResolver class**
+    {{region cs-radspreadprocessing-cross-platform_0}}
+
+        ImagePropertiesResolverBase imagePropertiesResolver = new ImagePropertiesResolver();
+        SpreadExtensibilityManager.ImagePropertiesResolver = imagePropertiesResolver;
+    {{endregion}}
+
+    #### **[C#] Example 2: Windows Example: Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class**
     {{region cs-radspreadprocessing-cross-platform_0}}
 
         public class ImageInfo : ImagePropertiesResolverBase
@@ -64,7 +75,7 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
         }
     {{endregion}}
 
-    #### **[C#] Example 2: Set the custom implementation inheriting the ImagePropertiesResolverBase abstract class**
+    #### **[C#] Example 3: Set the custom implementation inheriting the ImagePropertiesResolverBase abstract class**
     {{region cs-radspreadprocessing-cross-platform_1}}
 
         ImagePropertiesResolverBase imagePropertiesResolver = new ImageInfo();
@@ -77,24 +88,23 @@ The new **SpreadExtensibilityManager** class is exposing two properties:
 
     **Example 3** shows how to set a custom implementation inheriting the SpreadTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager
 
-    #### **[C#] Example 3: Set custom implementation inheriting the SpreadTextMeasurerBase abstract class**
+    #### **[C#] Example 4: Set custom implementation inheriting the SpreadTextMeasurerBase abstract class**
     {{region cs-radspreadprocessing-cross-platform_2}}
 
         SpreadTextMeasurerBase customTextMeasurer = new TextInfo();
         SpreadExtensibilityManager.TextMeasurer = customTextMeasurer;
     {{endregion}}
-    
-    
+
 ## Limitations in .Net Standard
 
 ### Additional settings required
 
 Some functionalities require additional settings to be done:
-* Exporting images when exporting a Workbook to a PDF format requires a custom implementation inheriting the ImagePropertiesResolverBase abstract class to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
+* Exporting images when exporting a Workbook to a PDF format requires an implementation inheriting the ImagePropertiesResolverBase abstract class to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
+* In order to export to PDF format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
 
 ### Currently not supported
  - At this point, the charts are not supported for .NET Standard.
- - When exporting to PDF, **PNG** images are **not** supported for .NET Standard. Due to framework limitations, **only JPEG and JPEG2000 are supported**.
 
 ## See Also
 
