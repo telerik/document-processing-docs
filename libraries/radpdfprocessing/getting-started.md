@@ -107,6 +107,7 @@ Exporting to PDF format can be achieved with the __PdfFormatProvider__ class. __
 
 ## See Also
 
+ * [Using Telerik Document Processing First Steps]({%slug getting-started-first-steps%})
  * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
