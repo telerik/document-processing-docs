@@ -17,7 +17,9 @@ This article will help you get familiar with the concepts of rows and columns.
 
 ## What is a Row? What is a Column?
 
-Rows in the document model of __RadSpreadProcessing__ are groups of cells that are on the same horizontal line. Each row is identified by a number. For example, the first row has an index 1, the second – 2 and the last – 1048576. Similarly, a column is a group of cells that are vertically stacked and appear on the same vertical line. Columns in __RadSpreadProcessing__ are identified by a letter or a combination of letters. For example, the first column is called A, the second – B and the last column is XFD.
+**Rows** in the document model of __RadSpreadProcessing__ are groups of cells that are on the same **horizontal line**. Each row is identified by a number. For example, the first row has an index 1, the second – 2 and the last – 1048576. 
+
+Similarly, a **column** is a group of cells that are vertically stacked and appear on the same **vertical line**. Columns in __RadSpreadProcessing__ are identified by a letter or a combination of letters. For example, the first column is called A, the second – B and the last column is XFD.
         
 
 ## 
