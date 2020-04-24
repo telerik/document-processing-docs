@@ -26,7 +26,7 @@ The following assemblies are required in order to be able to export to Xlsx and 
 * **Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll**
 * **Telerik.Zip.dll**
 
-To export to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High you will need to add references to the following **.Net Standard** assembly:
+To export to PDF format documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High, you will need to add references to the following **.Net Standard** assembly:
 
 * **Telerik.Documents.ImageUtils.dll**
 
@@ -101,7 +101,7 @@ The new **SpreadExtensibilityManager** class is exposing the following propertie
 
 Some functionalities require additional settings to be done:
 * Exporting images when exporting a Workbook to a PDF format requires an implementation inheriting the ImagePropertiesResolverBase abstract class to be set to the ImagePropertiesResolver property inside the SpreadExtensibilityManager.
-* In order to export to PDF format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
+* In order to export to PDF format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}).
 
 ### Currently not supported
  - At this point, the charts are not supported for .NET Standard.

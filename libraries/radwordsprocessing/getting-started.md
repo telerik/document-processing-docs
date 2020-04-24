@@ -86,7 +86,7 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 </tbody>
 </table>
 
-* If you want to export images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High.
+* When export to PDF format documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High.
 
 ## Creating RadFlowDocument from Code
 
