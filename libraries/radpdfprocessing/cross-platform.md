@@ -96,7 +96,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
             FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
         {{endregion}}
 
-    #### **[C#] Example 4: Creating custom implementation inheriting the JpegImageConverterBase abstract class**
+    #### **[C#] Example 4: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
         {{region cs-radpdfprocessing-cross-platform_2}}
 
             internal class CustomJpegImageConverter : JpegImageConverterBase
