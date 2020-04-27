@@ -14,7 +14,7 @@ res_type: kb
 |2020.1.218|PdfProcessing|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
 
 ## Problem 
-This can happen when the characters cannot be found in a specific font. In this case, we either fall back to another font or draw nothing. 
+This can happen when the characters cannot be found in a specific font. In this case, the RadPdfProcessing either falls back to another font or draws nothing. 
 
 ## Solution
 

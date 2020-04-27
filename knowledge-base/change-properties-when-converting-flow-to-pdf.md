@@ -29,8 +29,8 @@ Change the properties of the RadFlowDocument.
 
     foreach (var section in document.Sections)
     {
-        section.PageMargins = new Telerik.Windows.Documents.Primitives.Padding(150);
-        section.PageOrientation = Telerik.Windows.Documents.Model.PageOrientation.Landscape;
+        section.PageMargins = new Padding(150);
+        section.PageOrientation = PageOrientation.Landscape;
         section.PageSize = PaperTypeConverter.ToSize(PaperTypes.A4);
     }
 

@@ -26,11 +26,11 @@ Use [RadZipLibrary]({%slug radziplibrary-overview%}) to create and export the ar
 {{region kb-archive-a-list-of-files1}}
     List<string> fileNames = new List<string>();
 
-    fileNames.Add(@"..\..\text.txt");
-    fileNames.Add(@"..\..\text1.txt");
-    fileNames.Add(@"..\..\text2.txt");
+    fileNames.Add("text.txt");
+    fileNames.Add("text1.txt");
+    fileNames.Add("text2.txt");
 
-    string zipFileName = @"..\..\Result.zip";
+    string zipFileName = "Result.zip";
 
     using (Stream stream = File.Open(zipFileName, FileMode.Create))
     {

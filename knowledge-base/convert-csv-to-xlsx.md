@@ -15,7 +15,7 @@ res_type: kb
 
 ## Description
 
-Th below example shows how you can easily convert a CSV file to XLSX format.  
+The below example shows how you can easily convert a CSV file to XLSX format.  
 
 ## Solution
 

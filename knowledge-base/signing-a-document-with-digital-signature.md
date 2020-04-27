@@ -44,8 +44,8 @@ In order to sign a **PDF** file with the [PdfProcessing]({%slug radpdfprocessing
 	string certificateFilePassword = "johndoe";
 
 	// Define the certificate which will be used for the signing. 
-	System.Security.Cryptography.X509Certificates.X509Certificate2 certificate =
-		new System.Security.Cryptography.X509Certificates.X509Certificate2(certificateFilePath, certificateFilePassword);
+	X509Certificate2 certificate =
+		new X509Certificate2(certificateFilePath, certificateFilePassword);
 
 	// The name of the signature must be unique. 
 	string signatureName = "SampleSignature";
