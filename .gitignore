@@ -1,4 +1,5 @@
 
+.asset-cache/
 .bundle
 .dockerignore
 .DS_Store
@@ -6,6 +7,8 @@
 .jekyll-metadata
 .ruby-version
 /_assets/
+/_build/
+/_buildApi/
 /_common/root/
 /_data/
 /_includes/
@@ -17,6 +20,7 @@
 /fonts/
 /styles/
 _site
+_tempconfig.yml
 bs-config.js
 build-docs.sh
 copy_content.sh
@@ -26,8 +30,8 @@ Gemfile
 Gemfile.lock
 install-npm.sh
 knowledge-base.html
+modify-config.sh
 robots.txt
 search.html
 start-docs.sh
 watch.sh
-.asset-cache/
