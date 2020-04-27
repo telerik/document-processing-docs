@@ -68,7 +68,7 @@ In order to describe fully the state of the frozen panes, the following need to 
 ## Freezing Panes
 ### FreezePanes Methods
 
-Panes can be frozen through the ViewState property of the Worksheet. It is of type WorksheetViewState and exposes the following overloads of the FreezePanes method:
+Panes can be frozen through the [ViewState]({%slug radspreadprocessing-working-with-worksheets-view-state%}) property of the Worksheet. It is of type WorksheetViewState and exposes the following overloads of the FreezePanes method:
 
 * void FreezePanes(int frozenRowsCount, int frozenColumnsCount)
 * void FreezePanes(CellIndex fixedPaneTopLeftCellIndex, int frozenRowsCount, int frozenColumnsCount)
