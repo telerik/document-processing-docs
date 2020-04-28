@@ -44,6 +44,16 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 	    <td colspan="2">&nbsp;</td>
 	</tr>
 	<tr>
+        <td colspan="2">To export images different than <b>Jpeg</b> and <b>Jpeg2000</b> or ImageQuality different than High you will need to add a reference to the following assembly:</td> 
+    </tr>
+	<tr>
+	    <td><b>-</b></td>
+		<td><b>Telerik.Documents.ImageUtils.dll</b></td>
+	</tr>
+	<tr>
+	    <td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
         <td colspan="2">To describe different colors, shapes and other properties, <b>RadPdfProcessing</b> depends on the listed below .NET assemblies, which you should also refer in your project:</td> 
     </tr>
     <tr>

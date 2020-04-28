@@ -130,6 +130,8 @@ The __FloatingImage__ element exposes the following properties:
 
 This section explains the behavior of the  __Size__ property of The __Image__ object in a __FloatingImage__  and how the image sizes are exported to the supported formats.
 
+>note Currently, the PdfFormatProvider **does not support floating images** and these elements are skipped when exporting to **PDF**.
+
 * __Insert image without specifying its size__
 	* Model: Size will be Size.Empty.
 	* Export to DOCX: Size will be decoded
