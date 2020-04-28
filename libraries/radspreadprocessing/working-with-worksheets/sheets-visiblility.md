@@ -5,7 +5,7 @@ description: Sheets Visibility
 slug: radspreadprocessing-working-with-worksheets-sheets-visibility
 tags: grouping
 published: True
-position: 16
+position: 6
 ---
 
 # Sheets Visibility

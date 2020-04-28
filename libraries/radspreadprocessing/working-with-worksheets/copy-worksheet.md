@@ -1,7 +1,7 @@
 ---
 title: Copy a Worksheet
 page_title: Copy a Worksheet
-description: Iterate Through Worksheets
+description: Shows how you can copy a worksheet between workbooks.
 slug: radspreadprocessing-working-with-worksheets-copy-worksheet
 tags: copy,worksheet
 published: True
