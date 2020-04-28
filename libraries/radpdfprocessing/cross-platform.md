@@ -83,7 +83,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
 
 * **JpegImageConverter**: Gets or sets a *JpegImageConverterBase* instance used to provide a Jpeg converted image data.
 
-    >note .NET Standard specification does not define APIs for converting images or scaling their quality. Thats why, to allow the library to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the JpegImageConverterBase abstract class and set this implementation to the JpegImageConverter property of the of FixedExtensibilityManager.
+    >note To reduce file size, PDF supports only a number of compression filters like Jpeg and Jpeg2000 compression of color and grayscale images. So to allow the library to export images different than Jpeg and Jpeg2000 these images have to be converted to the one of the supported image formats. **.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the of **FixedExtensibilityManager**.
       
     >important If the JpegImageConverter property is not set, an exception is thrown.
     
@@ -146,7 +146,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
 Some functionalities require additional settings to be done:
 
 * In order to export specific fonts, the FontsProvider property inside the FixedExtensibilityManager have to be set.
-* In order to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, the JpegImageConverter property inside the FixedExtensibilityManager have to be set.
+* In order to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, the JpegImageConverter property inside the FixedExtensibilityManager must be set.
 
 ### Currently not supported
 

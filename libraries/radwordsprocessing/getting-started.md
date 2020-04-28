@@ -86,7 +86,7 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 </tbody>
 </table>
 
-* When export to PDF format documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High.
+* _The Telerik.Documents.ImageUtils.dll assembly is needed when exporting to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High._
 
 ## Creating RadFlowDocument from Code
 
