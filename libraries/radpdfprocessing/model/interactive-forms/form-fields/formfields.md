@@ -22,7 +22,7 @@ The FormField class provides the following properties:
 
 * **FieldType**: Provides the FormFieldType of the specifying field instance. This property can be used to easily recognize the type of the concrete field and easily cast the instance to the concrete FormField class inheritor.
 
-* **Name**: Provides the name of the field. Each field should have a unique name when added to a FormFieldCollection of an AcroForm.
+* **Name**: Provides the name of the field. Each field should have a unique name when added to a FormFieldCollection of an AcroForm. Since R2 2020 you can set the Name as well.
 
 * **UserInterfaceName**: Provides name used by the UI when referencing the field. Usually shown in a tooltip when hovering the field representation on the page. Also shown in error messages related to field error calculations.
 
@@ -86,6 +86,55 @@ The following list shows all the inheritors of the FormField class:
 * [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
 
 * [TexBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%})
+
+
+## Rename Form Fields
+
+In R2 2020 we introduced the __Rename__ method which allows you to rename the Form Fields. You need to pass the existing field name and the new name.  
+
+#### **[C#] Example 2: Rename Form Fields**
+{{region radpdfprocessing-model-interactive-forms-form-fields_1}}
+
+	public void RenameFields(RadFixedDocument document)
+	{
+		document.AcroForm.FormFields.Rename("OldName", "NewName");
+	}
+{{endregion}}
+
+## Merging Documents with Form Fields
+
+When merging documents that contain FormFields you need to ensure that each field the the document will have unique name. This can be achieved by using the __MergedFieldNameResolving__ event which gives you access to all used field names. 
+
+#### **[C#] Example 2: Merge files with Form Fields**
+{{region radpdfprocessing-model-interactive-forms-form-fields_2}}
+
+	public void MergeFields()
+	{
+		PdfFormatProvider provider = new PdfFormatProvider();
+		var document = provider.Import(File.ReadAllBytes(@"D:\FormFieldDoc.pdf"));
+		var document1 = provider.Import(File.ReadAllBytes(@"D:\FormFieldDoc1.pdf"));
+
+		document.MergedFieldNameResolving += Document_MergedFieldNameResolving;
+
+		document.Merge(document1);
+
+		using (FileStream fs = new FileStream(@"MergedResult.pdf", FileMode.OpenOrCreate))
+		{
+			provider.Export(document, fs);
+		}
+	
+	}
+
+	private void Document_MergedFieldNameResolving(object sender, MergedFormFieldNameResolvingEventArgs e)
+	{
+		if (e.UsedNames.Contains(e.Name))
+		{
+			e.NewName = e.Name + "1";
+		}
+	}
+
+{{endregion}}
+
 
 ## See Also
 
