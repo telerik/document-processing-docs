@@ -184,6 +184,11 @@ navigation:
     libraries/radziplibrary/features:
         title: Features
         position: 5
+        
+        
+    knowledge-base:
+        position: 100
+        
 
 ## The application virtual path
 baseurl: "/devtools/document-processing"
