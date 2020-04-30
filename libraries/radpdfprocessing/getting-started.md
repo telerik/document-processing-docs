@@ -71,6 +71,7 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 </tbody>
 </table>
 
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
 
 ## Creating a Document
 
