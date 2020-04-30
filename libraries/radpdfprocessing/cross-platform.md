@@ -24,6 +24,8 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 
 * **Telerik.Documents.ImageUtils.dll**
 
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
+
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 
 ## What's New
