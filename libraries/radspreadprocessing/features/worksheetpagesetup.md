@@ -63,7 +63,7 @@ Through the Worksheet's __WorksheetPageSetup__ property you can change the follo
 
 * __FitToPagesWide__: Specify the number of pages wide the worksheet will be scaled to when it's printed. The default value is 1.
 
-* __FitToPages__: Allows you to specify whether the worksheet will be scaled according to a number of pages. If the value of this property is *true*, the worksheet will be scaled according to the **FitToPagesWide** and **FitToPagesTall** values. Otherwise, it will be scaled according to the **ScaleFactor** value. Additionally, if **FitToPagesTall** is 0, it will only fit to width, and if **FitToPagesTall** has value of 0, it will fit to height only.
+* __FitToPages__: Allows you to specify whether the worksheet will be scaled according to a number of pages. If the value of this property is *true*, the worksheet will be scaled according to the **FitToPagesWide** and **FitToPagesTall** values. Otherwise, it will be scaled according to the **ScaleFactor** value. Additionally, if **FitToPagesTall** is 0, it will only fit to width, and if **FitToPagesWide** has value of 0, it will fit to height only.
 
 * __PrintOptions__: Specify print options such as whether to print gridlines or row and column headings.
             
