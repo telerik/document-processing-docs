@@ -13,7 +13,6 @@ position: 1
 
 
 This tutorial will take you through the creation of a sample application that uses RadWordsProcessing.
-      
 
 * [Assembly References](#assembly-references)
 
@@ -134,6 +133,7 @@ More information about the supported formats and features can be found [here]({%
 
 ## See Also
 
+* [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%})
 * [Model]({%slug radwordsprocessing-model%})
 * [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%})
 

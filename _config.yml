@@ -4,6 +4,8 @@ site_name: DocumentProcessing
 # Exclude files which should not be in the output
 exclude: [README.md,Gemfile,Gemfile.lock,_assetsApi]
 
+exclude_navigation: [knowledge-base/*]
+
 navigation:
 ## Common Start
 
@@ -182,6 +184,12 @@ navigation:
     libraries/radziplibrary/features:
         title: Features
         position: 5
+        
+        
+    knowledge-base:
+        position: 100
+        
+
 ## The application virtual path
 baseurl: "/devtools/document-processing"
 
@@ -244,6 +252,9 @@ footer_social:
     twitter: https://twitter.com/Telerik/ 
 
 api_reference_url: "api/"
+
+has_kb_portal: true
+
 
 sdk_examples: "sdk.json"
 sdk_repo_path: "https://github.com/telerik/document-processing-sdk/tree/master/"

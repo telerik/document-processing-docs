@@ -101,9 +101,9 @@ Yes
 Horizontal Alignment
               </td><td>
 
-Yes
+Partially
               </td><td>
-
+Supported Left, Center, and Right alignment
 </td></tr><tr><td>
 
 Vertical Alignment

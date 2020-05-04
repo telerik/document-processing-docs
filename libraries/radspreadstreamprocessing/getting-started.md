@@ -142,6 +142,7 @@ When creating a document with **RadSpreadStreаmProcessing**, you should have in
 
 ## See Also 
 
+* [Using Telerik Document Processing First Steps]({%slug getting-started-first-steps%})
 * [Rows]({%slug radspreadstreamprocessing-model-rows%})
 * [Columns]({%slug radspreadstreamprocessing-model-columns%})
 * [Cells]({%slug radspreadstreamprocessing-model-cells%})
