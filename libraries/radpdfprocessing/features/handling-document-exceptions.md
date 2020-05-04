@@ -3,15 +3,15 @@ title: Handling Exceptions
 page_title: Handling Exceptions
 description: Handling Exceptions
 slug: radpdfprocessing-handling-exceptions
-tags: bookmarks, outlines
+tags: exception, import
 position: 4
 ---
 # Handling Exceptions
 
 Since R2 2020 RadPdfProcessing has and exception handling mechanism. It allows to intercept and handle exceptions when the document is imported or loaded. This functionality introduces two events.
 
-* __PdfImportSettings.DocumentUnhandledException:__ The event is fired the document is imported and an exception occurs. If the __ReadingMode__ is set to **AllAtOnce** the entire document will be loaded and there is no need to use the other event.
-* __RadFixedDocument.DocumentUnhandledException:__ The event is fired when the  __ReadingMode__ is set to __OnDemand__ and an exception occurs when a particular page is loaded. 
+* __PdfImportSettings.DocumentUnhandledException:__ The event is fired when an exception occurs during document import. If the ReadingMode is set to AllAtOnce the entire document will be loaded on document import and there is no need to use the other event.
+* __RadFixedDocument.DocumentUnhandledException:__ The event is fired when an exception occurs while loading the document pages. This event can be fired when the document is imported with OnDemand ReadingMode and a particular page is loaded after the import.
 
 When both events are raised, the  __DocumentUnhandledExceptionEventArgs__ argument is passed. This argument contains two properties:
 * __Exception:__ Gets the document exception.
