@@ -128,6 +128,8 @@ The next step is to configure the other properties of the image as needed.
 
 
 Insert the image into the collection of shapes of the worksheet.  Note that the worksheet needs to be the same as the one passed in the FloatingImage constructor, otherwise an exception is thrown.
+
+>important When using the **.NET Standard** version of the RadSpreadProcessing binaries, in order to **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
         
 
 #### __[C#] Example 3: Add image to worksheet__

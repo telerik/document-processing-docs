@@ -61,6 +61,10 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 		<td><b>Telerik.Documents.Fixed.dll</b></td>
 	</tr>
 	<tr>
+	    <td><b>-</b></td>
+		<td><b>Telerik.Documents.ImageUtils.dll*</b></td>
+	</tr>
+	<tr>
 	    <td colspan="2">&nbsp;</td>
 	</tr>
 	<tr>
@@ -80,6 +84,10 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 	</tr>
 </tbody>
 </table>
+
+* _The Telerik.Documents.ImageUtils.dll assembly is needed when exporting to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High._
+
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
 
 ## Creating RadFlowDocument from Code
 

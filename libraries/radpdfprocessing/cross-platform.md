@@ -20,11 +20,17 @@ In order to use the model of the **RadPdfProcessing** library in your cross-plat
 * **Telerik.Documents.Fixed.dll**
 * **Telerik.Zip.dll**
 
+To export images different than Jpeg and Jpeg2000 or ImageQuality different than High you will need to add references to the following **.Net Standard** assembly:
+
+* **Telerik.Documents.ImageUtils.dll**
+
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
+
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 
 ## What's New
 
-In the .NET Framework version of PdfProcessing, scenarios like reading fonts are something that comes out of the box. However, the .NET Standard doesn't specify APIs to provide this functionality built in the library, so there are some differences in both versions of PdfProcessing.
+In the .NET Framework version of PdfProcessing, scenarios like reading fonts and converting images or scaling their quality are something that comes out of the box. However, the .NET Standard doesn't specify APIs to provide such functionalities built in the library, so there are some differences in both versions of PdfProcessing.
 
 ### New APIs
 
@@ -32,7 +38,7 @@ The [limitations in .Net Standard](#limitations-in-net-standard) require some ad
 
 #### FixedExtensibilityManager class
 
-The new **FixedExtensibilityManager** class is exposing one property:
+The new **FixedExtensibilityManager** class is exposing the following properties:
 
 * **FontsProvider**: Gets or sets a *FontsProviderBase* instance used to provide missing fonts.
 
@@ -77,6 +83,65 @@ The new **FixedExtensibilityManager** class is exposing one property:
         FixedExtensibilityManager.FontsProvider = fontsProvider;
     {{endregion}}
 
+* **JpegImageConverter**: Gets or sets a *JpegImageConverterBase* instance used to provide a Jpeg converted image data.
+
+    >note To reduce file size, PDF supports only a number of compression filters like Jpeg and Jpeg2000 compression of color and grayscale images. So to allow the library to export images different than Jpeg and Jpeg2000 these images have to be converted to the one of the supported image formats. **.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the of **FixedExtensibilityManager**.
+      
+    >important If the JpegImageConverter property is not set, an exception is thrown.
+    
+    The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document.
+
+    #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
+        {{region cs-radpdfprocessing-cross-platform_3}}
+
+            JpegImageConverterBase jpegImageConverter = new JpegImageConverter();
+            FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
+        {{endregion}}
+
+    #### **[C#] Example 4: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
+        {{region cs-radpdfprocessing-cross-platform_2}}
+
+            internal class CustomJpegImageConverter : JpegImageConverterBase
+            {
+                public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
+                {
+                    string[] imageSharpImageFormats = new string[] { "jpeg", "bmp", "png", "gif" };
+                    string imageFormat;
+
+                    if (this.TryGetImageFormat(imageData, out imageFormat) && imageSharpImageFormats.Contains(imageFormat.ToLower()))
+                    {
+                        using (Image imageSharp = Image.Load(imageData))
+                        {
+                            imageSharp.Mutate(x => x.BackgroundColor(Color.White));
+
+                            JpegEncoder options = new JpegEncoder
+                            {
+                                Quality = (int)imageQuality,
+                            };
+
+                            MemoryStream ms = new MemoryStream();
+                            imageSharp.SaveAsJpeg(ms, options);
+
+                            jpegImageData = ms.ToArray();
+                        }
+
+                        return true;
+                    }
+
+                    jpegImageData = null;
+                    return false;
+                }
+            }
+        {{endregion}}
+
+    #### **[C#] Example 5: Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
+        {{region cs-radpdfprocessing-cross-platform_3}}
+
+            JpegImageConverterBase customJpegImageConverter = new CustomJpegImageConverter();
+            FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
+        {{endregion}}
+
+>note A complete SDK example could be found on our [GitHub repository](https://github.com/telerik/document-processing-sdk).
 
 ## Limitations in .Net Standard
 
@@ -85,11 +150,11 @@ The new **FixedExtensibilityManager** class is exposing one property:
 Some functionalities require additional settings to be done:
 
 * In order to export specific fonts, the FontsProvider property inside the FixedExtensibilityManager have to be set.
+* In order to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, the JpegImageConverter property inside the FixedExtensibilityManager must be set.
 
 ### Currently not supported
 
  - Referencing .Net Standard binaries you can add SignatureField but can not sign or import signed documents.
- - **PNG** images are **not** supported. Due to framework limitations, **only JPEG and JPEG2000 are supported**.
  
 ## See Also
 

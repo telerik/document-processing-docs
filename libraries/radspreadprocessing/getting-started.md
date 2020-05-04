@@ -66,7 +66,11 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	    <td><b>Telerik.Windows.Zip.dll</b></td>
 		<td><b>Telerik.Zip.dll</b></td>
 	</tr>
-		<tr>
+	<tr>
+	    <td><b>-</b></td>
+		<td><b>Telerik.Documents.ImageUtils.dll*</b></td>
+	</tr>
+	<tr>
 	    <td colspan="2">&nbsp;</td>
 	</tr>
 	<tr>
@@ -86,6 +90,10 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	</tr>
 </tbody>
 </table>
+
+* _The Telerik.Documents.ImageUtils.dll assembly is needed when exporting to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High._
+
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
 
 ## Creating a Workbook
 

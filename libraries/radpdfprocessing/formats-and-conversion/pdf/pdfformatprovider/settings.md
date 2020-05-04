@@ -19,7 +19,22 @@ __PdfFormatProvider__ provides you with the ability to import/export PDF documen
 
 You can specify the import settings you wish through the __ImportSettings__ property of __PdfFormatProvider__.The available import settings are listed below:
 
-__UserPasswordNeeded__
+### __ReadingMode__ 
+
+Gets or sets the mode for loading the document pages content on import.  
+
+* __ReadAllAtOnce:__ All document pages content will be loaded on import. This is the default behavior.
+* __OnDemand:__  The document pages content will be loaded on demand. This mode is made for using with PdfViewers and only the currently visible page will be loaded. 
+
+>important Currently, the __OnDemand__ mode should be applied for use with viewers only.
+
+>note This property is available since R2 2020. 
+
+### __CopyStream__ 
+
+Gets or sets whether to copy the document stream on import. When false and ReadingMode is OnDemand, the original stream must be kept open while the document is in use. When true, the original stream can be disposed after import, regardless of the reading mode.
+
+### __UserPasswordNeeded__
 
 The event is fired when a user password is needed to open the document. The password can be specified in the __PasswordNeededEventArgs.Password__ property.
         
@@ -47,21 +62,23 @@ __Example 1__ shows how you can create a __PdfImportSettings__ object and assign
 In order to modify the way content is exported, you can set the __ExportSettings__ property of __PdfFormatProvider__. These are the modification options you can use:
         
 
-__IsEncrypted__
+### __IsEncrypted__
 
 This property specifies if the document should be encrypted. The default value is *False*. The encryption algorithm used when exporting encrypted documents is **RC4**.
 
 >This setting is ignored when __ComplianceLevel__ differs from __None__ as PDF/A compliant documents do not allow encryption.
 
-__UserPassword__
+### __UserPassword__
 
 The password to be used if the document is encrypted. The default password is an empty string.
 
-__ImageQuality__
+### __ImageQuality__
 
 The **ImageQuality** property specifies the quality with which images are exported to PDF. More information about how it works is available in [this article]({%slug radpdfprocessing-concepts-imagequality%}).
 
-__ComplianceLevel__
+>note **.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to allow the library to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the of **FixedExtensibilityManager**. For more information check the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) help article.
+
+### __ComplianceLevel__
 
 Specifies the PDF/A compliance level. It can have one of the following values: 
 

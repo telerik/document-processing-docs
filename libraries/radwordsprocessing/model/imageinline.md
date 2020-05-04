@@ -100,11 +100,14 @@ The __ImageInline__ element exposes the following properties:
 
 This section explains the behavior of the __Size__ property of The __Image__ object in an __ImageInline__ and how the image sizes are exported to the supported formats.
 
+>important When using the **.NET Standard** version of the RadWordsProcessing binaries, in order to **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
+
 * __Insert image without specifying its size__
 	* Model: Size will be Size.Empty.
 	* Export to DOCX: Size will be decoded
 	* Export to RTF: Size will be decoded
-	* Export HTML: Width and height attributes will not be exported
+	* Export to HTML: Width and height attributes will not be exported
+	* Export to PDF: Size will be decoded
 
 
 * __Insert image and set its size to Size.Empty__
@@ -112,11 +115,10 @@ This section explains the behavior of the __Size__ property of The __Image__ obj
 	* Export to DOCX: Size will be (1,1)
 	* Export to RTF: Size will be (1,1)
 	* Export to HTML: Width and height attributes will not be exported
+	* Export to PDF: Size will be (1,1)
 
 * __Inserting image without specifying its size and obtain its size later (through the property getter)__
 	* Model: Size will be decoded
-
-
 
 
 ## See Also
