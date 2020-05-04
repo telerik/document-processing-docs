@@ -141,6 +141,8 @@ The new **FixedExtensibilityManager** class is exposing the following properties
             FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
         {{endregion}}
 
+>note A complete SDK example could be found on our [GitHub repository](https://github.com/telerik/document-processing-sdk).
+
 ## Limitations in .Net Standard
 
 ### Additional settings required
