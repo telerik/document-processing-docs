@@ -5,7 +5,7 @@ type: how-to
 page_title: Create Custom Image Bullets
 slug: create-custom-image-bullets
 position: 0
-tags: 
+tags: bullets, image, listlevel, bulletnumbering, bulletnumberingformat
 res_type: kb
 ---
 
