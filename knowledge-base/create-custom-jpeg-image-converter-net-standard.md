@@ -19,7 +19,7 @@ res_type: kb
 </thead>
 <tbody>
 	<tr>
-		<td>2020.1.506</td>
+		<td>2020.2.513</td>
 		<td>RadPdfProcessing</td>
 		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
