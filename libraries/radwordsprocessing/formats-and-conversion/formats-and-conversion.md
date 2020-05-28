@@ -304,4 +304,4 @@ Supported</td><td></td><td></td><td></td></tr></table>
 
 >***The result of the fields is exported as text.
           
->****Justify alignment is currently not supported when export to PDF format. In such cases the alignment is set to Left.
+>****Justify alignment is currently not supported when exporting to PDF format, thus the content is exported with Left alignment.
