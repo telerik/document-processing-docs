@@ -10,7 +10,7 @@ position: 11
 
 # Format Codes
 
-__RadSpreadProcessing__ allows to control the appearance of the number values using Number Formats. There is a variety of predefined formats and you can define a custom one in case they are not suitable for your scenario. This article explains how to use the codes in order to create your own number format or modify one of the predefined types. More information about the predefined types can be found in [Number Formatting](%slug radspreadprocessing-features-number-formats%) article.
+__RadSpreadProcessing__ allows to control the appearance of the number values using Number Formats. There is a variety of predefined formats and you can define a custom one in case they are not suitable for your scenario. This article explains how to use the codes in order to create your own number format or modify one of the predefined types. More information about the predefined types can be found in [Number Formatting]({%slug radspreadprocessing-features-number-formats%}) article.
 
 ## Overview
 
@@ -34,23 +34,25 @@ You could display a combination of text and numbers in a cell by enclosing the t
 #### Table 1
 <table>
 <tr>
-	<th>Number Format Code </th>
-	<th>Value  </th>
-	<th>Result  </th>
+	<th>Number Format Code</th>
+	<th>Value</th>
+	<th>Result</th>
 </tr>
 
 <tr>
-	<td  rowspan="3">$ 0.00" Salary";$ –0.00" Monthly expenses";;"Invoice for "@</td>
+	<td>$ 0.00" Salary"</td>
 	<td>345</td>
-	<td>$345.00 Salary</td>
+	<td>$ 345.00 Salary</td>
 </tr>
 
 <tr>
-	<td>-50</td>
-	<td>$-50 Monthly expenses</td>
+	<td>$ –0.00" Monthly expenses"</td>
+	<td>50</td>
+	<td>$ -50 Monthly expenses</td>
 </tr>
 
 <tr>
+	<td>"Invoice for "@</td>
 	<td>electricity</td>
 	<td>Invoice for electricity</td>
 </tr>

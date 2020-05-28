@@ -13,7 +13,7 @@ position: 11
 
 Applying different formats to a number changes the appearance of the number. It is important to note, however, that a format does not change the value it is applied to. It only changes the way the value appears in the cell. This article explains the how to use the predefined number formats.
 
->note More information of how to create your own number format or modify one of the predefined types you can find in [Format Codes](%slug radspreadprocessing-features-format-codes%) help article.
+>note More information of how to create your own number format or modify one of the predefined types you can find in [Format Codes]({%slug radspreadprocessing-features-format-codes%}) help article.
 
 
 ## Available Number Formats
@@ -42,9 +42,9 @@ The document model exposes the following categories of predefined formats:
 
 * __Special format__: Designed to display numbers as postal codes (ZIP Code), phone numbers, or Social Security numbers.
 
-* __Custom format__: Allows modifying any of the predefined formats. The format also allows creating a new custom number format that is added to the list of number format codes. For more information check the [Format Codes](%slug radspreadprocessing-features-format-codes%) help article.
+* __Custom format__: Allows modifying any of the predefined formats. The format also allows creating a new custom number format that is added to the list of number format codes. For more information check the [Format Codes]({%slug radspreadprocessing-features-format-codes%}) help article.
 
-> The Date, Time and Currency formats are influenced by your OS regional settings. For more information, go to [Localization](%slug radspreadprocessing-features-format-codes#localization%).
+> The Date, Time and Currency formats are influenced by your OS regional settings. For more information, go to [Localization](http://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/format-codes.html#localization).
 
 ## Applying a Number Format
 
@@ -65,7 +65,7 @@ The following examples demonstrate how to apply a predefined format to a **CellS
 {{endregion}}
 
 **Example 1** produces the following result:	
-![Rad Spread Processing Features Number Formatting 00](images/RadSpreadProcessing_Features_Number_Formatting_New_00.jpg)
+![Rad Spread Processing Features Number Formatting 00](images/RadSpreadProcessing_Features_Number_Formatting_00.jpg)
 
 #### **[C#] Example 2: Apply number format**
 {{region cs-radspreadprocessing-features-number-formats_1}}
@@ -78,7 +78,7 @@ The following examples demonstrate how to apply a predefined format to a **CellS
 {{endregion}}
 
 **Example 2** produces the following result:	
-![Rad Spread Processing Features Number Formatting 01](images/RadSpreadProcessing_Features_Number_Formatting_New_01.jpg)
+![Rad Spread Processing Features Number Formatting 01](images/RadSpreadProcessing_Features_Number_Formatting_01.jpg)
 
 #### **[C#] Example 3: Apply currency format**
 
@@ -92,7 +92,7 @@ The following examples demonstrate how to apply a predefined format to a **CellS
 {{endregion}}
 
 **Example 3** produces the following result:	
-![Rad Spread Processing Features Number Formatting 02](images/RadSpreadProcessing_Features_Number_Formatting_New_02.jpg)
+![Rad Spread Processing Features Number Formatting 02](images/RadSpreadProcessing_Features_Number_Formatting_02.jpg)
 
 #### **[C#] Example 4: Apply accounting format**
 
@@ -106,7 +106,7 @@ The following examples demonstrate how to apply a predefined format to a **CellS
 {{endregion}}
 
 **Example 4** produces the following result:	
-![Rad Spread Processing Features Number Formatting 3](images/RadSpreadProcessing_Features_Number_Formatting_New_03.jpg)
+![Rad Spread Processing Features Number Formatting 3](images/RadSpreadProcessing_Features_Number_Formatting_03.jpg)
 
 #### **[C#] Example 5: Apply date format**
 
@@ -115,14 +115,14 @@ The following examples demonstrate how to apply a predefined format to a **CellS
 	CellValueFormat dateFormat = new CellValueFormat("m/d/yyyy");
 
 	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
+	cellSelectionA1.SetValue(1234.56789); // OR cellSelectionA1.SetValue(new DateTime(1903, 5, 18, 13, 37, 46));
 	cellSelectionA1.SetFormat(dateFormat);
 {{endregion}}
 
 **Example 5** produces the following result:	
-![Rad Spread Processing Features Number Formatting 04](images/RadSpreadProcessing_Features_Number_Formatting_New_04.jpg)
+![Rad Spread Processing Features Number Formatting 04](images/RadSpreadProcessing_Features_Number_Formatting_04.jpg)
 
-In order to show **milliseconds** in **Date Format** the predefined format could be modified like: _"m/d/yyyy HH:mm:ss.SSS"_. More information of how to create your own number format or modify one of the predefined types you can find in [Format Codes](%slug radspreadprocessing-features-format-codes%) help article.
+In order to show **milliseconds** in **Date Format** the predefined format could be modified like: _"m/d/yyyy HH:mm:ss.SSS"_. More information of how to create your own number format or modify one of the predefined types you can find in [Format Codes]({%slug radspreadprocessing-features-format-codes%}) help article.
 
 #### **[C#] Example 6: Apply time format**
 
@@ -131,14 +131,14 @@ In order to show **milliseconds** in **Date Format** the predefined format could
 	CellValueFormat timeFormat = new CellValueFormat("h:mm:ss AM/PM");
 
 	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
+	cellSelectionA1.SetValue(1234.56789); // OR cellSelectionA1.SetValue(new DateTime(1903, 5, 18, 13, 37, 46));
 	cellSelectionA1.SetFormat(timeFormat);
 {{endregion}}
 
 **Example 6** produces the following result:	
-![Rad Spread Processing Features Number Formatting 05](images/RadSpreadProcessing_Features_Number_Formatting_New_05.jpg)
+![Rad Spread Processing Features Number Formatting 05](images/RadSpreadProcessing_Features_Number_Formatting_05.jpg)
 
-In order to show **milliseconds** in **Time Format** the predefined format could be modified like: _"HH:mm:ss.SSS"_. More information of how to create your own number format or modify one of the predefined types you can find in [Format Codes](%slug radspreadprocessing-features-format-codes%) help article.
+In order to show **milliseconds** in **Time Format** the predefined format could be modified like: _"HH:mm:ss.SSS"_. More information of how to create your own number format or modify one of the predefined types you can find in [Format Codes]({%slug radspreadprocessing-features-format-codes%}) help article.
 
 #### **[C#] Example 7: Apply percentage format**
 
@@ -152,7 +152,7 @@ In order to show **milliseconds** in **Time Format** the predefined format could
 {{endregion}}
 
 **Example 7** produces the following result:	
-![Rad Spread Processing Features Number Formatting 06](images/RadSpreadProcessing_Features_Number_Formatting_New_06.jpg)
+![Rad Spread Processing Features Number Formatting 06](images/RadSpreadProcessing_Features_Number_Formatting_06.jpg)
 
 #### **[C#] Example 8: Apply fraction format**
 
@@ -166,7 +166,7 @@ In order to show **milliseconds** in **Time Format** the predefined format could
 {{endregion}}
 
 **Example 8** produces the following result:	
-![Rad Spread Processing Features Number Formatting 07](images/RadSpreadProcessing_Features_Number_Formatting_New_07.jpg)
+![Rad Spread Processing Features Number Formatting 07](images/RadSpreadProcessing_Features_Number_Formatting_07.jpg)
 
 #### **[C#] Example 9: Apply scientific format**
 
@@ -180,7 +180,7 @@ In order to show **milliseconds** in **Time Format** the predefined format could
 {{endregion}}
 
 **Example 9** produces the following result:	
-![Rad Spread Processing Features Number Formatting 08](images/RadSpreadProcessing_Features_Number_Formatting_New_08.jpg)
+![Rad Spread Processing Features Number Formatting 08](images/RadSpreadProcessing_Features_Number_Formatting_08.jpg)
 
 #### **[C#] Example 10: Apply text format**
 
@@ -194,7 +194,7 @@ In order to show **milliseconds** in **Time Format** the predefined format could
 {{endregion}}
 
 **Example 10** produces the following result:	
-![Rad Spread Processing Features Number Formatting 09](images/RadSpreadProcessing_Features_Number_Formatting_New_09.jpg)
+![Rad Spread Processing Features Number Formatting 09](images/RadSpreadProcessing_Features_Number_Formatting_09.jpg)
 
 #### **[C#] Example 11: Apply special format**
 
@@ -208,7 +208,7 @@ In order to show **milliseconds** in **Time Format** the predefined format could
 {{endregion}}
 
 **Example 11** produces the following result:	
-![Rad Spread Processing Features Number Formatting 10](images/RadSpreadProcessing_Features_Number_Formatting_New_10.jpg)
+![Rad Spread Processing Features Number Formatting 10](images/RadSpreadProcessing_Features_Number_Formatting_10.jpg)
 
 #### **[C#] Example 12: Apply custom format**
 
@@ -234,9 +234,9 @@ In order to show **milliseconds** in **Time Format** the predefined format could
 {{endregion}}
 
 **Example 12** produces the following result:	
-![Rad Spread Processing Features Number Formatting 11](images/RadSpreadProcessing_Features_Number_Formatting_New_11.jpg)
+![Rad Spread Processing Features Number Formatting 11](images/RadSpreadProcessing_Features_Number_Formatting_11.jpg)
 
-More information of how to create your own number format or modify one of the predefined types you can find in [Format Codes](%slug radspreadprocessing-features-format-codes%) help article.
+More information of how to create your own number format or modify one of the predefined types you can find in [Format Codes]({%slug radspreadprocessing-features-format-codes%}) help article.
 
 ## Retrieving a Number Format
 
