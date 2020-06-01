@@ -12,7 +12,11 @@ position: 0
 
 Welcome to __Telerik Document Processing__!
 
-Telerik Document Processing is a bundle of UI-independent, cross-platform libraries enabling you to process the most commonly used flow, fixed and spreadsheet document formats. The components allow to create, import, modify and export documents, without external dependencies, and supporting the following file formats:
+Telerik Document Processing is a bundle of UI-independent, cross-platform libraries enabling you to process the most commonly used flow, fixed and spreadsheet document formats. The components allow to create, import, modify and export documents, without external dependencies. To read more about the benefits of using Telerik Document Processing, please visit the [product overview page](https://www.telerik.com/document-processing-libraries).
+
+
+
+Telerik Document Processing libraries support the following file formats:
 
 * CSV
 * DOCX
@@ -24,6 +28,59 @@ Telerik Document Processing is a bundle of UI-independent, cross-platform librar
 * ZIP
  
 >**.NET Standard** and **.NET Core** compatible versions are available for the Telerik Document Processing libraries. Their assemblies can be downloaded from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)**, **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** and **[UI for Blazor](https://www.telerik.com/blazor-ui)** suites respectively.
+
+<style>
+/* Document Processing download trial button */
+div#document_processing_trial {
+	text-align: center !important;
+}
+
+div#document_processing_trial .document_processing_download_btn {	
+	color: #fff;
+	background-color: #e74b3c;
+	padding:.44em .9em .52em;
+	font-size: 20px;
+	font-weight:400;
+	letter-spacing:-.025em;
+	position:relative;
+	display:inline-block;
+	line-height:1.2;
+	-webkit-transition:color .2s ease,background-color .2s ease;
+	transition:color .2s ease,background-color .2s ease;
+	border-radius:2px;
+	-webkit-appearance:none;
+	font-family:Metric,Arial,Gadget,sans-serif;
+	text-align:center	
+}
+</style>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+	  var mac = navigator.userAgent.match(/(Mac)/i);
+	  var $btnWin = $(".js-btnWin");
+	  var $btnOSX = $(".js-btnOSX");
+
+	  if (mac) {
+		$btnOSX.show();
+		$btnWin.hide();
+	  } else {
+		$btnOSX.hide();
+		$btnWin.show();
+	  }
+  });
+
+</script>
+
+<div id="document_processing_trial">
+<br />
+<a href="https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate" class="document_processing_download_btn js-btnWin" style="display: none">Download Free Trial</a>
+<a href="https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate" class="document_processing_download_btn js-btnOSX" style="display: none">Download Free Trial</a>
+</div>
+
+## Getting Started
+
+If you would like to directly start using the libraries, go to the [First Steps]({%slug getting-started-first-steps%}) topic that walks you through creating a sample application with them.
 
 ## Libraries
 
@@ -39,10 +96,22 @@ Telerik Document Processing features the following components:
 
 * [RadZipLibrary]({%slug radziplibrary-overview%}): Compress and decompress ZIP files.
 
+## Trial Version and Commercial License
 
-## Licensing
+Telerik Document Processing is a commercial library. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to [purchase a license](https://www.telerik.com/purchase.aspx). Feel free to review the Telerik [License Agreement](https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s) to get acquainted with the full terms of use.	
 
->Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight**. A part of the libraries is included in  as well. The libraries are subject of the license under which you've obtained the assemblies.
+>Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight**. The libraries are subject of the license under which you've obtained the assemblies.
 
-Learn more on how to start using Telerik Document Processing in the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) topic.
+## Support Options
 
+For any issues you might encounter while working with Telerik Document Processing, use any of the available support channels:
+
+* License holders and active trialists can take advantage of our outstanding customer support delivered by the developers building the library. To submit a support ticket, use the [dedicated support system](https://www.telerik.com/account/support-tickets?pid=1886&supcId=daf62541-57e0-b84c-8b5e-da9851c61873&fbp=false).
+* Our [forums](https://www.telerik.com/forums/telerik-document-processing) are part of the free support you can get from the community and from the team on all kinds of general issues.
+* Our [feedback portal](https://feedback.telerik.com/document-processing) provides information on the features/bugs in discussion and also the planned ones for release.
+* You may still need a tailor-made solution for your project. In such cases, go straight to [Progress Services](https://www.progress.com/services).
+
+## Learning Resources
+
+* [Knowledge Base](https://docs.telerik.com/devtools/document-processing/knowledge-base)
+* [Virtual Classroom](https://www.telerik.com/account/support/virtual-classroom)
