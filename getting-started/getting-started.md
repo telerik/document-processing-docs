@@ -79,3 +79,4 @@ You can find more information on working with the Telerik Document Processing li
 
 * [System Requirements]({%slug installation-system-requirements%})
 * [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
+* [First Steps in using Telerik Document Processing]({%slug getting-started-first-steps%})

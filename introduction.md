@@ -115,3 +115,8 @@ For any issues you might encounter while working with Telerik Document Processin
 
 * [Knowledge Base](https://docs.telerik.com/devtools/document-processing/knowledge-base)
 * [Virtual Classroom](https://www.telerik.com/account/support/virtual-classroom)
+
+## Next Steps
+
+- [Document Processing Libraries Overview]({%slug getting-started%})
+- [First Steps in using Telerik Document Processing]({%slug getting-started-first-steps%})
