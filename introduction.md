@@ -8,9 +8,7 @@ published: True
 position: 0
 ---
 
-# Introduction
-
-Welcome to __Telerik Document Processing__!
+# Welcome to Telerik Document Processing Libraries
 
 Telerik Document Processing is a bundle of UI-independent, cross-platform libraries enabling you to process the most commonly used flow, fixed and spreadsheet document formats. The components allow to create, import, modify and export documents, without external dependencies. To read more about the benefits of using Telerik Document Processing, please visit the [product overview page](https://www.telerik.com/document-processing-libraries).
 
