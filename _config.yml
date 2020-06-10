@@ -3,7 +3,6 @@ url: "https://docs.telerik.com/devtools/document-processing"
 site_name: DocumentProcessing
 # Exclude files which should not be in the output
 exclude: [README.md,Gemfile,Gemfile.lock,_assetsApi]
-
 exclude_navigation: [knowledge-base/*]
 
 navigation:
@@ -216,6 +215,7 @@ gcs_api_key: 'AIzaSyC_1zrkB9jMkIDAJ6VBYGilbhOWEFZqQKA'
 
 edit_repo_url: https://github.com/telerik/dpl-docs/edit/master
 product: "Telerik Document Processing"
+product_url: https://www.telerik.com/document-processing-libraries
 
 # Available for names: 
 platforms: ["UI for ASP.NET Core", "UI for ASP.NET MVC", "UI for ASP.NET AJAX", "UI for Blazor", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin",]
@@ -254,7 +254,6 @@ footer_social:
 api_reference_url: "api/"
 
 has_kb_portal: true
-
 
 sdk_examples: "sdk.json"
 sdk_repo_path: "https://github.com/telerik/document-processing-sdk/tree/master/"
