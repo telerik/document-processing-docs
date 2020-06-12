@@ -10,8 +10,6 @@ position: 1
 
 # Getting Started
 
-
-
 This tutorial will take you through the creation of a sample application that uses RadWordsProcessing.
 
 * [Assembly References](#assembly-references)
@@ -19,6 +17,8 @@ This tutorial will take you through the creation of a sample application that us
 * [Creating RadFlowDocument from Code](#creating-radflowdocument-from-code)
 
 * [Exporting RadFlowDocument to Docx](#exporting-radflowdocument-to-docx)
+
+>noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 ## Assembly References
 

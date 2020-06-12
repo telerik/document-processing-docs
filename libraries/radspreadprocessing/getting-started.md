@@ -22,6 +22,8 @@ This article will get you started in using the __RadSpreadProcessing__ library. 
 
 * [Using RadSpreadsheet](#using-radspreadsheet)
 
+>noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+
 ## Assembly References
 
 >The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radspreadprocessing-cross-platform%}) article.

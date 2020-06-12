@@ -12,7 +12,9 @@ position: 0
 
 This article briefly explains the specifics of **RadSpreadStreamProcessing** - what is spread streaming, how it works compared to the RadSpreadProcessing library and when to use it.
 
->If you would like to directly start using SpreadStreamProcessing, take a look at the [Getting Started]({%slug radspreadstreamprocessing-getting-started%}) help topic and the ones under the Model folder.
+>noteIf you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+
+>noteIf you would like to directly start using SpreadStreamProcessing, take a look at the **[Getting Started]({%slug radspreadstreamprocessing-getting-started%})** help topic and the ones under the Model folder.
 
 ![](images/SpreadStreamProcessing-Overview_01.png)
 
