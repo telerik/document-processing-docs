@@ -51,7 +51,7 @@ Once you have a __CellSelection__ instance, you can easily set and retrieve the 
 With one minor exception, the get methods of all cell properties return an object of type __RangePropertyValue<T>__. The class exposes two properties that indicate the value of the property for the cell range:
         
 
-* __IsIndeterminate__: Indicates whether the value of the retrieved property is consistent among all cells in the specified CellSelection. If the property has one and the same value for all cells, __IsIndeterminate__ is set to false. However, if the value of the retrieved property varies throughout the cells in the CellSelection, the __IsIndetermine__ property is set to true and the __Value__ property of the __RangePropertyValue<T>__ class is set to its default value.
+* __IsIndeterminate__: Indicates whether the value of the retrieved property is consistent among all cells in the specified CellSelection. If the property has one and the same value for all cells, __IsIndeterminate__ is set to false. However, if the value of the retrieved property varies throughout the cells in the CellSelection, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue<T>__ class is set to its default value.
             
 
 * __Value__: Contains the value of the retrieved property. If the __IsIndeterminate__ property is set to false, __Value__ contains the value of the retrieved property for the whole CellSelection region. If the __IsIndeterminate__ property is set to true, the __Value__ property is set to its default value.
@@ -93,6 +93,8 @@ Cells in __RadSpreadProcessing__ offer a number of properties that allow you to 
 * VerticalAlignment
 
 * IsLocked
+
+* TextRotation
 
 As already mentioned, the __CellSelection__ class exposes methods that get, set and clear methods for each of the above properties. The names of the methods are constructed through the concatenation of the action the method executes (Get, Set, Clear) and the name of the property. For example, the methods that get, set and clear the __IsBold__ property are respectively, __GetIsBold()__, __SetIsBold()__ and __ClearIsBold()__.
         
