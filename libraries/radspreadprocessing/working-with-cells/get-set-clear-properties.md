@@ -51,7 +51,7 @@ Once you have a __CellSelection__ instance, you can easily set and retrieve the 
 With one minor exception, the get methods of all cell properties return an object of type __RangePropertyValue<T>__. The class exposes two properties that indicate the value of the property for the cell range:
         
 
-* __IsIndeterminate__: Indicates whether the value of the retrieved property is consistent among all cells in the specified CellSelection. If the property has one and the same value for all cells, __IsIndeterminate__ is set to false. However, if the value of the retrieved property varies throughout the cells in the CellSelection, the __IsIndetermine__ property is set to true and the __Value__ property of the __RangePropertyValue<T>__ class is set to its default value.
+* __IsIndeterminate__: Indicates whether the value of the retrieved property is consistent among all cells in the specified CellSelection. If the property has one and the same value for all cells, __IsIndeterminate__ is set to false. However, if the value of the retrieved property varies throughout the cells in the CellSelection, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue<T>__ class is set to its default value.
             
 
 * __Value__: Contains the value of the retrieved property. If the __IsIndeterminate__ property is set to false, __Value__ contains the value of the retrieved property for the whole CellSelection region. If the __IsIndeterminate__ property is set to true, the __Value__ property is set to its default value.
@@ -115,7 +115,8 @@ __Example 2__ illustrates how to use these methods on the region A1:F6.
 
 
 Using the above approach you can set the value of almost all cell properties. There are a few exceptions to the general get, set and clear rule, though, and each of them is described into one of the following sections.
-        
+
+>When using **GetFontSize()** and **SetFontSize()** methods you have to keep in mind that measurement units used in **RadSpreadProcessing** are [Device Independent Pixels](https://en.wikipedia.org/wiki/Device-independent_pixel) (DIPs). For more information go to [Measurement Units]({%slug radspreadprocessing-working-with-rows-and-columns-resizing#measurement-units%}) help topic.
 
 ## Value Property
 
