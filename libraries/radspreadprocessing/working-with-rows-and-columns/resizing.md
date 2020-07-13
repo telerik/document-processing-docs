@@ -207,13 +207,13 @@ __Example 6__ shows how to convert from Point to DIP and set the row height.
 
 ### Telerik RadSpreadProcessing vs MS Excel 
 
- In the other hand, MS Excel uses its [own measurement unit](https://docs.microsoft.com/en-sg/office/troubleshoot/excel/determine-column-widths), so in order to convert between pixel and Excel width you can use the following methods of the UnitHelper class in combination with the **SetWidth**() method: 
+ In the other hand, MS Excel uses its [own measurement unit](https://docs.microsoft.com/en-sg/office/troubleshoot/excel/determine-column-widths), so in order to convert between pixel and MS Excel width you can use the following methods of the UnitHelper class in combination with the **SetWidth**() method: 
 
-* PixelWidthToExcelColumnWidth: Converts column width in pixels to excel column width.
+* PixelWidthToExcelColumnWidth: Converts column width in pixels to MS Excel column width.
 
-__Example 7__ shows how to convert and set from pixel to Excel column width.    
+__Example 7__ shows how to convert and set from pixel to MS Excel column width.    
 
-#### __[C#] Example 7: Convert from pixel column width to Excel column width__
+#### __[C#] Example 7: Convert from pixel column width to MS Excel column width__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_7}}
 
@@ -222,11 +222,11 @@ __Example 7__ shows how to convert and set from pixel to Excel column width.
 	worksheet.Columns[0].SetWidth(newColumnWidth);
 {{endregion}}
 
-* ExcelColumnWidthToPixelWidth: Converts excel column width to pixels width.
+* ExcelColumnWidthToPixelWidth: Converts MS Excel column width to pixels width.
 
-__Example 8__ shows how to convert and set from Excel to pixel column width.    
+__Example 8__ shows how to convert and set from MS Excel to pixel column width.    
 
-#### __[C#] Example 8: Convert from Excel column width to pixel column width__
+#### __[C#] Example 8: Convert from MS Excel column width to pixel column width__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_8}}
 
