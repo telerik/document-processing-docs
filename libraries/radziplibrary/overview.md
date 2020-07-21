@@ -29,4 +29,4 @@ This is a list with short descriptions of the top-of-the-line features of Teleri
             
 >noteIf you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
->noteFor details on the **usage of the library**, go to the **[Getting Started](%slug radziplibrary-gettingstarted%)** article.
+>noteFor details on the **usage of the library**, go to the **[Getting Started]({%slug radziplibrary-gettingstarted%})** article.
