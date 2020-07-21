@@ -16,7 +16,7 @@ position: 0
 
 >noteIf you still don't have **Telerik Document Processing installed**, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
 
->noteFor details on the **usage of the library**, go to the **[Getting Started](%slug radwordsprocessing-getting-started%)** article.
+>noteFor details on the **usage of the library**, go to the **[Getting Started]({%slug radwordsprocessing-getting-started%})** article.
 
 ## Model
 The model of **RadWordsProcessing** includes:
