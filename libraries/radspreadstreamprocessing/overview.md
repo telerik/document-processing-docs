@@ -18,7 +18,7 @@ This article briefly explains the specifics of **RadSpreadStreamProcessing** - w
 
 ![](images/SpreadStreamProcessing-Overview_01.png)
 
->You can find the example from the image above in our official demos. It can be checked online using the [example](https://demos.telerik.com/aspnet-mvc/spreadstreamprocessing) for UI for ASP.NET MVC.
+>You can find the example from the image above in our [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing/GenerateDocument). 
 
 
 ## What is Spread Streaming?

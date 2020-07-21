@@ -15,7 +15,7 @@ __RadPdfProcessing__ is a processing library that allows creation, import and ex
 
 >noteIf you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
->noteFor details on the **usage of the library**, go to the **[Getting Started](%slug radpdfprocessing-getting-started%)** article.
+>noteFor details on the **usage of the library**, go to the **[Getting Started]({%slug radpdfprocessing-getting-started%})** article.
 
 The API of RadPdfProcessing contains two different editors, enabling you to choose between editing in a flow-like manner, or using the much more powerful and flexible fixed document structure and drawing on the page.
             
