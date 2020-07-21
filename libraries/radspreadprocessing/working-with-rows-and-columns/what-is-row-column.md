@@ -21,6 +21,7 @@ This article will help you get familiar with the concepts of rows and columns.
 
 Similarly, a **column** is a group of cells that are vertically stacked and appear on the same **vertical line**. Columns in __RadSpreadProcessing__ are identified by a letter or a combination of letters. For example, the first column is called A, the second – B and the last column is XFD.
         
+![](images/RowAndColumn.png)
 
 ## 
 
