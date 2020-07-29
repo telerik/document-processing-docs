@@ -73,7 +73,7 @@ The code snippet from __Example 1__ demonstrates how to open existing Zip archiv
 {{endregion}}
 
 
-The *archive* variable holds the files that are compressed in the selected zip. You can access the list of these files through the __ZipArchive.Entries__ property. It holds a collection of __ZipArchiveEntry__ elements - the elements that describe the files archived in the zip file. You can use these elements to get the name of the compressed file, its uncompressed and compressed size and other file attributes.
+The *archive* variable holds the files that are compressed in the selected zip. You can access the list of these files through the __ZipArchive.Entries__ property. It holds a collection of [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) elements - the elements that describe the files archived in the zip file. You can use these elements to get the name of the compressed file, its uncompressed and compressed size and other file attributes.
         
 
 ## Create Zip Archive

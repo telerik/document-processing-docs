@@ -12,7 +12,7 @@ position: 1
 
 
 
-__RadZipLibrary__ lets you protect a ZIP archive with a password. This help article will teach you to use __RadZipLibrary__ to password protect files and how to open files that are protected with a password. To protect a ZIP archive and all __ZipArchiveEntry__ items in it, you should specify encryption settings when creating the [ZipArchive]({%slug radziplibrary-gettingstarted%}) object.
+__RadZipLibrary__ lets you protect a ZIP archive with a password. This help article will teach you to use __RadZipLibrary__ to password protect files and how to open files that are protected with a password. To protect a ZIP archive and all [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) items in it, you should specify encryption settings when creating the [ZipArchive]({%slug radziplibrary-gettingstarted%}) object.
       
 
 __RadZipLibrary__ supports traditional PKWARE encryption only. The settings for this encryption type are represented by the __DefaultEncryptionSettings__ class.
