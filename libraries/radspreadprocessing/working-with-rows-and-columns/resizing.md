@@ -25,6 +25,8 @@ Worksheets in __RadSpreadProcessing__'s document model consist of cells organize
 
 * [Measurement Units](#measurement-units)
 
+* [LayoutHelper class](#layouthelper-class)
+
 ## Row Height
 
 The height of a row is retrieved and changed through an instance of type __RowHeight__. The class exposes two properties: __Value__, which holds the height of the row, and __IsCustom__ that indicates whether the height is set by the user. If the __IsCustom__ property is set to false, the row height changes automatically in certain cases, for example when you increase the font size of a cell that contains a number value and its content no longer fits in the available size. However, if you increase the font size and the __IsCustom__ property is set to true, the row height is not going to change and part of the cell content would stay hidden.
@@ -76,7 +78,7 @@ The autofit feature offers a handy approach for resizing multiple rows so that e
 	rowSelection.AutoFitHeight();
 {{endregion}}
 
-
+> The expected behavior when calling the **AutoFitHeight** method on a row that contains a merged and wrapped [CellSelection](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.cellselection) is to set the default [RowHeight](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.rowheight) value instead of calculating the row height according to its content. In order to measure the cell content you can check the exposed by the [LayoutHelper class](#layouthelper-class) methods. 
 
 ## Columns Width
 
@@ -143,7 +145,6 @@ Another way to auto fit column widths is to use the __ExpandToFitNumberValuesWid
 	ColumnSelection columnSelection = worksheet.Columns[5, 7];
 	columnSelection.ExpandToFitNumberValuesWidth();
 {{endregion}}
-
 
 
 ## Measurement Units
@@ -236,3 +237,30 @@ __Example 8__ shows how to convert and set from MS Excel to pixel column width.
 {{endregion}}
 
 The row height in MS Excel is measured in points so in order to set them you can convert this unit and set the exact number you are passing to the **SetHeight**() method for the height using the UnitHelper class.
+
+
+## LayoutHelper class
+
+The **LayoutHelper** class exposes the following methods that help to calculate the size of the page content:
+
+* **CalculateCellContentSize**: Calculates the size of the cell content.
+
+__Example 9__ shows how to get the size of the cell content.    
+
+#### __[C#] Example 9: Get the Size of the cell content__
+
+{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_9}}
+
+	Size cellContentSize = LayoutHelper.CalculateCellContentSize(worksheet, rowIndex, columnIndex);
+{{endregion}}
+
+* **CalculateCellLayoutBox**: Calculates the cell layout box.
+
+__Example 10__ shows how to get the cell layout box.    
+
+#### __[C#] Example 10: Get the cell layout box__
+
+{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_10}}
+
+	CellLayoutBox cellLayoutBox = LayoutHelper.CalculateCellLayoutBox(worksheet, rowIndex, columnIndex);
+{{endregion}}
