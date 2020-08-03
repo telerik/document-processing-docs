@@ -241,7 +241,7 @@ The row height in MS Excel is measured in points so in order to set them you can
 
 ## LayoutHelper class
 
-The **LayoutHelper** class exposes the following methods that help to calculate the size of the page content:
+The [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.layout.layouthelper) class exposes the following methods that help to calculate the size of the page content:
 
 * **CalculateCellContentSize**: Calculates the size of the cell content.
 
@@ -260,3 +260,7 @@ The **LayoutHelper** class exposes the following methods that help to calculate 
 
 	CellLayoutBox cellLayoutBox = LayoutHelper.CalculateCellLayoutBox(worksheet, rowIndex, columnIndex);
 {{endregion}}
+
+## See Also
+
+* [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.layout.layouthelper)
