@@ -252,7 +252,7 @@ The [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/tel
 	Size cellContentSize = LayoutHelper.CalculateCellContentSize(worksheet, rowIndex, columnIndex);
 {{endregion}}
 
-* **CalculateCellLayoutBox**: Creates, arranges and return the cell layout box.
+* **CalculateCellLayoutBox**: Creates, arranges and returns the cell layout box.
 
 #### __[C#] Example 10: Get the cell layout box__
 
