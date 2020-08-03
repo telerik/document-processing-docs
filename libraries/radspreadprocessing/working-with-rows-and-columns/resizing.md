@@ -78,7 +78,7 @@ The autofit feature offers a handy approach for resizing multiple rows so that e
 	rowSelection.AutoFitHeight();
 {{endregion}}
 
-> The expected behavior when calling the **AutoFitHeight** method on a row that contains a merged and wrapped [CellSelection](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.cellselection) is to set the default [RowHeight](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.rowheight) value instead of calculating the row height according to its content. In order to measure the cell content you can check the exposed by the [LayoutHelper class](#layouthelper-class) methods. 
+> The expected behavior when calling the **AutoFitHeight** method on a row that contains merged and wrapped cells is to set the default [RowHeight](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.rowheight) value instead of calculating the row height according to its content. In order to measure the cell content you can check the exposed by the [LayoutHelper class](#layouthelper-class) methods. 
 
 ## Columns Width
 
@@ -245,8 +245,6 @@ The **LayoutHelper** class exposes the following methods that help to calculate 
 
 * **CalculateCellContentSize**: Calculates the size of the cell content.
 
-__Example 9__ shows how to get the size of the cell content.    
-
 #### __[C#] Example 9: Get the Size of the cell content__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_9}}
@@ -254,9 +252,7 @@ __Example 9__ shows how to get the size of the cell content.
 	Size cellContentSize = LayoutHelper.CalculateCellContentSize(worksheet, rowIndex, columnIndex);
 {{endregion}}
 
-* **CalculateCellLayoutBox**: Calculates the cell layout box.
-
-__Example 10__ shows how to get the cell layout box.    
+* **CalculateCellLayoutBox**: Creates, arranges and return the cell layout box.
 
 #### __[C#] Example 10: Get the cell layout box__
 
