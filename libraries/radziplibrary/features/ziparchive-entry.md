@@ -23,7 +23,7 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
 
     > The archive compressed length can be obtained only after the **ZipArchiveEntry** is disposed of, so in the following example, we are ensuring the correct disposing of the object by [using statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement).
 
-    #### **[C#] Example 1: Get entry`s compressed length**
+    #### **[C#] Example 1: Get entry's compressed length**
     {{region cs-radziplibrary-ziparchive-entry_0}}
                     
         ZipArchiveEntry entry;
@@ -39,7 +39,7 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
 
 * **ExternalAttributes**: Gets or sets external [file attributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view).
     
-    #### **[C#] Example 2: Set entry`s external attributes**
+    #### **[C#] Example 2: Set entry's external attributes**
 
     {{region cs-radziplibrary-ziparchive-entry_1}}
                     
@@ -48,7 +48,7 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
 
 * **FullName**: Gets the relative path of the entry in the zip archive.
   
-    #### **[C#] Example 3: Get entry`s relative path**
+    #### **[C#] Example 3: Get entry's relative path**
     
     {{region cs-radziplibrary-ziparchive-entry_2}}
                     
@@ -57,7 +57,7 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
 
 * **LastWriteTime**: Gets or sets the last time the entry in the zip archive was changed.
     
-    #### **[C#] Example 4: Set last entry`s write time**
+    #### **[C#] Example 4: Set last entry's write time**
 
     {{region cs-radziplibrary-ziparchive-entry_3}}
 
@@ -68,7 +68,7 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
 * **Length**: Gets the uncompressed size of the entry in the zip archive.
     > The archive length can be obtained only after the **ZipArchiveEntry** is disposed of, so in the following example, we are ensuring the correct disposing of the object by [using statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement).
 
-    #### **[C#] Example 5: Get entry`s length**
+    #### **[C#] Example 5: Get entry's length**
 
     {{region cs-radziplibrary-ziparchive-entry_4}}
                     
@@ -85,7 +85,7 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
 
 * **Name**: Gets the file name of the entry in the zip archive.
 
-    #### **[C#] Example 6: Get entry`s name**
+    #### **[C#] Example 6: Get entry's name**
 
     {{region cs-radziplibrary-ziparchive-entry_5}}
                     
