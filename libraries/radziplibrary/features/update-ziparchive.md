@@ -63,6 +63,8 @@ In order to add a new entry into the ZIP archive, you should perform the followi
             
 
 1. Dispose entry when all necessary information is written. In the *Update* mode this step is optional. You can omit it if you are going to add/delete/update other entries in the archive.
+
+>note More information about ZipArchiveEntry you can find in [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) help article. 
             
 
 #### __[C#] Example 2: Add entry__
