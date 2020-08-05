@@ -42,6 +42,7 @@ Telerik Document Processing supports [.NET Standard 2.0](https://github.com/dotn
 * __Telerik.Documents.Fixed:__ The package is required when processing `PDF` documents.
 * __Telerik.Documents.Flow:__ The package is part of the Words Processing Library. Required for processing `HTML`, `DOCX`, `RTF`, and `TXT` documents.
 * __Telerik.Documents.Flow.FormatProviders.Pdf:__ The package for exporting flow documents, such as `DOCX` and `RTF`, to PDF.
+* __Telerik.Documents.ImageUtils:__ This package is required when exporting to `PDF` format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
 * __Telerik.Documents.Spreadsheet:__ The main package for generating and editing spreadsheets.
 * __Telerik.Documents.Spreadsheet.FormatProviders.OpenXml:__ This package is required for the import/export of the `XLSX` and `CSV` documents.
 * __Telerik.Documents.Spreadsheet.FormatProviders.Pdf:__ Required for the export of RadSpreadProcessing documents to `PDF`.

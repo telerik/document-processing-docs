@@ -60,7 +60,7 @@ Supported</td><td>
 Supported</td><td>
 Supported</td><td>
 Supported</td><td>
-Supported</td></tr><tr><td>
+Partially Supported****</td></tr><tr><td>
 Text Spacing</td><td>
 Supported</td><td>
 Supported</td><td>
@@ -304,4 +304,4 @@ Supported</td><td></td><td></td><td></td></tr></table>
 
 >***The result of the fields is exported as text.
           
-
+>****Justify alignment is currently not supported when exporting to PDF format, thus the content is exported with Left alignment.

@@ -154,7 +154,7 @@ Some functionalities require additional settings to be done:
 
 ### Currently not supported
 
- - Referencing .Net Standard binaries you can add SignatureField but can not sign or import signed documents.
+ - Referencing .Net Standard binaries you can add SignatureField but cannot sign or import signed documents.
  
 ## See Also
 

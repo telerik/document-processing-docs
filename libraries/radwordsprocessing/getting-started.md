@@ -10,8 +10,6 @@ position: 1
 
 # Getting Started
 
-
-
 This tutorial will take you through the creation of a sample application that uses RadWordsProcessing.
 
 * [Assembly References](#assembly-references)
@@ -19,6 +17,8 @@ This tutorial will take you through the creation of a sample application that us
 * [Creating RadFlowDocument from Code](#creating-radflowdocument-from-code)
 
 * [Exporting RadFlowDocument to Docx](#exporting-radflowdocument-to-docx)
+
+>noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 ## Assembly References
 
@@ -85,7 +85,7 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 </tbody>
 </table>
 
-* _The Telerik.Documents.ImageUtils.dll assembly is needed when exporting to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High._
+\* _The Telerik.Documents.ImageUtils.dll assembly is needed when exporting to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High._
 
 >note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
 

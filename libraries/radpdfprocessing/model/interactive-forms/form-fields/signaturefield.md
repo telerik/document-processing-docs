@@ -20,7 +20,7 @@ This article describes the following topics:
 
 This class corresponds to FormFieldType.Signature enum value and represents a placeholder which preserves the digital signature information. 
 
->In PdfProcessing for Xamarin you can add SignatureField but can not sign or import signed documents.
+>In PdfProcessing for .NET Standard you can add SignatureField but can not sign or import signed documents. The Signature property of SignatureField is not available.
 
 ## Properties
 
@@ -39,11 +39,11 @@ SignatureField provides the following properties:
 {{region radpdfprocessing-model-interactive-forms-form-fields-signaturefield_0}}
 
 	SignatureField signatureField = new SignatureField("SampleSignature");
-	signatureField.Signature = new Signature(certificate);
+	signatureField.Signature = new Signature(certificate); // The Signature property fo SignatureField is not available in PdfProcessing for .NET Standard.
 
 	SignatureWidget widget = signatureField.Widgets.AddWidget();
 	widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
-	widget.Border = new AnnotationBorder(100, AnnotationBorderStyle.Solid, null);
+	widget.Border = new AnnotationBorder(5, AnnotationBorderStyle.Solid, null);
 
 	// Create a Form object to define the appearance you would like for the signature field.
 	Form form = new Form();

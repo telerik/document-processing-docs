@@ -18,6 +18,8 @@ This article will get you started in using the **RadSpreadStreamProcessing** lib
 
 * [Create a Spreadsheet Document](#create-a-spreadsheet-document)
 
+>noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+
 ## Assembly References
 
 >The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**).

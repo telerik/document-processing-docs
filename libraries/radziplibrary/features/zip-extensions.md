@@ -5,7 +5,7 @@ description: Zip Extensions
 slug: radziplibrary-zipextensions
 tags: zip, extensions
 published: True
-position: 5
+position: 6
 platforms: ajax, mvc, wpf, winforms
 ---
 
@@ -22,7 +22,7 @@ In this article you will find the classes and their members.
 
 With the __ZipFile__ class you could take advantage of static methods, which will give you the ability to create, extract or open zip archives with only one line of code.
 
-* __ZipArchiveEntry CreateEntryFromFile(this ZipArchive destination, string sourceFileName, string entryName)__ – Archives a file by compressing it and adding it to the zip archive. It has two more overloads, which allow you to specify the __CompressionLevel__ or __CompressionSettings__ of the __ZipEntry__.
+* __[ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) CreateEntryFromFile(this ZipArchive destination, string sourceFileName, string entryName)__ – Archives a file by compressing it and adding it to the zip archive. It has two more overloads, which allow you to specify the __CompressionLevel__ or __CompressionSettings__ of the __ZipEntry__.
 
 * __void CreateFromDirectory(string sourceDirectoryName, string destinationArchiveFileName)__: Creates a zip archive that contains the files and directories from the specified directory. This method has few overloads to set different settings of the entry.
     

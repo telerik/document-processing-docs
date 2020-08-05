@@ -5,7 +5,7 @@ description: Compression Settings
 slug: radziplibrary-compression-settings
 tags: compression,settings
 published: True
-position: 3
+position: 4
 ---
 
 # Compression Settings

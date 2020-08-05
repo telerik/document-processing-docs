@@ -14,6 +14,7 @@ position: 1
 
 This article will get you started in using the __RadPdfProcessing__ library. 
 
+>noteIf you still don't have **Telerik Document Processing** installed, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
 
 ## Assembly References
 

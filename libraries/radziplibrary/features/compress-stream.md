@@ -5,7 +5,7 @@ description: Compressing a Stream
 slug: radziplibrary-compress-stream
 tags: compressing,a,stream
 published: True
-position: 2
+position: 3
 ---
 
 # Compressing a Stream

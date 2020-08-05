@@ -16,6 +16,7 @@ Once you have first example up and running, take a look at the [next steps](#nex
 
 For additional resources you can also review the Related Articles section on the right.
 
+>You can download the packages that contain Telerik Document Processing from your [Telerik account](https://www.telerik.com/account/my-downloads).
 
 ## Installing on Your Computer
 

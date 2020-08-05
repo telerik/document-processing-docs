@@ -13,15 +13,15 @@ position: 1
 __RadZipLibrary__ allows you to load data from existing ZIP archives or create and edit ZIPs that can be used by other applications. You can also create ZIP archives in memory or use a stream to get data and add it to a ZIP archive.
       
 
+>noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+
 The ZIP archive is represented by __ZipArchive__ class. It can be used in 3 modes:
       
 
 * __Read__: Allows reading of the existing ZIP archive. In this mode it is not possible to add or update archive entries.
           
-
 * __Create__: Allows creation of a new archive. In this mode you can add new entries in the archive but cannot read or update content of the entries which have been written already.
           
-
 * __Update__: Allows update of the existing ZIP archive. In this mode you can add new entries, read and update existing entries.
 
 ## Assembly References
@@ -73,7 +73,7 @@ The code snippet from __Example 1__ demonstrates how to open existing Zip archiv
 {{endregion}}
 
 
-The *archive* variable holds the files that are compressed in the selected zip. You can access the list of these files through the __ZipArchive.Entries__ property. It holds a collection of __ZipArchiveEntry__ elements - the elements that describe the files archived in the zip file. You can use these elements to get the name of the compressed file, its uncompressed and compressed size and other file attributes.
+The *archive* variable holds the files that are compressed in the selected zip. You can access the list of these files through the __ZipArchive.Entries__ property. It holds a collection of [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) elements - the elements that describe the files archived in the zip file. You can use these elements to get the name of the compressed file, its uncompressed and compressed size and other file attributes.
         
 
 ## Create Zip Archive
