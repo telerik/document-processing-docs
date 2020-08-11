@@ -33,7 +33,8 @@
          var gcsInstance = '001595215763381649090:dzdv3_di-fm';
          var gcsKey = 'AIzaSyC_1zrkB9jMkIDAJ6VBYGilbhOWEFZqQKA';
          isKbPage =  false ;
-         siteHasKbPortal = ''
+         siteHasKbPortal = '';
+         showSearchPopup = false;
       </script>
       <script type="text/javascript" src="/devtools/document-processing/assets/search-results.js"></script>
    </div>
