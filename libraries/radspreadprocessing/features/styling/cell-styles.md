@@ -37,7 +37,7 @@ A cell style is represented by the __CellStyle__ class. The properties of the cl
 
 	* IsWrapped
 
-	* TextRotation
+	* TextRotation (supported in **XLSX** format only)
 
 * Font group
 
