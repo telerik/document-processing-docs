@@ -94,6 +94,8 @@ Cells in __RadSpreadProcessing__ offer a number of properties that allow you to 
 
 * IsLocked
 
+* TextRotation
+
 As already mentioned, the __CellSelection__ class exposes methods that get, set and clear methods for each of the above properties. The names of the methods are constructed through the concatenation of the action the method executes (Get, Set, Clear) and the name of the property. For example, the methods that get, set and clear the __IsBold__ property are respectively, __GetIsBold()__, __SetIsBold()__ and __ClearIsBold()__.
         
 

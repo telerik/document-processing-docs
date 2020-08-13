@@ -37,6 +37,8 @@ A cell style is represented by the __CellStyle__ class. The properties of the cl
 
 	* IsWrapped
 
+	* TextRotation
+
 * Font group
 
 	* FontFamily

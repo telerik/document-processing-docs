@@ -199,6 +199,21 @@ Yes
 	<tr>
 		<td>
 
+Text Rotation
+
+		</td>
+		<td>
+
+Yes
+
+		</td>
+		<td>
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+
 			<b>
 
 Cells

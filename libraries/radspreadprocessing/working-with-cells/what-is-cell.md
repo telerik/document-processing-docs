@@ -25,7 +25,7 @@ A cell is the basic data unit in a worksheet. Cells are organized in rows and co
 Cells have the following characteristics:
         
 
-* __Value and Formatting__: A cell serves as a rudimentary storage unit in a worksheet and it can be assigned any text, number, Boolean or formula value. Additionally, each cell can be styled using various fonts, font sizes, fore and background colors, bold, italics, underline. Cells also have support for horizontal and vertical alignment.
+* __Value and Formatting__: A cell serves as a rudimentary storage unit in a worksheet and it can be assigned any text, number, Boolean or formula value. Additionally, each cell can be styled using various fonts, font sizes, fore and background colors, bold, italics, underline. Cells also have support for how text is aligned both horizontally and vertically, as well as indentation and text rotation settings, and so on.
             
 
 * __Fill__: Cells can be styled with pattern fills with various colors and pattern styles. The model also supports gradient fills that allow you to specify two colors and choose between six shading styles.
