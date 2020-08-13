@@ -27,6 +27,12 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
               
 
 >* Telerik.Windows.Zip.dll
+
+> The __XlsFormatProvider__ requires references to the following assemblies:
+
+>* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
+            
+>* BouncyCastle.Crypto.dll
               
 
 #### __[C#] Example 1: Register provider__

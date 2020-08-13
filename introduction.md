@@ -23,6 +23,7 @@ Telerik Document Processing libraries support the following file formats:
 * RTF
 * TXT
 * XLSX
+* XLS
 * ZIP
  
 >**.NET Standard** and **.NET Core** compatible versions are available for the Telerik Document Processing libraries. Their assemblies can be downloaded from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)**, **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** and **[UI for Blazor](https://www.telerik.com/blazor-ui)** suites respectively.
@@ -86,7 +87,7 @@ Telerik Document Processing features the following components:
 
 * [RadPdfProcessing]({%slug radpdfprocessing-overview%}): Create, import and export PDF documents.
 
-* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}): Create, import and export XLSX, CSV and TXT spreadsheet documents, and export them to PDF.
+* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}): Create, import and export XLSX, XLS, CSV and TXT spreadsheet documents, and export them to PDF.
 
 * [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}): Export large XLSX and CSV spreadsheet documents with low memory footprint and great performance.
 
