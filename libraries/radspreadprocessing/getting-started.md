@@ -35,48 +35,58 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	<tr>
 		<th>.NET Framework </th>
 		<th>.NET Standard-compatible</th>
+		<th>Additional information</th>
 	</tr>
 </thead>
 <tbody>
 	<tr>
 		<td><b>Telerik.Windows.Documents.Core.dll</b></td>
 		<td><b>Telerik.Documents.Core.dll</b></td>
+		<td></td>
 	</tr>
 	<tr>
 	    <td><b>Telerik.Windows.Documents.Spreadsheet.dll</b></td>
 		<td><b>Telerik.Documents.Spreadsheet.dll</b></td>
+		<td></td>
 	</tr>
-	<tr>
-	    <td colspan="2">&nbsp;</td>
-	</tr>
-    <tr>
-        <td colspan="2">The following assemblies are required in order to be able to export to Xlsx and PDF formats:</td> 
-    </tr>
 	<tr>
 		<td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</b></td>
 		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.dll</b></td>
+		<td>Required when exporting to XLSX.</td>
 	</tr>
-	<tr>
-	    <td><b>Telerik.Windows.Documents.Fixed.dll</b></td>
-		<td><b>Telerik.Documents.Fixed.dll</b></td>
+		<tr>
+		<td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</b></td>
+		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll</b></td>
+		<td>Required when exporting to XLS. Depends on BouncyCastle.Crypto.dll. You can download the dependency as a NuGet package from <a url="https://www.nuget.org/packages/BouncyCastle.Crypto.dll/">https://www.nuget.org/</a>.</td>
 	</tr>
 	<tr>
 	    <td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</b></td>
 		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll</b></td>
+		<td>Required when exporting to PDF.</td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Windows.Documents.Fixed.dll</b></td>
+		<td><b>Telerik.Documents.Fixed.dll</b></td>
+		<td>Required when exporting to PDF.</td>
 	</tr>
 	<tr>
 	    <td><b>Telerik.Windows.Zip.dll</b></td>
 		<td><b>Telerik.Zip.dll</b></td>
+		<td>Required when exporting to XLSX or PDF.</td>
 	</tr>
 	<tr>
 	    <td><b>-</b></td>
-		<td><b>Telerik.Documents.ImageUtils.dll*</b></td>
+		<td><b>Telerik.Documents.ImageUtils.dll</b></td>
+		<td>Needed when exporting to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High.
+		
+		The <b>Telerik.Documents.ImageUtils.dll</b> assembly depends on <b>Magick.NET</b>. In order to use this assembly, you will need to add a reference to <a url="https://github.com/dlemstra/Magick.NET">Magick.NET</a>
+		</td>
 	</tr>
 	<tr>
-	    <td colspan="2">&nbsp;</td>
+	    <td colspan="3">&nbsp;</td>
 	</tr>
 	<tr>
-        <td colspan="2">To describe different colors, shapes and other properties, RadSpreadProcessing depends on the listed below .NET assemblies, which you should also refer in your project:</td> 
+        <td colspan="3">To describe different colors, shapes and other properties, RadSpreadProcessing depends on the listed below .NET assemblies, which you should also refer in your project:</td> 
     </tr>
     <tr>
 	    <td><b>WindowsBase.dll</b></td>
@@ -92,10 +102,6 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	</tr>
 </tbody>
 </table>
-
-\* _The Telerik.Documents.ImageUtils.dll assembly is needed when exporting to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High._
-
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
 
 ## Creating a Workbook
 
