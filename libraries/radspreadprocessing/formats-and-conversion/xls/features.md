@@ -862,6 +862,20 @@ Yes
 		</td>
 	</tr>
 	<tr>
+		<tr>
+		<td>
+
+Show/Hide Rows/Columns
+		</td>
+		<td>
+
+Partially
+		</td>
+		<td>
+Only columns can be hidden
+		</td>
+	</tr>
+	<tr>
 		<td>
 
 Center Horizontally/Vertically
@@ -907,7 +921,7 @@ Selection State
 Yes
 		</td>
 		<td>
-Only single selection is supported.
+Only single selection is supported
 		</td>
 	</tr>
 	<tr>
@@ -1102,7 +1116,7 @@ Yes
 		<tr>
 		<td>
 
-Data Validation
+<b>Data Validation</b>
 		</td>
 		<td>
 
@@ -1111,4 +1125,18 @@ No
 		<td>
 
 		</td>
+		<tr>
+		<td>
+<b>Headers & Footers</b>
+		</td>
+		<td>
+
+Partially
+		</td>
+		<td>
+No Even or Odd header & footer
+		</td>
 </table>
+
+
+
