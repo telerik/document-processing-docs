@@ -51,6 +51,16 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 	    <td><b>-</b></td>
 		<td><b>Telerik.Documents.ImageUtils.dll</b></td>
 	</tr>
+		<tr>
+	    <td colspan="2">&nbsp;</td>
+	</tr>
+		<tr>
+        <td colspan="2">To enable the import of documents containing <a url="https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/cmaps">CMap Tables</a>, you will need to add a reference to:</td> 
+    </tr>
+	<tr>
+	    <td><b>Telerik.Windows.Documents.CMapUtils</b></td>
+		<td><b>Telerik.Documents.CMapUtils</b></td>
+	</tr>
 	<tr>
 	    <td colspan="2">&nbsp;</td>
 	</tr>

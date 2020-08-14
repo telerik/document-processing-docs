@@ -212,7 +212,22 @@ Paths
 Yes
               </td><td>
 
-</td></tr><tr><td>
+</td></tr>
+<tr>
+<td><b>CMap Tables</b></td><td></td>
+<td></td>
+</tr>
+<tr>
+<td>Predefined CMap Tables</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Custom CMap Tables</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr><td>
 
 <b>
                   Other
