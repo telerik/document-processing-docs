@@ -91,6 +91,8 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     
     The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document.
 
+    >important Due to a **Magick.NET** library limitation, the users of [UI for Blazor](https://www.telerik.com/blazor-ui) that use **WebAssembly** could only create and provide a **custom** implementation JpegImageConverterBase.
+
     #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
         {{region cs-radpdfprocessing-cross-platform_3}}
 
