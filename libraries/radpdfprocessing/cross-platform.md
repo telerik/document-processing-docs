@@ -30,7 +30,7 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 
 ## What's New
 
-In the .NET Framework version of PdfProcessing, scenarios like reading fonts and converting images or scaling their quality are something that comes out of the box. However, the .NET Standard doesn't specify APIs to provide such functionalities built in the library, so there are some differences in both versions of PdfProcessing.
+In the .NET Framework version of PdfProcessing, scenarios like reading fonts and converting images or scaling their quality are something that comes out of the box. However, the .NET Standard specification doesn't specify APIs to provide such functionalities built in the library, so there are some differences in both versions of PdfProcessing.
 
 ### New APIs
 
