@@ -30,7 +30,7 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 
 ## What's New
 
-In the .NET Framework version of PdfProcessing, scenarios like reading fonts and converting images or scaling their quality are something that comes out of the box. However, the .NET Standard specification doesn't specify APIs to provide such functionalities built in the library, so there are some differences in both versions of PdfProcessing.
+In the .NET Framework version of PdfProcessing, scenarios like reading fonts and converting images or scaling their quality are something that comes out of the box. However, the .NET Standard specification doesn't specify APIs to provide such functionalities built in the library, so there are some differences in both versions of PdfProcessing described in this article.
 
 ### New APIs
 
@@ -91,14 +91,14 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     
     The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document.
 
-    >important Due to a **Magick.NET** library limitation, the users of [UI for Blazor](https://www.telerik.com/blazor-ui) that use **WebAssembly** could only create and provide a **custom** implementation JpegImageConverterBase.
-
     #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
         {{region cs-radpdfprocessing-cross-platform_3}}
 
             JpegImageConverterBase jpegImageConverter = new JpegImageConverter();
             FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
         {{endregion}}
+
+    >important Due to a **Magick.NET** library limitation, the users of [UI for Blazor](https://www.telerik.com/blazor-ui) that use **WebAssembly** could only create and provide a **custom** implementation JpegImageConverterBase. Check the following example.
 
     #### **[C#] Example 4: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
         {{region cs-radpdfprocessing-cross-platform_2}}
