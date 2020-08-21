@@ -10,8 +10,6 @@ position: 1
 
 # Format Providers Manager
 
-
-
  __RadSpreadprocessing__ contains a __WorkbookFormatProvidersManager__ class that allows you to specify a set of format providers and import or export files letting the manager choose the appropriate format provider. The class also exposes methods that return all registered providers and supported file extensions.
       
       
@@ -27,7 +25,11 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
               
 
 >* Telerik.Windows.Zip.dll
-              
+
+> The __XlsFormatProvider__ requires references to the following assembly:
+
+>* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
+
 
 #### __[C#] Example 1: Register provider__
 
@@ -44,11 +46,8 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
 {{endregion}}
 
 
-
-
 You can also unregister format providers using the UnregisterFormatProvider() method. __Example 2__ demonstrates how to unregister the TxtFormatProvider.
         
-
 #### __[C#] Example 2: Unregister provider__
 
 {{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
@@ -100,7 +99,6 @@ __Example 3__ demonstrates how to present the user with an OpenFileDialog and tr
 {{endregion}}
 
 
-
 #### __[VB.NET] Example 3: Import a file using OpenFileDialog__
 
 {{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
@@ -150,7 +148,6 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 {{endregion}}
 
 
-
 #### __[VB.NET] Example 4: Save a file using SaveFileDialog__
 
 {{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
@@ -166,10 +163,8 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 {{endregion}}
 
 
-
 You can achieve the same result through using the __SaveFile__ command. In fact, the command executes exactly the same code as above. That said, make sure you register the format providers you would like to use before using the command.
         
-
 ## Retrieve Registered Providers and Supported Extensions
 
 The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the GetProviderByName() static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __GetSupportedExtensions()__ that returns an IEnumeable of the currently supported file extensions.
