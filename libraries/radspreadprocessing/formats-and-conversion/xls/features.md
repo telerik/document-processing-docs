@@ -967,7 +967,7 @@ Values Sort Condition
 		</td>
 		<td>
 
-Yes
+No
 		</td>
 		<td>
 
@@ -980,7 +980,7 @@ Cell Color Sort Condition
 		</td>
 		<td>
 
-Yes
+No
 		</td>
 		<td>
 
@@ -993,7 +993,7 @@ Font Color Sort Condition
 		</td>
 		<td>
 
-Yes
+No
 		</td>
 		<td>
 
@@ -1006,7 +1006,7 @@ Custom Sort Condition
 		</td>
 		<td>
 
-Yes
+No
 		</td>
 		<td>
 
@@ -1027,10 +1027,7 @@ Yes
 	</tr>
 	<tr>
 		<td>
-
-			<b>
-                  Filtering
-			</b>
+			<b>  Filtering	</b>
 		</td>
 		<td/>
 		<td/>
@@ -1120,10 +1117,10 @@ Yes
 		</td>
 		<td>
 
-No
+Partially
 		</td>
 		<td>
-
+Data validation formulas to another sheet are not supported
 		</td>
 		<tr>
 		<td>
@@ -1135,6 +1132,63 @@ Partially
 		</td>
 		<td>
 No Even or Odd header & footer
+		</td>
+
+		<tr>
+		<td>
+<b>Other </b>
+		</td>
+		<td>
+
+		</td>
+		<td>
+
+		</td>
+	 
+		<tr>
+		<td>
+Themable Colors
+		</td>
+		<td>
+
+No
+		</td>
+		<td>
+ 
+		</td>
+
+		<tr>
+		<td>
+Screen tip of the hyperlink 
+		</td>
+		<td>
+
+No
+		</td>
+		<td>
+
+		</td>
+		<tr>
+		<td>
+ Multiple selections
+		</td>
+		<td>
+
+No
+		</td>
+		<td>
+ 
+		</td>
+<tr>
+		<td>
+Columns or Row Styles
+		</td>
+		<td>
+
+No
+		</td>
+		<td>
+ 
 		</td>
 </table>
 

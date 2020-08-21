@@ -45,11 +45,9 @@ The document model exposes four format providers that work with each of the form
 
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll
 
-> The __XlsFormatProvider__ requires references to the following assemblies:
+> The __XlsFormatProvider__ requires references to the following assembly:
         
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
-            
->* BouncyCastle.Crypto.dll
 
 
 The document model of RadSpreadProcessing also contains a __WorkbookFormatProvidersManager__ class, which exposes a whole set of useful static methods. The manager allows you to specify a set of format providers you would like to use. Then you can import and export a file leaving the manager to choose the appropriate format provider to use. You only need to specify the extension of the file that you open or save:

@@ -10,16 +10,12 @@ position: 2
 
 # Using XlsFormatProvider
 
-
-
 __XlsFormatProvider__ makes it easy to import and export XLS files. 
 
->The __XlsFormatProvider__ requires references to the following assemblies:
+>The __XlsFormatProvider__ requires references to the following assembly:
         
-
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
-            
->* BouncyCastle.Crypto.dll
+
             
 The BouncyCastle dependency can be downloaded as a NuGet package from [https://www.nuget.org/](https://www.nuget.org/packages/BouncyCastle.Crypto.dll/)
 
