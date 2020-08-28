@@ -33,6 +33,7 @@ There are other Telerik NuGet Packages for the UI suites. The following are the 
 * __Telerik.Windows.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
 * __Telerik.Windows.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
 * __Telerik.Windows.Zip.Extensions:__ The package provides methods for working with files and platform specific operations. 
+* __Telerik.Windows.Documents.CMapUtils:__ Provides a default implementation for providing the data of a predefined CMap table by a given name.
 
 ## Packages for .NET Standard 2.0
 
@@ -48,6 +49,7 @@ Telerik Document Processing supports [.NET Standard 2.0](https://github.com/dotn
 * __Telerik.Documents.Spreadsheet.FormatProviders.Pdf:__ Required for the export of RadSpreadProcessing documents to `PDF`.
 * __Telerik.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
 * __Telerik.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
+*__Telerik.Documents.CMapUtils:__ Provides a default implementation for providing the data of a predefined CMap table by a given name.
 
 
 ## Get the NuGet Packages
