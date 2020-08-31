@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-xls-xlsformatprovider
 tags: using,xlsformatprovider
 published: True
 position: 2
+platforms: netcore, mvc, ajax, blazor, wpf, winforms, xamarin
 ---
 
 # Using XlsFormatProvider
@@ -15,9 +16,6 @@ __XlsFormatProvider__ makes it easy to import and export XLS files.
 >The __XlsFormatProvider__ requires references to the following assembly:
         
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
-
-            
-The BouncyCastle dependency can be downloaded as a NuGet package from [https://www.nuget.org/](https://www.nuget.org/packages/BouncyCastle.Crypto.dll/)
 
 Once you reference the aforementioned assemblies, you need to create an instance of the __XlsFormatProvider__ in order to import and export XLS files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls namespace. __XlsFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
       

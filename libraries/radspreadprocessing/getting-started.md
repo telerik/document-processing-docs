@@ -57,7 +57,7 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 		<tr>
 		<td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</b></td>
 		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll</b></td>
-		<td>Required when exporting to XLS. Depends on BouncyCastle.Crypto.dll. You can download the dependency as a NuGet package from <a url="https://www.nuget.org/packages/BouncyCastle.Crypto.dll/">https://www.nuget.org/</a>.</td>
+		<td>Required when exporting to XLS.</td>
 	</tr>
 	<tr>
 	    <td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</b></td>

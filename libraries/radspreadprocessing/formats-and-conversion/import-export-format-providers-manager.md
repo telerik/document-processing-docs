@@ -26,7 +26,7 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
 
 >* Telerik.Windows.Zip.dll
 
-> The __XlsFormatProvider__ requires references to the following assembly:
+> The __XlsFormatProvider__ requires a reference to the following assembly:
 
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
 
