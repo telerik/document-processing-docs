@@ -17,7 +17,7 @@ __RadSpreadProcessing__'s document model allows you to easily open and save file
 
 * __Xlsx__: Rich text format, which exports the whole content of a workbook: worksheets, formula values, formatting, hyperlinks etc.
 
-* __Xls__: Rich text format, which exports the content of a workbook: worksheets, formula values, formatting, hyperlinks etc. Supported in older applications.
+* __Xls__: Rich text format, which exports the content of a workbook: worksheets, formula values, formatting, hyperlinks etc. Supported in older applications. This format is not supported in Silverlight.
 
 * __Pdf__: Fixed format, which preserves the content of a workbook in independent from software or hardware manner.
 

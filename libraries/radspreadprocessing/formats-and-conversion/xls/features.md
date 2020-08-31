@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-xls-features
 tags: features, xls
 published: True
 position: 1
+platforms: netcore, mvc, ajax, blazor, wpf, winforms, xamarin
 ---
 
 # Features
