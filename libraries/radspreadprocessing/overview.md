@@ -72,8 +72,6 @@ This library enables you to work with spreadsheet documents – create ones from
 
 * [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
 
-* [**XLS**]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
-
 * [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})
 
 * [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
