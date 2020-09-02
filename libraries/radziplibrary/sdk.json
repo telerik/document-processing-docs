@@ -13,7 +13,7 @@
   {
     "Name": "Create Zip Archive (.NET Standard)",
     "ExampleInfo": {
-      "Name": "Create Zip Archive",
+      "Name": "Create Zip Archive (.NET Standard)",
       "DirectoryName": "CreateZipArchive",
       "ExampleFileNames": [ "CreateZipArchive_NetStandard.csproj", "Program.cs", "ReadMe.md" ]
     },
