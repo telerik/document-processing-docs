@@ -33,6 +33,8 @@ Telerik Document Processing includes a set of cross-platform libraries that let 
 
 * **Telerik.Windows.Documents.Fixed.dll**: This assembly is needed for processing PDF documents.
 
+* **Telerik.Windows.Documents.CMapUtils.dll**: Provides a default implementation for getting the data of a predefined CMap table by a given name. The assembly is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}).
+
 * **Telerik.Windows.Zip.dll**: Needed for working with zipped formats (DOCX, XLSX) and PDF. It is the main assembly of the ([Telerik Zip Library]({%slug radziplibrary-overview%})).
 
 * **Telerik.Windows.Zip.Extensions.dll**: Extends **Telerik.Windows.Zip** assembly with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})).

@@ -25,6 +25,7 @@ There are other Telerik NuGet Packages for the UI suites. The following are the 
 
 * __Telerik.Windows.Documents.Core:__ The main NuGet package for the Telerik Document Processing libraries. Required when you plan to use the library.
 * __Telerik.Windows.Documents.Fixed:__ The package is required when processing `PDF` documents.
+* __Telerik.Windows.Documents.CMapUtils:__ Provides a default implementation for getting the data of a predefined CMap table by a given name.
 * __Telerik.Windows.Documents.Flow:__ The package is part of the Word Processing Library. Required for processing `HTML`, `DOCX`, `RTF`, and `TXT` documents.
 * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf:__ The package for exporting flow documents, such as `DOCX` and `RTF`, to `PDF`.
 * __Telerik.Windows.Documents.Spreadsheet:__ The main package for generating spreadsheets.
@@ -34,24 +35,28 @@ There are other Telerik NuGet Packages for the UI suites. The following are the 
 * __Telerik.Windows.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
 * __Telerik.Windows.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
 * __Telerik.Windows.Zip.Extensions:__ The package provides methods for working with files and platform specific operations. 
-* __Telerik.Windows.Documents.CMapUtils:__ Provides a default implementation for providing the data of a predefined CMap table by a given name.
 
 ## Packages for .NET Standard 2.0
 
 Telerik Document Processing supports [.NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md). The available packages are: 
 
 * __Telerik.Documents.Core:__ The main NuGet package from the Telerik Document Processing libraries. Required when you plan to use the library.
+
 * __Telerik.Documents.Fixed:__ The package is required when processing `PDF` documents.
+* __Telerik.Documents.ImageUtils:__ This package is required when exporting to `PDF` format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
+* __Telerik.Documents.CMapUtils:__ Provides a default implementation for getting the data of a predefined CMap table by a given name.
+
 * __Telerik.Documents.Flow:__ The package is part of the Words Processing Library. Required for processing `HTML`, `DOCX`, `RTF`, and `TXT` documents.
 * __Telerik.Documents.Flow.FormatProviders.Pdf:__ The package for exporting flow documents, such as `DOCX` and `RTF`, to PDF.
-* __Telerik.Documents.ImageUtils:__ This package is required when exporting to `PDF` format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
+
 * __Telerik.Documents.Spreadsheet:__ The main package for generating and editing spreadsheets.
 * __Telerik.Documents.Spreadsheet.FormatProviders.OpenXml:__ This package is required for the import/export of `XLSX documents.
 * __Telerik.Documents.Spreadsheet.FormatProviders.Xls:__ This package is required for the import/export of `XLS` documents.
 * __Telerik.Documents.Spreadsheet.FormatProviders.Pdf:__ Required for the export of RadSpreadProcessing documents to `PDF`.
+
 * __Telerik.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
+
 * __Telerik.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
-*__Telerik.Documents.CMapUtils:__ Provides a default implementation for providing the data of a predefined CMap table by a given name.
 
 
 ## Get the NuGet Packages
