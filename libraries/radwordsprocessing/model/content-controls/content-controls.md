@@ -11,7 +11,7 @@ published: True
 
 Structured Document Tags (SDT) enable users to add specific semantics to part of the document: restricting input, modifying editing behavior etc. 
 
->note Currently, the WordsProcessing library can import and export content controls from and to Office Open XML (DOCX) and XAML formats. When exporting to other formats the content controls will be lost, however, their content (current value) will be exported.
+>note Currently, the WordsProcessing library can import and export content controls from and to Office Open XML (DOCX) format. When exporting to other formats the content controls will be lost, however, their content (current value) will be exported.
 
 ## Content Controls Inside the Document
 
