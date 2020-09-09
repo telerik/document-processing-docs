@@ -42,5 +42,12 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
     chart.SeriesGroups.Add(barSeriesGroup);
     
     // Add the chart to the worksheet
-    worksheet.Shapes.Add(chartShape); 
+    Worksheet worksheet = workbook.ActiveWorksheet;
+    FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(6, 4), new CellRange(1, 1, 5, 2), ChartType.Column)
+    {
+        Width = 460,
+        Height = 250
+    };
+
+    worksheet.Shapes.Add(chartShape);
 {{endregion}}
