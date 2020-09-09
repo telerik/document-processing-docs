@@ -29,7 +29,7 @@ The digital signature feature enables you to sign and validate a PDF document. A
 
 In the PDF document model, the validation is performed per signature. A signed document is considered valid when it has not been changed after the signing and all of its certificates have a valid trusted root certificate.
 
->In PdfProcessing for Xamarin you can add SignatureField but can not sign or import signed documents.
+>In PdfProcessing for .NET Standard you can add SignatureField but can not sign or import signed documents.
 
 ## Signing a Document
 

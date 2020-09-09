@@ -33,7 +33,7 @@ The document model of the library provides support for:
 
 * [**Interactive Forms**]({%slug radpdfprocessing-model-interactive-forms-overview%}): Create and modify PDF files containing textboxes, buttons, listboxes and other interactive controls making available for the PDF file user to interactively fill some data in the PDF document and/or digitally sign the filled document.
 
-* [**Digital Signature**]({%slug radpdfprocessing-features-digital-signature%}): The digital signature feature enables you to sign and validate PDF document.
+* [**Digital Signature**]({%slug radpdfprocessing-features-digital-signature%}): The digital signature feature enables you to sign and validate PDF document (limited supportd in .NET Standard).
 
 * [**Clipping**]({%slug radpdfprocessing-concepts-clipping%}): You can define the outline of other content elements like images and paths.
 
