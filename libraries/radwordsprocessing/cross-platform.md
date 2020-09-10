@@ -4,6 +4,7 @@ page_title: Cross-Platform Support
 description: Cross-Platform Support
 slug: radwordsprocessing-cross-platform
 tags: cross,platform
+platforms: netcore, blazor, xamarin
 published: True
 position: 2
 ---
@@ -11,6 +12,8 @@ position: 2
 # Cross-Platform Support
 
 **Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of binaries built against the .NET Core & .NET Standard which you can reference in an application.
+
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Assembly References
 

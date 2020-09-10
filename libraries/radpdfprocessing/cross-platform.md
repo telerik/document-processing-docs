@@ -4,6 +4,7 @@ page_title: Cross-Platform Support
 description: Cross-Platform Support
 slug: radpdfprocessing-cross-platform
 tags: cross,platform
+platforms: netcore, blazor, xamarin
 published: True
 position: 2
 ---
@@ -11,6 +12,8 @@ position: 2
 # Cross-Platform Support
 
 **Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of binaries built against the .NET Core & .NET Standard which you can reference in an application.
+
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Assembly References
 
@@ -89,7 +92,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
       
     >important If the JpegImageConverter property is not set, an exception is thrown.
     
-    The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document.
+    The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document. This assembly is **not available for Xamarin**.
 
     #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
         {{region cs-radpdfprocessing-cross-platform_3}}
@@ -98,7 +101,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
             FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
         {{endregion}}
 
-    >important Due to a **Magick.NET** library limitation, the users of [UI for Blazor](https://www.telerik.com/blazor-ui) that use **WebAssembly** could only create and provide a **custom** implementation JpegImageConverterBase. Check the following example.
+    >Due to a **Magick.NET** library limitation, the users of [UI for Blazor](https://www.telerik.com/blazor-ui) that use **WebAssembly** could only create and provide a **custom** implementation JpegImageConverterBase. Check the following example.
 
     #### **[C#] Example 4: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
         {{region cs-radpdfprocessing-cross-platform_2}}
