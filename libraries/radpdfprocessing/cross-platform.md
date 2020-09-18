@@ -26,6 +26,7 @@ In order to use the model of the **RadPdfProcessing** library in your cross-plat
 To export images different than Jpeg and Jpeg2000 or ImageQuality different than High you will need to add references to the following **.Net Standard** assembly:
 
 * **Telerik.Documents.ImageUtils.dll**
+<br><sub>_This assembly is not available in UI for Xamarin._</sub>
 
 >note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
 
