@@ -1,6 +1,6 @@
 ---
-title: What is a Workbook?
-page_title: What is a Workbook?
+title: What is a Excel Workbook?
+page_title: What is a Excel Workbook?
 description: What is a Workbook?
 slug: radspreadprocessing-working-with-workbooks-what-is-workbook
 tags: what,is,a,workbook?
@@ -14,7 +14,7 @@ This article will help you get familiar with the concept of a workbook and its f
 
 ## Overview
 
-The workbook lays in the core of the RadSpreadProcessing' document model. It is the primary document that you use to retrieve, manipulate and store data. The workbook can also be viewed as a collection of worksheets, where a worksheet is in turn defined as a collection of cells organized in rows and columns. Each workbook contains, at least, one worksheet and often holds several sheets with related information.
+The Excel workbook lays in the core of the RadSpreadProcessing' document model. It is the primary document that you use to retrieve, manipulate and store data. The workbook can also be viewed as a collection of worksheets, where a worksheet is in turn defined as a collection of cells organized in rows and columns. Each workbook contains, at least, one worksheet and often holds several sheets with related information.
 
 The workbook is designed to hold together multiple worksheets in order to allow efficient organization and consolidation of data. Typically, a workbook has a single theme and contains worksheets with related data. For example, an annual budget workbook may comprise four worksheets that break down the budget in quarters.
 
@@ -24,7 +24,7 @@ You can create a workbook from scratch or import an existing document. To save a
 
 The workbook has several important characteristics:
 
-* __Collection of Worksheets__: Each workbook maintains a collection of worksheets that allows you to add and delete worksheets. It also allows you to move worksheets within the workbook or simply iterate through them. More information about worksheets is available in the [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) section.
+* __Collection of Worksheets__: Each workbook maintains a collection of worksheets that allows you to add and delete worksheets. It also allows you to move worksheets within the workbook or simply iterate through them. More information about worksheets is available in the [What is a Excel Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) section.
 
 * __Active Worksheet__: The workbook exposes a property that indicates the active worksheet. Note that there is a single active worksheet in a workbook at a time. The [Activate a Worksheet]({%slug radspreadprocessing-working-with-worksheets-activate-worksheet%}) article illustrates how to set the active worksheet.
 
@@ -40,4 +40,7 @@ The workbook has several important characteristics:
 
 * __Protection__: The feature lets you prevent users from modifying the structure of the workbook: adding, removing, renaming or reordering sheets.
 
-![Rad Spreadsheet Model Working with Workbooks What is Workbook](images/RadSpreadsheet_Model_Working_with_Workbooks_What_is_Workbook_02.png)
+![Rad Spreadsheet Model Working with Excel Workbooks What is Workbook](images/RadSpreadsheet_Model_Working_with_Workbooks_What_is_Workbook_02.png)
+
+
+*This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft® Corporation.
