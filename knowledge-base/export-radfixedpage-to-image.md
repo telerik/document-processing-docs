@@ -29,8 +29,8 @@ res_type: kb
 	</tr>	
 </tbody>
 </table>
-`
-\* Due to the new PdfViewer`s document model transition, there is a difference in the implementation between different assemblies version.
+
+\* Due to the new PdfViewer's document model transition, there is a difference in the implementation between different assemblies version.
 
 ## Description
  
