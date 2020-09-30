@@ -107,6 +107,8 @@ The result of executing the code in **Example 3** over a cell range containing s
 #### Figure 3: 
 ![](images/SpreadProcessing-Features-UsingCharts_2.png)
 
+>note The series are styled using the colors defined in the [Document Theme]({%slug radspreadprocessing-features-styling-document-themes%}).
+
 ## DocumentChart 
 
 This is the object representing the chart itself and contains the following properties:
