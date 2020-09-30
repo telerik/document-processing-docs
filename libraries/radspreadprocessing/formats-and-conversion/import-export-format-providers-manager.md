@@ -79,7 +79,7 @@ __Example 3__ demonstrates how to present the user with an OpenFileDialog and tr
 #### __[C#] Example 3: Import a file using OpenFileDialog__
 
 {{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
-	OpenFileDialog openFileDialog = new OpenFileDialog();
+	OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
 	openFileDialog.Filter = Telerik.Windows.Controls.Spreadsheet.Utilities.FileDialogsHelper.GetOpenFileDialogFilter();
 	if (openFileDialog.ShowDialog() == true)
 	{
@@ -102,7 +102,7 @@ __Example 3__ demonstrates how to present the user with an OpenFileDialog and tr
 #### __[VB.NET] Example 3: Import a file using OpenFileDialog__
 
 {{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
-	Dim openFileDialog As New OpenFileDialog()
+	Dim openFileDialog As New Microsoft.Win32.OpenFileDialog()
 	openFileDialog.Filter = FileDialogsHelper.GetOpenFileDialogFilter()
 	If openFileDialog.ShowDialog() = True Then
 	    Try
@@ -134,7 +134,7 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 #### __[C#] Example 4: Save a file using SaveFileDialog__
 
 {{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
-	SaveFileDialog saveFileDialog = new SaveFileDialog();
+	Microsoft.Win32.SaveFileDialog saveFileDialog = new Microsoft.Win32.SaveFileDialog();
 	saveFileDialog.Filter = Telerik.Windows.Controls.Spreadsheet.Utilities.FileDialogsHelper.GetSaveFileDialogFilter();
 	
 	if (saveFileDialog.ShowDialog() == true)
@@ -151,7 +151,7 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 #### __[VB.NET] Example 4: Save a file using SaveFileDialog__
 
 {{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
-	Dim saveFileDialog As New SaveFileDialog()
+	Dim saveFileDialog As New Microsoft.Win32.SaveFileDialog()
 	saveFileDialog.Filter = FileDialogsHelper.GetSaveFileDialogFilter()
 	
 	If saveFileDialog.ShowDialog() = True Then
@@ -166,6 +166,8 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 You can achieve the same result through using the __SaveFile__ command. In fact, the command executes exactly the same code as above. That said, make sure you register the format providers you would like to use before using the command.
         
 ## Retrieve Registered Providers and Supported Extensions
+
+Currently RadSpreadProcessing supports the following extensions: ,xlsx, .xls, .csv, .txt and .pdf (export only). The format providers available for them are respectively [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [XlsFormatProvider]]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%}), [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}) and [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
 The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the GetProviderByName() static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __GetSupportedExtensions()__ that returns an IEnumeable of the currently supported file extensions.
 
