@@ -63,7 +63,7 @@ More information about import is available in the [Formats and Conversion]({%slu
 ## Save a Workbook
 
 
-__RadSpreadProcessing__ also allows you to save a workbook into a csv, txt and xlsx formats. To export a workbook, you need to instantiate the format provider you would like to use and invoke its __Export()__ method. __Example 3__ demonstrates how to export an existing Workbook to a csv file. The snippet creates a new workbook with a single worksheet. Further, it creates a __CsvFormatProvider__ and invokes its __Export()__ method.
+__RadSpreadProcessing__ also allows you to save a workbook into a XLSX, XLS, CSV, TXT, and PDF formats. To export a workbook, you need to instantiate the format provider you would like to use and invoke its __Export()__ method. __Example 3__ demonstrates how to export an existing Workbook to a CSV file. The snippet creates a new workbook with a single worksheet. Further, it creates a __CsvFormatProvider__ and invokes its __Export()__ method. Saving to the other formats is done in the same way, using a different format provider class.
           
 
 #### __[C#] Example 3: Save csv file__
