@@ -12,7 +12,7 @@ position: 6
 
 
 
-The __RadFixedDocumentEditor__ class allows you create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in a flow-like manner. The editor provides methods that enable the generation of documents, which automatically flows to pages.
+The __RadFixedDocumentEditor__ class allows you to create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in a flow-like manner. The editor provides methods that enable the generation of documents, which automatically flows to pages.
       
 
 * [Creating RadFixedDocumentEditor](#creating-radfixeddocumenteditor)
