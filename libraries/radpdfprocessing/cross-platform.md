@@ -53,7 +53,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     #### **[C#] Example 1: Windows Example: Creating custom implementation inheriting the FontsProviderBase abstract class**
     {{region cs-radpdfprocessing-cross-platform_0}}
 
-        public class FontsProvider : FontsProviderBase
+        public class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
         {
             public override byte[] GetFontData(FontProperties fontProperties)
             {
@@ -83,8 +83,8 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     #### **[C#] Example 2: Set the custom implementation inheriting the FontsProviderBase abstract class**
     {{region cs-radpdfprocessing-cross-platform_1}}
 
-        FontsProviderBase fontsProvider = new FontsProvider();
-        FixedExtensibilityManager.FontsProvider = fontsProvider;
+        Telerik.Windows.Documents.Extensibility.FontsProviderBase fontsProvider = new FontsProvider();
+        Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.FontsProvider = fontsProvider;
     {{endregion}}
 
 * **JpegImageConverter**: Gets or sets a *JpegImageConverterBase* instance used to provide a Jpeg converted image data.
@@ -98,8 +98,8 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
         {{region cs-radpdfprocessing-cross-platform_3}}
 
-            JpegImageConverterBase jpegImageConverter = new JpegImageConverter();
-            FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
+            Telerik.Windows.Documents.Extensibility.JpegImageConverterBase jpegImageConverter = new Telerik.Documents.ImageUtils.JpegImageConverter();
+            Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
         {{endregion}}
 
     >Due to a **Magick.NET** library limitation, the users of [UI for Blazor](https://www.telerik.com/blazor-ui) that use **WebAssembly** could only create and provide a **custom** implementation JpegImageConverterBase. Check the following example.
@@ -107,7 +107,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     #### **[C#] Example 4: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
         {{region cs-radpdfprocessing-cross-platform_2}}
 
-            internal class CustomJpegImageConverter : JpegImageConverterBase
+            internal class CustomJpegImageConverter : Telerik.Windows.Documents.Extensibility.JpegImageConverterBase
             {
                 public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
                 {
@@ -144,7 +144,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
         {{region cs-radpdfprocessing-cross-platform_3}}
 
             JpegImageConverterBase customJpegImageConverter = new CustomJpegImageConverter();
-            FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
+            Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
         {{endregion}}
 
 >note A complete SDK example could be found on our [GitHub repository](https://github.com/telerik/document-processing-sdk).
