@@ -360,6 +360,11 @@ In order to set a filter on a range, you need to follow the steps below:
 	{{endregion}}
 	
 	
+	**Figure 2** demonstrates the result of the filtering when applied on the values 1-9 in column B and 11-19 in column C.
+	
+    #### Figure 2: Result of the filtering
+    ![Filtering](images/RadSpreadProcessing_Features_Filtering_01.png)
+	
 	
 	Alternatively, you can set the filter through the cell selection like in __Example 10__. This approach will automatically set the filter range anew.
         
@@ -370,6 +375,7 @@ In order to set a filter on a range, you need to follow the steps below:
 
 		worksheet.Cells[filterRange].Filter(filter);
 	{{endregion}}
+
 
 
 
