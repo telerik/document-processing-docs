@@ -1,9 +1,9 @@
 ---
-title: What is a Excel Worksheet?
-page_title: What is a Excel Worksheet?
+title: What is a Worksheet?
+page_title: What is a Worksheet?
 description: What is a Worksheet?
 slug: radspreadprocessing-working-with-worksheets-what-is-worksheet
-tags: what,is,a,worksheet?
+tags: what,is,a,worksheet?,excel
 published: True
 position: 0
 ---
@@ -17,7 +17,7 @@ This article will help you get familiar with the concept of a worksheet and its 
 
 ## What is a Worksheet
 
-A __Worksheet__ is a collection of cells organized in rows and columns. It is the working surface you interact with to enter data. Each Excel worksheet contains 1048576 rows and 16384 columns and serves as a giant table that allows you to organize information. Typically, a workbook contains several worksheets with related content and only one of the worksheets is active at a time.
+The term __Worksheet__ used in Excel documents is a collection of cells organized in rows and columns. It is the working surface you interact with to enter data. Each Excel worksheet contains 1048576 rows and 16384 columns and serves as a giant table that allows you to organize information. Typically, a workbook contains several worksheets with related content and only one of the worksheets is active at a time.
         
 
 ## What is in it?
@@ -42,7 +42,7 @@ The main characteristics of worksheets can be summarized in the following list:
 		CellRange result = worksheet.GetUsedCellRange(new IPropertyDefinition[] { CellPropertyDefinitions.ValueProperty });
 	{{endregion}}
 
-	>More information and examples of working with the used cell range of a Excel worksheet are available in the [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}) topic.
+	>More information and examples of working with the used cell range of a worksheet are available in the [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}) topic.
 
 * __Collection of Hyperlinks__: Each worksheet can contain numerous hyperlinks to web pages, particular cells in the workbook or email addresses. More information on the topic is available in the [Hyperlink]({%slug radspreadprocessing-features-hyperlink%}) article.
             
