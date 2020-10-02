@@ -1,9 +1,9 @@
 ---
 title: Using XlsFormatProvider
-page_title: Using XlsFormatProvider
-description: Using XlsFormatProvider
+page_title: Import and Export to Excel File Format Using XlsFormatProvider
+description: Import and Export to Excel File Format Using XlsFormatProvider
 slug: radspreadprocessing-formats-and-conversion-xls-xlsformatprovider
-tags: using,xlsformatprovider
+tags: using,xlsformatprovider,excel
 published: True
 position: 2
 platforms: netcore, mvc, ajax, blazor, wpf, winforms, xamarin
@@ -11,21 +11,21 @@ platforms: netcore, mvc, ajax, blazor, wpf, winforms, xamarin
 
 # Using XlsFormatProvider
 
-__XlsFormatProvider__ makes it easy to import and export XLS files. 
+__XlsFormatProvider__ makes it easy to import and export to Excel XLS files. 
 
 >The __XlsFormatProvider__ requires references to the following assembly:
         
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
 
-Once you reference the aforementioned assemblies, you need to create an instance of the __XlsFormatProvider__ in order to import and export XLS files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls namespace. __XlsFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
+Once you reference the aforementioned assemblies, you need to create an instance of the __XlsFormatProvider__ in order to import and export Excel XLS files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls namespace. __XlsFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
       
 
 ## Import
 
-__Example 1__ shows how to import an xls file using a FileStream. The code assures that a file with the specified name exists. Further, the sample instantiates an __XlsFormatProvider__ and passes a FileStream to its __Import()__ method.
+__Example 1__ shows how to import an Excel xls file using a FileStream. The code assures that a file with the specified name exists. Further, the sample instantiates an __XlsFormatProvider__ and passes a FileStream to its __Import()__ method.
         
 
-#### __[C#] Example 1: Import Xls file__
+#### __[C#] Example 1: Import Excel xls file__
 
 {{region cs-radspreadprocessing-formats-and-conversion-xls-xlsformatprovider_0}}
 
@@ -51,7 +51,7 @@ __Example 1__ shows how to import an xls file using a FileStream. The code assur
 __Example 2__ demonstrates how to export an existing Workbook to an XLS file. The snippet creates a new workbook with a single worksheet. Further, the example creates an __XlsFormatProvider__ and invokes its __Export()__ method. Note that the __Export()__ method accepts a parameter of type __Stream__ so you can work with any of its inheritors.
         
 
-#### __[C#] Example 2: Export spreadsheet document to Xls file__
+#### __[C#] Example 2: Export spreadsheet document to Excel xls file__
 
 {{region cs-radspreadprocessing-formats-and-conversion-xls-xlsformatprovider_1}}
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
@@ -83,3 +83,6 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
         bytes = output.ToArray();
     }
 {{endregion}}
+
+
+*This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.

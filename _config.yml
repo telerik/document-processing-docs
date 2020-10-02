@@ -115,21 +115,24 @@ navigation:
     libraries/radspreadprocessing/features:
         title: Features
         position: 7
+    libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats:
+        title: Import and Export to Excel File Formats
+        position: 2    
     libraries/radspreadprocessing/formats-and-conversion/xlsx:
         title: Xlsx
-        position: 2
+        position: 3
     libraries/radspreadprocessing/formats-and-conversion/xls:
         title: Xls
-        position: 3
+        position: 4
     libraries/radspreadprocessing/formats-and-conversion/pdf:
         title: Pdf
-        position: 4
+        position: 5
     libraries/radspreadprocessing/formats-and-conversion/csv:
         title: Csv
-        position: 5
+        position: 6
     libraries/radspreadprocessing/formats-and-conversion/txt:
         title: Txt
-        position: 6
+        position: 7
         
     libraries/radspreadprocessing/features/charts:
         title: Charts
