@@ -10,11 +10,11 @@ position: 0
 
 # What is a Workbook?
 
-This article will help you get familiar with the concept of a workbook and its features.
+This article will help you get familiar with the representation of an Excel workbook in the model of RadSpreadProcessing.
 
 ## Overview
 
-The Excel workbook lays in the core of the RadSpreadProcessing' document model. It is the primary document that you use to retrieve, manipulate and store data. The workbook can also be viewed as a collection of worksheets, where a worksheet is in turn defined as a collection of cells organized in rows and columns. Each workbook contains, at least, one worksheet and often holds several sheets with related information.
+The workbook lays in the core of the RadSpreadProcessing' document model. It is the primary document that you use to retrieve, manipulate and store data. The workbook can also be viewed as a collection of worksheets, where a worksheet is in turn defined as a collection of cells organized in rows and columns. Each workbook contains, at least, one worksheet and often holds several sheets with related information.
 
 The workbook is designed to hold together multiple worksheets in order to allow efficient organization and consolidation of data. Typically, a workbook has a single theme and contains worksheets with related data. For example, an annual budget workbook may comprise four worksheets that break down the budget in quarters.
 
