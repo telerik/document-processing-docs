@@ -17,7 +17,7 @@ This article will help you get familiar with the concept of a worksheet and its 
 
 ## What is a Worksheet
 
-The term __Worksheet__ used in Excel documents is a collection of cells organized in rows and columns. It is the working surface you interact with to enter data. Each Excel worksheet contains 1048576 rows and 16384 columns and serves as a giant table that allows you to organize information. Typically, a workbook contains several worksheets with related content and only one of the worksheets is active at a time.
+The term __Worksheet__ used in Excel documents is a collection of cells organized in rows and columns. It is the working surface you interact with to enter data. Each worksheet contains 1048576 rows and 16384 columns and serves as a giant table that allows you to organize information. Typically, a workbook contains several worksheets with related content and only one of the worksheets is active at a time.
         
 
 ## What is in it?
