@@ -1,9 +1,9 @@
 ---
-title: What is a Excel Workbook?
-page_title: What is a Excel Workbook?
+title: What is a Workbook?
+page_title: What is a Workbook?
 description: What is a Workbook?
 slug: radspreadprocessing-working-with-workbooks-what-is-workbook
-tags: what,is,a,workbook?
+tags: what,is,a,workbook?,excel
 published: True
 position: 0
 ---
@@ -24,7 +24,7 @@ You can create a workbook from scratch or import an existing document. To save a
 
 The workbook has several important characteristics:
 
-* __Collection of Worksheets__: Each workbook maintains a collection of worksheets that allows you to add and delete worksheets. It also allows you to move worksheets within the workbook or simply iterate through them. More information about worksheets is available in the [What is a Excel Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) section.
+* __Collection of Worksheets__: Each workbook maintains a collection of worksheets that allows you to add and delete worksheets. It also allows you to move worksheets within the workbook or simply iterate through them. More information about worksheets is available in the [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) section.
 
 * __Active Worksheet__: The workbook exposes a property that indicates the active worksheet. Note that there is a single active worksheet in a workbook at a time. The [Activate a Worksheet]({%slug radspreadprocessing-working-with-worksheets-activate-worksheet%}) article illustrates how to set the active worksheet.
 
