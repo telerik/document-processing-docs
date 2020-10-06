@@ -63,7 +63,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
 
                 DirectoryInfo directory = new DirectoryInfo(fontFolder);
                 FileInfo[] fontFiles = directory.GetFiles("*.ttf");
-                if (fontFiles.Any(s => s.Name.ToLower() == fontFileName.ToLower()))
+                if (fontFiles.Any(s => s.Name.Equals(fontFileName, StringComparison.InvariantCultureIgnoreCase)))
                 {
                     using (FileStream fileStream = File.OpenRead(targetPath))
                     {
