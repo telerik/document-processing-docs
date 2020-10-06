@@ -29,12 +29,13 @@ Telerik Document Processing libraries support the following file formats:
 >**.NET Standard** and **.NET Core** compatible versions are available for the Telerik Document Processing libraries. Their assemblies can be downloaded from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)**, **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** and **[UI for Blazor](https://www.telerik.com/blazor-ui)** suites respectively.
 
 <style>
-/* Document Processing download trial button */
-div#document_processing_trial {
-	text-align: center !important;
+/* download trial button */
+
+div#trial_button {
+    text-align: center !important;
 }
 
-div#document_processing_trial .document_processing_download_btn {	
+div#trial_button .trialLink {	
 	color: #fff;
 	background-color: #e74b3c;
 	padding:.44em .9em .52em;
@@ -53,28 +54,9 @@ div#document_processing_trial .document_processing_download_btn {
 }
 </style>
 
-<script type="text/javascript">
-
-  $(document).ready(function(){
-	  var mac = navigator.userAgent.match(/(Mac)/i);
-	  var $btnWin = $(".js-btnWin");
-	  var $btnOSX = $(".js-btnOSX");
-
-	  if (mac) {
-		$btnOSX.show();
-		$btnWin.hide();
-	  } else {
-		$btnOSX.hide();
-		$btnWin.show();
-	  }
-  });
-
-</script>
-
-<div id="document_processing_trial">
+<div id="trial_button">
 <br />
-<a href="https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate" class="document_processing_download_btn js-btnWin" style="display: none">Download Free Trial</a>
-<a href="https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate" class="document_processing_download_btn js-btnOSX" style="display: none">Download Free Trial</a>
+<a href="https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate" class="trialLink">Download Free Trial</a>
 </div>
 
 ## Getting Started
