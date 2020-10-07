@@ -3,14 +3,14 @@ title: What is a Workbook?
 page_title: What is a Workbook?
 description: What is a Workbook?
 slug: radspreadprocessing-working-with-workbooks-what-is-workbook
-tags: what,is,a,workbook?
+tags: what,is,a,workbook?,excel
 published: True
 position: 0
 ---
 
 # What is a Workbook?
 
-This article will help you get familiar with the concept of a workbook and its features.
+This article will help you get familiar with the representation of an Excel workbook in the model of RadSpreadProcessing.
 
 ## Overview
 
@@ -40,4 +40,7 @@ The workbook has several important characteristics:
 
 * __Protection__: The feature lets you prevent users from modifying the structure of the workbook: adding, removing, renaming or reordering sheets.
 
-![Rad Spreadsheet Model Working with Workbooks What is Workbook](images/RadSpreadsheet_Model_Working_with_Workbooks_What_is_Workbook_02.png)
+![Rad Spreadsheet Model Working with Excel Workbooks What is Workbook](images/RadSpreadsheet_Model_Working_with_Workbooks_What_is_Workbook_02.png)
+
+
+*This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft® Corporation.

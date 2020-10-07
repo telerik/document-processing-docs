@@ -70,16 +70,14 @@ This library enables you to work with spreadsheet documents – create ones from
 
 ## Supported formats:
 
-* [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
+* Excel formats: [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [**XLS**]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
 
-* [**XLS**]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
+* Text formats: [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
 
-* [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})
+* Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only)
 
-* [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
 
-* [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only)
-
+*This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
 
 ## See Also
 
