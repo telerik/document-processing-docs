@@ -29,6 +29,7 @@ If you need to export documents to PDF format, you will need to refer the follow
 
 If you need to export to PDF format documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High, you will need to refer the following assembly:
 * **Telerik.Documents.ImageUtils.dll**
+<br><sub>_This assembly is not available in UI for Xamarin._</sub>
 
 >note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
 
@@ -39,6 +40,7 @@ If you need to export to PDF format documents containing images different than *
 ### Additional settings required
 
 Some functionalities require additional settings to be done:
+* In order to **export to PDF** format documents containing fonts different than the [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}), the **FontsProvider** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}).
 * In order to **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}).
 
 ## See Also

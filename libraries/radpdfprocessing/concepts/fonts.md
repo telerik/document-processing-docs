@@ -21,17 +21,17 @@ There are 14 standard fonts that are not embedded in the document when you use t
         
 
 * Helvetica
-* Helvetica Bold
-* Helvetica Oblique
-* Helvetica BoldOblique
+* Helvetica-Bold
+* Helvetica-Oblique
+* Helvetica-BoldOblique
 * Courier
-* Courier Bold
-* Courier Oblique
-* Courier BoldOblique
-* Times Roman
-* Times Bold
-* Times Italic
-* Times BoldItalic
+* Courier-Bold
+* Courier-Oblique
+* Courier-BoldOblique
+* Times-Roman
+* Times-Bold
+* Times-Italic
+* Times-BoldItalic
 * Symbol
 * ZapfDingbats
 
