@@ -10,7 +10,7 @@ position: 0
 
 # Name Converter
 
-The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.utilities.nameconverter) is a static class that provides several methods for converting cell names to indexes and vice versa.
+The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.utilities.nameconverter) is a static class that provides methods for name conversion (e.g. converting cell names to indexes and vice versa).
 
 ## Methods
 
