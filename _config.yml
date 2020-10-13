@@ -109,12 +109,15 @@ navigation:
     libraries/radspreadprocessing/working-with-cells:
         title: Cells
         position: 6
-    libraries/radspreadprocessing/formats-and-conversion:
-        title: Formats and Conversion
-        position: 8
     libraries/radspreadprocessing/features:
         title: Features
         position: 7
+    libraries/radspreadprocessing/helpers:
+        title: Helpers
+        position: 9
+    libraries/radspreadprocessing/formats-and-conversion:
+        title: Formats and Conversion
+        position: 10
     libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats:
         title: Excel File Formats
         position: 2   
