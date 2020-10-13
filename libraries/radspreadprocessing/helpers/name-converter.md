@@ -69,7 +69,7 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 
 ### Convert Cell Index to Name
 **ConvertCellIndexToName** method converts the cell index to name. This method exposes two overloads.
-#### __[C#] Example 5: 1st overload__
+#### __[C#] Example 5: first overload__
 
 {{region radspreadprocessing-name-converter_4}}
 
@@ -77,7 +77,7 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
     string cellName = NameConverter.ConvertCellIndexToName(cellIndex);
 {{endregion}}
 
-#### __[C#] Example 5: 2nd overload__
+#### __[C#] Example 5: second overload__
 {{region radspreadprocessing-name-converter_5}}
 
     string cellName = NameConverter.ConvertCellIndexToName(rowIndex: 0, columnIndex: 0);
@@ -133,7 +133,7 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 
 ### Convert Cell Name to Index
 **ConvertCellNameToIndex** method converts the cell name to a cell index. This method exposes two overloads.
-#### __[C#] Example 10: 1st overload__
+#### __[C#] Example 10: first overload__
 
 {{region radspreadprocessing-name-converter_10}}
 
@@ -143,7 +143,7 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
     NameConverter.ConvertCellNameToIndex(cellName, out rowIndex, out columnIndex);
 {{endregion}}
 
-#### __[C#] Example 10: 2nd overload__
+#### __[C#] Example 10: second overload__
 {{region radspreadprocessing-name-converter_11}}
 
     string cellName = "A1";
@@ -156,7 +156,7 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 
 ### Try Convert Cell Name to Index
 **TryConvertCellNameToIndex** method tries to convert the cell name to index. This method exposes two overloads.
-#### __[C#] Example 11: 1st overload__
+#### __[C#] Example 11: first overload__
 {{region radspreadprocessing-name-converter_12}}
 
     string cellName = "A1";
@@ -165,7 +165,7 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
     bool isConversionSuccessful = NameConverter.TryConvertCellNameToIndex(cellName, out rowIndex, out columnIndex);
 {{endregion}}
 
-#### __[C#] Example 11: 2nd overload__
+#### __[C#] Example 11: second overload__
 {{region radspreadprocessing-name-converter_13}}
  
     string cellName = "A1";
