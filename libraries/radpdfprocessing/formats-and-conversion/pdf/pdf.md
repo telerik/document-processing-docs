@@ -14,7 +14,7 @@ position: 0
 
 [Portable Document Format](http://en.wikipedia.org/wiki/Portable_Document_Format) (PDF) is a file format used to present documents independently of application software, hardware and operating system. Each PDF file contains a complete description of a fixed-layout flat document, including text, fonts, graphics, and other information needed to display it. 
 
->note More information on how to use PdfProcessing to import or export a PDF document is available in the [Using PdfFormatProvider]({%slg radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) topic.
+>note More information on how to use PdfProcessing to import or export a PDF document is available in the [Using PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) topic.
 
 >caption Figure 1: PDF File Opened in Text Editor
 
