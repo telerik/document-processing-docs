@@ -24,7 +24,7 @@ When both events are raised, the  __DocumentUnhandledExceptionEventArgs__ argume
 
 To use this functionality you should handle the __PdfImportSettings.DocumentUnhandledException__ event. The __Handled__ property in the event arguments indicates if the exception is handled by the code in the event handler or the exception should be thrown. 
 
-#### __C# Example 1: Using the OnException event while loading the entire document__ 
+#### __C# Example 1: Using the DocumentUnhandledException event while loading the entire document__ 
 
 {{region radpdfprocessing-handling-exceptions_0}}
 
@@ -50,7 +50,7 @@ To use this functionality you should handle the __PdfImportSettings.DocumentUnha
 
 When using the OnDemand reading mode you should handle the __RadFixedDocument.DocumentUnhandledException__ event. The __Handled__ option in the event arguments indicates if the exception is handled by the code in the event handler or the exception should be thrown. 
 
-#### __C# Example 2: Using the OnException event while loading on demand__
+#### __C# Example 2: Using the DocumentUnhandledException event while loading on demand__
 
 {{region radpdfprocessing-handling-exceptions_1}}
 
