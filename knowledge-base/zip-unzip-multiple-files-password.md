@@ -32,6 +32,8 @@ The example is showing how to all files from a directory to a password-protected
 
 The following code snippet is traversing all the files in a directory then add the contents of each file to a new Entry in the ZipArchive. The password for the archive is passed through the DefaultEncryptionSettings class. After zipping all the files a new folder named TestZip is created and the contents of the ZipArchive are unzipped into the new folder.
 
+#### __C#__
+
 {{region kb-zip-unzip-multiple-files-password}}
 DefaultEncryptionSettings protectionSettings = new DefaultEncryptionSettings() { Password = "test" };
 
