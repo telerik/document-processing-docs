@@ -1,8 +1,8 @@
 ---
-title: Example on how to zip and unzip multiple files with password
-description: The example is showing how to add two text files to a password protected zip archive
+title: How to zip and unzip multiple files with a password
+description: The example is showing how to zip and unzip multiple files with a password
 type: how-to
-page_title: Example on how to zip and unzip multiple files with password
+page_title: Example on how to zip and unzip multiple files with a password
 slug: zip-unzip-multiple-files-password
 position: 
 tags: 
@@ -26,9 +26,13 @@ res_type: kb
 
 
 ## Description
-The example is showing how to add two text files to a password-protected zip archive.
+The example is showing how to all files from a directory to a password-protected zip archive.
 
 ## Solution
+
+The following code snippet is traversing all the files in a directory then add the contents of each file to a new Entry in the ZipArchive. The password for the archive is passed through the DefaultEncryptionSettings class. After zipping all the files a new folder named TestZip is created and the contents of the ZipArchive are unzipped into the new folder.
+
+{{region kb-zip-unzip-multiple-files-password}}
 DefaultEncryptionSettings protectionSettings = new DefaultEncryptionSettings() { Password = "test" };
 
 using (FileStream output = File.OpenWrite("TestZip.zip"))
@@ -73,4 +77,5 @@ using (FileStream output = File.OpenRead("TestZip.zip"))
         }
     }
 }
+{{endregion}}
 
