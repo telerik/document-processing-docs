@@ -263,6 +263,7 @@ footer_social:
 api_reference_url: "api/"
 
 has_kb_portal: true
+has_cta_panels: true
 
 sdk_examples: "sdk.json"
 sdk_repo_path: "https://github.com/telerik/document-processing-sdk/tree/master/"
