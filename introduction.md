@@ -12,7 +12,9 @@ position: 0
 
 Telerik Document Processing is a bundle of UI-independent, cross-platform libraries enabling you to process the most commonly used flow, fixed and spreadsheet document formats. The components allow to create, import, modify and export documents, without external dependencies. To read more about the benefits of using Telerik Document Processing, please visit the [product overview page](https://www.telerik.com/document-processing-libraries).
 
-
+{% if site.has_cta_panels == true %}
+{% include cta-panel-introduction.html %}
+{% endif %}
 
 Telerik Document Processing libraries support the following file formats:
 
@@ -27,37 +29,6 @@ Telerik Document Processing libraries support the following file formats:
 * ZIP
  
 >**.NET Standard** and **.NET Core** compatible versions are available for the Telerik Document Processing libraries. Their assemblies can be downloaded from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)**, **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** and **[UI for Blazor](https://www.telerik.com/blazor-ui)** suites respectively.
-
-<style>
-/* download trial button */
-
-div#trial_button {
-    text-align: center !important;
-}
-
-div#trial_button .trialLink {	
-	color: #fff;
-	background-color: #e74b3c;
-	padding:.44em .9em .52em;
-	font-size: 20px;
-	font-weight:400;
-	letter-spacing:-.025em;
-	position:relative;
-	display:inline-block;
-	line-height:1.2;
-	-webkit-transition:color .2s ease,background-color .2s ease;
-	transition:color .2s ease,background-color .2s ease;
-	border-radius:2px;
-	-webkit-appearance:none;
-	font-family:Metric,Arial,Gadget,sans-serif;
-	text-align:center	
-}
-</style>
-
-<div id="trial_button">
-<br />
-<a href="https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate" class="trialLink">Download Free Trial</a>
-</div>
 
 ## Getting Started
 
