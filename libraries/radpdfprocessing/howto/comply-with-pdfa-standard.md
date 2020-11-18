@@ -12,7 +12,7 @@ position: 1
 
 [PDF/A](http://en.wikipedia.org/?title=PDF/A) is an ISO-standardized version of the PDF (Portable Document Format) specialized for the digital preservation of electronic documents. 
 
-PDF/A standard is designed to use the PDF format for achieving documents. This means that the compliant documents should contain all the information necessary for displaying the document embedded in the file. This includes all content, fonts, and color information. A PDF/A document is not permitted to rely on information from external sources. Other key elements to PDF/A conformance include:
+PDF/A standard is designed to use the PDF format for archiving documents. This means that the compliant documents should contain all the information necessary for displaying the document embedded in the file. This includes all content, fonts, and color information. A PDF/A document is not permitted to rely on information from external sources. Other key elements to PDF/A conformance include:
 
 * Audio and video content is forbidden.
 * JS and executable file launches are forbidden.
