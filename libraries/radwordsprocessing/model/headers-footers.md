@@ -141,6 +141,10 @@ Elements of type __Header__ have a property corresponding to a collection of wat
 Information on the types of watermarks and their use is available in the [Watermark]({%slug radwordsprocessing-concepts-watermark%}) help article.
 
 
+### Adding Fields to Header/Footer
+
+You can add PAGE, DATE or other fields to the headers and footers of a document. For more information on how to do that, check the [Fields]({%slug radwordsprocessing-concepts-fields%}) help topic.
+
 
 ## See Also
 
