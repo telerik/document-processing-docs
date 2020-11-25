@@ -17,4 +17,6 @@ Plain text is the contents of an ordinary sequential document readable as textua
 ![Rad Words Processing Formats And Conversion Txt 02](images/RadWordsProcessing_Formats_And_Conversion_Txt_02.png)
 
 __TxtFormatProvider__ allows you to extract the text content of a document.
+
+>Since **R1 2021 Release** the hyperlink address is no longer exported but the hyperlink text only, which mimics the behavior in MS Word.
       
