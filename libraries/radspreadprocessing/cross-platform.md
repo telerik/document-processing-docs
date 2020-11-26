@@ -4,6 +4,7 @@ page_title: Cross-Platform Support
 description: Cross-Platform Support
 slug: radspreadprocessing-cross-platform
 tags: cross,platform
+platforms: netcore, blazor, xamarin
 published: True
 position: 2
 ---
@@ -11,6 +12,8 @@ position: 2
 # Cross-Platform Support
 
 **Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of binaries built against the .NET Core & .NET Standard which you can reference in an application.
+
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Assembly References
 
@@ -30,7 +33,7 @@ To export to PDF format documents containing images different than **Jpeg** and 
 
 * **Telerik.Documents.ImageUtils.dll**
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
 
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 

@@ -77,10 +77,7 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	<tr>
 	    <td><b>-</b></td>
 		<td><b>Telerik.Documents.ImageUtils.dll</b></td>
-		<td>Needed when exporting to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High.
-		
-		The <b>Telerik.Documents.ImageUtils.dll</b> assembly depends on <b>Magick.NET</b>. In order to use this assembly, you will need to add a reference to <a url="https://github.com/dlemstra/Magick.NET">Magick.NET</a>
-		</td>
+		<td>*</td>
 	</tr>
 	<tr>
 	    <td colspan="3">&nbsp;</td>
@@ -102,6 +99,8 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	</tr>
 </tbody>
 </table>
+
+/* Needed when exporting to PDF format a document containing images different than _Jpeg_ and _Jpeg2000_ or _ImageQuality_ different than _High_. The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
 
 ## Creating a Workbook
 
