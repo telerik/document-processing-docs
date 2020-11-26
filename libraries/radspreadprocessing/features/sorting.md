@@ -37,7 +37,7 @@ This article describes what is sorting and how to work with it through the docum
 
 ## What is Sorting?
 
-The sorting feature allows the user to arrange the data according to one or more sorting conditions.
+The sorting feature allows arranging the data according to one or more sorting conditions.
         
 
 The information about the sorting applied to a worksheet is contained in the worksheet property __SortState__ which is of type __SortState__. Through it, you can set and modify the worksheet sorting conditions. The interface implemented by all sort conditions is __ISortCondition__.
