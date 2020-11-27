@@ -92,7 +92,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
       
     >important If the JpegImageConverter property is not set, an exception is thrown.
     
-    The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document.
+    The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document. The default implementation depends on the [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/) libraries to convert images to Jpeg format.
 
     #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
         {{region cs-radpdfprocessing-cross-platform_3}}
@@ -100,9 +100,9 @@ The new **FixedExtensibilityManager** class is exposing the following properties
             Telerik.Windows.Documents.Extensibility.JpegImageConverterBase jpegImageConverter = new Telerik.Documents.ImageUtils.JpegImageConverter();
             Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
         {{endregion}}
-        
 
-    The following example is using the [Magick.NET](https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/) library to try to convert images to Jpeg format.
+
+    The following example depends on the [Magick.NET](https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/) library to convert images to Jpeg format.
 
     #### **[C#] Example 4: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
         {{region cs-radpdfprocessing-cross-platform_2}}
