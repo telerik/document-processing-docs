@@ -4,6 +4,7 @@ page_title: Cross-Platform Support
 description: Cross-Platform Support
 slug: radpdfprocessing-cross-platform
 tags: cross,platform
+platforms: netcore, blazor, xamarin
 published: True
 position: 2
 ---
@@ -11,6 +12,8 @@ position: 2
 # Cross-Platform Support
 
 **Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of binaries built against the .NET Core & .NET Standard which you can reference in an application.
+
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Assembly References
 
@@ -24,7 +27,7 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 
 * **Telerik.Documents.ImageUtils.dll**
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
 
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 
@@ -49,7 +52,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     #### **[C#] Example 1: Windows Example: Creating custom implementation inheriting the FontsProviderBase abstract class**
     {{region cs-radpdfprocessing-cross-platform_0}}
 
-        public class FontsProvider : FontsProviderBase
+        public class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
         {
             public override byte[] GetFontData(FontProperties fontProperties)
             {
@@ -59,7 +62,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
 
                 DirectoryInfo directory = new DirectoryInfo(fontFolder);
                 FileInfo[] fontFiles = directory.GetFiles("*.ttf");
-                if (fontFiles.Any(s => s.Name.ToLower() == fontFileName.ToLower()))
+                if (fontFiles.Any(s => s.Name.Equals(fontFileName, StringComparison.InvariantCultureIgnoreCase)))
                 {
                     using (FileStream fileStream = File.OpenRead(targetPath))
                     {
@@ -79,8 +82,8 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     #### **[C#] Example 2: Set the custom implementation inheriting the FontsProviderBase abstract class**
     {{region cs-radpdfprocessing-cross-platform_1}}
 
-        FontsProviderBase fontsProvider = new FontsProvider();
-        FixedExtensibilityManager.FontsProvider = fontsProvider;
+        Telerik.Windows.Documents.Extensibility.FontsProviderBase fontsProvider = new FontsProvider();
+        Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.FontsProvider = fontsProvider;
     {{endregion}}
 
 * **JpegImageConverter**: Gets or sets a *JpegImageConverterBase* instance used to provide a Jpeg converted image data.
@@ -89,42 +92,36 @@ The new **FixedExtensibilityManager** class is exposing the following properties
       
     >important If the JpegImageConverter property is not set, an exception is thrown.
     
-    The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document.
+    The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document. The default implementation depends on the [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/) libraries to convert images to Jpeg format.
 
     #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
         {{region cs-radpdfprocessing-cross-platform_3}}
 
-            JpegImageConverterBase jpegImageConverter = new JpegImageConverter();
-            FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
+            Telerik.Windows.Documents.Extensibility.JpegImageConverterBase jpegImageConverter = new Telerik.Documents.ImageUtils.JpegImageConverter();
+            Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
         {{endregion}}
 
-    >important Due to a **Magick.NET** library limitation, the users of [UI for Blazor](https://www.telerik.com/blazor-ui) that use **WebAssembly** could only create and provide a **custom** implementation JpegImageConverterBase. Check the following example.
+
+    The following example depends on the [Magick.NET](https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/) library to convert images to Jpeg format.
 
     #### **[C#] Example 4: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
         {{region cs-radpdfprocessing-cross-platform_2}}
 
-            internal class CustomJpegImageConverter : JpegImageConverterBase
+            internal class CustomJpegImageConverter : Telerik.Windows.Documents.Extensibility.JpegImageConverterBase
             {
                 public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
                 {
-                    string[] imageSharpImageFormats = new string[] { "jpeg", "bmp", "png", "gif" };
+                    string[] magickImageFormats = Enum.GetNames(typeof(MagickFormat)).Select(x => x.ToLower()).ToArray();
                     string imageFormat;
-
-                    if (this.TryGetImageFormat(imageData, out imageFormat) && imageSharpImageFormats.Contains(imageFormat.ToLower()))
+                    if (this.TryGetImageFormat(imageData, out imageFormat) && magickImageFormats.Contains(imageFormat.ToLower()))
                     {
-                        using (Image imageSharp = Image.Load(imageData))
+                        using (MagickImage magickImage = new MagickImage(imageData))
                         {
-                            imageSharp.Mutate(x => x.BackgroundColor(Color.White));
+                            magickImage.Format = MagickFormat.Jpeg;
+                            magickImage.Alpha(AlphaOption.Remove);
+                            magickImage.Quality = (int)imageQuality;
 
-                            JpegEncoder options = new JpegEncoder
-                            {
-                                Quality = (int)imageQuality,
-                            };
-
-                            MemoryStream ms = new MemoryStream();
-                            imageSharp.SaveAsJpeg(ms, options);
-
-                            jpegImageData = ms.ToArray();
+                            jpegImageData = magickImage.ToByteArray();
                         }
 
                         return true;
@@ -140,7 +137,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
         {{region cs-radpdfprocessing-cross-platform_3}}
 
             JpegImageConverterBase customJpegImageConverter = new CustomJpegImageConverter();
-            FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
+            Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
         {{endregion}}
 
 >note A complete SDK example could be found on our [GitHub repository](https://github.com/telerik/document-processing-sdk).
