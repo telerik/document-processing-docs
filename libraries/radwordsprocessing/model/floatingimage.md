@@ -44,7 +44,14 @@ You can add an image at a specific index in the __Inlines__ collection of a para
 #### __[C#] Example 2: Add a floating image to a specific position__
 
 {{region cs-radwordsprocessing-model-floatingimage_1}}
+
+	// Create an image
 	FloatingImage floatingImage = new FloatingImage(document);
+
+	// Assign a source to the image
+	floatingImage.Image.ImageSource = new Telerik.Windows.Documents.Media.ImageSource(File.ReadAllBytes(pathToImage), imageExtension);
+
+	// Insert the image at the desired position in a Paragraph
 	paragraph.Inlines.Insert(0, floatingImage);
 {{endregion}}
 
