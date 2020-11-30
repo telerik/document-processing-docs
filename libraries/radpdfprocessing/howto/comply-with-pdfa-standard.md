@@ -73,6 +73,9 @@ Similar to PDF/A-2b level with the additional requirement that all text in the d
 
 PDF/A-3 differs from PDF/A-2 in only one regard – it allows embedding of arbitrary file formats into the PDF file.
 
+__PDF/A-3u__
+
+This conformance level requires character mapping to Unicode and it doesn't require embedded logical structure (like structure tree and tags).
 
 ## How to Conform to PDF/A Standard
 
