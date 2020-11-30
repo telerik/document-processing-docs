@@ -109,27 +109,33 @@ navigation:
     libraries/radspreadprocessing/working-with-cells:
         title: Cells
         position: 6
-    libraries/radspreadprocessing/formats-and-conversion:
-        title: Formats and Conversion
-        position: 8
     libraries/radspreadprocessing/features:
         title: Features
         position: 7
-    libraries/radspreadprocessing/formats-and-conversion/xlsx:
-        title: Xlsx
-        position: 2
-    libraries/radspreadprocessing/formats-and-conversion/xls:
+    libraries/radspreadprocessing/helpers:
+        title: Helpers
+        position: 9
+    libraries/radspreadprocessing/formats-and-conversion:
+        title: Formats and Conversion
+        position: 10
+    libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats:
+        title: Excel File Formats
+        position: 2   
+    libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xls:
         title: Xls
-        position: 3
+        position: 1  
+    libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsx:
+        title: Xlsx
+        position: 2          
     libraries/radspreadprocessing/formats-and-conversion/pdf:
         title: Pdf
-        position: 4
+        position: 3
     libraries/radspreadprocessing/formats-and-conversion/csv:
         title: Csv
-        position: 5
+        position: 4
     libraries/radspreadprocessing/formats-and-conversion/txt:
         title: Txt
-        position: 6
+        position: 5
         
     libraries/radspreadprocessing/features/charts:
         title: Charts
@@ -257,6 +263,7 @@ footer_social:
 api_reference_url: "api/"
 
 has_kb_portal: true
+has_cta_panels: true
 
 sdk_examples: "sdk.json"
 sdk_repo_path: "https://github.com/telerik/document-processing-sdk/tree/master/"

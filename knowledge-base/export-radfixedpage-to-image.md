@@ -29,8 +29,8 @@ res_type: kb
 	</tr>	
 </tbody>
 </table>
-`
-\* Due to the new PdfViewer`s document model transition, there is a difference in the implementation between different assemblies version.
+
+\* Due to the new PdfViewer's document model transition, there is a difference in the implementation between different assemblies version.
 
 ## Description
  
@@ -39,12 +39,11 @@ How to export RadFixedPage to TIFF file.
 ## Solution
 
 To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/overview) control form the [UI for WPF](https://docs.telerik.com/devtools/wpf/introduction) suite to create images from the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) pages using the **ThumbnailFactory** class.
-
+	q
 >note The COM threading model for the application has to be a single-threaded apartment (STA). A STAThreadAttribute tag "[STAThread]" should be placed on the class. 
 
-#### __C#__ Assemblies version bellow 2020.2.513
-
-{{region  kb-export-radfixedpage-to-image1}}
+#### __[C#] Assemblies version bellow 2020.2.513__
+{{region kb-export-radfixedpage-to-image1}}
 
 	[STAThread]
 	private static void Main(string[] args)
@@ -88,8 +87,7 @@ To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/
 
 {{endregion}}
 
-#### __C#__ Assemblies version 2020.2.513 or above
-
+#### __[C#] Assemblies version 2020.2.513 or above__
 {{region  kb-export-radfixedpage-to-image2}}
 
 	[STAThread]

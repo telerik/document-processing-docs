@@ -63,17 +63,17 @@ More information about import is available in the [Formats and Conversion]({%slu
 ## Save a Workbook
 
 
-__RadSpreadProcessing__ also allows you to save a workbook into a csv, txt and xlsx formats. To export a workbook, you need to instantiate the format provider you would like to use and invoke its __Export()__ method. __Example 3__ demonstrates how to export an existing Workbook to a csv file. The snippet creates a new workbook with a single worksheet. Further, it creates a __CsvFormatProvider__ and invokes its __Export()__ method.
+__RadSpreadProcessing__ also allows you to save a workbook into a XLSX, XLS, CSV, TXT, and PDF formats. To export a workbook, you need to instantiate the format provider you would like to use and invoke its __Export()__ method. __Example 3__ demonstrates how to export an existing Workbook to a XLSX file. The snippet creates a new workbook with a single worksheet. Further, it creates a __XlsxFormatProvider__ and invokes its __Export()__ method. Saving to the other formats is done in the same way, using a different format provider class.
           
 
-#### __[C#] Example 3: Save csv file__
+#### __[C#] Example 3: Save XLSX file__
 
 {{region cs-radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_3}}
 	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
 	workbook.Worksheets.Add();
 	
-	string fileName = "SampleFile.csv";
-	IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv.CsvFormatProvider();
+	string fileName = "SampleFile.xlsx";
+	IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 	
 	using (Stream output = new FileStream(fileName, FileMode.Create))
 	{

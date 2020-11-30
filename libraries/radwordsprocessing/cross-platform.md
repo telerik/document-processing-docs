@@ -29,6 +29,7 @@ If you need to export documents to PDF format, you will need to refer the follow
 
 If you need to export to PDF format documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High, you will need to refer the following assembly:
 * **Telerik.Documents.ImageUtils.dll**
+<br><sub>_This assembly is not available in UI for Xamarin._</sub>
 
 >note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
 

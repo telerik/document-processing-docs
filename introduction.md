@@ -12,70 +12,23 @@ position: 0
 
 Telerik Document Processing is a bundle of UI-independent, cross-platform libraries enabling you to process the most commonly used flow, fixed and spreadsheet document formats. The components allow to create, import, modify and export documents, without external dependencies. To read more about the benefits of using Telerik Document Processing, please visit the [product overview page](https://www.telerik.com/document-processing-libraries).
 
-
+{% if site.has_cta_panels == true %}
+{% include cta-panel-introduction.html %}
+{% endif %}
 
 Telerik Document Processing libraries support the following file formats:
 
-* CSV
-* DOCX
+* DOCX (Word Document)
 * HTML
 * PDF
 * RTF
 * TXT
-* XLSX
-* XLS
+* XLSX (Excel Workbook)
+* XLS (Excel 97-2003 Workbook)
+* CSV
 * ZIP
  
 >**.NET Standard** and **.NET Core** compatible versions are available for the Telerik Document Processing libraries. Their assemblies can be downloaded from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)**, **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** and **[UI for Blazor](https://www.telerik.com/blazor-ui)** suites respectively.
-
-<style>
-/* Document Processing download trial button */
-div#document_processing_trial {
-	text-align: center !important;
-}
-
-div#document_processing_trial .document_processing_download_btn {	
-	color: #fff;
-	background-color: #e74b3c;
-	padding:.44em .9em .52em;
-	font-size: 20px;
-	font-weight:400;
-	letter-spacing:-.025em;
-	position:relative;
-	display:inline-block;
-	line-height:1.2;
-	-webkit-transition:color .2s ease,background-color .2s ease;
-	transition:color .2s ease,background-color .2s ease;
-	border-radius:2px;
-	-webkit-appearance:none;
-	font-family:Metric,Arial,Gadget,sans-serif;
-	text-align:center	
-}
-</style>
-
-<script type="text/javascript">
-
-  $(document).ready(function(){
-	  var mac = navigator.userAgent.match(/(Mac)/i);
-	  var $btnWin = $(".js-btnWin");
-	  var $btnOSX = $(".js-btnOSX");
-
-	  if (mac) {
-		$btnOSX.show();
-		$btnWin.hide();
-	  } else {
-		$btnOSX.hide();
-		$btnWin.show();
-	  }
-  });
-
-</script>
-
-<div id="document_processing_trial">
-<br />
-<a href="https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate" class="document_processing_download_btn js-btnWin" style="display: none">Download Free Trial</a>
-<a href="https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate" class="document_processing_download_btn js-btnOSX" style="display: none">Download Free Trial</a>
-</div>
 
 ## Getting Started
 
@@ -87,11 +40,11 @@ Telerik Document Processing features the following components:
 
 * [RadPdfProcessing]({%slug radpdfprocessing-overview%}): Create, import and export PDF documents.
 
-* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}): Create, import and export XLSX, XLS, CSV and TXT spreadsheet documents, and export them to PDF.
+* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}): Create, import and export XLSX (Excel Workbook), XLS (Excel 97-2003 Workbook), CSV and TXT spreadsheet documents, and export them to PDF.
 
 * [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}): Export large XLSX and CSV spreadsheet documents with low memory footprint and great performance.
 
-* [RadWordsProcessing]({%slug radwordsprocessing-overview%}): Create, import and export DOCX, HTML, RTF and TXT documents, and export them to PDF.
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%}): Create, import and export DOCX (Word Document), HTML, RTF and TXT documents, and export them to PDF.
 
 * [RadZipLibrary]({%slug radziplibrary-overview%}): Compress and decompress ZIP files.
 

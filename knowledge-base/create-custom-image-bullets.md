@@ -34,7 +34,7 @@ How to create a custom [ListLevel](https://docs.telerik.com/devtools/document-pr
 
 This functionality could be achieved by creating a custom class implementing [IBulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.IBulletNumberingFormat.html) and passing it to [BulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html#collapsible-Telerik_Windows_Documents_Fixed_Model_Editing_Lists_ListLevel_BulletNumberingFormat) property of the [ListLevel](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html) class.
 
-#### __C#__
+#### __[C#]__
 
 {{region kb-create-custom-image-bullets1}}
 
@@ -63,7 +63,7 @@ This functionality could be achieved by creating a custom class implementing [IB
  
 {{endregion}}
 
-#### __C#__ Create custom image numbering bullet
+#### __[C#] Create custom image numbering bullet__
 
 {{region kb-create-custom-image-bullets2}}
 
@@ -100,7 +100,7 @@ This functionality could be achieved by creating a custom class implementing [IB
 
 {{endregion}}
 
-#### __C#__ Creating a custom class implementing IBulletNumberingFormat
+#### __[C#] Creating a custom class implementing IBulletNumberingFormat__
 
 {{region kb-create-custom-image-bullets2}}
 

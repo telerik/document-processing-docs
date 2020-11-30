@@ -79,16 +79,18 @@ __Example 3__ demonstrates how to protect a worksheet using WorksheetProtectionO
 
 
 
-The __WorksheetProtectionOptions__ class exposes the following options:
+The __WorksheetProtectionOptions__ class exposes the following properties so you can control what actions the users will be able to perform:
         
+* **AllowInsertColumns**: Gets a value indicating whether the user can insert columns when the worksheet is protected.
+* **AllowInsertRows**: Gets a value indicating whether the user can insert rows when the worksheet is protected.
+* **AllowDeleteColumns**: Gets a value indicating whether the user can delete columns when the worksheet is protected.
+* **AllowDeleteRows**: Gets a value indicating whether the user can delete rows when the worksheet is protected.
+* **AllowFormatCells**: Gets a value indicating whether the user can format cells when the worksheet is protected.
+* **AllowFormatColumns**: Gets a value indicating whether the user can format columns when the worksheet is protected.
+* **AllowFormatRows**: Gets a value indicating whether the user can format rows when the worksheet is protected.
+* **AllowFiltering**: Gets a value indicating whether the user can use autofilter when the worksheet is protected.
+* **AllowSorting**: Gets a value indicating whether the user can sort when the worksheet is protected.
 
-* Insert columns
-
-* Insert rows
-
-* Delete columns
-
-* Delete rows
 
 ## See Also
 

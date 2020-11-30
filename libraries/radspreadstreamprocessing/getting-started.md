@@ -59,6 +59,8 @@ In order to use **RadSpreadStreamProcessing** in your project, you will need to 
 </tbody>
 </table>
 
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+
 ## Create a Spreadsheet Document
 
 This section will explain how a document could be created. If you need more detailed information about the classes that export the different document elements, you can check the articles from the [Model section]({%slug radspreadstreamprocessing-model-workbook%}).

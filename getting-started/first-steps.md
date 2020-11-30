@@ -18,7 +18,7 @@ For additional resources you can also review the Related Articles section on the
 
 >You can download the packages that contain Telerik Document Processing from your [Telerik account](https://www.telerik.com/account/my-downloads).
 
-## Installing on Your Computer
+## Step 1: Installing on Your Computer
 
 Telerik Document Processing is part of several Telerik bundles and is installed following the steps for installing the suite with which you've obtained the product.
 
@@ -42,7 +42,7 @@ The libraries can be used through the available NuGet packages.
 
 1. UI for Xamarin - [Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/system-requirements)
 
-## Creating Application with Visual Studio
+## Step 2: Creating Application with Visual Studio
 
 As we are going to review a UI-Independent example we will use a console project.
 
@@ -51,7 +51,7 @@ As we are going to review a UI-Independent example we will use a console project
 #### __Figure 1: Go to File > New > Project > Console App (.Net Framework) > Next > Create__
 ![Create Console Project](images/VisualStudio_NewProject_Console3.gif "Create new Console Project")
 
-## Add a Teleik Document Processing Library to a Project
+## Step 3: Add a Teleik Document Processing Library to a Project
 
 For this example we will go through the creation of a sample application that uses [RadWordsProcessing]({%slug radwordsprocessing-overview%}).
 
@@ -69,6 +69,8 @@ Since we are going to export to a Docx and PDF file later in this example, we wi
 
 > Please note that for .NET Core, the references don't contain "Windows" in the assembly names.
 
+## Step 4: Create a Document
+
 #### __[C#] Example 1: Create RadFlowDocument__
 
 {{region cs-radwordsprocessing-getting-started_0}}
@@ -85,12 +87,14 @@ Since we are going to export to a Docx and PDF file later in this example, we wi
     editor.InsertText("Hello world!")
 {{endregion}}
 
-### Exporting RadFlowDocument to Docx
+## Step 5: Export the Generated Document
+
+### Exporting RadFlowDocument to DOCX
 
 Exporting the document to docx file can be achieved with the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). Using the below code will create a provider instance and save a document with it. The document will be exported in the bin folder of your current project.
         
 
-#### __[C#] Example 2: Export RadFlowDocument to Docx__
+#### __[C#] Example 2: Export RadFlowDocument to DOCX__
 
 {{region cs-radwordsprocessing-getting-started_1}}
 	using (Stream output = new FileStream("output.docx", FileMode.OpenOrCreate))
@@ -101,7 +105,7 @@ Exporting the document to docx file can be achieved with the [DocxFormatProvider
 {{endregion}}
 
 
-#### __[VB.NET] Example 2: Export RadFlowDocument to Docx__
+#### __[VB.NET] Example 2: Export RadFlowDocument to DOCX__
 
 {{region cs-radwordsprocessing-getting-started_0}}
 	Using output As Stream = New FileStream("output.docx", FileMode.OpenOrCreate)
@@ -125,7 +129,7 @@ If you want to export the same document to a PDF format you will need to use [Pd
 	}
 {{endregion}}
 
-#### __[VB.NET] Example 2: Export RadFlowDocument to Docx__
+#### __[VB.NET] Example 2: Export RadFlowDocument to PDF__
 
 {{region cs-radwordsprocessing-getting-started_0}}
 	Using output As Stream = File.OpenWrite("Output.pdf")

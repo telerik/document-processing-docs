@@ -12,15 +12,22 @@ position: 8
 
 
 
-__ImageInline__ element is an inline-level flow content element intended to contain an image object. The supported image extensions are JPG, JPEG, PNG, BMP, TIFF, TIF, GIF, ICON, WMF and EMF.
+__ImageInline__ element is an inline-level flow content element intended to contain an image object.
       
+## Supported Image Extensions
 
-* [Inserting an ImageInline](#inserting-an-imageinline)
+With **WordsProcessing**, you can work with images from the following file formats:
 
-* [Modifying an ImageInline](#modifying-an-imageinline)
-
-* [Working with Image Size](#working-with-image-size)
-
+ - JPG
+ - JPEG
+ - PNG
+ - BMP
+ - TIFF
+ - TIF
+ - GIF
+ - ICON
+ - WMF 
+ - EMF
 
 ## Inserting an ImageInline
 

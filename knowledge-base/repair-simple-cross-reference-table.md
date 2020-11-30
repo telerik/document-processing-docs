@@ -56,7 +56,7 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 {{endregion}}
 
 
-#### __C#__ Repair Document With Simple Cross-Reference Table
+#### __[C#] Repair Document With Simple Cross-Reference Table__
 
 {{region kb-repair-simple-cross-reference-table2}}
 
@@ -101,7 +101,7 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 
 {{endregion}}
 
-#### __C#__ Extensions class providing some static methods used in RepairDocumentWithSimpleCrossReferenceTable method
+#### __[C#] Extensions class providing some static methods used in RepairDocumentWithSimpleCrossReferenceTable method__
 
 {{region kb-repair-simple-cross-reference-table3}}
 

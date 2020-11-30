@@ -13,21 +13,7 @@ position: 4
 
 
 __RadFlowDocument__ includes repository of [Style](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Style.html) objects which contain sets of character, paragraph or table [style properties]({%slug radwordsprocessing-concepts-style-properties%}). They provide rich editing capabilities with consistent look over different content inside the document. Styles allow formatting properties to be stored and managed independently from the content. [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) keeps its styles in __StyleRepository__ object accessible through the __RadFlowDocument.StyleRepository__ property.
-      
 
-* [Style Class Overview](#style-class-overview)
-
-* [Style Types](#style-types)
-
-* [Creating New Styles](#creating-new-styles)
-
-* [Default Styles](#default-styles)
-
-* [Built in Styles](#built-in-styles)
-
-* [Linked Styles](#linked-styles)
-
-* [Style Evaluation and Inheritance](#style-evaluation-and-inheritance)
 
 ## Style Class Overview
 
@@ -115,16 +101,26 @@ Default style is a style which, according to its style type, is applied to objec
 
 >If you want to set default values for properties of all __Run__ and __Paragraph__ document elements, it is convenient to use __CharacterPoperties__ and __ParagraphProperties__ stored in __RadFlowDocument.DefaultStyle__ property. Setting default values for properties for all __Table__, __TableRow__ and __TableCell__ document elements should be done in the default table style - "TableNormal".
           
+ You can change the default styling properties for a document through the DefaultStyle property of RadFlowDocument. **Example 2** shows how you can do that for the font-family, and similar code can be used for the other styling properties for the runs and paragraphs inside a document.
+          
+#### __[C#] Example 2: Set a default font-family__
+
+{{region cs-radwordsprocessing-concepts-styles_2}}
+
+    RadFlowDocument document = new RadFlowDocument();
+    document.DefaultStyle.CharacterProperties.FontFamily.LocalValue = new ThemableFontFamily("Verdana");
+{{endregion}}
+
 
 ## Built-in Styles
 
 Built-in styles are commonly used styles, which are predefined for convenience. They have to be explicitly added to the style repository before usage using the __StyleRepository.AddBuiltInStyle()__ method.
         
 
-[BuiltInStyleNames](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.BuiltInStyleNames.html) static class contains properties and methods for getting the IDs of all built-in styles. __Example 2__ shows how to get the ID of the "Heading 1" built-in style.
+[BuiltInStyleNames](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.BuiltInStyleNames.html) static class contains properties and methods for getting the IDs of all built-in styles. __Example 3__ shows how to get the ID of the "Heading 1" built-in style.
         
 
-#### __[C#] Example 2: Get the ID of a built-in style__
+#### __[C#] Example 3: Get the ID of a built-in style__
 
 {{region cs-radwordsprocessing-concepts-styles_1}}
 	            

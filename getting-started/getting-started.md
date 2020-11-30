@@ -45,27 +45,27 @@ You can find more information on working with the Telerik Document Processing li
 	
 	* [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%})
 
-	* [DOCX format provider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
+	* [Export to DOCX (Word Document) using DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
 
-	* [HTML format provider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
+	* [Export to HTML using HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
 
-	* [RTF format provider]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})
+	* [Export to RTF using RtfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})
 
-	* [TXT format provider]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%})
+	* [Export to TXT (plain text) using TxtFormatProvider]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%})
 
 * Spreadsheet processing
 
 	* [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%})
 
-	* [XLSX format provider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
+	* [Export to XLSX (Excel Workbook) using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
 	
-    * [XLS format provider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
+    * [Export to XLS (Excel 97-2003 Workbook) using XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
 
-	* [CSV format provider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})
+	* [Export to CSV (Comma delimited) using CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})
 
-	* [PDF format provider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+	* [Export to PDF using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 
-	* [TXT format provider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
+	* [Export to TXT (plain text) using TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
 
 * Fast spreadsheet generation
 	
@@ -75,7 +75,7 @@ You can find more information on working with the Telerik Document Processing li
 
 	* [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
 
-	* [PDF format provider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+	* [Import/export from/to PDF using PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 
 * Working with ZIP files
 

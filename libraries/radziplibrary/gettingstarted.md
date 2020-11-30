@@ -42,6 +42,8 @@ The ZIP archive is represented by __ZipArchive__ class. It can be used in 3 mode
 </tbody>
 </table>                
 
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+
 ## Open Zip Archive
 
 The code snippet from __Example 1__ demonstrates how to open existing Zip archive using the __ZipArchive__ class.

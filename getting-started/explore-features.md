@@ -3,6 +3,7 @@ title: Explore Features
 page_title: Explore Features
 description: Explore Features
 slug: getting-started-explore-features
+sdk_example: true
 tags: Explore Features
 published: True
 position: 2
