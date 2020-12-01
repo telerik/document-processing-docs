@@ -10,11 +10,11 @@ position: 0
 
 # What is a Workbook?
 
-This article will help you get familiar with the representation of an Excel workbook in the model of RadSpreadProcessing.
+This article will help you get familiar with the representation of an Excel workbook in the model of SpreadProcessing.
 
 ## Overview
 
-The workbook lays in the core of the RadSpreadProcessing' document model. It is the primary document that you use to retrieve, manipulate and store data. The workbook can also be viewed as a collection of worksheets, where a worksheet is in turn defined as a collection of cells organized in rows and columns. Each workbook contains, at least, one worksheet and often holds several sheets with related information.
+The workbook lays in the core of the SpreadProcessing' document model. It is the primary document that you use to retrieve, manipulate and store data. The workbook can also be viewed as a collection of worksheets, where a worksheet is in turn defined as a collection of cells organized in rows and columns. Each workbook contains, at least, one worksheet and often holds several sheets with related information.
 
 The workbook is designed to hold together multiple worksheets in order to allow efficient organization and consolidation of data. Typically, a workbook has a single theme and contains worksheets with related data. For example, an annual budget workbook may comprise four worksheets that break down the budget in quarters.
 
@@ -30,7 +30,7 @@ The workbook has several important characteristics:
 
 * __History__: Each workbook maintains a history stack that records all changes introduced to its content. That said, you can perform undo and redo operations effortlessly, replying on the built-in recorder. Although the tracking of changes is done automatically, it also allows manual control over the recorded items. The history of the workbook also lets you group several actions into a one undo step. This feature is very handy, for example, when you replace the contents of multiple cells in a single action. You will be able to find more information about the feature in the [History]({%slug radspreadprocessing-features-history%}) article.
 
-* __Names (Named Ranges)__: the Workbook class exposes a Names property of type NameCollection that allows you to create, update and manage names. More about the feature is available in the [Names]({%slug radspreadprocessing-features-named-ranges%}) article.
+* __Names (Named Ranges)__: The Workbook class exposes a Names property of type NameCollection that allows you to create, update and manage names. More about the feature is available in the [Names]({%slug radspreadprocessing-features-named-ranges%}) article.
 
 * __Collection of Cell Styles__: Each workbook contains a collection of cell styles. A cell style is a predefined set of formatting options, such as borders, fonts, fills and number formats, that you can apply to a cell. The concept of cell styles facilitates the process of formatting cells since it allows you to set multiple properties in one step and also serves as means for achieving a consistent look. The collection of cell styles allows you to add, retrieve and delete styles. More information on the cell styles is available in the [Cell Styles]({%slug radspreadprocessing-features-styling-cell-styles%}) article.
 
@@ -38,7 +38,9 @@ The workbook has several important characteristics:
 
 * __Find and Replace__: The Workbook class offers friendly API that allows you to find and replace text and numbers in all worksheets it contains. For more information about the feature see the [Find and Replace]({%slug radspreadprocessing-features-find-and-replace%}) article.
 
-* __Protection__: The feature lets you prevent users from modifying the structure of the workbook: adding, removing, renaming or reordering sheets.
+* __Protection__: The feature lets you prevent users from modifying the structure of the workbook: adding, removing, renaming or reordering sheets. Learn how to use it in the [Workbook Protection]({%slug radspreadprocessing-features-protection-workbook%}) help topic.
+
+* **DocumentInfo**: This property enables you to set and obtain metadata information for the document file. It is of type **DocumentInfo** and allows you get and set the **Author**, **Title**, **Subject**, **Keywords** and **Description**.  
 
 ![Rad Spreadsheet Model Working with Excel Workbooks What is Workbook](images/RadSpreadsheet_Model_Working_with_Workbooks_What_is_Workbook_02.png)
 
