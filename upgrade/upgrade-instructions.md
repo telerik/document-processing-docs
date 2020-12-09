@@ -37,7 +37,7 @@ Telerik Document Processing is part of several Telerik bundles and could be upgr
 
 ## UI for WinForms
 
-[Upgrading Telerik UI for WinForms project](http://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/visual-studio-extensions/upgrade-wizard)
+[Upgrading Telerik UI for WinForms project](https://docs.telerik.com/devtools/winforms/visual-studio-integration/visual-studio-extensions/upgrade-project)
 
 
 ## UI for Silverlight
