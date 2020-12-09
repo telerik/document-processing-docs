@@ -68,7 +68,6 @@ New content controls can be inserted trough the **InsertStructuredDocumentTag** 
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
     var checkbox = editor.InsertStructuredDocumentTag(SdtType.CheckBox);
     ((CheckBoxProperties)checkbox.SdtProperties).Checked = true;
-    
 {{endregion}}
 
 #### Example 4: Inserting a content control using content control properties
@@ -82,10 +81,10 @@ New content controls can be inserted trough the **InsertStructuredDocumentTag** 
         Alias = "AliasName",
         Lock = Lock.SdtContentLocked,
     };
-
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+    this.radRichTextBox.InsertStructuredDocumentTag(sdtProperties);
+    // OR
+    RadDocumentEditor editor = new RadDocumentEditor(this.radRichTextBox.Document);
     editor.InsertStructuredDocumentTag(sdtProperties);
-
 {{endregion}}
 
 #### Example 5: Remove a content control
@@ -95,9 +94,7 @@ New content controls can be inserted trough the **InsertStructuredDocumentTag** 
 {{region wordsprocessing-model-working-with-content-controls_4}}
 
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.RemoveStructuredDocumentTag(contentControl); //this will delete the entire content control along with the value
-    // or 
-    editor.RemoveStructuredDocumentTag(contentControl, false); //this will preserve the value 
+    editor.RemoveStructuredDocumentTag(contentControl); 
 
 {{endregion}}
 
