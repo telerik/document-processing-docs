@@ -9,7 +9,7 @@ published: True
 
 # Working with Content Controls Programmatically
 
-This article shows some examples of how you can insert content controls or access existing and modify their properties from the code. In RadRichTextBox, the content controls are marked with annotations and you can manipulate them as such. Detailed information is available in the [Manipulating Annotations]({%slug wordsprocessing-model-document-elements-manipulating-annotations%}) topic.
+This article shows some examples of how you can insert content controls, access existing and modify their properties from the code. In the RadWordsProcessing library, the content controls are marked with annotations and you can manipulate them as such. Additional information is available in the [Manipulating Annotations]({%slug wordsprocessing-model-document-elements-manipulating-annotations%}) topic as well.
 
 ## Manipulate Existing Content Controls
 
@@ -57,7 +57,7 @@ This example show how one can iterate the items and add an item to to a existing
 
 ## Insert or Remove Content Controls
 
-New content controls can be inserted trough one of the overloads of the **InsertStructuredDocumentTag** method accessible from **RadRichTextBox** and [RadDocumentEditor]({%slug wordsprocessing-model-raddocumenteditor%}):
+New content controls can be inserted trough the **InsertStructuredDocumentTag** method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).The method has several overloads that allow to insert the content control by passing its type, properties, and position in the document. 
 
 #### Example 3: Inserting a content control using content control type
 

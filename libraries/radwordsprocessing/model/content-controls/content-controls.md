@@ -11,7 +11,7 @@ published: True
 
 Structured Document Tags (SDT) enable users to add specific semantics to part of the document: restricting input, modifying editing behavior etc. 
 
->note Currently, the WordsProcessing library can import and export content controls from and to Office Open XML (DOCX) format. When exporting to other formats the content controls will be lost, however, their content (current value) will be exported.
+>note Currently, the WordsProcessing library can import and export content controls from and to Office Open XML (DOCX) format. When exporting to other formats the content controls will be lost, however, their content (current value) will be preserved.
 
 ## Content Controls Inside the Document
 
@@ -91,7 +91,7 @@ The __CheckBox__ content control exposes two properties __CheckedState__ and __U
 
 ### ComboBox and DropDownList
 
-The __ComboBox__ and __DropDownList__ provide the user with options to choose from. The only difference is that when using ComboBox you can add a value that is not in the data source.
+The __ComboBox__ and __DropDownList__ provide the user with options to choose from. The only difference is that when using ComboBox you can add a value that is not defined in the list.
 * __Items:__ This property allows you to specify the predefined items. 
 * __LastValue:__ This property returns the currently selected value as string. 
 * __SelectedItem:__ This property holds the currently selected item object.
