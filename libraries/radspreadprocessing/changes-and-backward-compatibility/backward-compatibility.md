@@ -48,6 +48,7 @@ The default value of Telerik.Windows.Documents.Spreadsheet.Model.Printing.SheetP
 
 If you need to keep the document with A4 PaperType, you can apply this setting before exporting it:
 
+#### [C#] Set PaperType
 {{region radspreadprocessing-backward-compatibility_0}}
 
 	foreach (Worksheet worksheet in workbook.Worksheets)
