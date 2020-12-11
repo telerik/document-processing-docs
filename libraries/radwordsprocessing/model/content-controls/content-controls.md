@@ -15,7 +15,7 @@ Structured Document Tags (SDT) enable users to add specific semantics to part of
 
 ## Content Controls Inside the Document
 
-The content controls can be defined on __Block__, __Inline__, __Row__ or __Cell__ level. They can be nested inside each other as well. In addition, one can modify the editing behavior of the content controls. This means that you can lock the content of the content control, the entire content control or both.
+The content controls can be defined on [__Block__]({%slug radwordsprocessing-model%}), [__Inline__]({%slug radwordsprocessing-model%}), [__Row__]({%slug radwordsprocessing-model-tablerow%}) or [__Cell__]({%slug radwordsprocessing-model-tablecell%}) level. They can be nested inside each other as well. In addition, one can modify the editing behavior of the content controls. This means that you can lock the content of the content control, the entire content control or both.
 
 ## Supported Content Controls 
 
@@ -44,7 +44,7 @@ The following content controls are not supported by __Microsoft Word__:
 The above content controls share the following properties: 
 
 * __Type:__ The type of the current content control. 
-* __ID:__ Each content control must have a an unique ID.
+* __ID:__ Each content control must have unique ID.
 * __DataBinding:__ Gets or sets an XML mapping (DataBinding) that relates the content of associated SDT to a specific XML node.
 * __Lock:__ This property controls if the entire content control or its contents can be edited or deleted. The possible values are:
     - __Unlocked:__ The content control can be edited and deleted. 

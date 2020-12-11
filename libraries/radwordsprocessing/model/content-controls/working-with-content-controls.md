@@ -2,20 +2,20 @@
 title: Working with Content Controls
 page_title:  Working with Content Controls
 description: This article show you you can access the content controls in code
-slug: wordsprocessing-features-working-with-content-controls
+slug: wordsprocessing-model-working-with-content-controls
 tags: content controls, wordsprocessing
 published: True
 ---
 
-# Working with Content Controls Programmatically
+# Working with Content Controls 
 
-This article shows some examples of how you can insert content controls, access existing and modify their properties from the code. In the RadWordsProcessing library, the content controls are marked with annotations and you can manipulate them as such. Additional information is available in the [Manipulating Annotations]({%slug wordsprocessing-model-document-elements-manipulating-annotations%}) topic as well.
+This article shows some examples of how you can insert content controls, access existing and modify their properties from the code. 
 
 ## Manipulate Existing Content Controls
 
 ### Get the Content Controls 
 
-The content controls can be retrieved by using the __EnumerateChildrenOfType__ method.
+The content controls can be retrieved by using the __EnumerateChildrenOfType()__ method of any document element. 
 
 #### Example 1: Get all content controls
 
@@ -33,7 +33,7 @@ The content controls can be retrieved by using the __EnumerateChildrenOfType__ m
 
 ### Set Content Controls Properties
 
-This example show how one can iterate the items and add an item to to a existing ComboBox content control. 
+This example shows how one can iterate the items and add an item to an existing ComboBox content control. 
 
 #### Example 2: Adding items to a ComboBox or a DropDownList
 
@@ -57,7 +57,7 @@ This example show how one can iterate the items and add an item to to a existing
 
 ## Insert or Remove Content Controls
 
-New content controls can be inserted trough the **InsertStructuredDocumentTag** method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).The method has several overloads that allow to insert the content control by passing its type, properties, and position in the document. 
+New content controls can be inserted through the **InsertStructuredDocumentTag** method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).The method has several overloads that allow you to insert the content control by passing its type, properties, and relative document elements. 
 
 #### Example 3: Inserting a content control using content control type
 
@@ -103,7 +103,7 @@ New content controls can be inserted trough the **InsertStructuredDocumentTag** 
 
 #### Example 6: Insert a content control to a specific position
 
->note When sung the bellow insert method and passing a start end elements, make sure that the elements are not already part of an content control. 
+>note When using the InsertStructuredDocumentTag() method and passing start and end elements, make sure that the elements are not already part of a content control. 
 
 #### __C#__
 
@@ -128,5 +128,3 @@ New content controls can be inserted trough the **InsertStructuredDocumentTag** 
 
 # See Also
 * [Content Controls Overview]({%slug wordsprocessing-model-content-controls%})
-* [Manipulating Annotations]({%slug wordsprocessing-model-document-elements-manipulating-annotations%})
-* [Working with Content Controls UI]({%slug wordsprocessing-model-working-with-content-controls-ui%})
