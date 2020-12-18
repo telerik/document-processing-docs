@@ -23,13 +23,13 @@ __CsvFormatProvider__ exposes a __Settings__ property of type __CsvSettings__. T
 * __Delimiter__: Gets or sets the list separator. By default the CsvFormatProvider class imports and exports files using the list separator specified by the current culture of the system.
             
 
-* __Quote__: Gets or sets the quote symbol
+* __Quote__: Gets or sets the quote symbol.
             
 
 * __HasHeaderRow__: Specifies whether the document has a header row. The default value is __false__.
             
 
-* __Encoding__: Gets or sets the Encoding that is used when exporting the file. The default value is UTF8 BOM.
+* __Encoding__: Gets or sets the character encoding that is used when importing or exporting a file. The default value is UTF8 with BOM.
             
 
 __Example 1__ shows how to create and specify a particular setting to a CsvFormatProvider.
