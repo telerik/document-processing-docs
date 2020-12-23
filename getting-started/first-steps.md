@@ -51,7 +51,7 @@ As we are going to review a UI-Independent example we will use a console project
 #### __Figure 1: Go to File > New > Project > Console App (.Net Framework) > Next > Create__
 ![Create Console Project](images/VisualStudio_NewProject_Console3.gif "Create new Console Project")
 
-## Step 3: Add a Teleik Document Processing Library to a Project
+## Step 3: Add a Telerik Document Processing Library to a Project
 
 For this example we will go through the creation of a sample application that uses [RadWordsProcessing]({%slug radwordsprocessing-overview%}).
 
@@ -154,5 +154,5 @@ Now that you have run your first project example with Telerik Document Processin
 ## See Also
 
 * [System Requirements]({%slug installation-system-requirements%})
-* [Installeing on your computer]({%slug installation-installing-on-your-computer%})
+* [Installing on your computer]({%slug installation-installing-on-your-computer%})
 * [Document Processing SDK Examples](https://github.com/telerik/document-processing-sdk)
