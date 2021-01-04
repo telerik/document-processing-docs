@@ -90,12 +90,12 @@ The __FloatingImage__ element exposes the following properties:
     * __Width__: The width of the image.
     * __Height__: The height of the image.    
 	* __Size__: The size of the image. Can also be set to __Size.Empty__.  
-    * __IsHorizontallyFlipped__: Specifies whether the image is horizontally flipped. *Not supported when exporting to PDF*.
-    * __IsVerticallyFlipped__: Specifies whether the image is vertically flipped. *Not supported when exporting to PDF*.
-    * __RotationAngle__: Specifies the rotation angle of the image. *Not supported when exporting to PDF*.
+    * __IsHorizontallyFlipped__: Specifies whether the image is horizontally flipped. 
+    * __IsVerticallyFlipped__: Specifies whether the image is vertically flipped. 
+    * __RotationAngle__: Specifies the rotation angle of the image. 
     * __LockAspectRatio__: Determines whether the aspect ratio between the width and the height of the image will be preserved. 
 
-* __AllowOverlap__: Specifies whether the image is allowed to overlap the contents of the other image objects. The default value is *true*. *When exporting to PDF, all images are drawn as they have AllowOverlap set to true*.
+* __AllowOverlap__: Specifies whether the image is allowed to overlap the contents of the other image objects. The default value is *true*. 
 
 * __IsLocked__: Specifies if the anchor can be modified at runtime.
 
@@ -104,7 +104,7 @@ The __FloatingImage__ element exposes the following properties:
     * __WrappingType__: The wrapping type. The default value is *Square*.
     * __TextWrap__: The text wrap. The default value is *BothSides*.
 
-* __LayoutInCell__: Indicates if the layout of the image should be calculated relative to the cell that is holding the shape. *Not supported when exporting to PDF. The image is always drawn inside the cell*.
+* __LayoutInCell__: Indicates if the layout of the image should be calculated relative to the cell that is holding the shape. 
 
 * __IsBehindDocument__: Indicates if the shape should be displayed behind the document content.
 
@@ -151,7 +151,16 @@ This section explains the behavior of the  __Size__ property of The __Image__ ob
 * __Inserting image without specifying its size and obtain its size later (through the property getter)__
 	* Model: Size will be decoded
 
+## Exporting to PDF
 
+WordsProcessing enables you exporting documents with floating images to PDF. However, the set of supported properties is **limited** compared to the other document formats. Following is a list of the properties that are not supported by the **PdfFormatProvider** class:
+
+* __IsHorizontallyFlipped__
+* __IsVerticallyFlipped__
+* __RotationAngle__
+* __AllowOverlap__: All images are drawn as they have AllowOverlap set to `true`.
+* __LayoutInCell__: The image is always drawn inside the cell.
+* When exporting floating images that are anchored to elements **inside tables**, they will be inserted on a separate paragraph inside that cell, disregarding their wrapping properties.
 
 ## See Also
 
