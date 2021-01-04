@@ -43,11 +43,11 @@ Windows Server 2003 (excluding IA-64)
 Supported Development Tools and Environments:
 
         
-* __.NET Framework 4.0, or later__ - download .NET 4.0 from [here](http://www.microsoft.com/downloads/details.aspx?FamilyID=9cfb2d51-5ff4-4491-b0e5-b386f32c0992&displaylang=en), .NET 4.5 from [here](http://www.microsoft.com/en-us/download/details.aspx?id=30653), .NET 4.5.1 from [here](http://www.microsoft.com/en-us/download/details.aspx?id=40779), .NET 4.5.2 from [here](http://www.microsoft.com/en-us/download/details.aspx?id=42642) or .NET 4.6 from [here](https://www.microsoft.com/en-us/download/details.aspx?id=48130).
+* __.NET Framework 4.0, or later__ - download from [here](https://dotnet.microsoft.com/download/dotnet-framework).
 
-* __.NET Core 3.0, or later__ - download .NET Core 3.0 from [here](https://dotnet.microsoft.com/download/dotnet-core/3.0) or .NET Core 3.1 from [here](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+* __.NET Core 3.0, or later__ - download from [here](https://dotnet.microsoft.com/download/dotnet-core).
 
-* __.NET 5.0__ - download .NET 5.0 from [here](https://dotnet.microsoft.com/download/dotnet/5.0)
+* __.NET 5.0__ - download from [here](https://dotnet.microsoft.com/download/dotnet)
 
 * __Microsoft Visual Studio 2010/2012/2013/2015/2019__ - download from [here](http://www.microsoft.com/visualstudio/eng/downloads).
           
