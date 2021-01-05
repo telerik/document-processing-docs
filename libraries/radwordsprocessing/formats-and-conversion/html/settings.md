@@ -43,12 +43,12 @@ Contains an instance of __GenericHtmlFonts__ class, which specifies the Themable
 ### LoadImageFromUri and LoadStylesFromUri events 
 These events should be used when you need to load external resources (images and CSS files) that are not included in the HTML. When using these events you need to load the data using the Uri passed in the event arguments and return the data.  
 
->important The __LoadFromUri__ The event is obsoleted in R1 2021, you can use one of the above events instead. With Q3 2015 the __UriImageSource__ class was introduced. This allows the images to be automatically downloaded, however since such approach can be considered as a security vulnerability this is obsoleted in R1 2021.
+>important The __LoadFromUri__ event is obsoleted in R1 2021, you can use one of the above events instead. With Q3 2015 the __UriImageSource__ class was introduced. This allows the images to be automatically downloaded, however since such approach can be considered as a security vulnerability this is obsoleted in R1 2021.
 
 The __LoadImageFromUri__ event uses the __LoadImageFromUriEventArgs__ object which exposes the following properties: 
 
 * __Uri__: The URI originally specified in the imported HTML file.
-* __SetImageInfo()__: Used to pass the image data and image format (extension).
+* __SetImageInfo__: Used to pass the image data and image format (extension).
 
 
 __Example 1__ Shows how you can use the __LoadImageFromUri__ event to download an image.
@@ -59,7 +59,7 @@ __Example 1__ Shows how you can use the __LoadImageFromUri__ event to download a
     HtmlFormatProvider provider = new HtmlFormatProvider();
     HtmlImportSettings importSettings = new HtmlImportSettings();
 
-    provider.ImportSettings. LoadImageFromUri += (s, e) =>
+    importSettings.LoadImageFromUri += (s, e) =>
     {
         // Load the data representing the resource
         System.Net.WebClient webClient = new System.Net.WebClient();
@@ -77,17 +77,17 @@ __Example 1__ Shows how you can use the __LoadImageFromUri__ event to download a
 The __LoadStylesFromUri__ event uses the __LoadStylesFromUriEventArgs__ object which exposes the following properties: 
  
 * __Uri__: The URI originally specified in the imported HTML file.
-* __SetStyleSheetContent()__: Used to pass the styles as string.
+* __SetStyleSheetContent__: Used to pass the styles as string.
 
 __Example 2__ Shows how you can use the __LoadStylesFromUri__ event.
             
-#### __[C#] Example 1: Use the LoadStylesFromUri event__
+#### __[C#] Example 2: Use the LoadStylesFromUri event__
 {{region cs-radwordsprocessing-formats-and-conversion-html-settings_0}}
 
     HtmlFormatProvider provider = new HtmlFormatProvider();
     HtmlImportSettings importSettings = new HtmlImportSettings();
 
-    provider.ImportSettings.LoadStylesFromUri += (s, e) =>
+  	importSettings.LoadStylesFromUri += (s, e) =>
     {
         string styles = File.ReadAllText(@"Data\"+ e.Uri);
         e.SetStyleSheetContent(styles);
