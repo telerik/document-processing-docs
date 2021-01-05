@@ -82,6 +82,9 @@ navigation:
     libraries/radwordsprocessing/concepts/fields:
         title: Fields
         position: 0		
+    libraries/radwordsprocessing/model/content-controls:
+        title: Content Controls
+        position: 17
 ## RadSpreadStreamProcessing Start 
     "*radspreadstreamprocessing":
         title: RadSpreadStreamProcessing

@@ -15,11 +15,6 @@ position: 1
 __RadFlowDocument__ hosts flow document content and is the root element in the document elements tree. It holds a collection of [Section]({%slug radwordsprocessing-model-section%}) elements.
       
 
-* [Inserting and Modifying a RadFlowDocument](#inserting-and-modifying-a-radflowdocument)
-
-* [Operating with a RadFlowDocument](#operating-with-a-radflowdocument)
-
-
 ## Inserting and  Modifying a RadFlowDocument
 
 The code from __Example 1__ shows how you can create a new __RadFlowDocument__.
@@ -35,8 +30,9 @@ The code from __Example 1__ shows how you can create a new __RadFlowDocument__.
 
 __RadFlowDocument__ exposes properties which allow you to customize the way content is presented. The following properties are available for change:
         
+* **DocumentInfo**: This property enables you to set and obtain metadata information for the document file. It is of type **DocumentInfo** and allows you get and set the **Author**, **Title**, **Subject**, **Keywords** and **Description**.        
 
-* __ViewType__: An enumeration which specifies how the document should be laid out when displayed. It depends on the application with which the document is opened after it has been created whether this property is respected.
+* __ViewType__: An enumeration which specifies how the document should be laid out when displayed. It depends on the application with which the document is opened after it has been created whether this property is respected. 
             
 
 * __Theme__: Specifies the theme which is applied to the document. The document theme enables you to specify colors, fonts and a variety of graphic effects which affect the look of the whole document. More information is available [here]({%slug radwordsprocessing-concepts-document-themes%}).

@@ -34,7 +34,7 @@ To export to PDF format documents containing images different than **Jpeg** and 
 * **Telerik.Documents.ImageUtils.dll**
 <br><sub>_This assembly is not available in UI for Xamarin._</sub>
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
 
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 

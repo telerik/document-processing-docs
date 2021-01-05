@@ -50,7 +50,6 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 	<tr>
 	    <td><b>-</b></td>
 		<td><b>Telerik.Documents.ImageUtils.dll</b>
-		<br/><i><small>This assembly is not available in UI for Xamarin.</small></i></td>
 	</tr>
 		<tr>
 	    <td colspan="2">&nbsp;</td>
@@ -83,7 +82,7 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 </tbody>
 </table>
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **Magick.NET**. In order to use this assembly, you will need to add a reference to [Magick.NET](https://github.com/dlemstra/Magick.NET).
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
 
 ## Creating a Document
 

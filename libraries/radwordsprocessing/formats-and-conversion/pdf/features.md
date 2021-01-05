@@ -353,8 +353,8 @@ Yes
 <td>
 Floating Images
 </td>
-<td></td>
-<td></td>
+<td>Yes</td>
+<td>Limited set of properties. Check the [FloatingImage]({%slug radwordsprocessing-model-floatingimage%}) topic that lists the properties that are unsupported during PDF export.</td>
 </tr>
 <tr>
 <td>
