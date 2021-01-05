@@ -40,42 +40,62 @@ You can set the value of the property to any valid CSS document.
 
 Contains an instance of __GenericHtmlFonts__ class, which specifies the ThemableFontFamily objects that should be used when importing the 5 generic CSS font families: serif, sans-serif, monospace, cursive and fantasy. By default, these fonts are Times New Roman, Arial, Courier New, Comic Sans MS and Algerian, respectively.
             
+### LoadImageFromUri and LoadStylesFromUri events 
+These events should be used when you need to load external resources (images and CSS files) that are not included in the HTML. When using these events you need to load the data using the Uri passed in the event arguments and return the data.  
 
-### LoadFromUri
+>important The __LoadFromUri__ event is obsoleted in R1 2021, you can use one of the above events instead. With Q3 2015 the __UriImageSource__ class was introduced. This allows the images to be automatically downloaded, however since such approach can be considered as a security vulnerability this is obsoleted in R1 2021.
 
-The event can be used to override the process of loading of external resources – like external images and external CSS files. When handling the event, you gain access to the __LoadFromUriEventArgs__ instance exposing the following members:
-            
+The __LoadImageFromUri__ event uses the __LoadImageFromUriEventArgs__ object which exposes the following properties: 
 
 * __Uri__: The URI originally specified in the imported HTML file.
-* __SetData()__: Can be used to set the data (in the form of byte array) that will be loaded.
-                
+* __SetImageInfo__: Used to pass the image data and image format (extension).
 
-__Example 1__ shows how you can create and apply specific import settings.
-            
 
-#### __[C#] Example 1: Create HtmlImportSettings__
+__Example 1__ Shows how you can use the __LoadImageFromUri__ event to download an image.
+
+#### __[C#] Example 1: Use the LoadImageFromUri__
 {{region cs-radwordsprocessing-formats-and-conversion-html-settings_0}}
 
     HtmlFormatProvider provider = new HtmlFormatProvider();
     HtmlImportSettings importSettings = new HtmlImportSettings();
 
-    importSettings.GenericFonts.Serif = new ThemableFontFamily("Baskerville");
-
-    provider.ImportSettings.LoadFromUri += (s, e) =>
+    importSettings.LoadImageFromUri += (s, e) =>
     {
         // Load the data representing the resource
         System.Net.WebClient webClient = new System.Net.WebClient();
         byte[] data = webClient.DownloadData(e.Uri);
 
         // Pass the loaded data to the arguments
-        e.SetData(data);
+		string extension = e.Uri.Substring(s.Length - 3);
+        e.SetImageInfo(data, extension);
     };
 
     provider.ImportSettings = importSettings;
+
 {{endregion}}
 
-> With Q3 2015 the __UriImageSource__ class has been introduced and it is not necessary to subscribe to the LoadFromUri event when you want to import an image with URI. 
+The __LoadStylesFromUri__ event uses the __LoadStylesFromUriEventArgs__ object which exposes the following properties: 
+ 
+* __Uri__: The URI originally specified in the imported HTML file.
+* __SetStyleSheetContent__: Used to pass the styles as string.
 
+__Example 2__ Shows how you can use the __LoadStylesFromUri__ event.
+            
+#### __[C#] Example 2: Use the LoadStylesFromUri event__
+{{region cs-radwordsprocessing-formats-and-conversion-html-settings_0}}
+
+    HtmlFormatProvider provider = new HtmlFormatProvider();
+    HtmlImportSettings importSettings = new HtmlImportSettings();
+
+  	importSettings.LoadStylesFromUri += (s, e) =>
+    {
+        string styles = File.ReadAllText(@"Data\"+ e.Uri);
+        e.SetStyleSheetContent(styles);
+    };
+
+    provider.ImportSettings = importSettings;
+	
+{{endregion}}
 
 ## UriImageSource Class
 
@@ -93,7 +113,7 @@ When importing HTML, which contains images with URI source, the **HtmlFormatProv
 
 The **UriImageSource** objects are always exported as images with URI as their source independently of the export settings. If you need to export this object as an embedded or external image, you could convert the **UriImageSource** to **ImageSource** object. 
 
-#### __[C#] Example 2: Convert UriImageSource to ImageSource__
+#### __[C#] Example 3: Convert UriImageSource to ImageSource__
 
 {{region cs-radwordsprocessing-formats-and-conversion-html-settings_2}}
 	UriImageSource uriImageSource = imageInline.Image.ImageSource as UriImageSource;
@@ -217,7 +237,7 @@ The event is only raised when the __StylesExportMode__ property is set to __Exte
 __Example 3__ demonstrates how you can create export settings.
             
 
-#### __[C#] Example 3: Create HtmlExportSettings__
+#### __[C#] Example 4: Create HtmlExportSettings__
 
 {{region cs-radwordsprocessing-formats-and-conversion-html-settings_1}}
 	HtmlFormatProvider provider = new HtmlFormatProvider();
