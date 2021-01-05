@@ -30,8 +30,8 @@ Change the properties of the RadFlowDocument.
     foreach (var section in document.Sections)
     {
         section.PageMargins = new Padding(150);
-        section.PageOrientation = PageOrientation.Landscape;
         section.PageSize = PaperTypeConverter.ToSize(PaperTypes.A4);
+        section.Rotate(PageOrientation.Landscape);
     }
 
     PdfFormatProvider pdfProvider = new PdfFormatProvider();
