@@ -153,7 +153,7 @@ This section explains the behavior of the  __Size__ property of The __Image__ ob
 
 ## Exporting to PDF
 
-WordsProcessing enables you exporting documents with floating images to PDF. However, the set of supported properties is **limited** compared to the other document formats. Following is a list of the properties that are not supported by the **PdfFormatProvider** class:
+WordsProcessing enables you to export documents with floating images to PDF. However, the set of supported properties is **limited** compared to the other document formats. Following is a list of the properties that are not supported by the **PdfFormatProvider** class:
 
 * __IsHorizontallyFlipped__
 * __IsVerticallyFlipped__
