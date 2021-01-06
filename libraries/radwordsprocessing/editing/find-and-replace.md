@@ -1,14 +1,14 @@
 ---
-title: Find and Replace
-page_title: Find and Replace
-description: Find and Replace
+title: Replace Text and Style
+page_title: Replace Text and Style
+description: Learn how to replace text or styling with WordsProcessing
 slug: radwordsprocessing-editing-find-and-replace
 tags: find,replace
 published: True
 position: 5
 ---
 
-# Find and Replace
+# Replace Text and Style
 
 
 __RadWordsProcessing__ gives you the ability to search for a string in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance and replace all matches. The library also allows you to replace the styling of the matches alone.

@@ -213,7 +213,7 @@ Some series groups (Bar, Line and Area) implement the **ISupportGrouping** inter
 #### Figure 3: Sample data
 ![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_3.png)
 
-#### Example 6: Creating standard/clustered bar chart with vertical orientation
+#### [C#] Example 6: Creating standard/clustered bar chart with vertical orientation
 
 {{region radspreadprocessing-features-charts-working-with-series_4}}
 	
@@ -224,7 +224,7 @@ Some series groups (Bar, Line and Area) implement the **ISupportGrouping** inter
 #### Figure 4: Standard/clustered bar chart with vertical orientation
 ![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_4.png)
 
-#### Example 7: Creating stacked bar chart with vertical orientation
+#### [C#] Example 7: Creating stacked bar chart with vertical orientation
 
 {{region radspreadprocessing-features-charts-working-with-series_5}}
 	
@@ -236,7 +236,7 @@ Some series groups (Bar, Line and Area) implement the **ISupportGrouping** inter
 ![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_5.png)
 
 
-#### Example 8: Creating percent-stacked bar chart with vertical orientation
+#### [C#] Example 8: Creating percent-stacked bar chart with vertical orientation
 
 {{region radspreadprocessing-features-charts-working-with-series_6}}
 	

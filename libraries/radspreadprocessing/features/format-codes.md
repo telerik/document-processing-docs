@@ -193,10 +193,12 @@ The name of the color must be defined as the first item in a section and enclose
 
 The number formats could be applied according to conditions. Each condition is enclosed in square brackets and consists of a comparison operator and a value. For example, the following number format will display numbers that are less than or equal to 50 in a red font and numbers that are greater than 50 in a blue font. 
 
-{{region noname}}
 
+<table>
+<tr><td>
 	[Red][<=50];[Blue][>50]
-{{endregion}}
+</tr></td>
+</table>
 
 ## Currency, percentages, and scientific notation
 
