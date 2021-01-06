@@ -40,7 +40,7 @@ You can set the value of the property to any valid CSS document.
 
 Contains an instance of __GenericHtmlFonts__ class, which specifies the ThemableFontFamily objects that should be used when importing the 5 generic CSS font families: serif, sans-serif, monospace, cursive and fantasy. By default, these fonts are Times New Roman, Arial, Courier New, Comic Sans MS and Algerian, respectively.
             
-### LoadImageFromUri and LoadStylesFromUri events 
+### LoadImageFromUri and LoadStyleSheetFromUri events 
 These events should be used when you need to load external resources (images and CSS files) that are not included in the HTML. When using these events you need to load the data using the Uri passed in the event arguments and return the data.  
 
 >important The __LoadFromUri__ event is obsoleted in R1 2021, you can use one of the above events instead. With Q3 2015 the __UriImageSource__ class was introduced. This allows the images to be automatically downloaded, however since such approach can be considered as a security vulnerability this is obsoleted in R1 2021.
@@ -60,34 +60,34 @@ __Example 1__ Shows how you can use the __LoadImageFromUri__ event to download a
     HtmlImportSettings importSettings = new HtmlImportSettings();
 
     importSettings.LoadImageFromUri += (s, e) =>
-    {
-        // Load the data representing the resource
-        System.Net.WebClient webClient = new System.Net.WebClient();
-        byte[] data = webClient.DownloadData(e.Uri);
+	{
+		// Load the data representing the resource 
+		System.Net.WebClient webClient = new System.Net.WebClient();
+		byte[] data = webClient.DownloadData(e.Uri);
 
-        // Pass the loaded data to the arguments
-		string extension = e.Uri.Substring(s.Length - 3);
-        e.SetImageInfo(data, extension);
-    };
+		// Pass the loaded data to the arguments 
+		string extension = e.Uri.Substring(e.Uri.Length - 3);
+		e.SetImageInfo(data, extension);
+	};
 
     provider.ImportSettings = importSettings;
 
 {{endregion}}
 
-The __LoadStylesFromUri__ event uses the __LoadStylesFromUriEventArgs__ object which exposes the following properties: 
+The __LoadStyleSheetFromUri__ event uses the __LoadStyleSheetFromUriEventArgs__ object which exposes the following properties: 
  
 * __Uri__: The URI originally specified in the imported HTML file.
 * __SetStyleSheetContent__: Used to pass the styles as string.
 
-__Example 2__ Shows how you can use the __LoadStylesFromUri__ event.
+__Example 2__ Shows how you can use the __LoadStyleSheetFromUri__ event.
             
-#### __[C#] Example 2: Use the LoadStylesFromUri event__
+#### __[C#] Example 2: Use the LoadStyleSheetFromUri event__
 {{region cs-radwordsprocessing-formats-and-conversion-html-settings_0}}
 
     HtmlFormatProvider provider = new HtmlFormatProvider();
     HtmlImportSettings importSettings = new HtmlImportSettings();
 
-  	importSettings.LoadStylesFromUri += (s, e) =>
+  	importSettings.LoadStyleSheetFromUri += (s, e) =>
     {
         string styles = File.ReadAllText(@"Data\"+ e.Uri);
         e.SetStyleSheetContent(styles);
