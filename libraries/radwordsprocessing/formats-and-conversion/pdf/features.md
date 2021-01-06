@@ -354,7 +354,7 @@ Yes
 Floating Images
 </td>
 <td>Yes</td>
-<td>Limited set of properties. Check the <a href="https://testdocs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/model/floatingimage#exporting-to-pdf">FloatingImage</a> topic that lists the properties that are unsupported during PDF export.</td>
+<td>Limited set of properties. Check the <a href="https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/model/floatingimage#exporting-to-pdf">FloatingImage</a> topic that lists the properties that are unsupported during PDF export.</td>
 </tr>
 <tr>
 <td>
