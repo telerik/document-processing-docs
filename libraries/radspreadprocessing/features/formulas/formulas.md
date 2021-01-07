@@ -31,6 +31,7 @@ A formula is an algebraic expression that contains values, operators, functions,
 
 In order to set the value of a cell to a formula use the __SetValue()__ method of the [CellSelection]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}) class and pass the formula string as an argument. In order to produce a formula value the string you enter should start with either __=__ (equal) or __–__ (minus) sign, otherwise, the method treats the input as plain text.
         
+> The examples in the topic use numbers for simplicity. It doesn't matter whether the formula is with numbers or with cell references and you can work with any formula.
 
 __Example 1__ creates a workbook from scratch and adds a worksheet. Further, the code assigns the value =3+4 to cell A1.
         
