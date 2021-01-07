@@ -131,15 +131,36 @@ Creates an empty entry that has the specified path and entry name in the zip arc
 {{endregion}}
 
 
+### Extract ZipArchiveEntry
+Extract an entry to a specific folder/directory.
+
+#### **[C#] Example 9: Extracting a ZipArchiveEntry to folder/directory**
+
+{{region cs-radziplibrary-ziparchive-entry_8}}
+                
+    ZipArchiveEntry entry = archive.GetEntry("file.txt");
+    string path = Path.Combine(RootDirectory, entry.FullName);
+
+    using (Stream fileStream = File.Open(path, FileMode.Create, FileAccess.Write, FileShare.None))
+    {
+        using (Stream entryStream = entry.Open())
+        {
+            entryStream.CopyTo(fileStream);
+        }
+    }   
+{{endregion}}
+
+>tipThis functionality could be achieved by using the [Zip Extensions']({%slug radziplibrary-zipextensions%}) _ExtractToFile_ method as well.
+
 ## Operating with ZipArchiveEntry
 Specific examples of using the ZipArchiveEntry.
 
 ### Using ZipArchiveEntry Properties
 A complete example including all the properties discussed above.
 
-#### **[C#] Example 9: Complete example**
+#### **[C#] Example 10: Complete example**
 
-{{region cs-radziplibrary-ziparchive-entry_8}}
+{{region cs-radziplibrary-ziparchive-entry_9}}
                 
     string[] files = Directory.GetFiles("SampleFiles");
     string zipFileName = "ZipArchive.zip";
@@ -190,31 +211,18 @@ A complete example including all the properties discussed above.
 
 ### Working with Folders/Directories
 
-#### **[C#] Example 10: Creating folders/directories**
+#### **[C#] Example 11: Creating folders/directories**
 
-{{region cs-radziplibrary-ziparchive-entry_9}}
+{{region cs-radziplibrary-ziparchive-entry_10}}
                 
     ZipArchiveEntry entry = archive.CreateEntry("Documents/Sample/");
 {{endregion}}
 
-#### **[C#] Example 11: Opening Files in folders/directories**
-
-{{region cs-radziplibrary-ziparchive-entry_10}}
-                
-    ZipArchiveEntry entry = archive.GetEntry("Documents/Sample/file.txt");
-{{endregion}}
-
-
-The following example shows how to extract an entry to a specific folder/directory using a [Zip Extensions']({%slug radziplibrary-zipextensions%}) _ExtractToFile_ method.
-
-#### **[C#] Example 12: Extracting a ZipArchiveEntry to folder/directory**
+#### **[C#] Example 12: Opening Files in folders/directories**
 
 {{region cs-radziplibrary-ziparchive-entry_11}}
                 
-    ZipArchiveEntry entry = archive.GetEntry("file.txt");
-    string path = Path.Combine(RootDirectory, entry.FullName);
-
-    entry.ExtractToFile(path, overwrite: true);
+    ZipArchiveEntry entry = archive.GetEntry("Documents/Sample/file.txt");
 {{endregion}}
 
 ## See Also
