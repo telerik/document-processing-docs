@@ -51,7 +51,13 @@ __Example 1__ demonstrates how you can use the RegisterFont() method.
 #### __[C#] Example 1: Register font__
 
 {{region cs-radpdfprocessing-concepts-fonts_0}}
-	FontsRepository.RegisterFont(fontFamily, fontStyle, fontWeight, data);
+
+	// Read the font file
+	byte[] fontData = File.ReadAllBytes("some-font.tdf");
+	FontFamily fontFamily = new FontFamily("Some Font");
+	
+	// Register the font
+	FontsRepository.RegisterFont(fontFamily, FontStyles.Normal, FontWeights.Normal, fontData);
 {{endregion}}
 
 
