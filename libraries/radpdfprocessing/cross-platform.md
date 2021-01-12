@@ -95,6 +95,8 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     
     The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document. The default implementation depends on the [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/) libraries to convert images to Jpeg format.
 
+>important Telerik.Documents.ImageUtils.dll is not available for Xamarin.
+
     #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
         {{region cs-radpdfprocessing-cross-platform_3}}
 
