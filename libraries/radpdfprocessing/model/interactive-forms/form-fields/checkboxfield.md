@@ -54,3 +54,5 @@ CheckBoxField provides the following properties:
 * [Form Field]({%slug radpdfprocessing-model-interactive-forms-form-fields %})
 * [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets %})
 * [RadioButtonField Class]({%slug radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield%})
+* [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
+* [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 
