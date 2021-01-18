@@ -48,18 +48,30 @@ If you want to use a font, which is not part of the standard ones, you can regis
 __Example 1__ demonstrates how you can use the RegisterFont() method.
             
 
-#### __[C#] Example 1: Register font__
+#### __[C#] Example 1: Register font in .NET Framework application__
 
 {{region cs-radpdfprocessing-concepts-fonts_0}}
 
 	// Read the font file
-	byte[] fontData = File.ReadAllBytes("some-font.tdf");
-	FontFamily fontFamily = new FontFamily("Some Font");
+	byte[] fontData = File.ReadAllBytes("some-font.ttf");
+	System.Windows.Media.FontFamily fontFamily = new System.Windows.Media.FontFamily("Some Font");
 	
 	// Register the font
-	FontsRepository.RegisterFont(fontFamily, FontStyles.Normal, FontWeights.Normal, fontData);
+	 Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.RegisterFont(fontFamily, System.Windows.FontStyles.Normal, System.Windows.FontWeights.Normal, fontData);
 {{endregion}}
 
+
+#### __[C#] Example 1: Register font in .NET Standard application__
+
+{{region cs-radpdfprocessing-concepts-fonts_2}}
+
+	// Read the font file
+	byte[] fontData = File.ReadAllBytes("some-font.ttf");
+	Telerik.Documents.Core.Fonts.FontFamily fontFamily = new Telerik.Documents.Core.Fonts.FontFamily("Some Font");
+	
+	// Register the font
+	 Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.RegisterFont(fontFamily, Telerik.Documents.Core.Fonts.FontStyles.Normal, Telerik.Documents.Core.Fonts.FontWeights.Normal, fontData);
+{{endregion}}
 
 
 ### Creating a Font
