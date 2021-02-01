@@ -59,16 +59,21 @@ This example shows how one can iterate the items and add an item to an existing 
 
 New content controls can be inserted through the **InsertStructuredDocumentTag** method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).The method has several overloads that allow you to insert the content control by passing its type, properties, and relative document elements. 
 
+>note If adding content controls with the InsertStructuredDocumentTag(SdtType) method without specifying the content, the resulting document will only have the annotation range start and end of the control. The desired content should be manually added afterwards. 
+
 #### Example 3: Inserting a content control using content control type
 
 #### __C#__
 
 {{region wordsprocessing-model-working-with-content-controls_2}}
 
+    RadFlowDocument document = new RadFlowDocument();
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    var checkbox = editor.InsertStructuredDocumentTag(SdtType.CheckBox);
-    ((CheckBoxProperties)checkbox.SdtProperties).Checked = true;
-    
+    var dateContentControl = editor.InsertStructuredDocumentTag(SdtType.Date);
+
+    editor.MoveToInlineStart(dateContentControl.End);
+    editor.InsertText(DateTime.Now.ToString()); // Insert content
+  
 {{endregion}}
 
 #### Example 4: Inserting a content control using content control properties
@@ -103,7 +108,12 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
 
 #### Example 6: Insert a content control to a specific position
 
->note When using the InsertStructuredDocumentTag() method and passing start and end elements, make sure that the elements are not already part of a content control. 
+>note When using the InsertStructuredDocumentTag() method and passing start and end elements, make sure that the elements are not already part of a content control.  An exception to the rule are the rich text and repeating section content controls, which can fully contain other controls, with the restriction that they cannot intersect their ranges. 
+
+>caption Figure 1: Examples of correct/incorrect adding of content controls
+
+![working-with-content-controls001](images/working-with-content-controls001.png)		
+
 
 #### __C#__
 
