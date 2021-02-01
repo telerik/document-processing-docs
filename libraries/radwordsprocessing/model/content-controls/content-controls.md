@@ -62,6 +62,7 @@ The above content controls share the following properties:
 * __Placeholder:__ Gets or set the associated placeholder object.
     - __ShowPlaceholder:__ This property enables/disables the Placeholder editing behavior.
     - __PlaceholderText:__ This property holds the Placeholder text.
+* __RunProperties:__ These are the properties which will be applied to the content of the control after interacting with it.This is relevant for the content controls that generate new content after an interaction, e.g. check box, combo box, drop down list, date picker, repeating section.
 
 ## Content Controls with Specific Properties
 
