@@ -30,7 +30,7 @@ The **Telerik[.Windows].Documents.CMapUtils.dll** assembly provides a default im
     Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.PredefinedCMapsProvider = new Telerik.Windows.Documents.CMapUtils.PredefinedCMapsProvider();
         
     // For .NET Standard
-    Telerik.Documents.Extensibility.FixedExtensibilityManager.PredefinedCMapsProvider = new Telerik.Documents.CMapUtils.PredefinedCMapsProvider();
+    Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.PredefinedCMapsProvider = new Telerik.Documents.CMapUtils.PredefinedCMapsProvider();
 {{endregion}}
 
 After registering the **PredefinedCMapsProvider** class, you will be able to import any document containing a predefined CMap table. 
