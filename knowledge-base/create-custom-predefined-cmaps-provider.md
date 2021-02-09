@@ -5,7 +5,7 @@ type: how-to
 page_title: Create Custom Predefined CMaps Provider
 slug: create-custom-predefined-cmaps-provider
 position: 0
-tags: custom, predefined, cmap, provider, cff, font
+tags: pdf, cmap, cff, font
 res_type: kb
 ---
 
@@ -32,20 +32,12 @@ How to create a custom implementation of the [PredefinedCMapsProviderBase](https
 
 ## Solution
 
-This functionality could be achieved by creating a custom class implementing the [PredefinedCMapsProviderBase](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.predefinedcmapsproviderbase) and passing it to [PredefinedCMapsProvider](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.cmaputils.predefinedcmapsprovider) property of the [FixedExtensibilityManager](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.fixedextensibilitymanager) class.
+This functionality could be achieved by creating a custom class inheriting the [PredefinedCMapsProviderBase](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.predefinedcmapsproviderbase) and passing it to [PredefinedCMapsProvider](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.cmaputils.predefinedcmapsprovider) property of the [FixedExtensibilityManager](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.fixedextensibilitymanager) class.
 
-#### __[C#]__
+
+#### __[C#] Creating a custom class inheriting PredefinedCMapsProviderBase__
 
 {{region kb-create-custom-predefined-cmaps-provider1}}
-
-	FixedExtensibilityManager.PredefinedCMapsProvider = new CustomPredefinedCMapsProvider(new PredefinedCMapsProvider());
- 
-{{endregion}}
-
-
-#### __[C#] Creating a custom class implementing IBulletNumberingFormat__
-
-{{region kb-create-custom-predefined-cmaps-provider2}}
 
 	internal class CustomPredefinedCMapsProvider : PredefinedCMapsProviderBase
     {
@@ -72,4 +64,12 @@ This functionality could be achieved by creating a custom class implementing the
         }
     }
 	
+{{endregion}}
+
+#### __[C#] Set the custom PredefinedCMapsProvider the FixedExtensibilityManager.PredefinedCMapsProvider__
+
+{{region kb-create-custom-predefined-cmaps-provider2}}
+
+	FixedExtensibilityManager.PredefinedCMapsProvider = new CustomPredefinedCMapsProvider(new PredefinedCMapsProvider());
+ 
 {{endregion}}
