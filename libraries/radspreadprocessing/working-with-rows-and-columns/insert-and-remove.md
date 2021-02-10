@@ -66,7 +66,7 @@ The __RowSelection__ class exposes a __Remove()__ method that performs the remov
 	int index = 2;
 	int itemCount = 3;
 	
-	RowSelection selection = worksheet.Rows[index, index + itemCount];
+	RowSelection selection = worksheet.Rows[index, index + itemCount - 1];
 	selection.Remove();
 {{endregion}}
 
@@ -115,7 +115,7 @@ The __ColumnSelection__ class exposes a __Remove()__ method that executes the re
 	int index = 2;
 	int itemCount = 3;
 	
-	ColumnSelection selection = worksheet.Columns[index, index + itemCount];
+	ColumnSelection selection = worksheet.Columns[index, index + itemCount - 1];
 	selection.Remove();
 {{endregion}}
 
