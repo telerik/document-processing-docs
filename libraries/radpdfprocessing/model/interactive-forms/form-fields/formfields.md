@@ -15,6 +15,7 @@ The form fields are the data containers responsible for preserving separate piec
 
 FormField class is the base class for all fields. Instances of this class may be found by iterating in the FormFieldCollection of [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%}). 
 
+>note You can find complete examples for [Creating Interactive Forms](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) and [Modifying Forms](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) in our SDK repository.
 
 ## FormField Properties
 
@@ -143,3 +144,5 @@ When merging documents that contain FormFields you need to ensure that each fiel
 
 * [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets %})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
+* [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
+* [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 

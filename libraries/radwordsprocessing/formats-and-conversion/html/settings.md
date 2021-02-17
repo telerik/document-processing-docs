@@ -105,6 +105,7 @@ When importing HTML, which contains images with URI source, the **HtmlFormatProv
 * __Data__: Gets a byte[], which represents the data of the image. Accessing this property will download the image data.
 * __Extension__: Gets the extension. Accessing this property will download the image data only if the extension is not predefined.
 
+> important Using __UriImageSource__ or the __LoadFromUri__ event will make an http request and will download the respected resource. Consider this fact if your application is not meant to freely access any remote resources.
 
 > Exporting an **UriImageSource** object to other supported formats will download the image and save it according to the used format specification.
 

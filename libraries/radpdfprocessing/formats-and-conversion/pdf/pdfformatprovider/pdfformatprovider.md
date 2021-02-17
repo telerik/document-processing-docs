@@ -56,6 +56,8 @@ The result from the import method is a [__RadFixedDocument__]({%slug radpdfproce
 
 >Import support is limited to the features that are supported by the export so it is possible that you cannot import all of your custom PDF documents.
           
+	 
+>note Complete examples showing importing and exporting a document are available in the [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing).
 
 ## Export
 

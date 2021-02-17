@@ -14,6 +14,8 @@ Interactive forms in PDF format are also known as AcroForm. The AcroForm class i
 
 >The AcroForm class instance is unique for each RadFixedDocument instance and may be accessed through the **AcroForm property** of RadFixedDocument.
 
+>note You can find complete examples for [Creating Interactive Forms](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) and [Modifying Forms](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) in our SDK repository.
+
 ## AcroForm properties
 
 The AcroForm class provides the following properties:

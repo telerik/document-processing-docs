@@ -69,3 +69,5 @@ TextBoxField exposes the following properties:
 * [Form Field]({%slug radpdfprocessing-model-interactive-forms-form-fields %})
 * [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets %})
 * [CombTextBoxField Class]({%slug radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield%})
+* [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
+* [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 

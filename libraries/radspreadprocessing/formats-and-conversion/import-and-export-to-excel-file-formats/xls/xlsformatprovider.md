@@ -11,7 +11,7 @@ platforms: netcore, mvc, ajax, blazor, wpf, winforms, xamarin
 
 # Using XlsFormatProvider
 
-__XlsFormatProvider__ makes it easy to import and export to XLS (Excel 97-2003 Workbook) files. 
+__XlsFormatProvider__ makes it easy to import and export to XLS (Excel 97-2003 Workbook) files. The functionality is available since R3 2020.
 
 >The __XlsFormatProvider__ requires references to the following assembly:
         

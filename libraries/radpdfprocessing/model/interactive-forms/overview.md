@@ -15,6 +15,8 @@ The interactive forms feature (also known as AcroForm) allows you to create PDF 
 #### Interactive Forms in a PDF document
 ![Interactive forms in a PDF document](images/InteractiveForms_0.png)
 
+>note You can find complete examples for [Creating Interactive Forms](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) and [Modifying Forms](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) in our SDK repository.
+
 ## Form Fields
 
 The data in an interactive form is separated into form fields restricting the different data input to different input formats – buttons, text fields or choice fields. Additionally, the interactive form can contain [signature fields]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}), which are responsible for preserving [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) information when signing the document. Each form field is a container for its specific type of data.

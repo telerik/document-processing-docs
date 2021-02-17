@@ -50,6 +50,7 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 	<tr>
 	    <td><b>-</b></td>
 		<td><b>Telerik.Documents.ImageUtils.dll</b>
+			<br><sub><i>This assembly is not available in UI for Xamarin.</i></sub>
 	</tr>
 		<tr>
 	    <td colspan="2">&nbsp;</td>

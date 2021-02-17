@@ -76,7 +76,10 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	</tr>
 	<tr>
 	    <td><b>-</b></td>
-		<td><b>Telerik.Documents.ImageUtils.dll</b></td>
+		<td>	
+			<b>Telerik.Documents.ImageUtils.dll</b>
+			<br><sub><i>This assembly is not available in UI for Xamarin.</i></sub>
+		</td>
 		<td>*</td>
 	</tr>
 	<tr>

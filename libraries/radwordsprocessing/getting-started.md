@@ -62,7 +62,9 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 	</tr>
 	<tr>
 	    <td><b>-</b></td>
-		<td><b>Telerik.Documents.ImageUtils.dll*</b></td>
+		<td><b>Telerik.Documents.ImageUtils.dll*</b>
+		<br><sub><i>This assembly is not available in UI for Xamarin.</i></sub>
+	   </td>		
 	</tr>
 	<tr>
 	    <td colspan="2">&nbsp;</td>
