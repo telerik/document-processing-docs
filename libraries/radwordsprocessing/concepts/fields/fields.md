@@ -137,7 +137,7 @@ The syntax of a field code is as follows:
 field-type [field-argument] [switches]
         
 
-* *field-type*: The type of the field. For example: HYPERINK.
+* *field-type*: The type of the field. For example: HYPERLINK.
             
 
 * *argument*: The argument of the field. This is optional as some of the fields do not require an argument.
