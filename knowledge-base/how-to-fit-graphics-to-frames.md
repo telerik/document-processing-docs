@@ -28,22 +28,23 @@ res_type: kb
 
 ## Description
 
-How to fit graphics to frames or vice versa.
+How to fit images to frames (predefined shapes, or in our case a square with a side length of 90) or vice versa.
 
 ## Solution
 
 This functionality could be achieved by using the [FixedContentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/fixedcontenteditor) API. Below are demonstrated the following four different scenarios:
 
 * Fit Content Proportionally
+* Fit Content To Frame (or Stretch fit)
+* Fill Frame Proportionally (or Center fit)
 * Fit Frame to Content
-* Fit Content To Frame
-* Fill Frame Proportionally
 
-For the purposes of the demonstration, we use the side of а square (squareSide) to describe the frame. 
-
+The following example demonstrates how to fit the image in a square without changing the image sides aspect ratio.
 #### __[C#] Fit Content Proportionally__
 
 {{region kb-how-to-fit-graphics-to-frames1}}
+
+    double squareSide = 90;
 
     FixedContentEditor editor = new FixedContentEditor(document.Pages.AddPage());
     editor.DrawText("Fit Content Proportionally");
@@ -64,27 +65,13 @@ For the purposes of the demonstration, we use the side of а square (squareSide)
 	
 {{endregion}}
 
-#### __[C#] Fit Frame to Content__
+The following example demonstrates how to stretch the image in a square (the image aspect ratio is changed).
+#### __[C#] Fit Content To Frame__
 
 {{region kb-how-to-fit-graphics-to-frames2}}
 
-    FixedContentEditor editor = new FixedContentEditor(document.Pages.AddPage());
-    editor.DrawText("Fit Frame To Content");
-    editor.Position.Translate(0, 20);
-    using (Stream sampleImage = File.OpenRead("image.jpg"))
-    {
-        Block block = new Block();
-        block.InsertImage(sampleImage);
-        Size imageSize = block.Measure();
-        editor.DrawBlock(block);
-    }
- 
-{{endregion}}
-
-#### __[C#] Fit Content To Frame__
-
-{{region kb-how-to-fit-graphics-to-frames3}}
-
+    double squareSide = 90;
+    
     FixedContentEditor editor = new FixedContentEditor(document.Pages.AddPage());
     editor.DrawText("Fit Content To Frame");
     editor.Position.Translate(0, 20);
@@ -97,9 +84,12 @@ For the purposes of the demonstration, we use the side of а square (squareSide)
  
 {{endregion}}
 
+The following example demonstrates how to crop the image in order to fill a square without changing the image aspect ratio.
 #### __[C#] Fill Frame Proportionally__
 
-{{region kb-how-to-fit-graphics-to-frames4}}
+{{region kb-how-to-fit-graphics-to-frames3}}
+
+    double squareSide = 90;
 
     RadFixedPage page = document.Pages.AddPage();
     FixedContentEditor editor = new FixedContentEditor(page);
@@ -139,3 +129,22 @@ For the purposes of the demonstration, we use the side of а square (squareSide)
 {{endregion}}
 
 In the last scenario, we are finding the smallest side of the image and use it to calculate the factor which we are using to scale the position. After that, we are calculating the offset that we are going to use to create an image [Clipping](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/clipping) with the desired size. 
+
+
+The following example demonstrates how to insert an image in its original size.
+#### __[C#] Fit Frame to Content__
+
+{{region kb-how-to-fit-graphics-to-frames4}}
+
+    FixedContentEditor editor = new FixedContentEditor(document.Pages.AddPage());
+    editor.DrawText("Fit Frame To Content");
+    editor.Position.Translate(0, 20);
+    using (Stream sampleImage = File.OpenRead("image.jpg"))
+    {
+        Block block = new Block();
+        block.InsertImage(sampleImage);
+        Size imageSize = block.Measure();
+        editor.DrawBlock(block);
+    }
+ 
+{{endregion}}
