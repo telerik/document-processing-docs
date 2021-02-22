@@ -10,13 +10,13 @@ position: 18
 
 ## Setting the culture
 
-__RadSpreadProcessing__ allows you to set a culture that differs from the current tread culture. This can be achieve by setting the static __DefaultSpreadsheetCulture__ property.
+__RadSpreadProcessing__ allows you to set a culture that differs from the current tread culture. This can be achieve by creating a new __CultureHelper__.
 
 #### __C# Setting the Culture__
 
 {{region cs-radspreadprocessing-features-setting-the-culture_1}}
 
-	 FormatHelper.DefaultSpreadsheetCulture = new SpreadsheetCultureHelper(new CultureInfo("en-US"));
+    FormatHelper.CultureHelper = new SpreadsheetCultureHelper(new CultureInfo("en-US"));
 
 {{endregion}}
 
