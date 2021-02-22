@@ -10,7 +10,7 @@ position: 18
 
 ## Setting the culture
 
-__RadSpreadProcessing__ allows you to set a culture that differs from the current tread culture. This can be achieve by creating a new __CultureHelper__.
+__RadSpreadProcessing__ allows you to set a culture that differs from the current thread culture. This can be achieve by creating a new __CultureHelper__.
 
 #### __C# Setting the Culture__
 
