@@ -30,6 +30,8 @@ __CsvFormatProvider__ exposes a __Settings__ property of type __CsvSettings__. T
             
 
 * __Encoding__: Gets or sets the character encoding that is used when importing or exporting a file. The default value is UTF8 with BOM.
+  
+* __ShouldExportEmptyValues__: Gets or Sets a value indicating whether the empty values are exported.
             
 
 __Example 1__ shows how to create and specify a particular setting to a CsvFormatProvider.
