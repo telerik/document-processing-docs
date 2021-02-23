@@ -199,10 +199,10 @@ Specifies the export mode for the [styles in RadFlowdDocument's StyleRepository]
 * __External__: RadFlowDocument styles are exported as CSS selectors in external CSS file. You have two options:
                 
 
-* Set __StylesFilePath__ and __StylesSourcePath__ properties, which should be used to export the external file.
+    * Set __StylesFilePath__ and __StylesSourcePath__ properties, which should be used to export the external file.
                     
 
-* Handle __ExportStylesToExternalSource__ event, specifying the output stream and reference Uri to be exported.
+    * Handle __ExportStylesToExternalSource__ event, specifying the output stream and reference Uri to be exported.
                     
 
 * __Inline__: RadFlowDocument styles are exported as CSS properties in the 'style' attribute of the HTML elements. This ensures maximum compatibility with some applications that don't support external or embedded CSS, for example some email clients.
