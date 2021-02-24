@@ -13,9 +13,19 @@ position: 6
 
 Telerik Document Processing provides the __RadPdfProcessing__, __RadSpreadProcessing__, __RadSpreadStreamProcessing__, __RadWordsProcessing__, and __RadZipLibrary__ UI-independent and cross-platform libraries which enable you to process content between different formats and work with archive files. Currently, the libraries are not shipped independently, and they are part of the products that provide UI components (UI for ASP.NET, Kendo UI, UI for WPF, UI for WinForms, UI for Xamarin, UI for Blazor).   
  
+ 
+#### This article contains the following sections:
+
+* [Packages for .NET Framework](#packages-for-net-framework)
+* [Packages for .NET Standard 2.0](#packages-for-net-standard-20)
+* [Get the NuGet Packages](#get-the-nuget-packages)
 
 
->important There are two versions of each assembly in the library, for __.Net Framework 4.0 or later__, and for __.Net Standard 2.0__. Both versions are available as NuGet packages. The name of the assemblies for both versions is different. The assemblies for .NET Standard do not contain the word __Windows__ in their name. 
+>important There are two versions of each assembly in the library, for __.Net Framework 4.0 or later__, and for __.Net Standard 2.0__. Both versions are available as NuGet packages. The name of the assemblies for both versions is different. 
+>
+>The assemblies for __.NET Standard__ do __not__ contain the word __Windows__ in their name. 
+
+>caption Package lists to use with .NET Standard (left) and .NET Framework (right)
 
 ![installation-nuget-packages 000](images/installation-nuget-packages000.png)
 
