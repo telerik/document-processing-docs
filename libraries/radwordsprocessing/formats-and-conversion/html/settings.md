@@ -65,8 +65,8 @@ __Example 1__ Shows how you can use the __LoadImageFromUri__ event to download a
 		System.Net.WebClient webClient = new System.Net.WebClient();
 		byte[] data = webClient.DownloadData(e.Uri);
 
-		// Pass the loaded data to the arguments 
-		string extension = e.Uri.Substring(e.Uri.Length - 3);
+		// Pass the loaded data to the arguments
+		string extension = System.IO.Path.GetExtension(e.Uri).Substring(1); // Get the extension without the dot
 		e.SetImageInfo(data, extension);
 	};
 
