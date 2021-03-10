@@ -1,0 +1,92 @@
+---
+title: Create Custom Text Measurer in .NET Standard
+description: How to Create Custom Text Measurer .NET Standard
+type: how-to
+page_title: Create Custom Text Measurer .NET Standard
+slug: create-custom-text-measurer-net-standard
+position: 0
+tags: spreadsheet, custom, text, measurer, netstandard
+res_type: kb
+---
+
+<table>
+<thead>
+	<tr>
+		<th>Product Version</th>
+		<th>Product</th>
+		<th>Author</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>2021.1.212</td>
+		<td>RadSpreadProcessing</td>
+		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
+	</tr>
+</tbody>
+</table>
+
+## Description
+
+**.NET Standard** specification does not define APIs for getting the image properties. **SpreadProcessing** needs to have access to GDI+ basic graphics functionality. Thats why, to allow the library to get the image properties in order to export them an implementation inheriting the _ImagePropertiesResolverBase_ abstract class have to be set to the _ImagePropertiesResolver_ property inside the _SpreadExtensibilityManager_.
+
+## Solution
+
+In the example below, we are demonstrating how to create a custom [TextMeasurer](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.core.textmeasurer) inheriting the _SpreadTextMeasurerBase_ abstract class and set it to the _TextMeasurer_ property of the _SpreadExtensibilityManager_.
+
+#### __[C#] Creating a CustomTextMeasurer__
+
+{{region kb-create-custom-text-measurer-net-standard1}}
+
+    public class CustomTextMeasurer : SpreadTextMeasurerBase
+    {
+        private static readonly double ratioX = 1.035;
+        private static readonly double ratioY = 1;
+        private static readonly double ratioBaseline = 1;
+
+        private readonly SpreadTextMeasurerBase originalMeasurer;
+
+        public CustomTextMeasurer(SpreadTextMeasurerBase originalMeasurer)
+        {
+            this.originalMeasurer = originalMeasurer;
+        }
+
+        public override TextMeasurementInfo MeasureText(TextProperties textProperties, FontProperties fontProperties)
+        {
+            TextMeasurementInfo info = originalMeasurer.MeasureText(textProperties, fontProperties);
+
+            Size size = info.Size;
+            return new TextMeasurementInfo()
+            {
+                BaselineOffset = info.BaselineOffset * ratioBaseline,
+                Size = new Size(
+                    size.Width * ratioX,
+                    size.Height * ratioY),
+            };
+        }
+
+        public override TextMeasurementInfo MeasureTextWithWrapping(TextProperties textProperties, FontProperties fontProperties, double wrappingWidth)
+        {
+            TextMeasurementInfo info = originalMeasurer.MeasureText(textProperties, fontProperties);
+
+            Size size = info.Size;
+            return new TextMeasurementInfo()
+            {
+                BaselineOffset = info.BaselineOffset * ratioBaseline,
+                Size = new Size(
+                    size.Width * ratioX,
+                    size.Height * ratioY),
+            };
+        }
+    }
+{{endregion}}
+
+The following example shows how to set the custom implementation inheriting the SpreadTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager.
+
+#### __[C#] Setting the CustomTextMeasurer__
+
+{{region kb-create-custom-text-measurer-net-standard2}}
+
+    SpreadTextMeasurerBase customTextMeasurer = new CustomTextMeasurer(); 
+    SpreadExtensibilityManager.TextMeasurer = customTextMeasurer; 
+{{endregion}}
