@@ -1,11 +1,11 @@
 ---
-title: Create Custom Text Measurer
-description: How to Create Custom Text Measurer
+title: Create Custom Text Measurer in .NET Standard
+description: How to Create Custom Text Measurer .NET Standard
 type: how-to
-page_title: Create Custom Text Measurer
-slug: create-custom-text-measurer
+page_title: Create Custom Text Measurer .NET Standard
+slug: create-custom-text-measurer-net-standard
 position: 0
-tags: spreadsheet, custom, text, measurer
+tags: spreadsheet, custom, text, measurer, netstandard
 res_type: kb
 ---
 
@@ -28,7 +28,7 @@ res_type: kb
 
 ## Description
 
-How to create a custom [TextMeasurer](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.core.textmeasurer).
+**.NET Standard** specification does not define APIs for getting the image properties. **SpreadProcessing** needs to have access to GDI+ basic graphics functionality. Thats why, to allow the library to get the image properties in order to export them an implementation inheriting the _ImagePropertiesResolverBase_ abstract class have to be set to the _ImagePropertiesResolver_ property inside the _SpreadExtensibilityManager_.
 
 ## Solution
 
@@ -36,7 +36,7 @@ In the example below, we are demonstrating how to create a custom [TextMeasurer]
 
 #### __[C#] Creating a CustomTextMeasurer__
 
-{{region kb-create-custom-text-measurer1}}
+{{region kb-create-custom-text-measurer-net-standard1}}
 
     public class CustomTextMeasurer : SpreadTextMeasurerBase
     {
@@ -79,4 +79,14 @@ In the example below, we are demonstrating how to create a custom [TextMeasurer]
             };
         }
     }
+{{endregion}}
+
+The following example shows how to set the custom implementation inheriting the SpreadTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager.
+
+#### __[C#] Setting the CustomTextMeasurer__
+
+{{region kb-create-custom-text-measurer-net-standard2}}
+
+    SpreadTextMeasurerBase customTextMeasurer = new CustomTextMeasurer(); 
+    SpreadExtensibilityManager.TextMeasurer = customTextMeasurer; 
 {{endregion}}
