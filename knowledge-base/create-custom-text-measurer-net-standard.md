@@ -28,7 +28,7 @@ res_type: kb
 
 ## Description
 
-**.NET Standard** specification does not define APIs for getting the image properties. **SpreadProcessing** needs to have access to GDI+ basic graphics functionality. Thats why, to allow the library to get the image properties in order to export them an implementation inheriting the _ImagePropertiesResolverBase_ abstract class have to be set to the _ImagePropertiesResolver_ property inside the _SpreadExtensibilityManager_.
+Due to **.NET Standard** APIs limitations, the _SimpleTextMeasurer_ provides basic functionality for text measuring and it is not expected to be an all-purpose measurer. So in order to measure the specific text in a more precise way, you will need to create a custom implementation of a text measure and set it to the _TextMeasurer_ property of the _SpreadExtensibilityManager_.
 
 ## Solution
 
