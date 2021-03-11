@@ -28,7 +28,7 @@ res_type: kb
 
 ## Description
 
-How to set the value to a [CellSelection](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.cellselection) using its [Named Range]({%%slug radspreadprocessing-features-named-ranges%}).
+How to set the value to a [CellSelection](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.cellselection) using its [Named Range]({%slug radspreadprocessing-features-named-ranges%}).
 
 ## Solution
 
