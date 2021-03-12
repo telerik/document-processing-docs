@@ -43,11 +43,11 @@ __Example 1__ demonstrates how you can insert a date field.
 {{region cs-radwordsprocessing-concepts-date-field_0}}
 	            
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	editor.InsertField("DATE \\@ \"dd / MM / yyyy\"", "to be updated");
+	editor.InsertField(@"DATE \@ ""dd / MM / yyyy""", "to be updated");
 {{endregion}}
 
 
-After updating the field the result would be "_26/02/2021_" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
+After updating the field the result would be "_12/03/2021_" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
 
 ## See Also
 
