@@ -28,11 +28,11 @@ res_type: kb
 
 ## Description
 
-How to set the value to a [CellSelection](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.cellselection) using its [Named Range]({%%slug radspreadprocessing-features-named-ranges%}).
+How to set the value to a [CellSelection](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.cellselection) using its [Named Range]({%slug radspreadprocessing-features-named-ranges%}).
 
 ## Solution
 
-The solution would be to iterate the imported [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})`s Names in order to find the desired one. Then to split its [RefersTo](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.definedname#collapsible-Telerik_Windows_Documents_Spreadsheet_Model_DefinedName_RefersTo) property to use its elements to match the exact [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) and to get the name of the indexes describing the **CellSelection**. We are using the [NameConverter]({%slug radspreadprocessing-name-converter%})._TryConvertCellNameToIndex()_ method to convert the already obtained cell name to an index.
+The solution would be to iterate the imported [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook %})`s Names in order to find the desired one. Then to split its [RefersTo](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.definedname#collapsible-Telerik_Windows_Documents_Spreadsheet_Model_DefinedName_RefersTo) property to use its elements to match the exact [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) and to get the name of the indexes describing the **CellSelection**. We are using the [NameConverter]({%slug radspreadprocessing-name-converter%})._TryConvertCellNameToIndex()_ method to convert the already obtained cell name to an index.
 
 #### __[C#] Set Value using Named Range__
 
