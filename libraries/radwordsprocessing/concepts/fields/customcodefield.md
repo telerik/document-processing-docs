@@ -1,36 +1,33 @@
 ---
-title: CustomCodeField
-page_title: CustomCodeField
-description: CustomCodeField
+title: Custom Code Field
+page_title: Custom Code Field
+description: Custom Code Field
 slug: radwordsprocessing-concepts-customcodefield
-tags: customcodefield
+tags: custom,code,field
 published: True
-position: 3
+position: 2
 ---
 
 # CustomCodeField
 
+__Fields__ in __RadFlowDocument__ consist of code fragment and result fragment as explained in the [Fields]({%slug radwordsprocessing-concepts-fields%}) article. Some fields have a direct representation in the document model – for example [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlink-field%}). For all other fields you can use the [CustomCodeField](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.customcodefield) class – however you will need some knowledge of how to correctly form the code of the field.
+
+## Field Syntax
+
+Here is the basic syntax of a field code:  
+
+| Syntax   								 |
+| :---     								 |
+| **field-type** [_field-argument_] [_switches_] | 
 
 
-__Fields__ in __RadFlowDocument__ consist of code fragment and result fragment as explained in the [Fields]({%slug radwordsprocessing-concepts-fields%}) article. Some fields have direct representation in the document model – for example [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlinks%}). For all other fields you can use the __CustomCodeField__ class – however you will need some knowledge of how to correctly form the code of the field.
-      
-
-## Syntax
-
-Here is the basic syntax of a field code:
-        
-
-field-type [field-argument] [switches]
-        
 
 * *field-type*: The type of the field. For example: HYPERLINK.
-            
 
 * *argument*: The argument of the field. This is optional as some of the fields do not require an argument.
-            
 
 * *switches*: Additional properties of the field. More information on the topic can be found in the [Fields]({%slug radwordsprocessing-concepts-fields%}) article.
-            
+
 
 ## Inserting
 
@@ -46,7 +43,6 @@ Here are some commonly used fields. The complete list of field codes and the swi
 ### Inserting PAGE Field
 
 **Example 1** shows how to insert a __PAGE__ field representing the current page number in the document.
-            
 
 #### __[C#] Example 1: Insert PAGE field__
 
@@ -56,8 +52,7 @@ Here are some commonly used fields. The complete list of field codes and the swi
 {{endregion}}
 
 
-
-The __\* ROMAN__ is general formatting switch that formats a numeric result using uppercase Roman numerals.
+The __\\* ROMAN__ is general formatting switch that formats a numeric result using uppercase Roman numerals.
             
 
 ### Inserting NUMPAGES Field
@@ -76,11 +71,9 @@ The __\* ROMAN__ is general formatting switch that formats a numeric result usin
 {{endregion}}
 
 
-
 ### Inserting AUTHOR Field
 
 In **Example 3** is demonstrated how to insert __AUTHOR__ field showing the name of the author of the document.
-            
 
 #### __[C#]  Example 3: Insert AUTHOR field__
 
@@ -90,15 +83,13 @@ In **Example 3** is demonstrated how to insert __AUTHOR__ field showing the name
 {{endregion}}
 
 
-
-The __\\\\\* Upper__ switch will convert all letters in the result to uppercase.
+The __\\* Upper__ switch will convert all letters in the result to uppercase.
             
 
 ### Inserting Table of Contents Field
 
 **Example 4** shows how to insert a table of contents (TOC) field.
             
-
 #### __[C#]  Example 4: Insert Table of Contents field__
 
 {{region cs-radwordsprocessing-concepts-customcodefield_4}}
@@ -108,21 +99,14 @@ The __\\\\\* Upper__ switch will convert all letters in the result to uppercase.
 {{endregion}}
 
 
-
 There are several switches which can be used for this field:
-            
 
-* __\o "1-3"__: Specifies that the first 3 heading levels should be included in the table of contents.
-                
-
-* __\h__: Makes the table of contents entries hyperlinks.
-                
-
-* __\z__: Hides tab leader and page numbers in Web layout view.
-                
-
-* __\u__: Uses the applied paragraph outline level.
-                
+| Switch   | Description                                                                           |
+| :---     | :---                                                                                  |
+| \o "1-3" | Specifies that the first 3 heading levels should be included in the table of contents |
+| \h       | Makes the table of contents entries hyperlinks                                        |
+| \z       | Hides tab leader and page numbers in Web layout view                                  |
+| \u       | Uses the applied paragraph outline level                                              |
 
 The __IsDirty__ property is set so that the TOC field is updated when the document is loaded inside an editor like Microsoft Word.
             
