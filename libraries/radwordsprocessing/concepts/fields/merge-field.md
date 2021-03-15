@@ -51,7 +51,7 @@ The possible switches for a Merge field are:
 Inserting a merge field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
   
 
-#### __[C#] Example 1: Insert merge field__
+#### __[C#] Example 1: Insert Merge field__
 
 {{region cs-radwordsprocessing-concepts-merge-field_0}}
 	            
@@ -59,7 +59,7 @@ Inserting a merge field is easily achieved through the [RadFlowDocumentEditor]({
 {{endregion}}
   
 
-#### __[C#] Example 2: Insert merge field with switches__
+#### __[C#] Example 2: Insert Merge field with switches__
 
 {{region cs-radwordsprocessing-concepts-merge-field_1}}
 	        
@@ -68,7 +68,7 @@ Inserting a merge field is easily achieved through the [RadFlowDocumentEditor]({
 
 
 ## See Also
-	
+
  * [Fields]({%slug radwordsprocessing-concepts-fields%})
  * [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
