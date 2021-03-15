@@ -60,7 +60,6 @@ When using the OnDemand reading mode you should handle the __RadFixedDocument.Do
         provider.ImportSettings.ReadingMode = ReadingMode.OnDemand;
         var document = provider.Import(File.ReadAllBytes("SampleDoc.pdf"));
         document.DocumentUnhandledException += Document_DocumentUnhandledException;
-
     }
 
     private void Document_DocumentUnhandledException(object sender, DocumentUnhandledExceptionEventArgs e)
