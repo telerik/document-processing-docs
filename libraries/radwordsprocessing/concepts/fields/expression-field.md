@@ -94,8 +94,6 @@ Inserting an Expression Field is easily achieved through the [RadFlowDocumentEdi
 
 {{region cs-radwordsprocessing-concepts-expression-field_0}}
 
-	RadFlowDocument document = new RadFlowDocument();
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
 	editor.InsertText("Initial Amount: ");
 	editor.InsertInline(new Run(document));
 	Run sales = editor.InsertText("100,000");

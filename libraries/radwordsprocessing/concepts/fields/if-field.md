@@ -46,7 +46,6 @@ Inserting an If field is easily achieved through the [RadFlowDocumentEditor]({%s
 
 {{region cs-radwordsprocessing-concepts-if-field_0}}
 	            
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
 	editor.InsertText("Wallet: ");
 	editor.InsertInline(new Run(document));
 	Run wallet = editor.InsertText("99");

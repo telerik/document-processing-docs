@@ -42,7 +42,6 @@ __Example 1__ demonstrates how you can insert a merge field.
 
 {{region cs-radwordsprocessing-concepts-time-field_0}}
 	            
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
 	editor.InsertField("TIME \\@ \"h:mm:ss am/pm\"", "to be updated");
 {{endregion}}
 

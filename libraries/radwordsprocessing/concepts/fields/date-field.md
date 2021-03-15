@@ -42,7 +42,6 @@ __Example 1__ demonstrates how you can insert a date field.
 
 {{region cs-radwordsprocessing-concepts-date-field_0}}
 	            
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
 	editor.InsertField(@"DATE \@ ""dd / MM / yyyy""", "to be updated");
 {{endregion}}
 
