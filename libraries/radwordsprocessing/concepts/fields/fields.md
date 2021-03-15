@@ -13,8 +13,8 @@ position: 0
 __Fields__ in the __RadFlowDocument__ model are special constructions that hold data, which can change/be updated – for example page numbers or merge fields. Fields consist of field code and field result. The field code fragment defines how the field result should be calculated when the field is updated. The field result fragment holds the latest calculated result. In the model these two fragments are separated by a special type of inline – [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}). __FieldCharacters__ are 3 types:
       
 
-* __Start__: Defines the start of the field.          
-* __End__: Defines the end of the field.  
+* __Start__: Defines the start of the field.
+* __End__: Defines the end of the field.
 * __Separate__: Separates the code and result fragments.
           
 
@@ -53,7 +53,6 @@ In the document object model Fields are represented by the [Field](https://docs.
 
 The suggested way to insert field is to use the __InsertField()__ method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. It takes care of creating and inserting the code and result fragments as well as placing the appropriate field character inlines to separate them. The __InsertField()__ method returns an instance of the __FieldInfo__ class. It holds references to the start, separate and end field characters and also provides an API for getting the code and result fragments and updating the field.
         
-**Example 1** shows how to create a document with a single __Date__ field using __RadFlowDocumenteditor__:  
 
 #### __[C#] Example 1: Create a document containing a Date field using RadFlowDocumentEditor__
 
@@ -63,6 +62,7 @@ The suggested way to insert field is to use the __InsertField()__ method of [Rad
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
 	editor.InsertField("DATE", "10/11/2012");
 {{endregion}}
+
 
 You can also create and insert all the parts of the field manually by creating a __FieldInfo__ instance and adding all the inlines to the document structure. **Example 2** demonstrates how to achieve the same result as in **Example 1**.
         
@@ -85,11 +85,12 @@ You can also create and insert all the parts of the field manually by creating a
 	paragraph.Inlines.Add(field.End);
 {{endregion}}
 
+
 You can see that the manual approach is more verbose and prone to errors. If not all of the field characters are inserted the result is an invalid document. Using the __RadFlowDocumentEditor__ on the other hand, guarantees that the document integrity is maintained.
         
 ## Updating Fields
 
-__RadWordsPorcessing__ supports updating of some fields types. When a field is updated, its result fragment is replaced with the calculated result value. Also the __Field__ property of the corresponding __FieldInfo__ object will be initialized to an instance of a __Field__ class that matches the recognized field type.
+__RadWordsProcessing__ supports updating of some fields types. When a field is updated, its result fragment is replaced with the calculated result value. Also the __Field__ property of the corresponding __FieldInfo__ object will be initialized to an instance of a __Field__ class that matches the recognized field type.
         
 Here is a list of the field types that support updating:
 
@@ -154,7 +155,7 @@ The syntax of a switch is the following: <br/>
 	| _\switch-character_ _[switch-argument]_ |
 
     * _switch-character_: Character defining the switch. For example, the "\o" switch for HYPERLINK fields defines the tooltip switch.
-	
+
     * _switch-argument_: The argument of the switch. The argument is optional as not all switches require an argument.
                 
 Below is an example of field code:
