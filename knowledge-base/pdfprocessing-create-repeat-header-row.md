@@ -1,8 +1,8 @@
 ---
-title: Create Repeating in PdfProcessing
-description: Create Repeating in PdfProcessing
+title: Create Repeating Table Header Row in PdfProcessing
+description: Create Repeating Table Header Row in PdfProcessing
 type: how-to  
-page_title: Create Repeating in PdfProcessing
+page_title: Create Repeating Table Header Row in PdfProcessing
 slug: pdfprocessing-create-repeat-header-row
 position: 0
 tags:  repeat, header, row, PdfProcessing
