@@ -1,7 +1,7 @@
 ---
 title: License Agreement
 page_title: License Agreement
-description: License Agreement
+description: Find out more about Telerik Document Processing License Agreement policy and get familiar with all the details. 
 slug: license-agreement
 tags: license,agreement
 published: True
