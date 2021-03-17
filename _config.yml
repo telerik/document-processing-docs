@@ -224,6 +224,7 @@ defaults:
         kind: "api"
         res_type: "api"
         description_suffix: "- Save development time with the complete Telerik Document Processing reference listing publicly available classes, methods, and properties."
+        title_suffix: "Telerik Document Processing API Reference"
 
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
 # "foo": "Bar"
