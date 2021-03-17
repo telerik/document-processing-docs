@@ -212,6 +212,7 @@ defaults:
     values:
         layout: "documentation"
         category: "default"
+        description_suffix: "Read more in Telerik Document Processing Documentation." 
 -
     scope:
         path: "knowledge-base"
