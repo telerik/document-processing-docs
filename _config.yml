@@ -212,6 +212,18 @@ defaults:
     values:
         layout: "documentation"
         category: "default"
+-
+    scope:
+        path: "knowledge-base"
+    values:
+        description_suffix: "Find other useful information in the Knowledge Base section of the Telerik Document Processing documentation."
+-
+    scope:
+        path: "api"
+    values:
+        kind: "api"
+        res_type: "api"
+        description_suffix: "- Save development time with the complete Telerik Document Processing reference listing publicly available classes, methods, and properties."
 
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
 # "foo": "Bar"

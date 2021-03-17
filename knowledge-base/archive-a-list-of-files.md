@@ -1,6 +1,6 @@
 ---
 title: Create archive from a list of files
-description: Create archive from a list of files
+description: Learn on how you can create an archive from a list of files using ZipLibrary, part of Telerik Document Processing.
 type: how-to
 page_title: Create archive from a list of files
 slug: archive-a-list-of-files
