@@ -1,6 +1,6 @@
 ---
 title: Introduction
-page_title: Start with Cross-Platform Document Management | Telerik Document Processing
+page_title: Start with Cross-Platform Document Management
 description: Telerik Document Processing is a bundle of UI-independent, cross-platform APIs enabling you to process the most commonly used flow, fixed and spreadsheet document formats. 
 slug: introduction
 tags: introduction
