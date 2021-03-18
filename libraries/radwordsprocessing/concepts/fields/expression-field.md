@@ -1,7 +1,7 @@
 ---
 title: Expression Field
 page_title: Expression Field
-description: Expression Field
+description: Expression field is a Field element that calculates a number by using a mathematical formula.
 slug: radwordsprocessing-concepts-expression-field
 tags: expression,field
 published: True
@@ -10,7 +10,7 @@ position: 5
 
 # Expression Field
 
-[ExpressionField](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.expressionfield) or "**= (Formula)**" field code is a [Field]({%slug radwordsprocessing-concepts-fields%}) element which calculates a number by using a mathematical formula.
+[ExpressionField](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.expressionfield) or "**= (Formula)**" field code is a [Field]({%slug radwordsprocessing-concepts-fields%}) element that calculates a number by using a mathematical formula.
 
 ## Field Syntax
 
@@ -110,7 +110,7 @@ Inserting an Expression Field is easily achieved through the [RadFlowDocumentEdi
 	editor.InsertField(@"= Sales-Expenses \# ""$#,##0.00""", "Calculate");
 {{endregion}}
 
-The result looks like shown in Figure 1.
+The result is shown in Figure 1.
 
 #### Figure 1: Expression field and bookmarks in a document
   ![RadWordsProcessing Concepts Fields Expression Field 01](images/RadWordsProcessing_Concepts_Fields_Expression_Field_01.png)

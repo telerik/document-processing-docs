@@ -1,7 +1,7 @@
 ---
 title: Compare Field
 page_title: Compare Field
-description: Compare Field
+description: Compare field is a Field element that compares two values and displays the comparison result.
 slug: radwordsprocessing-concepts-compare-field
 tags: compare,field
 published: True
@@ -10,7 +10,7 @@ position: 1
 
 # Compare Field
 
-[CompareField](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.comparefield) is a [Field]({%slug radwordsprocessing-concepts-fields%}) element compares two values and displays the result "1" if the comparison is true or "0" (zero) if the comparison is false.
+[CompareField](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.comparefield) is a [Field]({%slug radwordsprocessing-concepts-fields%}) element that compares two values. It displays the result "1" if the comparison is true or "0" (zero) if the comparison is false.
 
 ## Field Syntax
 

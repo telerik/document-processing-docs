@@ -1,7 +1,7 @@
 ---
 title: Date Field
 page_title: Date Field
-description: Date Field
+description: Date field is a Field element that can display a date, a time, or both.
 slug: radwordsprocessing-concepts-date-field
 tags: date,field
 published: True

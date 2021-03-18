@@ -1,7 +1,7 @@
 ---
 title: Hyperlink Field
 page_title: Hyperlink Field
-description: Hyperlink Field
+description: Hyperlink field is a Field element that containing a reference to another location by its name.
 slug: radwordsprocessing-concepts-hyperlink-field
 tags: hyperlink,field
 published: True
@@ -39,7 +39,7 @@ The __Hyperlink__ field exposes the following properties:
 
 Switches are a way for the code fragment to specify formatting for the result of the field. More information is available in the [Syntax and Switches](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#syntax-and-switches) section of the _Fields_ article.
 
-The possible switches for a date field are:
+The possible switches for a Hyperlink field are:
 
 | Switch | Subtype      | Description                                                                                 |
 | :---   |  :---        | :---                                                                                        |

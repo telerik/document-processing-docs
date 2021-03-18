@@ -1,7 +1,7 @@
 ---
 title: Fields
 page_title: Fields
-description: Fields
+description: Fields are special constructions that hold data, which can be updated.
 slug: radwordsprocessing-concepts-fields
 tags: fields
 published: True

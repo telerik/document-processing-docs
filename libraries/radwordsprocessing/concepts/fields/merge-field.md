@@ -1,7 +1,7 @@
 ---
 title: MergeField Field
 page_title: MergeField Field
-description: MergeField Field
+description: MergeField field is a Field element that contains a reference to a data field by its name.
 slug: radwordsprocessing-concepts-merge-field
 tags: merge,field
 published: True
@@ -16,7 +16,7 @@ position: 8
       
 
 ## Field Syntax
-This is how the syntax of a If field looks like:
+This is how the syntax of a Merge field looks like:
 
 | Syntax   				                 |
 | :---     				                 |
@@ -48,7 +48,7 @@ The possible switches for a Merge field are:
 
 ## Inserting
 
-Inserting a merge field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
+Inserting a Merge field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
   
 
 #### __[C#] Example 1: Insert Merge field__

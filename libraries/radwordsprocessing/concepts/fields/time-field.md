@@ -1,7 +1,7 @@
 ---
 title: Time Field
 page_title: Time Field
-description: Time Field
+description: Time field is a Field element that inserts the current time in your document.
 slug: radwordsprocessing-concepts-time-field
 tags: time,field
 published: True

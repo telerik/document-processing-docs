@@ -1,7 +1,7 @@
 ---
 title: Custom Code Field
 page_title: Custom Code Field
-description: Custom Code Field
+description: Custom Code field is a Field element with configurable code part.
 slug: radwordsprocessing-concepts-customcodefield
 tags: custom,code,field
 published: True

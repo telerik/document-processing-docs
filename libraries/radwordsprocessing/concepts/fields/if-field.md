@@ -1,7 +1,7 @@
 ---
 title: If Field
 page_title: If Field
-description: If Field
+description: If field is a Field element that compares two values and inserts the text appropriate to the result of the comparison.
 slug: radwordsprocessing-concepts-if-field
 tags: if,field
 published: True
@@ -10,11 +10,11 @@ position: 7
 
 # If Field
 
-[IfField](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.iffield) is a [Field]({%slug radwordsprocessing-concepts-fields%}) element compares two values and inserts the text appropriate to the result of the comparison.
+[IfField](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.iffield) is a [Field]({%slug radwordsprocessing-concepts-fields%}) element that compares two values and inserts the text appropriate to the result of the comparison.
 
 ## Field Syntax
 
-This is how the syntax of a If field looks like:
+This is how the syntax of an If field looks like:
 
 | Syntax   											                   |
 | :---     											                   |
