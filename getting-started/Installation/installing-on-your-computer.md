@@ -59,3 +59,7 @@ The libraries can be used through the available NuGet packages.
 ## UI for Xamarin
 
 [Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/system-requirements)
+
+## UI for WinUI
+
+[Installing Telerik UI for WinUI](https://docs.telerik.com/devtools/winui/installation-and-deployment/installationsteps)

@@ -42,6 +42,8 @@ The libraries can be used through the available NuGet packages.
 
 1. UI for Xamarin - [Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/system-requirements)
 
+1. UI for WinUI - [Installing Telerik UI for WinUI](https://docs.telerik.com/devtools/winui/installation-and-deployment/installationsteps)
+
 ## Step 2: Creating Application with Visual Studio
 
 As we are going to review a UI-Independent example we will use a console project.
