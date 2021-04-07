@@ -107,7 +107,7 @@ Inserting an Expression Field is easily achieved through the [RadFlowDocumentEdi
 	editor.InsertBreak(BreakType.LineBreak);
 
 	editor.InsertText("Net: ");
-	editor.InsertField(@"= Sales-Expenses \# ""$#,##0.00""", "Calculate");
+	editor.InsertField(@"= Sales-Expenses \\# ""$#,##0.00""", "Calculate");
 {{endregion}}
 
 The result is shown in Figure 1.
