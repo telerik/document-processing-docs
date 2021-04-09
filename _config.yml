@@ -220,6 +220,11 @@ defaults:
         description_suffix: "Find other useful information in the Knowledge Base section of the Telerik Document Processing documentation."
 -
     scope:
+        path: "knowledge-base.html"
+    values:
+        description_suffix: "Find other useful information in the Knowledge Base section of the Telerik Document Processing documentation."
+-
+    scope:
         path: "api"
     values:
         kind: "api"
