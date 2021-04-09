@@ -52,12 +52,12 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	<tr>
 		<td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</b></td>
 		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.dll</b></td>
-		<td>Required when exporting to XLSX.</td>
+		<td>Required when importing/exporting from/to XLSX or CSV.</td>
 	</tr>
 		<tr>
 		<td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</b></td>
 		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll</b></td>
-		<td>Required when exporting to XLS.</td>
+		<td>Required when importing/exporting from/to XLS.</td>
 	</tr>
 	<tr>
 	    <td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</b></td>
