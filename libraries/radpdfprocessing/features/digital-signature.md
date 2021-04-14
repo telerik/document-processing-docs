@@ -25,11 +25,9 @@ This article covers the following topics:
 
 ## What is Digital Signature?
 
-The digital signature feature enables you to sign and validate a PDF document. A signature confirms that the document content originated from the signer and has not been modified in any way.
+The digital signature feature enables you to sign and validate a PDF document. A signature confirms that the document's content originated from the signer and has not been modified in any way. A signed document is considered valid when it has not been changed after the signing, and all of its certificates have a valid trusted root certificate.
 
-In the PDF document model, the validation is performed per signature. A signed document is considered valid when it has not been changed after the signing and all of its certificates have a valid trusted root certificate.
-
->In PdfProcessing for **.NET Standard/.NET Core** you can add SignatureField but can not sign or import signed documents.
+>In PdfProcessing for **.NET Standard/.NET Core**, you can add SignatureField but can not sign or import signed documents.
 
 ## Signing a Document
 
@@ -43,7 +41,7 @@ The signing is done through the **Signature** object. The constructor of the Sig
 	Signature signature = new Signature(certificate);
 {{endregion}}
 
-When instantiated, the signature should be added to the document content using the [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}).
+When instantiated, the signature should be added to the document's content using the [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}).
 
 #### **[C#] Example 2: Add signature to a signature field**
 
@@ -53,7 +51,7 @@ When instantiated, the signature should be added to the document content using t
     signatureField.Signature = signature;
 {{endregion}}
 
-In addition, to create a signature, which has a visual representation, you will need to associate a **Widget** annotation with the signed [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) through the Widget constructor. The widget will also need a [FormSource]({%slug radpdfprocessing-model-formsource%}) object to be applied to its Content.NormalContentSource property. A FormSource could be filled with data using the FixedContentEditor.
+In addition, to create a signature, which has a visual representation, you must use the **Widget constructor** - you need to associate a Widget annotation with the signed [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}). The widget also needs a [FormSource]({%slug radpdfprocessing-model-formsource%}) object applied to its Content.NormalContentSource property. A FormSource could be filled with data using the FixedContentEditor.
 
 >important When saving a document that is digitally signed, the stream used to export the document must support reading.
 
@@ -114,7 +112,7 @@ In addition, to create a signature, which has a visual representation, you will 
 
 ## Signature Encodings
 
-RadPdfProcessing enables you to sign and validate signature fields using standard signature encodings. Following is a list of them:
+RadPdfProcessing enables you to sign and validate signature fields using standard signature encodings:
 
 * adbe.x509.rsa_sha1 (PKCS #1)
 
@@ -126,20 +124,20 @@ RadPdfProcessing enables you to sign and validate signature fields using standar
 
 ## Validating a Signature
 
-The validation is performed for the current field and, since it strongly depends on the file bytes of the document, against the state of the document in the moment of importing.
+The validation is performed for the current field and, since it strongly depends on the file bytes of the document, against the state of the document at the moment of importing.
 
 The Signature class exposes two methods allowing you to validate a signature:
 
-* **Validate()**: The method accepts a parameter of type SignatureValidationProperties which uses while validating the signature. The **SignatureValidationProperties** class exposes the following properties:
+* **Validate()**: The method accepts a parameter of type SignatureValidationProperties. The method uses these properties while validating the signature. The **SignatureValidationProperties** class exposes the following properties:
 	*  **Chain**: Gets or sets the chain used to validate the certificate that signed the digital signature. It is of type [X509Chain](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509chain(v=vs.110).aspx).
-	*  **ChainStatusFlags**: Gets or sets the chain status flags which describes the used signature certificate as invalid. It is of type [X509ChainStatusFlags](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509chainstatusflags(v=vs.110).aspx).
+	*  **ChainStatusFlags**: Gets or sets the chain status flags that describe the used signature certificate as invalid. It is of type [X509ChainStatusFlags](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509chainstatusflags(v=vs.110).aspx).
 	
-	Validate() returns object of type [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html).
+	Validate() returns an object of type [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html).
 
 
 * **TryValidate()**: This method returns a boolean value indicating whether the validation succeeded or not. There are two overloads of this method. The first one accepts an out parameter containing a [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html) object and second one allows you to also pass **SignatureValidationProperties**.
 
->important Note, that the validation requires that the stream, from which the document is imported, to be opened. The validation is performed for the current field, and against the state of the document in the moment of importing.
+>important The validation requires that the stream, from which the document is imported, to be opened. The validation is performed for the current field and against the state of the document at the moment of importing.
 
 **Example 4** shows how the validation can be used.
 
@@ -190,7 +188,7 @@ The Signature class exposes two methods allowing you to validate a signature:
     }
 {{endregion}}
 
->To evaluate a certificate as trusted one, it must be added to the [trusted certificates on your machine](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
+>To evaluate a certificate as trusted, it must be added to the [trusted certificates on your machine](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
 
 ## Limitations
 
