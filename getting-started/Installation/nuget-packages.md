@@ -1,9 +1,9 @@
 ---
-title: NuGet packages
-page_title: NuGet packages
-description: Adding references via NuGet Packages
+title: NuGet Packages
+page_title: NuGet Packages
+description: Learn how you can use the Telerik Document Processing libraries through NuGet.
 slug: installation-nuget-packages
-tags: nuget, document, processing
+tags: nuget, document, processing, assembly
 published: True
 position: 6
 ---
