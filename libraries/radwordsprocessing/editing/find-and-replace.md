@@ -23,9 +23,7 @@ Replacing can be achieved with the help of the [RadFlowDocumentEditor]({%slug ra
 Finding all instances of a string and replacing it with another can be achieved with the __ReplaceText()__ method of __RadFlowDocumentEditor__. The editor exposes three methods accepting different parameters.
 
 
-* __void ReplaceText(string oldText, string newText):__ Replaces all occurrences of the *oldText* string with the *newText* string. Matches the casing of the old text and replaces occurrences within a word as well.
-
-* __void ReplaceText(string oldText, string newText, bool matchCase, bool matchWholeWord):__ Replaces all occurrences of a string with another string. Accepts Boolean parameters which specify whether the casing should be matched and only whole words should be replaced.
+* __void ReplaceText(string oldText, string newText, bool matchCase, bool matchWholeWord):__ Replaces all occurrences of a string with another string. Accepts two optional Boolean parameters which specify whether the casing should be matched and only whole words should be replaced. If not set the default values are respectively _true_ for matchCase and _false_ for matchWholeWord.
 
 * __void ReplaceText(Regex regex, string newText):__ Replaces all matches of the passed __Regex__ with the new text.
 
