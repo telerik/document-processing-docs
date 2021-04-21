@@ -53,7 +53,7 @@ The model of **RadWordsProcessing** includes:
 
 * [**Clone**]({%slug radwordsprocessing-editing-clone-and-merge%}) documents and document elements.
 
-* [**Replace**]({%slug radwordsprocessing-editing-find-and-replace%}): RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone. 
+* [**Find and Replace**]({%slug radwordsprocessing-editing-find-and-replace%}): RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone. 
 
 * [**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%}): It is intended to simplify the process of creating and modifying a document and achieve the same results as you would using the style properties and child collections of the document elements with less amount of code.
 
