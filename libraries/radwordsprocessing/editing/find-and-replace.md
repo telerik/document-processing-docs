@@ -1,7 +1,7 @@
 ---
 title: Find and Replace Text and Style
 page_title: Find and Replace Text and Style
-description: Learn how to find and replace text or styling with WordsProcessing
+description: Learn how to find and replace text content or styling in a document using WordsProcessing.
 slug: radwordsprocessing-editing-find-and-replace
 tags: find,search,replace
 published: True
@@ -12,20 +12,20 @@ position: 5
 
 **RadWordsProcessing** gives you the ability to search for a string in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance and replace all matches. The library also allows you to replace the styling of the matches alone.
 
-Searching and replacing can be achieved with the help of the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class exposed by the library which works with a specific document. 
+You can search and replace text or styling using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). This article lists the available methods and describes how you can use them.
 
 
 ## Find Text
 
-Finding all instances of a string can be achieved with the **FindAll()** method of **RadFlowDocumentEditor**. The editor exposes two methods accepting different parameters.
+**RadFlowDocumentEditor** exposes the **FindAll()** method to enable you to find all instances of a string. You can choose between the following overloads:
 
-* **FindAll(string text, bool matchCase, bool matchWholeWord):** Finds all occurrences of the passed string. Accepts two optional Boolean parameters which specify whether the casing should be matched and only whole words should be replaced. If not set the default values are respectively _true_ for matchCase and _false_ for matchWholeWord.
+* **FindAll(string text, bool matchCase=true, bool matchWholeWord=false):** Finds all occurrences of the specified string. The last two parameters are optional. If these parameters are not set, the default values are true for matchCase and false for matchWholeWord.
 
 * **FindAll(Regex regex):** Finds all matches of the passed **Regex**.
 
 Both methods return a collection of **FindResult** instances, which in turn expose the following properties:
 
-* **Runs**: Gets a collection of Runs that contains the searched text.
+* **Runs**: Gets a collection of [Runs]({%slug radwordsprocessing-model-run%}) that contains the searched text.
 
 * **RelativeStartIndex**: Gets the index of the first character in the searched text inside the first Run.
 
@@ -45,12 +45,12 @@ Both methods return a collection of **FindResult** instances, which in turn expo
 
 ## Replace Text
 
-Finding all instances of a string and replacing it with another can be achieved with the **ReplaceText()** method of **RadFlowDocumentEditor**. The editor exposes two methods accepting different parameters.
+To find all instances of a string and replace it with another one, you can use the **ReplaceText()** method of **RadFlowDocumentEditor**. The method features two overloads accepting different parameters:
 
 
-* **void ReplaceText(string oldText, string newText, bool matchCase, bool matchWholeWord):** Replaces all occurrences of a string with another string. Accepts two optional Boolean parameters which specify whether the casing should be matched and only whole words should be replaced. If not set the default values are respectively _true_ for matchCase and _false_ for matchWholeWord.
+* **void ReplaceText(string oldText, string newText, bool matchCase=true, bool matchWholeWord=false):** Replaces all occurrences of a string with another string. The last two parameters are optional. If these parameters are not set, the default values are true for matchCase and false for matchWholeWord.
 
-* **void ReplaceText(Regex regex, string newText):** Replaces all matches of the passed **Regex** with the new text.
+* **void ReplaceText(Regex regex, string newText):** Replaces all matches of the specified **Regex** with the new text.
 
 
 **Example 2** shows how to create a **RadFlowDocumentEditor** instance and use it to replace all matches of the word "code" with the phrase "source code".
