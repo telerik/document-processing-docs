@@ -1,7 +1,7 @@
 ---
 title: Flatten Form Fields
 page_title: Flatten Form Fields
-description: Handling Exceptions
+description: This article shows how one can flatten the form fields of a pdf document. 
 slug: radpdfprocessing-flatten-form-fields
 tags: flatten, form, field
 position: 5
@@ -35,12 +35,12 @@ The __FlattenFieldMethod__ takes as parameter the field that that should be flat
 
 	RadFixedDocument document = GetFixedDocument();
 	string fieldName = "TextBoxField";
-
-    FormField field = document.AcroForm.FormFields.Where(n => n.Name == fieldName).FirstOrDefault();
-    if (field != null)
-    {
-        document.AcroForm.FlattenFormField(field);
-    }
+	
+	FormField field = document.AcroForm.FormFields.Where(n => n.Name == fieldName).FirstOrDefault();
+	if (field != null)
+	{
+	    document.AcroForm.FlattenFormField(field);
+	}
 
 {{endregion}}
 
