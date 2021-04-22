@@ -14,7 +14,7 @@ The __DataTableFormatProvider__ allows you to easily convert existing [DataTable
 
 ## Import
 
-__Example 1__ Shows how you can import a DataTable. The sample  instantiates a __DataTableFormatProvider__ and passes the table to its __Import__ method.   
+Example 1 shows how you can import a DataTable. The sample instantiates a __DataTableFormatProvider__ and passes the table to its __Import__ method.   
 
 #### __[C#] Example 1: Import DataTable __
 
@@ -45,7 +45,7 @@ You can import the DataTable to and existing worksheet as well.
 
 ## Export
 
-__Example 3__ demonstrates how you can export an existing Worksheet to Datatable. In the snipped we are assuming that you already have a Workbook wit some data. 
+Example 3 demonstrates how you can export an existing Worksheet to Datatable. In the snipped we are assuming that you already have a Workbook with some data. 
 
 #### __[C#] Example 3: Export RadWorksheet to a DataTable __
 
