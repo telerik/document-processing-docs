@@ -6,7 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-xls-xlsformatprovider
 tags: xlsformatprovider,excel97-2003,workbook,xls,import,export,save
 published: True
 position: 2
-platforms: netcore, mvc, ajax, blazor, wpf, winforms, xamarin
+platforms: core, mvc, ajax, blazor, wpf, winforms, xamarin, winui
 ---
 
 # Using XlsFormatProvider
