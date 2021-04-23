@@ -139,6 +139,9 @@ navigation:
     libraries/radspreadprocessing/formats-and-conversion/txt:
         title: Txt
         position: 5
+    libraries/radspreadprocessing/formats-and-conversion/data-table:
+        title: DataTable
+        position: 6
         
     libraries/radspreadprocessing/features/charts:
         title: Charts
