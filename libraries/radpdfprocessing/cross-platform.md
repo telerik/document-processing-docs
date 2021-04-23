@@ -4,7 +4,7 @@ page_title: Cross-Platform Support
 description: Cross-Platform Support
 slug: radpdfprocessing-cross-platform
 tags: cross,platform
-platforms: netcore, blazor, xamarin
+platforms: blazor, core, xamarin, winui
 published: True
 position: 2
 ---

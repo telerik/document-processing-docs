@@ -4,7 +4,7 @@ page_title: Cross-Platform Support
 description: Cross-Platform Support
 slug: radwordsprocessing-cross-platform
 tags: cross,platform
-platforms: netcore, blazor, xamarin
+platforms: core, blazor, xamarin, winui
 published: True
 position: 2
 ---
