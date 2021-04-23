@@ -311,3 +311,4 @@ Formatting options are most useful when inserting multiple elements that should 
  * [RadFlowDocumentEditor API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor.html)
  * [RadFlowDocument API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.RadFlowDocument.html)
  * [Document model]({%slug radwordsprocessing-model%})
+ * [Find and Replace]({%slug radwordsprocessing-editing-find-and-replace%})
