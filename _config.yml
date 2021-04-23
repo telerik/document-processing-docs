@@ -100,6 +100,9 @@ navigation:
 ## RadSpreadProcessing Start
     "*radspreadprocessing":
         title: RadSpreadProcessing
+    libraries/radspreadprocessing/cross-platform-support:
+        title: Cross-Platform Support
+        position: 2
     libraries/radspreadprocessing/working-with-workbooks:
         title: Workbooks
         position: 3
@@ -139,6 +142,9 @@ navigation:
     libraries/radspreadprocessing/formats-and-conversion/txt:
         title: Txt
         position: 5
+    libraries/radspreadprocessing/formats-and-conversion/data-table:
+        title: DataTable
+        position: 6
         
     libraries/radspreadprocessing/features/charts:
         title: Charts
@@ -249,9 +255,9 @@ product: "Telerik Document Processing"
 product_url: https://www.telerik.com/document-processing-libraries
 
 # Available for names: 
-platforms: ["UI for ASP.NET Core", "UI for ASP.NET MVC", "UI for ASP.NET AJAX", "UI for Blazor", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin","UI for WinUI",]
+platforms: ["UI for ASP.NET MVC", "UI for ASP.NET AJAX", "UI for Blazor", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin", "UI for WinUI", "UI for ASP.NET Core"]
 # in articles use as shown below: 
-# platforms: netcore, mvc, ajax, blazor, wpf, winforms, silverlight, xamarin
+# platforms: mvc, ajax, blazor, wpf, winforms, silverlight, xamarin, winui, core
 platform: dpl
 download: https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate
 nav:

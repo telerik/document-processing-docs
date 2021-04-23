@@ -62,7 +62,7 @@ In order to customize the way a row appears, you could use one of the following 
 	}
 {{endregion}}
 
-\* Due to the specifics of the library, RadSpreadStreamProcessing doesn't support auto fitting the height of the rows.
+\* Due to the specifics of the library, RadSpreadStreamProcessing doesn't support auto fitting the height of the rows. You can find information on how you can calculate the height needed for specific content in the [Get Cell Content Size]({%slug radspreadstreamprocessing-features-text-measuring%}) topic.
 
 ### Skip Rows
 
