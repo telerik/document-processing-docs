@@ -1,7 +1,7 @@
 ---
 title: Settings
 page_title: Settings
-description: This article shows the seeting taht allow you to control the dataTable import/export operations. 
+description: This article shows the settings that you can use to control the DataTable import/export operations. 
 slug: radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings
 tags: datatable, workbook, worksheet, settings
 published: True
@@ -15,9 +15,9 @@ position: 2
 * __ShouldImportColumnHeaders:__ Controls whether the column headers should be imported. 
 * __StartCellIndex:__ Get or sets the index where the table should start in the Worksheet.
 
-## The OnCellImported event
+## The CellImported event
 
-The __OnCellImported__  event is fired for each cell and allows you to change the cell properties.
+The __CellImported__  event is fired for each cell and allows you to change the cell properties.
 
 The __CellImportedEventArgs__ contains information about the current cell:
 *  __dataTableRowIndex:__ The index of the row in the DataTable containing the cell that the event occurs for.
@@ -27,7 +27,7 @@ The __CellImportedEventArgs__ contains information about the current cell:
 *  __worksheet:__ The worksheet where the data is imported.
 
 
-#### __[C#] Example 1: Using the OnCellImported event to format the cells __
+#### __[C#] Example 1: Using the CellImported event to format the cells__
 
 {{region cs-radspreadprocessing-formats-and-conversion-data-table-format-provider-settings_0}}
 	private void ImportTable()
@@ -38,9 +38,9 @@ The __CellImportedEventArgs__ contains information about the current cell:
 
         Workbook workbook = new Workbook();
         Worksheet worksheet = workbook.Worksheets.Add();
-
+    
         provider.Import(table, worksheet);
-
+    
         this.radSpreadsheet.Workbook = workbook;
     }
     private void ImportSettings_CellImported(object sender, CellImportedEventArgs e)
@@ -52,7 +52,7 @@ The __CellImportedEventArgs__ contains information about the current cell:
     }
 
 {{endregion}}
- 
+
 # Export Settings
 
 * __HasHeaderRow:__ Gets or sets whether the header row of the worksheet should be exported.
