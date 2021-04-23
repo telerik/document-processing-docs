@@ -1,7 +1,7 @@
 ---
 title: Features
 page_title: Features
-description: Features
+description: This article describes all the features that are supported by DocxFormatProvider
 slug: radwordsprocessing-formats-and-conversion-docx-features
 tags: features
 published: True
@@ -155,7 +155,7 @@ Yes
 
 </td></tr><tr><td>
 
-Fist Line/Hanging indent
+First Line/Hanging indent
               </td><td>
 
 Yes
@@ -431,7 +431,8 @@ Other Fields
 Partial
               </td><td>
 
-Through [custom code fields]({%slug radwordsprocessing-concepts-customcodefield%}).
+Through <a href={%slug radwordsprocessing-concepts-customcodefield%}>custom code fields</a>
+
               </td></tr><tr><td>
 
 <b>

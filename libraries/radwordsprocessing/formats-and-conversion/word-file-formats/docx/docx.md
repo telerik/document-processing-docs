@@ -1,7 +1,7 @@
 ---
 title: Docx
 page_title: Docx
-description: Docx
+description: This article describes the Docx Office Open XML file format
 slug: radwordsprocessing-formats-and-conversion-docx
 tags: docx
 published: True
@@ -12,7 +12,7 @@ position: 0
 
 
 
-Docx, a part of [Office Open XML](http://en.wikipedia.org/wiki/Office_Open_XML), is a zipped, XML-based file format developed by Microsoft for representing word processing document and is one of the supported formats by        __RadWordsProcessing__. It is the default target format for Microsoft Word since Microsoft Office 2007.
+Docx, a part of [Office Open XML](http://en.wikipedia.org/wiki/Office_Open_XML), is a zipped, XML-based file format developed by Microsoft for representing word processing document and is one of the supported formats by __RadWordsProcessing__. It is the default target format for Microsoft Word since Microsoft Office 2007.
       
 ![Rad Words Processing Formats And Conversion Docx 01](images/RadWordsProcessing_Formats_And_Conversion_Docx_01.png)
 

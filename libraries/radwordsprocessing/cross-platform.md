@@ -23,6 +23,9 @@ In order to use the model of the **RadWordsProcessing** library in your cross-pl
 * **Telerik.Documents.Flow.dll**
 * **Telerik.Zip.dll**
 
+If you need to import DOC files, you will need to refer the following assembly:
+* **Telerik.Documents.Flow.FormatProvider.Doc.dll**
+
 If you need to export documents to PDF format, you will need to refer the following assemblies:
 * **Telerik.Documents.Flow.FormatProviders.Pdf.dll**
 * **Telerik.Documents.Fixed.dll**

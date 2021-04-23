@@ -1,7 +1,7 @@
 ---
 title: Using DocxFormatProvider
 page_title: Using DocxFormatProvider
-description: Using DocxFormatProvider
+description: Import and Export to Docx File Format Using DocxFormatProvider
 slug: radwordsprocessing-formats-and-conversion-docx-docxformatprovider
 tags: using,docxformatprovider
 published: True
@@ -12,7 +12,7 @@ position: 2
 
 
 
-__DocxFormatProvider__ makes it easy to import and export __RadFlowDocument__ to/from docx format, preserving the entire document structure and formatting.
+__DocxFormatProvider__ makes it easy to import and export __RadFlowDocument__ to/from DOCX format, preserving the entire document structure and formatting.
       
 
 All you have to do in order to use __DocxFormatProvider__ is add references to the assemblies listed below:

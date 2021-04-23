@@ -1,7 +1,7 @@
 ---
 title: Settings
 page_title: Settings
-description: Settings
+description: This article describes the import/export settings which provide additional modification options
 slug: radwordsprocessing-formats-and-conversion-docx-settings
 tags: settings
 published: True

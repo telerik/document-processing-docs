@@ -1,8 +1,8 @@
 ---
 title: Features
 page_title: Features
-description: Features
-slug: radwordsprocessing-formats-and-conversion-rtf-features
+description: This article describes all the features that are supported by DocFormatProvider
+slug: radwordsprocessing-formats-and-conversion-doc-features
 tags: features
 published: True
 position: 1
@@ -12,13 +12,12 @@ position: 1
 
 
 
-Below you can find list with all features that are supported by RtfFormatProvider.
+Below you can find a list of all the features that are supported by DocFormatProvider.
 
 ## 
 <table><tr><th>Feature</th><th>
 Supported</th><th>
-Comment</th></tr>
-<tr><td>
+Comment</th></tr><tr><td>
 
 <b>
                   Text Formatting
@@ -99,7 +98,6 @@ Yes
 Double Strikethrough
               </td><td>
 
-Yes
               </td><td>
 
 </td></tr><tr><td>
@@ -243,8 +241,7 @@ Yes
 Page Breaks
               </td><td>
 
-Yes
-              </td><td>
+Yes</td><td>
 
 </td></tr><tr><td>
 
@@ -253,9 +250,9 @@ Columns
 
 </td><td>
 
-</td></tr><tr><td>Watermark</td><td>Yes</td><td>
-
-</td></tr><tr><td>
+</td></tr><tr>
+<td>Watermark</td><td></td>
+<td></td></tr><tr><td>
 
 <b>
                   Table
@@ -272,7 +269,6 @@ Yes
 Nested Tables
               </td><td>
 
-Yes
               </td><td>
 
 </td></tr><tr><td>
@@ -307,7 +303,6 @@ Yes
 Floating Images
               </td><td>
 
-Yes
               </td><td>
 
 </td></tr><tr><td>
@@ -340,21 +335,23 @@ Yes
 
 </td></tr><tr><td>
 
-Conditional Table Styles
-              </td><td>
-
-</td><td>
-
-</td></tr><tr><td>
-
 Built-in Styles
               </td><td>
 
-</td><td>
+Yes
+              </td><td>
 
 </td></tr><tr><td>
 
 Themes
+              </td><td>
+
+Yes
+              </td><td>
+
+</td></tr><tr><td>
+
+Conditional Table Styles
               </td><td>
 
 </td><td>
@@ -365,7 +362,7 @@ Themes
                   Lists
                 </b></td><td></td><td></td></tr><tr><td>
 
-List Support
+Lists Support
               </td><td>
 
 Yes
@@ -373,7 +370,7 @@ Yes
 
 </td></tr><tr><td>
 
-List Style
+Lists Styles
               </td><td>
 
 Yes
@@ -420,7 +417,6 @@ Yes
 Document Variables
               </td><td>
 
-Yes
               </td><td>
 
 </td></tr><tr><td>
@@ -428,12 +424,9 @@ Yes
 Other Fields
               </td><td>
 
-Partial
-</td><td>
+              </td><td>
 
-Through <a href={%slug radwordsprocessing-concepts-customcodefield%}>custom code fields</a>
-
-</td></tr><tr><td>
+              </td></tr><tr><td>
 
 <b>
                   Review
@@ -472,3 +465,4 @@ Yes
               </td><td>
 
 </td></tr></table>
+
