@@ -39,9 +39,9 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
 
 >To use this class, you must add a reference to **Telerik.Documents.Fixed.dll**.
 
-#### [C#] Example 1: Set custom implementation inheriting the SpreadTextMeasurerBase abstract class
+#### [C#] Example 1: Set the SpreadFixedTextMeasurer as a text measurer
 
-{{region cs-radspreadprocessing-cross-platform_2}}
+{{region cs-radspreadprocessing-cross-platform_1}}
 
     SpreadTextMeasurerBase fixedTextMeasurer = new SpreadFixedTextMeasurer();
     SpreadExtensibilityManager.TextMeasurer = fixedTextMeasurer;
@@ -51,12 +51,62 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
 
 You can assign any **SpreadTextMeasurerBase** implementation to the **SpreadExtensibilityManager.TextMeasurer** property. All you should do is to inherit the abstract **SpreadTextMeasurerBase**, implement the required members and set the new implementation to the TextMeasurer property.
 
-#### **[C#] Example 2: Set custom implementation inheriting the SpreadTextMeasurerBase abstract class**
-{{region cs-radspreadprocessing-cross-platform_2}}
+#### **[C#] Example 2: Create a custom implementation inheriting the SpreadTextMeasurerBase abstract class**
 
-    SpreadTextMeasurerBase customTextMeasurer = new TextInfo();
-    SpreadExtensibilityManager.TextMeasurer = customTextMeasurer;
+{{region cs-radspreadprocessing-custommeasurer}}
+
+    public class CustomTextMeasurer : SpreadTextMeasurerBase 
+    { 
+        private static readonly double ratioX = 1.035; 
+        private static readonly double ratioY = 1; 
+        private static readonly double ratioBaseline = 1; 
+     
+        private readonly SpreadTextMeasurerBase originalMeasurer; 
+     
+        public CustomTextMeasurer(SpreadTextMeasurerBase originalMeasurer) 
+        { 
+            this.originalMeasurer = originalMeasurer; 
+        } 
+     
+        public override TextMeasurementInfo MeasureText(TextProperties textProperties, FontProperties fontProperties) 
+        { 
+            TextMeasurementInfo info = originalMeasurer.MeasureText(textProperties, fontProperties); 
+     
+            Size size = info.Size; 
+            return new TextMeasurementInfo() 
+            { 
+                BaselineOffset = info.BaselineOffset * ratioBaseline, 
+                Size = new Size( 
+                    size.Width * ratioX, 
+                    size.Height * ratioY), 
+            }; 
+        } 
+     
+        public override TextMeasurementInfo MeasureTextWithWrapping(TextProperties textProperties, FontProperties fontProperties, double wrappingWidth) 
+        { 
+            TextMeasurementInfo info = originalMeasurer.MeasureText(textProperties, fontProperties); 
+     
+            Size size = info.Size; 
+            return new TextMeasurementInfo() 
+            { 
+                BaselineOffset = info.BaselineOffset * ratioBaseline, 
+                Size = new Size( 
+                    size.Width * ratioX, 
+                    size.Height * ratioY), 
+            }; 
+        } 
+    } 
 {{endregion}}
+
+
+#### **[C#] Example 3: Set the custom implementation as a text measurer**
+
+{{region cs-radspreadprocessing-custommeasurer2}}
+
+    SpreadTextMeasurerBase customTextMeasurer = new CustomTextMeasurer(); 
+    SpreadExtensibilityManager.TextMeasurer = customTextMeasurer; 
+{{endregion}}
+
 
 ## See Also
 
