@@ -64,9 +64,15 @@ navigation:
     libraries/radwordsprocessing/concepts:
         title: Concepts
         position: 6
-    libraries/radwordsprocessing/formats-and-conversion/docx:
+    libraries/radwordsprocessing/formats-and-conversion/word-file-formats:
+        title: Word File Formats
+        position: 1   
+    libraries/radwordsprocessing/formats-and-conversion/word-file-formats/doc:
+        title: Doc
+        position: 1  
+    libraries/radwordsprocessing/formats-and-conversion/word-file-formats/docx:
         title: Docx
-        position: 1
+        position: 2
     libraries/radwordsprocessing/formats-and-conversion/rtf:
         title: Rtf
         position: 2
