@@ -1,7 +1,7 @@
 ---
 title: Using DocxFormatProvider
 page_title: Using DocxFormatProvider
-description: Import and Export to Docx File Format Using DocxFormatProvider
+description: Learn how you can import and export documents from/to DOCX using WordsProcessing.
 slug: radwordsprocessing-formats-and-conversion-docx-docxformatprovider
 tags: using,docxformatprovider
 published: True

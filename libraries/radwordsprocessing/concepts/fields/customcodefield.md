@@ -40,7 +40,7 @@ The suggested approach for inserting code fields is by using [RadFlowDocumentEdi
 Here are some commonly used fields. The complete list of field codes and the switches for each of them can be found in the [Docx specification](http://www.ecma-international.org/publications/standards/Ecma-376.htm).
         
 
->In all examples the result fragment is also inserted. However, if you export the document to [Docx format]({%slug radwordsprocessing-formats-and-conversion-docx%}), you can make use of the __AutoUpdateFields__ property. It forces all fields to be updated when the document is opened in MS Word or another editor.
+>In all examples the result fragment is also inserted. However, if you export the document to [Docx format]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}#docx), you can make use of the __AutoUpdateFields__ property. It forces all fields to be updated when the document is opened in MS Word or another editor.
           
 
 ### Inserting PAGE Field

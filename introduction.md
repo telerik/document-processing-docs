@@ -19,6 +19,8 @@ Telerik Document Processing is a bundle of UI-independent, cross-platform librar
 Telerik Document Processing libraries support the following file formats:
 
 * DOCX (Word Document)
+* DOC (Word 97-2003 Document)
+* DOT (Word 97-2003 Template)
 * HTML
 * PDF
 * RTF

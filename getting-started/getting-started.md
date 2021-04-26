@@ -19,7 +19,9 @@ Telerik Document Processing includes a set of cross-platform libraries that let 
 
 * **Telerik.Windows.Documents.Flow.dll**: Part of the words (text) processing library. It is needed for processing HTML, DOCX, RTF and TXT documents.
 
-* **Telerik.Windows.Documents.Flow.FormatProviders.Pdf**: Allows exporting of flow documents (DOCX, RTF) to PDF.
+* **Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll**: Allows importing of DOC and DOT document.
+
+* **Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll**: Allows exporting of flow documents (DOCX, DOC, DOT, RTF, and HTML) to PDF.
 
 * **Telerik.Documents.SpreadsheetStreaming.dll**: The main assembly for generating huge spreadsheet files using minimum resources.
 

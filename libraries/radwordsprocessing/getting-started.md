@@ -53,8 +53,8 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
         <td colspan="2">If you need to import DOC or DOT files, you will need to refer the following assembly:</td> 
     </tr>
 	<tr>
-	    <td><b>Telerik.Windows.Documents.Flow.FormatProvider.Doc.dll</b></td>
-		<td><b>Telerik.Documents.Flow.FormatProvider.Doc.dll</b></td>
+	    <td><b>Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll</b></td>
+		<td><b>Telerik.Documents.Flow.FormatProviders.Doc.dll</b></td>
 	</tr>
 	<tr>
 	    <td colspan="2">&nbsp;</td>

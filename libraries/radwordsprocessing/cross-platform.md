@@ -19,20 +19,47 @@ position: 2
 
 In order to use the model of the **RadWordsProcessing** library in your cross-platform project, you need to add references to the following **.Net Standard** assemblies:
 
-* **Telerik.Documents.Core.dll**
-* **Telerik.Documents.Flow.dll**
-* **Telerik.Zip.dll**
-
-If you need to import DOC or DOT files, you will need to refer the following assembly:
-* **Telerik.Documents.Flow.FormatProvider.Doc.dll**
-
-If you need to export documents to PDF format, you will need to refer the following assemblies:
-* **Telerik.Documents.Flow.FormatProviders.Pdf.dll**
-* **Telerik.Documents.Fixed.dll**
-
-If you need to export to PDF format documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High, you will need to refer the following assembly:
-* **Telerik.Documents.ImageUtils.dll**
-<br><sub>_This assembly is not available in UI for Xamarin._</sub>
+<table>
+<thead>
+	<tr>
+		<th>.NET Standard-compatible</th>
+		<th>Additional information</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><b>Telerik.Documents.Core.dll</b></td>
+		<td></td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Documents.Flow.dll</b></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><b>Telerik.Zip.dll</b></td>
+		<td>Required when working with DOCX, DOC, DOT or PDF.</td>
+	</tr>
+    <tr>
+		<td><b>Telerik.Documents.Flow.FormatProviders.Doc.dll</b></td>
+		<td>Required when importing from DOC or DOT files.</td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Documents.Flow.FormatProviders.Pdf.dll</b></td>
+		<td>Required when exporting to PDF.</td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Documents.Fixed.dll</b></td>
+		<td>Required when exporting to PDF.</td>
+	</tr>
+	<tr>
+		<td>	
+			<b>Telerik.Documents.ImageUtils.dll</b>
+			<br><sub><i>This assembly is not available in UI for Xamarin.</i></sub>
+		</td>
+        <td>Required when exporting to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High.</td>
+	</tr>
+</tbody>
+</table>
 
 >note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
 
