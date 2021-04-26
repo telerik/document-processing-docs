@@ -1,18 +1,16 @@
 ---
 title: Features
 page_title: Features
-description: Features
-slug: radwordsprocessing-formats-and-conversion-docx-features
+description: This article describes all the features that are supported by DocFormatProvider
+slug: radwordsprocessing-formats-and-conversion-doc-features
 tags: features
 published: True
-position: 1
+position: 0
 ---
 
 # Features
 
-
-
-Below you can find a list of all the features that are supported by DocxFormatProvider.
+Below you can find a list of all the features that are supported by DocFormatProvider.
 
 ## 
 <table><tr><th>Feature</th><th>
@@ -98,7 +96,6 @@ Yes
 Double Strikethrough
               </td><td>
 
-Yes
               </td><td>
 
 </td></tr><tr><td>
@@ -155,7 +152,7 @@ Yes
 
 </td></tr><tr><td>
 
-Fist Line/Hanging indent
+First Line/Hanging indent
               </td><td>
 
 Yes
@@ -252,7 +249,7 @@ Columns
 </td><td>
 
 </td></tr><tr>
-<td>Watermark</td><td>Yes</td>
+<td>Watermark</td><td></td>
 <td></td></tr><tr><td>
 
 <b>
@@ -270,7 +267,6 @@ Yes
 Nested Tables
               </td><td>
 
-Yes
               </td><td>
 
 </td></tr><tr><td>
@@ -305,7 +301,6 @@ Yes
 Floating Images
               </td><td>
 
-Yes
               </td><td>
 
 </td></tr><tr><td>
@@ -420,7 +415,6 @@ Yes
 Document Variables
               </td><td>
 
-Yes
               </td><td>
 
 </td></tr><tr><td>
@@ -428,10 +422,8 @@ Yes
 Other Fields
               </td><td>
 
-Partial
               </td><td>
 
-Through [custom code fields]({%slug radwordsprocessing-concepts-customcodefield%}).
               </td></tr><tr><td>
 
 <b>

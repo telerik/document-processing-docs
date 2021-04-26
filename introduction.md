@@ -21,6 +21,8 @@ For more details about the benefits of using Telerik Document Processing, see th
 The Telerik Document Processing libraries support the following file formats:
 
 * DOCX (Word Document)
+* DOC (Word 97-2003 Document)
+* DOT (Word 97-2003 Template)
 * HTML
 * PDF
 * RTF
