@@ -5,12 +5,10 @@ description: This article describes all the features that are supported by DocFo
 slug: radwordsprocessing-formats-and-conversion-doc-features
 tags: features
 published: True
-position: 1
+position: 0
 ---
 
 # Features
-
-
 
 Below you can find a list of all the features that are supported by DocFormatProvider.
 

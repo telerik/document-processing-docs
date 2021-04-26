@@ -70,7 +70,7 @@ The model of **RadWordsProcessing** includes:
 
 The library comes with support for the following document formats:
 
-* [**DOC**]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) (import only)
+* [**DOC & DOT**]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) (import only)
 
 * [**DOCX**]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
 

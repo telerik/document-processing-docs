@@ -5,12 +5,16 @@ description: Import and Export to Docx File Format Using DocxFormatProvider
 slug: radwordsprocessing-formats-and-conversion-docx-docxformatprovider
 tags: using,docxformatprovider
 published: True
-position: 2
+position: 1
 ---
 
+# Docx
+
+DOCX, a part of [Office Open XML](http://en.wikipedia.org/wiki/Office_Open_XML), is a zipped, XML-based file format developed by Microsoft for representing word processing document and is one of the supported formats by **RadWordsProcessing**. It is the default target format for Microsoft Word since Microsoft Office 2007.
+
+**DocxFormatProvider** is compliant with the latest Office Open XML standard - [ECMA-376](http://www.ecma-international.org/publications/standards/Ecma-376.htm) 4th edition, December 2012.
+
 # Using DocxFormatProvider
-
-
 
 __DocxFormatProvider__ makes it easy to import and export __RadFlowDocument__ to/from DOCX format, preserving the entire document structure and formatting.
       
@@ -24,10 +28,10 @@ All you have to do in order to use __DocxFormatProvider__ is add references to t
 
 ## Import
 
-In order to import a docx document, you need to use the __Import()__ method of __DocxFormatProvider__.
+In order to import a DOCX document, you need to use the __Import()__ method of __DocxFormatProvider__.
         
 
-The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a docx document from a file.
+The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a DOCX document from a file.
         
 
 #### __[C#] Example 1: Import document from a file__
@@ -43,7 +47,7 @@ The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a do
 
 
 
-And here is how you can import a document from byte array containing the docx document:
+And here is how you can import a document from byte array containing the DOCX document:
         
 
 #### __[C#] Example 2: Import document from a byte array__
@@ -59,7 +63,7 @@ The resulting __RadFlowDocument__ can be manipulated like any code-generated doc
 
 ## Export
 
-In order to export a document to docx, you need to use the __Export()__ method of __DocxFormatProvider__.
+In order to export a document to DOCX, you need to use the __Export()__ method of __DocxFormatProvider__.
         
 
 __Example 3__ shows how to use __DocxFormatProvider__ to export __RadFlowDocument__ to a file.
@@ -88,6 +92,6 @@ You can also export the document to a byte array and preserve it in a database.
 	byte[] output = provider.Export(document);
 {{endregion}}
 
-The resulting documents can be opened in any application that supports docx documents.
+The resulting documents can be opened in any application that supports DOCX documents.
         
 

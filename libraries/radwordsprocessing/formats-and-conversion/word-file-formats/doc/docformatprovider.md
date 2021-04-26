@@ -5,12 +5,20 @@ description: Import from Word 97 - Word 2003 Binary file format Using DocFormatP
 slug: radwordsprocessing-formats-and-conversion-doc-docformatprovider
 tags: using,docformatprovider
 published: True
-position: 2
+position: 1
 ---
+
+# Doc
+
+DOC is the default target Binary file format developed by Microsoft for representing documents in Word 97 - Word 2003 and is one of the supported formats by RadWordsProcessing.
+
+# Dot
+
+DOT is а Word 97 - Word 2003 Binary file format, developed by Microsoft for representing document templates and is one of the supported formats by RadWordsProcessing.
 
 # Using DocFormatProvider
 
-**DocFormatProvider** makes it easy to import a **RadFlowDocument** from DOC format, preserving the entire document structure and formatting.
+**DocFormatProvider** makes it easy to import a **RadFlowDocument** from DOC and DOT format, preserving the entire document structure and formatting.
 
 All you have to do in order to use **DocFormatProvider** is add references to the assemblies listed below:
       
@@ -22,9 +30,9 @@ All you have to do in order to use **DocFormatProvider** is add references to th
 
 ## Import
 
-In order to import a doc document, you need to use the **Import()** method of **DocFormatProvider**.
+In order to import a DOC or DOT document, you need to use the **Import()** method of **DocFormatProvider**.
 
-The code in **Example 1** shows how to use **DocFormatProvider** to import a doc document from a file.
+The code in **Example 1** shows how to use **DocFormatProvider** to import a DOC document from a file.
 
 #### **[C#] Example 1: Import document from a file**
 
@@ -39,7 +47,7 @@ The code in **Example 1** shows how to use **DocFormatProvider** to import a doc
 {{endregion}}
 
 
-And here is how you can import a document from byte array containing the doc document:
+And here is how you can import a document from byte array containing the DOC or DOT document:
 
 #### **[C#] Example 2: Import document from a byte array**
 {{region cs-radwordsprocessing-formats-and-conversion-doc-docformatprovider_1}}

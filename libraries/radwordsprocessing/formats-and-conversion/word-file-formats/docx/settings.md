@@ -5,7 +5,7 @@ description: This article describes the import/export settings which provide add
 slug: radwordsprocessing-formats-and-conversion-docx-settings
 tags: settings
 published: True
-position: 3
+position: 2
 ---
 
 # Settings
