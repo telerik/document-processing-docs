@@ -11,77 +11,72 @@ position: 0
 # Getting Started with Telerik Document Processing
 
 
-Telerik Document Processing includes a set of cross-platform libraries that let you import and export content between different formats and work with archive files. The needed assemblies come with the installation (automated and manual) of several of the Telerik suites and in the internal builds archive where the latter is available. More information about the suites that include Telerik Document Processing and how to install them is available in the [Installing on Your Computer article]({%slug installation-installing-on-your-computer%}). 
+Telerik Document Processing includes a set of cross-platform libraries that let you import and export content between different formats and work with archive files. The needed assemblies come with the installation files of several Telerik suites. They are available also in the internal builds of the same Telerik suites. 
+
+More information about the suites that include Telerik Document Processing and how to install them is available in the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) article.
+
+The following table lists all Telerik Document Processing assemblies and their roles:
+
+| Assembly | Description |
+|-------|----------------|
+| **Telerik.Windows.Documents.Core.dll** | The main assembly from the Telerik document processing libraries. You always need it when you intend to use the library. |
+| **Telerik.Windows.Documents.Flow.dll** | Part of the words (text) processing library. It is needed for processing HTML, DOCX, RTF and TXT documents. |
+| **Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll** | Allows importing of DOC and DOT document. |
+| **Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll** | Allows exporting of flow documents (DOCX, DOC, DOT, RTF, and HTML) to PDF. |
+| **Telerik.Documents.SpreadsheetStreaming.dll** | The main assembly for generating huge spreadsheet files using minimum resources. |
+| **Telerik.Windows.Documents.Spreadsheet.dll** | The main assembly for the spreadsheet processing. It is needed for processing XLSX, CSV, TXT documents. |
+| **Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll** | This assembly is needed for processing XLSX documents. |
+| **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll** | This assembly is needed for processing XLS documents. |
+| **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll** | This assembly is needed for processing PDF documents. |
+| **Telerik.Windows.Documents.CMapUtils.dll** | Provides a default implementation for getting the data of a predefined CMap table by a given name. The assembly is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}). |
+| **Telerik.Windows.Zip.dll** | Needed for working with zipped formats (DOCX, XLSX) and PDF. It is the main assembly of the ([Telerik Zip Library]({%slug radziplibrary-overview%})). |
+| **Telerik.Windows.Zip.Extensions.dll** | Extends **Telerik.Windows.Zip** assembly with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})). |
 
 >The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names.
 
-* **Telerik.Windows.Documents.Core.dll**: The main assembly from the Telerik document processing libraries. You always need it when you intend to use the library.
+## Getting Started Resources by Library
 
-* **Telerik.Windows.Documents.Flow.dll**: Part of the words (text) processing library. It is needed for processing HTML, DOCX, RTF and TXT documents.
+More information about each of the Telerik Document Processing libraries is available in the articles listed below.
 
-* **Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll**: Allows importing of DOC and DOT document.
+### Words (text) processing
 
-* **Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll**: Allows exporting of flow documents (DOCX, DOC, DOT, RTF, and HTML) to PDF.
+* [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%})
 
-* **Telerik.Documents.SpreadsheetStreaming.dll**: The main assembly for generating huge spreadsheet files using minimum resources.
+* [Export to DOCX (Word Document) using DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
 
-* **Telerik.Windows.Documents.Spreadsheet.dll**: The main assembly for the spreadsheet processing. It is needed for processing XLSX, CSV, TXT documents.
+* [Export to HTML using HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
 
-* **Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll**: This assembly is needed for processing XLSX documents.
- 
-* **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll**: This assembly is needed for processing XLS documents.
+* [Export to RTF using RtfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})
 
-* **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll**: This assembly is needed for processing PDF documents.
+* [Export to TXT (plain text) using TxtFormatProvider]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%})
 
-* **Telerik.Windows.Documents.Fixed.dll**: This assembly is needed for processing PDF documents.
+### Spreadsheet processing
 
-* **Telerik.Windows.Documents.CMapUtils.dll**: Provides a default implementation for getting the data of a predefined CMap table by a given name. The assembly is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}).
+* [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%})
 
-* **Telerik.Windows.Zip.dll**: Needed for working with zipped formats (DOCX, XLSX) and PDF. It is the main assembly of the ([Telerik Zip Library]({%slug radziplibrary-overview%})).
+* [Export to XLSX (Excel Workbook) using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
 
-* **Telerik.Windows.Zip.Extensions.dll**: Extends **Telerik.Windows.Zip** assembly with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})).
+* [Export to XLS (Excel 97-2003 Workbook) using XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
 
-You can find more information on working with the Telerik Document Processing libraries in the following articles:
+* [Export to CSV (Comma delimited) using CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})
 
-* Words (text) processing
-	
-	* [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%})
+* [Export to PDF using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 
-	* [Export to DOCX (Word Document) using DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
+* [Export to TXT (plain text) using TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
 
-	* [Export to HTML using HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
+### Fast spreadsheet generation
 
-	* [Export to RTF using RtfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})
+* [Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})
 
-	* [Export to TXT (plain text) using TxtFormatProvider]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%})
+### PDF processing
 
-* Spreadsheet processing
+* [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
 
-	* [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%})
+* [Import/export from/to PDF using PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 
-	* [Export to XLSX (Excel Workbook) using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
-	
-    * [Export to XLS (Excel 97-2003 Workbook) using XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
+### Working with ZIP files
 
-	* [Export to CSV (Comma delimited) using CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})
-
-	* [Export to PDF using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-
-	* [Export to TXT (plain text) using TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
-
-* Fast spreadsheet generation
-	
-	* [Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})
-
-* PDF processing
-
-	* [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
-
-	* [Import/export from/to PDF using PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-
-* Working with ZIP files
-
-    * [Getting started with RadZipLibrary]({%slug radziplibrary-gettingstarted%})
+* [Getting started with RadZipLibrary]({%slug radziplibrary-gettingstarted%})
 
 ## See Also
 

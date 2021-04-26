@@ -1,44 +1,67 @@
 ---
-title: Replace Text and Style
-page_title: Replace Text and Style
-description: Learn how to replace text or styling with WordsProcessing
+title: Find and Replace Text and Style
+page_title: Find and Replace Text and Style
+description: Learn how to find and replace text content or styling in a document using WordsProcessing.
 slug: radwordsprocessing-editing-find-and-replace
-tags: find,replace
+tags: find,search,replace
 published: True
 position: 5
 ---
 
-# Replace Text and Style
+# Find and Replace Text and Style
+
+**RadWordsProcessing** gives you the ability to search for a string in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance and replace all matches. The library also allows you to replace the styling of the matches alone.
+
+You can search and replace text or styling using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). This article lists the available methods and describes how you can use them.
 
 
-__RadWordsProcessing__ gives you the ability to search for a string in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance and replace all matches. The library also allows you to replace the styling of the matches alone.
+## Find Text
 
+**RadFlowDocumentEditor** exposes the **FindAll()** method to enable you to find all instances of a string. You can choose between the following overloads:
 
-Replacing can be achieved with the help of the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class exposed by the library which works with a specific document. 
+* **FindAll(string text, bool matchCase=true, bool matchWholeWord=false):** Finds all occurrences of the specified string. The last two parameters are optional. If these parameters are not set, the default values are true for matchCase and false for matchWholeWord.
 
+* **FindAll(Regex regex):** Finds all matches of the passed **Regex**.
 
-## Replace Text
+Both methods return a collection of **FindResult** instances, which in turn expose the following properties:
 
+* **Runs**: Gets a collection of [Runs]({%slug radwordsprocessing-model-run%}) that contains the searched text.
 
-Finding all instances of a string and replacing it with another can be achieved with the __ReplaceText()__ method of __RadFlowDocumentEditor__. The editor exposes three methods accepting different parameters.
+* **RelativeStartIndex**: Gets the index of the first character in the searched text inside the first Run.
 
+* **RelativeEndIndex**: Gets the index of the last character in the searched text inside the last Run.
 
-* __void ReplaceText(string oldText, string newText):__ Replaces all occurrences of the *oldText* string with the *newText* string. Matches the casing of the old text and replaces occurrences within a word as well.
+* **FullMatchText**: Gets the matched text.
 
-* __void ReplaceText(string oldText, string newText, bool matchCase, bool matchWholeWord):__ Replaces all occurrences of a string with another string. Accepts Boolean parameters which specify whether the casing should be matched and only whole words should be replaced.
+**Example 1** shows how to create a **RadFlowDocumentEditor** instance and use it to find all matches of the word "code".
 
-* __void ReplaceText(Regex regex, string newText):__ Replaces all matches of the passed __Regex__ with the new text.
-
-
-__Example 1__ shows how to create a __RadFlowDocumentEditor__ instance and use it to replace all matches of the word "code" with the phrase "source code".
-
-
-#### __[C#] Example 1: Replace text__
+#### **[C#] Example 1: Find text**
 
 {{region cs-radwordsprocessing-editing-find-and-replace_0}}
 
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document); // document is an instance of the RadFlowDocument class
-	editor.ReplaceText("code", "source code", true, true);
+	ReadOnlyCollection<FindResult> findResults = editor.FindAll("code", matchCase: true, matchWholeWord: true);
+{{endregion}}
+
+## Replace Text
+
+To find all instances of a string and replace it with another one, you can use the **ReplaceText()** method of **RadFlowDocumentEditor**. The method features two overloads accepting different parameters:
+
+
+* **void ReplaceText(string oldText, string newText, bool matchCase=true, bool matchWholeWord=false):** Replaces all occurrences of a string with another string. The last two parameters are optional. If these parameters are not set, the default values are true for matchCase and false for matchWholeWord.
+
+* **void ReplaceText(Regex regex, string newText):** Replaces all matches of the specified **Regex** with the new text.
+
+
+**Example 2** shows how to create a **RadFlowDocumentEditor** instance and use it to replace all matches of the word "code" with the phrase "source code".
+
+
+#### **[C#] Example 2: Replace text**
+
+{{region cs-radwordsprocessing-editing-find-and-replace_1}}
+
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document); // document is an instance of the RadFlowDocument class
+	editor.ReplaceText("code", "source code", matchCase: true, matchWholeWord: true);
 {{endregion}}
 
 
@@ -54,12 +77,12 @@ __RadFlowDocumentEditor__ gives you the ability to format all occurrences of a s
 * __void ReplaceStyling(Regex regex, Action&lt;CharacterProperties&gt; replacePropertiesAction):__ Applies the character property changes from the Action delegate to all matches of the __Regex__.
 
 
-__Example 2__ shows how to apply a red highlight color to all occurrences of the word "alert".
+**Example 3** shows how to apply a red highlight color to all occurrences of the word "alert".
 
 
-#### __[C#] Example 2: Replace character properties__
+#### **[C#] Example 3: Replace character properties**
 
-{{region cs-radwordsprocessing-editing-find-and-replace_1}}
+{{region cs-radwordsprocessing-editing-find-and-replace_2}}
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
 	editor.ReplaceStyling("text", new Action<CharacterProperties>((properties) =>
 	{

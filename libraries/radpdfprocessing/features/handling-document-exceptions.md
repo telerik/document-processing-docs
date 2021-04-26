@@ -39,7 +39,7 @@ To use this functionality you should handle the __PdfImportSettings.DocumentUnha
 
     private void ImportSettings_DocumentUnhandledException(object sender, DocumentUnhandledExceptionEventArgs e)
     {
-        MessageBox.Show("The document is corupted and cannot be loaded: " + e.Exception.Message);
+        MessageBox.Show("The document is corrupted and cannot be loaded: " + e.Exception.Message);
         e.Handled = true;
     }
 
@@ -60,7 +60,6 @@ When using the OnDemand reading mode you should handle the __RadFixedDocument.Do
         provider.ImportSettings.ReadingMode = ReadingMode.OnDemand;
         var document = provider.Import(File.ReadAllBytes("SampleDoc.pdf"));
         document.DocumentUnhandledException += Document_DocumentUnhandledException;
-
     }
 
     private void Document_DocumentUnhandledException(object sender, DocumentUnhandledExceptionEventArgs e)

@@ -1,7 +1,7 @@
 ---
 title: Introduction
-page_title: Introduction
-description: Introduction
+page_title: Start with Cross-Platform Document Management
+description: Telerik Document Processing is a bundle of UI-independent, cross-platform APIs enabling you to process the most commonly used flow, fixed and spreadsheet document formats. 
 slug: introduction
 tags: introduction
 published: True
@@ -10,13 +10,15 @@ position: 0
 
 # Welcome to Telerik Document Processing Libraries
 
-Telerik Document Processing is a bundle of UI-independent, cross-platform libraries enabling you to process the most commonly used flow, fixed and spreadsheet document formats. The components allow to create, import, modify and export documents, without external dependencies. To read more about the benefits of using Telerik Document Processing, please visit the [product overview page](https://www.telerik.com/document-processing-libraries).
+Telerik Document Processing is a bundle of UI-independent cross-platform libraries that enable you to process the most commonly used text, PDF, and spreadsheet file formats. The Document Processing library allows you to create, import, modify and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
+
+For more details about the benefits of using Telerik Document Processing, see the [Telerik Document Processing product overview page](https://www.telerik.com/document-processing-libraries).
 
 {% if site.has_cta_panels == true %}
 {% include cta-panel-introduction.html %}
 {% endif %}
 
-Telerik Document Processing libraries support the following file formats:
+The Telerik Document Processing libraries support the following file formats:
 
 * DOCX (Word Document)
 * DOC (Word 97-2003 Document)
@@ -30,25 +32,25 @@ Telerik Document Processing libraries support the following file formats:
 * CSV
 * ZIP
  
->**.NET Standard** and **.NET Core** compatible versions are available for the Telerik Document Processing libraries. Their assemblies can be downloaded from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)**, **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** and **[UI for Blazor](https://www.telerik.com/blazor-ui)** suites respectively.
+>The Telerik Document Processing libraries are available in **.NET Standard** and **.NET Core** compatible versions. You can download the assemblies of these libraries from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)**, **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** and **[UI for Blazor](https://www.telerik.com/blazor-ui)** suites, respectively.
 
 ## Getting Started
 
-If you would like to directly start using the libraries, go to the [First Steps]({%slug getting-started-first-steps%}) topic that walks you through creating a sample application with them.
+To start using the libraries right away, see the [First Steps]({%slug getting-started-first-steps%}) topic that demonstrates how to create a sample application that uses the Document Processing libraries.
 
 ## Libraries
 
 Telerik Document Processing features the following components:
 
-* [RadPdfProcessing]({%slug radpdfprocessing-overview%}): Create, import and export PDF documents.
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%}): A library that allows you to create, import and export PDF documents.
 
-* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}): Create, import and export XLSX (Excel Workbook), XLS (Excel 97-2003 Workbook), CSV and TXT spreadsheet documents, and export them to PDF.
+* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}): A library that allows you to create, import and export XLSX (Excel Workbook), XLS (Excel 97-2003 Workbook), CSV and TXT spreadsheet documents. It also allows you to export all these formats to PDF.
 
-* [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}): Export large XLSX and CSV spreadsheet documents with low memory footprint and great performance.
+* [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}): A library that allows you to export large XLSX and CSV spreadsheet documents with low memory footprint and great performance.
 
-* [RadWordsProcessing]({%slug radwordsprocessing-overview%}): Create, import and export DOCX (Word Document), HTML, RTF and TXT documents, and export them to PDF.
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%}): A library that allows you to create, import and export DOCX (Word Document), HTML, RTF and TXT documents. It also allows you to export all these formats to PDF.
 
-* [RadZipLibrary]({%slug radziplibrary-overview%}): Compress and decompress ZIP files.
+* [RadZipLibrary]({%slug radziplibrary-overview%}): A library that allows you to compress and decompress ZIP files.
 
 ## Trial Version and Commercial License
 

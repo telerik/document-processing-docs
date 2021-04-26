@@ -140,7 +140,7 @@ When creating a document with **RadSpreadStreаmProcessing**, you should have in
 
 **Figure 1** shows the result of executing the code from **Example 1**.
 
-#### Figure 1: The document created in Example 2
+#### Figure 1: The document created in Example 1
 ![](images/SpreadStreamProcessing-GettingStarted_01.png)
 
 

@@ -6,7 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-xls-xlsformatprovider
 tags: xlsformatprovider,excel97-2003,workbook,xls,import,export,save
 published: True
 position: 2
-platforms: netcore, mvc, ajax, blazor, wpf, winforms, xamarin
+platforms: core, mvc, ajax, blazor, wpf, winforms, xamarin, winui
 ---
 
 # Using XlsFormatProvider
@@ -15,7 +15,8 @@ __XlsFormatProvider__ makes it easy to import and export to XLS (Excel 97-2003 W
 
 >The __XlsFormatProvider__ requires references to the following assembly:
         
->* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
+>* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll for .NET Framework projects
+>* Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll for .NET Standard projects
 
 Once you reference the aforementioned assemblies, you need to create an instance of the __XlsFormatProvider__ in order to import and export Excel 97-2003 Workbook files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls namespace. __XlsFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
       

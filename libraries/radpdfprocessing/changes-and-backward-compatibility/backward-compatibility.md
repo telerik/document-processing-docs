@@ -1,7 +1,7 @@
 ---
-title: Backward Compatibility
-page_title: Backward Compatibility
-description: Backward Compatibility
+title: Backward Compatibility | Telerik Document Processing
+page_title: RadPdfProcessing Backward Compatibility | Telerik Document Processing
+description: Check our document management article about Backward Compatibility. Read more in Telerik Document Processing Library. 
 slug: radpdfprocessing-backward-compatibility
 tags: backward,compatibility
 published: True

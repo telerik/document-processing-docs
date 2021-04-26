@@ -16,17 +16,14 @@ __RadSpreadProcessing__'s document model allows you to easily open and save file
       
 
 * __Xlsx__: Rich text format, which exports the whole content of a workbook: worksheets, formula values, formatting, hyperlinks etc.
-
 * __Xls__: Rich text format, which exports the content of a workbook: worksheets, formula values, formatting, hyperlinks etc. Supported in older applications. This format is not supported in Silverlight.
-
 * __Pdf__: Fixed format, which preserves the content of a workbook in independent from software or hardware manner.
-
 * __Csv__(comma separated): Plain text format that saves the content of the cell in the active worksheet. The format strips all formatting and keeps only the result values of cells. These values are separated by a culture dependent delimiter.
-
 * __Txt__(tab delimited): Plain text format, which preserves only the content of the cells in the active worksheet. The format does not save any formatting and keeps only the result values of the cells. These values are delimited via tabs.
+* **DataTable**: This allows you to convert the DataTable that is coming form your database to a spreadsheet and vice versa. 
 
 
-          
+​          
 
 The document model exposes four format providers that work with each of the formats above: __XlsxFormatProvider__, __XlsFormatProvider__, __CsvFormatProvider__, __PdfFormatProvider__ and __TxtFormatProvider__. All of them implement the __IWorkbookFormatProvider__ interface and, thus, share a common API that enables import and export of files. To conform to the interface each of the providers implements two methods that, respectively, turn a stream into a workbook and save the contents of the workbook into a stream:
       
@@ -46,7 +43,7 @@ The document model exposes four format providers that work with each of the form
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll
 
 > The __XlsFormatProvider__ requires references to the following assembly:
-        
+
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
 
 

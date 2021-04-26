@@ -33,7 +33,7 @@ The model of **RadWordsProcessing** includes:
 	* [Fields]({%slug radwordsprocessing-concepts-fields%}): Merge fields, Document Variables and custom code fields, enabling you to insert any fields using its code representation.
 	* [Breaks]({%slug radwordsprocessing-model-break%}): Support for different types of breaks, so you can achieve the desired layout.
 	* [Bookmarks]({%slug radwordsprocessing-model-bookmark%}): Inserting, modifying and removing bookmarks.
-	* [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlinks%}): You can work with hyperlinks pointing to a website or to a bookmark inside the document.
+	* [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlink-field%}): You can work with hyperlinks pointing to a website or to a bookmark inside the document.
 	* [Tab stops]({%slug radwordsprocessing-concepts-tabstop%}): Working with a tab stops collection for each paragraph.
 
 * [**Styles**]({%slug radwordsprocessing-concepts-styles%})
@@ -53,7 +53,7 @@ The model of **RadWordsProcessing** includes:
 
 * [**Clone**]({%slug radwordsprocessing-editing-clone-and-merge%}) documents and document elements.
 
-* [**Replace**]({%slug radwordsprocessing-editing-find-and-replace%}): RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone. 
+* [**Find and Replace**]({%slug radwordsprocessing-editing-find-and-replace%}): RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone. 
 
 * [**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%}): It is intended to simplify the process of creating and modifying a document and achieve the same results as you would using the style properties and child collections of the document elements with less amount of code.
 

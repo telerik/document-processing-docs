@@ -87,6 +87,18 @@ A style should be added to __RadFlowDocument__'s style repository in order to be
 
 >If a style is not added to the StyleRepository, applying it to a document element would not take any effect.
 
+To apply a style to a spesific element you neet to set its __StyleId__ proerty.
+
+#### __[C#] Example 2: Apply a custom style to an element__
+
+{{region cs-radwordsprocessing-concepts-styles_5}}
+	            
+    Table table = new Table(document, 10, 5);
+    table.StyleId = tableStyle.Id;
+
+    section.Blocks.Add(table);
+
+{{endregion}}
 
 ## Default Styles
 
@@ -100,10 +112,10 @@ Default style is a style which, according to its style type, is applied to objec
             
 
 >If you want to set default values for properties of all __Run__ and __Paragraph__ document elements, it is convenient to use __CharacterPoperties__ and __ParagraphProperties__ stored in __RadFlowDocument.DefaultStyle__ property. Setting default values for properties for all __Table__, __TableRow__ and __TableCell__ document elements should be done in the default table style - "TableNormal".
+
+ You can change the default styling properties for a document through the DefaultStyle property of RadFlowDocument. **Example 3** shows how you can do that for the font-family, and similar code can be used for the other styling properties for the runs and paragraphs inside a document.
           
- You can change the default styling properties for a document through the DefaultStyle property of RadFlowDocument. **Example 2** shows how you can do that for the font-family, and similar code can be used for the other styling properties for the runs and paragraphs inside a document.
-          
-#### __[C#] Example 2: Set a default font-family__
+#### __[C#] Example 3: Set a default font-family__
 
 {{region cs-radwordsprocessing-concepts-styles_2}}
 
@@ -117,10 +129,10 @@ Default style is a style which, according to its style type, is applied to objec
 Built-in styles are commonly used styles, which are predefined for convenience. They have to be explicitly added to the style repository before usage using the __StyleRepository.AddBuiltInStyle()__ method.
         
 
-[BuiltInStyleNames](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.BuiltInStyleNames.html) static class contains properties and methods for getting the IDs of all built-in styles. __Example 3__ shows how to get the ID of the "Heading 1" built-in style.
+[BuiltInStyleNames](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.BuiltInStyleNames.html) static class contains properties and methods for getting the IDs of all built-in styles. __Example 4__ shows how to get the ID of the "Heading 1" built-in style.
         
 
-#### __[C#] Example 3: Get the ID of a built-in style__
+#### __[C#] Example 4: Get the ID of a built-in style__
 
 {{region cs-radwordsprocessing-concepts-styles_1}}
 	            
@@ -159,10 +171,10 @@ When evaluating the actual value of a style property in one of the style propert
             
 
 > __*__ If a style is of character or paragraph style type it takes into consideration the default style only if it is based on it.
-          
+
 
 >tipSome of the style properties always have a local value set.
-          
+
 
 Corresponding style property of the base style is determined depending on the style type using the following rules:
         

@@ -135,4 +135,3 @@ Exporting to PDF format can be achieved with the __PdfFormatProvider__ class. __
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
- * [PDF Format]({%slug radpdfprocessing-formats-and-conversion-pdf-pdf%})

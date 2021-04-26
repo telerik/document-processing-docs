@@ -62,7 +62,7 @@ In order to customize the way a column appears, you could use one of the followi
 	}
 {{endregion}}
 
-\* Due to the specifics of the library, RadSpreadStreamProcessing doesn't support auto fitting the width of the columns.
+\* Due to the specifics of the library, RadSpreadStreamProcessing doesn't support auto fitting the width of the columns. You can find information on how you can calculate the width needed for specific content in the [Get Cell Content Size]({%slug radspreadstreamprocessing-features-text-measuring%}) topic.
 
 ### Skip Columns
 
