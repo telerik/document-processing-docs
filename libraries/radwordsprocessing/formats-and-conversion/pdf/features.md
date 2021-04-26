@@ -176,7 +176,7 @@ Yes
 </tr>
 <tr>
 <td>
-Fist Line/Hanging indent
+First Line/Hanging indent
 </td>
 <td>
 Yes

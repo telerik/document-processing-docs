@@ -1,24 +1,23 @@
 ---
 title: Features
 page_title: Features
-description: Features
-slug: radwordsprocessing-formats-and-conversion-rtf-features
+description: This article describes all the features that are supported by DocxFormatProvider
+slug: radwordsprocessing-formats-and-conversion-docx-features
 tags: features
 published: True
-position: 1
+position: 0
 ---
 
 # Features
 
 
 
-Below you can find list with all features that are supported by RtfFormatProvider.
+Below you can find a list of all the features that are supported by DocxFormatProvider.
 
 ## 
 <table><tr><th>Feature</th><th>
 Supported</th><th>
-Comment</th></tr>
-<tr><td>
+Comment</th></tr><tr><td>
 
 <b>
                   Text Formatting
@@ -243,8 +242,7 @@ Yes
 Page Breaks
               </td><td>
 
-Yes
-              </td><td>
+Yes</td><td>
 
 </td></tr><tr><td>
 
@@ -253,9 +251,9 @@ Columns
 
 </td><td>
 
-</td></tr><tr><td>Watermark</td><td>Yes</td><td>
-
-</td></tr><tr><td>
+</td></tr><tr>
+<td>Watermark</td><td>Yes</td>
+<td></td></tr><tr><td>
 
 <b>
                   Table
@@ -340,21 +338,23 @@ Yes
 
 </td></tr><tr><td>
 
-Conditional Table Styles
-              </td><td>
-
-</td><td>
-
-</td></tr><tr><td>
-
 Built-in Styles
               </td><td>
 
-</td><td>
+Yes
+              </td><td>
 
 </td></tr><tr><td>
 
 Themes
+              </td><td>
+
+Yes
+              </td><td>
+
+</td></tr><tr><td>
+
+Conditional Table Styles
               </td><td>
 
 </td><td>
@@ -365,7 +365,7 @@ Themes
                   Lists
                 </b></td><td></td><td></td></tr><tr><td>
 
-List Support
+Lists Support
               </td><td>
 
 Yes
@@ -373,7 +373,7 @@ Yes
 
 </td></tr><tr><td>
 
-List Style
+Lists Styles
               </td><td>
 
 Yes
@@ -429,11 +429,11 @@ Other Fields
               </td><td>
 
 Partial
-</td><td>
+              </td><td>
 
 Through <a href={%slug radwordsprocessing-concepts-customcodefield%}>custom code fields</a>
 
-</td></tr><tr><td>
+              </td></tr><tr><td>
 
 <b>
                   Review
@@ -472,3 +472,4 @@ Yes
               </td><td>
 
 </td></tr></table>
+
