@@ -21,6 +21,9 @@ The interactive forms feature (also known as AcroForm) allows you to create PDF 
 
 The data in an interactive form is separated into form fields restricting the different data input to different input formats – buttons, text fields or choice fields. Additionally, the interactive form can contain [signature fields]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}), which are responsible for preserving [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) information when signing the document. Each form field is a container for its specific type of data.
 
+### Flattening Form Fields
+Since R2 2021 the form fields can be flattened. This way the fields will be removed, the values preserved and the document can no longer be edited. You can find more information here: [Flatten Form Fields]({%slug radpdfprocessing-flatten-form-fields%})
+
 
 ## Widget Annotations
 

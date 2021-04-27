@@ -53,7 +53,7 @@ The following table describes the most popular features of the RadSpreadProcessi
 
 * Text formats: [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
 
-* Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only)
+* Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only), [__DataTable__]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
 
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
