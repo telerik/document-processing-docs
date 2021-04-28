@@ -1,7 +1,7 @@
 ---
 title: Overview
 page_title: Overview
-description: Overview
+description: RadWordsProcessing is a processing library that allows you to create, modify and export documents to a variety of formats.
 slug: radwordsprocessing-overview
 tags: overview
 published: True
@@ -57,7 +57,7 @@ The model of **RadWordsProcessing** includes:
 
 * [**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%}): It is intended to simplify the process of creating and modifying a document and achieve the same results as you would using the style properties and child collections of the document elements with less amount of code.
 
-* Formatting:
+* **Formatting**:
 
 	In addition to the styles, RadWordsProcessing provides support for different types of formatting so you can format any of the document elements:
 	* **Character formatting**: Font size, font color, font name, bold, italic, underline, etc.
