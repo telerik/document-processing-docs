@@ -48,7 +48,7 @@ Telerik Document Processing features the following components:
 
 * [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}): A library that allows you to export large XLSX and CSV spreadsheet documents with low memory footprint and great performance.
 
-* [RadWordsProcessing]({%slug radwordsprocessing-overview%}): A library that allows you to create, import and export DOCX (Word Document), HTML, RTF and TXT documents. It also allows you to export all these formats to PDF.
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%}): A library that allows you to create, import and export DOCX (Word Document), DOC & DOT (import only), HTML, RTF and TXT documents. It also allows you to export all these formats to PDF.
 
 * [RadZipLibrary]({%slug radziplibrary-overview%}): A library that allows you to compress and decompress ZIP files.
 
