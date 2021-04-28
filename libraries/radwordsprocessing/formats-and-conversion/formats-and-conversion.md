@@ -3,7 +3,7 @@ title: Formats and Conversion Overview
 page_title: Formats and Conversion
 description: You can use RadWordsProcessing to convert among variety of formats.
 slug: radwordsprocessing-formats-and-conversion
-tags: formats,and,conversion
+tags: doc,dot,docx,html,rtf,pdf,txt,formats,import,export,conversion,features
 published: True
 position: 0
 ---
@@ -14,14 +14,14 @@ position: 0
 RadWordsProcessing does not need any external dependencies in order to convert documents from/to the supported formats. The document model is independent from UI and can be used on the server side as well as on the client.
       
 
-You can use RadWordsProcessing to convert among variety of formats. Below you can see a feature / format matrix that describes supported features by file format. The currently supported format are Docx, Doc & Dot (import only), Rtf, Html and plain text, as plain text is excluded from the comparison.
+You can use RadWordsProcessing to convert among variety of formats. Below you can see a feature / format matrix that describes supported features by file format. The currently supported format are Docx, Doc & Dot (import only), Rtf, Html, Pdf (export only), and plain text, as plain text is excluded from the comparison.
 
 <style>
-    .table td {
+    table td {
         color:#5ce500;
         text-align: center;
     }
-    .table td:nth-child(1) {
+    table td:nth-child(1) {
         color:black;
     }
     td.not-applicable {
@@ -32,11 +32,9 @@ You can use RadWordsProcessing to convert among variety of formats. Below you ca
         color:orange;
         text-align: center;
     }
-
 </style>
 
-<div class="table">
-
+<div>
 <table><tr><th>Feature</th>
 <th>Docx Import</th>
 <th>Docx Export</th>
@@ -236,7 +234,8 @@ Floating Images</td><td>
 ✔</td><td>
 ✔</td><td class="partially-supported">
 ✔<sup>3</sup></td><td class="partially-supported">
-✔<sup>3</sup></td><td></td></tr><tr><td>
+✔<sup>3</sup></td><td>
+✔</td></tr><tr><td>
 <b>Styles</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
 Styles Support</td><td>
 ✔</td><td>
@@ -356,7 +355,6 @@ Bookmarks</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td></td><td></td><td></td></tr></table>
-
 </div>
 
 >1. Double Strikethrough is currently not supported.
