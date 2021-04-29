@@ -82,7 +82,7 @@ As the PDF document has no background concept we are creating a [RectangleGeomet
 	}
 {{endregion}}
 
-The following methods show how to invert the document elements` color by recursively iterating their content and setting the desired color using the relevant Fill property.
+The following methods show how to invert the document elements' color by recursively iterating their content and setting the desired color using the relevant Fill property.
 
 #### __[C#] Invert Document Content`s Color__
 
