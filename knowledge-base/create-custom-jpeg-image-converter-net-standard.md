@@ -56,10 +56,12 @@ The following code snippets demonstrates how to create a custom implementation o
                         Quality = (int)imageQuality,
                     };
 
-                    MemoryStream ms = new MemoryStream();
-                    imageSharp.SaveAsJpeg(ms, options);
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        image.SaveAsJpeg(ms, options);
 
-                    jpegImageData = ms.ToArray();
+                        jpegImageData = ms.ToArray();
+                    }
                 }
 
                 return true;
