@@ -38,12 +38,14 @@ Switches are a way for the code fragment to specify formatting for the result of
 
 The possible switches for a Merge field are:
 
-| Switch   | Description                                                                                   |
-| :---     | :---                                                                                          |
-| \b       | Specifies text, which shall be inserted before the Merge Field in case the field is not blank |
-| \f       | Specifies text, which shall be inserted after the Merge Field in case the field is not blank  |
-| \m       | Specifies that the MergeField field is a mapped field                                         |
-| \v       | Enables character conversion for vertical formatting                                          |
+| Switch                 | Description                                                                                   |
+| :---                   | :---                                                                                          |
+| \@ "Date-Time Picture" | Specifies a date format if different than the default format.                                 |
+| \\* Format Switch      | Specifies the appearance of the number if different than the default format.                  |
+| \b                     | Specifies text, which shall be inserted before the Merge Field in case the field is not blank |
+| \f                     | Specifies text, which shall be inserted after the Merge Field in case the field is not blank  |
+| \m                     | Specifies that the MergeField field is a mapped field                                         |
+| \v                     | Enables character conversion for vertical formatting                                          |
      
 
 ## Inserting
@@ -55,7 +57,7 @@ Inserting a Merge field is easily achieved through the [RadFlowDocumentEditor]({
 
 {{region cs-radwordsprocessing-concepts-merge-field_0}}
 	            
-	editor.InsertField("MERGEFIELD First_Name", "to be updated");
+	editor.InsertField("MERGEFIELD First_Name", "«to be updated»");
 {{endregion}}
   
 
@@ -63,9 +65,17 @@ Inserting a Merge field is easily achieved through the [RadFlowDocumentEditor]({
 
 {{region cs-radwordsprocessing-concepts-merge-field_1}}
 	        
-	editor.InsertField("MERGEFIELD First_Name \\b \"Mr. \" \\f \". \"", "to be updated");
+	editor.InsertField("MERGEFIELD First_Name \\b \"Mr. \" \\f \". \"", "«to be updated»");
 {{endregion}}
 
+#### __[C#] Example 3: Insert Merge field with a Date-Time format switch__
+
+{{region cs-radwordsprocessing-concepts-merge-field_2}}
+	        
+	editor.InsertField("MERGEFIELD Date_Time \\@ \"MM/dd/yy\"", "«to be updated»");
+{{endregion}}
+
+After updating the field the result would be "05/13/21".
 
 ## See Also
 

@@ -60,7 +60,7 @@ The suggested way to insert field is to use the __InsertField()__ method of [Rad
 	            
 	RadFlowDocument document = new RadFlowDocument();
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	editor.InsertField("DATE", "10/11/2012");
+	editor.InsertField("DATE", "«10/11/2012»");
 {{endregion}}
 
 
@@ -110,7 +110,7 @@ Updating a single field is done with the __UpdateField()__ method of the __Field
 {{region cs-radwordsprocessing-concepts-fields_2}}
 	            
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "result");
+	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "«result»");
 	Console.WriteLine(fieldInfo.GetResult()); // Output: result
 	fieldInfo.UpdateField();
 	Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
@@ -127,7 +127,7 @@ All fields in the document can be updated using __UpdateFields()__ of __RadFlowD
 	            
 	RadFlowDocument document = new RadFlowDocument();
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "result");
+	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "«result»");
 	        
 	Console.WriteLine(fieldInfo.GetResult()); // Output: result
 	document.UpdateFields();

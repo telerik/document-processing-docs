@@ -42,7 +42,7 @@ __Example 1__ demonstrates how you can insert a merge field.
 
 {{region cs-radwordsprocessing-concepts-time-field_0}}
 	            
-	editor.InsertField("TIME \\@ \"h:mm:ss am/pm\"", "to be updated");
+	editor.InsertField("TIME \\@ \"h:mm:ss am/pm\"", "«to be updated»");
 {{endregion}}
 
 
