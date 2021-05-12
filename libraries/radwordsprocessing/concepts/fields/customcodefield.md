@@ -48,7 +48,7 @@ Here are some commonly used fields. The complete list of field codes and the swi
 
 {{region cs-radwordsprocessing-concepts-customcodefield_0}}
 	            
-	editor.InsertField("PAGE  \\* ROMAN", "VII");
+	editor.InsertField("PAGE  \\* ROMAN", "«VII»");
 {{endregion}}
 
 
