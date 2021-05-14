@@ -43,7 +43,7 @@ Inserting a Compare Field is easily achieved through the [RadFlowDocumentEditor]
 
 {{region cs-radwordsprocessing-concepts-compare-field_0}}
 	            
-	editor.InsertField("COMPARE MERGEFIELD CustomerNumber <> 1", "to be updated");
+	editor.InsertField("COMPARE MERGEFIELD CustomerNumber <> 1", "«to be updated»");
 {{endregion}}
 
 

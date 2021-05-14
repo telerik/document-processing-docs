@@ -48,7 +48,7 @@ Here are some commonly used fields. The complete list of field codes and the swi
 
 {{region cs-radwordsprocessing-concepts-customcodefield_0}}
 	            
-	editor.InsertField("PAGE  \\* ROMAN", "VII");
+	editor.InsertField("PAGE  \\* ROMAN", "«VII»");
 {{endregion}}
 
 
@@ -79,7 +79,7 @@ In **Example 3** is demonstrated how to insert __AUTHOR__ field showing the name
 
 {{region cs-radwordsprocessing-concepts-customcodefield_3}}
 	            
-	editor.InsertField("AUTHOR  \\* Upper", "JOHN DOE");
+	editor.InsertField("AUTHOR  \\* Upper", "«JOHN DOE»");
 {{endregion}}
 
 
@@ -94,7 +94,7 @@ The __\\* Upper__ switch will convert all letters in the result to uppercase.
 
 {{region cs-radwordsprocessing-concepts-customcodefield_4}}
 	            
-	FieldInfo tocField = editor.InsertField("TOC \\o \"1-3\" \\h \\z \\u", "result");
+	FieldInfo tocField = editor.InsertField("TOC \\o \"1-3\" \\h \\z \\u", "«result»");
 	tocField.IsDirty = true;
 {{endregion}}
 

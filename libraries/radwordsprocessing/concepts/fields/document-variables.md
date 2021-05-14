@@ -70,7 +70,7 @@ __Example 3__ shows insertion of the field created in __Example 1__.
 
 {{region cs-radwordsprocessing-concepts-document-variables_2}}
 
-	editor.InsertField("DOCVARIABLE Name", "Nancy Davolio");
+	editor.InsertField("DOCVARIABLE Name", "«Nancy Davolio»");
 {{endregion}}
 
 

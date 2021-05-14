@@ -52,7 +52,7 @@ Inserting an If field is easily achieved through the [RadFlowDocumentEditor]({%s
 	editor.InsertBookmark("Money", wallet, wallet);
 	editor.InsertBreak(BreakType.LineBreak);
 
-	editor.InsertField("IF Money >= 100 \"Buy\" \"The minimum required amount is 100\"", "T-shirt");
+	editor.InsertField("IF Money >= 100 \"Buy\" \"The minimum required amount is 100\"", "«T-shirt»");
 {{endregion}}
 
 The result of the above snippet is illustrated in **Figure 1**.

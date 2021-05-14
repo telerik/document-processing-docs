@@ -76,7 +76,7 @@ Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEdito
 
 	{{region cs-radwordsprocessing-concepts-hyperlink-field_1}}
 					
-		editor.InsertField(@"HYPERLINK ""http://www.telerik.com"" \o ""Telerik site""", "telerik");
+		editor.InsertField(@"HYPERLINK ""http://www.telerik.com"" \o ""Telerik site""", "«telerik»");
 	{{endregion}}
 
 	The result looks like shown in **Figure 2**.
