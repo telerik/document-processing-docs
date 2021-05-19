@@ -19,7 +19,7 @@ This article demonstrates how you can convert a Xlsx  file to a PDF with the [Sp
 
 ## Solution
 
-The solution is to import the file with the XlsxForamtProvider and export it with the PdfFormatProvider. 
+The solution is to import the file with the XlsxFormatProvider and export it with the PdfFormatProvider. 
 
 #### [C#] Convert Xlsx to PDF
 
