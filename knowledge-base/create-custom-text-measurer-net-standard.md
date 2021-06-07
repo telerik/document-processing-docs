@@ -43,18 +43,18 @@ In the example below, we are demonstrating how to create a custom [TextMeasurer]
         private static readonly double ratioX = 1.035;
         private static readonly double ratioY = 1;
         private static readonly double ratioBaseline = 1;
-
+    
         private readonly SpreadTextMeasurerBase originalMeasurer;
-
+    
         public CustomTextMeasurer(SpreadTextMeasurerBase originalMeasurer)
         {
             this.originalMeasurer = originalMeasurer;
         }
-
+    
         public override TextMeasurementInfo MeasureText(TextProperties textProperties, FontProperties fontProperties)
         {
             TextMeasurementInfo info = originalMeasurer.MeasureText(textProperties, fontProperties);
-
+    
             Size size = info.Size;
             return new TextMeasurementInfo()
             {
@@ -64,11 +64,11 @@ In the example below, we are demonstrating how to create a custom [TextMeasurer]
                     size.Height * ratioY),
             };
         }
-
+    
         public override TextMeasurementInfo MeasureTextWithWrapping(TextProperties textProperties, FontProperties fontProperties, double wrappingWidth)
         {
             TextMeasurementInfo info = originalMeasurer.MeasureText(textProperties, fontProperties);
-
+    
             Size size = info.Size;
             return new TextMeasurementInfo()
             {
@@ -87,6 +87,6 @@ The following example shows how to set the custom implementation inheriting the 
 
 {{region kb-create-custom-text-measurer-net-standard2}}
 
-    SpreadTextMeasurerBase customTextMeasurer = new CustomTextMeasurer(); 
+    SpreadTextMeasurerBase customTextMeasurer = new CustomTextMeasurer(SpreadExtensibilityManager.TextMeasurer); 
     SpreadExtensibilityManager.TextMeasurer = customTextMeasurer; 
 {{endregion}}
