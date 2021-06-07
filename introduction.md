@@ -32,7 +32,11 @@ The Telerik Document Processing libraries support the following file formats:
 * CSV
 * ZIP
  
->The Telerik Document Processing libraries are available in **.NET Standard** and **.NET Core** compatible versions. You can download the assemblies of these libraries from the **[UI for Xamarin](https://www.telerik.com/xamarin-ui)**, **[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)** and **[UI for Blazor](https://www.telerik.com/blazor-ui)** suites, respectively.
+>The Telerik Document Processing libraries are available in **.NET Framework** and **.NET Standard** (**.NET Core**) compatible versions. You can download the assemblies of these libraries from the following products:<table><tr><th> .NET Framework Binaries</th><th> .NET Standard Binaries</th></tr><tr><td> <ul><li>[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)</li><li>[UI for ASP.NET AJAX](https://www.telerik.com/products/aspnet-ajax.aspx)</li><li>[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)</li><li>[UI for WinForms](https://www.telerik.com/products/winforms.aspx)</li><li>[UI for Silverlight](https://www.telerik.com/products/silverlight/overview.aspx)</li></td><td><ul><li>[UI for Xamarin](https://www.telerik.com/xamarin-ui)</li><li>[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)</li><li>[UI for Blazor](https://www.telerik.com/blazor-ui)</li><li>[UI for WinUI](https://www.telerik.com/win-ui)</li></td></tr></table>
+
+
+
+
 
 ## Getting Started
 
