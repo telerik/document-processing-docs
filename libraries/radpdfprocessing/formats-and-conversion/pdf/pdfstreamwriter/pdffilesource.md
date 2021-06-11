@@ -31,22 +31,22 @@ PdfFileSource exposes also an additional overload, which allows you to keep the 
 An additional option you can use is the overload that accepts a parameter of type [**PdfImportSettings**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings). This overload enables you to handle  password encrypted documents.
 
 #### **[C#] Example 2: Open encrypted document**
-{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource_2}}
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource_1}}
 	
 	public void ReadDocument(string path)
 	{
-	    PdfImportSettings settings = new PdfImportSettings();
-	    settings.UserPasswordNeeded += Settings_UserPasswordNeeded;
-	
-	    using (PdfFileSource fileSource = new PdfFileSource(File.OpenRead(path)))
-	    {
-	        // ...
-	    }
+		PdfImportSettings importSettings = new PdfImportSettings();
+		importSettings.UserPasswordNeeded += this.Settings_UserPasswordNeeded;
+
+		using (PdfFileSource fileSource = new PdfFileSource(File.OpenRead(path), importSettings, leaveStreamOpen: false))
+		{
+			// ...
+		}
 	}
-	
+
 	private void Settings_UserPasswordNeeded(object sender, PasswordNeededEventArgs e)
 	{
-	    e.Password = "pass";
+		e.Password = "pass";
 	}
 {{endregion}}
 
@@ -57,7 +57,7 @@ An additional option you can use is the overload that accepts a parameter of typ
 PdfFileSource exposes the **Pages** property, which is of type [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%})[] and allows you access the pages of the imported document.
 
 #### **[C#] Example 3: Iterate the pages of a document**
-{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource_1}}
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource_2}}
 	
 	using (PdfFileSource fileSource = new PdfFileSource(File.OpenRead(path)))
 	{
