@@ -1,7 +1,6 @@
 ---
 title: FixedContentEditor
 page_title: FixedContentEditor
-description: FixedContentEditor
 slug: radpdfprocessing-editing-fixedcontenteditor
 tags: fixedcontenteditor
 published: True

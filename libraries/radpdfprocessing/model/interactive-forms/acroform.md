@@ -1,7 +1,6 @@
 ---
 title: AcroForm 
 page_title: AcroForm 
-description: AcroForm 
 slug: radpdfprocessing-model-interactive-forms-acroform 
 tags: acroform
 published: True

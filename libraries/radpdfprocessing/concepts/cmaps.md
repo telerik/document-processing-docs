@@ -1,7 +1,6 @@
 ---
 title: CMap Tables
 page_title: CMap Tables
-description: Using CMap in PdfProcessing
 slug: radpdfprocessing-concepts-cmap-tables
 tags: cmap
 published: True

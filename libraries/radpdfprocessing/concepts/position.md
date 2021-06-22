@@ -1,7 +1,6 @@
 ---
 title: Position
 page_title: Position
-description: Position
 slug: radpdfprocessing-concepts-position
 tags: position
 published: True

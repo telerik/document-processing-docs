@@ -1,7 +1,6 @@
 ---
 title: Text and Graphic Properties
 page_title: Text and Graphic Properties
-description: Text and Graphic Properties
 slug: radpdfprocessing-editing-text-and-graphic-properties
 tags: text,and,graphic,properties
 published: True
@@ -9,8 +8,6 @@ position: 5
 ---
 
 # Text and Graphic Properties
-
-
 
 When using the methods of [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) or [Block]({%slug radpdfprocessing-editing-block%}) classes they will create different content elements. You can control the look of the newly created elements with the following properties:
       

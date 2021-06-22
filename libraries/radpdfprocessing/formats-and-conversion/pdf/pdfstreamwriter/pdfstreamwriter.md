@@ -1,7 +1,6 @@
 ---
 title: PdfStreamWriter
 page_title: PdfStreamWriter
-description: PdfStreamWriter
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter
 tags: pdf,stream,writer
 published: True

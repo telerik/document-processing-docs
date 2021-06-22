@@ -1,7 +1,6 @@
 ---
 title: RadioButtonField 
 page_title: RadioButtonField 
-description: RadioButtonField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield
 tags: radiobuttonfield
 published: True

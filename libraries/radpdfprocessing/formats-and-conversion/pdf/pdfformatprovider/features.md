@@ -1,7 +1,6 @@
 ---
 title: Features
 page_title: Features
-description: Features
 slug: radpdfprocessing-formats-and-conversion-pdf-features
 tags: features
 published: True

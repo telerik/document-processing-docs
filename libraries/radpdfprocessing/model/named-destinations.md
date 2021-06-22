@@ -1,7 +1,6 @@
 ---
 title: Named Destinations
 page_title: Named Destinations
-description: Named Destinations
 slug: radpdfprocessing-model-named-destinations
 tags: named,destinations
 published: True

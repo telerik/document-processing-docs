@@ -1,7 +1,6 @@
 ---
 title: List
 page_title: List
-description: List
 slug: radpdfprocessing-editing-list
 tags: list
 published: True

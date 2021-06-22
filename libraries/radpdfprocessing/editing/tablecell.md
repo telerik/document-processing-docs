@@ -1,7 +1,6 @@
 ---
 title: TableCell
 page_title: TableCell
-description: TableCell
 slug: radpdfprocessing-editing-tablecell
 tags: tablecell
 published: True

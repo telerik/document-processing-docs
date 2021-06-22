@@ -1,7 +1,6 @@
 ---
 title: Settings
 page_title: Settings
-description: Settings
 slug: radpdfprocessing-formats-and-conversion-plain-text-settings
 tags: using,textformatprovider, settings
 published: True

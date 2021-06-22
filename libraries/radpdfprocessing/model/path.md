@@ -1,7 +1,6 @@
 ---
 title: Path
 page_title: Path
-description: Path
 slug: radpdfprocessing-model-path
 tags: path
 published: True

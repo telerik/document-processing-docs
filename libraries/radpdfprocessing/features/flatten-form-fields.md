@@ -1,7 +1,6 @@
 ---
 title: Flatten Form Fields
 page_title: Flatten Form Fields
-description: This article shows how one can flatten the form fields of a pdf document. 
 slug: radpdfprocessing-flatten-form-fields
 tags: flatten, form, field
 position: 5

@@ -1,7 +1,6 @@
 ---
 title: ComboBoxField 
 page_title: ComboBoxField 
-description: ComboBoxField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-comboboxfield
 tags: comboboxfield
 published: True

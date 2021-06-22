@@ -1,7 +1,6 @@
 ---
 title: Bookmarks (Outlines)
 page_title: Bookmarks (Outlines)
-description: Bookmarks (Outlines)
 slug: radpdfprocessing-features-bookmarks
 tags: bookmarks, outlines
 position: 0

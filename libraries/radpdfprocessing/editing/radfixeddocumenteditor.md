@@ -3,7 +3,6 @@ title: RadFixedDocumentEditor
 page_title: RadFixedDocumentEditor
 description: RadFixedDocumentEditor
 slug: radpdfprocessing-editing-radfixeddocumenteditor
-tags: radfixeddocumenteditor
 published: True
 position: 6
 ---

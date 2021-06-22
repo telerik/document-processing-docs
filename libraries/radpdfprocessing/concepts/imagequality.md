@@ -1,7 +1,6 @@
 ---
 title: ImageQuality
 page_title: ImageQuality
-description: ImageQuality
 slug: radpdfprocessing-concepts-imagequality
 tags: image, quality
 published: True

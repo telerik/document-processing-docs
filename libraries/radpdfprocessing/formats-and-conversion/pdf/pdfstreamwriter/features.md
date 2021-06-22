@@ -1,7 +1,6 @@
 ---
 title: Features
 page_title: Pdf Stream Writer - Features
-description: Pdf Stream Writer - Features
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-features
 tags: pdf,stream,writer, features
 published: True

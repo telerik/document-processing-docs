@@ -1,7 +1,6 @@
 ---
 title: FormFieldCollection 
 page_title: FormFieldCollection 
-description: FormFieldCollection 
 slug: radpdfprocessing-model-interactive-forms-formfieldcollection
 tags: FormFieldCollection
 published: True

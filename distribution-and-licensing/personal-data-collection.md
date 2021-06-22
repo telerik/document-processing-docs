@@ -1,7 +1,6 @@
 ---
 title: Personal Data Collection
 page_title: Personal Data Collection
-description: Personal Data Collection
 slug: personal-data-collection
 tags: personaldatacollection, gdpr
 position: 4

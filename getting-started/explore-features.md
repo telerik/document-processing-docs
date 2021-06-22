@@ -1,7 +1,6 @@
 ---
 title: Explore Features
 page_title: Explore Features
-description: Getting Started with Telerik Document Processing Article can be easy like a piece of cake. Check our Overview article and learn more. 
 slug: getting-started-explore-features
 sdk_example: true
 tags: Explore Features

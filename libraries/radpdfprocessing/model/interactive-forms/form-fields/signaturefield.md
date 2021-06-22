@@ -1,7 +1,6 @@
 ---
 title: SignatureField 
 page_title: SignatureField 
-description: SignatureField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-signaturefield
 tags: signaturefield
 ---

@@ -1,7 +1,6 @@
 ---
 title: Plain text
 page_title: Plain text
-description: Plain text
 slug: radpdfprocessing-formats-and-conversion-plain-text-text
 tags: plain,text
 published: True

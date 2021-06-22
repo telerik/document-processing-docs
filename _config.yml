@@ -237,6 +237,43 @@ defaults:
         description_suffix: "- Find other useful information in the Knowledge Base section of the Telerik Document Processing documentation."
 -
     scope:
+        path: "getting-started"
+    values:
+        description: "Getting Started with Telerik Document Processing Article can be easy like a piece of cake. Check our {{page.title}} article and learn more."
+-
+    scope:
+        path: "distribution-and-licensing"
+    values:
+        description: "Find out more about Telerik Document Processing {{page.title}} policy and get familiar with all the details. "
+-
+    scope:
+        path: "libraries/radspreadprocessing"
+    values:
+        title_prefix: "SpreadProcessing"
+-
+    scope:
+        path: "libraries/radpdfprocessing"
+    values:
+        title_prefix: "PdfProcessing"
+-
+    scope:
+        path: "libraries/radwordsprocessing"
+    values:
+        title_prefix: "WordsProcessing"
+-
+    scope:
+        path: "libraries/radziplibrary"
+    values:
+        title_prefix: "ZipLibrary"
+-
+
+    scope:
+        path: "libraries"
+    values:
+        description: "Check our document management article about {{page.title}}."
+-
+
+    scope:
         path: "api"
     values:
         kind: "api"
