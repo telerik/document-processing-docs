@@ -1,6 +1,6 @@
 ---
 title: How to Fit Graphics to Frames
-description: How to Fit Graphics
+description: Learn how to fit graphics and images in specific frames using PdfProcessing.
 type: how-to
 page_title: How to Fit Graphics
 slug: how-to-fit-graphics-to-frames

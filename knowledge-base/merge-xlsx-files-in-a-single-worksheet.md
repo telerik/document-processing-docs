@@ -1,6 +1,6 @@
 ---
 title: Merge Xlsx files in a single Workbook
-description:  Merge Xlsx files in a single Workbook
+description:  Merge several XSLX files in a single Workbook using SpreadProcessing.
 type: how-to 
 page_title:  Merge Xlsx files in a single Workbook
 slug: merge-xlsx-files-in-a-single-worksheet

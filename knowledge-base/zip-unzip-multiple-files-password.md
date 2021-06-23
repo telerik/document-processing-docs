@@ -1,6 +1,6 @@
 ---
 title: How to zip and unzip multiple files with a password
-description: The example is showing how to zip and unzip multiple files with a password
+description: The example is showing how to zip and unzip multiple files with a password.
 type: how-to
 page_title: Example on how to zip and unzip multiple files with a password
 slug: zip-unzip-multiple-files-password

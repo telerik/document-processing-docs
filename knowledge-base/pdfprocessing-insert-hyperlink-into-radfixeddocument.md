@@ -1,6 +1,6 @@
 ---
 title: Insert Hyperlink into the RadFixedDocument
-description: This knowledge base article describes how to insert a Hyperlink into the RadFixedDocument
+description: This knowledge base article describes how to insert a Hyperlink into a PDF document.
 type: how-to
 page_title: Insert Hyperlink into the RadFixedDocument
 slug: pdfprocessing-insert-hyperlink-into-radfixeddocument

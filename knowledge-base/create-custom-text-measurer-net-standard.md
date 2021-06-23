@@ -1,6 +1,6 @@
 ---
 title: Create Custom Text Measurer in .NET Standard
-description: How to Create Custom Text Measurer .NET Standard
+description: How to implement custom text measuring functionality in SpreadProcessing for .NET Standard.
 type: how-to
 page_title: Create Custom Text Measurer .NET Standard
 slug: create-custom-text-measurer-net-standard

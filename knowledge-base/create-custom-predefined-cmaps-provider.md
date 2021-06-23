@@ -1,6 +1,6 @@
 ---
 title: Create Custom Predefined CMaps Provider
-description: Create Custom Predefined CMaps Provider
+description: Create Custom Predefined CMaps Provider so you can use a custom CMAP table in your PDF documents.
 type: how-to
 page_title: Create Custom Predefined CMaps Provider
 slug: create-custom-predefined-cmaps-provider

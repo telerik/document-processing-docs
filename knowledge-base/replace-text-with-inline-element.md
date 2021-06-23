@@ -1,11 +1,11 @@
 ---
 title: Replace existing text with Inline element
-description: Replace existing text with Inline element
+description: Learn how to replace text with another inline element in a document using WordsProcessing.
 type: how-to
 page_title: Replace existing text with Inline element
 slug: replace-text-with-inline-element
 position: 0
-tags: text, inline, element, line, break, replace
+tags: text, inline, element, line, break, replace, c#, docx
 res_type: kb
 ---
 

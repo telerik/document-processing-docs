@@ -1,6 +1,6 @@
 ---
 title: Invert PDF Document Colors
-description: Invert the Colors within a PDF Document by iterating its content
+description: Invert the Colors within a PDF Document by iterating its content using PdfProcessing.
 type: how-to
 page_title: Invert the Colors within a PDF Document
 slug: pdfprocessing-invert-pdf-document-colors

@@ -1,6 +1,6 @@
 ---
 title: Convert Xlsx to PDF
-description: This article demonstrates how you can convert a xlsx  file to a PDF with the SpreadProcessing library.
+description: This article demonstrates how you can convert an xlsx file to a PDF with the SpreadProcessing library.
 type: how-to 
 page_title: Convert Xlsx to PDF
 slug: convert-xlsx-to-pdf

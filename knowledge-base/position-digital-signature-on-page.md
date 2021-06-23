@@ -1,6 +1,6 @@
 ---
 title: Add Digital Signatures on an existing page | Telerik Document Processing
-description: Position Digital Signature widget and replace an existing page content
+description: Position Digital Signature widget and replace an existing page content in a PDF document.
 type: how-to
 page_title: Position Digital Signature widget and replace an existing page content
 slug: position-digital-signature-on-page

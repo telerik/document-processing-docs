@@ -239,7 +239,7 @@ defaults:
     scope:
         path: "getting-started"
     values:
-        description: "Getting Started with Telerik Document Processing Article can be easy like a piece of cake. Check our {{page.title}} article and learn more."
+        description: "Getting Started with Telerik Document Processing can be easy like a piece of cake. Check our {{page.title}} article and learn more."
 -
     scope:
         path: "distribution-and-licensing"

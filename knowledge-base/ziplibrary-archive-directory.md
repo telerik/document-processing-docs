@@ -1,6 +1,6 @@
 ---
 title: Create archive from a directory
-description: Learn how to zip a folder using RadZipLibrary
+description: Learn how to zip a folder using RadZipLibrary.
 type: how-to
 page_title: Create archive from a directory
 slug: archive-directory

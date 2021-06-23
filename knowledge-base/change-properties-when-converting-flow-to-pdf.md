@@ -1,6 +1,6 @@
 ---
 title: Change Flow Document Properties when converting to PDF
-description:  Change Flow Document Properties when converting to PDF
+description:  Learn how to control the Document Properties when converting flow document to PDF with Telerik Document Processing.
 type: how-to troubleshooting
 page_title:  Change Flow Document Properties when converting to PDF
 slug: change-properties-when-converting-flow-to-pdf
