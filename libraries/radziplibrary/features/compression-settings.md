@@ -1,7 +1,6 @@
 ---
 title: Compression Settings
 page_title: Compression Settings
-description: Compression Settings
 slug: radziplibrary-compression-settings
 tags: compression,settings
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Using CsvFormatProvider
 page_title: Using CsvFormatProvider
-description: Using CsvFormatProvider
 slug: radspreadprocessing-formats-and-conversion-csv-csvformatprovider
 tags: using,csvformatprovider
 published: True

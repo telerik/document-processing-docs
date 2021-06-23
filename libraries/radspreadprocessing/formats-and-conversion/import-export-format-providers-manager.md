@@ -1,7 +1,6 @@
 ---
 title: Format Providers Manager
 page_title: Format Providers Manager
-description: Format Providers Manager
 slug: radspreadprocessing-formats-and-conversion-format-providers-manager
 tags: format,providers,manager
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Cell Value Types
 page_title: Cell Value Types
-description: Cell Value Types
 slug: radspreadprocessing-working-with-cells-cell-value-types
 tags: cell,value,types
 published: True

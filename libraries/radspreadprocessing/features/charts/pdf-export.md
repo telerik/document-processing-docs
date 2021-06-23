@@ -1,7 +1,6 @@
 ---
 title: Export Chart to PDF
 page_title: Export Chart to PDF
-description: Export Chart to PDF
 slug: radspreadprocessing-features-charts-pdf-export
 tags: chart, pdf, export
 published: True

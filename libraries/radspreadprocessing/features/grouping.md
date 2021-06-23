@@ -1,7 +1,6 @@
 ---
 title: Grouping
 page_title: Grouping
-description: Grouping
 slug: radspreadprocessing-features-grouping
 tags: grouping
 published: True

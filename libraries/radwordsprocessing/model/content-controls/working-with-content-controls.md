@@ -1,7 +1,7 @@
 ---
 title: Working with Content Controls
 page_title:  Working with Content Controls
-description: This article show you you can access the content controls in code
+description: This article show how you can access the content controls in code.
 slug: wordsprocessing-model-working-with-content-controls
 tags: content controls, wordsprocessing
 published: True

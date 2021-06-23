@@ -1,7 +1,6 @@
 ---
 title: Freeze Panes
 page_title: Freeze Panes
-description: Freeze Panes
 slug: radspreadprocessing-features-freeze-panes
 tags: freeze,panes
 published: True

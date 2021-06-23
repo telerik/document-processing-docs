@@ -1,7 +1,6 @@
 ---
 title: Name Converter
 page_title: Name Converter
-description: Name Converter
 slug: radspreadprocessing-name-converter
 tags: convert,name,index
 published: True

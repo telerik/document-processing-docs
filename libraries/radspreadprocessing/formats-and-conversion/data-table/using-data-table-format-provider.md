@@ -1,7 +1,7 @@
 ---
 title: Using DataTableFormatProvider
 page_title: Using DataTableFormatProvider
-description: Using DataTableFormatProvider articke describes how you can convert a DataTable to a worksheet and vice versa. 
+description: Using DataTableFormatProvider article describes how you can convert a DataTable to a worksheet and vice versa. 
 slug: radspreadprocessing-formats-and-conversion-using-data-table-format-provider
 tags: datatable, workbook, worksheet
 published: True

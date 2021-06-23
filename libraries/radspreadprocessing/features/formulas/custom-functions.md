@@ -1,7 +1,6 @@
 ---
 title: Custom Functions
 page_title: Custom Functions
-description: Custom Functions
 slug: radspreadprocessing-features-formulas-custom-functions
 tags: custom,functions
 published: True

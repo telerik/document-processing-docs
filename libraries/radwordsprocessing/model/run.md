@@ -1,7 +1,6 @@
 ---
 title: Run
 page_title: Run
-description: Run
 slug: radwordsprocessing-model-run
 tags: run
 published: True

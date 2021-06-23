@@ -1,7 +1,6 @@
 ---
 title: Headers and Footers
 page_title: Headers and Footers
-description: Headers and Footers
 slug: radwordsprocessing-model-headers-footers
 tags: headers,and,footers
 published: True

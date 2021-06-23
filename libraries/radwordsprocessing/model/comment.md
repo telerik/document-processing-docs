@@ -1,7 +1,6 @@
 ---
 title: Comment
 page_title: Comment
-description: Comment
 slug: radwordsprocessing-model-comment
 tags: comment
 published: True

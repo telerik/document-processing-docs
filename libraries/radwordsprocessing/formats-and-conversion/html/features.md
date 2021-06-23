@@ -1,7 +1,6 @@
 ---
 title: Features
 page_title: Features
-description: Features
 slug: radwordsprocessing-formats-and-conversion-html-features
 tags: features
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Sheets Visibility
 page_title: Sheets Visibility
-description: Sheets Visibility
 slug: radspreadprocessing-working-with-worksheets-sheets-visibility
 tags: grouping
 published: True

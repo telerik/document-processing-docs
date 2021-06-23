@@ -1,7 +1,6 @@
 ---
 title: Cell References
 page_title: Cell References
-description: Cell References
 slug: radspreadprocessing-features-formulas-cell-references
 tags: cell,references
 published: True

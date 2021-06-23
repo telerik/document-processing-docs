@@ -1,7 +1,6 @@
 ---
 title: FieldCharacter
 page_title: FieldCharacter
-description: FieldCharacter
 slug: radwordsprocessing-model-fieldcharacter
 tags: fieldcharacter
 published: True

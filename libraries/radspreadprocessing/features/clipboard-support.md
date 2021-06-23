@@ -1,7 +1,6 @@
 ---
 title: Clipboard Support
 page_title: Clipboard Support
-description: Clipboard Support
 slug: radspreadprocessing-features-clipboard-support
 tags: clipboard,support
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Bookmark
 page_title: Bookmark
-description: Bookmark
 slug: radwordsprocessing-model-bookmark
 tags: bookmark
 published: True

@@ -1,7 +1,6 @@
 ---
 title: PermissionRange
 page_title: PermissionRange
-description: PermissionRange
 slug: radwordsprocessing-model-permissionrange
 tags: permission,range
 published: True

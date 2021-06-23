@@ -1,7 +1,6 @@
 ---
 title: TabStop
 page_title: TabStop
-description: TabStop
 slug: radwordsprocessing-concepts-tabstop
 tags: tab, stop
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Performance Tips and Tricks
 page_title: Performance Tips and Tricks
-description: Performance Tips and Tricks
 slug: radspreadprocessing-performance
 tags: performance,tips,and,tricks
 published: True

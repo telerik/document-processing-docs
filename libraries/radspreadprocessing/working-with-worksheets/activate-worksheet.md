@@ -1,7 +1,6 @@
 ---
 title: Activate a Worksheet
 page_title: Activate a Worksheet
-description: Activate a Worksheet
 slug: radspreadprocessing-working-with-worksheets-activate-worksheet
 tags: activate,a,worksheet
 published: True

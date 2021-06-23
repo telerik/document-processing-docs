@@ -1,7 +1,6 @@
 ---
 title: Getting Started
 page_title: Getting Started
-description: Getting Started
 slug: radspreadstreamprocessing-getting-started
 tags: getting started
 published: True

@@ -1,7 +1,7 @@
 ---
 title: Hyperlink Field
 page_title: Hyperlink Field
-description: Hyperlink field is a Field element that containing a reference to another location by its name.
+description: Hyperlink field is a Field element that contains a reference to another location.
 slug: radwordsprocessing-concepts-hyperlink-field
 tags: hyperlink,field
 published: True

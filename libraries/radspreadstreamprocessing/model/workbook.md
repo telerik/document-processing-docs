@@ -1,7 +1,6 @@
 ---
 title: Workbook
 page_title: Workbook
-description: Workbook
 slug: radspreadstreamprocessing-model-workbook
 tags: workbook
 published: True

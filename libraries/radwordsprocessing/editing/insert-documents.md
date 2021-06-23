@@ -1,7 +1,6 @@
 ---
 title: Insert Documents
 page_title: Insert Documents
-description: Insert Documents
 slug: radwordsprocessing-editing-insert-documents
 tags: insert, document, position
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Changes
 page_title: Changes
-description: Changes
 slug: radspreadprocessing-changes
 tags: changes
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Shapes and Images
 page_title: Shapes and Images
-description: Shapes and Images
 slug: radspreadprocessing-features-shapes-and-images
 tags: shapes,and,images
 published: True

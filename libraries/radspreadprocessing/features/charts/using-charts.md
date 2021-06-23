@@ -1,7 +1,6 @@
 ---
 title: Using Charts
 page_title: Using Charts
-description: Using Charts
 slug: radspreadprocessing-features-charts-using-charts
 tags: chart, insert, remove
 published: True

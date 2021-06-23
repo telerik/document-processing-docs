@@ -1,7 +1,6 @@
 ---
 title: General Information
 page_title: General Information
-description: General Information
 slug: radspreadprocessing-features-formulas-general-information
 tags: formulas
 published: True

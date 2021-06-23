@@ -1,7 +1,6 @@
 ---
 title: Developer Focused Examples
 page_title: Developer Focused Examples
-description: Developer Focused Examples
 sdk_example: true
 slug: radspreadprocessing-sdk-examples
 tags: sdk,examples

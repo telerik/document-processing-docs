@@ -1,7 +1,6 @@
 ---
 title: Update ZipArchive
 page_title: Update ZipArchive
-description: Update ZipArchive
 slug: radziplibrary-update-ziparchive
 tags: update,ziparchive
 published: True

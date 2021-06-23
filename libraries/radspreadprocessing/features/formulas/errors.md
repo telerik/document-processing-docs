@@ -1,7 +1,6 @@
 ---
 title: Errors
 page_title: Errors
-description: Errors
 slug: radspreadprocessing-features-formulas-errors
 tags: errors
 published: True
