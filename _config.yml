@@ -249,22 +249,22 @@ defaults:
     scope:
         path: "libraries/radspreadprocessing"
     values:
-        title_prefix: "SpreadProcessing"
+        title_prefix: "SpreadProcessing "
 -
     scope:
         path: "libraries/radpdfprocessing"
     values:
-        title_prefix: "PdfProcessing"
+        title_prefix: "PdfProcessing "
 -
     scope:
         path: "libraries/radwordsprocessing"
     values:
-        title_prefix: "WordsProcessing"
+        title_prefix: "WordsProcessing "
 -
     scope:
         path: "libraries/radziplibrary"
     values:
-        title_prefix: "ZipLibrary"
+        title_prefix: "ZipLibrary "
 -
 
     scope:
