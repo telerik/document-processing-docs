@@ -18,7 +18,7 @@ The workbook lays in the core of the SpreadProcessing' document model. It is the
 
 The workbook is designed to hold together multiple worksheets in order to allow efficient organization and consolidation of data. Typically, a workbook has a single theme and contains worksheets with related data. For example, an annual budget workbook may comprise four worksheets that break down the budget in quarters.
 
-You can create a workbook from scratch or import an existing document. To save a document you can export its contents into a csv, txt or xlsx file. Further information is available in the [Create, Open and Save Workbooks]({%slug radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks%}) article and the [Formats and Conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}) section.
+You can create a workbook from scratch or import an existing document. To save a document you can export its contents into a `csv`, `txt`, `xlsx`, `xls` file or a `DataTable`. Further information is available in the [Create, Open and Save Workbooks]({%slug radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks%}) article and the [Formats and Conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}) section.
 
 ## What is in it?
 
@@ -46,3 +46,8 @@ The workbook has several important characteristics:
 
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft® Corporation.
+
+## See Also
+
+* [Create, Open and Save Workbooks]({%slug radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks%})
+* [Formats and Conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%})

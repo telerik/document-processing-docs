@@ -10,25 +10,36 @@ position: 1
 
 # Format Providers Manager
 
- __RadSpreadprocessing__ contains a __WorkbookFormatProvidersManager__ class that allows you to specify a set of format providers and import or export files letting the manager choose the appropriate format provider. The class also exposes methods that return all registered providers and supported file extensions.
+__RadSpreadprocessing__ contains a __WorkbookFormatProvidersManager__ class that allows you to specify a set of format providers and import or export files letting the manager choose the appropriate format provider. The class also exposes methods that return all registered providers and supported file extensions. 
+
+````C#
+public class WorkbookFormatProvidersManager
+{
+    public static IEnumerable<IWorkbookFormatProvider> FormatProviders { get; }
+
+    public static void Export(Workbook workbook, string extension, Stream output);
+    public static void Export(Workbook workbook, string extension, Stream output, IEnumerable<IWorkbookFormatProvider> formatProviders);
+
+    public static IWorkbookFormatProvider GetProviderByExtension(string extension);
+    public static IWorkbookFormatProvider GetProviderByName(string providerName);
+
+    public static IEnumerable<string> GetSupportedExtensions();
+    
+    public static Workbook Import(string extension, Stream input);
+    public static Workbook Import(string extension, Stream input, IEnumerable<IWorkbookFormatProvider> formatProviders);
+    
+    public static void RegisterFormatProvider(IWorkbookFormatProvider provider);
+    public static void UnregisterFormatProvider(IWorkbookFormatProvider provider);
+}
+````
       
       
 ## Registering and Unregistering Format Providers
 
-The __WorkbookFormatProvidersManager__ class contains two methods that allow you to register and unregister format providers respectively. The manager has the csv and txt format providers registered by default. The snippet in __Example 1__ illustrates how to register the xlsx format provider.
+The __WorkbookFormatProvidersManager__ class contains two methods that allow you to register and unregister format providers respectively. The manager has the `csv` and `txt` format providers registered by default. The snippet in __Example 1__ illustrates how to register the [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider %}).
         
 
->Unlike the __CsvFormatProvider__ and __TxtFormatProvider__ classes, using __XlsxFormatProvider__ requires references to the following assemblies:
-          
-
->* Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll
-              
-
->* Telerik.Windows.Zip.dll
-
-> The __XlsFormatProvider__ requires a reference to the following assembly:
-
->* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
+> Some Format Providers require additional assembly references. Check the full list of the FormatProviders' additional reference requirements in [Format Providers - Additional assembly references]({%slug radspreadprocessing-formats-and-conversion-general-information%}#additional-assembly-references).
 
 
 #### __[C#] Example 1: Register provider__
@@ -46,7 +57,7 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
 {{endregion}}
 
 
-You can also unregister format providers using the UnregisterFormatProvider() method. __Example 2__ demonstrates how to unregister the TxtFormatProvider.
+You can also unregister format providers using the `UnregisterFormatProvider()` method. __Example 2__ demonstrates how to unregister the [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider %}).
         
 #### __[C#] Example 2: Unregister provider__
 
@@ -71,10 +82,14 @@ You can also unregister format providers using the UnregisterFormatProvider() me
 
 ## Import
 
-The format providers manager exposes an Import() method that takes one string argument, which specifies the extension of the file to be imported, and a Stream argument, which provides access to the file. The method tries to find a registered format provider that can handle the extension of the file you would like to import, and if such a provider is registered the file is imported. If the manager does not have an appropriate format registered, an __UnsupportedFileFormatException__ is thrown.
+The format providers manager exposes an `Import()` method that takes two arguments:
+- `string` argument - specifies the extension of the file to be imported, 
+- `Stream` argument -  provides access to the file. 
+
+The method tries to find a registered format provider that can handle the extension of the file you would like to import, and if such a provider is registered the file is imported. If the manager does not have an appropriate format registered, an __UnsupportedFileFormatException__ is thrown.
         
 
-__Example 3__ demonstrates how to present the user with an OpenFileDialog and try to import the selected file. Note that you can use the __GetOpenFileDialogFilter()__ method of the __FileDialogHelper__ class to constructs the correct filter for all registered format providers.
+__Example 3__ demonstrates how to present the user with an `OpenFileDialog` and try to import the selected file. Note that you can use the __GetOpenFileDialogFilter()__ method of the __FileDialogHelper__ class to constructs the correct filter for all registered format providers.
 
 #### __[C#] Example 3: Import a file using OpenFileDialog__
 
@@ -117,7 +132,7 @@ __Example 3__ demonstrates how to present the user with an OpenFileDialog and tr
 {{endregion}}
 
 
-> The OpenFileDialog class exposes a different API in Silverlight. The name of the file could be obtained through the File.Name property of OpenFileDialog and the stream you can get using File.OpenRead().
+> The OpenFileDialog class exposes a different API in Silverlight. The name of the file could be obtained through the File.Name property of `OpenFileDialog` and the stream you can get using `File.OpenRead()`.
 
 
 You can achieve the same result through using the __OpenFile__ command. In fact, the command executes exactly the same code as above. That said, make sure you register the format providers you would like to use before using the command.
@@ -125,7 +140,12 @@ You can achieve the same result through using the __OpenFile__ command. In fact,
 
 ## Export
 
-The format providers manager contains an __Export()__ method that takes three arguments: the workbook that is to be exported, a string that specified the extension of the saved file, and a Stream that will contain the data. The method attempts to find a provider that can handle a file of the specified extension and if such a provider is registered, the file is saved. If the manager does not have an appropriate registered provider, an __UnsupportedFileFormatException__ is raised.
+The format providers manager contains an __Export()__ method that takes three arguments: 
+- `Workbook` argument - the workbook to be exported
+- `string` argument - specifies the extension of the saved file
+- `Stream` argument - the Stream that will contain the data. 
+
+The method attempts to find a provider that can handle a file of the specified extension and if such a provider is registered, the file is saved. If the manager does not have an appropriate registered provider, an __UnsupportedFileFormatException__ is raised.
         
 
 __Example 4__ illustrates how to use the __Export()__ method to save a file. The sample code presents the user with the SaveFileDialog. Note that here again you can use the __GetOpenFileDialogFilter()__ method of the __FileDialogHelper__ class to construct the correct filter for all registered format providers.
@@ -167,7 +187,13 @@ You can achieve the same result through using the __SaveFile__ command. In fact,
         
 ## Retrieve Registered Providers and Supported Extensions
 
-Currently RadSpreadProcessing supports the following extensions: ,xlsx, .xls, .csv, .txt and .pdf (export only). The format providers available for them are respectively [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%}), [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}) and [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+Currently RadSpreadProcessing supports the following extensions: `.xlsx`, `.xls`, `.csv`, `.txt` and `.pdf` (export only). The format providers available for them are respectively [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%}), [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}) and [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
-The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the GetProviderByName() static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __GetSupportedExtensions()__ that returns an IEnumeable of the currently supported file extensions.
+The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the `GetProviderByName()` static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __GetSupportedExtensions()__ that returns an `IEnumeable` of the currently supported file extensions.
 
+## See Also
+
+* [Getting Started - First Steps]({%slug getting-started-first-steps%})
+* [Format Providers - General Information]({%slug radspreadprocessing-formats-and-conversion-general-information%})
+* [What is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
+* [Create, Open and Save Workbooks]({%slug radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks%})

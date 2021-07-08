@@ -141,7 +141,9 @@ You can then create a [CellSelection]({%slug radspreadprocessing-working-with-ce
 
 ## Exporting
 
-The __RadSpreadProcessing__ library supports a variety of formats to which you can export the contents of a workbook. __Example 3__ shows how you can export the previously created workbook to Xlsx format.
+The __RadSpreadProcessing__ library supports a variety of formats to which you can export the contents of a workbook using [FormatProviders]({%slug radspreadprocessing-formats-and-conversion-general-information%}). __Example 3__ shows how you can export the previously created workbook to `.xlsx` format.
+
+For more examples and application scenarios of Importing and Exporting a Workbook to various formats check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
 
 
 #### __[C#] Example 3: Export to Xlsx__
@@ -171,3 +173,5 @@ __RadSpreadsheet__ is a UI control part of the Telerik UI for WPF/Silverlight su
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
  * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
  * [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
+ * [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-general-information%})
+ * [Import/Load and Export/Save RadSpreadProcessing Workbook KB]({%slug import-export-save-load-workbook%}) 
