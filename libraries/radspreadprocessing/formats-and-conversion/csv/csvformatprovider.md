@@ -16,6 +16,8 @@ __CsvFormatProvider__ makes it easy to import and export CSV files. Note that CS
       
 
 To import and export csv files, you need to use the __CsvFormatProvider__ class that appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv namespace. The __CsvFormatProvider__ implements the __IWorkbookFormatProvider__ interface which in turn is contained in the Telerik.Windows.Documents.Spreadsheet.FormatProviders namespace.
+
+>note For more examples and application scenarios of Importing and Exporting a Workbook to various formats using a FormatProvider check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
       
 
 ## Import
@@ -68,3 +70,4 @@ __Example 2__ demonstrates how to export an existing Workbook to a CSV file. The
 
 * [IWorkbookFormatProvider API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider.html)
 * [CsvFormatProvider API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv.CsvFormatProvider.html)
+* [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%})

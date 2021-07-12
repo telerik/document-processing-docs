@@ -17,6 +17,8 @@ __TxtFormatProvider__ makes it easy to import and export TXT files. Note that TX
 
 In order to import and export txt files, you need an instance of __TxtFormatProvider__, which is contained in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt namespace. The __TxtFormatProvider__ implements the interface __IWorkbookFormatProvider__ that appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders namespace.
       
+>note For more examples and application scenarios of Importing and Exporting a Workbook to various formats using a FormatProvider check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
+  
 
 ## Import
 
@@ -57,4 +59,7 @@ __Example 2__ demonstrates how to export an existing Workbook to a TXT file. The
 	}
 {{endregion}}
 
+## See Also
+
+* [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%})
 

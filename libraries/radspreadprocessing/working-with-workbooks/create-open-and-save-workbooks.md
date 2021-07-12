@@ -23,7 +23,9 @@ You have the possibility to create workbooks from scratch, open existing files a
 
 ## Create a Workbook
 
-The fact that __RadSpreadProcessing__ is completely decoupled from UI enables numerous server side scenarios that build a document from scratch. The model allows you to instantiate a new workbook using the nullary constructor of the __Workbook__ class. Note that when a new workbook is created in this manner its __Worksheet__'s collection is still empty. __Example 1__ creates a new workbook and adds its first worksheet, which also becomes the __ActiveWorksheet__ of the workbook.
+The fact that __RadSpreadProcessing__ is completely decoupled from UI enables numerous server side scenarios that build a document from scratch. The model allows you to instantiate a new workbook using the nullary constructor of the __Workbook__ class. Note that when a new workbook is created in this manner its __Worksheet__'s collection is still empty. 
+
+__Example 1__ creates a new workbook and adds its first worksheet, which also becomes the __ActiveWorksheet__ of the workbook.
         
 
 #### __[C#] Example 1: Create a workbook and add a worksheet to it__
@@ -37,7 +39,11 @@ The fact that __RadSpreadProcessing__ is completely decoupled from UI enables nu
 
 ## Open a Workbook
 
-__RadSpreadProcessing__ allows you to easily import a workbook from a number of formats. Currently, the model supports csv, txt and xlsx formats. To import a workbook, you need to instantiate a specific format provider, invoke its __Import()__ method and pass a stream as an argument. __Example 2__ uses a WebClient to download a csv file stored on a server. Further, the code creates a __CsvFormatProvider__ object and invokes its __Import()__ method.
+__RadSpreadProcessing__ allows you to easily import a workbook from a number of formats. Currently, the model supports `csv`, `txt`, `xlsx`, `xls` file formats and `DataTable` objects. 
+
+To import a workbook, you need to instantiate a specific [FormatProvider]({%slug radspreadprocessing-formats-and-conversion-general-information%}), invoke its __Import()__ method and pass a `Stream` or `byte[]` array as an argument. 
+
+__Example 2__ uses a WebClient to download a `xlsx` file stored on a server. Further, the code creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public Workbook Import(Stream stream)` method.
         
 
 #### __[C#] Example 2: Download and import xlsx file__
@@ -57,13 +63,17 @@ __RadSpreadProcessing__ allows you to easily import a workbook from a number of 
 
 
 
-More information about import is available in the [Formats and Conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}) section.
+>note Additional examples about import are available in the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
         
 
 ## Save a Workbook
 
 
-__RadSpreadProcessing__ also allows you to save a workbook into a XLSX, XLS, CSV, TXT, and PDF formats. To export a workbook, you need to instantiate the format provider you would like to use and invoke its __Export()__ method. __Example 3__ demonstrates how to export an existing Workbook to a XLSX file. The snippet creates a new workbook with a single worksheet. Further, it creates a __XlsxFormatProvider__ and invokes its __Export()__ method. Saving to the other formats is done in the same way, using a different format provider class.
+__RadSpreadProcessing__ also allows you to save a workbook into a `XLSX`, `XLS`, `CSV`, `TXT`, and `PDF` file formats as well as into a `DataTable` object. 
+
+To export a workbook, you need to instantiate the [FormatProvider]({%slug radspreadprocessing-formats-and-conversion-general-information%}) you would like to use and invoke its __Export()__ method. 
+
+__Example 3__ demonstrates how to export an existing Workbook to a `XLSX` file. The snippet creates a new workbook with a single worksheet. Further, it creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public void Export(Workbook workbook, Stream output)`. Saving to the other formats is done in the same way, using a different format provider class.
           
 
 #### __[C#] Example 3: Save XLSX file__
@@ -82,7 +92,9 @@ __RadSpreadProcessing__ also allows you to save a workbook into a XLSX, XLS, CSV
 {{endregion}}
 
 
-For security purposes accessing files in Silverlight can be achieved only through user-initiated dialogs. That said, to save workbook's contents into a csv file, you need to use the SaveFileDialog. __Example 4__ passes the stream returned by the dialog and the current workbook to the __Export()__ method of the __CsvFormatProvider__.
+For security purposes accessing files in *Silverlight* can be achieved only through user-initiated dialogs. That said, to save workbook's contents into a `csv` file, you need to use the `SaveFileDialog`. 
+
+__Example 4__ passes the stream returned by the dialog and the current workbook to the __Export()__ method of the [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider %}).
           
 
 #### __[C#] Example 4: Save csv file using SaveFileDialog__
@@ -104,5 +116,12 @@ For security purposes accessing files in Silverlight can be achieved only throug
 	}
 {{endregion}}
 
-More information about export is available in the [Formats and Conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}) section.
-        
+
+>note Additional examples about export are available in the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
+
+## See Also
+
+* [Formats and Conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}) 
+* [Import/Load and Export/Save RadSpreadProcessing Workbook KB]({%slug import-export-save-load-workbook%}) 
+
+

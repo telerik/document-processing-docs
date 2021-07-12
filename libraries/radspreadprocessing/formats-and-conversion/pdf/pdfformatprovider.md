@@ -18,7 +18,9 @@ __PdfFormatProvider__ is part of SpreadProcessing which allows export to PDF for
 ## Using PdfFormatProvider
 
 __PdfFormatProvider__ makes it easy to export a Workbook to a PDF format. Each Worksheet exported to PDF is being divided into pages according to its WorksheetPageSetup. More information about paging a Worksheet is available in the [Worksheet Page Setup]({%slug radspreadprocessing-features-worksheetpagesetup%}) documentation article.
-        
+
+>note For more examples and application scenarios of Importing and Exporting a Workbook to various formats using a FormatProvider check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
+  
 
 ## Prerequisites
 
@@ -66,3 +68,8 @@ The result from the export method is a document that can be opened in any applic
 {{endregion}}
 
 >tip __RadFixedDocument__ is the base class of the __RadPdfProcessing__ library. Additional information on the library and its functionality can be found [here]({%slug radpdfprocessing-overview%}).
+
+## See Also
+
+* [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%})
+
