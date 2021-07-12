@@ -25,7 +25,9 @@ __XlsxFormatProvider__ makes it easy to import and export XLSX (Excel Workbook) 
             
 
 Once you reference the aforementioned assemblies, you need to create an instance of the __XlsxFormatProvider__ in order to import and export XLSX (Excel Workbook) files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx namespace. __XlsxFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
-      
+
+>note For more examples and application scenarios of Importing and Exporting a Workbook to various formats using a FormatProvider check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
+  
 
 ## Import
 
@@ -92,3 +94,7 @@ __Example 2__ demonstrates how to export an existing Workbook to an xlsx file. T
 
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
+
+## See Also
+
+* [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%})

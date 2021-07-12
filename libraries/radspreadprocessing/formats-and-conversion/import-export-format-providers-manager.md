@@ -191,9 +191,14 @@ Currently RadSpreadProcessing supports the following extensions: `.xlsx`, `.xls`
 
 The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the `GetProviderByName()` static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __GetSupportedExtensions()__ that returns an `IEnumeable` of the currently supported file extensions.
 
+>note For more examples and application scenarios of Importing and Exporting a Workbook to various formats using a FormatProvider check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
+  
+
 ## See Also
 
 * [Getting Started - First Steps]({%slug getting-started-first-steps%})
 * [Format Providers - General Information]({%slug radspreadprocessing-formats-and-conversion-general-information%})
 * [What is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
 * [Create, Open and Save Workbooks]({%slug radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks%})
+* [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%})
+
