@@ -40,6 +40,11 @@ This could be achieved by iterating the [RadFixedPage]({%slug radpdfprocessing-m
 
 	public static void FlattenFormFields(RadFixedDocument document)
 	{
+		if (document.AcroForm.FormFields.Count == 0)
+		{
+			return;
+		}
+		
 		foreach (RadFixedPage page in document.Pages)
 		{
 			List<Widget> widgetsToRemove = new List<Widget>();
