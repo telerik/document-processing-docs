@@ -56,7 +56,7 @@ The following code snippets shows how to:
 
 #### __[C#] Import PDF files__
 
-{{region pdfprocessing-create-table-of-contents-page1}}
+{{region pdfprocessing-create-table-of-contents-page2}}
 
 	private static void ImportDocuments(PdfFormatProvider provider, out RadFixedDocument document1, out RadFixedDocument document2)
 	{
@@ -74,7 +74,7 @@ The following code snippets shows how to:
 
 #### __[C#] Create the Table of Contents__
 
-{{region pdfprocessing-create-table-of-contents-page1}}
+{{region pdfprocessing-create-table-of-contents-page3}}
 
 	private static void CreateTOC(RadFixedDocument document1)
 	{
@@ -121,7 +121,7 @@ The following code snippets shows how to:
 
 #### __[C#] Export to PDF file__
 
-{{region pdfprocessing-create-table-of-contents-page1}}
+{{region pdfprocessing-create-table-of-contents-page4}}
 
 	private static void ExportToPdf(PdfFormatProvider provider, RadFixedDocument document1)
 	{
