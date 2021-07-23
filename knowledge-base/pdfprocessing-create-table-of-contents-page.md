@@ -1,6 +1,6 @@
 ---
 title: Create Table of Contents (TOC)
-description: This knowledge base article describes how import PDF documents, merge them, and create a Table of Contents linking to the merged document pages
+description: This knowledge base article describes how import PDF documents, merge them, and create a Table of Contents pointing to the merged document pages
 type: how-to
 page_title: Create Table of Contents (TOC)
 slug: pdfprocessing-create-table-of-contents-page
@@ -28,14 +28,14 @@ res_type: kb
 
 ## Description
 
-This article describes how to import PDF documents, merge them, and create a Table of Contents linking to the merged document pages.
+This article describes how to import PDF documents, merge them, and create a Table of Contents pointing to the merged document pages.
 
 ## Solution
 
 The following code snippets shows how to:
 	1. Import two PDF documents into [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) instances using the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%});
 	2. Merge them into a single RadFixedDocument using the RadFixedDocument`s _Merge()_ method;
-	3. Create a Table of Contents (TOC) using [Link]({%slug radpdfprocessing-model-annotations-and-destinations%}#link) annotations linking to the merged document pages;
+	3. Create a Table of Contents (TOC) using [Link]({%slug radpdfprocessing-model-annotations-and-destinations%}#link) annotations pointing to the merged document pages;
 	4. Export the merged document to a single PDF file.
 
 #### __[C#] Example__
