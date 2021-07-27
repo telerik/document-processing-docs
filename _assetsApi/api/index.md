@@ -82,7 +82,8 @@ article:not(.api-reference)>p:first-child, article:not(.api-reference) h1+p {
 
 </style>
 
-# Telerik Document Processing API Reference
+# API Reference Overview
+
 The API reference section of the documentation contains a list and descriptions of all public available classes, methods and properties of the Telerik Document Processing product.
 
 > This documentation refers to the latest version of Telerik Document Processing libraries.

@@ -252,6 +252,11 @@ defaults:
         title_prefix: "SpreadProcessing "
 -
     scope:
+        path: "libraries/radspreadstreamprocessing"
+    values:
+        title_prefix: "SpreadStreamProcessing "
+-
+    scope:
         path: "libraries/radpdfprocessing"
     values:
         title_prefix: "PdfProcessing "
