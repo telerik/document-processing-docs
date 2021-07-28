@@ -1,6 +1,6 @@
 ---
 title: Merge two document pages into a new single page
-description: This knowledge base article describes how import two PDF documents and merge their first pages into a new single page 
+description: This knowledge base article describes how to import two PDF documents and merge their first pages into a new single page.
 type: how-to
 page_title: Merge two document pages into new a single page
 slug: pdfprocessing-merge-two-pages-from-different-documents-into-a-single-page

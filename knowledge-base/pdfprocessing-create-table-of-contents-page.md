@@ -1,6 +1,6 @@
 ---
 title: Create Table of Contents (TOC)
-description: This knowledge base article describes how import PDF documents, merge them, and create a Table of Contents pointing to the merged document pages
+description: This knowledge base article describes how to import PDF documents, merge them, and create a Table of Contents pointing to the merged document pages.
 type: how-to
 page_title: Create Table of Contents (TOC)
 slug: pdfprocessing-create-table-of-contents-page
