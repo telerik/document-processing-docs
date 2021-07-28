@@ -1,7 +1,6 @@
 ---
 title: Features
 page_title: Features
-description: Features
 slug: radspreadprocessing-formats-and-conversion-xlsx-features
 tags: features
 published: True

@@ -1,6 +1,6 @@
 ---
 title: Replace Image in PDF Document
-description: How to Replace Image in PDF Document
+description: Check this topic to learn how to replace image in PDF document with PdfProcessing.
 type: how-to
 page_title: Replace Image in PDF Document
 slug: replace-image-in-pdf-document

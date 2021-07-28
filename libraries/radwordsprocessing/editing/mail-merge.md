@@ -1,7 +1,6 @@
 ---
 title: Mail Merge
 page_title: Mail Merge
-description: Mail Merge
 slug: radwordsprocessing-editing-mail-merge
 tags: mail,merge
 published: True

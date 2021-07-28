@@ -1,7 +1,6 @@
 ---
 title: General Information
 page_title: General Information
-description: General Information
 slug: radspreadprocessing-formats-and-conversion-general-information
 tags: formats,and,conversion
 published: True

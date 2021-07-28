@@ -1,7 +1,6 @@
 ---
 title: Using TextFormatProvider
 page_title: Using TextFormatProvider
-description: Using TextFormatProvider
 slug: radpdfprocessing-formats-and-conversion-plain-text-textformatprovider
 tags: using,textformatprovider
 published: True

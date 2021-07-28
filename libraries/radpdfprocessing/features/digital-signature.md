@@ -1,7 +1,6 @@
 ---
 title: Digital Signature
 page_title: Digital Signature
-description: Digital Signature
 slug: radpdfprocessing-features-digital-signature
 tags: digital, signature
 position: 2

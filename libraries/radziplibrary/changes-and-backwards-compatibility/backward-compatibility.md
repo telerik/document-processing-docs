@@ -1,7 +1,6 @@
 ---
 title: Backward Compatibility
 page_title: Backward Compatibility
-description: Backward Compatibility
 slug: radziplibrary-backward-compatibility
 tags: backward,compatibility
 published: True

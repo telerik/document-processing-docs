@@ -1,7 +1,6 @@
 ---
 title: Worksheet
 page_title: Worksheet
-description: Worksheet
 slug: radspreadstreamprocessing-model-worksheet
 tags: worksheet
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Fonts
 page_title: Fonts
-description: Fonts
 slug: radpdfprocessing-concepts-fonts
 tags: fonts
 published: True

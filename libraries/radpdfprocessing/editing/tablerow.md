@@ -1,7 +1,6 @@
 ---
 title: TableRow
 page_title: TableRow
-description: TableRow
 slug: radpdfprocessing-editing-tablerow
 tags: tablerow
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Txt
 page_title: Txt
-description: Txt
 slug: radspreadprocessing-formats-and-conversion-txt-txt
 tags: txt
 published: True

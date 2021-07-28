@@ -1,6 +1,6 @@
 ---
 title: Change Cells Content 
-description: Change Cells Content
+description: Learn how to change the content of a table cell using WordsProcessing.
 type: how-to 
 page_title: Change Cells Content
 slug: change-cells-content

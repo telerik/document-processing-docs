@@ -1,7 +1,6 @@
 ---
 title: Format Codes
 page_title: Format Codes
-description: Format Codes
 slug: radspreadprocessing-features-format-codes
 tags: number,formatting, codes
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Image
 page_title: Image
-description: Image
 slug: radpdfprocessing-model-image
 tags: image
 published: True

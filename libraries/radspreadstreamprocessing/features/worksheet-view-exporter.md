@@ -1,7 +1,6 @@
 ---
 title: Worksheet View Exporter
 page_title: Worksheet View Exporter
-description: Worksheet View Exporter
 slug: radspreadstreamprocessing-features-worksheetviewexporter
 tags: worksheet, view, viewport, freeze panes, scale, active cell, selection, gridlines
 published: True

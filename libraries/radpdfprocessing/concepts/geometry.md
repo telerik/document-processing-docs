@@ -1,7 +1,6 @@
 ---
 title: Geometry
 page_title: Geometry
-description: Geometry
 slug: radpdfprocessing-concepts-geometry
 tags: geometry
 published: True

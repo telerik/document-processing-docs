@@ -1,7 +1,6 @@
 ---
 title: Iterating Used Cells
 page_title: Iterating Used Cells
-description: Iterating Used Cells
 slug: radspreadprocessing-working-with-cells-iterating-used-cells
 tags: iterate, used,cells, range,of,a,worksheet
 published: True

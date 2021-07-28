@@ -1,7 +1,6 @@
 ---
 title: Using TxtFormatProvider
 page_title: Using TxtFormatProvider
-description: Using TxtFormatProvider
 slug: radspreadprocessing-formats-and-conversion-txt-txtformatprovider
 tags: using,txtformatprovider
 published: True

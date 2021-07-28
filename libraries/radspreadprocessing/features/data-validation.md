@@ -1,7 +1,6 @@
 ---
 title: Data Validation
 page_title: Data Validation
-description: Filtering
 slug: radspreadprocessing-features-data-validation
 tags: data,validation
 published: True

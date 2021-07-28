@@ -1,6 +1,6 @@
 ---
 title: Missing symbols in PdfProcessing
-description:  Missing symbols in PdfProcessing
+description:  Learn how you can deal with missing symbols in PDF document when exported with PdfProcessing.
 type: how-to troubleshooting
 page_title:  Missing symbols in PdfProcessing
 slug: missing-symbols-in-pdf

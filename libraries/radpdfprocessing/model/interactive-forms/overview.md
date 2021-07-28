@@ -1,7 +1,7 @@
 ---
 title: Overview 
 page_title: Overview  
-description: Overview  
+description: Learn how to work with interactive forms (form fields) in PdfProcessing.  
 slug: radpdfprocessing-model-interactive-forms-overview 
 tags: overview 
 published: True

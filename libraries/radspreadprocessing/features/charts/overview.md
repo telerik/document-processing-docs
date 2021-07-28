@@ -1,7 +1,6 @@
 ---
 title: Overview
 page_title: Charts
-description: Charts
 slug: radspreadprocessing-features-charts
 tags: chart
 published: True

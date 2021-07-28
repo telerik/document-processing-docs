@@ -1,6 +1,6 @@
 ---
 title: RadPdfProcessing manually register font
-description: RadPdfProcessing manually register font
+description: This topic shows you how to manually register a font and use it in a PDF document with PdfProcessing.
 type: how-to
 page_title: RadPdfProcessing manually register font
 slug: load-fonts-with-net-standard

@@ -1,6 +1,6 @@
 ---
 title: Extract the contents of a zip file to a directory
-description: The example is showing how to extract the contents of a zip file to a directory
+description: The example is showing how to extract the contents of a zip file to a directory.
 type: how-to
 page_title: Extract the contents of a zip file to a directory
 slug: zip-library-extract-files-from-archive

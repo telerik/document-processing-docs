@@ -1,7 +1,6 @@
 ---
 title: Cell Styles
 page_title: Cell Styles
-description: Cell Styles
 slug: radspreadstreamprocessing-features-styling-cell-styles
 tags: cell, styles
 published: True

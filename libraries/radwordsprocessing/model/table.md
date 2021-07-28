@@ -1,7 +1,6 @@
 ---
 title: Table
 page_title: Table
-description: Table
 slug: radwordsprocessing-model-table
 tags: table
 published: True

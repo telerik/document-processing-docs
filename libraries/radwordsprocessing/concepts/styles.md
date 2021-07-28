@@ -1,7 +1,6 @@
 ---
 title: Styles
 page_title: Styles
-description: Styles
 slug: radwordsprocessing-concepts-styles
 tags: styles
 published: True

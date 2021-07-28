@@ -1,7 +1,6 @@
 ---
 title: TextBoxField 
 page_title: TextBoxField 
-description: TextBoxField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-textboxfield
 tags: textboxfield
 published: True

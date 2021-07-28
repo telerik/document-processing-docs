@@ -1,7 +1,6 @@
 ---
 title: Style Properties
 page_title: Style Properties
-description: Style Properties
 slug: radwordsprocessing-concepts-style-properties
 tags: style,properties
 published: True

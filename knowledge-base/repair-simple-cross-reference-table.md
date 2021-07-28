@@ -1,6 +1,6 @@
 ---
 title: Repair Simple Cross-Reference Table 
-description: Repair Simple Cross-Reference Table
+description: Describes how to repair a document containing simple invalid cross-reference table.
 type: how-to
 page_title: Repair Simple Cross-Reference Table
 slug: repair-simple-cross-reference-table

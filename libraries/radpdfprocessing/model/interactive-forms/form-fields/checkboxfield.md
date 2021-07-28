@@ -1,7 +1,6 @@
 ---
 title: CheckBoxField 
 page_title: CheckBoxField 
-description: CheckBoxField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-checkboxfield
 tags: checkboxfield
 published: True

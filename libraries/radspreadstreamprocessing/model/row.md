@@ -1,7 +1,6 @@
 ---
 title: Rows
 page_title: Rows
-description: Rows
 slug: radspreadstreamprocessing-model-rows
 tags: row
 published: True

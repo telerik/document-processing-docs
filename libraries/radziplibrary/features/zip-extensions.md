@@ -1,7 +1,6 @@
 ---
 title: Zip Extensions
 page_title: Zip Extensions
-description: Zip Extensions
 slug: radziplibrary-zipextensions
 tags: zip, extensions
 published: True

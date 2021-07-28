@@ -1,7 +1,6 @@
 ---
 title: Pdf
 page_title: PDF
-description: PDF
 slug: radspreadprocessing-formats-and-conversion-pdf-pdf
 tags: pdf
 published: True

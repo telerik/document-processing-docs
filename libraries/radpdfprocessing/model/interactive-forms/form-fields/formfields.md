@@ -1,7 +1,6 @@
 ---
 title: FormField 
 page_title: FormField 
-description: FormField 
 slug: radpdfprocessing-model-interactive-forms-form-fields 
 tags: formfield
 published: True

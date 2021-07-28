@@ -1,7 +1,6 @@
 ---
 title: Handling Exceptions
 page_title: Handling Exceptions
-description: Handling Exceptions
 slug: radpdfprocessing-handling-exceptions
 tags: exception, import
 position: 4

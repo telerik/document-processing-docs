@@ -1,7 +1,6 @@
 ---
 title: Headers and Footers
 page_title: Headers and Footers
-description: Headers and Footers
 slug: radspreadprocessing-features-headers-and-footers
 tags: header, footer
 published: True

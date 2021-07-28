@@ -1,7 +1,6 @@
 ---
 title: Paragraph
 page_title: Paragraph
-description: Paragraph
 slug: radwordsprocessing-model-paragraph
 tags: paragraph
 published: True

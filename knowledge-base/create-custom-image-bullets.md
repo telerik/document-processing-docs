@@ -1,6 +1,6 @@
 ---
 title: Create Custom Image Bullets
-description: Create Custom Image Bullets
+description: Learn how to create a list that has custom image bullets and use it in a PDF document.
 type: how-to
 page_title: Create Custom Image Bullets
 slug: create-custom-image-bullets

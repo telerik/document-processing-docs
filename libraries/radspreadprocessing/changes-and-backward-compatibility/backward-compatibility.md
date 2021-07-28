@@ -1,7 +1,6 @@
 ---
 title: Backwards Compatibility
 page_title: Backwards Compatibility
-description: Backwards Compatibility
 slug: radspreadprocessing-backwards-compatibility
 tags: backward,compatibility
 published: True

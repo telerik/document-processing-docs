@@ -1,7 +1,6 @@
 ---
 title: ZipArchive Entry
 page_title: ZipArchive Entry
-description: ZipArchive Entry
 slug: radziplibrary-ziparchive-entry
 tags: zip, ziparchive
 published: True

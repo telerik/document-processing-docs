@@ -1,7 +1,6 @@
 ---
 title: Chart Data
 page_title: Chart Data
-description: Chart Data
 slug: radspreadprocessing-features-charts-chart-data
 tags: chart, data
 published: True

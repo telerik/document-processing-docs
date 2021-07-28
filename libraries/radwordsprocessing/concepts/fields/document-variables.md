@@ -1,7 +1,7 @@
 ---
 title: Document Variable Field
 page_title: Document Variable Field
-description: Document Variable field is a Field element used to access and display the value, which corresponds to the given field-argument.
+description: Document Variable field is a Field element used to access and display the value, which correspond to a given field-argument.
 slug: radwordsprocessing-concepts-document-variables
 tags: document,variables
 published: True

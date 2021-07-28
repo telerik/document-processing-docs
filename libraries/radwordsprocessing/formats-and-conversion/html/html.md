@@ -1,7 +1,6 @@
 ---
 title: Html
 page_title: Html
-description: Html
 slug: radwordsprocessing-formats-and-conversion-html
 tags: html
 published: True

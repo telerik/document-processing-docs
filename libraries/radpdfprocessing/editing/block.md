@@ -1,7 +1,6 @@
 ---
 title: Block
 page_title: Block
-description: Block
 slug: radpdfprocessing-editing-block
 tags: block
 published: True

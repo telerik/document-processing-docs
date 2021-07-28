@@ -1,7 +1,6 @@
 ---
 title: Xls
 page_title: Xls
-description: Xls
 slug: radspreadprocessing-formats-and-conversion-xls-xls
 tags: xls
 published: True

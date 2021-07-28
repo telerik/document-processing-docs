@@ -1,7 +1,6 @@
 ---
 title: Series
 page_title: Series
-description: Working with Series
 slug: radspreadprocessing-features-charts-series
 tags: series, insert, remove
 published: True

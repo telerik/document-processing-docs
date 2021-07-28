@@ -1,6 +1,6 @@
 ---
 title: Export RadFixedPage to image
-description: Export RadFixedPage to image
+description: Check this topic to learn how you can create images from PDF pages.
 type: how-to
 page_title: Export RadFixedPage to image
 slug: export-radfixedpage-to-image

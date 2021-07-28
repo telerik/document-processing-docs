@@ -1,7 +1,6 @@
 ---
 title: ListBoxField 
 page_title: ListBoxField 
-description: ListBoxField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-listboxfield
 tags: listboxfield
 published: True

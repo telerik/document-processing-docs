@@ -1,7 +1,6 @@
 ---
 title: Overview
 page_title: Pdf Stream Writer - Overview
-description: Pdf Stream Writer - Overview
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview
 tags: pdf,stream,writer
 published: True

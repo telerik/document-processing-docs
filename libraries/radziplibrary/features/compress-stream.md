@@ -1,7 +1,6 @@
 ---
 title: Compressing a Stream
 page_title: Compressing a Stream
-description: Compressing a Stream
 slug: radziplibrary-compress-stream
 tags: compressing,a,stream
 published: True

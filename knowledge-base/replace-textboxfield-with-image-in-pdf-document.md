@@ -1,6 +1,6 @@
 ---
 title: Replace TextBoxField with Image in PDF Document
-description: How to Replace TextBoxField with Image in PDF Document
+description: How to replace textbox field with image in PDF document using PdfProcessing.
 type: how-to
 page_title: Replace TextBoxField with Image in PDF Document
 slug: replace-textboxfield-with-image-in-pdf-document

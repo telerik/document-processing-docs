@@ -1,7 +1,6 @@
 ---
 title: Getting Started
 page_title: Getting Started
-description: Getting Started
 slug: radziplibrary-gettingstarted
 tags: getting,started
 published: True

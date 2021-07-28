@@ -1,7 +1,6 @@
 ---
 title: CombTextBoxField 
 page_title: CombTextBoxField 
-description: CombTextBoxField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield
 tags: combtextboxfield
 published: True

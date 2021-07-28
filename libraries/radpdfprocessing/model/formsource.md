@@ -1,7 +1,6 @@
 ---
 title: Form Source
 page_title: Form Source
-description: Form Source
 slug: radpdfprocessing-model-formsource
 tags: formsource
 published: True

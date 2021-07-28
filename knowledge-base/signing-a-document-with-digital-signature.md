@@ -1,6 +1,6 @@
 ---
 title: Signing a document with a digital signature
-description: Signing a document with a digital signature
+description: Learn how to sign a PDF document with a digital signature using the API of PdfProcessing.
 type: how-to
 page_title: Signing a document with a digital signature
 slug: signing-a-document-with-digital-signature

@@ -1,7 +1,6 @@
 ---
 title: Columns
 page_title: Columns
-description: Columns
 slug: radspreadstreamprocessing-model-columns
 tags: column
 published: True

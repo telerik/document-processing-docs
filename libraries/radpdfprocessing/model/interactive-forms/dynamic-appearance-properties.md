@@ -1,7 +1,6 @@
 ---
 title: Dynamic Appearance Properties 
 page_title: Dynamic Appearance Properties   
-description: Dynamic Appearance Properties   
 slug: radpdfprocessing-model-interactive-forms-dynamic-appearance-properties 
 tags: dynamic appearance properties 
 published: True

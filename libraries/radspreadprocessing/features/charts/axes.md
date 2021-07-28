@@ -1,7 +1,6 @@
 ---
 title: Axes
 page_title: Axes
-description: Axes
 slug: radspreadprocessing-features-charts-axes
 tags: chart, axes, axis
 published: True

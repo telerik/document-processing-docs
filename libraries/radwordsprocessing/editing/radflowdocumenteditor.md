@@ -1,7 +1,6 @@
 ---
 title: RadFlowDocumentEditor
 page_title: RadFlowDocumentEditor
-description: RadFlowDocumentEditor
 slug: radwordsprocessing-editing-radflowdocumenteditor
 tags: radflowdocumenteditor
 published: True

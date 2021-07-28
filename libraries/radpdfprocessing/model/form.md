@@ -1,7 +1,6 @@
 ---
 title: Form
 page_title: Form
-description: Form
 slug: radpdfprocessing-model-form
 tags: form
 published: True

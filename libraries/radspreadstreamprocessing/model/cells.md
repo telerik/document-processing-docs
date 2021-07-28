@@ -1,7 +1,6 @@
 ---
 title: Cells
 page_title: Cells
-description: Cells
 slug: radspreadstreamprocessing-model-cells
 tags: cell
 published: True

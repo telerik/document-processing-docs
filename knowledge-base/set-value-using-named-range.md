@@ -1,6 +1,6 @@
 ---
 title: Set Value using Named Range
-description: Set Value using Named Range
+description: Learn how to set a value to a named range in a worksheet using SpreadProcessing.
 type: how-to
 page_title: Set Value using Named Range
 slug: set-value-using-named-range

@@ -1,7 +1,6 @@
 ---
 title: Widgets 
 page_title: Widgets  
-description: Widgets  
 slug: radpdfprocessing-model-interactive-forms-widgets 
 tags: widgets 
 published: True

@@ -1,7 +1,6 @@
 ---
 title: General Information
 page_title: General Information
-description: General Information
 slug: radpdfprocessing-model-general-information
 tags: model
 published: True

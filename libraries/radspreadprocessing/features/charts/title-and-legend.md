@@ -1,7 +1,6 @@
 ---
 title: Title and Legend
 page_title: Title and Legend
-description: Title and Legend
 slug: radspreadprocessing-features-charts-title-and-legend
 tags: chart, title, legend
 published: True

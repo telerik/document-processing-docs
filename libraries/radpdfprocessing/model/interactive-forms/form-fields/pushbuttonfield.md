@@ -1,7 +1,6 @@
 ---
 title: PushButtonField 
 page_title: PushButtonField 
-description: PushButtonField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield
 tags: pushbuttonfield
 published: True

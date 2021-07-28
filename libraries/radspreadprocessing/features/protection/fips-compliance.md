@@ -1,7 +1,6 @@
 ---
 title: FIPS Compliance
 page_title: FIPS Compliance
-description: FIPS Compliance
 slug: radspreadprocessing-features-protection-fips-compliance
 tags: workbook,protection, fips
 published: True

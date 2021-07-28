@@ -1,7 +1,6 @@
 ---
 title: Settings
 page_title: Settings
-description: Settings
 slug: radwordsprocessing-formats-and-conversion-pdf-settings
 tags: settings, pdf
 published: True

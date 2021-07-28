@@ -1,7 +1,6 @@
 ---
 title: Settings
 page_title: Settings
-description: Settings
 slug: radspreadprocessing-formats-and-conversion-csv-settings
 tags: settings
 published: True

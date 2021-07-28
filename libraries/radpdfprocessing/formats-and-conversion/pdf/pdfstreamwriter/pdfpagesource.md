@@ -1,7 +1,6 @@
 ---
 title: PdfPageSource
 page_title: PdfPageSource
-description: PdfPageSource
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource
 tags: pdf,stream,page,source
 published: True

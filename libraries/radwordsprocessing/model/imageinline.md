@@ -1,7 +1,6 @@
 ---
 title: ImageInline
 page_title: ImageInline
-description: ImageInline
 slug: radwordsprocessing-model-imageinline
 tags: imageinline
 published: True

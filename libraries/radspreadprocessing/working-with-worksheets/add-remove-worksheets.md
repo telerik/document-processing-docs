@@ -1,7 +1,6 @@
 ---
 title: Add, Remove and Reorder Worksheets
 page_title: Add, Remove and Reorder Worksheets
-description: Add, Remove and Reorder Worksheets
 slug: radspreadprocessing-working-with-worksheets-add-remove-worksheets
 tags: add,and,remove,worksheets, move, reorder
 published: True

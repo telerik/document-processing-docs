@@ -1,7 +1,6 @@
 ---
 title: Export
 page_title: Export
-description: Export
 slug: radspreadstreamprocessing-export
 tags: export
 published: True

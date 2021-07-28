@@ -1,7 +1,6 @@
 ---
 title: Watermark
 page_title: Watermark
-description: Watermark
 slug: radwordsprocessing-concepts-watermark
 tags: watermark
 published: True

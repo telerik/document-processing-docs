@@ -1,7 +1,6 @@
 ---
 title: Import Document Element
 page_title: Import Document Element
-description: Import Document Element
 slug: radwordsprocessing-editing-import-document-element
 tags: import, document, element
 published: True

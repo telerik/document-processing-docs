@@ -1,6 +1,6 @@
 ---
 title: Flatten Form Fields
-description: Flatten Form Fields
+description: Flatten the interactive forms in your PDF documents using PdfProcessing.
 type: how-to
 page_title: Flatten Form Fields
 slug: flatten-form-fields
@@ -31,6 +31,8 @@ res_type: kb
 How to flatten [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields %}).
 
 ## Solution
+
+>In R2 2021 this can be achieved with a single method of the AcroForm. Check the [Flatten Form Fields]({%slug radpdfprocessing-flatten-form-fields%}) topic for more details.
 
 This could be achieved by iterating the [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})`s [Annotations]({%slug radpdfprocessing-model-annotations-and-destinations%}) and if the type of the annotation is [Widget]({%slug radpdfprocessing-model-interactive-forms-widgets %}) to flatten its appearance.
 

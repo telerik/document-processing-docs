@@ -1,7 +1,6 @@
 ---
 title: Table
 page_title: Table
-description: Table
 slug: radpdfprocessing-editing-table
 tags: table
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Settings
 page_title: Settings
-description: Settings
 slug: radwordsprocessing-formats-and-conversion-rtf-settings
 tags: settings
 published: True

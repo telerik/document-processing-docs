@@ -1,6 +1,6 @@
 ---
 title: Create Pdf from Image
-description: The example is showing how create a pdf file from a single image
+description: The example is showing how create a pdf file from a single image using PdfProcessing.
 type: how-to
 page_title: Create Pdf from Image
 slug: pdfprocessing-create-pdf-from-image

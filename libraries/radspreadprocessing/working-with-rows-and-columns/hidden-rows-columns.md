@@ -1,7 +1,6 @@
 ---
 title: Hidden Rows and Columns
 page_title: Hidden Rows and Columns
-description: Hidden Rows and Columns
 slug: radspreadprocessing-working-with-rows-and-columns-hiding
 tags: hiding,hidden,rows,and,columns
 published: True

@@ -1,7 +1,6 @@
 ---
 title: Sorting
 page_title: Sorting
-description: Sorting
 slug: radspreadprocessing-features-sorting
 tags: sorting
 published: True

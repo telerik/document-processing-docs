@@ -1,7 +1,6 @@
 ---
 title: History
 page_title: History
-description: History
 slug: radspreadprocessing-features-history
 tags: history
 published: True

@@ -229,13 +229,60 @@ defaults:
     scope:
         path: "knowledge-base"
     values:
-        description_suffix: "- Find other useful information in the Knowledge Base section of the Telerik Document Processing documentation."
+        description_suffix: " Find other useful information in the Knowledge Base section of the Telerik Document Processing documentation."
 -
     scope:
         path: "knowledge-base.html"
     values:
-        description_suffix: "- Find other useful information in the Knowledge Base section of the Telerik Document Processing documentation."
+        description_suffix: "- Find some best practices, tips, and code examples, which you can use in your cross-platform document management process."
 -
+    scope:
+        path: "getting-started"
+    values:
+        description: "Getting Started with Telerik Document Processing can be easy like a piece of cake. Check our {{page.title}} article and learn more."
+-
+    scope:
+        path: "distribution-and-licensing"
+    values:
+        description: "Find out more about Telerik Document Processing {{page.title}} policy and get familiar with all the details. "
+-
+    scope:
+        path: "libraries/radspreadprocessing"
+    values:
+        title_prefix: "SpreadProcessing"
+        title_prefix_separator: " - "
+-
+    scope:
+        path: "libraries/radspreadstreamprocessing"
+    values:
+        title_prefix: "SpreadStreamProcessing"
+        title_prefix_separator: " - "
+-
+    scope:
+        path: "libraries/radpdfprocessing"
+    values:
+        title_prefix: "PdfProcessing"
+        title_prefix_separator: " - "
+-
+    scope:
+        path: "libraries/radwordsprocessing"
+    values:
+        title_prefix: "WordsProcessing"
+        title_prefix_separator: " - "
+-
+    scope:
+        path: "libraries/radziplibrary"
+    values:
+        title_prefix: "ZipLibrary"
+        title_prefix_separator: " - "
+-
+
+    scope:
+        path: "libraries"
+    values:
+        description: "Check our document management article about {{page.title}}."
+-
+
     scope:
         path: "api"
     values:

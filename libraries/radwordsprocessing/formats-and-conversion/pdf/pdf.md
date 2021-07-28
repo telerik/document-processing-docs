@@ -1,7 +1,6 @@
 ---
 title: Pdf
 page_title: Pdf
-description: Pdf
 slug: radwordsprocessing-formats-and-conversion-pdf
 tags: pdf
 published: True

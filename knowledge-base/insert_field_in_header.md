@@ -1,6 +1,6 @@
 ---
 title: Insert Field in Header
-description: Insert Field in Header
+description: Learn how you can insert a field in the header of a document using WordsProcessing.
 type: how-to 
 page_title: Insert Field in Header 
 slug: insert_field_in_header

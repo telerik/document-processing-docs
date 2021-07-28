@@ -1,7 +1,6 @@
 ---
 title: ImageSource
 page_title: ImageSource
-description: ImageSource
 slug: radpdfprocessing-model-imagesource
 tags: imagesource
 published: True

@@ -1,6 +1,6 @@
 ---
 title: Create Custom JpegImageConverter in .Net Standard
-description: Describes how to create a custom implementation of JpegImageConverterBase in .Net Standard
+description: Describes how to create a custom implementation of JpegImageConverterBase in .Net Standard.
 type: how-to
 page_title: Create custom implementation of JpegImageConverterBase in .Net Standard
 slug: create-custom-jpeg-image-converter-net-standard
