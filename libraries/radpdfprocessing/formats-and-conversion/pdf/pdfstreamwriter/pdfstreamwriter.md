@@ -29,13 +29,34 @@ To create an object of type PdfSteamWriter, you should pass it the Stream of the
 
 >PdfStreamWriter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content might not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a using statement. 
 
+### Using PdfStreamWriter with MemoryStream
+
+The constructor of **PdfStreamWriter** enables you to use any class inheriting from **Stream**. In many cases, you might need to not save a file but instead preserve it in the memory, to directly send it to a client, for example. For this scenario, it would be most suitable to use a **MemoryStream** to preserve the document data inside.
+
+> Two important key-points when working with MemoryStream:
+>
+>- Make sure to use the second parameter of PdfStreamWriter's constructor that enables you to leave the stream open. This parameter should be set to true so that you can use the stream after you are done with PdfStreamWriter;
+>- All the data is flushed into the stream when disposing PdfStreamWriter. It is important to dispose the object prior to further processing the MemoryStream so you can ensure that all the required document data is saved inside;
+
+
+#### **[C#] Example 2: Instantiate PdfStreamWriter with MemoryStream**
+
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_3}}
+
+    MemoryStream stream = new MemoryStream();
+	using (PdfStreamWriter writer = new PdfStreamWriter(stream, true))
+	{
+		// ...
+	}
+{{endregion}}
+
 ## PdfStreamWriter Members
 
 The members of the class allow you to set several properties of the document you are working with as well as generate and write new pages.
 
 * **BeginPage()**: The BeginPage() method returns an instance of the **PdfPageStreamWriter** class, which is responsible to draw the content of the page. More information about this class is available in the [PdfPageStreamWriter article](). The overloads of BeginPage() allow you to pass the size and the [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) of the page.
 	
-	#### **[C#] Example 2: Insert a new page into a document**
+	#### **[C#] Example 3: Insert a new page into a document**
 	
 	{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_1}}
 	
@@ -53,7 +74,7 @@ The members of the class allow you to set several properties of the document you
 
 * **WritePage()**: The WritePage() methods enable you to pass an already constructed page object. With the different overloads, you can pass an instance of [**RadFixedPage**]() and [**PdfPageStreamWriter**]().
 	
-	#### **[C#] Example 3: Insert an already generated page into a document**
+	#### **[C#] Example 4: Insert an already generated page into a document**
 	
 	{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_2}}
 	
