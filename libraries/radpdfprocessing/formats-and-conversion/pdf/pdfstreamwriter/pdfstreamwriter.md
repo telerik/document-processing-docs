@@ -31,7 +31,7 @@ To create an object of type PdfSteamWriter, you should pass it the Stream of the
 
 ### Using PdfStreamWriter with MemoryStream
 
-The constructor of **PdfStreamWriter** enables you to use any class inheriting from **Stream**. In many cases, you might need to not save a file but instead preserve it in the memory, to directly send it to a client, for example. For this scenario, it would be most suitable to use a **MemoryStream** to preserve the document data inside.
+The constructor of **PdfStreamWriter** enables you to use any class inheriting from **Stream**. In many cases, you might not need to save a file but instead preserve it in the memory, to directly send it to a client, for example. For this scenario, it would be most suitable to use a **MemoryStream** to preserve the document data inside.
 
 > Two important key-points when working with MemoryStream:
 >
