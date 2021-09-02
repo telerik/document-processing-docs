@@ -14,7 +14,7 @@ position: 1
 
 __XlsmFormatProvider__ makes it easy to import and export Xlsm (Excel Workbook that supports Macros) files. An Xlsm file is a group of zipped files that conform to the Office Open XML schema. That said, the format allows you export all parts of a workbook: worksheets, formula values, formatting, hyperlinks, etc.
 
-> Currently the Macros are only preserved during import export. They cannot be excecuted or changed in the code.
+> Currently the Macros are only preserved during import export. They cannot be executed or changed in the code.
 
 >Unlike the CSV and TXT format providers, the __XlsmFormatProvider__ requires references to the following assemblies:
 
@@ -55,13 +55,11 @@ __Example 1__ shows how to import an Xlsm file using a FileStream. The code assu
 
 {{endregion}}
 
-
-
 ## Export
 
 __Example 2__ demonstrates how to export an existing Workbook to an Xlsm file. The snippet creates a new workbook with a single worksheet. Further, the example creates an __XlsmFormatProvider__ and invokes its __Export()__ method. Note that the __Export()__ method accepts a parameter of type __Stream__ so you can work with any of its inheritors.
 
->Exporting worbook created with RadSpreadProcessing will result in a file with emty Macros (VBA Project).
+>Exporting worbook created with RadSpreadProcessing will result in a file with empty Macros (VBA Project).
 
 #### __[C#] Example 2: Export spreadsheet document to Xlsm (Excel Workbook) file__
 
@@ -97,10 +95,7 @@ __Example 2__ demonstrates how to export an existing Workbook to an Xlsm file. T
         bytes = output.ToArray();
     }
 
-{{endregion}}
-
-
-*This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
+{{endregion}} 
 
 ## See Also
 
