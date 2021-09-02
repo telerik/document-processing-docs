@@ -9,19 +9,19 @@ position: 3
 
 # Page Setup Exporter
 
-The PageSetupExporter alloes you to export the page setting used when the document is printed. the following methods are exposed:
+The __PageSetupExporter__ allows you to export the page settings for printing. The following methods are exposed:
 
-* __SetFitToPagesTall:__
-* __SetFitToPagesWide:__
-* __SetPageOrder:__
-* __SetPageOrientation:__
-* __SetPaperSize:__
-* __SetScaleFactor:__
+* __SetFitToPagesTall:__ Sets the number of pages tall the worksheet will be scaled to when it's printed.
+* __SetFitToPagesWide:__ Sets the number of pages wide the worksheet will be scaled to when it's printed.
+* __SetPageOrder:__ Sets the page order.
+* __SetPageOrientation:__ Sets the page orientation.
+* __SetPaperSize:__ Sets the size of the paper.
+* __SetScaleFactor:__ Sets the scale factor of the printed worksheet. The valid values are from 0.1 to 4.
 
 
 ## Working with PageSetupExporter
 
-Importan part is that you need to place the PageSetupExporer after all cells on the sheet are exported. Example e demostrates how you can create the PageSetup exporter and where to palce it. 
+Importan part is that you need to place the __PageSetupExporer__ after the code for exporting all cells on the sheet. Example 1 demostrates how you can create the __PageSetupExporter__ and where to palce it. 
 
 #### **[C#] Example 1: Using  PageSetupExporter**
 
@@ -33,8 +33,8 @@ Importan part is that you need to place the PageSetupExporer after all cells on 
         {
             using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("Date"))
             {
- 				// export cells here
-
+    			// export cells here
+    
                 using (IPageSetupExporter pageSetupExporter = worksheet.CreatePageSetupExporter())
                 {
                     pageSetupExporter.SetFitToPagesTall(2);
@@ -51,4 +51,4 @@ Importan part is that you need to place the PageSetupExporer after all cells on 
 {{endregion}}
 
 
->IWorksheetViewExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
+>IPageSetupExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
