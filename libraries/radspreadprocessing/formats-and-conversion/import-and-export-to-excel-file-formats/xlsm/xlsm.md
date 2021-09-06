@@ -16,4 +16,4 @@ An XLSM file is a **macro-enabled spreadsheet created by Microsoft Excel** for r
 
 If you would like to work with Xlsm files in SpreadProcessing, check the [Using XlsmFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider%}) article.
 
-> Currently the Macros are only preserved during import export. They cannot be executed or changed in the code.
+> Currently the Macros are only preserved during import and export. They cannot be executed or changed in the code.

@@ -14,7 +14,7 @@ position: 1
 
 __XlsmFormatProvider__ makes it easy to import and export Xlsm (Excel Workbook that supports Macros) files. An Xlsm file is a group of zipped files that conform to the Office Open XML schema. That said, the format allows you export all parts of a workbook: worksheets, formula values, formatting, hyperlinks, etc.
 
-> Currently the Macros are only preserved during import export. They cannot be executed or changed in the code.
+> Currently the Macros are only preserved during import and export. They cannot be executed or changed in the code.
 
 >Unlike the CSV and TXT format providers, the __XlsmFormatProvider__ requires references to the following assemblies:
 
