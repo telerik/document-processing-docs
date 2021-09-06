@@ -21,7 +21,7 @@ The __PageSetupExporter__ allows you to export the page settings for printing. T
 
 ## Working with PageSetupExporter
 
-Importan part is that you need to place the __PageSetupExporer__ after the code for exporting all cells on the sheet. Example 1 demostrates how you can create the __PageSetupExporter__ and where to palce it. 
+An important part is that you need to place the **PageSetupExporer** after the code for exporting all cells on the sheet. Example 1 demonstrates how you can create the **PageSetupExporter** and where to place it.
 
 #### **[C#] Example 1: Using  PageSetupExporter**
 
