@@ -138,7 +138,10 @@ navigation:
         position: 1  
     libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsx:
         title: Xlsx
-        position: 2          
+        position: 2 
+    libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsm:
+        title: Xlsm
+        position: 3           
     libraries/radspreadprocessing/formats-and-conversion/pdf:
         title: Pdf
         position: 3
