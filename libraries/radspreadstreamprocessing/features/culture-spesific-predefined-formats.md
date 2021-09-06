@@ -1,10 +1,9 @@
 ---
 title: Culture Specific Predefined Formats 
 page_title: Culture Specific Predefined Formats
-description:  
+description: This article describes how you can use the predefined culture specific format strings. 
 slug: radspreadstreamprocessing-features-culture-spesific-predefined-formats
 tags: culture, format, currency, number
-platforms: core,blazor,xamarin,winui, wpf, ajax, mvc, silverlight
 published: True
 position: 4
 ---
@@ -12,7 +11,7 @@ position: 4
 # Culture Spescific Predefined Formats 
 
 
-In __R3 2021__ we introduced the __BuiltInNumberFormats__ static class. This class contains several methods that allow you to get a set of predefined formats. These formats are culture specific. This means that they depend on the operating system current culture. And for example if you set a currency format you will get the currency symbol for the current culture. Currently the following methods are exposed:
+Starting with R3 2021, __SpreadStreamProcessing__ exposes the __BuiltInNumberFormats__ static class. This class contains several methods that allow you to get a set of predefined formats. These formats are culture-specific. This means that they depend on the current culture of the operating system. And for example, if you set a currency format you will get the currency symbol for the current culture. Currently, the following methods are exposed:
 
 |Method|Format in en-US culture|Description|
 |---|---|---|
