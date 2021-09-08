@@ -25,9 +25,10 @@ The SeriesBase class is the base class for all series in RadSpreadProcessing. It
 * **SeriesType**: Gets the type of the series.
 * **Title**: Gets or sets the title of the series.
 * **Outline**: Represents the outline of a chart. It is of type [Outline](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Model.Drawing.Theming.Outline.html).
+* __Fill__: Represents the fill of the series. You can use the [SolidFill](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.model.drawing.theming.solidfill) type to set the series color. 
 * **Clone()**: Creates a deep copy of the object and returns the cloning.
 
-The differnt types of charts support different types of series. To meet this need, the base class is inherted by the CategoriesSeriesBase and PointSerierBase base classes representing the different series types.
+The differnt types of charts support different types of series. To meet this need, the base class is inherited by the CategoriesSeriesBase and PointSerierBase base classes representing the different series types.
 
 ### CategorySeriesBase
 
@@ -144,7 +145,7 @@ You can modify the properties of the base class for all series - SeriesBase.
 	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
 	SeriesGroup seriesGroup = chart.SeriesGroups.First();
 	CategorySeriesBase firstSeries = seriesGroup.Series.Where(s => s is CategorySeriesBase).First() as CategorySeriesBase;
-
+	
 	firstSeries.Title = new TextTitle("New title");
 	firstSeries.Values = new WorkbookFormulaChartData(worksheet, new CellRange(2, 3, 5, 3));
 {{endregion}}
