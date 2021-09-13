@@ -14,7 +14,7 @@ position: 6
 
 You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). This article lists the available methods and describes how you can use them.
 
-**RadFlowDocumentEditor** exposes the **ReaplaceText()** method to enable you to find all instances of a string. You can choose between several overloads that allow you to replace the text with one or more [blocks]({%slug radwordsprocessing-model%})(tables or paragrpaphs) or [inlines]({%slug radwordsprocessing-model%})(runs, images, annotation marker). 
+**RadFlowDocumentEditor** exposes the **ReaplaceText()** method to enable you to find and replace all instances of a specified string. You can choose between several overloads that allow you to replace the matched text with one or more [blocks]({%slug radwordsprocessing-model%}) (tables or paragraphs) or [inlines]({%slug radwordsprocessing-model%}) (runs, images, annotation marker). 
 
 > This functionality is available with R3 2021.
 
@@ -26,23 +26,24 @@ You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordspr
 * __ReplaceText(Regex regex, InlineBase inline):__ Replaces all matches of the passed **Regex** with a single inline. 
 * __ReplaceText(Regex regex, IEnumerable\<InlineBase\> inlines):__ Replaces all matches of the passed **Regex** with multiple inlines. 
 
-#### **[C#] Example 1: Replace text with single inline**
+#### **[C#] Example 1: Replace text with a single inline**
 
 {{region cs-radwordsprocessing-editing-replace-document-elements_0}}
 
-    RadFlowDocument document = new RadFlowDocument();
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.InsertText("Content Before");
-    editor.InsertParagraph();
-    editor.InsertText("Replace");
-    editor.InsertParagraph();
-    editor.InsertText("Content After");
-    
-    Run run = new Run(document);
-    run.Text = "New Content";
-    
-    // Replace 
-    editor.ReplaceText("Replace", run, true, true);
+	// Prepare Document 
+	RadFlowDocument document = new RadFlowDocument();
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+	editor.InsertText("Content Before");
+	editor.InsertParagraph();
+	editor.InsertText("Replace");
+	editor.InsertParagraph();
+	editor.InsertText("Content After");
+
+	Run run = new Run(document);
+	run.Text = "New Content";
+
+	// Replace 
+	editor.ReplaceText("Replace", run, true, true);
 
 {{endregion}}
 
@@ -76,9 +77,9 @@ You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordspr
 * __ReplaceText(string oldText, BlockBase block, bool matchCase = true, bool matchWholeWord = false):__ Replaces all occurrences of the specified string with a single block. The last two parameters are optional. If these parameters are not set, the default values are true for matchCase and false for matchWholeWord.
 * __ReplaceText(string oldText, IEnumerable\<BlockBase \> blocks, bool matchCase = true, bool matchWholeWord = false):__ Replaces all occurrences of the specified string with a list of blocks. The last two parameters are optional. If these parameters are not set, the default values are true for matchCase and false for matchWholeWord.
 * __ReplaceText(Regex regex, BlockBase block):__ Replaces all matches of the passed **Regex** with a single block. 
-* __ReplaceText(Regex regex, IEnumerable\<BlockBase\> blocks):__ Replaces all matches of the passed **Regex** with multiple inlines. 
+* __ReplaceText(Regex regex, IEnumerable\<BlockBase\> blocks):__ Replaces all matches of the passed **Regex** with multiple blocks. 
 
-**[C#] Example 3: Replace text with single block**
+**[C#] Example 3: Replace text with a single block**
 
 {{region cs-radwordsprocessing-editing-replace-document-elements_2}}
 
@@ -91,7 +92,7 @@ You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordspr
     editor.InsertParagraph();
     editor.InsertText("Content After");
     
-    var table =  this.GetSampleTable(document);
+    Table table =  this.GetSampleTable(document);
     
     // Replace
     editor.ReplaceText("Replace", table, true, true);
@@ -112,11 +113,11 @@ You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordspr
     editor.InsertText("Content After");
     
     List<BlockBase> newContent = new List<BlockBase>();
-    var table =  this.GetSampleTable(document);
+    Table table =  this.GetSampleTable(document);
     newContent.Add(table);
     newContent.Add(new Paragraph(document));
     
-    var table2 = this.GetSampleTable(document);
+    Table table2 = this.GetSampleTable(document);
     newContent.Add(table);
     newContent.Add(new Paragraph(document));
      
