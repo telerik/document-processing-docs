@@ -35,49 +35,51 @@ The following code snippet is traversing all the files in a directory then add t
 #### __C#__
 
 {{region kb-zip-unzip-multiple-files-password}}
-DefaultEncryptionSettings protectionSettings = new DefaultEncryptionSettings() { Password = "test" };
 
-using (FileStream output = File.OpenWrite("TestZip.zip"))
-{
-    using (ZipArchive zipArchive = new ZipArchive(output, ZipArchiveMode.Create, true, null, null, protectionSettings))
+    DefaultEncryptionSettings protectionSettings = new DefaultEncryptionSettings() { Password = "test" };
+
+    using (FileStream output = File.OpenWrite("TestZip.zip"))
     {
-        string currentDirectory = Directory.GetCurrentDirectory();
-        string[] files = Directory.GetFiles(currentDirectory);
-        IEnumerable<string> txtFiles = files.Where(p => Path.GetExtension(p) == ".txt");
-
-        foreach (string file in txtFiles)
+        using (ZipArchive zipArchive = new ZipArchive(output, ZipArchiveMode.Create, true, null, null, protectionSettings))
         {
-            using (FileStream stream = File.OpenRead(file))
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string[] files = Directory.GetFiles(currentDirectory);
+            IEnumerable<string> txtFiles = files.Where(p => Path.GetExtension(p) == ".txt");
+
+            foreach (string file in txtFiles)
             {
-                using (ZipArchiveEntry entry = zipArchive.CreateEntry(Path.GetFileName(file)))
+                using (FileStream stream = File.OpenRead(file))
                 {
-                    Stream entryStream = entry.Open();
-                    stream.CopyTo(entryStream);
+                    using (ZipArchiveEntry entry = zipArchive.CreateEntry(Path.GetFileName(file)))
+                    {
+                        Stream entryStream = entry.Open();
+                        stream.CopyTo(entryStream);
+                    }
                 }
             }
         }
     }
-}
 
-string unzipDir = "TestZip";
-if (!Directory.Exists(unzipDir))
-{
-    Directory.CreateDirectory(unzipDir);
-}
-
-using (FileStream output = File.OpenRead("TestZip.zip"))
-{
-    using (ZipArchive zipArchive = new ZipArchive(output, ZipArchiveMode.Read, true, null, null, protectionSettings))
+    string unzipDir = "TestZip";
+    if (!Directory.Exists(unzipDir))
     {
-        foreach (ZipArchiveEntry entry in zipArchive.Entries)
+        Directory.CreateDirectory(unzipDir);
+    }
+
+    using (FileStream output = File.OpenRead("TestZip.zip"))
+    {
+        using (ZipArchive zipArchive = new ZipArchive(output, ZipArchiveMode.Read, true, null, null, protectionSettings))
         {
-            using (Stream entryStream = entry.Open())
-            using (FileStream fileStream = File.OpenWrite(string.Format("{0}/{1}", unzipDir, entry.FullName)))
+            foreach (ZipArchiveEntry entry in zipArchive.Entries)
             {
-                entryStream.CopyTo(fileStream);
+                using (Stream entryStream = entry.Open())
+                using (FileStream fileStream = File.OpenWrite(string.Format("{0}/{1}", unzipDir, entry.FullName)))
+                {
+                    entryStream.CopyTo(fileStream);
+                }
             }
         }
     }
-}
+
 {{endregion}}
 
