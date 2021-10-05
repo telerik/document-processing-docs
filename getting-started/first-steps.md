@@ -19,6 +19,10 @@ Since we distribute Telerik Document Processing libraries as an addition to seve
 
 >tipRegardless of the Telerik UI components suite that you use, you can always get the Document Processing assemblies as NuGet packages from the [Telerik NuGet server]({%slug installation-nuget-packages%}).
 
+> The improved Telerik NuGet v3 is now available for beta testing at https://nuget.telerik.com/v3/index.json. The new v3 API is faster, lighter, and reduces the number of requests from NuGet clients. You are welcome to try it.
+
+
+
 | UI Components suite | Installation instructions | Default location of the Document Processing assemblies |
 |--------------------|---------------------------|------------------------------------------------|
 | UI for ASP.NET AJAX | [Installing Telerik UI for ASP.NET AJAX](http://docs.telerik.com/devtools/aspnet-ajax/installation/which-file-do-i-need-to-install) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX [version]\AdditionalLibraries\Bin40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX [version]\AdditionalLibraries\Bin45`</li></ul> |
@@ -138,7 +142,7 @@ Now that you have run your first project example with Telerik Document Processin
 
 * [Explore Features]({%slug getting-started-explore-features%})
 * [Further Information]({%slug getting-started-next-steps%})
- 
+
 ## See Also
 
 * [System Requirements]({%slug installation-system-requirements%})
