@@ -11,7 +11,7 @@ res_type: kb
 
 |Product Version|Product|Author|
 |----|----|----|
-|2021.2.511|RadWordsProcessing|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
+|2021.3.909|RadWordsProcessing|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
 
 ## Description
 
