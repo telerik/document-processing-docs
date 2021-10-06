@@ -15,7 +15,7 @@ Telerik provides NuGet packages with the assemblies for all five Document Proces
 
 If your workflow relies on NuGet for package management, you can take advantage of the packages that we describe in this article. There is no need to download and install the Document Processing libraries by using other methods.
 
-> The improved Telerik NuGet v3 is now available for beta testing at https://nuget.telerik.com/v3/index.json. The new v3 API is faster, lighter, and reduces the number of requests from NuGet clients. You are welcome to try it.
+> The improved Telerik NuGet v3 is now available at https://nuget.telerik.com/v3/index.json. The new v3 API is faster, lighter, and reduces the number of requests from NuGet clients. The old https://nuget.telerik.com/nuget server will be deprecated and we encourage our clients to switch to the v3 API and use https://nuget.telerik.com/v3/index.json to access it.
 
 #### This article contains the following sections:
 
@@ -72,13 +72,13 @@ The following list represents the available NuGet packages for the Document Proc
 
 ## Get the NuGet Packages
 
-Before you can install Telerik NuGet packages, you must configure the Telerik NuGet server (https://nuget.telerik.com/nuget) as a package source in Visual Studio:
+Before you can install Telerik NuGet packages, you must configure the Telerik NuGet server (https://nuget.telerik.com/v3/index.json) as a package source in Visual Studio:
 
 1\. In the Visual Studio Solution Explorer, right-click a Project, select **Manage NuGet Packages...**, and then select the **Settings** icon:
 
 ![installation-nuget-packages 001](images/installation-nuget-packages001.png)
 
-2\. Select **+** to add a new package source and enter https://nuget.telerik.com/nuget in the **Source** field. Add a name for the new package source, for example, **Telerik**:
+2\. Select **+** to add a new package source and enter https://nuget.telerik.com/v3/index.json in the **Source** field. Add a name for the new package source, for example, **Telerik**:
 
 ![installation-nuget-packages 002](images/installation-nuget-packages002.png)
 
