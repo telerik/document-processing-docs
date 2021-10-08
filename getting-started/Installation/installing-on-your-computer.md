@@ -32,7 +32,7 @@ When the installation completes, the Telerik Document Processing assemblies will
 
 ## UI for ASP.NET MVC
 
-[Installing Telerik UI for ASP.NET MVC](http://docs.telerik.com/kendo-ui/aspnet-mvc/introduction#installation)
+[Installing Telerik UI for ASP.NET MVC](https://docs.telerik.com/aspnet-mvc/getting-started/installation/overview)
 
 When the installation completes, the Telerik Document Processing assemblies will be available in the *spreadsheet* sub-folder.
 
