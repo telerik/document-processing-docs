@@ -19,11 +19,12 @@ __PdfFormatProvider__ allows to export PDF documents. Additionally, there are a 
 __PdfExportSettings__ allow controlling how a __Workbook__ is exported to PDF. Using __PdfExportSettings__ you may specify:
         
 
-* __ExportWhat option__: Enumeration specifying whether to export the __Active Sheet__, the __Entire Workbook__ or the current __Selection__.
+* __ExportWhat__: Enumeration specifying whether to export the __Active Sheet__, the __Entire Workbook__ or the current __Selection__.
             
 
-* __IgnorePrintArea option__: Boolean value indicating whether or not to ignore print area when exporting worksheets.
+* __IgnorePrintArea__: Boolean value indicating whether or not to ignore print area when exporting worksheets.
             
+* __IncludeHiddenSheets__: Bolean value indicating whether to include the hidden sheets or to skip them. Default value is `false`.
 
 * __SelectedRanges property__: A list of ranges specifying which areas of the active worksheet should be exported. Using the __ExportWhat.Selection__ option you may specify that you need to export exactly this __SelectedRanges__ from the current worksheet, __ignoring PrintArea and PageBreaks__ from __WorksheetPageSetup__.
 
