@@ -43,7 +43,7 @@ __Example 1__ demonstrates how you can create an ImageInline and add it to a [Pa
 
 
 >tipThe parent __Paragraph__ should belong to the same document that is passed to the constructor of the __ImageInline__.
-          
+
 
 You can add an image at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. Here is how to add an ImageInline at the beginning of a paragraph:
         
@@ -100,7 +100,7 @@ The __ImageInline__ element exposes the following properties:
     * __IsVerticallyFlipped__: Specifies whether the image is vertically flipped.
     * __RotationAngle__: Specifies the rotation angle of the image.    
 	* __LockAspectRatio__: Determines whether the aspect ratio between the width and the height of the image will be preserved. 
-                
+    * __Link__: Specifies the link that would be opened when the image is clicked. The property is of type string, currently it works with the docx format only.            
 
 ## Working with Image Size
 
