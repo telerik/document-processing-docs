@@ -98,12 +98,10 @@ __Example 2__ shows how you can create a __PdfExportSettings__ object and assign
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
 	PdfFormatProvider provider = new PdfFormatProvider();
 	PdfExportSettings settings = new PdfExportSettings();
-	settings.IsEncrypted = true;
-	settings.UserPassword = "D0cum3ntP4ssw0rd";
 	settings.ImageQuality = ImageQuality.Medium;
 	settings.ComplianceLevel = PdfComplianceLevel.PdfA2B;
-	
 	provider.ExportSettings = settings;
+
 {{endregion}}
 
 
