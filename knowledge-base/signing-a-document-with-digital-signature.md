@@ -30,6 +30,8 @@ res_type: kb
 
 How to sign a document with a digital signature using [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 
+>Singing PDF documents is not supported in PdfProcessing for .NET Standard.
+
 ## Solution
 
 In order to sign a **PDF** file with the [PdfProcessing]({%slug radpdfprocessing-overview%}) library, you need an instance of the _System.Security.Cryptography.X509Certificates.[X509Certificate2](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificate2)_ class. One way to create such an instance is to provide the path to a PFX file and the password in an X509Certificate2 constructor, as in the provided example.
