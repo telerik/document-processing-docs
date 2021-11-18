@@ -9,9 +9,9 @@ published: True
 position: 2
 ---
 
-# Exporting Images to PDF
+# Exporting Images in .NET Standard
 
-.NET Standard specification does not define APIs for getting the image properties. SpreadProcessing needs to have access to GDI+ basic graphics functionality when exporting spreadsheets that contain images to PDF. That is why, to allow the library to get the image properties needed for **saving to PDF**, an implementation inheriting the **ImagePropertiesResolverBase** abstract class must be set to the **ImagePropertiesResolver** property of **SpreadExtensibilityManager**.
+.NET Standard specification does not define APIs for getting the image properties. SpreadProcessing needs to have access to GDI+ basic graphics functionality when exporting spreadsheets that contain images. That is why, to allow the library to get the image properties needed for **saving the workbook**, an implementation inheriting the **ImagePropertiesResolverBase** abstract class must be set to the **ImagePropertiesResolver** property of **SpreadExtensibilityManager**.
 
 >note The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the ImagePropertiesResolver class that could be used when exporting the document.
 
