@@ -24,6 +24,7 @@ The __FlattenFormFields__ method does not take any parameters and will flatten a
 	document.AcroForm.FlattenFormFields();
 
 {{endregion}}
+
 ### Using the FlattenFormField method
 
 The __FlattenFormField__ method takes the field that should be flattened as a parameter. The field must belong to the same document.
