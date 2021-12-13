@@ -108,8 +108,7 @@ There are several factors that affect tables measuring calculations. Some of the
         
 
 * __Margin__: Specifies the distances between the table borders outline and the rest of the document's content.
-            
-
+         
 * __Padding__: Set through the TableCell's Padding property, it specifies the distances between cell borders inner contour and the cell content.
             
 * __LayoutType__: Specifies the algorithm, which shall be used to layout table contents. There are two options available in the __TableLayoutType__ enumeration:
@@ -117,10 +116,10 @@ There are several factors that affect tables measuring calculations. Some of the
 	* __AutoFit__ – The table width fits the content unless the needed width is bigger than the available measuring width.
 	* __FixedWidth__ – The table width always fits the available measuring width.
 
+* __HorizontalAlignment__: Specifies the alignment of the table inside the page. 
 
 * __BorderSpacing__: Specifies the distance between all the borders in the table. This distance is measured differently depending on the __BorderCollapse__ option.
-            
-
+         
 * __BorderCollapse__: Specifies the way the border spacing calculations should be done. There are two options:         
 	* __Collapse__: The distance between borders is measured from the middle lines of the borders
 	* __Separate__: The distance between borders is measured from the outer border contour.
