@@ -1,93 +1,12 @@
-[
-  {
-    "Name": "Convert Documents",
-    "ExampleInfo": {
-      "Name": "Convert Documents",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\ConvertDocuments\\ConvertDocuments.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\ConvertDocuments\\ReadMe.md",
-      "DirectoryName": "ConvertDocuments",
-      "ExampleFileNames": [ "ConvertDocuments.csproj", "DocumentConverter.cs", "FileHelper.cs", "Program.cs" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/SpreadProcessing/ConvertDocuments/",
-    "Description": "This project demonstrates how to use RadSpreadProcessing to convert different document formats.",
-    "KeyWords": "Convert Documents,  import,export,xlsx,csv,txt,text,format,provider"
-  },
-  {
-    "Name": "Convert Documents (Silverlight)",
-    "ExampleInfo": {
-      "Name": "Convert Documents",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\ConvertDocuments\\ConvertDocuments_SL.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\ConvertDocuments\\ReadMe.md",
-      "DirectoryName": "ConvertDocuments (Silverlight)",
-      "ExampleFileNames": [ "ConvertDocuments_SL.csproj", "App_SL.xaml", "App_SL.xaml.cs", "ExampleViewModel.cs", "FileHelper_SL.cs", "MainPage.xaml", "MainPage.xaml.cs" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/SpreadProcessing/ConvertDocuments",
-    "Description": "This project demonstrates how to use RadSpreadProcessing to convert different document formats.",
-    "KeyWords": "Convert Documents,  import,export,xlsx,csv,txt,text,format,provider"
-  },
-  {
-    "Name": "Create Modify Export",
-    "ExampleInfo": {
-      "Name": "Create Modify Export",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\CreateModifyExport\\CreateModifyExport.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\CreateModifyExport\\ReadMe.md",
-      "DirectoryName": "CreateModifyExport",
-      "ExampleFileNames": [ "CreateModifyExport.csproj", "ExpenseModel.cs", "Program.cs", "ReadMe.md", "ReportGenerator.cs" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/SpreadProcessing/CreateModifyExport/",
-    "Description": "This project demonstrates how to:\r\n- Create an expense report document from scratch using formulas.\r\n- Modify the document using themes, styles and images.\r\n- Export three expense reports for each individual company department, filtering the data before saving it to PDF files.\r\n\r\nThis example is related to SpreadProcessing blog post series \"SpreadProcessing - Complete Solution to Create, Modify and Export Spreadsheets\". The posts may be found on the following links:\r\n- Part 1: http://blogs.telerik.com/blogs/14-09-09/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-i\r\n- Part 2: http://blogs.telerik.com/blogs/14-11-24/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-ii\r\n- Part 3: http://blogs.telerik.com/blogs/15-03-24/spreadprocessing-complete-solution-to-create-modify-and-export-spreadsheets-part-iii",
-    "KeyWords": "Create Modify Export,  formulas,themes,styles,images,expense,report,save,pdf,export"
-  },
-  {
-    "Name": "Create Modify Export (Silverlight)",
-    "ExampleInfo": {
-      "Name": "Create Modify Export",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\CreateModifyExport\\CreateModifyExport_SL.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\CreateModifyExport\\ReadMe.md",
-      "DirectoryName": "CreateModifyExport (Silverlight)",
-      "ExampleFileNames": [ "CreateModifyExport_SL.csproj", "App_SL.xaml", "App_SL.xaml.cs", "ExpenseModel.cs", "ExpenseViewModel.cs", "MainPage.xaml", "MainPage.xaml.cs", "ToolBarControl_SL.xaml", "ToolBarControl_SL.xaml.cs", "ToolBarViewModel_SL.cs" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/SpreadProcessing/CreateModifyExport/",
-    "Description": "This project demonstrates how to:\r\n- Create an expense report document from scratch using formulas.\r\n- Modify the document using themes, styles and images.\r\n- Export three expense reports for each individual company department, filtering the data before saving it to PDF files.\r\n\r\nThis example is related to SpreadProcessing blog post series \"SpreadProcessing - Complete Solution to Create, Modify and Export Spreadsheets\". The posts may be found on the following links:\r\n- Part 1: http://blogs.telerik.com/blogs/14-09-09/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-i\r\n- Part 2: http://blogs.telerik.com/blogs/14-11-24/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-ii\r\n- Part 3: http://blogs.telerik.com/blogs/15-03-24/spreadprocessing-complete-solution-to-create-modify-and-export-spreadsheets-part-iii",
-    "KeyWords": "Create Modify Export,  formulas,themes,styles,images,expense,report,save,pdf,export"
-  },
-  {
-    "Name": "Generate Documents",
-    "ExampleInfo": {
-      "Name": "Generate Documents",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\GenerateDocuments\\GenerateDocuments.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\GenerateDocuments\\ReadMe.md",
-      "DirectoryName": "GenerateDocuments",
-      "ExampleFileNames": [ "GenerateDocuments.csproj", "DocumentGenerator.cs", "FileHelper.cs", "Program.cs", "ReadMe.md", "SampleData\\Product.cs", "SampleData\\Products.cs" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/SpreadProcessing/GenerateDocuments/",
-    "Description": "This project demonstrates how to use RadSpreadProcessing to generate document from scratch and export it to a file.",
-    "KeyWords": "Generate Documents,  create,scratch,prepare,data,report,invoice,save,export"
-  },
-  {
-    "Name": "Generate Documents (Silverlight)",
-    "ExampleInfo": {
-      "Name": "Generate Documents",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\GenerateDocuments\\GenerateDocuments_SL.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\GenerateDocuments\\ReadMe.md",
-      "DirectoryName": "GenerateDocuments (Silverlight)",
-      "ExampleFileNames": [ "GenerateDocuments_SL.csproj", "App_SL.xaml", "App_SL.xaml.cs", "ExampleViewModel.cs", "FileHelper_SL.cs", "MainPage.xaml", "MainPage.xaml.cs", "SampleData\\Product.cs", "SampleData\\Products.cs" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/SpreadProcessing/GenerateDocuments/",
-    "Description": "This project demonstrates how to use RadSpreadProcessing to generate document from scratch and export it to a file.",
-    "KeyWords": "Generate Documents,  create,scratch,prepare,data,report,invoice,save,export"
-  },
-  {
-    "Name": "Register And Export Pdf Fonts",
-    "ExampleInfo": {
-      "Name": "Register And Export Pdf Fonts",
-      "ProjectPath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\RegisterAndExportPdfFonts\\RegisterAndExportPdfFonts.csproj",
-      "ReadmePath": "C:\\Work\\WPF_Scrum\\Current\\SDK\\Examples\\SpreadProcessing\\RegisterAndExportPdfFonts\\readme.md",
-      "DirectoryName": "RegisterAndExportPdfFonts (Silverlight)",
-      "ExampleFileNames": [ "RegisterAndExportPdfFonts.csproj", "App.xaml", "App.xaml.cs", "BeginEndUpdateCounter.cs", "MainPage.xaml", "MainPage.xaml.cs", "ServiceReferences.ClientConfig", "Service References\\PdfFontsServiceReference\\configuration.svcinfo", "Service References\\PdfFontsServiceReference\\configuration91.svcinfo", "Service References\\PdfFontsServiceReference\\PdfFontsService.disco", "Service References\\PdfFontsServiceReference\\PdfFontsService.wsdl", "Service References\\PdfFontsServiceReference\\PdfFontsService.xsd", "Service References\\PdfFontsServiceReference\\PdfFontsService1.wsdl", "Service References\\PdfFontsServiceReference\\PdfFontsService1.xsd", "Service References\\PdfFontsServiceReference\\PdfFontsService2.xsd", "Service References\\PdfFontsServiceReference\\Reference.cs", "Service References\\PdfFontsServiceReference\\Reference.svcmap" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/document-processing-sdk/contents/SpreadProcessing/RegisterAndExportPdfFonts/",
-    "Description": "This project demonstrates how to:\r\n 1. Check if all used fonts in a Workbook are registered in the FontsRepository before exporting to PDF.\r\n 2. Register the missing fonts using the WCF service from RegisterAndExportPdfFonts.Web project.\r\n 3. Export the Workbook to PDF after all fonts are registered.",
-    "KeyWords": "Register And Export Pdf Fonts,  font,repository,wcf,save"
-  }
-]
+[{"Name":"Convert Documents","ExampleInfo":{"Name":"Convert Documents","DirectoryName":"ConvertDocuments","ExampleFileNames":["ConvertDocuments.csproj","DocumentConverter.cs","FileHelper.cs","Program.cs","ReadMe.md"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/ConvertDocuments/","Description":"This project demonstrates how to use RadSpreadProcessing to convert different document formats.","KeyWords":"Convert Documents,  import,export,xlsx,csv,txt,text,format,provider"},
+{"Name":"Convert Documents","ExampleInfo":{"Name":"Convert Documents","DirectoryName":"ConvertDocuments(.NET Standard)(Silverlight)","ExampleFileNames":["ConvertDocuments_NetStandard.csproj","App.xaml","App.xaml.cs","App_SL.xaml","App_SL.xaml.cs","ConvertDocuments.csproj","ConvertDocuments_NetStandard.csproj","ConvertDocuments_SL.csproj","ExampleViewModel.cs","FileHelper_SL.cs","MainPage.xaml","MainPage.xaml.cs"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/ConvertDocuments/","Description":"This project demonstrates how to use RadSpreadProcessing to convert different document formats.","KeyWords":"Convert Documents,  import,export,xlsx,csv,txt,text,format,provider"},
+{"Name":"Convert Documents","ExampleInfo":{"Name":"Convert Documents","DirectoryName":"ConvertDocuments(Silverlight)","ExampleFileNames":["ConvertDocuments_SL.csproj","App_SL.xaml","App_SL.xaml.cs","ExampleViewModel.cs","FileHelper_SL.cs","MainPage.xaml","MainPage.xaml.cs"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/ConvertDocuments/","Description":"This project demonstrates how to use RadSpreadProcessing to convert different document formats.","KeyWords":"Convert Documents,  import,export,xlsx,csv,txt,text,format,provider"},
+{"Name":"Create Modify Export","ExampleInfo":{"Name":"Create Modify Export","DirectoryName":"CreateModifyExport","ExampleFileNames":["CreateModifyExport.csproj","ExpenseModel.cs","Program.cs","ReadMe.md","ReportGenerator.cs"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/CreateModifyExport/","Description":"This project demonstrates how to:\r\n- Create an expense report document from scratch using formulas.\r\n- Modify the document using themes, styles and images.\r\n- Export three expense reports for each individual company department, filtering the data before saving it to PDF files.\r\n\r\nThis example is related to SpreadProcessing blog post series \"SpreadProcessing - Complete Solution to Create, Modify and Export Spreadsheets\". The posts may be found on the following links:\r\n- Part 1: http://blogs.telerik.com/blogs/14-09-09/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-i\r\n- Part 2: http://blogs.telerik.com/blogs/14-11-24/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-ii\r\n- Part 3: http://blogs.telerik.com/blogs/15-03-24/spreadprocessing-complete-solution-to-create-modify-and-export-spreadsheets-part-iii","KeyWords":"Create Modify Export,  formulas,themes,styles,images,expense,report,save,pdf,export"},
+{"Name":"Create Modify Export","ExampleInfo":{"Name":"Create Modify Export","DirectoryName":"CreateModifyExport(.NET Standard)(Silverlight)","ExampleFileNames":["CreateModifyExport_NetStandard.csproj","App_SL.xaml","App_SL.xaml.cs","CreateModifyExport.csproj","CreateModifyExport_NetStandard.csproj","CreateModifyExport_SL.csproj","ExpenseViewModel.cs","MainPage.xaml","MainPage.xaml.cs","ToolBarControl_SL.xaml","ToolBarControl_SL.xaml.cs","ToolBarViewModel_SL.cs"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/CreateModifyExport/","Description":"This project demonstrates how to:\r\n- Create an expense report document from scratch using formulas.\r\n- Modify the document using themes, styles and images.\r\n- Export three expense reports for each individual company department, filtering the data before saving it to PDF files.\r\n\r\nThis example is related to SpreadProcessing blog post series \"SpreadProcessing - Complete Solution to Create, Modify and Export Spreadsheets\". The posts may be found on the following links:\r\n- Part 1: http://blogs.telerik.com/blogs/14-09-09/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-i\r\n- Part 2: http://blogs.telerik.com/blogs/14-11-24/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-ii\r\n- Part 3: http://blogs.telerik.com/blogs/15-03-24/spreadprocessing-complete-solution-to-create-modify-and-export-spreadsheets-part-iii","KeyWords":"Create Modify Export,  formulas,themes,styles,images,expense,report,save,pdf,export"},
+{"Name":"Create Modify Export","ExampleInfo":{"Name":"Create Modify Export","DirectoryName":"CreateModifyExport(Silverlight)","ExampleFileNames":["CreateModifyExport_SL.csproj","App_SL.xaml","App_SL.xaml.cs","ExpenseModel.cs","ExpenseViewModel.cs","MainPage.xaml","MainPage.xaml.cs","ToolBarControl_SL.xaml","ToolBarControl_SL.xaml.cs","ToolBarViewModel_SL.cs"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/CreateModifyExport/","Description":"This project demonstrates how to:\r\n- Create an expense report document from scratch using formulas.\r\n- Modify the document using themes, styles and images.\r\n- Export three expense reports for each individual company department, filtering the data before saving it to PDF files.\r\n\r\nThis example is related to SpreadProcessing blog post series \"SpreadProcessing - Complete Solution to Create, Modify and Export Spreadsheets\". The posts may be found on the following links:\r\n- Part 1: http://blogs.telerik.com/blogs/14-09-09/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-i\r\n- Part 2: http://blogs.telerik.com/blogs/14-11-24/spreadprocessing---complete-solution-to-create-modify-and-export-spreadsheets---part-ii\r\n- Part 3: http://blogs.telerik.com/blogs/15-03-24/spreadprocessing-complete-solution-to-create-modify-and-export-spreadsheets-part-iii","KeyWords":"Create Modify Export,  formulas,themes,styles,images,expense,report,save,pdf,export"},
+{"Name":"Export Chart","ExampleInfo":{"Name":"Export Chart","DirectoryName":"ExportChart","ExampleFileNames":["ExportChart_WPF.csproj","App.config","DocumentConverter.cs","Program.cs","ReadMe.md","WpfPdfChartImageRenderer.cs"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/ExportChart/","Description":"This project demonstrates how to use RadSpreadProcessing to convert an XLSX file containing a chart to PDF. This requires a reference to the **Telerik.Windows.Controls.Spreadsheet** and **Telerik.Windows.Controls.Chart** assemblies of the [Telerik UI for WPF](https://docs.telerik.com/devtools/wpf/introduction) suite. \n\r\nThe examples uses the ChartModelToImageConverter class which is readily available in the Telerik.Windows.Controls.Spreadsheet assembly and uses internally the [RadChartView](https://docs.telerik.com/devtools/wpf/controls/radchartview/overview) control to visualize the chart and create an image.","KeyWords":"Export Chart,  import,export,chart,pdf"},
+{"Name":"Generate Documents","ExampleInfo":{"Name":"Generate Documents","DirectoryName":"GenerateDocuments","ExampleFileNames":["GenerateDocuments.csproj","DocumentGenerator.cs","FileHelper.cs","Program.cs","ReadMe.md","SampleData\\Product.cs","SampleData\\Products.cs"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/GenerateDocuments/","Description":"This project demonstrates how to use RadSpreadProcessing to generate document from scratch and export it to a file.","KeyWords":"Generate Documents,  create,scratch,prepare,data,report,invoice,save,export"},
+{"Name":"Generate Documents","ExampleInfo":{"Name":"Generate Documents","DirectoryName":"GenerateDocuments(.NET Standard)(Silverlight)","ExampleFileNames":["GenerateDocuments_NetStandard.csproj","App.xaml","App.xaml.cs","App_SL.xaml","App_SL.xaml.cs","ExampleViewModel.cs","FileHelper_SL.cs","GenerateDocuments.csproj","GenerateDocuments_NetStandard.csproj","GenerateDocuments_SL.csproj","MainPage.xaml","MainPage.xaml.cs"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/GenerateDocuments/","Description":"This project demonstrates how to use RadSpreadProcessing to generate document from scratch and export it to a file.","KeyWords":"Generate Documents,  create,scratch,prepare,data,report,invoice,save,export"},
+{"Name":"Generate Documents","ExampleInfo":{"Name":"Generate Documents","DirectoryName":"GenerateDocuments(Silverlight)","ExampleFileNames":["GenerateDocuments_SL.csproj","App_SL.xaml","App_SL.xaml.cs","ExampleViewModel.cs","FileHelper_SL.cs","MainPage.xaml","MainPage.xaml.cs","SampleData\\Product.cs","SampleData\\Products.cs"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/GenerateDocuments/","Description":"This project demonstrates how to use RadSpreadProcessing to generate document from scratch and export it to a file.","KeyWords":"Generate Documents,  create,scratch,prepare,data,report,invoice,save,export"},
+{"Name":"Register And Export Pdf Fonts","ExampleInfo":{"Name":"Register And Export Pdf Fonts","DirectoryName":"RegisterAndExportPdfFonts(Silverlight)","ExampleFileNames":["RegisterAndExportPdfFonts_SL.csproj","App.xaml","App.xaml.cs","BeginEndUpdateCounter.cs","MainPage.xaml","MainPage.xaml.cs","ServiceReferences.ClientConfig","Service References\\PdfFontsServiceReference\\configuration.svcinfo","Service References\\PdfFontsServiceReference\\configuration91.svcinfo","Service References\\PdfFontsServiceReference\\PdfFontsService.disco","Service References\\PdfFontsServiceReference\\PdfFontsService.wsdl","Service References\\PdfFontsServiceReference\\PdfFontsService.xsd","Service References\\PdfFontsServiceReference\\PdfFontsService1.wsdl","Service References\\PdfFontsServiceReference\\PdfFontsService1.xsd","Service References\\PdfFontsServiceReference\\PdfFontsService2.xsd","Service References\\PdfFontsServiceReference\\Reference.cs","Service References\\PdfFontsServiceReference\\Reference.svcmap"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/RegisterAndExportPdfFonts/","Description":"This project demonstrates how to:\r\n 1. Check if all used fonts in a Workbook are registered in the FontsRepository before exporting to PDF.\r\n 2. Register the missing fonts using the WCF service from RegisterAndExportPdfFonts.Web project.\r\n 3. Export the Workbook to PDF after all fonts are registered.","KeyWords":"Register And Export Pdf Fonts,  font,repository,wcf,save"},
+{"Name":"Register And Export Pdf Fonts . Web","ExampleInfo":{"Name":"Register And Export Pdf Fonts . Web","DirectoryName":"RegisterAndExportPdfFonts.Web","ExampleFileNames":["RegisterAndExportPdfFonts.Web.csproj","PdfFontsService.svc","PdfFontsService.svc.cs","RegisterAndExportPdfFontsTestPage.aspx","RegisterAndExportPdfFontsTestPage.html","Silverlight.js","Web.config","Web.Debug.config","Web.Release.config"]},"GitHubPath":"https://api.github.com/repos/telerik/xaml-sdk/contents/SpreadProcessing/RegisterAndExportPdfFonts.Web/","Description":"## Register And Export Pdf Fonts . Web\nThis project demonstrates how to return the fonts data needed for SpreadProcessing PDF export using a WCF service. The service from this project is consumed by the Silverlight project RegisterAndExportPdfFonts.","KeyWords":"Register And Export Pdf Fonts . Web"}]

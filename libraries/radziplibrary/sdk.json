@@ -11,15 +11,15 @@
     "KeyWords": "Create Zip Archive,  ziparchive"
   },
   {
-    "Name": "Create Zip Archive (.NET Standard)",
+    "Name": "Create Zip Archive(.NET Standard)",
     "ExampleInfo": {
-      "Name": "Create Zip Archive (.NET Standard)",
-      "DirectoryName": "CreateZipArchive (.NET Standard)",
-      "ExampleFileNames": [ "CreateZipArchive_NetStandard.csproj", "Program.cs", "ReadMe.md" ]
+      "Name": "Create Zip Archive(.NET Standard)",
+      "DirectoryName": "CreateZipArchive(.NET Standard)",
+      "ExampleFileNames": [ "CreateZipArchive_NetStandard.csproj", "CreateZipArchive_NetStandard.csproj" ]
     },
     "GitHubPath": "https://api.github.com/repos/telerik/xaml-sdk/contents/ZipLibrary/CreateZipArchive/",
     "Description": "This project demonstrates how to use ZipLibrary to create a zip archive.",
-    "KeyWords": "Create Zip Archive, ziparchive"
+    "KeyWords": "Create Zip Archive,  ziparchive"
   },
   {
     "Name": "Extract Zip Archive To Directory",
