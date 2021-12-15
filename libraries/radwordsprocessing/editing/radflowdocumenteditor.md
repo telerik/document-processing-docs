@@ -106,7 +106,7 @@ The result looks like __Figure 1__ shows.
 ![Rad Words Processing Editing Rad Flow Document Editor 01](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_01.png)
 
 >The current [CharacterFormatting](#changing-current-styles) and [ParagraphFormatting](#changing-current-styles) is applied for each Run and Paragraph that is created.
-              
+
 
 ### Inserting Paragraph
 
@@ -198,7 +198,7 @@ Note that in this case the result is automatically updated when a document is op
             
 
 >tipYou can find an extensive list of field codes in the Office Open XML standard documentation - [ECMA-376](http://www.ecma-international.org/publications/standards/Ecma-376.htm) 4th edition, December 2012, Chapter 17.16.6 Field Definitions.
-              
+
 
 ### Inserting Images
 
@@ -245,7 +245,7 @@ The following methods can be used to insert [Table]({%slug radwordsprocessing-mo
             
 
 >The formatting specified with the [TableFormatting](#changing-current-styles) property is applied to the inserted table. After the insert operation the editor is automatically placed directly __after__ the inserted table (not inside it).
-              
+
 
 Here is how to insert a table with the "TableGrid" built-in style:
             
@@ -304,6 +304,30 @@ Formatting options are most useful when inserting multiple elements that should 
 
 #### Figure 7: The inserted in Example 11 content
 ![Rad Words Processing Editing Rad Flow Document Editor 07](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_07.png)
+
+
+
+## Deleting Content
+
+#### __[C#] Example 12: Delete content between existing elements__
+
+{{region cs-radwordsprocessing-editing-radflowdocumenteditor_13}}
+
+ 	var document = new RadFlowDocument();
+ 	var editor = new RadFlowDocumentEditor(document);
+ 	
+ 	editor.InsertParagraph();
+ 	var startRun = editor.InsertText("Start");
+ 	editor.InsertParagraph();
+ 	var middleRun = editor.InsertText("Middle");
+ 	editor.InsertParagraph();
+ 	var endRun = editor.InsertText("End");
+ 	
+ 	editor.DeleteContent(startRun, endRun, false);
+
+{{endregion}}
+
+The above method will delete everything between the "start" and "end" elements. You can choose if the "start" and "end" elements should be deleted with the last parameter.
 
 ## See Also
 
