@@ -76,7 +76,7 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
   
 {{endregion}}
 
-#### Example 4: Inserting a content control using content control properties
+#### Example 4: Inserting a Rich Text content control using content control properties
 
 #### __C#__
 
@@ -90,10 +90,27 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
 
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
     editor.InsertStructuredDocumentTag(sdtProperties);
-
+    editor.MoveToInlineStart(control.End);
+    Run span = editor.InsertText("Rich Text Content Control"); // Insert content inside the content control
+    span.FontWeight = FontWeights.Bold; // Style the content
 {{endregion}}
 
-#### Example 5: Remove a content control
+#### Example 5: Inserting a CheckBox content control using content control properties
+
+#### __C#__
+
+{{region wordsprocessing-model-working-with-content-controls_6}}
+
+    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+    CheckBoxProperties checkBoxProperties = new CheckBoxProperties();
+    SdtRangeStart sdt = editor.InsertStructuredDocumentTag(checkBoxProperties);
+    editor.MoveToInlineEnd(sdt);
+    char text = (char)checkBoxProperties.UncheckedState.CharacterCode;
+    editor.InsertText(text.ToString());
+    editor.MoveToInlineEnd(sdt.End);
+{{endregion}}
+
+#### Example 6: Remove a content control
 
 #### __C#__
 
@@ -106,7 +123,7 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
 
 {{endregion}}
 
-#### Example 6: Insert a content control to a specific position
+#### Example 7: Insert a content control to a specific position
 
 >note When using the InsertStructuredDocumentTag() method and passing start and end elements, make sure that the elements are not already part of a content control.  An exception to the rule are the rich text and repeating section content controls, which can fully contain other controls, with the restriction that they cannot intersect their ranges. 
 
