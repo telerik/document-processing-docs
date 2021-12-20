@@ -190,7 +190,7 @@ With the nested mail merge functionality, it is possible to add all items to a s
 
 ![Rad Words Processing mail merge](images/RadWordsProcessing_MailMerge_01.png)
 
-If you want separate the items on several rows you need to clowse the group on the next row
+If you want to separate the items into several rows you need to close the group on the next row
 
 >caption Figure 2: Mail Merging on multiple rows row and the results
 
