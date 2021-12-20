@@ -95,7 +95,7 @@ __Example 4__ performs the mail merge operation over a previously defined templa
 
 ## Nested Mail Merge
 
-The nested mail merge functionality is supported from R1 2022. It allows you to merge data sources that contain nested data. For example your business object can contain a list of other objects and this functionality allows accessing the properties of the underlying objects. In order to use the underling objects you need to  declare a group. Currently the following group tags are supported. 
+The nested mail merge functionality is supported from R1 2022. It allows you to merge data sources that contain nested data. For example, your business object can contain a list of other objects and this functionality allows accessing the properties of the underlying objects. In order to use the underlying objects, you need to  declare a group. Currently, the following group tags are supported. 
 
 * BeginGroup/EndGroup 
 * TableStart/TableEnd
