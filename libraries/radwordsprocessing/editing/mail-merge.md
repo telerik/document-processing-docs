@@ -186,7 +186,7 @@ Now you need to add the fields using the specific supported names. In this examp
 
 With the nested mail merge functionality, it is possible to add all items to a single line. This is achieved by adding the group and regular fields to a single paragraph.
 
->caption Figure 1: Mail Merging on single row and the results
+>caption Figure 1: Mail Merging on a single row and the results
 
 ![Rad Words Processing mail merge](images/RadWordsProcessing_MailMerge_01.png)
 
