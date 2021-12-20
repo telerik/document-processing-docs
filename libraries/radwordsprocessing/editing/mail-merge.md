@@ -184,7 +184,7 @@ Now you need to add the fields using the specific supported names. In this examp
 
 ### One Row vs Multiline Mail Merge
 
-With the nested mail merge functionality it is possible to add all items to a single line. This is achieved by adding the group and regular fields to a single paragraph.
+With the nested mail merge functionality, it is possible to add all items to a single line. This is achieved by adding the group and regular fields to a single paragraph.
 
 >caption Figure 1: Mail Merging on single row and the results
 
