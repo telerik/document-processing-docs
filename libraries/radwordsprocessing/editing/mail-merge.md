@@ -103,7 +103,7 @@ The nested mail merge functionality is supported from R1 2022. It allows you to 
 * GroupStart/GroupEnd
 
 
-Currently, all tags work equally and more that one option exist in order to improve the readability of the documents. The bellow example demonstrates the how you can use the nested mail merge. 
+Currently, all tags work equally and more than one option exist in order to improve the readability of the documents. The below example demonstrates how you can use the nested mail merge. 
 
 First you need to define a data source that contains an `IEnumerable` of objects.
 
