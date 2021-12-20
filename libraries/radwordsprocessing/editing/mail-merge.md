@@ -147,7 +147,7 @@ First you need to define a data source that contains an `IEnumerable` of objects
 
 {{endregion}}
 
-Now you need to add the fields using the specific supported names. In this example we are adding the fields to the table an we will use the TableStart/TableEnd tags, but this is not mandatory and you can use tag of your choosing.
+Now you need to add the fields using the specific supported names. In this example we are adding the fields to the table and we will use the TableStart/TableEnd tags, but this is not mandatory and you can use a tag of your choosing.
 
 #### __[C#] Example 6: Perform nested mail merge__
 
