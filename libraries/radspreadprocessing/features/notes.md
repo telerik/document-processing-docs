@@ -36,7 +36,7 @@ Since R1 2022 the SpreadProcessing library supports working with notes. The Note
 
 To add a note you need to specify the related cell, the position which is a cell index, the content, and the author. Specifying the position is optional and by default the note is placed next to related cell. 
 
-__[C#] Example 1: Add note__
+#### __[C#] Example 1: Add note__
 
 {{region cs-radspreadprocessing-features-notes_0}}
 	
@@ -48,7 +48,7 @@ The above snipped will add a note in cell B2 with position on cell F6.
 
 ### Removing Notes
 
-__[C#] Example 2: Remove note__
+#### __[C#] Example 2: Remove note__
 
 {{region cs-radspreadprocessing-features-notes_1}}
 	
@@ -67,7 +67,7 @@ You can use on of the following methods to show/hide single or all comments:
 * __Hide(SpreadsheetNote note):__ Hide the specified note from the collection.
 * __Show(SpreadsheetNote note):__ Show the specified note from the collection.
 
-__[C#] Example 3:Hide note__
+#### __[C#] Example 3:Hide note__
 
 {{region cs-radspreadprocessing-features-notes_1}}
 	
