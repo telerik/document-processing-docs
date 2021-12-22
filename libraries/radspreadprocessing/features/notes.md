@@ -34,7 +34,7 @@ Since R1 2022 the SpreadProcessing library supports working with notes. The Note
 
 ### Adding notes
 
-To add a note you need to specify the related cell, the position which is a cell index, the content, and the author. Specifying the position is optional and by default the note is placed next to related cell. 
+To add a note you need to specify the related cell, the position which is a cell index, the content, and the author. Specifying the position is optional and by default, the note is placed next to the related cell. 
 
 #### __[C#] Example 1: Add note__
 
@@ -44,7 +44,7 @@ To add a note you need to specify the related cell, the position which is a cell
 
 {{endregion}}
 
-The above snipped will add a note in cell B2 with position on cell F6.
+The above snippet will add a note in cell B2 with a position on cell F6.
 
 ### Removing Notes
 
@@ -60,7 +60,7 @@ The above snipped will add a note in cell B2 with position on cell F6.
 
 ### Hide/Show notes
 
-You can use on of the following methods to show/hide single or all comments:
+You can use one of the following methods to show/hide single or all comments:
 
 * __ShowAll:__ Shows all notes in the collection.
 * __HideAll:__ Hides all notes in the collection.
@@ -75,3 +75,11 @@ You can use on of the following methods to show/hide single or all comments:
     worksheet.Notes.Hide(note);
 
 {{endregion}}
+
+### Events
+
+The notes collection exposes the following events:
+* __Changing:__ Occurs when the collection is being changed.
+* __Changed:__ Occurs when the collection has changed.
+* __NotesVisiblilityChanged:__ Occurs when the visibility of all notes has been changed at the same time.
+
