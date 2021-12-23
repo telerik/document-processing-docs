@@ -103,7 +103,7 @@ The nested mail merge functionality is supported from R1 2022. It allows you to 
 * GroupStart/GroupEnd
 
 
-Currently, all tags work equally and more than one option exist in order to improve the readability of the documents. The below example demonstrates how you can use the nested mail merge. 
+Currently, all tags work equally and more than one option exists in order to improve the readability of the documents. The below example demonstrates how you can use the nested mail merge. 
 
 First you need to define a data source that contains an `IEnumerable` of objects.
 
@@ -152,8 +152,9 @@ Now you need to add the fields using the specific supported names. In this examp
 #### __[C#] Example 6: Perform nested mail merge__
 
 {{region cs-radwordsprocessing-editing-mail-merge_5}}
+
     var document = new RadFlowDocument();
-	var editor = new RadFlowDocumentEditor(document);
+    var editor = new RadFlowDocumentEditor(document);
 
     editor.InsertParagraph();
     editor.InsertField("MERGEFIELD TeamName", "");
