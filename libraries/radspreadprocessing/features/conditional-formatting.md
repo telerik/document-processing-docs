@@ -18,40 +18,40 @@ This article describes the supported formatting rules, how to create and how to 
 
 ## Rules
 
-SpreadProcessing supports many different types of formatting rules. Each rule implements the base **ConditionalFormattingRule** class. All of them are listed in **Table 1**.
+SpreadProcessing supports many different types of formatting rules. Each rule implements the base `ConditionalFormattingRule` class. All of them are listed in **Table 1**.
 
 #### Table 1: Supported formatting rules
 
 | Rule | Description |
 |---|---|
-| ColorScaleRule | Specificies a gradient range of colors that is used to give additional meaning to data by assigning certain values to colors in the gradient spectrum. |
-| DataBarRule | A graphical representation of the cells’ content. |
-| IconSetRule | Specifies a collection of icons that can be used to comment and classify data into categories. |
-| BetweenRule | This conditional formatting rule determines whether a cell value is inside a specified range. |
-| NotBetweenRule | This conditional formatting rule determines whether a cell value is outside a specified range. |
-| EqualToRule | Determines whether a cell value matches a specified value. |
-| NotEqualToRule | Determines whether a cell value doesn't match a specified value. |
-| GreaterThanOrEqualToRule | Determines whether a cell value matches specified value or it is greater. |
-| GreaterThanRule | Determines whether a cell value is greater than the specified value. |
-| LessThanOrEqualToRule | Determines whether a cell value matches specified value or it is smaller. |
-| LessThanRule | Determines whether a cell value is smaller than the specified value. |
-| HasErrorRule | Matches cell values that contain errors. |
-| HasNoErrorRule | Matches cell values that do not contain errors. |
-| BeginsWithRule | Matches cells whose values begin with a specified string. |
-| EndsWith | Matches cells whose values end with a specified string. |
-| ContainsBlanksRule | Matches blank cells. |
-| NotContainsBlanksRule | Matches non-empty cells. |
-| ContainsRule | This conditional formatting rule highlights cells containing given text. |
-| NotContainsRule | This conditional formatting rule highlights cells that do not contain given text. |
-| TopRule | This conditional formatting rule highlights cells whose values fall in the top N bracket. It can also work for N % instead of N items. It has two Boolean configuration properties: Items and Percent, which act like switches for these behaviors. |
-| BottomRule | This conditional formatting rule highlights cells whose values fall in the bottom N bracket. It can also work for N % instead of N items. It has two Boolean configuration properties: Items and Percent, which act like switches for these behaviors. |
-| DuplicateValuesRule | Matches values that are duplicate inside a specified range. |
-| UniqueValuesRule | Matches values that are unique inside a specified range. |
-| ValueDistributionRule | This conditional formatting rule highlights cells that are above or below the average for all values in the range. It has four Boolean configuration properties – AboveAverage, AboveOrEqualToAverage, BelowAverage, BelowOrEqualToAverage. |
+| **ColorScaleRule** | Specificies a gradient range of colors that is used to give additional meaning to data by assigning certain values to colors in the gradient spectrum. |
+| **DataBarRule** | A graphical representation of the cells’ content. |
+| **IconSetRule** | Specifies a collection of icons that can be used to comment and classify data into categories. |
+| **BetweenRule** | This conditional formatting rule determines whether a cell value is inside a specified range. |
+| **NotBetweenRule** | This conditional formatting rule determines whether a cell value is outside a specified range. |
+| **EqualToRule** | Determines whether a cell value matches a specified value. |
+| **NotEqualToRule** | Determines whether a cell value doesn't match a specified value. |
+| **GreaterThanOrEqualToRule** | Determines whether a cell value matches specified value or it is greater. |
+| **GreaterThanRule** | Determines whether a cell value is greater than the specified value. |
+| **LessThanOrEqualToRule** | Determines whether a cell value matches specified value or it is smaller. |
+| **LessThanRule** | Determines whether a cell value is smaller than the specified value. |
+| **HasErrorRule** | Matches cell values that contain errors. |
+| **HasNoErrorRule** | Matches cell values that do not contain errors. |
+| **BeginsWithRule** | Matches cells whose values begin with a specified string. |
+| **EndsWith** | Matches cells whose values end with a specified string. |
+| **ContainsBlanksRule** | Matches blank cells. |
+| **NotContainsBlanksRule** | Matches non-empty cells. |
+| **ContainsRule** | This conditional formatting rule highlights cells containing given text. |
+| **NotContainsRule** | This conditional formatting rule highlights cells that do not contain given text. |
+| **TopRule** | This conditional formatting rule highlights cells whose values fall in the top N bracket. It can also work for N % instead of N items. It has two Boolean configuration properties: Items and Percent, which act like switches for these behaviors. |
+| **BottomRule** | This conditional formatting rule highlights cells whose values fall in the bottom N bracket. It can also work for N % instead of N items. It has two Boolean configuration properties: Items and Percent, which act like switches for these behaviors. |
+| **DuplicateValuesRule** | Matches values that are duplicate inside a specified range. |
+| **UniqueValuesRule** | Matches values that are unique inside a specified range. |
+| **ValueDistributionRule** | This conditional formatting rule highlights cells that are above or below the average for all values in the range. It has four Boolean configuration properties – `AboveAverage`, `AboveOrEqualToAverage`, `BelowAverage`, `BelowOrEqualToAverage`. |
 
 ## Create Formatting for a Rule
 
-The **ConditionalFormattingRule** base class and all of its inheritors, expose the `Formatting` property. This property is of type `DifferentialFormatting` and holds the formatting that will be applied to all cells inside the range that fit the rule requirement. You can set the following properties:
+The **ConditionalFormattingDxfRule** class is a base class for all rules that support formatting. All of its inheritors, expose the `Formatting` property. This property is of type `DifferentialFormatting` and holds the formatting that will be applied to all cells inside the range that fit the rule requirement. You can set the following properties:
 
 - Font size
 - Font family
@@ -61,6 +61,7 @@ The **ConditionalFormattingRule** base class and all of its inheritors, expose t
 - Underline
 - Fill
 
+The Formatting property can be used for all rules listed in **Table 1** except **ColorScaleRule**, **IconSetRule**, and **DataBarRule**. Due to their specificity, these three rules inherit directly from `ConditionalFormattingRule` and **do not** expose the `Formatting` property. Their styling options are directly inside the rule class. 
 
 #### [C#] Example 1: Create formatting
 
@@ -214,7 +215,7 @@ The following list shows all implementations of `IRangeValue` that you can use:
 
 Any previously applied formatting can be obtained through the GetConditionalFormattings method of CellSelection. This method returns a collection of **ConditionalFormattingRange** object representing the formattings applied to the selection and the CellRange each formatting is applied on.
 
-#### [C#] Example 7: Get formatting
+#### [C#] Example 7: Get the conditional formatting
 
 {{region radspreadprocessing-features-conditional-formatting_6}}
 
@@ -225,7 +226,7 @@ Any previously applied formatting can be obtained through the GetConditionalForm
 
 Through the CellSelection, you can also remove the formatting from the selected cells.
 
-#### [C#] Example 8: Remove formatting
+#### [C#] Example 8: Remove the conditional formatting
 
 {{region radspreadprocessing-features-conditional-formatting_7}}
 
