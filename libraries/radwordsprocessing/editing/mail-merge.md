@@ -93,6 +93,110 @@ __Example 4__ performs the mail merge operation over a previously defined templa
 	RadFlowDocument mailMergeResult = document.MailMerge(mailMergeDataSource);
 {{endregion}}
 
+## Nested Mail Merge
+
+The nested mail merge functionality is supported from R1 2022. It allows you to merge data sources that contain nested data. For example, your business object can contain a list of other objects and this functionality allows accessing the properties of the underlying objects. In order to use the underlying objects, you need to  declare a group. Currently, the following group tags are supported. 
+
+* BeginGroup/EndGroup 
+* TableStart/TableEnd
+* RangeStart/RangeEnd
+* GroupStart/GroupEnd
+
+
+Currently, all tags work equally and more than one option exists in order to improve the readability of the documents. The below example demonstrates how you can use the nested mail merge. 
+
+First you need to define a data source that contains an `IEnumerable` of objects.
+
+#### __[C#] Example 5: Nested mail merge data source__
+
+{{region cs-radwordsprocessing-editing-mail-merge_4}}
+    public List<Team> GetTeams()
+    {
+        var teams = new List<Team>();
+        var team1 = new Team();
+        team1.TeamName = "Team 1";
+        team1.Players.Add(new Player() { FirsName = "John", LastName = "Baker" });
+        team1.Players.Add(new Player() { FirsName = "Sam ", LastName = "Wayne" });
+        teams.Add(team1);
+
+        var team2 = new Team();
+        team2.TeamName = "Team 2";
+        team2.Players.Add(new Player() { FirsName = "Patrick", LastName = "Gibbs" });
+        team2.Players.Add(new Player() { FirsName = "Oscar", LastName = "Stevens" });
+        teams.Add(team2);
+    
+        return teams;
+    }
+    
+    public class Team
+    {
+        public string TeamName { get; set; }
+    
+        public List<Player> Players { get; set; }
+    
+        public Team()
+        {
+            this.Players = new List<Player>();
+        }
+    }
+    public class Player
+    {
+        public string FirsName { get; set; }
+        public string LastName { get; set; }
+    }
+
+{{endregion}}
+
+Now you need to add the fields using the specific supported names. In this example we are adding the fields to the table and we will use the TableStart/TableEnd tags, but this is not mandatory and you can use a tag of your choosing.
+
+#### __[C#] Example 6: Perform nested mail merge__
+
+{{region cs-radwordsprocessing-editing-mail-merge_5}}
+
+    var document = new RadFlowDocument();
+    var editor = new RadFlowDocumentEditor(document);
+
+    editor.InsertParagraph();
+    editor.InsertField("MERGEFIELD TeamName", "");
+    editor.InsertParagraph();
+    editor.InsertText("Players:"); 
+    
+    var playersTable = editor.InsertTable(2, 2);
+    playersTable.PreferredWidth = new TableWidthUnit(TableWidthUnitType.Percent, 100);
+    document.StyleRepository.AddBuiltInStyle(BuiltInStyleNames.TableGridStyleId);
+    playersTable.StyleId = BuiltInStyleNames.TableGridStyleId;
+    
+    playersTable.Rows[0].Cells[0].Blocks.AddParagraph().Inlines.AddRun("First Name");
+    playersTable.Rows[0].Cells[1].Blocks.AddParagraph().Inlines.AddRun("Last Name");
+    
+    var firstNameParagraph = playersTable.Rows[1].Cells[0].Blocks.AddParagraph();
+    editor.MoveToParagraphStart(firstNameParagraph);
+    editor.InsertField("MERGEFIELD TableStart:Players", "");
+    editor.InsertField("MERGEFIELD FirstName", "");
+    
+    var lastNameParagraph = playersTable.Rows[1].Cells[1].Blocks.AddParagraph();
+    editor.MoveToParagraphStart(lastNameParagraph);
+    editor.InsertField("MERGEFIELD LastName", "");
+    editor.InsertField("MERGEFIELD TableEnd:Players", "");
+    
+    RadFlowDocument mailMergeResult = document.MailMerge(GetTeams());
+
+{{endregion}}
+
+### One Row vs Multiline Mail Merge
+
+With the nested mail merge functionality, it is possible to add all items to a single line. This is achieved by adding the group and regular fields to a single paragraph.
+
+>caption Figure 1: Mail Merging on a single row and the results
+
+![Rad Words Processing mail merge](images/RadWordsProcessing_MailMerge_01.png)
+
+If you want to separate the items into several rows you need to close the group on the next row
+
+>caption Figure 2: Mail Merging on multiple rows row and the results
+
+![Rad Words Processing mail merge](images/RadWordsProcessing_MailMerge_02.png)
+
 
 
 ## See Also

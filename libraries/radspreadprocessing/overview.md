@@ -24,6 +24,7 @@ The following table describes the most popular features of the RadSpreadProcessi
 |---------|-------------|
 | [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | API for insertion, positioning and deletion of images in worksheets. |
 | [**Charts**]({%slug radspreadprocessing-features-charts%}) | Add, remove and manipulate chart objects in your spreadsheet documents. |
+| [**Conditional Formatting**]({%slug radspreadprocessing-features-conditional-formatting%}) |Make it easy to analyze data, find critical issues, patterns and trends by representing the data inside in a user-friendly manner. |
 | [**Hyperlinks**]({%slug radspreadprocessing-features-hyperlink%}) | The API enables you to add, remove, edit and search for hyperlinks in the worksheets of the document. |
 | [**Workbook Protection**]({%slug radspreadprocessing-features-protection-workbook%}) | Prevents the users from modifying the workbook by adding, removing, renaming or reordering sheets. |
 | [**Worksheet protection**]({%slug radspreadprocessing-features-protection-worksheet%}) | Restricts the user from modifying the content and structure of the worksheet. Additionally, the model offers protection options that let you choose a set of commands that will be available to the user when protection is enabled. |

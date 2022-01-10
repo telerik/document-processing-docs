@@ -26,7 +26,7 @@ You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordspr
 * __ReplaceText(Regex regex, InlineBase inline):__ Replaces all matches of the passed **Regex** with a single inline. 
 * __ReplaceText(Regex regex, IEnumerable\<InlineBase\> inlines):__ Replaces all matches of the passed **Regex** with multiple inlines. 
 
-#### **[C#] Example 1: Replace text with a single inline**
+#### __[C#] Example 1: Replace text with a single inline__
 
 {{region cs-radwordsprocessing-editing-replace-document-elements_0}}
 
@@ -38,16 +38,16 @@ You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordspr
 	editor.InsertText("Replace");
 	editor.InsertParagraph();
 	editor.InsertText("Content After");
-
+	
 	Run run = new Run(document);
 	run.Text = "New Content";
-
+	
 	// Replace 
 	editor.ReplaceText("Replace", run, true, true);
 
 {{endregion}}
 
-#### **[C#] Example 2: Replace text with multiple inlines**
+#### __[C#] Example 2: Replace text with multiple inlines__
 
 {{region cs-radwordsprocessing-editing-replace-document-elements_1}}
 
@@ -79,7 +79,7 @@ You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordspr
 * __ReplaceText(Regex regex, BlockBase block):__ Replaces all matches of the passed **Regex** with a single block. 
 * __ReplaceText(Regex regex, IEnumerable\<BlockBase\> blocks):__ Replaces all matches of the passed **Regex** with multiple blocks. 
 
-**[C#] Example 3: Replace text with a single block**
+#### __[C#] Example 3: Replace text with a single block__
 
 {{region cs-radwordsprocessing-editing-replace-document-elements_2}}
 
