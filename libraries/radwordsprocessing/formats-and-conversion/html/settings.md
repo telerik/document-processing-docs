@@ -32,7 +32,14 @@ The property specifies the default style sheet that should be used. This is equi
 The default value, for example, specifies that "b" elements should be imported with "font-weight: bold".
             
 
-You can set the value of the property to any valid CSS document.
+You can set the value of the property to any valid CSS document. **Example 1** shows how you can add styling in addition to the default ones. 
+
+#### [C#] Example 1: Add CSS to the DefaultStyleSheet
+
+{{region }}
+	HtmlFormatProvider provider = new HtmlFormatProvider();
+	provider.ImportSettings.DefaultStyleSheet = provider.ImportSettings.DefaultStyleSheet + @" p {color: #ff99ac;}";
+{{endregion}}
             
 
 ### GenericFonts
@@ -50,10 +57,10 @@ The __LoadImageFromUri__ event uses the __LoadImageFromUriEventArgs__ object whi
 * __SetImageInfo__: Used to pass the image data and image format (extension).
 
 
-__Example 1__ Shows how you can use the __LoadImageFromUri__ event to download an image.
+__Example 2__ Shows how you can use the __LoadImageFromUri__ event to download an image.
 
-#### __[C#] Example 1: Use the LoadImageFromUri__
-{{region cs-radwordsprocessing-formats-and-conversion-html-settings_0}}
+#### __[C#] Example 2: Use the LoadImageFromUri__
+{{region cs-radwordsprocessing-formats-and-conversion-html-settings_4}}
 
     HtmlFormatProvider provider = new HtmlFormatProvider();
     HtmlImportSettings importSettings = new HtmlImportSettings();
@@ -78,9 +85,9 @@ The __LoadStyleSheetFromUri__ event uses the __LoadStyleSheetFromUriEventArgs__ 
 * __Uri__: The URI originally specified in the imported HTML file.
 * __SetStyleSheetContent__: Used to pass the styles as string.
 
-__Example 2__ Shows how you can use the __LoadStyleSheetFromUri__ event.
+__Example 3__ Shows how you can use the __LoadStyleSheetFromUri__ event.
             
-#### __[C#] Example 2: Use the LoadStyleSheetFromUri event__
+#### __[C#] Example 3: Use the LoadStyleSheetFromUri event__
 {{region cs-radwordsprocessing-formats-and-conversion-html-settings_0}}
 
     HtmlFormatProvider provider = new HtmlFormatProvider();
@@ -113,7 +120,7 @@ When importing HTML, which contains images with URI source, the **HtmlFormatProv
 
 The **UriImageSource** objects are always exported as images with URI as their source independently of the export settings. If you need to export this object as an embedded or external image, you could convert the **UriImageSource** to **ImageSource** object. 
 
-#### __[C#] Example 3: Convert UriImageSource to ImageSource__
+#### __[C#] Example 4: Convert UriImageSource to ImageSource__
 
 {{region cs-radwordsprocessing-formats-and-conversion-html-settings_2}}
 	UriImageSource uriImageSource = imageInline.Image.ImageSource as UriImageSource;
@@ -234,10 +241,10 @@ The event is only raised when the __StylesExportMode__ property is set to __Exte
 * __Reference__: The value that will be set to the "href" attribute of the "link" element tag. In general, this should be set to the absolute or relative path pointing to the file containing the CSS styles.
                 
 
-__Example 3__ demonstrates how you can create export settings.
+__Example 5__ demonstrates how you can create export settings.
             
 
-#### __[C#] Example 4: Create HtmlExportSettings__
+#### __[C#] Example 5: Create HtmlExportSettings__
 
 {{region cs-radwordsprocessing-formats-and-conversion-html-settings_1}}
 	HtmlFormatProvider provider = new HtmlFormatProvider();
