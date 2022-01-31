@@ -1,3 +1,4 @@
+
 ---
 title: Getting Started
 page_title: Getting Started
@@ -22,6 +23,7 @@ This tutorial will take you through the creation of a sample application that us
 ## Assembly References
 
 >The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radwordsprocessing-cross-platform%}) article.
+>Please note that due to compatibility reasons “Windows” is present in the **class namespaces for both** .NET Framework **and** .NET Standard/.Net 5+ assemblies.
 
 Here is a list of assemblies that contain the __RadWordsProcessing__ functionality and need to be referenced in your project:
 
@@ -29,7 +31,7 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 <thead>
 	<tr>
 		<th>.NET Framework </th>
-		<th>.NET Standard-compatible</th>
+		<th>.NET Standard/.Net 5+ compatible</th>
 	</tr>
 </thead>
 <tbody>
