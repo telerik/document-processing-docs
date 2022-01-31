@@ -201,7 +201,7 @@ public static byte[] ReadFileFromDatabaseAsByteArray(string id)
 
         using (var cmd = new SqlCommand() { Connection = cn, CommandText = statement })
         {
-            cmd.Parameters.AddWithValue("@id", fileName);
+            cmd.Parameters.AddWithValue("@id", id);
 
             cn.Open();
 
