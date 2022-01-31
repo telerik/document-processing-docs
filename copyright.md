@@ -4,7 +4,7 @@ page_title: Copyright
 description: Copyright
 slug: license-copyright
 tags: copyright
-published: True
+published: false
 position: 25
 ---
 
