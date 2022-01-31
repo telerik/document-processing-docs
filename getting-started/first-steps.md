@@ -61,6 +61,7 @@ This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-
   * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll__
 
 > The Document Processing assemblies for .NET Core don't contain "Windows" in their names.
+>Please note that due to compatibility reasons “Windows” is present in the **class namespaces for both** .NET Framework **and** .NET Standard/.Net 5+ assemblies.
 
 ## Step 4: Create a Document
 

@@ -22,6 +22,7 @@ This article will get you started in using the **RadSpreadStreamProcessing** lib
 ## Assembly References
 
 >The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**).
+>Please note that due to compatibility reasons “Windows” is present in the **class namespaces for both** .NET Framework **and** .NET Standard/.Net 5+ assemblies.
 
 In order to use **RadSpreadStreamProcessing** in your project, you will need to add the references listed below.
 
@@ -29,7 +30,7 @@ In order to use **RadSpreadStreamProcessing** in your project, you will need to 
 <thead>
 	<tr>
 		<th>.NET Framework </th>
-		<th>.NET Standard-compatible</th>
+		<th>.NET Standard/.Net 5+ compatible</th>
 	</tr>
 </thead>
 <tbody>
