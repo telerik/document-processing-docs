@@ -10,9 +10,9 @@ position: 2
 
 # Cross-Platform Support
 
-**Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of binaries built against the .NET Core & .NET Standard which you can reference in an application.
+**Telerik Document Processing** comes with **.NET Core** & **.NET Standard/.NET 5+** support. There is a set of binaries built against the .NET Core & .NET Standard/.NET 5+ which you can reference in an application.
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor**, **UI for Xamarin**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard/.NET 5+ and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor**, **UI for Xamarin**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Assembly References
 
@@ -30,6 +30,8 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 >note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
 
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
+> Please note that due to compatibility reasons “Windows” is present in the **class namespaces for both** .NET Framework **and** .NET Standard/.Net 5+ assemblies.
+
 
 ## What's New
 
