@@ -1,3 +1,4 @@
+
 ---
 title: Getting Started
 page_title: Getting Started
@@ -25,7 +26,7 @@ This article will get you started in using the __RadSpreadProcessing__ library. 
 
 ## Assembly References
 
->The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radspreadprocessing-cross-platform%}) article.
+>The libraries support .NET 4 and later. Binaries compatible with .NET Standard/.NET 5+ are available as well. The assemblies for .NET Standard/.NET 5+ don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). However, both .NET Framework **and** .NET Standard/.Net 5+ class namespaces include "Windows" in their paths. For more information check [**Cross-Platform Support**]({%slug radspreadprocessing-cross-platform%}) article.
 
 In order to use the model of the __RadSpreadProcessing__ library in your project, you need to add references to the following assemblies:
 
@@ -33,7 +34,7 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 <thead>
 	<tr>
 		<th>.NET Framework </th>
-		<th>.NET Standard-compatible</th>
+		<th>.NET Standard/.NET 5+ compatible</th>
 		<th>Additional information</th>
 	</tr>
 </thead>
