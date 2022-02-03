@@ -81,6 +81,7 @@ The *archive* variable holds the files that are compressed in the selected zip. 
 
 __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ class and place a text file in it.
         
+>Do not close the stream opened by the __ZipArchiveEntry.Open()__ method. Otherwise the result is unpredictable.
 
 #### __[C#] Example 2: Create archive__
 
@@ -120,10 +121,7 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
 
 >tipIf you use __StreamWriter__ to write content to the stream, you should call the Flush() method in order to flush the data to the stream.
           
-
->Do not close the stream opened by the __ZipArchiveEntry.Open()__ method. Otherwise the result is unpredictable.
-          
-
+         
 
 ## See Also
 
