@@ -59,7 +59,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
                 string fontFileName = fontProperties.FontFamilyName + ".ttf";
                 string fontFolder = Environment.GetFolderPath(Environment.SpecialFolder.Fonts);
                 string targetPath = Path.Combine(fontFolder, fontFileName);
-
+    
                 DirectoryInfo directory = new DirectoryInfo(fontFolder);
                 FileInfo[] fontFiles = directory.GetFiles("*.ttf");
                 if (fontFiles.Any(s => s.Name.Equals(fontFileName, StringComparison.InvariantCultureIgnoreCase)))
@@ -73,7 +73,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
                         }
                     }
                 }
-
+    
                 return null;
             }
         }
@@ -89,7 +89,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
 * **JpegImageConverter**: Gets or sets a *JpegImageConverterBase* instance used to provide a Jpeg converted image data.
 
     >note To reduce file size, PDF supports only a number of compression filters like Jpeg and Jpeg2000 compression of color and grayscale images. So to allow the library to export images different than Jpeg and Jpeg2000 these images have to be converted to the one of the supported image formats. **.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the of **FixedExtensibilityManager**.
-      
+    
     >important If the JpegImageConverter property is not set, an exception is thrown.
     
     The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document. The default implementation depends on the [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/) libraries to convert images to Jpeg format.
@@ -99,17 +99,17 @@ The new **FixedExtensibilityManager** class is exposing the following properties
 
     #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
         {{region cs-radpdfprocessing-cross-platform_3}}
-
+    
             Telerik.Windows.Documents.Extensibility.JpegImageConverterBase jpegImageConverter = new Telerik.Documents.ImageUtils.JpegImageConverter();
             Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
         {{endregion}}
 
 
     The following example depends on the [Magick.NET](https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/) library to convert images to Jpeg format.
-
+    
     #### **[C#] Example 4: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
         {{region cs-radpdfprocessing-cross-platform_2}}
-
+    
             internal class CustomJpegImageConverter : Telerik.Windows.Documents.Extensibility.JpegImageConverterBase
             {
                 public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
@@ -123,22 +123,22 @@ The new **FixedExtensibilityManager** class is exposing the following properties
                             magickImage.Format = MagickFormat.Jpeg;
                             magickImage.Alpha(AlphaOption.Remove);
                             magickImage.Quality = (int)imageQuality;
-
+    
                             jpegImageData = magickImage.ToByteArray();
                         }
-
+    
                         return true;
                     }
-
+    
                     jpegImageData = null;
                     return false;
                 }
             }
         {{endregion}}
-
+    
     #### **[C#] Example 5: Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
         {{region cs-radpdfprocessing-cross-platform_3}}
-
+    
             JpegImageConverterBase customJpegImageConverter = new CustomJpegImageConverter();
             Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
         {{endregion}}
@@ -153,11 +153,9 @@ Some functionalities require additional settings to be done:
 
 * In order to export specific fonts, the FontsProvider property inside the FixedExtensibilityManager have to be set.
 * In order to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, the JpegImageConverter property inside the FixedExtensibilityManager must be set.
+* Since R1 2022 SP1 the digital signatures are supported in Net Standard as well. More information is available [here]({%slug radpdfprocessing-features-digital-signature%}).
 
-### Currently not supported
 
- - Referencing .Net Standard binaries you can add SignatureField but cannot sign or import signed documents.
- 
 ## See Also
 
  * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
