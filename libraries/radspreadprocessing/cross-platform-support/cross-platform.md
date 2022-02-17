@@ -31,8 +31,7 @@ To use the model of **RadSpreadProcessing** in your cross-platform project, you 
 | **Telerik.Zip.dll**                      | Required for working with XSLX, XLS and PDF files. |
 | **Telerik.Documents.ImageUtils.dll** <br><sub>_This assembly is not available in UI for Xamarin._</sub> | Required when you need to export to PDF documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High. |
 
-
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp**. In order to use this assembly, you will need to add a reference to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/). After R1 2022 SP1 the minimum **ImageSharp** required version is **v.2.0.0**.
 
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 
