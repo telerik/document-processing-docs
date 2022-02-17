@@ -60,6 +60,9 @@ __Example 1__ shows how you can create a __PdfImportSettings__ object and assign
 
 In order to modify the way content is exported, you can set the __ExportSettings__ property of __PdfFormatProvider__. These are the modification options you can use:
         
+### __ShouldEmbedFonts__
+
+This property controls if the fonts should be embeded in the file. 
 
 ### __IsEncrypted__
 
