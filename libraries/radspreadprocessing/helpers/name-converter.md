@@ -128,11 +128,12 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 
 {{region radspreadprocessing-name-converter_9}}
 
-	CellIndex fromIndex = new CellIndex(rowIndex: 0, columnIndex: 0);
+    CellIndex fromIndex = new CellIndex(rowIndex: 0, columnIndex: 0);
     CellIndex toIndex = new CellIndex(rowIndex: 10, columnIndex: 5);
     string cellRangeName = NameConverter.ConvertCellRangeToName(fromIndex, toIndex);
-	
-    bool result = NameConverter.TryConvertCellRangeNameToCellRange(cellRangeName, out CellRange cellRange);
+
+    CellRange cellRange;
+    bool result = NameConverter.TryConvertCellRangeNameToCellRange(cellRangeName, out cellRange);
 {{endregion}}
 
 ### Convert Cell Indexes to Name
