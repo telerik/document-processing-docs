@@ -123,11 +123,15 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 
 
 ### Try Convert Name to Cell Range
-**TryConvertNameToCellRange** method converts the name to a cell range. The following example code uses the string cellRangeName variable from the previous example code.
+**TryConvertNameToCellRange** method converts the name to a cell range. 
 #### __[C#] Example 9:__
 
 {{region radspreadprocessing-name-converter_9}}
 
+	CellIndex fromIndex = new CellIndex(rowIndex: 0, columnIndex: 0);
+    CellIndex toIndex = new CellIndex(rowIndex: 10, columnIndex: 5);
+    string cellRangeName = NameConverter.ConvertCellRangeToName(fromIndex, toIndex);
+	
     bool result = NameConverter.TryConvertCellRangeNameToCellRange(cellRangeName, out CellRange cellRange);
 {{endregion}}
 
