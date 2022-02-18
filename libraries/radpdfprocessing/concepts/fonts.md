@@ -17,7 +17,7 @@ __RadPdfProcessing__ uses fonts represented by __FontBase__ objects to specify t
 ## Standard Fonts
 There are 14 standard fonts that are not embedded in the document when you use them. These fonts can be accessed through the [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html) class and are listed below.
 
-        
+​        
 
 * Helvetica
 * Helvetica-Bold
@@ -38,6 +38,7 @@ There are 14 standard fonts that are not embedded in the document when you use t
 
 All fonts, which are not included in the 14 standard ones should be embedded in the PDF document. Otherwise, the result when the document is rendered is unpredictable. In __RadPdfProcessing__ you have the ability to embed fonts following the approaches described below.
         
+>If you do not wish  to embed the fonts in the document set the __ShouldEmbedFonts__ property of the [ExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
 
 ### Registering a Font
 
@@ -76,7 +77,7 @@ __Example 1__ demonstrates how you can use the RegisterFont() method.
 ### Creating a Font
 
 >tipEach registered font can be obtained from the font repository as __FontBase__ object and applied to a __[TextFragment]({%slug radpdfprocessing-model-textfragment%})__ through its __Font__ property.
-            
+
 
 __Example 2__ shows how to create a font using the FontsRepository.
             
