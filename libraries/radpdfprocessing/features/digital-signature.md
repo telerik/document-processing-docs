@@ -4,7 +4,6 @@ page_title: Digital Signature
 slug: radpdfprocessing-features-digital-signature
 tags: digital, signature
 position: 2
-platforms: ajax, mvc, wpf, winforms
 ---
 
 # Digital Signature
