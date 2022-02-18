@@ -26,7 +26,7 @@ This article covers the following topics:
 
 The digital signature feature enables you to sign and validate a PDF document. A signature confirms that the document's content originated from the signer and has not been modified in any way. A signed document is considered valid when it has not been changed after the signing, and all of its certificates have a valid trusted root certificate.
 
->In PdfProcessing for **.NET Standard/.NET Core**, you new to add reference to the __System.Security.Cryptography.Pkcs__ NuGet package, version 6 or newer. 
+>To use the signing functionality in PdfProcessing for **.NET Standard/.NET Core**, you must add a reference to the **System.Security.Cryptography.Pkcs** NuGet package, version 6 or newer (This functionality is available since R1 2022 SP1).
 
 ## Signing a Document
 
