@@ -27,7 +27,7 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 * **Telerik.Documents.ImageUtils.dll**
 <br><sub>_This assembly is not available in UI for Xamarin._</sub>
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp**. In order to use this assembly, you will need to add a reference to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/). After R1 2022 SP1 the minimum **ImageSharp** required version is **v.2.0.0**.
 
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 
@@ -92,6 +92,7 @@ The new **FixedExtensibilityManager** class is exposing the following properties
     
     >important If the JpegImageConverter property is not set, an exception is thrown.
     
+	>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp**. In order to use this assembly, you will need to add a reference to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/). After R1 2022 SP1 the minimum **ImageSharp** required version is **v.2.0.0**.
     The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document. The default implementation depends on the [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/) libraries to convert images to Jpeg format.
 
     >important Telerik.Documents.ImageUtils.dll is not available for Xamarin.
