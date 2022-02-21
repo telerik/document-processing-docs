@@ -80,7 +80,7 @@ The password that governs permissions for operations such as printing, copying a
 
 ### __UserAccessPermissions__
 
-This property specifies three types of user access permissions: **PrintingPermissionType**, **ChangingPermissionType**, and **CopyingPermissionType**. Each has an available set of values, represented by the respective enumerations:
+This property specifies three types of user access permissions: **PrintingPermissionType**, **ChangingPermissionType**, and **CopyingPermissionType**. These settings are exported **only** if the PdfExportSettings.IsEncrypted property is set to true. Each has an available set of values, represented by the respective enumerations:
 
 
 * __PrintingPermissionType__: Sets the permissions for document printing. Possible values: 
@@ -104,6 +104,30 @@ This property specifies three types of user access permissions: **PrintingPermis
     * __TextAccess__: Specify that text access for screen reader devices for copying is allowed.
 
 
+__Example 2__ shows how you can create a __PdfExportSettings__ object with settings that specify an OwnerPassword and UserAccessPermissions.
+
+
+#### __[C#] Example 2: Export settings__
+
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
+
+	PdfFormatProvider provider = new PdfFormatProvider();
+    PdfExportSettings settings = new PdfExportSettings();
+    settings.IsEncrypted = true;
+    settings.OwnerPassword = "0wn3rP4ssw0rd";
+    // The following permissions are exported only if the settings.IsEncrypted property is set to true
+    UserAccessPermissions permissions = new UserAccessPermissions
+    {
+        Printing = PrintingPermissionType.HighResolution,
+        Changing = ChangingPermissionType.AnyExceptExtractingPages,
+        Copying = CopyingPermissionType.TextAccess,
+    };
+	
+    settings.UserAccessPermissions = permissions;
+    provider.ExportSettings = settings;
+
+{{endregion}}
+
 ### __ImageQuality__
 
 The **ImageQuality** property specifies the quality with which images are exported to PDF. More information about how it works is available in [this article]({%slug radpdfprocessing-concepts-imagequality%}).
@@ -123,10 +147,11 @@ Specifies the PDF/A compliance level. It can have one of the following values:
 
 The default value is __None__. For more information on PDF/A compliance, check the [PDF/A Compliance article]({%slug radpdfprocessing-howto-comply-with-pdfa-standard%}).
 
-__Example 2__ shows how you can create a __PdfExportSettings__ object and assign it to a PdfFormatProvider.
+
+__Example 3__ shows how you can create a __PdfExportSettings__ object and assign it to a PdfFormatProvider.
         
 
-#### __[C#] Example 2: Export settings__
+#### __[C#] Example 3: Export settings__
 
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
 	PdfFormatProvider provider = new PdfFormatProvider();
@@ -137,27 +162,6 @@ __Example 2__ shows how you can create a __PdfExportSettings__ object and assign
 
 {{endregion}}
 
-__Example 3__ shows how you can create a __PdfExportSettings__ object with a different set of settings. The settings used specify an OwnerPassword and UserAccessPermissions.
-
-
-#### __[C#] Example 3: Export settings__
-
-{{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
-	PdfFormatProvider provider = new PdfFormatProvider();
-    PdfExportSettings settings = new PdfExportSettings();
-    settings.IsEncrypted = true;
-    settings.OwnerPassword = "0wn3rP4ssw0rd";
-    // The following permissions are exported only if the settings.IsEncrypted property is set to true
-    UserAccessPermissions permissions = new UserAccessPermissions
-    {
-    Printing = PrintingPermissionType.HighResolution,
-    Changing = ChangingPermissionType.AnyExceptExtractingPages,
-    Copying = CopyingPermissionType.TextAccess,
-    };
-    settings.UserAccessPermissions = permissions;
-    provider.ExportSettings = settings;
-
-{{endregion}}
 
 ## See Also
 
