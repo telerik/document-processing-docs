@@ -48,7 +48,7 @@ __Example 1__ shows how you can create a __PdfImportSettings__ object and assign
 	PdfImportSettings settings = new PdfImportSettings();
 	settings.UserPasswordNeeded += (s, a) =>
 	{
-	    a.Password = "D0cum3ntP4ssw0rd";
+	    a.Password = "Us3rP4ssw0rd";
 	};
 	
 	provider.ImportSettings = settings;
@@ -74,6 +74,60 @@ This property specifies if the document should be encrypted. The default value i
 
 The password to be used if the document is encrypted. The default password is an empty string.
 
+### __OwnerPassword__
+
+The password that governs permissions for operations such as printing, copying and modifying the document. The default password is an empty string.
+
+### __UserAccessPermissions__
+
+This property specifies three types of user access permissions: **PrintingPermissionType**, **ChangingPermissionType**, and **CopyingPermissionType**. These settings are exported **only** if the PdfExportSettings.IsEncrypted property is set to true. Each has an available set of values, represented by the respective enumerations:
+
+
+* __PrintingPermissionType__: Sets the permissions for document printing. Possible values: 
+
+    * __None__: Specify no printing is allowed.
+    * __LowResolution__: Specify low resolution (150 dpi) printing is allowed.
+    * __HighResolution__: Specify printing on the highest resolution is allowed.
+
+* __ChangingPermissionType__: Sets the permissions for making changes to the document. Possible values: 
+
+    * __None__: Specify no document changes are allowed.
+    * __DocumentAssembly__: Specify inserting, deleting, and rotating page changes are allowed.
+    * __FormFieldFillingOrSigning__: Specify filling in form fields and signing existing signature fields changes are allowed.
+	* __FormFieldFillingOrSigningAndCommenting__: Specify commenting, filling in form fields, and signing existing signature fields changes are allowed.
+    * __AnyExceptExtractingPages__: Specify any changes except extracting pages are allowed.
+
+* __CopyingPermissionType__: Sets the permissions for document copying. Possible values: 
+
+    * __None__: Specify no copying is allowed.
+    * __Copying__: Specify copying is allowed.
+    * __TextAccess__: Specify that text access for screen reader devices for copying is allowed.
+
+
+__Example 2__ shows how you can create a __PdfExportSettings__ object with settings that specify an OwnerPassword and UserAccessPermissions.
+
+
+#### __[C#] Example 2: Export settings__
+
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
+
+	PdfFormatProvider provider = new PdfFormatProvider();
+    PdfExportSettings settings = new PdfExportSettings();
+    settings.IsEncrypted = true;
+    settings.OwnerPassword = "0wn3rP4ssw0rd";
+    // The following permissions are exported only if the settings.IsEncrypted property is set to true
+    UserAccessPermissions permissions = new UserAccessPermissions
+    {
+        Printing = PrintingPermissionType.HighResolution,
+        Changing = ChangingPermissionType.AnyExceptExtractingPages,
+        Copying = CopyingPermissionType.TextAccess,
+    };
+	
+    settings.UserAccessPermissions = permissions;
+    provider.ExportSettings = settings;
+
+{{endregion}}
+
 ### __ImageQuality__
 
 The **ImageQuality** property specifies the quality with which images are exported to PDF. More information about how it works is available in [this article]({%slug radpdfprocessing-concepts-imagequality%}).
@@ -93,10 +147,11 @@ Specifies the PDF/A compliance level. It can have one of the following values:
 
 The default value is __None__. For more information on PDF/A compliance, check the [PDF/A Compliance article]({%slug radpdfprocessing-howto-comply-with-pdfa-standard%}).
 
-__Example 2__ shows how you can create a __PdfExportSettings__ object and assign it to a PdfFormatProvider.
+
+__Example 3__ shows how you can create a __PdfExportSettings__ object and assign it to a PdfFormatProvider.
         
 
-#### __[C#] Example 2: Export settings__
+#### __[C#] Example 3: Export settings__
 
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
 	PdfFormatProvider provider = new PdfFormatProvider();
