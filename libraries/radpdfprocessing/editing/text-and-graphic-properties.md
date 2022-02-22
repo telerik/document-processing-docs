@@ -97,18 +97,18 @@ These properties hold the parameters used for text fragments. The following para
 The TextProperties also exposes the following methods, which can be used for changing the current font:
         
 
-__TextProperties.TrySetFont(FontFamily fontFamily);__
+* __TextProperties.TrySetFont(FontFamily fontFamily);__
 
-__TextProperties.TrySetFont(fontFamily, fontStyle, fontWeight);__
+* __TextProperties.TrySetFont(fontFamily, fontStyle, fontWeight);__
 
 ## Preserving Current State
 
 Both Text and Graphic properties contain methods that can preserve and restore the current state.
         
 
-__properties.Save();__
+* __properties.Save();__
 
-__properties.Restore();__
+* __properties.Restore();__
 
 >The Save() method returns __IDisposable__ object that will execute Restore() as soon as the dispose method is called and can be used in a using statement.
           
