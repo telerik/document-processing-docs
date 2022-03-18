@@ -129,21 +129,22 @@ The constructor of ZipArchive lets you specify whether you would like to keep th
 
 {{region cs-radziplibrary-gettingstarted_2}}
 
-	Stream memoryStream = new MemoryStream();
+    Stream memoryStream = new MemoryStream();
 
-	// The third parameter of ZipArchive's constructor specifies that the stream should be left open
-	using (ZipArchive archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true, null))
-	{
-	    using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
-	    {
-		Stream entryStream = entry.Open();
-		StreamWriter writer = new StreamWriter(entryStream);
-		writer.WriteLine("Hello world!");
-		writer.Flush();
-	    }
-	}
+    // The third parameter of ZipArchive's constructor specifies that the stream should be left open 
+    using (ZipArchive archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true, null))
+    {
+        using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
+        {
+            Stream entryStream = entry.Open();
+            StreamWriter writer = new StreamWriter(entryStream);
+            writer.WriteLine("Hello world!");
+            writer.Flush();
+        }
+    }
+    
+    // Save memoryStream to a file or send it to client
 
-// Save memoryStream to a file or send it to client
 {{endregion}}
 
 
