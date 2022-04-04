@@ -1,0 +1,100 @@
+---
+title: Getting Started
+page_title: Getting Started
+slug: radziplibrary-gettingstarted
+tags: getting,started
+published: True
+position: 1
+---
+
+# Getting Started
+
+__RadZipLibrary__ allows you to load data from existing ZIP archives or create and edit ZIPs that can be used by other applications. You can also create ZIP archives in memory or use a stream to get data and add it to a ZIP archive.
+      
+
+>noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+
+The ZIP archive is represented by __ZipArchive__ class. It can be used in 3 modes:
+      
+
+* __Read__: Allows reading of the existing ZIP archive. In this mode it is not possible to add or update archive entries.
+          
+* __Create__: Allows creation of a new archive. In this mode you can add new entries in the archive but cannot read or update content of the entries which have been written already.
+          
+* __Update__: Allows update of the existing ZIP archive. In this mode you can add new entries, read and update existing entries.
+
+## Assembly References
+
+>The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**). 
+
+<table>
+<thead>
+    <tr>
+        <th>.NET Framework </th>
+        <th>.NET Standard-compatible</th>
+    </tr>
+</thead>
+    <tr>
+        <td><b>Telerik.Windows.Zip.dll</b></td>
+        <td><b>Telerik.Zip.dll</b></td>
+    </tr>
+</tbody>
+</table>                
+
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+
+## Open Zip Archive
+
+The code snippet from __Example 1__ demonstrates how to open existing Zip archive using the __ZipArchive__ class.
+        
+
+#### __[C#] Example 1: Open archive__
+
+{{region cs-radziplibrary-gettingstarted_0}}
+                
+    using (Stream stream = File.Open("test.zip", FileMode.Open))
+    {
+        using (ZipArchive archive = new ZipArchive(stream))
+        {
+            // Display the list of the files in the selected zip file using the ZipArchive.Entries property.
+        }
+    }
+{{endregion}}
+
+
+
+#### __[VB.NET] Example 1: Open archive__
+
+{{region vb-radziplibrary-gettingstarted_0}}
+    Using stream As Stream = File.Open("test.zip", FileMode.Open)
+        Using archive As New ZipArchive(stream)
+            ' Display the list of the files in the selected zip file using the ZipArchive.Entries property.
+        End Using
+    End Using
+{{endregion}}
+
+
+The *archive* variable holds the files that are compressed in the selected zip. You can access the list of these files through the __ZipArchive.Entries__ property. It holds a collection of [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) elements - the elements that describe the files archived in the zip file. You can use these elements to get the name of the compressed file, its uncompressed and compressed size and other file attributes.
+        
+
+## Create Zip Archive
+
+__Example 2__ shows how to create a new Zip archive using the __ZipArchive__ class and place a text file in it.
+        
+
+#### __[C#] Example 2: Create archive__
+
+{{region cs-radziplibrary-gettingstarted_1}}
+        
+    using (Stream stream = File.Open("test.zip", FileMode.Create))
+    {
+        using (ZipArchive archive = new ZipArchive(stream, ZipArchiveMode.Create, false, null))
+        {
+            using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
+            {
+                StreamWriter writer = new StreamWriter(entry.Open());
+                writer.WriteLine("Hello world!");
+                writer.Flush();
+            }
+        }
+    }
