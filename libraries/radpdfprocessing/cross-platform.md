@@ -32,7 +32,7 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 ## Fonts and Images
 
 The .NET Framework version of PdfProcessing comes with out-of-the-box functionality to read fonts, convert images, and scale their quality. The .NET Standard specification, however does not specify APIs to provide such functionalities built in the library.
-In order to provide the necessary extensibility mechanisms for working with fonts and images, the .NET Standard version of **RadPdfProcessing** exposes the **FixedExtensibilityManager** class.
+In order to provide the necessary extensibility mechanisms for working with fonts and images, the .NET Standard version of **RadPdfProcessing** exposes the **FixedExtensibilityManager** class. Code samples on how to configure the **FixedExtensibilityManager** are present later in this article.
 
 ### Setting and Exporting Fonts
 
@@ -40,7 +40,7 @@ PdfProcessing needs to have access to the font data so that it can read it and a
 
 The code snippets below show how to create a custom <u>FontsProvider</u> implementation and how to set it.
 
-    #### **[C#] Example 1: Creating custom implementation, inheriting the FontsProviderBase abstract class**
+#### **[C#] Example 1: Creating custom implementation by inheriting the FontsProviderBase abstract class**
     {{region cs-radpdfprocessing-cross-platform_0}}
 
         public class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
@@ -84,8 +84,8 @@ The code snippets below show how to create a custom <u>FontsProvider</u> impleme
 To reduce file size, PDF supports only a number of compression filters like Jpeg and Jpeg2000 compression of color and grayscale images. So to allow the library to export images different than Jpeg and Jpeg2000 these images have to be converted to the one of the supported image formats. The **.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the **FixedExtensibilityManager**.
         
 The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting the document. The default implementation depends on the [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) library to convert images to Jpeg format.
+>important Telerik.Documents.ImageUtils.dll is not available for Xamarin. A custom converter can be implemented by inheriting **Telerik.Windows.Documents.Extensibility.JpegImageConverterBase**.
 
->important Telerik.Documents.ImageUtils.dll is not available for Xamarin.
 
 
 #### **[C#] Example 3: Set the default implementation of the JpegImageConverter class**
