@@ -72,13 +72,23 @@ __Example 2__ creates a hyperlink to a cell range somewhere in the document.
 {{endregion}}
 
 
+__Example 3__ creates a hyperlink to a cell in a another worksheet of the document.
 
-__Example 3__ create a hyperlink to an email address.
-        
 
-#### __[C#] Example 3: Create link to email address__
+#### __[C#] Example 3: Create link to a cell in a another worksheet of the document__
 
 {{region cs-radspreadprocessing-features-hyperlink_2}}
+	HyperlinkInfo inDocument = HyperlinkInfo.CreateInDocumentHyperlink("'Sheet2'!A1", "Go to Sheet2");
+{{endregion}}
+
+
+
+__Example 4__ create a hyperlink to an email address.
+        
+
+#### __[C#] Example 4: Create link to email address__
+
+{{region cs-radspreadprocessing-features-hyperlink_3}}
 	HyperlinkInfo mailto = HyperlinkInfo.CreateMailtoHyperlink("someOne@someCompany.com", "someSubject", "Mail to someOne");
 {{endregion}}
 
@@ -89,12 +99,12 @@ __Example 3__ create a hyperlink to an email address.
 To add a hyperlink, you need to specify a cell range that will contain the hyperlink and a hyperlink info that will determine the type of the hyperlink.
         
 
-__Example 4__ assigns the hyperlink created in __Example 1__ to A1.
+__Example 5__ assigns the hyperlink created in __Example 1__ to A1.
         
 
-#### __[C#] Example 4: Add hyperlink__
+#### __[C#] Example 5: Add hyperlink__
 
-{{region cs-radspreadprocessing-features-hyperlink_3}}
+{{region cs-radspreadprocessing-features-hyperlink_4}}
 	CellIndex a1Index = new CellIndex(0, 0);
 	SpreadsheetHyperlink spreadsheetHyperlink = worksheet.Hyperlinks.Add(a1Index, webAddres);
 {{endregion}}
@@ -106,12 +116,12 @@ __Example 4__ assigns the hyperlink created in __Example 1__ to A1.
 There are several ways you can retrieve hyperlinks from the __HyperlinkCollection__ depending on their position relative to a given cell range.
         
 
-__Example 5__ defines two indexes and then a cell range out of those indexes.
+__Example 6__ defines two indexes and then a cell range out of those indexes.
         
 
-#### __[C#] Example 5: Define cell range__
+#### __[C#] Example 6: Define cell range__
 
-{{region cs-radspreadprocessing-features-hyperlink_4}}
+{{region cs-radspreadprocessing-features-hyperlink_5}}
 	CellIndex a1Index = new CellIndex(0, 0);
 	CellIndex b3Index = new CellIndex(2, 1);
 	CellRange a1b3Range = new CellRange(a1Index, b3Index);
@@ -119,12 +129,12 @@ __Example 5__ defines two indexes and then a cell range out of those indexes.
 
 
 
- __Example 6__ gets all hyperlinks the ranges of which are contained in the cell range from __Example 5__.
+ __Example 7__ gets all hyperlinks the ranges of which are contained in the cell range from __Example 5__.
             
 
-#### __[C#] Example 6: Get hyperlinks in cell range__
+#### __[C#] Example 7: Get hyperlinks in cell range__
 
-{{region cs-radspreadprocessing-features-hyperlink_5}}
+{{region cs-radspreadprocessing-features-hyperlink_6}}
 	IEnumerable<SpreadsheetHyperlink> containingHyperlinks = worksheet.Hyperlinks.GetContainingHyperlinks(a1b3Range);
 {{endregion}}
 
@@ -133,23 +143,23 @@ __Example 5__ defines two indexes and then a cell range out of those indexes.
 >The __GetContainingHyperlinks()__ method has an overload which accepts a collection of cell ranges.
               
 
- __Example 7__ gets all hyperlinks the ranges of which intersect with the cell range from __Example 5__.
+ __Example 8__ gets all hyperlinks the ranges of which intersect with the cell range from __Example 5__.
             
 
-#### __[C#] Example 7: Get hyperlinks intersecting with cell range__
+#### __[C#] Example 8: Get hyperlinks intersecting with cell range__
 
-{{region cs-radspreadprocessing-features-hyperlink_6}}
+{{region cs-radspreadprocessing-features-hyperlink_7}}
 	IEnumerable<SpreadsheetHyperlink> intersectingHyperlinks = worksheet.Hyperlinks.GetIntersectingHyperlinks(a1b3Range);
 {{endregion}}
 
 
 
- __Example 8__ gets the last added hyperlink that intersects with the cell range from __Example 5__.
+ __Example 9__ gets the last added hyperlink that intersects with the cell range from __Example 5__.
             
 
-#### __[C#] Example 8: Get last hyperlink intersecting with cell range__
+#### __[C#] Example 9: Get last hyperlink intersecting with cell range__
 
-{{region cs-radspreadprocessing-features-hyperlink_7}}
+{{region cs-radspreadprocessing-features-hyperlink_8}}
 	bool canGetHyperlink = worksheet.Hyperlinks.TryGetHyperlink(a1Index, out spreadsheetHyperlink);
 {{endregion}}
 
@@ -158,12 +168,12 @@ __Example 5__ defines two indexes and then a cell range out of those indexes.
 >The __TryGetHyperlink__ method has an overload that accepts a __CellIndex__ instead of __CellRange__.
               
 
- __Example 9__ gets the hyperlink which range matches the cell range from __Example 5__.
+ __Example 10__ gets the hyperlink which range matches the cell range from __Example 5__.
             
 
-#### __[C#] Example 9: Get hyperlink exactly matching cell range__
+#### __[C#] Example 10: Get hyperlink exactly matching cell range__
 
-{{region cs-radspreadprocessing-features-hyperlink_8}}
+{{region cs-radspreadprocessing-features-hyperlink_9}}
 	bool canGetHyperlinkExact = worksheet.Hyperlinks.TryGetHyperlinkExact(a1b3Range, out spreadsheetHyperlink);
 {{endregion}}
 
@@ -174,12 +184,12 @@ __Example 5__ defines two indexes and then a cell range out of those indexes.
 To remove a hyperlink you need to retrieve a __SpreadsheetHyperlink__ object and then remove it from the hyperlinks collection.
         
 
-__Example 10__ removes a hyperlink.
+__Example 11__ removes a hyperlink.
         
 
-#### __[C#] Example 10: Remove hyperlink__
+#### __[C#] Example 11: Remove hyperlink__
 
-{{region cs-radspreadprocessing-features-hyperlink_9}}
+{{region cs-radspreadprocessing-features-hyperlink_10}}
 	SpreadsheetHyperlink spreadsheetHyperlink;
 	if (worksheet.Hyperlinks.TryGetHyperlink(a1Index, out spreadsheetHyperlink))
 	{
