@@ -40,9 +40,7 @@ PdfProcessing needs to have access to the font data so that it can read it and a
 
 The code snippets below show how to create a custom <u>FontsProvider</u> implementation and how to set it.
 
-* **FontsProvider**: Gets or sets a *FontsProviderBase* instance used to provide and export missing fonts.  
-
-    #### **[C#] Example 1: Windows Example: Creating custom implementation, inheriting the FontsProviderBase abstract class**
+    #### **[C#] Example 1: Creating custom implementation, inheriting the FontsProviderBase abstract class**
     {{region cs-radpdfprocessing-cross-platform_0}}
 
         public class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
@@ -72,7 +70,7 @@ The code snippets below show how to create a custom <u>FontsProvider</u> impleme
         }
     {{endregion}}
 
-    #### **[C#] Example 2: Set the custom implementation inheriting the FontsProviderBase abstract class**
+#### **[C#] Example 2: Set the custom implementation inheriting the FontsProviderBase abstract class**
     {{region cs-radpdfprocessing-cross-platform_1}}
 
         Telerik.Windows.Documents.Extensibility.FontsProviderBase fontsProvider = new FontsProvider();
