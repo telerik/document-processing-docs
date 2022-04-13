@@ -40,7 +40,7 @@ Since we distribute Telerik Document Processing libraries as an addition to seve
 
 As we are going to create a UI-Independent example, we will use a console project for this guide:
 
-* Open Microsoft Visual Studio and create a new console project.
+* Open Microsoft Visual Studio and create a new console project. It could be a .NET Framework or .NET 5+ project.
 
 #### __Figure 1: Go to File > New > Project > Console App (.Net Framework) > Next > Create__
 ![Create Console Project](images/VisualStudio_NewProject_Console3.gif "Create new Console Project")
@@ -51,16 +51,27 @@ This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-
 
 1. Reference the assemblies that provide the __RadWordsProcessing__ functionality:
 
-  * __Telerik.Windows.Documents.Core.dll__
-  * __Telerik.Windows.Documents.Flow.dll__
-  * __Telerik.Windows.Zip.dll__
+	For .NET Framework project:
+	  * __Telerik.Windows.Documents.Core.dll__
+	  * __Telerik.Windows.Documents.Flow.dll__
+	  * __Telerik.Windows.Zip.dll__
+
+	For .NET 5+ project:
+	  * __Telerik.Documents.Core.dll__
+	  * __Telerik.Documents.Flow.dll__
+	  * __Telerik.Zip.dll__
 
 1. Reference the assemblies that allow you to export the content as Docx and PDF files:
 
-  * __Telerik.Windows.Documents.Flow.FormatProviders.Docx.dll__
-  * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll__
+	For .NET Framework project:
+	  * __Telerik.Windows.Documents.Flow.FormatProviders.Docx.dll__
+	  * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll__
 
-> The Document Processing assemblies for .NET Core don't contain "Windows" in their names.
+	For .NET 5+ project:
+	  * __Telerik.Documents.Flow.FormatProviders.Docx.dll__
+	  * __Telerik.Documents.Flow.FormatProviders.Pdf.dll__
+
+> The Document Processing assemblies for .NET 5+ don't contain "Windows" in their names.
 
 ## Step 4: Create a Document
 
