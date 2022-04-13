@@ -11,20 +11,7 @@ position: 5
 
 
 
-This article briefly describes how to work with the __Value__ property of the cells in the document model and focuses on the different supported types of values. It contains the following sections:
-      
-
-* [Working with the Value Property of Cells](#working-with-the-value-property-of-cells)
-
-* [EmptyCellValue](#empty-cell-value)
-
-* [BooleanCellValue](#boolean-cell-value)
-
-* [NumberCellValue](#number-cell-value)
-
-* [FormulaCellValue](#formula-cell-value)
-
-* [TextCellValue](#text-cell-value)
+This article briefly describes how to work with the __Value__ property of the cells in the document model and focuses on the different supported types of values. 
 
 ## Working with the Value Property of Cells
 
@@ -201,6 +188,7 @@ __Example 8__ shows how to set the value of cell A1 to 1.23.
 {{endregion}}
 
 
+## Date Values
 
 You can use the SetValue(string) method to assign dates.
         
