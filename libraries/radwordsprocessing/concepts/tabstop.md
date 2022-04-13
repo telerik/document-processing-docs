@@ -130,6 +130,34 @@ The following code-snippet illustrates how to remove the created in [Example 4](
 	paragraph.TabStops = paragraph.TabStops.Remove(tabStop);
 {{endregion}}
 
+### Using TabStop In the Content
+
+Once you have applied the desired tab stops to a paragraph, you need to insert tabs (\t) so that the content can be aligned to the specified tab stops. The code in **Example 6** inserts tab stops at three positions with different properties and aligns three words on the tab stop positions using tabs.
+
+#### __[C#] Example 6: Add tabs to align to the tab stops__
+
+{{region cs-radwordsprocessing-concepts-tabstops_6}}
+
+    private RadFlowDocument CreateDocumentWithTabStops()
+    {
+        RadFlowDocument document = new RadFlowDocument();
+        RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+
+        List<TabStop> tabStops = new List<TabStop>();
+        tabStops.Add(new TabStop(Unit.InchToDip(1), TabStopType.Left));
+        tabStops.Add(new TabStop(Unit.InchToDip(3), TabStopType.Center, TabStopLeader.Dot));
+        tabStops.Add(new TabStop(Unit.InchToDip(5), TabStopType.Right, TabStopLeader.Hyphen));
+
+        TabStopCollection tabStopCollection = new TabStopCollection(tabStops);
+
+        Paragraph paragraph = editor.InsertParagraph();
+        paragraph.TabStops = tabStopCollection;
+        paragraph.Inlines.AddRun("\tleft\tcenter\tright");
+
+        return document;
+    }
+{{endregion}}
+
 ## See Also
 
 * [Paragraph]({%slug radwordsprocessing-model-paragraph%})

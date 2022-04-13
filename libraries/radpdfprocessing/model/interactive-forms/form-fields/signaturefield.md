@@ -19,7 +19,7 @@ This article describes the following topics:
 
 This class corresponds to FormFieldType.Signature enum value and represents a placeholder which preserves the digital signature information. 
 
->In PdfProcessing for .NET Standard you can add SignatureField but can not sign or import signed documents. The Signature property of SignatureField is not available.
+>To use the signing functionality in PdfProcessing for .NET Standard/.NET Core, you must add a reference to the System.Security.Cryptography.Pkcs NuGet package, version 6 or newer (This functionality is available since R1 2022 SP1).
 
 ## Properties
 
@@ -39,24 +39,24 @@ SignatureField provides the following properties:
 
 	SignatureField signatureField = new SignatureField("SampleSignature");
 	signatureField.Signature = new Signature(certificate); // The Signature property fo SignatureField is not available in PdfProcessing for .NET Standard.
-
+	
 	SignatureWidget widget = signatureField.Widgets.AddWidget();
 	widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
 	widget.Border = new AnnotationBorder(5, AnnotationBorderStyle.Solid, null);
-
+	
 	// Create a Form object to define the appearance you would like for the signature field.
 	Form form = new Form();
 	form.FormSource = new FormSource();
 	form.FormSource.Size = new Size(120, 120);
-
+	
 	FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
 	formEditor.DrawCircle(new Point(50, 50), 20);
 	formEditor.DrawText("Sample Signature");
-
+	
 	// Add the FormSource object to the widget of the field.
 	widget.Content.NormalContentSource = form.FormSource;
 	widget.RecalculateContent();
-
+	
 	RadFixedPage page = document.Pages.Last();
 	page.Annotations.Add(widget);
 	document.AcroForm.FormFields.Add(signatureField);

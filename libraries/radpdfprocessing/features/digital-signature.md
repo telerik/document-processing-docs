@@ -4,7 +4,6 @@ page_title: Digital Signature
 slug: radpdfprocessing-features-digital-signature
 tags: digital, signature
 position: 2
-platforms: ajax, mvc, wpf, winforms
 ---
 
 # Digital Signature
@@ -26,7 +25,7 @@ This article covers the following topics:
 
 The digital signature feature enables you to sign and validate a PDF document. A signature confirms that the document's content originated from the signer and has not been modified in any way. A signed document is considered valid when it has not been changed after the signing, and all of its certificates have a valid trusted root certificate.
 
->In PdfProcessing for **.NET Standard/.NET Core**, you can add SignatureField but can not sign or import signed documents.
+>To use the signing functionality in PdfProcessing for **.NET Standard/.NET Core**, you must add a reference to the **System.Security.Cryptography.Pkcs** NuGet package, version 6 or newer (This functionality is available since R1 2022 SP1).
 
 ## Signing a Document
 
@@ -63,45 +62,45 @@ In addition, to create a signature, which has a visual representation, you must 
 
 	// Define the certificate which will be used for the signing.
 	System.Security.Cryptography.X509Certificates.X509Certificate2 certificate = new System.Security.Cryptography.X509Certificates.X509Certificate2(certificateFilePath, certificateFilePassword);
-
+	
 	// The name of the signature must be unique.
 	string signatureName = "SampleSignature";
-
+	
 	// This is the Form XObject element that represents the contents of the signature field. 
 	Form form = new Form();
 	form.FormSource = new FormSource();
 	form.FormSource.Size = new Size(220, 220);
-
+	
 	// We will use the editor to fill the Form XObject. 
 	FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
 	form.Position.Translate(10, 10);
 	formEditor.DrawCircle(new Point(50, 50), 20);
 	formEditor.DrawText(signatureName);
-
+	
 	// The Signature object is added to a signature field, so we can add a visualization to it. 
 	SignatureField signatureField = new SignatureField(signatureName);
 	signatureField.Signature = new Signature(certificate);
-
+	
 	// The widget contains the Form XObject and defines the appearance of the signature field. 
 	SignatureWidget widget = signatureField.Widgets.AddWidget();
 	widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
 	widget.Border = new AnnotationBorder(10, AnnotationBorderStyle.Solid, null);
 	widget.Content.NormalContentSource = form.FormSource;
 	widget.RecalculateContent();
-
+	
 	// The Widget class inherits from Annotation. And, as any other annotation, must be added to the respective collection of the page. 
-
+	
 	RadFixedDocument document = new RadFixedDocument();
 	RadFixedPage page = document.Pages.AddPage();
 	page.Annotations.Add(widget);
-
+	
 	var editor = new FixedContentEditor(page);
 	editor.Position.Translate(200, 400);
 	editor.DrawForm(form.FormSource);
 	document.AcroForm.FormFields.Add(signatureField);
 	widget.RecalculateContent();
 	widget.AppearanceCharacteristics.Background = new Telerik.Windows.Documents.Fixed.Model.ColorSpaces.RgbColor(255, 0, 0);
-
+	
 	using (Stream stream = File.OpenWrite("signed.pdf"))
 	{
 	    new PdfFormatProvider().Export(document, stream);
@@ -146,9 +145,9 @@ The Signature class exposes two methods allowing you to validate a signature:
 {{region radpdfprocessing-features-digital-signature_3}}
 
     RadFixedDocument document = new PdfFormatProvider().Import(stream); // The stream containing the document
-
+    
     string validationStatus;
-
+    
     // For simplicity, the example handles only the first signature.
     SignatureField firstSignatureField = document.AcroForm.FormFields.FirstOrDefault(field => field.FieldType == FormFieldType.Signature) as SignatureField;
     if (firstSignatureField != null && firstSignatureField.Signature != null)
@@ -156,7 +155,7 @@ The Signature class exposes two methods allowing you to validate a signature:
         SignatureValidationProperties properties = new SignatureValidationProperties();
         System.Security.Cryptography.X509Certificates.X509VerificationFlags verificationFlags = System.Security.Cryptography.X509Certificates.X509VerificationFlags.IgnoreInvalidName;
         properties.Chain.ChainPolicy.VerificationFlags = verificationFlags;
-
+    
         SignatureValidationResult validationResult;
         if (firstSignatureField.Signature.TryValidate(properties, out validationResult))
         {

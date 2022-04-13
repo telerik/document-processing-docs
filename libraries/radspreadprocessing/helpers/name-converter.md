@@ -21,6 +21,7 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 * **[TryConvertNamesToCellReferenceRangeExpression](#try-convert-names-to-cell-reference-range-expression)**: Tries to convert the cell ranges names to cell reference ranges.
 * **[ConvertCellReferenceToName](#convert-cell-reference-to-name)**: Converts the cell reference to name.
 * **[ConvertCellRangeToName](#convert-cell-range-to-name)**: Converts the cell range to a name.
+* **[TryConvertNameToCellRange](#try-convert-name-to-cell-range)**: Tries to convert the name to a cell range. 
 * **[ConvertCellIndexesToName](#convert-cell-indexes-to-name)**: Converts the cell indexes to a name.
 * **[ConvertCellNameToIndex](#convert-cell-name-to-index)**: Converts the cell name to a cell index.
 * **[TryConvertCellNameToIndex](#try-convert-cellName-to-index)**: Tries to convert the cell name to index.
@@ -121,20 +122,34 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 {{endregion}}
 
 
-### Convert Cell Indexes to Name
-**ConvertCellIndexesToName** method converts the cell indexes to a name.
+### Try Convert Name to Cell Range
+**TryConvertNameToCellRange** method converts the name to a cell range. 
 #### __[C#] Example 9:__
 
 {{region radspreadprocessing-name-converter_9}}
+
+    CellIndex fromIndex = new CellIndex(rowIndex: 0, columnIndex: 0);
+    CellIndex toIndex = new CellIndex(rowIndex: 10, columnIndex: 5);
+    string cellRangeName = NameConverter.ConvertCellRangeToName(fromIndex, toIndex);
+
+    CellRange cellRange;
+    bool result = NameConverter.TryConvertCellRangeNameToCellRange(cellRangeName, out cellRange);
+{{endregion}}
+
+### Convert Cell Indexes to Name
+**ConvertCellIndexesToName** method converts the cell indexes to a name.
+#### __[C#] Example 10:__
+
+{{region radspreadprocessing-name-converter_10}}
 
     string cellRangeName = NameConverter.ConvertCellIndexesToName(fromRowIndex: 0, fromColumnIndex: 0, toRowIndex: 10, toColumnIndex: 5);
 {{endregion}}
 
 ### Convert Cell Name to Index
 **ConvertCellNameToIndex** method converts the cell name to a cell index. This method exposes two overloads.
-#### __[C#] Example 10: first overload__
+#### __[C#] Example 11: first overload__
 
-{{region radspreadprocessing-name-converter_10}}
+{{region radspreadprocessing-name-converter_11}}
 
     string cellName = "A1";
     int rowIndex;
@@ -142,7 +157,7 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
     NameConverter.ConvertCellNameToIndex(cellName, out rowIndex, out columnIndex);
 {{endregion}}
 
-#### __[C#] Example 10: second overload__
+#### __[C#] Example 11: second overload__
 {{region radspreadprocessing-name-converter_11}}
 
     string cellName = "A1";
@@ -155,7 +170,7 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 
 ### Try Convert Cell Name to Index
 **TryConvertCellNameToIndex** method tries to convert the cell name to index. This method exposes two overloads.
-#### __[C#] Example 11: first overload__
+#### __[C#] Example 12: first overload__
 {{region radspreadprocessing-name-converter_12}}
 
     string cellName = "A1";
@@ -164,8 +179,8 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
     bool isConversionSuccessful = NameConverter.TryConvertCellNameToIndex(cellName, out rowIndex, out columnIndex);
 {{endregion}}
 
-#### __[C#] Example 11: second overload__
-{{region radspreadprocessing-name-converter_13}}
+#### __[C#] Example 12: second overload__
+{{region radspreadprocessing-name-converter_12}}
  
     string cellName = "A1";
     int rowIndex;
@@ -178,9 +193,9 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 
 ### Is Valid A1 Cell Name
 **IsValidA1CellName** method determines whether the name of the cell is valid.
-#### __[C#] Example 12:__
+#### __[C#] Example 13:__
 
-{{region radspreadprocessing-name-converter_14}}
+{{region radspreadprocessing-name-converter_13}}
 
     string cellName = "B2";
     bool isValidCellName= NameConverter.IsValidA1CellName(cellName);

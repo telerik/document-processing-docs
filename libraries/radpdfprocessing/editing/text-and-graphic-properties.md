@@ -66,7 +66,7 @@ These properties hold the parameters used for text fragments. The following para
 
 * __HorizontalScaling__: The horizontal scaling for text fragments. The property is of type `double?`.
 
-* __FontSize__: The font size for text fragments. The property is of type `double`.
+* __FontSize__: The font size for text fragments. The property is of type `double`. The measurement unit used for font size is [DIP](https://en.wikipedia.org/wiki/Device-independent_pixel). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
 
 * __RenderingMode__: The rendering mode for text fragments. The property is of type [RenderingMode](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Text.RenderingMode.html).
 
@@ -87,6 +87,7 @@ These properties hold the parameters used for text fragments. The following para
 
 	block.TextProperties.CharacterSpacing = 5;
 	block.TextProperties.Font = FontsRepository.TimesBold;
+	block.TextProperties.FontSize = Unit.PointToDip(12);
 
 	block.TextProperties.HighlightColor = new RgbColor(40, 60, 80);
 	block.TextProperties.RenderingMode = Telerik.Windows.Documents.Fixed.Model.Text.RenderingMode.FillAndStroke;
@@ -97,18 +98,18 @@ These properties hold the parameters used for text fragments. The following para
 The TextProperties also exposes the following methods, which can be used for changing the current font:
         
 
-__TextProperties.TrySetFont(FontFamily fontFamily);__
+* __TextProperties.TrySetFont(FontFamily fontFamily);__
 
-__TextProperties.TrySetFont(fontFamily, fontStyle, fontWeight);__
+* __TextProperties.TrySetFont(fontFamily, fontStyle, fontWeight);__
 
 ## Preserving Current State
 
 Both Text and Graphic properties contain methods that can preserve and restore the current state.
         
 
-__properties.Save();__
+* __properties.Save();__
 
-__properties.Restore();__
+* __properties.Restore();__
 
 >The Save() method returns __IDisposable__ object that will execute Restore() as soon as the dispose method is called and can be used in a using statement.
           

@@ -121,7 +121,33 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
 
 >tipIf you use __StreamWriter__ to write content to the stream, you should call the Flush() method in order to flush the data to the stream.
           
-         
+
+>Do not close the stream opened by the __ZipArchiveEntry.Open()__ method. Otherwise the result is unpredictable.
+          
+The constructor of ZipArchive lets you specify whether you would like to keep the stream associated to the instance open. If you decide to set the `leaveOpen` parameter to `false`, the underlying stream will be closed once the ZipArchive instance is disposed. In case you need to continue working with that stream (to send it as a responce, for example), you should pass `true` for the `leaveOpen` parameter.
+
+#### __[C#] Example 3: Create archive in a MemoryStream__
+
+{{region cs-radziplibrary-gettingstarted_2}}
+
+    Stream memoryStream = new MemoryStream();
+
+    // The third parameter of ZipArchive's constructor specifies that the stream should be left open 
+    using (ZipArchive archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true, null))
+    {
+        using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
+        {
+            Stream entryStream = entry.Open();
+            StreamWriter writer = new StreamWriter(entryStream);
+            writer.WriteLine("Hello world!");
+            writer.Flush();
+        }
+    }
+    
+    // Save memoryStream to a file or send it to client
+
+{{endregion}}
+
 
 ## See Also
 

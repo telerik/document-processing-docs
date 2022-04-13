@@ -100,7 +100,7 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 	\* _The Telerik.Documents.ImageUtils.dll assembly is needed when exporting to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High._
 </sub>
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp** and **TiffLibrary.ImageSharpAdapter**. In order to use this assembly, you will need to add references to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) and [TiffLibrary.ImageSharpAdapter](https://www.nuget.org/packages/TiffLibrary.ImageSharpAdapter/).
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp**. In order to use this assembly, you will need to add a reference to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/). After R1 2022 SP1 the minimum **ImageSharp** required version is **v.2.0.0**.
 
 ## Creating RadFlowDocument from Code
 
