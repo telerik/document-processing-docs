@@ -65,7 +65,7 @@ The __CellImportedEventArgs__ contains information about the current cell:
 The __ColumnExporting__ event is fired for each column before the column is added to the table and allows you to change its properties.
 
 The __ColumnExportingEventArgs__ object contains the the current column instance and its index:
-* __DataColumn:__ Gets the DataColumn that is being exported.
+* __DataColumn:__ Gets the [DataColumn](https://docs.microsoft.com/en-us/dotnet/api/system.data.datacolumn?view=net-6.0) that is being exported.
 * __ColumnIndex:__  Gets the index of the exported column. 
 
 #### __[C#] Example 2: Using the ColumnExporting event to set the AllowDBNull property__
