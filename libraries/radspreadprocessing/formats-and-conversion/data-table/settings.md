@@ -60,6 +60,34 @@ The __CellImportedEventArgs__ contains information about the current cell:
 * __DataTableCulture:__ Get or sets the DataTable culture. By default the culture of the workbook is used.
 * __RangeToExport:__ Get or sets the cell range for which the data will be exported.
 
+## The ColumnExporting event  
+
+The __ColumnExporting__ event is fired for each column before the column is added to the table and allows you to change its properties.
+
+The __ColumnExportingEventArgs__ object contains the the current column instance and its index:
+* __DataColumn:__ Gets the DataColumn that is being exported.
+* __ColumnIndex:__  Gets the index of the exported column. 
+
+#### __[C#] Example 2: Using the ColumnExporting event to set the AllowDBNull property__
+
+{{region cs-radspreadprocessing-formats-and-conversion-data-table-format-provider-settings_1}}
+
+    private void ExportTable()
+    {
+        DataTableFormatProvider provider = new DataTableFormatProvider();
+        provider.ExportSettings.ColumnExporting += this.ExportSettings_ColumnExporting;
+        var table = provider.Export(radSpreadsheet.Workbook.ActiveWorksheet);
+    }
+    private void ExportSettings_ColumnExporting(object sender, ColumnExportingEventArgs e)
+    {
+        if (e.ColumnIndex == 3)
+        {
+            e.DataColumn.AllowDBNull = true;
+        } 
+    }
+
+{{endregion}}
+
 # See Also
 
 * [Using DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
