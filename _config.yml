@@ -176,6 +176,9 @@ navigation:
 ## RadPdfProcessing Start
     "*radpdfprocessing":
         title: RadPdfProcessing   
+    libraries/radpdfprocessing/cross-platform:
+        title: Cross-Platform Support
+        position: 2        
     libraries/radpdfprocessing/model:
         title: Model
         position: 4
