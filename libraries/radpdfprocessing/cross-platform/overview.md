@@ -1,7 +1,7 @@
 ---
 title: Overview
 page_title: Overview
-slug: radpdfprocessing-cross-platform-overview
+slug: radpdfprocessing-cross-platform
 tags: cross,platform
 platforms: blazor, core, xamarin, winui
 published: True
@@ -32,16 +32,9 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 
 ## Fonts and Images
 
-The .NET Framework version of PdfProcessing comes with out-of-the-box functionality to read fonts, convert images, and scale their quality. The .NET Standard specification, however does not specify APIs to provide such functionalities built in the library.
+The .NET Framework version of PdfProcessing comes with out-of-the-box functionality to read fonts, convert images, and scale their quality. The .NET Standard specification, however, does not specify APIs to provide such functionalities built in the library.
 In order to provide the necessary extensibility mechanisms for working with fonts and images, the .NET Standard version of **RadPdfProcessing** exposes the **FixedExtensibilityManager** class. 
 More information, including code samples on how to configure the **FixedExtensibilityManager** is available in the [**Fonts**]({%slug radpdfprocessing-cross-platform-fonts%}) and [**Images**]({%slug radpdfprocessing-cross-platform-images%}) articles respectively.
-
-## Additional settings required
-
-### Signatures
-
-* Since R1 2022 SP1 digital signatures are supported in Net Standard as well. More information is available [here]({%slug radpdfprocessing-features-digital-signature%}).
-
 
 ## See Also
 
