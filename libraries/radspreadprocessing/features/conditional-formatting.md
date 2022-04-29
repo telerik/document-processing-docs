@@ -60,6 +60,13 @@ The **ConditionalFormattingDxfRule** class is a base class for all rules that su
 - Italic
 - Underline
 - Fill
+- LeftBorder
+- RightBorder
+- TopBorder
+- BottomBorder
+- DiagonalUpBorder
+- DiagonalDownBorder
+- CellValueFormat: Allows you to set the number format string for the cell value
 
 The Formatting property can be used for all rules listed in **Table 1** except **ColorScaleRule**, **IconSetRule**, and **DataBarRule**. Due to their specificity, these three rules inherit directly from `ConditionalFormattingRule` and **do not** expose the `Formatting` property. Their styling options are directly inside the rule class. 
 
@@ -72,8 +79,15 @@ The Formatting property can be used for all rules listed in **Table 1** except *
     formatting.FontFamily = new ThemableFontFamily("Times New Roman");
     formatting.ForeColor = new ThemableColor(Colors.Red);
     formatting.IsBold = true;
-    formatting.IsItalic= true;
+    formatting.IsItalic = true;
     formatting.Fill = new PatternFill(PatternType.Solid, Color.FromArgb(255, 46, 204, 113), Colors.Transparent);
+    formatting.CellValueFormat = new CellValueFormat("@");
+        
+    CellBorder cellBorder = new CellBorder(CellBorderStyle.Thin, ThemableColor.FromColor(Colors.Red));
+    formatting.TopBorder = cellBorder;
+    formatting.BottomBorder = cellBorder;
+    formatting.LeftBorder = cellBorder;
+    formatting.RightBorder = cellBorder;
 {{endregion}}
 
 
@@ -251,6 +265,27 @@ For the rules that apply on all the values in the range, the return value is **b
 
 {{region radspreadprocessing-features-conditional-formatting_8}}
 
-    ICellValue cellValue = worksheet.Cells[0, 0, 10, 10].GetValue().Value;
-    bool isFormattingRuleApplied = rule.ResolveRule(cellValue) > 0;
+    CellIndex cellIndex = new CellIndex(0, 0);
+    ConditionalFormatting formatting = worksheet.Cells[cellIndex].GetConditionalFormattings().First().Formattings.First();
+    bool isFormattingApplied = formatting.Resolve(cellIndex) > 0;
 {{endregion}}
+
+## Update the Rule for a Formatting
+
+In case you would like to change the rule used by a ConditionalFormatting object, you can do so using the UpdateRule() method.
+
+#### [C#] Example 10: Change the rule for existing conditional formatting
+
+{{region radspreadprocessing-features-conditional-formatting_9}}
+
+    ConditionalFormattingRange formattingRange = worksheet.Cells[0, 0, 10, 10].GetConditionalFormattings().First();
+    formattingRange.Formattings.First().UpdateRule(new ContainsRule("test"));
+{{endregion}
+
+## Update the Cell Range of Existing Formatting
+
+The CellSelection class exposes the UpdateConditionalFormattingCellRanges method to help you change the conditional formatting element's cell range, applying it on the currently selected ranges. When invoked, the UpdateConditionalFormattingCellRanges method removes the conditional formatting from the ranges it is associated to and applies it to the selection.
+
+## Control the Priority of Rules
+
+Each ConditionalFormattingRule has a specific priority used to evaluate which formatting should be applied when several rules are used on the same range of cells. If you would like to change that priority, you can use the SwapPriority() method of the rule. It takes a ConditionalFormattingRule object and swaps its priority with the rule the method is invoked for.
