@@ -10,12 +10,12 @@ position: 2
 
 # Images
 
-Means for converting images, and scaling their quality are readily available in the .NET Framework version of the RadPdfProcessing library. In contrast, the .NET Standard one does not provide such functionality and requires some manual settings to achieve this. The **FixedExtensibilityManager** class is exposed specifically to address this need. 
+Means for converting images, and scaling their quality are readily available in the .NET Framework version of the RadPdfProcessing library. In contrast, the .NET Standard one does not provide such functionality and requires some manual settings to achieve this. The `FixedExtensibilityManager` class is exposed specifically to address this need. 
 More information on how to configure it can be found in the code samples later in this article.
 
 ## Exporting Images
 
-To reduce file size, PDF supports only a number of compression filters like Jpeg and Jpeg2000 compression of color and grayscale images. So to allow the library to export images different than Jpeg and Jpeg2000, these images should be additionally processed. The **.NET Standard** specification does not define APIs for converting/processing images or scaling their quality. That is why, to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, PdfProcessing comes with two extensibility points exposed by the static **FixedExtensibilityManager** class - **ImagePropertiesResolver** and **JpegImageConverter**.
+To reduce file size, PDF supports only a number of compression filters like Jpeg and Jpeg2000 compression of color and grayscale images. So to allow the library to export images different than Jpeg and Jpeg2000, these images should be additionally processed. The **.NET Standard** specification does not define APIs for converting/processing images or scaling their quality. That is why, to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, PdfProcessing comes with two extensibility points exposed by the static `FixedExtensibilityManager` class - **ImagePropertiesResolver** and **JpegImageConverter**.
 
 > If neither **ImagePropertiesResolver** and **JpegImageConverter** are set, an InvalidOperationException is thrown during export of document.
 
@@ -26,7 +26,7 @@ This property enables you to set a resolver implementation that can parse the im
 
 ### Default Implementation
 
-PdfProcessing comes with a default implementation for such resolver called ImagePropertiesResolver. The built-in logic depends on the [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) library to parse the image data. To use the default functionality, you should add a reference to the **Telerik.Documents.ImageUtils.dll** assembly and set an instance of the ImagePropertiesResolver class it to the FixedExtensibilityManager.ImagePropertiesResolver property.
+PdfProcessing comes with a default implementation for such resolver called `ImagePropertiesResolver`. The built-in logic depends on the [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/) library to parse the image data. To use the default functionality, you should add a reference to the **Telerik.Documents.ImageUtils.dll** assembly and set an instance of the ImagePropertiesResolver class it to the `FixedExtensibilityManager.ImagePropertiesResolver` property.
 
 >important Telerik.Documents.ImageUtils.dll is not available for Xamarin. If targeting this platform, you will need to implement a custom resolver.
 
@@ -41,16 +41,16 @@ PdfProcessing comes with a default implementation for such resolver called Image
 ## Custom Implementation
 
 In case you have specific requirements and the default ImagePropertiesResolver doesn't fit them, you can implement custom logic that can handle them. To achieve that, you should:
-1. inherit the Telerik.Windows.Documents.Core.Imaging.ImagePropertiesResolverBase class
+1. inherit the `Telerik.Windows.Documents.Core.Imaging.ImagePropertiesResolverBase` class
 1. implement its members
-1. assign an instance of the custom implementation to the FixedExtensibilityManager.ImagePropertiesResolver property 
+1. assign an instance of the custom implementation to the `FixedExtensibilityManager.ImagePropertiesResolver` property 
 
 
 ### JpegImageConverter 
 
-The JpegImageConverter property uses an implementation of the JpegImageConverterBase abstract class to convert an image to Jpeg. This implementation should be passed to the JpegImageConverter property of the of FixedExtensibilityManager.
+The `JpegImageConverter` property uses an implementation of the `JpegImageConverterBase` abstract class to convert an image to Jpeg. This implementation should be passed to the JpegImageConverter property of the of FixedExtensibilityManager.
        
-> If you have both properties set - ImagePropertiesResolver and JpegConverter, ImagePropertiesResolver is used with a higher prority to parse the image.
+> If you have both the `ImagePropertiesResolver` and `JpegImageConverter` properties set, the `ImagePropertiesResolver` is prioritized and used to parse the image.
 
 
 #### Default Implementation
@@ -106,5 +106,5 @@ The following example depends on the [Magick.NET](https://www.nuget.org/packages
     {{endregion}}
 
 
->note A complete SDK example could be found on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter).
+>note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter).
 
