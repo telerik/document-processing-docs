@@ -66,7 +66,7 @@ The **ConditionalFormattingDxfRule** class is a base class for all rules that su
 - BottomBorder
 - DiagonalUpBorder
 - DiagonalDownBorder
-- CellValueFormat: Allows you to set the number format string for the cell value
+- CellValueFormat: Allows you to set the number format string for the cell value. For more information, check the [Number Formatting]({%slug radspreadprocessing-features-number-formats%}) topic.
 
 The Formatting property can be used for all rules listed in **Table 1** except **ColorScaleRule**, **IconSetRule**, and **DataBarRule**. Due to their specificity, these three rules inherit directly from `ConditionalFormattingRule` and **do not** expose the `Formatting` property. Their styling options are directly inside the rule class. 
 
