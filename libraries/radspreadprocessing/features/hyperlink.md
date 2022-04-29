@@ -72,10 +72,10 @@ __Example 2__ creates a hyperlink to a cell range somewhere in the document.
 {{endregion}}
 
 
-__Example 3__ creates a hyperlink to a cell in a another worksheet of the document.
+__Example 3__ creates a hyperlink to a cell in another worksheet of the document.
 
 
-#### __[C#] Example 3: Create link to a cell in a another worksheet of the document__
+#### __[C#] Example 3: Create link to a cell in another worksheet of the document__
 
 {{region cs-radspreadprocessing-features-hyperlink_2}}
 	HyperlinkInfo inDocument = HyperlinkInfo.CreateInDocumentHyperlink("'Sheet2'!A1", "Go to Sheet2");
@@ -83,7 +83,7 @@ __Example 3__ creates a hyperlink to a cell in a another worksheet of the docume
 
 
 
-__Example 4__ create a hyperlink to an email address.
+__Example 4__ shows how you can create a hyperlink to an email address.
         
 
 #### __[C#] Example 4: Create link to email address__
