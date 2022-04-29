@@ -10,7 +10,7 @@ position: 23
 
 # Comments
 
-Since R1 2022 the SpreadProcessing library supports working with comments. Comments are used for marking information about a cell's data and can have one or multiple [Replies] (#replies). All comments can be found in the __Comments__ property of the worksheet, which is of the type __CommentsCollection__. This collection holds __SpreadsheetComment__ objects which represent the comments. Each comment has the following members:
+Since R1 2022 the SpreadProcessing library supports working with comments. Comments are used for marking information about a cell's data and can have one or multiple [Replies] (#replies). All comments can be found in the __Comments__ property of the worksheet, which is of the type __CommentsCollection__. This collection holds __SpreadsheetComment__ objects, which represent the comments. Each comment has the following members:
 
 ***Properties***:
 
