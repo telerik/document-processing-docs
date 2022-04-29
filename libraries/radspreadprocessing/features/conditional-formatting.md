@@ -280,7 +280,7 @@ In case you would like to change the rule used by a ConditionalFormatting object
 
     ConditionalFormattingRange formattingRange = worksheet.Cells[0, 0, 10, 10].GetConditionalFormattings().First();
     formattingRange.Formattings.First().UpdateRule(new ContainsRule("test"));
-{{endregion}
+{{endregion}}
 
 ## Update the Cell Range of Existing Formatting
 
