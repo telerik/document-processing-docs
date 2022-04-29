@@ -15,7 +15,7 @@ More information on how to configure it can be found in the code samples later i
 
 ## Exporting Images
 
-To reduce file size, PDF supports only a number of compression filters like Jpeg and Jpeg2000 compression of color and grayscale images. So to allow the library to export images different than Jpeg and Jpeg2000, these images have to be converted to the one of the supported image formats. The **.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why, to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, PdfProcessing comes with two extensibility points exposed by the static **FixedExtensibilityManager** class - **ImagePropertiesResolver** and **JpegImageConverter**.
+To reduce file size, PDF supports only a number of compression filters like Jpeg and Jpeg2000 compression of color and grayscale images. So to allow the library to export images different than Jpeg and Jpeg2000, these images should be additionally processed. The **.NET Standard** specification does not define APIs for converting/processing images or scaling their quality. That is why, to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, PdfProcessing comes with two extensibility points exposed by the static **FixedExtensibilityManager** class - **ImagePropertiesResolver** and **JpegImageConverter**.
 
 > If neither **ImagePropertiesResolver** and **JpegImageConverter** are set, an InvalidOperationException is thrown during export of document.
 
@@ -42,7 +42,7 @@ PdfProcessing comes with a default implementation for such resolver called Image
 
 In case you have specific requirements and the default ImagePropertiesResolver doesn't fit them, you can implement custom logic that can handle them. To achieve that, you should:
 1. inherit the Telerik.Windows.Documents.Core.Imaging.ImagePropertiesResolverBase class
-1. implement its memebers
+1. implement its members
 1. assign an instance of the custom implementation to the FixedExtensibilityManager.ImagePropertiesResolver property 
 
 
@@ -62,8 +62,8 @@ The **Telerik.Documents.ImageUtils** assembly provides a default implementation 
 #### **[C#] Example 2: Set the default implementation of the JpegImageConverter class**
     {{region cs-radpdfprocessing-cross-platform_3}}
 
-       Telerik.Windows.Documents.Extensibility.JpegImageConverterBase jpegImageConverter = new Telerik.Documents.ImageUtils.JpegImageConverter();
-       Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = jpegImageConverter;
+       Telerik.Windows.Documents.Extensibility.JpegImageConverterBase defaultJpegImageConverter = new Telerik.Documents.ImageUtils.JpegImageConverter();
+       Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = defaultJpegImageConverter;
     {{endregion}}
 
 
@@ -105,7 +105,6 @@ The following example depends on the [Magick.NET](https://www.nuget.org/packages
         Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
     {{endregion}}
 
->important If the JpegImageConverter property is not set, an exception is thrown.
 
 >note A complete SDK example could be found on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter).
 
