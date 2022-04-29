@@ -284,7 +284,7 @@ In case you would like to change the rule used by a ConditionalFormatting object
 
 ## Update the Cell Range of Existing Formatting
 
-The CellSelection class exposes the UpdateConditionalFormattingCellRanges method to help you change the conditional formatting element's cell range, applying it on the currently selected ranges. When invoked, the UpdateConditionalFormattingCellRanges method removes the conditional formatting from the ranges it is associated to and applies it to the selection.
+The CellSelection class exposes the UpdateConditionalFormattingCellRanges method to help you change the conditional formatting element's cell range, applying it to the currently selected ranges. When invoked, the UpdateConditionalFormattingCellRanges method removes the conditional formatting from the ranges it is associated with and applies it to the selection.
 
 ## Control the Priority of Rules
 
