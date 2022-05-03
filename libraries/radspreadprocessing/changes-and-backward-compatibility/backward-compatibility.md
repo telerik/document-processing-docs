@@ -42,6 +42,14 @@ IconSetRule.IsReversed is now read-only.
 
 You can set the IsReversed property through the constructor of IconSetRule.
 
+### Changed
+
+Telerik.Windows.Documents.Spreadsheet.Model.FilteredShapeCollection.Changing event's arguments type changed from ___ShapeCollectionChangedEventArgs___ to ___ShapeCollectionChangingEventArgs___.
+
+
+### What to do now
+
+You can replace the old event arguments type with the new one.
 
 
 ## What's Different in 2019 R2
