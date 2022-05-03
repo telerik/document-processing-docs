@@ -10,11 +10,11 @@ position: 23
 
 # Comments
 
-Since R1 2022 the SpreadProcessing library supports working with comments. Comments are used for marking information about a cell's data and can have one or multiple [Replies] (#replies). All comments can be found in the __Comments__ property of the worksheet, which is of the type __CommentsCollection__. This collection holds __SpreadsheetComment__ objects, which represent the comments. Each comment has the following members:
+Since R2 2022 the SpreadProcessing library supports working with comments. Comments are used for marking information about a cell's data and can have one or multiple [Replies] (#replies). All comments can be found in the __Comments__ property of the worksheet, which is of the type __CommentCollection__. This collection holds __SpreadsheetComment__ objects, which represent the comments. Each comment has the following members:
 
 ***Properties***:
 
-* __CellIndex:__  Gets or sets the cell index assigned to the comment. 
+* __CellIndex:__  Gets or sets the cell index the comment is assigned to. 
 * __Text:__ Gets or sets the text of the comment. 
 * __CreationDate:__ Gets or sets the date when the comment is created. Nullable.
 * __Author:__ Gets or sets the author assigned to the comment.
@@ -28,7 +28,7 @@ Since R1 2022 the SpreadProcessing library supports working with comments. Comme
 * __AddReply:__ Adds a SpreadsheetCommentReply to the ReplySortedCollection.The collection will be re-sorted by SpreadsheetReply`s CreationDate in ascending order after adding an object.
 * __RemoveReply:__ Removes the specified reply from the collection.
 
-## Working with the CommentsCollection
+## Working with CommentCollection
 
 ### Adding comments
 
@@ -52,8 +52,7 @@ The above snippet will add a comment in cell B2.
 
 ### Removing Comments
 
-To remove a comment specify the comment instance, which can be obtained from the CommentsCollection. 
-
+To remove a comment, you should specify the comment instance. This instance can be obtained from the __CommentCollection__.
 
 #### __[C#] Example 2: Remove comment__
 
@@ -64,7 +63,6 @@ To remove a comment specify the comment instance, which can be obtained from the
 
 {{endregion}}
 
-The above snippet removes the first comment in the collection.
 
 ## Replies
 
@@ -77,7 +75,7 @@ Each comment can be replied to, forming a thread of information. All replies can
 ***Methods***:
 
 * __Add:__ Adds a __SpreadsheetCommentReply__ to the __ReplySortedCollection__. The collection will be re-sorted by __SpreadsheetReply`s__ CreationDate in ascending order after adding an object. Requires an object of type __SpreadsheetCommentReply__ and can be used for adding existing replies. For adding a new reply, it is best to use the __SpreadsheetComment.AddReply()__ method.
-* __Remove:__ Removes the first occurrence of a specific object from the __ReplySortedCollection__.
+* __Remove:__ Removes the specified __SpreadsheetCommentReply__ object from the ReplySortedCollection.
 * __RemoveAt:__ Removes the element at the specified index of the __ReplySortedCollection__.
 * __Clear:__ Removes all elements from the __ReplySortedCollection__.
 * __Contains:__ Determines whether an element is in the __ReplySortedCollection__.
@@ -95,13 +93,13 @@ Each comment can be replied to, forming a thread of information. All replies can
 
             string text = "First Comment";
             CellIndex relatedCellIndex = new CellIndex(0, 0); // Cell A1
-            AddCommentWithRepliesToWorksheet(worksheet, relatedCellIndex, text, 2); 
-			// First comment will have 2 replies
+            AddCommentWithRepliesToWorksheet(worksheet, relatedCellIndex, text, 2); // First comment will have 2 replies
+
 
             relatedCellIndex = new CellIndex(1, 1); // Cell B2
             text = "Second Comment";
-            AddCommentWithRepliesToWorksheet(worksheet, relatedCellIndex, text, 0); 
-			// Second comment will have 0 replies
+            AddCommentWithRepliesToWorksheet(worksheet, relatedCellIndex, text, 0); // Second comment will have 0 replies
+
 
             // Add existing reply using the Add() method of __SpreadsheetCommentReply__
 
@@ -112,19 +110,15 @@ Each comment can be replied to, forming a thread of information. All replies can
             secondComment.Replies.Add(reply); // Copies the reply # 1 from firstComment to secondComment
 
             //Remove
-
             firstComment.Replies.Remove(reply);
 
             //Clear
-
             firstComment.Replies.Clear();
 
             //Contains
-
             firstComment.Replies.Contains(reply); // Returns false
 
             //CopyTo
-
             SpreadsheetCommentReply[] replyArray = new SpreadsheetCommentReply[1];
             secondComment.Replies.CopyTo(replyArray, 0);
         }
@@ -146,20 +140,19 @@ Each comment can be replied to, forming a thread of information. All replies can
 
 {{endregion}}
 
-The above code snippte shows how to use the __ReplySortedCollection__'s methods.
 
 ### Events
 
-Both __CommentsCollection__ and __ReplySortedCollection__ expose the following events, which work identically for both types:
-* __Changing:__ Occurs when the collection is being changed.
-* __Changed:__ Occurs when the collection has changed.
+Both __CommentCollection__ and __ReplySortedCollection__ expose the following events, which work identically for both types:
+* __Changing:__ Occurs prior to changing the collection.
+* __Changed:__ Occurs after the collection has changed.
 
 The two events for both collections use similar enumeration types for event arguments, with two possible values:
  
 * __Add:__ Used when Adding a Comment or Reply
 * __Remove:__ Used when Removing a Comment or Reply
 
-#### __[C#] Example 4: Changing the author of a comment upon adding it to the CommentsCollection using the Changing event__
+#### __[C#] Example 4: Changing the author of a comment upon adding it to the CommentCollection using the Changing event__
 
 {{region cs-radspreadprocessing-features-comments_3}}
 
@@ -187,3 +180,10 @@ The two events for both collections use similar enumeration types for event argu
 	}
 
 {{endregion}}
+
+
+
+## See Also
+
+ * [Working with Notes]({%slug radspreadprocessing-features-notes%})
+ * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
