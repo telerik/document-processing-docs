@@ -25,7 +25,7 @@ Since R2 2022 the SpreadProcessing library supports working with comments. Comme
  
 ***Methods***:
 
-* __AddReply:__ Adds a SpreadsheetCommentReply to the ReplySortedCollection.The collection will be re-sorted by SpreadsheetReply`s CreationDate in ascending order after adding an object.
+* __AddReply:__ Adds a SpreadsheetCommentReply to the ReplySortedCollection. The collection will be re-sorted by SpreadsheetReply`s CreationDate in ascending order after adding an object.
 * __RemoveReply:__ Removes the specified reply from the collection.
 
 ## Working with CommentCollection
@@ -107,7 +107,7 @@ Each comment can be replied to, forming a thread of information. All replies can
             var secondComment = worksheet.Comments[1];
 
             SpreadsheetCommentReply reply = firstComment.Replies[0];
-            secondComment.Replies.Add(reply); // Copies the reply # 1 from firstComment to secondComment
+            secondComment.Replies.Add(reply); // Copies reply #1 from firstComment to secondComment
 
             //Remove
             firstComment.Replies.Remove(reply);
@@ -132,8 +132,8 @@ Each comment can be replied to, forming a thread of information. All replies can
             for (int i = 0; i < repliesCount; i++)
             {
                 string replyText = "Reply #" + (i + 1);
-                comment.AddReply(authorName, replyText, creationDate); 
-				//Add new reply using the SpreadsheetComment.AddReply() method 
+                comment.AddReply(authorName, replyText, creationDate); // Add new reply using the SpreadsheetComment.AddReply() method 
+
             }
 
         }
