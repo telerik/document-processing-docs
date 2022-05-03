@@ -103,7 +103,7 @@ SpreadProcessing supports references to whole columns and whole rows. You can us
 - can refer to a single or to multiple rows/columns;
 - can also be absolute, relative or mixed references.
 
-#### __[C#] Example 4: Use reference to a column__
+#### [C#] Example 4: Use reference to a column
 
 {{region cs-radspreadprocessing-features-formulas-cell-references_3}}
 	Workbook workbook = new Workbook();
@@ -111,7 +111,7 @@ SpreadProcessing supports references to whole columns and whole rows. You can us
 	workbook.ActiveWorksheet.Cells[1, 1].SetValue("=AVERAGE(A:A)");
 {{endregion}}
 
-#### __[C#] Example 4: Use reference to multuple rows
+#### [C#] Example 5: Use reference to multuple rows
 
 {{region cs-radspreadprocessing-features-formulas-cell-references_4}}
 	Workbook workbook = new Workbook();
