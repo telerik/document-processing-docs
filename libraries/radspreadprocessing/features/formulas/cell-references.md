@@ -100,7 +100,7 @@ A mixed reference specifies its row as absolute and its column as relative or vi
 
 SpreadProcessing supports references to whole columns and whole rows. You can use this functionality to include all the values from a row/column to a formula. The row and column references:
 - are entered like other ranges, with a colon separating the starting point from the ending point;
-- can refer to a single or to multiple rows/columns;
+- can refer to a single or to multiple rows/columns. Note that even for single row or column, the reference should be defined similarly to how you define ranges, e.g. you should use A:A to refer to column A.
 - can also be absolute, relative or mixed references.
 
 #### [C#] Example 4: Use reference to a column
