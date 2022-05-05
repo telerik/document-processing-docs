@@ -19,7 +19,7 @@ res_type: kb
 </thead>
 <tbody>
 	<tr>
-		<td>2020.1.310</td>
+		<td>R1 2022 Service Pack 1</td>
 		<td>RadPdfProcessing</td>
 		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
@@ -29,8 +29,6 @@ res_type: kb
 ## Description
 
 How to sign a document with a digital signature using [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
-
->Singing PDF documents is not supported in PdfProcessing for .NET Standard.
 
 ## Solution
 
