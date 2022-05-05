@@ -5,6 +5,7 @@ slug: radspreadprocessing-features-notes
 tags: notes, xlsx
 published: True
 position: 23
+platforms: mvc, ajax, blazor, wpf, winforms, xamarin, winui, core
 ---
 
 
