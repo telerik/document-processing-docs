@@ -33,7 +33,7 @@ The document model of the library provides support for:
 | [**Annotations**]({%slug radpdfprocessing-model-annotations-and-destinations%}) | Associate an object with a location on a page of the PDF document. |
 | [**Destinations**]({%slug radpdfprocessing-model-annotations-and-destinations%}) | Defines a particular view of a document.|
 | [**Colors and Color Spaces**]({%slug radpdfprocessing-concepts-colors-and-color-spaces%}) | Support for different types of both. |
-| [**Fonts**]({%slug radpdfprocessing-concepts-fonts%}) | Support for the standard PDF fonts, Type0, Type1, CIDFontType2, TrueType and more. |
+| [**Fonts**]({%slug radpdfprocessing-concepts-fonts%}) | Support for the standard PDF fonts, Type0, Type1, Type 3, CIDFontType2, TrueType and more. |
 | [**Text and Graphic properties**]({%slug radpdfprocessing-editing-text-and-graphic-properties%}) | Provide options for changing the properties of the different elements in the document elements so you can achieve a unique look. |
 | [**Password Protection**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings) | Support for documents encrypted with **Encryption Algorithm 4 (RC4/AES-128)** |
 | [**Merge documents**]({%slug radpdfprocessing-model-radfixeddocument%}) and [**document pages**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}) | You can combine the pages from multiple documents into a single document. |
