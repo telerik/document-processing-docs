@@ -926,7 +926,7 @@ CODE</td><td>
 
 Returns a numeric code for the first character in a text string</td></tr><tr><td>
 
-CONCATENATE</td><td>
+CONCAT/CONCATENATE</td><td>
 
 Joins several text items into one text item</td></tr><tr><td>
 
