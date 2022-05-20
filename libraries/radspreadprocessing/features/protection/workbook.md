@@ -24,6 +24,7 @@ To protect a workbook, use the __Protect(string)__ method of the __Workbook__ cl
 
 __Example 1__ illustrates how to create a workbook from scratch and protect it using a password.
 
+>The protection functionality protects the workbook structure from being edited. If you need to protect the document so that it can be opened only after providing a password for it, you should encrypt it. The encryption functionality is currently not supported in SpreadProcessing and you can vote for its implementation using the [public request](https://feedback.telerik.com/document-processing/1356022-spreadprocessing-implement-encryption-of-workbook) for it. 
 
 #### __[C#] Example 1: Password-protect a Workbook__
 
