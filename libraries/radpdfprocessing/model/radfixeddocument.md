@@ -2,7 +2,7 @@
 title: RadFixedDocument
 page_title: RadFixedDocument
 slug: radpdfprocessing-model-radfixeddocument
-tags: radfixeddocument
+tags: radfixeddocument, pdf, merge, create, document, page
 published: True
 position: 1
 ---
