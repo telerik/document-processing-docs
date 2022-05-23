@@ -3,7 +3,7 @@ title: Cross-Platform Support
 page_title: Cross-Platform Support
 slug: radwordsprocessing-cross-platform
 tags: cross,platform
-platforms: core, blazor, xamarin, winui
+platforms: core, blazor, xamarin, winui, maui
 published: True
 position: 2
 ---

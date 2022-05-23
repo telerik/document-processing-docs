@@ -4,7 +4,7 @@ page_title: Text Measuring
 description: Read the topic to get a better understanding of how you can control the way the text is measured when exporting spreadsheets to PDF using SpreadProcessing for .NET Standard.
 slug: radspreadprocessing-cross-platform-text-measure
 tags: cross,platform,text, pdf,spreadsheet, measure
-platforms: core, blazor, xamarin, wuinui
+platforms: blazor, core, xamarin, winui, maui
 published: True
 position: 1
 ---

@@ -3,7 +3,7 @@ title: Images
 page_title: Images
 slug: radpdfprocessing-cross-platform-images
 tags: cross,platform
-platforms: blazor, core, xamarin, winui
+platforms: blazor, core, xamarin, winui, maui
 published: True
 position: 2
 ---
