@@ -32,7 +32,7 @@ The Telerik Document Processing libraries support the following file formats:
 * CSV
 * ZIP
  
->The Telerik Document Processing libraries are available in **.NET Framework** and **.NET Standard** (**.NET Core**) compatible versions. You can download the assemblies of these libraries from the following products:<table><tr><th> .NET Framework Binaries</th><th> .NET Standard Binaries</th></tr><tr><td> <ul><li>[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)</li><li>[UI for ASP.NET AJAX](https://www.telerik.com/products/aspnet-ajax.aspx)</li><li>[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)</li><li>[UI for WinForms](https://www.telerik.com/products/winforms.aspx)</li><li>[UI for Silverlight](https://www.telerik.com/products/silverlight/overview.aspx)</li></td><td><ul><li>[UI for Xamarin](https://www.telerik.com/xamarin-ui)</li><li>[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)</li><li>[UI for Blazor](https://www.telerik.com/blazor-ui)</li><li>[UI for WinUI](https://www.telerik.com/winui)</li></td></tr></table>
+>The Telerik Document Processing libraries are available in **.NET Framework** and **.NET Standard** (**.NET Core**) compatible versions. You can download the assemblies of these libraries from the following products:<table><tr><th> .NET Framework Binaries</th><th> .NET Standard Binaries</th></tr><tr><td> <ul><li>[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)</li><li>[UI for ASP.NET AJAX](https://www.telerik.com/products/aspnet-ajax.aspx)</li><li>[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)</li><li>[UI for WinForms](https://www.telerik.com/products/winforms.aspx)</li><li>[UI for Silverlight](https://www.telerik.com/products/silverlight/overview.aspx)</li></td><td><ul><li>[UI for Xamarin](https://www.telerik.com/xamarin-ui)</li><li>[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)</li><li>[UI for Blazor](https://www.telerik.com/blazor-ui)</li><li>[UI for WinUI](https://www.telerik.com/winui)</li><li>[UI for .NET MAUI](https://www.telerik.com/maui-ui)</li></td></tr></table>
 
 
 
@@ -60,7 +60,7 @@ Telerik Document Processing features the following components:
 
 Telerik Document Processing is a commercial library. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to [purchase a license](https://www.telerik.com/purchase.aspx). Feel free to review the Telerik [License Agreement](https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s) to get acquainted with the full terms of use.	
 
->Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight**. The libraries are subject of the license under which you've obtained the assemblies.
+>Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight**. The libraries are subject of the license under which you've obtained the assemblies.
 
 ## Support Options
 

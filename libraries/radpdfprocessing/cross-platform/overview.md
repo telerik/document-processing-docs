@@ -3,7 +3,7 @@ title: Overview
 page_title: Overview
 slug: radpdfprocessing-cross-platform
 tags: cross,platform
-platforms: blazor, core, xamarin, winui
+platforms: blazor, core, xamarin, winui, maui
 published: True
 position: 0
 ---

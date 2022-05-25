@@ -3,7 +3,7 @@ title: Fonts
 page_title: Fonts
 slug: radpdfprocessing-cross-platform-fonts
 tags: cross,platform
-platforms: blazor, core, xamarin, winui
+platforms: blazor, core, xamarin, winui, maui
 published: True
 position: 1
 ---

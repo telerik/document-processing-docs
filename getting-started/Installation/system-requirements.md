@@ -15,7 +15,7 @@ This topic describes the system requirements needed by Telerik Document Processi
 
 ## Supported Operating Systems
 
-Windows 10
+Windows 10, or later
 
 Windows 8, 8.1
 
@@ -47,9 +47,9 @@ Supported Development Tools and Environments:
 
 * __.NET Core 3.0, or later__ - download from [here](https://dotnet.microsoft.com/download/dotnet-core).
 
-* __.NET 5.0__ - download from [here](https://dotnet.microsoft.com/download/dotnet)
+* __.NET 5.0, or later__ - download from [here](https://dotnet.microsoft.com/download/dotnet)
 
-* __Microsoft Visual Studio 2010/2012/2013/2015/2019__ - download from [here](http://www.microsoft.com/visualstudio/eng/downloads).
+* __Microsoft Visual Studio 2010/2012/2013/2015/2019/2022__ - download from [here](http://www.microsoft.com/visualstudio/eng/downloads).
           
 
 ## Hardware Environment

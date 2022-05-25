@@ -317,9 +317,9 @@ product: "Telerik Document Processing"
 product_url: https://www.telerik.com/document-processing-libraries
 
 # Available for names: 
-platforms: ["UI for ASP.NET MVC", "UI for ASP.NET AJAX", "UI for Blazor", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin", "UI for WinUI", "UI for ASP.NET Core"]
+platforms: ["UI for ASP.NET MVC", "UI for ASP.NET AJAX", "UI for Blazor", "UI for WPF", "UI for WinForms", "UI for Silverlight", "UI for Xamarin", "UI for WinUI", "UI for ASP.NET Core", "UI for .NET MAUI"]
 # in articles use as shown below: 
-# platforms: mvc, ajax, blazor, wpf, winforms, silverlight, xamarin, winui, core
+# platforms: mvc, ajax, blazor, wpf, winforms, silverlight, xamarin, winui, core, maui
 platform: dpl
 download: https://www.telerik.com/download-trial-file/v2-b/devcraft-ultimate
 nav:
