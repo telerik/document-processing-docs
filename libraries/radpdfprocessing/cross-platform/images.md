@@ -76,22 +76,20 @@ The following example depends on the [Magick.NET](https://www.nuget.org/packages
         {
             public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
             {
-                string[] magickImageFormats = Enum.GetNames(typeof(MagickFormat)).Select(x => x.ToLower()).ToArray();
-                string imageFormat;
-                if (this.TryGetImageFormat(imageData, out imageFormat) && magickImageFormats.Contains(imageFormat.ToLower()))
+                MagickFormatInfo formatInfo = MagickFormatInfo.Create(imageData);
+                if (formatInfo != null && formatInfo.IsReadable)
                 {
                     using (MagickImage magickImage = new MagickImage(imageData))
                     {
-                        magickImage.Format = MagickFormat.Jpeg;
                         magickImage.Alpha(AlphaOption.Remove);
                         magickImage.Quality = (int)imageQuality;
 
-                        jpegImageData = magickImage.ToByteArray();
+                        jpegImageData = magickImage.ToByteArray(MagickFormat.Jpeg);
                     }
-    
+
                     return true;
                 }
-    
+
                 jpegImageData = null;
                 return false;
             }
