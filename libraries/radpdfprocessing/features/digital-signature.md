@@ -118,22 +118,7 @@ RadPdfProcessing enables you to sign and validate signature fields using standar
 
 * adbe.pkcs7.detached (PKCS #7 Detached)
 
-## Signature Flags
 
-The sigature flags were intrduced in R2022 SP1. You can set the flogs with the following code:
-
-#### **[C#] Example 4: Set signature flags**
-
-{{region radpdfprocessing-features-digital-signature_5}}
-	
-	pdfDocument.AcroForm.SignatureFlags = SignatureFlags.None;
- 
-{{endregion}}
-
-The posible values are: 
-* __None__
-* __SignaturesExist:__ If set, the document contains at least one signature field.
-* __AppendOnly:__ The document contains signatures that may be invalidated if the file is saved in a way that alters its previous contents.
 
 ## Validating a Signature
 
@@ -152,9 +137,9 @@ The Signature class exposes two methods allowing you to validate a signature:
 
 >important The validation requires that the stream, from which the document is imported, to be opened. The validation is performed for the current field and against the state of the document at the moment of importing.
 
-**Example 5** shows how the validation can be used.
+**Example 4** shows how the validation can be used.
 
-#### **[C#] Example 5: Validate a field**
+#### **[C#] Example 4: Validate a field**
 
 
 {{region radpdfprocessing-features-digital-signature_3}}
