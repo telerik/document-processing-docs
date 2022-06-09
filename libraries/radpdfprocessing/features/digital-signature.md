@@ -120,14 +120,14 @@ RadPdfProcessing enables you to sign and validate signature fields using standar
 
 ## Signature Flags
 
-The sigature flags were intrduced in R2022 SP1. You can set the flogs with the following code:
+The signature flags were introduced in R2022 SP1. You can set the flags with the following code:
 
 #### **[C#] Example 4: Set signature flags**
 
 {{region radpdfprocessing-features-digital-signature_5}}
 	
 	pdfDocument.AcroForm.SignatureFlags = SignatureFlags.None;
- 
+
 {{endregion}}
 
 The posible values are: 
