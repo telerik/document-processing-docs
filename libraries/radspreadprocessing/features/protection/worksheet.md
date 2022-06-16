@@ -16,6 +16,7 @@ __Worksheet__ protection is designed to restrict the user from modifying the con
 
 You can enforce worksheet protection with or without a password and you can always unprotect the workbook as needed. You can also let the user remove the protection by entering the correct password.
       
+The protection functionality protects the worksheet content from being edited. If you need to protect the document so that it can be opened only after providing a password for it, you should encrypt it. The encryption functionality is currently not supported in SpreadProcessing and you can vote for its implementation using the [public request](https://feedback.telerik.com/document-processing/1356022-spreadprocessing-implement-encryption-of-workbook) for it. 
 
 ## How to Protect and Unprotect a Worksheet
 
