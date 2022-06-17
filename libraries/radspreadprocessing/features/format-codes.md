@@ -242,7 +242,7 @@ Adding a percent sign (%) in the number format helps to display numbers as a per
 	<tr>
 		<td>0.00%;[Red]-0.00%</td>
 		<td>-0.123</td>
-		<td style="color: red">-12.3%</td>
+		<td style="color: red">-12.30%</td>
 	</tr>
 </table>
 
