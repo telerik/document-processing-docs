@@ -5,7 +5,7 @@ type: how-to
 page_title: Handle the import of JPEG images with orientation set in their metadata different than 0 (normal)
 slug: pdfprocessing-rotate-jpeg-with-orientation-set-in-metadata
 position: 0
-tags: rotation, orientation, metadata, jpeg, image
+tags: rotation, orientation, metadata, jpeg, image, exif
 res_type: kb
 ---
 
@@ -28,7 +28,9 @@ res_type: kb
 
 ## Description
 
-This article shows how to rotate a **JPEG** image with orientation set in its metadata and then insert it into a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
+This article shows how to rotate a **JPEG** image with orientation set in its metadata ([EXIF](https://en.wikipedia.org/wiki/Exif) data) and then insert it into a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
+
+EXIF data is useful information about a JPEG image, hidden inside the file`s metadata. When images are photographed, digital cameras use orientation sensors to store an EXIF orientation value for how the camera is held. The same behavior can be observed when using specific image processing software as well.
 
 ## Solution
 
@@ -58,7 +60,7 @@ After the image is successfully rotated we are inserting it into the **RadFixedP
 	page.Content.Add(image);
 {{endregion}}
 
-Here is an example of rotating the image according to its internal orientation.
+Here is an example of rotating the image according to its EXIF orientation.
 
 #### __[C#] The helper method__
 
