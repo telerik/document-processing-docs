@@ -58,7 +58,7 @@ The following code snippets demonstrates how to create a custom implementation o
 
                     using (MemoryStream ms = new MemoryStream())
                     {
-                        image.SaveAsJpeg(ms, options);
+                        imageSharp.SaveAsJpeg(ms, options);
 
                         jpegImageData = ms.ToArray();
                     }
