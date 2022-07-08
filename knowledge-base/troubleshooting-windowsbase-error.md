@@ -52,5 +52,5 @@ Remove all the binaries related to Telerik Document Processing and add them agai
 - [WordsProcessing Dependencies]({%slug radwordsprocessing-getting-started%})#assembly-references
 - [SpreadProcessing Dependencies]({%slug radspreadprocessing-getting-started%})#assembly-references
 - [SpreadStreamProcessing Dependencies]({%slug radspreadstreamprocessing-getting-started%})#assembly-references
-- [ZipLibrary Dependencies]({%slug radziplibrary-getting-started%})#assembly-references
+- [ZipLibrary Dependencies]({%slug radziplibrary-gettingstarted%})#assembly-references
 
