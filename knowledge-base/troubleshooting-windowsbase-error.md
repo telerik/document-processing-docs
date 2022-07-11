@@ -4,7 +4,7 @@ description: Check how to resolve errors related to a dependency to the WindowsB
 type: troubleshooting
 page_title: TypeLoadException is thrown trying to run .NET Core project with Telerik Document Processing
 slug: troubleshooting-windowsbase-error
-position: 
+position: 0
 tags: processing, document, worbook, pdf, error, exception, windows, xamarin, blazor, maui, .net core, net5, net6
 ticketid: 1563636
 res_type: kb
