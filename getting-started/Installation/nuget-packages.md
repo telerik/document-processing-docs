@@ -20,7 +20,7 @@ If your workflow relies on NuGet for package management, you can take advantage 
 #### This article contains the following sections:
 
 * [NuGet packages for .NET Framework and .NET Core for Windows](#packages-for-net-framework-and-net-core-for-windows)
-* [NuGet packages for .NET Standard 2.0](#packages-for-net-standard-20-net-core-net-5-net-6)
+* [Packages for .NET Standard 2.0 (.NET Core, .NET 5, .NET 6)](#packages-for-net-standard-20-net-core-net-5-net-6)
 * [Get the NuGet Packages](#get-the-nuget-packages)
 
 
