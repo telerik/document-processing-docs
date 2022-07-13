@@ -19,7 +19,7 @@ If your workflow relies on NuGet for package management, you can take advantage 
 
 #### This article contains the following sections:
 
-* [NuGet packages for .NET Framework](#packages-for-net-framework)
+* [NuGet packages for .NET Framework and .NET Core for Windows](#packages-for-net-framework-and-net-core-for-windows)
 * [NuGet packages for .NET Standard 2.0](#packages-for-net-standard-20)
 * [Get the NuGet Packages](#get-the-nuget-packages)
 
@@ -36,9 +36,9 @@ If your workflow relies on NuGet for package management, you can take advantage 
 
 ![installation-nuget-packages 000](images/installation-nuget-packages000.png)
 
-## Packages for .NET Framework
+## Packages for .NET Framework and .NET Core for Windows
 
-The following list represents the available NuGet packages for the Document Processing libraries that you can use with the .NET Framework. Although we offer them as an addition to the Telerik UI components, you can use them without any UI components:
+The following list represents the available NuGet packages for the Document Processing libraries that you can use with the .NET Framework or .NET Core for Windows. Although we offer them as an addition to the Telerik UI components, you can use them without any UI components:
 
 * __Telerik.Windows.Documents.Core:__ The main NuGet package for the Telerik Document Processing libraries. Required when you plan to use the library.
 * __Telerik.Windows.Documents.Fixed:__ The package is required when processing `PDF` documents.
@@ -53,7 +53,7 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Windows.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
 * __Telerik.Windows.Zip.Extensions:__ The package provides methods for working with files and platform specific operations. 
 
-## Packages for .NET Standard 2.0
+## Packages for .NET Standard 2.0 (.NET Core, .NET 5, .NET 6)
 
 The following list represents the available NuGet packages for the Document Processing libraries that you can use with [.NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md):
 
