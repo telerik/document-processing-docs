@@ -17,11 +17,12 @@ Since R3 2022 the __RadPdfProcessing__ library support converting entire documen
 ## Required packages
 
 * The __Telerik.Documents.Fixed.FormatProviders.Image.Skia__ assembly.
-* The __SkiaSharp__ Nuget package. Please note that the package is different for the different operating systems. There is a Linux, MacOs, and Win32 versions. 
+* The __SkiaSharp__ Nuget package. 
+* The __SkiaSharp.NativeAssets.*__ Nuget package. This package may differ according to the used platform. There are version for Windows, MacOs, Linux, WebAssembly, Android, iOS, and others.
 
 ## Using the SkiaImageFormatProvider
 
-To convert your documents to images use the __Export__ method.
+To convert your documents to images use the __Export__ method. Please nota that the export method does not accept a document but a page. This is why you need to iterate all pages. In this example each page is saved in a separate file.  
 
 #### __[C#] Example 1: Export RadFixedDocument to Image__
 
@@ -34,37 +35,36 @@ To convert your documents to images use the __Export__ method.
 	int count = 1;
 	foreach (RadFixedPage page in fixedDocument.Pages)
 	{
-	byte[] resultImage = imageProvider.Export(page);
-	File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
+	    byte[] resultImage = imageProvider.Export(page);
+	    File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
 	}
 
 {{endregion}}
 
 ## Exporting Asynchronously
-The __ExportAsync__ method allows you to perform this operation asyncronously.
+The __ExportAsync__ method allows you to perform the conversion asynchronously.
 
 #### __[C#] Example 2: Export RadFixedDocument to Image Async__
 
-    {{region cs-radpdfprocessing-formats-and-conversion-imageformatprovider_1}}
+{{region cs-radpdfprocessing-formats-and-conversion-imageformatprovider_1}}
     
-    PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
-    RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Test.pdf"));
-    SkiaImageFormatProvider imageProvider = new SkiaImageFormatProvider();
-    
-    List<Task<byte[]>> tasks = new List<Task<byte[]>>();
-    foreach (RadFixedPage page in fixedDocument.Pages)
+    public async void ExportAsync()
     {
-        Task<byte[]> resultTask = imageProvider.ExportAsync(page);
-        tasks.Add(resultTask);
-    }
+        PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
+        RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"));
+        SkiaImageFormatProvider imageProvider = new SkiaImageFormatProvider();
+         
+        int count = 0;
     
-    Task.WaitAll(tasks.ToArray());
+        await Parallel.ForEachAsync(fixedDocument.Pages, async (page, token) =>
+        {
+            int currentCount = Interlocked.Increment(ref count); 
+            byte[]? result = await imageProvider.ExportAsync(page);
+            File.WriteAllBytes(@"C:\my_temp\Page" + currentCount + ".png", result);
     
-    int count = 1;
-    foreach (Task<byte[]> task in tasks)
-    {
-        File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", task.Result);
-    }
+        }); 
+    } 
+
 
 {{endregion}}
 
@@ -79,7 +79,7 @@ The __SkiaImageFormatProvider__ exposes the following settings.
 
 #### __[C#] Example 3: Set the Settings__
 
-{{region cs-radpdfprocessing-formats-and-conversion-imageformatprovider_0}}
+{{region cs-radpdfprocessing-formats-and-conversion-imageformatprovider_2}}
 
 	PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
 	RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"));
@@ -93,8 +93,8 @@ The __SkiaImageFormatProvider__ exposes the following settings.
 	int count = 1;
 	foreach (RadFixedPage page in fixedDocument.Pages)
 	{
-	byte[] resultImage = imageProvider.Export(page);
-	File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
+	    byte[] resultImage = imageProvider.Export(page);
+	    File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
 	}
 
 {{endregion}}
