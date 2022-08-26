@@ -21,7 +21,7 @@ The __UpdateConditionalFormattingCellRanges__ method is marked obsolete.
 
 ### What to do now
 
-Use use the combination of __RemoveConditionalFormatting__ and __AddConditionalFormatting instead__.
+Use use the combination of __RemoveConditionalFormatting__ and __AddConditionalFormatting__ instead.
 
 
 ## What's Different in 2022 R2
