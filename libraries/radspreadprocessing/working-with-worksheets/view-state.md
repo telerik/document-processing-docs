@@ -112,6 +112,11 @@ Allows you to set the color of the worksheet's tab.
 Boolean property determining whether the view state must be updated.
 
 
+### **ViewType**
+
+Allows you to set the view type. The supported values are **Normal**, **PageBreakPreview**, and **PageLayout**.
+
+
 
 ## See Also
 
