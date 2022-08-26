@@ -13,6 +13,16 @@ position: 1
 
 This article will list the breaking changes and how they can be fixed when upgrading from a specific version of the controls to the next one.
 
+## What's Different in 2022 R3
+
+### Changed
+
+The __UpdateConditionalFormattingCellRanges__ method is marked obsolete.
+
+### What to do now
+
+Use use the combination of __RemoveConditionalFormatting__ and __AddConditionalFormatting__ instead.
+
 
 ## What's Different in 2022 R2
 
@@ -165,7 +175,7 @@ Use Telerik.Windows.Documents.Spreadsheet.Expressions.Functions::**FunctionWithS
 Telerik.Windows.Documents.Spreadsheet.Layout.Layers.WorksheetRenderUpdateContext::__ViewportPaneTypeToVisibleCellBoxes__ property is removed.
 
 ### What to do now
- 
+
 Use Telerik.Windows.Documents.Spreadsheet.Layout.Layers.WorksheetRenderUpdateContext::__VisibleCellLayoutBoxes__ property instead.
 
 
