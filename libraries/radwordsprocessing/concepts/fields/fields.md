@@ -49,6 +49,19 @@ In the document object model Fields are represented by the [Field](https://docs.
 
 * **[Time Field]({%slug radwordsprocessing-concepts-time-field%})**
 
+* **[PageRef]({%slug radwordsprocessing-concepts-pageref-field%})**
+
+* **[Page]({%slug radwordsprocessing-concepts-page-field%})**
+
+* **[NumPages]({%slug radwordsprocessing-concepts-numpages-field%})**
+
+* **[Section]({%slug radwordsprocessing-concepts-section-field%})**
+
+* **[Section Pages]({%slug radwordsprocessing-concepts-sectionpages-field%})**
+
+
+
+
 ## Inserting Fields
 
 The suggested way to insert field is to use the __InsertField()__ method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. It takes care of creating and inserting the code and result fragments as well as placing the appropriate field character inlines to separate them. The __InsertField()__ method returns an instance of the __FieldInfo__ class. It holds references to the start, separate and end field characters and also provides an API for getting the code and result fragments and updating the field.
@@ -103,9 +116,25 @@ Here is a list of the field types that support updating:
 
 If the field type is not one of the above, the result will not be updated and the Field property of the FieldInfo class will be set to an instance of a CustomCodeField. The complete list of field codes and the switches for each of them can be found in the [Docx specification](http://www.ecma-international.org/publications/standards/Ecma-376.htm).
 
+### Updating PageRef, Page, Section, NumPages, and SectionPage fields. 
+
+In R3 2022 the above fields were introduced. Тheir evaluation requires calculating the size of the document elements. This is why to update them you need to provide an implementation of a **NumberingFieldsProvider** which can provide the needed layout logic. In the default implementation we are using the the layout logic from the [RadPdfPRocessing]({%slug radpdfprocessing-overview%}) library. To use it you need to add reference to the following assembly: 
+
+* **Telerik.Windows.Documents.Fixed**
+
+You can register the provider with the following code:
+
+#### __[C#] Example 3: Register the default NumberingFieldsProvider__
+
+{{region cs-radwordsprocessing-concepts-fields_5}}
+
+	 FlowExtensibilityManager.NumberingFieldsProvider = new NumberingFieldsProvider();
+
+{{endregion}}
+
 Updating a single field is done with the __UpdateField()__ method of the __FieldInfo__ class as demonstrated in **Example 3**.
 
-#### __[C#] Example 3: Update a field__
+#### __[C#] Example 4: Update a field__
 
 {{region cs-radwordsprocessing-concepts-fields_2}}
 	            
@@ -121,7 +150,7 @@ Updating a single field is done with the __UpdateField()__ method of the __Field
 
 All fields in the document can be updated using __UpdateFields()__ of __RadFlowDocument__. **Example 4** shows how to use this method.        
 
-#### __[C#] Example 4: Update all fields in a document__
+#### __[C#] Example 5: Update all fields in a document__
 
 {{region cs-radwordsprocessing-concepts-fields_3}}
 	            
@@ -148,7 +177,7 @@ The syntax of a field code is as follows:
 * _argument_: The argument of the field. This is optional as some of the fields do not require an argument.
 
 * _switches_: One or several additional properties of the field.<br/>
-The syntax of a switch is the following: <br/> 
+  The syntax of a switch is the following: <br/> 
 
 	| Syntax   		                      |
 	| :---     					          |
@@ -158,6 +187,7 @@ The syntax of a switch is the following: <br/>
 
     * _switch-argument_: The argument of the switch. The argument is optional as not all switches require an argument.
                 
+
 Below is an example of field code:
        
 ![Rad Words Processing Concepts Custom Code Field 01](images/RadWordsProcessing_Concepts_CustomCodeField_01.png)
@@ -168,7 +198,7 @@ Fields can also be nested in each other. If there are nested fields inside the c
 
 **Example 5** creates a field, which will be evaluated to appropriate greeting based on the time of the day.
 
-#### __[C#] Example 5: Create a nested field__
+#### __[C#] Example 6: Create a nested field__
 
 {{region cs-radwordsprocessing-concepts-fields_4}}
 	            
@@ -199,7 +229,7 @@ When calling the UpdateField() method all nested fields inside the code fragment
 __FieldInfo__ is the main entry point when working with fields. It serves as "glue" between the start, separate and end field characters of a field. Each field character also holds a reference to its FieldInfo class through the FieldInfo property.
 
 >The only way to create __FieldCharacter__ is by creating __FieldInfo__ instance. To preserve the document integrity all field characters should be inserted and removed from the document together. If the RadFlowDocumentEditor class is used for insertion – this is done automatically.
-          
+
 
 __FieldInfo__ exposes several properties and methods for working with fields:
 
