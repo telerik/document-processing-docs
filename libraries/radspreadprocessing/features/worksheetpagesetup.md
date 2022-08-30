@@ -2,7 +2,7 @@
 title: Worksheet Page Setup
 page_title: Worksheet Page Setup
 slug: radspreadprocessing-features-worksheetpagesetup
-tags: worksheet,page,setup
+tags: worksheet,page,setup,print,titles,repeat rows,header,footer,fit
 published: True
 position: 14
 ---
@@ -10,17 +10,7 @@ position: 14
 # Worksheet Page Setup
 
 
-There are cases, such as printing or exporting scenarios, when you need to present the __Worksheet__'s content on a set of pages. In these cases, particularly handy comes the __WorksheetPageSetup__ class which provides you with the needed properties for controlling how the content is split and presented into pages.
-      
-
-This article presents the WorksheetPageSetup API and demonstrates how to use it. It contains the following sections:
-      
-
-* [WorksheetPageSetup Properties](#worksheetpagesetup-properties)
-
-* [Using Print Area](#using-print-area)
-
-* [Using Page Breaks](#using-page-breaks)
+There are cases, such as printing or exporting scenarios, when you need to present the __Worksheet__'s content on a set of pages. In these cases, particularly handy comes the __WorksheetPageSetup__ class which provides you with the needed properties for controlling how the content is split and presented into pages. This article presents the WorksheetPageSetup API and demonstrates how to use it. 
 
 
 ## WorksheetPageSetup Properties
@@ -71,6 +61,8 @@ Through the Worksheet's __WorksheetPageSetup__ property you can change the follo
             
 
 * __PageBreaks__: Change the page breaks collection in the selected worksheet.
+
+* __PrintTitles__: Enables you to specify rows and/or columns that should be repeated on each page for the worksheet. 
             
 
 __Figures 1 and 2__ show an example of Worksheet's page setup usage. In the example, we have spreadsheet data that has bigger width than height. Previewing the print pages with the default settings we can see that it doesn't fit well as the print content is split into two pages.
@@ -197,6 +189,23 @@ As a result of inserting these horizontal page breaks we have eight pages to pri
 
 #### Figure 5: Result of PageBreaks
 ![Print preview after inserting page breaks](images/RadSpreadProcessing_Features_WorksheetPageSetup_05.png)
+
+## Repeating Rows/Columns
+
+The __PrintTitles__ property of __WorksheetPageSetup__ enables you to set rows and/or columns to be repeated on each page when printing or exporting the worksheet to PDF. The property is of type PrintTitles and exposes the following properties:
+
+* __RepeatedColumns__: Gets or sets a value of type ColumnRange that represents the range of columns that should be repeated. 
+* __RepeatedRows__: Gets or sets a value of type RowRange that represents the range of rows that should be repeated. 
+
+
+#### __[C#] Example 4: Repeat the first two rows and two columns of the worksheet on each page__
+
+{{region cs-radspreadprocessing-features-worksheetpagesetup_3}}
+
+	WorksheetPageSetup pageSetup = workbook.ActiveWorksheet.WorksheetPageSetup;
+	pageSetup.PrintTitles.RepeatedRows = new RowRange(0, 1);
+	pageSetup.PrintTitles.RepeatedColumns = new ColumnRange(0, 1);
+{{endregion}}
 
 ## See Also
 
