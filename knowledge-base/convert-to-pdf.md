@@ -134,7 +134,7 @@ In scenarios where you need to convert a document from another file format to PD
 
 ## Convert a Spreadsheet Document to PDF
 
-While the so far discussed libraries allow working with text documents, with **SpreadProcessing** you can create, import and export tabular data. This library supports the most common file formats for storing spreadsheet documents - XLSX, XLS CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
+While the so far discussed libraries allow working with text documents, with **SpreadProcessing** you can create, import and export tabular data. This library supports the most common file formats for storing spreadsheet documents - XLSX, XLS, XLSM, CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
 
 >note In order to enable the export to PDF in SpreadProcessing, you will need to add a reference to the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf** assembly. For the full list of dependencies required by SpreadProcessing, check the [Getting Started]({%slug radspreadprocessing-getting-started%}) topic.
 
