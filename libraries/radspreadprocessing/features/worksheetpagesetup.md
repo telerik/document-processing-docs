@@ -62,7 +62,7 @@ Through the Worksheet's __WorksheetPageSetup__ property you can change the follo
 
 * __PageBreaks__: Change the page breaks collection in the selected worksheet.
 
-* __PrintTitles__: Enables you specify rows and/or columns that should be repeated on each page for the worksheet. 
+* __PrintTitles__: Enables you to specify rows and/or columns that should be repeated on each page for the worksheet. 
             
 
 __Figures 1 and 2__ show an example of Worksheet's page setup usage. In the example, we have spreadsheet data that has bigger width than height. Previewing the print pages with the default settings we can see that it doesn't fit well as the print content is split into two pages.
