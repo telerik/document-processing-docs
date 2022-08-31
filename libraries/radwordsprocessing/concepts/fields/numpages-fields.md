@@ -22,7 +22,7 @@ The syntax of this field looks like this:
 
 ## Inserting
 
-Inserting a this field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
+Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
 
 __Example 1__ demonstrates how you can insert a NumPages field.
         

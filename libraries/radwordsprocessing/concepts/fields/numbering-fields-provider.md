@@ -9,11 +9,11 @@ position: 20
 
 # Using NumberingFieldsProvider
 
-The NumberingFieldsProvider is used for calculating the layout of the document. This is necessary when updating the fields values. For example to caculate the total number of pages. 
+The __NumberingFieldsProvider__ is used for calculating the layout of the document. This is necessary when updating the fields values. For example to calculate the total number of pages. 
 
 ### Requirements
 
-To use the default implantation of the NumberingFieldsProvider you need to reference the __**Telerik.Documents.Flow.FormatProviders.Pdf.dll**__ assembly.
+To use the default implantation of the __NumberingFieldsProvider__ you need to reference the __**Telerik.Documents.Flow.FormatProviders.Pdf.dll**__ assembly.
 
 ### Setting the default implementation
 

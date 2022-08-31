@@ -1,7 +1,7 @@
 ---
 title: Page Field
 page_title: Page Field
-description: Page field is a Field element that reprsents the page number.
+description: Page field is a Field element that represents the page number.
 slug: radwordsprocessing-concepts-page-field
 tags: page,field
 published: True
@@ -10,7 +10,7 @@ position: 0
 
 # Page Field
 
-Insert the current page nuber. 
+Inserts the current page number. 
 
 ## Field Syntax
 
@@ -18,7 +18,7 @@ This is how the syntax of a Page field looks like:
 
 | Syntax   |
 | :---     	 |
-| { **PAGE* [\*_Fotmat Switch_] } |    
+| { **PAGE** [\\*_Format Switch_] } |    
 
 
 ## Switches
@@ -29,11 +29,11 @@ The possible switches for a Page field are:
 
 | Switch                 | Description                                                   |
 | :---                   | :---                                                          |
-| \* | Optional switch that specifies the format |
+| \\* Format Switch | Optional switch that specifies the format |
 
 ## Inserting
 
-Inserting a this field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
+Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
 
 __Example 1__ demonstrates how you can insert a date field.
         

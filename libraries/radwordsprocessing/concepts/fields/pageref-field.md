@@ -1,7 +1,7 @@
 ---
 title: PageRef Field
 page_title: PageRef Field
-description: PageRef field is a Field element that .
+description: PageRef field is a Field element that inserts the page number of a bookmark.
 slug: radwordsprocessing-concepts-pageref-field
 tags: pageref,field
 published: True
@@ -18,7 +18,7 @@ This is how the syntax of a PageRef field looks like:
 
 | Syntax   											  |
 | :---     											  |
-| { **PAGEREF** Bookmark   [\* Format Switch ] } |    
+| { **PAGEREF** Bookmark   [\\* Format Switch ] } |    
 
 
 ## Switches
