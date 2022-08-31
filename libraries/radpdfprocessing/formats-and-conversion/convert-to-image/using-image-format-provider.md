@@ -16,6 +16,8 @@ Since R3 2022 the __RadPdfProcessing__ library support converting entire documen
 
 ## Required packages
 
+To enable the image exporting functionality in your application, you should add references to:
+
 * The __Telerik.Documents.Fixed.FormatProviders.Image.Skia__ assembly.
 * The __SkiaSharp__ Nuget package. 
 * The __SkiaSharp.NativeAssets.*__ Nuget package. This package may differ according to the used platform. There are version for Windows, MacOs, Linux, WebAssembly, Android, iOS, and others.
