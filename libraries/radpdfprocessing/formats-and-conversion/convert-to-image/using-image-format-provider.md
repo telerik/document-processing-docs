@@ -9,9 +9,9 @@ position: 1
 
 # Using SkiaImageFormatProvider
 
-Since R3 2022 the __RadPdfProcessing__ library support converting entire documents to images. This is achieved by using the third party library SkiaSharp. You can convert to various formats, using synchronous or asynchronous export. 
+Since R3 2022 the __RadPdfProcessing__ library support converting entire documents to images. This is achieved by using the third party library [SkiaSharp](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/). You can convert to various formats, using synchronous or asynchronous export. 
 
->important This feature is only available in the NET Standard version of the suite. For other versions check the fllowing article: [ThumbnailFactory](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
+>important This feature is only available in the NET Standard version of the suite. For other versions check the following article: [ThumbnailFactory](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
 >
 
 ## Required packages
@@ -22,7 +22,7 @@ Since R3 2022 the __RadPdfProcessing__ library support converting entire documen
 
 ## Using the SkiaImageFormatProvider
 
-To convert your documents to images use the __Export__ method. Please nota that the export method does not accept a document but a page. This is why you need to iterate all pages. In this example each page is saved in a separate file.  
+To convert your documents' pages to images, use the __Export__ method. Note that the export method does not accept a document but a page. This is why you need to iterate all pages. In this example, each page is saved in a separate file.
 
 #### __[C#] Example 1: Export RadFixedDocument to Image__
 
@@ -70,7 +70,7 @@ The __ExportAsync__ method allows you to perform the conversion asynchronously.
 
 ## Export Settings
 
-The __SkiaImageFormatProvider__ exposes the following settings.
+The __SkiaImageFormatProvider__ exposes the following settings:
 
 * __ImageFormat:__ Allows you to set the image format, the suported values are __JPEG__, __PNG__, and __Webpp__.
 * __ScaleFactor:__ Allows you to set the scale factor. The minimum values is 0.1.
