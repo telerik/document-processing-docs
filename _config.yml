@@ -94,6 +94,9 @@ navigation:
     libraries/radwordsprocessing/model/content-controls:
         title: Content Controls
         position: 17
+    libraries/radwordsprocessing/model/shapes:
+        title: Shapes
+        position: 18
 ## RadSpreadStreamProcessing Start 
     "*radspreadstreamprocessing":
         title: RadSpreadStreamProcessing
