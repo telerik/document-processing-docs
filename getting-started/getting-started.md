@@ -22,6 +22,7 @@ The following tables list all Telerik Document Processing assemblies for the dif
 |-------|----------------|
 | **Telerik.Documents.Core.dll** | The main assembly from the Telerik document processing libraries. You always need it when you intend to use the library. |
 | **Telerik.Documents.Flow.dll** | Part of the words (text) processing library. It is needed for processing HTML, DOCX, RTF and TXT documents. |
+| **Telerik.Documents.DrawingML.dll** | Part of the words (text) processing library. It is needed for working with shapes inside the documents. |
 | **Telerik.Documents.Flow.FormatProviders.Doc.dll** | Allows importing of DOC and DOT document. |
 | **Telerik.Documents.Flow.FormatProviders.Pdf.dll** | Allows exporting of flow documents (DOCX, DOC, DOT, RTF, and HTML) to PDF. |
 | **Telerik.Documents.Fixed.dll** | Part of the PDF processing library. It is needed for working with PDF documents. |
@@ -41,6 +42,7 @@ The following tables list all Telerik Document Processing assemblies for the dif
 |-------|----------------|
 | **Telerik.Windows.Documents.Core.dll** | The main assembly from the Telerik document processing libraries. You always need it when you intend to use the library. |
 | **Telerik.Windows.Documents.Flow.dll** | Part of the words (text) processing library. It is needed for processing HTML, DOCX, RTF and TXT documents. |
+| **Telerik.Windows.Documents.DrawingML.dll** | Part of the words (text) processing library. It is needed for working with shapes inside the documents. |
 | **Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll** | Allows importing of DOC and DOT document. |
 | **Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll** | Allows exporting of flow documents (DOCX, DOC, DOT, RTF, and HTML) to PDF. |
 | **Telerik.Documents.SpreadsheetStreaming.dll** | The main assembly for generating huge spreadsheet files using minimum resources. |
