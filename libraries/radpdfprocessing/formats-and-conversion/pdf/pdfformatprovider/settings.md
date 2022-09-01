@@ -102,7 +102,7 @@ This property specifies three types of user access permissions: **PrintingPermis
     * __None__: Specify no copying is allowed.
     * __Copying__: Specify copying is allowed.
     * __TextAccess__: Specify that text access for screen reader devices for copying is allowed.
-    * __NumberingFieldsPrecisionLevel__: Indicates how many times the layout will be updated. The default value is *Normal* (2 times). When *High* is set 6 updates will be performed. 
+    * __NumberingFieldsPrecisionLevel__: Represents precision level when updating numbering fields. When the Normal option is selected the fields are updated once, not taking into account if their new values would have shifted the already measured layout. In such cases, the results could be outdated. This is the MS Word-like behavior. If you need more accurate results, use NumberingFieldsPrecisionLevel.High where the fields are updated until their values become more accurate. This precision level is more accurate than NumberingFieldsPrecisionLevel.Normal but requires more resources.
 
 
 __Example 2__ shows how you can create a __PdfExportSettings__ object with settings that specify an OwnerPassword and UserAccessPermissions.

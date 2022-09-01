@@ -113,12 +113,13 @@ Here is a list of the field types that support updating:
 * DATE
 * TIME
 * HYPERLINK
+* SECTION
 
 If the field type is not one of the above, the result will not be updated and the Field property of the FieldInfo class will be set to an instance of a CustomCodeField. The complete list of field codes and the switches for each of them can be found in the [Docx specification](http://www.ecma-international.org/publications/standards/Ecma-376.htm).
 
-### Updating PageRef, Page, Section, NumPages, and SectionPage fields. 
+### Updating PageRef, Page, NumPages, and SectionPage fields. 
 
-In R3 2022 the above fields were introduced. Тheir evaluation requires calculating the size of the document elements. This is why to update them you need to provide an implementation of a [**NumberingFieldsProvider**]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) which can provide the needed layout logic. In the default implementation we are using the the layout logic from the [RadPdfPRocessing]({%slug radpdfprocessing-overview%}) library. To use it you need to add reference to the following assembly: 
+In R3 2022 the above fields were introduced. Their evaluation requires calculating the size of the document elements. This is why to update them you need to provide an implementation of a [**NumberingFieldsProvider**]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) which can provide the needed layout logic. In the default implementation we are using the the layout logic from the [RadPdfPRocessing]({%slug radpdfprocessing-overview%}) library. To use it you need to add reference to the following assembly: 
 
 * **Telerik.Windows.Documents.Fixed**
 

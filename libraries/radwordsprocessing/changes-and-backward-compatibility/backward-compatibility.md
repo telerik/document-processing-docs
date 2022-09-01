@@ -19,7 +19,7 @@ The __TryGetSwitch__ method is marked obsolete.
 
 ### What to do now
 
-Use use the __TryGetSwitch__ method where the second parameter is `IList<FieldSwitch>`. 
+Use the __TryGetSwitch__ method where the second parameter is `IList<FieldSwitch>`. 
 
 ### Changed
 
@@ -27,7 +27,7 @@ The __FieldParameters.GetSwitchArgument__ method is marked obsolete.
 
 ### What to do now
 
-Use use the __GetSwitchArguments__ method instead.
+Use the __GetSwitchArguments__ method instead.
   
 ### Changed
 
@@ -35,7 +35,7 @@ The __Field.GeneralFormatting__ property is marked obsolete.
 
 ### What to do now
 
-Use use the __GeneralFormattings__ property instead. 
+Use the __GeneralFormattings__ property instead. 
 
 ## What's Different in 2016 R3  
 
