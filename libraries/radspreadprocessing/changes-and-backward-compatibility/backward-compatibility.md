@@ -16,14 +16,25 @@ This article will list the breaking changes and how they can be fixed when upgra
 ## What's Different in 2022 R3
 
 ### Changed
+ 
+The parameterless constructors of the following classes are obsoleted:
+* TwoColorScaleValueContext 
+* ThreeColorScaleValueContext 
+* FiveIconSetValueContext 
+* FourIconSetValueContext 
+* ThreeIconSetValueContext 
+
+### What to do now
+ 
+ Use the constructor with parameters instead.
+
+### Changed
 
 The __UpdateConditionalFormattingCellRanges__ method is marked obsolete.
 
 ### What to do now
 
 Use use the combination of __RemoveConditionalFormatting__ and __AddConditionalFormatting__ instead.
-
-
 ## What's Different in 2022 R2
 
 ### Changed
