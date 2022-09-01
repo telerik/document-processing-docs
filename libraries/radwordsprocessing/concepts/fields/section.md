@@ -1,7 +1,7 @@
 ---
 title: Section Field
 page_title: Section Field
-description: Section field is a Field element that  inserts the number of the current section.
+description: Section field is a Field element that inserts the number of the current section.
 slug: radwordsprocessing-concepts-section-field
 tags: section,field
 published: True
@@ -32,7 +32,7 @@ __Example 1__ demonstrates how you can insert a section field.
 {{region cs-radwordsprocessing-concepts-section-field_0}}
 	            
 	editor.InsertText("Page ");
-	editor.InsertField("PAGE", "");
+	editor.InsertField("SECTIONPAGES", "");
 	editor.InsertText(" of Section ");
 	editor.InsertField("SECTION", "");
 

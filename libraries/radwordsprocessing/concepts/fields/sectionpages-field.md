@@ -10,7 +10,7 @@ position: 0
 
 # SectionPages Field
 
-This field  inserts the total number of pages in a section.
+This field inserts the total number of pages in a section.
 
 ## Field Syntax
 
@@ -18,12 +18,12 @@ This is how the syntax of a SectionPages field looks like:
 
 | Syntax   											  |
 | :---     											  |
-| { **SECTIONPAGES ** } |    
+| { **SECTIONPAGES** } |    
 
  
 ## Inserting
 
-Inserting a this field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
+Inserting SectionPages field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
 
 __Example 1__ demonstrates how you can insert a SectionPages field.
  
