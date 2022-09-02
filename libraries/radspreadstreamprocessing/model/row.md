@@ -11,20 +11,16 @@ position: 4
 
 This article will help you get familiar with the concept of a row and its features.
 
-* [What is a Row](#what-is-a-row)
-
-* [IRowExporter Interface](#irowexporter-interface)
-
-* [Using IRowExporter](#using-irowexporter)
-
 ## What is a Row
 
 Rows in the terms of a spreadsheet document are groups of cells that are on the same horizontal line. Each row is identified by a number. For example, the first row has an index 1, the second one – 2 and the last one – 1048576. 
 
 
-## IRowExporter Interface
+## IRowExporter and IRowImporter Interfaces
 
 In **RadSpreadStreamProcessing**, a row could be exported through the [**IRowExporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.IRowExporter.html). It defines several methods allowing you to add cells to a row or change its appearance.
+
+To read a row and its properties, you should use [**IRowImporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.IRowImporter.html). 
 
 ### Using IRowExporter
 
@@ -78,6 +74,34 @@ In some cases you may need to skip several rows and start filling the data in th
 	    row.SetHidden(true); // The sixth row will be hidden.
 	}
 {{endregion}}
+
+## Read a Row
+
+### Using IRowImporter
+
+A concrete instance of IRowImporter could be obtained through the Rows collection of [IWorksheetImporter]({%slug radspreadstreamprocessing-model-worksheet%}). **Example 4** demonstrates how you can start reading a row from a worksheet.
+
+#### **[C#] Example 4: Create IRowImporter**
+
+{{region cs-radspreadstreamprocessing-model-rows_3}}
+
+	foreach (IRowImporter rowImporter in worksheetImporter.Rows)
+	{
+	}
+{{endregion}}
+
+>IRowImporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. The best way to ensure this is handled properly is to wrap it in a *using* statement.
+
+The IRowImporter interface exposes the following properties to allow you access its data:
+
+* **RowIndex**: Gets the index of the row in the worksheet.
+* **OutlineLevel**: Gets the outline level (used when grouping rows).
+* **IsCustomHeight**: Gets a value indicating whether the height applied to the current row is a custom one.
+* **HeightInPixels** and **HeightInPoints**: Gets the height of the row in pixels and in points, respectively.
+* **IsHidden**: Gets a value determining whether the row is hidden.
+* **Cells**: Collection of ICellImporter objects, enabling you to iterate the cells inside the worksheet using.
+
+
 
 ## See Also
 

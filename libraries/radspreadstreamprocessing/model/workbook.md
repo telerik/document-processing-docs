@@ -2,7 +2,7 @@
 title: Workbook
 page_title: Workbook
 slug: radspreadstreamprocessing-model-workbook
-tags: workbook
+tags: workbook, read, save
 published: True
 position: 1
 ---
@@ -11,13 +11,6 @@ position: 1
 
 This article will help you get familiar with the concept of a workbook and its features.
 
-* [What is a Workbook](#what-is-a-workbook)
-
-* [IWorkbookExporter Interface](#iworkbookexporter-interface)
-
-* [Using IWorkbookExporter](#using-iworkbookexporter)
-
-
 ## What is a Workbook?
 
 The workbook is the primary document that you use to manipulate and store data. The workbook can also be described as a collection of worksheets, where a worksheet is in turn defined as a collection of cells organized in rows and columns. Each workbook contains, at least, one worksheet and often holds several sheets with related information.
@@ -25,11 +18,11 @@ The workbook is the primary document that you use to manipulate and store data. 
 The workbook is designed to hold together multiple worksheets in order to allow efficient organization and consolidation of data. Typically, a workbook contains worksheets with related data. 
 
 
-## IWorkbookExporter Interface
+## IWorkbookExporter and IWorkbookImporter Interfaces
 
-In **RadSpreadStreamProcessing**, the workbook is represented by the [**IWorkbookExporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.IWorkbookExporter.html). This interface defines members for adding [worksheets]({%slug radspreadstreamprocessing-model-worksheet%}) and accessing the cell styles of the workbook. 
+In **RadSpreadStreamProcessing**, the workbook is represented by the [**IWorkbookExporter**](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.IWorkbookExporter.html) and [**IWorkbookImporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.IWorkbookImporter.html) interfaces. These interfaces define members for adding [worksheets]({%slug radspreadstreamprocessing-model-worksheet%}), parsing them, and accessing the cell styles of the workbook. 
 
-**IWorkbookExporter** is responsible for exporting a workbook. Due to the specifics of the different file formats, different concrete instances of this interface take care about the creation and export of a document. 
+**IWorkbookExporter** is responsible for exporting a workbook. Due to the specifics of the different file formats, different concrete instances of this interface take care about the creation and export of a document. The same applies when importing with **IWorkbookImporter**.
 
 ## Using IWorkbookExporter
 
@@ -83,7 +76,13 @@ Since the CSV format doesn't have the concept for multiple sheets, invoking GetS
 
 >You can find a runnable example showing how to append a worksheet to an existing workbook in the [SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/SpreadStreamProcessing/AppendWorksheetToExistingWorkbook) on GitHub.
 
+## Using IWorkbookImporter to Read a File
+
+The **IWorkbookImporter** interface is the entry point for reading a document and allows you iterate the worksheet importers. You can get an instance of IWorkbookImporter through the **CreateWorkbookImporter()** method of [SpreadExporter](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadExporter.html). The first parameter of the CreateWorkbookImporter() method specifies the file format of the document that will be imported and the second one represents the stream with the file data. For more information on how to read the data, check the [Import]({%slug radspreadstreamprocessing-import%}) help topic.
+
+
 ## See Also
 
+* [Import]({%slug radspreadstreamprocessing-import%})
 * [Worksheets]({%slug radspreadstreamprocessing-model-worksheet%})
 * [SpreadCellStyle API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle.html)

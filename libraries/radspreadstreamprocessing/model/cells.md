@@ -11,20 +11,16 @@ position: 5
 
 This article will help you get familiar with the concept of a cell and its features.
 
-* [What is a Cell](#what-is-a-cell)
-
-* [ICellExporter Interface](#icellexporter-interface)
-
-* [Using ICellExporter](#using-icolumnexporter)
-
 
 ## What is a Cell
 
 A cell is the basic data unit in a worksheet. Cells are organized in rows and columns and can also be referred as an intersection point of a column and a row. Cells are identified by a letter and number combination that indicates the letter of their column and the number of their row. For example, the top left cell is referred to as A1 and the bottom right cell is – XFD1048576.
 
-## ICellExporter Interface
+## ICellExporter and ICellImporter Interface
 
 In **RadSpreadStreamProcessing**, a cell could be exported through the [**ICellExporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.ICellExporter.html). It defines several methods allowing you to set different values and formats to a cell.
+
+If you need to read the cell data and its properties, you should use the [**ICellImporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.ICellImporter.html).
 
 ## Using ICellExporter
 
@@ -238,6 +234,37 @@ In addition to the listed properties, the SpreadCellFormat class allows you to s
 {{endregion}}
 
 A SpreadCellFormat instance could be applied on multiple cells. However, if a property of the format changes, the new settings will be applied to the cells formatted after the modification.
+
+## Read a Cell
+
+### Using ICellImporter
+
+A concrete instance of ICellImporter could be obtained through the Cells collection of [IRowImporter]({%slug radspreadstreamprocessing-model-rows%}). **Example 8** demonstrates how you can read the cells of a row.
+
+#### **[C#] Example 8: Create ICellImporter**
+
+{{region cs-radspreadstreamprocessing-model-cells_7}}
+
+	foreach (ICellImporter cell in rowImporter.Cells)
+	{
+		string value = cell.Value;
+
+		SpreadCellFormat format = cell.Format;
+		SpreadCellStyle style = cell.Format.CellStyle;
+	}
+{{endregion}}
+
+>ICellImporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. The best way to ensure this is handled properly is to wrap it in a *using* statement.
+
+The ICellImporter interface exposes the following properties:
+
+* **RowIndex**: Gets the index of the row the cell appears in.
+* **ColumnIndex**: Gets the index of the column the cell appears in.
+* **Format**: Gets the formatting applied to the cell. The property is of type [SpreadCellFormat](https://docs.telerik.com/devtools/document-processing/api/telerik.documents.spreadsheetstreaming.spreadcellformat).
+* **Value**: A string property that allows you get the value of the cell.
+* **ValueType**: Gets the value type of the cell. This property is enumeration of type [CellValueType](https://docs.telerik.com/devtools/document-processing/api/telerik.documents.spreadsheetstreaming.cellvaluetype)
+
+
 
 ## See Also
 
