@@ -11,20 +11,15 @@ position: 3
 
 This article will help you get familiar with the concept of a column and its features.
 
-* [What is a Column](#what-is-a-column)
-
-* [IColumnExporter Interface](#icolumnexporter-interface)
-
-* [Using IColumnExporter](#using-icolumnexporter)
-
-
 ## What is a Column
 
 A column is a group of cells that are vertically stacked and appear on the same vertical line. Columns are identified by a letter or a combination of letters. For example, the first column is called A, the second one – B and the last column is XFD.
 
-## IColumnExporter Interface
+## IColumnExporter and IColumnImporter Interfaces
 
 In **RadSpreadStreamProcessing**, a column could be exported through the [**IColumnExporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.IColumnExporter.html). It defines several methods allowing you to change the appearance of a column.
+
+To read a column and its properties, you should use the [**IColumnImporter** interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.IColumnImporter.html). 
 
 ### Using IColumnExporter
 
@@ -78,6 +73,31 @@ In some cases you may need to skip several columns and start filling the data in
 	    column.SetHidden(true); // The sixth (F) column will be hidden.
 	}
 {{endregion}}
+
+## Read a Column
+
+### Using IColumnImporter
+
+A concrete instance of IColumnImporter could be obtained through the Columns collection of [IWorksheetImporter]({%slug radspreadstreamprocessing-model-worksheet%}). **Example 4** demonstrates how you can start reading a row from a worksheet.
+
+#### **[C#] Example 4: Create IColumnImporter**
+
+{{region cs-radspreadstreamprocessing-model-columns_3}}
+
+	foreach (IColumnImporter column in worksheetImporter.Columns)
+	{
+	}
+{{endregion}}
+
+
+The IColumnImporter interface exposes the following properties:
+
+* **FromIndex**: Gets the first index of the column range with same properties.
+* **ToIndex**: Gets the last index of the column range with same properties.
+* **OutlineLevel**: Gets the outline level (used when grouping columns).
+* **IsCustomWidth**: Gets a value indicating whether the width applied to the current column is a custom one.
+* **WidthInPixels** and **WidthInCharacters**: Gets the width of the column in pixels and in characters, respectively.
+* **IsHidden**: Gets a value determining whether the row is hidden.
 
 ## See Also
 
