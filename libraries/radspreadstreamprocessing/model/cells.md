@@ -254,8 +254,6 @@ A concrete instance of ICellImporter could be obtained through the Cells collect
 	}
 {{endregion}}
 
->ICellImporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. The best way to ensure this is handled properly is to wrap it in a *using* statement.
-
 The ICellImporter interface exposes the following properties:
 
 * **RowIndex**: Gets the index of the row the cell appears in.

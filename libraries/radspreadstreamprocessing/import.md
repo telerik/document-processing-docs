@@ -19,7 +19,7 @@ This functionality is introduced in R3 2022.
 
 ## Specifics
 
-The library reads dynamically the document content. To achieve this, each of the classes responsible for importing the elements of the document implement **IDisposable** and keeps the corresponding content and settings into the memory until it is disposed. 
+The library reads dynamically the document content. To achieve this, the IWorksheetImporter and IWorkbookImporter  classes responsible for importing the elements of the document implement **IDisposable** and keep the corresponding content and settings into the memory until it is disposed. 
 
 ## Read File Data
 

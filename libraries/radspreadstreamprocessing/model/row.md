@@ -90,7 +90,6 @@ A concrete instance of IRowImporter could be obtained through the Rows collectio
 	}
 {{endregion}}
 
->IRowImporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
 The IRowImporter interface exposes the following properties to allow you access its data:
 
