@@ -42,6 +42,10 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 		<td><b>Telerik.Documents.Flow.dll</b></td>
 	</tr>
 	<tr>
+	    <td><b>Telerik.Windows.Documents.DrawingML.dll</b></td>
+		<td><b>Telerik.Documents.DrawingML.dll</b></td>
+	</tr>
+	<tr>
 	    <td><b>Telerik.Windows.Zip.dll</b></td>
 		<td><b>Telerik.Zip.dll</b></td>
 	</tr>
