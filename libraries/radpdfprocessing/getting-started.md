@@ -51,6 +51,13 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 		<td><b>Telerik.Documents.ImageUtils.dll</b>
 			<br><sub><i>This assembly is not available in UI for Xamarin.</i></sub>
 	</tr>
+	<tr> 
+		<td  colspan="2" >This assembly is required for the <a href="https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/convert-to-image/using-image-format-provider">Image Exporting</a> functionality. This is only available in the NET Standard version. </td>
+	</tr>
+	<tr>
+		<td><b>-</b></td>
+		<td><b>Telerik.Documents.Fixed.FormatProviders.Image.Skia</b></td>
+	</tr>
 		<tr>
 	    <td colspan="2">&nbsp;</td>
 	</tr>
@@ -83,6 +90,9 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 </table>
 
 >note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp**. In order to use this assembly, you will need to add a reference to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/). After R1 2022 SP1 the minimum **ImageSharp** required version is **v.2.0.0**.
+
+>note The **elerik.Documents.Fixed.FormatProviders.Image.Skia** assembly depends on **SkiaSharp**. In order to use this assembly, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). The **SkiaSharp.NativeAssets.*** Nuget package is required as well. This package may differ according to the used platform. There are version for Windows, MacOs, Linux, WebAssembly, Android, iOS, and others.
+ 
 
 ## Creating a Document
 
