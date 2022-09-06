@@ -58,7 +58,7 @@ In order to use **RadSpreadStreamProcessing** in your project, you will need to 
 </tbody>
 </table>
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. For the full list of suites including Telerik Document Processing, check the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) help topic. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Create a Spreadsheet Document
 
@@ -141,6 +141,48 @@ When creating a document with **RadSpreadStreаmProcessing**, you should have in
 
 #### Figure 1: The document created in Example 1
 ![](images/SpreadStreamProcessing-GettingStarted_01.png)
+
+
+## Read Existing Document
+
+When reading a document with **RadSpreadStreаmProcessing**, you should have in mind that the order of parsing the content is much important. To achieve the low resources usage, the library parses only the required by the user data and, due to the format restrictions of the way the content is presented in the structure of the file, you have to create the desired elements in a sequence keeping the following consecution:
+
+
+1. Read the Workbook 
+
+2. Read a Worksheet
+
+3. Read Columns (optional)
+
+4. Read Rows (a worksheet must contain at least one row)
+
+5. Read Cells (optional)
+
+**Example 2** demonstrates how you could read the data from an existing document.
+
+#### [C#] **Example 2: Read data from a document**
+
+{{region radspreadstreamprocessing-getting-started_1}}
+
+	using (FileStream fs = new FileStream(fileName, FileMode.Open))
+	{
+		using (IWorkbookImporter workBookImporter = SpreadImporter.CreateWorkbookImporter(SpreadDocumentFormat.Xlsx, fs))
+		{
+			foreach (IWorksheetImporter worksheetImporter in workBookImporter.WorksheetImporters)
+			{
+				foreach (IRowImporter rowImporter in worksheetImporter.Rows)
+				{
+					foreach (ICellImporter cell in rowImporter.Cells)
+					{
+						string value = cell.Value;
+					}
+				}
+			}
+		}
+	}
+
+{{endregion}}
+
 
 
 ## See Also 

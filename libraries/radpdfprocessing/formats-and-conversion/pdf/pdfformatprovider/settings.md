@@ -102,6 +102,7 @@ This property specifies three types of user access permissions: **PrintingPermis
     * __None__: Specify no copying is allowed.
     * __Copying__: Specify copying is allowed.
     * __TextAccess__: Specify that text access for screen reader devices for copying is allowed.
+    * __NumberingFieldsPrecisionLevel__: Represents precision level when updating numbering fields. When the Normal option is selected the fields are updated once, not taking into account if their new values would have shifted the already measured layout. In such cases, the results could be outdated. This is the MS Word-like behavior. If you need more accurate results, use NumberingFieldsPrecisionLevel.High where the fields are updated until their values become more accurate. This precision level is more accurate than NumberingFieldsPrecisionLevel.Normal but requires more resources.
 
 
 __Example 2__ shows how you can create a __PdfExportSettings__ object with settings that specify an OwnerPassword and UserAccessPermissions.
@@ -112,19 +113,19 @@ __Example 2__ shows how you can create a __PdfExportSettings__ object with setti
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
 
 	PdfFormatProvider provider = new PdfFormatProvider();
-    PdfExportSettings settings = new PdfExportSettings();
-    settings.IsEncrypted = true;
-    settings.OwnerPassword = "0wn3rP4ssw0rd";
-    // The following permissions are exported only if the settings.IsEncrypted property is set to true
-    UserAccessPermissions permissions = new UserAccessPermissions
-    {
-        Printing = PrintingPermissionType.HighResolution,
-        Changing = ChangingPermissionType.AnyExceptExtractingPages,
-        Copying = CopyingPermissionType.TextAccess,
-    };
+	PdfExportSettings settings = new PdfExportSettings();
+	settings.IsEncrypted = true;
+	settings.OwnerPassword = "0wn3rP4ssw0rd";
+	// The following permissions are exported only if the settings.IsEncrypted property is set to true
+	UserAccessPermissions permissions = new UserAccessPermissions
+	{
+	    Printing = PrintingPermissionType.HighResolution,
+	    Changing = ChangingPermissionType.AnyExceptExtractingPages,
+	    Copying = CopyingPermissionType.TextAccess,
+	};
 	
-    settings.UserAccessPermissions = permissions;
-    provider.ExportSettings = settings;
+	settings.UserAccessPermissions = permissions;
+	provider.ExportSettings = settings;
 
 {{endregion}}
 

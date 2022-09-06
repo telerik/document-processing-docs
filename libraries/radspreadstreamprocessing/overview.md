@@ -17,14 +17,16 @@ If you want to skip this introductory article and directly start using SpreadStr
 
 ![](images/SpreadStreamProcessing-Overview_01.png)
 
->tipYou can find the code example from the image above in our [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing/GenerateDocument). This repository contains numerous examples that cover all Document Processing libraries.
+>tipYou can find the code example from the image above in our [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/SpreadStreamProcessing/GenerateDocument). This repository contains numerous examples that cover all Document Processing libraries.
 
 
 ## What is Spread Streaming?
 
-Spread streaming is a document processing paradigm that allows you to create big spreadsheet documents with great performance and minimal memory footprint. 
+Spread streaming is a document processing paradigm that allows you to create or read big spreadsheet documents with great performance and minimal memory footprint. 
 
 The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory. Each time an exporter object is disposed, the set values are written into the stream. This allows you to create large documents with excellent performance.
+
+While reading, only the required chunk of information is parsed to ensure there are no application resources kept without user need.
 
 ## Key Features
 
@@ -32,7 +34,9 @@ Some of the features you can take advantage of are:
 
 * [Export]({%slug radspreadstreamprocessing-export%}) to XLSX or CSV files
 
-* Writing directly into a stream
+* [Import]({%slug radspreadstreamprocessing-import%}) from XLSX or CSV files
+
+* Writing directly into a stream; or parsing required data only
 
 * **Append** new worksheets to existing workbook
 
@@ -57,14 +61,14 @@ Some of the features you can take advantage of are:
 
 ## RadSpreadStreamProcessing vs. RadSpreadProcessing
 
-There are several main differences between the two spreadsheet processing libraries.
-* __RadSpreadStreamProcessing__ can be used only to create documents and append data to existing ones. On the other hand, you can use the __RadSpreadProcessing__ also for reading and modifying the content of documents.
+Following are the main differences between the two spreadsheet processing libraries.
+
 * __RadSpreadStreamProcessing__ writes directly into a stream, unlike [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), which creates models for the elements in the document. This is why the memory used with the spread streaming library is significantly lower than when using __RadSpreadProcessing__.
 * __RadSpreadStreamProcessing__ does not perform any formula or other layout-related calculations, which makes its file generation performance much better compared to __RadSpreadProcessing__.
 
 ## When to Use RadSpreadStreamProcessing
 
-You can use the __RadSpreadStreamProcessing__ library to create and export __large amount of data__ with a low memory footprint and great performance. You can also append data to an already existing document stream. The generated document can be exported directly to a file on the file system or to a stream (for example, to send it to the client).
+You can use the __RadSpreadStreamProcessing__ library to create or read __large amount of data__ with a low memory footprint and great performance. You can also append data to an already existing document stream. The generated document can be exported directly to a file on the file system or to a stream (for example, to send it to the client).
 
 ## See Also
 

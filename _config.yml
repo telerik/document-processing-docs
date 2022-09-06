@@ -94,6 +94,9 @@ navigation:
     libraries/radwordsprocessing/model/content-controls:
         title: Content Controls
         position: 17
+    libraries/radwordsprocessing/model/shapes:
+        title: Shapes
+        position: 18
 ## RadSpreadStreamProcessing Start 
     "*radspreadstreamprocessing":
         title: RadSpreadStreamProcessing
@@ -202,8 +205,11 @@ navigation:
         title: PdfStreamWriter
         position: 2
     libraries/radpdfprocessing/formats-and-conversion/plain-text:
-        title: Plain text
+        title: Plain Text
         position: 0
+    libraries/radpdfprocessing/formats-and-conversion/convert-to-image:
+        title: Convert to Image
+        position: 3       
     libraries/radpdfprocessing/editing:
         title: Editing
         position: 9
