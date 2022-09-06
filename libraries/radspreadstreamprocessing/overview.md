@@ -26,17 +26,17 @@ Spread streaming is a document processing paradigm that allows you to create or 
 
 The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory. Each time an exporter object is disposed, the set values are written into the stream. This allows you to create large documents with excellent performance.
 
-While reading, only the required chunk of information is parsed to ensure there are no application resources kept without user need.
+While reading, RadSpreadStreamProcessing parses only the required chunk of information. This ensures minimal use of application resources.
 
 ## Key Features
 
 Some of the features you can take advantage of are:
 
-* [Export]({%slug radspreadstreamprocessing-export%}) to XLSX or CSV files
+* [Export to XLSX or CSV files]({%slug radspreadstreamprocessing-export%})
 
-* [Import]({%slug radspreadstreamprocessing-import%}) from XLSX or CSV files
+* [Import from XLSX or CSV files]({%slug radspreadstreamprocessing-import%}) 
 
-* Writing directly into a stream; or parsing required data only
+* Write directly into a stream; or parse only required data
 
 * **Append** new worksheets to existing workbook
 
@@ -61,9 +61,9 @@ Some of the features you can take advantage of are:
 
 ## RadSpreadStreamProcessing vs. RadSpreadProcessing
 
-Following are the main differences between the two spreadsheet processing libraries.
+The main differences between the two spreadsheet processing libraries include:
 
-* __RadSpreadStreamProcessing__ writes directly into a stream, unlike [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), which creates models for the elements in the document. This is why the memory used with the spread streaming library is significantly lower than when using __RadSpreadProcessing__.
+* __RadSpreadStreamProcessing__ writes directly into a stream, while [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) creates models for the elements in the document. This is why the spread streaming library uses significantly less memory than __RadSpreadProcessing__.
 * __RadSpreadStreamProcessing__ does not perform any formula or other layout-related calculations, which makes its file generation performance much better compared to __RadSpreadProcessing__.
 
 ## When to Use RadSpreadStreamProcessing
