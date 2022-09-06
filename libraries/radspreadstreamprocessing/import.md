@@ -36,7 +36,7 @@ To read the data from a file, you should parse the desired elements in a sequenc
 5. Read Cells 
 
 
-#### [C#] **Example 1: Read data from a document**
+#### [C#] Example 1: Read data from a document
 
 {{region radspreadstreamprocessing-import_0}}
 
