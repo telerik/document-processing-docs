@@ -81,7 +81,7 @@ When creating a document with **RadSpreadStreаmProcessing**, you should have in
 
 **Example 1** shows how you could create a simple document.
 
-#### [C#] **Example 1: Create a document**
+#### [C#] Example 1: Create a document
 
 {{region radspreadstreamprocessing-getting-started_0}}
 	using (FileStream stream = File.OpenWrite("sample.xlsx"))
@@ -160,7 +160,7 @@ When reading a document with **RadSpreadStreаmProcessing**, you should have in 
 
 **Example 2** demonstrates how you could read the data from an existing document.
 
-#### [C#] **Example 2: Read data from a document**
+#### [C#] Example 2: Read data from a document
 
 {{region radspreadstreamprocessing-getting-started_1}}
 
