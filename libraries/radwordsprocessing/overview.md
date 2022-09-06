@@ -43,7 +43,7 @@ The model of **RadWordsProcessing** includes:
 
 * [**Content Controls**]({%slug wordsprocessing-model-content-controls%}): Content controls or Structured Document Tags (SDT) enable users to add specific semantics to part of the document: restricting input, modifying editing behavior etc. This functionality allows adding of checkboxes, combo boxes and other controls to the document as well. 
 
-* [**Shapes**]({%slug wordsprocessing-shapes-shapes%}): Their variation in shape and style makes them very useful for drawing attention to specific text.
+* [**Shapes**]({%slug radwordsprocessing-shapes-shapes%}): Their variation in shape and style makes them very useful for drawing attention to specific text.
 
 ## Features:
 
