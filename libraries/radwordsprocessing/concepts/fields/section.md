@@ -32,7 +32,7 @@ __Example 1__ demonstrates how you can insert a section field.
 {{region cs-radwordsprocessing-concepts-section-field_0}}
 	            
 	editor.InsertText("Page ");
-	editor.InsertField("SECTIONPAGES", "");
+	editor.InsertField("PAGE", "");
 	editor.InsertText(" of Section ");
 	editor.InsertField("SECTION", "");
 
