@@ -89,7 +89,7 @@ Gets or sets the pane of the worksheet. Applicable when the worksheet contains [
 
 ### **CircleInvalidData**
 
-Gets or sets a value indicating whether to circle the invalid data. Applicable when using the [Data Validation]({%slug radspreadprocessing-features-data-validation%}) feature.
+Gets or sets a value indicating whether to circle the invalid data. Applicable when using the [Data Validation]({%slug radspreadprocessing-features-data-validation%}) feature. Note that this property is not preserved when exporting the document as there is no alternative representation in the supported formats. Its value is used only by viewers integrated with SpreadProcessing.
 
 ### **FreezePanes()**
 
