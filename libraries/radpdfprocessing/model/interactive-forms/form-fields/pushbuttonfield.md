@@ -17,7 +17,7 @@ This article describes the following topics:
 
 ## Overview
 
-This class corresponds to FormFieldType.PushButton enum value and represents a simple button that may be clicked with the mouse. This is the only field that does not preserve any data. It is usually used to execute some action on mouse click such as the action for submitting the form data. 
+This class corresponds to FormFieldType.PushButton enum value and represents a simple button that may be clicked with the mouse. This is the only field that does not preserve any data. It is usually used to execute some action on mouse click such as the action. For the supported by PdfProcessing actions, check the [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%}#action) help topic.
 
 ## Properties
 
