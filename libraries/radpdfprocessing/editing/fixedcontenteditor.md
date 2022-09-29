@@ -247,6 +247,9 @@ The Widget annotations allow you visualize the content of a FormField. With the 
 	{{region cs-radpdfprocessing-editing-fixedcontenteditor_10}}
 	
 		PushButtonField pushButton = new PushButtonField("button");
+	
+		document.AcroForm.FormFields.Add(pushButton);
+	
 		editor.Position.Translate(20, 450);
 		editor.DrawWidget(pushButton, new Size(100, 20));
 	{{endregion}}
@@ -265,6 +268,8 @@ The Widget annotations allow you visualize the content of a FormField. With the 
 		radio.Options.Add(new RadioOption("second radio"));
 		radio.Options.Add(new RadioOption("third radio"));
 		radio.Value = radio.Options[1];
+	
+		document.AcroForm.FormFields.Add(radio);
 		
 		editor.Position.Translate(20, 410);
 		editor.DrawWidget(radio, radio.Options[0], new Size(20, 20));
