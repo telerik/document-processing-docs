@@ -62,14 +62,12 @@ This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-
 	  * __Telerik.Documents.Flow.dll__
 	  * __Telerik.Zip.dll__
 
-1. Reference the assemblies that allow you to export the content as Docx and PDF files:
+1. Reference the assembly that allows you to export the content as a PDF file:
 
 	For .NET Framework project:
-	  * __Telerik.Windows.Documents.Flow.FormatProviders.Docx.dll__
 	  * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll__
 
 	For .NET Core/.NET 5+ project:
-	  * __Telerik.Documents.Flow.FormatProviders.Docx.dll__
 	  * __Telerik.Documents.Flow.FormatProviders.Pdf.dll__
 
 > The Document Processing assemblies for .NET 5+ don't contain "Windows" in their names.
