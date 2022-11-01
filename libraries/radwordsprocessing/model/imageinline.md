@@ -27,6 +27,7 @@ With **WordsProcessing**, you can work with images from the following file forma
  - ICON
  - WMF 
  - EMF
+ - BIN
 
 ## Inserting an ImageInline
 
