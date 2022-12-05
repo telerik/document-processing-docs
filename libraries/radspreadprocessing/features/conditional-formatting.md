@@ -49,6 +49,7 @@ SpreadProcessing supports many different types of formatting rules. Each rule im
 | **DuplicateValuesRule** | Matches values that are duplicate inside a specified range. |
 | **UniqueValuesRule** | Matches values that are unique inside a specified range. |
 | **ValueDistributionRule** | This conditional formatting rule highlights cells that are above or below the average for all values in the range. It has four Boolean configuration properties – `AboveAverage`, `AboveOrEqualToAverage`, `BelowAverage`, `BelowOrEqualToAverage`. |
+| **FormulaRule** | This conditional formatting rule allows you to enter any valid formula as a rule argument that returns a number. |
 
 ## Create Formatting for a Rule
 
