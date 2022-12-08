@@ -3,7 +3,7 @@ title: Creating TableCells with GoToAction and UriAction
 description: This article demonstrates how can create table cells with GoTo action and UriAction in PDF document with Telerik Document Processing.
 type: how-to 
 page_title: Creating TableCells with GoToAction and UriAction
-slug: 
+slug: kb-create-table-cells
 position: 0
 tags: pdf, datatable, cells, widget
 res_type: kb
@@ -11,99 +11,100 @@ res_type: kb
 
 |Product Version|Product|Author|
 |----|----|----|
-|N/A|Telerik Document Processing|Maria Terzieva|
+|N/A|RadPdfProcessing|Maria Terzieva|
 
 ## Description
 
-The pdf format is different than the format in MS Word or other commonly used editors. With the PDF format, each content element has a specific position, and in some cases, each character is positioned separately. PDF standard does not have any information about tables as well, once exported the tables in the document are represented by lines and text fragments. 
+With the PDF format, each content element has a specific position, and in some cases, each character is positioned separately. PDF standard does not have any information about tables as well, once exported the tables in the document are represented by lines and text fragments. 
 
 Although the editors do not allow you to insert the widgets it is possible to insert a place holder and then use its postion to insert the widget.
 
 ## Solution
 
-This article shows example of how you implement solution for inserting a widget.
+First we need to create a table in the document. Next we have to iterate throught the elements of the page and to find the text fragment which we want. After that for creating Links to URLs or Locations within the document, we use Actions - UriAction or GoToAction.
 
-## Table of Contents
-
- - [Convert a Document to PDF](#convert-a-document-to-pdf)
-	- [DOCX to PDF](#convert-docx-to-pdf)
-	- [DOC to PDF](#convert-doc-to-pdf)
-	- [HTML to PDF](#convert-html-to-pdf)
-	- [RTF to PDF](#convert-rtf-to-pdf)
-	- [Plain text to PDF](#convert-txt-to-pdf)
-- [Convert a Spreadsheet Document to PDF](#convert-a-spreadsheet-document-to-pdf)
-	- [XLSX to PDF](#convert-xlsx-to-pdf)
-	- [XLS to PDF](#convert-xls-to-pdf)
-	- [CSV to PDF](#convert-csv-to-pdf)	
-	- [DataTable object to PDF](#convert-datatable-to-pdf)	
-	
-
-## Insert widgets in table cell
+## Create TableCells with GoToAction and UriAction
 
 ````C#
-var doc = new RadFixedDocument();
+{{region kb-create-table-cells}}
 
-var editor = new RadFixedDocumentEditor(doc);
-editor.InsertRun("Sample Document");
-
-Table table = new Table();
-for (int i = 0; i < 100; i++)
-{
-    TableRow row = table.Rows.AddTableRow();
-    for (int j = 0; j < 5; j++)
+    RadFixedDocument document = new RadFixedDocument();
+    using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
     {
-        var cell = row.Cells.AddTableCell();
-        cell.Blocks.AddBlock().InsertText("Test");
+        Table table = new Table();
+        Border border = new Border(BorderStyle.Single);
+        table.Borders = new TableBorders(left: border, top: border, right: border, bottom: border);
+        TableRow firstRow = table.Rows.AddTableRow();
+        TableCell firstRowFirstCell = firstRow.Cells.AddTableCell();
+        firstRowFirstCell.Borders = new TableCellBorders(left: border, top: border, right: border, bottom: border);
+        Block block1 = firstRowFirstCell.Blocks.AddBlock();
+        block1.InsertText("Text in first cell.");
+
+        TableRow secondRow = table.Rows.AddTableRow();
+        TableCell secondRowFirstCell = secondRow.Cells.AddTableCell();
+        secondRowFirstCell.Borders = new TableCellBorders(left: border, top: border, right: border, bottom: border);
+        Block block2 = secondRowFirstCell.Blocks.AddBlock();
+        block2.InsertText("Text in second cell.");
+
+        editor.InsertTable(table);
     }
-}
-TableRow lastRow = table.Rows.AddTableRow();
-var lastCell = lastRow.Cells.AddTableCell();
-lastCell.Blocks.AddBlock().InsertText("##FieldHolder");
 
-editor.InsertTable(table);
+    RadFixedPage secondPage = document.Pages.AddPage();
 
-var provider = new PdfFormatProvider();
-var docBytes = provider.Export(doc);
-
-var document = provider.Import(docBytes);
-
-SimplePosition holderPosition = new SimplePosition();
-RadFixedPage holderPage = null;
-
-foreach (var page in document.Pages)
-{
-    foreach (var element in page.Content)
+    foreach (RadFixedPage page in document.Pages)
     {
-        if (element is TextFragment fragment)
+        foreach (ContentElementBase element in page.Content)
         {
-            if (fragment.Text == "##FieldHolder")
+            if (element is TextFragment textFragment)
             {
-                var fragmentPosition = fragment.Position;
-                holderPosition.Translate(fragmentPosition.Matrix.OffsetX, fragmentPosition.Matrix.OffsetY);
-                holderPage = page;
-                fragment.Text = "";
+                if (textFragment.Text == "Text in first cell.")
+                {
+                    Location location = new Location
+                    {
+                        Left = 225,
+                        Top = 500,
+                        Zoom = 1,
+                        Page = secondPage
+                    };
+
+                    GoToAction goToAction = new GoToAction
+                    {
+                        Destination = location
+                    };
+
+                    Link goToLink = document.Pages[0].Annotations.AddLink(goToAction);
+                    Rect clippingBounds = textFragment.Clipping.Clip.Bounds;
+                    goToLink.Rect = new Rect(clippingBounds.X, clippingBounds.Y, clippingBounds.Width, clippingBounds.Height);
+                }
+                else if (textFragment.Text == "Text in second cell.")
+                {
+                    UriAction uriAction = new UriAction
+                    {
+                        Uri = new Uri(@"http://www.telerik.com"),
+                    };
+
+                    Link uriLink = document.Pages[0].Annotations.AddLink(uriAction);
+                    Rect clippingBounds = textFragment.Clipping.Clip.Bounds;
+                    uriLink.Rect = new Rect(clippingBounds.X, clippingBounds.Y, clippingBounds.Width, clippingBounds.Height);
+                }
             }
         }
     }
-}
 
-TextBoxField textField = new TextBoxField("SampleTextBox")
-{
-    MaxLengthOfInputCharacters = 500,
-    IsMultiline = true,
-    IsPassword = false,
-    IsFileSelect = false,
-    ShouldSpellCheck = true,
-    AllowScroll = true,
-    Value = "Sample content",
-};
+    string outputPath = "Exported.pdf";
+    if (File.Exists(outputPath))
+    {
+        File.Delete(outputPath);
+    }
 
-VariableContentWidget widget = textField.Widgets.AddWidget();
-widget.Rect = new Rect(new Point(holderPosition.Matrix.OffsetX, holderPosition.Matrix.OffsetY), new Size(250, 50));
-widget.RecalculateContent();
+    using (Stream output = File.OpenWrite(outputPath))
+    {
+        PdfFormatProvider provider = new PdfFormatProvider();
+        provider.Export(document, output);
+    }
 
-document.AcroForm.FormFields.Add(textField);
-holderPage.Annotations.Add(widget);
+    Process.Start(new ProcessStartInfo() { FileName = outputPath, UseShellExecute = true });
 
-File.WriteAllBytes(@"..\..\result.pdf", provider.Export(document));
+{{endregion}}
+
 ````
