@@ -1,11 +1,11 @@
 ---
 title: Creating TableCells with GoToAction and UriAction
-description: This article demonstrates how can create table cells with GoTo action and UriAction in PDF document with Telerik Document Processing.
+description: This article demonstrates how to create table cells with GoToAction and UriAction in PDF document with Telerik Document Processing.
 type: how-to 
 page_title: Creating TableCells with GoToAction and UriAction
 slug: kb-create-table-cells
 position: 0
-tags: pdf, datatable, cells, widget
+tags: pdf, cells, actions
 res_type: kb
 ---
 
@@ -16,14 +16,19 @@ res_type: kb
 ## Description
 
 With the PDF format, each content element has a specific position, and in some cases, each character is positioned separately. PDF standard does not have any information about tables as well, once exported the tables in the document are represented by lines and text fragments. 
+For this reason we use Action which defines the behaviour for an annotation. And annotation element associates an object with a location on a RadFixedPage.
 
-Although the editors do not allow you to insert the widgets it is possible to insert a place holder and then use its postion to insert the widget.
 
 ## Solution
 
-First we need to create a table in the document. Next we have to iterate throught the elements of the page and to find the text fragment which we want. After that for creating Links to URLs or Locations within the document, we use Actions - UriAction or GoToAction.
+The following example demonstrates how to create TableCells with GoToAction and UriAction:
 
-## Create TableCells with GoToAction and UriAction
+1.First we need to create a table in the document. 
+
+2.Next we have to iterate throught the elements of the page and to find the text fragment which we want. 
+
+3.After that for creating Links to URLs or Locations within the document, we use Actions - UriAction or GoToAction.
+
 
 ````C#
 {{region kb-create-table-cells}}
