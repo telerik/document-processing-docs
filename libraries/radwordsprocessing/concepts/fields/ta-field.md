@@ -41,8 +41,10 @@ __Example 1__ demonstrates how you can insert a TA field.
 
 {{region cs-radwordsprocessing-concepts-ta-field_0}}
 
- 
+    var document = new RadFlowDocument();
+    var editor = new RadFlowDocumentEditor(document);
 
+    editor.InsertField("TA \"Item\" \\b");
 
 {{endregion}}
 
