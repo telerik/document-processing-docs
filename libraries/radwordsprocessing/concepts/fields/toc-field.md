@@ -42,9 +42,10 @@ The TOC (Table of Contents) field creates a table of contents. It is created fro
 |\\s Identifier|Includes a number such as a chapter number before the page number. The chapter or other item must be numbered with a SEQ field. Identifier must match the identifier in the SEQ field.|
 |\\d "Separator"|When used with the \s switch, specifies the character that separates the sequence numbers and page numbers.|
 |\\p "Separator"|Specifies the character that separates an entry and its page number.|
-|\\n Levels|Omits page numbers from the table of contents. Page numbers are omitted from all levels unless a range of entry levels is specified. |
+|\\n Levels|Omits page numbers from the table of contents. Page numbers are omitted from all levels unless a range of entry levels is specified.|
  
- ### Switches that format table entries.
+
+### Switches that format table entries
 
 |Switch|Description|
 |---|---|
