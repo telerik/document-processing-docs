@@ -12,7 +12,7 @@ position: 8
 
 
 
-SequenceField is a [Field]({%slug radwordsprocessing-concepts-fields%}) element that sequally numbers chapters, tables, figures, and other items in the document. 
+SeqField is a [Field]({%slug radwordsprocessing-concepts-fields%}) element that sequally numbers chapters, tables, figures, and other items in the document. 
 If you add, delete, or move an item and its respective Sequence field, you can update remaining Seq fields in the document to reflect the new sequence.
 
 ## Field Syntax
@@ -37,7 +37,7 @@ The possible switches for a Sequence field are:
 | :---                   | :---                                                                                          |
 | \c                     | Repeats the closest preceding sequence number.                                                |
 | \h                     | Hides the field result.                                                                       |
-| \n                     | Inserts the  next sequence number for the specified number.                                   |
+| \n                     | Inserts the next sequence number for the specified number.                                   |
 | \r n                   | Resets the sequence number to the specified number.                                           |
 | \s                     | Resets the sequence number at the heading level following the "s".                            |
 
