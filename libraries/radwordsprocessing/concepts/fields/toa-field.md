@@ -49,6 +49,7 @@ __Example 1__ demonstrates how you can insert a TOA field.
  
 {{endregion}}
  
+In order to update the  update the **PageRef** fields within the TOA field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
 
 ## See Also 
 
