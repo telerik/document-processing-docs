@@ -41,9 +41,10 @@ The event is fired when a user password is needed to open the document. The pass
 __Example 1__ shows how you can create a __PdfImportSettings__ object and assign it to a PdfFormatProvider.
         
 
-#### __[C#] Example 1: Import settings__
+#### __[C#] Example 1: Import settings with UserPasswordNeeded__
 
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_0}}
+
 	PdfFormatProvider provider = new PdfFormatProvider();
 	PdfImportSettings settings = new PdfImportSettings();
 	settings.UserPasswordNeeded += (s, a) =>
@@ -52,9 +53,28 @@ __Example 1__ shows how you can create a __PdfImportSettings__ object and assign
 	};
 	
 	provider.ImportSettings = settings;
+
 {{endregion}}
 
+### OwnerPasswordNeeded
 
+The event is fired when an owner password is needed to open the document. The password can be specified in the __PasswordNeededEventArgs.Password__ property.
+
+#### __[C#] Example 2: Import settings with OwnerPasswordNeeded__
+
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_2}}
+
+	PdfFormatProvider provider = new PdfFormatProvider();
+	PdfImportSettings settings = new PdfImportSettings();
+	settings.OwnerPasswordNeeded += (s, a) =>
+	{
+		a.Password = "Own3erP4ssw0rd";
+	};
+
+	provider.ImportSettings = settings;
+ 
+
+{{endregion}}
 
 ## Export Settings
 
@@ -66,7 +86,10 @@ This property controls if the fonts will be embedded in the file. The default va
 
 ### __IsEncrypted__
 
-This property specifies if the document should be encrypted. The default value is *False*. The encryption algorithm used when exporting encrypted documents is **RC4**.
+This property specifies if the document should be encrypted. The default value is *False*. You can specify the encryption algorithm by setting the **EncryptionType** property. The supported values are **AES256** and **RC4**
+
+>important **All passwords for revision 6 (AES-256) shall be based on Unicode**. Preprocessing of a user-provided password consists first of normalizing its representation by applying the "SASLPrep" profile (Internet RFC 4013) of the "stringprep" algorithm (Internet RFC 3454) to the supplied password using the Normalize and BiDi options.
+
 
 >This setting is ignored when __ComplianceLevel__ differs from __None__ as PDF/A compliant documents do not allow encryption.
 
