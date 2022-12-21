@@ -24,10 +24,10 @@ Switches are a way for the code fragment to specify formatting for the result of
 |\\f|Removes the formatting of the entry text in the document from the entry in the table of authorities. |
 |\\g "Separators"|Defines the abbreviated form of the entry.| 
 |\\h|Includes the category heading for the entries in a table of authorities.|
-|\\l|Specifies the characters (up to five) that separate multiple page references. |
+|\\l|Specifies the characters (up to fifteen) that separate multiple page references. |
 |\\p|Replaces five or more different page references to the same authority with "passim".|
 |\\s Identifier|Includes a number, such as a case number or section number, before the page number. The item must be numbered with a SEQ field, and Identifier must match the identifier in the SEQ field.|
-|\\d "Separator"|Used with the \s switch, specifies the characters (up to five) that separate the sequence numbers and page numbers. |
+|\\d "Separator"|Used with the \s switch, specifies the characters (up to fifteen) that separate the sequence numbers and page numbers. |
 
 
 
@@ -49,8 +49,9 @@ __Example 1__ demonstrates how you can insert a TOA field.
  
 {{endregion}}
  
-In order to update the  update the **PageRef** fields within the TOA field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
+In order to obtain the pages of TA fields, BookmarkRangeStart, and BookmarkRangeEnd fields you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
 
 ## See Also 
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* * [TA field]({%slug radwordsprocessing-concepts-ta-field%}))
