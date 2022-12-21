@@ -51,7 +51,7 @@ __Example 1__ demonstrates how you can insert a TC field.
 
 {{endregion}}
  
-This type of field does not have a result but when updated the switches are applied to the text. 
+This type of field does not have a result and there is no need to be updated. 
 
 ## See Also 
 

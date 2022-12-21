@@ -20,7 +20,7 @@ Switches are a way for the code fragment to specify formatting for the result of
 | :---                   | :---                               |
 |\\c "Category" |Specifies the category of entries to collect in a table of authorities. This switch is required |
 |\\b Bookmark |Collects entries only from the portion of the document marked by the specified bookmark.|
-|\\e "Separators"|Specifies the characters (up to five) that separate a table of authorities entry and its page number.|
+|\\e "Separators"|Specifies the characters (up to fifteen) that separate a table of authorities entry and its page number.|
 |\\f|Removes the formatting of the entry text in the document from the entry in the table of authorities. |
 |\\g "Separators"|Defines the abbreviated form of the entry.| 
 |\\h|Includes the category heading for the entries in a table of authorities.|
