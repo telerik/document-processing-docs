@@ -58,7 +58,7 @@ __Example 1__ shows how you can create a __PdfImportSettings__ object and assign
 
 ### OwnerPasswordNeeded
 
-The event is fired when a owner password is needed to open the document. The password can be specified in the __PasswordNeededEventArgs.Password__ property.
+The event is fired when an owner password is needed to open the document. The password can be specified in the __PasswordNeededEventArgs.Password__ property.
 
 #### __[C#] Example 2: Import settings with OwnerPasswordNeeded__
 
