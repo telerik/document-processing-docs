@@ -68,7 +68,7 @@ The event is fired when a owner password is needed to open the document. The pas
 	PdfImportSettings settings = new PdfImportSettings();
 	settings.OwnerPasswordNeeded += (s, a) =>
 	{
-		a.Password = "Us3rP4ssw0rd";
+		a.Password = "Own3erP4ssw0rd";
 	};
 
 	provider.ImportSettings = settings;
@@ -87,6 +87,8 @@ This property controls if the fonts will be embedded in the file. The default va
 ### __IsEncrypted__
 
 This property specifies if the document should be encrypted. The default value is *False*. You can specify the encryption algorithm by setting the **EncryptionType** property. The supported values are **AES256** and **RC4**
+
+>important **All passwords for revision 6 (AES-256) shall be based on Unicode**. Preprocessing of a user-provided password consists first of normalizing its representation by applying the "SASLPrep" profile (Internet RFC 4013) of the "stringprep" algorithm (Internet RFC 3454) to the supplied password using the Normalize and BiDi options.
 
 
 >This setting is ignored when __ComplianceLevel__ differs from __None__ as PDF/A compliant documents do not allow encryption.
