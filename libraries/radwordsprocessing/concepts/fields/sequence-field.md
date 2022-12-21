@@ -1,7 +1,7 @@
 ---
 title: Sequence Field
 page_title: Sequence Field
-description: MergeField field is a Field element that contains a reference to a data field by its name.
+description: SeqField field is a Field element that contains a reference to a data field by its name.
 slug: radwordsprocessing-concepts-sequence-field
 tags: sequence,field
 published: True
@@ -23,7 +23,7 @@ This is how the syntax of a Sequence field looks like:
 | { **SEQ Identifier** [Bookmark] [Switches]} |
 
 ### Seq identifier
-The name you assign to a series of items to number. The name must start with a letter and is limited to a 40 characters(letters, numbers, and underscores).
+Every SEQ code needs an identifier to tag each sequence or list. Identifiers must start with a letter and is limited to a 40 characters(letters, numbers, and underscores).
 
 ### Bookmarks
 Include a bookmark name to refer to an item elsewhere in the document.
@@ -44,7 +44,7 @@ The possible switches for a Sequence field are:
 
 ## Inserting 
 
-Inserting a SEQ fields can be easily achieved when inserting to number tables, figures, and other items in a document.
+Inserting a SEQ fields can be easily achieved when inserting number to tables, figures, and other items in a document.
 
 #### __[C#] Example 1: Insert Sequence field__ using InsertField() method__
 
