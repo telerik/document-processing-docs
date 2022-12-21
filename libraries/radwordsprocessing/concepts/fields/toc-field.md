@@ -1,7 +1,7 @@
 ---
 title: Table of Contents Field
 page_title: Table of Contents Field
-description: Table of Contents Field is a Field element that inserts a table od contents in the document.
+description: Table of Contents Field is a Field element that inserts a table of contents in the document.
 slug: radwordsprocessing-concepts-toc-field
 tags: table of contents,field
 published: True
@@ -21,7 +21,7 @@ The TOC (Table of Contents) field creates a table of contents. It is created fro
 
 # Switches
 
-### Switched that control whats included in the table of contents.
+### Switches that control whats included in the table of contents.
 
 |Switch|Description|
 |:---  |:---  |
@@ -29,7 +29,7 @@ The TOC (Table of Contents) field creates a table of contents. It is created fro
 |\\t "Style,Level,Style,Level,..."|Builds a table of contents from paragraphs formatted with styles other than the built-in styles. For example, { TOC \t "style1,1, style2,2" }|
 |\\u|Builds a table of contents from paragraphs whose formatting includes outline levels applied directly, in paragraph settings.|
 |\\c "SEQIdentifier"|Lists figures, tables, charts, or other items that are numbered by a SEQ (Sequence) field.|
-|\\a Identifier|Lists items captioned with the Caption but omits caption labels and numbers. Currently you cna insert caption by adding a SEQ field|
+|\\a Identifier|Lists items captioned with the Caption but omits caption labels and numbers. Currently you can insert caption by adding a SEQ field|
 |\\f EntryIdentifier|Builds a table from TC fields. If EntryIdentifier is specified, the table is built only from TC fields with the same identifier (typically a letter)|
 |\\l Levels|Builds a table of contents from TC fields that assign entries to one of the specified levels.|
 |\\b BookmarkName|Collects entries only from the portion of the document marked by the specified bookmark.|
@@ -75,6 +75,9 @@ __Example 1__ demonstrates how you can insert a TOC field.
 
 This makes a list of all TC fields with the 'a' identifier.
 
+In order to update the **PageRef** fields within the TOC field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%})
+
 ## See Also 
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [TC field]({%slug radwordsprocessing-concepts-tc-field%}))

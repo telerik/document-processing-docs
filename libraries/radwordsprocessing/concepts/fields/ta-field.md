@@ -1,7 +1,7 @@
 ---
 title: TA Field
-page_title: Ta Field
-description: Ta field is a Field element that represents the and entry in the Table of Authorities.
+page_title: TA Field
+description: TA field is a field element that represents the and entry in a Table of Authorities table.
 slug: radwordsprocessing-concepts-ta-field
 tags: table of authorities,field
 published: True
@@ -48,8 +48,9 @@ __Example 1__ demonstrates how you can insert a TA field.
 
 {{endregion}}
 
-This type of field does not have a result and there is no need to be updated. 
+This type of field does not have a result but when updated the switches are applied to the text.
 
 ## See Also 
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [TOA field]({%slug radwordsprocessing-concepts-toa-field%}))

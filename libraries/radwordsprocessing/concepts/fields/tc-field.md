@@ -27,7 +27,7 @@ Switches are a way for the code fragment to specify formatting for the result of
 | :---                   | :---                               |
 | \\f Type  | The item types used in particular contents list. Use a unique Type identifier (typically a letter from A-Z) for each type of list. |
 | \\l Level | The level of the TC entry.  |
-| \\n Level | Omits the page number for the entry. |
+| \\n | Omits the page number for the entry. |
 
 # Inserting
 
@@ -50,9 +50,10 @@ __Example 1__ demonstrates how you can insert a TC field.
 
 
 {{endregion}}
-
-This type of field does not have a result and there is no need to be updated. 
+ 
+This type of field does not have a result but when updated the switches are applied to the text. 
 
 ## See Also 
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [TOC field]({%slug radwordsprocessing-concepts-toc-field%}))
