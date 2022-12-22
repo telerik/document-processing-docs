@@ -62,7 +62,6 @@ PointSeriesBase is inherited by the following classes, which represent concrete 
 
 The adding of the new series is done through the **SeriesCollection** Add() method overloads and removing is done through the Remove() method. The first overload throws an exception when the series parameter passed is not of the correct type and the other Add ()overloads create a series of the appropriate type. The overloads of the base **SeriesCollection** type are listed below:
 
-- public void **Add(SeriesBase series)**
 - public SeriesBase **Add(IChartData categoriesData, IChartData valuesData, Title title = null)**
 - public SeriesBase **Add()**
 - public void **Remove(SeriesBase series)**
