@@ -16,6 +16,16 @@ This article will list the breaking changes and how they can be fixed when upgra
 ## What's Different in 2022 R3
 
 ### Changed
+
+Removed method void Add(T) of SeriesCollection.
+
+### What to do now
+
+Use other overrides insted.
+
+## What's Different in 2022 R3
+
+### Changed
  
 The parameterless constructors of the following classes are obsoleted:
 * TwoColorScaleValueContext 
