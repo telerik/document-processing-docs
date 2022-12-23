@@ -1,7 +1,7 @@
 ---
 title: Search
 page_title: Search
-description: THis article show how one can use the search feature to find text in a PDF Document.
+description: This article shows how one can use the search feature to find text in a PDF Document.
 slug: radwordsprocessing-features-search
 tags: pdf,search
 published: True
@@ -40,7 +40,7 @@ The **TextSeach** class exposes the following methods which allow you to search 
 
 ### SearchResult class
 
-All of the above methods returns one or more instances of the **SearchResult** class. This class exposes the following public members that provide information about the results.
+All of the above methods return one or more instances of the **SearchResult** class. This class exposes the following public members that provide information about the results.
 
 * **TextRange:** An object describing the start and end positions of the match. This object exposed the following properties.
     * **StartPosition:** An object that contains the start index and location of the current match. 
