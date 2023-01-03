@@ -13,7 +13,7 @@ position: 1
 
 This article will list the breaking changes and how they can be fixed when upgrading from a specific version of the controls to the next one.
 
-## What's Different in 2022 R3
+## What's Different in 2023 R1
 
 ### Changed
 
