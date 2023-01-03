@@ -17,11 +17,11 @@ This article will list the breaking changes and how they can be fixed when upgra
 
 ### Changed
 
-Removed method void Add(T) of SeriesCollection.
+Removed method void Add(T) of SeriesCollectionOfT.
 
 ### What to do now
 
-Use other overrides insted.
+Use the other overrides of the SeriesCollectionOfT.Add() method.
 
 ## What's Different in 2022 R3
 
