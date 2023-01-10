@@ -13,6 +13,16 @@ position: 1
 
 This article will list the breaking changes and how they can be fixed when upgrading from a specific version of the controls to the next one.
 
+## What's Different in 2023 R1
+
+### Changed
+
+Removed method void Add(T) of SeriesCollectionOfT.
+
+### What to do now
+
+Use the other overrides of the SeriesCollectionOfT.Add() method.
+
 ## What's Different in 2022 R3
 
 ### Changed
