@@ -32,6 +32,9 @@ The code from __Example 1__ shows how to use __RtfFormatProvider__ to import an 
 #### __[C#] Example 1: Import document from a file__
 
 {{region cs-radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_0}}
+	using Telerik.Windows.Documents.Flow.FormatProviders.Rtf;
+	using Telerik.Windows.Documents.Flow.Model;
+
 	RtfFormatProvider provider = new RtfFormatProvider();
 	using (Stream input = File.OpenRead("Sample.rtf"))
 	{
@@ -47,6 +50,9 @@ And here is how you can import a document from string containing the RTF documen
 #### __[C#] Example 2: Import document from a string__
 
 {{region cs-radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_1}}
+	using Telerik.Windows.Documents.Flow.FormatProviders.Rtf;
+	using Telerik.Windows.Documents.Flow.Model;
+
 	RtfFormatProvider provider = new RtfFormatProvider();
 	RadFlowDocument document = provider.Import(input);
 {{endregion}}
@@ -67,6 +73,9 @@ __Example 3__ shows how to use __RtfFormatProvider__ to export __RadFlowDocument
 #### __[C#] Example 3: Export a document to a file__
 
 {{region cs-radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_2}}
+	using Telerik.Windows.Documents.Flow.FormatProviders.Rtf;
+	using Telerik.Windows.Documents.Flow.Model;
+	
 	RtfFormatProvider provider = new RtfFormatProvider();
 	using (Stream output = File.Create("sample.rtf"))
 	{
@@ -83,6 +92,9 @@ You can also export the document to a string and preserve it in a database.
 #### __[C#] Example 4: Export a document to a string__
 
 {{region cs-radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_3}}
+	using Telerik.Windows.Documents.Flow.FormatProviders.Rtf;
+	using Telerik.Windows.Documents.Flow.Model;
+	
 	RtfFormatProvider provider = new RtfFormatProvider();
 	RadFlowDocument document = CreateRadFlowDocument();
 	string output = provider.Export(document);
