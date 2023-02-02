@@ -91,6 +91,7 @@ The __ColumnSelection__ class exposes __CanInsert()__ and __Insert()__ methods t
 	if (worksheet.Columns.CanInsert(index, itemCount))
 	{
 	    ColumnSelection selection = worksheet.Columns[index, index + itemCount];
+	    !!!  No overload of this method takes two arguments.,  worksheet.Columns does not return a selection with array args.!!!
 	    selection.Insert();
 	}
 {{endregion}}
