@@ -74,6 +74,7 @@ __Example 2__ shows how to use the __Export()__ method of __PdfFormatProvider__ 
 	}
 {{endregion}}
 
+>important When exporting a digitally signed document a stream that allows both reading and writing should be passed otherwise an exception is thrown: NotSupportedException: 'Stream does not support reading.' For example creаte the output stream like this: 'new FileStream("signed.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite)'.
 
 
 The resulting document can be opened in any application which supports PDF documents.
