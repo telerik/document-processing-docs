@@ -51,7 +51,7 @@ When instantiated, the signature should be added to the document's content using
 
 In addition, to create a signature, which has a visual representation, you must use the **Widget constructor** - you need to associate a Widget annotation with the signed [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}). The widget also needs a [FormSource]({%slug radpdfprocessing-model-formsource%}) object applied to its Content.NormalContentSource property. A FormSource could be filled with data using the FixedContentEditor.
 
->important When saving a document that is digitally signed, the stream used to export the document must support reading.
+>important When exporting a digitally signed document a stream that allows both reading and writing should be passed otherwise an exception is thrown: NotSupportedException: 'Stream does not support reading.'
 
 
 **Example 3** shows the full code for simple signing of a document.
@@ -101,10 +101,10 @@ In addition, to create a signature, which has a visual representation, you must 
 	widget.RecalculateContent();
 	widget.AppearanceCharacteristics.Background = new Telerik.Windows.Documents.Fixed.Model.ColorSpaces.RgbColor(255, 0, 0);
 	
-	using (Stream stream = File.OpenWrite("signed.pdf"))
-	{
-	    new PdfFormatProvider().Export(document, stream);
-	}
+	using (Stream output = new FileStream("signed.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite))
+    {
+        new PdfFormatProvider().Export(document, output);
+    }
 {{endregion}}
 
 
