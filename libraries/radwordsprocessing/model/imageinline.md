@@ -38,6 +38,10 @@ __Example 1__ demonstrates how you can create an ImageInline and add it to a [Pa
 
 {{region cs-radwordsprocessing-model-imageinline_0}}
 	ImageInline imageInline = new ImageInline(document);
+
+	byte[] data = File.ReadAllBytes("logo.png");
+	imageInline.Image.ImageSource = new ImageSource(data, "png");
+
 	paragraph.Inlines.Add(imageInline);
 {{endregion}}
 
@@ -53,6 +57,10 @@ You can add an image at a specific index in the __Inlines__ collection of a para
 
 {{region cs-radwordsprocessing-model-imageinline_1}}
 	ImageInline imageInline = new ImageInline(document);
+
+	byte[] data = File.ReadAllBytes("logo.png");
+	imageInline.Image.ImageSource = new ImageSource(data, "png");
+
 	paragraph.Inlines.Insert(0, imageInline);
 {{endregion}}
 
