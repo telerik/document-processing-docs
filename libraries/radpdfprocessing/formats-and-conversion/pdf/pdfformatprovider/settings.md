@@ -126,17 +126,16 @@ This property specifies three types of user access permissions: **PrintingPermis
     * __Copying__: Specify copying is allowed.
     * __TextAccess__: Specify that text access for screen reader devices for copying is allowed.
     * __NumberingFieldsPrecisionLevel__: Represents precision level when updating numbering fields. When the Normal option is selected the fields are updated once, not taking into account if their new values would have shifted the already measured layout. In such cases, the results could be outdated. This is the MS Word-like behavior. If you need more accurate results, use NumberingFieldsPrecisionLevel.High where the fields are updated until their values become more accurate. This precision level is more accurate than NumberingFieldsPrecisionLevel.Normal but requires more resources.
+ 
+__Example 3__ shows how you can create a __PdfExportSettings__ object with settings that specify an OwnerPassword and UserAccessPermissions.
 
 
-__Example 2__ shows how you can create a __PdfExportSettings__ object with settings that specify an OwnerPassword and UserAccessPermissions.
-
-
-#### __[C#] Example 2: Export settings__
+#### __[C#] Example 3: Export settings__
 
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
 
 	PdfFormatProvider provider = new PdfFormatProvider();
-	PdfExportSettings settings = new PdfExportSettings();
+	PdfExportSettings settings = new PdfExportSettings(); 
 	settings.IsEncrypted = true;
 	settings.OwnerPassword = "0wn3rP4ssw0rd";
 	// The following permissions are exported only if the settings.IsEncrypted property is set to true
@@ -158,6 +157,31 @@ The **ImageQuality** property specifies the quality with which images are export
 
 >note **.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to allow the library to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the of **FixedExtensibilityManager**. For more information check the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) help article.
 
+### __ImageCompression__
+
+ Sets the desired compression for the images when exporting. You can set one of the following values: 
+ 
+* ImageFilterTypes.Default
+* ImageFilterTypes.None 
+* ImageFilterTypes.FlateDecode
+* ImageFilterTypes.DCTDecode 	
+
+__Example 4__ shows how you can create a __PdfExportSettings__ object with settings for the image properties.
+
+#### __[C#] Example 4: Image settings__
+
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_2}}
+
+	PdfFormatProvider provider = new PdfFormatProvider();
+	PdfExportSettings settings = new PdfExportSettings();
+	settings.ImageCompression = new ImageFilterTypes[] { ImageFilterTypes.FlateDecode };
+	settings.ImageQuality = ImageQuality.Medium;
+
+provider.ExportSettings = settings;
+
+
+{{endregion}}
+
 ### __ComplianceLevel__
 
 Specifies the PDF/A compliance level. It can have one of the following values: 
@@ -172,15 +196,14 @@ Specifies the PDF/A compliance level. It can have one of the following values:
 The default value is __None__. For more information on PDF/A compliance, check the [PDF/A Compliance article]({%slug radpdfprocessing-howto-comply-with-pdfa-standard%}).
 
 
-__Example 3__ shows how you can create a __PdfExportSettings__ object and assign it to a PdfFormatProvider.
+__Example 5__ shows how you can create a __PdfExportSettings__ object and assign it to a PdfFormatProvider.
         
 
-#### __[C#] Example 3: Export settings__
+#### __[C#] Example 5: Export settings__
 
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
 	PdfFormatProvider provider = new PdfFormatProvider();
-	PdfExportSettings settings = new PdfExportSettings();
-	settings.ImageQuality = ImageQuality.Medium;
+	PdfExportSettings settings = new PdfExportSettings(); 
 	settings.ComplianceLevel = PdfComplianceLevel.PdfA2B;
 	provider.ExportSettings = settings;
 
