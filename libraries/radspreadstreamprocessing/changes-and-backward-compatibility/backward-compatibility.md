@@ -13,6 +13,16 @@ position: 1
 
 This article lists the breaking changes and how they can be fixed when upgrading from a specific version of the controls to the next one.
 
+## What's Different in 2023 R1 SP1
+
+### Changed
+
+There are separate properties for the formula and the value in the ICellImporter.
+
+### What to do now
+
+Use each property depending on your desired result. 
+
 ## What's Different in 2016 R3  
 
 
