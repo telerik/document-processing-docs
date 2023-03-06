@@ -61,6 +61,8 @@ To read the data from a file, you should parse the desired elements in a sequenc
 
 Through the importer objects, you can access the properties of the different elements.
 
+> Since R1 2023 SP1 there are separate properties for the formula and the value in the ICellImporter. 
+
 ## See Also
 
 * [Getting Started]({%slug radspreadstreamprocessing-getting-started%})
