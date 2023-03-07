@@ -164,7 +164,6 @@ The **ImageQuality** property specifies the quality with which images are export
 * ImageFilterTypes.Default
 * ImageFilterTypes.None 
 * ImageFilterTypes.FlateDecode
-* ImageFilterTypes.DCTDecode 	
 
 __Example 4__ shows how you can create a __PdfExportSettings__ object with settings for the image properties.
 
