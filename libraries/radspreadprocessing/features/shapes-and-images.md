@@ -134,7 +134,7 @@ Insert the image into the collection of shapes of the worksheet.  Note that the 
 #### __[C#] Example 3: Add image to worksheet__
 
 {{region cs-radspreadprocessing-features-shapes-and-images_02}}
-	worksheet.Shapes.Add(image);
+	worksheet.Images.Add(image);
 {{endregion}}
 
 
@@ -150,7 +150,7 @@ __Example 4__ demonstrates how you can remove the image added in __Example 3__.
 #### __[C#] Example 4: Delete shape__
 
 {{region cs-radspreadprocessing-features-shapes-and-images_03}}
-	worksheet.Shapes.Remove(image);
+	worksheet.Images.Remove(image);
 {{endregion}}
 
 

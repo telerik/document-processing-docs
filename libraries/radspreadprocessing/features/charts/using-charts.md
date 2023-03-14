@@ -154,7 +154,7 @@ The chart can then be used to replace the chart in an existing **FloatingChartSh
 
 	chartShape.Chart = chart;
 	
-	worksheet.Shapes.Add(chartShape);
+	worksheet.Charts.Add(chartShape);
 {{endregion}}
 
 >noteFor more on Series, the [Series]({%slug radspreadprocessing-features-charts-series%}) help topic. Refer to [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}) for description of the axes objects of the chart.
@@ -176,7 +176,7 @@ You can access the Charts collection of the Shape collection of the Worksheet in
 
 {{region radspreadprocessing-features-charts-using-charts_4}}
 
-	foreach (FloatingChartShape chartShape in worksheet.Shapes.Charts)
+	foreach (FloatingChartShape chartShape in worksheet.Charts)
 	{
 	    DocumentChart chart = chartShape.Chart;
 	    SeriesGroup group = chart.SeriesGroups.First();
