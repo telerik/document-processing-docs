@@ -44,6 +44,8 @@ The editor maintains an internal position inside the document. This position poi
 
 * **MoveToParagraphStart(Paragraph paragraph)**
 
+* **MoveToParagraphEnd(Paragraph paragraph)**
+
 * **MoveToTableEnd(Table table)**
 
 
