@@ -8,7 +8,7 @@ published: True
 position: 4
 ---
 
-# Culture Spescific Predefined Formats 
+# Culture Specific Predefined Formats 
 
 
 Starting with R3 2021, __SpreadStreamProcessing__ exposes the __BuiltInNumberFormats__ static class. This class contains several methods that allow you to get a set of predefined formats. These formats are culture-specific. This means that they depend on the current culture of the operating system. And for example, if you set a currency format you will get the currency symbol for the current culture. Currently, the following methods are exposed:
