@@ -19,7 +19,7 @@ res_type: kb
 </thead>
 <tbody>
 	<tr>
-		<td>2020.2.513</td>
+		<td>2023.1.315</td>
 		<td>RadPdfProcessing</td>
 		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
@@ -38,18 +38,19 @@ The following code snippets demonstrates how to create a custom implementation o
 
 {{region kb-create-custom-jpeg-image-converter1}}
 
-	internal class CustomJpegImageConverter : JpegImageConverterBase
+	internal class JpegImageConverter : JpegImageConverterBase
     {
         public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
         {
-            string[] imageSharpImageFormats = new string[] { "jpeg", "bmp", "png", "gif" };
-            string imageFormat;
-
-            if (this.TryGetImageFormat(imageData, out imageFormat) && imageSharpImageFormats.Contains(imageFormat.ToLower()))
+            try
             {
-                using (Image imageSharp = Image.Load(imageData))
+                IImageFormat imageFormat;
+                using (ImageSharp image = ImageSharp.Load(imageData, out imageFormat))
                 {
-                    imageSharp.Mutate(x => x.BackgroundColor(Color.White));
+                    if (imageFormat.GetType() == typeof(PngFormat))
+                    {
+                        image.Mutate(x => x.BackgroundColor(Color.White));
+                    }
 
                     JpegEncoder options = new JpegEncoder
                     {
@@ -58,7 +59,7 @@ The following code snippets demonstrates how to create a custom implementation o
 
                     using (MemoryStream ms = new MemoryStream())
                     {
-                        imageSharp.SaveAsJpeg(ms, options);
+                        image.SaveAsJpeg(ms, options);
 
                         jpegImageData = ms.ToArray();
                     }
@@ -66,9 +67,18 @@ The following code snippets demonstrates how to create a custom implementation o
 
                 return true;
             }
-
-            jpegImageData = null;
-            return false;
+            catch (Exception ex)
+            {
+                if (ex is UnknownImageFormatException || ex is ImageProcessingException)
+                {
+                    jpegImageData = null;
+                    return false;
+                }
+                else
+                {
+                    throw ex;
+                }
+            }
         }
     }
  
