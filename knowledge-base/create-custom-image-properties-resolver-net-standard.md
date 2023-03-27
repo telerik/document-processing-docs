@@ -39,14 +39,14 @@ The following code snippets demonstrates how to create a custom implementation o
 {{region kb-create-custom-image-properties-resolver1}}
 public class ImagePropertiesResolver : ImagePropertiesResolverBase
 {
-    public override TelerikSize GetImageSize(byte[] imageData)
+    public override Telerik.Documents.Primitives.Size GetImageSize(byte[] imageData)
     {
-        TelerikSize size = TelerikSize.Empty;
+        var size = Telerik.Documents.Primitives.Size.Empty;
         try
         {
             using (ImageSharp image = ImageSharp.Load(imageData))
             {
-                size = new TelerikSize(image.Width, image.Height);
+                size = new Telerik.Documents.Primitives.Size(image.Width, image.Height);
             }
         }
         catch (UnknownImageFormatException ex)
@@ -58,14 +58,14 @@ public class ImagePropertiesResolver : ImagePropertiesResolverBase
         return size;
     }
 
-    public override bool TryGetRawImageData(byte[] imageData, out byte[] rawRgbData, out byte[] rawAlpha, out TelerikSize size)
+    public override bool TryGetRawImageData(byte[] imageData, out byte[] rawRgbData, out byte[] rawAlpha, out Telerik.Documents.Primitives.Size size)
     {
         try
         {
             IImageFormat imageFormat;
             using (ImageSharp image = ImageSharp.Load(imageData, out imageFormat))
             {
-                size = new TelerikSize(image.Width, image.Height);
+                size = new Telerik.Documents.Primitives.Size(image.Width, image.Height);
 
                 IImageDecoder decoder = null;
                 Dictionary<Type, Action> decoderSwitch = new Dictionary<Type, Action>
@@ -123,7 +123,7 @@ public class ImagePropertiesResolver : ImagePropertiesResolverBase
             {
                 rawRgbData = null;
                 rawAlpha = null;
-                size = new TelerikSize();
+                size = new Telerik.Documents.Primitives.Size();
 
                 return false;
             }
