@@ -82,7 +82,7 @@ In order to modify the way content is exported, you can set the __ExportSettings
         
 ### __ShouldEmbedFonts__
 
-This property controls if the fonts will be embedded in the file. The default value is *true* because by the PDF Standard the fonts should be embedded in the file. This means that by default the fonts are added which allows proper viewing on any device. If the the fonts are not embedded and the file is viewed on a device that does not have the used fronts the font might be substituted. 
+This property controls if the fonts will be embedded in the file. The default value is *true* because by the PDF Standard the fonts should be embedded in the file. This means that by default the fonts are added which allows proper viewing on any device. If the fonts are not embedded and the file is viewed on a device that does not have the used fronts the font might be substituted. 
 
 ### __IsEncrypted__
 
