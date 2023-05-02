@@ -32,7 +32,7 @@ This article describes how to identify the actual document type when the filenam
 
 ## Solution
 
-The following example demonstrates how to read two documents with ".doc" filename extensions but actually different document types. Using the (StringBuilder)[https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-6.0] class we are creating the document signature (header) string, which later to compare with predefined values.
+The following example demonstrates how to read two documents with ".doc" filename extensions but actually different document types. Using the [`StringBuilder`](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-6.0) class we are creating the document signature (header) string, which later to compare with predefined values.
 Once having the right document type we can determine which format provider to use to import the document.
 
 #### __[C#] Example__
