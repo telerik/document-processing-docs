@@ -30,6 +30,9 @@ navigation:
     for-more-help:
         title: For More Help
         position: 10
+    troubleshooting:
+        title: Troubleshooting
+        position: 99 
     "*overview":
         title: Overview
         position: 1
@@ -296,6 +299,11 @@ defaults:
         path: "libraries"
     values:
         description: "Check our document management article about {{page.title}}."
+-
+    scope:
+        path: "troubleshooting"
+    values:
+        description: "Find solutions to common issues that you may observe when working with the Telerik NuGet server and the NuGet packages it provides"
 -
 
     scope:
