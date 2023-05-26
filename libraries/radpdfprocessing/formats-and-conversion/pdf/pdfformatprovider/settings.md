@@ -178,8 +178,14 @@ __Example 4__ shows how you can create a __PdfExportSettings__ object with setti
 
 provider.ExportSettings = settings;
 
-
 {{endregion}}
+
+### __StreamCompression__
+
+ Gets or sets the content stream compression type. Possible Values are: 
+ * **None**: The content streams won't be encoded.
+ * **FlateDecode**:  Compresses data using the zlib/deflate compression method.
+
 
 ### __ComplianceLevel__
 

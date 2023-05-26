@@ -95,6 +95,10 @@ Through the **Settings property** of PdfStreamWriter you can control the way the
 
 * **WriteAnnotations**: A boolean property indicating whether the annotations should be included in the exported document.
 
+* **StreamCompression**: Gets or sets the content stream compression type. Possible Values are: 
+   - **None**: The content streams won't be encoded.
+   - **FlateDecode**:  Compresses data using the zlib/deflate compression method.
+
 > The XAML SDK repository on GitHub contains examples showing the capabilities of PdfStreamWriter: 
 > 
 > - The [PdfStreamWriterPerformance](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/PdfStreamWriterPerformance) sample shows the performance you can achieve using PdfStreamWriter
