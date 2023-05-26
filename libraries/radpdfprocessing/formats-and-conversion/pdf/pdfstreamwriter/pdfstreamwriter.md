@@ -93,6 +93,12 @@ Through the **Settings property** of PdfStreamWriter you can control the way the
 
 * **ImageQuality**: This property is of type [ImageQuality]({%slug radpdfprocessing-concepts-imagequality%}) and gets or sets the default image quality when exporting images to PDF. The default value is *High*. The value of this property is overridden when specifying the ImageQuality in ImageSource constructor or when creating [ImageSource]({%slug radpdfprocessing-model-imagesource%}) from EncodedImageData. The quality of the images reflects the size of the PDF file. The higher the quality, the bigger the document size is.
 
+* **ImageCompression**: Gets or sets the image compression type. The possible values are:
+	- **None**: No compression will be used. 
+	- **Default**: The image compression will be preserved as it is in the original document.
+	- **FlateDecode**: The images will be encoded with a FlateDecode filter.
+	- **DCTDecode**: Compresses data using a DCT (discrete cosine transform) technique based on the JPEG standard.
+
 * **WriteAnnotations**: A boolean property indicating whether the annotations should be included in the exported document.
 
 > The XAML SDK repository on GitHub contains examples showing the capabilities of PdfStreamWriter: 
