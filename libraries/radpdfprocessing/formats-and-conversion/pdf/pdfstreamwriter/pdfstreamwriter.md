@@ -97,7 +97,7 @@ Through the **Settings property** of PdfStreamWriter you can control the way the
 
 * **StreamCompression**: Gets or sets the content stream compression type. Possible Values are: 
    - **None**: The content streams won't be encoded.
-   - **FlateDecode**:  Compresses data using the zlib/deflate compression method.
+   - **FlateDecode**: Compresses data using the zlib/deflate compression method.
 
 > The XAML SDK repository on GitHub contains examples showing the capabilities of PdfStreamWriter: 
 > 

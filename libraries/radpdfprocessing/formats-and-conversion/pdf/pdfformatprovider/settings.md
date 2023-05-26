@@ -184,7 +184,7 @@ provider.ExportSettings = settings;
 
  Gets or sets the content stream compression type. Possible Values are: 
  * **None**: The content streams won't be encoded.
- * **FlateDecode**:  Compresses data using the zlib/deflate compression method.
+ * **FlateDecode**: Compresses data using the zlib/deflate compression method.
 
 
 ### __ComplianceLevel__
