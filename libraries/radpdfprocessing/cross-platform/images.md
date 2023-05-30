@@ -36,7 +36,7 @@ PdfProcessing comes with a default implementation for such resolver called `Imag
 </thead>
 <tbody>
 	<tr>
-		<td><b>Telerik.Documents.ImageUtils.dll</b> assembly
+		<td><b>Telerik.Documents.ImageUtils</b> assembly
         <br><sub><i>This assembly is not available in UI for Xamarin.</i></sub></td>
 	</tr>
     <tr>
@@ -87,7 +87,7 @@ The **Telerik.Documents.ImageUtils** assembly provides a default implementation 
 </thead>
 <tbody>
 	<tr>
-		<td><b>Telerik.Documents.ImageUtils.dll</b> assembly
+		<td><b>Telerik.Documents.ImageUtils</b> assembly
         <br><sub><i>This assembly is not available in UI for Xamarin.</i></sub></td>
 	</tr>
     <tr>
