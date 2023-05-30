@@ -26,15 +26,31 @@ This property enables you to set a resolver implementation that can parse the im
 
 ### Default Implementation
 
-PdfProcessing comes with a default implementation for such resolver called `ImagePropertiesResolver`. The built-in logic depends on the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/) library to parse the image data. To use the default functionality, you should add a reference to the **Telerik.Documents.ImageUtils.dll** assembly and set an instance of the ImagePropertiesResolver class it to the `FixedExtensibilityManager.ImagePropertiesResolver` property.
+PdfProcessing comes with a default implementation for such resolver called `ImagePropertiesResolver`. The built-in logic depends on the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/) library to parse the image data. To use the default functionality, you should set an instance of the ImagePropertiesResolver class to the `FixedExtensibilityManager.ImagePropertiesResolver` property.
+
+<table>
+<thead>
+	<tr>
+		<th>Requirements</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><b>Telerik.Documents.ImageUtils.dll</b> assembly
+        <br><sub><i>This assembly is not available in UI for Xamarin.</i></sub></td>
+	</tr>
+    <tr>
+		<td><b>SkiaSharp.NativeAssets.*</b> assembly
+        <br><sub><i>May differ according to the used platform.</i></sub></td>
+	</tr>
+    <tr>
+		<td><b>SkiaSharp.Views.Blazor</b> and <b>wasm-tools</b>
+        <br><sub><i>For Blazor Web Assembly.</i></sub></td>
+	</tr>
+</tbody> 
+</table>
 
 >important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
-
->important The **SkiaSharp.NativeAssets.*** Nuget package is required as well. This package may differ according to the used platform. There are version for Windows, MacOs, Linux, WebAssembly, Android, iOS, and others.
-
->important Additional requirements when working with **Blazor Web Assembly**: reference **SkiaSharp.Views.Blazor** nuget and install **wasm-tools**.
-
->important Telerik.Documents.ImageUtils.dll is not available for Xamarin. If targeting this platform, you will need to implement a custom resolver.
 
 #### **[C#] Example 1: Set the default implementation of the ImagePropertiesResolver class**
     {{region cs-radpdfprocessing-cross-platform-images_0}}
@@ -63,13 +79,31 @@ The `JpegImageConverter` property uses an implementation of the `JpegImageConver
 
 The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting a document. The default implementation depends on the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/) library to convert images to Jpeg format.
 
+<table>
+<thead>
+	<tr>
+		<th>Requirements</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><b>Telerik.Documents.ImageUtils.dll</b> assembly
+        <br><sub><i>This assembly is not available in UI for Xamarin.</i></sub></td>
+	</tr>
+    <tr>
+		<td><b>SkiaSharp.NativeAssets.*</b> assembly
+        <br><sub><i>May differ according to the used platform.</i></sub></td>
+	</tr>
+    <tr>
+		<td><b>SkiaSharp.Views.Blazor</b> and <b>wasm-tools</b>
+        <br><sub><i>For Blazor Web Assembly.</i></sub></td>
+	</tr>
+</tbody> 
+</table>
+
 >important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
->important The **SkiaSharp.NativeAssets.*** Nuget package is required as well. This package may differ according to the used platform. There are version for Windows, MacOs, Linux, WebAssembly, Android, iOS, and others.
-
->important Additional requirements when working with **Blazor Web Assembly**: reference **SkiaSharp.Views.Blazor** nuget and install **wasm-tools**.
-
->important Telerik.Documents.ImageUtils.dll is not available for Xamarin. A custom converter can be implemented by inheriting **Telerik.Windows.Documents.Extensibility.JpegImageConverterBase**.
+>important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
 #### **[C#] Example 2: Set the default implementation of the JpegImageConverter class**
     {{region cs-radpdfprocessing-cross-platform_3}}
