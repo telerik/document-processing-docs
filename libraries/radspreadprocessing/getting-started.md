@@ -105,9 +105,7 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 </tbody>
 </table>
 
-<sub> 
-	\* _Needed when exporting to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp**. In order to use this assembly, you will need to add а reference to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/). After R1 2022 SP1 the minimum **ImageSharp** required version is **v.2.0.0**.
-</sub>
+>note Needed when exporting to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. The **Telerik.Documents.ImageUtils.dll** assembly depends on **SkiaSharp**. In order to use this assembly, you will need to add а reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
 ## Creating a Workbook
 

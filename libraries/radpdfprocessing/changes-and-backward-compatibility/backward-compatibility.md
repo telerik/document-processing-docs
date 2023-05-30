@@ -13,6 +13,15 @@ position: 1
 
 This article lists the breaking changes and how they can be fixed when upgrading from a specific version of the controls to another.
 
+## What's Different in 2023 R2  
+
+
+### Changed
+
+The default implementation of ImageUtils assembly is now using SkiaSharp instead of ImageSharp.
+
+Before 2023 R2 the default implementation of ImageUtils required the ImageSharp library with the minimum required version of **v.2.0.0**.
+
 ## What's Different in 2016 R3  
 
 
