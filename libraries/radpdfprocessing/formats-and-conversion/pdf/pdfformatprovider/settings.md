@@ -161,9 +161,10 @@ The **ImageQuality** property specifies the quality with which images are export
 
  Sets the desired compression for the images when exporting. You can set one of the following values: 
  
-* ImageFilterTypes.Default
-* ImageFilterTypes.None 
-* ImageFilterTypes.FlateDecode
+* **ImageFilterTypes.Default:** The image compression will be preserved as it is in the original document.
+* **ImageFilterTypes.None:** The images won't be encoded.
+* **ImageFilterTypes.FlateDecode:** The images will be encoded with a FlateDecode filter. Compresses data using the zlib/deflate compression method.
+* **ImageFilterTypes.DCTDecode:** The images will be encoded with a DCTDecode filter. Compresses data using a DCT (discrete cosine transform) technique based on the JPEG standard.
 
 __Example 4__ shows how you can create a __PdfExportSettings__ object with settings for the image properties.
 
