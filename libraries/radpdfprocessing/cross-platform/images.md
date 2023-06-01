@@ -24,7 +24,7 @@ To reduce file size, PDF supports only a number of compression filters like Jpeg
 This property enables you to set a resolver implementation that can parse the image raw data to separate its colors and alpha channel. While this implementation can be used for any type of supported image, it is required when working with PNG images so their transparency can be preserved in the generated PDF document. 
 
 
-### Default Implementation for IPR
+### Default Implementation for ImagePropertiesResolver
 
 PdfProcessing comes with a default implementation for such resolver called `ImagePropertiesResolver`. The built-in logic depends on the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/) library to parse the image data. To use the default functionality, you should set an instance of the ImagePropertiesResolver class to the `FixedExtensibilityManager.ImagePropertiesResolver` property.
 
@@ -60,7 +60,7 @@ PdfProcessing comes with a default implementation for such resolver called `Imag
     {{endregion}}
 
 
-### Custom Implementation
+### Custom Implementation for ImagePropertiesResolver
 
 In case you have specific requirements and the default ImagePropertiesResolver doesn't fit them, you can implement custom logic that can handle them. To achieve that, you should:
 1. inherit the `Telerik.Windows.Documents.Core.Imaging.ImagePropertiesResolverBase` class
@@ -75,7 +75,7 @@ The `JpegImageConverter` property uses an implementation of the `JpegImageConver
 > If you have both the `ImagePropertiesResolver` and `JpegImageConverter` properties set, the `ImagePropertiesResolver` is prioritized and used to parse the image.
 
 
-### Default Implementation for JIC
+### Default Implementation for JpegImageConverter
 
 The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting a document. The default implementation depends on the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/) library to convert images to Jpeg format.
 
@@ -110,7 +110,7 @@ The **Telerik.Documents.ImageUtils** assembly provides a default implementation 
        Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = defaultJpegImageConverter;
     {{endregion}}
 
-### Custom Implementation
+### Custom Implementation for JpegImageConverter
 
 The following example depends on the [Magick.NET](https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/) library to convert images to Jpeg format.
     
