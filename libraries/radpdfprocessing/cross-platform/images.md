@@ -24,7 +24,7 @@ To reduce file size, PDF supports only a number of compression filters like Jpeg
 This property enables you to set a resolver implementation that can parse the image raw data to separate its colors and alpha channel. While this implementation can be used for any type of supported image, it is required when working with PNG images so their transparency can be preserved in the generated PDF document. 
 
 
-### Default Implementation
+### Default Implementation for IPR
 
 PdfProcessing comes with a default implementation for such resolver called `ImagePropertiesResolver`. The built-in logic depends on the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/) library to parse the image data. To use the default functionality, you should set an instance of the ImagePropertiesResolver class to the `FixedExtensibilityManager.ImagePropertiesResolver` property.
 
@@ -75,7 +75,7 @@ The `JpegImageConverter` property uses an implementation of the `JpegImageConver
 > If you have both the `ImagePropertiesResolver` and `JpegImageConverter` properties set, the `ImagePropertiesResolver` is prioritized and used to parse the image.
 
 
-### Default Implementation
+### Default Implementation for JIC
 
 The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting a document. The default implementation depends on the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/) library to convert images to Jpeg format.
 
@@ -100,8 +100,6 @@ The **Telerik.Documents.ImageUtils** assembly provides a default implementation 
 	</tr>
 </tbody> 
 </table>
-
->important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
 >important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
