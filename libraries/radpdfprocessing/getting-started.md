@@ -89,9 +89,9 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 </tbody>
 </table>
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp**. In order to use this assembly, you will need to add a reference to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/). After R1 2022 SP1 the minimum **ImageSharp** required version is **v.2.0.0**.
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **SkiaSharp**. In order to use this assembly, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
->note The **elerik.Documents.Fixed.FormatProviders.Image.Skia** assembly depends on **SkiaSharp**. In order to use this assembly, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). The **SkiaSharp.NativeAssets.*** Nuget package is required as well. This package may differ according to the used platform. There are version for Windows, MacOs, Linux, WebAssembly, Android, iOS, and others.
+>note The **Telerik.Documents.Fixed.FormatProviders.Image.Skia** assembly depends on **SkiaSharp**. In order to use this assembly, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). The **SkiaSharp.NativeAssets.*** Nuget package is required as well. This package may differ according to the used platform. There are version for Windows, MacOs, Linux, WebAssembly, Android, iOS, and others.
  
 
 ## Creating a Document

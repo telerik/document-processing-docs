@@ -60,7 +60,7 @@ In order to use the model of the **RadWordsProcessing** library in your cross-pl
 </tbody>
 </table>
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **ImageSharp**. In order to use this assembly, you will need to add a reference to [ImageSharp](https://www.nuget.org/packages/SixLabors.ImageSharp/). After R1 2022 SP1 the minimum **ImageSharp** required version is **v.2.0.0**.
+>note The **Telerik.Documents.ImageUtils.dll** assembly depends on **SkiaSharp**. In order to use this assembly, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
 > Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
  
