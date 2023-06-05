@@ -75,7 +75,7 @@ __Example 1__ demonstrates how you can insert a TOC field.
 
 This makes a list of all TC fields with the 'a' identifier.
 
-In order to update the **PageRef** fields within the TOC field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%})
+>note In order to update the **PageRef** fields within the TOC field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%})
 
 ## See Also 
 
