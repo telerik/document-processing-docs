@@ -9,7 +9,7 @@ position: 1
 
 # Using SkiaImageFormatProvider
 
-Since R3 2022 the __RadPdfProcessing__ library support converting entire documents to images. This is achieved by using the third party library [SkiaSharp](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/). You can convert to various formats, using synchronous or asynchronous export. 
+Since R3 2022 the __RadPdfProcessing__ library support converting entire documents to images. This is achieved by using the third-party library [SkiaSharp](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/). You can convert to various formats, using synchronous or asynchronous export. 
 
 >important This feature is only available in the NET Standard version of the suite. For other versions check the following article: [ThumbnailFactory](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
 >
@@ -20,7 +20,7 @@ To enable the image exporting functionality in your application, you should add 
 
 * The __Telerik.Documents.Fixed.FormatProviders.Image.Skia__ assembly.
 * The __SkiaSharp__ Nuget package. 
-* The __SkiaSharp.NativeAssets.*__ Nuget package. This package may differ according to the used platform. There are version for Windows, MacOs, Linux, WebAssembly, Android, iOS, and others.
+* The __SkiaSharp.NativeAssets.*__ Nuget package. This package may differ according to the used platform. There are versions for Windows, macOS, Linux, WebAssembly, Android, iOS, and others.
 
 ## Using the SkiaImageFormatProvider
 
@@ -74,10 +74,10 @@ The __ExportAsync__ method allows you to perform the conversion asynchronously.
 
 The __SkiaImageFormatProvider__ exposes the following settings:
 
-* __ImageFormat:__ Allows you to set the image format, the suported values are __JPEG__, __PNG__, and __Webpp__.
-* __ScaleFactor:__ Allows you to set the scale factor. The minimum values is 0.1.
+* __ImageFormat:__ Allows you to set the image format, the supported values are __JPEG__, __PNG__, and __Webp__.
+* __ScaleFactor:__ Allows you to set the scale factor. The minimum value is 0.1.
 * __Quality:__ The value range is 1 (lowest quality) to 100 (highest quality) inclusive. The default value is 75.
-* __IsAntialiased:__ Gets or sets a value indicating whether the image will be antialiased. Default value is *true*. 
+* __IsAntialiased:__ Gets or sets a value indicating whether the image will be antialiased. The default value is *true*. 
 
 #### __[C#] Example 3: Set the Settings__
 
