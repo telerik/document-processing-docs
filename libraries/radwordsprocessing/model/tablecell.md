@@ -63,11 +63,11 @@ The __TableCell__ element exposes several properties that allow you to customize
 * __Shading__: Represents the shading applied to the cell. It is a composite object and is read-only. You can obtain the following properties from it:
             
 
-* __BackgroundColor__: Specifies the background color for the shading. *This is a Style property. The value is themable object.*
+    * __BackgroundColor__: Specifies the background color for the shading. *This is a Style property. The value is themable object.*
 
-* __PatternColor__: Specifies the pattern color for the shading. *This is a Style property. The value is themable object.*
+    * __PatternColor__: Specifies the pattern color for the shading. *This is a Style property. The value is themable object.*
 
-* __Pattern__: Specifies the pattern which is used to lay the pattern color over the background color for the shading. *This is a Style property.*
+    * __Pattern__: Specifies the pattern which is used to lay the pattern color over the background color for the shading. *This is a Style property.*
 
 * __Padding__: Specifies the padding of the cell. *This is a Style property.*
 
