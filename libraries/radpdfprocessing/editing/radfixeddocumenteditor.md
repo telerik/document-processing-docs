@@ -214,7 +214,7 @@ The code in __Example 6__ inserts a new run and a line break after it.
 Image inline is a combination of an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) object and its desired size.
                 
 
-### Inserting an Image
+### Inserting Image
 
 You can insert image inline using one of the following methods:
          
