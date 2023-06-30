@@ -25,34 +25,60 @@ The following example demonstrates the approach of iterating the page content an
 
     foreach (RadFixedPage page in pdfDocument.Pages)
     {
-        List<TextFragment> contentToRemove = new List<TextFragment>();
+    	List<TextFragment> contentToRemove = new List<TextFragment>();
     
-        foreach (ContentElementBase contentElement in page.Content.ToList())
-        {
-            // Find a TextFragment exactly matching the $ImagePlaceholder text 
-            TextFragment textFragment = contentElement as TextFragment;
-            if (textFragment != null && textFragment.Text == "$ImagePlaceholder")
-            {
-                // Create and add an image
-                Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource source = new Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource(File.OpenRead("sample.png"));
-                Telerik.Windows.Documents.Fixed.Model.Objects.Image image = page.Content.AddImage(source);
-                
-                // Set the desired size to the image
-                image.Width = 10;
-                image.Height = 10;
+    	for (int i = 0; i < page.Content.Count; i++)
+    	{
+    		ContentElementBase contentElement = page.Content[i];
+    		if (contentElement is TextFragment textFragment)
+    		{
+    			int count = contentToRemove.Sum(f => f.Text.Length);
+       
+                // Find a TextFragment exactly matching or be part of the $ImagePlaceholder text  
+    			if (count == 0 && textToRemove.StartsWith(textFragment.Text))
+    			{
+    				contentToRemove.Add(textFragment);
+    			}
+    			else if (count > 0)
+    			{
+    				string oldValueRemainings = textToRemove.Substring(count);
     
-                // Position the image
-                image.Position = textFragment.Position;
-                image.Position.Translate(0, -textFragment.FontSize);
+    				if (oldValueRemainings.StartsWith(textFragment.Text))
+    				{
+    					contentToRemove.Add(textFragment);
+    				}
+    				else
+    				{
+    					contentToRemove.Clear();
+    					return;
+    				}
+    			}
     
-                // Indicate the TextFragment to be removed 
-                contentToRemove.Add(textFragment);
-            }
-        }
+    			count = contentToRemove.Sum(f => f.Text.Length);
     
-        foreach (TextFragment contentElement in contentToRemove)
-        {
-            page.Content.Remove(contentElement);
-        }
+    			if (count == textToRemove.Length)
+    			{
+    				// Create and add an image 
+    				ImageSource source = new ImageSource(File.OpenRead(imagePath));
+    				Image image = page.Content.AddImage(source);
+    
+    				// Set the desired size to the image 
+    				image.Width = 300;
+    				image.Height = 50;
+    				TextFragment firstFragment = contentToRemove[0];
+    
+    				// Position the image 
+    				image.Position = firstFragment.Position;
+    				image.Position.Translate(0, -firstFragment.FontSize);
+    
+    				// Indicate the TextFragment to be removed  
+    				for (int j = 0; j < contentToRemove.Count; j++)
+    				{
+    					TextFragment fragment = contentToRemove[j];
+    					page.Content.Remove(fragment);
+    				}
+    			}
+    		}
+    	}
     }
 {{endregion}}
