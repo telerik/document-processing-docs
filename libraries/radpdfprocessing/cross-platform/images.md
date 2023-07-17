@@ -21,7 +21,7 @@ To reduce file size, PDF supports only a number of compression filters like Jpeg
 
 ## ImagePropertiesResolver 
 
-This property enables you to set a resolver implementation that can parse the image raw data to separate its colors and alpha channel. While this implementation can be used for any type of supported image, it is required when working with PNG images so their transparency can be preserved in the generated PDF document. 
+This property enables you to set a resolver implementation that can parse the image raw data to separate its colors and alpha channel. While this implementation can be used for any type of supported image, it is required when working with PNG images so their transparency can be preserved in the generated PDF document. The resolver gets the image bytes as they are and does not take into consideration the [Image Quality](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#imagequality) set through the [Export Settings](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#export-settings).
 
 ### Default Implementation for ImagePropertiesResolver
 
