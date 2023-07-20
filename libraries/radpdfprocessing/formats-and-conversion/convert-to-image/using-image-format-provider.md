@@ -14,13 +14,15 @@ Since R3 2022 the __RadPdfProcessing__ library support converting entire documen
 >important This feature is only available in the NET Standard version of the suite. For other versions check the following article: [ThumbnailFactory](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
 >
 
-## Required packages
+## Requirements
 
-To enable the image exporting functionality in your application, you should add references to:
+To enable the image exporting functionality in your application, you must add references to the following packages:
 
 * The __Telerik.Documents.Fixed.FormatProviders.Image.Skia__ assembly.
 * The __SkiaSharp__ Nuget package. 
 * The __SkiaSharp.NativeAssets.*__ Nuget package. This package may differ according to the used platform. There are versions for Windows, macOS, Linux, WebAssembly, Android, iOS, and others.
+
+A [FontsProvider](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/cross-platform/fonts#setting-and-exporting-fonts) implementation is required to read the document fonts and draw the image.
 
 ## Using the SkiaImageFormatProvider
 
