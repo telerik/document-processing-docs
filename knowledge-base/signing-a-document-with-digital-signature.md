@@ -74,10 +74,13 @@ In order to sign a **PDF** file with the [PdfProcessing]({%slug radpdfprocessing
 	RadFixedPage page = document.Pages.AddPage();
 	page.Annotations.Add(widget);
 	document.AcroForm.FormFields.Add(signatureField);
+
+	// Add Signature flags
+	document.AcroForm.SignatureFlags = SignatureFlags.AppendOnly;
  
 {{endregion}}
 
-However, there are other approaches provided by the **.Net Framework API** that allow you to get an X509Certificate2 class instance. The following code snippet demonstrates a possible approach for getting an X509Certificate2 class instance from a external devise (e.g. **USB token** or hardware security module (**HSM**)) using .Net Framework API:
+However, there are other approaches provided by the **.Net Framework API** that allow you to get an X509Certificate2 class instance. The following code snippet demonstrates a possible approach for getting an X509Certificate2 class instance from an external device (e.g. **USB token** or hardware security module (**HSM**)) using .Net Framework API:
 
 #### __C#__
 
