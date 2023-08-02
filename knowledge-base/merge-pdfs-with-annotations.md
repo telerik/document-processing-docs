@@ -15,50 +15,43 @@ res_type: kb
 
 ## Description
  
-This article describes how to merge PDF documents without loss of supported annotations with the help of the [PdfStreamWriter](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfstreamwriter/pdfstreamwriter?_gl=1*13soitb*_ga*MTMwNDAxMDM0LjE2NjkwMTIyMDM.*_ga_9JSNBCSF54*MTY4OTg0MjQ3Ny4yNDcuMS4xNjg5ODQ1NTU1LjQ0LjAuMA..#overview) and [PdfFileSource](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfstreamwriter/pdffilesource?_gl=1*18e46d3*_ga*MTMwNDAxMDM0LjE2NjkwMTIyMDM.*_ga_9JSNBCSF54*MTY4OTg0MjQ3Ny4yNDcuMS4xNjg5ODQ1NTk3LjIuMC4w). 
+This article describes how to merge PDF documents without loss of supported annotations with the help of the [PdfStreamWriter](%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%) and [PdfFileSource](%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%). 
 
 ## Solution
 
-The following approach takes a collection of paths, creates a new RadFixedDocument instance, appends the documents from those paths to the newly created RadFixedDocument and returns it as a result.
+The following approach takes a collection of paths, creates a new [RadFixedDocument](%slug radpdfprocessing-model-radfixeddocument%) instance, appends the documents from those paths to the newly created RadFixedDocument and returns it as a result.
 
 #### __[C#] Merge PDF files
 
 {{region kb-merge-pdf-files-while-preserving-their-annotations_0}}
 
     public static RadFixedDocument MergeDocuments(string[] pathsCollection)
-    {
-        RadFixedDocument result = new RadFixedDocument();
+{
+	RadFixedDocument result = new RadFixedDocument();
 
-        PdfFormatProvider provider = new PdfFormatProvider();
+	using (MemoryStream stream = new MemoryStream())
+	{
+		using (PdfStreamWriter fileWriter = new PdfStreamWriter(stream, leaveStreamOpen: true))
+		{
+			foreach (string path in pathsCollection)
+			{
+				using (PdfFileSource fileSource = new PdfFileSource(new MemoryStream(File.ReadAllBytes(path))))
+				{
+					for (int i = 0; i < fileSource.Pages.Length; i++)
+					{
+						PdfPageSource sourcePage = fileSource.Pages[i];
+						using (PdfPageStreamWriter resultPage = fileWriter.BeginPage(sourcePage.Size))
+						{
+							// set content                     
+							resultPage.WriteContent(sourcePage);
+						}
+					}
+				}
+			}
+		}
+	}
 
-        using (MemoryStream stream = new MemoryStream())
-        {
-            using (PdfStreamWriter fileWriter = new PdfStreamWriter(stream, true))
-            {
-                foreach (var path in pathsCollection)
-                {
-                    using (PdfFileSource fileSource = new PdfFileSource(new MemoryStream(File.ReadAllBytes(path))))
-                    {
-                        PdfPageStreamWriter resultPage = null;
-                        for (int i = 0; i < fileSource.Pages.Length; i++)
-                        {
-                            // set page size
-                            resultPage = fileWriter.BeginPage(new Size(
-                            fileSource.Pages.First().Size.Width,
-                            fileSource.Pages.First().Size.Height),
-                            Rotation.Rotate0);
-                            
-                            // set content                     
-                            PdfPageSource sourcePage = fileSource.Pages[i];
-                            resultPage.WriteContent(sourcePage);
-                            resultPage.Dispose();
-                        }
-                    }
-                }
-            }
-        }
-
-        return result;
-    }
+	return result;
+}
 
 {{endregion}}
