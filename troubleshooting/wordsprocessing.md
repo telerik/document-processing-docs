@@ -20,5 +20,5 @@ You get this error when importing an HTML file containing images, in a Windows S
 
 You can choose one of the following:
 
-* Install .NET 4.8 on the Windows Server.
+* Install **.NET 4.8** on the Windows Server.
 * Subscribe to the [LoadImageFromUri](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/html/settings?_gl=1*5qmunw*_ga*ODA0MjEzMDU2LjE2NjEyNjUxMjc.*_ga_9JSNBCSF54*MTY5MDUyNDk1Ni4yMDYuMS4xNjkwNTI1NzY1LjcuMC4w#loadimagefromuri-and-loadstylesheetfromuri-events) event to load external resources that are not included in the HTML.

@@ -76,7 +76,7 @@ Some functionalities require additional settings:
 
 ### Additional settings required
  When importing HTML with images that are not included in the file and need to be loaded:
- * Make sure .NET 4.8 is installed.
+ * Make sure **.NET 4.8** is installed.
  * Or subscribe to the [LoadImageFromUri](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/html/settings#loadimagefromuri-and-loadstylesheetfromuri-events) event.
 
 ## See Also
