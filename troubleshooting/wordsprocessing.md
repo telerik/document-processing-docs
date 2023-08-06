@@ -14,7 +14,7 @@ This article provides solutions to common issues that you may observe when worki
 
 ## Issue: "NotSupportedException: The requested security protocol is not supported." when importing HTML with images in Windows Server
 
-You get this error when importing an HTML file containing images, in a Windows Server environment that does not have .NET 4.8 installed. The required TLS security protocols are missing and are causing the observed behavior.  
+You get this error when importing an HTML file containing images in a Windows Server environment that does not have .NET 4.8 installed. The required TLS security protocols are missing and are causing the observed behavior.  
 
 ### Solution
 
