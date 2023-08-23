@@ -115,14 +115,14 @@ First you need to define a data source that contains an `IEnumerable` of objects
         var teams = new List<Team>();
         var team1 = new Team();
         team1.TeamName = "Team 1";
-        team1.Players.Add(new Player() { FirsName = "John", LastName = "Baker" });
-        team1.Players.Add(new Player() { FirsName = "Sam ", LastName = "Wayne" });
+        team1.Players.Add(new Player() { FirstName = "John", LastName = "Baker" });
+        team1.Players.Add(new Player() { FirstName = "Sam ", LastName = "Wayne" });
         teams.Add(team1);
 
         var team2 = new Team();
         team2.TeamName = "Team 2";
-        team2.Players.Add(new Player() { FirsName = "Patrick", LastName = "Gibbs" });
-        team2.Players.Add(new Player() { FirsName = "Oscar", LastName = "Stevens" });
+        team2.Players.Add(new Player() { FirstName = "Patrick", LastName = "Gibbs" });
+        team2.Players.Add(new Player() { FirstName = "Oscar", LastName = "Stevens" });
         teams.Add(team2);
     
         return teams;
@@ -141,13 +141,13 @@ First you need to define a data source that contains an `IEnumerable` of objects
     }
     public class Player
     {
-        public string FirsName { get; set; }
+        public string FirstName { get; set; }
         public string LastName { get; set; }
     }
 
 {{endregion}}
 
-Now you need to add the fields using the specific supported names. In this example we are adding the fields to the table and we will use the TableStart/TableEnd tags, but this is not mandatory and you can use a tag of your choosing.
+Now you need to add the fields using the specific supported names. In this example, we are adding the fields to the table and we will use the TableStart/TableEnd tags, but this is not mandatory and you can use a tag of your choosing.
 
 #### __[C#] Example 6: Perform nested mail merge__
 
