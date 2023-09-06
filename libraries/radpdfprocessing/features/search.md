@@ -35,7 +35,6 @@ The **TextSeach** class exposes the following methods which allow you to search 
 
 * **Find(string text, TextSearchOptions options):** Finds the first occurrence of the specified string starting from the beginning of the document. Optionally you can specify a start position or a specific range.
 * **FindPrevious(string text, TextSearchOptions options):** Finds the previous occurrence of the specified text. Optionally you can specify a start position or a specific range.
-* **FindNext(string text, TextSearchOptions options):** Finds the next occurrence of the specified text. Optionally you can specify a start position or a specific range.
 * **FindAll(string text, TextSearchOptions options):** Finds all occurrences of the specified text. Optionally you can specify a start position or a specific range.
 
 ### SearchResult class
