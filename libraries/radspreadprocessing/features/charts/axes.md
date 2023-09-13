@@ -12,7 +12,7 @@ platforms: ajax, mvc, wpf, winforms
 
 ## Axis Object and Their Properties
 
-The axes of the chart are contained in two objects of type **AxisGroup**. The two collections can be accessed by the **PrimaryAxes** and **SecondaryAxes** properties of the **DocumentChart** object. Each of the collections contains two axes, contained in the **CategoryAxis** and **ValueAxis** properties. The **PrimaryAxes** property is populated on creation when the constructor of **FloatingChartShape** or the **AddChart()** methods of the **ShapeCollection** are used  and can be replaced or edited as desired.
+The axes of the chart are contained in two objects of type **AxisGroup**. The two collections can be accessed by the **PrimaryAxes** and **SecondaryAxes** properties of the **DocumentChart** object. Each of the collections contains two axes, contained in the **CategoryAxis** and **ValueAxis** properties. The **PrimaryAxes** property is populated on creation when the constructor of **FloatingChartShape** or the **Add()** method of the **ChartCollection** are used  and can be replaced or edited as desired.
 
 If the **SeriesGroup** object implements the **ISupportAxes** interface, it can indicate whether it is associated with the **Primary** or **Secondary** couple of axes. For example, the bar and line chart groups implement the interface, while the pie group does not. The **ISupportAxes** interface defines one property: **AxisGroupName**, of type **AxisGroupName**. The AxisGroupName enum has two members: **Primary** and **Secondary**. 
 

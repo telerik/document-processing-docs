@@ -76,7 +76,7 @@ To better illustrate how you can change the series of a chart, let's take the sa
 {{region radspreadprocessing-features-charts-working-with-series_0}}
 	
 	// The worksheet contains a chart of type bar.
-	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
+	DocumentChart chart = (worksheet.Charts.First() as FloatingChartShape).Chart;
 	SeriesGroup chartComponent = chart.SeriesGroups.First();
 	SeriesBase firstSeries = chartComponent.Series.First();
 	chartComponent.Series.Remove(firstSeries);
@@ -114,7 +114,7 @@ You can access the **Series** property of the **SeriesGroup** object contained i
 
 {{region radspreadprocessing-features-charts-working-with-series_2}}
 	
-	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
+	DocumentChart chart = (worksheet.Charts.First() as FloatingChartShape).Chart;
 	SeriesGroup seriesGroup = chart.SeriesGroups.First();
 	
 	foreach (CategorySeriesBase series in seriesGroup.Series.Where(s => s is CategorySeriesBase))
@@ -141,7 +141,7 @@ You can modify the properties of the base class for all series - SeriesBase.
 
 {{region radspreadprocessing-features-charts-working-with-series_3}}
 		
-	DocumentChart chart = (worksheet.Shapes.First() as FloatingChartShape).Chart;
+	DocumentChart chart = (worksheet.Charts.First() as FloatingChartShape).Chart;
 	SeriesGroup seriesGroup = chart.SeriesGroups.First();
 	CategorySeriesBase firstSeries = seriesGroup.Series.Where(s => s is CategorySeriesBase).First() as CategorySeriesBase;
 	
@@ -216,7 +216,7 @@ Some series groups (Bar, Line and Area) implement the **ISupportGrouping** inter
 
 {{region radspreadprocessing-features-charts-working-with-series_4}}
 	
-	FloatingChartShape chartShape = worksheet.Shapes.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
+	FloatingChartShape chartShape = worksheet.Charts.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
 	(chartShape.Chart.SeriesGroups.First() as ISupportGrouping).Grouping = SeriesGrouping.Standard;
 {{endregion}}
 
@@ -227,7 +227,7 @@ Some series groups (Bar, Line and Area) implement the **ISupportGrouping** inter
 
 {{region radspreadprocessing-features-charts-working-with-series_5}}
 	
-	FloatingChartShape chartShape = worksheet.Shapes.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
+	FloatingChartShape chartShape = worksheet.Charts.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
 	(chartShape.Chart.SeriesGroups.First() as ISupportGrouping).Grouping = SeriesGrouping.Stacked;
 {{endregion}}
 
@@ -239,7 +239,7 @@ Some series groups (Bar, Line and Area) implement the **ISupportGrouping** inter
 
 {{region radspreadprocessing-features-charts-working-with-series_6}}
 	
-	FloatingChartShape chartShape = worksheet.Shapes.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
+	FloatingChartShape chartShape = worksheet.Charts.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
 	(chartShape.Chart.SeriesGroups.First() as ISupportGrouping).Grouping = SeriesGrouping.PercentStacked;
 {{endregion}}
 
