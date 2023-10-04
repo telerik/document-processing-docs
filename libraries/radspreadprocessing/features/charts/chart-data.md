@@ -48,5 +48,5 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
         Height = 250
     };
 
-    worksheet.Shapes.Add(chartShape);
+    worksheet.Charts.Add(chartShape);
 {{endregion}}

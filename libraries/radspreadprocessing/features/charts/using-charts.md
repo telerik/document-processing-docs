@@ -12,7 +12,7 @@ platforms: ajax, mvc, wpf, winforms
 
 RadSpreadProcessing allows you to add and manipulate charts in your spreadsheet document. This article describes the available API for inserting and modifying different types of charts.
 
-The chart objects are preserved in the Shapes collection of the worksheet and are represented by the FloatingChartShape class. The FloatingChartShape object exposes a property called Chart, which is of type DocumentChart.
+The chart objects are preserved in the Charts collection of the worksheet and are represented by the FloatingChartShape class. The FloatingChartShape object exposes a property called Chart, which is of type DocumentChart.
 
 
 ## FloatingChartShape
@@ -34,7 +34,7 @@ The FloatingChartShape class exposes the following constructors, which parse the
 
 	>The number of chartTypes must be no more than the number of columns inside the chartDataRange minus one (the first column is used to populate the X axis), otherwise you will get an exception of type **System.NullReferenceException**.
 
-Once you have created a FloatingChartShape, you can insert it in the document through the Add() method of worksheet's Shapes property.
+Once you have created a FloatingChartShape, you can insert it in the document through the Add() method of worksheet's Charts property.
 
 >Make sure that you have set the size of the FloatingChartShape object. Otherwise, it will be inserted in the worksheet with zero size and will be invisible.
 
@@ -48,7 +48,7 @@ Once you have created a FloatingChartShape, you can insert it in the document th
 	    Height = 250
 	};
 	
-	worksheet.Shapes.Add(chartShape);
+	worksheet.Charts.Add(chartShape);
 	
 	SeriesGroup seriesGroup = chartShape.Chart.SeriesGroups.First(); // type BarChart
 	int seriesCount = seriesGroup.Series.Count(); // 1
@@ -74,7 +74,7 @@ The Chart property of FloatingChartShape holds an object of type [DocumentChart]
 	    Height = 250
 	};
 	
-	worksheet.Shapes.Add(chartShape);
+	worksheet.Charts.Add(chartShape);
 
 {{endregion}}
 
@@ -160,13 +160,6 @@ The chart can then be used to replace the chart in an existing **FloatingChartSh
 >noteFor more on Series, the [Series]({%slug radspreadprocessing-features-charts-series%}) help topic. Refer to [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}) for description of the axes objects of the chart.
 
 The initial data and the resulting chart are shown in **Figure 1**.
-
-## Creating a chart using the AddChart methods of the ShapeCollection
-
-The ShapeCollection (Shapes property of Worksheet) exposes two overloads which can add a chart to a worksheet. Internally, they use the same logic as the FloatingChartShape constructor. They create a FloatingChartShape object using the data passed as a parameter and return the object as a result from the execution.
-
-* FloatingChartShape **AddChart**(CellIndex cellIndex, CellRange chartDataRange, params ChartType[] chartTypes)
-* FloatingChartShape **AddChart**(CellIndex cellIndex, CellRange chartDataRange, SeriesRangesOrientation seriesRangesOrientation, params ChartType[] chartTypes)
 
 ##	Iterating the charts of a worksheet
 

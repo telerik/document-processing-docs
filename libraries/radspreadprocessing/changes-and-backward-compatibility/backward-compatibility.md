@@ -23,6 +23,14 @@ Removed method void Add(T) of SeriesCollectionOfT.
 
 Use the other overrides of the SeriesCollectionOfT.Add() method.
 
+### Changed
+
+Worksheet's ShapeCollection is now ChartCollection.
+
+### What to do now
+
+Use the single ChartCollection.Add() method for adding entries.
+
 ## What's Different in 2022 R3
 
 ### Changed
