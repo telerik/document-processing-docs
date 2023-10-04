@@ -146,74 +146,15 @@ Another way to auto fit column widths is to use the __ExpandToFitNumberValuesWid
 {{endregion}}
 
 
-## Measurement Units
-
-The unit type used to set the width of the columns and the height of the rows in RadSpreadProcessing is [Device Independent Pixels](https://en.wikipedia.org/wiki/Device-independent_pixel) (DIPs).
-
-### UnitHelper class
-
-The [UnitHelper](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.utilities.unithelper) class provides a bunch of methods for converting from DIPs to other measurement units and vice versa (e.g. points, picas, centimeters, inches, etc.).
-
-#### Convert From Dip to Unit:
-* **DipToPoint**: Converts dips to points.
-* **DipToPointI**: Converts dips to points.
-* **DipToPica**: Converts dips to picas.
-* **DipToCm**: Converts dips to centimeters.
-* **DipToMm**: Converts dips to millimeters.
-* **DipToInch**: Converts dips to inches.
-* **DipToTwip**: Converts dips to twips.
-* **DipToEmu**: Converts dips to EMUs.
-* **DipToTwipI**: Converts dips to twips.
-* **DipToTwipF**: Converts dips to twips.
-* **DipToUnit**: Converts DIPs to units.
-
-#### Convert From Unit to Dip:
-* **PointToDip**: Converts points to dips.
-* **PicaToDip**: Converts to points dips.
-* **EmuToDip**: Converts EMUs to dips.
-* **CmToDip**: Converts centimeters to dips.
-* **MmToDip**: Converts millimeters to dips.
-* **InchToDip**: Converts inches to dips.
-* **TwipToDip**: Converts twips to dips.
-* **TwipToDipF**: Converts twips to dips.
-* **TwipToDipI**: Converts twips to dips.
-* **UnitToDip**: Converts Units to dips.
-
-Most of the methods follow the same pattern for converting units:
-
-__Example 5__ shows how to convert from DIP to Point and set the row height.    
-
-#### __[C#] Example 5: Convert from DIP to Point__
-
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_5}}
-
-	double points = UnitHelper.DipToPoint(80);
-	RowHeight newRowHeight = new RowHeight(points, isCustom: true);
-	worksheet.Rows[0].SetHeight(newRowHeight);
-{{endregion}}
-
-except the **DipToUnit** and **UnitToDip** methods which accepts not only the units but the [UnitType](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.media.unittype) as well as a parameter:
-
-__Example 6__ shows how to convert from Point to DIP and set the row height.    
-
-#### __[C#] Example 6: Convert from Point to DIP__
-
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_6}}
-
-	double dips = UnitHelper.UnitToDip(60, UnitType.Point);
-	RowHeight newRowHeight = new RowHeight(dips, isCustom: true);
-	worksheet.Rows[0].SetHeight(newRowHeight);
-{{endregion}}
-
 ### Telerik RadSpreadProcessing vs MS Excel 
 
  In the other hand, MS Excel uses its [own measurement unit](https://docs.microsoft.com/en-sg/office/troubleshoot/excel/determine-column-widths), so in order to convert between pixel and MS Excel width you can use the following methods of the UnitHelper class in combination with the **SetWidth**() method: 
 
 * PixelWidthToExcelColumnWidth: Converts column width in pixels to MS Excel column width.
 
-__Example 7__ shows how to convert and set from pixel to MS Excel column width.    
+__Example 6__ shows how to convert and set from pixel to MS Excel column width.    
 
-#### __[C#] Example 7: Convert from pixel column width to MS Excel column width__
+#### __[C#] Example 6: Convert from pixel column width to MS Excel column width__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_7}}
 
@@ -224,9 +165,9 @@ __Example 7__ shows how to convert and set from pixel to MS Excel column width.
 
 * ExcelColumnWidthToPixelWidth: Converts MS Excel column width to pixels width.
 
-__Example 8__ shows how to convert and set from MS Excel to pixel column width.    
+__Example 7__ shows how to convert and set from MS Excel to pixel column width.    
 
-#### __[C#] Example 8: Convert from MS Excel column width to pixel column width__
+#### __[C#] Example 7: Convert from MS Excel column width to pixel column width__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_8}}
 
@@ -244,7 +185,7 @@ The [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/tel
 
 * **CalculateCellContentSize**: Calculates the size of the cell content.
 
-#### __[C#] Example 9: Get the Size of the cell content__
+#### __[C#] Example 8: Get the Size of the cell content__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_9}}
 
@@ -253,7 +194,7 @@ The [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/tel
 
 * **CalculateCellLayoutBox**: Creates, arranges and returns the cell layout box.
 
-#### __[C#] Example 10: Get the cell layout box__
+#### __[C#] Example 9: Get the cell layout box__
 
 {{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_10}}
 
