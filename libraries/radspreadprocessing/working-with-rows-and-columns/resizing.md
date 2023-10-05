@@ -113,8 +113,6 @@ __Example 3__ shows how to retrieve and change the width of several columns.
 	columnSelection.SetWidth(new ColumnWidth(columnWidth + 50, true));
 {{endregion}}
 
-
-
 ## Auto Fit Columns Width
 
 The autofit feature offers a handy approach for resizing multiple columns so that each of them chooses a width that fits its content. To autofit the columns, you need to create a __ColumnSelection__ instance that holds the columns to be resized, and invoke its __AutoFitWidth()__ method. __Example 4__ shows how to fit the column width of columns F to H.
@@ -131,7 +129,6 @@ The autofit feature offers a handy approach for resizing multiple columns so tha
 {{endregion}}
 
 
-
 Another way to auto fit column widths is to use the __ExpandToFitNumberValuesWidth()__ method. It affects cells that contain only number values and have a __ColumnWidth__ with __IsCustom__ property set to true. __Example 5__ demonstrates the alternative way to fit the column width.
         
 
@@ -145,6 +142,7 @@ Another way to auto fit column widths is to use the __ExpandToFitNumberValuesWid
 	columnSelection.ExpandToFitNumberValuesWidth();
 {{endregion}}
 
+> The unit type used to set the width of the columns and the height of the rows in RadSpreadProcessing is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).  
 
 ### Telerik RadSpreadProcessing vs MS Excel 
 
