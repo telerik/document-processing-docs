@@ -15,6 +15,7 @@ __RadSpreadProcessing__'s document model allows you to easily open and save file
 
 * __Xlsx__: Rich text format, which exports the whole content of a workbook: worksheets, formula values, formatting, hyperlinks etc.
 * __Xls__: Rich text format, which exports the content of a workbook: worksheets, formula values, formatting, hyperlinks etc. Supported in older applications. This format is not supported in Silverlight.
+* __Xlsm__: Rich text format, which exports all that is included in the Xlsx format with the addition of macro instructions.
 * __Pdf__: Fixed format, which preserves the content of a workbook in independent from software or hardware manner.
 * __Csv__(comma separated): Plain text format that saves the content of the cell in the active worksheet. The format strips all formatting and keeps only the result values of cells. These values are separated by a culture dependent delimiter.
 * __Txt__(tab delimited): Plain text format, which preserves only the content of the cells in the active worksheet. The format does not save any formatting and keeps only the result values of the cells. These values are delimited via tabs.
@@ -26,11 +27,11 @@ __RadSpreadProcessing__'s document model allows you to easily open and save file
 The document model exposes separate format providers that work with each of the formats above: 
 - [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider %}) for `.xlsx` files
 - [XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider %}) for `.xls` files
+- [XlsmFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider %}) for `.xlsm` files
 - [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider %}) for `.pdf` files
 - [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider %}) for comma separated `.csv` files
 - [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider %}) for tab delimited `.txt` files
 - [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider %}) for `DataTable` objects
-
 
 > Some FormatProviders require additional assembly references. Check them out in the [Additional Assemlby References](#additional-assembly-references) section.
  
@@ -108,7 +109,7 @@ byte[] workbookAsByteArray = formatProvider.Export(workbook);
 
 Unlike the __CsvFormatProvider__, __TxtFormatProvider__ and __DataTableFormatProvider__ classes, the other RadSpreadProcessing format providers require references to additional assemblies.
 
-- **XlsxFormatProvider** additional assembly references
+- **XlsxFormatProvider** and **XlsmFormatProvider** additional assembly references
   * Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll
   * Telerik.Windows.Zip.dll
 
