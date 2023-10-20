@@ -13,7 +13,7 @@ The __NumberingFieldsProvider__ is used for calculating the layout of the docume
 
 ### Requirements
 
-To use the default implantation of the __NumberingFieldsProvider__ you need to reference the __**Telerik.Documents.Flow.FormatProviders.Pdf.dll**__ assembly.
+To use the default implementation of the __NumberingFieldsProvider__ you need to reference the __**Telerik.Documents.Flow.FormatProviders.Pdf**__ assembly.
 
 ### Setting the default implementation
 
