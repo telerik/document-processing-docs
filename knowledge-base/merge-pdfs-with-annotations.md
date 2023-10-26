@@ -26,7 +26,7 @@ The following approach takes a collection of paths, creates a new [RadFixedDocum
 {{region kb-merge-pdf-files-while-preserving-their-annotations_0}}
 
     public static RadFixedDocument MergeDocuments(string[] pathsCollection)
-{
+	{
 	RadFixedDocument result = new RadFixedDocument();
 
 	using (MemoryStream stream = new MemoryStream())
@@ -52,6 +52,6 @@ The following approach takes a collection of paths, creates a new [RadFixedDocum
 	}
 
 	return result;
-}
+	}
 
 {{endregion}}
