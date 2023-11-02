@@ -127,25 +127,9 @@ Here is a list of the field types that support updating:
 
 If the field type is not one of the above, the result will not be updated and the Field property of the FieldInfo class will be set to an instance of a CustomCodeField. The complete list of field codes and the switches for each of them can be found in the [Docx specification](http://www.ecma-international.org/publications/standards/Ecma-376.htm).
 
-### Updating PageRef, Page, NumPages, and SectionPage fields. 
-
-In R3 2022 the above fields were introduced. Their evaluation requires calculating the size of the document elements. This is why to update them you need to provide an implementation of a [**NumberingFieldsProvider**]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) which can provide the needed layout logic. In the default implementation we are using the the layout logic from the [RadPdfPRocessing]({%slug radpdfprocessing-overview%}) library. To use it you need to add reference to the following assembly: 
-
-* **Telerik.Windows.Documents.Fixed**
-
-You can register the provider with the following code:
-
-#### __[C#] Example 3: Register the default NumberingFieldsProvider__
-
-{{region cs-radwordsprocessing-concepts-fields_5}}
-
-	 FlowExtensibilityManager.NumberingFieldsProvider = new NumberingFieldsProvider();
-
-{{endregion}}
-
 Updating a single field is done with the __UpdateField()__ method of the __FieldInfo__ class as demonstrated in **Example 3**.
 
-#### __[C#] Example 4: Update a field__
+#### __[C#] Example 3: Update a field__
 
 {{region cs-radwordsprocessing-concepts-fields_2}}
 	            
@@ -161,7 +145,7 @@ Updating a single field is done with the __UpdateField()__ method of the __Field
 
 All fields in the document can be updated using __UpdateFields()__ of __RadFlowDocument__. **Example 4** shows how to use this method.        
 
-#### __[C#] Example 5: Update all fields in a document__
+#### __[C#] Example 4: Update all fields in a document__
 
 {{region cs-radwordsprocessing-concepts-fields_3}}
 	            
@@ -174,6 +158,21 @@ All fields in the document can be updated using __UpdateFields()__ of __RadFlowD
 	Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
 {{endregion}}
 
+### Updating PageRef, Page, NumPages, and SectionPage fields. 
+
+In R3 2022 the above fields were introduced. Their evaluation requires calculating the size of the document elements. This is why to update them you need to provide an implementation of a [**NumberingFieldsProvider**]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) which can provide the needed layout logic. In the default implementation we are using the the layout logic from the [RadPdfPRocessing]({%slug radpdfprocessing-overview%}) library. To use it you need to add reference to the following assembly: 
+
+* **Telerik.Windows.Documents.Fixed**
+
+You can register the provider with the following code:
+
+#### __[C#] Example 5: Register the default NumberingFieldsProvider__
+
+{{region cs-radwordsprocessing-concepts-fields_5}}
+
+	 FlowExtensibilityManager.NumberingFieldsProvider = new NumberingFieldsProvider();
+
+{{endregion}}
 
 ## Syntax and Switches
 
