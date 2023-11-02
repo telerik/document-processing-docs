@@ -20,7 +20,13 @@ __TxtFormatProvider__ exposes a __Settings__ property of type __TxtSettings__. T
         
 
 * __Delimiter__: Gets or sets the list separator. By default the TxtFormatProvider class imports and exports files using the list separator specified by the current culture of the system.
-            
+
+
+* __ShouldExportEmptyValues__: Gets or sets a value indicating whether the empty values are exported.
+
+
+* __Encoding__: Gets or sets the encoding.
+
 
 * __Quote__: Gets or sets the quote symbol
             
