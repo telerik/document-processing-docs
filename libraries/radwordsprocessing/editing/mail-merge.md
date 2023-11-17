@@ -104,7 +104,7 @@ The nested mail merge functionality is supported from R1 2022. It allows you to 
 
 Currently, all tags pairs work equally and more than one option exists in order to improve the readability of the documents.
 
->Exception: When a table row has only one cell, using the TableStart/TableEnd tags for the whole content of that cell will create a new row for each value. Every other pair of tags (BeginGroup/EndGroup, RangeStart/RangeEnd, GroupStart/GroupEnd) are interchangeable and will put the values on the same row inside that cell.
+>Exception: When a table row has only one cell, using the TableStart/TableEnd tags over the whole content of that cell will create a new row for each value. Every other pair of tags (BeginGroup/EndGroup, RangeStart/RangeEnd, GroupStart/GroupEnd) are interchangeable and will put the values on the same row inside that cell.
 
 The following example demonstrates how you can use the nested mail merge: 
 
