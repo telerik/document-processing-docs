@@ -21,11 +21,11 @@ This class exposes methods for searching. You need to pass an instance of [RadFi
 
 {{region cs-pdfprocessing-features-search_0}}
 
-    var provider = new PdfFormatProvider();
-    var document = provider.Import(File.ReadAllBytes(@"Test.pdf"));
+    PdfFormatProvider provider = new PdfFormatProvider();
+    RadFixedDocument document = provider.Import(File.ReadAllBytes(@"Test.pdf"));
 
-    var search = new TextSearch(document);
-    var result = search.FindAll("Lorem", TextSearchOptions.Default);
+    TextSearch search = new TextSearch(document);
+    IEnumerable<SearchResult> result = search.FindAll("Lorem", TextSearchOptions.Default);
 
 {{endregion}}
 
@@ -52,17 +52,17 @@ All of the above methods return one or more instances of the **SearchResult** cl
 
 {{region cs-pdfprocessing-features-search_1}}
 
-    var provider = new PdfFormatProvider();
-    var document = provider.Import(File.ReadAllBytes(@"Test.pdf"));
+    PdfFormatProvider provider = new PdfFormatProvider();
+    RadFixedDocument document = provider.Import(File.ReadAllBytes(@"Test.pdf"));
 
-    var search = new TextSearch(document);
-    var result = search.FindAll("Lorem", TextSearchOptions.Default);
+    TextSearch search = new TextSearch(document);
+    IEnumerable<SearchResult> result = search.FindAll("Lorem", TextSearchOptions.Default);
 
-    foreach (var resultItem in result)
+    foreach (SearchResult resultItem in result)
     {
-        var rect = resultItem.GetWordBoundingRect();
-        var page = resultItem.GetResultPage();
-        var editor = new FixedContentEditor(page);
+        Rect rect = resultItem.GetWordBoundingRect();
+        RadFixedPage page = resultItem.GetResultPage();
+        FixedContentEditor editor = new FixedContentEditor(page);
         editor.DrawRectangle(rect);
     }
 
