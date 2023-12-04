@@ -27,8 +27,9 @@ The following approach takes a collection of paths, creates a new [RadFixedDocum
 
     public static RadFixedDocument MergeDocuments(string[] pathsCollection)
 	{
-	RadFixedDocument result = new RadFixedDocument();
-
+	RadFixedDocument resultFile;
+	Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider pdfFormatProvider = new Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider();
+ 
 	using (MemoryStream stream = new MemoryStream())
 	{
 		using (PdfStreamWriter fileWriter = new PdfStreamWriter(stream, leaveStreamOpen: true))
@@ -49,9 +50,10 @@ The following approach takes a collection of paths, creates a new [RadFixedDocum
 				}
 			}
 		}
+  		resultFile = pdfFormatProvider.Import(stream);
 	}
 
-	return result;
+	return resultFile;
 	}
 
 {{endregion}}
