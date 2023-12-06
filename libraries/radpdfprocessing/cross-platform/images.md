@@ -118,7 +118,7 @@ The following example depends on the [Magick.NET](https://www.nuget.org/packages
 	</tr>
     <tr>
 		<td><b>SkiaSharp.NativeAssets.*</b> assembly
-        <br><sub><i>May differ according to the used platform.</i></sub></td>
+        <br><sub><i>May differ according to the used platform. For <b>Linux</b> use <b>SkiaSharp.NativeAssets.Linux.NoDependencies</b></i></sub></td>
 	</tr>
     <tr>
 		<td><b>SkiaSharp.Views.Blazor</b> and <b>wasm-tools</b>
