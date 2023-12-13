@@ -99,7 +99,7 @@ internal class Program
 }
 ```
 
-Please note that this is a workaround and not an official feature of RadPdfProcessing. I have also logged a feature request to add an API for setting image opacity in RadPdfProcessing. You can vote for and subscribe to this feature request to receive updates on its progress: [PdfProcessing: Add API for setting Image opacity](https://feedback.telerik.com/document-processing/1546300-pdfprocessing-add-api-for-setting-image-opacity)
+Please note that this is a workaround and not an official feature of the PdfProcessing. There is a feature request logged in our backlog to add an API for setting image opacity using PdfProcessing. You can vote for and subscribe to this feature request to receive updates on its progress: [PdfProcessing: Add API for setting Image opacity](https://feedback.telerik.com/document-processing/1634368-pdfprocessing-add-api-for-setting-image-opacity)
 
 ## See Also
 
