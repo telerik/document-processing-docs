@@ -9,7 +9,7 @@ position: 0
 
 # Overview
 
-RadPdfProcessing is a processing library that allows you to create, import and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like  Adobe Acrobat.
+**RadPdfProcessing** is a processing library that allows you to create, import and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like  Adobe Acrobat.
 
 In this article, we list the library's most popular features. If you want to learn how to use the library, head straight to the **[Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})** article.
 
