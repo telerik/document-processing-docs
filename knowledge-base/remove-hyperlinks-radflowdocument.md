@@ -10,9 +10,9 @@ res_type: kb
 
 ## Environment
 
-| Property | Value |
-| --- | --- |
-| Product | Telerik Document Processing |
+| Version | Product | Author |
+| --- | --- | ---- |
+| 2023.3.1106 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|
 
 ## Description
 
