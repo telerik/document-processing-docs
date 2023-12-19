@@ -4,7 +4,7 @@ description: Learn how to remove hyperlinks from text in an HTML document using 
 type: how-to
 page_title: How to Remove Hyperlinks from Text with RadFlowDocument
 slug: remove-hyperlinks-radflowdocument
-tags: telerik-document-processing, hyperlinks, text, RadFlowDocument, WordProcessing
+tags: telerik-document-processing, hyperlinks, text, RadFlowDocument, WordsProcessing
 res_type: kb
 ---
 
@@ -52,7 +52,7 @@ To remove hyperlinks from text in an HTML document using RadFlowDocument, follow
                 {
                     r.StyleId = "Normal";
                 }
-                string output = provider.Export(document);
+                string rawHtmlContent = provider.Export(document);
             }
             return document;
         }
