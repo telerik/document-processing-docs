@@ -16,7 +16,7 @@ res_type: kb
 
 ## Description
 
-This article demonstrates a sample approach how to remove hyperlinks from text in an HTML document using the [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) from [RadWordsProcessing]({%slug radwordsprocessing-overview%})].
+This article demonstrates a sample approach how to remove hyperlinks from text in an HTML document using the [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) from [RadWordsProcessing]({%slug radwordsprocessing-overview%}).
 
 |Before|After|
 |----|----|
