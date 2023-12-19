@@ -38,7 +38,7 @@ To remove hyperlinks from text in an HTML document using RadFlowDocument, follow
             Telerik.Windows.Documents.Flow.Model.RadFlowDocument document;
             using (Stream input = File.OpenRead(filePath))
             {
-                Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider();
+                HtmlFormatProvider provider = new HtmlFormatProvider();
                 document = provider.Import(input);
                 RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
                 var hyperlinkElements = document.EnumerateChildrenOfType<FieldCharacter>().Where(x => x.FieldCharacterType == FieldCharacterType.Start).ToList();
