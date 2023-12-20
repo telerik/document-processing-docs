@@ -16,7 +16,7 @@ res_type: kb
 
 ## Description
 
-This article demonstrates a sample approach how to remove hyperlinks from text in an HTML document using the [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) from [RadWordsProcessing]({%slug radwordsprocessing-overview%}).
+This article demonstrates a sample approach how to remove hyperlinks from text in a document using the [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) from [RadWordsProcessing]({%slug radwordsprocessing-overview%}).
 
 |Before|After|
 |----|----|
@@ -26,10 +26,10 @@ This article demonstrates a sample approach how to remove hyperlinks from text i
  
 The hyperlinks are stored with the help of [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}) in RadFlowDocument. More information about the internal structure of the hyperlink fields is available in the following article: [Hyperlink Field]({%slug radwordsprocessing-concepts-hyperlink-field%}).
 
-To remove hyperlinks from text in an HTML document using RadFlowDocument, follow these steps:
+To remove hyperlinks from the text in a document using RadFlowDocument, follow these steps:
 
-1. Load the HTML document into RadFlowDocument using the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}).
-2. Enumerate the [FieldCharacters]({%slug radwordsprocessing-model-fieldcharacter%}) elements in the document and delete the content of the hyperlink fields. The **DeleteContent** method removes the hyperlink field elements and leave only the text run that store the text itself. 
+1. Load the HTML document into RadFlowDocument using the [appropriate FormatProvider]({%slug radwordsprocessing-formats-and-conversion%}).
+2. Enumerate the [FieldCharacters]({%slug radwordsprocessing-model-fieldcharacter%}) elements in the document and delete the content of the hyperlink fields. The **DeleteContent** method removes the hyperlink field elements and leaves only the text run that stores the text itself. 
 3. Enumerate the **Run** elements in the document with the custom *Hyperlink* style and change their style to *Normal*.
 
 ```csharp
