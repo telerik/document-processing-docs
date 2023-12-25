@@ -102,9 +102,17 @@ The nested mail merge functionality is supported from R1 2022. It allows you to 
 * RangeStart/RangeEnd
 * GroupStart/GroupEnd
 
-Currently, all tags pairs work equally and more than one option exists in order to improve the readability of the documents.
+Currently, all tag pairs work equally and more than one option exists in order to improve the readability of the documents.
 
 >Exception: When a table row has only one cell, using the TableStart/TableEnd tags over the whole content of that cell will create a new row for each value. Every other pair of tags (BeginGroup/EndGroup, RangeStart/RangeEnd, GroupStart/GroupEnd) are interchangeable and will put the values on the same row inside that cell.
+
+>caption A single cell (spanning the whole row) with TableStart/TableEnd tags:
+
+![Rad Words Processing mail merge](images/RadWordsProcessing_MailMerge_SingleCellRow_01.png)
+
+>caption A single cell (spanning the whole row) with a tag group different than TableStart/TableEnd:
+
+![Rad Words Processing mail merge](images/RadWordsProcessing_MailMerge_SingleCellRow_02.png)
 
 The following example demonstrates how you can use the nested mail merge: 
 
