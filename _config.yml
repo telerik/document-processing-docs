@@ -32,7 +32,10 @@ navigation:
         position: 10
     troubleshooting:
         title: Troubleshooting
-        position: 99 
+        position: 99
+    common-information:
+        title: Common Information
+        position: 98 
     "*overview":
         title: Overview
         position: 1
@@ -299,6 +302,11 @@ defaults:
         path: "libraries"
     values:
         description: "Check our document management article about {{page.title}}."
+-
+    scope:
+        path: "common-information"
+    values:
+        description: "Common information that targets more than one library"
 -
     scope:
         path: "troubleshooting"

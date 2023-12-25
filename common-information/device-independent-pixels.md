@@ -1,19 +1,13 @@
 ---
 title: Device Independent Pixels
 description: Device Independent Pixels (DIPs) measuremnt unit.
-type: how-to 
 page_title:  Device Independent Pixels
 slug: device-independent-pixels
 position: 0
+published: True
 tags: dip, dips, device, independent, pixels, measurement, unit, SpreadProcessing, WordsProcessing, PdfProcessing  
-res_type: kb
 ---
-
-|Product Version|Product|Author|
-|----|----|----|
-|2023.3.928|SpreadProcessing, PdfProcessing, WordsProcessing|[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)|
-
-## Measurement Units
+# Document Processing Libraries Configuration Wizard
 
 [Device Independent Pixels](https://en.wikipedia.org/wiki/Device-independent_pixel) (DIPs) is a unit type used in the Document Processing libraries in the following cases:
 
@@ -56,7 +50,7 @@ __Example 1__ shows how to convert from DIP to Point and set the row height.
 
 #### __[C#] Example 1: Convert from DIP to Point__
 
-{{region kb-dips_1}}
+{{region dips_1}}
 
 	double points = UnitHelper.DipToPoint(80);
 	RowHeight newRowHeight = new RowHeight(points, isCustom: true);
@@ -69,7 +63,7 @@ __Example 2__ shows how to convert from Point to DIP and set the row height.
 
 #### __[C#] Example 2: Convert from Point to DIP__
 
-{{region kb-dips_2}}
+{{region dips_2}}
 
 	double dips = UnitHelper.UnitToDip(60, UnitType.Point);
 	RowHeight newRowHeight = new RowHeight(dips, isCustom: true);
