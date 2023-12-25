@@ -7,7 +7,7 @@ position: 0
 published: True
 tags: dip, dips, device, independent, pixels, measurement, unit, SpreadProcessing, WordsProcessing, PdfProcessing  
 ---
-# Document Processing Libraries Configuration Wizard
+# Device Independent Pixels
 
 [Device Independent Pixels](https://en.wikipedia.org/wiki/Device-independent_pixel) (DIPs) is a unit type used in the Document Processing libraries in the following cases:
 
