@@ -12,7 +12,7 @@ res_type: kb
 
 | Version | Product | Author |
 | --- | --- | ---- |
-| 2023.3.1106 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|
+| 2023.3.1106 | RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|
 
 ## Description
 
@@ -82,7 +82,7 @@ Make sure to replace the `filePath` variable with the actual path to your PDF do
 
 >note Please note that the above code snippet regarding to FlateDecode filter is compatible with .NET Framework because the image data extracted from the PDF is encoded. If you want to use the image data, you will need to decode it and then encode it with the desired image format. 
 
->caution Keep in mind that the current implementation of the .NET Standard version of the PdfProcessing library doesn't provide an option to get the decoded image data of images with the FlateDecode filter applied. However, you can create a custom method to decode the flate encoded data.
+>important Keep in mind that the current implementation of the .NET Standard version of the PdfProcessing library doesn't provide an option to get the decoded image data of images with the FlateDecode filter applied. However, you can create a custom method to decode the flate encoded data.
 
 For more information about converting images and scaling their quality, refer to our online documentation: [Cross-Platform Support](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/cross-platform/images).
 
