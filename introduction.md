@@ -29,6 +29,7 @@ The Telerik Document Processing libraries support the following file formats:
 * TXT
 * XLSX (Excel Workbook)
 * XLS (Excel 97-2003 Workbook)
+* XLSM (Excel Workbook that supports Macros)
 * CSV
 * ZIP
  
