@@ -28,7 +28,8 @@ The Telerik Document Processing libraries support the following file formats:
 * RTF
 * TXT
 * XLSX (Excel Workbook)
-* XLS (Excel 97-2003 Workbook) 
+* XLS (Excel 97-2003 Workbook)
+* XLSM (macro-enabled spreadsheet created by Microsoft Excel) *Macros are only preserved during import and export. They cannot be executed or changed in the code.
 * CSV
 * ZIP
  
