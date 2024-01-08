@@ -34,7 +34,7 @@ The [UnitHelper](https://docs.telerik.com/devtools/document-processing/api/teler
 
 #### Convert From Unit to Dip:
 * **PointToDip**: Converts points to dips.
-* **PicaToDip**: Converts to points dips.
+* **PicaToDip**: Converts picas to dips.
 * **EmuToDip**: Converts EMUs to dips.
 * **CmToDip**: Converts centimeters to dips.
 * **MmToDip**: Converts millimeters to dips.
@@ -46,15 +46,14 @@ The [UnitHelper](https://docs.telerik.com/devtools/document-processing/api/teler
 
 Most of the methods follow the same pattern for converting units:
 
-__Example 1__ shows how to convert from DIP to Point and set the row height.    
+__Example 1__ shows how to obtain row height as DIPs and convert it to Points.    
 
 #### __[C#] Example 1: Convert from DIP to Point__
 
 {{region dips_1}}
 
-	double points = UnitHelper.DipToPoint(80);
-	RowHeight newRowHeight = new RowHeight(points, isCustom: true);
-	worksheet.Rows[0].SetHeight(newRowHeight);
+	var rowHeightInDips = worksheet.Rows[0].GetHeight().Value.Value;
+	var rowHeightInPoints = UnitHelper.DipToPoint(rowHeightInDips);
 {{endregion}}
 
 except the **DipToUnit** and **UnitToDip** methods which accepts not only the units but the [UnitType](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.media.unittype) as well as a parameter:
