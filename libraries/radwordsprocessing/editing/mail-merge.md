@@ -95,15 +95,26 @@ __Example 4__ performs the mail merge operation over a previously defined templa
 
 ## Nested Mail Merge
 
-The nested mail merge functionality is supported from R1 2022. It allows you to merge data sources that contain nested data. For example, your business object can contain a list of other objects and this functionality allows accessing the properties of the underlying objects. In order to use the underlying objects, you need to  declare a group. Currently, the following group tags are supported. 
+The nested mail merge functionality is supported from R1 2022. It allows you to merge data sources that contain nested data. For example, your business object can contain a list of other objects and this functionality allows accessing the properties of the underlying objects. In order to use the underlying objects, you need to  declare a group. Currently, the following group tags are supported: 
 
 * BeginGroup/EndGroup 
 * TableStart/TableEnd
 * RangeStart/RangeEnd
 * GroupStart/GroupEnd
 
+Currently, all tag pairs work equally and more than one option exists in order to improve the readability of the documents.
 
-Currently, all tags work equally and more than one option exists in order to improve the readability of the documents. The below example demonstrates how you can use the nested mail merge. 
+>Exception: When a table row has only one cell, using the TableStart/TableEnd tags over the whole content of that cell will create a new row for each value. Every other pair of tags (BeginGroup/EndGroup, RangeStart/RangeEnd, GroupStart/GroupEnd) are interchangeable and will put the values on the same row inside that cell.
+
+>caption A single cell (spanning the whole row) with TableStart/TableEnd tags:
+
+![Rad Words Processing mail merge](images/RadWordsProcessing_MailMerge_SingleCellRow_01.png)
+
+>caption A single cell (spanning the whole row) with a tag group different than TableStart/TableEnd:
+
+![Rad Words Processing mail merge](images/RadWordsProcessing_MailMerge_SingleCellRow_02.png)
+
+The following example demonstrates how you can use the nested mail merge: 
 
 First you need to define a data source that contains an `IEnumerable` of objects.
 
