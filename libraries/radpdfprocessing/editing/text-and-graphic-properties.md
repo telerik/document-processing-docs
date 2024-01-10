@@ -66,7 +66,7 @@ These properties hold the parameters used for text fragments. The following para
 
 * __HorizontalScaling__: The horizontal scaling for text fragments. The property is of type `double?`.
 
-* __FontSize__: The font size for text fragments. The property is of type `double`. The measurement unit used for font size is [DIP](https://en.wikipedia.org/wiki/Device-independent_pixel). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
+* __FontSize__: The font size for text fragments. The property is of type `double`. The measurement unit used for font size is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
 
 * __RenderingMode__: The rendering mode for text fragments. The property is of type [RenderingMode](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Text.RenderingMode.html).
 

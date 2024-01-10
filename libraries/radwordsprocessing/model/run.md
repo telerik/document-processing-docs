@@ -107,7 +107,7 @@ The Run exposes several properties that allow you to customize how it is rendere
 
 * __FontFamily__: Specifies the font family that is used to render the text. *This is a Style property. The value is themable object.*
 
-* __FontSize__: The font size. The measurement unit used for font size is [DIP](https://en.wikipedia.org/wiki/Device-independent_pixel). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
+* __FontSize__: The font size. The measurement unit used for font size is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
 
 * __Shading__: Represents the shading applied to the run. It is a composite object and is read-only. You can obtain the following properties from it:
 
