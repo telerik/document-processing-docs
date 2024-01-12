@@ -38,8 +38,6 @@ res_type: kb
 
 The following code snippets demonstrate how to create a custom implementation of the JpegImageConverterBase abstract class using the [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp) library and set it to the JpegImageConverter property of the FixedExtensibilityManager. We are using the ImageSharp library to convert the images from one of the library's supported formats to Jpeg and to change their quality if it is set.
 
->important This example is compatible with SixLabors.ImageSharp version not greater than 2.1.6!
-
 #### __[C#] Create a custom implementation inheriting the JpegImageConverterBase abstract class__
 
 {{region kb-create-custom-jpeg-image-converter1}}
