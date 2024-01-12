@@ -11,28 +11,32 @@ res_type: kb
 
 <table>
 <thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
+<tr>
+<th>Product Version</th>
+<th>Product</th>
+<th>Author</th>
+</tr>
 </thead>
 <tbody>
-	<tr>
-		<td>2023.1.315</td>
-		<td>RadPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
+<tr>
+<td>2023.1.315</td>
+<td>RadPdfProcessing</td>
+<td rowspan="2" ><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
+</tr>
+<tr>
+<td>2.1.6</td>
+<td>ImageSharp</td>
+</tr>
 </tbody>
 </table>
 
 ## Description
 
-**.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the of **FixedExtensibilityManager**.
+**.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the **FixedExtensibilityManager**.
 
 ## Solution
 
-The following code snippets demonstrates how to create a custom implementation of the JpegImageConverterBase abstract class using the [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp) library and set it to the JpegImageConverter property of the FixedExtensibilityManager. We are using the ImageSharp library to convert the images from one of the library's supported formats to Jpeg and to change their quality if it is set.
+The following code snippets demonstrate how to create a custom implementation of the JpegImageConverterBase abstract class using the [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp) library and set it to the JpegImageConverter property of the FixedExtensibilityManager. We are using the ImageSharp library to convert the images from one of the library's supported formats to Jpeg and to change their quality if it is set.
 
 #### __[C#] Create a custom implementation inheriting the JpegImageConverterBase abstract class__
 
@@ -45,7 +49,7 @@ The following code snippets demonstrates how to create a custom implementation o
             try
             {
                 IImageFormat imageFormat;
-                using (ImageSharp image = ImageSharp.Load(imageData, out imageFormat))
+                using (SixLabors.ImageSharp.Image image = SixLabors.ImageSharp.Image.Load(imageData, out imageFormat))
                 {
                     if (imageFormat.GetType() == typeof(PngFormat))
                     {
