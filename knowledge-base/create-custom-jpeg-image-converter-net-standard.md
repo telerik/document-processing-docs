@@ -11,18 +11,22 @@ res_type: kb
 
 <table>
 <thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
+<tr>
+<th>Product Version</th>
+<th>Product</th>
+<th>Author</th>
+</tr>
 </thead>
 <tbody>
-	<tr>
-		<td>2023.1.315</td>
-		<td>RadPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
+<tr>
+<td>2023.1.315</td>
+<td>RadPdfProcessing</td>
+<td rowspan="2" ><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
+</tr>
+<tr>
+<td>2.1.6</td>
+<td>ImageSharp</td>
+</tr>
 </tbody>
 </table>
 
