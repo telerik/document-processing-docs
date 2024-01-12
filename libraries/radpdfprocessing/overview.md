@@ -28,6 +28,7 @@ The document model of the library provides support for:
 | [**Form XObjects**]({%slug radpdfprocessing-model-form%}) | The Form XObjects enables you to describe composite objects (consisting of text, images, vector elements, etc.) within a PDF file and reuse this content among the document, for smaller document size and better rendering performance. |
 | [**Interactive Forms**]({%slug radpdfprocessing-model-interactive-forms-overview%}) | Create and modify PDF files containing textboxes, buttons, listboxes and other interactive controls making available for the PDF file user to interactively fill some data in the PDF document and/or digitally sign the filled document. You can flatten the fields as well. |
 | [**Digital Signature**]({%slug radpdfprocessing-features-digital-signature%}) | The digital signature feature enables you to sign and validate PDF document (limited supportd in .NET Standard). |
+|[**Embedded File Streams**]({%slug radpdfprocessing-embedded-file-streams-overview%})|The embedding a file stream feature allows adding external files to the PDF document.|
 | [**Clipping**]({%slug radpdfprocessing-concepts-clipping%}) | You can define the outline of other content elements like images and paths. |
 | [**Bookmarks (Outlines)**]({%slug radpdfprocessing-features-bookmarks%}) | Add, remove or modify the bookmarks in a PDF document. |
 | [**Annotations**]({%slug radpdfprocessing-model-annotations-and-destinations%}) | Associate an object with a location on a page of the PDF document. |

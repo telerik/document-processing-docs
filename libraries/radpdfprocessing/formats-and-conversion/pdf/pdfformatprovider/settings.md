@@ -76,6 +76,30 @@ The event is fired when an owner password is needed to open the document. The pa
 
 {{endregion}}
 
+### DuplicatedEmbeddedFileNameResolving
+
+The event is fired when trying to resolve conflicts between the [embedded file names]({%slug radpdfprocessing-embedded-file-streams-overview%}) with the same names.
+
+#### **[C#] Example 3: Import settings with DuplicatedEmbeddedFileNameResolving**
+
+{{region cs-radpdfprocessing-formats-and-conversion-pdf-import_settings_3}}
+
+            PdfFormatProvider provider = new PdfFormatProvider();
+            PdfImportSettings importSettings = new PdfImportSettings();
+            importSettings.DuplicatedEmbeddedFileNameResolving += (s, a) =>
+            {
+                string myNewName = "2_" + a.Name;
+                if (!a.UsedNames.Contains(myNewName))
+                {
+                    a.NewName = myNewName;
+                }
+            };
+
+            provider.ImportSettings = importSettings;	
+
+{{endregion}}
+
+
 ## Export Settings
 
 In order to modify the way content is exported, you can set the __ExportSettings__ property of __PdfFormatProvider__. These are the modification options you can use:
@@ -127,10 +151,10 @@ This property specifies three types of user access permissions: **PrintingPermis
     * __TextAccess__: Specify that text access for screen reader devices for copying is allowed.
     * __NumberingFieldsPrecisionLevel__: Represents precision level when updating numbering fields. When the Normal option is selected the fields are updated once, not taking into account if their new values would have shifted the already measured layout. In such cases, the results could be outdated. This is the MS Word-like behavior. If you need more accurate results, use NumberingFieldsPrecisionLevel.High where the fields are updated until their values become more accurate. This precision level is more accurate than NumberingFieldsPrecisionLevel.Normal but requires more resources.
  
-__Example 3__ shows how you can create a __PdfExportSettings__ object with settings that specify an OwnerPassword and UserAccessPermissions.
+__Example 4__ shows how you can create a __PdfExportSettings__ object with settings that specify an OwnerPassword and UserAccessPermissions.
 
 
-#### __[C#] Example 3: Export settings__
+#### __[C#] Example 4: Export settings__
 
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
 
@@ -166,9 +190,9 @@ The **ImageQuality** property specifies the quality with which images are export
 * **ImageFilterTypes.FlateDecode:** The images will be encoded with a FlateDecode filter. Compresses data using the zlib/deflate compression method.
 * **ImageFilterTypes.DCTDecode:** The images will be encoded with a DCTDecode filter. Compresses data using a DCT (discrete cosine transform) technique based on the JPEG standard.
 
-__Example 4__ shows how you can create a __PdfExportSettings__ object with settings for the image properties.
+__Example 5__ shows how you can create a __PdfExportSettings__ object with settings for the image properties.
 
-#### __[C#] Example 4: Image settings__
+#### __[C#] Example 5: Image settings__
 
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_2}}
 
@@ -202,10 +226,10 @@ Specifies the PDF/A compliance level. It can have one of the following values:
 The default value is __None__. For more information on PDF/A compliance, check the [PDF/A Compliance article]({%slug radpdfprocessing-howto-comply-with-pdfa-standard%}).
 
 
-__Example 5__ shows how you can create a __PdfExportSettings__ object and assign it to a PdfFormatProvider.
+__Example 6__ shows how you can create a __PdfExportSettings__ object and assign it to a PdfFormatProvider.
         
 
-#### __[C#] Example 5: Export settings__
+#### __[C#] Example 6: Export settings__
 
 {{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_1}}
 	PdfFormatProvider provider = new PdfFormatProvider();
