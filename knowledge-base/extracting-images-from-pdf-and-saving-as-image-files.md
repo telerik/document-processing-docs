@@ -55,7 +55,7 @@ static void Main(string[] args)
 static int counter = 0;
 private static void SaveImageToFile(Image image, EncodedImageData encodedImageData)
 {
-    string outputDirectoryName = @"..\..\";
+    string outputDirectoryName = @"..\..\{sample folder here}";
     bool isTransperant = image.ImageSource.GetEncodedImageData().AlphaChannel != null;
     if (encodedImageData.Filters.Contains("DCTDecode") && !isTransperant)
     {
