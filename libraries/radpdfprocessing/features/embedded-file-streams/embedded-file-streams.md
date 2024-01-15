@@ -1,12 +1,12 @@
 ---
 title: Embedded File Streams
-page_title: Embedded File Streams
+page_title: Overview
 slug: radpdfprocessing-embedded-file-streams-overview
 tags: pdf, file, stream, embedded
 position: 0
 ---
 
-# Embedded File Streams
+# Embedded File Streams - Overview
 
 As of **2024 Q1** RadPdfProcessing allows embedding files streams into the document. Thus, the content of the referenced files is embedded directly within the body of the PDF file.
 
