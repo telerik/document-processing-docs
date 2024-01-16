@@ -16,9 +16,9 @@ This is the class representing a single bookmark inside the model of PdfProcessi
 
 * **IsExpanded**: Determines whether the bookmark item is open or closed by default. An item is open when its children are visible upon opening the document in a viewer.
 
-* **Action**: Gets the action to be performed when this bookmark item is activated. For more information on how to work with actions, check the [Action]({%slug radpdfprocessing-model-annotations-and-destinations%}#action) help topic.
+* **Action**: Gets the action to be performed when this bookmark item is activated. For more information on how to work with actions, check the [Action]({%slug radpdfprocessing-model-annotations-links%}#action) help topic.
 
-* **Destination**: Gets the destination to be displayed when this bookmark item is activated. For more information on how to work with destinations, check the [Destination]({%slug radpdfprocessing-model-annotations-and-destinations%}#destination) help topic.
+* **Destination**: Gets the destination to be displayed when this bookmark item is activated. For more information on how to work with destinations, check the [Destination]({%slug radpdfprocessing-model-annotations-links%}#destination) help topic.
 
 * **NamedDestination**: Gets the named destination to be displayed when this bookmark item is activated. Check the [Named Destinations]({%slug radpdfprocessing-model-named-destinations%}) topic for more details about these objects.
 
@@ -100,7 +100,7 @@ In case you need to iterate all the bookmarks in a document, keep in mind that e
 
 ## See Also
 
-* [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%})
+* [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
 * [Named Destinations]({%slug radpdfprocessing-model-named-destinations%})
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
 * [BookmarkItem API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Navigation.BookmarkItem.html)

@@ -45,7 +45,7 @@ All widgets have two type of content properties:
 
 ## Widget Class
 
-The Widget class is inheritor of [Annotation]({%slug radpdfprocessing-model-annotations-and-destinations%}) and is the base class for all widgets. It provides common properties for all widgets and has WidgetContentType property, which helps you to recognize the concrete widget type and cast the base class instance to get the concrete widget inheritor. 
+The Widget class is inheritor of [Annotation]({%slug radpdfprocessing-model-annotations-overview%}) and is the base class for all widgets. It provides common properties for all widgets and has WidgetContentType property, which helps you to recognize the concrete widget type and cast the base class instance to get the concrete widget inheritor. 
 
 All widgets are created using the Widgets collection of the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) class inheritors. Using the **AddWidget()** and **Remove()** methods, you can respectively add or remove a widget from the collection. As the widget collection implements the **IEnumerable** interface, you can iterate all the available in the FormField instance widgets.
 
@@ -72,7 +72,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 {{endregion}}
 
 
->The Widget class inherits from [Annotation]({%slug radpdfprocessing-model-annotations-and-destinations%}). It is important to add each annotation to the Annotations collection of RadFixedPage.
+>The Widget class inherits from [Annotation]({%slug radpdfprocessing-model-annotations-overview%}). It is important to add each annotation to the Annotations collection of RadFixedPage.
 
 
 ## Widget Properties
