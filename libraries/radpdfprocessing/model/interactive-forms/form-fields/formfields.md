@@ -141,7 +141,7 @@ When merging documents that contain FormFields you need to ensure that each fiel
 
 ## See Also
 
-* [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets %})
+* [Widgets]({%slug radpdfprocessing-model-annotations-widgets %})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 
