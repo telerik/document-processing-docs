@@ -1,5 +1,5 @@
 ---
-title: Embedded File Streams
+title: Overview
 page_title: Overview
 slug: radpdfprocessing-embedded-file-streams-overview
 tags: pdf, file, stream, embedded
