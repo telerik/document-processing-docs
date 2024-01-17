@@ -13,7 +13,7 @@ The abstract __Annotation__ element associates an object with a location on a [R
       
 * __Rect__: The rectangle, which defines the location of the annotation on the page.
           
-* __Type__: Property of type [AnnotationType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html), which determines the type of the annotation. The only supported types are [Link]({%radpdfprocessing-model-annotations-links%}) and [Widget]({%radpdfprocessing-model-annotations-widgets%}).
+* __Type__: Property of type [AnnotationType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html), which determines the type of the annotation. The only supported types are [Link]({%slug radpdfprocessing-model-annotations-links%}) and [Widget]({%slug radpdfprocessing-model-annotations-widgets%}).
           
 * **Border**: Represents the annotation borders. This property is of type [AnnotationBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationBorder.html).
 
