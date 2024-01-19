@@ -29,8 +29,8 @@ __RadFixedDocument__ is the root that contains all other elements in the __RadPd
         
 
 * __Pages__: The pages collection that contains all __RadFixedPages__ in the document.
-* __Annotations__: A read-only collection that contains all [Annotations]({%slug radpdfprocessing-model-annotations-and-destinations%}) in the document.
-* __Destinations__: A collection that contains all [Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%}) in the document.
+* __Annotations__: A read-only collection that contains all [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) in the document.
+* __Destinations__: A collection that contains all [Destinations]({%slug radpdfprocessing-model-annotations-links%}#destination) in the document.
 * __DocumentInfo__: Contains additional meta information about the document like author, title, etc. 
             
 
@@ -117,4 +117,4 @@ __RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocum
 * [RadFixedDocument API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.RadFixedDocument.html)
 * [Model]({%slug radpdfprocessing-model-general-information%})
 * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
-* [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%})
+* [Annotations]({%slug radpdfprocessing-model-annotations-overview%})

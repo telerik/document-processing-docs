@@ -29,7 +29,7 @@ RadioButtonField provides the following properties:
 
 * **DefaultValue**: Gets or sets the default selected option used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) is reset to its default values.
 
-* **Widgets**: The collection of Widget annotations, which represent the field on the PDF pages. Each Widget is of type  [RadioButtonWidget]({%slug radpdfprocessing-model-interactive-forms-widgets%}#radiobuttonwidget-class) and represents a single radio button option provided by the RadioButtonWidget’s **Option** property. The widgets are created using the collection **AddWidget()** method and can be removed by using the collection's **Remove()** method. As the widget collection implements  the IEnumerable interface, the available widget instances can be iterated.
+* **Widgets**: The collection of Widget annotations, which represent the field on the PDF pages. Each Widget is of type  [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets%}#radiobuttonwidget-class) and represents a single radio button option provided by the RadioButtonWidget’s **Option** property. The widgets are created using the collection **AddWidget()** method and can be removed by using the collection's **Remove()** method. As the widget collection implements  the IEnumerable interface, the available widget instances can be iterated.
 
 * **Options**: A RadioOptionCollection instance containing all available options for this field. In order to modify this collection, you can use its indexer property and its **Add()**, **RemoveAt()** and **Clear()** methods. Each RadioOption instance can be added only once to such a collection. If you try adding the same instance more than once in the collection, an exception will be thrown.
 
@@ -60,7 +60,7 @@ RadioButtonField provides the following properties:
 
 
 * [Form Field]({%slug radpdfprocessing-model-interactive-forms-form-fields %})
-* [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets %})
+* [Widgets]({%slug radpdfprocessing-model-annotations-widgets %})
 * [CheckBoxField Class]({%slug radpdfprocessing-model-interactive-forms-form-fields-checkboxfield%})
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 

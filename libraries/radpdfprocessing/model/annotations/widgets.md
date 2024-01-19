@@ -1,8 +1,8 @@
 ---
 title: Widgets 
 page_title: Widgets  
-slug: radpdfprocessing-model-interactive-forms-widgets 
-tags: widgets 
+slug: radpdfprocessing-model-annotations-widgets 
+tags: annotations,overview,pdfprocessing,widgets,widget 
 published: True
 position: 2
 ---
@@ -45,7 +45,7 @@ All widgets have two type of content properties:
 
 ## Widget Class
 
-The Widget class is inheritor of [Annotation]({%slug radpdfprocessing-model-annotations-and-destinations%}) and is the base class for all widgets. It provides common properties for all widgets and has WidgetContentType property, which helps you to recognize the concrete widget type and cast the base class instance to get the concrete widget inheritor. 
+The Widget class is inheritor of [Annotation]({%slug radpdfprocessing-model-annotations-overview%}) and is the base class for all widgets. It provides common properties for all widgets and has WidgetContentType property, which helps you to recognize the concrete widget type and cast the base class instance to get the concrete widget inheritor. 
 
 All widgets are created using the Widgets collection of the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) class inheritors. Using the **AddWidget()** and **Remove()** methods, you can respectively add or remove a widget from the collection. As the widget collection implements the **IEnumerable** interface, you can iterate all the available in the FormField instance widgets.
 
@@ -53,7 +53,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 
 #### **[C#] Example 1: Creating a widget**
 
-{{region radpdfprocessing-model-interactive-forms-widgets_0}}
+{{region radpdfprocessing-model-annotations-widgets_0}}
 	VariableContentWidget widget = textBoxField.Widgets.AddWidget();
 	widget.Rect = new Rect(100, 100, 20, 20);
 {{endregion}}
@@ -64,7 +64,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 
 #### **[C#] Example 2: Iterating the widgets in the FormField's collection**
 
-{{region radpdfprocessing-model-interactive-forms-widgets_1}}
+{{region radpdfprocessing-model-annotations-widgets_1}}
 	foreach (var widget in textBoxField.Widgets)
 	{
 	    document.Pages[0].Annotations.Add(widget);
@@ -72,7 +72,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 {{endregion}}
 
 
->The Widget class inherits from [Annotation]({%slug radpdfprocessing-model-annotations-and-destinations%}). It is important to add each annotation to the Annotations collection of RadFixedPage.
+>The Widget class inherits from [Annotation]({%slug radpdfprocessing-model-annotations-overview%}). It is important to add each annotation to the Annotations collection of RadFixedPage.
 
 
 ## Widget Properties
@@ -147,5 +147,5 @@ This class inherits the [TwoStatesButtonWidget](#twostatesbuttonwidget-class) cl
 
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
-* [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%})
+* [Annotations Overview]({%slug radpdfprocessing-model-annotations-overview%})
 * [FormSource]({%slug radpdfprocessing-model-formsource%})

@@ -1,37 +1,11 @@
 ---
-title: Annotations and Destinations
-page_title: Annotations and Destinations
-slug: radpdfprocessing-model-annotations-and-destinations
-tags: annotations,and,destinations
+title: Links
+page_title: Links
+slug: radpdfprocessing-model-annotations-links
+tags: annotations,overview,pdfprocessing,link,links
 published: True
-position: 9
+position: 1
 ---
-
-# Annotations and Destinations
-
-
-
-The abstract __Annotation__ element associates an object with a location on a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). Annotation exposes the following properties:
-      
-
-* __Rect__: The rectangle, which defines the location of the annotation on the page.
-          
-
-* __Type__: Property of type [AnnotationType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html), which determines the type of the annotation. The only supported type is __Link__.
-          
-* **Border**: Represents the annotation borders. This property is of type [AnnotationBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationBorder.html).
-
-* **IsPrintable**: A boolean value that indicates whether the annotation instance should be visualized when printing the document. When set to *false*, the annotation won't appear when the document is printed. 
-
-
-This article will get you familiar with the following concepts:
-      
-
-* [Link](#link)
-
-* [Destination](#destination)
-
-* [Action](#action)
 
 ## Link
 
@@ -46,7 +20,7 @@ __Link__ exposes the following properties:
 
 	#### __[C#] Example 1: Add link to destination__
 	
-	{{region cs-radpdfprocessing-model-annotations-and-destinations_0}}
+	{{region cs-radpdfprocessing-model-annotations-links_0}}
 		Link linkWithDestination = new Link(destination);
 		page.Annotations.Add(linkWithDestination);
 	{{endregion}}
@@ -60,7 +34,7 @@ __Link__ exposes the following properties:
 
 	#### __[C#] Example 2: Add link with action__
 	
-	{{region cs-radpdfprocessing-model-annotations-and-destinations_1}}
+	{{region cs-radpdfprocessing-model-annotations-links_1}}
 		Link linkWithAction = new Link(action);
 		page.Annotations.Add(linkWithAction);
 	{{endregion}}
@@ -112,7 +86,7 @@ __Example 3__ shows how you can create a Location object, associate it with a Li
 
 #### __[C#] Example 3: Add link with location__
 
-{{region cs-radpdfprocessing-model-annotations-and-destinations_2}}
+{{region cs-radpdfprocessing-model-annotations-links_2}}
 	Location location = new Location();
 	location.Left = 225;
 	location.Top = 500;
@@ -148,7 +122,7 @@ __Example 4__ demonstrates how to create an action of type __GoToAction__, assoc
 
 #### __[C#] Example 4: Add link with action__
 
-{{region cs-radpdfprocessing-model-annotations-and-destinations_3}}
+{{region cs-radpdfprocessing-model-annotations-links_3}}
 	GoToAction goToAction = new GoToAction();
 	goToAction.Destination = location;
 	
@@ -162,10 +136,9 @@ __Example 4__ demonstrates how to create an action of type __GoToAction__, assoc
 	uriLink.Rect = new Rect(70, 10, 50, 50);
 {{endregion}}
 
-
-
 ## See Also
 
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [AnnotationType API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html)
  * [Link API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html)
+

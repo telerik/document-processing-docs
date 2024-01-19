@@ -30,7 +30,7 @@ __RadFixedPage__ exposes the following properties:
         
 
 * __Content__: The content elements collection.
-* __Annotations__: Collection that contains all [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%}) in the RadFixedPage.
+* __Annotations__: Collection that contains all [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) in the RadFixedPage.
 * __MediaBox__: Defines the boundaries of the physical medium on which the page will be printed. Any content falling outside this boundary is discarded without affecting the meaning of the PDF file. 
 * __CropBox__: Defines the region to which the contents of the page are clipped (cropped) when displayed or printed. This boundary determines the visible page content. The default value is the page’s media box. 
 * __Size__: Property of type Size representing the size of the page. Its value is determined by the width and height of the **MediaBox**.
@@ -92,7 +92,7 @@ __Example 3__ shows how to add a previously created annotation in a __RadFixedPa
 
 
 
-The other possible approach is using the __AddLink()__ method of the __Annotations__ property. The method creates the link, adds it to the page and returns it. More information on the topic is available in the [Annotation]({%slug radpdfprocessing-model-annotations-and-destinations%}) article.
+The other possible approach is using the __AddLink()__ method of the __Annotations__ property. The method creates the link, adds it to the page and returns it. More information on the topic is available in the [Annotation]({%slug radpdfprocessing-model-annotations-links%}) article.
             
 
 ### Modifying Properties
@@ -117,4 +117,4 @@ __Example 4__ shows how you can change the __Rotation__ and __Size__ properties 
 
  * [Model]({%slug radpdfprocessing-model-general-information%})
  * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
- * [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%})
+ * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})

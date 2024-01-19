@@ -222,6 +222,9 @@ navigation:
     libraries/radpdfprocessing/concepts:
         title: Concepts
         position: 5		
+    libraries/radpdfprocessing/model/annotations:
+        title: Annotations
+        position: 7  
 ## RadZipLibrary Start
     "*radziplibrary":
         title: RadZipLibrary

@@ -10,7 +10,7 @@ position: 0
 
 # Interactive Forms concept
 
-The interactive forms feature (also known as AcroForm) allows you to create PDF files containing textboxes, buttons, listboxes and other interactive controls enabling the PDF file user to interactively fill some data in the PDF document and/or digitally sign the filled document. The responsibilities for preserving this data and interactively modifying it are separated into two base concepts – [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) and [Widget Annotations]({%slug radpdfprocessing-model-interactive-forms-widgets%}).
+The interactive forms feature (also known as AcroForm) allows you to create PDF files containing textboxes, buttons, listboxes and other interactive controls enabling the PDF file user to interactively fill some data in the PDF document and/or digitally sign the filled document. The responsibilities for preserving this data and interactively modifying it are separated into two base concepts – [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) and [Widget Annotations]({%slug radpdfprocessing-model-annotations-widgets%}).
 
 #### Interactive Forms in a PDF document
 ![Interactive forms in a PDF document](images/InteractiveForms_0.png)
@@ -32,5 +32,5 @@ Widget annotations are used in order to visualize the Form Fields data on the PD
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
-* [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets%})
-* [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%})
+* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
+* [Annotations]({%slug radpdfprocessing-model-annotations-overview%})

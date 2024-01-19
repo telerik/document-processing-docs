@@ -30,8 +30,8 @@ The document model of the library provides support for:
 | [**Digital Signature**]({%slug radpdfprocessing-features-digital-signature%}) | The digital signature feature enables you to sign and validate PDF document (limited supportd in .NET Standard). |
 | [**Clipping**]({%slug radpdfprocessing-concepts-clipping%}) | You can define the outline of other content elements like images and paths. |
 | [**Bookmarks (Outlines)**]({%slug radpdfprocessing-features-bookmarks%}) | Add, remove or modify the bookmarks in a PDF document. |
-| [**Annotations**]({%slug radpdfprocessing-model-annotations-and-destinations%}) | Associate an object with a location on a page of the PDF document. |
-| [**Destinations**]({%slug radpdfprocessing-model-annotations-and-destinations%}) | Defines a particular view of a document.|
+| [**Annotations**]({%slug radpdfprocessing-model-annotations-overview%}) | Associate an object with a location on a page of the PDF document. |
+| [**Destinations**]({%slug radpdfprocessing-model-annotations-links%}#destination) | Defines a particular view of a document.|
 | [**Colors and Color Spaces**]({%slug radpdfprocessing-concepts-colors-and-color-spaces%}) | Support for different types of both. |
 | [**Fonts**]({%slug radpdfprocessing-concepts-fonts%}) | Support for the standard PDF fonts, Type0, Type1, Type 3, CIDFontType2, TrueType and more. |
 | [**Text and Graphic properties**]({%slug radpdfprocessing-editing-text-and-graphic-properties%}) | Provide options for changing the properties of the different elements in the document elements so you can achieve a unique look. |

@@ -17,7 +17,7 @@ This article describes the following topics:
 
 ## Overview
 
-This class corresponds to FormFieldType.PushButton enum value and represents a simple button that may be clicked with the mouse. This is the only field that does not preserve any data. It is usually used to execute some action on mouse click. For the supported by PdfProcessing actions, check the [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%}#action) help topic.
+This class corresponds to FormFieldType.PushButton enum value and represents a simple button that may be clicked with the mouse. This is the only field that does not preserve any data. It is usually used to execute some action on mouse click. For the supported by PdfProcessing actions, check the [Links]({%slug radpdfprocessing-model-annotations-links%}#action) help topic.
 
 ## Properties
 
@@ -47,6 +47,6 @@ PushButtonField provides a single property called **Widgets**. It represents the
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
-* [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets%})
+* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 

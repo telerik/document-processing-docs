@@ -35,7 +35,7 @@ This article describes how to import PDF documents, merge them, and create a Tab
 The following code snippets shows how to:
 	1. Import two PDF documents into [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) instances using the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%});
 	2. Merge them into a single RadFixedDocument using the RadFixedDocument`s _Merge()_ method;
-	3. Create a Table of Contents (TOC) using [Link]({%slug radpdfprocessing-model-annotations-and-destinations%}#link) annotations pointing to the merged document pages;
+	3. Create a Table of Contents (TOC) using [Link]({%slug radpdfprocessing-model-annotations-links%}#link) annotations pointing to the merged document pages;
 	4. Export the merged document to a single PDF file.
 
 #### __[C#] Example__

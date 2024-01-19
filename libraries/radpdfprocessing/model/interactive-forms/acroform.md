@@ -25,11 +25,11 @@ The AcroForm class provides the following properties:
 	>Each FormField has a **unique name** in this collection and you cannot add two fields with the same name.
 
 
-* **ViewersShouldRecalculateWidgetAppearances**: A boolean value indicating whether the [Widget]({%slug radpdfprocessing-model-interactive-forms-widgets%}) appearances should be recalculated before visualizing them in a PDF viewer. If true, the PDF viewers should dynamically reconstruct all widgets content based on widget text properties and appearance characteristics. Otherwise, the PDF viewer should rely on the AnnotationContentSource instances provided by each [Widget]({%slug radpdfprocessing-model-interactive-forms-widgets%}) annotation in order to render its content in the UI.
+* **ViewersShouldRecalculateWidgetAppearances**: A boolean value indicating whether the [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) appearances should be recalculated before visualizing them in a PDF viewer. If true, the PDF viewers should dynamically reconstruct all widgets content based on widget text properties and appearance characteristics. Otherwise, the PDF viewer should rely on the AnnotationContentSource instances provided by each [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) annotation in order to render its content in the UI.
 
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [FormFieldCollection class]({%slug radpdfprocessing-model-interactive-forms-formfieldcollection%})
-* [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets%})
+* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 

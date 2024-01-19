@@ -56,25 +56,25 @@ These properties are as follows:
 
 ## DynamicAppearanceCharacteristics Class
 
-This class is used by [VariableContentWidget]({%slug radpdfprocessing-model-interactive-forms-widgets %}#variablecontentwidget-class) and [SignatureWidget]({%slug radpdfprocessing-model-interactive-forms-widgets %}#signaturewidget-class) classes in order to specify the dynamic construction of widget geometry representation. It provides the following properties:
+This class is used by [VariableContentWidget]({%slug radpdfprocessing-model-annotations-widgets %}#variablecontentwidget-class) and [SignatureWidget]({%slug radpdfprocessing-model-annotations-widgets  %}#signaturewidget-class) classes in order to specify the dynamic construction of widget geometry representation. It provides the following properties:
 
 * **Rotation**: Gets or sets the rotation of the widget content.
 
-* **BorderColor**: Gets or sets the color of the Widget rectangle border. If null then no border is drawn.
+* **BorderColor**: Gets or sets the color of the Widget rectangle border. If null then no border is drawn. Takes effect only if an [AnnotationBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationBorder.html) instance is set to the Border property of the widget.
 
 * **Background**: Gets or sets the color of the Widget rectangle background. If null then no background is drawn.
 
 
 ### ButtonAppearanceCharacteristics Class
 
-This class inherits DynamicAppearanceChanacteristics and is used by [TwoStateButtonWidget]({%slug radpdfprocessing-model-interactive-forms-widgets %}#twostatebuttonwidget-class) and [RadioButtonWidget]({%slug radpdfprocessing-model-interactive-forms-widgets %}#radiobuttonwidget-class) for dynamically constructing button appearances. It adds the following property to its parent class implementation:
+This class inherits DynamicAppearanceChanacteristics and is used by [TwoStateButtonWidget]({%slug radpdfprocessing-model-annotations-widgets  %}#twostatebuttonwidget-class) and [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets  %}#radiobuttonwidget-class) for dynamically constructing button appearances. It adds the following property to its parent class implementation:
 
 * **NormalCaption**: The text drawn when the mouse is not interacting with the button.
 
 
 ### PushButtonAppearanceCharacteristics Class
 
-This class inherits ButtonAppearanceCharacteristics and is used by [PushButtonWidget]({%slug radpdfprocessing-model-interactive-forms-widgets %}#pushbuttonwidget-class) for dynamically constructing button appearances. It adds the following properties to its parent class implementation:
+This class inherits ButtonAppearanceCharacteristics and is used by [PushButtonWidget]({%slug radpdfprocessing-model-annotations-widgets %}#pushbuttonwidget-class) for dynamically constructing button appearances. It adds the following properties to its parent class implementation:
 
 * **MouseOverCaption**: The text drawn when the mouse is over the button.
 
@@ -93,6 +93,6 @@ This class inherits ButtonAppearanceCharacteristics and is used by [PushButtonWi
 
 ## See Also
 
-* [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets %})
+* [Widgets]({%slug radpdfprocessing-model-annotations-widgets %})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
 * [FormSource]({%slug radpdfprocessing-model-formsource%})

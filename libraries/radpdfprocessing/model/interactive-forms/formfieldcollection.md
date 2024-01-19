@@ -67,5 +67,5 @@ You can also use several more methods of the class to modify the collection of f
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
-* [Widgets]({%slug radpdfprocessing-model-interactive-forms-widgets%})
+* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})

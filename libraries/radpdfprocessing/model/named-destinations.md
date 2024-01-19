@@ -74,5 +74,5 @@ The **NamedDestinations** collection provides you with the ContainsName() method
 
 ## See Also 
 
-* [Annotations and Destinations]({%slug radpdfprocessing-model-annotations-and-destinations%})
+* [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
