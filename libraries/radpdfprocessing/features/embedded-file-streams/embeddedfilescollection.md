@@ -23,7 +23,7 @@ This class holds a collection of **EmbeddedFile** instances, assigned to the **E
 |----|----| 
 |**GetEnumerator**|Returns an enumerator that iterates through the collection.|
 |**Remove(string name)**|Removes the embedded file with the specified name from the collection.|
-|**Rename(string oldName, string newName)**|Renames a named embedded file in the collection.|
+|**Rename(string oldName, string newName)**|Rename an embedded file in the collection.|
 |**Add(string name, byte[] data)**|Adds a named embedded file with the specified name and value to the collection and returns it.|
 |**ContainsName(string name)**|Determines whether the collection contains the specified name.|
-|**Clear**|Removes all named destination from the collection.| 
+|**Clear**|Removes all embedded files from the collection.| 
