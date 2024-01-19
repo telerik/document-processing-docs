@@ -12,7 +12,7 @@ As of **2024 Q1** RadPdfProcessing allows embedding files streams into the docum
 
 ## The EmbeddedFile Class
 
-RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** accessed by the **EmbeddedFiles** property. Each **EmbeddedFile** contains **Name** (string) and **Data** (byte[]) properties. The specified Name represents the textual description of the embedded file, which can be displayed in the user interface of a viewer application.  The Data stores the byte[] of the file stream. 
+RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** accessed by the **EmbeddedFiles** property. Each **EmbeddedFile** contains **Name** (string) and **Data** (byte[]) properties. The specified Name should be unique and it represents the textual description of the embedded file, which can be displayed in the user interface of a viewer application. The Data stores the byte[] of the file stream. 
 
 >important The Name for the EmbeddedFile should contain the file extension as well, e.g. *MySampleTextFile.txt*.
  
@@ -33,7 +33,7 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 #### Attachments section in Adobe 
 ![Embedded Files in a PDF document](images/embedded_files_0.png)
 
->caution **DuplicatedEmbeddedFileNameException** is thrown when adding an embedded file with a name which is already added to the collection.
+>caution **DuplicatedEmbeddedFileNameException** is thrown when adding an embedded file with a name that is already added to the collection.
 
 ### Using the MergedEmbeddedFileNameResolving event
 
