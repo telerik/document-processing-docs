@@ -16,13 +16,13 @@ res_type: kb
 | 2023.3.1106 | RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|
 
 ## Description
-When using the **PdfFormatProvider** in your project, you may encounter the following [Compiler Error CS0104](https://learn.microsoft.com/en-us/dotnet/csharp/misc/cs0104?f1url=%3FappId%3Droslyn%26k%3Dk(CS0104)) messages during the application build:
+When using the **PdfFormatProvider** in your project, you may encounter one of the following [Compiler Error CS0104](https://learn.microsoft.com/en-us/dotnet/csharp/misc/cs0104?f1url=%3FappId%3Droslyn%26k%3Dk(CS0104)) messages during the application build:
 
-- 'PdfFormatProvider' is an ambiguous reference between 'Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider' and 'Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider'
+- **'PdfFormatProvider' is an ambiguous reference between 'Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider' and 'Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider'**
 
-- 'PdfFormatProvider' is an ambiguous reference between 'Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider' and 'Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider'
+- **'PdfFormatProvider' is an ambiguous reference between 'Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider' and 'Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider'**
 
-Usually, such an error may occur when the following using statements are imported:
+Usually, such an error may occur when the following **using** statements are imported:
 
 ```csharp
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
@@ -55,7 +55,7 @@ Explicitly specify the namespace when declaring the **PdfFormatProvider** object
      Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider();
      ```
 
-By explicitly specifying the namespace, you ensure that the correct `PdfFormatProvider` is used and avoid the ambiguous reference error.
+By explicitly specifying the namespace, you ensure that the correct `PdfFormatProvider` is used and avoid ambiguous reference errors.
 
 ## See Also
 * [Using PdfFormatProvider in RadWordsProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/pdf/pdfformatprovider) 
