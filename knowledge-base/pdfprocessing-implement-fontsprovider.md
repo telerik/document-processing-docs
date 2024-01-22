@@ -1,6 +1,6 @@
 ---
 title: How to implement FontsProvider
-description:  How to implement FontsProvider in .NET Standard due to font limitations in PdfProcessing.
+description: How to implement FontsProvider in .NET Standard due to font limitations in PdfProcessing.
 type: how-to 
 page_title:  Implement FontsProvider
 slug: pdfprocessing-implement-fontsprovider
@@ -17,13 +17,13 @@ res_type: kb
  
 This article describes how to implement a **FontsProvider** in .NET Standard due to font limitations in [PdfProcessing]({%radpdfprocessing-overview%}). 
 
-[PdfProcessing]({%radpdfprocessing-overview%}) needs to have access to the font data so that it can read it and add it to the PDF file. The .NET Standard version of the library does not offer a default mechanism to to do that which is why, to allow the library to create and use fonts, an implementation of the **FontsProviderBase** abstract class needs to be provided and set to the **FontsProvider** property of the **FixedExtensibilityManager**.
+[PdfProcessing]({%radpdfprocessing-overview%}) needs to have access to the font data so that it can read it and add it to the PDF file. The .NET Standard version of the library does not offer a default mechanism to do that which is why, to allow the library to create and use fonts, an implementation of the **FontsProviderBase** abstract class needs to be provided and set to the **FontsProvider** property of the **FixedExtensibilityManager**.
 
 ## Solution
 
 You must know the fonts the PDF file contains beforehand. Then all fonts must be manually added to the implementation in a similar pattern in order to obtain each font file. Through validation the corresponding font files are extracted.
 
-In the validation each font name (FontFamilyName) must be explicitly specified (e.g. "Calibri", "Century Gothic") along with the different font styles (e.g. "Italic", "Bold", "Bold Italic"). Depending on the combination of the font name and font properties a correspnonding font file is obtainded. The font file names must also be manually specified and known beforehand because each font has a different naming convetion which cannot be predicted or automated (e.g. "calibri**z** - gothic**bi**" - both used for the Bold Italic style).
+In the validation each font name (FontFamilyName) must be explicitly specified (e.g. "Calibri", "Century Gothic") along with the different font styles (e.g. "Italic", "Bold", "Bold Italic"). Depending on the combination of the font name and font properties a corresponding font file is obtainded. The font file names must also be manually specified and known beforehand because each font has a different naming convention which cannot be predicted or automated (e.g. "calibri**z** - gothic**bi**" - both used for the Bold Italic style).
 
 >important If the **FontsProvider** property is not set, a default font will be used when exporting the document.
 
