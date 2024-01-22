@@ -41,19 +41,19 @@ In the validation each font name (FontFamilyName) must be explicitly specified (
         	{
 	            if (fontProperties.FontStyle == FontStyles.Italic && fontProperties.FontWeight == FontWeights.Bold)
             	{
-	                fontFileName = $"{fontProperties.FontFamilyName}z.ttf";
+	                fontFileName = $"calibriz.ttf";
             	}
             	else if (fontProperties.FontStyle == FontStyles.Italic)
             	{
-	                fontFileName = $"{fontProperties.FontFamilyName}i.ttf";
+	                fontFileName = $"calibrii.ttf";
             	}
             	else if (fontProperties.FontWeight == FontWeights.Normal)
             	{
-	                fontFileName = fontProperties.FontFamilyName + ".ttf";
+	                fontFileName = "calibri.ttf";
             	}
             	else if (fontProperties.FontWeight == FontWeights.Bold)
             	{
-	                fontFileName = $"{fontProperties.FontFamilyName}b.ttf";
+	                fontFileName = $"calibrib.ttf";
             	}
         	}
 
@@ -88,7 +88,7 @@ In the validation each font name (FontFamilyName) must be explicitly specified (
         	//...add more fonts if needed...
 
         	DirectoryInfo directory = new DirectoryInfo(fontFolder);
-        	FileInfo[] fontFiles = directory.GetFiles("*.ttf");
+        	FileInfo[] fontFiles = directory.GetFiles();
 
         	var fontFile = fontFiles.FirstOrDefault(f => f.Name.Equals(fontFileName, StringComparison.InvariantCultureIgnoreCase));
         	if (fontFile != null)
