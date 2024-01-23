@@ -15,9 +15,9 @@ res_type: kb
 
 ## Description
  
-This article describes how to implement a **FontsProvider** in .NET Standard due to font limitations in [PdfProcessing]({%radpdfprocessing-overview%}). 
+This article describes how to implement a **FontsProvider** in .NET Standard due to font limitations in [PdfProcessing]({%slug radpdfprocessing-overview%}). 
 
-[PdfProcessing]({%radpdfprocessing-overview%}) needs to have access to the font data so that it can read it and add it to the PDF file. The .NET Standard version of the library does not offer a default mechanism to do that which is why, to allow the library to create and use fonts, an implementation of the **FontsProviderBase** abstract class needs to be provided and set to the **FontsProvider** property of the **FixedExtensibilityManager**.
+[PdfProcessing]({%slug radpdfprocessing-overview%}) needs to have access to the font data so that it can read it and add it to the PDF file. The .NET Standard version of the library does not offer a default mechanism to do that which is why, to allow the library to create and use fonts, an implementation of the **FontsProviderBase** abstract class needs to be provided and set to the **FontsProvider** property of the **FixedExtensibilityManager**.
 
 ## Solution
 
