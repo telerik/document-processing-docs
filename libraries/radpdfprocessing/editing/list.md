@@ -52,6 +52,8 @@ On the following image you may see the available list template types and how the
 #### Figure 2
 ![](images/RadPdfProcessing_Editing_List_02.png)
 
+>In .NET Standard due to font limitations, the **BulletDefault** list requires a Wingdings font be provided so its bullets are rendered properly. You can read how to handle these retrictions in the [Fonts]({%radpdfprocessing-cross-platform-fonts%}) and [FontsProvider]({%pdfprocessing-implement-fontsprovider%}) articles.
+
 ## Creating Custom ListLevel
 
 

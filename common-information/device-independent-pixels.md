@@ -9,11 +9,11 @@ tags: dip, dips, device, independent, pixels, measurement, unit, SpreadProcessin
 ---
 # Device Independent Pixels
 
-[Device Independent Pixels](https://en.wikipedia.org/wiki/Device-independent_pixel) (DIPs) is a unit type used in the Document Processing libraries in the following cases:
+[Device Independent Pixels](https://en.wikipedia.org/wiki/Device-independent_pixel) (DIPs) is a unit type used in the [Document Processing libraries]({%slug introduction%}) in the following cases:
 
-* SpreadProcessing - setting the width of the columns and the height of the rows.
-* PdfProcessing - setting the FontSize of TextFragment or TextProperties.
-* WordsProcessing - setting the FontSize of a Run.
+* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) - setting the width of the columns and the height of the rows.
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%}) - setting the FontSize of TextFragment or TextProperties.
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%}) - setting the FontSize of a Run.
 
 ### UnitHelper class
 
