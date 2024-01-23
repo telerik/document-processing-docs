@@ -3,7 +3,7 @@ title: Resolving Compiler Ambiguous Reference Error CS0104 with PdfFormatProvide
 description: Learn how to resolve the ambiguous reference error (Compiler Error CS0104) when using PdfFormatProvider.
 type: troubleshooting
 page_title: Compiler Error CS0104 with PdfFormatProvider
-slug: cs0104-error-pdf-format-provider-winforms
+slug: cs0104-error-pdf-format-provider
 tags: troubleshooting, PdfFormatProvider, Compiler Error, CS0104,  ambiguous, reference
 res_type: kb
 
