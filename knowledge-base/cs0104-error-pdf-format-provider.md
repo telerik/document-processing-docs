@@ -37,7 +37,7 @@ Telerik Document Processing Libraries offer PdfFormatProvider which makes it eas
 
 * [RadWordsProcessing]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}): The PdfFormatProvider class of RadWordsProcessing is located in the Telerik.Windows.Documents.Flow.FormatProviders.Pdf namespace. RadFlowDocument supports only the export option to PDF format. Importing a PDF document to RadFlowDocument is not supported.
 
-* [RadSpreadProcessing]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}): The PdfFormatProvider class of RadSpreadProcessing is located in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf namespace.
+* [RadSpreadProcessing]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}): The PdfFormatProvider class of RadSpreadProcessing is located in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf namespace. The Workbook supports only the export to PDF format. Importing a PDF document to Workbook is not supported.
 
 * [RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}): The PdfFormatProvider class of RadPdfProcessing is located in the Telerik.Windows.Documents.Fixed.FormatProviders.Pdf namespace.
 
