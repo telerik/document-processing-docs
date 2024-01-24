@@ -67,7 +67,7 @@ RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedi
 
 >note Only a single XML invoice attachment is allowed according to ZUGFeRD standard.
 
->caution To comply with the PDF/A-3B standard all the fonts in the documents should be embedded, so please avoid using [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) because they are not being embedded in the document. 
+>important To comply with the PDF/A-3B standard all the fonts in the documents should be embedded, so please avoid using [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) because they are not being embedded in the document. 
 
 #### **[C#] Remove ZUGFeRD invoice**
 
