@@ -32,7 +32,7 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 
 {{endregion}}
 
->caution **DuplicatedEmbeddedFileNameException** is thrown when adding an embedded file with a name that is already added to the collection.
+>important **DuplicatedEmbeddedFileNameException** is thrown when adding an embedded file with a name that is already added to the collection.
 
 #### Attachments section in Adobe 
 ![Embedded Files in a PDF document](images/embedded_files_0.png)
@@ -49,15 +49,14 @@ RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedi
             using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
             {
                 editor.CharacterProperties.TrySetFont(new System.Windows.Media.FontFamily("Calibri"));
-                editor.InsertRun("Hello PDF/A");
+                editor.InsertRun("PDF/A-3B Complaint Invoice");
             };
-            byte[] bytes = File.ReadAllBytes(@"..\..\zugferd-invoice.xml");
+            byte[] bytes = File.ReadAllBytes(@"zugferd-invoice.xml");
             document.EmbeddedFiles.AddZugferdInvoice(bytes);
 
             PdfFormatProvider provider = new PdfFormatProvider();
             PdfExportSettings settings = new PdfExportSettings();
             settings.ComplianceLevel = PdfComplianceLevel.PdfA3B;
-            settings.ShouldEmbedFonts = true;
             provider.ExportSettings = settings; 
             using (Stream output = File.OpenWrite("exportedInvoice.pdf"))
             { 
@@ -66,9 +65,9 @@ RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedi
 
 {{endregion}}
 
->note Only a single XML invoice attachment is allowed in ZUGFeRD.
+>note Only a single XML invoice attachment is allowed according to ZUGFeRD standard.
 
->caution Please avoid using [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) because they are not being embedded in the document. 
+>caution To comply with the PDF/A-3B standard all the fonts in the documents should be embedded, so please avoid using [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) because they are not being embedded in the document. 
 
 #### **[C#] Remove ZUGFeRD invoice**
 
