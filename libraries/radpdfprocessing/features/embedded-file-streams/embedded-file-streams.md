@@ -16,7 +16,7 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 
 >important The Name for the EmbeddedFile should contain the file extension as well, e.g. *MySampleTextFile.txt*.
  
-#### **[C#] Example 1: Creating an embedded file stream**
+#### **[C#] Creating an embedded file stream**
 
 {{region cs-radpdfprocessing-embedded-file-streams_creating_1}}
 
@@ -29,6 +29,32 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 
 
 {{endregion}}
+
+>note RadPdfProcessing  provides support for embedding of [ZUGFeRD](https://de.wikipedia.org/wiki/ZUGFeRD) (acronym for Zentraler User Guide des Forums elektronische Rechnung Deutschland) invoices.
+
+#### **[C#] Add ZUGFeRD invoide**
+
+{{region cs-radpdfprocessing-embedded-file-add-zugferd-invoice}}
+
+byte[] bytes = File.ReadAllBytes(@"..\zugferd-invoice.xml");
+document.EmbeddedFiles.AddZugferdInvoice(bytes);
+
+{{endregion}}
+
+>caution [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) should be embedded in the document.
+
+#### **[C#] Remove ZUGFeRD invoice**
+
+{{region cs-radpdfprocessing-embedded-file-remove-zugferd-invoice}}
+
+            bool result = document.EmbeddedFiles.ContainsZugferdInvoice;
+            document.EmbeddedFiles.RemoveZugferdInvoice();
+
+{{endregion}}
+
+>note Only a single XML invoice attachment is allowed in ZUGFeRD.
+
+Exporting embedded files with invoices should be with [ComplianceLevel](%slug radpdfprocessing-howto-comply-with-pdfa-standard%) set to PDF/A-3.
 
 #### Attachments section in Adobe 
 ![Embedded Files in a PDF document](images/embedded_files_0.png)
@@ -45,7 +71,7 @@ The **MergedEmbeddedFileNameResolving** event occurs when trying to resolve conf
 |**NewName**|Gets or sets the new embedded file name.|
 |**UsedNames**|Gets the names that are already used for embedded files in the same RadFixedDocument.|
 
-#### **[C#] Example 2: Resolving Duplicated Names**
+#### **[C#] Resolving Duplicated Names**
 
 {{region cs-radpdfprocessing-embedded-file-streams_resolving_2}}
 
