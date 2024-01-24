@@ -54,7 +54,7 @@ The code snippet from __Example 1__ demonstrates how to open existing Zip archiv
 	            
 	using (Stream stream = File.Open("test.zip", FileMode.Open))
 	{
-	    using (ZipArchive archive = new ZipArchive(stream))
+	    using (ZipArchive = ZipArchive.Create(stream))
 	    {
 	        // Display the list of the files in the selected zip file using the ZipArchive.Entries property.
 	    }
@@ -67,7 +67,7 @@ The code snippet from __Example 1__ demonstrates how to open existing Zip archiv
 
 {{region vb-radziplibrary-gettingstarted_0}}
 	Using stream As Stream = File.Open("test.zip", FileMode.Open)
-	    Using archive As New ZipArchive(stream)
+	    Using archive As ZipArchive = ZipArchive.Create(stream)
 	        ' Display the list of the files in the selected zip file using the ZipArchive.Entries property.
 	    End Using
 	End Using
@@ -88,7 +88,7 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
 	    
 	using (Stream stream = File.Open("test.zip", FileMode.Create))
 	{
-	    using (ZipArchive archive = new ZipArchive(stream, ZipArchiveMode.Create, false, null))
+	    using (ZipArchive archive = ZipArchive.Create(stream, null))
 	    {
 	        using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
 	        {
@@ -106,7 +106,7 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
 
 {{region vb-radziplibrary-gettingstarted_1}}
 	Using stream As Stream = File.Open("test.zip", FileMode.Create)
-	    Using archive As New ZipArchive(stream, ZipArchiveMode.Create, False, Nothing)
+	    Using archive As ZipArchive = ZipArchive.Create(stream, Nothing)
 	        Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
 	            Dim writer As New StreamWriter(entry.Open())
 	            writer.WriteLine("Hello world!")
@@ -132,7 +132,7 @@ The constructor of ZipArchive lets you specify whether you would like to keep th
     Stream memoryStream = new MemoryStream();
 
     // The third parameter of ZipArchive's constructor specifies that the stream should be left open 
-    using (ZipArchive archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true, null))
+    using (ZipArchive archive = ZipArchive.Create(memoryStream, null))
     {
         using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
         {

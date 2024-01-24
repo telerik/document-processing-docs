@@ -9,16 +9,11 @@ position: 0
 
 # Update ZipArchive
 
-
-
 With __RadZipLibrary__ you can update existing ZIP archive in order to add new entries to it, delete or update existing ones.
       
+The __ZipArchive__ class provides three modes: *Read*, *Create* and *Update*. More information on creating and reading an archive is available [here]({%slug radziplibrary-gettingstarted%}).     
 
-The __ZipArchive__ class provides three modes: *Read*, *Create* and *Update*. More information on creating and reading an archive is available [here]({%slug radziplibrary-gettingstarted%}).
-      
-
-The code snippet from __Example 1__ opens a ZIP archive in update mode using __ZipArchive__ class.
-      
+The code snippet from __Example 1__ opens a ZIP archive in update mode using __ZipArchive__ class.    
 
 #### __[C#] Example 1: Open for update__
 
@@ -26,20 +21,18 @@ The code snippet from __Example 1__ opens a ZIP archive in update mode using __Z
 	            
 	using (Stream stream = File.Open("test.zip", FileMode.Open))
 	{
-	    using (ZipArchive archive = new ZipArchive(stream, ZipArchiveMode.Update, false, null))
+	    using (ZipArchive archive = ZipArchive.Update(stream, null))
 	    {
 	        // Display the list of the files in the selected zip file using the ZipArchive.Entries property.
 	    }
 	}
 {{endregion}}
 
-
-
 #### __[VB.NET] Example 1: Open for update__
 
 {{region vb-radziplibrary-update-ziparchive_0}}
 	Using stream As Stream = File.Open("test.zip", FileMode.Open)
-	    Using archive As New ZipArchive(stream, ZipArchiveMode.Update, False, Nothing)
+	    Using archive As ZipArchive = ZipArchive.Update(stream, Nothing)
 	        ' Display the list of the files in the selected zip file using the ZipArchive.Entries property.
 	    End Using
 	End Using
@@ -51,7 +44,6 @@ The code snippet from __Example 1__ opens a ZIP archive in update mode using __Z
 
 In order to add a new entry into the ZIP archive, you should perform the following steps:
         
-
 1. Use __CreateEntry()__ method of the __ZipArchive__ object to create a new entry.
             
 
