@@ -73,8 +73,10 @@ RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedi
 
 {{region cs-radpdfprocessing-embedded-file-remove-zugferd-invoice}}
 
-            bool result = document.EmbeddedFiles.ContainsZugferdInvoice;
-            document.EmbeddedFiles.RemoveZugferdInvoice();
+            if (document.EmbeddedFiles.ContainsZugferdInvoice)
+            {
+                document.EmbeddedFiles.RemoveZugferdInvoice();
+            }
 
 {{endregion}}
 
