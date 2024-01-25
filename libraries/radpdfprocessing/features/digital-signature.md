@@ -54,7 +54,7 @@ In addition, to create a signature, which has a visual representation, you must 
 >important When exporting a digitally signed document a stream that allows both reading and writing should be passed otherwise an exception is thrown: NotSupportedException: 'Stream does not support reading.'
 
 
-**Example 3** shows the full code for simple signing of a document.
+**Example 3** shows the full code for a simple signing of a document.
 
 #### **[C#] Example 3: Sign a document**
 
@@ -88,7 +88,7 @@ In addition, to create a signature, which has a visual representation, you must 
 	widget.Content.NormalContentSource = form.FormSource;
 	widget.RecalculateContent();
 	
-	// The Widget class inherits from Annotation. And, as any other annotation, must be added to the respective collection of the page. 
+	// The Widget class inherits from Annotation. And, as with any other annotation, must be added to the respective collection of the page. 
 	
 	RadFixedDocument document = new RadFixedDocument();
 	RadFixedPage page = document.Pages.AddPage();
@@ -106,6 +106,8 @@ In addition, to create a signature, which has a visual representation, you must 
         new PdfFormatProvider().Export(document, output);
     }
 {{endregion}}
+
+>important When signing an existing document (after the import) we must be sure the AcroForm's ViewersShouldRecalculateWidgetAppearances property is set to false, otherwise, the exported and signed PDF document could not be shown as a signed. 
 
 
 ## Signature Encodings
@@ -130,7 +132,7 @@ The signature flags were introduced in R2022 SP1. You can set the flags with the
 
 {{endregion}}
 
-The posible values are: 
+The possible values are: 
 * __None__
 * __SignaturesExist:__ If set, the document contains at least one signature field.
 * __AppendOnly:__ The document contains signatures that may be invalidated if the file is saved in a way that alters its previous contents.
@@ -139,7 +141,7 @@ The posible values are:
 
 The validation is performed for the current field and, since it strongly depends on the file bytes of the document, against the state of the document at the moment of importing.
 
-The Signature class exposes two methods allowing you to validate a signature:
+The Signature class exposes two methods that allow you to validate a signature:
 
 * **Validate()**: The method accepts a parameter of type SignatureValidationProperties. The method uses these properties while validating the signature. The **SignatureValidationProperties** class exposes the following properties:
 	*  **Chain**: Gets or sets the chain used to validate the certificate that signed the digital signature. It is of type [X509Chain](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509chain(v=vs.110).aspx).
@@ -205,17 +207,17 @@ The Signature class exposes two methods allowing you to validate a signature:
 
 ## Limitations
 
-There are few limitations related to the usage of digital signature in RadPdfProcessing.
+There are a few limitations related to the usage of digital signatures in RadPdfProcessing.
 
 * Exporting a document that is signed must be done using a stream that supports reading.
 
 * The validation of a signature depends on the bytes representing the document. Thus, to validate a signature, the stream used to import the document must be still open.
 
-* The validation is always performed for the current field, against the state of the document in the moment of importing.
+* The validation is always performed for the current field, against the state of the document at the moment of importing.
 
-* At this point, RadPdfProcessing supports only signing of a document that does not contain signed signature field. Signing a document containing a signed signature field will result in invalidation and corruption of the existing signature.
+* At this point, RadPdfProcessing supports only the signing of a document that does not contain a signed signature field. Signing a document containing a signed signature field will result in invalidation and corruption of the existing signature.
 
-* RadPdfProcessing currently supports only signing of a single signature field. Signing more than one signature field will result in invalidation of all signatures except the last one.
+* RadPdfProcessing currently supports only the signing of a single signature field. Signing more than one signature field will result in the invalidation of all signatures except the last one.
 
 ## See Also
 
