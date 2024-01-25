@@ -29,5 +29,6 @@ To obtain the Latest Internal Build (LIB) version, follow these steps:
 5. Look for the zip archive containing the LIB version.
 6. Download the zip archive.
 
+![Latest Internal Build](images/lib.png)
 
 Please note that the Latest Internal Builds are intended for development purposes only and are not recommended for production use. These distributions have not gone through the complete QA process and may contain issues that could affect the stability and reliability of your application.
