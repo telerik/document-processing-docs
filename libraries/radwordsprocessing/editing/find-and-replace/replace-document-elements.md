@@ -14,7 +14,7 @@ position: 6
 
 You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). This article lists the available methods and describes how you can use them.
 
-**RadFlowDocumentEditor** exposes the **ReaplaceText()** method to enable you to find and replace all instances of a specified string. You can choose between several overloads that allow you to replace the matched text with one or more [blocks]({%slug radwordsprocessing-model%}) (tables or paragraphs) or [inlines]({%slug radwordsprocessing-model%}) (runs, images, annotation marker). 
+**RadFlowDocumentEditor** exposes the **ReplaceText()** method to enable you to find and replace all instances of a specified string. You can choose between several overloads that allow you to replace the matched text with one or more [blocks]({%slug radwordsprocessing-model%}) (tables or paragraphs) or [inlines]({%slug radwordsprocessing-model%}) (runs, images, annotation marker). 
 
 > This functionality is available with R3 2021.
 
