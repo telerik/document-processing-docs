@@ -16,18 +16,27 @@ res_type: kb
 ## Description
 This tutorial shows how to merge headers, footers, and content from multiple DOCX documents - specifically, append headers and merge the content inside a final document.
 
+#### Headers
+![Headers](images/merge-headers.png)
+
+#### Footers 
+![Footers](images/merge-footers.png)
+
 ## Solution
 To merge the headers, footers, and content in DOCX documents, follow these steps:
 
-1. Use the `DocumentElementImporter` to prepare a document element from the source document for import into the target document.
+1. Use the [DocumentElementImporter]({%slug radwordsprocessing-editing-import-document-element%}) to prepare a document element from the source document for import into the target document.
 2. Merge the headers of the source document with the target document.
 3. Merge the footers of the source document with the target document.
 4. Use the `RadFlowDocumentEditor` to insert the content of the documents into the final document.
 
+#### Final document 
+![Final ](images/merged-headers-footers.png)
+
 Here is a sample code snippet that demonstrates how to accomplish this:
 
 ```csharp
-DocxFormatProvider _DocXProvider = new DocxFormatProvider();
+DocxFormatProvider _DocXProvider = new DocxFormatProvider(); 
 string outputFile = @"..\..\MergedResult.docx";
 File.Delete(outputFile); 
 
@@ -97,5 +106,6 @@ Please try the attached project and let us know if you have any further question
 - This code snippet uses the `RadFlowDocument` class from the RadWordsProcessing library.
 
 ## See Also
-- [RadWordsProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/introduction)
-- [RadFlowDocumentEditor Class](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/api/radflowdocumenteditor)
+- [RadWordsProcessing Documentation]({%slug radwordsprocessing-overview%})
+- [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+- [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})
