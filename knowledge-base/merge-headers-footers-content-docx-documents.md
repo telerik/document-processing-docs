@@ -98,8 +98,6 @@ private static void MergeFooters(RadFlowDocument target, RadFlowDocument source)
 }
 ```
 
-Please try the attached project and let us know if you have any further questions or need additional assistance.
-
 ## Notes
 - This solution assumes you have the necessary references and dependencies set up in your project.
 - Make sure to adjust the file paths in the code snippet to match the location of your files.
