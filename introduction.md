@@ -37,6 +37,7 @@ The Telerik Document Processing libraries support the following file formats:
  
 >The Telerik Document Processing libraries are available in **.NET Framework** and **.NET Standard** (**.NET Core**) compatible versions. You can download the assemblies of these libraries from the following products:
 >
+
 |.NET Framework Products|.NET Standard/Core/5+ Products|
 |----|----|
 |[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)|[UI for Xamarin](https://www.telerik.com/xamarin-ui)|
