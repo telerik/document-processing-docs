@@ -15,6 +15,8 @@ res_type: kb
 # Description
 This tutorial demonstrates a sample approach how to generate a PDF document from a collection of images located in a local folder.
 
+![Folder with images](images/images-folder.png) 
+
 # Solution
 To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which generates the document  in a flow-like manner. The editor provides methods that enable the generation of documents, which automatically flows to pages.
  
@@ -52,6 +54,9 @@ To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdf
             Process.Start(outputFilePath);
         }        
 ```
+The produced document is illustrated in the screenshot:
+
+![PDF with images](images/pdf-document-with-images.png) 
 
 # See Also
 - [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})  
