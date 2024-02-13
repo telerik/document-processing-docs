@@ -103,18 +103,23 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
 #### __[VB.NET] Example 2: Open and read a password-protected ZIP archive__
 
 {{region vb-radziplibrary-protect-ziparchive_1}}
-	
- 	Using stream As FileStream = File.Open("test.zip", FileMode.Open)
-     		Dim decryptionSettings As DecryptionSettings = EncryptionSettings.CreateDecryptionSettings()
-     		AddHandler decryptionSettings.PasswordRequired, Function(s, a) (a.Password = "password")
-     		Dim compressionSettings As CompressionSettings = Nothing
-     		Dim encoding As Encoding = Nothing
 
-     		Using zipArchive As ZipArchive = ZipArchive.Read(stream, encoding, compressionSettings, decryptionSettings)
-         		'  Display the list of the files in the selected zip file using the ZipArchive.Entries property. 
-     		End Using
- 	End Using
+	Sub Main()	
+ 		Using stream As FileStream = File.Open("test.zip", FileMode.Open)
+     			Dim decryptionSettings As DecryptionSettings = EncryptionSettings.CreateDecryptionSettings()
+     			AddHandler decryptionSettings.PasswordRequired, AddressOf DecryptionSettings_PasswordRequired
+     			Dim compressionSettings As CompressionSettings = Nothing
+     			Dim encoding As Encoding = Nothing
 
+     			Using zipArchive As ZipArchive = ZipArchive.Read(stream, encoding, compressionSettings, decryptionSettings)
+         			'  Display the list of the files in the selected zip file using the ZipArchive.Entries property. 
+     			End Using
+ 		End Using
+	End Sub
+
+	Private Sub DecryptionSettings_PasswordRequired(ByVal sender As Object, ByVal e As PasswordRequiredEventArgs)
+        	e.Password = "passw0rd"
+    	End Sub
 {{endregion}}
 
 >tip You must always dispose of the ZIP archive object when all operations that use it are completed. We recommend that you declare and instantiate the ZIP archive object in a **using** statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
