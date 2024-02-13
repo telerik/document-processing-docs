@@ -23,7 +23,7 @@ To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdf
 ```csharp
          private static void GeneratePdfFromImagesWithRadFixedDocumentEditor(string imageFolderPath)
         {
-            Padding _pageMargins = new Padding(
+            Padding pageMarginsValue = new Padding(
                 Unit.MmToDip(20),//left
                  Unit.MmToDip(0),//top
                   Unit.MmToDip(0),//right
@@ -32,7 +32,7 @@ To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdf
             RadFixedDocument fixedDocument = new RadFixedDocument();
             RadFixedDocumentEditor documentEditor = new RadFixedDocumentEditor(fixedDocument);
             documentEditor.SectionProperties.PageSize = pageSize;
-            documentEditor.SectionProperties.PageMargins = _pageMargins;
+            documentEditor.SectionProperties.PageMargins = pageMarginsValue;
             string[] imageFiles = Directory.GetFiles(imageFolderPath);
 
             foreach (string imageFilePath in imageFiles)
