@@ -18,7 +18,7 @@ This tutorial demonstrates a sample approach how to generate a PDF document from
 ![Folder with images](images/images-folder.png) 
 
 # Solution
-To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which generates the document  in a flow-like manner. The editor provides methods that enable the generation of documents, which automatically flows to pages.
+To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which generates the document in a flow-like manner. The editor provides methods that enable the generation of documents, which automatically flows to pages.
  
 ```csharp
          private static void GeneratePdfFromImagesWithRadFixedDocumentEditor(string imageFolderPath)
@@ -28,10 +28,10 @@ To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdf
                  Unit.MmToDip(0),//top
                   Unit.MmToDip(0),//right
                    Unit.MmToDip(0));//bottom
-            Size _pageSize = new Size(Unit.MmToDip(210), Unit.MmToDip(297));
+            Size pageSize = new Size(Unit.MmToDip(210), Unit.MmToDip(297));
             RadFixedDocument fixedDocument = new RadFixedDocument();
             RadFixedDocumentEditor documentEditor = new RadFixedDocumentEditor(fixedDocument);
-            documentEditor.SectionProperties.PageSize = _pageSize;
+            documentEditor.SectionProperties.PageSize = pageSize;
             documentEditor.SectionProperties.PageMargins = _pageMargins;
             string[] imageFiles = Directory.GetFiles(imageFolderPath);
 
@@ -60,5 +60,5 @@ The produced document is illustrated in the screenshot:
 
 # See Also
 - [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})  
-- [PdfFormatProvider ]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-- [RadPdfProcessing ]({%slug radpdfprocessing-overview%})
+- [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+- [RadPdfProcessing]({%slug radpdfprocessing-overview%})
