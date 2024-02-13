@@ -105,7 +105,7 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
 {{region vb-radziplibrary-protect-ziparchive_1}}
 
 	Sub Main()	
- 		Using stream As FileStream = File.Open("test.zip", FileMode.Open)
+		Using stream As FileStream = File.Open("test.zip", FileMode.Open)
      			Dim decryptionSettings As DecryptionSettings = EncryptionSettings.CreateDecryptionSettings()
      			AddHandler decryptionSettings.PasswordRequired, AddressOf DecryptionSettings_PasswordRequired
      			Dim compressionSettings As CompressionSettings = Nothing
@@ -115,11 +115,12 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
          			'  Display the list of the files in the selected zip file using the ZipArchive.Entries property. 
      			End Using
  		End Using
-	End Sub
+   	End Sub
 
 	Private Sub DecryptionSettings_PasswordRequired(ByVal sender As Object, ByVal e As PasswordRequiredEventArgs)
         	e.Password = "passw0rd"
-    	End Sub
+	End Sub
+     
 {{endregion}}
 
 >tip You must always dispose of the ZIP archive object when all operations that use it are completed. We recommend that you declare and instantiate the ZIP archive object in a **using** statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
