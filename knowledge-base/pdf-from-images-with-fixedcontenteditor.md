@@ -24,7 +24,7 @@ To create the PDF document, we will use a [FixedContentEditor]({%slug radpdfproc
         private static void GeneratePdfFromImagesWithFixedContentEditor(string imageFolderPath)
         {
             Size pageSize = new Size(Unit.MmToDip(210), Telerik.Windows.Documents.Media.Unit.MmToDip(297));
-            Padding _pageMargins = new Telerik.Windows.Documents.Primitives.Padding(
+            Padding pageMarginsValue = new Telerik.Windows.Documents.Primitives.Padding(
                 Unit.MmToDip(20),//left
                  Unit.MmToDip(0),//top
                   Unit.MmToDip(0),//right
@@ -33,8 +33,8 @@ To create the PDF document, we will use a [FixedContentEditor]({%slug radpdfproc
             RadFixedPage fixedPage = fixedDocument.Pages.AddPage();
             fixedPage.Size = pageSize;
             FixedContentEditor fixedEditor = new FixedContentEditor(fixedPage);
-            double currentYposition = _pageMargins.Top;
-            double pageYLimit = pageSize.Height - _pageMargins.Bottom;
+            double currentYposition = pageMarginsValue.Top;
+            double pageYLimit = pageSize.Height - pageMarginsValue.Bottom;
             string[] imageFiles = Directory.GetFiles(imageFolderPath);
 
             foreach (string imageFilePath in imageFiles)
@@ -55,16 +55,16 @@ To create the PDF document, we will use a [FixedContentEditor]({%slug radpdfproc
                     fixedEditor.DrawText("END");
                     //above code is just for testing purposes
 
-                    currentYposition = _pageMargins.Top;
+                    currentYposition = pageMarginsValue.Top;
                     fixedPage = fixedDocument.Pages.AddPage();
                     fixedPage.Size = pageSize;
                     fixedEditor = new FixedContentEditor(fixedPage);
                     //move the cursor to the beginning of the new page
-                    fixedEditor.Position.Translate(_pageMargins.Left, currentYposition);
+                    fixedEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
                 }
                 fixedEditor.DrawBlock(imageBlock);
                 currentYposition += imageBlock.ActualSize.Height;
-                fixedEditor.Position.Translate(_pageMargins.Left, currentYposition);
+                fixedEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
             }
 
             PdfFormatProvider provider = new PdfFormatProvider();
@@ -85,5 +85,5 @@ The produced document is illustrated in the screenshot:
 - [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
 - [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
 - [Position]({%slug radpdfprocessing-concepts-position%})
-- [PdfFormatProvider ]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+- [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 - [RadPdfProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
