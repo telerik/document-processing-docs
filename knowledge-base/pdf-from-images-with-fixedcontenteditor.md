@@ -23,7 +23,7 @@ To create the PDF document, we will use a [FixedContentEditor]({%slug radpdfproc
 ```csharp
         private static void GeneratePdfFromImagesWithFixedContentEditor(string imageFolderPath)
         {
-            Size _pageSize = new Size(Unit.MmToDip(210), Telerik.Windows.Documents.Media.Unit.MmToDip(297));
+            Size pageSize = new Size(Unit.MmToDip(210), Telerik.Windows.Documents.Media.Unit.MmToDip(297));
             Padding _pageMargins = new Telerik.Windows.Documents.Primitives.Padding(
                 Unit.MmToDip(20),//left
                  Unit.MmToDip(0),//top
@@ -31,18 +31,18 @@ To create the PDF document, we will use a [FixedContentEditor]({%slug radpdfproc
                    Unit.MmToDip(0));//bottom
             RadFixedDocument fixedDocument = new RadFixedDocument();
             RadFixedPage fixedPage = fixedDocument.Pages.AddPage();
-            fixedPage.Size = _pageSize;
+            fixedPage.Size = pageSize;
             FixedContentEditor fixedEditor = new FixedContentEditor(fixedPage);
             double currentYposition = _pageMargins.Top;
-            double pageYLimit = _pageSize.Height - _pageMargins.Bottom;
+            double pageYLimit = pageSize.Height - _pageMargins.Bottom;
             string[] imageFiles = Directory.GetFiles(imageFolderPath);
 
             foreach (string imageFilePath in imageFiles)
             {
                 Block imageBlock = new Block();
                 imageBlock.SpacingAfter = 0;
-                imageBlock.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
-                FileStream fileStream = new System.IO.FileStream(imageFilePath, FileMode.Open);
+                imageBlock.HorizontalAlignment = HorizontalAlignment.Center;
+                FileStream fileStream = new FileStream(imageFilePath, FileMode.Open);
                 var _imageSource = new Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource(fileStream);
                 imageBlock.InsertImage(_imageSource);
                 Size imageBlockDesiredSize = imageBlock.Measure();
@@ -57,13 +57,11 @@ To create the PDF document, we will use a [FixedContentEditor]({%slug radpdfproc
 
                     currentYposition = _pageMargins.Top;
                     fixedPage = fixedDocument.Pages.AddPage();
-                    fixedPage.Size = _pageSize;
+                    fixedPage.Size = pageSize;
                     fixedEditor = new FixedContentEditor(fixedPage);
                     //move the cursor to the beginning of the new page
                     fixedEditor.Position.Translate(_pageMargins.Left, currentYposition);
                 }
-
-
                 fixedEditor.DrawBlock(imageBlock);
                 currentYposition += imageBlock.ActualSize.Height;
                 fixedEditor.Position.Translate(_pageMargins.Left, currentYposition);
