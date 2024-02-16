@@ -13,13 +13,14 @@ __RadSpreadProcessing__'s document model allows you to easily open and save file
 
 ## Supported formats      
 
-* __Xlsx__: Rich text format, which exports the whole content of a workbook: worksheets, formula values, formatting, hyperlinks etc.
-* __Xls__: Rich text format, which exports the content of a workbook: worksheets, formula values, formatting, hyperlinks etc. Supported in older applications. This format is not supported in Silverlight.
+* __Xlsx__: Rich text format, which exports the whole content of a workbook: worksheets, formula values, formatting, hyperlinks etc. [Read more]({%slug radspreadprocessing-formats-and-conversion-xlsx-features%}) about all features that are supported by XlsxFormatProvider.
+* __Xls__: Rich text format, which exports the content of a workbook: worksheets, formula values, formatting, hyperlinks etc. Supported in older applications. This format is not supported in Silverlight. [Read more]({%slug radspreadprocessing-formats-and-conversion-xls-features%}) about all features that are supported by XlsFormatProvider.
 * __Xlsm__: Rich text format, which exports all that is included in the Xlsx format with the addition of macro instructions.
-* __Pdf__: Fixed format, which preserves the content of a workbook in independent from software or hardware manner.
+* __Pdf__: Fixed format, which preserves the content of a workbook in independent from software or hardware manner. [Read more]({%slug radspreadprocessing-formats-and-conversion-pdf-features%}) about all features that are supported by PdfFormatProvider.
 * __Csv__(comma separated): Plain text format that saves the content of the cell in the active worksheet. The format strips all formatting and keeps only the result values of cells. These values are separated by a culture dependent delimiter.
-* __Txt__(tab delimited): Plain text format, which preserves only the content of the cells in the active worksheet. The format does not save any formatting and keeps only the result values of the cells. These values are delimited via tabs.
+* __Txt__(tab delimited): Plain text format, which preserves only the content of the cells in the active worksheet. The format does not save any formatting and keeps only the result values of the cells. These values are delimited via tabs. [Read more]({%slug radspreadprocessing-formats-and-conversion-txt-settings%}) about all features that are supported by TxtFormatProvider.
 * **DataTable**: This allows you to convert the DataTable that is coming form your database to a spreadsheet and vice versa. 
+
 
 
 ## Format providers​          
