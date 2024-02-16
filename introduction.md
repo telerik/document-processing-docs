@@ -106,7 +106,30 @@ For any issues you might encounter while working with Telerik Document Processin
 * [Knowledge Base](https://docs.telerik.com/devtools/document-processing/knowledge-base)
 * [Virtual Classroom](https://www.telerik.com/account/support/virtual-classroom)
 
+## Related Links
+
+* Telerik DPL product page - https://www.telerik.com/document-processing-libraries 
+* Creative ideas – https://www.telerik.com/blogs/productivity-document-processing
+
 ## Next Steps
 
 - [Document Processing Libraries Overview]({%slug getting-started%})
 - [First Steps in using Telerik Document Processing]({%slug getting-started-first-steps%})
+
+## Help us Improve the Telerik UI for DPL Documentation
+
+We believe that the documentation for a product is at its best when the content is a collaboration between the builders and consumers of that product. Everybody can play a role in making our documentation better and we encourage you to help us with that task in the way that you choose:
+
+__Submit a New Issue at GitHub__
+
+If you find an issue with our docs that need to be addressed, the best way to let us know is by creating an issue in our [Github repository] (https://github.com/telerik/document-processing-docs/issues). When creating an issue, please provide a descriptive title, be as specific as possible and link to the documentation in question. If you can provide a link to the closes anchor to the issue, that is even better.
+
+__Update the Documentation at GitHub__
+
+Creating an issue is great, but what we really love are pull requests. This is the most direct method.  So, if you find an issue in the docs, or even feel like creating new content, we’d be happy to have your contributions! The basic steps are that you fork our documentation and submit a pull request. That way you may contribute to exactly where you found the error.  After that, our technical writing team just needs to approve your change request. Please use only standard markdown. For a more detailed instructions, please follow [the contribution instructions] (https://github.com/telerik/winforms-docs/blob/master/README.md) published in GitHub.
+
+__Forums__
+
+You can visit the [Telerik UI for WinForms forum](https://www.telerik.com/forums/winforms) and leave us a feedback.  Please notice that this method will take a bit longer to reach our documentation team. However, if you need a fast reply from our support team, leaving feedback in the forum guarantees a support number for your suggestions and that we will follow up on it.
+
+Thank you for your contribution to the WinForms Documentation!
