@@ -9,7 +9,9 @@ position: 0
 
 # Overview
 
-RadSpreadProcessing is a powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
+**RadSpreadProcessing** is a powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
+
+![SpreadProcessing](images/spread-processing-overview.png) 
 
 In this article, we list the library's most popular features. If you want to start using the library right away, see **[Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})**.
 

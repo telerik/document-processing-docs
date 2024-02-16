@@ -9,9 +9,12 @@ position: 0
 
 # Overview
 
-Have you ever wondered how to increase the responsiveness of your applications by compressing the data that you send over the internet? With __RadZipLibrary__ you can compress data like images, DOCX or PDF files and send them over the wire. Thus, you will achieve fast and secure transactions. 
+With **RadZipLibrary** you can compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.
 
-![Zip Library Overview 01](images/ZipLibrary_Overview_01.png)
+![ZipLibrary](images/zip-library-overview.png)  
+
+You can compress data like images, DOCX or PDF files and send them over the wire. Thus, you will achieve fast and secure transactions. 
+![Zip Library Overview 01](images/ziplibrary-overview.gif) 
 
 This is a list with short descriptions of the top-of-the-line features of Telerik's __Zip Library__ control:
         
