@@ -14,6 +14,10 @@ position: 0
 
 ![DPL Ninja](images/dpl-ninja.png) 
 
+{% if site.has_cta_panels == true %}
+{% include cta-panel-introduction.html %}
+{% endif %}
+
 ## Key Features
 
 * **UI-Independent**: The libraries are UI-Independent and cover all .NET technologies, from desktop and web to mobile, and can be deployed in client, server-side and cloud apps.
@@ -25,13 +29,9 @@ position: 0
 
 * **Any document. Any Business.**: The Telerik Document Processing is suitable for various business cases and scenarios, where document creation or manipulation is required.
 
-* **Support for Variety of File Formats**: The Telerik Document Processing includes 5 libraries for manipulating PDF, Word, Excel and ZIP files in your application.
+* **Support for Variety of File Formats**: The Telerik Document Processing includes 5 libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.
 
 For more details about the benefits of using Telerik Document Processing, see the [Telerik Document Processing product overview page](https://www.telerik.com/document-processing-libraries).
-
-{% if site.has_cta_panels == true %}
-{% include cta-panel-introduction.html %}
-{% endif %}
 
 ## Supported Formats
 
@@ -64,7 +64,7 @@ The Telerik Document Processing libraries support the following file formats:
 |[UI for ASP.NET AJAX](https://www.telerik.com/products/aspnet-ajax.aspx)|[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)|
 |[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for Blazor](https://www.telerik.com/blazor-ui)|
 |[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
-|[UI for Silverlight](https://www.telerik.com/products/silverlight/overview.aspx)|[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
+|[UI for Silverlight (discontinued)](https://www.telerik.com/products/silverlight/overview.aspx)|[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
 
 Both versions are available as [NuGet packages]({%slug installation-nuget-packages%}) but with different names. The assemblies for .NET Standard do not contain the word Windows in their name.
 
@@ -90,7 +90,7 @@ Telerik Document Processing features the following components:
 
 Telerik Document Processing is a commercial library. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to [purchase a license](https://www.telerik.com/purchase.aspx). Feel free to review the Telerik [License Agreement](https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s) to get acquainted with the full terms of use.	
 
->Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight**. The libraries are subject of the license under which you've obtained the assemblies.
+>Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight***. The libraries are subject of the license under which you've obtained the assemblies. ( * [Learn about Telerik UI for Silverlight discontinuation, end user options and alternatives.](https://www.telerik.com/products/silverlight/overview.aspx)).
 
 ## Support Options
 

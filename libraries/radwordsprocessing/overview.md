@@ -12,11 +12,13 @@ position: 0
 
 **RadWordsProcessing** is a processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.
 
+![WordsProcessing](images/words-processing-overview.png)  
+
+>note If you still don't have **Telerik Document Processing installed**, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
+
+>note For details on the **usage of the library**, go to the **[Getting Started]({%slug radwordsprocessing-getting-started%})** article.
+
    ![Rad Words Processing Overview 02](images/RadWordsProcessing_Overview_01.png)
-
->noteIf you still don't have **Telerik Document Processing installed**, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
-
->noteFor details on the **usage of the library**, go to the **[Getting Started]({%slug radwordsprocessing-getting-started%})** article.
 
 ## Model
 The model of **RadWordsProcessing** includes:
