@@ -96,14 +96,11 @@ Each comment can be replied to, forming a thread of information. All replies can
             CellIndex relatedCellIndex = new CellIndex(0, 0); // Cell A1
             AddCommentWithRepliesToWorksheet(worksheet, relatedCellIndex, text, 2); // First comment will have 2 replies
 
-
             relatedCellIndex = new CellIndex(1, 1); // Cell B2
             text = "Second Comment";
             AddCommentWithRepliesToWorksheet(worksheet, relatedCellIndex, text, 0); // Second comment will have 0 replies
 
-
             // Add existing reply using the Add() method of __SpreadsheetCommentReply__
-
             var firstComment = worksheet.Comments[0];
             var secondComment = worksheet.Comments[1];
 
@@ -134,9 +131,7 @@ Each comment can be replied to, forming a thread of information. All replies can
             {
                 string replyText = "Reply #" + (i + 1);
                 comment.AddReply(authorName, replyText, creationDate); // Add new reply using the SpreadsheetComment.AddReply() method 
-
             }
-
         }
 
 {{endregion}}
