@@ -28,6 +28,7 @@ To draw an arc using the [ArcSegment]({%slug radpdfprocessing-concepts-geometry%
 6. Set the `Geometry` property of the `Path` to the `PathGeometry`.
 
 Here is an example of how to draw an arc:
+
 ```csharp
 private static void AddArcSegment(RadFixedPage page)
 {
@@ -55,6 +56,7 @@ private static void AddArcSegment(RadFixedPage page)
 ```
 
 To draw lines, you can use the [LineSegment]({%slug radpdfprocessing-concepts-geometry%}) class. Here is an example of how to draw a triangle:
+
 ```csharp
 private void AddLineSegment(RadFixedPage page)
 {
@@ -89,7 +91,28 @@ private static void ApplyLine(PathFigure figure, Point startPoint, Point endPoin
     figure.Segments.Add(segment);
 }
 ```
+The following code snippet shows how to use the above methods:
+
+```csharp
+
+   RadFixedDocument fixedDocument = new RadFixedDocument();
+   RadFixedPage fixedPage = fixedDocument.Pages.AddPage();
+   AddArcSegment(fixedPage);
+   AddLineSegment(fixedPage);
+
+   PdfFormatProvider provider = new PdfFormatProvider();
+   string filePath = @"..\..\output.pdf";
+   File.Delete(filePath);
+   using (Stream output = File.OpenWrite(filePath))
+   { 
+       provider.Export(fixedDocument, output);
+   }
+
+```
+For more information on using geometries, figures, and segments, you can refer to our [Geometry]({%slug radpdfprocessing-concepts-geometry%}) help article. 
 
 You can find the result of the combined arc and triangle in the below screenshot:
 
-For more information on using geometries, figures, and segments, you can refer to our [Geometry]({%slug radpdfprocessing-concepts-geometry%}) help article. 
+![Draw figures](images/pdf-processing-draw-figures.png)   
+
+
