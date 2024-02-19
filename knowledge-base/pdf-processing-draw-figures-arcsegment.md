@@ -14,7 +14,7 @@ tags: arcsegment, draw, circle, lines, RadPdfProcessing
 
 # Description
 
-This article demonstrates a sample approach how to draw a small figure containing an arc and some lines using RadPdfProcessing. 
+This article demonstrates a sample approach on how to draw a small figure containing an arc and some lines using RadPdfProcessing. 
 
 # Solution
 
@@ -23,7 +23,7 @@ To draw an arc using the [ArcSegment]({%slug radpdfprocessing-concepts-geometry%
 1. Create a `Path` object and set its `IsFilled` and `IsStroked` properties to `true`.
 2. Create a `PathGeometry` object and set its `FillRule` property to `FillRule.EvenOdd`.
 3. Add a `PathFigure` to the `PathGeometry` and set its `StartPoint` property to the starting point of the figure.
-4. Create an instance of the `ArcSegment` class and set its `Point`, `RadiusX`, and `RadiusY` properties. The `Point` property represents the end point of the arc, while `RadiusX` and `RadiusY` represent the radii for the X and Y coordinates respectively.
+4. Create an instance of the `ArcSegment` class and set its `Point`, `RadiusX`, and `RadiusY` properties. The `Point` property represents the endpoint of the arc, while `RadiusX` and `RadiusY` represent the radii for the X and Y coordinates respectively.
 5. Add the `ArcSegment` to the `Segments` collection of the `PathFigure`.
 6. Set the `Geometry` property of the `Path` to the `PathGeometry`.
 
