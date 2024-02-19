@@ -16,6 +16,10 @@ res_type: kb
 ## Description
 This article demonstrates how to hide the empty lines in the output Word document when the fields are blank during the MailMerge process using RadWordsProcessing.
 
+|Original Document|Merged Document|
+|----|----|
+|![Original Document](images/originalMailMerge.png)|![Actual Merged Document](images/actualMailMerge.png)|
+
 ## Solution
 To achieve this, you can follow these steps:
 
@@ -30,8 +34,6 @@ using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
 using Telerik.Windows.Documents.Flow.Model;
 using Telerik.Windows.Documents.Flow.Model.Editing;
 using Telerik.Windows.Documents.Flow.TextSearch;
-using System.Collections.Generic;
-using System.IO;
 
 internal class Program
 {
@@ -40,18 +42,40 @@ internal class Program
         string placeHolder = "{remove_Empty_field}";
         RadFlowDocument document = new RadFlowDocument();
         RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-        
-        // Insert your MailMerge fields here
+        editor.InsertField("MERGEFIELD Company", "");
+        editor.InsertParagraph();
         editor.InsertField("MERGEFIELD Agent", "");
+        editor.InsertParagraph();
+        editor.InsertField("MERGEFIELD First_Name", ""); editor.InsertText(", ");
+        editor.InsertField("MERGEFIELD Last_Name", "");
+        editor.InsertParagraph();
+        editor.InsertField("MERGEFIELD Address1", "");
         editor.InsertParagraph();
         editor.InsertField("MERGEFIELD Address2", "");
         editor.InsertParagraph();
-        
-        // Perform the MailMerge process
-        // ...
+        editor.InsertField("MERGEFIELD CityMail", ""); editor.InsertText(", ");
+        editor.InsertField("MERGEFIELD State", ""); editor.InsertText(", ");
+        editor.InsertField("MERGEFIELD Zip", "");
 
-        // Remove paragraphs with the placeholder text
-        editor = new RadFlowDocumentEditor(mailMergeResult);
+        List<MailMergeRecord> mailMergeDataSource = new List<MailMergeRecord>()
+{
+    new MailMergeRecord()
+    {
+        Company = "My Company",
+        First_Name = "My Name",
+        Last_Name = placeHolder,
+        Address1 = "My address",
+        Address2= placeHolder,
+        State = "My State",
+        Zip= "GS123K",
+        CityMail="My City",
+        Agent=placeHolder
+    }
+};
+        RadFlowDocument mailMergeResult = document.MailMerge(mailMergeDataSource);
+
+
+       editor = new RadFlowDocumentEditor(mailMergeResult);
 
         foreach (FindResult find in editor.FindAll(placeHolder))
         {
@@ -65,16 +89,37 @@ internal class Program
 
         DocxFormatProvider provider = new DocxFormatProvider();
 
+        string originalFilePath = @"..\..\..\original.docx";
         string mergedFilePath = @"..\..\..\merged.docx";
+        File.Delete(originalFilePath);
         File.Delete(mergedFilePath);
+        using (Stream output = File.OpenWrite(originalFilePath))
+        {
+            provider.Export(document, output);
+        }
         using (Stream output = File.OpenWrite(mergedFilePath))
         {
             provider.Export(mailMergeResult, output);
         }
     }
-}
+    public class MailMergeRecord
+    {
+        public MailMergeRecord()
+        { }
+        public string Company { get; set; }
+        public string Agent { get; set; }
+        public string First_Name { get; set; }
+        public string Last_Name { get; set; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string CityMail { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
+    }
 ```
+|Result Document|
+|----|
+|![Result Document](images/expectedMailMerge.png)| 
 
 ## See Also
-- [Performing Mail Merge](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/features/mail-merge)
-- [WordsProcessing: Add Mail Merge events](https://feedback.telerik.com/document-processing/1509791-wordsprocessing-add-mail-merge-events)
+- [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) 
