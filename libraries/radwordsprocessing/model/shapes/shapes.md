@@ -32,3 +32,4 @@ In next releases, the feature will be enhanced with support for text in shapes, 
  * [Model]({%slug radwordsprocessing-model%})
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+ * [Creating Colored Squares in RadFlowDocument]({%slug creating-colored-squares-radflowdocument%})
