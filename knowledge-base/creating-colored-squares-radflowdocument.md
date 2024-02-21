@@ -15,18 +15,17 @@ res_type: kb
 
 ## Description
 
-A common requirement is to insert [shapes]({%slug radwordsprocessing-shapes-shapes%}) in a RadFlowDocument (or a DOCX file). Currently, RadWordsProcessing doesn't support such functionality out-of-the-box.
+A common requirement is to insert [shapes]({%slug radwordsprocessing-shapes-shapes%}) in a RadFlowDocument (or a DOCX file). Currently, RadWordsProcessing doesn't support such functionality.
 
 This article demonstrates a sample approach how to create a RadFlowDocument with colored squares with borders using the library.
-
-![Draw shapes](images/words-processing-draw-squares.png) 
 
 >note A similar approach can be used for any other shapes such as circles, triangles, etc. 
 
 ## Solution
 
 The easiest way to achieve the colored square is to generate an image with the desired size and insert it in the RadFlowDocument. Then, exporting the document to DOCX or any supported format will give you the following result:
-(show image example here) 
+
+![Draw shapes](images/words-processing-draw-squares.png) 
 
 Here is a code snippet that demonstrates the process:
 
