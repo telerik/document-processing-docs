@@ -25,7 +25,8 @@ This article demonstrates a sample approach how to create a RadFlowDocument with
 
 ## Solution
 
-The easiest way to achieve the colored square is to generate an image with the desired size and insert it in RadFlowDocument, Then, exporting to DOCX or any supported format will give you the image shape out-of-the-box. 
+The easiest way to achieve the colored square is to generate an image with the desired size and insert it in the RadFlowDocument. Then, exporting the document to DOCX or any supported format will give you the following result:
+(show image example here) 
 
 Here is a code snippet that demonstrates the process:
 
