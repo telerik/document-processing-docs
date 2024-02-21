@@ -2,7 +2,7 @@
 title: How to Resolve InvalidDataException Central directory header is broken
 description: This article provides a solution for the InvalidDataException that occurs when trying to import a DOC file using RadWordsProcessing
 type: troubleshooting
-page_title: How to Resolve 'InvalidDataException: Central directory header is broken'
+page_title: How to Resolve InvalidDataException Central directory header is broken
 slug: fix-invalid-data-exception-generating-word-document
 tags: troubleshooting, RadZipLibrary, Document Processing, InvalidDataException
 res_type: kb
