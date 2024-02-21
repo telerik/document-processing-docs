@@ -29,7 +29,7 @@ To resolve this issue, please follow these steps:
 
 2. After importing the document, if you need to export it as a DOCX file, use the `DocxFormatProvider`.
 
-By following these steps, you should be able to import the Word document without encountering the `InvalidDataException`.
+By following these steps, you should be able to import the DOC file without encountering the `InvalidDataException`.
 
 ## See Also
 
