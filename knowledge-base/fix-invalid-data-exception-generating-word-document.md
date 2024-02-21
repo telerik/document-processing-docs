@@ -18,15 +18,21 @@ res_type: kb
 
 The following exception may occur when trying to import a .DOC file using RadWordsProcessing:
 
+![InvalidDataException](images/InvalidDataException.png)   
+
+
 ## Solution
 
 To resolve this issue, please follow these steps:
 
-1. Make sure that you are using the correct format provider for importing the DOC file. Use the `DocFormatProvider` instead of the `DocxFormatProvider` for importing the DOC file.
+1. Make sure that you are using the correct format provider for importing the DOC file. Use the `[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%})` instead of the `[DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})` for importing the DOC file.
 
 2. After importing the document, if you need to export it as a DOCX file, use the `DocxFormatProvider`.
 
-
 By following these steps, you should be able to generate the Word document without encountering the `InvalidDataException`.
 
+## See Also
+
+* [DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%})
+* [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
 
