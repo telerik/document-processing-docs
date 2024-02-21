@@ -14,7 +14,7 @@ res_type: kb
 | 2024.1.124 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-This article demonstrates how to hide the empty lines in the output Word document when the fields are blank during the MailMerge process using RadWordsProcessing.
+This article demonstrates how to hide the empty lines in the output Word document when the fields are blank during the [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) process using RadWordsProcessing.
 
 |Original Document|Merged Document|
 |----|----|
@@ -58,25 +58,22 @@ internal class Program
         editor.InsertField("MERGEFIELD Zip", "");
 
         List<MailMergeRecord> mailMergeDataSource = new List<MailMergeRecord>()
-{
-    new MailMergeRecord()
-    {
-        Company = "My Company",
-        First_Name = "My Name",
-        Last_Name = placeHolder,
-        Address1 = "My address",
-        Address2= placeHolder,
-        State = "My State",
-        Zip= "GS123K",
-        CityMail="My City",
-        Agent=placeHolder
-    }
-};
+        {
+            new MailMergeRecord()
+            {
+                Company = "My Company",
+                First_Name = "My Name",
+                Last_Name = placeHolder,
+                Address1 = "My address",
+                Address2= placeHolder,
+                State = "My State",
+                Zip= "GS123K",
+                CityMail="My City",
+                Agent=placeHolder
+            }
+        };
         RadFlowDocument mailMergeResult = document.MailMerge(mailMergeDataSource);
-
-
-       editor = new RadFlowDocumentEditor(mailMergeResult);
-
+        editor = new RadFlowDocumentEditor(mailMergeResult);
         foreach (FindResult find in editor.FindAll(placeHolder))
         {
             Paragraph paragraph = find.Runs[0].Paragraph;
@@ -88,7 +85,6 @@ internal class Program
         }
 
         DocxFormatProvider provider = new DocxFormatProvider();
-
         string originalFilePath = @"..\..\..\original.docx";
         string mergedFilePath = @"..\..\..\merged.docx";
         File.Delete(originalFilePath);
