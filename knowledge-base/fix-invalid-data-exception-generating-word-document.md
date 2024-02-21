@@ -1,6 +1,6 @@
 ---
 title: How to Resolve 'InvalidDataException: Central directory header is broken'
-description: This article provides a solution for the InvalidDataException that occurs when trying to generate a Word document using RadWordsProcessing
+description: This article provides a solution for the InvalidDataException that occurs when trying to import a DOC file using RadWordsProcessing
 type: troubleshooting
 page_title: How to Resolve 'InvalidDataException: Central directory header is broken'
 slug: fix-invalid-data-exception-generating-word-document
@@ -16,7 +16,7 @@ res_type: kb
 
 ## Description
 
-The following exception may occur when trying to import a .DOC file using RadWordsProcessing:
+The following exception may occur when trying to import a DOC file using RadWordsProcessing:
 
 ![InvalidDataException](images/InvalidDataException.png)   
 
@@ -29,7 +29,7 @@ To resolve this issue, please follow these steps:
 
 2. After importing the document, if you need to export it as a DOCX file, use the `DocxFormatProvider`.
 
-By following these steps, you should be able to generate the Word document without encountering the `InvalidDataException`.
+By following these steps, you should be able to import the Word document without encountering the `InvalidDataException`.
 
 ## See Also
 
