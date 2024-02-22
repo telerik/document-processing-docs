@@ -4,7 +4,7 @@ description: This article provides a solution for the InvalidDataException that 
 type: troubleshooting
 page_title: How to Resolve InvalidDataException Central directory header is broken
 slug: fix-invalid-data-exception-generating-word-document
-tags: troubleshooting, RadZipLibrary, Document Processing, InvalidDataException
+tags: troubleshooting, RadZipLibrary, WordsProcessing, Document Processing, InvalidDataException
 res_type: kb
 ---
 
