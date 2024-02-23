@@ -16,10 +16,10 @@ res_type: kb
 
 ## Description
 
-To insert images into a merge field using Mail Merge in RadWordsProcessing, follow these steps:
+To insert images into a merge field using [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) in RadWordsProcessing, follow these steps:
 
 1. Use specific text as a placeholder for the image in your DOCX template.
-2. Utilize the Find and Replace functionality to insert the image.
+2. Utilize the [Find and Replace]({%slug radwordsprocessing-editing-replace-document-elements%}) functionality to insert the image.
 
 ## Solution
 
@@ -73,5 +73,13 @@ public class MailMergeRecord
 
 }
 ```
+The achieved result is illustrated below:
 
+![Image mail merge](images/image_mail_merge.png)
+
+## See Also
+
+ * [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
+ * [Hiding MailMerge Line in Output Word Document If Blank]({%slug hide-mailmerge-line-output-word-document-if-blank%})
+ * [Find and Replace]({%slug radwordsprocessing-editing-replace-document-elements%})
 
