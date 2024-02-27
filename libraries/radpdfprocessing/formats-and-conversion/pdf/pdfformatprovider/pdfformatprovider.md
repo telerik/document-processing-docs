@@ -25,7 +25,7 @@ The PdfFormatProvider class of RadPdfProcessing is located in the **Telerik.Wind
 
 ## Import
 
-To import a PDF document you need to use the __Import()__ method of __PdfFormatprovider__.
+To import a PDF document you need to use the __Import()__ method of __PdfFormatProvider__.
         
 
 __Example 1__ shows how to use PdfFormatProvider to import a PDF document from a file.
