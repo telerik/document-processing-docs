@@ -9,8 +9,6 @@ position: 4
 
 # Mail Merge
 
-
-
 [Mail merge](http://en.wikipedia.org/wiki/Mail_merge) is functionality allowing to produce personalized documents from a template holding fixed content and variables. The variables are called [Merge Fields]({%slug radwordsprocessing-concepts-merge-field%}) and are replaced through the merge process with content from a specified data source.
       
 
@@ -216,3 +214,4 @@ If you want to separate the items into several rows you need to close the group 
  * [Merge Field]({%slug radwordsprocessing-concepts-merge-field%})
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
  * [Hiding MailMerge Line in Output Word Document If Blank]({%slug hide-mailmerge-line-output-word-document-if-blank%})
+ * [Inserting Images using Mail Merge]({%slug inserting-images-using-mail-merge-radwordsprocessing%})
