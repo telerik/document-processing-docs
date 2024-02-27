@@ -18,20 +18,29 @@ This article describes how you can install the Document Processing Libraries usi
 
 ## Manually Download NuGet Packages
 
-1. First you need to log in using your Telerik licensed account. Telerik Document Processing is a part of several Telerik bundles and is available in the Downloads section of the suite with which you've obtained the product, e.g. UI for Blazor. This way you will be able to download the packages:
+1\. First you need to log in using your Telerik licensed account. Telerik Document Processing is a part of several Telerik bundles and is available in the Downloads section of the suite with which you've obtained the product, e.g. UI for Blazor. This way you will be able to download the packages:
 
-	![install-using-nuget001](images/install-using-nuget001.png)
+![install-using-nuget001](images/install-using-nuget001.png)
 	
-1. Then, you need to add packages to Visual Studio. Open the NuGet manager and then click the Options button:
+2\. Then, you need to add packages to Visual Studio. Open the NuGet manager and then click the Options button:
 	
-	![installation-nuget-packages 002](images/installation-nuget-packages001.png)
-1. Add new package source. The __Source__ should point to the local folder with the NuGets:
-	
-	![installation-deployment-and-distribution-install-using-nuget 003](images/installation-deployment-and-distribution-install-using-nuget003.png)
+![installation-nuget-packages 002](images/installation-nuget-packages001.png)
 
-1. The final step is to select and install the desired packages. Please note that there are several versions, corresponding to the target framework used in the project, one for .NET 4.0, one for 4.8, one for .NET 6.0 or newer. 
+3\. Add new package source. The __Source__ should point to the local folder with the NuGets:
+	
+![install-using-nuget002](images/install-using-nuget002.png) 
 
-	![installation-deployment-and-distribution-install-using-nuget 00](images/installation-deployment-and-distribution-install-using-nuget008.png)
+4\. The final step is to select and install the desired packages. 
+
+![install-using-nuget003](images/install-using-nuget003.png) 
+
+>important The Telerik Document Processing libraries are available in two versions:
+>
+>* A version for __.Net Framework 4.0__ or later
+>
+>* A version for __.Net Standard 2.0__
+>
+>Both versions are available as NuGet packages but with different names. The assemblies for __.NET Standard__ do __not__ contain the word __Windows__ in their name.
 
 ## Download from the NuGet server
 
