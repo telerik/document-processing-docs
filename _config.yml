@@ -12,6 +12,9 @@ navigation:
     api:
         title: API Reference
         position: 100
+    release-notes:
+        title: Release Notes
+        position: 110
     installation-and-deployment:
         title: Installation and Deployment
         position: 4
