@@ -12,7 +12,7 @@ position: 0
  
 ## PdfProcessing
 
-|Type|Description|
+|||
 |----|----|
 |![new](./images/new.png)|Exposed the IsBold property of FontBase.|
 |![new](./images/new.png)|Added support for embedding ZUGFeRD invoices.|
@@ -29,7 +29,7 @@ position: 0
 
 ## SpreadProcessing
 
-|Type|Description|
+|||
 |----|----|
 |![new](./images/fixed.png)|The XlsxFormatProvider.Import method closes the stream passed to it as an argument.|
 |![new](./images/fixed.png)|An InvalidOperationException is thrown: The axes are incorrectly paired exception on import.|
@@ -37,14 +37,14 @@ position: 0
 
 ## WordsProcessing
 
-|Type|Description|
+|||
 |----|----|
 |![new](./images/fixed.png)|Inline image surrounded by bookmarks is incorrectly measured when the document contains numbering fields..|
 
 
 ## ZipLibrary
 
-|Type|Description|
+|||
 |----|----|
 |![new](./images/new.png)|Added support for extraction of AES-encrypted archives.|
 |![new](./images/changed.png)|Changed GetCryptoProvider() method signature. It now accepts EncryptionSettingsBase instead of EncryptionSettings. |
