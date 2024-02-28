@@ -9,11 +9,11 @@ position: 1
 
 # Protect ZipArchive
 
-__RadZipLibrary__ lets you protect a ZIP archive with a password. This help article will teach you to use __RadZipLibrary__ to password-protect files and how to open files that are protected with a password. To protect a ZIP archive and all [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) items in it, you should specify encryption settings when creating the [ZipArchive]({%slug radziplibrary-gettingstarted%}) object.     
+__RadZipLibrary__ lets you protect a ZIP archive with a password. This help article will teach you how to use __RadZipLibrary__ to password-protect files and how to open files that are protected with a password. To protect a ZIP archive and all [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) items in it, you should specify encryption settings when creating the [ZipArchive]({%slug radziplibrary-gettingstarted%}) object.     
 
 __RadZipLibrary__ supports the following encryption algorithms:
 
-* Traditional **PKWARE** encryption algorithm -the settings for this encryption type are represented by the **PasswordEncryptionSettings** class.
+* Traditional **PKWARE** encryption algorithm - the settings for this encryption type are represented by the **PasswordEncryptionSettings** class.
 
 *  Strong **AES** encryption algorithm - introduced in **2024 Q1**. Currently, RadZipLibrary supports **only reading/extracting** AES-protected archives.  
 
