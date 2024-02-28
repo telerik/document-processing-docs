@@ -9,10 +9,7 @@ position: 0
 ---
 # 2024 Q1 (version 2024.1.124)
 
- 
-## PdfProcessing
-
-|||
+||PdfProcessing|
 |----|----|
 |![new](./images/new.png)|Exposed the IsBold property of FontBase.|
 |![new](./images/new.png)|Added support for embedding ZUGFeRD invoices.|
@@ -27,24 +24,20 @@ position: 0
 |![new](./images/fixed.png)|DrawTable is not setting the HasPendingContent property correctly.  |
 |![new](./images/fixed.png)|Some characters in Wingdings (or custom) font are exported with a different font.  |
 
-## SpreadProcessing
 
-|||
+||SpreadProcessing|
 |----|----|
 |![new](./images/fixed.png)|The XlsxFormatProvider.Import method closes the stream passed to it as an argument.|
 |![new](./images/fixed.png)|An InvalidOperationException is thrown: The axes are incorrectly paired exception on import.|
 |![new](./images/fixed.png)|Left and Top-most borders are not rendered when exporting to PDF.|
 
-## WordsProcessing
 
-|||
+||WordsProcessing|
 |----|----|
 |![new](./images/fixed.png)|Inline image surrounded by bookmarks is incorrectly measured when the document contains numbering fields..|
 
 
-## ZipLibrary
-
-|||
+||ZipLibrary|
 |----|----|
 |![new](./images/new.png)|Added support for extraction of AES-encrypted archives.|
 |![new](./images/changed.png)|Changed GetCryptoProvider() method signature. It now accepts EncryptionSettingsBase instead of EncryptionSettings. |
