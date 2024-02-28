@@ -12,6 +12,8 @@ This article lists the breaking changes and how they can be fixed when upgrading
 
 ## What's Different in 2024 Q1  
 
+### Changed
+
 The following constructors are obsolete:
 
 * **ZipArchive(Stream stream)**
