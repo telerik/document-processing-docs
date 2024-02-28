@@ -11,7 +11,7 @@ position: 0
 
 ||PdfProcessing|
 |----|----|
-|![new](./images/new.png)|Exposed the IsBold property of FontBase.|
+|![new](../images/new.png)|Exposed the IsBold property of FontBase.|
 |![new](./images/new.png)|Added support for embedding ZUGFeRD invoices.|
 |![new](./images/new.png)|Introduced support for embedding file streams.|
 |![new](./images/fixed.png)|An unwanted Stopwatch is contained in the DocumentCatalog class. |
