@@ -90,3 +90,7 @@ The notes collection exposes the following events:
 * __Changed:__ Occurs when the collection has changed.
 * __NotesVisiblilityChanged:__ Occurs when the visibility of all notes has been changed at the same time.
 
+## See Also
+
+ * [Comments vs Notes in RadSpreadProcessing]({%slug comments-vs-notes-in-radspreadprocessing%})
+
