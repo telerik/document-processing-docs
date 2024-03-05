@@ -1,13 +1,13 @@
 ---
-title: 2024 Q1 (version 2024.1.124)
+title: Version 2024.1.124 (2024 Q1)
 page_title: What is new in Q1 2024 for the Document Processing Libraries
-description: 2024 Q1 (version 2024.1.124)
+description: version 2024.1.124 (2024 Q1)
 slug: release-notes-2024-q1
 tags: q1, 2024, release, notes
 published: True
 position: 0
 ---
-# 2024 Q1 (version 2024.1.124)
+# Version 2024.1.124 (2024 Q1)
 
 ## PdfProcessing
 
@@ -19,7 +19,7 @@ position: 0
 ![fixed](../images/fixed.png)
 * An unwanted Stopwatch is contained in the DocumentCatalog class. 
 * A NullReferenceException is thrown when getting the hash code of CFF font`s UnderlineThickness.  
-* A NullReferenceException is thrown on import because the value of the TransformMethod property is not obtained when Refence is set as an indirect reference. 
+* A NullReferenceException is thrown on import because the value of the TransformMethod property is not obtained when Reference is set as an indirect reference. 
 * A NullReferenceException is thrown on export because the value of TransformMethod property is not obtained.  
 * A NotSupportedException is thrown when decoding a CalRgb ColorSpace image. 
 * Missing characters when exporting a document containing different font types but with the same name and properties. 
