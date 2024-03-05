@@ -7,7 +7,6 @@ slug: comments-vs-notes-in-radspreadprocessing
 tags: comments, notes, excel, spreadprocessing
 res_type: kb
 ---
-# Comments vs Notes in RadSpreadProcessing
 
 ## Environment
 
