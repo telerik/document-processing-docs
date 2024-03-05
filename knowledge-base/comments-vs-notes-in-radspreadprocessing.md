@@ -24,7 +24,7 @@ When opening XLSX files in MS Excel, the comments may appear as threaded comment
 
 The [SpreadProcessing]({%slug radspreadprocessing-overview%}) library supports both [Comments]({%slug radspreadprocessing-features-comments%}) and [Notes]({%slug radspreadprocessing-features-notes%}) in Excel. The difference between them is as follows:
 
-- **Comments**: These are the traditional comments that were available in earlier versions of Excel. They are displayed as small red triangles in the corners of cells and can be viewed by hovering over the cell. Each comment can be replied to, forming a thread of information. 
+- **Comments**: These are the traditional comments that were available in earlier versions of Excel. They are anchored as small purple triangles in the corners of cells and can be viewed by hovering over the cell. Each comment can be replied to, forming a thread of information. 
 
 ![Comments in MS Excel](images/comments-vs-notes-in-radspreadprocessing002.png)
 
@@ -36,7 +36,7 @@ Microsoft rebranded their Comments to Notes, and added the possibility to add co
 
 > For more information about the changes in Excel's functionality, you can refer to the following link: [Comments and Notes Updates in Excel](https://insider.microsoft365.com/en-us/blog/comments-and-notes-updates-in-excel-for-the-web)
 
-Telerik Document Processing Libraries do not have effect over this changed behavior of the mechanism in MS Excel and how the documents are generated or displayed. We just provide both functionalities, Comments and Notes. No matter what document is imported in the SpreadProcessing library, you can iterate both collections and extract whatever data is stored.
+Telerik Document Processing Libraries do not have an effect on this changed behavior of the mechanism in MS Excel and how the documents are generated or displayed. We just provide functionalities, Comments, and Notes. No matter what document is imported in the SpreadProcessing library, you can iterate both collections and extract whatever data is stored.
 
 ## See Also
 
