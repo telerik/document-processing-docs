@@ -183,3 +183,4 @@ The two events for both collections use similar enumeration types for event argu
 
  * [Working with Notes]({%slug radspreadprocessing-features-notes%})
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
+ * [Comments vs Notes in RadSpreadProcessing]({%slug comments-vs-notes-in-radspreadprocessing%})
