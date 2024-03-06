@@ -8,7 +8,6 @@ published: True
 position: 6
 ---
 
-
 # Available NuGet Packages 
 
 Telerik provides NuGet packages with the assemblies for all five Document Processing libraries: __RadPdfProcessing__, __RadSpreadProcessing__, __RadSpreadStreamProcessing__, __RadWordsProcessing__, and __RadZipLibrary__. These UI-independent cross-platform libraries enable you to process and convert content in various formats and even work with archive files. We deliver these libraries as a complement to the Telerik UI component suites (UI for ASP.NET, Kendo UI, UI for WPF, UI for WinForms, UI for Xamarin, UI for Blazor), and you don't need to purchase an additional license to use them.
@@ -72,25 +71,7 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
 * __Telerik.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
 
-## Get the NuGet Packages
 
-Before you can install Telerik NuGet packages, you must configure the Telerik NuGet server (https://nuget.telerik.com/v3/index.json) as a package source in Visual Studio:
-
-1\. In the Visual Studio Solution Explorer, right-click a Project, select **Manage NuGet Packages...**, and then select the **Settings** icon:
-
-![installation-nuget-packages 001](images/installation-nuget-packages001.png)
-
-2\. Select **+** to add a new package source and enter https://nuget.telerik.com/v3/index.json in the **Source** field. Add a name for the new package source, for example, **Telerik**:
-
-![installation-nuget-packages 002](images/installation-nuget-packages002.png)
-
-3\. Select **Telerik** from the __Package Source__ dropdown, and you will be prompted for a user name and a password. Use the credentials for your [Telerik Account](https://www.telerik.com/account/).
-
-![installation-nuget-packages 003](images/installation-nuget-packages003.png)
-
-4\. Select and install the desired NuGet packages.
-
-![installation-nuget-packages 004](images/installation-nuget-packages004.png)
 
 ## See Also
 
