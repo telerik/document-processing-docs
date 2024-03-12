@@ -10,13 +10,17 @@ res_type: kb
 
 ## Environment
 
-| Version | Product | Author | 
+| Version | Product | Author |  
 | --- | --- | ---- | 
-| 2024.1.124 | RadSpreadProcessing  |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| 2024.1.124 | RadSpreadProcessing  |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|  
 
 ## Problem
 
 When using the SDK example, [Export Chart](https://github.com/telerik/document-processing-sdk/tree/master/SpreadProcessing/ExportChart), the exported chart images might get exported as blank images in some cases. This article gives information how to handle this undesired behavior.
+
+|XLSX document with Charts|Exported PDF document with Blank charts|
+|----|----|
+|![XLSX document with charts](images/handle-blank-chart-images-pdf-export01.png)|![Exported PDF with missing charts](images/handle-blank-chart-images-pdf-export02.png)|
 
 ## Solution
 
@@ -25,8 +29,11 @@ The SDK example uses the **ChartModelToImageConverter** class which is readily a
 If you are using different versions of Telerik products in your project, this can sometimes cause compatibility issues. Ensure that all references to Telerik products in your project are the same version, including the suffix (e.g.,  `.40`). If necessary, remove all references and add them again using the correct DLLs.
 
 The main reason behind the exported blank charts is if their style is missing. Usually, this is the case when the [NoXaml assemblies](https://docs.telerik.com/devtools/wpf/styling-and-appearance/xaml-vs-noxaml) are referred for Telerik.Windows.Controls.Spreadsheet and Telerik.Windows.Controls.Chart.
+![XLSX document with charts](images/handle-blank-chart-images-pdf-export03.png)
 
->important Ensure that the Xaml assemblies are used from the UI for WPF suite. Thus, the exported chart images will be as expected.
+>important Ensure that the [Xaml assemblies](https://docs.telerik.com/devtools/wpf/styling-and-appearance/xaml-vs-noxaml) are used from the UI for WPF suite. The Xaml assemblies embed also all styles of the controls. Thus, the exported chart images will be as expected.
+
+![Exported PDF document with charts](images/handle-blank-chart-images-pdf-export04.png)  
 
 ## See Also
 
