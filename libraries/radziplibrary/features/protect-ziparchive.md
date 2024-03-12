@@ -15,7 +15,7 @@ __RadZipLibrary__ supports the following encryption algorithms:
 
 * Traditional **PKWARE** encryption algorithm - the settings for this encryption type are represented by the **PasswordEncryptionSettings** class.
 
-*  Strong **AES** encryption algorithm - introduced in **2024 Q1**. Currently, RadZipLibrary supports **only reading/extracting** AES-protected archives.  
+*  Strong **AES** encryption algorithm - introduced in **2024 Q1**.
 
 >note AES encryption (Advanced Encryption Standard) is commonly used to secure sensitive information, such as credit card numbers, passwords, and personal data. It uses a symmetric-key algorithm, meaning the same key is used for both encrypting and decrypting the data. AES encryption uses a fixed-length key of 128, 192, or 256 bits to encrypt and decrypt data.
 
@@ -35,19 +35,25 @@ In order to create a password-protected ZIP archive, you need to pass a **Passwo
 
 	using (Stream stream = File.Open("test.zip", FileMode.Create))
 	{
-		PasswordEncryptionSettings encryptionSettings =  EncryptionSettings.CreatePkzipPasswordEncryptionSettings();
-    		encryptionSettings.Password = "password"; 
-    		CompressionSettings compressionSettings = null;
-    		Encoding encoding = null;
-    		using (ZipArchive archive = ZipArchive.Create(stream, encoding, compressionSettings, encryptionSettings))
-    		{
-        		using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
-        		{
-            		StreamWriter writer = new StreamWriter(entry.Open());
-            		writer.WriteLine("Hello world!");
-            		writer.Flush();
-        		}
-    		}
+
+		//By default the EncryptionStrenght is 256 bits but it can be explicitly specified (EncryptionStrength.Aes128, EncryptionStrength.Aes192, and EncryptionStrength.Aes256) by passing it to the constructor
+		PasswordEncryptionSettings aesEncryptionSettings = EncryptionSettings.CreateAesPasswordEncryptionSettings();
+
+		//You can also use the PKWARE encryption algorithm instead of the AES one
+		PasswordEncryptionSettings pkwareEncryptionSettings = EncryptionSettings.CreatePkzipPasswordEncryptionSettings();
+
+    	aesEncryptionSettings.Password = "password"; 
+    	CompressionSettings compressionSettings = null;
+    	Encoding encoding = null;
+    	using (ZipArchive archive = ZipArchive.Create(stream, encoding, compressionSettings, aesEncryptionSettings))
+    	{
+        	using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
+        	{
+            	StreamWriter writer = new StreamWriter(entry.Open());
+            	writer.WriteLine("Hello world!");
+            	writer.Flush();
+        	}
+    	}
 	}
 
 {{endregion}}
@@ -57,12 +63,17 @@ In order to create a password-protected ZIP archive, you need to pass a **Passwo
 {{region vb-radziplibrary-protect-ziparchive_0}}
 
 	Using stream As Stream = File.Open("test.zip", FileMode.Create)
-    		Dim encryptionSettings As PasswordEncryptionSettings = encryptionSettings.CreatePkzipPasswordEncryptionSettings()
-    		encryptionSettings.Password = "password"
+			'By default the EncryptionStrenght is 256 bits but it can be explicitly specified (EncryptionStrength.Aes128, EncryptionStrength.Aes192, and EncryptionStrength.Aes256) by passing it to the constructor
+    		Dim aesEncryptionSettings As PasswordEncryptionSettings = EncryptionSettings.CreateAesPasswordEncryptionSettings()
+
+			'You can also use the PKWARE encryption algorithm instead of the AES one
+			Dim pkwareEncryptionSettings As PasswordEncryptionSettings = EncryptionSettings.CreatePkzipPasswordEncryptionSettings()
+
+    		aesEncryptionSettings.Password = "password"
     		Dim compressionSettings As CompressionSettings = Nothing
     		Dim encoding As Encoding = Nothing
 
-    		Using archive As ZipArchive = ZipArchive.Create(stream, encoding, compressionSettings, encryptionSettings)
+    		Using archive As ZipArchive = ZipArchive.Create(stream, encoding, compressionSettings, aesEncryptionSettings)
 
         		Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
             			Dim writer As StreamWriter = New StreamWriter(entry.Open())
