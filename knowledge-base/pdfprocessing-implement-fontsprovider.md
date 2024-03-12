@@ -5,7 +5,7 @@ type: how-to
 page_title:  Implement FontsProvider
 slug: pdfprocessing-implement-fontsprovider
 position: 0
-tags: pdf, fonts, PdfProcessing, fontsprovider, netstandard
+tags: pdf, font, PdfProcessing, provider, netstandard, export
 res_type: kb
 ---
 
@@ -21,9 +21,9 @@ This article describes how to implement a **FontsProvider** in .NET Standard due
 
 ## Solution
 
-You must know the fonts the PDF file contains beforehand. Then all fonts must be manually added to the implementation in a similar pattern in order to obtain each font file. Through validation the corresponding font files are extracted.
+You must know the fonts the PDF file contains beforehand. Then all fonts must be manually added to the implementation in a similar pattern in order to obtain each font file. Through validation, the corresponding font files are extracted.
 
-In the validation each font name (FontFamilyName) must be explicitly specified (e.g. "Calibri", "Century Gothic") along with the different font styles (e.g. "Italic", "Bold", "Bold Italic"). Depending on the combination of the font name and font properties a corresponding font file is obtainded. The font file names must also be manually specified and known beforehand because each font has a different naming convention which cannot be predicted or automated (e.g. "calibri**z** - gothic**bi**" - both used for the Bold Italic style).
+In the validation, each font name (FontFamilyName) must be explicitly specified (e.g. "Calibri", "Century Gothic") along with the different font styles (e.g. "Italic", "Bold", "Bold Italic"). Depending on the combination of the font name and font properties a corresponding font file is obtained. The font file names must also be manually specified and known beforehand because each font has a different naming convention which cannot be predicted or automated (e.g. "calibri**z** - gothic**bi**" - both used for the Bold Italic style).
 
 >important If the **FontsProvider** property is not set, a default font will be used when exporting the document.
 
@@ -115,3 +115,7 @@ In the validation each font name (FontFamilyName) must be explicitly specified (
         Telerik.Windows.Documents.Extensibility.FontsProviderBase fontsProvider = new FontsProvider();
         Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.FontsProvider = fontsProvider;
     {{endregion}}
+
+## See Also
+ * [Standard Fonts]({%slug radpdfprocessing-concepts-fonts})
+ * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
