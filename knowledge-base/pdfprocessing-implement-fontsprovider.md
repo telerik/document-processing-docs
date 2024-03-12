@@ -117,5 +117,5 @@ In the validation, each font name (FontFamilyName) must be explicitly specified 
     {{endregion}}
 
 ## See Also
- * [Standard Fonts]({%slug radpdfprocessing-concepts-fonts})
+ * [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})
  * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
