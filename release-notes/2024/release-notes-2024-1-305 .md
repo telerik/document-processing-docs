@@ -1,5 +1,5 @@
 ---
-title: 2024.1.305 (2024 Q1)
+title: Version 2024.1.305 (2024 Q1)
 page_title: What is new in 2024.1.305 (2024 Q1) for the Document Processing Libraries
 description: 2024.1.305 (2024 Q1)
 slug: release-notes-2024-1-305 
