@@ -1,6 +1,6 @@
 ---
 title: How to Update the CellRange used for the FloatingChartShape in RadSpreadProcessing
-description: This article provides solutions for common issues related to dlls in RadSpreadProcessing.
+description: This article provides solutions for updating the used cell range for generating charts in RadSpreadProcessing.
 type: troubleshooting
 page_title: How to Update the CellRange used for the FloatingChartShape in RadSpreadProcessing
 slug: update-cell-range-used-in-charts
@@ -13,7 +13,9 @@ res_type: kb
 | 2024.1.124 | RadSpreadProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 ---
 # Description
- When the CellRange used for generating the chart object in a worksheet contains blank/empty values, they are converted to zero values which may change the chart line in an unexpected way. This article demonstrates how to update chart's CellRange and eliminate such empty values.
+ When the CellRange used for generating the [chart object]({%slug radspreadprocessing-features-charts-using-charts%}) in a worksheet contains blank/empty values, they are converted to zero values which may change the chart line in an unexpected way. This article demonstrates how to update chart's CellRange and eliminate such empty values.
+
+ ![Zero values](images/update-cell-range-used-in-charts01.png) 
 
 # Solution
 
@@ -65,6 +67,7 @@ After importing the XLSX document into a Workbook, iterate the chart shapes and 
             }
    ```
  
+  ![Eliminate zero values](images/update-cell-range-used-in-charts02.png)
 
 # See Also
-- [Export Chart Example](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/chart-support/export-chart)
+- [Using Charts]({%slug radspreadprocessing-features-charts-using-charts%}) 
