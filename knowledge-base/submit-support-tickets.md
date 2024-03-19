@@ -38,7 +38,7 @@ Let's continue with a few steps how to contact the Telerik Document Processing T
 
     ![submit-support-tickets 000](images/submit-support-tickets000.png)
 
-3. Next, select the product **Telerik Document Processing***: 
+3. Next, select the product **Telerik Document Processing**: 
 
 	![submit-support-tickets 001](images/submit-support-tickets001.png)
 
@@ -78,6 +78,8 @@ The trick of obtaining a "one response resolution", is to give as much informati
 >note Max total attached files size: 100MB.
 	
 >important In case you decide to provide your original project, you can be certain that it will be used only for investigation purposes of this case and your privacy will be respected. Telerik Document Processing is licensed under the conditions of the product you've obtained the libraries with. Confidentiality is also described in our product EULA - See Section 11 of the [EULA](https://docs.telerik.com/devtools/document-processing/distribution-and-licensing/license-agreement) and Article V Section 11 of the DevCraft Complete and DevCraft Ultimate EULAs.
+
+* It is hard to investigate the issues without actually having the problematic document. Please try and prepare a sample file without the sensitive information. If you decide you can also send us the original file. You can be certain that it will be used only for investigation purposes of this case and your privacy will be respected.  
 
 * Specify the **Product Version** you are using since it will facilitate reproducing the issue. It is possible that a fix is available in a newer version.
 
