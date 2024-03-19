@@ -1,0 +1,90 @@
+---
+title: How to Get the Most Out of the Telerik Document Processing Support 
+description: This article shows how you can get the most out of the Telerik Document Processing Support 
+type: how-to
+page_title: How to Get the Most Out of the Telerik Document Processing Support   
+slug: submit-support-tickets
+position: 0
+tags: support, submit, ticket, telerik, processing, document, dpl
+res_type: kb
+---
+
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| N/A | Document Processing Libraries |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+
+This tutorial will guide you through the process of contacting the Support team of the Telerik Document Processing Libraries. It would be good to have some general tips in mind when submitting a ticket in order to start a productive discussion. The provided information is very essential for understanding the precise case that you have. It may significantly facilitate the investigation process or troubleshooting. So, always pay attention to the details you give to the support people because usually the case's resolution depends on it.  
+
+Before proceeding further with submitting a ticket, there are some very simple things you can check right away to make sure you haven't missed something very simple.
+
+There are several appropriate resources which our customers can use to find most of their answers quickly:
+
+* [Online Documentation]({%slug introduction%}): Reading documentation is never fun, but we have been refining our docs over the past years to provide better description, more code samples, and easier discoverability.
+
+* [Knowledge Base](https://docs.telerik.com/devtools/document-processing/knowledge-base): There are introduced different implementations of common problems/questions.
+
+* [Forums](https://www.telerik.com/forums/telerik-document-processing): I would like to note that the forum is reviewed not only by the community. Our support engineers answer the questions there as well.
+
+* [SDK](https://github.com/telerik/document-processing-sdk): The Document Processing SDK is an easy-to-use infrastructure containing developer focused examples for the libraries included in Telerik Document Processing.
+
+You will be surprised at how many of your issues can be resolved by a quick read through all of these guides.
+
+Telerik has an exceptional history of support. It is unparalleled in the industry. You usually have a 24 hour guaranteed response time on your ticket ([depending on product and package](https://www.telerik.com/purchase/support-plans)). That's fast considering you are getting direct access to an engineer, but every back and forth that you have with the support team takes up valuable time. You need to make the most of your ticket the first time. You need that first response from the team to contain your answer, not a request for more information.
+
+Let's continue with a few steps how to contact the Telerik Document Processing Technical Support if none of the above listed resource helped you:
+
+1. Log into your Telerik.com account and navigate to the [Support Center - Contact Us](https://www.telerik.com/account/support-center/contact-us) page.
+2. Select the [Get Technical Support](https://www.telerik.com/account/support-center/contact-us/technical-support) option for technical help (use the [Get Licensing Support](https://www.telerik.com/account/support-center/contact-us/licensing-support) option for product license questions).
+
+    ![submit-support-tickets 000](images/submit-support-tickets000.png)
+
+3. Next, select the product **Telerik Document Processing**: 
+
+	![submit-support-tickets 001](images/submit-support-tickets001.png)
+
+4. Pick up the **Document Processing Library** for which you need assistance, e.g. **PdfProcessing**:
+
+	![submit-support-tickets 002](images/submit-support-tickets002.png)
+
+5. Try to search for a possible solution for your inquiry, e.g. *"how to change the page size"*
+
+	![submit-support-tickets 003](images/submit-support-tickets003.png)
+
+6. Have a look at the found results. You may find a suitable solution for your question:
+
+	![submit-support-tickets 004](images/submit-support-tickets004.png)
+
+7. If you are still not discovering what you are looking for, then click the Contact Support button at the bottom to contact our Support engineers. Here comes the important part - what exactly to be included in the support ticket so that the agent that will be assigned to this thread to understand what you are trying to achieve.
+
+	![submit-support-tickets 005](images/submit-support-tickets005.png)
+
+
+## General Tips when Submitting a Support Ticket
+
+The trick of obtaining a "one response resolution", is to give as much information as you can about your issue in your ticket when you initially submit it. If you are able to do this, it will pay huge dividends for you in terms of success in getting your questions answered in the first 1 to 2 exchanges. Here is how it works:
+
+* Give a suitable **Subject** for the ticket - it should summarize what you are tying to accomplish or what error message you get. 
+
+* Have in mind that the support agent is out of the scope of your project and the specific implementation that you have in it. Hence, some information that may seem obvious for you, it may be unknown for the support engineer. That is why strive to provide as much details as possible to describe the precise case.
+
+* Specify clearly ordered steps to follow.
+
+* Provide screen shots and explanations of the expected and actual state of the application. An alternative option is to provide a screen recording of the issue. Download [TechSmith Capture](https://www.techsmith.com/jing-tool.html) for free, upload the recording to their server, and provide the link.
+
+* In case of obtaining an error message, copy/paste the entire message and/or provide a screen shot of it.
+	
+* A sample project, demonstrating the exact undesired behavior that you are facing, may save a lot of days and efforts on both sides. That is why it is always greatly appreciated if you simulate the problematic behavior in a runnable project. Then, we would be able to make an adequate analysis of the precise case and think about a suitable solution. This is the most important thing you can do to clearly demonstrate your issue. Replicating your issue is no doubt the most time consuming part, but it's going to play the biggest role in your success at demonstrating your issue clearly the first time. It often feels easier to copy and paste the relevant portions of your code into the ticket. The problem with this approach is that the pieces have to be reviewed by somebody who doesn't know what the entire project is supposed to look like or accomplish. 
+
+>note Max total attached files size: 100MB.
+	
+>important In case you decide to provide your original project, you can be certain that it will be used only for investigation purposes of this case and your privacy will be respected. Telerik Document Processing is licensed under the conditions of the product you've obtained the libraries with. Confidentiality is also described in our product EULA - See Section 11 of the [EULA](https://docs.telerik.com/devtools/document-processing/distribution-and-licensing/license-agreement) and Article V Section 11 of the DevCraft Complete and DevCraft Ultimate EULAs.
+
+* It is hard to investigate the issues without actually having the problematic document. Please try and prepare a sample file without the sensitive information. If you decide you can also send us the original file. You can be certain that it will be used only for investigation purposes of this case and your privacy will be respected.  
+
+* Specify the **Product Version** you are using since it will facilitate reproducing the issue. It is possible that a fix is available in a newer version.
+
+* The **.NET Framework** is also important as there may have some differences between the full framework and .NET Standard.
+
+>important In case of multiple, unrelated questions please open a separate thread for each question with the appropriate Product (PdfProcessing  / Telerik Document Processing) and avoid mixing different subjects in the same thread. This will also give you the opportunity to track the different cases easily in your account. 
+
+Last, but not least, do not forget that [we are always here to help you](https://www.telerik.com/best-tech-support). We are only successful when you are successful. We will stick with you as long as it takes to get your ticket resolved. We want you to help you be as productive as possible. 
