@@ -13,7 +13,7 @@ res_type: kb
 | 2024.1.124 | RadSpreadProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 ---
 # Description
- When the CellRange used for generating the [chart object]({%slug radspreadprocessing-features-charts-using-charts%}) in a worksheet contains blank/empty values, they are converted to zero values which may change the chart line in an unexpected way. This article demonstrates how to update chart's CellRange and eliminate such empty values.
+ When the CellRange used for generating the [chart object]({%slug radspreadprocessing-features-charts-using-charts%}) in a worksheet contains blank/empty values, they are converted to zero values which may change the chart line in an unexpected way. This article demonstrates how to update the chart's CellRange and update the range's end when such empty values are found. Thus, the range with null values is cut.
 
  ![Zero values](images/update-cell-range-used-in-charts01.png) 
 
@@ -32,7 +32,6 @@ After importing the XLSX document into a Workbook, iterate the chart shapes and 
                 {
                     continue;
                 }
-                LineSeries series = group.Series.First() as LineSeries;
                 CategorySeriesBase firstSeries = group.Series.Where(s => s is CategorySeriesBase).First() as CategorySeriesBase;
                 CellIndex start ;
                 CellIndex end;
