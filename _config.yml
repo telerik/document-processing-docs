@@ -197,7 +197,7 @@ navigation:
     libraries/radpdfprocessing/features:
         title: Features
         position: 6
-    libraries/radpdfprocessing/digital-signature:
+    libraries/radpdfprocessing/features/digital-signature:
         title: Digital Signature
         position: 2
     libraries/radpdfprocessing/features/embedded-file-streams:
