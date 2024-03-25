@@ -18,12 +18,14 @@ res_type: kb
 
 This article shows how to digitally sign an existing PDF document that already contains a SignatureField.
 
+ ![Unsigned PDF](images/sign-pdf-with-signature-widget01.png) 
+
 ## Solution
 
 Use the PdfFormatProvider to import the existing document and find the SignatureField to sign the document:
 
    ```csharp
-      PdfFormatProvider provider = new PdfFormatProvider();
+   PdfFormatProvider provider = new PdfFormatProvider();
    RadFixedDocument document = provider.Import(File.ReadAllBytes("Unsigned.pdf"));
    FormSource formSource = new FormSource();
    formSource.Size = new Size(420, 150);
@@ -60,6 +62,8 @@ Use the PdfFormatProvider to import the existing document and find the Signature
    }
 
    ```
+ ![Signed PDF](images/sign-pdf-with-signature-widget02.png) 
+
 ## See Also
 
 - [Signing a Document with a Digital Signature](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/features/security/signing-a-document-with-a-digital-signature)
