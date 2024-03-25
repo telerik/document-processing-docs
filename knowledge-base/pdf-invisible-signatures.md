@@ -56,3 +56,5 @@ using (System.IO.Stream output = new System.IO.FileStream(signedDocumentFilePath
 
 ```
 
+![Invisible Signature in a PDF document](images/pdf-invisible-signatures.png) 
+
