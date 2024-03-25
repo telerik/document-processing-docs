@@ -80,7 +80,7 @@ __Example 3__ creates a page and adds it to the document created in [__Example 1
 #### __[C#] Example 4: Clone a document__
 
 {{region cs-radpdfprocessing-model-radfixeddocument_5}}
-	RadFixedDocument clonedDocument = originalDocument.Clone();
+	RadFixedDocument clonedDocument = document.Clone();
 {{endregion}}
 
 
