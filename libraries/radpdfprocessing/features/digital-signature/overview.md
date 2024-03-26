@@ -84,3 +84,6 @@ The following example shows a full code snippet for a simple signing of a newly 
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})
 * [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
 * [Signing a document with a digital signature]({%slug signing-a-document-with-digital-signature%})
+* [Widgets Types]({%slug radpdfprocessing-model-annotations-widgets%})
+* [How to Create Invisible Signatures for PDF Documents]({%slug pdf-invisible-signatures%})
+* [Signing a PDF Document with a SignatureWidget]({%slug sign-pdf-with-signature-widget%})
