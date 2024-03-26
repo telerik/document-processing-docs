@@ -26,6 +26,10 @@ The code in __Example 1__ creates a __Run__ element and adds it to a [Paragraph]
 #### __[C#] Example 1: Create and add a run to a paragraph__
 
 {{region cs-radwordsprocessing-model-run_0}}
+	RadFlowDocument document = new RadFlowDocument();
+	Section section = document.Sections.AddSection();
+	Paragraph paragraph = section.Blocks.AddParagraph();
+
 	Run run = new Run(document);
 	paragraph.Inlines.Add(run);
 {{endregion}}
@@ -68,7 +72,7 @@ Inserting text in the document can also be achieved with the [RadFlowDocumentEdi
 #### __[C#] Example 4: Insert a run using RadFlowDocumentEditor__
 
 {{region cs-radwordsprocessing-model-run_3}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(GetDocument());
+	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
 	
 	// Adds a new run to the document.
 	Run run1 = editor.InsertText("First run ");
