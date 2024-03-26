@@ -16,13 +16,13 @@ res_type: kb
 
 ## Description
 
-This article shows how to digitally sign an existing PDF document that already contains a SignatureField.
+This article shows how to digitally sign an existing PDF document that already contains a [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}).
 
  ![Unsigned PDF](images/sign-pdf-with-signature-widget01.png) 
 
 ## Solution
 
-Use the PdfFormatProvider to import the existing document and find the SignatureField to sign the document:
+Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the existing document and find the SignatureField to sign the document:
 
    ```csharp
    PdfFormatProvider provider = new PdfFormatProvider();
@@ -66,4 +66,7 @@ Use the PdfFormatProvider to import the existing document and find the Signature
 
 ## See Also
 
-- [Signing a Document with a Digital Signature](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/features/security/signing-a-document-with-a-digital-signature)
+* [Signing a Document with a Digital Signature]({%slug signing-a-document-with-digital-signature%}})
+* [Widgets Types]({%slug radpdfprocessing-model-annotations-widgets%})
+* [How to Create Invisible Signatures for PDF Documents]({%slug pdf-invisible-signatures%})
+
