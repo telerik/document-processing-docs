@@ -17,7 +17,7 @@ As a worksheet contains a considerable number of rows and columns, it is unusual
 
 The document model offers multiple ways to create a __CellSelection__ object. The following examples list all approaches you can use to retrieve a __CellSelection__ instance. Note that each example creates a new workbook, adds one worksheet and creates a selection for its cells.
 
-Using a **CellIndex** object allows you to specify a single cell (identified by a row index and column index) from the sheet and create a CellSelection for this single cell. Then, you can get the [Value]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) for the cell.                
+Using a **CellIndex** object allows you to specify a single cell (identified by a row index and column index) from the sheet and create a CellSelection for this single cell. Then, you can get the [Value]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) of the cell.                
 
 #### __[C#] Example 1: Create CellSelection using CellIndex__
 
