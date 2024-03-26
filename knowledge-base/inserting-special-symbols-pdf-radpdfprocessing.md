@@ -17,6 +17,8 @@ res_type: kb
 
 This article shows how to insert special symbols, such as "↓", in a PDF document using RadPdfProcessing.
 
+![Special Symbols in PdfProcessing](images/inserting-special-symbols-pdf-radpdfprocessing.png)   
+
 ## Solution
 
 When using the Telerik Document Processing's .NET Standard assemblies/NuGet packages and want to export a document to PDF format, the PdfProcessing library needs to have access to the specific font's data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you will need to provide an implementation of the FontsProviderBase abstract class and set this implementation to the FontsProvider property of FixedExtensibilityManager. 
