@@ -60,7 +60,7 @@ using (System.IO.Stream output = new System.IO.FileStream(signedDocumentFilePath
 
 ## See Also
 
-* [Signing a Document with a Digital Signature]({%slug signing-a-document-with-digital-signature%}})
+* [Signing a Document with a Digital Signature]({%slug signing-a-document-with-digital-signature%})
 * [Widgets Types]({%slug radpdfprocessing-model-annotations-widgets%})
 * [Signing a PDF Document with a SignatureWidget]({%slug sign-pdf-with-signature-widget%})
 
