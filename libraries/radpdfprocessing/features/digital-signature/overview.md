@@ -64,14 +64,12 @@ The following example shows a full code snippet for a simple signing of a newly 
     document.AcroForm.FormFields.Add(pdfSignature);
     signatureWidget.RecalculateContent();
 
-
     string signedDocumentFilePath = "signed.pdf";
     File.Delete(signedDocumentFilePath);
     using (System.IO.Stream output = new System.IO.FileStream(signedDocumentFilePath, System.IO.FileMode.OpenOrCreate, System.IO.FileAccess.ReadWrite))
     {
         new Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider().Export(document, output);
     }
-
 
 {{endregion}}
 
