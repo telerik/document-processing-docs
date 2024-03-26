@@ -66,7 +66,7 @@ Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-p
 
 ## See Also
 
-* [Signing a Document with a Digital Signature]({%slug signing-a-document-with-digital-signature%}})
+* [Signing a Document with a Digital Signature]({%slug signing-a-document-with-digital-signature%})
 * [Widgets Types]({%slug radpdfprocessing-model-annotations-widgets%})
 * [How to Create Invisible Signatures for PDF Documents]({%slug pdf-invisible-signatures%})
 
