@@ -197,12 +197,15 @@ navigation:
     libraries/radpdfprocessing/features:
         title: Features
         position: 6
+    libraries/radpdfprocessing/features/digital-signature:
+        title: Digital Signature
+        position: 2
     libraries/radpdfprocessing/features/embedded-file-streams:
         title: Embedded File Streams
         position: 5
     libraries/radpdfprocessing/model/interactive-forms:
         title: Interactive Forms
-    libraries/radpdfprocessing/model/interactive-forms/form-fields	:
+    libraries/radpdfprocessing/model/interactive-forms/form-fields:
         title: Form Fields
     libraries/radpdfprocessing/formats-and-conversion:
         title: Formats and Conversion

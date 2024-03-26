@@ -9,8 +9,6 @@ position: 5
 
 # Cell Value Types
 
-
-
 This article briefly describes how to work with the __Value__ property of the cells in the document model and focuses on the different supported types of values. 
 
 ## Working with the Value Property of Cells
