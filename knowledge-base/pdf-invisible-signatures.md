@@ -1,6 +1,6 @@
 ---
 title: How to Create Invisible Signatures for PDF Documents
-description: Learn how to digitally sign a PDF document using RadPdfProcessing for Document Processing.
+description: Learn how to sign PDF documents with invisible signatures using RadPdfProcessing.
 type: how-to
 page_title: How to Create Invisible Signatures for PDF Documents
 slug: pdf-invisible-signatures
@@ -20,7 +20,7 @@ This article shows how to sign PDF documents with invisible signatures.
 
 ## Solution
 
-The invisible signature is created by not setting the size to the signature widget. It can not be achieved without the use of signature flags.
+The invisible signature is created by not setting the size to the signature widget. It can be achieved with the use of signature flags.
 
 **RadPdfProcessing**  offers the ability to set the signature flags. The possible values are as specified in the PDF Standard:
 
@@ -57,4 +57,10 @@ using (System.IO.Stream output = new System.IO.FileStream(signedDocumentFilePath
 ```
 
 ![Invisible Signature in a PDF document](images/pdf-invisible-signatures.png) 
+
+## See Also
+
+* [Signing a Document with a Digital Signature]({%slug signing-a-document-with-digital-signature%}})
+* [Widgets Types]({%slug radpdfprocessing-model-annotations-widgets%})
+* [Signing a PDF Document with a SignatureWidget]({%slug sign-pdf-with-signature-widget%})
 
