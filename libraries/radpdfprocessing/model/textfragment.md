@@ -8,45 +8,48 @@ position: 3
 ---
 
 # TextFragment
-
-
-
-__TextFragment__ is content element that represents а single-line text object.
-      
+__TextFragment__ is content element that represents а single-line text object.    
 
 * [Inserting a TextFragment](#inserting-a-textfragment)
 
-* [Modifying a TextFragment](#modifying-a-textfragment)
-
+* [Modifying a TextFragment](#modifying-a-textfragment) 
 
 ## Inserting a TextFragment
 
-__TextFragment__ is a content element that can be added in the __Content__ collection of a __IContainerElement__ such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches that can be adopted.
-        
+__TextFragment__ is a content element that can be added in the __Content__ collection of a __IContainerElement__ such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches that can be adopted:
 
-__Example 1__ shows how you can initialize a TextFragment object and add it to a previously defined container.
-        
+* Create a TextFragment and add it to a page container
+* Use one of the factory methods of the __ContentElementCollection__ to create a new text fragment and insert it into the respective container
+
+ Both methods return the actual TextFragment instance so you can modify it.
 
 #### __[C#] Example 1: Create TextFragment and add it to container__
 
 {{region cs-radpdfprocessing-model-textfragment_0}}
-	TextFragment fragment = new TextFragment();
-	container.Content.Add(fragment);
+	RadFixedDocument document = new RadFixedDocument();
+	RadFixedPage page = new RadFixedPage();
+	document.Pages.Add(page);
+	FixedContentEditor editor = new FixedContentEditor(page);
+
+	SimplePosition simplePosition = new SimplePosition();
+	simplePosition.Translate(20, 20);
+	TextFragment textFragment = page.Content.AddTextFragment("Document Processing Libraries");
+	textFragment.CharacterSpacing = 5;
+	textFragment.WordSpacing = 15;
+	textFragment.Position = simplePosition;
+
+	SimplePosition simplePosition2 = new SimplePosition();
+	simplePosition2.Translate(20, 120);
+	TextFragment textFragment2 = new TextFragment("Document Processing Libraries");
+	textFragment2.CharacterSpacing = 10;
+	textFragment2.WordSpacing = 20;
+	textFragment2.Position = simplePosition2;
+	page.Content.Add(textFragment2);
 {{endregion}}
 
+>caption Inserted TextFragments
 
-
-__Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__, which create new text fragment and insert it into the respective container. Both methods return the actual TextFragment instance so you can modify it.
-        
-
-#### __[C#] Example 2: Add TextFragment to container__
-
-{{region cs-radpdfprocessing-model-textfragment_1}}
-	TextFragment textFragment = container.Content.AddTextFragment();
-	TextFragment textFragmentWithText = container.Content.AddTextFragment("Text");
-{{endregion}}
-
-
+![TextFragments in PdfProcessing](images/radpdfprocessing-model-textfragment.png)  
 
 >tip__TextFragment__ represents a single line of text. In order to make your text "flows" in a document you should make sure all fragments you add can fit in a line or you can use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
           
