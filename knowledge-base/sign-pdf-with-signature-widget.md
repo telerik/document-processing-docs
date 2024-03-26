@@ -2,7 +2,7 @@
 title: Signing a PDF Document with a SignatureWidget
 description: This article provides instructions on how to digitally sign an existing PDF document using RadPdfProcessing.
 type: how-to
-page_title: Signing a PDF Document with a SignatureWidgetProcessing
+page_title: Signing a PDF Document with a SignatureWidget
 slug: sign-pdf-with-signature-widget
 tags: pdf, sign, widget
 res_type: kb
