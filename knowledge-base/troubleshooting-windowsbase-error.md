@@ -42,7 +42,32 @@ This exception is thrown when the binaries for .NET Framework are used in a proj
 
 ## Solution
 
-Remove all the binaries related to Telerik Document Processing and add them again making sure that the names of the binaries or NuGet packages do not include 'Windows'.
+Remove all the binaries or NuGet packages related to Telerik Document Processing and make sure you add them again in their .NET Standard-Compatible version that does not include the word 'Windows'.
+
+**Example:**
+
+<table>
+<thead>
+	<tr>
+		<th>.NET Framework </th>
+		<th>.NET Standard-compatible</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><b>Telerik.Windows.Documents.Core.dll</b></td>
+		<td><b>Telerik.Documents.Core.dll</b></td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Windows.Documents.Fixed.dll</b></td>
+		<td><b>Telerik.Documents.Fixed.dll</b></td>
+	</tr>
+	<tr>
+	    <td><b>Telerik.Windows.Zip.dll</b></td>
+		<td><b>Telerik.Zip.dll</b></td>
+	</tr>
+</tbody>
+</table>
 
 >Although the word 'Windows' is removed from the assembly names for .NET Core, the namespaces still contain it.
 
