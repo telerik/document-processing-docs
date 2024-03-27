@@ -120,5 +120,7 @@ internal class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProv
 ```
 
 ## See Also
-- [Cross-Platform Support >> Fonts](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/cross-platform-support/fonts)
-- [How to Implement FontsProvider](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/how-to/howto-implement-fontsprovider)
+- [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})
+- [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
+- [Cross-Platform Support >> Fonts]({%slug radpdfprocessing-cross-platform-fonts%}})
+- [How to Implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}})
