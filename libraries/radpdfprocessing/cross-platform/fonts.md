@@ -21,4 +21,4 @@ You can find a detailed **FixedExtensibilityManager** and **FontsProvider** desc
 >important If the FontsProvider property is not set, a default font will be used when exporting the document.
 	
 ## See Also
-- [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%}})
+- [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
