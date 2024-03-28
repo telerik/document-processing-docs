@@ -109,7 +109,7 @@ You can assign any **SpreadTextMeasurerBase** implementation to the **SpreadExte
 
 
 ## See Also
- * [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%}})
+ * [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
  * [Cross-Platform Support]({%slug radspreadprocessing-cross-platform%})
  * [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
  * [Using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
