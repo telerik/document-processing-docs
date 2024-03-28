@@ -99,7 +99,7 @@ Now, the font in the exported PDF document is the correct one and the text is no
 ![Hande Export Differences](images/exporting-xlsx-to-pdf-formatting-issues02.png)    
 
 ## See Also
-- [Cross-Platform Support]({%slug radspreadprocessing-cross-platform%}})
-- [Text Measuring]({%slug radspreadprocessing-cross-platform-text-measure%}})
+- [Cross-Platform Support]({%slug radspreadprocessing-cross-platform%})
+- [Text Measuring]({%slug radspreadprocessing-cross-platform-text-measure%})
 - [Fonts in PdfProcessing]({%slug radpdfprocessing-cross-platform-fonts%})
 - [How to implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
