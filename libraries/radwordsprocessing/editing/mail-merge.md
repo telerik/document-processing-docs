@@ -215,4 +215,4 @@ If you want to separate the items into several rows you need to close the group 
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
  * [Hiding MailMerge Line in Output Word Document If Blank]({%slug hide-mailmerge-line-output-word-document-if-blank%})
  * [Inserting Images using Mail Merge]({%slug inserting-images-using-mail-merge-radwordsprocessing%})
- * [Populate a Table with Data using Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
+ * [Populate a Table with Data using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
