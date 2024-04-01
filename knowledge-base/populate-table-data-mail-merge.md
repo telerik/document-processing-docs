@@ -108,6 +108,5 @@ If you skip the MailMerge step, the following template would be produced:
 
 ## See Also
 
-* [Telerik Control Panel Forum](https://www.telerik.com/forums/telerik-control-panel)
 * [Nested Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
 * [Table]({%slug radwordsprocessing-model-table%})
