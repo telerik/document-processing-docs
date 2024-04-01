@@ -16,11 +16,11 @@ res_type: kb
 
 # Description
 
-Learn how to generate a Word (.DOCX) document that contains a table with a header row and an item row merge field. Then, passing a collection of records, automatically populate the data rows. 
+Learn how to generate a Word (.DOCX) document that contains a [Table]({%slug radwordsprocessing-model-table%}) with a header row and an item row merge field. Then, passing a collection of records, automatically populate the data rows. 
 
 # Solution
 
-To achieve the desired result, you can use the Nested Mail Merge functionality and populate the data rows automatically.
+To achieve the desired result, you can use the [Nested Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) functionality that [RadWordsProcessing]({%slug radwordsprocessing-overview%}) offers and populate the data rows automatically.
 
 Here's a sample code snippet that demonstrates how to achieve this:
 
@@ -99,4 +99,15 @@ public class Player {
 
 This code snippet will produce the desired result, merging the data into the table in the Word document.
 
+![Populate Table Data](images/populate-table-data-mail-merge.png) 
 
+
+If you skip the MailMerge step, the following template would be produced:
+
+![Populate Table Data](images/populate-table-data-mail-merge-original.png) 
+
+## See Also
+
+* [Telerik Control Panel Forum](https://www.telerik.com/forums/telerik-control-panel)
+* [Nested Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
+* [Table]({%slug radwordsprocessing-model-table%})
