@@ -40,7 +40,7 @@ To read the data from a file, you should parse the desired elements in a sequenc
 
 {{region radspreadstreamprocessing-import_0}}
 
-	using (FileStream fs = new FileStream(fileName, FileMode.Open))
+	using (System.IO.FileStream fs = new System.IO.FileStream(fileName, FileMode.Open))
 	{
 		using (IWorkbookImporter workBookImporter = SpreadImporter.CreateWorkbookImporter(SpreadDocumentFormat.Xlsx, fs))
 		{

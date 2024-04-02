@@ -9,14 +9,10 @@ position: 1
 
 # RadFixedDocument
 
-
-
-__RadFixedDocument__ hosts fixed document content and is the root element in the document elements tree. It holds a collection of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})  elements.
-      
+__RadFixedDocument__ hosts fixed document content and is the root element in the document elements tree. It holds a collection of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})  elements. 
 
 This article will get you familiar with the basics of __RadFixedDocument__. It contains the following sections:
       
-
 * [What Is RadFixedDocument](#what-is-radfixeddocument)
 
 * [Operating with RadFixedDocument](#operating-with-radfixeddocument)
@@ -27,13 +23,13 @@ This article will get you familiar with the basics of __RadFixedDocument__. It c
 
 __RadFixedDocument__ is the root that contains all other elements in the __RadPdfProcessing__ model. It exposes the following properties:
         
-
 * __Pages__: The pages collection that contains all __RadFixedPages__ in the document.
 * __Annotations__: A read-only collection that contains all [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) in the document.
 * __Destinations__: A collection that contains all [Destinations]({%slug radpdfprocessing-model-annotations-links%}#destination) in the document.
 * __DocumentInfo__: Contains additional meta information about the document like author, title, etc. 
-            
 
+>note A complete SDK example how to generate a document is available [here](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/GenerateDocument).
+            
 __Example 1__ shows how you can create a new __RadFixedDocument__ instance.
         
 <a name="example1"><a/>
@@ -44,16 +40,12 @@ __Example 1__ shows how you can create a new __RadFixedDocument__ instance.
 	RadFixedDocument document = new RadFixedDocument();
 {{endregion}}
 
-
-
 ## Operating with RadFixedDocument
 
 There are different actions, which you can execute with the help of __RadFixedDocument__. For example, you can add a __RadFixedPage__ to an existing document.
         
-
 __Example 2__ adds a page to the document created in [__Example 1__](#example1).
         
-
 #### __[C#] Example 2: Add page to RadFixedDocument__
 
 {{region cs-radpdfprocessing-model-radfixeddocument_1}}
@@ -61,10 +53,8 @@ __Example 2__ adds a page to the document created in [__Example 1__](#example1).
 {{endregion}}
 
 
-
 Alternatively, you can create new __RadFixedPage__ and add it to the __Pages__ collection of a document.
         
-
 __Example 3__ creates a page and adds it to the document created in [__Example 1__](#example1).
         
 
