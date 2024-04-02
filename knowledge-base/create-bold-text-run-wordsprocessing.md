@@ -16,7 +16,7 @@ res_type: kb
 Learn how to create a bold text part in a paragraph using RadWordsProcessing, while keeping the rest of the information regular. 
 
 ## Solution
-To achieve bold text for a specific part of an inline element, such as a `Run`, you need to use two separate `Run` objects with different font weights and sizes. Here is an example of how to accomplish this using Telerik RadWordsProcessing:
+To achieve bold text for a specific part of an inline element, such as a [Run]({%slug radwordsprocessing-model-run%}), you need to use two separate [Run]({%slug radwordsprocessing-model-run%}) objects with different font weights and sizes. Here is an example of how to accomplish this using Telerik [RadWordsProcessing]({%slug radwordsprocessing-overview%}):
 
 ```csharp
 RadFlowDocument document = new RadFlowDocument();
@@ -47,4 +47,8 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 ```
 >note This code creates a `RadFlowDocument` and inserts a section and a paragraph. Two separate `Run` objects are used to define the bold and the regular text. Finally, the document is exported to a DOCX file and opened.
 
+![Create Bold Text](images/create-bold-text-run-wordsprocessing.png)  
 
+## See Also
+
+* [Run]({%slug radwordsprocessing-model-run%})
