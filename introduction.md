@@ -1,6 +1,6 @@
 ---
 title: Introduction
-page_title: Start with Cross-Platform Document Management
+page_title: Telerik Document Processing
 description: Telerik Document Processing is a bundle of UI-independent, cross-platform APIs enabling you to process the most commonly used flow, fixed and spreadsheet document formats. 
 slug: introduction
 tags: introduction
@@ -90,7 +90,7 @@ Telerik Document Processing features the following components:
 
 Telerik Document Processing is a commercial library. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to [purchase a license](https://www.telerik.com/purchase.aspx). Feel free to review the Telerik [License Agreement](https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s) to get acquainted with the full terms of use.	
 
->Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight***. The libraries are subject of the license under which you've obtained the assemblies. ( * [Learn about Telerik UI for Silverlight discontinuation, end user options and alternatives.](https://www.telerik.com/products/silverlight/overview.aspx)).
+>Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight***. The libraries are subject to the license under which you've obtained the assemblies. ( * [Learn about Telerik UI for Silverlight discontinuation, end user options and alternatives.](https://www.telerik.com/products/silverlight/overview.aspx)).
 
 ## Support Options
 
@@ -105,6 +105,24 @@ For any issues you might encounter while working with Telerik Document Processin
 
 * [Knowledge Base](https://docs.telerik.com/devtools/document-processing/knowledge-base)
 * [Virtual Classroom](https://www.telerik.com/account/support/virtual-classroom)
+
+## Help us Improve the Telerik Document Processing Libraries' Documentation
+
+We believe that the documentation for a product is at its best when the content is a collaboration between the builders and consumers of that product. Everybody can play a role in making our documentation better and we encourage you to help us with that task in the way that you choose:
+
+* **Submit a New Issue at GitHub**
+
+If you find an issue with our docs that needs to be addressed, the best way to let us know is by creating an issue in our [Github repository](https://github.com/telerik/document-processing-docs/issues). When creating an issue, please provide a descriptive title, be as specific as possible, and link to the documentation in question. If you can provide a link to the closest anchor to the issue, that is even better.
+
+* **Update the Documentation at GitHub**
+
+Creating an issue is great, but what we really love are pull requests. This is the most direct method. So, if you find an issue in the docs, or even feel like creating new content, we’d be happy to have your contributions! The basic steps are that you fork our documentation and submit a pull request. That way you may contribute to exactly where you found the error. After that, our technical writing team just needs to approve your change request. Please use only standard markdown. For more detailed instructions, please follow [the contribution instructions] (https://github.com/telerik/document-processing-docs/blob/master/README.md) published on GitHub.
+
+* **Forums**
+
+You can visit the [Telerik Document Processing forum](https://www.telerik.com/forums/telerik-document-processing) and leave us feedback. Please notice that this method will take a bit longer to reach our documentation team. However, if you need a fast reply from our support team, leaving feedback in the forum guarantees a support number for your suggestions, and that we will follow up on it.
+
+Thank you for your contribution to the Telerik Document Processing Libraries' Documentation!
 
 ## Next Steps
 
