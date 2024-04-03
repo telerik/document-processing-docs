@@ -73,8 +73,8 @@ The following example depends on the [Magick.NET](https://www.nuget.org/packages
         {
             public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
             {
-                MagickFormatInfo formatInfo = MagickFormatInfo.Create(imageData);
-                if (formatInfo != null && formatInfo.IsReadable)
+                IMagickFormatInfo? formatInfo = MagickFormatInfo.Create(imageData);
+                if (formatInfo != null && formatInfo.SupportsReading)
                 {
                     using (MagickImage magickImage = new MagickImage(imageData))
                     {
