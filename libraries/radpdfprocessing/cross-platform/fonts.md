@@ -21,4 +21,9 @@ You can find a detailed **FixedExtensibilityManager** and **FontsProvider** desc
 >important If the FontsProvider property is not set, a default font will be used when exporting the document.
 	
 ## See Also
-- [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
+
+ * [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})
+ * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
+ * [Inserting Special Symbols in PDF using RadPdfProcessing]({%slug inserting-special-symbols-pdf-radpdfprocessing%})
+ * [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
+
