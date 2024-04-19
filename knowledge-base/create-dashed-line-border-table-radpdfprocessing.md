@@ -15,10 +15,10 @@ res_type: kb
 
 # Description
 
-Learn how to add a dashed line border below the headings of a table using RadPdfProcessing.
+Learn how to add a dashed line border below the headings of a table using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
 # Solution
-To create a dashed line border for a table in RadPdfProcessing, you can follow these steps:
+To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-table%}) in RadPdfProcessing, you can follow these steps:
 
 1. Set the desired font style properties for the table.
 2. Create a `Border` object with the desired thickness, style, and color.
@@ -26,10 +26,12 @@ To create a dashed line border for a table in RadPdfProcessing, you can follow t
 4. Set the `Padding` property of the table's `DefaultCellProperties` to the desired padding values.
 5. Add rows and cells to the table and set the preferred width for each cell.
 6. Insert text into each cell using the desired font style properties.
-7. Use a `FixedContentEditor` to draw the table on the document page.
+7. Use a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}}) to draw the table on the document page.
 8. Specify the desired dashed line style by setting the `StrokeDashArray` property of the `GraphicProperties` of the `FixedContentEditor`.
 
 Here is a sample code snippet that demonstrates how to create a dashed line border for a table in RadPdfProcessing:
+
+![Dashed Table Border](images/pdf-dashed-table-border.png) 
 
 ```csharp
 FontFamily fFamily = new FontFamily("Verdana");
@@ -68,10 +70,17 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 ```
 
 Please note that you can modify the `Borders` property of the `DefaultCellProperties` to specify different border styles for each side of the cell or render a border only at the botom:
+![Bottom Dashed Table Border](images/pdf-bottom-dashed-table-border.png) 
 
 ```csharp
 table.DefaultCellProperties.Borders = new TableCellBorders(null, null, null,b);
 ```
 
+## See Also
+
+* [TableCell]({%slug radpdfprocessing-editing-tablecell%})
+* [Table]({%slug radpdfprocessing-editing-table%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}})
+* [Create Repeating Table Header Row in PdfProcessing]({%slug pdfprocessing-create-repeat-header-row%})
 
 
