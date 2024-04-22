@@ -15,7 +15,7 @@ res_type: kb
 
 ## Description
 
-[RadPdfProcessing]({%slug radpdfprocessing-overview%}) allows you to create [Tables]({%slug radpdfprocessing-editing-table%}). A common requirement is to have a header row for the table. This articles how to simulates such functionality.
+[RadPdfProcessing]({%slug radpdfprocessing-overview%}) allows you to create [Tables]({%slug radpdfprocessing-editing-table%}). A common requirement is to have a header row for the table. This article shows how to simulate such functionality.
 
 ## Solution
 Table header row can be added as a standard TableRow with bold text. 
