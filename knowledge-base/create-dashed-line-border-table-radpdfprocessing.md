@@ -1,10 +1,10 @@
 ---
 title: Creating a Dashed Line Border for a Table in RadPdfProcessing
-description: Learn how to add a dashed line border to a table heading in RadPdfProcessing.
+description: Learn how to add a dashed line border to a table in RadPdfProcessing.
 type: how-to
 page_title: Create a Dashed Line Border for a Table in RadPdfProcessing
 slug: create-dashed-line-border-table-radpdfprocessing
-tags: pdfprocessing, table, border, dash, line, heading
+tags: pdfprocessing, table, border, dash, line
 res_type: kb
 ---
 # Environment
@@ -15,7 +15,7 @@ res_type: kb
 
 # Description
 
-Learn how to add a dashed line border below the headings of a table using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
+Learn how to add a dashed line border in a table using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
 # Solution
 To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-table%}) in RadPdfProcessing, you can follow these steps:
@@ -69,7 +69,7 @@ using (Stream output = File.OpenWrite(outputFilePath))
 Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
 
-Please note that you can modify the `Borders` property of the `DefaultCellProperties` to specify different border styles for each side of the cell or render a border only at the botom:
+Please note that you can modify the `Borders` property of the `DefaultCellProperties` to specify different border styles for each side of the cell or render a border only at the bottom:
 ![Bottom Dashed Table Border](images/pdf-bottom-dashed-table-border.png) 
 
 ```csharp
