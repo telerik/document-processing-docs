@@ -23,3 +23,108 @@ Telerik Document Processing is part of several Telerik bundles and is licensed u
 | UI for WinUI | [ WinUI Document Processing Overview](https://docs.telerik.com/devtools/winui/controls/document-processing/overview) |
 | UI for .NET MAUI ||
 | UI for Xamarin ||
+
+## Using the Telerik Document Processing Libraries in Your Solutions
+
+In order to include the Telerik Document Processing libraries in your application, you should build the source code as described below. The source code of the Document Processing libraries is distributed together with the above-listed products' source code and is available for download from the client's account. 
+
+For the sake of the example it is assumed that the source distribution ZIP file is extracted in C:\DPL.         		         
+ 		 
+ __Instructions__
+
+1\. Open `C:\DPL\Documents\Licensing\AssemblyProtection.cs` in a text editor (notepad, Visual Studio, etc.). In versions of the suite prior to R2 2016, the path is `C:\DPL\Documents\Core\Core\Licensing\AssemblyProtection.cs`.   
+            
+
+2\. Uncomment the following line:
+            
+
+Before:
+
+{{source=..\SamplesCS\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls.cs region=CommentedIsValid}}
+{{source=..\SamplesVB\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls.vb region=CommentedIsValid}}
+
+````C#
+public static bool IsValid()
+{
+    // Uncomment the following line
+    // return ValidatePassPhrase();
+    return true;
+}
+
+````
+````VB.NET
+Public Shared Function IsValid() As Boolean
+    ' Uncomment the following line
+    ' return ValidatePassPhrase();
+    Return True
+End Function
+
+````
+
+{{endregion}}
+
+
+After:
+
+{{source=..\SamplesCS\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls2.cs region=UnCommentedIsValid}}
+{{source=..\SamplesVB\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls2.vb region=UnCommentedIsValid}}
+
+````C#
+public static bool IsValid()
+{
+    // Uncomment the following line
+    return ValidatePassPhrase();
+}
+
+````
+````VB.NET
+Public Shared Function IsValid() As Boolean
+    ' Uncomment the following line
+    Return ValidatePassPhrase()
+End Function
+
+````
+
+{{endregion}}
+
+3\. Change the ApplicationName constant to match the name of your application:
+
+Before:
+
+{{source=..\SamplesCS\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls.cs region=AppNameBefore}}
+{{source=..\SamplesVB\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls.vb region=AppNameBefore}}
+
+````C#
+internal const string ApplicationName = "MyApp";
+
+````
+````VB.NET
+Friend Const ApplicationName As String = "MyApp"
+
+````
+
+{{endregion}}
+
+
+After:
+
+{{source=..\SamplesCS\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls2.cs region=AppNameAfter}}
+{{source=..\SamplesVB\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls2.vb region=AppNameAfter}}
+
+````C#
+internal const string ApplicationName = "Sample Application Name v2.0 (tm)";
+
+````
+````VB.NET
+Friend Const ApplicationName As String = "Sample Application Name v2.0 (tm)"
+
+````	
+
+{{endregion}}
+
+4\. Save __AssemblyProtection.cs__ and rebuild.
+            
+
+5\. In your application replace the existing references to the Telerik assemblies with the ones built from the source code.
+
+6\. If you run the application now you should get an exception with message “This version of *Product* is licensed only for use by Sample Application Name v2.0 (tm)”. Note that “Sample Application Name v2.0 (tm)” will be replaced with the value of the ApplicationName constant.
