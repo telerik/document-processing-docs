@@ -16,11 +16,11 @@ Telerik Document Processing is part of several Telerik bundles and is licensed u
 | UI for ASP.NET AJAX | [Protecting the Telerik ASP.NET AJAX Assemblies](https://docs.telerik.com/devtools/aspnet-ajax/deployment/protecting-the-telerik-asp.net-ajax-assembly#protecting-the-document-processing-libraries)|
 | UI for WPF | [Protecting the Telerik UI for WPF Assemblies](https://docs.telerik.com/devtools/wpf/licensing/protecting-telerik-assembly#protect-the-telerik-documents-assemblies-by-editing-the-source-code) |
 | UI for WinForms | [Protecting the Telerik UI for WinForms Assemblies](https://docs.telerik.com/devtools/winforms/deployment-and-distribution/redistributing-telerik-ui-for-winforms#usingthe-telerik-document-processing-libraries-in-your-solutions) |
-| UI for Silverlight | [Protecting the Telerik UI for Silverlight Assemblies](https://docs.telerik.com/devtools/silverlight/licensing/protecting-telerik-assembly#protect-the-telerik-documents-assemblies-by-editing-the-source-code) |
 | UI for ASP.NET MVC | [ ASP.NET MVC Document Processing Overview](https://docs.telerik.com/aspnet-mvc/document-processing) |  
 | UI for ASP.NET Core | [ ASP.NET Core Document Processing Overview](https://docs.telerik.com/aspnet-core/document-processing#telerik-document-processing) |
 | UI for Blazor | [ Blazor Document Processing Overview](https://docs.telerik.com/blazor-ui/components/document-processing/overview) |
 | UI for WinUI | [ WinUI Document Processing Overview](https://docs.telerik.com/devtools/winui/controls/document-processing/overview) |
+| UI for Silverlight | [Protecting the Telerik UI for Silverlight Assemblies](https://docs.telerik.com/devtools/silverlight/licensing/protecting-telerik-assembly#protect-the-telerik-documents-assemblies-by-editing-the-source-code) ([Discontinued](https://www.telerik.com/products/silverlight/overview.aspx)) |
 | UI for .NET MAUI ||
 | UI for Xamarin ||
 
@@ -34,96 +34,44 @@ For the sake of the example it is assumed that the source distribution ZIP file 
 
 1\. Open `C:\DPL\Documents\Licensing\AssemblyProtection.cs` in a text editor (notepad, Visual Studio, etc.). In versions of the suite prior to R2 2016, the path is `C:\DPL\Documents\Core\Core\Licensing\AssemblyProtection.cs`.   
             
-
 2\. Uncomment the following line:
-            
 
-Before:
+#### __[C#] Before
 
-{{source=..\SamplesCS\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls.cs region=CommentedIsValid}}
-{{source=..\SamplesVB\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls.vb region=CommentedIsValid}}
-
-````C#
-public static bool IsValid()
-{
-    // Uncomment the following line
-    // return ValidatePassPhrase();
-    return true;
-}
-
-````
-````VB.NET
-Public Shared Function IsValid() As Boolean
-    ' Uncomment the following line
-    ' return ValidatePassPhrase();
-    Return True
-End Function
-
-````
-
+{{region cs-documentprocessing-protect-source_0}}
+	public static bool IsValid()
+    {
+        // Uncomment the following line
+        // return ValidatePassPhrase();
+        return true;
+    }
 {{endregion}}
 
+#### __[C#] After
 
-After:
-
-{{source=..\SamplesCS\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls2.cs region=UnCommentedIsValid}}
-{{source=..\SamplesVB\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls2.vb region=UnCommentedIsValid}}
-
-````C#
-public static bool IsValid()
-{
-    // Uncomment the following line
-    return ValidatePassPhrase();
-}
-
-````
-````VB.NET
-Public Shared Function IsValid() As Boolean
-    ' Uncomment the following line
-    Return ValidatePassPhrase()
-End Function
-
-````
-
+{{region cs-documentprocessing-protect-source_1}}
+	public static bool IsValid()
+    {
+        // Uncomment the following line
+        return ValidatePassPhrase();
+    }
 {{endregion}}
 
 3\. Change the ApplicationName constant to match the name of your application:
 
-Before:
+#### __[C#] Before
 
-{{source=..\SamplesCS\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls.cs region=AppNameBefore}}
-{{source=..\SamplesVB\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls.vb region=AppNameBefore}}
-
-````C#
-internal const string ApplicationName = "MyApp";
-
-````
-````VB.NET
-Friend Const ApplicationName As String = "MyApp"
-
-````
-
+{{region cs-documentprocessing-protect-source_2}}
+	internal const string ApplicationName = "MyApp";
 {{endregion}}
 
+#### __[C#] After
 
-After:
-
-{{source=..\SamplesCS\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls2.cs region=AppNameAfter}}
-{{source=..\SamplesVB\InstallationDeploymentAndDistribution\RedestributingTelerikRadControls2.vb region=AppNameAfter}}
-
-````C#
-internal const string ApplicationName = "Sample Application Name v2.0 (tm)";
-
-````
-````VB.NET
-Friend Const ApplicationName As String = "Sample Application Name v2.0 (tm)"
-
-````	
-
+{{region cs-documentprocessing-protect-source_3}}
+	internal const string ApplicationName = "Sample Application Name v2.0 (tm)";
 {{endregion}}
 
-4\. Save __AssemblyProtection.cs__ and rebuild.
-            
+4\. Save __AssemblyProtection.cs__ and rebuild.           
 
 5\. In your application replace the existing references to the Telerik assemblies with the ones built from the source code.
 
