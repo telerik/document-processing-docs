@@ -153,6 +153,7 @@ This property specifies three types of user access permissions: **PrintingPermis
  
 __Example 4__ shows how you can create a __PdfExportSettings__ object with settings that specify an OwnerPassword and UserAccessPermissions.
 
+>important Note that the UserAccessPermissions are exported only if the PdfExportSettings.**IsEncrypted** property is set to true.
 
 #### __[C#] Example 4: Export settings__
 
