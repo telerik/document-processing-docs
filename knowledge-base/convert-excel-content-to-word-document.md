@@ -146,7 +146,7 @@ Size CalculateRangeSize(Worksheet worksheet, CellRange range)
     return new Size(totalWidth, totalHeight);
 }
 ```
->note: Please be aware that the resolution of the exported images may vary depending on the settings used. You can adjust the image quality, compression, scale factor, and anti-aliasing properties in the SkiaImageFormatProvider to achieve the desired results.
+>note Please be aware that the resolution of the exported images may vary depending on the settings used. You can adjust the image quality, compression, scale factor, and anti-aliasing properties in the SkiaImageFormatProvider to achieve the desired results.
 
 # See Also
 - [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) 
