@@ -9,14 +9,11 @@ position: 4
 
 # FixedContentEditor
 
-
-
-__FixedContentEditor__ is utility class that is intended to simplify the process of creating and editing the content of an __IContentRootElement__ such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
-      
+__FixedContentEditor__ is a utility class that is intended to simplify the process of creating and editing the content of a single PDF page, [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) (also known as __IContentRootElement__).
 
 ## Creating FixedContentEditor
 
-__FixedContentEditor__ is always associated to a single __IContentRootElement__ which it takes as a constructor parameter when it is created. __Example 1__ shows how you can create an editor.
+__FixedContentEditor__ is always associated with a single page, __IContentRootElement__, which it takes as a constructor parameter when it is created. __Example 1__ shows how you can create an editor for editing a specific PDF page.
         
 
 #### __[C#] Example 1: Create FixedContentEditor__
@@ -25,13 +22,9 @@ __FixedContentEditor__ is always associated to a single __IContentRootElement__ 
 	FixedContentEditor editor = new FixedContentEditor(contentRootElement);
 {{endregion}}
 
-
-
 The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the content root element. When a new element is created, its position is being set to the current position of the editor. The initial position of the editor can be specified when it is created.
-        
 
 __Example 2__ demonstrates how you can create а FixedContentEditor with a specific initial position.
-        
 
 #### __[C#] Example 2: Create FixedContentEditor with specific position__
 
@@ -39,17 +32,13 @@ __Example 2__ demonstrates how you can create а FixedContentEditor with a speci
 	FixedContentEditor editor = new FixedContentEditor(contentRootElement, initialPosition);
 {{endregion}}
 
-
-
 ## Inserting Elements
 
-Composing a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) normally requires to create all elements and specify exactly how they should look. The __FixedContentEditor__ takes care of most things for you. This section explains how you can add different type of elements.
-        
+Composing a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) normally requires creating all elements and specifying exactly how they should look. The __FixedContentEditor__ takes care of most things for you. This section explains how you can add different types of elements.       
 
 ### Inserting Text
 
-Inserting а [TextFragment]({%slug radpdfprocessing-model-textfragment%}) can be done with the __public void DrawText(string text)__ method. __Example 3__ inserts a fragment with content "First text fragment.".
-            
+Inserting а [TextFragment]({%slug radpdfprocessing-model-textfragment%}) can be done with the __public void DrawText(string text)__ method. __Example 3__ inserts a fragment with the content "First text fragment.".     
 
 #### __[C#] Example 3: Insert TextFragment__
 
@@ -57,22 +46,17 @@ Inserting а [TextFragment]({%slug radpdfprocessing-model-textfragment%}) can be
 	editor.DrawText("First text fragment.");
 {{endregion}}
 
-
-
 __Figure 1__ shows the result of __Example 3__.
             
-
 #### Figure 1: TextFragment result
 ![Rad Pdf Processing Editing Fixed Content Editor 01](images/RadPdfProcessing_Editing_FixedContentEditor_01.png)
 
 
 >The '\r' and '\n' characters don't have the usual meaning of "go to next line" when they are inserted into a PDF document and you cannot simply insert text containing these characters to produce multiline text. Instead, you should split the text and insert it line by line. 
 
-
 ### Inserting Paragraph
 
-__Example 4__ shows how you can use the __Block__ object to draw a paragraph.
-            
+__Example 4__ shows how you can use the __Block__ object to draw a paragraph.            
 
 #### __[C#] Example 4: Insert paragraph__
 
@@ -82,8 +66,6 @@ __Example 4__ shows how you can use the __Block__ object to draw a paragraph.
 	block.InsertText("Second sentence.");
 	editor.DrawBlock(block);
 {{endregion}}
-
-
 
 __Figure 2__ shows the result of __Example 4__.
             
@@ -158,10 +140,8 @@ __FixedContentEditor__ exposes a __Clipping__ property, which defines the [Clipp
 
 When the returned __IDisposable__ object from the __PushClipping()__ method is disposed, the clipping is popped from the clippings in the editor.
             
-
 When a new clipping is pushed, it is set as a clipping to the current clipping in the editor. __Example 7__ shows how a clipping can be pushed.
             
-
 #### __[C#] Example 7: Push clipping__
 
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_6}}
@@ -177,18 +157,14 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
 	}
 {{endregion}}
 
-
-
-__Figure 4__ shows the result of __Example 7__.
-            
+__Figure 4__ shows the result of __Example 7__.        
 
 #### Figure 4: Clipping result
 ![Rad Pdf Processing Editing Fixed Content Editor 03](images/RadPdfProcessing_Editing_FixedContentEditor_03.png)
 
 ### Inserting Table
 
-__FixedContentEditor__ exposes __DrawTable()__ method, which allows you to easily position and draw tabular data in the PDF document. You can specify the size you need to fit the table in by using the appropriate overload of the __DrawTable()__ method.
-            
+__FixedContentEditor__ exposes __DrawTable()__ method, which allows you to easily position and draw tabular data in the PDF document. You can specify the size you need to fit the table in by using the appropriate overload of the __DrawTable()__ method.        
 
 __Example 8__ generates a table and draws it in some fixed size.
             
@@ -224,7 +200,7 @@ More detailed information about tables is available in the [Table]({%slug radpdf
 
 ### Inserting Forms
 
-With the FixedContentEditor class you can insert a Form (Form-XObject) element. 
+With the FixedContentEditor class, you can insert a Form (Form-XObject) element. 
 
 #### __[C#] Example 9: Insert a form__
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_9}}
@@ -238,7 +214,7 @@ There are two more overloads of DrawForm() that enable you to pass the size that
 
 ### Inserting Widgets
 
-The Widget annotations allow you visualize the content of a FormField. With the API of FixedContentEditor, you can easily create and insert widgets to the PDF document. The **DrawWidget**() method has two overloads:
+The Widget annotations allow you to visualize the content of a FormField. With the API of FixedContentEditor, you can easily create and insert widgets to the PDF document. The **DrawWidget**() method has two overloads:
 
 * **DrawWidget<T>(FormField<T> parentField, Size annotationSize)**: Creates new [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) representing the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instance passed as a parameter and draws the widget with the specified annotation size. This method will add widget only in cases when the root of the FixedContentEditor supports annotations. 
 
@@ -328,7 +304,7 @@ __FixedContentEditor__ has some properties and methods that affect how it will b
 * __RestoreGraphicProperties()__: Restores the GrahpicProperties.
             
 
-* __SaveProperties()__: Saves both the text and the graphic properties. It returns an IDisposable object which calls RestoreProperties() when disposed and can be used in a using statement.
+* __SaveProperties()__: Saves both the text and the graphic properties. It returns an IDisposable object that calls RestoreProperties() when disposed and can be used in a using statement.
             
 
 * __RestoreProperties()__: Restores both text and graphic properties.
