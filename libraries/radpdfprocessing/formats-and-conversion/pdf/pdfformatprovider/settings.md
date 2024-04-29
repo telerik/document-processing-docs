@@ -111,7 +111,7 @@ This property controls if the fonts will be embedded in the file. The default va
 > * **Subset** - Embeds only the used characters subset of the fonts. This is the default approach.
 
 
->caution The subset export is currently implemented for TrueType fonts only (.ttf) (which should be the biggest group of fonts) and **not** implemented for the CFF fonts (.otf).
+>caution The subset export option is currently implemented for TrueType fonts only (.ttf) and **not** implemented for the CFF fonts (.otf).
 
 ### __IsEncrypted__
 
