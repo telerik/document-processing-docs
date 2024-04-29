@@ -9,11 +9,12 @@ position: 0
 
 # Changes
 
-
-
 This topic summarizes the new functionality introduced in the library with helpful links to places in the documentation that describe in greater detail the new functionality and how it can be used.
-      
 
+## What's New in 2024 Q2
+
+The PdfExportSettings.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property uses the **FontEmbeddingType** enum allowing to specify whether the full font will be embedded in the document or a subset of it.
+      
 ## What's New in 2014 Q3
 
 __What's New__

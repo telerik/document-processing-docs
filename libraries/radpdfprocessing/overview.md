@@ -1,23 +1,26 @@
 ---
 title: Overview
-page_title: Overview
+page_title: Overview - RadPdfProcessing
+description: RadPdfProcessing is a processing library that allows you to create, import and export PDF documents.
 slug: radpdfprocessing-overview
-tags: overview
+tags: overview, pdf, processing, features
 published: True
 position: 0
 ---
 
 # Overview
 
-**RadPdfProcessing** is a processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.
-
-![PdfProcessing](images/pdf-processing-overview.png)  
+|RadPdfProcessing|Introduction|
+|----|----|
+![PdfProcessing](images/pdf-processing-overview.png)| **RadPdfProcessing** is a processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.|
 
 In this article, we list the library's most popular features. If you want to learn how to use the library, head straight to the **[Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})** article.
 
 >note If you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
 
-The API of RadPdfProcessing contains two different editors, enabling you to choose between editing in a flow-like manner or using the much more powerful and flexible fixed document structure that allows you to draw on the page.
+The API of RadPdfProcessing contains two different editors,  [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) and  [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}), enabling you to choose between editing in a **flow-like** manner or using the much more powerful and flexible **fixed** document structure that allows you to draw on the page.
+
+## Key Features 
             
 The document model of the library provides support for:
 
@@ -42,3 +45,10 @@ The document model of the library provides support for:
 | [**Merge documents**]({%slug radpdfprocessing-model-radfixeddocument%}) and [**document pages**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}) | You can combine the pages from multiple documents into a single document. |
 | [**PdfStreamWriter**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})| The API exposes a functionality that provides an option for exporting PDF files with unmatched performance and minimized memory footprint. Extremely useful when you need to add some content to an existing document, merge or split documents. |
 | [**Import of PDF and export to PDF or plain text**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) | You can import or export PDF files and convert PDF files to plain text. |
+
+# See Also
+
+- [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
+- [First Steps]({%slug getting-started-first-steps%})
+- [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
+
