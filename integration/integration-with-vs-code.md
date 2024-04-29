@@ -53,5 +53,5 @@ To use **Document Processing Libraries Configuration Wizard** from the **VS Code
 
 ## See Also
 
-* [Visual Studio Code Integration for Telerik UI for Blazor Overview]({% slug getting-started-vs-code-integration-overview %}) 
+* [Visual Studio Code Integration for Telerik UI for Blazor Overview]({% slug getting-started-vs-code-integration-overview%}) 
 
