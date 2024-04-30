@@ -63,41 +63,11 @@ The following code snippets demonstrates how to create a custom implementation o
         {
             try
             {
-                IImageFormat imageFormat;
-                using (ImageSharp image = ImageSharp.Load(imageData, out imageFormat))
+                using (Image image = Image.Load(imageData))
                 {
                     size = new Telerik.Documents.Primitives.Size(image.Width, image.Height);
 
-                    IImageDecoder decoder = null;
-                    Dictionary<Type, Action> decoderSwitch = new Dictionary<Type, Action>
-                        {
-                            { typeof(PngFormat), () => decoder = new PngDecoder() },
-                            { typeof(BmpFormat), () => decoder = new BmpDecoder() },
-                            { typeof(GifFormat), () => decoder = new GifDecoder() },
-                            { typeof(JpegFormat), () => decoder = new JpegDecoder() },
-                            { typeof(PbmFormat), () => decoder = new PbmDecoder() },
-                            { typeof(TgaFormat), () => decoder = new TgaDecoder() },
-                            { typeof(TiffFormat), () => decoder = new TiffDecoder() },
-                            { typeof(WebpFormat), () => decoder = new WebpDecoder() },
-                        };
-
-                    if (decoderSwitch.ContainsKey(imageFormat.GetType()))
-                    {
-                        decoderSwitch[imageFormat.GetType()]();
-                    }
-                    else
-                    {
-                        rawRgbData = null;
-                        rawAlpha = null;
-
-                        return false;
-                    }
-
-                    Configuration configuration = new Configuration();
-                    ImageSharp decodedImage = decoder.Decode(configuration, new MemoryStream(imageData));
-
-                    ImageFrame frame = decodedImage.Frames[0];
-
+                    var frame = image.Frames.RootFrame;
                     ImageFrame<Rgb24> frameRgb24 = frame as ImageFrame<Rgb24>;
                     if (frameRgb24 != null)
                     {
