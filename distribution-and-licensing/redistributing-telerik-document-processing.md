@@ -20,7 +20,7 @@ Telerik Document Processing is part of several Telerik bundles and is licensed u
 | UI for ASP.NET Core | [ ASP.NET Core Document Processing Overview](https://docs.telerik.com/aspnet-core/document-processing#telerik-document-processing) |
 | UI for Blazor | [ Blazor Document Processing Overview](https://docs.telerik.com/blazor-ui/components/document-processing/overview) |
 | UI for WinUI | [ WinUI Document Processing Overview](https://docs.telerik.com/devtools/winui/controls/document-processing/overview) |
-| UI for Silverlight | [Protecting the Telerik UI for Silverlight Assemblies](https://docs.telerik.com/devtools/silverlight/licensing/protecting-telerik-assembly#protect-the-telerik-documents-assemblies-by-editing-the-source-code) ([Discontinued](https://www.telerik.com/products/silverlight/overview.aspx)) |
+| UI for Silverlight ([Discontinued](https://www.telerik.com/products/silverlight/overview.aspx)) | [Protecting the Telerik UI for Silverlight Assemblies](https://docs.telerik.com/devtools/silverlight/licensing/protecting-telerik-assembly#protect-the-telerik-documents-assemblies-by-editing-the-source-code) |
 | UI for .NET MAUI ||
 | UI for Xamarin ||
 
@@ -70,6 +70,7 @@ For the sake of the example it is assumed that the source distribution ZIP file 
 {{region cs-documentprocessing-protect-source_3}}
 	internal const string ApplicationName = "Sample Application Name v2.0 (tm)";
 {{endregion}}
+
 
 4\. Save __AssemblyProtection.cs__ and rebuild.           
 
