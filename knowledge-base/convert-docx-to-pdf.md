@@ -15,7 +15,7 @@ res_type: kb
 
 ## Description
 
-This article demonstrates how you can convert a Docx file to a PDF with the [WordsProcessing]({%slug radwordsprocessing-overview%}) library.
+This article demonstrates how you can convert a Docx file to a PDF with the [WordsProcessing]({%slug radwordsprocessing-overview%}) library. In the [WordsProcessing Getting Started]({%slug radwordsprocessing-getting-started%}) article you can find all the required assembly references.
 
 ## Solution
 
