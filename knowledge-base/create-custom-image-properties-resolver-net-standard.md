@@ -2,7 +2,7 @@
 title: Create Custom ImagePropertiesResolver in .Net Standard
 description: Describes how to create a custom implementation of ImagePropertiesResolver in .Net Standard.
 type: how-to
-page_title: Create custom implementation of ImagePropertiesResolverBase in .Net Standard
+page_title: Create a custom implementation of ImagePropertiesResolverBase in .Net Standard
 slug: create-custom-image-properties-resolver-net-standard
 position: 0
 tags: image, resolver, jpeg, imagepropertiesresolver, netstandard
@@ -19,7 +19,7 @@ res_type: kb
 </thead>
 <tbody>
 	<tr>
-		<td>2023.1.315</td>
+		<td>2023.1.315*</td>
 		<td>RadPdfProcessing</td>
 		<td><a href="https://www.telerik.com/blogs/author/yoan-karamanov">Yoan Karamanov</a></td>
 	</tr>
@@ -28,7 +28,9 @@ res_type: kb
 
 ## Description
 
-**.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **ImagePropertiesResolver** abstract class. This property enables you to set a resolver implementation that can parse the image raw data to separate its colors and alpha channel. This implementation should be passed to the **ImagePropertiesResolver** property of the of **FixedExtensibilityManager**.
+**.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **ImagePropertiesResolver** abstract class. This property enables you to set a resolver implementation that can parse the image's raw data to separate its colors and alpha channels. This implementation should be passed to the **ImagePropertiesResolver** property of the **FixedExtensibilityManager**.
+
+>caution The Telerik.Documents.ImageUtils.dll assembly depends on SkiaSharp. To use this assembly, you will need to add a reference to SkiaSharp. With the **R2 2023** changes, SkiaSharp replaced ImageSharp as the required dependency. That is why the suggested sample implementation is applicable up to version 2023.1.315.
 
 ## Solution
 
