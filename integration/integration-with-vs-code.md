@@ -32,7 +32,9 @@ To use **Document Processing Libraries Configuration Wizard** from the **VS Code
 
 To use **Document Processing Libraries Configuration Wizard** from the **VS Code** command palette:
 
- 1\. Open a `.razor` file or a `Razor` language in the code editor.
+ 1\. Open a `.razor` file or a `Razor` language in the code editor and right-click in the editor to see the `Command Palette..` option.
+
+  ![Configure Document Processing Wizard, Command Palette](images/DPLBlazor_CommandPallete.png)  
 
  2\. Select the `Telerik UI for Blazor: Add Document Processing Libraries`.
 
@@ -46,9 +48,9 @@ To use **Document Processing Libraries Configuration Wizard** from the **VS Code
 
 |Library  |Packages |
 |---------|---------|
-|RadPdfProcessing    |Documents.Core<br>Documents.Fixed<br>Zip<br>Documents.ImageUtils<br>Documents.Fixed.FormatProviders.Image.Skia<br>Documents.CMapUtils         |
-|RadSpreadProcessing     |    Documents.Core<br>Documents.Fixed<br>Documents.Spreadsheet<br>Documents.SpreadSheet.FormatProviders.OpenXml<br>Documents.SpreadSheet.FormatProviders.Pdf<br>Documents.Spreadsheet.FormatProviders.Xls<br>Documents.ImageUtils<br>Zip     |
-|RadWordsProcessing     |   Documents.Core<br>Documents.Fixed<br>Documents.Flow<br>Documents.Flow.FormatProviders.Pdf<br>Documents.ImageUtils<br>Documents.Flow.FormatProviders.Doc<br>Documents.DrawingML<br>Zip      |
+|**RadPdfProcessing**|Documents.Core<br>Documents.Fixed<br>Zip<br>Documents.ImageUtils<br>Documents.Fixed.FormatProviders.Image.Skia<br>Documents.CMapUtils|
+|**RadSpreadProcessing**|Documents.Core<br>Documents.Fixed<br>Documents.Spreadsheet<br>Documents.SpreadSheet.FormatProviders.OpenXml<br>Documents.SpreadSheet.FormatProviders.Pdf<br>Documents.Spreadsheet.FormatProviders.Xls<br>Documents.ImageUtils<br>Zip|
+|**RadWordsProcessing**|Documents.Core<br>Documents.Fixed<br>Documents.Flow<br>Documents.Flow.FormatProviders.Pdf<br>Documents.ImageUtils<br>Documents.Flow.FormatProviders.Doc<br>Documents.DrawingML<br>Zip|
 
 
 ## See Also
