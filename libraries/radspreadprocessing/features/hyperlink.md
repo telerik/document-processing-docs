@@ -57,7 +57,7 @@ __Example 1__ creates a hyperlink to a web address.
 #### __[C#] Example 1: Create link to web address__
 
 {{region cs-radspreadprocessing-features-hyperlink_0}}
-	HyperlinkInfo webAddres = HyperlinkInfo.CreateHyperlink("http://telerik.com", "Telerik");
+	HyperlinkInfo webAddres = HyperlinkInfo.CreateHyperlink("http://www.telerik.com", "Telerik");
 {{endregion}}
 
 

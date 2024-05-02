@@ -46,7 +46,7 @@ There is an additional overload of the InsertText() method enabling you to speci
 
 #### __[C#] Example 3: Insert styled text__
 
-{{region cs-radpdfprocessing-editing-block_8}}
+{{region cs-radpdfprocessing-editing-block_2}}
 	block.InsertText(new FontFamily("Arial"), FontStyles.Italic, FontWeights.Bold, "Text");
 {{endregion}}
 
@@ -100,7 +100,7 @@ The Form (or also known as Form-XObject) is an object that can contain PDF conte
 
 #### __[C#] Example 5: Insert a form__
 
-{{region cs-radpdfprocessing-editing-block_7}}
+{{region cs-radpdfprocessing-editing-block_4}}
 	block.InsertForm(simpleForm);
 {{endregion}}
 
@@ -177,13 +177,37 @@ The __Block__ class has some properties and methods that affect how it will be r
 * __Clear():__ Clears all elements in the block.
                 
 
+#### __[C#] Example 6: Change Block properties__
+
+{{region cs-radpdfprocessing-editing-block_5}}
+	Block block = new Block();
+	block.InsertText("block content");
+
+	block.SpacingBefore = 10;
+	block.SpacingAfter = 5;
+	block.LineSpacingType = HeightType.Exact;
+	block.LineSpacing = 15;
+	block.FirstLineIndent = 12;
+	block.LeftIndent = 0;
+	block.RightIndent = 0;
+	block.BackgroundColor = RgbColors.White;
+	block.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Left;
+	block.VerticalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.Top;
+
+	var textFragment = new TextFragment();
+	textFragment.Text = "test bullet";
+	block.Bullet = textFragment;
+	block.IndentAfterBullet = 5;
+{{endregion}}
+
+
 ## Drawing a Block
 
 A Block can be drawn to the content using the __Draw()__ method. The method accepts as a parameter a __Rectangle__, specifying the desired size and position relatively to the editor of the element.
         
-#### __[C#] Example 5: Draw block__
+#### __[C#] Example 7: Draw block__
 
-{{region cs-radpdfprocessing-editing-block_4}}
+{{region cs-radpdfprocessing-editing-block_6}}
 	Rect boundingRect = new Rect(new Point(0, 0), new Size(200, 300));
 	block.Draw(fixedContentEditor, boundingRect);
 {{endregion}}
@@ -200,12 +224,12 @@ Measuring a Block can be achieved with one of the overloads of the __Measure()__
 Calling the overload accepting available size measures the block in that specific size. Additionally to setting the __DesiredSize__ property, it sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
         
 
-__Example 7__ creates a Block with the text "Hello RadPdfProcessing!" and measures it.
+__Example 8__ creates a Block with the text "Hello RadPdfProcessing!" and measures it.
         
 
-#### __[C#] Example 7: Measure block__
+#### __[C#] Example 8: Measure block__
 
-{{region cs-radpdfprocessing-editing-block_5}}
+{{region cs-radpdfprocessing-editing-block_7}}
 	Block block = new Block();
 	block.InsertText("Hello RadPdfProcessing!");
 	Size size = block.Measure();
@@ -218,11 +242,11 @@ __Example 7__ creates a Block with the text "Hello RadPdfProcessing!" and measur
 The __Split()__ method of a Block returns a new Block with the same properties. The resulting block contains all pending elements that do not fit in the current block, based on the result of the last measure call.
         
 
-The code in __Example 8__ splits a block in two. The first will contains text "Hello" and the second – "RadPdfProcessing!".
+The code in __Example 9__ splits a block in two. The first will contains text "Hello" and the second – "RadPdfProcessing!".
         
-#### __[C#] Example 8: Split block__
+#### __[C#] Example 9: Split block__
 
-{{region cs-radpdfprocessing-editing-block_6}}
+{{region cs-radpdfprocessing-editing-block_8}}
 	Block helloBlock = new Block();
 	helloBlock.InsertText("Hello");
 	Size helloSize = helloBlock.Measure();

@@ -55,7 +55,6 @@ SignatureField provides the following properties:
 	
 	// Add the FormSource object to the widget of the field.
 	widget.Content.NormalContentSource = form.FormSource;
-	widget.RecalculateContent();
 	
 	RadFixedPage page = document.Pages.Last();
 	page.Annotations.Add(widget);
