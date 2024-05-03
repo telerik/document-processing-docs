@@ -83,6 +83,6 @@ Here is an example of how to implement this solution:
 # See Also
 - [RadPdfProcessing]({%slug radpdfprocessing-overview%}})
 - [Table]({%slug radpdfprocessing-editing-table%})
-- [Images]({%radpdfprocessing-model-image%})
+- [Images]({%slug radpdfprocessing-model-image%})
 
 Remember to adjust the code according to your specific requirements and environment.
