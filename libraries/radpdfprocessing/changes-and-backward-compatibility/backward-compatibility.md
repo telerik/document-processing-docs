@@ -9,9 +9,17 @@ position: 1
 
 # Backward Compatibility
 
-
-
 This article lists the breaking changes and how they can be fixed when upgrading from a specific version of the controls to another.
+
+## What's Different in 2024 R2 
+
+### Changed
+
+The PdfExportSettings.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property uses the **FontEmbeddingType** enum
+
+## What to do now
+
+Instead of setting the PdfExportSettings.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property to a boolean value, use the None, Full, Subset enum options.
 
 ## What's Different in 2023 R2  
 

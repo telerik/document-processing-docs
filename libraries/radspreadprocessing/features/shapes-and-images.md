@@ -72,6 +72,8 @@ Shapes have the following properties:
             
 
 * __Worksheet:__ The worksheet in which the shape is or will be inserted.
+
+* **Description**: Gets or sets the description of the shape. (*introduced in 2024 Q2*).
             
 
 Images have one additional property:
