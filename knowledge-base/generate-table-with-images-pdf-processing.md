@@ -15,11 +15,11 @@ res_type: kb
 
 # Description
 
-Learn how to create a PDF document containing a table with images.
+Learn how to create a PDF document containing a [Table]({%slug radpdfprocessing-editing-table%}) with [images]({%radpdfprocessing-model-image%}).
 
 # Solution
 
-RadPdfProcessing is suitable for such a requirement and it allows a convenient API for creating a RadFixedDocument from scratch and populating a table with image content:
+[RadPdfProcessing]({%slug radpdfprocessing-overview%}) is suitable for such a requirement and it allows a convenient API for creating a RadFixedDocument from scratch and populating a table with image content:
 
 Here is an example of how to implement this solution:
 
@@ -78,7 +78,11 @@ Here is an example of how to implement this solution:
         }
 ```
 
+  ![Table with Images](images/pdf-table-with-images.png)   
+
 # See Also
-- [RadPdfProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
+- [RadPdfProcessing]({%slug radpdfprocessing-overview%}})
+- [Table]({%slug radpdfprocessing-editing-table%})
+- [Images]({%radpdfprocessing-model-image%})
 
 Remember to adjust the code according to your specific requirements and environment.
