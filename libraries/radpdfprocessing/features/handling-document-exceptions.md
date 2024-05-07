@@ -69,6 +69,34 @@ When using the OnDemand reading mode you should handle the __RadFixedDocument.Do
 
 {{endregion}}
 
+### Exceptions
 
+|Exception|Description|
+|------|-----------|
+| __DuplicatedEmbeddedFileNameException__| Represents an exception for embedding a file with a duplicated name.|
+| __InvalidActionException__| Represents an exception for importing an invalid action.|
+| __InvalidGraphicOperandsCountException__| Represents an exception for importing a graphic operator with an invalid number of operands.|
+| __NotSupportedActionException__| Represents an exception for an action which is not supported.|
+| __NotSupportedCCITTFaxDecodeFilterException__| Represents an exception for a scan decoder which is not supported.|
+| __NotSupportedCharsetFormatException__| Represents an exception for an charset format which is not supported. This exception has a CharsetFormat property which specifies the name of the CharsetFormat.|
+| __NotSupportedColorSpaceException__| Represents an exception for a color space which is not supported. This exception has a ColorSpace property which specifies the name of the ColorSpace. |
+| __NotSupportedCompressionMethodException__| Represents an exception for importing a FlateDecode method which is not supported.|
+| __NotSupportedEncryptionException__| Represents an exception for an encryption which is not supported. This exception has e EncryptionCode property which specifies the code of the encryption. |
+| __NotSupportedEncryptionRevisionException__| Represents an exception for an encryption revision which is not supported. This exception has a RevisionCode property which specifies the name of the RevisionCode. |
+| __NotSupportedFeatureException__| Represents an exception for a feature which is not supported.|
+| __NotSupportedFilterException__| Represents an exception for a filter which is not supported. This exception has a FilterName property which specifies the name of the filter. 
+| __NotSupportedFontException__| Represents an exception for a font which is not supported. This exception has a FontType property which specifies the type of the font.|
+| __NotSupportedFontFamilyException__| Represents an exception for a font family which is not supported.|
+| __NotSupportedFunctionTypeException__| Represents an exception for a function type which is not supported. This exception has a FunctionType property which specifies the name of the FunctionType.|
+| __NotSupportedPaintTypeException__| Represents an exception for a paint type which is not supported. This exception has a PaintType property which specifies the name of the PaintType.|
+| __NotSupportedPredefinedCMapException__| Represents an exception for a predefined CMap which is not supported. This exception has a CMapName which specifies the name of the predefined CMap.|
+| __NotSupportedReservedMethodException__| Represents an exception for importing a FlateDecode reserved method which is not supported.|
+| __NotSupportedScanDecoderException__| Represents an exception for a document with a scan decoder which is not supported.|
+| __NotSupportedScanEncoderException__| Represents an exception for a scan decoder which is not supported.|
+| __NotSupportedShadingTypeException__| Represents an exception for a shading type which is not supported. This exception has e ShadingType property which specifies the type of the shading.|
+| __NotSupportedStreamTypeException__| Represents an exception for a stream type which is not supported. A stream is not supported if it does not support read or seek. This exception has a SupportSeek and SupportRead properties which specify whether the stream supports them.|
+| __NotSupportedXObjectTypeException__| Represents an exception for document with an XObject type which is not supported.
 
+# See Also
 
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
