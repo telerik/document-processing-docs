@@ -7,12 +7,9 @@ published: True
 position: 6
 ---
 
-# RadFixedDocumentEditor
+# RadFixedDocumentEditor 
 
-
-
-The __RadFixedDocumentEditor__ class allows you to create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in a flow-like manner. The editor provides methods that enable the generation of documents, which automatically flows to pages.
-      
+**RadFixedDocumentEditor** allows you to create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in a flow-like manner and insert all desired elements one after another. When the document is rendered, the size of the elements will be automatically calculated. The editor provides a convenient API that enables the generation of documents, which automatically flow to pages.    
 
 * [Creating RadFixedDocumentEditor](#creating-radfixeddocumenteditor)
 
@@ -40,8 +37,6 @@ __Example 1__ demonstrates how a RadFixedDocumentEditor instance can be created.
 {{region cs-radpdfprocessing-editing-radfixeddocumenteditor_0}}
 	RadFixedDocumentEditor editor = new RadFixedDocumentEditor(radFixedDocument);
 {{endregion}}
-
-
 
 >__RadFixedDocumentEditor__ inherits from __IDisposable__ so it should be properly disposed when the document is created. Otherwise, some of the content may not be finished, i.e. it might not appear on the PDF document.
           
