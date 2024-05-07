@@ -10,9 +10,9 @@ position: 0
 
 # Overview
 
-**RadWordsProcessing** is a processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.
+**Telerik WordsProcessing Library** allows you to create and modify various document formats like DOCX, RTF, HTML, TXT, convert from one format to another, and export to PDF. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.
 
-![WordsProcessing](images/words-processing-overview.png)  
+![WordsProcessing](images/words-processing-overview.jpg)   
 
 >note If you still don't have **Telerik Document Processing installed**, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
 
@@ -20,7 +20,30 @@ position: 0
 
    ![Rad Words Processing Overview 02](images/RadWordsProcessing_Overview_01.png)
 
+## Key Features 
+
+* Create and modify documents from various document formats: DOCX, RTF, HTML, plain text.
+* Convert documents to PDF (export only).
+* Convert between the different formats.
+* Full rich-text capabilities.
+* Font and paragraphs formatting, tables, images, comments, hyperlinks, fields and a lot more are supported.
+* Mail merge: Generate documents using template document and a data set, e.g. "Thank you" letters to all employees.
+* Merge different documents into a single one controlling how their styles should be merged.
+
+The document model of the library provides support for:
+
+|Feature|Description|
+|----|----|
+|[**Mail Merge**]({%slug radwordsprocessing-editing-mail-merge%})|Provides ability to produce personalized documents from a template holding fixed content merged with variable data from a data source (database or any other collection of data items).|
+|[**Merge documents**]({%slug radwordsprocessing-editing-insert-documents%})|Insert a document into another one at the desired position, controlling the way the styles of both are merged.|
+|[**Import of document elements**]({%slug radwordsprocessing-editing-import-document-element%})|Import a document element from one document into another.|
+|[**Clone**]({%slug radwordsprocessing-editing-clone-and-merge%})| Close documents and document elements.|
+|[**Find and Replace**]({%slug radwordsprocessing-editing-find-and-replace%})|RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone.|
+|[**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%})|It is intended to simplify the process of creating and modifying a document and achieve the same results as you would using the style properties and child collections of the document elements with less amount of code.|
+|**Formatting**|In addition to the styles, RadWordsProcessing provides support for different types of formatting so you can format any of the document elements: - **Character formatting**: Font size, font color, font name, bold, italic, underline, etc. - **Paragraph formatting**: Line spacing, alignment, indentation, spacing before and after, etc. - **Table formatting**: Enables you to change the alignment, borders, shading, spacing and padding, and more. - **Modifying the section properties** to adjust the page size, orientation, margins, headers and footers, etc.|
+
 ## Model
+
 The model of **RadWordsProcessing** includes:
             
 * [**Sections**]({%slug radwordsprocessing-model-section%}): You can customize the sections using the properties exposed by the corresponding class. The library provides support for customizing the headers, footers, and watermarks for a section as well.
@@ -47,29 +70,6 @@ The model of **RadWordsProcessing** includes:
 
 * [**Shapes**]({%slug radwordsprocessing-shapes-shapes%}): Their variation in shape and style makes them very useful for drawing attention to specific text.
 
-## Features:
-
-* [**Mail Merge**]({%slug radwordsprocessing-editing-mail-merge%}): Provides ability to produce personalized documents from a template holding fixed content merged with variable data from a data source (database or any other collection of data items).
-
-* [**Merge documents**]({%slug radwordsprocessing-editing-insert-documents%}): Insert a document into another one at the desired position, controlling the way the styles of both are merged.
-
-* [**Import of document elements**]({%slug radwordsprocessing-editing-import-document-element%}): Import a document element from one document into another.
-
-* [**Clone**]({%slug radwordsprocessing-editing-clone-and-merge%}) documents and document elements.
-
-* [**Find and Replace**]({%slug radwordsprocessing-editing-find-and-replace%}): RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone. 
-
-* [**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%}): It is intended to simplify the process of creating and modifying a document and achieve the same results as you would using the style properties and child collections of the document elements with less amount of code.
-
-* **Formatting**:
-
-	In addition to the styles, RadWordsProcessing provides support for different types of formatting so you can format any of the document elements:
-	* **Character formatting**: Font size, font color, font name, bold, italic, underline, etc.
-	* **Paragraph formatting**: Line spacing, alignment, indentation, spacing before and after, etc.
-	* **Table formatting**: Enables you to change the alignment, borders, shading, spacing and padding, and more.
-	* **Modifying the section properties** to adjust the page size, orientation, margins, headers and footers, etc.
-
-
 ## Supported formats:
 
 The library comes with support for the following document formats:
@@ -88,3 +88,8 @@ The library comes with support for the following document formats:
 
 You can import and export documents of these formats as well as convert the format of the document.
 
+# See Also
+
+- [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
+- [First Steps]({%slug getting-started-first-steps%})
+- [Getting Started with RadPdfProcessing]({%slug radwordsprocessing-getting-started%})
