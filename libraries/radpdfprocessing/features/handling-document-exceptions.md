@@ -71,51 +71,31 @@ When using the OnDemand reading mode you should handle the __RadFixedDocument.Do
 
 ### Exceptions
 
-* __NotSupportedFilterException:__ Represents an exception for a filter which is not supported. This exception has a FilterName property which specifies the name of the filter.
-
-* __NotSupportedEncryptionException:__ Represents an exception for an encryption which is not supported. This exception has e EncryptionCode property which specifies the code of the encryption.
-
-* __NotSupportedFontException:__ Represents an exception for a font which is not supported. This exception has a FontType property which specifies the type of the font.
-
-* __NotSupportedShadingTypeException:__ Represents an exception for a shading type which is not supported. This exception has e ShadingType property which specifies the type of the shading.
-
-* __NotSupportedStreamTypeException:__ Represents an exception for a stream type which is not supported. A stream is not supported if it does not support read or seek. This exception has a SupportSeek and SupportRead properties which specify whether the stream supports them.
-
-* __NotSupportedPredefinedCMapException:__ Represents an exception for a predefined CMap which is not supported. This exception has a CMapName which specifies the name of the predefined CMap.
-
-* __NotSupportedScanDecoderException:__ This exception is thrown if the document contains a scan decoder which is not supported.
-
-* __NotSupportedXObjectTypeException:__ This exception is thrown if the document contains a XObject type which is not supported.
-
-* __DuplicatedEmbeddedFileNameException:__ This exception is thrown in an attempt to embed a file with a duplicated name.
-
-* __InvalidActionException:__ This exception is thrown when an invalid action is imported.
-
-* __InvalidGraphicOperandsCountException:__ This exception is thrown when a graphic operator with an invalid number of operands is imported.
-
-* __NotSupportedActionException:__ Represents an exception for an action which is not supported.
-
-* __NotSupportedCharsetFormatException:__ Represents an exception for an charset format which is not supported. This exception has a CharsetFormat property which specifies the name of the CharsetFormat.
-
-* __NotSupportedColorSpaceException:__ Represents an exception for a color space which is not supported. This exception has a ColorSpace property which specifies the name of the ColorSpace.
-
-* __NotSupportedCompressionMethodException:__ This exception is thrown when a not supported FlateDecode method is imported.
-
-* __NotSupportedEncryptionRevisionException:__ Represents an exception for an encryption revision which is not supported. This exception has a RevisionCode property which specifies the name of the RevisionCode.
-
-* __NotSupportedFontFamilyException:__ Represents an exception for a font family which is not supported.
-
-* __NotSupportedFunctionTypeException:__ Represents an exception for a function type which is not supported. This exception has a FunctionType property which specifies the name of the FunctionType.
-
-* __NotSupportedPaintTypeException:__ Represents an exception for a paint type which is not supported. This exception has a PaintType property which specifies the name of the PaintType.
-
-* __NotSupportedReservedMethodException:__ Occurs when a not supported FlateDecode reserved method is imported.
-
-* __NotSupportedCCITTFaxDecodeFilterException:__ Represents an exception for a scan decoder which is not supported.
-
-* __NotSupportedFeatureException:__ Represents an exception for a feature which is not supported.
-
-* __NotSupportedScanEncoderException:__ Represents an exception for a scan decoder  is not supported.
+|Exception|Description|
+|----|----|
+|__NotSupportedFilterException__|Represents an exception for a filter which is not supported. This exception has a FilterName property which specifies the name of the filter.|
+|__NotSupportedEncryptionException__|Represents an exception for an encryption which is not supported. This exception has e EncryptionCode property which specifies the code of the encryption.|
+|__NotSupportedFontException__|Represents an exception for a font which is not supported. This exception has a FontType property which specifies the type of the font.|
+|__NotSupportedShadingTypeException__|Represents an exception for a shading type which is not supported. This exception has e ShadingType property which specifies the type of the shading.|
+|__NotSupportedPredefinedCMapException__| Represents an exception for a predefined CMap which is not supported. This exception has a CMapName which specifies the name of the predefined CMap.|
+|__NotSupportedScanDecoderException__| Represents an exception for a document with a scan decoder which is not supported.|
+|__NotSupportedXObjectTypeException__| Represents an exception for document with an XObject type which is not supported.|
+|__NotSupportedActionException__| Represents an exception for an action which is not supported.|
+|__NotSupportedCharsetFormatException__| Represents an exception for an charset format which is not supported. This exception has a CharsetFormat property which specifies the name of the CharsetFormat.|
+|__NotSupportedColorSpaceException__| Represents an exception for a color space which is not supported. This exception has a ColorSpace property which specifies the name of the ColorSpace.|
+|__NotSupportedCompressionMethodException__| Represents an exception for importing a FlateDecode method which is not supported.|
+|__NotSupportedEncryptionRevisionException__| Represents an exception for an encryption revision which is not supported. This exception has a RevisionCode property which specifies the name of the RevisionCode.|
+|__NotSupportedFontFamilyException__| Represents an exception for a font family which is not supported.|
+|__NotSupportedFunctionTypeException__| Represents an exception for a function type which is not supported. This exception has a FunctionType property which specifies the name of the FunctionType.|
+|__NotSupportedPaintTypeException__| Represents an exception for a paint type which is not supported. This exception has a PaintType property which specifies the name of the PaintType.|
+|__NotSupportedReservedMethodException__| Represents an exception for importing a FlateDecode reserved method which is not supported.|
+|__NotSupportedCCITTFaxDecodeFilterException__| Represents an exception for a scan decoder which is not supported.|
+|__NotSupportedFeatureException__| Represents an exception for a feature which is not supported.|
+|__NotSupportedScanEncoderException__| Represents an exception for a scan decoder which is not supported.|
+|__NotSupportedStreamTypeException__| Represents an exception for a stream type which is not supported. A stream is not supported if it does not support read or seek. This exception has a SupportSeek and SupportRead properties which specify whether the stream supports them.|
+|__DuplicatedEmbeddedFileNameException__| Represents an exception for embedding a file with a duplicated name.|
+|__InvalidActionException__| Represents an exception for importing an invalid action.|
+|__InvalidGraphicOperandsCountException__| Represents an exception for importing a graphic operator with an invalid number of operands.|
 
 # See Also
 
