@@ -9,15 +9,16 @@ position: 0
 
 # Overview
 
-With **RadZipLibrary** you can compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.
+With **RadZipLibrary** you can compress and archive images, DOCX or PDF files with **Telerik ZipLibrary**. You can create and edit new ZIP files or load and extract data from existing ZIP archives. Includes support for large files, encryption and more.
 
 ![ZipLibrary](images/zip-library-overview.png)  
 
 You can compress data like images, DOCX or PDF files and send them over the wire. Thus, you will achieve fast and secure transactions. 
 ![Zip Library Overview 01](images/ziplibrary-overview.gif) 
 
+## Key Features
+
 This is a list with short descriptions of the top-of-the-line features of Telerik's __Zip Library__ control:
-        
 
 * **Easy to use API**: The library exposes flexible and easy API to provide you with full control over the compressed data. The [extension methods]({%slug radziplibrary-zipextensions%}) allow you to implement the most common scenarios in a single line of code, like creating zip file from folder or extracting it.
 

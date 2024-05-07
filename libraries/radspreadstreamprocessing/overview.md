@@ -9,7 +9,9 @@ position: 0
 
 # Overview
 
-This article briefly explains the specifics of **RadSpreadStreamProcessing** - what is spread streaming, how it works compared to the RadSpreadProcessing library, when to use it, and what are its key features.
+**Telerik SpreadStream Processing Library** allows you to generate big spreadsheet documents with great performance and minimal memory footprint in your .NET applications with the , specialized for fast generation of huge (even 1M+ rows) XLSX and CSV documents. The document model has no external dependencies on third-party software or UI. Users are able to process Microsoft Excel supported documents even without having Microsoft Excel, Microsoft Office or any other external library installed on the client or server. 
+
+![SpreadStreamProcessing](images/spread-stream-processing-overview.jpg)  
 
 If you want to skip this introductory article and directly start using SpreadStreamProcessing, take a look at the **[Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})** help topic.
 
@@ -26,17 +28,23 @@ Spread streaming is a document processing paradigm that allows you to create or 
 
 The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory. Each time an exporter object is disposed, the set values are written into the stream. This allows you to create large documents with excellent performance.
 
-While reading, RadSpreadStreamProcessing parses only the required chunk of information. This ensures minimal use of application resources.
+While reading, RadSpreadStreamProcessing parses only the required chunk of information. This ensures minimal use of application resources. 
 
-## Key Features
+## Key Features 
 
 Some of the features you can take advantage of are:
 
-* [Export to XLSX or CSV files]({%slug radspreadstreamprocessing-export%})
+* Specialized for fast generation of huge (even 1M+ rows) XLSX and CSV documents.
 
-* [Import from XLSX or CSV files]({%slug radspreadstreamprocessing-import%}) 
+* Create document from scratch or append new sheets to existing document.
 
-* Write directly into a stream; or parse only required data
+* Faster than Spread Processing and with minimal memory footprint.
+
+* [Export to XLSX or CSV files]({%slug radspreadstreamprocessing-export%}).
+
+* [Import from XLSX or CSV files]({%slug radspreadstreamprocessing-import%}). 
+
+* Write directly into a stream; or parse only required data.
 
 * **Append** new worksheets to existing workbook
 

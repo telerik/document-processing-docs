@@ -9,9 +9,9 @@ position: 0
 
 # Overview
 
-**RadSpreadProcessing** is a powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
+**Telerik SpreadProcessing Library** allows you to generate and convert documents to XLSX, CSV, TXT and PDF. **RadSpreadProcessing** ships with built-in support for computation of more than 200 functions, like SUM, AVERAGE, and more. You can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
 
-![SpreadProcessing](images/spread-processing-overview.png) 
+![SpreadProcessing](images/spread-processing-overview.jpg) 
 
 In this article, we list the library's most popular features. If you want to start using the library right away, see **[Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})**.
 
@@ -19,6 +19,20 @@ In this article, we list the library's most popular features. If you want to sta
 
 
 >noteIf you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
+
+## Key Features
+
+* Create from scratch and modify existing documents from spreadsheet formats: XLSX, CSV.
+* Export to PDF.
+* Convert between the different formats.
+* Extracting and populating cells with data.
+* Built-in support for computation of more than 200 functions, like SUM, AVERAGE, etc.
+* Custom functions could be added as well.
+* Protection from editing operations using password/removing such password.
+* Most of the important Excel features are supported:
+    * Data validation - restrict the types of input to cells (e.g. allow only numbers).
+    * Grouping to organize data (e.g. collapse some rows/columns).
+    * Filtering, sorting, freeze panes, hidden rows, and more.
 
 The following table describes the most popular features of the RadSpreadProcessing library.
 

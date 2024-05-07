@@ -12,7 +12,7 @@ position: 0
 
 **Telerik PdfProcessing Library** enables code-only generation, import, and export of PDF documents with text blocks, images, forms, tables, shapes, and more. The library supports flow-like editing as well as great control over native PDF elements. You can use **RadPdfProcessing** in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.
 
-[PdfProcessing](images/pdf-processing-overview.png)
+![PdfProcessing](images/pdf-processing-overview.jpg)  
 
 In this article, we list the library's most popular features. If you want to learn how to use the library, head straight to the **[Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})** article.
 
@@ -21,6 +21,17 @@ In this article, we list the library's most popular features. If you want to lea
 The API of RadPdfProcessing contains two different editors,  [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) and  [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}), enabling you to choose between editing in a **flow-like** manner or using the much more powerful and flexible **fixed** document structure that allows you to draw on the page.
 
 ## Key Features 
+
+* Generate PDF documents from scratch.
+* Edit existing documents - delete headers/footers or watermarks, change images and colors.
+* Add content to existing document: all features of the existing PDF document are preserved, and just some content is added.
+* Merge document pages: Combine pages from different documents into a single document.
+* Interactive forms
+    * Automatic filling of forms (e.g. tax forms).
+    * Automatic extraction of data from already filled forms.
+* Digital signatures
+    * Signing a document with digital signature.
+    * Validate digital signature of already signed document.
             
 The document model of the library provides support for:
 
