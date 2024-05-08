@@ -22,7 +22,10 @@ __FixedContentEditor__ is always associated to a single __IContentRootElement__ 
 #### __[C#] Example 1: Create FixedContentEditor__
 
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_0}}
-	FixedContentEditor editor = new FixedContentEditor(contentRootElement);
+	RadFixedDocument document = new RadFixedDocument();
+	var firstPage = document.Pages.AddPage();
+
+	FixedContentEditor fixedContentEditor = new FixedContentEditor(firstPage);
 {{endregion}}
 
 
@@ -36,7 +39,16 @@ __Example 2__ demonstrates how you can create а FixedContentEditor with a speci
 #### __[C#] Example 2: Create FixedContentEditor with specific position__
 
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_1}}
-	FixedContentEditor editor = new FixedContentEditor(contentRootElement, initialPosition);
+	MatrixPosition matrixPosition = new MatrixPosition();
+	matrixPosition.Translate(20, 20); // Translates the position by (20, 20) 
+	matrixPosition.Translate(30, 30); // Translates the position by (30, 30). 
+
+	SimplePosition simplePosition = new SimplePosition();
+	simplePosition.Translate(20, 20); // Translates the position by (20, 20). 
+	simplePosition.Translate(30, 30); // Translates the position by (30, 30) overwriting the previous translations. 
+
+	FixedContentEditor simplePositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition);
+	FixedContentEditor matrixPositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition);
 {{endregion}}
 
 
@@ -54,7 +66,7 @@ Inserting а [TextFragment]({%slug radpdfprocessing-model-textfragment%}) can be
 #### __[C#] Example 3: Insert TextFragment__
 
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_2}}
-	editor.DrawText("First text fragment.");
+	fixedContentEditor.DrawText("First text fragment.");
 {{endregion}}
 
 
@@ -80,7 +92,7 @@ __Example 4__ shows how you can use the __Block__ object to draw a paragraph.
 	Block block = new Block();
 	block.InsertText("First sentence.");
 	block.InsertText("Second sentence.");
-	editor.DrawBlock(block);
+	fixedContentEditor.DrawBlock(block);
 {{endregion}}
 
 
@@ -114,7 +126,7 @@ __Example 5__ shows how you can add an image created from a Stream.
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_4}}
 	using (Stream stream = this.GetResourceStream("Telerik_logo.jpg"))
 	{
-	    editor.DrawImage(stream, new Size(118, 28));
+	    fixedContentEditor.DrawImage(stream, new Size(118, 28));
 	}
 {{endregion}}
 
@@ -141,7 +153,7 @@ __Example 6__ shows how you can add an ellipse using one of FixedContentEditor's
 #### __[C#] Example 6: Insert ellipse__
 
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_5}}
-	editor.DrawEllipse(new Point(250, 70), 136, 48);
+	fixedContentEditor.DrawEllipse(new Point(250, 70), 136, 48);
 {{endregion}}
 
 
@@ -173,7 +185,7 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
 	
 	using (editor.PushClipping(new Rect(new Point(0, 0), visisibleTextSize)))
 	{
-	    editor.DrawText(text);
+	    fixedContentEditor.DrawText(text);
 	}
 {{endregion}}
 
@@ -212,8 +224,8 @@ __Example 8__ generates a table and draws it in some fixed size.
 	RadFixedDocument document = new RadFixedDocument();
 	RadFixedPage page = document.Pages.AddPage();
 	FixedContentEditor editor = new FixedContentEditor(page);
-	editor.Position.Translate(10, 10);
-	editor.DrawTable(table, new Size(180, double.PositiveInfinity));
+	fixedContentEditor.Position.Translate(10, 10);
+	fixedContentEditor.DrawTable(table, new Size(180, double.PositiveInfinity));
 {{endregion}}
 
 #### The table created in Example 8
@@ -228,7 +240,7 @@ With the FixedContentEditor class you can insert a Form (Form-XObject) element.
 
 #### __[C#] Example 9: Insert a form__
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_9}}
-	editor.DrawForm(formSource);
+	fixedContentEditor.DrawForm(formSource);
 {{endregion}}
 
 There are two more overloads of DrawForm() that enable you to pass the size that should be used for the form.
@@ -250,8 +262,8 @@ The Widget annotations allow you visualize the content of a FormField. With the 
 	
 		document.AcroForm.FormFields.Add(pushButton);
 	
-		editor.Position.Translate(20, 450);
-		editor.DrawWidget(pushButton, new Size(100, 20));
+		fixedContentEditor.Position.Translate(20, 450);
+		fixedContentEditor.DrawWidget(pushButton, new Size(100, 20));
 	{{endregion}}
 
 
@@ -271,12 +283,12 @@ The Widget annotations allow you visualize the content of a FormField. With the 
 	
 		document.AcroForm.FormFields.Add(radio);
 		
-		editor.Position.Translate(20, 410);
-		editor.DrawWidget(radio, radio.Options[0], new Size(20, 20));
-		editor.Position.Translate(50, 410);
-		editor.DrawWidget(radio, radio.Options[1], new Size(20, 20));
-		editor.Position.Translate(80, 410);
-		editor.DrawWidget(radio, radio.Options[2], new Size(20, 20));
+		fixedContentEditor.Position.Translate(20, 410);
+		fixedContentEditor.DrawWidget(radio, radio.Options[0], new Size(20, 20));
+		fixedContentEditor.Position.Translate(50, 410);
+		fixedContentEditor.DrawWidget(radio, radio.Options[1], new Size(20, 20));
+		fixedContentEditor.Position.Translate(80, 410);
+		fixedContentEditor.DrawWidget(radio, radio.Options[2], new Size(20, 20));
 	{{endregion}}
 
 
@@ -291,13 +303,13 @@ The code in __Example 12__ shows how to manipulate the position of the inserted 
 #### __[C#] Example 12: Scale and rotate content__
 
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_7}}
-	editor.Position.Scale(1.5, 0.5);
-	editor.Position.Rotate(10);
-	editor.DrawText("Image:");
-	editor.Position.Translate(0, 20);
+	fixedContentEditor.Position.Scale(1.5, 0.5);
+	fixedContentEditor.Position.Rotate(10);
+	fixedContentEditor.DrawText("Image:");
+	fixedContentEditor.Position.Translate(0, 20);
 	using (Stream stream = this.GetResourceStream("Telerik_logo.jpg"))
 	{
-	    editor.DrawImage(stream, new Size(118, 28));
+	    fixedContentEditor.DrawImage(stream, new Size(118, 28));
 	}
 {{endregion}}
 
