@@ -57,3 +57,4 @@ __Example 2__ shows how to add two cells in a row and get the cells count.
 
  * [Table]({%slug radpdfprocessing-editing-table%})
  * [TableCell]({%slug radpdfprocessing-editing-tablecell%})
+ * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
