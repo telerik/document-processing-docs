@@ -265,3 +265,5 @@ The code in __Example 9__ splits a block in two. The first will contains text "H
  * [Image]({%slug radpdfprocessing-model-image%})
  * [Geometry]({%slug radpdfprocessing-concepts-geometry%})
  * [Text and Graphic Properties]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
+ * [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})
+ * [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})
