@@ -39,22 +39,22 @@ FixedExtensibilityManager.FontsProvider = fontsProvider;
 
 SpreadTextMeasurerBase textMeasurer = new SpreadFixedTextMeasurer();
 
-var flowDocument = new RadFlowDocument();
-var editor = new RadFlowDocumentEditor(flowDocument);
-var section = editor.InsertSection();
+RadFlowDocument flowDocument = new RadFlowDocument();
+RadFlowDocumentEditor editor = new RadFlowDocumentEditor(flowDocument);
+Section section = editor.InsertSection();
 
 #region Verdana, font size 16
 //Verdana, font size 16
-var fontFamily = new FontFamily("Verdana");
-var text = "This is a sample text - Verdana";
-var fontSize = 16;
+FontFamily fontFamily = new FontFamily("Verdana");
+string text = "This is a sample text - Verdana";
+int fontSize = 16;
 
 //FontStyles.Normal, FontWeights.Normal
-var paragraph = section.Blocks.AddParagraph();
-var textProperties = new TextProperties(text, fontSize);
-var fontProperties = new FontProperties(fontFamily, FontStyles.Normal, FontWeights.Normal);
-var measurementInfo = textMeasurer.MeasureText(textProperties, fontProperties);
-var run = paragraph.Inlines.AddRun(text);
+Paragraph paragraph = section.Blocks.AddParagraph();
+TextProperties textProperties = new TextProperties(text, fontSize);
+FontProperties fontProperties = new FontProperties(fontFamily, FontStyles.Normal, FontWeights.Normal);
+TextMeasurementInfo measurementInfo = textMeasurer.MeasureText(textProperties, fontProperties);
+Run run = paragraph.Inlines.AddRun(text);
 run.Properties.FontFamily.LocalValue = new ThemableFontFamily(fontFamily);
 run.FontStyle = FontStyles.Normal;
 run.FontWeight = FontWeights.Normal;
@@ -215,7 +215,7 @@ public class FontsProvider : FontsProviderBase
         var fontFile = fontFiles.FirstOrDefault(f => f.Name.Equals(fontFileName, StringComparison.InvariantCultureIgnoreCase));
         if (fontFile != null)
         {
-            var targetPath = fontFile.FullName;
+            string targetPath = fontFile.FullName;
             using (FileStream fileStream = File.OpenRead(targetPath))
             {
                 using (MemoryStream memoryStream = new MemoryStream())
