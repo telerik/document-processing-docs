@@ -285,3 +285,4 @@ As a result, on __Figure 7__ you can see a 45-degree rotated table similar to th
  * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
  * [TableRow]({%slug radpdfprocessing-editing-tablerow%})
  * [TableCell]({%slug radpdfprocessing-editing-tablecell%})
+ * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
