@@ -4,7 +4,7 @@ description: Learn how to create a PDF document from scratch containing a logo a
 type: how-to
 page_title: How to Generate a PDF Document with Logo and Text using FixedContentEditor 
 slug: create-pdf-document-with-logo-and-text-using-fixedcontenteditor
-tags: pdf, fixedcontenteditor, editor, logo, image, text, processing
+tags: pdf, fixedcontenteditor, editor, logo, image, text
 res_type: kb
 ---
 # Environment
@@ -24,9 +24,9 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
         public static System.Windows.Size pageSize = new System.Windows.Size(Unit.MmToDip(210), Telerik.Windows.Documents.Media.Unit.MmToDip(297));
         public static Padding pageMarginsValue = new Telerik.Windows.Documents.Primitives.Padding(
              Unit.MmToDip(20),//left
-              Unit.MmToDip(0),//top
-               Unit.MmToDip(0),//right
-                Unit.MmToDip(0));//bottom
+             Unit.MmToDip(0),//top
+             Unit.MmToDip(0),//right
+             Unit.MmToDip(0));//bottom
         public static double currentYposition = pageMarginsValue.Top;
         public static double currentXposition = pageMarginsValue.Left;
         public static double pageYLimit = pageSize.Height - pageMarginsValue.Bottom;
@@ -34,12 +34,9 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
         static void Main(string[] args)
         {
             RadFixedDocument fixedDocument = new RadFixedDocument();
-
             DrawLogo(fixedDocument);
             DrawHeading(fixedDocument);
             DrawText(fixedDocument);
-
-
             PdfFormatProvider provider = new PdfFormatProvider();
             string outputFilePath = @"..\..\sample.pdf";
             File.Delete(outputFilePath);
@@ -47,18 +44,18 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
             {
                 provider.Export(fixedDocument, output);
             }
-            Process.Start(outputFilePath);
+            Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true }); 
         }
 
         private static void DrawText(RadFixedDocument fixedDocument)
         {
             RadFixedPage fixedPage = fixedDocument.Pages.LastOrDefault();
             if (fixedPage == null) { fixedPage = fixedDocument.Pages.AddPage(); }
-            FixedContentEditor fixedEditor = new FixedContentEditor(fixedPage);
+            FixedContentEditor fixedContentEditor = new FixedContentEditor(fixedPage);
 
-            fixedEditor.Position.Translate(currentXposition, currentYposition);
+            fixedContentEditor.Position.Translate(currentXposition, currentYposition);
 
-            fixedEditor.TextProperties.Font = FontsRepository.HelveticaOblique;
+            fixedContentEditor.TextProperties.Font = FontsRepository.HelveticaOblique;
 
             Block textBlock = new Block();
 
@@ -78,26 +75,26 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
                 currentXposition = pageMarginsValue.Left;
                 fixedPage = fixedDocument.Pages.AddPage();
                 fixedPage.Size = pageSize;
-                fixedEditor = new FixedContentEditor(fixedPage);
+                fixedContentEditor = new FixedContentEditor(fixedPage);
 
             }
             if (desiredXLocationToDraw > pageXLimit)
             {
                 currentXposition = pageMarginsValue.Left;
             }
-            fixedEditor.Position.Translate(currentXposition, currentYposition);
-            fixedEditor.DrawBlock(textBlock, new Size(pageSize.Width - pageMarginsValue.Right - pageMarginsValue.Left, double.PositiveInfinity));
+            fixedContentEditor.Position.Translate(currentXposition, currentYposition);
+            fixedContentEditor.DrawBlock(textBlock, new Size(pageSize.Width - pageMarginsValue.Right - pageMarginsValue.Left, double.PositiveInfinity));
             currentYposition += textBlock.ActualSize.Height;
             currentXposition += textBlock.ActualSize.Width;
-            fixedEditor.Position.Translate(currentXposition, currentYposition);
+            fixedContentEditor.Position.Translate(currentXposition, currentYposition);
         }
 
         private static void DrawHeading(RadFixedDocument fixedDocument)
         {
             RadFixedPage fixedPage = fixedDocument.Pages.LastOrDefault();
             if (fixedPage == null) { fixedPage = fixedDocument.Pages.AddPage(); }
-            FixedContentEditor fixedEditor = new FixedContentEditor(fixedPage);
-            fixedEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
+            FixedContentEditor fixedContentEditor = new FixedContentEditor(fixedPage);
+            fixedContentEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
 
             Block textBlock = new Block();
             textBlock.TextProperties.Font = FontsRepository.CourierBoldOblique;
@@ -116,25 +113,25 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
                 currentXposition = pageMarginsValue.Left;
                 fixedPage = fixedDocument.Pages.AddPage();
                 fixedPage.Size = pageSize;
-                fixedEditor = new FixedContentEditor(fixedPage);
+                fixedContentEditor = new FixedContentEditor(fixedPage);
                 //move the cursor to the beginning of the new page
-                fixedEditor.Position.Translate(currentXposition, currentYposition);
+                fixedContentEditor.Position.Translate(currentXposition, currentYposition);
             }
             currentXposition = (fixedPage.Size.Width / 2) - (textBlockDesiredSize.Width / 2);
-            fixedEditor.Position.Translate(currentXposition, currentYposition);
+            fixedContentEditor.Position.Translate(currentXposition, currentYposition);
 
-            fixedEditor.DrawBlock(textBlock);
+            fixedContentEditor.DrawBlock(textBlock);
             currentYposition += textBlock.ActualSize.Height;
             currentXposition += textBlock.ActualSize.Width;
-            fixedEditor.Position.Translate(currentXposition, currentYposition);
+            fixedContentEditor.Position.Translate(currentXposition, currentYposition);
         }
 
         private static void DrawLogo(RadFixedDocument fixedDocument)
         {
             RadFixedPage fixedPage = fixedDocument.Pages.LastOrDefault();
             if (fixedPage == null) { fixedPage = fixedDocument.Pages.AddPage(); }
-            FixedContentEditor fixedEditor = new FixedContentEditor(fixedPage);
-            fixedEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
+            FixedContentEditor fixedContentEditor = new FixedContentEditor(fixedPage);
+            fixedContentEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
             using (Stream imageStream = File.OpenRead("pdf-processing-overview.jpg"))
             {
                 Block imageBlock = new Block();
@@ -153,22 +150,22 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
                     currentXposition = pageMarginsValue.Left;
                     fixedPage = fixedDocument.Pages.AddPage();
                     fixedPage.Size = pageSize;
-                    fixedEditor = new FixedContentEditor(fixedPage);
+                    fixedContentEditor = new FixedContentEditor(fixedPage);
                     //move the cursor to the beginning of the new page
-                    fixedEditor.Position.Translate(currentXposition, currentYposition);
+                    fixedContentEditor.Position.Translate(currentXposition, currentYposition);
 
                 }
-                fixedEditor.DrawBlock(imageBlock);
+                fixedContentEditor.DrawBlock(imageBlock);
                 currentYposition += imageBlock.ActualSize.Height;
                 currentXposition += imageBlock.ActualSize.Width;
-                fixedEditor.Position.Translate(currentXposition, currentYposition);
+                fixedContentEditor.Position.Translate(currentXposition, currentYposition);
             }
         }
 
 ```
 The achieved result is illustrated below:
 
-![Pdf document with Logo and Text](images/pdf-with-logo-and-text.png)
+![PDF document with Logo and Text](images/pdf-with-logo-and-text.png)
 
 # See Also
 - [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
