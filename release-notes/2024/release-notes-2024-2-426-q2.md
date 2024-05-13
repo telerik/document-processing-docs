@@ -1,5 +1,5 @@
 ---
-title: 2024.2.426 (2024 Q2)
+title: Version 2024.2.426 (2024 Q2)
 page_title: What is new in 2024.2.426 (2024 Q2) for the Document Processing Libraries
 description: 2024.2.426 (2024 Q2)
 slug: release-notes-2024-2-426 
