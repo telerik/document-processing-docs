@@ -256,7 +256,7 @@ Yes
 <td>
 Continuous Section Breaks
 </td>
-<td></td>
+<td>No</td>
 <td></td>
 </tr>
 <tr>
@@ -281,7 +281,7 @@ Yes
 <td>
 Columns
 </td>
-<td></td>
+<td>No</td>
 <td></td>
 </tr>
 <tr>
@@ -329,7 +329,7 @@ Yes
 <td>
 Floating Tables
 </td>
-<td></td>
+<td>No</td>
 <td></td>
 </tr>
 <tr>
@@ -411,7 +411,7 @@ Yes
 <td>
 Conditional Table Styles
 </td>
-<td></td>
+<td>No</td>
 <td></td>
 </tr>
 <tr>
@@ -513,21 +513,21 @@ Result fragment is exported.
 <td>
 Comments
 </td>
-<td></td>
+<td>No</td>
 <td></td>
 </tr>
 <tr>
 <td>
 Protection
 </td>
-<td></td>
+<td>No</td>
 <td></td>
 </tr>
 <tr>
 <td>
 Track Changes
 </td>
-<td></td>
+<td>No</td>
 <td></td>
 </tr>
 <tr>
@@ -541,7 +541,7 @@ Track Changes
 <td>
 Bookmarks
 </td>
-<td></td>
+<td>No</td>
 <td></td>
 </tr>
 </table>
