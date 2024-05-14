@@ -103,6 +103,7 @@ For any issues you might encounter while working with Telerik Document Processin
 
 ## Learning Resources
 
+* [Online Demo application](https://demos.telerik.com/document-processing)
 * [Knowledge Base](https://docs.telerik.com/devtools/document-processing/knowledge-base)
 * [Virtual Classroom](https://www.telerik.com/account/support/virtual-classroom)
 
