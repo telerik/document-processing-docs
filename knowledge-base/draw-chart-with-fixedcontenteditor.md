@@ -4,7 +4,7 @@ description: This article provides a solution to draw a bar chart with PdfProces
 type: how-to
 page_title: How to Draw a Chart with FixedContentEditor in PdfProcessing
 slug: draw-chart-with-fixedcontenteditor
-tags:  pdfprocessing, chart, draw
+tags:  pdfprocessing, chart, draw, pdf, fixedcontenteditor
 res_type: kb
 ---
 # Environment
@@ -21,12 +21,12 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
 
  
    ```csharp
-            public static System.Windows.Size pageSize = new System.Windows.Size(Unit.MmToDip(210), Telerik.Windows.Documents.Media.Unit.MmToDip(297));
+        public static System.Windows.Size pageSize = new System.Windows.Size(Unit.MmToDip(210), Telerik.Windows.Documents.Media.Unit.MmToDip(297));
         public static Padding pageMarginsValue = new Telerik.Windows.Documents.Primitives.Padding(
-             Unit.MmToDip(20),//left
-              Unit.MmToDip(0),//top
+               Unit.MmToDip(20),//left
+               Unit.MmToDip(0),//top
                Unit.MmToDip(0),//right
-                Unit.MmToDip(0));//bottom
+               Unit.MmToDip(0));//bottom
         public static double currentYposition = pageMarginsValue.Top;
         public static double currentXposition = pageMarginsValue.Left;
         public static double pageYLimit = pageSize.Height - pageMarginsValue.Bottom;
@@ -52,17 +52,17 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
             {
                 provider.Export(fixedDocument, output);
             }
-            Process.Start(outputFilePath);
+            Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
         }
 
         private static void DrawChart()
         {
             RadFixedPage fixedPage = fixedDocument.Pages.LastOrDefault();
             if (fixedPage == null) { fixedPage = fixedDocument.Pages.AddPage(); }
-            FixedContentEditor fixedEditor = new FixedContentEditor(fixedPage);
+            FixedContentEditor fixedContentEditor = new FixedContentEditor(fixedPage);
 
-            fixedEditor.Position.Translate(currentXposition, currentYposition);
-            fixedEditor.TextProperties.Font = FontsRepository.Courier;
+            fixedContentEditor.Position.Translate(currentXposition, currentYposition);
+            fixedContentEditor.TextProperties.Font = FontsRepository.Courier;
             double maxWidth = availableLibraries.Max(x =>
             {
                 Block block = new Block();
@@ -73,7 +73,7 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
 
             Rect chartDimensions = GetChartDimensions(chartStartPoint);
  
-            fixedEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
+            fixedContentEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
             int maxValue = availableLibraries.Max(x => x.Value);
             Block textBlock = new Block();
             textBlock.InsertText(availableLibraries.First().Key);
@@ -121,22 +121,21 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
             string name = library.Key;
             RadFixedPage fixedPage = fixedDocument.Pages.LastOrDefault();
             if (fixedPage == null) { fixedPage = fixedDocument.Pages.AddPage(); }
-            FixedContentEditor fixedEditor = new FixedContentEditor(fixedPage);
+            FixedContentEditor fixedContentEditor = new FixedContentEditor(fixedPage);
             RgbColor fillColor = new RgbColor(RandomRgbValue(), RandomRgbValue(), RandomRgbValue());
             Block textBlock = new Block();
-            fixedEditor.GraphicProperties.FillColor = fillColor;
-            fixedEditor.GraphicProperties.StrokeColor = new RgbColor(fillColor.B, fillColor.G, fillColor.R);
-            textBlock.GraphicProperties.CopyFrom(fixedEditor.GraphicProperties);
+            fixedContentEditor.GraphicProperties.FillColor = fillColor;
+            fixedContentEditor.GraphicProperties.StrokeColor = new RgbColor(fillColor.B, fillColor.G, fillColor.R);
+            textBlock.GraphicProperties.CopyFrom(fixedContentEditor.GraphicProperties);
             textBlock.InsertText(string.Format("{0} - {1}", name, library.Value));
             Size measuredText = textBlock.Measure();
             currentYposition += measuredText.Height;
-            fixedEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
-            fixedEditor.DrawBlock(textBlock);
-
+            fixedContentEditor.Position.Translate(pageMarginsValue.Left, currentYposition);
+            fixedContentEditor.DrawBlock(textBlock);
           
             int width = library.Value - (maxValue % library.Value);
             
-            fixedEditor.Position.Translate(fixedEditor.Position.Matrix.OffsetX + startX, currentYposition);
+            fixedContentEditor.Position.Translate(fixedContentEditor.Position.Matrix.OffsetX + startX, currentYposition);
 
             LinearGradient linearGradient = new Telerik.Windows.Documents.Fixed.Model.ColorSpaces.LinearGradient(new Point(0, 0), new Point(30, 30));
             RgbColor startColor=  new RgbColor(RandomRgbValue(), RandomRgbValue(), RandomRgbValue());
@@ -144,12 +143,12 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
             linearGradient.GradientStops.Add(new GradientStop(startColor, 0));
             linearGradient.GradientStops.Add(new GradientStop(stopColor, 1));
 
-            fixedEditor.GraphicProperties.FillColor = linearGradient;
-            IPosition savedPosition = fixedEditor.Position.Clone();
-            fixedEditor.Position.Translate(0, currentYposition);
-            fixedEditor.DrawRectangle(new Rect(startX + pageMarginsValue.Left, textHeight / 2, width, 10));
-            fixedEditor.Position = savedPosition; 
-            fixedEditor.Position.Translate(fixedEditor.Position.Matrix.OffsetX - startX, currentYposition + measuredText.Height);
+            fixedContentEditor.GraphicProperties.FillColor = linearGradient;
+            IPosition savedPosition = fixedContentEditor.Position.Clone();
+            fixedContentEditor.Position.Translate(0, currentYposition);
+            fixedContentEditor.DrawRectangle(new Rect(startX + pageMarginsValue.Left, textHeight / 2, width, 10));
+            fixedContentEditor.Position = savedPosition; 
+            fixedContentEditor.Position.Translate(fixedContentEditor.Position.Matrix.OffsetX - startX, currentYposition + measuredText.Height);
         }
    ```
 
