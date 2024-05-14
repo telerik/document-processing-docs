@@ -66,7 +66,7 @@ The section properties are responsible for the page size, margins and orientatio
 	* __Rotate180__: The page is rotated to 180°.
 	* __Rotate270__: The page is rotated to 270°.
                     
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_0}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_1}}
 	radFixedDocumentEditor.SectionProperties.PageSize = new Size(100,100);
 	radFixedDocumentEditor.SectionProperties.PageRotation = Telerik.Windows.Documents.Fixed.Model.Data.Rotation.Rotate90;
 {{endregion}}
@@ -81,7 +81,7 @@ Adding an additional section is achieved with the __InsertSectionBreak()__ metho
 
 #### __[C#] Example 2: Start a section__
 
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_1}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_2}}
 	radFixedDocumentEditor.InsertSectionBreak();
 {{endregion}}
 
@@ -93,7 +93,7 @@ Adding an additional section is achieved with the __InsertSectionBreak()__ metho
 All pages that have the same __SectionProperties__ are part of the current section. To start a new page, you can use the following code:
 
 #### __[C#] Example 3: Start new page__
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_2}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_3}}
 	radFixedDocumentEditor.InsertPageBreak();
 {{endregion}}
 
@@ -129,7 +129,7 @@ Similar to the section properties, paragraph has its own properties that are res
 
 * __ListLevel__: The list level the paragraph belongs to.
 
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_2}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_4}}
 	radFixedDocumentEditor.ParagraphProperties.SpacingAfter = 10;
 	radFixedDocumentEditor.ParagraphProperties.LineSpacingType = HeightType.Auto;
 	adFixedDocumentEditor.ParagraphProperties.BackgroundColor = new RgbColor(0, 100, 0);
@@ -146,7 +146,7 @@ In order to start a new paragraph, use the code in __Example 4__.
 
 #### __[C#] Example 4: Start a paragraph__
 
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_3}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_5}}
 	radFixedDocumentEditor.InsertParagraph();
 {{endregion}}
 
@@ -188,7 +188,7 @@ The character properties that are responsible for the look of the runs are liste
 
 * __UnderlineColor__: The color of the underline.
                     
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_3}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_6}}
 	radFixedDocumentEditor.CharacterProperties.FontSize = 12;
 	radFixedDocumentEditor.CharacterProperties.Font = FontsRepository.Courier;
 	radFixedDocumentEditor.CharacterProperties.HighlightColor = new RgbColor(10, 100, 80);
@@ -205,7 +205,7 @@ There are a number of overloads that insert a run. The code snippet in __Example
 
 #### __[C#] Example 5: Insert run__
 
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_4}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_7}}
 	radFixedDocumentEditor.InsertRun("text");
 	radFixedDocumentEditor.InsertRun(new FontFamily("Helvetica"),"text");
 {{endregion}}
@@ -221,7 +221,7 @@ The code in __Example 6__ inserts a new run and a line break after it.
 
 #### __[C#] Example 6: Insert run and line break__
 
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_5}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_8}}
 	radFixedDocumentEditor.InsertLine("Line of text");
 {{endregion}}
 
@@ -237,7 +237,7 @@ You can insert image inline using one of the following methods:
          
 #### __[C#] Example 7: Insert image__    
    
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_6}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_9}}
 	ImageSource imageSource = new ImageSource(new FileStream("image.jpeg", FileMode.Open));
  	radFixedDocumentEditor.InsertImageInline(imageSource);
  	radFixedDocumentEditor.InsertImageInline(imageSource, new Size(100, 100));
@@ -250,7 +250,7 @@ The __Table__ class implements the __IBlockElement__ interface and an instance o
 
 #### __[C#] Example 8: Insert table__
 
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_7}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_10}}
 	Table table = new Table();
 	TableRow firstRow = table.Rows.AddTableRow();
 	firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("cellText");
@@ -266,7 +266,7 @@ The [IBlockElement](https://docs.telerik.com/devtools/document-processing/api/Te
 
 #### __[C#] Example 9: Insert Block element__
 
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_8}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_11}}
 	Block block = new Block();
 	block.InsertText("Text");
 
@@ -281,7 +281,7 @@ You can easily insert list items with __RadFixedDocumentEditor__. The first thin
 The following code snippet shows how to add a new list to __RadFixedDocumentEditor’s ListCollection__ and after that insert a paragraph with the corresponding list properties:
 
 #### __[C#] Example 10: Insert list__
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_9}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_12}}
 	List list = radFixedDocumentEditor.Lists.AddList(ListTemplateType.NumberedDefault);
 	radFixedDocumentEditor.ParagraphProperties.ListId = list.Id;
 	radFixedDocumentEditor.ParagraphProperties.ListLevel = 0;
@@ -295,7 +295,7 @@ More detailed information about lists is available in the [List documentation ar
 With the RadFixedDocumentEditor class you can insert a Form (Form-XObject) element. 
 
 #### __[C#] Example 11: Insert a form__
-{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_10}}
+{{region cs-radpdfprocessing-editing-radfixeddocumenteditor_13}}
 	radFixedDocumentEditor.InsertFormInline(formSource);
 {{endregion}}
 
