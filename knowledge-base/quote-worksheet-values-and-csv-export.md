@@ -64,7 +64,7 @@ using (StreamWriter writer = new StreamWriter(stream))
     }
 }
 ```
-![Before - After quoting and exporting to CSV ](images/quotedCsvValus.png)
+![Before - After quoting and exporting to CSV ](images/quoted-csv-values.png)
 
 ## See Also
 
