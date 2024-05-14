@@ -84,6 +84,8 @@ With the following example we will iterate through the cells in the used range o
 
 This approach ensures that you correctly read the values of merged cells in a worksheet by always retrieving the value from the top-left cell of the merged region.
 
+![Merged Cells Value](images/read-xls-file-merged-cells-radspreadprocessing.png) 
+
 ## See Also
 
 - [Merge Cells in SpreadProcessing]({%slug radspreadprocessing-features-merge-unmerge-cells%})
