@@ -103,9 +103,8 @@ In order to create an instance of __FloatingImage__ you need the worksheet in wh
 
 {{region cs-radspreadprocessing-features-shapes-and-images_0}}
 	Worksheet worksheet = workbook.ActiveWorksheet;
-	FloatingImage image = new FloatingImage(worksheet, new CellIndex(7, 1), 35, 10);
+	Telerik.Windows.Documents.Spreadsheet.Model.Shapes.FloatingImage image = new Telerik.Windows.Documents.Spreadsheet.Model.Shapes.FloatingImage(worksheet, new CellIndex(7, 1), 35, 10);
 {{endregion}}
-
 
 
 The next step is to configure the other properties of the image as needed.
