@@ -49,7 +49,7 @@ RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedi
             using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
             {
                 editor.CharacterProperties.TrySetFont(new System.Windows.Media.FontFamily("Calibri"));
-                editor.InsertRun("PDF/A-3B Complaint Invoice");
+                editor.InsertRun("PDF/A-3B Compliant Invoice");
             };
             byte[] bytes = File.ReadAllBytes(@"zugferd-invoice.xml");
             document.EmbeddedFiles.AddZugferdInvoice(bytes);

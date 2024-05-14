@@ -28,5 +28,5 @@ This class holds a collection of **EmbeddedFile** instances, assigned to the **E
 |**Add(string name, byte[] data)**|Adds a named embedded file with the specified name and value to the collection and returns it.|
 |**ContainsName(string name)**|Determines whether the collection contains the specified name.|
 |**Clear**|Removes all embedded files from the collection.| 
-|**AddZugferdInvoice(byte[] data)**|Adds an embedded ZUGFeRD complaint file to the collection and returns it. The Conformance level is set to Basic. *Only a single XML invoice attachment is allowed in ZUGFeRD.*|
+|**AddZugferdInvoice(byte[] data)**|Adds an embedded ZUGFeRD compliant file to the collection and returns it. The Conformance level is set to Basic. *Only a single XML invoice attachment is allowed in ZUGFeRD.*|
 |**RemoveZugferdInvoice()**|Removes the embedded ZUGFeRD file with the specified name from the collection.|
