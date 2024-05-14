@@ -34,7 +34,7 @@ __Example 1__ shows how to import a CSV file using a __FileStream__. The code as
 	}
 	
 	Workbook workbook;
-	IWorkbookFormatProvider formatProvider = new CsvFormatProvider();
+	CsvFormatProvider formatProvider = new CsvFormatProvider();
 	
 	using (Stream input = new FileStream(fileName, FileMode.Open))
 	{
@@ -56,7 +56,7 @@ __Example 2__ demonstrates how to export an existing Workbook to a CSV file. The
 	workbook.Worksheets.Add();
 	
 	string fileName = "SampleFile.csv";
-	IWorkbookFormatProvider formatProvider = new CsvFormatProvider();
+	CsvFormatProvider formatProvider = new CsvFormatProvider();
 	
 	using (Stream output = new FileStream(fileName, FileMode.Create))
 	{
