@@ -15,7 +15,9 @@ position: 3
 * Standard 
 
 * Embedded
-  
+
+>note As of **Q2 2024** RadPdfProcessing offers support for OTF (OpenType Font) font file format.
+
 ## Standard Fonts
 
 There are 14 standard fonts that are not embedded in the document when you use them. These fonts can be accessed through the [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html) class. The standard fonts are listed below:
