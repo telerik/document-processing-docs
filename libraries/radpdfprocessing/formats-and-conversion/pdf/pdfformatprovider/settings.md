@@ -113,7 +113,7 @@ The property controls what part of the fonts will be embedded in the file offeri
 
 * **None** - Does not embed fonts.
 * **Full** - Fully embeds fonts.
- * **Subset** - Embeds only the used characters subset of the fonts. This is the default approach.
+* **Subset** - Embeds only the used characters subset of the fonts. This is the default approach.
 
 >note The subset export option is currently implemented **only** for TrueType fonts (.ttf).
 
