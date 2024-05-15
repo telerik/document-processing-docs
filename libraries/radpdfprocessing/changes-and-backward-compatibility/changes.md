@@ -13,7 +13,8 @@ This topic summarizes the new functionality introduced in the library with helpf
 
 ## What's New in 2024 Q2
 
-The PdfExportSettings.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property uses the **FontEmbeddingType** enum allowing to specify whether the full font will be embedded in the document or a subset of it.
+* Instead of using the PdfExportSettings.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property, use the **FontEmbeddingType** property allowing to specify whether the full font will be embedded in the document or a subset of it.
+* Support for OTF (OpenType Font) font file format
       
 ## What's New in 2014 Q3
 
