@@ -75,4 +75,4 @@ The Image class exposes also the **GetBitmapSource()** method, enabling you to o
  * [Position]({%slug radpdfprocessing-concepts-position%})
  * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
  * [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
- * [Position]({%slug pdfprocessing-change-file-size-through-image-quality-and-compression%})
+ * [Change file size of a PDF with images through ImageCompression and ImageQuality]({%slug pdfprocessing-change-file-size-through-image-quality-and-compression%})
