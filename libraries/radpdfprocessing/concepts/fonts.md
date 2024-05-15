@@ -41,11 +41,11 @@ There are 14 standard fonts that are not embedded in the document when you use t
 
 All fonts, which are not included in the 14 standard ones, should be **embedded** in the PDF document. Otherwise, the result may be unpredictable when the document is rendered. In __RadPdfProcessing__ you have the ability to embed fonts following the approaches described below.
         
->If you do not wish to embed the fonts in the document set the __ShouldEmbedFonts__ property of the [ExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
+>If you do not wish to embed the fonts in the document set the **FontEmbeddingType** property of the [ExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
 
 ### Registering a Font
 
-If you want to use a font, which is not part of the standard ones, you can register it using the __RegisterFont()__ method of the __FontRepository__ static class. The method requires four parameters - FontFamily, FontStyle and FontWeight objects describing the font and a byte array containing the raw font data.
+If you want to use a font, that is not part of the standard ones, you can register it using the __RegisterFont()__ method of the __FontRepository__ static class. The method requires four parameters - FontFamily, FontStyle and FontWeight objects describing the font and a byte array containing the raw font data.
          
 __Example 1__ demonstrates how you can use the RegisterFont() method.
             
