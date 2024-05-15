@@ -101,15 +101,18 @@ The event is fired when trying to resolve conflicts between the [embedded file n
 
 In order to modify the way content is exported, you can set the __ExportSettings__ property of __PdfFormatProvider__. These are the modification options you can use:
         
-### __ShouldEmbedFonts__
+### __ShouldEmbedFonts__ (obsolete)
 
 This property controls if the fonts will be embedded in the file. The default value is *true* because by the PDF Standard the fonts should be embedded in the file. This means that by default the fonts are added which allows proper viewing on any device. If the fonts are not embedded and the file is viewed on a device that does not have the used fronts the font might be substituted. 
 
->important As of **Q2 2024** the ShouldEmbedFonts property use the **FontEmbeddingType** offerring the following options:
+>important As of **Q2 2024** the ShouldEmbedFonts property is obsolete. Use the **FontEmbeddingType** property instead.
+
+### **FontEmbeddingType**
+
+The property controls what part of the fonts will be embedded in the file offering the following options:
 > * **None** - Does not embed fonts.
 > * **Full** - Fully embeds fonts.
 > * **Subset** - Embeds only the used characters subset of the fonts. This is the default approach.
-
 
 >caution The subset export option is currently implemented for TrueType fonts only (.ttf) and **not** implemented for the CFF fonts (.otf).
 
