@@ -107,3 +107,4 @@ The __SkiaImageFormatProvider__ exposes the following settings:
 
 # See Also
 * [Converting XLSX Content to DOCX Document]({%slug convert-excel-content-to-word-document%}) 
+* [Export Worksheet to image]({%slug spreadprocessing-export-worksheet-to-image-netstandard%})
