@@ -77,3 +77,10 @@ position: 0
 ![fixed](../images/fixed.png)
 
 * Cannot open newly added files to a password-protected zip archive.
+  
+## Visual Studio Code Extension
+
+
+![new](../images/new.png)
+
+* Add Document Processing Libraries Configuration Wizard for Telerik UI for Blazor and Telerik UI for ASP.NET Core.
