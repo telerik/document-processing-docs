@@ -83,4 +83,4 @@ position: 0
 
 ![new](../images/new.png)
 
-* Add Document Processing Libraries Configuration Wizard for Telerik UI for Blazor and Telerik UI for ASP.NET Core.
+* Added Document Processing Libraries Configuration Wizard for Telerik UI for Blazor and Telerik UI for ASP.NET Core.
