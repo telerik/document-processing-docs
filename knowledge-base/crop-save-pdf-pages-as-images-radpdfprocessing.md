@@ -28,14 +28,14 @@ To achieve the desired functionality of cropping parts of a PDF page and saving 
 
 2. **Set the CropBox** for each page to define the area you want to crop. The CropBox property specifies the region of the page to be displayed or printed.
 
-3. **Export the cropped pages as images**. You can use the RadPdfViewer or any suitable image processing library for this step.
+3. **Export the cropped pages as images**. You can use the [RadPdfViewer](https://docs.telerik.com/devtools/winforms/controls/pdfviewer/overview) which offers [export to image](https://docs.telerik.com/devtools/winforms/controls/pdfviewer/export-to-image) functionality out of the box.
 
 Here is a simplified code example demonstrating these steps:
 
 ```csharp
          static void Main(string[] args)
         {
-            string originalFilePath = @"WinForms PdfViewer.pdf";
+            string originalFilePath = @"sample.pdf";
             PdfFormatProvider provider = new PdfFormatProvider();
             RadFixedDocument croppedDocument = provider.Import(File.ReadAllBytes(originalFilePath));
 
@@ -72,9 +72,9 @@ Here is a simplified code example demonstrating these steps:
             }
         }
 ```
+![Pdf CropBox](images/pdf-cropbox.png) 
 
-The above example is just a sample approach. Feel free to further fine-tune or adjust the crop rectangle according to the specific part of the document that should be extracted as an image.
-
+The above example is just a sample approach. Feel free to further fine-tune or adjust the crop rectangle according to the specific part of the page that should be extracted as an image.
 
 ## See Also
 
