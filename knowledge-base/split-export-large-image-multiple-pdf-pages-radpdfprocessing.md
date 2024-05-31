@@ -52,7 +52,6 @@ To export a large image across multiple PDF pages without adding headers or blan
             }
             Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 
-            //ScaleImage();
         }
 
         private static void SplitImages(bool isVerticalSplit, Bitmap bmp, RadFixedDocument document, RadFixedPage page)
@@ -82,6 +81,7 @@ To export a large image across multiple PDF pages without adding headers or blan
 
 This example splits the image into two parts, but you can adjust the logic to split the image into as many parts as necessary, depending on the image size and the desired size of each part on the PDF pages.
 
+![PdfProcessing Split Images](images/pdf-processing-split-images.png)  
  
 ## See Also
 
