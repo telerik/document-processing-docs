@@ -22,7 +22,7 @@ This article shows how to change the file size of a PDF with images by changing 
 
 The size of the exported PDF file depends on the value of the [ImageQuality]({%slug radpdfprocessing-concepts-imagequality%}) and [ImageCompression](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#imagecompression) properties of the [PDF Export Setting](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#export-settings). You can try different combinations with these values in order to achieve different results. 
 
-This examples showcases all four __ImageCompression__ options and how each option behaves with a different __ImageQuiality__. In general, lowering the image quality will lower the file size.
+This example showcases all four __ImageCompression__ options and how each option behaves with a different __ImageQuiality__. In general, lowering the image quality will lower the file size.
 
 >The result file sizes seen in the comments are based on a sample document and should be just used as reference.
 
