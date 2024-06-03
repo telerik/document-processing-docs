@@ -30,7 +30,7 @@ This topic describes the system requirements needed by Telerik Document Processi
 
 * [Windows Server 2003 (excluding IA-64)](https://learn.microsoft.com/en-us/dotnet/framework/get-started/system-requirements#server-operating-systems)
 
->*Check [here]([http://msdn.microsoft.com/en-us/library/8z6watww%28v=vs.100%29.aspx](https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies?source=recommendations#net-framework-462)) for a complete list of the supported operating systems.
+>*Check [here](https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies?source=recommendations#net-framework-462) for a complete list of the supported operating systems.
 
 ## Development Environment
 
