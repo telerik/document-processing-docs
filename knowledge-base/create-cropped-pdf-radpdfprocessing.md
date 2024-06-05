@@ -17,15 +17,15 @@ ticketid: 1653594
 
 ## Description
 
-When working with PDF documents, you might encounter scenarios where you need to extract and crop a specific page to create a new PDF document. This article demonstrates how to use RadPdfProcessing to crop a page from an existing PDF and save the cropped content as a new PDF document.
+When working with PDF documents, you might encounter scenarios where you need to extract and crop a specific page to create a new PDF document. This article demonstrates how to use [RadPdfProcessing]({%slug radpdfprocessing-overview%}) to crop a page from an existing PDF and save the cropped content as a new PDF document.
 
 ## Solution
 
 To create a new PDF document from a cropped page of an existing PDF, follow these steps:
 
-1. **Extract the desired page from the original PDF document.** Use the `PdfFileSource` class to access the pages of the original PDF.
+1. **Extract the desired page from the original PDF document.** Use the [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}) class to access the pages of the original PDF.
 
-2. **Create a new PDF document with the extracted page.** Utilize the `PdfStreamWriter` class to write the extracted page into a new PDF document.
+2. **Create a new PDF document with the extracted page.** Utilize the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) class to write the extracted page into a new PDF document.
 
 3. **Crop the content of the newly created PDF.** Modify the `CropBox` of the `RadFixedPage` to specify the cropped area.
 
@@ -61,13 +61,14 @@ Here's a complete code snippet illustrating the process:
         }
 ```
 
-This code snippet demonstrates how to create a new PDF by cropping the center third of a specific page from an existing PDF document.
+This code snippet demonstrates how to create a new PDF by cropping the center third of a specific page from an existing PDF document. The observed result is illustrated below:
+
+![New PDF document with Cropped Content](images/pdf-with-cropped-page.png) 
 
 ## See Also
 
-- [RadPdfProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [PdfStreamWriter Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfstreamwriter/overview)
-- [Position Concept in RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/position)
+- [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
+- [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) 
 - [Telerik Document Processing SDK Repository](https://github.com/telerik/document-processing-sdk)
 
 ---
