@@ -1,13 +1,13 @@
 ---
-title: How to Draw Figures in PDF document
+title: How to Draw Figures in PDF documents
 description: Learn how to use the ArcSegment class in RadPdfProcessing to draw a part of a circle.
 type: how-to
-page_title: How to Draw Figures in PDF document
+page_title: How to Draw Figures in PDF documents
 slug: pdf-processing-draw-figures-arcsegment
 tags: arcsegment, draw, circle, lines, RadPdfProcessing
 ---
 
-# How to Draw Figures in PDF document
+# How to Draw Figures in PDF documents
 
 ## Environment
 
