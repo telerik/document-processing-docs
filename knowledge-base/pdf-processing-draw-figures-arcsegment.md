@@ -5,18 +5,19 @@ type: how-to
 page_title: How to Draw Figures in PDF document
 slug: pdf-processing-draw-figures-arcsegment
 tags: arcsegment, draw, circle, lines, RadPdfProcessing
-
 ---
-# Environment
+
+## Environment
+
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.124| RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Description
+## Description
 
 This article demonstrates a sample approach on how to draw a small figure containing an arc and some lines using RadPdfProcessing. 
 
-# Solution
+## Solution
 
 To draw an arc using the [ArcSegment]({%slug radpdfprocessing-concepts-geometry%}) class, follow these steps:
 
