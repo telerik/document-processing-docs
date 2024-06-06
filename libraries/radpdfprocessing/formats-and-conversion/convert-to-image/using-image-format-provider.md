@@ -9,7 +9,7 @@ position: 1
 
 # Using SkiaImageFormatProvider
 
-Since R3 2022 the __RadPdfProcessing__ library support converting entire documents to images. This is achieved by using the third-party library [SkiaSharp](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/). You can convert to various formats, using synchronous or asynchronous export. 
+Since R3 2022 the __RadPdfProcessing__ library supports converting entire documents to images. This is achieved by using the third-party library [SkiaSharp](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/). You can convert to various formats, using synchronous or asynchronous export. 
 
 >important This feature is only available in the NET Standard version of the suite. For other versions check the following articles:
 >* [ThumbnailFactory](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
