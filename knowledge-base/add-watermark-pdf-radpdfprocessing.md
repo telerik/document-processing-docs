@@ -73,6 +73,8 @@ Here is a complete code snippet demonstrating these steps:
         }
 ```
 
+![Pdf Watermark](images/pdf-watermark.png)  
+
 ## See Also
 
 - [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
