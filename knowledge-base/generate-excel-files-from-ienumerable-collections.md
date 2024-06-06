@@ -2,7 +2,7 @@
 title: Generating Excel Documents from IEnumerable Collections
 description: Learn how to create Excel files from IEnumerable Collections using the RadSpreadProcessing library.
 type: how-to
-page_title: How to  Excel Documents from IEnumerable Collections 
+page_title: How to generate Excel Documents from IEnumerable Collections 
 slug: generate-excel-files-from-ienumerable-collections
 tags: radspreadprocessing, document processing, excel, formatting, datatable, ienumerable
 res_type: kb
@@ -22,8 +22,8 @@ This article demonstrates a sample approach how to generate Excel documents from
 
 ## Solution
 
- RadSpreadProcessing is the perfect fit for the requirement. It is possible to iterate a collection of any custom objects and populate the worksheet's cells with the values coming from the respective fields in the custom objects. A good example of a sample approach how to do it is available in the following code snippet which fills the data in a worksheet from a collection of Employee objects.
-This approach can be adopted to any custom collection that can be obtained as an input.
+RadSpreadProcessing is the perfect fit for the requirement. It is possible to iterate a collection of any custom objects and populate the worksheet's cells with the values coming from the respective fields in the custom objects. A good example how to do it is available in the following code snippet which fills the data in a worksheet from a collection of Employee objects.
+This approach can be adapted to any custom collection that can be obtained as an input.
 
 ```csharp
         static void Main(string[] args)
@@ -58,7 +58,6 @@ This approach can be adopted to any custom collection that can be obtained as an
             worksheet.Cells[17, 4].SetValue("=SumIf(C7:C15,\"" + JobPosition.QA.ToString() + "\",E7:E15)");
             worksheet.Cells[18, 4].SetValue("=SumIf(C7:C15,\"" + JobPosition.Manager.ToString() + "\",E7:E15)");
             worksheet.Cells[19, 4].SetValue("=Sum(E7:E15)");
-
 
             //Add a document title. 
             CellSelection departmentNameCells = worksheet.Cells[1, 1, 1, 4];
