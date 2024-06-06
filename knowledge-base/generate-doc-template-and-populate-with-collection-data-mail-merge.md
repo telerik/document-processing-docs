@@ -1,10 +1,10 @@
 ---
-title: Generating a Word Document Template with Data Using MailMerge in RadWordsProcessing
-description: Learn how to create s Word document template with a collection of data using the Mail Merge functionality in RadWordsProcessing.
+title: Generating a Word Document with Data Using MailMerge in RadWordsProcessing
+description: Learn how to create a Word document template with a collection of data using the Mail Merge functionality in RadWordsProcessing.
 type: how-to
-page_title: How to Generate a Word Document Template with Data Using MailMerge in RadWordsProcessing
+page_title: How to Generate a Word Document and Populate it with Data Using MailMerge in RadWordsProcessing
 slug: generate-doc-template-and-populate-with-collection-data-mail-merge
-tags: word, documentprocessing, mailmerge, nestedmailmerge, docx, word, template
+tags: word, documentprocessing, mailmerge, nestedmailmerge, docx, word, template, populate
 res_type: kb
 category: knowledge-base
 ticketid: 1651971
@@ -18,11 +18,11 @@ ticketid: 1651971
 
 ## Description
 
-When working with Word documents, a common requirement is to generate a document template with a collection of data, such as a list of products, without rebuilding the application. This operation can be achieved using the Mail Merge functionality provided by RadWordsProcessing. 
+A common requirement when working with Word documents is to generate and populate a document with data/collection of data, such as a list of products, without rebuilding the application. This operation can be achieved using the Mail Merge functionality provided by RadWordsProcessing. 
 
 ## Solution
 
-To generate a Word document with a collection of data using RadWordsProcessing, follow these steps:
+To generate a Word document and populate it with a collection of data using RadWordsProcessing, follow these steps:
 
 1. **Prepare the Template**: Ensure that the Word document template contains the appropriate merge fields for the data that will be populated. For nested collections, use [nested merge fields]({%slug radwordsprocessing-editing-mail-merge%}).
 
@@ -87,7 +87,6 @@ static void Main(string[] args)
             editor.InsertParagraph();
             editor.InsertText("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ");
 
-
             RadFlowDocument mailMergeResult = document.MailMerge(itemsHolders);        
             string resultFileNameDocx = "merged.docx";
             File.Delete(resultFileNameDocx);
@@ -119,7 +118,6 @@ static void Main(string[] args)
                        new Items(){ProductName = "Product4", Price = 40, Qty = 4, Amount = 160},
                    }
                },
-
             };
 
             return products;
