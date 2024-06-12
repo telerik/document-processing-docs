@@ -1,6 +1,6 @@
 ---
 title: Optimizing and Reducing the Size of PDF Files with RadPdfProcessing
-description: Learn how to optimize and reduce the size of PDF files using RadPdfProcessing by applying compression and image quality settings.
+description: Learn how to optimize and reduce the size of PDF files through the compression and image quality settings when using RadPdfProcessing.
 type: how-to
 page_title: How to Optimize PDF File Size with RadPdfProcessing
 slug: optimize-and-reduce-pdf-size-radpdfprocessing
@@ -67,3 +67,4 @@ To optimize and reduce the size of existing PDF files with RadPdfProcessing, fol
 
 - [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
 - [PDF Format Provider Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})
+- [Change the file size of PDF with images]({%slug pdfprocessing-change-file-size-through-image-quality-and-compression%})
