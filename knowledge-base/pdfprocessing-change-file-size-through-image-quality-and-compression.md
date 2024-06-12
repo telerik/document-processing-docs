@@ -108,3 +108,4 @@ This example showcases all four __ImageCompression__ options and how each option
 * [PdfProcessing Export Settings](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#export-settings)
 * [PdfProcessing .NET Standard Requirements]({%slug radpdfprocessing-cross-platform%})
 * [PdfProcessing Image]({%slug radpdfprocessing-model-image%})
+* [Optimizing and Reducing the Size of PDF Files with RadPdfProcessing]({%slug optimize-and-reduce-pdf-size-radpdfprocessing%})
