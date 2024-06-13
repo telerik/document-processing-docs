@@ -84,6 +84,7 @@ static void Main(string[] args)
     } 
 }
 ```
+ ![Image Shadon in PDF](images/image-shadow-pdf.png)  
 
 Adjust the shadow's size, color, and opacity according to your requirements. This approach can be customized to fit specific needs or visual styles.
 
