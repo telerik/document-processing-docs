@@ -14,19 +14,20 @@ ticketid: 1655041
 | 2024.2.426| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-When using the RadWordsProcessing in a .NET 6.0 project, a `System.IO.FileNotFoundException` error may occur, stating that the file for assembly 'System.Text.Encoding.CodePages, Version=7.0.0.0' could not be found. This issue arises while utilizing the `Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider`.
+When using the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) in a WPF/WinForms project which targets .NET 6.0 , a `System.IO.FileNotFoundException` error may occur, stating that the file for assembly 'System.Text.Encoding.CodePages, Version=7.0.0.0' could not be found. This issue arises while utilizing the `Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider`.
 
-This KB article also answers the following questions:
-- How to resolve FileNotFoundException when using RadWordsProcessing?
-- How to add support for System.Text.Encoding.CodePages in .NET 6.0 projects?
-- What to include in the .csproj file to fix assembly loading issues in RadWordsProcessing?
+![WPF project Net6](images/wpf-net6-project.png)   
+
+![Encoding CodePages Error](images/codepages-error.png)   
 
 ## Solution
 To resolve the FileNotFoundException for 'System.Text.Encoding.CodePages' in a .NET 6.0 project using RadWordsProcessing, follow these steps:
 
-1. Edit the `.csproj` file of your project.
-2. Include the necessary `PackageReference` entries for `Telerik.Windows.Documents.Flow` and `System.Text.Encoding.CodePages`.
-3. Add a `FunctionsPreservedDependencies` entry for the `System.Text.Encoding.CodePages.dll`.
+1. Right-click the project to edit the `.csproj` file of your project.
+
+![Edit proj file](images/edit-wpf-net6-project.png)    
+
+2. Include the necessary `PackageReference` entry for `System.Text.Encoding.CodePages` and add a `FunctionsPreservedDependencies` entry for it.
 
 ```xml
 <ItemGroup>
@@ -37,6 +38,7 @@ To resolve the FileNotFoundException for 'System.Text.Encoding.CodePages' in a .
   <FunctionsPreservedDependencies Include="System.Text.Encoding.CodePages.dll" />
 </ItemGroup>
 ```
+![Add PackageReference](images/codepages-package-reference-net6-project.png)   
 
 By adding these entries to your `.csproj` file, the required package references will be included in your project, resolving the FileNotFoundException.
 
@@ -44,4 +46,4 @@ By adding these entries to your `.csproj` file, the required package references 
 Ensure that your project targets the appropriate .NET 6.0 framework and that all NuGet package versions are compatible with your project setup.
 
 ## See Also
-- [RadWordsProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview)
+- [RadWordsProcessing]({%slug radwordsprocessing-overview%}) 
