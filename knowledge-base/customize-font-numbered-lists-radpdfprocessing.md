@@ -79,6 +79,8 @@ using (Stream output = File.OpenWrite(outputFilePath))
 }
 ```
 
+![List Number's Font](images/pdf-list-number-font.png)
+
 This approach allows you to customize the font and font size of the numbers in a numbered list, ensuring they match the rest of the text in the PDF document.
 
 ## See Also
