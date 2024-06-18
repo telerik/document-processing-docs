@@ -17,10 +17,10 @@ res_type: kb
 This article demonstrates how to deal with formatting difficulties when exporting an XLSX file to PDF using the RadSpreadProcessing library in .NET Standard. 
 
 The most common scenario is:
-1. [Export an XLSX file to PDF]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) using the RadSpreadProcessing library.
-2. Observe the resulting PDF file with truncated columns or different font.
 
-![Export Differences](images/exporting-xlsx-to-pdf-formatting-issues01.png)   
+1\. [Export an XLSX file to PDF]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) using the RadSpreadProcessing library.
+
+2\. Observe the resulting PDF file with truncated columns or a different font.![Export Differences](images/exporting-xlsx-to-pdf-formatting-issues01.png)   
 
 ## Solution
 The limitations of .NET Standard may cause differences in the font and text size (text measuring) when converting to PDF format.
