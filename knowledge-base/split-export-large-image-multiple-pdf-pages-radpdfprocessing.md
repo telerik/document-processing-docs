@@ -85,5 +85,6 @@ This example splits the image into two parts, but you can adjust the logic to sp
  
 ## See Also
 
-- [RadPdfProcessing]({%slug radpdfprocessing-overview%}) 
+ * [RadPdfProcessing]({%slug radpdfprocessing-overview%}) 
+ * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
 
