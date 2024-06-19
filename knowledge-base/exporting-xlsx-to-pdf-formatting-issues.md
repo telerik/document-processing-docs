@@ -25,7 +25,7 @@ The most common scenario is:
 ## Solution
 The limitations of .NET Standard may cause differences in the font and text size (text measuring) when converting to PDF format.
 
-1\. To address the issue with the size discrepancy, set a [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}}) to handle the problem with the size:
+1\. To address the issue with the size discrepancy, set a [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}) to handle the problem with the size:
 
 ```csharp
         SpreadTextMeasurerBase fixedTextMeasurer = new SpreadFixedTextMeasurer();
