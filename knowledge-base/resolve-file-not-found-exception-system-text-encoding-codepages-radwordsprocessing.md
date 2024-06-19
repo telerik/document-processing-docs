@@ -23,7 +23,7 @@ When using the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) in a W
 ## Solution
 To resolve the FileNotFoundException for 'System.Text.Encoding.CodePages' in a .NET 6.0 project using RadWordsProcessing, follow these steps:
 
-1. Right-click the project to edit the `.csproj` file of your project.
+1. Right-click on your project to select it and edit `.csproj` file.
 
 ![Edit proj file](images/edit-wpf-net6-project.png)    
 
