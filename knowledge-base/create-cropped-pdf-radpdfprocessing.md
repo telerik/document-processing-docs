@@ -70,5 +70,5 @@ This code snippet demonstrates how to create a new PDF by cropping the center th
 - [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
 - [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) 
 - [Telerik Document Processing SDK Repository](https://github.com/telerik/document-processing-sdk)
-
+- [Cropping PDF Pages and Saving as Images Using RadPdfProcessing]({%slug crop-save-pdf-pages-as-images-radpdfprocessing%})
 ---
