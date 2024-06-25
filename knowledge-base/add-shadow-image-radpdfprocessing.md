@@ -17,13 +17,13 @@ ticketid: 1655064
 
 ## Description
 
-When inserting an image into a PDF document using the [Block.InsertImage](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/path) method, you might want to add a shadow effect to enhance its appearance. RadPdfProcessing provides functionalities to draw paths and geometries, enabling the simulation of shadows around images. This KB article demonstrates how to add a shadow to an image in a PDF document.
+When inserting an image into a PDF document using the [Block.InsertImage](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/block#inserting-image) method, you might want to add a shadow effect to enhance its appearance. [RadPdfProcessing](%slug radpdfprocessing-overview%) provides functionalities to draw paths and geometries, enabling the simulation of shadows around images. This KB article demonstrates how to add a shadow to an image in a PDF document.
 
 ## Solution
 
 To add a shadow to an image, utilize paths with specific geometries to simulate the shadow effect. The following example outlines the necessary steps to insert an image and draw a shadow around it using RadPdfProcessing:
 
-1. **Prepare the environment**: Ensure that `ImagePropertiesResolver` and `JpegImageConverter` are set for cross-platform image scenarios. Refer to the RadPdfProcessing documentation on [cross-platform image handling](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/cross-platform/images).
+1. **Prepare the environment**: Ensure that `ImagePropertiesResolver` and `JpegImageConverter` are set for cross-platform image scenarios. Refer to the RadPdfProcessing documentation on [cross-platform image handling]({%slug radpdfprocessing-cross-platform-images%}).
 
 2. **Insert the image**: Use the `Block.InsertImage` method to insert the image into a block.
 
@@ -95,6 +95,6 @@ Adjust the shadow's size, color, and opacity according to your requirements. Thi
 
 ## See Also
 
-- [RadPdfProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
+- [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
 - [Drawing Geometries in PDF Documents](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/fixedcontenteditor#inserting-geometries)
-- [Handling Images in Cross-Platform Scenarios](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/cross-platform/images)
+- [Handling Images in Cross-Platform Scenarios]({%slug radpdfprocessing-cross-platform-images%})
