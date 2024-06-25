@@ -11,9 +11,9 @@ ticketid: 1656165
 
 ## Environment
 
-| Product | RadSpreadProcessing for Document Processing |
-| --- | --- |
-| Version | 2021.3.1123 |
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| 2024.2.426| RadSpreadProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
