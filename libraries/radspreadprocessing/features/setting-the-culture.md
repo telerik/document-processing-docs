@@ -15,7 +15,7 @@ __RadSpreadProcessing__ allows you to set a culture that differs from the curren
 
 {{region cs-radspreadprocessing-features-setting-the-culture_1}}
 
-    FormatHelper.CultureHelper = new SpreadsheetCultureHelper(new CultureInfo("en-US"));
+    Telerik.Windows.Documents.Spreadsheet.Formatting.FormatHelper.CultureHelper = new SpreadsheetCultureHelper(new CultureInfo("en-US"));
 
 {{endregion}}
 
