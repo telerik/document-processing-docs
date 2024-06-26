@@ -160,3 +160,4 @@ TextFragment exposes the following properties that can modify the look of the re
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [Position]({%slug radpdfprocessing-concepts-position%})
+ * [Extracting Text Within a Specific Rectangle in PDF Documents]({%slug extract-text-specific-rectangle-pdf-radpdfprocessing%})

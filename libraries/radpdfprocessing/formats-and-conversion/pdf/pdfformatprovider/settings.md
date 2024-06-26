@@ -254,3 +254,4 @@ __Example 6__ shows how you can create a __PdfExportSettings__ object and assign
 
 * [PdfExportSettings API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.PdfExportSettings.html)
 * [How to Comply with PDF/A Standard]({%slug radpdfprocessing-howto-comply-with-pdfa-standard%})
+* [Optimizing and Reducing the Size of PDF Files with RadPdfProcessing]({%slug optimize-and-reduce-pdf-size-radpdfprocessing%})

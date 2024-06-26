@@ -56,7 +56,7 @@ The following tables list all Telerik Document Processing assemblies for the dif
 | **Telerik.Windows.Zip.Extensions.dll** | Extends **Telerik.Windows.Zip** assembly with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})). |
 
 
->The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names.
+>The libraries support .NET 4.6.2 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names.
 
 ## Getting Started Resources by Library
 
