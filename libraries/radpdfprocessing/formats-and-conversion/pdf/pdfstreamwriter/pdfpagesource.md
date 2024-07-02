@@ -72,3 +72,4 @@ PdfPageSource exposes the following properties to give you information about the
 * [PdfStreamWriter Class]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%})
 * [PdfPageStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter%})
 * [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%})
+* [Creating a Cropped PDF from an Existing PDF Page Using RadPdfProcessing]({%slug create-cropped-pdf-radpdfprocessing%})
