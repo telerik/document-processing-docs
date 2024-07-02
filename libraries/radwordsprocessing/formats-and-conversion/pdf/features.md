@@ -99,7 +99,7 @@ No
 Strikethrough
 </td>
 <td>
-No
+Yes
 </td>
 <td></td>
 </tr>

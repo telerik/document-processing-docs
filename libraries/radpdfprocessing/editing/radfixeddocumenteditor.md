@@ -173,6 +173,12 @@ The character properties that are responsible for the look of the runs are liste
 	* __Single__: The underline is a single line.
 
 * __UnderlineColor__: The color of the underline.
+
+* __StrikethroughPattern__: Тhe strikethrough pattern. Two patterns are supported.
+	* __None__: There is no strikethrough. This is the default value.
+	* __Single__: The strikethrough is a single line.
+
+* __StrikethroughColor__: The color of the strikethrough.
                     
 
 ### Inserting a Run

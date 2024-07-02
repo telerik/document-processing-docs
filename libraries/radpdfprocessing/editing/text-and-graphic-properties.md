@@ -59,6 +59,14 @@ These properties hold the parameters used for text fragments. The following para
 * __UnderlinePattern__: The underline pattern. The property is an enumeration of type [UnderlinePattern](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.UnderlinePattern.html). Two patterns are supported:   
 	* __None__: There is no underline. This is the default value.      
 	* __Single__: The underline is a single line.
+
+* __UnderlineColor__: The color of the underline.
+
+* __StrikethroughPattern__: The strikethrough pattern. The property is an enumeration of type [StrikethroughPattern](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.StrikethroughPattern.html). Two patterns are supported:   
+	* __None__: There is no strikethrough. This is the default value.      
+	* __Single__: The strikethrough is a single line.
+
+* __StrikethroughColor__: The color of the strikethrough.
 	
 * __CharacterSpacing__: The character spacing for text fragments. The property is of type `double?`.
 
