@@ -21,15 +21,15 @@ When inserting an image into a PDF document using the [Block.InsertImage](https:
 
 ## Solution
 
-To add a shadow to an image, utilize paths with specific geometries to simulate the shadow effect. The following example outlines the necessary steps to insert an image and draw a shadow around it using RadPdfProcessing:
+To add a shadow to an image, utilize [paths]({%slug radpdfprocessing-model-path%}) with specific [geometries]({%slug radpdfprocessing-concepts-geometry%}) to simulate the shadow effect. The following example outlines the necessary steps to insert an image and draw a shadow around it using RadPdfProcessing:
 
-1. **Prepare the environment**: Ensure that `ImagePropertiesResolver` and `JpegImageConverter` are set for cross-platform image scenarios. Refer to the RadPdfProcessing documentation on [cross-platform image handling]({%slug radpdfprocessing-cross-platform-images%}).
+1. **Prepare the environment**: Ensure that [ImagePropertiesResolver](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/cross-platform/images#imagepropertiesresolver) and [JpegImageConverter](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/cross-platform/images#jpegimageconverter) are set for cross-platform image scenarios. Refer to the RadPdfProcessing documentation on [cross-platform image handling]({%slug radpdfprocessing-cross-platform-images%}).
 
 2. **Insert the image**: Use the `Block.InsertImage` method to insert the image into a block.
 
 3. **Draw the shadow**: Create a `RectangleGeometry` around the image's location with an offset to simulate the shadow effect. Use a dark color for the shadow and adjust its opacity as needed.
 
-4. **Export the PDF document**: Use the `PdfFormatProvider` to export the document to a PDF file.
+4. **Export the PDF document**: Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the document to a PDF file.
 
 ```csharp
 public static Padding pageMarginsValue = new Telerik.Windows.Documents.Primitives.Padding(
