@@ -4,7 +4,7 @@ description: Learn how to adjust large images to fit within the PDF page dimensi
 type: how-to
 page_title: How to Resize Images for PDF Documents in RadPdfProcessing
 slug: resize-images-radpdfprocessing
-tags: radpdfprocessing, document processing, image to pdf, image resize, aspect ratio
+tags: pdfprocessing, document, processing, image, pdf, resize, aspect, ratio
 res_type: kb
 ticketid: 1656650
 ---
@@ -17,7 +17,7 @@ ticketid: 1656650
 
 ## Description
 
-When converting an image to a PDF file using [RadPdfProcessing]({%slug radpdfprocessing-overview%}), the resulting PDF may cut off parts of the image if its dimensions (e.g., 1700 x 1700 px) exceed the PDF page size. The goal is to:
+When inserting an image to a PDF file using [RadPdfProcessing]({%slug radpdfprocessing-overview%}), the resulting PDF may cut off parts of the image if its dimensions exceed the PDF page size. The goal is to:
 
 1. Display the image as is if it fits on the page without resizing.
 2. If the image is too large, shrink it to fit on the page while preserving the aspect ratio.
