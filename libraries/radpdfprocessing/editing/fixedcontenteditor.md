@@ -302,4 +302,4 @@ __FixedContentEditor__ has some properties and methods that affect how it will b
  * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
  * [Adding Images with a Shadow in PDF Documents]({%slug add-shadow-image-radpdfprocessing%})
  * [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
-
+ * [Resizing Large Images to Fit in the PDF Page]({%slug resize-images-radpdfprocessing%})
