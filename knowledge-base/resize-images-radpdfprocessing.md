@@ -89,9 +89,13 @@ foreach (string imageFilePath in imageFiles)
     }
     Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 }
-```
+``` 
 
 This approach ensures that images are resized to fit within the PDF page dimensions without losing their aspect ratio.
+
+|Vertical Image|Horizontal Image|
+|----|----|
+|![PdfProcessing Resize Vertical Image](images/pdf-processing-resize-vertical-image.png)|![PdfProcessing Resize Horizontal](images/pdf-processing-resize-horizontal-image.png)|      
 
 ## See Also
 
