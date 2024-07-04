@@ -18,9 +18,35 @@ position: 3
 
 >note As of **Q2 2024** RadPdfProcessing offers support for OTF (OpenType Font) font file format.
 
+## Supported Font Types
+
+>tip *A character is an abstract symbol, whereas a glyph is a specific graphical rendering of a character. Glyphs are organized into fonts. A font defines glyphs for a particular character set; for example, the Helvetica and Times fonts define glyphs for a set of standard Latin characters. A font for use with a PDF consumer application is prepared in the form of a program. Such a font program is written in a special-purpose language, such as the Type 1 or TrueType font format, that is understood by a specialized font interpreter. In PDF, the term `font` refers to a font dictionary, a PDF object that identifies the font program and contains additional information about it. There are several different font types, identified by the Subtype entry of the font dictionary. For most font types, the font program is defined in a separate font file, which may
+be either embedded in a PDF stream object or obtained from an external source. The font program contains glyph descriptions that generate glyphs. A content stream paints glyphs on the page by specifying a font dictionary and a string object that is interpreted as a sequence of one or more character codes
+identifying glyphs in the font. * (PDF Reference 1.7)
+
+A font is represented in PDF as a dictionary specifying the type of font, its PostScript name, its encoding, and information that can be used to provide a substitute when the font program is not available. Optionally, the font program can be embedded as a stream object in the PDF file. 
+
+The following table lists the font types defined in PDF. Type 0 fonts are called composite fonts; other types of fonts are called simple fonts. In addition to fonts, PDF supports two classes of font-related objects, called CIDFonts and CMaps.
+
+
+|Font Type|Support/Not Supported | Subset Export Option|Description|
+|----|----|----|----|
+|Type 0|Supported|No|A composite font - a font composed of glyphs from a descendant CIDFont|
+|Type 1|Supported|No|A font that defines glyph shapes using Type 1 font technology|
+|Type 3|Supported|No|A font that defines glyphs with streams of PDF graphics operators|
+|TrueType|Supported|Yes|A font based on the TrueType font format|
+|CIDFont|Supported|No|CIDFontType0: A CIDFont whose glyph descriptions are based on Type 1 font technology.  CIDFontType2: A CIDFont whose glyph descriptions are based on TrueType font technology|
+
+>tip The most predictable and dependable results are produced when all font programs used to show text are embedded in the PDF file. If a PDF file refers to font programs that are not embedded, the results depend on the availability of fonts in the consumer application's environment. 
+
+|OTF (OpenType Font)|Supported|Yes|
+|Type 1|Supported|No|A composite font—a font composed of glyphs from a descendant CIDFont|
+|Type 3|Supported|No|
+|TrueType|Supported|No| 
+
 ## Standard Fonts
 
-There are 14 standard fonts that are not embedded in the document when you use them. These fonts can be accessed through the [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html) class. The standard fonts are listed below:
+There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedded in the document when you use them. These fonts can be accessed through the [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html) class. The standard fonts are listed below:
        
 |Font Name|
 |----|
@@ -38,6 +64,8 @@ There are 14 standard fonts that are not embedded in the document when you use t
 | Times-BoldItalic|
 | Symbol|
 | ZapfDingbats|
+
+>tip These fonts, or their font metrics and suitable substitution fonts, must be available to the consumer application.
 
 ## Embedded Fonts
 
