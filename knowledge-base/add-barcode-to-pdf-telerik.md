@@ -19,13 +19,15 @@ ticketid: 1657503
 
 Learn how to generate a PDF document and add a barcode to it.  
 
+![Pdf with Barcodes](images/pdf-with-barcodes.png)  
+
 ## Solution
 
 To add a barcode to a PDF document, consider using the [WinForms BarcodeView]({%slug barcodeview-overview%}): 
 
-1\. First, [generate an image of the barcode](https://docs.telerik.com/devtools/winforms/controls/barcodeview/how-to/export-to-image).
+1\. First, [generate an image of the barcode]({%slug barcodeview-export-to-image%}).
 
-2\. Then, add the image to the PDF document. Here is a sample code snippet:
+2\. Then, add the [image to the PDF document]({%slug pdf-from-images-with-radfixeddocumenteditor%}). Here is a sample code snippet:
 
     ```csharp
     Telerik.WinControls.UI.Barcode.QRCode qrCode1 = new Telerik.WinControls.UI.Barcode.QRCode();
@@ -63,7 +65,8 @@ To add a barcode to a PDF document, consider using the [WinForms BarcodeView]({%
 
 ## See Also
 
-- [RadPdfProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Exporting BarcodeView to Image](https://docs.telerik.com/devtools/winforms/controls/barcodeview/how-to/export-to-image)
+- [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
+- [WinForms BarcodeView]({%slug barcodeview-overview%})
+- [Exporting BarcodeView to Image]({%slug barcodeview-export-to-image%})
 - [Generating a Barcode Image outside WinForms]({%slug barcodeview-generating-image-console-app%})
 
