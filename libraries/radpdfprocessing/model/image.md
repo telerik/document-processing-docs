@@ -79,3 +79,4 @@ The Image class exposes also the **GetBitmapSource()** method, enabling you to o
  * [Adding Images with a Shadow in PDF Documents]({%slug add-shadow-image-radpdfprocessing%})
  * [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
  * [Change file size of a PDF with images through ImageCompression and ImageQuality]({%slug pdfprocessing-change-file-size-through-image-quality-and-compression%})
+ * [Adding a Barcode to a PDF Document using PdfProcessing and the WinForms BarcodeView]({%slug add-barcode-to-pdf-telerik%})
