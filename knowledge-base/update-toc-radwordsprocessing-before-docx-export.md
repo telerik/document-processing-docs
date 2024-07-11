@@ -11,9 +11,9 @@ ticketid: 1657401
 
 ## Environment
 
-| Product | Version |
-| --- | --- |
-| RadWordsProcessing for Document Processing | 18.0.24.305 |
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| 2024.2.426| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
