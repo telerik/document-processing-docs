@@ -21,7 +21,7 @@ When working with Word documents that contain a [Table of Contents (TOC)]({%slug
 
 |Before|After|
 |----|----|
-|||
+|![TOC Before](images/toc-before.png) |![TOC After](images/toc-after.png) |   
 
 ## Solution
 
