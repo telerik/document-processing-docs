@@ -29,7 +29,7 @@ To add a barcode to a PDF document, consider using the [WinForms BarcodeView](ht
 
 2\. Then, add the [image to the PDF document]({%slug pdf-from-images-with-radfixeddocumenteditor%}). Here is a sample code snippet:
 
-    ```csharp
+ ```csharp
     Telerik.WinControls.UI.Barcode.QRCode qrCode1 = new Telerik.WinControls.UI.Barcode.QRCode();
     RadBarcodeView radBarcodeView = new RadBarcodeView();
     radBarcodeView.BindingContext = new BindingContext();
@@ -57,7 +57,7 @@ To add a barcode to a PDF document, consider using the [WinForms BarcodeView](ht
         provider.Export(fixedDocument, output);
     }
     Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
-    ```
+  ```
 
 ## Notes
 
