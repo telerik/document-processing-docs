@@ -24,9 +24,25 @@ The [Telerik Document Processing]({%slug introduction%}) libraries are compatibl
 
 Depending on the product suite you are using (Telerik UI for WinForms, WPF, ASP.NET AJAX, Blazor, ASP.NET Core, etc.), the [libraries are included](https://docs.telerik.com/devtools/document-processing/introduction#available-assemblies) in the respective NuGet packages:
    
-    - For **.NET Framework** projects, libraries are usually distributed with Telerik UI for WinForms, WPF, ASP.NET AJAX, etc.
-    - For **.NET Core / .NET 6 / .NET 8** (or newer) projects, libraries are typically included with Telerik UI for WinForms, WPF, etc.
-    - For projects targeting .NET Standard, libraries are commonly distributed with Telerik UI for Blazor, ASP.NET Core, etc.
+- For **.NET Framework** projects, libraries are usually distributed with Telerik UI for WinForms, WPF, ASP.NET AJAX, etc.
+
+![DPL NET Framework](images/dpl-net-framework.png)  
+
+- For **.NET Core / .NET 6 / .NET 8** (or newer) projects, libraries are typically included with Telerik UI for WinForms, WPF, etc.
+
+![DPL NET Core](images/dpl-net-core.png)  
+
+![DPL NET Core Windows](images/dpl-net-core-windows.png)   
+
+- For projects targeting .NET Standard, libraries are commonly distributed with Telerik UI for Blazor, ASP.NET Core, etc.
+
+![DPL NET Standard](images/dpl-net-standard.png)  
+
+![DPL NET Standard None OS](images/dpl-net-standard-none-os.png)    
+
+As the above screenshots shows, the respective NuGet package indicates the exact target frameworks version considering the application's Target framework and Target OS. All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The assemblies/ packages for .NET Standard do not contain the word *Windows* in their name.
+
+>note There are no implementation/functionality differences between the Document Processing versions for .NET Framework and .NET Core/.NET 6 (or newer)). However, the .NET Standard version comes with some differences. More information about the differences can be found in the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
 
 ### Download the Libraries
 
@@ -39,6 +55,6 @@ To download the libraries, visit the [Telerik Document Processing installation g
 
 ## See Also
 
-- [Cross-Platform Support for Telerik Document Processing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/cross-platform/overview)
-- [Supported Target Frameworks](https://learn.microsoft.com/en-us/dotnet/standard/frameworks#supported-target-frameworks)
-- [Installing Telerik Document Processing on Your Computer](https://docs.telerik.com/devtools/document-processing/getting-started/installation/installing-on-your-computer)
+- [Cross-Platform Support for Telerik Document Processing]({%slug radpdfprocessing-cross-platform%})
+- [Supported Target Frameworks](https://docs.telerik.com/devtools/document-processing/introduction#available-assemblies)
+- [Installing Telerik Document Processing on Your Computer]({%slug installation-deploying-telerik-document-processing%})
