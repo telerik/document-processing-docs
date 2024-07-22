@@ -19,6 +19,8 @@ ticketid: 1658864
 
 This article demonstrates how to create tables and checkboxes within a DOCX document programmatically.
 
+![DOCX with CheckBoxes](images/docx-with-checkboxes.png)   
+
 ## Solution
 
 To generate a DOCX document dynamically, including tables and checkboxes, follow these steps:
@@ -29,7 +31,7 @@ To generate a DOCX document dynamically, including tables and checkboxes, follow
 4. Customize the checkbox appearance and checked state.
 5. [Export the document]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) as a DOCX file.
 
-Here is a sample code snippet demonstrating how to accomplish this:
+Here is a sample code snippet demonstrating how to accomplish this: 
 
 ```csharp
 static void Main(string[] args)
