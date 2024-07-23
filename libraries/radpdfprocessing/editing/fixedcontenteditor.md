@@ -300,3 +300,4 @@ __FixedContentEditor__ has some properties and methods that affect how it will b
  * [Clipping]({%slug radpdfprocessing-concepts-clipping%})
  * [Table]({%slug radpdfprocessing-editing-table%})
  * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
+ * [Adding a Watermark to PDF Files Using RadPdfProcessing]({%slug add-watermark-pdf-radpdfprocessing%})

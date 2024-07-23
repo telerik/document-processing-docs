@@ -23,11 +23,11 @@ This KB article demonstrates how to add a text watermark across all pages of a P
 
 To add a watermark to PDF pages using RadPdfProcessing, follow these steps:
 
-1. Import the PDF document using [PdfFormatProvider({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+1. Import the PDF document using [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 2. Iterate through each page of the document.
 3. Use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to add a watermark text block to each page.
 4. Customize the watermark's text properties, color, and position.
-5. [Export[(https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/pdfformatprovider#export) the document with watermarks back to a PDF file.
+5. [Export](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/pdfformatprovider#export) the document with watermarks back to a PDF file.
 
 Here is a complete code snippet demonstrating these steps:
 
