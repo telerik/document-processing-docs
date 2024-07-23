@@ -110,3 +110,4 @@ You can modify a __Path__ element using the properties the class exposes. The pr
  * [Geometry]({%slug radpdfprocessing-concepts-geometry%})
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+ * [How to Draw Figures in PDF documents]({%slug pdf-processing-draw-figures-arcsegment%})

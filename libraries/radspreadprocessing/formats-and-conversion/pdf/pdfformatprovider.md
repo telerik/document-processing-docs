@@ -71,4 +71,5 @@ The result from the export method is a document that can be opened in any applic
 ## See Also
 - [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
 - [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%})
+- [Export Worksheet to image]({%slug spreadprocessing-export-worksheet-to-image-netstandard%})
 

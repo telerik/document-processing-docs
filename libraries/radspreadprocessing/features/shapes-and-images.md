@@ -9,8 +9,6 @@ position: 13
 
 # Shapes and Images
 
-
-
 This article briefly describes what are shapes and images, and how to create and work with them.  It contains the following sections:
 
 * [What Are Shapes and Images?](#what-are-shapes-and-images?)
@@ -27,11 +25,25 @@ This article briefly describes what are shapes and images, and how to create and
 
 ## What Are Shapes and Images?
 
-The shapes are objects which represent a visual illustration which can be inserted in a worksheet. In the document model they are represented by the abstract class __FloatingShapeBase__.
+The shapes are objects that represent a visual illustration that can be inserted into a worksheet. In the document model, they are represented by the abstract class __FloatingShapeBase__.
         
+The image is a kind of shape that is characterized by having an image source. They are represented by the __FloatingImage__ class, which inherits FloatingShapeBase.     
 
-The image is a kind of shape which is characterized by having an image source. They are represented by the __FloatingImage__ class, which inherits FloatingShapeBase.
-        
+## Supported Formats
+
+The supported formats are:
+
+* **JPG**
+* **JPEG**
+* **PNG**
+* **BMP**
+* **TIFF**
+* **TIF**
+* **GIF**
+* **ICON**
+* **WMF**
+* **EMF**
+* **BIN**
 
 ## Properties of Shapes and Images
 

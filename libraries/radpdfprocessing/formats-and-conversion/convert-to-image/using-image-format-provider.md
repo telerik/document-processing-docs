@@ -106,5 +106,6 @@ The __SkiaImageFormatProvider__ exposes the following settings:
 {{endregion}}
 
 # See Also
-* [Converting XLSX Content to DOCX Document]({%slug convert-excel-content-to-word-document%})
+* [Converting XLSX Content to DOCX Document]({%slug convert-excel-content-to-word-document%}) 
+* [Export Worksheet to image]({%slug spreadprocessing-export-worksheet-to-image-netstandard%})
 * [Cropping PDF Pages and Saving as Images Using RadPdfProcessing]({%slug crop-save-pdf-pages-as-images-radpdfprocessing%})
