@@ -74,7 +74,13 @@ private static void ChangeCheckboxState(SdtRangeStart sdt)
 }
 ```
 
-To apply this method, iterate through the content controls in your document, and call `ChangeCheckboxState` for each checkbox you wish to modify.
+To apply this method, iterate through the content controls in your document, and call `ChangeCheckboxState` for each checkbox you wish to modify. Alternatively, get the first SdtRangeStart and update its state:
+
+```csharp
+SdtRangeStart stdStart = document.EnumerateChildrenOfType<SdtRangeStart>().First();
+ChangeCheckboxState(stdStart);
+```
+
 
 ## Notes
 
@@ -83,4 +89,5 @@ To apply this method, iterate through the content controls in your document, and
 
 ## See Also
 
-- [RadWordsProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview)
+- [Working with Content Controls]({%slug wordsprocessing-model-working-with-content-controls%})
+- [Content Controls (Structured Document Tags)]({%slug wordsprocessing-model-content-controls%})
