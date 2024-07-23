@@ -36,6 +36,8 @@ The following table lists the font types defined in PDF. Type 0 fonts are called
 
 >tip The most predictable and dependable results are produced when all font programs used to show text are embedded in the PDF file. If a PDF file refers to font programs that are not embedded, the results depend on the availability of fonts in the consumer application's environment. 
 
+Font programs may be embedded using the OpenType format, which is an extension of the TrueType format that allows inclusion of font programs using the Compact Font Format (CFF). It also allows inclusion of data to describe glyph substitutions, kerning, and baseline adjustments. In addition to rendering glyphs, applications can use the data in OpenType fonts to do advanced line layout, automatically substitute ligatures, provide selections of alternate glyphs to users, and handle complicated writing scripts.
+
 ### Simple Fonts
 
 All *Simple* fonts have the following properties:
