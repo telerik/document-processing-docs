@@ -2,7 +2,7 @@
 title: Updating TOC Page Numberings in Word Documents Before Exporting to DOCX Format
 description: Learn how to update the Table of Contents (TOC) in a Word document using RadWordsProcessing before exporting to DOCX format.
 type: how-to
-page_title: How to TOC Page Numberings in Word Documents Before Exporting to DOCX Format
+page_title: How to Update TOC Page Numberings in Word Documents Before Exporting to DOCX Format
 slug: update-toc-radwordsprocessing-before-docx-export
 tags: wordsprocessing, document, processing, toc, table, contents, update, fields, docx, export
 res_type: kb
@@ -39,6 +39,14 @@ document.UpdateFields();
 ```
 
 By setting the `NumberingFieldsProvider` and then calling `RadFlowDocument.UpdateFields()`, the document will update the TOC to reflect the correct page numbering.
+
+It is possible to [update just a single field](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields), not all of them:
+
+```csharp
+FieldCharacter fieldCharacter = document.EnumerateChildrenOfType<FieldCharacter>().First(x=> x.FieldInfo.Field is TocField);
+FieldInfo fieldInfo = fieldCharacter.FieldInfo; 
+fieldInfo.UpdateField(); 
+```
 
 4. With the TOC updated, you can now proceed to export the document to DOCX format, confident that the TOC displays the correct page references.
 
