@@ -55,18 +55,18 @@ The Telerik Document Processing libraries support the following file formats:
 
 ## Available Assemblies
 
->The Telerik Document Processing libraries are available in **.NET Framework** and **.NET Standard** (**.NET Core**) compatible versions. You can download the assemblies of these libraries from the following products:
+>The Telerik Document Processing libraries are available in **.NET Framework**, **.NET Core/.NET 6/.NET 8** (or newer) for Windows and **.NET Standard** compatible versions. You can download the assemblies of these libraries from the following products:
 >
 
-|.NET Framework Products|.NET Standard/Core/5+ Products|
-|----|----|
-|[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)|[UI for Xamarin](https://www.telerik.com/xamarin-ui)|
-|[UI for ASP.NET AJAX](https://www.telerik.com/products/aspnet-ajax.aspx)|[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)|
-|[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for Blazor](https://www.telerik.com/blazor-ui)|
-|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
-|[UI for Silverlight (discontinued)](https://www.telerik.com/products/silverlight/overview.aspx)|[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
+|.NET Framework Products|.NET Core/.NET 6/ .NET 8 (or newer) *for Windows*|.NET Standard|
+|----|----|----|
+|[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)||[UI for Xamarin](https://www.telerik.com/xamarin-ui)|
+|[UI for ASP.NET AJAX](https://www.telerik.com/products/aspnet-ajax.aspx)||[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)|
+|[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for Blazor](https://www.telerik.com/blazor-ui)|
+|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
+|[UI for Silverlight (discontinued)](https://www.telerik.com/products/silverlight/overview.aspx)||[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
 
-Both versions are available as [NuGet packages]({%slug installation-nuget-packages%}) but with different names. The assemblies for .NET Standard do not contain the word Windows in their name.
+All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The assemblies/packages for .NET Standard do not contain the word *Windows* in their name.
 
 ## Getting Started
 
@@ -129,3 +129,4 @@ Thank you for your contribution to the Telerik Document Processing Libraries' Do
 
 - [Document Processing Libraries Overview]({%slug getting-started%})
 - [First Steps in using Telerik Document Processing]({%slug getting-started-first-steps%})
+- [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
