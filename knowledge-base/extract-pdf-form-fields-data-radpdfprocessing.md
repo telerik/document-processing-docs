@@ -17,11 +17,11 @@ ticketid: 1658908
 
 ## Description
 
-Learn how to import a PDF document and read the data from the input fields within the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}). The use-case is to iterate the form fields in a PDF document, extract the input values, and use these values to populate a data object.  
+Learn how to [import a PDF document]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) and read the data from the input fields within the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%}). The use-case is to iterate the form fields in a PDF document, extract the input values, and use these values to populate a data object.  
 
 ## Solution
 
-Here is a sample code snippet demonstrating how to iterate over form fields in a PDF document and extract the input values:
+Here is a sample code snippet demonstrating how to iterate over the form fields in a PDF document and extract the input values:
 
 ```csharp
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
@@ -79,9 +79,9 @@ Replace `"your_pdf_file.pdf"` with the path to your PDF file. This code iterates
 
 ## Notes
 
--Depending on the [type of form fields](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/interactive-forms/form-fields/formfields#formfield-types) present in your PDF, you may need to handle additional field types apart from TextBox, CheckBox, and ComboBox.
+Depending on the [type of form fields](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/interactive-forms/form-fields/formfields#formfield-types) present in your PDF, you may need to handle additional field types apart from TextBox, CheckBox, and ComboBox.
 
 ## See Also
 
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Import and Export PDF Documents](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider)
+- [Interactive Forms]({%slug radpdfprocessing-model-interactive-forms-overview%})
+- [Import and Export PDF Documents]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
