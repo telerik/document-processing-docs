@@ -23,10 +23,10 @@ This article shows how to merge two DOCX documents into a single document and ge
 
 To merge two Word documents and generate a unified TOC, follow these steps:
 
-1. Import the documents using the `DocxFormatProvider`.
-2. Merge the documents using the `Merge` method with appropriate `MergeOptions`.
+1. Import the documents using the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
+2. [Merge]({%slug radwordsprocessing-editing-clone-and-merge%}) the documents using the `Merge` method with appropriate `MergeOptions`.
 3. Insert a unified TOC at the desired location in the merged document.
-4. Update the TOC to reflect the merged content accurately.
+4. [Update the TOC field](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields) to reflect the merged content accurately.
 
 Here is an example code that demonstrates this process:
 
@@ -113,6 +113,10 @@ class Program
 
 This example demonstrates merging two DOCX files, positioning the document editor at the beginning of the merged document, inserting a page break followed by a unified TOC title, and finally, inserting the TOC field. The document is then saved as both a PDF and a DOCX file.
 
+The achieved result is illustrated below:
+
+![TOC of Merged Documents](images/toc-of-merged-documents.png)  
+
 ## Notes
 
 - Ensure that the documents you are merging have compatible styles to avoid conflicts in the merged document.
@@ -120,6 +124,6 @@ This example demonstrates merging two DOCX files, positioning the document edito
 
 ## See Also
 
-- [RadWordsProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview)
-- [Working with Fields in RadWordsProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/toc-field)
-- [Merge Documents in RadWordsProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/features/merge-documents)
+- [Fields Overview]({%slug radwordsprocessing-concepts-fields%})
+- [Working with Fields in RadWordsProcessing]({%slug radwordsprocessing-concepts-toc-field%})
+- [Merge Documents in RadWordsProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/editing/clone-and-merge#merging-documents)
