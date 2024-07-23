@@ -55,7 +55,7 @@ The Telerik Document Processing libraries support the following file formats:
 
 ## Available Assemblies
 
->The Telerik Document Processing libraries are available in **.NET Framework**, **.NET Core/.NET 6/ .NET 8** (or newer) for Windows and **.NET Standard** compatible versions. You can download the assemblies of these libraries from the following products:
+>The Telerik Document Processing libraries are available in **.NET Framework**, **.NET Core/.NET 6/.NET 8** (or newer) for Windows and **.NET Standard** compatible versions. You can download the assemblies of these libraries from the following products:
 >
 
 |.NET Framework Products|.NET Core/.NET 6/ .NET 8 (or newer) *for Windows*|.NET Standard|
@@ -66,7 +66,7 @@ The Telerik Document Processing libraries support the following file formats:
 |[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
 |[UI for Silverlight (discontinued)](https://www.telerik.com/products/silverlight/overview.aspx)||[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
 
-All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The assemblies/ packages for .NET Standard do not contain the word *Windows* in their name.
+All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The assemblies/packages for .NET Standard do not contain the word *Windows* in their name.
 
 ## Getting Started
 

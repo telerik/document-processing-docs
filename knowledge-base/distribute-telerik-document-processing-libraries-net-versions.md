@@ -4,7 +4,7 @@ description: Learn how to obtain Telerik Document Processing libraries suitable 
 type: how-to
 page_title: How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6, and newer versions
 slug: distribute-telerik-document-processing-libraries-net-versions
-tags: telerik, document, processing, net, core, nuget, packages
+tags: telerik, document, processing, net, core, nuget, packages, framework, windows, distribute, libraries, standard
 res_type: kb
 ticketid: 1658084
 ---
@@ -24,25 +24,25 @@ The [Telerik Document Processing]({%slug introduction%}) libraries are compatibl
 
 Depending on the product suite you are using (Telerik UI for WinForms, WPF, ASP.NET AJAX, Blazor, ASP.NET Core, etc.), the [libraries are included](https://docs.telerik.com/devtools/document-processing/introduction#available-assemblies) in the respective NuGet packages:
    
-- For **.NET Framework** projects, libraries are usually distributed with Telerik UI for WinForms, WPF, ASP.NET AJAX, etc.
+- For **.NET Framework** projects, libraries are distributed with Telerik UI for WinForms, WPF, ASP.NET AJAX, ASP.NET MVC.
 
 ![DPL NET Framework](images/dpl-net-framework.png)  
 
-- For **.NET Core / .NET 6 / .NET 8** (or newer) projects, libraries are typically included with Telerik UI for WinForms, WPF, etc.
+- For **.NET Core / .NET 6 / .NET 8** (or newer) projects, libraries are included with Telerik UI for WinForms and WPF.
 
 ![DPL NET Core](images/dpl-net-core.png)  
 
 ![DPL NET Core Windows](images/dpl-net-core-windows.png)   
 
-- For projects targeting .NET Standard, libraries are commonly distributed with Telerik UI for Blazor, ASP.NET Core, etc.
+- For projects targeting .NET Standard, libraries are distributed with Telerik UI for Blazor, ASP.NET Core, .NET MAUI, WinUI, Xamarin.
 
 ![DPL NET Standard](images/dpl-net-standard.png)  
 
 ![DPL NET Standard None OS](images/dpl-net-standard-none-os.png)    
 
-As the above screenshots shows, the respective NuGet package indicates the exact target frameworks version considering the application's Target framework and Target OS. All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The assemblies/ packages for .NET Standard do not contain the word *Windows* in their name.
+As the above screenshots shows, the respective NuGet package indicates the exact target frameworks version considering the application's Target framework and Target OS. All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The assemblies/packages for .NET Standard do not contain the word *Windows* in their name.
 
->note There are no implementation/functionality differences between the Document Processing versions for .NET Framework and .NET Core/.NET 6 (or newer)). However, the .NET Standard version comes with some differences. More information about the differences can be found in the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
+>note There are no implementation/functionality differences between the Document Processing versions for .NET Framework and .NET Core/.NET 6 (or newer). However, the .NET Standard version comes with some limitations. More information about the limitations can be found in the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
 
 ### Download the Libraries
 
