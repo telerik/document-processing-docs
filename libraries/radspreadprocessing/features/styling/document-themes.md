@@ -231,3 +231,4 @@ In order to get the actual value from __ThemableColor__ or __ThemableFontFamily_
 ## See Also
 
  * [Cell Styles]({%slug radspreadprocessing-features-styling-cell-styles%})
+ * [Retrieving Themable Cell Color in RadSpreadProcessing]({%slug retrieve-cell-color-radspreadprocessing%})
