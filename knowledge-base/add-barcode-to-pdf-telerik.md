@@ -23,13 +23,13 @@ Learn how to generate a PDF document and add a barcode to it.
 
 ## Solution
 
-To add a barcode to a PDF document, consider using the [WinForms BarcodeView]({%slug barcodeview-overview%}): 
+To add a barcode to a PDF document, consider using the [WinForms BarcodeView](https://docs.telerik.com/devtools/winforms/controls/barcodeview/overview): 
 
-1\. First, [generate an image of the barcode]({%slug barcodeview-export-to-image%}).
+1\. First, [generate an image of the barcode](https://docs.telerik.com/devtools/winforms/controls/barcodeview/how-to/export-to-image)
 
 2\. Then, add the [image to the PDF document]({%slug pdf-from-images-with-radfixeddocumenteditor%}). Here is a sample code snippet:
 
-    ```csharp
+ ```csharp
     Telerik.WinControls.UI.Barcode.QRCode qrCode1 = new Telerik.WinControls.UI.Barcode.QRCode();
     RadBarcodeView radBarcodeView = new RadBarcodeView();
     radBarcodeView.BindingContext = new BindingContext();
@@ -57,16 +57,16 @@ To add a barcode to a PDF document, consider using the [WinForms BarcodeView]({%
         provider.Export(fixedDocument, output);
     }
     Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
-    ```
+  ```
 
 ## Notes
 
-- The WinForms BarcodeView method is suitable for applications where a barcode image can be generated and saved before adding it to the PDF: [Generating a Bar Code Image outside WinForms]({%slug barcodeview-generating-image-console-app%}).
+- The WinForms BarcodeView method is suitable for applications where a barcode image can be generated and saved before adding it to the PDF: [Generating a Bar Code Image outside WinForms](https://docs.telerik.com/devtools/winforms/knowledge-base/gridview-generating-barcode-image-non-winforms).
 
 ## See Also
 
 - [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
-- [WinForms BarcodeView]({%slug barcodeview-overview%})
-- [Exporting BarcodeView to Image]({%slug barcodeview-export-to-image%})
-- [Generating a Barcode Image outside WinForms]({%slug barcodeview-generating-image-console-app%})
+- [WinForms BarcodeView](https://docs.telerik.com/devtools/winforms/controls/barcodeview/overview)
+- [Exporting BarcodeView to Image](https://docs.telerik.com/devtools/winforms/controls/barcodeview/how-to/export-to-image)
+- [Generating a Barcode Image outside WinForms](https://docs.telerik.com/devtools/winforms/knowledge-base/gridview-generating-barcode-image-non-winforms)
 
