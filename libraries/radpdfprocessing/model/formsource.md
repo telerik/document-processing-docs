@@ -9,8 +9,6 @@ position: 7
 
 # FormSource
 
-
-
 With __FormSource__ you can add content to a [Form]({%slug radpdfprocessing-model-form%}) object, which will be inserted in the PDF document. This article explains the following topics:
 
 * [Creating a FormSource](#creating-a-formsource)
@@ -69,7 +67,6 @@ The FormSource class inherits from the IContentRootElement interface. This inher
 	formEditor.DrawText("Sample rectangle in a form");
 {{endregion}}
 
-
 ## Inserting a FormSource into a Document
 
 After generating the FormSource object and filling it with content, you should insert it in the document. The API provides you with convenient approaches that might be useful to easily insert the form in different scenarios.
@@ -96,6 +93,39 @@ After generating the FormSource object and filling it with content, you should i
 * A FormSource object can be inserted using the methods of **RadFixedDocumentEditor**. The InsertFormInline() method is described in the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) topic.
 
 * When editing a Block, you can insert a FormSource object directly into it. For more information, check [this topic]({%slug radpdfprocessing-editing-block%}).
+
+## Adding SVG into a Document
+
+As of **Q3 2024** RadPdfProcessing provides support for SVG (vector graphics image format). The static FormSource.**FromSvg** method allows the possibility to insert a vector image in the PDF document. The following overloads are publicly available:
+
+* **FormSource.FromSvg(string xml)** - Creates a FormSource object from an SVG file provided as a xml.
+
+* **FormSource.FromSvg(byte[] svgData)** - Creates a FormSource object from an SVG file provided as a byte[].
+
+* **FormSource.FromSvg(Stream stream)** - Creates a FormSource object from an SVG file provided as a stream.
+
+The following example shows how to insert a SVG image into a FormSource object using FixedContentEditor:
+
+```csharp
+string svgFilePath = "svg file path"; 
+RadFixedDocument fixedDocument = new RadFixedDocument();
+FixedContentEditor documentPageEditor = new FixedContentEditor(fixedDocument.Pages.AddPage());
+int offset = 10;
+documentPageEditor.Position.Translate(offset, offset);
+
+FormSource svgHostForm = FormSource.FromSvg(File.ReadAllBytes(svgFilePath));
+documentPageEditor.DrawForm(svgHostForm); 
+//draw the SVG with its original size
+
+double aspectRatio = svgHostForm.Size.Width / svgHostForm.Size.Height;
+//get the aspect ratio from the original SVG size
+double desiredSVGWidth = 100;
+double calculatedSVGHeight = desiredSVGWidth / aspectRatio;
+documentPageEditor.Position.Translate(offset, svgHostForm.Size.Height + offset);          
+documentPageEditor.DrawForm(svgHostForm, new Size(desiredSVGWidth, calculatedSVGHeight));
+//draw the SVG with desired width preserving the aspect ratio
+```
+![PdfProcessing Insert SVG](images/pdf-processing-insert-svg.png) 
 
 ## See Also
 
