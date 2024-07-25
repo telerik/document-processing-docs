@@ -1,6 +1,7 @@
 ---
 title: Links
 page_title: Links
+description: Link annotations represent either a hypertext link to a destination elsewhere in the document or an action to be performed. 
 slug: radpdfprocessing-model-annotations-links
 tags: annotations,overview,pdfprocessing,link,links
 published: True

@@ -104,10 +104,10 @@ As of **Q3 2024** RadPdfProcessing provides support for SVG (vector graphics ima
 
 * **FormSource.FromSvg(Stream stream)** - Creates a FormSource object from an SVG file provided as a stream.
 
-The following example shows how to insert a SVG image into a FormSource object using FixedContentEditor:
+The following example shows how to insert an SVG image into a FormSource object using FixedContentEditor:
 
 ```csharp
-string svgFilePath = "svg file path"; 
+string svgFilePath = "image.svg"; 
 RadFixedDocument fixedDocument = new RadFixedDocument();
 FixedContentEditor documentPageEditor = new FixedContentEditor(fixedDocument.Pages.AddPage());
 int offset = 10;
