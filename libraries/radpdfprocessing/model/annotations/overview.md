@@ -26,9 +26,7 @@ The abstract **Annotation** element associates an object with a location on a [R
 |[Text]({%slug radpdfprocessing-model-annotations-text%})|A text annotation represents a *sticky note* attached to a point in the PDF document.|
 |Line||
 |Stamp||
-|TextMarkup| Text markup annotations appear as **Highlights**, **Underlines**, **Strikeouts** or **Squiggly** underlines in the text of a document. When opened, they display a pop-up window containing the text of the associated note.|
-
-
+|[TextMarkup]({%slug radpdfprocessing-model-annotations-text-markup%})| Text markup annotations appear as **Highlights**, **Underlines**, **Strikeouts** or **Squiggly** underlines in the text of a document. When opened, they display a pop-up window containing the text of the associated note.|
           
 * **Border**: Represents the annotation borders. This property is of type [AnnotationBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationBorder.html).
 
@@ -37,5 +35,6 @@ The abstract **Annotation** element associates an object with a location on a [R
 ## See Also
 
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
- * [AnnotationType API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html)
- * [Link API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html)
+ * [TextMarkup]({%slug radpdfprocessing-model-annotations-text-markup%})
+ * [Text]({%slug radpdfprocessing-model-annotations-text%})
+ * [Link]({%slug radpdfprocessing-model-annotations-links%})
