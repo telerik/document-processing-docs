@@ -9,7 +9,7 @@ position: 4
 
 # Image
 
-__Image__ is a content element, which contains an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and represents an image. It can be added in the __Content__ collection of a __IContainerElement__ such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). 
+**Image** is a content element, which contains an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and represents an image. It can be added in the **Content** collection of a **IContainerElement** such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). 
 
 ## Working With an Image
 
@@ -19,6 +19,8 @@ You can edit an __Image__ element using the properties the class exposes. The pr
 * __Width__: The width of the image.
 * __Height__: The height of the image.
 * __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the __IContainerElement__.
+
+>note As of **Q3 2024** RadPdfProcessing provides support for SVG (vector graphics image format): [Adding SVG into a Document](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/formsource#adding-svg-into-a-document).
             
 __Example 1__ shows how to initialize an Image object, assigns an ImageSource to it and add it to a previously defined container (page).
       

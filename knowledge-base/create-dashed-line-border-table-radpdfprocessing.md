@@ -76,11 +76,13 @@ Please note that you can modify the `Borders` property of the `DefaultCellProper
 table.DefaultCellProperties.Borders = new TableCellBorders(null, null, null,b);
 ```
 
+>note As of **Q3 2024** RadPdfProcessing offers *Dotted*, *Dashed*, and *DashSmallGap* [border styles]({%slug radpdfprocessing-editing-table%}) out-of-the-box without the necessity to play with the **StrokeDashArray** of the **FixedContentEditor**. With this update, the Dotted, Dashed, DashSmallGap, and Thick border lines are now exported from [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) as well.
+
 ## See Also
 
 * [TableCell]({%slug radpdfprocessing-editing-tablecell%})
 * [Table]({%slug radpdfprocessing-editing-table%})
-* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}})
-* [Create Repeating Table Header Row in PdfProcessing]({%slug pdfprocessing-create-repeat-header-row%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Supported Border Styles]({%slug radpdfprocessing-editing-table%})
 
 
