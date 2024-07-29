@@ -202,6 +202,11 @@ Yes
 </td></tr>
 
 <tr>
+<td>Widget Annotations</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
 <td>Stamp Annotations</td>
 <td>Yes</td>
 <td></td>
