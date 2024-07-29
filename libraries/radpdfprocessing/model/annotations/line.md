@@ -31,13 +31,12 @@ The **LineAnnotation** class is a derivative of the **MarkupAnnotation** (descen
             RadFixedDocument document = new RadFixedDocument();
             RadFixedPage page = document.Pages.AddPage();
 
-            LineAnnotation annotation = page.Annotations.AddLine(new Point(10, 10), new Point(300, 300));
+            LineAnnotation annotation = page.Annotations.AddLine(new Point(50, 50), new Point(300, 300));
             annotation.StartLineEndingType = LineEndingType.None;
             annotation.EndLineEndingType = LineEndingType.OpenArrow;
             annotation.Color = new RgbColor(255, 0, 0); //Default RgbColor(255, 255, 255)
             annotation.Contents = "This is a LineAnnotation";
             annotation.Opacity = 0.5;
-            annotation.RecalculateContent();
 ```
 
 ![Create LineAnnotation](images/pdf-processing-create-lineannotation.png)  
@@ -52,7 +51,7 @@ The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) o
 
             editor.Position.Translate(50, 50);
             editor.DrawText("Line starts here.");
-            editor.DrawLineAnnotation(300, 400);
+            editor.DrawLineAnnotation(100, 200);
 ```
 
 ![Create LineAnnotation with FixedContentEditor](images/pdf-processing-create-lineannotation-with-fixedcontenteditor.png)   

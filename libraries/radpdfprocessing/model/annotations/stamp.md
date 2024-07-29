@@ -25,49 +25,20 @@ The **StampAnnotation** class is a derivative of the **MarkupAnnotation** (desce
 ### Creating a StampAnnotation
 
 ```csharp
-            RadFixedDocument document = new RadFixedDocument();
-            RadFixedPage page = document.Pages.AddPage();
-
+            RadFixedDocument fixedDocument = new RadFixedDocument();
             RadFixedPage page = fixedDocument.Pages.AddPage();
 
             StampAnnotation annotation1 = page.Annotations.AddStamp(new Rect(50, 50, 300, 50));
             annotation1.Name = StampAnnotationPredefinedNames.SBApproved;
 
-            StampAnnotation annotation3 = page.Annotations.AddStamp(new Rect(50, 100, 300, 50));
-            annotation3.Name = StampAnnotationPredefinedNames.SBCompleted;
+            StampAnnotation annotation2 = page.Annotations.AddStamp(new Rect(50, 100, 300, 50));
+            annotation2.Name = StampAnnotationPredefinedNames.SBPreliminaryResults;
 
-            StampAnnotation annotation4 = page.Annotations.AddStamp(new Rect(50, 150, 300, 50));
-            annotation4.Name = StampAnnotationPredefinedNames.SBConfidential;
+            StampAnnotation annotation3 = page.Annotations.AddStamp(new Rect(50, 150, 300, 50));
+            annotation3.Name = StampAnnotationPredefinedNames.SBRejected;
 
-            StampAnnotation annotation5 = page.Annotations.AddStamp(new Rect(50, 200, 300, 50));
-            annotation5.Name = StampAnnotationPredefinedNames.SBDraft;
-
-            StampAnnotation annotation6 = page.Annotations.AddStamp(new Rect(50, 250, 300, 50));
-            annotation6.Name = StampAnnotationPredefinedNames.SBFinal;
-
-            StampAnnotation annotation7 = page.Annotations.AddStamp(new Rect(50, 300, 300, 50));
-            annotation7.Name = StampAnnotationPredefinedNames.SBForComment;
-
-            StampAnnotation annotation8 = page.Annotations.AddStamp(new Rect(50, 350, 300, 50));
-            annotation8.Name = StampAnnotationPredefinedNames.SBForPublicRelease;
-
-            StampAnnotation annotation9 = page.Annotations.AddStamp(new Rect(50, 400, 300, 50));
-            annotation9.Name = StampAnnotationPredefinedNames.SBInformationOnly;
-
-            StampAnnotation annotation10 = page.Annotations.AddStamp(new Rect(50, 450, 300, 50));
-            annotation10.Name = StampAnnotationPredefinedNames.SBNotApproved;
-
-            StampAnnotation annotation11 = page.Annotations.AddStamp(new Rect(50, 500, 300, 50));
-            annotation11.Name = StampAnnotationPredefinedNames.SBNotForPublicRelease;
-
-            StampAnnotation annotation13 = page.Annotations.AddStamp(new Rect(50, 550, 300, 50));
-            annotation13.Name = StampAnnotationPredefinedNames.SBPreliminaryResults;
-
-            StampAnnotation annotation15 = page.Annotations.AddStamp(new Rect(50, 600, 300, 50));
-            annotation15.Name = StampAnnotationPredefinedNames.SBRejected;
-
-            StampAnnotation annotation16 = page.Annotations.AddStamp(new Rect(50, 650, 300, 50));
-            annotation16.Name = StampAnnotationPredefinedNames.SBVoid;
+            StampAnnotation annotation4 = page.Annotations.AddStamp(new Rect(50, 200, 300, 50));
+            annotation4.Name = StampAnnotationPredefinedNames.SBVoid;
 ```
 
 ![Create StampAnnotation](images/pdf-processing-create-stampannotation.png)  
