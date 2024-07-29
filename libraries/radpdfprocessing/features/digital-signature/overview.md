@@ -87,3 +87,4 @@ The following example shows a full code snippet for a simple signing of a newly 
 * [Widgets Types]({%slug radpdfprocessing-model-annotations-widgets%})
 * [How to Create Invisible Signatures for PDF Documents]({%slug pdf-invisible-signatures%})
 * [Signing a PDF Document with a SignatureWidget]({%slug sign-pdf-with-signature-widget%})
+* [Verifying If Digital Signatures Exist in PDF Documents]({%slug verify-digital-signatures-radpdfprocessing%})

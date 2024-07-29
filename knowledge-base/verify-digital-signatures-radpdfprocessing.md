@@ -23,9 +23,9 @@ When working with PDF documents, it might be necessary to verify whether the doc
 
 To verify digital signatures in a PDF document and extract their signing dates, follow the steps below:
 
-1. Use the `PdfFormatProvider` to import the PDF document into a `RadFixedDocument`.
+1. Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the PDF document into a `RadFixedDocument`.
 
-2. Check if the document is digitally signed by searching for `SignatureField` objects in the `AcroForm` of the document. 
+2. Check if the document is [digitally signed]({%slug radpdfprocessing-features-digital-signature%}) by searching for [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) objects in the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) of the document. 
 
 3. For each `SignatureField` found, access the `Signature` property and then the `Properties` to retrieve the `TimeOfSigning`.
 
@@ -109,9 +109,9 @@ Here is a code snippet demonstrating these steps and including the creation of a
         }
 ```
 
-To validate a signature, utilize the `Validate()` or `TryValidate()` methods available within the RadPdfProcessing library. Detailed information on signature validation can be found in the [Signature Validation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/features/digital-signature/signature-validation) documentation.
+To validate a signature, utilize the `Validate()` or `TryValidate()` methods available within the RadPdfProcessing library. Detailed information on signature validation can be found in the [Signature Validation]({%slug radpdfprocessing-features-signature-validation%}) documentation.
 
 ## See Also
 
-- [Digital Signature Overview in RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/features/digital-signature/overview)
-- [Signature Validation in RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/features/digital-signature/signature-validation)
+- [Digital Signature Overview in RadPdfProcessing]({%slug radpdfprocessing-features-digital-signature%})
+- [Signature Validation]({%slug radpdfprocessing-features-signature-validation%})
