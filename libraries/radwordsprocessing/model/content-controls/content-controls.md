@@ -78,17 +78,54 @@ The __CheckBox__ content control exposes two properties __CheckedState__ and __U
 
     SdtCheckBoxState checkedBoxState = new SdtCheckBoxState();
     checkedBoxState.Font = new FontFamily("Arial");
-    checkedBoxState.CharacterCode = 0040;
+    checkedBoxState.CharacterCode = 0x0040;
 
     SdtCheckBoxState uncheckedBoxState = new SdtCheckBoxState();
     uncheckedBoxState.Font = new FontFamily("Arial");
-    uncheckedBoxState.CharacterCode = 0024;
+    uncheckedBoxState.CharacterCode = 0x0024;
 
     CheckBoxProperties properties = new CheckBoxProperties();
     properties.CheckedState = checkedBoxState;
     properties.UncheckedState = uncheckedBoxState;
     properties.Checked = true;
 {{endregion}}
+
+The toggle states can be visualized with any characters specified in the properties. The following example demonstrates a complete code snippet how to insert toggled/untoggled checkboxes:
+
+```csharp
+   RadFlowDocument document = new RadFlowDocument();
+   RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
+
+   //define the characters which will visually indicate the toggle states
+   SdtCheckBoxState checkedBoxState = new SdtCheckBoxState();
+   checkedBoxState.Font = new FontFamily("Arial");
+   checkedBoxState.CharacterCode = 0x0040;
+
+   SdtCheckBoxState uncheckedBoxState = new SdtCheckBoxState();
+   uncheckedBoxState.Font = new FontFamily("Arial");
+   uncheckedBoxState.CharacterCode = 0x0024;
+
+   CheckBoxProperties checkBoxProperties = new CheckBoxProperties();
+   checkBoxProperties.CheckedState = checkedBoxState;
+   checkBoxProperties.UncheckedState = uncheckedBoxState;
+   checkBoxProperties.Checked = true;
+
+   Run checkedRun = editor.InsertText("Checked: ");
+   editor.MoveToInlineEnd(checkedRun);
+   SdtRangeStart sdt = editor.InsertStructuredDocumentTag(checkBoxProperties);
+   editor.MoveToInlineEnd(sdt);
+   Run runWithCheckBox = editor.InsertText(((char)checkBoxProperties.CheckedState.CharacterCode).ToString());
+   runWithCheckBox.Properties.FontFamily.LocalValue = new ThemableFontFamily(checkBoxProperties.CheckedState.Font);
+   editor.MoveToInlineEnd(sdt.End);
+
+   Run uncheckedRun = editor.InsertText(Environment.NewLine+ "UnChecked: ");
+   editor.MoveToInlineEnd(uncheckedRun);
+   sdt = editor.InsertStructuredDocumentTag(checkBoxProperties);
+   editor.MoveToInlineEnd(sdt);
+   runWithCheckBox = editor.InsertText(((char)checkBoxProperties.UncheckedState.CharacterCode).ToString());
+```
+
+![Insert CheckBoxes](images/insert-checkboxes.gif)    
 
 ### ComboBox and DropDownList
 
@@ -169,5 +206,6 @@ The __Text__ content control allows you to enter plain text. The text content co
 # See Also
  
 * [Working with Content Controls]({%slug wordsprocessing-model-working-with-content-controls%})
+* [Generating Dynamic DOCX Documents with Tables and CheckBoxes using RadWordsProcessing]({%slug dynamic-docx-document-generation-radwordsprocessing%})
 
 
