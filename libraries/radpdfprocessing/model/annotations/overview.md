@@ -24,8 +24,8 @@ The abstract **Annotation** element associates an object with a location on a [R
 |[Link]({%slug radpdfprocessing-model-annotations-links%})|A link annotation represents either a hypertext link to a destination elsewhere in the document or an action to be performed.|
 |[Widget]({%slug radpdfprocessing-model-annotations-widgets%})|Interactive forms use widget annotations to represent the appearance of fields and to manage user interactions.|
 |[Text]({%slug radpdfprocessing-model-annotations-text%})|A text annotation represents a *sticky note* attached to a point in the PDF document.|
-|Line||
-|Stamp||
+|[Line]({%slug radpdfprocessing-model-annotations-line%})|Line annotations display a single straight line on the page.|
+|[Stamp]({%slug radpdfprocessing-model-annotations-stamp%})|Stamp annotations display text or graphics intended to look as if they were stamped on the page with a rubber stamp.|
 |[TextMarkup]({%slug radpdfprocessing-model-annotations-text-markup%})| Text markup annotations appear as **Highlights**, **Underlines**, **Strikeouts** or **Squiggly** underlines in the text of a document. When opened, they display a pop-up window containing the text of the associated note.|
           
 * **Border**: Represents the annotation borders. This property is of type [AnnotationBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationBorder.html).
