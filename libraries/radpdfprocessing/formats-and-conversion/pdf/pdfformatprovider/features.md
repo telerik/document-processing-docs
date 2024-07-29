@@ -199,7 +199,45 @@ Link Annotations
 Yes
               </td><td>
 
-</td></tr><tr><td>
+</td></tr>
+
+<tr>
+<td>Stamp Annotations</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Line Annotations</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Text Annotations</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Underline Annotations</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>StrikeOut Annotations</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Squiggly  Annotations</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td>Highlight Annotations</td>
+<td>Yes</td>
+<td></td>
+</tr>
+
+<tr><td>
 
 <b>
                   Graphics
