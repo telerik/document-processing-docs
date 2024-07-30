@@ -14,6 +14,30 @@ position: 4
       
 >note Unlike [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which manages the document's content in a flow-like manner and allows you to insert all desired elements one after another without calculating the elements' position, the **FixedContentEditor** requires managing the Position at which the document elements will be drawn. This will give you the possibility to draw the respective element at a fixed position. However, you should be careful about the available remaining space on the page and the space needed for the element to be drawn. A complete example of how to create a PDF document from scratch is available in the [How to Generate a PDF Document with Logo and Text using FixedContentEditor]({%slug create-pdf-document-with-logo-and-text-using-fixedcontenteditor%}) KB article.
 
+## Public API
+
+|Method/Property|Description|
+|----|----|
+|[Position]({%slug radpdfprocessing-concepts-position%})|Gets or sets the current position of the editor.|
+|[Clipping]({%slug radpdfprocessing-concepts-clipping%})|Defines the outline of other content elements like [Image]({%slug radpdfprocessing-model-image%}) and [Path]({%slug radpdfprocessing-model-path%}).|
+|PushClipping|Inserts a new clipping defined from the specified object depending on the overload.|
+|PopClipping|Pops the last clipping, which was inserted with the editor.|
+|DrawText|Draws text as a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) at the current position and with size depening on the overload.|
+|DrawImage|Draws an [Image]({%slug radpdfprocessing-model-image%}) at the current position and with size depening on the overload.|
+|DrawForm|Draws a [Form]({%slug radpdfprocessing-model-form%}) at the current position and with size depening on the overload.|
+|DrawWidget|Creates a [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) with different type and size depending on the overload.|
+|DrawStampAnnotation|Creates a new [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}) and draws it with a specified size and name.|
+|DrawTextAnnotation|Creates a new [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}) and draws it with a specified size and text|
+|DrawLineAnnotation|Creates a new [LineAnnotation]({%slug radpdfprocessing-model-annotations-line%}) with starting point the current point of the editor and end point the current point of the editor plus the given distances.|
+|DrawLine|Draws a line from point A to point B.|
+|DrawRectangle|Draws a rectangle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|DrawEllipse|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|DrawCircle|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|DrawPath|Draws a path ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|DrawTable|Draws a [Table]({%slug radpdfprocessing-editing-table%}) with size depening on the overload.|
+|DrawBlock|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depening on the overload.|
+|Draw|Draws the specified element.|
+
 ## Creating FixedContentEditor with a Specified Position
 
 __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) (also known as **IContentRootElement**) which it takes as a constructor parameter when it is created. __Example 1__ shows how you can create an editor.
@@ -300,6 +324,7 @@ __FixedContentEditor__ has some properties and methods that affect how it will b
  * [Clipping]({%slug radpdfprocessing-concepts-clipping%})
  * [Table]({%slug radpdfprocessing-editing-table%})
  * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
+ * [Adding a Watermark to PDF Files Using RadPdfProcessing]({%slug add-watermark-pdf-radpdfprocessing%})
  * [Adding Images with a Shadow in PDF Documents]({%slug add-shadow-image-radpdfprocessing%})
  * [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
  * [Resizing Large Images to Fit in the PDF Page]({%slug resize-images-radpdfprocessing%})

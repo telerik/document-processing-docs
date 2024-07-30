@@ -10,7 +10,9 @@ position: 0
 
 # TOA (Table of Authorities) Field
 
-The TOA (Table of Authorities) field creates and inserts a table of authorities. The TOA field collects entries marked by TA (Table of Authorities Entry) fields.
+>information The TOA (Table of Authorities) field creates and inserts a table of authorities. The TOA field collects entries marked by TA (Table of Authorities Entry) fields.
+
+In order to obtain the pages of TA fields, BookmarkRangeStart, and BookmarkRangeEnd fields you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
 
 # Switches 
 
@@ -49,7 +51,7 @@ __Example 1__ demonstrates how you can insert a TOA field.
  
 {{endregion}}
  
-In order to obtain the pages of TA fields, BookmarkRangeStart, and BookmarkRangeEnd fields you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
+
 
 ## See Also 
 

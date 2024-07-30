@@ -43,7 +43,9 @@ This method allows you to use a custom numbering style converter.
 
 The NumberingStyleConverter must implement the **INumberingStyleConverter** interface which has one method that takes a number and converts it to a string.
 
+## See Also
 
+- [Updating TOC Page Numberings in Word Documents Before Exporting to DOCX Format]({%slug update-toc-radwordsprocessing-before-docx-export%}) 
 
 
 

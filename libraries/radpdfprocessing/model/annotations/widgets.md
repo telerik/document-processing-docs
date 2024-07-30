@@ -1,6 +1,7 @@
 ---
 title: Widgets 
 page_title: Widgets  
+description: Interactive forms use widget annotations to represent the appearance of fields and to manage user interactions.
 slug: radpdfprocessing-model-annotations-widgets 
 tags: annotations,overview,pdfprocessing,widgets,widget 
 published: True
