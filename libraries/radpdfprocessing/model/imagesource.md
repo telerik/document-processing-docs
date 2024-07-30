@@ -9,10 +9,7 @@ position: 5
 
 # ImageSource
 
-
-
-__ImageSource__ represents a single, constant set of pixels at a certain size. It can be used by multiple [Image]({%slug radpdfprocessing-model-image%}) objects in order to be drawn in a PDF file.
-      
+**ImageSource** represents a single, constant set of pixels at a certain size. It can be used by multiple [Image]({%slug radpdfprocessing-model-image%}) objects in order to be drawn in a PDF file.
 
 ## Creating an ImageSource
 
@@ -102,4 +99,5 @@ __RadPdfProcessing__ exposes an extension method allowing you to convert every B
 ## See Also
 
  * [Image]({%slug radpdfprocessing-model-image%})
+ * [Adding SVG into a Document](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/formsource#adding-svg-into-a-document)
  * [ImageSource API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.html)
