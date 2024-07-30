@@ -24,7 +24,7 @@ This article shows how to merge two DOCX documents into a single document and ge
 To merge two Word documents and generate a unified TOC, follow these steps:
 
 1. Import the documents using the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
-2. [Merge]({%slug radwordsprocessing-editing-clone-and-merge%}) the documents using the `Merge` method with appropriate `MergeOptions`.
+2. [Merge]({%slug radwordsprocessing-editing-clone-and-merge%}) the documents using the `Merge` method with appropriate [MergeOptions](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/editing/clone-and-merge#merging-documents).
 3. Insert a unified TOC at the desired location in the merged document.
 4. [Update the TOC field](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields) to reflect the merged content accurately.
 

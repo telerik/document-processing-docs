@@ -81,3 +81,4 @@ This makes a list of all TC fields with the 'a' identifier.
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
 * [TC field]({%slug radwordsprocessing-concepts-tc-field%}))
+* [Generating a Table of Contents in a Merged Document Using RadWordsProcessing]({%slug generate-table-of-contents-radwordsprocessing%})
