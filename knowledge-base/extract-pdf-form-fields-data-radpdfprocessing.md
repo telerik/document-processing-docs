@@ -17,7 +17,7 @@ ticketid: 1658908
 
 ## Description
 
-Learn how to [import a PDF document]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) and read the data from the input fields within the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%}). The use-case is to iterate the form fields in a PDF document, extract the input values, and use these values to populate a data object.  
+Learn how to [import a PDF document]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) and read the data from the input fields within the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%}).FormFields collection. The use-case is to iterate the form fields in a PDF document, extract the input values, and use these values to populate a data object.  
 
 ## Solution
 

@@ -32,4 +32,5 @@ The AcroForm class provides the following properties:
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [FormFieldCollection class]({%slug radpdfprocessing-model-interactive-forms-formfieldcollection%})
 * [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
+* [Extracting Data from PDF Form Fields Using RadPdfProcessing]({%slug extract-pdf-form-fields-data-radpdfprocessing%})
 
