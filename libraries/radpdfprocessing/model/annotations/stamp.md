@@ -2,7 +2,7 @@
 title: Stamp 
 page_title: Stamp Annotation  
 description: Stamp annotations display text or graphics intended to look as if they were stamped on the page with a rubber stamp.
-slug: radpdfprocessing-model-annotations-stamp 
+slug: radpdfprocessing-model-annotations-stamp
 tags: annotation, overview, pdfprocessing, stamp 
 published: True
 position: 6
@@ -63,9 +63,9 @@ The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) o
 
 The **AnnotationContentSource** class, accessed by the **Content** property of the annotation object, represents the [FormSource]({%slug radpdfprocessing-model-formsource%}) instances used for displaying the widget content. The following example shows how to create a custom Stamp annotation and change its visual appearance:
 
->important When creating a custom stamp name (not from the predefined names), it is important to start the name with "#". Otherwise, if the stamp is moved in adobe, its appearance will be rewritten.
+>important When creating a custom stamp name (not from the predefined names), it is important to start the name with "#". Otherwise, if the stamp is moved in Adobe, its appearance will be rewritten.
 
->important When creating appearance for an annotation, it is important to create it with the same size as the rect of the annotation otherwise unexpected behavior may occur when the annotation is moved in Adobe.
+>important When creating appearance for an annotation, it is important to create it with the same size as the rectangle of the annotation otherwise unexpected behavior may occur when the annotation is moved in Adobe.
 
 ```csharp 
         private RadFixedDocument CreateTextAnnotation()
