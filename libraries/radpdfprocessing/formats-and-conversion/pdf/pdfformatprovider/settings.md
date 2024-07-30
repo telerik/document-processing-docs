@@ -103,7 +103,7 @@ In order to modify the way content is exported, you can set the __ExportSettings
         
 ### __ShouldEmbedFonts__ (obsolete)
 
-This property controls if the fonts will be embedded in the file. The default value is *true* because by the PDF Standard the fonts should be embedded in the file. This means that by default the fonts are added which allows proper viewing on any device. If the fonts are not embedded and the file is viewed on a device that does not have the used fronts the font might be substituted. 
+This property controls if the fonts will be embedded in the file. The default value is *true* because by the PDF Standard the fonts should be embedded in the file. This means that by default the fonts are added which allows proper viewing on any device. If the fonts are not embedded and the file is viewed on a device that does not have the used fronts the font might be substituted. If the font is embedded in the PDF file, it ensures the most predictable and dependable results. 
 
 >important As of **Q2 2024** the ShouldEmbedFonts property is obsolete. Use the **FontEmbeddingType** property instead.
 
@@ -116,6 +116,8 @@ The property controls what part of the fonts will be embedded in the file offeri
 * **Subset** - Embeds only the used characters subset of the fonts. This is the default approach.
 
 >note The subset export option is currently implemented **only** for TrueType fonts (.ttf).
+
+>important The receiver of a PDF document must have the same fonts that were originally used to create it. If a different font is substituted, its character set, glyph shapes, and metrics may differ from those in the original font. This substitution can produce unexpected and unwanted results, such as lines of text extending into margins or overlapping with graphics. A PDF file can refer by name to fonts that are not embedded in the PDF file. In this case, a PDF consumer can use those fonts if they are available in its environment. This approach suffers from the uncertainties noted above. 
 
 ### __IsEncrypted__
 
