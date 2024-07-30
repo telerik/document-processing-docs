@@ -85,7 +85,7 @@ The **AnnotationContentSource** class, accessed by the **Content** property of t
         private static void CreateContentFormWithText(FormSource normalForm, string text)
         {
             Size s = new Size(100, 40);
-            Random rand= new Random();
+            Random rand = new Random();
             normalForm.Size = s;
 
             FixedContentEditor formEditor = new FixedContentEditor(normalForm);
