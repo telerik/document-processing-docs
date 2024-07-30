@@ -150,15 +150,15 @@ Depending on the TextMarkupAnnotationType the respective type of the TextMarkup 
             RadFixedPage page = fixedDocument.Pages.AddPage();
             FixedContentEditor editor = new FixedContentEditor(page);
             editor.Position.Translate(100, 100);
-            editor.DrawText("This is an underline.");
+            editor.DrawText("This is a strikeout.");
 
-            TextSearch search = new TextSearch(fixedDocument);
-            IEnumerable<SearchResult> underlineSearch = search.FindAll("underline", TextSearchOptions.Default);
-            Rect underlineRectangle = underlineSearch.First().GetWordBoundingRect();
-            TextMarkupAnnotation underlineAnnotation = page.Annotations.AddUnderline(underlineRectangle);
-            underlineAnnotation.Color = new RgbColor(255, 0, 255);
+            TextSearch search = new Search.TextSearch(fixedDocument);
+            IEnumerable<SearchResult> strikeoutSearch = search.FindAll("strikeout", TextSearchOptions.Default);
+            Rect underlineRectangle = strikeoutSearch.First().GetWordBoundingRect();
+            TextMarkupAnnotation underlineAnnotation = page.Annotations.AddStrikeout(underlineRectangle);
+            underlineAnnotation.Color = new RgbColor(0, 0, 0);
             underlineAnnotation.Opacity = 0.90;
-            underlineAnnotation.RecalculateContent();     
+            underlineAnnotation.RecalculateContent();    
 ```
 
 ![Create StrikeOut Annotation](images/pdf-processing-create-strikeOut-annotation.png)      
