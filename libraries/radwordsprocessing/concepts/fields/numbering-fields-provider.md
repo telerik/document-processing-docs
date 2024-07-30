@@ -23,7 +23,7 @@ The default provider can be set with the following code:
 
 {{region cs-radwordsprocessing-concepts- numbering-fields-provider_1}}
 
-	 FlowExtensibilityManager.NumberingFieldsProvider = new NumberingFieldsProvider();
+	 Telerik.Windows.Documents.Flow.Extensibility.FlowExtensibilityManager.NumberingFieldsProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.NumberingFieldsProvider();
 
 {{endregion}}
 
@@ -35,7 +35,7 @@ This method allows you to use a custom numbering style converter.
 
 {{region cs-radwordsprocessing-concepts- numbering-fields-provider_2}}
 
-	NumberingFieldsProvider numberingFieldsProvider = new NumberingFieldsProvider();
+	Telerik.Windows.Documents.Flow.FormatProviders.Pdf.NumberingFieldsProvider numberingFieldsProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.NumberingFieldsProvider();
 	numberingFieldsProvider.RegisterNumberingStyleConverter(NumberingStyle.ChineseCounting, new NumberingStyleConverter());
 	
 

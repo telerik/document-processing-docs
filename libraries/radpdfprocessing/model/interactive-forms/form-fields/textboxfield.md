@@ -43,25 +43,45 @@ TextBoxField exposes the following properties:
 
 #### **[C#] Example 1: Create a TextBoxField and add it to a page**
 {{region radpdfprocessing-model-interactive-forms-form-fields-textboxfield_0}}
-	TextBoxField textField = new TextBoxField("SampleTextBox")
+	
+	using Telerik.Windows.Documents.Fixed.Model.Annotations;
+	using Telerik.Windows.Documents.Fixed.Model.InteractiveForms;
+	using Telerik.Windows.Documents.Fixed.Model;
+	using System.Windows;
+
+	namespace ConsoleNetFramework
 	{
-	    MaxLengthOfInputCharacters = 500,
-	    IsMultiline = true,
-	    IsPassword = false,
-	    IsFileSelect = false,
-	    ShouldSpellCheck = true,
-	    AllowScroll = true,
-	    Value = "Sample content",
-	};
-	
-	VariableContentWidget widget = textField.Widgets.AddWidget();
-	widget.Rect = new Rect(new Size(250, 50));
-    widget.RecalculateContent();
-	
-	document.AcroForm.FormFields.Add(textField);
-	document.Pages[0].Annotations.Add(widget);
+		internal class Program
+		{
+			static void Main(string[] args)
+			{
+				RadFixedDocument fixedDocument = new RadFixedDocument();
+				fixedDocument.Pages.AddPage();
+
+				TextBoxField textField = new TextBoxField("SampleTextBox")
+				{
+					MaxLengthOfInputCharacters = 500,
+					IsMultiline = true,
+					IsPassword = false,
+					IsFileSelect = false,
+					ShouldSpellCheck = true,
+					AllowScroll = true,
+					Value = "Sample content",
+				};
+
+				VariableContentWidget widget = textField.Widgets.AddWidget();
+				widget.Rect = new Rect(new Size(250, 50));
+				widget.RecalculateContent();
+
+				fixedDocument.AcroForm.FormFields.Add(textField);
+				fixedDocument.Pages[0].Annotations.Add(widget);
+			}
+		}
+	}
 
 {{endregion}}
+
+>important In .NET Standard use __Telerik.Documents.Primitives.Rect__ instead of __System.Windows.Rect__.
 
 ## See Also
 
