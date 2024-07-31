@@ -17,7 +17,19 @@ ticketid: 1656165
 
 ## Description
 
-Let's import an Excel file with some cells formatted with color. Learn how to retrieve the cell color when the background color is set from MS Excel.
+Let's import an Excel file with some cells formatted with color. Learn how to retrieve the cell color when the background color is set from MS Excel with a theme.
+
+It is possible to set a **Standard** Color (e.g. Yellow) or a **Theme** Color (e.g. Dark Teal, Accent 1) to a cell:
+
+|Standard Color|Theme Color|
+|----|----|
+|![Standard Color](images/worksheet-standard-color.png) |![Theme Color](images/worksheet-theme-color.png) |   
+
+The *Yellow* color will be fixed and after the changing the document's theme, it wouldn't change. However, the *Dark Teal, Accent 1* color will be changed if another theme is selected:
+
+![Changing Theme Color](images/worksheet-changing-theme-color.gif)    
+ 
+This article demonstrates how to extract the color value from a cell when it is applied via a theme color.
 
 ## Solution
 
