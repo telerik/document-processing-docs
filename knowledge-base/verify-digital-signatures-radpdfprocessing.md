@@ -34,7 +34,6 @@ Here is a code snippet demonstrating these steps and including the creation of a
 ```csharp
         static void Main(string[] args)
         {
-
             PdfFormatProvider provider = new PdfFormatProvider();
             RadFixedDocument document = provider.Import(File.ReadAllBytes("unsigned.pdf"));
 
@@ -73,7 +72,7 @@ Here is a code snippet demonstrating these steps and including the creation of a
                     provider.Export(document, output);
                 }
 
-                  isSigned = CheckSignedDocument(document);
+                isSigned = CheckSignedDocument(document);
                 Debug.WriteLine(isSigned.ToString());
                 Process.Start(new ProcessStartInfo() { FileName = signedDocumentFilePath, UseShellExecute = true });
             }
@@ -101,10 +100,10 @@ Here is a code snippet demonstrating these steps and including the creation of a
                         Debug.WriteLine("Signed on: "+properties.TimeOfSigning.ToString());
                         isSigned = true;
                         break;
-
                     }
                 }
             }
+
             return isSigned;
         }
 ```
