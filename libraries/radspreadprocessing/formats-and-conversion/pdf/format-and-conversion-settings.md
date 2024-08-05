@@ -30,6 +30,8 @@ __PdfExportSettings__ allow controlling how a __Workbook__ is exported to PDF. U
 
 * __PdfFileSettings__:  A property of type __Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.PdfExportSettings__ which is a class related to the [RadPdfProcessing library]({%slug radpdfprocessing-overview%}). Thus, the property allows you to control the image quality, encryption, compliance level and other PDF format related properties. More information on the settings is available in the [export settings article for RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
 
+* **ChartRenderer**: A property of type [IPdfChartRenderer](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.formatproviders.pdf.export.ipdfchartrenderer) that gets or sets the renderer which will be used to render charts. It is not relevant for the .NET Standard version of the Telerik Document Processing libraries. Read more in the [Export Chart to PDF]({%slug radspreadprocessing-features-charts-pdf-export%}) article. 
+
 
 __Example 1__ shows how to export the Entire Workbook without ignoring the __PrintArea__ property in all worksheets.
         
