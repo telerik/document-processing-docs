@@ -1,15 +1,15 @@
 ---
-title: Version 2024.3.731 (2024 Q3)
-page_title: What is new in 2024.3.731 (2024 Q3) for the Document Processing Libraries
-description: 2024.3.731 (2024 Q3)
+title: Version 2024.3.802 (2024 Q3)
+page_title: What is new in 2024.3.802 (2024 Q3) for the Document Processing Libraries
+description: 2024.3.802 (2024 Q3)
 slug: release-notes-2024-3-731
-tags: 2024.3.731,2024,Q3
+tags: 2024.3.802,2024,Q3
 published: True
 position: 0
 ---
 
 
-# 2024.3.731 (2024 Q3)
+# 2024.3.802 (2024 Q3)
 
 
 ## PdfProcessing
