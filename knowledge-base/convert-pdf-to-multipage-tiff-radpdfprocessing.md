@@ -19,15 +19,17 @@ ticketid: 1660512
 
 When working with PDF documents, a common task might be to convert the PDF pages into multipage TIFF images. This scenario arises due to the need for image-based representations of document pages, often for archival or compatibility reasons with certain systems that prefer image formats. Converting a PDF document to a multipage TIFF file can be challenging, as this functionality is not directly supported by many graphic applications, including Adobe. This KB article demonstrates how to convert PDF documents to multipage TIFF images using RadPdfProcessing.
 
+![Convert PDF to Multipage TIFF](images/pdf-to-multiple-page-tiff.gif)  
+
 ## Solution
 
 To convert a PDF document to a multipage TIFF image, follow the steps below:
 
-1. Use the `PdfFormatProvider` to import the PDF document.
-2. Iterate through all the pages of the imported document.
+1. Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the PDF document.
+2. Iterate through all the pages ([RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})) of the imported [RadFixedDocument](%slug radpdfprocessing-model-radfixeddocument%).
 3. For each page, create a thumbnail image.
 4. Render each thumbnail image onto a `RenderTargetBitmap`.
-5. Add each rendered bitmap as a frame to a `TiffBitmapEncoder`.
+5. Add each rendered bitmap as a frame to a [TiffBitmapEncoder](https://learn.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.tiffbitmapencoder?view=windowsdesktop-8.0).
 6. Save the encoded TIFF image to a file.
 
 Here is the code snippet demonstrating this process:
@@ -66,6 +68,15 @@ private static void Main(string[] args)
     Process.Start(new ProcessStartInfo() { FileName = exportedFileName, UseShellExecute = true });
 }
 ```
+
+## Required Assemblies
+
+* Telerik.Windows.Controls.FixedDocumentViewers.dll
+* Telerik.Windows.Documents.Core.dll
+* Telerik.Windows.Documents.Fixed.dll
+* WindowsBase.dll
+* PresentationCore.dll
+
 ## Notes
 
 - Ensure you have added references to the necessary Telerik Document Processing and WPF libraries in your project.
@@ -74,6 +85,8 @@ private static void Main(string[] args)
 
 ## See Also
 
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Export RadFixedPage to Image KB Article](https://docs.telerik.com/devtools/document-processing/knowledge-base/export-radfixedpage-to-image)
+- [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+- [Export RadFixedPage to TIFF Image]({%slug export-radfixedpage-to-image%})
 - [TiffBitmapEncoder Class Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.tiffbitmapencoder)
+- [Using SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
+- [Converting Multi-page TIFF Images to PDF]({%slug convert-tiff-to-pdf-radpdfprocessing%})
