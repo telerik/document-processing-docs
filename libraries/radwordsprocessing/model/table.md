@@ -178,4 +178,6 @@ __Example 5__ demonstrates how to add a __Table__ with 5 rows and 10 columns to 
  * [TableRow]({%slug radwordsprocessing-model-tablerow%})
  * [TableCell]({%slug radwordsprocessing-model-tablecell%})
  * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})
+ * [Finding a Table Containing a Specific Bookmark in Word Documents]({%slug radwordsprocessing-find-table-by-bookmark%})
  * [Generating Dynamic DOCX Documents with Tables and CheckBoxes using RadWordsProcessing]({%slug dynamic-docx-document-generation-radwordsprocessing%})
+
