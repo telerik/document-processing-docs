@@ -4,7 +4,7 @@ description: This article demonstrates how to identify and retrieve the table th
 type: how-to
 page_title: How to Retrieve a Table by Bookmark in RadWordsProcessing
 slug: radwordsprocessing-find-table-by-bookmark
-tags: radwordsprocessing, document processing, bookmarks, table, nested tables
+tags: radwordsprocessing, document, processing, bookmarks, table, nested, tables
 res_type: kb
 ticketid: 1657970
 ---
@@ -17,7 +17,7 @@ ticketid: 1657970
 
 ## Description
 
-When working with documents, it's common to need to find a table that contains a specific bookmark. This can become complex when dealing with nested tables, as a bookmark could be situated within multiple layers of tables. This KB article outlines methods to find either the innermost or outermost table containing a given bookmark, catering to scenarios involving nested tables.
+When working with documents, it's a common requirement to find a table that contains a specific bookmark. This can become complex when dealing with nested tables, as a bookmark could be situated within multiple layers of tables. This KB article outlines methods to find either the innermost or outermost table containing a given bookmark, catering to scenarios involving nested tables.
 
 This KB article also answers the following questions:
 - How can I find a table containing a specific bookmark in a document?
@@ -26,9 +26,13 @@ This KB article also answers the following questions:
 
 ## Solution
 
-To find a table containing a specific bookmark, especially in documents with nested tables, you can use the following two methods: `GetInnermostTableContainingBookmark` and `GetOutermostTableContainingBookmark`. These methods help in identifying either the innermost or outermost table that contains the bookmark, depending on the nesting level of tables in the document.
+To find a table containing a specific bookmark, especially in documents with nested tables, you can use the following custom methods: `GetInnermostTableContainingBookmark` and `GetOutermostTableContainingBookmark`. These methods help in identifying either the innermost or outermost table that contains the bookmark, depending on the nesting level of tables in the document.
 
 1. **Load the document and identify the bookmark:**
+2. **Define methods to get the innermost and outermost tables containing the bookmark:**
+- **GetInnermostTableContainingBookmark:**
+- **GetOutermostTableContainingBookmark:**
+3. **Retrieve the innermost and outermost tables containing the bookmark (as needed):**
 
 ```csharp
 RadFlowDocument document;
@@ -40,13 +44,10 @@ using (Stream input = File.OpenRead("input.docx"))
 }
 
 Bookmark bookmark = document.EnumerateChildrenOfType<BookmarkRangeStart>().Select(b => b.Bookmark).ToList().First(bm => bm.Name == "BookmarkName");
-```
 
-2. **Define methods to get the innermost and outermost tables containing the bookmark:**
+Table innermostTable = GetInnermostTableContainingBookmark(bookmark);
+Table outermostTable = GetOutermostTableContainingBookmark(bookmark);
 
-- **GetInnermostTableContainingBookmark:**
-
-```csharp
 private static Table GetInnermostTableContainingBookmark(Bookmark bookmark)
 {
     TableCell tableCell = bookmark.BookmarkRangeStart.Paragraph.BlockContainer as TableCell;
@@ -58,11 +59,7 @@ private static Table GetInnermostTableContainingBookmark(Bookmark bookmark)
 
     return null;
 }
-```
 
-- **GetOutermostTableContainingBookmark:**
-
-```csharp
 private static Table GetOutermostTableContainingBookmark(Bookmark bookmark)
 {
     TableCell tableCell = bookmark.BookmarkRangeStart.Paragraph.BlockContainer as TableCell;
@@ -87,13 +84,6 @@ private static Table GetTableContainingAnotherTable(Table table)
 
     return table;
 }
-```
-
-3. **Retrieve the innermost and outermost tables containing the bookmark (as needed):**
-
-```csharp
-Table innermostTable = GetInnermostTableContainingBookmark(bookmark);
-Table outermostTable = GetOutermostTableContainingBookmark(bookmark);
 ```
 
 If the bookmark is in a single table, both methods will yield the same result. These methods ensure you can accurately find the table containing a specific bookmark, regardless of the complexity of the document's table structure.
