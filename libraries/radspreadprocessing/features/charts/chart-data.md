@@ -27,6 +27,7 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 - Workbook **Workbook**: Gets the workbook that the formula refers to get the chart data.
 
 #### [C#] Example 1: Using IChartData
+
 {{region radspreadprocessing-features-charts-chart-data_0}}
 
    Workbook workbook = new Workbook();
@@ -52,4 +53,9 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
    worksheet.Charts[0].Chart.SeriesGroups.First().Series.First().Title = new TextTitle("Team 1");
    worksheet.Charts[0].Chart.SeriesGroups.First().Series.Last().Title = new TextTitle("Team 2");
 
-{{endregion}}
+{{endregion}} 
+
+>caption Using Chart Data in RadSpreadProcessing
+
+![Spread Chart Data](images/spread-chart-data.png)    
+
