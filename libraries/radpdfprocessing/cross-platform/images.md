@@ -40,8 +40,8 @@ PdfProcessing comes with a default implementation for such resolver called `Imag
 
 In case you have specific requirements and the default ImagePropertiesResolver doesn't fit them, you can implement custom logic that can handle them. To achieve that, you should:
 1. inherit the `Telerik.Windows.Documents.Core.Imaging.ImagePropertiesResolverBase` class
-1. implement its members
-1. assign an instance of the custom implementation to the `FixedExtensibilityManager.ImagePropertiesResolver` property 
+2. implement its members
+3. assign an instance of the custom implementation to the `FixedExtensibilityManager.ImagePropertiesResolver` property 
 
 ## JpegImageConverter 
 
