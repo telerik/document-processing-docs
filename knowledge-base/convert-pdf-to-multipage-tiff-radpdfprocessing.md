@@ -1,10 +1,10 @@
 ---
 title: Converting a PDF Document to a Multipage TIFF Image
-description: Learn how to transform PDF documents into multipage TIFF files using RadPdfProcessing from the Document Processing library.
+description: Learn how to transform PDF documents into multipage TIFF files using RadPdfProcessing from the Document Processing libraries.
 type: how-to
 page_title: How to Convert PDF Documents to Multipage TIFF with RadPdfProcessing
 slug: convert-pdf-to-multipage-tiff-radpdfprocessing
-tags: pdfprocessing, document, processing, pdf, tiff, image conversion, multipage
+tags: pdfprocessing, document, processing, pdf, tiff, image, conversion, multipage
 res_type: kb
 ticketid: 1660512
 ---
