@@ -96,7 +96,7 @@ Telerik Document Processing is a commercial library. You are welcome to explore 
 
 For any issues you might encounter while working with Telerik Document Processing, use any of the available support channels:
 
-* License holders and active trialists can take advantage of our outstanding customer support delivered by the developers building the library. To submit a support ticket, use the [dedicated support system](https://www.telerik.com/account/support-tickets?pid=1886&supcId=daf62541-57e0-b84c-8b5e-da9851c61873&fbp=false).
+* License holders and active trialists can take advantage of our outstanding customer support delivered by the developers building the library. To submit a support ticket, use the [dedicated support system](https://www.telerik.com/account/support-tickets?pid=1886&supcId=daf62541-57e0-b84c-8b5e-da9851c61873&fbp=false). Learn [How to Get the Most Out of the Telerik Document Processing Support]({%slug submit-support-tickets%}).
 * Our [forums](https://www.telerik.com/forums/telerik-document-processing) are part of the free support you can get from the community and from the team on all kinds of general issues.
 * Our [feedback portal](https://feedback.telerik.com/document-processing) provides information on the features/bugs in discussion and also the planned ones for release.
 * You may still need a tailor-made solution for your project. In such cases, go straight to [Progress Services](https://www.progress.com/services).
@@ -130,3 +130,4 @@ Thank you for your contribution to the Telerik Document Processing Libraries' Do
 - [Document Processing Libraries Overview]({%slug getting-started%})
 - [First Steps in using Telerik Document Processing]({%slug getting-started-first-steps%})
 - [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+- [How to Get the Most Out of the Telerik Document Processing Support]({%slug submit-support-tickets%})
