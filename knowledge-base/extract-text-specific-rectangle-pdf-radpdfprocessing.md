@@ -22,7 +22,7 @@ Learn how to extract the text from specific rectangular areas within PDF pages.
 
 ## Solution
 
-To extract text from a specific rectangle or crop box within a PDF page, you can utilize the [TextFragment]({%slug radpdfprocessing-model-textfragment%}}) class along with its [MatrixPosition]({%slug radpdfprocessing-concepts-position%}) property. The following code snippet demonstrates how to load a PDF document, define a rectangle that represents the desired area from which text should be extracted, and iterate through the text fragments within each page. It checks if the position of the text fragment is contained within the specified rectangle and, if so, outputs the text.
+To extract text from a specific rectangle or crop box within a PDF page, you can utilize the [TextFragment]({%slug radpdfprocessing-model-textfragment%}) class along with its [MatrixPosition]({%slug radpdfprocessing-concepts-position%}) property. The following code snippet demonstrates how to load a PDF document, define a rectangle that represents the desired area from which text should be extracted, and iterate through the text fragments within each page. It checks if the position of the text fragment is contained within the specified rectangle and, if so, outputs the text.
 
 ```csharp
         static void Main(string[] args)
