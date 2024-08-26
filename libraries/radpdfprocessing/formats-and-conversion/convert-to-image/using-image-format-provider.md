@@ -109,3 +109,5 @@ The __SkiaImageFormatProvider__ exposes the following settings:
 * [Converting XLSX Content to DOCX Document]({%slug convert-excel-content-to-word-document%}) 
 * [Export Worksheet to image]({%slug spreadprocessing-export-worksheet-to-image-netstandard%})
 * [Cropping PDF Pages and Saving as Images Using RadPdfProcessing]({%slug crop-save-pdf-pages-as-images-radpdfprocessing%})
+* [Converting a PDF Document to a Multipage TIFF Image]({%slug convert-pdf-to-multipage-tiff-radpdfprocessing%})
+* [Converting Multi-page TIFF Images to PDF]({%slug convert-tiff-to-pdf-radpdfprocessing%})
