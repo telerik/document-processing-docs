@@ -25,7 +25,7 @@ To export charts from Excel files to PDF format using RadSpreadProcessing, follo
 
 1. **Implement a Custom IPdfChartRenderer**: The export process requires providing an [IPdfChartRenderer]({%slug radspreadprocessing-features-charts-pdf-export%}) implementation. This renderer is responsible for converting the chart shapes from the Excel file into images that can be inserted into the PDF. 
 
-2. **Use the WinForms RadChartView control**: The [WinForms RadSpreadsheet]({%slug ({%slug radspreadsheet-overview%})%}) control (that supports charts) internally uses the WinForms RadChartView for visualization and it provides a convenient API for image creation having the [FloatingChartShape]({%slug radspreadprocessing-features-charts-using-charts%}) from the SpreadProcessing model.
+2. **Use the WinForms RadChartView control**: The [WinForms RadSpreadsheet]({%slug radspreadsheet-overview%}) control (that supports charts) internally uses the WinForms RadChartView for visualization and it provides a convenient API for image creation having the [FloatingChartShape]({%slug radspreadprocessing-features-charts-using-charts%}) from the SpreadProcessing model.
 
 3. **Export the Excel to PDF**: Use the [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the workbook to PDF, setting the `ChartRenderer` property to your custom renderer implementation.
 
