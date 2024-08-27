@@ -42,9 +42,9 @@ In case you have specific requirements and the default ImagePropertiesResolver d
 
 1\. Inherit the `Telerik.Windows.Documents.Core.Imaging.ImagePropertiesResolverBase` class
    
-2.\. Implement its members
+2\. Implement its members
    
-3.\ Assign an instance of the custom implementation to the `FixedExtensibilityManager.ImagePropertiesResolver` property 
+3\. Assign an instance of the custom implementation to the `FixedExtensibilityManager.ImagePropertiesResolver` property 
 
 ## JpegImageConverter 
 
