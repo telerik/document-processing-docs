@@ -27,26 +27,35 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 - Workbook **Workbook**: Gets the workbook that the formula refers to get the chart data.
 
 #### [C#] Example 1: Using IChartData
+
 {{region radspreadprocessing-features-charts-chart-data_0}}
 
-    BarSeriesGroup barSeriesGroup = new BarSeriesGroup();
+   Workbook workbook = new Workbook();
+   Worksheet worksheet = workbook.Worksheets.Add();
+   FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(1, 1), new CellRange(1, 1, 1, 1), ChartType.Column)
+   {
+       Width = 400,
+       Height = 200
+   };
 
-    StringChartData barCategoryData = new StringChartData(new List<string> { "category 1", "category 2", "category 3" });
-    NumericChartData barValueData = new NumericChartData(new List<double> { 1, 2, 3 });
-    FormulaChartData barSeriesTitle = new WorkbookFormulaChartData(workbook, "Sheet1!A1");
+   DocumentChart chart = chartShape.Chart;
+   BarSeriesGroup barSeriesGroup = chart.SeriesGroups.First() as BarSeriesGroup;
+   barSeriesGroup.BarDirection = BarDirection.Column;
 
-    barSeriesGroup.Series.Add(barCategoryData, barValueData, new FormulaTitle(barSeriesTitle));
+   StringChartData barCategoryData = new StringChartData(new List<string> { "New", "In Progress", "Ready for Test", "Done", "Declined" });
+   NumericChartData barValueScore1Data = new NumericChartData(new List<double> { 75.31, 66.3, 62.78, 61.72, 63.9 });
+   NumericChartData barValueScore2Data = new NumericChartData(new List<double> { 78.56, 70.7, 67.63, 66.71, 63.9 });
+   barSeriesGroup.Series.Remove(barSeriesGroup.Series.First());
+   barSeriesGroup.Series.Add(barCategoryData, barValueScore1Data);
+   barSeriesGroup.Series.Add(barCategoryData, barValueScore2Data);
+   worksheet.Charts.Add(chartShape);
 
-    DocumentChart chart = new DocumentChart();
-    chart.SeriesGroups.Add(barSeriesGroup);
-    
-    // Add the chart to the worksheet
-    Worksheet worksheet = workbook.ActiveWorksheet;
-    FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(6, 4), new CellRange(1, 1, 5, 2), ChartType.Column)
-    {
-        Width = 460,
-        Height = 250
-    };
+   worksheet.Charts[0].Chart.SeriesGroups.First().Series.First().Title = new TextTitle("Team 1");
+   worksheet.Charts[0].Chart.SeriesGroups.First().Series.Last().Title = new TextTitle("Team 2");
 
-    worksheet.Charts.Add(chartShape);
-{{endregion}}
+{{endregion}} 
+
+>caption Using Chart Data in RadSpreadProcessing
+
+![Spread Chart Data](images/spread-chart-data.png)    
+
