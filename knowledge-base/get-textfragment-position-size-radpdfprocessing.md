@@ -17,7 +17,7 @@ ticketid: 1662399
 
 ## Description
 
-Determining the precise location and size of a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) in a PDF document is essential for various document processing tasks. A `TextFragment`'s position is accessible through its `Position` property, which returns a `MatrixPosition`. This article outlines how to translate the `MatrixPosition` into (x,y) coordinates and how to calculate the width and height of a `TextFragment`.
+Determining the precise location and size of a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) in a PDF document is essential for various document processing tasks. A `TextFragment`'s position is accessible through its ({%slug radpdfprocessing-concepts-position%}) property, which returns a `MatrixPosition`. This article outlines how to translate the `MatrixPosition` into (x,y) coordinates and how to calculate the width and height of a `TextFragment`.
 
 This KB article also answers the following questions:
 - How can I find the exact location of a text in a PDF document?
@@ -60,6 +60,6 @@ By following these steps, you can accurately locate a `TextFragment` within a PD
 
 ## See Also
 
-- [Position Concept in RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/position)
-- [TextFragment in RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/textfragment)
-- [Extracting Text Within a Specific Rectangle in PDF Documents](https://docs.telerik.com/devtools/document-processing/knowledge-base/extract-text-specific-rectangle-pdf-radpdfprocessing)
+- [Position Concept in RadPdfProcessing]({%slug radpdfprocessing-concepts-position%})
+- [TextFragment in RadPdfProcessing]({%slug radpdfprocessing-model-textfragment%})
+- [Extracting Text Within a Specific Rectangle in PDF Documents]({%slug extract-text-specific-rectangle-pdf-radpdfprocessing%})
