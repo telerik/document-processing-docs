@@ -114,3 +114,5 @@ You can assign any **SpreadTextMeasurerBase** implementation to the **SpreadExte
  * [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
  * [Using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
  * [PdfProcessing Library Documentation]({%slug radpdfprocessing-overview%})
+ * [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})
+ * [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})

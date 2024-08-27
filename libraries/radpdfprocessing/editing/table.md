@@ -9,14 +9,11 @@ position: 3
 
 # Table
 
-
-
-The __Table__ class helps you easily create tabular data content. All you need to do is define the table content and pass a Table instance to a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) or a [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}). From then on, these editors are responsible for positioning, measuring, drawing and splitting the table onto pages.
+The **Table** class helps you easily create tabular data content. All you need to do is define the table content and pass a Table instance to a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) or a [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}). From then on, these editors are responsible for positioning, measuring, drawing and splitting the table onto pages.
 
 ![Rad Pdf Processing Editing Table 01](images/RadPdfProcessing_Editing_Table_01.png)
 
-This article aims to present the table-related API in __RadPdfProcessing__. It contains the following sections:
-      
+This article aims to present the table-related API in __RadPdfProcessing__. It contains the following sections:     
 
 * [Defining Table Content](#defining-table-content)
 
@@ -279,9 +276,21 @@ As a result, on __Figure 7__ you can see a 45-degree rotated table similar to th
 #### Figure 7: FixedWidth table
 ![Rad Pdf Processing Editing Table 08](images/RadPdfProcessing_Editing_Table_08.png)
 
+## Supported Border Styles
+
+As of **Q3 2024**, along with the BorderStyle.*Single*, RadPdfProcessing offers *Dotted*, *Dashed*, and *DashSmallGap* border styles. With this update, the Dotted, Dashed, DashSmallGap, and Thick border lines are now exported from [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) as well.
+
+|BorderStyle|Border Design|
+|----|----|
+|Single|![Pdf Single Border](images/pdf-single-border.png)|  
+|Dotted|![Pdf Dotted Border](images/pdf-dotted-border.png)|
+|Dashed|![Pdf Dashed Border](images/pdf-dashed-border.png)|   
+|DashSmallGap|![Pdf Single Border](images/pdf-dash-small-gap-border.png)| 
+
 ## See Also
 
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
  * [TableRow]({%slug radpdfprocessing-editing-tablerow%})
  * [TableCell]({%slug radpdfprocessing-editing-tablecell%})
+ * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})

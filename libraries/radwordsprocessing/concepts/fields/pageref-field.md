@@ -12,6 +12,8 @@ position: 0
 
 The PageRef field inserts the page number of a bookmark for a cross-reference.
 
+>In order to update the **PageRef** fields within the TOC field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%})
+
 ## Field Syntax
 
 This is how the syntax of a PageRef field looks like:

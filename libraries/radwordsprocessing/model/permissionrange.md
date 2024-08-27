@@ -20,7 +20,7 @@ A __PermissionRange__ object holds annotation markers which specify for which ra
 ## Inserting a PermissionRange
 
 
-Creating a __PermissionRange__ requires to pass an instance of the __PermissionRangeCredentials__ class to the constructor, which can be created in either one of the following ways:
+Creating a __PermissionRange__ requires passing an instance of the __PermissionRangeCredentials__ class to the constructor, which can be created in either one of the following ways:
 
 * __PermissionRangeCredentials(EditingGroup editingGroup):__ Initialize credentials with a type of user group. The enumeration exposes the following members:
 	* __None:__ Specifies that none of the users that open the document shall be allowed to edit range permissions using this editing group when document protection is enforced.
@@ -50,7 +50,7 @@ __Example 1__ demonstrates how to create permission credentials for a single use
 	PermissionRange range = editor.InsertPermissionRange(everyone, cell);
 {{endregion}}
 
-The paragraph should belong to the same document that is passed to the constructor of the __PermissionRange__ object, otherwise an exception is thrown.
+The paragraph should belong to the same document that is passed to the constructor of the __PermissionRange__ object, otherwise, an exception is thrown.
 
 
 Inserting a __PermissionRange__ in the document can be achieved through [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) as well. Since a permission range refers to a specific document element or a range of elements, there are several overloads for the __InsertPermissionRange()__ method - accepting a __TableCell__, __TableRow__ or two inline elements representing the start and end of the range.
@@ -81,6 +81,8 @@ __ProtectionMode__ exposes the following members:
 * __NoProtection:__ Specifies that no editing restrictions are applied.
 * __AllowComments:__ Specifies that working with comments is allowed in addition to editing in permission ranges.
 * __ReadOnly:__ Specifies that editing is allowed only in permission regions by the users or groups that have permissions for edition. This mode is applied when __ProtectionMode__ parameter is not passed to the __Protect()__ method.
+
+>note In MS Word [passwords are case-sensitive and can be a maximum of 15 characters long](https://support.microsoft.com/en-us/office/protect-a-document-with-a-password-05084cc3-300d-4c1a-8416-38d3e37d6826). 
 
 __Example 3__ shows how to protect and unprotect a document using the various overloads of the methods.
 

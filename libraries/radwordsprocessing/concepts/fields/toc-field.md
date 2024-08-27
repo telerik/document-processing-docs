@@ -12,6 +12,9 @@ position: 0
 
 The TOC (Table of Contents) field creates a table of contents. It is created from the heading or other styles used in the document. You can specify the items by using the TC field as well.  
 
+>In order to update the **PageRef** fields within the TOC field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%})
+
+
 # Syntax
 
 | Syntax   |
@@ -75,9 +78,10 @@ __Example 1__ demonstrates how you can insert a TOC field.
 
 This makes a list of all TC fields with the 'a' identifier.
 
->note In order to update the **PageRef** fields within the TOC field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%})
-
 ## See Also 
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
 * [TC field]({%slug radwordsprocessing-concepts-tc-field%}))
+* [Generating a Table of Contents in a Merged Document Using RadWordsProcessing]({%slug generate-table-of-contents-radwordsprocessing%})
+* [Updating TOC Page Numberings in Word Documents Before Exporting to DOCX Format]({%slug update-toc-radwordsprocessing-before-docx-export%}) 
+

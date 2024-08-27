@@ -28,6 +28,7 @@ With **WordsProcessing**, you can work with images from the following file forma
  - WMF 
  - EMF
  - BIN
+ - SVG (*introduced in 2024 Q3*)
 
 ## Inserting an ImageInline
 

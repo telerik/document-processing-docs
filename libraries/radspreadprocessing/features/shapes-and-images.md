@@ -9,8 +9,6 @@ position: 13
 
 # Shapes and Images
 
-
-
 This article briefly describes what are shapes and images, and how to create and work with them.  It contains the following sections:
 
 * [What Are Shapes and Images?](#what-are-shapes-and-images?)
@@ -27,53 +25,46 @@ This article briefly describes what are shapes and images, and how to create and
 
 ## What Are Shapes and Images?
 
-The shapes are objects which represent a visual illustration which can be inserted in a worksheet. In the document model they are represented by the abstract class __FloatingShapeBase__.
+The shapes are objects that represent a visual illustration that can be inserted into a worksheet. In the document model, they are represented by the abstract class __FloatingShapeBase__.
         
+The image is a kind of shape that is characterized by having an image source. They are represented by the __FloatingImage__ class, which inherits FloatingShapeBase.     
 
-The image is a kind of shape which is characterized by having an image source. They are represented by the __FloatingImage__ class, which inherits FloatingShapeBase.
-        
+## Supported Formats
+
+The supported formats are:
+
+* **JPG**
+* **JPEG**
+* **PNG**
+* **BMP**
+* **TIFF**
+* **TIF**
+* **GIF**
+* **ICON**
+* **WMF**
+* **EMF**
+* **BIN**
+* **SVG** (*introduced in 2024 Q3*)
 
 ## Properties of Shapes and Images
 
-Shapes have the following properties:
-        
+Shapes have the following properties:       
 
-* __CellIndex:__ The cell index where the top left corner of the shape is located when the shape is not rotated.
-            
-
-* __OffsetX:__ The offset between the left side of the shape and the left side of the cell index.
-            
-
-* __OffsetY:__ The offset between the top of the shape and the top of the cell index.
-            
-
-* __Width:__ The width of the shape.
-            
-
-* __Height:__ The height of the shape.
-            
-
-* __RotationAngle:__ The angle (in degrees) by which the shape is rotated about its center.
-            
-
-* __IsHorizontallyFlipped:__ Indicates whether the shape has been flipped across the y-axis.
-            
-
-* __IsVerticallyFlipped:__ Indicates whether the shape has been flipped across the x-axis.
-            
-
-* __Name:__ The name of the shape.
-            
-
-* __LockAspectRatio:__ Determines whether the aspect ratio between the width and the height of the image will be preserved.
-            
-
-* __Id:__ A unique number assigned to the image after it has been added to a worksheet.
-            
-
-* __Worksheet:__ The worksheet in which the shape is or will be inserted.
-
-* **Description**: Gets or sets the description of the shape. (*introduced in 2024 Q2*).
+|Property|Description|
+|----|----|
+|__CellIndex__| The cell index where the top left corner of the shape is located when the shape is not rotated.|            
+|__OffsetX__| The offset between the left side of the shape and the left side of the cell index.|           
+|__OffsetY__| The offset between the top of the shape and the top of the cell index.|           
+|__Width__| The width of the shape.|
+|__Height__| The height of the shape.|          
+|__RotationAngle__| The angle (in degrees) by which the shape is rotated about its center.|           
+|__IsHorizontallyFlipped__| Indicates whether the shape has been flipped across the y-axis.|        
+|__IsVerticallyFlipped__| Indicates whether the shape has been flipped across the x-axis.|          
+|__Name__| The name of the shape.|         
+|__LockAspectRatio__| Determines whether the aspect ratio between the width and the height of the image will be preserved.|
+|__Id__| A unique number assigned to the image after it has been added to a worksheet.|
+|__Worksheet__| The worksheet in which the shape is or will be inserted.|
+|**Description**| Gets or sets the description of the shape. (*introduced in 2024 Q2*)|
             
 
 Images have one additional property:
@@ -237,13 +228,14 @@ If we increase the rotation angle of the image, it will be visualized differentl
 It appears that the top left cell index is B5, however, the CellIndex property of the image will remain unchanged, B8, as will the offset.
         
 
-This set up is convenient as it allows more intuitive rotation of the shapes. However, when the rotation angle increases substantially, the underlying CellIndex of the shape might become too distant to be useful. In order to avoid this, once the rotation angle becomes 45° and more, the CellIndex should switch to where the top left corner would be at 90° rotation.
-        
+This set up is convenient as it allows more intuitive rotation of the shapes. However, when the rotation angle increases substantially, the underlying CellIndex of the shape might become too distant to be useful. In order to avoid this, once the rotation angle becomes 45° and more, the CellIndex should switch to where the top left corner would be at 90° rotation.      
 
 This is illustrated in the following images:
+
 ![Rad Spread Processing Features Shapes And Images 03](images/RadSpreadProcessing_Features_Shapes_And_Images_03.png)
 
 At this point, the CellIndex property of the shape is D1 and the offset should also be recalculated accordingly.
+
 ![Rad Spread Processing Features Shapes And Images 04](images/RadSpreadProcessing_Features_Shapes_And_Images_04.png)
 
 As rotation increases, the CellIndex of the shape will switch between B8 and D1, depending on what is closer to the visual top left corner of the shape. The result will be the following:

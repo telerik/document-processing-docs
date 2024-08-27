@@ -90,3 +90,7 @@ The following example shows how to set the custom implementation inheriting the 
     SpreadTextMeasurerBase customTextMeasurer = new CustomTextMeasurer(SpreadExtensibilityManager.TextMeasurer); 
     SpreadExtensibilityManager.TextMeasurer = customTextMeasurer; 
 {{endregion}}
+
+## See Also
+ * [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})
+ * [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})

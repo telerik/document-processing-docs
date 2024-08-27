@@ -17,6 +17,7 @@ The TA (Table of Authorities Entry) field defines the text and page number for a
 | :---     	 |
 | { **TA** [Switches ] }|    
 
+>In order to update the field, you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
 
 # Switches 
 

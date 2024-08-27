@@ -227,3 +227,7 @@ __Figure 6__ shows that as a result, the two ranges are unmerged.
 
 #### Figure 6: Result of unmerge action
 ![Rad Spread Processing Features Merge Unmerge Cells 06](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_06.png)
+
+## See Also
+
+- [How to Read the Values of Merged Cells in a Worksheet]({%slug read-xls-file-merged-cells-radspreadprocessing%})

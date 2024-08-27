@@ -69,3 +69,4 @@ You can also use several more methods of the class to modify the collection of f
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
+* [Extracting Data from PDF Form Fields Using RadPdfProcessing]({%slug extract-pdf-form-fields-data-radpdfprocessing%})

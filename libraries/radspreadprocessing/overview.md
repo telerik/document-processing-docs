@@ -9,11 +9,11 @@ position: 0
 
 # Overview
 
-**Telerik SpreadProcessing Library** allows you to generate and convert documents to XLSX, CSV, TXT and PDF. **RadSpreadProcessing** ships with built-in support for computation of more than 200 functions, like SUM, AVERAGE, and more. You can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
+**Telerik SpreadProcessing Library** allows you to generate and convert documents to XLSX, CSV, TXT, and PDF. **RadSpreadProcessing** ships with built-in support for the computation of more than 200 functions, like SUM, AVERAGE, and more. You can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
 
 ![SpreadProcessing](images/spread-processing-overview.jpg) 
 
-In this article, we list the library's most popular features. If you want to start using the library right away, see **[Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})**.
+In this article, we list the library's most popular features. If you want to start using the library right away, see **[Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%})**.
 
 ![Rad Spread Processing Overview 01](images/RadSpreadProcessing_Overview_01.png)
 
@@ -28,7 +28,7 @@ In this article, we list the library's most popular features. If you want to sta
 * Extracting and populating cells with data.
 * Built-in support for computation of more than 200 functions, like SUM, AVERAGE, etc.
 * Custom functions could be added as well.
-* Protection from editing operations using password/removing such password.
+* Protection from editing operations using passwords/removing such passwords.
 * Most of the important Excel features are supported:
     * Data validation - restrict the types of input to cells (e.g. allow only numbers).
     * Grouping to organize data (e.g. collapse some rows/columns).
@@ -38,7 +38,7 @@ The following table describes the most popular features of the RadSpreadProcessi
 
 | Feature | Description |
 |---------|-------------|
-| [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | API for insertion, positioning and deletion of images in worksheets. |
+| [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | API for insertion, positioning and deletion of images in worksheets. As of **Q3 2024** RadSpreadProcessing provides support for SVG (vector graphics image format). |
 | [**Charts**]({%slug radspreadprocessing-features-charts%}) | Add, remove and manipulate chart objects in your spreadsheet documents. |
 | [**Conditional Formatting**]({%slug radspreadprocessing-features-conditional-formatting%}) |Make it easy to analyze data, find critical issues, patterns and trends by representing the data inside in a user-friendly manner. |
 | [**Hyperlinks**]({%slug radspreadprocessing-features-hyperlink%}) | The API enables you to add, remove, edit and search for hyperlinks in the worksheets of the document. |
@@ -81,3 +81,4 @@ The following table describes the most popular features of the RadSpreadProcessi
 * [Getting Started]({%slug radspreadprocessing-getting-started%})
 * [What is a Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
 * [What is a Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
+* [Generating Excel Documents from IEnumerable Collections]({%slug generate-excel-files-from-ienumerable-collections%})

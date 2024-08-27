@@ -12,6 +12,8 @@ position: 0
 
 Inserts the current page number. 
 
+>In order to update the field within the TOC field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
+
 ## Field Syntax
 
 This is how the syntax of a Page field looks like:
