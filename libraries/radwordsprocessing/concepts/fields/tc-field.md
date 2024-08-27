@@ -12,7 +12,7 @@ position: 0
 
 The TC (Table of Contents Entry) field defines the text and page numbers for entries in a table of contents and in lists of tables, figures, and similar contents. This fields should be inserted before the text that you want to include in the contents. 
 
->information In order to update the field, you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
+>In order to update the field, you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
 
 # Syntax
 
