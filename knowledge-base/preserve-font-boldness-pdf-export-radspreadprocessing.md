@@ -17,7 +17,7 @@ ticketid: 1659898
 
 ## Description
 
-When converting Excel documents in .NET Framework applications to PDF using RadSpreadProcessing, the bold text in the Excel file might not appear bold in the exported PDF.  The font also may be changed in the exported PDF. This issue often arises due to the PDF export process using a different font than the one specified in the Excel document. For instance, the PDF export might default to using "Arial" font, while the original Excel document uses "Aptos Narrow".
+When converting Excel documents in .NET Framework applications to PDF format using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), the bold text in the Excel file might not appear bold in the exported PDF.  The font also may be changed in the exported PDF. This issue often arises due to the PDF export process using a different font than the one specified in the Excel document. For instance, the PDF export might default to using "Arial" font, while the original Excel document uses "Aptos Narrow".
 
 This KB article also answers the following questions:
 - How to ensure text boldness is preserved in PDF exports?
@@ -32,7 +32,7 @@ To preserve the font and the bold text when exporting an Excel document to PDF, 
 
 2. **Create a `FontFamily`** instance for the custom font.
 
-3. **Register the font** with the `FontsRepository`. Ensure to register both the regular and bold variations of the font to cover all text styles in the document.
+3. [Register the font](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/fonts#registering-a-font) with the `FontsRepository`. Ensure to register both the regular and bold variations of the font to cover all text styles in the document.
 
 ```csharp
             // Read the font file 
@@ -52,3 +52,4 @@ By following these steps, the exported PDF document will correctly display text 
 
 - [Fonts in RadPdfProcessing]({%slug radpdfprocessing-concepts-fonts%})
 - [Registering a Font](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/fonts#registering-a-font)
+- [Using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
