@@ -143,3 +143,4 @@ This section explains the behavior of the __Size__ property of The __Image__ obj
  * [Document model]({%slug radwordsprocessing-model%})
  * [FloatingImage]({%slug radwordsprocessing-model-floatingimage%})
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
+ * [Converting WMF Images to PNG in RTF Documents with RadWordsProcessing]({%slug convert-wmf-to-png-radwordsprocessing%})
