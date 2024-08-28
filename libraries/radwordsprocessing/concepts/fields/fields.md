@@ -158,7 +158,7 @@ All fields in the document can be updated using __UpdateFields()__ of __RadFlowD
 	Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
 {{endregion}}
 
-### Updating PageRef, Page, NumPages, and SectionPage fields. 
+### Updating PageRef, Page, NumPages, and SectionPages fields. 
 
 In R3 2022 the above fields were introduced. Their evaluation requires calculating the size of the document elements. This is why to update them you need to provide an implementation of a [**NumberingFieldsProvider**]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) which can provide the needed layout logic. In the default implementation we are using the the layout logic from the [RadPdfPRocessing]({%slug radpdfprocessing-overview%}) library. To use it you need to add reference to the following assembly: 
 
