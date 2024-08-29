@@ -72,7 +72,7 @@ Creating image watermark is very similar to creating a text one. __Example 2__ s
 	    Angle = 45,
 	    Width = 50,
 	    Height = 75,
-	    ImageSource = new Telerik.Windows.Documents.Media.ImageSource(imageStream, "png")
+	    ImageSource = new Telerik.Windows.Documents.Media.ImageSource(new FileStream("sample.jpeg", FileMode.Open), "jpeg")
 	});
 {{endregion}}
 

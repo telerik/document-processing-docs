@@ -77,7 +77,15 @@ There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedd
 | Symbol|
 | ZapfDingbats|
 
+
+{{region cs-radpdfprocessing-concepts-fonts_0}}
+
+	FontBase helvetica = FontsRepository.Helvetica;
+	
+{{endregion}}
+
 >tip These fonts, or their font metrics and suitable substitution fonts, must be available to the consumer application.
+
 
 ## Embedded Fonts
 
@@ -93,7 +101,7 @@ __Example 1__ demonstrates how you can use the RegisterFont() method.
             
 #### __[C#] Example 1: Register font in .NET Framework application__
 
-{{region cs-radpdfprocessing-concepts-fonts_0}}
+{{region cs-radpdfprocessing-concepts-fonts_1}}
 
 	// Read the font file
 	byte[] fontData = File.ReadAllBytes("some-font.ttf");
@@ -119,12 +127,20 @@ __Example 1__ demonstrates how you can use the RegisterFont() method.
 
 >tip Each registered font can be obtained from the font repository as __FontBase__ object and applied to a __[TextFragment]({%slug radpdfprocessing-model-textfragment%})__ through its __Font__ property.
 
+{{region cs-radpdfprocessing-concepts-fonts_3}}
+
+	FontBase courier = FontsRepository.Courier;
+	TextFragment textFragment = new TextFragment();
+	textFragment.Font = courier;	
+
+{{endregion}}
+
 __Example 2__ shows how to create a font using the FontsRepository.
             
 
 #### __[C#] Example 2: Create FontBase__
 
-{{region cs-radpdfprocessing-concepts-fonts_1}}
+{{region cs-radpdfprocessing-concepts-fonts_4}}
 	FontBase font;
 	bool success = FontsRepository.TryCreateFont(fontFamily, fontStyle, fontWeight, out font);
 {{endregion}}
