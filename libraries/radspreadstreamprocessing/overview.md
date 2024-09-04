@@ -9,7 +9,7 @@ position: 0
 
 # Overview
 
-**Telerik SpreadStream Processing Library** allows you to generate big spreadsheet documents with great performance and minimal memory footprint in your .NET applications with the , specialized for fast generation of huge (even 1M+ rows) XLSX and CSV documents. The document model has no external dependencies on third-party software or UI. Users are able to process Microsoft Excel supported documents even without having Microsoft Excel, Microsoft Office or any other external library installed on the client or server. 
+**Telerik SpreadStream Processing Library** allows you to generate big spreadsheet documents with great performance and minimal memory footprint in your .NET applications, specialized for fast generation of huge (even 1M+ rows) XLSX and CSV documents. The document model has no external dependencies on third-party software or UI. Users are able to process Microsoft Excel supported documents even without having Microsoft Excel, Microsoft Office or any other external library installed on the client or server. 
 
 ![SpreadStreamProcessing](images/spread-stream-processing-overview.jpg)  
 
