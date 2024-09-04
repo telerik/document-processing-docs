@@ -4,7 +4,7 @@ description: Learn how to programmatically convert WMF images to PNG within RTF 
 type: how-to
 page_title: How to Convert WMF to PNG in RTF Files Using Telerik Document Processing
 slug: convert-wmf-to-png-radwordsprocessing
-tags: radwordsprocessing, document processing, rtf, wmf, png, image conversion
+tags: wordsprocessing, rtf, wmf, png, document, processing, image, conversion
 res_type: kb
 ticketid: 1662500
 ---
@@ -17,13 +17,13 @@ ticketid: 1662500
 
 ## Description
 
-This article demonstrates a sample approach how to convert the images in WMF format to PNG within a [RTF]({%slug radwordsprocessing-formats-and-conversion-rtf%}) document.
+This article demonstrates a sample approach how to convert the images in WMF format to PNG within an [RTF]({%slug radwordsprocessing-formats-and-conversion-rtf%}) document.
 
 ## Solution
 
 To convert WMF images to PNG format within an RTF document using RadWordsProcessing, follow these steps:
 
-1. [Import the RTF file](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/rtf/rtfformatprovider#import) into a `RadFlowDocument`.
+1. [Import the RTF file](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/rtf/rtfformatprovider#import) as a `RadFlowDocument`.
 
 2. Iterate through the [floating images]({%slug radwordsprocessing-model-floatingimage%}) in the document.
 
@@ -34,6 +34,11 @@ To convert WMF images to PNG format within an RTF document using RadWordsProcess
 Here is a sample code snippet demonstrating this process:
 
 ```csharp
+using System.Diagnostics;
+using Telerik.Windows.Documents.Flow.Model;
+using Telerik.Windows.Documents.Flow.Model.Shapes;
+using Telerik.Windows.Documents.Media;
+
 static void Main(string[] args)
 {
     string inputFilePath = "yourfile.rtf";
