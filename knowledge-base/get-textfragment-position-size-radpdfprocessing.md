@@ -17,7 +17,7 @@ ticketid: 1662399
 
 ## Description
 
-Determining the precise location and size of a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) in a PDF document is essential for various document processing tasks. A `TextFragment`'s position is accessible through its ({%slug radpdfprocessing-concepts-position%}) property, which returns a `MatrixPosition`. This article outlines how to translate the `MatrixPosition` into (x,y) coordinates and how to calculate the width and height of a `TextFragment`.
+Determining the precise location and size of a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) in a PDF document is essential for various document processing tasks. A `TextFragment`'s position is accessible through its [Position]({%slug radpdfprocessing-concepts-position%}) property, which returns a `MatrixPosition`. This article outlines how to translate the `MatrixPosition` into (x,y) coordinates and how to calculate the width and height of a `TextFragment`.
 
 ![TextFragment Position and Size](images/text-fragment-position-and-size.png)   
 
