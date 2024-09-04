@@ -19,6 +19,8 @@ ticketid: 1662399
 
 Determining the precise location and size of a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) in a PDF document is essential for various document processing tasks. A `TextFragment`'s position is accessible through its ({%slug radpdfprocessing-concepts-position%}) property, which returns a `MatrixPosition`. This article outlines how to translate the `MatrixPosition` into (x,y) coordinates and how to calculate the width and height of a `TextFragment`.
 
+![TextFragment Position and Size](images/text-fragment-position-and-size.png)   
+
 This KB article also answers the following questions:
 - How can I find the exact location of a text in a PDF document?
 - What is the method to determine the dimensions of a text segment within a PDF file?
