@@ -2,9 +2,9 @@
 title: Preserving the Font in PDF Export from Excel
 description: Learn how to preserve the bold text when converting Excel documents to PDF using RadSpreadProcessing.
 type: how-to
-page_title: How to Keep Text Boldness in PDF Conversion with RadSpreadProcessing
+page_title: How to Preserve Text Boldness in PDF Conversion with RadSpreadProcessing
 slug: preserve-font-boldness-pdf-export-radspreadprocessing
-tags: spreadprocessing, document, processing, pdf export, font, registration, bold, text
+tags: spreadprocessing, document, processing, pdf export, font, registration, bold, text, pdf, export
 res_type: kb
 ticketid: 1659898
 ---
@@ -17,7 +17,7 @@ ticketid: 1659898
 
 ## Description
 
-When converting Excel documents in .NET Framework applications to PDF format using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), the bold text in the Excel file might not appear bold in the exported PDF.  The font also may be changed in the exported PDF. This issue often arises due to the PDF export process using a different font than the one specified in the Excel document. For instance, the PDF export might default to using "Arial" font, while the original Excel document uses "Aptos Narrow".
+When converting Excel documents in .NET Framework applications to PDF format using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), the bold text in the Excel file might not appear bold in the exported PDF. The font also may be changed in the exported PDF. This issue often arises due to the PDF export process using a different font than the one specified in the Excel document. For instance, the PDF export might default to using "Arial" font, while the original Excel document uses "Aptos Narrow".
 
 This KB article also answers the following questions:
 - How to ensure text boldness is preserved in PDF exports?
