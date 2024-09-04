@@ -20,7 +20,7 @@ ticketid: 1660148
 Creating tables with varying column counts and sizes in a PDF can be challenging, especially when trying to merge cells across columns to achieve a specific layout. This article demonstrates how to use the `ColumnSpan` property in the [RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/table) library to merge cells across columns and adjust the layout of tables as required. This KB article also answers the following questions:
 - How do I merge cells across columns in a PDF table using RadPdfProcessing?
 - How can I adjust the column count dynamically in a table created with RadPdfProcessing?
-- What is the correct way to apply `ColumnSpan` in RadPdfProcessing tables for custom layouts?
+- What is the correct way to apply `ColumnSpan` in RadPdfProcessing tables for custom layouts? 
 
 ## Solution
 
@@ -103,6 +103,10 @@ Here is a simplified example demonstrating these steps:
 ```
 
 This example demonstrates how to create a table with cells that span multiple columns, providing a flexible way to design complex table layouts in PDF documents using RadPdfProcessing.
+
+The achieved result is illustrated below:
+
+![ColumnSpan in PDF Table](images/pdf-table-column-span.png)   
 
 ## Notes
 
