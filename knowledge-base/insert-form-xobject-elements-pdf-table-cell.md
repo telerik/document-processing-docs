@@ -19,6 +19,8 @@ ticketid: 1663177
 
 Learn how to insert interactive [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) such as [radio buttons]({%slug radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield%}) and [textboxes]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) into [table cells]({%slug radpdfprocessing-editing-tablecell%}) in a PDF document using RadPdfProcessing.
 
+![Pdf Table with Form Fields](images/pdf-table-with-form-fields.png) 
+
 ## Solution
 
 To insert interactive form fields like radio buttons and textboxes into table cells in a PDF document, follow the steps below:
