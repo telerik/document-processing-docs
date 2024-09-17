@@ -30,28 +30,28 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 
 {{region radspreadprocessing-features-charts-chart-data_0}}
 
-   Workbook workbook = new Workbook();
-   Worksheet worksheet = workbook.Worksheets.Add();
-   FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(1, 1), new CellRange(1, 1, 1, 1), ChartType.Column)
-   {
-       Width = 400,
-       Height = 200
-   };
-
-   DocumentChart chart = chartShape.Chart;
-   BarSeriesGroup barSeriesGroup = chart.SeriesGroups.First() as BarSeriesGroup;
-   barSeriesGroup.BarDirection = BarDirection.Column;
-
-   StringChartData barCategoryData = new StringChartData(new List<string> { "New", "In Progress", "Ready for Test", "Done", "Declined" });
-   NumericChartData barValueScore1Data = new NumericChartData(new List<double> { 75.31, 66.3, 62.78, 61.72, 63.9 });
-   NumericChartData barValueScore2Data = new NumericChartData(new List<double> { 78.56, 70.7, 67.63, 66.71, 63.9 });
-   barSeriesGroup.Series.Remove(barSeriesGroup.Series.First());
-   barSeriesGroup.Series.Add(barCategoryData, barValueScore1Data);
-   barSeriesGroup.Series.Add(barCategoryData, barValueScore2Data);
-   worksheet.Charts.Add(chartShape);
-
-   worksheet.Charts[0].Chart.SeriesGroups.First().Series.First().Title = new TextTitle("Team 1");
-   worksheet.Charts[0].Chart.SeriesGroups.First().Series.Last().Title = new TextTitle("Team 2");
+      Workbook workbook = new Workbook();
+      Worksheet worksheet = workbook.Worksheets.Add();
+      FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(1, 1), new CellRange(1, 1, 1, 1), ChartType.Column)
+      {
+          Width = 400,
+          Height = 200
+      };
+   
+      DocumentChart chart = chartShape.Chart;
+      BarSeriesGroup barSeriesGroup = chart.SeriesGroups.First() as BarSeriesGroup;
+      barSeriesGroup.BarDirection = BarDirection.Column;
+   
+      StringChartData barCategoryData = new StringChartData(new List<string> { "New", "In Progress", "Ready for Test", "Done", "Declined" });
+      NumericChartData barValueScore1Data = new NumericChartData(new List<double> { 75.31, 66.3, 62.78, 61.72, 63.9 });
+      NumericChartData barValueScore2Data = new NumericChartData(new List<double> { 78.56, 70.7, 67.63, 66.71, 63.9 });
+      barSeriesGroup.Series.Remove(barSeriesGroup.Series.First());
+      barSeriesGroup.Series.Add(barCategoryData, barValueScore1Data);
+      barSeriesGroup.Series.Add(barCategoryData, barValueScore2Data);
+      worksheet.Charts.Add(chartShape);
+   
+      worksheet.Charts[0].Chart.SeriesGroups.First().Series.First().Title = new TextTitle("Team 1");
+      worksheet.Charts[0].Chart.SeriesGroups.First().Series.Last().Title = new TextTitle("Team 2");
 
 {{endregion}} 
 
