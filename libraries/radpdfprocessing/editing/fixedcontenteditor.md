@@ -60,7 +60,7 @@ __Example 2__ demonstrates how you can create a FixedContentEditor with a specif
         
 #### __[C#] Example 2: Create FixedContentEditor with a specific position__
 
-{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=cs-radpdfprocessing-editing-fixedcontenteditor_1}} 
+{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=cs-radpdfprocessing-editing-fixedcontenteditor_345}} 
 
 ````C#
 	MatrixPosition matrixPosition = new MatrixPosition();
