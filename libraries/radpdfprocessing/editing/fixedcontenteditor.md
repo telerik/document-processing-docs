@@ -44,10 +44,12 @@ __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug 
 
 #### __[C#] Example 1: Create FixedContentEditor__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_0}}
-	RadFixedDocument document = new RadFixedDocument(); 
-	var firstPage = document.Pages.AddPage(); 	 
-	FixedContentEditor fixedContentEditor = new FixedContentEditor(firstPage); 
+
+{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=cs-radpdfprocessing-editing-fixedcontenteditor_0}} 
+
+````C#
+
+````
 {{endregion}} 
 
 The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the content root element. When a new element is created, its position is being set to the current position of the editor. The initial position of the editor can be specified when it is created.      
@@ -56,15 +58,19 @@ __Example 2__ demonstrates how you can create a FixedContentEditor with a specif
         
 #### __[C#] Example 2: Create FixedContentEditor with a specific position__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_1}}
-	MatrixPosition matrixPosition = new MatrixPosition(); 
-	matrixPosition.Translate(20, 20); // Translates the position by (20, 20)  
-	matrixPosition.Translate(30, 30); // Translates the position by (30, 30).  	 
-	SimplePosition simplePosition = new SimplePosition(); 
-	simplePosition.Translate(20, 20); // Translates the position by (20, 20).  
-	simplePosition.Translate(30, 30); // Translates the position by (30, 30) overwriting the previous translations.  	 
-	FixedContentEditor simplePositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition); 
-	FixedContentEditor matrixPositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition); 
+{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=cs-radpdfprocessing-editing-fixedcontenteditor_345}} 
+
+````C#
+	MatrixPosition matrixPosition = new MatrixPosition();
+	matrixPosition.Translate(20, 20); // Translates the position by (20, 20) 
+	matrixPosition.Translate(30, 30); // Translates the position by (30, 30). 
+
+
+
+	FixedContentEditor simplePositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition);
+	FixedContentEditor matrixPositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition);
+
+````
 {{endregion}} 
 
 ## Inserting Elements
