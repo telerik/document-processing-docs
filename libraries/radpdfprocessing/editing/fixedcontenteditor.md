@@ -44,8 +44,7 @@ __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug 
 
 #### __[C#] Example 1: Create FixedContentEditor__
 
-
-{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=dpl_test}} 
+{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=createFixedEditor}} 
 
 {{endregion}} 
 
@@ -55,9 +54,9 @@ __Example 2__ demonstrates how you can create a FixedContentEditor with a specif
         
 #### __[C#] Example 2: Create FixedContentEditor with a specific position__
 
-{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=testregion}} 
 
-
+{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=initializeSpecificPosition}} 
+	 
 {{endregion}} 
 
 ## Inserting Elements
