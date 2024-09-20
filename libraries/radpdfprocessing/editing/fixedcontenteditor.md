@@ -159,7 +159,7 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
             
 #### __[C#] Example 7: Push clipping__
 
-{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=pushClipping}}
+{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=WRONGpushClipping}}
 	string visibleText = "The last word in this text is";
 	string text = string.Format("{0} clipped.", visibleText); //The last word in this text is clipped.
 	Block block = new Block();
