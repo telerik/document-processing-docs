@@ -67,3 +67,7 @@ The libraries can be used through the available NuGet packages.
 ## UI for .NET MAUI
 
 [Installing Telerik UI for .NET MAUI](https://docs.telerik.com/devtools/maui/installation/download-product-files)
+
+## See Also
+
+- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6, and newer versions]({%slug distribute-telerik-document-processing-libraries-net-versions%})
