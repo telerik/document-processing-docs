@@ -145,3 +145,4 @@ When merging documents that contain FormFields you need to ensure that each fiel
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 
+* [Creating a PDF Table with Form Fields Inside the Cells]({%slug insert-form-xobject-elements-pdf-table-cell%})
