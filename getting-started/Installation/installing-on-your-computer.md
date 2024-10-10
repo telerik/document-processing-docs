@@ -38,7 +38,7 @@ When the installation completes, the Telerik Document Processing assemblies will
 
 ## UI for Blazor
 
-[Download and Installation of Document Processing Libraries](https://docs.telerik.com/blazor-ui/common-features/document-processing)
+[Download and Installation of Document Processing Libraries](https://docs.telerik.com/blazor-ui/integrations/document-processing-libraries)
 
 The libraries can be used through the available NuGet packages.
 
