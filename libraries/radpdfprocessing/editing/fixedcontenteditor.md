@@ -44,7 +44,7 @@ __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug 
 
 #### Example 1: Create FixedContentEditor__
 
-<snippet id='createFixedEditor' />
+<snippet id='create-fixed-editor' />
 
 The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the content root element. When a new element is created, its position is being set to the current position of the editor. The initial position of the editor can be specified when it is created.      
 
