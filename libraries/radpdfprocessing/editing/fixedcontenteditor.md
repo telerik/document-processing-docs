@@ -44,9 +44,7 @@ __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug 
 
 #### __[C#] Example 1: Create FixedContentEditor__
 
-{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=createFixedEditor}} 
-
-{{endregion}} 
+<snippet id='createFixedEditor' />
 
 The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the content root element. When a new element is created, its position is being set to the current position of the editor. The initial position of the editor can be specified when it is created.      
 
@@ -54,10 +52,7 @@ __Example 2__ demonstrates how you can create a FixedContentEditor with a specif
         
 #### __[C#] Example 2: Create FixedContentEditor with a specific position__
 
-
-{{source=..\SamplesCS\RadPdfProcessing\Editing.cs region=initializeSpecificPosition}} 
-	 
-{{endregion}} 
+<snippet id='initializeSpecificPosition' />
 
 ## Inserting Elements
 
