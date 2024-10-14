@@ -42,7 +42,7 @@ position: 4
 
 __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) (also known as **IContentRootElement**) which it takes as a constructor parameter when it is created. __Example 1__ shows how you can create an editor.
 
-#### __[C#] Example 1: Create FixedContentEditor__
+#### Example 1: Create FixedContentEditor__
 
 <snippet id='createFixedEditor' />
 
@@ -50,7 +50,7 @@ The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-pos
 
 __Example 2__ demonstrates how you can create a FixedContentEditor with a specific initial [Position]({%slug radpdfprocessing-concepts-position%}).
         
-#### __[C#] Example 2: Create FixedContentEditor with a specific position__
+#### Example 2: Create FixedContentEditor with a specific position__
 
 <snippet id='initializeSpecificPosition' />
 
