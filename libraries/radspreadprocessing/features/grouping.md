@@ -42,15 +42,7 @@ There are two available options when grouping. The first option is to simply ass
 
 #### __[C#] Example 1: Grouping columns using outline level__
 
-{{region cs-radspreadprocessing-features-grouping_0}}
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	worksheet.Columns[0].SetOutlineLevel(1);
-	worksheet.Columns[1, 2].SetOutlineLevel(2);
-	worksheet.Columns[3].SetOutlineLevel(1);
-{{endregion}}
-
+<snippet id='vb-radspreadprocessing-features-grouping-outline-level'/>
 
 #### __[VB.NET] Example 1: Grouping columns using outline level__
 
