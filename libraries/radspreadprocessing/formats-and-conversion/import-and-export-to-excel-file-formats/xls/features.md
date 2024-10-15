@@ -1190,6 +1190,16 @@ No
 		<td>
  
 		</td>
+<tr>
+<td><b>Notes</b></td>
+<td>No</td>
+<td>Previously called "Comments"</td>
+</tr>
+<tr>
+<td><b>Comments</b></td>
+<td>No</td>
+<td>New version, also called "Threaded Comments"</td>
+</tr>	
 </table>
 
 

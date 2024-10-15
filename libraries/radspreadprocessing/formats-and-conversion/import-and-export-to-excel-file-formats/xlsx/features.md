@@ -1110,4 +1110,14 @@ Yes
 
 		</td>
 	</tr>
+<tr>
+<td><b>Notes</b></td>
+<td>Yes</td>
+<td>Previously called "Comments"</td>
+</tr>
+<tr>
+<td><b>Comments</b></td>
+<td>Yes</td>
+<td>New version, also called "Threaded Comments"</td>
+</tr>		
 </table>
