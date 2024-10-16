@@ -70,4 +70,4 @@ The libraries can be used through the available NuGet packages.
 
 ## See Also
 
-- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6, and newer versions]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
