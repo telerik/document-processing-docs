@@ -151,3 +151,4 @@ You can add PAGE, DATE or other fields to the headers and footers of a document.
  * [Document model]({%slug radwordsprocessing-model%})
  * [Section]({%slug radwordsprocessing-model-section%})
  * [Watermark]({%slug radwordsprocessing-concepts-watermark%})
+ * [Draw Header/Footer in RadFixedDocument](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/DrawHeaderFooter)
