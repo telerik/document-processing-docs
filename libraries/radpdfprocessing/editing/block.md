@@ -21,56 +21,40 @@ The most common usage of __Block__ is to draw flowing content. Similarly to [Fix
 
 ### Inserting Text
 
-Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achieved with one of the overloads of the __Insert()__ method. __Example 1__ shows a simple insert by passing a string to the method.
+Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achieved with one of the overloads of the __Insert()__ method. __Example 1__ shows all the overloads which allow specifying the styles and font family.
             
-
 #### __[C#] Example 1: Insert text__
 
 {{region cs-radpdfprocessing-editing-block_0}}
 	Block block = new Block();
 	block.InsertText("Text");
-{{endregion}}
 
+	// .NET Framework
+	block.InsertText(new System.Windows.Media.FontFamily("Arial"), "Text");
+	block.InsertText(new System.Windows.Media.FontFamily("Arial"), System.Windows.FontStyles.Italic, System.Windows.FontWeights.Bold, "Text");
 
-
-__Example 2__ demonstrates how to insert text with a specific font family.
-            
-
-#### __[C#] Example 2: Insert text with Arial font family__
-
-{{region cs-radpdfprocessing-editing-block_1}}
-	block.InsertText(new FontFamily("Arial"), "Text");
-{{endregion}}
-
-There is an additional overload of the InsertText() method enabling you to specify the font family, font style and font weight for the text which you would like to insert.
-
-#### __[C#] Example 3: Insert styled text__
-
-{{region cs-radpdfprocessing-editing-block_2}}
-	block.InsertText(new FontFamily("Arial"), FontStyles.Italic, FontWeights.Bold, "Text");
+	// .NET Standard
+	//block.InsertText(new Telerik.Documents.Core.Fonts.FontFamily("Arial"), "Text"); 
+	//block.InsertText(new Telerik.Documents.Core.Fonts.FontFamily("Arial"), Telerik.Documents.Core.Fonts.FontStyles.Italic, Telerik.Documents.Core.Fonts.FontWeights.Bold, "Text");
 {{endregion}}
 
 >The '\r' and '\n' characters don't have the usual meaning of "go to next line" when they are inserted into a PDF document and you cannot simply insert text containing these characters to produce multiline text. Instead, you should insert a line break.
 
-
 ### Inserting Line Break
 
-Inserting a line break results in the next element starting on a new line. The action is achieved with the __InsertLineBreak()__ method as shown in __Example 4__.
+Inserting a line break results in the next element starting on a new line. The action is achieved with the __InsertLineBreak()__ method as shown in __Example 2__.
             
 
-#### __[C#] Example 4: Break the line__
+#### __[C#] Example 2: Break the line__
 
-{{region cs-radpdfprocessing-editing-block_3}}
+{{region cs-radpdfprocessing-editing-block_1}}
 	block.InsertLineBreak();
 {{endregion}}
-
-
 
 ### Inserting Image
 
 __Block__ provides the following methods for inserting images:
             
-
 * block.InsertImage(imageSource);
 * block.InsertImage(stream);
 * block.InsertImage(imageSource, size);
@@ -78,10 +62,18 @@ __Block__ provides the following methods for inserting images:
 * block.InsertImage(imageSource, width, height);
 * block.InsertImage(stream, width, height);
                 
+#### __[C#] Example 3: Inserting an image__
+
+{{region cs-radpdfprocessing-editing-block_2}}
+	string imageFilePath = "sample.jpg";
+	FileStream fileStream = new FileStream(imageFilePath, FileMode.Open);
+	Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource imageSrc = new Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource(fileStream);
+
+	block.InsertImage(imageSrc, 300, 200);
+{{endregion}}
 
 Information on images in the context of the library is available in the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and [Image]({%slug radpdfprocessing-model-image%}) articles.
             
-
 ### Inserting Geometries
 
 [Geometries]({%slug radpdfprocessing-concepts-geometry%}) allow you to describe 2D shapes in a document. The following methods can be used to insert different geometries.
@@ -93,6 +85,19 @@ Information on images in the context of the library is available in the [ImageSo
 * block.**InsertPath**(geometry);
 * block.**InsertRectangle**(rectangle);
                 
+#### __[C#] Example 4: Inserting a geometry__
+
+{{region cs-radpdfprocessing-editing-block_3}}
+	Telerik.Windows.Documents.Fixed.Model.Graphics.RectangleGeometry rectangleGeometry = new Telerik.Windows.Documents.Fixed.Model.Graphics.RectangleGeometry();
+	// .NET Framework
+	rectangleGeometry.Rect = new System.Windows.Rect(10, 10, 400, 300);
+	block.InsertRectangle(new System.Windows.Rect(10, 10, 200, 150));
+	// .NET Standard
+	//rectangleGeometry.Rect = new Telerik.Documents.Primitives.Rect(10, 5, 400, 300);
+	//block.InsertRectangle(new Telerik.Documents.Primitives.Rect(20, 30, 200, 150));
+
+	block.InsertPath(rectangleGeometry);
+{{endregion}}
 
 ### Inserting Form-XObject Elements
 
@@ -101,6 +106,13 @@ The Form (or also known as Form-XObject) is an object that can contain PDF conte
 #### __[C#] Example 5: Insert a form__
 
 {{region cs-radpdfprocessing-editing-block_4}}
+	FormSource simpleForm = new FormSource();
+	simpleForm.Size = new System.Windows.Size(310, 250); // .NET Framework
+	//simpleForm.Size = new Telerik.Documents.Primitives.Size(310, 250); // .NET Standard
+
+	FixedContentEditor formEditor = new FixedContentEditor(simpleForm);
+	formEditor.DrawText("Sample text.");
+
 	block.InsertForm(simpleForm);
 {{endregion}}
 
