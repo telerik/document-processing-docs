@@ -16,7 +16,7 @@ ticketid: 1667593
 | 2024.3.806| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-When preparing a document for the [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) operation in RadWordsProcessing, it might be necessary to remove a `MERGEFIELD `  without losing its inserted value. This process ensures that the document is clean and ready for MailMerge without encountering issues related to leftover `MERGEFIELD` .
+When preparing a document for the [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) operation in RadWordsProcessing, it might be necessary to remove a [MERGEFIELD]({%slug radwordsprocessing-concepts-merge-field%}) without losing its inserted value. This process ensures that the document is clean and ready for MailMerge without encountering issues related to leftover `MERGEFIELD` .
 
 This KB article also answers the following questions:
 - How can I delete `MERGEFIELD` fields but keep their content in the document?
@@ -72,6 +72,10 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 ```
 
 This method ensures that the `MERGEFIELD ` is removed effectively, leaving only the value in the document.
+
+|Before|After|
+|----|----|
+|![Merge Fields Before](images/mergeFields.gif)|![Merge Fields After](images/replacedMergeFields.png)|
 
 ## See Also
 
