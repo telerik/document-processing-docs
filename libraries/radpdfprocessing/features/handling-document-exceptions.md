@@ -95,7 +95,8 @@ When using the OnDemand reading mode you should handle the __RadFixedDocument.Do
 | __NotSupportedScanEncoderException__| Represents an exception for a scan decoder which is not supported.|
 | __NotSupportedShadingTypeException__| Represents an exception for a shading type which is not supported. This exception has e ShadingType property which specifies the type of the shading.|
 | __NotSupportedStreamTypeException__| Represents an exception for a stream type which is not supported. A stream is not supported if it does not support read or seek. This exception has a SupportSeek and SupportRead properties which specify whether the stream supports them.|
-| __NotSupportedXObjectTypeException__| Represents an exception for document with an XObject type which is not supported.
+| __NotSupportedXObjectTypeException__| Represents an exception for document with an XObject type which is not supported.|
+|**DuplicatedJavaScriptNameException**|Represents an exception for JavaScript with a duplicated name.|
 
 # See Also
 
