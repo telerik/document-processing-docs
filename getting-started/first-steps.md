@@ -39,7 +39,7 @@ Since we distribute Telerik Document Processing libraries as an addition to seve
 
 As we are going to create a UI-Independent example, we will use a console project for this guide:
 
-* Open Microsoft Visual Studio and create a new console project. It could be a .NET Framework, .NET Standard, .NET 5 or later project.
+* Open Microsoft Visual Studio and create a new console project. It could be a .NET Framework, .NET Standard, .NET 6/.NET 8/.NET 9 project.
 
 #### __Figure 1: Go to File > New > Project > Console App (.Net Framework) > Next > Create__
 ![Create Console Project](images/VisualStudio_NewProject_Console3.gif "Create new Console Project")
@@ -55,7 +55,7 @@ This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-
 	  * __Telerik.Windows.Documents.Flow.dll__
 	  * __Telerik.Windows.Zip.dll__
 
-	For .NET Core/.NET 5+ project:
+	For .NET Core/.NET 6/.NET 8/.NET 9 project:
 	  * __Telerik.Documents.Core.dll__
 	  * __Telerik.Documents.Flow.dll__
 	  * __Telerik.Zip.dll__
@@ -65,10 +65,10 @@ This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-
 	For .NET Framework project:
 	  * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll__
 
-	For .NET Core/.NET 5+ project:
+	For .NET Core/.NET 6/.NET 8/.NET 9 project:
 	  * __Telerik.Documents.Flow.FormatProviders.Pdf.dll__
 
-> The Document Processing assemblies for .NET 5+ don't contain "Windows" in their names.
+> The Document Processing assemblies for .NET 6/.NET 8/.NET 9 don't contain "Windows" in their names.
 
 ## Step 4: Create a Document
 

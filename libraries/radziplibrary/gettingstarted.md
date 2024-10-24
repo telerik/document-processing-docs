@@ -25,7 +25,7 @@ The ZIP archive is represented by __ZipArchive__ class. It can be used in 3 mode
 
 ## Assembly References
 
->The libraries support .NET 4 and later. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**). 
+>The libraries support .NET 6/.NET 8/.NET 9. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**). 
 
 <table>
 <thead>

@@ -100,9 +100,9 @@ Yes
 Horizontal Alignment
               </td><td>
 
-Partially
+Yes
               </td><td>
-Supported Left, Center, and Right alignment
+Left, Right, Center - and Justified (since Q4 2024)
 </td></tr><tr><td>
 
 Vertical Alignment
