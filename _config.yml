@@ -39,6 +39,9 @@ navigation:
     common-information:
         title: Common Information
         position: 98 
+    security:
+        title: Security
+        position: 97
     "*overview":
         title: Overview
         position: 1
@@ -321,13 +324,18 @@ defaults:
     scope:
         path: "common-information"
     values:
-        description: "Common information that targets more than one library"
+        description: "Common information that targets more than one library."
 -
     scope:
         path: "troubleshooting"
     values:
-        description: "Find solutions to common issues that you may observe when working with the Telerik NuGet server and the NuGet packages it provides"
+        description: "Find solutions to common issues that you may observe when working with the Telerik NuGet server and the NuGet packages it provides."
 -
+    scope:
+        path: "security"
+    values:
+        description: "See Telerik's security guidelines, best practices, and reporting processes to protect our products, outlining how customers and researchers can report issues and how we address them."
+
 
     scope:
         path: "api"
