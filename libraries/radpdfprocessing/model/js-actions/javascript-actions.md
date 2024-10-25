@@ -1,6 +1,7 @@
 ---
-title: JavaScript Actions 
-page_title: JavaScript Actions  
+title: Overview 
+description: RadPdfProcessing provides support for JavaScript actions and trigger events.
+page_title: JavaScript Actions - Overview  
 slug: radpdfprocessing-model-javascript-actions 
 tags: js, action, pdf,javascript
 published: True
@@ -9,30 +10,33 @@ position: 0
 
 # JavaScript Actions  
 
-As of **Q4 2024** RadPdfProcessing offers import/ export functionality the javascript actions associated with pages, form fields, etc. so that they can be executed when the exported document is opened with Adobe Acrobat. 
+As of **Q4 2024** RadPdfProcessing provides support for:
 
-JavaScript Actions can be added by using the public **Actions** property of the following classes: 
+*  **JavaScript actions** associated with documents, pages, form fields, etc.
+*  **Trigger events** - represent a set of events that can trigger the execution of an action.
+
+JavaScript Actions are represented by the **JavaScriptAction** class storing in its public **Script** property the JS content as plain text. JS actions can be added by using the public **Actions** property of the following classes: 
 
 |Class|Collection Type|
 |----|----|
-|Link|ActionCollection*| 
-|BookmarkItem|ActionCollection*|
+|Link*|ActionCollection| 
+|BookmarkItem*|ActionCollection|
 |Widget|WidgetActionCollection| 
 |FormField|FormFieldActionCollection|
 |RadFixedDocument|DocumentActionCollection| 
 |RadFixedPage|PageActionCollection|
 
->note * The existing **Action** property is obsolete. 
+\* The existing **Action** property is obsolete. 
 
 ![PdfProcessing JS Actions Overview](images/js-action-overview.png)  
 
-### Adding a JavaScript Action to a TextBoxField 
+### Adding a JavaScript Action to a TextBoxField
 
 The following example demonstrates how to create a PDF document with three TextBoxFields where the third field calculates the sum of the values entered in the first two widgets:
 
 ![JS Action Sum FormField](images/js-action-sum-form-field.gif)   
 
-{{region cs-radpdfprocessing-model-js-actions-create}}
+```csharp
 
    RadFixedDocument document = new RadFixedDocument();
    document.Pages.AddPage();
@@ -63,7 +67,7 @@ The following example demonstrates how to create a PDF document with three TextB
    document.Pages[0].Annotations.Add(widget2);
    document.Pages[0].Annotations.Add(totalWidget);
 	 
-{{endregion}}
+```
  
 
 ## See Also
