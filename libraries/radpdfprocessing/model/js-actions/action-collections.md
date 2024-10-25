@@ -4,7 +4,7 @@ page_title: Action Collections
 slug: radpdfprocessing-model-action-collections
 tags: js, action, pdf, javascript
 published: True
-position: 0
+position: 1
 ---
 
 # Action Collections
