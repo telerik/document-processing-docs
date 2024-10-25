@@ -15,7 +15,11 @@ As of **Q4 2024** RadPdfProcessing provides support for:
 *  **JavaScript actions** associated with documents, pages, form fields, etc.
 *  **Trigger events** - represent a set of events that can trigger the execution of an action.
 
-JavaScript Actions are represented by the **JavaScriptAction** class storing in its public **Script** property the JS content as plain text. JS actions can be added by using the public **Actions** property of the following classes: 
+JavaScript Actions are represented by the **JavaScriptAction** class storing in its public **Script** property the JS content as plain text. 
+
+![PdfProcessing JS Actions Overview](images/js-action-overview.png)  
+
+JS actions can be added by using the public **Actions** property of the following classes: 
 
 |Class|Collection Type|
 |----|----|
@@ -27,8 +31,6 @@ JavaScript Actions are represented by the **JavaScriptAction** class storing in 
 |RadFixedPage|PageActionCollection|
 
 \* The existing **Action** property is obsolete. 
-
-![PdfProcessing JS Actions Overview](images/js-action-overview.png)  
 
 ### Adding a JavaScript Action to a TextBoxField
 
