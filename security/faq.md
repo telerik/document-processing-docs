@@ -10,7 +10,7 @@ position: 2
 
 # Frequently Asked Questions (FAQ)
 
-In this article, you will find essential information and resources to help you secure Telerik UI for ASP.NET AJAX controls. Whether you need to report vulnerabilities, manage third-party dependencies, or understand how security fixes are delivered, this FAQ provides clear guidance on our security processes. Explore best practices and learn how Progress ensures the highest level of security for its products, from vulnerability reporting to compliance with industry standards.
+In this article, you will find essential Telerik-related security information and resources. Whether you need to report vulnerabilities, manage third-party dependencies, or understand how security fixes are delivered, this FAQ provides clear guidance on our security processes. Explore best practices and learn how Progress ensures the highest level of security for its products, from vulnerability reporting to compliance with industry standards.
 
 ## How can I submit a security vulnerability report?
 
