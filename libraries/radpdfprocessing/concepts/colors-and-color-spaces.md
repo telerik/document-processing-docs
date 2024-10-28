@@ -9,35 +9,29 @@ position: 0
 
 # Colors and Color Spaces
 
-
-
-The __ColorBase__ abstract class is used to encapsulate colors in different color spaces. The classes which inherit from __ColorBase__:
+The __ColorBase__ abstract class is used to encapsulate colors in different color spaces. The classes which inherit from __ColorBase__ are:
       
-
 * [SimpleColor](#simplecolor)
 
 * [PatternColor](#patterncolor)
 
+* [LabColor](#labcolor)
 
 ## SimpleColor
 
-The abstract __SimpleColor__ represents colors, which are defined with color components. The following classes inherit SimpleColor:
-        
+The simple colors represent colors, which are defined with color components. The following colors are categorized as simple:
 
 ### RgbColor
 
-Represents an ARGB (alpha, red, green, blue) color. The RgbColor class exposes the following properties:
-        
+Represents an ARGB (alpha, red, green, blue) color. The RgbColor class exposes the following properties: 
 
 * __A__: The alpha component value.
 * __R__: The red component value.
 * __G__: The green component value.
 * __B__: The blue component value.
             
-
 __Example 1__ demonstrates how you can create an RgbColor and assign it as Fill of a [Path]({%slug radpdfprocessing-model-path%}) element.
         
-
 #### __[C#] Example 1: Create RgbColor__
 
 {{region cs-radpdfprocessing-concepts-colors-and-color-spaces_0}}
@@ -46,17 +40,43 @@ __Example 1__ demonstrates how you can create an RgbColor and assign it as Fill 
 	path.Fill = magenta;
 {{endregion}}
 
+### CmykColor
 
+Represents an CMYK (cyan, magenta, yellow, key) color. The CmykColor class was introduced in **Q4 2024** and it exposes the following properties:
+
+* **C**: The cyan component of the color, a value between 0.0 and 1.0.
+* **M**: The magenta component of the color, a value between 0.0 and 1.0.
+* **Y**: The yellow component of the color, a value between 0.0 and 1.0.
+* **K**: The key (black) component of the color, a value between 0.0 and 1.0.
+
+#### Create CmykColor
+
+```csharp
+   RadFixedDocument document = new RadFixedDocument();
+   RadFixedPage page = document.Pages.AddPage();
+   FixedContentEditor containerEditor = new FixedContentEditor(page);
+
+   double c = 0.46;
+   double m = 0.3;
+   double y = 0.76;
+   double k = 0.12;
+
+   CmykColor cmykColor = new CmykColor(c, m, y, k);
+   containerEditor.GraphicProperties.FillColor = cmykColor;
+   containerEditor.DrawRectangle(new Rect(10, 10, 48, 29));
+```
+
+![CMYK Color](images/cmyk-color.png) 
+
+>note The difference between the RGB and CMYK color spaces is an essential aspect of color management in the design industry. While CMYK is used for traditional print, the RGB color space is used for screen-based media. 
 
 ## PatternColor
 
 The abstract __PatternColor__ class represents colors, which are defined with the pattern color space. A pattern color paints with a pattern rather than a single color. PatternColor is inherited by the __Gradient__ and __TilingBase__ classes.
         
-
 ### Gradient
 
-Gradient provides a smooth transition between colors across an area which is painted. The gradient color is represented by the __Gradient__ abstract class which exposes the following properties:
-            
+Gradient provides a smooth transition between colors across an area which is painted. The gradient color is represented by the __Gradient__ abstract class which exposes the following properties:         
 
 * __StartPoint__: A __Point__ object representing the starting two-dimensional coordinates of the gradient.
 
@@ -70,16 +90,12 @@ Gradient provides a smooth transition between colors across an area which is pai
 
 * __GradientStops__: A collection of [GradientStop](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.GradientStop.html) objects representing the gradient stops collection.
                 
-
 The __Gradient__ class is inherited by the following classes:
             
-
 * __LinearGradient__: Defines a color blend along a line between two points, optionally extended beyond the boundary points by continuing the boundary colors.
             
-	
 	__Example 2__ shows how to create a LinearGradient and assign it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
             
-	
 	#### __[C#] Example 2: Create LinearGradient__
 	
 	{{region cs-radpdfprocessing-concepts-colors-and-color-spaces_1}}
@@ -93,15 +109,11 @@ The __Gradient__ class is inherited by the following classes:
 		containerEditor.DrawRectangle(new Rect(10, 10, 48, 29));
 	{{endregion}}
 	
-	
-	
 	The gradient created in __Example 2__ is shown in __Figure 1__.
 	            
-	
 	#### Figure 1: LinearGradient	
 	![Rad Pdf Processing Concepts Colors And Color Spaces 01](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
     
-
 * __RadialGradient__: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The __RadialGradient__ class exposes the following properties:
                 
 
@@ -109,7 +121,6 @@ The __Gradient__ class is inherited by the following classes:
 	 * __EndRadius__: Decimal number determining the radius of the ending circle.
               
 	__Example 3__ demonstrates how to create a RadialGradient and assing it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
-	
 	
 	#### __[C#] Example 3: Create RadialGradient__
 	
@@ -129,7 +140,6 @@ The __Gradient__ class is inherited by the following classes:
 	#### Figure 2: RadialGradient
 	
 	![Rad Pdf Processing Concepts Colors And Color Spaces 03](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_03.png)
-
 
 ### Tiling Pattern
 
@@ -180,13 +190,24 @@ Since the __TilingBase__ class implements the __IContentRootElement__ interface 
 	containerEditor.DrawCircle(new Point(30, 30), 20);
 {{endregion}}
 
-
-
-The tiling created in __Example 4__ is shown in __Figure 3__.
-            
+The tiling created in __Example 4__ is shown in __Figure 3__.        
 
 #### Figure 3: Tiling
 ![Rad Pdf Processing Concepts Colors And Color Spaces 02](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_02.png)
+
+## LabColor
+
+ **LAB** is a device-independent color space: **L** represents lightness or brightness, **A** represents the red-green axis, and **B** represents the yellow-blue axis.
+
+ #### Create LabColor
+
+```csharp
+   double[] whitePoint = new double[3] { 1, 2, 3 };
+   double[] range = new double[4] { 4, 5, 6, 7 };
+   double[] expectedBlackPoint = new double[3] { 0, 0, 0 };
+
+   LabColor labColor = new LabColor(1, 2, 3, whitePoint, range);
+```
 
 ## See Also
 
