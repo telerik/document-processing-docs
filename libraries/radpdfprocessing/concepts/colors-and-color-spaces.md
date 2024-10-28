@@ -42,7 +42,7 @@ __Example 1__ demonstrates how you can create an RgbColor and assign it as Fill 
 
 ### CmykColor
 
-Represents an CMYK (cyan, magenta, yellow, key) color. The CmykColor class was introduced in **Q4 2024** and it exposes the following properties:
+Represents a CMYK (cyan, magenta, yellow, key) color. The CmykColor class was introduced in **Q4 2024** and it exposes the following properties:
 
 * **C**: The cyan component of the color, a value between 0.0 and 1.0.
 * **M**: The magenta component of the color, a value between 0.0 and 1.0.
