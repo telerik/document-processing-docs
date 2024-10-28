@@ -199,7 +199,7 @@ The tiling created in __Example 4__ is shown in __Figure 3__.
 
  **LAB** is a device-independent color space: **L** represents lightness or brightness, **A** represents the red-green axis, and **B** represents the yellow-blue axis.
 
- #### Create LabColor
+#### Create LabColor
 
 ```csharp
    double[] whitePoint = new double[3] { 1, 2, 3 };
