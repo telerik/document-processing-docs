@@ -1121,3 +1121,7 @@ Yes
 <td>New version, also called "Threaded Comments"</td>
 </tr>		
 </table>
+
+## See Also
+
+* [Comments vs Notes in RadSpreadProcessing]({%slug comments-vs-notes-in-radspreadprocessing%})
