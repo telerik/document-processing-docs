@@ -86,6 +86,16 @@ There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedd
 
 >tip These fonts, or their font metrics and suitable substitution fonts, must be available to the consumer application.
 
+RadPdfProcessing introduced suitable API for replacing the predefined Standard Fonts in **R2 2023**. The public static method **ReplaceStandardFont**(StandardFontNames name, byte[] data) offered by the 
+FontsRepository will replace the provided standard font with the passed font data:
+
+#### Replace a Standard Font
+
+```csharp
+  byte[] fontData = File.ReadAllBytes("Courier-font.ttf");
+  FontsRepository.ReplaceStandardFont(StandardFontNames.Courier, fontData);
+
+```
 
 ## Embedded Fonts
 
