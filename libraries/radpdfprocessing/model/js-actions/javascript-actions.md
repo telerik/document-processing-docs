@@ -23,12 +23,12 @@ JS actions can be added by using the public **Actions** property of the followin
 
 |Class|Collection Type|
 |----|----|
-|Link*|ActionCollection| 
-|BookmarkItem*|ActionCollection|
-|Widget|WidgetActionCollection| 
-|FormField|FormFieldActionCollection|
-|RadFixedDocument|DocumentActionCollection| 
-|RadFixedPage|PageActionCollection|
+|Link*|[ActionCollection]({%slug radpdfprocessing-model-action-collections%}#actioncollection)| 
+|BookmarkItem*|[ActionCollection]({%slug radpdfprocessing-model-action-collections%}#actioncollection)|
+|Widget|[WidgetActionCollection]({%slug radpdfprocessing-model-action-collections%}#widgetactioncollection)| 
+|FormField|[FormFieldActionCollection]({%slug radpdfprocessing-model-action-collections%}#formfieldactioncollection)|
+|RadFixedDocument|[DocumentActionCollection]({%slug radpdfprocessing-model-action-collections%}#documentactioncollection)| 
+|RadFixedPage|[PageActionCollection]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection)|
 
 \* The existing **Action** property is obsolete. 
 
