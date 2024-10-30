@@ -105,3 +105,4 @@ The result from __Example 3__ is illustrated on __Figure 1__.
  * [TableRow]({%slug radpdfprocessing-editing-tablerow%})
  * [Block]({%slug radpdfprocessing-editing-block%})
  * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
+ * [Creating a PDF Table with Form Fields Inside the Cells]({%slug insert-form-xobject-elements-pdf-table-cell%})
