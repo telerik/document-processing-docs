@@ -13,7 +13,7 @@ Depending on the [document element]({%slug radpdfprocessing-model-general-inform
 
 ## ActionCollection
 
-Represents a basic collection of [Action](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/annotations/links#action) objects. The collection allows manipulating the items by the following public methods:
+Represents a basic collection of [Action]({%slug radpdfprocessing-model-annotations-links%}#action) objects. The collection allows manipulating the items by the following public methods:
 
 |Method Name|Description|
 |----|----|
