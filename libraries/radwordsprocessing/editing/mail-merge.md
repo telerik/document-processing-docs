@@ -226,3 +226,4 @@ If you want to separate the items into several rows you need to close the group 
  * [Inserting Images using Mail Merge]({%slug inserting-images-using-mail-merge-radwordsprocessing%})
  * [Populate a Table with Data using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
  * [Generating a Word Document Template with Data Using MailMerge in RadWordsProcessing]({%slug generate-doc-template-and-populate-with-collection-data-mail-merge%})
+ * [Performing Nested MailMerge with Multiple Levels in RadWordsProcessing]({%slug nested-mailmerge-radwordsprocessing%})
