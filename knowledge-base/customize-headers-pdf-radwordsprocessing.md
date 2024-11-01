@@ -4,7 +4,7 @@ description: Learn how to customize headers in PDF documents to have left, cente
 type: how-to
 page_title: How to Customize Headers in PDF Documents with RadWordsProcessing
 slug: customize-headers-pdf-radwordsprocessing
-tags: radwordsprocessing, document processing, header, alignment, pdf, convert html to pdf
+tags: wordsprocessing, document, processing, header, alignment, pdf, convert, html
 res_type: kb
 ticketid: 1665701
 ---
@@ -16,13 +16,13 @@ ticketid: 1665701
 | 2024.3.806| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-When converting HTML documents to PDF format, it might be necessary to customize the document header to include left, center, and right aligned text and images. This article demonstrates how to generated a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and divide a header into three sections and customize the font settings for each section respectively using the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library.
+This article demonstrates how to generate a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}), divide a header into three sections, and customize the font settings for each section respectively using the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library.
 
 ![Left, Center, Right Headers](images/left-center-right-header.png)    
 
 ## Solution
 
-To achieve a header with left, center, and right aligned sections in a PDF document, use the RadWordsProcessing library to create a header and then insert a [Table]({%slug radwordsprocessing-model-table%}) with three [cells]({%slug radwordsprocessing-model-tablecell%}) into the header. Each cell represents one section of the header (left, center, right) and can contain text or image. The following steps and code snippet demonstrate this process:
+To achieve a header with left, center, and right aligned sections in a PDF document, use the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library to create a header and then insert a [Table]({%slug radwordsprocessing-model-table%}) with three [cells]({%slug radwordsprocessing-model-tablecell%}) into the header. Each cell represents one section of the header (left, center, right) and can contain text or image. The following steps and code snippet demonstrate this process:
 
 1. Create a new [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and add a section to it.
 2. Define the page size and margins for the section.
