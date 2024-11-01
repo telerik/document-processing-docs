@@ -16,7 +16,7 @@ ticketid: 1660148
 | 2024.3.806| RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-Creating tables with customized layouts, including varying column spans, is a common requirement for document processing. This article demonstrates how to achieve a table with multiple rows, each having a different column layout, using the [RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview) library. 
+Creating tables with customized layouts, including varying column spans, is a common requirement for document processing. This article demonstrates how to achieve a table with multiple rows, each having a different column layout, using the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library. 
 
 Here is demonstrated a sample design for such a custom layout:
 
@@ -189,5 +189,5 @@ Here's an example code snippet demonstrating the setup:
 
 ## See Also
 
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Working with Tables in RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/table)
+- [Tables in RadPdfProcessing]({%slug radpdfprocessing-editing-table%})
+- [TableCell]({%slug radpdfprocessing-editing-tablecell%})
