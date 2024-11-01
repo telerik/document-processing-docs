@@ -4,7 +4,7 @@ description: How to prevent text with special characters from being cut off when
 type: how-to
 page_title: How to prevent text with special characters from being cut off when converting HTML to PDF using RadWordsProcessing
 slug: prevent-text-cut-off-pdf-conversion-radwordsprocessing
-tags: radwordsprocessing, documentprocessing, pdf, pdfconversion, fonts, special characters
+tags: radwordsprocessing, documentprocessing, pdf, pdfconversion, fonts, special, characters
 res_type: kb
 ticketid: 1665364
 ---
