@@ -29,7 +29,7 @@ __Link__ exposes the following properties:
 * **NamedDestination**: A named destination associated with the link.
 
 
-* __Action__: An [action]({%slug radpdfprocessing-model-actions-overview%}) to be performed when the annotation is activated. __Example 2__ demonstrates how you can create a Link using a previously created __Action__ and add the Link in RadFixedPage's Annotations collection.
+* __Action__: An [action]({%slug radpdfprocessing-model-actions%}) to be performed when the annotation is activated. __Example 2__ demonstrates how you can create a Link using a previously created __Action__ and add the Link in RadFixedPage's Annotations collection.
             
 
 
