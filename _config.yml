@@ -210,9 +210,12 @@ navigation:
         title: Interactive Forms
     libraries/radpdfprocessing/model/interactive-forms/form-fields:
         title: Form Fields
-    libraries/radpdfprocessing/model/js-actions:
-        title: Javascript Actions
+    libraries/radpdfprocessing/model/actions:
+        title: Actions
         position: 7
+    libraries/radpdfprocessing/model/actions/js-actions:
+        title: Javascript Actions
+        position: 1
     libraries/radpdfprocessing/formats-and-conversion:
         title: Formats and Conversion
         position: 8
