@@ -68,7 +68,7 @@ It is suitable for cases when a certain calculation needs to be performed after 
 
 A common case is restricting the user's input, e.g. when entering a date in a specific format:
 
-```csharp
+{{region cs-radpdfprocessing-formfieldactioncollection}}
 
     RadFixedDocument document = new RadFixedDocument();
     document.Pages.AddPage();
@@ -79,12 +79,11 @@ A common case is restricting the user's input, e.g. when entering a date in a sp
 
     VariableContentWidget widget = textField.Widgets.AddWidget();
     widget.Rect = new Rect(new Size(250, 50));
-    widget.RecalculateContent();
 
     document.AcroForm.FormFields.Add(textField);
     document.Pages[0].Annotations.Add(widget);    
-
-```
+    
+{{endregion}} 
 
 The achieved result is illustrated below: 
 
@@ -101,7 +100,7 @@ Represents a collection of Action objects associated with a [RadFixedPage]({%slu
 
 The following example shows how to utilize the JavaScript Actions functionality showing an alert when the second page in a document is closed
 
-```csharp
+{{region cs-radpdfprocessing-pageactioncollection}}
 
    RadFixedDocument document = new RadFixedDocument();
    document.Pages.AddPage();//first page
@@ -110,7 +109,7 @@ The following example shows how to utilize the JavaScript Actions functionality 
    page.Actions.OnPageClose.Add(action);
    document.Pages.AddPage();//third page 
 
-```
+{{endregion}} 
 
 ![JS Action Page](images/js-action-page.gif)  
 

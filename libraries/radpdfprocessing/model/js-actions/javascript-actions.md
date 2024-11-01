@@ -13,7 +13,7 @@ position: 0
 As of **Q4 2024** RadPdfProcessing provides support for:
 
 *  **JavaScript actions** associated with documents, pages, form fields, etc.
-*  **Trigger events** - represent a set of events that can trigger the execution of an action.
+*  **Event triggered actions** - represent actions that can be executed after a certain event in the respective viewer (e.g. RadPdfViewer, Adobe or a web browser) is triggerred.
 
 JavaScript Actions are represented by the **JavaScriptAction** class storing in its public **Script** property the JS content as plain text. 
 
@@ -38,7 +38,7 @@ The following example demonstrates how to create a PDF document with three TextB
 
 ![JS Action Sum FormField](images/js-action-sum-form-field.gif)   
 
-```csharp
+{{region cs-radpdfprocessing-sum-js-action}}
 
    RadFixedDocument document = new RadFixedDocument();
    document.Pages.AddPage();
@@ -58,10 +58,6 @@ The following example demonstrates how to create a PDF document with three TextB
    VariableContentWidget totalWidget = totalField.Widgets.AddWidget();
    totalWidget.Rect = new Rect(new Point(0, 100), new Size(150, 30));
 
-   widget1.RecalculateContent();
-   widget2.RecalculateContent();
-   totalWidget.RecalculateContent();
-
    document.AcroForm.FormFields.Add(field1);
    document.AcroForm.FormFields.Add(field2);
    document.AcroForm.FormFields.Add(totalField);
@@ -69,8 +65,7 @@ The following example demonstrates how to create a PDF document with three TextB
    document.Pages[0].Annotations.Add(widget2);
    document.Pages[0].Annotations.Add(totalWidget);
 	 
-```
- 
+{{endregion}} 
 
 ## See Also
 

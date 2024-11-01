@@ -44,10 +44,6 @@ Such functionality is achieved with the [JavaScript Actions]({%slug radpdfproces
    VariableContentWidget totalWidget = totalField.Widgets.AddWidget();
    totalWidget.Rect = new Rect(new Point(0, 100), new Size(150, 30));
 
-   priceWidget.RecalculateContent();
-   amountWidget.RecalculateContent();
-   totalWidget.RecalculateContent();
-
    document.AcroForm.FormFields.Add(priceField);
    document.AcroForm.FormFields.Add(amountField);
    document.AcroForm.FormFields.Add(totalField);
