@@ -105,3 +105,4 @@ The result from __Example 3__ is illustrated on __Figure 1__.
  * [TableRow]({%slug radpdfprocessing-editing-tablerow%})
  * [Block]({%slug radpdfprocessing-editing-block%})
  * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
+ * [Implementing Column Span in RadPdfProcessing Tables]({%slug table-column-span-radpdfprocessing%})

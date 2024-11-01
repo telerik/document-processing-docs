@@ -17,7 +17,7 @@ ticketid: 1660148
 
 ## Description
 
-Creating tables with varying column counts and sizes in a PDF can be challenging, especially when trying to merge cells across columns to achieve a specific layout. This article demonstrates how to use the `ColumnSpan` property in the [RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/table) library to merge cells across columns and adjust the layout of tables as required. This KB article also answers the following questions:
+Creating [tables]({%slug radpdfprocessing-editing-table%}) with varying column counts and sizes in a PDF can be challenging, especially when trying to merge cells across columns to achieve a specific layout. This article demonstrates how to use the `ColumnSpan` property in the RadPdfProcessing library to merge cells across columns and adjust the layout of tables as required. This KB article also answers the following questions:
 - How do I merge cells across columns in a PDF table using RadPdfProcessing?
 - How can I adjust the column count dynamically in a table created with RadPdfProcessing?
 - What is the correct way to apply `ColumnSpan` in RadPdfProcessing tables for custom layouts? 
@@ -26,7 +26,7 @@ Creating tables with varying column counts and sizes in a PDF can be challenging
 
 To correctly implement column spanning in tables using RadPdfProcessing, follow these steps:
 
-1. Create a new `Table` and configure its properties, such as `LayoutType` and `DefaultCellProperties`.
+1. Create a new [Table]({%slug radpdfprocessing-editing-table%}) and configure its properties, such as `LayoutType` and `DefaultCellProperties`.
 
 2. When adding cells to a row that includes a column span, adjust the number of added cells accordingly. For a row with cells that should span across multiple columns, reduce the number of total cells in that row by the span amount minus one.
 
@@ -115,5 +115,5 @@ The achieved result is illustrated below:
 
 ## See Also
 
-- [RadPdfProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/table)
-- [Table Class API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Tables.Table.html)
+- [Tables in RadPdfProcessing]({%slug radpdfprocessing-editing-table%})
+- [TableCell]({%slug radpdfprocessing-editing-tablecell%})

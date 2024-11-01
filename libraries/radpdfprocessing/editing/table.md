@@ -294,3 +294,4 @@ As of **Q3 2024**, along with the BorderStyle.*Single*, RadPdfProcessing offers 
  * [TableRow]({%slug radpdfprocessing-editing-tablerow%})
  * [TableCell]({%slug radpdfprocessing-editing-tablecell%})
  * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
+ * [Implementing Column Span in RadPdfProcessing Tables]({%slug table-column-span-radpdfprocessing%})
