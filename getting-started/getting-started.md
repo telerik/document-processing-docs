@@ -16,7 +16,7 @@ Telerik Document Processing includes a set of cross-platform libraries that let 
 
 The following tables list all Telerik Document Processing assemblies for the different platforms and their roles:
 
-### Assemblies for .NET Standard and .NET 6+ 
+### Assemblies for .NET Standard and .NET 6/.NET 8/.NET 9
 
 | Assembly Name| Description |
 |-------|----------------|

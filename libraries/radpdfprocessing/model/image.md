@@ -19,6 +19,7 @@ You can edit an __Image__ element using the properties the class exposes. The pr
 * __Width__: The width of the image.
 * __Height__: The height of the image.
 * __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the __IContainerElement__.
+* __AlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
 
 >note As of **Q3 2024** RadPdfProcessing provides support for SVG (vector graphics image format): [Adding SVG into a Document](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/formsource#adding-svg-into-a-document).
             
@@ -36,7 +37,8 @@ __Example 1__ shows how to initialize an Image object, assigns an ImageSource to
     ImageSource imageSrc = new ImageSource(fileStream);
     image.ImageSource = imageSrc;
     image.Width = 200;
-    image.Height = 200; 
+    image.Height = 200;
+    image.AlphaConstant = 0.5; 
     SimplePosition simplePosition = new SimplePosition();
     simplePosition.Translate(200, 300);
     image.Position = simplePosition;

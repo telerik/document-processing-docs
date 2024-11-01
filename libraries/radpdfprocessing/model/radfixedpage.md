@@ -23,12 +23,15 @@ The root element in the document model tree is [RadFixedDocument]({%slug radpdfp
 
 __RadFixedPage__ exposes the following properties:        
 
-* __Content__: The content elements collection.
-* __Annotations__: Collection that contains all [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) in the RadFixedPage.
-* __MediaBox__: Defines the boundaries of the physical medium on which the page will be printed. Any content falling outside this boundary is discarded without affecting the meaning of the PDF file. 
-* __CropBox__: Defines the region to which the contents of the page are clipped (cropped) when displayed or printed. This boundary determines the visible page content. The default value is the page’s media box. 
-* __Size__: Property of type Size representing the size of the page. Its value is determined by the width and height of the **MediaBox**.
-* __Rotation__: Property of type [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) representing the page rotation.         
+|Property Name|Description|
+|----|----|
+|__Content__|The content elements collection.|
+|__Annotations__|Collection that contains all [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) in the RadFixedPage.|
+|__MediaBox__|Defines the boundaries of the physical medium on which the page will be printed. Any content falling outside this boundary is discarded without affecting the meaning of the PDF file. | 
+|__CropBox__| Defines the region to which the contents of the page are clipped (cropped) when displayed or printed. This boundary determines the visible page content. The default value is the page’s media box. |
+|__Size__|Property of type Size representing the size of the page. Its value is determined by the width and height of the **MediaBox**.|
+|__Rotation__|Property of type [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) representing the page rotation.|
+|**Actions**|Gets the page [actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) collection.|         
 
 __Example 1__ demonstrates how to create a new __RadFixedPage__ instance and add it to the __Pages__ collection of __RadFixedDocument__.  
 
