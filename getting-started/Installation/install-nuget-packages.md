@@ -67,3 +67,4 @@ Before you can install Telerik NuGet packages, you must configure the Telerik Nu
 ## See Also
 
  * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
+ * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
