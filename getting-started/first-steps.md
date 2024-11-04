@@ -156,3 +156,4 @@ Now that you have run your first project example with Telerik Document Processin
 * [System Requirements]({%slug installation-system-requirements%})
 * [Installing on your computer]({%slug installation-installing-on-your-computer%})
 * [Document Processing SDK Examples](https://github.com/telerik/document-processing-sdk)
+* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
