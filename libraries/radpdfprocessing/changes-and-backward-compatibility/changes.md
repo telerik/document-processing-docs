@@ -9,7 +9,11 @@ position: 0
 
 # Changes
 
-This topic summarizes the new functionality introduced in the library with helpful links to places in the documentation that describe in greater detail the new functionality and how it can be used.
+This topic summarizes the new functionality introduced in the library with helpful links to places in the documentation that describe in greater detail the new functionality and how it can be used. [Read more.]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+
+## What's New in 2024 Q4
+
+* Introduced timeout mechanism for import and export of documents. The new Import and Export methods for all FormatProviders have a mandatory timeout parameter. 
 
 ## What's New in 2024 Q2
 
