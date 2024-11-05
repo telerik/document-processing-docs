@@ -37,14 +37,17 @@ __Example 1__ shows how to import an XLS file using a FileStream. The code assur
     {
         throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
     }
-    
+
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
     IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
-    
+
     using (Stream input = new FileStream(fileName, FileMode.Open))
     {
-        workbook = formatProvider.Import(input);
+        //workbook = formatProvider.Import(input); //This method is obsolete since Q4 2024.
+
+        workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
     }
+
 {{endregion}}
 
 
@@ -60,13 +63,16 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
     workbook.Worksheets.Add();
     string fileName = "SampleFile.xls";
-    
+
     Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
-    
+
     using (Stream output = new FileStream(fileName, FileMode.Create))
     {
-        formatProvider.Export(workbook, output);
+        //formatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
+
+        formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10)); 
     }
+
 {{endregion}}
 
 
@@ -76,15 +82,18 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
 
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
     workbook.Worksheets.Add();
-    
+
     Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
-    
+
     byte[] bytes;
     using (MemoryStream output = new MemoryStream())
     {
-        formatProvider.Export(workbook, output);
+        //formatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
+
+        formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
         bytes = output.ToArray();
     }
+
 {{endregion}}
 
 

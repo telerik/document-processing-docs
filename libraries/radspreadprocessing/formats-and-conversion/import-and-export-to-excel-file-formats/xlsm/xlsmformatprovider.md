@@ -38,20 +38,22 @@ __Example 1__ shows how to import an Xlsm file using a FileStream. The code assu
 #### __[C#] Example 1: Import Xlsm (Excel Workbook) file__
 
 {{region cs-radspreadprocessing-formats-and-conversion-Xlsm-Xlsmformatprovider_0}}
-	string fileName = "SampleFile.Xlsm";
-	if (!File.Exists(fileName))
-	{
-	    throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
-	}
-	
+    string fileName = "SampleFile.Xlsm";
+    if (!File.Exists(fileName))
+    {
+        throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
+    }
 
-	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
-	IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
-	
-	using (Stream input = new FileStream(fileName, FileMode.Open))
-	{
-	    workbook = formatProvider.Import(input);
-	}
+
+    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
+    IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
+
+    using (Stream input = new FileStream(fileName, FileMode.Open))
+    {
+        //workbook = formatProvider.Import(input); //This method is obsolete since Q4 2024.
+
+        workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
+    }
 
 {{endregion}}
 
@@ -64,17 +66,20 @@ __Example 2__ demonstrates how to export an existing Workbook to an Xlsm file. T
 #### __[C#] Example 2: Export spreadsheet document to Xlsm (Excel Workbook) file__
 
 {{region cs-radspreadprocessing-formats-and-conversion-Xlsm-Xlsmformatprovider_1}}
-	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
-	workbook.Worksheets.Add();
-	string fileName = "SampleFile.Xlsm";
-	
+    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
+    workbook.Worksheets.Add();
+    string fileName = "SampleFile.Xlsm";
 
-	Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
-	
-	using (Stream output = new FileStream(fileName, FileMode.Create))
-	{
-	    formatProvider.Export(workbook, output);
-	}
+
+    Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
+
+    using (Stream output = new FileStream(fileName, FileMode.Create))
+    {
+        //formatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
+
+        formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
+    }
+
 
 {{endregion}}
 
@@ -85,13 +90,15 @@ __Example 2__ demonstrates how to export an existing Workbook to an Xlsm file. T
 
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
     workbook.Worksheets.Add();
-    
+
     Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
-    
+
     byte[] bytes;
     using (MemoryStream output = new MemoryStream())
     {
-        formatProvider.Export(workbook, output);
+        //formatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
+
+        formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
         bytes = output.ToArray();
     }
 
