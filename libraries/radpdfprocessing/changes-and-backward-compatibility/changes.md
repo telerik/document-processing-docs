@@ -1,8 +1,8 @@
 ---
 title: Changes
-page_title: Changes
+page_title: Get familiar with the new functionality introduced in the RadPdfProcessing. 
 slug: radpdfprocessing-changes
-tags: changes
+tags: changes, pdf, processing, dpl, document, timeout
 published: True
 position: 0
 ---
