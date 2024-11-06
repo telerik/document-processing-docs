@@ -32,7 +32,10 @@ __Example 1__ shows how to use HtmlFormatProvider to import an HTML document fro
 	using (Stream input = File.OpenRead(@"Sample.html"))
 	{
 	    Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider();
-	    RadFlowDocument document = provider.Import(input);
+
+	    //RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
+
+		RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
 
@@ -46,7 +49,10 @@ __Example 2__ shows how you can import an HTML string.
 {{region cs-radwordsprocessing-formats-and-conversion-html-htmlformatprovider_1}}
 	string html = "<p>hello world!</p>";
 	Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider();
-	RadFlowDocument document = provider.Import(html);
+
+	//RadFlowDocument document = provider.Import(html); //This method is obsolete since Q4 2024.
+
+	//RadFlowDocument document = provider.Import(html, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 
@@ -69,7 +75,10 @@ __Example 3__ shows how to use the HtmlFormatProvider to export an instance of R
 	using (Stream output = File.Create("Sample.html"))
 	{
 	    RadFlowDocument document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
-	    provider.Export(document, output);
+
+	    //provider.Export(document, output); //This method is obsolete since Q4 2024.
+
+		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
 
@@ -83,7 +92,10 @@ You can also export the document to a string variable like shown in __Example 4_
 {{region cs-radwordsprocessing-formats-and-conversion-html-htmlformatprovider_3}}
 	RadFlowDocument document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
 	Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider();
-	string html = provider.Export(document);
+	
+	//string html = provider.Export(document); //This method is obsolete since Q4 2024.
+
+	string html = provider.Export(document, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 

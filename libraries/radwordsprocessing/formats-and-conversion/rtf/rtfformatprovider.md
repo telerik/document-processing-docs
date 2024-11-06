@@ -38,7 +38,9 @@ The code from __Example 1__ shows how to use __RtfFormatProvider__ to import an 
 
 	using (Stream input = File.OpenRead("Sample.rtf"))
 	{
-	    document = provider.Import(input);
+	    //document = provider.Import(input); //This method is obsolete since Q4 2024.
+
+		document = provider.Import(input, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
 
@@ -52,7 +54,9 @@ And here is how you can import a document from string containing the RTF documen
 {{region cs-radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider_1}}
 	Telerik.Windows.Documents.Flow.FormatProviders.Rtf.RtfFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Rtf.RtfFormatProvider();
 
-	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input);
+	//Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
+
+	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 
@@ -78,7 +82,10 @@ __Example 3__ shows how to use __RtfFormatProvider__ to export __RadFlowDocument
 	using (Stream output = File.Create("sample.rtf"))
 	{
 	    document = CreateRadFlowDocument();
-	    provider.Export(document, output);
+
+	    //provider.Export(document, output); //This method is obsolete since Q4 2024.
+
+		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
 
@@ -93,7 +100,10 @@ You can also export the document to a string and preserve it in a database.
 	Telerik.Windows.Documents.Flow.FormatProviders.Rtf.RtfFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Rtf.RtfFormatProvider();
 
 	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = CreateRadFlowDocument();
-	string output = provider.Export(document);
+
+	//string output = provider.Export(document); //This method is obsolete since Q4 2024.
+
+	string output = provider.Export(document, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 

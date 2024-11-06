@@ -41,7 +41,10 @@ To convert your documents' pages to images, use the __Export__ method. Note that
 	int count = 1;
 	foreach (RadFixedPage page in fixedDocument.Pages)
 	{
-	    byte[] resultImage = imageProvider.Export(page);
+	    //byte[] resultImage = imageProvider.Export(page); //This method is obsolete since Q4 2024.
+
+		byte[] resultImage = imageProvider.Export(page, TimeSpan.FromSeconds(10));
+
 	    File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
 	}
 
@@ -99,7 +102,10 @@ The __SkiaImageFormatProvider__ exposes the following settings:
 	int count = 1;
 	foreach (RadFixedPage page in fixedDocument.Pages)
 	{
-	    byte[] resultImage = imageProvider.Export(page);
+	    //byte[] resultImage = imageProvider.Export(page); //This method is obsolete since Q4 2024.
+
+		byte[] resultImage = imageProvider.Export(page, TimeSpan.FromSeconds(10));
+		
 	    File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
 	}
 
