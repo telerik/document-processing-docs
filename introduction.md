@@ -31,7 +31,7 @@ position: 0
 
 * **Support for Variety of File Formats**: The Telerik Document Processing includes 5 libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.
 
-* **Timeout Mechanism** when importing and exporting documents. The **Import** and **Export** methods for all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled. 
+* **Timeout Mechanism** when importing and exporting documents. The **Import** and **Export** methods for all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled. [Read More]({%slug timeout-mechanism-in-dpl%})
 
 For more details about the benefits of using Telerik Document Processing, see the [Telerik Document Processing product overview page](https://www.telerik.com/document-processing-libraries).
 
