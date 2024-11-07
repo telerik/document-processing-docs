@@ -16,7 +16,7 @@ res_type: kb
 
 ## Description
 
-After upgrading to **Q2 2024** (or a newer version) of Telerik Document Processing Libraries and you have any logic for importing or exporting documents in your application, one of the following warning messages may occur if you try building the project:
+After upgrading to **Q4 2024** (or a newer version) of Telerik Document Processing Libraries and you have any logic for importing or exporting documents in your application, one of the following warning messages may occur if you try building the project:
 
 ![CS0618 Warning](images/cs0618-warning.png)  
 
@@ -26,9 +26,9 @@ The [Compiler Warning (level 2) CS0618](https://learn.microsoft.com/en-us/dotnet
 
 ## Solution
 
-In Q4 2024 Telerik Document Processing Libraries introduced a new **timeout mechanism** for importing and exporting documents. The Import and Export methods of all FormatProviders have a mandatory **TimeSpan?** timeout parameter after which the operation will be cancelled:
+In Q4 2024 Telerik Document Processing Libraries introduced a new **timeout mechanism** for importing and exporting documents. The Import and Export methods of the FormatProviders have a mandatory **TimeSpan?** timeout parameter after which the operation will be cancelled:
 
->note This is valid for all Document Processing Libraries.
+>note This is valid for WordsProcessing, PdfProcessing and SpreadProcessing.
 
 #### Import XLSX (Excel Workbook) file
 
@@ -41,7 +41,7 @@ In Q4 2024 Telerik Document Processing Libraries introduced a new **timeout mech
     }
    ```
 
->note The [TimeSpan](https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-timespan) interval is up to the developer and should be considered with the environment specific configurations.
+>note The [TimeSpan](https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-timespan) interval is up to the developer and should be considered with the environment specific configurations. In case of developing a web application for example, set such a timeout interval value that would be safe enough to protect the application from potential [DDoS attacks](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack). If the application is expected to be delivered directly to the end-users, it is possible to use TimeSpan=null as well. 
   
 Note that there is a Visual Studio setting that controls whether the [warnings will be treated as errors](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings):
 
