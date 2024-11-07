@@ -71,8 +71,12 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
 * __Telerik.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
 
+## See Also
+
+- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
 
 
 ## See Also
 
  * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
+ * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
