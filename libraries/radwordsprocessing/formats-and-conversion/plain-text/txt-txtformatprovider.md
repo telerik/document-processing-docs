@@ -35,7 +35,7 @@ __Example 1__ shows how to use __TxtFormatProvider__ to import a document from a
 	TxtFormatProvider provider = new TxtFormatProvider();
 	using (Stream input = File.OpenRead("Sample.txt"))
 	{
-	    //RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
+		//RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
 
 		RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
 	}
@@ -77,7 +77,7 @@ __Example 3__ shows how to use __TxtFormatProvider__ to export __RadFlowDocument
 	{
 	    RadFlowDocument document = CreateRadFlowDocument();
 
-	    //provider.Export(document, output); //This method is obsolete since Q4 2024.
+		//provider.Export(document, output); //This method is obsolete since Q4 2024.
 
 		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}

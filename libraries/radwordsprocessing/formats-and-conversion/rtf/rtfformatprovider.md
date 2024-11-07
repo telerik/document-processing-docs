@@ -38,7 +38,7 @@ The code from __Example 1__ shows how to use __RtfFormatProvider__ to import an 
 
 	using (Stream input = File.OpenRead("Sample.rtf"))
 	{
-	    //document = provider.Import(input); //This method is obsolete since Q4 2024.
+		//document = provider.Import(input); //This method is obsolete since Q4 2024.
 
 		document = provider.Import(input, TimeSpan.FromSeconds(10));
 	}
@@ -83,7 +83,7 @@ __Example 3__ shows how to use __RtfFormatProvider__ to export __RadFlowDocument
 	{
 	    document = CreateRadFlowDocument();
 
-	    //provider.Export(document, output); //This method is obsolete since Q4 2024.
+		//provider.Export(document, output); //This method is obsolete since Q4 2024.
 
 		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}

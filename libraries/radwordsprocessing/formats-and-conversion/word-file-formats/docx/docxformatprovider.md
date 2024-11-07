@@ -86,7 +86,7 @@ __Example 3__ shows how to use __DocxFormatProvider__ to export __RadFlowDocumen
 	{
 	    document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
 
-	    //provider.Export(document, output); //This method is obsolete since Q4 2024.
+		//provider.Export(document, output); //This method is obsolete since Q4 2024.
 
 		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}

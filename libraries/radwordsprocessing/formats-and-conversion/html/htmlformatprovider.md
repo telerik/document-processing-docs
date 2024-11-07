@@ -33,7 +33,7 @@ __Example 1__ shows how to use HtmlFormatProvider to import an HTML document fro
 	{
 	    Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider();
 
-	    //RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
+		//RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
 
 		RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
 	}
@@ -52,7 +52,7 @@ __Example 2__ shows how you can import an HTML string.
 
 	//RadFlowDocument document = provider.Import(html); //This method is obsolete since Q4 2024.
 
-	//RadFlowDocument document = provider.Import(html, TimeSpan.FromSeconds(10));
+	RadFlowDocument document = provider.Import(html, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 
@@ -76,7 +76,7 @@ __Example 3__ shows how to use the HtmlFormatProvider to export an instance of R
 	{
 	    RadFlowDocument document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
 
-	    //provider.Export(document, output); //This method is obsolete since Q4 2024.
+		//provider.Export(document, output); //This method is obsolete since Q4 2024.
 
 		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}

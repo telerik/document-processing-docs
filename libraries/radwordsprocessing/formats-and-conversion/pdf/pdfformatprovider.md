@@ -39,7 +39,7 @@ The code snippet in __Example 1__ shows how to create a __PdfFormatProvider__ in
 	{
 	    RadFlowDocument document = CreateRadFlowDocument();
 
-	    //provider.Export(document, output); //This method is obsolete since Q4 2024.
+		//provider.Export(document, output); //This method is obsolete since Q4 2024.
 
 		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}
