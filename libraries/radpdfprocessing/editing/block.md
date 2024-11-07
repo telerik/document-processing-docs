@@ -253,7 +253,11 @@ The code in __Example 9__ splits a block in two. The first will contains text "H
 	
 	Block block = new Block();
 	block.InsertText("Hello RadPdfProcessing!");
-	Size size = block.Measure(helloSize);
+	
+	//Size size = block.Measure(helloSize); //This method is obsolete since Q4 2024.
+	
+	Size size = block.Measure(helloSize, TimeSpan.FromSeconds(10));
+
 	Block secondBlock = block.Split();
 {{endregion}}
 
