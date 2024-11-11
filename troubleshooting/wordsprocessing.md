@@ -5,7 +5,7 @@ description: Troubleshooting WordsProcessing
 slug: troubleshooting-wordsprocessing
 tags: wordsprocessing, document, processing, troubleshooting, telerik, word, docx
 published: True
-position: 0
+position: 2
 ---
 
 # Troubleshooting WordsProcessing

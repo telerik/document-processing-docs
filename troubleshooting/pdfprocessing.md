@@ -5,7 +5,7 @@ description: Troubleshooting PdfProcessing
 slug: troubleshooting-pdfprocessing
 tags: pdfprocessing, document, processing, troubleshooting, telerik, pdf, iamge, resolver, converter
 published: True
-position: 0
+position: 1
 ---
 
 # Troubleshooting PdfProcessing
@@ -62,6 +62,7 @@ In order to successfully export images different than Jpeg and Jpeg2000 and Imag
             }
         }
     {{endregion}}
+
 
 You can read more about the [requirements]({%slug radpdfprocessing-cross-platform-images%}#requirements) and implementation in the [PdfProcessing Cross-Platform Images]({%slug radpdfprocessing-cross-platform-images%}) article.
 
