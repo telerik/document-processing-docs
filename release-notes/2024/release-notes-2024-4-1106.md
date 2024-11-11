@@ -26,7 +26,7 @@ position: 0
 
 ![changed](../images/changed.png)
 
-* Document Processing Libraries: Remediated CVE-2024-8049 - (&lt;a href="https://www.cve.org/CVERecord?id=CVE-2024-8049"&gt;CVE-2024-8049&lt;/a&gt;).
+* Document Processing Libraries: Remediated [CVE-2024-8049](https://www.cve.org/CVERecord?id=CVE-2024-8049).
 
 ## PdfProcessing
 
