@@ -3,7 +3,7 @@ title: Troubleshooting PdfProcessing
 page_title: Troubleshooting PdfProcessing
 description: Troubleshooting PdfProcessing
 slug: troubleshooting-pdfprocessing
-tags: pdfprocessing, document, processing, troubleshooting, telerik, pdf, iamge, resolver, converter
+tags: pdfprocessing, document, processing, troubleshooting, telerik, pdf, image, resolver, converter
 published: True
 position: 1
 ---
@@ -14,7 +14,7 @@ This article provides solutions to common issues that you may observe when worki
 
 ## Issue: "InvalidOperationException: 'FixedExtensibilityManager.ImagePropertiesResolver and FixedExtensibilityManager.JpegImageConverter cannot be both null.
 
-You get this error when exporting PDF files containing unsupported images in a .NET Standard environment.
+You get this error when exporting PDF files containing [unsupported images]({%slug radpdfprocessing-cross-platform-images%}) in a [.NET Standard]({%slug distribute-telerik-document-processing-libraries-net-versions%}) environment.
 
 The **.NET Standard** version of the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library has limitations in handling image conversion and quality scaling compared to the **.NET Framework** version. Unlike the **.NET Framework**, which includes built-in image processing capabilities, **.NET Standard** requires manual configuration to process non-JPEG/JPEG2000 images or to adjust image quality. Without the required configurations, attempting to export unsupported images or quality levels will cause an **InvalidOperationException**.
 
