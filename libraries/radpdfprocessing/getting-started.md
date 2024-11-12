@@ -135,7 +135,7 @@ Exporting to PDF format can be achieved with the __PdfFormatProvider__ class. __
 	}
 {{endregion}}
 
-
+For more complete examples head to the [Developer Focused Examples]({%slug radpdfprocessing-sdk-examples%}) section of the library.
 
 ## See Also
 
