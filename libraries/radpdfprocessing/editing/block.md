@@ -209,7 +209,7 @@ The __Block__ class has some properties and methods that affect how it will be r
 	block.VerticalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.Top;
 	block.InsertText("block content");
 
-	var bulletTextFragment = new TextFragment();
+	TextFragment bulletTextFragment = new TextFragment();
 	bulletTextFragment.Text = "•";
 	block.Bullet = bulletTextFragment;
 	block.IndentAfterBullet = 15;
