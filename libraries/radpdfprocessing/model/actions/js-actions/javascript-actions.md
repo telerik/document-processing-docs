@@ -17,7 +17,7 @@ As of **Q4 2024** RadPdfProcessing provides support for:
 
 JavaScript Actions are represented by the **JavaScriptAction** class storing in its public **Script** property the JS content as plain text. 
 
-![PdfProcessing JS Actions Overview](images/js-action-overview.png)  
+![PdfProcessing JS Actions Overview](images/js-action-overview.png)   
 
 JS actions can be added by using the public **Actions** property of the following classes: 
 
