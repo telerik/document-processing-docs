@@ -192,26 +192,34 @@ The __Block__ class has some properties and methods that affect how it will be r
 #### __[C#] Example 6: Change Block properties__
 
 {{region cs-radpdfprocessing-editing-block_5}}
-	Block block = new Block();
-	block.InsertText("block content");
+	RadFixedDocument radFixedDocument = new RadFixedDocument();
+	RadFixedPage page = radFixedDocument.Pages.AddPage();
 
+	Block block = new Block();
+	block.GraphicProperties.FillColor = new RgbColor(100, 0, 0, 0);
 	block.SpacingBefore = 10;
 	block.SpacingAfter = 5;
 	block.LineSpacingType = HeightType.Exact;
 	block.LineSpacing = 15;
-	block.FirstLineIndent = 12;
+	block.FirstLineIndent = 0;
 	block.LeftIndent = 0;
 	block.RightIndent = 0;
-	block.BackgroundColor = RgbColors.White;
+	block.BackgroundColor = new RgbColor(100, 255, 0, 0);
 	block.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Left;
 	block.VerticalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.Top;
+	block.InsertText("block content");
 
-	var textFragment = new TextFragment();
-	textFragment.Text = "test bullet";
-	block.Bullet = textFragment;
-	block.IndentAfterBullet = 5;
+	var bulletTextFragment = new TextFragment();
+	bulletTextFragment.Text = "•";
+	block.Bullet = bulletTextFragment;
+	block.IndentAfterBullet = 15;
+
+	var editor = new FixedContentEditor(page);
+	editor.Position.Translate(50,50);
+	editor.DrawBlock(block);
 {{endregion}}
 
+![Block Properties Result](images/radpdfprocessing-editing-block_5_result.png)
 
 ## Drawing a Block
 
