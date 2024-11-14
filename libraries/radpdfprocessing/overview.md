@@ -56,6 +56,7 @@ The document model of the library provides support for:
 | [**Merge documents**]({%slug radpdfprocessing-model-radfixeddocument%}) and [**document pages**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}) | You can combine the pages from multiple documents into a single document. |
 | [**PdfStreamWriter**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})| The API exposes a functionality that provides an option for exporting PDF files with unmatched performance and minimized memory footprint. Extremely useful when you need to add some content to an existing document, merge or split documents. |
 | [**Import of PDF and export to PDF or plain text**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) | You can import or export PDF files and convert PDF files to plain text. |
+|[**JavaScript Actions and Trigger Events**]({%slug radpdfprocessing-model-javascript-actions%})|As of Q4 2024 you can import or export the javascript actions associated with pages, form fields, etc. so that they can be executed when the exported document is opened with Adobe Acrobat. |
 
 # See Also
 

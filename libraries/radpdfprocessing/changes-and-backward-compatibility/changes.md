@@ -1,8 +1,8 @@
 ---
 title: Changes
-page_title: Changes
+page_title: Get familiar with the new functionality introduced in the RadPdfProcessing. 
 slug: radpdfprocessing-changes
-tags: changes
+tags: changes, pdf, processing, dpl, document, timeout
 published: True
 position: 0
 ---
@@ -10,6 +10,10 @@ position: 0
 # Changes
 
 This topic summarizes the new functionality introduced in the library with helpful links to places in the documentation that describe in greater detail the new functionality and how it can be used.
+
+## What's New in 2024 Q4
+
+* Introduced timeout mechanism for import and export of documents. The new Import and Export methods for all FormatProviders have a mandatory timeout parameter.  [Read more.]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) 
 
 ## What's New in 2024 Q2
 

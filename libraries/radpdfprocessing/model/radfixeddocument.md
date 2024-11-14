@@ -22,11 +22,15 @@ This article will get you familiar with the basics of __RadFixedDocument__. It c
 ## What Is RadFixedDocument
 
 __RadFixedDocument__ is the root that contains all other elements in the __RadPdfProcessing__ model. It exposes the following properties:
-        
-* __Pages__: The pages collection that contains all __RadFixedPages__ in the document.
-* __Annotations__: A read-only collection that contains all [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) in the document.
-* __Destinations__: A collection that contains all [Destinations]({%slug radpdfprocessing-model-annotations-links%}#destination) in the document.
-* __DocumentInfo__: Contains additional meta information about the document like author, title, etc. 
+
+|Property Name|Description|
+|----|----|
+|__Pages__|The pages collection that contains all __RadFixedPages__ in the document.|
+|__Annotations__|A read-only collection that contains all [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) in the document.|
+|__Destinations__|A collection that contains all [Destinations]({%slug radpdfprocessing-model-annotations-links%}#destination) in the document.|
+|__DocumentInfo__|Contains additional meta information about the document like author, title, etc.|
+|**Actions**|Gets the document [actions]({%slug radpdfprocessing-model-action-collections%}#documentactioncollection) collection. (introduced in Q4 2024)| 
+|**HasLayers**|Gets whether the document has layers. (introduced in Q4 2024)|
 
 >note A complete SDK example how to generate a document is available [here](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/GenerateDocument).
             

@@ -29,7 +29,7 @@ __Link__ exposes the following properties:
 * **NamedDestination**: A named destination associated with the link.
 
 
-* __Action__: An action to be performed when the annotation is activated. __Example 2__ demonstrates how you can create a Link using a previously created __Action__ and add the Link in RadFixedPage's Annotations collection.
+* __Action__: An [action]({%slug radpdfprocessing-model-actions%}) to be performed when the annotation is activated. __Example 2__ demonstrates how you can create a Link using a previously created __Action__ and add the Link in RadFixedPage's Annotations collection.
             
 
 
@@ -100,23 +100,7 @@ __Example 3__ shows how you can create a Location object, associate it with a Li
 
 
 
-## Action
-
-The abstract __Action__ class defines a behavior for an annotation. Action is inherited from the following classes:
-        
-
-* __GoToAction__: Associates the action with a __Destination__. The GoToAction class exposes the following properties:
-
-	* __Destination__: The associated destination.
-	* __NamedDestination__: The associated named destination.
-	                
-
-* __UriAction__: Associates the action with an Uri. The UriAction class exposes the following properties:
-            
-
-	* __Uri__: The associated Uri.    
-	* __IncludeMouseCoordinates__: Specifies whether to include the mouse coordinates as query parameters in the Uri.
-                
+## Action              
 
 __Example 4__ demonstrates how to create an action of type __GoToAction__, associate it with a Link and add it to a RadFixedPage. The *location* object can be of type Location like the one in __Example 3__.
         
@@ -142,4 +126,5 @@ __Example 4__ demonstrates how to create an action of type __GoToAction__, assoc
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [AnnotationType API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html)
  * [Link API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html)
+ * [JavaScript Actions]({%slug radpdfprocessing-model-javascript-actions%})
 

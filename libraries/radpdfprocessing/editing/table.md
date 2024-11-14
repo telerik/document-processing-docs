@@ -218,9 +218,11 @@ __Example 8__ inserts the table from __Example 7__ in a RadFixedDocumentEditor a
 #### __[C#] Example 8: Insert AutoFit table__
 
 {{region cs-radpdfprocessing-editing-table_7}}
-	RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document);
-	table.LayoutType = TableLayoutType.AutoFit;
-	editor.InsertTable(table);
+	using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
+	{
+		table.LayoutType = TableLayoutType.AutoFit;
+		editor.InsertTable(table);
+	}
 {{endregion}}
 
 

@@ -50,20 +50,25 @@ __Example 1__ shows how to use __PdfFormatProvider__ to export a Workbook to a f
     using (Stream output = File.OpenWrite("Sample.pdf"))
     {
         Workbook workbook = CreateSampleWorkbook(); // The CreateSampleWorkbook() method generates a sample spreadsheet document. Use your Workbook object here.
-        pdfFormatProvider.Export(workbook, output);
+        pdfFormatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
+
+        pdfFormatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
     }
+
 {{endregion}}
-
-
 
 The result from the export method is a document that can be opened in any application that supports PDF documents.
         
 #### __[C#] Example 2: Export to RadFixedDocument__
 {{region cs-radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider_1}}
-	Workbook workbook = CreateSampleWorkbook();
-	
-	Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
-	RadFixedDocument fixedDocument = provider.ExportToFixedDocument(workbook);
+
+     Workbook workbook = CreateSampleWorkbook();
+
+     Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
+     //RadFixedDocument fixedDocument = provider.ExportToFixedDocument(workbook); //This method is obsolete since Q4 2024.
+
+     RadFixedDocument fixedDocument = provider.ExportToFixedDocument(workbook, TimeSpan.FromSeconds(10));
+
 {{endregion}}
 
 >tip __RadFixedDocument__ is the base class of the __RadPdfProcessing__ library. Additional information on the library and its functionality can be found [here]({%slug radpdfprocessing-overview%}).
@@ -72,4 +77,5 @@ The result from the export method is a document that can be opened in any applic
 - [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
 - [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%})
 - [Export Worksheet to image]({%slug spreadprocessing-export-worksheet-to-image-netstandard%})
+- [Preserving the Font in PDF Export from Excel]({%slug preserve-font-boldness-pdf-export-radspreadprocessing%})
 
