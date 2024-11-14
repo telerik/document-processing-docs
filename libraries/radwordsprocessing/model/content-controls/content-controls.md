@@ -207,5 +207,6 @@ The __Text__ content control allows you to enter plain text. The text content co
  
 * [Working with Content Controls]({%slug wordsprocessing-model-working-with-content-controls%})
 * [Generating Dynamic DOCX Documents with Tables and CheckBoxes using RadWordsProcessing]({%slug dynamic-docx-document-generation-radwordsprocessing%})
+* [How to Clone and Populate Repeating Section Content Controls in RadWordsProcessing]({%slug clone-repeating-section-content-control-radwordsprocessing%})
 
 
