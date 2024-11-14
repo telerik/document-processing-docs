@@ -56,7 +56,6 @@ Here's an example code snippet demonstrating the setup:
             File.Delete(outputFilePath);
             PdfFormatProvider provider = new PdfFormatProvider();
 
-         
             using (Stream output = File.OpenWrite(outputFilePath))
             {
                 provider.Export(fixedDocument, output);
@@ -116,7 +115,6 @@ Here's an example code snippet demonstrating the setup:
             TableCell cell10 = row5.Cells.AddTableCell();
             cell10.Blocks.AddBlock().InsertText(new FontFamily("Helvetica"), FontStyles.Normal, FontWeights.Normal, "Trailer:");
             cell10.ColumnSpan = 4;
-
 
             TableRow row6 = table.Rows.AddTableRow();
             TableCell cell11 = row6.Cells.AddTableCell();
@@ -185,7 +183,8 @@ Here's an example code snippet demonstrating the setup:
 
 * The rows which contain cells with ColumnSpan should contain less text blocks, e.g. if ColumnSpan=4, you need to insert 4 text blocks less for this row. Hence, skip adding the text block for the cells participating in the ColumnSpan functionality.
 
-* At least one row should contain the cells participating in the ColumnSpan for the other cells. If all rows contain cells which span the same columns, you wouldn't need the column span functionality. You will just need a wider column to fit the content.
+* For a column to exist and have a calculated width, it must contain at least one cell with content among the rows within the table.
+
 
 ## See Also
 
