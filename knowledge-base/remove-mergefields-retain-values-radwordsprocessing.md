@@ -1,8 +1,8 @@
 ---
-title: How to Remove a MERGEFIELD Without Deleting the Value in RadWordsProcessing
-description: Learn how to remove a MERGEFIELD from a document while preserving the values, facilitating the MailMerge process in RadWordsProcessing.
+title: How to Remove a MERGEFIELD While Replacing the Placeholders with Values in RadWordsProcessing
+description: Learn how to remove a MERGEFIELD from a document while replacing the placeholders with actual values, facilitating the MailMerge process in RadWordsProcessing.
 type: how-to
-page_title: How to Remove a MERGEFIELD Without Deleting the Value in RadWordsProcessing
+page_title: How to Remove a MERGEFIELD WWhile Replacing the Placeholders with Values in RadWordsProcessing
 slug: remove-mergefields-retain-values-radwordsprocessing
 tags: wordsprocessing, document, processing, merge, field, mailmerge, remove 
 res_type: kb
