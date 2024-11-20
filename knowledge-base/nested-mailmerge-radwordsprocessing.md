@@ -4,7 +4,7 @@ description: Learn how to implement nested MailMerge operations with multiple le
 type: how-to
 page_title: How to Handle Nested MailMerge with Multi-Level Data in RadWordsProcessing
 slug: nested-mailmerge-radwordsprocessing
-tags: radwordsprocessing, mailmerge, nested, data, list, document processing
+tags: wordsprocessing, mailmerge, nested, data, list, document, processing
 res_type: kb
 ticketid: 1668943
 ---
