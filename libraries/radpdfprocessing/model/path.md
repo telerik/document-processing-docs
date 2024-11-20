@@ -97,6 +97,12 @@ You can modify a __Path__ element using the properties the class exposes. The pr
             
 
 * __StrokeDashOffset__: The distance from the start of a line to the beginning of a dash pattern.
+
+
+* __AlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
+
+
+* __StrokeAlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
             
 
 * __MiterLimit__: The limit of the thickness of the join on a mitered corner.
@@ -104,6 +110,38 @@ You can modify a __Path__ element using the properties the class exposes. The pr
 
 * __Geometry__: The shape to be drawn. More information about geometries is available [here]({%slug radpdfprocessing-concepts-geometry%}).
             
+#### __[C#] Example 3: Modifying Path properties__
+
+{{region cs-radpdfprocessing-model-path_2}}
+	RadFixedDocument document = new RadFixedDocument();
+	RadFixedPage page = document.Pages.AddPage();
+	FixedContentEditor editor = new FixedContentEditor(page);
+
+	RectangleGeometry rectangleGeometry = new RectangleGeometry();
+	rectangleGeometry.Rect = new Rect(10, 5, 400, 300);
+
+	Telerik.Windows.Documents.Fixed.Model.Graphics.Path path = new Telerik.Windows.Documents.Fixed.Model.Graphics.Path();
+	path.Geometry = rectangleGeometry;
+
+	SimplePosition simplePosition = new SimplePosition();
+	simplePosition.Translate(20, 20);
+
+	path.Fill = new RgbColor(255, 0, 255);
+	path.Stroke = new RgbColor(0, 0, 255);
+	path.IsFilled = true;
+	path.IsStroked = true;
+	path.StrokeThickness = 1;
+	path.StrokeLineCap = Telerik.Windows.Documents.Fixed.Model.Graphics.LineCap.Flat;
+	path.StrokeLineJoin = Telerik.Windows.Documents.Fixed.Model.Graphics.LineJoin.Round;
+	path.StrokeDashArray = new double[] { 1 };
+	path.StrokeDashOffset = 2;
+	path.AlphaConstant = 0.5;
+	path.StrokeAlphaConstant = 0.1;
+	path.MiterLimit = 2;
+	path.Position = simplePosition;
+
+	page.Content.Add(path);
+{{endregion}}
 
 ## See Also
 

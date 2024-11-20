@@ -11,10 +11,20 @@ position: 0
 # Formats and Conversion
 
 
-RadWordsProcessing does not need any external dependencies in order to convert documents from/to the supported formats. The document model is independent from UI and can be used on the server side as well as on the client.
-      
+RadWordsProcessing does not need any external dependencies in order to convert documents from/to the supported formats. The document model is independent from UI and can be used on the server side as well as on the client.   
 
-You can use RadWordsProcessing to convert among variety of formats. Below you can see a feature / format matrix that describes supported features by file format. The currently supported format are [Docx]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}), [Doc]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) & Dot (import only), [Rtf]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%}), [Html]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}), [Pdf]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only), and [plain text]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%}), as plain text is excluded from the comparison.
+You can use RadWordsProcessing to convert among variety of formats. 
+
+>note As of **Q4 2024** RadWordsProcessing offers timeout mechanism for import and export of documents. The new Import and Export methods for all FormatProviders have a mandatory timeout parameter. The old **Import** and **Export** methods are Obsolete now.
+
+Below you can see a feature / format matrix that describes supported features by file format. The currently supported formats are:
+
+* [Docx]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
+* [Doc]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) & Dot (import only)
+* [Rtf]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})
+* [Html]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
+* [Pdf]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only)
+* [Plain text]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%}) - plain text is excluded from the comparison.
 
 <style>
     table td {
@@ -80,8 +90,8 @@ Text Alignment</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
-✔</td><td class="partially-supported">
-✔<sup>2</sup></td></tr><tr><td>
+✔</td><td>
+✔</td></tr><tr><td>
 Text Spacing</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -233,8 +243,8 @@ Floating Images</td><td>
 </td><td>
 ✔</td><td>
 ✔</td><td class="partially-supported">
-✔<sup>3</sup></td><td class="partially-supported">
-✔<sup>3</sup></td><td>
+✔<sup>2</sup></td><td class="partially-supported">
+✔<sup>2</sup></td><td>
 ✔</td></tr><tr><td>
 <b>Styles</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
 Styles Support</td><td>
@@ -310,8 +320,8 @@ Date and Time Fields</td><td>
 ✔</td><td>
 ✔</td><td class="not-applicable">
 n/a</td><td class="partially-supported">
-✔<sup>4</sup></td><td class="partially-supported">
-✔<sup>4</sup></td></tr><tr><td>
+✔<sup>3</sup></td><td class="partially-supported">
+✔<sup>3</sup></td></tr><tr><td>
 Merge fields</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -319,8 +329,8 @@ Merge fields</td><td>
 ✔</td><td>
 ✔</td><td class="not-applicable">
 n/a</td><td class="partially-supported">
-✔<sup>4</sup></td><td class="partially-supported">
-✔<sup>4</sup></td></tr><tr><td>
+✔<sup>3</sup></td><td class="partially-supported">
+✔<sup>3</sup></td></tr><tr><td>
 Document Variables</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -328,17 +338,17 @@ Document Variables</td><td>
 ✔</td><td>
 ✔</td><td class="not-applicable">
 n/a</td><td class="partially-supported">
-✔<sup>4</sup></td><td class="partially-supported">
-✔<sup>4</sup></td></tr><tr><td>
+✔<sup>3</sup></td><td class="partially-supported">
+✔<sup>3</sup></td></tr><tr><td>
 Other fields</td><td class="partially-supported">
-✔<sup>5</sup></td><td class="partially-supported">
-✔<sup>5</sup></td><td>
-</td><td class="partially-supported">
-✔<sup>5</sup></td><td class="partially-supported">
-✔<sup>5</sup></td><td class="not-applicable">
-n/a</td><td class="partially-supported">
 ✔<sup>4</sup></td><td class="partially-supported">
-✔<sup>4</sup></td></tr><tr><td>
+✔<sup>4</sup></td><td>
+</td><td class="partially-supported">
+✔<sup>4</sup></td><td class="partially-supported">
+✔<sup>4</sup></td><td class="not-applicable">
+n/a</td><td class="partially-supported">
+✔<sup>3</sup></td><td class="partially-supported">
+✔<sup>3</sup></td></tr><tr><td>
 <b>Review</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
 Comments</td><td>
 ✔</td><td>
@@ -359,10 +369,8 @@ Bookmarks</td><td>
 
 >1. Double Strikethrough is currently not supported.
 
->2. Justify alignment is currently not supported when exporting to PDF format, thus the content is exported with Left alignment.
+>2. Floating images are treated as inline images when importing/exporting HTML.
 
->3. Floating images are treated as inline images when importing/exporting HTML.
+>3. The result of the fields is exported as text.
 
->4. The result of the fields is exported as text.
-
->5. All fields are supported through custom code fields. More information is available [here]({%slug radwordsprocessing-concepts-customcodefield%}).
+>4. All fields are supported through custom code fields. More information is available [here]({%slug radwordsprocessing-concepts-customcodefield%}).

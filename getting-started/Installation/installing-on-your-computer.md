@@ -38,7 +38,7 @@ When the installation completes, the Telerik Document Processing assemblies will
 
 ## UI for Blazor
 
-[Download and Installation of Document Processing Libraries](https://docs.telerik.com/blazor-ui/common-features/document-processing)
+[Download and Installation of Document Processing Libraries](https://docs.telerik.com/blazor-ui/integrations/document-processing-libraries)
 
 The libraries can be used through the available NuGet packages.
 
@@ -67,3 +67,7 @@ The libraries can be used through the available NuGet packages.
 ## UI for .NET MAUI
 
 [Installing Telerik UI for .NET MAUI](https://docs.telerik.com/devtools/maui/installation/download-product-files)
+
+## See Also
+
+- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})

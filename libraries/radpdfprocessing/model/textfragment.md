@@ -144,7 +144,9 @@ TextFragment exposes the following properties that can modify the look of the re
             
 
 * __StrokeDashOffset__: The distance from the start of a line to the beginning of a dash pattern.
-            
+
+
+* __AlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
 
 * __MiterLimit__: The limit of the thickness of the join on a mitered corner.
 
@@ -153,11 +155,41 @@ TextFragment exposes the following properties that can modify the look of the re
             
 
 * __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) where the text element is drawn.
-            
 
+#### __[C#] Example 2: Modifying TextFragment properties__
+
+{{region cs-radpdfprocessing-model-textfragment_1}}
+	RadFixedDocument document = new RadFixedDocument();
+	RadFixedPage page = document.Pages.AddPage();
+	FixedContentEditor editor = new FixedContentEditor(page);
+
+	SimplePosition simplePosition = new SimplePosition();
+	simplePosition.Translate(20, 20);
+
+	TextFragment textFragment = page.Content.AddTextFragment("Document Processing Libraries");
+	textFragment.CharacterSpacing = 5;
+	textFragment.WordSpacing = 15;
+	textFragment.HorizontalScaling = 1;
+	textFragment.Font = FontsRepository.Courier;
+	textFragment.FontSize = UnitHelper.PointToDip(12);
+	textFragment.RenderingMode = RenderingMode.Stroke;
+	textFragment.TextRise = 5;
+	textFragment.Fill = new RgbColor(255, 0, 255);
+	textFragment.Stroke = new RgbColor(0, 0, 255);
+	textFragment.StrokeThickness = 1;
+	textFragment.StrokeLineCap = Telerik.Windows.Documents.Fixed.Model.Graphics.LineCap.Flat;
+	textFragment.StrokeLineJoin = Telerik.Windows.Documents.Fixed.Model.Graphics.LineJoin.Round;
+	textFragment.StrokeDashArray = new double[] { 1 };
+	textFragment.StrokeDashOffset = 2;
+	textFragment.AlphaConstant = 0.5;
+	textFragment.MiterLimit = 2;
+	textFragment.Position = simplePosition;
+{{endregion}}
+            
 ## See Also
 
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [Position]({%slug radpdfprocessing-concepts-position%})
  * [Extracting Text Within a Specific Rectangle in PDF Documents]({%slug extract-text-specific-rectangle-pdf-radpdfprocessing%})
+ * [Getting Position and Size of TextFragment in PDF Documents]({%slug get-textfragment-position-size-radpdfprocessing%})

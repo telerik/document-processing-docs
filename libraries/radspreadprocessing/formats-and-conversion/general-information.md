@@ -21,6 +21,8 @@ __RadSpreadProcessing__'s document model allows you to easily open and save file
 * __Txt__(tab delimited): Plain text format, which preserves only the content of the cells in the active worksheet. The format does not save any formatting and keeps only the result values of the cells. These values are delimited via tabs.
 * **DataTable**: This allows you to convert the DataTable that is coming form your database to a spreadsheet and vice versa. 
 
+>note In **Q4 2024** Telerik Document Processing Libraries introduced a new timeout mechanism for importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled.  
+
 
 ## Format providers​          
 

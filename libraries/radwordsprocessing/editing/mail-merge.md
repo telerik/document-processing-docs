@@ -38,7 +38,10 @@ Additionally, a field can be added to a Paragraph manually by creating a __Field
 
 {{region cs-radwordsprocessing-editing-mail-merge_1}}
 	            
-	FieldInfo field = new FieldInfo(document);
+	Paragraph paragraph = new Paragraph(document);
+	document.Sections.First().Blocks.Add(paragraph);
+ 
+ 	FieldInfo field = new FieldInfo(document);
 	            
 	paragraph.Inlines.Add(field.Start);
 	paragraph.Inlines.AddRun("MERGEFIELD LastName");
@@ -73,10 +76,16 @@ Example 3 shows a simple example data source.
 	    },
 	    new MailMergeRecord()
 	    {
-	        FirstName = "Nancy",
+		FirstName = "Nancy",
 	        LastName = "Davolio"
 	    },
 	};
+
+ 	public class MailMergeRecord
+	{
+	    public string FirstName { get; set; }
+	    public string LastName { get; set; }
+	}
 {{endregion}}
 
 

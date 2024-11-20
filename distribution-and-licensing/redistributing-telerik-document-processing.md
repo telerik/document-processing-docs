@@ -18,7 +18,7 @@ Telerik Document Processing is part of several Telerik bundles and is licensed u
 | UI for WinForms | [Protecting the Telerik UI for WinForms Assemblies](https://docs.telerik.com/devtools/winforms/deployment-and-distribution/redistributing-telerik-ui-for-winforms#usingthe-telerik-document-processing-libraries-in-your-solutions) |
 | UI for ASP.NET MVC | [ ASP.NET MVC Document Processing Overview](https://docs.telerik.com/aspnet-mvc/document-processing) |  
 | UI for ASP.NET Core | [ ASP.NET Core Document Processing Overview](https://docs.telerik.com/aspnet-core/document-processing#telerik-document-processing) |
-| UI for Blazor | [ Blazor Document Processing Overview](https://docs.telerik.com/blazor-ui/components/document-processing/overview) |
+| UI for Blazor | [ Blazor Document Processing Overview](https://docs.telerik.com/blazor-ui/integrations/document-processing-libraries) |
 | UI for WinUI | [ WinUI Document Processing Overview](https://docs.telerik.com/devtools/winui/controls/document-processing/overview) |
 | UI for Silverlight ([Discontinued](https://www.telerik.com/products/silverlight/overview.aspx)) | [Protecting the Telerik UI for Silverlight Assemblies](https://docs.telerik.com/devtools/silverlight/licensing/protecting-telerik-assembly#protect-the-telerik-documents-assemblies-by-editing-the-source-code) |
 | UI for .NET MAUI ||

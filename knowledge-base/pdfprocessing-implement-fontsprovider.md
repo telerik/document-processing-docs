@@ -120,3 +120,4 @@ In the validation, each font name (FontFamilyName) must be explicitly specified 
  * [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})
  * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) 
  * [Inserting Special Symbols in PDF using RadPdfProcessing]({%slug inserting-special-symbols-pdf-radpdfprocessing%})
+* [How to Prevent Text with Special Characters from Being Cut Off when converting HTML to PDF using RadWordsProcessing]({%slug prevent-text-cut-off-pdf-conversion-radwordsprocessing%})

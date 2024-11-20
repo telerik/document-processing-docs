@@ -22,9 +22,9 @@ position: 4
 |[Clipping]({%slug radpdfprocessing-concepts-clipping%})|Defines the outline of other content elements like [Image]({%slug radpdfprocessing-model-image%}) and [Path]({%slug radpdfprocessing-model-path%}).|
 |PushClipping|Inserts a new clipping defined from the specified object depending on the overload.|
 |PopClipping|Pops the last clipping, which was inserted with the editor.|
-|DrawText|Draws text as a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) at the current position and with size depening on the overload.|
-|DrawImage|Draws an [Image]({%slug radpdfprocessing-model-image%}) at the current position and with size depening on the overload.|
-|DrawForm|Draws a [Form]({%slug radpdfprocessing-model-form%}) at the current position and with size depening on the overload.|
+|DrawText|Draws text as a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) at the current position and with size depending on the overload.|
+|DrawImage|Draws an [Image]({%slug radpdfprocessing-model-image%}) at the current position and with size depending on the overload.|
+|DrawForm|Draws a [Form]({%slug radpdfprocessing-model-form%}) at the current position and with size depending on the overload.|
 |DrawWidget|Creates a [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) with different type and size depending on the overload.|
 |DrawStampAnnotation|Creates a new [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}) and draws it with a specified size and name.|
 |DrawTextAnnotation|Creates a new [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}) and draws it with a specified size and text.|
@@ -45,11 +45,10 @@ __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug 
 #### __[C#] Example 1: Create FixedContentEditor__
 
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_0}}
-	RadFixedDocument document = new RadFixedDocument();
-	var firstPage = document.Pages.AddPage();
-
-	FixedContentEditor fixedContentEditor = new FixedContentEditor(firstPage);
-{{endregion}}
+	RadFixedDocument document = new RadFixedDocument(); 
+	var firstPage = document.Pages.AddPage(); 	 
+	FixedContentEditor fixedContentEditor = new FixedContentEditor(firstPage); 
+{{endregion}} 
 
 The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the content root element. When a new element is created, its position is being set to the current position of the editor. The initial position of the editor can be specified when it is created.      
 
@@ -58,21 +57,19 @@ __Example 2__ demonstrates how you can create a FixedContentEditor with a specif
 #### __[C#] Example 2: Create FixedContentEditor with a specific position__
 
 {{region cs-radpdfprocessing-editing-fixedcontenteditor_1}}
-	MatrixPosition matrixPosition = new MatrixPosition();
-	matrixPosition.Translate(20, 20); // Translates the position by (20, 20) 
-	matrixPosition.Translate(30, 30); // Translates the position by (30, 30). 
-
-	SimplePosition simplePosition = new SimplePosition();
-	simplePosition.Translate(20, 20); // Translates the position by (20, 20). 
-	simplePosition.Translate(30, 30); // Translates the position by (30, 30) overwriting the previous translations. 
-
-	FixedContentEditor simplePositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition);
-	FixedContentEditor matrixPositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition);
-{{endregion}}
+	MatrixPosition matrixPosition = new MatrixPosition(); 
+	matrixPosition.Translate(20, 20); // Translates the position by (20, 20)  
+	matrixPosition.Translate(30, 30); // Translates the position by (30, 30).  	 
+	SimplePosition simplePosition = new SimplePosition(); 
+	simplePosition.Translate(20, 20); // Translates the position by (20, 20).  
+	simplePosition.Translate(30, 30); // Translates the position by (30, 30) overwriting the previous translations.  	 
+	FixedContentEditor simplePositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition); 
+	FixedContentEditor matrixPositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition); 
+{{endregion}} 
 
 ## Inserting Elements
 
-Composing a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) normally requires to create all elements and specify exactly how they should look. The **FixedContentEditor** takes care of most things for you. This section explains how you can add different type of elements.
+Composing a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) normally requires creating all elements and specifying exactly how they should look. The **FixedContentEditor** takes care of most things for you. This section explains how you can add different type of elements.
         
 ### Inserting Text
 
@@ -111,7 +108,7 @@ __Figure 2__ shows the result of __Example 4__.
 
 ![Rad Pdf Processing Editing Fixed Content Editor 02](images/RadPdfProcessing_Editing_FixedContentEditor_02.png)
 
->tip Building a paragraph with the FixedContentEditor is much simpler than creating TextFragments yourself. The [Block]({%slug radpdfprocessing-editing-block%}) object would flow the content of a paragraph for you if this is necessary.  
+>tip Building a paragraph with the FixedContentEditor is much simpler than creating TextFragments yourself. The [Block]({%slug radpdfprocessing-editing-block%}) object will flow the content of a paragraph for you if this is necessary.  
 
 ### Inserting Image
 

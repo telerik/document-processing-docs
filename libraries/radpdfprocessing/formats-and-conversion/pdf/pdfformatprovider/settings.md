@@ -100,6 +100,10 @@ The event is fired when trying to resolve conflicts between the [embedded file n
 ## Export Settings
 
 In order to modify the way content is exported, you can set the __ExportSettings__ property of __PdfFormatProvider__. These are the modification options you can use:
+
+### **StripJavaScriptActions**
+
+As of **Q4 2024** RadPdfProcessing provides support for Javascript Actions. The **StripJavaScriptActions** property specifies if the PDF document should strip JavaScript actions on export.        
         
 ### __ShouldEmbedFonts__ (obsolete)
 

@@ -86,6 +86,16 @@ There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedd
 
 >tip These fonts, or their font metrics and suitable substitution fonts, must be available to the consumer application.
 
+RadPdfProcessing introduced suitable API for replacing the predefined Standard Fonts in **R2 2023**. The public static method **ReplaceStandardFont**(StandardFontNames name, byte[] data) offered by the 
+FontsRepository will replace the provided standard font with the passed font data:
+
+#### Replace a Standard Font
+
+```csharp
+  byte[] fontData = File.ReadAllBytes("Courier-font.ttf");
+  FontsRepository.ReplaceStandardFont(StandardFontNames.Courier, fontData);
+
+```
 
 ## Embedded Fonts
 
@@ -153,4 +163,6 @@ You can create fonts that are not explicitly registered. Creating a font that is
  * [Cross-Platform Support for Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
  * [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html)
  * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
+ * [Preserving the Font in PDF Export from Excel]({%slug preserve-font-boldness-pdf-export-radspreadprocessing%})
+ * [How to Prevent Text with Special Characters from Being Cut Off when converting HTML to PDF using RadWordsProcessing]({%slug prevent-text-cut-off-pdf-conversion-radwordsprocessing%})
 

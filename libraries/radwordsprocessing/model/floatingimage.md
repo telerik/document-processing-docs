@@ -167,3 +167,4 @@ WordsProcessing enables you to export documents with floating images to PDF. How
  * [Document model]({%slug radwordsprocessing-model%})
  * [ImageInline]({%slug radwordsprocessing-model-imageinline%})
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
+ * [Converting WMF Images to PNG in RTF Documents with RadWordsProcessing]({%slug convert-wmf-to-png-radwordsprocessing%})

@@ -15,11 +15,11 @@ res_type: kb
 
 ## Description
  
-This article describes how to merge PDF documents without loss of supported annotations with the help of the [PdfStreamWriter](%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%) and [PdfFileSource](%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%). 
+This article describes how to merge PDF documents without loss of supported annotations with the help of the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) and [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}). 
 
 ## Solution
 
-The following approach takes a collection of paths, creates a new [RadFixedDocument](%slug radpdfprocessing-model-radfixeddocument%) instance, appends the documents from those paths to the newly created RadFixedDocument and returns it as a result.
+The following approach takes a collection of paths, creates a new [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) instance, appends the documents from those paths to the newly created [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and returns it as a result.
 
 #### __[C#] Merge PDF files
 

@@ -16,7 +16,7 @@ Telerik Document Processing includes a set of cross-platform libraries that let 
 
 The following tables list all Telerik Document Processing assemblies for the different platforms and their roles:
 
-### Assemblies for .NET Standard and .NET 6+ 
+### Assemblies for .NET Standard and .NET 6/.NET 8/.NET 9
 
 | Assembly Name| Description |
 |-------|----------------|
@@ -109,3 +109,4 @@ More information about each of the Telerik Document Processing libraries is avai
 * [System Requirements]({%slug installation-system-requirements%})
 * [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
 * [First Steps in using Telerik Document Processing]({%slug getting-started-first-steps%})
+* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})

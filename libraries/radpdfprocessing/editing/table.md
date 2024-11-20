@@ -218,9 +218,11 @@ __Example 8__ inserts the table from __Example 7__ in a RadFixedDocumentEditor a
 #### __[C#] Example 8: Insert AutoFit table__
 
 {{region cs-radpdfprocessing-editing-table_7}}
-	RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document);
-	table.LayoutType = TableLayoutType.AutoFit;
-	editor.InsertTable(table);
+	using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
+	{
+		table.LayoutType = TableLayoutType.AutoFit;
+		editor.InsertTable(table);
+	}
 {{endregion}}
 
 
@@ -295,3 +297,5 @@ As of **Q3 2024**, along with the BorderStyle.*Single*, RadPdfProcessing offers 
  * [TableCell]({%slug radpdfprocessing-editing-tablecell%})
  * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
  * [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})
+ * [Implementing Column Span in RadPdfProcessing Tables]({%slug table-column-span-radpdfprocessing%})
+

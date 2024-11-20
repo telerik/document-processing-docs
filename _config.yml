@@ -39,6 +39,9 @@ navigation:
     common-information:
         title: Common Information
         position: 98 
+    security:
+        title: Security
+        position: 97
     "*overview":
         title: Overview
         position: 1
@@ -207,9 +210,15 @@ navigation:
         title: Interactive Forms
     libraries/radpdfprocessing/model/interactive-forms/form-fields:
         title: Form Fields
+    libraries/radpdfprocessing/model/actions:
+        title: Actions
+        position: 7
+    libraries/radpdfprocessing/model/actions/js-actions:
+        title: Javascript Actions
+        position: 1
     libraries/radpdfprocessing/formats-and-conversion:
         title: Formats and Conversion
-        position: 7
+        position: 8
     libraries/radpdfprocessing/formats-and-conversion/pdf:
         title: Pdf
         position: 0
@@ -318,13 +327,18 @@ defaults:
     scope:
         path: "common-information"
     values:
-        description: "Common information that targets more than one library"
+        description: "Common information that targets more than one library."
 -
     scope:
         path: "troubleshooting"
     values:
-        description: "Find solutions to common issues that you may observe when working with the Telerik NuGet server and the NuGet packages it provides"
+        description: "Find solutions to common issues that you may observe when working with the Telerik NuGet server and the NuGet packages it provides."
 -
+    scope:
+        path: "security"
+    values:
+        description: "See Telerik's security guidelines, best practices, and reporting processes to protect our products, outlining how customers and researchers can report issues and how we address them."
+
 
     scope:
         path: "api"

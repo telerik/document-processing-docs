@@ -31,6 +31,9 @@ The code snippet from __Example 1__ creates and inserts a __Paragraph__ in a __S
 #### __C# Example 1: Insert paragraph in section__
 
 {{region cs-radwordsprocessing-model-paragraph_0}}
+	RadFlowDocument document = new RadFlowDocument();
+	Section section = document.Sections.AddSection();
+
 	Paragraph paragraph = new Paragraph(document);
 	section.Blocks.Add(paragraph);
 {{endregion}}
@@ -208,6 +211,19 @@ In __Example 8__ it is demonstrated how to add a tab stop to the paragraph's col
 {{endregion}}
 
 You can refer to the [TabStop article]({%slug radwordsprocessing-concepts-tabstop%}) for more details about this element.
+
+### Setting Borders
+
+__Example 9__ shows how to create Borders and set them to a Paragraph.
+
+#### __C# Example 9: Setting Borders__
+
+{{region cs-radwordsprocessing-model-paragraph_9}}
+	Border blackBorder = new Border(1, BorderStyle.Single, new ThemableColor(Colors.Black));
+	Border redBorder = new Border(2, BorderStyle.Single, new ThemableColor(Colors.Red));
+
+	paragraph.Borders = paragraph.Borders.SetLeft(blackBorder).SetRight(redBorder).SetTop(blackBorder).SetBottom(redBorder);
+{{endregion}}
 
 ## See Also
 
