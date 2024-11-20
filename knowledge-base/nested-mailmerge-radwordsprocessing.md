@@ -81,6 +81,8 @@ In your document template, ensure you have the corresponding merge fields:
 - For the start and end of the `Phones` list within each `Person`: `RangeStart:Phones` and `RangeEnd:Phones`.
 - For merging individual property values, use merge fields named after the properties, such as `FirstName`, `LastName`, and `PhoneNumber`.
 
+![Nested mail merge template](images/nested-mail-merge-template.png)  
+
 ### Generating the Necessary Table Structure in the Document
 
 When dealing with nested collections, it's crucial to dynamically create table structures that can accommodate the varying lengths of these collections.
