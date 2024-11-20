@@ -43,7 +43,9 @@ The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a DO
 
 	using (Stream input = File.OpenRead("Sample.docx"))
 	{
-		document = provider.Import(input);
+		//document = provider.Import(input); //This method is obsolete since Q4 2024.
+
+		document = provider.Import(input, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
 
@@ -57,7 +59,9 @@ And here is how you can import a document from byte array containing the DOCX do
 
 	Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
 
-	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input);
+	//Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
+
+	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 
@@ -81,7 +85,10 @@ __Example 3__ shows how to use __DocxFormatProvider__ to export __RadFlowDocumen
 	using (Stream output = File.OpenWrite("Sample.docx"))
 	{
 	    document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
-	    provider.Export(document, output);
+
+		//provider.Export(document, output); //This method is obsolete since Q4 2024.
+
+		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
 
@@ -95,7 +102,10 @@ You can also export the document to a byte array and preserve it in a database.
 	Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
 	        
 	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
-	byte[] output = provider.Export(document);
+
+	//byte[] output = provider.Export(document); //This method is obsolete since Q4 2024.
+
+	byte[] output = provider.Export(document, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 The resulting documents can be opened in any application that supports DOCX documents.

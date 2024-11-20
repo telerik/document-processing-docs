@@ -27,19 +27,22 @@ __Example 1__ shows how to import a CSV file using a __FileStream__. The code as
 #### __[C#] Example 1: Import CSV file__
 
 {{region cs-radspreadprocessing-formats-and-conversion-csv-csvformatprovider_0}}
-	string fileName = "FileName.csv";
-	if (!File.Exists(fileName))
-	{
-	    throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
-	}
-	
-	Workbook workbook;
-	CsvFormatProvider formatProvider = new CsvFormatProvider();
-	
-	using (Stream input = new FileStream(fileName, FileMode.Open))
-	{
-	    workbook = formatProvider.Import(input);
-	}
+    string fileName = "FileName.csv";
+    if (!File.Exists(fileName))
+    {
+        throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
+    }
+
+    Workbook workbook;
+    CsvFormatProvider formatProvider = new CsvFormatProvider();
+
+    using (Stream input = new FileStream(fileName, FileMode.Open))
+    {
+        //workbook = formatProvider.Import(input); //This method is obsolete since Q4 2024.
+
+        workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
+    }
+
 {{endregion}}
 
 
@@ -54,14 +57,17 @@ __Example 2__ demonstrates how to export an existing Workbook to a CSV file. The
 {{region cs-radspreadprocessing-formats-and-conversion-csv-csvformatprovider_1}}
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
-	
+
 	string fileName = "SampleFile.csv";
 	CsvFormatProvider formatProvider = new CsvFormatProvider();
-	
+
 	using (Stream output = new FileStream(fileName, FileMode.Create))
 	{
-	    formatProvider.Export(workbook, output);
+		//formatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
+
+		formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
 	}
+
 {{endregion}}
 
 

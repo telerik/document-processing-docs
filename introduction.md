@@ -31,6 +31,8 @@ position: 0
 
 * **Support for Variety of File Formats**: The Telerik Document Processing includes 5 libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.
 
+* [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%}) for importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled.
+
 For more details about the benefits of using Telerik Document Processing, see the [Telerik Document Processing product overview page](https://www.telerik.com/document-processing-libraries).
 
 ## Supported Formats
@@ -55,10 +57,10 @@ The Telerik Document Processing libraries support the following file formats:
 
 ## Available Assemblies
 
->The Telerik Document Processing libraries are available in **.NET Framework**, **.NET Core/.NET 6/.NET 8** (or newer) for Windows and **.NET Standard** compatible versions. You can download the assemblies of these libraries from the following products:
+>The Telerik Document Processing libraries are available in **.NET Framework**, **.NET Core/.NET 6/.NET 8/.NET 9** (or newer) for Windows and **.NET Standard** compatible versions. You can download the assemblies of these libraries from the following products:
 >
 
-|.NET Framework Products|.NET Core/.NET 6/ .NET 8 (or newer) *for Windows*|.NET Standard|
+|.NET Framework Products|.NET Core/.NET 6/.NET 8/.NET 9 *for Windows*|.NET Standard|
 |----|----|----|
 |[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)||[UI for Xamarin](https://www.telerik.com/xamarin-ui)|
 |[UI for ASP.NET AJAX](https://www.telerik.com/products/aspnet-ajax.aspx)||[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)|

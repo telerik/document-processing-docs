@@ -43,7 +43,9 @@ To import a DOC or DOT file, you should use the **Import()** method of **DocForm
 	
 	using (Stream input = File.OpenRead("Sample.doc"))
 	{				
-		document = provider.Import(input);
+		//document = provider.Import(input); //This method is obsolete since Q4 2024.
+
+		document = provider.Import(input, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
 
@@ -55,7 +57,9 @@ And here is how you can import a document from a byte array containing the docum
 
 	Telerik.Windows.Documents.Flow.FormatProviders.Doc.DocFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Doc.DocFormatProvider();
 
-	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input);
+	//Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
+
+	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 

@@ -62,9 +62,47 @@ You can modify a __Form__ element using the properties the class exposes. The pr
 
 * __Height__: The height of the form.
 
+* __AlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
+
+* __StrokeAlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
+
 * __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) of the form inside the __IContainerElement__.
 
 * __Parent__: Allows you to obtain the parent page of the form.
+
+#### __[C#] Example 3: Modify Form properties__
+
+{{region cs-radpdfprocessing-model-form_2}}
+	RadFixedDocument document = new RadFixedDocument();
+
+	RadFixedPage page = document.Pages.AddPage();
+	FormSource formSource = new FormSource();
+	formSource.Size = new Size(200, 200);
+	Form form = page.Content.AddForm(formSource);
+
+	SimplePosition simplePosition = new SimplePosition();
+	simplePosition.Translate(20, 20);
+
+	form.Width = 200;
+	form.Height = 300;
+	form.Position = simplePosition;
+	form.AlphaConstant = 0.5;
+	form.StrokeAlphaConstant = 0.1;
+
+	PathGeometry pathGeometry = new PathGeometry();
+	PathFigure pathFigure = pathGeometry.Figures.AddPathFigure();
+	pathFigure.StartPoint = new Point(5, 5);
+	LineSegment lineSegment = pathFigure.Segments.AddLineSegment();
+	lineSegment.Point = new Point(205, 5);
+	BezierSegment bezierSegment = pathFigure.Segments.AddBezierSegment();
+	bezierSegment.Point1 = new Point(105, 50);
+	bezierSegment.Point2 = new Point(130, 105);
+	bezierSegment.Point3 = new Point(100, 200);
+	pathFigure.IsClosed = true;
+
+	FixedContentEditor editor = new FixedContentEditor(formSource);
+	editor.DrawPath(pathGeometry);
+{{endregion}}
 
 ## See Also
 

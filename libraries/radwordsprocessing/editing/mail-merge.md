@@ -227,3 +227,4 @@ If you want to separate the items into several rows you need to close the group 
  * [Populate a Table with Data using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
  * [Generating a Word Document Template with Data Using MailMerge in RadWordsProcessing]({%slug generate-doc-template-and-populate-with-collection-data-mail-merge%})
  * [How to Remove a MERGEFIELD While Replacing the Placeholders with Values in RadWordsProcessing]({%slug remove-mergefields-retain-values-radwordsprocessing%})
+ * [Performing Nested MailMerge with Multiple Levels in RadWordsProcessing]({%slug nested-mailmerge-radwordsprocessing%})
