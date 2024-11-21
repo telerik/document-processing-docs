@@ -143,9 +143,7 @@ Exporting the document to Docx file can be achieved with the [DocxFormatProvider
 	}
 {{endregion}}
 
-
-
-More information about the supported formats and features can be found [here]({%slug radwordsprocessing-formats-and-conversion%}).
+Detailed information about the supported formats and features can be found in the [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}) article. For more complete examples head to the [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%}) section of the library.
         
 
 ## See Also

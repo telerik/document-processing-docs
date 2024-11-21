@@ -26,13 +26,20 @@ __RadWordsProcessing__ allows you to merge two __RadFlowDocument__ instance usin
 
 #### __[C#] Example 1: Merge two instances of RadFlowDocument__
 
-{{region cs-radwordsprocessing-editing-clone-and-merge_0}}
-	            
-	RadFlowDocument target = new RadFlowDocument();
-	RadFlowDocument source = new RadFlowDocument();
-	//...
-	// target will contain merged content and styles.
-	target.Merge(source);
+{{region cs-radwordsprocessing-editing-clone-and-merge_0}}            
+	RadFlowDocument targetDocument;
+	RadFlowDocument sourceDocument;
+          
+	DocxFormatProvider docxFormatProvider = new DocxFormatProvider();
+
+	byte[] targetByteArray = File.ReadAllBytes("targetDocument.docx");
+	byte[] sourceByteArray = File.ReadAllBytes("sourceDocument.docx");
+
+	targetDocument = docxFormatProvider.Import(targetByteArray);
+	sourceDocument = docxFormatProvider.Import(sourceByteArray);
+
+	// targetDocument will contain merged content and styles. 
+	targetDocument.Merge(sourceDocument);
 {{endregion}}
 
 
@@ -61,14 +68,14 @@ __Example 2__ shows how to merge documents by specifying the __MergeOptions__ pa
 
 {{region cs-radwordsprocessing-editing-clone-and-merge_1}}
 	            
-	RadFlowDocument target = new RadFlowDocument();
-	RadFlowDocument source = new RadFlowDocument();
+	RadFlowDocument targetDocument;
+	RadFlowDocument sourceDocument;
 	//...
 	MergeOptions mergeOptions = new MergeOptions()
 	{
 	    ConflictingStylesResolutionMode = ConflictingStylesResolutionMode.RenameSourceStyle
 	};
-	target.Merge(source, mergeOptions);
+	targetDocument.Merge(sourceDocument, mergeOptions);
 {{endregion}}
 
 
