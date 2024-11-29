@@ -4,71 +4,135 @@ description: Learn how to insert HTML content into a TableCell in a PDF document
 type: how-to
 page_title: How to Insert HTML Content into PDF TableCell Using RadPdfProcessing
 slug: insert-html-content-into-pdf-tablecell-radpdfprocessing
-tags: radpdfprocessing, documentprocessing, pdf, html, tablecell, insert, radwordsprocessing
+tags: pdfprocessing, document, processing, pdf, html, table, cell, insert, wordsprocessing
 res_type: kb
 ticketid: 1671595
 ---
 
+## Environment 
+
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| 2024.3.806 .NET Standard| RadWordsProcessing-RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+
 ## Description
-When generating PDF documents, a common requirement is to insert HTML content into specific sections of the document, such as a `TableCell`. This article demonstrates how to achieve this using the RadPdfProcessing and RadWordsProcessing libraries. This knowledge base article also answers the following questions:
-- How can I display HTML content in a PDF document?
-- What is the approach to convert HTML to PDF content for insertion into a PDF table cell?
-- How to use RadWordsProcessing to import HTML content and RadPdfProcessing to insert it into a PDF document?
+When generating PDF documents, a common requirement is to insert HTML content into specific sections of the document, such as a [TableCell]({%slug radpdfprocessing-editing-tablecell%}). This article demonstrates how to achieve this using the smooth integration between [RadPdfProcessing]({%slug radpdfprocessing-overview%}) and [RadWordsProcessing]({%slug radwordsprocessing-overview%}) libraries. 
 
-## Environment
+>caption Sample HTML content to Insert
 
-<table>
-<tbody>
-<tr>
-<td>Product</td>
-<td>
-RadPdfProcessing for Document Processing, <br/>
-RadWordsProcessing for Document Processing
-</td>
-</tr>
-</tbody>
-</table>
+```HTML
+<!DOCTYPE html>
+<html>
+<body>
+<p>I am normal</p>
+<p style="color:red;">I am red</p>
+<p style="color:blue;">I am blue</p>
+<p style="font-size:50px;">I am big</p>
+</body>
+</html>
+```
+
+![HTML Displayed in the Browser](images/sample-html-content.png)  
 
 ## Solution
-To insert HTML content into a `TableCell` in a PDF document, you can use the RadWordsProcessing library to import the HTML content and then either convert it to a PDF document or export it as images to insert into the PDF. Below are the steps and code snippet for achieving this.
+To insert HTML content into a `TableCell` in a PDF document, you can obtain the HTML content as an image and insert the image inside the PDF table cell. Below are the steps and complete code snippet for achieving this:
 
-1. **Import HTML Content**: Use RadWordsProcessing's `HtmlFormatProvider` to import the HTML content into a `RadFlowDocument`.
-2. **Export HTML to PDF or Images**: Use RadWordsProcessing's `PdfFormatProvider` to convert the `RadFlowDocument` into PDF format or export it as images.
-3. **Insert PDF or Images into TableCell**: Use RadPdfProcessing to create or edit a PDF document and insert the converted PDF content or images into the desired `TableCell`.
+1. **Import HTML Content**: Use the RadWordsProcessing's [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) to import the HTML content into a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}).
+
+1. **Export the HTML Content to PDF Format**: Use the RadWordsProcessing's [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to convert the `RadFlowDocument` into PDF format.
+
+1. **Convert the exported PDF content to an Image**: Use the RadPdfProcessing's [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the exported HTML content to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) to export the PDF pages to images.
+
+1. **Insert the exported Images into the PDF TableCell**: Use RadPdfProcessing's [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to create or edit a PDF document and insert the converted PDF images into the desired [TableCell]({%slug radpdfprocessing-editing-tablecell%}).
 
 ### Inserting HTML Content as PDF
 
 ```csharp
-// Import HTML as RadFlowDocument
-HtmlFormatProvider htmlFormatProvider = new HtmlFormatProvider();
-RadFlowDocument htmlDocument = htmlFormatProvider.Import(htmlContent, TimeSpan.FromSeconds(10));
+            Telerik.Documents.ImageUtils.ImagePropertiesResolver defaultImagePropertiesResolver = new Telerik.Documents.ImageUtils.ImagePropertiesResolver();
+            Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.ImagePropertiesResolver = defaultImagePropertiesResolver;
 
-// Export HTML to PDF
-Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider flowPdfFormatProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
-byte[] htmlToPdfByteArray = flowPdfFormatProvider.Export(htmlDocument, TimeSpan.FromSeconds(10));
+            RadFixedDocument mainPdfDocument = new RadFixedDocument();
+            RadFixedPage page = mainPdfDocument.Pages.AddPage();
 
-// Import htmlToPdfByteArray as RadFixedDocument
-Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider fixedPdfFormatProvider = new Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider();
-RadFixedDocument htmlPdfDocument = fixedPdfFormatProvider.Import(htmlToPdfByteArray, TimeSpan.FromSeconds(10));
+            FixedContentEditor editor = new FixedContentEditor(page);
+            Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider fixedPdfFormatProvider = new Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider();
 
-// Insert the HTML PDF content into the table cell in the main PDF document
-// Refer to the provided code snippet in the support engineer response for detailed implementation
+            //Create PDF table
+            Telerik.Windows.Documents.Fixed.Model.Editing.Tables.Table table = new Telerik.Windows.Documents.Fixed.Model.Editing.Tables.Table();
+
+            //Set borders
+            Telerik.Windows.Documents.Fixed.Model.Editing.Border border = new Telerik.Windows.Documents.Fixed.Model.Editing.Border();
+            table.Borders = new Telerik.Windows.Documents.Fixed.Model.Editing.TableBorders(border);
+            table.DefaultCellProperties.Borders = new Telerik.Windows.Documents.Fixed.Model.Editing.Tables.TableCellBorders(border, border, border, border);
+
+            //Set table properties
+            table.Margin = new Thickness(20);
+            table.DefaultCellProperties.Padding = new Thickness(5);
+            table.BorderSpacing = 2;
+
+            //Create row 
+            Telerik.Windows.Documents.Fixed.Model.Editing.Tables.TableRow row1 = table.Rows.AddTableRow(); 
+            Telerik.Windows.Documents.Fixed.Model.Editing.Tables.TableCell imgCell = row1.Cells.AddTableCell();
+            imgCell.PreferredWidth = 200;
+            string htmlContent = File.ReadAllText("cellContent.html");
+
+            //Import HTML as RadFlowDocument
+            HtmlFormatProvider htmlFormatProvider = new HtmlFormatProvider();
+            RadFlowDocument htmlDocument = htmlFormatProvider.Import(htmlContent, TimeSpan.FromSeconds(10));
+
+            //Export HTML to PDF
+            Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider flowPdfFormatProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
+            byte[] htmlToPdfByteArray = flowPdfFormatProvider.Export(htmlDocument, TimeSpan.FromSeconds(10));
+
+            //Import htmlToPdfByteArray as RadFixedDocument 
+            RadFixedDocument htmlPdfDocument = fixedPdfFormatProvider.Import(htmlToPdfByteArray, TimeSpan.FromSeconds(10));
+
+            RgbColor bordersColor = new RgbColor(255, 0, 0);
+            Telerik.Windows.Documents.Fixed.Model.Editing.Border cellBorder = new Telerik.Windows.Documents.Fixed.Model.Editing.Border(2, Telerik.Windows.Documents.Fixed.Model.Editing.BorderStyle.Single, bordersColor);
+            Telerik.Windows.Documents.Fixed.Model.Editing.Tables.TableCellBorders tableCellsBorder = new Telerik.Windows.Documents.Fixed.Model.Editing.Tables.TableCellBorders(border, border, border, border, null, null);
+
+            //Export the PDF pages as images
+            Telerik.Documents.Fixed.FormatProviders.Image.Skia.SkiaImageFormatProvider imageProvider = new Telerik.Documents.Fixed.FormatProviders.Image.Skia.SkiaImageFormatProvider();
+            string imagesFolderPath = @"..\..\..\Images\";
+            int count = 1;
+            foreach (RadFixedPage p in htmlPdfDocument.Pages)
+            { 
+                byte[] resultImage = imageProvider.Export(p, TimeSpan.FromSeconds(10));
+                File.WriteAllBytes(imagesFolderPath + count++ + ".png", resultImage);
+            }
+ 
+            Block imageBlock;
+            string[] pdfFilePaths = Directory.GetFiles(imagesFolderPath);
+            foreach (string imageFilePath in pdfFilePaths)
+            {
+           
+                imageBlock = imgCell.Blocks.AddBlock();
+                imageBlock.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
+                imageBlock.InsertImage(new FileStream(imageFilePath, FileMode.Open),new Size(300,400));
+                imgCell = row1.Cells.AddTableCell();
+                imgCell.Borders = tableCellsBorder;
+            }
+            
+            //Draw the generated table
+            editor.DrawTable(table);
+
+            string outputFile = "output.pdf";
+            File.Delete(outputFile);
+            //Export main PDF with changes
+            using (Stream output = File.OpenWrite(outputFile))
+            {
+                fixedPdfFormatProvider.Export(mainPdfDocument, output, TimeSpan.FromSeconds(10));
+            }
+            //Open main PDF
+            var psi = new ProcessStartInfo()
+            {
+                FileName = outputFile,
+                UseShellExecute = true
+            };
+            Process.Start(psi);
 ```
 
-### Inserting HTML Content as Images
-
-```csharp
-// Export the HTML content as images
-Telerik.Documents.Fixed.FormatProviders.Image.Skia.SkiaImageFormatProvider imageProvider = new Telerik.Documents.Fixed.FormatProviders.Image.Skia.SkiaImageFormatProvider();
-byte[] resultImage = imageProvider.Export(htmlDocument.Pages.First(), TimeSpan.FromSeconds(10));
-
-// Insert the image into the table cell in the main PDF document
-// Refer to the provided code snippet in the support engineer response for detailed implementation
-```
+![HTML Inside the PDF Table](images/html-inside-pdf-table.png) 
 
 ## See Also
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [RadWordsProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview)
-- [Importing HTML Content with RadWordsProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/html/htmlformatprovider)
-- [Converting Documents to Images with RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/convert-to-image/using-image-format-provider)
-- [Generate Table with Images using RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/knowledge-base/generate-table-with-images-pdf-processing)
+- [Generate Table with Images using RadPdfProcessing]({%slug generate-table-with-images-pdf-processing%})
