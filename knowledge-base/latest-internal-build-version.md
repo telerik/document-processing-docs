@@ -1,8 +1,8 @@
 ---
-title: Latest Internal Build (LIB) 
-description: This article explains what the Latest Internal Build (LIB) version is and its purpose. It also provides instructions on how to obtain the LIB version and clarifies its suitability for production use.
+title: Latest Internal Build (Preview Version)
+description: This article explains what the Latest Internal Build (Preview Version) is and its purpose. It also provides instructions on how to obtain the LIB version and clarifies its suitability for production use.
 type: how-to
-page_title: How to Obtain and Use the Latest Internal Build (LIB) Version
+page_title: How to Obtain and Use the Latest Internal Build (Preview Version)
 slug: obtain-use-latest-internal-build-version
 tags: internal-build, LIB, version, distribution, bug fixes
 res_type: kb
