@@ -13,7 +13,7 @@ ticketid: 1671595
 
 | Version | Product | Author | 
 | --- | --- | ---- | 
-| 2024.3.806 .NET Standard| RadWordsProcessing-RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| 2024.4.1106.NET Standard| RadWordsProcessing-RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 When generating PDF documents, a common requirement is to insert HTML content into specific sections of the document, such as a [TableCell]({%slug radpdfprocessing-editing-tablecell%}). This article demonstrates how to achieve this using the smooth integration between [RadPdfProcessing]({%slug radpdfprocessing-overview%}) and [RadWordsProcessing]({%slug radwordsprocessing-overview%}) libraries. 
@@ -41,9 +41,9 @@ To insert HTML content into a `TableCell` in a PDF document, you can obtain the 
 
 1. **Export the HTML Content to PDF Format**: Use the RadWordsProcessing's [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to convert the `RadFlowDocument` into PDF format.
 
-1. **Convert the exported PDF content to an Image**: Use the RadPdfProcessing's [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the exported HTML content to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) to export the PDF pages to images.
+1. **Convert the exported PDF content to an Image**: Use the RadPdfProcessing's [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the PDF-converted HTML content to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) to export the PDF pages to images.
 
-1. **Insert the exported Images into the PDF TableCell**: Use RadPdfProcessing's [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to create or edit a PDF document and insert the converted PDF images into the desired [TableCell]({%slug radpdfprocessing-editing-tablecell%}).
+1. **Insert the exported Images into the PDF TableCell**: Use RadPdfProcessing's [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to create the main PDF document with a table and insert the converted PDF images into the desired [TableCell]({%slug radpdfprocessing-editing-tablecell%}).
 
 ### Inserting HTML Content as PDF
 
