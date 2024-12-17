@@ -9,34 +9,45 @@ res_type: kb
 ticketid: 1672286
 ---
 
+## Environment
+
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| 2024.4.1106| Document Processing Libraries |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+
 ## Description
 
-When adding the Telerik NuGet source (https://nuget.telerik.com/v3/index.json) to a .NET 8 (WebApi) project in Visual Studio 2022, the expected Telerik NuGet packages do not appear in the Manage NuGet Packages window, even after entering the correct credentials. This knowledge base article also answers the following questions:
-- How can I ensure Telerik NuGet packages are visible in Visual Studio 2022?
-- What steps should I take if Telerik NuGet packages do not appear after adding the Telerik source?
-- How do I troubleshoot issues with adding Telerik NuGet packages to a .NET 8 project?
+When adding the [Telerik NuGet source]({%slug installation-nuget-packages%}#download-from-the-nuget-server) to your Visual Studio, the expected Telerik Document Processing NuGet packages may not appear in the *Manage NuGet Packages* window. This knowledge base article shows how to troubleshoot this scenario and properly setup the NuGet feed.
+
+>note Make sure that your firewall or proxy doesn't prevent the access to the Telerik NuGet server.
 
 ## Solution
 
-To resolve the issue of Telerik NuGet packages not appearing in Visual Studio 2022 for a .NET 8 project, follow these steps:
+To resolve the issue of Telerik NuGet packages not appearing in Visual Studio, follow these steps:
 
-1. **Add Telerik NuGet Source Correctly**: Make sure the Telerik NuGet source is added correctly to Visual Studio 2022. The correct source URL is `https://nuget.telerik.com/v3/index.json`. Refer to the [official Telerik documentation](https://docs.telerik.com/devtools/document-processing/getting-started/installation/nuget-packages) for detailed instructions.
+1. **Add Telerik NuGet Source Correctly**: Make sure the Telerik NuGet source is added correctly to Visual Studio. The correct source URL is `https://nuget.telerik.com/v3/index.json`. Refer to the [Download from the NuGet server section]({%slug installation-nuget-packages%}#download-from-the-nuget-server) for detailed instructions.
 
-2. **Enter Correct Credentials**: When prompted, enter the correct Telerik account credentials. Ensure you are using an account with an active subscription or trial.
+    ![NuGet server Authentication](images/telerik-nuget-server.png)
 
-3. **Check for Multiple Accounts**: Verify if you have multiple Telerik accounts and ensure you are using the one with an active subscription. Packages may not appear if the account used has no active licenses.
+If the setup is proper and you still don't have access to the Telerik Document Processing NuGet packages from the server, it may be related to the specific account used for authentication. 
 
-4. **Reset Telerik NuGet Credentials**: If you have verified the above steps and still face issues, try resetting your Telerik NuGet credentials. This ensures that Visual Studio is using the correct account for authentication. Instructions for resetting credentials can be found in the [Troubleshooting Telerik NuGet](https://docs.telerik.com/devtools/document-processing/troubleshooting/telerik-nuget#issue-resetting-telerik-nuget-credentials) guide.
+2. **Enter Correct Credentials**: When prompted, enter the correct Telerik account credentials. Ensure you are using an account with an active subscription or trial. 
+
+    ![NuGet server Authentication](images/nuget-server-authentication.png)
+
+3. **Check for Multiple Accounts**: Verify if you have multiple Telerik accounts and ensure you are using the one with an active subscription. Packages may not appear if the account used has no active licenses or expired trials.
+
+4. **Reset Telerik NuGet Credentials**: If you have verified the above steps and still face issues, try resetting your Telerik NuGet credentials. This ensures that Visual Studio is using the correct account for authentication. Instructions for resetting credentials can be found in the [Troubleshooting Telerik NuGet]({%slug troubleshooting-telerik-nuget%}#issue-resetting-telerik-nuget-credentials) guide.
+
+    ![Reset NuGet Credentials](images/reset-nuget-credentials.png)
 
 5. **Download Packages Manually (Optional)**: As a workaround, you can manually download the required Telerik NuGet packages and add them as a local source in Visual Studio. Detailed steps for manual download are provided in the [Manually Download NuGet Packages](https://docs.telerik.com/devtools/document-processing/getting-started/installation/install-nuget-packages#manually-download-nuget-packages) section.
 
-Ensure you follow these steps to add Telerik NuGet packages to your .NET 8 project successfully.
-
 ## See Also
 
-- [Available NuGet Packages](https://docs.telerik.com/devtools/document-processing/getting-started/installation/nuget-packages)
-- [Install Using NuGet Packages](https://docs.telerik.com/devtools/document-processing/getting-started/installation/install-nuget-packages)
-- [Restoring NuGet Packages in Your CI Workflow](https://docs.telerik.com/devtools/document-processing/getting-started/installation/nuget-keys)
-- [Troubleshooting Telerik NuGet](https://docs.telerik.com/devtools/document-processing/troubleshooting/telerik-nuget)
+- [Available NuGet Packages]({%slug available-nuget-packages%})
+- [Install Using NuGet Packages]({%slug installation-nuget-packages%})
+- [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
+- [Troubleshooting Telerik NuGet]({%slug troubleshooting-telerik-nuget%})
 
 ---
