@@ -90,3 +90,4 @@ TextBoxField exposes the following properties:
 * [CombTextBoxField Class]({%slug radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield%})
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 
+* [Customizing Text and Border Colors to Highlight a TextBoxField with RadPdfProcessing]({%slug radpdfprocessing-customize-textboxfield-colors%})
