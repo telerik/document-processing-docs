@@ -17,7 +17,7 @@ ticketid: 1673638
 
 ## Description
 
-When working with PDF documents containing [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}), you might need to update the text and border colors of a [TextBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) and highlight specific fields. This article demonstrates how to customize the appearance of `TextBoxField` elements, including changing their text and border colors.
+When creating PDF documents containing [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}), you might need to update the text and border colors of a [TextBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) and highlight specific fields. This article demonstrates how to customize the appearance of `TextBoxField` elements, including changing their text and border colors.
 
 ![Highlight TextBox Field](images/highlight-textbox-field.gif)    
 
