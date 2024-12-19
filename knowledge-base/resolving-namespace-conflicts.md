@@ -1,10 +1,10 @@
 ---
 title: Resolving Namespace Conflicts in Telerik Document Processing Libraries
-description: This article demonstrates how to resolve namespace conflicts when using Telerik Document Processing in a .NET Core project with both .NET Standard and .NET Framework versions installed.
+description: This article demonstrates how to resolve namespace conflicts when using Telerik Document Processing in a .NET Core project with both .NET Standard and .NET Framework packages/assemblies referenced.
 type: how-to
 page_title: How to Fix Namespace Conflicts in RadSpreadProcessing for Document Processing
 slug: radspreadprocessing-resolving-namespace-conflicts
-tags: radspreadprocessing, document processing, namespace, extern alias, .net core, .net standard
+tags: spreadprocessing, document, processing, namespace, extern, alias, net, core, standard
 res_type: kb
 ticketid: 1673450
 ---
@@ -32,7 +32,7 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-Depending on the target framework of your project (NET Framework, .NET Standard .NET Core, .NET 6, etc.), you should install the library version accordinglyt. However, if you need to install both versions for any reason, to resolve the compile-time error caused by the conflicting `Workbook` type in both assemblies, utilize the C# [extern alias](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern-alias) feature. This approach allows you to differentiate between assemblies and use types from both without conflict. Follow the steps below:
+Depending on the target framework of your project (NET Framework, .NET Standard .NET Core, .NET 6, etc.), you should install the library version accordingly. However, if you need to install both versions for any reason, to resolve the compile-time error caused by the conflicting `Workbook` type in both assemblies, utilize the C# [extern alias](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern-alias) feature. This approach allows you to differentiate between assemblies and use types from both without conflict. Follow the steps below:
 
 1. **Assign Alias to NuGet Packages**
    - For the `Telerik.Documents.Spreadsheet` NuGet package, set its alias to `StandardHelper` (or any preferred alias).
