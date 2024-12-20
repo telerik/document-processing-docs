@@ -24,10 +24,16 @@ The abstract **Action** class defines a behavior for an [annotation]({%slug radp
 	* __Uri__: The associated Uri.    
 	* __IncludeMouseCoordinates__: Specifies whether to include the mouse coordinates as query parameters in the Uri.
 
-* **JavaScriptAction**: Represents [JavaScript action]({%slug radpdfprocessing-model-javascript-actions%}) which exposes the following property:
+* **JavaScriptAction**: Represents a [JavaScript action]({%slug radpdfprocessing-model-javascript-actions%}) which exposes the following property:
 
 	* **Script**: Gets or sets the script.
+
+* **NamedAction**: Represents a [named action]({%slug radpdfprocessing-model-named-actions%}) which exposes the following property:
+
+	* **NamedActionType**: The type of the action representing the menu item to be executed.
  
 ## See Also
 
  * [Link]({%slug radpdfprocessing-model-annotations-links%})
+ * [JavaScript action]({%slug radpdfprocessing-model-javascript-actions%}) 
+ * [Named Actions]({%slug radpdfprocessing-model-named-actions%}) 
