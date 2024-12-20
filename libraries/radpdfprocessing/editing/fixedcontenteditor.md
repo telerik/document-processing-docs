@@ -44,28 +44,15 @@ __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug 
 
 #### __[C#] Example 1: Create FixedContentEditor__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_0}}
-	RadFixedDocument document = new RadFixedDocument(); 
-	var firstPage = document.Pages.AddPage(); 	 
-	FixedContentEditor fixedContentEditor = new FixedContentEditor(firstPage); 
-{{endregion}} 
-
+ <snippet id='create-fixed-editor'/>
+ 
 The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the content root element. When a new element is created, its position is being set to the current position of the editor. The initial position of the editor can be specified when it is created.      
 
 __Example 2__ demonstrates how you can create a FixedContentEditor with a specific initial [Position]({%slug radpdfprocessing-concepts-position%}).
         
 #### __[C#] Example 2: Create FixedContentEditor with a specific position__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_1}}
-	MatrixPosition matrixPosition = new MatrixPosition(); 
-	matrixPosition.Translate(20, 20); // Translates the position by (20, 20)  
-	matrixPosition.Translate(30, 30); // Translates the position by (30, 30).  	 
-	SimplePosition simplePosition = new SimplePosition(); 
-	simplePosition.Translate(20, 20); // Translates the position by (20, 20).  
-	simplePosition.Translate(30, 30); // Translates the position by (30, 30) overwriting the previous translations.  	 
-	FixedContentEditor simplePositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition); 
-	FixedContentEditor matrixPositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition); 
-{{endregion}} 
+ <snippet id='initialize-specific-position'/>
 
 ## Inserting Elements
 
@@ -167,18 +154,7 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
             
 #### __[C#] Example 7: Push clipping__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_6}}
-	string visibleText = "The last word in this text is";
-	string text = string.Format("{0} clipped.", visibleText); //The last word in this text is clipped.
-	Block block = new Block();
-	block.InsertText(visibleText);
-	Size visisibleTextSize = block.Measure();
-	
-	using (editor.PushClipping(new Rect(new Point(0, 0), visisibleTextSize)))
-	{
-	    fixedContentEditor.DrawText(text);
-	}
-{{endregion}}
+ <snippet id='push-clipping'/>
 
 __Figure 4__ shows the result of __Example 7__.
             
