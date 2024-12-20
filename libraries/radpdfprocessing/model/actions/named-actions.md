@@ -66,31 +66,9 @@ The available **NamedActionType** are listed in the table below:
 ### Adding a Named Action to a PushButtonField
 
 The following example demonstrates how to create a PDF document with a [PushButtonField]({%slug radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield%}) which triggers printing action when the document is displayed in a viewer: 
+ 
+ <snippet id='named-actions'/>
 
-```csharp
-
-            PushButtonField pushButtonField = new PushButtonField("SamplePushButton");
-
-            PushButtonWidget widget = pushButtonField.Widgets.AddWidget();
-            widget.Rect = new Rect(10, 10, 250, 50);
-            widget.HighlightingMode = HighlightingMode.InvertBorderOfAnnotationRectangle;
-
-            NamedAction printAction = new NamedAction(NamedActionType.Print);
-            widget.Actions.MouseUp.Add(printAction);
-
-            widget.AppearanceCharacteristics.Background = new RgbColor(123, 165, 134);
-            widget.AppearanceCharacteristics.NormalCaption = "Print";
-
-            widget.TextProperties.FontSize = 20;
-            widget.TextProperties.Fill = new RgbColor(0, 0, 0);
-            widget.RecalculateContent();
-
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            fixedDocument.Pages.AddPage();
-            fixedDocument.AcroForm.FormFields.Add(pushButtonField);
-            fixedDocument.Pages[0].Annotations.Add(widget);
-     
-```
 ![Print Named Action](images/print-named-action.gif) 
 
 ## See Also
