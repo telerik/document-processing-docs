@@ -239,23 +239,49 @@ A Block can be drawn to the content using the __Draw()__ method. The method acce
 
 ## Measuring Block Size
 
-Measuring a Block can be achieved with one of the overloads of the __Measure()__ method. Invoking the method without a parameter will return the desired size of the elements in the block and set the block's __DesiredSize__ property. The method is handy when you want to determine the size of the Block. When you want to wrap the text or you page has a limited space make sure to pass the available size to the method. 
-        
-Calling the overload accepting available size measures the block in that specific size. Additionally to setting the __DesiredSize__ property, it sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
-        
+Measuring a __Block__ can be achieved with one of the two overloads of the __Measure()__ method. 
 
-__Example 8__ creates a Block with the text "Hello RadPdfProcessing!" and measures it.
-        
+Invoking the method without a parameter will return the desired size of the block elements and set it as the block's __DesiredSize__ property. The method is handy when you want to determine what size the __Block__ should be depending on its content. 
 
-#### __[C#] Example 8: Measure block__
+__Example 8__ Creates a __Block__ with text, measures the text, and sets the block size to match the text size.
+        
+#### __[C#] Example 8: Measure block content__
 
 {{region cs-radpdfprocessing-editing-block_7}}
 	Block block = new Block();
-	block.InsertText("Hello RadPdfProcessing!");
-	Size size = block.Measure();
+	block.BackgroundColor = new RgbColor(255, 255, 0, 0);
+	block.InsertText("Telerik Document Processing Libraries.");
+
+	// The size of the block content
+	Size desiredBlockContentSize = block.Measure();
+
+	// Draw the block with size equal to the size of the content 
+	fixedContentEditor.DrawBlock(block, desiredBlockContentSize);
 {{endregion}}
 
+#### Example 8 Result
+![Rad Pdf Processing Measuring Block 01](images/RadPdfProcessing_Measuring_Block_01.png)
+        
+The second overload accepts available __Size__. Calling it measures the block content as if the __Block__ was in that specific size. 		
+Additionally to setting the __DesiredSize__ property, it sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
+        
+__Example 9__ Creates a __Block__ with text and draws it with a specific size using the [RadFixedContentEditor]({%slug %}). The block content auto fits to the dimentions of the __Block__. The size of the auto fitted content is then measured.
 
+{{region cs-radpdfprocessing-editing-block_8}}
+	Block block = new Block();
+	block.BackgroundColor = new RgbColor(255, 255, 0, 0);
+	block.InsertText("Telerik Document Processing Libraries.");
+
+	// Draw the block with a specific size. The block content auto fits (or wraps) according to the set block size.
+	Size specificBlockSize = new Size(100, 100);
+	fixedContentEditor.DrawBlock(block, specificBlockSize);
+
+	// The size of the auto fitted block content.
+	Size blockContentSize = block.Measure();
+{{endregion}}
+
+#### Example 9 Result
+![Rad Pdf Processing Measuring Block 02](images/RadPdfProcessing_Measuring_Block_02.png)
 
 ## Splitting a Block
 
