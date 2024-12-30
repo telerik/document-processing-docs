@@ -2,7 +2,7 @@
 title: Named Actions   
 description: RadPdfProcessing provides support for Named actions.
 page_title: Named Actions    
-slug: radpdfprocessing-model-named-actions 
+slug: radpdfprocessing-model-actions-named-actions
 tags: named, action, pdf
 published: True
 position: 2
@@ -12,7 +12,9 @@ position: 2
 
 As of **Q1 2025** RadPdfProcessing provides support for **Named actions** that PDF viewer applications are expected to support. The NamedAction class offers the public **Type** property which specifies the type of the action representing the menu item to be executed.
 
-The available **NamedActionType** are listed in the table below:
+The available *Standard* **NamedActionType** options are listed in the table below. 
+
+>note The PDF viewer applications are expected to support the standard name actions. Further names may be added as well but it is not guaranteed that all PDF viewers would support the *NonStandard* actions:
 
 |Standard Names Actions|Description|
 |----|----|
@@ -21,7 +23,9 @@ The available **NamedActionType** are listed in the table below:
 |**FirstPage**|Go to the first page of the document.|
 |**LastPage**|Go to the last page of the document.|
 
->note Viewer applications may support additional, nonstandard named actions, but any document using them is not portable. If the viewer encounters a named action that is inappropriate for a viewing platform, or if the viewer does not recognize the name, it should take no action.
+>note Viewer applications may support additional, nonstandard named actions, but any document using them is not portable. If a viewer (e.g. Adobe Acrobat, RadPdfViewer or a web browser) encounters a named action that is inappropriate for a viewing platform, or if the viewer does not recognize the name, it should take no action.
+
+RadPdfProcessing offers support for the following *NonStandard* **Named actions** as well:
 
 |NonStandard Named Actions|Description|
 |----|----|
@@ -65,7 +69,7 @@ The available **NamedActionType** are listed in the table below:
 
 ### Adding a Named Action to a PushButtonField
 
-The following example demonstrates how to create a PDF document with a [PushButtonField]({%slug radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield%}) which triggers printing action when the document is displayed in a viewer: 
+The following example demonstrates how to create a PDF document with a [PushButtonField]({%slug radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield%}) which triggers a printing action when the document is displayed in a viewer and the button is pressed by the end-user: 
  
  <snippet id='named-actions'/>
 
