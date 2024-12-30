@@ -28,7 +28,7 @@ The abstract **Action** class defines a behavior for an [annotation]({%slug radp
 
 	* **Script**: Gets or sets the script.
 
-* [NamedAction]({%slug radpdfprocessing-model-actions-named-actions%}): Represents a [named action]({%slug radpdfprocessing-model-named-actions%}) which exposes the following property:
+* [NamedAction]({%slug radpdfprocessing-model-actions-named-actions%}): Represents a named action which exposes the following property:
 
 	* **NamedActionType**: The type of the action representing the menu item to be executed.
  
@@ -36,5 +36,5 @@ The abstract **Action** class defines a behavior for an [annotation]({%slug radp
 
  * [Link]({%slug radpdfprocessing-model-annotations-links%})
  * [JavaScript action]({%slug radpdfprocessing-model-javascript-actions%}) 
- * [Named Actions]({%slug radpdfprocessing-model-named-actions%}) 
+ * [Named Actions]({%slug radpdfprocessing-model-actions-named-actions%}) 
  * [Creating TableCells with GoToAction and UriAction]({%slug kb-create-table-cells%})
