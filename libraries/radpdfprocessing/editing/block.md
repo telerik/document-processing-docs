@@ -243,7 +243,7 @@ Measuring a __Block__ can be achieved with one of the two overloads of the __Mea
 
 Invoking the method without a parameter will return the desired size of the block elements and set it as the block's __DesiredSize__ property. The method is handy when you want to determine what size the __Block__ should be depending on its content. 
 
-__Example 8__ Creates a __Block__ with text, measures the text, and sets the block size to match the text size.
+__Example 8__ Creates a __Block__ with text, measures the text, and sets the block size to match the content size.
         
 #### __[C#] Example 8: Measure block content__
 
@@ -252,32 +252,34 @@ __Example 8__ Creates a __Block__ with text, measures the text, and sets the blo
 	block.BackgroundColor = new RgbColor(255, 255, 0, 0);
 	block.InsertText("Telerik Document Processing Libraries.");
 
-	// The size of the block content
-	Size desiredBlockContentSize = block.Measure();
+	// The size of the block content (DesiredSize)
+	Size desiredBlockContentSize = block.Measure(); // Width: 232.653, Height: 15.306
 
-	// Draw the block with size equal to the size of the content 
-	fixedContentEditor.DrawBlock(block, desiredBlockContentSize);
+	fixedContentEditor.DrawBlock(block); // If the block size (ActualSize) is not specified, it will automatically be assigned the content size (DesiredSize)
+
+	//Draw the block with Size equal to the size of the content
+	fixedContentEditor.DrawBlock(block, desiredBlockContentSize); // The block size (ActualSize) can also be explicitly set to the content size (DesiredSize) when drawing the block
 {{endregion}}
 
 #### Example 8 Result
 ![Rad Pdf Processing Measuring Block 01](images/RadPdfProcessing_Measuring_Block_01.png)
         
 The second overload accepts available __Size__. Calling it measures the block content as if the __Block__ was in that specific size. 		
-Additionally to setting the __DesiredSize__ property, it sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
+Additionally to setting the __DesiredSize__ property, it also sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
         
-__Example 9__ Creates a __Block__ with text and draws it with a specific size using the [RadFixedContentEditor]({%slug %}). The block content auto fits to the dimentions of the __Block__. The size of the auto fitted content is then measured.
+__Example 9__ Creates a __Block__ with text and draws it with a specific size using the [RadFixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}). The block content auto fits to the dimentions of the __Block__. The size of the auto fitted content can then be measured.
 
 {{region cs-radpdfprocessing-editing-block_8}}
 	Block block = new Block();
 	block.BackgroundColor = new RgbColor(255, 255, 0, 0);
 	block.InsertText("Telerik Document Processing Libraries.");
 
-	// Draw the block with a specific size. The block content auto fits (or wraps) according to the set block size.
+	// Draw with a specific block size (ActualSize), ignoring the content size (DesiredSize).
 	Size specificBlockSize = new Size(100, 100);
 	fixedContentEditor.DrawBlock(block, specificBlockSize);
 
-	// The size of the auto fitted block content.
-	Size blockContentSize = block.Measure();
+	// The size of the block content (DesiredSize) autofitted in the specified dimentions
+	Size autoFittedBlockContentSize = block.Measure(specificBlockSize); // Width: 65.946, Height: 61.226
 {{endregion}}
 
 #### Example 9 Result
@@ -313,3 +315,4 @@ The code in __Example 9__ splits a block in two. The first will contains text "H
  * [Text and Graphic Properties]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
  * [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})
  * [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})
+ * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
