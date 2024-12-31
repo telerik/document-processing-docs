@@ -24,13 +24,15 @@ The abstract **Action** class defines a behavior for an [annotation]({%slug radp
 	* __Uri__: The associated Uri.    
 	* __IncludeMouseCoordinates__: Specifies whether to include the mouse coordinates as query parameters in the Uri.
 
-* **JavaScriptAction**: Represents a [JavaScript action]({%slug radpdfprocessing-model-javascript-actions%}) which exposes the following property:
+* [JavaScriptAction]({%slug radpdfprocessing-model-javascript-actions%}): Represents a JavaScript action which exposes the following property:
 
 	* **Script**: Gets or sets the script.
 
 * [NamedAction]({%slug radpdfprocessing-model-actions-named-actions%}): Represents a named action which exposes the following property:
 
 	* **NamedActionType**: The type of the action representing the menu item to be executed.
+
+* [ResetFormAction]({%slug radpdfprocessing-model-interactive-forms-resetting-form-fields%}): Represents an action that resets the specified [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) in a document. 
  
 ## See Also
 
@@ -38,3 +40,4 @@ The abstract **Action** class defines a behavior for an [annotation]({%slug radp
  * [JavaScript action]({%slug radpdfprocessing-model-javascript-actions%}) 
  * [Named Actions]({%slug radpdfprocessing-model-actions-named-actions%}) 
  * [Creating TableCells with GoToAction and UriAction]({%slug kb-create-table-cells%})
+ * [Resetting Form Fields]({%slug radpdfprocessing-model-interactive-forms-resetting-form-fields%})
