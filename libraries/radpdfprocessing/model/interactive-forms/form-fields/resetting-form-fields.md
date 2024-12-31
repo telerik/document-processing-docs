@@ -9,7 +9,7 @@ position: 9
 ---
 # ResetFormAction
 
-[RadPdfProcessing]({%slug radpdfprocessing-overview%}) provides functionality for resetting the form fields (*introduced in **Q1 2025***). The **ResetFormAction** class represents an action that resets specific form fields in a document. The **Fields** property represents the list of field names that are *included* in the reset operation or *excluded* from it.
+[RadPdfProcessing]({%slug radpdfprocessing-overview%}) provides functionality for resetting the form fields (*introduced in Q1 2025*). The **ResetFormAction** class represents an action that resets specific form fields in a document. The **Fields** property represents the list of field names that are *included* in the reset operation or *excluded* from it.
 
 The **ResetFormType** property represents the type of the reset form behavior. The available options are:
 
