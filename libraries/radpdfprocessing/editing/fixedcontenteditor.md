@@ -44,7 +44,7 @@ __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug 
 
 #### __[C#] Example 1: Create FixedContentEditor__
 
- <snippet id='create-fixed-editor'/>
+ <snippet id='libraries-pdf-editing-fixedcontenteditor-create-content-editor'/>
  
 The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the content root element. When a new element is created, its position is being set to the current position of the editor. The initial position of the editor can be specified when it is created.      
 
@@ -52,7 +52,7 @@ __Example 2__ demonstrates how you can create a FixedContentEditor with a specif
         
 #### __[C#] Example 2: Create FixedContentEditor with a specific position__
 
- <snippet id='initialize-specific-position'/>
+ <snippet id='libraries-pdf-editing-fixedcontenteditor-initialize-specific-position'/>
 
 ## Inserting Elements
 
@@ -154,7 +154,7 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
             
 #### __[C#] Example 7: Push clipping__
 
- <snippet id='push-clipping'/>
+ <snippet id='libraries-pdf-editing-fixedcontenteditor-push-clipping'/>
 
 __Figure 4__ shows the result of __Example 7__.
             
