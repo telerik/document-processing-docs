@@ -113,3 +113,7 @@ The following example demonstrates how to create TableCells with GoToAction and 
 {{endregion}}
 
 ````
+
+## See Also
+
+ * [Link annotations]({%slug radpdfprocessing-model-annotations-links%})
