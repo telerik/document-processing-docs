@@ -245,21 +245,7 @@ Invoking the method without a parameter will return the desired size of the bloc
 
 __Example 8__ Creates a __Block__ with text, measures the text, and sets the block size to match the content size.
         
-#### __[C#] Example 8: Measure block content__
-
-{{region cs-radpdfprocessing-editing-block_7}}
-	Block block = new Block();
-	block.BackgroundColor = new RgbColor(255, 255, 0, 0);
-	block.InsertText("Telerik Document Processing Libraries.");
-
-	// The size of the block content (DesiredSize)
-	Size desiredBlockContentSize = block.Measure(); // Width: 232.653, Height: 15.306
-
-	fixedContentEditor.DrawBlock(block); // If the block size (ActualSize) is not specified, it will automatically be assigned the content size (DesiredSize)
-
-	//Draw the block with Size equal to the size of the content
-	fixedContentEditor.DrawBlock(block, desiredBlockContentSize); // The block size (ActualSize) can also be explicitly set to the content size (DesiredSize) when drawing the block
-{{endregion}}
+<snippet id='libraries-pdf-editing-block-measure-no-parameter'/>
 
 #### Example 8 Result
 ![Rad Pdf Processing Measuring Block 01](images/RadPdfProcessing_Measuring_Block_01.png)
@@ -269,18 +255,7 @@ Additionally to setting the __DesiredSize__ property, it also sets the __Pending
         
 __Example 9__ Creates a __Block__ with text and draws it with a specific size using the [RadFixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}). The block content auto fits to the dimentions of the __Block__. The size of the auto fitted content can then be measured.
 
-{{region cs-radpdfprocessing-editing-block_8}}
-	Block block = new Block();
-	block.BackgroundColor = new RgbColor(255, 255, 0, 0);
-	block.InsertText("Telerik Document Processing Libraries.");
-
-	// Draw with a specific block size (ActualSize), ignoring the content size (DesiredSize).
-	Size specificBlockSize = new Size(100, 100);
-	fixedContentEditor.DrawBlock(block, specificBlockSize);
-
-	// The size of the block content (DesiredSize) autofitted in the specified dimentions
-	Size autoFittedBlockContentSize = block.Measure(specificBlockSize); // Width: 65.946, Height: 61.226
-{{endregion}}
+<snippet id='libraries-pdf-editing-block-measure-with-parameter'/>
 
 #### Example 9 Result
 ![Rad Pdf Processing Measuring Block 02](images/RadPdfProcessing_Measuring_Block_02.png)
