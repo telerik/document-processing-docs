@@ -27,93 +27,26 @@ table tr td table tr td table tr td :first-of-type {
 
 # Settings
 
-__PdfFormatProvider__ provides you with the ability to import/export PDF documents. Additionally, you can take advantage of the import/export settings that give you modification options.
+**PdfFormatProvider** provides the ability to import/export PDF documents. Additionally, you can take advantage of the import/export settings that give you modification options and further fine-tuning.
 
 ## Import Settings
 
-You can specify the import settings you wish through the __ImportSettings__ property of __PdfFormatProvider__.The available import settings are listed below:
+The **PdfFormatProvider** class offers the **ImportSettings** property which allows you to modify how the content is being imported. The available import settings are listed below:
 
-### __ReadingMode__ 
+|Property|Description|
+|----|----|
+|**ReadingMode**|Gets or sets the mode for loading the document pages content on import. *Introduced in R2 2020*.<table><tr><td>**ReadAllAtOnce**</td><td>All document pages content will be loaded on import. This is the default behavior.</td></tr><tr><td>**OnDemand**</td><td>The document pages content will be loaded on demand. This mode is made for using with PdfViewers and only the currently visible page will be loaded. </td></tr></table> Currently, the **OnDemand** mode should be applied when using with viewers only.|
+|**CopyStream**|Gets or sets whether to copy the document stream on import. When false and ReadingMode is OnDemand, the original stream must be kept open while the document is in use. When true, the original stream can be disposed after import, regardless of the reading mode.|
 
-Gets or sets the mode for loading the document pages content on import.  
-
-* __ReadAllAtOnce:__ All document pages content will be loaded on import. This is the default behavior.
-* __OnDemand:__  The document pages content will be loaded on demand. This mode is made for using with PdfViewers and only the currently visible page will be loaded. 
-
->important Currently, the __OnDemand__ mode should be applied for use with viewers only.
-
->note This property is available since R2 2020. 
-
-### __CopyStream__ 
-
-Gets or sets whether to copy the document stream on import. When false and ReadingMode is OnDemand, the original stream must be kept open while the document is in use. When true, the original stream can be disposed after import, regardless of the reading mode.
-
-### __UserPasswordNeeded__
-
-The event is fired when a user password is needed to open the document. The password can be specified in the __PasswordNeededEventArgs.Password__ property.
+|Event|Description|
+|----|----|
+|**UserPasswordNeeded**|The event is fired when a *user* password is needed to open the document. The password can be specified in the PasswordNeededEventArgs.**Password** property.|
+|**OwnerPasswordNeeded**|The event is fired when an *owner* password is needed to open the document. The password can be specified in the PasswordNeededEventArgs.**Password** property.|
+|**DuplicatedEmbeddedFileNameResolving**|The event is fired when trying to resolve conflicts between the [embedded file names]({%slug radpdfprocessing-embedded-file-streams-overview%}) with the same names.|
         
+The example shows how you can create a **PdfImportSettings** object with the desired settings and handle the offers events:
 
-__Example 1__ shows how you can create a __PdfImportSettings__ object and assign it to a PdfFormatProvider.
-        
-
-#### __[C#] Example 1: Import settings with UserPasswordNeeded__
-
-{{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_0}}
-
-	PdfFormatProvider provider = new PdfFormatProvider();
-	PdfImportSettings settings = new PdfImportSettings();
-	settings.UserPasswordNeeded += (s, a) =>
-	{
-	    a.Password = "Us3rP4ssw0rd";
-	};
-	
-	provider.ImportSettings = settings;
-
-{{endregion}}
-
-### OwnerPasswordNeeded
-
-The event is fired when an owner password is needed to open the document. The password can be specified in the __PasswordNeededEventArgs.Password__ property.
-
-#### __[C#] Example 2: Import settings with OwnerPasswordNeeded__
-
-{{region cs-radpdfprocessing-formats-and-conversion-pdf-settings_2}}
-
-	PdfFormatProvider provider = new PdfFormatProvider();
-	PdfImportSettings settings = new PdfImportSettings();
-	settings.OwnerPasswordNeeded += (s, a) =>
-	{
-		a.Password = "Own3erP4ssw0rd";
-	};
-
-	provider.ImportSettings = settings;
- 
-
-{{endregion}}
-
-### DuplicatedEmbeddedFileNameResolving
-
-The event is fired when trying to resolve conflicts between the [embedded file names]({%slug radpdfprocessing-embedded-file-streams-overview%}) with the same names.
-
-#### **[C#] Example 3: Import settings with DuplicatedEmbeddedFileNameResolving**
-
-{{region cs-radpdfprocessing-formats-and-conversion-pdf-import_settings_3}}
-
-            PdfFormatProvider provider = new PdfFormatProvider();
-            PdfImportSettings importSettings = new PdfImportSettings();
-            importSettings.DuplicatedEmbeddedFileNameResolving += (s, a) =>
-            {
-                string myNewName = "2_" + a.Name;
-                if (!a.UsedNames.Contains(myNewName))
-                {
-                    a.NewName = myNewName;
-                }
-            };
-
-            provider.ImportSettings = importSettings;	
-
-{{endregion}}
-
+<snippet id='libraries-pdf-formats-and-conversion-pdf-import-settings'/>
 
 ## Export Settings
 
