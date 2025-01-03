@@ -18,7 +18,7 @@ table th:nth-of-type(2) {
 	width: 80%;
 }
 table tr td:first-of-type {
-	width: 25%;
+	width: 20%;
 }
 table tr td table tr td:first-of-type {
 	width: 40%;
