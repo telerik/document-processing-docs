@@ -12,11 +12,8 @@ table th:first-of-type {
 	width: 20%;
 }
 table th:nth-of-type(2) {
-	width: 20%;
+	width: 80%;
 }
-
-table th:nth-of-type(3) {
-	width: 60%;
 </style>
 
 # Settings
