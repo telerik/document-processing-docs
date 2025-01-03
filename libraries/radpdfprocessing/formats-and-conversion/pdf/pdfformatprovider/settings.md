@@ -14,6 +14,9 @@ table th:first-of-type {
 table th:nth-of-type(2) {
 	width: 80%;
 }
+table tr td:first-of-type {
+	width: 20%;
+}
 </style>
 
 # Settings
@@ -114,7 +117,7 @@ The **PdfFormatProvider** class offers the **ExportSettings** property which all
 |----|----|
 |**StripJavaScriptActions**|Specifies if the PDF document should strip JavaScript actions on export. *Introduced in Q4 2024*.|
 |**ShouldEmbedFonts** (obsolete)|Specifies whether the font files should be embedded in the PDF document. The default value is *true* because the fonts should be embedded in the file by the PDF Standard. This means that by default the fonts are added which allows proper viewing on any device. If the fonts are not embedded and the file is viewed on a device that does not have the used fronts the font might be substituted. If the font is embedded in the PDF file, it ensures the most predictable and dependable results. As of **Q2 2024** the ShouldEmbedFonts property is obsolete. Use the **FontEmbeddingType** property instead.|
-|**FontEmbeddingType**|The property controls what part of the fonts will be embedded in the file offering the following options: <table><tr><td>**None**</td><td>Does not embed fonts.</td></tr><tr><td>**Full**</td><td>Fully embeds fonts.</td></tr><tr><td>**Subset**</td><td>Embeds only the used characters subset of the fonts. This is the default approach.</td></tr></table> The subset export option is currently implemented **only** for TrueType fonts (.ttf).|
+|**FontEmbeddingType**|The property controls what part of the fonts will be embedded in the file offering the following options: <table><tr><td  width="10%">**None**</td><td>Does not embed fonts.</td></tr><tr><td>**Full**</td><td>Fully embeds fonts.</td></tr><tr><td>**Subset**</td><td>Embeds only the used characters subset of the fonts. This is the default approach.</td></tr></table> The subset export option is currently implemented **only** for TrueType fonts (.ttf).|
 |**IsEncrypted**|This property specifies if the document should be encrypted. The default value is *false*. You can specify the encryption algorithm by setting the **EncryptionType** property. The supported values are **AES256** and **RC4**. </br>**All passwords for revision 6 (AES-256) shall be based on Unicode**. Preprocessing of a user-provided password consists first of normalizing its representation by applying the "SASLPrep" profile (Internet RFC 4013) of the "stringprep" algorithm (Internet RFC 3454) to the supplied password using the Normalize and BiDi options. </br> This setting is ignored when __ComplianceLevel__ differs from __None__ as PDF/A compliant documents do not allow encryption.|
 |**UserPassword**|The password to be used if the document is encrypted. The default password is an empty string.|
 |**OwnerPassword**|The password that governs permissions for operations such as printing, copying and modifying the document. The default password is an empty string.|
