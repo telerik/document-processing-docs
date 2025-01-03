@@ -8,6 +8,9 @@ published: True
 position: 3
 ---
 <style>
+table, th, td {
+	border: 1px solid;
+}
 table th:first-of-type {
 	width: 20%;
 }
@@ -15,7 +18,10 @@ table th:nth-of-type(2) {
 	width: 80%;
 }
 table tr td:first-of-type {
-	width: 30%;
+	width: 25%;
+}
+table tr td table tr td:first-of-type {
+	width: 40%;
 }
 </style>
 
