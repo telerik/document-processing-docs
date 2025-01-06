@@ -38,7 +38,7 @@ The **PdfFormatProvider** class offers the **ImportSettings** property which all
 |**OwnerPasswordNeeded**|The event is fired when an *owner* password is needed to open the document. The password can be specified in the PasswordNeededEventArgs.**Password** property.|
 |**DuplicatedEmbeddedFileNameResolving**|The event is fired when trying to resolve conflicts between the [embedded file names]({%slug radpdfprocessing-embedded-file-streams-overview%}) with the same names.|
         
-The example shows how you can create a **PdfImportSettings** object with the desired settings and handle the offers events:
+The example shows how you can create a **PdfImportSettings** object with the desired settings and handle the offered events:
 
 <snippet id='libraries-pdf-formats-and-conversion-pdf-import-settings'/>
 
