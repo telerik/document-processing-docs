@@ -17,12 +17,12 @@ table th:first-of-type {
 table th:nth-of-type(2) {
 	width: 80%;
 }
-table tr td table tr td :first-of-type {
+/* table tr td table tr td :first-of-type {
 	width: 20%;
 }
 table tr td table tr td table tr td :first-of-type {
 	width: 40%;
-}
+} */
 </style>
 
 # Settings
