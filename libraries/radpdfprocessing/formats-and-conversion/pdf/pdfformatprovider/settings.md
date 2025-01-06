@@ -12,10 +12,10 @@ table, th, td {
 	border: 1px solid;
 }
 table th:first-of-type {
-	width: 20%;
+	width: 25%;
 }
 table th:nth-of-type(2) {
-	width: 80%;
+	width: 75%;
 } 
 </style>
 
