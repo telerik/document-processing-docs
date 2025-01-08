@@ -245,7 +245,7 @@ Invoking the method without a parameter will return the desired size of the bloc
 
 __Example 8__ Creates a __Block__ with text, measures the text, and sets the block size to match the content size.
         
-<snippet id='libraries-pdf-editing-block-measure-no-parameter'/>
+<snippet id='libraries-pdf-editing-block-measure-without-parameter'/>
 
 #### Example 8 Result
 ![Rad Pdf Processing Measuring Block 01](images/RadPdfProcessing_Measuring_Block_01.png)
