@@ -71,7 +71,7 @@ RadPdfProcessing offers support for the following *NonStandard* **Named actions*
 
 The following example demonstrates how to create a PDF document with a [PushButtonField]({%slug radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield%}) which triggers a printing action when the document is displayed in a viewer and the button is pressed by the end-user: 
  
- <snippet id='named-actions'/>
+ <snippet id='libraries-pdf-model-actions-named-actions-create'/>
 
 ![Print Named Action](images/print-named-action.gif) 
 

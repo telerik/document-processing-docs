@@ -40,7 +40,7 @@ The **PdfFormatProvider** class offers the **ImportSettings** property which all
         
 The example shows how you can create a **PdfImportSettings** object with the desired settings and handle the offered events:
 
-<snippet id='libraries-pdf-formats-and-conversion-pdf-import-settings'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdfformatprovider-import-settings'/>
 
 ## Export Settings
 
@@ -65,7 +65,7 @@ The **PdfFormatProvider** class offers the **ExportSettings** property which all
 
 The example shows how you can create a __PdfExportSettings__ object with the desired settings:
 
-<snippet id='libraries-pdf-formats-and-conversion-pdf-export-settings'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdfformatprovider-export-settings'/>
 
 ## See Also
 
