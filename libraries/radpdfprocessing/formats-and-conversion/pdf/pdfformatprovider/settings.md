@@ -63,12 +63,14 @@ The **PdfFormatProvider** class offers the **ExportSettings** property which all
  
 >important The receiver of a PDF document must have the same fonts that were originally used to create it. If a different font is substituted, its character set, glyph shapes, and metrics may differ from those in the original font. This substitution can produce unexpected and unwanted results, such as lines of text extending into margins or overlapping with graphics. A PDF file can refer by name to fonts that are not embedded in the PDF file. In this case, a PDF consumer can use those fonts if they are available in its environment. This approach suffers from the uncertainties noted above. 
 
-The example shows how you can create a __PdfExportSettings__ object with the desired settings:
+As of **Q1 2025** the PdfExportSettings offers the **DocumentUnhandledException** event which allows you to handle exceptions while exporting a document. 
+
+The example shows how you can create a **PdfExportSettings** object with the desired settings and handle unexpected errors while exporting the PDF document:
 
 <snippet id='libraries-pdf-formats-and-conversion-pdfformatprovider-export-settings'/>
 
 ## See Also
 
-* [PdfExportSettings API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.PdfExportSettings.html)
+* [Handling Exceptions]({%slug radpdfprocessing-handling-exceptions%})
 * [How to Comply with PDF/A Standard]({%slug radpdfprocessing-howto-comply-with-pdfa-standard%})
 * [Optimizing and Reducing the Size of PDF Files with RadPdfProcessing]({%slug optimize-and-reduce-pdf-size-radpdfprocessing%})
