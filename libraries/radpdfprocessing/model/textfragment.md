@@ -18,7 +18,7 @@ position: 3
 
 ## Creating a TextFragment
 
-TextFragment is a content element that can be added to the **Content** collection of an **IContainerElement** such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches that can be adopted:
+**TextFragment** is a content element that can be added to the **Content** collection of an **IContainerElement** such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches that can be adopted:
 
 * Create a TextFragment and add it to a page container
 * Use one of the factory methods of the __ContentElementCollection__ to create a new text fragment and insert it into the respective container
@@ -53,9 +53,9 @@ TextFragment is a content element that can be added to the **Content** collectio
 
 ![TextFragments in PdfProcessing](images/radpdfprocessing-model-textfragment.png)  
 
->tip **TextFragment** represents a **single line of text**. In order to make your text "flows" in a document you should make sure all fragments you add can fit in a line or you can use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
+>tip **TextFragment** represents a **single line of text**. In order to make your text "flow" in a document you should make sure all fragments you add can fit in a line or you can use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
           
->The '\r' and '\n' characters don't have the usual meaning of *"go to next line"* when they are inserted into a PDF document and you cannot simply insert text, containing these characters, to produce multiline text. Instead, you should split the text and insert it line by line. An alternative approach is to use the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which allows you to create a documentt in a flow-like manner. 
+>The '\r' and '\n' characters don't have the usual meaning of *"go to next line"* when they are inserted into a PDF document and you cannot simply insert text, containing these characters, to produce multiline text. Instead, you should split the text and insert it line by line. An alternative approach is to use the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which allows you to create a document in a flow-like manner. 
 
 
 ## Modifying a TextFragment
@@ -75,7 +75,7 @@ TextFragment exposes the following properties that can modify the look of the re
 |**Stroke**|The color that is used to stroke text. The default value is Black.|
 |**StrokeThickness**|The width of the stroke line.|
 |**StrokeLineCap**|Specifies the shape, which is used at the ends of open paths, used to draw a letter, when they are stroked. It can have one of the following values:<table><tr><td>**Flat**</td><td>Flat line cap.</td></tr><tr><td>**Round**</td><td>Round line cap.</td></tr><tr><td>**Square**</td><td>Square line cap.</td></tr></table>|
-|**StrokeLineJoin**|Specifies the shape to be used at the corners of paths that are stroked. Join styles are significant only at the points where consecutive segments of a path connect at an angle. Available options: <table><tr><td>**Bevel**</td><td>Produces a diagonal corner.</td></tr><tr><td>**Miter**</td><td>Produces a sharp corner. If the segments meet at too sharp angle, a bevel join is used instead.</td></tr><tr><td>**Round**</td><td>Produces a smooth, circular arc between the lines.</td></tr></table>|
+|**StrokeLineJoin**|Specifies the shape to be used at the corners of paths that are stroked. Join styles are significant only at the points where consecutive segments of a path connect at an angle. Available options: <table><tr><td>**Bevel**</td><td>Produces a diagonal corner.</td></tr><tr><td>**Miter**</td><td>Produces a sharp corner. If the segments meet at too sharp an angle, a bevel join is used instead.</td></tr><tr><td>**Round**</td><td>Produces a smooth, circular arc between the lines.</td></tr></table>|
 |**StrokeDashArray**|The pattern of dashes and gaps used to stroke paths.|
 |**StrokeDashOffset**|The distance from the start of a line to the beginning of a dash pattern.|
 |**AlphaConstant**|Specifying the constant shape or constant opacity value to be used for nonstroking operations.|
