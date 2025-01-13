@@ -7,10 +7,10 @@ position: 4
 ---
 # Handling Exceptions
 
-Since **R2 2020** RadPdfProcessing has and exception handling mechanism. It allows to intercept and handle exceptions when the document is imported or loaded. This functionality introduces two events.
+Since **R2 2020** RadPdfProcessing has an exception handling mechanism. It allows to intercept and handle exceptions when the document is imported or loaded. This functionality introduces two events.
 
-* __PdfImportSettings.DocumentUnhandledException:__ The event is fired when an exception occurs during document import. If the ReadingMode is set to AllAtOnce the entire document will be loaded on document import and there is no need to use the other event.
-* __RadFixedDocument.DocumentUnhandledException:__ The event is fired when an exception occurs while loading the document pages. This event can be fired when the document is imported with OnDemand ReadingMode and a particular page is loaded after the import.
+* __PdfImportSettings.DocumentUnhandledException:__ The event is fired when an exception occurs during document import. If the **ReadingMode** is set to **AllAtOnce** the entire document will be loaded on document import and there is no need to use the other event.
+* __RadFixedDocument.DocumentUnhandledException:__ The event is fired when an exception occurs while loading the document pages. This event can be fired when the document is imported with **OnDemand ReadingMode** and a particular page is loaded after the import.
 * **PdfExportSettings.DocumentUnhandledException:** The event is fired when an exception occurs while exporting the document pages. Introduced in **Q1 2025**.
 
 When both events are raised, the  __DocumentUnhandledExceptionEventArgs__ argument is passed. This argument contains two properties:
@@ -27,7 +27,7 @@ To use this functionality you should handle the __PdfImportSettings.DocumentUnha
 
 ### Using RadFixedDocument.DocumentUnhandledException
 
-When using the OnDemand reading mode you should handle the __RadFixedDocument.DocumentUnhandledException__ event. The __Handled__ option in the event arguments indicates if the exception is handled by the code in the event handler or the exception should be thrown. 
+When using the **OnDemand** reading mode you should handle the __RadFixedDocument.DocumentUnhandledException__ event. The __Handled__ option in the event arguments indicates if the exception is handled by the code in the event handler or the exception should be thrown. 
 
 #### __C# Example 2: Using the DocumentUnhandledException event while loading on demand__
 
@@ -51,10 +51,10 @@ As of **Q1 2025** the [PdfExportSettings]({%slug radpdfprocessing-formats-and-co
 | __InvalidGraphicOperandsCountException__| Represents an exception for importing a graphic operator with an invalid number of operands.|
 | __NotSupportedActionException__| Represents an exception for an action which is not supported.|
 | __NotSupportedCCITTFaxDecodeFilterException__| Represents an exception for a scan decoder which is not supported.|
-| __NotSupportedCharsetFormatException__| Represents an exception for an charset format which is not supported. This exception has a CharsetFormat property which specifies the name of the CharsetFormat.|
+| __NotSupportedCharsetFormatException__| Represents an exception for a charset format which is not supported. This exception has a CharsetFormat property which specifies the name of the CharsetFormat.|
 | __NotSupportedColorSpaceException__| Represents an exception for a color space which is not supported. This exception has a ColorSpace property which specifies the name of the ColorSpace. |
 | __NotSupportedCompressionMethodException__| Represents an exception for importing a FlateDecode method which is not supported.|
-| __NotSupportedEncryptionException__| Represents an exception for an encryption which is not supported. This exception has e EncryptionCode property which specifies the code of the encryption. |
+| __NotSupportedEncryptionException__| Represents an exception for an encryption which is not supported. This exception has an EncryptionCode property which specifies the code of the encryption. |
 | __NotSupportedEncryptionRevisionException__| Represents an exception for an encryption revision which is not supported. This exception has a RevisionCode property which specifies the name of the RevisionCode. |
 | __NotSupportedFeatureException__| Represents an exception for a feature which is not supported.|
 | __NotSupportedFilterException__| Represents an exception for a filter which is not supported. This exception has a FilterName property which specifies the name of the filter. 
@@ -66,9 +66,9 @@ As of **Q1 2025** the [PdfExportSettings]({%slug radpdfprocessing-formats-and-co
 | __NotSupportedReservedMethodException__| Represents an exception for importing a FlateDecode reserved method which is not supported.|
 | __NotSupportedScanDecoderException__| Represents an exception for a document with a scan decoder which is not supported.|
 | __NotSupportedScanEncoderException__| Represents an exception for a scan decoder which is not supported.|
-| __NotSupportedShadingTypeException__| Represents an exception for a shading type which is not supported. This exception has e ShadingType property which specifies the type of the shading.|
+| __NotSupportedShadingTypeException__| Represents an exception for a shading type which is not supported. This exception has a ShadingType property which specifies the type of the shading.|
 | __NotSupportedStreamTypeException__| Represents an exception for a stream type which is not supported. A stream is not supported if it does not support read or seek. This exception has a SupportSeek and SupportRead properties which specify whether the stream supports them.|
-| __NotSupportedXObjectTypeException__| Represents an exception for document with an XObject type which is not supported.|
+| __NotSupportedXObjectTypeException__| Represents an exception for a document with an XObject type which is not supported.|
 |**DuplicatedJavaScriptNameException**|Represents an exception for JavaScript with a duplicated name.|
 |**InvalidAnnotationException**|Represents an exception for an annotation which is not valid. *(Introduced in Q1 2025)*|
 |**NotSupportedAnnotationException**|Represents an exception for an annotation which is not supported.*(Introduced in Q1 2025)*|
