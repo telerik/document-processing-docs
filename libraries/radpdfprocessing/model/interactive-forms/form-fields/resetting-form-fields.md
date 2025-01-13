@@ -19,13 +19,13 @@ The **ResetFormType** property represents the type of the reset form behavior. T
 
 ## Creating a PushButtonWidget with a ResetFormAction 
 
-The following example demonstrates how to create a document from scratch, add a form field (e.g. CheckBoxField) and a push button which is expected to trigger the reset action for the checkbox when the button is clicked.
+The following example demonstrates how to create a document from scratch, add a form field (e.g. CheckBoxField), and a push-button which is expected to trigger the reset action for the checkbox when the button is clicked.
 
 <snippet id='libraries-pdf-model-interactiveforms-formfields-resettingformfields-create-pushbuttonwidget-with-resetformaction'/>
 
 ## Updating an Existing document with a field
 
-If the document already contains form fields and a PushButtonWidget, it is possible access the existing button and add the ResetFormAction.
+If the document already contains form fields and a PushButtonWidget, it is possible to access the existing button and add the ResetFormAction.
 
 <snippet id='libraries-pdf-model-interactiveforms-formfields-resettingformfields-update-existing-pushbuttonwidget-field'/>
 
