@@ -1,6 +1,6 @@
 ---
-title: Setting Up Your Document Processing Libraries License Key
-page_title: Setting Up Your Document Processing Libraries License Key
+title: Setting Up Document Processing Libraries License Key
+page_title: Setting Up Document Processing Libraries License Key
 slug: license-key
 tags: license,key, document, processing
 published: True
@@ -13,7 +13,7 @@ Starting with the Q1 2025 release, the components from the Document Processing L
 To install the license key and activate the components:
 
 1. [Download the license key](#downloading-the-license-key).
-1. [Install or update the license key file on your system or** in your project](#installing-the-license-key).
+1. [Install or update the license key file on your system or** in your project](#installing-or-updating-your-license-key).
 
 The implementation of the 2025 licensing requirements will occur in two phases:
 
@@ -26,20 +26,14 @@ Note that future updates of the product may restrict or disable some features wh
 
 The Telerik Document Processing Libraries are only distributed as a part of several Telerik bundles and are licensed only according to the terms of the bundle under which they are obtained. In the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) article you can find specific license key instruction for each respective bundle.
 
-<!-- Take in to consideration that this is a general article. -->
-
-To download a license key for the respective bundle, you must have either a developer license or a trial license. If you are new to that bundle, you can sign up for a free trial first, and then follow the steps below.
+To download a license key, you must have either a developer license or a trial license. If you are new, you can sign up for a free trial first, and then follow the steps below.
 
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
 1. Click the **Download License Key** button.
 
 ![Download License Key](images/download-license-key.png)
 
-<!-- The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/control-panel), [automated MSI installer](LINK TO MSI INSTALLER ARTICLE), and the [Visual Studio Extensions](LINK TO VSE ARTICLE) (remove if not applicable) will automatically download and store your license key in your home directory. This makes it available for all projects that you develop on your local machine. -->
-
-<!-- Note to documentation authors:
-
-The MSI installer and VSE articles will require updates that address the added license key. -->
+The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/control-panel), automated MSI installer, and the Visual Studio Extensions (if available) of each product will automatically download and store your license key in your home directory. This makes it available for all projects that you develop on your local machine.
 
 ## **Installing or Updating Your License Key**
 Whenever you purchase a new license or renew an existing one, always [download](#downloading-the-license-key) and install a new license key. The new license key includes information about all previous license purchases. The procedure for the installation of a new license key and update of a license key is the same:
@@ -49,18 +43,19 @@ Whenever you purchase a new license or renew an existing one, always [download](
    1. For Mac/Linux: ~/.telerik/telerik.license.txt
       Alternatively, copy the telerik-license.txt license key file to the root folder of your project. This makes the license key available only to this project. Do not commit the file to source control as this is your personal license key.
 1. Add the Telerik.Licensing NuGet package as a project dependency. This package will automatically locate the license file at build time. If your project doesn’t use NuGet packages, see the next document section.
-<!-- ### **Installing a License Key in Projects without NuGet References**
+
+### **Installing a License Key in Projects without NuGet References**
 If you’re not using NuGet packages in your project, add the license as a code snippet:
 
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
-1. On the [PRODUCT NAME] row, click the **View key** link in the **SCRIPT KEY** column.
-   1. [ADD IMAGE HERE]
+1. On the corresponding product row, click the **View key** link in the **SCRIPT KEY** column.
 1. Copy the C# code snippet into a new file, for example, TelerikLicense.cs.
 1. Add the TelerikLicense.cs file to your project.
 
-Do not publish the license key code snippet in publicly accessible repositories. This is your personal license key. -->
+Do not publish the license key code snippet in publicly accessible repositories. This is your personal license key.
 
 -----
+
 # **Adding the License Key to CI Services**
 This article describes how to set up and activate your [license key](https://www.telerik.com/account/your-licenses/license-keys) across a few popular CI services by using environment variables.
 
@@ -71,30 +66,30 @@ When working with CI/CD platforms, always add the Telerik.Licensing NuGet packag
 The license activation process in a CI/CD environment involves the following steps:
 
 1. [Download](https://www.telerik.com/account/your-licenses/license-keys) a license key from your Telerik account.
-2. Add the Telerik.Licensing NuGet package as a project dependency: <PackageReference Include="Telerik.Licensing" Version="1.\*" />
+2. Add the Telerik.Licensing NuGet package as a project dependency:\<PackageReference Include="Telerik.Licensing" Version="1.\*" /\>
 2. [Create an environment variable](#creating-an-environment-variable) and add your license key as a value.
 
 ## **Creating an Environment Variable**
 The recommended approach for providing your license key to the Telerik.Licensing NuGet package is to use environment variables. Each CI/CD platform has a different process for setting environment variables and this article lists only some of the most popular examples.
+
 ### **Azure Pipelines (YAML)**
 1. Create a new [User-defined Variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) named TELERIK\_LICENSE.
 1. Paste the contents of the license key file as a value.
+
 ### **Azure Pipelines (Classic)**
 1. Create a new [user-defined variable](https://docs.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=classic%2Cbatch) named TELERIK\_LICENSE.
 1. Paste the contents of the license key file as a value.
+
 ### **GitHub Actions**
 1. Create a new [Repository Secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) or an [Organization Secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-an-organization).
 1. Set the name of the secret to TELERIK\_LICENSE and paste the contents of the license file as a value.
 1. After running npm install or yarn, add a build step to activate the license:
 
-yaml
-
+```yaml
 env:
-
-`    `TELERIK\_LICENSE: ${{ secrets.TELERIK\_LICENSE }}
-
+    TELERIK_LICENSE: ${{ secrets.TELERIK_LICENSE }}
+```
 -----
-# **[ARTICLE 3]**
 # **Frequently Asked Questions**
 This article lists the answers to the most frequently asked questions (FAQs) about working with the license key.
 ### **[2025 Q2] Will the product function with an expired license key?** 
@@ -118,6 +113,7 @@ If this happens, the possible reason is that the end date of the license activat
 
 1. [Download a new license key](#downloading-the-license-key).
 1. [Activate the new license key](#installing-or-updating-your-license-key) in your project.
+
 ### **Can I use the same license key in multiple builds?**
 You can use your personal license key in multiple pipelines, builds, and environments.
 
@@ -130,7 +126,7 @@ Yes, the license key expires at the end of your support subscription:
 
 You will need to obtain and install a new license key after starting a trial, renewing a license, or upgrading a license.
 
-An expired perpetual license key is valid for all [PRODUCT NAME] versions published before its expiration date.
+An expired perpetual license key is valid for all product versions published before its expiration date.
 ### **Do I need an Internet connection to activate the license?**
 No, the license activation and validation are performed entirely offline.
 
@@ -159,14 +155,14 @@ This depends on your license:
 # **License Activation Errors and Warnings**
 Starting with the 2025 Q1 release, using a product without a license or with an invalid license causes specific license warnings and errors. This article defines what an invalid license is, explains what is causing it, and describes the related license warnings and errors.
 
-The implementation of the 2025 [PRODUCT NAME] licensing requirements will occur in two phases:
+The implementation of the 2025 product licensing requirements will occur in two phases:
 
 - Phase 1 - Starting with the 2025 Q1 release, a missing or invalid license logs a warning in the build log.
 - Phase 2 - Starting with the 2025 Q2 release, a missing, expired, or invalid license will result in:
   - A watermark appearing on application startup.
   - A modal dialog appearing on application startup. Clicking the **OK** button of the dialog closes the dialog and removes the banner until the next application startup.
-  - A warning message similar to the following appearing in the build log:
-    [SAMPLE MESSAGE]
+  - A warning message appearing in the build log:
+
 ## **Invalid License**
 An invalid license can be caused by any of the following:
 
@@ -176,6 +172,7 @@ An invalid license can be caused by any of the following:
 - A missing license for the product.
 - Not installing a license key in your application.
 - Not updating the license key after renewing your product license.
+
 ## **License Warnings and Errors**
 Using the product in a project with an expired or missing license, the Telerik.Licensing build task will indicate the following errors:
 
@@ -192,4 +189,9 @@ In addition, the following conditions will be logged:
 |Your license is not valid for the detected product(s).|Review the purchase options for the listed products.<br>Alternatively, remove the references to the listed packages from package.json.|
 
 Starting with the 2025 Q2 release of the product in May 2025, all conditions above will be treated as errors.
+
+## See Also
+
+* [License Agreement]({%slug license-agreement%})
+* [Redistributing Telerik Document Processing]({%slug installation-deploying-telerik-document-processing%})
 
