@@ -185,7 +185,7 @@ In addition, the following conditions will be logged:
 |**Condition**|**Solution**|
 | :-: | :-: |
 |Your subscription license has expired.|Renew your subscription and [download a new license key](#downloading-the-license-key).|
-|Your perpetual license is invalid.|<p>You are using a product version released outside the validity period of your perpetual license. To remove the error message, do either of the following:</p><p>- Purchase a license for the product version you are using, then download a new license key and install it.</p><p>- Downgrade to a product version included in your perpetual license as indicated in the message.</p>|
+|Your perpetual license is invalid.|You are using a product version outside the validity period of your perpetual license. To resolve this, do either of the following: <br> - Purchase a license for the current product version, then download and install a new key. <br> - Downgrade to a version covered by your perpetual license, as specified in the message. |
 |Your trial license has expired.|Purchase a commercial license to continue using the product.|
 |Your license is not valid for the detected product(s).|Review the purchase options for the listed products.<br>Alternatively, remove the references to the listed packages from package.json.|
 
