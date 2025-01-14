@@ -27,27 +27,7 @@ position: 3
 
 #### __[C#] Example 1: Create TextFragments and add them to a page__
 
-{{region cs-radpdfprocessing-model-textfragment_0}}
-	RadFixedDocument document = new RadFixedDocument();
-	RadFixedPage page = new RadFixedPage();
-	document.Pages.Add(page);
-	FixedContentEditor editor = new FixedContentEditor(page);
-
-	SimplePosition simplePosition = new SimplePosition();
-	simplePosition.Translate(20, 20);
-	TextFragment textFragment = page.Content.AddTextFragment("Document Processing Libraries");
-	textFragment.CharacterSpacing = 5;
-	textFragment.WordSpacing = 15;
-	textFragment.Position = simplePosition;
-
-	SimplePosition simplePosition2 = new SimplePosition();
-	simplePosition2.Translate(20, 120);
-	TextFragment textFragment2 = new TextFragment("Document Processing Libraries");
-	textFragment2.CharacterSpacing = 10;
-	textFragment2.WordSpacing = 20;
-	textFragment2.Position = simplePosition2;
-	page.Content.Add(textFragment2);
-{{endregion}}
+ <snippet id='libraries-pdf-model-text-fragment-create'/>
 
 >caption Figure 1: Inserted TextFragments
 
@@ -87,58 +67,7 @@ TextFragment exposes the following properties that can modify the look of the re
      
 #### __[C#] Example 2: Modifying TextFragment's properties__
 
-{{region cs-radpdfprocessing-model-textfragment_1}}
-            RadFixedDocument document = new RadFixedDocument();
-            RadFixedPage page = new RadFixedPage();
-            document.Pages.Add(page);
-            FixedContentEditor editor = new FixedContentEditor(page);
-
-            SimplePosition simplePosition = new SimplePosition();
-            simplePosition.Translate(20, 20);
-            TextFragment textFragment = page.Content.AddTextFragment("Document");
-            textFragment.RenderingMode = RenderingMode.Stroke;
-            textFragment.Stroke = new RgbColor(255, 0, 255);
-            textFragment.CharacterSpacing = 5;
-            textFragment.WordSpacing = 15;
-
-            // Read the font file 
-            byte[] fontData = File.ReadAllBytes(@"C:\Windows\Fonts\arial.ttf");
-            FontFamily fontFamily = new FontFamily("Arial");
-
-            // Register the font 
-            FontsRepository.RegisterFont(fontFamily, FontStyles.Normal, FontWeights.Normal, fontData);
-            FontBase font;
-            bool success = FontsRepository.TryCreateFont(fontFamily, FontStyles.Normal, FontWeights.Normal, out font);
-            textFragment.Font = font;
-            textFragment.FontSize = Unit.PointToDip(12);
-            textFragment.Position = simplePosition;
-
-            textFragment = page.Content.AddTextFragment("Processing");
-            simplePosition = new SimplePosition();
-            simplePosition.Translate(20, 50);
-            textFragment.Position = simplePosition;
-            textFragment.CharacterSpacing = 5;
-            textFragment.WordSpacing = 15;
-            textFragment.Font = FontsRepository.Courier;
-            textFragment.FontSize = Unit.PointToDip(12);
-            textFragment.RenderingMode = RenderingMode.Stroke;
-            textFragment.Stroke = new RgbColor(0, 0, 255);
-            textFragment.StrokeThickness = 1;
-
-            simplePosition = new SimplePosition();
-            textFragment = page.Content.AddTextFragment("Libraries");
-            simplePosition.Translate(20, 80);
-            textFragment.Position = simplePosition;
-            textFragment.Font = FontsRepository.TimesItalic;
-            textFragment.FontSize = Unit.PointToDip(16);
-            textFragment.RenderingMode = RenderingMode.Stroke;
-            textFragment.StrokeLineCap = Telerik.Windows.Documents.Fixed.Model.Graphics.LineCap.Flat;
-            textFragment.StrokeLineJoin = Telerik.Windows.Documents.Fixed.Model.Graphics.LineJoin.Round;
-            textFragment.StrokeDashArray = new double[] { 1 };
-            textFragment.StrokeDashOffset = 2;
-            textFragment.AlphaConstant = 0.5;
-            textFragment.MiterLimit = 2;
-{{endregion}}
+ <snippet id='libraries-pdf-model-text-fragment-modify'/>
 
 >caption Figure 2: Modified TextFragments
 
