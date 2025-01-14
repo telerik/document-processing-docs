@@ -62,8 +62,6 @@ This article describes how to set up and activate your [license key](https://www
 
 When working with CI/CD platforms, always add the Telerik.Licensing NuGet package as a project dependency. This package activates the product components at build time by using the provided license key.
 
-<!-- If you cannot use NuGet packages in your project, see the workaround in the [Adding Your License Key to CI Platforms as a Code Snippet](LINK TO ARTICLE) KB article. -->
-
 The license activation process in a CI/CD environment involves the following steps:
 
 1. [Download](https://www.telerik.com/account/your-licenses/license-keys) a license key from your Telerik account.
@@ -183,7 +181,7 @@ Using the product in a project with an expired or missing license, the Telerik.L
 In addition, the following conditions will be logged:
 
 |**Condition**|**Solution**|
-| :- | :- |
+|----|----|
 |Your subscription license has expired.|Renew your subscription and [download a new license key](#downloading-the-license-key).|
 |Your perpetual license is invalid.|You are using a product version outside the validity period of your perpetual license. To resolve this, do either of the following: <br> - Purchase a license for the current product version, then download and install a new key. <br> - Downgrade to a version covered by your perpetual license, as specified in the message. |
 |Your trial license has expired.|Purchase a commercial license to continue using the product.|
