@@ -183,7 +183,7 @@ Using the product in a project with an expired or missing license, the Telerik.L
 In addition, the following conditions will be logged:
 
 |**Condition**|**Solution**|
-| :-: | :-: |
+| :- | :- |
 |Your subscription license has expired.|Renew your subscription and [download a new license key](#downloading-the-license-key).|
 |Your perpetual license is invalid.|You are using a product version outside the validity period of your perpetual license. To resolve this, do either of the following: <br> - Purchase a license for the current product version, then download and install a new key. <br> - Downgrade to a version covered by your perpetual license, as specified in the message. |
 |Your trial license has expired.|Purchase a commercial license to continue using the product.|
