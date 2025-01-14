@@ -3,7 +3,7 @@ title: Named Actions
 description: RadPdfProcessing provides support for Named actions.
 page_title: Named Actions    
 slug: radpdfprocessing-model-actions-named-actions
-tags: named, action, pdf
+tags: named, action, pdf, processing
 published: True
 position: 2
 ---
