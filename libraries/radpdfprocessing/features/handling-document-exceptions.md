@@ -13,15 +13,15 @@ Since **R2 2020** RadPdfProcessing has an exception handling mechanism. It allow
 * __RadFixedDocument.DocumentUnhandledException:__ The event is fired when an exception occurs while loading the document pages. This event can be fired when the document is imported with **OnDemand ReadingMode** and a particular page is loaded after the import.
 * **PdfExportSettings.DocumentUnhandledException:** The event is fired when an exception occurs while exporting the document pages. Introduced in **Q1 2025**.
 
-When both events are raised, the  __DocumentUnhandledExceptionEventArgs__ argument is passed. This argument contains two properties:
+When the events are raised, the  __DocumentUnhandledExceptionEventArgs__ argument is passed. This argument contains two properties:
 * __Exception:__ Gets the document exception.
 * __Handled:__ Gets or sets if the exception should be handled. The default value is *false*. 
 
 >note The exception handling mechanism handles exceptions at the very beginning of the import as well. In such a case, the event will be raised and an empty document instance is returned. The exception handling mechanism **does not handle** exceptions while parsing **fonts glyph data** or parsing **images** during document rendering in the UI viewers.
 
-To use this functionality you should handle the __PdfImportSettings.DocumentUnhandledException__ event. The __Handled__ property in the event arguments indicates if the exception is handled by the code in the event handler or the exception should be thrown. 
+### Using ImportSettings.DocumentUnhandledException event 
 
-#### __C# Example 1: Using the DocumentUnhandledException event while loading the entire document__ 
+To use this functionality you should handle the __PdfImportSettings.DocumentUnhandledException__ event. The __Handled__ property in the event arguments indicates if the exception is handled by the code in the event handler or the exception should be thrown. 
 
 <snippet id='libraries-pdf-features-handling-exceptions-import-settings'/>
 
