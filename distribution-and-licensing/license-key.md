@@ -10,14 +10,14 @@ position: 2
 # Setting Up Your Telerik Document Processing Libraries License Key
 Starting with the Q1 2025 release, the libraries from Telerik Document Processing require activation through a license key (trial or commercial). This article describes how to download, install, and update your personal license key.
 
-To install the license key and activate the components:
+To install the license key and activate the libraries:
 
 1. [Download the license key](#downloading-the-license-key).
 1. [Install or update the license key file on your system or** in your project](#installing-or-updating-your-license-key).
 
 The implementation of the 2025 licensing requirements will occur in two phases:
 
-- Phase 1 - Starting with the 2025 Q1 release, a missing or invalid license causes [warnings during build](#license-activation-errors-and-warnings). The commercial distributions of the components do not exhibit any functional restrictions.
+- Phase 1 - Starting with the 2025 Q1 release, a missing or invalid license causes [warnings during build](#license-activation-errors-and-warnings). The commercial distributions of the libraries do not exhibit any functional restrictions.
 - Phase 2 - Starting with the 2025 Q2 release, a missing or invalid license will result in [build errors and run-time indicators](#license-activation-errors-and-warnings), such as watermarks and banners.
 
 Note that future updates of the product may restrict or disable some features when no valid license is present. You can send us feedback through the Contact Us form or by [opening a support ticket](https://www.telerik.com/account/support-center/contact-us?utm_source=licensing&utm_medium=console&utm_campaign=no_references).
@@ -60,7 +60,7 @@ Do not publish the license key code snippet in publicly accessible repositories.
 ## Adding the License Key to CI Services
 This article describes how to set up and activate your [license key](https://www.telerik.com/account/your-licenses/license-keys) across a few popular CI services by using environment variables.
 
-When working with CI/CD platforms, always add the Telerik.Licensing NuGet package as a project dependency. This package activates the product components at build time by using the provided license key.
+When working with CI/CD platforms, always add the Telerik.Licensing NuGet package as a project dependency. This package activates the product libraries at build time by using the provided license key.
 
 The license activation process in a CI/CD environment involves the following steps:
 
@@ -147,7 +147,7 @@ No, versions released prior to Jan 2025 do not require a license key.
 ### What happens if I make a change to non-Telerik parts of the code after the subscription expires?
 This depends on your license:
 
-- If you have a perpetual license, you can build the application with the Telerik components.
+- If you have a perpetual license, you can build the application with the Telerik libraries.
 - If you have an expired subscription license, the build will fail.
 
 -----
@@ -175,8 +175,8 @@ An invalid license can be caused by any of the following:
 ### License Warnings and Errors
 Using the product in a project with an expired or missing license, the Telerik.Licensing build task will indicate the following errors:
 
-- No license key is detected - [Install a license key](#installing-or-updating-your-license-key) to activate the UI components and remove the error message.
-- Invalid license key - [Download a new license key](#downloading-the-license-key) and install it to activate the UI components and remove the error message.
+- No license key is detected - [Install a license key](#installing-or-updating-your-license-key) to activate the libraries and remove the error message.
+- Invalid license key - [Download a new license key](#downloading-the-license-key) and install it to activate the libraries and remove the error message.
 
 In addition, the following conditions will be logged:
 
