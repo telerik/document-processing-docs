@@ -26,7 +26,7 @@ position: 0
 
 ![changed](../images/changed.png)
 
-* Document Processing Libraries: Remediated [CVE-2024-8049](https://www.cve.org/CVERecord?id=CVE-2024-8049).
+* Document Processing Libraries: Remediated [CVE-2024-8049](https://www.cve.org/CVERecord?id=CVE-2024-8049) - [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%}) for importing and exporting documents was introduced.
 
 ## PdfProcessing
 
