@@ -18,22 +18,22 @@ However, it is possible to implement your own **IOcrProvider** that uses the des
 
 The [Azure AI Vision](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview) service gives you access to the [Optical Character Recognition](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr) (OCR) service that extracts text from images. We will use its [OCR engine](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr#ocr-engine) to implement a custom **IOcrProvider** that our RadPdfprocessing library can use.
 
-1. Before going further, you can find listed below the **required** assemblies/ NuGet packages that should be added to your project:
+1\. Before going further, you can find listed below the **required** assemblies/ NuGet packages that should be added to your project:
 
 * [Azure.AI.Vision.ImageAnalysis](https://www.nuget.org/packages/Azure.AI.Vision.ImageAnalysis)
 * Telerik.Documents.Fixed
 * Telerik.Documents.Fixed.FormatProviders.Ocr
 * Telerik.Documents.ImageUtils
 
-2.  It is necessary to generate your Azure AI key and endpoint: [Get your credentials from your Azure AI services resource](https://learn.microsoft.com/en-us/azure/ai-services/use-key-vault?tabs=azure-cli&pivots=programming-language-csharp)
+2\.  It is necessary to generate your Azure AI key and endpoint: [Get your credentials from your Azure AI services resource](https://learn.microsoft.com/en-us/azure/ai-services/use-key-vault?tabs=azure-cli&pivots=programming-language-csharp)
 
 ![Azure AI key](images/azure-ai-key.png)  
 
-3. Create the custom AzureAIOcrProvider class that implements the **IOcrProvider** interface: 
+3\. Create the custom AzureAIOcrProvider class that implements the **IOcrProvider** interface: 
 
 <snippet id='libraries-pdf-formats-and-conversion-ocrformatprovider-azureaiocrprovider'/>
  
-4. Use the custom implementation with the [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) that RadPdfProcessing offers:
+4\. Use the custom implementation with the [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) that RadPdfProcessing offers:
 
 <snippet id='libraries-pdf-formats-and-conversion-ocrformatprovider-use-custom-iocrprovider'/>
 
