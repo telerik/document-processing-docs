@@ -5,7 +5,7 @@ page_title: Using a Custom OCR Provider
 slug: radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider
 tags: pdf,image,skia
 published: True
-position: 1
+position: 2
 ---
 
 # Implementing a Custom IOcrProvider
