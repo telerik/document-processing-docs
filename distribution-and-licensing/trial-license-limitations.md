@@ -22,4 +22,5 @@ In PDF and flow formats, this is a message at the top of the document, whereas f
 # See Also
 
 * [How to Upgrade Trial to Licensed Version]({%slug upgrade-trial-to-licensed-version%}) 
+* [Setting Up Document Processing Libraries License Key]({%slug license-key%})
 

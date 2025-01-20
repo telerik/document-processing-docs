@@ -20,22 +20,16 @@ FormField class is the base class for all fields. Instances of this class may be
 
 The FormField class provides the following properties:
 
-* **FieldType**: Provides the FormFieldType of the specifying field instance. This property can be used to easily recognize the type of the concrete field and easily cast the instance to the concrete FormField class inheritor.
-
-* **Name**: Provides the name of the field. Each field should have a unique name when added to a FormFieldCollection of an AcroForm. Since R2 2020 you can set the Name as well.
-
-* **UserInterfaceName**: Provides name used by the UI when referencing the field. Usually shown in a tooltip when hovering the field representation on the page. Also shown in error messages related to field error calculations.
-
-* **MappingName**: Name used when exporting the field data from the document.
-
-* **IsReadOnly**: Boolean value indicating whether the field should be threated as read-only in a PDF viewer UI.
-
-* **IsRequired**: Boolean value indicating whether the field is required for submitting the interactive form data.
-
-* **ShouldBeSkipped**: Boolean value indicating whether the field should be skipped when submitting the form.
-
-* **TextProperties**: Represents a VariableTextProperties instance used when creating Widget for visualizing the concrete field. These properties are used to dynamically construct the Widget appearance when it contains some text content.
-
+|Property|Description|
+|----|----|
+|**FieldType**|Provides the FormFieldType of the specifying field instance. This property can be used to easily recognize the type of the concrete field and easily cast the instance to the concrete FormField class inheritor.|
+|**Name**|Provides the name of the field. Each field should have a unique name when added to a FormFieldCollection of an AcroForm. Since R2 2020 you can set the Name as well.|
+|**UserInterfaceName**|Provides name used by the UI when referencing the field. Usually shown in a tooltip when hovering the field representation on the page. Also shown in error messages related to field error calculations.|
+|**MappingName**|Name used when exporting the field data from the document.|
+|**IsReadOnly**|Boolean value indicating whether the field should be threated as read-only in a PDF viewer UI.|
+|**IsRequired**|Boolean value indicating whether the field is required for submitting the interactive form data.|
+|**ShouldBeSkipped**|Boolean value indicating whether the field should be skipped when submitting the form.|
+|**TextProperties**|Represents a VariableTextProperties instance used when creating Widget for visualizing the concrete field. These properties are used to dynamically construct the Widget appearance when it contains some text content.|
 
 ## FormField Types
 
@@ -105,7 +99,7 @@ In R2 2020 we introduced the __Rename__ method which allows you to rename the Fo
 
 ## Merging Documents with Form Fields
 
-When merging documents that contain FormFields you need to ensure that each field in the document will have unique name. This can be achieved by using the __MergedFieldNameResolving__ event. This event gives you access to all used field names and allow you to change the current field if it is already used. 
+When merging documents that contain FormFields, you need to ensure that each field in the document will have a unique name. This can be achieved by using the __MergedFieldNameResolving__ event. This event gives you access to all used field names and allows you to change the current field, if it is already used. 
 
 #### **[C#] Example 2: Merge files with Form Fields**
 
@@ -146,3 +140,4 @@ When merging documents that contain FormFields you need to ensure that each fiel
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 
 * [Creating a PDF Table with Form Fields Inside the Cells]({%slug insert-form-xobject-elements-pdf-table-cell%})
+* [Resetting Form Fields]({%slug radpdfprocessing-model-interactive-forms-resetting-form-fields%})

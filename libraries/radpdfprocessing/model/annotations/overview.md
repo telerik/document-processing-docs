@@ -13,6 +13,8 @@ position: 0
 An *annotation* associates an object such as a note, sound, or movie with a location on a page of a PDF document, or provides a way to interact with the user by
 means of the mouse and keyboard. PDF includes a wide variety of standard [annotation types](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html). Many of the standard annotation types may be displayed in either the open or the closed state. When closed, they appear on the page in some distinctive form, such as an icon, a box, or a rubber stamp, depending on the specific annotation type. When the user activates the annotation by clicking it, it exhibits its associated object, such as by opening a pop-up window displaying a text note or by playing a sound or a movie. 
 
+>note RadPdfProcessing provides an [Exception Handling]({%slug radpdfprocessing-handling-exceptions%}) mechanism which allows detecting cases with invalid or not supported annotations being imported in the document.
+
 The abstract **Annotation** element associates an object with a location on a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). Annotation exposes the following properties:
       
 * **Rect**: The rectangle, which defines the location of the annotation on the page.
@@ -38,3 +40,4 @@ The abstract **Annotation** element associates an object with a location on a [R
  * [TextMarkup]({%slug radpdfprocessing-model-annotations-text-markup%})
  * [Text]({%slug radpdfprocessing-model-annotations-text%})
  * [Link]({%slug radpdfprocessing-model-annotations-links%})
+ * [Handling Exceptions]({%slug radpdfprocessing-handling-exceptions%})
