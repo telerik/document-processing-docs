@@ -24,6 +24,7 @@ The [Azure AI Vision](https://learn.microsoft.com/en-us/azure/ai-services/comput
 * Telerik.Documents.Fixed
 * Telerik.Documents.Fixed.FormatProviders.Ocr
 * Telerik.Documents.ImageUtils
+* SkiaSharp
 
 2\.  It is necessary to generate your Azure AI key and endpoint: [Get your credentials from your Azure AI services resource](https://learn.microsoft.com/en-us/azure/ai-services/use-key-vault?tabs=azure-cli&pivots=programming-language-csharp)
 
