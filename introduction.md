@@ -8,6 +8,15 @@ published: True
 position: 0
 ---
 
+<style>
+table th:first-of-type {
+	width: 25%;
+}
+table th:nth-of-type(2) {
+	width: 75%;
+} 
+</style>
+
 # Welcome to Telerik Document Processing Libraries
 
 **Telerik Document Processing** is a bundle of **UI-independent** *cross-platform* libraries that enable you to process the most commonly used flow, fixed and spreadsheet document formats for web and desktop. The Document Processing library allows you to create, import, modify and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
