@@ -110,4 +110,6 @@ You can also export the document to a byte array and preserve it in a database.
 
 The resulting documents can be opened in any application that supports DOCX documents.
         
+## See Also
 
+* [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
