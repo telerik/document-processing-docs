@@ -19,6 +19,8 @@ ticketid: 1676495
 
 This tutorial demonstrates how to import an unsigned PDF containing a signature and sign it using RadPdfProcessing.
 
+![Sign an Unsigned PDF](images/sign-an-unsigned-pdf.png)   
+
 ## Solution
 To add signatures and images to PDF documents and ensure the signed version correctly overwrites an existing file, follow these steps:
 
