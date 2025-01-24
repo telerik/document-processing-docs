@@ -16,7 +16,7 @@ However, it is possible to implement your own **IOcrProvider** that uses the des
 
 ## Using the Azure AI Vision
 
-The [Azure AI Vision](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview) service gives you access to the [Optical Character Recognition](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr) (OCR) service that extracts text from images. We will use its [OCR engine](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr#ocr-engine) to implement a custom **IOcrProvider** that our RadPdfprocessing library can use.
+The [Azure AI Vision](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview) service gives you access to the [Optical Character Recognition](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr) (OCR) service that extracts text from images. We will use its [OCR engine](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview-ocr#ocr-engine) to implement a custom **IOcrProvider** that our RadPdfProcessing library can use.
 
 1\. Before going further, you can find listed below the **required** assemblies/ NuGet packages that should be added to your project:
 
