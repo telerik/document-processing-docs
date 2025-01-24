@@ -23,6 +23,14 @@ table th:nth-of-type(2) {
 
 ![DPL Ninja](images/dpl-ninja.png) 
 
+{% if site.has_cta_panels == true %}
+{% include cta-panel-introduction.html %}
+{% endif %}
+
+## Libraries
+
+Telerik Document Processing features the following components:
+
 |Library|Description|
 |----|----|
 | [RadPdfProcessing]({%slug radpdfprocessing-overview%})|A processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.|
@@ -30,10 +38,6 @@ table th:nth-of-type(2) {
 |[RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|Spread streaming is a document processing paradigm that allows you to create or read big spreadsheet documents with great performance and minimal memory footprint. The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory.|
 |[RadWordsProcessing]({%slug radwordsprocessing-overview%})|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or sent it to the client browser.|
 |[RadZipLibrary]({%slug radziplibrary-overview%})| It allows you to compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.|
-
-{% if site.has_cta_panels == true %}
-{% include cta-panel-introduction.html %}
-{% endif %}
 
 ## Key Features
 
@@ -87,20 +91,6 @@ All versions are available as [NuGet packages]({%slug installation-nuget-package
 ## Getting Started
 
 To start using the libraries right away, see the [First Steps]({%slug getting-started-first-steps%}) topic that demonstrates how to create a sample application that uses the Document Processing libraries.
-
-## Libraries
-
-Telerik Document Processing features the following components:
-
-* [RadPdfProcessing]({%slug radpdfprocessing-overview%}): A library that allows you to create, import and export PDF documents.
-
-* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}): A library that allows you to create, import and export XLSX (Excel Workbook), XLS (Excel 97-2003 Workbook), CSV and TXT spreadsheet documents. It also allows you to export all these formats to PDF.
-
-* [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}): A library that allows you to export and read large XLSX and CSV spreadsheet documents with low memory footprint and great performance.
-
-* [RadWordsProcessing]({%slug radwordsprocessing-overview%}): A library that allows you to create, import and export DOCX (Word Document), DOC & DOT (import only), HTML, RTF and TXT documents. It also allows you to export all these formats to PDF.
-
-* [RadZipLibrary]({%slug radziplibrary-overview%}): A library that allows you to compress and decompress ZIP files.
 
 ## Trial Version and Commercial License
 
