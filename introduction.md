@@ -26,7 +26,7 @@ table th:first-of-type {
 
 ## Libraries
 
-Telerik Document Processing features the following components:
+Telerik Document Processing features the following libraries:
 
 |Library|Description||
 |----|----|----|
@@ -52,21 +52,22 @@ For more details about the benefits of using Telerik Document Processing, see th
 
 ## Supported Formats
 
-
 The Telerik Document Processing libraries support the following file formats:
 
-* DOCX (Word Document)
-* DOC (Word 97-2003 Document)
-* DOT (Word 97-2003 Template)
-* HTML
-* PDF
-* RTF
-* TXT
-* XLSX (Excel Workbook)
-* XLS (Excel 97-2003 Workbook)
-* XLSM (macro-enabled spreadsheet created by Microsoft Excel) *Macros are only preserved during import and export. They cannot be executed or changed in the code.
-* CSV
-* ZIP
+|Format|Library|Provider|
+|----|----|----|
+|**DOCX (Word Document)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})|
+|**DOC (Word 97-2003 Document)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})|[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%})|
+|**DOT (Word 97-2003 Template)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%})|
+|**HTML**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})|
+|**PDF**|[RadWordsProcessing]({%slug radwordsprocessing-overview%}), [RadPdfProcessing]({%slug radpdfprocessing-overview%}), [RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[PdfFormatProvider in RadWordsProcessing]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}), [PdfFormatProvider in RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}), [PdfFormatProvider in RadSpreadProcessing]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})|
+|**RTF**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[RtfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})|
+|**TXT**|[RadWordsProcessing]({%slug radwordsprocessing-overview%}), [RadPdfProcessing]({%slug radpdfprocessing-overview%})|[TxtFormatProvider in RadWordsProcessing]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%}), [TextFormatProvider in RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%})|
+|**XLSX (Excel Workbook)**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%}), [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|[XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})|
+|**XLS (Excel 97-2003 Workbook)**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})|
+|**XLSM (macro-enabled spreadsheet created by Microsoft Excel)** <sub>*Macros are only preserved during import and export. They cannot be executed or changed in the code.</sub>|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[XlsmFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider%})|
+|**CSV**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%}), [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|[CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})|
+|**ZIP**|[RadZipLibrary]({%slug radziplibrary-overview%})|[ZipArchive]({%slug radziplibrary-gettingstarted%})|
 
 ![DPL Ninja](images/dpl-formats.png) 
 
