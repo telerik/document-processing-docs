@@ -13,9 +13,11 @@ Starting with the Q1 2025 release, the libraries from Telerik Document Processin
 To install the license key and activate the libraries:
 
 1. [Download the license key](#downloading-the-license-key).
-1. [Install or update the license key file on your system or** in your project](#installing-or-updating-your-license-key).
+1. [Install or update the license key file on your system or in your project](#installing-or-updating-your-license-key).
 
 The implementation of the 2025 licensing requirements will occur in two phases:
+
+>important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
 
 - Phase 1 - Starting with the 2025 Q1 release, a missing or invalid license causes [warnings during build](#license-activation-errors-and-warnings). The commercial distributions of the libraries do not exhibit any functional restrictions.
 - Phase 2 - Starting with the 2025 Q2 release, a missing or invalid license will result in [build errors and run-time indicators](#license-activation-errors-and-warnings), such as watermarks and banners.
