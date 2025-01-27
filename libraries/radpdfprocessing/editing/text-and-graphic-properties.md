@@ -126,3 +126,4 @@ Both Text and Graphic properties contain methods that can preserve and restore t
 
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [Block]({%slug radpdfprocessing-editing-block%})
+ * [Changing Block's Text Color in PDF Documents Using RadPdfProcessing]({%slug change-text-color-pdf-radpdfprocessing%})
