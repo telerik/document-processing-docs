@@ -4,7 +4,7 @@ description: Learn how to use Telerik Document Processing libraries to convert c
 type: how-to
 page_title: How to Convert Color PDF Reports to Black & White Using Telerik Document Processing
 slug: convert-color-pdf-to-black-and-white-telerik-document-processing
-tags: document, processing, pdf, conversion, black, white, grays
+tags: document, processing, pdf, conversion, black, white, gray, image, convert
 res_type: kb
 ticketid: 1675661
 ---
@@ -17,14 +17,16 @@ ticketid: 1675661
 
 ## Description
 
-This article shows a sample approach how to convert a colored PDF document to a grayscale one with RadPdfProcessing. 
+This article shows a sample approach how to convert a **colored** PDF document to a **grayscale** one with [RadPdfProcessing]({%slug radpdfprocessing-overview%}). 
+
+![Converting Colored PDF Documents to GrayScale](images/convert-grascale-pdf.png)   
 
 ## Solution
 
 To convert a colored PDF file to black and white using Telerik Document Processing, follow the steps below:
 
-1. Use the [RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview) library to import the PDF file.
-2. Iterate through the content of the PDF file, including Path, TextFragment, and Image instances.
+1. Use the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library to import the PDF file.
+2. Iterate through the content of the PDF file, including [Path]({%slug radpdfprocessing-model-path%}), [TextFragment]({%slug radpdfprocessing-model-textfragment%}), and [Image]({%slug radpdfprocessing-model-image%}) instances.
 3. Modify the colors to grayscale and export the processed file as a new PDF document.
 
 Here is a complete code snippet that demonstrates how to achieve this conversion:
@@ -234,8 +236,9 @@ namespace _1675661GrayScalePDF
 ```
 
 Ensure to adjust the `MakeGrayscale` methods for `ColorBase`, `Path`, and `Image` according to your specific needs. This sample demonstrates the basic approach to converting document elements to grayscale but might require adjustments for complex scenarios or specific color processing requirements.
+
 ## See Also
 
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Telerik Document Processing Introduction](https://docs.telerik.com/devtools/document-processing/introduction)
-- [Conditional Formatting in Telerik Reporting](https://docs.telerik.com/reporting/designing-reports/connecting-to-data/expressions/using-expressions/conditional-formatting)
+- [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+- [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%}) 
+- [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
