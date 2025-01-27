@@ -32,7 +32,7 @@ position: 4
 |**DrawLine**|Draws a line from point A to point B.|
 |**DrawRectangle**|Draws a rectangle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
 |**DrawEllipse**|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|vDrawCircle**|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|**DrawCircle**|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
 |**DrawPath**|Draws a path ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
 |**DrawTable**|Draws a [Table]({%slug radpdfprocessing-editing-table%}) with size depening on the overload.|
 |**DrawBlock**|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depening on the overload.|
