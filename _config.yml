@@ -219,6 +219,9 @@ navigation:
     libraries/radpdfprocessing/formats-and-conversion:
         title: Formats and Conversion
         position: 8
+    libraries/radpdfprocessing/formats-and-conversion/ocr:
+        title: OCR
+        position: 2
     libraries/radpdfprocessing/formats-and-conversion/pdf:
         title: Pdf
         position: 0

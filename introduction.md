@@ -1,16 +1,22 @@
 ---
 title: Introduction
-page_title: Telerik Document Processing
+page_title: Welcome to Telerik Document Processing Libraries
 description: Telerik Document Processing is a bundle of UI-independent, cross-platform APIs enabling you to process the most commonly used flow, fixed and spreadsheet document formats. 
 slug: introduction
-tags: introduction
+tags: introduction, dpl, document, processing, pdf, word, excel
 published: True
 position: 0
 ---
 
+<style>
+table th:first-of-type {
+	width: 25%;
+} 
+</style>
+
 # Welcome to Telerik Document Processing Libraries
 
-**Telerik Document Processing** is a bundle of UI-independent cross-platform libraries that enable you to process the most commonly used flow, fixed and spreadsheet document formats for web and desktop. The Document Processing library allows you to create, import, modify and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
+**Telerik Document Processing** is a bundle of **UI-independent** *cross-platform* libraries that enable you to process the most commonly used flow, fixed and spreadsheet document formats for web and desktop. The Document Processing library allows you to create, import, modify and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
 
 ![DPL Ninja](images/dpl-ninja.png) 
 
@@ -18,20 +24,29 @@ position: 0
 {% include cta-panel-introduction.html %}
 {% endif %}
 
+## Libraries
+
+Telerik Document Processing features the following components:
+
+|Library|Description|
+|----|----|
+| [RadPdfProcessing]({%slug radpdfprocessing-overview%})|A processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.|
+|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|A powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.|
+|[RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|Spread streaming is a document processing paradigm that allows you to create or read big spreadsheet documents with great performance and minimal memory footprint. The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory.|
+|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or sent it to the client browser.|
+|[RadZipLibrary]({%slug radziplibrary-overview%})| It allows you to compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.|
+
 ## Key Features
 
-* **UI-Independent**: The libraries are UI-Independent and cover all .NET technologies, from desktop and web to mobile, and can be deployed in client, server-side and cloud apps.
-* **No need for 3rd party software – No Server Deployment Fees**: Enable document manipulation within your application without relying on 3rd party software such as Microsoft Office or Adobe Acrobat Reader.
-
-* **Convenient API**: Add document processing capabilities to your applications in no time by utilizing the convenient APIs. Enable creating, editing and converting documents with just a few lines of code.
-
-* **Performance and Speed**: The libraries are decoupled from UI and can provide a great performance in different cases, especially when dealing with huge excel files.
-
-* **Any document. Any Business.**: The Telerik Document Processing is suitable for various business cases and scenarios, where document creation or manipulation is required.
-
-* **Support for Variety of File Formats**: The Telerik Document Processing includes 5 libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.
-
-* [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%}) for importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled.
+|Feature|Description|
+|----|----|
+|**UI-Independent**|The libraries are UI-Independent and cover all .NET technologies, from desktop and web to mobile, and can be deployed in client, server-side and cloud apps.|
+|**No need for 3rd party software - No Server Deployment Fees**|Enable document manipulation within your application without relying on 3rd party software such as Microsoft Office or Adobe Acrobat Reader.|
+|**Convenient API**|Add document processing capabilities to your applications in no time by utilizing the convenient APIs. Enable creating, editing and converting documents with just a few lines of code.|
+|**Performance and Speed**|The libraries are decoupled from UI and can provide a great performance in different cases, especially when dealing with huge excel files.|
+|**Any document. Any Business.**|The Telerik Document Processing is suitable for various business cases and scenarios, where document creation or manipulation is required|
+|**Support for Variety of File Formats**|The Telerik Document Processing includes 5 libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.|
+|**Timeout Mechanism**|[Timeout Mechanism]({%slug timeout-mechanism-in-dpl%}) for importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled.|
 
 For more details about the benefits of using Telerik Document Processing, see the [Telerik Document Processing product overview page](https://www.telerik.com/document-processing-libraries).
 
@@ -68,25 +83,11 @@ The Telerik Document Processing libraries support the following file formats:
 |[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
 |[UI for Silverlight (discontinued)](https://www.telerik.com/products/silverlight/overview.aspx)||[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
 
-All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The assemblies/packages for .NET Standard do not contain the word *Windows* in their name.
+All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The assemblies/packages for .NET Standard do not contain the word *Windows* in their name. Learn [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
 
 ## Getting Started
 
 To start using the libraries right away, see the [First Steps]({%slug getting-started-first-steps%}) topic that demonstrates how to create a sample application that uses the Document Processing libraries.
-
-## Libraries
-
-Telerik Document Processing features the following components:
-
-* [RadPdfProcessing]({%slug radpdfprocessing-overview%}): A library that allows you to create, import and export PDF documents.
-
-* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}): A library that allows you to create, import and export XLSX (Excel Workbook), XLS (Excel 97-2003 Workbook), CSV and TXT spreadsheet documents. It also allows you to export all these formats to PDF.
-
-* [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}): A library that allows you to export and read large XLSX and CSV spreadsheet documents with low memory footprint and great performance.
-
-* [RadWordsProcessing]({%slug radwordsprocessing-overview%}): A library that allows you to create, import and export DOCX (Word Document), DOC & DOT (import only), HTML, RTF and TXT documents. It also allows you to export all these formats to PDF.
-
-* [RadZipLibrary]({%slug radziplibrary-overview%}): A library that allows you to compress and decompress ZIP files.
 
 ## Trial Version and Commercial License
 

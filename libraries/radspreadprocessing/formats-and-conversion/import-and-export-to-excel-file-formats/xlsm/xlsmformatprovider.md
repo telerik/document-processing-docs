@@ -107,3 +107,4 @@ __Example 2__ demonstrates how to export an existing Workbook to an Xlsm file. T
 ## See Also
 
 * [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%})
+* [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})

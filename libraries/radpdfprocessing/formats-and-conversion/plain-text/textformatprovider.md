@@ -40,3 +40,4 @@ __Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocume
 
 * [Plain text]({%slug radpdfprocessing-formats-and-conversion-plain-text-text%})
 * [TextFormatProvider Settings]({%slug radpdfprocessing-formats-and-conversion-plain-text-settings%})
+* [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})

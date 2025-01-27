@@ -44,6 +44,23 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 	    <td colspan="2">&nbsp;</td>
 	</tr>
 	<tr>
+	    <td><b>Telerik.Windows.Documents.Fixed.FormatProviders.Ocr</b></td>
+		<td><b>Telerik.Documents.Fixed.FormatProviders.Ocr</b></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			This reference is recommended to always be in the form of a NuGet package, as it will add the required Tesseract references and files automatically. Otherwise, a 
+			<a href="https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/ocr/prerequisites#manually-set-up-the-tesseract-native-assemblies">manual intervention</a> might be required.
+		</td>
+	</tr>
+	<tr>
+		<td><b>Telerik.Windows.Documents.Tesseract.Ocr</b></td>
+		<td><b>Telerik.Documents.Tesseract.Ocr</b></td>
+	</tr>
+	<tr>
+	    <td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
         <td colspan="2">To export images different than <b>Jpeg</b> and <b>Jpeg2000</b> or ImageQuality different than High you will need to add a reference to the following assembly:</td> 
     </tr>
 	<tr>
