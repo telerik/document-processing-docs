@@ -1,5 +1,5 @@
 ---
-title:  Signing an Unsigned PDF Document that Contains a Digital Signature with RadPdfProcessing
+title: Signing an Unsigned PDF Document that Contains a Digital Signature with RadPdfProcessing
 description: This article provides a guide on how to add signatures and images to PDF documents programmatically using RadPdfProcessing.
 type: how-to
 page_title: Signing a PDF Document that Contains a Digital Signature with RadPdfProcessing
@@ -17,7 +17,7 @@ ticketid: 1676495
 
 ## Description
 
-This tutorial demonstrates how to import an unsigned PDF containing a signature and sign it using RadPdfProcessing.
+This tutorial demonstrates how to import an unsigned PDF containing a [signature]({%slug radpdfprocessing-features-digital-signature%}) and sign it using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
 ![Sign an Unsigned PDF](images/sign-an-unsigned-pdf.png)   
 
@@ -125,6 +125,6 @@ Below is a sample code snippet demonstrating these steps:
 Remember to adjust the file paths, certificate details, and specific document requirements according to your application's context.
 
 ## See Also
-- [RadPdfProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Working with Forms in RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/form-fields)
-- [Exporting Documents with RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/export)
+- [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+- [Form Fields concept in RadPdfProcessing]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
+- [Digital Signature in RadPdfProcessing]({%slug radpdfprocessing-features-digital-signature%})
