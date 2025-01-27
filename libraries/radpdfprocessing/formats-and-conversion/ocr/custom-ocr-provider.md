@@ -2,7 +2,7 @@
 title: Implementing a Custom OCR Provider
 description: Learn how to implement your own IOcrProvider engine and plug it into the OcrFormatProvider that RadpdfProcessing offers.
 page_title: Using a Custom OCR Provider
-slug: radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider
+slug: radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider
 tags: pdf,image,skia
 published: True
 position: 2

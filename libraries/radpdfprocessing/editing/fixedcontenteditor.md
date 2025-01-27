@@ -18,25 +18,25 @@ position: 4
 
 |Method/Property|Description|
 |----|----|
-|[Position]({%slug radpdfprocessing-concepts-position%})|Gets or sets the current position of the editor.|
-|[Clipping]({%slug radpdfprocessing-concepts-clipping%})|Defines the outline of other content elements like [Image]({%slug radpdfprocessing-model-image%}) and [Path]({%slug radpdfprocessing-model-path%}).|
-|PushClipping|Inserts a new clipping defined from the specified object depending on the overload.|
-|PopClipping|Pops the last clipping, which was inserted with the editor.|
-|DrawText|Draws text as a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) at the current position and with size depending on the overload.|
-|DrawImage|Draws an [Image]({%slug radpdfprocessing-model-image%}) at the current position and with size depending on the overload.|
-|DrawForm|Draws a [Form]({%slug radpdfprocessing-model-form%}) at the current position and with size depending on the overload.|
-|DrawWidget|Creates a [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) with different type and size depending on the overload.|
-|DrawStampAnnotation|Creates a new [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}) and draws it with a specified size and name.|
-|DrawTextAnnotation|Creates a new [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}) and draws it with a specified size and text.|
-|DrawLineAnnotation|Creates a new [LineAnnotation]({%slug radpdfprocessing-model-annotations-line%}) with starting point the current point of the editor and end point the current point of the editor plus the given distances.|
-|DrawLine|Draws a line from point A to point B.|
-|DrawRectangle|Draws a rectangle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|DrawEllipse|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|DrawCircle|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|DrawPath|Draws a path ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|DrawTable|Draws a [Table]({%slug radpdfprocessing-editing-table%}) with size depening on the overload.|
-|DrawBlock|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depening on the overload.|
-|Draw|Draws the specified element.|
+|**[Position]({%slug radpdfprocessing-concepts-position%})**|Gets or sets the current position of the editor.|
+|**[Clipping]({%slug radpdfprocessing-concepts-clipping%})**|Defines the outline of other content elements like [Image]({%slug radpdfprocessing-model-image%}) and [Path]({%slug radpdfprocessing-model-path%}).|
+|**PushClipping**|Inserts a new clipping defined from the specified object depending on the overload.|
+|**PopClipping**|Pops the last clipping, which was inserted with the editor.|
+|**DrawText**|Draws text as a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) at the current position and with size depending on the overload.|
+|**DrawImage**|Draws an [Image]({%slug radpdfprocessing-model-image%}) at the current position and with size depending on the overload.|
+|**DrawForm**|Draws a [Form]({%slug radpdfprocessing-model-form%}) at the current position and with size depending on the overload.|
+|**DrawWidget**|Creates a [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) with different type and size depending on the overload.|
+|**DrawStampAnnotation**|Creates a new [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}) and draws it with a specified size and name.|
+|**DrawTextAnnotation**|Creates a new [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}) and draws it with a specified size and text.|
+|**DrawLineAnnotation**|Creates a new [LineAnnotation]({%slug radpdfprocessing-model-annotations-line%}) with starting point the current point of the editor and end point the current point of the editor plus the given distances.|
+|**DrawLine**|Draws a line from point A to point B.|
+|**DrawRectangle**|Draws a rectangle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|**DrawEllipse**|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|vDrawCircle**|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|**DrawPath**|Draws a path ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|**DrawTable**|Draws a [Table]({%slug radpdfprocessing-editing-table%}) with size depening on the overload.|
+|**DrawBlock**|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depening on the overload.|
+|**Draw**|Draws the specified element.|
 
 ## Creating FixedContentEditor with a Specified Position
 

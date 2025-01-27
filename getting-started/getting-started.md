@@ -28,6 +28,8 @@ The following tables list all Telerik Document Processing assemblies for the dif
 | **Telerik.Documents.Flow.FormatProviders.Doc.dll** | Allows importing of DOC and DOT document. |
 | **Telerik.Documents.Flow.FormatProviders.Pdf.dll** | Allows exporting of flow documents (DOCX, DOC, DOT, RTF, and HTML) to PDF. |
 | **Telerik.Documents.Fixed.dll** | Part of the PDF processing library. It is needed for working with PDF documents. |
+| **Telerik.Documents.Fixed.FormatProviders.Ocr.dll** | This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
+| **Telerik.Documents.Tesseract.Ocr.dll** | This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
 | **Telerik.Documents.ImageUtils.dll** |  This assembly is required when exporting to `PDF` format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
 | **Telerik.Documents.CMapUtils.dll** | Provides a default implementation for getting the data of a predefined CMap table by a given name. The assembly is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}). |
 | **Telerik.Documents.Spreadsheet.dll** | The main assembly for the spreadsheet processing. It is needed for processing XLSX, CSV, TXT documents. |
@@ -53,6 +55,8 @@ The following tables list all Telerik Document Processing assemblies for the dif
 | **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll** | This assembly is needed for processing XLS documents. |
 | **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll** | This assembly is needed for processing PDF documents. |
 | **Telerik.Windows.Documents.Fixed.dll** | Part of the PDF processing library. It is needed for working with PDF documents. |
+| **Telerik.Windows.Documents.Fixed.FormatProviders.Ocr.dll** | This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
+| **Telerik.Windows.Documents.Tesseract.Ocr.dll** | This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
 | **Telerik.Windows.Documents.CMapUtils.dll** | Provides a default implementation for getting the data of a predefined CMap table by a given name. The assembly is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}). |
 | **Telerik.Windows.Zip.dll** | Needed for working with zipped formats (DOCX, XLSX) and PDF. It is the main assembly of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
 | **Telerik.Windows.Zip.Extensions.dll** | Extends **Telerik.Windows.Zip** assembly with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})). |
