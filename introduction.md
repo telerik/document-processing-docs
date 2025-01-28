@@ -66,8 +66,10 @@ The Telerik Document Processing libraries support the following file formats:
 |**XLSX (Excel Workbook)**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%}),<br> [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|[XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})|
 |**XLS (Excel 97-2003 Workbook)**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})|
 |**XLSM (macro-enabled spreadsheet created by Microsoft Excel)** <sub>*Macros are only preserved during import and export. They cannot be executed or changed in the code.</sub>|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[XlsmFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider%})|
-|**CSV**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%}), [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|[CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})|
+|**CSV**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%}),<br> [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|[CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})|
+|**DataTable**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})|
 |**ZIP**|[RadZipLibrary]({%slug radziplibrary-overview%})|[ZipArchive]({%slug radziplibrary-gettingstarted%})|
+|**Image**|[RadPdfProcessing]({%slug radpdfprocessing-overview%})|[SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}),<br> [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) |
 
 ![DPL Ninja](images/dpl-formats.png) 
 
