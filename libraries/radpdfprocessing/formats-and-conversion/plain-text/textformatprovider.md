@@ -42,3 +42,4 @@ __Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocume
 * [TextFormatProvider Settings]({%slug radpdfprocessing-formats-and-conversion-plain-text-settings%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Extracting Text from PDF Documents]({%slug extract-text-from-pdf%})
+* [Summarizing the Text Content of PDF Documents using Text Analytics with Azure AI services]({%slug summarize-pdf-content%})

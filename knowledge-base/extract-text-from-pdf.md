@@ -47,4 +47,5 @@ Follow the steps:
 - [RadPdfProcessing]({%slug radpdfprocessing-overview%})
 - [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%})
 - [TextFormatProvider]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%}) 
+- [Summarizing the Text Content of PDF Documents using Text Analytics with Azure AI services]({%slug summarize-pdf-content%})
 
