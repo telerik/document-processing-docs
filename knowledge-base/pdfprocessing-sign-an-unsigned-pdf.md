@@ -17,7 +17,7 @@ ticketid: 1676495
 
 ## Description
 
-This tutorial demonstrates how to import an unsigned PDF containing a [signature field]({%slug radpdfprocessing-features-digital-signature%}) and sign it using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
+This tutorial demonstrates how to import an unsigned PDF containing a [signature field]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) and sign it using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
 ![Sign an Unsigned PDF](images/sign-an-unsigned-pdf.png)   
 
