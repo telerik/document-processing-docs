@@ -64,6 +64,6 @@ By following these steps, you can successfully differentiate text elements in a 
 
 ## See Also
 
-- [Text and Graphic Properties in RadPdfProcessing]({%slugradpdfprocessing-editing-text-and-graphic-properties%})
+- [Text and Graphic Properties in RadPdfProcessing]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
 - [Block Content in RadPdfProcessing]({%slug radpdfprocessing-editing-block%})
 - [Colors and Color Spaces]({%slug radpdfprocessing-concepts-colors-and-color-spaces%})
