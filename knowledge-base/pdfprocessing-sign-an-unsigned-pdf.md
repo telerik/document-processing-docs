@@ -1,10 +1,10 @@
 ---
-title: Signing an Unsigned PDF Document that Contains a Digital Signature with RadPdfProcessing
-description: This article provides a guide on how to add signatures and images to PDF documents programmatically using RadPdfProcessing.
+title: Signing an Unsigned PDF Document that Contains a Signature Field with RadPdfProcessing
+description: This article provides a guide on how to sign an empty signature field by using text and image programmatically using RadPdfProcessing.
 type: how-to
-page_title: Signing a PDF Document that Contains a Digital Signature with RadPdfProcessing
+page_title: Signing a PDF Document that Contains a Signature Field with RadPdfProcessing
 slug: pdfprocessing-sign-an-unsigned-pdf
-tags: processing, pdf, sign, image, document, digital
+tags: processing, pdf, sign, image, document, digital, signature, field, empty
 res_type: kb
 ticketid: 1676495
 ---
@@ -17,20 +17,20 @@ ticketid: 1676495
 
 ## Description
 
-This tutorial demonstrates how to import an unsigned PDF containing a [signature]({%slug radpdfprocessing-features-digital-signature%}) and sign it using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
+This tutorial demonstrates how to import an unsigned PDF containing a [signature field]({%slug radpdfprocessing-features-digital-signature%}) and sign it using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
 ![Sign an Unsigned PDF](images/sign-an-unsigned-pdf.png)   
 
 ## Solution
 To add signatures and images to PDF documents and ensure the signed version correctly overwrites an existing file, follow these steps:
 
-1. **Check if the Document is Already Signed**: Before adding a new signature, it's essential to check if the document is already signed. This can be done by iterating through the form fields and checking for signature fields.
+1. **Check if the Document is Already Signed**: Before signing the signature field, it's essential to check if the document is already signed. This can be done by iterating through the form fields and checking for signature fields.
 
-2. **Prepare the Document for Signing**: Load the document into a `RadFixedDocument` object using the `PdfFormatProvider.Import` method. If the document already contains a signature field, you will need to access this field to add the signature.
+2. **Prepare the Document for Signing**: Load the document into a `RadFixedDocument` object using the `PdfFormatProvider.Import` method. If the document already contains an empty signature field, you will need to access this field and sign it.
 
 3. **Add the Signature**: Use a certificate to sign the document. The `SignatureField.Signature` property allows you to assign a new `Signature` object, which is created using the certificate.
 
-4. **Add an Image**: To insert an image, such as a signature graphic, use a `FixedContentEditor` on the desired page and use the `DrawBlock` method. The image can be loaded from a file using a `FileStream` and added to a `Block` object.
+4. **Add an Image**: To insert an image, such as a signature graphic, use a `FixedContentEditor` on the desired **FormSource** and use the `DrawBlock` method. The image can be loaded from a file using a `FileStream` and added to a `Block` object.
 
 5. **Export the Signed Document**: Before exporting the signed document, delete the previous version of the file if it exists. This step is crucial to avoid permission issues or structure mismatches in the PDF file. Use the `PdfFormatProvider.Export` method to save the signed document.
 
@@ -56,25 +56,25 @@ Below is a sample code snippet demonstrating these steps:
                 if (widget != null)
                 {
                     formSource = widget.Content.NormalContentSource;
-                    FixedContentEditor ed = new FixedContentEditor(formSource);
-                    ed.TextProperties.FontSize = 30;
-                    ed.Position.Translate(30, 0);
-                    ed.DrawText("John Doe");
-                    ed.Position.Translate(200, 5);
+                    FixedContentEditor fixedContentEditor = new FixedContentEditor(formSource);
+                    fixedContentEditor.TextProperties.FontSize = 30;
+                    fixedContentEditor.Position.Translate(30, 0);
+                    fixedContentEditor.DrawText("John Doe");
+                    fixedContentEditor.Position.Translate(200, 5);
 
                     FileStream fileStream = new FileStream("ProgressNinjas.png", FileMode.Open);
                     ImageSource _imageSource = new ImageSource(fileStream);
                     Block imageBlock = new Block();
                     imageBlock.InsertImage(_imageSource);
-                    ed.DrawBlock(imageBlock);
+                    fixedContentEditor.DrawBlock(imageBlock);
                     
 
-                    ed.Position.Translate(0, 90);
-                    ed.TextProperties.FontSize = 20;
-                    ed.DrawText("Digitally signed on: " + DateTime.Now.ToString());
-                    ed.Position.Translate(40, 120);
-                    ed.TextProperties.FontSize = 20;
-                    ed.DrawText("(Click here to view the signature info)");
+                    fixedContentEditor.Position.Translate(0, 90);
+                    fixedContentEditor.TextProperties.FontSize = 20;
+                    fixedContentEditor.DrawText("Digitally signed on: " + DateTime.Now.ToString());
+                    fixedContentEditor.Position.Translate(40, 120);
+                    fixedContentEditor.TextProperties.FontSize = 20;
+                    fixedContentEditor.DrawText("(Click here to view the signature info)");
                 }
 
                 document.Pages[0].Annotations.Add(widget);
