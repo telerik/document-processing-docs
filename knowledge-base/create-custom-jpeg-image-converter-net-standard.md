@@ -44,7 +44,7 @@ The following code snippets demonstrate how to create a custom implementation of
 
 {{region kb-create-custom-jpeg-image-converter1}}
 
-	internal class JpegImageConverter : JpegImageConverterBase
+	internal class CustomJpegImageConverter : JpegImageConverterBase
     {
         public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
         {
