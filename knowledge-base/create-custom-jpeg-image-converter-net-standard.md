@@ -94,8 +94,29 @@ The following code snippets demonstrate how to create a custom implementation of
 
 {{region kb-create-custom-jpeg-image-converter2}}
 
-	JpegImageConverterBase customJpegImageConverter = new CustomJpegImageConverter(); 
-	FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter; 
+       JpegImageConverterBase customJpegImageConverter = new CustomJpegImageConverter();
+       FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
+
+
+       // RadPdfProcessing version 2023.1.307
+       PdfFormatProvider provider = new PdfFormatProvider();
+       provider.ExportSettings.ImageQuality = ImageQuality.High;
+       provider.ExportSettings.ImageCompression = new ImageFilterTypes[] { ImageFilterTypes.FlateDecode };
+       RadFixedDocument document;
+       string input = "input.pdf";
+       using (Stream stream = File.OpenRead(input))
+       {
+           document = provider.Import(stream);
+       }
+
+       string outputFilePath = "output.pdf";
+       File.Delete(outputFilePath);
+       using (Stream output = File.OpenWrite(outputFilePath))
+       {
+           provider.Export(document, output);
+       }
+       Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
+
 {{endregion}}
 
 
