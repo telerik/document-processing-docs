@@ -19,7 +19,7 @@ res_type: kb
 </thead>
 <tbody>
 <tr>
-<td>2023.1.315</td>
+<td>up to 2023.1.315</td>
 <td>RadPdfProcessing</td>
 <td rowspan="2" ><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 </tr>
@@ -33,6 +33,8 @@ res_type: kb
 ## Description
 
 **.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the **FixedExtensibilityManager**.
+
+>important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
 ## Solution
 
@@ -95,3 +97,8 @@ The following code snippets demonstrate how to create a custom implementation of
 	JpegImageConverterBase customJpegImageConverter = new CustomJpegImageConverter(); 
 	FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter; 
 {{endregion}}
+
+
+# See Also
+
+- [Cross platform >> Images]({%slug radpdfprocessing-cross-platform-images%})
