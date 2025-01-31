@@ -4,7 +4,7 @@ description: Learn how to summarize the text content from a PDF document using R
 type: how-to
 page_title: How to Summarize the Text Content of PDF documents using Text Analytics with Azure AI services
 slug: summarize-pdf-content
-tags: pdf, document, processing, text, summarize,, summary, content, azure 
+tags: pdf, document, processing, text, summarize, summary, content, azure 
 res_type: kb
 ticketid: 1657503
 ---
@@ -23,14 +23,14 @@ Learn how to summarize the text content of a PDF document using [Text Analytics 
 
 Follow the steps:
 
-1\. Before going further, you can find listed below the **required** assemblies/ NuGet packages that should be added to your project:
+1\. Before going further, you can find listed below the **required** assemblies/NuGet packages that should be added to your project:
 
 * [Azure.AI.TextAnalytics](https://www.nuget.org/packages/Azure.AI.TextAnalytics)
 * Telerik.Documents.Fixed
 * Telerik.Documents.Core
 * Telerik.Zip
 
-2\.  It is necessary to generate your Azure AI key and endpoint: [Get your credentials from your Azure AI services resource](https://learn.microsoft.com/en-us/azure/ai-services/use-key-vault?tabs=azure-cli&pivots=programming-language-csharp)
+2\. It is necessary to generate your Azure AI key and endpoint: [Get your credentials from your Azure AI services resource](https://learn.microsoft.com/en-us/azure/ai-services/use-key-vault?tabs=azure-cli&pivots=programming-language-csharp)
 
 ![Azure AI key](images/azure-ai-key.png)  
 
