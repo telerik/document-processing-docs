@@ -12,6 +12,14 @@ position: 0
 table th:first-of-type {
 	width: 25%;
 } 
+
+img[alt$="><"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  float: none!important;
+}
 </style>
 
 # Welcome to Telerik Document Processing Libraries
@@ -53,6 +61,8 @@ For more details about the benefits of using Telerik Document Processing, see th
 ## Supported Formats
 
 The Telerik Document Processing libraries support the following file formats:
+
+![Ninja Looking ><](images/ninja_looking.png)  
 
 |Format|Library|Provider|
 |----|----|----|
