@@ -69,6 +69,7 @@ The following code snippets demonstrate how to create a custom implementation of
 
                             jpegImageData = ms.ToArray();
                         }
+                        
                     }
 
                     return true;
@@ -103,6 +104,7 @@ The following code snippets demonstrate how to create a custom implementation of
             string[] imageFiles = Directory.GetFiles(imageFolderPath);
             RadFixedDocument fixedDocument = new RadFixedDocument();
             RadFixedDocumentEditor documentEditor = new RadFixedDocumentEditor(fixedDocument);
+            
             foreach (string imageFilePath in imageFiles)
             {
                 FileStream fileStream = new FileStream(imageFilePath, FileMode.Open);
@@ -110,14 +112,15 @@ The following code snippets demonstrate how to create a custom implementation of
                 documentEditor.InsertImageInline(_imageSource);
                 documentEditor.InsertLineBreak();
             }
-            documentEditor.Dispose();
-             
+            
+            documentEditor.Dispose();      
             string outputFilePath = @"output.pdf";
             File.Delete(outputFilePath);
             using (Stream output = File.OpenWrite(outputFilePath))
             {
                 provider.Export(fixedDocument, output);
             }
+            
             Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 
 {{endregion}}
