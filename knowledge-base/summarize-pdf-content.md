@@ -34,7 +34,9 @@ Follow the steps:
 
 ![Azure AI key](images/azure-ai-key.png)  
 
-3\. Use the custom implementation to summarize the text content extracted in step 1:
+3\. [Extract the text content from a PDF document]({%slug extract-text-from-pdf%}).
+
+4\. Use the custom implementation to summarize the text content extracted in step 3:
 
 ```csharp
         static void Main(string[] args)
