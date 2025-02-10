@@ -256,7 +256,10 @@ The code in __Example 9__ splits a block in two. The first will contains text "H
 	
 	//Size size = block.Measure(helloSize); //This method is obsolete since Q4 2024.
 	
-	Size size = block.Measure(helloSize, TimeSpan.FromSeconds(10));
+	CancellationTokenSource cancellationTokenSource = new(TimeSpan.FromSeconds(10));
+	CancellationToken cancellationToken = cancellationTokenSource.Token;
+	
+	Size size = block.Measure(helloSize, cancellationToken);
 
 	Block secondBlock = block.Split();
 {{endregion}}
