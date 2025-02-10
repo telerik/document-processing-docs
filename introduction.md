@@ -12,6 +12,14 @@ position: 0
 table th:first-of-type {
 	width: 25%;
 } 
+
+img[alt$="><"] {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  float: none!important;
+}
 </style>
 
 # Welcome to Telerik Document Processing Libraries
@@ -26,15 +34,15 @@ table th:first-of-type {
 
 ## Libraries
 
-Telerik Document Processing features the following components:
+Telerik Document Processing features the following libraries:
 
 |Library|Description|
 |----|----|
-| [RadPdfProcessing]({%slug radpdfprocessing-overview%})|A processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.|
-|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|A powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.|
-|[RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|Spread streaming is a document processing paradigm that allows you to create or read big spreadsheet documents with great performance and minimal memory footprint. The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory.|
-|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or sent it to the client browser.|
-|[RadZipLibrary]({%slug radziplibrary-overview%})| It allows you to compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.|
+|![Pdf](images/dpl-pdf.png) [RadPdfProcessing]({%slug radpdfprocessing-overview%})|A processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.|
+|![Spread](images/dpl-spread.png) [RadSpreadProcessing]({%slug radspreadprocessing-overview%})|A powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.| 
+|![SpreadStream](images/dpl-spread.png) [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|Spread streaming is a document processing paradigm that allows you to create or read big spreadsheet documents with great performance and minimal memory footprint. The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory.| 
+|![Words](images/dpl-words.png) [RadWordsProcessing]({%slug radwordsprocessing-overview%})|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or sent it to the client browser.|  
+|![Zip](images/dpl-zip.png) [RadZipLibrary]({%slug radziplibrary-overview%})| It allows you to compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.|  
 
 ## Key Features
 
@@ -52,21 +60,26 @@ For more details about the benefits of using Telerik Document Processing, see th
 
 ## Supported Formats
 
-
 The Telerik Document Processing libraries support the following file formats:
 
-* DOCX (Word Document)
-* DOC (Word 97-2003 Document)
-* DOT (Word 97-2003 Template)
-* HTML
-* PDF
-* RTF
-* TXT
-* XLSX (Excel Workbook)
-* XLS (Excel 97-2003 Workbook)
-* XLSM (macro-enabled spreadsheet created by Microsoft Excel) *Macros are only preserved during import and export. They cannot be executed or changed in the code.
-* CSV
-* ZIP
+![Ninja Looking ><](images/ninja_looking.png)  
+
+|Format|Library|Provider|
+|----|----|----|
+|**DOCX (Word Document)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})|
+|**DOC (Word 97-2003 Document)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) <sup>Import only</sup>|[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%})|
+|**DOT (Word 97-2003 Template)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) <sup>Import only</sup>|
+|**HTML**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})|
+|**PDF**|[RadWordsProcessing]({%slug radwordsprocessing-overview%}) <br> [RadPdfProcessing]({%slug radpdfprocessing-overview%}) <br> [RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[PdfFormatProvider in RadWordsProcessing]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) <sup>Export only</sup> <br> [PdfFormatProvider in RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) <br> [PdfFormatProvider in RadSpreadProcessing]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) <sup>Export only</sup>|
+|**RTF**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[RtfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})|
+|**TXT**|[RadWordsProcessing]({%slug radwordsprocessing-overview%}) <br> [RadPdfProcessing]({%slug radpdfprocessing-overview%}) <br> [RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[TxtFormatProvider in RadWordsProcessing]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%}) <br> [TextFormatProvider in RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%}) <sup>Export only</sup> <br> [TxtFormatProvider in RadSpreadProcessing]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})|
+|**XLSX (Excel Workbook)**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%}) <br> [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|[XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})|
+|**XLS (Excel 97-2003 Workbook)**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})|
+|**XLSM (macro-enabled spreadsheet created by Microsoft Excel)** <sup>Macros are only preserved during import and export. They cannot be executed or changed in the code.</sup>|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[XlsmFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider%})|
+|**CSV**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%}) <br> [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|[CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})|
+|**DataTable**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})|
+|**ZIP**|[RadZipLibrary]({%slug radziplibrary-overview%})|[ZipArchive]({%slug radziplibrary-gettingstarted%})|
+|**Image**|[RadPdfProcessing]({%slug radpdfprocessing-overview%})|[SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) <sup>Export only</sup> <br> [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) <sup>Import only</sup> |
 
 ![DPL Ninja](images/dpl-formats.png) 
 
