@@ -21,56 +21,40 @@ The most common usage of __Block__ is to draw flowing content. Similarly to [Fix
 
 ### Inserting Text
 
-Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achieved with one of the overloads of the __Insert()__ method. __Example 1__ shows a simple insert by passing a string to the method.
+Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achieved with one of the overloads of the __Insert()__ method. __Example 1__ shows all the overloads which allow specifying the styles and font family.
             
-
 #### __[C#] Example 1: Insert text__
 
 {{region cs-radpdfprocessing-editing-block_0}}
 	Block block = new Block();
 	block.InsertText("Text");
-{{endregion}}
 
+	// .NET Framework
+	block.InsertText(new System.Windows.Media.FontFamily("Arial"), "Text");
+	block.InsertText(new System.Windows.Media.FontFamily("Arial"), System.Windows.FontStyles.Italic, System.Windows.FontWeights.Bold, "Text");
 
-
-__Example 2__ demonstrates how to insert text with a specific font family.
-            
-
-#### __[C#] Example 2: Insert text with Arial font family__
-
-{{region cs-radpdfprocessing-editing-block_1}}
-	block.InsertText(new FontFamily("Arial"), "Text");
-{{endregion}}
-
-There is an additional overload of the InsertText() method enabling you to specify the font family, font style and font weight for the text which you would like to insert.
-
-#### __[C#] Example 3: Insert styled text__
-
-{{region cs-radpdfprocessing-editing-block_2}}
-	block.InsertText(new FontFamily("Arial"), FontStyles.Italic, FontWeights.Bold, "Text");
+	// .NET Standard
+	//block.InsertText(new Telerik.Documents.Core.Fonts.FontFamily("Arial"), "Text"); 
+	//block.InsertText(new Telerik.Documents.Core.Fonts.FontFamily("Arial"), Telerik.Documents.Core.Fonts.FontStyles.Italic, Telerik.Documents.Core.Fonts.FontWeights.Bold, "Text");
 {{endregion}}
 
 >The '\r' and '\n' characters don't have the usual meaning of "go to next line" when they are inserted into a PDF document and you cannot simply insert text containing these characters to produce multiline text. Instead, you should insert a line break.
 
-
 ### Inserting Line Break
 
-Inserting a line break results in the next element starting on a new line. The action is achieved with the __InsertLineBreak()__ method as shown in __Example 4__.
+Inserting a line break results in the next element starting on a new line. The action is achieved with the __InsertLineBreak()__ method as shown in __Example 2__.
             
 
-#### __[C#] Example 4: Break the line__
+#### __[C#] Example 2: Break the line__
 
-{{region cs-radpdfprocessing-editing-block_3}}
+{{region cs-radpdfprocessing-editing-block_1}}
 	block.InsertLineBreak();
 {{endregion}}
-
-
 
 ### Inserting Image
 
 __Block__ provides the following methods for inserting images:
             
-
 * block.InsertImage(imageSource);
 * block.InsertImage(stream);
 * block.InsertImage(imageSource, size);
@@ -78,10 +62,18 @@ __Block__ provides the following methods for inserting images:
 * block.InsertImage(imageSource, width, height);
 * block.InsertImage(stream, width, height);
                 
+#### __[C#] Example 3: Inserting an image__
+
+{{region cs-radpdfprocessing-editing-block_2}}
+	string imageFilePath = "sample.jpg";
+	FileStream fileStream = new FileStream(imageFilePath, FileMode.Open);
+	Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource imageSrc = new Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource(fileStream);
+
+	block.InsertImage(imageSrc, 300, 200);
+{{endregion}}
 
 Information on images in the context of the library is available in the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and [Image]({%slug radpdfprocessing-model-image%}) articles.
             
-
 ### Inserting Geometries
 
 [Geometries]({%slug radpdfprocessing-concepts-geometry%}) allow you to describe 2D shapes in a document. The following methods can be used to insert different geometries.
@@ -93,6 +85,19 @@ Information on images in the context of the library is available in the [ImageSo
 * block.**InsertPath**(geometry);
 * block.**InsertRectangle**(rectangle);
                 
+#### __[C#] Example 4: Inserting a geometry__
+
+{{region cs-radpdfprocessing-editing-block_3}}
+	Telerik.Windows.Documents.Fixed.Model.Graphics.RectangleGeometry rectangleGeometry = new Telerik.Windows.Documents.Fixed.Model.Graphics.RectangleGeometry();
+	// .NET Framework
+	rectangleGeometry.Rect = new System.Windows.Rect(10, 10, 400, 300);
+	block.InsertRectangle(new System.Windows.Rect(10, 10, 200, 150));
+	// .NET Standard
+	//rectangleGeometry.Rect = new Telerik.Documents.Primitives.Rect(10, 5, 400, 300);
+	//block.InsertRectangle(new Telerik.Documents.Primitives.Rect(20, 30, 200, 150));
+
+	block.InsertPath(rectangleGeometry);
+{{endregion}}
 
 ### Inserting Form-XObject Elements
 
@@ -101,6 +106,13 @@ The Form (or also known as Form-XObject) is an object that can contain PDF conte
 #### __[C#] Example 5: Insert a form__
 
 {{region cs-radpdfprocessing-editing-block_4}}
+	FormSource simpleForm = new FormSource();
+	simpleForm.Size = new System.Windows.Size(310, 250); // .NET Framework
+	//simpleForm.Size = new Telerik.Documents.Primitives.Size(310, 250); // .NET Standard
+
+	FixedContentEditor formEditor = new FixedContentEditor(simpleForm);
+	formEditor.DrawText("Sample text.");
+
 	block.InsertForm(simpleForm);
 {{endregion}}
 
@@ -180,26 +192,34 @@ The __Block__ class has some properties and methods that affect how it will be r
 #### __[C#] Example 6: Change Block properties__
 
 {{region cs-radpdfprocessing-editing-block_5}}
-	Block block = new Block();
-	block.InsertText("block content");
+	RadFixedDocument radFixedDocument = new RadFixedDocument();
+	RadFixedPage page = radFixedDocument.Pages.AddPage();
 
+	Block block = new Block();
+	block.GraphicProperties.FillColor = new RgbColor(100, 0, 0, 0);
 	block.SpacingBefore = 10;
 	block.SpacingAfter = 5;
 	block.LineSpacingType = HeightType.Exact;
 	block.LineSpacing = 15;
-	block.FirstLineIndent = 12;
+	block.FirstLineIndent = 0;
 	block.LeftIndent = 0;
 	block.RightIndent = 0;
-	block.BackgroundColor = RgbColors.White;
+	block.BackgroundColor = new RgbColor(100, 255, 0, 0);
 	block.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Left;
 	block.VerticalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.Top;
+	block.InsertText("block content");
 
-	var textFragment = new TextFragment();
-	textFragment.Text = "test bullet";
-	block.Bullet = textFragment;
-	block.IndentAfterBullet = 5;
+	TextFragment bulletTextFragment = new TextFragment();
+	bulletTextFragment.Text = "•";
+	block.Bullet = bulletTextFragment;
+	block.IndentAfterBullet = 15;
+
+	var editor = new FixedContentEditor(page);
+	editor.Position.Translate(50,50);
+	editor.DrawBlock(block);
 {{endregion}}
 
+![Block Properties Result](images/radpdfprocessing-editing-block_5_result.png)
 
 ## Drawing a Block
 
@@ -219,23 +239,26 @@ A Block can be drawn to the content using the __Draw()__ method. The method acce
 
 ## Measuring Block Size
 
-Measuring a Block can be achieved with one of the overloads of the __Measure()__ method. Invoking the method without a parameter will return the desired size of the elements in the block and set the block's __DesiredSize__ property. The method is handy when you want to determine the size of the Block. When you want to wrap the text or you page has a limited space make sure to pass the available size to the method. 
+Measuring a __Block__ can be achieved with one of the two overloads of the __Measure()__ method. 
+
+Invoking the method without a parameter will return the desired size of the block elements and set it as the block's __DesiredSize__ property. The method is handy when you want to determine what size the __Block__ should be depending on its content. 
+
+__Example 8__ Creates a __Block__ with text, measures the text, and sets the block size to match the content size.
         
-Calling the overload accepting available size measures the block in that specific size. Additionally to setting the __DesiredSize__ property, it sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
+<snippet id='libraries-pdf-editing-block-measure-without-parameter'/>
+
+#### Example 8 Result
+![Rad Pdf Processing Measuring Block 01](images/RadPdfProcessing_Measuring_Block_01.png)
         
-
-__Example 8__ creates a Block with the text "Hello RadPdfProcessing!" and measures it.
+The second overload accepts available __Size__. Calling it measures the block content as if the __Block__ was in that specific size. 		
+Additionally to setting the __DesiredSize__ property, it also sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
         
+__Example 9__ Creates a __Block__ with text and draws it with a specific size using the [RadFixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}). The block content auto fits to the dimentions of the __Block__. The size of the auto fitted content can then be measured.
 
-#### __[C#] Example 8: Measure block__
+<snippet id='libraries-pdf-editing-block-measure-with-parameter'/>
 
-{{region cs-radpdfprocessing-editing-block_7}}
-	Block block = new Block();
-	block.InsertText("Hello RadPdfProcessing!");
-	Size size = block.Measure();
-{{endregion}}
-
-
+#### Example 9 Result
+![Rad Pdf Processing Measuring Block 02](images/RadPdfProcessing_Measuring_Block_02.png)
 
 ## Splitting a Block
 
@@ -274,3 +297,4 @@ The code in __Example 9__ splits a block in two. The first will contains text "H
  * [Text and Graphic Properties]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
  * [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})
  * [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})
+ * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
