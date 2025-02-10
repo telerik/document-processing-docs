@@ -13,7 +13,7 @@ ticketid: 1657503
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
-| 2025.1.128| RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| Q1 2025 | RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
