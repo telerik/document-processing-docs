@@ -16,10 +16,10 @@ navigation:
         title: Release Notes
         position: 110
     release-notes/2025:
-        title: 2025
+        title: '2025'
         position: 99
     release-notes/2024:
-        title: 2024
+        title: '2024'
         position: 100
     installation-and-deployment:
         title: Installation and Deployment
