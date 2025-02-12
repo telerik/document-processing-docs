@@ -93,11 +93,11 @@ position: 99
 
 ![fixed](../images/fixed.png)
 
-* Remediated Security Vulnerability CVE-2024-11629.  **<sup>.NET Standard</sup>**
+* Remediated Security Vulnerability [CVE-2024-11629]({%slug kb-security-excessive-iteration-cve-2024-11629%}).  <sup>.NET Standard</sup>
 
 ## ZipLibrary
 
 
 ![fixed](../images/fixed.png)
 
-* Remediated Security Vulnerability CVE-2024-11343.
+* Remediated Security Vulnerability [CVE-2024-11343]({%slug kb-security-excessive-iteration-cve-2024-11343%}).
