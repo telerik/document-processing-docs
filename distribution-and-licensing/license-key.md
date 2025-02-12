@@ -195,4 +195,5 @@ Starting with the 2025 Q2 release of the product in May 2025, all conditions abo
 
 * [License Agreement]({%slug license-agreement%})
 * [Redistributing Telerik Document Processing]({%slug installation-deploying-telerik-document-processing%})
+* [Unable to find package Telerik.Licensing]({%slug dpl-package-update-failure-license%})
 
