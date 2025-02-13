@@ -26,6 +26,11 @@ position: 99
 
 * Introduced support for Optical Character Recognition (OCR), allowing the conversion of images of typed, handwritten, or printed text into machine-encoded text from a scanned document.
 
+![fixed](../images/fixed.png)
+
+* Remediated Security Vulnerability [CVE-2024-11629]({%slug kb-security-excessive-iteration-cve-2024-11629%}).  <sup>.NET Standard</sup>
+* Remediated Security Vulnerability [CVE-2024-11343]({%slug kb-security-excessive-iteration-cve-2024-11343%}).
+
 ## DocumentProcessing
 
 
@@ -88,16 +93,3 @@ position: 99
 * Duplicating a worksheet with the CopyFrom method does not copy the defined conditional formatting rules.
 * An ArgumentNullException is thrown when importing a document containing a rule with no format set.
 
-## WordsProcessing
-
-
-![fixed](../images/fixed.png)
-
-* Remediated Security Vulnerability [CVE-2024-11629]({%slug kb-security-excessive-iteration-cve-2024-11629%}).  <sup>.NET Standard</sup>
-
-## ZipLibrary
-
-
-![fixed](../images/fixed.png)
-
-* Remediated Security Vulnerability [CVE-2024-11343]({%slug kb-security-excessive-iteration-cve-2024-11343%}).
