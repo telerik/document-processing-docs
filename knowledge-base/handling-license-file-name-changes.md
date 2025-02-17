@@ -31,7 +31,7 @@ It may be caused by an old [KENDO_UI_LICENSE environment variable](https://docs.
 
 2\. Compare the license key with the one downloaded from the extensions. If it indeed looks different than the one VS2022 got, replace the original telerik-license.txt file with the newly downloaded one.
 
-3\.Next, I restart VS2022 (to ensure it has a fresh copy env vars) and compile the project. It is expected to work:
+3\. Next, restart VS2022 (to ensure it has a fresh copy env vars) and compile the project. It is expected to work:
 
 
 ![License Fixed](images/license-fixed.png)   
