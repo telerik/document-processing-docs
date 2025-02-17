@@ -25,7 +25,7 @@ when building a simple console app with the Telerik Document Processing librarie
 
 ## Solution
 
-It may be caused by an old KENDO_UI_LICENSE environment variable. So, delete it and invoke `refreshenv` command. If the rebuild has the same error again:
+It may be caused by an old [KENDO_UI_LICENSE environment variable](https://docs.telerik.com/kendo-ui/knowledge-base/license-key-file-name-and-environment-variable). So, delete it and invoke `refreshenv` command. If the rebuild has the same error again:
 
 1\. Go to telerik.com and generate a new [License Key](https://www.telerik.com/account/your-licenses/license-keys). 
 
