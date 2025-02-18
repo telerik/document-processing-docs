@@ -42,7 +42,7 @@ That is why it is a technical decision to have the **Telerik.Licensing** NuGet p
 
 To ensure the Telerik.Licensing package and the Telerik Document Processing libraries are restored correctly, follow the steps below to configure your NuGet.config file:
 
-1\. **Modify the NuGet.config file** to include both the `nuget.org` and the [Telerik NuGet feed]({%slug installation-nuget-packages%}#manually-download-nuget-packages). This setup allows the restoration of the Telerik Document Processing libraries from the Telerik NuGet feed and the Telerik.Licensing package from `nuget.org`.
+1\. **Modify the NuGet.config file** to include both the `nuget.org` and the [Telerik NuGet feed]({%slug installation-nuget-packages%}). This setup allows the restoration of the Telerik Document Processing libraries from the Telerik NuGet feed and the Telerik.Licensing package from `nuget.org`.
 
 ```xml
   <packageSources>
