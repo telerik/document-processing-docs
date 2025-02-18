@@ -197,4 +197,5 @@ Starting with the 2025 Q2 release of the product in May 2025, all conditions abo
 * [Redistributing Telerik Document Processing]({%slug installation-deploying-telerik-document-processing%})
 * [Unable to find package Telerik.Licensing]({%slug dpl-package-update-failure-license%})
 * [Handling License Key File Name and Environment Variable Name Changes in the 2025 Q1 Release]({%slug handling-license-file-name-changes%})
+* [Telerik.Licensing NuGet package is not available on the Telerik NuGet feed]({%slug dpl-telerik-licensing-nuget-feed%})
 
