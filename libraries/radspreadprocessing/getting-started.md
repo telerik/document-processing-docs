@@ -158,6 +158,8 @@ For more examples and application scenarios of Importing and Exporting a Workboo
 
 >More information about the import and export functionalities of RadSpreadProcessing is available in the [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-general-information%}).
 
+For more complete examples head to the [Developer Focused Examples]({%slug radspreadprocessing-sdk-examples%}) section of the library.
+
 ## Using RadSpreadsheet
 
 __RadSpreadsheet__ is a UI control part of the Telerik UI for WPF/Silverlight suites. The document model explained in this section of the documentation and all its features are shared between the __RadSpreadProcessing__ library and __RadSpreadsheet__. [This help section](http://docs.telerik.com/devtools/wpf/controls/radspreadsheet/overview.html) contains information about all UI-specific features of __RadSpreadsheet__.
