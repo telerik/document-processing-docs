@@ -42,7 +42,7 @@ That is why it is a technical decision to have the **Telerik.Licensing** NuGet p
 
 To ensure the Telerik.Licensing package and the Telerik Document Processing libraries are restored correctly, follow the steps below to configure your NuGet.config file:
 
-1. **Modify the NuGet.config file** to include both the `nuget.org` and the [Telerik NuGet feed]({%slug installation-nuget-packages%}#manually-download-nuget-packages). This setup allows the restoration of the Telerik Document Processing libraries from the Telerik NuGet feed and the Telerik.Licensing package from `nuget.org`.
+1\. **Modify the NuGet.config file** to include both the `nuget.org` and the [Telerik NuGet feed]({%slug installation-nuget-packages%}#manually-download-nuget-packages). This setup allows the restoration of the Telerik Document Processing libraries from the Telerik NuGet feed and the Telerik.Licensing package from `nuget.org`.
 
 ```xml
   <packageSources>
@@ -52,9 +52,9 @@ To ensure the Telerik.Licensing package and the Telerik Document Processing libr
   </packageSources>
 ```
 
-2. **Ensure that your Telerik account** has the appropriate licenses and that you are authenticated correctly in the Telerik NuGet feed to avoid issues with accessing the Telerik Document Processing libraries.
+2\. **Ensure that your Telerik account** has the appropriate licenses and that you are authenticated correctly in the Telerik NuGet feed to avoid issues with accessing the Telerik Document Processing libraries.
 
-3. **For Continuous Integration (CI) environments**, ensure the Telerik.Licensing package is accessible via `nuget.org` and that the CI environment has access to the internet to restore the package. Alternatively, consider [manually downloading the NuGet packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages) and hosting them in a local feed or directory accessible by your CI environment.
+3\. **For Continuous Integration (CI) environments**, ensure the Telerik.Licensing package is accessible via `nuget.org` and that the CI environment has access to the internet to restore the package. Alternatively, consider [manually downloading the NuGet packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages) and hosting them in a local feed or directory accessible by your CI environment.
 
 By following these steps, you can efficiently manage the NuGet package sources for your projects that use Telerik Document Processing libraries and ensure the Telerik.Licensing package is restored correctly.
 
