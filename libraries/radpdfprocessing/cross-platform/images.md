@@ -10,14 +10,26 @@ position: 2
 
 # Images
 
-Means for converting images, and scaling their quality are readily available in the .NET Framework version of the RadPdfProcessing library. In contrast, the .NET Standard one does not provide such functionality and requires some manual settings to achieve this. The `FixedExtensibilityManager` class is exposed specifically to address this need. 
+Means for converting images, and scaling their quality are readily available in the **.NET Framework** version of the RadPdfProcessing library. In contrast, the **.NET Standard** one does not provide such functionality and requires some manual settings to achieve this. The `FixedExtensibilityManager` class is exposed specifically to address this need. 
 More information on how to configure it can be found in the code samples later in this article.
 
 ## Exporting Images
 
 To reduce file size, PDF supports only a number of compression filters like Jpeg and Jpeg2000 compression of color and grayscale images. So to allow the library to export images different than Jpeg and Jpeg2000, these images should be additionally processed. The **.NET Standard** specification does not define APIs for converting/processing images or scaling their quality. That is why, to export images different than Jpeg and Jpeg2000 or ImageQuality different than High, PdfProcessing comes with two extensibility points exposed by the static `FixedExtensibilityManager` class - **ImagePropertiesResolver** and **JpegImageConverter**.
 
-> If neither **ImagePropertiesResolver** and **JpegImageConverter** are set, an InvalidOperationException is thrown during export of document.
+>caution If neither **ImagePropertiesResolver** and **JpegImageConverter** are set, an InvalidOperationException is thrown during export of document.
+
+## Requirements
+
+To export images different than Jpeg and Jpeg2000 or ImageQuality different than High you will need to add references to the following .Net Standard assemblies:
+
+|Assembly/ NuGet package|Description|
+|----|----|
+|**Telerik.Documents.ImageUtils**|This assembly is currently not available in UI for Xamarin.|
+|**SkiaSharp.NativeAssets.*** (version 2.88.8)|May differ according to the used platform. For **Linux** use <b>SkiaSharp.NativeAssets.Linux.NoDependencies|
+|**SkiaSharp.Views.Blazor** and **wasm-tools**|For Blazor Web Assembly.|
+
+>important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
 ## ImagePropertiesResolver 
 
@@ -106,28 +118,3 @@ The following example depends on the [Magick.NET](https://www.nuget.org/packages
 
 >note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter).
 
-## Requirements
-
-<table>
-<thead>
-	<tr>
-		<th>Requirements</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td><b>Telerik.Documents.ImageUtils</b> assembly
-        <br><sub><i>This assembly is not available in UI for Xamarin.</i></sub></td>
-	</tr>
-    <tr>
-		<td><b>SkiaSharp.NativeAssets.*</b> assembly
-        <br><sub><i>May differ according to the used platform. For <b>Linux</b> use <b>SkiaSharp.NativeAssets.Linux.NoDependencies</b></i></sub></td>
-	</tr>
-    <tr>
-		<td><b>SkiaSharp.Views.Blazor</b> and <b>wasm-tools</b>
-        <br><sub><i>For Blazor Web Assembly.</i></sub></td>
-	</tr>
-</tbody> 
-</table>
-
->important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
