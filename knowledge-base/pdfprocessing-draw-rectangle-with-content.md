@@ -1,10 +1,10 @@
 ---
-title: Drawing Rectangles, Text, and Images with RadPdfProcessing
+title: Drawing Rectangles with Text and Image Contant with RadPdfProcessing
 description: Learn how to draw rectangles with specific styles, add centered text, and images within those rectangles using the RadPdfProcessing library.
 type: how-to
-page_title: How to Draw Styled Rectangles, Text, and Images in PDFs with RadPdfProcessing
+page_title: How to Draw Styled Rectangles with Text and Image Content in PDFs with RadPdfProcessing
 slug: draw-rectangles-text-images-radpdfprocessing
-tags: radpdfprocessing, document processing, rectangles, text, images, drawing, pdf
+tags: radpdfprocessing, document processing, rectangles, text, images, drawing, pdf, content, style, format
 res_type: kb
 ticketid: 1677969
 ---
