@@ -323,3 +323,4 @@ There is an additional overload of InsertFormInline() that enables you to pass t
  * [ImageSource]({%slug radpdfprocessing-model-imagesource%})
  * [Table]({%slug radpdfprocessing-editing-table%})
  * [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
+ * [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})
