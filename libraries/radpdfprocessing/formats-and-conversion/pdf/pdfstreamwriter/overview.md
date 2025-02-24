@@ -69,3 +69,4 @@ If the scenario requires you to read or modify the existing page content, you sh
 * [Features]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-features%})
 * [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 * [PdfStreamWriter Class]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%})
+* [Splitting Big PDF Documents into Smaller Files Efficiently]({%slug split-big-pdf-documents%})
