@@ -32,44 +32,8 @@ To convert a colored PDF file to black and white using Telerik Document Processi
 Here is a complete code snippet that demonstrates how to achieve this conversion:
 
 ```csharp
-using System;
-using System.Diagnostics;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
-using Telerik.Windows.Documents.Fixed.Model;
-using Telerik.Windows.Documents.Fixed.Model.ColorSpaces;
-using Telerik.Windows.Documents.Fixed.Model.Common;
-using Telerik.Windows.Documents.Fixed.Model.Graphics;
-using Telerik.Windows.Documents.Fixed.Model.Objects;
-using Telerik.Windows.Documents.Fixed.Model.Text;
-
-namespace _1675661GrayScalePDF
-{
-    internal class Program
-    {
         static void Main(string[] args)
-        {
-            var reportProcessor = new Telerik.Reporting.Processing.ReportProcessor();
-            var deviceInfo = new System.Collections.Hashtable();
-            var reportSource = new Telerik.Reporting.UriReportSource();
-            reportSource.Uri = "ConditionalReport.trdp";
-
-            Telerik.Reporting.Processing.RenderingResult result = reportProcessor.RenderReport("PDF", reportSource, deviceInfo);
-
-            if (!result.HasErrors)
-            {
-                string fileName = result.DocumentName + "." + result.Extension;
-                string path = System.IO.Path.GetTempPath();
-                string filePath = System.IO.Path.Combine(path, fileName);
-
-                using (System.IO.FileStream fs = new System.IO.FileStream(filePath, System.IO.FileMode.Create))
-                {
-                    fs.Write(result.DocumentBytes, 0, result.DocumentBytes.Length);
-                }
-
-                Process.Start(new ProcessStartInfo() { FileName = filePath, UseShellExecute = true });
-
+        {        
                 PdfFormatProvider provider = new PdfFormatProvider();
                 RadFixedDocument document = provider.Import(System.IO.File.ReadAllBytes(filePath));
 
@@ -89,9 +53,7 @@ namespace _1675661GrayScalePDF
                 }
 
                 System.IO.File.WriteAllBytes(resultFile, provider.Export(document, TimeSpan.FromSeconds(10)));
-                Process.Start(resultFile);
-
-            }
+                Process.Start(resultFile);        
         }
         private static void MakeGrayscale(ContentElementBase element)
         {
@@ -231,8 +193,6 @@ namespace _1675661GrayScalePDF
         {
             return (byte)(0.2126 * r + 0.7152 * g + 0.0722 * b);
         }
-    }
-}
 ```
 
 Ensure to adjust the `MakeGrayscale` methods for `ColorBase`, `Path`, and `Image` according to your specific needs. This sample demonstrates the basic approach to converting document elements to grayscale but might require adjustments for complex scenarios or specific color processing requirements.
