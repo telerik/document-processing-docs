@@ -2,7 +2,7 @@
 title: Get, Set and Clear Cell Properties
 page_title: Get, Set and Clear Cell Properties
 slug: radspreadprocessing-working-with-cells-get-set-clear-properties
-tags: get,,set,and,clear,cell,properties
+tags: get,set,and,clear,cell,properties,selection,spreadprocessing
 published: True
 position: 4
 ---
@@ -50,10 +50,10 @@ Once you have a __CellSelection__ instance, you can easily set and retrieve the 
 With one minor exception, the get methods of all cell properties return an object of type __RangePropertyValue<T>__. The class exposes two properties that indicate the value of the property for the cell range:
         
 
-* __IsIndeterminate__: Indicates whether the value of the retrieved property is consistent among all cells in the specified CellSelection. If the property has one and the same value for all cells, __IsIndeterminate__ is set to false. However, if the value of the retrieved property varies throughout the cells in the CellSelection, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue<T>__ class is set to its default value.
+* __IsIndeterminate__: Indicates whether the value of the retrieved property is consistent among all cells in the specified __CellSelection__. If the property has one and the same value for all cells, __IsIndeterminate__ is set to false. However, if the value of the retrieved property varies throughout the cells in the __CellSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue<T>__ class is set to its default value.
             
 
-* __Value__: Contains the value of the retrieved property. If the __IsIndeterminate__ property is set to false, __Value__ contains the value of the retrieved property for the whole CellSelection region. If the __IsIndeterminate__ property is set to true, the __Value__ property is set to its default value.
+* __Value__: Contains the value of the retrieved property. If the __IsIndeterminate__ property is set to false, __Value__ contains the value of the retrieved property for the whole __CellSelection__ region. If the __IsIndeterminate__ property is set to true, the __Value__ property is set to its default value.
             
 
 ## Cell Properties
@@ -142,7 +142,7 @@ __Example 3__ illustrates who to retrieve the value of cell B2.
 
 
 
-As the document model supports different types of cell values, the CellSelection class offers multiple overloads of the __SetValue()__ method that allow you to produce different types of values. For example, if you choose the method that accepts a double instance, the __Value__ of the cell will be an instance of NumberCellValue. The __SetValue()__  method has three more overloads that take DateTime, string and ICellValue, respectively.
+As the document model supports different types of cell values, the __CellSelection__ class offers multiple overloads of the __SetValue()__ method that allow you to produce different types of values. For example, if you choose the method that accepts a double instance, the __Value__ of the cell will be an instance of NumberCellValue. The __SetValue()__  method has three more overloads that take DateTime, string and ICellValue, respectively.
         
 
 __Example 4__ demonstrates how to set the value of a given selection.
@@ -268,7 +268,7 @@ The result of __Example 7__ is illustrated in __Figure 3__.
 
 ## Indent Property
 
-In addition to the __GetIndent()__, __SetIndent()__ and __ClearIndent()__ methods, CellSelection offers two more methods that are used to increase and decrease the value of the __Indent__ property. Those methods are __IncreaseIndent()__ and __DecreaseIndent()__ and neither of them takes arguments. __Example 8__ snippet shows how to use the methods.
+In addition to the __GetIndent()__, __SetIndent()__ and __ClearIndent()__ methods, __CellSelection__ offers two more methods that are used to increase and decrease the value of the __Indent__ property. Those methods are __IncreaseIndent()__ and __DecreaseIndent()__ and neither of them takes arguments. __Example 8__ snippet shows how to use the methods.
         
 
 #### __[C#] Example 8: Increase and decrease indent__
@@ -285,7 +285,7 @@ In addition to the __GetIndent()__, __SetIndent()__ and __ClearIndent()__ method
 
 
 ## See Also
-
+ * [Accessing Cells of a Worksheet - CellSelection] ({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
  * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
  * [PatternType Enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.PatternType.html)
  * [GradientType Enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.GradientType.html)

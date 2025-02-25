@@ -38,9 +38,16 @@ Both methods return a collection of **FindResult** instances, which in turn expo
 #### **[C#] Example 1: Find text**
 
 {{region cs-radwordsprocessing-editing-find-and-replace_0}}
+	RadFlowDocument flowDocument;
+	DocxFormatProvider docxFormatProvider = new DocxFormatProvider();
 
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document); // document is an instance of the RadFlowDocument class
-	ReadOnlyCollection<FindResult> findResults = editor.FindAll("code", matchCase: true, matchWholeWord: true);
+	using (Stream input = File.OpenRead("input.docx"))
+	{
+    	flowDocument = docxFormatProvider.Import(input);
+	}
+
+	RadFlowDocumentEditor radFlowDocumentEditor = new RadFlowDocumentEditor(flowDocument);
+	ReadOnlyCollection<Telerik.Windows.Documents.Flow.TextSearch.FindResult> findResults = radFlowDocumentEditor.FindAll("text to search", matchCase: true, matchWholeWord: true);
 {{endregion}}
 
 ## Replace Text
@@ -59,9 +66,7 @@ To find all instances of a string and replace it with another one, you can use t
 #### **[C#] Example 2: Replace text**
 
 {{region cs-radwordsprocessing-editing-find-and-replace_1}}
-
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document); // document is an instance of the RadFlowDocument class
-	editor.ReplaceText("code", "source code", matchCase: true, matchWholeWord: true);
+	radFlowDocumentEditor.ReplaceText("old text", "new text", matchCase: true, matchWholeWord: true);
 {{endregion}}
 
 
@@ -83,14 +88,11 @@ __RadFlowDocumentEditor__ gives you the ability to format all occurrences of a s
 #### **[C#] Example 3: Replace character properties**
 
 {{region cs-radwordsprocessing-editing-find-and-replace_2}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	editor.ReplaceStyling("text", new Action<CharacterProperties>((properties) =>
+	radFlowDocumentEditor.ReplaceStyling("text", new Action<CharacterProperties>((properties) =>
 	{
 	    properties.HighlightColor.LocalValue = Colors.Red;
 	}));
 {{endregion}}
-
-
 
 ## See Also
 
