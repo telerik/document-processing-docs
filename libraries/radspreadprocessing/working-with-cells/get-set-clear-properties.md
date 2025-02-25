@@ -2,7 +2,7 @@
 title: Get, Set and Clear Cell Properties
 page_title: Get, Set and Clear Cell Properties
 slug: radspreadprocessing-working-with-cells-get-set-clear-properties
-tags: get,set,and,clear,cell,properties,cellselection,spreadprocessing
+tags: get,set,and,clear,cell,properties,selection,spreadprocessing
 published: True
 position: 4
 ---
