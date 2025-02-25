@@ -29,7 +29,7 @@ To embed a chart into a PDF document using RadPdfProcessing, follow these steps:
 
 - For **.NET Standard** scenario, it is suitable to use the Telerik UI for Blazor Chart, and utilize the [Export Chart as Image](https://www.telerik.com/blazor-ui/documentation/knowledge-base/chart-export-to-image) feature. Refer to [forum post](https://www.telerik.com/forums/export-chart-as-image-47277c4c2e77) for detailed instructions.
 
-- For **.NET Framework** scenario, it is suitable to use the Telerik UI for WinForms ChartView, and utilize its [Export to image]({%slug winforms/chartview-/features/export%}) functionality.
+- For **.NET Framework** scenario, it is suitable to use the Telerik UI for WinForms ChartView, and utilize its [Export to image](https://docs.telerik.com/devtools/winforms/controls/chartview/features/export) functionality.
 
 2\. **Insert the Image into the PDF**: After obtaining the image of your chart, use RadPdfProcessing to insert this image into your PDF document. RadPdfProcessing offers two approaches for working with images in PDFs:
     
@@ -43,4 +43,5 @@ Choose the approach that best suits your needs. Both methods will allow you to i
 
 - [Exporting Telerik UI for Blazor Chart as Image](https://www.telerik.com/blazor-ui/documentation/knowledge-base/chart-export-to-image)
 - [Telerik UI for Blazor Chart Documentation](https://docs.telerik.com/blazor-ui/components/chart/overview)
+- [Telerik UI for WinForms Chart Documentation](https://docs.telerik.com/devtools/winforms/controls/chartview/overview)
 - [How to Draw a Chart with FixedContentEditor in PdfProcessing]({%slug draw-chart-with-fixedcontenteditor%})
