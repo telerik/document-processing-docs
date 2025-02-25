@@ -35,7 +35,7 @@ To convert your documents' pages to images, use the __Export__ method. Note that
 {{region cs-radpdfprocessing-formats-and-conversion-imageformatprovider_0}}
 
 	PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
-	RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"));
+	RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"), TimeSpan.FromSeconds(10));
 	SkiaImageFormatProvider imageProvider = new SkiaImageFormatProvider(); 
 	
 	int count = 1;
@@ -60,7 +60,7 @@ The __ExportAsync__ method allows you to perform the conversion asynchronously.
     public async void ExportAsync()
     {
         PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
-        RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"));
+        RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"), TimeSpan.FromSeconds(10));
         SkiaImageFormatProvider imageProvider = new SkiaImageFormatProvider();
          
         int count = 0;
@@ -95,7 +95,7 @@ The __SkiaImageFormatProvider__ exposes the following settings:
 {{region cs-radpdfprocessing-formats-and-conversion-imageformatprovider_2}}
 
 	PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
-	RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"));
+	RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"), TimeSpan.FromSeconds(10));
 	SkiaImageFormatProvider imageProvider = new SkiaImageFormatProvider();
 	
 	imageProvider.ExportSettings.ImageFormat = SkiaImageFormat.Png;
@@ -121,3 +121,4 @@ The __SkiaImageFormatProvider__ exposes the following settings:
 * [Cropping PDF Pages and Saving as Images Using RadPdfProcessing]({%slug crop-save-pdf-pages-as-images-radpdfprocessing%})
 * [Converting a PDF Document to a Multipage TIFF Image]({%slug convert-pdf-to-multipage-tiff-radpdfprocessing%})
 * [Converting Multi-page TIFF Images to PDF]({%slug convert-tiff-to-pdf-radpdfprocessing%})
+* [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})

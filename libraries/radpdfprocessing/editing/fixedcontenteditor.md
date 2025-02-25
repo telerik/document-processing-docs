@@ -18,25 +18,25 @@ position: 4
 
 |Method/Property|Description|
 |----|----|
-|[Position]({%slug radpdfprocessing-concepts-position%})|Gets or sets the current position of the editor.|
-|[Clipping]({%slug radpdfprocessing-concepts-clipping%})|Defines the outline of other content elements like [Image]({%slug radpdfprocessing-model-image%}) and [Path]({%slug radpdfprocessing-model-path%}).|
-|PushClipping|Inserts a new clipping defined from the specified object depending on the overload.|
-|PopClipping|Pops the last clipping, which was inserted with the editor.|
-|DrawText|Draws text as a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) at the current position and with size depending on the overload.|
-|DrawImage|Draws an [Image]({%slug radpdfprocessing-model-image%}) at the current position and with size depending on the overload.|
-|DrawForm|Draws a [Form]({%slug radpdfprocessing-model-form%}) at the current position and with size depending on the overload.|
-|DrawWidget|Creates a [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) with different type and size depending on the overload.|
-|DrawStampAnnotation|Creates a new [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}) and draws it with a specified size and name.|
-|DrawTextAnnotation|Creates a new [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}) and draws it with a specified size and text.|
-|DrawLineAnnotation|Creates a new [LineAnnotation]({%slug radpdfprocessing-model-annotations-line%}) with starting point the current point of the editor and end point the current point of the editor plus the given distances.|
-|DrawLine|Draws a line from point A to point B.|
-|DrawRectangle|Draws a rectangle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|DrawEllipse|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|DrawCircle|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|DrawPath|Draws a path ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|DrawTable|Draws a [Table]({%slug radpdfprocessing-editing-table%}) with size depening on the overload.|
-|DrawBlock|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depening on the overload.|
-|Draw|Draws the specified element.|
+|**[Position]({%slug radpdfprocessing-concepts-position%})**|Gets or sets the current position of the editor.|
+|**[Clipping]({%slug radpdfprocessing-concepts-clipping%})**|Defines the outline of other content elements like [Image]({%slug radpdfprocessing-model-image%}) and [Path]({%slug radpdfprocessing-model-path%}).|
+|**PushClipping**|Inserts a new clipping defined from the specified object depending on the overload.|
+|**PopClipping**|Pops the last clipping, which was inserted with the editor.|
+|**DrawText**|Draws text as a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) at the current position and with size depending on the overload.|
+|**DrawImage**|Draws an [Image]({%slug radpdfprocessing-model-image%}) at the current position and with size depending on the overload.|
+|**DrawForm**|Draws a [Form]({%slug radpdfprocessing-model-form%}) at the current position and with size depending on the overload.|
+|**DrawWidget**|Creates a [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) with different type and size depending on the overload.|
+|**DrawStampAnnotation**|Creates a new [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}) and draws it with a specified size and name.|
+|**DrawTextAnnotation**|Creates a new [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}) and draws it with a specified size and text.|
+|**DrawLineAnnotation**|Creates a new [LineAnnotation]({%slug radpdfprocessing-model-annotations-line%}) with starting point the current point of the editor and end point the current point of the editor plus the given distances.|
+|**DrawLine**|Draws a line from point A to point B.|
+|**DrawRectangle**|Draws a rectangle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|**DrawEllipse**|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|**DrawCircle**|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|**DrawPath**|Draws a path ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
+|**DrawTable**|Draws a [Table]({%slug radpdfprocessing-editing-table%}) with size depening on the overload.|
+|**DrawBlock**|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depening on the overload.|
+|**Draw**|Draws the specified element.|
 
 ## Creating FixedContentEditor with a Specified Position
 
@@ -44,28 +44,15 @@ __FixedContentEditor__ is always associated with a single [RadFixedPage]({%slug 
 
 #### __[C#] Example 1: Create FixedContentEditor__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_0}}
-	RadFixedDocument document = new RadFixedDocument(); 
-	var firstPage = document.Pages.AddPage(); 	 
-	FixedContentEditor fixedContentEditor = new FixedContentEditor(firstPage); 
-{{endregion}} 
-
+ <snippet id='libraries-pdf-editing-fixedcontenteditor-create-fixedcontenteditor'/>
+ 
 The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the content root element. When a new element is created, its position is being set to the current position of the editor. The initial position of the editor can be specified when it is created.      
 
 __Example 2__ demonstrates how you can create a FixedContentEditor with a specific initial [Position]({%slug radpdfprocessing-concepts-position%}).
         
 #### __[C#] Example 2: Create FixedContentEditor with a specific position__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_1}}
-	MatrixPosition matrixPosition = new MatrixPosition(); 
-	matrixPosition.Translate(20, 20); // Translates the position by (20, 20)  
-	matrixPosition.Translate(30, 30); // Translates the position by (30, 30).  	 
-	SimplePosition simplePosition = new SimplePosition(); 
-	simplePosition.Translate(20, 20); // Translates the position by (20, 20).  
-	simplePosition.Translate(30, 30); // Translates the position by (30, 30) overwriting the previous translations.  	 
-	FixedContentEditor simplePositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition); 
-	FixedContentEditor matrixPositionfixedContentEditor = new FixedContentEditor(firstPage,matrixPosition); 
-{{endregion}} 
+ <snippet id='libraries-pdf-editing-fixedcontenteditor-set-fixedcontenteditor-position'/>
 
 ## Inserting Elements
 
@@ -167,18 +154,7 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
             
 #### __[C#] Example 7: Push clipping__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_6}}
-	string visibleText = "The last word in this text is";
-	string text = string.Format("{0} clipped.", visibleText); //The last word in this text is clipped.
-	Block block = new Block();
-	block.InsertText(visibleText);
-	Size visisibleTextSize = block.Measure();
-	
-	using (editor.PushClipping(new Rect(new Point(0, 0), visisibleTextSize)))
-	{
-	    fixedContentEditor.DrawText(text);
-	}
-{{endregion}}
+ <snippet id='libraries-pdf-editing-fixedcontenteditor-push-clipping'/>
 
 __Figure 4__ shows the result of __Example 7__.
             

@@ -18,7 +18,7 @@ __TableRow__ class represents a single row in a [Table]({%slug radpdfprocessing-
 
 * [Using TableCellCollection](#using-tablecellcollection)
 
-## Inserting a Row 
+## Inserting a TableRow 
 
 You can easily add a __TableRow__ instance by using the __AddTableRow()__ method of the __Table__ class.
         
@@ -51,7 +51,23 @@ __Example 2__ shows how to add two cells in a row and get the cells count.
 	int cellsInRowCount = tableRow.Cells.Count;
 {{endregion}}
 
+## Setting TableRow Height
 
+Since **Q1 2025** you can easily configure the TablRow's height through its **Height** property which accepts the following options defined in the **HeightType** enum:     
+
+* __Auto__: Automatically determines the row height.
+            
+* __Exact__: Sets an exact row height. The value is in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).      
+
+* __AtLeast__: Sets a minimum row height. The value is in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).
+            
+__Example 3__ creates a table with three single-cell rows, each with a different **HeightType**.
+        
+#### __[C#] Example 3: Set TableRow height__
+
+<snippet id='libraries-pdf-editing-tablerow-set-tablerow-height'/>
+
+![Rad Pdf Processing Editing TableRow Height](images/RadPdfProcessing_Editing_TableRow_Height.png)
 
 ## See Also
 

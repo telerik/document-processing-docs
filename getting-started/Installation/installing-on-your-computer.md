@@ -10,6 +10,8 @@ position: 5
 
 # Installing on Your Computer
 
+>important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
+
 Telerik Document Processing is part of several Telerik bundles and is installed following the steps for installing the suite with which you've obtained the product.
 
 >Starting from Q1 2016, the Document Processing assemblies have an assembly version which may differ from the assembly version of the other assemblies in the particular suite. 

@@ -62,3 +62,4 @@ The produced document is illustrated in the screenshot:
 - [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})  
 - [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 - [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+- [Converting Colored PDF Documents to GrayScale with Telerik Document Processing]({%slug convert-color-pdf-to-black-and-white-telerik-document-processing%})

@@ -26,7 +26,7 @@ The [Compiler Warning (level 2) CS0618](https://learn.microsoft.com/en-us/dotnet
 
 ## Solution
 
-In Q4 2024 Telerik Document Processing Libraries introduced a new **timeout mechanism** for importing and exporting documents. The Import and Export methods of the FormatProviders have a mandatory **TimeSpan?** timeout parameter after which the operation will be canceled:
+In Q4 2024 Telerik Document Processing Libraries introduced a new **timeout mechanism** for importing and exporting documents. The Import and Export methods of the FormatProviders have a mandatory **TimeSpan?** timeout parameter after which the operation will be canceled and **OperationCanceledException** is thrown:
 
 >note This is valid for WordsProcessing, PdfProcessing and SpreadProcessing.
 
@@ -48,6 +48,56 @@ Note that there is a Visual Studio setting that controls whether the [warnings w
 ![Treat Warning as Errors](images/treat-warning-as-errors.png)    
 
 Make sure that it is not toggled. Otherwise, the application wouldn't be compiled due to the obsolete API.
+
+#### Handling the OperationCanceledException
+
+   ```csharp
+           static void Main(string[] args)
+           {
+            string outputFilePath = "output.xlsx";
+            File.Delete(outputFilePath);
+            IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
+
+            bool exceptionThrown = false;
+            string exceptionStack = string.Empty;
+            try
+            { 
+                using (Stream output = new FileStream(outputFilePath, FileMode.Create))
+                {
+                    formatProvider.Export(workbook, output, TimeSpan.FromMilliseconds(1));
+                }
+                Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
+            }
+            catch (OperationCanceledException ex)
+            {
+                exceptionThrown = true;
+                exceptionStack = ex.StackTrace;
+            }
+            catch (Exception ex)
+            {
+                Exception inner = FindInnermostException(ex);
+                if (!(inner is OperationCanceledException))
+                {
+                    throw;
+                }
+                else
+                {
+                    exceptionThrown = true;
+                    exceptionStack = inner.StackTrace;
+                }
+            }
+           }
+
+        private static Exception FindInnermostException(Exception ex)
+        {
+            while (ex.InnerException != null)
+            {
+                ex = ex.InnerException;
+            }
+
+            return ex;
+        }
+   ```
 
 ## See Also
 

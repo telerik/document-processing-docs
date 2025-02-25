@@ -15,6 +15,8 @@ The Telerik Document Processing libraries that we use in this guide are UI-indep
 
 ## Step 1: Installing on Your Computer
 
+>important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
+
 Since we distribute Telerik Document Processing libraries as an addition to several Telerik UI component bundles, chances are that the libraries are already installed on your system. In this case, all you need is to locate them. The table below provides links to the installation instructions for each of the Telerik UI component suites that give you access to the Telerik Document Processing libraries. If the standard installation of your Telerik UI component suite includes the Document Processing assemblies, the table also shows their default location.
 
 >tipRegardless of the Telerik UI components suite that you use, you can always get the Document Processing assemblies as NuGet packages from the [Telerik NuGet server]({%slug installation-nuget-packages%}).

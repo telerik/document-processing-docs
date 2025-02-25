@@ -86,4 +86,5 @@ The produced document is illustrated in the screenshot:
 - [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
 - [Position]({%slug radpdfprocessing-concepts-position%})
 - [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-- [RadPdfProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
+- [RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
+- [Converting Colored PDF Documents to GrayScale with Telerik Document Processing]({%slug convert-color-pdf-to-black-and-white-telerik-document-processing%})

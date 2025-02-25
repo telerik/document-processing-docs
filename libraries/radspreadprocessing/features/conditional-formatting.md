@@ -117,7 +117,7 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
     
     // Create conditional formatting and add it to the desired range of cells
     ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
-    worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);;
+    worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);
 {{endregion}}
 
 #### Between rule applied on a range of values
