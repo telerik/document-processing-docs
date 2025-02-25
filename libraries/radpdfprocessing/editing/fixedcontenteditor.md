@@ -313,4 +313,5 @@ __FixedContentEditor__ has some properties and methods that affect how it will b
  * [Adding Images with a Shadow in PDF Documents]({%slug add-shadow-image-radpdfprocessing%})
  * [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
  * [Resizing Large Images to Fit in the PDF Page]({%slug resize-images-radpdfprocessing%})
- * [ Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
+ * [Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
+ * [Drawing Rectangles with Text and Image Contant with RadPdfProcessing]({%slug draw-rectangles-text-images-radpdfprocessing%})
