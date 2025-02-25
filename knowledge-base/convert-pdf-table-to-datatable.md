@@ -1,6 +1,6 @@
 ---
-title: Converting PDF Table Content to DataTable
-description: Learn how to transform a table from a PDF file into a DataTable object using the Telerik Document Processing libraries.
+title: Converting PDF Table Content to DataTable using RadSpreadProcessing and UI interaction
+description: Learn how to transform a table from a PDF file into a DataTable object using the Telerik Document Processing libraries and UI interaction.
 type: how-to
 page_title: How to Convert PDF Table to DataTable with Telerik Document Processing
 slug: convert-pdf-table-to-datatable
@@ -17,7 +17,7 @@ ticketid: 1675626
 
 ## Description
 
-Learn how to convert a specific table from a PDF file into a DataTable object using **Telerik Document Processing** libraries.
+Learn how to convert a specific table from a PDF file into a [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-5.0) object using **Telerik Document Processing** libraries.
 
 ## Solution
 
