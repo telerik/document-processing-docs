@@ -4,25 +4,20 @@ description: Learn how to draw rectangles with specific styles, add centered tex
 type: how-to
 page_title: How to Draw Styled Rectangles with Text and Image Content in PDFs with RadPdfProcessing
 slug: draw-rectangles-text-images-radpdfprocessing
-tags: radpdfprocessing, document processing, rectangles, text, images, drawing, pdf, content, style, format
+tags: radpdfprocessing, document, processing, rectangles, text, images, drawing, pdf, content, style, format, fixedcontenteditor
 res_type: kb
 ticketid: 1677969
 ---
 
 ## Environment
 
-<table>
-<tbody>
-<tr>
-<td>Product</td>
-<td>RadPdfProcessing for Document Processing</td>
-</tr>
-</tbody>
-</table>
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| 2025.1.205| RadPdfProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)| 
 
 ## Description
 
-I have created a block that contains some text and is located at a specific position with a defined size. I need to draw a rectangle at the same position and size, style it with a black stroke and a light blue background, and then place text and an image centered both vertically and horizontally within this rectangle.
+This article shows how to draw rectangles with formatted text or image content with the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) in the [PdfProcessing]({%slug radpdfprocessing-overview%}) library.
 
 This knowledge base article also answers the following questions:
 - How can I draw a rectangle and style it using RadPdfProcessing?
@@ -35,57 +30,105 @@ To draw a rectangle with a black stroke and a light blue background, add centere
 
 ### Drawing a Rectangle
 
-1. Create a `RectangleGeometry` and define its dimensions.
-2. Create a `Path` and set the `RectangleGeometry` to its geometry.
-3. Set the `IsFilled` and `IsStroked` properties of the path to true.
-4. Specify the `Fill`, `Stroke`, and `StrokeThickness` properties for the path.
-5. Add the path to the page content.
+1. Draw a rectangle by creating a **Path** with a **RectangleGeometry** , defining its dimensions, formatting it, and inserting it in the page.
+2. Create a **Block** of text, format it, and draw it on top of the rectangle with the **FixedContentEditor** by specifying its **Position**.
+3. Draw a second rectangle at a different position.
+4. Create an image **Block** and draw it on top of the second rectangle with the **FixedContentEditor** while specifying its **Position**.
+5. Export the **RadFixedDocument** to PDF.
+
+![RadPdfProcessing Draw Rectangles With Text and Image content](images/draw-rectangles-text-images-radpdfprocessing-result.png)
 
 ```csharp
-RectangleGeometry rectangleGeometry = new RectangleGeometry();
-rectangleGeometry.Rect = new Rect(100, 100, 100, 300);
+RadFixedDocument radFixedDocument = new RadFixedDocument();
+RadFixedPage radFixedPage = new RadFixedPage();
 
-Telerik.Windows.Documents.Fixed.Model.Graphics.Path path = new Telerik.Windows.Documents.Fixed.Model.Graphics.Path();
-path.Geometry = rectangleGeometry;
+radFixedPage.Size = new Size(11 * 100, 8.5 * 100);
+radFixedDocument.Pages.Add(radFixedPage);
 
-path.IsFilled = true;
-path.IsStroked = true;
+FixedContentEditor fixedContentEditor = new FixedContentEditor(radFixedPage);
 
-path.Fill = new RgbColor(173, 216, 230); // Light blue
-path.Stroke = RgbColors.Black;
-path.StrokeThickness = 2;
+int rectangle1X = 400;
+int rectangle1Y = 100;
+double rectangle1Width = 100;
+double rectangle1Height = 300;
 
-Page.Content.Add(path);
-```
+int rectangle2X = 700;
+int rectangle2Y = 100;
+double rectangle2Width = 100;
+double rectangle2Height = 300;
 
-### Adding Centered Text
+// Draw a rectangle
+RectangleGeometry rectangleGeometry1 = new RectangleGeometry();
+rectangleGeometry1.Rect = new Rect(rectangle1X, rectangle1Y, rectangle1Width, rectangle1Height);
 
-1. Create a `Block` and insert the text.
-2. Apply text and graphic properties as desired.
-3. Use a `FixedContentEditor` to draw the block at the desired position and size.
+Telerik.Windows.Documents.Fixed.Model.Graphics.Path rectangle1Path = new Telerik.Windows.Documents.Fixed.Model.Graphics.Path();
+rectangle1Path.Geometry = rectangleGeometry1;
+rectangle1Path.IsFilled = true;
+rectangle1Path.IsStroked = true;
+rectangle1Path.Fill = new RgbColor(173, 216, 230);
+rectangle1Path.Stroke = RgbColors.Black;
+rectangle1Path.StrokeThickness = 2;
 
-```csharp
+radFixedPage.Content.Add(rectangle1Path);
+
+// Add formatted text Block on top of the rectangle
 Block textBlock = new Block();
-textBlock.InsertText("Your text here");
-// Apply desired text and graphic properties to textBlock
-FixedContentEditor editor = new FixedContentEditor(Page);
-editor.Position.Translate(100, 100);
-editor.DrawBlock(textBlock, new System.Windows.Size(100, 300));
+
+textBlock.VerticalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.Center;
+textBlock.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
+textBlock.TextProperties.CharacterSpacing = 5;
+textBlock.TextProperties.Font = FontsRepository.TimesBold;
+textBlock.TextProperties.FontSize = Unit.PointToDip(12);
+
+textBlock.InsertText("How will this text needs to see how this draws");
+
+fixedContentEditor.Position.Translate(rectangle1X, rectangle1Y);
+fixedContentEditor.DrawBlock(textBlock, new Size(rectangle1Width, rectangle1Height));
+
+// Draw a second rectangle
+RectangleGeometry rectangleGeometry2 = new RectangleGeometry();
+rectangleGeometry2.Rect = new Rect(rectangle2X, rectangle2Y, rectangle2Width, rectangle2Height);
+
+Telerik.Windows.Documents.Fixed.Model.Graphics.Path rectangle2Path = new Telerik.Windows.Documents.Fixed.Model.Graphics.Path();
+rectangle2Path.Geometry = rectangleGeometry2;
+rectangle2Path.IsFilled = true;
+rectangle2Path.IsStroked = true;
+rectangle2Path.Fill = new RgbColor(173, 216, 230);
+rectangle2Path.Stroke = RgbColors.Black;
+rectangle2Path.StrokeThickness = 2;
+
+radFixedPage.Content.Add(rectangle2Path);
+
+// Draw a block with an image on top of the second rectangle
+Block imageBlock = new Block();
+
+imageBlock.VerticalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.Center;
+imageBlock.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Center;
+
+Image image = new Image();
+string imageFilePath = "..\\..\\..\\image.png";
+FileStream fileStream = new FileStream(imageFilePath, FileMode.Open);
+
+imageBlock.InsertImage(fileStream);
+
+fixedContentEditor.Position.Translate(rectangle2X, rectangle2Y);
+fixedContentEditor.DrawBlock(imageBlock, new Size(rectangle2Width, rectangle2Height));
+
+// Export To PDF
+string pdfOutputPath = "output.pdf";
+PdfFormatProvider PDFProvider = new PdfFormatProvider();
+using (FileStream FS = File.OpenWrite(pdfOutputPath))
+{
+    PDFProvider.Export(radFixedDocument, FS);
+}
+
+var psi = new ProcessStartInfo()
+{
+    FileName = pdfOutputPath,
+    UseShellExecute = true
+};
+Process.Start(psi);
 ```
-
-### Inserting a Centered Image
-
-1. Load or create an `ImageSource`.
-2. Create an `Image` and set the image source.
-3. Use a `FixedContentEditor` to draw the image at the desired position and size.
-
-```csharp
-ImageSource imageSource = new ImageSource("path/to/your/image.jpg");
-Image image = new Image(imageSource);
-// Use FixedContentEditor to draw the image as shown for the text block
-```
-
-Following these steps allows you to draw styled rectangles, add centered text, and insert centered images within these rectangles using the RadPdfProcessing library.
 
 ## See Also
 
