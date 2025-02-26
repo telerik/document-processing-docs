@@ -34,7 +34,7 @@ To resolve the issue with text cut off and ensure all characters, including spec
 
 The following example shows how to handle *Tahoma, Arial and Segoe UI* fonts. When using other fonts, the custom implementation should be modified and further extended with the respective fonts.
 
-    ```csharp
+ ```csharp
     internal class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
     {
         private readonly string fontFolder = Environment.GetFolderPath(Environment.SpecialFolder.Fonts);
@@ -79,14 +79,14 @@ The following example shows how to handle *Tahoma, Arial and Segoe UI* fonts. Wh
             }
         }
     }
-    ```
+  ```
 
 2. Before converting your HTML document to PDF, set the custom `FontsProvider` to the `FontsProvider` property of the `FixedExtensibilityManager`.
 
-    ```csharp
+ ```csharp
     Telerik.Windows.Documents.Extensibility.FontsProviderBase fontsProvider = new FontsProvider();
     Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.FontsProvider = fontsProvider;
-    ```
+ ```
 
 Following these steps will ensure access to the necessary font data, preventing text from being cut off and ensuring all characters, including those with special characters, are properly rendered in the PDF document.
 
