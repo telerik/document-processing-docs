@@ -104,6 +104,8 @@ You can modify a __Form__ element using the properties the class exposes. The pr
 	editor.DrawPath(pathGeometry);
 {{endregion}}
 
+![PdfProcessing Modify Form Properties](images/pdf-processing-modify-form-properties.png)
+
 ## See Also
 
  * [Form Source]({%slug radpdfprocessing-model-formsource%})
