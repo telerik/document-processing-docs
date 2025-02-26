@@ -1,10 +1,10 @@
 ---
-title: Drawing Rectangles with Text and Image Contant with RadPdfProcessing
+title: Drawing Rectangles with Text and Image Content with RadPdfProcessing
 description: Learn how to draw rectangles with specific styles, add centered text, and images within those rectangles using the RadPdfProcessing library.
 type: how-to
 page_title: How to Draw Styled Rectangles with Text and Image Content in PDFs with RadPdfProcessing
 slug: draw-rectangles-text-images-radpdfprocessing
-tags: radpdfprocessing, document, processing, rectangles, text, images, drawing, pdf, content, style, format, fixedcontenteditor
+tags: radpdfprocessing, document, processing, rectangles, text, images, drawing, pdf, content, style, format, fixedcontenteditor, editor, image, centered
 res_type: kb
 ticketid: 1677969
 ---
@@ -28,9 +28,7 @@ This knowledge base article also answers the following questions:
 
 To draw a rectangle with a black stroke and a light blue background, add centered text, and insert a centered image within the rectangle using the RadPdfProcessing library, follow these steps:
 
-### Drawing a Rectangle
-
-1. Draw a rectangle by creating a **Path** with a **RectangleGeometry** , defining its dimensions, formatting it, and inserting it in the page.
+1. Draw a rectangle by creating a [Path]({%slug radpdfprocessing-model-path%}) with a [RectangleGeometry]({%slug radpdfprocessing-concepts-geometry%}#rectanglegeometry), defining its dimensions, formatting it, and inserting it in the page.
 2. Create a **Block** of text, format it, and draw it on top of the rectangle with the **FixedContentEditor** by specifying its **Position**.
 3. Draw a second rectangle at a different position.
 4. Create an image **Block** and draw it on top of the second rectangle with the **FixedContentEditor** while specifying its **Position**.
@@ -132,9 +130,8 @@ Process.Start(psi);
 
 ## See Also
 
-- [Text and Graphic Properties Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/text-and-graphic-properties)
-- [Path Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/path)
-- [Geometry Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/geometry)
-- [Image Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/image)
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
+- [Text and Graphic Properties]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
+- [Path]({%slug radpdfprocessing-model-path%})
+- [Geometry]({%slug radpdfprocessing-concepts-geometry%})
+- [PdfProcessing Image]({%slug radpdfprocessing-model-image%})
 ---
