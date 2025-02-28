@@ -1,33 +1,26 @@
 ---
-title: Handling Empty Cells with RadSpreadStreamProcessing During Excel Import
+title: Handling Empty Cells with RadSpreadStreamProcessing
 description: This article demonstrates how to manage empty cells when importing an Excel file into a DataTable using RadSpreadStreamProcessing.
 type: how-to
-page_title: How to Handle Empty Cells with RadSpreadStreamProcessing in Excel Import
+page_title: How to Handle Empty Cells with RadSpreadStreamProcessing
 slug: handle-empty-cells-radspreadstreamprocessing
-tags: radspreadstreamprocessing, document processing, excel, xlsx, import, datatable, empty cells
+tags: spread, stream, document, processing, excel, xlsx, import, datatable, empty, cells
 res_type: kb
 ticketid: 1678225
 ---
+<style> img[alt$="><"] { border: 1px solid lightgrey; } </style>
 
 ## Environment
 
-<table>
-<tbody>
-<tr>
-<td>Product</td>
-<td>RadSpreadStreamProcessing for Document Processing</td>
-</tr>
-</tbody>
-</table>
+| Version | Product | Author | 
+| ---- | ---- | ---- | 
+| 2025.1.205| RadSpreadStreamProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
-When importing an Excel file into a DataTable using RadSpreadStreamProcessing, empty cells are skipped, resulting in misalignment of the data with the columns. This article explains how to correctly handle empty cells during the import process, ensuring data is accurately represented in the DataTable.
+When importing an Excel file into a [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-9.0) using [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}), empty cells are skipped, resulting in misalignment of the data with the columns. This article explains how to correctly handle empty cells during the import process, ensuring data is accurately represented in the DataTable.
 
-This knowledge base article also answers the following questions:
-- How to import an Excel file into a DataTable with empty cells using RadSpreadStreamProcessing?
-- How to ensure data integrity when empty cells are present in an Excel import?
-- What approach can be used to include empty cells during Excel file import into a DataTable?
+![Empty Cells in SpreadStreamProcessing](images/spread-stream-processing-empty-cells.png)   
 
 ## Solution
 
@@ -80,6 +73,5 @@ This code iterates through each cell in the imported rows. If a cell is skipped 
 
 ## See Also
 
-- [RadSpreadStreamProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadstreamprocessing/overview)
-- [Import and Export to Excel File Formats](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xls/xlsformatprovider)
-- [Using DataTableFormatProvider](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/data-table/using-data-table-format-provider#export)
+- [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})
+- [Import Excel File Formats with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-import%}) 
