@@ -20,7 +20,7 @@ ticketid: 1678225
 
 When importing an Excel file into a [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-9.0) using [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}), empty cells are skipped, resulting in misalignment of the data with the columns. This article explains how to correctly handle empty cells during the import process, ensuring data is accurately represented in the DataTable.
 
-![Empty Cells in SpreadStreamProcessing](images/spread-stream-processing-empty-cells.png)   
+![Empty Cells in SpreadStreamProcessing ><](images/spread-stream-processing-empty-cells.png)   
 
 ## Solution
 
