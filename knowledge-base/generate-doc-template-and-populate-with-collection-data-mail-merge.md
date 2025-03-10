@@ -159,8 +159,8 @@ static void Main(string[] args)
 
 ## See Also
 
-- [Populate a Table with Data using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%}})
-- [RadWordsProcessing]({%slug radwordsprocessing-overview%}})
-- [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}})
+- [Populate a Table with Data using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
+- [RadWordsProcessing]({%slug radwordsprocessing-overview%})
+- [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
 
 
