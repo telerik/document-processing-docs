@@ -21,7 +21,7 @@ Learn how to perform a [MailMerge]({%slug radwordsprocessing-editing-mail-merge%
 
 ## Solution
 
-To achieve a nested [MailMerge]({%slug radwordsprocessing-editing-mail-merge%} operation with multiple levels of data, follow the steps below:
+To achieve a nested [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) operation with multiple levels of data, follow the steps below:
 
 1. Prepare your data model to reflect the nested structure. In this case, the model includes `Incident`, `Person`, and `Phone` classes.
 
