@@ -29,11 +29,11 @@ This may happen if you upgrade to [Q1 2025]({%slug release-notes-2025-1-205%}) f
 
 However, the recommended way is to ensure that you have added the `Telerik.Licensing` package to your project. This package is necessary for the newer licensing mechanism.
 
-Refer to the [Setting Up Your Telerik Document Processing Libraries License Key]({%slug license-key%}) documentation for details on activating your license key.
+Refer to the [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%}) documentation for details on activating your license key.
 
 Following these steps should resolve the update failure and allow for the successful update of Telerik Document Processing Libraries to the latest version, while ensuring compliance with the new licensing requirements.
 
 ## See Also
 
-- [Licensing Documentation]({%slug license-key%})
+- [Licensing Documentation]({%slug setting-up-license-key%})
 - [Telerik.Licensing NuGet Package](https://www.nuget.org/packages/Telerik.Licensing)

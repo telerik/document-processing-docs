@@ -30,6 +30,9 @@ navigation:
     distribution-and-licensing:
         title: Distribution and Licensing
         position: 6  
+    distribution-and-licensing/license-key:
+        title: License Key
+        position: 1
     integration:
         title: Integration
         position: 7

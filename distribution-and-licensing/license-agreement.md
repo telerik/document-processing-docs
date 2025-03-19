@@ -27,5 +27,5 @@ __UI for WinUI__: [https://www.telerik.com/purchase/license-agreement/winui](htt
 
 ## See Also
 
-* [Setting Up Document Processing Libraries License Key]({%slug license-key%})
+* [Setting Up Document Processing Libraries License Key]({%slug setting-up-license-key%})
 * [Redistributing Telerik Document Processing]({%slug installation-deploying-telerik-document-processing%})
