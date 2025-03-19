@@ -1,5 +1,5 @@
 ---
-title: License Key Frequently Asked Questions
+title: Frequently Asked Questions
 page_title: License Key Frequently Asked Questions
 slug: frequently-asked-questions
 tags: frequently, asked, questions, license, key, document, processing, libraries
