@@ -17,7 +17,7 @@ position: 99
 
 ![changed](../images/changed.png)
 
-* Starting with 2025 Q1, all users of the Telerik and Kendo UI components and tools, will need to apply a valid license key file to both new and existing projects. For details, see our [Licensing Documentation]({%slug license-key%}).
+* Starting with 2025 Q1, all users of the Telerik and Kendo UI components and tools, will need to apply a valid license key file to both new and existing projects. For details, see our [Licensing Documentation]({%slug setting-up-license-key%}).
 
 ## What's New
 
