@@ -11,19 +11,10 @@ res_type: kb
 ---
 
 ## Environment
-<table>
-	<tbody>
-		<tr>
-			<td>Product Version</td>
-			<td>2021.2.728.1</td>
-		</tr>
-		<tr>
-			<td>Product</td>
-			<td>Telerik Document Processing</td>
-		</tr>
-	</tbody>
-</table>
 
+| Version | Product | 
+| ---- | ---- | ---- | 
+| 2021.2.728.1| RadWordsProcessing |
 
 ## Description
 
