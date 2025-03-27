@@ -9,7 +9,7 @@ res_type: kb
 ---
 ## Environment
 | Version | Product | Author | 
-| --- | --- | ---- | 
+| ---- | ---- | ---- | 
 | 2024.1.124 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
