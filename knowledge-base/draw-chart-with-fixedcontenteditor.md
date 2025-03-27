@@ -9,7 +9,7 @@ res_type: kb
 ---
 # Environment
 | Version | Product | Author | 
-| --- | --- | ---- | 
+| ---- | ---- | ---- | 
 | 2024.1.124 | RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 # Description
@@ -17,7 +17,7 @@ res_type: kb
 This article demonstrates a sample solution how to draw a chart in PdfProcessing.
 
 # Solution
-The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) allows you draw a simulation of a chart element at the desired [Position]({%slug radpdfprocessing-concepts-position%}):
+The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) allows you to draw a simulation of a chart element at the desired [Position]({%slug radpdfprocessing-concepts-position%}):
 
  
    ```csharp
