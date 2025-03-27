@@ -9,22 +9,9 @@ tags: rotation, orientation, metadata, jpeg, image, exif
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2022.2.620</td>
-		<td>RadPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-</tbody>
-</table>
+| Version | Product | Author | 
+| ---- | ---- | ---- | 
+| 2022.2.620| RadPdfProcessing |[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)| 
 
 ## Description
 
