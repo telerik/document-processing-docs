@@ -11,22 +11,9 @@ res_type: kb
 
 ## Environment
 
-<table>
-	<tbody>
-		<tr>
-			<td>Product Version</td>
-			<td>R1 2022</td>
-		</tr>
-		<tr>
-			<td>Product</td>
-			<td>RadPdfProcessing | SignaturePad for Xamarin | PdfViewer for Xamarin</td>
-		</tr>
-        <tr>
-			<td>Author</td>
-			<td><a href="https://www.telerik.com/blogs/author/lance-mccarthy">Lance McCarthy</a></td>
-		</tr>
-	</tbody>
-</table>
+| Version | Product | Author | 
+| ---- | ---- | ---- | 
+| R1 2022| RadPdfProcessing |[Lance McCarthy](https://www.telerik.com/blogs/author/lance-mccarthy)|
 
 ## Description
 
