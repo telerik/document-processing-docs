@@ -1,6 +1,6 @@
 ---
 title: Creating Headers with Left, Center, and Right Text/Image in Exported PDF Documents Using RadWordsProcessing
-description: Learn how to customize headers in PDF documents to have left, center, and right aligned text using RadWordsProcessing library.
+description: Learn how to customize headers in PDF documents to have left, center, and right-aligned text using RadWordsProcessing library.
 type: how-to
 page_title: How to Customize Headers in PDF Documents with RadWordsProcessing
 slug: customize-headers-pdf-radwordsprocessing
@@ -12,7 +12,7 @@ ticketid: 1665701
 ## Environment
 
 | Version | Product | Author | 
-| --- | --- | ---- | 
+| ---- | ---- | ---- | 
 | 2024.3.806| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
@@ -22,7 +22,7 @@ This article demonstrates how to generate a [RadFlowDocument]({%slug radwordspro
 
 ## Solution
 
-To achieve a header with left, center, and right aligned sections in a PDF document, use the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library to create a header and then insert a [Table]({%slug radwordsprocessing-model-table%}) with three [cells]({%slug radwordsprocessing-model-tablecell%}) into the header. Each cell represents one section of the header (left, center, right) and can contain text or image. The following steps and code snippet demonstrate this process:
+To achieve a header with left, center, and right aligned sections in a PDF document, use the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library to create a header and then insert a [Table]({%slug radwordsprocessing-model-table%}) with three [cells]({%slug radwordsprocessing-model-tablecell%}) into the header. Each cell represents one section of the header (left, center, right) and can contain text or an image. The following steps and code snippet demonstrate this process:
 
 1. Create a new [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and add a section to it.
 2. Define the page size and margins for the section.
@@ -30,7 +30,7 @@ To achieve a header with left, center, and right aligned sections in a PDF docum
 4. Add a header to the first section of the document.
 5. Inside the header, add a table with a single row and three cells.
 6. Set the preferred width for each cell to one-third of the page width.
-7. Add text or image to each cell with the desired alignment (left, center, right).
+7. Add text or an image to each cell with the desired alignment (left, center, right).
 8. Use the [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the document to a PDF file.
 
 ```csharp
