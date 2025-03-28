@@ -12,9 +12,9 @@ ticketid: 1670534
 ## Environment
 
 | Version | Product | Author | 
-| --- | --- | ---- | 
-| 18.3.24.1112| Telerik.Reporting|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
-|2024.4.1106|RadPdfProcessing (.NET Standard)||
+| ---- | ---- | ---- | 
+| 18.3.24.1112| Reporting |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+|2024.4.1106| RadPdfProcessing (.NET Standard) ||
 
 ## Description
 

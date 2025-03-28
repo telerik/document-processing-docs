@@ -11,7 +11,7 @@ res_type: kb
 ## Environment
 |Product Version|Product|Author|
 |----|----|----|
-|2024.1.124|SpreadProcessing|[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)|
+|2024.1.124| RadSpreadProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)|
 
 ## Description
 This example shows how to export the values of a worksheet to a CSV file using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), while also specifying the delimiter and surrounding the cell values with quotes.

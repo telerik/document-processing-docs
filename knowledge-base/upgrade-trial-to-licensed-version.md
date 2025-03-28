@@ -11,11 +11,13 @@ res_type: kb
 
 | Version | Product | Author | 
 | --- | --- | ---- | 
-| N/A | Document Processing Libraries |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| Valid until Q2 2025 | Document Processing Libraries |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
-This tutorial explains in details how to upgrade your Telerik [Trial]({%slug trial-license-limitations%}) to a Licensed version of the Document Processing Libraries.
+This tutorial explains in detail how to upgrade your Telerik [Trial]({%slug trial-license-limitations%}) to a Licensed version of the Document Processing Libraries.
+
+>caution This approach is valid for versions **before Q2 2025**. For later versions, it is just necessary to update the [license key]({%slug setting-up-license-key%}).
 
 Let's start with having a trial version installed on your machine and a project that uses the trial version:
 

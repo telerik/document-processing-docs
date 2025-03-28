@@ -12,7 +12,7 @@ ticketid: 1657401
 ## Environment
 
 | Version | Product | Author | 
-| --- | --- | ---- | 
+| ---- | ---- | ---- | 
 | 2024.2.426| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description

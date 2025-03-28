@@ -4,7 +4,7 @@ description: Learn how to build a table using the RadFixedDocumentEditor for flo
 type: how-to
 page_title: How to Generate a Table with RadFixedDocumentEditor
 slug: generate-table-with-radfixeddocumenteditor
-tags: pdf, document, processing, fixedcontenteditor, fixeddocumenteditor, edit, table,flow, position
+tags: pdf, document, processing, fixedcontenteditor, fixeddocumenteditor, edit, table, flow, position
 res_type: kb
 ticketid: 1674934
 ---
@@ -14,15 +14,15 @@ ticketid: 1674934
 
 ## Description
 
-When creating or editing a PDF document using [RadPdfProcessing]({%slug radpdfprocessing-overview%}), understanding how to manage the positioning of elements is essential. To eliminate the necessity of repositioning all elements below a newly added element in the middle of the PDF file, explore the functionality offerred by the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) to generate a PDF table.
+When creating or editing a PDF document using [RadPdfProcessing]({%slug radpdfprocessing-overview%}), understanding how to manage the positioning of elements is essential. To eliminate the necessity of repositioning all elements below a newly added element in the middle of the PDF file, explore the functionality offered by the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) to generate a PDF table.
 
 ## Solution
 
-RadPdfProcessing offers the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}, which allows for a flow-like content management approach and allows you to insert all desired elements one after another without calculating the elements' position. We will use this approach for generating the PDF table.
+RadPdfProcessing offers the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}, which allows for a flow-like content management approach and allows you to insert all desired elements one after another without calculating the elements' position. We will use this approach to generate the PDF table.
 
  This editor automates the positioning of elements, enabling you to insert content sequentially without manually calculating positions. This option might be more suitable for scenarios where manual positioning is cumbersome.
 
-The following example demonstrates how to create a table which result is illustrated below:
+The following example demonstrates how to create a table whose result is illustrated below:
 
 ```csharp
             RadFixedDocument radFixedDocument = new RadFixedDocument();
