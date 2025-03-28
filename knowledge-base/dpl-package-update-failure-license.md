@@ -25,6 +25,8 @@ After upgrading the Telerik Document Processing libraries to version [Q1 2025]({
 
 ## Solution
 
+*Note: If you have a Source Mapping for "Telerik.\*" that points to your Telerik source, make sure you also add one for NuGet.org.*
+
 This may happen if you upgrade to [Q1 2025]({%slug release-notes-2025-1-205%}) from an older version. With [Q1 2025]({%slug release-notes-2025-1-205%}) a new licensing mechanism was introduced, which requires a reference the Telerik.Licensing.Runtime dll.
 
 However, the recommended way is to ensure that you have added the `Telerik.Licensing` package to your project. This package is necessary for the newer licensing mechanism.
