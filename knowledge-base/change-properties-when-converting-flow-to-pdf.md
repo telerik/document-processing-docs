@@ -9,7 +9,7 @@ tags: pdf, html, docx, page, margin
 res_type: kb
 ---
 
-|Product Version|Product|Author|
+|Version|Product|Author|
 |----|----|----|
 |2020.1.218|RadWordsProcessing|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
 
