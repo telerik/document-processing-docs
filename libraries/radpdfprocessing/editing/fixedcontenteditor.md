@@ -207,7 +207,7 @@ With the FixedContentEditor class you can insert a Form (Form-XObject) element.
 
 There are two more overloads of DrawForm() that enable you to pass the size that should be used for the form.
 
->For more information on how to create a form, check the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) articles.
+>For more information on how to create a form, check the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource%}) articles.
 
 ### Inserting Widgets
 

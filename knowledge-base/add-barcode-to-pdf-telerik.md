@@ -21,7 +21,7 @@ Learn how to generate a PDF document and add a barcode to it.
 
 ![Pdf with Barcodes](images/pdf-with-barcodes.png)  
 
->note As of **Q1 2025** RadPdfProcessing provides support for adding Barcodes (1D and 2D) into a PDF document: [Adding Barcode into a Document]({%slug radpdfprocessing-model-formsource-overview%}#adding-barcode-into-a-document).
+>note As of **Q1 2025** RadPdfProcessing provides support for adding Barcodes (1D and 2D) into a PDF document: [Adding Barcode into a Document]({%slug radpdfprocessing-model-formsource%}#adding-barcode-into-a-document).
 
 ## Solution
 

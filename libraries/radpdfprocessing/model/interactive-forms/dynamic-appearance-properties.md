@@ -80,11 +80,11 @@ This class inherits ButtonAppearanceCharacteristics and is used by [PushButtonWi
 
 * **MouseDownCaption**: The text drawn when the mouse is pressed on the button.
 
-* **NormalIconSource**: [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) that is used for drawing a button icon when the mouse is not interacting with widget.
+* **NormalIconSource**: [FormSource]({%slug radpdfprocessing-model-formsource%}) that is used for drawing a button icon when the mouse is not interacting with widget.
 
-* **MouseOverIcon**: [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) that is used for drawing a button icon when the mouse is over the widget.
+* **MouseOverIcon**: [FormSource]({%slug radpdfprocessing-model-formsource%}) that is used for drawing a button icon when the mouse is over the widget.
 
-* **MouseDownIcon**: [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) that is used for drawing a button icon when the mouse is pressed on the widget.
+* **MouseDownIcon**: [FormSource]({%slug radpdfprocessing-model-formsource%}) that is used for drawing a button icon when the mouse is pressed on the widget.
 
 * **IconAndCaptionPosition**: Property specifying how to position the button icon relatively to the button caption.
 
@@ -95,4 +95,4 @@ This class inherits ButtonAppearanceCharacteristics and is used by [PushButtonWi
 
 * [Widgets]({%slug radpdfprocessing-model-annotations-widgets %})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
-* [FormSource]({%slug radpdfprocessing-model-formsource-overview%})
+* [FormSource]({%slug radpdfprocessing-model-formsource%})
