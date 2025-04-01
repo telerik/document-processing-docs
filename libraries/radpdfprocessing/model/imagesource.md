@@ -99,5 +99,5 @@ __RadPdfProcessing__ exposes an extension method allowing you to convert every B
 ## See Also
 
  * [Image]({%slug radpdfprocessing-model-image%})
- * [Adding SVG into a Document](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/formsource#adding-svg-into-a-document)
+ * [Adding SVG into a Document]({%slug radpdfprocessing-model-formsource-svg%})
  * [ImageSource API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.html)
