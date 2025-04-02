@@ -61,7 +61,7 @@ The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) o
 
 ### Creating a StampAnnotation with Appearance
 
-The **AnnotationContentSource** class, accessed by the **Content** property of the annotation object, represents the [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) instances used for displaying the widget content. The following example shows how to create a custom Stamp annotation and change its visual appearance:
+The **AnnotationContentSource** class, accessed by the **Content** property of the annotation object, represents the [FormSource]({%slug radpdfprocessing-sample-test%}) instances used for displaying the widget content. The following example shows how to create a custom Stamp annotation and change its visual appearance:
 
 >important When creating a custom stamp name (not from the predefined names), it is important to start the name with "#". Otherwise, if the stamp is moved in Adobe, its appearance will be rewritten.
 
@@ -114,4 +114,4 @@ The **AnnotationContentSource** class, accessed by the **Content** property of t
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [Annotations Overview]({%slug radpdfprocessing-model-annotations-overview%})
-* [FormSource]({%slug radpdfprocessing-model-formsource-overview%})
+* [FormSource]({%slug radpdfprocessing-sample-test%})

@@ -62,7 +62,7 @@ The FixedContentEditor offers the public **DrawTextAnnotation** method which cre
 
 ### Creating a TextAnnotation with Appearance
 
-The **AnnotationContentSource** class, accessed by the **Content** property of the annotation object, represents the [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) instances used for displaying the widget content. The following example shows how to change the annotation's visual appearance when the mouse is not interacting with the widget (**NormalContentSource**) and when the mouse is over the widget (**MouseOverContentSource**):
+The **AnnotationContentSource** class, accessed by the **Content** property of the annotation object, represents the [FormSource]({%slug radpdfprocessing-sample-test%}) instances used for displaying the widget content. The following example shows how to change the annotation's visual appearance when the mouse is not interacting with the widget (**NormalContentSource**) and when the mouse is over the widget (**MouseOverContentSource**):
 
 ```csharp 
         private RadFixedDocument CreateTextAnnotation()
@@ -116,4 +116,4 @@ It is possible to modify the content source displayed when the mouse button is p
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [Annotations Overview]({%slug radpdfprocessing-model-annotations-overview%})
-* [FormSource]({%slug radpdfprocessing-model-formsource-overview%})
+* [FormSource]({%slug radpdfprocessing-sample-test%})

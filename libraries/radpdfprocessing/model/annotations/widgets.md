@@ -31,7 +31,7 @@ Widget annotations are used for visual representation of some [FormField]({%slug
 
 All widgets have two type of content properties:
 
-* **AnnotationContentSource properties**: Properties of this type provide three [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) instances for the three mouse interactions with the widget – normal (no mouse interaction) source, mouse over source and mouse down source. The AnnotationContentSource is usually taken with higher priority when visualizing the widget in a PDF viewer. 
+* **AnnotationContentSource properties**: Properties of this type provide three [FormSource]({%slug radpdfprocessing-sample-test%}) instances for the three mouse interactions with the widget – normal (no mouse interaction) source, mouse over source and mouse down source. The AnnotationContentSource is usually taken with higher priority when visualizing the widget in a PDF viewer. 
 
 	There are two exceptional cases when these properties are ignored in favor of the Dynamic appearance properties. 
 	* The first exceptional case is when the widget is visualizing some variable content which is dynamically modified by the user interaction. 
@@ -149,4 +149,4 @@ This class inherits the [TwoStatesButtonWidget](#twostatesbuttonwidget-class) cl
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [Annotations Overview]({%slug radpdfprocessing-model-annotations-overview%})
-* [FormSource]({%slug radpdfprocessing-model-formsource-overview%})
+* [FormSource]({%slug radpdfprocessing-sample-test%})

@@ -46,7 +46,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 >tipThere are other methods that allow adding a form to a document by passing it size and source. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
           
->You can add content to the form by setting its FormSource property. The API allows you also to directly pass the FormSource to a method which will automatically generate a form in the document content. For more information on this topic, check the [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) article.
+>You can add content to the form by setting its FormSource property. The API allows you also to directly pass the FormSource to a method which will automatically generate a form in the document content. For more information on this topic, check the [FormSource]({%slug radpdfprocessing-sample-test%}) article.
 
  
 ## Form Properties
@@ -54,7 +54,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 You can modify a __Form__ element using the properties the class exposes. The properties are listed below.
         
 
-* __FormSource__: Specifies the content that will be visualized in the Form object. It is of type [**FormSource**]({%slug radpdfprocessing-model-formsource-overview%}).
+* __FormSource__: Specifies the content that will be visualized in the Form object. It is of type [**FormSource**]({%slug radpdfprocessing-sample-test%}).
 
 * __Clipping__: Gets or sets the clipping of the form object.
 
@@ -106,7 +106,7 @@ You can modify a __Form__ element using the properties the class exposes. The pr
 
 ## See Also
 
- * [Form Source]({%slug radpdfprocessing-model-formsource-overview%})
+ * [Form Source]({%slug radpdfprocessing-sample-test%})
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [Position]({%slug radpdfprocessing-concepts-position%})
