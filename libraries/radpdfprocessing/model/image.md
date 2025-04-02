@@ -21,7 +21,7 @@ You can edit an __Image__ element using the properties the class exposes. The pr
 * __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the __IContainerElement__.
 * __AlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
 
->note As of **Q3 2024** RadPdfProcessing provides support for SVG (vector graphics image format): [Adding SVG into a Document](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/formsource#adding-svg-into-a-document).
+>note As of **Q3 2024** RadPdfProcessing provides support for SVG (vector graphics image format): [Adding SVG into a Document]({%slug radpdfprocessing-model-formsource-svg%}).
             
 __Example 1__ shows how to initialize an Image object, assigns an ImageSource to it and add it to a previously defined container (page).
       
