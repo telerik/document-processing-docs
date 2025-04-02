@@ -1,3 +1,4 @@
+---
 title: Barcode
 description: Learn how to add barcodes into a PDF document using RadPdfProcessing.
 page_title: Barcode FormSource
