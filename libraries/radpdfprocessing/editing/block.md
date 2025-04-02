@@ -119,7 +119,7 @@ The Form (or also known as Form-XObject) is an object that can contain PDF conte
 There are two more overloads of InsertForm() that enables you to pass the size that should be used for the form.
 
 
->For more information on how to create a form, check the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-sample-test%}) articles.
+>For more information on how to create a form, check the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) articles.
 
 
 ### Changing Current Styles
