@@ -255,6 +255,9 @@ navigation:
     libraries/radpdfprocessing/model/annotations:
         title: Annotations
         position: 7  
+    libraries/radpdfprocessing/model/formsource:
+        title: FormSource
+        position: 9 
 ## RadZipLibrary Start
     "*radziplibrary":
         title: RadZipLibrary
