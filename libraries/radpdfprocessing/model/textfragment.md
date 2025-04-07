@@ -59,6 +59,7 @@ TextFragment exposes the following properties that can modify the look of the re
 |**StrokeDashArray**|The pattern of dashes and gaps used to stroke paths.|
 |**StrokeDashOffset**|The distance from the start of a line to the beginning of a dash pattern.|
 |**AlphaConstant**|Specifying the constant shape or constant opacity value to be used for nonstroking operations.|
+|**StrokeAlphaConstant**|Specifying the constant shape or constant opacity value to be used for stroking operations.|
 |**MiterLimit**|The limit of the thickness of the join on a mitered corner.|
 |**Text**|Represents the text that is drawn.|
 |**Position**|The [Position]({%slug radpdfprocessing-concepts-position%}) where the text element is drawn.|
