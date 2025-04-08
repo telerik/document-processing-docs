@@ -147,7 +147,7 @@ Execute the following commands in the environment:
 * ```bash
   sudo apt update
   ```
-  
+
 * ```bash
   sudo apt install tesseract-ocr
   ```
@@ -156,6 +156,11 @@ Execute the following commands in the environment:
   sudo apt install libleptonica-dev
   ```
  
+> important If the generated tesseract/leptonica .so files cannot be found, it is likely that they were installed with different names than expected. To resolve this, you can copy their names and location, and set them to the corresponding properties:
+> * TesseractEnvironment.TesseractUnixLibName
+> * TesseractEnvironment.LeptonicaUnixLibName
+> * TesseractEnvironment.CustomSearchPath
+
 ## See Also
 
 * [Using OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%})
