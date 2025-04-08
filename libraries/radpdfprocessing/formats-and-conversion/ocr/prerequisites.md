@@ -14,7 +14,7 @@ position: 0
 
 This topic describes the requirements needed by the [PdfProcessing]({%slug radpdfprocessing-overview%}) library to start using the **OcrFormatProvider**.
 
->important The default Tesseract implementation is at this point **Windows-only**. You can still use the OCR feature with a [custom implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}).
+>important The default Tesseract implementation is at this point **Windows** and **Linux-only**. You can still use the OCR feature with a [custom implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}).
 
 >note Used images should be **300 DPI** for best results.
 
@@ -80,6 +80,20 @@ In order to use the **OcrFormatProvider** you need to add the following assembli
         <sub><i>Telerik.Documents.ImageUtils depends on SkiaSharp.</i></sub>
     </td>
 	</tr>
+	<tr>
+        <td><b>-</b></td>
+		<td>
+        <b>SkiaSharp.NativeAssets.*</b> (version 2.88.8)
+        <br>
+        <sub><i>May differ according to the used platform. For <b>Linux</b> (since <b>Q2 2025</b>) use <b>SkiaSharp.NativeAssets.Linux.NoDependencies</b> and execute the <a href="#linux-specific-steps">required commands</a></i></sub>
+	</tr>
+	<tr>
+        <td><b>-</b></td>
+		<td>
+        <b>SkiaSharp.Views.Blazor</b> and <b>wasm-tools</b>
+        <br>
+        <sub><i>For Blazor Web Assembly.</i></sub>
+	</tr>
 </tbody>
 </table>
 
@@ -103,7 +117,7 @@ tessdata
 ```
 ![tessdata Structure](images/tessdata-structure.png) 
 
-### Manually set up the Tesseract native assemblies
+## Manually set up the Tesseract native assemblies
 
 Ensure that the following already exist in the root directory of your project:
 - The "_Tesseract.dll_" assembly.
@@ -113,7 +127,6 @@ Ensure that the following already exist in the root directory of your project:
 
 If these requirements are not met, go through the following steps:
 
-1. [Extract the "Tesseract.dll" assembly from the _Telerik.Windows.Documents.TesseractOcr_ NuGet package and add it to your project]({%slug extract-assemblies-from-nuget%}).
 1. Download the "_tesseract50.dll_" and "_leptonica-1.82.0.dll_" native assemblies from the listed links:
     * https://github.com/charlesw/tesseract/tree/master/src/Tesseract/x64.
     * https://github.com/charlesw/tesseract/tree/master/src/Tesseract/x86.
@@ -128,9 +141,21 @@ If these requirements are not met, go through the following steps:
         ├── tesseract50.dll
         └── leptonica-1.82.0.dll
     ```
- 
 
+### Linux-specific steps
+Execute the following commands in the environment:
+* ```bash
+  sudo apt update
+  ```
+* ```bash
+  sudo apt install tesseract-ocr
+  ```
+* ```bash
+  sudo apt install libleptonica-dev
+  ```
+ 
 ## See Also
 
 * [Using OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%})
 * [Implementing a Custom OCR Provider]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%})
+* [Cross-Platform Images]({%slug radpdfprocessing-cross-platform-images%})
