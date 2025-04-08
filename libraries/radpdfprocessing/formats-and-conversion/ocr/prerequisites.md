@@ -85,7 +85,7 @@ In order to use the **OcrFormatProvider** you need to add the following assembli
 		<td>
         <b>SkiaSharp.NativeAssets.*</b> (version 2.88.8)
         <br>
-        <sub><i>May differ according to the used platform. For <b>Linux</b> (since <b>Q2 2025</b>) use <b>SkiaSharp.NativeAssets.Linux.NoDependencies</b> and execute the <a href="#linux-specific-steps">required commands</a></i></sub>
+        <sub><i>May differ according to the used platform. For <b>Linux</b> (since <b>Q2 2025</b>) use <b>SkiaSharp.NativeAssets.Linux.NoDependencies</b> and execute the <a href="#linux-specific-steps">required commands.</a></i></sub>
 	</tr>
 	<tr>
         <td><b>-</b></td>
@@ -147,9 +147,11 @@ Execute the following commands in the environment:
 * ```bash
   sudo apt update
   ```
+  
 * ```bash
   sudo apt install tesseract-ocr
   ```
+
 * ```bash
   sudo apt install libleptonica-dev
   ```
