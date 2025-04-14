@@ -26,7 +26,7 @@ As of **Q2 2025** RadPdfProcessing provides support for **GoToR actions**. A rem
 
 The following example shows how to create a PDF document and add a **GoToRAction** to a [Link annotation]({%slug radpdfprocessing-model-annotations-links%}) that opens another PDF document in a new window:
  
- <snippet id='libraries-pdf-model-actions-gotor/>
+ <snippet id='libraries-pdf-model-actions-gotor'/>
 
  >note Navigating to a specific destination is not supported with the current implementation.
 
