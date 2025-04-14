@@ -144,17 +144,11 @@ If these requirements are not met, go through the following steps:
 
 ### Linux-specific steps
 Execute the following commands in the environment:
-```bash
-sudo apt update
-```
-
-```bash
-sudo apt install tesseract-ocr
-```
-
-```bash
-sudo apt install libleptonica-dev
-```
+|Ubuntu|Alpine|Fedora|
+|----|----|----|
+|```sudo apt update```|```dsudo apk update```|```sudo dnf install tesseract```|
+|```sudo apt install tesseract-ocr```|```sudo apk add tesseract-ocr```|```sudo dnf install leptonica```|
+|```sudo apt install libleptonica-dev```|```sudo apk add leptonica```||
  
 >caution If the generated **tesseract/leptonica** .so files cannot be found, it is likely that they were installed with different names than expected. To resolve this, you can copy their names and location, and set them to the corresponding properties:
 > * **TesseractEnvironment.TesseractUnixLibName**
