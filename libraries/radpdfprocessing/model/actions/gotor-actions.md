@@ -18,13 +18,17 @@ As of **Q2 2025** RadPdfProcessing provides support for **GoToR actions**. A rem
 |**OpenInNewWindow**|Gets or sets a value indicating whether to open the destination document in a new window. True if the document should be open in a new window, otherwise false.|
 |**Destination**|Gets or sets the named destination for the action.|
 
+>caution Currently, RadPdfProcessing provides support **only** for preserving the GoToR actions during import/export operations.
+
 >note Remote go-to actions cannot be used with embedded files.
 
 ### Adding a GoToR Action to a Document
 
-The following example shows how to create a PDF document and add a **GoToRAction** to a [Link annotation]({%slug radpdfprocessing-model-annotations-links%}) that opens another PDF document in a new window to a specific destination:
+The following example shows how to create a PDF document and add a **GoToRAction** to a [Link annotation]({%slug radpdfprocessing-model-annotations-links%}) that opens another PDF document in a new window:
  
  <snippet id='libraries-pdf-model-actions-gotor/>
+
+ >note Navigating to a specific destination is not supported with the current implementation.
 
 ## See Also
 
