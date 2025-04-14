@@ -20,6 +20,8 @@ The abstract **Action** class defines a behavior for an [annotation]({%slug radp
 |[NamedAction]({%slug radpdfprocessing-model-actions-named-actions%})|Represents a named action which exposes the following property: <br>**NamedActionType**: The type of the action representing the menu item to be executed.|
 |[ResetFormAction]({%slug radpdfprocessing-model-interactive-forms-resetting-form-fields%})|Represents an action that resets the specified [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) in a document. |
 |[LaunchAction]({%slug radpdfprocessing-model-actions-launch%})|Represents an action which launches an application, usually to open a file. |
+|[GoToRAction]({%slug radpdfprocessing-model-actions-gotor%})|(“Go-to remote”) Go to a destination in another
+document.|
  
 ## See Also
 

@@ -30,4 +30,4 @@ The following example shows how to create a PDF document and add a **LaunchActio
 * [Links]({%slug radpdfprocessing-model-annotations-links%}) 
 * [Actions]({%slug radpdfprocessing-model-actions%}) 
 * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
-omp
+* [GoToRAction]({%slug radpdfprocessing-model-actions-gotor%})
