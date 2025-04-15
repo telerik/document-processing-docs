@@ -19,16 +19,15 @@ In this article you will find the classes and their members.
 
 ## The ZipFile class
 
-With the __ZipFile__ class you could take advantage of static methods, which will give you the ability to create, extract or open zip archives with only one line of code.
+With the __ZipFile__ class, you can utilize static methods to create, extract, or open zip archives with minimal code. Starting with the **Q2 2025** release, some methods now include an additional optional parameter `(TimeSpan? timeout)`. The older overloads of these specific methods, which do not include this parameter, are now obsolete. 
 
-* __[ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) CreateEntryFromFile(this ZipArchive destination, string sourceFileName, string entryName)__ – Archives a file by compressing it and adding it to the zip archive. It has two more overloads, which allow you to specify the __CompressionLevel__ or __CompressionSettings__ of the __ZipEntry__.
+* **[ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) CreateEntryFromFile(this ZipArchive destination, string sourceFileName, string entryName, _TimeSpan? timeout_)** – Archives a file by compressing it and adding it to the zip archive. You can also specify the __CompressionLevel__ or __CompressionSettings__ of the __ZipEntry__ using other overloads.
 
-* __void CreateFromDirectory(string sourceDirectoryName, string destinationArchiveFileName)__: Creates a zip archive that contains the files and directories from the specified directory. This method has few overloads to set different settings of the entry.
-    
-* __void ExtractToDirectory(string sourceArchiveFileName, string destinationDirectoryName)__: Extracts all the files in the specified zip archive to a directory on the file system.
+* **void CreateFromDirectory(string sourceDirectoryName, string destinationArchiveFileName, _TimeSpan? timeout_)**: Creates a zip archive containing the files and directories from the specified directory. Additional overloads allow you to configure various settings for the entries.
 
+* **void ExtractToDirectory(string sourceArchiveFileName, string destinationDirectoryName, _TimeSpan? timeout_)**: Extracts all the files in the specified zip archive to a directory on the file system.
 
-* __void ExtractToFile(this ZipArchiveEntry source, string destinationFileName)__: Extracts an entry in the zip archive to a file. With the additional overload you could specify whether to overwrite an existing file that has the same name as the destination file or not.
+* **void ExtractToFile(this ZipArchiveEntry source, string destinationFileName, _TimeSpan? timeout_)**: Extracts an entry in the zip archive to a file. You can also specify whether to overwrite an existing file with the same name as the destination file.
 
 * __ZipArchive Open(string archiveFileName, ZipArchiveMode mode)__: Opens a zip archive at the specified path and in the specified mode. Another overload allows specifying the encoding to use when reading or writing entry names in this archive. Specify a value for this parameter only when an encoding is required for interoperability with zip archive tools and libraries that do not support UTF-8 encoding for entry names.
 
