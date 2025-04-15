@@ -10,7 +10,7 @@ position: 4
 
 # GoToR Actions  
 
-As of **Q2 2025** RadPdfProcessing provides support for **GoToR actions**. A remote go-to action is similar to an ordinary go-to action but jumps to a destination in another PDF file instead of the current file. The **GoToRAction** class offers the following public properties: 
+As of **Q2 2025** RadPdfProcessing provides **partial** support for **GoToR actions**. A *remote go-to* action is similar to an ordinary go-to action but jumps to a destination in another PDF file instead of the current file. The **GoToRAction** class offers the following public properties: 
 
 |Property|Description|
 |----|----|
@@ -25,10 +25,10 @@ As of **Q2 2025** RadPdfProcessing provides support for **GoToR actions**. A rem
 ### Adding a GoToR Action to a Document
 
 The following example shows how to create a PDF document and add a **GoToRAction** to a [Link annotation]({%slug radpdfprocessing-model-annotations-links%}) that opens another PDF document in a new window:
- 
- <snippet id='libraries-pdf-model-actions-gotor'/>
 
- >note Navigating to a specific destination is not supported with the current implementation.
+>important Navigating to a specific destination is not supported with the current implementation.
+
+<snippet id='libraries-pdf-model-actions-gotor'/>
 
 ## See Also
 
