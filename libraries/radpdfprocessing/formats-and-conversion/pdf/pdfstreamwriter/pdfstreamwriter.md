@@ -7,6 +7,18 @@ published: True
 position: 2
 ---
 
+<style>
+table, th, td {
+	border: 1px solid;
+}
+table th:first-of-type {
+	width: 25%;
+}
+table th:nth-of-type(2) {
+	width: 75%;
+} 
+</style>
+
 # Overview
 
 The **PdfStreamWriter** class enables you to write file content directly to a Stream. This is the root element of the streaming mechanism used when exporting a PDF document.
@@ -97,7 +109,7 @@ Through the **Settings** property of PdfStreamWriter you can control the way the
 |**WriteAnnotations**|A boolean property indicating whether the annotations should be included in the exported document.|
 |**StreamCompression**|Gets or sets the content stream compression type. Possible Values are: <br>- **None**: The content streams won't be encoded. <br>- **FlateDecode**: Compresses data using the zlib/deflate compression method.|
 
-When merging documents' pages using the PdfStreamWriter the Form Fields may be duplicated. The **PdfStreamWriterSettings** offers the **MergedFieldNameResolving** event which occurs when trying to resolve conflicts between the fields names while merging instances with duplicated names:
+When merging documents' pages using the PdfStreamWriter the Form Fields may be duplicated. As of **Q2 2025** the **PdfStreamWriterSettings** offers the **MergedFieldNameResolving** event which occurs when trying to resolve conflicts between the fields names while merging instances with duplicated names:
 
 <snippet id='libraries-pdf-formats-and-conversion-pdfstreamwritersettings'/>
 
