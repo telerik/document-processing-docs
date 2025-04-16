@@ -2,6 +2,7 @@
 title: Licensing before 2025
 page_title: "Licensing mechanism before Q2 2025 explained."
 description: "Learn more about Licensing in Telerik Document Processing before Q2 2025 and how you may upgrade your Trial license to Purchase license"
+type: how-to
 slug: licensing-before-q2-2025
 tags: licensing, dpl, document, processing, before, 2025, trial, dev
 published: True
