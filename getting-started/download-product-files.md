@@ -10,7 +10,7 @@ position: 4
 
 # Download Product Files
 
-The [Telerik Document Processing]({%slug introduction%}) libraries are available as a separate distribution in the **Downloads** section of your [Telerik account](https://www.telerik.com/account/). 
+As of **Q2 2025** the [Telerik Document Processing]({%slug introduction%}) libraries are available as a separate distribution in the **Downloads** section of your [Telerik account](https://www.telerik.com/account/). 
 
 Since the **Telerik Document Processing** is a part of several [Telerik bundles](https://www.telerik.com/purchase.aspx) and it is installed following the steps for installing the suite with which you've obtained the product, when you purchase a Telerik license, you can download the following files:
 
