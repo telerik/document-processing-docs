@@ -11,15 +11,24 @@ position: 4
 
 **Image** is a content element, which contains an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and represents an image. It can be added in the **Content** collection of a **IContainerElement** such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). 
 
-## Working With an Image
+## Public API
 
-You can edit an __Image__ element using the properties the class exposes. The properties are listed below.       
+| **Property**          | **Description**                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| ImageSource           | Specifies the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) that will be visualized in the Image object. |
+| Width                 | The width of the image.                                                                         |
+| Height                | The height of the image.                                                                        |
+| Position              | The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the __IContainerElement__. |
+| AlphaConstant         | Specifies the constant shape or constant opacity value to be used for nonstroking operations.   |
 
-* __ImageSource__: Specifies the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) that will be visualized in the Image object.
-* __Width__: The width of the image.
-* __Height__: The height of the image.
-* __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the __IContainerElement__.
-* __AlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
+| **Method**            | **Description**                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| GetBitmapSource  (_.NET Standard_) | Creates a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) from the image element.|
+| Clone (_since Q2 2025_)                | Creates a deep copy of this document element.                                                  |
+
+### Working With an Image
+
+You can edit an __Image__ element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.       
 
 >note As of **Q3 2024** RadPdfProcessing provides support for SVG (vector graphics image format): [Adding SVG into a Document]({%slug radpdfprocessing-model-formsource-svg%}).
             
