@@ -20,18 +20,18 @@ __Form__ is a content element, which contains a form source and represents a For
 
 | **Property**          | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| FormSource            | Specifies the content that will be visualized in the Form object. It is of type [**FormSource**]({%slug radpdfprocessing-model-formsource-overview%}). |
-| Clipping              | Gets or sets the clipping of the form object.                                                  |
-| Width                 | The width of the form.                                                                          |
-| Height                | The height of the form.                                                                         |
-| AlphaConstant         | Specifies the constant shape or constant opacity value to be used for nonstroking operations.   |
-| StrokeAlphaConstant   | Specifies the constant shape or constant opacity value to be used for stroking operations.      |
-| Position              | The [Position]({%slug radpdfprocessing-concepts-position%}) of the form inside the __IContainerElement__. |
-| Parent                | Allows you to obtain the parent page of the form.                                               |
+| **FormSource**        | Specifies the content that will be visualized in the Form object. It is of type [**FormSource**]({%slug radpdfprocessing-model-formsource-overview%}). |
+| **Clipping**          | Gets or sets the clipping of the form object.                                                  |
+| **Width**             | The width of the form.                                                                          |
+| **Height**            | The height of the form.                                                                         |
+| **AlphaConstant**     | Specifies the constant shape or constant opacity value to be used for nonstroking operations.   |
+| **StrokeAlphaConstant** | Specifies the constant shape or constant opacity value to be used for stroking operations.      |
+| **Position**          | The [Position]({%slug radpdfprocessing-concepts-position%}) of the form inside the __IContainerElement__. |
+| **Parent**            | Allows you to obtain the parent page of the form.                                               |
 
 | **Method**            | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| Clone (_since Q2 2025_)                | Creates a deep copy of this document element.                                                  |
+| **Clone** (_since Q2 2025_) | Creates a deep copy of this document element.                                                  |
 
 
 ### Creating and Inserting a Form

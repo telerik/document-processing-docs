@@ -15,16 +15,16 @@ position: 4
 
 | **Property**          | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| ImageSource           | Specifies the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) that will be visualized in the Image object. |
-| Width                 | The width of the image.                                                                         |
-| Height                | The height of the image.                                                                        |
-| Position              | The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the __IContainerElement__. |
-| AlphaConstant         | Specifies the constant shape or constant opacity value to be used for nonstroking operations.   |
+| **ImageSource**       | Specifies the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) that will be visualized in the Image object. |
+| **Width**             | The width of the image.                                                                     |
+| **Height**            | The height of the image.                                                                    |
+| **Position**          | The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the **IContainerElement**. |
+| **AlphaConstant**     | Specifies the constant shape or constant opacity value to be used for nonstroking operations.   |
 
 | **Method**            | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| GetBitmapSource  (_.NET Standard_) | Creates a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) from the image element.|
-| Clone (_since Q2 2025_)                | Creates a deep copy of this document element.                                                  |
+| **GetBitmapSource**  (_.NET Standard_) | Creates a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) from the image element.|
+| **Clone** (_since Q2 2025_)                | Creates a deep copy of this document element.                                                  |
 
 ### Working With an Image
 
