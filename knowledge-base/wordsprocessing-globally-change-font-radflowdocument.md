@@ -28,7 +28,7 @@ This article demonstrates how to recursively iterate through all text runs in a 
 The solution involves three key steps:
 
 1. Import the document from your source format
-2. Recursively iterate through all **Run** elements in the document and change their font
+2. Recursively iterate through all [Run]({%slug radwordsprocessing-model-run%}) elements in the document and change their font
 3. Export the document to your desired format
 
 Here's a complete code example that demonstrates how to change all fonts in a **RadFlowDocument** to _Arial_ before exporting to PDF:
@@ -137,6 +137,8 @@ foreach (Run run in radFlowDocument.EnumerateChildrenOfType<Run>())
     }
 }
 ```
+
+>note In **.NET Standard**, font handling for PDF export differs from other frameworks. System fonts may not be properly embedded or may use fallback fonts which can affect text appearance and layout in documents exported to PDF. For more details on how to resolve this, see the [Export section of the Flow PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}#export).
 
 ## See Also
 
