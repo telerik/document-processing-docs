@@ -215,6 +215,9 @@ navigation:
     libraries/radpdfprocessing/features/embedded-file-streams:
         title: Embedded File Streams
         position: 5
+    libraries/radpdfprocessing/features/ai-document-analysis:
+        title: AI Document Analysis
+        position: 6
     libraries/radpdfprocessing/model/interactive-forms:
         title: Interactive Forms
     libraries/radpdfprocessing/model/interactive-forms/form-fields:
