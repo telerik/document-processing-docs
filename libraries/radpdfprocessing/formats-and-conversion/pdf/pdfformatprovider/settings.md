@@ -48,6 +48,7 @@ The **PdfFormatProvider** class offers the **ExportSettings** property which all
 
 |Property|Description|
 |----|----|
+|**StripStructureTree**|Specifies if the PDF document should strip structure tree on export. *Introduced in Q2 2025*. The default value is **false**.|
 |**StripJavaScriptActions**|Specifies if the PDF document should strip JavaScript actions on export. *Introduced in Q4 2024*. The default value is **false**.|
 |**FontEmbeddingType**|The property controls what part of the fonts will be embedded in the file offering the following options: <ul><li>**None**: Does not embed fonts.</li><li>**Full**: Fully embeds fonts.</li><li>**Subset**: Embeds only the used characters subset of the fonts. This is the default approach.</li></tr></ul> The subset export option is currently implemented **only** for TrueType fonts (.ttf).|
 |**IsEncrypted**|This property specifies if the document should be encrypted. The default value is *false*. You can specify the encryption algorithm by setting the **EncryptionType** property. The supported values are **AES256** and **RC4**. </br>**All passwords for revision 6 (AES-256) shall be based on Unicode**. Preprocessing of a user-provided password consists first of normalizing its representation by applying the "SASLPrep" profile (Internet RFC 4013) of the "stringprep" algorithm (Internet RFC 3454) to the supplied password using the Normalize and BiDi options. </br> This setting is ignored when __ComplianceLevel__ differs from __None__ as PDF/A compliant documents do not allow encryption.|
