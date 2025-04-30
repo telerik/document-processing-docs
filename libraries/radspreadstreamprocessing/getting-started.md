@@ -58,7 +58,7 @@ In order to use **RadSpreadStreamProcessing** in your project, you will need to 
 </tbody>
 </table>
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. For the full list of suites including Telerik Document Processing, check the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) help topic. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and {{site.dotnetversions}}. For the full list of suites including Telerik Document Processing, check the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) help topic. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Create a Spreadsheet Document
 

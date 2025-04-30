@@ -18,7 +18,7 @@ If your workflow relies on NuGet for package management, you can take advantage 
 
 #### This article contains the following sections:
 
-* [NuGet packages for .NET Framework and .NET Core for Windows](#packages-for-net-framework-and-net-core-for-windows)
+* [NuGet packages for .NET Framework and {{site.dotnetversions}} for Windows](#packages-for-net-framework-and-net-core-for-windows)
 * [Packages for .NET Standard 2.0 (Support for {{site.dotnetversions}})](#packages-for-net-standard-20-net-core-net-6-net-8)
 * [Get the NuGet Packages](#get-the-nuget-packages)
 
@@ -37,9 +37,9 @@ If your workflow relies on NuGet for package management, you can take advantage 
 
 >important The .NET Standard packages are compatible with any .NET version (e.g .NET 9), even if there are no packages explicitly available for the specific versions. The same applies to the .NET Framework packages.
 
-## Packages for .NET Framework and .NET Core for Windows
+## Packages for .NET Framework and {{site.dotnetversions}} for Windows
 
-The following list represents the available NuGet packages for the Document Processing libraries that you can use with the .NET Framework or .NET Core for Windows. Although we offer them as an addition to the Telerik UI components, you can use them without any UI components:
+The following list represents the available NuGet packages for the Document Processing libraries that you can use with the .NET Framework or {{site.dotnetversions}} for Windows. Although we offer them as an addition to the Telerik UI components, you can use them without any UI components:
 
 * __Telerik.Windows.Documents.Core:__ The main NuGet package for the Telerik Document Processing libraries. Required when you plan to use the library.
 * __Telerik.Windows.Documents.Fixed:__ The package is required when processing `PDF` documents.

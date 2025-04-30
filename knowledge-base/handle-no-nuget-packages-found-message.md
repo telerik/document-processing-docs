@@ -1,8 +1,8 @@
 ---
-title: Handling the 'No packages found" Message when Using the Telerik NuGet Server
-description: Learn how to handle the 'No packages found" message when using the Telerik NuGet Server
+title: Handling the 'No packages found' Message when Using the Telerik NuGet Server
+description: Learn how to handle the 'No packages found' message when using the Telerik NuGet Server
 type: how-to
-page_title: How to handle the 'No packages found" message when using the Telerik NuGet Server
+page_title: How to handle the 'No packages found' message when using the Telerik NuGet Server
 slug: handle-no-nuget-packages-found-message
 tags: telerik, nuget, server, package, dpl, document, processing
 res_type: kb

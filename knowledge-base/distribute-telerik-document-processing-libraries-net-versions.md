@@ -1,8 +1,8 @@
 ---
 title: What Versions of Document Processing Libraries are Distributed with the Telerik Products
-description: Learn how to obtain Telerik Document Processing libraries suitable for .NET Framework, .NET Standard, .NET Core, .NET 6, and newer versions.
+description: Learn how to obtain Telerik Document Processing libraries suitable for .NET Framework, .NET Standard, {{site.dotnetversions}} and newer versions.
 type: how-to
-page_title: How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6, and newer versions
+page_title: How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}} and newer versions
 slug: distribute-telerik-document-processing-libraries-net-versions
 tags: telerik, document, processing, net, core, nuget, packages, framework, windows, distribute, libraries, standard
 res_type: kb
@@ -42,7 +42,7 @@ Depending on the product suite you are using (Telerik UI for WinForms, WPF, ASP.
 
 As the above screenshots shows, the respective NuGet package indicates the exact target frameworks version considering the application's Target framework and Target OS. All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The assemblies/packages for .NET Standard do not contain the word *Windows* in their name.
 
->note There are no implementation/functionality differences between the Document Processing versions for .NET Framework and .NET Core/.NET 6 (or newer). However, the .NET Standard version comes with some limitations. More information about the limitations can be found in the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
+>note There are no implementation/functionality differences between the Document Processing versions for .NET Framework and {{site.dotnetversions}} (or newer). However, the .NET Standard version comes with some limitations. More information about the limitations can be found in the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
 
 ### Download the Libraries
 
