@@ -8,8 +8,7 @@ position: 1
 ---
 
 # AI Document Analysis Prerequisites
-
-This article explains the requirements for using the AI Document Analysis functionality in the RadPdfProcessing library.
+This article explains the requirements for using the AI Document Analysis functionality in the [RadPdfProcessing library]({%slug radpdfprocessing-overview%}).
 
 ## Required Assemblies
 
@@ -45,7 +44,7 @@ Additionally, you'll need a package for your specific AI provider:
 
 ## AI Provider Setup
 
-Before using the AI Document Analysis functionality, you need to set up an AI provider. To understand how these components work together, see the [AI Document Analysis Overview]({%slug radpdfprocessing-features-ai-document-analysis-overview%}#key-benefits).
+Before using the AI Document Analysis functionality, you need to set up an AI provider.
 
 ### Azure OpenAI Setup
 
@@ -119,7 +118,11 @@ int maxTokenLimit = 4096; // Adjust based on your model
 
 ## IEmbeddingsStorage Setup for .NET Standard and .NET Framework
 
-When using the **PartialContextQuestionProcessor** in .NET Standard or .NET Framework, you need to provide an implementation of the **IEmbeddingsStorage** interface. This is required for the functionality described in the [PartialContextQuestionProcessor section]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}#constructors-and-platform-support). Below is an example implementation using Ollama:
+When using the **PartialContextQuestionProcessor** in .NET Standard or .NET Framework, you need to provide an implementation of the **IEmbeddingsStorage** interface. This is required for the functionality described in the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}#constructors-and-platform-support) section. 
+
+For this sample Ollama implementation, you'll need to add references to the following NuGet packages:
+* **LangChain.Ollama**
+* **LangChain.Databases.Sqlite**
 
 #### __[C#] Example 4: OllamaEmbeddingsStorage Implementation__
 
@@ -178,10 +181,6 @@ internal class OllamaEmbeddingsStorage : IEmbeddingsStorage
     }
 }
 ```
-
-For this implementation, you'll need to add references to the following NuGet packages:
-* **LangChain.Ollama**
-* **LangChain.Databases.Sqlite**
 
 ## See Also
 

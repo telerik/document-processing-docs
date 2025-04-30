@@ -19,8 +19,6 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 2. **Efficient Token Usage**: When you want to minimize token consumption and optimize costs.
 3. **Specific Questions**: When questions are targeted at specific information within the document rather than requiring complete document understanding.
 
-These benefits contrast with the use cases for [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%}#when-to-use-completecontextquestionprocessor).
-
 ## Public API and Configuration
 
 ### Constructors and Platform Support
