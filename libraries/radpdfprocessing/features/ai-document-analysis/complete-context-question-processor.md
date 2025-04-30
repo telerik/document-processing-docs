@@ -6,6 +6,17 @@ tags: ai, document, analysis, question, processor, complete, context
 published: True
 position: 4
 ---
+<style>
+table, th, td {
+	border: 1px solid;
+}
+table th:first-of-type {
+	width: 30%;
+}
+table th:nth-of-type(2) {
+	width: 70%;
+} 
+</style>
 
 # CompleteContextQuestionProcessor
 
@@ -23,17 +34,13 @@ However, if you're working with larger documents or want to optimize token usage
 
 ## Public API
 
-### Properties
+|Property|Description|
+|---|---|
+|**Settings**|Gets the settings for the AI question-answering process. Returns **CompleteContextProcessorSettings**.|
 
-| Property | Description |
-|----------|-------------|
-| **Settings** | Gets the settings for the AI question-answering process. Returns **CompleteContextProcessorSettings**. |
-
-### Methods
-
-| Method | Description |
-|--------|-------------|
-| **public Task<string> AnswerQuestion(ISimpleTextDocument document, string question)** | Answers a question using the provided document. Parameters: **document** - The document containing the text to process, **question** - The question to answer. Returns a task that represents the asynchronous operation. The task result contains the answer to the question. |
+|Method|Description|
+|---|---|
+|**public Task<string> AnswerQuestion(ISimpleTextDocument document, string question)**|Answers a question using the provided document. Parameters: **document** - The document containing the text to process, **question** - The question to answer. Returns a task that represents the asynchronous operation. The task result contains the answer to the question.|
 
 ## CompleteContextProcessorSettings
 

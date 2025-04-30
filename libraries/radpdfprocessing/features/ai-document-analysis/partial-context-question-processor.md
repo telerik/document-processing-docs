@@ -6,6 +6,17 @@ tags: ai, document, analysis, question, processor, partial, context, embeddings
 published: True
 position: 3
 ---
+<style>
+table, th, td {
+	border: 1px solid;
+}
+table th:first-of-type {
+	width: 30%;
+}
+table th:nth-of-type(2) {
+	width: 70%;
+} 
+</style>
 
 # PartialContextQuestionProcessor
 
@@ -21,21 +32,19 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 
 ## Public API and Configuration
 
-### Constructors and Platform Support
-
-| Constructor | Platform | Description |
-|-------------|----------|-------------|
-| **PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)** | .NET 7+ | Creates an instance with built-in embeddings storage |
-| **PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, ISimpleTextDocument document)** | All platforms | Creates an instance with custom embeddings storage |
+|Constructor|Platform|Description|
+|---|---|
+|**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|.NET 7+|Creates an instance with built-in embeddings storage|
+|**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|All platforms|Creates an instance with custom embeddings storage|
 
 > The .NET 7+ constructor uses **DefaultEmbeddingsStorage** internally, while the cross-platform constructor requires a custom implementation of **IEmbeddingsStorage** as shown in the [Prerequisites]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework).
 
 ### Properties and Methods
 
-| Member | Type | Description |
-|--------|------|-------------|
-| **Settings** | Property | Gets the **PartialContextProcessorSettings** for configuring the AI process |
-| **AnswerQuestion(string question)** | Method | Returns an answer to the question using relevant document context |
+|Member|Type|Description|
+|---|---|---|
+|**Settings**|Property|Gets the **PartialContextProcessorSettings** for configuring the AI process|
+|**AnswerQuestion(string question)**|Method|Returns an answer to the question using relevant document context|
 
 ### PartialContextProcessorSettings
 

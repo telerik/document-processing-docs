@@ -6,6 +6,17 @@ tags: ai, document, analysis, summarization, processor, summary
 published: True
 position: 2
 ---
+<style>
+table, th, td {
+	border: 1px solid;
+}
+table th:first-of-type {
+	width: 30%;
+}
+table th:nth-of-type(2) {
+	width: 70%;
+} 
+</style>
 
 # SummarizationProcessor
 
@@ -13,23 +24,19 @@ The **SummarizationProcessor** class enables you to generate concise summaries o
 
 ## Public API
 
-### Properties
+|Property|Description|
+|---|---|
+|**Settings**|Gets or sets the settings that will be used for summarization.|
 
-| Property | Description |
-| --- | --- |
-| **Settings** | Gets or sets the settings that will be used for summarization. |
 
-### Methods
+|Method|Description|
+|---|---|
+|**Task<string> Summarize(ISimpleTextDocument document)**|Generates a summary of the provided document. The parameter **document** is an **ISimpleTextDocument** containing the text to be summarized.|
 
-| Method | Description |
-| --- | --- |
-| **Task<string> Summarize(ISimpleTextDocument document)** | Generates a summary of the provided document. The parameter **document** is an **ISimpleTextDocument** containing the text to be summarized. |
 
-### Events
-
-| Event | Description |
-| --- | --- |
-| **EventHandler<SummaryResourcesCalculatedEventArgs> SummaryResourcesCalculated** | Triggered before the actual summarization process begins, providing information about the estimated resource usage. The **SummaryResourcesCalculatedEventArgs** provides properties: **EstimatedCallsRequired** (number of API calls required), **EstimatedTokensRequired** (number of tokens to be processed), and **ShouldContinueExecution** (boolean flag indicating whether to proceed with summarization, default is **true** for single-call and **false** for multi-call operations). |
+|Event|Description|
+|---|---|
+|**EventHandler<SummaryResourcesCalculatedEventArgs> SummaryResourcesCalculated**|Triggered before the actual summarization process begins, providing information about the estimated resource usage. The **SummaryResourcesCalculatedEventArgs** provides properties: **EstimatedCallsRequired** (number of API calls required), **EstimatedTokensRequired** (number of tokens to be processed), and **ShouldContinueExecution** (boolean flag indicating whether to proceed with summarization, default is **true** for single-call and **false** for multi-call operations).|
 
 ## SummarizationProcessorSettings
 

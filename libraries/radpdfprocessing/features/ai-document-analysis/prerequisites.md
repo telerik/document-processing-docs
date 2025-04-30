@@ -6,6 +6,17 @@ tags: ai, document, analysis, prerequisites, setup, installation
 published: True
 position: 1
 ---
+<style>
+table, th, td {
+	border: 1px solid;
+}
+table th:first-of-type {
+	width: 50%;
+}
+table th:nth-of-type(2) {
+	width: 50%;
+} 
+</style>
 
 # AI Document Analysis Prerequisites
 This article explains the requirements for using the AI Document Analysis functionality in the [RadPdfProcessing library]({%slug radpdfprocessing-overview%}).
@@ -14,20 +25,9 @@ This article explains the requirements for using the AI Document Analysis functi
 
 In addition to the [standard RadPdfProcessing assemblies]({%slug radpdfprocessing-getting-started%}#assembly-references), you will need to reference the following assemblies to use the AI Document Analysis features:
 
-<table>
-<thead>
-    <tr>
-        <th>.NET Framework</th>
-        <th>.NET Standard-compatible</th>
-    </tr>
-</thead>
-<tbody>
-    <tr>
-        <td><b>Telerik.Windows.Documents.AIConnector.dll</b></td>
-        <td><b>Telerik.Documents.AIConnector.dll</b></td>
-    </tr>
-</tbody>
-</table>
+|.NET Framework|.NET Standard-compatible|
+|---|---|
+|**Telerik.Windows.Documents.AIConnector.dll**|**Telerik.Documents.AIConnector.dll**|
 
 ## NuGet Packages
 
