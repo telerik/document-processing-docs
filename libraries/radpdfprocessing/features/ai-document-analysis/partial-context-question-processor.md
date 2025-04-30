@@ -8,14 +8,17 @@ position: 3
 ---
 <style>
 table, th, td {
-	border: 1px solid;
+    border: 1px solid;
 }
 table th:first-of-type {
-	width: 30%;
+    width: 20%;
 }
 table th:nth-of-type(2) {
-	width: 70%;
-} 
+    width: 15%;
+}
+table th:nth-of-type(3) {
+    width: 65%;
+}
 </style>
 
 # PartialContextQuestionProcessor
@@ -33,7 +36,7 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 ## Public API and Configuration
 
 |Constructor|Platform|Description|
-|---|---|
+|---|---|---|
 |**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|.NET 7+|Creates an instance with built-in embeddings storage|
 |**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|All platforms|Creates an instance with custom embeddings storage|
 
