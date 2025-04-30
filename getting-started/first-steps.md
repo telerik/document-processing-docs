@@ -41,7 +41,7 @@ Since we distribute Telerik Document Processing libraries as an addition to seve
 
 As we are going to create a UI-Independent example, we will use a console project for this guide:
 
-* Open Microsoft Visual Studio and create a new console project. It could be a .NET Framework, .NET Standard, .NET 6/.NET 8/.NET 9 project.
+* Open Microsoft Visual Studio and create a new console project. It could be a .NET Framework, .NET Standard, {{site.dotnetversions}} project.
 
 #### __Figure 1: Go to File > New > Project > Console App (.Net Framework) > Next > Create__
 ![Create Console Project](images/VisualStudio_NewProject_Console3.gif "Create new Console Project")
@@ -57,7 +57,7 @@ This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-
 	  * __Telerik.Windows.Documents.Flow.dll__
 	  * __Telerik.Windows.Zip.dll__
 
-	For .NET Standard (.NET Core/.NET 6/.NET 8/.NET 9) project:
+	For .NET Standard ({{site.dotnetversions}}) project:
 	  * __Telerik.Documents.Core.dll__
 	  * __Telerik.Documents.Flow.dll__
 	  * __Telerik.Zip.dll__
@@ -67,10 +67,10 @@ This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-
 	For .NET Framework project:
 	  * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll__
 
-	For .NET Standard (.NET Core/.NET 6/.NET 8/.NET 9) project:
+	For .NET Standard ({{site.dotnetversions}}) project:
 	  * __Telerik.Documents.Flow.FormatProviders.Pdf.dll__
 
-> The Document Processing assemblies for .NET 6/.NET 8/.NET 9 don't contain "Windows" in their names.
+> The Document Processing assemblies for {{site.dotnetversions}} don't contain "Windows" in their names.
 
 ## Step 4: Create a Document
 
@@ -158,4 +158,4 @@ Now that you have run your first project example with Telerik Document Processin
 * [System Requirements]({%slug installation-system-requirements%})
 * [Installing on your computer]({%slug installation-installing-on-your-computer%})
 * [Document Processing SDK Examples](https://github.com/telerik/document-processing-sdk)
-* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})

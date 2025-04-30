@@ -19,7 +19,7 @@ If your workflow relies on NuGet for package management, you can take advantage 
 #### This article contains the following sections:
 
 * [NuGet packages for .NET Framework and .NET Core for Windows](#packages-for-net-framework-and-net-core-for-windows)
-* [Packages for .NET Standard 2.0 (Support for .NET Core, .NET 6/.NET 8/.NET 9)](#packages-for-net-standard-20-net-core-net-6-net-8)
+* [Packages for .NET Standard 2.0 (Support for {{site.dotnetversions}})](#packages-for-net-standard-20-net-core-net-6-net-8)
 * [Get the NuGet Packages](#get-the-nuget-packages)
 
 
@@ -57,7 +57,7 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Windows.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
 * __Telerik.Windows.Zip.Extensions:__ The package provides methods for working with files and platform specific operations. 
 
-## Packages for .NET Standard 2.0 (Support for .NET Core, .NET 6/.NET 8/.NET 9)
+## Packages for .NET Standard 2.0 (Support for {{site.dotnetversions}})
 
 The following list represents the available NuGet packages for the Document Processing libraries that you can use with [.NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md):
 
@@ -79,11 +79,11 @@ The following list represents the available NuGet packages for the Document Proc
 
 ## See Also
 
-- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
 
 
 ## See Also
 
  * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
- * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+ * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
  * [Resolving Namespace Conflicts in Telerik Document Processing Libraries]({%slug radspreadprocessing-resolving-namespace-conflicts%})

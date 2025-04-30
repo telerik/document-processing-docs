@@ -20,7 +20,7 @@ The following tables list all Telerik Document Processing assemblies for the dif
 
 >important The .NET Standard assemblies are compatible with any .NET version (e.g .NET 9), even if there are no assemblies explicitly available for the specific versions. The same applies to the .NET Framework assemblies.
 
-### Assemblies for .NET Standard (Support for .NET 6/.NET 8/.NET 9)
+### Assemblies for .NET Standard (Support for {{site.dotnetversions}})
 
 | Assembly Name| Description |
 |-------|----------------|
@@ -117,4 +117,4 @@ More information about each of the Telerik Document Processing libraries is avai
 * [System Requirements]({%slug installation-system-requirements%})
 * [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
 * [First Steps in using Telerik Document Processing]({%slug getting-started-first-steps%})
-* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})

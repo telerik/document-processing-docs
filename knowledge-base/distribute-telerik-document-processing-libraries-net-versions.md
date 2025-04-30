@@ -20,7 +20,7 @@ Learn how to find and download the Telerik Document Processing libraries for the
 
 ## Solution
 
-The [Telerik Document Processing]({%slug introduction%}) libraries are compatible across different .NET implementations, including .NET Framework, .NET Standard .NET Core, .NET 6, .NET 8, and newer versions. However, the libraries are [distributed with different Telerik UI products]({%slug installation-deploying-telerik-document-processing%}). Depending on the target framework of your project (NET Framework, .NET Standard .NET Core, .NET 6, etc.), you should pick the library version accordingly. 
+The [Telerik Document Processing]({%slug introduction%}) libraries are compatible across different .NET implementations, including .NET Framework, .NET Standard, {{site.dotnetversions}}, and newer versions. However, the libraries are [distributed with different Telerik UI products]({%slug installation-deploying-telerik-document-processing%}). Depending on the target framework of your project (.NET Framework, .NET Standard, {{site.dotnetversions}}, etc.), you should pick the library version accordingly. 
 
 Depending on the product suite you are using (Telerik UI for WinForms, WPF, ASP.NET AJAX, Blazor, ASP.NET Core, etc.), the [libraries are included](https://docs.telerik.com/devtools/document-processing/introduction#available-assemblies) in the respective NuGet packages:
    
@@ -28,7 +28,7 @@ Depending on the product suite you are using (Telerik UI for WinForms, WPF, ASP.
 
 ![DPL NET Framework](images/dpl-net-framework.png)  
 
-- For **.NET Core / .NET 6 / .NET 8** (or newer) projects, libraries are included with Telerik UI for WinForms and WPF.
+- For **{{site.dotnetversions}}** (or newer) projects, libraries are included with Telerik UI for WinForms and WPF.
 
 ![DPL NET Core](images/dpl-net-core.png)  
 

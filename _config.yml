@@ -369,6 +369,10 @@ defaults:
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
 # "foo": "Bar"
 
+mindotnetversion: "8"
+maxdotnetversion: "9"
+dotnetversions: ".NET 8 and .NET 9"
+
 # Feedback Form Product Code
 productCode: TDP
 
