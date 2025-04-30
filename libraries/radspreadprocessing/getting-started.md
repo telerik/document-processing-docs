@@ -69,11 +69,6 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 		<td>Required when exporting to PDF.</td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Windows.Zip.dll</b></td>
-		<td><b>Telerik.Zip.dll</b></td>
-		<td>Required for working with XLSX, XLS and PDF files.</td>
-	</tr>
-	<tr>
 	    <td><b>-</b></td>
 		<td>	
 			<b>Telerik.Documents.ImageUtils.dll</b>

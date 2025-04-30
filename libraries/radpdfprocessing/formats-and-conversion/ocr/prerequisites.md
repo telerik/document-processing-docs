@@ -42,10 +42,6 @@ In order to use the **OcrFormatProvider** you need to add the following assembli
 	    <td><b>Telerik.Windows.Documents.Fixed.FormatProviders.Ocr</b></td>
 		<td><b>Telerik.Documents.Fixed.FormatProviders.Ocr</b></td>
 	</tr>
-    <tr>
-	    <td><b>Telerik.Windows.Zip</b></td>
-		<td><b>Telerik.Zip</b></td>
-	</tr>
      </tr>
 		<tr>
 	    <td colspan="2">&nbsp;</td>

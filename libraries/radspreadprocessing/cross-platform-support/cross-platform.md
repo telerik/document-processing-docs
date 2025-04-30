@@ -28,8 +28,10 @@ To use the model of **RadSpreadProcessing** in your cross-platform project, you 
 | **Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll** | Required for working with XLS files.     |
 | **Telerik.Documents.Fixed.dll**          | Required for exporting to PDF files.     |
 | **Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll** | Required for exporting to PDF files.     |
-| **Telerik.Zip.dll**                      | Required for working with XSLX, XLS and PDF files. |
+| ~~Telerik.Zip.dll~~*                      | ~~Required for working with XSLX, XLS and PDF files.~~ |
 | **Telerik.Documents.ImageUtils.dll** <br><sub>_This assembly is not available in UI for Xamarin._</sub> | Required when you need to export to PDF documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High. |
+
+>note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
 >note The **Telerik.Documents.ImageUtils.dll** assembly depends on **SkiaSharp**. In order to use this assembly, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 

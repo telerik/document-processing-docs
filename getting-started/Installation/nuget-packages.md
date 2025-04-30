@@ -37,6 +37,8 @@ If your workflow relies on NuGet for package management, you can take advantage 
 
 >important The .NET Standard packages are compatible with any .NET version (e.g .NET 9), even if there are no packages explicitly available for the specific versions. The same applies to the .NET Framework packages.
 
+>note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
+
 ## Packages for .NET Framework and {{site.dotnetversions}} for Windows
 
 The following list represents the available NuGet packages for the Document Processing libraries that you can use with the .NET Framework or {{site.dotnetversions}} for Windows. Although we offer them as an addition to the Telerik UI components, you can use them without any UI components:
@@ -54,7 +56,7 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls:__ This package is required for the import/export of `XLS` documents. 
 * __Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf:__ Required for the export of RadSpreadProcessing documents to `PDF`.
 * __Telerik.Windows.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
-* __Telerik.Windows.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
+* __Telerik.Windows.Zip:__ It can be used as a standalone library as well. 
 * __Telerik.Windows.Zip.Extensions:__ The package provides methods for working with files and platform specific operations. 
 
 ## Packages for .NET Standard 2.0 (Support for {{site.dotnetversions}})
@@ -75,7 +77,7 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Documents.Spreadsheet.FormatProviders.Xls:__ This package is required for the import/export of `XLS` documents.
 * __Telerik.Documents.Spreadsheet.FormatProviders.Pdf:__ Required for the export of RadSpreadProcessing documents to `PDF`.
 * __Telerik.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
-* __Telerik.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
+* __Telerik.Zip:__ It can be used as a standalone library as well. 
 
 ## See Also
 

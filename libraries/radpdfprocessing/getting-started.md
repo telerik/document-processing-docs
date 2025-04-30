@@ -37,10 +37,6 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 		<td><b>Telerik.Documents.Fixed.dll</b></td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Windows.Zip.dll</b></td>
-		<td><b>Telerik.Zip.dll</b></td>
-	</tr>
-	<tr>
 	    <td colspan="2">&nbsp;</td>
 	</tr>
 	<tr>

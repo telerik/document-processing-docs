@@ -38,10 +38,6 @@ In order to use **RadSpreadStreamProcessing** in your project, you will need to 
 		<td><b>Telerik.Documents.SpreadsheetStreaming.dll</b></td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Windows.Zip.dll</b></td>
-		<td><b>Telerik.Zip.dll</b></td>
-	</tr>
-	<tr>
 	    <td colspan="2">&nbsp;</td>
 	</tr>
 	<tr>

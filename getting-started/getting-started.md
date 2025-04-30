@@ -39,7 +39,7 @@ The following tables list all Telerik Document Processing assemblies for the dif
 | **Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll** | This assembly is needed for exporting to PDF documents. |
 | **Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll** | This assembly is needed for processing XLS documents. |
 | **Telerik.Documents.SpreadsheetStreaming.dll** | The main assembly for generating huge spreadsheet files using minimum resources. |
-| **Telerik.Zip.dll** | Needed for working with zipped formats (DOCX, XLSX) and PDF. It is the main assembly of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
+| **Telerik.Zip.dll** |It is the main assembly of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
 
 
 ### Assemblies for .NET Framework 
@@ -60,7 +60,7 @@ The following tables list all Telerik Document Processing assemblies for the dif
 | **Telerik.Windows.Documents.Fixed.FormatProviders.Ocr.dll** | This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
 | **Telerik.Windows.Documents.Tesseract.Ocr.dll** | This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
 | **Telerik.Windows.Documents.CMapUtils.dll** | Provides a default implementation for getting the data of a predefined CMap table by a given name. The assembly is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}). |
-| **Telerik.Windows.Zip.dll** | Needed for working with zipped formats (DOCX, XLSX) and PDF. It is the main assembly of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
+| **Telerik.Windows.Zip.dll** |It is the main assembly of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
 | **Telerik.Windows.Zip.Extensions.dll** | Extends **Telerik.Windows.Zip** assembly with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})). |
 
 
