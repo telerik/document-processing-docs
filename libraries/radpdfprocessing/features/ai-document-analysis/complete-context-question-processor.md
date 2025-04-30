@@ -9,15 +9,15 @@ position: 4
 
 # CompleteContextQuestionProcessor
 
-The `CompleteContextQuestionProcessor` class enables you to ask questions about a PDF document and receive answers based on the entire document content. Unlike [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}), this processor sends the complete document text to the AI model, which is suitable for smaller documents or when you need to ensure that the AI model has access to all the information in the document. This class inherits from the abstract `AIProcessorBase` class, which provides common functionality for all AI processors.
+The **CompleteContextQuestionProcessor** class enables you to ask questions about a PDF document and receive answers based on the entire document content. Unlike [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}), this processor sends the complete document text to the AI model, which is suitable for smaller documents or when you need to ensure that the AI model has access to all the information in the document. This class inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors.
 
 ## When to Use CompleteContextQuestionProcessor
 
-The `CompleteContextQuestionProcessor` is ideal for the following scenarios:
+The **CompleteContextQuestionProcessor** is ideal for the following scenarios:
 
 1. **Small Documents**: When the document is small enough to fit within the token limit of the AI model.
 2. **Holistic Understanding**: When the question requires understanding the entire document context.
-3. **Simplicity**: When you don't need the advanced embedding functionality of `PartialContextQuestionProcessor`.
+3. **Simplicity**: When you don't need the advanced embedding functionality of **PartialContextQuestionProcessor**.
 
 However, if you're working with larger documents or want to optimize token usage, you should use the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}#when-to-use-partialcontextquestionprocessor) instead.
 
@@ -27,17 +27,17 @@ However, if you're working with larger documents or want to optimize token usage
 
 | Property | Description |
 |----------|-------------|
-| `Settings` | Gets the settings for the AI question-answering process. Returns `CompleteContextProcessorSettings`. |
+| **Settings** | Gets the settings for the AI question-answering process. Returns **CompleteContextProcessorSettings**. |
 
 ### Methods
 
 | Method | Description |
 |--------|-------------|
-| `public Task<string> AnswerQuestion(ISimpleTextDocument document, string question)` | Answers a question using the provided document. Parameters: `document` - The document containing the text to process, `question` - The question to answer. Returns a task that represents the asynchronous operation. The task result contains the answer to the question. |
+| **public Task<string> AnswerQuestion(ISimpleTextDocument document, string question)** | Answers a question using the provided document. Parameters: **document** - The document containing the text to process, **question** - The question to answer. Returns a task that represents the asynchronous operation. The task result contains the answer to the question. |
 
 ## CompleteContextProcessorSettings
 
-The `CompleteContextProcessorSettings` class provides configuration options for the question-answering process.
+The **CompleteContextProcessorSettings** class provides configuration options for the question-answering process.
 
 ### Settings Properties
 
@@ -47,7 +47,7 @@ The `CompleteContextProcessorSettings` class provides configuration options for 
 
 ## Usage Example
 
-The following example demonstrates how to use the `CompleteContextQuestionProcessor` to ask questions about a PDF document, including working with specific document pages. For setting up the AI client as shown in this example, see the [AI Provider Setup]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%}#ai-provider-setup) section:
+The following example demonstrates how to use the **CompleteContextQuestionProcessor** to ask questions about a PDF document, including working with specific document pages. For setting up the AI client as shown in this example, see the [AI Provider Setup]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%}#ai-provider-setup) section:
 
 #### __[C#] Example 1: Using CompleteContextQuestionProcessor__
 
@@ -128,9 +128,9 @@ private async void AskQuestionUsingCompleteContext()
 
 ## Token Limit Considerations
 
-The `CompleteContextQuestionProcessor` sends the entire document to the AI model, which means the document must fit within the model's token limit. If the document exceeds this limit, the `AnswerQuestion` method will throw an `ArgumentException`. This is a key difference from the [SummarizationProcessor]({%slug radpdfprocessing-features-ai-document-analysis-summarization-processor%}#handling-large-documents), which can handle documents of any size.
+The **CompleteContextQuestionProcessor** sends the entire document to the AI model, which means the document must fit within the model's token limit. If the document exceeds this limit, the **AnswerQuestion** method will throw an **ArgumentException**. This is a key difference from the [SummarizationProcessor]({%slug radpdfprocessing-features-ai-document-analysis-summarization-processor%}#handling-large-documents), which can handle documents of any size.
 
-Here's how to check if a document is suitable for processing with `CompleteContextQuestionProcessor`:
+Here's how to check if a document is suitable for processing with **CompleteContextQuestionProcessor**:
 
 #### __[C#] Example 2: Checking Document Size__
 

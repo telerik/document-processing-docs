@@ -119,7 +119,7 @@ int maxTokenLimit = 4096; // Adjust based on your model
 
 ## IEmbeddingsStorage Setup for .NET Standard and .NET Framework
 
-When using the `PartialContextQuestionProcessor` in .NET Standard or .NET Framework, you need to provide an implementation of the `IEmbeddingsStorage` interface. This is required for the functionality described in the [PartialContextQuestionProcessor section]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}#constructors-and-platform-support). Below is an example implementation using Ollama:
+When using the **PartialContextQuestionProcessor** in .NET Standard or .NET Framework, you need to provide an implementation of the **IEmbeddingsStorage** interface. This is required for the functionality described in the [PartialContextQuestionProcessor section]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}#constructors-and-platform-support). Below is an example implementation using Ollama:
 
 #### __[C#] Example 4: OllamaEmbeddingsStorage Implementation__
 

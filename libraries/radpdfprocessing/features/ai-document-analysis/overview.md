@@ -17,7 +17,7 @@ The AI Document Analysis feature includes three main components:
 * **CompleteContextQuestionProcessor**: Answers questions by providing the entire document content to the AI model. For details, see the [CompleteContextQuestionProcessor section]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%}#when-to-use-completecontextquestionprocessor).
 * **PartialContextQuestionProcessor**: Answers questions by providing only the relevant portions of the document to the AI model, which helps reduce token usage and improve response relevance. Learn more in the [PartialContextQuestionProcessor documentation]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}).
 
-## Key Benefits
+## Key Features
 
 * **Extract Document Insights**: Quickly understand the key points of lengthy documents.
 * **Efficient Information Retrieval**: Ask specific questions about your documents and receive accurate answers.
