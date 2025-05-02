@@ -193,7 +193,7 @@ internal class OllamaEmbeddingsStorage : IEmbeddingsStorage
 
 ## See Also
 
-* [AI Document Analysis Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
+* [GenAI-powered Document Insights Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
 * [SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
 * [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
 * [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})

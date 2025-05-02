@@ -169,7 +169,7 @@ private bool IsDocumentSuitableForCompleteContext(RadFixedDocument document, int
 
 ## See Also
 
-* [AI Document Analysis Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
+* [GenAI-powered Document Insights Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
 * [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%})
 * [SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
 * [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
