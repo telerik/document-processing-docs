@@ -5,7 +5,7 @@ description: Integration with Visual Studio
 slug: integration-with-visual-studio
 tags: integration,visual-studio,document,processing,configure,wizard
 published: True
-position: 4
+position: 2
 ---
 # Document Processing Libraries Configuration Wizard
 
