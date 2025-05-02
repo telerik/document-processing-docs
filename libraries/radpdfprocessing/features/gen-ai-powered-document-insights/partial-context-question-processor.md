@@ -40,7 +40,7 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 |**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|.NET 7+|Creates an instance with built-in embeddings storage|
 |**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|Any|Creates an instance with custom embeddings storage|
 
-> The .NET 7+ constructor uses **DefaultEmbeddingsStorage** internally, while the cross-platform constructor requires a custom implementation of **IEmbeddingsStorage** as shown in the [Prerequisites]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework).
+> The .NET 7+ constructor uses **DefaultEmbeddingsStorage** internally, while the cross-platform constructor requires a custom implementation of **IEmbeddingsStorage** as shown in the [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework).
 
 ### Properties and Methods
 
@@ -63,7 +63,7 @@ The settings class provides configuration options for the question-answering pro
 
 ### Example 1: Using PartialContextQuestionProcessor in .NET 7 and Later
 
-This example demonstrates how to use the PartialContextQuestionProcessor with the built-in embeddings storage on .NET 7 and later. For setting up the AI client, see the [AI Provider Setup]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%}#ai-provider-setup) section:
+This example demonstrates how to use the PartialContextQuestionProcessor with the built-in embeddings storage on .NET 7 and later. For setting up the AI client, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
 ```csharp
 private async void AskQuestionsUsingPartialContext()
@@ -122,7 +122,7 @@ private async void AskQuestionsUsingPartialContext()
 
 ### Example 2: Using PartialContextQuestionProcessor with Custom Embeddings (.NET Standard/.NET Framework)
 
-This example demonstrates how to use the PartialContextQuestionProcessor with a custom embeddings storage implementation as described in the [IEmbeddingsStorage Setup]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework) section:
+This example demonstrates how to use the PartialContextQuestionProcessor with a custom embeddings storage implementation as described in the [IEmbeddingsStorage Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework) section:
 
 ```csharp
 private async void AskQuestionsUsingPartialContext()

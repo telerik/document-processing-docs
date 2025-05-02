@@ -13,16 +13,16 @@ The GenAI-powered Document Insights feature enables you to easily extract insigh
 
 The GenAI-powered Document Insights feature includes three main components:
 
-* **[SummarizationProcessor]({%slug radpdfprocessing-features-ai-document-analysis-summarization-processor%})**: Generates concise summaries of PDF documents.
-* **[CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%})**: Answers questions by providing the entire document content to the AI model.
-* **[PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%})**: Answers questions by providing only the relevant portions of the document to the AI model.
+* **[SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%})**: Generates concise summaries of PDF documents.
+* **[CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})**: Answers questions by providing the entire document content to the AI model.
+* **[PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})**: Answers questions by providing only the relevant portions of the document to the AI model.
 
 ## Key Features
 
 * **Extract Document Insights**: Quickly understand the key points of lengthy documents.
 * **Efficient Information Retrieval**: Ask specific questions about your documents and receive accurate answers.
-* **Token Optimization**: Reduce token usage by only sending relevant portions of the document to the AI model as shown in the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}#when-to-use-partialcontextquestionprocessor) section.
-* **Multiple LLM Support**: Compatible with different AI providers including Azure OpenAI, OpenAI, and Ollama as described in the [Prerequisites]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%}#ai-provider-setup).
+* **Token Optimization**: Reduce token usage by only sending relevant portions of the document to the AI model as shown in the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#when-to-use-partialcontextquestionprocessor) section.
+* **Multiple LLM Support**: Compatible with different AI providers including Azure OpenAI, OpenAI, and Ollama as described in the [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup).
 
 ## Complete Example
 

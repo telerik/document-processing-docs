@@ -59,7 +59,7 @@ using (SummarizationProcessor summarizationProcessor = new SummarizationProcesso
 
 ## Usage Example
 
-The following example demonstrates how to use the **SummarizationProcessor** to generate a summary of a PDF document. To set up the AI client as shown in this example, see the [AI Provider Setup]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%}#ai-provider-setup) section:
+The following example demonstrates how to use the **SummarizationProcessor** to generate a summary of a PDF document. To set up the AI client as shown in this example, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
 #### __[C#] Example 2: Using SummarizationProcessor__
 
@@ -131,7 +131,7 @@ private async void SummarizeDocument()
 ```
 ## Handling Large Documents
 
-For large documents that exceed the token limit of the model, **SummarizationProcessor** automatically splits the document into smaller chunks and processes them separately. This approach is similar to how [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}) handles large documents. The process is as follows:
+For large documents that exceed the token limit of the model, **SummarizationProcessor** automatically splits the document into smaller chunks and processes them separately. This approach is similar to how [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}) handles large documents. The process is as follows:
 
 1. The document is split into chunks that fit within the model's token limit.
 2. Each chunk is summarized individually.
