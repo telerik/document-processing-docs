@@ -36,5 +36,5 @@ The following table lists the main use-cases together with the necessary updates
 
 - [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%}) 
 - [Installing Telerik Document Processing on Your Computer]({%slug installation-deploying-telerik-document-processing%})
-- [Integration with UI for WinForms]({%slug document-processing-libraries-overview%})
-- [Integration with UI for Blazor](%slug dpl-in-blazor%)
+- [Integration with UI for WinForms](https://docs.telerik.com/devtools/winforms/integration-with-other-telerik-products/document-processing-libraries)
+- [Integration with UI for Blazor](https://www.telerik.com/blazor-ui/documentation/integrations/document-processing-libraries)
