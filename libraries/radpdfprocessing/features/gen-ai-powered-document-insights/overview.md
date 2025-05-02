@@ -1,17 +1,17 @@
 ---
 title: Overview
 page_title: Overview
-slug: radpdfprocessing-features-ai-document-analysis-overview
-tags: ai, document, analysis, overview, pdf, processing
+slug: radpdfprocessing-features-gen-ai-powered-document-insights-overview
+tags: ai, document, analysis, overview, pdf, processing, genai, powered, insights
 published: True
 position: 0
 ---
 
-# AI Document Analysis Overview
+# GenAI-powered Document Insights Overview
 
-The AI Document Analysis feature enables you to easily extract insights from PDF documents using Large Language Models (LLMs). This functionality allows you to summarize document content and ask questions about the document, with the AI providing relevant answers based on the document's content.
+The GenAI-powered Document Insights feature enables you to easily extract insights from PDF documents using Large Language Models (LLMs). This functionality allows you to summarize document content and ask questions about the document, with the AI providing relevant answers based on the document's content.
 
-The AI Document Analysis feature includes three main components:
+The GenAI-powered Document Insights feature includes three main components:
 
 * **[SummarizationProcessor]({%slug radpdfprocessing-features-ai-document-analysis-summarization-processor%})**: Generates concise summaries of PDF documents.
 * **[CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%})**: Answers questions by providing the entire document content to the AI model.
@@ -26,9 +26,9 @@ The AI Document Analysis feature includes three main components:
 
 ## Complete Example
 
-The following example demonstrates how to use the AI Document Analysis functionality to summarize a PDF document and ask questions about it:
+The following example demonstrates how to use the GenAI-powered Document Insights functionality to summarize a PDF document and ask questions about it:
 
-#### __[C#] Example 1: Using AI Document Analysis__
+#### __[C#] Example 1: Using GenAI-powered Document Insights__
 
 ```csharp
 private async void ProcessPdfWithAI()
@@ -119,7 +119,7 @@ When you run this code, the AI will process your document, generate a summary, a
 
 ## See Also
 
-* [Prerequisites]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%})
-* [SummarizationProcessor]({%slug radpdfprocessing-features-ai-document-analysis-summarization-processor%})
-* [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%})
-* [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%})
+* [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
+* [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
+* [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})

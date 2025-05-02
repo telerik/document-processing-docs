@@ -1,7 +1,7 @@
 ---
 title: CompleteContextQuestionProcessor
 page_title: CompleteContextQuestionProcessor
-slug: radpdfprocessing-features-ai-document-analysis-complete-context-question-processor
+slug: radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor
 tags: ai, document, analysis, question, processor, complete, context
 published: True
 position: 4
@@ -20,7 +20,7 @@ table th:nth-of-type(2) {
 
 # CompleteContextQuestionProcessor
 
-The **CompleteContextQuestionProcessor** class enables you to ask questions about a PDF document and receive answers based on the entire document content. Unlike [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}), this processor sends the complete document text to the AI model, which is suitable for smaller documents or when you need to ensure that the AI model has access to all the information in the document. This class inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors.
+The **CompleteContextQuestionProcessor** class enables you to ask questions about a PDF document and receive answers based on the entire document content. This processor sends the complete document text to the AI model, which is suitable for smaller documents or when you need to ensure that the AI model has access to all the information in the document. This class inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors.
 
 ## When to Use CompleteContextQuestionProcessor
 
@@ -28,7 +28,7 @@ The **CompleteContextQuestionProcessor** is ideal for the following scenarios:
 
 1. **Small Documents**: When the document is small enough to fit within the token limit of the AI model.
 2. **Holistic Understanding**: When the question requires understanding the entire document context.
-3. **Simplicity**: When you don't need the advanced embedding functionality of **PartialContextQuestionProcessor**.
+3. **Simplicity**: When you don't need the advanced embedding functionality of [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}).
 
 However, if you're working with larger documents or want to optimize token usage, you should use the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}#when-to-use-partialcontextquestionprocessor) instead.
 
@@ -36,7 +36,7 @@ However, if you're working with larger documents or want to optimize token usage
 
 |Property|Description|
 |---|---|
-|**Settings**|Gets the settings for the AI question-answering process. Returns **CompleteContextProcessorSettings**.|
+|**Settings**|Gets the settings for the AI question-answering process. Returns [CompleteContextProcessorSettings]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%}#completectextprocessorsettings).|
 
 |Method|Description|
 |---|---|
@@ -169,7 +169,7 @@ private bool IsDocumentSuitableForCompleteContext(RadFixedDocument document, int
 
 ## See Also
 
-* [AI Document Analysis Overview]({%slug radpdfprocessing-features-ai-document-analysis-overview%})
-* [Prerequisites]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%})
-* [SummarizationProcessor]({%slug radpdfprocessing-features-ai-document-analysis-summarization-processor%})
-* [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%})
+* [AI Document Analysis Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
+* [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
+* [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})

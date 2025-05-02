@@ -1,29 +1,34 @@
 ---
 title: Prerequisites
 page_title: Prerequisites
-slug: radpdfprocessing-features-ai-document-analysis-prerequisites
+slug: radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites
 tags: ai, document, analysis, prerequisites, setup, installation
 published: True
 position: 1
 ---
 <style>
 table, th, td {
-	border: 1px solid;
+    border: 1px solid;
 }
-table th:first-of-type {
-	width: 50%;
+/* First table with two columns */
+table:nth-of-type(1) th:first-of-type {
+    width: 50%;
 }
-table th:nth-of-type(2) {
-	width: 50%;
-} 
+table:nth-of-type(1) th:nth-of-type(2) {
+    width: 50%;
+}
+/* Second table with three columns */
+table:nth-of-type(2) th {
+    width: 33.33%;
+}
 </style>
 
-# AI Document Analysis Prerequisites
-This article explains the requirements for using the AI Document Analysis functionality in the [RadPdfProcessing library]({%slug radpdfprocessing-overview%}).
+# GenAI-powered Document Insights Prerequisites
+This article explains the requirements for using the GenAI-powered Document Insights functionality in the [RadPdfProcessing library]({%slug radpdfprocessing-overview%}).
 
 ## Required Assemblies
 
-In addition to the [standard RadPdfProcessing assemblies]({%slug radpdfprocessing-getting-started%}#assembly-references), you will need to reference the following assemblies to use the AI Document Analysis features:
+In addition to the [standard RadPdfProcessing assemblies]({%slug radpdfprocessing-getting-started%}#assembly-references), you will need to reference the following assemblies to use the GenAI-powered Document Insights features:
 
 |.NET Framework|.NET Standard-compatible|
 |---|---|
@@ -44,7 +49,11 @@ Additionally, you'll need a package for your specific AI provider:
 
 ## AI Provider Setup
 
-Before using the AI Document Analysis functionality, you need to set up an AI provider.
+Before using the GenAI-powered Document Insights functionality, you need to set up an AI provider.
+
+| [Azure OpenAI Setup](#azure-openai-setup) | [OpenAI Setup](#openai-setup) | [Ollama Setup (Local AI)](#ollama-setup-local-ai) |
+|---|---|---|
+| Uses the Azure OpenAI service, which provides enterprise-grade security, compliance, and regional availability for OpenAI models. | Uses direct access to OpenAI's models through their API service. Suitable for general development scenarios. | Runs AI models locally on your machine. Useful for development or working with sensitive data where privacy is important. |
 
 ### Azure OpenAI Setup
 
@@ -118,7 +127,7 @@ int maxTokenLimit = 4096; // Adjust based on your model
 
 ## IEmbeddingsStorage Setup for .NET Standard and .NET Framework
 
-When using the **PartialContextQuestionProcessor** in .NET Standard or .NET Framework, you need to provide an implementation of the **IEmbeddingsStorage** interface. This is required for the functionality described in the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}#constructors-and-platform-support) section. 
+When using the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%}#constructors-and-platform-support)  in .NET Standard or .NET Framework, you need to provide an implementation of the **IEmbeddingsStorage** interface.
 
 For this sample Ollama implementation, you'll need to add references to the following NuGet packages:
 * **LangChain.Ollama**
@@ -184,7 +193,7 @@ internal class OllamaEmbeddingsStorage : IEmbeddingsStorage
 
 ## See Also
 
-* [AI Document Analysis Overview]({%slug radpdfprocessing-features-ai-document-analysis-overview%})
-* [SummarizationProcessor]({%slug radpdfprocessing-features-ai-document-analysis-summarization-processor%})
-* [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%})
-* [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%})
+* [AI Document Analysis Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
+* [SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
+* [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
+* [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})

@@ -1,7 +1,7 @@
 ---
 title: SummarizationProcessor
 page_title: SummarizationProcessor
-slug: radpdfprocessing-features-ai-document-analysis-summarization-processor
+slug: radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor
 tags: ai, document, analysis, summarization, processor, summary
 published: True
 position: 2
@@ -40,7 +40,7 @@ The **SummarizationProcessor** class enables you to generate concise summaries o
 
 ## SummarizationProcessorSettings
 
-The **ummarizationProcessorSettings** class provides configuration options for the summarization process:
+The **SummarizationProcessorSettings** class provides configuration options for the summarization process:
 
 * **PromptAddition**: Gets or sets an addition for the prompt used for summarization. It can be used for clarification purposes.
 
@@ -163,7 +163,7 @@ summarizationProcessor.SummaryResourcesCalculated += (object sender, SummaryReso
 ```
 ## See Also
 
-* [AI Document Analysis Overview]({%slug radpdfprocessing-features-ai-document-analysis-overview%})
-* [Prerequisites]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%})
-* [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-partial-context-question-processor%})
-* [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%})
+* [AI Document Analysis Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
+* [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
+* [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})

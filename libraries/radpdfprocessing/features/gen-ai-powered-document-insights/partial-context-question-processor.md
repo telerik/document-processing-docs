@@ -1,7 +1,7 @@
 ---
 title: PartialContextQuestionProcessor
 page_title: PartialContextQuestionProcessor
-slug: radpdfprocessing-features-ai-document-analysis-partial-context-question-processor
+slug: radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor
 tags: ai, document, analysis, question, processor, partial, context, embeddings
 published: True
 position: 3
@@ -11,19 +11,19 @@ table, th, td {
     border: 1px solid;
 }
 table th:first-of-type {
-    width: 20%;
+    width: 65%;
 }
 table th:nth-of-type(2) {
-    width: 15%;
+    width: 10%;
 }
 table th:nth-of-type(3) {
-    width: 65%;
+    width: 25%;
 }
 </style>
 
 # PartialContextQuestionProcessor
 
-The **PartialContextQuestionProcessor** class enables you to ask questions about a PDF document and receive answers based on the most relevant parts of the document content. Unlike [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%}), this processor uses embeddings to identify and send only the relevant portions of the document to the AI model, making it more efficient for token usage and more suitable for large documents. This class inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors.
+The **PartialContextQuestionProcessor** class enables you to ask questions about a PDF document and receive answers based on the most relevant parts of the document content. This processor uses embeddings to identify and send only the relevant portions of the document to the AI model, making it more efficient for token usage and more suitable for large documents. This class inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors.
 
 ## When to Use PartialContextQuestionProcessor
 
@@ -38,7 +38,7 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 |Constructor|Platform|Description|
 |---|---|---|
 |**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|.NET 7+|Creates an instance with built-in embeddings storage|
-|**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|All platforms|Creates an instance with custom embeddings storage|
+|**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|Any|Creates an instance with custom embeddings storage|
 
 > The .NET 7+ constructor uses **DefaultEmbeddingsStorage** internally, while the cross-platform constructor requires a custom implementation of **IEmbeddingsStorage** as shown in the [Prerequisites]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework).
 
@@ -283,7 +283,7 @@ using (PartialContextQuestionProcessor processor =
 
 ## See Also
 
-* [AI Document Analysis Overview]({%slug radpdfprocessing-features-ai-document-analysis-overview%})
-* [Prerequisites]({%slug radpdfprocessing-features-ai-document-analysis-prerequisites%})
-* [SummarizationProcessor]({%slug radpdfprocessing-features-ai-document-analysis-summarization-processor%})
-* [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-ai-document-analysis-complete-context-question-processor%})
+* [AI Document Analysis Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
+* [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
+* [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})
