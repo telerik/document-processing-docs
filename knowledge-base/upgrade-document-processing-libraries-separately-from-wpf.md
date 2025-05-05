@@ -11,18 +11,15 @@ ticketid: 1681608
 
 ## Environment
 
-<table>
-<tbody>
-<tr>
-<td>Product</td>
-<td>Telerik Document Processing</td>
-</tr>
-</tbody>
-</table>
+| Version | Product | Author | 
+| ---- | ---- | ---- | 
+| 2025.1.205| Telerik Document Processing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
-I need to upgrade the Telerik Document Processing Libraries to address a vulnerability in version 2024.4.1106 by moving to version 2025.1.205. However, I want to continue using version 2024.4.1111 of the WPF libraries in my projects. Is it possible to upgrade only the Document Processing Libraries without updating the WPF libraries, and what are the implications? This knowledge base article also answers the following questions:
+This article covers the case when a client needs to upgrade **only** the Telerik Document Processing Libraries version to address a vulnerability issue, while the WPF libraries remains the previous version in the same project. 
+
+Is it possible to upgrade only the Document Processing Libraries without updating the WPF libraries, and what are the implications? This knowledge base article also answers the following questions:
 - Can I upgrade Telerik Document Processing Libraries separately from Telerik UI for WPF suite?
 - What are the dependencies between Telerik UI for WPF and Telerik Document Processing Libraries?
 - How to ensure application stability when upgrading Telerik Document Processing Libraries?
@@ -31,9 +28,9 @@ I need to upgrade the Telerik Document Processing Libraries to address a vulnera
 
 To upgrade the Telerik Document Processing Libraries (DPL) while using an older version of the Telerik UI for WPF suite, follow these guidelines:
 
-1. **Understand Dependencies**: Certain WPF controls such as RichTextBox, PdfViewer, PivotGrid, and GridView have dependencies on the DPL for specific functionalities, like exporting data. If your application does not utilize these specific functionalities or controls, you might not need to upgrade DPL.
+1. **Understand Dependencies**: Certain WPF controls such as RichTextBox, PdfViewer, PivotGrid, and GridView have dependencies on the Document Processing Libraries (DPL) for specific functionalities, like exporting data. If your application does not utilize these specific functionalities or controls, you might not need to upgrade DPL.
    
-2. **Evaluate Compatibility**: While it is technically possible to use DPL version 2025.1.205 with WPF version 2024.4.1111, Telerik does not guarantee the same level of application stability due to the potential changes in the internal API used by the WPF suite.
+2. **Evaluate Compatibility**: While it is technically possible to use a newer DPL version ( e.g. 2025.1.205) with an older WPF version (e.g. 2024.4.1111), Telerik does not guarantee the same level of application stability due to the potential changes in the internal API used by the WPF suite.
 
 3. **Consider Licensing Changes**: Starting from the 2025 Q1 release, all Telerik products, including DPL, introduced a dependency on the Telerik.Licensing library. Ensure to account for this change by setting up the license key as outlined in the [Setting Up Your Telerik Document Processing Libraries License Key](https://docs.telerik.com/devtools/document-processing/distribution-and-licensing/license-key).
 
@@ -43,6 +40,4 @@ To upgrade the Telerik Document Processing Libraries (DPL) while using an older 
 
 ## See Also
 
-- [Telerik Document Processing Libraries Release Notes](https://docs.telerik.com/devtools/document-processing/release-notes/2025/release-notes-2025-1-205)
-- [Telerik.Licensing NuGet Package Information](https://docs.telerik.com/devtools/document-processing/knowledge-base/dpl-telerik-licensing-nuget-feed)
-- [Telerik UI for WPF Controls Documentation](https://docs.telerik.com/devtools/wpf/)
+- [Telerik.Licensing NuGet Package Information]({%slug dpl-telerik-licensing-nuget-feed%})
