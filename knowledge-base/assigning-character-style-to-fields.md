@@ -17,20 +17,17 @@ ticketid: 1686361
 
 ## Description
 
-I want to apply a custom character style to fields, such as page number and total pages, in RadWordsProcessing for Document Processing. I need the document to reflect the applied styles and be exported to PDF format.
+Learn how to apply a custom character style to fields, such as [page number]({%slug radwordsprocessing-concepts-page-field%}) and total pages, in [RadWordsProcessing]({%slug radwordsprocessing-overview%}). The document reflects the applied styles when exporting to PDF format.
 
-This knowledge base article also answers the following questions:
-- How to set a character style for a field in RadWordsProcessing?
-- How to format fields like PAGE and NUMPAGES with custom styles?
-- How to export styled fields to PDF using RadWordsProcessing?
+![Character Style in FieldInfo](images/character-style-in-fieldinfo.png) 
 
 ## Solution
 
 To assign a custom character style to fields in RadWordsProcessing and export the document to PDF, follow the steps below:
 
-1. Create and define the custom character styles.
+1. Create and define the [custom character styles]({%slug radwordsprocessing-concepts-styles%}).
 2. Add the styles to the document's `StyleRepository`.
-3. Specify the desired style for the `Run` objects in the field or the paragraph containing the field.
+3. Specify the desired style for the [Run]({%slug radwordsprocessing-model-run%}) objects in the [field]({%slug radwordsprocessing-concepts-fields%}) or the paragraph containing the field.
 4. Export the document to PDF format.
 
 Here is a complete code example:
@@ -96,6 +93,5 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 
 ## See Also
 
-- [RadWordsProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview)
-- [RadWordsProcessing Fields Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/features/fields)
-- [RadWordsProcessing PDF Export](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/pdf)
+- [Fields]({%slug radwordsprocessing-concepts-fields%})
+- [Styles]({%slug radwordsprocessing-concepts-styles%})
