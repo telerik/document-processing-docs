@@ -1,10 +1,10 @@
 ---
-title: Converting PDF to TIFF with RadPdfProcessing in .NET Core Applications
-description: This article demonstrates how to convert PDF documents to TIFF images in .NET Core applications using RadPdfProcessing.
+title: Converting PDF to TIFF with RadPdfProcessing in .NET Standard
+description: This article demonstrates how to convert PDF documents to TIFF images in .NET Standard applications using RadPdfProcessing.
 type: how-to
-page_title: How to Convert PDF Documents to TIFF Images Using RadPdfProcessing in .NET Core
+page_title: How to Convert PDF Documents to TIFF Images Using RadPdfProcessing in .NET Standard
 slug: convert-pdf-to-tiff-radpdfprocessing-net-core
-tags: radpdfprocessing, document processing, pdf, tiff, conversion, .net core, asp.net core
+tags: radpdfprocessing, document, processing, pdf, tiff, conversion, net, standard
 res_type: kb
 ticketid: 1682497
 ---
@@ -17,19 +17,14 @@ ticketid: 1682497
 
 ## Description
 
-I need to convert PDFs to TIFFs in a .NET 8 ASP.NET Core application. The existing solutions seem to target the .NET Framework, causing compatibility issues. How can I achieve this conversion using RadPdfProcessing in my application?
-
-This knowledge base article also answers the following questions:
-- How do I convert PDF documents to TIFF format in a .NET Core application?
-- What is the process for exporting PDF pages as images in .NET Core?
-- Can I generate a multipage TIFF image from a PDF document using RadPdfProcessing in ASP.NET Core?
+Learn how to convert PDF documents to TIFF format in .NET Standard.
 
 ## Solution
 
-To convert PDF documents to TIFF images in a .NET Core application, follow these steps:
+To convert PDF documents to TIFF images in .NET Standard, follow these steps:
 
-1. Use the `SkiaImageFormatProvider` to export the PDF pages to images.
-2. Utilize the `System.Drawing.Common` library to assemble these images into a multipage TIFF file.
+1. Use the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) to export the PDF pages to images.
+2. Utilize the [System.Drawing.Common](https://www.nuget.org/packages/System.Drawing.Common/) library to assemble these images into a multi-page TIFF file.
 
 Here's an example code snippet demonstrating the process:
 
@@ -112,8 +107,5 @@ Replace `"your-pdf-file.pdf"` with the path to your PDF file. This code will cre
 
 ## See Also
 
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Using Image Format Provider](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/convert-to-image/using-image-format-provider)
-- [PdfProcessing: Add support for converting a PDF document to a multipage TIFF image](https://feedback.telerik.com/document-processing/1660559-pdfprocessing-add-support-for-converting-a-pdf-document-to-a-multipage-tiff-image)
+- [Converting a PDF Document to a Multipage TIFF Image]({%slug convert-pdf-to-multipage-tiff-radpdfprocessing%})
 
----
