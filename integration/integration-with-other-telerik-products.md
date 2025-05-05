@@ -34,3 +34,4 @@ The following table lists the main use-cases together with the necessary updates
 - [Installing Telerik Document Processing on Your Computer]({%slug installation-deploying-telerik-document-processing%})
 - [Integration with UI for WinForms](https://docs.telerik.com/devtools/winforms/integration-with-other-telerik-products/document-processing-libraries)
 - [Integration with UI for Blazor](https://www.telerik.com/blazor-ui/documentation/integrations/document-processing-libraries)
+- [Download Product Files]({%slug download-product-files%})
