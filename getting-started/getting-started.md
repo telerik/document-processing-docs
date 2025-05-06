@@ -20,7 +20,7 @@ The following tables list all Telerik Document Processing assemblies for the dif
 
 >important The .NET Standard assemblies are compatible with any .NET version (e.g .NET 9), even if there are no assemblies explicitly available for the specific versions. The same applies to the .NET Framework assemblies.
 
-### Assemblies for .NET Standard (Support for .NET 6/.NET 8/.NET 9)
+### Assemblies for .NET Standard (Support for {{site.dotnetversions}})
 
 | Assembly Name| Description |
 |-------|----------------|
@@ -39,7 +39,7 @@ The following tables list all Telerik Document Processing assemblies for the dif
 | **Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll** | This assembly is needed for exporting to PDF documents. |
 | **Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll** | This assembly is needed for processing XLS documents. |
 | **Telerik.Documents.SpreadsheetStreaming.dll** | The main assembly for generating huge spreadsheet files using minimum resources. |
-| **Telerik.Zip.dll** | Needed for working with zipped formats (DOCX, XLSX) and PDF. It is the main assembly of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
+| **Telerik.Zip.dll** |It is the main assembly of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
 
 
 ### Assemblies for .NET Framework 
@@ -60,7 +60,7 @@ The following tables list all Telerik Document Processing assemblies for the dif
 | **Telerik.Windows.Documents.Fixed.FormatProviders.Ocr.dll** | This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
 | **Telerik.Windows.Documents.Tesseract.Ocr.dll** | This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
 | **Telerik.Windows.Documents.CMapUtils.dll** | Provides a default implementation for getting the data of a predefined CMap table by a given name. The assembly is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}). |
-| **Telerik.Windows.Zip.dll** | Needed for working with zipped formats (DOCX, XLSX) and PDF. It is the main assembly of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
+| **Telerik.Windows.Zip.dll** |It is the main assembly of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
 | **Telerik.Windows.Zip.Extensions.dll** | Extends **Telerik.Windows.Zip** assembly with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})). |
 
 
@@ -117,4 +117,4 @@ More information about each of the Telerik Document Processing libraries is avai
 * [System Requirements]({%slug installation-system-requirements%})
 * [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
 * [First Steps in using Telerik Document Processing]({%slug getting-started-first-steps%})
-* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})

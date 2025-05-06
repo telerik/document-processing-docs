@@ -21,7 +21,7 @@ This article will get you started in using the **RadSpreadStreamProcessing** lib
 
 ## Assembly References
 
->The libraries support .NET 6, .NET 8 and .NET 9. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**).
+>The libraries support {{site.dotnetversions}}. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**).
 
 In order to use **RadSpreadStreamProcessing** in your project, you will need to add the references listed below.
 
@@ -36,10 +36,6 @@ In order to use **RadSpreadStreamProcessing** in your project, you will need to 
 	<tr>
 		<td><b>Telerik.Documents.SpreadsheetStreaming.dll</b></td>
 		<td><b>Telerik.Documents.SpreadsheetStreaming.dll</b></td>
-	</tr>
-	<tr>
-	    <td><b>Telerik.Windows.Zip.dll</b></td>
-		<td><b>Telerik.Zip.dll</b></td>
 	</tr>
 	<tr>
 	    <td colspan="2">&nbsp;</td>
@@ -58,7 +54,7 @@ In order to use **RadSpreadStreamProcessing** in your project, you will need to 
 </tbody>
 </table>
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. For the full list of suites including Telerik Document Processing, check the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) help topic. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and {{site.dotnetversions}}. For the full list of suites including Telerik Document Processing, check the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) help topic. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Create a Spreadsheet Document
 

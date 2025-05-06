@@ -21,14 +21,16 @@ In order to use the model of the **RadPdfProcessing** library in your cross-plat
 
 * **Telerik.Documents.Core.dll**
 * **Telerik.Documents.Fixed.dll**
-* **Telerik.Zip.dll**
+* ~~Telerik.Zip.dll~~*
+
+>note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
 To export images different than Jpeg and Jpeg2000 or ImageQuality different than High you will need to add references to the following **.Net Standard** assembly:
 
 * **Telerik.Documents.ImageUtils.dll**
 <br><sub>_This assembly is not available in UI for Xamarin._</sub>
 
-> Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
+> Note that for .NET Framework, {{site.dotnetversions}} with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
 
 ## Fonts and Images
 

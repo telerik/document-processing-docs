@@ -34,10 +34,6 @@ To use the model of the **RadWordsProcessing** library in your cross-platform pr
 	    <td><b>Telerik.Documents.Flow.dll</b></td>
 		<td></td>
 	</tr>
-	<tr>
-		<td><b>Telerik.Zip.dll</b></td>
-		<td>Required when working with DOCX, DOC, DOT or PDF.</td>
-	</tr>
     <tr>
 		<td><b>Telerik.Documents.Flow.FormatProviders.Doc.dll</b></td>
 		<td>Required when importing from DOC or DOT files.</td>

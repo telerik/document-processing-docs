@@ -7,6 +7,18 @@ published: True
 position: 2
 ---
 
+<style>
+table, th, td {
+	border: 1px solid;
+}
+table th:first-of-type {
+	width: 25%;
+}
+table th:nth-of-type(2) {
+	width: 75%;
+} 
+</style>
+
 # Overview
 
 The **PdfStreamWriter** class enables you to write file content directly to a Stream. This is the root element of the streaming mechanism used when exporting a PDF document.
@@ -87,23 +99,19 @@ The members of the class allow you to set several properties of the document you
 
 ### Settings of PdfStreamWriter
 
-Through the **Settings property** of PdfStreamWriter you can control the way the document is exported. The following list describes the available properties:
+Through the **Settings** property of PdfStreamWriter you can control the way the document is exported. The following list describes the available properties:
 
-* **DocumentInfo**: A property of type [RadFixedDocumentInfo](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.RadFixedDocumentInfo.html), intended to hold additional information about the document. The RadFixedDocumentInfo class allows you to set the title, author and description of the document.
+|Property|Description|
+|----|----|
+|**DocumentInfo**|A property of type [RadFixedDocumentInfo](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.RadFixedDocumentInfo.html), intended to hold additional information about the document. The RadFixedDocumentInfo class allows you to set the title, author and description of the document.|
+|**ImageQuality**|This property is of type [ImageQuality]({%slug radpdfprocessing-concepts-imagequality%}) and gets or sets the default image quality when exporting images to PDF. The default value is *High*. The value of this property is overridden when specifying the ImageQuality in ImageSource constructor or when creating [ImageSource]({%slug radpdfprocessing-model-imagesource%}) from EncodedImageData. The quality of the images reflects the size of the PDF file. The higher the quality, the bigger the document size is.|
+|**ImageCompression**|Gets or sets the image compression type. The possible values are: <br> - **None**: No compression will be used. <br> - **Default**: The image compression will be preserved as it is in the original document. <br> - **FlateDecode**: The images will be encoded with a FlateDecode filter. <br> - **DCTDecode**: Compresses data using a DCT (discrete cosine transform) technique based on the JPEG standard.|
+|**WriteAnnotations**|A boolean property indicating whether the annotations should be included in the exported document.|
+|**StreamCompression**|Gets or sets the content stream compression type. Possible Values are: <br>- **None**: The content streams won't be encoded. <br>- **FlateDecode**: Compresses data using the zlib/deflate compression method.|
 
-* **ImageQuality**: This property is of type [ImageQuality]({%slug radpdfprocessing-concepts-imagequality%}) and gets or sets the default image quality when exporting images to PDF. The default value is *High*. The value of this property is overridden when specifying the ImageQuality in ImageSource constructor or when creating [ImageSource]({%slug radpdfprocessing-model-imagesource%}) from EncodedImageData. The quality of the images reflects the size of the PDF file. The higher the quality, the bigger the document size is.
+When merging documents' pages using the PdfStreamWriter the Form Fields may be duplicated. As of **Q2 2025** the **PdfStreamWriterSettings** offers the **MergedFieldNameResolving** event which occurs when trying to resolve conflicts between the fields names while merging instances with duplicated names:
 
-* **ImageCompression**: Gets or sets the image compression type. The possible values are:
-	- **None**: No compression will be used. 
-	- **Default**: The image compression will be preserved as it is in the original document.
-	- **FlateDecode**: The images will be encoded with a FlateDecode filter.
-	- **DCTDecode**: Compresses data using a DCT (discrete cosine transform) technique based on the JPEG standard.
-
-* **WriteAnnotations**: A boolean property indicating whether the annotations should be included in the exported document.
-
-* **StreamCompression**: Gets or sets the content stream compression type. Possible Values are: 
-   - **None**: The content streams won't be encoded.
-   - **FlateDecode**: Compresses data using the zlib/deflate compression method.
+<snippet id='libraries-pdf-formats-and-conversion-pdfstreamwritersettings'/>
 
 > The XAML SDK repository on GitHub contains examples showing the capabilities of PdfStreamWriter: 
 > 

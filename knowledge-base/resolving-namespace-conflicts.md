@@ -32,7 +32,7 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-Depending on the target framework of your project (NET Framework, .NET Standard .NET Core, .NET 6, etc.), you should install the library version accordingly. However, if you need to install both versions for any reason, to resolve the compile-time error caused by the conflicting `Workbook` type in both assemblies, utilize the C# [extern alias](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern-alias) feature. This approach allows you to differentiate between assemblies and use types from both without conflict. Follow the steps below:
+Depending on the target framework of your project (NET Framework, .NET Standard, {{site.dotnetversions}}, etc.), you should install the library version accordingly. However, if you need to install both versions for any reason, to resolve the compile-time error caused by the conflicting `Workbook` type in both assemblies, utilize the C# [extern alias](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern-alias) feature. This approach allows you to differentiate between assemblies and use types from both without conflict. Follow the steps below:
 
 1. **Assign Alias to NuGet Packages**
    - For the `Telerik.Documents.Spreadsheet` NuGet package, set its alias to `StandardHelper` (or any preferred alias).

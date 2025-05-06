@@ -18,7 +18,30 @@ __Path__ is a content element that represents series of connected lines and curv
 
 * [Modifying a Path](#modifying-a-path)
 
-## Inserting a Path
+## Public API
+
+| **Property**          | **Description**                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| **Fill**              | The color that is used to fill the path. The default value is Black.                            |
+| **Stroke**            | The color that is used to stroke the path. The default value is Black.                          |
+| **IsFilled**          | Specifies whether the path should be filled.                                                   |
+| **IsStroked**         | Specifies whether the path should be stroked.                                                  |
+| **StrokeThickness**   | The width of the stroke outline.                                                                |
+| **StrokeLineCap**     | Specifies the shape, which is used at the ends of open paths when they are stroked. It can have one of the following values: <table><tr><td>**Flat**</td><td>Flat line cap.</td></tr><tr><td>**Round**</td><td>Round line cap.</td></tr><tr><td>**Square**</td><td>Square line cap.</td></tr></table> |
+| **StrokeLineJoin**    | Specifies the shape to be used at the corners of paths that are stroked. Join styles are significant only at the points where consecutive segments of a path connect at an angle. Available options: <table><tr><td>**Bevel**</td><td>Produces a diagonal corner.</td></tr><tr><td>**Miter**</td><td>Produces a sharp corner. If the segments meet at too sharp an angle, a bevel join is used instead.</td></tr><tr><td>**Round**</td><td>Produces a smooth, circular arc between the lines.</td></tr></table> |
+| **StrokeDashArray**   | The pattern of dashes and gaps used to stroke paths.                                            |
+| **StrokeDashOffset**  | The distance from the start of a line to the beginning of a dash pattern.                       |
+| **AlphaConstant**     | Specifies the constant shape or constant opacity value to be used for nonstroking operations.   |
+| **StrokeAlphaConstant** | Specifies the constant shape or constant opacity value to be used for stroking operations.    |
+| **MiterLimit**        | The limit of the thickness of the join on a mitered corner.                                     |
+| **Geometry**          | The shape to be drawn. More information about geometries is available [here]({%slug radpdfprocessing-concepts-geometry%}). |
+| **Position**          | Specifies the position of the path.                                                             |
+
+| **Method**            | **Description**                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| **Clone** (_since Q2 2025_)             | Creates a deep copy of this document element.                                                  |
+
+### Inserting a Path
 
 __Path__ is a content element that is designed to be added in the __Content__ collection of an __IContainerElement__ such [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches, which you can adopt to achieve that.
         
@@ -34,8 +57,6 @@ __Example 1__ shows how you can create a Path, assign a predefined Geometry to i
 	container.Content.Add(path);
 {{endregion}}
 
-
-
 __Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__ that create a new path and insert it into the document.
         
 
@@ -47,69 +68,13 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 {{endregion}}
 
 
-
 >There are other methods that allow adding a path to a document. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
           
 
-## Modifying a Path
+### Modifying a Path
 
-You can modify a __Path__ element using the properties the class exposes. The properties are listed below.
+You can modify a __Path__ element using the properties the class exposes. The properties are listed listed in the [Public API](#public-api) section.
         
-
-* __Fill__: The color that is used to fill the path. The default value is Black.
-            
-
-* __Stroke__: The color that is used to stroke the path. The default value is Black.
-            
-
-* __IsFilled__: Specifies whether the path should be filled.
-            
-
-* __IsStroked__: Specifies whether the path should be stroked.
-            
-
-* __StrokeThickness__: The width of the stroke outline.
-            
-
-* __StrokeLineCap__: Specifies the shape, which is used at the ends of open paths when they are stroked.
-            
-
-	* __Flat__: Flat line cap.
-	
-	* __Round__: Round line cap.
-
-	* __Square__: Square line cap.
-                
-
-* __StrokeLineJoin__: Specifies the shape to be used at the corners of paths that are stroked. Join styles are significant only at the points where consecutive segments of a path connect at an angle.
-            
-
-	* __Bevel__: Produces a diagonal corner.
-	            
-	
-	* __Miter__: Produces a sharp corner. If the segments meet at too sharp angle, a bevel join is used instead.
-	            
-	
-	* __Round__: Produces a smooth, circular arc between the lines.
-                
-
-* __StrokeDashArray__: The pattern of dashes and gaps used to stroke paths.
-            
-
-* __StrokeDashOffset__: The distance from the start of a line to the beginning of a dash pattern.
-
-
-* __AlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
-
-
-* __StrokeAlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
-            
-
-* __MiterLimit__: The limit of the thickness of the join on a mitered corner.
-            
-
-* __Geometry__: The shape to be drawn. More information about geometries is available [here]({%slug radpdfprocessing-concepts-geometry%}).
-            
 #### __[C#] Example 3: Modifying Path properties__
 
 {{region cs-radpdfprocessing-model-path_2}}

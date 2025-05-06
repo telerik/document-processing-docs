@@ -25,7 +25,7 @@ This article will get you started in using the __RadSpreadProcessing__ library. 
 
 ## Assembly References
 
->The libraries support .NET 6/.NET 8/.NET 9. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radspreadprocessing-cross-platform%}) article.
+>The libraries support {{site.dotnetversions}}. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radspreadprocessing-cross-platform%}) article.
 
 In order to use the model of the __RadSpreadProcessing__ library in your project, you need to add references to the following assemblies:
 
@@ -67,11 +67,6 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 	    <td><b>Telerik.Windows.Documents.Fixed.dll</b></td>
 		<td><b>Telerik.Documents.Fixed.dll</b></td>
 		<td>Required when exporting to PDF.</td>
-	</tr>
-	<tr>
-	    <td><b>Telerik.Windows.Zip.dll</b></td>
-		<td><b>Telerik.Zip.dll</b></td>
-		<td>Required for working with XLSX, XLS and PDF files.</td>
 	</tr>
 	<tr>
 	    <td><b>-</b></td>

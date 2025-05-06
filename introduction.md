@@ -85,10 +85,10 @@ The Telerik Document Processing libraries support the following file formats:
 
 ## Available Assemblies
 
->The Telerik Document Processing libraries are available in **.NET Framework**, **.NET Core/.NET 6/.NET 8/.NET 9** (or newer) for Windows and **.NET Standard** compatible versions. You can download the assemblies of these libraries from the following products:
+>The Telerik Document Processing libraries are available in **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows and **.NET Standard** compatible versions. You can download the assemblies of these libraries from the following products:
 >
 
-|.NET Framework Products|.NET Core/.NET 6/.NET 8/.NET 9 *for Windows*|.NET Standard|
+|.NET Framework Products|{{site.dotnetversions}} *for Windows*|.NET Standard|
 |----|----|----|
 |[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)||[UI for Xamarin](https://www.telerik.com/xamarin-ui)|
 |[UI for ASP.NET AJAX](https://www.telerik.com/products/aspnet-ajax.aspx)||[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)|

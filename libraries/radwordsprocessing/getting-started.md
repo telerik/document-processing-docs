@@ -21,7 +21,7 @@ This tutorial will take you through the creation of a sample application that us
 
 ## Assembly References
 
->The libraries support .NET 6/.NET 8/.NET 9. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radwordsprocessing-cross-platform%}) article.
+>The libraries support {{site.dotnetversions}}. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radwordsprocessing-cross-platform%}) article.
 
 Here is a list of assemblies that contain the __RadWordsProcessing__ functionality and need to be referenced in your project:
 
@@ -44,10 +44,6 @@ Here is a list of assemblies that contain the __RadWordsProcessing__ functionali
 	<tr>
 	    <td><b>Telerik.Windows.Documents.DrawingML.dll</b></td>
 		<td><b>Telerik.Documents.DrawingML.dll</b></td>
-	</tr>
-	<tr>
-	    <td><b>Telerik.Windows.Zip.dll</b></td>
-		<td><b>Telerik.Zip.dll</b></td>
 	</tr>
 	<tr>
 	    <td colspan="2">&nbsp;</td>

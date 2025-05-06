@@ -167,6 +167,18 @@ In order to update an existing entry in the ZIP archive, you should perform the 
 	End If
 {{endregion}}
 
+## Copy Entry
+
+Starting with the **Q2 2025** release, the __RadZipLibrary__ introduces a new extension method `CopyTo` for the `Stream` class. This method allows you to copy data from one stream to another with an optional timeout parameter, providing more control over long-running operations. This is particularly useful when working with large files in ZIP archives.
+
+The following example demonstrates how to use the `CopyTo` method to copy the contents of a large file from a ZIP archive to a memory stream with a specified timeout.
+
+#### __[C#] Example 5: Copy entry with timeout__
+
+<snippet id='libraries-zip-features-update-ziparchive-copy-entry'/>
+
+This method ensures that the operation will not hang indefinitely, making it a valuable addition for scenarios involving large files or limited resources.
+
 
 
 ## See Also

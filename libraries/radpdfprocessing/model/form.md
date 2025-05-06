@@ -16,8 +16,25 @@ __Form__ is a content element, which contains a form source and represents a For
 
 * [Form Properties](#form-properties)
 
+## Public API
 
-## Creating and Inserting a Form
+| **Property**          | **Description**                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| **FormSource**        | Specifies the content that will be visualized in the Form object. It is of type [**FormSource**]({%slug radpdfprocessing-model-formsource-overview%}). |
+| **Clipping**          | Gets or sets the clipping of the form object.                                                  |
+| **Width**             | The width of the form.                                                                          |
+| **Height**            | The height of the form.                                                                         |
+| **AlphaConstant**     | Specifies the constant shape or constant opacity value to be used for nonstroking operations.   |
+| **StrokeAlphaConstant** | Specifies the constant shape or constant opacity value to be used for stroking operations.      |
+| **Position**          | The [Position]({%slug radpdfprocessing-concepts-position%}) of the form inside the __IContainerElement__. |
+| **Parent**            | Allows you to obtain the parent page of the form.                                               |
+
+| **Method**            | **Description**                                                                                 |
+|-----------------------|-------------------------------------------------------------------------------------------------|
+| **Clone** (_since Q2 2025_) | Creates a deep copy of this document element.                                                  |
+
+
+### Creating and Inserting a Form
 
 The **Form** class exposes a default public constructor to allow you create instances of it. __Form__ is a content element and you can add such an object to the __Content__ collection of an __IContainerElement__ such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
         
@@ -49,26 +66,9 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 >You can add content to the form by setting its FormSource property. The API allows you also to directly pass the FormSource to a method which will automatically generate a form in the document content. For more information on this topic, check the [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) article.
 
  
-## Form Properties
+### Modifying Form Properties
 
-You can modify a __Form__ element using the properties the class exposes. The properties are listed below.
-        
-
-* __FormSource__: Specifies the content that will be visualized in the Form object. It is of type [**FormSource**]({%slug radpdfprocessing-model-formsource-overview%}).
-
-* __Clipping__: Gets or sets the clipping of the form object.
-
-* __Width__: The width of the form.
-
-* __Height__: The height of the form.
-
-* __AlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
-
-* __StrokeAlphaConstant__: Specifying the constant shape or constant opacity value to be used for nonstroking operations.
-
-* __Position__: The [Position]({%slug radpdfprocessing-concepts-position%}) of the form inside the __IContainerElement__.
-
-* __Parent__: Allows you to obtain the parent page of the form.
+You can modify a __Form__ element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.  
 
 #### __[C#] Example 3: Modify Form properties__
 

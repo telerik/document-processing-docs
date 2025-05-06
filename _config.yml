@@ -215,6 +215,9 @@ navigation:
     libraries/radpdfprocessing/features/embedded-file-streams:
         title: Embedded File Streams
         position: 5
+    libraries/radpdfprocessing/features/gen-ai-powered-document-insights:
+        title: GenAI-powered Document Insights
+        position: 6
     libraries/radpdfprocessing/model/interactive-forms:
         title: Interactive Forms
     libraries/radpdfprocessing/model/interactive-forms/form-fields:
@@ -365,6 +368,10 @@ defaults:
 
 # Aliases available in the markdown template. The below will expand {{site.foo}} to Bar in the output
 # "foo": "Bar"
+
+mindotnetversion: "8"
+maxdotnetversion: "9"
+dotnetversions: ".NET 8 and .NET 9"
 
 # Feedback Form Product Code
 productCode: TDP

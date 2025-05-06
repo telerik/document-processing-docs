@@ -38,11 +38,10 @@ Supported Development Tools and Environments:
         
 * **.NET Framework**
 	* [.NET 4.6.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net462) to [.NET 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48)
-	* [.NET 6](https://dotnet.microsoft.com/download/dotnet/6.0)
-	* [.NET 8](https://dotnet.microsoft.com/download/dotnet/8.0)
-	* [.NET 9](https://dotnet.microsoft.com/download/dotnet/9.0)
+	* [.NET {{site.mindotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.mindotnetversion}}.0) to [.NET {{site.maxdotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.maxdotnetversion}}.0) (for Windows)
    
 * **.NET Standard 2.0** 
+	* [.NET {{site.mindotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.mindotnetversion}}.0) to [.NET {{site.maxdotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.maxdotnetversion}}.0) 
 
 * __Microsoft Visual Studio 2010/2012/2013/2015/2019/2022__ - download from [here](http://www.microsoft.com/visualstudio/eng/downloads).
   

@@ -18,8 +18,8 @@ If your workflow relies on NuGet for package management, you can take advantage 
 
 #### This article contains the following sections:
 
-* [NuGet packages for .NET Framework and .NET Core for Windows](#packages-for-net-framework-and-net-core-for-windows)
-* [Packages for .NET Standard 2.0 (Support for .NET Core, .NET 6/.NET 8/.NET 9)](#packages-for-net-standard-20-net-core-net-6-net-8)
+* [NuGet packages for .NET Framework and {{site.dotnetversions}} for Windows](#packages-for-net-framework-and-net-core-for-windows)
+* [Packages for .NET Standard 2.0 (Support for {{site.dotnetversions}})](#packages-for-net-standard-20-net-core-net-6-net-8)
 * [Get the NuGet Packages](#get-the-nuget-packages)
 
 
@@ -37,9 +37,11 @@ If your workflow relies on NuGet for package management, you can take advantage 
 
 >important The .NET Standard packages are compatible with any .NET version (e.g .NET 9), even if there are no packages explicitly available for the specific versions. The same applies to the .NET Framework packages.
 
-## Packages for .NET Framework and .NET Core for Windows
+>note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
-The following list represents the available NuGet packages for the Document Processing libraries that you can use with the .NET Framework or .NET Core for Windows. Although we offer them as an addition to the Telerik UI components, you can use them without any UI components:
+## Packages for .NET Framework and {{site.dotnetversions}} for Windows
+
+The following list represents the available NuGet packages for the Document Processing libraries that you can use with the .NET Framework or {{site.dotnetversions}} for Windows. Although we offer them as an addition to the Telerik UI components, you can use them without any UI components:
 
 * __Telerik.Windows.Documents.Core:__ The main NuGet package for the Telerik Document Processing libraries. Required when you plan to use the library.
 * __Telerik.Windows.Documents.Fixed:__ The package is required when processing `PDF` documents.
@@ -54,10 +56,10 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls:__ This package is required for the import/export of `XLS` documents. 
 * __Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf:__ Required for the export of RadSpreadProcessing documents to `PDF`.
 * __Telerik.Windows.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
-* __Telerik.Windows.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
+* __Telerik.Windows.Zip:__ It can be used as a standalone library as well. 
 * __Telerik.Windows.Zip.Extensions:__ The package provides methods for working with files and platform specific operations. 
 
-## Packages for .NET Standard 2.0 (Support for .NET Core, .NET 6/.NET 8/.NET 9)
+## Packages for .NET Standard 2.0 (Support for {{site.dotnetversions}})
 
 The following list represents the available NuGet packages for the Document Processing libraries that you can use with [.NET Standard 2.0](https://github.com/dotnet/standard/blob/master/docs/versions/netstandard2.0.md):
 
@@ -75,15 +77,15 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Documents.Spreadsheet.FormatProviders.Xls:__ This package is required for the import/export of `XLS` documents.
 * __Telerik.Documents.Spreadsheet.FormatProviders.Pdf:__ Required for the export of RadSpreadProcessing documents to `PDF`.
 * __Telerik.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
-* __Telerik.Zip:__ The package is required when working with zipped formats, such as `DOCX` and `XLSX`. It can be used as a standalone library as well. 
+* __Telerik.Zip:__ It can be used as a standalone library as well. 
 
 ## See Also
 
-- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
 
 
 ## See Also
 
  * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
- * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, .NET Core, .NET 6/.NET 8/.NET 9]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+ * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
  * [Resolving Namespace Conflicts in Telerik Document Processing Libraries]({%slug radspreadprocessing-resolving-namespace-conflicts%})

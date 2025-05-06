@@ -17,13 +17,10 @@ __XlsmFormatProvider__ makes it easy to import and export Xlsm (Excel Workbook t
 > Currently the Macros are only preserved during import and export. They cannot be executed or changed in the code.
 
 >Unlike the CSV and TXT format providers, the __XlsmFormatProvider__ requires references to the following assemblies:
-
-
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll
+>* ~~Telerik.Windows.Zip.dll~~*
 
-
->* Telerik.Windows.Zip.dll
-
+>note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
 Once you reference the aforementioned assemblies, you need to create an instance of the __XlsmFormatProvider__ in order to import and export Xlsm (Excel Workbook) files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm namespace. __XlsmFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
 

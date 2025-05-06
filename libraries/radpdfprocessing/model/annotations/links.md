@@ -128,4 +128,6 @@ __Example 4__ demonstrates how to create an action of type __GoToAction__, assoc
  * [Link API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html)
  * [JavaScript Actions]({%slug radpdfprocessing-model-javascript-actions%})
  * [Creating TableCells with GoToAction and UriAction]({%slug kb-create-table-cells%})
+ * [LaunchAction]({%slug radpdfprocessing-model-actions-launch%})
+ * [GoToRAction]({%slug radpdfprocessing-model-actions-gotor%})
 

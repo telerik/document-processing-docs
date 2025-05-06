@@ -17,7 +17,7 @@ This article will get you started in using the __RadPdfProcessing__ library.
 
 ## Assembly References
 
->The libraries support .NET 6/.NET 8/.NET 9. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radpdfprocessing-cross-platform%}) article.
+>The libraries support {{site.dotnetversions}}. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radpdfprocessing-cross-platform%}) article.
 
 In order to use the __RadPdfProcessing__ library in your project, you need to add references to the following assemblies:
 <table>
@@ -35,10 +35,6 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 	<tr>
 	    <td><b>Telerik.Windows.Documents.Fixed.dll</b></td>
 		<td><b>Telerik.Documents.Fixed.dll</b></td>
-	</tr>
-	<tr>
-	    <td><b>Telerik.Windows.Zip.dll</b></td>
-		<td><b>Telerik.Zip.dll</b></td>
 	</tr>
 	<tr>
 	    <td colspan="2">&nbsp;</td>
