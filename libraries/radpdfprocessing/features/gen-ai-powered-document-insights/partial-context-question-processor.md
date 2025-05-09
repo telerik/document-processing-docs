@@ -1,5 +1,6 @@
 ---
 title: PartialContextQuestionProcessor
+description: PartialContextQuestionProcessor class enables you to ask questions about a PDF document and receive answers based on the most relevant parts of the document content.
 page_title: PartialContextQuestionProcessor
 slug: radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor
 tags: ai, document, analysis, question, processor, partial, context, embeddings
@@ -61,225 +62,29 @@ The settings class provides configuration options for the question-answering pro
 
 ## Usage Examples
 
-### Example 1: Using PartialContextQuestionProcessor in .NET 7 and Later
+### Example 1: Using PartialContextQuestionProcessor in .NET {{site.mindotnetversion}} and Later
 
-This example demonstrates how to use the PartialContextQuestionProcessor with the built-in embeddings storage on .NET 7 and later. For setting up the AI client, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
+This example demonstrates how to use the PartialContextQuestionProcessor with the built-in embeddings storage on .NET {{site.mindotnetversion}} and later. For setting up the AI client, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
-```csharp
-private async void AskQuestionsUsingPartialContext()
-{
-    // Load the PDF document
-    string filePath = @"path\to\your\document.pdf";
-    PdfFormatProvider formatProvider = new PdfFormatProvider();
-    RadFixedDocument fixedDocument;
-    
-    using (FileStream fs = File.OpenRead(filePath))
-    {
-        fixedDocument = formatProvider.Import(fs);
-    }
-    
-    // Convert the document to a simple text representation
-    ISimpleTextDocument plainDoc = fixedDocument.ToSimpleTextDocument();
-    
-    // Set up the AI client (Azure OpenAI in this example)
-    string key = Environment.GetEnvironmentVariable("AZUREOPENAI_KEY");
-    string endpoint = Environment.GetEnvironmentVariable("AZUREOPENAI_ENDPOINT");
-    string model = "gpt-4o-mini";
-    
-    AzureOpenAIClient azureClient = new(
-        new Uri(endpoint),
-        new Azure.AzureKeyCredential(key),
-        new AzureOpenAIClientOptions());
-    ChatClient chatClient = azureClient.GetChatClient(model);
-    
-    IChatClient iChatClient = new OpenAIChatClient(chatClient);
-    int maxTokenCount = 128000;
-    
-    // Create the processor with built-in DefaultEmbeddingsStorage (.NET 7+ only)
-    using (PartialContextQuestionProcessor processor = 
-           new PartialContextQuestionProcessor(iChatClient, maxTokenCount, plainDoc))
-    {
-        // Customize settings if needed
-        processor.Settings.MaxNumberOfEmbeddingsSent = 20;
-        processor.Settings.EmbeddingTokenSize = 500;
-        
-        // Ask a question
-        string question = "What are the key findings in the document?";
-        string answer = await processor.AnswerQuestion(question);
-        
-        Console.WriteLine($"Question: {question}");
-        Console.WriteLine($"Answer: {answer}");
-        
-        // Ask additional questions using the same processor
-        string question2 = "What methodology was used in the research?";
-        string answer2 = await processor.AnswerQuestion(question2);
-        
-        Console.WriteLine($"\nQuestion: {question2}");
-        Console.WriteLine($"Answer: {answer2}");
-    }
-}
-```
+<snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context'/>
 
 ### Example 2: Using PartialContextQuestionProcessor with Custom Embeddings (.NET Standard/.NET Framework)
 
 This example demonstrates how to use the PartialContextQuestionProcessor with a custom embeddings storage implementation as described in the [IEmbeddingsStorage Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework) section:
 
-```csharp
-private async void AskQuestionsUsingPartialContext()
-{
-    // Load the PDF document and convert to simple text (same as Example 1)
-    string filePath = @"path\to\your\document.pdf";
-    PdfFormatProvider formatProvider = new PdfFormatProvider();
-    RadFixedDocument fixedDocument;
-    
-    using (FileStream fs = File.OpenRead(filePath))
-    {
-        fixedDocument = formatProvider.Import(fs);
-    }
-    
-    ISimpleTextDocument plainDoc = fixedDocument.ToSimpleTextDocument();
-    
-    // Set up the AI client (Azure OpenAI in this example)
-    string key = Environment.GetEnvironmentVariable("AZUREOPENAI_KEY");
-    string endpoint = Environment.GetEnvironmentVariable("AZUREOPENAI_ENDPOINT");
-    string model = "gpt-4o-mini";
-    
-    AzureOpenAIClient azureClient = new(
-        new Uri(endpoint),
-        new Azure.AzureKeyCredential(key),
-        new AzureOpenAIClientOptions());
-    ChatClient chatClient = azureClient.GetChatClient(model);
-    
-    IChatClient iChatClient = new OpenAIChatClient(chatClient);
-    int maxTokenCount = 128000;
-    
-    // Create an embeddings storage implementation
-    // Uses Ollama for embeddings and SQLite for storage
-    IEmbeddingsStorage embeddingsStorage = new OllamaEmbeddingsStorage();
-    
-    // Create the processor with custom embeddings storage
-    using (PartialContextQuestionProcessor processor = 
-           new PartialContextQuestionProcessor(iChatClient, embeddingsStorage, maxTokenCount, plainDoc))
-    {
-        try
-        {
-            // Ask a question
-            string question = "What are the main conclusions of the document?";
-            string answer = await processor.AnswerQuestion(question);
-            
-            Console.WriteLine($"Question: {question}");
-            Console.WriteLine($"Answer: {answer}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine($"Error processing question: {ex.Message}");
-        }
-    }
-}
+<snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-iembeddingsstorage'/>
 
-// IEmbeddingsStorage interface defines:
-// - SetText(string text, PartialContextProcessorSettings settings): Processes text and creates embeddings
-// - GetQuestionContext(string question): Returns relevant context for the question
-// - Dispose(): Cleans up resources
+A sample custom implementation for the OllamaEmbeddingsStorage is shown in the below code snippet:
 
-// Example implementation of IEmbeddingsStorage using Ollama and SQLite
-internal class OllamaEmbeddingsStorage : IEmbeddingsStorage
-{
-    // Configuration constants for Ollama embeddings model
-    private const string AllMinilmEmbeddingModelName = "all-minilm";
-    private const string DBName = "vectors.db";
-    private const int DimensionsForAllMinilm = 384; // Dimension size for all-minilm model
-    private static readonly string defaultCollectionName = "defaultName";
-
-    private readonly SqLiteVectorDatabase vectorDatabase;
-    private readonly OllamaEmbeddingModel embeddingModel;
-    private IVectorCollection vectorCollection;
-
-    public OllamaEmbeddingsStorage()
-    {
-        // Initialize Ollama provider and SQLite vector database
-        OllamaProvider provider = new OllamaProvider();
-        this.embeddingModel = new OllamaEmbeddingModel(provider, id: AllMinilmEmbeddingModelName);
-        this.vectorDatabase = new SqLiteVectorDatabase(dataSource: DBName);
-    }
-
-    // Retrieve similar documents for a question using embeddings similarity
-    public async Task<string> GetQuestionContext(string question)
-    {
-        IReadOnlyCollection<Document> similarDocuments = await this.vectorCollection.GetSimilarDocuments(
-            this.embeddingModel, question, amount: 5);
-
-        return similarDocuments.AsString();
-    }
-
-    public void SetText(string text, PartialContextProcessorSettings settings)
-    {
-        MemoryStream memoryStream = new MemoryStream();
-        StreamWriter writer = new StreamWriter(memoryStream);
-        writer.Write(text);
-        writer.Flush();
-        memoryStream.Position = 0;
-
-        if (this.vectorDatabase.IsCollectionExistsAsync(defaultCollectionName).Result)
-        {
-            this.vectorDatabase.DeleteCollectionAsync(defaultCollectionName).Wait();
-        }
-
-        this.vectorCollection = this.vectorDatabase.AddDocumentsFromAsync<TextLoader>(
-            this.embeddingModel,
-            dimensions: DimensionsForAllMinilm,
-            dataSource: DataSource.FromBytes(memoryStream.ToArray()),
-            textSplitter: null,
-            collectionName: defaultCollectionName,
-            behavior: AddDocumentsToDatabaseBehavior.JustReturnCollectionIfCollectionIsAlreadyExists).Result;
-    }
-
-    public void Dispose()
-    {
-        this.vectorDatabase.Dispose();
-    }
-}
-```
+<snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-ollama-embeddings-storage'/>
 
 ### Example 3: Processing Specific Pages
 
-```csharp
-// Convert only pages 5-10 to a simple text document (0-based index)
-ISimpleTextDocument partialDoc = fixedDocument.ToSimpleTextDocument(4, 9);
-
-using (PartialContextQuestionProcessor processor = 
-       new PartialContextQuestionProcessor(iChatClient, maxTokenCount, partialDoc))
-{
-    // Ask a question about the specific pages
-    string question = "What information is presented on pages 5-10 of the document?";
-    string answer = await processor.AnswerQuestion(question);
-    
-    Console.WriteLine($"Question: {question}");
-    Console.WriteLine($"Answer: {answer}");
-}
-```
+<snippet id='libraries-pdf-features-gen-ai-summarize-process-specific-pages'/>
 
 ### Example 4: Optimizing Embeddings Settings
 
-```csharp
-using (PartialContextQuestionProcessor processor = 
-       new PartialContextQuestionProcessor(iChatClient, maxTokenCount, plainDoc))
-{
-    // For more comprehensive answers at the cost of more tokens
-    processor.Settings.MaxNumberOfEmbeddingsSent = 50;   // Increase the number of context chunks
-    processor.Settings.EmbeddingTokenSize = 400;         // Increase the size of each context chunk
-    
-    // For more precise answers and fewer tokens
-    // processor.Settings.MaxNumberOfEmbeddingsSent = 15;  // Decrease for fewer chunks
-    // processor.Settings.EmbeddingTokenSize = 250;        // Decrease for smaller chunks
-    
-    string question = "What are the key recommendations in the document?";
-    string answer = await processor.AnswerQuestion(question);
-    
-    Console.WriteLine($"Question: {question}");
-    Console.WriteLine($"Answer: {answer}");
-}
-```
+<snippet id='libraries-pdf-features-gen-ai-summarize-optimize-embeddings-storage'/>
 
 ## See Also
 

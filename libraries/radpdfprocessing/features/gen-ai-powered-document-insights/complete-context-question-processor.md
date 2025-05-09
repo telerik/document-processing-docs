@@ -1,5 +1,6 @@
 ---
 title: CompleteContextQuestionProcessor
+description: CompleteContextQuestionProcessor class enables you to ask questions about a PDF document and receive answers based on the entire document content.
 page_title: CompleteContextQuestionProcessor
 slug: radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor
 tags: ai, document, analysis, question, processor, complete, context
@@ -58,80 +59,7 @@ The following example demonstrates how to use the **CompleteContextQuestionProce
 
 #### __[C#] Example 1: Using CompleteContextQuestionProcessor__
 
-```csharp
-private async void AskQuestionUsingCompleteContext()
-{
-    // Load the PDF document
-    string filePath = @"path\to\your\document.pdf";
-    PdfFormatProvider formatProvider = new PdfFormatProvider();
-    RadFixedDocument fixedDocument;
-    
-    using (FileStream fs = File.OpenRead(filePath))
-    {
-        fixedDocument = formatProvider.Import(fs);
-    }
-    
-    // Set up the AI client (Azure OpenAI in this example)
-    string key = Environment.GetEnvironmentVariable("AZUREOPENAI_KEY");
-    string endpoint = Environment.GetEnvironmentVariable("AZUREOPENAI_ENDPOINT");
-    string model = "gpt-4o-mini";
-    
-    AzureOpenAIClient azureClient = new(
-        new Uri(endpoint),
-        new Azure.AzureKeyCredential(key),
-        new AzureOpenAIClientOptions());
-    ChatClient chatClient = azureClient.GetChatClient(model);
-    
-    IChatClient iChatClient = new OpenAIChatClient(chatClient);
-    int maxTokenCount = 128000;
-    
-    // Create the processor
-    using (CompleteContextQuestionProcessor processor = 
-           new CompleteContextQuestionProcessor(iChatClient, maxTokenCount))
-    {
-        try
-        {
-            // Customize settings if needed
-            processor.Settings.TokenizationEncoding = "cl100k_base";
-            processor.Settings.ModelId = "gpt-4o-mini";
-            
-            // Example 1: Process full document
-            // Convert the document to a simple text representation
-            ISimpleTextDocument plainDoc = fixedDocument.ToSimpleTextDocument();
-            
-            // Ask a question about the full document
-            string question = "What is the main subject of this document?";
-            string answer = await processor.AnswerQuestion(plainDoc, question);
-            
-            Console.WriteLine($"Question: {question}");
-            Console.WriteLine($"Answer: {answer}");
-            
-            // Ask another question
-            string question2 = "What are the key conclusions drawn in this document?";
-            string answer2 = await processor.AnswerQuestion(plainDoc, question2);
-            
-            Console.WriteLine($"Question: {question2}");
-            Console.WriteLine($"Answer: {answer2}");
-            
-            // Example 2: Process specific pages
-            // Convert only pages 5-10 to a simple text document (0-based index)
-            ISimpleTextDocument partialDoc = fixedDocument.ToSimpleTextDocument(4, 9);
-            
-            // Ask a question about the specific pages
-            string pageQuestion = "Summarize the content of pages 5-10 of the document.";
-            string pageAnswer = await processor.AnswerQuestion(partialDoc, pageQuestion);
-            
-            Console.WriteLine($"Question: {pageQuestion}");
-            Console.WriteLine($"Answer: {pageAnswer}");
-        }
-        catch (ArgumentException ex) when (ex.Message.Contains("The text is too long"))
-        {
-            Console.WriteLine("The document is too large to process with CompleteContextQuestionProcessor.");
-            Console.WriteLine("Consider using PartialContextQuestionProcessor instead.");
-        }
-    }
-}
-```
+<snippet id='libraries-pdf-features-gen-ai-ask-questions-using-complete-context'/>
 
 ## Token Limit Considerations
 
@@ -141,31 +69,7 @@ Here's how to check if a document is suitable for processing with **CompleteCont
 
 #### __[C#] Example 2: Checking Document Size__
 
-```csharp
-private bool IsDocumentSuitableForCompleteContext(RadFixedDocument document, int modelMaxInputTokenLimit)
-{
-    ISimpleTextDocument textDoc = document.ToSimpleTextDocument();
-    
-    if (textDoc is ISimpleTextDocumentInternal internalDoc)
-    {
-        string text = internalDoc.Text;
-        
-        // Create an encoding to count tokens
-        GptEncoding encoding = GptEncoding.GetEncoding("cl100k_base");
-        
-        // Estimate the token count for the document text + prompt + typical question
-        const string prompt = "You are a helpful assistant. Use the following context to answer the question.";
-        const string typicalQuestion = "What is this document about?";
-        
-        int estimatedTokens = encoding.Encode(prompt + text + typicalQuestion).Count;
-        
-        // Allow for a safety margin
-        return estimatedTokens <= (int)(modelMaxInputTokenLimit * 0.9);
-    }
-    
-    return false;
-}
-```
+<snippet id='libraries-pdf-features-gen-ai-ask-questions-using-complete-context-check-document-size '/>
 
 ## See Also
 

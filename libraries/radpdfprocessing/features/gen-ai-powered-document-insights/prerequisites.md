@@ -1,5 +1,6 @@
 ---
 title: Prerequisites
+description: Get familiar with the requirements for using the GenAI-powered Document Insights functionality in the PdfProcessing library. 
 page_title: Prerequisites
 slug: radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites
 tags: ai, document, analysis, prerequisites, setup, installation
@@ -36,16 +37,13 @@ In addition to the [standard RadPdfProcessing assemblies]({%slug radpdfprocessin
 
 ## NuGet Packages
 
-You will also need to install the following NuGet packages:
-
-* **Microsoft.Extensions.AI.Abstractions** - Core abstractions for AI functionality
-* **SharpToken** - For token counting and text chunking
-
-Additionally, you'll need a package for your specific AI provider:
+You will also need to install a package for your specific AI provider:
 
 * **Azure.AI.OpenAI** - For using Azure OpenAI
 * **Microsoft.Extensions.AI.OpenAI** - For using OpenAI
 * **OllamaSharp** - For using Ollama (local AI models)
+
+>important Microsoft.Extensions.AI.Abstractions is currently available only in preview version.
 
 ## AI Provider Setup
 
@@ -60,6 +58,8 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 1. Create an Azure OpenAI resource in the Azure portal.
 2. Deploy a model in your Azure OpenAI resource.
 3. Get your Azure OpenAI endpoint and key.
+
+>note: The following code snippet is valid for Azure Open AI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
 
 #### __[C#] Example 1: Setting up Azure OpenAI__
 
@@ -135,61 +135,7 @@ For this sample Ollama implementation, you'll need to add references to the foll
 
 #### __[C#] Example 4: OllamaEmbeddingsStorage Implementation__
 
-```csharp
-internal class OllamaEmbeddingsStorage : IEmbeddingsStorage
-{
-    private const string AllMinilmEmbeddingModelName = "all-minilm";
-    private const string DBName = "vectors.db";
-    private const int DimensionsForAllMinilm = 384; // Should be 384 for all-minilm
-    private static readonly string defaultCollectionName = "defaultName";
-
-    private readonly SqLiteVectorDatabase vectorDatabase;
-    private readonly OllamaEmbeddingModel embeddingModel;
-    private IVectorCollection vectorCollection;
-
-    public OllamaEmbeddingsStorage()
-    {
-        OllamaProvider provider = new OllamaProvider();
-        this.embeddingModel = new OllamaEmbeddingModel(provider, id: AllMinilmEmbeddingModelName);
-        this.vectorDatabase = new SqLiteVectorDatabase(dataSource: DBName);
-    }
-
-    public async Task<string> GetQuestionContext(string question)
-    {
-        IReadOnlyCollection<Document> similarDocuments = await this.vectorCollection.GetSimilarDocuments(
-            this.embeddingModel, question, amount: 5);
-
-        return similarDocuments.AsString();
-    }
-
-    public void SetText(string text, PartialContextProcessorSettings settings)
-    {
-        MemoryStream memoryStream = new MemoryStream();
-        StreamWriter writer = new StreamWriter(memoryStream);
-        writer.Write(text);
-        writer.Flush();
-        memoryStream.Position = 0;
-
-        if (this.vectorDatabase.IsCollectionExistsAsync(defaultCollectionName).Result)
-        {
-            this.vectorDatabase.DeleteCollectionAsync(defaultCollectionName).Wait();
-        }
-
-        this.vectorCollection = this.vectorDatabase.AddDocumentsFromAsync<TextLoader>(
-            this.embeddingModel,
-            dimensions: DimensionsForAllMinilm,
-            dataSource: DataSource.FromBytes(memoryStream.ToArray()),
-            textSplitter: null,
-            collectionName: defaultCollectionName,
-            behavior: AddDocumentsToDatabaseBehavior.JustReturnCollectionIfCollectionIsAlreadyExists).Result;
-    }
-
-    public void Dispose()
-    {
-        this.vectorDatabase.Dispose();
-    }
-}
-```
+<snippet id='libraries-pdf-features-gen-ai-summarize-optimize-embeddings-storage'/>
 
 ## See Also
 
