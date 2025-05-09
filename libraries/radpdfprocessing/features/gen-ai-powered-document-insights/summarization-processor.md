@@ -4,7 +4,7 @@ page_title: SummarizationProcessor
 slug: radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor
 tags: ai, document, analysis, summarization, processor, summary
 published: True
-position: 2
+position: 3
 ---
 <style>
 table, th, td {
