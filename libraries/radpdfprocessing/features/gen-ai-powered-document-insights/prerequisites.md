@@ -33,17 +33,17 @@ In addition to the [standard RadPdfProcessing assemblies]({%slug radpdfprocessin
 
 |.NET Framework|.NET Standard-compatible|
 |---|---|
-|**Telerik.Windows.Documents.AIConnector.dll**|**Telerik.Documents.AIConnector.dll**|
+|**Telerik.Windows.Documents.AIConnector.dll** * |**Telerik.Documents.AIConnector.dll** *|
+
+**The Documents.**AIConnector** assembly internally depends on **Microsoft.Extensions.AI.Abstractions**  which is currently available only in **preview** version.*
 
 ## NuGet Packages
 
 You will also need to install a package for your specific AI provider:
 
-* **Azure.AI.OpenAI** - For using Azure OpenAI
-* **Microsoft.Extensions.AI.OpenAI** - For using OpenAI
-* **OllamaSharp** - For using Ollama (local AI models)
-
->important Microsoft.Extensions.AI.Abstractions is currently available only in preview version.
+* **Azure.AI.OpenAI** and **Microsoft.Extensions.AI.OpenAI** - For using Azure OpenAI
+* **Microsoft.Extensions.AI.OpenAI** and **OpenAI** - For using OpenAI
+* **Microsoft.Extensions.AI.Ollama** - For using Ollama (local AI models)
 
 ## AI Provider Setup
 
@@ -59,7 +59,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 2. Deploy a model in your Azure OpenAI resource.
 3. Get your Azure OpenAI endpoint and key.
 
->note: The following code snippet is valid for Azure Open AI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
+>note The following code snippet is valid for Azure Open AI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
 
 #### __[C#] Example 1: Setting up Azure OpenAI__
 
