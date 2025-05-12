@@ -12,7 +12,7 @@ position: 2
 
 The following example demonstrates how to use the GenAI-powered Document Insights functionality to summarize a PDF document and ask questions about it:
 
->note: The following code snippet is valid for Azure Open AI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
+>note The following code snippet is valid for Azure Open AI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
 
 #### __[C#] Example 1: Using GenAI-powered Document Insights__
 
