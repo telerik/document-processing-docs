@@ -37,7 +37,7 @@ However, if you're working with larger documents or want to optimize token usage
 
 |Property|Description|
 |---|---|
-|**Settings**|Gets the settings for the AI question-answering process. Returns [CompleteContextProcessorSettings]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%}#completectextprocessorsettings).|
+|**Settings**|Gets the settings for the AI question-answering process. Returns [CompleteContextProcessorSettings]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%}#completecontextprocessorsettings).|
 
 |Method|Description|
 |---|---|
@@ -60,16 +60,6 @@ The following example demonstrates how to use the **CompleteContextQuestionProce
 #### __[C#] Example 1: Using CompleteContextQuestionProcessor__
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-complete-context'/>
-
-## Token Limit Considerations
-
-The **CompleteContextQuestionProcessor** sends the entire document to the AI model, which means the document must fit within the model's token limit. If the document exceeds this limit, the **AnswerQuestion** method will throw an **ArgumentException**. This is a key difference from the [SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%}#handling-large-documents), which can handle documents of any size.
-
-Here's how to check if a document is suitable for processing with **CompleteContextQuestionProcessor**:
-
-#### __[C#] Example 2: Checking Document Size__
-
-<snippet id='libraries-pdf-features-gen-ai-ask-questions-using-complete-context-check-document-size '/>
 
 ## See Also
 

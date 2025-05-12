@@ -49,15 +49,11 @@ The **SummarizationProcessorSettings** class provides configuration options for 
 
 ## Usage Example
 
-The following example demonstrates how to use the **SummarizationProcessor** to generate a summary of a PDF document. To set up the AI client as shown in this example, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
+The following example demonstrates how to use the **SummarizationProcessor** to generate a summary of a PDF document. To set up the AI client as shown in this example, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section.
 
-#### __[C#] Example 2: Using SummarizationProcessor__
+### Handling Large Documents
 
-<snippet id='libraries-pdf-features-gen-ai-summirize-document'/>
-
-## Handling Large Documents
-
-For large documents that exceed the token limit of the model, **SummarizationProcessor** automatically splits the document into smaller chunks and processes them separately. This approach is similar to how [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}) handles large documents. The process is as follows:
+For large documents that exceed the token limit of the model, **SummarizationProcessor** automatically splits the document into smaller chunks and processes them separately:
 
 1. The document is split into chunks that fit within the model's token limit.
 2. Each chunk is summarized individually.
@@ -65,9 +61,10 @@ For large documents that exceed the token limit of the model, **SummarizationPro
 
 This approach allows the processor to efficiently handle documents of any size, but it increases the number of API calls required. The **SummaryResourcesCalculated** event provides information about the expected resource usage, allowing you to decide whether to proceed with the operation.
 
-#### __[C#] Example 4: Configuring Resource Limits__
+#### __[C#] Example 2: Using SummarizationProcessor__
 
-<snippet id='libraries-pdf-features-gen-ai-summirize-configure-resources'/>
+<snippet id='libraries-pdf-features-gen-ai-summarize-document'/>
+
 ## See Also
 
 * [GenAI-powered Document Insights Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})

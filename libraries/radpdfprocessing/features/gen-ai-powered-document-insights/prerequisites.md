@@ -125,18 +125,6 @@ IChatClient iChatClient = new OllamaChatClient(new Uri("http://localhost:11434/"
 int maxTokenLimit = 4096; // Adjust based on your model
 ```
 
-## IEmbeddingsStorage Setup for .NET Standard and .NET Framework
-
-When using the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#constructors-and-platform-support)  in .NET Standard or .NET Framework, you need to provide an implementation of the **IEmbeddingsStorage** interface.
-
-For this sample Ollama implementation, you'll need to add references to the following NuGet packages:
-* **LangChain.Ollama**
-* **LangChain.Databases.Sqlite**
-
-#### __[C#] Example 4: OllamaEmbeddingsStorage Implementation__
-
-<snippet id='libraries-pdf-features-gen-ai-summarize-optimize-embeddings-storage'/>
-
 ## See Also
 
 * [GenAI-powered Document Insights Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})

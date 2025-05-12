@@ -76,6 +76,13 @@ This example demonstrates how to use the PartialContextQuestionProcessor with a 
 
 A sample custom implementation for the OllamaEmbeddingsStorage is shown in the below code snippet:
 
+>note Requires installing the following NuGet packages:
+> * **LangChain**
+> * **LangChain.Databases.Sqlite**
+> * **Microsoft.Extensions.AI.Ollama**
+> * **Telerik.Windows.Documents.AIConnector**
+> * **Telerik.Windows.Documents.Fixed**  
+
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-ollama-embeddings-storage'/>
 
 ### Example 3: Processing Specific Pages
