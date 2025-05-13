@@ -26,8 +26,6 @@ table th:nth-of-type(3) {
 
 The **PartialContextQuestionProcessor** class enables you to ask questions about a PDF document and receive answers based on the most relevant parts of the document content. This processor uses embeddings to identify and send only the relevant portions of the document to the AI model, making it more efficient for token usage and more suitable for large documents. This class inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors.
 
-## When to Use PartialContextQuestionProcessor
-
 The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 
 1. **Large Documents**: When the document exceeds the token limit of the AI model and cannot be processed in a single call.
@@ -38,10 +36,10 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 
 |Constructor|Platform|Description|
 |---|---|---|
-|**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|.NET 7+|Creates an instance with built-in embeddings storage|
+|**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|.NET {{site.mindotnetversion}}|Creates an instance with built-in embeddings storage|
 |**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|Any|Creates an instance with custom embeddings storage|
 
-> The .NET 7+ constructor uses **DefaultEmbeddingsStorage** internally, while the cross-platform constructor requires a custom implementation of **IEmbeddingsStorage** as shown in the [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework).
+> The .NET {{site.mindotnetversion}} constructor uses **DefaultEmbeddingsStorage** internally, while the cross-platform constructor requires a custom implementation of **IEmbeddingsStorage** as shown in the [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework).
 
 ### Properties and Methods
 
@@ -62,17 +60,19 @@ The settings class provides configuration options for the question-answering pro
 
 ## Usage Examples
 
-### Example 1: Using PartialContextQuestionProcessor in .NET {{site.mindotnetversion}} and Later
+#### Example 1: Using PartialContextQuestionProcessor in .NET {{site.mindotnetversion}} and Later
 
 This example demonstrates how to use the PartialContextQuestionProcessor with the built-in embeddings storage on .NET {{site.mindotnetversion}} and later. For setting up the AI client, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context'/>
 
-### Example 2: Using PartialContextQuestionProcessor with Custom Embeddings (.NET Standard/.NET Framework)
+#### Example 2: Using PartialContextQuestionProcessor with Custom Embeddings (.NET Standard/.NET Framework)
 
 This example demonstrates how to use the PartialContextQuestionProcessor with a custom embeddings storage implementation as described in the [IEmbeddingsStorage Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework) section:
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-iembeddingsstorage'/>
+
+#### Implementing custom IEmbeddingsStorage
 
 A sample custom implementation for the OllamaEmbeddingsStorage is shown in the below code snippet:
 
@@ -85,11 +85,11 @@ A sample custom implementation for the OllamaEmbeddingsStorage is shown in the b
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-ollama-embeddings-storage'/>
 
-### Example 3: Processing Specific Pages
+#### Example 3: Processing Specific Pages
 
 <snippet id='libraries-pdf-features-gen-ai-summarize-process-specific-pages'/>
 
-### Example 4: Optimizing Embeddings Settings
+#### Example 4: Optimizing Embeddings Settings
 
 <snippet id='libraries-pdf-features-gen-ai-summarize-optimize-embeddings-storage'/>
 

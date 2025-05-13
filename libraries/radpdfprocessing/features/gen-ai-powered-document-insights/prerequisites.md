@@ -35,13 +35,13 @@ In addition to the [standard RadPdfProcessing assemblies]({%slug radpdfprocessin
 |---|---|
 |**Telerik.Windows.Documents.AIConnector.dll** * |**Telerik.Documents.AIConnector.dll** *|
 
-**The Documents.**AIConnector** assembly internally depends on **Microsoft.Extensions.AI.Abstractions**  which is currently available only in **preview** version.*
+The **Documents.AIConnector** assembly internally depends on **Microsoft.Extensions.AI.Abstractions**  which is currently available only in **preview** version.*
 
 ## NuGet Packages
 
 You will also need to install a package for your specific AI provider:
 
-* **Azure.AI.OpenAI** and **Microsoft.Extensions.AI.OpenAI** - For using Azure OpenAI
+* **Microsoft.Extensions.AI.OpenAI** and **Azure.AI.OpenAI** - For using Azure OpenAI
 * **Microsoft.Extensions.AI.OpenAI** and **OpenAI** - For using OpenAI
 * **Microsoft.Extensions.AI.Ollama** - For using Ollama (local AI models)
 

@@ -23,8 +23,6 @@ table th:nth-of-type(2) {
 
 The **CompleteContextQuestionProcessor** class enables you to ask questions about a PDF document and receive answers based on the entire document content. This processor sends the complete document text to the AI model, which is suitable for smaller documents or when you need to ensure that the AI model has access to all the information in the document. This class inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors.
 
-## When to Use CompleteContextQuestionProcessor
-
 The **CompleteContextQuestionProcessor** is ideal for the following scenarios:
 
 1. **Small Documents**: When the document is small enough to fit within the token limit of the AI model.
