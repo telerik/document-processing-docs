@@ -13,6 +13,7 @@ position: 2
 The following example demonstrates how to use the GenAI-powered Document Insights functionality to summarize a PDF document and ask questions about it:
 
 >note The following code snippet is valid for Azure Open AI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
+
 >important For **.NET Framework** and **.NET Standard** an [IEmbeddingsStorage]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembeddingsstorage) implementation is required for the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}).
 
 #### __[C#] Example 1: Using GenAI-powered Document Insights__

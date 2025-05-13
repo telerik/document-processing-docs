@@ -72,7 +72,7 @@ This example demonstrates how to use the PartialContextQuestionProcessor with a 
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-iembeddingsstorage'/>
 
-#### Implementing custom IEmbeddingsStorage
+### Implementing custom IEmbeddingsStorage
 
 A sample custom implementation for the OllamaEmbeddingsStorage is shown in the below code snippet:
 
