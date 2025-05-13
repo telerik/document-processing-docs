@@ -83,6 +83,10 @@ A sample custom implementation for the OllamaEmbeddingsStorage is shown in the b
 > * **Telerik.Windows.Documents.AIConnector**
 > * **Telerik.Windows.Documents.Fixed**  
 
+1. Install Ollama from [ollama.com](https://ollama.com/).
+2. Pull the model you want to use.
+3. Start the Ollama server.
+
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-ollama-embeddings-storage'/>
 
 #### Example 3: Processing Specific Pages
