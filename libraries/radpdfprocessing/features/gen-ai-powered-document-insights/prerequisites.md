@@ -1,5 +1,6 @@
 ---
 title: Prerequisites
+description: Get familiar with the requirements for using the GenAI-powered Document Insights functionality in the PdfProcessing library. 
 page_title: Prerequisites
 slug: radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites
 tags: ai, document, analysis, prerequisites, setup, installation
@@ -32,20 +33,17 @@ In addition to the [standard RadPdfProcessing assemblies]({%slug radpdfprocessin
 
 |.NET Framework|.NET Standard-compatible|
 |---|---|
-|**Telerik.Windows.Documents.AIConnector.dll**|**Telerik.Documents.AIConnector.dll**|
+|**Telerik.Windows.Documents.AIConnector.dll** * |**Telerik.Documents.AIConnector.dll** *|
+
+The **Documents.AIConnector** assembly internally depends on **Microsoft.Extensions.AI.Abstractions**  which is currently available only in **preview** version.*
 
 ## NuGet Packages
 
-You will also need to install the following NuGet packages:
+You will also need to install a package for your specific AI provider:
 
-* **Microsoft.Extensions.AI.Abstractions** - Core abstractions for AI functionality
-* **SharpToken** - For token counting and text chunking
-
-Additionally, you'll need a package for your specific AI provider:
-
-* **Azure.AI.OpenAI** - For using Azure OpenAI
-* **Microsoft.Extensions.AI.OpenAI** - For using OpenAI
-* **OllamaSharp** - For using Ollama (local AI models)
+* **Microsoft.Extensions.AI.OpenAI** and **Azure.AI.OpenAI** - For using Azure OpenAI
+* **Microsoft.Extensions.AI.OpenAI** and **OpenAI** - For using OpenAI
+* **Microsoft.Extensions.AI.Ollama** - For using Ollama (local AI models)
 
 ## AI Provider Setup
 
@@ -60,6 +58,8 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 1. Create an Azure OpenAI resource in the Azure portal.
 2. Deploy a model in your Azure OpenAI resource.
 3. Get your Azure OpenAI endpoint and key.
+
+>note The following code snippet is valid for Azure Open AI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
 
 #### __[C#] Example 1: Setting up Azure OpenAI__
 
@@ -123,72 +123,6 @@ using Microsoft.Extensions.AI;
 // Set up Ollama client
 IChatClient iChatClient = new OllamaChatClient(new Uri("http://localhost:11434/"), "llama3");
 int maxTokenLimit = 4096; // Adjust based on your model
-```
-
-## IEmbeddingsStorage Setup for .NET Standard and .NET Framework
-
-When using the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#constructors-and-platform-support)  in .NET Standard or .NET Framework, you need to provide an implementation of the **IEmbeddingsStorage** interface.
-
-For this sample Ollama implementation, you'll need to add references to the following NuGet packages:
-* **LangChain.Ollama**
-* **LangChain.Databases.Sqlite**
-
-#### __[C#] Example 4: OllamaEmbeddingsStorage Implementation__
-
-```csharp
-internal class OllamaEmbeddingsStorage : IEmbeddingsStorage
-{
-    private const string AllMinilmEmbeddingModelName = "all-minilm";
-    private const string DBName = "vectors.db";
-    private const int DimensionsForAllMinilm = 384; // Should be 384 for all-minilm
-    private static readonly string defaultCollectionName = "defaultName";
-
-    private readonly SqLiteVectorDatabase vectorDatabase;
-    private readonly OllamaEmbeddingModel embeddingModel;
-    private IVectorCollection vectorCollection;
-
-    public OllamaEmbeddingsStorage()
-    {
-        OllamaProvider provider = new OllamaProvider();
-        this.embeddingModel = new OllamaEmbeddingModel(provider, id: AllMinilmEmbeddingModelName);
-        this.vectorDatabase = new SqLiteVectorDatabase(dataSource: DBName);
-    }
-
-    public async Task<string> GetQuestionContext(string question)
-    {
-        IReadOnlyCollection<Document> similarDocuments = await this.vectorCollection.GetSimilarDocuments(
-            this.embeddingModel, question, amount: 5);
-
-        return similarDocuments.AsString();
-    }
-
-    public void SetText(string text, PartialContextProcessorSettings settings)
-    {
-        MemoryStream memoryStream = new MemoryStream();
-        StreamWriter writer = new StreamWriter(memoryStream);
-        writer.Write(text);
-        writer.Flush();
-        memoryStream.Position = 0;
-
-        if (this.vectorDatabase.IsCollectionExistsAsync(defaultCollectionName).Result)
-        {
-            this.vectorDatabase.DeleteCollectionAsync(defaultCollectionName).Wait();
-        }
-
-        this.vectorCollection = this.vectorDatabase.AddDocumentsFromAsync<TextLoader>(
-            this.embeddingModel,
-            dimensions: DimensionsForAllMinilm,
-            dataSource: DataSource.FromBytes(memoryStream.ToArray()),
-            textSplitter: null,
-            collectionName: defaultCollectionName,
-            behavior: AddDocumentsToDatabaseBehavior.JustReturnCollectionIfCollectionIsAlreadyExists).Result;
-    }
-
-    public void Dispose()
-    {
-        this.vectorDatabase.Dispose();
-    }
-}
 ```
 
 ## See Also
