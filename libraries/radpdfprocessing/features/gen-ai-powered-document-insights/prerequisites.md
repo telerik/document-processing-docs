@@ -63,24 +63,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 
 #### __[C#] Example 1: Setting up Azure OpenAI__
 
-```csharp
-using Microsoft.Extensions.AI;
-using Azure.AI.OpenAI;
-
-// Set up Azure OpenAI client
-string key = "your-azure-openai-key";
-string endpoint = "https://your-resource-name.openai.azure.com/";
-string deploymentName = "your-deployment-name";
-
-AzureOpenAIClient azureClient = new(
-    new Uri(endpoint),
-    new Azure.AzureKeyCredential(key),
-    new AzureOpenAIClientOptions());
-ChatClient chatClient = azureClient.GetChatClient(deploymentName);
-
-IChatClient iChatClient = new OpenAIChatClient(chatClient);
-int maxTokenLimit = 128000; // Adjust based on your model
-```
+<snippet id='libraries-pdf-features-gen-ai-setup-azure-open-ai'/>
 
 ### OpenAI Setup
 
@@ -89,18 +72,7 @@ int maxTokenLimit = 128000; // Adjust based on your model
 
 #### __[C#] Example 2: Setting up OpenAI__
 
-```csharp
-using Microsoft.Extensions.AI;
-using OpenAI;
-
-// Set up OpenAI client
-string key = "your-openai-api-key";
-string modelId = "gpt-4o-mini";
-
-OpenAIClient openAIClient = new OpenAIClient(key);
-IChatClient client = openAIClient.AsChatClient(modelId);
-int maxTokenLimit = 128000; // Adjust based on your model
-```
+<snippet id='libraries-pdf-features-gen-ai-setup-open-ai'/>
 
 ### Ollama Setup (Local AI)
 
@@ -112,18 +84,7 @@ Ollama allows you to run AI models locally on your machine. This is useful for d
 
 #### __[C#] Example 3: Setting up Ollama__
 
-```csharp
-using Microsoft.Extensions.AI;
-
-// Install and run Ollama:
-// 1. Install Ollama: https://ollama.com/
-// 2. Pull the model: ollama pull llama3
-// 3. Ensure Ollama is running: ollama serve
-
-// Set up Ollama client
-IChatClient iChatClient = new OllamaChatClient(new Uri("http://localhost:11434/"), "llama3");
-int maxTokenLimit = 4096; // Adjust based on your model
-```
+<snippet id='libraries-pdf-features-gen-ai-setup-ollama-ai'/>
 
 ## See Also
 
