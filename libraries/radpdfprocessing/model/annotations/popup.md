@@ -23,53 +23,15 @@ The **PopupAnnotation** class is a derivative of the **Annotation** class and it
 
 Popup annotations are typically created in association with another markup annotation, such as Text, Line, TextMarkup or Stamp. The following example shows how to create a PopupAnnotation  associated with a TextAnnotation:
 
-```csharp
-            RadFixedDocument document = new RadFixedDocument();
-            RadFixedPage page = document.Pages.AddPage();
+<snippet id='libraries-pdf-model-annotations-popup-create'/>
 
-            TextAnnotation annotation = page.Annotations.AddText(new Rect(100, 100, 200, 200));
-            annotation.Contents = "Test text";
-
-            PopupAnnotation popupAnnot = page.Annotations.AddPopup(annotation);
-            popupAnnot.IsOpen = true;
-```
 The popup annotation will display the contents of the text annotation in a pop-up window.
 
 ## Creating a PopupAnnotation with FixedContentEditor
 
-You can create a popup annotation by using the FixedContentEditor's **DrawPopupAnnotation** method. The constructor expects two parameters - the size of the popup and the markup annotation to be associated with the popup:
-
-```csharp
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            RadFixedPage page = fixedDocument.Pages.AddPage();
-            FixedContentEditor editor = new FixedContentEditor(page);
-            
-            // Create a parent annotation first
-            TextAnnotation textAnnotation = page.Annotations.AddText(new Rect(100, 100, 50, 50));
-            textAnnotation.Contents = "Parent annotation text";
-            
-            // Create an associated popup annotation
-            editor.Position.Translate(100, 100);
-            editor.DrawPopupAnnotation(new Size(200, 100), textAnnotation);
-```
-
 When creating a TextAnnotation with the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})'s **DrawTextAnnotation** method, you can also associate a popup annotation by setting the `addPopup` parameter to **true**:
 
-```csharp
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            FixedContentEditor editor = new FixedContentEditor(fixedDocument.Pages.AddPage());
-            
-            editor.Position.Translate(100, 100);
-            Size annotationSize = new Size(50, 50);
-            Size popupSize = new Size(250, 100);
-            string text = "This is a TextAnnotation";
-            bool addPopup = true;
-            
-            editor.DrawTextAnnotation(annotationSize, popupSize, text, addPopup);
-            
-            // Access the created popup annotation if needed
-            PopupAnnotation popupAnnotation = fixedDocument.Pages[0].Annotations[1] as PopupAnnotation;
-```
+<snippet id='libraries-pdf-model-annotations-popup-create-with-fixedcontenteditor'/>
 
 This code creates a [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}) with an associated **PopupAnnotation**. The popup will display the text provided in the method call.
 

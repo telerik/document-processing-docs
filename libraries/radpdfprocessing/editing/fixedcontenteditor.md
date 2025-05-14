@@ -29,7 +29,6 @@ position: 4
 |**DrawStampAnnotation**|Creates a new [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}) and draws it with a specified size and name.|
 |**DrawTextAnnotation**|Creates a new [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}) and draws it with a specified size and text.|
 |**DrawLineAnnotation**|Creates a new [LineAnnotation]({%slug radpdfprocessing-model-annotations-line%}) with starting point the current point of the editor and end point the current point of the editor plus the given distances.|
-|**DrawPopupAnnotation**|Creates a new [PopupAnnotation]({%slug radpdfprocessing-model-annotations-popup%}), associates it with a [markup annotation]({%slug radpdfprocessing-model-annotations-overview%}), and draws it with the specified size and properties.|
 |**DrawLine**|Draws a line from point A to point B.|
 |**DrawRectangle**|Draws a rectangle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
 |**DrawEllipse**|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
