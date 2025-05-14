@@ -30,12 +30,14 @@ When using the product in a project with an expired or missing license, the _Tel
 
 |**Condition**|**Message Code**|**Solution**|
 |----|----|----|
-|No license key is detected|TKL002|[Install a license key]({%slug setting-up-license-key%}) to activate the UI components and remove the error message.|
-|Invalid license key|TKL003|[Download a new license key]({%slug setting-up-license-key%}#downloading-the-license-key) and install it to activate the UI components and remove the error message.|
-|Your subscription license has expired.|TKL103; TKL104|Renew your subscription and [download a new license key]({%slug setting-up-license-key%}).|
-|Your perpetual license is invalid.|TKL102|You are using a product version released outside the validity period of your perpetual license. To remove the error message, do either of the following: <br> - Renew your subscription and [download a new license key]({%slug setting-up-license-key%}#downloading-the-license-key). <br> - Downgrade to a product version included in your perpetual license as indicated in the message.|
-|Your trial license has expired.|TKL105|Purchase a commercial license to continue using the product.|
-|Your license is not valid for the detected product(s).|TKL101|Review the purchase options for the listed products. Alternatively, remove the references to the listed packages from _package.json._|
+|`No license key is detected`|TKL002|[Install a license key]({%slug setting-up-license-key%}) to activate the UI components and remove the error message.|
+|`Invalid license key`|TKL003|[Download a new license key]({%slug setting-up-license-key%}#downloading-the-license-key) and install it to activate the UI components and remove the error message.|
+|`Your subscription license has expired.`|TKL103; TKL104|Renew your subscription and [download a new license key]({%slug setting-up-license-key%}).|
+|`Your perpetual license is invalid.`|TKL102|You are using a product version released outside the validity period of your perpetual license. To remove the error message, do either of the following: <br> - Renew your subscription and [download a new license key]({%slug setting-up-license-key%}#downloading-the-license-key). <br> - Downgrade to a product version included in your perpetual license as indicated in the message.|
+|`Your trial license has expired.`|TKL105|Purchase a commercial license to continue using the product.|
+|`Your license is not valid for the detected product(s).`|TKL101|Review the purchase options for the listed products. Alternatively, remove the references to the listed packages from _package.json._|
+|`Unable to locate licenses for all products`|TKL004|Your license is not valid for all Telerik and Kendo products added to your project. If you have already purchased the required license, then update your license key]({%slug setting-up-license-key%}).|
+|`No Telerik or Kendo UI product references detected in project`|TKL001|<ul><li>If you use Telerik products and see this message, update the Telerik.Licensing package to version 1.4.9 or later.</li><li>If you do not use Telerik products, remove the Telerik.Licensing NuGet reference from your project.</li></ul>|
 
 ## See Also
 
