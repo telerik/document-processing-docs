@@ -13,15 +13,17 @@ ticketid: 1684241
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
-| 2025.1.205| Telerik Document Processing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| 2025.1.205| RadSpreadProcessing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
-When developing a WPF application that utilizes [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) to set a font in a spreadsheet, and the solution includes a cross-platform project referencing `Telerik.Documents.Core`, an ambiguous reference error may occur. 
+When developing a WPF application that utilizes [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) to set a font in a spreadsheet (referencing `Telerik.Windows.Documents.Core`), and the solution includes a cross-platform project referencing `Telerik.Documents.Core`, an ambiguous reference error may occur. 
 
 ![Ambiguous Error](images/ambiguous_error.png) 
 
 The issue arises due to identical namespaces in both assemblies when both platform-specific projects and cross-platform projects are part of the solution.
+
+>note This is just an example scenario for WPF combined with SpreadProcessing. Usually, such ambiguity can happen regardless of the project type or library, as long as the project is cross-platform and there is a reference to the .NET Standard and .NET Framework version of the same DPL assembly.
 
 ## Solution
 
