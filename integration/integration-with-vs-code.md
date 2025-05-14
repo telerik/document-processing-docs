@@ -11,10 +11,15 @@ position: 1
 # Configuring Document Processing Libraries
 
 With **Q2 2024** we are adding a Document Processing Configuration Wizard for **Visual Studio Code**. The wizard is included in the Visual Studio Code extension for [Telerik UI for Blazor ](https://marketplace.visualstudio.com/items?itemName=TelerikInc.blazortemplatewizard) and [Telerik UI for ASP.NET Core](https://dotnet.microsoft.com/en-us/apps/aspnet) and it enables you to easily add the required packages when working with the Telerik Document Processing Library.
+As of **Q1 2025** we offer the DPL wizard for the [Telerik UI for MAUI](https://marketplace.visualstudio.com/items?itemName=TelerikInc.telerik-maui-productivity-tools) as well.
 
 ## Getting the Wizard
 
-To use the Document Processing Libraries Wizard, install the [Telerik UI for Blazor Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TelerikInc.blazortemplatewizard).
+To use the Document Processing Libraries Wizard, install the VS Code extension for the desired produckt:
+
+* [Telerik UI for Blazor Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TelerikInc.blazortemplatewizard)
+
+* [Telerik UI for MAUI Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TelerikInc.telerik-maui-productivity-tools)
 
 ## Starting the Wizard
 
@@ -24,25 +29,23 @@ To use **Document Processing Libraries Configuration Wizard** from the **VS Code
 
  1\. Right-click on a file in the files tree.
 
- 2\. Select the `Telerik UI for Blazor: Add Document Processing Libraries`.
+ 2\. Select the `Telerik UI for .NET MAUI: Add Document Processing Libraries`.
 
-  ![Configure Document Processing Wizard, Context Menu](images/DPLBlazor_ContextMenu.png) 
+  ![Configure Document Processing Wizard, Context Menu](images/DPLMAUI_ContextMenu.png)  
 
 ### Using the Code Editor Command Palette
 
 To use **Document Processing Libraries Configuration Wizard** from the **VS Code** command palette:
 
- 1\. Open a `.razor` file or a `Razor` language in the code editor and right-click in the editor to see the `Command Palette..` option.
+ 1\. Open the Command Pallette menu by pressing Ctrl+Shift+P on Windows or Linux, or Cmd+Shift+P on Mac.
 
-  ![Configure Document Processing Wizard, Command Palette](images/DPLBlazor_CommandPallete.png)  
+ 2\. Select `Telerik UI for Maui: Add Document Processing Libraries`.
 
- 2\. Select the `Telerik UI for Blazor: Add Document Processing Libraries`.
-
- ![Configure Document Processing Wizard, Command Palette](images/DPLBlazor_Pallete.png) 
+ ![Configure Document Processing Wizard, Command Palette](images/DPLMAUI_Pallete.png)  
 
 After executing one of the options the wizard must appear like this: 
 
- ![Configure Document Processing Wizard](images/Configure_Document_Processing_Wizard.png)
+ ![Configure Document Processing Wizard](images/Configure_Document_Processing_Wizard_MAUI.png) 
 
 The **Telerik Document Processing Configuration wizard** allows you to select which libraries your project would use. It allows you to use the license and selection of the `.csproj` file, in which you want the installation to be provided. This option is useful in cases when the user has many opened projects in the workspace. If a library you selected has any dependencies, they are automatically checked. In the table below there is a list of the assemblies that will be selected for each library:
 
