@@ -1,5 +1,5 @@
 ---
-title: Converting a PDF Document to a Multipage TIFF Image
+title: Converting a PDF Document to a Multipage TIFF Image in .NET Framework
 description: Learn how to transform PDF documents into multipage TIFF files using RadPdfProcessing from the Document Processing libraries.
 type: how-to
 page_title: How to Convert PDF Documents to Multipage TIFF with RadPdfProcessing
@@ -90,3 +90,4 @@ private static void Main(string[] args)
 - [TiffBitmapEncoder Class Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.tiffbitmapencoder)
 - [Using SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
 - [Converting Multi-page TIFF Images to PDF]({%slug convert-tiff-to-pdf-radpdfprocessing%})
+- [Converting PDF to TIFF with RadPdfProcessing in .NET Standard]({%slug convert-pdf-to-tiff-radpdfprocessing-net-core%})
