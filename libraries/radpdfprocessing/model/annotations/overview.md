@@ -29,7 +29,8 @@ The abstract **Annotation** element associates an object with a location on a [R
 |[Line]({%slug radpdfprocessing-model-annotations-line%})|Line annotations display a single straight line on the page.|
 |[Stamp]({%slug radpdfprocessing-model-annotations-stamp%})|Stamp annotations display text or graphics intended to look as if they were stamped on the page with a rubber stamp.|
 |[TextMarkup]({%slug radpdfprocessing-model-annotations-text-markup%})| Text markup annotations appear as **Highlights**, **Underlines**, **Strikeouts** or **Squiggly** underlines in the text of a document. When opened, they display a pop-up window containing the text of the associated note.|
-          
+|[Popup]({%slug radpdfprocessing-model-annotations-popup%})|A popup annotation is associated with another [markup annotation]({%slug radpdfprocessing-model-annotations-overview%}) and displays its content in a pop-up window for entry and editing. It typically appears as a pop-up note.|  
+   
 * **Border**: Represents the annotation borders. This property is of type [AnnotationBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationBorder.html).
 
 * **IsPrintable**: A boolean value that indicates whether the annotation instance should be visualized when printing the document. When set to *false*, the annotation won't appear when the document is printed. 
