@@ -57,3 +57,4 @@ After updating the field the result would be "Page 3 of 6" (check [Updating Fiel
 ## See Also 
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [Assigning Character Style to Fields in RadWordsProcessing]({%slug assigning-character-style-to-fields%})

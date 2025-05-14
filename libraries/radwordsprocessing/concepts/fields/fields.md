@@ -261,3 +261,4 @@ When exporting documents to DOCX format you can use the __IsDirty__ property of 
  * [Document model]({%slug radwordsprocessing-model%})
  * [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%})
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+ * [Assigning Character Style to Fields in RadWordsProcessing]({%slug assigning-character-style-to-fields%})
