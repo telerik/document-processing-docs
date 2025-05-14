@@ -9,17 +9,19 @@ res_type: kb
 ticketid: 1681870
 ---
 
+## Environment
+
+| Version | Product | Author | 
+| ---- | ---- | ---- | 
+| 2025.1.205| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|
+ 
 ## Description
 
 When working with bullet lists in [RadWordsProcessing]({%slug radwordsprocessing-overview%}) documents, you might need to adjust the bullet position and text indentation to meet specific formatting requirements. This knowledge base article demonstrates how to set the text indent or adjust the bullet position for bullet lists in RadWordsProcessing.
 
 ![Bullet Text Indentation](images/bullet-text-indentation.png) 
 
-## Environment
 
-| Version | Product | Author | 
-| ---- | ---- | ---- | 
-| 2025.1.205| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Solution
 
