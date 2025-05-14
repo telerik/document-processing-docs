@@ -4,7 +4,7 @@ description: Learn how to apply a custom character style to fields in RadWordsPr
 type: how-to
 page_title: Applying Custom Character Style to Fields in RadWordsProcessing
 slug: assigning-character-style-to-fields
-tags: radwordsprocessing, document-processing, fields, character-style, pdf-export
+tags: wordsprocessing, document, processing, fields, character, style, pdf, export
 res_type: kb
 ticketid: 1686361
 ---
@@ -17,7 +17,7 @@ ticketid: 1686361
 
 ## Description
 
-Learn how to apply a custom character style to fields, such as [page number]({%slug radwordsprocessing-concepts-page-field%}) and total pages, in [RadWordsProcessing]({%slug radwordsprocessing-overview%}). The document reflects the applied styles when exporting to PDF format.
+Learn how to apply a custom character style to fields, such as [page number]({%slug radwordsprocessing-concepts-page-field%}) and [total pages]({%slug radwordsprocessing-concepts-sectionpages-field%}), in [RadWordsProcessing]({%slug radwordsprocessing-overview%}). The document reflects the applied styles when exporting to PDF format.
 
 ![Character Style in FieldInfo](images/character-style-in-fieldinfo.png) 
 
