@@ -17,7 +17,7 @@ ticketid: 1683368
 
 ## Description
 
-When converting HTML content to PDF format using [RadWordsProcessing]({%slug radwordsprocessing-overview%}), non-breaking spaces (`&nbsp;`) within and surrounding HTML tags are not rendered correctly in the generated PDF document, although they appear as expected in the DOCX output. This issue occurs due to the .NET Standard version of RadWordsProcessing lacking a default mechanism for reading font data, which is required for accurate space rendering in PDFs.
+When converting HTML content to PDF format using [RadWordsProcessing]({%slug radwordsprocessing-overview%}), non-breaking spaces (`&nbsp;`) within and surrounding HTML tags are not rendered correctly in the generated PDF document, although they appear as expected in the DOCX output. This issue occurs only when exporting to PDF format due to the .NET Standard version of RadPdfProcessing lacking a default mechanism for reading font data, which is required for accurate space rendering in PDFs.
 
 This knowledge base article shows how to ensure that non-breaking spaces in HTML are correctly rendered in the exported PDF documents using RadWordsProcessing.
 
@@ -127,6 +127,8 @@ tags: using,pdfformatprovider%}) to export the document to PDF, ensuring non-bre
     ```
 
 For a detailed guide on implementing a `FontsProvider`, refer to the [How to implement a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) article. This implementation ensures that non-breaking spaces and other font-related elements are accurately rendered in PDF documents generated from HTML content using RadWordsProcessing.
+
+>note There is also an alternative option of [manually registering the fonts]({%slug load-fonts-with-net-standard%}).
 
 ## See Also
 
