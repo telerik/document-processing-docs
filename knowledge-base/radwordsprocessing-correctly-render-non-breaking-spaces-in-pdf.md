@@ -115,8 +115,7 @@ To resolve the issue of non-breaking spaces not being rendered correctly in PDF 
 
 3. **Generate PDF Document from HTML Content**
 
-   Utilize the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) to import HTML content and convert it to a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). Then, use the [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider
-tags: using,pdfformatprovider%}) to export the document to PDF, ensuring non-breaking spaces and other font-related elements are rendered correctly.
+   Utilize the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) to import HTML content and convert it to a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). Then, use the [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the document to PDF, ensuring non-breaking spaces and other font-related elements are rendered correctly.
 
     ```csharp
     // Example method implementation for converting HTML to PDF
