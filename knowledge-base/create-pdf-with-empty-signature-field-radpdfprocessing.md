@@ -18,6 +18,8 @@ ticketid: 1687482
 ## Description
 Learn how to create a PDF document with an empty signature field, which allows signing the document in any PDF viewer. The document should only contain the empty signature field, and when opened in a viewer, it should provide the option to sign.
 
+![UnSigned PDF](images/unsigned-pdf.png) 
+
 ## Solution
 
 To create a PDF document with an empty [signature field]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) using [RadPdfProcessing]({%slug radpdfprocessing-overview%}), follow these steps:
