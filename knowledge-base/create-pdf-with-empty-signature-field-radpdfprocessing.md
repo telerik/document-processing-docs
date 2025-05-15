@@ -1,6 +1,6 @@
 ---
 title: Creating a PDF Document with an Empty Signature Field Using RadPdfProcessing 
-description: Learn how to create a PDF document with an empty signature field using the PdfProcessing library in a Document Processing environment.
+description: Learn how to create a PDF document with an empty signature field using the PdfProcessing library of the Document Processing Libraries.
 type: how-to
 page_title: How to Add an Empty Signature Field to a PDF Document in RadPdfProcessing
 slug: create-pdf-with-empty-signature-field-radpdfprocessing
