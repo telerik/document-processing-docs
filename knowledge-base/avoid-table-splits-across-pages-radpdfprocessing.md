@@ -17,7 +17,7 @@ ticketid: 1686584
 
 ## Description
 
-When adding tables in RadPdfProcessing using the [RadFixedDocumentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/radfixeddocumenteditor), tables may sometimes split across pages if they cannot fit within the remaining space on the current page. To ensure a table fits entirely on one page and starts on a new page if necessary, you can adopt a strategy to measure the table size and calculate the remaining page height.
+When adding tables in [RadPdfProcessing]({%slug radpdfprocessing-overview%}) using the [RadFixedDocumentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/radfixeddocumenteditor), tables may sometimes split across pages if they cannot fit within the remaining space on the current page. To ensure a table fits entirely on one page and starts on a new page if necessary, you can adopt a strategy to measure the table size and calculate the remaining page height.
 
 This article demonstrates how to prevent tables from splitting across pages and apply page breaks before adding tables using FixedContentEditor.
 
