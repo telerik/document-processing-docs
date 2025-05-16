@@ -17,7 +17,7 @@ position: 98
 
 ![new](../images/new.png)
 
-* Trial and commercial users now use the same product package. The trial and commercial product versions merged into a single unified distribution package. The product access now depends on a license key file. This eliminates the need for separate trial downloads. For more information, please refer to the &lt;documentation article&gt;.
+* Trial and commercial users now use the same product package. The trial and commercial product versions merged into a single unified distribution package. The product access now depends on a license key file. This eliminates the need for separate trial downloads. For more information, please refer to the [Setting Up Your Telerik Document Processing Libraries License Key])({%slug setting-up-license-key%}) article.
 * For basic compression/decompression tasks, the Telerik Document Processing Libraries now use System.IO.Compression instead of Telerik.Zip.
 
 ## What's New
