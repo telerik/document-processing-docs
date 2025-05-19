@@ -28,7 +28,7 @@ To change the text color inside a table in a PDF document using RadPdfProcessing
 
 Here's how to achieve this:
 
-1. Create a [Table]({%slug radpdfprocessing-editing-table%}) and add a [Row]({%slug radpdfprocessing-editing-tablerow%}) and a [Cell]({%slug radpdfprocessing-editing-tablecell%}) to it.
+1. Create a [Table]({%slug radpdfprocessing-editing-table-overview%}) and add a [Row]({%slug radpdfprocessing-editing-table-tablerow%}) and a [Cell]({%slug radpdfprocessing-editing-table-tablecell%}) to it.
 2. Add a [Block]({%slug radpdfprocessing-editing-block%}) to the cell for the text you want to display.
 3. Use `SaveGraphicProperties()` to save the current graphic state.
 4. Set the [FillColor]({%slug radpdfprocessing-concepts-colors-and-color-spaces%}) property of [GraphicProperties]({%slug radpdfprocessing-editing-text-and-graphic-properties%}) to the desired color.

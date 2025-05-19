@@ -98,7 +98,7 @@ The observed result is illustrated below:
 ## See Also
 - [RadPdfProcessing]({%slug radpdfprocessing-overview%})
 - [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
-- [Table]({%slug radpdfprocessing-editing-table%})
+- [Table]({%slug radpdfprocessing-editing-table-overview%})
 - [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})
 - [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
  

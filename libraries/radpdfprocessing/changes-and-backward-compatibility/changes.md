@@ -26,7 +26,7 @@ __What's New__
 
 * RadFixedDocumentEditor class which creates fixed content in a flow-like manner. [Read more.]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
 
-* Introduced Tables generator allowing easy export of tabular data content. [Read more.]({%slug radpdfprocessing-editing-table%})
+* Introduced Tables generator allowing easy export of tabular data content. [Read more.]({%slug radpdfprocessing-editing-table-overview%})
 
 * Exposed Block class allowing to draw and split in parts groups of text, images and shapes. [Read more.]({%slug radpdfprocessing-editing-block%})
 

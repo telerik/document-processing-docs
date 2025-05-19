@@ -18,7 +18,7 @@ res_type: kb
 Learn how to add a dashed line border in a table using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
 # Solution
-To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-table%}) in RadPdfProcessing, you can follow these steps:
+To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-table-overview%}) in RadPdfProcessing, you can follow these steps:
 
 1. Set the desired font style properties for the table.
 2. Create a `Border` object with the desired thickness, style, and color.
@@ -76,13 +76,13 @@ Please note that you can modify the `Borders` property of the `DefaultCellProper
 table.DefaultCellProperties.Borders = new TableCellBorders(null, null, null,b);
 ```
 
->note As of **Q3 2024** RadPdfProcessing offers *Dotted*, *Dashed*, and *DashSmallGap* [border styles]({%slug radpdfprocessing-editing-table%}) out-of-the-box without the necessity to play with the **StrokeDashArray** of the **FixedContentEditor**. With this update, the Dotted, Dashed, DashSmallGap, and Thick border lines are now exported from [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) as well.
+>note As of **Q3 2024** RadPdfProcessing offers *Dotted*, *Dashed*, and *DashSmallGap* [border styles]({%slug radpdfprocessing-editing-table-overview%}) out-of-the-box without the necessity to play with the **StrokeDashArray** of the **FixedContentEditor**. With this update, the Dotted, Dashed, DashSmallGap, and Thick border lines are now exported from [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) as well.
 
 ## See Also
 
-* [TableCell]({%slug radpdfprocessing-editing-tablecell%})
-* [Table]({%slug radpdfprocessing-editing-table%})
+* [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
+* [Table]({%slug radpdfprocessing-editing-table-overview%})
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-* [Supported Border Styles]({%slug radpdfprocessing-editing-table%})
+* [Supported Border Styles]({%slug radpdfprocessing-editing-table-overview%})
 
 

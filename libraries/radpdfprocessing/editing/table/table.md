@@ -1,10 +1,10 @@
 ---
-title: Table
-page_title: Table
-slug: radpdfprocessing-editing-table
-tags: table
+title: Overview
+page_title: Table Overview
+slug: radpdfprocessing-editing-table-overview
+tags: table, overview, pdfprocessing, pdf, fixed, tablerow, tablecell
 published: True
-position: 3
+position: 0
 ---
 
 # Table
@@ -28,7 +28,7 @@ This article aims to present the table-related API in __RadPdfProcessing__. It c
 
 ## Defining Table Content
 
-Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-tablerow%}) instances each of which contains a series of [TableCell]({%slug radpdfprocessing-editing-tablecell%}) instances. In order to define a simple table, you need to generate the table cells and add some content to them.
+Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instances each of which contains a series of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances. In order to define a simple table, you need to generate the table cells and add some content to them.
         
 
 __Example 1__ shows how to generate a simple table with two rows and three columns with some sample text in each table cell.
@@ -293,8 +293,8 @@ As of **Q3 2024**, along with the BorderStyle.*Single*, RadPdfProcessing offers 
 
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
- * [TableRow]({%slug radpdfprocessing-editing-tablerow%})
- * [TableCell]({%slug radpdfprocessing-editing-tablecell%})
+ * [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
+ * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
  * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
  * [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})
  * [Implementing Column Span in RadPdfProcessing Tables]({%slug table-column-span-radpdfprocessing%})

@@ -17,7 +17,7 @@ ticketid: 1663177
 
 ## Description
 
-Learn how to insert interactive [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) such as [radio buttons]({%slug radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield%}) and [textboxes]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) into [table cells]({%slug radpdfprocessing-editing-tablecell%}) in a PDF document using RadPdfProcessing.
+Learn how to insert interactive [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) such as [radio buttons]({%slug radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield%}) and [textboxes]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) into [table cells]({%slug radpdfprocessing-editing-table-tablecell%}) in a PDF document using RadPdfProcessing.
 
 ![Pdf Table with Form Fields](images/pdf-table-with-form-fields.png) 
 
@@ -27,7 +27,7 @@ To insert interactive form fields like radio buttons and textboxes into table ce
 
 1. Create a new [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and add a page to it.
 2. Initialize a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) on the page for drawing content.
-3. Define a [Table]({%slug radpdfprocessing-editing-table%}) object and configure its properties, including borders and cell padding.
+3. Define a [Table]({%slug radpdfprocessing-editing-table-overview%}) object and configure its properties, including borders and cell padding.
 4. For each row in the table:
    - Add a text cell with the caption using [InsertText](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/block#inserting-text).
    - Create a [RadioButtonField]({%slug radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield%}) , configure its options, and draw it in a table cell.
