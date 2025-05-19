@@ -97,7 +97,7 @@ In order to use the **OcrFormatProvider** you need to add the following assembli
 
 ## Language Data Setup
 
-Create a "**tessdata**" folder and populate it with the desired languages. The languages are in the form of _.traineddata_ files and are crucial for Tesseract OCR because they contain the machine learning models that Tesseract uses to recognize text. You can download the language data files from the official [Tesseract GitHub repository](https://github.com/tesseract-ocr/tessdata/tree/3.04.00). Results may vary depending on the language version:
+Create a "**tessdata**" folder and populate it with the desired languages. The languages are in the form of _.traineddata_ files and are crucial for Tesseract OCR because they contain the machine learning models that Tesseract uses to recognize text. English (eng.traineddata) is always required by default. You can download the language data files from the official [Tesseract GitHub repository](https://github.com/tesseract-ocr/tessdata/tree/3.04.00). Results may vary depending on the language version:
 
 ![Tesseract Languages Version](images/tesseract-languages-version.png)
 
