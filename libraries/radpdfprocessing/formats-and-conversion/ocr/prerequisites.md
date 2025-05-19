@@ -53,8 +53,8 @@ In order to use the **OcrFormatProvider** you need to add the following assembli
     </td>
 </tr>
         <tr>
-	    <td><b>Telerik.Windows.Documents.Tesseract.Ocr</b></td>
-		<td><b>Telerik.Documents.Tesseract.Ocr</b></td>
+	    <td><b>Telerik.Windows.Documents.TesseractOcr</b></td>
+		<td><b>Telerik.Documents.TesseractOcr</b></td>
 	</tr>
     </tr>
 		<tr>
