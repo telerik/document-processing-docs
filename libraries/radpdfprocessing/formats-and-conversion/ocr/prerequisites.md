@@ -139,6 +139,7 @@ If these requirements are not met, go through the following steps:
 
 ### Linux-specific steps
 Execute the following commands in the environment:
+
 |Ubuntu|Alpine|Fedora|
 |----|----|----|
 |```sudo apt update```|```dsudo apk update```|```sudo dnf install tesseract```|
