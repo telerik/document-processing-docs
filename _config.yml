@@ -260,7 +260,10 @@ navigation:
         position: 7  
     libraries/radpdfprocessing/model/formsource:
         title: FormSource
-        position: 8  
+        position: 8
+    libraries/radpdfprocessing/editing/table:
+        title: Table
+        position: 2  
 ## RadZipLibrary Start
     "*radziplibrary":
         title: RadZipLibrary

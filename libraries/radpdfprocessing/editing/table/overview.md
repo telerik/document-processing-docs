@@ -287,7 +287,7 @@ As of **Q3 2024**, along with the BorderStyle.*Single*, RadPdfProcessing offers 
 |Single|![Pdf Single Border](images/pdf-single-border.png)|  
 |Dotted|![Pdf Dotted Border](images/pdf-dotted-border.png)|
 |Dashed|![Pdf Dashed Border](images/pdf-dashed-border.png)|   
-|DashSmallGap|![Pdf Single Border](images/pdf-dash-small-gap-border.png)| 
+|DashSmallGap|![Pdf DashSmallGap Border](images/pdf-dash-small-gap-border.png)| 
 
 ## See Also
 
