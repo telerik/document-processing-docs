@@ -1,17 +1,17 @@
 ---
 title: TableRow
 page_title: TableRow
-slug: radpdfprocessing-editing-tablerow
-tags: tablerow
+slug: radpdfprocessing-editing-table-tablerow
+tags: table, overview, pdfprocessing, pdf, fixed, tablerow, tablecell
 published: True
-position: 2
+position: 1
 ---
 
 # TableRow
 
 
 
-__TableRow__ class represents a single row in a [Table]({%slug radpdfprocessing-editing-table%}). Each row contains a collection of [TableCell]({%slug radpdfprocessing-editing-tablecell%}) instances.
+__TableRow__ class represents a single row in a [Table]({%slug radpdfprocessing-editing-table-overview%}). Each row contains a collection of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances.
       
 
 * [Inserting a Row](#inserting-a-row-)
@@ -71,6 +71,6 @@ __Example 3__ creates a table with three single-cell rows, each with a different
 
 ## See Also
 
- * [Table]({%slug radpdfprocessing-editing-table%})
- * [TableCell]({%slug radpdfprocessing-editing-tablecell%})
+ * [Table]({%slug radpdfprocessing-editing-table-overview%})
+ * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
  * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})

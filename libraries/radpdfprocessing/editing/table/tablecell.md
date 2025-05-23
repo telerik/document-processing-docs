@@ -1,17 +1,15 @@
 ---
 title: TableCell
 page_title: TableCell
-slug: radpdfprocessing-editing-tablecell
-tags: tablecell
+slug: radpdfprocessing-editing-table-tablecell
+tags: table, overview, pdfprocessing, pdf, fixed, tablerow, tablecell
 published: True
-position: 1
+position: 2
 ---
 
 # TableCell
 
-
-
-__TableCell__ class represents a single cell in a [Table]({%slug radpdfprocessing-editing-table%}). Cells are added to a [TableRow]({%slug radpdfprocessing-editing-tablerow%}) instance in the rows collection of a table. The main purpose of the cell is to contain, organize and layout tabular data.
+__TableCell__ class represents a single cell in a [Table]({%slug radpdfprocessing-editing-table-overview%}). Cells are added to a [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instance in the rows collection of a table. The main purpose of the cell is to contain, organize and layout tabular data.
       
 
 * [Inserting a TableCell](#inserting-a-tablecell)
@@ -101,8 +99,8 @@ The result from __Example 3__ is illustrated on __Figure 1__.
 
 ## See Also
 
- * [Table]({%slug radpdfprocessing-editing-table%})
- * [TableRow]({%slug radpdfprocessing-editing-tablerow%})
+ * [Table]({%slug radpdfprocessing-editing-table-overview%})
+ * [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
  * [Block]({%slug radpdfprocessing-editing-block%})
  * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
  * [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})

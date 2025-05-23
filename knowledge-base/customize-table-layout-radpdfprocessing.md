@@ -188,5 +188,5 @@ Here's an example code snippet demonstrating the setup:
 
 ## See Also
 
-- [Tables in RadPdfProcessing]({%slug radpdfprocessing-editing-table%})
-- [TableCell]({%slug radpdfprocessing-editing-tablecell%})
+- [Tables in RadPdfProcessing]({%slug radpdfprocessing-editing-table-overview%})
+- [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})

@@ -38,7 +38,7 @@ The document model of the library provides support for:
 | Feature | Description |
 |---------|-------------|
 | [**Pages**]({%slug radpdfprocessing-model-radfixedpage%}) | Adding, modifying or removing of pages in a document. The properties enable you to change the size of the page, its rotation, and more. |
-| **Automatic layout** | Although the PDF format is fixed, sometimes you will need to insert the content in a way that flows on the page. RadPdfProcessing enables to achieve this easily by using  [blocks]({%slug radpdfprocessing-editing-block%}), [tables]({%slug radpdfprocessing-editing-table%}) and [lists]({%slug radpdfprocessing-editing-list%}). |
+| **Automatic layout** | Although the PDF format is fixed, sometimes you will need to insert the content in a way that flows on the page. RadPdfProcessing enables to achieve this easily by using  [blocks]({%slug radpdfprocessing-editing-block%}), [tables]({%slug radpdfprocessing-editing-table-overview%}) and [lists]({%slug radpdfprocessing-editing-list%}). |
 | [**Images**]({%slug radpdfprocessing-model-image%}) | Decoded on demand to achieve better performance. The API enables you to obtain the encoded image data. You can also control the image quality when saving the document. As of **Q3 2024** RadPdfProcessing provides support for SVG (vector graphics image format).|
 | [**Geometries**]({%slug radpdfprocessing-concepts-geometry%}) | Enable you to describe the geometry of a 2D shape. |
 | [**Form XObjects**]({%slug radpdfprocessing-model-form%}) | The Form XObjects enables you to describe composite objects (consisting of text, images, vector elements, etc.) within a PDF file and reuse this content among the document, for smaller document size and better rendering performance. |
