@@ -29,13 +29,7 @@ The code snippet in __Example 1__ shows how to create a table with a single row 
 
 #### __[C#] Example 1: Create TableCell__
 
-{{region cs-radpdfprocessing-editing-tablecell_0}}
-	Table table = new Table();
-	TableRow firstRow = table.Rows.AddTableRow();
-	TableCell firstCell = firstRow.Cells.AddTableCell();
-{{endregion}}
-
-
+<snippet id='libraries-pdf-editing-table-tablecell-create-tablecell'/>
 
 ## Adding Cell Content
 
@@ -47,12 +41,7 @@ __Example 2__ shows how to create a cell with a single [Block]({%slug radpdfproc
 
 #### __[C#] Example 2: Add content to TableCell__
 
-{{region cs-radpdfprocessing-editing-tablecell_1}}
-	Block block = firstCell.Blocks.AddBlock();
-	block.InsertText("Text in the cell.");
-{{endregion}}
-
-
+<snippet id='libraries-pdf-editing-table-tablecell-add-content-to-tablecell'/>
 
 ## Modifying a TableCell
 
@@ -82,17 +71,9 @@ __Example 3__ demonstrates how to set locally the cell properties to a specific 
 
 #### __[C#] Example 1: Change TableCell appearance__
 
-{{region cs-radpdfprocessing-editing-tablecell_2}}
-	firstCell.RowSpan = 2;
-	firstCell.ColumnSpan = 2;
-	firstCell.Borders = new TableCellBorders(new Border(1, new RgbColor(150, 0, 0)));
-	firstCell.Background = new RgbColor(255, 100, 100);
-{{endregion}}
-
-
+<snippet id='libraries-pdf-editing-table-tablecell-change-tablecell-appearance'/>
 
 The result from __Example 3__ is illustrated on __Figure 1__.
-        
 
 #### Figure 1: TableCell 
 ![Rad Pdf Processing Editing Table Cell 01](images/RadPdfProcessing_Editing_TableCell_01.png)
