@@ -34,7 +34,7 @@ position: 4
 |**DrawEllipse**|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
 |**DrawCircle**|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
 |**DrawPath**|Draws a path ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|**DrawTable**|Draws a [Table]({%slug radpdfprocessing-editing-table%}) with size depening on the overload.|
+|**DrawTable**|Draws a [Table]({%slug radpdfprocessing-editing-table-overview%}) with size depening on the overload.|
 |**DrawBlock**|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depening on the overload.|
 |**Draw**|Draws the specified element.|
 
@@ -194,7 +194,7 @@ __Example 8__ generates a table and draws it in some fixed size.
 
 ![Rad Pdf Processing Editing Fixed Content Editor 06](images/RadPdfProcessing_Editing_FixedContentEditor_06.png)
 
-More detailed information about tables is available in the [Table]({%slug radpdfprocessing-editing-table%}) documentation article.
+More detailed information about tables is available in the [Table]({%slug radpdfprocessing-editing-table-overview%}) documentation article.
 
 ### Inserting Forms
 
@@ -307,7 +307,7 @@ __FixedContentEditor__ has some properties and methods that affect how it will b
  * [Image]({%slug radpdfprocessing-model-image%})
  * [Geometry]({%slug radpdfprocessing-concepts-geometry%})
  * [Clipping]({%slug radpdfprocessing-concepts-clipping%})
- * [Table]({%slug radpdfprocessing-editing-table%})
+ * [Table]({%slug radpdfprocessing-editing-table-overview%})
  * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
  * [Adding a Watermark to PDF Files Using RadPdfProcessing]({%slug add-watermark-pdf-radpdfprocessing%})
  * [Adding Images with a Shadow in PDF Documents]({%slug add-shadow-image-radpdfprocessing%})
