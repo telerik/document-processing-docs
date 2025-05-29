@@ -51,3 +51,8 @@ Telerik Document Processing is part of several Telerik bundles and could be upgr
 [Upgrading Telerik UI for Xamarin on Windows](https://docs.telerik.com/devtools/xamarin/upgrade/upgrading-windows)
 
 [Upgrading Telerik UI for Xamarin on Mac](https://docs.telerik.com/devtools/xamarin/upgrade/upgrading-mac)
+
+## See Also
+
+- [Telerik.Licensing NuGet Package Information]({%slug dpl-telerik-licensing-nuget-feed%})
+- [Guidelines for Upgrading Document Processing Libraries Independently from WPF (WinForms) Libraries]({%slug upgrade-document-processing-libraries-separately-from-wpf%})
