@@ -28,7 +28,7 @@ If your application does not utilize these specific functionalities or controls,
    
 * **Evaluate Compatibility**: While it is technically possible to use a newer DPL version ( e.g. 2025.1.205) with an older WPF version (e.g. 2024.4.1111), Telerik does not guarantee the same level of application stability due to the potential changes in the internal API used by the WPF suite.
 
-* **Consider Licensing Changes**: Starting from the 2025 Q1 release, all Telerik products, including DPL, introduced a dependency on the Telerik.Licensing library. Ensure to account for this change by setting up the license key as outlined in the [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting, up, license, key, document, processing, libraries%}).
+* **Consider Licensing Changes**: Starting from the 2025 Q1 release, all Telerik products, including DPL, introduced a dependency on the Telerik.Licensing library. Ensure to account for this change by setting up the license key as outlined in the [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%}).
 
 * **Perform Extensive Testing**: Before finalizing the upgrade, thoroughly test your application with the new DPL version to identify any runtime issues that might not be apparent during development.
 
