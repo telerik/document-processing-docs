@@ -154,11 +154,11 @@ Depending on the TextMarkupAnnotationType the respective type of the TextMarkup 
 
             TextSearch search = new Search.TextSearch(fixedDocument);
             IEnumerable<SearchResult> strikeoutSearch = search.FindAll("strikeout", TextSearchOptions.Default);
-            Rect underlineRectangle = strikeoutSearch.First().GetWordBoundingRect();
-            TextMarkupAnnotation underlineAnnotation = page.Annotations.AddStrikeout(underlineRectangle);
-            underlineAnnotation.Color = new RgbColor(0, 0, 0);
-            underlineAnnotation.Opacity = 0.90;
-            underlineAnnotation.RecalculateContent();    
+            Rect strikeoutRectangle = strikeoutSearch.First().GetWordBoundingRect();
+            TextMarkupAnnotation strikeoutAnnotation = page.Annotations.AddStrikeout(strikeoutRectangle);
+            strikeoutAnnotation.Color = new RgbColor(0, 0, 255);
+            strikeoutAnnotation.Opacity = 0.90;
+            strikeoutAnnotation.RecalculateContent();    
 ```
 
 ![Create StrikeOut Annotation](images/pdf-processing-create-strikeOut-annotation.png)      
