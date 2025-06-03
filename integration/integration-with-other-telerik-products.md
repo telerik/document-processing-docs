@@ -23,7 +23,7 @@ As of **Q2 2025** end-users are able to use product specific components, built w
 
 The following table lists the main use-cases together with the necessary updates that are required by the developer according to the .NET version:
 
-||.NET Framework|.NET Standard|
+||.NET Framework|.NET Core/.NET Standard|
 |----|----|----|
 |Using Binaries (.DLL)|Need to use the app.config/web.config file with [binding redirect](https://learn.microsoft.com/en-us/dotnet/framework/deployment/configuring-assembly-binding-redirection): <br> &lt;bindingRedirect oldVersion="*" newVersion="*" /&gt;|Just replace the binaries|
 |Using NuGet Packages|Migrate to PackageReferences: [Migrating from packages.config to PackageReference formats](https://learn.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference)|Just update the NuGet packages|
