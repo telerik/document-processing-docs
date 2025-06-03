@@ -30,8 +30,8 @@ The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/cont
 To activating the Document Processing Libraries:
 
 1. Copy the [downloaded](#downloading-the-license-key) telerik-license.txt license key file to your home directory. This makes the license key available to all projects that you develop on your computer.
-   1. For Windows: %AppData%\Telerik\telerik.license.txt
-   1. For Mac/Linux: ~/.telerik/telerik.license.txt
+   1. For Windows: %AppData%\Telerik\telerik-license.txt
+   1. For Mac/Linux: ~/.telerik/telerik-license.txt
       Alternatively, copy the telerik-license.txt license key file to the root folder of your project. This makes the license key available only to this project. Do not commit the file to source control as this is your personal license key.
 1. Add the [Telerik.Licensing](https://www.nuget.org/packages/Telerik.Licensing) NuGet package as a project dependency:
 
