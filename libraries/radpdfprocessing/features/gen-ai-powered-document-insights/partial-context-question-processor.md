@@ -36,10 +36,10 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 
 |Constructor|Platform|Description|
 |---|---|---|
-|**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|.NET {{site.mindotnetversion}}|Creates an instance with built-in embeddings storage|
+|**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|.NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET Framework and .NET 8 and .NET 9 for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows) |Creates an instance with built-in embeddings storage|
 |**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|Any|Creates an instance with custom embeddings storage|
 
-> The .NET {{site.mindotnetversion}} constructor uses **DefaultEmbeddingsStorage** internally, while the cross-platform constructor requires a custom implementation of **IEmbeddingsStorage** as shown in the [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework).
+> The .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET Framework and .NET 8 and .NET 9 for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows) constructor uses **DefaultEmbeddingsStorage** internally, while the cross-platform constructor requires a custom implementation of **IEmbeddingsStorage** as shown in the [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#iembeddingsstorage-setup-for-net-standard-and-net-framework).
 
 ### Properties and Methods
 
@@ -60,9 +60,9 @@ The settings class provides configuration options for the question-answering pro
 
 ## Usage Examples
 
-#### Example 1: Using PartialContextQuestionProcessor in .NET {{site.mindotnetversion}} and Later
+#### Example 1: Using PartialContextQuestionProcessor in .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET Framework and .NET 8 and .NET 9 for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows)
 
-This example demonstrates how to use the PartialContextQuestionProcessor with the built-in embeddings storage on .NET {{site.mindotnetversion}} and later. For setting up the AI client, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
+This example demonstrates how to use the PartialContextQuestionProcessor with the built-in embeddings storage on .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET Framework and .NET 8 and .NET 9 for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows). For setting up the AI client, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context'/>
 
