@@ -261,9 +261,9 @@ The following code snippet shows how to create __List__ with __BulletDefault__ t
 ## See Also
 
 * [Block]({%slug radpdfprocessing-editing-block%})
-* [Table]({%slug radpdfprocessing-editing-table%})
-* [TableRow]({%slug radpdfprocessing-editing-tablerow%})
-* [TableCell]({%slug radpdfprocessing-editing-tablecell%})
+* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
+* [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
 * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
 * [Customizing the Font of Numbered Lists with RadPdfProcessing]({%slug customize-font-numbered-lists-radpdfprocessing%})

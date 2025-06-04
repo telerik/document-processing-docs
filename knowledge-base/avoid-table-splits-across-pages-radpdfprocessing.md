@@ -91,4 +91,4 @@ Measuring the table and calculating the remaining page height is the suitable ap
 ## See Also
 
 - [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-- [Tables]({%slug radpdfprocessing-editing-table%}) 
+- [Tables]({%slug radpdfprocessing-editing-table-overview%}) 

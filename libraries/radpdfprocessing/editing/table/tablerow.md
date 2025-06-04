@@ -1,17 +1,17 @@
 ---
 title: TableRow
 page_title: TableRow
-slug: radpdfprocessing-editing-tablerow
-tags: tablerow
+slug: radpdfprocessing-editing-table-tablerow
+tags: table, overview, pdfprocessing, pdf, fixed, tablerow, tablecell
 published: True
-position: 2
+position: 1
 ---
 
 # TableRow
 
 
 
-__TableRow__ class represents a single row in a [Table]({%slug radpdfprocessing-editing-table%}). Each row contains a collection of [TableCell]({%slug radpdfprocessing-editing-tablecell%}) instances.
+__TableRow__ class represents a single row in a [Table]({%slug radpdfprocessing-editing-table-overview%}). Each row contains a collection of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances.
       
 
 * [Inserting a Row](#inserting-a-row-)
@@ -28,12 +28,7 @@ The code snippet in __Example 1__ shows how to create a table and add a single r
 
 #### __[C#] Example 1: Create TableRow__
 
-{{region cs-radpdfprocessing-editing-tablerow_0}}
-	Table table = new Table();
-	TableRow tableRow = table.Rows.AddTableRow();
-{{endregion}}
-
-
+<snippet id='libraries-pdf-editing-table-tablerow-create-tablerow'/>
 
 ## Using TableCellCollection
 
@@ -45,11 +40,7 @@ __Example 2__ shows how to add two cells in a row and get the cells count.
 
 #### __[C#] Example 2: Access cells in a TableRow__
 
-{{region cs-radpdfprocessing-editing-tablerow_1}}
-	TableCell firstCell = tableRow.Cells.AddTableCell();
-	TableCell secondCell = tableRow.Cells.AddTableCell();
-	int cellsInRowCount = tableRow.Cells.Count;
-{{endregion}}
+<snippet id='libraries-pdf-editing-table-tablerow-add-cells'/>
 
 ## Setting TableRow Height
 
@@ -65,12 +56,12 @@ __Example 3__ creates a table with three single-cell rows, each with a different
         
 #### __[C#] Example 3: Set TableRow height__
 
-<snippet id='libraries-pdf-editing-tablerow-set-tablerow-height'/>
+<snippet id='libraries-pdf-editing-table-tablerow-set-tablerow-height'/>
 
 ![Rad Pdf Processing Editing TableRow Height](images/RadPdfProcessing_Editing_TableRow_Height.png)
 
 ## See Also
 
- * [Table]({%slug radpdfprocessing-editing-table%})
- * [TableCell]({%slug radpdfprocessing-editing-tablecell%})
+ * [Table]({%slug radpdfprocessing-editing-table-overview%})
+ * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
  * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})

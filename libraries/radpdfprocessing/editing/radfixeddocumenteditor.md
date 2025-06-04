@@ -270,11 +270,11 @@ The __Table__ class implements the __IBlockElement__ interface and an instance o
 	radFixedDocumentEditor.InsertTable(table);
 {{endregion}}     
 
-For more detailed information on tables, check the [Table]({%slug radpdfprocessing-editing-table%}) documentation article.
+For more detailed information on tables, check the [Table]({%slug radpdfprocessing-editing-table-overview%}) documentation article.
         
 ## Block Elements
 
-The [IBlockElement](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.IBlockElement.html) interface allows you to easily draw and split some block content onto pages. The interface is implemented by [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table%}) classes. You can easily add some block element instance with RadFixedDocumentEditor using the InsertBlock() method like illustrated in __Example 9__.
+The [IBlockElement](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.IBlockElement.html) interface allows you to easily draw and split some block content onto pages. The interface is implemented by [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table-overview%}) classes. You can easily add some block element instance with RadFixedDocumentEditor using the InsertBlock() method like illustrated in __Example 9__.
 
 #### __[C#] Example 12: Insert Block element__
 
@@ -321,6 +321,6 @@ There is an additional overload of InsertFormInline() that enables you to pass t
  * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [ImageSource]({%slug radpdfprocessing-model-imagesource%})
- * [Table]({%slug radpdfprocessing-editing-table%})
+ * [Table]({%slug radpdfprocessing-editing-table-overview%})
  * [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
  * [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})
