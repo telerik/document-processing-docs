@@ -27,15 +27,18 @@ table:nth-of-type(2) th {
 # GenAI-powered Document Insights Prerequisites
 This article explains the requirements for using the GenAI-powered Document Insights functionality in the [RadPdfProcessing library]({%slug radpdfprocessing-overview%}).
 
-## Required Assemblies
+## Required References
 
-In addition to the [standard RadPdfProcessing assemblies]({%slug radpdfprocessing-getting-started%}#assembly-references), you will need to reference the following assemblies to use the GenAI-powered Document Insights features:
+In addition to the [standard RadPdfProcessing references]({%slug radpdfprocessing-getting-started%}#assembly-references), you will need to add the following references to use the GenAI-powered Document Insights features:
 
 |.NET Framework|.NET Standard-compatible|
 |---|---|
-|**Telerik.Windows.Documents.AIConnector.dll** * |**Telerik.Documents.AIConnector.dll** *|
+|**Telerik.Windows.Documents.AIConnector** * |**Telerik.Documents.AIConnector** *|
 
-The **Documents.AIConnector** assembly internally depends on **Microsoft.Extensions.AI.Abstractions**  which is currently available only in **preview** version.*
+> __*__ The **Documents.AIConnector** NuGet package internally depends on **Microsoft.Extensions.AI.Abstractions** and **SharpToken**. 
+>
+> * **Microsoft.Extensions.AI.Abstractions** is currently available only in **preview** version. 
+> * If you are referencing an _assembly/dll_ of **Documents.AIConnector** instead of a NuGet package, you must manually add the **SharpToken** NuGet package.
 
 ## NuGet Packages
 
