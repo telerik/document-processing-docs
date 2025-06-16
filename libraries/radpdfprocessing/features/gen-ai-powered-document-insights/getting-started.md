@@ -14,7 +14,7 @@ The following example demonstrates how to use the GenAI-powered Document Insight
 
 >note The following code snippet is valid for Azure Open AI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
 
->important For **.NET Framework** and **.NET Standard** an [IEmbeddingsStorage]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembeddingsstorage) implementation is required for the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}).
+>important For .NET {{site.mindotnetversion}}+ (Target OS Windows) with [Packages for .NET Framework and .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows), an [IEmbeddingsStorage]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembeddingsstorage) implementation is required for the [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}).
 
 #### __[C#] Example 1: Using GenAI-powered Document Insights__
 
