@@ -91,6 +91,32 @@ echo "Copying $(telerikLicense.secureFilePath) to $(Build.Repository.LocalPath)/
 Copy-Item -Path $(telerikLicense.secureFilePath) -Destination "$(Build.Repository.LocalPath)/telerik-license.txt" -Force
 ```
 
+### Using TelerikLicensing.Register method on AWS Lambdas
+
+As of version **1.6.7** [ Telerik.Licensing](https://www.nuget.org/packages/Telerik.Licensing) offers the parameterless **TelerikLicensing.Register()** method allowing the developers to validate the Telerik license when running [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) functions. It is necessary to upgrade the Telerik.Licensing NuGet package at least to **1.6.7** and call the Register() method in the body of the function. Thus, the Telerik license will be validated, and the trial message is not expected to be printed (for licensed users) in the generated document:
+
+```csharp
+namespace LicensingInLambda;
+ 
+public class Function
+{
+    public string FunctionHandler(string input, ILambdaContext context)
+    {
+        // Lambda function entry point
+ 
+        // This requires Telerik.Licensing to be added to the function project
+        TelerikLicensing.Register();
+ 
+        // TODO: DPL - generate PDF here
+ 
+        var entryAssembly = Assembly.GetEntryAssembly();
+        var name = entryAssembly?.GetName();
+ 
+        return $"Entry assembly: {entryAssembly?.GetName()} ... {Class1.DoYourMagic()}";
+    }
+}
+```
+
 ## See Also
 
 * [License Activation Errors and Warnings]({%slug activation-errors-and-warnings%})
