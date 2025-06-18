@@ -69,4 +69,5 @@ Whenever you purchase a new license or renew an existing one, always [download a
 * [Unable to find package Telerik.Licensing]({%slug dpl-package-update-failure-license%})
 * [Handling License Key File Name and Environment Variable Name Changes in the 2025 Q1 Release]({%slug handling-license-file-name-changes%})
 * [Telerik.Licensing NuGet package is not available on the Telerik NuGet feed]({%slug dpl-telerik-licensing-nuget-feed%})
+* [Diagnostic Options for Telerik Licensing]({%slug telerik-trial-version-message-diagnostic-options%})
 
