@@ -4,7 +4,7 @@ description: Learn how to handle missing content in PDF files generated using Ra
 type: how-to
 page_title: Fixing Missing Content in PDFs Generated with RadWordsProcessing
 slug: missing-content-pdf-radwordsprocessing
-tags: radwordsprocessing, document-processing, pdfprocessing, fonts, custom-fonts, fixedextensibilitymanager, fontsprovider
+tags: words, processing, document, pdf, font, custom, fixedextensibilitymanager, fontsprovider
 res_type: kb
 ticketid: 1690314
 ---
@@ -17,7 +17,7 @@ ticketid: 1690314
 
 ## Description
 
-When generating PDF files using RadWordsProcessing from HTML or DOCX templates, specific content may be missing in the output due to custom fonts used in the document. This occurs because the .NET Standard version of RadPdfProcessing does not have a default mechanism to read fonts. To resolve this issue, the font data must be provided explicitly using the FixedExtensibilityManager and a custom implementation of the FontsProviderBase class.
+When generating PDF files using [RadWordsProcessing]({%slug radwordsprocessing-overview%}) from HTML or DOCX templates, specific content may be **missing** in the output due to custom fonts used in the document. This occurs because the .NET Standard version of [RadPdfProcessing]({%slug radpdfprocessing-overview%}) does not have a default mechanism to read fonts. To resolve this issue, the font data must be provided explicitly using the **FixedExtensibilityManager** and a custom implementation of the [FontsProviderBase]({%slug pdfprocessing-implement-fontsprovider%}) class.
 
 This knowledge base article also answers the following questions:
 - Why is some text missing in RadWordsProcessing-generated PDFs?
@@ -83,7 +83,4 @@ To ensure that custom fonts are correctly embedded in the PDF files:
 
 ## See Also
 
-- [FixedExtensibilityManager Documentation](https://docs.telerik.com/devtools/document-processing/knowledge-base/pdfprocessing-implement-fontsprovider)
-- [RadWordsProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview)
-- [PdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Implementing FontsProvider](https://docs.telerik.com/devtools/document-processing/knowledge-base/pdfprocessing-implement-fontsprovider)
+- [Implementing FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
