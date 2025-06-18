@@ -2,9 +2,9 @@
 title: Diagnostic Options for Telerik Licensing
 description: Learn how to better diagnose the issues of the trial version message in Telerik products when using a DevCraft UI License.
 type: how-to
-page_title: Resolving Licensing Issues for Telerik Document Processing
-slug: telerik-trial-version-message
-tags: progress, telerik, reporting, license, document-processing, devcraft-ui
+page_title: Diagnostic Options for Telerik Licensing
+slug: telerik-trial-version-message-diagnostic-options
+tags: progress, telerik, license, document, processing, devcraft, diagnostic, trial
 res_type: kb
 ticketid: 1688475
 ---
@@ -17,7 +17,7 @@ ticketid: 1688475
 
 ## Description
 
- Despite adding the license key file `TelerikLicense.cs`, the documents displayed the trial version message. Learn how to better diagnose the issues of the trial version message in Telerik products when using a DevCraft UI License.
+This article describes follow-up steps you can take if the **trial** message persists, even after following the steps listed in the [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%}) article.
 
 This knowledge base article also answers the following questions:
 - How to properly set up Telerik Document Processing license keys?
@@ -28,7 +28,7 @@ This knowledge base article also answers the following questions:
 
 Ensure your license includes the respective product. Without a valid license for the respective Telerik product, the trial version message will persist. Verify your license details on the [Telerik Purchase](https://www.telerik.com/purchase.aspx?filter=web) page.
 
-Telerik Document Processing is distributed with several bundles. Learn [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%}). To integrate and validate its license, follow these steps:
+[Telerik Document Processing]({%slug introduction%}) is distributed with several bundles. Learn [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%}). To integrate and validate its license, follow these steps:
 
 * Remove any environment variables such as `KENDO_UI_LICENSE` or `TELERIK_LICENSE `, as they may cause licensing issues due to length limitations on Windows. Instead, use the `telerik-license.txt` file as described in [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%}).
 
