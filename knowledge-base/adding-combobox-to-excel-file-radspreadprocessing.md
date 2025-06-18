@@ -4,7 +4,7 @@ description: Explains how to add a combo box with specific options to an Excel f
 type: how-to
 page_title: Adding a Dropdown in Excel Using RadSpreadProcessing
 slug: adding-combobox-to-excel-file-radspreadprocessing
-tags: radspreadprocessing, combobox, excel, listdata, datavalidation, document-processing
+tags: spread, processing, combobox, excel, listdata, validation, document, dropdown, comma, delimiter
 res_type: kb
 ticketid: 1689410
 ---
@@ -17,16 +17,15 @@ ticketid: 1689410
 
 ## Description
 
-I want to add a ComboBox with predefined options to an Excel file programmatically using RadSpreadProcessing. Additionally, I need the ComboBox to support special characters like commas within the options. 
-
-This knowledge base article also answers the following questions:
-- How can I add comboboxes with options to Excel files using RadSpreadProcessing?
-- How do I handle special characters in combobox options in an Excel file?
-- How can I use cell ranges for dropdown validation in RadSpreadProcessing?
+Learn how to add a ComboBox with predefined options to an Excel file programmatically using RadSpreadProcessing. Additionally, the ComboBox should support special characters like commas (or another delimiter) within the options. 
 
 ## Solution
 
-To add a ComboBox to an Excel file and handle special characters like commas within options, use the `ListDataValidationRule` with a cell range as the source for the validation. Below is the sample code:
+To add a ComboBox to an Excel file and handle special characters like commas within options, use the [ListDataValidationRule]({%slug radspreadprocessing-features-data-validation%}) with a cell range as the source for the validation. 
+
+![Combobox with Specific Options ><](images/adding-combobox-to-excel-file-radspreadprocessing.png)     
+ 
+Below is the sample code:
 
 ```csharp
 // Create a workbook
@@ -69,12 +68,11 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 ```
 
 ### Key Points
-- Use a cell range to define options if the values include commas or other special characters.
+- Use a cell range to define options if the values include commas or other special characters that are not allowed out-of-the-box.
 - The `Argument1` property supports referencing a range of cells (e.g., `=A1:D1`) as dropdown options.
 
 ## See Also
 
-- [RadSpreadProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/overview)
-- [List Rule Data Validation](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/data-validation#list-rule)
-- [Setting the Culture](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/setting-the-culture)
-- [RadSpreadProcessing API Reference](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model)
+- [RadSpreadProcessing Overview]({%slug  radspreadprocessing-overview%})
+- [List Rule Data Validation]({%slug%}#list-rule)
+- [Setting the Culture]({%slug radspreadprocessing-features-setting-the-culture%}) 
