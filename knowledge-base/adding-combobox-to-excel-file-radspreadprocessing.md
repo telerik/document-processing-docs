@@ -74,5 +74,5 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 ## See Also
 
 - [RadSpreadProcessing Overview]({%slug  radspreadprocessing-overview%})
-- [List Rule Data Validation]({%slug%}#list-rule)
+- [List Rule Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule)
 - [Setting the Culture]({%slug radspreadprocessing-features-setting-the-culture%}) 
