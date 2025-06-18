@@ -30,7 +30,7 @@ This KB article also answers the following questions:
 ## Solution
 To resolve the issue with text cut off and ensure all characters, including special ones, are correctly displayed, implement a custom `FontsProvider`. This provider will supply the necessary font data to the PdfProcessing library, enabling it to correctly render all characters.
 
-1\. Implement a custom [FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) by extending `FontsProviderBase` and override the `GetFontData` method. This method should return the font data for the required fonts, including those with special characters.
+1/. Implement a custom [FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) by extending `FontsProviderBase` and override the `GetFontData` method. This method should return the font data for the required fonts, including those with special characters.
 
 The following example shows how to handle *Tahoma, Arial and Segoe UI* fonts. When using other fonts, the custom implementation should be modified and further extended with the respective fonts.
 
@@ -81,7 +81,7 @@ The following example shows how to handle *Tahoma, Arial and Segoe UI* fonts. Wh
     }
   ```
 
-2\. Before converting your HTML document to PDF, set the custom `FontsProvider` to the `FontsProvider` property of the `FixedExtensibilityManager`.
+2/. Before converting your HTML document to PDF, set the custom `FontsProvider` to the `FontsProvider` property of the `FixedExtensibilityManager`.
 
 ```csharp
     Telerik.Windows.Documents.Extensibility.FontsProviderBase fontsProvider = new FontsProvider();
