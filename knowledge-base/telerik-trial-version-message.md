@@ -57,4 +57,4 @@ Ensure your license includes the respective product. Without a valid license for
 
 - [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%})
 - [Telerik Purchase Options](https://www.telerik.com/purchase.aspx?filter=web)
----
+
