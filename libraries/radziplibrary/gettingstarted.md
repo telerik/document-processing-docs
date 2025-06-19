@@ -54,7 +54,7 @@ The code snippet from __Example 1__ demonstrates how to open existing Zip archiv
 	            
 	using (Stream stream = File.Open("test.zip", FileMode.Open))
 	{
-	    using (ZipArchive = ZipArchive.Create(stream))
+	    using (ZipArchive archive = ZipArchive.Create(stream))
 	    {
 	        // Display the list of the files in the selected zip file using the ZipArchive.Entries property.
 	    }
