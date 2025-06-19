@@ -1,10 +1,10 @@
 ---
-title: Resolving Missing Content in Exported PDF Files
-description: Learn how to handle missing content in PDF files generated using RadWordsProcessing for Document Processing due to custom fonts.
+title: Resolving missing content after HTML/DOCX to PDF conversion with WordsProcessing in .NET Standard
+description: Learn how to handle missing content in PDF files generated using RadWordsProcessing for Document Processing due to fonts' specifics.
 type: how-to
 page_title: Fixing Missing Content in PDFs Generated with RadWordsProcessing
-slug: missing-content-pdf-radwordsprocessing
-tags: words, processing, document, pdf, font, custom, fixedextensibilitymanager, fontsprovider
+slug: missing-content-word-to-pdf-radwordsprocessing
+tags: words, processing, document, pdf, font, custom, fixedextensibilitymanager, fontsprovider, netstandard
 res_type: kb
 ticketid: 1690314
 ---
@@ -17,7 +17,7 @@ ticketid: 1690314
 
 ## Description
 
-When generating PDF files using [RadWordsProcessing]({%slug radwordsprocessing-overview%}) from HTML or DOCX templates, specific content may be **missing** in the output due to custom fonts used in the document. This occurs because the .NET Standard version of [RadPdfProcessing]({%slug radpdfprocessing-overview%}) does not have a default mechanism to read fonts. To resolve this issue, the font data must be provided explicitly using the **FixedExtensibilityManager** and a custom implementation of the [FontsProviderBase]({%slug pdfprocessing-implement-fontsprovider%}) class.
+When generating PDF files using [RadWordsProcessing]({%slug radwordsprocessing-overview%}) from HTML or DOCX templates, specific content may be **missing** in the output due to the fonts used in the document. This occurs because the .NET Standard version of [RadPdfProcessing]({%slug radpdfprocessing-overview%}) does not have a default mechanism to read fonts. To resolve this issue, the font data must be provided explicitly using the **FixedExtensibilityManager** and a custom implementation of the [FontsProviderBase]({%slug pdfprocessing-implement-fontsprovider%}) class.
 
 This knowledge base article also answers the following questions:
 - Why is some text missing in RadWordsProcessing-generated PDFs?
@@ -84,3 +84,4 @@ To ensure that custom fonts are correctly embedded in the PDF files:
 ## See Also
 
 - [Implementing FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
+- [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})
