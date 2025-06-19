@@ -1,8 +1,8 @@
 ---
-title: Adding a ComboBox to an Excel File Using RadSpreadProcessing
+title: Adding a DropDown/ComboBox to an Excel File Using RadSpreadProcessing
 description: Explains how to add a combo box with specific options to an Excel file using RadSpreadProcessing.
 type: how-to
-page_title: Adding a Dropdown in Excel Using RadSpreadProcessing
+page_title: Adding a /ComboBox in Excel Using RadSpreadProcessing
 slug: adding-combobox-to-excel-file-radspreadprocessing
 tags: spread, processing, combobox, excel, listdata, validation, document, dropdown, comma, delimiter
 res_type: kb
@@ -17,11 +17,15 @@ ticketid: 1689410
 
 ## Description
 
-Learn how to add a ComboBox with predefined options to an Excel file programmatically using RadSpreadProcessing. Additionally, the ComboBox should support special characters like commas (or another delimiter) within the options. 
+Learn how to add a ComboBox with predefined options to an Excel file programmatically using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}). Additionally, the ComboBox should support special characters like commas (or another delimiter) within the options. 
 
 ## Solution
 
-To add a ComboBox to an Excel file and handle special characters like commas within options, use the [ListDataValidationRule]({%slug radspreadprocessing-features-data-validation%}) with a cell range as the source for the validation. 
+To add a DropDown/ComboBox to an Excel file and handle special characters like commas within options, use the [ListDataValidationRule]({%slug radspreadprocessing-features-data-validation%}) with a cell range as the source for the validation. Consider the following sample options: 
+
+* Option 1, Inc.
+* Option 2, Inc.
+* Option 3, Inc.
 
 ![Combobox with Specific Options ><](images/adding-combobox-to-excel-file-radspreadprocessing.png)     
  
@@ -73,6 +77,6 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 
 ## See Also
 
-- [RadSpreadProcessing Overview]({%slug  radspreadprocessing-overview%})
+- [RadSpreadProcessing Overview]({%slug radspreadprocessing-overview%})
 - [List Rule Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule)
 - [Setting the Culture]({%slug radspreadprocessing-features-setting-the-culture%}) 
