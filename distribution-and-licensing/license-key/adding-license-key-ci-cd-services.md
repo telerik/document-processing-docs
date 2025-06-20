@@ -2,7 +2,7 @@
 title: Adding the License Key to CI/CD Services
 page_title: Adding the License Key to CI/CD Services
 slug: adding-license-key-ci-cd-services
-tags: ci, cd, service, services, license, key, document, processing, libraries
+tags: ci, cd, service, services, license, key, document, processing, libraries, lambda, plugin, vsto, extension, function
 published: True
 position: 1
 ---
@@ -93,7 +93,7 @@ Copy-Item -Path $(telerikLicense.secureFilePath) -Destination "$(Build.Repositor
 
 ### Using TelerikLicensing.Register method on AWS Lambdas
 
-As of version **1.6.7** [ Telerik.Licensing](https://www.nuget.org/packages/Telerik.Licensing) offers the parameterless **TelerikLicensing.Register()** method allowing the developers to validate the Telerik license when running [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) functions. It is necessary to upgrade the Telerik.Licensing NuGet package at least to **1.6.7** and call the Register() method in the body of the function. Thus, the Telerik license will be validated, and the trial message is not expected to be printed (for licensed users) in the generated document:
+As of version **1.6.7** [ Telerik.Licensing](https://www.nuget.org/packages/Telerik.Licensing) offers the parameterless **TelerikLicensing.Register()** method and the **TelerikLicensing.Register(…script key…)** method allowing the developers to validate the Telerik license when running [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) functions, plugins, or a class library that uses Telerik Document Processing consumed by any third-party software (Word, Excel, Revit, AutoCAD, MFC app, etc.). It is necessary to upgrade the Telerik.Licensing NuGet package at least to **1.6.7** and call the Register method in the body of the function. Thus, the Telerik license will be validated, and the trial message is not expected to be printed (for licensed users) in the generated document:
 
 ```csharp
 namespace LicensingInLambda;
