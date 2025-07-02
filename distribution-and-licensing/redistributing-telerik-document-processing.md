@@ -24,6 +24,8 @@ Telerik Document Processing is part of several Telerik bundles and is licensed u
 | UI for .NET MAUI ||
 | UI for Xamarin ||
 
+>important Protecting the Telerik dlls is required only with versions prior to **2025 Q2 (2025.2.520)**. With the introduction of our new [licensing mechanism](https://www.telerik.com/blogs/license-key-files-telerik-kendo-ui-products-2025-update), Telerik UI suites have simplified deployment requirements. __Starting with 2025 Q2, users are no longer required to protect the Telerik assemblies__. Instead, the respective Telerik product now requires [installing a license key]({%slug setting-up-license-key%}). Applications without a valid license will continue to function normally, but will contain a watermark.
+
 ## Using the Telerik Document Processing Libraries in Your Solutions
 
 In order to include the Telerik Document Processing libraries in your application, you should build the source code as described below. The source code of the Document Processing libraries is distributed together with the above-listed products' source code and is available for download from the client's account. 
