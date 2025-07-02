@@ -18,11 +18,11 @@ ticketid: 1690929
 
 ## Description
 
-This article aims to address potential licensing issues while generating Excel files with Telerik Document Processing Libraries during runtime testing. The generated file contains a "License" tab with a trial message, despite the Build Output window indicating a valid license. The issue arises in a multi-project (e.g. Blazor WASM) application setup, where dependencies are shared across projects.
+This article aims to address potential licensing issues while generating Excel (or PDF, DOCX, etc.) files with Telerik Document Processing Libraries during **runtime** testing. The generated file contains a "License" sheet (or a watermark) with a trial message, despite the **Build Output** window indicating a valid license. The issue arises in a multi-project (e.g. Blazor WASM) application setup, where dependencies are shared across projects.
 
 ## Cause
 
-This issue generally occurs due to incomplete license validation during runtime in complex setups, particularly when using shared libraries or plugin architectures. Even if the license is validated during build, runtime environments may fail to recognize it due to transitive dependency limitations.
+This issue generally occurs due to incomplete license validation during runtime in complex setups, particularly when using shared libraries or plugin architectures. *Even if the license is validated during build time, runtime environments may fail to recognize it due to transitive dependency limitations.*
 
 ## Solution
 
@@ -32,17 +32,7 @@ To ensure proper license validation and eliminate trial messages, follow the ste
 
 2. **Explicit License Registration**: Add a call to `TelerikLicensing.Register()` early in your application lifecycle. For Blazor WASM applications, include this call in the `Program.cs` file. This approach validates the license explicitly.
 
-   Example:
-   ```csharp
-   using Telerik.Licensing;
-
-   var builder = WebAssemblyHostBuilder.CreateDefault(args);
-   TelerikLicensing.Register();
-   builder.RootComponents.Add<App>("#app");
-   builder.Build().RunAsync();
-   ```
-
-3. **Verify Assemblies**: Ensure no trial versions of Telerik assemblies are referenced in any project. Replace trial assemblies with licensed versions, if necessary.
+3. **Verify Assemblies**: Ensure **no trial** versions of Telerik assemblies are referenced in any project. Replace [trial assemblies]({%slug upgrade-trial-to-licensed-version%}) with licensed ones, if such even exist.
 
 4. **Enable Diagnostics**: Add the following property to your `.csproj` file to enable detailed licensing diagnostics during build and runtime:
    ```xml
@@ -52,7 +42,7 @@ To ensure proper license validation and eliminate trial messages, follow the ste
    ```
    Review the diagnostic output for clues about license validation issues.
 
-5. **Direct Package References**: Add references to Telerik Document Processing Libraries and Telerik UI for Blazor NuGet packages directly in the Blazor WASM project. This resolves transitive dependency limitations.
+5. **Direct Package References**: Add references to the Telerik Document Processing Libraries NuGet packages directly in the Blazor WASM project. This resolves transitive dependency limitations.
 
 6. **Avoid Environment Variables**: Use only the `telerik-license.txt` file for license delivery instead of environment variables, which can cause issues due to length limitations.
 
@@ -60,7 +50,7 @@ By following these steps, runtime validation issues should resolve, and the tria
 
 ## See Also
 
-- [Telerik Document Processing Licensing Overview](https://docs.telerik.com/devtools/document-processing/distribution-and-licensing/license-key)
-- [Using TelerikLicensing.Register Method](https://docs.telerik.com/devtools/document-processing/distribution-and-licensing/license-key/adding-license-key-ci-cd-services#using-teleriklicensingregister-method-on-aws-lambdas)
-- [Diagnostic Options for Telerik Licensing](https://docs.telerik.com/devtools/document-processing/knowledge-base/telerik-trial-version-message)
-- [Troubleshooting Telerik Document Processing Licensing Issues](https://docs.telerik.com/devtools/document-processing/distribution-and-licensing/license-key/setting-up-license-key)
+- [Telerik Document Processing Licensing Overview]({%slug introduction%})
+- [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%})
+- [Using TelerikLicensing.Register Method]({%slug adding-license-key-ci-cd-services%}#using-teleriklicensingregister-method-on-aws-lambdas)
+- [Diagnostic Options for Telerik Licensing]({%slug telerik-trial-version-message-diagnostic-options%})
