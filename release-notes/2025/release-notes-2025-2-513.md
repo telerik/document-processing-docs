@@ -10,4 +10,4 @@ position: 98
 
 # 2025.2.520 (2025 Q2)
 
-[Progress® Telerik® Document Processing 2025.2.520 (2025 Q2)](https://www.telerik.com/support/whats-new/document-processing-libraries-release-history/progress--telerik--document-processing-2025.2.520-(2025-q2))
+[Progress® Telerik® Document Processing 2025.2.520 (2025 Q2)](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history/progress-telerik-document-processing-2025-2-520-changelog)
