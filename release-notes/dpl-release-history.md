@@ -1,6 +1,6 @@
 ---
-title: Release History - Document Processing Libraries
-page_title: Release History - Document Processing Libraries
+title: Release History
+page_title: Release History
 description: What is new for the Document Processing Libraries
 slug: dpl-release-history
 tags: release, notes, history, dpl, version, telerik, document, processing, library, libraries
@@ -15,4 +15,4 @@ As of Q2 2025 [Telerik Document Processing]({%slug introduction%}) libraries are
 
 ## See Also
 
-* [Download Product Files]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [Download Product Files]({%slug download-product-files%})
