@@ -48,3 +48,4 @@ Since the **Telerik Document Processing** is a part of several [Telerik bundles]
 
 * [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
 * [Latest Internal Build (Preview Version)]({%slug obtain-use-latest-internal-build-version%})
+* [Release History]({%slug dpl-release-history%})
