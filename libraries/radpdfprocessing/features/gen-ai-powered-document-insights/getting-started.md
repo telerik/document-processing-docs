@@ -22,6 +22,8 @@ The following example demonstrates how to use the GenAI-powered Document Insight
 
 When you run this code, the AI will process your document, generate a summary, and answer your questions.
 
+>note A sample runnable project is available in the Document Processing SDK: [AIConnectorDemo](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/AIConnectorDemo).
+
 ## See Also
 
 * [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%})
