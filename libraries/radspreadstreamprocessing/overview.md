@@ -84,3 +84,4 @@ You can use the __RadSpreadStreamProcessing__ library to create or read __large 
 * [Workbook]({%slug radspreadstreamprocessing-model-workbook%})
 * [Worksheet View Exporter]({%slug radspreadstreamprocessing-features-worksheetviewexporter%})
 * [RadSpreadProcessing]({%slug radspreadprocessing-overview%})
+* [Available Assemblies]({%slug introduction%}#available-assemblies)

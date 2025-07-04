@@ -93,3 +93,4 @@ You can import and export documents of these formats as well as convert the form
 - [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
 - [First Steps]({%slug getting-started-first-steps%})
 - [Getting Started with RadPdfProcessing]({%slug radwordsprocessing-getting-started%})
+- [Available Assemblies]({%slug introduction%}#available-assemblies)

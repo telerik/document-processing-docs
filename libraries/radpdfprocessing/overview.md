@@ -63,4 +63,4 @@ The document model of the library provides support for:
 - [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
 - [First Steps]({%slug getting-started-first-steps%})
 - [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
-
+- [Available Assemblies]({%slug introduction%}#available-assemblies)

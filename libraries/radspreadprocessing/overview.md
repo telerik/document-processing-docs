@@ -82,3 +82,4 @@ The following table describes the most popular features of the RadSpreadProcessi
 * [What is a Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
 * [What is a Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
 * [Generating Excel Documents from IEnumerable Collections]({%slug generate-excel-files-from-ienumerable-collections%})
+* [Available Assemblies]({%slug introduction%}#available-assemblies)
