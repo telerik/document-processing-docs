@@ -114,3 +114,4 @@ __RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocum
 * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
 * [Export to PDF]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 * [Export to Image]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
+* [Merge PDF Documents]({%slug merge-pdf-documents%})
