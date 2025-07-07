@@ -5,7 +5,7 @@ type: troubleshooting
 page_title: License Not Recognized in Telerik Document Processing Libraries
 meta_title: License Not Recognized in Telerik Document Processing Libraries
 slug: license-not-recognized-telerik-document-processing-libraries
-tags: telerik, document, processing, license, validation, runtime, issues, licensing diagnostics
+tags: telerik, document, processing, license, validation, runtime, issues, licensing, diagnostics
 res_type: kb
 ticketid: 1690929
 ---
@@ -26,15 +26,17 @@ This issue generally occurs due to incomplete license validation during runtime 
 
 ## Solution
 
+The **Telerik.Licensing** verifies the DevSeat association at the time your classlib is built, and also provisions at runtime licenses in the Root app. When you have a setup such as **"Root app -> classlib -> Telerik UI"**, the Telerik UI will execute and verify the licensing for the classlib, but will not be applied transitively in the Root app. That's why you **need to add the Telerik.Licensing NuGet package reference to Root app manually**.
+
 To ensure proper license validation and eliminate trial messages, follow the steps below:
 
-1. **License Key Placement**: Ensure the `telerik-license.txt` file is present in the root directory of all projects referencing Telerik Document Processing Libraries, including shared libraries or class libraries.
+* **Direct Package References**: Add references to the **Telerik.Licensing** package directly in the Root project. This resolves transitive dependency limitations.
 
-2. **Explicit License Registration**: Add a call to `TelerikLicensing.Register()` early in your application lifecycle. For Blazor WASM applications, include this call in the `Program.cs` file. This approach validates the license explicitly.
+* **Explicit License Registration**: Add a call to `TelerikLicensing.Register()` early in your application lifecycle. For Blazor WASM applications, include this call in the `Program.cs` file. This approach validates the license explicitly.
 
-3. **Verify Assemblies**: Ensure **no trial** versions of Telerik assemblies are referenced in any project. Replace [trial assemblies]({%slug upgrade-trial-to-licensed-version%}) with licensed ones, if such even exist.
+* **Verify Assemblies**: Ensure **no trial** versions of Telerik assemblies are referenced in any project. Replace [trial assemblies]({%slug upgrade-trial-to-licensed-version%}) with licensed ones, if such even exist.
 
-4. **Enable Diagnostics**: Add the following property to your `.csproj` file to enable detailed licensing diagnostics during build and runtime:
+* **Enable Diagnostics**: Add the following property to your `.csproj` file to enable detailed licensing diagnostics during build and runtime:
    ```xml
    <PropertyGroup>
        <TelerikLicensingVerbosity>diagnostic</TelerikLicensingVerbosity>
@@ -42,9 +44,7 @@ To ensure proper license validation and eliminate trial messages, follow the ste
    ```
    Review the diagnostic output for clues about license validation issues.
 
-5. **Direct Package References**: Add references to the Telerik Document Processing Libraries NuGet packages directly in the Blazor WASM project. This resolves transitive dependency limitations.
-
-6. **Avoid Environment Variables**: Use only the `telerik-license.txt` file for license delivery instead of environment variables, which can cause issues due to length limitations.
+* **Avoid Environment Variables**: Use only the `telerik-license.txt` file for license delivery instead of environment variables, which can cause issues due to length limitations.
 
 By following these steps, runtime validation issues should resolve, and the trial message will no longer appear in generated documents.
 
