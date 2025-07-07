@@ -38,6 +38,9 @@ To activating the Document Processing Libraries:
 ```xml
 <PackageReference Include="Telerik.Licensing" Version="1.*" />
 ```
+
+>important The **Telerik.Licensing** verifies the DevSeat association at the time your classlib is built, and also provisions at runtime licenses in the Root app. When you have a setup such as **"Root app -> classlib -> Telerik UI"**, the Telerik UI will execute and verify the licensing for the classlib, but will not be applied transitively in the Root app. That's why you **need to add the Telerik.Licensing NuGet package reference to Root app manually**.
+
 When you build the project, the _Telerik.Licensing_ NuGet package automatically locates the license file and uses it to activate the product.
 
 >important If your project doesn’t use NuGet packages, see [Adding a License Key to Projects without NuGet References](#adding-a-license-key-to-projects-without-nuget-references).
@@ -70,4 +73,5 @@ Whenever you purchase a new license or renew an existing one, always [download a
 * [Handling License Key File Name and Environment Variable Name Changes in the 2025 Q1 Release]({%slug handling-license-file-name-changes%})
 * [Telerik.Licensing NuGet package is not available on the Telerik NuGet feed]({%slug dpl-telerik-licensing-nuget-feed%})
 * [Diagnostic Options for Telerik Licensing]({%slug telerik-trial-version-message-diagnostic-options%})
+* [Resolving License Validation Issues in Telerik Document Processing Libraries]({%slug license-not-recognized-telerik-document-processing-libraries%})
 
