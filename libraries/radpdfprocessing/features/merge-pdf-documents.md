@@ -19,7 +19,7 @@ You can merge PDF documents out-of-the-box with the **Merge** method of [RadFixe
 
 ## Using the PdfStreamWriter
 
-An alternative approach is using the PdfStreamWriter allowing you to merge pages from different PDF documents:
+An alternative approach is using the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) allowing you to merge pages from different PDF documents:
  
 <snippet id='libraries-pdf-features-merge-documents-with-pdfstreamwriter'/>
 
