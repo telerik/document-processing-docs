@@ -32,5 +32,6 @@ The AcroForm class provides the following properties:
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [FormFieldCollection class]({%slug radpdfprocessing-model-interactive-forms-formfieldcollection%})
 * [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
-* [Extracting Data from PDF Form Fields Using RadPdfProcessing]({%slug extract-pdf-form-fields-data-radpdfprocessing%})
+* [Extracting Data from PDF Form Fields Using RadPdfProcessing]({%slug extract-pdf-form-fields-data-radpdfprocessing%}) 
+* [Resolving Apostrophe Character Being Replaced with Copyright Symbol in Filled PDF AcroForm]({%slug apostrophe-character-replaced-copyright-symbol-acroform%})
 

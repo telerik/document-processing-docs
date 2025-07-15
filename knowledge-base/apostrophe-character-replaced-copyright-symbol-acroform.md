@@ -18,18 +18,20 @@ ticketid: 1692742
 
 ## Description
 
-Learn how to address the issue where a special symbol (e.g. apostrophe character) is replaced by a copyright symbol in a filled PDF AcroForm using RadPdfProcessing. When the form is opened for editing, the character appears correctly as an apostrophe in the editor itself. 
+Learn how to address the issue where a special symbol (e.g. apostrophe character) is replaced by a copyright (or other) symbol in a filled PDF AcroForm using RadPdfProcessing. When the form is opened for editing in a viewer (like Adobe Acrobat), the character appears correctly as an apostrophe in the editor itself. 
+
+>note This might be reproduced with other symbols as well, not only with the apostrophe character.
 
 ## Solution
 
-This issue is likely caused by the font encoding used in the AcroForm fields. If the font does not properly support the character encoding for the apostrophe or is not embedded or referenced correctly, such substitution may occur.
+This issue is likely caused by the font encoding used in the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%}) fields. If the font does not properly support the character encoding for the apostrophe or is not embedded or referenced correctly, such substitution may occur.
 
-To resolve this issue, set the font of the AcroForm fields to one of the 14 standard PDF fonts, such as Helvetica, Times, or Courier. These fonts have broad character support and do not require embedding.
+To resolve this issue, set the font of the AcroForm fields to one of the [14 standard PDF fonts]({%slug radpdfprocessing-concepts-fonts%}), such as Helvetica, Times, or Courier. These fonts have broad character support and do not require embedding.
 
 ### Steps:
 
 1. Iterate through all form fields in `RadFixedDocument.AcroForm.FormFields`.
-2. Check if the field type is `TextBox` or `CombTextBox`.
+2. Check if the field type is [TextBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) or [CombTextBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield%}).
 3. Set the widget font and text properties font to `FontsRepository.HelveticaBold`.
 
 ### Code Implementation
