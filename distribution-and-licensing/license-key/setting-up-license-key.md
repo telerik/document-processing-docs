@@ -74,4 +74,5 @@ Whenever you purchase a new license or renew an existing one, always [download a
 * [Telerik.Licensing NuGet package is not available on the Telerik NuGet feed]({%slug dpl-telerik-licensing-nuget-feed%})
 * [Diagnostic Options for Telerik Licensing]({%slug telerik-trial-version-message-diagnostic-options%})
 * [Resolving License Validation Issues in Telerik Document Processing Libraries]({%slug license-not-recognized-telerik-document-processing-libraries%})
+* [Telerik License Approaches](https://github.com/LanceMcCarthy/DevOpsExamples?tab=readme-ov-file#telerik-license-approaches)
 
