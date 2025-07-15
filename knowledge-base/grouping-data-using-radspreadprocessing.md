@@ -24,7 +24,7 @@ img[alt$="><"] {
 
 ## Description
 
-This article shows how to generate a worksheet with **grouped** data having a **flat** collection of records as an input. 
+This article shows how to generate a worksheet with **grouped** data from a **flat** collection of records as an input. 
 
 >caption Flat vs. Grouped Data
 
@@ -32,15 +32,14 @@ This article shows how to generate a worksheet with **grouped** data having a **
 
 ## Solution
 
-Note that if you want to perform grouping, this data operation should be performed separately and then populate the Worksheet with the grouped rows.
+Note that the grouping should be performed separately beforehand, and only then can the Worksheet be populated with the grouped data.
 
-Once you have the grouped data, then, the SpreadProcessing functionality (in a similar way like MS Excel) allows you to assign the outline level to all rows that belong to the same group. To make it clearer, let's have the following example: a flat list of products stored in CSV data for simplicity.
-
-To group data in a worksheet, follow these steps:
+Once you have the grouped data, the SpreadProcessing functionality (in a similar way to MS Excel) allows you to assign the outline level to all rows that belong to the same group. 
+To make it clear and simple, let's take the following example - a flat list of products stored in CSV data:
 
 ### Preparing Grouped Data
 
-1. Perform grouping on your flat data (e.g. Northwind.Products) before populating the worksheet.
+1. Group your flat data (e.g. Northwind.Products) before populating the worksheet.
 2. Use LINQ or other methods to group rows based on a specific column (e.g. CategoryID).
 
 Use the following code snippet to group rows in a worksheet:
@@ -67,8 +66,6 @@ Use the following code snippet to group rows in a worksheet:
 
             // Apply grouping and outlining
            Workbook groupedWorkbook= ApplyGroupingToWorksheet(dataTable, new Workbook());
-
-
 
             Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider xlsx_formatProvider = 
                 new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
@@ -176,7 +173,6 @@ Use the following code snippet to group rows in a worksheet:
         }
     }
 ```
-
 Modify the example to suit your specific data structure and requirements.
 
 ## See Also
