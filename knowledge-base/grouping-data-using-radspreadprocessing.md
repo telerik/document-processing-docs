@@ -10,6 +10,12 @@ res_type: kb
 ticketid: 1692310
 ---
 
+<style>
+img[alt$="><"] {
+  border: 1px solid lightgrey;
+}
+</style>
+
 ## Environment
 
 | Version | Product | Author | 
@@ -18,16 +24,24 @@ ticketid: 1692310
 
 ## Description
 
-This article shows how to generate a worksheet with grouped data having a flat collection of records as an input. 
+This article shows how to generate a worksheet with **grouped** data having a **flat** collection of records as an input. 
+
+>caption Flat vs. Grouped Data
+
+![Flat vs Grouped Data in Excel ><](images/build-grouped-data-in-spreadprocessing.png)   
 
 ## Solution
+
+Note that if you want to perform grouping, this data operation should be performed separately and then populate the Worksheet with the grouped rows.
+
+Once you have the grouped data, then, the SpreadProcessing functionality (in a similar way like MS Excel) allows you to assign the outline level to all rows that belong to the same group. To make it clearer, let's have the following example: a flat list of products stored in CSV data for simplicity.
 
 To group data in a worksheet, follow these steps:
 
 ### Preparing Grouped Data
 
-1. Perform grouping on your flat data before populating the worksheet.
-2. Use LINQ or other methods to group rows based on a specific column.
+1. Perform grouping on your flat data (e.g. Northwind.Products) before populating the worksheet.
+2. Use LINQ or other methods to group rows based on a specific column (e.g. CategoryID).
 
 Use the following code snippet to group rows in a worksheet:
 
@@ -163,12 +177,8 @@ Use the following code snippet to group rows in a worksheet:
     }
 ```
 
-
-
 Modify the example to suit your specific data structure and requirements.
 
 ## See Also
 
-- [RadSpreadStreamProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadstreamprocessing/overview)
-- [RadSpreadStreamProcessing API Reference](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model) 
-- [Document Processing Libraries Overview](https://docs.telerik.com/devtools/document-processing/introduction)
+- [Grouping in SpreadProcessing]({%slug radspreadprocessing-features-grouping%})
