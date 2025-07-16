@@ -22,7 +22,7 @@ The __Clipping__ element exposes a single property.
 * __Clip__: Property of type __GeometryBase__ representing the [Geometry]({%slug radpdfprocessing-concepts-geometry%}) that is used to clip the content element.
             
 
-__Example 1__ demonstrates how you can create a Clipping element and assign a __RectangeGeometry__ to its Clip property.
+__Example 1__ demonstrates how you can create a Clipping element and assign a __RectangleGeometry__ to its Clip property.
         
 
 #### __[C#] Example 1: Create clipping__
