@@ -189,4 +189,5 @@ Both properties have a default value of true. The following snippet shows how to
 
 * [Filtering]({%slug radspreadprocessing-features-filtering%})
 * [Sorting]({%slug radspreadprocessing-features-sorting%})
+* [Grouping Data Example Using RadSpreadProcessing]({%slug grouping-data-using-radspreadprocessing%})
 
