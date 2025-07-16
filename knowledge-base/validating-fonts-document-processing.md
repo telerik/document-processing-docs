@@ -1,11 +1,11 @@
 ---
 title: Validating Fonts when Using Telerik Document Processing
-description: Learn how to identify and resolve issues caused by incomplete or corrupt TTF font files in exported PDFs using Telerik Document Processing.
+description: Learn how to identify incomplete or corrupt TTF font files that cause content issues while exporting PDF files using Telerik Document Processing.
 type: how-to
-page_title: Resolving Missing Content Issues in PDF Export Due to Fonts
-meta_title: Resolving Missing Content Issues in PDF Export Due to Fonts
+page_title: Identifying incomplete or corrupted font files causing content issues in exported PDF dcouments
+meta_title: Identifying incomplete or corrupted font files causing content issues in exported PDF documents
 slug: validating-fonts-pdf-document-processing
-tags: word, document, processing, ttf, font, validation, pdf, export
+tags: word, document, processing, ttf, font, validation, pdf, export, spread, fixed, flow, excel
 res_type: kb
 ticketid: 1690314
 ---
@@ -18,7 +18,7 @@ ticketid: 1690314
 
 ## Description
 
-When exporting a document to PDF format using [Telerik RadWordsProcessing]({%slug radwordsprocessing-overview%}), missing content may occur due to issues with the TTF font file. These issues can arise if the font file is incomplete, corrupted, or missing required font tables. This results in missing or improperly rendered text in the exported PDF.
+When exporting a document to PDF format using the Telerik [Document Processing Librararies]({%slug introduction%}), content issues may occur due to incomplete or corrupted font files. These issues can arise if the font file is incomplete, corrupted, or missing required font tables. This results in missing or improperly rendered text in the exported PDF.
 
 This knowledge base article gives some tips and tricks how to validate fonts used in Telerik Document Processing and what tools can check for font file's integrity.
 
@@ -53,7 +53,7 @@ To ensure a font file is complete and compatible with Telerik Document Processin
 - Validate fonts from third-party sources before integrating them.
 - Request official font packages or sources for reliable compatibility.
 - Replace problematic font files with known-good versions to resolve rendering issues.
-- Extend the FontsProvider to log missing or problematic fonts during testing for early detection.
+- You can utilize a [FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) implementation to identify all fonts and styles used in the document. Thus, you can log missing or problematic fonts during testing for early detection.
 
 ## See Also
 
