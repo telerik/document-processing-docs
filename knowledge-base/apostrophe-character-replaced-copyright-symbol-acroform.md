@@ -5,10 +5,17 @@ type: how-to
 page_title: Fixing Apostrophe Display Issue in PDF AcroForm Fields
 meta_title: Fixing Apostrophe Display Issue in PDF AcroForm Fields
 slug: apostrophe-character-replaced-copyright-symbol-acroform
-tags: processing, document, pdf, acroform, font, encoding, text, field
+tags: processing, document, pdf, acroform, font, encoding, text, field, xfa
 res_type: kb
 ticketid: 1692742
 ---
+
+<style>
+img[alt$="><"] {
+  border: 1px solid lightgrey;
+}
+
+</style>
 
 ## Environment
 
@@ -20,7 +27,9 @@ ticketid: 1692742
 
 Learn how to address the issue where a special symbol (e.g. apostrophe character) is replaced by a copyright (or other) symbol in a filled PDF AcroForm using RadPdfProcessing. When the form is opened for editing in a viewer (like Adobe Acrobat), the character appears correctly as an apostrophe in the editor itself. 
 
->note This might be reproduced with other symbols as well, not only with the apostrophe character.
+![apostrophe-character-replaced-copyright-symbol-acroform ><](images/apostrophe-character-replaced-copyright-symbol-acroform.gif)  
+
+>note This might be reproduced with other symbols as well, not only with the apostrophe character. Usually, such behavior may occur with XFA forms. However, from PDF 2.0 (ISO 32000-2) the XFA forms are depreciated.
 
 ## Solution
 
