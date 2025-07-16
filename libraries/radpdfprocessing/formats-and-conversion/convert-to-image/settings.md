@@ -10,7 +10,7 @@ position: 1
 
 # SkiaImageExportSettings
 
-The [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) offers the functionality to export PDF pages ([RadFixedPage]({%slug radfixedpage%}) objects). The public **ExportSettings** property gives access to the **SkiaImageExportSettings** that gives you modification options and further fine-tuning.
+The [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) offers the functionality to export PDF pages ([RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) objects). The public **ExportSettings** property gives access to the **SkiaImageExportSettings** that gives you modification options and further fine-tuning.
 
 The available export settings are:
 
@@ -30,4 +30,4 @@ The example shows how you can create a **SkiaImageExportSettings** object with t
 # See Also
 
 * [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})  
-* [RadFixedPage]({%slug radfixedpage%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
