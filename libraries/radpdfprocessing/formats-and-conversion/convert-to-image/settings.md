@@ -25,9 +25,13 @@ The available export settings are:
 
 As of **Q3 2025** the **SkiaImageExportSettings** offers the **DocumentUnhandledException** event which allows you to handle exceptions while exporting a PDF page (RadFixedPage). 
 
-The example shows how you can create a **SkiaImageExportSettings** object with the desired settings and handle unexpected errors while exporting the PDF document:
+The example shows how you can create a **SkiaImageExportSettings** object with the desired settings and handle unexpected errors while exporting a PDF page (built from scratch) which is not associated with a document:
 
 <snippet id='libraries-pdf-skiaimageformatprovider-exportsettings'/>
+
+The next example shows how to import an existing PDF document, iterate all of its pages and export each page to an image:
+
+<snippet id='radpdfprocessing-formats-and-conversion-imageformatprovider'/>
 
 # See Also
 

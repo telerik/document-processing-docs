@@ -85,31 +85,6 @@ The __ExportAsync__ method allows you to perform the conversion asynchronously.
 
 The __SkiaImageFormatProvider__ exposes the [SkiaImageExportSettings]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageexportsettings%}) which allow you to control the export options.
 
-#### __[C#] Example 3: Set the Settings__
-
-{{region cs-radpdfprocessing-formats-and-conversion-imageformatprovider_2}}
-
-	PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
-	RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"), TimeSpan.FromSeconds(10));
-	SkiaImageFormatProvider imageProvider = new SkiaImageFormatProvider();
-	
-	imageProvider.ExportSettings.ImageFormat = SkiaImageFormat.Png;
-	imageProvider.ExportSettings.ScaleFactor = 0.5;
-	imageProvider.ExportSettings.Quality = 50;
-	imageProvider.ExportSettings.IsAntialiased = false; 
-	
-	int count = 1;
-	foreach (RadFixedPage page in fixedDocument.Pages)
-	{
-		//byte[] resultImage = imageProvider.Export(page); //This method is obsolete since Q4 2024.
-
-		byte[] resultImage = imageProvider.Export(page, TimeSpan.FromSeconds(10));
-		
-	    File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
-	}
-
-{{endregion}}
-
 # See Also
 * [Converting XLSX Content to DOCX Document]({%slug convert-excel-content-to-word-document%}) 
 * [Export Worksheet to image]({%slug spreadprocessing-export-worksheet-to-image-netstandard%})
