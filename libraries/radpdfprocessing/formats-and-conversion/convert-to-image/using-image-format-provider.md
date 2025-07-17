@@ -83,12 +83,7 @@ The __ExportAsync__ method allows you to perform the conversion asynchronously.
 
 ## Export Settings
 
-The __SkiaImageFormatProvider__ exposes the following settings:
-
-* __ImageFormat:__ Allows you to set the image format, the supported values are __JPEG__, __PNG__, and __Webp__.
-* __ScaleFactor:__ Allows you to set the scale factor. The minimum value is 0.1.
-* __Quality:__ The value range is 1 (lowest quality) to 100 (highest quality) inclusive. The default value is 75.
-* __IsAntialiased:__ Gets or sets a value indicating whether the image will be antialiased. The default value is *true*. 
+The __SkiaImageFormatProvider__ exposes the [SkiaImageExportSettings]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageexportsettings%}) which allow you to control the export options.
 
 #### __[C#] Example 3: Set the Settings__
 

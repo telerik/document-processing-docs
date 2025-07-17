@@ -12,6 +12,8 @@ position: 1
 
 The [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) offers the functionality to export PDF pages ([RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) objects). The public **ExportSettings** property gives access to the **SkiaImageExportSettings** that gives you modification options and further fine-tuning.
 
+>important Since the SkiaImageFormatProvider works with PDF pages (RadFixedPage), not a PDF document (RadFixedDocument), it is possible to export detached pages as well which are not associated with a particular PDF document. Hence, any document-related [exception handling mechanism]({%slug radpdfprocessing-handling-exceptions%}) wouldn't be triggered in this case.
+
 The available export settings are:
 
 |Setting|Description|
