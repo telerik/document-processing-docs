@@ -1,15 +1,16 @@
 ---
 title: RadFixedDocument
+description: RadFixedDocument is the main document unit of the PdfProcessing library offered by Telerik Document Processing libraries.
 page_title: RadFixedDocument
 slug: radpdfprocessing-model-radfixeddocument
-tags: radfixeddocument, pdf, merge, create, document, page
+tags: radfixeddocument, pdf, merge, create, document, page, fixed
 published: True
 position: 1
 ---
 
 # RadFixedDocument
 
-__RadFixedDocument__ hosts fixed document content and is the root element in the document elements tree. It holds a collection of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})  elements. 
+__RadFixedDocument__ hosts fixed document content and is the root element in the document elements tree. It holds a collection of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) elements. 
 
 This article will get you familiar with the basics of __RadFixedDocument__. It contains the following sections:
       
@@ -90,21 +91,7 @@ The code from __Example 5__ merges the document created in [__Example 1__](#exam
 
 ## Document Information
 
-__RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocumentInfo__, intended to hold additional information about the document. The __RadFixedDocumentInfo__ class allows to set the following properties:
-
-* __Author__: The author of the document.
-* __Title__: The title of the document.
-* __Description__: Text that describes the content of the document.
-
-#### __[C#] Example 6: Set DocumentInfo__
-
-{{region cs-radpdfprocessing-model-radfixeddocument_3}}
-	document.DocumentInfo.Author = "Jane Doe";
-	document.DocumentInfo.Title = "RadFixedDocument";
-	document.DocumentInfo.Description = "This document is intended to explain the RadFixedDocument class from the RadPdfProcessing library";
-{{endregion}}
-
->Currently the DocumentInfo property is for export purposes only and meta information about documents is stripped when importing.
+__RadFixedDocument__ exposes a __DocumentInfo__ property of type [RadFixedDocumentInfo]({%slug radpdfprocessing-model-radfixeddocumentinfo%}), intended to hold additional information about the document. 
 
 ## See Also
 
