@@ -7,6 +7,8 @@ tags: digital, signature, getting, started
 position: 1
 ---
 
+# Getting Started 
+
 RadPdfProcessing allows adding a digital signature while editing a created from scratch document (or importing an existing one).
 
 >To use the signing functionality in PdfProcessing for **.NET Standard/.NET Core**, you must add a reference to the **System.Security.Cryptography.Pkcs** NuGet package, version 6 or newer (This functionality is available since R1 2022 SP1).
