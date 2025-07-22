@@ -8,9 +8,11 @@ published: True
 position: 1
 ---
 
-# PdfStreamSigner
+# Multiple Digital Signing with PdfStreamSigner
 
 As of **Q2 2025** RadPdfProcessing introduces the **PdfStreamSigner**. The **SignDocument** method it exposes allows the user to insert one or more [Digital Signatures]({%slug radpdfprocessing-features-digital-signature%}) into a PDF document.
+
+>important When adding multiple signatures, make sure the document is exported after each signature before importing it back again.
 
 |Method|Description|
 |----|----|
@@ -21,7 +23,7 @@ The following example shows how to insert multiple [Digital Signatures]({%slug r
 
 >important In .NET Standard use __Telerik.Documents.Primitives.Rect__ instead of __System.Windows.Rect__.
 
->important When adding multiple signatures, make sure the document is exported after each signature before importing it back again.
+
 
 <snippet id='libraries-pdf-features-digital-signature-pdfstreamsigner'/>
 
@@ -31,3 +33,4 @@ The following example shows how to insert multiple [Digital Signatures]({%slug r
 
  * [Digital Signature]({%slug radpdfprocessing-features-digital-signature%})
  * [Signature Field]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
+ * [Multiple Digital Signatures Demo](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)
