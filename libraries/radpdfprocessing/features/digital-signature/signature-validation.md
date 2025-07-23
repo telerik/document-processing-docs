@@ -31,7 +31,7 @@ The following example shows how the validation can be used:
 
 {{region radpdfprocessing-features-digital-signature_3}}
 
-    RadFixedDocument document = new PdfFormatProvider().Import(stream); // The stream containing the document
+    RadFixedDocument document = new PdfFormatProvider().Import(stream, TimeSpan.FromSeconds(10)); // The stream containing the document
     
     string validationStatus;
     

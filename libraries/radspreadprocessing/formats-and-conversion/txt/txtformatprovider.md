@@ -34,7 +34,6 @@ __Example 1__ shows how to import a txt file using a FileStream. The sample inst
 
     using (Stream input = new FileStream(fileName, FileMode.Open))
     {
-        //workbook = formatProvider.Import(input); //This method is obsolete since Q4 2024.
         workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
     }
 
@@ -59,8 +58,6 @@ __Example 2__ demonstrates how to export an existing Workbook to a TXT file. The
 
     using (Stream output = new FileStream(fileName, FileMode.Create))
     {
-        //formatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
-
         formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
     }
 

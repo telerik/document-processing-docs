@@ -91,7 +91,7 @@ To comply with one of the versions of the standard, you need to specify __Compli
 	settings.ComplianceLevel = PdfComplianceLevel.PdfA2B;
 	provider.ExportSettings = settings;
 	
-	return provider.Export(document);
+	return provider.Export(document, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 __RadPdfProcessing__ will do the rest for you. If you also specify encryption for the document, this setting will be ignored since the standard does not allow documents to be encrypted.

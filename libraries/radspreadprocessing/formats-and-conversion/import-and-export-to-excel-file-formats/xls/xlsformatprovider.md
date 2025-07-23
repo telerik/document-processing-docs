@@ -43,8 +43,6 @@ __Example 1__ shows how to import an XLS file using a FileStream. The code assur
 
     using (Stream input = new FileStream(fileName, FileMode.Open))
     {
-        //workbook = formatProvider.Import(input); //This method is obsolete since Q4 2024.
-
         workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
     }
 
@@ -68,8 +66,6 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
 
     using (Stream output = new FileStream(fileName, FileMode.Create))
     {
-        //formatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
-
         formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10)); 
     }
 
@@ -88,8 +84,6 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
     byte[] bytes;
     using (MemoryStream output = new MemoryStream())
     {
-        //formatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
-
         formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
         bytes = output.ToArray();
     }

@@ -113,7 +113,7 @@ To export the document as a docx file, use [DocxFormatProvider]({%slug radwordsp
 {{region cs-radwordsprocessing-getting-started_0}}
 	Using output As Stream = New FileStream("output.docx", FileMode.OpenOrCreate)
         Dim docxProvider As Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider = New Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider()
-        docxProvider.Export(document, output)
+        docxProvider.Export(document, output, TimeSpan.FromSeconds(10))
     End Using
 {{endregion}}
 
@@ -136,7 +136,7 @@ To export the document as a PDF file, use [PdfFormatProvider]({%slug radpdfproce
 {{region cs-radwordsprocessing-getting-started_0}}
 	Using output As Stream = File.OpenWrite("Output.pdf")
         Dim flowPdfProvider As Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider = New Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider()
-        flowPdfProvider.Export(document, output)
+        flowPdfProvider.Export(document, output, TimeSpan.FromSeconds(10))
     End Using
 {{endregion}}
 

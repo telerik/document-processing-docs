@@ -54,7 +54,7 @@ __Example 2__ uses a WebClient to download a `xlsx` file stored on a server. Fur
 	webClient.OpenReadCompleted += (sender, eventArgs) =>
 	{
 	    Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
-	    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = formatProvider.Import(eventArgs.Result);
+	    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = formatProvider.Import(eventArgs.Result, TimeSpan.FromSeconds(10));
 	};
 	
 	webClient.OpenReadAsync(new Uri(FilePath));

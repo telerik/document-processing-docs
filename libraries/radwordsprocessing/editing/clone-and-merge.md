@@ -35,8 +35,8 @@ __RadWordsProcessing__ allows you to merge two __RadFlowDocument__ instance usin
 	byte[] targetByteArray = File.ReadAllBytes("targetDocument.docx");
 	byte[] sourceByteArray = File.ReadAllBytes("sourceDocument.docx");
 
-	targetDocument = docxFormatProvider.Import(targetByteArray);
-	sourceDocument = docxFormatProvider.Import(sourceByteArray);
+	targetDocument = docxFormatProvider.Import(targetByteArray, TimeSpan.FromSeconds(10));
+	sourceDocument = docxFormatProvider.Import(sourceByteArray, TimeSpan.FromSeconds(10));
 
 	// targetDocument will contain merged content and styles. 
 	targetDocument.Merge(sourceDocument);

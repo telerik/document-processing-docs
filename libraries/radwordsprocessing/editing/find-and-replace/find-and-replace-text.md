@@ -43,7 +43,7 @@ Both methods return a collection of **FindResult** instances, which in turn expo
 
 	using (Stream input = File.OpenRead("input.docx"))
 	{
-    	flowDocument = docxFormatProvider.Import(input);
+    	flowDocument = docxFormatProvider.Import(input, TimeSpan.FromSeconds(10));
 	}
 
 	RadFlowDocumentEditor radFlowDocumentEditor = new RadFlowDocumentEditor(flowDocument);

@@ -41,8 +41,6 @@ To convert your documents' pages to images, use the __Export__ method. Note that
 	int count = 1;
 	foreach (RadFixedPage page in fixedDocument.Pages)
 	{
-		//byte[] resultImage = imageProvider.Export(page); //This method is obsolete since Q4 2024.
-
 		byte[] resultImage = imageProvider.Export(page, TimeSpan.FromSeconds(10));
 
 	    File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
@@ -68,8 +66,6 @@ The __ExportAsync__ method allows you to perform the conversion asynchronously.
         await Parallel.ForEachAsync(fixedDocument.Pages, async (page, token) =>
         {
             int currentCount = Interlocked.Increment(ref count); 
-            
-			//byte[]? result = await imageProvider.ExportAsync(page); //This method is obsolete since Q4 2024.
 
 			byte[]? result = await imageProvider.ExportAsync(page, TimeSpan.FromSeconds(10));
 
