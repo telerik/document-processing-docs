@@ -43,7 +43,7 @@ The following code snippets demonstrate how to create a custom implementation of
 
 #### __[C#] Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class__
 
-{{region kb-create-custom-image-properties-resolver1}}
+```csharp
 
 public class ImagePropertiesResolver : ImagePropertiesResolverBase
 {
@@ -184,12 +184,16 @@ public class ImagePropertiesResolver : ImagePropertiesResolverBase
         }
     }
 
-{{endregion}}
+```
 
 #### __[C#] Set the custom implementation to the ImagePropertiesResolver property of the FixedExtensibilityManager__
 
-{{region kb-create-custom-image-properties-resolver2}}
+```csharp
 
 	ImagePropertiesResolver customImagePropertiesResolver  = new ImagePropertiesResolver(); 
 	FixedExtensibilityManager.ImagePropertiesResolver = customImagePropertiesResolver; 
-{{endregion}}
+```
+
+## See Also
+
+- [Cross-Platform Images Support in PdfProcessing]({%slug radpdfprocessing-cross-platform-images%})
