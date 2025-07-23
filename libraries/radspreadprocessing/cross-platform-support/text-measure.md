@@ -21,6 +21,7 @@ The **SpreadExtensibilityManager** static class exposes the **TextMeasurer** pro
 
 - [SimpleTextMeasurer](#simpletextmeasurer): This is the default value.
 - [SpreadFixedTextMeasurer](#spreadfixedtextmeasurer): An additional implementation that provides more accurate results than the SimpleTextMeasurer.
+- [SkiaTextMeasurer](#skiatextmeasurer): A cross-platform text measurer that supports advanced font features like kerning, ligatures, and contextual shaping.
 - [Custom implementation](#custom-text-measurer): Implementing the abstract SpreadTextMeasurerBase class enables you to provide your own implementation for text measuring.
 
 ## SimpleTextMeasurer
@@ -49,11 +50,35 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
     SpreadExtensibilityManager.TextMeasurer = fixedTextMeasurer;
 {{endregion}}
 
+## SkiaTextMeasurer
+
+The SkiaTextMeasurer is a cross-platform text measurer that provides consistent text layout behavior across all supported platforms. Unlike other available measurer implementations, it also supports advanced font features like kerning, ligatures, contextual shaping, and more. This implementation reduces the need for maintaining multiple text measurement implementations across different platforms.
+
+### Required References
+
+To use the **SkiaTextMeasurer** class, you can reference it in one of the following ways:
+
+**Using NuGet Packages (Recommended)**
+
+- **Telerik.Documents.TextMeasurer.Skia** - This package automatically includes all required dependencies
+
+**Using Assembly References**
+
+If you prefer to reference assemblies directly, you need:
+
+- **Telerik.Documents.TextMeasurer.Skia.dll** - Main assembly containing the SkiaTextMeasurer class
+- **Telerik.Text.Skia.dll** - Required dependency of Telerik.Documents.TextMeasurer.Skia.
+- **SkiaSharp.HarfBuzz.dll** (and all of its dependencies) - Required dependency of Telerik.Text.Skia.dll, along with all its dependencies
+
+#### [C#] Example 2: Set the SkiaTextMeasurer as a text measurer
+
+<snippet id='libraries-spread-crossplatform-textmeasuring-setskiatextmeasurer'/>
+
 ## Custom Text Measurer
 
 You can assign any **SpreadTextMeasurerBase** implementation to the **SpreadExtensibilityManager.TextMeasurer** property. All you should do is to inherit the abstract **SpreadTextMeasurerBase**, implement the required members and set the new implementation to the TextMeasurer property.
 
-#### **[C#] Example 2: Create a custom implementation inheriting the SpreadTextMeasurerBase abstract class**
+#### **[C#] Example 3: Create a custom implementation inheriting the SpreadTextMeasurerBase abstract class**
 
 {{region cs-radspreadprocessing-custommeasurer}}
 
@@ -101,7 +126,7 @@ You can assign any **SpreadTextMeasurerBase** implementation to the **SpreadExte
 {{endregion}}
 
 
-#### **[C#] Example 3: Set the custom implementation as a text measurer**
+#### **[C#] Example 4: Set the custom implementation as a text measurer**
 
 {{region cs-radspreadprocessing-custommeasurer2}}
 
