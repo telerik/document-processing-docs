@@ -75,32 +75,7 @@ The following example shows how the validation can be used:
 
 >To evaluate a certificate as trusted, it must be added to the [trusted certificates on your machine](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
 
-## Signature Encodings
 
-RadPdfProcessing enables you to sign and validate signature fields using standard signature encodings:
-
-* adbe.x509.rsa_sha1 (PKCS #1)
-
-* adbe.pkcs7.sha1 (PKCS #7)
-
-* adbe.pkcs7.detached (PKCS #7 Detached)
-
-## Signature Flags
-
-The signature flags were introduced in R2022 SP1. You can set the flags with the following code:
-
-#### **[C#] Example: Set signature flags**
-
-{{region radpdfprocessing-features-digital-signature_5}}
-	
-	pdfDocument.AcroForm.SignatureFlags = SignatureFlags.None;
-
-{{endregion}}
-
-The possible values are: 
-* __None__
-* __SignaturesExist:__ If set, the document contains at least one signature field.
-* __AppendOnly:__ The document contains signatures that may be invalidated if the file is saved in a way that alters its previous contents.
 
 ## See Also
 
@@ -108,3 +83,4 @@ The possible values are:
 * [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})
 * [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
+* [Validate Digital Signature Demo](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature)
