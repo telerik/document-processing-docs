@@ -37,3 +37,4 @@ There are different possibilities for adding marked content to a RadFixedDocumen
  * [Block]({%slug radpdfprocessing-editing-block%})
  * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
+ * [Tagged PDF]({%slug radpdfprocessing-model-tagged-pdf%})
