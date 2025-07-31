@@ -21,7 +21,7 @@ The **SpreadExtensibilityManager** static class exposes the **TextMeasurer** pro
 
 - [SimpleTextMeasurer](#simpletextmeasurer): This is the default value.
 - [SpreadFixedTextMeasurer](#spreadfixedtextmeasurer): An additional implementation that provides more accurate results than the SimpleTextMeasurer.
-- [SkiaTextMeasurer](#skiatextmeasurer): A cross-platform text measurer that supports advanced font features like kerning, ligatures, and contextual shaping.
+- [SkiaTextMeasurer](#skiatextmeasurer): A cross-platform text measurer that supports advanced font features such as kerning, ligatures, and contextual shaping, with a trade-off in performance. It relies on the fonts registered on the current machine.
 - [Custom implementation](#custom-text-measurer): Implementing the abstract SpreadTextMeasurerBase class enables you to provide your own implementation for text measuring.
 
 ## SimpleTextMeasurer
