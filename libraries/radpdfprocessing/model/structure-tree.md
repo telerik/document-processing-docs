@@ -5,7 +5,7 @@ page_title: StructureTree
 slug: radpdfprocessing-model-structure-tree
 tags: fixeddocument, pdf, accessibility, structure, document, tree, fixed
 published: True
-position: 1
+position: 7
 ---
 
 # StructureTree

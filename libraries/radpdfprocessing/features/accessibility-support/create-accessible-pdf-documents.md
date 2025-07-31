@@ -8,17 +8,11 @@ published: True
 position: 1
 ---
 
-## Environment
+# Creating Accessible PDF Documents
 
 |Version|**Q3 2025** (or newer)|
 |----|----|
 
-## Description
-
-Learn how to generate an accessible PDF document using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
-
-
-## Solution
 
 
  ```csharp

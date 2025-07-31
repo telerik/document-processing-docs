@@ -5,7 +5,7 @@ page_title: Tagged PDF
 slug: radpdfprocessing-model-tagged-pdf
 tags: marked, content, tag, pdf, accessibility
 published: True
-position: 0
+position: 7
 ---
 
 # Tagged PDF
