@@ -212,6 +212,9 @@ navigation:
     libraries/radpdfprocessing/features/digital-signature:
         title: Digital Signature
         position: 2
+    libraries/radpdfprocessing/features/accessibility-support:
+        title: Accessibility Support
+        position: 0
     libraries/radpdfprocessing/features/embedded-file-streams:
         title: Embedded File Streams
         position: 5
