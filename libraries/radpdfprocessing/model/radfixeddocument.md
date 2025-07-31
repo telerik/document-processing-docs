@@ -32,6 +32,10 @@ __RadFixedDocument__ is the root that contains all other elements in the __RadPd
 |__DocumentInfo__|Contains additional meta information about the document like author, title, etc.|
 |**Actions**|Gets the document [actions]({%slug radpdfprocessing-model-action-collections%}#documentactioncollection) collection. (introduced in Q4 2024)| 
 |**HasLayers**|Gets whether the document has layers. (introduced in Q4 2024)|
+|**Language**|Gets or sets the language of the document. (introduced in Q3 2025)|
+|**StructureTree**| Gets or sets the structure tree of the document. (introduced in Q3 2025)|
+|**AutoTag**|Gets a value indicating whether the document is set to automatically tag elements. If true, the document will automatically tag elements with structure tags when they are added. (introduced in Q3 2025)|
+|**ViewerPreferences**|Gets the viewer preferences controlling the way the document is to be presented on the screen or in print. If no such dictionary is specified, viewing and printing applications should behave in accordance with their own current user preference settings. (introduced in Q3 2025)|
 
 >note A complete SDK example how to generate a document is available [here](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/GenerateDocument).
             
