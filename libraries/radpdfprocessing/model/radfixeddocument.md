@@ -22,7 +22,7 @@ This article will get you familiar with the basics of __RadFixedDocument__. It c
 
 ## What Is RadFixedDocument
 
-__RadFixedDocument__ is the root that contains all other elements in the __RadPdfProcessing__ model. It exposes the following properties:
+__RadFixedDocument__ is the root that contains all other elements in the __RadPdfProcessing__ model. It exposes the following public API:
 
 |Property Name|Description|
 |----|----|
@@ -31,11 +31,28 @@ __RadFixedDocument__ is the root that contains all other elements in the __RadPd
 |__Destinations__|A collection that contains all [Destinations]({%slug radpdfprocessing-model-annotations-links%}#destination) in the document.|
 |__DocumentInfo__|Contains additional meta information about the document like author, title, etc.|
 |**Actions**|Gets the document [actions]({%slug radpdfprocessing-model-action-collections%}#documentactioncollection) collection. (introduced in Q4 2024)| 
+|**NamedDestinations**|Gets the collection of named destinations that provide bookmark-like navigation points within the document.|
+|**EmbeddedFiles**|Gets the collection of files embedded within this document as attachments.|
+|**AcroForm**|Gets the interactive form (AcroForm) that manages form fields elements within the document.|
+|**Bookmarks**|Gets the hierarchical collection of bookmarks (outline items) that provide structured navigation through the document.|
+|**PageMode**|Gets or sets the page display mode that determines how the document appears when first opened in a PDF viewer.|
 |**HasLayers**|Gets whether the document has layers. (introduced in Q4 2024)|
 |**Language**|Gets or sets the language of the document. (introduced in Q3 2025)|
 |**StructureTree**| Gets or sets the structure tree of the document. (introduced in Q3 2025)|
 |**AutoTag**|Gets a value indicating whether the document is set to automatically tag elements. If true, the document will automatically tag elements with structure tags when they are added. (introduced in Q3 2025)|
 |**ViewerPreferences**|Gets the viewer preferences controlling the way the document is to be presented on the screen or in print. If no such dictionary is specified, viewing and printing applications should behave in accordance with their own current user preference settings. (introduced in Q3 2025)|
+
+|Method|Description|
+|----|----|
+|**Merge**|Merges this document with the specified source document.|
+|**Clone**|Clones the document content.|
+|**ToSimpleTextDocument**|Converts the current document to a plain text document.|
+
+|Event|Description|
+|----|----|
+|**MergedFieldNameResolving**|Occurs when trying to resolve conflicts between the fields names while merging RadFixedDocument instances.|
+|**MergedEmbeddedFileNameResolving**|Occurs when trying to resolve conflicts between the embedded file names while merging RadFixedDocument instances.|
+|**MergedJavaScriptNameResolving**|Occurs when trying to resolve conflicts between the JavaScript names while merging RadFixedDocument instances.|
 
 >note A complete SDK example how to generate a document is available [here](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/GenerateDocument).
             
