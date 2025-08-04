@@ -68,7 +68,7 @@ This example demonstrates how to use the **PartialContextQuestionProcessor** wit
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context'/>
 
-#### Example 2: Using PartialContextQuestionProcessor with Custom Embeddings (.NET Standard/.NET Framework)
+#### Example 2: Using PartialContextQuestionProcessor with Custom Embeddings (.NET Standard)
 
 This example demonstrates how to use the **PartialContextQuestionProcessor** with a custom embeddings storage implementation as described in the [Custom IEmbeddingsStorage Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembeddingsstorage) section:
 
