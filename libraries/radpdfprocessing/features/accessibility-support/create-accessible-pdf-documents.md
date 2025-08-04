@@ -13,13 +13,25 @@ position: 1
 |Version|**Q3 2025** (or newer)|
 |----|----|
 
+This article aims to demonstrate how to generate an accessible PDF document using Telerik Document Processing. 
 
+RadFixedDocument offers a constructor allowing to specify the **AutoTag** property value which is *false* by default. This gives the developer the oportunity to choose whether to build the [StructureTree]({%slug radpdfprocessing-model-structure-tree%}) from scratch or leave the library auto-tag the elements. 
 
- ```csharp
-    
-```
+##  Creating Accessible PDF Documents and Building the StructureTree
 
+When exporting the document, specify the [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}#tagging-strategy) so the document should not be tagged automatically and use the existing StructureTree:
 
+<snippet id='libraries-pdf-features-accessible-pdf'/>
+
+|PDF Accessibility Checker tool|Logical Structure|Properties|
+|----|----|----|
+|![Validate with PDF Accessibility Checker](images/accessible-pdf-validity.png)|![Logical Structure of PDF](images/accessible-pdf-logical-structure.png)|  ![Validate with PDF Accessibility Checker](images/accessible-pdf-logical-structure-properties.png)|
+
+## Creating Accessible PDF Documents with Auto-Tagging
+
+This example shows how to add content to a PDF doocument and leave the PdfProcessing's engine build the [StructureTree]({%slug radpdfprocessing-model-structure-tree%}) automatically:
+
+<snippet id='libraries-pdf-features-accessible-pdf-with-auto-tagging'/>
 
 ## See Also
 
@@ -27,3 +39,4 @@ position: 1
 * [Tagged PDF]({%slug radpdfprocessing-model-tagged-pdf%})
 * [Marked Content]({%slug radpdfprocessing-model-marked-content%})
 * [StructureTree]({%slug radpdfprocessing-model-structure-tree%})
+* [Export Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings)

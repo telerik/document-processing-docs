@@ -87,3 +87,4 @@ The following sections demonstrate how to tag the different elements of a RadFix
  * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
  * [StructureTree]({%slug radpdfprocessing-model-structure-tree%})
+ * [Accessibility Support]({%slug create-accessible-pdf-documents%})

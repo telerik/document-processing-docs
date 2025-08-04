@@ -17,7 +17,7 @@ The **StructureTree** class represents the root of the structure elements tree o
 
 ## StructureElement
 
-Represents a structure element in the document.
+The class represents a structure element in the document. The available public properties that can be set are listed in the table:
 
 |Property|Description|
 |----|----|
@@ -27,7 +27,8 @@ Represents a structure element in the document.
 |**Language**|Gets or sets the language of the structure element.|
 |**StandardStructureType**|Gets the type of the structure element.|
 |**CustomStructureType**|Gets the custom type of the structure element.|
-|||
+|**TaggedElements**|Gets a read-only collection of structural elements that have been tagged with this structure element.|
+|**Parent**|Gets or sets the parent structure tree of the structure element.|
 
 
 ## Structure Tag Types
@@ -92,3 +93,4 @@ A set of standard structure types define the meaning of structure elements, such
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) 
 * [Tagged PDF]({%slug radpdfprocessing-model-tagged-pdf%})
 * [Marked Content]({%slug radpdfprocessing-model-marked-content%})
+* [Accessibility Support]({%slug create-accessible-pdf-documents%})
