@@ -24,65 +24,28 @@ PDF/A standard is designed to use the PDF format for archiving documents. This m
 
 ## Compliance Levels
 
-There are three major versions of the standard – PDF/A-1 (2005), PDF/A-2 (2011), PDF/A-3 (2013).
+There are three major versions of the standard – PDF/A-1 (2005), PDF/A-2 (2011), PDF/A-3 (2013). RadPdfProcessing supports the following PDF/A compliance levels:
 
-### PDF/A-1
+|Compliance Level|Description|
+|----|----|
+|**None**|Specify no compliance level.|
+|**PdfA1B**|PDF/A-1b compliance level. Ensures reliable reproduction of the visual appearance of the document.|
+|**PdfA1A**|PDF/A-1a compliance level. Ensures that document content can be searched and re-purposed. Requires document structure, tagged PDF, Unicode character maps, and language specification.|
+|**PdfA2B**|PDF/A-2b compliance level. Similar to PDF/A-1b but based on PDF Reference 1.7.|
+|**PdfA2A**|PDF/A-2a compliance level. Similar to PDF/A-1a but based on PDF Reference 1.7.|
+|**PdfA2U**|PDF/A-2u compliance level. Similar to PDF/A-2b with the additional requirement that all text has Unicode mapping.|
+|**PdfA3B**|PDF/A-3b compliance level. Similar to PDF/A-2b but allows embedding of arbitrary file formats.|
+|**PdfA3A**|PDF/A-3a compliance level. Similar to PDF/A-2a but allows embedding of arbitrary file formats.|
+|**PdfA3U**|PDF/A-3u compliance level. Requires character mapping to Unicode and allows embedding of arbitrary file formats.|
+|**PdfUA1**|PDF/UA-1 compliance level. Ensures accessibility for users with disabilities.|
 
-PDF/A-1 standard uses the PDF Reference 1.4 and specifies two levels of compliance. 
-
-__PDF/A-1b__
-
-Its goal is to ensure reliable reproduction of the visual appearance of the document.
-
-__PDF/A-1a__
-
-Its objective is to ensure that documents content can be searched and re-purposed. This compliance level has some additional requirements:
-
-* Document structure must be included.
-* Tagged PDF.
-* Unicode character maps
-* Language specification.
-
-> __RadPdfProcessing__ does not support PDF/A-1a level of compliance.
-
-### PDF/A-2
-
-Pdf/A-2 standard uses the PDF Reference 1.7. In addition, it has the following features:
-
-* Support for JPEG2000 image compression.
-* Support for transparency effects and layers.
-
-It defines three conformance levels.
-
-__PDF/A-2a__
-
-Corresponding to the PDF/A-1a
-
->__RadPdfProcessing__ does not support PDF/A-2a level of compliance.
-
-__PDF/A-2b__
-
-This level corresponds to the PDF/A-1b.
-
-__PDF/A-2u__
-
-Similar to PDF/A-2b level with the additional requirement that all text in the document has Unicode mapping.
-
-### PDF/A-3
-
-PDF/A-3 differs from PDF/A-2 in only one regard – it allows embedding of arbitrary file formats into the PDF file.
-
-__PDF/A-3u__
-
-This conformance level requires character mapping to Unicode and it doesn't require embedded logical structure (like structure tree and tags).
+>note Any files embedded within a PDF/A-compliant document must also comply with the PDF/A standard.
 
 ## How to Conform to PDF/A Standard
 
-The __PdfFormatProvider__ class allows to export a __RadFixedDocument__ to PDF and specify some specific settings when doing so. More information about the available export settings can be found in the  [Settings article]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}). 
+The **PdfFormatProvider** class allows the export of a **RadFixedDocument** to PDF while also specifying available [export settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings). 
 
-To comply with one of the versions of the standard, you need to specify __ComplianceLevel__ different from __None__. The snippet in __Example 1__ shows how this can be achieved. 
-
-#### __[C#] Example 1: Export PDF/A compliant document__
+To comply with any of the standards, you need to set the **ComplianceLevel** property to a different value than **None**:
 
 {{region cs-radpdfprocessing-howto-comply-with-pdfa-standard_0}}
 	PdfFormatProvider provider = new PdfFormatProvider();
@@ -90,14 +53,27 @@ To comply with one of the versions of the standard, you need to specify __Compli
 	PdfExportSettings settings = new PdfExportSettings();
 	settings.ComplianceLevel = PdfComplianceLevel.PdfA2B;
 	provider.ExportSettings = settings;
-	
-	return provider.Export(document, TimeSpan.FromSeconds(10));
 {{endregion}}
 
-__RadPdfProcessing__ will do the rest for you. If you also specify encryption for the document, this setting will be ignored since the standard does not allow documents to be encrypted.
+#### Accessibility Compliance
 
-> PDF/A standard requires documents to contain all fonts used in them. __RadPdfProcessing__ does not support embedding of the standard 14 fonts used in PDF documents, so using them will prevent the document from complying with the standard. More information about font embedding is available in the [Fonts]({%slug radpdfprocessing-concepts-fonts%}) article.
+To comply with the [accessibility]({%slug create-accessible-pdf-documents%}) requirements of the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standards, you must also set the **TaggingStrategy** property of the PdfFormatProvider's **PdfExportSettings**. 
 
+{{region cs-radpdfprocessing-howto-comply-with-pdfa-standard_1}}
+	PdfFormatProvider provider = new PdfFormatProvider();
+	
+	PdfExportSettings settings = new PdfExportSettings();
+	settings.ComplianceLevel = PdfComplianceLevel.PdfA1A;
+	settings.TaggingStrategy = TaggingStrategyType.UseExisting;
+
+	provider.ExportSettings = settings;	
+{{endregion}}
+
+This ensures that the exported PDF document is properly tagged, which is essential for meeting these standards' requirements.
+
+> If you specify an encryption for the document, it will be ignored since the standard does not allow documents to be encrypted.
+
+> PDF/A standard requires documents to contain all fonts used in them. RadPdfProcessing does not support embedding of the standard 14 fonts used in PDF documents, so using them will prevent the document from complying with the standard. More information about font embedding is available in the [Fonts]({%slug radpdfprocessing-concepts-fonts%}) article.
 
 ## See Also
 
