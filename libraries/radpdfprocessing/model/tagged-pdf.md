@@ -35,51 +35,55 @@ The following sections demonstrate how to tag the different elements of a RadFix
 
 ### Tagging a TextFragment
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-text-fragment'/>
+<snippet id='libraries-pdf-tagged-pdf-text-fragment'/>
 
 ### Tagging an Annotation 
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-annotation'/>
+<snippet id='libraries-pdf-tagged-pdf-annotation'/>
+
+### Tagging a Link Annotation 
+
+<snippet id='libraries-pdf-libraries-pdf-tag-link-annotation'/>
 
 ### Tagging a Table
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-table'/>
+<snippet id='libraries-pdf-tagged-pdf-table'/>
 
 ### Tagging a List
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-list'/>
+<snippet id='libraries-pdf-tagged-pdf-list'/>
 
 ### Advanced Example
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-advanced'/>
+<snippet id='libraries-pdf-tagged-pdf-advanced'/>
 
 ### Auto-Tagging 
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-auto-tagging'/>
+<snippet id='libraries-pdf-tagged-pdf-auto-tagging'/>
 
 ### Tagging a Form Field
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-form-field'/>
+<snippet id='libraries-pdf-tagged-pdf-form-field'/>
 
 ### Tagging a FormField using FixedContentEditor
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-form-field-with-fixed-content-editor'/>
+<snippet id='libraries-pdf-tagged-pdf-form-field-with-fixed-content-editor'/>
 
 ### Auto-Tagging a FormField using FixedContentEditor
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-form-field-with-fixed-content-editor-auto-tagging'/>
+<snippet id='libraries-pdf-tagged-pdf-form-field-with-fixed-content-editor-auto-tagging'/>
 
 ### Tagging a Form
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-form'/>
+<snippet id='libraries-pdf-tagged-pdf-form'/>
 
 ### Auto-Tagging a Form
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-form-auto-tagging'/>
+<snippet id='libraries-pdf-tagged-pdf-form-auto-tagging'/>
 
 ### Tagging a Link
 
-<snippet id='libraries-pdf-features-digital-signature-tagged-pdf-link'/>
+<snippet id='libraries-pdf-tagged-pdf-link'/>
 
 ## See Also
 

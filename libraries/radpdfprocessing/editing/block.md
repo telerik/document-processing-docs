@@ -121,6 +121,19 @@ There are two more overloads of InsertForm() that enables you to pass the size t
 
 >For more information on how to create a form, check the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) articles.
 
+### Inserting Link Annotation
+
+The following example shows how to insert a link inside the text:
+
+#### __[C#] Example: Insert a text link__
+
+{{region cs-radpdfprocessing-editing-block_text-link}}
+
+	Block block = new Block();
+    block.InsertHyperlinkStart(new Uri("https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/getting-started"));
+    block.InsertText(text4);
+    block.InsertHyperlinkEnd();
+{{endregion}}
 
 ### Changing Current Styles
 
