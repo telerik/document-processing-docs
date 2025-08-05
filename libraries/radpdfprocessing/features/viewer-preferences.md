@@ -32,7 +32,7 @@ The ViewerPreferences class provides the following properties:
 |**NumberOfCopies**|NumberOfCopiesType|The number of copies to be printed when the print dialog is opened.|One|
 |**Direction**|DirectionType|The predominant reading order for text. Affects relative positioning of pages when displayed side by side or printed n-up.|L2R|
 
->important If a document is created with the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standard, the **ShouldDisplayDocumentTitle** setting is automatically set to **true** to comply with the standard's requirements.
+>important If a document is created with the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standard, the **ShouldDisplayDocumentTitle** setting is automatically set to **true** to comply with the standard's [accessability]({%slug create-accessible-pdf-documents%}) requirements.
 
 #### **[C#] Example: Setting viewer preferences**
 
