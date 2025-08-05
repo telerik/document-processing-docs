@@ -53,27 +53,13 @@ The **PdfFormatProvider** class allows the export of a **RadFixedDocument** to P
 
 To comply with any of the standards, you need to set the **ComplianceLevel** property to a value different than **None**:
 
-{{region cs-radpdfprocessing-howto-comply-with-pdfa-standard_0}}
-	PdfFormatProvider provider = new PdfFormatProvider();
-	
-	PdfExportSettings settings = new PdfExportSettings();
-	settings.ComplianceLevel = PdfComplianceLevel.PdfA2B;
-	provider.ExportSettings = settings;
-{{endregion}}
+<snippet id='libraries-pdf-concepts-compliance-ensure-compliance'/>
 
 ### Accessibility Compliance
 
 To comply with the [accessibility]({%slug create-accessible-pdf-documents%}) requirements of the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standards, you must also set the [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}) property of the PdfFormatProvider's **PdfExportSettings**. 
 
-{{region cs-radpdfprocessing-howto-comply-with-pdfa-standard_1}}
-	PdfFormatProvider provider = new PdfFormatProvider();
-	
-	PdfExportSettings settings = new PdfExportSettings();
-	settings.ComplianceLevel = PdfComplianceLevel.PdfA1A;
-	settings.TaggingStrategy = TaggingStrategyType.UseExisting;
-
-	provider.ExportSettings = settings;	
-{{endregion}}
+<snippet id='libraries-pdf-concepts-compliance-ensure-accessability-compliance'/>
 
 This ensures that the exported PDF document is properly tagged, which is essential for meeting these standards' requirements.
 
