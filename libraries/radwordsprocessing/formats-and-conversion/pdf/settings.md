@@ -66,7 +66,7 @@ __Example 2__ shows how to register a custom *ChineseCountingConverter* class in
 ## See Also
 
 * [PdfProcessing Export Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})
-* [PdfProcessing PDF/A Compliancy]({%slug radpdfprocessing-howto-comply-with-pdfa-standard%})
+* [PdfProcessing PDF/A Compliancy]({%slug radpdfprocessing-concepts-comply-with-pdfa-standard%})
 
 
 

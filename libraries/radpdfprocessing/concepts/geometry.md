@@ -4,7 +4,7 @@ page_title: Geometry
 slug: radpdfprocessing-concepts-geometry
 tags: geometry
 published: True
-position: 2
+position: 6
 ---
 
 # Geometry

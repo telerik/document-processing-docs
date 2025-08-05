@@ -15,7 +15,7 @@ position: 1
 
 This article aims to demonstrate how to generate an accessible PDF document using Telerik Document Processing. 
 
-To take advantage of the accessibility feature, the document must be **PDF/A-1a**, **PDF/A-2a**, **PDF/A-3a**, or **PDF/UA-1** compliant. To achieve this, the [PdfComplianceLevel]({%slug radpdfprocessing-howto-comply-with-pdfa-standard%}#accessibility-compliance) and [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}) properties of the PdfFormatProvider's **PdfExportSettings** must be set accordingly.
+To take advantage of the accessibility feature, the document must be **PDF/A-1a**, **PDF/A-2a**, **PDF/A-3a**, or **PDF/UA-1** compliant. To achieve this, the [PdfComplianceLevel]({%slug radpdfprocessing-concepts-comply-with-pdfa-standard%}#accessibility-compliance) and [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}) properties of the PdfFormatProvider's **PdfExportSettings** must be set accordingly.
 
 RadFixedDocument offers a constructor allowing to specify the **AutoTag** property value which is *false* by default. This gives the developer the opportunity to choose whether to build the [StructureTree]({%slug radpdfprocessing-model-structure-tree%}) from scratch or leave the library auto-tag the elements.
 

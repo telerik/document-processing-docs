@@ -1,7 +1,7 @@
 ---
 title: How to Comply with PDF/A Standard
 page_title: How to Comply with PDF/A Standard
-slug: radpdfprocessing-howto-comply-with-pdfa-standard
+slug: radpdfprocessing-concepts-comply-with-pdfa-standard
 tags: pdfa,standard
 published: True
 position: 1
