@@ -5,7 +5,7 @@ type: how-to
 page_title: Simulating Mail Merge with HTML content by Utilizing the Find and Replace Functionality
 meta_title: Simulating Mail Merge with HTML content by Utilizing the Find and Replace Functionality
 slug: simulating-mail-merge-with-html-content
-tags: wordsprocessing,telerik document processing,mail merge,html content,html format provider
+tags: words, processing,telerik, document, mail, merge, html, content, find, replace
 res_type: kb
 ticketid: 1694621
 ---
@@ -18,19 +18,16 @@ ticketid: 1694621
 
 ## Description
 
-I want to perform mail merge using Telerik Document Processing Library, where HTML content needs to replace placeholders in a DOCX template. When performing mail merge, the library binds plain HTML text instead of rendering the HTML with formatting. In some cases, using the HtmlFormatProvider results in corrupted documents.
+This article demonstrates a sample approach how to simulate [mail merge]({%slug radwordsprocessing-editing-mail-merge%}), where HTML content needs to replace placeholders in a DOCX template. When performing mail merge, the WordProcessing library binds plain HTML text instead of rendering the HTML with formatting.
 
-This knowledge base article also answers the following questions:
-- How to insert formatted HTML content in mail merge using Telerik Document Processing?
-- How to replace placeholders with styled HTML content in RadFlowDocument?
-- How to use HtmlFormatProvider correctly in Telerik WordsProcessing?
+![Replace Placeholders with HTML content in DOCX template ><](images/simulating-mail-merge-with-html-content.png) 
 
 ## Solution
 
-To render HTML content during mail merge, use the find-and-replace functionality instead of the default mail merge engine. Replace placeholders with styled HTML content using the following steps:
+To render HTML content during mail merge, use the [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%}) functionality instead of the default mail merge engine. Replace placeholders with styled HTML content using the following steps:
 
-1. Import the HTML content using HtmlFormatProvider.
-2. Import the DOCX template using DocxFormatProvider.
+1. Import the HTML content using [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}).
+2. Import the DOCX template using [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
 3. Find placeholders in the template and replace them with the imported HTML content.
 
 ### Code Example
@@ -80,11 +77,11 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 ### Notes:
 - Replace `<<EXSUSection>>` with your placeholder text.
 - Modify the code to suit your template and requirements.
-- Ensure the provided HTML content is supported by HtmlFormatProvider.
+- Ensure the provided HTML content is [supported]({%slug radwordsprocessing-formats-and-conversion-html-supported-elements%}) by HtmlFormatProvider.
 
 ## See Also
 
-- [HtmlFormatProvider Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/html/htmlformatprovider)
-- [DocxFormatProvider Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/word-file-formats/docx/docxformatprovider)
-- [Mail Merge Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/editing/mail-merge)
-- [Replace Text with Document Elements](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/editing/find-and-replace/replace-document-elements)
+- [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
+- [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
+- [Mail Merge Documentation]({%slug radwordsprocessing-editing-mail-merge%})
+- [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%}) 
