@@ -29,6 +29,7 @@ position: 0
 * Font and paragraphs formatting, tables, images, comments, hyperlinks, fields and a lot more are supported.
 * Mail merge: Generate documents using template document and a data set, e.g. "Thank you" letters to all employees.
 * Merge different documents into a single one controlling how their styles should be merged.
+* GenAI-powered Document Insights
 
 The document model of the library provides support for:
 
@@ -41,6 +42,7 @@ The document model of the library provides support for:
 |[**Find and Replace**]({%slug radwordsprocessing-editing-find-and-replace%})|RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone.|
 |[**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%})|It is intended to simplify the process of creating and modifying a document and achieve the same results as you would using the style properties and child collections of the document elements with less amount of code.|
 |**Formatting**|In addition to the styles, RadWordsProcessing provides support for different types of formatting so you can format any of the document elements: - **Character formatting**: Font size, font color, font name, bold, italic, underline, etc. - **Paragraph formatting**: Line spacing, alignment, indentation, spacing before and after, etc. - **Table formatting**: Enables you to change the alignment, borders, shading, spacing and padding, and more. - **Modifying the section properties** to adjust the page size, orientation, margins, headers and footers, etc.|
+|**GenAI-powered Document Insights**|Enables you to easily extract insights from Word documents using Large Language Models (LLMs). This functionality enables you to summarize document content and ask questions about it, with the AI providing relevant answers based on the document's content. [Read More]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-overview%})|
 
 ## Model
 

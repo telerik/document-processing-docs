@@ -32,6 +32,8 @@ The API of RadPdfProcessing contains two different editors,  [RadFixedDocumentEd
 * Digital signatures
     * Signing a document with digital signature.
     * Validate digital signature of already signed document.
+* GenAI-powered Document Insights
+* Accessibility Support
             
 The document model of the library provides support for:
 
@@ -59,6 +61,7 @@ The document model of the library provides support for:
 |[**JavaScript Actions and Trigger Events**]({%slug radpdfprocessing-model-javascript-actions%})|As of Q4 2024 you can import or export the javascript actions associated with pages, form fields, etc. so that they can be executed when the exported document is opened with Adobe Acrobat. |
 |[**Accessibility Support**]({%slug create-accessible-pdf-documents%})|Offers accessibility support of documents to users with disabilities.|
 | [**Viewer Preferences**]({%slug radpdfprocessing-features-viewer-preferences%}) | Control how PDF documents are displayed and behave in PDF viewers, including window behavior, UI visibility, and print settings. |
+|**GenAI-powered Document Insights**|Enables you to easily extract insights from PDF documents using Large Language Models (LLMs). This functionality enables you to summarize document content and ask questions about it, with the AI providing relevant answers based on the document's content. [Read More]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
 
 # See Also
 
