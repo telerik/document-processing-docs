@@ -15,7 +15,7 @@ This article explains the structure of __RadPdfProcessing__'s document model and
 
 [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) is the root element of all document elements. All document elements inherit from the __FixedDocumentElementBase__ abstract class. The diagram below describes the hierarchy in __RadPdfProcessing__:
 
-* FixedDocumentElementBase
+* **FixedDocumentElementBase**
   * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
   * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}): IContentRootElement
   * [Annotation]({%slug radpdfprocessing-model-annotations-overview%})
@@ -57,10 +57,18 @@ This article explains the structure of __RadPdfProcessing__'s document model and
 
 __RadFixedDocument__ represents a tree of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) where the fixed content is hosted. The diagram below describes the composition of the fixed content. The document elements are denoted in black and collections - in orange.
 
-
  * RadFixedDocument
+   * [Pages]({%slug radpdfprocessing-model-radfixedpage%}) 
+     * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
+     * [Actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) (PageActionCollection)
+   * [NamedDestinations]({%slug radpdfprocessing-model-named-destinations%})
+   * [EmbeddedFiles]({%slug radpdfprocessing-embedded-file-streams-overview%})
+   * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})
+      * [FormFields]({%slug radpdfprocessing-model-interactive-forms-form-fields %})
+   * [Bookmarks]({%slug radpdfprocessing-features-bookmarks%})
+   * [Actions]({%slug radpdfprocessing-model-actions%}) (DocumentActionCollection)
 
-![Rad Pdf Processing Model 02](images/RadPdfProcessing_Model_02.png)
+<!-- ![Rad Pdf Processing Model 02](images/RadPdfProcessing_Model_02.png) -->
 
 ## Creating or Editing document content 
 
