@@ -5,7 +5,7 @@ type: how-to
 page_title: SUMPRODUCT Function Implementation in Telerik SpreadProcessing
 meta_title: SUMPRODUCT Function Implementation  in Telerik SpreadProcessing
 slug: sumproduct-function-nested-array-formulas-telerik-spreadprocessing
-tags: spreadprocessing, formula, custom function, sumproduct, array formulas
+tags: spread, processing, formula, custom, function, sumproduct, array
 res_type: kb
 ticketid: 1694608
 ---
@@ -18,11 +18,11 @@ ticketid: 1694608
 
 ## Description
 
-Learn how to implement a custom SUMPRODUCT function that exists in Excel but not in Telerik SpreadProcessing. The function works for basic cases but returns incorrect results for formulas with nested array functions.
+Learn how to implement a custom [SUMPRODUCT](https://support.microsoft.com/en-us/office/sumproduct-function-16753e75-9f68-4874-94ac-4d2145a2fd2e) function in [RadSpreadProcessing]({%slug radspreadprocessing-overview%}).  
 
 ## Solution
 
-SpreadProcessing does not natively support full array formula evaluation or Excel-style boolean coercion inside custom functions. To achieve Excel-like results, manually evaluate nested logic before passing data to the custom function, or extend your implementation to handle nested expressions explicitly. Follow the steps below:
+Follow the steps:
 
 1. Register your custom SUMPRODUCT function using the `FunctionManager.RegisterFunction()` method.
 
@@ -87,8 +87,6 @@ SpreadProcessing does not natively support full array formula evaluation or Exce
         protected override RadExpression EvaluateOverride(FunctionEvaluationContext<object> context)
         {
             double result = 0;
-            try
-            {
                 List<ArrayExpression> arrayExpressions = new List<ArrayExpression>();
                 foreach (ArrayExpression array in context.Arguments)
                 {
@@ -122,22 +120,13 @@ SpreadProcessing does not natively support full array formula evaluation or Exce
 
                     result = values.Sum();
                 }
-            }
-            catch
-            {
-                // Do nothing
-            }
 
             return new NumberExpression(result);
         }
     }
 ```
 
-
-Avoid using nested array formulas inside the spreadsheet. Instead, preprocess arrays in your code and provide numeric arrays as direct input to the custom function.
-
 ## See Also
 
-- [Telerik Document Processing](https://docs.telerik.com/devtools/document-processing/introduction)
-- [SpreadProcessing: Implement the SUMPRODUCT Function](https://feedback.telerik.com/document-processing/1625149-spreadprocessing-implement-the-sumproduct-function)
-- [SUMPRODUCT Function in Excel](https://support.microsoft.com/en-us/office/sumproduct-function-16753e75-9f68-4874-94ac-4d2145a2fd2e)
+- [Functions]({%slug radspreadprocessing-features-formulas-functions%})
+- [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%})

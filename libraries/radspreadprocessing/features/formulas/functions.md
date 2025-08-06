@@ -973,3 +973,8 @@ Removes duplicate spaces, and spaces at the start and end of a text string. The 
 UPPER</td><td>
 
 Converts text to uppercase</td></tr></table>
+
+## See Also
+
+ * [CustomFunctions SDK](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions)
+ * [Implementing SUMPRODUCT Function in SpreadProcessing]({%slug sumproduct-function-nested-array-formulas-telerik-spreadprocessing%})
