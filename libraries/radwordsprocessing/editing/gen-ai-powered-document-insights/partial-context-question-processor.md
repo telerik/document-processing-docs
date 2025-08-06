@@ -83,7 +83,7 @@ A sample custom implementation for the OllamaEmbeddingsStorage is shown in the b
 > * **LangChain.Databases.Sqlite**
 > * **Microsoft.Extensions.AI.Ollama**
 > * **Telerik.Windows.Documents.AIConnector**
-> * **Telerik.Windows.Documents.Fixed**  
+> * **Telerik.Windows.Documents.Flow**  
 
 1. Install Ollama from [ollama.com](https://ollama.com/).
 2. Pull the model you want to use.
