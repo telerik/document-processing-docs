@@ -85,7 +85,7 @@ navigation:
     libraries/radwordsprocessing/editing/find-and-replace:
         title: Find and Replace
         position: 6
-    libraries/radwordsprocessing/features/gen-ai-powered-document-insights:
+    libraries/radwordsprocessing/editing/gen-ai-powered-document-insights:
         title: GenAI-powered Document Insights
         position: 7
     libraries/radwordsprocessing/concepts:
