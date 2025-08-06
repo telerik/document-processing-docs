@@ -43,7 +43,7 @@ The following sections demonstrate how to tag the different elements of a RadFix
 
 ### Tagging a Link Annotation 
 
-<snippet id='libraries-pdf-libraries-pdf-tag-link-annotation'/>
+<snippet id='libraries-pdf-tag-link-annotation'/>
 
 ### Tagging a Table
 
