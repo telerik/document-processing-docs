@@ -19,15 +19,22 @@ To take advantage of the accessibility feature, the document must be **PDF/A-1a*
 
 RadFixedDocument offers a constructor allowing to specify the **AutoTag** property value which is *false* by default. This gives the developer the opportunity to choose whether to build the [StructureTree]({%slug radpdfprocessing-model-structure-tree%}) from scratch or leave the library auto-tag the elements.
 
+>note Please refer to the [PdfProcessing Accessibility Demo](https://demos.telerik.com/document-processing/pdfprocessing/accessibility) which demonstrates how to create accessible PDF documents programmatically, ensuring compliance with standards such as PDF/UA by supporting features like tagged content, document structure, and metadata. Downloaded documents will adhere to the selected compliance level.
+
 ##  Creating Accessible PDF Documents and Building the StructureTree
 
 When exporting the document, specify the [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}#tagging-strategy) so the document should not be tagged automatically and use the existing StructureTree:
 
 <snippet id='libraries-pdf-features-accessible-pdf'/>
 
-|PDF Accessibility Checker tool|Logical Structure|Properties|
-|----|----|----|
-|![Validate with PDF Accessibility Checker](images/accessible-pdf-validity.png)|![Logical Structure of PDF](images/accessible-pdf-logical-structure.png)|  ![Validate with PDF Accessibility Checker](images/accessible-pdf-logical-structure-properties.png)|
+<table style="width:100%;">
+<th width=45%>PDF Accessibility Checker tool</th><th>Logical Structure</th>
+<tr>
+    <td rowspan="2"><img src="images/accessible-pdf-validity.png" alt="Validate with PDF Accessibility Checker"/></td>
+    <td><img src="images/accessible-pdf-logical-structure.png" alt="Logical Structure of PDF"/></td>
+</tr>
+<tr><td><img src="images/accessible-pdf-logical-structure-properties.png" alt="Properties"/></td></tr>
+</table>
 
 ## Creating Accessible PDF Documents with Auto-Tagging
 
@@ -42,3 +49,4 @@ This example shows how to add content to a PDF doocument and leave the PdfProces
 * [Marked Content]({%slug radpdfprocessing-model-marked-content%})
 * [StructureTree]({%slug radpdfprocessing-model-structure-tree%})
 * [Export Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings)
+* [PdfProcessing Accessibility Demo](https://demos.telerik.com/document-processing/pdfprocessing/accessibility)
