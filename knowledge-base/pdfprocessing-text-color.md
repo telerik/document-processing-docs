@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Change Text Color Using PdfProcessing
 meta_title: How to Change Text Color Using PdfProcessing
 slug: pdfprocessing-text-color
-tags: pdf, processing, text color, cell, fill, color, graphic, properties
+tags: pdf, processing, text, color, block, color, graphic
 res_type: kb
 ticketid: 1695311
 ---
@@ -18,27 +18,13 @@ ticketid: 1695311
 
 ## Description
 
-I want to set the text color in a cell but cannot find an option for this in `TextProperties`. The only visible option is `HighlightColor`. 
+Learn how to change the forecolor (e.g. red color) for a text block.   
 
-This knowledge base article also answers the following questions:
-- How to change the text color in PdfProcessing cells?
-- How to use FillColor to set cell text color in Telerik Document Processing?
-- What is the method to apply custom text color in RadPdfProcessing blocks?
+![Change Text Block's ForeColor ><](images/pdfprocessing-text-color.png)     
 
 ## Solution
 
-To set the text color in a cell, use the `FillColor` property of `GraphicProperties`. This property determines the color used for rendering content elements of a block. To apply the change only to specific text, use the `SaveGraphicProperties()` and `RestoreGraphicProperties()` methods. These methods allow you to apply a temporary change and revert to the previous settings.
-
-Follow the steps below:
-
-1. Create a new `RadFixedDocument` and add a page.
-2. Initialize a `FixedContentEditor` for the page.
-3. Create a `Block` and call `SaveGraphicProperties()` to save the current settings.
-4. Assign a color to `GraphicProperties.FillColor`.
-5. Insert the text that needs the custom color.
-6. Call `RestoreGraphicProperties()` to revert to the previous settings.
-7. Continue adding text or elements to the block.
-8. Export the document using `PdfFormatProvider`.
+To set the fore color in a text block, use the `FillColor` property of `GraphicProperties`. This property determines the color used for rendering content elements of a block. To apply the change only to specific text, use the `SaveGraphicProperties()` and `RestoreGraphicProperties()` methods. These methods allow you to apply a temporary change and revert to the previous settings.
 
 ### Example Code
 
@@ -79,6 +65,4 @@ Process.Start(new ProcessStartInfo() { UseShellExecute = true, FileName = fileNa
 
 ## See Also
 
-- [Text and Graphic Properties in PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/text-and-graphic-properties)
-- [Block Class Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/block)
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
+- [Text and Graphic Properties in PdfProcessing]({%slug radpdfprocessing-editing-text-and-graphic-properties%})  
