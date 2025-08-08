@@ -8,10 +8,7 @@ published: True
 position: 7
 ---
 
-# Viewer Preferences
-
-|Version|**Q3 2025** (or newer)|
-|----|----|
+# Viewer Preferences <sup>Q3 2025 (or newer)</sup>
 
 The **ViewerPreferences** class designates a viewer preferences dictionary controlling the way the document is to be presented on the screen or in print. If no such dictionary is specified, viewing and printing applications should behave in accordance with their own current user preference settings.
 
@@ -21,7 +18,7 @@ The **ViewerPreferences** class designates a viewer preferences dictionary contr
 
 The ViewerPreferences class provides the following properties:
 
-|Property|Type|Description|Default Value|
+|Property|Type|Description width|Default Value|
 |----|----|----|----|
 |**ShouldHideToolbar**|bool|Specifies whether to hide the viewer application's tool bars when the document is active.|false|
 |**ShouldHideMenubar**|bool|Specifies whether to hide the viewer application's menu bar when the document is active.|false|

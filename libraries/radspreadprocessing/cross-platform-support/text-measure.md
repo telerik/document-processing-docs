@@ -50,19 +50,19 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
     SpreadExtensibilityManager.TextMeasurer = fixedTextMeasurer;
 {{endregion}}
 
-## SkiaTextMeasurer
+## SkiaTextMeasurer <sup>Q3 2025 (or newer)</sup>
 
-The SkiaTextMeasurer is a cross-platform text measurer that provides consistent text layout behavior across all supported platforms. Unlike other available measurer implementations, it also supports advanced font features like kerning, ligatures, contextual shaping, and more. This implementation reduces the need for maintaining multiple text measurement implementations across different platforms.
+The **SkiaTextMeasurer** is a cross-platform text measurer that provides consistent text layout behavior across all supported platforms. Unlike other available measurer implementations, it also supports advanced font features like *kerning*, *ligatures*, *contextual shaping*, and more. This implementation reduces the need for maintaining multiple text measurement implementations across different platforms.
 
 ### Required References
 
 To use the **SkiaTextMeasurer** class, you can reference it in one of the following ways:
 
-**Using NuGet Packages (Recommended)**
+#### Using NuGet Packages (Recommended)
 
 - **Telerik.Documents.TextMeasurer.Skia** - This package automatically includes all required dependencies
 
-**Using Assembly References**
+#### Using Assembly References
 
 If you prefer to reference assemblies directly, you need:
 

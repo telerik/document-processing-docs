@@ -8,11 +8,10 @@ published: True
 position: 7
 ---
 
-# StructureTree
+# StructureTree <sup>Q3 2025 (or newer)</sup>
 
-|Version|**Q3 2025** (or newer)|
-|----|----|
 |Related Feature:|[Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})|
+|----|----|
 
 The **StructureTree** class represents the root of the structure elements tree of the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}). It offers a public **ChildElements** collection property allowing to add different StructureElements. 
 

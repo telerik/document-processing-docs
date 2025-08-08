@@ -8,11 +8,10 @@ published: True
 position: 1
 ---
 
-# Creating Accessible PDF Documents
+# Creating Accessible PDF Documents <sup>Q3 2025 (or newer)</sup>
 
-|Version|**Q3 2025** (or newer)|
-|----|----|
 |Related Feature:|[Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})|
+|----|----|
 
 This article aims to demonstrate how to generate an accessible PDF document using Telerik Document Processing. 
 

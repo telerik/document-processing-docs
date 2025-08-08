@@ -8,7 +8,7 @@ published: True
 position: 7
 ---
 
-# Tagged PDF <sup>Q3 2025</sup>
+# Tagged PDF <sup>Q3 2025 (or newer)</sup>
 
 |Related Feature:|[Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})|
 |----|----|

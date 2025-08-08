@@ -10,9 +10,6 @@ position: 0
 
 # Accessibility Support - Overview
 
-|Version|**Q3 2025** (or newer)|
-|----|----|
-
 **RadPdfProcessing** provides *accessibility support* of documents to users with disabilities. This allows many users with visual impairments to use screen readers and read such documents aloud. To enable proper vocalization, either through a screen reader or by some more direct invocation of a text-to-speech engine, the PDF document should support the following features: 
 
 * Specifying the natural language used for text in a PDF document.

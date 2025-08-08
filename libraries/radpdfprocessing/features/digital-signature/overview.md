@@ -11,9 +11,9 @@ position: 0
 
 The **digital signature** feature enables you to sign and validate a PDF document. A signature confirms that the document's content originated from the signer and has not been modified in any way. A signed document is considered valid when it has not been changed after the signing, and all of its certificates have a valid trusted root certificate.
 
-Telerik **RadPdfProcessing** provides an easy-to-use API that allows you to:
-
 <a name="signing-a-document"><a/>
+
+Telerik **RadPdfProcessing** provides an easy-to-use API that allows you to:
 
 * [Create a PDF document from scratch and add a signature field]({%slug radpdfprocessing-features-digital-signature-getting-started%}). 
 * [Sign PDF documents that contain a predifined signature field](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document).
