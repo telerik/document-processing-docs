@@ -2,7 +2,7 @@
 title: Overview
 description: Learn how to generate an accessible PDF document using Telerik Document Processing Libraries.
 page_title: Accessibility Support - Overview
-slug: create-accessible-pdf-documents
+slug: pdfprocessing-feature-accessibility-support
 tags: overview, content, structure, pdf, accessibility
 published: True
 position: 0

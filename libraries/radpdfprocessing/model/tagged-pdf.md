@@ -8,10 +8,11 @@ published: True
 position: 7
 ---
 
-# Tagged PDF
+# Tagged PDF <sup>Accessibility Support</sup>
 
 |Version|**Q3 2025** (or newer)|
 |----|----|
+|Related Feature:|[Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})|
 
 **RadPdfProcessing** provides support for a **Tagged PDF**. It is a stylized use of PDF which defines a set of standard structure types and attributes that allow page content (text, graphics, and images) to be extracted and reused for other purposes. It is intended to be used by tools that perform operations like:
 
@@ -21,7 +22,7 @@ position: 7
 * Processing text for such purposes as searching, indexing, and spell-checking 
 * Conversion to other common file formats with document structure and basic styling information preserved
 
-## Tagging Strategy 
+## Tagging Strategy
 
 Represents the strategy for handling tagging in PDF documents. The available options are:
 
