@@ -35,7 +35,7 @@ The class represents a structure element in the document. The available public p
 
 A set of standard structure types define the meaning of structure elements, such as paragraphs, headings, articles, and tables. The available options are:
 
-|StructureTagType|Description|
+|Structure Tag Type|Description|
 |----|----|
 |**None**|No specific structure tag type.|
 |**Document**|A complete document. This is the root element of any structure tree containing multiple parts or multiple articles.|
