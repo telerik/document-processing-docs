@@ -55,7 +55,7 @@ __Example 1__ shows how to use PdfFormatProvider to import a PDF document from a
 The result from the import method is a [__RadFixedDocument__]({%slug radpdfprocessing-model-radfixeddocument%}), which can be used like any code-generated document.
         
 
->Import support is limited to the features that are supported by the export so it is possible that you cannot import all of your custom PDF documents.
+>Import support is limited to the features that are supported by the export, so it is possible that you cannot import all of your custom PDF documents.
           
 	 
 >note Complete examples showing importing and exporting a document are available in the [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing).
@@ -75,10 +75,10 @@ __Example 2__ shows how to use the __Export()__ method of __PdfFormatProvider__ 
 	}
 {{endregion}}
 
->important When exporting a digitally signed document a stream that allows both reading and writing should be passed otherwise an exception is thrown: NotSupportedException: 'Stream does not support reading.' For example creаte the output stream like this: 'new FileStream("signed.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite)'.
+>important When exporting a digitally signed document a stream that allows both reading and writing should be passed otherwise an exception is thrown: NotSupportedException: 'Stream does not support reading.' For example, create the output stream like this: 'new FileStream("signed.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite)'.
 
 
-The resulting document can be opened in any application which supports PDF documents.
+The resulting document can be opened in any application that supports PDF documents.
         
 ## See Also
 

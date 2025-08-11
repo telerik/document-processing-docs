@@ -337,4 +337,4 @@ __Example 5__ shows how to create the 'E' function.
  * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
  * [ArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArgumentInterpretation.html)
  * [ArrayArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArrayArgumentInterpretation.html)
- * [CustomFunctions SDK](https://github.com/telerik/xaml-sdk)
+ * [CustomFunctions SDK](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions)
