@@ -51,12 +51,12 @@ In order to use the **PdfFormatProvider** of **RadWordsProcessing**, you should 
 	
     Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider htmlProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider();
 	// Create a document instance from the content.
-    RadFlowDocument document = htmlProvider.Import(htmlContent);
+    RadFlowDocument document = htmlProvider.Import(htmlContent, TimeSpan.FromSeconds(10));
 
     Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider pdfProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
-    byte[] pdfBytes = pdfProvider.Export(document);
+    byte[] pdfBytes = pdfProvider.Export(document, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 ## Convert a Spreadsheet Document to PDF

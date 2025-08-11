@@ -4,7 +4,7 @@ page_title: ImageQuality
 slug: radpdfprocessing-concepts-imagequality
 tags: image, quality
 published: True
-position: 5
+position: 7
 ---
 
 # ImageQuality 

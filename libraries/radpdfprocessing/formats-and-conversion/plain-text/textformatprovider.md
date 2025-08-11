@@ -39,7 +39,7 @@ __Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocume
     	radFixedDocumentEditor.InsertRun("Sample run.");
 	}
 
-	string documentAsText = textFormatProvider.Export(document);
+	string documentAsText = textFormatProvider.Export(document, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 

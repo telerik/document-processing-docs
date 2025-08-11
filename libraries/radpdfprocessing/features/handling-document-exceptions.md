@@ -11,7 +11,9 @@ Since **R2 2020** RadPdfProcessing has an exception handling mechanism. It allow
 
 * __PdfImportSettings.DocumentUnhandledException:__ The event is fired when an exception occurs during document import. If the **ReadingMode** is set to **AllAtOnce** the entire document will be loaded on document import and there is no need to use the other event.
 * __RadFixedDocument.DocumentUnhandledException:__ The event is fired when an exception occurs while loading the document pages. This event can be fired when the document is imported with **OnDemand ReadingMode** and a particular page is loaded after the import.
-* **PdfExportSettings.DocumentUnhandledException:** The event is fired when an exception occurs while exporting the document pages. Introduced in **Q1 2025**.
+* **PdfExportSettings.DocumentUnhandledException:** The event is fired when an exception occurs while exporting the document pages. Introduced in **Q1 2025**. 
+
+* **SkiaImageExportSettings.DocumentUnhandledException**: The event is fired when an exception occurs while exporting a PDF page. Introduced in **Q3 2025**. (*Available in the NET Standard version of the libraries*).
 
 When the events are raised, the  __DocumentUnhandledExceptionEventArgs__ argument is passed. This argument contains two properties:
 * __Exception:__ Gets the document exception.
@@ -77,3 +79,4 @@ As of **Q1 2025** the [PdfExportSettings]({%slug radpdfprocessing-formats-and-co
 # See Also
 
 * [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [SkiaImageExportSettings]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageexportsettings%})

@@ -1,15 +1,16 @@
 ---
 title: RadFixedDocument
+description: RadFixedDocument is the main document unit of the PdfProcessing library offered by Telerik Document Processing libraries.
 page_title: RadFixedDocument
 slug: radpdfprocessing-model-radfixeddocument
-tags: radfixeddocument, pdf, merge, create, document, page
+tags: radfixeddocument, pdf, merge, create, document, page, fixed
 published: True
 position: 1
 ---
 
 # RadFixedDocument
 
-__RadFixedDocument__ hosts fixed document content and is the root element in the document elements tree. It holds a collection of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})  elements. 
+__RadFixedDocument__ hosts fixed document content and is the root element in the document elements tree. It holds a collection of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) elements. 
 
 This article will get you familiar with the basics of __RadFixedDocument__. It contains the following sections:
       
@@ -21,7 +22,7 @@ This article will get you familiar with the basics of __RadFixedDocument__. It c
 
 ## What Is RadFixedDocument
 
-__RadFixedDocument__ is the root that contains all other elements in the __RadPdfProcessing__ model. It exposes the following properties:
+__RadFixedDocument__ is the root that contains all other elements in the __RadPdfProcessing__ model. It exposes the following public API:
 
 |Property Name|Description|
 |----|----|
@@ -30,7 +31,28 @@ __RadFixedDocument__ is the root that contains all other elements in the __RadPd
 |__Destinations__|A collection that contains all [Destinations]({%slug radpdfprocessing-model-annotations-links%}#destination) in the document.|
 |__DocumentInfo__|Contains additional meta information about the document like author, title, etc.|
 |**Actions**|Gets the document [actions]({%slug radpdfprocessing-model-action-collections%}#documentactioncollection) collection. (introduced in Q4 2024)| 
+|**NamedDestinations**|Gets the collection of named destinations that provide bookmark-like navigation points within the document.|
+|**EmbeddedFiles**|Gets the collection of files embedded within this document as attachments.|
+|**AcroForm**|Gets the interactive form (AcroForm) that manages form fields elements within the document.|
+|**Bookmarks**|Gets the hierarchical collection of bookmarks (outline items) that provide structured navigation through the document.|
+|**PageMode**|Gets or sets the page display mode that determines how the document appears when first opened in a PDF viewer.|
 |**HasLayers**|Gets whether the document has layers. (introduced in Q4 2024)|
+|**Language**|Gets or sets the language of the document. (introduced in Q3 2025)|
+|**StructureTree**| Gets or sets the structure tree of the document. (introduced in Q3 2025)|
+|**AutoTag**|Gets a value indicating whether the document is set to automatically tag elements. If true, the document will automatically tag elements with structure tags when they are added. (introduced in Q3 2025)|
+|**ViewerPreferences**|Gets the viewer preferences controlling the way the document is to be presented on the screen or in print. If no such dictionary is specified, viewing and printing applications should behave in accordance with their own current user preference settings. (introduced in Q3 2025)|
+
+|Method|Description|
+|----|----|
+|**Merge**|Merges this document with the specified source document.|
+|**Clone**|Clones the document content.|
+|**ToSimpleTextDocument**|Converts the current document to a plain text document.|
+
+|Event|Description|
+|----|----|
+|**MergedFieldNameResolving**|Occurs when trying to resolve conflicts between the fields names while merging RadFixedDocument instances.|
+|**MergedEmbeddedFileNameResolving**|Occurs when trying to resolve conflicts between the embedded file names while merging RadFixedDocument instances.|
+|**MergedJavaScriptNameResolving**|Occurs when trying to resolve conflicts between the JavaScript names while merging RadFixedDocument instances.|
 
 >note A complete SDK example how to generate a document is available [here](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/GenerateDocument).
             
@@ -90,21 +112,7 @@ The code from __Example 5__ merges the document created in [__Example 1__](#exam
 
 ## Document Information
 
-__RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocumentInfo__, intended to hold additional information about the document. The __RadFixedDocumentInfo__ class allows to set the following properties:
-
-* __Author__: The author of the document.
-* __Title__: The title of the document.
-* __Description__: Text that describes the content of the document.
-
-#### __[C#] Example 6: Set DocumentInfo__
-
-{{region cs-radpdfprocessing-model-radfixeddocument_3}}
-	document.DocumentInfo.Author = "Jane Doe";
-	document.DocumentInfo.Title = "RadFixedDocument";
-	document.DocumentInfo.Description = "This document is intended to explain the RadFixedDocument class from the RadPdfProcessing library";
-{{endregion}}
-
->Currently the DocumentInfo property is for export purposes only and meta information about documents is stripped when importing.
+__RadFixedDocument__ exposes a __DocumentInfo__ property of type [RadFixedDocumentInfo]({%slug radpdfprocessing-model-radfixeddocumentinfo%}), intended to hold additional information about the document. 
 
 ## See Also
 
@@ -115,3 +123,4 @@ __RadFixedDocument__ exposes a __DocumentInfo__ property of type __RadFixedDocum
 * [Export to PDF]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 * [Export to Image]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
 * [Merge PDF Documents]({%slug merge-pdf-documents%})
+* [Accessibility Support]({%slug create-accessible-pdf-documents%})

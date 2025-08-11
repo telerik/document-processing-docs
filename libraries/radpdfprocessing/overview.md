@@ -32,6 +32,8 @@ The API of RadPdfProcessing contains two different editors,  [RadFixedDocumentEd
 * Digital signatures
     * Signing a document with digital signature.
     * Validate digital signature of already signed document.
+* GenAI-powered Document Insights
+* Accessibility Support
             
 The document model of the library provides support for:
 
@@ -57,10 +59,14 @@ The document model of the library provides support for:
 | [**PdfStreamWriter**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})| The API exposes a functionality that provides an option for exporting PDF files with unmatched performance and minimized memory footprint. Extremely useful when you need to add some content to an existing document, merge or split documents. |
 | [**Import of PDF and export to PDF or plain text**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) | You can import or export PDF files and convert PDF files to plain text. |
 |[**JavaScript Actions and Trigger Events**]({%slug radpdfprocessing-model-javascript-actions%})|As of Q4 2024 you can import or export the javascript actions associated with pages, form fields, etc. so that they can be executed when the exported document is opened with Adobe Acrobat. |
+|[**Accessibility Support**]({%slug create-accessible-pdf-documents%})|Offers accessibility support of documents to users with disabilities.|
+| [**Viewer Preferences**]({%slug radpdfprocessing-features-viewer-preferences%}) | Control how PDF documents are displayed and behave in PDF viewers, including window behavior, UI visibility, and print settings. |
+|**GenAI-powered Document Insights**|Enables you to easily extract insights from PDF documents using Large Language Models (LLMs). This functionality enables you to summarize document content and ask questions about it, with the AI providing relevant answers based on the document's content. [Read More]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
 
 # See Also
 
 - [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
 - [First Steps]({%slug getting-started-first-steps%})
 - [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
+- [Accessibility Support]({%slug create-accessible-pdf-documents%})
 

@@ -41,7 +41,7 @@ Each field type can be recognized from the FormField base class by getting the v
 
 	using (Stream stream = FileHelper.GetSampleResourceStream("InteractiveForms.pdf"))
 	{
-	    RadFixedDocument document = new PdfFormatProvider().Import(stream);
+	    RadFixedDocument document = new PdfFormatProvider().Import(stream, TimeSpan.FromSeconds(10));
 	    foreach (FormField field in document.AcroForm.FormFields)
 	    {
 	        switch (field.FieldType)
@@ -108,8 +108,8 @@ When merging documents that contain FormFields, you need to ensure that each fie
 	public void MergeFields()
 	{
 		PdfFormatProvider provider = new PdfFormatProvider();
-		var document = provider.Import(File.ReadAllBytes(@"D:\FormFieldDoc.pdf"));
-		var document1 = provider.Import(File.ReadAllBytes(@"D:\FormFieldDoc1.pdf"));
+		var document = provider.Import(File.ReadAllBytes(@"D:\FormFieldDoc.pdf"), TimeSpan.FromSeconds(10));
+		var document1 = provider.Import(File.ReadAllBytes(@"D:\FormFieldDoc1.pdf"), TimeSpan.FromSeconds(10));
 
 		document.MergedFieldNameResolving += Document_MergedFieldNameResolving;
 

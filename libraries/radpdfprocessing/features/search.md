@@ -22,7 +22,7 @@ This class exposes methods for searching. You need to pass an instance of [RadFi
 {{region cs-pdfprocessing-features-search_0}}
 
     PdfFormatProvider provider = new PdfFormatProvider();
-    RadFixedDocument document = provider.Import(File.ReadAllBytes(@"Test.pdf"));
+    RadFixedDocument document = provider.Import(File.ReadAllBytes(@"Test.pdf"), TimeSpan.FromSeconds(10));
 
     TextSearch search = new TextSearch(document);
     IEnumerable<SearchResult> result = search.FindAll("Lorem", TextSearchOptions.Default);
@@ -53,7 +53,7 @@ All of the above methods return one or more instances of the **SearchResult** cl
 {{region cs-pdfprocessing-features-search_1}}
 
     PdfFormatProvider provider = new PdfFormatProvider();
-    RadFixedDocument document = provider.Import(File.ReadAllBytes(@"Test.pdf"));
+    RadFixedDocument document = provider.Import(File.ReadAllBytes(@"Test.pdf"), TimeSpan.FromSeconds(10));
 
     TextSearch search = new TextSearch(document);
     IEnumerable<SearchResult> result = search.FindAll("Lorem", TextSearchOptions.Default);
@@ -66,7 +66,7 @@ All of the above methods return one or more instances of the **SearchResult** cl
         editor.DrawRectangle(rect);
     }
 
-    File.WriteAllBytes(@"result.pdf", provider.Export(document));
+    File.WriteAllBytes(@"result.pdf", provider.Export(document, TimeSpan.FromSeconds(10)));
 
 {{endregion}}
 

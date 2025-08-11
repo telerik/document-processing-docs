@@ -5,7 +5,7 @@ description: RadPdfProcessing is a processing library that allows you to create,
 slug: radpdfprocessing-concepts-fonts
 tags: fonts, pdf, framework, standard, embed
 published: True
-position: 3
+position: 5
 ---
 
 # Fonts

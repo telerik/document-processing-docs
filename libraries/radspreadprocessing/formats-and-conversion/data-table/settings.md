@@ -76,7 +76,7 @@ The __ColumnExportingEventArgs__ object contains the the current column instance
     {
         DataTableFormatProvider provider = new DataTableFormatProvider();
         provider.ExportSettings.ColumnExporting += this.ExportSettings_ColumnExporting;
-        var table = provider.Export(radSpreadsheet.Workbook.ActiveWorksheet);
+        var table = provider.Export(radSpreadsheet.Workbook.ActiveWorksheet, TimeSpan.FromSeconds(10));
     }
     private void ExportSettings_ColumnExporting(object sender, ColumnExportingEventArgs e)
     {

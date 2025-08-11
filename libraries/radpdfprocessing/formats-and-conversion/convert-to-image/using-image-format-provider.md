@@ -4,7 +4,7 @@ page_title: Using SkiaImageFormatProvider
 slug: radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider
 tags: pdf,image,skia
 published: True
-position: 1
+position: 0
 ---
 
 # Using SkiaImageFormatProvider
@@ -41,8 +41,6 @@ To convert your documents' pages to images, use the __Export__ method. Note that
 	int count = 1;
 	foreach (RadFixedPage page in fixedDocument.Pages)
 	{
-		//byte[] resultImage = imageProvider.Export(page); //This method is obsolete since Q4 2024.
-
 		byte[] resultImage = imageProvider.Export(page, TimeSpan.FromSeconds(10));
 
 	    File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
@@ -68,8 +66,6 @@ The __ExportAsync__ method allows you to perform the conversion asynchronously.
         await Parallel.ForEachAsync(fixedDocument.Pages, async (page, token) =>
         {
             int currentCount = Interlocked.Increment(ref count); 
-            
-			//byte[]? result = await imageProvider.ExportAsync(page); //This method is obsolete since Q4 2024.
 
 			byte[]? result = await imageProvider.ExportAsync(page, TimeSpan.FromSeconds(10));
 
@@ -83,37 +79,7 @@ The __ExportAsync__ method allows you to perform the conversion asynchronously.
 
 ## Export Settings
 
-The __SkiaImageFormatProvider__ exposes the following settings:
-
-* __ImageFormat:__ Allows you to set the image format, the supported values are __JPEG__, __PNG__, and __Webp__.
-* __ScaleFactor:__ Allows you to set the scale factor. The minimum value is 0.1.
-* __Quality:__ The value range is 1 (lowest quality) to 100 (highest quality) inclusive. The default value is 75.
-* __IsAntialiased:__ Gets or sets a value indicating whether the image will be antialiased. The default value is *true*. 
-
-#### __[C#] Example 3: Set the Settings__
-
-{{region cs-radpdfprocessing-formats-and-conversion-imageformatprovider_2}}
-
-	PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
-	RadFixedDocument fixedDocument = pdfFormatProvider.Import(File.ReadAllBytes("Sample.pdf"), TimeSpan.FromSeconds(10));
-	SkiaImageFormatProvider imageProvider = new SkiaImageFormatProvider();
-	
-	imageProvider.ExportSettings.ImageFormat = SkiaImageFormat.Png;
-	imageProvider.ExportSettings.ScaleFactor = 0.5;
-	imageProvider.ExportSettings.Quality = 50;
-	imageProvider.ExportSettings.IsAntialiased = false; 
-	
-	int count = 1;
-	foreach (RadFixedPage page in fixedDocument.Pages)
-	{
-		//byte[] resultImage = imageProvider.Export(page); //This method is obsolete since Q4 2024.
-
-		byte[] resultImage = imageProvider.Export(page, TimeSpan.FromSeconds(10));
-		
-	    File.WriteAllBytes(@"C:\Temp\Page " + count++ + ".png", resultImage);
-	}
-
-{{endregion}}
+The __SkiaImageFormatProvider__ exposes the [SkiaImageExportSettings]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageexportsettings%}) which allow you to control the export options.
 
 # See Also
 * [Converting XLSX Content to DOCX Document]({%slug convert-excel-content-to-word-document%}) 
@@ -122,3 +88,4 @@ The __SkiaImageFormatProvider__ exposes the following settings:
 * [Converting a PDF Document to a Multipage TIFF Image]({%slug convert-pdf-to-multipage-tiff-radpdfprocessing%})
 * [Converting Multi-page TIFF Images to PDF]({%slug convert-tiff-to-pdf-radpdfprocessing%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
+* [SkiaImageExportSettings]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageexportsettings%})

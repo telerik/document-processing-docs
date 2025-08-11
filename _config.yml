@@ -85,6 +85,9 @@ navigation:
     libraries/radwordsprocessing/editing/find-and-replace:
         title: Find and Replace
         position: 6
+    libraries/radwordsprocessing/editing/gen-ai-powered-document-insights:
+        title: GenAI-powered Document Insights
+        position: 7
     libraries/radwordsprocessing/concepts:
         title: Concepts
         position: 6
@@ -212,6 +215,9 @@ navigation:
     libraries/radpdfprocessing/features/digital-signature:
         title: Digital Signature
         position: 2
+    libraries/radpdfprocessing/features/accessibility-support:
+        title: Accessibility Support
+        position: 0
     libraries/radpdfprocessing/features/embedded-file-streams:
         title: Embedded File Streams
         position: 5

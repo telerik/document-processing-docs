@@ -43,9 +43,7 @@ __Example 1__ shows how to use PdfFormatProvider to import a PDF document from a
 	PdfFormatProvider provider = new PdfFormatProvider();
 	RadFixedDocument document;
 	using (Stream stream = File.OpenRead("sample.pdf"))
-	{
-		//document = provider.Import(stream); //This method is obsolete since Q4 2024.
-		
+	{		
 		document = provider.Import(stream, TimeSpan.FromSeconds(10)); 
 	
 	    // Do your work with the document inside the using statement.
@@ -73,8 +71,6 @@ __Example 2__ shows how to use the __Export()__ method of __PdfFormatProvider__ 
 	PdfFormatProvider provider = new PdfFormatProvider();
 	using (Stream output = File.OpenWrite("sample.pdf"))
 	{
-		//provider.Export(document, output); //This method is obsolete since Q4 2024.
-
 		provider.Export(document, output, TimeSpan.FromSeconds(10)); 
 	}
 {{endregion}}

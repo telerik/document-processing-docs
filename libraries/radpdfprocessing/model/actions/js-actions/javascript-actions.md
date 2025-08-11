@@ -10,7 +10,10 @@ position: 0
 
 # JavaScript Actions  
 
-As of **Q4 2024** RadPdfProcessing provides support for:
+|Version|**Q4 2024** (or newer)|
+|----|----|
+
+RadPdfProcessing provides support for:
 
 *  **JavaScript actions** associated with documents, pages, form fields, etc.
 *  **Event triggered actions** - represent actions that can be executed after a certain event in the respective viewer (e.g. RadPdfViewer, Adobe or a web browser) is triggerred.
@@ -66,7 +69,19 @@ The following example demonstrates how to create a PDF document with three TextB
    document.Pages[0].Annotations.Add(totalWidget);
 	 
 ```
- 
+### Using the MergedJavaScriptNameResolving Event
+
+The event is fired when trying to resolve conflicts between the JavaScript names while merging RadFixedDocument instances.
+
+```csharp
+document.MergedJavaScriptNameResolving += (sender, e) =>
+{
+    if (e.UsedNames.Contains(e.Name))
+    {
+        e.NewName = e.Name + "1";
+    }
+};
+```
 
 ## See Also
 

@@ -38,8 +38,6 @@ __Example 1__ shows how to import a CSV file using a __FileStream__. The code as
 
     using (Stream input = new FileStream(fileName, FileMode.Open))
     {
-        //workbook = formatProvider.Import(input); //This method is obsolete since Q4 2024.
-
         workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
     }
 
@@ -63,8 +61,6 @@ __Example 2__ demonstrates how to export an existing Workbook to a CSV file. The
 
 	using (Stream output = new FileStream(fileName, FileMode.Create))
 	{
-		//formatProvider.Export(workbook, output); //This method is obsolete since Q4 2024.
-
 		formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
 	}
 

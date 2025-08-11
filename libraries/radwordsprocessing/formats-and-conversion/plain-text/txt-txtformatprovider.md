@@ -35,8 +35,6 @@ __Example 1__ shows how to use __TxtFormatProvider__ to import a document from a
 	TxtFormatProvider provider = new TxtFormatProvider();
 	using (Stream input = File.OpenRead("Sample.txt"))
 	{
-		//RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
-
 		RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
@@ -50,8 +48,6 @@ And here is how you can import a document from string:
 
 {{region cs-radwordsprocessing-formats-and-conversion-txt-txtformatprovider_1}}
 	TxtFormatProvider provider = new TxtFormatProvider();
-
-	//RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
 
 	RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
 {{endregion}}
@@ -76,9 +72,6 @@ __Example 3__ shows how to use __TxtFormatProvider__ to export __RadFlowDocument
 	using (Stream output = File.OpenWrite("sample.txt"))
 	{
 	    RadFlowDocument document = CreateRadFlowDocument();
-
-		//provider.Export(document, output); //This method is obsolete since Q4 2024.
-
 		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
@@ -93,8 +86,6 @@ You can also export the document to a string and preserve it in a database.
 {{region cs-radwordsprocessing-formats-and-conversion-txt-txtformatprovider_3}}
 	TxtFormatProvider provider = new TxtFormatProvider();
 	RadFlowDocument document = CreateRadFlowDocument();
-	
-	//string output = provider.Export(document); //This method is obsolete since Q4 2024.
 
 	string output = provider.Export(document, TimeSpan.FromSeconds(10));
 {{endregion}}

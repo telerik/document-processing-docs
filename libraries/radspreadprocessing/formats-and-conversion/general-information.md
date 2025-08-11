@@ -68,7 +68,7 @@ IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadshe
 // Import 
 using (Stream input = new FileStream(path, FileMode.Open))
 {
-    workbook = formatProvider.Import(input);
+    workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
 }
 
 // Export
@@ -99,10 +99,10 @@ IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spr
 
 // Import
 byte[] fileAsByteArray = File.ReadAllBytes(path);
-workbook = formatProvider.Import(fileAsByteArray);
+workbook = formatProvider.Import(fileAsByteArray, TimeSpan.FromSeconds(10));
 
 // Export
-byte[] workbookAsByteArray = formatProvider.Export(workbook);
+byte[] workbookAsByteArray = formatProvider.Export(workbook, TimeSpan.FromSeconds(10));
 ````
 
 >note For more examples of importing and exporting workbooks check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.

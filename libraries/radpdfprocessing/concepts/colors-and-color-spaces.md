@@ -4,7 +4,7 @@ page_title: Colors and Color Spaces
 slug: radpdfprocessing-concepts-colors-and-color-spaces
 tags: colors,and,color,spaces
 published: True
-position: 0
+position: 2
 ---
 
 # Colors and Color Spaces

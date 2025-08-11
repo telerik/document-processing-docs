@@ -25,7 +25,7 @@ All you have to do in order to use __DocxFormatProvider__ is add references to t
 * Telerik.Windows.Documents.Flow.dll         
 * ~~Telerik.Windows.Zip.dll~~*
           
->note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
+>note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
 ## Import
 
@@ -44,8 +44,6 @@ The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a DO
 
 	using (Stream input = File.OpenRead("Sample.docx"))
 	{
-		//document = provider.Import(input); //This method is obsolete since Q4 2024.
-
 		document = provider.Import(input, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
@@ -59,8 +57,6 @@ And here is how you can import a document from byte array containing the DOCX do
 {{region cs-radwordsprocessing-formats-and-conversion-docx-docxformatprovider_1}}	            
 
 	Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
-
-	//Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input); //This method is obsolete since Q4 2024.
 
 	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
 {{endregion}}
@@ -87,8 +83,6 @@ __Example 3__ shows how to use __DocxFormatProvider__ to export __RadFlowDocumen
 	{
 	    document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
 
-		//provider.Export(document, output); //This method is obsolete since Q4 2024.
-
 		provider.Export(document, output, TimeSpan.FromSeconds(10));
 	}
 {{endregion}}
@@ -103,8 +97,6 @@ You can also export the document to a byte array and preserve it in a database.
 	Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
 	        
 	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = CreateRadFlowDocument(); // CreateRadFlowDocument() is a custom method that creates a simple instance of RadFlowDocument. You can replace it with the instance you would like to export.
-
-	//byte[] output = provider.Export(document); //This method is obsolete since Q4 2024.
 
 	byte[] output = provider.Export(document, TimeSpan.FromSeconds(10));
 {{endregion}}
