@@ -43,7 +43,7 @@ Use these settings when configuring the server in your MCP client:
 
 ### License Configuration
 
-Add your [Telerik license key]({%slug set-up-your-license%}) as an environment parameter in your `mcp.json` file using one of these options:
+Add your [Telerik license key]({%slug setting-up-license-key%}) as an environment parameter in your `mcp.json` file using one of these options:
 
 Option 1: License File Path (Recommended)
 
@@ -61,7 +61,7 @@ Option 2: Direct License Key
  }
  ```
 
-> Option 1 is recommended unless you're sharing settings across different systems. Remember to [update your license key]({%slug set-up-your-license%}#updating-your-license-key) when necessary.
+> Option 1 is recommended unless you're sharing settings across different systems. Remember to [update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
 
 ## Visual Studio
 
