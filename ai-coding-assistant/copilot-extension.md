@@ -1,15 +1,15 @@
 ---
 title: Copilot Extension
-page_title: Getting Started with the DPL Copilot Extension
+page_title: DPL Copilot Extension
 description: Learn how to add and use the Telerik Document Processing GitHub Copilot Extension as a DPL AI coding assistant and code generator for better developer productivity.
 slug: ai-copilot-extension
 tags: ai, dpl, document, processing, coding, assistant, getting, started, extension, copilot
 published: True
-position: 0
+position: 1
 ---
 
 
-# Getting Started with the DPL Copilot Extension
+# Telerik Document Processing GitHub Copilot Extension
 
 The Telerik Document Processing Libraries (DPL) [GitHub Copilot](https://github.com/features/copilot) extension is an AI-powered coding assistant that provides specialized knowledge about the Telerik [Document Processing Libraries]({%slug introduction%}).
 
@@ -20,14 +20,11 @@ This extension enhances GitHub Copilot with proprietary context about Telerik Do
 * Access best practices and implementation patterns.
 * Speed up development with AI-powered code completion.
 
-## Prerequisites
+## Prerequisites for the GitHub Copilot Extension
 
-Before using the Telerik Document Processing Libraries GitHub Copilot extension, ensure you have:
+In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-assistant%}), before using the Telerik Document Processing Libraries GitHub Copilot extension, ensure you have:
 
 * An active [GitHub Copilot](https://github.com/features/copilot) subscription. You can enable or configure GitHub Copilot on the [Copilot Settings page in your GitHub account](https://github.com/settings/copilot).
-* A [Telerik user account](https://www.telerik.com/account/).
-* An active [Telerik license](https://www.telerik.com/purchase.aspx?filter=web) that includes Telerik Document Processing.
-* An application that uses the Telerik [Document Processing Libraries]({%slug introduction%}).
 * The latest version of your [Copilot-enabled app](https://docs.github.com/en/copilot/building-copilot-extensions/about-building-copilot-extensions#supported-clients-and-ides) (for example, Visual Studio or Visual Studio Code).
 
 ## Installation
@@ -68,7 +65,7 @@ The following examples demonstrate useful prompts for the Telerik DPL extension:
 
 ## Number of Requests
 
-@[template](/_contentTemplates/common/ai-coding-assistant.md#number-of-requests)
+A Telerik [Subscription license](https://www.telerik.com/purchase/faq/licensing-purchasing) is recommended in order to use the Telerik DPL AI Coding Assistant without restrictions. Perpetual license holders and trial users can make a [limited number of requests per year]({%slug ai-coding-assistant%}#number-of-requests).
 
 ## Troubleshooting
 
