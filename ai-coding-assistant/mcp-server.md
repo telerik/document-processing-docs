@@ -8,7 +8,7 @@ published: True
 position: 2
 ---
 
-# Telerik Document Processing MCP Server
+# Telerik Document Processing MCP Server <sup>(Preview)</sup>
 
 The Telerik Document Processing [MCP (Model Context Protocol) Server](https://modelcontextprotocol.io/introduction) enhances your AI-powered development experience by providing specialized context about Telerik Document Processing libraries.
 
@@ -16,7 +16,7 @@ This MCP server enables AI-powered IDEs and tools to generate more accurate, tai
 
 ## Prerequisites for the MCP Server
 
-In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-assistant%}), To use the Telerik Document Processing (DPL) MCP server, you need:
+In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-assistant%}#prerequisites-for-the-ai-coding-assistant), To use the Telerik Document Processing (DPL) MCP server, you need:
 
 * [Node.js](https://nodejs.org/en) 18 or newer.
 * An [MCP-compatible client](https://modelcontextprotocol.io/clients) that supports **MCP tools** (latest version recommended).

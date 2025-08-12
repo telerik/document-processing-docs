@@ -9,7 +9,7 @@ position: 1
 ---
 
 
-# Telerik Document Processing GitHub Copilot Extension
+# Telerik Document Processing GitHub Copilot Extension <sup>(Preview)</sup>
 
 The Telerik Document Processing Libraries (DPL) [GitHub Copilot](https://github.com/features/copilot) extension is an AI-powered coding assistant that provides specialized knowledge about the Telerik [Document Processing Libraries]({%slug introduction%}).
 
@@ -22,7 +22,7 @@ This extension enhances GitHub Copilot with proprietary context about Telerik Do
 
 ## Prerequisites for the GitHub Copilot Extension
 
-In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-assistant%}), before using the Telerik Document Processing Libraries GitHub Copilot extension, ensure you have:
+In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-assistant%}#prerequisites-for-the-ai-coding-assistant), before using the Telerik Document Processing Libraries GitHub Copilot extension, ensure you have:
 
 * An active [GitHub Copilot](https://github.com/features/copilot) subscription. You can enable or configure GitHub Copilot on the [Copilot Settings page in your GitHub account](https://github.com/settings/copilot).
 * The latest version of your [Copilot-enabled app](https://docs.github.com/en/copilot/building-copilot-extensions/about-building-copilot-extensions#supported-clients-and-ides) (for example, Visual Studio or Visual Studio Code).
