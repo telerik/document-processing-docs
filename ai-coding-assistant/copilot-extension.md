@@ -52,7 +52,11 @@ To use the Telerik DPL Copilot extension:
 1. Start your prompt with `@telerikdpl` and type your request. Verify that `@telerikdpl` is recognized and highlighted; otherwise, the extension may not be properly installed.
 
     ![Recognized TelerikDpl](images/dpl-ai-copilot-extension-recognized.png)    
+
 1. Look for a status label such as **Telerik DPL working...** or **Telerik DPL generating response...** in the output to confirm the extension is active.
+
+    ![Telerik DPL generating response](images/dpl-ai-copilot-extension-generating-response.png)    
+
 1. Grant permission to the Telerik DPL extension to read your workspace files when prompted.
 1. For unrelated queries, start a new chat session in a new window to avoid context pollution from previous conversations.
 
@@ -65,7 +69,7 @@ The following examples demonstrate useful prompts for the Telerik DPL extension:
 
 ## Number of Requests
 
-A Telerik [Subscription license](https://www.telerik.com/purchase/faq/licensing-purchasing) is recommended in order to use the Telerik DPL AI Coding Assistant without restrictions. Perpetual license holders and trial users can make a [limited number of requests per year]({%slug ai-coding-assistant%}#number-of-requests).
+A Telerik [Subscription license](https://www.telerik.com/purchase.aspx?filter=web) is recommended in order to use the Telerik DPL AI Coding Assistant without restrictions. Perpetual license holders and trial users can make a [limited number of requests per year]({%slug ai-coding-assistant%}#number-of-requests).
 
 ## Troubleshooting
 
