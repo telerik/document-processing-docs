@@ -21,8 +21,6 @@ In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-
 * [Node.js](https://nodejs.org/en) 18 or newer.
 * An [MCP-compatible client](https://modelcontextprotocol.io/clients) that supports **MCP tools** (latest version recommended).
 
-@[template](/_contentTemplates/common/ai-coding-assistant.md#getting-started)
-
 ## Installation
 
 Install the Telerik DPL MCP server using npm:
