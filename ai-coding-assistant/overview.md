@@ -14,7 +14,7 @@ Telerik Document Processing offers an **AI Coding Assistant** which will leverag
 
 ## Supported Libraries
 
-* [RadPdfPocessing]({%slug radpdfprocessing-overview})
+* [RadPdfPocessing]({%slug radpdfprocessing-overview%})
 
 ## Available Tools
 
