@@ -16,6 +16,8 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 
 >important The Name for the EmbeddedFile should contain the file extension as well, e.g. *MySampleTextFile.txt*.
 
+>note [PdfProcessing Embedding File Streams Demo](https://demos.telerik.com/document-processing/pdfprocessing/embed_file_streams)
+
 ### Creating an Embedded File Stream
  
 #### **[C#] Creating an embedded file stream**

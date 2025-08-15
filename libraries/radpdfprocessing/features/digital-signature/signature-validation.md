@@ -24,6 +24,8 @@ The Signature class exposes two methods that allow you to validate a signature:
 
 >important The validation requires that the stream, from which the document is imported, to be opened. The validation is performed for the current field and against the state of the document at the moment of importing.
 
+>note [PdfProcessing Validate Digital Signature Demo](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature)
+
 The following example shows how the validation can be used:
 
 #### **[C#] Example: Validate a field**

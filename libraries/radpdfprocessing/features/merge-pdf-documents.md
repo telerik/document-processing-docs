@@ -11,6 +11,8 @@ position: 5
 
 **RadPdfProcessing** provides support for merging multiple PDF documents into one using the following approaches:
 
+>note [PdfProcessing Content Merging, Splitting, and Adding Demo](https://demos.telerik.com/document-processing/pdfprocessing/merge_split_add_content)
+
 ## Using the RadFixedDocument.Merge Method
 
 You can merge PDF documents out-of-the-box with the **Merge** method of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}). This method clones the source document and appends it to the current instance of RadFixedDocument:
