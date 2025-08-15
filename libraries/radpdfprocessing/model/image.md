@@ -23,7 +23,7 @@ position: 4
 
 | **Method**            | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| **GetBitmapSource**  (_.NET Standard_) | Creates a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) from the image element.|
+| **GetBitmapSource**  (_Unavailable in .NET Standard_) | Creates a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) from the image element.|
 | **Clone** (_since Q2 2025_)                | Creates a deep copy of this document element.                                                  |
 
 ### Working With an Image
