@@ -9,7 +9,7 @@ position: 1
 ---
 
 
-# Telerik Document Processing GitHub Copilot Extension <sup>(Preview)</sup>
+# Telerik Document Processing GitHub Copilot Extension
 
 The Telerik Document Processing Libraries (DPL) [GitHub Copilot](https://github.com/features/copilot) extension is an AI-powered coding assistant that provides specialized knowledge about the Telerik [Document Processing Libraries]({%slug introduction%}).
 
@@ -45,13 +45,14 @@ Follow these steps to install and configure the Telerik Document Processing Copi
 
 ## Usage
 
-To use the Telerik DPL Copilot extension:
+The Telerik DPL Copilot extension can be used in `ASK` mode as follows:
 
 1. Open the GitHub Copilot chat window in your [Copilot-enabled app](https://docs.github.com/en/copilot/building-copilot-extensions/about-building-copilot-extensions#supported-clients-and-ides) (for example, Visual Studio or VS Code).
 1. Ensure you are in **Chat** mode and not in **Edit** or **Agent** mode. The Edit and Agent modes do not use the Telerik Copilot extension. However, the Agent mode can use the [Telerik DPL MCP server]({%slug ai-mcp-server%}).
 1. Start your prompt with `@telerikdpl` and type your request. Verify that `@telerikdpl` is recognized and highlighted; otherwise, the extension may not be properly installed.
 
-    ![Recognized TelerikDpl](images/dpl-ai-copilot-extension-recognized.png)    
+    >caption Recognized TelerikDpl GitHub Copilot Extension in VisualStudio
+    ![Recognized TelerikDpl in VisualStudio](images/dpl-ai-copilot-extension-recognized.png)    
 
 1. Look for a status label such as **Telerik DPL working...** or **Telerik DPL generating response...** in the output to confirm the extension is active.
 

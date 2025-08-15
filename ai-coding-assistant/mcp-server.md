@@ -8,7 +8,7 @@ published: True
 position: 2
 ---
 
-# Telerik Document Processing MCP Server <sup>(Preview)</sup>
+# Telerik Document Processing MCP Server
 
 The Telerik Document Processing [MCP (Model Context Protocol) Server](https://modelcontextprotocol.io/introduction) enhances your AI-powered development experience by providing specialized context about Telerik Document Processing libraries.
 
@@ -23,13 +23,17 @@ In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-
 
 ## Installation
 
-Install the Telerik DPL MCP server using npm:
+Install the Telerik DPL MCP server using npm:  
 
 ```bash
 npm i @progress/telerik-dpl-mcp
 ```
 
-### Configuration
+>caption Installing in VS Code
+
+![Installing DPL MCP Server in VS Code](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif)  
+
+## Configuration
 
 Use these settings when configuring the server in your MCP client:
 
@@ -39,13 +43,13 @@ Use these settings when configuring the server in your MCP client:
 | Type | `stdio` (standard input/output transport) |
 | Command | `npx` |
 | Arguments | `-y` |
-| Server Name | `telerikDplAssistant` (customizable) |
+| Server Name | `telerik-dpl-mcp` (customizable) |
 
 ### License Configuration
 
 Add your [Telerik license key]({%slug setting-up-license-key%}) as an environment parameter in your `mcp.json` file using one of these options:
 
-Option 1: License File Path (Recommended)
+#### Option 1: License File Path (Recommended)
 
  ```json
  "env": {
@@ -53,7 +57,7 @@ Option 1: License File Path (Recommended)
  }
  ```
 
-Option 2: Direct License Key
+#### Option 2: Direct License Key
 
  ```json
  "env": {
@@ -76,7 +80,7 @@ For complete setup instructions, see [Use MCP servers in Visual Studio](https://
  ```json
  {
    "servers": {
-     "telerikDplAssistant": {
+     "telerik-dpl-mcp": {
        "type": "stdio",
        "command": "npx",
        "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
@@ -91,7 +95,7 @@ For complete setup instructions, see [Use MCP servers in Visual Studio](https://
  ```
 
 2. Restart Visual Studio.
-3. Enable the `telerikDplAssistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
+3. Enable the `telerik-dpl-mcp` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
 
 ### Global Setup:
 
@@ -109,20 +113,22 @@ The basic setup in Visual Studio Code follows these steps:
 2. Create `.vscode/mcp.json` in your workspace root (or user folder for global setup):
 
  ```json
- {
-   "servers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "npx",
-       "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   }
- }
+{
+    "servers": {
+        "telerik-dpl-mcp": {
+            "type": "stdio",
+            "command": "npx",
+            "args": [
+                "@progress/telerik-dpl-mcp@0.2.0"],
+            "env": {
+				"TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+				// or
+				"TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+            }
+        }
+    },
+    "inputs": []
+}
  ```
 
 3. For global discovery, enable [`chat.mcp.discovery.enabled`](vscode://settings/chat.mcp.discovery.enabled) in `settings.json`:
@@ -144,7 +150,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 ```json
 {
   "mcpServers": {
-    "telerikDplAssistant": {
+    "telerik-dpl-mcp": {
       "type": "stdio",
       "command": "npx",
       "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
@@ -160,17 +166,17 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 
 ## Usage
 
-To use the Telerik MCP Server:
+The Telerik MCP Server can be used in `Agent` mode as follows:
 
 1. Start your prompt with one of these triggers:
    - `/telerik` / `@telerik` / `#telerik`
    - `/telerikdpl` / `@telerikdpl` / `#telerikdpl`
-   - `#telerik-dpl-assistant`
+   - `#telerik-dpl-mcp`
 
 2. Verify server activation by looking for these messages:
-   - Visual Studio: `Running telerikDplAssistant`
-   - Visual Studio Code: `Running telerik-dpl-assistant`
-   - Cursor: `Calling MCP tool telerikDplAssistant`
+   - Visual Studio: `Running telerik-dpl-mcp`
+   - Visual Studio Code: `Running telerik-dpl-mcp`
+   - Cursor: `Calling MCP tool telerik-dpl-mcp`
 
 3. Grant permissions when prompted (per session, workspace, or always).
 
@@ -186,8 +192,13 @@ To increase the likelihood of the Telerik MCP server being used, add custom inst
 
 The following examples demonstrate useful prompts for the Telerik Document Processing MCP Server:
 
-* "`/telerik` Generate a PDF document with a table 3x3 with Name, Age, City as columns"
-* "`/telerikdpl` Generate a PDF document with a text and an image"
+* "`#telerik-dpl-mcp` Generate a PDF document with a table 3x3 with Name, Age, City as columns"
+
+    ![Sample Prompt for MCP Server in VS Code Generating a Table](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
+
+* "`/telerikdpl` Import an unsigned PDF document and sign it"
+
+    ![Sample Prompt for MCP Server in VS Code Signing a Document](images/sample-prompt-dpl-mcp-server-in-vs-code-signing-document.png)   
 
 ## Number of Requests
 
