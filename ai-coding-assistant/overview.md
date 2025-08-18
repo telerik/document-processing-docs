@@ -18,7 +18,7 @@ Telerik Document Processing offers an **AI Coding Assistant**, which helps you e
 
 ## Available Tools
 
-The **AI Coding Assistant** is represented by:
+The **AI Coding Assistant** is available through the following tools:
 
 * GenAI-powered Embeddability [Copilot Extension]({%slug ai-copilot-extension%})
 
