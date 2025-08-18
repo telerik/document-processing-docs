@@ -90,7 +90,8 @@ For complete setup instructions, see [Use MCP servers in Visual Studio](https://
          "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
        }
      }
-   }
+   },
+   "inputs": []
  }
  ```
 
