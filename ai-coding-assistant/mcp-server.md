@@ -10,7 +10,7 @@ position: 2
 
 # Telerik Document Processing MCP Server
 
-The Telerik Document Processing [MCP (Model Context Protocol) Server](https://modelcontextprotocol.io/introduction) enhances your AI-powered development experience by providing specialized context about Telerik Document Processing libraries.
+The Telerik Document Processing [MCP (Model Context Protocol) Server](https://modelcontextprotocol.io/introduction) enhances your AI-powered development experience by providing specialized context about the Telerik Document Processing libraries.
 
 This MCP server enables AI-powered IDEs and tools to generate more accurate, tailored code that leverages [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries) and APIs. You can ask complex questions about Document Processing Libraries, request specific implementations, and generate comprehensive code solutions.
 
