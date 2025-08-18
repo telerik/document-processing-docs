@@ -192,7 +192,7 @@ To increase the likelihood of the Telerik MCP server being used, add custom inst
 
 The following examples demonstrate useful prompts for the Telerik Document Processing MCP Server:
 
-* "`#telerik-dpl-mcp` Generate a PDF document with a table 3x3 with Name, Age, City as columns"
+* "`#telerik-dpl-mcp` Generate a PDF document with a 3x3 table having Name, Age, and City as columns"
 
     ![Sample Prompt for MCP Server in VS Code Generating a Table](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
 
