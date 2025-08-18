@@ -65,7 +65,7 @@ The Telerik DPL Copilot extension can be used in `ASK` mode as follows:
 
 The following examples demonstrate useful prompts for the Telerik DPL extension:
 
-* "`@telerikdpl` Generate a PDF document with a table 3x3 with Name, Age, City as columns"
+* "`@telerikdpl` Generate a PDF document with a 3x3 table having Name, Age, and City as columns"
 * "`@telerikdpl` Generate a PDF document with a text and an image"
 
 ## Number of Requests
