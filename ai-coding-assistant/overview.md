@@ -26,7 +26,7 @@ The **AI Coding Assistant** is represented by:
 
 ### Key Differences
 
-The major differences between these tools are:
+The major differences between these tools are listed in the table below.
 
 | Feature| MCP Server| GitHub Copilot Extension|
 |-----|----|----|
