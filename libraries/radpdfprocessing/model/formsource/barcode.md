@@ -1,5 +1,5 @@
 ---
-title: Barcode
+title: Barcode 
 description: Learn how to add barcodes into a PDF document using RadPdfProcessing.
 page_title: Barcode FormSource
 slug: radpdfprocessing-model-formsource-barcode
@@ -25,7 +25,7 @@ The following example shows how to create a **Barcode** as a **FormSource** obje
 
 <snippet id='libraries-pdf-model-formsource-adding-barcode'/>
 
-![PdfProcessing Insert Barcode](images/pdf-processing-insert-barcode.png)
+![PdfProcessing Insert Barcode FormSource](images/pdf-processing-insert-barcode.png)
 
 ## See Also
 

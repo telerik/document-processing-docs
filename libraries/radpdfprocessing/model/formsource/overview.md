@@ -97,4 +97,4 @@ After generating the FormSource object and filling it with content, you should i
 ## See Also
 
  * [SVG FormSource]({%slug radpdfprocessing-model-formsource-svg%})
- * [Barcode]({%slug radpdfprocessing-model-formsource-barcode%})
+ * [Barcode FormSource]({%slug radpdfprocessing-model-formsource-barcode%})
