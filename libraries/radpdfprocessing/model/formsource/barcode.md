@@ -30,4 +30,4 @@ The following example shows how to create a **Barcode** as a **FormSource** obje
 ## See Also
 
  * [FormSource]({%slug radpdfprocessing-model-formsource-overview%})
- * [SVG]({%slug radpdfprocessing-model-formsource-svg%})
+ * [SVG FormSource]({%slug radpdfprocessing-model-formsource-svg%})

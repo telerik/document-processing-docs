@@ -38,7 +38,7 @@ The following table describes the most popular features of the RadSpreadProcessi
 
 | Feature | Description |
 |---------|-------------|
-| [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | API for insertion, positioning and deletion of images in worksheets. As of **Q3 2024** RadSpreadProcessing provides support for SVG (vector graphics image format). |
+| [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | API for insertion, positioning and deletion of images in worksheets. As of **Q3 2024** RadSpreadProcessing provides support for SVG FormSource (vector graphics image format). |
 | [**Charts**]({%slug radspreadprocessing-features-charts%}) | Add, remove and manipulate chart objects in your spreadsheet documents. |
 | [**Conditional Formatting**]({%slug radspreadprocessing-features-conditional-formatting%}) |Make it easy to analyze data, find critical issues, patterns and trends by representing the data inside in a user-friendly manner. |
 | [**Hyperlinks**]({%slug radspreadprocessing-features-hyperlink%}) | The API enables you to add, remove, edit and search for hyperlinks in the worksheets of the document. |

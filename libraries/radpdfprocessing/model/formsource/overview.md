@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Learn how to add content, SVG images or barcodes into a PDF document using RadPdfProcessing.
+description: Learn how to add content, SVG FormSource images or FormSource barcodes into a PDF document using RadPdfProcessing.
 page_title: Form Source Overview
 slug: radpdfprocessing-model-formsource-overview
 tags: formsource, pdfprocessing, document, processing, pdf
@@ -96,5 +96,5 @@ After generating the FormSource object and filling it with content, you should i
 
 ## See Also
 
- * [SVG]({%slug radpdfprocessing-model-formsource-svg%})
+ * [SVG FormSource]({%slug radpdfprocessing-model-formsource-svg%})
  * [Barcode]({%slug radpdfprocessing-model-formsource-barcode%})
