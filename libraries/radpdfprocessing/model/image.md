@@ -30,7 +30,7 @@ position: 4
 
 You can edit an __Image__ element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.       
 
->note As of **Q3 2024** RadPdfProcessing provides support for SVG (vector graphics image format): [Adding SVG into a Document]({%slug radpdfprocessing-model-formsource-svg%}).
+>note As of **Q3 2024** RadPdfProcessing provides support for SVG FormSource(vector graphics image format): [Adding SVG FormSource into a Document]({%slug radpdfprocessing-model-formsource-svg%}).
             
 __Example 1__ shows how to initialize an Image object, assigns an ImageSource to it and add it to a previously defined container (page).
       

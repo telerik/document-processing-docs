@@ -23,6 +23,8 @@ The following example demonstrates how to create a document from scratch, add a 
 
 <snippet id='libraries-pdf-model-interactiveforms-formfields-resettingformfields-create-pushbuttonwidget-with-resetformaction'/>
 
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+
 ## Updating an Existing document with a field
 
 If the document already contains form fields and a PushButtonWidget, it is possible to access the existing button and add the ResetFormAction.

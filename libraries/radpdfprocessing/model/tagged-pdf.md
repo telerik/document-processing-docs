@@ -26,6 +26,8 @@ position: 7
 
 Represents the strategy for handling tagging in PDF documents. The available options are:
 
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+
 * **UseExisting** - Specifies whether the document should not be tagged on export automatically and the existing StructureTree will be used. The *default* option.
 
 * **Build** - Specifies whether the document should be automatically tagged on export and a new StructureTree should be created.

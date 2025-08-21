@@ -102,12 +102,15 @@ The **AnnotationContentSource** class, accessed by the **Content** property of t
             }
 
             formEditor.TextProperties.FontSize = 20;
+            formEditor.TextProperties.Font = FontsRepository.Courier;
             formEditor.Position.Translate(10, 10);
             formEditor.DrawText(text);
         }
 ```
 
 ![Create StampAnnotation with Appearance](images/pdf-processing-create-stampannotation-with-appearance.png)  
+
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
 ## See Also
 
