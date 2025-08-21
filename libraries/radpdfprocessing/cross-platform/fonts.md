@@ -22,6 +22,10 @@ You can find a detailed **FixedExtensibilityManager** and **FontsProvider** desc
 >caution If the FontsProvider property is not set, a default font will be used when exporting the document in cross-platform applications.
 
 >important When converting a document (e.g. DOCX, HTML, etc.) to PDF format in **.NET Standard** and **.NET (Target OS: *None*)** projects, fonts from the original document are not automatically maintained in the PDF unless you explicitly provide the font data. This is especially important when the original document uses non-standard or custom fonts. The PdfProcessing library requires access to the actual font files to embed them in the PDF. If font data is not provided, the PDF model will substitute the missing fonts with standard ones, resulting in a mismatch between the original document and the exported PDF file.
+
+<snippet id='libraries-pdf-cross-platform-fonts-fontsprovider-implementation'/>
+
+<snippet id='libraries-pdf-cross-platform-fonts-set-fontsprovider'/>
 	
 ## See Also
 
