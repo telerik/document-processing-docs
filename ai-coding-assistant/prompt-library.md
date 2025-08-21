@@ -39,7 +39,6 @@ The section provides examples of general questions related to RadPdfProcessing.
 <table>
 		<tr>
 			<th>Create a New PDF Document</th>
-			<th width=5%></th>
       <th>Create an Accessible PDF</th>
 		</tr>
     <tr>  
@@ -50,7 +49,6 @@ The section provides examples of general questions related to RadPdfProcessing.
 			  </code>
       </pre>
       </td>
-      <td></td>
             <td>
       <pre>
         <code>
@@ -64,7 +62,6 @@ The section provides examples of general questions related to RadPdfProcessing.
 <table>
 		<tr>
 			<th>Create a New PDF Document with an Image</th>
-			<th width=5%></th>
       <th>Merge PDF Documents</th>
 		</tr>
     <tr>  
@@ -75,7 +72,6 @@ The section provides examples of general questions related to RadPdfProcessing.
 			  </code>
       </pre>
       </td>
-      <td></td>
             <td>
       <pre>
         <code>
