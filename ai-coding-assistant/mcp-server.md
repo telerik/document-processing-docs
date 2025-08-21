@@ -3,7 +3,7 @@ title: MCP Server
 page_title: DPL MCP Server
 description: Learn how to add and use the Telerik Document Processing MCP Server as a .NET Document Processing AI coding assistant and code generator for better developer productivity. The Telerik Document Processing MCP server provides proprietary context about Telerik UI for .NET Document Processing to AI-powered software.
 slug: ai-mcp-server
-tags: telerik, dpl, ai, server, mcp, dotnet,coding assistant
+tags: telerik, dpl, ai, server, mcp, dotnet,coding, assistant
 published: True
 position: 2
 ---

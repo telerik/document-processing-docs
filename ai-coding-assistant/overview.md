@@ -59,7 +59,6 @@ The Document Processing AI Coding Assistant allows the following maximum number 
 
 The Telerik Document Processing AI Coding Assistant operates under strict privacy guidelines:
 
-Data Access:
 * No access to your workspace and application code.
 * Exception: when using the Telerik MCP server (or any other MCP server), the LLM generates parameters for the MCP server request, which may include parts of your application code.
  
