@@ -43,20 +43,14 @@ The section provides examples of general questions related to RadPdfProcessing.
 		</tr>
     <tr>  
       <td>
-      <pre>
-        <code>
-/telerikdpl create a PDF file and insert text "Hello world",
- using telerik_dpl_assistant (usage is mandatory).
-			  </code>
-      </pre>
+        <pre><code>
+/telerikdpl create a PDF file and insert text "Hello world", using telerik_dpl_assistant (usage is mandatory).
+			  </code></pre>
       </td>
             <td>
-      <pre>
-        <code>
-/telerikdpl create a PDF document and export it to a PDF/A Compliant file,
- using telerik_dpl_assistant (usage is mandatory).
-			  </code>
-      </pre>
+         <pre><code>
+/telerikdpl create a PDF document and export it to a PDF/A Compliant file,  using telerik_dpl_assistant (usage is mandatory).
+			  </code></pre>
       </td>
     </tr>   
 </table>   
@@ -68,20 +62,18 @@ The section provides examples of general questions related to RadPdfProcessing.
 		</tr>
     <tr>  
       <td>
-      <pre>
+      <pre style="margin:0">
         <code>
-/telerikdpl create a PDF file with image in it,
- using telerik_dpl_assistant (usage is mandatory).
+/telerikdpl create a PDF file with image in it, using telerik_dpl_assistant (usage is mandatory).
 			  </code>
       </pre>
       </td>
-            <td>
-      <pre>
+      <td>
+        <pre style="margin:0">
         <code>
-/telerikdpl import two PDF files and merge them into a single one,
- using telerik_dpl_assistant (usage is mandatory).
+/telerikdpl import two PDF files and merge them into a single one,  using telerik_dpl_assistant (usage is mandatory).
 			  </code>
-      </pre>
+        </pre>
       </td>
     </tr>   
 </table>  
