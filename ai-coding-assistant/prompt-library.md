@@ -23,26 +23,68 @@ The list of prompts is not exhaustive and the Telerik Document Processing team i
 ## How to Use This Library
 
 Quick Start Guide:
+
 1. Find a prompt that matches your needs
+
 1. Copy the prompt text
+
 1. Paste it in your IDE with the AI Assistant
+
 1. Customize the prompt for your specific use case. 
 
 ## General Prompts
 
+The section provides examples of general questions related to RadPdfProcessing.
+
 <table>
 		<tr>
-			<th>Property</th>
-			<th>Description</th>
+			<th>Create a New PDF Document</th>
+			<th></th>
+      <th>Create an Accessible PDF</th>
 		</tr>
     <tr>  
       <td>
-      <pre><code>
-
-			</code></pre>
+      <pre>
+        <code>
+/telerikdpl create a PDF file and insert text "Hello world", using telerik_dpl_assistant (usage is mandatory).
+			  </code>
+      </pre>
+      </td>
+      <td></td>
+            <td>
+      <pre>
+        <code>
+/telerikdpl create a PDF document and export it to a PDF/A Compliant file, using telerik_dpl_assistant (usage is mandatory).
+			  </code>
+      </pre>
       </td>
     </tr>   
 </table>   
+
+<table>
+		<tr>
+			<th>Create a New PDF Document with an Image</th>
+			<th></th>
+      <th>Merge PDF Documents</th>
+		</tr>
+    <tr>  
+      <td>
+      <pre>
+        <code>
+/telerikdpl create a PDF file with image in it, using telerik_dpl_assistant (usage is mandatory).
+			  </code>
+      </pre>
+      </td>
+      <td></td>
+            <td>
+      <pre>
+        <code>
+/telerikdpl import two PDF files and merge them into a single one, using telerik_dpl_assistant (usage is mandatory).
+			  </code>
+      </pre>
+      </td>
+    </tr>   
+</table>  
 
 ## Library-Specific Prompts
 
