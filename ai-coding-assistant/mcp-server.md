@@ -8,7 +8,7 @@ published: True
 position: 2
 ---
 
-# Telerik Document Processing MCP Server
+# MCP Server <sup>Telerik Document Processing</sup>
 
 The Telerik Document Processing [MCP (Model Context Protocol) Server](https://modelcontextprotocol.io/introduction) enhances your AI-powered development experience by providing specialized context about the Telerik Document Processing libraries.
 
@@ -67,6 +67,8 @@ Add your [Telerik license key]({%slug setting-up-license-key%}) as an environmen
 
 > Option 1 is recommended unless you're sharing settings across different systems. Remember to [update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
 
+>note Usually, the `.mcp.json` file is expected to be found in the user's directory: %USERPROFILE%
+
 ## Visual Studio
 
 For complete setup instructions, see [Use MCP servers in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers).
@@ -94,12 +96,6 @@ For complete setup instructions, see [Use MCP servers in Visual Studio](https://
    "inputs": []
  }
  ```
-  >note Usually, the `.mcp.json` file is expected to be found in one of the following locations: 
-  > * "C:\Users\your user name\\.mcp.json"
-  > * "Project folder\\.vscode\mcp.json"
-  > * "Project folder\\.cursor\mcp.json"
-  > * "Project folder\\.mcp.json"
-  > * "Project folder\\.vs\mcp.json"
 
 2. Restart Visual Studio.
 3. Enable the `telerik-dpl-mcp` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).

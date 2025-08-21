@@ -8,7 +8,7 @@ published: True
 position: 3
 ---
 
-# Telerik Document Processing Prompt Library
+# Prompt Library <sup>Telerik Document Processing</sup>
 
 The prompts provided here are intended and optimized for use with Telerik Document Processing [AI Coding Assistant]({%slug ai-coding-assistant%}). When you run them in the [GitHub Copilot Extension]({%slug ai-copilot-extension%}) or the [MCP Server]({%slug ai-mcp-server%}), these prompts will help you kick start your app development, speed up the component configuration process, and troubleshoot your code.
 
