@@ -195,13 +195,17 @@ To increase the likelihood of the Telerik MCP server being used, add custom inst
 
 The following examples demonstrate useful prompts for the Telerik Document Processing MCP Server:
 
-* "`#telerik-dpl-mcp` Generate a PDF document with a 3x3 table having Name, Age, and City as columns"
+* "`#telerik-dpl-mcp` import two PDF files and merge them into a single one, using telerik_dpl_assistant (usage is mandatory)."
 
-    ![Sample Prompt for MCP Server in VS Code Generating a Table](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
+    ![Sample Prompt for MCP Server in VS Code Merging PDFs](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
 
-* "`/telerikdpl` Import an unsigned PDF document and sign it"
+|Run telerik_dpl_assistant in VS Code|Ran telerik_dpl_assistant in VS Code|
+|----|----| 
+|
+![Running Sample Prompt for MCP Server in VS Code Merging PDFs](images/running-sample-prompt-dpl-mcp-server-in-vs-code.png)|![Produced Result with MCP Server in VS Code Merging PDFs](images/result-sample-prompt-dpl-mcp-server-in-vs-code.png)|    
 
-    ![Sample Prompt for MCP Server in VS Code Signing a Document](images/sample-prompt-dpl-mcp-server-in-vs-code-signing-document.png)   
+
+* "`#telerik-dpl-mcp` create a PDF file with a link to "http://telerik.com" in it, using telerik_dpl_assistant (usage is mandatory)."
 
 ## Number of Requests
 
