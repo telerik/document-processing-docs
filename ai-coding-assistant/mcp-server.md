@@ -94,6 +94,12 @@ For complete setup instructions, see [Use MCP servers in Visual Studio](https://
    "inputs": []
  }
  ```
+  >note Usually, the `.mcp.json` file is expected to be found in one of the following locations: 
+  > * "C:\Users\your user name\\.mcp.json"
+  > * "Project folder\\.vscode\mcp.json"
+  > * "Project folder\\.cursor\mcp.json"
+  > * "Project folder\\.mcp.json"
+  > * "Project folder\\.vs\mcp.json"
 
 2. Restart Visual Studio.
 3. Enable the `telerik-dpl-mcp` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
