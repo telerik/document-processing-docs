@@ -15,13 +15,19 @@ Unlike the .NET Framework and .NET (Target OS: *Windows*) version, the RadPdfPro
 
 ## Setting and Exporting Fonts
 
-RadPdfProcessing needs access to the font data, so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you will need to provide an implementation of the **FontsProviderBase** abstract class and set this implementation to the **<u>FontsProvider</u>** property of the **FixedExtensibilityManager**.
+RadPdfProcessing needs access to the font data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you will need to provide an implementation of the **FontsProviderBase** abstract class and set this implementation to the **<u>FontsProvider</u>** property of the **FixedExtensibilityManager**.
 
-You can find a detailed **FixedExtensibilityManager** and **FontsProvider** descripiton and implementaion in the [How to implement a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) article. 
+You can find a detailed **FixedExtensibilityManager** and **FontsProvider** description and implementation in the [How to implement a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) article. 
 
 >caution If the FontsProvider property is not set, a default font will be used when exporting the document in cross-platform applications.
 
->important When converting a document (e.g. DOCX, HTML, etc.) to PDF format in **.NET Standard** and **.NET (Target OS: *None*)** projects, fonts from the original document are not automatically maintained in the PDF unless you explicitly provide the font data. This is especially important when the original document uses non-standard or custom fonts. The PdfProcessing library requires access to the actual font files to embed them in the PDF. If font data is not provided, the PDF model will substitute the missing fonts with standard ones, resulting in a mismatch between the original document and the exported PDF file.
+>important When converting a document (e.g., DOCX, HTML, etc.) to PDF format in **.NET Standard** and **.NET (Target OS: *None*)** projects, fonts from the original document are not automatically maintained in the PDF unless you explicitly provide the font data. This is especially important when the original document uses non-standard or custom fonts. The PdfProcessing library requires access to the actual font files to embed them in the PDF. If font data is not provided, the PDF model will substitute the missing fonts with standard ones, resulting in a mismatch between the original document and the exported PDF file.
+
+## Implementing a FontsProviderBase
+
+<snippet id='libraries-pdf-cross-platform-fonts-fontsprovider-implementation'/>
+
+<snippet id='libraries-pdf-cross-platform-fonts-set-fontsprovider'/>
 	
 ## See Also
 

@@ -142,7 +142,7 @@ Another way to auto fit column widths is to use the __ExpandToFitNumberValuesWid
 	columnSelection.ExpandToFitNumberValuesWidth();
 {{endregion}}
 
-> The unit type used to set the width of the columns and the height of the rows in RadSpreadProcessing is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).  
+> The unit type used to set the width of the columns and the height of the rows in RadSpreadProcessing is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
 
 ### Telerik RadSpreadProcessing vs MS Excel 
 

@@ -117,7 +117,7 @@ __Example 2__ illustrates how to use these methods on the region A1:F6.
 
 Using the above approach you can set the value of almost all cell properties. There are a few exceptions to the general get, set and clear rule, though, and each of them is described into one of the following sections.
 
->When using **GetFontSize()** and **SetFontSize()** methods you have to keep in mind that measurement units used in **RadSpreadProcessing** are [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). For more information go to [Measurement Units]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%}#measurement-units) help topic.
+>When using **GetFontSize()** and **SetFontSize()** methods you have to keep in mind that measurement units used in **RadSpreadProcessing** are [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class. For more information go to [Measurement Units]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%}#measurement-units) help topic.
 
 ## Value Property
 

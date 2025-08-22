@@ -51,6 +51,8 @@ Since **Q1 2025** you can easily configure the TablRow's height through its **He
 * __Exact__: Sets an exact row height. The value is in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).      
 
 * __AtLeast__: Sets a minimum row height. The value is in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).
+
+>note You can convert DIPs to other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
             
 __Example 3__ creates a table with three single-cell rows, each with a different **HeightType**.
         
