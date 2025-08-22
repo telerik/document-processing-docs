@@ -7,12 +7,21 @@ tags: telerik, dpl, ai, server, mcp, dotnet,coding, assistant
 published: True
 position: 2
 ---
+<style>
+img[alt$="><"] {
+  border: 1px solid lightgrey;
+}
+</style>
 
-# Telerik Document Processing MCP Server
+# MCP Server <sup>Telerik Document Processing</sup>
 
 The Telerik Document Processing [MCP (Model Context Protocol) Server](https://modelcontextprotocol.io/introduction) enhances your AI-powered development experience by providing specialized context about the Telerik Document Processing libraries.
 
 This MCP server enables AI-powered IDEs and tools to generate more accurate, tailored code that leverages [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries) and APIs. You can ask complex questions about Document Processing Libraries, request specific implementations, and generate comprehensive code solutions.
+
+## Supported Libraries
+
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%})
 
 ## Prerequisites for the MCP Server
 
@@ -67,6 +76,8 @@ Add your [Telerik license key]({%slug setting-up-license-key%}) as an environmen
 
 > Option 1 is recommended unless you're sharing settings across different systems. Remember to [update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
 
+>note Usually, the `.mcp.json` file is expected to be found in the user's directory: %USERPROFILE%
+
 ## Visual Studio
 
 For complete setup instructions, see [Use MCP servers in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers).
@@ -94,12 +105,6 @@ For complete setup instructions, see [Use MCP servers in Visual Studio](https://
    "inputs": []
  }
  ```
-  >note Usually, the `.mcp.json` file is expected to be found in one of the following locations: 
-  > * "C:\Users\your user name\\.mcp.json"
-  > * "Project folder\\.vscode\mcp.json"
-  > * "Project folder\\.cursor\mcp.json"
-  > * "Project folder\\.mcp.json"
-  > * "Project folder\\.vs\mcp.json"
 
 2. Restart Visual Studio.
 3. Enable the `telerik-dpl-mcp` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
@@ -199,13 +204,21 @@ To increase the likelihood of the Telerik MCP server being used, add custom inst
 
 The following examples demonstrate useful prompts for the Telerik Document Processing MCP Server:
 
-* "`#telerik-dpl-mcp` Generate a PDF document with a 3x3 table having Name, Age, and City as columns"
+* "`#telerik-dpl-mcp` import two PDF files and merge them into a single one"
 
-    ![Sample Prompt for MCP Server in VS Code Generating a Table](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
+    ![Sample Prompt for MCP Server in VS Code Merging PDFs ><](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
 
-* "`/telerikdpl` Import an unsigned PDF document and sign it"
+|Run telerik_dpl_assistant in VS Code|Ran telerik_dpl_assistant in VS Code|
+|----|----| 
+|![Running Sample Prompt for MCP Server in VS Code Merging PDFs ><](images/running-sample-prompt-dpl-mcp-server-in-vs-code.png)|![Produced Result with MCP Server in VS Code Merging PDFs ><](images/result-sample-prompt-dpl-mcp-server-in-vs-code.png)|    
 
-    ![Sample Prompt for MCP Server in VS Code Signing a Document](images/sample-prompt-dpl-mcp-server-in-vs-code-signing-document.png)   
+
+* "`#telerik-dpl-mcp` create a PDF file with a link to "http://telerik.com" in it"
+
+
+>caption Runnin MCP Server in Visual Studio 
+
+![Running MCP Server in Visual Studio ><](images/running-mcp-server-in-vs.png)   
 
 ## Number of Requests
 

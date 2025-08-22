@@ -4,7 +4,6 @@ site_name: DocumentProcessing
 # Exclude files which should not be in the output
 exclude: [README.md,Gemfile,Gemfile.lock,_assetsApi]
 exclude_navigation: [knowledge-base/*]
-exclude_navigation: [knowledge-base/*, ai-coding-assistant/*]
 
 navigation:
 ## Common Start
@@ -25,10 +24,6 @@ navigation:
     "ai-coding-assistant":
         title: AI Coding Assistant
         position: 10
-    # ai-coding-assistant: Hidden from TOC
-    # "ai-coding-assistant":
-    #     title: AI Coding Assistant
-    #     position: 10
     installation-and-deployment:
         title: Installation and Deployment
         position: 4

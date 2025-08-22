@@ -9,7 +9,7 @@ position: 1
 ---
 
 
-# Telerik Document Processing GitHub Copilot Extension
+# GitHub Copilot Extension <sup>Telerik Document Processing</sup>
 
 The Telerik Document Processing Libraries (DPL) [GitHub Copilot](https://github.com/features/copilot) extension is an AI-powered coding assistant that provides specialized knowledge about the Telerik [Document Processing Libraries]({%slug introduction%}).
 

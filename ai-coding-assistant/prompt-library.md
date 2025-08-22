@@ -8,11 +8,11 @@ published: True
 position: 3
 ---
 
-# Telerik Document Processing Prompt Library
+# Prompt Library <sup>Telerik Document Processing</sup>
 
 The prompts provided here are intended and optimized for use with Telerik Document Processing [AI Coding Assistant]({%slug ai-coding-assistant%}). When you run them in the [GitHub Copilot Extension]({%slug ai-copilot-extension%}) or the [MCP Server]({%slug ai-mcp-server%}), these prompts will help you kick start your app development, speed up the component configuration process, and troubleshoot your code.
 
-You can use the provided prompts as they are or modify them to fit your use case. Make sure to start your prompt with the required prefix (@telerikdpl for the [GitHub Copilot Extension]({%slug ai-copilot-extension%}) or the respective MCP Server handle).
+You can use the provided prompts as they are or modify them to fit your use case. Make sure to start your prompt with the required prefix (@telerikdpl for the [GitHub Copilot Extension]({%slug ai-copilot-extension%}) or the respective [MCP Server]({%slug ai-mcp-server%}) handle).
 
 You can also use the prompts with any AI-powered tool of your choice. However, the Telerik Document Processing AI Coding Assistant is developed to provide highly accurate results based extensively on the documentation, APIs, and community knowledge for Telerik Document Processing. Running the prompts outside the AI Coding Assistant may not produce as relevant results.
 
@@ -43,20 +43,14 @@ The section provides examples of general questions related to RadPdfProcessing.
 		</tr>
     <tr>  
       <td>
-      <pre>
-        <code>
-/telerikdpl create a PDF file and insert text "Hello world",
- using telerik_dpl_assistant (usage is mandatory).
-			  </code>
-      </pre>
+        <pre><code>
+/telerikdpl create a PDF file and insert text "Hello world", using telerik_dpl_assistant (usage is mandatory).
+			  </code></pre>
       </td>
             <td>
-      <pre>
-        <code>
-/telerikdpl create a PDF document and export it to a PDF/A Compliant file,
- using telerik_dpl_assistant (usage is mandatory).
-			  </code>
-      </pre>
+         <pre><code>
+/telerikdpl create a PDF document and export it to a PDF/A Compliant file,  using telerik_dpl_assistant (usage is mandatory).
+			  </code></pre>
       </td>
     </tr>   
 </table>   
@@ -68,25 +62,23 @@ The section provides examples of general questions related to RadPdfProcessing.
 		</tr>
     <tr>  
       <td>
-      <pre>
-        <code>
-/telerikdpl create a PDF file with image in it,
- using telerik_dpl_assistant (usage is mandatory).
-			  </code>
-      </pre>
+      <pre><code>
+/telerikdpl create a PDF file with image in it, using telerik_dpl_assistant (usage is mandatory).
+			  </code></pre>
       </td>
-            <td>
-      <pre>
-        <code>
-/telerikdpl import two PDF files and merge them into a single one,
- using telerik_dpl_assistant (usage is mandatory).
-			  </code>
-      </pre>
+      <td>
+        <pre><code>
+/telerikdpl import two PDF files and merge them into a single one,  using telerik_dpl_assistant (usage is mandatory).
+			  </code></pre>
       </td>
     </tr>   
 </table>  
 
 ## Library-Specific Prompts
+
+## Troubleshooting Prompts
+
+This section provides sample prompts for debugging and troubleshooting your PdfProcessing code.
 
 ## See Also
 
