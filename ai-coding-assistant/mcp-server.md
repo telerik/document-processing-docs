@@ -19,6 +19,10 @@ The Telerik Document Processing [MCP (Model Context Protocol) Server](https://mo
 
 This MCP server enables AI-powered IDEs and tools to generate more accurate, tailored code that leverages [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries) and APIs. You can ask complex questions about Document Processing Libraries, request specific implementations, and generate comprehensive code solutions.
 
+## Supported Libraries
+
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+
 ## Prerequisites for the MCP Server
 
 In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-assistant%}#prerequisites-for-the-ai-coding-assistant), To use the Telerik Document Processing (DPL) MCP server, you need:
