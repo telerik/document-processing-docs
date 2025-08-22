@@ -26,7 +26,7 @@ In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-
 Install the Telerik DPL MCP server using npm:  
 
 ```bash
-npm i @progress/telerik-dpl-mcp
+npm i @progress/telerik-dpl-mcp@latest
 ```
 
 >caption Installing in VS Code
