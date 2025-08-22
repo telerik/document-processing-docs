@@ -131,7 +131,7 @@ The basic setup in Visual Studio Code follows these steps:
             "type": "stdio",
             "command": "npx",
             "args": [
-                "@progress/telerik-dpl-mcp@0.2.0"],
+                "@progress/telerik-dpl-mcp@latest"],
             "env": {
 				"TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
 				// or
