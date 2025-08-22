@@ -7,6 +7,11 @@ tags: telerik, dpl, ai, server, mcp, dotnet,coding, assistant
 published: True
 position: 2
 ---
+<style>
+img[alt$="><"] {
+  border: 1px solid lightgrey;
+}
+</style>
 
 # MCP Server <sup>Telerik Document Processing</sup>
 
@@ -197,15 +202,19 @@ The following examples demonstrate useful prompts for the Telerik Document Proce
 
 * "`#telerik-dpl-mcp` import two PDF files and merge them into a single one, using telerik_dpl_assistant (usage is mandatory)."
 
-    ![Sample Prompt for MCP Server in VS Code Merging PDFs](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
+    ![Sample Prompt for MCP Server in VS Code Merging PDFs ><](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
 
 |Run telerik_dpl_assistant in VS Code|Ran telerik_dpl_assistant in VS Code|
 |----|----| 
-|
-![Running Sample Prompt for MCP Server in VS Code Merging PDFs](images/running-sample-prompt-dpl-mcp-server-in-vs-code.png)|![Produced Result with MCP Server in VS Code Merging PDFs](images/result-sample-prompt-dpl-mcp-server-in-vs-code.png)|    
+|![Running Sample Prompt for MCP Server in VS Code Merging PDFs ><](images/running-sample-prompt-dpl-mcp-server-in-vs-code.png)|![Produced Result with MCP Server in VS Code Merging PDFs ><](images/result-sample-prompt-dpl-mcp-server-in-vs-code.png)|    
 
 
 * "`#telerik-dpl-mcp` create a PDF file with a link to "http://telerik.com" in it, using telerik_dpl_assistant (usage is mandatory)."
+
+
+>caption Runnin MCP Server in Visual Studio 
+
+![Running MCP Server in Visual Studio ><](images/running-mcp-server-in-vs.png)   
 
 ## Number of Requests
 
