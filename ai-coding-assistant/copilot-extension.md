@@ -7,7 +7,11 @@ tags: ai, dpl, document, processing, coding, assistant, getting, started, extens
 published: True
 position: 1
 ---
-
+<style>
+img[alt$="><"] {
+  border: 1px solid lightgrey;
+}
+</style>
 
 # GitHub Copilot Extension <sup>Telerik Document Processing</sup>
 
@@ -27,15 +31,18 @@ In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-
 * An active [GitHub Copilot](https://github.com/features/copilot) subscription. You can enable or configure GitHub Copilot on the [Copilot Settings page in your GitHub account](https://github.com/settings/copilot).
 * The latest version of your [Copilot-enabled app](https://docs.github.com/en/copilot/building-copilot-extensions/about-building-copilot-extensions#supported-clients-and-ides) (for example, Visual Studio or Visual Studio Code).
 
-## Installation
+## Installation 
 
 Follow these steps to install and configure the Telerik Document Processing Copilot extension:
 
 1. Go to the [Telerik Document Processing GitHub App](https://github.com/apps/telerikdpl) page and click the **Install** button.
+
+    ![Install Telerik Document Processing GitHub App ><](images/install-dpl-ai-copilot-extension.png)  
+
 1. You will see a list that includes your GitHub account and all GitHub organizations that you are part of. **Select your GitHub account**.
 1. Click the **Install & Authorize** button. This will allow the GitHub Copilot extension to integrate with your GitHub account.
 
-    ![Telerik Document Processing GitHub App](images/dpl-ai-copilot-extension.png)   
+    ![Telerik Document Processing GitHub App ><](images/dpl-ai-copilot-extension.png)   
 
 1. Enter your GitHub password when prompted.
 1. You will be redirected to **telerik.com**. Enter your **Telerik account** credentials if prompted. This step links the GitHub Copilot extension with your Telerik account.
@@ -52,11 +59,11 @@ The Telerik DPL Copilot extension can be used in `ASK` mode as follows:
 1. Start your prompt with `@telerikdpl` and type your request. Verify that `@telerikdpl` is recognized and highlighted; otherwise, the extension may not be properly installed.
 
     >caption Recognized TelerikDpl GitHub Copilot Extension in VisualStudio
-    ![Recognized TelerikDpl in VisualStudio](images/dpl-ai-copilot-extension-recognized.png)    
+    ![Recognized TelerikDpl in VisualStudio ><](images/dpl-ai-copilot-extension-recognized.png)    
 
 1. Look for a status label such as **Telerik DPL working...** or **Telerik DPL generating response...** in the output to confirm the extension is active.
 
-    ![Telerik DPL generating response](images/dpl-ai-copilot-extension-generating-response.png)    
+    ![Telerik DPL generating response ><](images/dpl-ai-copilot-extension-generating-response.png)    
 
 1. Grant permission to the Telerik DPL extension to read your workspace files when prompted.
 1. For unrelated queries, start a new chat session in a new window to avoid context pollution from previous conversations.

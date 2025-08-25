@@ -77,8 +77,6 @@ Add your [Telerik license key]({%slug setting-up-license-key%}) as an environmen
 > Option 1 is recommended unless you're sharing settings across different systems. Remember to [update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
 
 >note Usually, the `.mcp.json` file is expected to be found in the user's directory: %USERPROFILE%
-
-![Installed DPL MCP Server in VS Code ><](images/installed-dpl-mcp-server-in-vs-code.png)  
  
 ## Visual Studio
 
@@ -154,6 +152,8 @@ The basic setup in Visual Studio Code follows these steps:
  ```
 
 4. Restart Visual Studio Code.
+
+![Installed DPL MCP Server in VS Code ><](images/installed-dpl-mcp-server-in-vs-code.png)  
 
 ## Cursor
 
