@@ -10,7 +10,7 @@ position: 0
 
 # AI Coding Assistant <sup>Telerik Document Processing</sup>
 
-Telerik Document Processing offers an **AI Coding Assistant**, which helps you enhance your productivity, reduce guesswork, and ensure compliance with security standards when building applications with the [Document Processing Libraries]({%slug introduction%}). The coding assistant is an AI code generator that provides specialized context to AI models, enabling them to produce higher-quality code samples.
+[Telerik Document Processing]({%slug introduction%}) offers an **AI Coding Assistant**, which helps you enhance your productivity, reduce guesswork, and ensure compliance with security standards when building applications with the [Document Processing Libraries]({%slug introduction%}). The coding assistant is an AI code generator that provides specialized context to AI models, enabling them to produce higher-quality code samples.
 
 ## Available Tools
 
