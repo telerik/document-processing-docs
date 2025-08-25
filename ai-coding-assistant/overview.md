@@ -39,6 +39,25 @@ To use the Telerik Document Processing Libraries AI Coding Assistant, you need:
 * An active [Telerik license](https://www.telerik.com/purchase.aspx?filter=web) that includes Telerik Document Processing.
 * An application that uses the Telerik [Document Processing Libraries]({%slug introduction%}).
 
+## Intended Use
+
+>warning Always double-check the code and solutions proposed by any AI-powered tool before applying them to your project.
+
+You can use the AI Coding Assistant for:
+
+* **Initial code generation:** Quickly create/ udpate / convert documents in your app to speed up the initial development.
+* **Basic document library configuration:** Enable or disable specific document library features, or fine tune the configuration through prompting. More complex configurations are possible but may require additional manual work to be production-ready.
+* **Dummy data generation:** Quickly add data to your app for testing and prototyping purposes. Avoid exposing or providing access to your proprietary or production data to AI-enabled tools.
+* **Step-by-step explanations:** Understand the solutions provided by the AI Coding Assistant through the detailed explanations (depends on the tool, mode, and model used). To further develop your knowledge, check the respective documentation.
+* **Preliminary troubleshooting:** Resolve obvious and easy-to-solve issues affecting your code. For more complex issues, look for assistance from the community or contact the support team.
+
+## Recommendations
+
+Consider the following recommendations when working with the AI Coding Assistant:
+
+* When switching between tasks and files, start a new session in a new chat window to avoid polluting the context with irrelevant or outdated information.
+* At the time of publishing, **Claude Sonnet 4** and **GPT-5** produce optimal results.
+
 ## Number of Requests
 
 The Document Processing AI Coding Assistant allows the following maximum number of requests based on your [Telerik license type](https://www.telerik.com/purchase.aspx?filter=web):

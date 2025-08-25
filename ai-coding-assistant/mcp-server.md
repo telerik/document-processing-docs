@@ -216,7 +216,7 @@ The following examples demonstrate useful prompts for the Telerik Document Proce
 * "`#telerik-dpl-mcp` create a PDF file with a link to "http://telerik.com" in it"
 
 
->caption Runnin MCP Server in Visual Studio 
+>caption Running MCP Server in Visual Studio 
 
 ![Running MCP Server in Visual Studio ><](images/running-mcp-server-in-vs.png)   
 
