@@ -52,6 +52,8 @@ Follow these steps to install and configure the Telerik Document Processing Copi
 
 ## Usage
 
+> When switching between tasks and files, start a new session in a new chat window to avoid polluting the context with irrelevant or outdated information.
+
 The Telerik DPL Copilot extension can be used in `ASK` mode as follows:
 
 1. Open the GitHub Copilot chat window in your [Copilot-enabled app](https://docs.github.com/en/copilot/building-copilot-extensions/about-building-copilot-extensions#supported-clients-and-ides) (for example, Visual Studio or VS Code).

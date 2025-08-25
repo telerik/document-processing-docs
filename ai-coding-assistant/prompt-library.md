@@ -38,18 +38,18 @@ The section provides examples of general questions related to RadPdfProcessing.
 
 <table>
 		<tr>
-			<th>Create a New PDF Document</th>
-      <th>Create an Accessible PDF</th>
+			<th>Create a New PDF Document with Text</th>
+      <th>Create a New PDF Document with a Table</th>
 		</tr>
     <tr>  
       <td>
         <pre><code>
-/telerikdpl create a PDF file and insert text "Hello world", using telerik_dpl_assistant (usage is mandatory).
+#telerik_dpl_assistant show me how to create a PDF document and insert text "Hello Telerik Document Processing".
 			  </code></pre>
       </td>
             <td>
          <pre><code>
-/telerikdpl create a PDF document and export it to a PDF/A Compliant file,  using telerik_dpl_assistant (usage is mandatory).
+How to create a PDF document with a table that has 3 rows and 3 columns, with background highlighting on the header row and red top and bottom borders for the entire table
 			  </code></pre>
       </td>
     </tr>   
@@ -57,28 +57,79 @@ The section provides examples of general questions related to RadPdfProcessing.
 
 <table>
 		<tr>
-			<th>Create a New PDF Document with an Image</th>
-      <th>Merge PDF Documents</th>
+			<th>Create a New PDF Document with a Barcode</th>
+      <th>Create a PDF Document with a Specific font</th>
 		</tr>
     <tr>  
       <td>
       <pre><code>
-/telerikdpl create a PDF file with image in it, using telerik_dpl_assistant (usage is mandatory).
+How to create a PDF document with Barcode inside the first page and export it.
 			  </code></pre>
       </td>
       <td>
         <pre><code>
-/telerikdpl import two PDF files and merge them into a single one,  using telerik_dpl_assistant (usage is mandatory).
+#telerik_dpl_assistant create a PDF document with text using Arial font and font size 12
 			  </code></pre>
       </td>
     </tr>   
 </table>  
 
-## Library-Specific Prompts
+<table>
+		<tr>
+			<th>Register a Font</th>
+      <th>Generate an Interactive Form</th>
+		</tr>
+    <tr>  
+      <td>
+      <pre><code>
+#telerik_dpl_assistant can you show me how to register a font.
+			  </code></pre>
+      </td>
+      <td>
+        <pre><code>
+#telerik_dpl_assistant create a new pdf document with an interactive form containing a text field, a combobox field and a listbox field. Use Telerik Document Processing library - the PdfProcessing one. I am using net8 project.
+			  </code></pre>
+      </td>
+    </tr>   
+</table>  
 
-## Troubleshooting Prompts
+<table>
+		<tr>
+			<th>Create a PDF with a Text Annotation</th>
+      <th>Embed a Text File in a PDF</th>
+		</tr>
+    <tr>  
+      <td>
+      <pre><code>
+#telerik_dpl_assistant can you create a new pdf document containing a red highlighted text annotation "I am a highlight annotation."
+			  </code></pre>
+      </td>
+      <td>
+        <pre><code>
+#telerik_dpl_assistant show me a complete code example on how to embed a text file
+			  </code></pre>
+      </td>
+    </tr>   
+</table>  
 
-This section provides sample prompts for debugging and troubleshooting your PdfProcessing code.
+<table>
+		<tr>
+			<th>Generate and Export a PDF Document to an Image</th>
+      <th>Generate an Accessible PDF document</th>
+		</tr>
+    <tr>  
+      <td>
+      <pre><code>
+#telerik_dpl_assistant create a PDF document with a "Hello DPL!" text in the middle of the page and export it to a PNG image.
+			  </code></pre>
+      </td>
+      <td>
+        <pre><code>
+#telerik_dpl_assistant create a PDF/UA1 compliant document with StructureTree and text content in MarkedContent container with StructureTag set. Position the text in the middle of the page.
+			  </code></pre>
+      </td>
+    </tr>   
+</table> 
 
 ## See Also
 
