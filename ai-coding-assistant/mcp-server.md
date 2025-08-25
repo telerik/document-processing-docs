@@ -222,7 +222,7 @@ The following examples demonstrate useful prompts for the Telerik Document Proce
 
 ![Running MCP Server in Visual Studio ><](images/running-mcp-server-in-vs.png)   
 
-## Number of Requests
+## Usage Limits
 
 A Telerik [Subscription license](https://www.telerik.com/purchase.aspx?filter=web) is recommended in order to use the Telerik DPL AI Coding Assistant without restrictions. Perpetual license holders and trial users can make a [limited number of requests per year]({%slug ai-coding-assistant%}#usage-limits).
 

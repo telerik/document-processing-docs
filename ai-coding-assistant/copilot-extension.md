@@ -77,7 +77,7 @@ The following examples demonstrate useful prompts for the Telerik DPL extension:
 * "`@telerikdpl` Generate a PDF document with a 3x3 table having Name, Age, and City as columns"
 * "`@telerikdpl` Generate a PDF document with text and an image"
 
-## Number of Requests
+## Usage Limits
 
 A Telerik [Subscription license](https://www.telerik.com/purchase.aspx?filter=web) is recommended in order to use the Telerik DPL AI Coding Assistant without restrictions. Perpetual license holders and trial users can make a [limited number of requests per year]({%slug ai-coding-assistant%}#usage-limits).
 
