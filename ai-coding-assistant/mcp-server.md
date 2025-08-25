@@ -15,9 +15,7 @@ img[alt$="><"] {
 
 # MCP Server <sup>Telerik Document Processing</sup>
 
-The Telerik Document Processing [MCP (Model Context Protocol) Server](https://modelcontextprotocol.io/introduction) enhances your AI-powered development experience by providing specialized context about the Telerik Document Processing libraries.
-
-This MCP server enables AI-powered IDEs and tools to generate more accurate, tailored code that leverages [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries) and APIs. You can ask complex questions about Document Processing Libraries, request specific implementations, and generate comprehensive code solutions.
+The Telerik Document Processing [MCP (Model Context Protocol) Server](https://modelcontextprotocol.io/introduction) lets you interact with AI and reach new levels of developer productivity. The MCP server provides proprietary context to AI-powered IDEs, apps and tools. You can use the MCP server for Document Processing code generation and successfully prompt more complex questions and tasks, and generate tailored code that includes the [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries).
 
 ## Supported Libraries
 
@@ -25,22 +23,24 @@ This MCP server enables AI-powered IDEs and tools to generate more accurate, tai
 
 ## Prerequisites for the MCP Server
 
-In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-assistant%}#prerequisites-for-the-ai-coding-assistant), To use the Telerik Document Processing (DPL) MCP server, you need:
+In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-assistant%}#prerequisites-for-the-ai-coding-assistant), to use the Telerik Document Processing (DPL) MCP server, you need:
 
 * [Node.js](https://nodejs.org/en) 18 or newer.
 * An [MCP-compatible client](https://modelcontextprotocol.io/clients) that supports **MCP tools** (latest version recommended).
 
 ## Installation
 
-Install the Telerik DPL MCP server using npm:  
+Use the documentation of your AI-powered MCP client to add the Telerik Document Processing MCP server to a specific workspace or globally. You can see installation tips and examples for some popular MCP clients below.
+
+### Installing the Telerik Document Processing MCP server using npm:  
 
 ```bash
-npm i @progress/telerik-dpl-mcp@latest
+npm i @progress/telerik-dpl-mcp
 ```
 
->caption Installing in VS Code
+### Installing in VS Code
 
-![Installing DPL MCP Server in VS Code](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif)  
+![Installing DPL MCP Server in VS Code ><](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif)  
 
 ## Configuration
 
@@ -78,6 +78,8 @@ Add your [Telerik license key]({%slug setting-up-license-key%}) as an environmen
 
 >note Usually, the `.mcp.json` file is expected to be found in the user's directory: %USERPROFILE%
 
+![Installed DPL MCP Server in VS Code ><](images/installed-dpl-mcp-server-in-vs-code.png)  
+ 
 ## Visual Studio
 
 For complete setup instructions, see [Use MCP servers in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers).

@@ -82,6 +82,8 @@ The Telerik Document Processing AI Coding Assistant operates under strict privac
 * The Assistant does not generate the actual responses and has no access to these responses. The Assistant only provides a better context that helps your selected model (for example, GPT, Gemini, Claude) provide better responses.
 * The Assistant does not associate your prompts to your Telerik user account. Your prompts and generated context are anonymized and stored for statistical and troubleshooting purposes.
 * The Assistant stores metrics about how often and how much you use it in order to ensure compliance with the [allowed number of requests that correspond to your current license](#number-of-requests).
+
+Make sure to also get familiar with the terms and privacy policy of your selected AI model and AI client.
  
 ## Next Steps
 
