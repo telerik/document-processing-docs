@@ -16,9 +16,9 @@ position: 0
 
 The **AI Coding Assistant** is available through the following tools:
 
-* [Copilot Extension]({%slug ai-copilot-extension%})&mdash;A Copilot add-on for fast initial code generation, basic component configuration, and detailed explanations within Copilot-enabled IDEs&mdash;A powerful tool for running complex or multi-step prompts that integrates with any MCP-enabled client.
+* [Copilot Extension]({%slug ai-copilot-extension%})&mdash;A Copilot add-on for fast initial code generation, basic component configuration, and detailed explanations within Copilot-enabled IDEs
 
-* [MCP server]({%slug ai-mcp-server%})
+* [MCP server]({%slug ai-mcp-server%})&mdash;A powerful tool for running complex or multi-step prompts that integrates with any MCP-enabled client.
 
 ### Key Differences
 
