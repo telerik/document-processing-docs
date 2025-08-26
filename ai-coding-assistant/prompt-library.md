@@ -10,9 +10,9 @@ position: 3
 
 # Prompt Library
 
-The prompts provided here are intended and optimized for use with Telerik Document Processing [AI Coding Assistant]({%slug ai-coding-assistant%}). When you run them in the [GitHub Copilot Extension]({%slug ai-copilot-extension%}) or the [MCP Server]({%slug ai-mcp-server%}), these prompts will help you kick start your app development, speed up the component configuration process, and troubleshoot your code.
+The prompts provided here are intended and optimized for use with Telerik Document Processing [AI Coding Assistant]({%slug ai-coding-assistant%}). When you run them in the [MCP Server]({%slug ai-mcp-server%}), these prompts will help you kick start your app development, speed up the component configuration process, and troubleshoot your code.
 
-You can use the provided prompts as they are or modify them to fit your use case. Make sure to start your prompt with the required prefix (@telerikdpl for the [GitHub Copilot Extension]({%slug ai-copilot-extension%}) or the respective [MCP Server]({%slug ai-mcp-server%}) handle).
+You can use the provided prompts as they are or modify them to fit your use case. Make sure to start your prompt with the respective [MCP Server]({%slug ai-mcp-server%}) handle).
 
 You can also use the prompts with any AI-powered tool of your choice. However, the Telerik Document Processing AI Coding Assistant is developed to provide highly accurate results based extensively on the documentation, APIs, and community knowledge for Telerik Document Processing. Running the prompts outside the AI Coding Assistant may not produce as relevant results.
 
@@ -49,7 +49,7 @@ The section provides examples of general questions related to RadPdfProcessing.
       </td>
             <td>
          <pre><code>
-How to create a PDF document with a table that has 3 rows and 3 columns, with background highlighting on the header row and red top and bottom borders for the entire table
+#telerik_dpl_assistant create a PDF document with a table that has 3 rows and 3 columns, with background highlighting on the header row and red top and bottom borders for the entire table.
 			  </code></pre>
       </td>
     </tr>   
@@ -63,12 +63,12 @@ How to create a PDF document with a table that has 3 rows and 3 columns, with ba
     <tr>  
       <td>
       <pre><code>
-How to create a PDF document with Barcode inside the first page and export it.
+#telerik_dpl_assistant create a PDF document with Barcode inside the first page and export it.
 			  </code></pre>
       </td>
       <td>
         <pre><code>
-#telerik_dpl_assistant create a PDF document with text using Arial font and font size 12
+#telerik_dpl_assistant  create a PDF document with text using Arial font and font size 12.
 			  </code></pre>
       </td>
     </tr>   
@@ -82,12 +82,12 @@ How to create a PDF document with Barcode inside the first page and export it.
     <tr>  
       <td>
       <pre><code>
-#telerik_dpl_assistant can you show me how to register a font.
+#telerik_dpl_assistant register a font.
 			  </code></pre>
       </td>
       <td>
         <pre><code>
-#telerik_dpl_assistant create a new pdf document with an interactive form containing a text field, a combobox field and a listbox field. Use Telerik Document Processing library - the PdfProcessing one. I am using net8 project.
+#telerik_dpl_assistant create a new PDF document with an interactive form containing a text field, a combobox field and a listbox field. 
 			  </code></pre>
       </td>
     </tr>   
@@ -101,12 +101,12 @@ How to create a PDF document with Barcode inside the first page and export it.
     <tr>  
       <td>
       <pre><code>
-#telerik_dpl_assistant can you create a new pdf document containing a red highlighted text annotation "I am a highlight annotation."
+#telerik_dpl_assistant implement code for generating a PDF document with a red highlighted text annotation "I am a highlighted annotation."
 			  </code></pre>
       </td>
       <td>
         <pre><code>
-#telerik_dpl_assistant show me a complete code example on how to embed a text file
+#telerik_dpl_assistant show me a complete code example on how to embed a text file.
 			  </code></pre>
       </td>
     </tr>   
@@ -133,6 +133,5 @@ How to create a PDF document with Barcode inside the first page and export it.
 
 ## See Also
 
-* [Telerik DPL GitHub Copilot Extension]({%slug ai-copilot-extension%})
 * [AI Coding Assistant Overview]({%slug ai-coding-assistant%})
 * [Telerik DPL MCP Server]({%slug ai-mcp-server%})

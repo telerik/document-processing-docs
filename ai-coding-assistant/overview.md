@@ -14,22 +14,20 @@ position: 0
 
 ## Available Tools
 
-The **AI Coding Assistant** is available through the following tools:
-
-* [Copilot Extension]({%slug ai-copilot-extension%})&mdash;A Copilot add-on for fast initial code generation, basic component configuration, and detailed explanations within Copilot-enabled IDEs.
+The **AI Coding Assistant** is available through the following tool:
 
 * [MCP server]({%slug ai-mcp-server%})&mdash;A powerful tool for running complex or multi-step prompts that integrates with any MCP-enabled client.
 
-### Key Differences
+### Key Features
 
 The major differences between these tools are listed in the table below.
 
-| Feature| MCP Server| GitHub Copilot Extension|
-|-----|----|----|
-|Prompt Handling|Handles complex, multi-step prompts| Offers shorter, focused code snippets|
-|Client Compatibility|Works with MCP-enabled clients (e.g., Cursor, Copilot Agent mode)|Integrated as a Copilot extension|
-|Code Suggestions|Can directly suggest changes and rebuild applications to verify code|Provides detailed explanations alongside code suggestions|
-|Response Focus|Primarily code-focused|Better for learning and understanding implementation|
+| Feature| MCP Server|
+|-----|----|
+|Prompt Handling|Handles complex, multi-step prompts|
+|Client Compatibility|Works with MCP-enabled clients (e.g., Cursor, Copilot Agent mode)|
+|Code Suggestions|Can directly suggest changes and rebuild applications to verify code|
+|Response Focus|Primarily code-focused|
 
 ## Prerequisites for the AI Coding Assistant
 
@@ -61,15 +59,23 @@ Consider the following recommendations when working with the AI Coding Assistant
 
 ## Usage Limits
 
-The Document Processing AI Coding Assistant allows the following maximum number of requests based on your [Telerik license type](https://www.telerik.com/purchase.aspx?filter=web):
+Access to the Kendo UI for Angular AI Coding Assistant depends on your [Telerik license type](https://www.telerik.com/purchase/faq/licensing-purchasing):
 
-| License Type | Request Limit |
-|--------------|---------------|
-| Perpetual | 50 requests per year |
-| Subscription | Virtually unlimited with fair use threshold of 300 requests per day |
-| Trial | 300 requests per trial period (does not reset with new trial activations) |
+* Subscription License
+  * A Subscription is the primary license that grants full access to the AI Coding Assistant.
+  * Includes a virtually unlimited number of requests, with a fair use threshold of 300 requests per day.
+  * Best for ongoing and high-volume usage.
+* Perpetual License (Limited Access)
+  * Perpetual licenses include limited access of 50 requests per year.
+  * Intended for exploring and trying out the AI Coding Assistant.
+  * For continued or higher-volume access, upgrade to a Subscription license.
+* Trial License
+  * Trial licenses include 300 requests per trial per year.
+  * Reactivating the same trial for a new release does not grant additional requests.
+  * Designed for evaluating the feature before purchasing.
 
-> All Telerik AI tools share a single request quota for your Telerik account. Usage from the [Telerik Copilot extension]({%slug ai-copilot-extension%}) and [Telerik MCP server]({%slug ai-mcp-server%}) counts toward the same limit. Complex prompts in the MCP server may consume multiple requests.
+> All Telerik AI tools share a single request limit for your Telerik account. For example, the [Telerik MCP server]({%slug ai-mcp-server%}) takes up from the same usage quota.
+> When using the Telerik Document Processing MCP server, one prompt may trigger several requests, depending on the prompt complexity.
 
 ## Privacy
 
@@ -87,6 +93,5 @@ Make sure to also get familiar with the terms and privacy policy of your selecte
  
 ## Next Steps
 
-* Install the [Telerik Document Processing GitHub Copilot Extension]({%slug ai-copilot-extension%})
 * Configure the [Telerik Document Processing MCP Server]({%slug ai-mcp-server%})
 * Explore the [Telerik Document Processing Prompt Library]({%slug ai-prompt-library%}).

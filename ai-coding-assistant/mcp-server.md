@@ -180,19 +180,20 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 
 ## Usage
 
-The Telerik MCP Server can be used in `Agent` mode as follows:
+>note When switching between tasks and files, start a new session in a new chat window to avoid polluting the context with irrelevant or outdated information.
 
-1. Start your prompt with one of these triggers:
-   - `/telerik` / `@telerik` / `#telerik`
-   - `/telerikdpl` / `@telerikdpl` / `#telerikdpl`
-   - `#telerik-dpl-mcp`
+The Telerik Document Processing MCP Server can be used in `Agent` mode as follows:
 
-2. Verify server activation by looking for these messages:
+1. Start your prompt with `#telerik-dpl-assistant` (or with # followed by your custom server name, if set, e.g. `#telerik-dpl-mcp`).
+
+2. Inspect the output and verify that the MCP Server is used. Look for a similar statement in the output (the exact text may vary across tools):
    - Visual Studio: `Running telerik-dpl-mcp`
    - Visual Studio Code: `Running telerik-dpl-mcp`
    - Cursor: `Calling MCP tool telerik-dpl-mcp`
 
-3. Grant permissions when prompted (per session, workspace, or always).
+3. If the MCP server is not used even though it's installed and enabled, double-check the server name in your configuration and try rephrasing your prompt.
+
+4. Grant permissions when prompted (per session, workspace, or always).
 
 4. Start fresh sessions for unrelated prompts to avoid context pollution.
 
@@ -210,7 +211,7 @@ The following examples demonstrate useful prompts for the Telerik Document Proce
 
     ![Sample Prompt for MCP Server in VS Code Merging PDFs ><](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
 
-|Run telerik_dpl_assistant in VS Code|Ran telerik_dpl_assistant in VS Code|
+|Copilot calling the DPL MCP Server in VS Code|Copilot final answer in VS Code|
 |----|----| 
 |![Running Sample Prompt for MCP Server in VS Code Merging PDFs ><](images/running-sample-prompt-dpl-mcp-server-in-vs-code.png)|![Produced Result with MCP Server in VS Code Merging PDFs ><](images/result-sample-prompt-dpl-mcp-server-in-vs-code.png)|    
 
@@ -238,5 +239,5 @@ This setup allows you to use the Telerik AI Coding Assistant without cloud-based
 
 ## See Also
 
-* [Telerik DPL GitHub Copilot Extension]({%slug ai-copilot-extension%})
 * [AI Coding Assistant Overview]({%slug ai-coding-assistant%})
+* [Telerik Document Processing Prompt Library]({%slug ai-prompt-library%})
