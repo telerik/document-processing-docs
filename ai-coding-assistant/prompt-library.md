@@ -30,7 +30,7 @@ Quick Start Guide:
 
 1. Paste it in your IDE with the AI Assistant
 
-1. Customize the prompt for your specific use case. 
+1. Customize the prompt for your specific use case 
 
 ## General Prompts
 

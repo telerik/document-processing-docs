@@ -20,7 +20,7 @@ The **AI Coding Assistant** is available through the following tool:
 
 ### Key Features
 
-The major differences between these tools are listed in the table below.
+The major features are listed in the table below.
 
 | Feature| MCP Server|
 |-----|----|
