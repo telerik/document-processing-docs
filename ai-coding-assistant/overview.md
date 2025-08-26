@@ -45,7 +45,7 @@ To use the Telerik Document Processing Libraries AI Coding Assistant, you need:
 
 You can use the AI Coding Assistant for:
 
-* **Initial code generation:** Quickly create/ udpate / convert documents in your app to speed up the initial development.
+* **Initial code generation:** Quickly create / update / convert documents in your app to speed up the initial development.
 * **Basic document library configuration:** Enable or disable specific document library features, or fine tune the configuration through prompting. More complex configurations are possible but may require additional manual work to be production-ready.
 * **Dummy data generation:** Quickly add data to your app for testing and prototyping purposes. Avoid exposing or providing access to your proprietary or production data to AI-enabled tools.
 * **Step-by-step explanations:** Understand the solutions provided by the AI Coding Assistant through the detailed explanations (depends on the tool, mode, and model used). To further develop your knowledge, check the respective documentation.
@@ -77,7 +77,7 @@ The Telerik Document Processing AI Coding Assistant operates under strict privac
 
 * The Assistant does not have access to your workspace and application code. Note that when using the Telerik Document Processing MCP server (or any other MCP server), the LLM generates parameters for the MCP server request, which may include parts of your application code.
 
-* The Assistant does not have access to your workspace and application code. Note that when using the Kendo UI for Angular MCP server (or any other MCP server), the LLM generates parameters for the MCP server request, which may include parts of your application code.
+* The Assistant does not have access to your workspace and application code. Note that when using the DPL MCP server (or any other MCP server), the LLM generates parameters for the MCP server request, which may include parts of your application code.
 * The Assistant does not use your prompts to train Telerik AI models.
 * The Assistant does not generate the actual responses and has no access to these responses. The Assistant only provides a better context that helps your selected model (for example, GPT, Gemini, Claude) provide better responses.
 * The Assistant does not associate your prompts to your Telerik user account. Your prompts and generated context are anonymized and stored for statistical and troubleshooting purposes.
