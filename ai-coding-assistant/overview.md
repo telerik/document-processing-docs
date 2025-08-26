@@ -59,7 +59,7 @@ Consider the following recommendations when working with the AI Coding Assistant
 
 ## Usage Limits
 
-Access to the Kendo UI for Angular AI Coding Assistant depends on your [Telerik license type](https://www.telerik.com/purchase/faq/licensing-purchasing):
+Access to the Telerik Document Processing AI Coding Assistant depends on your [Telerik license type](https://www.telerik.com/purchase/faq/licensing-purchasing):
 
 * Subscription License
   * A Subscription is the primary license that grants full access to the AI Coding Assistant.
