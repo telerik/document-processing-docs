@@ -89,4 +89,4 @@ Make sure to also get familiar with the terms and privacy policy of your selecte
 
 * Install the [Telerik Document Processing GitHub Copilot Extension]({%slug ai-copilot-extension%})
 * Configure the [Telerik Document Processing MCP Server]({%slug ai-mcp-server%})
-* Explore the [Telerik Document Processing Prompt Library]({%slug ai-prompt-library%}.
+* Explore the [Telerik Document Processing Prompt Library]({%slug ai-prompt-library%}).
