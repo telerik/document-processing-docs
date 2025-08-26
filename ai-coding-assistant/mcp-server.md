@@ -56,7 +56,7 @@ Use these settings when configuring the server in your MCP client:
 
 ### License Configuration
 
-Add your [Telerik license key]({%slug setting-up-license-key%}) as an environment parameter in your `mcp.json` file either as a path or as a key.
+Add your [Telerik license key]({%slug setting-up-license-key%}) as an environment parameter in your `mcp.json` file either as a path or as a script key.
 
 #### Option 1: License File Path (Recommended)
 
