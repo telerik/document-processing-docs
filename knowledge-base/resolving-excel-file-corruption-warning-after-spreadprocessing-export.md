@@ -17,12 +17,11 @@ ticketid: 1695962
 
 ## Description
 
-Exporting an Excel file using Telerik SpreadProcessing shows a corruption warning when opening the file in Excel. This issue occurs when reusing the same `MemoryStream` for both import and export operations without resetting or truncating the stream. The problem started after upgrading to version 2025.2.520 due to changes in the library that replaced `Telerik.Zip` with `System.IO.Compression`. 
+Exporting an Excel file using Telerik [SpreadProcessing]({%slug radspreadprocessing-overview%}) shows a corruption warning when opening the file in Excel. 
 
-This knowledge base article also answers the following questions:
-- How to fix "Excel found unreadable content" errors after export?
-- Why does my exported Excel file open with a corruption warning?
-- How to resolve MemoryStream issues with Telerik SpreadProcessing?
+This issue occurs when reusing the same `MemoryStream` for both import and export operations without resetting or truncating the stream. The problem started after upgrading to version 2025.2.520 due to changes in the library that replaced `Telerik.Zip` with `System.IO.Compression`. 
+
+This knowledge base article shows how to fix "Excel found unreadable content" errors after export.
 
 ## Solution
 
@@ -58,11 +57,7 @@ To ensure the exported files are not corrupted, reset or truncate the `MemoryStr
    }
    ```
 
-### Additional Notes:
-- If you are not explicitly using the [RadZipLibrary](https://docs.telerik.com/devtools/document-processing/libraries/radziplibrary/overview), you can safely remove its reference in your project. Starting with version 2025.2.520, Telerik Document Processing Libraries use `System.IO.Compression` internally.
-
 ## See Also
 
-- [Telerik SpreadProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/spreadprocessing/overview)
-- [RadZipLibrary Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radziplibrary/overview)
+- [SpreadProcessing]({%slug radspreadprocessing-overview%}) 
 - [Release Notes for Telerik Document Processing Libraries 2025.2.520](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history/progress-telerik-document-processing-2025-2-520-changelog)
