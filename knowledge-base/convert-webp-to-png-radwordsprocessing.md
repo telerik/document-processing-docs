@@ -5,7 +5,7 @@ type: how-to
 page_title: Converting WEBP Images to PNG in HTML Documents using Telerik WordsProcessing
 meta_title: Converting WEBP Images to PNG in HTML Documents using Telerik WordsProcessing
 slug: convert-webp-to-png-radwordsprocessing
-tags: wordsprocessing, telerik-document-processing, images, webp, html-import, docx-export
+tags: words,processing, telerik,document, image, webp, html,import, docx,export
 res_type: kb
 ticketid: 1695863
 ---
@@ -17,26 +17,21 @@ ticketid: 1695863
 
 ## Description
 
-I want to render `.webp` images in DOCX files using Telerik WordsProcessing. The current implementation fails to process `.webp` format images when importing HTML content and exporting the output.
-
-This knowledge base article also answers the following questions:
-- How to convert `.webp` images to supported formats in Telerik WordsProcessing?
-- How to handle unsupported image formats in DOCX export using Telerik WordsProcessing?
-- How to process `.webp` images when importing HTML content in Telerik WordsProcessing?
+The current implementation of Telerik Document Processing libraries is not intended to process `.webp` format images when importing HTML content and exporting the output using [RadWordsProcessing]({%slug radwordsprocessing-overview%}). This article shows how to convert `.webp` images to the [supported formats]({%slug radwordsprocessing-model-imageinline%}) like PNG in Telerik WordsProcessing.
 
 ## Solution
 
-Telerik WordsProcessing does not support the `.webp` format directly. The supported image formats are listed in the [Supported Image Extensions](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/model/imageinline#supported-image-extensions). To handle `.webp` images, convert them to a supported format like `.png`. Follow the steps below:
+To handle `.webp` images, convert them to a supported format like `.png`. Follow the steps below:
 
 1. Install the `SixLabors.ImageSharp` NuGet package for image conversion.
 
-2. Import the HTML content using `HtmlFormatProvider`.
+2. Import the HTML content using [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}).
 
 3. Iterate through the images in the document and convert `.webp` images to `.png` format.
 
 4. Replace the `.webp` image sources with the converted `.png` sources.
 
-5. Export the document to DOCX.
+5. Export the document to [DOCX]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
 
 Here is the complete implementation:
 
@@ -93,6 +88,5 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 
 ## See Also
 
-- [Supported Image Extensions](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/model/imageinline#supported-image-extensions)
-- [WordsProcessing: Introduce support for importing webp images](https://feedback.telerik.com/document-processing/1543913-wordsprocessing-introduce-support-for-importing-webp-images)
-- [RadWordsProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview)
+- [Supported Image Formats]({%slug radwordsprocessing-model-imageinline%})
+- [RadWordsProcessing]({%slug radwordsprocessing-overview%})
