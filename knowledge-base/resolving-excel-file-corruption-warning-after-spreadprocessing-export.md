@@ -5,7 +5,7 @@ type: how-to
 page_title: Resolving Excel File Corruption Warning After SpreadProcessing Export
 meta_title: Resolving Excel File Corruption Warning After SpreadProcessing Export
 slug: resolving-excel-file-corruption-warning-after-spreadprocessing-export
-tags: telerik-document-processing, spreadprocessing, excel-export, memory-stream, corrupted-file
+tags: telerik,document,processing, spread, excel,export, memory,stream, corrupted,file
 res_type: kb
 ticketid: 1695962
 ---
