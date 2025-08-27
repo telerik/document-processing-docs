@@ -32,7 +32,7 @@ Exporting charts directly from Excel files to PNG images with a specific resolut
 
 ### Alternative Approach: Exporting to PDF
 
-Export the XLSX document to PDF format using SpreadProcessing. This method internally uses a **chart renderer** for rendering charts in the PDF. Implement a custom `IPdfChartRenderer` to manipulate chart resolution and save the chart as a PNG image in the ongoing export process.
+Export the XLSX document to PDF format using SpreadProcessing. This method internally uses a **chart renderer** for rendering charts in the PDF. Implement a custom [IPdfChartRenderer]({%slug radspreadprocessing-features-charts-pdf-export%}) to manipulate chart resolution and save the chart as a PNG image in the ongoing export process.
 
 #### Sample implementation for exporting charts as PNG with 300 DPI:
 
