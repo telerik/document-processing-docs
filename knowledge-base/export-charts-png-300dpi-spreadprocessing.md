@@ -1,9 +1,9 @@
 ---
-title: Exporting Charts from Excel Documents to PNG Images with 300 DPI Resolution Using SpreadProcessing
-description: Learn how to export Excel charts to PNG images with 300 DPI resolution using Telerik SpreadProcessing and charting controls.
+title: Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing
+description: Learn how to export Excel charts to PNG images with a Specific DPI resolution using Telerik SpreadProcessing and charting controls.
 type: how-to
-page_title: Exporting Charts from Excel Documents to PNG Images with 300 DPI Resolution Using SpreadProcessing
-meta_title: Exporting Charts from Excel Documents to PNG Images with 300 DPI Resolution Using SpreadProcessing
+page_title: Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing
+meta_title: Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing
 slug: export-charts-png-300dpi-spreadprocessing
 tags: spread, processing,telerik, document ,chart, image, export, png, dpi, resolution
 res_type: kb
@@ -18,16 +18,11 @@ ticketid: 1695547
 
 ## Description
 
-I need to export charts from Excel as PNG files with a resolution of at least 300 DPI for printing purposes. I want to know if Telerik SpreadProcessing supports exporting charts with 300 DPI directly to PNG format.
-
-This knowledge base article also answers the following questions:
-- How to export Excel charts as PNG with high resolution using SpreadProcessing?
-- How to set DPI for charts exported using Telerik Document Processing?
-- Can Excel charts be exported to 300 DPI PNG files directly?
+Learn how to extract the [charts]({%slug radspreadprocessing-features-charts%}) from Excel documents and save as PNG files specifying the desired resolution, e.g. 300 DPI.
 
 ## Solution
 
-Exporting charts directly from Excel files to PNG images with 300 DPI resolution using Telerik SpreadProcessing is not supported. SpreadProcessing focuses on spreadsheet data manipulation and exporting to formats like XLSX and PDF but does not handle chart export or DPI settings.
+Exporting charts directly from Excel files to PNG images with a specific resolution (e.g.300 DPI) using Telerik [SpreadProcessing]({%slug radspreadprocessing-overview%}) is not supported. SpreadProcessing focuses on spreadsheet data manipulation and exporting to formats like XLSX and PDF but does not handle chart export or DPI settings.
 
 ### Suggested Workflow Using Charting Controls
 
@@ -37,9 +32,9 @@ Exporting charts directly from Excel files to PNG images with 300 DPI resolution
 
 ### Alternative Approach: Exporting to PDF
 
-Export the XLSX document to PDF format using SpreadProcessing. This method internally uses a chart renderer for rendering charts in the PDF. Implement a custom `IPdfChartRenderer` to manipulate chart resolution and save the chart as a PNG image.
+Export the XLSX document to PDF format using SpreadProcessing. This method internally uses a **chart renderer** for rendering charts in the PDF. Implement a custom `IPdfChartRenderer` to manipulate chart resolution and save the chart as a PNG image in the ongoing export process.
 
-Sample implementation for exporting charts as PNG with 300 DPI:
+#### Sample implementation for exporting charts as PNG with 300 DPI:
 
 ```csharp
 public class WinFormsPdfChartImageRenderer : IPdfChartRenderer
@@ -75,6 +70,5 @@ Note: Recreating the chart using RadChartView may require extra effort if the ch
 
 ## See Also
 
-- [RadChartView Export](https://docs.telerik.com/devtools/winforms/controls/chartview/features/export)
-- [SpreadProcessing PDF Export](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/charts/pdf-export)
-- [Exporting Spreadsheets with Charts to PDF with RadSpreadProcessing and WinForms RadChartView](https://docs.telerik.com/devtools/document-processing/knowledge-base/export-charts-to-pdf-radspreadprocessing)
+- [SpreadProcessing PDF Export]({%slug radspreadprocessing-features-charts-pdf-export%})
+- [Exporting Spreadsheets with Charts to PDF with RadSpreadProcessing and WinForms RadChartView]({%slug export-charts-to-pdf-radspreadprocessing%})
