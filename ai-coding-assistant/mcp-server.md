@@ -207,7 +207,7 @@ To increase the likelihood of the Telerik MCP server being used, add custom inst
 
 The following examples demonstrate useful prompts for the Telerik Document Processing MCP Server:
 
-* "`#telerik-dpl-assistant` import two PDF files and merge them into a single one"
+* "`#telerik-dpl-assistant` generate a pdf document with text "Hello" and a table 3x3"
 
     ![Sample Prompt for MCP Server in VS Code Merging PDFs ><](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
 
