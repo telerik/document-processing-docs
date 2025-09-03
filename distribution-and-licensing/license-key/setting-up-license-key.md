@@ -7,6 +7,12 @@ published: True
 position: 0
 ---
 
+<style>
+img[alt$="><"] {
+  border: 1px solid lightgrey;
+}
+</style>
+
 # Setting Up Your Telerik Document Processing Libraries License Key
 Starting with the Q1 2025 release, the Telerik Document Processing libraries require activation through a license key (trial or commercial). This article describes how to download and use your personal license key to activate the product.
 
@@ -21,7 +27,7 @@ To download a license key, you must have either a developer license or a trial l
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
 1. Click the **Download License Key** button.
 
-![Download License Key](images/download-license-key.png)
+![Download License Key ><](images/download-license-key.png)
 
 The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/control-panel), automated MSI installer, and the Visual Studio Extensions (if available) of each product will automatically download and store your license key in your home directory. This makes it available for all projects that you develop on your local machine.
 
@@ -52,7 +58,7 @@ If you’re not using NuGet packages in your project, add the license as a code 
 
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
 1. On the corresponding product row, click the **View key** link in the **SCRIPT KEY** column.
-![Download Product Key](images/download-product-key.png)
+![Download Product Key ><](images/download-product-key.png)
 1. Copy the C# code snippet into a new file, for example, TelerikLicense.cs.
 1. Add the TelerikLicense.cs file to your project.
 
