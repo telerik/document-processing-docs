@@ -93,11 +93,7 @@ FontsRepository will replace the provided standard font with the passed font dat
 
 #### Replace a Standard Font
 
-```csharp
-  byte[] fontData = File.ReadAllBytes("Courier-font.ttf");
-  FontsRepository.ReplaceStandardFont(StandardFontNames.Courier, fontData);
-
-```
+<snippet id='codeblock_18'/>
 
 ## Embedded Fonts
 

@@ -25,18 +25,7 @@ Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achie
             
 #### __[C#] Example 1: Insert text__
 
-{{region cs-radpdfprocessing-editing-block_0}}
-	Block block = new Block();
-	block.InsertText("Text");
-
-	// .NET Framework
-	block.InsertText(new System.Windows.Media.FontFamily("Arial"), "Text");
-	block.InsertText(new System.Windows.Media.FontFamily("Arial"), System.Windows.FontStyles.Italic, System.Windows.FontWeights.Bold, "Text");
-
-	// .NET Standard
-	//block.InsertText(new Telerik.Documents.Core.Fonts.FontFamily("Arial"), "Text"); 
-	//block.InsertText(new Telerik.Documents.Core.Fonts.FontFamily("Arial"), Telerik.Documents.Core.Fonts.FontStyles.Italic, Telerik.Documents.Core.Fonts.FontWeights.Bold, "Text");
-{{endregion}}
+<snippet id='codeblock_29'/>
 
 >The '\r' and '\n' characters don't have the usual meaning of "go to next line" when they are inserted into a PDF document and you cannot simply insert text containing these characters to produce multiline text. Instead, you should insert a line break.
 
@@ -49,9 +38,7 @@ Inserting a line break results in the next element starting on a new line. The a
 
 #### __[C#] Example 2: Break the line__
 
-{{region cs-radpdfprocessing-editing-block_1}}
-	block.InsertLineBreak();
-{{endregion}}
+<snippet id='codeblock_30'/>
 
 ### Inserting Image
 
@@ -66,13 +53,7 @@ __Block__ provides the following methods for inserting images:
                 
 #### __[C#] Example 3: Inserting an image__
 
-{{region cs-radpdfprocessing-editing-block_2}}
-	string imageFilePath = "sample.jpg";
-	FileStream fileStream = new FileStream(imageFilePath, FileMode.Open);
-	Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource imageSrc = new Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource(fileStream);
-
-	block.InsertImage(imageSrc, 300, 200);
-{{endregion}}
+<snippet id='codeblock_31'/>
 
 Information on images in the context of the library is available in the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and [Image]({%slug radpdfprocessing-model-image%}) articles.
             
@@ -89,17 +70,7 @@ Information on images in the context of the library is available in the [ImageSo
                 
 #### __[C#] Example 4: Inserting a geometry__
 
-{{region cs-radpdfprocessing-editing-block_3}}
-	Telerik.Windows.Documents.Fixed.Model.Graphics.RectangleGeometry rectangleGeometry = new Telerik.Windows.Documents.Fixed.Model.Graphics.RectangleGeometry();
-	// .NET Framework
-	rectangleGeometry.Rect = new System.Windows.Rect(10, 10, 400, 300);
-	block.InsertRectangle(new System.Windows.Rect(10, 10, 200, 150));
-	// .NET Standard
-	//rectangleGeometry.Rect = new Telerik.Documents.Primitives.Rect(10, 5, 400, 300);
-	//block.InsertRectangle(new Telerik.Documents.Primitives.Rect(20, 30, 200, 150));
-
-	block.InsertPath(rectangleGeometry);
-{{endregion}}
+<snippet id='codeblock_32'/>
 
 ### Inserting Form-XObject Elements
 
@@ -107,16 +78,7 @@ The Form (or also known as Form-XObject) is an object that can contain PDF conte
 
 #### __[C#] Example 5: Insert a form__
 
-{{region cs-radpdfprocessing-editing-block_4}}
-	FormSource simpleForm = new FormSource();
-	simpleForm.Size = new System.Windows.Size(310, 250); // .NET Framework
-	//simpleForm.Size = new Telerik.Documents.Primitives.Size(310, 250); // .NET Standard
-
-	FixedContentEditor formEditor = new FixedContentEditor(simpleForm);
-	formEditor.DrawText("Sample text.");
-
-	block.InsertForm(simpleForm);
-{{endregion}}
+<snippet id='codeblock_33'/>
 
 There are two more overloads of InsertForm() that enables you to pass the size that should be used for the form.
 
@@ -129,13 +91,7 @@ The following example shows how to insert a link inside the text:
 
 #### __[C#] Example: Insert a text link__
 
-{{region cs-radpdfprocessing-editing-block_text-link}}
-
-	Block block = new Block();
-    block.InsertHyperlinkStart(new Uri("https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/getting-started"));
-    block.InsertText(text4);
-    block.InsertHyperlinkEnd();
-{{endregion}}
+<snippet id='codeblock_34'/>
 
 ### Changing Current Styles
 
@@ -206,33 +162,7 @@ The __Block__ class has some properties and methods that affect how it will be r
 
 #### __[C#] Example 6: Change Block properties__
 
-{{region cs-radpdfprocessing-editing-block_5}}
-	RadFixedDocument radFixedDocument = new RadFixedDocument();
-	RadFixedPage page = radFixedDocument.Pages.AddPage();
-
-	Block block = new Block();
-	block.GraphicProperties.FillColor = new RgbColor(100, 0, 0, 0);
-	block.SpacingBefore = 10;
-	block.SpacingAfter = 5;
-	block.LineSpacingType = HeightType.Exact;
-	block.LineSpacing = 15;
-	block.FirstLineIndent = 0;
-	block.LeftIndent = 0;
-	block.RightIndent = 0;
-	block.BackgroundColor = new RgbColor(100, 255, 0, 0);
-	block.HorizontalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.Left;
-	block.VerticalAlignment = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.Top;
-	block.InsertText("block content");
-
-	TextFragment bulletTextFragment = new TextFragment();
-	bulletTextFragment.Text = "•";
-	block.Bullet = bulletTextFragment;
-	block.IndentAfterBullet = 15;
-
-	var editor = new FixedContentEditor(page);
-	editor.Position.Translate(50,50);
-	editor.DrawBlock(block);
-{{endregion}}
+<snippet id='codeblock_35'/>
 
 ![Block Properties Result](images/radpdfprocessing-editing-block_5_result.png)
 
@@ -242,10 +172,7 @@ A Block can be drawn to the content using the __Draw()__ method. The method acce
         
 #### __[C#] Example 7: Draw block__
 
-{{region cs-radpdfprocessing-editing-block_6}}
-	Rect boundingRect = new Rect(new Point(0, 0), new Size(200, 300));
-	block.Draw(fixedContentEditor, boundingRect);
-{{endregion}}
+<snippet id='codeblock_36'/>
 
 
 
@@ -284,21 +211,7 @@ The code in __Example 9__ splits a block in two. The first will contains text "H
         
 #### __[C#] Example 9: Split block__
 
-{{region cs-radpdfprocessing-editing-block_8}}
-	Block helloBlock = new Block();
-	helloBlock.InsertText("Hello");
-	Size helloSize = helloBlock.Measure();
-	
-	Block block = new Block();
-	block.InsertText("Hello RadPdfProcessing!");
-	
-	CancellationTokenSource cancellationTokenSource = new(TimeSpan.FromSeconds(10));
-	CancellationToken cancellationToken = cancellationTokenSource.Token;
-	
-	Size size = block.Measure(helloSize, cancellationToken);
-
-	Block secondBlock = block.Split();
-{{endregion}}
+<snippet id='codeblock_37'/>
 
 
 ## See Also

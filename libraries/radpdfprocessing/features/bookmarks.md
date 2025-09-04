@@ -41,17 +41,7 @@ The **BookmarkItem** class exposes several constructor overloads which enable yo
 
 <a name="example1"><a/>
 #### **[C#] Example 1: Creating a bookmark and setting its properties**
-{{region radpdfprocessing-features-bookmarks_0}}
-
-    Location location = new Location();
-    location.Page = document.Pages[0];
-    location.Left = 10;
-    location.Top = 10;
-    BookmarkItem bookmark = new BookmarkItem("Title", location);
-    bookmark.TextColor = new RgbColor(255, 0, 255);
-    bookmark.TextStyle = BookmarkItemStyles.Bold | BookmarkItemStyles.Italic;
-    bookmark.IsExpanded = true;
-{{endregion}}
+<snippet id='codeblock_68'/>
 
 
 ## Bookmarks Collection
@@ -61,41 +51,17 @@ The **Bookmarks** property exposed through the **RadFixedDocument** class allows
 Inserting a bookmark in a document is achieved by adding it to the Bookmarks collection. **Example 2** shows adding the **BookmarkItem** created in [**Example 1**](#example-1)
 
 #### **[C#] Example 2: Adding a bookmark to a document**
-{{region radpdfprocessing-features-bookmarks_1}}
-    
-    document.Bookmarks.Add(bookmark);
-{{endregion}}
+<snippet id='codeblock_69'/>
 
 Removing a bookmark is pretty similar to adding one. In **Example 3**, the second bookmark inside the document is removed.
 
 #### **[C#] Example 3: Removing a bookmark from a document**
-{{region radpdfprocessing-features-bookmarks_2}}
-    
-    BookmarkItem bookmark = document.Bookmarks[1];
-    document.Bookmarks.RemoveAt(1);
-{{endregion}}
+<snippet id='codeblock_70'/>
  
 In case you need to iterate all the bookmarks in a document, keep in mind that each BookmarkItem can contain other bookmarks in its Children collection. If you are encountering such a case, you will need to iterate the Bookmarks collection recursively.
  
 #### **[C#] Example 4: Iterate through all bookmarks**
-{{region radpdfprocessing-features-bookmarks_3}}
-    
-    private static void IterateBookmarks(RadFixedDocument document)
-    {
-        foreach (BookmarkItem bookmark in document.Bookmarks)
-        {
-            IterateBookmarksHierarchy(bookmark);
-        }
-    }
-
-    private static void IterateBookmarksHierarchy(BookmarkItem bookmark)
-    {
-        foreach (BookmarkItem child in bookmark.Children)
-        {
-            IterateBookmarksHierarchy(child);
-        }
-    }
-{{endregion}}
+<snippet id='codeblock_71'/>
 
 
 ## See Also

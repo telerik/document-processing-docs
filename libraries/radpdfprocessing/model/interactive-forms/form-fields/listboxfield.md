@@ -38,23 +38,7 @@ ListBoxField provides the following properties:
 
 
 #### **[C#] Example 1: Create a ListBoxField and add it to a page**
-{{region radpdfprocessing-model-interactive-forms-form-fields-listboxfield_0}}
-
-	ListBoxField listBoxField = new ListBoxField("SampleListBox");
-	
-	listBoxField.Options.Add(new ChoiceOption("First Value"));
-	listBoxField.Options.Add(new ChoiceOption("Second Value"));
-	listBoxField.Options.Add(new ChoiceOption("Third Value"));
-	
-	listBoxField.Value = new ChoiceOption[] { listBoxField.Options[1] };
-	
-	VariableContentWidget widget = listBoxField.Widgets.AddWidget();
-	widget.Rect = new Rect(100, 100, 200, 200);
-    widget.RecalculateContent();
-
-	document.AcroForm.FormFields.Add(listBoxField);
-	document.Pages[0].Annotations.Add(widget);
-{{endregion}}
+<snippet id='codeblock_161'/>
 
 ## See Also
 

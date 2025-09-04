@@ -68,22 +68,7 @@ It is suitable for cases when a certain calculation needs to be performed after 
 
 A common case is restricting the user's input, e.g. when entering a date in a specific format:
 
-```csharp
-
-    RadFixedDocument document = new RadFixedDocument();
-    document.Pages.AddPage();
-
-    TextBoxField textField = new TextBoxField("SampleTextBox");
-    textField.Actions.Format = new Telerik.Windows.Documents.Fixed.Model.Actions.JavaScriptAction("AFDate_FormatEx(\"m/d/yy\");");
-    textField.Actions.Keystroke = new Telerik.Windows.Documents.Fixed.Model.Actions.JavaScriptAction("AFDate_KeystrokeEx(\"m/d/yy\");");
-
-    VariableContentWidget widget = textField.Widgets.AddWidget();
-    widget.Rect = new Rect(new Size(250, 50));
-
-    document.AcroForm.FormFields.Add(textField);
-    document.Pages[0].Annotations.Add(widget);    
-
-```
+<snippet id='codeblock_126'/>
 
 The achieved result is illustrated below: 
 
@@ -100,16 +85,7 @@ Represents a collection of Action objects associated with a [RadFixedPage]({%slu
 
 The following example shows how to utilize the JavaScript Actions functionality showing an alert when the second page in a document is closed
 
-```csharp
-
-   RadFixedDocument document = new RadFixedDocument();
-   document.Pages.AddPage();//first page
-   RadFixedPage page = document.Pages.AddPage();//second page
-   JavaScriptAction action = new JavaScriptAction("app.alert('JS Action when second page is closed!');");
-   page.Actions.OnPageClose.Add(action);
-   document.Pages.AddPage();//third page 
-
-```
+<snippet id='codeblock_127'/>
 
 ![JS Action Page](images/js-action-page.gif)  
 

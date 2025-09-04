@@ -114,10 +114,7 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 
 #### __[C#] Example 1: Create RadFixedDocument__
 
-{{region cs-radpdfprocessing-getting-started_0}}
-	RadFixedDocument document = new RadFixedDocument();
-	RadFixedPage page = document.Pages.AddPage();
-{{endregion}}
+<snippet id='codeblock_1'/>
 
 
 
@@ -126,10 +123,7 @@ The page can then be edited through a [FixedContentEditor]({%slug radpdfprocessi
 
 #### __[C#] Example 2: Add text__
 
-{{region cs-radpdfprocessing-getting-started_1}}
-	FixedContentEditor editor = new FixedContentEditor(page);
-	editor.DrawText("Hello RadPdfProcessing!");
-{{endregion}}
+<snippet id='codeblock_2'/>
 
 
 
@@ -140,13 +134,7 @@ Exporting to PDF format can be achieved with the __PdfFormatProvider__ class. __
 
 #### __[C#] Example 3: Export to PDF__
 
-{{region cs-radpdfprocessing-getting-started_2}}
-	PdfFormatProvider provider = new PdfFormatProvider();
-	using (Stream output = File.OpenWrite("Hello.pdf"))
-	{
-	    provider.Export(document, output);
-	}
-{{endregion}}
+<snippet id='codeblock_3'/>
 
 For more complete examples head to the [Developer Focused Examples]({%slug radpdfprocessing-sdk-examples%}) section of the library.
 

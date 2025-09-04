@@ -22,17 +22,7 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
  
 #### **[C#] Creating an embedded file stream**
 
-{{region cs-radpdfprocessing-embedded-file-streams_creating_1}}
-
-            RadFixedDocument document = new RadFixedDocument();
-            RadFixedPage page = document.Pages.AddPage();
-            byte[] textFile = File.ReadAllBytes(@"..\..\Embedded_File_Streams.txt");
-            document.EmbeddedFiles.Add("Text file.txt", textFile);
-            byte[] imageFile = File.ReadAllBytes(@"..\..\Basel.JPG");
-            document.EmbeddedFiles.Add("Basel photo.jpg", imageFile);
-
-
-{{endregion}}
+<snippet id='codeblock_79'/>
 
 >important **DuplicatedEmbeddedFileNameException** is thrown when adding an embedded file with a name that is already added to the collection.
 
@@ -45,27 +35,7 @@ RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedi
 
 #### **[C#] Add ZUGFeRD invoice**
 
-{{region cs-radpdfprocessing-embedded-file-add-zugferd-invoice}}
-
-            RadFixedDocument document = new RadFixedDocument();
-            using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
-            {
-                editor.CharacterProperties.TrySetFont(new System.Windows.Media.FontFamily("Calibri"));
-                editor.InsertRun("PDF/A-3B Compliant Invoice");
-            };
-            byte[] bytes = File.ReadAllBytes(@"zugferd-invoice.xml");
-            document.EmbeddedFiles.AddZugferdInvoice(bytes);
-
-            PdfFormatProvider provider = new PdfFormatProvider();
-            PdfExportSettings settings = new PdfExportSettings();
-            settings.ComplianceLevel = PdfComplianceLevel.PdfA3B;
-            provider.ExportSettings = settings; 
-            using (Stream output = File.OpenWrite("exportedInvoice.pdf"))
-            { 
-                provider.Export(document, output);
-            }
-
-{{endregion}}
+<snippet id='codeblock_80'/>
 
 >note Only a single XML invoice attachment is allowed according to ZUGFeRD standard.
 
@@ -73,14 +43,7 @@ RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedi
 
 #### **[C#] Remove ZUGFeRD invoice**
 
-{{region cs-radpdfprocessing-embedded-file-remove-zugferd-invoice}}
-
-            if (document.EmbeddedFiles.ContainsZugferdInvoice)
-            {
-                document.EmbeddedFiles.RemoveZugferdInvoice();
-            }
-
-{{endregion}}
+<snippet id='codeblock_81'/>
 
 ### Using the MergedEmbeddedFileNameResolving event
 
@@ -94,33 +57,7 @@ The **MergedEmbeddedFileNameResolving** event occurs when trying to resolve conf
 
 #### **[C#] Resolving Duplicated Names**
 
-{{region cs-radpdfprocessing-embedded-file-streams_resolving_2}}
-
-            RadFixedDocument doc1 = new RadFixedDocument();
-            RadFixedPage page1 = doc1.Pages.AddPage();          
-            byte[] textFile1 = File.ReadAllBytes(@"..\..\Embedded_File_Streams.txt");
-            doc1.EmbeddedFiles.Add("Text file.txt", textFile1); 
-            byte[] imageFile = File.ReadAllBytes(@"..\..\Basel.JPG");
-            doc1.EmbeddedFiles.Add("Basel photo.jpg", imageFile);
-
-            RadFixedDocument doc2 = new RadFixedDocument();
-            RadFixedPage page2 = doc2.Pages.AddPage();           
-            byte[] textFile2 = File.ReadAllBytes(@"..\..\Release_Notes.txt");
-            doc2.EmbeddedFiles.Add("Text file.txt", textFile2);
-
-            doc1.MergedEmbeddedFileNameResolving += (s, a) =>
-            {
-                string myNewName = "2_" + a.Name;
-                if (!a.UsedNames.Contains(myNewName))
-                {
-                    a.NewName = myNewName;
-                }
-            };
-
-            doc1.Merge(doc2);
-
-
-{{endregion}}
+<snippet id='codeblock_82'/>
 
 #### Resolved Duplicated Names 
 ![Resolving duplicated Names in Embedded Files](images/embedded_files_1.png) 

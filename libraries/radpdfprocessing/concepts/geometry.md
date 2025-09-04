@@ -47,10 +47,7 @@ __Example 1__ shows how to create a RectangleGeometry.
 
 #### __[C#] Example 1: Create RectangleGeometry__
 
-{{region cs-radpdfprocessing-concepts-geometry_0}}
-	RectangleGeometry rectangleGeometry = new RectangleGeometry();
-	rectangleGeometry.Rect = new Rect(10, 5, 400, 300);
-{{endregion}}
+<snippet id='codeblock_19'/>
 
 
 
@@ -72,18 +69,7 @@ __Example 2__ shows how to create a PathGeometry, which consists of line segment
 
 #### __[C#] Example 2: Create PathGeometry__
 
-{{region cs-radpdfprocessing-concepts-geometry_1}}
-	PathGeometry pathGeometry = new PathGeometry();
-	PathFigure pathFigure = pathGeometry.Figures.AddPathFigure();
-	pathFigure.StartPoint = new Point(5, 5);
-	LineSegment lineSegment = pathFigure.Segments.AddLineSegment();
-	lineSegment.Point = new Point(205, 5);
-	BezierSegment bezierSegment = pathFigure.Segments.AddBezierSegment();
-	bezierSegment.Point1 = new Point(105, 50);
-	bezierSegment.Point2 = new Point(130, 105);
-	bezierSegment.Point3 = new Point(100, 200);
-	pathFigure.IsClosed = true;
-{{endregion}}
+<snippet id='codeblock_20'/>
 
 
 

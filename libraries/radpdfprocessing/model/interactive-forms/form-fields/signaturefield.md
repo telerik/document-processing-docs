@@ -35,31 +35,7 @@ SignatureField provides the following properties:
 
 
 #### **[C#] Example 1: Create a SignatureField and add it to a page**
-{{region radpdfprocessing-model-interactive-forms-form-fields-signaturefield_0}}
-
-	SignatureField signatureField = new SignatureField("SampleSignature");
-	signatureField.Signature = new Signature(certificate); // The Signature property fo SignatureField is not available in PdfProcessing for .NET Standard.
-	
-	SignatureWidget widget = signatureField.Widgets.AddWidget();
-	widget.Rect = new Rect(new Point(200, 600), new Size(100, 100));
-	widget.Border = new AnnotationBorder(5, AnnotationBorderStyle.Solid, null);
-	
-	// Create a Form object to define the appearance you would like for the signature field.
-	Form form = new Form();
-	form.FormSource = new FormSource();
-	form.FormSource.Size = new Size(120, 120);
-	
-	FixedContentEditor formEditor = new FixedContentEditor(form.FormSource);
-	formEditor.DrawCircle(new Point(50, 50), 20);
-	formEditor.DrawText("Sample Signature");
-	
-	// Add the FormSource object to the widget of the field.
-	widget.Content.NormalContentSource = form.FormSource;
-	
-	RadFixedPage page = document.Pages.Last();
-	page.Annotations.Add(widget);
-	document.AcroForm.FormFields.Add(signatureField);
-{{endregion}}
+<snippet id='codeblock_164'/>
 
 ## See Also
 

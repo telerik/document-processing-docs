@@ -42,44 +42,7 @@ TextBoxField exposes the following properties:
 * **MaxLengthOfInputCharacters**: Nullable integer value specifying the maximal length of the inputted text. When null, the text is not restricted to any specified length.
 
 #### **[C#] Example 1: Create a TextBoxField and add it to a page**
-{{region radpdfprocessing-model-interactive-forms-form-fields-textboxfield_0}}
-	
-	using Telerik.Windows.Documents.Fixed.Model.Annotations;
-	using Telerik.Windows.Documents.Fixed.Model.InteractiveForms;
-	using Telerik.Windows.Documents.Fixed.Model;
-	using System.Windows;
-
-	namespace ConsoleNetFramework
-	{
-		internal class Program
-		{
-			static void Main(string[] args)
-			{
-				RadFixedDocument fixedDocument = new RadFixedDocument();
-				fixedDocument.Pages.AddPage();
-
-				TextBoxField textField = new TextBoxField("SampleTextBox")
-				{
-					MaxLengthOfInputCharacters = 500,
-					IsMultiline = true,
-					IsPassword = false,
-					IsFileSelect = false,
-					ShouldSpellCheck = true,
-					AllowScroll = true,
-					Value = "Sample content",
-				};
-
-				VariableContentWidget widget = textField.Widgets.AddWidget();
-				widget.Rect = new Rect(new Size(250, 50));
-				widget.RecalculateContent();
-
-				fixedDocument.AcroForm.FormFields.Add(textField);
-				fixedDocument.Pages[0].Annotations.Add(widget);
-			}
-		}
-	}
-
-{{endregion}}
+<snippet id='codeblock_165'/>
 
 >important In .NET Standard use __Telerik.Documents.Primitives.Rect__ instead of __System.Windows.Rect__.
 

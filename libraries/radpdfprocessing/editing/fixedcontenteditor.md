@@ -64,9 +64,7 @@ Inserting a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) can be 
 
 #### __[C#] Example 3: Insert TextFragment__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_2}}
-	fixedContentEditor.DrawText("First text fragment.");
-{{endregion}}
+<snippet id='codeblock_38'/>
 
 __Figure 1__ shows the result of __Example 3__.         
 
@@ -82,12 +80,7 @@ __Example 4__ shows how you can use the __Block__ object to draw a paragraph.
 
 #### __[C#] Example 4: Insert paragraph__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_3}}
-	Block block = new Block();
-	block.InsertText("First sentence.");
-	block.InsertText("Second sentence.");
-	fixedContentEditor.DrawBlock(block);
-{{endregion}}
+<snippet id='codeblock_39'/>
 
 __Figure 2__ shows the result of __Example 4__.        
 
@@ -112,12 +105,7 @@ __Example 5__ shows how you can add an image created from a Stream.
             
 #### __[C#] Example 5: Insert image__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_4}}
-	using (Stream stream = this.GetResourceStream("Telerik_logo.jpg"))
-	{
-	    fixedContentEditor.DrawImage(stream, new Size(118, 28));
-	}
-{{endregion}}
+<snippet id='codeblock_40'/>
 
 #### Figure 3: Image result
 ![Rad Pdf Processing Editing Fixed Content Editor 04](images/RadPdfProcessing_Editing_FixedContentEditor_04.png)
@@ -136,9 +124,7 @@ __Example 6__ shows how you can add an ellipse using one of FixedContentEditor's
             
 #### __[C#] Example 6: Insert ellipse__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_5}}
-	fixedContentEditor.DrawEllipse(new Point(250, 70), 136, 48);
-{{endregion}}
+<snippet id='codeblock_41'/>
 
 ### Inserting Clipping
 
@@ -169,26 +155,7 @@ __Example 8__ generates a table and draws it in some fixed size.
 
 #### __[C#] Example 8: Insert table__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_8}}
-	Table table = new Table();
-	Border border = new Border();
-	table.DefaultCellProperties.Borders = new TableCellBorders(border, border, border, border);
-	table.DefaultCellProperties.Padding = new Thickness(10);
-	TableRow firstRow = table.Rows.AddTableRow();
-	firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("First cell");
-	firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Second cell");
-	firstRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Third cell");
-	TableRow secondRow = table.Rows.AddTableRow();
-	secondRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Forth cell");
-	secondRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Fifth cell");
-	secondRow.Cells.AddTableCell().Blocks.AddBlock().InsertText("Sixth cell");
-	
-	RadFixedDocument document = new RadFixedDocument();
-	RadFixedPage page = document.Pages.AddPage();
-	FixedContentEditor editor = new FixedContentEditor(page);
-	fixedContentEditor.Position.Translate(10, 10);
-	fixedContentEditor.DrawTable(table, new Size(180, double.PositiveInfinity));
-{{endregion}}
+<snippet id='codeblock_42'/>
 
 #### The table created in Example 8
 
@@ -201,9 +168,7 @@ More detailed information about tables is available in the [Table]({%slug radpdf
 With the FixedContentEditor class you can insert a Form (Form-XObject) element. 
 
 #### __[C#] Example 9: Insert a form__
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_9}}
-	fixedContentEditor.DrawForm(formSource);
-{{endregion}}
+<snippet id='codeblock_43'/>
 
 There are two more overloads of DrawForm() that enable you to pass the size that should be used for the form.
 
@@ -217,37 +182,13 @@ The Widget annotations allow you visualize the content of a FormField. With the 
 
 	#### **[C#] Example 10: Insert PushButtonField with PushButtonWidget using DrawWidget**
 	
-	{{region cs-radpdfprocessing-editing-fixedcontenteditor_10}}
-	
-		PushButtonField pushButton = new PushButtonField("button");
-	
-		document.AcroForm.FormFields.Add(pushButton);
-	
-		fixedContentEditor.Position.Translate(20, 450);
-		fixedContentEditor.DrawWidget(pushButton, new Size(100, 20));
-	{{endregion}}
+	<snippet id='codeblock_44'/>
 
 * **DrawWidget(RadioButtonField parentField, RadioOption option, Size annotationSize)**: Creates new [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets%}#radiobuttonwidget-class) and draws the widget with the specified annotation size. This method will add widget only in cases when the root of the FixedContentEditor supports annotations. The second parameter represents the option that should be visualized by the widget.
 	
 	#### **[C#] Example 11: Insert RadioButtonField with RadioButtonWidget using DrawWidget**
 	
-	{{region cs-radpdfprocessing-editing-fixedcontenteditor_11}}
-	
-		RadioButtonField radio = new RadioButtonField("radio");
-		radio.Options.Add(new RadioOption("first radio"));
-		radio.Options.Add(new RadioOption("second radio"));
-		radio.Options.Add(new RadioOption("third radio"));
-		radio.Value = radio.Options[1];
-	
-		document.AcroForm.FormFields.Add(radio);
-		
-		fixedContentEditor.Position.Translate(20, 410);
-		fixedContentEditor.DrawWidget(radio, radio.Options[0], new Size(20, 20));
-		fixedContentEditor.Position.Translate(50, 410);
-		fixedContentEditor.DrawWidget(radio, radio.Options[1], new Size(20, 20));
-		fixedContentEditor.Position.Translate(80, 410);
-		fixedContentEditor.DrawWidget(radio, radio.Options[2], new Size(20, 20));
-	{{endregion}}
+	<snippet id='codeblock_45'/>
 
 ## Positioning
 
@@ -257,16 +198,7 @@ The code in __Example 12__ shows how to manipulate the position of the inserted 
 
 #### __[C#] Example 12: Scale and rotate content__
 
-{{region cs-radpdfprocessing-editing-fixedcontenteditor_7}}
-	fixedContentEditor.Position.Scale(1.5, 0.5);
-	fixedContentEditor.Position.Rotate(10);
-	fixedContentEditor.DrawText("Image:");
-	fixedContentEditor.Position.Translate(0, 20);
-	using (Stream stream = this.GetResourceStream("Telerik_logo.jpg"))
-	{
-	    fixedContentEditor.DrawImage(stream, new Size(118, 28));
-	}
-{{endregion}}
+<snippet id='codeblock_46'/>
 
 #### Figure 5: Positioning result
 

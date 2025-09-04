@@ -54,10 +54,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 
 #### **[C#] Example 1: Creating a widget**
 
-{{region radpdfprocessing-model-annotations-widgets_0}}
-	VariableContentWidget widget = textBoxField.Widgets.AddWidget();
-	widget.Rect = new Rect(100, 100, 20, 20);
-{{endregion}}
+<snippet id='codeblock_147'/>
 
 >Don't forget to specify the size of the widget. Otherwise, it won't be visualized in the PDF document.
 
@@ -65,12 +62,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 
 #### **[C#] Example 2: Iterating the widgets in the FormField's collection**
 
-{{region radpdfprocessing-model-annotations-widgets_1}}
-	foreach (var widget in textBoxField.Widgets)
-	{
-	    document.Pages[0].Annotations.Add(widget);
-	}
-{{endregion}}
+<snippet id='codeblock_148'/>
 
 
 >The Widget class inherits from [Annotation]({%slug radpdfprocessing-model-annotations-overview%}). It is important to add each annotation to the Annotations collection of RadFixedPage.

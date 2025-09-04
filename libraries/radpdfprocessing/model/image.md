@@ -36,25 +36,7 @@ __Example 1__ shows how to initialize an Image object, assigns an ImageSource to
       
 #### __[C#] Example 1: Create image__
 
-{{region cs-radpdfprocessing-model-image_0}}
-    RadFixedDocument fixedDocument = new RadFixedDocument();
-    RadFixedPage fixedPage = fixedDocument.Pages.AddPage();
-
-    Image image = new Image();
-    string imageFilePath = "ProgressNinjas.png";
-    using (FileStream fileStream = new FileStream(imageFilePath, FileMode.Open))
-    {
-        ImageSource imageSrc = new ImageSource(fileStream);
-        image.ImageSource = imageSrc;
-        image.Width = 200;
-        image.Height = 200;
-        image.AlphaConstant = 0.5;
-        SimplePosition simplePosition = new SimplePosition();
-        simplePosition.Translate(200, 300);
-        image.Position = simplePosition;
-        fixedPage.Content.Add(image);
-    }
-{{endregion}}
+<snippet id='codeblock_103'/>
 
 Once the above RadFixedDocument is [exported]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}), the following document with an image is created:
 
@@ -64,10 +46,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 #### __[C#] Example 2: Add image to container__
 
-{{region cs-radpdfprocessing-model-image_1}}
-	Image image = container.Content.AddImage();
-	Image imageWithSource = container.Content.AddImage(imageSource);
-{{endregion}}
+<snippet id='codeblock_104'/>
 
 >tipThere are other methods that allow adding an image to a document by passing image size, format and source. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).     
 
@@ -77,10 +56,7 @@ The Image class exposes also the **GetBitmapSource()** method, enabling you to o
 
 #### __[C#] Example 3: Obtain BitmapSource__
 
-{{region cs-radpdfprocessing-model-image_2}}
-
-	BitmapSource source = image.GetBitmapSource();
-{{endregion}}
+<snippet id='codeblock_105'/>
 
 ## See Also
  

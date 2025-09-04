@@ -37,32 +37,7 @@ Each field type can be recognized from the FormField base class by getting the v
 
 #### **[C#] Example 1: Obtain fields from a document**
 
-{{region radpdfprocessing-model-interactive-forms-form-fields_0}}
-
-	using (Stream stream = FileHelper.GetSampleResourceStream("InteractiveForms.pdf"))
-	{
-	    RadFixedDocument document = new PdfFormatProvider().Import(stream, TimeSpan.FromSeconds(10));
-	    foreach (FormField field in document.AcroForm.FormFields)
-	    {
-	        switch (field.FieldType)
-	        {
-	            case FormFieldType.TextBox:
-	                this.ProcessTextBox((TextBoxField)field);
-	                break;
-	            case FormFieldType.ListBox:
-	                this.ProcessListBox((ListBoxField)field);
-	                break;
-	            case FormFieldType.RadioButton:
-	                this.ProcessRadioButtons((RadioButtonField)field);
-	
-	                break;
-	            case FormFieldType.CheckBox:
-	                this.ProcessCheckBoxes((CheckBoxField)field);
-	                break;
-	        }
-	    }
-	}
-{{endregion}}
+<snippet id='codeblock_158'/>
 
 The following list shows all the inheritors of the FormField class:
 
@@ -89,13 +64,7 @@ In R2 2020 we introduced the __Rename__ method which allows you to rename the Fo
 
 #### **[C#] Example 2: Rename Form Fields**
 
-{{region radpdfprocessing-model-interactive-forms-form-fields_1}}
-
-	public void RenameFields(RadFixedDocument document)
-	{
-		document.AcroForm.FormFields.Rename("OldName", "NewName");
-	}
-{{endregion}}
+<snippet id='codeblock_159'/>
 
 ## Merging Documents with Form Fields
 
@@ -103,34 +72,7 @@ When merging documents that contain FormFields, you need to ensure that each fie
 
 #### **[C#] Example 2: Merge files with Form Fields**
 
-{{region radpdfprocessing-model-interactive-forms-form-fields_2}}
-
-	public void MergeFields()
-	{
-		PdfFormatProvider provider = new PdfFormatProvider();
-		var document = provider.Import(File.ReadAllBytes(@"D:\FormFieldDoc.pdf"), TimeSpan.FromSeconds(10));
-		var document1 = provider.Import(File.ReadAllBytes(@"D:\FormFieldDoc1.pdf"), TimeSpan.FromSeconds(10));
-
-		document.MergedFieldNameResolving += Document_MergedFieldNameResolving;
-
-		document.Merge(document1);
-
-		using (FileStream fs = new FileStream(@"MergedResult.pdf", FileMode.OpenOrCreate))
-		{
-			provider.Export(document, fs);
-		}
-	
-	}
-
-	private void Document_MergedFieldNameResolving(object sender, MergedFormFieldNameResolvingEventArgs e)
-	{
-		if (e.UsedNames.Contains(e.Name))
-		{
-			e.NewName = e.Name + "1";
-		}
-	}
-
-{{endregion}}
+<snippet id='codeblock_160'/>
 
 
 ## See Also

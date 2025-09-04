@@ -19,15 +19,7 @@ This class exposes methods for searching. You need to pass an instance of [RadFi
 
 #### __[C#] Example 1:  Create TextSerch Instance__
 
-{{region cs-pdfprocessing-features-search_0}}
-
-    PdfFormatProvider provider = new PdfFormatProvider();
-    RadFixedDocument document = provider.Import(File.ReadAllBytes(@"Test.pdf"), TimeSpan.FromSeconds(10));
-
-    TextSearch search = new TextSearch(document);
-    IEnumerable<SearchResult> result = search.FindAll("Lorem", TextSearchOptions.Default);
-
-{{endregion}}
+<snippet id='codeblock_74'/>
 
 ### Search Methods
 
@@ -50,25 +42,7 @@ All of the above methods return one or more instances of the **SearchResult** cl
 
 #### __[C#] Example 2:  Searching in a document__
 
-{{region cs-pdfprocessing-features-search_1}}
-
-    PdfFormatProvider provider = new PdfFormatProvider();
-    RadFixedDocument document = provider.Import(File.ReadAllBytes(@"Test.pdf"), TimeSpan.FromSeconds(10));
-
-    TextSearch search = new TextSearch(document);
-    IEnumerable<SearchResult> result = search.FindAll("Lorem", TextSearchOptions.Default);
-
-    foreach (SearchResult resultItem in result)
-    {
-        Rect rect = resultItem.GetWordBoundingRect();
-        RadFixedPage page = resultItem.GetResultPage();
-        FixedContentEditor editor = new FixedContentEditor(page);
-        editor.DrawRectangle(rect);
-    }
-
-    File.WriteAllBytes(@"result.pdf", provider.Export(document, TimeSpan.FromSeconds(10)));
-
-{{endregion}}
+<snippet id='codeblock_75'/>
 
 ### TextSearchOptions
 

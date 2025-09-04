@@ -25,9 +25,7 @@ The FormSource class exposes a default constructor which you can use to create a
 
 #### __[C#] Example 1: Create FormSource__
 
-{{region cs-radpdfprocessing-model-formsource_0}}
-    FormSource formSource = new FormSource();
-{{endregion}}
+<snippet id='codeblock_149'/>
 
 The snippet from **Example 1** will create an empty FormSource object. To fill this object with content you can use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) as described later in this article.
 
@@ -45,27 +43,7 @@ The FormSource class inherits from the IContentRootElement interface. This inher
 
 #### __[C#] Example 2: Add content to a FormSource__
 
-{{region cs-radpdfprocessing-model-formsource_1}}
-    FormSource simpleForm = new FormSource();
-    simpleForm.Size = new Size(310, 250);
-    
-    FixedContentEditor formEditor = new FixedContentEditor(simpleForm);
-    formEditor.Position.Translate(50, 60);
-    
-    using (formEditor.SaveProperties())
-    {
-        formEditor.GraphicProperties.IsFilled = true;
-        formEditor.GraphicProperties.IsStroked = true;
-        formEditor.GraphicProperties.StrokeThickness = 2;
-        formEditor.GraphicProperties.StrokeColor = new RgbColor(92, 229, 0);
-        formEditor.GraphicProperties.FillColor = new RgbColor( 213, 222, 226);
-        formEditor.GraphicProperties.StrokeDashArray = new double[] { 17, 4 };
-        formEditor.DrawRectangle(new Rect(new Size(250, 150)));
-    }
-    
-    formEditor.Position.Translate(100, 120);
-    formEditor.DrawText("Sample rectangle in a form");
-{{endregion}}
+<snippet id='codeblock_150'/>
 
 ## Inserting a FormSource into a Document
 
@@ -78,15 +56,7 @@ After generating the FormSource object and filling it with content, you should i
 
     #### __[C#] Example 3: Add a FormSource to a document using FixedContentEditor__
     
-    {{region cs-radpdfprocessing-model-formsource_2}}
-        FixedContentEditor documentPageEditor = new FixedContentEditor(document.Pages.AddPage());
-        
-        FormSource simpleForm = new FormSource();
-        // Fill the FormSource instance with content (you can use the code from Example 2)
-        
-        documentPageEditor.DrawForm(simpleForm);
-    
-    {{endregion}}
+    <snippet id='codeblock_151'/>
 
     There are several overloads of the DrawForm() method that enables you to specify the size of the form.
 

@@ -33,10 +33,7 @@ In order to specify the default **ImageQuality** value when exporting to PDF, yo
 
 #### __[C#] Example 1: Set a default value for all images in a document__
 
-{{region cs-radpdfprocessing-concepts-imagequality_0}}
-	PdfExportSettings settings = new PdfExportSettings();
-	settings.ImageQuality = ImageQuality.Medium;
-{{endregion}}
+<snippet id='codeblock_21'/>
 
 > `PdfExportSettings.ImageQuality` property doesn't affect the quality of the images imported from a PDF document. Such images are preserved using `EncodedImageData` (see [ImageQuality and EncodedImageData Class](#imagequality-and-encodedimagedata-class)). `PdfExportSettings.ImageQuality` only affects the export quality of images created using an image stream or a `BitmapSource`.
 
@@ -46,9 +43,7 @@ If you need some particular image to be exported with a different **ImageQuality
 
 #### __[C#] Example 2: Set the image quality of an image__
 
-{{region cs-radpdfprocessing-concepts-imagequality_1}}
-	ImageSource imageSource = new ImageSource(bitmap, ImageQuality.Medium);
-{{endregion}}
+<snippet id='codeblock_22'/>
 
 
 ### ImageQuality and EncodedImageData Class

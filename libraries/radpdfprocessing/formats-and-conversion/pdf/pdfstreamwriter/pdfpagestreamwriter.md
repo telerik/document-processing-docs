@@ -20,19 +20,7 @@ An instance of the PdfPageStreamWriter class can be obtained using the **BeginPa
 
 #### **[C#] Example 1: Instantiate PdfPageStreamWriter**
 	
-{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter_0}}
-
-	using (PdfStreamWriter writer = new PdfStreamWriter(File.OpenWrite(resultDocument)))
-	{
-		Size size = new Size(700,1200);
-		Rotation rotation = Rotation.Rotate270;
-
-		using (PdfPageStreamWriter pageWriter = writer.BeginPage(size, rotation))
-        {
-			// Use the pageWriter object to fill the content of the page.
-		}
-	}
-{{endregion}}
+<snippet id='codeblock_92'/>
 
 
 >You can find an example on how to use the PdfPageStreamWriter class in the [Manipulate Pages](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) example in the XAML SDK repository on GitHub.

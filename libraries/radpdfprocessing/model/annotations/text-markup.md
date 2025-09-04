@@ -30,77 +30,14 @@ Depending on the TextMarkupAnnotationType the respective type of the TextMarkup 
 
 ### Creating a Highlight Annotation
 
-```csharp 
-            string sampleText =  File.ReadAllText("dummyText.txt");
-
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            using (RadFixedDocumentEditor documentEditor = new RadFixedDocumentEditor(fixedDocument))
-            {
-                documentEditor.InsertRun(sampleText);
-            }           
-            TextSearch search = new TextSearch(fixedDocument);
-            IEnumerable<SearchResult> result = search.FindAll("amet", TextSearchOptions.Default);
-            foreach (SearchResult r in result)
-            {
-                Rect highlightRectangle = r.GetWordBoundingRect(); 
-                TextMarkupAnnotation annotation = r.GetResultPage().Annotations.AddHighlight(highlightRectangle);
-                annotation.Color = new RgbColor(125, 255, 0, 0);
-
-                annotation.RecalculateContent();
-            }
-        
-```
+<snippet id='codeblock_139'/>
 
 ![Create Highlight Annotation](images/pdf-processing-create-highlight-annotation.png)   
 
 ### Creating a Highlight Annotation with Appearance
 
 
-```csharp          
-        private RadFixedDocument CreateTextMarkupAnnotation()
-        {
-            string sampleText = File.ReadAllText("dummyText.txt");
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            using (RadFixedDocumentEditor documentEditor = new RadFixedDocumentEditor(fixedDocument))
-            {
-                documentEditor.InsertRun(sampleText);
-            }
-            TextMarkupAnnotation annotation = fixedDocument.Pages[0].Annotations.AddHighlight(new Rect(150, 150, 100, 40));
-
-            FormSource simpleForm = new FormSource();
-            CreateContentFormWithText(simpleForm, "Hover me!");
-            annotation.Content.NormalContentSource = simpleForm;
-
-            FormSource secondForm = new FormSource();
-            CreateContentFormWithText(secondForm, "Hovered!");
-            annotation.Content.MouseOverContentSource = secondForm;
-            return fixedDocument;
-        }
-
-        private static void CreateContentFormWithText(FormSource normalForm, string text)
-        {
-            Size s = new Size(100, 40);
-            normalForm.Size = s;
-
-            FixedContentEditor formEditor = new FixedContentEditor(normalForm);
-
-            using (formEditor.SaveProperties())
-            {
-                formEditor.GraphicProperties.IsFilled = true;
-                formEditor.GraphicProperties.IsStroked = true;
-                formEditor.GraphicProperties.StrokeThickness = 1;
-                formEditor.GraphicProperties.StrokeColor = new RgbColor(255, 0, 0);
-                formEditor.GraphicProperties.FillColor = new RgbColor(175,255, 255, 0);
-                formEditor.GraphicProperties.StrokeDashArray = new double[] { 17, 4 };
-                formEditor.DrawRectangle(new Rect(s));
-            }
-
-            formEditor.TextProperties.FontSize = 16;
-            formEditor.TextProperties.Font = FontsRepository.Courier;
-            formEditor.Position.Translate(10, 10);
-            formEditor.DrawText(text);
-        }
-```
+<snippet id='codeblock_140'/>
 
 ![Create Highlight Annotation with Appearance](images/pdf-processing-create-highlight-annotation-with-appearance.gif)    
 
@@ -108,61 +45,19 @@ Depending on the TextMarkupAnnotationType the respective type of the TextMarkup 
 
 ## Underline
 
-```csharp 
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            RadFixedPage page = fixedDocument.Pages.AddPage();
-            FixedContentEditor editor = new FixedContentEditor(page);
-            editor.Position.Translate(100, 100);
-            editor.DrawText("This is an underline.");
-
-            TextSearch search = new TextSearch(fixedDocument);
-            IEnumerable<SearchResult> underlineSearch = search.FindAll("underline", TextSearchOptions.Default);
-            Rect underlineRectangle = underlineSearch.First().GetWordBoundingRect();
-            TextMarkupAnnotation underlineAnnotation = page.Annotations.AddUnderline(underlineRectangle);
-            underlineAnnotation.Color = new RgbColor(255, 0, 255);
-            underlineAnnotation.Opacity = 0.90;
-            underlineAnnotation.RecalculateContent();     
-```
+<snippet id='codeblock_141'/>
 
 ![Create Underline Annotation](images/pdf-processing-create-underline-annotation.png)     
 
 ## Squiggly
 
-```csharp 
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            RadFixedPage page = fixedDocument.Pages.AddPage();
-            FixedContentEditor editor = new FixedContentEditor(page);
-            editor.Position.Translate(100, 100);
-            editor.DrawText("This is a squiggly line.");
-
-            TextSearch search = new TextSearch(fixedDocument);
-            IEnumerable<SearchResult> squigglySearch = search.FindAll("squiggly", TextSearchOptions.Default);
-            Rect squigglyRectangle = squigglySearch.First().GetWordBoundingRect();
-            TextMarkupAnnotation squigglyAnnotation = page.Annotations.AddSquiggly(squigglyRectangle);
-            squigglyAnnotation.Color = new RgbColor (255,0, 0);
-            squigglyAnnotation.Opacity = 0.70;
-            squigglyAnnotation.RecalculateContent();       
-```
+<snippet id='codeblock_142'/>
 
 ![Create Squiggly Annotation](images/pdf-processing-create-squiggly-annotation.png)    
 
 ## StrikeOut
 
-```csharp 
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            RadFixedPage page = fixedDocument.Pages.AddPage();
-            FixedContentEditor editor = new FixedContentEditor(page);
-            editor.Position.Translate(100, 100);
-            editor.DrawText("This is a strikeout.");
-
-            TextSearch search = new Search.TextSearch(fixedDocument);
-            IEnumerable<SearchResult> strikeoutSearch = search.FindAll("strikeout", TextSearchOptions.Default);
-            Rect strikeoutRectangle = strikeoutSearch.First().GetWordBoundingRect();
-            TextMarkupAnnotation strikeoutAnnotation = page.Annotations.AddStrikeout(strikeoutRectangle);
-            strikeoutAnnotation.Color = new RgbColor(0, 0, 255);
-            strikeoutAnnotation.Opacity = 0.90;
-            strikeoutAnnotation.RecalculateContent();    
-```
+<snippet id='codeblock_143'/>
 
 ![Create StrikeOut Annotation](images/pdf-processing-create-strikeOut-annotation.png)      
 

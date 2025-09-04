@@ -51,20 +51,7 @@ Represents a CMYK (cyan, magenta, yellow, key) color. The CmykColor class was in
 
 #### Create CmykColor
 
-```csharp
-   RadFixedDocument document = new RadFixedDocument();
-   RadFixedPage page = document.Pages.AddPage();
-   FixedContentEditor containerEditor = new FixedContentEditor(page);
-
-   double c = 0.46;
-   double m = 0.3;
-   double y = 0.76;
-   double k = 0.12;
-
-   CmykColor cmykColor = new CmykColor(c, m, y, k);
-   containerEditor.GraphicProperties.FillColor = cmykColor;
-   containerEditor.DrawRectangle(new Rect(10, 10, 48, 29));
-```
+<snippet id='codeblock_11'/>
 
 ![CMYK Color](images/cmyk-color.png) 
 
@@ -201,13 +188,7 @@ The tiling created in __Example 4__ is shown in __Figure 3__.
 
 #### Create LabColor
 
-```csharp
-   double[] whitePoint = new double[3] { 1, 2, 3 };
-   double[] range = new double[4] { 4, 5, 6, 7 };
-   double[] expectedBlackPoint = new double[3] { 0, 0, 0 };
-
-   LabColor labColor = new LabColor(1, 2, 3, whitePoint, range);
-```
+<snippet id='codeblock_12'/>
 
 ## See Also
 

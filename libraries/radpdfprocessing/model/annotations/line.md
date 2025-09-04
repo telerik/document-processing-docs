@@ -27,17 +27,7 @@ The **LineAnnotation** class is a derivative of the **MarkupAnnotation** (descen
 
 ### Creating a LineAnnotation
 
-```csharp
-            RadFixedDocument document = new RadFixedDocument();
-            RadFixedPage page = document.Pages.AddPage();
-
-            LineAnnotation annotation = page.Annotations.AddLine(new Point(50, 50), new Point(300, 300));
-            annotation.StartLineEndingType = LineEndingType.None;
-            annotation.EndLineEndingType = LineEndingType.OpenArrow;
-            annotation.Color = new RgbColor(255, 0, 0); //Default RgbColor(255, 255, 255)
-            annotation.Contents = "This is a LineAnnotation";
-            annotation.Opacity = 0.5;
-```
+<snippet id='codeblock_130'/>
 
 ![Create LineAnnotation](images/pdf-processing-create-lineannotation.png)  
 
@@ -45,14 +35,7 @@ The **LineAnnotation** class is a derivative of the **MarkupAnnotation** (descen
 
 The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) offers the public **DrawLineAnnotation** method which creates a new __LineAnnotation__ with starting point the current point of the editor and end point the current point of the editor plus the given distances.
 
-```csharp
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            FixedContentEditor editor = new FixedContentEditor(fixedDocument.Pages.AddPage());
-
-            editor.Position.Translate(50, 50);
-            editor.DrawText("Line starts here.");
-            editor.DrawLineAnnotation(100, 200);
-```
+<snippet id='codeblock_131'/>
 
 ![Create LineAnnotation with FixedContentEditor](images/pdf-processing-create-lineannotation-with-fixedcontenteditor.png)   
 

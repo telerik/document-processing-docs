@@ -25,25 +25,7 @@ PushButtonField provides a single property called **Widgets**. It represents the
 
 
 #### **[C#] Example 1: Create a PushButtonField and add it to a page**
-{{region radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield_0}}
-	
-	PushButtonField pushButtonField = new PushButtonField("SamplePushButton");
-	
-	PushButtonWidget widget = pushButtonField.Widgets.AddWidget();
-	widget.Rect = new Rect(new Size(250, 50));
-	widget.HighlightingMode = HighlightingMode.InvertBorderOfAnnotationRectangle;
-	
-	widget.AppearanceCharacteristics.Background = new RgbColor(123, 165, 134);
-	widget.AppearanceCharacteristics.NormalCaption = "Click here";
-	
-	widget.TextProperties.FontSize = 20;
-	widget.TextProperties.Font = FontsRepository.Courier;
-	widget.TextProperties.Fill = new RgbColor(0, 0, 0);
-    widget.RecalculateContent();
-
-	document.AcroForm.FormFields.Add(pushButtonField);
-	document.Pages[0].Annotations.Add(widget);
-{{endregion}}
+<snippet id='codeblock_162'/>
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
