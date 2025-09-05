@@ -57,7 +57,7 @@ Telerik strongly recommends the use of NuGet packages whenever possible. Only in
 If you’re not using NuGet packages in your project, add the license as a code snippet:
 
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
-1. On the corresponding product row, click the **View key** link in the **SCRIPT KEY** column.
+1. On the corresponding product row, click the **Script Key** link in the **SCRIPT KEY** column.
 ![Download Product Key ><](images/download-product-key.png)
 1. Copy the C# code snippet into a new file, for example, TelerikLicense.cs.
 1. Add the TelerikLicense.cs file to your project.
