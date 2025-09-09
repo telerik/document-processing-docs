@@ -79,7 +79,6 @@ The **AnnotationContentSource** class, accessed by the **Content** property of t
             FormSource simpleForm = new FormSource();
             CreateContentFormWithText(simpleForm, "Sold");
 
-            AnnotationContentSource content = new AnnotationContentSource();
             annotation.Content.NormalContentSource = simpleForm;
             return fixedDocument;
         }
