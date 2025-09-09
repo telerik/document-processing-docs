@@ -1,11 +1,11 @@
 ---
-title: Fixing Corrupt Excel Files After Export Using Telerik SpreadProcessing
-description: Resolving issues where exported Excel files using Telerik SpreadProcessing show corruption warnings after upgrading to version 2025.2.520.
+title: Resolve Exporting Corrupted Excel Files With SpreadProcessing
+description: Resolve corrupted Excel files exported with SpreadProcessing in versions 2025.2.520 and newer.
 type: how-to
-page_title: Resolving Excel File Corruption Warning After SpreadProcessing Export
-meta_title: Resolving Excel File Corruption Warning After SpreadProcessing Export
+page_title: Resolve Exporting Corrupted Excel Files With SpreadProcessing
+meta_title: Resolve Exporting Corrupted Excel Files With SpreadProcessing
 slug: resolving-excel-file-corruption-warning-after-spreadprocessing-export
-tags: telerik,document,processing, spread, excel,export, memory,stream, corrupted,file
+tags: telerik, document, processing, spread, excel, export, memory, stream, corrupted, file
 res_type: kb
 ticketid: 1695962
 ---
@@ -19,9 +19,9 @@ ticketid: 1695962
 
 Exporting an Excel file using Telerik [SpreadProcessing]({%slug radspreadprocessing-overview%}) shows a corruption warning when opening the file in Excel. 
 
-This issue occurs when reusing the same `MemoryStream` for both import and export operations without resetting or truncating the stream. The problem started after upgrading to version 2025.2.520 due to changes in the library that replaced `Telerik.Zip` with `System.IO.Compression`. 
+This issue occurs when reusing the same `MemoryStream` for both import and export operations without resetting or truncating the stream. The issue originates in version 2025.2.520, where `Telerik.Zip` was replaced with `System.IO.Compression`.
 
-This knowledge base article shows how to fix "Excel found unreadable content" errors after export.
+This knowledge base article shows how to fix the "Excel found unreadable content" error after export.
 
 ## Solution
 
