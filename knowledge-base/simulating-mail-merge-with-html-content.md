@@ -1,11 +1,11 @@
 ---
-title: Simulating Mail Merge with HTML content by Utilizing the Find and Replace Functionality
-description: Learn how to render HTML content with formatting options during mail merge using Telerik Document Processing Library.
+title: Simulating Mail Merge with formatted HTML content by Utilizing the Find and Replace Functionality
+description: Learn how to simulate Mail Merge with formatted HTML content using Telerik Document Processing Library.
 type: how-to
-page_title: Simulating Mail Merge with HTML content by Utilizing the Find and Replace Functionality
-meta_title: Simulating Mail Merge with HTML content by Utilizing the Find and Replace Functionality
+page_title: Simulating Mail Merge with formatted HTML content by Utilizing the Find and Replace Functionality
+meta_title: Simulating Mail Merge with formatted HTML content by Utilizing the Find and Replace Functionality
 slug: simulating-mail-merge-with-html-content
-tags: words, processing,telerik, document, mail, merge, html, content, find, replace
+tags: words, processing, telerik, document, mail, merge, html, content, find, replace
 res_type: kb
 ticketid: 1694621
 ---
@@ -18,17 +18,17 @@ ticketid: 1694621
 
 ## Description
 
-This article demonstrates a sample approach how to simulate [mail merge]({%slug radwordsprocessing-editing-mail-merge%}), where HTML content needs to replace placeholders in a DOCX template. When performing mail merge, the WordProcessing library binds plain HTML text instead of rendering the HTML with formatting.
-
-![Replace Placeholders with HTML content in DOCX template ><](images/simulating-mail-merge-with-html-content.png) 
+This article demonstrates a sample approach how to simulate [mail merge]({%slug radwordsprocessing-editing-mail-merge%}), where formatted HTML content needs to replace placeholders in a DOCX template. When performing a mail merge, the WordProcessing library binds plain HTML text, instead of rendering the HTML with its original formatting.
 
 ## Solution
 
-To render HTML content during mail merge, use the [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%}) functionality instead of the default mail merge engine. Replace placeholders with styled HTML content using the following steps:
+To work around this, use the [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%}) functionality instead. Replace placeholders with the styled HTML content using the following steps:
 
 1. Import the HTML content using [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}).
 2. Import the DOCX template using [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
 3. Find placeholders in the template and replace them with the imported HTML content.
+
+![Replace Placeholders with HTML content in DOCX template ><](images/simulating-mail-merge-with-html-content.png) 
 
 ### Code Example
 
