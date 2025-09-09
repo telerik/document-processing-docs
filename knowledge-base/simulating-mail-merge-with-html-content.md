@@ -22,7 +22,7 @@ This article demonstrates a sample approach how to simulate [mail merge]({%slug 
 
 ## Solution
 
-To work around this, use the [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%}) functionality instead. Replace placeholders with the styled HTML content using the following steps:
+To successfully insert the formatted HTML content, you can use the [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%}) functionality instead. Replace placeholders with the styled HTML content using the following steps:
 
 1. Import the HTML content using [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}).
 2. Import the DOCX template using [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
