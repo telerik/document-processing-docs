@@ -17,7 +17,7 @@ This feature allows you to search for a specific text in a PDF document. You can
 This class exposes methods for searching. You need to pass an instance of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) when creating a new instance. This is the document that will be searched. 
 
 
-#### __[C#] Example 1:  Create TextSerch Instance__
+#### __[C#] Example 1:  Create TextSearch Instance__
 
 <snippet id='codeblock_74'/>
 
