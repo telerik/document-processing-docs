@@ -19,7 +19,7 @@ This class exposes methods for searching. You need to pass an instance of [RadFi
 
 #### __[C#] Example 1:  Create TextSearch Instance__
 
-<snippet id='snippet-74'/>
+<snippet id='search-find-all'/>
 
 ### Search Methods
 
