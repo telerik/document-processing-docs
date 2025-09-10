@@ -43,6 +43,8 @@ The FormSource class inherits from the IContentRootElement interface. This inher
 
 **Example 2** shows you how you can insert a content into a FormSource object using FixedContentEditor.
 
+>There’s no nesting limit for [Form XObjects[({%slug radpdfprocessing-model-form%})], but PDF viewers may restrict depth to avoid memory or performance issues and improve responsiveness, which can affect rendering depending on the viewer.
+
 #### __[C#] Example 2: Add content to a FormSource__
 
 {{region cs-radpdfprocessing-model-formsource_1}}
