@@ -65,7 +65,8 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
           
 >You can add content to the form by setting its FormSource property. The API allows you also to directly pass the FormSource to a method which will automatically generate a form in the document content. For more information on this topic, check the [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) article.
 
->There’s no nesting limit for [Form XObjects[({%slug radpdfprocessing-model-form%})], but PDF viewers may restrict depth to avoid memory or performance issues and improve responsiveness, which can affect rendering depending on the viewer.
+
+>There’s no nesting limit for [Form XObjects]({%slug radpdfprocessing-model-form%}), but PDF viewers may restrict depth to avoid memory or performance issues and improve responsiveness, which can affect rendering depending on the viewer.
 
  
 ### Modifying Form Properties
