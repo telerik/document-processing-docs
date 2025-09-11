@@ -27,7 +27,7 @@ __Example 1__ demonstrates how you can create a Clipping element and assign a __
 
 #### __[C#] Example 1: Create clipping__
 
-<snippet id='codeblock_4'/>
+<snippet id='pdf-clipping-geometry'/>
 
 
 
@@ -41,7 +41,7 @@ __Example 2__ demonstrates how to clip an image using the Clipping created in __
 
 #### __[C#] Example 2: Use clipping__
 
-<snippet id='codeblock_5'/>
+<snippet id='pdf-image-clipping'/>
 
 
 

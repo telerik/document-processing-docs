@@ -114,7 +114,7 @@ In order to use the __RadPdfProcessing__ library in your project, you need to ad
 
 #### __[C#] Example 1: Create RadFixedDocument__
 
-<snippet id='codeblock_1'/>
+<snippet id='pdf-create-fixed'/>
 
 
 
@@ -123,7 +123,7 @@ The page can then be edited through a [FixedContentEditor]({%slug radpdfprocessi
 
 #### __[C#] Example 2: Add text__
 
-<snippet id='codeblock_2'/>
+<snippet id='pdf-create-editor'/>
 
 
 
@@ -134,7 +134,7 @@ Exporting to PDF format can be achieved with the __PdfFormatProvider__ class. __
 
 #### __[C#] Example 3: Export to PDF__
 
-<snippet id='codeblock_3'/>
+<snippet id='pdf-export'/>
 
 For more complete examples head to the [Developer Focused Examples]({%slug radpdfprocessing-sdk-examples%}) section of the library.
 
