@@ -39,7 +39,7 @@ These properties are used to hold the current graphics control parameters. The f
             
 #### [C#] Example 1: Using GraphicProperties with FixedContentEditor
 
-<snippet id='codeblock_66'/>
+<snippet id='pdf-graphic-properties-editor'/>
 
 ## TextProperties
 
@@ -81,7 +81,7 @@ These properties hold the parameters used for text fragments. The following para
             
 #### [C#] Example 2: Using TextProperties with Block
 
-<snippet id='codeblock_67'/>
+<snippet id='pdf-text-properties-block'/>
 
 The TextProperties also exposes the following methods, which can be used for changing the current font:
         

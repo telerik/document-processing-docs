@@ -25,7 +25,7 @@ Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achie
             
 #### __[C#] Example 1: Insert text__
 
-<snippet id='codeblock_29'/>
+<snippet id='pdf-block-insert-text'/>
 
 >The '\r' and '\n' characters don't have the usual meaning of "go to next line" when they are inserted into a PDF document and you cannot simply insert text containing these characters to produce multiline text. Instead, you should insert a line break.
 
@@ -38,7 +38,7 @@ Inserting a line break results in the next element starting on a new line. The a
 
 #### __[C#] Example 2: Break the line__
 
-<snippet id='codeblock_30'/>
+<snippet id='pdf-block-line-break'/>
 
 ### Inserting Image
 
@@ -53,7 +53,7 @@ __Block__ provides the following methods for inserting images:
                 
 #### __[C#] Example 3: Inserting an image__
 
-<snippet id='codeblock_31'/>
+<snippet id='pdf-block-insert-image'/>
 
 Information on images in the context of the library is available in the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and [Image]({%slug radpdfprocessing-model-image%}) articles.
             
@@ -70,7 +70,7 @@ Information on images in the context of the library is available in the [ImageSo
                 
 #### __[C#] Example 4: Inserting a geometry__
 
-<snippet id='codeblock_32'/>
+<snippet id='pdf-block-insert-geometry'/>
 
 ### Inserting Form-XObject Elements
 
@@ -78,7 +78,7 @@ The Form (or also known as Form-XObject) is an object that can contain PDF conte
 
 #### __[C#] Example 5: Insert a form__
 
-<snippet id='codeblock_33'/>
+<snippet id='pdf-block-insert-form'/>
 
 There are two more overloads of InsertForm() that enables you to pass the size that should be used for the form.
 
@@ -91,7 +91,7 @@ The following example shows how to insert a link inside the text:
 
 #### __[C#] Example: Insert a text link__
 
-<snippet id='codeblock_34'/>
+<snippet id='pdf-block-text-link'/>
 
 ### Changing Current Styles
 
@@ -162,7 +162,7 @@ The __Block__ class has some properties and methods that affect how it will be r
 
 #### __[C#] Example 6: Change Block properties__
 
-<snippet id='codeblock_35'/>
+<snippet id='pdf-block-change-properties'/>
 
 ![Block Properties Result](images/radpdfprocessing-editing-block_5_result.png)
 
@@ -172,9 +172,7 @@ A Block can be drawn to the content using the __Draw()__ method. The method acce
         
 #### __[C#] Example 7: Draw block__
 
-<snippet id='codeblock_36'/>
-
-
+<snippet id='pdf-draw-block'/>
 
 >importantEvery block can be drawn only once. Otherwise, an exception will be thrown.
           
@@ -211,7 +209,7 @@ The code in __Example 9__ splits a block in two. The first will contains text "H
         
 #### __[C#] Example 9: Split block__
 
-<snippet id='codeblock_37'/>
+<snippet id='pdf-block-split'/>
 
 
 ## See Also

@@ -62,7 +62,7 @@ __Example 1__ shows how transformations can be appended.
 
 #### __[C#] Example 1: Trasform MatrixPosition__
 
-<snippet id='codeblock_23'/>
+<snippet id='pdf-matrix-position'/>
 
 
 
@@ -87,7 +87,7 @@ __Example 2__ shows how transformations overwrite the previous transformations o
 
 #### __[C#] Example 2: Transform SimplePosition__
 
-<snippet id='codeblock_24'/>
+<snippet id='pdf-simple-position'/>
 
 
 

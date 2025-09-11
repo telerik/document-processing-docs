@@ -64,7 +64,7 @@ Inserting a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) can be 
 
 #### __[C#] Example 3: Insert TextFragment__
 
-<snippet id='codeblock_38'/>
+<snippet id='fixed-content-editor-insert-text-fragment'/>
 
 __Figure 1__ shows the result of __Example 3__.         
 
@@ -80,7 +80,7 @@ __Example 4__ shows how you can use the __Block__ object to draw a paragraph.
 
 #### __[C#] Example 4: Insert paragraph__
 
-<snippet id='codeblock_39'/>
+<snippet id='fixed-content-editor-insert-paragraph'/>
 
 __Figure 2__ shows the result of __Example 4__.        
 
@@ -105,7 +105,7 @@ __Example 5__ shows how you can add an image created from a Stream.
             
 #### __[C#] Example 5: Insert image__
 
-<snippet id='codeblock_40'/>
+<snippet id='fixed-content-editor-insert-image'/>
 
 #### Figure 3: Image result
 ![Rad Pdf Processing Editing Fixed Content Editor 04](images/RadPdfProcessing_Editing_FixedContentEditor_04.png)
@@ -124,7 +124,7 @@ __Example 6__ shows how you can add an ellipse using one of FixedContentEditor's
             
 #### __[C#] Example 6: Insert ellipse__
 
-<snippet id='codeblock_41'/>
+<snippet id='fixed-content-editor-insert-ellipse'/>
 
 ### Inserting Clipping
 
@@ -155,7 +155,7 @@ __Example 8__ generates a table and draws it in some fixed size.
 
 #### __[C#] Example 8: Insert table__
 
-<snippet id='codeblock_42'/>
+<snippet id='fixed-content-editor-insert-table'/>
 
 #### The table created in Example 8
 
@@ -168,7 +168,7 @@ More detailed information about tables is available in the [Table]({%slug radpdf
 With the FixedContentEditor class you can insert a Form (Form-XObject) element. 
 
 #### __[C#] Example 9: Insert a form__
-<snippet id='codeblock_43'/>
+<snippet id='fixed-content-editor-insert-form'/>
 
 There are two more overloads of DrawForm() that enable you to pass the size that should be used for the form.
 
@@ -182,13 +182,13 @@ The Widget annotations allow you visualize the content of a FormField. With the 
 
 	#### **[C#] Example 10: Insert PushButtonField with PushButtonWidget using DrawWidget**
 	
-	<snippet id='codeblock_44'/>
+	<snippet id='fixed-content-editor-insert-pushbuttonfield'/>
 
 * **DrawWidget(RadioButtonField parentField, RadioOption option, Size annotationSize)**: Creates new [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets%}#radiobuttonwidget-class) and draws the widget with the specified annotation size. This method will add widget only in cases when the root of the FixedContentEditor supports annotations. The second parameter represents the option that should be visualized by the widget.
 	
 	#### **[C#] Example 11: Insert RadioButtonField with RadioButtonWidget using DrawWidget**
 	
-	<snippet id='codeblock_45'/>
+	<snippet id='fixed-content-editor-insert-radiobuttonfield'/>
 
 ## Positioning
 
@@ -198,7 +198,7 @@ The code in __Example 12__ shows how to manipulate the position of the inserted 
 
 #### __[C#] Example 12: Scale and rotate content__
 
-<snippet id='codeblock_46'/>
+<snippet id='fixed-content-editor-scale-rotate'/>
 
 #### Figure 5: Positioning result
 

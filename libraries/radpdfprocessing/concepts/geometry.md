@@ -47,7 +47,7 @@ __Example 1__ shows how to create a RectangleGeometry.
 
 #### __[C#] Example 1: Create RectangleGeometry__
 
-<snippet id='codeblock_19'/>
+<snippet id='pdf-create-rectangle-geometry'/>
 
 
 
@@ -69,7 +69,7 @@ __Example 2__ shows how to create a PathGeometry, which consists of line segment
 
 #### __[C#] Example 2: Create PathGeometry__
 
-<snippet id='codeblock_20'/>
+<snippet id='pdf-create-path-geometry'/>
 
 
 

@@ -81,12 +81,13 @@ The __Gradient__ class is inherited by the following classes:
             
 	#### __[C#] Example 2: Create LinearGradient__
 	
-<snippet id='pdf-create-linear-gradient'/>
+	<snippet id='pdf-create-linear-gradient'/>
 	
-	The gradient created in __Example 2__ is shown in __Figure 1__.
+The gradient created in __Example 2__ is shown in __Figure 1__.
 	            
-	#### Figure 1: LinearGradient	
-	![Rad Pdf Processing Concepts Colors And Color Spaces 01](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
+#### Figure 1: LinearGradient	
+
+![Rad Pdf Processing Concepts Colors And Color Spaces 01](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
     
 * __RadialGradient__: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The __RadialGradient__ class exposes the following properties:
                 

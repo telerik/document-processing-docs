@@ -36,11 +36,7 @@ The code snippet from __Example 1__ shows how to create a list with NumberedPare
 
 #### __[C#] Example 1: Create numbered parentheses list template type__
 
-<snippet id='codeblock_47'/>
-
-
-
-
+<snippet id='pdf-list-numbered-parentheses'/>
 
 On the following image you may see the available list template types and how they look:
 
@@ -71,10 +67,7 @@ __Example 2__ shows how to create an empty list and add two custom list levels t
 
 #### __[C#] Example 2: Create custom list levels__
 
-<snippet id='codeblock_48'/>
-
-
-
+<snippet id='pdf-list-custom-levels'/>
 
 The image in __Figure 3__ shows how the list created in __Example 2__ will look like when used.
 
@@ -91,10 +84,7 @@ The following code snippet shows how to create the bullets of a numbered hierarc
 
 #### __[C#] Example 3: Create custom text numbering bullet__
 
-<snippet id='codeblock_49'/>
-
-
-
+<snippet id='pdf-list-custom-numbering-bullet'/>
 
 When using the list created in __Example 3__ its bullets will look as shown in __Figure 4__.
 
@@ -110,10 +100,7 @@ __Example 4__ shows how to create a list with __RadFixedDocumentEditor__ and ins
 
 #### __[C#] Example 4: Using lists with RadFixedDocumentEditor__
 
-<snippet id='codeblock_50'/>
-
-
-
+<snippet id='pdf-list-using-raddocumentfixededitor'/>
 
 The resulting document looks like the image in **Figure 5**.
 
@@ -130,10 +117,7 @@ The following code snippet shows how to create __List__ with __BulletDefault__ t
 
 #### __[C#] Example 5: Using lists with Block class__
 
-<snippet id='codeblock_51'/>
-
-
-
+<snippet id='pdf-list-using--with-blocks'/>
 
 >The list style is applied for the whole Block element. Generating a list consisting of several paragraphs in different list items should be done using the same count of Block instances as the number of the different list items.
 

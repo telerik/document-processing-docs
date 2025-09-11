@@ -43,7 +43,8 @@ PdfProcessing comes with a default implementation for such resolver called `Imag
 >note View Implementation [Requirements](#requirements).
 
 #### **[C#] Example 1: Set the default implementation of the ImagePropertiesResolver class**
-    <snippet id='codeblock_25'/>
+   
+<snippet id='pdf-image-property-resolver'/>
 
 ### Custom Implementation for ImagePropertiesResolver
 
@@ -68,17 +69,20 @@ The **Telerik.Documents.ImageUtils** assembly provides a default implementation 
 >note View Implementation [Requirements](#requirements).
 
 #### **[C#] Example 2: Set the default implementation of the JpegImageConverter class**
-    <snippet id='codeblock_26'/>
+
+<snippet id='pdf-jpeg-image-converter'/>
 
 ### Custom Implementation for JpegImageConverter
 
 The following example depends on the [Magick.NET](https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/) library to convert images to Jpeg format.
     
 #### **[C#] Example 3: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
-    <snippet id='codeblock_27'/>
+
+<snippet id='pdf-custom-jpeg-converter'/>
     
 #### **[C#] Example 4: Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
-    <snippet id='codeblock_28'/>
+
+<snippet id='pdf-set-custom-image-converter'/>
 
 
 >note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter).
