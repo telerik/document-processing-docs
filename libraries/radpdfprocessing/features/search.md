@@ -42,7 +42,7 @@ All of the above methods return one or more instances of the **SearchResult** cl
 
 #### __[C#] Example 2:  Searching in a document__
 
-<snippet id='snippet-75'/>
+<snippet id='search-highlight-results'/>
 
 ### TextSearchOptions
 
