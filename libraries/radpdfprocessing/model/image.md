@@ -36,7 +36,7 @@ __Example 1__ shows how to initialize an Image object, assigns an ImageSource to
       
 #### __[C#] Example 1: Create image__
 
-<snippet id='codeblock_103'/>
+<snippet id='pdf-create-image'/>
 
 Once the above RadFixedDocument is [exported]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}), the following document with an image is created:
 
@@ -46,7 +46,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 #### __[C#] Example 2: Add image to container__
 
-<snippet id='codeblock_104'/>
+<snippet id='pdf-image-source'/>
 
 >tipThere are other methods that allow adding an image to a document by passing image size, format and source. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).     
 
@@ -56,7 +56,7 @@ The Image class exposes also the **GetBitmapSource()** method, enabling you to o
 
 #### __[C#] Example 3: Obtain BitmapSource__
 
-<snippet id='codeblock_105'/>
+<snippet id='pdf-obtain-botmap-source'/>
 
 ## See Also
  

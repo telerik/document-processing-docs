@@ -39,7 +39,7 @@ There are methods allowing you to easily construct a form field and add it to th
 **Example 1** shows how you can use the listed above methods to generate a form field and add it to the collection. 
 
 #### **[C#] Example 1: Creating a form field**
-<snippet id='codeblock_153'/>
+<snippet id='pdf-form-field-creation'/>
 
 
 You can also use several more methods of the class to modify the collection of form fields in the document's [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}).
@@ -51,7 +51,7 @@ You can also use several more methods of the class to modify the collection of f
 * **Contains()**: Accepts a string representing the form field name. Returns *true* when a field with such a name is present in the collection, otherwise *false*.
  
 #### **[C#] Example 2: Using the methods of FormFieldCollection**
-<snippet id='codeblock_154'/>
+<snippet id='pdf-form-field-collection-methods'/>
 
 ## See Also
 

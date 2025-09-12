@@ -19,7 +19,7 @@ An instance of the PdfPageSource class can be obtained using the **Pages** prope
 
 #### **[C#] Example 1: Obtain an instance of PdfPageSource**
 
-<snippet id='codeblock_90'/>
+<snippet id='pdf-obtain-page-source'/>
 
 ### Members
 
@@ -34,7 +34,7 @@ PdfPageSource exposes the following properties to give you information about the
 
 #### **[C#] Example 2: Merge the pages of several documents**
 
-<snippet id='codeblock_91'/>
+<snippet id='pdf-merge-documents-with-page-source'/>
 
 ## See Also
 

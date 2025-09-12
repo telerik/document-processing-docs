@@ -35,7 +35,7 @@ SignatureField provides the following properties:
 
 
 #### **[C#] Example 1: Create a SignatureField and add it to a page**
-<snippet id='codeblock_164'/>
+<snippet id='pdf-signature-field'/>
 
 ## See Also
 

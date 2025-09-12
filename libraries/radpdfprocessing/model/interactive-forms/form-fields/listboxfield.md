@@ -38,7 +38,7 @@ ListBoxField provides the following properties:
 
 
 #### **[C#] Example 1: Create a ListBoxField and add it to a page**
-<snippet id='codeblock_161'/>
+<snippet id='pdf-listboxfield'/>
 
 ## See Also
 

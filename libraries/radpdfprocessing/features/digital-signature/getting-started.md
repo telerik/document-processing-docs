@@ -31,7 +31,7 @@ The following example shows a full code snippet for a simple signing of a newly 
 
 #### **[C#] Example: Sign a document**
 
-<snippet id='codeblock_76'/>
+<snippet id='pdf-sign-document'/>
 
 >important In .NET Standard use __Telerik.Documents.Primitives.Rect__ instead of __System.Windows.Rect__.
 
@@ -55,7 +55,7 @@ The signature flags were introduced in R2022 SP1. You can set the flags with the
 
 #### **[C#] Example: Set signature flags**
 
-<snippet id='codeblock_77'/>
+<snippet id='pdf-signature-flags'/>
 
 The possible values are: 
 * __None__: Indicates no signature fields exist.

@@ -32,7 +32,7 @@ CombTextBoxField provides the following properties:
 * **MaxLengthOfInputCharacters**: Integer value specifying the number of characters that can be inputted.
 
 #### **[C#] Example 1: Create a CombTextBoxField and add it to a page**
-<snippet id='codeblock_157'/>
+<snippet id='pdf-combtetbox-field'/>
 
 
 ## See Also

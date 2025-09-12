@@ -37,7 +37,7 @@ Each field type can be recognized from the FormField base class by getting the v
 
 #### **[C#] Example 1: Obtain fields from a document**
 
-<snippet id='codeblock_158'/>
+<snippet id='pdf-obtain-fields-from-document'/>
 
 The following list shows all the inheritors of the FormField class:
 
@@ -64,7 +64,7 @@ In R2 2020 we introduced the __Rename__ method which allows you to rename the Fo
 
 #### **[C#] Example 2: Rename Form Fields**
 
-<snippet id='codeblock_159'/>
+<snippet id='pdf-rename-form-field'/>
 
 ## Merging Documents with Form Fields
 
@@ -72,7 +72,7 @@ When merging documents that contain FormFields, you need to ensure that each fie
 
 #### **[C#] Example 2: Merge files with Form Fields**
 
-<snippet id='codeblock_160'/>
+<snippet id='pdf-fields-merge'/>
 
 
 ## See Also

@@ -32,14 +32,14 @@ To convert your documents' pages to images, use the __Export__ method. Note that
 
 #### __[C#] Example 1: Export RadFixedDocument to Image__
 
-<snippet id='codeblock_83'/>
+<snippet id='pdf-export-to-image'/>
 
 ## Exporting Asynchronously
 The __ExportAsync__ method allows you to perform the conversion asynchronously.
 
 #### __[C#] Example 2: Export RadFixedDocument to Image Async__
 
-<snippet id='codeblock_84'/>
+<snippet id='pdf-async-export-to-image'/>
 
 ## Export Settings
 

@@ -41,7 +41,7 @@ The **BookmarkItem** class exposes several constructor overloads which enable yo
 
 <a name="example1"><a/>
 
-<snippet id='codeblock_68'/>
+<snippet id='pdf-create-bookmark'/>
 
 ## Bookmarks Collection
 
@@ -49,15 +49,15 @@ The **Bookmarks** property exposed through the **RadFixedDocument** class allows
 
 Inserting a bookmark in a document is achieved by adding it to the Bookmarks collection. **Example 2** shows adding the **BookmarkItem** created in [**Example 1**](#example-1)
 
-<snippet id='codeblock_69'/>
+<snippet id='pdf-add-bookmark-to-document'/>
 
 Removing a bookmark is pretty similar to adding one. In **Example 3**, the second bookmark inside the document is removed.
 
-<snippet id='codeblock_70'/>
+<snippet id='pdf-remove-bookmark-from-document'/>
  
 In case you need to iterate all the bookmarks in a document, keep in mind that each BookmarkItem can contain other bookmarks in its Children collection. If you are encountering such a case, you will need to iterate the Bookmarks collection recursively.
  
-<snippet id='codeblock_71'/>
+<snippet id='pdf-iterate-bookmarks'/>
 
 
 ## See Also

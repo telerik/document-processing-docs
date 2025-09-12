@@ -68,7 +68,7 @@ It is suitable for cases when a certain calculation needs to be performed after 
 
 A common case is restricting the user's input, e.g. when entering a date in a specific format:
 
-<snippet id='codeblock_126'/>
+<snippet id='pdf-form-field-action-collection'/>
 
 The achieved result is illustrated below: 
 
@@ -85,7 +85,7 @@ Represents a collection of Action objects associated with a [RadFixedPage]({%slu
 
 The following example shows how to utilize the JavaScript Actions functionality showing an alert when the second page in a document is closed
 
-<snippet id='codeblock_127'/>
+<snippet id='pdf-page-action-collection'/>
 
 ![JS Action Page](images/js-action-page.gif)  
 

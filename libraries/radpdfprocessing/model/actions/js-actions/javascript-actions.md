@@ -41,12 +41,12 @@ The following example demonstrates how to create a PDF document with three TextB
 
 ![JS Action Sum FormField](images/js-action-sum-form-field.gif)   
 
-<snippet id='codeblock_128'/>
+<snippet id='pdf-js-action-sum'/>
 ### Using the MergedJavaScriptNameResolving Event
 
 The event is fired when trying to resolve conflicts between the JavaScript names while merging RadFixedDocument instances.
 
-<snippet id='codeblock_129'/>
+<snippet id='pdf-merged-js-script-name-resolving'/>
 
 ## See Also
 

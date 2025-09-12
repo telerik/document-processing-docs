@@ -51,14 +51,14 @@ __Example 1__ shows how you can create a Path, assign a predefined Geometry to i
 
 #### __[C#] Example 1: Create Path and add it to container__
 
-<snippet id='codeblock_114'/>
+<snippet id='pdf-create-path'/>
 
 __Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__ that create a new path and insert it into the document.
         
 
 #### __[C#] Example 2: Add Path to container__
 
-<snippet id='codeblock_115'/>
+<snippet id='pdf-path-to-container'/>
 
 
 >There are other methods that allow adding a path to a document. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
@@ -70,7 +70,7 @@ You can modify a __Path__ element using the properties the class exposes. The pr
         
 #### __[C#] Example 3: Modifying Path properties__
 
-<snippet id='codeblock_116'/>
+<snippet id='pdf-modify-path'/>
 
 ## See Also
 

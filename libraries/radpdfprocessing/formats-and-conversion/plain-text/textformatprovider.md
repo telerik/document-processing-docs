@@ -29,7 +29,7 @@ __Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocume
 
 #### __[C#] Example 1: Export RadFixedDocument to string__
 
-<snippet id='codeblock_99'/>
+<snippet id='pdf-export-to-text'/>
 
 
 ## See Also

@@ -31,7 +31,7 @@ __Example 1__ illustrates how you can create an ImageSource using a __FileStream
 
 #### __[C#] Example 1: Create ImageSource from Stream__
 
-<snippet id='codeblock_106'/>
+<snippet id='pdf-image-source-from-stream'/>
 
 
 With the __EncodedImageData__ class you can create an __ImageSource__ with encoded image data. This way the image quality will not be reduced on import.
@@ -39,12 +39,12 @@ With the __EncodedImageData__ class you can create an __ImageSource__ with encod
 __Example 2__ demonstrates how you can create an __ImageSource__ using the __EncodedImageData__ class.
 
 #### __[C#] Example 2: Create ImageSource from EncodedImageData__
-<snippet id='codeblock_107'/>
+<snippet id='pdf-image-source-from-encoded-image-data'/>
 
 With the __EncodedImageData__ class you can also create an __ImageSource__ with encoded image data and set its transparency. The __EncodedImageData__ class provides a second constructor overload where you can set the alpha-channel bytes of the image as a second constructor parameter in order to apply transparency to this image.
 
 #### __[C#] Example 3: Create ImageSource from EncodedImageData with transparency__
-<snippet id='codeblock_108'/>
+<snippet id='pdf-transparency-image-source-from-encoded-image-data'/>
 
 ## Properties
 
@@ -72,7 +72,7 @@ __RadPdfProcessing__ exposes an extension method allowing you to convert every B
 
 #### __[C#] Example 4: Create ImageSource with extension method__
 
-<snippet id='codeblock_109'/>
+<snippet id='pdf-image-source-extensions'/>
 
 >The code from __Example 4__ won't compile in Silverlight due to differences in the BitmapImage API for this platform. You could pass the image as a stream to the SetSource() method of BitmapImage instead.
 

@@ -44,7 +44,7 @@ __Example 1__ shows how to initialize a Form object and add it to a previously d
 
 #### __[C#] Example 1: Create a form and add it to an IContainerElement__
 
-<snippet id='codeblock_100'/>
+<snippet id='pdf-create-form'/>
 
 
 __Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__ to create a new form and insert it into the respective container.
@@ -52,7 +52,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 #### __[C#] Example 2: Add a form to a container__
 
-<snippet id='codeblock_101'/>
+<snippet id='pdf-form-to-container'/>
 
 
 >tipThere are other methods that allow adding a form to a document by passing it size and source. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
@@ -66,7 +66,7 @@ You can modify a __Form__ element using the properties the class exposes. The pr
 
 #### __[C#] Example 3: Modify Form properties__
 
-<snippet id='codeblock_102'/>
+<snippet id='pdf-modify-form'/>
 
 ![PdfProcessing Modify Form Properties](images/pdf-processing-modify-form-properties.png)
 

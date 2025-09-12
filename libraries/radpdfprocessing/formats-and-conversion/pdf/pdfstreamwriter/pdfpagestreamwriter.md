@@ -20,7 +20,7 @@ An instance of the PdfPageStreamWriter class can be obtained using the **BeginPa
 
 #### **[C#] Example 1: Instantiate PdfPageStreamWriter**
 	
-<snippet id='codeblock_92'/>
+<snippet id='pdf-page-stream-writer-instance'/>
 
 
 >You can find an example on how to use the PdfPageStreamWriter class in the [Manipulate Pages](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) example in the XAML SDK repository on GitHub.

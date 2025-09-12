@@ -21,7 +21,7 @@ __Link__ exposes the following properties:
 
 	#### __[C#] Example 1: Add link to destination__
 	
-	<snippet id='codeblock_132'/>
+	<snippet id='pdf-add-link-to-destination'/>
 
 * **NamedDestination**: A named destination associated with the link.
 
@@ -32,7 +32,7 @@ __Link__ exposes the following properties:
 
 	#### __[C#] Example 2: Add link with action__
 	
-	<snippet id='codeblock_133'/>
+	<snippet id='pdf-link-with-action'/>
 
 
 
@@ -81,7 +81,7 @@ __Example 3__ shows how you can create a Location object, associate it with a Li
 
 #### __[C#] Example 3: Add link with location__
 
-<snippet id='codeblock_134'/>
+<snippet id='pdf-link-with-location'/>
 
 
 
@@ -92,7 +92,7 @@ __Example 4__ demonstrates how to create an action of type __GoToAction__, assoc
 
 #### __[C#] Example 4: Add link with action__
 
-<snippet id='codeblock_135'/>
+<snippet id='pdf-add-link-with-action'/>
 
 ## See Also
 

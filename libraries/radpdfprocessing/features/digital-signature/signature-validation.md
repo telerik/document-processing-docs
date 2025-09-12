@@ -31,7 +31,7 @@ The following example shows how the validation can be used:
 #### **[C#] Example: Validate a field**
 
 
-<snippet id='codeblock_78'/>
+<snippet id='pdf-validate-signature'/>
 
 >To evaluate a certificate as trusted, it must be added to the [trusted certificates on your machine](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
 

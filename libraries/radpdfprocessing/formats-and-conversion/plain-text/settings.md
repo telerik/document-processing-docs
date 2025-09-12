@@ -31,7 +31,7 @@ The constructor of the **TextFormatProviderSettings** class has two overloads:
 **Example 1** shows how to create and specify a particular setting.
 
 #### **[C#] Example 1: Create TextFormatProviderSettings**
-<snippet id='codeblock_97'/>
+<snippet id='pdf-create-text-provider-settings'/>
 
 
 ## Using TextFormatProviderSettings
@@ -41,7 +41,7 @@ The __Export()__ method of **TextFormatProvider** allows you to pass a **TextFor
 
 #### **[C#] Example 2: Apply TextFormatProviderSettings**
 
-<snippet id='codeblock_98'/>
+<snippet id='pdf-apply-text-provider-settings'/>
 
 
 ## See Also

@@ -24,7 +24,7 @@ The **StampAnnotation** class is a derivative of the **MarkupAnnotation** (desce
 
 ### Creating a StampAnnotation
 
-<snippet id='codeblock_136'/>
+<snippet id='pdf-create-stamp-annotation'/>
 
 ![Create StampAnnotation](images/pdf-processing-create-stampannotation.png)  
 
@@ -32,7 +32,7 @@ The **StampAnnotation** class is a derivative of the **MarkupAnnotation** (desce
 
 The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) offers the public **DrawStampAnnotation** method which creates a new __StampAnnotation__ and draws it with a specified annotation size and name.
 
-<snippet id='codeblock_137'/>
+<snippet id='pdf-fixed-editor-create-stamp'/>
 
 ![Create StampAnnotation with FixedContentEditor](images/pdf-processing-create-stampannotation-with-fixedcontenteditor.png)   
 
@@ -44,7 +44,7 @@ The **AnnotationContentSource** class, accessed by the **Content** property of t
 
 >important When creating appearance for an annotation, it is important to create it with the same size as the rectangle of the annotation otherwise unexpected behavior may occur when the annotation is moved in Adobe.
 
-<snippet id='codeblock_138'/>
+<snippet id='pdf-stamp-annotation-with-appearance'/>
 
 ![Create StampAnnotation with Appearance](images/pdf-processing-create-stampannotation-with-appearance.png)  
 

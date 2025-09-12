@@ -30,14 +30,14 @@ Depending on the TextMarkupAnnotationType the respective type of the TextMarkup 
 
 ### Creating a Highlight Annotation
 
-<snippet id='codeblock_139'/>
+<snippet id='pdf-highlight-annotation'/>
 
 ![Create Highlight Annotation](images/pdf-processing-create-highlight-annotation.png)   
 
 ### Creating a Highlight Annotation with Appearance
 
 
-<snippet id='codeblock_140'/>
+<snippet id='pdf-appearance-highlight-annotation'/>
 
 ![Create Highlight Annotation with Appearance](images/pdf-processing-create-highlight-annotation-with-appearance.gif)    
 
@@ -45,19 +45,19 @@ Depending on the TextMarkupAnnotationType the respective type of the TextMarkup 
 
 ## Underline
 
-<snippet id='codeblock_141'/>
+<snippet id='pdf-text-markup-underline'/>
 
 ![Create Underline Annotation](images/pdf-processing-create-underline-annotation.png)     
 
 ## Squiggly
 
-<snippet id='codeblock_142'/>
+<snippet id='pdf-text-markup-squiggly'/>
 
 ![Create Squiggly Annotation](images/pdf-processing-create-squiggly-annotation.png)    
 
 ## StrikeOut
 
-<snippet id='codeblock_143'/>
+<snippet id='pdf-text-markup-strikeout'/>
 
 ![Create StrikeOut Annotation](images/pdf-processing-create-strikeOut-annotation.png)      
 

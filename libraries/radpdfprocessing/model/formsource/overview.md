@@ -25,7 +25,7 @@ The FormSource class exposes a default constructor which you can use to create a
 
 #### __[C#] Example 1: Create FormSource__
 
-<snippet id='codeblock_149'/>
+<snippet id='pdf-create-form-source'/>
 
 The snippet from **Example 1** will create an empty FormSource object. To fill this object with content you can use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) as described later in this article.
 
@@ -43,7 +43,7 @@ The FormSource class inherits from the IContentRootElement interface. This inher
 
 #### __[C#] Example 2: Add content to a FormSource__
 
-<snippet id='codeblock_150'/>
+<snippet id='pdf-add-content-to-form-source'/>
 
 ## Inserting a FormSource into a Document
 
@@ -56,7 +56,7 @@ After generating the FormSource object and filling it with content, you should i
 
     #### __[C#] Example 3: Add a FormSource to a document using FixedContentEditor__
     
-    <snippet id='codeblock_151'/>
+    <snippet id='pdf-fixed-editor-add-content-to-form-source'/>
 
     There are several overloads of the DrawForm() method that enables you to specify the size of the form.
 

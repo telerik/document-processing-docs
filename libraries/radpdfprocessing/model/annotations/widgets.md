@@ -54,7 +54,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 
 #### **[C#] Example 1: Creating a widget**
 
-<snippet id='codeblock_147'/>
+<snippet id='pdf-create-widget'/>
 
 >Don't forget to specify the size of the widget. Otherwise, it won't be visualized in the PDF document.
 
@@ -62,7 +62,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 
 #### **[C#] Example 2: Iterating the widgets in the FormField's collection**
 
-<snippet id='codeblock_148'/>
+<snippet id='pdf-iterate-widgets'/>
 
 
 >The Widget class inherits from [Annotation]({%slug radpdfprocessing-model-annotations-overview%}). It is important to add each annotation to the Annotations collection of RadFixedPage.

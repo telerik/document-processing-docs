@@ -22,7 +22,7 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
  
 #### **[C#] Creating an embedded file stream**
 
-<snippet id='codeblock_79'/>
+<snippet id='pdf-create-embedded-file-stream'/>
 
 >important **DuplicatedEmbeddedFileNameException** is thrown when adding an embedded file with a name that is already added to the collection.
 
@@ -35,7 +35,7 @@ RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedi
 
 #### **[C#] Add ZUGFeRD invoice**
 
-<snippet id='codeblock_80'/>
+<snippet id='pdf-add-zugferd-invoice'/>
 
 >note Only a single XML invoice attachment is allowed according to ZUGFeRD standard.
 
@@ -43,7 +43,7 @@ RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedi
 
 #### **[C#] Remove ZUGFeRD invoice**
 
-<snippet id='codeblock_81'/>
+<snippet id='pdf-remove-zugferd-invoice'/>
 
 ### Using the MergedEmbeddedFileNameResolving event
 
@@ -57,7 +57,7 @@ The **MergedEmbeddedFileNameResolving** event occurs when trying to resolve conf
 
 #### **[C#] Resolving Duplicated Names**
 
-<snippet id='codeblock_82'/>
+<snippet id='pdf-duplicated-file-names'/>
 
 #### Resolved Duplicated Names 
 ![Resolving duplicated Names in Embedded Files](images/embedded_files_1.png) 

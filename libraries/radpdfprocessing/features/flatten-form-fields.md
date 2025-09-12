@@ -18,7 +18,7 @@ The __FlattenFormFields__ method does not take any parameters and will flatten a
 
 #### __[C#] Example 1:  Flatten all fields__
 
-<snippet id='codeblock_72'/>
+<snippet id='pdf-flatten-all-fields'/>
 
 ### Using the FlattenFormField method
 
@@ -26,6 +26,6 @@ The __FlattenFormField__ method takes the field that should be flattened as a pa
 
 #### __[C#] Example 2:  Flatten single field__
 
-<snippet id='codeblock_73'/>
+<snippet id='pdf-flatten-single-field'/>
 
 

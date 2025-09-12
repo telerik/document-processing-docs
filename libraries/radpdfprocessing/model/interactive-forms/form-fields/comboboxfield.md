@@ -40,7 +40,7 @@ ComboBoxField provides the following properties:
 * **ShouldSpellCheck**: Boolean value indicating whether the text should be spell checked during its input.
 
 #### **[C#] Example 1: Create a ComboBoxField and add it to a page**
-<snippet id='codeblock_156'/>
+<snippet id='pdf-combobox-field'/>
 
 ## See Also
 

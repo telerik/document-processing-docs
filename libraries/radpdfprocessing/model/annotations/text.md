@@ -26,7 +26,7 @@ The **TextAnnotation** class is a derivative of the **MarkupAnnotation** (descen
 
 ### Creating a TextAnnotation
 
-<snippet id='codeblock_144'/>
+<snippet id='pdf-create-text-annotation'/>
 
 ![Create TextAnnotation](images/pdf-processing-create-textannotation.png)  
 
@@ -34,7 +34,7 @@ The **TextAnnotation** class is a derivative of the **MarkupAnnotation** (descen
 
 The FixedContentEditor offers the public **DrawTextAnnotation** method which creates a new TextAnnotation and draws it with a specified size and text and can create a PopupAnnotation to go with it.
 
-<snippet id='codeblock_145'/>
+<snippet id='pdf-fixed-editor-create-text-annotation'/>
 
 ![Create TextAnnotation with Popup](images/pdf-processing-create-textannotation-with-popup.png)   
 
@@ -44,7 +44,7 @@ The **AnnotationContentSource** class, accessed by the **Content** property of t
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
-<snippet id='codeblock_146'/>
+<snippet id='pdf-text-annotation-with-appearance'/>
 
 ![Create TextAnnotation with Appearance](images/pdf-processing-create-textannotation-with-appearance.gif)  
 

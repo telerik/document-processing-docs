@@ -29,7 +29,7 @@ To create an object of type PdfSteamWriter, you should pass it the Stream of the
 
 #### **[C#] Example 1: Instantiate PdfStreamWriter**
 
-<snippet id='codeblock_93'/>
+<snippet id='pdf-stream-writer-instance'/>
 
 **PdfStreamWriter** exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the writer instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
 
@@ -47,7 +47,7 @@ The constructor of **PdfStreamWriter** enables you to use any class inheriting f
 
 #### **[C#] Example 2: Instantiate PdfStreamWriter with MemoryStream**
 
-<snippet id='codeblock_94'/>
+<snippet id='pdf-stream-writer-instance-memory'/>
 
 ## PdfStreamWriter Members
 
@@ -57,13 +57,13 @@ The members of the class allow you to set several properties of the document you
 	
 	#### **[C#] Example 3: Insert a new page into a document**
 	
-	<snippet id='codeblock_95'/>
+	<snippet id='pdf-stream-writer-insert-new-page'/>
 
 * **WritePage()**: The WritePage() methods enable you to pass an already constructed page object. With the different overloads, you can pass an instance of [**RadFixedPage**]() and [**PdfPageStreamWriter**]().
 	
 	#### **[C#] Example 4: Insert an already generated page into a document**
 	
-	<snippet id='codeblock_96'/>
+	<snippet id='pdf-insert-generated-page-in-doc'/>
 
 ### Settings of PdfStreamWriter
 

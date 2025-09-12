@@ -39,7 +39,7 @@ __Example 1__ shows how to use PdfFormatProvider to import a PDF document from a
 
 #### __[C#] Example 1: Import PDF file__
 
-<snippet id='codeblock_85'/>
+<snippet id='pdf-import-file'/>
 
 
 
@@ -58,7 +58,7 @@ __Example 2__ shows how to use the __Export()__ method of __PdfFormatProvider__ 
 
 #### __[C#] Example 2: Export PDF file__
 
-<snippet id='codeblock_86'/>
+<snippet id='pdf-export-file'/>
 
 >important When exporting a digitally signed document a stream that allows both reading and writing should be passed otherwise an exception is thrown: NotSupportedException: 'Stream does not support reading.' For example, create the output stream like this: 'new FileStream("signed.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite)'.
 
