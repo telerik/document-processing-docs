@@ -84,3 +84,8 @@ Combo charts combine two or more chart types to make the data easy to understand
 | ![](images/SpreadProcessing-Features-Charts_15.png) | ![](images/SpreadProcessing-Features-Charts_16.png) | ![](images/SpreadProcessing-Features-Charts_17.png)|
 
 >note For more details on the implementation of the charts and the properties you can use with them, check the [Using Charts]({%slug radspreadprocessing-features-charts-using-charts%}) topic.
+
+## See Also
+
+* [Generating Stacked Line Graphs and Configuring Axes in Excel Using FloatingChartShape]({%slug generating-stacked-line-graphs-configuring-axes-excel-floatingchartshape%})
+
