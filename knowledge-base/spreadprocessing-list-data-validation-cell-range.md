@@ -5,7 +5,7 @@ type: how-to
 page_title: Creating List Data Validation Rules Using Cell Ranges in SpreadProcessing
 meta_title: Creating List Data Validation Rules Using Cell Ranges in SpreadProcessing
 slug: spreadprocessing-list-data-validation-cell-range
-tags: spreadprocessing, data, validation, list, data,validation, rule, cell, range, telerik, document, processing, libraries
+tags: spreadprocessing, list, data, validation, rule, cell, range, telerik, document, processing, libraries
 res_type: kb
 ticketid: 1695747
 ---
@@ -17,7 +17,7 @@ ticketid: 1695747
 
 ## Description
 
-This article describes how to set a [List Data Validation](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/data-validation#list-rule) rule in the [SpreadProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/overview) library that uses a cell range as the validation source instead of a comma-delimited list of values. This avoids the 256-character limit imposed by Excel for comma-separated values.
+This article describes how to set a [List Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule) rule in the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library that uses a cell range as the validation source instead of a comma-delimited list of values. This avoids the 256-character limit imposed by Excel for comma-separated values.
 
 This knowledge base article also answers the following questions:
 - How to define validation rules with a cell range in SpreadProcessing?
@@ -26,13 +26,13 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-To set a [List Data Validation](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/data-validation#list-rule) rule that references a cell range, use the `ListDataValidationRule` and specify the cell range as the `Argument1`. Follow the steps below:
+To set a [List Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule) rule that references a cell range, use the `ListDataValidationRule` and specify the cell range as the `Argument1`. Follow the steps below:
 
-1. Import the workbook using the `XlsxFormatProvider`.
-2. Specify the cell where the validation rule will apply using `CellIndex`.
+1. Import the workbook using the [`XlsxFormatProvider`]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}).
+2. Specify the cell where the validation rule will apply using [`CellIndex`]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}#accessing-cells-of-a-worksheet).
 3. Define the validation parameters, including the cell range for allowed values.
-4. Create and assign the `ListDataValidationRule` to the target cell.
-5. Export the updated workbook.
+4. Create and assign the [`ListDataValidationRule`]({%slug radspreadprocessing-features-data-validation%}#list-rule) to the target cell.
+5. Export the updated workbook using the [`XlsxFormatProvider`]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}).
 
 Here is an example:
 
@@ -78,6 +78,6 @@ using (Stream output = new FileStream(xlsxOutputPath, FileMode.Create))
 
 # See Also
 
-* [Data Validation](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/data-validation#data-validation)
-* [List Rule](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/data-validation#list-rule)
-* [SpreadProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/overview)
+* [Data Validation]({%slug radspreadprocessing-features-data-validation%}#data-validation)
+* [List Rule]({%slug radspreadprocessing-features-data-validation%}#list-rule)
+* [SpreadProcessing Overview]({%slug radspreadprocessing-overview%})
