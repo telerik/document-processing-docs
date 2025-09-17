@@ -87,5 +87,5 @@ Combo charts combine two or more chart types to make the data easy to understand
 
 ## See Also
 
-* [Generating Stacked Line Graphs and Configuring Axes in Excel Using FloatingChartShape]({%slug generating-stacked-line-graphs-configuring-axes-excel-floatingchartshape%})
+* [Generating Stacked Line Charts and Configuring Axes in Excel Using FloatingChartShape]({%slug generating-stacked-line-charts-configuring-axes-excel-floatingchartshape%})
 
