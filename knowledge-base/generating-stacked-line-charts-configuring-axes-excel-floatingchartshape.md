@@ -18,7 +18,7 @@ ticketid: 1695510
 
 ## Description
 
-This article demonstrates how to generate stacked line charts in worksheets using the SpreadProcessing library. It also covers how to specify the data sources for the X-axis (dates) and Y-axis (numerical values). Additionally, it explains how to configure chart properties such as marker types, line styles, and visibility to customize the chart's appearance.
+This article demonstrates how to generate stacked line charts in worksheets using the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library. It also covers how to specify the data sources for the X-axis (dates) and Y-axis (numerical values). Additionally, it explains how to configure chart properties such as marker types, line styles, and visibility to customize the chart's appearance.
 
 Key topics addressed in this guide include:
 - Creating line and stacked line charts in Excel using Telerik Document Processing.
@@ -32,11 +32,11 @@ Key topics addressed in this guide include:
 
 To create a stacked line chart and configure the axes as desired, follow these steps:
 
-1. Define the `LineSeriesGroup` and set its grouping to `Stacked`. This ensures the chart is created as a stacked line chart.
-2. Create individual `[LineSeries]({%slug radspreadprocessing-features-charts-series%}#lineseries)` for each data column. Set the `Values` to represent numerical data and `Categories` to represent dates.
-3. Define the axes for the chart. Set the `CategoryAxis` to plot dates and the `ValueAxis` for numerical values.
-4. Create the chart and associate the `LineSeriesGroup` and axes with it.
-5. Replace the default chart in the `[FloatingChartShape]({%slug radspreadprocessing-features-charts-using-charts%}#floatingchartshape)` with the configured document chart`. Set the dimensions and add it to the worksheet.
+1. Define the **LineSeriesGroup** and set its grouping to **Stacked**. This ensures the chart is created as a stacked line chart.
+2. Create individual [LineSeries]({%slug radspreadprocessing-features-charts-series%}#lineseries) for each data column. Set the **Values** to represent numerical data and **Categories** to represent dates.
+3. Define the axes for the chart. Set the **CategoryAxis** to plot dates and the **ValueAxis** for numerical values.
+4. Create the chart and associate the **LineSeriesGroup** and axes with it.
+5. Replace the default chart in the [FloatingChartShape]({%slug radspreadprocessing-features-charts-using-charts%}#floatingchartshape) with the configured document chart. Set the dimensions and add it to the worksheet.
 
 ```csharp
 var fileBytes = File.ReadAllBytes("fileWithChartData.xlsx");
