@@ -378,3 +378,4 @@ __Example 11__ demonstrates how to evaluate a rule using the __Evaluate()__ meth
 * [Protection]({%slug radspreadprocessing-features-protection-workbook%})
 * [Formulas]({%slug radspreadprocessing-features-formulas-general-information%})
 * [Adding a ComboBox to an Excel File Using RadSpreadProcessing]({%slug adding-combobox-to-excel-file-radspreadprocessing%})
+* [Setting List DataValidation Rule to Reference Cell Range in SpreadProcessing]({%slug spreadprocessing-list-data-validation-cell-range%})
