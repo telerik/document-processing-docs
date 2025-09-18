@@ -96,12 +96,15 @@ Depending on the TextMarkupAnnotationType the respective type of the TextMarkup 
             }
 
             formEditor.TextProperties.FontSize = 16;
+            formEditor.TextProperties.Font = FontsRepository.Courier;
             formEditor.Position.Translate(10, 10);
             formEditor.DrawText(text);
         }
 ```
 
 ![Create Highlight Annotation with Appearance](images/pdf-processing-create-highlight-annotation-with-appearance.gif)    
+
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
 ## Underline
 

@@ -99,4 +99,4 @@ __RadFlowDocumentEditor__ gives you the ability to format all occurrences of a s
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
  * [CharacterProperties]({%slug radwordsprocessing-concepts-style-properties%}) 
  * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) 
- * [RadFlowDocumentEditor API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor.html)
+ * [Simulating Mail Merge with HTML content by Utilizing the Find and Replace Functionality]({%slug simulating-mail-merge-with-html-content%})

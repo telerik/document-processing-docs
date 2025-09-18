@@ -46,6 +46,8 @@ position: 3
 
 >note If you want to use a font, that is not part of the [standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts), you can register it using the [RegisterFont()]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font) method of the FontRepository static class. 
 
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+
 ### Creating a TextFragment
 
 **TextFragment** is a content element that can be added to the **Content** collection of an **IContainerElement** such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches that can be adopted:

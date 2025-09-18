@@ -64,6 +64,8 @@ The FixedContentEditor offers the public **DrawTextAnnotation** method which cre
 
 The **AnnotationContentSource** class, accessed by the **Content** property of the annotation object, represents the [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) instances used for displaying the widget content. The following example shows how to change the annotation's visual appearance when the mouse is not interacting with the widget (**NormalContentSource**) and when the mouse is over the widget (**MouseOverContentSource**):
 
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+
 ```csharp 
         private RadFixedDocument CreateTextAnnotation()
         {
@@ -102,6 +104,7 @@ The **AnnotationContentSource** class, accessed by the **Content** property of t
             }
 
             formEditor.TextProperties.FontSize = 10;
+            formEditor.TextProperties.Font = FontsRepository.Courier;
             formEditor.Position.Translate(10, 10);
             formEditor.DrawText(text);
         }

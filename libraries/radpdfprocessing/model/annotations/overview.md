@@ -15,6 +15,8 @@ means of the mouse and keyboard. PDF includes a wide variety of standard [annota
 
 >note RadPdfProcessing provides an [Exception Handling]({%slug radpdfprocessing-handling-exceptions%}) mechanism which allows detecting cases with invalid or not supported annotations being imported in the document.
 
+>note [PdfProcessing Annotations Demo](https://demos.telerik.com/document-processing/pdfprocessing/annotations)
+
 The abstract **Annotation** element associates an object with a location on a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). Annotation exposes the following properties:
       
 * **Rect**: The rectangle, which defines the location of the annotation on the page.

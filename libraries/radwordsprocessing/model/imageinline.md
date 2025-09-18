@@ -9,8 +9,6 @@ position: 8
 
 # ImageInline
 
-
-
 __ImageInline__ element is an inline-level flow content element intended to contain an image object.
       
 ## Supported Image Extensions
@@ -144,3 +142,4 @@ This section explains the behavior of the __Size__ property of The __Image__ obj
  * [FloatingImage]({%slug radwordsprocessing-model-floatingimage%})
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
  * [Converting WMF Images to PNG in RTF Documents with RadWordsProcessing]({%slug convert-wmf-to-png-radwordsprocessing%})
+ * [Converting WEBP Images to PNG in HTML Documents using Telerik WordsProcessing]({%slug convert-webp-to-png-radwordsprocessing%})
