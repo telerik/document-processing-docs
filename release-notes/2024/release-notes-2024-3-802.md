@@ -46,7 +46,7 @@ position: 97
 
 ![new](../images/new.png)
 
-* Introduced support for SVG images.
+* Introduced support for SVG FormSource images.
 * Handle importing and reading cached formula value when the formula contains external references.
 
 ![fixed](../images/fixed.png)
@@ -63,7 +63,7 @@ position: 97
 
 ![new](../images/new.png)
 
-* Introduced support for SVG images.
+* Introduced support for SVG FormSource images.
 * Introduced support for exporting text with a strikethrough to PDF.
 
 ![fixed](../images/fixed.png)

@@ -72,6 +72,7 @@ As of **Q1 2025** the [PdfExportSettings]({%slug radpdfprocessing-formats-and-co
 | __NotSupportedStreamTypeException__| Represents an exception for a stream type which is not supported. A stream is not supported if it does not support read or seek. This exception has a SupportSeek and SupportRead properties which specify whether the stream supports them.|
 | __NotSupportedXObjectTypeException__| Represents an exception for a document with an XObject type which is not supported.|
 |**DuplicatedJavaScriptNameException**|Represents an exception for JavaScript with a duplicated name.|
+|**NotSupportedImageFormatException**|Represents an exception thrown when attempting to use an image format that is not supported by the library.|
 |**InvalidAnnotationException**|Represents an exception for an annotation which is not valid. *(Introduced in Q1 2025)*|
 |**NotSupportedAnnotationException**|Represents an exception for an annotation which is not supported.*(Introduced in Q1 2025)*|
 |**InvalidImageDataException**|Represents an exception for importing an invalid image data.*(Introduced in Q1 2025)*|

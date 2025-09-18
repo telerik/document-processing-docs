@@ -210,6 +210,8 @@ The character properties that are responsible for the look of the runs are liste
 
 >In order for the character properties to be respected, make sure to set them __before__ inserting the Run.
 
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+
 ### Inserting a Run
 
 There are a number of overloads that insert a run. The code snippet in __Example 5__ inserts new runs with specific font family, style and weight.

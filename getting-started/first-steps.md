@@ -53,14 +53,12 @@ This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-
 	For .NET Framework project:
 	  * __Telerik.Windows.Documents.Core.dll__
 	  * __Telerik.Windows.Documents.Flow.dll__
-	  * ~~Telerik.Windows.Zip.dll~~*
 
 	For .NET Standard ({{site.dotnetversions}}) project:
 	  * __Telerik.Documents.Core.dll__
 	  * __Telerik.Documents.Flow.dll__
-	  * ~~Telerik.Zip.dll~~*
 
-	>note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
+	>note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
 1. Reference the assembly that allows you to export the content as a PDF file:
 

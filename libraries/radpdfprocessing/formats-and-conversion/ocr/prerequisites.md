@@ -79,7 +79,7 @@ In order to use the **OcrFormatProvider** you need to add the following assembli
 	<tr>
         <td><b>-</b></td>
 		<td>
-        <b>SkiaSharp.NativeAssets.*</b> (version 2.88.8)
+        <b>SkiaSharp.NativeAssets.*</b> (version {{site.skiasharpversion}})
         <br>
         <sub><i>May differ according to the used platform. For <b>Linux</b> (since <b>Q2 2025</b>) use <b>SkiaSharp.NativeAssets.Linux.NoDependencies</b> and execute the <a href="#linux-specific-steps">required commands.</a></i></sub>
 	</tr>

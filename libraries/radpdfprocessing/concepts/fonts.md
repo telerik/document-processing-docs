@@ -18,6 +18,8 @@ position: 5
 
 >note As of **Q2 2024** RadPdfProcessing offers support for OTF (OpenType Font) font file format.
 
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+
 ## Supported Font Types
 
 >tip *A character is an abstract symbol, whereas a glyph is a specific graphical rendering of a character. Glyphs are organized into fonts. A font defines glyphs for a particular character set; for example, the Helvetica and Times fonts define glyphs for a set of standard Latin characters. A font for use with a PDF consumer application is prepared in the form of a program. Such a font program is written in a special-purpose language, such as the Type 1 or TrueType font format, that is understood by a specialized font interpreter. In PDF, the term `font` refers to a font dictionary, a PDF object that identifies the font program and contains additional information about it. There are several different font types, identified by the Subtype entry of the font dictionary. For most font types, the font program is defined in a separate font file, which may be either embedded in a PDF stream object or obtained from an external source. The font program contains glyph descriptions that generate glyphs. A content stream paints glyphs on the page by specifying a font dictionary and a string object that is interpreted as a sequence of one or more character codes identifying glyphs in the font. * (PDF Reference 1.7)

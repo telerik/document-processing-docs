@@ -19,6 +19,8 @@ The GenAI-powered Document Insights feature enables you to easily extract insigh
 * **Token Optimization**: Reduce token usage by only sending relevant portions of the document to the AI model as shown in the [PartialContextQuestionProcessor]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#when-to-use-partialcontextquestionprocessor) section.
 * **Multiple LLM Support**: Compatible with different AI providers including Azure OpenAI, OpenAI, and Ollama as described in the [Prerequisites]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup).
 
+>note [WordsProcessing GenAI Document Insights Demo](https://demos.telerik.com/document-processing/wordsprocessing/genai_document_insights)
+
 The GenAI-powered Document Insights feature includes three main components:
 
 |Processor|Description|

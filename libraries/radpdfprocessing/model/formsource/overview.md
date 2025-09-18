@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Learn how to add content, SVG images or barcodes into a PDF document using RadPdfProcessing.
+description: Learn how to add content, SVG FormSource images or FormSource barcodes into a PDF document using RadPdfProcessing.
 page_title: Form Source Overview
 slug: radpdfprocessing-model-formsource-overview
 tags: formsource, pdfprocessing, document, processing, pdf
@@ -42,6 +42,8 @@ The properties exposed by the **FormSource** class are as follows:
 The FormSource class inherits from the IContentRootElement interface. This inheritance allows you to use the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) class for filling the content of the form.
 
 **Example 2** shows you how you can insert a content into a FormSource object using FixedContentEditor.
+
+>There’s no nesting limit for [Form XObjects]({%slug radpdfprocessing-model-form%}), but PDF viewers may restrict depth to avoid memory or performance issues and improve responsiveness, which can affect rendering depending on the viewer.
 
 #### __[C#] Example 2: Add content to a FormSource__
 
@@ -96,5 +98,5 @@ After generating the FormSource object and filling it with content, you should i
 
 ## See Also
 
- * [SVG]({%slug radpdfprocessing-model-formsource-svg%})
- * [Barcode]({%slug radpdfprocessing-model-formsource-barcode%})
+ * [SVG FormSource]({%slug radpdfprocessing-model-formsource-svg%})
+ * [Barcode FormSource]({%slug radpdfprocessing-model-formsource-barcode%})

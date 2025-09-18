@@ -53,6 +53,7 @@ These properties are as follows:
 
 * **MilterLimit**: Gets or sets the text milter limit.
 
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
 ## DynamicAppearanceCharacteristics Class
 
