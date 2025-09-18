@@ -26,13 +26,13 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-To set a [List Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule) rule that references a cell range, use the `ListDataValidationRule` and specify the cell range as the `Argument1`. Follow the steps below:
+To set a [List Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule) rule that references a cell range, use the **ListDataValidationRule** and specify the cell range as the **Argument1**. Follow the steps below:
 
-1. Import the workbook using the [`XlsxFormatProvider`]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}).
-2. Specify the cell where the validation rule will apply using [`CellIndex`]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}#accessing-cells-of-a-worksheet).
+1. Import the workbook using the [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}).
+2. Specify the cell where the validation rule will apply using [CellIndex]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}#accessing-cells-of-a-worksheet).
 3. Define the validation parameters, including the cell range for allowed values.
-4. Create and assign the [`ListDataValidationRule`]({%slug radspreadprocessing-features-data-validation%}#list-rule) to the target cell.
-5. Export the updated workbook using the [`XlsxFormatProvider`]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}).
+4. Create and assign the [ListDataValidationRule]({%slug radspreadprocessing-features-data-validation%}#list-rule) to the target cell.
+5. Export the updated workbook using the [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}).
 
 Here is an example:
 
