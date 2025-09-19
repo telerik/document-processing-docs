@@ -66,15 +66,12 @@ __Example 1__ demonstrates how you can insert a TOC field.
 
 #### __[C#] Example 1: Insert TOC field__
 
-{{region cs-radwordsprocessing-concepts-toc-field_0}}
-
+<pre><code>
     var document = new RadFlowDocument();
     var editor = new RadFlowDocumentEditor(document);
 
     editor.InsertField("TOC \\f a ");
-    
- 
-{{endregion}}
+</code></pre>
 
 This makes a list of all TC fields with the 'a' identifier.
 
