@@ -1,6 +1,6 @@
 ---
-title: Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing
-description: Learn how to export Excel charts to PNG images with a Specific DPI resolution using Telerik SpreadProcessing and charting controls.
+title: Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing and PdfProcessing
+description: Learn how to export Excel charts to PNG images with a Specific DPI resolution using Telerik SpreadProcessing, PdfProcessing and UI for WinForms and WPF charting controls.
 type: how-to
 page_title: Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing
 meta_title: Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing
@@ -14,15 +14,15 @@ ticketid: 1695547
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
-| 2025.2.520| RadSpreadProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| 2025.2.520| RadSpreadProcessing & RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
-Learn how to extract the [charts]({%slug radspreadprocessing-features-charts%}) from Excel documents and save as PNG files specifying the desired resolution, e.g. 300 DPI.
+Learn how to extract the [charts]({%slug radspreadprocessing-features-charts%}) from Excel documents and save them as PNG files, while specifying the desired resolution (e.g. 300 DPI).
 
 ## Solution
 
-Exporting charts directly from Excel files to PNG images with a specific resolution (e.g.300 DPI) using Telerik [SpreadProcessing]({%slug radspreadprocessing-overview%}) is not supported. SpreadProcessing focuses on spreadsheet data manipulation and exporting to formats like XLSX and PDF but does not handle chart export or DPI settings.
+Exporting charts directly from Excel files to images is not yet supported by the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library. As an alternative, you can benefit the export option to PDF format which allows you to plug into the chart rendering process, export the chart and handle the DPI settings
 
 ### Suggested Workflow Using Charting Controls
 
@@ -65,6 +65,26 @@ public class WinFormsPdfChartImageRenderer : IPdfChartRenderer
 ```
 
 To export charts to PNG, use the custom renderer in conjunction with SpreadProcessing’s PDF export functionalities. Charts saved as PNG images can then be adjusted for resolution.
+
+#### Applying the custom renderer:
+
+```csharp
+Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
+IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
+string fileName = "SampleFile.xlsx";
+using (Stream inputStream = new FileStream(fileName, FileMode.Open))
+{
+    workbook = formatProvider.Import(inputStream, TimeSpan.FromSeconds(10));
+}
+
+PdfFormatProvider pdfFormatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
+pdfFormatProvider.ExportSettings.ChartRenderer = new WinFormsPdfChartImageRenderer();  
+converter.PdfFormatProvider = pdfFormatProvider;
+using (Stream output = File.OpenWrite("Sample.pdf"))
+{ 
+    pdfFormatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
+}
+```
 
 Note: Recreating the chart using RadChartView may require extra effort if the charts are highly customized or complex.
 
