@@ -35,7 +35,7 @@ CheckBoxField provides the following properties:
 * **ExportValue**: Gets or sets the value of the field when exporting the interactive form. The default export value is “Yes”.
 
 #### **[C#] Example 1: Create a CheckBoxField and add it to a page**
-<snippet id='codeblock_155'/>
+<snippet id='pdf-checkbox-field'/>
 
 
 ## See Also
