@@ -42,14 +42,12 @@ __Example 1__ demonstrates how you can insert a TOA field.
 
 #### __[C#] Example 1: Insert TOA field__
 
-{{region cs-radwordsprocessing-concepts-toa-field_0}}
-
+<pre><code>
     var document = new RadFlowDocument();
     var editor = new RadFlowDocumentEditor(document);
 
     editor.InsertField("TOA \\h \\c \"3\" \\p");
- 
-{{endregion}}
+</code></pre>
  
 
 

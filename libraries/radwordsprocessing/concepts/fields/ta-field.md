@@ -40,14 +40,12 @@ __Example 1__ demonstrates how you can insert a TA field.
 
 #### __[C#] Example 1: Insert TA field__
 
-{{region cs-radwordsprocessing-concepts-ta-field_0}}
-
+<pre><code>
     var document = new RadFlowDocument();
     var editor = new RadFlowDocumentEditor(document);
 
     editor.InsertField("TA \"Item\" \\b");
-
-{{endregion}}
+</code></pre>
 
 This type of field does not have a result but when updated the switches are applied to the text.
 
