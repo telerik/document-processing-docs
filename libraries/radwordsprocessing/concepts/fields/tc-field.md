@@ -40,8 +40,8 @@ __Example 1__ demonstrates how you can insert a TC field.
 
 #### __[C#] Example 1: Insert TC field__
 
-{{region cs-radwordsprocessing-concepts-tc-field_0}}
 
+<pre><code>
     editor.InsertText("Text before ");
     editor.InsertBreak(BreakType.LineBreak);
 
@@ -49,9 +49,7 @@ __Example 1__ demonstrates how you can insert a TC field.
 
     editor.InsertBreak(BreakType.LineBreak);
     editor.InsertText("Text after");
-
-
-{{endregion}}
+</code></pre>
  
 This type of field does not have a result and there is no need to be updated. 
 
