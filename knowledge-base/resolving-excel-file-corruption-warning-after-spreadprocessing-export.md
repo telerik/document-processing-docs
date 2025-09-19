@@ -19,7 +19,7 @@ ticketid: 1695962
 
 Exporting an Excel file using Telerik [SpreadProcessing]({%slug radspreadprocessing-overview%}) shows a corruption warning when opening the file in Excel. 
 
-This issue occurs when reusing the same `MemoryStream` for both import and export operations without resetting or truncating the stream. The issue originates in version 2025.2.520, where `Telerik.Zip` was replaced with `System.IO.Compression`.
+This issue occurs when **reusing** the same `MemoryStream` for both import and export operations without resetting or truncating the stream. The issue originates in version 2025.2.520, where `Telerik.Zip` was replaced with `System.IO.Compression`.
 
 This knowledge base article shows how to fix the "Excel found unreadable content" error after export.
 
