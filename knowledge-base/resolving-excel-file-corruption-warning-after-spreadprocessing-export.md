@@ -32,9 +32,8 @@ To ensure the exported files are not corrupted, reset or truncate the `MemoryStr
 
    ```csharp
    XlsxFormatProvider formatProvider = new XlsxFormatProvider();
-   using (Stream memoryStream = new FileStream("path to your document", FileMode.Open))
+   using (Workbook workbook = formatProvider.Import(memoryStream))
    {
-       Workbook workbook = formatProvider.Import(memoryStream)
        memoryStream.SetLength(0);    // Truncate stream to remove previous content
        memoryStream.Position = 0;    // Reset position to start
        formatProvider.Export(workbook, memoryStream);
