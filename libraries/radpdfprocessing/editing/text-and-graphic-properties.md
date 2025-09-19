@@ -110,6 +110,8 @@ The TextProperties also exposes the following methods, which can be used for cha
 
 * __TextProperties.TrySetFont(fontFamily, fontStyle, fontWeight);__
 
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+
 ## Preserving Current State
 
 Both Text and Graphic properties contain methods that can preserve and restore the current state.
@@ -127,3 +129,4 @@ Both Text and Graphic properties contain methods that can preserve and restore t
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [Block]({%slug radpdfprocessing-editing-block%})
  * [Changing Block's Text Color in PDF Documents Using RadPdfProcessing]({%slug change-text-color-pdf-radpdfprocessing%})
+ * [How to Change Text Color Using PdfProcessing]({%slug pdfprocessing-text-color%})

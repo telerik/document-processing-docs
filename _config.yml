@@ -21,6 +21,9 @@ navigation:
     release-notes/2024:
         title: '2024'
         position: 100
+    "ai-coding-assistant":
+        title: AI Coding Assistant
+        position: 10
     installation-and-deployment:
         title: Installation and Deployment
         position: 4
@@ -381,6 +384,7 @@ defaults:
 mindotnetversion: "8"
 maxdotnetversion: "9"
 dotnetversions: ".NET 8 and .NET 9"
+skiasharpversion: "3.116.1"
 
 # Feedback Form Product Code
 productCode: TDP

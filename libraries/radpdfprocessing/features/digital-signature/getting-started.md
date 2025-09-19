@@ -13,6 +13,8 @@ RadPdfProcessing allows adding a digital signature while editing a created from 
 
 >To use the signing functionality in PdfProcessing for **.NET Standard/.NET Core**, you must add a reference to the **System.Security.Cryptography.Pkcs** NuGet package, version 6 or newer (This functionality is available since R1 2022 SP1).
 
+>note [PdfProcessing Digitally Sign Document Demo](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document)
+
 ## Signing a Document
 
 To sign a document, follow the steps:

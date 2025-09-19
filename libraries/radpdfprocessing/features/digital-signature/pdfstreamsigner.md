@@ -23,7 +23,7 @@ The following example shows how to insert multiple [Digital Signatures]({%slug r
 
 >important In .NET Standard use __Telerik.Documents.Primitives.Rect__ instead of __System.Windows.Rect__.
 
-
+>note [PdfProcessing Multiple Digital Signatures Demo](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)
 
 <snippet id='libraries-pdf-features-digital-signature-pdfstreamsigner'/>
 

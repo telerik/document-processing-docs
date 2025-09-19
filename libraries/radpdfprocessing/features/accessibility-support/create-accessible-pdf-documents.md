@@ -21,6 +21,8 @@ RadFixedDocument offers a constructor allowing to specify the **AutoTag** proper
 
 >note Please refer to the [PdfProcessing Accessibility Demo](https://demos.telerik.com/document-processing/pdfprocessing/accessibility) which demonstrates how to create accessible PDF documents programmatically, ensuring compliance with standards such as PDF/UA by supporting features like tagged content, document structure, and metadata. Downloaded documents will adhere to the selected compliance level.
 
+>important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+
 ##  Creating Accessible PDF Documents and Building the StructureTree
 
 When exporting the document, specify the [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}#tagging-strategy) so the document should not be tagged automatically and use the existing StructureTree:

@@ -1,8 +1,9 @@
 ---
 title: Images
+description: Discover how to work with images in Telerik RadPdfProcessing for cross-platform .NET applications.
 page_title: Images
 slug: radpdfprocessing-cross-platform-images
-tags: cross,platform
+tags: cross, platform, image, blazor, core, xamarin, winui, maui, net, standard, linux, ios 
 platforms: blazor, core, xamarin, winui, maui
 published: True
 position: 2
@@ -26,7 +27,7 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 |Assembly/ NuGet package|Description|
 |----|----|
 |**Telerik.Documents.ImageUtils**|This assembly is currently not available in UI for Xamarin.|
-|**SkiaSharp.NativeAssets.*** (version 2.88.8)|May differ according to the used platform. For **Linux** use <b>SkiaSharp.NativeAssets.Linux.NoDependencies|
+|**SkiaSharp.NativeAssets.*** (version {{site.skiasharpversion}})|May differ according to the used platform. For **Linux** use <b>SkiaSharp.NativeAssets.Linux.NoDependencies|
 |**SkiaSharp.Views.Blazor** and **wasm-tools**|For Blazor Web Assembly.|
 
 >important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
@@ -118,3 +119,7 @@ The following example depends on the [Magick.NET](https://www.nuget.org/packages
 
 >note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter).
 
+## See Also
+
+ * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
+ * [Fonts]({%slug radpdfprocessing-cross-platform-fonts%}) 
