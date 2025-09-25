@@ -1,14 +1,19 @@
 ---
 title: Generating a PDF Product Catalog
-description: Learn how to export items, images, and editable text fields into a PDF using Telerik PdfProcessing.
+description: Learn how to generate a PDF catalog from business objects adding images, and text fields into a PDF using Telerik PdfProcessing.
 type: how-to
-page_title: Creating Editable PDF Catalog with Telerik PdfProcessing
-meta_title: Creating Editable PDF Catalog with Telerik PdfProcessing
+page_title: Generating a PDF Product Catalog with Telerik PdfProcessing
+meta_title: Generating a PDF Product Catalog with Telerik PdfProcessing
 slug: generating-pdf-product-catalog
 tags: telerik, pdf,processing, catalog, product, item
 res_type: kb
 ticketid: 1697233
 ---
+<style>
+img[alt$="><"] {
+  border: 1px solid lightgrey;
+}
+</style>
 
 ## Environment
 
@@ -18,16 +23,13 @@ ticketid: 1697233
 
 ## Description
 
-I need to export items, including images, text, and prices, into a PDF format that allows the text fields to be editable. This PDF document will be shared with a team while maintaining the look and feel of a specific design template. 
+Learn how to generate a PDF catalog from business objects, including images, text, and prices.
 
-This knowledge base article also answers the following questions:
-- How can I export items with editable text fields to a PDF?
-- Can Telerik PdfProcessing create an editable PDF with interactive fields?
-- How to generate a PDF catalog with images and editable text using Telerik PdfProcessing?
+![Generating a PDF Product Catalog ><](images\generate-pdf-product-catalog.png) 
 
 ## Solution
 
-To achieve this, use the Telerik [PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview) library, which supports creating and modifying PDF documents with interactive forms. Below is a sample implementation to generate a catalog PDF with editable text fields:
+To achieve this, use the Telerik [PdfProcessing]({%slug radpdfprocessing-overview%}) library, which supports creating and modifying PDF documents. Below is a sample implementation to generate a PDF catalog using the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}):
 
 ### Code Example
 
@@ -150,14 +152,8 @@ internal class Program
 }
 ```
 
-### Key Notes
-1. Replace the inserted text blocks with interactive form fields like [TextBoxField](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/interactive-forms/form-fields/textboxfield) for editable text.
-2. Ensure all required images are available in the specified paths.
-
 ## See Also
 
-- [Telerik PdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Interactive Forms in PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/interactive-forms/overview)
-- [TextBoxField API](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/interactive-forms/form-fields/textboxfield)
-- [Creating Interactive Forms Example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
-- [PdfProcessing SDK Repository](https://github.com/telerik/document-processing-sdk)
+- [PdfProcessing]({%slug radpdfprocessing-overview%})
+- [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
+
