@@ -1,11 +1,11 @@
 ---
-title: Converting Colored PDF Documents to GrayScale in .NET Standard
-description: Learn how to convert colored PDF documents to grayscale using Telerik PdfProcessing in an ASP.NET Core (.NET 9) environment.
+title: Converting Colored PDF Document Images to GrayScale in .NET Standard
+description: Learn how to convert colored images in PDF documents to grayscale using Telerik PdfProcessing in an ASP.NET Core (.NET 9) environment.
 type: how-to
-page_title: How to Convert Color PDFs to GrayScale  in .NET Standard
-meta_title: How to Convert Color PDFs to GrayScale in .NET Standard
+page_title: How to Convert Colored PDF Document Images to GrayScale in .NET Standard
+meta_title: How to Convert Colored PDF Document Images to GrayScale in .NET Standard
 slug: convert-pdf-grayscale-aspnet-core
-tags: pdfprocessing,telerik document processing,asp.net core,convert grayscale,pdf,radfixeddocument,imagesource
+tags: pdf,processing,telerik, document, asp,core,convert grayscale,image
 res_type: kb
 ticketid: 1697916
 ---
@@ -18,18 +18,16 @@ ticketid: 1697916
 
 ## Description
 
-I need to convert colored PDF documents to grayscale using Telerik [PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview) in an ASP.NET Core (.NET 9) environment. The provided Telerik documentation uses `System.Windows.Media` and `System.Windows.Media.Imaging`, which are unavailable in .NET Core. I need an alternate approach compatible with my environment.
+Convert colored images in PDF documents using Telerik [PdfProcessing]({%slug radpdfprocessing-overview%}) in an ASP.NET Core (.NET 9) environment. 
 
-This knowledge base article also answers the following questions:
-- How to process PDFs to grayscale in ASP.NET Core (.NET 9)?
-- How to convert images in PDFs to grayscale using Telerik PdfProcessing?
-- How to handle PDF image transformations in non-Windows environments?
+![Converting Colored PDF Documents to GrayScale](images/colored-to-grayscale.gif)   
+
 
 ## Solution
 
 To convert colored PDFs to grayscale in ASP.NET Core (.NET 9), follow these steps:
 
-1. Use the Telerik PdfProcessing library to load and manipulate PDF content.
+1. Use the Telerik [PdfProcessing]({%slug radpdfprocessing-overview%}) library to load and manipulate PDF content.
 2. Replace the image processing logic with a custom implementation using `System.Drawing`.
 
 Here is the complete code example:
@@ -132,12 +130,6 @@ class Program
 }
 ```
 
-### Key Notes:
-- The image processing logic is implemented using `System.Drawing` to convert images to grayscale.
-- This approach works in non-Windows environments and is compatible with ASP.NET Core.
-
 ## See Also
 
-- [PdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Convert Color PDF to Black and White](https://docs.telerik.com/devtools/document-processing/knowledge-base/convert-color-pdf-to-black-and-white-telerik-document-processing)
-- [Telerik Document Processing Documentation](https://docs.telerik.com/devtools/document-processing/)
+- [Converting Colored PDF Documents to GrayScale in .NET Framework]({%slug convert-color-pdf-to-black-and-white-telerik-document-processing%})

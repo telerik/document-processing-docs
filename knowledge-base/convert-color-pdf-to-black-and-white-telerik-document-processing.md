@@ -202,3 +202,4 @@ Ensure to adjust the `MakeGrayscale` methods for `ColorBase`, `Path`, and `Image
 - [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
 - [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%}) 
 - [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
+- [Converting Colored PDF Document Images to GrayScale in .NET Standard]({%slug convert-pdf-grayscale-aspnet-core%})
