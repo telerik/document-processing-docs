@@ -91,3 +91,4 @@ TextBoxField exposes the following properties:
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 
 * [Customizing Text and Border Colors to Highlight a TextBoxField with RadPdfProcessing]({%slug radpdfprocessing-customize-textboxfield-colors%})
+* [Adjusting Widgets' Font Size to Fit the Whole Content in Form Fields Using PdfProcessing]({%slug auto-font-size-form-fields-pdfprocessing%})
