@@ -5,7 +5,7 @@ type: how-to
 page_title: Generating a PDF Product Catalog with Telerik PdfProcessing
 meta_title: Generating a PDF Product Catalog with Telerik PdfProcessing
 slug: generating-pdf-product-catalog
-tags: telerik, pdf,processing, catalog, product, item
+tags: telerik, pdf, processing, catalog, product, item, fixed, editor
 res_type: kb
 ticketid: 1697233
 ---
@@ -25,7 +25,7 @@ img[alt$="><"] {
 
 Learn how to generate a PDF catalog from business objects, including images, text, and prices.
 
-![Generating a PDF Product Catalog ><](images\generate-pdf-product-catalog.png) 
+![Generating a PDF Product Catalog ><](images/generate-pdf-product-catalog.png) 
 
 ## Solution
 
