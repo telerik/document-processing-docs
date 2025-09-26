@@ -1,14 +1,19 @@
 ---
 title:  Adding an Image Border in PdfProcessing
-description: Learn how to draw borders around images.
+description: Learn how to draw borders around images in the Telerik PdfProcessing library.
 type: how-to
 page_title: Drawing Borders for Images in Telerik PdfProcessing
 meta_title: Drawing Borders for Images in Telerik PdfProcessing
-slug: pdf--image-border
+slug: pdf-image-border
 tags: pdf,processing,telerik, document ,image,export,border
 res_type: kb
 ticketid: 1698380
 ---
+<style>
+img[alt$="><"] {
+  border: 1px solid lightgrey;
+}
+</style>
 
 ## Environment
 
@@ -18,14 +23,16 @@ ticketid: 1698380
 
 ## Description
 
-Learn how to add borders around images in the generated PDF document.
+Learn how to add borders around [images]({%slug radpdfprocessing-model-image%}) in the generated PDF document.
 
 ## Solution
 
-### Drawing Borders Around Images
-Follow one of the approaches below:
+To draw borders around images follow one of the approaches below:
 
-#### Approach 1: Using a Table with Borders
+### Approach 1: Using a Table with Borders
+
+Insert a table with a single [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) and put the image in the cell:
+
 ```csharp
 RadFixedDocument document = new RadFixedDocument();
 RadFixedPage page = document.Pages.AddPage(); 
@@ -52,9 +59,14 @@ using (Stream output = File.OpenWrite(@"..\..\exported.pdf"))
 {
     pdfProvider.Export(document, output);
 }
-```
+``` 
 
-#### Approach 2: Using FixedContentEditor to Draw a Rectangle Border
+![Using a Table with Borders ><](images/image-table-cell-border.png)    
+
+### Approach 2: Using FixedContentEditor to Draw a Rectangle Border
+
+An alternative approach is to draw a rectangular border around an image in a PDF using RadPdfProcessing, you can use the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to draw both the image and the rectangle:
+
 ```csharp
 RadFixedDocument document = new RadFixedDocument();
 RadFixedPage page = document.Pages.AddPage();
@@ -89,7 +101,6 @@ editor.RestoreGraphicProperties();
 using (FileStream fs = new FileStream(imagePath, FileMode.Open, FileAccess.Read))
 {
     editor.Position.Translate(x, y);
-    editor.DrawImage(fs);
 }
 
 PdfFormatProvider pdfProvider = new PdfFormatProvider();
@@ -99,7 +110,9 @@ using (Stream output = File.OpenWrite(@"..\..\exported.pdf"))
 }
 ```
 
+![Using a FixedContentEditor to Draw the Image Border ><](images/image-fixedcontenteditor-border.png)   
+
 ## See Also
-- [PdfProcessing ImageQuality Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/imagequality)
-- [How to Change File Size of PDF with Images](https://docs.telerik.com/devtools/document-processing/knowledge-base/pdfprocessing-change-file-size-through-image-quality-and-compression)
-- [Optimizing and Reducing PDF Size with RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/knowledge-base/optimize-and-reduce-pdf-size-radpdfprocessing)
+- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
+- [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
+- [Images]({%slug radpdfprocessing-model-image%}) 
