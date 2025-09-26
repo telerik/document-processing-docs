@@ -1,11 +1,11 @@
 ---
-title:  Adding an Image Border in PdfProcessing
-description: Learn how to draw borders around images in the Telerik PdfProcessing library.
+title: Adding an Image Border in PdfProcessing
+description: Learn how to draw borders around images with the Telerik PdfProcessing library.
 type: how-to
 page_title: Drawing Borders for Images in Telerik PdfProcessing
 meta_title: Drawing Borders for Images in Telerik PdfProcessing
 slug: pdf-image-border
-tags: pdf,processing,telerik, document ,image,export,border
+tags: pdf, processing, telerik, document, image, export, border, table
 res_type: kb
 ticketid: 1698380
 ---
