@@ -17,7 +17,6 @@ __XlsxFormatProvider__ makes it easy to import and export XLSX (Excel Workbook) 
 
 >Unlike the CSV and TXT format providers, the __XlsxFormatProvider__ requires references to the following assemblies:    
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll         
->* ~~Telerik.Windows.Zip.dll~~*
 
 >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.           
 
