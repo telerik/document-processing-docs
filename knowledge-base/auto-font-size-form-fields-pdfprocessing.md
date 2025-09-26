@@ -1,11 +1,11 @@
 ---
-title: Adjusting Widgets' Font Size to Fit the Whole Content in Form Fields Using PdfProcessing
-description: Learn how to adjust font size for text fields, flatten form fields, and handle calculations in PDFs using PdfProcessing in Telerik Document Processing.
+title: Adjust Font Size and Flatten Form Fields in PDFs with PdfProcessing
+description: Learn how to calculate and adjust the font size of text fields when flattening form fields of a PDF document with PdfProcessing.
 type: how-to
 page_title: Adjust Font Size and Flatten Form Fields in PDFs with PdfProcessing
 meta_title: Adjust Font Size and Flatten Form Fields in PDFs with PdfProcessing
 slug: auto-font-size-form-fields-pdfprocessing
-tags: pdf, processing, text, box, field, flatten, font, size, recalculation, acroform
+tags: pdf, processing, text, box, field, flatten, font, size, recalculation, acroform, fixed, calculate, auto, fit
 res_type: kb
 ticketid: 1697695
 ---
