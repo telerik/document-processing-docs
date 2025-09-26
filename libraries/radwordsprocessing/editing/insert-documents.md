@@ -95,3 +95,4 @@ You could merge documents at a specific position using the InsertDocument() meth
 * [Clone and Merge]({%slug radwordsprocessing-editing-clone-and-merge%})
 * [Section]({%slug radwordsprocessing-model-section%})
 * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
+* [Inserting Formatted HTML content in another RadFlowDocument using WordsProcessing]({%slug inserting-html-and-styling-radwordsprocessing%})
