@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Convert Colored PDF Document Images to GrayScale in .NET Standard
 meta_title: How to Convert Colored PDF Document Images to GrayScale in .NET Standard
 slug: convert-pdf-grayscale-aspnet-core
-tags: pdf,processing,telerik, document, asp,core,convert grayscale,image
+tags: pdf, processing, telerik, document, asp, core, convert, grayscale, image, gray, black, white, color
 res_type: kb
 ticketid: 1697916
 ---
