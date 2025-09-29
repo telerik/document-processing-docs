@@ -34,3 +34,4 @@ Widget annotations are used in order to visualize the Form Fields data on the PD
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
+* [PdfProcessing Form Fields Reading and Writing Demo](https://demos.telerik.com/document-processing/pdfprocessing/read_write_form_fields)

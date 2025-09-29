@@ -38,3 +38,4 @@ You can find all the dependencies and required steps for the implementation in t
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Implementing a Custom OCR Provider]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%})
 * [Extracting Text from PDF Documents]({%slug extract-text-from-pdf%})
+* [PdfProcessing Optical Character Recognition (OCR) Demo](https://demos.telerik.com/document-processing/pdfprocessing/optical_character_recognition)
