@@ -82,4 +82,5 @@ This makes a list of all TC fields with the 'a' identifier.
 * [Generating a Table of Contents in a Merged Document Using RadWordsProcessing]({%slug generate-table-of-contents-radwordsprocessing%})
 * [Updating TOC Page Numberings in Word Documents Before Exporting to DOCX Format]({%slug update-toc-radwordsprocessing-before-docx-export%}) 
 * [Styling Table of Contents with Multilevel List Numbering in Telerik WordsProcessing]({%slug wordsprocessing-styling-table-of-contents-multilevel-list-numbering%})
+* [WordsProcessing Table Of Contents/Authorities Demo](https://demos.telerik.com/document-processing/wordsprocessing/table_of_contents_authorities)
 
