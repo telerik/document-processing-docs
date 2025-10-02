@@ -2,10 +2,10 @@
 title: Inserting Formatted HTML content in another RadFlowDocument using WordsProcessing
 description: Learn how to insert formatted HTML text in specific locations within a RadFlowDocument and preserve the styling using Telerik WordsProcessing.
 type: how-to
-page_title: How to Insert HTML and Preserve the Styles in RadWordsProcessing Document
-meta_title: How to Insert HTML and Apply Preserve the in RadWordsProcessing Document
+page_title: How to Insert HTML Content in a Word Document while Preserving its Styles and Formatting
+meta_title: How to Insert HTML Content in a Word Document while Preserving its Styles and Formatting
 slug: inserting-html-and-styling-radwordsprocessing
-tags: word, processing,telerik,document,html,styling,insert, docx, flow
+tags: word, processing, telerik, document, html, styling, insert, docx, flow, words, formatting
 res_type: kb
 ticketid: 1698628
 ---
@@ -24,7 +24,7 @@ img[alt$="><"] {
 
 ## Description
 
-Leanr how to insert HTML content into specific locations within a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) using Telerik [WordsProcessing]({%slug radwordsprocessing-overview%}). 
+Learn how to insert HTML content at specific locations within a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) using Telerik [WordsProcessing]({%slug radwordsprocessing-overview%}). 
 
 |Input Content|Output Content|
 |----|----|
@@ -32,11 +32,11 @@ Leanr how to insert HTML content into specific locations within a [RadFlowDocume
 
 ## Solution
 
-To insert HTML content into specific locations in a RadFlowDocument, follow these steps:
+To insert HTML content at specific locations in a RadFlowDocument, follow these steps:
 
-1. Importing the HTML content: Use the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) to import HTML content into a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). 
+1. Use the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) to import HTML content into a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). 
 
-1. Inserting HTML Content into a Specific Location: Use the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) to insert the imported document (step 1) into a specific location in your target document.
+1. Use the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) to insert the imported document (step 1) into a specific location in your target document.
 
 Example:
 
@@ -69,7 +69,6 @@ Example:
 
             Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
-
 
 
 ### Additional Notes
