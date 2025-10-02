@@ -147,5 +147,6 @@ Detailed information about the supported formats and features can be found in th
 * [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%})
 * [Model]({%slug radwordsprocessing-model%})
 * [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%})
+* [WordsProcessing Basic Usage Demo](https://demos.telerik.com/document-processing/wordsprocessing)
 
 

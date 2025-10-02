@@ -141,3 +141,4 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
 
  * [Getting Started]({%slug radziplibrary-gettingstarted%})
  * [Update ZipArchive]({%slug radziplibrary-update-ziparchive%})
+ * [ZipLibrary Archive Protection Demo](https://demos.telerik.com/document-processing/ziplibrary/archive_protection)
