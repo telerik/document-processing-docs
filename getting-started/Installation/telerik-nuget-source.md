@@ -1,16 +1,16 @@
 ---
 title: Telerik NuGet Source
-page_title: Telerik Private NuGet Feed
-description: Explore the different ways to add the Telerik private NuGet feed to your system, and start using NuGet packages to install the Telerik Document Processing libraries.
+page_title: Telerik NuGet Feed
+description: Explore the different ways to add the Telerik NuGet feed to your system, and start using NuGet packages to install the Telerik Document Processing libraries.
 slug: telerik-nuget-source
-tags: get,started,installation,nuget,feed
+tags: get, started, installation, nuget, feed
 published: True
 position: 8
 ---
 
-# Telerik Private NuGet Source
+# Telerik NuGet Source
 
-This article explains how to add the private Telerik NuGet package feed to your environment. You can use it to obtain the Telerik Document Processing libraries instead of [setting up a local NuGet feed]({%slug installation-nuget-packages%}#manually-download-nuget-packages).
+This article explains how to add the Telerik NuGet package feed to your environment. You can use it to obtain the Telerik Document Processing libraries instead of [setting up a local NuGet feed]({%slug installation-nuget-packages%}#manually-download-nuget-packages).
 
 The benefit of using an online NuGet source is that you will receive notifications for newer component versions.
 
@@ -22,11 +22,11 @@ You can set up the remote Telerik NuGet feed in the following ways:
 
 >tip When working with the .NET CLI or editing the `NuGet.Config` manually, you can use your Telerik account credentials or a [NuGet API Key](#use-nuget-api-key). If you are logging in to telerik.com through single sign-on (SSO), use a [NuGet API Key](#use-nuget-api-key).
 
->warning Never hard-code Telerik account credentials or NuGet API keys in a `NuGet.Config` file in a GitHub repository, Docker image, or any location that may be accessed by unauthorized parties. A NuGet key is valuable and bad actors can use it to access the NuGet packages that are licensed under your account. A credentials abuse can lead to a review of the affected Telerik account.
+>warning Never hard-code Telerik account credentials or NuGet API keys in a `NuGet.Config` file in a GitHub repository, Docker image, or any location that may be accessed by unauthorized parties. A NuGet key is valuable, and bad actors can use it to access the NuGet packages that are licensed under your account. A credentials abuse can lead to a review of the affected Telerik account.
 
 For NuGet-related issues, see [Troubleshooting Telerik NuGet]({%slug troubleshooting-telerik-nuget%}).
 
-For information on automated builds, CI and CD, see [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%}).
+For information on automated builds, CI, and CD, see [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%}).
 
 
 ## Use Visual Studio
@@ -106,7 +106,7 @@ To edit a `NuGet.Config` file and add the Telerik feed, you need to:
 
 1. Ensure you are editing the [correct and desired config file](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior#config-file-locations-and-uses). You can also create a new one with the [`dotnet new nugetconfig` command](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new).
 
-2. Add the Telerik package source to the config file. Use plain text credentials, because the .NET Core NuGet tooling does not fully support encrypted credentials. Here is an example of how your `NuGet.Config` file can look like:
+2. Add the Telerik package source to the config file. Use plain text credentials because the .NET Core NuGet tooling does not fully support encrypted credentials. Here is an example of how your `NuGet.Config` file can look like:
 
 ````XML.skip-repl
 <?xml version="1.0" encoding="utf-8"?>
@@ -126,7 +126,7 @@ To edit a `NuGet.Config` file and add the Telerik feed, you need to:
 </configuration>
 ````
 
-## Use NuGet API Key
+### Use NuGet API Key
 
 There are two ways to authenticate with the Telerik NuGet server when you add the Telerik NuGet source [with the .NET CLI](#use-the-net-cli) or [edit the `NuGet.Config` file manually](#edit-the-nuget-config-file):
 
@@ -138,9 +138,9 @@ You can [generate your Telerik NuGet API Key on telerik.com](https://www.telerik
 > Always use the NuGet API Key in plain text.
 
 
-## Package Source Mapping
+### Package Source Mapping
 
-The Document Processing Libraries' NuGet packages and most of its dependencies reside on `nuget.telerik.com`. On the other hand, the [`Telerik.Licensing` package]({%slug setting-up-license-key%}) reside on `nuget.org`. The correct [package source mapping](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) configuration should be similar to the one below.
+The Document Processing Libraries' NuGet packages and most of its dependencies reside on `nuget.telerik.com`. On the other hand, the [`Telerik.Licensing` package]({%slug setting-up-license-key%}) resides on `nuget.org`. The correct [package source mapping](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) configuration should be similar to the one below.
 
 > Make sure that the `key` values in the `packageSourceMapping` section match the `key` values in the `packageSources` section, otherwise you will get a "Package not found" error.
 
@@ -169,7 +169,7 @@ The Document Processing Libraries' NuGet packages and most of its dependencies r
 ````
 
 
-## Access NuGet Packages behind Firewall
+### Access NuGet Packages behind Firewall
 
 To access the Telerik NuGet feed behind a firewall that restricts outgoing requests, you may need to allow the following domains:
 
@@ -178,12 +178,12 @@ To access the Telerik NuGet feed behind a firewall that restricts outgoing reque
 
 The firewall must allow some of the requests to be redirected from `nuget.telerik.com` to `downloads.cdn.telerik.com`.
 
-## Obsolete Telerik NuGet URL
+### Obsolete Telerik NuGet URL
 
-The NuGet v2 server at `https://nuget.telerik.com/nuget` was sunset in November 2024 and is no longer available. The v3 protocol offers faster package searches and restores, improved security, and more reliable infrastructure. To redirect your feed to the NuGet v3 protocol, all you have to do is to change your NuGet package source URL to `https://nuget.telerik.com/v3/index.json`.
+The NuGet v2 server at `https://nuget.telerik.com/nuget` was sunset in November 2024 and is no longer available. The v3 protocol offers faster package searches and restores, improved security, and more reliable infrastructure. To redirect your feed to the NuGet v3 protocol, all you have to do is change your NuGet package source URL to `https://nuget.telerik.com/v3/index.json`.
 
 
-## Troubleshooting
+### Troubleshooting
 
 See the [NuGet Troubleshooting](slug:troubleshooting-nuget) article for tips about common pitfalls when working with the Telerik NuGet feed.
 
@@ -191,4 +191,3 @@ See the [NuGet Troubleshooting](slug:troubleshooting-nuget) article for tips abo
 
 * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
 * [Install using NuGet Packages]({%slug installation-nuget-packages%})
-* [NuGet Troubleshooting](slug:troubleshooting-nuget) 
