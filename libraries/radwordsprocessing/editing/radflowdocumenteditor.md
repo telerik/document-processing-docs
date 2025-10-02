@@ -337,3 +337,4 @@ The above method will delete everything between the "start" and "end" elements. 
  * [RadFlowDocument API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.RadFlowDocument.html)
  * [Document model]({%slug radwordsprocessing-model%})
  * [Find and Replace]({%slug radwordsprocessing-editing-find-and-replace%})
+ * [Inserting Formatted HTML content in another RadFlowDocument using WordsProcessing]({%slug inserting-html-and-styling-radwordsprocessing%})
