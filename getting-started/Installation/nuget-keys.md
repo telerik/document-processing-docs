@@ -5,7 +5,7 @@ description: Learn how to use NuGet Keys to authenticate with the Telerik NuGet 
 slug: using-nuget-keys
 tags: telerik, document, processing, restore, nuget, packages, ci, continuous, integration, installation
 published: True
-position: 7
+position: 9
 ---
 
 # Restoring NuGet Packages in Your CI Workflow
