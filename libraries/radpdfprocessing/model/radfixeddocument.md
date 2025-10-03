@@ -10,7 +10,7 @@ position: 1
 
 # RadFixedDocument
 
-__RadFixedDocument__ hosts fixed document content and is the root element in the document elements tree. It holds a collection of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) elements. 
+**RadFixedDocument** is a core class in the Telerik Document Processing libraries, specifically within the PdfProcessing model.
 
 This article will get you familiar with the basics of __RadFixedDocument__. It contains the following sections:
       
@@ -22,7 +22,7 @@ This article will get you familiar with the basics of __RadFixedDocument__. It c
 
 ## What Is RadFixedDocument
 
-__RadFixedDocument__ is the root that contains all other elements in the __RadPdfProcessing__ model. It exposes the following public API:
+**RadFixedDocument** is the main document unit of the **PdfProcessing** model. It represents the root element of a fixed-layout PDF document and serves as the container for all other document elements. RadFixedDocument holds a collection of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) elements. It exposes the following public API:
 
 |Property Name|Description|
 |----|----|
@@ -53,6 +53,13 @@ __RadFixedDocument__ is the root that contains all other elements in the __RadPd
 |**MergedFieldNameResolving**|Occurs when trying to resolve conflicts between the fields names while merging RadFixedDocument instances.|
 |**MergedEmbeddedFileNameResolving**|Occurs when trying to resolve conflicts between the embedded file names while merging RadFixedDocument instances.|
 |**MergedJavaScriptNameResolving**|Occurs when trying to resolve conflicts between the JavaScript names while merging RadFixedDocument instances.|
+
+
+RadFixedDocument is typically used when:
+
+* Creating a PDF document from scratch programmatically: a complete example is available in the [PdfProcessing Basic Usage demo](https://demos.telerik.com/document-processing/pdfprocessing).
+* Extracting or manipulating content from existing PDF documents: first import any existing PDF documents with the help of the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+* Generating structured, fixed-layout documents with precise control over layout and formatting: [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) and [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) allow you to create a RadFixedDocument either with managing the position or in a flow-like manner and insert all desired elements one after another.
 
 >note A complete SDK example how to generate a document is available [here](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/GenerateDocument).
             
