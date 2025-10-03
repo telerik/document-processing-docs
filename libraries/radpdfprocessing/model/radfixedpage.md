@@ -37,7 +37,7 @@ __Example 1__ demonstrates how to create a new __RadFixedPage__ instance and add
 
 #### __[C#] Example 1: Create RadFixedPage and add it to a document__ 
 
-<snippet id='codeblock_122'/>
+<snippet id='add_radfixedpage'/>
 
 ## Operating with RadFixedPage
 
@@ -51,7 +51,7 @@ __Example 2__ shows how to add a previously created ContentElement in a __RadFix
             
 #### __[C#] Example 2: Add content element to RadFixedPage__
 
-<snippet id='codeblock_123'/>
+<snippet id='add_link_annotation_in_radfixedpage'/>
 
 You can also use the __Add\[Element]()__ methods of RadFixedPages's __Content__ property. The respective methods - AddPath(), AddTextFragment(), AddImage(), create the element, add it to the page and return it for your convenience.            
 
@@ -64,7 +64,7 @@ __Example 3__ shows how to add a previously created annotation in a __RadFixedPa
 
 #### __[C#] Example 3: Add annotation to RadFixedPage__
 
-<snippet id='codeblock_124'/>
+<snippet id='add_annotation_to_radfixedpage'/>
 
 The other possible approach is using the __AddLink()__ method of the __Annotations__ property. The method creates the link, adds it to the page and returns it. More information on the topic is available in the [Annotation]({%slug radpdfprocessing-model-annotations-links%}) article.          
 
@@ -77,7 +77,7 @@ __Example 4__ shows how you can change the __Rotation__ and __Size__ properties 
 
 #### __[C#] Example 4: Change properties of a RadFixedPage__
 
-<snippet id='codeblock_125'/>
+<snippet id='modify_radfixedpage_properties'/>
 
 >note A complete SDK example how to generate a document is available [here](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/GenerateDocument).
 
