@@ -41,7 +41,7 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 
 ### Creating an Embedded Electronic (ZUGFeRD) Invoice
 
-RadPdfProcessing provides support for embedding of [ZUGFeRD invoices]({%slug radpdfprocessing-embedded-file-streams-zugferd-invoices%}). 
+RadPdfProcessing provides support for embedding [ZUGFeRD invoices]({%slug radpdfprocessing-embedded-file-streams-zugferd-invoices%}). 
 
 ### Using the MergedEmbeddedFileNameResolving event
 

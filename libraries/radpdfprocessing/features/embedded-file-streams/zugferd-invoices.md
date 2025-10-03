@@ -40,7 +40,7 @@ position: 1
 
 {{endregion}}
 
->note Only a single XML invoice attachment is allowed according to ZUGFeRD standard.
+>note Only a single XML invoice attachment is allowed according to the ZUGFeRD standard.
 
 >important To comply with the PDF/A-3B standard all the fonts in the documents should be embedded, so please avoid using [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) because they are not being embedded in the document. In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
@@ -57,9 +57,9 @@ position: 1
 
 ## ZugferdConformanceLevel 
 
-Specifies the ZUGFeRD (Factur-X) conformance level to use when exporting PDF invoices. Higher levels generally include all requirements of the lower levels and add more structured data to support automated processing and validation scenarios.
+As of **Q4 2025** RadPdfProcessing provides support for specifying the ZUGFeRD (Factur-X) **conformance level** to use when exporting PDF invoices. Higher levels generally include all requirements of the lower levels and add more structured data to support automated processing and validation scenarios.
 
-As of **Q4 2025** RadPdfProcessing offers the functionality to specify the **ZugferdConformanceLevel**. The available options are:
+RadPdfProcessing offers the functionality to specify the **ZugferdConformanceLevel** when embedding the invoice. The available options are:
 
 * **Minimum**: The minimal profile providing only the essential data needed for a compliant e-invoice. Suitable for simple use cases with limited automation.
 * **Basic**: The basic profile providing core structured data for improved interoperability and basic automated processing between trading partners. This is the default value. 
@@ -68,11 +68,6 @@ As of **Q4 2025** RadPdfProcessing offers the functionality to specify the **Zug
 
 ````
 RadFixedDocument document = new RadFixedDocument();
-document.EmbeddedFiles.AddZugferdInvoice(new byte[3] { 1, 2, 3 }, ZugferdConformanceLevel.Comfort);
+document.EmbeddedFiles.AddZugferdInvoice(File.ReadAllBytes(@"zugferd-invoice.xml"), ZugferdConformanceLevel.Comfort); 
 ````
-
-The ZugferdConformanceLevel can be passed through:
-
-* ExportSettings
-* Directly to the EmbeddedFilesCollection.AddZugferdInvoice() method
 
