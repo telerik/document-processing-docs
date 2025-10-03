@@ -12,24 +12,13 @@ ticketid: 1667088
 
 ## Environment
 
-<table>
-<tbody>
-<tr>
-<td> Product </td>
-<td>
-SpreadProcessing for Telerik Document Processing
-</td>
-</tr>
-<tr>
-<td> Version </td>
-<td> 2015.1.225 </td>
-</tr>
-</tbody>
-</table>
+|Product Version|Product|Author|
+|----|----|----|
+|2025.3.806|[SpreadProcessing]({%slug radspreadprocessing-overview%})|[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)|
 
 ## Description
 
-This article describes how to use the SpreadProcessing library to simulate a checkbox by using conditional formatting rules. The goal is to display a checked symbol (☑) when the cell value is `1` and an unchecked symbol (☐) when the cell value is `0`. 
+This article describes how to use the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library to simulate a checkbox by using conditional formatting rules. The goal is to display a checked symbol (☑) when the cell value is **1** and an unchecked symbol (☐) when the cell value is **0**. 
 
 This knowledge base article also answers the following questions:
 - How to simulate checkbox behavior in Telerik SpreadProcessing?
@@ -41,13 +30,13 @@ This knowledge base article also answers the following questions:
 To simulate a checkbox using conditional formatting in Telerik SpreadProcessing, apply two separate conditional formatting rules. One for the checked state and one for the unchecked state.
 
 1. Create a workbook and add a worksheet.
-2. Define a *DifferentialFormatting* for the checked state with a format that displays "☑".
-3. Create an *EqualToRule* for the checked state, matching cells with a value of *1*.
+2. Define a **DifferentialFormatting** for the checked state with a format that displays "☑".
+3. Create an **EqualToRule** for the checked state, matching cells with a value of **1**.
 4. Apply the conditional formatting rule to the cell.
-5. Define another *DifferentialFormatting* for the unchecked state with a format that displays "☐".
-6. Create an *EqualToRule* for the unchecked state, matching cells with a value of *0*.
+5. Define another **DifferentialFormatting** for the unchecked state with a format that displays "☐".
+6. Create an **EqualToRule** for the unchecked state, matching cells with a value of **0**.
 7. Apply the second conditional formatting rule to the cell.
-8. Set the cell value to *1* or *0* to test the checkbox simulation.
+8. Set the cell value to **1** or **0** to test the checkbox simulation.
 9. Export the workbook to an XLSX file.
 
 Here’s an example implementation:
@@ -85,6 +74,5 @@ using (Stream output = new FileStream(xlsxOutputPath, FileMode.Create))
 
 ## See Also
 
-- [Conditional Formatting in Telerik SpreadProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/conditional-formatting#conditional-formatting)
-- [Workbook Object in Telerik SpreadProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/workbooks)
-- [XlsxFormatProvider Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/xlsx)
+* [Conditional Formatting]{%slug radspreadprocessing-features-conditional-formatting%}
+* [Workbook]{%slug radspreadprocessing-working-with-workbooks-what-is-workbook%}
