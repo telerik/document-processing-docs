@@ -21,7 +21,6 @@ In order to use the model of the **RadPdfProcessing** library in your cross-plat
 
 * **Telerik.Documents.Core.dll**
 * **Telerik.Documents.Fixed.dll**
-* ~~Telerik.Zip.dll~~*
 
 >note As of [Q2 2025](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history/progress-telerik-document-processing-2025-2-520-changelog) the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
