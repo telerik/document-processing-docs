@@ -30,7 +30,7 @@ In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-
 
 ## Installation
 
-Use the documentation of your AI-powered MCP client to add the Telerik Document Processing MCP server to a specific workspace or globally. You can see installation tips and examples for some popular MCP clients below.
+Use the documentation of your AI-powered MCP client to add the [Telerik Document Processing MCP server](https://www.npmjs.com/package/@progress/telerik-dpl-mcp) to a specific workspace or globally. You can see installation tips and examples for some popular MCP clients below.
 
 ### Installing the Telerik Document Processing MCP server using npm:  
 
@@ -40,7 +40,7 @@ npm i @progress/telerik-dpl-mcp
 
 ### Installing in VS Code
 
-![Installing DPL MCP Server in VS Code ><](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif)  
+![Installing DPL MCP Server in VS Code ><](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif)   
 
 ## Configuration
 
@@ -91,7 +91,7 @@ For complete setup instructions, see [Use MCP servers in Visual Studio](https://
  ```json
  {
    "servers": {
-     "telerik-dpl-mcp": {
+     "telerik-dpl-assistant": {
        "type": "stdio",
        "command": "npx",
        "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
@@ -107,7 +107,7 @@ For complete setup instructions, see [Use MCP servers in Visual Studio](https://
  ```
 
 2. Restart Visual Studio.
-3. Enable the `telerik-dpl-mcp` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
+3. Enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
 
 ### Global Setup:
 
@@ -127,7 +127,7 @@ The basic setup in Visual Studio Code follows these steps:
  ```json
 {
     "servers": {
-        "telerik-dpl-mcp": {
+        "telerik-dpl-assistant": {
             "type": "stdio",
             "command": "npx",
             "args": [
@@ -164,7 +164,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 ```json
 {
   "mcpServers": {
-    "telerik-dpl-mcp": {
+    "telerik-dpl-assistant": {
       "type": "stdio",
       "command": "npx",
       "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
@@ -184,12 +184,12 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 
 The Telerik Document Processing MCP Server can be used in `Agent` mode as follows:
 
-1. Start your prompt with `#telerik-dpl-assistant` (or with # followed by your custom server name, if set, e.g. `#telerik-dpl-mcp`).
+1. Start your prompt with `#telerik-dpl-assistant` (or with # followed by your custom server name, if set).
 
 2. Inspect the output and verify that the MCP Server is used. Look for a similar statement in the output (the exact text may vary across tools):
-   - Visual Studio: `Running telerik-dpl-mcp`
-   - Visual Studio Code: `Running telerik-dpl-mcp`
-   - Cursor: `Calling MCP tool telerik-dpl-mcp`
+   - Visual Studio: `Running telerik-dpl-assistant`
+   - Visual Studio Code: `Running telerik-dpl-assistant`
+   - Cursor: `Calling MCP tool telerik-dpl-assistant`
 
 3. If the MCP server is not used even though it's installed and enabled, double-check the server name in your configuration and try rephrasing your prompt.
 
@@ -207,7 +207,7 @@ To increase the likelihood of the Telerik MCP server being used, add custom inst
 
 The following examples demonstrate useful prompts for the Telerik Document Processing MCP Server:
 
-* "`#telerik-dpl-mcp` import two PDF files and merge them into a single one"
+* "`#telerik-dpl-assistant` generate a pdf document with text "Hello" and a table 3x3"
 
     ![Sample Prompt for MCP Server in VS Code Merging PDFs ><](images/sample-prompt-dpl-mcp-server-in-vs-code.png)   
 
@@ -216,7 +216,7 @@ The following examples demonstrate useful prompts for the Telerik Document Proce
 |![Running Sample Prompt for MCP Server in VS Code Merging PDFs ><](images/running-sample-prompt-dpl-mcp-server-in-vs-code.png)|![Produced Result with MCP Server in VS Code Merging PDFs ><](images/result-sample-prompt-dpl-mcp-server-in-vs-code.png)|    
 
 
-* "`#telerik-dpl-mcp` create a PDF file with a link to "http://telerik.com" in it"
+* "`#telerik-dpl-assistant` create a PDF file with a link to "http://telerik.com" in it"
 
 
 >caption Running MCP Server in Visual Studio 

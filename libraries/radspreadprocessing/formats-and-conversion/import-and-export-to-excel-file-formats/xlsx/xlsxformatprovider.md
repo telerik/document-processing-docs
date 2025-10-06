@@ -17,7 +17,6 @@ __XlsxFormatProvider__ makes it easy to import and export XLSX (Excel Workbook) 
 
 >Unlike the CSV and TXT format providers, the __XlsxFormatProvider__ requires references to the following assemblies:    
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll         
->* ~~Telerik.Windows.Zip.dll~~*
 
 >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.           
 
@@ -101,3 +100,4 @@ __Example 2__ demonstrates how to export an existing Workbook to an xlsx file. T
 
 * [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
+* [Resolve Exporting Corrupted Excel Files With SpreadProcessing]({%slug resolving-excel-file-corruption-warning-after-spreadprocessing-export%})

@@ -7,7 +7,7 @@ published: True
 position: 4
 ---
 
-# Overview
+# PdfFileSource
 
 The **PdfFileSource** class represents the content of an existing PDF file.
 

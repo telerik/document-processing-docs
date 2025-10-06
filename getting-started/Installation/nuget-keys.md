@@ -1,11 +1,11 @@
 ---
 title: Restoring NuGet Packages in CI
 page_title: Restoring NuGet Packages in CI 
-description: "Learn how to use NuGet Keys to authenticate with the Telerik NuGet server and restore Telerik Document Processing packages in your CI or desktop environment."
+description: Learn how to use NuGet Keys to authenticate with the Telerik NuGet server and restore Telerik Document Processing packages in your CI or desktop environment.
 slug: using-nuget-keys
 tags: telerik, document, processing, restore, nuget, packages, ci, continuous, integration, installation
 published: True
-position: 7
+position: 9
 ---
 
 # Restoring NuGet Packages in Your CI Workflow
@@ -25,14 +25,21 @@ Unlike your Telerik credentials, a NuGet Key has a limited scope and can be used
 
 1. Go to the [**Manage NuGet Keys**](https://www.telerik.com/account/downloads/nuget-keys) page in your Telerik account.
 
-1. Select the **DOWNLOADS** tab and then **Manage NuGet Keys**.
+1. Alternatively, select the **Downloads** tab from your Telerik account and then **NuGet Keys**.
 
     ![Manage NuGet Keys](images/manage-nuget-keys.png)
+
+    The **NuGet Keys** can be accessed from the **License Keys** section as well:
+
+    ![NuGet Keys from License Keys](images/access-nuget-keys-from-license-keys.png) 
+
 
 1. To create a new key, select the **Generate New Key** button.
 
 1. Enter a name for the NuGet Key, and then select **Generate Key**.
 
+    ![Generate NuGet Key](images/generate-nuget-key.png)
+ 
 1. To copy the key, select **Copy and Close**. Once you close the window, you can no longer copy the generated key. For security reasons, the **NuGet Keys** page displays only a portion of the key.
 
     ![Copy Generated NuGet Key](images/copy-nuget-key.png)
@@ -63,6 +70,8 @@ There are two popular ways to use the Telerik NuGet server in a build:
 
 For more information on how to use NuGet keys in a build, check the [Announcing NuGet Keys](https://www.telerik.com/blogs/announcing-nuget-keys) blog post by Lance McCarthy.
 
+The examples below assume that the secret environment variable name is `TELERIK_NUGET_KEY`.
+
 ### Using a nuget.config File with Your Projects
 
 1. In your `nuget.config` file, set the `Username` value to `api-key` and the `ClearTextPassword` value to an environment variable name:
@@ -77,16 +86,16 @@ For more information on how to use NuGet keys in a build, check the [Announcing 
         <packageSourceCredentials>
             <MyTelerikFeed>
             <add key="Username" value="api-key" />
-            <add key="ClearTextPassword" value="%MY_API_KEY%" />
+            <add key="ClearTextPassword" value="%TELERIK_NUGET_KEY%" />
             </MyTelerikFeed>
         </packageSourceCredentials>
         ...
         </configuration>
     ```
 
-1. Set the `MY_API_KEY` environment variable by using the value of your pipeline/workflow secret.
+1. Set the `TELERIK_NUGET_KEY` environment variable by using the value of your pipeline/workflow secret.
 
-The exact steps to set the `MY_API_KEY` environment variable depend on your workflow. For more details, refer to the [Announcing NuGet Keys](https://www.telerik.com/blogs/announcing-nuget-keys) blog post by Lance McCarthy.
+The exact steps to set the `TELERIK_NUGET_KEY` environment variable depend on your workflow. For more details, refer to the [Announcing NuGet Keys](https://www.telerik.com/blogs/announcing-nuget-keys) blog post by Lance McCarthy.
 
 ### Using Only CLI Commands
 

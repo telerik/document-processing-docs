@@ -83,3 +83,4 @@ Now the chart objects in the spreadsheet will be exported along with the other c
 
 * [Using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 * [Exporting Spreadsheets with Charts to PDF with RadSpreadProcessing and WinForms RadChartView]({%slug export-charts-to-pdf-radspreadprocessing%})
+* [Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing]({%slug export-charts-png-300dpi-spreadprocessing%})

@@ -136,3 +136,4 @@ You can create fonts that are not explicitly registered. Creating a font that is
  * [How to Prevent Text with Special Characters from Being Cut Off when converting HTML to PDF using RadWordsProcessing]({%slug prevent-text-cut-off-pdf-conversion-radwordsprocessing%}) 
  * [Validating Fonts when Using Telerik Document Processing]({%slug validating-fonts-pdf-document-processing%})
  * [Resolving Apostrophe Character Being Replaced with Copyright Symbol in Filled PDF AcroForm]({%slug apostrophe-character-replaced-copyright-symbol-acroform%})
+ * [Resolving Double-Bold Text Appearance in PDF Export Using Telerik Document Processing]({%slug fixing-double-bold-text-issue-in-pdf-document%})

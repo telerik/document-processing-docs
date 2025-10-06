@@ -19,7 +19,7 @@ table th:nth-of-type(2) {
 } 
 </style>
 
-# Overview
+# PdfStreamWriter
 
 The **PdfStreamWriter** class enables you to write file content directly to a Stream. This is the root element of the streaming mechanism used when exporting a PDF document.
 

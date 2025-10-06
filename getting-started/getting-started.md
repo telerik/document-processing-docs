@@ -9,8 +9,7 @@ position: 0
 
 # Getting Started with Telerik Document Processing
 
-
-**Telerik Document Processing** includes a set of cross-platform libraries that let you import and export content between different documents formats and work with archive files. The needed assemblies come with the installation files of several Telerik suites. They are available also in the internal builds of the same Telerik suites. 
+**Telerik Document Processing** includes a set of cross-platform libraries that let you import and export content between different document formats and work with archive files. The needed assemblies come with the installation files of several Telerik suites. They are also available in the internal builds of the same Telerik suites. Learn which products include Telerik Document Processing in the [Product Bundles](https://www.telerik.com/purchase.aspx?filter=web).
 
 >tipMore information about the suites that include Telerik Document Processing and how to install them is available in the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) article.
 

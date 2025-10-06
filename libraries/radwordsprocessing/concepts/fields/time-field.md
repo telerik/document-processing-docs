@@ -40,10 +40,9 @@ __Example 1__ demonstrates how you can insert a merge field.
 
 #### __[C#] Example 1: Insert merge field__
 
-{{region cs-radwordsprocessing-concepts-time-field_0}}
-	            
+<pre><code>        
 	editor.InsertField("TIME \\@ \"h:mm:ss am/pm\"", "«to be updated»");
-{{endregion}}
+</code></pre>
 
 
 After updating the field the result would be "_5:28:34 PM_" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).

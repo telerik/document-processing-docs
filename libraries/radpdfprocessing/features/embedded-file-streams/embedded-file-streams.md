@@ -66,3 +66,7 @@ The **MergedEmbeddedFileNameResolving** event occurs when trying to resolve conf
 
 When importing a PDF document containing embedded files, the **DuplicatedEmbeddedFileNameResolving** event that the [PdfImportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) offers, allows you to handle duplicated names and properly resolve them.
 
+## See Also
+
+* [PdfProcessing Embedding File Streams Demo](https://demos.telerik.com/document-processing/pdfprocessing/embed_file_streams)
+

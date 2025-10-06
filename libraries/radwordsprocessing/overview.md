@@ -90,6 +90,16 @@ The library comes with support for the following document formats:
 
 You can import and export documents of these formats as well as convert the format of the document.
 
+## Online Demos
+
+|Demo|Description|
+|----|----|
+|[WordsProcessing Basic Usage](https://demos.telerik.com/document-processing/wordsprocessing)|The WordsProcessing API enables effortless conversion of documents between the supported DOCX, RTF, HTML, and TXT formats.|
+|[WordsProcessing PDF Export](https://demos.telerik.com/document-processing/wordsprocessing/pdf_export)|This example demonstrates export of documents to PDF using WordsProcessing. You can upload Word(docx), RTF, HTML or plain text document and convert it to PDF.|
+|[WordsProcessing Replacement](https://demos.telerik.com/document-processing/wordsprocessing/replace)|This example illustrates the Replace functionality in WordsProcessing. You can import a document of your choice, replace or highlight text in it, using regular expressions or strings and then export the document to view the result.|
+|[WordsProcessing Table Of Contents/Authorities](https://demos.telerik.com/document-processing/wordsprocessing/table_of_contents_authorities)|This example illustrates how to add Table of Contents (TOC) of Table of Authorities (TOA) fields in WordsProcessing.|
+|[WordsProcessing GenAI Document Insights](https://demos.telerik.com/document-processing/wordsprocessing/genai_document_insights)|This example demonstrates how to use the GenAI-powered Document Insights feature in Telerik RadWordsProcessing to extract meaningful insights from Word documents and receive context-aware responses based on their content.|
+
 # See Also
 
 - [Installing on Your Computer]({%slug installation-installing-on-your-computer%})

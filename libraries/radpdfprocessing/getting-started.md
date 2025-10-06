@@ -145,3 +145,4 @@ For more complete examples head to the [Developer Focused Examples]({%slug radpd
  * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
+ * [PdfProcessing Basic Usage Demo](https://demos.telerik.com/document-processing/pdfprocessing)

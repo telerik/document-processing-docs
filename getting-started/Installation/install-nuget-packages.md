@@ -18,9 +18,14 @@ This article describes how you can install the Document Processing Libraries usi
 
 ## Manually Download NuGet Packages
 
-1\. First you need to log in using your Telerik licensed account. Telerik Document Processing is a part of several Telerik bundles and is available in the Downloads section of the suite with which you've obtained the product, e.g. UI for Blazor. This way you will be able to download the packages:
+This approach allows you to setup a local NuGet package source, so you can install the Telerik products without an active Internet connection and without setting up our private feed.
+
+1\. Copy all the .nupkg files we provide to your preferred local feed location. First you need to log in using your Telerik licensed account. Telerik Document Processing is a part of several Telerik bundles and is available in the Downloads section of the suite with which you've obtained the product, e.g. UI for Blazor. This way you will be able to download the packages:
 
 ![install-using-nuget001](images/install-using-nuget001.png)
+
+
+**Telerik Document Processing** is also available as a separate distibution in your account: [Download Product Files]({%slug installation-nuget-packages%})
 	
 2\. Then, you need to add packages to Visual Studio. Open the NuGet manager and then click the Options button:
 	

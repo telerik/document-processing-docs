@@ -66,15 +66,12 @@ __Example 1__ demonstrates how you can insert a TOC field.
 
 #### __[C#] Example 1: Insert TOC field__
 
-{{region cs-radwordsprocessing-concepts-toc-field_0}}
-
+<pre><code>
     var document = new RadFlowDocument();
     var editor = new RadFlowDocumentEditor(document);
 
     editor.InsertField("TOC \\f a ");
-    
- 
-{{endregion}}
+</code></pre>
 
 This makes a list of all TC fields with the 'a' identifier.
 
@@ -84,4 +81,6 @@ This makes a list of all TC fields with the 'a' identifier.
 * [TC field]({%slug radwordsprocessing-concepts-tc-field%}))
 * [Generating a Table of Contents in a Merged Document Using RadWordsProcessing]({%slug generate-table-of-contents-radwordsprocessing%})
 * [Updating TOC Page Numberings in Word Documents Before Exporting to DOCX Format]({%slug update-toc-radwordsprocessing-before-docx-export%}) 
+* [Styling Table of Contents with Multilevel List Numbering in Telerik WordsProcessing]({%slug wordsprocessing-styling-table-of-contents-multilevel-list-numbering%})
+* [WordsProcessing Table Of Contents/Authorities Demo](https://demos.telerik.com/document-processing/wordsprocessing/table_of_contents_authorities)
 
