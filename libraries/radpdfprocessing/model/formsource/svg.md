@@ -20,25 +20,7 @@ As of **Q3 2024** RadPdfProcessing provides support for SVG FormSource (vector g
 
 The following example shows how to insert an SVG image into a FormSource object using FixedContentEditor:
 
-```csharp
-string svgFilePath = "image.svg"; 
-RadFixedDocument fixedDocument = new RadFixedDocument();
-FixedContentEditor documentPageEditor = new FixedContentEditor(fixedDocument.Pages.AddPage());
-int offset = 10;
-documentPageEditor.Position.Translate(offset, offset);
-
-FormSource svgHostForm = FormSource.FromSvg(File.ReadAllBytes(svgFilePath));
-documentPageEditor.DrawForm(svgHostForm); 
-//draw the SVG FormSource with its original size
-
-double aspectRatio = svgHostForm.Size.Width / svgHostForm.Size.Height;
-//get the aspect ratio from the original SVG size
-double desiredSVGWidth = 100;
-double calculatedSVGHeight = desiredSVGWidth / aspectRatio;
-documentPageEditor.Position.Translate(offset, svgHostForm.Size.Height + offset);          
-documentPageEditor.DrawForm(svgHostForm, new Size(desiredSVGWidth, calculatedSVGHeight));
-//draw the SVG FormSource with desired width preserving the aspect ratio
-```
+<snippet id='pdf-add-svg'/>
 ![PdfProcessing Insert SVG FormSource](images/pdf-processing-insert-svg.png)
 
 ## See Also

@@ -31,49 +31,7 @@ The following example shows how the validation can be used:
 #### **[C#] Example: Validate a field**
 
 
-{{region radpdfprocessing-features-digital-signature_3}}
-
-    RadFixedDocument document = new PdfFormatProvider().Import(stream, TimeSpan.FromSeconds(10)); // The stream containing the document
-    
-    string validationStatus;
-    
-    // For simplicity, the example handles only the first signature.
-    SignatureField firstSignatureField = document.AcroForm.FormFields.FirstOrDefault(field => field.FieldType == FormFieldType.Signature) as SignatureField;
-    if (firstSignatureField != null && firstSignatureField.Signature != null)
-    {
-        SignatureValidationProperties properties = new SignatureValidationProperties();
-        System.Security.Cryptography.X509Certificates.X509VerificationFlags verificationFlags = System.Security.Cryptography.X509Certificates.X509VerificationFlags.IgnoreInvalidName;
-        properties.Chain.ChainPolicy.VerificationFlags = verificationFlags;
-    
-        SignatureValidationResult validationResult;
-        if (firstSignatureField.Signature.TryValidate(properties, out validationResult))
-        {
-            if (!validationResult.IsDocumentModified)
-            {
-                if (validationResult.IsCertificateValid)
-                {
-                    validationStatus = "Valid";
-                }
-                else
-                {
-                    validationStatus = "Unknown";
-                }
-            }
-            else
-            {
-                validationStatus = "Invalid";
-            }
-        }
-        else
-        {
-            validationStatus = "Invalid";
-        }
-    }
-    else
-    {
-        validationStatus = "None";
-    }
-{{endregion}}
+<snippet id='pdf-validate-signature'/>
 
 >To evaluate a certificate as trusted, it must be added to the [trusted certificates on your machine](https://docs.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
 

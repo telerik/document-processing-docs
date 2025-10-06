@@ -37,11 +37,7 @@ __Example 1__ demonstrates how to create a new __RadFixedPage__ instance and add
 
 #### __[C#] Example 1: Create RadFixedPage and add it to a document__ 
 
-{{region cs-radpdfprocessing-model-radfixedpage_0}}
-	RadFixedDocument document = new RadFixedDocument();
-	RadFixedPage page = new RadFixedPage();
-	document.Pages.Add(page);
-{{endregion}}
+<snippet id='add-radfixedpage'/>
 
 ## Operating with RadFixedPage
 
@@ -55,10 +51,7 @@ __Example 2__ shows how to add a previously created ContentElement in a __RadFix
             
 #### __[C#] Example 2: Add content element to RadFixedPage__
 
-{{region cs-radpdfprocessing-model-radfixedpage_1}}
-	RadFixedPage page = new RadFixedPage();
-	page.Content.Add(contentElement);
-{{endregion}}
+<snippet id='add-link-annotation-in-radfixedpage'/>
 
 You can also use the __Add\[Element]()__ methods of RadFixedPages's __Content__ property. The respective methods - AddPath(), AddTextFragment(), AddImage(), create the element, add it to the page and return it for your convenience.            
 
@@ -71,10 +64,7 @@ __Example 3__ shows how to add a previously created annotation in a __RadFixedPa
 
 #### __[C#] Example 3: Add annotation to RadFixedPage__
 
-{{region cs-radpdfprocessing-model-radfixedpage_2}}
-	RadFixedPage page = new RadFixedPage();
-	page.Annotations.Add(annotation);
-{{endregion}}
+<snippet id='add-annotation-to-radfixedpage'/>
 
 The other possible approach is using the __AddLink()__ method of the __Annotations__ property. The method creates the link, adds it to the page and returns it. More information on the topic is available in the [Annotation]({%slug radpdfprocessing-model-annotations-links%}) article.          
 
@@ -87,11 +77,7 @@ __Example 4__ shows how you can change the __Rotation__ and __Size__ properties 
 
 #### __[C#] Example 4: Change properties of a RadFixedPage__
 
-{{region cs-radpdfprocessing-model-radfixedpage_3}}
-	RadFixedPage page = new RadFixedPage();
-	page.Rotation = Rotation.Rotate270;
-	page.Size = new Size(792, 1128);
-{{endregion}}
+<snippet id='modify-radfixedpage-properties'/>
 
 >note A complete SDK example how to generate a document is available [here](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/GenerateDocument).
 

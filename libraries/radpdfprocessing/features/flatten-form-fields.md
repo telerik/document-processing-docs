@@ -18,12 +18,7 @@ The __FlattenFormFields__ method does not take any parameters and will flatten a
 
 #### __[C#] Example 1:  Flatten all fields__
 
-{{region cs-pdfprocessing-features-flatten-form-fields_0}}
-
-	RadFixedDocument document = GetFixedDocument();
-	document.AcroForm.FlattenFormFields();
-
-{{endregion}}
+<snippet id='pdf-flatten-all-fields'/>
 
 ### Using the FlattenFormField method
 
@@ -31,17 +26,6 @@ The __FlattenFormField__ method takes the field that should be flattened as a pa
 
 #### __[C#] Example 2:  Flatten single field__
 
-{{region cs-pdfprocessing-features-flatten-form-fields_1}}
-
-	RadFixedDocument document = GetFixedDocument();
-	string fieldName = "TextBoxField";
-	
-	FormField field = document.AcroForm.FormFields.Where(n => n.Name == fieldName).FirstOrDefault();
-	if (field != null)
-	{
-	    document.AcroForm.FlattenFormField(field);
-	}
-
-{{endregion}}
+<snippet id='pdf-flatten-single-field'/>
 
 

@@ -24,22 +24,7 @@ The **StampAnnotation** class is a derivative of the **MarkupAnnotation** (desce
 
 ### Creating a StampAnnotation
 
-```csharp
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            RadFixedPage page = fixedDocument.Pages.AddPage();
-
-            StampAnnotation annotation1 = page.Annotations.AddStamp(new Rect(50, 50, 300, 50));
-            annotation1.Name = StampAnnotationPredefinedNames.SBApproved;
-
-            StampAnnotation annotation2 = page.Annotations.AddStamp(new Rect(50, 100, 300, 50));
-            annotation2.Name = StampAnnotationPredefinedNames.SBPreliminaryResults;
-
-            StampAnnotation annotation3 = page.Annotations.AddStamp(new Rect(50, 150, 300, 50));
-            annotation3.Name = StampAnnotationPredefinedNames.SBRejected;
-
-            StampAnnotation annotation4 = page.Annotations.AddStamp(new Rect(50, 200, 300, 50));
-            annotation4.Name = StampAnnotationPredefinedNames.SBVoid;
-```
+<snippet id='pdf-create-stamp-annotation'/>
 
 ![Create StampAnnotation](images/pdf-processing-create-stampannotation.png)  
 
@@ -47,15 +32,7 @@ The **StampAnnotation** class is a derivative of the **MarkupAnnotation** (desce
 
 The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) offers the public **DrawStampAnnotation** method which creates a new __StampAnnotation__ and draws it with a specified annotation size and name.
 
-```csharp
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            FixedContentEditor editor = new FixedContentEditor(fixedDocument.Pages.AddPage());
-
-            editor.Position.Translate(100, 100);
-            editor.DrawStampAnnotation(new Size(250, 250), StampAnnotationPredefinedNames.SBFinal);
-            editor.Position.Translate(400, 100);
-            editor.DrawStampAnnotation(new Size(250, 250), StampAnnotationPredefinedNames.SBConfidential);
-```
+<snippet id='pdf-fixed-editor-create-stamp'/>
 
 ![Create StampAnnotation with FixedContentEditor](images/pdf-processing-create-stampannotation-with-fixedcontenteditor.png)   
 
@@ -67,45 +44,7 @@ The **AnnotationContentSource** class, accessed by the **Content** property of t
 
 >important When creating appearance for an annotation, it is important to create it with the same size as the rectangle of the annotation otherwise unexpected behavior may occur when the annotation is moved in Adobe.
 
-```csharp 
-        private RadFixedDocument CreateTextAnnotation()
-        {
-            RadFixedDocument fixedDocument = new RadFixedDocument();
-            RadFixedPage page = fixedDocument.Pages.AddPage();
-
-            StampAnnotation annotation = page.Annotations.AddStamp(new Rect(100, 100, 300, 100));
-            annotation.Name = "#Sold";
-
-            FormSource simpleForm = new FormSource();
-            CreateContentFormWithText(simpleForm, "Sold");
-
-            annotation.Content.NormalContentSource = simpleForm;
-            return fixedDocument;
-        }
-
-        private static void CreateContentFormWithText(FormSource normalForm, string text)
-        {
-            normalForm.Size = new Size(300, 100);
-
-            FixedContentEditor formEditor = new FixedContentEditor(normalForm);
-
-            using (formEditor.SaveProperties())
-            {
-                formEditor.GraphicProperties.IsFilled = true;
-                formEditor.GraphicProperties.IsStroked = true;
-                formEditor.GraphicProperties.StrokeThickness = 2;
-                formEditor.GraphicProperties.StrokeColor = new RgbColor(92, 229, 0);
-                formEditor.GraphicProperties.FillColor = new RgbColor(213, 222, 226);
-                formEditor.GraphicProperties.StrokeDashArray = new double[] { 17, 4 };
-                formEditor.DrawRectangle(new Rect(formEditor.Position.Matrix.OffsetX, formEditor.Position.Matrix.OffsetY, 300,100));
-            }
-
-            formEditor.TextProperties.FontSize = 20;
-            formEditor.TextProperties.Font = FontsRepository.Courier;
-            formEditor.Position.Translate(10, 10);
-            formEditor.DrawText(text);
-        }
-```
+<snippet id='pdf-stamp-annotation-with-appearance'/>
 
 ![Create StampAnnotation with Appearance](images/pdf-processing-create-stampannotation-with-appearance.png)  
 

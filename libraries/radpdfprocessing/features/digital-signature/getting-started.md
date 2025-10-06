@@ -31,68 +31,7 @@ The following example shows a full code snippet for a simple signing of a newly 
 
 #### **[C#] Example: Sign a document**
 
-{{region radpdfprocessing-features-digital-signature_2}}
-
-    using System;
-    using Telerik.Windows.Documents.Fixed.Model.Annotations;
-    using System.Security.Cryptography.X509Certificates;
-    using Telerik.Windows.Documents.Fixed.Model.Editing;
-    using Telerik.Windows.Documents.Fixed.Model.InteractiveForms;
-    using Telerik.Windows.Documents.Fixed.Model.Objects;
-    using Telerik.Windows.Documents.Fixed.Model.Resources;
-    using Telerik.Windows.Documents.Fixed.Model;
-    using Telerik.Windows.Documents.Fixed.Model.DigitalSignatures;
-    using System.Windows;
-    using System.IO;
-
-    namespace ConsoleNetFramework
-    {
-        internal class Program
-        {
-            static void Main(string[] args)
-            {
-                int signatureFieldWidth = 200;
-                int signatureFieldHeight = 50;
-                int signaturePositionLeft = 10;
-                int signaturePositionTop = 10;
-
-                X509Certificate2 certificate = new System.Security.Cryptography.X509Certificates.X509Certificate2("Certificate.pfx", "johndoe");
-                SignatureField pdfSignature = new SignatureField("SignatureField");
-                pdfSignature.Signature = new Signature(certificate);
-
-                Form pdfForm = new Telerik.Windows.Documents.Fixed.Model.Objects.Form();
-                pdfForm.FormSource = new FormSource();
-                pdfForm.FormSource.Size = new Size(signatureFieldWidth, signatureFieldHeight);
-                FixedContentEditor editor = new FixedContentEditor(pdfForm.FormSource);
-                pdfForm.Position.Translate(signaturePositionLeft, signaturePositionTop);
-                editor.DrawText($"{certificate.GetNameInfo(X509NameType.SimpleName, false)} {DateTime.Now.ToString("yyyy.MM.dd HH:mm")}");
-
-                SignatureWidget signatureWidget = pdfSignature.Widgets.AddWidget();
-                signatureWidget.Content.NormalContentSource = pdfForm.FormSource;
-                signatureWidget.Rect = new Rect(signaturePositionLeft,signaturePositionTop,signatureFieldWidth,signatureFieldHeight);
-                signatureWidget.RecalculateContent();
-
-                RadFixedDocument document = new RadFixedDocument();
-                RadFixedPage pdfPage = document.Pages.AddPage();
-                pdfPage.Annotations.Add(signatureWidget);
-
-                FixedContentEditor pageEditor = new FixedContentEditor(pdfPage);
-                pageEditor.Position.Translate(signaturePositionLeft, signaturePositionTop);
-                pageEditor.DrawForm(pdfForm.FormSource);
-                document.AcroForm.FormFields.Add(pdfSignature);
-                signatureWidget.RecalculateContent();
-
-                string signedDocumentFilePath = "signed.pdf";
-                File.Delete(signedDocumentFilePath);
-                using (System.IO.Stream output = new System.IO.FileStream(signedDocumentFilePath, System.IO.FileMode.OpenOrCreate, System.IO.FileAccess.ReadWrite))
-                {
-                    new Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider().Export(document, output);
-                }
-            }
-        }
-    }
-
-{{endregion}}
+<snippet id='pdf-sign-document'/>
 
 >important In .NET Standard use __Telerik.Documents.Primitives.Rect__ instead of __System.Windows.Rect__.
 
@@ -116,11 +55,7 @@ The signature flags were introduced in R2022 SP1. You can set the flags with the
 
 #### **[C#] Example: Set signature flags**
 
-{{region radpdfprocessing-features-digital-signature_5}}
-	
-	pdfDocument.AcroForm.SignatureFlags = SignatureFlags.None;
-
-{{endregion}}
+<snippet id='pdf-signature-flags'/>
 
 The possible values are: 
 * __None__: Indicates no signature fields exist.

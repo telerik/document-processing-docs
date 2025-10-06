@@ -32,23 +32,7 @@ CombTextBoxField provides the following properties:
 * **MaxLengthOfInputCharacters**: Integer value specifying the number of characters that can be inputted.
 
 #### **[C#] Example 1: Create a CombTextBoxField and add it to a page**
-{{region radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield_0}}
-
-	CombTextBoxField combTextBoxField = new CombTextBoxField("SampleCombTextBox")
-	{
-	    MaxLengthOfInputCharacters = 4,
-	    DefaultValue = "2017",
-	    Value = "2017",
-	};
-	
-	VariableContentWidget widget = combTextBoxField.Widgets.AddWidget();
-	widget.Rect = new Rect(new Size(250, 50));
-    widget.RecalculateContent();
-
-	document.AcroForm.FormFields.Add(combTextBoxField);
-	document.Pages[0].Annotations.Add(widget);
-
-{{endregion}}
+<snippet id='pdf-combtetbox-field'/>
 
 
 ## See Also

@@ -29,13 +29,7 @@ To create an object of type PdfSteamWriter, you should pass it the Stream of the
 
 #### **[C#] Example 1: Instantiate PdfStreamWriter**
 
-{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_0}}
-
-	using (PdfStreamWriter writer = new PdfStreamWriter(File.OpenWrite(resultDocument)))
-	{
-		// ...
-	}
-{{endregion}}
+<snippet id='pdf-stream-writer-instance'/>
 
 **PdfStreamWriter** exposes also an additional overload, which allows you to keep the stream you are working with open after disposing the writer instance by passing **true** as a value for the second constructor parameter (leaveStreamOpen).
 
@@ -53,14 +47,7 @@ The constructor of **PdfStreamWriter** enables you to use any class inheriting f
 
 #### **[C#] Example 2: Instantiate PdfStreamWriter with MemoryStream**
 
-{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_3}}
-
-    MemoryStream stream = new MemoryStream();
-	using (PdfStreamWriter writer = new PdfStreamWriter(stream, true))
-	{
-		// ...
-	}
-{{endregion}}
+<snippet id='pdf-stream-writer-instance-memory'/>
 
 ## PdfStreamWriter Members
 
@@ -70,32 +57,13 @@ The members of the class allow you to set several properties of the document you
 	
 	#### **[C#] Example 3: Insert a new page into a document**
 	
-	{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_1}}
-	
-		using (PdfStreamWriter writer = new PdfStreamWriter(File.OpenWrite(resultDocument)))
-		{
-			Size size = new Size(700,1200);
-			Rotation rotation = Rotation.Rotate270;
-	
-			using (PdfPageStreamWriter pageWriter = writer.BeginPage(size, rotation))
-	        {
-				// Use the pageWriter object to fill the content of the page.
-			}
-		}
-	{{endregion}}
+	<snippet id='pdf-stream-writer-insert-new-page'/>
 
 * **WritePage()**: The WritePage() methods enable you to pass an already constructed page object. With the different overloads, you can pass an instance of [**RadFixedPage**]() and [**PdfPageStreamWriter**]().
 	
 	#### **[C#] Example 4: Insert an already generated page into a document**
 	
-	{{region cs-radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter_2}}
-	
-		using (PdfStreamWriter writer = new PdfStreamWriter(File.OpenWrite(resultDocument)))
-		{
-			RadFixedPage page = this.GeneratePage();
-			writer.WritePage(page);
-		}
-	{{endregion}}
+	<snippet id='pdf-insert-generated-page-in-doc'/>
 
 ### Settings of PdfStreamWriter
 
