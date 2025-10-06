@@ -49,7 +49,8 @@ The __Export()__ method of **TextFormatProvider** allows you to pass a **TextFor
 	RadFixedDocument document = CreateRadFixedDocument();
 	
 	TextFormatProvider provider = new TextFormatProvider();
-	string text = provider.Export(document, settings);
+	string text = provider.Export(document, settings); // Obsolete since Q4 2025 
+	string text = provider.Export(document, settings, TimeSpan.FromSeconds(10));
 {{endregion}}
 
 
