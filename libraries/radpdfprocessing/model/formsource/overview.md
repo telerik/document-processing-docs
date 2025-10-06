@@ -32,10 +32,11 @@ The FormSource class exposes a default constructor which you can use to create a
 The snippet from **Example 1** will create an empty FormSource object. To fill this object with content you can use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) as described later in this article.
 
 The properties exposed by the **FormSource** class are as follows:
-|Property|Description|
-|----|----|
-|**Size**|Allows getting or setting the size of the form.|
-|**Content**|Gets the contents of the form.| 
+
+| Property | Description |
+| ---- | ---- |
+| **Size** | Allows getting or setting the size of the form. |
+| **Content** | Gets the contents of the form. | 
 
 ## Adding Content to a FormSource Object
 
