@@ -1,9 +1,9 @@
 ---
-title: Using FixedContentEditor.DrawText to Write Extended Latin Characters in PDF Document
-description: Learn how to resolve the issue when FixedContentEditor.DrawText in the PdfProcessing library does not display extended Latin characters like Polish letters correctly.
+title: Using FixedContentEditor's DrawText method to Write Extended Latin Characters in PDF Document
+description: Learn how to resolve the issue when the FixedContentEditor's DrawText methodin the PdfProcessing library does not display extended Latin characters like Polish letters correctly.
 type: how-to
-page_title: Displaying Extended Latin Characters with FixedContentEditor.DrawText in PDF
-meta_title: Displaying Extended Latin Characters with FixedContentEditor.DrawText in PDF
+page_title: Displaying Extended Latin Characters with the FixedContentEditor's DrawText in PDF
+meta_title: Displaying Extended Latin Characters with FixedContentEditor's DrawText in PDF
 slug: fixedcontenteditor-drawtext-extended-latin-characters-pdf
 tags: pdf,processing,fixedcontenteditor,draw,text,unicode,extended,latin,font, polish
 res_type: kb
@@ -18,16 +18,11 @@ ticketid: 1699876
 
 ## Description
 
-When using FixedContentEditor.DrawText in the Telerik PdfProcessing library to generate PDF documents, extended Latin characters (e.g., Polish letters like "ż", "ł", "ć", "ę", "ś", "ą") may not display correctly. Instead, characters are replaced or omitted, leading to incomplete text in the PDF. This happens because standard PDF fonts like TimesRoman do not support extended Latin characters. 
-
-This knowledge base article also answers the following questions:
-- How to use FixedContentEditor.DrawText for Polish characters in PDFs?
-- Why are extended Latin characters missing in PDF documents?
-- How to register a TrueType font for Unicode characters in PdfProcessing?
+When using the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) **DrawText** method in the Telerik PdfProcessing library to generate PDF documents, extended Latin characters (e.g., Polish letters like "ż", "ł", "ć", "ę", "ś", "ą") may not display correctly. Instead, characters are replaced or omitted, leading to incomplete text in the PDF. This happens because standard PDF fonts like TimesRoman do not support extended Latin characters. This knowledge base article shows how to handle this situation.
 
 ## Solution
 
-To correctly display extended Latin characters, use a Unicode-compliant TrueType font and register it with the Telerik Document Processing library. Follow these steps:
+To correctly display extended Latin characters, use a Unicode-compliant TrueType font and [register]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font) it with the Telerik Document Processing library. Follow these steps:
 
 1. Add the desired TrueType font file (e.g., Segoe UI) to your project.
 2. Write the following code to load, register, and use the font for drawing text:
@@ -82,6 +77,6 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 
 ## See Also
 
-- [FixedContentEditor Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/fixedcontenteditor)
-- [PdfProcessing Fonts](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/fonts)
-- [PdfFormatProvider API](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.formatproviders.pdf.pdfformatprovider)
+- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+- [Fonts in PdfProcessing]({%slug radpdfprocessing-concepts-fonts%})
+- [Cross-Platform Support]({%slug radpdfprocessing-cross-platform-fonts%})
