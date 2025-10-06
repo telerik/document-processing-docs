@@ -1,11 +1,11 @@
 ---
-title: Fix WinForms Runtime DPI-Aware Application
+title: Resolving Unexpected Per-Monitor DPI Awareness in WinForms Apps
 description: Fix a WinForms application that unexpectedly becomes (per‑monitor) DPI aware and changes size when using controls depending on the Telerik Document Processing libraries.
 type: how-to 
-page_title: Fix WinForms Runtime DPI-Aware Application
+page_title: Why Your WinForms App Resizes - DPI Awareness and Telerik Document Processing Explained
 slug: fix-winforms-runtime-dpi-aware-application
 position: 0
-tags: winforms, dpi, scaling, document, processing, pdf, viewer, rich, text, editor, spreadsheet, control, aware, shrink, scale
+tags: winforms,windows, forms, dpi, scaling, document, processing, pdf, viewer, rich, text, editor, spreadsheet, control, aware, shrink, scale
 res_type: kb
 ---
 
@@ -17,7 +17,7 @@ res_type: kb
 
 ## Description
 
-A WinForms application may appear smaller (or larger) at runtime after using [Document Processing Libraries]({%slug introduction%}) (**DPL**) functionality or [DPL-dependent Telerik controls](https://docs.telerik.com/devtools/winforms/integration-with-other-telerik-products/document-processing-libraries#telerik-ui-for-winforms-integration) (**RadPdfViewer**, **RadRichTextEditor**, **RadSpreadsheetEditor**, **RadDiagram**). This can occur, for example, when exporting data, loading a document, or instantiating types from assemblies used by:
+A WinForms application may appear smaller (or larger) at runtime after using [Document Processing Libraries]({%slug introduction%}) (**DPL**) functionality or [DPL-dependent Telerik controls](https://docs.telerik.com/devtools/winforms/integration-with-other-telerik-products/document-processing-libraries#telerik-ui-for-winforms-integration) (e. g. **RadPdfViewer**, **RadSpreadsheet**). This can occur, for example, when **exporting data**, loading a document, or instantiating types from assemblies used by:
 
 These dependencies internally rely on WPF assemblies where DPI awareness is enabled at the assembly level. The moment a type from such an assembly is initialized, the hosting WinForms process can become DPI-aware.
 

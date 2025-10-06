@@ -27,10 +27,10 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-To simulate a checkbox using conditional formatting in Telerik SpreadProcessing, apply two separate conditional formatting rules. One for the checked state and one for the unchecked state.
+To simulate a checkbox using conditional formatting in Telerik SpreadProcessing, apply two separate conditional formatting rules: one for the `checked` state and one for the `unchecked` state.
 
-1. Create a workbook and add a worksheet.
-2. Define a **DifferentialFormatting** for the checked state with a format that displays "☑".
+1. Create a [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%}) and add a worksheet.
+2. Define a [DifferentialFormatting]({%slug radspreadprocessing-features-conditional-formatting%}) for the checked state with a format that displays "☑".
 3. Create an **EqualToRule** for the checked state, matching cells with a value of **1**.
 4. Apply the conditional formatting rule to the cell.
 5. Define another **DifferentialFormatting** for the unchecked state with a format that displays "☐".
@@ -74,5 +74,6 @@ using (Stream output = new FileStream(xlsxOutputPath, FileMode.Create))
 
 ## See Also
 
-* [Conditional Formatting]{%slug radspreadprocessing-features-conditional-formatting%}
-* [Workbook]{%slug radspreadprocessing-working-with-workbooks-what-is-workbook%}
+* [Conditional Formatting]({%slug radspreadprocessing-features-conditional-formatting%})
+* [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
+* [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
