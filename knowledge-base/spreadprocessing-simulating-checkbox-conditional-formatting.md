@@ -39,6 +39,8 @@ To simulate a checkbox using conditional formatting in Telerik SpreadProcessing,
 8. Set the cell value to **1** or **0** to test the checkbox simulation.
 9. Export the workbook to an XLSX file.
 
+![Conditional Formatting CheckBox](images/conditional-formatting-checkbox.png) 
+
 Here’s an example implementation:
 
 ```csharp
