@@ -117,7 +117,7 @@ The following code snippet shows how to create __List__ with __BulletDefault__ t
 
 #### __[C#] Example 5: Using lists with Block class__
 
-<snippet id='pdf-list-using--with-blocks'/>
+<snippet id='pdf-list-using-with-blocks'/>
 
 >The list style is applied for the whole Block element. Generating a list consisting of several paragraphs in different list items should be done using the same count of Block instances as the number of the different list items.
 
