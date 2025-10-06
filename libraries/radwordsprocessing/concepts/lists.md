@@ -185,10 +185,10 @@ __Example 6__ demonstrates how you can apply the list created in Steps 1-4 above
 {{region cs-radwordsprocessing-concepts-lists_5}}
 	for (int level = 0; level < list.Levels.Count; level++)
 	{
-	    Paragraph paragrah = section.Blocks.AddParagraph();
-	    paragrah.Inlines.AddRun(string.Format("ListLevel: {0}", level + 1));
-	    paragrah.ListId = list.Id;
-	    paragrah.ListLevel = level;
+	    Paragraph paragraph = section.Blocks.AddParagraph();
+	    paragraph.Inlines.AddRun(string.Format("ListLevel: {0}", level + 1));
+	    paragraph.ListId = list.Id;
+	    paragraph.ListLevel = level;
 	}
 {{endregion}}
 
