@@ -18,27 +18,7 @@ position: 1
 
 #### **[C#] Add ZUGFeRD invoice**
 
-{{region cs-radpdfprocessing-embedded-file-add-zugferd-invoice}}
-
-            RadFixedDocument document = new RadFixedDocument();
-            using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
-            {
-                editor.CharacterProperties.TrySetFont(new System.Windows.Media.FontFamily("Calibri"));
-                editor.InsertRun("PDF/A-3B Compliant Invoice");
-            };
-            byte[] bytes = File.ReadAllBytes(@"zugferd-invoice.xml");
-            document.EmbeddedFiles.AddZugferdInvoice(bytes);
-
-            PdfFormatProvider provider = new PdfFormatProvider();
-            PdfExportSettings settings = new PdfExportSettings();
-            settings.ComplianceLevel = PdfComplianceLevel.PdfA3B;
-            provider.ExportSettings = settings; 
-            using (Stream output = File.OpenWrite("exportedInvoice.pdf"))
-            { 
-                provider.Export(document, output);
-            }
-
-{{endregion}}
+<snippet id='pdf-add-zugferd-invoice'/>
 
 >note Only a single XML invoice attachment is allowed according to the ZUGFeRD standard.
 
@@ -46,14 +26,7 @@ position: 1
 
 #### **[C#] Remove ZUGFeRD invoice**
 
-{{region cs-radpdfprocessing-embedded-file-remove-zugferd-invoice}}
-
-            if (document.EmbeddedFiles.ContainsZugferdInvoice)
-            {
-                document.EmbeddedFiles.RemoveZugferdInvoice();
-            }
-
-{{endregion}}
+<snippet id='pdf-remove-zugferd-invoice'/>
 
 ## ZugferdConformanceLevel 
 
@@ -66,8 +39,6 @@ RadPdfProcessing offers the functionality to specify the **ZugferdConformanceLev
 * **Comfort**: The comfort profile with richer structured content, typically aligned with common business requirements to enable advanced automation.
 * **Extended**: The most comprehensive profile including extended data elements to cover advanced or industry-specific scenarios beyond the comfort profile.
 
-````
-RadFixedDocument document = new RadFixedDocument();
-document.EmbeddedFiles.AddZugferdInvoice(File.ReadAllBytes(@"zugferd-invoice.xml"), ZugferdConformanceLevel.Comfort); 
-````
+<snippet id='pdf-specify-zugferd-conformance-level'/>
+
 
