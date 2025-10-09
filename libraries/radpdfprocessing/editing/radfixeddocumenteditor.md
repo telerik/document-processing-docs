@@ -157,13 +157,13 @@ The character properties that are responsible for the look of the runs are liste
 	* __Subscript__: A baseline that is aligned at the subscript position of the containing box.
 	* __Superscript__: A baseline that is aligned at the superscript position of the containing box.
 
-* __UnderlinePattern__: Тhe underline pattern. Two patterns are supported.
+* __UnderlinePattern__: The underline pattern. Two patterns are supported.
 	* __None__: There is no underline. This is the default value.
 	* __Single__: The underline is a single line.
 
 * __UnderlineColor__: The color of the underline.
 
-* __StrikethroughPattern__: Тhe strikethrough pattern. Two patterns are supported.
+* __StrikethroughPattern__: The strikethrough pattern. Two patterns are supported.
 	* __None__: There is no strikethrough. This is the default value.
 	* __Single__: The strikethrough is a single line.
 

@@ -54,7 +54,7 @@ If you want to apply default styling to all the cells in a table, you can use Ta
 * __Background__: Specifies the background of the cell.
             
 
-__Еxample 2__ shows how to use the __DefaultCellProperties__ of a table
+__Example 2__ shows how to use the __DefaultCellProperties__ of a table
         
 
 #### __[C#] Example 2: Use DefaultCellProperties of Table__

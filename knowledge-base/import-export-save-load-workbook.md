@@ -180,7 +180,7 @@ public Workbook LoadFromUploadedFile(UploadedFile uploadedFile) // Telerik RadAs
 The SQL table used for the example below has the `FileContent` column as `varbinary(MAX)`. 
 
 ````C#
-// the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IBinaryWorkbookFormatProvider interfacе
+// the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IBinaryWorkbookFormatProvider interface
 IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
 // ReadFileFromDatabaseAsByteArray is demo method declared in the code snippet below 

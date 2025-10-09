@@ -50,10 +50,10 @@ The __CellSelection__ class exposes an __Insert()__ method that takes one argume
 In order to remove cells, you need to create a __CellSelection__ object that indicates the region of cells you would like to remove. Also, you have to specify the direction of the shift.
         
 
-Whenever you remove cells, all values that appear to the right or below the CellSelection region are shifted. There are two shift directions: left and up. When you choose to shift cells to the left, all cells that appear to the right of the selected region аре shifted to the left. Similarly, choosing to shift the values up moves all values in the selected region columns upwards.
+Whenever you remove cells, all values that appear to the right or below the CellSelection region are shifted. There are two shift directions: left and up. When you choose to shift cells to the left, all cells that appear to the right of the selected region are shifted to the left. Similarly, choosing to shift the values up moves all values in the selected region columns upwards.
         
 
-The __CellSelection__ class exposes a __Remove()__ method that takes one argument which indicates the direction of the shift. Тhe class also offers a __CanInsertOrRemove()__ method that determines if the removal is possible. __Example 2__ shows how to remove cells using methods mentioned above.
+The __CellSelection__ class exposes a __Remove()__ method that takes one argument which indicates the direction of the shift. The class also offers a __CanInsertOrRemove()__ method that determines if the removal is possible. __Example 2__ shows how to remove cells using methods mentioned above.
         
 
 #### __[C#] Example 2: Remove cells__

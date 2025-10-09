@@ -145,7 +145,7 @@ In order to use the document theme's fonts, you need to use __ThemableFontFamily
 * Passing a __FontFamily__ object or a string representing a FontFamily name – the result would be a static FontFamily, meaning it will not be changed when the document theme is changed.
             
 
-When you need to create а font that depends on the current document theme, you can use the __ThemableFontFamily__ objects.
+When you need to create a font that depends on the current document theme, you can use the __ThemableFontFamily__ objects.
         
 
 __Example 4__ shows how to create a ThemableFontFamily.
