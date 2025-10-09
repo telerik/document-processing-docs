@@ -16,7 +16,7 @@ As of **Q2 2025** RadPdfProcessing introduces the **PdfStreamSigner**. The **Sig
 
 |Method|Description|
 |----|----|
-|**PdfStreamSigner(Stream outputStream)**|Creates a new instance of thе PdfStreamSigner and specifies the output stream of the signed document.|
+|**PdfStreamSigner(Stream outputStream)**|Creates a new instance of the PdfStreamSigner and specifies the output stream of the signed document.|
 |**SignDocument(Stream originalStream, SignatureField signatureField, int pageIndex, TimeSpan? timeout)**|Adds a [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) to the PDF document|
 
 The following example shows how to insert multiple [Digital Signatures]({%slug radpdfprocessing-features-digital-signature%}) into a PDF document using the PdfStreamSigner:

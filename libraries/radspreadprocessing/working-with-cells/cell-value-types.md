@@ -15,11 +15,11 @@ This article briefly describes how to work with the __Value__ property of the ce
 
 Since cells are the atomic data units of a worksheet, their __Value__ property is used frequently. The property is of type __ICellValue__ – an interface that is implemented by all five concrete value types supported by the document model: EmptyCellValue, BooleanCellValue, NumberCellValue, FormulaCellValue and TextCellValue. The __ICellValue__ interface exposes several properties and methods:
         
-* __RawValue__: Тhe property holds the string value entered by the user, opposed to the result value displayed in the cell. For example, when the user enters the string "=1+2" in a cell, the Value of the cell becomes a *FormulaCellValue* instance with result value of "3" and RawValue of "=1+2".
+* __RawValue__: The property holds the string value entered by the user, opposed to the result value displayed in the cell. For example, when the user enters the string "=1+2" in a cell, the Value of the cell becomes a *FormulaCellValue* instance with result value of "3" and RawValue of "=1+2".
             
-* __ValueType__ and __ResultValueType__: Тhe two properties are of type CellValueType and provide information about the type of the Value and its result. For example, the FormulaCellValue with RawValue of "=1+2" has a *Formula* ValueType and a *Number* ResultValueType. Similarly, the string "=CONCATENATE("abc", "def")" produces a FormulaCellValue with *Formula* ValueType and *Text* ResultValueType.
+* __ValueType__ and __ResultValueType__: The two properties are of type CellValueType and provide information about the type of the Value and its result. For example, the FormulaCellValue with RawValue of "=1+2" has a *Formula* ValueType and a *Number* ResultValueType. Similarly, the string "=CONCATENATE("abc", "def")" produces a FormulaCellValue with *Formula* ValueType and *Text* ResultValueType.
             
-* __GetValueAsString()__ and __GetResultValueAsString()__: Тhe two methods require a **CellValueFormat** argument that specifies how to present the Value and the ResultValue of the ICellValue object as strings.
+* __GetValueAsString()__ and __GetResultValueAsString()__: The two methods require a **CellValueFormat** argument that specifies how to present the Value and the ResultValue of the ICellValue object as strings.
             
 To access the Value property of cells, first you need to create a CellSelection object that designates the cell or region of cells you would like to work with. Just like all other properties of the worksheet's cells, the Value property has three methods that respectively set, get and clear its value: SetValue(), GetValue() and ClearValue().
         
