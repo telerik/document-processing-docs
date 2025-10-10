@@ -15,8 +15,7 @@ All you have to do in order to use __PdfFormatProvider__ is add references to th
       
 
 * Telerik.Windows.Documents.Core.dll
-* Telerik.Windows.Documents.Flow.dll
-* ~~Telerik.Windows.Zip.dll~~*
+* Telerik.Windows.Documents.Flow.dll 
 * Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll
 * Telerik.Windows.Documents.Fixed.dll
 
