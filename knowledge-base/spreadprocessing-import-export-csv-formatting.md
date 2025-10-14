@@ -1,6 +1,6 @@
 ---
 title: Importing and Exporting CSV Files while changing their formatting in Telerik SpreadProcessing
-description: Learn how to handle culture settings, delimiters, and decimal separators while importing and exporting CSV files in Telerik SpreadProcessing.
+description: Learn how to handle culture settings, delimiters, decimal separators, and date formats while importing and exporting CSV files in Telerik SpreadProcessing.
 type: how-to
 page_title: Changing Formatting While Importing and Exporting CSV Files in SpreadProcessing
 meta_title: Changing Formatting While Importing and Exporting CSV Files in SpreadProcessing
@@ -12,22 +12,13 @@ ticketid: 1700417
 
 ## Environment
 
-<table>
-<tbody>
-<tr>
-<td> Product </td>
-<td> SpreadProcessing for Telerik Document Processing </td>
-</tr>
-<tr>
-<td> Version </td>
-<td> 11.1.1 </td>
-</tr>
-</tbody>
-</table>
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| 2025.3.806 | RadSpreadProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)| 
 
 ## Description
 
-I want to import a CSV file and export its values to another CSV file while applying specific formatting during the process. I need to account for culture settings and delimiters during both import and export operations to ensure the desired formatting results.
+This article shows how to import a CSV file and export it with different formatting (delimiters, decimal separators, and date formats) back to CSV. You need to account for culture settings and delimiters during both import and export operations to ensure the desired formatting results.
 
 This knowledge base article also answers the following questions:
 - How to change culture settings during CSV import/export in SpreadProcessing?
@@ -36,12 +27,22 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-To import and export a CSV file with custom formatting, follow these steps:
+Example input data (*a comma (",") as the delimiter and a dot (".") as the decimal separator*):
 
-1. Set the culture settings to English (en-EN) and the delimiter to a comma (",") for importing the CSV file.
-2. Import the CSV file using the `CsvFormatProvider` and parse the workbook.
-3. Switch the culture settings to German (de-DE), the delimiter to a semicolon (";"), and apply the desired formatting.
-4. Export the formatted workbook to a new CSV file.
+![Input CSV](images/import-export-csv-formatting-input.png) 
+
+Example result data (*a semicolon (";") as the delimiter, a comma (",") as the decimal separator, and a formatted date*):
+
+![Output CSV](images/import-export-csv-formatting-output.png) 
+
+To import and process the input file correctly you must:
+* Set the **Delimiter** property of the [CsvFormatProvider Settings]({%slug radspreadprocessing-formats-and-conversion-csv-settings%}) to a comma (",")
+* Set the [culture]({%slug radspreadprocessing-features-setting-the-culture%}) to English ("en-EN"), since its default decimal separator is a dot (".") and must match the file decimal separator
+
+Once the document is imported and parsed, you can:
+* Switch to a culture that has a comma (",") as its default decimal separator (e.g German - "de-DE")
+* Set a new [Number Format]({%slug radspreadprocessing-features-number-formats%}) with a comma ("#,##") to the number values
+* Set the **Delimiter** property of the [CsvFormatProvider Settings]({%slug radspreadprocessing-formats-and-conversion-csv-settings%}) to a semicolon (";")
 
 ### Full Code Example
 
@@ -58,7 +59,7 @@ Workbook workbook;
 CsvFormatProvider formatProvider = new CsvFormatProvider();
 formatProvider.Settings.Delimiter = ',';
 
-using (Stream input = new FileStream("..\\..\\..\\input.csv", FileMode.Open))
+using (Stream input = new FileStream("input.csv", FileMode.Open))
 {
     workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
 }
@@ -80,7 +81,7 @@ date.SetFormat(dateFormat);
 
 formatProvider.Settings.Delimiter = ';';
 
-string fileName = "..\\..\\..\\output.csv";
+string fileName = "output.csv";
 File.Delete(fileName);
 using (Stream output = new FileStream(fileName, FileMode.Create))
 {
@@ -88,13 +89,7 @@ using (Stream output = new FileStream(fileName, FileMode.Create))
 }
 ```
 
-### Key Notes:
-- Modify `SpreadsheetCultureHelper` settings before and after importing the file to ensure proper parsing and formatting.
-- Use `CsvFormatProvider.Settings.Delimiter` to set the appropriate delimiter for import and export.
-- Apply formatting such as `CellValueFormat` to columns before exporting the workbook.
-
 ## See Also
 
-- [SpreadProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/overview)
-- [CsvFormatProvider Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/import-export/csv)
-- [Formatting Cells in SpreadProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/cells/formatting-cells)
+* [SpreadProcessing]({%slug radspreadprocessing-overview%})
+* [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})
