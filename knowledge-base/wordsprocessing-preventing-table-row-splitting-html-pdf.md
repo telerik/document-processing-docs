@@ -44,8 +44,6 @@ To prevent table rows from splitting across pages, manually recreate the PDF tab
 
 ![HTML to PDF Table Without Split Rows](images/html-pdf-table-no-split-rows.png) 
 
-### Code Example
-
 ```csharp
 const string InputHtmlPath = "..\\..\\..\\input.html";
 const string OutputPdfPath = "..\\..\\..\\output.pdf";
@@ -161,4 +159,3 @@ private static void AddRowToTable(Telerik.Windows.Documents.Fixed.Model.Editing.
 * [Table]({%slug radpdfprocessing-editing-table-overview%})
 * [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
 * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
----
