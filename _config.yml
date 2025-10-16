@@ -252,6 +252,9 @@ navigation:
     libraries/radpdfprocessing/formats-and-conversion/pdf/pdfstreamwriter:
         title: PdfStreamWriter
         position: 2
+    libraries/radpdfprocessing/formats-and-conversion/pdf/expandablememorystream:
+        title: ExpandableMemoryStream
+        position: 3
     libraries/radpdfprocessing/formats-and-conversion/plain-text:
         title: Plain Text
         position: 0
