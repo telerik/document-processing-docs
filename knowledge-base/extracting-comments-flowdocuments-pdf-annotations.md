@@ -5,7 +5,7 @@ type: how-to
 page_title: Extracting Word Document Comments and Converting to PDF Annotations
 meta_title: Extracting Word Document Comments and Converting to PDF Annotations
 slug: extracting-comments-flowdocuments-pdf-annotations
-tags: wordsprocessing, pdfprocessing, radflowdocument, radfixeddocument, annotations
+tags: docx, word, comment, pdf, processing, flow, document, fixed, annotations
 res_type: kb
 ticketid: 1701044
 ---
