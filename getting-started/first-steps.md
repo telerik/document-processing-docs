@@ -17,11 +17,11 @@ The Telerik Document Processing libraries that we use in this guide are UI-indep
 
 >important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
 
-Since we distribute Telerik Document Processing libraries as an addition to several Telerik UI component bundles, chances are that the libraries are already installed on your system. In this case, all you need is to locate them. The table below provides links to the installation instructions for each of the Telerik UI component suites that give you access to the Telerik Document Processing libraries. If the standard installation of your Telerik UI component suite includes the Document Processing assemblies, the table also shows their default location.
+Since we distribute Telerik Document Processing libraries as an addition to several Telerik UI component bundles, chances are that the libraries are already installed on your system. In this case, all you need is to locate them. The table below provides links to the installation instructions for each of the Telerik UI component suites that give you access to the Telerik Document Processing libraries. If the standard installation of your Telerik UI component suite includes the Document Processing packages, the table also shows their default location.
 
->tipRegardless of the Telerik UI components suite that you use, you can always get the Document Processing assemblies as NuGet packages from the [Telerik NuGet server]({%slug installation-nuget-packages%}).
+>tipRegardless of the Telerik UI components suite that you use, you can always get the Document Processing packages as NuGet packages from the [Telerik NuGet server]({%slug installation-nuget-packages%}).
 
-| UI Components suite | Installation instructions | Default location of the Document Processing assemblies |
+| UI Components suite | Installation instructions | Default location of the Document Processing packages |
 |--------------------|---------------------------|------------------------------------------------|
 | UI for ASP.NET AJAX | [Installing Telerik UI for ASP.NET AJAX](http://docs.telerik.com/devtools/aspnet-ajax/installation/which-file-do-i-need-to-install) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX [version]\AdditionalLibraries\Bin40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX [version]\AdditionalLibraries\Bin45`</li></ul> |
 | UI for ASP.NET MVC | [Installing Telerik UI for ASP.NET MVC](http://docs.telerik.com/kendo-ui/aspnet-mvc/introduction#installation) |  <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET MVC [version]\dpl\net40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET MVC [version]\dpl\netstandard`</li></ul> |
@@ -46,29 +46,29 @@ As we are going to create a UI-Independent example, we will use a console projec
 
 ## Step 3: Add a Telerik Document Processing Library to a Project
 
-This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-overview%}). In this step, we must add the required assemblies.
+This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-overview%}). In this step, we must add the required packages.
 
-1. Reference the assemblies that provide the __RadWordsProcessing__ functionality:
+1. Reference the packages that provide the __RadWordsProcessing__ functionality:
 
 	For .NET Framework project:
-	  * __Telerik.Windows.Documents.Core.dll__
-	  * __Telerik.Windows.Documents.Flow.dll__
+	  * __Telerik.Windows.Documents.Core__
+	  * __Telerik.Windows.Documents.Flow__
 
 	For .NET Standard ({{site.dotnetversions}}) project:
-	  * __Telerik.Documents.Core.dll__
-	  * __Telerik.Documents.Flow.dll__
+	  * __Telerik.Documents.Core__
+	  * __Telerik.Documents.Flow__
 
 	>note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
-1. Reference the assembly that allows you to export the content as a PDF file:
+1. Reference the package that allows you to export the content as a PDF file:
 
 	For .NET Framework project:
-	  * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll__
+	  * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf__
 
 	For .NET Standard ({{site.dotnetversions}}) project:
-	  * __Telerik.Documents.Flow.FormatProviders.Pdf.dll__
+	  * __Telerik.Documents.Flow.FormatProviders.Pdf__
 
-> The Document Processing assemblies for {{site.dotnetversions}} don't contain "Windows" in their names.
+> The Document Processing packages for {{site.dotnetversions}} don't contain "Windows" in their names.
 
 ## Step 4: Create a Document
 
