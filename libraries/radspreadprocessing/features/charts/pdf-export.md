@@ -14,7 +14,7 @@ platforms: wpf
 
 You can export spreadsheet documents in RadSpreadProcessing using the [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) class. The charts functionality relies on a renderer that implements the **IPdfChartRenderer** interface to draw the charts in the PDF document. This topic shows how you can implement this renderer using the built-in class in WPF.
 
->To use the functionality described in this topic, you will need to add a reference to the **Telerik.Windows.Controls.Spreadsheet.dll** and **Telerik.Windows.Controls.Chart.dll** assemblies of the [Telerik UI for WPF](https://www.telerik.com/products/wpf/overview.aspx) suite.
+>To use the functionality described in this topic, you will need to add a reference to the **Telerik.Windows.Controls.Spreadsheet** and **Telerik.Windows.Controls.Chart** packages of the [Telerik UI for WPF](https://www.telerik.com/products/wpf/overview.aspx) suite.
 
 ## IPdfChartRenderer
 

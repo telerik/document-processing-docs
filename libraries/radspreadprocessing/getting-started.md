@@ -13,7 +13,7 @@ position: 1
 This article will get you started in using the __RadSpreadProcessing__ library. It contains the following sections:
 
 
-* [Assembly References](#assembly-references)
+* [Package References](#package-references)
 
 * [Creating a Workbook](#creating-a-workbook)
 
@@ -23,11 +23,11 @@ This article will get you started in using the __RadSpreadProcessing__ library. 
 
 >noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
-## Assembly References
+## Package References
 
->The libraries support {{site.dotnetversions}}. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core.dll**). For more information check [**Cross-Platform Support**]({%slug radspreadprocessing-cross-platform%}) article.
+>The libraries support {{site.dotnetversions}}. .NET Standard-compatible packages are available as well. The packages for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Documents.Core**). For more information check [**Cross-Platform Support**]({%slug radspreadprocessing-cross-platform%}) article.
 
-In order to use the model of the __RadSpreadProcessing__ library in your project, you need to add references to the following assemblies:
+In order to use the model of the __RadSpreadProcessing__ library in your project, you need to add references to the following packages:
 
 <table>
 <thead>
@@ -39,40 +39,40 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 </thead>
 <tbody>
 	<tr>
-		<td><b>Telerik.Windows.Documents.Core.dll</b></td>
-		<td><b>Telerik.Documents.Core.dll</b></td>
+		<td><b>Telerik.Windows.Documents.Core</b></td>
+		<td><b>Telerik.Documents.Core</b></td>
 		<td></td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Windows.Documents.Spreadsheet.dll</b></td>
-		<td><b>Telerik.Documents.Spreadsheet.dll</b></td>
+	    <td><b>Telerik.Windows.Documents.Spreadsheet</b></td>
+		<td><b>Telerik.Documents.Spreadsheet</b></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</b></td>
-		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.dll</b></td>
+		<td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml</b></td>
+		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.OpenXml</b></td>
 		<td>Required when importing/exporting from/to XLSX or CSV.</td>
 	</tr>
 		<tr>
-		<td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll</b></td>
-		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll</b></td>
+		<td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls</b></td>
+		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.Xls</b></td>
 		<td>Required when importing/exporting from/to XLS.</td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll</b></td>
-		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll</b></td>
+	    <td><b>Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf</b></td>
+		<td><b>Telerik.Documents.Spreadsheet.FormatProviders.Pdf</b></td>
 		<td>Required when exporting to PDF.</td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Windows.Documents.Fixed.dll</b></td>
-		<td><b>Telerik.Documents.Fixed.dll</b></td>
+	    <td><b>Telerik.Windows.Documents.Fixed</b></td>
+		<td><b>Telerik.Documents.Fixed</b></td>
 		<td>Required when exporting to PDF.</td>
 	</tr>
 	<tr>
 	    <td><b>-</b></td>
 		<td>	
-			<b>Telerik.Documents.ImageUtils.dll</b>
-			<br><sub><i>This assembly is not available in UI for Xamarin.</i></sub>
+			<b>Telerik.Documents.ImageUtils</b>
+			<br><sub><i>This package is not available in UI for Xamarin.</i></sub>
 		</td>
 		<td>*</td>
 	</tr>
@@ -100,7 +100,7 @@ In order to use the model of the __RadSpreadProcessing__ library in your project
 </tbody>
 </table>
 
->note Needed when exporting to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. The **Telerik.Documents.ImageUtils.dll** assembly depends on **SkiaSharp**. In order to use this assembly, you will need to add а reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
+>note Needed when exporting to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. The **Telerik.Documents.ImageUtils** package depends on **SkiaSharp**. In order to use this package, you will need to add а reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
 ## Creating a Workbook
 

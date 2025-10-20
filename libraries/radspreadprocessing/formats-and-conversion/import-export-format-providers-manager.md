@@ -38,7 +38,7 @@ public class WorkbookFormatProvidersManager
 The __WorkbookFormatProvidersManager__ class contains two methods that allow you to register and unregister format providers respectively. The manager has the `csv` and `txt` format providers registered by default. The snippet in __Example 1__ illustrates how to register the [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider %}).
         
 
-> Some Format Providers require additional assembly references. Check the full list of the FormatProviders' additional reference requirements in [Format Providers - Additional assembly references]({%slug radspreadprocessing-formats-and-conversion-general-information%}#additional-assembly-references).
+> Some Format Providers require additional package references. Check the full list of the FormatProviders' additional reference requirements in [Format Providers - Additional package references]({%slug radspreadprocessing-formats-and-conversion-general-information%}#additional-package-references).
 
 
 #### __[C#] Example 1: Register provider__

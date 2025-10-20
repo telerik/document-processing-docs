@@ -12,7 +12,7 @@ position: 1
 
 The __DataTableFormatProvider__ allows you to easily convert existing [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-5.0) to a worksheet and vice versa. Below you can see how to use this format provider to import/export data tables.
 
-To use the DataTableFormatProvider you need to reference the __Telerik.Windows.Documents.Spreadsheet__ assembly. 
+To use the DataTableFormatProvider you need to reference the __Telerik.Windows.Documents.Spreadsheet__ package. 
 
 ## Import
 

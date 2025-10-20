@@ -10,13 +10,13 @@ position: 2
 
 # Cross-Platform Support
 
-**Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of binaries built against the .NET Core & .NET Standard which you can reference in an application.
+**Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of packages built against the .NET Core & .NET Standard which you can reference in an application.
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can get the assemblies through the **UI for ASP.NET Core**, **UI for Blazor**, **UI for Xamarin**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can get the packages through the **UI for ASP.NET Core**, **UI for Blazor**, **UI for Xamarin**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
-## Assembly References
+## Package References
 
-To use the model of the **RadWordsProcessing** library in your cross-platform project, you need to add references to the following **.Net Standard** assemblies:
+To use the model of the **RadWordsProcessing** library in your cross-platform project, you need to add references to the following **.Net Standard** packages:
 
 <table>
 <thead>
@@ -27,38 +27,38 @@ To use the model of the **RadWordsProcessing** library in your cross-platform pr
 </thead>
 <tbody>
 	<tr>
-		<td><b>Telerik.Documents.Core.dll</b></td>
+		<td><b>Telerik.Documents.Core</b></td>
 		<td></td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Documents.Flow.dll</b></td>
+	    <td><b>Telerik.Documents.Flow</b></td>
 		<td></td>
 	</tr>
     <tr>
-		<td><b>Telerik.Documents.Flow.FormatProviders.Doc.dll</b></td>
+		<td><b>Telerik.Documents.Flow.FormatProviders.Doc</b></td>
 		<td>Required when importing from DOC or DOT files.</td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Documents.Flow.FormatProviders.Pdf.dll</b></td>
+	    <td><b>Telerik.Documents.Flow.FormatProviders.Pdf</b></td>
 		<td>Required when exporting to PDF.</td>
 	</tr>
 	<tr>
-	    <td><b>Telerik.Documents.Fixed.dll</b></td>
+	    <td><b>Telerik.Documents.Fixed</b></td>
 		<td>Required when exporting to PDF.</td>
 	</tr>
 	<tr>
 		<td>	
-			<b>Telerik.Documents.ImageUtils.dll</b>
-			<br><sub><i>This assembly is not available in UI for Xamarin.</i></sub>
+			<b>Telerik.Documents.ImageUtils</b>
+			<br><sub><i>This pckage is not available in UI for Xamarin.</i></sub>
 		</td>
         <td>Required when exporting to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High.</td>
 	</tr>
 </tbody>
 </table>
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **SkiaSharp**. To use this assembly, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
+>note The **Telerik.Documents.ImageUtils** package depends on **SkiaSharp**. To use this package, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
-> Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
+> Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core**)
  
 ## Limitations in .Net Standard
 

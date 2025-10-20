@@ -9,7 +9,7 @@ position: 0
 
 # General Information
 
-__RadSpreadProcessing__'s document model allows you to easily open and save files of different formats. This article will share more details on the [supported formats](#supported-formats), [available format providers](#format-providers), the [additional assembly references](#additional-assembly-references) each provider requires and the [Format Providers Manager](#format-providers-manager).
+__RadSpreadProcessing__'s document model allows you to easily open and save files of different formats. This article will share more details on the [supported formats](#supported-formats), [available format providers](#format-providers), the [additional package references](#additional-package-references) each provider requires and the [Format Providers Manager](#format-providers-manager).
 
 ## Supported formats      
 
@@ -35,7 +35,7 @@ The document model exposes separate format providers that work with each of the 
 - [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider %}) for tab delimited `.txt` files
 - [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider %}) for `DataTable` objects
 
-> Some FormatProviders require additional assembly references. Check them out in the [Additional Assemlby References](#additional-assembly-references) section.
+> Some FormatProviders require additional package references. Check them out in the [Additional Package References](#additional-package-references) section.
  
 ## Import and Export methods
 
@@ -107,21 +107,21 @@ byte[] workbookAsByteArray = formatProvider.Export(workbook, TimeSpan.FromSecond
 
 >note For more examples of importing and exporting workbooks check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
 
-## Additional assembly references
+## Additional package references
 
-Unlike the __CsvFormatProvider__, __TxtFormatProvider__ and __DataTableFormatProvider__ classes, the other RadSpreadProcessing format providers require references to additional assemblies.
+Unlike the __CsvFormatProvider__, __TxtFormatProvider__ and __DataTableFormatProvider__ classes, the other RadSpreadProcessing format providers require references to additional packages.
 
-- **XlsxFormatProvider** and **XlsmFormatProvider** additional assembly references
-  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll
-  * ~~Telerik.Windows.Zip.dll~~*
+- **XlsxFormatProvider** and **XlsmFormatProvider** additional package references
+  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml
+  * ~~Telerik.Windows.Zip~~*
 
   >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
 - **PdfFormatProvider**
-  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll
+  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf
 
 - **XlsFormatProvider**
-  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll
+  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls
 
 
 ## Format Providers Manager

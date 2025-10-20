@@ -11,14 +11,14 @@ position: 2
 
 RadWordsProcessing provides a __PdfFormatProvider__ class that allows you to export a __RadFlowDocument__ to PDF.      
 
-All you have to do in order to use __PdfFormatProvider__ is add references to the assemblies listed below:
+All you have to do in order to use __PdfFormatProvider__ is add references to the packages listed below:
       
 
-* Telerik.Windows.Documents.Core.dll
-* Telerik.Windows.Documents.Flow.dll
-* ~~Telerik.Windows.Zip.dll~~*
-* Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll
-* Telerik.Windows.Documents.Fixed.dll
+* Telerik.Windows.Documents.Core
+* Telerik.Windows.Documents.Flow
+* ~~Telerik.Windows.Zip~~*
+* Telerik.Windows.Documents.Flow.FormatProviders.Pdf
+* Telerik.Windows.Documents.Fixed
 
 >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 

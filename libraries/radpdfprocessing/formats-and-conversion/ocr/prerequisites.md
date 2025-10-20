@@ -18,9 +18,9 @@ This topic describes the requirements needed by the [PdfProcessing]({%slug radpd
 
 >note Used images should be **300 DPI** for best results.
 
-## Required Assemblies/ NuGet Packages
+## Required Packages
 
-In order to use the **OcrFormatProvider** you need to add the following assemblies:
+In order to use the **OcrFormatProvider** you need to add the following packages:
 
 <table>
 <thead>

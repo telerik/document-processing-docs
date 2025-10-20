@@ -13,12 +13,12 @@ platforms: core, mvc, ajax, blazor, wpf, winforms, xamarin, winui
 
 __XlsFormatProvider__ makes it easy to import and export to XLS (Excel 97-2003 Workbook) files. The functionality is available since R3 2020.
 
->The __XlsFormatProvider__ requires references to the following assembly:
+>The __XlsFormatProvider__ requires references to the following packages:
         
->* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll for .NET Framework projects
->* Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll for .NET Standard projects
+>* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls for .NET Framework projects
+>* Telerik.Documents.Spreadsheet.FormatProviders.Xls for .NET Standard projects
 
-Once you reference the aforementioned assemblies, you need to create an instance of the __XlsFormatProvider__ in order to import and export Excel 97-2003 Workbook files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls namespace. __XlsFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
+Once you reference the aforementioned packages, you need to create an instance of the __XlsFormatProvider__ in order to import and export Excel 97-2003 Workbook files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls namespace. __XlsFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
       
 
 >note For more examples and application scenarios of Importing and Exporting a Workbook to various formats using a FormatProvider check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.

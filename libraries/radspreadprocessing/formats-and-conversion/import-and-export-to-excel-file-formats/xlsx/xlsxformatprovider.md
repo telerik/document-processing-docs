@@ -15,12 +15,12 @@ position: 2
 __XlsxFormatProvider__ makes it easy to import and export XLSX (Excel Workbook) files. An XLSX file is a group of zipped files that conform to the Office Open XML schema. That said, the format allows you export all parts of a workbook: worksheets, formula values, formatting, hyperlinks, etc.
       
 
->Unlike the CSV and TXT format providers, the __XlsxFormatProvider__ requires references to the following assemblies:    
->* Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll         
+>Unlike the CSV and TXT format providers, the __XlsxFormatProvider__ requires references to the following package:    
+>* Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml        
 
 >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.           
 
-Once you reference the aforementioned assemblies, you need to create an instance of the __XlsxFormatProvider__ in order to import and export XLSX (Excel Workbook) files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx namespace. __XlsxFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
+Once you reference the aforementioned packages, you need to create an instance of the __XlsxFormatProvider__ in order to import and export XLSX (Excel Workbook) files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx namespace. __XlsxFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
 
 >note For more examples and application scenarios of Importing and Exporting a Workbook to various formats using a FormatProvider check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
   

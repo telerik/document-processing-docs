@@ -40,7 +40,7 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
 
 >note Due to the [Font Limitations]({%slug radpdfprocessing-cross-platform-fonts%}) of the [PdfProcessing]({%slug radpdfprocessing-overview%}) library in .NET Standard, you should provide a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) as well.
 
->important To use the **SpreadFixedTextMeasurer** class, you must add a reference to **Telerik.Documents.Fixed.dll**.
+>important To use the **SpreadFixedTextMeasurer** class, you must add a reference to **Telerik.Documents.Fixed**.
 
 #### [C#] Example 1: Set the SpreadFixedTextMeasurer as a text measurer
 

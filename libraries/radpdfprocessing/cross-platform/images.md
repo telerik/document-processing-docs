@@ -22,11 +22,11 @@ To reduce file size, PDF supports only a number of compression filters like Jpeg
 
 ## Requirements
 
-To export images different than Jpeg and Jpeg2000 or ImageQuality different than High you will need to add references to the following .Net Standard assemblies:
+To export images different than Jpeg and Jpeg2000 or ImageQuality different than High you will need to add references to the following .Net Standard packages:
 
-|Assembly/ NuGet package|Description|
+|NuGet package|Description|
 |----|----|
-|**Telerik.Documents.ImageUtils**|This assembly is currently not available in UI for Xamarin.|
+|**Telerik.Documents.ImageUtils**|This package is currently not available in UI for Xamarin.|
 |**SkiaSharp.NativeAssets.*** (version {{site.skiasharpversion}})|May differ according to the used platform. For **Linux** use <b>SkiaSharp.NativeAssets.Linux.NoDependencies|
 |**SkiaSharp.Views.Blazor** and **wasm-tools**|For Blazor Web Assembly.|
 
@@ -67,7 +67,7 @@ The `JpegImageConverter` property uses an implementation of the `JpegImageConver
 
 ### Default Implementation for JpegImageConverter
 
-The **Telerik.Documents.ImageUtils** assembly provides a default implementation of the JpegImageConverter class that could be used when exporting a document. The default implementation depends on the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/) library to convert images to Jpeg format.
+The **Telerik.Documents.ImageUtils** package provides a default implementation of the JpegImageConverter class that could be used when exporting a document. The default implementation depends on the [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/) library to convert images to Jpeg format.
 
 >note View Implementation [Requirements](#requirements).
 

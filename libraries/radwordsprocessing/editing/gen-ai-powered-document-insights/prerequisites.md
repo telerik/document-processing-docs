@@ -29,7 +29,7 @@ This article explains the requirements for using the GenAI-powered Document Insi
 
 ## Required References
 
-In addition to the [standard RadWordsProcessing references]({%slug radwordsprocessing-getting-started%}#assembly-references), you will need to add the following references to use the GenAI-powered Document Insights features:
+In addition to the [standard RadWordsProcessing references]({%slug radwordsprocessing-getting-started%}#package-references), you will need to add the following references to use the GenAI-powered Document Insights features:
 
 |.NET Framework|.NET Standard-compatible|
 |---|---|

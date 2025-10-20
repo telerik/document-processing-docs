@@ -14,11 +14,11 @@ position: 1
 __TxtFormatProvider__ makes it easy to import and export __RadFlowDocument__ to/from plain text format, preserving the document structure.
       
 
-All you have to do in order to use __TxtFormatProvider__ is add references to the assemblies listed below:
+All you have to do in order to use __TxtFormatProvider__ is add references to the packages listed below:
       
 
-* Telerik.Windows.Documents.Core.dll
-* Telerik.Windows.Documents.Flow.dll
+* Telerik.Windows.Documents.Core
+* Telerik.Windows.Documents.Flow
           
 
 ## Import

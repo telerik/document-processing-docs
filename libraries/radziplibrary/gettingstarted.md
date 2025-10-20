@@ -25,7 +25,7 @@ The ZIP archive is represented by __ZipArchive__ class. It can be used in 3 mode
 
 ## Assembly References
 
->The libraries support {{site.dotnetversions}}. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**). 
+>The libraries support {{site.dotnetversions}}. .NET Standard-compatible packages are available as well. The packages for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip**). 
 
 <table>
 <thead>
@@ -35,13 +35,13 @@ The ZIP archive is represented by __ZipArchive__ class. It can be used in 3 mode
 	</tr>
 </thead>
 	<tr>
-	    <td><b>Telerik.Windows.Zip.dll</b></td>
-		<td><b>Telerik.Zip.dll</b></td>
+	    <td><b>Telerik.Windows.Zip</b></td>
+		<td><b>Telerik.Zip</b></td>
 	</tr>
 </tbody>
 </table>                
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the packages through the **UI for ASP.NET Core**, **UI for Blazor** and **UI for Xamarin** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Open Zip Archive
 

@@ -11,31 +11,31 @@ position: 0
 
 # Cross-Platform Support
 
-**Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of binaries built against the .NET Core & .NET Standard which you can reference in an application.
+**Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of packages built against the .NET Core & .NET Standard which you can reference in an application.
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the assemblies through the **UI for ASP.NET Core**, **UI for Blazor**, **UI for Xamarin**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the packages through the **UI for ASP.NET Core**, **UI for Blazor**, **UI for Xamarin**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
-## Assembly References
+## Package References
 
-To use the model of **RadSpreadProcessing** in your cross-platform project, you need to add references to the following **.Net Standard** assemblies:
+To use the model of **RadSpreadProcessing** in your cross-platform project, you need to add references to the following **.Net Standard** packages:
 
 
-| Assembly Name                            | Notes                                    |
+| Package Name                            | Notes                                    |
 |------------------------------------------|------------------------------------------|
-| **Telerik.Documents.Core.dll**           |                                          |
-| **Telerik.Documents.Spreadsheet.dll**    |                                          |
-| **Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.dll** | Required for working with XLSX files.    |
-| **Telerik.Documents.Spreadsheet.FormatProviders.Xls.dll** | Required for working with XLS files.     |
-| **Telerik.Documents.Fixed.dll**          | Required for exporting to PDF files.     |
-| **Telerik.Documents.Spreadsheet.FormatProviders.Pdf.dll** | Required for exporting to PDF files.     |
-| ~~Telerik.Zip.dll~~*                      | ~~Required for working with XSLX, XLS and PDF files.~~ |
-| **Telerik.Documents.ImageUtils.dll** <br><sub>_This assembly is not available in UI for Xamarin._</sub> | Required when you need to export to PDF documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High. |
+| **Telerik.Documents.Core**           |                                          |
+| **Telerik.Documents.Spreadsheet**    |                                          |
+| **Telerik.Documents.Spreadsheet.FormatProviders.OpenXml** | Required for working with XLSX files.    |
+| **Telerik.Documents.Spreadsheet.FormatProviders.Xls** | Required for working with XLS files.     |
+| **Telerik.Documents.Fixed**          | Required for exporting to PDF files.     |
+| **Telerik.Documents.Spreadsheet.FormatProviders.Pdf** | Required for exporting to PDF files.     |
+| ~~Telerik.Zip~~*                      | ~~Required for working with XSLX, XLS and PDF files.~~ |
+| **Telerik.Documents.ImageUtils** <br><sub>_This package is not available in UI for Xamarin._</sub> | Required when you need to export to PDF documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High. |
 
 >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
->note The **Telerik.Documents.ImageUtils.dll** assembly depends on **SkiaSharp**. In order to use this assembly, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
+>note The **Telerik.Documents.ImageUtils** package depends on **SkiaSharp**. In order to use this package, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
-> Note that for .NET Framework, {{site.dotnetversions}} with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core.dll**)
+> Note that for .NET Framework, {{site.dotnetversions}} with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core**)
 
 ## What's Different Between .NET Framework and .NET Standard versions of SpreadProcessing
 

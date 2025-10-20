@@ -47,7 +47,7 @@ After executing one of the options the wizard must appear like this:
 
  ![Configure Document Processing Wizard](images/Configure_Document_Processing_Wizard_MAUI.png) 
 
-The **Telerik Document Processing Configuration wizard** allows you to select which libraries your project would use. It allows you to use the license and selection of the `.csproj` file, in which you want the installation to be provided. This option is useful in cases when the user has many opened projects in the workspace. If a library you selected has any dependencies, they are automatically checked. In the table below there is a list of the assemblies that will be selected for each library:
+The **Telerik Document Processing Configuration wizard** allows you to select which libraries your project would use. It allows you to use the license and selection of the `.csproj` file, in which you want the installation to be provided. This option is useful in cases when the user has many opened projects in the workspace. If a library you selected has any dependencies, they are automatically checked. In the table below there is a list of the packages that will be selected for each library:
 
 |Library  |Packages |
 |---------|---------|

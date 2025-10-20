@@ -19,9 +19,9 @@ PdfProcessing enables you to use a default implementation for the known predefin
 
 ## Default Implementation
 
-The **Telerik[.Windows].Documents.CMapUtils.dll** assembly provides a default implementation for obtaining the data of a predefined CMap table by a given name. The class that contains implementations for all the CMap tables defined by the PDF Format Specification is called **PredefinedCMapsProvider**. In order to register an instance of the default implementation, the **FixedExtensibilityManager** class should be used.
+The **Telerik[.Windows].Documents.CMapUtils** package provides a default implementation for obtaining the data of a predefined CMap table by a given name. The class that contains implementations for all the CMap tables defined by the PDF Format Specification is called **PredefinedCMapsProvider**. In order to register an instance of the default implementation, the **FixedExtensibilityManager** class should be used.
 
->To use this functionality, you must add a reference to the **Telerik[.Windows].Documents.CMapUtils.dll**.
+>To use this functionality, you must add a reference to the **Telerik[.Windows].Documents.CMapUtils package**.
 
 #### [C#] Example 1: Register default CMapsProvider
 {{region radpdfprocessing-concepts-cmap_0}}

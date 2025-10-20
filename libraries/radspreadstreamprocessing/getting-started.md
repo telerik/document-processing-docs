@@ -11,7 +11,7 @@ position: 1
 
 This article will get you started in using the **RadSpreadStreamProcessing** library. It contains the following sections:
 
-* [Assembly References](#assembly-references)
+* [Package References](#package-references)
 
 * [Supported Formats](#supported-formats)
 
@@ -19,9 +19,9 @@ This article will get you started in using the **RadSpreadStreamProcessing** lib
 
 >noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
-## Assembly References
+## Package References
 
->The libraries support {{site.dotnetversions}}. .NET Standard-compatible binaries are available as well. The assemblies for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.dll**).
+>The libraries support {{site.dotnetversions}}. .NET Standard-compatible packages are available as well. The packages for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.**).
 
 In order to use **RadSpreadStreamProcessing** in your project, you will need to add the references listed below.
 
@@ -34,8 +34,8 @@ In order to use **RadSpreadStreamProcessing** in your project, you will need to 
 </thead>
 <tbody>
 	<tr>
-		<td><b>Telerik.Documents.SpreadsheetStreaming.dll</b></td>
-		<td><b>Telerik.Documents.SpreadsheetStreaming.dll</b></td>
+		<td><b>Telerik.Documents.SpreadsheetStreaming</b></td>
+		<td><b>Telerik.Documents.SpreadsheetStreaming</b></td>
 	</tr>
 	<tr>
 	    <td colspan="2">&nbsp;</td>
