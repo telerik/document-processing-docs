@@ -238,3 +238,4 @@ __FixedContentEditor__ has some properties and methods that affect how it will b
 * [Resizing Large Images to Fit in the PDF Page]({%slug resize-images-radpdfprocessing%})
 * [Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
 * [Drawing Rectangles with Text and Image Contant with RadPdfProcessing]({%slug draw-rectangles-text-images-radpdfprocessing%})
+* [Positioning Centered and Right-Aligned Text on the Same Line in PDF]({%slug aligning-centered-right-margin-text-pdf-telerik-document-processing%})

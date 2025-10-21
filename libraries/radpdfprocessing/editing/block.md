@@ -223,3 +223,4 @@ The code in __Example 9__ splits a block in two. The first will contains text "H
  * [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})
  * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
  * [How to Change Text Color Using PdfProcessing]({%slug pdfprocessing-text-color%})
+ * [Positioning Centered and Right-Aligned Text on the Same Line in PDF]({%slug aligning-centered-right-margin-text-pdf-telerik-document-processing%})
