@@ -9,6 +9,11 @@ tags: pdf, processing,document, position, text, center, right, align, block, mea
 res_type: kb
 ticketid: 1701532
 ---
+<style>
+img[alt$="><"] {
+  border: 1px solid lightgrey;
+}
+</style>
 
 ## Environment
 
@@ -18,18 +23,20 @@ ticketid: 1701532
 
 ## Description
 
-I want to display centered text and right-aligned text on the same line in a PDF. The centered text varies in length, as does the text in the margin. The goal is to manually position each text block as there is no built-in feature for this layout.
+Learn how to generate a PDF document with centered text and right-aligned text on the same line. The centered text varies in length, as does the text in the right margin. The goal is to manually position each text block as there is no built-in feature for this layout.
 
-This knowledge base article also answers the following questions:
-- How can I align text to the center and right margin on the same line in a PDF?
-- How do I calculate positions for text blocks in Telerik Document Processing?
-- How can I measure text width and adjust its position in the PDF?
+This knowledge base article also shows how to:
+* Align text to the center and right margin on the same line in a PDF
+* Calculate positions for text blocks in RadPdfProcessing
+* Measure text width and adjust its position in the PDF
+ 
+![Positioning Centered and Right-Aligned Text ><](images/aligning-centered-right-margin-text-pdf-telerik-document-processing.png)  
 
 ## Solution
 
 To position centered and right-aligned text on the same line, follow these steps:
 
-1. Measure Text Widths: Use the `Block.Measure()` method to determine the width of both the centered text and the right-margin text. Refer to [Measuring Block Size](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/block#measuring-block-size) for details.
+1. Measure Text Widths: Use the `Block.Measure()` method to determine the width of both the centered text and the right-margin text. Refer to [Measuring Block Size]({%slug radpdfprocessing-editing-block%}#measuring-block-size) for details.
 
 2. Calculate Positions:
    - For centered text, calculate the X position by subtracting the text width from the page width and dividing by two.
@@ -82,6 +89,5 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 
 ## See Also
 
-- [FixedContentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/fixedcontenteditor)
-- [Measuring Block Size](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/block#measuring-block-size)
-- [Block Class](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.model.editing.block)
+- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+- [Block Element]({%slug radpdfprocessing-editing-block%}) 
