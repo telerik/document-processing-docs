@@ -65,7 +65,7 @@ This ensures that the exported PDF document is properly tagged, which is essenti
 
 >important If you specify an encryption for the document, it will be ignored since the standard does not allow documents to be encrypted.
 
->important PDF/A standard requires documents to contain all fonts used in them. RadPdfProcessing does not support embedding of the standard 14 fonts used in PDF documents, so using them will prevent the document from complying with the standard. More information about font embedding is available in the [Fonts]({%slug radpdfprocessing-concepts-fonts%}) article.
+>important The PDF/A standard requires all fonts used in a document to be embedded. Prior to **Q3 2025**, the [14 standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) were not embedded in the file, which caused the document to be non-compliant. As of **Q3 2025**, these standard fonts are automatically embedded when PDF/A compliance is enabled. More information about font embedding is available in the [Fonts]({%slug radpdfprocessing-concepts-fonts%}) article.
 
 ## See Also
 
