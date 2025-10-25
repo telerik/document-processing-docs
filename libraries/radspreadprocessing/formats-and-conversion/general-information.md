@@ -16,9 +16,10 @@ __RadSpreadProcessing__'s document model allows you to easily open and save file
 * __Xlsx__: Rich text format, which exports the whole content of a workbook: worksheets, formula values, formatting, hyperlinks etc.
 * __Xls__: Rich text format, which exports the content of a workbook: worksheets, formula values, formatting, hyperlinks etc. Supported in older applications. This format is not supported in Silverlight.
 * __Xlsm__: Rich text format, which exports all that is included in the Xlsx format with the addition of macro instructions.
-* __Pdf__: Fixed format, which preserves the content of a workbook in independent from software or hardware manner.
+* __Pdf__(*export only*): Fixed format, which preserves the content of a workbook in independent from software or hardware manner.
 * __Csv__(comma separated): Plain text format that saves the content of the cell in the active worksheet. The format strips all formatting and keeps only the result values of cells. These values are separated by a culture dependent delimiter.
 * __Txt__(tab delimited): Plain text format, which preserves only the content of the cells in the active worksheet. The format does not save any formatting and keeps only the result values of the cells. These values are delimited via tabs.
+* __Json__(*export only*): Structured text format that serializes worksheet data and metadata (values, number formats, named ranges, charts, active sheet info, etc.) to JSON. Styling is not preserved fully as in XLSX;
 * **DataTable**: This allows you to convert the DataTable that is coming form your database to a spreadsheet and vice versa. 
 
 >note In **Q4 2024** Telerik Document Processing Libraries introduced a new timeout mechanism for importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled.  
@@ -30,10 +31,11 @@ The document model exposes separate format providers that work with each of the 
 - [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider %}) for `.xlsx` files
 - [XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider %}) for `.xls` files
 - [XlsmFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider %}) for `.xlsm` files
-- [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider %}) for `.pdf` files
+- [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider %}) for `.pdf` files (export only)
 - [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider %}) for comma separated `.csv` files
 - [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider %}) for tab delimited `.txt` files
 - [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider %}) for `DataTable` objects
+- [JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider %}) for `.json` files (export only)
 
 > Some FormatProviders require additional package references. Check them out in the [Additional Package References](#additional-package-references) section.
  
@@ -117,11 +119,14 @@ Unlike the __CsvFormatProvider__, __TxtFormatProvider__ and __DataTableFormatPro
 
   >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
-- **PdfFormatProvider**
+- **PdfFormatProvider** (export only)
   * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf
 
 - **XlsFormatProvider**
   * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls
+  
+- **JsonFormatProvider** (export only)
+  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Json
 
 
 ## Format Providers Manager
