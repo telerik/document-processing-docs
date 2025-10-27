@@ -7,7 +7,7 @@ tags: digital, signature, getting, started
 position: 1
 ---
 
-# Getting Started 
+# Getting Started with Digital Signature
 
 RadPdfProcessing allows adding a digital signature while editing a created from scratch document (or importing an existing one).
 
@@ -99,6 +99,15 @@ The following example shows a full code snippet for a simple signing of a newly 
 ![Signed PDF](images/radpdfprocessing-features-digital-signature.png)
 
 >important When signing an existing document (after the import) we must be sure the AcroForm's ViewersShouldRecalculateWidgetAppearances property is set to false, otherwise, the exported and signed PDF document could not be shown as a signed. 
+
+## Signature Settings
+
+The **SignatureSettings** class (*introduced in Q4 2025*) provides configurable options for producing digital signatures in PDF documents. It allows developers to specify the digest (hash) algorithm used during certificate-based signing. The SignatureSettings are accessed by the Signature.**Settings** public property and it offers the following settings to be specified:
+
+|Property|Description|
+|----|----|
+|**DigestAlgorithm**|Gets or sets the digest (hash) algorithm used when producing the CMS (PKCS#7) signature. The default is *DigestAlgorithmType.Sha256* to provide a modern, interoperable baseline (SHA-256). The supported digest (hash) algorithms for producing CMS (PKCS#7) PDF signature values are: <ul><li>**Sha256**: SHA-256 (256-bit). Recommended default: strong, widely supported, and efficient.</li><li>**Sha384**: SHA-384 (384-bit). Use when organizational policy or key size (e.g. P-384) mandates higher strength.</li><li>**Sha512**: SHA-512 (512-bit). Use for highest SHA-2 family strength or long‑term archival policies; may have slightly higher computational cost.</li></ul>|
+|**TimeStampServer**|Gets or sets the [timestamp server]({%slug pdf-sign-timestamp-server%}) settings used to obtain a trusted timestamp for the signature.|
 
 ## Signature Encodings
 

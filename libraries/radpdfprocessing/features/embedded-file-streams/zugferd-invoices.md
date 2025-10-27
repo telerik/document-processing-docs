@@ -41,4 +41,7 @@ RadPdfProcessing offers the functionality to specify the **ZugferdConformanceLev
 
 <snippet id='pdf-specify-zugferd-conformance-level'/>
 
+## See Also
+
+* [Embedded File Streams]({%slug radpdfprocessing-embedded-file-streams-overview%})
 
