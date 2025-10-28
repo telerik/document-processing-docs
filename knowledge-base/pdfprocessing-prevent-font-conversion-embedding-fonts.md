@@ -97,4 +97,3 @@ Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.FontsProvider 
 ## See Also
 
 - [Implementing a FontsProvider]({%slug radpdfprocessing-concepts-fonts%})
----
