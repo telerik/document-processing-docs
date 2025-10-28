@@ -76,9 +76,9 @@ To generate a PDF with separate headers and footers, process the HTML files usin
         }
 ```
 Let's have the following 3 separate HTML files: 
-|Header HTML| Preview|
-|----|----|
-|
+
+* Header HTML:
+
 ```html
 <p style="text-align: center; font-size: 16pt; font-weight: bold;">
     Company Name
@@ -91,11 +91,10 @@ Let's have the following 3 separate HTML files:
 </p>
 
 ``` 
-|![HTML Header](images/html-header-preview.png)|  
+![HTML Header](images/html-header-preview.png)
 
-|Footer HTML| Preview|
-|----|----|
-|
+* Footer HTML
+
 ```html
 <p style="text-align: center; font-size: 10pt;">
     Confidential - For Internal Use Only
@@ -105,16 +104,15 @@ Let's have the following 3 separate HTML files:
 </p>
 
 ``` 
-|![HTML Footer](images/html-footer-preview.png)|    
+![HTML Footer](images/html-footer-preview.png)    
 
-|Content HTML| Preview|
-|----|----|
-|
+* Content HTML
+
 ```html
 <p>This is the main content of the document.</p>
 
 ``` 
-|![HTML Content](images/html-content-preview.png)|     
+![HTML Content](images/html-content-preview.png)
 
 The result PDF document combined all of the HTML files in one common document:
 
