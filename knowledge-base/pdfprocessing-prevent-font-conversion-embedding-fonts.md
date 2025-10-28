@@ -18,7 +18,7 @@ ticketid: 1701737
 
 ## Description
 
-When using the [PdfProcessing]({%slug radpdfprocessing-overview%) library in .NET Standard to embed fonts into a PDF, the behavior can lead to unintended font substitution for text content and fields that are already using a different font. This happens because the .NET Standard environment requires the font data to be explicitly provided for embedding, unlike the .NET Framework which can access system fonts directly. Without providing the required font files, the library substitutes missing fonts, potentially altering the PDF's appearance. This unexpected result commonly arises when the font chosen for embedding replaces existing fonts in the document, such as converting Arial text to Courier New, resulting in illegible text in certain languages.
+When using the [PdfProcessing]({%slug radpdfprocessing-overview%}) library in .NET Standard to embed fonts into a PDF, the behavior can lead to unintended font substitution for text content and fields that are already using a different font. This happens because the .NET Standard environment requires the font data to be explicitly provided for embedding, unlike the .NET Framework which can access system fonts directly. Without providing the required font files, the library substitutes missing fonts, potentially altering the PDF's appearance. This unexpected result commonly arises when the font chosen for embedding replaces existing fonts in the document, such as converting Arial text to Courier New, resulting in illegible text in certain languages.
 
 This article provides steps to prevent such undesired font conversion when embedding fonts in a PDF using PdfProcessing.
 
