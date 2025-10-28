@@ -38,5 +38,6 @@ You can find a detailed **FixedExtensibilityManager** and **FontsProvider** desc
  * [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
  * [Resolving Missing Content in Exported PDF Files]({%slug missing-content-word-to-pdf-radwordsprocessing%})
  * [Validating Fonts when Using Telerik Document Processing]({%slug validating-fonts-pdf-document-processing%})
+ * [Preserving Original Bold, Italic and Regular Fonts When Exporting PDF Documents Using PdfProcessing  in .NET Standard]({%slug pdfprocessing-prevent-font-conversion-embedding-fonts%})
 
 
