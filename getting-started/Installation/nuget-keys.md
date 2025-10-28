@@ -3,7 +3,7 @@ title: Restoring NuGet Packages in CI
 page_title: Restoring NuGet Packages in CI 
 description: Learn how to use NuGet Keys to authenticate with the Telerik NuGet server and restore Telerik Document Processing packages in your CI or desktop environment.
 slug: using-nuget-keys
-tags: telerik, document, processing, restore, nuget, packages, ci, continuous, integration, installation
+tags: telerik, document, processing, restore, nuget, packages, ci, continuous, integration, installation, api, key
 published: True
 position: 9
 ---
