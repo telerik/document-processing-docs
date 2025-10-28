@@ -75,6 +75,51 @@ To generate a PDF with separate headers and footers, process the HTML files usin
             Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
         }
 ```
+Let's have the following 3 separate HTML files: 
+|Header HTML| Preview|
+|----|----|
+|
+```html
+<p style="text-align: center; font-size: 16pt; font-weight: bold;">
+    Company Name
+</p>
+<p style="text-align: center; font-size: 12pt;">
+    Document Title
+</p>
+<p style="text-align: center; font-size: 10pt;">
+    Date: October 28, 2025
+</p>
+
+``` 
+|![HTML Header](images/html-header-preview.png)|  
+
+|Footer HTML| Preview|
+|----|----|
+|
+```html
+<p style="text-align: center; font-size: 10pt;">
+    Confidential - For Internal Use Only
+</p>
+<p style="text-align: center; font-size: 10pt;">
+    Page 1 of 1
+</p>
+
+``` 
+|![HTML Footer](images/html-footer-preview.png)|    
+
+|Content HTML| Preview|
+|----|----|
+|
+```html
+<p>This is the main content of the document.</p>
+
+``` 
+|![HTML Content](images/html-content-preview.png)|     
+
+The result PDF document combined all of the HTML files in one common document:
+
+![Combined PDF](images/combined_pdf.png)  
+
 ## See Also
 
 - [DocumentElementImporter]({%slug radwordsprocessing-editing-import-document-element%}) 
