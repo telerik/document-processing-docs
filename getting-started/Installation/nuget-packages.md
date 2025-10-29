@@ -79,11 +79,6 @@ The following list represents the available NuGet packages for the Document Proc
 
 ## See Also
 
-- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
-
-
-## See Also
-
  * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
  * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
  * [Resolving Namespace Conflicts in Telerik Document Processing Libraries]({%slug radspreadprocessing-resolving-namespace-conflicts%})

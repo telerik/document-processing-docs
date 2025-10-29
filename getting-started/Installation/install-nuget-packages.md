@@ -59,28 +59,11 @@ Before adding the Telerik NuGet server to Visual Studio, make sure you have:
 
 ### Generate an API Key
 
-1. Go to the [API Keys](https://www.telerik.com/account/downloads/api-keys) page in your Telerik account.
-
-1. Click **Generate New Key +**.
-
-    ![Generate API key](images/generate-api-key.png) 
-
-1. In the **Key Note** field, add a note that describes the API key.
-
-1. Click `Generate Key`.
-
-    ![Generate API key](images/generate-key-button.png) 
-
-1. Select `Copy and Close`. Once you close the window, you can no longer copy the generated key. For security reasons, the API Keys page displays only a portion of the key.
-
-    ![Generated API key](images/generatee-api-key.png)  
-
-1. Store the generated NuGet API key as you will need it in the next steps. Whenever you need to authenticate your system with the Telerik NuGet server, use api-key as the username and your generated API key as the password.
+As the Telerik NuGet server requires authentication, the first step is to [obtain an API key]({%slug generating-api-keys%}) that you will use instead of a password. Using an API key instead of a password is a more secure approach, especially when working with .NET CLI or the NuGet.Config file.
 
 ### Add the Telerik NuGet Package Source to Visual Studio
 
 Before you can install Telerik NuGet packages, you must configure the Telerik NuGet server as a package source in Visual Studio: 
-
 
 ```
 https://nuget.telerik.com/v3/index.json

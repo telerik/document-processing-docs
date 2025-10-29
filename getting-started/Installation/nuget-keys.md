@@ -10,57 +10,32 @@ position: 9
 
 # Restoring NuGet Packages in Your CI Workflow
 
-This article provides an overview of the most popular approaches for using token-based authentication to restore Telerik NuGet packages in your CI (Continuous Integration) workflow.
+This article describes how to use token-based authentication for the Telerik NuGet feed. You will learn how to create and use NuGet API keys to restore Telerik NuGet packages in your Continuous Integration (CI) workflow.
 
-The Telerik NuGet server allows you to authenticate by using two methods:
+When you need to restore the [Telerik NuGet packages]({%slug installation-nuget-packages%}#download-from-the-nuget-server) as part of your CI, using API Keys provides a secure way to authenticate. This method does not require you to provide your Telerik credentials anywhere in the CI workflow. An API key has a limited scope and can be used only with the Telerik NuGet server. If any of your API Keys is compromised, you can quickly delete it and create a new one.
 
-* Basic authentication by providing your Telerik user name and password.
-* Token-based authentication by providing a NuGet Key.
+## Generating API Keys
 
-When you need to restore Telerik NuGet packages as part of your CI, using NuGet keys is the more secure way to authenticate. This method does not require you to provide your Telerik username and password anywhere in the CI workflow.
-
-Unlike your Telerik credentials, a NuGet Key has a limited scope and can be used only with the Telerik NuGet server. If any of your NuGet keys is compromised, you can quickly delete it and create a new one.
-
-## Generating NuGet Keys
-
-1. Go to the [**Manage NuGet Keys**](https://www.telerik.com/account/downloads/nuget-keys) page in your Telerik account.
-
-1. Alternatively, select the **Downloads** tab from your Telerik account and then **NuGet Keys**.
-
-    ![Manage NuGet Keys](images/manage-nuget-keys.png)
-
-    The **NuGet Keys** can be accessed from the **License Keys** section as well:
-
-    ![NuGet Keys from License Keys](images/access-nuget-keys-from-license-keys.png) 
-
-
-1. To create a new key, select the **Generate New Key** button.
-
-1. Enter a name for the NuGet Key, and then select **Generate Key**.
-
-    ![Generate NuGet Key](images/generate-nuget-key.png)
- 
-1. To copy the key, select **Copy and Close**. Once you close the window, you can no longer copy the generated key. For security reasons, the **NuGet Keys** page displays only a portion of the key.
-
-    ![Copy Generated NuGet Key](images/copy-nuget-key.png)
+As the Telerik NuGet server requires authentication, the first step is to [obtain an API key]({%slug generating-api-keys%}) that you will use instead of a password. Using an API key instead of a password is a more secure approach, especially when working with .NET CLI or the NuGet.Config file.
 
 ## Storing a NuGet Key
 
-> Never check in a NuGet Key with your source code or leave it publicly visible in plain text, for example, as a raw key value in a `nuget.config` file. A NuGet Key is valuable as bad actors can use it to access the NuGet packages that are licensed under your account. A potential key abuse could lead to a review of the affected account.
+> Never check-in NuGet API Keys with your source code or leave it publicly visible in plain text, for example, as a raw key value in a `nuget.config` file. A NuGet API Key is valuable as bad actors can use it to access the NuGet packages that are licensed under your account. A potential key abuse could lead to a review of the affected account.
 
 To protect the NuGet Key, store it as a secret environment variable. The exact steps depend on your workflow:
 
-* In GitHub Actions, save the key as a GitHub Actions Secret. Go to **Settings** > **Security** > **Secrets** > **Actions** > **Add new secret**.
+* In GitHub Actions, save the key as a [GitHub Actions Secret](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions). Go to **Settings** > **Security** > **Secrets** > **Actions** > **Add new secret**.
 
-* In Azure DevOps Classic, save the key as a secret pipeline variable. Go to the **Variables** tab and then select **Pipeline variables**.
+* In Azure DevOps, save the key as a [secret Azure DevOps pipeline variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/set-secret-variables). If you use an Azure DevOps Service connection instead of secret environment variables, enter `api-key` in the username field and the API key as the password in the **New NuGet service connection** form editor.
 
 * In Azure DevOps YAML pipelines, save the key as a secret variable as well. Click the YAML editor's **Variables** button and complete the **New variable** form.
 
-If you use Azure DevOps Service connection instead of secret environment variables, enter `api-key` in the username filed and the NuGet Key as the password in the **New NuGet service connection** form editor.
+* In Docker images, save the key as a [Docker secret](https://docs.docker.com/tags/secrets/).
 
-For more details on storing and protecting your NuGet Key, check the [Announcing NuGet Keys](https://www.telerik.com/blogs/announcing-nuget-keys) blog post by Lance McCarthy.
+For more details on storing and protecting your API key, check the [Announcing NuGet Keys](https://www.telerik.com/blogs/announcing-nuget-keys) blog post by Lance McCarthy.
+The examples below assume that the secret environment variable name is `TELERIK_NUGET_KEY`.
 
-## Using a NuGet Key
+## Using a NuGet API Key
 
 There are two popular ways to use the Telerik NuGet server in a build:
 

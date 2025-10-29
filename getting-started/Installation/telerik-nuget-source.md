@@ -119,8 +119,8 @@ To edit a `NuGet.Config` file and add the Telerik feed, you need to:
     </packageSources>
     <packageSourceCredentials>
     <TelerikOnlineFeed>
-        <add key="Username" value="<TELERIK EMAIL or api-key>" />
-        <add key="ClearTextPassword" value="<TELERIK PASSWORD or NUGET API KEY>" />
+        <add key="Username" value="api-key" />
+        <add key="ClearTextPassword" value="Your API KEY" />
     </TelerikOnlineFeed>
     </packageSourceCredentials>
 </configuration>
