@@ -55,11 +55,11 @@ Before adding the Telerik NuGet server to Visual Studio, make sure you have:
 
 * A commercial or trial license that includes Document Processing. Note that the Telerik NuGet server requires authentication and checks if you have a valid license.
 
-* Generate an API key - As the Telerik NuGet server requires authentication, the first step is to obtain an API key that you will use instead of a password. Using an API key instead of a password is a more secure approach, especially when working with .NET CLI or the NuGet.Config file.
+* Generate an API key - As the Telerik NuGet server requires authentication, the first step is to obtain an API key.
 
 ### Generate an API Key
 
-As the Telerik NuGet server requires authentication, the first step is to [obtain an API key]({%slug generating-api-keys%}) that you will use instead of a password. Using an API key instead of a password is a more secure approach, especially when working with .NET CLI or the NuGet.Config file.
+It is necessary to [obtain an API key]({%slug generating-api-keys%}) that you will use instead of a password. Using an API key instead of a password is a more secure approach, especially when working with .NET CLI or the NuGet.Config file.
 
 ### Add the Telerik NuGet Package Source to Visual Studio
 
