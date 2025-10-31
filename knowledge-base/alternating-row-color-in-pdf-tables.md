@@ -22,6 +22,7 @@ This article shows how to generate a PDF table with styled header cells with bor
 
 A similar design can be produced with the demonstrated approach:
 
+<img style="border: 1px solid gray;" src="images/alternating-row-color-in-pdf-tables.png" />
 
 ## Solution
 
