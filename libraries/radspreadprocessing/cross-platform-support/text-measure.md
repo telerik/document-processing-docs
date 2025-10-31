@@ -66,9 +66,11 @@ To use the **SkiaTextMeasurer** class, you can reference it in one of the follow
 
 If you prefer to reference assemblies directly, you need:
 
-- **Telerik.Documents.TextMeasurer.Skia.dll** - Main assembly containing the SkiaTextMeasurer class
-- **Telerik.Text.Skia.dll** - Required dependency of Telerik.Documents.TextMeasurer.Skia.
-- **SkiaSharp.HarfBuzz.dll** (and all of its dependencies) - Required dependency of Telerik.Text.Skia.dll, along with all its dependencies
+|Assembly|Description|
+|----|----|
+|**Telerik.Documents.TextMeasurer.Skia.dll**|Main assembly containing the SkiaTextMeasurer class|
+|**Telerik.Text.Skia.dll**|Required dependency of Telerik.Documents.TextMeasurer.Skia.|
+|**SkiaSharp.HarfBuzz.dll** (version {{site.harfbuzzsharp}}) (and all of its dependencies)|Required dependency of Telerik.Text.Skia.dll, along with all its dependencies|
 
 #### [C#] Example 2: Set the SkiaTextMeasurer as a text measurer
 

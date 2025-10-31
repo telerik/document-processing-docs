@@ -396,7 +396,8 @@ defaults:
 mindotnetversion: "8"
 maxdotnetversion: "9"
 dotnetversions: ".NET 8 and .NET 9"
-skiasharpversion: "3.116.1"
+skiasharpversion: "3.119.1"
+harfbuzzsharp: "8.3.1.2"
 
 # Feedback Form Product Code
 productCode: TDP
