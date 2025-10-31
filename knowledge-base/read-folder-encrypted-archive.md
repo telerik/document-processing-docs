@@ -29,6 +29,16 @@ This knowledge base article also answers the following questions:
 
 ### Creating a Password-Protected ZIP Archive
 
+Let's have the following folders structure and we want to :
+
+* MyFolder
+    * Subfolder1
+        * textFile1.txt
+        * textFile2.txt
+    * Subfolder2
+        * textFile3.txt
+        * textFile4.txt
+
 To create a password-protected ZIP archive with the correct folder structure, perform the following steps:
 
 1. Iterate through all files in the source directory and subdirectories.
@@ -73,18 +83,16 @@ Here is the modified code:
                 }
             }
             File.Delete(zipFileName);
-            //Process.Start(new ProcessStartInfo() { FileName = encryptedZipPath, UseShellExecute = true });
+            Process.Start(new ProcessStartInfo() { FileName = encryptedZipPath, UseShellExecute = true });
 
             bool extracted = ExtractFile(encryptedZipPath,  @"..\..\");
-
-
         }
 
 ```
 
 ### Extracting Files from an Encrypted ZIP Archive
 
-To extract files from an encrypted ZIP archive, perform the following steps:
+To extract files from an encrypted ZIP archive and read the content, perform the following steps:
 
 1. Use `EncryptionSettings.CreateDecryptionSettings()` for decryption settings.
 2. Handle the `PasswordRequired` event to assign the correct password.
