@@ -29,7 +29,7 @@ This knowledge base article also answers the following questions:
 
 ### Creating a Password-Protected ZIP Archive
 
-Let's have the following folders structure and we want to :
+Let's have the following folders structure and we want to zip the root folder with all of its content:
 
 * MyFolder
     * Subfolder1
