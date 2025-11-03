@@ -1,5 +1,5 @@
 ---
-title: TimeStamp Server
+title: Using a TimeStamp Server
 description: Learn how to sign a PDF document using a TimeStamp server.
 page_title: Signing a PDF using a TimeStamp Server
 slug: pdf-sign-timestamp-server
