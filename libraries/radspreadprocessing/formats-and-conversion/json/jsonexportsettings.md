@@ -45,7 +45,7 @@ The [JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-
 
 **ExportWhat**
 * **ActiveSheet** - Exports only the currently active worksheet.
-* EntireWorkbook** - Exports all worksheets in the workbook. (Default)
+* **EntireWorkbook** - Exports all worksheets in the workbook. (Default)
 * **Selection** - Exports only the currently selected cell ranges.
 
 **ChartDataMode**
