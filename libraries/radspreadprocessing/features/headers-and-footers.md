@@ -148,7 +148,7 @@ The following list describes all valid uses of the ampersand symbol sequences. I
 
 * **&A**: This text sequence allows you to insert a **Sheet name** field. This field is evaluated as the Sheet Name property value.
 
-**Example 3** demonstrates how you could insert a date field in the header, a page number filed combined with а number of pages field in the footer of a worksheet .
+**Example 3** demonstrates how you could insert a date field in the header, a page number filed combined with a number of pages field in the footer of a worksheet .
 
 #### **[C#] Example 3: Insert fields in header/footer**
 

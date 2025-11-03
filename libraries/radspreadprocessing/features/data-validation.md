@@ -58,7 +58,7 @@ The __AnyValueDataValidationRuleContext__ class exposes the following properties
 __SingleArgumentdataValidationRuleContext__ exposes the properties which the __AnyValueDataValidationRuleContext__ class has, but extends them with the following properties:
 
 * __IgnoreBlank__: Specifies if the validation will ignore blank values and this way consider them as valid values.
-* __Argument1__: Тhe argument needed for the validation.
+* __Argument1__: The argument needed for the validation.
 * __CellIndex__: The cell index of the cell based on which the validation rule is created.
 * __Worksheet__: The worksheet in which the data validation rule is created.
 

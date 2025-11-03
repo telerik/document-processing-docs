@@ -21,7 +21,7 @@ __TableCell__ class represents a single cell in a [Table]({%slug radpdfprocessin
 
 ## Inserting a TableCell
 
-In order to add a cell to а __Тable__, you should add it in the __TableCellCollection__ of a __TableRow__.
+In order to add a cell to a __Table__, you should add it in the __TableCellCollection__ of a __TableRow__.
         
 
 The code snippet in __Example 1__ shows how to create a table with a single row and add a cell in the first row.

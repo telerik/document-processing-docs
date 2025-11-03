@@ -33,3 +33,11 @@ This is a list with short descriptions of the top-of-the-line features of Teleri
 >noteIf you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 >noteFor details on the **usage of the library**, go to the **[Getting Started]({%slug radziplibrary-gettingstarted%})** article.
+
+## Online Demos
+
+|Demo|Description|
+|----|----|
+|[ZipLibrary Basic Usage](https://demos.telerik.com/document-processing/ziplibrary)|The Zip library allows your application to read all the data from a ZIP file simultaneously and display the information about the compressed files in a Grid.|
+|[ZipLibrary Stream Compression](https://demos.telerik.com/document-processing/ziplibrary/compress_stream)|The example demonstrates how to easily compress streams with the preferred compression level.|
+|[ZipLibrary Archive Protection](https://demos.telerik.com/document-processing/ziplibrary/archive_protection)|The ZipLibrary lets you password-protect and open ZIP archive with a password.|

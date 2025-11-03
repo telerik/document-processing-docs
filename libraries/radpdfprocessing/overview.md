@@ -63,6 +63,27 @@ The document model of the library provides support for:
 | [**Viewer Preferences**]({%slug radpdfprocessing-features-viewer-preferences%}) | Control how PDF documents are displayed and behave in PDF viewers, including window behavior, UI visibility, and print settings. |
 |**GenAI-powered Document Insights**|Enables you to easily extract insights from PDF documents using Large Language Models (LLMs). This functionality enables you to summarize document content and ask questions about it, with the AI providing relevant answers based on the document's content. [Read More]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
 
+
+## Online Demos
+
+|Demo|Description|
+|----|----|
+|[PdfProcessing Basic Usage](https://demos.telerik.com/document-processing/pdfprocessing)|This example demonstrates how to create a document containing images, text and shapes and export it to PDF.|
+|[PdfProcessing Bar Chart Export](https://demos.telerik.com/document-processing/pdfprocessing/bar_chart_export)|This example demonstrates how to create a document containing Bar Chart, Data Table and export it to PDF.|
+|[PdfProcessing Form Fields Reading and Writing](https://demos.telerik.com/document-processing/pdfprocessing/read_write_form_fields)|This example demonstrates how to use a PDF from the server, modify its fields based on user input and export it to PDF on the client.|
+|[PdfProcessing Content Merging, Splitting, and Adding](https://demos.telerik.com/document-processing/pdfprocessing/merge_split_add_content)|This example demonstrates how to merge, split or add content to PDF document.|
+|[PdfProcessing Embedding File Streams](https://demos.telerik.com/document-processing/pdfprocessing/embed_file_streams)|This example demonstrates how to use a PDF from the server, select a file or an Embedded Electronic (ZUGFeRD) Invoice and embed it into the PDF document.|
+|[PdfProcessing Optical Character Recognition (OCR)](https://demos.telerik.com/document-processing/pdfprocessing/optical_character_recognition)|This example demonstrates how to import an image into the PdfProcessing library, retrieve the text from it and export it to a PDF document.|
+|[PdfProcessing Annotations](https://demos.telerik.com/document-processing/pdfprocessing/annotations)|This example demonstrates how to create a PDF file and insert annotations in it.|
+|[PdfProcessing Digitally Sign Document](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document)|This example demonstrates how to digitally sign a PDF.|
+|[PdfProcessing Validate Digital Signature](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature)|This example demonstrates how to validate a digitally signed PDF.|
+|[PdfProcessing Multiple Digital Signatures](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)|This example demonstrates how to digitally sign a PDF without invalidating any existing signatures.|
+|[PdfProcessing Accessibility](https://demos.telerik.com/document-processing/pdfprocessing/accessibility)|This example demonstrates how to create accessible PDF documents programmatically, ensuring compliance with standards such as PDF/UA by supporting features like tagged content, document structure, and metadata. Downloaded documents will adhere to the selected compliance level.|
+|[PdfProcessing GenAI Document Insights](https://demos.telerik.com/document-processing/pdfprocessing/genai_document_insights)|This example demonstrates how to use the GenAI-powered Document Insights feature in Telerik RadPdfProcessing to extract meaningful insights from PDF documents.|
+
+
+
+
 # See Also
 
 - [Installing on Your Computer]({%slug installation-installing-on-your-computer%})

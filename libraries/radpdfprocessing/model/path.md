@@ -51,21 +51,14 @@ __Example 1__ shows how you can create a Path, assign a predefined Geometry to i
 
 #### __[C#] Example 1: Create Path and add it to container__
 
-{{region cs-radpdfprocessing-model-path_0}}
-	Path path = new Path();
-	path.Geometry = geometry;
-	container.Content.Add(path);
-{{endregion}}
+<snippet id='pdf-create-path'/>
 
 __Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__ that create a new path and insert it into the document.
         
 
 #### __[C#] Example 2: Add Path to container__
 
-{{region cs-radpdfprocessing-model-path_1}}
-	Path path = container.Content.AddPath();
-	path.Geometry = geometry;
-{{endregion}}
+<snippet id='pdf-path-to-container'/>
 
 
 >There are other methods that allow adding a path to a document. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
@@ -77,36 +70,7 @@ You can modify a __Path__ element using the properties the class exposes. The pr
         
 #### __[C#] Example 3: Modifying Path properties__
 
-{{region cs-radpdfprocessing-model-path_2}}
-	RadFixedDocument document = new RadFixedDocument();
-	RadFixedPage page = document.Pages.AddPage();
-	FixedContentEditor editor = new FixedContentEditor(page);
-
-	RectangleGeometry rectangleGeometry = new RectangleGeometry();
-	rectangleGeometry.Rect = new Rect(10, 5, 400, 300);
-
-	Telerik.Windows.Documents.Fixed.Model.Graphics.Path path = new Telerik.Windows.Documents.Fixed.Model.Graphics.Path();
-	path.Geometry = rectangleGeometry;
-
-	SimplePosition simplePosition = new SimplePosition();
-	simplePosition.Translate(20, 20);
-
-	path.Fill = new RgbColor(255, 0, 255);
-	path.Stroke = new RgbColor(0, 0, 255);
-	path.IsFilled = true;
-	path.IsStroked = true;
-	path.StrokeThickness = 1;
-	path.StrokeLineCap = Telerik.Windows.Documents.Fixed.Model.Graphics.LineCap.Flat;
-	path.StrokeLineJoin = Telerik.Windows.Documents.Fixed.Model.Graphics.LineJoin.Round;
-	path.StrokeDashArray = new double[] { 1 };
-	path.StrokeDashOffset = 2;
-	path.AlphaConstant = 0.5;
-	path.StrokeAlphaConstant = 0.1;
-	path.MiterLimit = 2;
-	path.Position = simplePosition;
-
-	page.Content.Add(path);
-{{endregion}}
+<snippet id='pdf-modify-path'/>
 
 ## See Also
 

@@ -75,7 +75,7 @@ Note that qualifier for a workbook name is required only if the current workshee
 
 ## Types of Names
 
-Тhe document model  has support only for Defined Names.
+The document model  has support only for Defined Names.
         
 
 __Defined name__: A name that can contain any value that can be stored in a cell: a number or text constant, a formula, or a cell reference. You can create your own defined names. Note that you can edit the name, value and comment of the already created defined name, however, you cannot change its scope.

@@ -20,14 +20,14 @@ You can use the code snippet from __Example 1__ to create a __TableCell__ and ad
 
 #### __[C#] Example 1: Create a TableCell object and add it to a TableRow__
 
-{{region cs-radwordsprocessing-model-tablecell_0}}
-	RadFlowDocument radFlowDocument = new RadFlowDocument();
-	Table table = radFlowDocument.Sections.AddSection().Blocks.AddTable();
-	TableRow row = table.Rows.AddTableRow();
+````
+RadFlowDocument radFlowDocument = new RadFlowDocument();
+Table table = radFlowDocument.Sections.AddSection().Blocks.AddTable();
+TableRow row = table.Rows.AddTableRow();
 
-	TableCell cell = new TableCell(radFlowDocument);
-	row.Cells.Add(cell);
-{{endregion}}
+TableCell cell = new TableCell(radFlowDocument);
+row.Cells.Add(cell);
+````
 
 
 
@@ -36,10 +36,10 @@ To create a __TableCell__ and add it in the document tree in the same time, you 
 
 #### __[C#] Example 2: Create a TableCell and add it to a TableRow in the same time__
 
-{{region cs-radwordsprocessing-model-tablecell_1}}
-	TableRow row = table.Rows.AddTableRow();
-	TableCell cell = row.Cells.AddTableCell();
-{{endregion}}
+````
+TableRow row = table.Rows.AddTableRow();
+TableCell cell = row.Cells.AddTableCell();
+````
 
 
 ## Modifying a TableCell
@@ -98,15 +98,16 @@ The __TableCell__ element exposes several properties that allow you to customize
             
 
 * __GridRowIndex__: Represents the row index of the cell in the table grid.
-            
-{{region cs-radwordsprocessing-model-tablecell_2}}
-	Border border = new Border(1, BorderStyle.Single, new ThemableColor(Colors.Blue));
-	cell.Borders = new Telerik.Windows.Documents.Flow.Model.Styles.TableCellBorders(border, border, border, border);
-	cell.Shading.BackgroundColor = new ThemableColor(Colors.Red);
-	cell.Padding = new Telerik.Windows.Documents.Primitives.Padding(20,20,20,20);
-	cell.VerticalAlignment = VerticalAlignment.Bottom;
-	cell.TextDirection = TextDirection.LeftToRightTopToBottom;
-{{endregion}}			
+         
+		    
+````
+Border border = new Border(1, BorderStyle.Single, new ThemableColor(Colors.Blue));
+cell.Borders = new Telerik.Windows.Documents.Flow.Model.Styles.TableCellBorders(border, border, border, border);
+cell.Shading.BackgroundColor = new ThemableColor(Colors.Red);
+cell.Padding = new Telerik.Windows.Documents.Primitives.Padding(20,20,20,20);
+cell.VerticalAlignment = VerticalAlignment.Bottom;
+cell.TextDirection = TextDirection.LeftToRightTopToBottom;
+````			
 
 ## Operating with a TableCell
 
@@ -118,11 +119,9 @@ __Example 3__ demonstrates how to add a __Paragraph__ to a __TableCell__.
 #### __[C#] Example 3: Add a paragraph to a TableCell__
 
 
-{{region cs-radwordsprocessing-model-tablecell_3}}
-	Paragraph paragraph = cell.Blocks.AddParagraph();
-{{endregion}}
-
-
+````
+Paragraph paragraph = cell.Blocks.AddParagraph();
+````
 
 Through the __BlockCollection__ property of the __TableCell__ element you can add a __Table__ or any other [BlockBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.BlockBase.html) element.
             

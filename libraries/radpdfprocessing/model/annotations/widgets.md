@@ -54,10 +54,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 
 #### **[C#] Example 1: Creating a widget**
 
-{{region radpdfprocessing-model-annotations-widgets_0}}
-	VariableContentWidget widget = textBoxField.Widgets.AddWidget();
-	widget.Rect = new Rect(100, 100, 20, 20);
-{{endregion}}
+<snippet id='pdf-create-widget'/>
 
 >Don't forget to specify the size of the widget. Otherwise, it won't be visualized in the PDF document.
 
@@ -65,12 +62,7 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 
 #### **[C#] Example 2: Iterating the widgets in the FormField's collection**
 
-{{region radpdfprocessing-model-annotations-widgets_1}}
-	foreach (var widget in textBoxField.Widgets)
-	{
-	    document.Pages[0].Annotations.Add(widget);
-	}
-{{endregion}}
+<snippet id='pdf-iterate-widgets'/>
 
 
 >The Widget class inherits from [Annotation]({%slug radpdfprocessing-model-annotations-overview%}). It is important to add each annotation to the Annotations collection of RadFixedPage.
@@ -125,7 +117,7 @@ This class corresponds to WidgetContentType.PushButtonContent enum value and rep
 
 * **Content**: Provides the AnnotationContentSource, used to visualize the button in the PDF viewer. This property is with higher priority compared to AppearanceCharacteristics property.
 
-* **AppearanceCharacteristics**: А [PushButtonAppearanceCharacteristics class]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}#pushbuttonappearancecharacteristics-class) instance providing information on how to dynamically recalculate the widget appearance. This property is used only when the [AcroForm class]({%slug radpdfprocessing-model-interactive-forms-acroform %}) has ViewersShouldRecalculateWidgetAppearances property set to *true*, which forces the PDF viewer to ignore the provided AnnotationContentSource. In order to apply these properties, you should call **RecalculateContent()** method, which will modify the Content property value so that it corresponds to the appearance characteristics.
+* **AppearanceCharacteristics**: A [PushButtonAppearanceCharacteristics class]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}#pushbuttonappearancecharacteristics-class) instance providing information on how to dynamically recalculate the widget appearance. This property is used only when the [AcroForm class]({%slug radpdfprocessing-model-interactive-forms-acroform %}) has ViewersShouldRecalculateWidgetAppearances property set to *true*, which forces the PDF viewer to ignore the provided AnnotationContentSource. In order to apply these properties, you should call **RecalculateContent()** method, which will modify the Content property value so that it corresponds to the appearance characteristics.
 
 ### TwoStatesButtonWidget Class
 

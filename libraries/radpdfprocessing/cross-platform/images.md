@@ -43,11 +43,8 @@ PdfProcessing comes with a default implementation for such resolver called `Imag
 >note View Implementation [Requirements](#requirements).
 
 #### **[C#] Example 1: Set the default implementation of the ImagePropertiesResolver class**
-    {{region cs-radpdfprocessing-cross-platform-images_0}}
-
-        Telerik.Documents.ImageUtils.ImagePropertiesResolver defaultImagePropertiesResolver = new Telerik.Documents.ImageUtils.ImagePropertiesResolver();
-        Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.ImagePropertiesResolver = defaultImagePropertiesResolver;
-    {{endregion}}
+   
+<snippet id='pdf-image-property-resolver'/>
 
 ### Custom Implementation for ImagePropertiesResolver
 
@@ -72,49 +69,20 @@ The **Telerik.Documents.ImageUtils** package provides a default implementation o
 >note View Implementation [Requirements](#requirements).
 
 #### **[C#] Example 2: Set the default implementation of the JpegImageConverter class**
-    {{region cs-radpdfprocessing-cross-platform_3}}
 
-       Telerik.Windows.Documents.Extensibility.JpegImageConverterBase defaultJpegImageConverter = new Telerik.Documents.ImageUtils.JpegImageConverter();
-       Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = defaultJpegImageConverter;
-    {{endregion}}
+<snippet id='pdf-jpeg-image-converter'/>
 
 ### Custom Implementation for JpegImageConverter
 
 The following example depends on the [Magick.NET](https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/) library to convert images to Jpeg format.
     
 #### **[C#] Example 3: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
-    {{region cs-radpdfprocessing-cross-platform_2}}
 
-        internal class CustomJpegImageConverter : Telerik.Windows.Documents.Extensibility.JpegImageConverterBase
-        {
-            public override bool TryConvertToJpegImageData(byte[] imageData, ImageQuality imageQuality, out byte[] jpegImageData)
-            {
-                IMagickFormatInfo? formatInfo = MagickFormatInfo.Create(imageData);
-                if (formatInfo != null && formatInfo.SupportsReading)
-                {
-                    using (MagickImage magickImage = new MagickImage(imageData))
-                    {
-                        magickImage.Alpha(AlphaOption.Remove);
-                        magickImage.Quality = (int)imageQuality;
-
-                        jpegImageData = magickImage.ToByteArray(MagickFormat.Jpeg);
-                    }
-
-                    return true;
-                }
-
-                jpegImageData = null;
-                return false;
-            }
-        }
-    {{endregion}}
+<snippet id='pdf-custom-jpeg-converter'/>
     
 #### **[C#] Example 4: Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
-    {{region cs-radpdfprocessing-cross-platform_3}}
-    
-        JpegImageConverterBase customJpegImageConverter = new CustomJpegImageConverter();
-        Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = customJpegImageConverter;
-    {{endregion}}
+
+<snippet id='pdf-set-custom-image-converter'/>
 
 
 >note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter).

@@ -40,23 +40,7 @@ ComboBoxField provides the following properties:
 * **ShouldSpellCheck**: Boolean value indicating whether the text should be spell checked during its input.
 
 #### **[C#] Example 1: Create a ComboBoxField and add it to a page**
-{{region radpdfprocessing-model-interactive-forms-form-fields-comboboxfield_0}}
-
-	ComboBoxField comboBoxField = new ComboBoxField("SampleComboBox");
-	
-	comboBoxField.Options.Add(new ChoiceOption("First Value"));
-	comboBoxField.Options.Add(new ChoiceOption("Second Value"));
-	comboBoxField.Options.Add(new ChoiceOption("Third Value"));
-	
-	comboBoxField.Value = comboBoxField.Options[1];
-	
-	VariableContentWidget widget = comboBoxField.Widgets.AddWidget();
-	widget.Rect = new Rect(100, 100, 200, 30);
-	widget.RecalculateContent();
-		
-	document.AcroForm.FormFields.Add(comboBoxField);
-	document.Pages[0].Annotations.Add(widget);
-{{endregion}}
+<snippet id='pdf-combobox-field'/>
 
 ## See Also
 

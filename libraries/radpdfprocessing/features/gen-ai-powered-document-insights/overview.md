@@ -36,3 +36,4 @@ The GenAI-powered Document Insights feature includes three main components:
 * [SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
 * [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
 * [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})
+* [PdfProcessing GenAI Document Insights Demo](https://demos.telerik.com/document-processing/pdfprocessing/genai_document_insights)

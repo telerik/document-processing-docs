@@ -39,17 +39,7 @@ These properties are used to hold the current graphics control parameters. The f
             
 #### [C#] Example 1: Using GraphicProperties with FixedContentEditor
 
-{{region radpdfprocessing-editing-text-and-graphic-properties_0}}
-
-	editor.GraphicProperties.IsFilled = true;
-	editor.GraphicProperties.IsStroked = true;
-
-	editor.GraphicProperties.FillColor = new RgbColor(255, 0, 0);
-	editor.GraphicProperties.StrokeColor = RgbColors.Black;
-	editor.GraphicProperties.StrokeThickness = 2;
-	editor.GraphicProperties.StrokeDashArray = new double[] { 2, 2, 5 };
-	editor.GraphicProperties.StrokeLineJoin = Telerik.Windows.Documents.Fixed.Model.Graphics.LineJoin.Round;
-{{endregion}}
+<snippet id='pdf-graphic-properties-editor'/>
 
 ## TextProperties
 
@@ -91,17 +81,7 @@ These properties hold the parameters used for text fragments. The following para
             
 #### [C#] Example 2: Using TextProperties with Block
 
-{{region radpdfprocessing-editing-text-and-graphic-properties_1}}
-
-	block.TextProperties.CharacterSpacing = 5;
-	block.TextProperties.Font = FontsRepository.TimesBold;
-	block.TextProperties.FontSize = Unit.PointToDip(12);
-
-	block.TextProperties.HighlightColor = new RgbColor(40, 60, 80);
-	block.TextProperties.RenderingMode = Telerik.Windows.Documents.Fixed.Model.Text.RenderingMode.FillAndStroke;
-	block.TextProperties.UnderlinePattern = Telerik.Windows.Documents.Fixed.Model.Editing.Flow.UnderlinePattern.Single;
-	block.TextProperties.UnderlineColor = RgbColors.Black;;
-{{endregion}}
+<snippet id='pdf-text-properties-block'/>
 
 The TextProperties also exposes the following methods, which can be used for changing the current font:
         

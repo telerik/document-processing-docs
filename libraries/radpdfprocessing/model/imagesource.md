@@ -31,12 +31,7 @@ __Example 1__ illustrates how you can create an ImageSource using a __FileStream
 
 #### __[C#] Example 1: Create ImageSource from Stream__
 
-{{region cs-radpdfprocessing-model-imagesource_0}}
-	using (FileStream source = File.Open(filename, FileMode.Open))
-	{
-	    ImageSource imageSource = new ImageSource(source);
-	}
-{{endregion}}
+<snippet id='pdf-image-source-from-stream'/>
 
 
 With the __EncodedImageData__ class you can create an __ImageSource__ with encoded image data. This way the image quality will not be reduced on import.
@@ -44,18 +39,12 @@ With the __EncodedImageData__ class you can create an __ImageSource__ with encod
 __Example 2__ demonstrates how you can create an __ImageSource__ using the __EncodedImageData__ class.
 
 #### __[C#] Example 2: Create ImageSource from EncodedImageData__
-{{region cs-radpdfprocessing-model-imagesource_1}}
-	EncodedImageData imageData = new EncodedImageData(imageBytes, 8, 655, 983, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.DCTDecode });
-	ImageSource imageSource = new ImageSource(imageData);
-{{endregion}}
+<snippet id='pdf-image-source-from-encoded-image-data'/>
 
 With the __EncodedImageData__ class you can also create an __ImageSource__ with encoded image data and set its transparency. The __EncodedImageData__ class provides a second constructor overload where you can set the alpha-channel bytes of the image as a second constructor parameter in order to apply transparency to this image.
 
 #### __[C#] Example 3: Create ImageSource from EncodedImageData with transparency__
-{{region cs-radpdfprocessing-model-imagesource_2}}
-	EncodedImageData imageData = new EncodedImageData(imageBytes, alphaChannelBytes, 8, imageWidth, imageHeight, ColorSpaceNames.DeviceRgb, new string[] { PdfFilterNames.FlateDecode });
-	ImageSource imageSource = new ImageSource(imageData);
-{{endregion}}
+<snippet id='pdf-transparency-image-source-from-encoded-image-data'/>
 
 ## Properties
 
@@ -83,16 +72,7 @@ __RadPdfProcessing__ exposes an extension method allowing you to convert every B
 
 #### __[C#] Example 4: Create ImageSource with extension method__
 
-{{region cs-radpdfprocessing-model-imagesource_3}}
-	BitmapImage bitmap = new BitmapImage();
-	bitmap.BeginInit();
-	bitmap.UriSource = new Uri(filename, UriKind.RelativeOrAbsolute);
-	bitmap.EndInit();
-	
-	ImageSource imageSource = bitmap.ToImageSource();
-	
-	return imageSource;
-{{endregion}}
+<snippet id='pdf-image-source-extensions'/>
 
 >The code from __Example 4__ won't compile in Silverlight due to differences in the BitmapImage API for this platform. You could pass the image as a stream to the SetSource() method of BitmapImage instead.
 

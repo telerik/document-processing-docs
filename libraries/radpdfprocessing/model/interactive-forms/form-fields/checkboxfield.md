@@ -35,17 +35,7 @@ CheckBoxField provides the following properties:
 * **ExportValue**: Gets or sets the value of the field when exporting the interactive form. The default export value is “Yes”.
 
 #### **[C#] Example 1: Create a CheckBoxField and add it to a page**
-{{region radpdfprocessing-model-interactive-forms-form-fields-checkboxfield_0}}
-	CheckBoxField checkBoxField = new CheckBoxField("SampleCheckBox");
-	checkBoxField.IsChecked = true;
-	
-	TwoStatesButtonWidget widget = checkBoxField.Widgets.AddWidget();
-	widget.Rect = new Rect(100, 100, 20, 20);
-	widget.RecalculateContent();
-
-	document.AcroForm.FormFields.Add(checkBoxField);
-	document.Pages[0].Annotations.Add(widget);
-{{endregion}}
+<snippet id='pdf-checkbox-field'/>
 
 
 ## See Also

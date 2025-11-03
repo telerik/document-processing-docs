@@ -153,3 +153,4 @@ For more complete examples head to the [Developer Focused Examples]({%slug radzi
 
 * [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%})
 * [Update ZipArchive]({%slug radziplibrary-update-ziparchive%})
+* [ZipLibrary Basic Usage Demo](https://demos.telerik.com/document-processing/ziplibrary)

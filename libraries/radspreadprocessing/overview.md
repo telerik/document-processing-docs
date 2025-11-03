@@ -76,6 +76,17 @@ The following table describes the most popular features of the RadSpreadProcessi
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
 
+## Online Demos
+
+|Demo|Description|
+|----|----|
+|[SpreadProcessing Basic Usage](https://demos.telerik.com/document-processing/spreadprocessing)|With RadSpreadProcessing, you can convert spreadsheet documents between various formats, including XLSX, CSV, XLSM, and TXT. Additionally, you can export any of these formats to PDF.|
+|[SpreadProcessing Document Generation](https://demos.telerik.com/document-processing/spreadprocessing/generate_documents)|RadSpreadProcessing allows you to create a document from scratch using only code. This is particulary convenient when you need to export large amount of data to one of the supported formats - XLSX, CSV, TXT, XLSM.|
+|[SpreadProcessing Grid Integration](https://demos.telerik.com/document-processing/spreadprocessing/grid_integration)|This example illustrates integration between Telerik SpreadProcessing and the Kendo ASP.NET Core Grid component. You can visualize data in Grid and easily export it to XLSX, CSV, XLSM or TXT format.|
+|[SpreadProcessing Chart Generation](https://demos.telerik.com/document-processing/spreadprocessing/charts)|RadSpreadProcessing allows you to create a document with a chart from scratch using only code.|
+|[SpreadProcessing Add Notes](https://demos.telerik.com/document-processing/spreadprocessing/notes)|With RadSpreadProcessing, you can insert a Note related to a cell on a specific document position. The current example demonstrates how you can add notes with custom Author and Text while generating a document, and then export it to Xlsx format.|
+|[SpreadProcessing Add Comments](https://demos.telerik.com/document-processing/spreadprocessing/comments)|With RadSpreadProcessing, you can insert a Comment related to a cell on a specific document position. The current example demonstrates how you can add comments with custom Author and Text while generating a document, and then export it to Xlsx format.|
+
 ## See Also
 
 * [Getting Started]({%slug radspreadprocessing-getting-started%})

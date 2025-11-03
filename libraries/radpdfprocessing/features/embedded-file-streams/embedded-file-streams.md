@@ -22,17 +22,7 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
  
 #### **[C#] Creating an embedded file stream**
 
-{{region cs-radpdfprocessing-embedded-file-streams_creating_1}}
-
-            RadFixedDocument document = new RadFixedDocument();
-            RadFixedPage page = document.Pages.AddPage();
-            byte[] textFile = File.ReadAllBytes(@"..\..\Embedded_File_Streams.txt");
-            document.EmbeddedFiles.Add("Text file.txt", textFile);
-            byte[] imageFile = File.ReadAllBytes(@"..\..\Basel.JPG");
-            document.EmbeddedFiles.Add("Basel photo.jpg", imageFile);
-
-
-{{endregion}}
+<snippet id='pdf-create-embedded-file-stream'/>
 
 >important **DuplicatedEmbeddedFileNameException** is thrown when adding an embedded file with a name that is already added to the collection.
 
@@ -55,33 +45,7 @@ The **MergedEmbeddedFileNameResolving** event occurs when trying to resolve conf
 
 #### **[C#] Resolving Duplicated Names**
 
-{{region cs-radpdfprocessing-embedded-file-streams_resolving_2}}
-
-            RadFixedDocument doc1 = new RadFixedDocument();
-            RadFixedPage page1 = doc1.Pages.AddPage();          
-            byte[] textFile1 = File.ReadAllBytes(@"..\..\Embedded_File_Streams.txt");
-            doc1.EmbeddedFiles.Add("Text file.txt", textFile1); 
-            byte[] imageFile = File.ReadAllBytes(@"..\..\Basel.JPG");
-            doc1.EmbeddedFiles.Add("Basel photo.jpg", imageFile);
-
-            RadFixedDocument doc2 = new RadFixedDocument();
-            RadFixedPage page2 = doc2.Pages.AddPage();           
-            byte[] textFile2 = File.ReadAllBytes(@"..\..\Release_Notes.txt");
-            doc2.EmbeddedFiles.Add("Text file.txt", textFile2);
-
-            doc1.MergedEmbeddedFileNameResolving += (s, a) =>
-            {
-                string myNewName = "2_" + a.Name;
-                if (!a.UsedNames.Contains(myNewName))
-                {
-                    a.NewName = myNewName;
-                }
-            };
-
-            doc1.Merge(doc2);
-
-
-{{endregion}}
+<snippet id='pdf-duplicated-file-names'/>
 
 #### Resolved Duplicated Names 
 ![Resolving duplicated Names in Embedded Files](images/embedded_files_1.png) 
@@ -89,4 +53,8 @@ The **MergedEmbeddedFileNameResolving** event occurs when trying to resolve conf
 ### Using the PdfImportSettings.DuplicatedEmbeddedFileNameResolving event 
 
 When importing a PDF document containing embedded files, the **DuplicatedEmbeddedFileNameResolving** event that the [PdfImportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) offers, allows you to handle duplicated names and properly resolve them.
+
+## See Also
+
+* [PdfProcessing Embedding File Streams Demo](https://demos.telerik.com/document-processing/pdfprocessing/embed_file_streams)
 

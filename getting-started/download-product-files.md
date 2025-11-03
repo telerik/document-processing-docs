@@ -32,7 +32,7 @@ Since the **Telerik Document Processing** is a part of several [Telerik bundles]
 
 * Documentation files
 
-Тo download these files, follow the steps below:
+To download these files, follow the steps below:
 
 1\. Log into [your Telerik account](https://www.telerik.com/account/) and click the **Downloads** option: 
 

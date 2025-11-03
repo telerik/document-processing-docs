@@ -10,9 +10,7 @@ position: 3
 
 # ExpandableMemoryStream
 
-## Overview
-
-ExpandableMemoryStream is a segmented in‑memory stream optimized for large or many parallel PDF operations. Instead of resizing one big array, it grows by adding fixed‑size blocks only when needed. This keeps allocations smaller and steadier, helps the GC, and maintains predictable performance as documents scale. Compared to MemoryStream (which resizes one contiguous array and copies data on expansion), this segmented approach adds fixed blocks without copying existing bytes, reducing large reallocations and LOH pressure for very large or unpredictable workloads. The block‑based design grows incrementally without moving existing bytes and supports very large content sizes while keeping allocation behavior stable under parallel load.
+ExpandableMemoryStream is a segmented in-memory stream designed for efficient large or parallel PDF operations. Instead of resizing a single contiguous array like a **MemoryStream**, it grows by adding fixed-size blocks as needed—avoiding costly reallocations and Large Object Heap (LOH) pressure. Each block remains untouched once filled, so data isn’t copied during expansion. This block-based approach keeps allocations small and predictable, reduces GC overhead, and supports very large or bursty workloads. When growing, new cleared blocks are appended. When shrinking, only the visible length changes, allowing future reuse of existing memory without additional allocations.
 
 ## Why a Segmented Approach
 
@@ -39,4 +37,7 @@ The following example shows two common ways to load a large PDF document into me
 
 In both cases the segmented internal structure avoids reallocating a single large contiguous buffer, helping performance and memory stability for very large PDF files.
 
+## See Also
 
+* [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})

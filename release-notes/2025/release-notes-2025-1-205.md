@@ -64,7 +64,7 @@ position: 99
 * A NotSupportedException is thrown when parsing CFF Type1 font.
 * A NotSupportedException is thrown when exporting an image with ICCBased color space and the default ImageCompression is changed.
 * Some text is missing when the culture is German.
-* А KeyNotFoundException is thrown when reading glyph data with Type1Font.
+* A KeyNotFoundException is thrown when reading glyph data with Type1Font.
 * A KeyNotFoundException is thrown when loading a document with unsupported annotation.
 * An InvalidOperationException: 'Position is out of range.' is thrown while reading the font in the import process.
 * An InvalidCastException is thrown when parsing the font for a specific document.

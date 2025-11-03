@@ -154,3 +154,4 @@ CompressedStream derives from the Stream class and therefore it supports all its
 
  * [Protect ZipArchive]({%slug radziplibrary-protect-ziparchive%})
  * [Compression Settings]({%slug radziplibrary-compression-settings%})
+ * [ZipLibrary Stream Compression Demo](https://demos.telerik.com/document-processing/ziplibrary/compress_stream)

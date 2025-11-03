@@ -34,11 +34,7 @@ __Example 1__ demonstrates how you can create an RgbColor and assign it as Fill 
         
 #### __[C#] Example 1: Create RgbColor__
 
-{{region cs-radpdfprocessing-concepts-colors-and-color-spaces_0}}
-	RgbColor magenta = new RgbColor(255, 0, 255);
-	Path path = new Path();
-	path.Fill = magenta;
-{{endregion}}
+<snippet id='pdf-create-rgb-color'/>
 
 ### CmykColor
 
@@ -51,20 +47,7 @@ Represents a CMYK (cyan, magenta, yellow, key) color. The CmykColor class was in
 
 #### Create CmykColor
 
-```csharp
-   RadFixedDocument document = new RadFixedDocument();
-   RadFixedPage page = document.Pages.AddPage();
-   FixedContentEditor containerEditor = new FixedContentEditor(page);
-
-   double c = 0.46;
-   double m = 0.3;
-   double y = 0.76;
-   double k = 0.12;
-
-   CmykColor cmykColor = new CmykColor(c, m, y, k);
-   containerEditor.GraphicProperties.FillColor = cmykColor;
-   containerEditor.DrawRectangle(new Rect(10, 10, 48, 29));
-```
+<snippet id='pdf-create-cmyk-color'/>
 
 ![CMYK Color](images/cmyk-color.png) 
 
@@ -98,21 +81,13 @@ The __Gradient__ class is inherited by the following classes:
             
 	#### __[C#] Example 2: Create LinearGradient__
 	
-	{{region cs-radpdfprocessing-concepts-colors-and-color-spaces_1}}
-		FixedContentEditor containerEditor = new FixedContentEditor(container);
-		
-		LinearGradient linearGradient = new LinearGradient(new Point(0, 0), new Point(30, 30));
-		linearGradient.GradientStops.Add(new GradientStop(new RgbColor(0, 207, 0), 0));
-		linearGradient.GradientStops.Add(new GradientStop(new RgbColor(0, 102, 204), 1));
-		
-		containerEditor.GraphicProperties.FillColor = linearGradient;
-		containerEditor.DrawRectangle(new Rect(10, 10, 48, 29));
-	{{endregion}}
+	<snippet id='pdf-create-linear-gradient'/>
 	
-	The gradient created in __Example 2__ is shown in __Figure 1__.
+The gradient created in __Example 2__ is shown in __Figure 1__.
 	            
-	#### Figure 1: LinearGradient	
-	![Rad Pdf Processing Concepts Colors And Color Spaces 01](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
+#### Figure 1: LinearGradient	
+
+![Rad Pdf Processing Concepts Colors And Color Spaces 01](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
     
 * __RadialGradient__: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The __RadialGradient__ class exposes the following properties:
                 
@@ -124,16 +99,7 @@ The __Gradient__ class is inherited by the following classes:
 	
 	#### __[C#] Example 3: Create RadialGradient__
 	
-	{{region cs-radpdfprocessing-concepts-colors-and-color-spaces_3}}
-		FixedContentEditor containerEditor = new FixedContentEditor(container);
-		
-		RadialGradient radialGradient = new RadialGradient(new Point(40, 40), new Point(40, 40), 0, 30);
-		radialGradient.GradientStops.Add(new GradientStop(new RgbColor(0, 207, 0), 0));
-		radialGradient.GradientStops.Add(new GradientStop(new RgbColor(0, 102, 204), 1));
-		
-		containerEditor.GraphicProperties.FillColor = radialGradient;
-		containerEditor.DrawEllipse(new Point(40, 40), 30, 30);
-	{{endregion}}
+	<snippet id='pdf-create-linear-gradient'/>
 	
 	The result from __Example 3__ is shown in __Figure 2__.
 	
@@ -177,18 +143,7 @@ Since the __TilingBase__ class implements the __IContentRootElement__ interface 
 
 #### __[C#] Example 4: Create tiling__
 
-{{region cs-radpdfprocessing-concepts-colors-and-color-spaces_2}}
-	FixedContentEditor containerEditor = new FixedContentEditor(container);
-	
-	Tiling tiling = new Tiling(new Rect(0, 0, 10, 10));
-	FixedContentEditor tilingEditor = new FixedContentEditor(tiling);
-	tilingEditor.GraphicProperties.IsStroked = false;
-	tilingEditor.GraphicProperties.FillColor = new RgbColor(128, 28, 43);
-	tilingEditor.DrawRectangle(new Rect(2, 2, 5, 7));
-	
-	containerEditor.GraphicProperties.FillColor = tiling;
-	containerEditor.DrawCircle(new Point(30, 30), 20);
-{{endregion}}
+<snippet id='pdf-create-tiling'/>
 
 The tiling created in __Example 4__ is shown in __Figure 3__.        
 
@@ -201,13 +156,7 @@ The tiling created in __Example 4__ is shown in __Figure 3__.
 
 #### Create LabColor
 
-```csharp
-   double[] whitePoint = new double[3] { 1, 2, 3 };
-   double[] range = new double[4] { 4, 5, 6, 7 };
-   double[] expectedBlackPoint = new double[3] { 0, 0, 0 };
-
-   LabColor labColor = new LabColor(1, 2, 3, whitePoint, range);
-```
+<snippet id='pdf-create-lab-color'/>
 
 ## See Also
 

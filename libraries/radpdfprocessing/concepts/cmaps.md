@@ -24,13 +24,7 @@ The **Telerik[.Windows].Documents.CMapUtils** package provides a default impleme
 >To use this functionality, you must add a reference to the **Telerik[.Windows].Documents.CMapUtils package**.
 
 #### [C#] Example 1: Register default CMapsProvider
-{{region radpdfprocessing-concepts-cmap_0}}
-    // For .NET Framework
-    Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.PredefinedCMapsProvider = new Telerik.Windows.Documents.CMapUtils.PredefinedCMapsProvider();
-        
-    // For .NET Standard
-    Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.PredefinedCMapsProvider = new Telerik.Documents.CMapUtils.PredefinedCMapsProvider();
-{{endregion}}
+<snippet id='pdf-cmaps'/>
 
 After registering the **PredefinedCMapsProvider** class, you will be able to import any document containing a predefined CMap table. 
 

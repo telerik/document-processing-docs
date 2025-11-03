@@ -93,4 +93,5 @@ The notes collection exposes the following events:
 ## See Also
 
  * [Comments vs Notes in RadSpreadProcessing]({%slug comments-vs-notes-in-radspreadprocessing%})
+ * [SpreadProcessing Add Notes Demo](https://demos.telerik.com/document-processing/spreadprocessing/notes)
 

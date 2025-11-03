@@ -80,11 +80,8 @@ There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedd
 | ZapfDingbats|
 
 
-{{region cs-radpdfprocessing-concepts-fonts_0}}
 
-	FontBase helvetica = FontsRepository.Helvetica;
-	
-{{endregion}}
+<snippet id='pdf-standard-font'/>
 
 >tip These fonts, or their font metrics and suitable substitution fonts, must be available to the consumer application.
 
@@ -93,11 +90,7 @@ FontsRepository will replace the provided standard font with the passed font dat
 
 #### Replace a Standard Font
 
-```csharp
-  byte[] fontData = File.ReadAllBytes("Courier-font.ttf");
-  FontsRepository.ReplaceStandardFont(StandardFontNames.Courier, fontData);
-
-```
+<snippet id='pdf-replace-standard-font'/>
 
 ## Embedded Fonts
 
@@ -113,49 +106,23 @@ __Example 1__ demonstrates how you can use the RegisterFont() method.
             
 #### __[C#] Example 1: Register font in .NET Framework application__
 
-{{region cs-radpdfprocessing-concepts-fonts_1}}
-
-	// Read the font file
-	byte[] fontData = File.ReadAllBytes("some-font.ttf");
-	System.Windows.Media.FontFamily fontFamily = new System.Windows.Media.FontFamily("Some Font");
-	
-	// Register the font
-	 Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.RegisterFont(fontFamily, System.Windows.FontStyles.Normal, System.Windows.FontWeights.Normal, fontData);
-{{endregion}}
+<snippet id='pdf-register-font-net-framework'/>
 
 #### __[C#] Example 1: Register font in .NET Standard application__
 
-{{region cs-radpdfprocessing-concepts-fonts_2}}
-
-	// Read the font file
-	byte[] fontData = File.ReadAllBytes("some-font.ttf");
-	Telerik.Documents.Core.Fonts.FontFamily fontFamily = new Telerik.Documents.Core.Fonts.FontFamily("Some Font");
-	
-	// Register the font
-	 Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.RegisterFont(fontFamily, Telerik.Documents.Core.Fonts.FontStyles.Normal, Telerik.Documents.Core.Fonts.FontWeights.Normal, fontData);
-{{endregion}}
+<snippet id='pdf-register-font-net-standard'/>
 
 ### Creating a Font
 
 >tip Each registered font can be obtained from the font repository as __FontBase__ object and applied to a __[TextFragment]({%slug radpdfprocessing-model-textfragment%})__ through its __Font__ property.
 
-{{region cs-radpdfprocessing-concepts-fonts_3}}
-
-	FontBase courier = FontsRepository.Courier;
-	TextFragment textFragment = new TextFragment();
-	textFragment.Font = courier;	
-
-{{endregion}}
+<snippet id='pdf-text-fragment-font'/>
 
 __Example 2__ shows how to create a font using the FontsRepository.
             
-
 #### __[C#] Example 2: Create FontBase__
 
-{{region cs-radpdfprocessing-concepts-fonts_4}}
-	FontBase font;
-	bool success = FontsRepository.TryCreateFont(fontFamily, fontStyle, fontWeight, out font);
-{{endregion}}
+<snippet id='pdf-bool-font-creation'/>
 
 You can create fonts that are not explicitly registered. Creating a font that is not registered in the repository with the code from __Example 2__ tries to find the font from the ones installed on the machine. 
 
@@ -169,3 +136,4 @@ You can create fonts that are not explicitly registered. Creating a font that is
  * [How to Prevent Text with Special Characters from Being Cut Off when converting HTML to PDF using RadWordsProcessing]({%slug prevent-text-cut-off-pdf-conversion-radwordsprocessing%}) 
  * [Validating Fonts when Using Telerik Document Processing]({%slug validating-fonts-pdf-document-processing%})
  * [Resolving Apostrophe Character Being Replaced with Copyright Symbol in Filled PDF AcroForm]({%slug apostrophe-character-replaced-copyright-symbol-acroform%})
+ * [Resolving Double-Bold Text Appearance in PDF Export Using Telerik Document Processing]({%slug fixing-double-bold-text-issue-in-pdf-document%})

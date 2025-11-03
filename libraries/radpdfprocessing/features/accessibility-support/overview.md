@@ -26,3 +26,4 @@ The core of this support lies in the ability to determine the logical order of c
 * [Tagged PDF]({%slug radpdfprocessing-model-tagged-pdf%})
 * [Marked Content]({%slug radpdfprocessing-model-marked-content%})
 * [StructureTree]({%slug radpdfprocessing-model-structure-tree%})
+* [PdfProcessing Accessibility Demo](https://demos.telerik.com/document-processing/pdfprocessing/accessibility)

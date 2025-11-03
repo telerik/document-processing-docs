@@ -25,7 +25,7 @@ position: 99
 * A strange symbol is added as a name when embedding a file with an empty string as its name argument.
 * A NullReferenceException is thrown when importing a document with embedded files.
 * A NullReferenceException is thrown when importing a document with a signature and parsing the linejoin operator.
-* А NullReferenceException is thrown when importing and then exporting a document containing Type1Font with a missing FontInfo table.
+* A NullReferenceException is thrown when importing and then exporting a document containing Type1Font with a missing FontInfo table.
 * Merging two documents having embedded files with same names repeats adding number 2.
 * Unicode characters from Supplementary Multilingual Plane are skipped during the PDF export.
 

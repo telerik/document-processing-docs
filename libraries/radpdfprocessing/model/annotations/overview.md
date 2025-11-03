@@ -44,3 +44,4 @@ The abstract **Annotation** element associates an object with a location on a [R
  * [Text]({%slug radpdfprocessing-model-annotations-text%})
  * [Link]({%slug radpdfprocessing-model-annotations-links%})
  * [Handling Exceptions]({%slug radpdfprocessing-handling-exceptions%})
+ * [PdfProcessing Annotations Demo](https://demos.telerik.com/document-processing/pdfprocessing/annotations)

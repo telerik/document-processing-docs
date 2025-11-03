@@ -54,7 +54,7 @@ If you want to apply default styling to all the cells in a table, you can use Ta
 * __Background__: Specifies the background of the cell.
             
 
-__Еxample 2__ shows how to use the __DefaultCellProperties__ of a table
+__Example 2__ shows how to use the __DefaultCellProperties__ of a table
         
 
 #### __[C#] Example 2: Use DefaultCellProperties of Table__
@@ -199,4 +199,5 @@ As of **Q3 2024**, along with the BorderStyle.*Single*, RadPdfProcessing offers 
  * [Implementing Column Span in RadPdfProcessing Tables]({%slug table-column-span-radpdfprocessing%})
  * [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})
  * [Avoiding Table Splits Across Pages Using FixedContentEditor in RadPdfProcessing]({%slug  avoid-table-splits-across-pages-radpdfprocessing%})
+ * [How to Achieve Alternating Row Color for Tables in PdfProcessing]({%slug alternating-row-color-in-pdf-tables%})
 

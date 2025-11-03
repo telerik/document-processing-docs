@@ -7,11 +7,7 @@ published: True
 position: 0
 ---
 
-
-
 # Plain text
-
-
 
 Plain text is the contents of an ordinary sequential document readable as textual material without much processing.
  

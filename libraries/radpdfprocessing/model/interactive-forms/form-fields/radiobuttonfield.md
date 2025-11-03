@@ -39,21 +39,7 @@ RadioButtonField provides the following properties:
 
 
 #### **[C#] Example 1: Create RadioButtonFields and add them to a page**
-{{region radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield_0}}
-	RadioButtonField radioButtonField = new RadioButtonField("SampleRadioButton");
-	
-	radioButtonField.Widgets.AddWidget(new RadioOption("True")).Rect = new Rect(0, 0, 20, 20);
-	radioButtonField.Widgets.AddWidget(new RadioOption("False")).Rect = new Rect(25, 0, 20, 20);
-	radioButtonField.Widgets.AddWidget(new RadioOption("False")).Rect = new Rect(50, 0, 20, 20);
-	
-	document.AcroForm.FormFields.Add(radioButtonField);
-	
-	foreach (RadioButtonWidget widget in radioButtonField.Widgets)
-	{
-	    document.Pages[0].Annotations.Add(widget);
-		widget.RecalculateContent();
-	}
-{{endregion}}
+<snippet id='pdf-radio-button-field'/>
 
 
 ## See Also

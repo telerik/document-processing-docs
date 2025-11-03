@@ -60,7 +60,7 @@ In order to use **RadSpreadStreamProcessing** in your project, you will need to 
 
 This section will explain how a document could be created. If you need more detailed information about the classes that export the different document elements, you can check the articles from the [Model section]({%slug radspreadstreamprocessing-model-workbook%}).
 
-When creating a document with **RadSpreadStreаmProcessing**, the order in which the elements are created is very important. In order to minimize resource consumption, the library writes the content directly to a stream, and due to the structure of the file format, it is necessary to create the elements in the following order:
+When creating a document with **RadSpreadStreamProcessing**, the order in which the elements are created is very important. In order to minimize resource consumption, the library writes the content directly to a stream, and due to the structure of the file format, it is necessary to create the elements in the following order:
 
 
 1. Create a Workbook 
@@ -141,7 +141,7 @@ When creating a document with **RadSpreadStreаmProcessing**, the order in which
 
 ## Read Existing Document
 
-When reading a document with **RadSpreadStreаmProcessing**, the order of parsing the content is very important. To minimize resource consumption, the library parses only the parts required by the user and, due to the file structure, it is necessary to read the desired elements in the following order:
+When reading a document with **RadSpreadStreamProcessing**, the order of parsing the content is very important. To minimize resource consumption, the library parses only the parts required by the user and, due to the file structure, it is necessary to read the desired elements in the following order:
 
 
 1. Read the Workbook 
