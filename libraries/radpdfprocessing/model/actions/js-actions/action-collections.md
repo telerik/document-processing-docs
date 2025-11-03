@@ -83,7 +83,7 @@ Represents a collection of Action objects associated with a [RadFixedPage]({%slu
 |OnPageOpen|Gets or sets the collection of actions triggered when the page is opened.|
 |OnPageClose|Gets or sets the collection of actions triggered when the page is closed.|
 
-The following example shows how to utilize the JavaScript Actions functionality showing an alert when the second page in a document is closed
+The following example shows how to utilize the JavaScript Actions functionality showing an alert when the second page in a document is closed:
 
 <snippet id='pdf-page-action-collection'/>
 

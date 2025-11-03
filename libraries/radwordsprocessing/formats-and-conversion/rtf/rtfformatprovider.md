@@ -14,11 +14,11 @@ position: 2
 __RtfFormatProvider__ makes it easy to import and export __RadFlowDocument__ to/from RTF format, preserving the entire document structure and formatting.
       
 
-All you have to do in order to use __RtfFormatProvider__ is add references to the assemblies listed below:
+All you have to do in order to use __RtfFormatProvider__ is add references to the packages listed below:
       
 
-* Telerik.Windows.Documents.Core.dll
-* Telerik.Windows.Documents.Flow.dll
+* Telerik.Windows.Documents.Core
+* Telerik.Windows.Documents.Flow
           
 
 ## Import

@@ -38,7 +38,7 @@ public class WorkbookFormatProvidersManager
 The __WorkbookFormatProvidersManager__ class contains two methods that allow you to register and unregister format providers respectively. The manager has the `csv` and `txt` format providers registered by default. The snippet in __Example 1__ illustrates how to register the [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider %}).
         
 
-> Some Format Providers require additional assembly references. Check the full list of the FormatProviders' additional reference requirements in [Format Providers - Additional assembly references]({%slug radspreadprocessing-formats-and-conversion-general-information%}#additional-assembly-references).
+> Some Format Providers require additional package references. Check the full list of the FormatProviders' additional reference requirements in [Format Providers - Additional package references]({%slug radspreadprocessing-formats-and-conversion-general-information%}#additional-package-references).
 
 
 #### __[C#] Example 1: Register provider__
@@ -186,7 +186,7 @@ You can achieve the same result through using the __SaveFile__ command. In fact,
         
 ## Retrieve Registered Providers and Supported Extensions
 
-Currently RadSpreadProcessing supports the following extensions: `.xlsx`, `.xls`, `.csv`, `.txt` and `.pdf` (export only). The format providers available for them are respectively [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%}), [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}) and [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+Currently RadSpreadProcessing supports the following extensions: `.xlsx`, `.xls`, `.csv`, `.txt`, `.json` (export only) and `.pdf` (export only). The format providers available for them are respectively [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%}), [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}), [JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider%}) (export only) and [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only).
 
 The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the `GetProviderByName()` static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __GetSupportedExtensions()__ that returns an `IEnumeable` of the currently supported file extensions.
 

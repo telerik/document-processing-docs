@@ -12,11 +12,11 @@ position: 1
 
 __TextFormatProvider__ makes it easy to export __RadFixedDocument__ to plain text format, preserving the document structure.
 
-All you have to do in order to use __TextFormatProvider__ is add references to the assemblies listed below:
+All you have to do in order to use __TextFormatProvider__ is add references to the packages listed below:
       
 
-* Telerik.Windows.Documents.Core.dll
-* Telerik.Windows.Documents.Fixed.dll
+* Telerik.Windows.Documents.Core
+* Telerik.Windows.Documents.Fixed
 
 
 ## Export

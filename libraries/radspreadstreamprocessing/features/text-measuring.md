@@ -21,7 +21,7 @@ SpreadStreamProcessing is designed to directly write the content inside the stre
 
 CellContentSizeHelper is a static class and exposes two overloads of the GetCellContentSize method. These overloads allow you to pass the formatting applied to the cell as a SpreadCellFormat or as separate values.
 
->To use this class, you must add a reference to the **Telerik.Windows.Documents.Spreadsheet.dll** for .NET Framework projects or **Telerik.Documents.Spreadsheet.dll** for .NET Standard projects.
+>To use this class, you must add a reference to **Telerik.Windows.Documents.Spreadsheet** for .NET Framework projects or **Telerik.Documents.Spreadsheet** for .NET Standard projects.
 
 >tipTo achieve accurate results in .NET Standard, it is suggested to use [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}#spreadfixedtextmeasurer).
 

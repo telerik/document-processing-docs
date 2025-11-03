@@ -187,6 +187,15 @@ navigation:
     libraries/radspreadprocessing/formats-and-conversion/data-table:
         title: DataTable
         position: 6
+    libraries/radspreadprocessing/formats-and-conversion/json:
+        title: Json
+        position: 7
+    libraries/radspreadprocessing/formats-and-conversion/json/jsonformatprovider:
+        title: JsonFormatProvider
+        position: 1
+    libraries/radspreadprocessing/formats-and-conversion/json/jsonexportsettings:
+        title: JsonExportSettings
+        position: 2
         
     libraries/radspreadprocessing/features/charts:
         title: Charts
@@ -387,7 +396,8 @@ defaults:
 mindotnetversion: "8"
 maxdotnetversion: "9"
 dotnetversions: ".NET 8 and .NET 9"
-skiasharpversion: "3.116.1"
+skiasharpversion: "3.119.1"
+harfbuzzsharp: "8.3.1.2"
 
 # Feedback Form Product Code
 productCode: TDP

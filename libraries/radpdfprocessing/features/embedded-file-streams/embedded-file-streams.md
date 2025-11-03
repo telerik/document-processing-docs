@@ -31,19 +31,7 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 
 ### Creating an Embedded Electronic (ZUGFeRD) Invoice
 
-RadPdfProcessing provides support for embedding of [ZUGFeRD](https://de.wikipedia.org/wiki/ZUGFeRD) (acronym for Zentraler User Guide des Forums elektronische Rechnung Deutschland) invoices.
-
-#### **[C#] Add ZUGFeRD invoice**
-
-<snippet id='pdf-add-zugferd-invoice'/>
-
->note Only a single XML invoice attachment is allowed according to ZUGFeRD standard.
-
->important The PDF/A standard requires all fonts used in a document to be embedded. Prior to **Q3 2025**, the [14 standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) were not embedded in the file, which caused the document to be non-compliant. As of **Q3 2025**, these standard fonts are automatically embedded when PDF/A compliance is enabled. More information about font embedding is available in the [Fonts]({%slug radpdfprocessing-concepts-fonts%}) article.
-
-#### **[C#] Remove ZUGFeRD invoice**
-
-<snippet id='pdf-remove-zugferd-invoice'/>
+RadPdfProcessing provides support for embedding [ZUGFeRD invoices]({%slug radpdfprocessing-embedded-file-streams-zugferd-invoices%}). 
 
 ### Using the MergedEmbeddedFileNameResolving event
 

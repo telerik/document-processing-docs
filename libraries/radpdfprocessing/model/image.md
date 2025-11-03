@@ -52,7 +52,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 The Image class exposes also the **GetBitmapSource()** method, enabling you to obtain a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) instance representing the image.
 
->  The GetBitmapSource() method is not available in the .NET Standard version of the PdfProcessing binaries.
+>  The GetBitmapSource() method is not available in the .NET Standard version of the PdfProcessing packages.
 
 #### __[C#] Example 3: Obtain BitmapSource__
 

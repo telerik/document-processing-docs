@@ -21,12 +21,12 @@ DOT is the Binary file format developed by Microsoft for representing templates 
 
 **DocFormatProvider** makes it easy to import a DOC or DOT file into a **RadFlowDocument**, preserving the entire document structure and formatting.
 
-To use **DocFormatProvider**, you should add references to the assemblies listed below:
+To use **DocFormatProvider**, you should add references to the packages listed below:
       
-* Telerik.Windows.Documents.Core.dll
-* Telerik.Windows.Documents.Flow.dll         
-* Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll
-* Telerik.Windows.Zip.dll
+* Telerik.Windows.Documents.Core
+* Telerik.Windows.Documents.Flow     
+* Telerik.Windows.Documents.Flow.FormatProviders.Doc
+* Telerik.Windows.Zip
           
 
 ## Import

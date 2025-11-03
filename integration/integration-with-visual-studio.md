@@ -27,13 +27,13 @@ The Telerik Document Processing Configuration wizard allows you to select which 
 
 ![DPL Configure Wizard Main Page](../images/dpl_configure_wizard.png)
 
-Assemblies are pre-selected based on the component you have launched the wizard through. Following is a list of the assemblies that will be selected for each library.
+Packages are pre-selected based on the component you have launched the wizard through. Following is a list of the packages that will be selected for each library.
 
-|Component  |Selected assemblies  |
+|Component  |Selected packages  |
 |---------|---------|
 |RadPdfProcessing    |Documents.Core<br>Documents.Fixed<br>Zip         |
 |RadSpreadProcessing     |    Documents.Core<br>Documents.Fixed<br>Documents.Spreadsheet<br>Documents.SpreadSheet.FormatProviders.OpenXml<br>Documents.SpreadSheet.FormatProviders.Pdf<br>Zip     |
 |RadSpreadStreamProcessing     |   Documents.SpreadSheetStreaming<br>Zip      |
 |RadWordsProcessing     |   Documents.Core<br>Documents.Fixed<br>Documents.Flow<br>Documents.Flow.FormatProviders.Pdf<br>Zip      |
 
-When you click the **Finish** button, the selected assembly references are added to you project.
+When you click the **Finish** button, the selected package references are added to you project.

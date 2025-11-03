@@ -3,7 +3,7 @@ title: Available NuGet Packages
 page_title: Available NuGet Packages
 description: Learn how you can use the Telerik Document Processing libraries through NuGet.
 slug: available-nuget-packages
-tags: nuget, document, processing, assembly
+tags: nuget, document, processing, assembly, package
 published: True
 position: 6
 ---
@@ -27,7 +27,7 @@ If your workflow relies on NuGet for package management, you can take advantage 
 >
 >* A version for __.Net Standard 2.0__
 >
->Both versions are available as NuGet packages but with different names. The assemblies for __.NET Standard__ do __not__ contain the word __Windows__ in their name.
+>Both versions are available as NuGet packages but with different names. The packages for __.NET Standard__ do __not__ contain the word __Windows__ in their name.
 
 >caption Package lists to use with .NET Standard (left) and .NET Framework (right)
 
@@ -43,8 +43,8 @@ The following list represents the available NuGet packages for the Document Proc
 
 * __Telerik.Windows.Documents.Core:__ The main NuGet package for the Telerik Document Processing libraries. Required when you plan to use the library.
 * __Telerik.Windows.Documents.Fixed:__ The package is required when processing `PDF` documents.
-* __Telerik.Windows.Documents.Fixed.FormatProviders.Ocr:__ This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
-* __Telerik.Windows.Documents.Tesseract.Ocr:__ This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
+* __Telerik.Windows.Documents.Fixed.FormatProviders.Ocr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
+* __Telerik.Windows.Documents.Tesseract.Ocr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
 * __Telerik.Windows.Documents.CMapUtils:__ Provides a default implementation for getting the data of a predefined CMap table by a given name.
 * __Telerik.Windows.Documents.Flow:__ The package is part of the WordsProcessing library. Required for processing `HTML`, `DOCX`, `RTF`, and `TXT` documents.
 * __Telerik.Windows.Documents.DrawingML:__ Part of the WordsProcessing library. It is needed for working with shapes inside the documents. 
@@ -63,8 +63,8 @@ The following list represents the available NuGet packages for the Document Proc
 
 * __Telerik.Documents.Core:__ The main NuGet package from the Telerik Document Processing libraries. Required when you plan to use the library.
 * __Telerik.Documents.Fixed:__ The package is required when processing `PDF` documents.
-* __Telerik.Documents.Fixed.FormatProviders.Ocr:__ This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
-* __Telerik.Documents.Tesseract.Ocr:__ This assembly is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
+* __Telerik.Documents.Fixed.FormatProviders.Ocr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
+* __Telerik.Documents.Tesseract.Ocr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
 * __Telerik.Documents.ImageUtils:__ This package is required when exporting to `PDF` format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
 * __Telerik.Documents.CMapUtils:__ Provides a default implementation for getting the data of a predefined CMap table by a given name.
 * __Telerik.Documents.Flow:__ The package is part of the Words Processing Library. Required for processing `HTML`, `DOCX`, `RTF`, and `TXT` documents.

@@ -31,7 +31,7 @@ res_type: kb
 
 ## Description
 
-This exception is thrown when the binaries for .NET Framework are used in a project targeting .NET Core.
+This exception is thrown when the packages for .NET Framework are used in a project targeting .NET Core.
 
 ## Error Message
 

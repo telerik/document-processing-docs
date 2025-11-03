@@ -29,9 +29,15 @@ __RadFixedPage__ exposes the following properties:
 |__Annotations__|Collection that contains all [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) in the RadFixedPage.|
 |__MediaBox__|Defines the boundaries of the physical medium on which the page will be printed. Any content falling outside this boundary is discarded without affecting the meaning of the PDF file. | 
 |__CropBox__| Defines the region to which the contents of the page are clipped (cropped) when displayed or printed. This boundary determines the visible page content. The default value is the page’s media box. |
-|__Size__|Property of type Size representing the size of the page. Its value is determined by the width and height of the **MediaBox**.|
+|__Size__|Property of type Size representing the size of the page. Its value is determined by the width and height of the **MediaBox** in points. It defines the physical dimensions of the page in PDF units - where 1 point = 1/72 inch. So, for example: A page size of Size(612, 792) corresponds to 8.5 x 11 inches (standard US Letter size).|1
 |__Rotation__|Property of type [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) representing the page rotation.|
-|**Actions**|Gets the page [actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) collection.|         
+|**Actions**|Gets the page [actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) collection.|        
+
+RadFixedPage is typically used when:
+
+* Creating a PDF document (and its pages) from scratch programmatically: a complete example is available in the [PdfProcessing Basic Usage demo](https://demos.telerik.com/document-processing/pdfprocessing).
+* Loading page content from existing PDF documents: you cannot deserialize a RadFixedPage directly from a byte array (memory stream) because pages are part of the document structure. The [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) handles the parsing and conversion from raw PDF bytes to the structured RadFixedDocument object. Once imported, you can manipulate individual pages (RadFixedPage) as needed.
+* Generating structured, fixed-layout documents with precise control over layout and formatting: [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) and [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) allow you to create a RadFixedDocument either with managing the position or in a flow-like manner and insert all desired elements one after another.
 
 __Example 1__ demonstrates how to create a new __RadFixedPage__ instance and add it to the __Pages__ collection of __RadFixedDocument__.  
 

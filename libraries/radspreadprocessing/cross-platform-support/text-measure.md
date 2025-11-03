@@ -40,7 +40,7 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
 
 >note Due to the [Font Limitations]({%slug radpdfprocessing-cross-platform-fonts%}) of the [PdfProcessing]({%slug radpdfprocessing-overview%}) library in .NET Standard, you should provide a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) as well.
 
->important To use the **SpreadFixedTextMeasurer** class, you must add a reference to **Telerik.Documents.Fixed.dll**.
+>important To use the **SpreadFixedTextMeasurer** class, you must add a reference to **Telerik.Documents.Fixed**.
 
 #### [C#] Example 1: Set the SpreadFixedTextMeasurer as a text measurer
 
@@ -66,9 +66,11 @@ To use the **SkiaTextMeasurer** class, you can reference it in one of the follow
 
 If you prefer to reference assemblies directly, you need:
 
-- **Telerik.Documents.TextMeasurer.Skia.dll** - Main assembly containing the SkiaTextMeasurer class
-- **Telerik.Text.Skia.dll** - Required dependency of Telerik.Documents.TextMeasurer.Skia.
-- **SkiaSharp.HarfBuzz.dll** (and all of its dependencies) - Required dependency of Telerik.Text.Skia.dll, along with all its dependencies
+|Assembly|Description|
+|----|----|
+|**Telerik.Documents.TextMeasurer.Skia.dll**|Main assembly containing the SkiaTextMeasurer class|
+|**Telerik.Text.Skia.dll**|Required dependency of Telerik.Documents.TextMeasurer.Skia.|
+|**SkiaSharp.HarfBuzz.dll** (version {{site.harfbuzzsharp}}) (and all of its dependencies)|Required dependency of Telerik.Text.Skia.dll, along with all its dependencies|
 
 #### [C#] Example 2: Set the SkiaTextMeasurer as a text measurer
 

@@ -10,7 +10,15 @@ position: 3
 
 # ExpandableMemoryStream
 
-ExpandableMemoryStream is a segmented in-memory stream designed for efficient large or parallel PDF operations. Instead of resizing a single contiguous array like a **MemoryStream**, it grows by adding fixed-size blocks as needed—avoiding costly reallocations and Large Object Heap (LOH) pressure. Each block remains untouched once filled, so data isn’t copied during expansion. This block-based approach keeps allocations small and predictable, reduces GC overhead, and supports very large or bursty workloads. When growing, new cleared blocks are appended. When shrinking, only the visible length changes, allowing future reuse of existing memory without additional allocations.
+ExpandableMemoryStream is a specialized in-memory stream built to handle demanding PDF workloads that involve large data volumes or concurrent operations. It provides a scalable alternative to traditional memory buffers by managing data growth in a controlled, efficient way. Instead of relying on a single expanding array, it uses an internal structure that minimizes memory churn and maintains stable performance even under heavy or unpredictable load.
+
+## Why a Segmented Approach
+
+Large PDF generation often needs a temporary buffer. A normal contiguous array may reallocate and copy data multiple times as it expands, increasing CPU work, peak memory, and pressure on the Large Object Heap (LOH). Avoiding large contiguous allocations lowers fragmentation, reduces garbage collection pauses, and scales better when size is unpredictable or workloads are bursty.
+
+## How It Works
+
+Data lives in equal‑sized blocks held in order. When more space is required a single new block is allocated, earlier blocks stay untouched. A position maps to (block index, offset). Growing exposes cleared bytes ready for writing. Shrinking lowers only the visible length and retains the blocks so later growth can reuse already allocated memory without new large allocations.
 
 ## When to Use
 

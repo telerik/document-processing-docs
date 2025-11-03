@@ -69,7 +69,7 @@ The following table describes the most popular features of the RadSpreadProcessi
 
 * Excel formats: [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [**XLS**]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
 
-* Text formats: [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
+* Text formats: [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}), [**JSON**]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider%}) (export only)
 
 * Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only), [__DataTable__]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
 

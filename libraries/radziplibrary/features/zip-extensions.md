@@ -10,12 +10,11 @@ platforms: ajax, mvc, wpf, winforms
 
 # Zip Extensions
 
-In addition to the main __ZipLibrary__ control, you could take advantage of a set of helper methods, divided in two classes, which will help you to implement your scenarios faster. All these methods are in the __Telerik.Windows.Zip.Extensions.dll__. 
+In addition to the main __ZipLibrary__ control, you could take advantage of a set of helper methods, divided in two classes, which will help you to implement your scenarios faster. All these methods are in the __Telerik.Windows.Zip.Extensions__ NuGet package. 
 
->In [**UI for WinForms**](https://docs.telerik.com/devtools/winforms/introduction), the classes are merged in **Telerik.WinControls.dll**, so you will need to refer that assembly instead of Telerik.Windows.Zip.Extensions.dll.
+>In [**UI for WinForms**](https://docs.telerik.com/devtools/winforms/introduction), the classes are merged in **Telerik.WinControls**, so you will need to refer that package instead of Telerik.Windows.Zip.Extensions.
 
 In this article you will find the classes and their members.
-
 
 ## The ZipFile class
 

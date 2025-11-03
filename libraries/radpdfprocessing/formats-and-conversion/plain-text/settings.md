@@ -43,7 +43,6 @@ The __Export()__ method of **TextFormatProvider** allows you to pass a **TextFor
 
 <snippet id='pdf-apply-text-provider-settings'/>
 
-
 ## See Also
 
 * [Using TextFormatProvider]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%})

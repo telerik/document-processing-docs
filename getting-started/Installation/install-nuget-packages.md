@@ -45,7 +45,7 @@ This approach allows you to setup a local NuGet package source, so you can insta
 >
 >* A version for __.Net Standard 2.0__
 >
->Both versions are available as NuGet packages but with different names. The assemblies for __.NET Standard__ do __not__ contain the word __Windows__ in their name.
+>Both versions are available as NuGet packages but with different names. The packages for __.NET Standard__ do __not__ contain the word __Windows__ in their name.
 
 ## Download from the NuGet server
 
