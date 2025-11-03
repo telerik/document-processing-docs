@@ -20,6 +20,10 @@ The Telerik Document Processing [MCP (Model Context Protocol) Server](https://mo
 ## Supported Libraries
 
 * [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+* [RadSpreadProcessing]({%slug radspreadprocessing-overview%})
+* [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%})
+* [RadZipLibrary]({%slug radziplibrary-overview%})
 
 ## Prerequisites for the MCP Server
 
