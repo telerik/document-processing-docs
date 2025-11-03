@@ -30,7 +30,7 @@ The following code snippet shows how to initialize a Signature instance using th
 
 <snippet id='libraries-pdf-features-digital-signature-externally-cms-sign-pdf'/>
 
-## Using ExternalSignerbase and TimeStampServer
+## Using ExternalSignerBase and TimeStampServer
 
 In addition to [using a TimeStamp Server]({%slug pdf-sign-timestamp-server%}), the PdfProcessing library allows creating a base helper implementation for building external (client supplied) digital signatures. The private key is managed outside the PDF library (e.g., HSMs, smart cards, remote signing services) and it allows integration without exposing private key material to the library.
 
