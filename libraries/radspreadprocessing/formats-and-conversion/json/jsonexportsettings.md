@@ -15,9 +15,6 @@ table th:first-of-type { width: 25%; }
 table th:nth-of-type(2) { width: 20%; }
 table th:nth-of-type(3) { width: 15%; }
 table th:nth-of-type(4) { width: 40%; }
-
-h3 + table th:first-of-type { width: 1%; white-space: nowrap; }
-h3 + table th:nth-of-type(2) { width: auto; }
 </style>
 
 # JsonExportSettings
@@ -46,11 +43,20 @@ The [JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-
 
 ### Enum Values
 
-| Enum | Members |
-|------|---------|
-| **ExportWhat** | **ActiveSheet** – Exports only the currently active worksheet.<br> **EntireWorkbook** – Exports all worksheets in the workbook. (Default)<br> **Selection** – Exports only the currently selected cell ranges. |
-| **ChartDataMode** | **ReferencesOnly** – Only formula / reference expressions are exported. (Default)<br> **ResolvedValues** – Only resolved literal value arrays are exported.<br> **Both** – Both references and resolved value arrays are exported. |
-| **ValueRenderMode** | **Raw** – Underlying raw cell value is exported.<br> **Display** – Formatted display value is exported. (Default)<br> **Both** – Both raw and display representations are exported. |
+**ExportWhat**
+* **ActiveSheet** - Exports only the currently active worksheet.
+* EntireWorkbook** - Exports all worksheets in the workbook. (Default)
+* **Selection** - Exports only the currently selected cell ranges.
+
+**ChartDataMode**
+* **ReferencesOnly** - Only formula / reference expressions are exported. (Default)
+* **ResolvedValues** - Only resolved literal value arrays are exported.
+* **Both** - Both references and resolved value arrays are exported.
+
+**ValueRenderMode**
+* **Raw** - Underlying raw cell value is exported.
+* **Display** - Formatted display value is exported. (Default)
+* **Both** - Both raw and display representations are exported.
 
 ## Basic Usage
 
