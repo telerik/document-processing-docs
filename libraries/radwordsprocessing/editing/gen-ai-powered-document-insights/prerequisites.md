@@ -38,9 +38,9 @@ In addition to the [standard RadWordsProcessing references]({%slug radwordsproce
 > __*__ The **Documents.AIConnector** NuGet package internally depends on:
 >
 >* **Telerik.(Windows).Documents.AI.Core**
->* **Telerik.(Windows).Documents.AI.RAG** 
->* **Microsoft.Extensions.AI.Abstractions**
->* **SharpToken**
+>* **Telerik.(Windows).Documents.AI.RAG**
+>    * **Microsoft.Extensions.AI.Abstractions**
+>    * **SharpToken**
 >
 >**Microsoft.Extensions.AI.Abstractions** is currently available only in **preview** version. 
 >If you are referencing an _assembly/dll_ of **Documents.AIConnector** instead of a NuGet package, you must manually add the **SharpToken** NuGet package.
