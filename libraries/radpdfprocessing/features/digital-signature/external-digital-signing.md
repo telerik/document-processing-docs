@@ -14,7 +14,7 @@ position: 3
 |Minimum Version|Q4 2025|
 |----|----|
 
-RadPdfProcessing provides support for creating a Signature instance configured for external signing. The external signing handler performs the actual signing operation.
+RadPdfProcessing provides support for creating a **Signature** instance configured for external signing. The external signing handler performs the actual signing operation.
 
 ##  Using IExternalSigner
 
@@ -22,15 +22,17 @@ When you digitally sign a PDF, the signature data is typically embedded in the P
 
 The supported digest (hash) algorithms for producing CMS (PKCS #7) PDF signature values are **Sha256**, **Sha384** and **Sha512** specified by the **DigestAlgorithm** property of the [SignatureSettings]({%slug radpdfprocessing-features-digital-signature-getting-started%}#signature-settings).
 
+The following example demonstrates how to implement the **IExternalSigner** interface producing an external CMS (PKCS #7) detached signature over a PDF byte range:
+
 #### [C#] CMS External Signer 
 
 <snippet id='libraries-pdf-features-digital-signature-cms-external-signing'/>
 
-The following code snippet shows how to initialize a Signature instance using the CMS External Signer:
+Then, initialize a Signature instance using the CMS External Signer:
 
 <snippet id='libraries-pdf-features-digital-signature-externally-cms-sign-pdf'/>
 
-## Using ExternalSignerBase and TimeStampServer
+## Using ExternalSignerBase
 
 In addition to [using a TimeStamp Server]({%slug pdf-sign-timestamp-server%}), the PdfProcessing library allows creating a base helper implementation for building external (client supplied) digital signatures. The private key is managed outside the PDF library (e.g., HSMs, smart cards, remote signing services) and it allows integration without exposing private key material to the library.
 
