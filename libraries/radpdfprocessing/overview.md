@@ -80,6 +80,7 @@ The document model of the library provides support for:
 |[PdfProcessing Multiple Digital Signatures](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)|This example demonstrates how to digitally sign a PDF without invalidating any existing signatures.|
 |[PdfProcessing Accessibility](https://demos.telerik.com/document-processing/pdfprocessing/accessibility)|This example demonstrates how to create accessible PDF documents programmatically, ensuring compliance with standards such as PDF/UA by supporting features like tagged content, document structure, and metadata. Downloaded documents will adhere to the selected compliance level.|
 |[PdfProcessing GenAI Document Insights](https://demos.telerik.com/document-processing/pdfprocessing/genai_document_insights)|This example demonstrates how to use the GenAI-powered Document Insights feature in Telerik RadPdfProcessing to extract meaningful insights from PDF documents.|
+|[PdfProcessing Add Digital Signature External](https://demos.telerik.com/document-processing/pdfprocessing/external_digitally_sign_document)|This example demonstrates how to digitally sign a PDF with the option to provide a TimeStamp Server for enhanced security and validation.|
 
 
 

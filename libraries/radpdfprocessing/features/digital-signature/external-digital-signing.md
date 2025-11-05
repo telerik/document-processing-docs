@@ -14,7 +14,9 @@ position: 3
 |Minimum Version|Q4 2025|
 |----|----|
 
-RadPdfProcessing provides support for creating a **Signature** instance configured for external signing. The external signing handler performs the actual signing operation.
+RadPdfProcessing provides support for creating a **Signature** instance configured for external signing. The external signing handler performs the actual signing operation. The private key is managed outside the PDF library (e.g., HSMs, smart cards, remote signing services) and it allows integration without exposing private key material to the library.
+
+>note [PdfProcessing Add Digital Signature External Demo](https://demos.telerik.com/document-processing/pdfprocessing/external_digitally_sign_document)
 
 ##  Using IExternalSigner
 
@@ -34,10 +36,10 @@ Then, initialize a Signature instance using the CMS External Signer:
 
 ## Using ExternalSignerBase
 
-In addition to [using a TimeStamp Server]({%slug pdf-sign-timestamp-server%}), the PdfProcessing library allows creating a base helper implementation for building external (client supplied) digital signatures. The private key is managed outside the PDF library (e.g., HSMs, smart cards, remote signing services) and it allows integration without exposing private key material to the library.
+The PdfProcessing library allows creating a base helper implementation for building external (client supplied) digital signatures. 
 
 The following example implements external RSA-based digital signing for PDF documents deriving the ExternalSignerBase class.
-**RSA** (Rivest–Shamir–Adleman) algorithm is a widely used asymmetric cryptographic algorithm. RSA generates a **private key** and a **public key** where the private key is used to sign the PDF and the public key is used to verify the signature. During the signing process a hash (digest) of the PDF content is created (e.g., using SHA-256). This hash is then encrypted with the RSA private key to create the digital signature. The signature is embedded in the PDF file, typically in a signature field.
+**RSA** (Rivest–Shamir–Adleman) algorithm is a widely used asymmetric cryptographic algorithm. RSA generates a **private key** and a **public key** where the private key is used to sign the PDF and the public key is used to verify the signature. During the signing process a hash (digest) of the PDF content is created (e.g., using SHA-512). This hash is then encrypted with the RSA private key to create the digital signature. The signature is embedded in the PDF file, typically in a signature field.
 
 #### [C#] RSA External Signer 
 
