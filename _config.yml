@@ -236,6 +236,9 @@ navigation:
     libraries/radpdfprocessing/features/gen-ai-powered-document-insights:
         title: GenAI-powered Document Insights
         position: 6
+    libraries/radpdfprocessing/features/gen-ai-powered-document-insights/custom-partialcontextquestionprocessor:
+        title: Custom PartialContextQuestionProcessor
+        position: 6
     libraries/radpdfprocessing/model/interactive-forms:
         title: Interactive Forms
     libraries/radpdfprocessing/model/interactive-forms/form-fields:
