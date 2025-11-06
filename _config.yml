@@ -91,6 +91,12 @@ navigation:
     libraries/radwordsprocessing/editing/gen-ai-powered-document-insights:
         title: GenAI-powered Document Insights
         position: 7
+    libraries/radwordsprocessing/features/gen-ai-powered-document-insights/partial-context-question-processor:
+        title: PartialContextQuestionProcessor
+        position: 5
+    libraries/radwordsprocessing/features/gen-ai-powered-document-insights/custom-partialcontextquestionprocessor:
+        title: Custom PartialContextQuestionProcessor
+        position: 6
     libraries/radwordsprocessing/concepts:
         title: Concepts
         position: 6
