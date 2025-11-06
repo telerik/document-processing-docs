@@ -31,7 +31,7 @@ The **SummarizationProcessor** class enables you to generate concise summaries o
 
 |Method|Description|
 |---|---|
-|**Task<string> Summarize(ISimpleTextDocument document)**|Generates a summary of the provided document. The parameter **document** is an **ISimpleTextDocument** containing the text to be summarized.|
+|**Task<string> Summarize(SimpleTextDocument document)**|Generates a summary of the provided document. The parameter **document** is an **ISimpleTextDocument** containing the text to be summarized.|
 
 |Event|Description|
 |---|---|

@@ -44,17 +44,6 @@ All extension points live in **Telerik.Documents.AI.Core** (as abstractions) wit
 2. Question time (**GetContextAsync(question)**) - Similarity scores computed (**ISimilarityCalculator**), top fragments selected within limits, context formatted (plain or JSON).
 3. Processor sends formatted context + question via **IChatClient** and returns model answer.
 
-## Customization Goals
-| Goal | Interface(s) to Extend | Sample Strategy |
-|---|---|---|
-| Higher answer relevance | **IContextFragmentsManager**, **ISimilarityCalculator** | Semantic chunk boundaries; hybrid re-ranking |
-| Lower latency | **IEmbedder**, **IContextRetriever** | Batch embedding; async caching; vector DB offload |
-| Reduced cost (token/API) | **IContextFragmentsManager**, **ITokensCounter** | Dynamic fragment sizing; early pruning |
-| Governance / compliance | **IContextRetriever**, **IContextFragmentsManager** | PII masking before embedding; audit logging |
-| Observability & metrics | Any | Wrap implementations with decorators emitting telemetry |
-| Cross-platform embedding | **IEmbedder** | Use external provider (Azure OpenAI, HuggingFace, etc.) |
-| Advanced filtering | **ISimilarityCalculator**, **IContextRetriever** | Metadata filters (page, section, tags) before ranking |
-
 ## Custom Implementation
 
 The example below constructs a custom **PartialContextQuestionProcessor** by supplying a **DefaultContextRetriever** that mixes user implementations (custom **IContextFragmentsManager** and **IEmbedder**) with default components (**DefaultSimilarityCalculator**, **DefaultTokensCounter**, and the retriever's own orchestration). This hybrid approach lets you optimize the most impactful stages (fragmentation + embedding) without rewriting the entire retrieval pipeline.

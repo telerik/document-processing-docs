@@ -36,8 +36,8 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 
 |Constructor|Platform|Description|
 |---|---|---|
-|**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|_Specific*_ |Creates an instance with built-in embeddings storage|
-|**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, ISimpleTextDocument document)**|Any|Creates an instance with custom embeddings storage|
+|**PartialContextQuestionProcessor(IChatClient chatClient, int modelMaxInputTokenLimit, SimpleTextDocument document)**|_Specific*_ |Creates an instance with built-in embeddings storage|
+|**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingsStorage embeddingsStorage, int modelMaxInputTokenLimit, SimpleTextDocument document)**|Any|Creates an instance with custom embeddings storage|
 
 > _*Specific_ The .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows) constructor uses **DefaultEmbeddingsStorage** internally, while the cross-platform constructor requires a custom implementation of **IEmbeddingsStorage** as shown in the [Custom IEmbeddingsStorage Setup]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembeddingsstorage) section.
 
