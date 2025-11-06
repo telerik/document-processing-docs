@@ -37,8 +37,8 @@ In addition to the [standard RadWordsProcessing references]({%slug radwordsproce
 
 > __*__ The **Documents.AIConnector** NuGet package internally depends on:
 >
->* **Telerik.(Windows).Documents.AI.Core**
->* **Telerik.(Windows).Documents.AI.RAG**
+>* **Telerik.Documents.AI.Core**
+>* **Telerik.Documents.AI.RAG**
 >    * **Microsoft.Extensions.AI.Abstractions**
 >    * **SharpToken**
 >

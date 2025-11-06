@@ -77,9 +77,9 @@ This example demonstrates how to use the **PartialContextQuestionProcessor** wit
 
 <snippet id='libraries-flow-features-gen-ai-ask-questions-using-partial-context-iembedder'/>
 
-### Implementing custom IEmbeddingsStorage
+### Implementing custom IEmbedder
 
-A sample custom implementation for the OllamaEmbeddingsStorage is shown in the below code snippet:
+A sample custom CustomOpenAIEmbedder implementation for the IEmbedder is shown in the below code snippet:
 
 >note Requires installing the following NuGet packages:
 > * **Azure.AI.OpenAI**
