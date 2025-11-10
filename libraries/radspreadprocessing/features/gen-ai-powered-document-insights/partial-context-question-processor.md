@@ -74,7 +74,7 @@ This example demonstrates how to use the **PartialContextQuestionProcessor** wit
 
 #### Example 2: Using PartialContextQuestionProcessor with Custom IEmbedder
 
-This example demonstrates how to use the **PartialContextQuestionProcessor** with a custom IEmbedder implementation as described in the [Implementing Custom IEmbedder]({%slug radspreadsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section:
+This example demonstrates how to use the **PartialContextQuestionProcessor** with a custom IEmbedder implementation as described in the [Implementing Custom IEmbedder]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section:
 
 <snippet id='libraries-spread-features-gen-ai-ask-questions-using-partial-context-iembedder'/>
 

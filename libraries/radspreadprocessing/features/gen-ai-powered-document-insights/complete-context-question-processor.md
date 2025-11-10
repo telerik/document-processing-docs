@@ -29,13 +29,13 @@ The **CompleteContextQuestionProcessor** is ideal for the following scenarios:
 2. **Holistic Understanding**: When the question requires understanding the entire document context.
 3. **Simplicity**: When you don't need the advanced embedding functionality of [PartialContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}).
 
-However, if you're working with larger documents or want to optimize token usage, you should use the [PartialContextQuestionProcessor]({%slug radspreadsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#when-to-use-partialcontextquestionprocessor) instead.
+However, if you're working with larger documents or want to optimize token usage, you should use the [PartialContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#when-to-use-partialcontextquestionprocessor) instead.
 
 ## Public API
 
 |Property|Description|
 |---|---|
-|**Settings**|Gets the settings for the AI question-answering process. Returns [CompleteContextProcessorSettings]({%slug radspreadsprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%}#completecontextprocessorsettings).|
+|**Settings**|Gets the settings for the AI question-answering process. Returns [CompleteContextProcessorSettings]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%}#completecontextprocessorsettings).|
 
 |Method|Description|
 |---|---|

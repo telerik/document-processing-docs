@@ -2,7 +2,7 @@
 title: Limitations
 description: Learn what are the limitations related to the usage of digital signatures in RadPdfProcessing. 
 page_title: Limitations
-slug: radpdfprocessing-features-signature-validation
+slug: radpdfprocessing-features-digital-signature-limitations
 tags: digital, signature, limitations
 position: 5
 ---

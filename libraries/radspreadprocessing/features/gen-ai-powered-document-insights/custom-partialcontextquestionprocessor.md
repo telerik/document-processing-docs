@@ -2,7 +2,7 @@
 title: Custom PartialContextQuestionProcessor
 description: Customize the PartialContextQuestionProcessor by providing a custom IContextRetriever and interface implementations for fragmentation, embedding, similarity, token counting, and retrieval.
 page_title: Custom PartialContextQuestionProcessor
-slug: radspreadsprocessing-features-gen-ai-powered-document-insights-custom-partialcontextquestionprocessor
+slug: radspreadprocessing-features-gen-ai-powered-document-insights-custom-partialcontextquestionprocessor
 tags: ai, context, retriever, embeddings, customization, spread, document, partial, processor, question, insights, xlsx, excel, workbook
 published: True
 position: 6

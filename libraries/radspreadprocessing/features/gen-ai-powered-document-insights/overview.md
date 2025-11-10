@@ -27,7 +27,7 @@ The GenAI-powered Document Insights feature includes three main components:
 |----|----|
 |**[SummarizationProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-summarization-processor%})**|Generates concise summaries of Excel documents.|
 |**[CompleteContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})**|Answers questions by providing the entire document content to the AI model.|
-|**[PartialContextQuestionProcessor]({%slug radspreadsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})**|Answers questions by providing only the relevant portions of the document to the AI model.|
+|**[PartialContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})**|Answers questions by providing only the relevant portions of the document to the AI model.|
 
 ## See Also
 
