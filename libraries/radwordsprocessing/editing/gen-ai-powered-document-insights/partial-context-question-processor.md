@@ -89,10 +89,6 @@ A sample custom CustomOpenAIEmbedder implementation for the IEmbedder is shown i
 
 <snippet id='libraries-flow-features-gen-ai-ask-questions-using-partial-context-custom-openai-embedder'/>
 
-#### Example 3: Processing Specific Pages
-
-<snippet id='libraries-flow-features-gen-ai-summarize-process-specific-pages'/>
-
 ## See Also
 
 * [GenAI-powered Document Insights Overview]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-overview%})

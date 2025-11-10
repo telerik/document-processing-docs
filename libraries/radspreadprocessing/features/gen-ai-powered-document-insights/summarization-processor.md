@@ -1,9 +1,9 @@
 ---
 title: SummarizationProcessor
-description: SummarizationProcessor class enables you to generate concise summaries of PDF documents using Large Language Models.
+description: SummarizationProcessor class enables you to generate concise summaries of Excel documents using Large Language Models.
 page_title: SummarizationProcessor
-slug: radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor
-tags: ai, document, analysis, summarization, processor, summary
+slug: radspreadprocessing-features-gen-ai-powered-document-insights-summarization-processor
+tags: ai, document, analysis, summarization, processor, summary, excel, xlsx, spread, xls, csv, workbook, worksheet
 published: True
 position: 3
 ---
@@ -21,7 +21,7 @@ table th:nth-of-type(2) {
 
 # SummarizationProcessor
 
-The **SummarizationProcessor** class enables you to generate concise summaries of PDF documents using Large Language Models (LLMs). It inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors. It automatically handles large documents by splitting them into smaller chunks when needed, making it suitable for documents of any size.
+The **SummarizationProcessor** class enables you to generate concise summaries of Excel documents using Large Language Models (LLMs). It inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors. It automatically handles large documents by splitting them into smaller chunks when needed, making it suitable for documents of any size.
 
 ## Public API
 
@@ -31,7 +31,7 @@ The **SummarizationProcessor** class enables you to generate concise summaries o
 
 |Method|Description|
 |---|---|
-|**Task<string> Summarize(SimpleTextDocument document)**|Generates a summary of the provided document. The parameter **document** is an **SimpleTextDocument** containing the text to be summarized.|
+|**Task<string> Summarize(SimpleTextDocument document)**|Generates a summary of the provided document. The parameter **document** is a **SimpleTextDocument** containing the text to be summarized.|
 
 |Event|Description|
 |---|---|
@@ -48,11 +48,11 @@ The **SummarizationProcessorSettings** class defines configuration options for t
 
 #### __[C#] Example 1: Configuring SummarizationProcessorSettings__
 
-<snippet id='libraries-pdf-features-gen-ai-summirize-configure'/>
+<snippet id='libraries-spread-features-gen-ai-summarize-configure'/>
 
 ## Usage Example
 
-The following example demonstrates how to use the **SummarizationProcessor** to generate a summary of a PDF document. To set up the AI client as shown in this example, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section.
+The following example demonstrates how to use the **SummarizationProcessor** to generate a summary of an Excel document. To set up the AI client as shown in this example, see the [AI Provider Setup]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section.
 
 ### Handling Large Documents
 
@@ -66,11 +66,11 @@ This approach allows the processor to efficiently handle documents of any size, 
 
 #### __[C#] Example 2: Using SummarizationProcessor__
 
-<snippet id='libraries-pdf-features-gen-ai-summarize-document'/>
+<snippet id='libraries-spread-features-gen-ai-summarize-document'/>
 
 ## See Also
 
-* [GenAI-powered Document Insights Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
-* [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%})
-* [PartialContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
-* [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})
+* [GenAI-powered Document Insights Overview]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})
+* [Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [PartialContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
+* [CompleteContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})
