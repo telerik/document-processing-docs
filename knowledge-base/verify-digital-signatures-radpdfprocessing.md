@@ -108,9 +108,9 @@ Here is a code snippet demonstrating these steps and including the creation of a
         }
 ```
 
-To validate a signature, utilize the `Validate()` or `TryValidate()` methods available within the RadPdfProcessing library. Detailed information on signature validation can be found in the [Signature Validation]({%slug radpdfprocessing-features-signature-validation%}) documentation.
+To validate a signature, utilize the `Validate()` or `TryValidate()` methods available within the RadPdfProcessing library. Detailed information on signature validation can be found in the [Signature Validation]({%slug radpdfprocessing-features-digital-signature-validation%}) documentation.
 
 ## See Also
 
 - [Digital Signature Overview in RadPdfProcessing]({%slug radpdfprocessing-features-digital-signature%})
-- [Signature Validation]({%slug radpdfprocessing-features-signature-validation%})
+- [Signature Validation]({%slug radpdfprocessing-features-digital-signature-validation%})

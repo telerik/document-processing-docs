@@ -35,10 +35,15 @@ In addition to the [standard RadPdfProcessing references]({%slug radpdfprocessin
 |---|---|
 |**Telerik.Windows.Documents.AIConnector** * |**Telerik.Documents.AIConnector** *|
 
-> __*__ The **Documents.AIConnector** NuGet package internally depends on **Microsoft.Extensions.AI.Abstractions** and **SharpToken**. 
+> __*__ The **Documents.AIConnector** NuGet package internally depends on:
 >
-> * **Microsoft.Extensions.AI.Abstractions** is currently available only in **preview** version. 
-> * If you are referencing an _assembly/dll_ of **Documents.AIConnector** instead of a NuGet package, you must manually add the **SharpToken** NuGet package.
+>* **Telerik.Documents.AI.Core**
+>* **Telerik.Documents.AI.RAG**
+>    * **Microsoft.Extensions.AI.Abstractions**
+>    * **SharpToken**
+>
+>**Microsoft.Extensions.AI.Abstractions** is currently available only in **preview** version. 
+>If you are referencing an _assembly/dll_ of **Documents.AIConnector** instead of a NuGet package, you must manually add the **SharpToken** NuGet package.
 
 ## NuGet Packages
 
