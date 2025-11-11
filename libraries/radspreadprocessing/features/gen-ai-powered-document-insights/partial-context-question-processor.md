@@ -8,9 +8,7 @@ published: True
 position: 4
 ---
 <style>
-table, th, td {
-    border: 1px solid;
-}
+
 table th:first-of-type {
     width: 65%;
 }
@@ -23,6 +21,9 @@ table th:nth-of-type(3) {
 </style>
 
 # PartialContextQuestionProcessor
+
+|Minimum Version:|Q4 2025|
+|----|----|
 
 The **PartialContextQuestionProcessor** class enables you to ask questions about an Excel document and receive answers based on the most relevant parts of the document content. This processor uses embeddings to identify and send only the relevant portions of the document to the AI model, making it more efficient for token usage and more suitable for large documents. This class inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors.
 

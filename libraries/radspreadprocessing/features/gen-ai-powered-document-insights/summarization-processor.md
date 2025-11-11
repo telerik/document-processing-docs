@@ -8,9 +8,7 @@ published: True
 position: 3
 ---
 <style>
-table, th, td {
-	border: 1px solid;
-}
+
 table th:first-of-type {
 	width: 30%;
 }
@@ -20,6 +18,9 @@ table th:nth-of-type(2) {
 </style>
 
 # SummarizationProcessor
+
+|Minimum Version:|Q4 2025|
+|----|----|
 
 The **SummarizationProcessor** class enables you to generate concise summaries of Excel documents using Large Language Models (LLMs). It inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors. It automatically handles large documents by splitting them into smaller chunks when needed, making it suitable for documents of any size.
 

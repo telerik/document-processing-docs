@@ -8,9 +8,7 @@ published: True
 position: 1
 ---
 <style>
-table, th, td {
-    border: 1px solid;
-}
+
 /* First table with two columns */
 table:nth-of-type(1) th:first-of-type {
     width: 50%;
@@ -25,6 +23,10 @@ table:nth-of-type(2) th {
 </style>
 
 # GenAI-powered Document Insights Prerequisites
+
+|Minimum Version:|Q4 2025|
+|----|----|
+
 This article explains the requirements for using the GenAI-powered Document Insights functionality in the [RadSpreadProcessing library]({%slug radspreadprocessing-overview%}).
 
 ## Required References
