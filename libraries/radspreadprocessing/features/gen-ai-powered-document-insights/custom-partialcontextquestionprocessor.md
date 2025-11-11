@@ -10,6 +10,9 @@ position: 6
 
 # Custom PartialContextQuestionProcessor
 
+|Minimum Version:|Q4 2025|
+|----|----|
+
 This article explains how to create a custom **PartialContextQuestionProcessor** configuration by supplying your own **IContextRetriever** and related interface implementations. You can tailor every step: splitting text, producing embeddings, ranking relevance, enforcing token limits, formatting context, and retrieving it efficiently to optimize performance, cost, accuracy, or compliance.
 
 When you need full control over fragmentation, embedding, similarity ranking, and retrieval, use the constructor that accepts an **IContextRetriever**:

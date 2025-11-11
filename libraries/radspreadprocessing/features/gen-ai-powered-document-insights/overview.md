@@ -10,6 +10,9 @@ position: 0
 
 # GenAI-powered Document Insights Overview
 
+|Minimum Version:|Q4 2025|
+|----|----|
+
 The GenAI-powered Document Insights feature enables you to easily extract insights from Excel documents using Large Language Models (LLMs). This functionality allows you to summarize document content and ask questions about the document, with the AI providing relevant answers based on the document's content.
 
 ## Key Features
