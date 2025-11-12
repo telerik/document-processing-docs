@@ -29,16 +29,6 @@ The major features are listed in the table below.
 |Code Suggestions|Can directly suggest changes and rebuild applications to verify code|
 |Response Focus|Primarily code-focused|
 
-## Prerequisites for the AI Coding Assistant
-
-To use the Telerik Document Processing Libraries AI Coding Assistant, you need:
-
-* [.NET](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview) 8 or later, or [Node.js](https://nodejs.org/en) 18 or later.
-* An [MCP-compatible client (IDE, code editor, or app)](https://modelcontextprotocol.io/clients) that supports MCP tools (latest version recommended). For example, the latest [Visual Studio Code](https://code.visualstudio.com/).
-* A [Telerik user account](https://www.telerik.com/account/).
-* An active [Telerik license](https://www.telerik.com/purchase.aspx?filter=web) that includes Telerik Document Processing.
-* An application that uses the Telerik [Document Processing Libraries]({%slug introduction%}).
-
 ## Intended Use
 
 >warning Always double-check the code and solutions proposed by any AI-powered tool before applying them to your project.

@@ -25,25 +25,30 @@ The Telerik Document Processing [MCP (Model Context Protocol) server](https://mo
 
 ## Prerequisites for the MCP Server
 
-In addition to the [prerequisites for the AI Coding Assistant]({%slug ai-coding-assistant%}#prerequisites-for-the-ai-coding-assistant), to use the Telerik Document Processing (DPL) MCP server, you need:
+To use the Telerik Document Processing Libraries (DPL) MCP Server, you need:
 
-* [Node.js](https://nodejs.org/en) 18 or later.
-* An [MCP-compatible client](https://modelcontextprotocol.io/clients) that supports **MCP tools** (latest version recommended).
+* A [Telerik user account](https://www.telerik.com/account/).
+* An active [Telerik license](https://www.telerik.com/purchase.aspx?filter=web) that includes Telerik Document Processing.
+* An application that uses the Telerik [Document Processing Libraries]({%slug introduction%}).
+* [.NET](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview) {{site.mindotnetversion}} or later, or [Node.js](https://nodejs.org/en) 18 or later.
+* An [MCP-compatible client (IDE, code editor, or app)](https://modelcontextprotocol.io/clients) that supports MCP tools (latest version recommended). For example, the latest [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Installation
 
-Depending on your environment, you can install the Telerik DPL MCP server in any of the following ways:
+Depending on your environment, you can install the Telerik DPL MCP server either by using the .NET tooling or Node.js.
 
-### Using the `dnx` script (.NET 10 or later only) or the `dotnet` CLI (.NET 8 and .NET 9)
+### Using the .NET Tooling
 
-  ```bash .NET 10
+Use the `dnx` script (.NET 10 or later only) or the `dotnet` CLI (.NET {{site.mindotnetversion}} and .NET 9)
+
+```bash .NET10
   dnx Telerik.DPL.MCP
-  ```
-  ```bash .NET 8/9
+```
+```bash .NET8/9
   dotnet tool install Telerik.DPL.MCP
-  ```
+```
 
-### Installing the Telerik Document Processing MCP server using npm:  
+### Using npm: 
 
 Use the documentation of your AI-powered MCP client to add the [Telerik Document Processing MCP server](https://www.npmjs.com/package/@progress/telerik-dpl-mcp) to a specific workspace or globally. You can see installation tips and examples for some popular MCP clients below.
 
@@ -58,6 +63,8 @@ Next, make sure the configuration in your `mcp.json` is [correct](#configuring-m
 ![Installing DPL MCP Server in VS Code ><](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif)   
 
 ## Configuration
+
+To configure the Telerik DPL MCP server you need to configure the license and mcp.json as follows:
 
 ### Configuring mcp.json
 
@@ -74,41 +81,45 @@ Use these settings when configuring the server in your MCP client:
 
 ### License Configuration
 
-An active Document Processing license is required to use the Telerik DPL MCP server. Add your [Telerik license key]({%slug setting-up-license-key%}) as an environment parameter in your `mcp.json` file using one of these options:
+An active Document Processing license is required to use the Telerik DPL MCP server. 
+
+* When installing the MCP server by using the .NET tooling (`dnx` or `dotnet tool install`), the [Telerik license key]({%slug setting-up-license-key%}) will be retrieved automatically if it is present in the default directory on your system (`%AppData%\Telerik\telerik-license.txt` on Windows and `~/.telerik/telerik-license.txt` on Linux). No additional action is required.
+* When using the .NET tooling, but your [license key file]({%slug setting-up-license-key%}) is not in the default directory, use one of the options below to configure your license.
+* When using Node.js, add your [license key file]({%slug setting-up-license-key%}) as an environment variable in your `mcp.json` file using one of the options below:
 
 * As a license file path (recommended)
 
- ```json
+```json
  "env": {
      "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE"
  }
- ```
+```
 
 * As a license key value
 
- ```json
+```json
  "env": {
      "TELERIK_LICENSE": "YOUR_LICENSE_KEY_HERE"
  }
- ```
+```
 
 > Using a license file path is recommended unless you're sharing settings across different systems. Remember to [update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
 
 >note Usually, the `.mcp.json` file is expected to be found in the user's directory: %USERPROFILE%
  
-## Visual Studio
+## Visual Studio Configuration
 
 > * Early Visual Studio 17.14 versions require the Copilot Chat window to be open when opening a solution for the MCP server to work properly.
 > * For complete setup instructions, see [Use MCP servers in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers).
 
-### Workspace-Specific Setup:
+The steps below describe the sample procedure for configuring the Telerik DPL MCP server in Visual Studio.
 
 1. Add an `.mcp.json` file to either of the following locations:
 
   * For a workspace-specific setup, add the file to the solution's folder.
   * For a global setup, add the file to your user directory, `%USERPROFILE%` (for example, `C:\Users\YourName\.mcp.json`).
 
- ```json
+  ```json .NET10
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -125,8 +136,7 @@ An active Document Processing license is required to use the Telerik DPL MCP ser
    "inputs": []
  }
  ```
-
-  ```json .NET 8/9
+ ```json .NET8/9
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -142,7 +152,7 @@ An active Document Processing license is required to use the Telerik DPL MCP ser
    },
    "inputs": []
  }
-
+ ```
  ```json Node.js
  {
    "servers": {
@@ -164,8 +174,6 @@ An active Document Processing license is required to use the Telerik DPL MCP ser
 2. Restart Visual Studio.
 3. Enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
 
-### Global Setup:
-
 Add the `.mcp.json` file to your user directory (`%USERPROFILE%`, e.g., `C:\Users\YourName\.mcp.json`).
 
 ## Visual Studio Code
@@ -180,7 +188,7 @@ The basic setup in Visual Studio Code involves the following steps:
 1. Enable [`chat.mcp.enabled`](vscode://settings/chat.mcp.enabled) in Visual Studio Code settings.
 2. Create `.vscode/mcp.json` in your workspace root (or user folder for global setup):
 
- ```json .NET 10
+ ```json .NET10
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -197,8 +205,7 @@ The basic setup in Visual Studio Code involves the following steps:
    "inputs": []
  }
  ```
-
-  ```json .NET 8/9
+ ```json .NET8/9
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -214,7 +221,7 @@ The basic setup in Visual Studio Code involves the following steps:
    },
    "inputs": []
  }
-
+ ```
  ```json Node.js
  {
    "servers": {
@@ -251,7 +258,7 @@ For complete setup instructions, see [Model Context Protocol](https://docs.curso
 
 Create `.cursor/mcp.json` in your workspace root (or user folder for global setup):
 
- ```json .NET 10
+```json .NET10
  {
    "mcpServers": {
      "telerik-dpl-assistant": {
@@ -267,9 +274,8 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
    },
    "inputs": []
  }
- ```
-
-  ```json .NET 8/9
+```
+```json .NET8/9
  {
    "mcpServers": {
      "telerik-dpl-assistant": {
@@ -285,8 +291,8 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
    },
    "inputs": []
  }
-
- ```json Node.js
+```
+```json Node.js
  {
    "mcpServers": {
      "telerik-dpl-assistant": {
@@ -302,7 +308,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
    },
    "inputs": []
  }
- ```
+```
 
 ## Usage
 
