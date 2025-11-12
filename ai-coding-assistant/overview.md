@@ -33,6 +33,8 @@ The major features are listed in the table below.
 
 To use the Telerik Document Processing Libraries AI Coding Assistant, you need:
 
+* [.NET](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-8/overview) 8 or later, or [Node.js](https://nodejs.org/en) 18 or later.
+* An [MCP-compatible client (IDE, code editor, or app)](https://modelcontextprotocol.io/clients) that supports MCP tools (latest version recommended). For example, the latest [Visual Studio Code](https://code.visualstudio.com/).
 * A [Telerik user account](https://www.telerik.com/account/).
 * An active [Telerik license](https://www.telerik.com/purchase.aspx?filter=web) that includes Telerik Document Processing.
 * An application that uses the Telerik [Document Processing Libraries]({%slug introduction%}).
@@ -55,7 +57,7 @@ Consider the following recommendations when working with the AI Coding Assistant
 
 * When switching between tasks and files, start a new session in a new chat window to avoid polluting the context with irrelevant or outdated information.
 * At the time of publishing, **Claude Sonnet 4** and **GPT-5** produce optimal results.
-* Specify the [Target Framework]({%slug available-nuget-packages%}) (e.g. .NET Framework, .NET Standard, .NET  {{site.mindotnetversion}} (Target OS: *None*), .NET  {{site.mindotnetversion}} (Target OS: *Windows*)) for producing as high-quality results as possible.
+* Specify the [Target Framework]({%slug available-nuget-packages%}) (e.g. .NET Framework, .NET Standard, .NET  {{site.mindotnetversion}} or later (Target OS: *None*), .NET  {{site.mindotnetversion}} or later (Target OS: *Windows*)) for producing as high-quality results as possible.
 
 ## Usage Limits
 
