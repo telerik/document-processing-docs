@@ -414,8 +414,8 @@ defaults:
 # "foo": "Bar"
 
 mindotnetversion: "8"
-maxdotnetversion: "9"
-dotnetversions: ".NET 8 and .NET 9"
+maxdotnetversion: "10"
+dotnetversions: ".NET 8, .NET 9 and .NET 10"
 skiasharpversion: "3.119.1"
 harfbuzzsharp: "8.3.1.2"
 cryptographypkcs: "9.0.9"

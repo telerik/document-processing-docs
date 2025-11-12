@@ -43,7 +43,7 @@ Supported Development Tools and Environments:
 * **.NET Standard 2.0** 
 	* [.NET {{site.mindotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.mindotnetversion}}.0) to [.NET {{site.maxdotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.maxdotnetversion}}.0) 
 
-* __Microsoft Visual Studio 2010/2012/2013/2015/2019/2022__ - download from [here](http://www.microsoft.com/visualstudio/eng/downloads).
+* __Microsoft Visual Studio 2010/2012/2013/2015/2019/2022/2026__ - download from [here](http://www.microsoft.com/visualstudio/eng/downloads).
   
 ## Hardware Environment
 
