@@ -45,9 +45,14 @@ Depending on your environment, you can install the Telerik DPL MCP server either
 
 Use the `dnx` script (.NET 10 or later only) or the `dotnet` CLI (.NET {{site.mindotnetversion}} and .NET 9)
 
+* .NET 10:
+
 ```NET10
   dnx Telerik.DPL.MCP
 ```
+
+* .NET 8 and .NET 9:
+
 ```NET8/9
   dotnet tool install Telerik.DPL.MCP
 ```
@@ -123,57 +128,64 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
   * For a workspace-specific setup, add the file to the solution's folder.
   * For a global setup, add the file to your user directory, `%USERPROFILE%` (for example, `C:\Users\YourName\.mcp.json`).
 
-```NET10
- {
-   "servers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "dnx",
-       "args": ["Telerik.DPL.MCP", "--yes"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   },
-   "inputs": []
- }
-```
-```NET8/9
- {
-   "servers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "dotnet",
-       "args": ["tool", "run", "telerik-dpl-mcp"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   },
-   "inputs": []
- }
-```
-```Nodejs
- {
-   "servers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "npx",
-       "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   },
-   "inputs": []
- }
-```
+  * In .NET 10:
+
+    ```json
+    {
+      "servers": {
+        "telerik-dpl-assistant": {
+          "type": "stdio",
+          "command": "dnx",
+          "args": ["Telerik.DPL.MCP", "--yes"],
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+    ```
+
+  * In .NET 8 and .NET 9:
+
+    ```json
+    {
+      "servers": {
+        "telerik-dpl-assistant": {
+          "type": "stdio",
+          "command": "dotnet",
+          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+    ```
+* In Node.js:
+
+    ```json
+    {
+      "servers": {
+        "telerik-dpl-assistant": {
+          "type": "stdio",
+          "command": "npx",
+          "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+  ```
 
 2\. Restart Visual Studio.
 3\. Enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
@@ -192,56 +204,63 @@ The basic setup in Visual Studio Code involves the following steps:
 1. Enable [`chat.mcp.enabled`](vscode://settings/chat.mcp.enabled) in Visual Studio Code settings.
 2. Create `.vscode/mcp.json` in your workspace root (or user folder for global setup):
 
- ```NET10
- {
-   "servers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "dnx",
-       "args": ["Telerik.DPL.MCP", "--yes"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   },
-   "inputs": []
- }
- ```
- ```NET8/9
- {
-   "servers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "dotnet",
-       "args": ["tool", "run", "telerik-dpl-mcp"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   },
-   "inputs": []
- }
- ```
- ```Nodejs
- {
-   "servers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "npx",
-       "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   },
-   "inputs": []
- }
+* In .NET 10:
+
+    ```json
+    {
+      "servers": {
+        "telerik-dpl-assistant": {
+          "type": "stdio",
+          "command": "dnx",
+          "args": ["Telerik.DPL.MCP", "--yes"],
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+    ```
+* In .NET 8 and .NET 9:
+
+    ```json
+    {
+      "servers": {
+        "telerik-dpl-assistant": {
+          "type": "stdio",
+          "command": "dotnet",
+          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+    ```
+
+* In Node.js:
+
+    ```json
+    {
+      "servers": {
+        "telerik-dpl-assistant": {
+          "type": "stdio",
+          "command": "npx",
+          "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
  ```
 
 3. For global discovery, enable [`chat.mcp.discovery.enabled`](vscode://settings/chat.mcp.discovery.enabled) in `settings.json`:
@@ -262,57 +281,65 @@ For complete setup instructions, see [Model Context Protocol](https://docs.curso
 
 Create `.cursor/mcp.json` in your workspace root (or user folder for global setup):
 
-```NET10
- {
-   "mcpServers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "dnx",
-       "args": ["Telerik.DPL.MCP", "--yes"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   },
-   "inputs": []
- }
-```
-```NET8/9
- {
-   "mcpServers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "dotnet",
-       "args": ["tool", "run", "telerik-dpl-mcp"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   },
-   "inputs": []
- }
-```
-```Nodejs
- {
-   "mcpServers": {
-     "telerik-dpl-assistant": {
-       "type": "stdio",
-       "command": "npx",
-       "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
-       "env": {
-         "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
-         // or
-         "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
-       }
-     }
-   },
-   "inputs": []
- }
-```
+* In .NET 10:
+
+    ```json
+    {
+      "mcpServers": {
+        "telerik-dpl-assistant": {
+          "type": "stdio",
+          "command": "dnx",
+          "args": ["Telerik.DPL.MCP", "--yes"],
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+    ```
+
+ * In .NET 8 and .NET 9:
+
+    ```NET8/9
+    {
+      "mcpServers": {
+        "telerik-dpl-assistant": {
+          "type": "stdio",
+          "command": "dotnet",
+          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+    ```
+
+* In Node.js:
+
+    ```Nodejs
+    {
+      "mcpServers": {
+        "telerik-dpl-assistant": {
+          "type": "stdio",
+          "command": "npx",
+          "args": ["-y", "@progress/telerik-dpl-mcp@latest"],
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+    ```
 
 ## Usage
 
