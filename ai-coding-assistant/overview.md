@@ -29,14 +29,6 @@ The major features are listed in the table below.
 |Code Suggestions|Can directly suggest changes and rebuild applications to verify code|
 |Response Focus|Primarily code-focused|
 
-## Prerequisites for the AI Coding Assistant
-
-To use the Telerik Document Processing Libraries AI Coding Assistant, you need:
-
-* A [Telerik user account](https://www.telerik.com/account/).
-* An active [Telerik license](https://www.telerik.com/purchase.aspx?filter=web) that includes Telerik Document Processing.
-* An application that uses the Telerik [Document Processing Libraries]({%slug introduction%}).
-
 ## Intended Use
 
 >warning Always double-check the code and solutions proposed by any AI-powered tool before applying them to your project.
@@ -55,7 +47,7 @@ Consider the following recommendations when working with the AI Coding Assistant
 
 * When switching between tasks and files, start a new session in a new chat window to avoid polluting the context with irrelevant or outdated information.
 * At the time of publishing, **Claude Sonnet 4** and **GPT-5** produce optimal results.
-* Specify the [Target Framework]({%slug available-nuget-packages%}) (e.g. .NET Framework, .NET Standard, .NET  {{site.mindotnetversion}} (Target OS: *None*), .NET  {{site.mindotnetversion}} (Target OS: *Windows*)) for producing as high-quality results as possible.
+* Specify the [Target Framework]({%slug available-nuget-packages%}) (e.g. .NET Framework, .NET Standard, .NET  {{site.mindotnetversion}} or later (Target OS: *None*), .NET  {{site.mindotnetversion}} or later (Target OS: *Windows*)) for producing as high-quality results as possible.
 
 ## Usage Limits
 
