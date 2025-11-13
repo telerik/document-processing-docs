@@ -47,13 +47,13 @@ Use the `dnx` script (.NET 10 or later only) or the `dotnet` CLI (.NET {{site.mi
 
 * .NET 10:
 
-```NET10
+```json
   dnx Telerik.DPL.MCP
 ```
 
 * .NET 8 and .NET 9:
 
-```NET8/9
+```json
   dotnet tool install Telerik.DPL.MCP
 ```
 
