@@ -418,3 +418,4 @@ The regional currency settings determine the position of the currency symbol rel
 ## See Also
 
 * [Number Formatting]({%slug radspreadprocessing-features-number-formats%})
+* [Changing Date Format of Exported Excel File from UI Grid components]({%slug changing-date-format-exported-excel-blazor-grid%})
