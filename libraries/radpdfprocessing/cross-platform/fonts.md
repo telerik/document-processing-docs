@@ -39,5 +39,6 @@ You can find a detailed **FixedExtensibilityManager** and **FontsProvider** desc
  * [Resolving Missing Content in Exported PDF Files]({%slug missing-content-word-to-pdf-radwordsprocessing%})
  * [Validating Fonts when Using Telerik Document Processing]({%slug validating-fonts-pdf-document-processing%})
  * [Preserving Original Bold, Italic and Regular Fonts When Exporting PDF Documents Using PdfProcessing  in .NET Standard]({%slug pdfprocessing-prevent-font-conversion-embedding-fonts%})
+ * [Resolving Font Differences Between Client and Server-Side PDF generation in Telerik Document Processing]({%slug consistent-pdf-font-formatting%})
 
 
