@@ -118,12 +118,12 @@ An active Document Processing license is required to use the Telerik DPL MCP ser
 
 The steps below describe the sample procedure for configuring the Telerik DPL MCP server in Visual Studio.
 
-1. Add an `.mcp.json` file to either of the following locations:
+1\. Add an `.mcp.json` file to either of the following locations:
 
   * For a workspace-specific setup, add the file to the solution's folder.
   * For a global setup, add the file to your user directory, `%USERPROFILE%` (for example, `C:\Users\YourName\.mcp.json`).
 
-  ```NET10
+```NET10
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -139,8 +139,8 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
    },
    "inputs": []
  }
- ```
- ```NET8/9
+```
+```NET8/9
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -156,8 +156,8 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
    },
    "inputs": []
  }
- ```
- ```Nodejs
+```
+```Nodejs
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -173,10 +173,10 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
    },
    "inputs": []
  }
- ```
+```
 
-2. Restart Visual Studio.
-3. Enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
+2\. Restart Visual Studio.
+3\. Enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
 
 Add the `.mcp.json` file to your user directory (`%USERPROFILE%`, e.g., `C:\Users\YourName\.mcp.json`).
 
