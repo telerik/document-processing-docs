@@ -98,19 +98,19 @@ An active Document Processing license is required to use the Telerik DPL MCP ser
 
 * As a license file path (recommended)
 
-```json
- "env": {
-     "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE"
- }
-```
+  ```json
+  "env": {
+      "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE"
+  }
+  ```
 
 * As a license key value
 
-```json
- "env": {
-     "TELERIK_LICENSE": "YOUR_LICENSE_KEY_HERE"
- }
-```
+  ```json
+  "env": {
+      "TELERIK_LICENSE": "YOUR_LICENSE_KEY_HERE"
+  }
+  ```
 
 > Using a license file path is recommended unless you're sharing settings across different systems. Remember to [update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
 
