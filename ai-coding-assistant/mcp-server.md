@@ -128,6 +128,8 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
   * For a workspace-specific setup, add the file to the solution's folder.
   * For a global setup, add the file to your user directory, `%USERPROFILE%` (for example, `C:\Users\YourName\.mcp.json`).
 
+2\. Add the following configuration to the mcp.json file:
+
   * In .NET 10:
 
     ```json
@@ -167,7 +169,8 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
       "inputs": []
     }
     ```
-* In Node.js:
+
+  * In Node.js:
 
     ```json
     {
@@ -187,8 +190,9 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
     }
   ```
 
-2\. Restart Visual Studio.
-3\. Enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
+3\. Restart Visual Studio.
+
+4\. Enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
 
 Add the `.mcp.json` file to your user directory (`%USERPROFILE%`, e.g., `C:\Users\YourName\.mcp.json`).
 
@@ -204,7 +208,7 @@ The basic setup in Visual Studio Code involves the following steps:
 1. Enable [`chat.mcp.enabled`](vscode://settings/chat.mcp.enabled) in Visual Studio Code settings.
 2. Create `.vscode/mcp.json` in your workspace root (or user folder for global setup):
 
-* In .NET 10:
+  * In .NET 10:
 
     ```json
     {
@@ -223,7 +227,8 @@ The basic setup in Visual Studio Code involves the following steps:
       "inputs": []
     }
     ```
-* In .NET 8 and .NET 9:
+
+  * In .NET 8 and .NET 9:
 
     ```json
     {
@@ -243,7 +248,7 @@ The basic setup in Visual Studio Code involves the following steps:
     }
     ```
 
-* In Node.js:
+  * In Node.js:
 
     ```json
     {
@@ -301,7 +306,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
     }
     ```
 
- * In .NET 8 and .NET 9:
+* In .NET 8 and .NET 9:
 
     ```NET8/9
     {
