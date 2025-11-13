@@ -99,7 +99,7 @@ If you previously stored credentials for the Telerik NuGet server, you need to r
 4. Check if you have any credentials stored in `%AppData%\NuGet\Nuget.Config`. If so, remove them.
 5. Try to reset the Visual Studio user data by [forcing NuGet to ask for authentication](https://stackoverflow.com/questions/43550797/how-to-force-nuget-to-ask-for-authentication-when-connecting-to-a-private-feed).
 6. Restart Visual Studio.
-7. Add the Telerik NuGet package source again through Visual Studio or .NET CLI. If you are using the Telerik NuGet feed in a .NET Core application, use a NuGet API key in the NuGet.Config file]({%slug telerik-nuget-source%}#edit-the-nugetconfig-file).
+7. Add the Telerik NuGet package source again through Visual Studio or .NET CLI. If you are using the Telerik NuGet feed in a .NET Core application, use a NuGet API key in the [NuGet.Config file]({%slug telerik-nuget-source%}#edit-the-nugetconfig-file).
 
 ## See Also
 
