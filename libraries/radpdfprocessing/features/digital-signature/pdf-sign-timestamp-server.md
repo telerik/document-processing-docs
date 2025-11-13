@@ -1,5 +1,5 @@
 ---
-title: TimeStamp Server
+title: Using a TimeStamp Server
 description: Learn how to sign a PDF document using a TimeStamp server.
 page_title: Signing a PDF using a TimeStamp Server
 slug: pdf-sign-timestamp-server
@@ -14,7 +14,9 @@ position: 2
 |Minimum Version|Q4 2025|
 |----|----|
 
-The **TimeStampServer** class encapsulates the necessary details to communicate with an external Timestamp Authority (TSA), including the endpoint URL, optional authentication credentials and timeout for requests. The TimeStampServer can be set via the [SignatureSettings]({%slug radpdfprocessing-features-digital-signature-getting-started%}#signature-settings):
+The **TimeStampServer** class encapsulates the necessary details to communicate with an external Timestamp Authority (TSA), including the endpoint URL, optional authentication credentials and timeout for requests. The TimeStampServer can be set via the [SignatureSettings]({%slug radpdfprocessing-features-digital-signature-getting-started%}#signature-settings).
+
+>note [PdfProcessing Add Digital Signature External Demo](https://demos.telerik.com/document-processing/pdfprocessing/external_digitally_sign_document)
 
 <snippet id='libraries-pdf-features-digital-signature-timestampserver'/>
 

@@ -34,7 +34,7 @@ Quick Start Guide:
 
 ## General Prompts
 
-The section provides examples of general questions related to RadPdfProcessing.
+The section provides examples of general questions related to [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
 <table>
 		<tr>
@@ -130,6 +130,170 @@ The section provides examples of general questions related to RadPdfProcessing.
       </td>
     </tr>   
 </table> 
+
+## SpreadProcessing Prompts
+
+The section provides examples of general questions related to [RadSpreadProcessing]({%slug radspreadprocessing-overview%}).
+
+<table>
+		<tr>
+			<th>Create a Spreadsheet with random data</th>
+      <th>Import a Spreadsheet and read the content</th>
+		</tr>
+    <tr>  
+      <td>
+        <pre><code>
+#telerik-dpl-assistant create a new spreadsheet file with random data inside.
+			  </code></pre>
+      </td>
+            <td>
+         <pre><code>
+#telerik-dpl-assistant import an excel file and read the content of row 1 and column 1, and how to change the value on row 1 and column 2 to 5
+			  </code></pre>
+      </td>
+    </tr>  
+		<tr>
+			<th>Import a Spreadsheet and color cells</th>
+      <th>Import a Spreadsheet and format a cell</th>
+		</tr>
+    <tr>  
+      <td>
+        <pre><code>
+#telerik-dpl-assistant import an excel document and change the background color of the first 5 cells on the first 2 rows.
+			  </code></pre>
+      </td>
+            <td>
+         <pre><code>
+#telerik-dpl-assistant import an excel document and change the number format for cell A1.
+			  </code></pre>
+      </td>
+    </tr>     
+</table> 
+
+## SpreadStreamProcessing Prompts
+
+The section provides examples of general questions related to [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}).
+
+<table>
+		<tr>
+			<th>Create a Spreadsheet with random data</th>
+      <th>Import an existing Spreadsheet</th>
+		</tr>
+    <tr>  
+      <td>
+        <pre><code>
+#telerik-dpl-assistant create a new excel file using spreadstreamprocessing with random data.
+			  </code></pre>
+      </td>
+            <td>
+         <pre><code>
+#telerik-dpl-assistant import an excel file using spreadstreamprocessing.
+			  </code></pre>
+      </td>
+    </tr>  
+		<tr>
+			<th>Import an Excel document and color cells</th>
+      <th>	Import a Spreadsheet and format a cell</th>
+		</tr>
+    <tr>  
+      <td>
+        <pre><code>
+#telerik-dpl-assistant open an excel file using spreadstreamprocessing and change the background color of the first 5 cells on the first 2 rows.
+			  </code></pre>
+      </td>
+            <td>
+         <pre><code>
+#telerik-dpl-assistant open an excel file using spreadstreamprocessing and change the number format for cell A1.
+			  </code></pre>
+      </td>
+    </tr>   
+</table>
+
+## WordsProcessing Prompts
+
+The section provides examples of general questions related to [RadWordsProcessing]({%slug radwordsprocessing-overview%}).
+
+<table>
+		<tr>
+			<th>Create a Word document</th>
+      <th>Import a Word document</th>
+		</tr>
+    <tr>  
+      <td>
+        <pre><code>
+#telerik-dpl-assistant  create a new Word document with text "Test".
+			  </code></pre>
+      </td>
+            <td>
+         <pre><code>
+#telerik-dpl-assistant import an existing word document.
+			  </code></pre>
+      </td>
+    </tr>  
+		<tr>
+			<th>MailMerge a Word document</th>
+      <th>Convert DOCX to PDF</th>
+		</tr>
+    <tr>  
+      <td>
+        <pre><code>
+#telerik-dpl-assistant perform a mail merge with a word document.
+			  </code></pre>
+      </td>
+            <td>
+         <pre><code>
+#telerik-dpl-assistant open a docx document and export it to a pdf file.
+			  </code></pre>
+      </td>
+    </tr> 
+		<tr>
+			<th></th>
+      <th></th>
+		</tr> 
+</table>
+
+## ZipLibrary Prompts
+
+The section provides examples of general questions related to [RadZipLibrary]({%slug radziplibrary-overview%}).
+
+<table>
+		<tr>
+			<th>Create a new zip archive</th>
+      <th>Open an existing zip archive</th>
+		</tr>
+    <tr>  
+      <td>
+        <pre><code>
+#telerik-dpl-assistant create a new zip archive.
+			  </code></pre>
+      </td>
+            <td>
+         <pre><code>
+#telerik-dpl-assistant open a zip archive.
+			  </code></pre>
+      </td>
+    </tr>  
+		<tr>
+			<th>Add a file to a zip archive</th>
+      <th>Protect a zip archive</th>
+		</tr>
+    <tr>  
+      <td>
+        <pre><code>
+#telerik-dpl-assistant add a new file into a zip archive.
+			  </code></pre>
+      </td>
+            <td>
+         <pre><code>
+#telerik-dpl-assistant protect a zip archive.
+			  </code></pre>
+      </td>
+    </tr> 
+		<tr>
+			<th></th>
+      <th></th>
+		</tr> 
+</table>
 
 ## See Also
 

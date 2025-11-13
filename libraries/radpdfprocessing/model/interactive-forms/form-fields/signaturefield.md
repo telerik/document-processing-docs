@@ -19,7 +19,7 @@ This article describes the following topics:
 
 This class corresponds to FormFieldType.Signature enum value and represents a placeholder which preserves the digital signature information. 
 
->To use the signing functionality in PdfProcessing for .NET Standard/.NET Core, you must add a reference to the System.Security.Cryptography.Pkcs NuGet package, version 6 or newer (This functionality is available since R1 2022 SP1).
+>To use the signing functionality in PdfProcessing for .NET Standard/.NET Core, you must add a reference to the System.Security.Cryptography.Pkcs NuGet package, version {{site.cryptographypkcs}} or newer (This functionality is available since R1 2022 SP1).
 
 ## Properties
 

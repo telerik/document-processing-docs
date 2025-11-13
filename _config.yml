@@ -91,6 +91,12 @@ navigation:
     libraries/radwordsprocessing/editing/gen-ai-powered-document-insights:
         title: GenAI-powered Document Insights
         position: 7
+    libraries/radwordsprocessing/editing/gen-ai-powered-document-insights/partial-context-question-processor:
+        title: PartialContextQuestionProcessor
+        position: 5
+    libraries/radwordsprocessing/editing/gen-ai-powered-document-insights/custom-partialcontextquestionprocessor:
+        title: Custom PartialContextQuestionProcessor
+        position: 6
     libraries/radwordsprocessing/concepts:
         title: Concepts
         position: 6
@@ -196,7 +202,15 @@ navigation:
     libraries/radspreadprocessing/formats-and-conversion/json/jsonexportsettings:
         title: JsonExportSettings
         position: 2
-        
+    libraries/radspreadprocessing/features/gen-ai-powered-document-insights:
+        title: GenAI-powered Document Insights
+        position: 7
+    libraries/radspreadprocessing/features/gen-ai-powered-document-insights/partial-context-question-processor:
+        title: PartialContextQuestionProcessor
+        position: 5
+    libraries/radspreadprocessing/features/gen-ai-powered-document-insights/custom-partialcontextquestionprocessor:
+        title: Custom PartialContextQuestionProcessor
+        position: 6
     libraries/radspreadprocessing/features/charts:
         title: Charts
         position: 0
@@ -235,6 +249,12 @@ navigation:
         position: 5
     libraries/radpdfprocessing/features/gen-ai-powered-document-insights:
         title: GenAI-powered Document Insights
+        position: 6
+    libraries/radpdfprocessing/features/gen-ai-powered-document-insights/partial-context-question-processor:
+        title: PartialContextQuestionProcessor
+        position: 5
+    libraries/radpdfprocessing/features/gen-ai-powered-document-insights/custom-partialcontextquestionprocessor:
+        title: Custom PartialContextQuestionProcessor
         position: 6
     libraries/radpdfprocessing/model/interactive-forms:
         title: Interactive Forms
@@ -394,10 +414,11 @@ defaults:
 # "foo": "Bar"
 
 mindotnetversion: "8"
-maxdotnetversion: "9"
-dotnetversions: ".NET 8 and .NET 9"
+maxdotnetversion: "10"
+dotnetversions: ".NET 8, .NET 9 and .NET 10"
 skiasharpversion: "3.119.1"
 harfbuzzsharp: "8.3.1.2"
+cryptographypkcs: "9.0.9"
 
 # Feedback Form Product Code
 productCode: TDP

@@ -17,7 +17,7 @@ Telerik **RadPdfProcessing** provides an easy-to-use API that allows you to:
 
 * [Create a PDF document from scratch and add a signature field]({%slug radpdfprocessing-features-digital-signature-getting-started%}). 
 * [Sign PDF documents that contain a predifined signature field](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document).
-* [Verify existing signed PDF documents]({%slug radpdfprocessing-features-signature-validation%}).
+* [Verify existing signed PDF documents]({%slug radpdfprocessing-features-digital-signature-validation%}).
 * [Multiple Digital Signing with PdfStreamSigner]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%}). 
 
 ![Overview of Signed PDF](images/radpdfprocessing-features-digital-signature-overview.png) 

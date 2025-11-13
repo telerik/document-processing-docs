@@ -27,11 +27,11 @@ The **SummarizationProcessor** class enables you to generate concise summaries o
 
 |Property|Description|
 |---|---|
-|**Settings**|Gets or sets the settings that will be used for summarization.|
+|**Settings**|Gets the settings that will be used for summarization.|
 
 |Method|Description|
 |---|---|
-|**Task<string> Summarize(ISimpleTextDocument document)**|Generates a summary of the provided document. The parameter **document** is an **ISimpleTextDocument** containing the text to be summarized.|
+|**Task<string> Summarize(SimpleTextDocument document)**|Generates a summary of the provided document. The parameter **document** is an **SimpleTextDocument** containing the text to be summarized.|
 
 |Event|Description|
 |---|---|
@@ -41,9 +41,10 @@ The **SummarizationProcessor** class enables you to generate concise summaries o
 
 ## SummarizationProcessorSettings
 
-The **SummarizationProcessorSettings** class provides configuration options for the summarization process:
+The **SummarizationProcessorSettings** class defines configuration options for the summarization process. The following read-only properties can be set only through the constructor:
 
-* **PromptAddition**: Gets or sets an addition for the prompt used for summarization. It can be used for clarification purposes.
+* **ModelMaxInputTokenLimit**: The maximum input token limit for the model.
+* **PromptAddition**: An addition for the prompt used for summarization. It can be used for clarification purposes.
 
 #### __[C#] Example 1: Configuring SummarizationProcessorSettings__
 
