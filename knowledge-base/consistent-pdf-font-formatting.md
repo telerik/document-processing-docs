@@ -1,5 +1,5 @@
 ---
-title: Achieving Consistent Fonts in Client-Side and Server-Side PDF Formatting with Telerik Document Processing
+title: Resolving Font Differences Between Client and Server-Side PDF generation in Telerik Document Processing
 description: Resolve font formatting discrepancies between client-side and server-side PDF generation using Telerik Document Processing.
 type: how-to
 page_title: Resolving PDF Formatting Differences Between Client and Server in Telerik Document Processing
@@ -18,18 +18,13 @@ ticketid: 1700632
 
 ## Description
 
-I was using a Kendo Grid in an Angular application to export data to PDF. Due to a large dataset, it was suggested to switch to server-side PDF generation with [Telerik Document Processing PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview). However, the server-generated PDF looked significantly different from the client-side version. To meet business requirements, I need the server-generated PDF to match the formatting of the client-side version. Manually replicating the Kendo layout on the server seems complex and time-consuming. I need a streamlined approach to achieve consistent formatting between server and client-side PDFs.
-
-This knowledge base article also answers the following questions:
-- How can I ensure server-side PDF formatting matches the client-side PDF?  
-- How to set custom fonts for server-side PDF generation in Telerik Document Processing?  
-- How to use server-side PDF generation to replicate client-side formatting?  
+This knowledge base article shows how to resolve font differences between server-side and client-side PDF generation.
 
 ## Solution
 
-To achieve consistent formatting between the client-side and server-side PDFs, follow these steps:
+Usually, the main difference between the server and client-side generated PDF documents is the font. To achieve consistent font formatting between the client-side and server-side PDFs, follow these steps:
 
-1. Install the [Telerik.Documents.Fixed](https://docs.telerik.com/devtools/document-processing/getting-started/installation/nuget-packages) NuGet package.
+1. Install the [Telerik.Documents.Fixed]({%slug available-nuget-packages%}) NuGet package.
 2. Specify the font explicitly for text elements in the server-side PDF generation code.
 3. Load the required font file and register it with the `FontsRepository`.
 
@@ -71,4 +66,5 @@ Ensure consistent usage of fonts between client-side and server-side export proc
 ## See Also
 
 - [Cross-Platform Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
+- [Registering a Font]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font)
 
