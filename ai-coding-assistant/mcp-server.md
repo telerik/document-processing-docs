@@ -22,6 +22,10 @@ The Telerik Document Processing [MCP (Model Context Protocol) server](https://mo
 ## Supported Libraries
 
 * [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+* [RadSpreadProcessing]({%slug radspreadprocessing-overview%})
+* [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%})
+* [RadZipLibrary]({%slug radziplibrary-overview%})
 
 ## Prerequisites for the MCP Server
 
@@ -41,10 +45,10 @@ Depending on your environment, you can install the Telerik DPL MCP server either
 
 Use the `dnx` script (.NET 10 or later only) or the `dotnet` CLI (.NET {{site.mindotnetversion}} and .NET 9)
 
-```bash .NET10
+```NET10
   dnx Telerik.DPL.MCP
 ```
-```bash .NET8/9
+```NET8/9
   dotnet tool install Telerik.DPL.MCP
 ```
 
@@ -119,7 +123,7 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
   * For a workspace-specific setup, add the file to the solution's folder.
   * For a global setup, add the file to your user directory, `%USERPROFILE%` (for example, `C:\Users\YourName\.mcp.json`).
 
-  ```json .NET10
+  ```NET10
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -136,7 +140,7 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
    "inputs": []
  }
  ```
- ```json .NET8/9
+ ```NET8/9
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -153,7 +157,7 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
    "inputs": []
  }
  ```
- ```json Node.js
+ ```Nodejs
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -188,7 +192,7 @@ The basic setup in Visual Studio Code involves the following steps:
 1. Enable [`chat.mcp.enabled`](vscode://settings/chat.mcp.enabled) in Visual Studio Code settings.
 2. Create `.vscode/mcp.json` in your workspace root (or user folder for global setup):
 
- ```json .NET10
+ ```NET10
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -205,7 +209,7 @@ The basic setup in Visual Studio Code involves the following steps:
    "inputs": []
  }
  ```
- ```json .NET8/9
+ ```NET8/9
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -222,7 +226,7 @@ The basic setup in Visual Studio Code involves the following steps:
    "inputs": []
  }
  ```
- ```json Node.js
+ ```Nodejs
  {
    "servers": {
      "telerik-dpl-assistant": {
@@ -258,7 +262,7 @@ For complete setup instructions, see [Model Context Protocol](https://docs.curso
 
 Create `.cursor/mcp.json` in your workspace root (or user folder for global setup):
 
-```json .NET10
+```NET10
  {
    "mcpServers": {
      "telerik-dpl-assistant": {
@@ -275,7 +279,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
    "inputs": []
  }
 ```
-```json .NET8/9
+```NET8/9
  {
    "mcpServers": {
      "telerik-dpl-assistant": {
@@ -292,7 +296,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
    "inputs": []
  }
 ```
-```json Node.js
+```Nodejs
  {
    "mcpServers": {
      "telerik-dpl-assistant": {
@@ -317,6 +321,10 @@ By default, MCP clients do not call MCP tools in a deterministic way. Some MCP c
 >note When switching between tasks and files, start a new session in a new chat window to avoid polluting the context with irrelevant or outdated information.
 
 To use the Telerik DPL MCP server:
+
+1. Choose your preferred mode and model.
+
+    At the time of publishing, **Claude Sonnet 4** and **GPT-5** produce optimal results.
 
 1. Start your prompt with `#telerik-dpl-assistant` (or with # followed by your custom server name, if set).
 
@@ -353,7 +361,6 @@ The following examples demonstrate useful prompts for the Telerik Document Proce
 
 
 * "`#telerik-dpl-assistant` create a PDF file with a link to "http://telerik.com" in it"
-
 
 >caption Running MCP Server in Visual Studio 
 
