@@ -30,7 +30,7 @@ __Example 1__ shows how to import a txt file using a FileStream. The sample inst
 
     Workbook workbook;
     string fileName = "input.txt";
-    IWorkbookFormatProvider formatProvider = new TxtFormatProvider();
+    TxtFormatProvider formatProvider = new TxtFormatProvider();
 
     using (Stream input = new FileStream(fileName, FileMode.Open))
     {
@@ -54,7 +54,7 @@ __Example 2__ demonstrates how to export an existing Workbook to a TXT file. The
     workbook.Worksheets.Add();
 
     string fileName = "SampleFile.txt";
-    IWorkbookFormatProvider formatProvider = new TxtFormatProvider();
+    TxtFormatProvider formatProvider = new TxtFormatProvider();
 
     using (Stream output = new FileStream(fileName, FileMode.Create))
     {
