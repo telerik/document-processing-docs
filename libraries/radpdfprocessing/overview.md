@@ -29,9 +29,12 @@ The API of RadPdfProcessing contains two different editors,  [RadFixedDocumentEd
 * Interactive forms
     * Automatic filling of forms (e.g. tax forms).
     * Automatic extraction of data from already filled forms.
-* Digital signatures
-    * Signing a document with digital signature.
-    * Validate digital signature of already signed document.
+* Flexible options for digitally signing PDF documents
+    * Sign PDF documents using X.509 certificates
+    * Validate signatures including certificate chain and revocation checks
+    * Add trusted timestamps via timestamp servers for long-term validation
+    * Support external signing with hardware security modules or third-party providers
+    * Apply multiple signatures with incremental updates without invalidating previous ones
 * GenAI-powered Document Insights
 * Accessibility Support
             
