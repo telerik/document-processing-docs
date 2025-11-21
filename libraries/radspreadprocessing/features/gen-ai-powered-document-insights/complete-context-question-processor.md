@@ -16,7 +16,7 @@ table th:nth-of-type(2) {
 } 
 </style>
 
-# CompleteContextQuestionProcessor
+# CompleteContextQuestionProcessor <sup>(Preview)</sup>
 
 |Minimum Version:|Q4 2025|
 |----|----|
