@@ -8,7 +8,7 @@ published: True
 position: 6
 ---
 
-# Custom PartialContextQuestionProcessor
+# Custom PartialContextQuestionProcessor <sup>(Preview)</sup>
 
 |Minimum Version:|Q4 2025|
 |----|----|

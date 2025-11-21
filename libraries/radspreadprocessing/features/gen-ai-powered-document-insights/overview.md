@@ -8,7 +8,7 @@ published: True
 position: 0
 ---
 
-# GenAI-powered Document Insights Overview
+# GenAI-powered Document Insights Overview <sup>(Preview)</sup>
 
 |Minimum Version:|Q4 2025|
 |----|----|

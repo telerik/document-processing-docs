@@ -20,7 +20,7 @@ table th:nth-of-type(3) {
 }
 </style>
 
-# PartialContextQuestionProcessor
+# PartialContextQuestionProcessor <sup>(Preview)</sup>
 
 |Minimum Version:|Q4 2025|
 |----|----|
