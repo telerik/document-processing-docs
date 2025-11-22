@@ -43,7 +43,7 @@ __Example 1__ shows how to import an Xlsm file using a FileStream. The code assu
 
 
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
-    IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
+    Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
 
     using (Stream input = new FileStream(fileName, FileMode.Open))
     {
@@ -66,7 +66,7 @@ __Example 2__ demonstrates how to export an existing Workbook to an Xlsm file. T
     string fileName = "SampleFile.Xlsm";
 
 
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
+    Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
 
     using (Stream output = new FileStream(fileName, FileMode.Create))
     {
@@ -84,7 +84,7 @@ __Example 2__ demonstrates how to export an existing Workbook to an Xlsm file. T
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
     workbook.Worksheets.Add();
 
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
+    Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
 
     byte[] bytes;
     using (MemoryStream output = new MemoryStream())

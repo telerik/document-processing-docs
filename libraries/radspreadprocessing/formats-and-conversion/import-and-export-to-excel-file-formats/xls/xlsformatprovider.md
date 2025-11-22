@@ -39,7 +39,7 @@ __Example 1__ shows how to import an XLS file using a FileStream. The code assur
     }
 
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
-    IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
+    Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
 
     using (Stream input = new FileStream(fileName, FileMode.Open))
     {
@@ -62,7 +62,7 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
     workbook.Worksheets.Add();
     string fileName = "SampleFile.xls";
 
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
+    Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
 
     using (Stream output = new FileStream(fileName, FileMode.Create))
     {
@@ -79,7 +79,7 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
     workbook.Worksheets.Add();
 
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
+    Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
 
     byte[] bytes;
     using (MemoryStream output = new MemoryStream())

@@ -143,7 +143,7 @@ For more examples and application scenarios of Importing and Exporting a Workboo
 {{region cs-radspreadprocessing-getting-started_2}}
 	string fileName = "SampleFile.xlsx";
 	
-	IWorkbookFormatProvider formatProvider = new XlsxFormatProvider();
+	XlsxFormatProvider formatProvider = new XlsxFormatProvider();
 	
 	using (Stream output = new FileStream(fileName, FileMode.Create))
 	{

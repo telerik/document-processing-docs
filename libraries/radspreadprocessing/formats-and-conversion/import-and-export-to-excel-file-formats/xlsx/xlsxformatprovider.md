@@ -41,7 +41,7 @@ __Example 1__ shows how to import an xlsx file using a FileStream. The code assu
     }
 
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
-    IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
+    XlsxFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
     using (Stream input = new FileStream(fileName, FileMode.Open))
     {
@@ -65,7 +65,7 @@ __Example 2__ demonstrates how to export an existing Workbook to an xlsx file. T
      workbook.Worksheets.Add();
      string fileName = "SampleFile.xlsx";
 
-     Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
+     Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
      using (Stream output = new FileStream(fileName, FileMode.Create))
      {
@@ -82,7 +82,7 @@ __Example 2__ demonstrates how to export an existing Workbook to an xlsx file. T
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
     workbook.Worksheets.Add();
 
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
+    Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
     byte[] bytes;
     using (MemoryStream output = new MemoryStream())

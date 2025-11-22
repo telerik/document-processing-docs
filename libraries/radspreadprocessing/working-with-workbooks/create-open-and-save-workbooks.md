@@ -82,7 +82,7 @@ __Example 3__ demonstrates how to export an existing Workbook to a `XLSX` file. 
 	workbook.Worksheets.Add();
 	
 	string fileName = "SampleFile.xlsx";
-	IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
+	XlsxFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 	
 	using (Stream output = new FileStream(fileName, FileMode.Create))
 	{
