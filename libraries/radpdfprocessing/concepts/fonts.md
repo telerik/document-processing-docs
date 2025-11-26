@@ -137,3 +137,4 @@ You can create fonts that are not explicitly registered. Creating a font that is
  * [Validating Fonts when Using Telerik Document Processing]({%slug validating-fonts-pdf-document-processing%})
  * [Resolving Apostrophe Character Being Replaced with Copyright Symbol in Filled PDF AcroForm]({%slug apostrophe-character-replaced-copyright-symbol-acroform%})
  * [Resolving Double-Bold Text Appearance in PDF Export Using Telerik Document Processing]({%slug fixing-double-bold-text-issue-in-pdf-document%})
+ * [Registering Custom Font Variants (Regular, Bold, Italic) for Conversion in Telerik Document Processing]({%slug registering-custom-font-pdf-processing%})

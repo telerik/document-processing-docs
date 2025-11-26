@@ -4,7 +4,7 @@ description: Learn how to register custom font variants in Telerik Document Proc
 type: how-to
 page_title: Proper Font Registration for Custom Font Variants (Regular, Bold, Italic) in DOCX to PDF Conversion
 meta_title: Proper Font Registration for Custom Font Variants (Regular, Bold, Italic) in DOCX to PDF Conversion
-slug: registering-barlow-font-pdf-processing
+slug: registering-custom-font-pdf-processing
 tags: pdf,processing,telerik, document ,font,register,bold, italic, regular
 res_type: kb
 ticketid: 1704494
@@ -17,16 +17,11 @@ ticketid: 1704494
 
 ## Description
 
-When converting DOCX files to PDF using [PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/fonts) for Telerik Document Processing, missing or incorrectly registered font variants may result in fallback fonts being applied in the output PDF. This article addresses how to register different styles and weights of the Barlow font family, including Barlow Condensed and Barlow Semi Condensed, to ensure proper rendering during conversion.
-
-This knowledge base article also answers the following questions:
-- How to register custom fonts for Telerik Document Processing?
-- Why are Barlow fonts not appearing correctly in the PDF output?
-- How to ensure proper font rendering in DOCX to PDF conversion?
+When converting DOCX files to PDF using [PdfProcessing]({%slug radpdfprocessing-concepts-fonts%}) for Telerik Document Processing, missing or incorrectly registered font variants may result in fallback fonts being applied in the output PDF. This article explains how to properly register custom font variants (Regular, Bold, Italic) for the Barlow (or other) font family in Telerik Document Processing to ensure accurate rendering during DOCX to PDF conversion. It covers why fonts may fall back to defaults, and provides step-by-step code examples for registering each font style and weight using FontsRepository. Finally, it demonstrates how to perform the conversion with the registered fonts, ensuring consistent output in PDF documents.
 
 ## Solution
 
-To ensure proper rendering of the Barlow font family in converted PDFs, register each font variant and style individually before conversion. Follow the steps below:
+To ensure proper rendering of the custom (e.g. Barlow) font family in converted PDFs, register each font variant and style individually before conversion. Follow the steps below:
 
 1. Register the Regular variant of the Barlow font:
    ```csharp
@@ -59,7 +54,7 @@ To ensure proper rendering of the Barlow font family in converted PDFs, register
 5. Register the Bold variant of the Barlow Semi Condensed font:
    ```csharp
    byte[] barlowSemiCondensedBold = File.ReadAllBytes(@"..\..\Barlow\BarlowSemiCondensed-Bold.ttf");
-   var barlowSemiCondensedFamilyBold = new FontFamily("Barlow Semi Condensed");
+   var barlowSemiCondensedFamilyBold = new FontFamily("Barlow Semi Condensed SemiBold");
    FontsRepository.RegisterFont(barlowSemiCondensedFamilyBold, FontStyles.Normal, FontWeights.Bold, barlowSemiCondensedBold);
    ```
 
@@ -81,12 +76,10 @@ To ensure proper rendering of the Barlow font family in converted PDFs, register
        pdfProvider.Export(document, outputStream, TimeSpan.FromSeconds(10));
    }
    ```
-
-Ensure you have correctly installed the fonts on your server and have the corresponding `.ttf` files available.
+Ensure the font name matches exactly in the DOCX and in the system font list. If the DOCX uses "Barlow Semi Condensed SemiBold", but the registered font is "Barlow Semi Condensed Bold", fallback occurs. 
 
 ## See Also
 
-- [PdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)  
-- [Registering Fonts](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/fonts)  
-- [DOCX to PDF Conversion with Telerik Document Processing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats/pdf)  
+- [PdfProcessing Overview]({%slug radpdfprocessing-overview%})  
+- [Registering Fonts]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font)    
 
