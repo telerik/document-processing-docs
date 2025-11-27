@@ -33,7 +33,7 @@ The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/cont
 
 ## Activating the Document Processing Libraries
 
-To activating the Document Processing Libraries:
+To activate the Document Processing Libraries:
 
 1. Copy the [downloaded](#downloading-the-license-key) telerik-license.txt license key file to your home directory. This makes the license key available to all projects that you develop on your computer.
    1. For Windows: %AppData%\Telerik\telerik-license.txt
@@ -61,6 +61,7 @@ If you’re not using NuGet packages in your project, add the license as a code 
 ![Download Product Key ><](images/download-product-key.png)
 1. Copy the C# code snippet into a new file, for example, TelerikLicense.cs.
 1. Add the TelerikLicense.cs file to your project.
+1. Add an assembly reference to Telerik.Licensing.Runtime.dll
 
 >caution Do not publish the license key code snippet in publicly accessible repositories. This is your personal license key.
 
