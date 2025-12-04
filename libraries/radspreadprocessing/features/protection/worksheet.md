@@ -96,3 +96,4 @@ The __WorksheetProtectionOptions__ class exposes the following properties so you
 
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
  * [Workbook Protection]({%slug radspreadprocessing-features-protection-workbook%})
+ * [Protect Specific Worksheet Cells Using RadSpreadProcessing]({%slug radspreadprocessing-protect-specific-worksheet-cells%})
