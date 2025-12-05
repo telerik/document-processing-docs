@@ -74,6 +74,37 @@ The **Telerik.Documents.ImageUtils** package provides a default implementation o
 
 ### Custom Implementation for JpegImageConverter
 
+This example shows a sample approach how to implement a custom image converter. It depends on the [SixLabors.ImageSharp](https://www.nuget.org/packages/sixlabors.imagesharp/) library. This approach can be followed with other image processing libraries as well according to the specific requirements.
+
+#### Required NuGet Packages
+
+* SixLabors.ImageSharp - version **3.1.12**
+* SixLabors.ImageSharp.Drawing - version **2.1.7**
+
+The following `using`/`imports` statements are required in the project:
+
+* using SixLabors.ImageSharp; 
+
+* using SixLabors.ImageSharp.Formats.Jpeg;
+
+* using SixLabors.ImageSharp.Formats.Png;
+
+* using SixLabors.ImageSharp.PixelFormats;
+
+* using SixLabors.ImageSharp.Processing;
+
+#### **[C#] Example 3: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
+
+<snippet id='pdf-custom-sixlabors-imagesharp-converter'/>
+
+#### **[C#] Example 4: Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
+
+<snippet id='pdf-set-custom-image-converter'/>
+
+>note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter). 
+
+<!-- ### Custom Implementation for JpegImageConverter
+
 The following example depends on the [Magick.NET](https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/) library to convert images to Jpeg format.
     
 #### **[C#] Example 3: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
@@ -85,7 +116,7 @@ The following example depends on the [Magick.NET](https://www.nuget.org/packages
 <snippet id='pdf-set-custom-image-converter'/>
 
 
->note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter).
+>note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter). -->
 
 ## See Also
 
