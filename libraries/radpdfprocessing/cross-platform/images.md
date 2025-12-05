@@ -103,21 +103,6 @@ The following `using`/`imports` statements are required in the project:
 
 >note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter). 
 
-<!-- ### Custom Implementation for JpegImageConverter
-
-The following example depends on the [Magick.NET](https://www.nuget.org/packages/Magick.NET-Q16-AnyCPU/) library to convert images to Jpeg format.
-    
-#### **[C#] Example 3: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
-
-<snippet id='pdf-custom-jpeg-converter'/>
-    
-#### **[C#] Example 4: Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
-
-<snippet id='pdf-set-custom-image-converter'/>
-
-
->note A complete SDK example of a custom implementation JpegImageConverterBase is available on our [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter). -->
-
 ## See Also
 
  * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
