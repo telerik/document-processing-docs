@@ -73,3 +73,4 @@ __Example 3__ demonstrates how you can delete the bookmark created in __Example 
  * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
  * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
  * [Finding a Table Containing a Specific Bookmark in Word Documents]({%slug radwordsprocessing-find-table-by-bookmark%})
+ * [Change Bookmark Content While Preserving Formatting]({%slug radwordsprocessing-change-bookmark-content-preserve-formatting%})

@@ -148,3 +148,4 @@ Represents an elliptical arc between two points. The __ArcSegment__ exposes the 
  * [Path]({%slug radpdfprocessing-model-path%})
  * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
  * [How to Draw Figures in PDF documents]({%slug pdf-processing-draw-figures-arcsegment%})
+ * [Draw a PDF Page Background Using RadPdfProcessing]({%slug radpdfprocessing-draw-pdf-page-background%})
