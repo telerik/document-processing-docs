@@ -19,15 +19,15 @@ This article shows how to change the content of an existing [Bookmark]({%slug ra
 
 ## Solution
 
-* **Import DOCX**: Use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-format-provider%}) to read the input DOCX and obtain a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}).
+* **Import DOCX**: Use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) to read the input DOCX and obtain a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}).
 * **Initialize editor**: Create a [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) for cursor movement and editing.
-* **Find bookmark**: Enumerate [BookmarkRangeStart]({%slug radwordsprocessing-model-form-bookmarkrangestart%}) elements and select the bookmark by **Name**.
-* **Capture formatting**: Get the first [Run]({%slug radwordsprocessing-model-textfragment-run%}) within the bookmark and copy its **CharacterFormatting** properties.
+* **Find bookmark**: Enumerate [BookmarkRangeStart]({%slug radwordsprocessing-model-bookmark%}) elements and select the bookmark by **Name**.
+* **Capture formatting**: Get the first [Run]({%slug radwordsprocessing-model-run%}) within the bookmark and copy its **CharacterFormatting** properties.
 * **Delete original bookmark content**: Delete only the content between the start and end markers while keeping the bookmark structure intact.
 * **Position cursor**: Move the editor back to the start of the bookmark to insert new text in place.
 * **Copy formatting**: Apply the formatting of the original bookmark content to the editor properties.
 * **Insert text**: Add the replacement content.
-* **Export DOCX**: Write the updated document using [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-format-provider%}).
+* **Export DOCX**: Write the updated document using [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
 
 #### [C#] Replace bookmark content but keep formatting
 
