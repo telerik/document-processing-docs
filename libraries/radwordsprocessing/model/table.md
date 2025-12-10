@@ -181,4 +181,5 @@ __Example 5__ demonstrates how to add a __Table__ with 5 rows and 10 columns to 
  * [Finding a Table Containing a Specific Bookmark in Word Documents]({%slug radwordsprocessing-find-table-by-bookmark%})
  * [Generating Dynamic DOCX Documents with Tables and CheckBoxes using RadWordsProcessing]({%slug dynamic-docx-document-generation-radwordsprocessing%})
  * [Creating Headers with Left, Center, and Right Text/Image in Exported PDF Documents Using RadWordsProcessing]({%slug customize-headers-pdf-radwordsprocessing%})
+ * [How To Handle Missing Content in Nested Tables While  Converting DOCX to PDF Format]({%slug handle-missing-content-in-nested-tables-while-converting-docx-to-pdf%})
 
