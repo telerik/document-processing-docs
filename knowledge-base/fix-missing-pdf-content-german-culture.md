@@ -23,9 +23,9 @@ When loading some PDF documents with German culture, part of the text got missin
 When importing a PDF file using RadFixedDocument with PdfFormatProvider, the document may recognize an incorrect size. For example, an A4-sized document may display a width value thousands of times larger than expected. This issue can occur due to culture settings on the machine (e.g. German).
 
 This knowledge base article also answers the following questions:
-- How to fix incorrect document size when using PdfFormatProvider in RadFixedDocument?
+- How to fix the incorrect document size when using PdfFormatProvider in RadFixedDocument?
 - Why does RadFixedDocument import PDFs with wrong size values?
-- How to ensure correct document size during import with RadFixedDocument?
+- How to ensure the correct document size during import with RadFixedDocument?
 
 ## Solution
 
@@ -33,12 +33,12 @@ To resolve the incorrect document size issue, follow these steps:
 
 ### Option 1: Set English Culture Before Import
 
-1. Add the following code before loading the document:
+Add the following code before loading the document:
    ```csharp
    Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
    ```
    
-### Option 2: Use Preview Version of Telerik UI for WinForms
+### Option 2: Version Upgrade
 
 1. Download and install the  preview version 2024.4.1127 (or newer).
 2. Use this version to render and process the PDF.
