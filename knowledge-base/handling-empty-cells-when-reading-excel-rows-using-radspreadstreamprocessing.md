@@ -18,7 +18,11 @@ ticketid: 1680377
 
 ## Description
 
-I am using RadSpreadStreamProcessing to read an Excel file. The issue arises when reading rows that contain empty cells. Empty cells are skipped, causing misalignment of data with columns. For example, when a row has blank values in the first columns, the value of the subsequent column with data shifts to the wrong column index.
+While using [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) to read an Excel file, unexpected results may occur when reading rows that contain **empty** cells. Empty cells are skipped, causing misalignment of data with columns. For example, when a row has blank values in the first columns, the value of the subsequent column with data shifts to the wrong column index.
+
+<img style="border: 1px solid gray;" src="images/handling-empty-cells-when-reading-excel-rows-using-radspreadstreamprocessing.png" /> 
+
+This may lead to unexpected difficulties if you need to traverse the data rows stored in the Excel document and populate a DataTable. 
 
 This knowledge base article also answers the following questions:
 - How to read Excel rows with empty cells using RadSpreadStreamProcessing?
@@ -87,6 +91,5 @@ This logic ensures that all cells, including empty ones, are accounted for, main
 
 ## See Also
 
-- [SpreadStreamProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadstreamprocessing/overview)
-- [RadSpreadStreamProcessing API Reference](https://docs.telerik.com/devtools/document-processing/api/radspreadstreamprocessing)
-- [Reading Excel Rows with RadSpreadStreamProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radspreadstreamprocessing/how-to/read-excel-rows)
+- [SpreadStreamProcessing Overview]({%slug radspreadstreamprocessing-overview%})
+- [Cells in RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-model-cells%})
