@@ -19,6 +19,7 @@ ticketid: 1699078
 ## Description
 
 When importing an HTML document using Telerik WordsProcessing, images with local file paths (e.g., "C:\temp\image.png") may fail to load which leads to missing image content once the document gets exported. Instead, blank placeholders appear in the media section of the exported document. This happens due to the lack of handling for external resources during the import process. Embedding images as base64-encoded data in the HTML works, but a more flexible solution involves using the `HtmlImportSettings` with the `LoadImageFromUri` event.
+<img style="border: 1px solid gray;" src="images/handling-local-path-images-html.png" /> 
 
 This knowledge base article also answers the following questions:
 
@@ -78,6 +79,4 @@ For a more robust approach, consider embedding images as base64-encoded data dir
 
 ## See Also
 
-- [HtmlImportSettings Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/html/settings)
-- [Telerik Document Processing Overview](https://docs.telerik.com/devtools/document-processing/overview)
-- [Base64 Images in HTML](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)
+- [HtmlImportSettings Documentation]({%slug radwordsprocessing-formats-and-conversion-html-settings%})  

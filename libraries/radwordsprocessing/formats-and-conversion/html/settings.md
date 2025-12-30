@@ -273,3 +273,4 @@ __Example 5__ demonstrates how you can create export settings.
 
  * [Styles]({%slug radwordsprocessing-concepts-styles%})
  * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})
+ * [Handling Local Path Images When Importing HTML Documents in Telerik WordsProcessing]({%slug handling-local-path-images-html%})
