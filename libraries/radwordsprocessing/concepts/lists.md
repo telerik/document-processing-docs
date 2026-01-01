@@ -100,7 +100,7 @@ __Example 1__ adds a default bulleted list to a predefined RadFlowDocument.
 
 #### __[C#] Example 1: Add list template__
 
-<snippet id='codeblock_m'/>
+<snippet id='codeblock-m'/>
 
 
 
@@ -114,7 +114,7 @@ The next tutorial will get you through the creation of a list.
 
 	#### __[C#] Step 1: Create RadFlowDocument__
 	
-	<snippet id='codeblock_n'/>
+	<snippet id='codeblock-n'/>
 
 
 
@@ -123,7 +123,7 @@ The next tutorial will get you through the creation of a list.
 
 	#### __[C#] Step 2: Create list__
 	
-	<snippet id='codeblock_o'/>
+	<snippet id='codeblock-o'/>
 	
 	In this case, the default __HybridMultilevel__ type of list would be created.
             
@@ -133,7 +133,7 @@ The next tutorial will get you through the creation of a list.
 
 	#### __[C#] Step 3: Iterate levels__
 	
-	<snippet id='codeblock_p'/>
+	<snippet id='codeblock-p'/>
 
 
 
@@ -142,7 +142,7 @@ The next tutorial will get you through the creation of a list.
 
 	#### __[C#] Step 4: Customize list levels__
 	
-	<snippet id='codeblock_q'/>
+	<snippet id='codeblock-q'/>
 	
 	With this step the list is ready-to-use.
             
@@ -157,7 +157,7 @@ __Example 6__ demonstrates how you can apply the list created in Steps 1-4 above
 
 #### __[C#] Example 6: Apply list__
 
-<snippet id='codeblock_r'/>
+<snippet id='codeblock-r'/>
 
 
 

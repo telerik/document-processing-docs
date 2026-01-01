@@ -75,7 +75,7 @@ __Example 1__ is an example for equivalent getting of a value with CLR property 
 
 #### __[C#] Example 1: Get a value__
 
-<snippet id='codeblock_s'/>
+<snippet id='codeblock-s'/>
 
 
 __Example 2__ is an example for an equivalent setting of a value with CLR property and style property.
@@ -83,7 +83,7 @@ __Example 2__ is an example for an equivalent setting of a value with CLR proper
 
 #### __[C#] Example 2: Set a value__
 
-<snippet id='codeblock_t'/>
+<snippet id='codeblock-t'/>
 
 
 
@@ -97,7 +97,7 @@ __Example 3__ illustrates how to get the local value of a style property in a st
 
 #### __[C#] Example 3: Get the local value__
 
-<snippet id='codeblock_u'/>
+<snippet id='codeblock-u'/>
 
 
 
@@ -106,7 +106,7 @@ __Example 4__ shows how to get the actual value of style property in style.
 
 #### __[C#] Example 4: Get the actual value__
 
-<snippet id='codeblock_v'/>
+<snippet id='codeblock-v'/>
 
 
 
@@ -120,7 +120,7 @@ The code in __Example 5__ illustrates how to get the default value for a style p
 
 #### __[C#] Example 5: Get the default value__
 
-<snippet id='codeblock_w'/>
+<snippet id='codeblock-w'/>
 
 
 

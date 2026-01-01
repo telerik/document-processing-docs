@@ -45,7 +45,7 @@ __Example 1__ demonstrates how to create a __ThemeColorScheme__ object. Note tha
 
 #### __[C#] Example 1: Create a ThemeColorScheme object__
 
-<snippet id='codeblock_d'/>
+<snippet id='codeblock-d'/>
 
 
 
@@ -72,7 +72,7 @@ In order to create colors that depend on the current document theme, you need to
 
 #### __[C#] Example 2: Create a ThemableColor object__
 
-<snippet id='codeblock_e'/>
+<snippet id='codeblock-e'/>
 
 
 
@@ -90,7 +90,7 @@ The code in __Example 3__ illustrates how to create a __ThemeFontScheme__ object
 
 #### __[C#] Example 3: Create a ThemeFontScheme__
 
-<snippet id='codeblock_f'/>
+<snippet id='codeblock-f'/>
 
 
 
@@ -108,7 +108,7 @@ When you need to create a font that depends on the current document theme, you n
 
 #### __[C#] Example 4: Create a ThemableFontFamily object__
 
-<snippet id='codeblock_g'/>
+<snippet id='codeblock-g'/>
 
 
 
@@ -118,19 +118,19 @@ Now that you have a color and a font schemes, you can create a new __DocumentThe
 
 #### __[C#] Example 5: Create a DocumentTheme object__
 
-<snippet id='codeblock_h'/>
+<snippet id='codeblock-h'/>
 
 There are a number of predefined color and font schemes. You can find them in a static class called [PredefinedThemeSchemes](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Theming.PredefinedThemeSchemes.html). The class exposes the properties __ColorSchemes__ and __FontSchemes__ that hold all predefined schemes. 
 
 #### __[C#] Example 6: Using a predefined scheme__
 
-<snippet id='codeblock_i'/>
+<snippet id='codeblock-i'/>
 
 Changing the current document theme is as easy as setting a single property.
         
 #### __[C#] Example 7: Change the document theme__
 
-<snippet id='codeblock_j'/>
+<snippet id='codeblock-j'/>
 
 ## Predefined ThemeColorSchemes
 
@@ -240,12 +240,12 @@ In order to get the actual value from __ThemableColor__ or __ThemableFontFamily_
 
 #### __[C#] Example 8: Get actual value from ThemableColor__
 
-<snippet id='codeblock_k'/>
+<snippet id='codeblock-k'/>
 
 
 #### __[C#] Example 9: Get actual value from ThemableFont__
 
-<snippet id='codeblock_l'/>
+<snippet id='codeblock-l'/>
 
 ## See Also
 

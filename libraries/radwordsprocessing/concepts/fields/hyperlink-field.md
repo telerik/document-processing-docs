@@ -58,7 +58,7 @@ Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEdito
 
 	#### __[C#] Example 1: Insert a Hyperlink using InsertHyperlink method__
 
-	<snippet id='codeblock_Y'/>
+	<snippet id='codeblock-Y'/>
 
 	The result looks like shown in **Figure 1**.
 
@@ -71,7 +71,7 @@ Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEdito
 
 	#### __[C#] Example 2: Insert a Hyperlink field using InsertField method__
 
-	<snippet id='codeblock_Z'/>
+	<snippet id='codeblock-Z'/>
 
 	The result looks like shown in **Figure 2**.
 

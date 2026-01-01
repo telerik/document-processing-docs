@@ -20,7 +20,7 @@ position: 4
 
 #### __[C#] Example 1: Add document variable record__
 
-<snippet id='codeblock_O'/>
+<snippet id='codeblock-O'/>
 
 
 
@@ -35,7 +35,7 @@ Removing defined variables can be achieved by using the __Remove()__ method of t
 
 #### __[C#] Example 2: Remove document variable record__
 
-<snippet id='codeblock_P'/>
+<snippet id='codeblock-P'/>
 
 
 
@@ -60,7 +60,7 @@ __Example 3__ shows insertion of the field created in __Example 1__.
 
 #### __[C#] Example 3: Insert document variable field__
 
-<snippet id='codeblock_Q'/>
+<snippet id='codeblock-Q'/>
 
 
 ## See Also

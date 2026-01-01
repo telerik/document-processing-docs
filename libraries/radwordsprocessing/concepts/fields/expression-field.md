@@ -92,7 +92,7 @@ Inserting an Expression Field is easily achieved through the [RadFlowDocumentEdi
 
 #### __[C#] Example 1: Insert an Expression field__
 
-<snippet id='codeblock_R'/>
+<snippet id='codeblock-R'/>
 
 The result is shown in Figure 1.
 

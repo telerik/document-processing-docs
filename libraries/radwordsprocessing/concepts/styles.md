@@ -73,7 +73,7 @@ A style should be added to __RadFlowDocument__'s style repository in order to be
 
 #### __[C#] Example 1: Create a table style and add it to the style repository__
 
-<snippet id='codeblock_x'/>
+<snippet id='codeblock-x'/>
 
 
 >If a style is not added to the StyleRepository, applying it to a document element would not take any effect.
@@ -82,7 +82,7 @@ To apply a style to a spesific element you neet to set its __StyleId__ proerty.
 
 #### __[C#] Example 2: Apply a custom style to an element__
 
-<snippet id='codeblock_y'/>
+<snippet id='codeblock-y'/>
 
 ## Default Styles
 
@@ -101,7 +101,7 @@ Default style is a style which, according to its style type, is applied to objec
           
 #### __[C#] Example 3: Set a default font-family__
 
-<snippet id='codeblock_z'/>
+<snippet id='codeblock-z'/>
 
 
 ## Built-in Styles
@@ -114,7 +114,7 @@ Built-in styles are commonly used styles, which are predefined for convenience. 
 
 #### __[C#] Example 4: Get the ID of a built-in style__
 
-<snippet id='codeblock_A'/>
+<snippet id='codeblock-A'/>
 
 
 
