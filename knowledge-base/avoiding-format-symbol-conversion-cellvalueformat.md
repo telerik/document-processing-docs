@@ -14,24 +14,31 @@ ticketid: 1676276
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
-| 2025.4.1104| RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| 2025.4.1104| RadSpreadProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
-When using the `CellValueFormat` in Telerik Document Processing, format strings may experience an undesired exchange of symbols, such as `,` to `.` and `.` to `,`. 
-   ```csharp
+When using the `CellValueFormat` in RadSpreadProcessing, format strings may experience an undesired exchange of symbols, such as `,` to `.` and `.` to `,`. 
+
+```csharp
     CellValueFormat textFormat = new CellValueFormat("[$-de-DE,101]#.##0,00;-#.##0,00"); 
     CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)]; 
     cellSelectionA1.SetValue(1234.56789); 
     cellSelectionA1.SetFormat(textFormat);
     CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)]; 
     CellValueFormat cellSelectioA1Format = cellSelectionA1.GetFormat().Value;
-   ```
-The returned Value is [$-de-DE,101]#,##0.00;-#,##0.00 - the , and . are exchanged. For better visualization:
-Input    : [$-de-DE,101]#.##0,00;-#.##0,00
-Output : [$-de-DE,101]#,##0.00;-#,##0.00
+```
+The returned Value is:
+<pre>[$-de-DE,101]#,##0.00;-#,##0.00</pre>
 
-You can see the 0,00 has been changed to 0.00  and #.## has been changed to #,##
+The **,** and **.** are exchanged. For better visualization:
+
+Input: 
+<pre>[$-de-DE,101]#.##0,00;-#.##0,00</pre>
+Output: 
+<pre>[$-de-DE,101]#,##0.00;-#,##0.00</pre>
+
+You can see that **0,00** has been changed to **0.00** and **#.##** has been changed to **#,##**.
 
 This happens due to culture settings. For instance, using the German culture (`de-DE`) where the decimal separator is a comma and the group separator is a period, versus the English culture (`en-US`) where these separators are reversed, can lead to a different output format.
 
@@ -42,7 +49,7 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-To prevent undesired format symbol exchanges, explicitly set the desired culture in your application using the `SpreadsheetCultureHelper`. Follow these steps:
+To prevent undesired format symbol exchanges, explicitly set the desired culture in your application using the [SpreadsheetCultureHelper]({%slug radspreadprocessing-features-setting-the-culture%}). Follow these steps:
 
 1. Import the required namespaces:
    ```csharp
@@ -63,5 +70,5 @@ This approach ensures consistent handling of format strings regardless of the us
 
 ## See Also
 
-- [Number Formats in Telerik Document Processing](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/number-formats)
-- [Setting the Culture for Telerik Spreadsheet](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/setting-the-culture#setting-the-culture)
+- [Number Formats in Telerik Document Processing]({%slug radspreadprocessing-features-number-formats%})
+- [Setting the Culture for Telerik Spreadsheet]({%slug radspreadprocessing-features-setting-the-culture%})
