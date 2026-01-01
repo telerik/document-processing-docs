@@ -95,3 +95,4 @@ You can also export the document to a string variable like shown in __Example 4_
 
 - [Resolving FileNotFoundException for System.Text.Encoding.CodePages in RadWordsProcessing]({%slug resolve-file-not-found-exception-system-text-encoding-codepages-radwordsprocessing%}) 
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
+* [Converting HTML to Image Using Telerik Document Processing]({%slug converting-html-to-image-using-document-processing%})

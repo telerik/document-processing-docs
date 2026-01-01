@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Convert HTML to Image Using Telerik Document Processing Libraries
 meta_title: How to Convert HTML to Image Using Telerik Document Processing Libraries
 slug: converting-html-to-image-using-document-processing
-tags: pdf,processing, word, radflowdocument, radfixeddocument, pdf, image, skiaimageformatprovider, htmlformatprovider
+tags: pdf,processing, word, flow,document, pdf, image, skia, html
 res_type: kb
 ticketid: 1675204
 ---
@@ -18,21 +18,16 @@ ticketid: 1675204
 
 ## Description
 
-I have HTML content as a string and need to convert it into an image (JPEG or PNG) in a Blazor WASM application running on .NET 8. Is there a way to achieve this using Telerik Document Processing tools?
-
-This knowledge base article also answers the following questions:
-- How can I convert a string containing HTML to an image?
-- Is it possible to generate a PNG or JPEG from HTML using Telerik libraries?
-- How do I use Telerik Document Processing for HTML to image conversion?
+This knowledge base article shows how to convert a string with HTML content to an image (JPEG or PNG) in a Blazor WASM application running on .NET 8 (or newer).
 
 ## Solution
 
 To convert HTML content into an image, use the Telerik Document Processing libraries. This process requires converting the HTML to PDF first, then exporting the PDF pages to images. Follow these steps:
 
-1. Import the HTML content as a [RadFlowDocument](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/model/radflowdocument) using the [HtmlFormatProvider](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/html/htmlformatprovider) from the [WordsProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview) library.
-2. Export the RadFlowDocument to a PDF byte array using the [Flow PdfFormatProvider](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/pdf/pdfformatprovider).
-3. Import the PDF byte array as a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument) with the [Fixed PdfFormatProvider](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/pdfformatprovider) from the [PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview) library.
-4. Export each page of the RadFixedDocument to an image using the [SkiaImageFormatProvider](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/convert-to-image/using-image-format-provider) (available in .NET Standard).
+1. Import the HTML content as a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) using the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) from the [WordsProcessing]({%slug radwordsprocessing-overview%}) library.
+2. Export the RadFlowDocument to a PDF byte array using the [Flow PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+3. Import the PDF byte array as a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) with the [Fixed PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) from the [PdfProcessing]({%slug radpdfprocessing-overview%}) library.
+4. Export each page of the RadFixedDocument to an image using the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) (available in .NET Standard).
 
 ### Code Example
 
@@ -69,14 +64,11 @@ foreach (RadFixedPage page in pdfHtml.Pages)
 ```
 
 For .NET Framework, consider these articles for image export:
-- [PDF to Image - WPF](https://docs.telerik.com/devtools/document-processing/knowledge-base/export-radfixedpage-to-image)
+- [PDF to Image - WPF]({%slug export-radfixedpage-to-image%})
 - [PDF to Image - WinForms](https://docs.telerik.com/devtools/winforms/knowledge-base/pdfviewer-export-page-images-with-no-ui)
 - [ThumbnailFactory - WPF](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
 
 ## See Also
 
-- [Document Processing Overview](https://docs.telerik.com/devtools/document-processing/introduction)
-- [WordsProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview)
-- [PdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [HtmlFormatProvider Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/html/htmlformatprovider)
-- [SkiaImageFormatProvider Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/convert-to-image/using-image-format-provider)
+- [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
+- [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
