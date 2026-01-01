@@ -79,34 +79,14 @@ The suggested way to insert field is to use the __InsertField()__ method of [Rad
 
 #### __[C#] Example 1: Create a document containing a Date field using RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-concepts-fields_0}}
-	            
-	RadFlowDocument document = new RadFlowDocument();
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	editor.InsertField("DATE", "«10/11/2012»");
-{{endregion}}
+<snippet id='codeblock_S'/>
 
 
 You can also create and insert all the parts of the field manually by creating a __FieldInfo__ instance and adding all the inlines to the document structure. **Example 2** demonstrates how to achieve the same result as in **Example 1**.
         
 #### __[C#] Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo__
 
-{{region cs-radwordsprocessing-concepts-fields_1}}
-	            
-	// Create a document with a paragraph.
-	RadFlowDocument document = new RadFlowDocument();
-	Paragraph paragraph = document.Sections.AddSection().Blocks.AddParagraph();
-	
-	// Create the field info.
-	FieldInfo field = new FieldInfo(document);
-	            
-	// Create and add all the inlines to the paragraph.
-	paragraph.Inlines.Add(field.Start);
-	paragraph.Inlines.AddRun("AUTHOR");
-	paragraph.Inlines.Add(field.Separator);
-	paragraph.Inlines.AddRun("John Doe");
-	paragraph.Inlines.Add(field.End);
-{{endregion}}
+<snippet id='codeblock_T'/>
 
 
 You can see that the manual approach is more verbose and prone to errors. If not all of the field characters are inserted the result is an invalid document. Using the __RadFlowDocumentEditor__ on the other hand, guarantees that the document integrity is maintained.
@@ -131,14 +111,7 @@ Updating a single field is done with the __UpdateField()__ method of the __Field
 
 #### __[C#] Example 3: Update a field__
 
-{{region cs-radwordsprocessing-concepts-fields_2}}
-	            
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "«result»");
-	Console.WriteLine(fieldInfo.GetResult()); // Output: result
-	fieldInfo.UpdateField();
-	Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
-{{endregion}}
+<snippet id='codeblock_U'/>
 
 
 >Note that field result is not automatically updated upon insertion. The initial result fragment is passed as a parameter to the __InsertField()__ method.
@@ -147,16 +120,7 @@ All fields in the document can be updated using __UpdateFields()__ of __RadFlowD
 
 #### __[C#] Example 4: Update all fields in a document__
 
-{{region cs-radwordsprocessing-concepts-fields_3}}
-	            
-	RadFlowDocument document = new RadFlowDocument();
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	FieldInfo fieldInfo = editor.InsertField("DATE \\@ dd/MM/yyyy", "«result»");
-	        
-	Console.WriteLine(fieldInfo.GetResult()); // Output: result
-	document.UpdateFields();
-	Console.WriteLine(fieldInfo.GetResult()); // Output: 06/06/2014
-{{endregion}}
+<snippet id='codeblock_V'/>
 
 ### Updating PageRef, Page, NumPages, and SectionPages fields. 
 
@@ -168,11 +132,7 @@ You can register the provider with the following code:
 
 #### __[C#] Example 5: Register the default NumberingFieldsProvider__
 
-{{region cs-radwordsprocessing-concepts-fields_5}}
-
-	 FlowExtensibilityManager.NumberingFieldsProvider = new NumberingFieldsProvider();
-
-{{endregion}}
+<snippet id='codeblock_W'/>
 
 ## Syntax and Switches
 
@@ -210,24 +170,7 @@ Fields can also be nested in each other. If there are nested fields inside the c
 
 #### __[C#] Example 6: Create a nested field__
 
-{{region cs-radwordsprocessing-concepts-fields_4}}
-	            
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	            
-	// Create an outer field with empty code fragment.
-	FieldInfo outerFieldInfo = editor.InsertField(string.Empty, "if field result");
-	            
-	// Move the editor after the field start character.
-	editor.MoveToInlineEnd(outerFieldInfo.Start);
-	        
-	// Create a code fragment with a nested TIME field.
-	editor.InsertText("IF ");
-	editor.InsertField("TIME \\@ HH", "time field result");
-	editor.InsertText(" < 12 \"Good morning!\" \"Good afternoon!\"");
-	
-	outerFieldInfo.UpdateField();
-	Console.WriteLine(outerFieldInfo.GetResult()); // Output: Good afternoon!
-{{endregion}}
+<snippet id='codeblock_X'/>
 
 ![Rad Words Processing Concepts Fields 02](images/RadWordsProcessing_Concepts_Fields_02.png)
 

@@ -58,10 +58,7 @@ Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEdito
 
 	#### __[C#] Example 1: Insert a Hyperlink using InsertHyperlink method__
 
-	{{region cs-radwordsprocessing-concepts-hyperlink-field_0}}
-					
-		editor.InsertHyperlink("telerik", "http://www.telerik.com", false, "Telerik site");
-	{{endregion}}
+	<snippet id='codeblock_Y'/>
 
 	The result looks like shown in **Figure 1**.
 
@@ -74,10 +71,7 @@ Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEdito
 
 	#### __[C#] Example 2: Insert a Hyperlink field using InsertField method__
 
-	{{region cs-radwordsprocessing-concepts-hyperlink-field_1}}
-					
-		editor.InsertField(@"HYPERLINK ""http://www.telerik.com"" \o ""Telerik site""", "«telerik»");
-	{{endregion}}
+	<snippet id='codeblock_Z'/>
 
 	The result looks like shown in **Figure 2**.
 

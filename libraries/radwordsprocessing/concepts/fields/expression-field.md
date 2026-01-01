@@ -92,23 +92,7 @@ Inserting an Expression Field is easily achieved through the [RadFlowDocumentEdi
 
 #### __[C#] Example 1: Insert an Expression field__
 
-{{region cs-radwordsprocessing-concepts-expression-field_0}}
-
-	editor.InsertText("Initial Amount: ");
-	editor.InsertInline(new Run(document));
-	Run sales = editor.InsertText("100,000");
-	editor.InsertBookmark("Sales", sales, sales);
-	editor.InsertBreak(BreakType.LineBreak);
-
-	editor.InsertText("Expenses: ");
-	editor.InsertInline(new Run(document));
-	Run expenses = editor.InsertText("30,000");
-	editor.InsertBookmark("Expenses", expenses, expenses);
-	editor.InsertBreak(BreakType.LineBreak);
-
-	editor.InsertText("Net: ");
-	editor.InsertField(@"= Sales-Expenses \\# ""$#,##0.00""", "«Calculate»");
-{{endregion}}
+<snippet id='codeblock_R'/>
 
 The result is shown in Figure 1.
 

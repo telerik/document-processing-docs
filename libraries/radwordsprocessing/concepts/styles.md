@@ -73,15 +73,7 @@ A style should be added to __RadFlowDocument__'s style repository in order to be
 
 #### __[C#] Example 1: Create a table style and add it to the style repository__
 
-{{region cs-radwordsprocessing-concepts-styles_0}}
-	            
-	Style tableStyle = new Style("TableStyle", StyleType.Table);
-	tableStyle.Name = "Table Style";
-	tableStyle.TableProperties.Borders.LocalValue = new TableBorders(new Border(1, BorderStyle.Single, new ThemableColor(Colors.Blue)));
-	tableStyle.TableProperties.Alignment.LocalValue = Alignment.Center;
-	tableStyle.TableCellProperties.VerticalAlignment.LocalValue = VerticalAlignment.Center;
-	document.StyleRepository.Add(tableStyle);
-{{endregion}}
+<snippet id='codeblock_x'/>
 
 
 >If a style is not added to the StyleRepository, applying it to a document element would not take any effect.
@@ -90,14 +82,7 @@ To apply a style to a spesific element you neet to set its __StyleId__ proerty.
 
 #### __[C#] Example 2: Apply a custom style to an element__
 
-{{region cs-radwordsprocessing-concepts-styles_5}}
-	            
-    Table table = new Table(document, 10, 5);
-    table.StyleId = tableStyle.Id;
-
-    section.Blocks.Add(table);
-
-{{endregion}}
+<snippet id='codeblock_y'/>
 
 ## Default Styles
 
@@ -116,11 +101,7 @@ Default style is a style which, according to its style type, is applied to objec
           
 #### __[C#] Example 3: Set a default font-family__
 
-{{region cs-radwordsprocessing-concepts-styles_2}}
-
-    RadFlowDocument document = new RadFlowDocument();
-    document.DefaultStyle.CharacterProperties.FontFamily.LocalValue = new ThemableFontFamily("Verdana");
-{{endregion}}
+<snippet id='codeblock_z'/>
 
 
 ## Built-in Styles
@@ -133,11 +114,7 @@ Built-in styles are commonly used styles, which are predefined for convenience. 
 
 #### __[C#] Example 4: Get the ID of a built-in style__
 
-{{region cs-radwordsprocessing-concepts-styles_1}}
-	            
-	string heading1StyleId = BuiltInStyleNames.GetHeadingStyleIdByIndex(1);
-	Style heading1Style = document.StyleRepository.AddBuiltInStyle(heading1StyleId);
-{{endregion}}
+<snippet id='codeblock_A'/>
 
 
 

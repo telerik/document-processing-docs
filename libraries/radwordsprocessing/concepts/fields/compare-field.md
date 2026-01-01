@@ -41,10 +41,7 @@ Inserting a Compare Field is easily achieved through the [RadFlowDocumentEditor]
 
 #### __[C#] Example 1: Insert a CompareField__
 
-{{region cs-radwordsprocessing-concepts-compare-field_0}}
-	            
-	editor.InsertField("COMPARE MERGEFIELD CustomerNumber <> 1", "«to be updated»");
-{{endregion}}
+<snippet id='codeblock_M'/>
 
 
 ## See Also
