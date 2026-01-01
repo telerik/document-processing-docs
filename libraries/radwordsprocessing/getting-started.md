@@ -109,9 +109,7 @@ Here is how to create a [RadFlowDocument]({%slug radwordsprocessing-model-radflo
 
 #### __[C#] Example 1: Create RadFlowDocument programmatically__
 
-<snippet id='codeblock_b'/>
-
-
+<snippet id='codeblock-b'/>
 
 You need to add using directive to the following namespaces:
         
@@ -127,7 +125,7 @@ Exporting the document to Docx file can be achieved with the [DocxFormatProvider
 
 #### __[C#] Example 2: Export RadFlowDocument to Docx__
 
-<snippet id='codeblock_c'/>
+<snippet id='codeblock-c'/>
 
 Detailed information about the supported formats and features can be found in the [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}) article. For more complete examples head to the [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%}) section of the library.
         
