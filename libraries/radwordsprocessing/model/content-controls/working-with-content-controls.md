@@ -21,15 +21,7 @@ The content controls can be retrieved by using the __EnumerateChildrenOfType()__
 
 #### __C#__
 
-{{region wordsprocessing-model-working-with-content-controls_0}}
-
-    IEnumerable<SdtRangeStart> content_controls = document.EnumerateChildrenOfType<SdtRangeStart>();
-    foreach (SdtRangeStart item in content_controls)
-    {
-        Console.WriteLine("Type: {0} ID:{1}", item.SdtProperties.Type, item.SdtProperties.ID);
-    }
-
-{{endregion}}
+<snippet id='codeblock-dN'/>
 
 ### Set Content Controls Properties
 
@@ -39,21 +31,7 @@ This example shows how one can iterate the items and add an item to an existing 
 
 #### __C#__
 
-{{region wordsprocessing-model-working-with-content-controls_1}}
-
-    foreach (SdtRangeStart item in content_controls)
-    {
-        if (item.SdtProperties.Type == SdtType.ComboBox)
-        {
-            ComboBoxProperties properties = item.SdtProperties as ComboBoxProperties;
-
-            ListItem newItem = new ListItem();
-            newItem.DisplayText = "New Item Text";
-
-            properties.Items.Add(newItem);
-        }
-    }
-{{endregion}}
+<snippet id='codeblock-dO'/>
 
 ## Insert or Remove Content Controls
 
@@ -65,63 +43,25 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
 
 #### __C#__
 
-{{region wordsprocessing-model-working-with-content-controls_2}}
-
-    RadFlowDocument document = new RadFlowDocument();
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    var dateContentControl = editor.InsertStructuredDocumentTag(SdtType.Date);
-
-    editor.MoveToInlineStart(dateContentControl.End);
-    editor.InsertText(DateTime.Now.ToString()); // Insert content
-  
-{{endregion}}
+<snippet id='codeblock-dP'/>
 
 #### Example 4: Inserting a Rich Text content control using content control properties
 
 #### __C#__
 
-{{region wordsprocessing-model-working-with-content-controls_3}}
-
-    SdtProperties sdtProperties = new SdtProperties(SdtType.RichText)
-    {
-        Alias = "AliasName",
-        Lock = Lock.SdtContentLocked,
-    };
-
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.InsertStructuredDocumentTag(sdtProperties);
-    editor.MoveToInlineStart(control.End);
-    Run span = editor.InsertText("Rich Text Content Control"); // Insert content inside the content control
-    span.FontWeight = FontWeights.Bold; // Style the content
-{{endregion}}
+<snippet id='codeblock-dQ'/>
 
 #### Example 5: Inserting a CheckBox content control using content control properties
 
 #### __C#__
 
-{{region wordsprocessing-model-working-with-content-controls_6}}
-
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    CheckBoxProperties checkBoxProperties = new CheckBoxProperties();
-    SdtRangeStart sdt = editor.InsertStructuredDocumentTag(checkBoxProperties);
-    editor.MoveToInlineEnd(sdt);
-    char text = (char)checkBoxProperties.UncheckedState.CharacterCode;
-    editor.InsertText(text.ToString());
-    editor.MoveToInlineEnd(sdt.End);
-{{endregion}}
+<snippet id='codeblock-dR'/>
 
 #### Example 6: Remove a content control
 
 #### __C#__
 
-{{region wordsprocessing-model-working-with-content-controls_4}}
-
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.RemoveStructuredDocumentTag(contentControl); //this will delete the entire content control along with the value
-    // or 
-    editor.RemoveStructuredDocumentTag(contentControl, false); //this will preserve the value 
-
-{{endregion}}
+<snippet id='codeblock-dS'/>
 
 #### Example 7: Insert a content control to a specific position
 
@@ -134,24 +74,7 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
 
 #### __C#__
 
-{{region wordsprocessing-model-working-with-content-controls_5}}
-
-    RadFlowDocument document = new RadFlowDocument();
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-
-    var paragrpah1 = editor.InsertParagraph();
-    editor.InsertText("Content Control");
-    var paragraph2 = editor.InsertParagraph();
-
-    SdtProperties sdtProperties = new SdtProperties(SdtType.RichText)
-    {
-        Alias = "AliasName",
-        Lock = Lock.SdtContentLocked,
-    };
-
-    editor.InsertStructuredDocumentTag(sdtProperties, paragrpah1, paragraph2);
-
-{{endregion}}
+<snippet id='codeblock-dT'/>
 
 # See Also
 * [Content Controls Overview]({%slug wordsprocessing-model-content-controls%})

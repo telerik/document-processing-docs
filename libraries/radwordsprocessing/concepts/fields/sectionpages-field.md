@@ -29,14 +29,7 @@ __Example 1__ demonstrates how you can insert a SectionPages field.
  
 #### __[C#] Example 1: Insert SectionPages field__
 
-{{region cs-radwordsprocessing-concepts-sectionpages-field_0}}
-
-	editor.InsertText("Page ");
-    editor.InsertField("PAGE", "");
-    editor.InsertText(" of ");
-    editor.InsertField("SECTIONPAGES", "");
-
-{{endregion}}
+<snippet id='codeblock-bl'/>
 
 
 After updating the field the result would be "Page 3 of 19" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).

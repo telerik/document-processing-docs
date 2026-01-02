@@ -30,13 +30,7 @@ The code snippet from __Example 1__ creates and inserts a __Paragraph__ in a __S
 
 #### __C# Example 1: Insert paragraph in section__
 
-{{region cs-radwordsprocessing-model-paragraph_0}}
-	RadFlowDocument document = new RadFlowDocument();
-	Section section = document.Sections.AddSection();
-
-	Paragraph paragraph = new Paragraph(document);
-	section.Blocks.Add(paragraph);
-{{endregion}}
+<snippet id='codeblock-cU'/>
 
 
 
@@ -48,10 +42,7 @@ You can add a paragraph at a specific index in the __Blocks__ collection of a __
 
 #### __C# Example 2: Insert a paragraph at a specific position of the Blocks collection__
 
-{{region cs-radwordsprocessing-model-paragraph_1}}
-	Paragraph paragraph = new Paragraph(document);
-	section.Blocks.Insert(0, paragraph);
-{{endregion}}
+<snippet id='codeblock-cV'/>
 
 
 
@@ -60,9 +51,7 @@ You can also use the __AddParagraph()__ method of the __Blocks__ collection of a
 
 #### __C# Example 3: Create a new paragraph and add it to a section__
 
-{{region cs-radwordsprocessing-model-paragraph_2}}
-	Paragraph paragraph = section.Blocks.AddParagraph();
-{{endregion}}
+<snippet id='codeblock-cW'/>
 
 
 
@@ -71,10 +60,7 @@ Inserting a new __Paragraph__ in the document can also be achieved with the [Rad
 
 #### __C#  Example 4: Insert a paragraph using the RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-model-paragraph_3}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(GetDocument());
-	Paragraph paragraph = editor.InsertParagraph();
-{{endregion}}
+<snippet id='codeblock-cX'/>
 
 
 
@@ -159,9 +145,7 @@ In __Example 5__ is illustrated how to add a run to an existing paragraph.
 
 #### __C# Example 5: Insert run in a paragraph__
 
-{{region cs-radwordsprocessing-model-paragraph_4}}
-	Run run = paragraph.Inlines.AddRun();
-{{endregion}}
+<snippet id='codeblock-cY'/>
 
 
 
@@ -175,9 +159,7 @@ __Example 6__ adds an inline image to an existing paragraph.
 
 #### __C# Example 6: Insert image inline__
 
-{{region cs-radwordsprocessing-model-paragraph_5}}
-	ImageInline imageInline = paragraph.Inlines.AddImageInline();
-{{endregion}}
+<snippet id='codeblock-cZ'/>
 
 
 
@@ -191,9 +173,7 @@ The code snippet from __Example 7__  adds a floating image to an existing paragr
 
 #### __C# Example 7: Add floating image__
 
-{{region cs-radwordsprocessing-model-paragraph_6}}
-	FloatingImage floatingImage = paragraph.Inlines.AddFloatingImage();
-{{endregion}}
+<snippet id='codeblock-da'/>
 
 
 For more information about __FloatingImage__ element, you can read [this article]({%slug radwordsprocessing-model-floatingimage%}).
@@ -205,10 +185,7 @@ In __Example 8__ it is demonstrated how to add a tab stop to the paragraph's col
 
 #### __C# Example 8: Insert TabStop__
 
-{{region cs-radwordsprocessing-model-paragraph_7}}
-	TabStop tabstop = new TabStop(Unit.InchToDip(2), TabStopType.Center, TabStopLeader.Hyphen);
-	paragraph.TabStops = paragraph.TabStops.Insert(tabstop);
-{{endregion}}
+<snippet id='codeblock-db'/>
 
 You can refer to the [TabStop article]({%slug radwordsprocessing-concepts-tabstop%}) for more details about this element.
 
@@ -218,12 +195,7 @@ __Example 9__ shows how to create Borders and set them to a Paragraph.
 
 #### __C# Example 9: Setting Borders__
 
-{{region cs-radwordsprocessing-model-paragraph_9}}
-	Border blackBorder = new Border(1, BorderStyle.Single, new ThemableColor(Colors.Black));
-	Border redBorder = new Border(2, BorderStyle.Single, new ThemableColor(Colors.Red));
-
-	paragraph.Borders = paragraph.Borders.SetLeft(blackBorder).SetRight(redBorder).SetTop(blackBorder).SetBottom(redBorder);
-{{endregion}}
+<snippet id='codeblock-dc'/>
 
 ## See Also
 

@@ -31,11 +31,6 @@ The code from __Example 1__ demonstrates how you can create and specify particul
 
 #### __[C#] Example 1: Create a RtfExportSettings__
 
-{{region cs-radwordsprocessing-formats-and-conversion-rtf-settings_0}}
-	RtfFormatProvider provider = new RtfFormatProvider();
-	RtfExportSettings exportSettings = new RtfExportSettings();
-	exportSettings.ExportImagesInCompatibilityMode = true;
-	provider.ExportSettings = exportSettings;
-{{endregion}}
+<snippet id='codeblock-co'/>
 
 

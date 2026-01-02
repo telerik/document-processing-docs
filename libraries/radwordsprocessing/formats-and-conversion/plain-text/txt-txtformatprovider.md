@@ -31,13 +31,7 @@ __Example 1__ shows how to use __TxtFormatProvider__ to import a document from a
 
 #### __[C#] Example 1: Import document from a file__
 
-{{region cs-radwordsprocessing-formats-and-conversion-txt-txtformatprovider_0}}
-	TxtFormatProvider provider = new TxtFormatProvider();
-	using (Stream input = File.OpenRead("Sample.txt"))
-	{
-		RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
-	}
-{{endregion}}
+<snippet id='codeblock-cg'/>
 
 
 
@@ -46,11 +40,7 @@ And here is how you can import a document from string:
 
 #### __[C#] Example 2: Import document from a string__
 
-{{region cs-radwordsprocessing-formats-and-conversion-txt-txtformatprovider_1}}
-	TxtFormatProvider provider = new TxtFormatProvider();
-
-	RadFlowDocument document = provider.Import(input, TimeSpan.FromSeconds(10));
-{{endregion}}
+<snippet id='codeblock-ch'/>
 
 
 
@@ -67,14 +57,7 @@ __Example 3__ shows how to use __TxtFormatProvider__ to export __RadFlowDocument
 
 #### __[C#] Example 3: Export a document to a file__
 
-{{region cs-radwordsprocessing-formats-and-conversion-txt-txtformatprovider_2}}
-	TxtFormatProvider provider = new TxtFormatProvider();
-	using (Stream output = File.OpenWrite("sample.txt"))
-	{
-	    RadFlowDocument document = CreateRadFlowDocument();
-		provider.Export(document, output, TimeSpan.FromSeconds(10));
-	}
-{{endregion}}
+<snippet id='codeblock-ci'/>
 
 
 
@@ -83,12 +66,7 @@ You can also export the document to a string and preserve it in a database.
 
 #### __[C#] Example 4: Export a document to a string__
 
-{{region cs-radwordsprocessing-formats-and-conversion-txt-txtformatprovider_3}}
-	TxtFormatProvider provider = new TxtFormatProvider();
-	RadFlowDocument document = CreateRadFlowDocument();
-
-	string output = provider.Export(document, TimeSpan.FromSeconds(10));
-{{endregion}}
+<snippet id='codeblock-cj'/>
 
 ## See Also
 

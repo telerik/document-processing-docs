@@ -26,19 +26,7 @@ __Example 1__ demonstrates how to export a __RadFlowDocument__ instance to PDF a
 
 #### __[C#] Example 1: Export PDF/A compliant document__
 
-{{region cs-radwordsprocessing-formats-and-conversion-pdf-settings_0}}
-	PdfFormatProvider provider = new PdfFormatProvider();
-	PdfExportSettings settings = new PdfExportSettings();
-	settings.ComplianceLevel = Fixed.PdfComplianceLevel.PdfA2B;
-	
-	provider.ExportSettings = settings;
-	
-	using (Stream output = File.OpenWrite("sample.pdf"))
-	{
-	    RadFlowDocument document = CreateRadFlowDocument();
-	    provider.Export(document, output);
-	}
-{{endregion}}
+<snippet id='codeblock-ce'/>
 
 
 >PDF/A standard requires documents to contain all fonts used in them within the document. RadPdfProcessing does not support embedding of the standard 14 fonts used in PDF documents that are listed [here]({%slug radpdfprocessing-concepts-fonts%}), so using them will prevent the document from complying with the standard.
@@ -57,9 +45,7 @@ __Example 2__ shows how to register a custom *ChineseCountingConverter* class in
 
 #### __[C#] Example 2: Register numbering style converter__
 
-{{region cs-radwordsprocessing-formats-and-conversion-pdf-settings_1}}
-	provider.ExportSettings.ExtensibilityManager.RegisterNumberingStyleConverter(NumberingStyle.ChineseCounting, new ChineseCountingConverter());
-{{endregion}}
+<snippet id='codeblock-cf'/>
 
 
 

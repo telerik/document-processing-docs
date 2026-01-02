@@ -29,14 +29,7 @@ __Example 1__ demonstrates how you can insert a NumPages field.
 
 #### __[C#] Example 1: Insert NumPages field__
 
-{{region cs-radwordsprocessing-concepts-numpages-field_0}}
-
-    editor.InsertText("Page ");
-    editor.InsertField("PAGE", "");
-    editor.InsertText(" of ");
-    editor.InsertField("NUMPAGES", "");
-
-{{endregion}}
+<snippet id='codeblock-bh'/>
 
 
 After updating the field the result would be "Page 5 of 60" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).

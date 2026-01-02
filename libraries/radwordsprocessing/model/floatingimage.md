@@ -21,10 +21,7 @@ __Example 1__ shows how to create a FloatingImage and add it to a [Paragraph]({%
 
 #### __[C#] Example 1: Create a floating image and insert it in a paragraph__
 
-{{region cs-radwordsprocessing-model-floatingimage_0}}
-	FloatingImage floatingImage = new FloatingImage(document);
-	paragraph.Inlines.Add(floatingImage);
-{{endregion}}
+<snippet id='codeblock-cH'/>
 
 
 
@@ -36,17 +33,7 @@ You can add an image at a specific index in the __Inlines__ collection of a para
 
 #### __[C#] Example 2: Add a floating image to a specific position__
 
-{{region cs-radwordsprocessing-model-floatingimage_1}}
-
-	// Create an image
-	FloatingImage floatingImage = new FloatingImage(document);
-
-	// Assign a source to the image
-	floatingImage.Image.ImageSource = new Telerik.Windows.Documents.Media.ImageSource(File.ReadAllBytes(pathToImage), imageExtension);
-
-	// Insert the image at the desired position in a Paragraph
-	paragraph.Inlines.Insert(0, floatingImage);
-{{endregion}}
+<snippet id='codeblock-cI'/>
 
 
 
@@ -55,9 +42,7 @@ You can also use the __AddFloatingImage()__ method of the __Inlines__ collection
 
 #### __[C#] Example 3: Using AddFloatingImage() method__
 
-{{region cs-radwordsprocessing-model-floatingimage_2}}
-	FloatingImage floatingImage = paragraph.Inlines.AddFloatingImage();
-{{endregion}}
+<snippet id='codeblock-cJ'/>
 
 
 
@@ -66,14 +51,7 @@ Inserting __FloatingImage__ element in RadFlowDocument can also be achieved with
 
 #### __[C#] Example 4: Insert a floating image using RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-model-floatingimage_3}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	
-	using (Stream stream = this.GetResourceStream("Telerik_logo.png"))
-	{
-	    editor.InsertFloatingImage(stream, "png", new Size(118, 28));
-	}
-{{endregion}}
+<snippet id='codeblock-cK'/>
 
 
 

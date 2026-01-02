@@ -42,12 +42,7 @@ __Example 1__ demonstrates how you can insert a PageRef field.
  
 #### __[C#] Example 1: Insert PageRef field__
 
-{{region cs-radwordsprocessing-concepts-pageref-field_0}}
- 
-	editor.InsertText("Bookmark Page: ");
-	editor.InsertField("PAGEREF mybookmark", "");
-
-{{endregion}}
+<snippet id='codeblock-bj'/>
 
 
 After updating the field the result would be "Bookmark Page: 2" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
