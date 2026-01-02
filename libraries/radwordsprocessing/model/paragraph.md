@@ -30,7 +30,7 @@ The code snippet from __Example 1__ creates and inserts a __Paragraph__ in a __S
 
 #### __C# Example 1: Insert paragraph in section__
 
-<snippet id='codeblock-cU'/>
+<snippet id='codeblock-cUcU'/>
 
 
 
@@ -42,7 +42,7 @@ You can add a paragraph at a specific index in the __Blocks__ collection of a __
 
 #### __C# Example 2: Insert a paragraph at a specific position of the Blocks collection__
 
-<snippet id='codeblock-cV'/>
+<snippet id='codeblock-cVcV'/>
 
 
 
@@ -51,7 +51,7 @@ You can also use the __AddParagraph()__ method of the __Blocks__ collection of a
 
 #### __C# Example 3: Create a new paragraph and add it to a section__
 
-<snippet id='codeblock-cW'/>
+<snippet id='codeblock-cWcW'/>
 
 
 
@@ -60,7 +60,7 @@ Inserting a new __Paragraph__ in the document can also be achieved with the [Rad
 
 #### __C#  Example 4: Insert a paragraph using the RadFlowDocumentEditor__
 
-<snippet id='codeblock-cX'/>
+<snippet id='codeblock-cXcX'/>
 
 
 
@@ -145,7 +145,7 @@ In __Example 5__ is illustrated how to add a run to an existing paragraph.
 
 #### __C# Example 5: Insert run in a paragraph__
 
-<snippet id='codeblock-cY'/>
+<snippet id='codeblock-cYcY'/>
 
 
 
@@ -159,7 +159,7 @@ __Example 6__ adds an inline image to an existing paragraph.
 
 #### __C# Example 6: Insert image inline__
 
-<snippet id='codeblock-cZ'/>
+<snippet id='codeblock-cZcZ'/>
 
 
 
@@ -173,7 +173,7 @@ The code snippet from __Example 7__  adds a floating image to an existing paragr
 
 #### __C# Example 7: Add floating image__
 
-<snippet id='codeblock-da'/>
+<snippet id='codeblock-dada'/>
 
 
 For more information about __FloatingImage__ element, you can read [this article]({%slug radwordsprocessing-model-floatingimage%}).
@@ -185,7 +185,7 @@ In __Example 8__ it is demonstrated how to add a tab stop to the paragraph's col
 
 #### __C# Example 8: Insert TabStop__
 
-<snippet id='codeblock-db'/>
+<snippet id='codeblock-dbdb'/>
 
 You can refer to the [TabStop article]({%slug radwordsprocessing-concepts-tabstop%}) for more details about this element.
 
@@ -195,7 +195,7 @@ __Example 9__ shows how to create Borders and set them to a Paragraph.
 
 #### __C# Example 9: Setting Borders__
 
-<snippet id='codeblock-dc'/>
+<snippet id='codeblock-dcdc'/>
 
 ## See Also
 
