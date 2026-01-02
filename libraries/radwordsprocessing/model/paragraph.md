@@ -151,7 +151,7 @@ __Example 6__ adds an inline image to an existing paragraph.
 
 #### __C# Example 6: Insert image inline__
 
-<snippet id='codeblock-cZ-cZ'/>
+<snippet id='codeblock-cz-cz'/>
 
 
 
