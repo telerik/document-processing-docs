@@ -17,9 +17,7 @@ This article shows some examples of how you can insert content controls, access 
 
 The content controls can be retrieved by using the __EnumerateChildrenOfType()__ method of any document element. 
 
-#### Example 1: Get all content controls
-
-#### __C#__
+#### __C# Example 1: Get all content controls__
 
 <snippet id='codeblock-dndn'/>
 
@@ -27,9 +25,7 @@ The content controls can be retrieved by using the __EnumerateChildrenOfType()__
 
 This example shows how one can iterate the items and add an item to an existing ComboBox content control. 
 
-#### Example 2: Adding items to a ComboBox or a DropDownList
-
-#### __C#__
+#### __C# Example 2: Adding items to a ComboBox or a DropDownList__
 
 <snippet id='codeblock-dodo'/>
 
@@ -39,40 +35,29 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
 
 >note If adding content controls with the InsertStructuredDocumentTag(SdtType) method without specifying the content, the resulting document will only have the annotation range start and end of the control. The desired content should be manually added afterwards. 
 
-#### Example 3: Inserting a content control using content control type
-
-#### __C#__
+#### __C# Example 3: Inserting a content control using content control type__
 
 <snippet id='codeblock-dpdp'/>
 
-#### Example 4: Inserting a Rich Text content control using content control properties
-
-#### __C#__
+#### __C# Example 4: Inserting a Rich Text content control using content control properties__
 
 <snippet id='codeblock-dqdq'/>
 
-#### Example 5: Inserting a CheckBox content control using content control properties
-
-#### __C#__
+#### __C# Example 5: Inserting a CheckBox content control using content control properties__
 
 <snippet id='codeblock-drdr'/>
 
-#### Example 6: Remove a content control
-
-#### __C#__
+#### __C# Example 6: Remove a content control__
 
 <snippet id='codeblock-dsds'/>
 
-#### Example 7: Insert a content control to a specific position
+#### __C# Example 7: Insert a content control to a specific position__
 
 >note When using the InsertStructuredDocumentTag() method and passing start and end elements, make sure that the elements are not already part of a content control.  An exception to the rule are the rich text and repeating section content controls, which can fully contain other controls, with the restriction that they cannot intersect their ranges. 
 
 >caption Figure 1: Examples of correct/incorrect adding of content controls
 
 ![working-with-content-controls001](images/working-with-content-controls001.png)		
-
-
-#### __C#__
 
 <snippet id='codeblock-dtdt'/>
 
