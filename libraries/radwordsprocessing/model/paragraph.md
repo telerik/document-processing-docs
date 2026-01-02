@@ -30,9 +30,7 @@ The code snippet from __Example 1__ creates and inserts a __Paragraph__ in a __S
 
 #### __C# Example 1: Insert paragraph in section__
 
-<snippet id='codeblock-cUcU'/>
-
-
+<snippet id='codeblock-cU-cU'/>
 
 >tipThe parent BlockContainer element (in this case - the *section*) should belong to the same document that is passed to the constructor of the __Paragraph__.
           
@@ -42,27 +40,21 @@ You can add a paragraph at a specific index in the __Blocks__ collection of a __
 
 #### __C# Example 2: Insert a paragraph at a specific position of the Blocks collection__
 
-<snippet id='codeblock-cVcV'/>
-
-
+<snippet id='codeblock-cV-cV'/>
 
 You can also use the __AddParagraph()__ method of the __Blocks__ collection of a __BlockContainer__. The method creates a new __Paragraph__ instance, adds it to the container and returns it.
         
 
 #### __C# Example 3: Create a new paragraph and add it to a section__
 
-<snippet id='codeblock-cWcW'/>
-
-
+<snippet id='codeblock-cW-cW'/>
 
 Inserting a new __Paragraph__ in the document can also be achieved with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
         
 
 #### __C#  Example 4: Insert a paragraph using the RadFlowDocumentEditor__
 
-<snippet id='codeblock-cXcX'/>
-
-
+<snippet id='codeblock-cX-cX'/>
 
 ## Modifying a Paragraph
 
@@ -145,7 +137,7 @@ In __Example 5__ is illustrated how to add a run to an existing paragraph.
 
 #### __C# Example 5: Insert run in a paragraph__
 
-<snippet id='codeblock-cYcY'/>
+<snippet id='codeblock-cY-cY'/>
 
 
 
@@ -159,7 +151,7 @@ __Example 6__ adds an inline image to an existing paragraph.
 
 #### __C# Example 6: Insert image inline__
 
-<snippet id='codeblock-cZcZ'/>
+<snippet id='codeblock-cZ-cZ'/>
 
 
 
@@ -173,7 +165,7 @@ The code snippet from __Example 7__  adds a floating image to an existing paragr
 
 #### __C# Example 7: Add floating image__
 
-<snippet id='codeblock-dada'/>
+<snippet id='codeblock-da-da'/>
 
 
 For more information about __FloatingImage__ element, you can read [this article]({%slug radwordsprocessing-model-floatingimage%}).
@@ -185,7 +177,7 @@ In __Example 8__ it is demonstrated how to add a tab stop to the paragraph's col
 
 #### __C# Example 8: Insert TabStop__
 
-<snippet id='codeblock-dbdb'/>
+<snippet id='codeblock-db-db'/>
 
 You can refer to the [TabStop article]({%slug radwordsprocessing-concepts-tabstop%}) for more details about this element.
 
@@ -195,7 +187,7 @@ __Example 9__ shows how to create Borders and set them to a Paragraph.
 
 #### __C# Example 9: Setting Borders__
 
-<snippet id='codeblock-dcdc'/>
+<snippet id='codeblock-dc-dc'/>
 
 ## See Also
 
