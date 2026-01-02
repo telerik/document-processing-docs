@@ -9,15 +9,11 @@ position: 10
 
 # Headers and Footers
 
-
-
 __Header__ and __Footer__ elements are block-container elements, i.e. they can contain Tables and Paragraphs. Each [Section]({%slug radwordsprocessing-model-section%}) contains three Header and three Footer instances.
-
 
 * [Inserting Header Footer](#inserting-header/footer)
 
 * [Operating with Headers and Footers ](#operating-with-headers-and-footers)
-
 
 ## Inserting Header/Footer
 
@@ -45,7 +41,7 @@ Headers of all __HeaderFooterType__ types can be created using the code snippet 
 
 #### __[C#] Example 1: Create a header__
 
-<snippet id='codeblock-cL'/>
+<snippet id='codeblock-clcl'/>
 
 
 
@@ -54,7 +50,7 @@ Footers can be created using the code snippet from __Example 2__:
 
 #### __[C#] Example 2: Create a footer__
 
-<snippet id='codeblock-cM'/>
+<snippet id='codeblock-cmcm'/>
 
 
 
@@ -68,7 +64,7 @@ You can obtain the Headers and Footers in a Section through the __Default__, __E
 
 #### __[C#] Example 3: Get the default header of a section__
 
-<snippet id='codeblock-cN'/>
+<snippet id='codeblock-cncn'/>
 
 
 
@@ -77,7 +73,7 @@ Similarly to the Header, the Footer element can be obtained as follows:
 
 #### __[C#] Example 4: Get the default footer of a section__
 
-<snippet id='codeblock-cO'/>
+<snippet id='codeblock-coco'/>
 
 
 
@@ -89,7 +85,7 @@ __Example 5__ demonstrates how to add different headers for odd and even pages:
 
 #### __[C#] Example 5: Add headers for even and odd pages__
 
-<snippet id='codeblock-cP'/>
+<snippet id='codeblock-cpcp'/>
 
 
 

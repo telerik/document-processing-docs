@@ -25,7 +25,7 @@ __Example 1__ shows how to create a __Comment__ and add its CommentRangeStart an
 
 #### __[C#] Example 1: Add a comment to a paragraph__
 
-<snippet id='codeblock-cD'/>
+<snippet id='codeblock-cdcd'/>
 
 
 
@@ -37,7 +37,7 @@ __Example 2__ shows how you can insert a previously created __Comment__ object i
 
 #### __[C#] Example 2: Insert previously created comment__
 
-<snippet id='codeblock-cE'/>
+<snippet id='codeblock-cece'/>
 
 
 
@@ -46,7 +46,7 @@ __Example 3__ demonstrates how you can use another overload of __RadFlowDocument
 
 #### __[C#] Example 3: Insert comment around run__
 
-<snippet id='codeblock-cF'/>
+<snippet id='codeblock-cfcf'/>
 
 
 
@@ -70,7 +70,7 @@ __Example 4__ shows how you can add a Table to a Comment.
 
 #### __[C#] Example 4: Add blocks to a comment__
 
-<snippet id='codeblock-cG'/>
+<snippet id='codeblock-cgcg'/>
 
 
 

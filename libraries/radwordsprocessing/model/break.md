@@ -45,7 +45,7 @@ __Example 2__ shows how you can change the type of the break created in __Exampl
 
 #### __[C#] Example 2: Change BreakType__
 
-<snippet id='codeblock-cA'/>
+<snippet id='codeblock-caca'/>
 
 
 
@@ -57,7 +57,7 @@ __Example 3__ shows how you can insert a break through __RadFlowDocumentEditor__
 
 #### __[C#] Example 3: Insert break using RadFlowDocumentEditor__
 
-<snippet id='codeblock-cB'/>
+<snippet id='codeblock-cbcb'/>
 
 
 
@@ -83,7 +83,7 @@ __Example 4__ shows how you can insert a Break through __RadFlowDocumentEditor__
 
 #### __[C#] Example 4: Customize a break__
 
-<snippet id='codeblock-cC'/>
+<snippet id='codeblock-cccc'/>
 
 
 

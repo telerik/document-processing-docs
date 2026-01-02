@@ -35,7 +35,7 @@ __Example 1__ demonstrates how you can create an ImageInline and add it to a [Pa
 
 #### __[C#] Example 1: Create an image inline and insert it in a paragraph__
 
-<snippet id='codeblock-cQ'/>
+<snippet id='codeblock-cqcq'/>
 
 
 
@@ -47,7 +47,7 @@ You can add an image at a specific index in the __Inlines__ collection of a para
 
 #### __[C#] Example 2: Add an image inline to a specific position__
 
-<snippet id='codeblock-cR'/>
+<snippet id='codeblock-crcr'/>
 
 
 
@@ -56,7 +56,7 @@ You can also use the __AddImageInline()__ method of the __Inlines__ collection o
 
 #### __[C#] Example 3: Using AddImageInline() method__
 
-<snippet id='codeblock-cS'/>
+<snippet id='codeblock-cscs'/>
 
 
 
@@ -65,7 +65,7 @@ Inserting __ImageInline__ element in RadFlowDocument can also be achieved with [
 
 #### __[C#] Example 4: Insert an image inline using RadFlowDocumentEditor__
 
-<snippet id='codeblock-cT'/>
+<snippet id='codeblock-ctct'/>
 
 
 

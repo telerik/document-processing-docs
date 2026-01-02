@@ -21,7 +21,7 @@ __Example 1__ shows how to create a FloatingImage and add it to a [Paragraph]({%
 
 #### __[C#] Example 1: Create a floating image and insert it in a paragraph__
 
-<snippet id='codeblock-cH'/>
+<snippet id='codeblock-chch'/>
 
 
 
@@ -33,7 +33,7 @@ You can add an image at a specific index in the __Inlines__ collection of a para
 
 #### __[C#] Example 2: Add a floating image to a specific position__
 
-<snippet id='codeblock-cI'/>
+<snippet id='codeblock-cici'/>
 
 
 
@@ -42,7 +42,7 @@ You can also use the __AddFloatingImage()__ method of the __Inlines__ collection
 
 #### __[C#] Example 3: Using AddFloatingImage() method__
 
-<snippet id='codeblock-cJ'/>
+<snippet id='codeblock-cjcj'/>
 
 
 
@@ -51,7 +51,7 @@ Inserting __FloatingImage__ element in RadFlowDocument can also be achieved with
 
 #### __[C#] Example 4: Insert a floating image using RadFlowDocumentEditor__
 
-<snippet id='codeblock-cK'/>
+<snippet id='codeblock-ckck'/>
 
 
 

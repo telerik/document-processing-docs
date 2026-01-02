@@ -21,7 +21,7 @@ The content controls can be retrieved by using the __EnumerateChildrenOfType()__
 
 #### __C#__
 
-<snippet id='codeblock-dN'/>
+<snippet id='codeblock-dndn'/>
 
 ### Set Content Controls Properties
 
@@ -31,7 +31,7 @@ This example shows how one can iterate the items and add an item to an existing 
 
 #### __C#__
 
-<snippet id='codeblock-dO'/>
+<snippet id='codeblock-dodo'/>
 
 ## Insert or Remove Content Controls
 
@@ -43,25 +43,25 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
 
 #### __C#__
 
-<snippet id='codeblock-dP'/>
+<snippet id='codeblock-dpdp'/>
 
 #### Example 4: Inserting a Rich Text content control using content control properties
 
 #### __C#__
 
-<snippet id='codeblock-dQ'/>
+<snippet id='codeblock-dqdq'/>
 
 #### Example 5: Inserting a CheckBox content control using content control properties
 
 #### __C#__
 
-<snippet id='codeblock-dR'/>
+<snippet id='codeblock-drdr'/>
 
 #### Example 6: Remove a content control
 
 #### __C#__
 
-<snippet id='codeblock-dS'/>
+<snippet id='codeblock-dsds'/>
 
 #### Example 7: Insert a content control to a specific position
 
@@ -74,7 +74,7 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
 
 #### __C#__
 
-<snippet id='codeblock-dT'/>
+<snippet id='codeblock-dtdt'/>
 
 # See Also
 * [Content Controls Overview]({%slug wordsprocessing-model-content-controls%})

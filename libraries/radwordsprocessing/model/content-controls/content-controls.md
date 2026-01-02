@@ -74,6 +74,8 @@ The __CheckBox__ content control exposes two properties __CheckedState__ and __U
 
 #### __C#__
 
+<snippet id='codeblock-dhdh'/>
+
 {{region wordsprocessing-model-content-controls_0}}
 
     SdtCheckBoxState checkedBoxState = new SdtCheckBoxState();
@@ -92,7 +94,7 @@ The __CheckBox__ content control exposes two properties __CheckedState__ and __U
 
 The toggle states can be visualized with any characters specified in the properties. The following example demonstrates a complete code snippet how to insert toggled/untoggled checkboxes:
 
-<snippet id='codeblock-dM'/>
+<snippet id='codeblock-dmdm'/>
 
 ![Insert CheckBoxes](images/insert-checkboxes.gif)    
 
@@ -109,14 +111,7 @@ The __ComboBox__ and __DropDownList__ provide the user with options to choose fr
 
 #### __C#__
 
-{{region wordsprocessing-model-content-controls_1}}
-
-    ComboBoxProperties properties = new ComboBoxProperties();
-    properties.Items.Add(new ListItem() { DisplayText = "Choice 1", Value = "a" });
-    properties.Items.Add(new ListItem() { DisplayText = "Choice 2", Value = "b" });
-    properties.SelectedItem = properties.Items.Where(li => li.Value == "a").FirstOrDefault();
-
-{{endregion}}
+<snippet id='codeblock-didi'/>
 
 ### Date
 
@@ -131,15 +126,7 @@ The __Date__ content control allows you to enter a date by using a calendar. The
 
 #### __C#__
 
-{{region wordsprocessing-model-content-controls_2}}
-
-    DateProperties properties = new DateProperties();
-    properties.DateFormat = "MM/dd/yyyy H:mm";
-    properties.Language = new CultureInfo("bg-BG");
-    properties.FullDate = DateTime.Now;
-    properties.Calendar = SdtCalendar.Gregorian;
-    properties.DateMappingType = DateMappingType.DateTime;
-{{endregion}}
+<snippet id='codeblock-djdj'/>
 
 ### Text
 
@@ -150,11 +137,7 @@ The __Text__ content control allows you to enter plain text. The text content co
 
 #### __C#__
 
-{{region wordsprocessing-model-content-controls_3}}
-
-    TextProperties properties = new TextProperties();
-    properties.IsMultiline = true;
-{{endregion}}
+<snippet id='codeblock-dkdk'/>
 
 ### RepeatingSection
 
@@ -165,12 +148,7 @@ The __Text__ content control allows you to enter plain text. The text content co
 
 #### __C#__
 
-{{region wordsprocessing-model-content-controls_4}}
-
-    RepeatingSectionProperties properties = new RepeatingSectionProperties();
-    properties.SectionTitle = "Title";
-    properties.AllowInsertAndDeleteSections = true;
-{{endregion}}
+<snippet id='codeblock-dldl'/>
 
 # See Also
  
