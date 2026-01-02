@@ -41,7 +41,7 @@ Inserting a Compare Field is easily achieved through the [RadFlowDocumentEditor]
 
 #### __[C#] Example 1: Insert a CompareField__
 
-<snippet id='codeblock-M'/>
+<snippet id='codeblock-mm'/>
 
 
 ## See Also

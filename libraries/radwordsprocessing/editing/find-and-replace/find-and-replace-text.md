@@ -37,7 +37,7 @@ Both methods return a collection of **FindResult** instances, which in turn expo
 
 #### **[C#] Example 1: Find text**
 
-<snippet id='codeblock-bM'/>
+<snippet id='codeblock-bmbm'/>
 
 ## Replace Text
 
@@ -54,7 +54,7 @@ To find all instances of a string and replace it with another one, you can use t
 
 #### **[C#] Example 2: Replace text**
 
-<snippet id='codeblock-bN'/>
+<snippet id='codeblock-bnbn'/>
 
 
 ## Replace Styling
@@ -74,7 +74,7 @@ __RadFlowDocumentEditor__ gives you the ability to format all occurrences of a s
 
 #### **[C#] Example 3: Replace character properties**
 
-<snippet id='codeblock-bO'/>
+<snippet id='codeblock-bobo'/>
 
 ## See Also
 

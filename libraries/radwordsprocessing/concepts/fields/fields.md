@@ -79,14 +79,14 @@ The suggested way to insert field is to use the __InsertField()__ method of [Rad
 
 #### __[C#] Example 1: Create a document containing a Date field using RadFlowDocumentEditor__
 
-<snippet id='codeblock-S'/>
+<snippet id='codeblock-ss'/>
 
 
 You can also create and insert all the parts of the field manually by creating a __FieldInfo__ instance and adding all the inlines to the document structure. **Example 2** demonstrates how to achieve the same result as in **Example 1**.
         
 #### __[C#] Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo__
 
-<snippet id='codeblock-T'/>
+<snippet id='codeblock-tt'/>
 
 
 You can see that the manual approach is more verbose and prone to errors. If not all of the field characters are inserted the result is an invalid document. Using the __RadFlowDocumentEditor__ on the other hand, guarantees that the document integrity is maintained.
@@ -111,7 +111,7 @@ Updating a single field is done with the __UpdateField()__ method of the __Field
 
 #### __[C#] Example 3: Update a field__
 
-<snippet id='codeblock-U'/>
+<snippet id='codeblock-uu'/>
 
 
 >Note that field result is not automatically updated upon insertion. The initial result fragment is passed as a parameter to the __InsertField()__ method.
@@ -120,7 +120,7 @@ All fields in the document can be updated using __UpdateFields()__ of __RadFlowD
 
 #### __[C#] Example 4: Update all fields in a document__
 
-<snippet id='codeblock-V'/>
+<snippet id='codeblock-vv'/>
 
 ### Updating PageRef, Page, NumPages, and SectionPages fields. 
 
@@ -132,7 +132,7 @@ You can register the provider with the following code:
 
 #### __[C#] Example 5: Register the default NumberingFieldsProvider__
 
-<snippet id='codeblock-W'/>
+<snippet id='codeblock-ww'/>
 
 ## Syntax and Switches
 
@@ -170,7 +170,7 @@ Fields can also be nested in each other. If there are nested fields inside the c
 
 #### __[C#] Example 6: Create a nested field__
 
-<snippet id='codeblock-X'/>
+<snippet id='codeblock-xx'/>
 
 ![Rad Words Processing Concepts Fields 02](images/RadWordsProcessing_Concepts_Fields_02.png)
 

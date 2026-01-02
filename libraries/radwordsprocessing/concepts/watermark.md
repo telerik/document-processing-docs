@@ -43,7 +43,7 @@ __Example 1__ demonstrates the creation of a text watermark.
 
 #### __[C#] Example 1: Create text watermark__
 
-<snippet id='codeblock-I'/>
+<snippet id='codeblock-iia'/>
 
 
 Creating image watermark is very similar to creating a text one. __Example 2__ shows how to create an image watermark.
@@ -51,7 +51,7 @@ Creating image watermark is very similar to creating a text one. __Example 2__ s
 
 #### __[C#] Example 2: Create image watermark__
 
-<snippet id='codeblock-J'/>
+<snippet id='codeblock-jja'/>
 
 
 ## Set Watermark 
@@ -64,7 +64,7 @@ __Example 3__ demonstrates how you can add the watermark created in __Example 1_
 
 #### __[C#] Example 3: Add watermark to header__
 
-<snippet id='codeblock-K'/>
+<snippet id='codeblock-kka'/>
 
 >tipBy default, if header is omitted for a __Section__ other than the first one, it is inherited from the previous __Section__. The watermark set in __Example 3__ will be implicitly inherited by all sections following the first one since watermarks are preserved in the header.
 
@@ -76,7 +76,7 @@ __Example 4__ demonstrates how to set the watermark created in __Example 2__ thr
 
 #### __[C#] Example 4: Set watermark with RadFlowDocumentEditor__
 
-<snippet id='codeblock-L'/>
+<snippet id='codeblock-lla'/>
 
 
 ## See Also

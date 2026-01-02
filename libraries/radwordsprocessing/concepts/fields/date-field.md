@@ -40,7 +40,7 @@ __Example 1__ demonstrates how you can insert a date field.
 
 #### __[C#] Example 1: Insert date field__
 
-<snippet id='codeblock-N'/>
+<snippet id='codeblock-nn'/>
 
 
 After updating the field the result would be "_12/03/2021_" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).

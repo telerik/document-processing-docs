@@ -59,7 +59,7 @@ Excluding the default constructor, the __TabStopCollection__ class exposes an ov
 <a name="example1"><a/>
 #### __[C#] Example 1: Create a TabStopCollection__
 
-<snippet id='codeblock-B'/>
+<snippet id='codeblock-bba'/>
 
 
 ### Insert Item in a TabStopCollection
@@ -67,7 +67,7 @@ Excluding the default constructor, the __TabStopCollection__ class exposes an ov
 In __Example 2__ is illustrated how to insert items in the __TabStopCollection__ created in [Example 1](#example1). Keep in mind that due to the fact that this collection is immutable, the __Insert()__ method will return a **new instance** of the class.
 
 #### __[C#] Example 2: Insert item in a TabStopCollection__
-<snippet id='codeblock-C'/>
+<snippet id='codeblock-cca'/>
 
 
 ### Remove Item from a TabStopCollection
@@ -75,7 +75,7 @@ In __Example 2__ is illustrated how to insert items in the __TabStopCollection__
 The snippet below shows how to remove an item from the __TabStopCollection__ created in [Example 1](#example1). Keep in mind that due to the fact that this collection is immutable, the Remove() method will return new instance of the class.
 
 #### __[C#] Example 3: Remove item from a TabStopCollection__
-<snippet id='codeblock-D'/>
+<snippet id='codeblock-dda'/>
 
 
 ## Working with TabStop
@@ -90,7 +90,7 @@ The code from __Example 4__ demonstrates how to create a tab stop.
 <a name="example4"><a/>
 #### __[C#] Example 4: Create a TabStop__
 
-<snippet id='codeblock-E'/>
+<snippet id='codeblock-eea'/>
 
 ### Adding a TabStop
 
@@ -98,7 +98,7 @@ __Example 5__ shows how to add the tab stop created in [Example 1](#example1) to
 
 #### __[C#] Example 5: Insert a TabStop__
 
-<snippet id='codeblock-F'/>
+<snippet id='codeblock-ffa'/>
 
 ### Remove a TabStop
 
@@ -114,7 +114,7 @@ Once you have applied the desired tab stops to a paragraph, you need to insert t
 
 #### __[C#] Example 6: Add tabs to align to the tab stops__
 
-<snippet id='codeblock-H'/>
+<snippet id='codeblock-hha'/>
 
 ## See Also
 
