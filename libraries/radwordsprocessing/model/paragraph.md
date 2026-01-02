@@ -30,7 +30,7 @@ The code snippet from __Example 1__ creates and inserts a __Paragraph__ in a __S
 
 #### __C# Example 1: Insert paragraph in section__
 
-<snippet id='codeblock-cU-cU'/>
+<snippet id='codeblock-cu-cu'/>
 
 >tipThe parent BlockContainer element (in this case - the *section*) should belong to the same document that is passed to the constructor of the __Paragraph__.
           
@@ -40,21 +40,21 @@ You can add a paragraph at a specific index in the __Blocks__ collection of a __
 
 #### __C# Example 2: Insert a paragraph at a specific position of the Blocks collection__
 
-<snippet id='codeblock-cV-cV'/>
+<snippet id='codeblock-cv-cv'/>
 
 You can also use the __AddParagraph()__ method of the __Blocks__ collection of a __BlockContainer__. The method creates a new __Paragraph__ instance, adds it to the container and returns it.
         
 
 #### __C# Example 3: Create a new paragraph and add it to a section__
 
-<snippet id='codeblock-cW-cW'/>
+<snippet id='codeblock-cw-cw'/>
 
 Inserting a new __Paragraph__ in the document can also be achieved with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
         
 
 #### __C#  Example 4: Insert a paragraph using the RadFlowDocumentEditor__
 
-<snippet id='codeblock-cX-cX'/>
+<snippet id='codeblock-cx-cx'/>
 
 ## Modifying a Paragraph
 
@@ -137,7 +137,7 @@ In __Example 5__ is illustrated how to add a run to an existing paragraph.
 
 #### __C# Example 5: Insert run in a paragraph__
 
-<snippet id='codeblock-cY-cY'/>
+<snippet id='codeblock-cy-cy'/>
 
 
 

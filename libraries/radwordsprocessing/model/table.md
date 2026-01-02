@@ -43,7 +43,7 @@ You can add a table at a specific index in the __Blocks__ collection of a __Bloc
 
 #### __[C#] Example 2: Insert a table at a specific index__
 
-<snippet id='codeblock-dA-dA'/>
+<snippet id='codeblock-da-da'/>
 
 
 
@@ -52,7 +52,7 @@ You can also use the __AddTable()__ method of the __Blocks__ collection of a __B
 
 #### __[C#] Example 3: Insert a new table to a container__
 
-<snippet id='codeblock-dB-dB'/>
+<snippet id='codeblock-db-db'/>
 
 
 
@@ -61,7 +61,7 @@ Inserting a new __Table__ in the document can also be achieved with the [RadFlow
 
 #### __[C#] Example 4: Insert a table using RadFlowDocumentEditor__
 
-<snippet id='codeblock-dC-dC'/>
+<snippet id='codeblock-dc-dc'/>
 
 
 
@@ -132,7 +132,7 @@ __Example 5__ demonstrates how to add a __Table__ with 5 rows and 10 columns to 
 
 #### __[C#] Example 5: Create a table with content and add it to a RadFlowDocument__
 
-<snippet id='codeblock-dD-dD'/>
+<snippet id='codeblock-dd-dd'/>
 
 
 
