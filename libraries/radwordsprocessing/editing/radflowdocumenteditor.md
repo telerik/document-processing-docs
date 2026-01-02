@@ -28,13 +28,7 @@ __RadFlowDocumentEditor__ is always associated with a single document, which it 
 
 #### __[C#] Example 1: Create a RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_0}}
-	            
-	RadFlowDocument document = this.CreateDocument();
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-{{endregion}}
-
-
+<snippet id='codeblock-baba'/>
 
 The editor maintains an internal position inside the document. This position points either inside a paragraph (to an inline) or directly after the end of a table element. Here is a list of the available methods for changing the position of the editor within a document:
         
@@ -54,36 +48,23 @@ The code from __Example 2__ demonstrates how to position the editor after the se
 
 #### __[C#] Example 2: Changing the position of RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_2}}
-	            
-	Paragraph firstParagraph = document.EnumerateChildrenOfType<Paragraph>().First();
-	editor.MoveToInlineEnd(firstParagraph.Inlines[1]);
-{{endregion}}
-
-
+<snippet id='codeblock-bbbb'/>
 
 Note that it is possible to create a __RadFlowDocumentEditor__ for an empty document (one with no sections). In this case, a section and a paragraph are automatically created when you call an insert method. __Example 3__ creates a document with one section, containing one paragraph with the text "Hello word!".
         
 
 #### __[C#] Example 3: Insert text in a document__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_3}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	editor.InsertText("Hello word!");
-{{endregion}}
-
-
+<snippet id='codeblock-bcbc'/>
 
 ## Inserting Document Elements
 
 Most of the insert methods of __RadFlowDocumentEditor__ return the newly inserted element. This way you can set some additional properties of the element if desired.
         
-
 ### Inserting Text
 
 Inserting text [Runs]({%slug radwordsprocessing-model-run%}) can be done with the following methods:
             
-
 * public Run InsertText(string text): Inserts a new __Run__ with the given text in the current paragraph.
 
 * public Run InsertLine(string text): Inserts a new __Run__ with the given text in the current paragraph and starts a new paragraph.
@@ -95,12 +76,7 @@ The code in __Example 4__ inserts a run containing a new line.
 
 #### __[C#] Example 4: Insert a run with a new line__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_4}}
-	        
-	editor.InsertText("First" + Environment.NewLine + "Second");
-{{endregion}}
-
-
+<snippet id='codeblock-bdbd'/>
 
 The result looks like __Figure 1__ shows.
 
@@ -117,14 +93,7 @@ You can start a new [Paragraph]({%slug radwordsprocessing-model-paragraph%}) wit
 
 #### __[C#] Example 5: Insert a paragraph__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_5}}
-	        
-	editor.InsertText("First paragraph");
-	editor.InsertParagraph();
-	editor.InsertText("Second paragraph");
-{{endregion}}
-
-
+<snippet id='codeblock-bebe'/>
 
 __Figure 2__ shows how the result from __Example 5__ looks like.
 
@@ -133,24 +102,19 @@ __Figure 2__ shows how the result from __Example 5__ looks like.
 
 If you call __InsertParagraph()__ method while the editor is positioned in the middle of a paragraph all the inlines after the position are moved inside the new paragraph. The effect is the same as pressing Enter key while the cursor is in the middle of a paragraph in a text editor application.
 
-
 ### Inserting Sections
 
 Inserting [Section]({%slug radwordsprocessing-model-section%}) elements can be achieved with the __InsertSection()__ method. A paragraph with the new section’s properties will be added and the new __Section__ element will be returned.
 
 #### __[C#] Example 6: Insert a section__
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_12}}
-	editor.InsertSection();
-{{endregion}}
+<snippet id='codeblock-bfbf'/>
 
 >If you call the __InsertSection()__ method while the editor is positioned in a TableCell, the Table will be split at the current row. This means that if the table contains 3 rows, and the editor is positioned in a cell which is on the second row, the table will be split into two tables – one with one row, which will be added to the previous section and one with 2 rows (containing the TableCell where the editor position was). The later will be added to the newly inserted Section.
-
 
 ### Inserting Hyperlinks
 
 __Hyperlinks__ in the __RadFlowDocument__ model are actually [Fields]({%slug radwordsprocessing-concepts-fields%}), which means they have code and result parts separated by [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}) inlines. Inserting hyperlinks is simplified with __RadFlowDocumentEditor.InsertHyperlink()__  method:
             
-
 public Hyperlink InsertHyperlink(string text, string uri, bool isAnchor, string toolTip)
 
 It automatically applies "Hyperlink" built-in style to the inserted hyperlink if there is no explicitly set style in the __CharacterFormatting__ options of the editor.
@@ -158,19 +122,14 @@ It automatically applies "Hyperlink" built-in style to the inserted hyperlink if
 
 #### __[C#] Example 7: Insert a hyperlink__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_6}}
-	            
-	editor.InsertHyperlink("telerik", "http://www.telerik.com", false, "Telerik site");
-{{endregion}}
+<snippet id='codeblock-bgbg'/>
 
 #### Figure 3: Hyperlink
 ![Rad Words Processing Editing Rad Flow Document Editor 03](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_03.png)
 
-
 ### Inserting Code Fields
 
-Inserting fields can be done with the __InsertField()__ method, which accepts code and result fragments:
-            
+Inserting fields can be done with the __InsertField()__ method, which accepts code and result fragments:          
 
 public Field InsertField(string code, string result)
 
@@ -179,19 +138,7 @@ __Example 8__ shows how to add page numbering in the header of a document:
 
 #### __[C#] Example 8: Add page numbering in a header__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_7}}
-	        
-	// Create header and move the editor
-	Header header = document.Sections[0].Headers.Add();
-	editor.MoveToParagraphStart(header.Blocks.AddParagraph());
-	            
-	editor.InsertText("Page ");
-	editor.InsertField("PAGE", "1");
-	editor.InsertText(" of ");
-	editor.InsertField("NUMPAGES", "1");
-{{endregion}}
-
-
+<snippet id='codeblock-bhbh'/>
 
 #### Figure 4: The page numbering inserted in Example 8            
 ![Rad Words Processing Editing Rad Flow Document Editor 04](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_04.png)
@@ -221,16 +168,7 @@ __Example 9__ shows how an image can be inserted using a stream:
 
 #### __[C#] Example 9: Insert an image from a Stream__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_9}}
-	        
-	editor.InsertText("Image:");
-	using (Stream stream = this.GetResourceStream("Telerik_logo.png"))
-	{
-	    editor.InsertImageInline(stream, "png", new Size(118, 28));
-	}
-{{endregion}}
-
-
+<snippet id='codeblock-bibi'/>
 
 #### Figure 5: The image inserted in Example 9            
 ![Rad Words Processing Editing Rad Flow Document Editor 05](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_05.png)
@@ -254,15 +192,7 @@ Here is how to insert a table with the "TableGrid" built-in style:
 
 #### __[C#] Example 10: Insert a table with a style__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_10}}
-	            
-	document.StyleRepository.AddBuiltInStyle(BuiltInStyleNames.TableGridStyleId);
-	editor.TableFormatting.StyleId = BuiltInStyleNames.TableGridStyleId;
-	            
-	editor.InsertText("Before table.");
-	editor.InsertTable(2, 4);
-	editor.InsertText("After table.");
-{{endregion}}
+<snippet id='codeblock-bjbj'/>
 
 
 #### Figure 6: The table in the document
@@ -290,44 +220,17 @@ Formatting options are most useful when inserting multiple elements that should 
 
 #### __[C#] Example 11: Insert content with specified styles__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_11}}
-	        
-	// Set code block formatting
-	var codeFont = new ThemableFontFamily(new FontFamily("Consolas"));
-	editor.CharacterFormatting.FontFamily.LocalValue = codeFont;
-	editor.ParagraphFormatting.SpacingAfter.LocalValue = 0;
-	
-	editor.InsertLine("static void Main(string[] args)");
-	editor.InsertLine("{");
-	editor.InsertLine("    Console.WriteLine(\"Hello World\");");
-	editor.InsertLine("}");
-{{endregion}}
+<snippet id='codeblock-bkbk'/>
 
 
 #### Figure 7: The inserted in Example 11 content
 ![Rad Words Processing Editing Rad Flow Document Editor 07](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_07.png)
 
-
-
 ## Deleting Content
 
 #### __[C#] Example 12: Delete content between existing elements__
 
-{{region cs-radwordsprocessing-editing-radflowdocumenteditor_13}}
-
- 	var document = new RadFlowDocument();
- 	var editor = new RadFlowDocumentEditor(document);
- 	
- 	editor.InsertParagraph();
- 	var startRun = editor.InsertText("Start");
- 	editor.InsertParagraph();
- 	var middleRun = editor.InsertText("Middle");
- 	editor.InsertParagraph();
- 	var endRun = editor.InsertText("End");
- 	
- 	editor.DeleteContent(startRun, endRun, false);
-
-{{endregion}}
+<snippet id='codeblock-blbl'/>
 
 The above method will delete everything between the "start" and "end" elements. You can choose if the "start" and "end" elements should be deleted with the last parameter.
 

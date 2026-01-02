@@ -25,12 +25,7 @@ __Example 1__ shows how to create a __Bookmark__ and add its BookmarkRangeStart 
 
 #### __[C#] Example 1: Add a bookmark to a paragraph__
 
-{{region cs-radwordsprocessing-model-bookmark_0}}
-	Bookmark bookmark = new Bookmark(document, "MyBookmark");
-	paragraph.Inlines.Add(bookmark.BookmarkRangeStart);
-	paragraph.Inlines.AddRun("text");
-	paragraph.Inlines.Add(bookmark.BookmarkRangeEnd);
-{{endregion}}
+<snippet id='codeblock-cw'/>
 
 
 
@@ -42,10 +37,7 @@ Inserting a __Bookmark__ in the document can also be done with the [RadFlowDocum
 
 #### __[C#] Example 2: Insert a bookmark using RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-model-bookmark_1}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	Bookmark bookmark = editor.InsertBookmark("MyBookmark");
-{{endregion}}
+<snippet id='codeblock-cx'/>
 
 
 
@@ -60,11 +52,9 @@ You can remove an inserted __Bookmark__ by using __RadFlowDocumentEditor__'s __D
 __Example 3__ demonstrates how you can delete the bookmark created in __Example 2__.
         
 
-#### __[C#] Example 2: Delete bookmark using RadFlowDocumentEditor__
+#### __[C#] Example 3: Delete bookmark using RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-model-bookmark_2}}
-	editor.DeleteBookmark("MyBookmark");
-{{endregion}}
+<snippet id='codeblock-cy'/>
 
 
 

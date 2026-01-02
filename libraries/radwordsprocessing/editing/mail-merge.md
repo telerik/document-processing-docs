@@ -22,12 +22,7 @@ The code snippet in __Example 1__ shows how to initialize a RadFlodDocumentEdito
 
 #### __[C#] Example 1: Insert a merge field__
 
-{{region cs-radwordsprocessing-editing-mail-merge_0}}
-	            
-	RadFlowDocument document = CreateDocument();
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	editor.InsertField("MERGEFIELD FirstName", "");
-{{endregion}}
+<snippet id='codeblock-bu'/>
 
 
 
@@ -36,19 +31,7 @@ Additionally, a field can be added to a Paragraph manually by creating a __Field
 
 #### __[C#] Example 2: Add a merge field manually__
 
-{{region cs-radwordsprocessing-editing-mail-merge_1}}
-	            
-	Paragraph paragraph = new Paragraph(document);
-	document.Sections.First().Blocks.Add(paragraph);
- 
- 	FieldInfo field = new FieldInfo(document);
-	            
-	paragraph.Inlines.Add(field.Start);
-	paragraph.Inlines.AddRun("MERGEFIELD LastName");
-	paragraph.Inlines.Add(field.Separator);
-	paragraph.Inlines.AddRun("");
-	paragraph.Inlines.Add(field.End);
-{{endregion}}
+<snippet id='codeblock-bv'/>
 
 
 
@@ -65,28 +48,7 @@ Example 3 shows a simple example data source.
 
 #### __[C#] Example 3: Sample data source__
 
-{{region cs-radwordsprocessing-editing-mail-merge_2}}
-	        
-	List<MailMergeRecord> mailMergeDataSource = new List<MailMergeRecord>()
-	{
-	    new MailMergeRecord()
-	    {
-	        FirstName = "Andrew",
-	        LastName = "Fuller"
-	    },
-	    new MailMergeRecord()
-	    {
-		FirstName = "Nancy",
-	        LastName = "Davolio"
-	    },
-	};
-
- 	public class MailMergeRecord
-	{
-	    public string FirstName { get; set; }
-	    public string LastName { get; set; }
-	}
-{{endregion}}
+<snippet id='codeblock-bw'/>
 
 
 
@@ -95,10 +57,7 @@ __Example 4__ performs the mail merge operation over a previously defined templa
 
 #### __[C#] Example 4: Perform mail merge__
 
-{{region cs-radwordsprocessing-editing-mail-merge_3}}
-	    
-	RadFlowDocument mailMergeResult = document.MailMerge(mailMergeDataSource);
-{{endregion}}
+<snippet id='codeblock-bx'/>
 
 ## Nested Mail Merge
 
@@ -127,79 +86,13 @@ First you need to define a data source that contains an `IEnumerable` of objects
 
 #### __[C#] Example 5: Nested mail merge data source__
 
-{{region cs-radwordsprocessing-editing-mail-merge_4}}
-    public List<Team> GetTeams()
-    {
-        var teams = new List<Team>();
-        var team1 = new Team();
-        team1.TeamName = "Team 1";
-        team1.Players.Add(new Player() { FirstName = "John", LastName = "Baker" });
-        team1.Players.Add(new Player() { FirstName = "Sam ", LastName = "Wayne" });
-        teams.Add(team1);
-
-        var team2 = new Team();
-        team2.TeamName = "Team 2";
-        team2.Players.Add(new Player() { FirstName = "Patrick", LastName = "Gibbs" });
-        team2.Players.Add(new Player() { FirstName = "Oscar", LastName = "Stevens" });
-        teams.Add(team2);
-    
-        return teams;
-    }
-    
-    public class Team
-    {
-        public string TeamName { get; set; }
-    
-        public List<Player> Players { get; set; }
-    
-        public Team()
-        {
-            this.Players = new List<Player>();
-        }
-    }
-    public class Player
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-    }
-
-{{endregion}}
+<snippet id='codeblock-by'/>
 
 Now you need to add the fields using the specific supported names. In this example, we are adding the fields to the table and we will use the TableStart/TableEnd tags, but this is not mandatory and you can use a tag of your choosing.
 
 #### __[C#] Example 6: Perform nested mail merge__
 
-{{region cs-radwordsprocessing-editing-mail-merge_5}}
-
-    var document = new RadFlowDocument();
-    var editor = new RadFlowDocumentEditor(document);
-
-    editor.InsertParagraph();
-    editor.InsertField("MERGEFIELD TeamName", "");
-    editor.InsertParagraph();
-    editor.InsertText("Players:"); 
-    
-    var playersTable = editor.InsertTable(2, 2);
-    playersTable.PreferredWidth = new TableWidthUnit(TableWidthUnitType.Percent, 100);
-    document.StyleRepository.AddBuiltInStyle(BuiltInStyleNames.TableGridStyleId);
-    playersTable.StyleId = BuiltInStyleNames.TableGridStyleId;
-    
-    playersTable.Rows[0].Cells[0].Blocks.AddParagraph().Inlines.AddRun("First Name");
-    playersTable.Rows[0].Cells[1].Blocks.AddParagraph().Inlines.AddRun("Last Name");
-    
-    var firstNameParagraph = playersTable.Rows[1].Cells[0].Blocks.AddParagraph();
-    editor.MoveToParagraphStart(firstNameParagraph);
-    editor.InsertField("MERGEFIELD TableStart:Players", "");
-    editor.InsertField("MERGEFIELD FirstName", "");
-    
-    var lastNameParagraph = playersTable.Rows[1].Cells[1].Blocks.AddParagraph();
-    editor.MoveToParagraphStart(lastNameParagraph);
-    editor.InsertField("MERGEFIELD LastName", "");
-    editor.InsertField("MERGEFIELD TableEnd:Players", "");
-    
-    RadFlowDocument mailMergeResult = document.MailMerge(GetTeams());
-
-{{endregion}}
+<snippet id='codeblock-bz'/>
 
 ### One Row vs Multiline Mail Merge
 

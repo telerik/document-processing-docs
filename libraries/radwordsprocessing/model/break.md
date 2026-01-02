@@ -33,10 +33,7 @@ __Example 1__ shows how to create a __Break__ element and add it to a [Paragraph
 
 #### __[C#] Example 1: Create break__
 
-{{region cs-radwordsprocessing-model-break_0}}
-	Break br = new Break(document);
-	paragraph.Inlines.Add(br);
-{{endregion}}
+<snippet id='codeblock-cz'/>
 
 
 
@@ -48,9 +45,7 @@ __Example 2__ shows how you can change the type of the break created in __Exampl
 
 #### __[C#] Example 2: Change BreakType__
 
-{{region cs-radwordsprocessing-model-break_1}}
-	br.BreakType = BreakType.PageBreak;
-{{endregion}}
+<snippet id='codeblock-caca'/>
 
 
 
@@ -62,10 +57,7 @@ __Example 3__ shows how you can insert a break through __RadFlowDocumentEditor__
 
 #### __[C#] Example 3: Insert break using RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-model-break_2}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	Break br = editor.InsertBreak(BreakType.PageBreak);
-{{endregion}}
+<snippet id='codeblock-cbcb'/>
 
 
 
@@ -91,13 +83,7 @@ __Example 4__ shows how you can insert a Break through __RadFlowDocumentEditor__
 
 #### __[C#] Example 4: Customize a break__
 
-{{region cs-radwordsprocessing-model-break_3}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	
-	Break br = editor.InsertBreak(BreakType.PageBreak);
-	br.BreakType = BreakType.LineBreak;
-	br.TextWrappingRestartLocation = TextWrappingRestartLocation.NextFullLine;
-{{endregion}}
+<snippet id='codeblock-cccc'/>
 
 
 

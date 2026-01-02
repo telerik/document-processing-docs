@@ -21,9 +21,7 @@ The code from __Example 1__ shows how you can create a new __RadFlowDocument__.
 
 #### __[C#] Example 1: Create RadFlowDocument__
 
-{{region cs-radwordsprocessing-model-radflowdocument_0}}
-	RadFlowDocument document = new RadFlowDocument();
-{{endregion}}
+<snippet id='codeblock-dh'/>
 
 
 
@@ -70,10 +68,7 @@ You can create a __RadFlowDocument__ from scratch and add Sections to it as foll
 
 #### __[C#] Example 2: Add a Section to a RadFlowDocument__
 
-{{region cs-radwordsprocessing-model-radflowdocument_1}}
-	RadFlowDocument document = new RadFlowDocument();
-	document.Sections.AddSection();
-{{endregion}}
+<snippet id='codeblock-di'/>
 
 
 
@@ -85,9 +80,7 @@ Alternatively, you could create a section by passing to its constructor the docu
 
 #### __[C#] Example 3: Create a section__
 
-{{region cs-radwordsprocessing-model-radflowdocument_2}}
-	Section section = new Section(document);
-{{endregion}}
+<snippet id='codeblock-dj'/>
 
 
 
@@ -98,9 +91,7 @@ You can merge a __RadFlowDocument__ within another document by using the __Merge
 
 #### __[C#] Example 4: Merge documents__
 
-{{region cs-radwordsprocessing-model-radflowdocument_3}}
-	document.Merge(sourceDocument);
-{{endregion}}
+<snippet id='codeblock-dk'/>
 
 
 
@@ -115,12 +106,7 @@ Additionally, you have the opportunity to specify the __MergeOptions__ which con
 
 #### __[C#] Example 5: Merge documents using MergeOptions__
 
-{{region cs-radwordsprocessing-model-radflowdocument_4}}
-	MergeOptions mergeOptions = new MergeOptions();
-	mergeOptions.ConflictingStylesResolutionMode = ConflictingStylesResolutionMode.RenameSourceStyle;
-	
-	document.Merge(sourceDocument, mergeOptions);
-{{endregion}}
+<snippet id='codeblock-dl'/>
 
 
 
@@ -134,9 +120,7 @@ The snippet from __Example 6__ shows how all fields in a document can be updated
 
 #### __[C#] Example 6: Update all fields in a document__
 
-{{region cs-radwordsprocessing-model-radflowdocument_5}}
-	document.UpdateFields();
-{{endregion}}
+<snippet id='codeblock-dm'/>
 
 
 
