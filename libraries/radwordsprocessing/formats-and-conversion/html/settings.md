@@ -36,11 +36,7 @@ You can set the value of the property to any valid CSS document. **Example 1** s
 
 #### [C#] Example 1: Add CSS to the DefaultStyleSheet
 
-{{region }}
-	HtmlFormatProvider provider = new HtmlFormatProvider();
-	provider.ImportSettings.DefaultStyleSheet = provider.ImportSettings.DefaultStyleSheet + @" p {color: #ff99ac;}";
-{{endregion}}
-            
+<snippet id='codeblock-css-default'/>          
 
 ### GenericFonts
 
@@ -60,7 +56,7 @@ The __LoadImageFromUri__ event uses the __LoadImageFromUriEventArgs__ object whi
 __Example 2__ Shows how you can use the __LoadImageFromUri__ event to download an image.
 
 #### __[C#] Example 2: Use the LoadImageFromUri__
-<snippet id='codeblock-bY'/>
+<snippet id='codeblock-load-image-from-uri'/>
 
 The __LoadStyleSheetFromUri__ event uses the __LoadStyleSheetFromUriEventArgs__ object which exposes the following properties: 
  
@@ -70,7 +66,7 @@ The __LoadStyleSheetFromUri__ event uses the __LoadStyleSheetFromUriEventArgs__ 
 __Example 3__ Shows how you can use the __LoadStyleSheetFromUri__ event.
             
 #### __[C#] Example 3: Use the LoadStyleSheetFromUri event__
-<snippet id='codeblock-bZ'/>
+<snippet id='codeblock-load-stylesheet-from-uri'/>
 
 ## UriImageSource Class
 

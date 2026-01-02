@@ -28,7 +28,7 @@ __Example 1__ shows how to use HtmlFormatProvider to import an HTML document fro
 
 #### __[C#] Example 1: Import HTML file__
 
-<snippet id='codeblock-bU'/>
+<snippet id='codeblock-bubu'/>
 
 
 
@@ -37,7 +37,7 @@ __Example 2__ shows how you can import an HTML string.
 
 #### __[C#] Example 2: Import HTML string__
 
-<snippet id='codeblock-bV'/>
+<snippet id='codeblock-bvbv'/>
 
 
 
@@ -54,7 +54,7 @@ __Example 3__ shows how to use the HtmlFormatProvider to export an instance of R
 
 #### __[C#] Example 3: Export HTML to file__
 
-<snippet id='codeblock-bW'/>
+<snippet id='codeblock-bwbw'/>
 
 
 
@@ -63,7 +63,7 @@ You can also export the document to a string variable like shown in __Example 4_
 
 #### __[C#] Example 4: Export HTML to string__
 
-<snippet id='codeblock-bX'/>
+<snippet id='codeblock-bxbx'/>
 
 
 ## See Also

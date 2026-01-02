@@ -104,15 +104,15 @@ __Example 5__ shows how to add the tab stop created in [Example 1](#example1) to
 
 The following code-snippet illustrates how to remove the created in [Example 4](#example4) TabStop:
 
-#### __[C#] Example 5: Remove a TabStop__
+#### __[C#] Example 6: Remove a TabStop__
 
-<snippet id='codeblock-G'/>
+<snippet id='codeblock-gga'/>
 
 ### Using TabStop In the Content
 
-Once you have applied the desired tab stops to a paragraph, you need to insert tabs (\t) so that the content can be aligned to the specified tab stops. The code in **Example 6** inserts tab stops at three positions with different properties and aligns three words on the tab stop positions using tabs.
+Once you have applied the desired tab stops to a paragraph, you need to insert tabs (\t) so that the content can be aligned to the specified tab stops. The code in **Example 7** inserts tab stops at three positions with different properties and aligns three words on the tab stop positions using tabs.
 
-#### __[C#] Example 6: Add tabs to align to the tab stops__
+#### __[C#] Example 7: Add tabs to align to the tab stops__
 
 <snippet id='codeblock-hha'/>
 
