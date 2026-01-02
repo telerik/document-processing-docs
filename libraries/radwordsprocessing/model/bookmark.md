@@ -52,7 +52,7 @@ You can remove an inserted __Bookmark__ by using __RadFlowDocumentEditor__'s __D
 __Example 3__ demonstrates how you can delete the bookmark created in __Example 2__.
         
 
-#### __[C#] Example 2: Delete bookmark using RadFlowDocumentEditor__
+#### __[C#] Example 3: Delete bookmark using RadFlowDocumentEditor__
 
 <snippet id='codeblock-cy'/>
 
