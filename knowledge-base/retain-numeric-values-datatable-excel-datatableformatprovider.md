@@ -5,7 +5,7 @@ type: how-to
 page_title: Retain Numeric Values in Excel Import with DataTableFormatProvider
 meta_title: Retain Numeric Values in Excel Import with DataTableFormatProvider
 slug: retain-numeric-values-datatable-excel-datatableformatprovider
-tags: spreadprocessing,telerik document processing,datatableformatprovider,worksheet,numeric values
+tags: spread, processing,telerik, document,datatable, table,formatprovider,worksheet,numeric, value
 res_type: kb
 ticketid: 1707296
 ---
@@ -18,7 +18,7 @@ ticketid: 1707296
 
 ## Description
 
-When using the [DataTableFormatProvider](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/data-table/overview)'s `Import` method to import data from a `DataTable` to an Excel worksheet, numeric fields may appear as text in Excel. This occurs because the `DataTableFormatProvider` converts data into cells where numeric values are often treated as text, depending on their storage format.
+When using the [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})'s `Import` method to import data from a `DataTable` to an Excel worksheet, numeric fields may appear as text in Excel. This occurs because the `DataTableFormatProvider` converts data into cells where numeric values are often treated as text, depending on their storage format.
 
 This knowledge base article also answers the following questions:
 - How to ensure numeric fields are retained as numbers in Excel using DataTableFormatProvider?
@@ -26,6 +26,17 @@ This knowledge base article also answers the following questions:
 - How to configure DataTableFormatProvider to handle numeric values properly?
 
 ## Solution
+
+The DataTableFormatProvider converts your DataTable into a worksheet. Each cell in RadSpreadProcessing exposes an [ICellValue]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) whose ValueType can be Empty, Boolean, Number, Text, or Formula. ICellValue has ValueType (what the cell contains) and ResultValueType (what the cell evaluates to, e.g., a formula’s result). If the importer writes strings for the cells, you’ll get ValueType = Text. Even if the text looks numeric (“1299.99”), it is still Text unless the cell’s value is actually stored as a number.
+
+The DataTableFormatProvider  offers [ImportSettings]({%slug radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings%}). The ImportSettings.**ShouldImportColumnHeaders** property controls whether the DataTable’s column names are written as a header row into the worksheet when you import with DataTableFormatProvider.
+
+`true` - the first worksheet row contains the column names; your data starts from the next row.
+`false` - no header row is created; your data starts from the first row at the import start position.
+
+This setting affects where your data lands, how you index rows after import, and what the CellImported event reports for the worksheet row indices. By default, the headers are imported. They are represented as TextCellValue since they store the column name.
+
+When you access your cell values, it is necessary to adjust the starting row index accordingly for the data rows. Hence, if you skip importing the headers by setting the **ShouldImportColumnHeaders** property to false, you can start from row index 0. Otherwise, start from index 1.
 
 To retain numeric values as numbers in Excel, follow these steps:
 
@@ -79,6 +90,5 @@ Debug.WriteLine("Price ValueType: " + cellValue.ValueType); // Expected: Number
 
 ## See Also
 
-- [DataTableFormatProvider Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/data-table/overview)
-- [ICellValue Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/working-with-cells/cell-value-types)
-- [ImportSettings Class](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/data-table/settings)
+- [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
+- [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
