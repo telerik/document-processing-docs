@@ -50,13 +50,7 @@ Inserting a SEQ fields can be easily achieved when inserting number to tables, f
 
 The suggested approach for inserting code fields is by using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The InsertField() method accepts code as a first argument and the result as a second argument.
 
-{{region cs-radwordsprocessing-concepts-sequence-field_0}}
-
-editor.InsertText("Figure ");
-
-editor.InsertField("SEQ Image" , "Update Figure Number");
-
-{{endregion}}
+<snippet id='codeblock-bm'/>
 
 
 ## See Also

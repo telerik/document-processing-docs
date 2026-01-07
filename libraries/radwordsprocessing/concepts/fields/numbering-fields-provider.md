@@ -21,11 +21,7 @@ The default provider can be set with the following code:
 
 #### __[C#] Example 1: Register the default NumberingFieldsProvider__
 
-{{region cs-radwordsprocessing-concepts- numbering-fields-provider_1}}
-
-	 Telerik.Windows.Documents.Flow.Extensibility.FlowExtensibilityManager.NumberingFieldsProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.NumberingFieldsProvider();
-
-{{endregion}}
+<snippet id='codeblock-bf'/>
 
 ### Using the RegisterNumberingStyleConverter
 
@@ -33,13 +29,7 @@ This method allows you to use a custom numbering style converter.
 
 #### __[C#] Example 2: Register custom NumberingStyleConverter__
 
-{{region cs-radwordsprocessing-concepts- numbering-fields-provider_2}}
-
-	Telerik.Windows.Documents.Flow.FormatProviders.Pdf.NumberingFieldsProvider numberingFieldsProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.NumberingFieldsProvider();
-	numberingFieldsProvider.RegisterNumberingStyleConverter(NumberingStyle.ChineseCounting, new NumberingStyleConverter());
-	
-
-{{endregion}}
+<snippet id='codeblock-bg'/>
 
 The NumberingStyleConverter must implement the **INumberingStyleConverter** interface which has one method that takes a number and converts it to a string.
 

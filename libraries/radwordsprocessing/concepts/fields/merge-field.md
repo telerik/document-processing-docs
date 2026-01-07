@@ -55,25 +55,16 @@ Inserting a Merge field is easily achieved through the [RadFlowDocumentEditor]({
 
 #### __[C#] Example 1: Insert Merge field__
 
-{{region cs-radwordsprocessing-concepts-merge-field_0}}
-	            
-	editor.InsertField("MERGEFIELD First_Name", "«to be updated»");
-{{endregion}}
+<snippet id='codeblock-bc'/>
   
 
 #### __[C#] Example 2: Insert Merge field with switches__
 
-{{region cs-radwordsprocessing-concepts-merge-field_1}}
-	        
-	editor.InsertField("MERGEFIELD First_Name \\b \"Mr. \" \\f \". \"", "«to be updated»");
-{{endregion}}
+<snippet id='codeblock-bd'/>
 
 #### __[C#] Example 3: Insert Merge field with a Date-Time format switch__
 
-{{region cs-radwordsprocessing-concepts-merge-field_2}}
-	        
-	editor.InsertField("MERGEFIELD Date_Time \\@ \"MM/dd/yy\"", "«to be updated»");
-{{endregion}}
+<snippet id='codeblock-be'/>
 
 After updating the field the result would be "05/13/21".
 

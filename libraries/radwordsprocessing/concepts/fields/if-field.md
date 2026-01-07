@@ -44,16 +44,7 @@ Inserting an If field is easily achieved through the [RadFlowDocumentEditor]({%s
 
 #### __[C#] Example 1: Insert If field__
 
-{{region cs-radwordsprocessing-concepts-if-field_0}}
-	            
-	editor.InsertText("Wallet: ");
-	editor.InsertInline(new Run(document));
-	Run wallet = editor.InsertText("99");
-	editor.InsertBookmark("Money", wallet, wallet);
-	editor.InsertBreak(BreakType.LineBreak);
-
-	editor.InsertField("IF Money >= 100 \"Buy\" \"The minimum required amount is 100\"", "«T-shirt»");
-{{endregion}}
+<snippet id='codeblock-bb'/>
 
 The result of the above snippet is illustrated in **Figure 1**.
 

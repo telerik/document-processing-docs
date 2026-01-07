@@ -29,14 +29,7 @@ __Example 1__ demonstrates how you can insert a section field.
          
 #### __[C#] Example 1: Insert section field__
 
-{{region cs-radwordsprocessing-concepts-section-field_0}}
-	            
-	editor.InsertText("Page ");
-	editor.InsertField("PAGE", "");
-	editor.InsertText(" of Section ");
-	editor.InsertField("SECTION", "");
-
-{{endregion}}
+<snippet id='codeblock-bkm'/>
 
 
 After updating the field the result would be such as "Page 4 of Section 2" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
