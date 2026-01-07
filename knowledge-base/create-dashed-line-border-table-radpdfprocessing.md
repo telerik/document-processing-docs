@@ -7,17 +7,17 @@ slug: create-dashed-line-border-table-radpdfprocessing
 tags: pdfprocessing, table, border, dash, line
 res_type: kb
 ---
-# Environment
+## Environment
 
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.124 | RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Description
+## Description
 
 Learn how to add a dashed line border in a table using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
-# Solution
+## Solution
 To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-table-overview%}) in RadPdfProcessing, you can follow these steps:
 
 1. Set the desired font style properties for the table.

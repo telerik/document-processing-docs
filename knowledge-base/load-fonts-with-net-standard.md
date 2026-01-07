@@ -13,11 +13,11 @@ res_type: kb
 |----|----|----|
 |2020.1.114|RadPdfProcessing for Net Standard|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
 
-# Problem
+## Problem
 
 The __RadPdfProcessing__ version for .NET standard does not look for the fonts on the operating system and falls back to the [standard fonts](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/fonts#standard-fonts).  
 
-# Solution
+## Solution
 
 Manually register the fonts in your application. 
 

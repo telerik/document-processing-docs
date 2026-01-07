@@ -7,7 +7,7 @@ slug: table-header-row-in-pdf-processing
 tags: pdf, table, header, row, bold
 res_type: kb
 ---
-# Environment
+## Environment
 
 | Version | Product | Author | 
 | --- | --- | ---- | 

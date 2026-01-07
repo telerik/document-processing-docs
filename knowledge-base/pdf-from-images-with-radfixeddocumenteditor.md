@@ -7,17 +7,17 @@ slug: pdf-from-images-with-radfixeddocumenteditor
 tags: pdf,images,editor
 res_type: kb
 ---
-# Environment
+## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.124 | RadPdfProcessing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Description
+## Description
 This tutorial demonstrates a sample approach how to generate a PDF document from a collection of images located in a local folder.
 
 ![Folder with images](images/images-folder.png) 
 
-# Solution
+## Solution
 To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which generates the document in a flow-like manner. The editor provides methods that enable the generation of documents, which automatically flows to pages.
  
 ```csharp

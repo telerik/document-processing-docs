@@ -7,7 +7,7 @@ slug: convert-excel-content-to-word-document
 tags: conversion, excel, word, snippet, image, insert, SpreadProcessing, WordsProcessing, xlsx, docx
 res_type: kb
 ---
-# Environment
+## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.124 | Document Processing Libraries (.NET Standard)|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
