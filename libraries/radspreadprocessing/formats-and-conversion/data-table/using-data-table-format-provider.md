@@ -25,11 +25,11 @@ Example 1 shows how you can import a DataTable. The sample instantiates a __Data
 	DataTable table = GetTable();
 	DataTableFormatProvider provider = new DataTableFormatProvider();
 	
-	Workbook workbook = provider.Import(table, TimeSpan.FromSeconds(10));
+	Workbook workbook = provider.Import(table);
 
 {{endregion}}
 
-You can import the data of the DataTable to an existing worksheet as well.
+You can import the data from the DataTable to an existing worksheet as well.
 
 #### __[C#] Example 2: Import DataTable to an existing Worksheet __
 
@@ -56,7 +56,7 @@ Example 3 demonstrates how you can export an existing Worksheet to a DataTable. 
 	Workbook workbook = GetWorkbook();
 	DataTableFormatProvider provider = new DataTableFormatProvider();
 	
-	DataTable table = provider.Export(workbook.ActiveWorksheet, TimeSpan.FromSeconds(10));
+	DataTable table = provider.Export(workbook.ActiveWorksheet);
 
 {{endregion}}
 
