@@ -91,3 +91,4 @@ The __ColumnExportingEventArgs__ object contains the current column instance and
 # See Also
 
 * [Using DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
+* [Keeping Numeric Values When Importing DataTable to Excel Using DataTableFormatProvider]({%slug retain-numeric-values-datatable-excel-datatableformatprovider%})
