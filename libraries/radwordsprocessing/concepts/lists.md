@@ -100,10 +100,7 @@ __Example 1__ adds a default bulleted list to a predefined RadFlowDocument.
 
 #### __[C#] Example 1: Add list template__
 
-{{region cs-radwordsprocessing-concepts-lists_0}}
-	            
-	List list = document.Lists.Add(ListTemplateType.BulletDefault);
-{{endregion}}
+<snippet id='codeblock-m'/>
 
 
 
@@ -117,11 +114,7 @@ The next tutorial will get you through the creation of a list.
 
 	#### __[C#] Step 1: Create RadFlowDocument__
 	
-	{{region cs-radwordsprocessing-concepts-lists_1}}
-		            
-		RadFlowDocument document = new RadFlowDocument();
-		Section section = document.Sections.AddSection();
-	{{endregion}}
+	<snippet id='codeblock-n'/>
 
 
 
@@ -130,11 +123,7 @@ The next tutorial will get you through the creation of a list.
 
 	#### __[C#] Step 2: Create list__
 	
-	{{region cs-radwordsprocessing-concepts-lists_2}}
-		            
-		List list = new List();
-		document.Lists.Add(list); // Adding the list in the document.
-	{{endregion}}
+	<snippet id='codeblock-o'/>
 	
 	In this case, the default __HybridMultilevel__ type of list would be created.
             
@@ -144,10 +133,7 @@ The next tutorial will get you through the creation of a list.
 
 	#### __[C#] Step 3: Iterate levels__
 	
-	{{region cs-radwordsprocessing-concepts-lists_3}}
-		    
-		for (int level = 0; level < list.Levels.Count; ++level)
-	{{endregion}}
+	<snippet id='codeblock-p'/>
 
 
 
@@ -156,18 +142,7 @@ The next tutorial will get you through the creation of a list.
 
 	#### __[C#] Step 4: Customize list levels__
 	
-	{{region cs-radwordsprocessing-concepts-lists_4}}
-		                
-		bool isEven = (level % 2) == 0;
-		
-		list.Levels[level].StartIndex = 1;
-		// We set Decimal numbering style to a list level if it is even level, otherwise Bullet.
-		list.Levels[level].NumberingStyle = isEven ? NumberingStyle.Decimal : NumberingStyle.Bullet;
-		// Accordingly to the above rule, we set the corresponding NumberTextFormat.
-		list.Levels[level].NumberTextFormat = isEven ? "%" + (level + 1) + "." : "o";
-		// Set the desired indentation of the ListLevel can be done through its ParagraphProperties:
-		list.Levels[level].ParagraphProperties.LeftIndent.LocalValue = 48 + (level * 24);
-	{{endregion}}
+	<snippet id='codeblock-q'/>
 	
 	With this step the list is ready-to-use.
             
@@ -182,15 +157,7 @@ __Example 6__ demonstrates how you can apply the list created in Steps 1-4 above
 
 #### __[C#] Example 6: Apply list__
 
-{{region cs-radwordsprocessing-concepts-lists_5}}
-	for (int level = 0; level < list.Levels.Count; level++)
-	{
-	    Paragraph paragraph = section.Blocks.AddParagraph();
-	    paragraph.Inlines.AddRun(string.Format("ListLevel: {0}", level + 1));
-	    paragraph.ListId = list.Id;
-	    paragraph.ListLevel = level;
-	}
-{{endregion}}
+<snippet id='codeblock-r'/>
 
 
 

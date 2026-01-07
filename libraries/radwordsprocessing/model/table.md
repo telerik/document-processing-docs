@@ -31,13 +31,7 @@ The code snippet from __Example 1__ creates and inserts a Table to a Section.
 
 #### __[C#] Example 1: Create and insert a table to a section__
 
-{{region cs-radwordsprocessing-model-table_0}}
-	Table emptyTable = new Table(document); // Table object with 0 rows and 0 columns.
-	section.Blocks.Add(emptyTable);
-	
-	Table table = new Table(document, 10, 5); // Table object with 10 rows and 5 columns.
-	section.Blocks.Add(emptyTable);
-{{endregion}}
+<snippet id='codeblock-dz'/>
 
 
 
@@ -49,10 +43,7 @@ You can add a table at a specific index in the __Blocks__ collection of a __Bloc
 
 #### __[C#] Example 2: Insert a table at a specific index__
 
-{{region cs-radwordsprocessing-model-table_1}}
-	Table table = new Table(document, 10, 5);
-	section.Blocks.Insert(0, table);
-{{endregion}}
+<snippet id='codeblock-dada'/>
 
 
 
@@ -61,9 +52,7 @@ You can also use the __AddTable()__ method of the __Blocks__ collection of a __B
 
 #### __[C#] Example 3: Insert a new table to a container__
 
-{{region cs-radwordsprocessing-model-table_2}}
-	Table table = section.Blocks.AddTable();
-{{endregion}}
+<snippet id='codeblock-dbdb'/>
 
 
 
@@ -72,10 +61,7 @@ Inserting a new __Table__ in the document can also be achieved with the [RadFlow
 
 #### __[C#] Example 4: Insert a table using RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-model-table_3}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(new RadFlowDocument());
-	Table table = editor.InsertTable(5, 3);
-{{endregion}}
+<snippet id='codeblock-dcdc'/>
 
 
 
@@ -146,28 +132,7 @@ __Example 5__ demonstrates how to add a __Table__ with 5 rows and 10 columns to 
 
 #### __[C#] Example 5: Create a table with content and add it to a RadFlowDocument__
 
-{{region cs-radwordsprocessing-model-table_4}}
-	RadFlowDocument document = new RadFlowDocument();
-	
-	Table table = document.Sections.AddSection().Blocks.AddTable();
-	document.StyleRepository.AddBuiltInStyle(BuiltInStyleNames.TableGridStyleId);
-	table.StyleId = BuiltInStyleNames.TableGridStyleId;
-	
-	ThemableColor cellBackground = new ThemableColor(Colors.Beige);
-	
-	for (int i = 0; i < 5; i++)
-	{
-	    TableRow row = table.Rows.AddTableRow();
-	
-	    for (int j = 0; j < 10; j++)
-	    {
-	        TableCell cell = row.Cells.AddTableCell();
-	        cell.Blocks.AddParagraph().Inlines.AddRun(string.Format("Cell {0}, {1}", i, j));
-	        cell.Shading.BackgroundColor = cellBackground;
-	        cell.PreferredWidth = new TableWidthUnit(50);
-	    }
-	}
-{{endregion}}
+<snippet id='codeblock-dddd'/>
 
 
 

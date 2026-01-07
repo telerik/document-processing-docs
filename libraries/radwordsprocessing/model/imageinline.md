@@ -35,14 +35,7 @@ __Example 1__ demonstrates how you can create an ImageInline and add it to a [Pa
 
 #### __[C#] Example 1: Create an image inline and insert it in a paragraph__
 
-{{region cs-radwordsprocessing-model-imageinline_0}}
-	ImageInline imageInline = new ImageInline(document);
-
-	byte[] data = File.ReadAllBytes("logo.png");
-	imageInline.Image.ImageSource = new ImageSource(data, "png");
-
-	paragraph.Inlines.Add(imageInline);
-{{endregion}}
+<snippet id='codeblock-cqcq'/>
 
 
 
@@ -54,14 +47,7 @@ You can add an image at a specific index in the __Inlines__ collection of a para
 
 #### __[C#] Example 2: Add an image inline to a specific position__
 
-{{region cs-radwordsprocessing-model-imageinline_1}}
-	ImageInline imageInline = new ImageInline(document);
-
-	byte[] data = File.ReadAllBytes("logo.png");
-	imageInline.Image.ImageSource = new ImageSource(data, "png");
-
-	paragraph.Inlines.Insert(0, imageInline);
-{{endregion}}
+<snippet id='codeblock-crcr'/>
 
 
 
@@ -70,9 +56,7 @@ You can also use the __AddImageInline()__ method of the __Inlines__ collection o
 
 #### __[C#] Example 3: Using AddImageInline() method__
 
-{{region cs-radwordsprocessing-model-imageinline_2}}
-	ImageInline imageInline = paragraph.Inlines.AddImageInline();
-{{endregion}}
+<snippet id='codeblock-cscs'/>
 
 
 
@@ -81,14 +65,7 @@ Inserting __ImageInline__ element in RadFlowDocument can also be achieved with [
 
 #### __[C#] Example 4: Insert an image inline using RadFlowDocumentEditor__
 
-{{region cs-radwordsprocessing-model-imageinline_3}}
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	
-	using (Stream stream = this.GetResourceStream("Telerik_logo.png"))
-	{
-	    editor.InsertImageInline(stream, "png", new Size(118, 28));
-	}
-{{endregion}}
+<snippet id='codeblock-ctct'/>
 
 
 

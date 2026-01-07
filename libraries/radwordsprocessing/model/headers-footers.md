@@ -9,15 +9,11 @@ position: 10
 
 # Headers and Footers
 
-
-
 __Header__ and __Footer__ elements are block-container elements, i.e. they can contain Tables and Paragraphs. Each [Section]({%slug radwordsprocessing-model-section%}) contains three Header and three Footer instances.
-
 
 * [Inserting Header Footer](#inserting-header/footer)
 
 * [Operating with Headers and Footers ](#operating-with-headers-and-footers)
-
 
 ## Inserting Header/Footer
 
@@ -45,14 +41,7 @@ Headers of all __HeaderFooterType__ types can be created using the code snippet 
 
 #### __[C#] Example 1: Create a header__
 
-{{region cs-radwordsprocessing-model-headers-footers_0}}
-	RadFlowDocument document = new RadFlowDocument();
-	document.Sections.AddSection();
-	
-	document.Sections.First().Headers.Add(); // Creates the default Header.
-	document.Sections.First().Headers.Add(HeaderFooterType.First);
-	document.Sections.First().Headers.Add(HeaderFooterType.Even);
-{{endregion}}
+<snippet id='codeblock-clcl'/>
 
 
 
@@ -61,14 +50,7 @@ Footers can be created using the code snippet from __Example 2__:
 
 #### __[C#] Example 2: Create a footer__
 
-{{region cs-radwordsprocessing-model-headers-footers_1}}
-	RadFlowDocument document = new RadFlowDocument();
-	document.Sections.AddSection();
-	
-	document.Sections.First().Footers.Add(); // Creates the default Footer.
-	document.Sections.First().Footers.Add(HeaderFooterType.First);
-	document.Sections.First().Footers.Add(HeaderFooterType.Even);
-{{endregion}}
+<snippet id='codeblock-cmcm'/>
 
 
 
@@ -82,9 +64,7 @@ You can obtain the Headers and Footers in a Section through the __Default__, __E
 
 #### __[C#] Example 3: Get the default header of a section__
 
-{{region cs-radwordsprocessing-model-headers-footers_2}}
-	Header defaultHeader = section.Headers.Default;
-{{endregion}}
+<snippet id='codeblock-cncn'/>
 
 
 
@@ -93,9 +73,7 @@ Similarly to the Header, the Footer element can be obtained as follows:
 
 #### __[C#] Example 4: Get the default footer of a section__
 
-{{region cs-radwordsprocessing-model-headers-footers_3}}
-	Footer defaultFooter = section.Footers.Default;
-{{endregion}}
+<snippet id='codeblock-coco'/>
 
 
 
@@ -107,21 +85,7 @@ __Example 5__ demonstrates how to add different headers for odd and even pages:
 
 #### __[C#] Example 5: Add headers for even and odd pages__
 
-{{region cs-radwordsprocessing-model-headers-footers_4}}
-	RadFlowDocument document = new RadFlowDocument();
-	document.Sections.AddSection();
-	document.HasDifferentEvenOddPageHeadersFooters = true;
-	
-	Header defaultHeader = document.Sections.First().Headers.Add();
-	Paragraph defaultHeaderParagraph = defaultHeader.Blocks.AddParagraph();
-	defaultHeaderParagraph.TextAlignment = Alignment.Right;
-	defaultHeaderParagraph.Inlines.AddRun("This is a sample odd page header.");
-	
-	Header evenHeader = document.Sections.First().Headers.Add(HeaderFooterType.Even);
-	Paragraph evenHeaderParagraph = evenHeader.Blocks.AddParagraph();
-	evenHeaderParagraph.TextAlignment = Alignment.Left;
-	evenHeaderParagraph.Inlines.AddRun("This is a sample even page header.");
-{{endregion}}
+<snippet id='codeblock-cpcp'/>
 
 
 

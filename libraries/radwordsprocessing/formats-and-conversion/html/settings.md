@@ -36,11 +36,7 @@ You can set the value of the property to any valid CSS document. **Example 1** s
 
 #### [C#] Example 1: Add CSS to the DefaultStyleSheet
 
-{{region }}
-	HtmlFormatProvider provider = new HtmlFormatProvider();
-	provider.ImportSettings.DefaultStyleSheet = provider.ImportSettings.DefaultStyleSheet + @" p {color: #ff99ac;}";
-{{endregion}}
-            
+<snippet id='codeblock-css-default'/>          
 
 ### GenericFonts
 
@@ -60,25 +56,7 @@ The __LoadImageFromUri__ event uses the __LoadImageFromUriEventArgs__ object whi
 __Example 2__ Shows how you can use the __LoadImageFromUri__ event to download an image.
 
 #### __[C#] Example 2: Use the LoadImageFromUri__
-{{region cs-radwordsprocessing-formats-and-conversion-html-settings_4}}
-
-    HtmlFormatProvider provider = new HtmlFormatProvider();
-    HtmlImportSettings importSettings = new HtmlImportSettings();
-
-    importSettings.LoadImageFromUri += (s, e) =>
-	{
-		// Load the data representing the resource 
-		System.Net.WebClient webClient = new System.Net.WebClient();
-		byte[] data = webClient.DownloadData(e.Uri);
-
-		// Pass the loaded data to the arguments
-		string extension = System.IO.Path.GetExtension(e.Uri).Substring(1); // Get the extension without the dot
-		e.SetImageInfo(data, extension);
-	};
-
-    provider.ImportSettings = importSettings;
-
-{{endregion}}
+<snippet id='codeblock-load-image-from-uri'/>
 
 The __LoadStyleSheetFromUri__ event uses the __LoadStyleSheetFromUriEventArgs__ object which exposes the following properties: 
  
@@ -88,20 +66,7 @@ The __LoadStyleSheetFromUri__ event uses the __LoadStyleSheetFromUriEventArgs__ 
 __Example 3__ Shows how you can use the __LoadStyleSheetFromUri__ event.
             
 #### __[C#] Example 3: Use the LoadStyleSheetFromUri event__
-{{region cs-radwordsprocessing-formats-and-conversion-html-settings_0}}
-
-    HtmlFormatProvider provider = new HtmlFormatProvider();
-    HtmlImportSettings importSettings = new HtmlImportSettings();
-
-  	importSettings.LoadStyleSheetFromUri += (s, e) =>
-    {
-        string styles = File.ReadAllText(@"Data\"+ e.Uri);
-        e.SetStyleSheetContent(styles);
-    };
-
-    provider.ImportSettings = importSettings;
-	
-{{endregion}}
+<snippet id='codeblock-load-stylesheet-from-uri'/>
 
 ## UriImageSource Class
 
@@ -122,13 +87,7 @@ The **UriImageSource** objects are always exported as images with URI as their s
 
 #### __[C#] Example 4: Convert UriImageSource to ImageSource__
 
-{{region cs-radwordsprocessing-formats-and-conversion-html-settings_2}}
-	UriImageSource uriImageSource = imageInline.Image.ImageSource as UriImageSource;
-	if (uriImageSource != null)
-	{
-	    imageInline.Image.ImageSource = new ImageSource(uriImageSource.Data, uriImageSource.Extension);
-	}
-{{endregion}}
+<snippet id='codeblock-ca'/>
 
 
 ## Export Settings
@@ -246,26 +205,7 @@ __Example 5__ demonstrates how you can create export settings.
 
 #### __[C#] Example 5: Create HtmlExportSettings__
 
-{{region cs-radwordsprocessing-formats-and-conversion-html-settings_1}}
-	HtmlFormatProvider provider = new HtmlFormatProvider();
-	HtmlExportSettings exportSettings = new HtmlExportSettings();
-	
-	byte[] data = null;
-	exportSettings.BordersMinimalThickness = 1;
-	exportSettings.DocumentExportLevel = DocumentExportLevel.Fragment;
-	exportSettings.IndentDocument = true;
-	exportSettings.ImageExporting += (s, e) =>
-	{
-	    e.Source = "test.jpg";
-	    data = e.Image.ImageSource.Data;
-	    e.Handled = true;
-	    e.Title = "Test image";
-	    e.ExportSize = true;
-	    e.AlternativeText = "You will see this text if the image is not loaded";
-	};
-	
-	provider.ExportSettings = exportSettings;
-{{endregion}}
+<snippet id='codeblock-cb'/>
 
 
 

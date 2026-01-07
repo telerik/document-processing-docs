@@ -26,21 +26,7 @@ __RadWordsProcessing__ allows you to merge two __RadFlowDocument__ instance usin
 
 #### __[C#] Example 1: Merge two instances of RadFlowDocument__
 
-{{region cs-radwordsprocessing-editing-clone-and-merge_0}}            
-	RadFlowDocument targetDocument;
-	RadFlowDocument sourceDocument;
-          
-	DocxFormatProvider docxFormatProvider = new DocxFormatProvider();
-
-	byte[] targetByteArray = File.ReadAllBytes("targetDocument.docx");
-	byte[] sourceByteArray = File.ReadAllBytes("sourceDocument.docx");
-
-	targetDocument = docxFormatProvider.Import(targetByteArray, TimeSpan.FromSeconds(10));
-	sourceDocument = docxFormatProvider.Import(sourceByteArray, TimeSpan.FromSeconds(10));
-
-	// targetDocument will contain merged content and styles. 
-	targetDocument.Merge(sourceDocument);
-{{endregion}}
+<snippet id='codeblock-bn'/>
 
 
 
@@ -66,17 +52,7 @@ __Example 2__ shows how to merge documents by specifying the __MergeOptions__ pa
 
 #### __[C#] Example 2: Merge documents with MergeOptions__
 
-{{region cs-radwordsprocessing-editing-clone-and-merge_1}}
-	            
-	RadFlowDocument targetDocument;
-	RadFlowDocument sourceDocument;
-	//...
-	MergeOptions mergeOptions = new MergeOptions()
-	{
-	    ConflictingStylesResolutionMode = ConflictingStylesResolutionMode.RenameSourceStyle
-	};
-	targetDocument.Merge(sourceDocument, mergeOptions);
-{{endregion}}
+<snippet id='codeblock-bo'/>
 
 
 >tip You could insert one document into another at a specified position using the InsertDocument() method of **RadFlowDocumentEditor**. More information is available [here]({%slug radwordsprocessing-editing-insert-documents%}).
@@ -88,10 +64,7 @@ __RadFlowDocument__ provides a __Clone()__ method, which creates a deep copy of 
 
 #### __[C#] Example 3: Clone a RadFlowDocument__
 
-{{region cs-radwordsprocessing-editing-clone-and-merge_2}}
-	        
-	RadFlowDocument clonedDocument = document.Clone();
-{{endregion}}
+<snippet id='codeblock-bp'/>
 
 
 
@@ -119,9 +92,7 @@ The __Clone()__ method has two overloads:
 
 #### __[C#] Example 4: Clone a section__
 
-{{region cs-radwordsprocessing-editing-clone-and-merge_3}}
-	Section clonedSection = section.Clone(radFlowDocument);
-{{endregion}}
+<snippet id='codeblock-bq'/>
 
 >tip With the **DocumentElementImporter** class you can import a document element from one document (source) and insert it into another (target). For more details, check [this article]({%slug radwordsprocessing-editing-import-document-element%}).
 
