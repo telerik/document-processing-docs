@@ -423,20 +423,11 @@ if (saveFileDialog.ShowDialog() == true)
 } 
 ````
 
-## Related resources
-
-- [Getting Started with Telerik Document Processing]({%slug getting-started%})
-- [Installing Telerik Document Processing on Your Computer]({%slug installation-installing-on-your-computer%})
-- [Telerik Document Processing Developer Focused examples repository](https://github.com/telerik/document-processing-sdk)
-- [RadSpreadProcessing - Formats and conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}})
-- [RadSpreadProcessing - Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%})
-- [RadSpreadProcessing Workbook Overview]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
-
 ## See Also
 
 - [Getting Started with Telerik Document Processing]({%slug getting-started%})
 - [Installing Telerik Document Processing on Your Computer]({%slug installation-installing-on-your-computer%})
 - [Telerik Document Processing Developer Focused examples repository](https://github.com/telerik/document-processing-sdk)
-- [RadSpreadProcessing - Formats and conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}})
+- [RadSpreadProcessing - Formats and conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%})
 - [RadSpreadProcessing - Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%})
 - [RadSpreadProcessing Workbook Overview]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})

@@ -26,7 +26,7 @@ To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-tab
 4. Set the `Padding` property of the table's `DefaultCellProperties` to the desired padding values.
 5. Add rows and cells to the table and set the preferred width for each cell.
 6. Insert text into each cell using the desired font style properties.
-7. Use a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}}) to draw the table on the document page.
+7. Use a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to draw the table on the document page.
 8. Specify the desired dashed line style by setting the `StrokeDashArray` property of the `GraphicProperties` of the `FixedContentEditor`.
 
 Here is a sample code snippet that demonstrates how to create a dashed line border for a table in RadPdfProcessing:

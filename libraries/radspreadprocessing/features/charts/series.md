@@ -169,7 +169,7 @@ These properties enable you to control the options for each of the series indepe
 
 ### BubbleSeries
 
- - **BubbleSizes**: Gets or sets the data for the bubble size of the series. It is of type [IChartData]({%slug radspreadprocessing-features-charts-chart-data%}}) and you can set it to a specific cell range or directly using values. 
+ - **BubbleSizes**: Gets or sets the data for the bubble size of the series. It is of type [IChartData]({%slug radspreadprocessing-features-charts-chart-data%}) and you can set it to a specific cell range or directly using values. 
 
 ### LineSeries
 

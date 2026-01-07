@@ -81,7 +81,7 @@ Here is an example of how to implement this solution:
   ![Table with Images](images/pdf-table-with-images.png)   
 
 # See Also
-- [RadPdfProcessing]({%slug radpdfprocessing-overview%}})
+- [RadPdfProcessing]({%slug radpdfprocessing-overview%})
 - [Table]({%slug radpdfprocessing-editing-table-overview%})
 - [Images]({%slug radpdfprocessing-model-image%})
 
