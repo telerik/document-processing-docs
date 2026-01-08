@@ -18,7 +18,7 @@ ticketid: 1707296
 
 ## Description
 
-When importing a dataset into a worksheet using Telerik Document Processing [SpreadProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/overview), columns defined as `decimal` in the dataset appear as text in the worksheet instead of numeric values. This happens because the import functionality checks if the data type is primitive and only interprets primitive types as numeric. Since `decimal` is not a primitive type, it is treated as text.
+When importing a DataTable into a worksheet using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), columns defined as `decimal` in the DataTable appear as text in the worksheet instead of numeric values. This happens because the import functionality checks if the data type is primitive and only interprets primitive types as numeric.Primitive types narrow to CLR primitives (sbyte, byte, short, ushort, int, uint, long, ulong, float, double, char, IntPtr, UIntPtr, bool). Since `decimal` is not a primitive type, it is treated as text.
 
 This knowledge base article also answers the following questions:
 - How to convert decimal columns to double for proper import in Telerik Document Processing?
@@ -31,7 +31,7 @@ To process `decimal` columns as numeric values, clone the `DataTable`, change th
 
 1. Clone the original `DataTable`. 
 2. Update the column type for `decimal` columns to `double`. 
-3. Import the cloned table into the worksheet.
+3. Import the cloned table into the worksheet using the [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%}).
 
 Example code implementation:
 
@@ -86,6 +86,5 @@ static void Main(string[] args)
 
 ## See Also
 
-- [Telerik Document Processing SpreadProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/overview)
-- [DataTableFormatProvider Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/datatable-import-export)
-- [API Reference for Workbook](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.workbook)
+- [Telerik Document Processing SpreadProcessing Overview]({%slug radspreadprocessing-overview%})
+- [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
