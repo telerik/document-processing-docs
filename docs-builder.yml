@@ -343,3 +343,117 @@ redirects:
   type: Permanent
 
 
+- from: "^/licensing/copyright"
+  to: "/distribution-and-licensing/license-agreement"
+  type: Permanent
+
+- from: "^/licensing/license-agreement"
+  to: "/distribution-and-licensing/license-agreement"
+  type: Permanent
+
+- from: "^/personal-data-collection"
+  to: "/distribution-and-licensing/license-agreement"
+  type: Permanent
+
+- from: "/installation-and-deployment/redistributing-telerik-document-processing"
+  to: "/distribution-and-licensing/redistributing-telerik-document-processing"
+  type: Permanent
+
+- from: "^/licensing/trial-license-limitations"
+  to: "/distribution-and-licensing/trial-license-limitations"
+  type: Permanent
+
+- from: "^/installation/installing-on-your-computer"
+  to: "/getting-started/installation/installing-on-your-computer"
+  type: Permanent
+
+- from: "^/installation-and-deployment/installing-on-your-computer"
+  to: "/getting-started/installation/installing-on-your-computer"
+  type: Permanent
+
+- from: "^/getting-started/installing-on-your-computer"
+  to: "/getting-started/installation/installing-on-your-computer"
+  type: Permanent
+
+- from: "^/pdf-export"
+  to: "/getting-started/installation/pdf-export"
+  type: Permanent
+
+- from: "/installation-and-deployment/system-requirements"
+  to: "/getting-started/installation/system-requirements"
+  type: Permanent
+
+- from: "/installation-and-deployment/integration-with-visual-studio"
+  to: "/integration/integration-with-visual-studio"
+  type: Permanent
+
+- from: "/installation-and-deployment/upgrade-instructions"
+  to: "/upgrade/upgrade-instructions"
+  type: Permanent
+
+- from: "/for-more-help"
+  to: "/introduction"
+  type: Permanent
+
+- from: "/radspreadprocessing/formats-and-conversion/xls/(.*)"
+  to: "/libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xls/$1"
+  type: Permanent
+
+- from: "/radspreadprocessing/formats-and-conversion/xlsx/(.*)"
+  to: "/libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsx/$1"
+  type: Permanent
+
+- from: "/radwordsprocessing/formats-and-conversion/docx/(.*)"
+  to: "/libraries/radwordsprocessing/formats-and-conversion/word-file-formats/docx/$1"
+  type: Permanent
+
+- from: "/concepts/hyperlinks"
+  to: "/libraries/radwordsprocessing/concepts/fields/hyperlink-field"
+  type: Permanent
+
+- from: "/libraries/radspreadprocessing/cross-platform$"
+  to: "/libraries/radspreadprocessing/cross-platform-support/cross-platform"
+  type: Permanent
+
+- from: "/libraries/radpdfprocessing/cross-platform$"
+  to: "/libraries/radpdfprocessing/cross-platform/overview"
+  type: Permanent
+
+- from: "/libraries/radpdfprocessing/features/digital-signature$"
+  to: "/libraries/radpdfprocessing/features/digital-signature/overview"
+  type: Permanent
+
+- from: "/libraries/radpdfprocessing/model/interactive-forms/widgets$"
+  to: "/libraries/radpdfprocessing/model/annotations/widgets"
+  type: Permanent
+
+- from: "^/distribution-and-licensing/license-key$"
+  to: "/distribution-and-licensing/license-key/setting-up-license-key"
+  type: Permanent
+  
+- from: "^/libraries/radpdfprocessing/model/formsource$"
+  to: "/libraries/radpdfprocessing/model/formsource/overview"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/editing/tablerow$"
+  to: "/libraries/radpdfprocessing/editing/table/tablerow"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/editing/tablecell$"
+  to: "/libraries/radpdfprocessing/editing/table/tablecell"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/editing/table$"
+  to: "/libraries/radpdfprocessing/editing/table/overview"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/features/digital-signature$"
+  to: "/libraries/radpdfprocessing/features/digital-signature/overview"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/howto/comply-with-pdfa-standard$"
+  to: "/libraries/radpdfprocessing/concepts/comply-with-pdfa-standard"
+  type: Permanent
+
+
+
