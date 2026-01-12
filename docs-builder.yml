@@ -39,7 +39,11 @@ excluded-files:
 
 meta:
   knowledge-base:
+    title: Knowledge Base
     position: 100
+    res_type: kb
+    relativeUrl: /knowledge-base
+    hideChildren: true
   libraries/radziplibrary/features:
     title: Features
     position: 5
