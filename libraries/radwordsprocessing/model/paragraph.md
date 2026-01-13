@@ -232,4 +232,4 @@ __Example 9__ shows how to create Borders and set them to a Paragraph.
  * [TableCell]({%slug radwordsprocessing-model-tablecell%})
  * [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})
  * [Run]({%slug radwordsprocessing-model-run%})
- * [Run]({%slug create-bullet-list-using-paragraph-styles-radwordsprocessing%})
+ * [Bullet list with Paragraph styles]({%slug create-bullet-list-using-paragraph-styles-radwordsprocessing%})
