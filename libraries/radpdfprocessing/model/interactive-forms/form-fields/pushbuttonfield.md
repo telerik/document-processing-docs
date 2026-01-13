@@ -24,7 +24,7 @@ This class corresponds to FormFieldType.PushButton enum value and represents a s
 PushButtonField provides a single property called **Widgets**. It represents the collection of Widget annotations, which visualize the field on the PDF pages. The widgets can be added and removed from the collection using the collection's **AddWidget()** and **Remove()** methods respectively. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
 
 
-#### **[C#] Example 1: Create a PushButtonField and add it to a page**
+#### **Example 1: Create a PushButtonField and add it to a page**
 <snippet id='pdf-push-button-field'/>
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.

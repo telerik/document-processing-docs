@@ -49,16 +49,16 @@ The __SetHeight()__ method is used to change the height of rows. It takes a sing
 __Example 1__ shows how to retrieve and change the height of several rows.
         
 
-#### __[C#] Example 1: Change row height__
+#### __Example 1: Change row height__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
 	RowSelection rowSelection = worksheet.Rows[5, 7];
 	double rowsHeight = rowSelection.GetHeight().Value.Value;
 	rowSelection.SetHeight(new RowHeight(rowsHeight + 50, true));
-{{endregion}}
+```
 
 
 
@@ -67,15 +67,15 @@ __Example 1__ shows how to retrieve and change the height of several rows.
 The autofit feature offers a handy approach for resizing multiple rows so that each of them chooses a height that fits its content. To autofit the height of rows, you need to create a __RowSelection__ instance that contains the rows that need to be resized and invoke the __AutoFitHeight()__ method of the __RowSelection__ object. __Example 2__ shows how to fit the height of rows with indexes 6, 7 and 8.
         
 
-#### __[C#] Example 2: Fit height of rows__
+#### __Example 2: Fit height of rows__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
 	RowSelection rowSelection = worksheet.Rows[5, 7];
 	rowSelection.AutoFitHeight();
-{{endregion}}
+```
 
 > The expected behavior when calling the **AutoFitHeight** method on a row that contains merged and wrapped cells is to set the default [RowHeight](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.rowheight) value instead of calculating the row height according to its content. In order to measure the cell content you can check the exposed by the [LayoutHelper class](#layouthelper-class) methods. 
 
@@ -102,45 +102,45 @@ The __SetWidth()__ method is used to change the width of columns. It takes a sin
 __Example 3__ shows how to retrieve and change the width of several columns.
         
 
-#### __[C#] Example 3: Change columns width__
+#### __Example 3: Change columns width__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_2}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
 	ColumnSelection columnSelection = worksheet.Columns[5, 7];
 	double columnWidth = columnSelection.GetWidth().Value.Value;
 	columnSelection.SetWidth(new ColumnWidth(columnWidth + 50, true));
-{{endregion}}
+```
 
 ## Auto Fit Columns Width
 
 The autofit feature offers a handy approach for resizing multiple columns so that each of them chooses a width that fits its content. To autofit the columns, you need to create a __ColumnSelection__ instance that holds the columns to be resized, and invoke its __AutoFitWidth()__ method. __Example 4__ shows how to fit the column width of columns F to H.
         
 
-#### __[C#] Example 4: Fit width of columns__
+#### __Example 4: Fit width of columns__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_3}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
 	ColumnSelection columnSelection = worksheet.Columns[5, 7];
 	columnSelection.AutoFitWidth();
-{{endregion}}
+```
 
 
 Another way to auto fit column widths is to use the __ExpandToFitNumberValuesWidth()__ method. It affects cells that contain only number values and have a __ColumnWidth__ with __IsCustom__ property set to true. __Example 5__ demonstrates the alternative way to fit the column width.
         
 
-#### __[C#] Example 5: Fit with ExpandToFitNumberValuesWidth()__
+#### __Example 5: Fit with ExpandToFitNumberValuesWidth()__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_4}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
 	ColumnSelection columnSelection = worksheet.Columns[5, 7];
 	columnSelection.ExpandToFitNumberValuesWidth();
-{{endregion}}
+```
 
 > The unit type used to set the width of the columns and the height of the rows in RadSpreadProcessing is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
 
@@ -152,27 +152,27 @@ Another way to auto fit column widths is to use the __ExpandToFitNumberValuesWid
 
 __Example 6__ shows how to convert and set from pixel to MS Excel column width.    
 
-#### __[C#] Example 6: Convert from pixel column width to MS Excel column width__
+#### __Example 6: Convert from pixel column width to MS Excel column width__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_7}}
+```csharp
 
 	double pixelWidthToExcelWidth = UnitHelper.PixelWidthToExcelColumnWidth(workbook, 57);
 	ColumnWidth newColumnWidth = new ColumnWidth(pixelWidthToExcelWidth, isCustom: true);
 	worksheet.Columns[0].SetWidth(newColumnWidth);
-{{endregion}}
+```
 
 * ExcelColumnWidthToPixelWidth: Converts MS Excel column width to pixels width.
 
 __Example 7__ shows how to convert and set from MS Excel to pixel column width.    
 
-#### __[C#] Example 7: Convert from MS Excel column width to pixel column width__
+#### __Example 7: Convert from MS Excel column width to pixel column width__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_8}}
+```csharp
 
 	double excelWidthToPixelWidth = UnitHelper.ExcelColumnWidthToPixelWidth(workbook, 8.11);
 	ColumnWidth newColumnWidth = new ColumnWidth(excelWidthToPixelWidth, isCustom: true);
 	worksheet.Columns[0].SetWidth(newColumnWidth);
-{{endregion}}
+```
 
 The row height in MS Excel is measured in points so in order to set them you can convert this unit and set the exact number you are passing to the **SetHeight**() method for the height using the UnitHelper class.
 
@@ -183,21 +183,21 @@ The [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/tel
 
 * **CalculateCellContentSize**: Calculates the size of the cell content.
 
-#### __[C#] Example 8: Get the Size of the cell content__
+#### __Example 8: Get the Size of the cell content__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_9}}
+```csharp
 
 	Size cellContentSize = LayoutHelper.CalculateCellContentSize(worksheet, rowIndex, columnIndex);
-{{endregion}}
+```
 
 * **CalculateCellLayoutBox**: Creates, arranges and returns the cell layout box.
 
-#### __[C#] Example 9: Get the cell layout box__
+#### __Example 9: Get the cell layout box__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-resizing_10}}
+```csharp
 
 	CellLayoutBox cellLayoutBox = LayoutHelper.CalculateCellLayoutBox(worksheet, rowIndex, columnIndex);
-{{endregion}}
+```
 
 ## See Also
 

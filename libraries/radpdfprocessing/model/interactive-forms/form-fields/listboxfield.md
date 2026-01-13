@@ -37,7 +37,7 @@ ListBoxField provides the following properties:
 * **TopIndex**: Gets or sets integer value providing the index of the choice that should be visualized on top of the list box viewport rectangle.
 
 
-#### **[C#] Example 1: Create a ListBoxField and add it to a page**
+#### **Example 1: Create a ListBoxField and add it to a page**
 <snippet id='pdf-listboxfield'/>
 
 ## See Also

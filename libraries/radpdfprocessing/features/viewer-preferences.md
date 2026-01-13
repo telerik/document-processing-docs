@@ -34,7 +34,7 @@ The ViewerPreferences class provides the following properties:
 
 >important If a document is created with the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standard, the **ShouldDisplayDocumentTitle** setting is automatically set to **true** to comply with the standard's [accessability]({%slug create-accessible-pdf-documents%}) requirements.
 
-#### **[C#] Example: Setting viewer preferences**
+#### **Example: Setting viewer preferences**
 
 You can access and modify viewer preferences through the **ViewerPreferences** property of the **RadFixedDocument** class.
 

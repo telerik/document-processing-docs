@@ -53,16 +53,16 @@ The possible switches for a Merge field are:
 Inserting a Merge field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
   
 
-#### __[C#] Example 1: Insert Merge field__
+#### __Example 1: Insert Merge field__
 
 <snippet id='codeblock-bc'/>
   
 
-#### __[C#] Example 2: Insert Merge field with switches__
+#### __Example 2: Insert Merge field with switches__
 
 <snippet id='codeblock-bd'/>
 
-#### __[C#] Example 3: Insert Merge field with a Date-Time format switch__
+#### __Example 3: Insert Merge field with a Date-Time format switch__
 
 <snippet id='codeblock-be'/>
 

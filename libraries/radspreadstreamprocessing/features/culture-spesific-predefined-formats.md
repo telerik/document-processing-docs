@@ -54,9 +54,9 @@ Starting with R3 2021, __SpreadStreamProcessing__ exposes the __BuiltInNumberFor
 
 Example 1 demonstrates how you can get specific format and set it when exporting a cell.
 
-#### [C#] Example 1: Using BuiltInNumberFormats class
+#### Example 1: Using BuiltInNumberFormats class
 
-{{region radspreadstreamprocessing-features-culture-spesific-predefined-formats_0}}
+```csharp
 
     SpreadCellFormat format = new SpreadCellFormat();
     format.NumberFormat = BuiltInNumberFormats.GetFraction();
@@ -67,4 +67,4 @@ Example 1 demonstrates how you can get specific format and set it when exporting
         cell.SetFormat(format);
     }
 
-{{endregion}}
+```

@@ -60,7 +60,7 @@ The __MatrixPosition__ class exposes a static __Default__ property, which repres
 __Example 1__ shows how transformations can be appended.
         
 
-#### __[C#] Example 1: Trasform MatrixPosition__
+#### __Example 1: Trasform MatrixPosition__
 
 <snippet id='pdf-matrix-position'/>
 
@@ -85,7 +85,7 @@ The __SimplePosition__ class exposes a static __Default__ property which represe
 __Example 2__ shows how transformations overwrite the previous transformations of the same type.
         
 
-#### __[C#] Example 2: Transform SimplePosition__
+#### __Example 2: Transform SimplePosition__
 
 <snippet id='pdf-simple-position'/>
 

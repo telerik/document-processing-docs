@@ -34,9 +34,7 @@ How to create a custom [ListLevel](https://docs.telerik.com/devtools/document-pr
 
 This functionality could be achieved by creating a custom class implementing [IBulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.IBulletNumberingFormat.html) and passing it to [BulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html#collapsible-Telerik_Windows_Documents_Fixed_Model_Editing_Lists_ListLevel_BulletNumberingFormat) property of the [ListLevel](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html) class.
 
-#### __[C#]__
-
-{{region kb-create-custom-image-bullets1}}
+```csharp
 
 	RadFixedDocument document = new RadFixedDocument();
 
@@ -61,11 +59,11 @@ This functionality could be achieved by creating a custom class implementing [IB
 	RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document);
 	editor.InsertTable(table);
  
-{{endregion}}
+```
 
-#### __[C#] Create custom image numbering bullet__
+#### __Create custom image numbering bullet__
 
-{{region kb-create-custom-image-bullets2}}
+```csharp
 
 	private List GetCustomBullet()
 	{
@@ -98,11 +96,11 @@ This functionality could be achieved by creating a custom class implementing [IB
 		return list;
 	}
 
-{{endregion}}
+```
 
-#### __[C#] Creating a custom class implementing IBulletNumberingFormat__
+#### __Creating a custom class implementing IBulletNumberingFormat__
 
-{{region kb-create-custom-image-bullets2}}
+```csharp
 
 	internal class CustomBullet : IBulletNumberingFormat
     {
@@ -120,4 +118,4 @@ This functionality could be achieved by creating a custom class implementing [IB
         }
     }
 	
-{{endregion}}
+```

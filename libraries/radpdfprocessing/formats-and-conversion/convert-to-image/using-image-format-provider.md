@@ -30,14 +30,14 @@ A [FontsProvider](https://docs.telerik.com/devtools/document-processing/librarie
 
 To convert your documents' pages to images, use the __Export__ method. Note that the export method does not accept a document but a page. This is why you need to iterate all pages. In this example, each page is saved in a separate file.
 
-#### __[C#] Example 1: Export RadFixedDocument to Image__
+#### __Example 1: Export RadFixedDocument to Image__
 
 <snippet id='pdf-export-to-image'/>
 
 ## Exporting Asynchronously
 The __ExportAsync__ method allows you to perform the conversion asynchronously.
 
-#### __[C#] Example 2: Export RadFixedDocument to Image Async__
+#### __Example 2: Export RadFixedDocument to Image Async__
 
 <snippet id='pdf-async-export-to-image'/>
 

@@ -19,7 +19,7 @@ __Example 1__ demonstrates how to export a __RadFlowDocument__ instance to PDF a
 
 >tipIn order to specify export settings to the PdfFormatProvider you need to add both the Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export and Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export namespaces. In __Example 1__ the *Fixed* alias corresponds to the *Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export* namespace.
 
-#### __[C#] Example 1: Export PDF/A compliant document__
+#### __Example 1: Export PDF/A compliant document__
 
 <snippet id='codeblock-ce'/>
 
@@ -34,7 +34,7 @@ ExtensibilityManager provides an option to control how lists with different __Nu
 __Example 2__ shows how to register a custom *ChineseCountingConverter* class instance that converts a number with NumberingStyle.ChineseCounting.
 
 
-#### __[C#] Example 2: Register numbering style converter__
+#### __Example 2: Register numbering style converter__
 
 <snippet id='codeblock-cf'/>
 

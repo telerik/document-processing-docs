@@ -28,9 +28,9 @@ Whenever cells insertion is performed, all values that appear to the right or be
 The __CellSelection__ class exposes an __Insert()__ method that takes one argument which indicates the direction of the shift. Also, the class offers a __CanInsertOrRemove()__ method that determines if the insertion is possible. __Example 1__ shows how to insert cells using methods mentioned above.
         
 
-#### __[C#] Example 1: Insert cells__
+#### __Example 1: Insert cells__
 
-{{region cs-radspreadprocessing-working-with-cells-insert-remove-cells_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -41,7 +41,7 @@ The __CellSelection__ class exposes an __Insert()__ method that takes one argume
 	{
 	    selection.Insert(InsertShiftType.Right);
 	}
-{{endregion}}
+```
 
 
 
@@ -56,9 +56,9 @@ Whenever you remove cells, all values that appear to the right or below the Cell
 The __CellSelection__ class exposes a __Remove()__ method that takes one argument which indicates the direction of the shift. The class also offers a __CanInsertOrRemove()__ method that determines if the removal is possible. __Example 2__ shows how to remove cells using methods mentioned above.
         
 
-#### __[C#] Example 2: Remove cells__
+#### __Example 2: Remove cells__
 
-{{region cs-radspreadprocessing-working-with-cells-insert-remove-cells_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -69,6 +69,6 @@ The __CellSelection__ class exposes a __Remove()__ method that takes one argumen
 	{
 	    selection.Remove(RemoveShiftType.Up);
 	}
-{{endregion}}
+```
 
 

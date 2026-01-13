@@ -19,9 +19,7 @@ A common scenario is to replace a temporary page content (a templated text) with
 ## Solution
 The following example demonstrates the approach of iterating the page content and finding TextFragment elements matching the *$CollectSignature* text. For each found match, a Signature Field is created and the TextFragment is replaced with a Signature widget. The *Rect* property is used to position and outline the Signature widget on the page.
 
-#### __C#__
-
-{{region kb-position-digital-signature-on-page}}
+```csharp
 
 	foreach (RadFixedPage page in document.Pages)
 	{
@@ -52,4 +50,4 @@ The following example demonstrates the approach of iterating the page content an
 		}
 	}
 
-{{endregion}}
+```

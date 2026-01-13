@@ -21,12 +21,12 @@ Adding a new worksheet to a workbook can be easily achieved through its __Worksh
 __Example 1__ creates a workbook from scratch and adds a single worksheet to it. Since this is the first worksheet in the workbook, it is also set as the active worksheet. All worksheets added after it will not become active.
         
 
-#### __[C#] Example 1: Create a workbook and add a worksheet to it__
+#### __Example 1: Create a workbook and add a worksheet to it__
 
-{{region cs-radspreadprocessing-working-with-worksheets-add-remove-worksheets_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet newWorksheet = workbook.Worksheets.Add();
-{{endregion}}
+```
 
 
 
@@ -38,9 +38,9 @@ The __Worksheets__ collection of the workbook offers two methods for removing wo
 __Example 2__ creates a workbook and adds four worksheets. All worksheets are with their default names: Sheet1, Sheet2, Sheet3 and Sheet4. The code further demonstrates how to remove three worksheets using all of the aforementioned remove methods.
         
 
-#### __[C#] Example 2: Add and remove worksheets__
+#### __Example 2: Add and remove worksheets__
 
-{{region cs-radspreadprocessing-working-with-worksheets-add-remove-worksheets_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add(); // Sheet1
 	Worksheet secondWorksheet = workbook.Worksheets.Add(); // Sheet2
@@ -51,16 +51,16 @@ __Example 2__ creates a workbook and adds four worksheets. All worksheets are wi
 	workbook.Worksheets.Remove("Sheet1"); // Removed Sheet1
 	workbook.Worksheets.Remove(secondWorksheet); // Removed Sheet2
 	// the only worksheet left is Sheet3
-{{endregion}}
+```
 
 
 ## Reorder Worksheets
 
 If you would like to change the order the worksheets appear inside the workbook, you can use the **Move()** method of the **Sheets** collection. The method allows you to move one or more consecutive sheets to a specified position. In **Example 3**, you can see how you can insert 4 sheets and move the last one to the first position in the collection. When the workbook is visualized, the fourth sheet will be the first one visible in the sheet tabs.
 
-#### __[C#] Example 3: Add and reorder worksheets__
+#### __Example 3: Add and reorder worksheets__
 
-{{region cs-radspreadprocessing-working-with-worksheets-add-remove-worksheets_2}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add(); // Sheet1
 	workbook.Worksheets.Add(); // Sheet2
@@ -69,4 +69,4 @@ If you would like to change the order the worksheets appear inside the workbook,
 	
 	workbook.Sheets.Move(3, 1, 0); // Move the fourth sheet to the first place
 
-{{endregion}}
+```

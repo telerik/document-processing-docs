@@ -22,9 +22,9 @@ The workbook offers API that lets you change the __ActiveWorksheet__ effortlessl
 __Example 1__ creates a new workbook from scratch and subscribes to its __ActiveSheetChanged__ event. Further, the code adds two worksheets. Note that when the first worksheet is added it is automatically selected as the active worksheet, because it is the only worksheet in the workbook. That said, adding the first worksheet also triggers the __ActiveSheetChanged__ event. When the second worksheet is added, however, the active worksheet is not changed and, thus, the event is not thrown. Later, the snippet sets the second worksheet to be the active one, which triggers the __ActiveSheetChanged__ event.
         
 
-#### __[C#] Example 1: Change active sheet__
+#### __Example 1: Change active sheet__
 
-{{region cs-radspreadprocessing-working-with-worksheets-activate-worksheet_0}}
+```csharp
 	public void ActivateWorksheetDemo()
 	{
 	    Workbook workbook = new Workbook();
@@ -41,6 +41,6 @@ __Example 1__ creates a new workbook from scratch and subscribes to its __Active
 	{
 	    // the active worksheet is changed
 	}
-{{endregion}}
+```
 
 

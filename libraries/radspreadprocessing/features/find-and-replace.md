@@ -50,9 +50,9 @@ Both Workbook and Worksheet classes expose methods that search their contents fo
 __Example 1__ creates a new workbook with two empty worksheets and assigns sample values to the sheets. The __FindOptions__ created below specifies that the search will be conducted for the whole workbook and will start from cell A1 of the first worksheet. The sample snippet illustrates how to use __Find()__ and __FindAll()__ methods.
         
 
-#### __[C#] Example 1: Perform find an find all__
+#### __Example 1: Perform find an find all__
 
-{{region cs-radspreadprocessing-features-find-and-replace_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet1 = workbook.Worksheets.Add();
 	Worksheet worksheet2 = workbook.Worksheets.Add();
@@ -74,7 +74,7 @@ __Example 1__ creates a new workbook with two empty worksheets and assigns sampl
 	
 	FindResult findResult = workbook.Find(options);
 	IEnumerable<FindResult> findResults = workbook.FindAll(options);
-{{endregion}}
+```
 
 
 
@@ -89,9 +89,9 @@ As a supplement to the __Find()__ and __FindAll()__ methods, the Workbook and Wo
 __Example 2__ creates a workbook from scratch with two empty worksheets and adds some sample values. The __ReplaceOptions__ instance specifies that the replace is performed on the whole workbook and includes formula values. The operation starts from cell A1 of the first worksheet and the search is done by columns.
         
 
-#### __[C#] Example 2: Perform replace and replace all__
+#### __Example 2: Perform replace and replace all__
 
-{{region cs-radspreadprocessing-features-find-and-replace_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet1 = workbook.Worksheets.Add();
 	Worksheet worksheet2 = workbook.Worksheets.Add();
@@ -121,7 +121,7 @@ __Example 2__ creates a workbook from scratch with two empty worksheets and adds
 	}
 	
 	workbook.ReplaceAll(options);
-{{endregion}}
+```
 
 
 

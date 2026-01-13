@@ -20,7 +20,7 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 
 ### Creating an Embedded File Stream
  
-#### **[C#] Creating an embedded file stream**
+#### **Creating an embedded file stream**
 
 <snippet id='pdf-create-embedded-file-stream'/>
 
@@ -43,7 +43,7 @@ The **MergedEmbeddedFileNameResolving** event occurs when trying to resolve conf
 |**NewName**|Gets or sets the new embedded file name.|
 |**UsedNames**|Gets the names that are already used for embedded files in the same RadFixedDocument.|
 
-#### **[C#] Resolving Duplicated Names**
+#### **Resolving Duplicated Names**
 
 <snippet id='pdf-duplicated-file-names'/>
 

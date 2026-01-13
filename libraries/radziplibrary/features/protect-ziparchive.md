@@ -29,9 +29,9 @@ In order to create a password-protected ZIP archive, you need to pass a **Passwo
         
 **PasswordEncryptionSettings** has a __Password__ property of type string, which represents the used password.
  
-#### __[C#] Example 1: Create a password-protected ZIP archive__
+#### __Example 1: Create a password-protected ZIP archive__
 
-{{region cs-radziplibrary-protect-ziparchive_0}}
+```csharp
 
 	using (Stream stream = File.Open("test.zip", FileMode.Create))
 	{
@@ -56,11 +56,11 @@ In order to create a password-protected ZIP archive, you need to pass a **Passwo
     	}
 	}
 
-{{endregion}}
+```
 
-#### __[VB.NET] Example 1: Create a password-protected ZIP archive__
+#### __Example 1: Create a password-protected ZIP archive__
 
-{{region vb-radziplibrary-protect-ziparchive_0}}
+```csharp
 
 	Using stream As Stream = File.Open("test.zip", FileMode.Create)
 			'By default the EncryptionStrenght is 256 bits but it can be explicitly specified (EncryptionStrength.Aes128, EncryptionStrength.Aes192, and EncryptionStrength.Aes256) by passing it to the constructor
@@ -83,7 +83,7 @@ In order to create a password-protected ZIP archive, you need to pass a **Passwo
     		End Using
 	End Using
 
-{{endregion}}
+```
 
 
 >tip You must always dispose of the ZIP archive object when all operations that use it are completed. Telerik Support recommends that you declare and instantiate the ZIP archive object in a using statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
@@ -93,9 +93,9 @@ In order to create a password-protected ZIP archive, you need to pass a **Passwo
 In order to open a password-protected __ZipArchive__, you need to pass a __DefaultEncryptionSettings__ object with the password that was used to create the archive in the first place.
                 
 
-#### __[C#] Example 2: Open and read a password-protected ZIP archive__
+#### __Example 2: Open and read a password-protected ZIP archive__
 
-{{region cs-radziplibrary-protect-ziparchive_1}}
+```csharp
 	    
 	using (FileStream stream = File.Open("test.zip", FileMode.Open))
 	{ 
@@ -109,11 +109,11 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
     		}
 	}
 
-{{endregion}}
+```
 
-#### __[VB.NET] Example 2: Open and read a password-protected ZIP archive__
+#### __Example 2: Open and read a password-protected ZIP archive__
 
-{{region vb-radziplibrary-protect-ziparchive_1}}
+```csharp
 
 	Sub Main()	
 		Using stream As FileStream = File.Open("test.zip", FileMode.Open)
@@ -132,7 +132,7 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
         	e.Password = "passw0rd"
 	End Sub
      
-{{endregion}}
+```
 
 >tip You must always dispose of the ZIP archive object when all operations that use it are completed. We recommend that you declare and instantiate the ZIP archive object in a **using** statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
           

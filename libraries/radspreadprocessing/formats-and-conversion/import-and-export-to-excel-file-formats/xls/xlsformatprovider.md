@@ -28,9 +28,9 @@ Once you reference the aforementioned packages, you need to create an instance o
 __Example 1__ shows how to import an XLS file using a FileStream. The code assures that a file with the specified name exists. Further, the sample instantiates an __XlsFormatProvider__ and passes a FileStream to its __Import()__ method.
         
 
-#### __[C#] Example 1: Import XLS (Excel 97-2003 Workbook) file__
+#### __Example 1: Import XLS (Excel 97-2003 Workbook) file__
 
-{{region cs-radspreadprocessing-formats-and-conversion-xls-xlsformatprovider_0}}
+```csharp
 
     string fileName = "SampleFile.xls";
     if (!File.Exists(fileName))
@@ -46,7 +46,7 @@ __Example 1__ shows how to import an XLS file using a FileStream. The code assur
         workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
     }
 
-{{endregion}}
+```
 
 
 
@@ -55,9 +55,9 @@ __Example 1__ shows how to import an XLS file using a FileStream. The code assur
 __Example 2__ demonstrates how to export an existing Workbook to an XLS file. The snippet creates a new workbook with a single worksheet. Further, the example creates an __XlsFormatProvider__ and invokes its __Export()__ method. Note that the __Export()__ method accepts a parameter of type __Stream__ so you can work with any of its inheritors.
         
 
-#### __[C#] Example 2: Export spreadsheet document to XLS (Excel 97-2003 Workbook) file__
+#### __Example 2: Export spreadsheet document to XLS (Excel 97-2003 Workbook) file__
 
-{{region cs-radspreadprocessing-formats-and-conversion-xls-xlsformatprovider_1}}
+```csharp
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
     workbook.Worksheets.Add();
     string fileName = "SampleFile.xls";
@@ -69,12 +69,12 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
         formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10)); 
     }
 
-{{endregion}}
+```
 
 
-#### __[C#] Example 3: Export spreadsheet document to a Stream and byte[]__
+#### __Example 3: Export spreadsheet document to a Stream and byte[]__
 
-{{region cs-radspreadprocessing-formats-and-conversion-xls-xlsformatprovider_2}}
+```csharp
 
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
     workbook.Worksheets.Add();
@@ -88,7 +88,7 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
         bytes = output.ToArray();
     }
 
-{{endregion}}
+```
 
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.

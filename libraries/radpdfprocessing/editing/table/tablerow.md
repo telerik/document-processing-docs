@@ -26,7 +26,7 @@ You can easily add a __TableRow__ instance by using the __AddTableRow()__ method
 The code snippet in __Example 1__ shows how to create a table and add a single row to it.
         
 
-#### __[C#] Example 1: Create TableRow__
+#### __Example 1: Create TableRow__
 
 <snippet id='libraries-pdf-editing-table-tablerow-create-tablerow'/>
 
@@ -38,7 +38,7 @@ In order to manipulate the cells in a row you can use TableRow's __Cells__ prope
 __Example 2__ shows how to add two cells in a row and get the cells count.
         
 
-#### __[C#] Example 2: Access cells in a TableRow__
+#### __Example 2: Access cells in a TableRow__
 
 <snippet id='libraries-pdf-editing-table-tablerow-add-cells'/>
 
@@ -56,7 +56,7 @@ Since **Q1 2025** you can easily configure the TablRow's height through its **He
             
 __Example 3__ creates a table with three single-cell rows, each with a different **HeightType**.
         
-#### __[C#] Example 3: Set TableRow height__
+#### __Example 3: Set TableRow height__
 
 <snippet id='libraries-pdf-editing-table-tablerow-set-tablerow-height'/>
 

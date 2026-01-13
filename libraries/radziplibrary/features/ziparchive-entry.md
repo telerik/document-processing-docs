@@ -22,8 +22,8 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
 
     > The archive compressed length can be obtained only after the **ZipArchiveEntry** is disposed of, so in the following example, we are ensuring the correct disposing of the object by [using statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement).
 
-    #### **[C#] Example 1: Get entry's compressed length**
-    {{region cs-radziplibrary-ziparchive-entry_0}}
+    #### **Example 1: Get entry's compressed length**
+    ```csharp
                     
         ZipArchiveEntry entry;
         using (entry = archive.CreateEntry("file.txt"))
@@ -34,42 +34,42 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
         }
 
         long compressedLength = entry.CompressedLength;
-    {{endregion}}
+    ```
 
 * **ExternalAttributes**: Gets or sets external [file attributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view).
     
-    #### **[C#] Example 2: Set entry's external attributes**
+    #### **Example 2: Set entry's external attributes**
 
-    {{region cs-radziplibrary-ziparchive-entry_1}}
+    ```csharp
                     
         entry.ExternalAttributes = (int)File.GetAttributes(sourceFileName);
-    {{endregion}}
+    ```
 
 * **FullName**: Gets the relative path of the entry in the zip archive.
   
-    #### **[C#] Example 3: Get entry's relative path**
+    #### **Example 3: Get entry's relative path**
     
-    {{region cs-radziplibrary-ziparchive-entry_2}}
+    ```csharp
                     
         string fullName = entry.FullName;
-    {{endregion}}
+    ```
 
 * **LastWriteTime**: Gets or sets the last time the entry in the zip archive was changed.
     
-    #### **[C#] Example 4: Set last entry's write time**
+    #### **Example 4: Set last entry's write time**
 
-    {{region cs-radziplibrary-ziparchive-entry_3}}
+    ```csharp
 
         DateTime lastWriteTime = File.GetLastWriteTime(sourceFileName);
         entry.LastWriteTime = lastWriteTime;
-    {{endregion}}
+    ```
 
 * **Length**: Gets the uncompressed size of the entry in the zip archive.
     > The archive length can be obtained only after the **ZipArchiveEntry** is disposed of, so in the following example, we are ensuring the correct disposing of the object by [using statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement).
 
-    #### **[C#] Example 5: Get entry's length**
+    #### **Example 5: Get entry's length**
 
-    {{region cs-radziplibrary-ziparchive-entry_4}}
+    ```csharp
                     
         ZipArchiveEntry entry;
         using (entry = archive.CreateEntry("file.txt"))
@@ -80,16 +80,16 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
         }
 
         long length = entry.CompressedLength;
-    {{endregion}}
+    ```
 
 * **Name**: Gets the file name of the entry in the zip archive.
 
-    #### **[C#] Example 6: Get entry's name**
+    #### **Example 6: Get entry's name**
 
-    {{region cs-radziplibrary-ziparchive-entry_5}}
+    ```csharp
                     
         string name = entry.Name;
-    {{endregion}}
+    ```
 
 
 ### Methods
@@ -107,35 +107,35 @@ There are several operations, which you can execute over a **ZipArchive** instan
 ### Get ZipArchiveEntry
 Retrieves a wrapper for the specified entry in the zip archive.
 
-#### **[C#] Example 7: Get ZipArchiveEntry**
+#### **Example 7: Get ZipArchiveEntry**
 
-{{region cs-radziplibrary-ziparchive-entry_6}}
+```csharp
                 
     ZipArchiveEntry entry = archive.GetEntry("file.txt");
-{{endregion}}
+```
 
 
 ### Create ZipArchiveEntry
 Creates an empty entry that has the specified path and entry name in the zip archive.
 
-#### **[C#] Example 8: Create ZipArchiveEntry**
+#### **Example 8: Create ZipArchiveEntry**
 
-{{region cs-radziplibrary-ziparchive-entry_7}}
+```csharp
                     
     ZipArchiveEntry entry = archive.CreateEntry("file.txt");
 
     // OR
 
     ZipArchiveEntry entry = archive.CreateEntry("file.txt", compressionSettings);
-{{endregion}}
+```
 
 
 ### Extract ZipArchiveEntry
 Extract an entry to a specific folder/directory.
 
-#### **[C#] Example 9: Extracting a ZipArchiveEntry to folder/directory**
+#### **Example 9: Extracting a ZipArchiveEntry to folder/directory**
 
-{{region cs-radziplibrary-ziparchive-entry_8}}
+```csharp
                 
     ZipArchiveEntry entry = archive.GetEntry("file.txt");
     string path = Path.Combine(RootDirectory, entry.FullName);
@@ -147,7 +147,7 @@ Extract an entry to a specific folder/directory.
             entryStream.CopyTo(fileStream);
         }
     }   
-{{endregion}}
+```
 
 >tipThis functionality could be achieved by using the [Zip Extensions']({%slug radziplibrary-zipextensions%}) _ExtractToFile_ method as well.
 
@@ -157,9 +157,9 @@ Specific examples of using the ZipArchiveEntry.
 ### Using ZipArchiveEntry Properties
 A complete example including all the properties discussed above.
 
-#### **[C#] Example 10: Complete example**
+#### **Example 10: Complete example**
 
-{{region cs-radziplibrary-ziparchive-entry_9}}
+```csharp
                 
     string[] files = Directory.GetFiles("SampleFiles");
     string zipFileName = "ZipArchive.zip";
@@ -206,23 +206,23 @@ A complete example including all the properties discussed above.
             }
         }
     }
-{{endregion}}
+```
 
 ### Working with Folders/Directories
 
-#### **[C#] Example 11: Creating folders/directories**
+#### **Example 11: Creating folders/directories**
 
-{{region cs-radziplibrary-ziparchive-entry_10}}
+```csharp
                 
     ZipArchiveEntry entry = archive.CreateEntry("Documents/Sample/");
-{{endregion}}
+```
 
-#### **[C#] Example 12: Opening Files in folders/directories**
+#### **Example 12: Opening Files in folders/directories**
 
-{{region cs-radziplibrary-ziparchive-entry_11}}
+```csharp
                 
     ZipArchiveEntry entry = archive.GetEntry("Documents/Sample/file.txt");
-{{endregion}}
+```
 
 ## See Also
 

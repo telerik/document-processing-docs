@@ -30,10 +30,10 @@ This article aims to present the Headers and Footers API in **RadSpreadprocessin
 **HeaderFooterSettings** is the class that defines how the headers and footers of some worksheet should look like. An instance of this class can be obtained through the propertied of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}#worksheetpagesetup-properties). 
 
 
-#### **[C#] Example 1: Get HeaderFooterSettings**
-{{region cs-radspreadprocessing-features-headers-and-footers_0}}
+#### **Example 1: Get HeaderFooterSettings**
+```csharp
 	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
-{{endregion}}
+```
 
 
 
@@ -89,13 +89,13 @@ The **HeaderFooterSection** class defines the content of a particular header/foo
 
 **Example 2** shows how to set a sample content to header and footer sections. The code demonstrates how to insert a “*Date*” field in the right section of the header and a “*Page*” and a “*Number of pages*” fields in the center section of the footer.
 
-#### **[C#] Example 2: Set a content to a header/footer section**
+#### **Example 2: Set a content to a header/footer section**
 
-{{region cs-radspreadprocessing-features-headers-and-footers_1}}
+```csharp
 	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
 	settings.Header.RightSection.Text = "Printed by Telerik";
 	settings.Footer.CenterSection.Text = "RadSpreadProcessing";
-{{endregion}}
+```
 
 The header and footer of the first page in the worksheet from the snippet above will be evaluated and rendered as shown in **Figure 1**.
 
@@ -150,13 +150,13 @@ The following list describes all valid uses of the ampersand symbol sequences. I
 
 **Example 3** demonstrates how you could insert a date field in the header, a page number filed combined with a number of pages field in the footer of a worksheet .
 
-#### **[C#] Example 3: Insert fields in header/footer**
+#### **Example 3: Insert fields in header/footer**
 
-{{region cs-radspreadprocessing-features-headers-and-footers_2}}
+```csharp
 	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
 	settings.Header.RightSection.Text = "Printed by Telerik on &D";
 	settings.Footer.CenterSection.Text = "Page &P of &N";
-{{endregion}}
+```
 
 **Figure 2** shows how the document will look like after applying the settings demonstrated in **Example 3**.
 
@@ -176,12 +176,12 @@ In order to control the vertical positioning of the headers and footers on the p
 **Example 4** shows how you could set the margins of a worksheet using the predefined NormalMargins of PageMargins for the page margins, 0 inches for the footer margin and 1 inch for the header.
 
 
-#### **[C#] Example 4: Setting margins to header/footer**
+#### **Example 4: Setting margins to header/footer**
 
-{{region cs-radspreadprocessing-features-headers-and-footers_3}}
+```csharp
 	PageMargins normalMargins = PageMargins.NormalMargins;
 	worksheet.WorksheetPageSetup.Margins = new PageMargins(normalMargins.Left, normalMargins.Top, normalMargins.Right, normalMargins.Bottom, Unit.DipToInch(0), Unit.DipToInch(1));
-{{endregion}}
+```
 
 The [Unit class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html), used in **Example 4** provides convenient methods that can help you convert a value between different measurement units.
 

@@ -21,9 +21,7 @@ You need to create an archive from the files in a folder.
 
 Use [RadZipLibrary]({%slug radziplibrary-overview%}) to create and export the archive.
 
-#### __C#__
-
-{{region kb-archive-directory1}}
+```csharp
 
     class Program
     {
@@ -80,4 +78,4 @@ Use [RadZipLibrary]({%slug radziplibrary-overview%}) to create and export the ar
         public byte[] Data { get; set; }
     }   
                                         
-{{endregion}}
+```

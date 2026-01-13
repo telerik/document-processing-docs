@@ -77,14 +77,14 @@ In the document object model Fields are represented by the [Field](https://docs.
 The suggested way to insert field is to use the __InsertField()__ method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. It takes care of creating and inserting the code and result fragments as well as placing the appropriate field character inlines to separate them. The __InsertField()__ method returns an instance of the __FieldInfo__ class. It holds references to the start, separate and end field characters and also provides an API for getting the code and result fragments and updating the field.
         
 
-#### __[C#] Example 1: Create a document containing a Date field using RadFlowDocumentEditor__
+#### __Example 1: Create a document containing a Date field using RadFlowDocumentEditor__
 
 <snippet id='codeblock-ss'/>
 
 
 You can also create and insert all the parts of the field manually by creating a __FieldInfo__ instance and adding all the inlines to the document structure. **Example 2** demonstrates how to achieve the same result as in **Example 1**.
         
-#### __[C#] Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo__
+#### __Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo__
 
 <snippet id='codeblock-tt'/>
 
@@ -109,7 +109,7 @@ If the field type is not one of the above, the result will not be updated and th
 
 Updating a single field is done with the __UpdateField()__ method of the __FieldInfo__ class as demonstrated in **Example 3**.
 
-#### __[C#] Example 3: Update a field__
+#### __Example 3: Update a field__
 
 <snippet id='codeblock-uu'/>
 
@@ -118,7 +118,7 @@ Updating a single field is done with the __UpdateField()__ method of the __Field
 
 All fields in the document can be updated using __UpdateFields()__ of __RadFlowDocument__. **Example 4** shows how to use this method.        
 
-#### __[C#] Example 4: Update all fields in a document__
+#### __Example 4: Update all fields in a document__
 
 <snippet id='codeblock-vv'/>
 
@@ -130,7 +130,7 @@ In R3 2022 the above fields were introduced. Their evaluation requires calculati
 
 You can register the provider with the following code:
 
-#### __[C#] Example 5: Register the default NumberingFieldsProvider__
+#### __Example 5: Register the default NumberingFieldsProvider__
 
 <snippet id='codeblock-ww'/>
 
@@ -168,7 +168,7 @@ Fields can also be nested in each other. If there are nested fields inside the c
 
 **Example 5** creates a field, which will be evaluated to appropriate greeting based on the time of the day.
 
-#### __[C#] Example 6: Create a nested field__
+#### __Example 6: Create a nested field__
 
 <snippet id='codeblock-xx'/>
 

@@ -34,13 +34,13 @@ In order to access cell properties, you have to create a __CellSelection__ objec
 __Example 1__ creates a selection for cells in the range A1:F6.
         
 
-#### __[C#] Example 1: Create CellSelection__
+#### __Example 1: Create CellSelection__
 
-{{region cs-radspreadprocessing-working-with-cells-get-set-clear-properties_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellSelection selection = worksheet.Cells[0, 0, 5, 5];
-{{endregion}}
+```
 
 
 
@@ -101,9 +101,9 @@ As already mentioned, the __CellSelection__ class exposes methods that get, set 
 __Example 2__ illustrates how to use these methods on the region A1:F6.
         
 
-#### __[C#] Example 2: Use GetIsBold(), SetIsBold() and ClearIsBold() methods__
+#### __Example 2: Use GetIsBold(), SetIsBold() and ClearIsBold() methods__
 
-{{region cs-radspreadprocessing-working-with-cells-get-set-clear-properties_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellSelection selection = worksheet.Cells[0, 0, 5, 5];
@@ -111,7 +111,7 @@ __Example 2__ illustrates how to use these methods on the region A1:F6.
 	selection.SetIsBold(true);
 	bool isBold = selection.GetIsBold().Value;
 	selection.ClearIsBold();
-{{endregion}}
+```
 
 
 
@@ -130,15 +130,15 @@ The __GetValue()__ method retrieves the value of the property and returns an ins
 __Example 3__ illustrates who to retrieve the value of cell B2.
         
 
-#### __[C#] Example 3: Retrieve value of cell__
+#### __Example 3: Retrieve value of cell__
 
-{{region cs-radspreadprocessing-working-with-cells-get-set-clear-properties_7}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellSelection selection = worksheet.Cells[1, 1];
 	
 	ICellValue cellValue = selection.GetValue().Value;
-{{endregion}}
+```
 
 
 
@@ -148,9 +148,9 @@ As the document model supports different types of cell values, the __CellSelecti
 __Example 4__ demonstrates how to set the value of a given selection.
         
 
-#### __[C#] Example 4: Set value of CellSelection__
+#### __Example 4: Set value of CellSelection__
 
-{{region cs-radspreadprocessing-working-with-cells-get-set-clear-properties_2}}
+```csharp
 	// set DateTime value
 	selection.SetValue(DateTime.Now);
 	
@@ -166,7 +166,7 @@ __Example 4__ demonstrates how to set the value of a given selection.
 	
 	// set formula value
 	selection.SetValue("=C1+C10");
-{{endregion}}
+```
 
 
 
@@ -178,9 +178,9 @@ The __Borders__ property uses a __CellBorders__ object for getting and setting i
 __Example 5__ demonstrates how to set the value of the Borders of the regions B2:C4 and E2:F4.
         
 
-#### __[C#] Example 5: Set value of Borders__
+#### __Example 5: Set value of Borders__
 
-{{region cs-radspreadprocessing-working-with-cells-get-set-clear-properties_3}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	ThemableColor purple = new ThemableColor(Color.FromArgb(255, 155, 89, 182));
@@ -200,7 +200,7 @@ __Example 5__ demonstrates how to set the value of the Borders of the regions B2
 	    new CellBorder(CellBorderStyle.None, darkBlue));    // Diagonal down border
 	
 	worksheet.Cells[1, 4, 2, 5].SetBorders(darkBlueBorders);
-{{endregion}}
+```
 
 
 
@@ -221,9 +221,9 @@ As its name suggests, the __PatternFill__ object is used to fill the background 
 __Example 6__ creates two PatternFill objects with a DiagonalStripe and Solid PatternType respectively.
         
 
-#### __[C#] Example 6: Create and set PatternFill__
+#### __Example 6: Create and set PatternFill__
 
-{{region cs-radspreadprocessing-working-with-cells-get-set-clear-properties_4}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -232,7 +232,7 @@ __Example 6__ creates two PatternFill objects with a DiagonalStripe and Solid Pa
 	
 	PatternFill solidPatternFill = new PatternFill(PatternType.Solid, Color.FromArgb(255, 46, 204, 113), Colors.Transparent);
 	worksheet.Cells[1, 0, 5, 5].SetFill(solidPatternFill);
-{{endregion}}
+```
 
 
 
@@ -247,16 +247,16 @@ The __GradientFill__ is used to set the background of a region of cells to a gra
 __Example 7__ assigns the region A1:F1 a smooth horizontal green gradient.
         
 
-#### __[C#] Example 7: Create and set GradientFill__
+#### __Example 7: Create and set GradientFill__
 
-{{region cs-radspreadprocessing-working-with-cells-get-set-clear-properties_5}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Rows[0].SetHeight(new RowHeight(50, true));
 	
 	GradientFill greenGradientFill = new GradientFill(GradientType.Horizontal, Color.FromArgb(255, 46, 204, 113), Color.FromArgb(255, 0, 134, 56));
 	worksheet.Cells[0, 0, 0, 5].SetFill(greenGradientFill);
-{{endregion}}
+```
 
 
 
@@ -271,16 +271,16 @@ The result of __Example 7__ is illustrated in __Figure 3__.
 In addition to the __GetIndent()__, __SetIndent()__ and __ClearIndent()__ methods, __CellSelection__ offers two more methods that are used to increase and decrease the value of the __Indent__ property. Those methods are __IncreaseIndent()__ and __DecreaseIndent()__ and neither of them takes arguments. __Example 8__ snippet shows how to use the methods.
         
 
-#### __[C#] Example 8: Increase and decrease indent__
+#### __Example 8: Increase and decrease indent__
 
-{{region cs-radspreadprocessing-working-with-cells-get-set-clear-properties_6}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellSelection selection = worksheet.Cells[0, 0, 5, 5];
 	
 	selection.IncreaseIndent();
 	selection.DecreaseIndent();
-{{endregion}}
+```
 
 
 

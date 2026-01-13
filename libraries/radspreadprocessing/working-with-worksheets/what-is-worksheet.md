@@ -37,11 +37,11 @@ The main characteristics of worksheets can be summarized in the following list:
 
 * __UsedCellRange and GetUsedCellRange()__: Since each worksheet contains over a million rows and more than sixteen thousand columns, it is unlikely to use the full capacity of a worksheet. Typically, a worksheet uses only a part of the available cells. That said, in a number of scenarios you might want to know which part of the worksheet contains your data and ignore the rest of the cells. The UsedCellRange property of the __Worksheet__ class returns a cell range that starts from cell A1 and holds all cells containing data or formatting. With the GetUsedCellRange() method you can pass and IEnumerable&lt;[IPropertyDefinition](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.IPropertyDefinition-1.html)&gt; object to get the used cell range, holding only the cells with specific property definitions. __Example 1__ demonstrates how to get the used cell range of cells with value.
 
-	#### __[C#] Example 1: Get the used cell range of cells with value__
+	#### __Example 1: Get the used cell range of cells with value__
 	
-	{{region cs-radspreadprocessing-working-with-worksheets-what-is-worksheet_0}}
+	```csharp
 		CellRange result = worksheet.GetUsedCellRange(new IPropertyDefinition[] { CellPropertyDefinitions.ValueProperty });
-	{{endregion}}
+	```
 
 	>More information and examples of working with the used cell range of a worksheet are available in the [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}) topic.
 

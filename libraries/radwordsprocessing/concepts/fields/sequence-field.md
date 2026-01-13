@@ -46,7 +46,7 @@ The possible switches for a Sequence field are:
 
 Inserting a SEQ fields can be easily achieved when inserting number to tables, figures, and other items in a document.
 
-#### __[C#] Example 1: Insert Sequence field__ using InsertField() method__
+#### __Example 1: Insert Sequence field__ using InsertField() method__
 
 The suggested approach for inserting code fields is by using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The InsertField() method accepts code as a first argument and the result as a second argument.
 

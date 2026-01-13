@@ -35,13 +35,13 @@ In order to set the value of a cell to a formula use the __SetValue()__ method o
 __Example 1__ creates a workbook from scratch and adds a worksheet. Further, the code assigns the value =3+4 to cell A1.
         
 
-#### __[C#] Example 1: Set formula__
+#### __Example 1: Set formula__
 
-{{region cs-radspreadprocessing-features-formulas_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	workbook.ActiveWorksheet.Cells[0, 0].SetValue("=3+4");
-{{endregion}}
+```
 
 
 
@@ -51,9 +51,9 @@ Additionally to entering formulas in cells, you can retrieve and inspect formula
 A closer look at the value of cell A1 will reveal that the two methods __GetValueAsString()__ and __GetResultValueAsString()__ return the original string of the expression and string of the computed result, respectively. Similarly, the __FormulaCellValue__ offers information about the __CellValueType__ of its value and result value through the __ValueType__ and __ResultValueType__ properties.
         
 
-#### __[C#] Example 2: Get formula value__
+#### __Example 2: Get formula value__
 
-{{region cs-radspreadprocessing-features-formulas_1}}
+```csharp
 	FormulaCellValue formulaCellValue = workbook.ActiveWorksheet.Cells[0, 0].GetValue().Value as FormulaCellValue;
 	if (formulaCellValue != null)
 	{
@@ -73,7 +73,7 @@ A closer look at the value of cell A1 will reveal that the two methods __GetValu
 	    CellValueType resultValueType = formulaCellValue.ResultValueType;
 	    //resultValueType = Number
 	}
-{{endregion}}
+```
 
 
 

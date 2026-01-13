@@ -29,7 +29,7 @@ When creating an instance of the Table class, you should pass the document that 
 The code snippet from __Example 1__ creates and inserts a Table to a Section.
         
 
-#### __[C#] Example 1: Create and insert a table to a section__
+#### __Example 1: Create and insert a table to a section__
 
 <snippet id='codeblock-dz'/>
 
@@ -41,7 +41,7 @@ The code snippet from __Example 1__ creates and inserts a Table to a Section.
 You can add a table at a specific index in the __Blocks__ collection of a __BlockContainer__ using the __Insert()__ method. __Example 2__ shows how to add a table at the beginning of a section.
         
 
-#### __[C#] Example 2: Insert a table at a specific index__
+#### __Example 2: Insert a table at a specific index__
 
 <snippet id='codeblock-dada'/>
 
@@ -50,7 +50,7 @@ You can add a table at a specific index in the __Blocks__ collection of a __Bloc
 You can also use the __AddTable()__ method of the __Blocks__ collection of a __BlockContainer__. The method creates a new __Table__ instance, adds it to the container and returns it.
         
 
-#### __[C#] Example 3: Insert a new table to a container__
+#### __Example 3: Insert a new table to a container__
 
 <snippet id='codeblock-dbdb'/>
 
@@ -59,7 +59,7 @@ You can also use the __AddTable()__ method of the __Blocks__ collection of a __B
 Inserting a new __Table__ in the document can also be achieved with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
         
 
-#### __[C#] Example 4: Insert a table using RadFlowDocumentEditor__
+#### __Example 4: Insert a table using RadFlowDocumentEditor__
 
 <snippet id='codeblock-dcdc'/>
 
@@ -130,7 +130,7 @@ __Properties__ exposes several properties that allow you to customize the layout
 __Example 5__ demonstrates how to add a __Table__ with 5 rows and 10 columns to a __RadFlowDocument__.
             
 
-#### __[C#] Example 5: Create a table with content and add it to a RadFlowDocument__
+#### __Example 5: Create a table with content and add it to a RadFlowDocument__
 
 <snippet id='codeblock-dddd'/>
 

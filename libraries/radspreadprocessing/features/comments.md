@@ -35,9 +35,9 @@ Since R2 2022 the SpreadProcessing library supports working with comments. Comme
 
 To add a comment you need to specify the cell index to which the comment will be related, the author, the text content, and the creation date. Specifying the creation date is optional and by default, its value is the current date and time.
 
-#### __[C#] Example 1: Add comment__
+#### __Example 1: Add comment__
 
-{{region cs-radspreadprocessing-features-comments_0}}
+```csharp
 	
     CellIndex relatedCellIndex = new CellIndex(1, 1);
     string author = "John Doe";
@@ -46,7 +46,7 @@ To add a comment you need to specify the cell index to which the comment will be
 
 	worksheet.Comments.Add(relatedCellIndex, author, text, creationDate);
 
-{{endregion}}
+```
 
 The above snippet will add a comment in cell B2.
 
@@ -55,14 +55,14 @@ The above snippet will add a comment in cell B2.
 
 To remove a comment, you should specify the comment instance. This instance can be obtained from the __CommentCollection__.
 
-#### __[C#] Example 2: Remove comment__
+#### __Example 2: Remove comment__
 
-{{region cs-radspreadprocessing-features-comments_1}}
+```csharp
 	
     SpreadsheetComment comment = worksheet.Comments[0];
 	worksheet.Comments.Remove(comment);
 
-{{endregion}}
+```
 
 
 ## Replies
@@ -83,9 +83,9 @@ Each comment can be replied to, forming a thread of information. All replies can
 * __CopyTo:__ Copies the entire __ReplySortedCollection__ to a compatible one-dimensional array, starting at the specified index of the target array.
 
 
-#### __[C#] Example 3: Working with Replies
+#### __Example 3: Working with Replies
 
-{{region cs-radspreadprocessing-features-comments_2}}
+```csharp
 
 	void MyProgram()
         {
@@ -134,7 +134,7 @@ Each comment can be replied to, forming a thread of information. All replies can
             }
         }
 
-{{endregion}}
+```
 
 
 ### Events
@@ -148,9 +148,9 @@ The two events for both collections use similar enumeration types for event argu
 * __Add:__ Used when Adding a Comment or Reply
 * __Remove:__ Used when Removing a Comment or Reply
 
-#### __[C#] Example 4: Changing the author of a comment upon adding it to the CommentCollection using the Changing event__
+#### __Example 4: Changing the author of a comment upon adding it to the CommentCollection using the Changing event__
 
-{{region cs-radspreadprocessing-features-comments_3}}
+```csharp
 
     void Comments_Changing(object sender, ShapeCollectionChangingEventArgs<SpreadsheetComment> e)
 	{
@@ -161,11 +161,11 @@ The two events for both collections use similar enumeration types for event argu
 		}
 	}
 
-{{endregion}}
+```
 
-#### __[C#] Example 5: Changing the author of a reply upon adding it to the ReplySortedCollection using the Changing event__
+#### __Example 5: Changing the author of a reply upon adding it to the ReplySortedCollection using the Changing event__
 
-{{region cs-radspreadprocessing-features-comments_4}}
+```csharp
 
 	void Replies_Changing(object sender, ReplySortedCollectionChangingEventArgs e)
 	{
@@ -175,7 +175,7 @@ The two events for both collections use similar enumeration types for event argu
 		}
 	}
 
-{{endregion}}
+```
 
 
 

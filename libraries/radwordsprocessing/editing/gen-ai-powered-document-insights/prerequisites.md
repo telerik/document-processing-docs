@@ -69,7 +69,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 
 >caution The following code snippet is valid for Microsoft.Extensions.AI.OpenAI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
 
-#### __[C#] Example 1: Setting up Azure OpenAI__
+#### __Example 1: Setting up Azure OpenAI__
 
 <snippet id='libraries-flow-features-gen-ai-setup-azure-open-ai'/>
 
@@ -78,7 +78,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 1. Create an OpenAI account.
 2. Get your API key from the OpenAI dashboard.
 
-#### __[C#] Example 2: Setting up OpenAI__
+#### __Example 2: Setting up OpenAI__
 
 <snippet id='libraries-flow-features-gen-ai-setup-open-ai'/>
 
@@ -90,7 +90,7 @@ Ollama allows you to run AI models locally on your machine. This is useful for d
 2. Pull the model you want to use.
 3. Start the Ollama server.
 
-#### __[C#] Example 3: Setting up Ollama__
+#### __Example 3: Setting up Ollama__
 
 <snippet id='libraries-flow-features-gen-ai-setup-ollama-ai'/>
 

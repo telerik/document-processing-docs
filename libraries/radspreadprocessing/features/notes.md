@@ -37,9 +37,9 @@ Since R1 2022 the SpreadProcessing library supports working with notes. The Note
 
 To add a note you need to specify the cell index to which the note will be related, the position where the note should be placed, the author, and the text content. Specifying the position is optional and by default, the note is placed next to the related cell.
 
-#### __[C#] Example 1: Add note__
+#### __Example 1: Add note__
 
-{{region cs-radspreadprocessing-features-notes_0}}
+```csharp
 	
     CellIndex relatedCellIndex = new CellIndex(1, 1);
     CellIndex cellIndex = new CellIndex(5, 5);
@@ -49,20 +49,20 @@ To add a note you need to specify the cell index to which the note will be relat
     worksheet.Notes.Add(relatedCellIndex, cellIndex, author, text);
     
 
-{{endregion}}
+```
 
 The above snippet will add a note in cell B2 with a position on cell F6.
 
 ### Removing Notes
 
-#### __[C#] Example 2: Remove note__
+#### __Example 2: Remove note__
 
-{{region cs-radspreadprocessing-features-notes_1}}
+```csharp
 	
     var note = worksheet.Notes[0];
     worksheet.Notes.Remove(note);
 
-{{endregion}}
+```
 
 
 ### Hide/Show notes
@@ -74,14 +74,14 @@ You can use one of the following methods to show/hide single or all notes:
 * __Hide(SpreadsheetNote note):__ Hide the specified note from the collection.
 * __Show(SpreadsheetNote note):__ Show the specified note from the collection.
 
-#### __[C#] Example 3:Hide note__
+#### __Example 3:Hide note__
 
-{{region cs-radspreadprocessing-features-notes_2}}
+```csharp
 	
     var note = worksheet.Notes[0];
     worksheet.Notes.Hide(note);
 
-{{endregion}}
+```
 
 ### Events
 

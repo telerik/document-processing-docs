@@ -82,16 +82,16 @@ The any value data validation rule is the default rule. It is applied to all cel
 
 __Example 1__ shows hot to create any value validation rule and set it to a cell.
 
-#### __[C#] Example 1: Apply any value rule__
+#### __Example 1: Apply any value rule__
 
-{{region cs-radspreadprocessing-features-data-validation_0}}
+```csharp
 	AnyValueDataValidationRuleContext context = new AnyValueDataValidationRuleContext();
 	context.InputMessageContent = "Sample input message content";
 	context.InputMessageTitle = "Sample input message title";
 	AnyValueDataValidationRule rule = new AnyValueDataValidationRule(context);
 	
 	worksheet.Cells[0, 0].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 The result from the code snippet in __Example 1__ is shown on the snapshot in __Figure 1__.
 
@@ -105,9 +105,9 @@ The whole number data validation rule allows you to restrict the user input to w
 
 The code snippet in __Example 2__ shows how to create a whole number data validation rule that restricts the user input using two arguments to the range between 0 and 100 and considers blank values as invalid.
 
-#### __[C#] Example 2: Apply whole number rule with two arguments__
+#### __Example 2: Apply whole number rule with two arguments__
 
-{{region cs-radspreadprocessing-features-data-validation_1}}
+```csharp
 	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
 	
 	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
@@ -124,7 +124,7 @@ The code snippet in __Example 2__ shows how to create a whole number data valida
 	WholeNumberDataValidationRule rule = new WholeNumberDataValidationRule(context);
 	
 	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 The result from __Example 2__ is shown in __Figure 2__.
 
@@ -140,9 +140,9 @@ The result from entering value *“test”* in the cell containing the data vali
 
 The code snippet in __Example 3__ shows how to create a whole number data validation rule that restricts the user input with one argument to numbers that are greater than 100.
 
-#### __[C#] Example 3: Apply whole number rule with one argument__
+#### __Example 3: Apply whole number rule with one argument__
 
-{{region cs-radspreadprocessing-features-data-validation_2}}
+```csharp
 	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
 	
 	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
@@ -157,13 +157,13 @@ The code snippet in __Example 3__ shows how to create a whole number data valida
 	WholeNumberDataValidationRule rule = new WholeNumberDataValidationRule(context);
 	
 	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 You are allowed to enter any valid [formula]({%slug radspreadprocessing-features-formulas-general-information%}) as a rule argument that returns a number. __Example 4__ shows how to restrict the user input to the values less than the sum of the values in cells A1 and B1.
 
-#### __[C#] Example 4: Apply whole number rule with formula__
+#### __Example 4: Apply whole number rule with formula__
 
-{{region cs-radspreadprocessing-features-data-validation_3}}
+```csharp
 	// The value of A1
 	worksheet.Cells[0, 0].SetValue(60);
 	// The value of B1
@@ -183,7 +183,7 @@ You are allowed to enter any valid [formula]({%slug radspreadprocessing-features
 	WholeNumberDataValidationRule rule = new WholeNumberDataValidationRule(context);
 	
 	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 
 #### Figure 4: Whole number rule based on formula
@@ -199,9 +199,9 @@ The decimal data validation rule allows you to restrict the user input to decima
 __Example 5__ demonstrates how to create a decimal data validation rule that restricts the user input to be outside the range between 0 and 100.
 
 
-#### __[C#] Example 5: Apply decimal rule__
+#### __Example 5: Apply decimal rule__
 
-{{region cs-radspreadprocessing-features-data-validation_4}}
+```csharp
 	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
 	
 	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
@@ -217,7 +217,7 @@ __Example 5__ demonstrates how to create a decimal data validation rule that res
 	DecimalDataValidationRule rule = new DecimalDataValidationRule(context);
 	
 	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 ## List Rule
 
@@ -225,9 +225,9 @@ The list data validation rule allows you to restrict the user input to a predefi
 
 __Example 6__ shows the creation of a list data validation rule that restricts the user input to a day of the week.
 
-#### __[C#] Example 6: Apply list rule__
+#### __Example 6: Apply list rule__
 
-{{region cs-radspreadprocessing-features-data-validation_5}}
+```csharp
 	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
 	
 	ListDataValidationRuleContext context = new ListDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
@@ -242,7 +242,7 @@ __Example 6__ shows the creation of a list data validation rule that restricts t
 	ListDataValidationRule rule = new ListDataValidationRule(context);
 	
 	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 __Figure 5__ shows the result from __Example 6__.
 
@@ -256,9 +256,9 @@ The date rule allows you to restrict the user input to a certain range of dates 
 
 __Example 7__ shows how to restrict the user input to the dates in the range between 12 February 2013 and 22 May 2017.
 
-#### __[C#] Example 7: Apply date rule__
+#### __Example 7: Apply date rule__
 
-{{region cs-radspreadprocessing-features-data-validation_6}}
+```csharp
 	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
 	
 	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
@@ -274,7 +274,7 @@ __Example 7__ shows how to restrict the user input to the dates in the range bet
 	DateDataValidationRule rule = new DateDataValidationRule(context);
 	
 	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 ## Time Rule
 
@@ -282,9 +282,9 @@ The time rule allows you to restrict the user input to a certain range of times 
 
 The code snippet in __Example 8__ shows how to restrict the user input to the range between 10:25 AM and 3:45 PM:
 
-#### __[C#] Example 8: Apply time rule__
+#### __Example 8: Apply time rule__
 
-{{region cs-radspreadprocessing-features-data-validation_7}}
+```csharp
 	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
 	
 	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
@@ -300,7 +300,7 @@ The code snippet in __Example 8__ shows how to restrict the user input to the ra
 	TimeDataValidationRule rule = new TimeDataValidationRule(context);
 	
 	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 ## Text Length Rule
 
@@ -308,9 +308,9 @@ The text length rule allows you to restrict the user input to text with length i
 
 __Example 9__ shows how to restrict the user input to text with a length between 5 and 10 symbols.
 
-#### __[C#] Example 9: Apply text length rule__
+#### __Example 9: Apply text length rule__
 
-{{region cs-radspreadprocessing-features-data-validation_8}}
+```csharp
 	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
 	
 	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
@@ -326,7 +326,7 @@ __Example 9__ shows how to restrict the user input to text with a length between
 	TextLengthDataValidationRule rule = new TextLengthDataValidationRule(context);
 	
 	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 ## Custom Rule
 
@@ -334,9 +334,9 @@ The custom rule allows you to restrict the user input with a custom condition sp
 
 The code snippet in __Example 10__ shows how to restrict the user input to values that are greater or equal to the sum of the values in the cells A1 and B1.
 
-#### __[C#] Example 10: Apply custom rule__
+#### __Example 10: Apply custom rule__
 
-{{region cs-radspreadprocessing-features-data-validation_9}}
+```csharp
 	CellIndex dataValidationRuleCellIndex = new CellIndex(1, 0);
 	
 	SingleArgumentDataValidationRuleContext context = new SingleArgumentDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
@@ -350,7 +350,7 @@ The code snippet in __Example 10__ shows how to restrict the user input to value
 	CustomDataValidationRule rule = new CustomDataValidationRule(context);
 	
 	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-{{endregion}}
+```
 
 ## Evaluate Rules
 
@@ -358,8 +358,8 @@ In order to check if the cell value satisfies a rule, you have to evaluate the r
 
 __Example 11__ demonstrates how to evaluate a rule using the __Evaluate()__ method.
 
-#### __[C#] Example 11: Evaluate rule__
-{{region cs-radspreadprocessing-features-data-validation_10}}
+#### __Example 11: Evaluate rule__
+```csharp
 	double value = 125;
 	ICellValue cellValue = value.ToCellValue();
 	if (rule.Evaluate(worksheet, 0, 0, cellValue))
@@ -370,7 +370,7 @@ __Example 11__ demonstrates how to evaluate a rule using the __Evaluate()__ meth
 	{
 	    // the rule is not satisfied
 	}
-{{endregion}}
+```
 
 
 ## See Also

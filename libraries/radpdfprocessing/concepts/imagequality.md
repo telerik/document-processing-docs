@@ -31,7 +31,7 @@ The quality of the images reflects the size of the PDF document. The higher the 
  
 In order to specify the default **ImageQuality** value when exporting to PDF, you should use the [PdfExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
 
-#### __[C#] Example 1: Set a default value for all images in a document__
+#### __Example 1: Set a default value for all images in a document__
 
 <snippet id='pdf-image-quality'/>
 
@@ -41,7 +41,7 @@ In order to specify the default **ImageQuality** value when exporting to PDF, yo
 
 If you need some particular image to be exported with a different **ImageQuality** value, you should specify this value in the constructor of [ImageSource]({%slug radpdfprocessing-model-imagesource%}) in order to override the default one.
 
-#### __[C#] Example 2: Set the image quality of an image__
+#### __Example 2: Set the image quality of an image__
 
 <snippet id='pdf-image-source-quality'/>
 

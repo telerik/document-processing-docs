@@ -15,9 +15,9 @@ In a number of scenarios you may need to iterate through all worksheets in a giv
 
 __Example 1__ illustrates how to retrieve worksheets that have already been added to the workbook.      
 
-#### __[C#] Example 1: Retrieve worksheet__
+#### __Example 1: Retrieve worksheet__
 
-{{region cs-radspreadprocessing-working-with-worksheets-iterate-through-worksheets_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	
 	WorksheetCollection worksheets = workbook.Worksheets;
@@ -26,13 +26,13 @@ __Example 1__ illustrates how to retrieve worksheets that have already been adde
 	
 	Worksheet firstWorksheet = worksheets[0];
 	Worksheet secondWorksheet = worksheets["Sheet2"];
-{{endregion}}
+```
 
 __Example 2__ creates a new workbook with three worksheets. The code further iterates through all worksheets and sets the value of cell *A1* to the name of the corresponding worksheet. The example also sets the ForeColor and BackgrounFill of the cell.
         
-#### __[C#] Example 2: Iterate worksheets__
+#### __Example 2: Iterate worksheets__
 
-{{region cs-radspreadprocessing-working-with-worksheets-iterate-through-worksheets_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	
 	workbook.Worksheets.Add();
@@ -50,7 +50,7 @@ __Example 2__ creates a new workbook with three worksheets. The code further ite
 	    cell.SetForeColor(foregroundColor);
 	    cell.SetFill(backgroundFill);
 	}
-{{endregion}}
+```
 
 ## See Also 
 

@@ -86,9 +86,9 @@ __Defined name__: A name that can contain any value that can be stored in a cell
 __Example 1__ demonstrates how to add and use defined names. The code creates a workbook with one worksheet containing four values. Further, the example adds one global name called CorporateTax containing a constant value of 16 percent and a local GrossProfit name referring to the four values stored in Sheet1. Also, the cell A5 is assigned a value that uses both GrossProfit and CorporateTax names.
         
 
-#### __[C#] Example 1: Add and use names__
+#### __Example 1: Add and use names__
 
-{{region cs-radspreadprocessing-features-named-ranges_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet sheet1 = workbook.Worksheets.Add();
 	
@@ -103,7 +103,7 @@ __Example 1__ demonstrates how to add and use defined names. The code creates a 
 	
 	workbook.Names.Remove("CorporateTax");
 	sheet1.Names.Remove("GrossProfit");
-{{endregion}}
+```
 
 > Other than the name, the __RefersTo__ value and the comment parameter, the Add method requires a cell index. The reason for this is that with some defined names, the cell index associated with their creation is relevant to the resulting value. More specifically, this is the case when the __RefersTo__ property includes a relative cell reference. For example, in the case of a name where the __RefersTo__ field is "=C3" (as opposed to "=$C$3") and the cell index is CellIndex(0,0), i.e. A1, the defined name will always point two rows lower and two columns to the right of the current cell it is used in: if you enter =Name in A1, A1 will have the value of C3 and if you enter the same in B2, it will have the value of D4.
 >
@@ -118,12 +118,12 @@ The NameCollection class exposes a __Remove()__ method that takes a string param
 __Example 2__ shows how to remove one of the names added in __Example 1__.
         
 
-#### __[C#] Example 2: Remove name__
+#### __Example 2: Remove name__
 
-{{region cs-radspreadprocessing-features-named-ranges_1}}
+```csharp
 	workbook.Names.Remove("CorporateTax");
 	sheet1.Names.Remove("GrossProfit");
-{{endregion}}
+```
 
 
 ## See Also
