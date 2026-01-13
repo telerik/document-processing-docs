@@ -68,7 +68,7 @@ The following list represents the available NuGet packages for the Document Proc
 
 * __Telerik.Documents.Core:__ The main NuGet package from the Telerik Document Processing libraries. Required when you plan to use the library.
 * __Telerik.Documents.Fixed:__ The package is required when processing `PDF` documents.
-* __Telerik.Documents.Fixed.FormatProviders.Image.Skia:__ The package is required for the cross-patform [SkiaTextMeasurer]({slug radspreadprocessing-cross-platform-text-measure}#skiatextmeasurer).
+* __Telerik.Documents.Fixed.FormatProviders.Image.Skia:__ The package is required for the cross-patform [SkiaTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}#skiatextmeasurer).
     * __Telerik.Text.Skia:__ The package is a dependency of __Telerik.Documents.Fixed.FormatProviders.Image.Skia__.
 * __Telerik.Documents.Fixed.FormatProviders.Ocr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
 * __Telerik.Documents.TesseractOcr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
