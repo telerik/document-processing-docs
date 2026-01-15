@@ -89,6 +89,18 @@ static string IndexToColumnLetter(int colIndex)
 - The `ICellImporter.Format.NumberFormat` provides the effective number format.
 - For advanced formatting, use RadSpreadProcessing.
 
+```csharp
+//Get format and value with SpreadStreamProcessing
+string numberFormat = cell.Format.NumberFormat;
+string value = cell.Value;
+
+//Get formatted cell value with SpreadProcessing
+worksheet.Cells[0, 0].SetValue(value);
+ICellValue cellValue = worksheet.Cells[0, 0].GetValue().Value;
+CellValueFormat cellValueFormat = new CellValueFormat(numberFormat);
+string resultValue = cellValue.GetResultValueAsString(cellValueFormat);
+```
+
 RadSpreadStreamProcessing is ideal for scenarios requiring high performance and low memory usage but lacks direct cell access or advanced formatting capabilities.
 
 ## See Also
