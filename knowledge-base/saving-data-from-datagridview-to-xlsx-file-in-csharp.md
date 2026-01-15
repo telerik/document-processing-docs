@@ -19,6 +19,8 @@ ticketid: 1707838
 
 Export the data from a [WinForms DataGridView](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview?view=windowsdesktop-10.0) control to an Excel file in XLSX format, including header information. I want to achieve this using Telerik Document Processing RadSpreadProcessing in a Visual Studio C# Windows Forms application.
 
+<img style="border: 1px solid gray;" src="images/saving-data-from-datagridview-to-xlsx-file-in-csharp.png" />
+
 ## Solution
 
 Use Telerik Document Processing [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) to create an Excel file programmatically. Follow these steps:
