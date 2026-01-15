@@ -43,9 +43,17 @@ The following example shows a full code snippet for a simple signing of a newly 
 
 The **SignatureSettings** class (*introduced in Q4 2025*) provides configurable options for producing digital signatures in PDF documents. It allows developers to specify the digest (hash) algorithm used during certificate-based signing. The SignatureSettings are accessed by the Signature.**Settings** public property and it offers the following settings to be specified:
 
-* **DigestAlgorithm**: Gets or sets the digest (hash) algorithm used when producing the CMS (PKCS#7) signature. The default is *DigestAlgorithmType.Sha256* to provide a modern, interoperable baseline (SHA-256). The supported digest (hash) algorithms for producing CMS (PKCS#7) PDF signature values are: <ul><li>**Sha256**: SHA-256 (256-bit). Recommended default: strong, widely supported, and efficient.</li><li>**Sha384**: SHA-384 (384-bit). Use when organizational policy or key size (e.g. P-384) mandates higher strength.</li><li>**Sha512**: SHA-512 (512-bit). Use for highest SHA-2 family strength or long‑term archival policies; may have slightly higher computational cost.</li></ul>
+* **DigestAlgorithm**&mdash;Gets or sets the digest (hash) algorithm used when producing the CMS (PKCS#7) signature. The default is *DigestAlgorithmType.Sha256* to provide a modern, interoperable baseline (SHA-256). The supported digest (hash) algorithms for producing CMS (PKCS#7) PDF signature values are: <ul><li>**Sha256**&mdash;SHA-256 (256-bit). Recommended default: strong, widely supported, and efficient.</li><li>**Sha384**&mdash;SHA-384 (384-bit). Use when organizational policy or key size (e.g. P-384) mandates higher strength.</li><li>**Sha512**&mdash;SHA-512 (512-bit). Use for highest SHA-2 family strength or long‑term archival policies; may have slightly higher computational cost.</li></ul>
 
-* **TimeStampServer**: Gets or sets the [timestamp server]({%slug pdf-sign-timestamp-server%}) settings used to obtain a trusted timestamp for the signature.
+* **TimeStampServer**&mdash;Gets or sets the [timestamp server]({%slug pdf-sign-timestamp-server%}) settings used to obtain a trusted timestamp for the signature.
+
+* **CertificateChainIncludeOption**&mdash;Gets or sets the option that determines which certificates are included in the certificate chain when exporting or processing certificates. Use this property to specify whether only the end-entity certificate, the entire chain, or a partial chain should be included. The selected option may affect compatibility with external systems and the ability to validate the certificate. [*Introduced in Q1 2026*]
+
+    The available options are:
+    * **None**&mdash;No certificate chain information is included.
+    * **ExcludeRoot**&mdash;The entire certificate chain is included except for the root certificate.
+    * **EndCertOnly**&mdash;Only the end certificate is included in the certificate chain information.
+    * **WholeChain**&mdash;The entire certificate chain is included.
 
 ## Signature Encodings
 
