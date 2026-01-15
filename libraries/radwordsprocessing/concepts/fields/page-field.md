@@ -42,14 +42,7 @@ __Example 1__ demonstrates how you can insert a date field.
 
 #### __[C#] Example 1: Insert page field__
 
-{{region cs-radwordsprocessing-concepts-page-field_0}}
-
-	editor.InsertText("Page ");
-	editor.InsertField("PAGE", "");
-	editor.InsertText(" of ");
-	editor.InsertField("NUMPAGES", "");
-
-{{endregion}}
+<snippet id='codeblock-bi'/>
 
 
 After updating the field the result would be "Page 3 of 6" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).

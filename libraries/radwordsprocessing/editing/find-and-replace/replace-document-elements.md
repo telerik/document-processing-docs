@@ -28,49 +28,11 @@ You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordspr
 
 #### __[C#] Example 1: Replace text with a single inline__
 
-{{region cs-radwordsprocessing-editing-replace-document-elements_0}}
-
-	// Prepare Document 
-	RadFlowDocument document = new RadFlowDocument();
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	editor.InsertText("Content Before");
-	editor.InsertParagraph();
-	editor.InsertText("Replace");
-	editor.InsertParagraph();
-	editor.InsertText("Content After");
-	
-	Run run = new Run(document);
-	run.Text = "New Content";
-	
-	// Replace 
-	editor.ReplaceText("Replace", run, true, true);
-
-{{endregion}}
+<snippet id='codeblock-bpbp'/>
 
 #### __[C#] Example 2: Replace text with multiple inlines__
 
-{{region cs-radwordsprocessing-editing-replace-document-elements_1}}
-
-	// Prepare Document
-	RadFlowDocument document = new RadFlowDocument();
-	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-	editor.InsertText("Content Before Replace Content After");
-	
-	List<InlineBase> newContent = new List<InlineBase>();
-	
-	Run run = new Run(document);
-	run.Text = "New Content";
-	
-	ImageInline image = new ImageInline(document);
-	image.Image.Size = new System.Windows.Size(100, 100);
-	
-	newContent.Add(run);
-	newContent.Add(image);
-	
-	// Replace
-	editor.ReplaceText("Replace", newContent, true, true);
-
-{{endregion}}
+<snippet id='codeblock-bqbq'/>
 
 ## Replace Text with One or more Blocks 
 
@@ -81,47 +43,9 @@ You can search and replace text  using [RadFlowDocumentEditor]({%slug radwordspr
 
 #### __[C#] Example 3: Replace text with a single block__
 
-{{region cs-radwordsprocessing-editing-replace-document-elements_2}}
-
-    // Prepare Document
-    RadFlowDocument document = new RadFlowDocument();
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.InsertText("Content Before");
-    editor.InsertParagraph();
-    editor.InsertText("Replace");
-    editor.InsertParagraph();
-    editor.InsertText("Content After");
-    
-    Table table =  this.GetSampleTable(document);
-    
-    // Replace
-    editor.ReplaceText("Replace", table, true, true);
-
-{{endregion}}
+<snippet id='codeblock-brbr'/>
 
 #### **[C#] Example 4: Replace text with multiple blocks**
 
-{{region cs-radwordsprocessing-editing-replace-document-elements_3}}
-
-    // Prepare Document
-    RadFlowDocument document = new RadFlowDocument();
-    RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-    editor.InsertText("Content Before");
-    editor.InsertParagraph();
-    editor.InsertText("Replace");
-    editor.InsertParagraph();
-    editor.InsertText("Content After");
-    
-    List<BlockBase> newContent = new List<BlockBase>();
-    Table table =  this.GetSampleTable(document);
-    newContent.Add(table);
-    newContent.Add(new Paragraph(document));
-    
-    Table table2 = this.GetSampleTable(document);
-    newContent.Add(table);
-    newContent.Add(new Paragraph(document));
-     
-    // Replace
-    editor.ReplaceText("Replace", newContent, true, true);
-{{endregion}}
+<snippet id='codeblock-bsbs'/>
 

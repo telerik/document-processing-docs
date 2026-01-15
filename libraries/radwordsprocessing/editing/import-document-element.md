@@ -28,10 +28,7 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 <a name="example1"><a/>
 #### __[C#] Example 1: Create DocumentElementImporter__
 
-{{region cs-radwordsprocessing-editing-import-document-element_0}}
-	            
-	DocumentElementImporter importer = new DocumentElementImporter(targetDocument, sourceDocument, ConflictingStylesResolutionMode.UseTargetStyle);
-{{endregion}}
+<snippet id='codeblock-br'/>
 
 
 
@@ -41,11 +38,7 @@ The **DocumentElementImporter** class exposes the Import&lt;T&gt;() method, whic
 
 #### __[C#] Example 2: Import a document element__
 
-{{region cs-radwordsprocessing-editing-import-document-element_1}}
-	            
-	Run run = sourceDocument.EnumerateChildrenOfType<Run>().First();
-	Run importedRun = importer.Import<Run>(run);
-{{endregion}}
+<snippet id='codeblock-bs'/>
 
 Now you could insert the imported document element into the target document through the RadFlowDocumentEditor class. How this could be achieved is described [here]({% slug radwordsprocessing-editing-radflowdocumenteditor%}#inserting-document-elements).
 
