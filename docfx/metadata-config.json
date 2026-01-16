@@ -17,7 +17,7 @@
                         "src/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll",
                         "src/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll",
                         "src/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Json.dll",
-                        "src/Telerik.Windows.Documents.SpreadsheetStreaming.dll",
+                        "src/Telerik.Documents.SpreadsheetStreaming.dll",
                         "src/Telerik.Windows.Documents.AIConnector.dll",
                         "src/Telerik.Documents.AI.Core.dll",
                         "src/Telerik.Documents.AI.RAG.dll",
