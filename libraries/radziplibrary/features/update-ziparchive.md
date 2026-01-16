@@ -15,9 +15,9 @@ The __ZipArchive__ class provides three modes: *Read*, *Create* and *Update*. Mo
 
 The code snippet from __Example 1__ opens a ZIP archive in update mode using __ZipArchive__ class.    
 
-#### __[C#] Example 1: Open for update__
+#### __Example 1: Open for update__
 
-{{region cs-radziplibrary-update-ziparchive_0}}
+```csharp
 	            
 	using (Stream stream = File.Open("test.zip", FileMode.Open))
 	{
@@ -26,17 +26,17 @@ The code snippet from __Example 1__ opens a ZIP archive in update mode using __Z
 	        // Display the list of the files in the selected zip file using the ZipArchive.Entries property.
 	    }
 	}
-{{endregion}}
+```
 
-#### __[VB.NET] Example 1: Open for update__
+#### __Example 1: Open for update__
 
-{{region vb-radziplibrary-update-ziparchive_0}}
+```csharp
 	Using stream As Stream = File.Open("test.zip", FileMode.Open)
 	    Using archive As ZipArchive = ZipArchive.Update(stream, Nothing)
 	        ' Display the list of the files in the selected zip file using the ZipArchive.Entries property.
 	    End Using
 	End Using
-{{endregion}}
+```
 
 
 
@@ -58,9 +58,9 @@ In order to add a new entry into the ZIP archive, you should perform the followi
 >note More information about ZipArchiveEntry you can find in [ZipArchiveEntry]({%slug radziplibrary-ziparchive-entry%}) help article. 
             
 
-#### __[C#] Example 2: Add entry__
+#### __Example 2: Add entry__
 
-{{region cs-radziplibrary-update-ziparchive_1}}
+```csharp
 	    
 	using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
 	{
@@ -68,19 +68,19 @@ In order to add a new entry into the ZIP archive, you should perform the followi
 	    writer.WriteLine("Hello world!");
 	    writer.Flush();
 	}
-{{endregion}}
+```
 
 
 
-#### __[VB.NET] Example 2: Add entry__
+#### __Example 2: Add entry__
 
-{{region vb-radziplibrary-update-ziparchive_1}}
+```csharp
 	Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
 	    Dim writer As New StreamWriter(entry.Open())
 	    writer.WriteLine("Hello world!")
 	    writer.Flush()
 	End Using
-{{endregion}}
+```
 
 
 
@@ -92,27 +92,27 @@ The __ZipArchive__ class provides a __GetEntry()__ method, which allows you acce
 __Example 3__ shows how you could obtain an entry and delete it from the ZIP archive using the __Delete()__ method.
         
 
-#### __[C#] Example 3: Delete entry__
+#### __Example 3: Delete entry__
 
-{{region cs-radziplibrary-update-ziparchive_2}}
+```csharp
 	            
 	ZipArchiveEntry entry = archive.GetEntry("text.txt");
 	if (entry != null)
 	{
 	    entry.Delete();
 	}
-{{endregion}}
+```
 
 
 
-#### __[VB.NET] Example 3: Delete entry__
+#### __Example 3: Delete entry__
 
-{{region vb-radziplibrary-update-ziparchive_2}}
+```csharp
 	Dim entry As ZipArchiveEntry = archive.GetEntry("text.txt")
 	If entry IsNot Nothing Then
 	    entry.Delete()
 	End If
-{{endregion}}
+```
 
 
 ## Update Entry
@@ -132,9 +132,9 @@ In order to update an existing entry in the ZIP archive, you should perform the 
 1. Dispose entry when all necessary information is written. In the __Update__ mode this step is optional. You can omit it if you are going to add/delete/update other entries in the archive.
             
 
-#### __[C#] Example 4: Update entry__
+#### __Example 4: Update entry__
 	
-{{region cs-radziplibrary-update-ziparchive_3}}
+```csharp
 	ZipArchiveEntry entry = archive.GetEntry("text.txt");
 	if (entry != null)
 	{
@@ -147,13 +147,13 @@ In order to update an existing entry in the ZIP archive, you should perform the 
 	    writer.WriteLine("Updated line.");
 	    writer.Flush();
 	}
-{{endregion}}
+```
 
 
 
-#### __[VB.NET] Example 4: Update entry__
+#### __Example 4: Update entry__
 
-{{region vb-radziplibrary-update-ziparchive_3}}
+```csharp
 	Dim entry As ZipArchiveEntry = archive.GetEntry("text.txt")
 	If entry IsNot Nothing Then
 	    Dim entryStream As Stream = entry.Open()
@@ -165,7 +165,7 @@ In order to update an existing entry in the ZIP archive, you should perform the 
 	    writer.WriteLine("Updated line.")
 	    writer.Flush()
 	End If
-{{endregion}}
+```
 
 ## Copy Entry
 
@@ -173,7 +173,7 @@ Starting with the **Q2 2025** release, the __RadZipLibrary__ introduces a new ex
 
 The following example demonstrates how to use the `CopyTo` method to copy the contents of a large file from a ZIP archive to a memory stream with a specified timeout.
 
-#### __[C#] Example 5: Copy entry with timeout__
+#### __Example 5: Copy entry with timeout__
 
 <snippet id='libraries-zip-features-update-ziparchive-copy-entry'/>
 

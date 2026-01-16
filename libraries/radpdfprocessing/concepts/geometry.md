@@ -45,7 +45,7 @@ __RectangleGeometry__ represents a two-dimensional rectangle. The class exposes 
 __Example 1__ shows how to create a RectangleGeometry.
         
 
-#### __[C#] Example 1: Create RectangleGeometry__
+#### __Example 1: Create RectangleGeometry__
 
 <snippet id='pdf-create-rectangle-geometry'/>
 
@@ -67,7 +67,7 @@ PathGeometry represents a complex shape that may be composed of curves and lines
 __Example 2__ shows how to create a PathGeometry, which consists of line segments and bezier segments.
         
 
-#### __[C#] Example 2: Create PathGeometry__
+#### __Example 2: Create PathGeometry__
 
 <snippet id='pdf-create-path-geometry'/>
 

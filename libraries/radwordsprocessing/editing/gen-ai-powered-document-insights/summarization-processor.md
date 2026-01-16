@@ -46,7 +46,7 @@ The **SummarizationProcessorSettings** class defines configuration options for t
 * **ModelMaxInputTokenLimit**: The maximum input token limit for the model.
 * **PromptAddition**: An addition for the prompt used for summarization. It can be used for clarification purposes.
 
-#### __[C#] Example 1: Configuring SummarizationProcessorSettings__
+#### __Example 1: Configuring SummarizationProcessorSettings__
 
 <snippet id='libraries-flow-features-gen-ai-summarize-configure'/>
 
@@ -64,7 +64,7 @@ For large documents that exceed the token limit of the model, **SummarizationPro
 
 This approach allows the processor to efficiently handle documents of any size, but it increases the number of API calls required. The **SummaryResourcesCalculated** event provides information about the expected resource usage, allowing you to decide whether to proceed with the operation.
 
-#### __[C#] Example 2: Using SummarizationProcessor__
+#### __Example 2: Using SummarizationProcessor__
 
 <snippet id='libraries-flow-features-gen-ai-summarize-document'/>
 

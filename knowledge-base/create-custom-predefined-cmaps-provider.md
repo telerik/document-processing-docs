@@ -35,9 +35,9 @@ How to create a custom implementation of the [PredefinedCMapsProviderBase](https
 This functionality could be achieved by creating a custom class inheriting the [PredefinedCMapsProviderBase](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.predefinedcmapsproviderbase) and passing it to [PredefinedCMapsProvider](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.cmaputils.predefinedcmapsprovider) property of the [FixedExtensibilityManager](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.fixedextensibilitymanager) class.
 
 
-#### __[C#] Creating a custom class inheriting PredefinedCMapsProviderBase__
+#### __Creating a custom class inheriting PredefinedCMapsProviderBase__
 
-{{region kb-create-custom-predefined-cmaps-provider1}}
+```csharp
 
 	internal class CustomPredefinedCMapsProvider : PredefinedCMapsProviderBase
     {
@@ -64,12 +64,12 @@ This functionality could be achieved by creating a custom class inheriting the [
         }
     }
 	
-{{endregion}}
+```
 
-#### __[C#] Set the custom PredefinedCMapsProvider the FixedExtensibilityManager.PredefinedCMapsProvider__
+#### __Set the custom PredefinedCMapsProvider the FixedExtensibilityManager.PredefinedCMapsProvider__
 
-{{region kb-create-custom-predefined-cmaps-provider2}}
+```csharp
 
 	FixedExtensibilityManager.PredefinedCMapsProvider = new CustomPredefinedCMapsProvider(new PredefinedCMapsProvider());
  
-{{endregion}}
+```

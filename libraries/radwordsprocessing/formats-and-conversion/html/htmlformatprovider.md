@@ -26,7 +26,7 @@ In order to import an HTML document you can use the overloads of the __HtmlForma
 __Example 1__ shows how to use HtmlFormatProvider to import an HTML document from a file.
         
 
-#### __[C#] Example 1: Import HTML file__
+#### __Example 1: Import HTML file__
 
 <snippet id='codeblock-bubu'/>
 
@@ -35,7 +35,7 @@ __Example 1__ shows how to use HtmlFormatProvider to import an HTML document fro
 __Example 2__ shows how you can import an HTML string.
         
 
-#### __[C#] Example 2: Import HTML string__
+#### __Example 2: Import HTML string__
 
 <snippet id='codeblock-bvbv'/>
 
@@ -52,7 +52,7 @@ In order to export a document to HTML you can use the overloads of the __HtmlFor
 __Example 3__ shows how to use the HtmlFormatProvider to export an instance of RadFlowDocument to a file:
         
 
-#### __[C#] Example 3: Export HTML to file__
+#### __Example 3: Export HTML to file__
 
 <snippet id='codeblock-bwbw'/>
 
@@ -61,7 +61,7 @@ __Example 3__ shows how to use the HtmlFormatProvider to export an instance of R
 You can also export the document to a string variable like shown in __Example 4__.
         
 
-#### __[C#] Example 4: Export HTML to string__
+#### __Example 4: Export HTML to string__
 
 <snippet id='codeblock-bxbx'/>
 

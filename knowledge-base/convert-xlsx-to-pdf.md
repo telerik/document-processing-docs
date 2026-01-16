@@ -21,9 +21,9 @@ This article demonstrates how you can convert a Xlsx  file to a PDF with the [Sp
 
 The solution is to import the file with the XlsxFormatProvider and export it with the PdfFormatProvider. 
 
-#### [C#] Convert Xlsx to PDF
+#### Convert Xlsx to PDF
 
-{{region kb-convert-xlsx-topdf1}}
+```csharp
 
     public static void ConvertXlsxToPdf(string path, string resultPath)
     {
@@ -37,5 +37,5 @@ The solution is to import the file with the XlsxFormatProvider and export it wit
         File.WriteAllBytes(resultPath, resultBytes);
     }
 
-{{endregion}}
+```
 

@@ -27,12 +27,12 @@ The supported formats require to follow different patterns when writing a docume
 
 >As of R3 2017, the encoding used to export **CSV** documents is **UTF-8 with BOM**.
 
-#### **[C#] Example 1: Specify export format**
+#### **Example 1: Specify export format**
 
-{{region radspreadstreamprocessing-export_0}}
+```csharp
 
 	IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Csv, stream);     
-{{endregion}}
+```
 
 Instantiating IWorkbookExporter directly starts the creation of the file using the Stream instance passed as a parameter to the CreateWorkbookExporter() method. Writing the document content finishes once the [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}) instance is disposed.
 

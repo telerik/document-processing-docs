@@ -29,12 +29,12 @@ By default, the __WorkbookHistory__ class does not record all changes introduced
 __Example 1__ enables the history of a workbook.
         
 
-#### __[C#] Example 1: Enable history__
+#### __Example 1: Enable history__
 
-{{region cs-radspreadprocessing-features-history_2}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.History.IsEnabled = true;
-{{endregion}}
+```
 
 
 
@@ -46,9 +46,9 @@ Once the history is enabled you can invoke its __Undo()__ and __Redo()__ methods
 __Example 2__ creates a new workbook with a single worksheet and sets the value of cell *A1* twice. Further, the snippet performs the undo and redo actions.
         
 
-#### __[C#] Example 2: Perform undo and redo__
+#### __Example 2: Perform undo and redo__
 
-{{region cs-radspreadprocessing-features-history_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.History.IsEnabled = true;
 	Worksheet worksheet = workbook.Worksheets.Add();
@@ -58,7 +58,7 @@ __Example 2__ creates a new workbook with a single worksheet and sets the value 
 	
 	workbook.History.Undo();
 	workbook.History.Redo();
-{{endregion}}
+```
 
 
 
@@ -70,9 +70,9 @@ The __Workbook__ history offers a friendly API that allows grouping multiple cha
 __Example 3__ demonstrates how to create an undo group.
         
 
-#### __[C#] Example 3: Create undo group__
+#### __Example 3: Create undo group__
 
-{{region cs-radspreadprocessing-features-history_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.History.IsEnabled = true;
 	Worksheet worksheet = workbook.Worksheets.Add();
@@ -86,7 +86,7 @@ __Example 3__ demonstrates how to create an undo group.
 	
 	workbook.History.Undo();
 	workbook.History.Redo();
-{{endregion}}
+```
 
 
 
@@ -98,10 +98,10 @@ To clear the history you just have to call the __Clear()__ method of the __Workb
 __Example 4__ clears the history of a workbook.
         
 
-#### __[C#] Example 4: Clear history__
+#### __Example 4: Clear history__
 
-{{region cs-radspreadprocessing-features-history_3}}
+```csharp
 	workbook.History.Clear();
-{{endregion}}
+```
 
 

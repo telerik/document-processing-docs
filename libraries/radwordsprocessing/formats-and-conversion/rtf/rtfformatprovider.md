@@ -29,7 +29,7 @@ In order to import an RTF document, you need to use the __Import()__ method of _
 The code from __Example 1__ shows how to use __RtfFormatProvider__ to import an RTF document from a file.
         
 
-#### __[C#] Example 1: Import document from a file__
+#### __Example 1: Import document from a file__
 
 <snippet id='codeblock-ck'/>
 
@@ -38,7 +38,7 @@ The code from __Example 1__ shows how to use __RtfFormatProvider__ to import an 
 And here is how you can import a document from string containing the RTF document:
         
 
-#### __[C#] Example 2: Import document from a string__
+#### __Example 2: Import document from a string__
 
 <snippet id='codeblock-cl'/>
 
@@ -55,7 +55,7 @@ In order to export a document to RTF, you need to use the __Export()__ method of
 __Example 3__ shows how to use __RtfFormatProvider__ to export __RadFlowDocument__ to a file.
         
 
-#### __[C#] Example 3: Export a document to a file__
+#### __Example 3: Export a document to a file__
 
 <snippet id='codeblock-cm'/>
 
@@ -64,7 +64,7 @@ __Example 3__ shows how to use __RtfFormatProvider__ to export __RadFlowDocument
 You can also export the document to a string and preserve it in a database.
         
 
-#### __[C#] Example 4: Export a document to a string__
+#### __Example 4: Export a document to a string__
 
 <snippet id='codeblock-cn'/>
 

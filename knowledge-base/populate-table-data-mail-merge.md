@@ -8,17 +8,17 @@ tags: mail, merge, mailmerge, word, table, data, nested
 res_type: kb
 ---
 
-# Environment
+## Environment
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
 | 2024.1.124 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Description
+## Description
 
 Learn how to generate a Word (.DOCX) document that contains a [Table]({%slug radwordsprocessing-model-table%}) with a header row and an item row merge field. Then, passing a collection of records automatically creates and populates the data rows. 
 
-# Solution
+## Solution
 
 To achieve the desired result, you can use the [Nested Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) functionality that [RadWordsProcessing]({%slug radwordsprocessing-overview%}) offers and populate the data rows automatically.
 

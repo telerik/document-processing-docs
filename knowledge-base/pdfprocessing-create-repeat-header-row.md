@@ -21,9 +21,7 @@ This example demonstrates how one can create the repeating row functionality. Wh
 
 The solution would be to split the table on each page and draw a second table that contains only the headers. The bellow example looks complex but I believe that it can be easily pugged in a real application. 
 
-#### __C#__
-
-{{region kb-pdfprocessing-create-repeat-header-row}}
+```csharp
 
     class Program
     {
@@ -170,6 +168,6 @@ The solution would be to split the table on each page and draw a second table th
         }
     }
 
-{{endregion}}
+```
 
 

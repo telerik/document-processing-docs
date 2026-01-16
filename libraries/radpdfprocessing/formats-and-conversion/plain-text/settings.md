@@ -30,7 +30,7 @@ The constructor of the **TextFormatProviderSettings** class has two overloads:
 
 **Example 1** shows how to create and specify a particular setting.
 
-#### **[C#] Example 1: Create TextFormatProviderSettings**
+#### **Example 1: Create TextFormatProviderSettings**
 <snippet id='pdf-create-text-provider-settings'/>
 
 
@@ -39,7 +39,7 @@ The constructor of the **TextFormatProviderSettings** class has two overloads:
 The __Export()__ method of **TextFormatProvider** allows you to pass a **TextFormatProviderSettings** instance. **Example 2** illustrates how to apply the settings created in **Example 1**, when exporting a **RadFixedDocument** to string.
 
 
-#### **[C#] Example 2: Apply TextFormatProviderSettings**
+#### **Example 2: Apply TextFormatProviderSettings**
 
 <snippet id='pdf-apply-text-provider-settings'/>
 

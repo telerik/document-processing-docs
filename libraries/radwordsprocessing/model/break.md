@@ -31,7 +31,7 @@ All inline-level elements in a __RadFlowDocument__ need to be placed within anot
 __Example 1__ shows how to create a __Break__ element and add it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
         
 
-#### __[C#] Example 1: Create break__
+#### __Example 1: Create break__
 
 <snippet id='codeblock-cz'/>
 
@@ -43,7 +43,7 @@ Note, that the paragraph should belong to the same document that is passed to th
 __Example 2__ shows how you can change the type of the break created in __Example 1__.
         
 
-#### __[C#] Example 2: Change BreakType__
+#### __Example 2: Change BreakType__
 
 <snippet id='codeblock-caca'/>
 
@@ -55,7 +55,7 @@ Inserting a break in the document can also be done with the __InsertBreak()__ me
 __Example 3__ shows how you can insert a break through __RadFlowDocumentEditor__.
         
 
-#### __[C#] Example 3: Insert break using RadFlowDocumentEditor__
+#### __Example 3: Insert break using RadFlowDocumentEditor__
 
 <snippet id='codeblock-cbcb'/>
 
@@ -81,7 +81,7 @@ The __Break__ element exposes several properties that allow you to customize it.
 __Example 4__ shows how you can insert a Break through __RadFlowDocumentEditor__ and modify it later.
         
 
-#### __[C#] Example 4: Customize a break__
+#### __Example 4: Customize a break__
 
 <snippet id='codeblock-cccc'/>
 

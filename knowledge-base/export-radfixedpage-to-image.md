@@ -42,8 +42,8 @@ To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/
 	q
 >note The COM threading model for the application has to be a single-threaded apartment (STA). A STAThreadAttribute tag "[STAThread]" should be placed on the class. 
 
-#### __[C#] Assemblies version bellow 2020.2.513__
-{{region kb-export-radfixedpage-to-image1}}
+#### __Assemblies version bellow 2020.2.513__
+```csharp
 
 	[STAThread]
 	private static void Main(string[] args)
@@ -85,10 +85,10 @@ To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/
 		}
 	}
 
-{{endregion}}
+```
 
-#### __[C#] Assemblies version 2020.2.513 or above__
-{{region  kb-export-radfixedpage-to-image2}}
+#### __Assemblies version 2020.2.513 or above__
+```csharp
 
 	[STAThread]
 	private static void Main(string[] args)
@@ -123,4 +123,4 @@ To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/
 		}
 	}
 
-{{endregion}}
+```

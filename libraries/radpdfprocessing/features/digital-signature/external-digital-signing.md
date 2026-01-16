@@ -26,7 +26,7 @@ The supported digest (hash) algorithms for producing CMS (PKCS #7) PDF signature
 
 The following example demonstrates how to implement the **IExternalSigner** interface producing an external CMS (PKCS #7) detached signature over a PDF byte range:
 
-#### [C#] CMS External Signer 
+#### CMS External Signer 
 
 <snippet id='libraries-pdf-features-digital-signature-cms-external-signing'/>
 
@@ -41,7 +41,7 @@ The PdfProcessing library allows creating a base helper implementation for build
 The following example implements external RSA-based digital signing for PDF documents deriving the ExternalSignerBase class.
 **RSA** (Rivest–Shamir–Adleman) algorithm is a widely used asymmetric cryptographic algorithm. RSA generates a **private key** and a **public key** where the private key is used to sign the PDF and the public key is used to verify the signature. During the signing process a hash (digest) of the PDF content is created (e.g., using SHA-512). This hash is then encrypted with the RSA private key to create the digital signature. The signature is embedded in the PDF file, typically in a signature field.
 
-#### [C#] RSA External Signer 
+#### RSA External Signer 
 
 <snippet id='libraries-pdf-features-digital-signature-rsa-external-signing'/>
 

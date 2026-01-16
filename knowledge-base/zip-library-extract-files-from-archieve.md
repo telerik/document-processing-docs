@@ -23,9 +23,7 @@ The example is showing how to extract the contents of a zip file to a directory.
 
 The following code snippet is iterating all the files in the archive and extracts each file in the respected directory.
 
-#### __C#__
-
-{{region kb-zip-unzip-multiple-files-password}}
+```csharp
 
     using (Stream stream = File.Open("test.zip", FileMode.Open))
     {
@@ -55,4 +53,4 @@ The following code snippet is iterating all the files in the archive and extract
         }
     }
 
-{{endregion}}
+```

@@ -38,7 +38,7 @@ Inserting a merge field is easily achieved through the [RadFlowDocumentEditor]({
 
 __Example 1__ demonstrates how you can insert a merge field.  
 
-#### __[C#] Example 1: Insert merge field__
+#### __Example 1: Insert merge field__
 
 <pre><code>        
 	editor.InsertField("TIME \\@ \"h:mm:ss am/pm\"", "«to be updated»");

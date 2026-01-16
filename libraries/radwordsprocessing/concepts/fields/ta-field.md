@@ -38,7 +38,7 @@ Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%sl
 __Example 1__ demonstrates how you can insert a TA field.
         
 
-#### __[C#] Example 1: Insert TA field__
+#### __Example 1: Insert TA field__
 
 <pre><code>
     var document = new RadFlowDocument();

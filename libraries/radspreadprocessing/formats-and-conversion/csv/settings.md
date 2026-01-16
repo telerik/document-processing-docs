@@ -36,14 +36,14 @@ __CsvFormatProvider__ exposes a __Settings__ property of type __CsvSettings__. T
 __Example 1__ shows how to create and specify a particular setting to a CsvFormatProvider.
         
 
-#### __[C#] Example 1: Use CsvSettings__
+#### __Example 1: Use CsvSettings__
 
-{{region cs-radspreadprocessing-formats-and-conversion-csv-settings_0}}
+```csharp
 	CsvFormatProvider provider = new CsvFormatProvider();
 	provider.Settings.Delimiter = ';';
 	provider.Settings.Quote = '^';
 	provider.Settings.HasHeaderRow = true;
 	provider.Settings.Encoding = new UTF8Encoding();
-{{endregion}}
+```
 
 

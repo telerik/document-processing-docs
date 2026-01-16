@@ -34,9 +34,9 @@ How to replace a [TextBoxField]({%slug radpdfprocessing-model-interactive-forms-
 
 In the example below, we are demonstrating how to find a specific [TextBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) by its name in the imported into a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument) PDF document, preserve its size and [Position]({%slug radpdfprocessing-concepts-position%}) and replace it with an [Image]({%slug radpdfprocessing-model-image%}).
 
-#### __[C#] Replace TextBoxField with Image in Imported PDF Document__
+#### __Replace TextBoxField with Image in Imported PDF Document__
 
-{{region kb-replace-textboxfield-with-image-in-pdf-document1}}
+```csharp
 
 RadFixedPage firstPage = document.Pages[0];
 
@@ -63,4 +63,4 @@ RadFixedPage firstPage = document.Pages[0];
 
     firstPage.Annotations.Remove(field);
     firstPage.Content.Add(newImage);	
-{{endregion}}
+```

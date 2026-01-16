@@ -24,13 +24,13 @@ When using the **PdfFormatProvider** in your project, you may encounter one of t
 
 Usually, such an error may occur when the following **using** statements are imported:
 
-````C#
+```csharp
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
 using Telerik.Windows.Documents.Flow.FormatProviders.Pdf;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf;
 
 PdfFormatProvider provider = PdfFormatProvider();
-````
+```
 
 ## Solution
 
@@ -45,21 +45,21 @@ Telerik Document Processing Libraries offer PdfFormatProvider which makes it eas
 Explicitly specify the namespace when declaring the **PdfFormatProvider** object based on your specific requirement:
    - If you are working with **RadSpreadProcessing**, use the following namespace:
 
-````C#
+```csharp
  Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
-````
+```
 
    - If you are working with **RadWordsProcessing**, use the following namespace:
 
-````C#
+```csharp
   Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
-````
+```
 
    - If you are working with **RadPdfProcessing**, use the following namespace:
 
-````C#
+```csharp
   Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider();
-````
+```
 
 By explicitly specifying the namespace, you ensure that the correct `PdfFormatProvider` is used and avoid ambiguous reference errors.
 

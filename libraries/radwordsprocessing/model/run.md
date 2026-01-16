@@ -19,7 +19,7 @@ __Run__ element is an inline-level flow content element intended to contain a ru
 
 The code in __Example 1__ creates a __Run__ element and adds it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).      
 
-#### __[C#] Example 1: Create and add a run to a paragraph__
+#### __Example 1: Create and add a run to a paragraph__
 
 <snippet id='codeblock-dn'/>
 
@@ -27,19 +27,19 @@ The code in __Example 1__ creates a __Run__ element and adds it to a [Paragraph]
 
 You can add a run at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. __Example 2__ demonstrates how to add a run at the beginning of a paragraph.     
 
-#### __[C#] Example 2: Create and add a run at a specific index of a paragraph's Inlines collection__
+#### __Example 2: Create and add a run at a specific index of a paragraph's Inlines collection__
 
 <snippet id='codeblock-do'/>
 
 You can also use the __AddRun()__ method of the __Inlines__ collection of a paragraph. The method creates a new __Run__ instance, adds it to the container and returns it:     
 
-#### __[C#] Example 3: Create and add a run to a paragraph__
+#### __Example 3: Create and add a run to a paragraph__
 
 <snippet id='codeblock-dp'/>
 
 Inserting text in the document can also be achieved with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class:
         
-#### __[C#] Example 4: Insert a run using RadFlowDocumentEditor__
+#### __Example 4: Insert a run using RadFlowDocumentEditor__
 
 <snippet id='codeblock-dq'/>
 

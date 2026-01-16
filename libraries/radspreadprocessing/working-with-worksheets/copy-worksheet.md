@@ -20,19 +20,19 @@ The __CopyFrom(Worksheet source)__ method of a Worksheet will copy the passed _s
 __Example 1__ illustrates how to copy a specific worksheet from a source Workbook into a new sheet in the desired target workbook.
 
 
-#### __[C#] Example 1: Copy worksheet__
-{{region cs-radspreadprocessing-working-with-worksheets-copy-worksheet_0}}
+#### __Example 1: Copy worksheet__
+```csharp
 	Worksheet clonedSheet = target.Worksheets.Add();
 	clonedSheet.CopyFrom(source.Sheets[0] as Worksheet);
-{{endregion}}
+```
 
 
-#### __[VB.NET] Example 1: Copy worksheet__
+#### __Example 1: Copy worksheet__
 
-{{region vb-radspreadprocessing-working-with-worksheets-copy-worksheet_2}}
+```csharp
 	Dim clonedSheet As Worksheet = target.Worksheets.Add()
 	clonedSheet.CopyFrom(TryCast(source.Sheets(0), Worksheet))
-{{endregion}}
+```
 
 
 >If the sheet that you're copying is in a document where a [DocumentTheme]({%slug radspreadprocessing-features-styling-document-themes%}) has been applied, the theme will not be copied. Themes are information preserved in the __Workbook__ and you may need to transfer them additionally.
@@ -43,8 +43,8 @@ Copying a worksheet can be done both in a newly created worksheet and an existin
 __Example 2__ demonstrates a slightly more complex scenario in which a sheet is copied into an existing workbook. If the workbook contains a worksheet with the same name, the sheet to clone is copied into it. Otherwise, a new worksheet is created and its Name is copied from the source document.  
         
 
-#### __[C#] Example 2: Copy to existing workbook__
-{{region cs-radspreadprocessing-working-with-worksheets-copy-worksheet_1}}
+#### __Example 2: Copy to existing workbook__
+```csharp
 	bool containsSameName = false;
 	
 	foreach (var worksheet in targetWorkbook.Worksheets)
@@ -66,12 +66,12 @@ __Example 2__ demonstrates a slightly more complex scenario in which a sheet is 
 	    clonedSheet.CopyFrom(sheetToClone);
 	    clonedSheet.Name = sheetToClone.Name;
 	}
-{{endregion}}
+```
 
 
-#### __[VB.NET] Example 2: Copy to existing workbook__
+#### __Example 2: Copy to existing workbook__
 
-{{region vb-radspreadprocessing-working-with-worksheets-copy-worksheet_3}}
+```csharp
 	Dim containsSameName As Boolean = False
 	
 	For Each worksheet As var In targetWorkbook.Worksheets
@@ -88,7 +88,7 @@ __Example 2__ demonstrates a slightly more complex scenario in which a sheet is 
 	    clonedSheet.CopyFrom(sheetToClone)
 	    clonedSheet.Name = sheetToClone.Name
 	End If
-{{endregion}}
+```
 
 
 ## See Also

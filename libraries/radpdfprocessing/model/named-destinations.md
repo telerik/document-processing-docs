@@ -32,7 +32,7 @@ The **NamedDestinations** collection is exposed by RadFixedDocument and is used 
 
 **NamedDestination** objects can be created through the Add() method of the **NamedDestinations** collection exposed by RadFixedDocument.
 
-#### __[C#] Example 1: Create NamedDestination with Destination of type Link__
+#### __Example 1: Create NamedDestination with Destination of type Link__
 
 <snippet id='pdf-create-named-destination'/>
 
@@ -40,7 +40,7 @@ The **NamedDestinations** collection is exposed by RadFixedDocument and is used 
 
 You can remove a named destination as you would do with any item in a collection.
 
-#### __[C#] Example 2: Remove NamedDestination__
+#### __Example 2: Remove NamedDestination__
 
 <snippet id='pdf-remove-named-destination'/>
 
@@ -48,7 +48,7 @@ You can remove a named destination as you would do with any item in a collection
 
 In addition to the **Name** property of the **NamedDestination** class which provides you with a setter, you can use the **Rename()** method of the **RadFixedDocument.NamedDestinations** collection.
 
-#### __[C#] Example 3: Rename NamedDestination__
+#### __Example 3: Rename NamedDestination__
 
 <snippet id='pdf-rename-named-destination'/>
 
@@ -56,7 +56,7 @@ In addition to the **Name** property of the **NamedDestination** class which pro
 
 The **NamedDestinations** collection provides you with the ContainsName() method which is convenient to check whether the name you would like to use has been already applied to a NamedDestination or to check whether the NamedDestination you are searching for exists.
 
-#### __[C#] Example 4: Check if a NamedDestination already exists__
+#### __Example 4: Check if a NamedDestination already exists__
 
 <snippet id='pdf-exist-named-destination'/>
 

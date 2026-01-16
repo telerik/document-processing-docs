@@ -11,11 +11,11 @@ position: 18
 
 __RadSpreadProcessing__ allows you to set a culture that differs from the current thread culture. This can be achieved by creating a new __CultureHelper__.
 
-#### __C# Setting the Culture__
+#### __Setting the Culture__
 
-{{region cs-radspreadprocessing-features-setting-the-culture_1}}
+```csharp
 
     Telerik.Windows.Documents.Spreadsheet.Formatting.FormatHelper.CultureHelper = new SpreadsheetCultureHelper(new CultureInfo("en-US"));
 
-{{endregion}}
+```
 

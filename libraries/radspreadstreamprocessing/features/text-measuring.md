@@ -52,9 +52,9 @@ GetCellContentSize exposes an overload that allows you pass separate values for 
 
 The following example shows how you can create a spreadsheet document, measure the content of the cells and apply width to the columns in a way that these columns auto fit their content.
 
-#### [C#] Example 1: Create spreadsheet with auto fit columns width
+#### Example 1: Create spreadsheet with auto fit columns width
 
-{{region radspreadstreamprocessing-features-text-measuring_0}}
+```csharp
 
     public static void ExportSpreadsheet(SpreadDocumentFormat documentFormat, string fileName)
     {
@@ -119,7 +119,7 @@ The following example shows how you can create a spreadsheet document, measure t
         }
     }
     
-{{endregion}}
+```
 
 
 ## See Also

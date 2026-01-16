@@ -57,52 +57,52 @@ The parameters accepted by the constructors serve the following functions:
 You can create a compressed stream by initializing a new instance of the __CompressedStream__ class and passing as a parameter the stream in which the compressed data will be written. You need to specify the operation mode to __Wrtie__ and the compression settings that should be used.
         
 
-#### __[C#] Example 1: Write to compressed stream__
+#### __Example 1: Write to compressed stream__
 
-{{region cs-radziplibrary-compress-stream_0}}
+```csharp
 	            
 	using (CompressedStream compressedStream = new CompressedStream(outputStream, StreamOperationMode.Write, new DeflateSettings()))
 	{
 	    // write to compressed stream
 	}
-{{endregion}}
+```
 
 
 
-#### __[VB.NET] Example 1: Write to compressed stream__
+#### __Example 1: Write to compressed stream__
 
-{{region vb-radziplibrary-compress-stream_0}}
+```csharp
 	Using compressedStream As New CompressedStream(outputStream, StreamOperationMode.Write, New DeflateSettings())
 	    ' write to compressed stream
 	End Using
-{{endregion}}
+```
 
 
 
 If you want to compress a specific stream (*inputStream*), you need to copy it to the compressed stream that you've created.
         
 
-#### __[C#] Example 2: Write stream to compressed stream__
+#### __Example 2: Write stream to compressed stream__
 
-{{region cs-radziplibrary-compress-stream_1}}
+```csharp
 	    
 	using (CompressedStream compressedStream = new CompressedStream(outputStream, StreamOperationMode.Write, new DeflateSettings()))
 	{
 	    inputStream.CopyTo(compressedStream);
 	    compressedStream.Flush();
 	}
-{{endregion}}
+```
 
 
 
-#### __[VB.NET] Example 2: Write stream to compressed stream__
+#### __Example 2: Write stream to compressed stream__
 
-{{region vb-radziplibrary-compress-stream_1}}
+```csharp
 	Using compressedStream As New CompressedStream(outputStream, StreamOperationMode.Write, New DeflateSettings())
 	    inputStream.CopyTo(compressedStream)
 	    compressedStream.Flush()
 	End Using
-{{endregion}}
+```
 
 
 
@@ -111,25 +111,25 @@ If you want to compress a specific stream (*inputStream*), you need to copy it t
 Decompressing a stream is just as simple as compressing it. All you need to do is create new instance of the __CompressedStream__ class and pass it the stream from which the compressed data will be extracted, operation mode __Read__, and the compression settings that need to be used.
         
 
-#### __[C#] Example 3: Decompressed stream__
+#### __Example 3: Decompressed stream__
 
-{{region cs-radziplibrary-compress-stream_2}}
+```csharp
 	            
 	using (CompressedStream compressedStream = new CompressedStream(inputStream, StreamOperationMode.Read, new DeflateSettings()))
 	{
 	    compressedStream.CopyTo(outputStream);
 	}
-{{endregion}}
+```
 
 
 
-#### __[VB.NET] Example 3: Decompressed stream__
+#### __Example 3: Decompressed stream__
 
-{{region vb-radziplibrary-compress-stream_2}}
+```csharp
 	Using compressedStream As New CompressedStream(inputStream, StreamOperationMode.Read, New DeflateSettings())
 	    compressedStream.CopyTo(outputStream)
 	End Using
-{{endregion}}
+```
 
 
 

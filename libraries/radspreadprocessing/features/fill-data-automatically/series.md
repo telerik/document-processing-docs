@@ -46,9 +46,9 @@ The __FillDataSeriesLinear()__ method of the __CellSelection__ class constructs 
 __Example 1__ creates a new worksheet that has the value *1* in cell *A1* and *3* in *B1*. The __FillDataSeriesLinear()__ method is invoked for the cell region *A1:F1*. Thus, the values *1, 3, 5, 7, 9 and 11* appear in the range *A1:F1*.
         
 
-#### __[C#] Example 1: Fill linear series__
+#### __Example 1: Fill linear series__
 
-{{region cs-radspreadprocessing-features-fill-data-automatically-series_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -57,7 +57,7 @@ __Example 1__ creates a new worksheet that has the value *1* in cell *A1* and *3
 	
 	CellRange range = new CellRange(0, 0, 0, 5);
 	worksheet.Cells[range].FillDataSeriesLinear(CellOrientation.Horizontal, 2);
-{{endregion}}
+```
 
 
 
@@ -75,9 +75,9 @@ The __FillDataSeriesLinearTrend()__ method produces series using a linear fittin
 __Example 2__ shows how to use __FillDataSeriesLinearTrend()__ to continue series values *1, 5* from the range *A1:B1* and result will be series *1, 5, 9, 13, 17, 21* in the range *A1:F1*.
         
 
-#### __[C#] Example 2: Fill linear trend series__
+#### __Example 2: Fill linear trend series__
 
-{{region cs-radspreadprocessing-features-fill-data-automatically-series_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -89,7 +89,7 @@ __Example 2__ shows how to use __FillDataSeriesLinearTrend()__ to continue serie
 	
 	CellRange range = new CellRange(0, 0, 0, 9);
 	worksheet.Cells[range].FillDataSeriesLinearTrend(CellOrientation.Horizontal);
-{{endregion}}
+```
 
 
 
@@ -113,9 +113,9 @@ The __FillDataSeriesExponential()__ method calculates the values of each cell af
 __Example 3__ shows how to use the __FillDataSeriesExponential()__ method to continue series with initial values *1 and 3* that appear in cells *A1 and B1* respectively. After the method is invoked, the region *A1:F1* contains the following values: *1, 4, 16, 64, 256 and 1024*.
         
 
-#### __[C#] Example 3: Fill exponential series__
+#### __Example 3: Fill exponential series__
 
-{{region cs-radspreadprocessing-features-fill-data-automatically-series_2}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -124,7 +124,7 @@ __Example 3__ shows how to use the __FillDataSeriesExponential()__ method to con
 	
 	CellRange range = new CellRange(0, 0, 0, 5);
 	worksheet.Cells[range].FillDataSeriesExponential(CellOrientation.Horizontal, 4);
-{{endregion}}
+```
 
 
 
@@ -142,9 +142,9 @@ The __FillDataSeriesExponentialTrend()__ method calculates the values of the ser
 __Example 4__ shows how to use the __FillDataSeriesLinearTrend()__ method to continue series with initial values *1 and 5* that appear in cells *A1 and B1* respectively. After the linear trend is applied, the range *A1:F1* holds the following values: *1, 5, 25, 125, 625 and 3125*.
         
 
-#### __[C#] Example 4: Exponential trend series__
+#### __Example 4: Exponential trend series__
 
-{{region cs-radspreadprocessing-features-fill-data-automatically-series_3}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -155,7 +155,7 @@ __Example 4__ shows how to use the __FillDataSeriesLinearTrend()__ method to con
 	
 	CellRange range = new CellRange(0, 0, 0, 5);
 	worksheet.Cells[range].FillDataSeriesExponentialTrend(CellOrientation.Horizontal);
-{{endregion}}
+```
 
 
 
@@ -179,9 +179,9 @@ The __FillDataSeriesDate()__ method is used to fill date values incrementally us
 __Example 5__ shows how to construct series that use *5/28/2013* as a starting point and add two weekdays for each consecutive value.
         
 
-#### __[C#] Example 5: Fill date series__
+#### __Example 5: Fill date series__
 
-{{region cs-radspreadprocessing-features-fill-data-automatically-series_4}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -189,7 +189,7 @@ __Example 5__ shows how to construct series that use *5/28/2013* as a starting p
 	
 	CellRange range = new CellRange(0, 0, 0, 9);
 	worksheet.Cells[range].FillDataSeriesDate(CellOrientation.Horizontal, DateUnitType.Weekday, 2);
-{{endregion}}
+```
 
 
 
@@ -271,9 +271,9 @@ Similarly to the rest auto filling methods, __FillDataSeriesAuto()__ takes three
 __Example 6__ shows how to use the __FillDataSeriesAuto()__ method for initial value *1st* set in the cell *A1*. The resulting series filled in the range *A1:F1* are as follows: *1st, 2nd, 3rd, 4th, 5th and 6th*.
         
 
-#### __[C#] Example 6: Auto fill__
+#### __Example 6: Auto fill__
 
-{{region cs-radspreadprocessing-features-fill-data-automatically-series_5}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -281,7 +281,7 @@ __Example 6__ shows how to use the __FillDataSeriesAuto()__ method for initial v
 	
 	CellRange range = new CellRange(0, 0, 0, 5);
 	worksheet.Cells[range].FillDataSeriesAuto(CellOrientation.Horizontal, true);
-{{endregion}}
+```
 
 
 
@@ -294,9 +294,9 @@ __Figure 8__ demonstrates the result of __Example 6__.
 __Example 7__ demonstrates the behavior of the __FillDataSeriesAuto()__ method. This time, the initial value *6th* appears in cell *F1* and the applied auto fill is with reversed direction. Note that the constructed __CellRange__ is actually *F1:A1*, instead of *A1:F1*. The resulting series are: *11th, 12th, 9th, 8th, 7th and 6th*.
         
 
-#### __[C#] Example 7: Auto fill reversed direction__
+#### __Example 7: Auto fill reversed direction__
 
-{{region cs-radspreadprocessing-features-fill-data-automatically-series_6}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -304,7 +304,7 @@ __Example 7__ demonstrates the behavior of the __FillDataSeriesAuto()__ method. 
 	
 	CellRange range = new CellRange(0, 5, 0, 0);
 	worksheet.Cells[range].FillDataSeriesAuto(CellOrientation.Horizontal, true);
-{{endregion}}
+```
 
 
 

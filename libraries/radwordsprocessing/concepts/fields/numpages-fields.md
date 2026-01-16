@@ -27,7 +27,7 @@ Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%sl
 __Example 1__ demonstrates how you can insert a NumPages field.
         
 
-#### __[C#] Example 1: Insert NumPages field__
+#### __Example 1: Insert NumPages field__
 
 <snippet id='codeblock-bh'/>
 

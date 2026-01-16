@@ -67,7 +67,7 @@ __Example 1__ shows how you can create a new __RadFixedDocument__ instance.
         
 <a name="example1"><a/>
 
-#### __[C#] Example 1: Create RadFixedDocument__
+#### __Example 1: Create RadFixedDocument__
 
 <snippet id='pdf-create-fixed-document'/>
 
@@ -77,7 +77,7 @@ There are different actions, which you can execute with the help of __RadFixedDo
         
 __Example 2__ adds a page to the document created in [__Example 1__](#example1).
         
-#### __[C#] Example 2: Add page to RadFixedDocument__
+#### __Example 2: Add page to RadFixedDocument__
 
 <snippet id='pdf-create-fixed-page'/>
 
@@ -87,20 +87,20 @@ Alternatively, you can create new __RadFixedPage__ and add it to the __Pages__ c
 __Example 3__ creates a page and adds it to the document created in [__Example 1__](#example1).
         
 
-#### __[C#] Example 3: Create and add a page to RadFixedDocument__
+#### __Example 3: Create and add a page to RadFixedDocument__
 
 <snippet id='pdf-add-fixed-page'/>
 
 **Example 4** shows you how you could obtain a copy of a RadFixedDocument.
 
-#### __[C#] Example 4: Clone a document__
+#### __Example 4: Clone a document__
 
 <snippet id='pdf-clone-document'/>
 
 
 You can merge PDF documents out-of-the-box with the Merge() method of __RadFixedDocument__. This method clones the source document and appends it to the current instance of __RadFixedDocument__.
 
-#### __[C#] Example 5: Merge documents__
+#### __Example 5: Merge documents__
 
 <snippet id='pdf-merge-fixed-documents'/>
 

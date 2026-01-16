@@ -40,7 +40,7 @@ Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%sl
 
 __Example 1__ demonstrates how you can insert a PageRef field.
  
-#### __[C#] Example 1: Insert PageRef field__
+#### __Example 1: Insert PageRef field__
 
 <snippet id='codeblock-bj'/>
 
