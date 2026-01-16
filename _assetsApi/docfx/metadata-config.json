@@ -1,0 +1,32 @@
+{
+  "metadata": [{
+            "src": [
+                {
+                    "files": [
+                        "src/Telerik.Windows.Documents.Core.dll",
+                        "src/Telerik.Windows.Documents.Fixed.dll",
+                        "src/Telerik.Windows.Documents.Fixed.FormatProviders.Ocr.dll",
+                        "src/Telerik.Windows.Documents.TesseractOcr.dll",
+                        "src/Telerik.Windows.Documents.CMapUtils.dll",
+                        "src/Telerik.Windows.Documents.Flow.dll",
+                        "src/Telerik.Windows.Documents.DrawingML.dll",
+                        "src/Telerik.Windows.Documents.Flow.FormatProviders.Doc.dll",
+                        "src/Telerik.Windows.Documents.Flow.FormatProviders.Pdf.dll",
+                        "src/Telerik.Windows.Documents.Spreadsheet.dll",
+                        "src/Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll",
+                        "src/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.dll",
+                        "src/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.dll",
+                        "src/Telerik.Windows.Documents.Spreadsheet.FormatProviders.Json.dll",
+                        "src/Telerik.Windows.Documents.SpreadsheetStreaming.dll",
+                        "src/Telerik.Windows.Documents.AIConnector.dll",
+                        "src/Telerik.Documents.AI.Core.dll",
+                        "src/Telerik.Documents.AI.RAG.dll",
+                        "src/Telerik.Windows.Zip.dll",
+                        "src/Telerik.Windows.Zip.Extensions.dll"
+                    ]
+                }
+            ],
+            "dest": "metadata",
+            "filter": "filterConfig.yml"
+  }]
+}
