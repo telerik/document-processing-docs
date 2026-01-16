@@ -16,7 +16,7 @@ enable-tabbed-code-blocks: true
 pdf-cover-png-path: ./images/pdf-cover.png
 img-max-width: 100%
 table-layout: fixed
-external-snippets-path: dpl-snippets/DPL_Documentation_Code
+external-snippets-path: document-processing-docs-tasks
 gitLastCommitDateEnabled: true
 
 cta-overview: The @Subject is part of @ProductLink, a professional grade .NET library for creating and manipulating PDF, Word, XLSX and HTML files. To try it out sign up for a free 30-day trial.
