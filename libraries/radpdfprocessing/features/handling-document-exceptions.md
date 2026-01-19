@@ -73,9 +73,10 @@ As of **Q1 2025** the [PdfExportSettings]({%slug radpdfprocessing-formats-and-co
 | __NotSupportedXObjectTypeException__| Represents an exception for a document with an XObject type which is not supported.|
 |**DuplicatedJavaScriptNameException**|Represents an exception for JavaScript with a duplicated name.|
 |**NotSupportedImageFormatException**|Represents an exception thrown when attempting to use an image format that is not supported by the library.|
-|**InvalidAnnotationException**|Represents an exception for an annotation which is not valid. *(Introduced in Q1 2025)*|
-|**NotSupportedAnnotationException**|Represents an exception for an annotation which is not supported.*(Introduced in Q1 2025)*|
-|**InvalidImageDataException**|Represents an exception for importing an invalid image data.*(Introduced in Q1 2025)*|
+|**InvalidAnnotationException**|Represents an exception for an annotation which is not valid.|
+|**NotSupportedAnnotationException**|Represents an exception for an annotation which is not supported.|
+|**InvalidImageDataException**|Represents an exception for importing an invalid image data.|
+|**NotSupportedPdfPrimitivesConversionException**|Represents an exception thrown when attempting to convert unsupported PDF primitive types..*(Introduced in Q1 2026)*|
 
 # See Also
 
