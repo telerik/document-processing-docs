@@ -70,60 +70,13 @@ The above content controls share the following properties:
 
 The __CheckBox__ content control exposes two properties __CheckedState__ and __UnCheckedState__. Both properties are of type __SdtCheckBoxState__ which allows you to set the respective character and its font. The __Checked__ property specifies whether the checkbox is checked.
 
-#### Example 1: Setting CheckBox properties
+#### __C# Example 1: Setting CheckBox properties__ 
 
-#### __C#__
-
-{{region wordsprocessing-model-content-controls_0}}
-
-    SdtCheckBoxState checkedBoxState = new SdtCheckBoxState();
-    checkedBoxState.Font = new FontFamily("Arial");
-    checkedBoxState.CharacterCode = 0x0040;
-
-    SdtCheckBoxState uncheckedBoxState = new SdtCheckBoxState();
-    uncheckedBoxState.Font = new FontFamily("Arial");
-    uncheckedBoxState.CharacterCode = 0x0024;
-
-    CheckBoxProperties properties = new CheckBoxProperties();
-    properties.CheckedState = checkedBoxState;
-    properties.UncheckedState = uncheckedBoxState;
-    properties.Checked = true;
-{{endregion}}
+<snippet id='codeblock-dhdh'/>
 
 The toggle states can be visualized with any characters specified in the properties. The following example demonstrates a complete code snippet how to insert toggled/untoggled checkboxes:
 
-```csharp
-   RadFlowDocument document = new RadFlowDocument();
-   RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
-
-   //define the characters which will visually indicate the toggle states
-   SdtCheckBoxState checkedBoxState = new SdtCheckBoxState();
-   checkedBoxState.Font = new FontFamily("Arial");
-   checkedBoxState.CharacterCode = 0x0040;
-
-   SdtCheckBoxState uncheckedBoxState = new SdtCheckBoxState();
-   uncheckedBoxState.Font = new FontFamily("Arial");
-   uncheckedBoxState.CharacterCode = 0x0024;
-
-   CheckBoxProperties checkBoxProperties = new CheckBoxProperties();
-   checkBoxProperties.CheckedState = checkedBoxState;
-   checkBoxProperties.UncheckedState = uncheckedBoxState;
-   checkBoxProperties.Checked = true;
-
-   Run checkedRun = editor.InsertText("Checked: ");
-   editor.MoveToInlineEnd(checkedRun);
-   SdtRangeStart sdt = editor.InsertStructuredDocumentTag(checkBoxProperties);
-   editor.MoveToInlineEnd(sdt);
-   Run runWithCheckBox = editor.InsertText(((char)checkBoxProperties.CheckedState.CharacterCode).ToString());
-   runWithCheckBox.Properties.FontFamily.LocalValue = new ThemableFontFamily(checkBoxProperties.CheckedState.Font);
-   editor.MoveToInlineEnd(sdt.End);
-
-   Run uncheckedRun = editor.InsertText(Environment.NewLine+ "UnChecked: ");
-   editor.MoveToInlineEnd(uncheckedRun);
-   sdt = editor.InsertStructuredDocumentTag(checkBoxProperties);
-   editor.MoveToInlineEnd(sdt);
-   runWithCheckBox = editor.InsertText(((char)checkBoxProperties.UncheckedState.CharacterCode).ToString());
-```
+<snippet id='codeblock-dmdm'/>
 
 ![Insert CheckBoxes](images/insert-checkboxes.gif)    
 
@@ -136,18 +89,9 @@ The __ComboBox__ and __DropDownList__ provide the user with options to choose fr
     - __DisplayText:__ This property holds the displayed in the ComboBox/DropdownList text.
     - __Value:__ This property holds the value, which can be propagated through a data-binding relation.
 
-#### Example 2: Setting ComboBox properties
+#### __C# Example 2: Setting ComboBox properties__
 
-#### __C#__
-
-{{region wordsprocessing-model-content-controls_1}}
-
-    ComboBoxProperties properties = new ComboBoxProperties();
-    properties.Items.Add(new ListItem() { DisplayText = "Choice 1", Value = "a" });
-    properties.Items.Add(new ListItem() { DisplayText = "Choice 2", Value = "b" });
-    properties.SelectedItem = properties.Items.Where(li => li.Value == "a").FirstOrDefault();
-
-{{endregion}}
+<snippet id='codeblock-didi'/>
 
 ### Date
 
@@ -158,55 +102,33 @@ The __Date__ content control allows you to enter a date by using a calendar. The
 * __Calendar:__ Allows you to select the calendar type.
 * __DateMappingType:__ Gets or sets the data type (e.g. Date, DateTime, and Text) that is used for storing mapped date time value. 
 
-#### Example 3: Setting Date properties
+#### __C# Example 3: Setting Date properties__ 
 
-#### __C#__
-
-{{region wordsprocessing-model-content-controls_2}}
-
-    DateProperties properties = new DateProperties();
-    properties.DateFormat = "MM/dd/yyyy H:mm";
-    properties.Language = new CultureInfo("bg-BG");
-    properties.FullDate = DateTime.Now;
-    properties.Calendar = SdtCalendar.Gregorian;
-    properties.DateMappingType = DateMappingType.DateTime;
-{{endregion}}
+<snippet id='codeblock-djdj'/>
 
 ### Text
 
 The __Text__ content control allows you to enter plain text. The text content control has the following property:
 * __IsMultiline:__ Gets or sets a value that indicates whether the SDT supports new lines in its content.
 
-#### Example 4: Setting Text properties
+#### __C# Example 4: Setting Text properties__ 
 
-#### __C#__
-
-{{region wordsprocessing-model-content-controls_3}}
-
-    TextProperties properties = new TextProperties();
-    properties.IsMultiline = true;
-{{endregion}}
+<snippet id='codeblock-dkdk'/>
 
 ### RepeatingSection
 
 * __SectionTitle:__ Gets or sets the title of the section.
 * __AllowInsertAndDeleteSections:__ Gets or sets a value that indicates whether the underlying sections can be modified.
 
-#### Example 5: Setting RepeatingSection properties
+#### __C# Example 5: Setting RepeatingSection properties__ 
 
-#### __C#__
-
-{{region wordsprocessing-model-content-controls_4}}
-
-    RepeatingSectionProperties properties = new RepeatingSectionProperties();
-    properties.SectionTitle = "Title";
-    properties.AllowInsertAndDeleteSections = true;
-{{endregion}}
+<snippet id='codeblock-dldl'/>
 
 # See Also
  
 * [Working with Content Controls]({%slug wordsprocessing-model-working-with-content-controls%})
 * [Generating Dynamic DOCX Documents with Tables and CheckBoxes using RadWordsProcessing]({%slug dynamic-docx-document-generation-radwordsprocessing%})
 * [How to Clone and Populate Repeating Section Content Controls in RadWordsProcessing]({%slug clone-repeating-section-content-control-radwordsprocessing%})
+ * [Modify the Content of Content Controls (SDTs) using WordsProcessing]({%slug radwordsprocessing-modify-content-controls%})
 
 

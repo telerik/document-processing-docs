@@ -12,7 +12,9 @@ position: 1
 
 The __DataTableFormatProvider__ allows you to easily convert existing [DataTable](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-5.0) to a worksheet and vice versa. Below you can see how to use this format provider to import/export data tables.
 
-To use the DataTableFormatProvider you need to reference the __Telerik.Windows.Documents.Spreadsheet__ package. 
+To use the DataTableFormatProvider you need to reference the __Telerik.Windows.Documents.Spreadsheet__ package.
+
+>note As of Q1 2026 the DataTableFormatProvider supports the [timeout mechanism]({%slug timeout-mechanism-in-dpl%}) that was previously introduced for the rest of the providers.
 
 ## Import
 
@@ -25,11 +27,11 @@ Example 1 shows how you can import a DataTable. The sample instantiates a __Data
 	DataTable table = GetTable();
 	DataTableFormatProvider provider = new DataTableFormatProvider();
 	
-	Workbook workbook = provider.Import(table, TimeSpan.FromSeconds(10));
+	Workbook workbook = provider.Import(table);
 
 {{endregion}}
 
-You can import the data of the DataTable to an existing worksheet as well.
+You can import the data from the DataTable to an existing worksheet as well.
 
 #### __[C#] Example 2: Import DataTable to an existing Worksheet __
 
@@ -41,7 +43,7 @@ You can import the data of the DataTable to an existing worksheet as well.
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
-	provider.Import(table, worksheet);
+	provider.Import(table, worksheet, TimeSpan.FromSeconds(10));
 
 {{endregion}}
 
@@ -65,3 +67,4 @@ Example 3 demonstrates how you can export an existing Worksheet to a DataTable. 
 * [Settings]({%slug radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings%})
 * [Converting PDF Table Content to DataTable]({%slug convert-pdf-table-to-datatable%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
+* [Processing Decimal Columns as Double when Importing a DataTable into a Workbook using RadSpreadProcessing]({%slug processing-decimal-columns-as-double-from-datatable%})

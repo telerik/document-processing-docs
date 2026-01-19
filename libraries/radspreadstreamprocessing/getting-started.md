@@ -189,3 +189,4 @@ For more complete examples head to the [Developer Focused Examples]({%slug radsp
 * [Cells]({%slug radspreadstreamprocessing-model-cells%})
 * [Worksheets]({%slug radspreadstreamprocessing-model-worksheet%})
 * [Workbook]({%slug radspreadstreamprocessing-model-workbook%})
+* [Accessing Specific Cells in RadSpreadStreamProcessing]({%slug accessing-specific-cells-radspreadstreamprocessing%})
