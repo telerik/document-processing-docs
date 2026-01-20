@@ -76,7 +76,7 @@ As of **Q1 2025** the [PdfExportSettings]({%slug radpdfprocessing-formats-and-co
 |**InvalidAnnotationException**|Represents an exception for an annotation which is not valid.|
 |**NotSupportedAnnotationException**|Represents an exception for an annotation which is not supported.|
 |**InvalidImageDataException**|Represents an exception for importing an invalid image data.|
-|**NotSupportedPdfPrimitivesConversionException**|Represents an exception thrown when attempting to convert unsupported PDF primitive types..*(Introduced in Q1 2026)*|
+|**NotSupportedPdfPrimitivesConversionException**|Represents an exception thrown when attempting to convert unsupported PDF primitive types.|
 
 # See Also
 
