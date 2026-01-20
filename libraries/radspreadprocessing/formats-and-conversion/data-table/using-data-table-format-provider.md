@@ -27,7 +27,7 @@ Example 1 shows how you can import a DataTable. The sample instantiates a __Data
 	DataTable table = GetTable();
 	DataTableFormatProvider provider = new DataTableFormatProvider();
 	
-	Workbook workbook = provider.Import(table);
+	Workbook workbook = provider.Import(table, TimeSpan.FromSeconds(10));
 
 {{endregion}}
 
