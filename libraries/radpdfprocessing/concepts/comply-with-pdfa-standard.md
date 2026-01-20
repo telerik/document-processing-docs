@@ -67,6 +67,16 @@ This ensures that the exported PDF document is properly tagged, which is essenti
 
 >important The PDF/A standard requires all fonts used in a document to be embedded. Prior to **Q3 2025**, the [14 standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) were not embedded in the file, which caused the document to be non-compliant. As of **Q3 2025**, these standard fonts are automatically embedded when PDF/A compliance is enabled. More information about font embedding is available in the [Fonts]({%slug radpdfprocessing-concepts-fonts%}) article.
 
+### Setting Fallback Fonts for Standard Fonts
+
+When working with PDF/A-compliant documents, you can specify fallback fonts for the standard fonts to ensure proper rendering when the standard font is unavailable or needs to be replaced:
+
+<snippet id='libraries-pdf-concepts-comply-with-pdfa-set-standard-font-fallback'/>
+
+If you need to remove all configured fallback fonts, you can use the __ClearStandardFontFallbacks()__ method:
+
+<snippet id='libraries-pdf-concepts-comply-with-pdfa-clear-fallback-fonts'/>
+
 ## See Also
 
  * [Using PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})

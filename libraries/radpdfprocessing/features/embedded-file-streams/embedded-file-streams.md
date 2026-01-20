@@ -12,9 +12,15 @@ As of **2024 Q1** RadPdfProcessing allows embedding file streams into the docume
 
 ## The EmbeddedFile Class
 
-RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** accessed by the **EmbeddedFiles** property. Each **EmbeddedFile** contains **Name** (string) and **Data** (byte[]) properties. The specified Name should be unique and it represents the textual description of the embedded file, which can be displayed in the user interface of a viewer application. The Data stores the byte[] of the file stream. 
+RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** accessed by the **EmbeddedFiles** property. Each **EmbeddedFile** requires **Name** (string) and **Data** (byte[]) properties. The specified Name should be unique and it represents the textual description of the embedded file, which can be displayed in the user interface of a viewer application. The Data stores the byte[] of the file stream. 
 
 >important The Name for the EmbeddedFile should contain the file extension as well, e.g. *MySampleTextFile.txt*.
+
+|Property|Description|
+|----|----|
+|**Name**|Gets or sets the attachment's display file name (including extension) shown in viewer UIs.|
+|**Data**|Represents the file data as a byte array.|
+|**MimeType**|Gets or sets the MIME type of the embedded file. The MIME type string (e.g., "application/xml", "text/xml", etc.). If not specified, the default value of "application/octet-stream" will be used. (*introduced in Q1 2026*) |
 
 >note [PdfProcessing Embedding File Streams Demo](https://demos.telerik.com/document-processing/pdfprocessing/embed_file_streams)
 
@@ -27,7 +33,17 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 >important **DuplicatedEmbeddedFileNameException** is thrown when adding an embedded file with a name that is already added to the collection.
 
 #### Attachments section in Adobe 
+
 ![Embedded Files in a PDF document](images/embedded_files_0.png)
+
+### Specifying the MIME Type
+
+|Minimum Version|Q1 2026|
+|----|----|
+
+RadPdfProcessing allows you to explicitly set the correct MIME type when embedding the file into the PDF. This is especially important for standards like PDF/A-3 and Factur-X, which require strict metadata and MIME type declarations for embedded files.
+
+<snippet id='pdf-set-mime-type'/>
 
 ### Creating an Embedded Electronic (ZUGFeRD) Invoice
 
