@@ -41,7 +41,7 @@ excluded-files:
 meta:
   knowledge-base:
     title: Knowledge Base
-    position: 100
+    position: 500
     res_type: kb
     relativeUrl: /knowledge-base
     hideChildren: true
@@ -340,7 +340,7 @@ meta:
     position: 110
   api:
     title: API Reference
-    position: 100
+    position: 1000
 
 redirects: 
 - from: "^/?$"
