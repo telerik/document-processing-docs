@@ -34,7 +34,7 @@ Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-table
 __Example 1__ shows how to generate a simple table with two rows and three columns with some sample text in each table cell.
         
 
-#### __[C#] Example 1: Create simple table__
+#### __Example 1: Create simple table__
 
 <snippet id='libraries-pdf-editing-table-overview-create-simple-table'/>
 
@@ -57,7 +57,7 @@ If you want to apply default styling to all the cells in a table, you can use Ta
 __Example 2__ shows how to use the __DefaultCellProperties__ of a table
         
 
-#### __[C#] Example 2: Use DefaultCellProperties of Table__
+#### __Example 2: Use DefaultCellProperties of Table__
 
 <snippet id='libraries-pdf-editing-table-overview-use-default-cell-properties-of-table'/>
 
@@ -93,21 +93,21 @@ There are several factors that affect tables measuring calculations. Some of the
 __Example 3__ demonstrates how border calculations occur with different __BorderCollapse__ option. The code in this example creates an empty table and sets default cell padding and red table border with thickness 10 to it.
         
 
-#### __[C#] Example 3: Create table with red border__
+#### __Example 3: Create table with red border__
 
 <snippet id='libraries-pdf-editing-table-overview-create-table-with-red-border'/>
 
 __Example 4__ adds a single row with two cells to the table from __Example 3__. The first cell has a green border with thickness 5 while the second cell has a blue border with thickness 3.
         
 
-#### __[C#] Example 4: Add green and blue cells__
+#### __Example 4: Add green and blue cells__
 
 <snippet id='libraries-pdf-editing-table-overview-add-green-and-blue-cells-to-table'/>
 
 __Figure 3__ shows the table from Example 3 and 4 with BorderCollapse property set to Collapse - all borders are drawn so that their middle lines coincide.
         
 
-#### __[C#] Example 5: Collapse border__
+#### __Example 5: Collapse border__
 
 <snippet id='libraries-pdf-editing-table-overview-collapse-table-border'/>
 
@@ -117,7 +117,7 @@ __Figure 3__ shows the table from Example 3 and 4 with BorderCollapse property s
 __Figure 4__ shows the same table with BorderCollapse property set to Separate - all borders are drawn so that their outer contour coincide.
         
 
-#### __[C#] Example 6: Separate border__
+#### __Example 6: Separate border__
 
 <snippet id='libraries-pdf-editing-table-overview-separate-table-border'/>
 
@@ -132,14 +132,14 @@ When a table is generated, it could be inserted in the PDF document using the __
 __Example 7__ generates a simple table with two cells.
         
 
-#### __[C#] Example 7: Create table__
+#### __Example 7: Create table__
 
 <snippet id='libraries-pdf-editing-table-overview-create-table'/>
 
 __Example 8__ inserts the table from __Example 7__ in a RadFixedDocumentEditor and specifies the table layout type to AutoFit.
         
 
-#### __[C#] Example 8: Insert AutoFit table__
+#### __Example 8: Insert AutoFit table__
 
 <snippet id='libraries-pdf-editing-table-overview-insert-autofit-table'/>
 
@@ -152,7 +152,7 @@ The result is that the table width is exactly as needed for fitting the cells co
 Specifying FixedWidth layout option produces different results.
         
 
-#### __[C#] Example 9: Insert FixedWidth table__
+#### __Example 9: Insert FixedWidth table__
 
 <snippet id='libraries-pdf-editing-table-overview-insert-fixed-width-table'/>
 
@@ -167,7 +167,7 @@ When in need of more customization options, you can use the __DrawTable()__ meth
 __Example 10__ shows how to draw a rotated table with the help of FixedContentEditor.
         
 
-#### __[C#] Example 10: Draw rotated table__
+#### __Example 10: Draw rotated table__
 
 <snippet id='libraries-pdf-editing-table-overview-draw-rotated-table'/>
 

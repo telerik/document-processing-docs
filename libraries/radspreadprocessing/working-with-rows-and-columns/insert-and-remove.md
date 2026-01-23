@@ -30,9 +30,9 @@ In order to insert rows, you need to create a __RowSelection__ instance that ind
 The __RowSelection__ class exposes __CanInsert()__ and __Insert()__ methods that indicate whether the insert is possible and perform the insert operation respectively. __Example 1__ shows how to insert rows using the two methods.
         
 
-#### __[C#] Example 1: Insert rows__
+#### __Example 1: Insert rows__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-insert-and-remove_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -44,7 +44,7 @@ The __RowSelection__ class exposes __CanInsert()__ and __Insert()__ methods that
 	    RowSelection selection = worksheet.Rows[index, index + itemCount];
 	    selection.Insert();
 	}
-{{endregion}}
+```
 
 
 
@@ -56,9 +56,9 @@ In order to remove rows, you need to create a __RowSelection__ instance that spe
 The __RowSelection__ class exposes a __Remove()__ method that performs the removal of the selected rows. __Example 2__ shows how to remove rows.
         
 
-#### __[C#] Example 2: Remove rows__
+#### __Example 2: Remove rows__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-insert-and-remove_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -67,7 +67,7 @@ The __RowSelection__ class exposes a __Remove()__ method that performs the remov
 	
 	RowSelection selection = worksheet.Rows[startIndex, endIndex];
 	selection.Remove();
-{{endregion}}
+```
 
 
 
@@ -79,9 +79,9 @@ In order to insert columns, you need to create a __ColumnSelection__ instance th
 The __ColumnSelection__ class exposes __CanInsert()__ and __Insert()__ methods that indicate whether the insert is possible and perform the insert operation respectively. __Example 3__ shows how to insert columns using the two methods.
         
 
-#### __[C#] Example 3: Insert columns__
+#### __Example 3: Insert columns__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-insert-and-remove_2}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -93,7 +93,7 @@ The __ColumnSelection__ class exposes __CanInsert()__ and __Insert()__ methods t
 	    ColumnSelection selection = worksheet.Columns[index, index + itemCount];
 	    selection.Insert();
 	}
-{{endregion}}
+```
 
 
 
@@ -105,9 +105,9 @@ In order to remove columns, you need to create a __ColumnSelection__ instance th
 The __ColumnSelection__ class exposes a __Remove()__ method that executes the removal of the selected columns. __Example 4__ illustrates how to remove columns.
         
 
-#### __[C#] Example 4: Remove columns__
+#### __Example 4: Remove columns__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-insert-and-remove_3}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -116,7 +116,7 @@ The __ColumnSelection__ class exposes a __Remove()__ method that executes the re
 	
 	ColumnSelection selection = worksheet.Columns[startIndex, endIndex];
 	selection.Remove();
-{{endregion}}
+```
 
 ## See Also
 

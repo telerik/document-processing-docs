@@ -34,9 +34,7 @@ How to sign a document with a digital signature using [FixedContentEditor]({%slu
 
 In order to sign a **PDF** file with the [PdfProcessing]({%slug radpdfprocessing-overview%}) library, you need an instance of the _System.Security.Cryptography.X509Certificates.[X509Certificate2](https://docs.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificate2)_ class. One way to create such an instance is to provide the path to a PFX file and the password in an X509Certificate2 constructor, as in the provided example.
 
-#### __C#__
-
-{{region kb-signing-a-document-with-digital-signature1}}
+```csharp
 
 	PdfFormatProvider provider = new PdfFormatProvider();
 	RadFixedDocument document = ImportDocument();
@@ -78,13 +76,11 @@ In order to sign a **PDF** file with the [PdfProcessing]({%slug radpdfprocessing
 	// Add Signature flags
 	document.AcroForm.SignatureFlags = SignatureFlags.AppendOnly;
  
-{{endregion}}
+```
 
 However, there are other approaches provided by the **.Net Framework API** that allow you to get an X509Certificate2 class instance. The following code snippet demonstrates a possible approach for getting an X509Certificate2 class instance from an external device (e.g. **USB token** or hardware security module (**HSM**)) using .Net Framework API:
 
-#### __C#__
-
-{{region kb-signing-a-document-with-digital-signature1}}
+```csharp
 
 	X509Store store = new X509Store(StoreLocation.CurrentUser);
 	store.Open(OpenFlags.ReadOnly);
@@ -92,7 +88,7 @@ However, there are other approaches provided by the **.Net Framework API** that 
 
 	X509Certificate2 cert = sel[0];
 
-{{endregion}}
+```
 
 ## See Also
 

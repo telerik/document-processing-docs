@@ -22,9 +22,9 @@ In order to copy values that appear in your worksheet, create a __CellSelection_
 __Example 1__ creates a new workbook with a single worksheet and assigns some sample values to the A1:B3 region. Further, the code creates a selection for the cell region and calls its __Copy()__ method. The returned __WorksheetFragment__ can later be used for pasting operation.
         
 
-#### __[C#] Example 1: Copy selected cells__
+#### __Example 1: Copy selected cells__
 
-{{region cs-radspreadprocessing-features-clipboard-support_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -37,7 +37,7 @@ __Example 1__ creates a new workbook with a single worksheet and assigns some sa
 	
 	CellRange copiedCellRange = new CellRange(0, 0, 2, 1);
 	WorksheetFragment worksheetFragment = worksheet.Cells[copiedCellRange].Copy();
-{{endregion}}
+```
 
 
 
@@ -70,9 +70,9 @@ The document model provides control over the content and the formatting included
 __Example 2__ creates a new workbook with an empty worksheet. Further, the example sets the __Value__ of cell *A1* to =CONCATENATE("Rad" ,"Spreadsheet") and its __ForeColor__ to green. The code copies the contents of *A1* and pastes it in *A2* using __All__ PasteType.
         
 
-#### __[C#] Example 2: Copy all__
+#### __Example 2: Copy all__
 
-{{region cs-radspreadprocessing-features-clipboard-support_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -83,19 +83,19 @@ __Example 2__ creates a new workbook with an empty worksheet. Further, the examp
 	
 	PasteOptions pasteOptions = new PasteOptions(PasteType.All);
 	worksheet.Cells[1, 0].Paste(worksheetFragment, pasteOptions);
-{{endregion}}
+```
 
 
 
 Using different __PasteType__, however, produces different output. __Example 3__ pastes the contents of *A1* with __Values__ PasteType, which results in a value "RadSpreadsheet" instead of =CONCATENATE("Rad" ,"Spreadsheet") and default __ForeColor__ instead of green:
         
 
-#### __[C#] Example 3: Paste using PasteType.Values__
+#### __Example 3: Paste using PasteType.Values__
 
-{{region cs-radspreadprocessing-features-clipboard-support_2}}
+```csharp
 	PasteOptions pasteOptionsValues = new PasteOptions(PasteType.Values);
 	worksheet.Cells[2, 0].Paste(worksheetFragment, pasteOptionsValues);
-{{endregion}}
+```
 
 
 
@@ -105,12 +105,12 @@ If you would like to paste the formula contained in *A1*, not only its result, a
 __Example 4__ combines the Value and Formats paste types and preserves both the contents and formatting of the copied cell selection.
         
 
-#### __[C#] Example 4: Combine Values and Formats PasteType__
+#### __Example 4: Combine Values and Formats PasteType__
 
-{{region cs-radspreadprocessing-features-clipboard-support_3}}
+```csharp
 	PasteOptions valuesAndFormatting = new PasteOptions(PasteType.Formulas | PasteType.Formats);
 	worksheet.Cells[3, 0].Paste(worksheetFragment, valuesAndFormatting);
-{{endregion}}
+```
 
 
 

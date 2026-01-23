@@ -107,7 +107,7 @@ Here is a list of packages that contain the __RadWordsProcessing__ functionality
 Here is how to create a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and insert some text content with the help of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
         
 
-#### __[C#] Example 1: Create RadFlowDocument programmatically__
+#### __Example 1: Create RadFlowDocument programmatically__
 
 <snippet id='codeblock-b'/>
 
@@ -125,7 +125,7 @@ You need to add using directive to the following namespaces:
 Exporting the document to Docx file can be achieved with the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). Here is how to create a provider instance and save a document with it:
         
 
-#### __[C#] Example 2: Export RadFlowDocument to Docx__
+#### __Example 2: Export RadFlowDocument to Docx__
 
 <snippet id='codeblock-c'/>
 

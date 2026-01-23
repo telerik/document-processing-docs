@@ -18,7 +18,7 @@ position: 4
 [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) has a __DocumentVariableCollection__ property, which holds document variable records. The collection maps string keys to string values. You can add a record in it through an indexer or with the collection's __Add()__ method. __Example 1__ demonstrates both approaches.
         
 
-#### __[C#] Example 1: Add document variable record__
+#### __Example 1: Add document variable record__
 
 <snippet id='codeblock-oo'/>
 
@@ -33,7 +33,7 @@ The same two methods can be used to modify the value of an existing variable in 
 Removing defined variables can be achieved by using the __Remove()__ method of the variables collection. It accepts the name of the variable as a parameter.
         
 
-#### __[C#] Example 2: Remove document variable record__
+#### __Example 2: Remove document variable record__
 
 <snippet id='codeblock-pp'/>
 
@@ -58,7 +58,7 @@ A __DocumentVariable__ field can be inserted through [RadFlowDocumentEditor]({%s
 __Example 3__ shows insertion of the field created in __Example 1__.
         
 
-#### __[C#] Example 3: Insert document variable field__
+#### __Example 3: Insert document variable field__
 
 <snippet id='codeblock-qq'/>
 

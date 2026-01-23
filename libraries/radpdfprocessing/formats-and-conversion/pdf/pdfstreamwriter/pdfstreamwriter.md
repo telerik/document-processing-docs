@@ -27,7 +27,7 @@ The **PdfStreamWriter** class enables you to write file content directly to a St
 
 To create an object of type PdfSteamWriter, you should pass it the Stream of the file, which you would like to work with, as a constructor parameter.
 
-#### **[C#] Example 1: Instantiate PdfStreamWriter**
+#### **Example 1: Instantiate PdfStreamWriter**
 
 <snippet id='pdf-stream-writer-instance'/>
 
@@ -45,7 +45,7 @@ The constructor of **PdfStreamWriter** enables you to use any class inheriting f
 >- All the data is flushed into the stream when disposing PdfStreamWriter. It is important to dispose the object prior to further processing the MemoryStream so you can ensure that all the required document data is saved inside;
 
 
-#### **[C#] Example 2: Instantiate PdfStreamWriter with MemoryStream**
+#### **Example 2: Instantiate PdfStreamWriter with MemoryStream**
 
 <snippet id='pdf-stream-writer-instance-memory'/>
 
@@ -55,13 +55,13 @@ The members of the class allow you to set several properties of the document you
 
 * **BeginPage()**: The BeginPage() method returns an instance of the **PdfPageStreamWriter** class, which is responsible to draw the content of the page. More information about this class is available in the [PdfPageStreamWriter article](). The overloads of BeginPage() allow you to pass the size and the [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) of the page.
 	
-	#### **[C#] Example 3: Insert a new page into a document**
+	#### **Example 3: Insert a new page into a document**
 	
 	<snippet id='pdf-stream-writer-insert-new-page'/>
 
 * **WritePage()**: The WritePage() methods enable you to pass an already constructed page object. With the different overloads, you can pass an instance of [**RadFixedPage**]() and [**PdfPageStreamWriter**]().
 	
-	#### **[C#] Example 4: Insert an already generated page into a document**
+	#### **Example 4: Insert an already generated page into a document**
 	
 	<snippet id='pdf-insert-generated-page-in-doc'/>
 

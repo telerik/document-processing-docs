@@ -20,9 +20,7 @@ This can happen when the characters cannot be found in a specific font. In this 
 
 To ensure that these symbols are available you need to embed a font that contains them to the document. 
 
-#### __C#__
-
-{{region kb-missing-symbols-in-pdf1}}
+```csharp
 
     var fontData = File.ReadAllBytes(@"..\\..\SegoeUI.ttf");
     FontsRepository.RegisterFont(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.Normal, fontData);
@@ -30,4 +28,4 @@ To ensure that these symbols are available you need to embed a font that contain
     FontBase font;
     FontsRepository.TryCreateFont(new FontFamily("Segoe UI"), FontStyles.Normal, FontWeights.Normal, out font);
 
-{{endregion}}
+```

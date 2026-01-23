@@ -33,9 +33,7 @@ Introducing a way to replace text with other document elements.
 
 To achieve this we will iterate the document elements of type [Run]({%slug radwordsprocessing-model-run%}) and will compare their text with the desired string. If there is a match we will store the Run index and we will insert the desired element (in our example: [Break]({%slug radwordsprocessing-model-break%}) on this specific index in the **Inlines** collection. Finally we will remove the Run.
 
-#### __C#__
-
-{{region kb-replace-text-with-inline-element1}}
+```csharp
 
 	RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
 	editor.InsertText("First line");
@@ -56,4 +54,4 @@ To achieve this we will iterate the document elements of type [Run]({%slug radwo
 		}
 	}
 
-{{endregion}}
+```

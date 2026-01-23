@@ -29,9 +29,7 @@ The following example demonstrates how to create TableCells with GoToAction and 
 
 3.After that for creating Links to URLs or Locations within the document, we use Actions - UriAction or GoToAction.
 
-
-````C#
-{{region kb-create-table-cells}}
+```csharp
 
     RadFixedDocument document = new RadFixedDocument();
     using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
@@ -110,9 +108,7 @@ The following example demonstrates how to create TableCells with GoToAction and 
 
     Process.Start(new ProcessStartInfo() { FileName = outputPath, UseShellExecute = true });
 
-{{endregion}}
-
-````
+```
 
 ## See Also
 

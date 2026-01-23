@@ -28,7 +28,7 @@ The Signature class exposes two methods that allow you to validate a signature:
 
 The following example shows how the validation can be used:
 
-#### **[C#] Example: Validate a field**
+#### **Example: Validate a field**
 
 
 <snippet id='pdf-validate-signature'/>

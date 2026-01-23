@@ -41,7 +41,7 @@ res_type: kb
 
 The following code snippets demonstrate how to create a custom implementation of the ImagePropertiesResolver abstract class using the [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp) (2.0.0) library and set it to the **ImagePropertiesResolver** property of the **FixedExtensibilityManager**.
 
-#### __[C#] Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class__
+#### __Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class__
 
 ```csharp
 
@@ -186,7 +186,7 @@ public class ImagePropertiesResolver : ImagePropertiesResolverBase
 
 ```
 
-#### __[C#] Set the custom implementation to the ImagePropertiesResolver property of the FixedExtensibilityManager__
+#### __Set the custom implementation to the ImagePropertiesResolver property of the FixedExtensibilityManager__
 
 ```csharp
 

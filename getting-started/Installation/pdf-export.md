@@ -43,9 +43,9 @@ In order to use the **PdfFormatProvider** of **RadWordsProcessing**, you should 
 
 **Example 1** demonstrates how you can convert an HTML string to a PDF document. The [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) and [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) classes of [RadWordsProcessing]({%slug radwordsprocessing-overview%}) are used to import/export the [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance. 
 
-#### [C#] Example 1: HTML to PDF conversion
+#### Example 1: HTML to PDF conversion
 
-{{region radwordsprocessing-pdf-export_0}}
+```csharp
 
 	string htmlContent = "<!DOCTYPE html><html><body><p>Hello, world!</p></body></html>";
 	
@@ -57,7 +57,7 @@ In order to use the **PdfFormatProvider** of **RadWordsProcessing**, you should 
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
     byte[] pdfBytes = pdfProvider.Export(document, TimeSpan.FromSeconds(10));
-{{endregion}}
+```
 
 ## Convert a Spreadsheet Document to PDF
 

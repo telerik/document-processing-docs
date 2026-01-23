@@ -9,7 +9,7 @@ published: True
 position: 4
 ---
 
-# Licensing before 2025
+## Licensing before 2025
 
 [Telerik Document Processing]({%slug introduction%}) used to come in separate **Trial** and **Developer** (or commercial) assets distribution until Q2 2025.
 

@@ -29,7 +29,7 @@ To sign a document, follow the steps:
 
 The following example shows a full code snippet for a simple signing of a newly created document:
 
-#### **[C#] Example: Sign a document**
+#### **Example: Sign a document**
 
 <snippet id='pdf-sign-document'/>
 
@@ -69,7 +69,7 @@ RadPdfProcessing enables you to sign and validate signature fields using standar
 
 The signature flags were introduced in R2022 SP1. You can set the flags with the following code:
 
-#### **[C#] Example: Set signature flags**
+#### **Example: Set signature flags**
 
 <snippet id='pdf-signature-flags'/>
 

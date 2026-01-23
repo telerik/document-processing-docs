@@ -34,7 +34,7 @@ Each List contains a __ListLevelCollection__ where the presentation of each list
 
 The code snippet from __Example 1__ shows how to create a list with NumberedParentheses template.
 
-#### __[C#] Example 1: Create numbered parentheses list template type__
+#### __Example 1: Create numbered parentheses list template type__
 
 <snippet id='pdf-list-numbered-parentheses'/>
 
@@ -65,7 +65,7 @@ When you need to create a custom List, you should define the presentation of eac
 
 __Example 2__ shows how to create an empty list and add two custom list levels to its __ListLevelsCollection__. Level 0 has a bullet which displays its current numbering as two digit number with a leading zero. Level 1 displays a checkbox as a bullet symbol for all of the corresponding list items. Additionally, each of the levels defines custom values for the __LeftIndent__, __ForegroundColor__ and __IndentAfterBullet__ properties. 
 
-#### __[C#] Example 2: Create custom list levels__
+#### __Example 2: Create custom list levels__
 
 <snippet id='pdf-list-custom-levels'/>
 
@@ -82,7 +82,7 @@ If you require using a text bullet, you may use __TextBulletNumberingFormat__ cl
 
 The following code snippet shows how to create the bullets of a numbered hierarchical list using __TextBulletNumberingFormat__ class:
 
-#### __[C#] Example 3: Create custom text numbering bullet__
+#### __Example 3: Create custom text numbering bullet__
 
 <snippet id='pdf-list-custom-numbering-bullet'/>
 
@@ -98,7 +98,7 @@ In order to use lists with __RadFixedDocumentEditor__, you should first add them
 
 __Example 4__ shows how to create a list with __RadFixedDocumentEditor__ and insert a single item for each of the list levels. The appearance of the list is from the values in the predefined __ListTemplateType__ enumeration
 
-#### __[C#] Example 4: Using lists with RadFixedDocumentEditor__
+#### __Example 4: Using lists with RadFixedDocumentEditor__
 
 <snippet id='pdf-list-using-raddocumentfixededitor'/>
 
@@ -115,7 +115,7 @@ As the __Block__ class has __Bullet__ and __IndentAfterBullet__ properties you c
 The following code snippet shows how to create __List__ with __BulletDefault__ template and set the bullet of the first list level to a Block:
 
 
-#### __[C#] Example 5: Using lists with Block class__
+#### __Example 5: Using lists with Block class__
 
 <snippet id='pdf-list-using-with-blocks'/>
 

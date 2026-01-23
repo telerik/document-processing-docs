@@ -34,9 +34,9 @@ This article shows how to merge two pages from different documents into a single
 
 The provided code snippet demonstrates how to import two **PDF** documents using the [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}), get their first pages using the [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}), and merge them on a single page using the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}).
 
-#### __[C#] Merge two pages from different documents into a single page__
+#### __Merge two pages from different documents into a single page__
 
-{{region pdfprocessing-merge-two-pdf-pages-into-a-single-page1}}
+```csharp
 
 	string firstDocument = "SampleDocument1.pdf";
 	string secondDocument = "SampleDocument2.pdf";
@@ -66,4 +66,4 @@ The provided code snippet demonstrates how to import two **PDF** documents using
 			}
 		}
 	}
-{{endregion}}
+```

@@ -90,7 +90,7 @@ Specifies the display of a numeric result. This switch is called a "picture" swi
 Inserting an Expression Field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s **InsertField()** method. It accepts code as first argument and result as second argument.
        
 
-#### __[C#] Example 1: Insert an Expression field__
+#### __Example 1: Insert an Expression field__
 
 <snippet id='codeblock-rr'/>
 

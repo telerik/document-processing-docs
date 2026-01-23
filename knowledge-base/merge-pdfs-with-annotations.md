@@ -21,9 +21,9 @@ This article describes how to merge PDF documents without loss of supported anno
 
 The following approach takes a collection of paths, creates a new [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) instance, appends the documents from those paths to the newly created [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and returns it as a result.
 
-#### __[C#] Merge PDF files
+#### __Merge PDF files
 
-{{region kb-merge-pdf-files-while-preserving-their-annotations_0}}
+```csharp
 
     public static RadFixedDocument MergeDocuments(string[] pathsCollection)
 	{
@@ -56,4 +56,4 @@ The following approach takes a collection of paths, creates a new [RadFixedDocum
 	return resultFile;
 	}
 
-{{endregion}}
+```

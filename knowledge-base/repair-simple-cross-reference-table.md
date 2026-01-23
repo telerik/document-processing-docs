@@ -36,9 +36,7 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 
 > The provided solution, however, can handle only simple cases in which the document contains a single XREF table.
 
-#### __C#__
-
-{{region kb-repair-simple-cross-reference-table1}}
+```csharp
 
 	RadFixedDocument document;
 
@@ -53,12 +51,12 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 		}
 	}
 
-{{endregion}}
+```
 
 
-#### __[C#] Repair Document With Simple Cross-Reference Table__
+#### __Repair Document With Simple Cross-Reference Table__
 
-{{region kb-repair-simple-cross-reference-table2}}
+```csharp
 
 	public MemoryStream RepairDocumentWithSimpleCrossReferenceTable(Stream corruptedPdfFile)
 	{
@@ -99,11 +97,11 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 		return repairedDocument;
 	}
 
-{{endregion}}
+```
 
-#### __[C#] Extensions class providing some static methods used in RepairDocumentWithSimpleCrossReferenceTable method__
+#### __Extensions class providing some static methods used in RepairDocumentWithSimpleCrossReferenceTable method__
 
-{{region kb-repair-simple-cross-reference-table3}}
+```csharp
 
 	public static class PdfStreamExtensions
 	{
@@ -212,5 +210,5 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 		}
 	}
 
-{{endregion}}
+```
 

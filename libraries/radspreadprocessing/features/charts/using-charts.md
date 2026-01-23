@@ -38,9 +38,9 @@ Once you have created a FloatingChartShape, you can insert it in the document th
 
 >Make sure that you have set the size of the FloatingChartShape object. Otherwise, it will be inserted in the worksheet with zero size and will be invisible.
 
-#### [C#] Example 1: Create a chart through FloatingChartShape and add it to a worksheet
+#### Example 1: Create a chart through FloatingChartShape and add it to a worksheet
 
-{{region radspreadprocessing-features-charts-using-charts_0}}
+```csharp
 	
 	FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(6, 4), new CellRange(1, 1, 5, 2), ChartType.Column)
 	{
@@ -54,7 +54,7 @@ Once you have created a FloatingChartShape, you can insert it in the document th
 	int seriesCount = seriesGroup.Series.Count(); // 1
 	SeriesBase series = seriesGroup.Series.First(); // type BarSeries
 
-{{endregion}}
+```
 
 The result of executing the code in **Example 1** would look like in **Figure 1**.
 
@@ -64,9 +64,9 @@ The result of executing the code in **Example 1** would look like in **Figure 1*
 
 The Chart property of FloatingChartShape holds an object of type [DocumentChart](#documentchart).
 
-#### [C#] Example 2: Create a combo (Column and Line) chart through FloatingChartShape and add it to a worksheet
+#### Example 2: Create a combo (Column and Line) chart through FloatingChartShape and add it to a worksheet
 
-{{region radspreadprocessing-features-charts-using-charts_5}}
+```csharp
 	
 	FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(0, 5), new CellRange(0, 0, 12, 3), new[] { ChartType.Line, ChartType.Line, ChartType.Column })
         {
@@ -76,7 +76,7 @@ The Chart property of FloatingChartShape holds an object of type [DocumentChart]
 	
 	worksheet.Charts.Add(chartShape);
 
-{{endregion}}
+```
 
 The result of executing the code in **Example 2** would look like in **Figure 2**.
 
@@ -87,8 +87,8 @@ The result of executing the code in **Example 2** would look like in **Figure 2*
 
 The FloatingChartShape class exposes properties allowing you to customize how the shape looks like. You can control the outline of the shape as well as its fill.
 
-#### [C#] Example 3: Customize the fill and outline of FloatingChartShape
-{{region radspreadprocessing-features-charts-using-charts_1}}
+#### Example 3: Customize the fill and outline of FloatingChartShape
+```csharp
 
     FloatingChartShape chartShape = new FloatingChartShape(workbook.ActiveWorksheet, new CellIndex(2, 7), new CellRange(0, 0, 4, 3), ChartType.Column)
     {
@@ -99,7 +99,7 @@ The FloatingChartShape class exposes properties allowing you to customize how th
     chartShape.Outline.Fill = new SolidFill(new ThemableColor(Colors.SlateGray));
     chartShape.Outline.Width = 5;
     chartShape.Fill = new SolidFill(new ThemableColor(Colors.Cornsilk));
-{{endregion}}
+```
 
 The result of executing the code in **Example 3** over a cell range containing sample data would look like in **Figure 3**.
 
@@ -126,9 +126,9 @@ Also, a **Clone()** method is exposed, which creates a deep copy of the object.
 
 You can create a simple DocumentChart object, which is empty and then set the desired values manually.
 
-#### [C#] Example 4: Creating an empty chart and setting its values manually
+#### Example 4: Creating an empty chart and setting its values manually
 
-{{region radspreadprocessing-features-charts-using-charts_2}}
+```csharp
 
 	DocumentChart chart = new DocumentChart();
 	// Fill the chart with data
@@ -144,18 +144,18 @@ You can create a simple DocumentChart object, which is empty and then set the de
 	
 	(seriesGroup as ISupportAxes).AxisGroupName = AxisGroupName.Primary;
 
-{{endregion}}
+```
 
 The chart can then be used to replace the chart in an existing **FloatingChartShape**.
 
-#### [C#] Example 5: Add the DocumentChart to a worksheet
+#### Example 5: Add the DocumentChart to a worksheet
 
-{{region radspreadprocessing-features-charts-using-charts_3}}
+```csharp
 
 	chartShape.Chart = chart;
 	
 	worksheet.Charts.Add(chartShape);
-{{endregion}}
+```
 
 >noteFor more on Series, the [Series]({%slug radspreadprocessing-features-charts-series%}) help topic. Refer to [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}) for description of the axes objects of the chart.
 
@@ -165,9 +165,9 @@ The initial data and the resulting chart are shown in **Figure 1**.
 
 You can access the Charts collection of the Shape collection of the Worksheet instance and enumerate the Charts.
 
-#### [C#] Example 6: Iterate all the charts in a worksheet
+#### Example 6: Iterate all the charts in a worksheet
 
-{{region radspreadprocessing-features-charts-using-charts_4}}
+```csharp
 
 	foreach (FloatingChartShape chartShape in worksheet.Charts)
 	{
@@ -175,4 +175,4 @@ You can access the Charts collection of the Shape collection of the Worksheet in
 	    SeriesGroup group = chart.SeriesGroups.First();
 	    SeriesBase series = group.Series.First();
 	}
-{{endregion}}
+```

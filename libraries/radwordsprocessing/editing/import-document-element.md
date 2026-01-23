@@ -26,7 +26,7 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 * **conflictingStylesResolutionMode**: Represents the resolution mode, which will be used if a style conflict appears during the style repositories merging. Could be set to one of the values of the [ConflictingStylesResolutionMode enumeration]( https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.ConflictingStylesResolutionMode.html).
 
 <a name="example1"><a/>
-#### __[C#] Example 1: Create DocumentElementImporter__
+#### __Example 1: Create DocumentElementImporter__
 
 <snippet id='codeblock-br'/>
 
@@ -36,7 +36,7 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 
 The **DocumentElementImporter** class exposes the Import&lt;T&gt;() method, which is used to prepare a document element from the source document for import into the target document. **Example 2** demonstrates how you could work with this method, using the **DocumentElementImporter** instance, created in [Example 1](#example1).
 
-#### __[C#] Example 2: Import a document element__
+#### __Example 2: Import a document element__
 
 <snippet id='codeblock-bs'/>
 
