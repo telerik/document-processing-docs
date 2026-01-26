@@ -20,9 +20,9 @@ ticketid: 1707647
 This article shows how to open a file that is already opened by another user or process. Usually, an exception is received because the file is locked for exclusive access. The solution is to open the file in read-only mode without modifying it.
 
 This knowledge base article also answers the following questions:
-* How to open locked files in Telerik SpreadProcessing?
-* How to handle locked file exceptions in SpreadProcessing?
-* Can SpreadProcessing open files in read-only mode?
+* How to open locked files in Telerik [SpreadProcessing]({%slug radspreadprocessing-overview%})?
+* How to handle locked file exceptions in [SpreadProcessing]({%slug radspreadprocessing-overview%})?
+* Can [SpreadProcessing]({%slug radspreadprocessing-overview%}) open files in read-only mode?
 
 ## Solution
 
