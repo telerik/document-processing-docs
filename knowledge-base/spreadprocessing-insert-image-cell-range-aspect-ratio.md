@@ -11,27 +11,19 @@ ticketid: 1708189
 ---
 
 ## Environment
-<table>
-<tbody>
-<tr>
-<td>Product</td>
-<td>Telerik Document Processing SpreadProcessing</td>
-</tr>
-<tr>
-<td>Version</td>
-<td>19.3.25.1119</td>
-</tr>
-</tbody>
-</table>
+
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| 2025.4.1319 | RadSpreadProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)| 
 
 ## Description
 
-I want to insert an image within a defined cell range in Telerik Document Processing SpreadProcessing, ensuring that the image retains its original aspect ratio. There is no built-in API for this, so manual calculations are required to determine the image's dimensions based on the cell range.
+This article shows how to use the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library to insert an image within a defined cell range, while ensuring that the image retains its original aspect ratio. For that, manual calculations are required to determine the image's dimensions based on the cell range.
 
 This knowledge base article also answers the following questions:
-- How to calculate image dimensions for a cell range in SpreadProcessing?
-- How to preserve aspect ratio when adding an image to a worksheet?
-- How to manually scale an image in SpreadProcessing?
+* How to calculate image dimensions for a cell range in [SpreadProcessing]({%slug radspreadprocessing-overview%})?
+* How to preserve aspect ratio when adding an image to a worksheet?
+* How to manually scale an image in [SpreadProcessing]({%slug radspreadprocessing-overview%})?
 
 ## Solution
 
@@ -39,12 +31,10 @@ To insert an image within a specified cell range while preserving its aspect rat
 
 1. Define the target cell range.
 2. Calculate the total width and height of the cell range.
-3. Create the image and set its source.
+3. Create the Image and set its Source.
 4. Calculate the scaling factor to fit the image within the cell range while maintaining its aspect ratio.
-5. Use either `SetWidth` or `SetHeight` methods to adjust dimensions based on the limiting factor.
+5. Use either **SetWidth** or **SetHeight** methods to adjust dimensions based on the limiting factor.
 6. Add the image to the worksheet.
-
-Here is the code example:
 
 ```csharp
 // Define your target cell range
@@ -99,12 +89,10 @@ worksheet.Images.Add(image);
 ```
 
 ### Notes:
-- Use the `SetWidth` and `SetHeight` methods with `true` for the `respectLockAspectRatio` parameter to maintain the aspect ratio.
-- Ensure the target cell range is correctly defined before performing calculations.
+* Use the **SetWidth** and **SetHeight** methods with **true** for the **respectLockAspectRatio** parameter to maintain the aspect ratio.
+* Ensure the target cell range is correctly defined before performing calculations.
 
 ## See Also
 
-- [SpreadProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/overview)
-- [Working with Images in SpreadProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/images)
-- [API Reference for FloatingImage](https://docs.telerik.com/devtools/document-processing/api/spreadprocessing/telerik.windows.documents.spreadsheet.model.floatingimage)
----
+* [SpreadProcessing]({%slug radspreadprocessing-overview%})
+* [Shapes and Images]({%slug radspreadprocessing-features-shapes-and-images%})
