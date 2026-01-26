@@ -268,3 +268,6 @@ In order to provide more flexibility, the model gives the option to have these c
 
 * void SetRotationAngle(double rotationAngle, bool adjustCellIndex = false)
             
+## See Also
+
+* [Inserting an Image in a Specified Worksheet Cell Range With SpreadProcessing While Preserving Aspect Ratio]({%slug spreadprocessing-insert-image-cell-range-aspect-ratio%})
