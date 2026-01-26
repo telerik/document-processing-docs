@@ -10,41 +10,31 @@ res_type: kb
 ticketid: 1707647
 ---
 
-## Environment
-<table>
-<tbody>
-<tr>
-<td> Product </td>
-<td>Telerik Document Processing SpreadProcessing</td>
-</tr>
-<tr>
-<td> Version </td>
-<td>2025.4.1104</td>
-</tr>
-</tbody>
-</table>
+# Environment
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| 2025.4.1319 | RadSpreadProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)| 
 
 ## Description
 
 This article shows how to open a file that is already opened by another user or process. Usually, an exception is received because the file is locked for exclusive access. The solution is to open the file in read-only mode without modifying it.
 
 This knowledge base article also answers the following questions:
-- How to open locked files in Telerik SpreadProcessing?
-- How to handle locked file exceptions in SpreadProcessing?
-- Can SpreadProcessing open files in read-only mode?
+* How to open locked files in Telerik SpreadProcessing?
+* How to handle locked file exceptions in SpreadProcessing?
+* Can SpreadProcessing open files in read-only mode?
 
 ## Solution
 
-To open a file locked by another user or process, load it into a `MemoryStream` using a read-only `FileStream`. This approach allows concurrent access and bypasses the file lock. Follow these steps:
+To open a file locked by another user or process, load it into a **MemoryStream** using a read-only **FileStream**. This approach allows concurrent access and bypasses the file lock. Follow these steps:
 
-1. Open the file using `FileStream` with `FileAccess.Read` and `FileShare.ReadWrite`.
-2. Copy the file contents to a `MemoryStream`.
-3. Use the `MemoryStream` with `XlsxFormatProvider` to import the workbook.
+1. The **FileStream** opens the file with read-only access (**FileAccess.Read**) and allows sharing (**FileShare.ReadWrite**).
+2. The **MemoryStream** receives the file contents, enabling the file lock to be released.
+3. The [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) imports the workbook from the **MemoryStream**.
 
 Here is the code example:
 
 ```csharp
-// Import necessary namespaces
 using Telerik.Windows.Documents.Spreadsheet.Model;
 using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
 
@@ -65,13 +55,7 @@ using (FileStream fileStream = new FileStream("file.xlsx", FileMode.Open, FileAc
 }
 ```
 
-### Steps Explained:
-1. The `FileStream` opens the file with read-only access (`FileAccess.Read`) and allows sharing (`FileShare.ReadWrite`).
-2. The `MemoryStream` receives the file contents, enabling the file lock to be released.
-3. The `XlsxFormatProvider` imports the workbook from the `MemoryStream`.
-
 ## See Also
 
-- [SpreadProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/overview)
-- [XlsxFormatProvider Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/format-providers/openxml/xlsx)
-- [FileStream Class in .NET](https://learn.microsoft.com/en-us/dotnet/api/system.io.filestream)
+* [SpreadProcessing Overview]({%slug radspreadprocessing-overview%})
+* [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
