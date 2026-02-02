@@ -158,3 +158,4 @@ After configuration and restart:
 
 * [AI Coding Assistant Overview]({%slug ai-coding-assistant%})
 * [Telerik Document Processing Prompt Library]({%slug ai-prompt-library%})
+* [npm-based Telerik DPL MCP Server]({%slug ai-mcp-server%})
