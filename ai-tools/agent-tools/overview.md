@@ -8,7 +8,7 @@ published: True
 position: 0
 ---
 
-# Agent Tools Overview
+# Overview
 
 The Agent Tools API provides document processing capabilities designed to be exposed to AI agents.
 
