@@ -10,14 +10,19 @@ position: 3
 
 # Multiple Digital Signing with PdfStreamSigner
 
-As of **Q2 2025** RadPdfProcessing introduces the **PdfStreamSigner**. The **SignDocument** method it exposes allows the user to insert one or more [Digital Signatures]({%slug radpdfprocessing-features-digital-signature%}) into a PDF document.
+|Minimum Version| Q2 2025|
+|----|----|
+
+RadPdfProcessing offers the **PdfStreamSigner** class. The **SignDocument** method it exposes allows the user to insert one or more [Digital Signatures]({%slug radpdfprocessing-features-digital-signature%}) into a PDF document.
 
 >important When adding multiple signatures, make sure the document is exported after each signature before importing it back again.
 
 |Method|Description|
 |----|----|
-|**PdfStreamSigner(Stream outputStream)**|Creates a new instance of the PdfStreamSigner and specifies the output stream of the signed document.|
+|**PdfStreamSigner(Stream outputStream)**|Creates a new instance of the PdfStreamSigner and specifies the output stream where the signed document will be written.|
 |**SignDocument(Stream originalStream, SignatureField signatureField, int pageIndex, TimeSpan? timeout)**|Adds a [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) to the PDF document|
+
+>note As of **Q1 2026** the **PdfStreamSigner** provides support for the [TimeStamp server]({%slug pdf-sign-timestamp-server%}). Hence, the SignatureField used for signing the document preserves all of its [SignatureSettings]({%slug radpdfprocessing-features-digital-signature-getting-started%}#signature-settings) including the **TimeStampServer**. 
 
 The following example shows how to insert multiple [Digital Signatures]({%slug radpdfprocessing-features-digital-signature%}) into a PDF document using the PdfStreamSigner:
 
@@ -34,3 +39,4 @@ The following example shows how to insert multiple [Digital Signatures]({%slug r
  * [Digital Signature]({%slug radpdfprocessing-features-digital-signature%})
  * [Signature Field]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
  * [Multiple Digital Signatures Demo](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)
+ * [Using a TimeStamp Server]({%slug pdf-sign-timestamp-server%})
