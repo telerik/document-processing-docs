@@ -12,4 +12,16 @@ position: 0
 
 The Agent Tools API provides document processing capabilities designed to be exposed to AI agents.
 
- 
+
+## Required NuGet packages
+
+* Telerik.Documents.AI.Tools.Core
+* Telerik.Documents.AI.Tools.Spreadsheet.Core
+* Telerik.Documents.AI.Tools.Fixed.Core
+* Telerik.Documents.AI.Tools.Flow.Core
+* Telerik.Documents.AI.Tools.Conversion.Core
+* Telerik.Documents.AI.AgentTools.Spreadsheet
+* Telerik.Documents.AI.AgentTools.Fixed
+* Telerik.Documents.AI.AgentTools.Conversion
+
+>important The packages have the same names for .NET Standard, .NET (Target OS: None) and .NET (Target OS: Windows).
