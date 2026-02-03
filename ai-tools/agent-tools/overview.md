@@ -10,8 +10,7 @@ position: 0
 
 # Overview
 
-The Agent Tools API provides document processing capabilities designed to be exposed to AI agents.
-
+The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations (Excel/PDF/Flow) to an LLM via tool calls.
 
 ## Required NuGet packages
 
