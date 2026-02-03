@@ -5,7 +5,7 @@ description: Telerik Document Processing Agent Tools provides document processin
 slug: agent-tools-getting-started
 tags: ai, dpl, document, processing, agent, tool, telerik, start
 published: True
-position: 0
+position: 1
 ---
 
 # Getting Started
