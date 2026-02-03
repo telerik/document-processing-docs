@@ -371,7 +371,7 @@ namespace TestApp
 
 ## Azure OpenAI Agent Construction
 
-In ChatWithLLMAndToolsToProcessDocuments:
+In the **ChatWithLLMAndToolsToProcessDocuments** method:
 
 1. Read Azure OpenAI config (ApiKey, Endpoint, Model) from IOptions<AzureOpenAISettings>.
 2. Build a repository registry that maps document types to concrete repositories:
