@@ -152,13 +152,46 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
 
   * In .NET 8 and .NET 9:
 
+    * Global Installation 
+
+      - Run `dotnet tool install --global(-g) Telerik.DPL.MCP` in the Terminal.
+
+      - Update global MCP config: %userprofile%.mcp.json with following configuration:
+
+    ```json
+    {
+      "servers": {
+			"telerik-dpl-assistant": {
+			"type": "stdio",
+			"command": "telerik-dpl-assistant",
+			"env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+    ```
+
+    * Local Installation
+
+      - Navigate to the solution folder.
+
+      - Run `dotnet tool new-manifest` in the Terminal.
+
+      - Run `dotnet tool install Telerik.DPL.MCP` in the Terminal.
+
+      - Create/update solution based MCP Config %solutiondir%.mcp.json with following configuration:
+
     ```json
     {
       "servers": {
         "telerik-dpl-assistant": {
           "type": "stdio",
           "command": "dotnet",
-          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "args": ["tool", "run", "telerik-dpl-assistant"],
           "env": {
             "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
             // or
@@ -236,7 +269,7 @@ The basic setup in Visual Studio Code involves the following steps:
         "telerik-dpl-assistant": {
           "type": "stdio",
           "command": "dotnet",
-          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "args": ["tool", "run", "telerik-dpl-assistant"],
           "env": {
             "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
             // or
@@ -314,7 +347,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
         "telerik-dpl-assistant": {
           "type": "stdio",
           "command": "dotnet",
-          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "args": ["tool", "run", "telerik-dpl-assistant"],
           "env": {
             "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
             // or

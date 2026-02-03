@@ -1,7 +1,7 @@
 ---
 title: Agent Tools Overview
 page_title: Telerik Document Processing Agent Tools Overview
-description: Telerik Document Processing Agent Tools Overview
+description: Telerik Document Processing Agent Tools provides document processing capabilities designed to be exposed to AI agents.
 slug: agent-tools-overview
 tags: ai, dpl, document, processing, agent, tool, telerik
 published: True

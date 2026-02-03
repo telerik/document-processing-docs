@@ -42,6 +42,8 @@ Additional requirements:
 
 ### .NET 8 / .NET 9
 
+  * Global installation
+
 Install the MCP server as a local tool in your solution root (or another chosen path):
 
 ````powershell
@@ -59,6 +61,12 @@ These commands install/update the Telerik DPL MCP [dotnet tool](https://learn.mi
 - Windows - `%USERPROFILE%\.dotnet\tools`
 - Linux/MacOS - `$HOME/.dotnet/tools`
 
+  * Local installation
+
+    - Navigate to the solution folder.
+    - Run `dotnet tool new-manifest` in the Terminal.
+    - Run `dotnet tool install Telerik.DPL.MCP` in the Terminal.
+
 ### .NET 10
 
 No manual install step is needed. The `dnx` command will download and execute the NuGet package on demand.
@@ -67,7 +75,7 @@ No manual install step is needed. The `dnx` command will download and execute th
 
 ### .NET 8 / .NET 9 Configuration (`.mcp.json`)
 
-Add a `.mcp.json` file to your solution root (or to `%USERPROFILE%` for global usage):
+Add `.mcp.json` file to your solution root (or to `%USERPROFILE%` for global usage):
 
 ```json
     {
@@ -75,7 +83,7 @@ Add a `.mcp.json` file to your solution root (or to `%USERPROFILE%` for global u
         "telerik-dpl-assistant": {
           "type": "stdio",
           "command": "dotnet",
-          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "args": ["tool", "run", "telerik-dpl-assistant"],
           "env": {
             "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
             // or
@@ -86,6 +94,26 @@ Add a `.mcp.json` file to your solution root (or to `%USERPROFILE%` for global u
       "inputs": []
     }
 ```
+
+For the **local** installation use the following `.mcp.json`:
+
+```json
+    {
+      "servers": {
+        "telerik-dpl-assistant": {
+         "type": "stdio",
+         "command": "telerik-dpl-assistant",
+          "env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+```
+
 
 ### .NET 10 Configuration (`.mcp.json`)
 
