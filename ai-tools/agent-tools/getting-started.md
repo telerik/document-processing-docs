@@ -428,3 +428,8 @@ Each scenario runs through the same orchestration, exercising different tools, a
     * Conversion/Merge: Cross‑format conversions (XLSX→PDF) and PDF merging.
 
 * .NET Generic Host (Configuration + DI): Streamlined startup, IOptions<T>, IHost, and service registration.
+
+
+## See Also
+
+* [Overview]({%slug agent-tools-overview%})

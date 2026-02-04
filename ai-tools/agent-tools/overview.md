@@ -10,6 +10,9 @@ position: 0
 
 # Overview
 
+|Minimum Version|Q1 2026|
+|----|----|
+
 The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations (Excel/PDF/Flow) to an LLM via tool calls.
 
 ## Required NuGet packages
@@ -42,3 +45,7 @@ If the user would like to use Dependency injection, Telerik Document Processing 
   - services.**AddSpreadsheetAgentTools()**&mdash;Adds Spreadsheet agent tools to the service collection.
   - services.**AddFixedAgentTools()**&mdash;Adds Fixed document agent tools to the service collection.
   - services.**AddFlowAgentTools()**&mdash;Adds Flow document agent tools to the service collection.
+
+## See Also
+
+* [Gettings Started with DPL Agent Tools]({%slug using-nuget-keys%})
