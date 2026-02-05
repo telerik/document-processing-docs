@@ -421,5 +421,5 @@ public class UserAgentSession : IDisposable
 
 ## See Also
 
-* [Gettings Started with DPL Agent Tools]({%slug using-nuget-keys%})
+* [Gettings Started with DPL Agent Tools]({%slug agent-tools-getting-started%})
 * [Overview]({%slug agent-tools-overview%})
