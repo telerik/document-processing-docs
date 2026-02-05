@@ -40,7 +40,7 @@ When exporting the document, specify the [TaggingStrategy]({%slug radpdfprocessi
 
 ## Creating Accessible PDF Documents with Auto-Tagging
 
-This example shows how to add content to a PDF doocument and leave the PdfProcessing's engine build the [StructureTree]({%slug radpdfprocessing-model-structure-tree%}) automatically:
+This example shows how to add content to a PDF document and leave the PdfProcessing's engine build the [StructureTree]({%slug radpdfprocessing-model-structure-tree%}) automatically:
 
 <snippet id='libraries-pdf-features-accessible-pdf-with-auto-tagging'/>
 
