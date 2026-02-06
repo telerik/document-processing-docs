@@ -17,6 +17,8 @@ img[alt$="><"] {
 
 The Telerik Document Processing [MCP (Model Context Protocol) server](https://modelcontextprotocol.io/introduction) lets you interact with AI and reach new levels of developer productivity. The MCP server provides proprietary context to AI-powered IDEs, apps and tools. You can use the MCP server for Document Processing code generation and successfully prompt more complex questions and tasks, and generate tailored code that includes the [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries).
 
+>important Known Issue: [Tool calling sometimes failing with tool_ids missing corresponding responses](https://developercommunity.visualstudio.com/t/Copilot-stopped-working-after-latest-upd/10936456)
+
 >tip The Telerik DPL MCP server works in **Chat** (**Ask**) and **Agent** modes.
 
 ## Supported Libraries
