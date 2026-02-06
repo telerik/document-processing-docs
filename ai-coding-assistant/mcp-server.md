@@ -17,7 +17,18 @@ img[alt$="><"] {
 
 The Telerik Document Processing [MCP (Model Context Protocol) server](https://modelcontextprotocol.io/introduction) lets you interact with AI and reach new levels of developer productivity. The MCP server provides proprietary context to AI-powered IDEs, apps and tools. You can use the MCP server for Document Processing code generation and successfully prompt more complex questions and tasks, and generate tailored code that includes the [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries).
 
->important Known Issue: [Tool calling sometimes failing with tool_ids missing corresponding responses](https://developercommunity.visualstudio.com/t/Copilot-stopped-working-after-latest-upd/10936456)
+>warning Known Issue: Hanging tool calls in Visual Studio
+> 
+>When using Telerik AI tools in Visual Studio, GitHub Copilot may:
+>- **hang** during tool invocation;
+>- show UI for a successful tool response, but actually **fail silently**;
+>- continue generation without waiting for **parallel tool calls**.
+>In these cases, the response may be generated but not provided to the Copilot Agent UI.
+>This is a known issue in Visual Studio Copilot, not related to Telerik MCP servers or AI tools, and does not reproduce in VS Code.
+>For more details, see the related Visual Studio Developer Community issue:  
+https://developercommunity.visualstudio.com/t/Copilot-stopped-working-after-latest-upd/10936456
+>
+>Microsoft has acknowledged the issue and marked it as **Fixed - Pending Release**. A future Visual Studio update is expected to resolve it.
 
 >tip The Telerik DPL MCP server works in **Chat** (**Ask**) and **Agent** modes.
 
