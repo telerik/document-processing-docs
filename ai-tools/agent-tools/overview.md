@@ -48,4 +48,4 @@ If the user would like to use Dependency injection, Telerik Document Processing 
 
 ## See Also
 
-* [Gettings Started with DPL Agent Tools]({%slug agent-tools-getting-started%})
+* [Getting Started with DPL Agent Tools]({%slug agent-tools-getting-started%})
