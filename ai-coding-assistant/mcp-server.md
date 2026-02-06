@@ -17,7 +17,7 @@ img[alt$="><"] {
 
 The Telerik Document Processing [MCP (Model Context Protocol) server](https://modelcontextprotocol.io/introduction) lets you interact with AI and reach new levels of developer productivity. The MCP server provides proprietary context to AI-powered IDEs, apps and tools. You can use the MCP server for Document Processing code generation and successfully prompt more complex questions and tasks, and generate tailored code that includes the [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries).
 
->warning Known Issue: Hanging tool calls in Visual Studio
+>warning **Known Issue: Hanging tool calls in Visual Studio**
 > 
 >When using Telerik AI tools in Visual Studio, GitHub Copilot may:
 >- **hang** during tool invocation;
