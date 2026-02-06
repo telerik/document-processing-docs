@@ -1,5 +1,5 @@
 ---
-title: Gettings Started
+title: Getting Started
 page_title: Telerik Document Processing Agent Tools Overview
 description: Telerik Document Processing Agent Tools provides document processing capabilities designed to be exposed to AI agents.
 slug: agent-tools-getting-started
