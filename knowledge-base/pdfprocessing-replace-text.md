@@ -25,9 +25,7 @@ With PdfProcessing, you can import a PDF document and traverse the text inside t
 
 The following code iterates the TextFragments on each RadFixedPage and replaces the *"<%textfield,1234%>"* string with *"replaced text"*.
 
-#### __C#__
-
-{{region kb-pdfprocessing-replace-text_0}}
+```csharp
 
     foreach (RadFixedPage page in document.Pages)
     {
@@ -43,13 +41,11 @@ The following code iterates the TextFragments on each RadFixedPage and replaces 
             }
         }
     }
-{{endregion}}
+```
 
 And here is the implementation of the Replace method:
 
-#### __C#__
-
-{{region kb-pdfprocessing-replace-text_1}}
+```csharp
 
     private static void Replace(TextFragment textFragment, string oldValue, string newValue)
     {
@@ -58,7 +54,7 @@ And here is the implementation of the Replace method:
             textFragment.Text = newValue;
         }
     }
-{{endregion}}
+```
 
 
 ## Notes

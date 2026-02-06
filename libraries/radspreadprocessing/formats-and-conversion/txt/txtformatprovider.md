@@ -24,9 +24,9 @@ In order to import and export txt files, you need an instance of __TxtFormatProv
 __Example 1__ shows how to import a txt file using a FileStream. The sample instantiates a __TxtFormatProvider__ and passes a FileStream to its __Import()__ method:
         
 
-#### __[C#] Example 1: Import TXT file__
+#### __Example 1: Import TXT file__
 
-{{region cs-radspreadprocessing-formats-and-conversion-txt-txtformatprovider_0}}
+```csharp
 
     Workbook workbook;
     string fileName = "input.txt";
@@ -37,7 +37,7 @@ __Example 1__ shows how to import a txt file using a FileStream. The sample inst
         workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
     }
 
-{{endregion}}
+```
 
 
 
@@ -46,9 +46,9 @@ __Example 1__ shows how to import a txt file using a FileStream. The sample inst
 __Example 2__ demonstrates how to export an existing Workbook to a TXT file. The snippet creates a new workbook with a single worksheet. Further, it creates a __TxtFormatProvider__ and invokes its __Export()__ method:
         
 
-#### __[C#] Example 2: Export TXT file__
+#### __Example 2: Export TXT file__
 
-{{region cs-radspreadprocessing-formats-and-conversion-txt-txtformatprovider_1}}
+```csharp
 
     Workbook workbook = new Workbook();
     workbook.Worksheets.Add();
@@ -61,7 +61,7 @@ __Example 2__ demonstrates how to export an existing Workbook to a TXT file. The
         formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
     }
 
-{{endregion}}
+```
 
 ## See Also
 

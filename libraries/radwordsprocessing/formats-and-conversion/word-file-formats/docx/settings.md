@@ -40,7 +40,7 @@ The __AutoUpdateFields__ setting indicates if fields should be auto-updated when
 __Example 1__ shows how you can create and specify particular export settings to DocxFormatProvider.
         
 
-#### __[C#] Example 1: Create DocxExportSettings__
+#### __Example 1: Create DocxExportSettings__
 
 <snippet id='codeblock-cv'/>
 

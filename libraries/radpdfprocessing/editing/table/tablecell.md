@@ -27,7 +27,7 @@ In order to add a cell to a __Table__, you should add it in the __TableCellColle
 The code snippet in __Example 1__ shows how to create a table with a single row and add a cell in the first row.
         
 
-#### __[C#] Example 1: Create TableCell__
+#### __Example 1: Create TableCell__
 
 <snippet id='libraries-pdf-editing-table-tablecell-create-tablecell'/>
 
@@ -39,7 +39,7 @@ Using __TableCell__'s __Blocks__ property you can easily add one or several __IB
 __Example 2__ shows how to create a cell with a single [Block]({%slug radpdfprocessing-editing-block%}) in it.
         
 
-#### __[C#] Example 2: Add content to TableCell__
+#### __Example 2: Add content to TableCell__
 
 <snippet id='libraries-pdf-editing-table-tablecell-add-content-to-tablecell'/>
 
@@ -69,7 +69,7 @@ You can easily change the cell's presentation by using the following properties:
 __Example 3__ demonstrates how to set locally the cell properties to a specific cell. This helps achieve different appearance for this cell by changing its borders and background. Additionally, the cell will span onto two rows and two columns.
         
 
-#### __[C#] Example 1: Change TableCell appearance__
+#### __Example 1: Change TableCell appearance__
 
 <snippet id='libraries-pdf-editing-table-tablecell-change-tablecell-appearance'/>
 

@@ -33,7 +33,7 @@ With this approach your app will look smaller when started. It will not look blu
 
 This approach works only on Windows 10. If you intend to use your application on machines where the DPI scaling is larger than 100 percent, you should explicitly set the application to be DPI-unaware
 
-#### [C#] Force process DPI unaware before using a Document Processing type
+#### Force process DPI unaware before using a Document Processing type
 
 ```csharp
 private void workbookTestButton_Click(object sender, EventArgs e)

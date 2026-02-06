@@ -48,7 +48,7 @@ In scenarios where you need to convert a document from another file format to PD
 
 ### Convert DOCX to PDF
 
-````C#
+```csharp
 	Telerik.Windows.Documents.Flow.Model.RadFlowDocument flowDocument;
 	using (Stream input = File.OpenRead("sample.docx"))
 	{
@@ -61,13 +61,13 @@ In scenarios where you need to convert a document from another file format to PD
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
 	byte[] pdfBytes = pdfProvider.Export(flowDocument);
-````
+```
 
 
 
 ### Convert DOC to PDF
 
-````C#
+```csharp
 	Telerik.Windows.Documents.Flow.Model.RadFlowDocument flowDocument;
 	using (Stream input = File.OpenRead("sample.doc"))
 	{
@@ -80,13 +80,13 @@ In scenarios where you need to convert a document from another file format to PD
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
 	byte[] pdfBytes = pdfProvider.Export(flowDocument);
-````
+```
 
 
 
 ### Convert HTML to PDF
 
-````C#
+```csharp
 	string htmlContent = "<!DOCTYPE html><html><body><p>Hello, world!</p></body></html>";
 	
     Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider htmlProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Html.HtmlFormatProvider();
@@ -97,11 +97,11 @@ In scenarios where you need to convert a document from another file format to PD
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
     byte[] pdfBytes = pdfProvider.Export(flowDocument);
-````
+```
 
 ### Convert RTF to PDF
 
-````C#
+```csharp
 	Telerik.Windows.Documents.Flow.Model.RadFlowDocument flowDocument;
 	using (Stream input = File.OpenRead("sample.rtf"))
 	{
@@ -114,12 +114,12 @@ In scenarios where you need to convert a document from another file format to PD
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
 	byte[] pdfBytes = pdfProvider.Export(flowDocument);
-````
+```
 
 
 ### Convert Plain text to PDF
 
-````C#
+```csharp
 	Telerik.Windows.Documents.Flow.Model.RadFlowDocument flowDocument;
 	string text = "Hello, WordsProcessing!";
 	Telerik.Windows.Documents.Flow.FormatProviders.Txt.TxtFormatProvider provider = new Telerik.Windows.Documents.Flow.FormatProviders.Txt.TxtFormatProvider();
@@ -130,7 +130,7 @@ In scenarios where you need to convert a document from another file format to PD
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
 	byte[] pdfBytes = pdfProvider.Export(flowDocument);
-````
+```
 
 ## Convert a Spreadsheet Document to PDF
 
@@ -143,7 +143,7 @@ While the so far discussed libraries allow working with text documents, with **S
 
 ### Convert XLSX to PDF
 
-````C#
+```csharp
 	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
 	using (Stream input = File.OpenRead("sample.xlsx"))
 	{
@@ -156,11 +156,11 @@ While the so far discussed libraries allow working with text documents, with **S
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
 	byte[] pdfBytes = pdfProvider.Export(workbook);
-````
+```
 
 ### Convert XLS to PDF
 
-````C#
+```csharp
 	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
 	using (Stream input = File.OpenRead("sample.xls"))
 	{
@@ -174,11 +174,11 @@ While the so far discussed libraries allow working with text documents, with **S
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
 	byte[] pdfBytes = pdfProvider.Export(workbook);
 
-````
+```
 
 ### Convert CSV to PDF
 
-````C#
+```csharp
 	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
 	using (Stream input = File.OpenRead("sample.csv"))
 	{
@@ -191,11 +191,11 @@ While the so far discussed libraries allow working with text documents, with **S
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
 	byte[] pdfBytes = pdfProvider.Export(workbook);
-````
+```
 
 ### Convert DataTable to PDF
 
-````C#
+```csharp
 	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
 	using (Stream input = File.OpenRead("sample.csv"))
 	{
@@ -209,7 +209,7 @@ While the so far discussed libraries allow working with text documents, with **S
 
 	// Export the document. The different overloads enables you to export to a byte[] or to a Stream.
 	byte[] pdfBytes = pdfProvider.Export(workbook);
-````
+```
 
 
 ## See Also

@@ -38,7 +38,7 @@ RadioButtonField provides the following properties:
 * **ShouldUpdateRadiosInUnison**: Boolean value indicating whether all radio buttons that have RadioOption with the same value should be selected in unison. If false, then at most on radio button will have selected state even if some other radio button has the same option value.
 
 
-#### **[C#] Example 1: Create RadioButtonFields and add them to a page**
+#### **Example 1: Create RadioButtonFields and add them to a page**
 <snippet id='pdf-radio-button-field'/>
 
 

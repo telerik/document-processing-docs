@@ -34,9 +34,9 @@ This article describes how to insert a Hyperlink into the [RadFixedDocument]({%s
 
 The following example shows how to insert a Hyperlink using a [Link]({%slug radpdfprocessing-model-annotations-links%}#link) annotation with an associated [UriAction](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.model.actions.uriaction) in the RadFixedDocument. With the help of the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}), we are drawing a block containing the text over the annotation.
 
-#### __[C#] Insert Hyperlink into RadFixedDocument__
+#### __Insert Hyperlink into RadFixedDocument__
 
-{{region pdfprocessing-insert-hyperlink-into-radfixeddocument1}}
+```csharp
 
 	RadFixedDocument document = new RadFixedDocument();
 	RadFixedPage firstPage = document.Pages.AddPage();
@@ -55,4 +55,4 @@ The following example shows how to insert a Hyperlink using a [Link]({%slug radp
 
 	Link uriLink = firstPage.Annotations.AddLink(uriAction);
 	uriLink.Rect = new Rect(70, 10, blockSize.Width, blockSize.Height);
-{{endregion}}
+```

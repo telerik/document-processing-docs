@@ -41,7 +41,7 @@ RadFixedPage is typically used when:
 
 __Example 1__ demonstrates how to create a new __RadFixedPage__ instance and add it to the __Pages__ collection of __RadFixedDocument__.  
 
-#### __[C#] Example 1: Create RadFixedPage and add it to a document__ 
+#### __Example 1: Create RadFixedPage and add it to a document__ 
 
 <snippet id='add-radfixedpage'/>
 
@@ -55,7 +55,7 @@ __RadFixedPage__ is designed to hold any content element in the document model. 
 
 __Example 2__ shows how to add a previously created ContentElement in a __RadFixedPage__.
             
-#### __[C#] Example 2: Add content element to RadFixedPage__
+#### __Example 2: Add content element to RadFixedPage__
 
 <snippet id='add-link-annotation-in-radfixedpage'/>
 
@@ -68,7 +68,7 @@ You can add different annotations in __RadFixedPage__ by using the __Annotations
 __Example 3__ shows how to add a previously created annotation in a __RadFixedPage__.
             
 
-#### __[C#] Example 3: Add annotation to RadFixedPage__
+#### __Example 3: Add annotation to RadFixedPage__
 
 <snippet id='add-annotation-to-radfixedpage'/>
 
@@ -81,7 +81,7 @@ RadFixedPage's API provides you with the ability to modify its properties.
 __Example 4__ shows how you can change the __Rotation__ and __Size__ properties of a __RadFixedPage__.
             
 
-#### __[C#] Example 4: Change properties of a RadFixedPage__
+#### __Example 4: Change properties of a RadFixedPage__
 
 <snippet id='modify-radfixedpage-properties'/>
 

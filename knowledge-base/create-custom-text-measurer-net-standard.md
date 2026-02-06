@@ -34,9 +34,9 @@ Due to **.NET Standard** APIs limitations, the _SimpleTextMeasurer_ provides bas
 
 In the example below, we are demonstrating how to create a custom [TextMeasurer](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.core.textmeasurer) inheriting the _SpreadTextMeasurerBase_ abstract class and set it to the _TextMeasurer_ property of the _SpreadExtensibilityManager_.
 
-#### __[C#] Creating a CustomTextMeasurer__
+#### __Creating a CustomTextMeasurer__
 
-{{region kb-create-custom-text-measurer-net-standard1}}
+```csharp
 
     public class CustomTextMeasurer : SpreadTextMeasurerBase
     {
@@ -79,17 +79,17 @@ In the example below, we are demonstrating how to create a custom [TextMeasurer]
             };
         }
     }
-{{endregion}}
+```
 
 The following example shows how to set the custom implementation inheriting the SpreadTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager.
 
-#### __[C#] Setting the CustomTextMeasurer__
+#### __Setting the CustomTextMeasurer__
 
-{{region kb-create-custom-text-measurer-net-standard2}}
+```csharp
 
     SpreadTextMeasurerBase customTextMeasurer = new CustomTextMeasurer(SpreadExtensibilityManager.TextMeasurer); 
     SpreadExtensibilityManager.TextMeasurer = customTextMeasurer; 
-{{endregion}}
+```
 
 ## See Also
  * [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})

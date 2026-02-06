@@ -33,14 +33,14 @@ To use **DocFormatProvider**, you should add references to the packages listed b
 
 To import a DOC or DOT file, you should use the **Import()** method of **DocFormatProvider**.
 
-#### **[C#] Example 1: Import document from a file**
+#### **Example 1: Import document from a file**
 
 <snippet id='codeblock-cp'/>
 
 
 And here is how you can import a document from a byte array containing the document:
 
-#### **[C#] Example 2: Import document from a byte array**
+#### **Example 2: Import document from a byte array**
 <snippet id='codeblock-cq'/>
 
 

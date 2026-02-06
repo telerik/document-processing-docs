@@ -21,9 +21,9 @@ The [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library allows yo
 
 Change the properties of the RadFlowDocument.
 
-#### __C# Change the RadFlowDocument properties while exporting.__ 
+#### __Change the RadFlowDocument properties while exporting.__ 
 
-{{region change-properties-when-converting-flow-to-pdf1}}
+```csharp
     HtmlFormatProvider htmlProvider = new HtmlFormatProvider();
     RadFlowDocument document = htmlProvider.Import(html);
 
@@ -40,7 +40,5 @@ Change the properties of the RadFlowDocument.
     {              
         pdfProvider.Export(document, output);
     }
-
-
-{{endregion}}
+```
  

@@ -45,7 +45,7 @@ All of the listed providers implement the `IWorkbookFormatProvider` and `IBinary
 
 ### IWorkbookFormatProvider interface methods
 
-````C#
+```csharp
 public interface IWorkbookFormatProvider
 {
     string Name { get; }
@@ -58,11 +58,11 @@ public interface IWorkbookFormatProvider
     void Export(Workbook workbook, Stream output);
     Workbook Import(Stream input);
 }
-````
+```
 
 __Example__: Use FormatProver's Import() and Export() methods with `Stream` array 
 
-````C#
+```csharp
 var path = "MyWorkbook.xlsx";
 Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
 IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
@@ -78,23 +78,23 @@ using (Stream output = new FileStream(path, FileMode.Create))
 {
     formatProvider.Export(workbook, output);
 }
-````
+```
 
 
 ### IBinaryWorkbookFormatProvider interface methods
 
-````C#
+```csharp
 public interface IBinaryWorkbookFormatProvider : IWorkbookFormatProvider
 {
     // Overloading IWorkbookFormatProvider's Import and Export methods to support byte[]
     byte[] Export(Workbook workbook);
     Workbook Import(byte[] input);
 }
-````
+```
 
 __Example__: Use FormatProver's Import() and Export() methods with `byte[]` array 
 
-````C#
+```csharp
 var path = "MyWorkbook.xlsx";
 Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
 IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
@@ -105,7 +105,7 @@ workbook = formatProvider.Import(fileAsByteArray, TimeSpan.FromSeconds(10));
 
 // Export
 byte[] workbookAsByteArray = formatProvider.Export(workbook, TimeSpan.FromSeconds(10));
-````
+```
 
 >note For more examples of importing and exporting workbooks check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
 
@@ -135,7 +135,7 @@ The document model of RadSpreadProcessing also contains a __WorkbookFormatProvid
 
 More information on the Format Providers Manager and the __WorkbookFormatProvidersManager__ class can be found in the dedicated [Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager %}) article.
       
-````C#
+```csharp
 public class WorkbookFormatProvidersManager
 {
     public static IEnumerable<IWorkbookFormatProvider> FormatProviders { get; }
@@ -154,7 +154,7 @@ public class WorkbookFormatProvidersManager
     public static void RegisterFormatProvider(IWorkbookFormatProvider provider);
     public static void UnregisterFormatProvider(IWorkbookFormatProvider provider);
 }
-````
+```
 
 ## See Also
 

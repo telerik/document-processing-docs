@@ -23,7 +23,7 @@ A __Comment__ holds annotation markers, which specify for which range of documen
 __Example 1__ shows how to create a __Comment__ and add its CommentRangeStart and CommentRangeEnd elements in a paragraph.
         
 
-#### __[C#] Example 1: Add a comment to a paragraph__
+#### __Example 1: Add a comment to a paragraph__
 
 <snippet id='codeblock-cdcd'/>
 
@@ -35,7 +35,7 @@ The __AddComment()__ method of the __Comments__ collection of a document creates
 __Example 2__ shows how you can insert a previously created __Comment__ object in a document by using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The InsertComment() method will insert the comment's start and end elements.
         
 
-#### __[C#] Example 2: Insert previously created comment__
+#### __Example 2: Insert previously created comment__
 
 <snippet id='codeblock-cece'/>
 
@@ -44,7 +44,7 @@ __Example 2__ shows how you can insert a previously created __Comment__ object i
 __Example 3__ demonstrates how you can use another overload of __RadFlowDocumentEditor__'s __InsertComment()__ method. In this case, a string representing the text of the Comment and two inline elements are passed. The two inline elements specify the element prior, which the CommentRangeStart should be added and the element after which the CommentRangeEnd should be added.
         
 
-#### __[C#] Example 3: Insert comment around run__
+#### __Example 3: Insert comment around run__
 
 <snippet id='codeblock-cfcf'/>
 
@@ -68,7 +68,7 @@ Comment derives BlockContainerBase [BlockContainerBase](https://docs.telerik.com
 __Example 4__ shows how you can add a Table to a Comment.
         
 
-#### __[C#] Example 4: Add blocks to a comment__
+#### __Example 4: Add blocks to a comment__
 
 <snippet id='codeblock-cgcg'/>
 

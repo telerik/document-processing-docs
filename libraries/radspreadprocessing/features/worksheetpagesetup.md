@@ -74,9 +74,9 @@ __Figures 1 and 2__ show an example of Worksheet's page setup usage. In the exam
 In order to fit the print content better, we use the Worksheet's page setup and change the page orientation as well as the scale factor and some additional print settings. __Example 1__ shows the code that needs to be executed.
         
 
-#### __[C#] Example 1: Use WorksheetPageSetup__
+#### __Example 1: Use WorksheetPageSetup__
 
-{{region cs-radspreadprocessing-features-worksheetpagesetup_0}}
+```csharp
 
 	WorksheetPageSetup pageSetup = workbook.ActiveWorksheet.WorksheetPageSetup;
 	
@@ -84,7 +84,7 @@ In order to fit the print content better, we use the Worksheet's page setup and 
 	pageSetup.PageOrientation = PageOrientation.Landscape;
 	pageSetup.ScaleFactor = new Size(0.9, 0.9);
 	pageSetup.CenterHorizontally = true;
-{{endregion}}
+```
 
 As a result, we managed to fit the data into a single page with size A4 as shown in __Figure 2__.
       
@@ -112,9 +112,9 @@ Through WorksheetPageSetup's __PrintArea__ property you can access the print are
 The example shown in __Figure 3__ demonstrates how to use Worksheet's print area. In this example, we have a big table with data and we want to print only two specific ranges. To achieve that, the print area is set with these cell ranges in the code snippet from __Example 2__.
         
 
-#### __[C#] Example 2: Set PrintArea__
+#### __Example 2: Set PrintArea__
 
-{{region cs-radspreadprocessing-features-worksheetpagesetup_1}}
+```csharp
 
 	PrintArea printArea = workbook.ActiveWorksheet.WorksheetPageSetup.PrintArea;
 	
@@ -123,7 +123,7 @@ The example shown in __Figure 3__ demonstrates how to use Worksheet's print area
 	    new CellRange(0, 0, 4, 8),
 	    new CellRange(1, 1, 25, 3)
 	});
-{{endregion}}
+```
 
 
 
@@ -167,9 +167,9 @@ __Figure 4__ shows a preview of large amount of data.
 In order to separate semantically-correct the print data onto several pages, we are going to place horizontal page breaks at the place where we need the splitting to happen. __Example 3__ shows how this can be achieved.
         
 
-#### __[C#] Example 3: Insert PageBreaks__
+#### __Example 3: Insert PageBreaks__
 
-{{region cs-radspreadprocessing-features-worksheetpagesetup_2}}
+```csharp
 
 	PageBreaks pageBreaks = workbook.ActiveWorksheet.WorksheetPageSetup.PageBreaks;
 	
@@ -180,7 +180,7 @@ In order to separate semantically-correct the print data onto several pages, we 
 	pageBreaks.TryInsertHorizontalPageBreak(17, 0);
 	pageBreaks.TryInsertHorizontalPageBreak(20, 0);
 	pageBreaks.TryInsertHorizontalPageBreak(23, 0);
-{{endregion}}
+```
 
 
 
@@ -198,14 +198,14 @@ The __PrintTitles__ property of __WorksheetPageSetup__ enables you to set rows a
 * __RepeatedRows__: Gets or sets a value of type RowRange that represents the range of rows that should be repeated. 
 
 
-#### __[C#] Example 4: Repeat the first two rows and two columns of the worksheet on each page__
+#### __Example 4: Repeat the first two rows and two columns of the worksheet on each page__
 
-{{region cs-radspreadprocessing-features-worksheetpagesetup_3}}
+```csharp
 
 	WorksheetPageSetup pageSetup = workbook.ActiveWorksheet.WorksheetPageSetup;
 	pageSetup.PrintTitles.RepeatedRows = new RowRange(0, 1);
 	pageSetup.PrintTitles.RepeatedColumns = new ColumnRange(0, 1);
-{{endregion}}
+```
 
 ## See Also
 

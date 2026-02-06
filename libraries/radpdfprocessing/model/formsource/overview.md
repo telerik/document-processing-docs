@@ -23,7 +23,7 @@ With **FormSource** you can add content to a [Form]({%slug radpdfprocessing-mode
 
 The FormSource class exposes a default constructor which you can use to create an empty instance.      
 
-#### __[C#] Example 1: Create FormSource__
+#### __Example 1: Create FormSource__
 
 <snippet id='pdf-create-form-source'/>
 
@@ -44,7 +44,7 @@ The FormSource class inherits from the IContentRootElement interface. This inher
 
 >There’s no nesting limit for [Form XObjects]({%slug radpdfprocessing-model-form%}), but PDF viewers may restrict depth to avoid memory or performance issues and improve responsiveness, which can affect rendering depending on the viewer.
 
-#### __[C#] Example 2: Add content to a FormSource__
+#### __Example 2: Add content to a FormSource__
 
 <snippet id='pdf-add-content-to-form-source'/>
 
@@ -57,7 +57,7 @@ After generating the FormSource object and filling it with content, you should i
 * In addition to the ability to fill a form source, the FixedContentEditor allows you to add this form to a container. 
 
 
-    #### __[C#] Example 3: Add a FormSource to a document using FixedContentEditor__
+    #### __Example 3: Add a FormSource to a document using FixedContentEditor__
     
     <snippet id='pdf-fixed-editor-add-content-to-form-source'/>
 

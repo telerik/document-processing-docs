@@ -7,16 +7,16 @@ slug: create-pdf-document-with-logo-and-text-using-fixedcontenteditor
 tags: pdf, fixedcontenteditor, editor, logo, image, text
 res_type: kb
 ---
-# Environment
+## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.124 | RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Description
+## Description
 
 This tutorial demonstrates a sample approach how to create a PDF document from scratch that contains a logo and text. 
 
-# Solution
+## Solution
 
 The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) allows you draw any element at the desired [Position]({%slug radpdfprocessing-concepts-position%}):
 

@@ -27,9 +27,9 @@ The __CellImportedEventArgs__ contains information about the current cell:
 *  __worksheet:__ The worksheet where the data is imported.
 
 
-#### __[C#] Example 1: Using the CellImported event to format the cells__
+#### __Example 1: Using the CellImported event to format the cells__
 
-{{region cs-radspreadprocessing-formats-and-conversion-data-table-format-provider-settings_0}}
+```csharp
 	private void ImportTable()
     {
         DataTable table = GetTable();
@@ -51,7 +51,7 @@ The __CellImportedEventArgs__ contains information about the current cell:
         }
     }
 
-{{endregion}}
+```
 
 # Export Settings
 
@@ -68,9 +68,9 @@ The __ColumnExportingEventArgs__ object contains the current column instance and
 * __DataColumn:__ Gets the [DataColumn](https://docs.microsoft.com/en-us/dotnet/api/system.data.datacolumn?view=net-6.0) that is being exported.
 * __ColumnIndex:__  Gets the index of the exported column. 
 
-#### __[C#] Example 2: Using the ColumnExporting event to set the AllowDBNull property__
+#### __Example 2: Using the ColumnExporting event to set the AllowDBNull property__
 
-{{region cs-radspreadprocessing-formats-and-conversion-data-table-format-provider-settings_1}}
+```csharp
 
     private void ExportTable()
     {
@@ -86,7 +86,7 @@ The __ColumnExportingEventArgs__ object contains the current column instance and
         } 
     }
 
-{{endregion}}
+```
 
 # See Also
 

@@ -24,9 +24,9 @@ To import and export csv files, you need to use the __CsvFormatProvider__ class 
 __Example 1__ shows how to import a CSV file using a __FileStream__. The code assures that a file with the specified name exists. Further, the sample instantiates a __CsvFormatProvider__ and passes a FileStream to its __Import()__ method.
         
 
-#### __[C#] Example 1: Import CSV file__
+#### __Example 1: Import CSV file__
 
-{{region cs-radspreadprocessing-formats-and-conversion-csv-csvformatprovider_0}}
+```csharp
     string fileName = "FileName.csv";
     if (!File.Exists(fileName))
     {
@@ -41,7 +41,7 @@ __Example 1__ shows how to import a CSV file using a __FileStream__. The code as
         workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
     }
 
-{{endregion}}
+```
 
 
 
@@ -50,9 +50,9 @@ __Example 1__ shows how to import a CSV file using a __FileStream__. The code as
 __Example 2__ demonstrates how to export an existing Workbook to a CSV file. The snippet creates a new workbook with a single worksheet. Further, it creates a __CsvFormatProvider__ and invokes its __Export()__ method:
         
 
-#### __[C#] Example 2: Export CSV file__
+#### __Example 2: Export CSV file__
 
-{{region cs-radspreadprocessing-formats-and-conversion-csv-csvformatprovider_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 
@@ -64,7 +64,7 @@ __Example 2__ demonstrates how to export an existing Workbook to a CSV file. The
 		formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
 	}
 
-{{endregion}}
+```
 
 
 ## See Also

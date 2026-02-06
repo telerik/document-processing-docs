@@ -29,7 +29,7 @@ In order to import a plain text document, you need to use the __Import()__ metho
 __Example 1__ shows how to use __TxtFormatProvider__ to import a document from a file.
         
 
-#### __[C#] Example 1: Import document from a file__
+#### __Example 1: Import document from a file__
 
 <snippet id='codeblock-cg'/>
 
@@ -38,7 +38,7 @@ __Example 1__ shows how to use __TxtFormatProvider__ to import a document from a
 And here is how you can import a document from string:
         
 
-#### __[C#] Example 2: Import document from a string__
+#### __Example 2: Import document from a string__
 
 <snippet id='codeblock-ch'/>
 
@@ -55,7 +55,7 @@ In order to export a document to plain text, you need to use the __Export()__ me
 __Example 3__ shows how to use __TxtFormatProvider__ to export __RadFlowDocument__ to a file.
         
 
-#### __[C#] Example 3: Export a document to a file__
+#### __Example 3: Export a document to a file__
 
 <snippet id='codeblock-ci'/>
 
@@ -64,7 +64,7 @@ __Example 3__ shows how to use __TxtFormatProvider__ to export __RadFlowDocument
 You can also export the document to a string and preserve it in a database.
         
 
-#### __[C#] Example 4: Export a document to a string__
+#### __Example 4: Export a document to a string__
 
 <snippet id='codeblock-cj'/>
 

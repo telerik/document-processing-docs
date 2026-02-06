@@ -98,7 +98,7 @@ In order to add one of the list templates to the document, you need to pass a __
 __Example 1__ adds a default bulleted list to a predefined RadFlowDocument.
         
 
-#### __[C#] Example 1: Add list template__
+#### __Example 1: Add list template__
 
 <snippet id='codeblock-m'/>
 
@@ -112,7 +112,7 @@ The next tutorial will get you through the creation of a list.
 1. Define a new __RadFlowDocument__ and add a __Section__ in it.
             
 
-	#### __[C#] Step 1: Create RadFlowDocument__
+	#### __Step 1: Create RadFlowDocument__
 	
 	<snippet id='codeblock-n'/>
 
@@ -121,7 +121,7 @@ The next tutorial will get you through the creation of a list.
 1. Create a __List__ object and associate it with the document by adding it to the __Lists__ collection.
             
 
-	#### __[C#] Step 2: Create list__
+	#### __Step 2: Create list__
 	
 	<snippet id='codeblock-o'/>
 	
@@ -131,7 +131,7 @@ The next tutorial will get you through the creation of a list.
 1. Iterate over the collection of __Levels__ the list has.
             
 
-	#### __[C#] Step 3: Iterate levels__
+	#### __Step 3: Iterate levels__
 	
 	<snippet id='codeblock-p'/>
 
@@ -140,7 +140,7 @@ The next tutorial will get you through the creation of a list.
 1. Specify some properties for each level.
             
 
-	#### __[C#] Step 4: Customize list levels__
+	#### __Step 4: Customize list levels__
 	
 	<snippet id='codeblock-q'/>
 	
@@ -155,7 +155,7 @@ The tutorial in the [previous section](#create-a-list) demonstrates how you can 
 __Example 6__ demonstrates how you can apply the list created in Steps 1-4 above.
         
 
-#### __[C#] Example 6: Apply list__
+#### __Example 6: Apply list__
 
 <snippet id='codeblock-r'/>
 

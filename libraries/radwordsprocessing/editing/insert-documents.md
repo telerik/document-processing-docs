@@ -29,7 +29,7 @@ You could merge documents at a specific position using the InsertDocument() meth
 
 **Example 1** demonstrates how to use the InsertDocument() method.
 
-#### __[C#] Example 1: Insert source document into target document__
+#### __Example 1: Insert source document into target document__
 
 <snippet id='codeblock-bt'/>
 

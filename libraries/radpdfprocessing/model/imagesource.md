@@ -29,7 +29,7 @@ The ImageSource class has several public constructor overloads and can be create
 __Example 1__ illustrates how you can create an ImageSource using a __FileStream__.
         
 
-#### __[C#] Example 1: Create ImageSource from Stream__
+#### __Example 1: Create ImageSource from Stream__
 
 <snippet id='pdf-image-source-from-stream'/>
 
@@ -38,12 +38,12 @@ With the __EncodedImageData__ class you can create an __ImageSource__ with encod
 
 __Example 2__ demonstrates how you can create an __ImageSource__ using the __EncodedImageData__ class.
 
-#### __[C#] Example 2: Create ImageSource from EncodedImageData__
+#### __Example 2: Create ImageSource from EncodedImageData__
 <snippet id='pdf-image-source-from-encoded-image-data'/>
 
 With the __EncodedImageData__ class you can also create an __ImageSource__ with encoded image data and set its transparency. The __EncodedImageData__ class provides a second constructor overload where you can set the alpha-channel bytes of the image as a second constructor parameter in order to apply transparency to this image.
 
-#### __[C#] Example 3: Create ImageSource from EncodedImageData with transparency__
+#### __Example 3: Create ImageSource from EncodedImageData with transparency__
 <snippet id='pdf-transparency-image-source-from-encoded-image-data'/>
 
 ## Properties
@@ -70,7 +70,7 @@ The ImageSource class exposes two methods, which could help you get the data fro
 __RadPdfProcessing__ exposes an extension method allowing you to convert every BitmapSource to an ImageSource that can be used for the creation of [Image]({%slug radpdfprocessing-model-image%}) elements. __Example 4__ shows how you can use the ToImageSource() extension method over a previously created bitmap.
         
 
-#### __[C#] Example 4: Create ImageSource with extension method__
+#### __Example 4: Create ImageSource with extension method__
 
 <snippet id='pdf-image-source-extensions'/>
 

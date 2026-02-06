@@ -40,7 +40,7 @@ Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%sl
 __Example 1__ demonstrates how you can insert a TOA field.
         
 
-#### __[C#] Example 1: Insert TOA field__
+#### __Example 1: Insert TOA field__
 
 <pre><code>
     var document = new RadFlowDocument();

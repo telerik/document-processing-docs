@@ -25,13 +25,13 @@ To display the sum of cells A1 and B1 in cell C1, you can invoke the __SetValue(
 __Example 1__ creates a workbook with a single worksheet before setting the value of C1.
         
 
-#### __[C#] Example 1: Set reference value__
+#### __Example 1: Set reference value__
 
-{{region cs-radspreadprocessing-features-formulas-cell-references_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	workbook.ActiveWorksheet.Cells[0, 2].SetValue("=A1+B1");
-{{endregion}}
+```
 
 
 
@@ -41,16 +41,16 @@ References may optionally specify the worksheet of the referenced cell/range. To
 __Example 2__ adds a worksheet to the workbook and renames the newly created instance. Moreover, the example sets the value of cell A1 in *Sheet1* to refer to cell B2 in the new sheet.
         
 
-#### __[C#] Example 2: Set reference value from another sheet__
+#### __Example 2: Set reference value from another sheet__
 
-{{region cs-radspreadprocessing-features-formulas-cell-references_1}}
+```csharp
 	workbook.Worksheets.Add();
 	Worksheet sheet1 = workbook.Worksheets[0];
 	Worksheet samsWorksheet = workbook.Worksheets[1];
 	samsWorksheet.Name = "Sam'sWorksheet";
 	
 	sheet1.Cells[0, 0].SetValue("='Sam''sWorksheet'!B2");
-{{endregion}}
+```
 
 
 
@@ -61,12 +61,12 @@ References to whole rows or columns should always contain a colon separating the
 __Example 3__ demonstrates how to add a reference to a cell range.
         
 
-#### __[C#] Example 3: Set reference to cell range__
+#### __Example 3: Set reference to cell range__
 
-{{region cs-radspreadprocessing-features-formulas-cell-references_2}}
+```csharp
 	sheet1.Cells[2, 2].SetValue("=SUM(A1:B2)");
 	samsWorksheet.Cells[0, 0].SetValue("=PRODUCT(D3:F5)");
-{{endregion}}
+```
 
 
 
@@ -103,21 +103,21 @@ SpreadProcessing supports references to whole columns and whole rows. You can us
 - can refer to a single or to multiple rows/columns. Note that even for single row or column, the reference should be defined similarly to how you define ranges, e.g. you should use A:A to refer to column A.
 - can also be absolute, relative or mixed references.
 
-#### [C#] Example 4: Use reference to a column
+#### Example 4: Use reference to a column
 
-{{region cs-radspreadprocessing-features-formulas-cell-references_3}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	workbook.ActiveWorksheet.Cells[1, 1].SetValue("=AVERAGE(A:A)");
-{{endregion}}
+```
 
-#### [C#] Example 5: Use reference to multuple rows
+#### Example 5: Use reference to multuple rows
 
-{{region cs-radspreadprocessing-features-formulas-cell-references_4}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	workbook.ActiveWorksheet.Cells[0, 0].SetValue("=AVERAGE(1:5)");
-{{endregion}}
+```
 
 
 ## See Also

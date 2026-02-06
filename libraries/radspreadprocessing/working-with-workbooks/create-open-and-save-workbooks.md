@@ -27,12 +27,12 @@ The fact that __RadSpreadProcessing__ is completely decoupled from UI enables nu
 __Example 1__ creates a new workbook and adds its first worksheet, which also becomes the __ActiveWorksheet__ of the workbook.
         
 
-#### __[C#] Example 1: Create a workbook and add a worksheet to it__
+#### __Example 1: Create a workbook and add a worksheet to it__
 
-{{region cs-radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_0}}
+```csharp
 	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
 	Telerik.Windows.Documents.Spreadsheet.Model.Worksheet worksheet = workbook.Worksheets.Add();
-{{endregion}}
+```
 
 
 
@@ -45,9 +45,9 @@ To import a workbook, you need to instantiate a specific [FormatProvider]({%slug
 __Example 2__ uses a WebClient to download a `xlsx` file stored on a server. Further, the code creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public Workbook Import(Stream stream)` method.
         
 
-#### __[C#] Example 2: Download and import xlsx file__
+#### __Example 2: Download and import xlsx file__
 
-{{region cs-radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_1}}
+```csharp
 	const string FilePath = @"http://localhost:54352/Resourses/SampleFile.xlsx";
 	WebClient webClient = new WebClient();
 	
@@ -58,7 +58,7 @@ __Example 2__ uses a WebClient to download a `xlsx` file stored on a server. Fur
 	};
 	
 	webClient.OpenReadAsync(new Uri(FilePath));
-{{endregion}}
+```
 
 
 
@@ -75,9 +75,9 @@ To export a workbook, you need to instantiate the [FormatProvider]({%slug radspr
 __Example 3__ demonstrates how to export an existing Workbook to a `XLSX` file. The snippet creates a new workbook with a single worksheet. Further, it creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public void Export(Workbook workbook, Stream output)`. Saving to the other formats is done in the same way, using a different format provider class.
           
 
-#### __[C#] Example 3: Save XLSX file__
+#### __Example 3: Save XLSX file__
 
-{{region cs-radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_3}}
+```csharp
 	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
 	workbook.Worksheets.Add();
 	
@@ -88,7 +88,7 @@ __Example 3__ demonstrates how to export an existing Workbook to a `XLSX` file. 
 	{
 	    formatProvider.Export(workbook, output);
 	}
-{{endregion}}
+```
 
 
 For security purposes accessing files in *Silverlight* can be achieved only through user-initiated dialogs. That said, to save workbook's contents into a `csv` file, you need to use the `SaveFileDialog`. 
@@ -96,9 +96,9 @@ For security purposes accessing files in *Silverlight* can be achieved only thro
 __Example 4__ passes the stream returned by the dialog and the current workbook to the __Export()__ method of the [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider %}).
           
 
-#### __[C#] Example 4: Save csv file using SaveFileDialog__
+#### __Example 4: Save csv file using SaveFileDialog__
 
-{{region cs-radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks_2}}
+```csharp
 	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
 	workbook.Worksheets.Add();
 	
@@ -113,7 +113,7 @@ __Example 4__ passes the stream returned by the dialog and the current workbook 
 	        formatProvider.Export(workbook, output);
 	    }
 	}
-{{endregion}}
+```
 
 
 >note Additional examples about export are available in the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.

@@ -36,9 +36,9 @@ To read the data from a file, you should parse the desired elements in a sequenc
 5. Read Cells 
 
 
-#### [C#] Example 1: Read data from a document
+#### Example 1: Read data from a document
 
-{{region radspreadstreamprocessing-import_0}}
+```csharp
 
 	using (System.IO.FileStream fs = new System.IO.FileStream(fileName, FileMode.Open))
 	{
@@ -57,7 +57,7 @@ To read the data from a file, you should parse the desired elements in a sequenc
 		}
 	}
 
-{{endregion}}
+```
 
 Through the importer objects, you can access the properties of the different elements.
 

@@ -7,17 +7,17 @@ slug: pdf-from-images-with-fixedcontenteditor
 tags: pdf,images,editor
 res_type: kb
 ---
-# Environment
+## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.124 | RadPdfProcessing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Description
+## Description
 This tutorial demonstrates a sample approach how to generate a PDF document from a collection of images located in a local folder.
 
 ![Folder with images](images/images-folder.png)
 
-# Solution
+## Solution
 To create the PDF document, we will use a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) which is always associated with a single [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the page at which the image block element will be inserted and drawn. The Position is adjusted after the image is rendered. If there is no remaining space on the page to draw the next image, a new page will be created and the editor's position will be moved to the beginning of the new page. 
  
 ```csharp

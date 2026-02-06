@@ -36,21 +36,21 @@ __PdfExportSettings__ allow controlling how a __Workbook__ is exported to PDF. U
 __Example 1__ shows how to export the Entire Workbook without ignoring the __PrintArea__ property in all worksheets.
         
 
-#### __[C#] Example 1: Export entire workbook__
+#### __Example 1: Export entire workbook__
 
-{{region cs-radspreadprocessing-formats-and-conversion-pdf-settings_0}}
+```csharp
 	PdfFormatProvider provider = new PdfFormatProvider();
 	provider.ExportSettings = new PdfExportSettings(ExportWhat.EntireWorkbook, false);
-{{endregion}}
+```
 
 
 
 __Example 2__ shows how to export only two selected ranges from the active worksheet, ignoring print areas and page breaks.
         
 
-#### __[C#] Example 2: Export selection__
+#### __Example 2: Export selection__
 
-{{region cs-radspreadprocessing-formats-and-conversion-pdf-settings_1}}
+```csharp
 	CellRange[] rangesToExport = new CellRange[]
 	{
 	    new CellRange(2, 3, 10, 15),
@@ -59,7 +59,7 @@ __Example 2__ shows how to export only two selected ranges from the active works
 	
 	PdfFormatProvider provider = new PdfFormatProvider();
 	provider.ExportSettings = new PdfExportSettings(rangesToExport);
-{{endregion}}
+```
 
 
 >In order to specify file export settings to the __PdfFormatProvider__ you need to add both the Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export and Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export namespaces. In Example 3 the *Fixed* alias corresponds to the __Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export__ namespace.
@@ -68,16 +68,16 @@ __Example 2__ shows how to export only two selected ranges from the active works
 Another export option is to specify settings specific to the PDF format to the exported document. __Example 3__ demonstrates how to utilize the __PdfFileSettings__ property in order to export a PDF/A-compliant document.
 
 
-#### __[C#] Example 3: Export PDF/A compliant document__
+#### __Example 3: Export PDF/A compliant document__
 
-{{region cs-radspreadprocessing-formats-and-conversion-pdf-settings_2}}
+```csharp
 	PdfFormatProvider provider = new PdfFormatProvider();
 	
 	Fixed.PdfExportSettings fileSettings = new Fixed.PdfExportSettings();
 	fileSettings.ComplianceLevel = Fixed.PdfComplianceLevel.PdfA2B;
 	
 	provider.ExportSettings.PdfFileSettings = fileSettings;
-{{endregion}}
+```
 
 
 ## See Also

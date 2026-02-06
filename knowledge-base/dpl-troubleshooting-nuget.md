@@ -15,7 +15,7 @@ ticketid: 1671187
 | --- | --- | ---- | 
 | N/A| Telerik Document Processing Libraries|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Troubleshooting Telerik NuGet
+## Troubleshooting Telerik NuGet
 
 This article provides solutions to common issues that you may observe when working with the Telerik NuGet server and the NuGet packages that it provides.
 
