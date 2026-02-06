@@ -59,6 +59,14 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Windows.Documents.AIConnector:__ This package is required for using the GenAI-powered Document Insights feature.
     * __Telerik.Documents.AI.Core:__ This package is a dependency of __Telerik.Documents.AIConnector__.
     * __Telerik.Documents.AI.RAG:__ This package is a dependency of __Telerik.Documents.AIConnector__. 
+* __Telerik.Documents.AI.Tools.Core:__ Core types and interfaces for the Agent Tools infrastructure.
+* __Telerik.Documents.AI.Tools.Spreadsheet.Core:__ Repository and core types for spreadsheet processing.
+* __Telerik.Documents.AI.Tools.Fixed.Core:__ Repository and core types for PDF document processing.
+* __Telerik.Documents.AI.Tools.Flow.Core:__ Repository and core types for flow document processing.
+* __Telerik.Documents.AI.Tools.Conversion.Core:__ Core types for document conversion operations.
+* __Telerik.Documents.AI.AgentTools.Spreadsheet:__ Agent tool classes for spreadsheet operations.
+* __Telerik.Documents.AI.AgentTools.Fixed:__ Agent tool classes for PDF document operations.
+* __Telerik.Documents.AI.AgentTools.Conversion:__ Agent tool classes for document conversion and merging.
 * __Telerik.Windows.Zip:__ It can be used as a standalone library as well. 
 * __Telerik.Windows.Zip.Extensions:__ The package provides methods for working with files and platform specific operations. 
 
@@ -87,6 +95,14 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Documents.AIConnector:__ This package is required for using the GenAI-powered Document Insights feature. 
     * __Telerik.Documents.AI.Core:__ This package is a dependency of __Telerik.Documents.AIConnector__.
     * __Telerik.Documents.AI.RAG:__ This package is a dependency of __Telerik.Documents.AIConnector__. 
+* __Telerik.Documents.AI.Tools.Core:__ Core types and interfaces for the Agent Tools infrastructure.
+* __Telerik.Documents.AI.Tools.Spreadsheet.Core:__ Repository and core types for spreadsheet processing.
+* __Telerik.Documents.AI.Tools.Fixed.Core:__ Repository and core types for PDF document processing.
+* __Telerik.Documents.AI.Tools.Flow.Core:__ Repository and core types for flow document processing.
+* __Telerik.Documents.AI.Tools.Conversion.Core:__ Core types for document conversion operations.
+* __Telerik.Documents.AI.AgentTools.Spreadsheet:__ Agent tool classes for spreadsheet operations.
+* __Telerik.Documents.AI.AgentTools.Fixed:__ Agent tool classes for PDF document operations.
+* __Telerik.Documents.AI.AgentTools.Conversion:__ Agent tool classes for document conversion and merging.
 * __Telerik.Zip:__ It can be used as a standalone library as well. 
 
 ## See Also

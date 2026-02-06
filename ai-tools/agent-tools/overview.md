@@ -1,50 +1,106 @@
 ---
 title: Overview
-page_title: Telerik Document Processing Agent Tools Overview
-description: Telerik Document Processing Agent Tools provides document processing capabilities designed to be exposed to AI agents.
+page_title: Agent Tools - Overview
+description: Telerik Document Processing Agent Tools provide document processing capabilities designed to be exposed to AI agents.
 slug: agent-tools-overview
-tags: ai, dpl, document, processing, agent, tool, telerik
+tags: ai, dpl, document, processing, agent, tool, telerik, excel, pdf, word, docx, pdf, xlsx 
 published: True
 position: 0
 ---
 
-# Overview
+# gent Tools - Overview
 
-|Minimum Version|Q1 2026|
-|----|----|
+The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations for spreadsheets, PDFs, and flow documents to an LLM via tool calls.
 
-The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations (Excel/PDF/Flow) to an LLM via tool calls.
-
-## Required NuGet packages
-
-* Telerik.Documents.AI.Tools.Core
-* Telerik.Documents.AI.Tools.Spreadsheet.Core
-* Telerik.Documents.AI.Tools.Fixed.Core
-* Telerik.Documents.AI.Tools.Flow.Core
-* Telerik.Documents.AI.Tools.Conversion.Core
-* Telerik.Documents.AI.AgentTools.Spreadsheet
-* Telerik.Documents.AI.AgentTools.Fixed
-* Telerik.Documents.AI.AgentTools.Conversion
-
->important The packages have the same names for .NET Standard, .NET (Target OS: None) and .NET (Target OS: Windows).
+The API is built around two key concepts: **repositories** for managing documents in memory, and **agent tool classes** that provide specific document processing capabilities that can be directly exposed to AI agents.
 
 ## Base Classes and Interfaces
 
-  - **AgentToolBase**&mdash;Provides a base class that serves as an abstract foundation for creating AI‑exposable tools within the Telerik Documents AI tooling ecosystem. It enables automatic discovery and conversion of specially annotated instance methods into AITool objects that can be consumed.
-  - **IDocumentRepository**&mdash;base interface for all repositories. A repository is a place in memory where we keep the documents we currently work with. You can import and export documents from it and ask for a document via ID.
-  - **IDocumentRepository&lt;TDocument&gt;**&mdash;The IDocumentRepository and IDocumentRepository&lt;TDocument&gt; interfaces define a consistent abstraction for managing documents across different file types (e.g., spreadsheets, PDFs, flow documents) within the Telerik Documents AI tooling ecosystem. These interfaces provide a unified set of operations for importing, exporting, retrieving, creating, and merging documents, enabling higher‑level AI tools or application services to interact with various document formats in a standardized way. Each repository explicitly reports the DocumentType it manages. This allows the system to route operations (such as conversions or multi-document workflows) to the correct repository based on file type:
-    * **IFixedDocumentRepository** : IDocumentRepository&lt;RadFixedDocument&gt;&mdash;Provides a unified interface for managing PDF (Fixed) documents. Extends IDocumentRepository with PDF-specific capabilities.
-    * **IFlowDocumentRepository** : IDocumentRepository&lt;RadFlowDocument&gt;&mdash;Provides a unified interface for managing Word (Flow) documents.
-    * **IWorkbookRepository** : IDocumentRepository&lt;Workbook&gt;&mdash;Provides a unified interface for managing spreadsheet workbooks. Extends IDocumentProvider with spreadsheet-specific creation capabilities.
-  - **DocumentRepositoryRegistry**&mdash;The DocumentRepositoryRegistry class serves as a lightweight, centralized lookup service for mapping document types to their corresponding document repository implementations. It enables higher‑level components—such as AI tools, file processing workflows, or conversion utilities—to dynamically resolve the appropriate repository at runtime based on the type of document being handled (e.g., workbook, PDF, flow document).
+The Agent Tools API provides foundational types that enable document management and tool creation across all document types:
 
-## Dependency Injection Extensions
+  - **AgentToolBase**: Base class for all agent tool classes. Provides an abstract foundation for creating AI-exposable tools within the Telerik Documents AI tooling ecosystem. It enables automatic discovery and conversion of specially annotated instance methods into AITool objects that can be consumed by AI frameworks.
+  
+  - **IDocumentRepository**: Base interface for all document repositories. A repository is an in-memory container where documents are stored and managed during processing. It provides operations to import and export documents and retrieve them via unique identifiers.
+  
+  - **IDocumentRepository&lt;TDocument&gt;**: Generic interface that extends IDocumentRepository to provide type-specific document management. Defines a consistent abstraction for managing documents across different file types (spreadsheets, PDFs, flow documents). Each repository explicitly reports the DocumentType it manages, allowing the system to route operations to the correct repository based on file type.
+  
+  - **DocumentRepositoryRegistry**: A centralized registry that maintains one repository for each document type (Workbook, Fixed, and Flow). Enables higher-level components to dynamically resolve the appropriate repository at runtime based on the document type being handled.
 
-If the user would like to use Dependency injection, Telerik Document Processing Libraries provide extension methods for registering Spreadsheet, Fixed, Flow document agent tools and related services with an IServiceCollection.
+## Spreadsheet Processing API
 
-  - services.**AddSpreadsheetAgentTools()**&mdash;Adds Spreadsheet agent tools to the service collection.
-  - services.**AddFixedAgentTools()**&mdash;Adds Fixed document agent tools to the service collection.
-  - services.**AddFlowAgentTools()**&mdash;Adds Flow document agent tools to the service collection.
+The Spreadsheet Processing API provides comprehensive tools for working with Excel workbooks, organized into repositories and specialized agent tool classes.
+
+### Repositories
+
+  - **IWorkbookRepository**: Interface for managing spreadsheet workbooks, extending IDocumentRepository&lt;Workbook&gt; with spreadsheet-specific capabilities.
+  
+  - **InMemoryWorkbookRepository**: A repository implementation that maintains multiple workbooks in memory simultaneously. Suitable for scenarios requiring concurrent access to multiple spreadsheet documents.
+  
+  - **SingleWorkbookRepository**: A simplified repository implementation designed to work with a single workbook. Provides a streamlined option for scenarios focused on analyzing or modifying one workbook at a time.
+
+### Agent Tool Classes
+
+  - **SpreadProcessingReadAgentTools**: Provides read-only operations for extracting and analyzing data from spreadsheets, including filtering, finding values, retrieving cell ranges, querying styles, and accessing worksheet information.
+  
+  - **SpreadProcessingWriteAgentTools**: Provides write operations for modifying cell content, formulas, and styles, as well as auto-fitting columns and rows, and managing cell merging.
+  
+  - **SpreadProcessingWorksheetAgentTools**: Provides operations for managing worksheets within a workbook, including adding, deleting, and renaming worksheets.
+  
+  - **SpreadProcessingFileManagementAgentTools**: Provides file-level operations for creating, listing, importing, and exporting workbooks.
+  
+  - **SpreadProcessingFormulaAgentTools**: Provides specialized operations for working with formulas, including calculating formulas without modifying documents, listing all formulas, and retrieving formula information.
+
+## Fixed Document (PDF) API
+
+The Fixed Document API provides tools for working with PDF documents, organized into repositories and specialized agent tool classes.
+
+### Repositories
+
+  - **IFixedDocumentRepository**: Interface for managing PDF documents, extending IDocumentRepository&lt;RadFixedDocument&gt; with PDF-specific capabilities.
+  
+  - **InMemoryFixedDocumentRepository**: A repository implementation that maintains multiple PDF documents in memory simultaneously.
+
+### Agent Tool Classes
+
+  - **FixedDocumentFormAgentTools**: Provides operations for working with PDF forms, including retrieving form field information and filling form fields.
+  
+  - **FixedDocumentContentAgentTools**: Provides operations for adding content segments to PDF documents.
+  
+  - **FixedFileManagementAgentTools**: Provides file-level operations for creating, listing, importing, and exporting PDF documents.
+
+## Flow Document (Word) API
+
+The Flow Document API provides repositories for managing Word documents, primarily for use with conversion and merge operations. Agent tool classes specific to Flow documents are not yet available, but the repository infrastructure is in place.
+
+### Repositories
+
+  - **IFlowDocumentRepository**: Interface for managing Word documents, extending IDocumentRepository&lt;RadFlowDocument&gt; with flow document-specific capabilities.
+  
+  - **InMemoryFlowDocumentRepository**: A repository implementation that maintains multiple Word documents in memory simultaneously.
+
+## Document Conversion and Merging API
+
+The Conversion API provides cross-document-type operations for converting between formats and merging documents.
+
+### Agent Tool Classes
+
+  - **ConvertDocumentsAgentTool**: Provides operations for converting documents between different formats (e.g., Excel to PDF, Word to PDF).
+  
+  - **MergeDocumentsAgentTool**: Provides operations for merging multiple documents into a single document.
+
+## Dependency Injection Support
+
+The Agent Tools API provides optional dependency injection support for applications that use the IServiceCollection pattern. These extension methods simplify registration of agent tools and their dependencies.
+
+>note Using dependency injection is **not required**. The agent tool classes and repositories can be instantiated and used directly without a DI container.
+
+The following extension methods are available for registering agent tools with IServiceCollection:
+
+  - **services.AddSpreadsheetAgentTools()**: Registers all spreadsheet agent tool classes (SpreadProcessingReadAgentTools, SpreadProcessingWriteAgentTools, SpreadProcessingWorksheetAgentTools, SpreadProcessingFileManagementAgentTools, and SpreadProcessingFormulaAgentTools) and their required dependencies, including the appropriate workbook repository.
+  
+  - **services.AddFixedAgentTools()**: Registers all fixed document agent tool classes (FixedDocumentFormAgentTools, FixedDocumentContentAgentTools, and FixedFileManagementAgentTools) and their required dependencies, including the fixed document repository.
+  
+  - **services.AddFlowAgentTools()**: Registers flow document repositories and related services for use with conversion and merge operations.
 
 ## See Also
 

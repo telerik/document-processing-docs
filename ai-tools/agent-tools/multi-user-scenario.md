@@ -1,31 +1,62 @@
 ---
 title: Multi‑User AI Agent Sessions
-page_title: Telerik Document Processing Agent Tools Overview
-description: Telerik Document Processing Agent Tools provides document processing capabilities designed to be exposed to AI agents.
+page_title: Agent Tools Multi‑User AI Agent Sessions
+description: Learn how to implement secure multi-user document processing with AI agents, including per-user repository isolation, session management, and production-ready patterns for web APIs and desktop applications.
 slug: agent-tools-multi-user-scenario
-tags: ai, dpl, document, processing, agent, tool, telerik, user, multi
+tags: ai, dpl, document, processing, agent, tool, telerik, excel, pdf, word, docx, pdf, xlsx, multi, user, session
 published: True
 position: 2
 ---
 
 # Multi‑User AI Agent Sessions
 
-Modern AI‑driven document processing systems must reliably support multiple users, maintain strict data isolation, and enable seamless state persistence across interactions. 
+When building AI-powered document processing applications that serve multiple users, proper isolation and session management are critical. This article demonstrates production-ready patterns for managing multi-user scenarios where each user interacts with their own set of documents through AI agents.
 
->important The provided examples in this article are purposed to show a sample approach for managing the documents storage. They can be further extended according to the complete requirement of the application.
+In single-user applications, you can create document repositories once and use them throughout the application lifecycle. However, in multi-user environments—such as web applications, SaaS platforms, or enterprise systems—you must ensure that:
+
+* Each user's documents remain isolated and inaccessible to other users
+* Document state persists appropriately across user interactions
+* Concurrent requests from multiple users are handled safely
+* Resources are properly managed and cleaned up
+
+### Risks and Mitigation
+
+Multi-user document processing systems face several critical risks:
+
+**Data Leakage Between Users**: Without proper isolation, one user could inadvertently access or modify another user's documents. This is mitigated by creating separate repository instances for each user and binding AI tools to user-specific repositories.
+
+**Session Confusion**: In stateless HTTP environments, requests from different users could interfere with each other if document state is shared. This is prevented by associating repositories with authenticated user identities and maintaining per-user sessions.
+
+**Resource Exhaustion**: Long-running sessions or abandoned user data can consume memory and storage. This is addressed through session cleanup policies, idle timeout mechanisms, and proper resource disposal.
+
+**Concurrent Access Issues**: Multiple simultaneous requests from the same user or different users require thread-safe repository management. This is handled using thread-safe collection types like `ConcurrentDictionary` for session storage.
+
+### Approaches Covered
+
+1. **[Per-User Isolated Storage](#per-user-isolated-storage)**: A stateful controller pattern for web APIs where each authenticated user gets persistent document repositories that survive across multiple HTTP requests within their session.
+
+2. **[Multi-User Agentic Application](#multi-user-agentic-application)**: A standalone application pattern that manages multiple user agent sessions, each with isolated repositories and conversation history, suitable for desktop applications or microservices.
 
 Both implementations share the same core principles:
 - Strict per-user repository isolation
 - Safe execution of AI tools
 - Concurrency-safe session handling
 
+>important The provided examples in this article are purposed to show a sample approach for managing the documents storage. They can be further extended according to the complete requirement of the application.
+
 ## Per-User Isolated Storage
 
-The example demonstrates how to maintain persistent document storage per user across multiple requests. Each authenticated user gets their own repository instances that persist across multiple requests within a session.
- Use this pattern when:
- - Users need to work with documents across multiple chat messages
- - You want document state to persist during a user's session
- - Different users should never see each other's documents
+This example implements a production-ready ASP.NET Core controller that addresses all four risks identified earlier:
+
+* **Preventing Data Leakage**: The `DocumentChatController` extracts the authenticated user ID from each HTTP request (`User.FindFirst(ClaimTypes.NameIdentifier)`) and retrieves or creates a session specifically for that user. Agent tools are instantiated with repositories from that user's session only, ensuring documents are never shared across users.
+
+* **Avoiding Session Confusion**: The `UserSessionManager` uses a `ConcurrentDictionary<string, UserSession>` to maintain isolated sessions keyed by user ID. Each HTTP request—even if stateless—retrieves the same session for the same authenticated user, providing stateful behavior across multiple requests.
+
+* **Managing Resource Exhaustion**: The `SessionCleanupService` background service runs every 15 minutes to identify and remove sessions that haven't been accessed in the past 2 hours. This prevents indefinite memory growth from abandoned sessions.
+
+* **Handling Concurrent Access**: The `ConcurrentDictionary` ensures thread-safe session storage and retrieval, allowing multiple users to make simultaneous requests without race conditions. The `LastAccessedAt` timestamp is updated atomically on each access.
+
+The implementation provides three HTTP endpoints: `POST /chat` for processing messages, `GET /documents` for listing user documents, and `DELETE /documents` for clearing user data. The `[Authorize]` attribute ensures all endpoints require authentication.
 
 ```csharp
 using System.Collections.Concurrent;
@@ -270,7 +301,17 @@ public class ChatResponse
 
 ## Multi-User Agentic Application
 
-The example demonstrates a production pattern: session-isolated agents with document processing. The idea is to manage isolated agent sessions for multiple users. Each user gets their own document repositories and conversation history.
+This example implements a self-contained multi-user agent system that addresses the same risks with a different architectural approach:
+
+* **Preventing Data Leakage**: Each `UserAgentSession` is created with its own dedicated `WorkbookRepository` and `PdfRepository` instances. Agent tools are bound to these repositories in the session constructor and cannot access documents from other sessions. The `MultiUserAgentApplication` manages the isolation through a session-per-user model.
+
+* **Avoiding Session Confusion**: Unlike the web API pattern that relies on HTTP authentication, this pattern uses explicit user identification through the `GetSession(userId)` method. Each session maintains its own complete conversation history (`_history`) and tool collection, ensuring context never bleeds between users.
+
+* **Managing Resource Exhaustion**: While this pattern doesn't include automatic cleanup (since it's designed for scenarios where session lifecycle is explicitly managed), it provides `EndSession(userId)` for explicit cleanup and `Dispose()` methods on sessions. Applications using this pattern should implement their own timeout logic based on their specific requirements.
+
+* **Handling Concurrent Access**: The `ConcurrentDictionary<string, UserAgentSession>` in `MultiUserAgentApplication` ensures thread-safe session management. Multiple users can interact with their sessions simultaneously, and the `FunctionInvokingChatClient` wrapper handles tool execution safely.
+
+The `UserAgentSession` class encapsulates the complete agent experience: repositories, conversation history (system message + all interactions), and tools. It provides both synchronous (`ChatAsync`) and streaming (`ChatStreamingAsync`) interaction methods, making it suitable for rich conversational applications. The `GetHistory()` and `ClearHistory()` methods give applications control over conversation context management.
 
 ```csharp
 using System.Collections.Concurrent;
