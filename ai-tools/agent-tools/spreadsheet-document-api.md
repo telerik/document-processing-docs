@@ -5,7 +5,7 @@ description: Telerik Document Processing Agent Tools provides a set of Spreadshe
 slug: agent-tools-spreadsheet-document-api
 tags: ai, dpl, document, processing, agent, tool, telerik, spreadsheet, api
 published: True
-position: 3
+position: 2
 ---
 
 # Spreadsheet Tools
@@ -68,7 +68,8 @@ Provides read-only agent tools for querying and analyzing spreadsheet content wi
     int toColumnIndex,
     string worksheetName = null,
     string documentId = null)</pre></td><td>Reads raw cell values from a small range and returns them as a string (for display/inspection).</td></tr>
-<tr><td>ListAvailableStyles</td><td><pre>CallToolResult ListAvailableStyles(string documentId = null)</pre></td><td>Lists all style names defined in the workbook.</td></tr>
+<tr><td>ListAvailableStyles</td><td><pre>CallToolResult ListAvailableStyles(
+    string documentId = null)</pre></td><td>Lists all style names defined in the workbook.</td></tr>
 <tr><td>GetStyleProperties</td><td><pre>CallToolResult GetStyleProperties(
     List<string> styleNames,
     string documentId = null)</pre></td><td>Returns detailed properties (font, border, alignment, fill, protection) for the specified existing style names.
@@ -80,8 +81,10 @@ Use ListAvailableStyles first to discover valid names.</td></tr>
     int toColumnIndex,
     string worksheetName = null,
     string documentId = null)</pre></td><td>Returns a 2D array of style names applied over the specified range. For spreadsheet formats only.</td></tr>
-<tr><td>GetWorksheetNames</td><td><pre>CallToolResult GetWorksheetNames(string documentId = null)</pre></td><td>Returns a list of worksheet names in the workbook.</td></tr>
-<tr><td>GetWorkbookStyles</td><td><pre>CallToolResult GetWorkbookStyles(string documentId = null)</pre></td><td>Returns all cell styles defined in the workbook including their detailed formatting properties.</td></tr>
+<tr><td>GetWorksheetNames</td><td><pre>CallToolResult GetWorksheetNames(
+    string documentId = null)</pre></td><td>Returns a list of worksheet names in the workbook.</td></tr>
+<tr><td>GetWorkbookStyles</td><td><pre>CallToolResult GetWorkbookStyles(
+    string documentId = null)</pre></td><td>Returns all cell styles defined in the workbook including their detailed formatting properties.</td></tr>
 </table>
 
 ### SpreadProcessingWriteAgentTools
@@ -117,7 +120,7 @@ Exposes a set of methods designed for automations and AI agents to modify spread
     int toColumnIndex,
     string worksheetName = null,
     string documentId = null)
-``</pre></td><td>Auto-fits widths for a contiguous range of columns.</td></tr>
+</pre></td><td>Auto-fits widths for a contiguous range of columns.</td></tr>
 <tr><td>AutoFitRowsHeight</td><td><pre>public CallToolResult AutoFitRowsHeight(
     int fromRowIndex,
     int toRowIndex,
@@ -151,7 +154,10 @@ tring documentId = null)</pre></td><td>Adds one or more new worksheets to a work
 <tr><td>DeleteWorksheet</td><td><pre>public CallToolResult DeleteWorksheet(
 string worksheetName, 
 string documentId = null)</pre></td><td>Deletes a worksheet from a workbook by name. The workbook must always retain at least one worksheet; the last remaining worksheet cannot be deleted.</td></tr>
-<tr><td>RenameWorksheet</td><td><pre>public CallToolResult RenameWorksheet(string currentWorksheetName, string newWorksheetName, string documentId = null)</pre></td><td>Renames an existing worksheet. The new name must be unique within the workbook.</td></tr>
+<tr><td>RenameWorksheet</td><td><pre>public CallToolResult RenameWorksheet(
+    string currentWorksheetName, 
+    string newWorksheetName, 
+    string documentId = null)</pre></td><td>Renames an existing worksheet. The new name must be unique within the workbook.</td></tr>
 </table>
 
 ### SpreadProcessingFileManagementAgentTools 

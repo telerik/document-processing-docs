@@ -1,18 +1,20 @@
 ---
-title: Conversion Tools
-page_title: Conversion Tools
-description: Telerik Document Processing Agent Tools expose document processing conversion capabilities to agentic workflows.
-slug: agent-tools-conversion-document-api
-tags: ai, dpl, document, processing, agent, tool, telerik, convert, api
+title: Convert and Merge Tools
+page_title: Convert and Merge
+description: Telerik Document Processing Agent Tools expose document processing conversion and merging capabilities to agentic workflows.
+slug: agent-tools-convert-merge-document-api
+tags: ai, dpl, document, processing, agent, tool, telerik, convert, api, merge
 published: True
 position: 4
 ---
 
-# Conversion Tools
+# Convert and Merge Tools
 
 ## ConvertDocumentsAgentTool
 
 The **ConvertDocumentsAgentTool** class provides an agent‑tool wrapper around Telerik’s document conversion engine, enabling automated file conversions within AI‑driven workflows. Typical use cases include converting DOCX → PDF or XLSX → CSV.
+
+>note Learn how to integrate the Agent Tools in your application: [Getting Started with DPL Agent Tools]({%slug agent-tools-getting-started%}).
 
 <table>
 <tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>

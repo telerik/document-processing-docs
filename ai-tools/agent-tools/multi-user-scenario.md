@@ -5,14 +5,14 @@ description: Learn how to implement secure multi-user document processing with A
 slug: agent-tools-multi-user-scenario
 tags: ai, dpl, document, processing, agent, tool, telerik, excel, pdf, word, docx, pdf, xlsx, multi, user, session
 published: True
-position: 2
+position: 5
 ---
 
 # Multi‑User AI Agent Sessions
 
 When building AI-powered document processing applications that serve multiple users, proper isolation and session management are critical. This article demonstrates production-ready patterns for managing multi-user scenarios where each user interacts with their own set of documents through AI agents.
 
-In single-user applications, you can create document repositories once and use them throughout the application lifecycle. However, in multi-user environments—such as web applications, SaaS platforms, or enterprise systems—you must ensure that:
+In single-user applications, you can create document repositories once and use them throughout the application lifecycle. However, in multi-user environments—such as web applications, SaaS platforms, or enterprise systems, you must ensure that:
 
 * Each user's documents remain isolated and inaccessible to other users
 * Document state persists appropriately across user interactions
@@ -23,13 +23,13 @@ In single-user applications, you can create document repositories once and use t
 
 Multi-user document processing systems face several critical risks:
 
-**Data Leakage Between Users**: Without proper isolation, one user could inadvertently access or modify another user's documents. This is mitigated by creating separate repository instances for each user and binding AI tools to user-specific repositories.
+* **Data Leakage Between Users**: Without proper isolation, one user could inadvertently access or modify another user's documents. This is mitigated by creating separate repository instances for each user and binding AI tools to user-specific repositories.
 
-**Session Confusion**: In stateless HTTP environments, requests from different users could interfere with each other if document state is shared. This is prevented by associating repositories with authenticated user identities and maintaining per-user sessions.
+* **Session Confusion**: In stateless HTTP environments, requests from different users could interfere with each other if document state is shared. This is prevented by associating repositories with authenticated user identities and maintaining per-user sessions.
 
-**Resource Exhaustion**: Long-running sessions or abandoned user data can consume memory and storage. This is addressed through session cleanup policies, idle timeout mechanisms, and proper resource disposal.
+* **Resource Exhaustion**: Long-running sessions or abandoned user data can consume memory and storage. This is addressed through session cleanup policies, idle timeout mechanisms, and proper resource disposal.
 
-**Concurrent Access Issues**: Multiple simultaneous requests from the same user or different users require thread-safe repository management. This is handled using thread-safe collection types like `ConcurrentDictionary` for session storage.
+* **Concurrent Access Issues**: Multiple simultaneous requests from the same user or different users require thread-safe repository management. This is handled using thread-safe collection types like `ConcurrentDictionary` for session storage.
 
 ### Approaches Covered
 

@@ -8,9 +8,9 @@ published: True
 position: 0
 ---
 
-# gent Tools - Overview
+# Agent Tools - Overview
 
-The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations for spreadsheets, PDFs, and flow documents to an LLM via tool calls.
+The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations for spreadsheets, PDFs, and flow (Word) documents to an LLM via tool calls.
 
 The API is built around two key concepts: **repositories** for managing documents in memory, and **agent tool classes** that provide specific document processing capabilities that can be directly exposed to AI agents.
 
@@ -26,67 +26,16 @@ The Agent Tools API provides foundational types that enable document management 
   
   - **DocumentRepositoryRegistry**: A centralized registry that maintains one repository for each document type (Workbook, Fixed, and Flow). Enables higher-level components to dynamically resolve the appropriate repository at runtime based on the document type being handled.
 
-## Spreadsheet Processing API
+## Available Tools
 
-The Spreadsheet Processing API provides comprehensive tools for working with Excel workbooks, organized into repositories and specialized agent tool classes.
-
-### Repositories
-
-  - **IWorkbookRepository**: Interface for managing spreadsheet workbooks, extending IDocumentRepository&lt;Workbook&gt; with spreadsheet-specific capabilities.
-  
-  - **InMemoryWorkbookRepository**: A repository implementation that maintains multiple workbooks in memory simultaneously. Suitable for scenarios requiring concurrent access to multiple spreadsheet documents.
-  
-  - **SingleWorkbookRepository**: A simplified repository implementation designed to work with a single workbook. Provides a streamlined option for scenarios focused on analyzing or modifying one workbook at a time.
-
-### Agent Tool Classes
-
-  - **SpreadProcessingReadAgentTools**: Provides read-only operations for extracting and analyzing data from spreadsheets, including filtering, finding values, retrieving cell ranges, querying styles, and accessing worksheet information.
-  
-  - **SpreadProcessingWriteAgentTools**: Provides write operations for modifying cell content, formulas, and styles, as well as auto-fitting columns and rows, and managing cell merging.
-  
-  - **SpreadProcessingWorksheetAgentTools**: Provides operations for managing worksheets within a workbook, including adding, deleting, and renaming worksheets.
-  
-  - **SpreadProcessingFileManagementAgentTools**: Provides file-level operations for creating, listing, importing, and exporting workbooks.
-  
-  - **SpreadProcessingFormulaAgentTools**: Provides specialized operations for working with formulas, including calculating formulas without modifying documents, listing all formulas, and retrieving formula information.
-
-## Fixed Document (PDF) API
-
-The Fixed Document API provides tools for working with PDF documents, organized into repositories and specialized agent tool classes.
-
-### Repositories
-
-  - **IFixedDocumentRepository**: Interface for managing PDF documents, extending IDocumentRepository&lt;RadFixedDocument&gt; with PDF-specific capabilities.
-  
-  - **InMemoryFixedDocumentRepository**: A repository implementation that maintains multiple PDF documents in memory simultaneously.
-
-### Agent Tool Classes
-
-  - **FixedDocumentFormAgentTools**: Provides operations for working with PDF forms, including retrieving form field information and filling form fields.
-  
-  - **FixedDocumentContentAgentTools**: Provides operations for adding content segments to PDF documents.
-  
-  - **FixedFileManagementAgentTools**: Provides file-level operations for creating, listing, importing, and exporting PDF documents.
-
-## Flow Document (Word) API
-
-The Flow Document API provides repositories for managing Word documents, primarily for use with conversion and merge operations. Agent tool classes specific to Flow documents are not yet available, but the repository infrastructure is in place.
-
-### Repositories
-
-  - **IFlowDocumentRepository**: Interface for managing Word documents, extending IDocumentRepository&lt;RadFlowDocument&gt; with flow document-specific capabilities.
-  
-  - **InMemoryFlowDocumentRepository**: A repository implementation that maintains multiple Word documents in memory simultaneously.
-
-## Document Conversion and Merging API
-
-The Conversion API provides cross-document-type operations for converting between formats and merging documents.
-
-### Agent Tool Classes
-
-  - **ConvertDocumentsAgentTool**: Provides operations for converting documents between different formats (e.g., Excel to PDF, Word to PDF).
-  
-  - **MergeDocumentsAgentTool**: Provides operations for merging multiple documents into a single document.
+* [Convert and Merge Tools]({%slug agent-tools-convert-merge-document-api%})
+* [Spread (Excel)]({%slug agent-tools-spreadsheet-document-api%})
+  * [Workbook Repositories]({%slug agent-tools-spreadsheet-document-api%}#repositories)
+  * [Tools]({%slug agent-tools-spreadsheet-document-api%}#agent-tools)
+* [Pdf]({%slug agent-tools-pdf-document-api%})
+  * [Fixed Repositories]({%slug agent-tools-pdf-document-api%}#repositories)
+  * [Tools]({%slug agent-tools-pdf-document-api%}#agent-tools)
+* Flow (Word) - Supports only conversion and merging.
 
 ## Dependency Injection Support
 

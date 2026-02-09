@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 page_title: Agent Tools - Getting Started
-description: Telerik Document Processing Agent Tools provides document processing capabilities designed to be exposed to AI agents.
+description: How to get started with Telerik Document Processing Agent Tools.
 slug: agent-tools-getting-started
 tags: ai, dpl, document, processing, agent, tool, telerik, start
 published: True
@@ -52,7 +52,7 @@ The complete example below illustrates the following workflow:
 
 7. **Process Prompts**: Send user prompts to the agent. The AI model analyzes the request, determines which tools to call, executes them in the correct sequence, and returns the results.
 
-The example includes multiple scenarios demonstrating various document operations, from simple spreadsheet creation to complex multi-document workflows combining Excel and PDF processing.
+The example includes multiple scenarios demonstrating various document operations, from simple spreadsheet creation to complex multi-document workflows combining Excel and PDF processing. You can find complete implementations in our [Agent Tools SDK examples]({%slug %}).
 
 ## Complete Example
 

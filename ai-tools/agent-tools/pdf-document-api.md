@@ -5,7 +5,7 @@ description: Telerik Document Processing Agent Tools provides a set of Fixed (PD
 slug: agent-tools-pdf-document-api
 tags: ai, dpl, document, processing, agent, tool, telerik, pdf, fixed, api
 published: True
-position: 4
+position: 3
 ---
 
 # PDF Tools
