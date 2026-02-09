@@ -52,7 +52,7 @@ The complete example below illustrates the following workflow:
 
 7. **Process Prompts**: Send user prompts to the agent. The AI model analyzes the request, determines which tools to call, executes them in the correct sequence, and returns the results.
 
-The example includes multiple scenarios demonstrating various document operations, from simple spreadsheet creation to complex multi-document workflows combining Excel and PDF processing. You can find complete implementations in our [Agent Tools SDK examples]({%slug %}).
+<!-- The example includes multiple scenarios demonstrating various document operations, from simple spreadsheet creation to complex multi-document workflows combining Excel and PDF processing. You can find complete implementations in our [Agent Tools SDK examples]({%slug %}). -->
 
 ## Complete Example
 
