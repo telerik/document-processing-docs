@@ -8,7 +8,10 @@ published: True
 position: 0
 ---
 
-# Agent Tools - Overview
+# Agent Tools <sup>Preview</sup>
+
+|Minimum Version|Q1 2026|
+|----|----|
 
 The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations for spreadsheets, PDFs, and flow (Word) documents to an LLM via tool calls.
 
