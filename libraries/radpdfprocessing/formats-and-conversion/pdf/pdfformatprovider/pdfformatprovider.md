@@ -19,7 +19,7 @@ In order to use the format provider, you need to add references to the following
 * Telerik.Windows.Documents.Core
 * Telerik.Windows.Documents.Fixed
           
->note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
+>note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 	  
 The PdfFormatProvider class of RadPdfProcessing is located in the **Telerik.Windows.Documents.Fixed.FormatProviders.Pdf** namespace.
 
