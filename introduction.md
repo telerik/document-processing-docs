@@ -86,10 +86,9 @@ The Telerik Document Processing libraries support the following file formats:
 
 ![DPL Ninja](images/dpl-formats.png) 
 
-## Required References
+## Distribution
 
->The Telerik Document Processing libraries are available in **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows and **.NET Standard** compatible versions. You can download the references for these libraries from the following products:
->
+The Telerik Document Processing libraries are available in **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows and **.NET Standard 2.0 (Support for {{site.dotnetversions}})** compatible versions. You can download the references for the libraries from the following products:
 
 |.NET Framework Products|{{site.dotnetversions}} *for Windows*|.NET Standard|
 |----|----|----|
@@ -99,7 +98,7 @@ The Telerik Document Processing libraries support the following file formats:
 |[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
 |[UI for Silverlight (discontinued)](https://www.telerik.com/products/silverlight/overview.aspx)||[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
 
-All versions are available as [NuGet packages]({%slug installation-nuget-packages%}). The packages for .NET Standard do not contain the word *Windows* in their name. Learn [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+You can find all packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article
 
 ## Getting Started
 

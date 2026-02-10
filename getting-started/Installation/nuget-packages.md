@@ -14,17 +14,11 @@ Telerik provides NuGet packages with the assemblies for all five Document Proces
 
 If your workflow relies on NuGet for package management, you can take advantage of the packages that we describe in this article. There is no need to download and install the Document Processing libraries by using other methods. 
 
-#### This article contains the following sections:
-
-* [Available NuGet Packages](#available-nuget-packages-1)
-* [Get the NuGet Packages](#get-the-nuget-packages)
-
-
 >important The Telerik Document Processing libraries are available in two versions:
 >
->* A version for __.Net Framework 4.0__ or later
+>* A version for **.NET Framework and {{site.dotnetversions}} for Windows**
 >
->* A version for __.Net Standard 2.0__
+>* A version for **.NET Standard 2.0 (Support for {{site.dotnetversions}})**
 >
 >Both versions are available as NuGet packages but with different names. The packages for __.NET Standard__ do __not__ contain the word __Windows__ in their name.
 
@@ -35,8 +29,6 @@ If your workflow relies on NuGet for package management, you can take advantage 
 >important The .NET Standard packages are compatible with any .NET version (e.g .NET 9), even if there are no packages explicitly available for the specific versions. The same applies to the .NET Framework packages.
 
 >note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
-
-## Available NuGet Packages
 
 The following tables represent the available NuGet packages for the Document Processing libraries. Each table shows the package names for both .NET Framework and {{site.dotnetversions}} for Windows, as well as .NET Standard 2.0 (Support for {{site.dotnetversions}}) versions. Although we offer them as an addition to the Telerik UI components, you can use them without any UI components.
 

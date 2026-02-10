@@ -68,7 +68,7 @@ This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-
 	For .NET Standard ({{site.dotnetversions}}) project:
 	  * __Telerik.Documents.Flow.FormatProviders.Pdf__
 
-> The Document Processing packages for {{site.dotnetversions}} don't contain "Windows" in their names.
+You can find all Document Processing Libraries packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article.
 
 ## Step 4: Create a Document
 
