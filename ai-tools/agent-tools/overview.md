@@ -19,7 +19,7 @@ The API is built around two key concepts: **repositories** for managing document
 
 ## License Requirements
 
-Access to the Telerik Document Processing Agent Tools depends on your [Telerik license type](https://www.telerik.com/purchase.aspx?filter=web). It is available with a valid 30-day **trial** or DevCraft Complete or Ultimate **subscription** licenses.
+Access to the Telerik Document Processing Agent Tools depends on your [Telerik license type](https://www.telerik.com/purchase.aspx?filter=web). The Agent Tools are included with any valid 30‑day **Trial** or active **Subscription** license for Telerik products or bundles that include Document Processing Libraries entitlement.
 
 ## Base Classes and Interfaces
 
