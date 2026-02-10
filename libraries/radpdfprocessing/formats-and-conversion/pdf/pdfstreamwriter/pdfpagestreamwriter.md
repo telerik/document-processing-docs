@@ -18,7 +18,7 @@ The **PdfPageStreamWriter** class provides API allowing you to write and positio
 An instance of the PdfPageStreamWriter class can be obtained using the **BeginPage()** method of [PdfSteamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}).
 
 
-#### **[C#] Example 1: Instantiate PdfPageStreamWriter**
+#### **Example 1: Instantiate PdfPageStreamWriter**
 	
 <snippet id='pdf-page-stream-writer-instance'/>
 

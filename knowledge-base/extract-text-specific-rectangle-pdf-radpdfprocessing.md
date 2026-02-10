@@ -65,6 +65,6 @@ The detected text is printed in the Output console:
 
 ## See Also
 
-- [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%}})
-- [TextFragment]({%slug radpdfprocessing-model-textfragment%}})
+- [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
+- [TextFragment]({%slug radpdfprocessing-model-textfragment%})
 - [MatrixPosition]({%slug radpdfprocessing-concepts-position%})

@@ -23,7 +23,7 @@ If your workflow relies on NuGet for package management, you can take advantage 
 
 >important The Telerik Document Processing libraries are available in two versions:
 >
->* A version for __.Net Framework 4.0__ or later
+>* A version for __.Net Framework 4.6.2__ or later
 >
 >* A version for __.Net Standard 2.0__
 >

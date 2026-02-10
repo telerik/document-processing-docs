@@ -38,40 +38,40 @@ For the sake of the example it is assumed that the source distribution ZIP file 
             
 2\. Uncomment the following line:
 
-#### __[C#] Before
+#### Before
 
-{{region cs-documentprocessing-protect-source_0}}
+```csharp
 	public static bool IsValid()
     {
         // Uncomment the following line
         // return ValidatePassPhrase();
         return true;
     }
-{{endregion}}
+```
 
-#### __[C#] After
+#### After
 
-{{region cs-documentprocessing-protect-source_1}}
+```csharp
 	public static bool IsValid()
     {
         // Uncomment the following line
         return ValidatePassPhrase();
     }
-{{endregion}}
+```
 
 3\. Change the ApplicationName constant to match the name of your application:
 
-#### __[C#] Before
+#### Before
 
-{{region cs-documentprocessing-protect-source_2}}
+```csharp
 	internal const string ApplicationName = "MyApp";
-{{endregion}}
+```
 
-#### __[C#] After
+#### After
 
-{{region cs-documentprocessing-protect-source_3}}
+```csharp
 	internal const string ApplicationName = "Sample Application Name v2.0 (tm)";
-{{endregion}}
+```
 
 
 4\. Save __AssemblyProtection.cs__ and rebuild.           

@@ -34,9 +34,9 @@ This article describes how to populate a [RadFlowDocument]({%slug radwordsproces
 
 The following example demonstrates how to import a document template using the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). Then by iterating an array of custom Person elements to implement the logic for inserting differing images in the RadFlowDocument's header ([Headers and Footers]({%slug radspreadprocessing-features-headers-and-footers%})) according to the Person's Account type while performing a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}).
 
-#### __[C#] Add Different Images While Mailmerging__
+#### __Add Different Images While Mailmerging__
 
-{{region wordsprocessing-add-different-images-when-mailmerging1}}
+```csharp
 
 	private const string DevCraftUltimate = "DevCraft Ultimate";
 	private const string Trial = "Trial";
@@ -89,11 +89,11 @@ The following example demonstrates how to import a document template using the [
 			Process.Start(new ProcessStartInfo() { FileName = resultFileName, UseShellExecute = true });
 		}
 	}
-{{endregion}}
+```
 
-#### __[C#] Person class__
+#### __Person class__
 
-{{region wordsprocessing-add-different-images-when-mailmerging2}}
+```csharp
 
 	public class Person
     {
@@ -119,4 +119,4 @@ The following example demonstrates how to import a document template using the [
             this.RenewalDate = renewalDate;
         }
     }
-{{endregion}}
+```

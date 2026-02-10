@@ -34,7 +34,7 @@ In order to import a DOCX document, you need to use the __Import()__ method of _
 The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a DOCX document from a file.
         
 
-#### __[C#] Example 1: Import document from a file__
+#### __Example 1: Import document from a file__
 
 <snippet id='codeblock-cr'/>
 
@@ -43,7 +43,7 @@ The code in __Example 1__ shows how to use __DocxFormatProvider__ to import a DO
 And here is how you can import a document from byte array containing the DOCX document:
         
 
-#### __[C#] Example 2: Import document from a byte array__
+#### __Example 2: Import document from a byte array__
 <snippet id='codeblock-cs'/>
 
 
@@ -58,14 +58,14 @@ In order to export a document to DOCX, you need to use the __Export()__ method o
 __Example 3__ shows how to use __DocxFormatProvider__ to export __RadFlowDocument__ to a file.
         
 
-#### __[C#] Example 3: Export a document to a file__
+#### __Example 3: Export a document to a file__
 <snippet id='codeblock-ct'/>
 
 
 You can also export the document to a byte array and preserve it in a database.
         
 
-#### __[C#] Example 4: Export a document to a byte array__
+#### __Example 4: Export a document to a byte array__
 <snippet id='codeblock-cu'/>
 
 The resulting documents can be opened in any application that supports DOCX documents.

@@ -70,7 +70,7 @@ The above content controls share the following properties:
 
 The __CheckBox__ content control exposes two properties __CheckedState__ and __UnCheckedState__. Both properties are of type __SdtCheckBoxState__ which allows you to set the respective character and its font. The __Checked__ property specifies whether the checkbox is checked.
 
-#### __C# Example 1: Setting CheckBox properties__ 
+#### __Example 1: Setting CheckBox properties__ 
 
 <snippet id='codeblock-dhdh'/>
 
@@ -89,7 +89,7 @@ The __ComboBox__ and __DropDownList__ provide the user with options to choose fr
     - __DisplayText:__ This property holds the displayed in the ComboBox/DropdownList text.
     - __Value:__ This property holds the value, which can be propagated through a data-binding relation.
 
-#### __C# Example 2: Setting ComboBox properties__
+#### __Example 2: Setting ComboBox properties__
 
 <snippet id='codeblock-didi'/>
 
@@ -102,7 +102,7 @@ The __Date__ content control allows you to enter a date by using a calendar. The
 * __Calendar:__ Allows you to select the calendar type.
 * __DateMappingType:__ Gets or sets the data type (e.g. Date, DateTime, and Text) that is used for storing mapped date time value. 
 
-#### __C# Example 3: Setting Date properties__ 
+#### __Example 3: Setting Date properties__ 
 
 <snippet id='codeblock-djdj'/>
 
@@ -111,7 +111,7 @@ The __Date__ content control allows you to enter a date by using a calendar. The
 The __Text__ content control allows you to enter plain text. The text content control has the following property:
 * __IsMultiline:__ Gets or sets a value that indicates whether the SDT supports new lines in its content.
 
-#### __C# Example 4: Setting Text properties__ 
+#### __Example 4: Setting Text properties__ 
 
 <snippet id='codeblock-dkdk'/>
 
@@ -120,7 +120,7 @@ The __Text__ content control allows you to enter plain text. The text content co
 * __SectionTitle:__ Gets or sets the title of the section.
 * __AllowInsertAndDeleteSections:__ Gets or sets a value that indicates whether the underlying sections can be modified.
 
-#### __C# Example 5: Setting RepeatingSection properties__ 
+#### __Example 5: Setting RepeatingSection properties__ 
 
 <snippet id='codeblock-dldl'/>
 

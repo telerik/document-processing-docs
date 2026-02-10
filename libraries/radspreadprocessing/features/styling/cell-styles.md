@@ -89,13 +89,13 @@ When you apply a style to a cell with locally set properties, the end result is 
 __Example 1__ shows what including the __Number__ group looks like.
         
 
-#### __[C#] Example 1: Include Number group in CellStyle__
+#### __Example 1: Include Number group in CellStyle__
 
-{{region cs-radspreadprocessing-features-styling-cell-styles_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	CellStyle tempStyle = workbook.Styles["Bad"];
 	tempStyle.IncludeNumber = true;
-{{endregion}}
+```
 
 
 
@@ -110,9 +110,9 @@ Creating a new style is pretty straight-forward. All you have to do is invoke th
 __Example 2__ creates a new style and applies it to cell *A1*.
         
 
-#### __[C#] Example 2: Create a style__
+#### __Example 2: Create a style__
 
-{{region cs-radspreadprocessing-features-styling-cell-styles_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	
@@ -137,7 +137,7 @@ __Example 2__ creates a new style and applies it to cell *A1*.
 	cellStyle.EndUpdate();
 	
 	workbook.ActiveWorksheet.Cells[0, 0].SetStyleName("My style");
-{{endregion}}
+```
 
 
 
@@ -149,9 +149,9 @@ Modifying a style is even easier than creating one. All you need to do is retrie
 __Example 3__ obtains the *Bad* style from the styles collection of a workbook and modifies it.
 
 
-#### __[C#] Example 3: Modify a style__
+#### __Example 3: Modify a style__
 
-{{region cs-radspreadprocessing-features-styling-cell-styles_2}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	
@@ -164,15 +164,15 @@ __Example 3__ obtains the *Bad* style from the styles collection of a workbook a
 	style.ForeColor = new ThemableColor(Colors.Black);
 	
 	style.EndUpdate();
-{{endregion}}
+```
 
 ## Copy Existing Cell Style
 
 The API enables you to copy the properties of an existing style so you can modify it according to your preferences while keeping the original style untouched.
 
-#### __[C#] Example 4: Copy an existing style and modify its properties__
+#### __Example 4: Copy an existing style and modify its properties__
 
-{{region cs-radspreadprocessing-features-styling-cell-styles_4}}
+```csharp
 
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
@@ -187,15 +187,15 @@ The API enables you to copy the properties of an existing style so you can modif
 	customStyle.Fill = new PatternFill(PatternType.Solid, Colors.LightSkyBlue, Colors.Transparent);
 	
 	customStyle.EndUpdate();
-{{endregion}}
+```
 
 ## Remove Cell Style
 
 You can also remove a style from the __Styles__ collection. It is as easy as removing an object from a list, you simply invoke the __Remove()__ method, which returns a Boolean value. If such style exist in the collection, the method will return *true*.
         
-#### __[C#] Example 5: Remove a style__
+#### __Example 5: Remove a style__
 
-{{region cs-radspreadprocessing-features-styling-cell-styles_3}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	
@@ -207,7 +207,7 @@ You can also remove a style from the __Styles__ collection. It is as easy as rem
 	{
 	    Debug.WriteLine("The style does not exist");
 	}
-{{endregion}}
+```
 
 
 

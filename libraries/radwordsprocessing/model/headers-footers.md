@@ -39,7 +39,7 @@ Headers and Footers are properties of the __Section__ element and each Section c
 Headers of all __HeaderFooterType__ types can be created using the code snippet in __Example 1__:
         
 
-#### __[C#] Example 1: Create a header__
+#### __Example 1: Create a header__
 
 <snippet id='codeblock-clcl'/>
 
@@ -48,7 +48,7 @@ Headers of all __HeaderFooterType__ types can be created using the code snippet 
 Footers can be created using the code snippet from __Example 2__:
         
 
-#### __[C#] Example 2: Create a footer__
+#### __Example 2: Create a footer__
 
 <snippet id='codeblock-cmcm'/>
 
@@ -62,7 +62,7 @@ Footers can be created using the code snippet from __Example 2__:
 You can obtain the Headers and Footers in a Section through the __Default__, __Even__ and __First__ properties of its __Headers__ or __Footers__ property. For example, if you want to get the default Header element of a Section element, you can use the following line of code:
         
 
-#### __[C#] Example 3: Get the default header of a section__
+#### __Example 3: Get the default header of a section__
 
 <snippet id='codeblock-cncn'/>
 
@@ -71,7 +71,7 @@ You can obtain the Headers and Footers in a Section through the __Default__, __E
 Similarly to the Header, the Footer element can be obtained as follows:
         
 
-#### __[C#] Example 4: Get the default footer of a section__
+#### __Example 4: Get the default footer of a section__
 
 <snippet id='codeblock-coco'/>
 
@@ -83,7 +83,7 @@ Similarly to the Header, the Footer element can be obtained as follows:
 __Example 5__ demonstrates how to add different headers for odd and even pages:
         
 
-#### __[C#] Example 5: Add headers for even and odd pages__
+#### __Example 5: Add headers for even and odd pages__
 
 <snippet id='codeblock-cpcp'/>
 

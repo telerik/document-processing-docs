@@ -50,11 +50,11 @@ Additionally each custom function needs to be registered through the __FunctionM
 __Example 1__ shows how to register a function class ArgumentsFunction, inheritor of FunctionBase.
         
 
-#### __[C#] Example 1: Register custom function__
+#### __Example 1: Register custom function__
 
-{{region cs-radspreadprocessing-features-formulas-custom-functions_0}}
+```csharp
 	FunctionManager.RegisterFunction(new ArgumentsFunction());
-{{endregion}}
+```
 
 
 
@@ -128,9 +128,9 @@ The value of these properties are from the enumerations [ArgumentInterpretation]
 __Example 2__ creates an instance of ArgumentConversionRules:
         
 
-#### __[C#] Example 2: Create ArgumentConversionRules__
+#### __Example 2: Create ArgumentConversionRules__
 
-{{region cs-radspreadprocessing-features-formulas-custom-functions_1}}
+```csharp
 	public static readonly ArgumentConversionRules BoolFunctionConversion = new ArgumentConversionRules(
 	            emptyIndirectArgument: ArgumentInterpretation.Ignore,
 	            textNumberDirectArgument: ArgumentInterpretation.TreatAsError,
@@ -138,7 +138,7 @@ __Example 2__ creates an instance of ArgumentConversionRules:
 	            nonTextNumberDirectArgument: ArgumentInterpretation.TreatAsError,
 	            nonTextNumberIndirectArgument: ArgumentInterpretation.Ignore,
 	            arrayArgument: ArrayArgumentInterpretation.UseAllElements);
-{{endregion}}
+```
 
 
 
@@ -196,9 +196,9 @@ __FunctionInfo__ has the following properties:
 __Example 3__ shows how to create an instance of FunctionInfo class.
         
 
-#### __[C#] Example 3: Create FunctionInfo__
+#### __Example 3: Create FunctionInfo__
 
-{{region cs-radspreadprocessing-features-formulas-custom-functions_2}}
+```csharp
 	string functionName = "ADD";
 	
 	string description = "Adds all the numbers in range of cells.";
@@ -214,7 +214,7 @@ __Example 3__ shows how to create an instance of FunctionInfo class.
 	};
 	
 	FunctionInfo sumFunctionInfo = new FunctionInfo(functionName, FunctionCategory.MathTrig, description, requiredArguments, optionalArguments, 254, true);
-{{endregion}}
+```
 
 
 
@@ -229,9 +229,9 @@ The result of the function's calculations is the number of arguments passed to t
 __Example 4__ shows how to create the 'ARGUMENTS' function.
         
 
-#### __[C#] Example 4: Create ARGUMENTS function__
+#### __Example 4: Create ARGUMENTS function__
 
-{{region cs-radspreadprocessing-features-formulas-custom-functions_3}}
+```csharp
 	public class Arguments : FunctionBase
 	{
 	    public static readonly string FunctionName = "ARGUMENTS";
@@ -279,7 +279,7 @@ __Example 4__ shows how to create the 'ARGUMENTS' function.
 	        return new NumberExpression(context.Arguments.Length);
 	    }
 	}
-{{endregion}}
+```
 
 
 
@@ -289,9 +289,9 @@ The next example is of a custom function named "E" that inherits from the __Func
 __Example 5__ shows how to create the 'E' function.
         
 
-#### __[C#] Example 5: Create E function__
+#### __Example 5: Create E function__
 
-{{region cs-radspreadprocessing-features-formulas-custom-functions_4}}
+```csharp
 	public class E : FunctionBase
 	{
 	    public static readonly string FunctionName = "E";
@@ -325,7 +325,7 @@ __Example 5__ shows how to create the 'E' function.
 	        return NumberExpression.E;
 	    }
 	}
-{{endregion}}
+```
 
 
 

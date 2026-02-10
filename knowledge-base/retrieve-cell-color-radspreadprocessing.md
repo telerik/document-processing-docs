@@ -73,7 +73,7 @@ This approach ensures that even when a cell's color is derived from the document
 
 ## See Also
 
-- [Document Themes in RadSpreadProcessing]({%slug radspreadprocessing-features-styling-document-themes%}})
+- [Document Themes in RadSpreadProcessing]({%slug radspreadprocessing-features-styling-document-themes%})
 - [Getting Actual Values](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/styling/document-themes#getting-actual-values)
 
 ---

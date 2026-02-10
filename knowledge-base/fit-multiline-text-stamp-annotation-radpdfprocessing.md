@@ -36,7 +36,7 @@ To fit multiline text inside a stamp rectangle:
 
 Below is a complete example demonstrating these steps.
 
-#### [C#] Measure and Fit Multiline Text in a StampAnnotation
+#### Measure and Fit Multiline Text in a StampAnnotation
 
 ```csharp
 using System;

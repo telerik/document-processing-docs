@@ -17,7 +17,7 @@ This feature allows you to search for a specific text in a PDF document. You can
 This class exposes methods for searching. You need to pass an instance of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) when creating a new instance. This is the document that will be searched. 
 
 
-#### __[C#] Example 1:  Create TextSearch Instance__
+#### __Example 1:  Create TextSearch Instance__
 
 <snippet id='search-find-all'/>
 
@@ -40,7 +40,7 @@ All of the above methods return one or more instances of the **SearchResult** cl
 * **GetWordBoundingRect():** Gets the rectangle of the current match.
 * **GetResultPage():** Gets the page where the current result is.
 
-#### __[C#] Example 2:  Searching in a document__
+#### __Example 2:  Searching in a document__
 
 <snippet id='search-highlight-results'/>
 

@@ -21,9 +21,9 @@ This article demonstrates how you can convert a Docx file to a PDF with the [Wor
 
 The solution is to import the file with the DocxFormatProvider and export it with the PdfFormatProvider. 
 
-#### [C#] Convert Docx to PDF
+#### Convert Docx to PDF
 
-{{region kb-convert-docx-topdf1}}.
+```csharp.
 
     public static void ConverDocxToPdf(string path, string resultPath)
     {
@@ -37,5 +37,5 @@ The solution is to import the file with the DocxFormatProvider and export it wit
         File.WriteAllBytes(resultPath, resultBytes);
     }
 
-{{endregion}}
+```
 

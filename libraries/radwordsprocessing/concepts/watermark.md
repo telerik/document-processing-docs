@@ -41,7 +41,7 @@ Creating a watermark through the constructor of the class requires to pass as a 
 __Example 1__ demonstrates the creation of a text watermark.
 
 
-#### __[C#] Example 1: Create text watermark__
+#### __Example 1: Create text watermark__
 
 <snippet id='codeblock-iia'/>
 
@@ -49,7 +49,7 @@ __Example 1__ demonstrates the creation of a text watermark.
 Creating image watermark is very similar to creating a text one. __Example 2__ shows how to create an image watermark.
 
 
-#### __[C#] Example 2: Create image watermark__
+#### __Example 2: Create image watermark__
 
 <snippet id='codeblock-jja'/>
 
@@ -62,7 +62,7 @@ Watermarks are preserved in the header of the section to which the watermark is 
 
 __Example 3__ demonstrates how you can add the watermark created in __Example 1__ to a __RadFlowDocument__ by creating a __Header__ for its first __Section__.
 
-#### __[C#] Example 3: Add watermark to header__
+#### __Example 3: Add watermark to header__
 
 <snippet id='codeblock-kka'/>
 
@@ -74,7 +74,7 @@ There is another way to set a watermark in a document - through the [RadFlowDocu
 __Example 4__ demonstrates how to set the watermark created in __Example 2__ through __RadFlowDocumentEditor__ to the first page of a section. The method will create the __Header__ element for you, and you only need to specify its type.
 
 
-#### __[C#] Example 4: Set watermark with RadFlowDocumentEditor__
+#### __Example 4: Set watermark with RadFlowDocumentEditor__
 
 <snippet id='codeblock-lla'/>
 

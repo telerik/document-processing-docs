@@ -20,9 +20,9 @@ You have a template that contains a table and you need to get this particular ta
 
 To get all tables you can use the __EnumerateChildrenOfType__ method, then you can iterate the table and populate the cells with data.
 
-#### __C# Iterate table Cells and add content__
+#### __Iterate table Cells and add content__
 
-{{region kb-change-cells-content_0}}
+```csharp
 
     var provider = new DocxFormatProvider();
     var document = provider.Import(File.ReadAllBytes("template.docx"));
@@ -60,4 +60,4 @@ To get all tables you can use the __EnumerateChildrenOfType__ method, then you c
     var bytes = provider.Export(document);
     File.WriteAllBytes("result.docx", bytes);
 
-{{endregion}}
+```

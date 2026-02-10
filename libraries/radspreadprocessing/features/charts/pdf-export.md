@@ -28,9 +28,9 @@ The **ChartModelToImageConverter** object is readily available in the **Telerik.
 
 The [**PdfFormatProvider**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) instance accepts a renderer in its settings. The renderer needs to implement the **IPdfChartRenderer** interface and the RenderChart() method this interface defines. The method takes a [**FixedContentEditor**]({%slug radpdfprocessing-editing-fixedcontenteditor%}) in its parameters, which will draw the chart, and the other parameters contain the information necessary to draw it. The WpfPdfChartImageRenderer implemented in **Example 1** is an example implementation that uses the Telerik.Windows.Controls.Spreadsheet and Telerik.Windows.Controls.Chart [Xaml assemblies](https://docs.telerik.com/devtools/wpf/styling-and-appearance/xaml-vs-noxaml) to draw the chart.
 
-#### [C#] Example 1: Implementing a renderer
+#### Example 1: Implementing a renderer
 
-{{region radspreadprocessing-features-charts-pdf-export_0}}
+```csharp
 	
  	public class WpfPdfChartImageRenderer : IPdfChartRenderer
     {
@@ -63,17 +63,17 @@ The [**PdfFormatProvider**]({%slug radspreadprocessing-formats-and-conversion-pd
             return bmp;
         }
     }
-{{endregion}}
+```
 
 When you have the renderer implemented, you will need to assign it to the PdfFormatProvider instance through the **ChartRenderer** property of its [ExportSettings]({%slug radspreadprocessing-format-and-conversion-pdf-settings%}). 
 
-#### [C#] Example 2: Registering the renderer
+#### Example 2: Registering the renderer
 
-{{region radspreadprocessing-features-charts-pdf-export_1}}
+```csharp
 	
 	PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
 	pdfFormatProvider.ExportSettings.ChartRenderer = new WpfPdfChartImageRenderer();
-{{endregion}}
+```
 
 Now the chart objects in the spreadsheet will be exported along with the other content after invoking the **Export()** method of **PdfFormatProvider**.
 

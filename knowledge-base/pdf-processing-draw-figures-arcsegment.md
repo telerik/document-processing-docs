@@ -7,7 +7,7 @@ slug: pdf-processing-draw-figures-arcsegment
 tags: arcsegment, draw, circle, lines, RadPdfProcessing
 ---
 
-# How to Draw Figures in PDF documents
+## How to Draw Figures in PDF documents
 
 ## Environment
 

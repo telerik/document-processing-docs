@@ -27,14 +27,14 @@ If you need to read the cell data and its properties, you should use the [**ICel
 A concrete instance of ICellExporter could be created through the **CreateCellExporter()** method of [IRowExporter]({%slug radspreadstreamprocessing-model-rows%}). **Example 1** demonstrates how you can add a cell to a row.
 
 
-#### **[C#] Example 1: Using ICellExporter**
+#### **Example 1: Using ICellExporter**
 
 
-{{region cs-radspreadstreamprocessing-model-cells_0}}
+```csharp
 	using (ICellExporter cell = row.CreateCellExporter())
 	{
 	}
-{{endregion}}
+```
 
 >ICellExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -51,28 +51,28 @@ The **SetValue()** method exposes several overloads allowing you to set values f
 
 > In order to visualize a value as a date or time, you will need to set an appropriate Number format of the cell. Otherwise, it will be treated as a number.
 
-#### **[C#] Example 2: Setting a value to a cell**
+#### **Example 2: Setting a value to a cell**
 
-{{region cs-radspreadstreamprocessing-model-cells_1}}
+```csharp
 	using (ICellExporter cell = row.CreateCellExporter())
 	{
 	    cell.SetValue(123.456);
 	}
-{{endregion}}
+```
 
 
 ### Set a Formula
 
 In order to allow you setting a formula as a value of a cell, ICellExporter defines the SetFormula() method. This method accepts a string, representing the formula as a parameter. **Example 4** shows how you could use it.
 
-#### **[C#] Example 4: Setting a formula to a cell**
+#### **Example 4: Setting a formula to a cell**
 
-{{region cs-radspreadstreamprocessing-model-cells_3}}
+```csharp
 	using (ICellExporter cell = row.CreateCellExporter())
 	{
 	    cell.SetFormula("=Sum(A1, B2)");
 	}
-{{endregion}}
+```
 
 
 >All formulas should be set in **InvariantCulture**. For example, the decimal separator should be “.”, the list separator should be “,”.
@@ -84,9 +84,9 @@ The cells in a document are exported one by one from left to right starting from
 
 In some cases you may need to skip several cells and start filling the data in the next one. The [**IRowExporter**]({%slug radspreadstreamprocessing-model-rows%}) interface declares a method that allows you to implement such scenario. **Example 3** shows how to skip 5 cells and set a value and a vertical alignment to the sixth one.
 
-#### **[C#] Example 3: Skip cells**
+#### **Example 3: Skip cells**
 
-{{region cs-radspreadstreamprocessing-model-cells_2}}
+```csharp
 	row.SkipCells(5);
 	using (ICellExporter cell = row.CreateCellExporter())
 	{
@@ -96,20 +96,20 @@ In some cases you may need to skip several cells and start filling the data in t
 	        VerticalAlignment = SpreadVerticalAlignment.Center
 	    });
 	}
-{{endregion}}
+```
 
 ### Merge Cells
 
 **Example 5** shows how several cells could be merged in a single one through [IWorksheetExporter]({%slug  radspreadstreamprocessing-model-worksheet%}).
 
-#### **[C#] Example 5: Merge cells**
+#### **Example 5: Merge cells**
 
-{{region cs-radspreadstreamprocessing-model-cells_4}}
+```csharp
 	using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("Sheet 1")) 
 	{
 	    worksheet.MergeCells(3, 3, 10, 10);
 	}
-{{endregion}}
+```
 
 >important Due to the importance of the order the content is inserted in a document, the Merge operation must be the last operation before disposing IWorksheetExporter.
 
@@ -165,8 +165,8 @@ Another method, exposed by **ICellExporter** - SetFormat() - enables you to chan
 - Fill properties
 	
 
-#### **[C#] Example 6: Format cells**
-{{region cs-radspreadstreamprocessing-model-cells_5}}
+#### **Example 6: Format cells**
+```csharp
 	SpreadBorder border = new SpreadBorder(SpreadBorderStyle.Thick, new SpreadThemableColor(new SpreadColor(255, 0, 0)));
 	
 	SpreadCellFormat cellFormat = new SpreadCellFormat()
@@ -191,13 +191,13 @@ Another method, exposed by **ICellExporter** - SetFormat() - enables you to chan
 	};
 	
 	cell.SetFormat(cellFormat);
-{{endregion}}
+```
 
 In addition to the listed properties, the SpreadCellFormat class allows you to set a style to a cell. For more information on cell styles, check [this topic]({%slug radspreadstreamprocessing-features-styling-cell-styles%})
 
-#### **[C#] Example 7: Set the value format to string, date or a number**
+#### **Example 7: Set the value format to string, date or a number**
 
-{{region cs-radspreadstreamprocessing-model-cells_6}}
+```csharp
 	using (ICellExporter cell = row.CreateCellExporter())
 	{
 		SpreadCellFormat format = new SpreadCellFormat()
@@ -231,7 +231,7 @@ In addition to the listed properties, the SpreadCellFormat class allows you to s
 		cell.SetValue(42370.12);
 	}
 
-{{endregion}}
+```
 
 A SpreadCellFormat instance could be applied on multiple cells. However, if a property of the format changes, the new settings will be applied to the cells formatted after the modification.
 
@@ -241,9 +241,9 @@ A SpreadCellFormat instance could be applied on multiple cells. However, if a pr
 
 A concrete instance of ICellImporter could be obtained through the Cells collection of [IRowImporter]({%slug radspreadstreamprocessing-model-rows%}). **Example 8** demonstrates how you can read the cells of a row.
 
-#### **[C#] Example 8: Create ICellImporter**
+#### **Example 8: Create ICellImporter**
 
-{{region cs-radspreadstreamprocessing-model-cells_7}}
+```csharp
 
 	foreach (ICellImporter cell in rowImporter.Cells)
 	{
@@ -252,7 +252,7 @@ A concrete instance of ICellImporter could be obtained through the Cells collect
 		SpreadCellFormat format = cell.Format;
 		SpreadCellStyle style = cell.Format.CellStyle;
 	}
-{{endregion}}
+```
 
 The ICellImporter interface exposes the following properties:
 

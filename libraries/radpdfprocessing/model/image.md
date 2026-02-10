@@ -34,7 +34,7 @@ You can edit an __Image__ element using the properties the class exposes. The pr
             
 __Example 1__ shows how to initialize an Image object, assigns an ImageSource to it and add it to a previously defined container (page).
       
-#### __[C#] Example 1: Create image__
+#### __Example 1: Create image__
 
 <snippet id='pdf-create-image'/>
 
@@ -44,17 +44,17 @@ Once the above RadFixedDocument is [exported]({%slug radpdfprocessing-formats-an
 
 __Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__ to create a new image and insert it into the respective container.     
 
-#### __[C#] Example 2: Add image to container__
+#### __Example 2: Add image to container__
 
 <snippet id='pdf-image-source'/>
 
->tipThere are other methods that allow adding an image to a document by passing image size, format and source. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).     
+>tip There are other methods that allow adding an image to a document by passing image size, format and source. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).     
 
 The Image class exposes also the **GetBitmapSource()** method, enabling you to obtain a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) instance representing the image.
 
 >  The GetBitmapSource() method is not available in the .NET Standard version of the PdfProcessing packages.
 
-#### __[C#] Example 3: Obtain BitmapSource__
+#### __Example 3: Obtain BitmapSource__
 
 <snippet id='pdf-obtain-botmap-source'/>
 

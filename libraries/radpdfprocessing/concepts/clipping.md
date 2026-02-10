@@ -25,7 +25,7 @@ The __Clipping__ element exposes a single property.
 __Example 1__ demonstrates how you can create a Clipping element and assign a __RectangleGeometry__ to its Clip property.
         
 
-#### __[C#] Example 1: Create clipping__
+#### __Example 1: Create clipping__
 
 <snippet id='pdf-clipping-geometry'/>
 
@@ -39,7 +39,7 @@ All inheritors of the __ContentElementBase__ class expose a __Clipping__ propert
 __Example 2__ demonstrates how to clip an image using the Clipping created in __Example 1__.
         
 
-#### __[C#] Example 2: Use clipping__
+#### __Example 2: Use clipping__
 
 <snippet id='pdf-image-clipping'/>
 

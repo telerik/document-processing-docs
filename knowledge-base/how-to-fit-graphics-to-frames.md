@@ -40,9 +40,9 @@ This functionality could be achieved by using the [FixedContentEditor](https://d
 * Fit Frame to Content
 
 The following example demonstrates how to fit the image in a square without changing the image sides aspect ratio.
-#### __[C#] Fit Content Proportionally__
+#### __Fit Content Proportionally__
 
-{{region kb-how-to-fit-graphics-to-frames1}}
+```csharp
 
     double squareSide = 90;
 
@@ -63,12 +63,12 @@ The following example demonstrates how to fit the image in a square without chan
         }
     }
 	
-{{endregion}}
+```
 
 The following example demonstrates how to stretch the image in a square (the image aspect ratio is changed).
-#### __[C#] Fit Content To Frame__
+#### __Fit Content To Frame__
 
-{{region kb-how-to-fit-graphics-to-frames2}}
+```csharp
 
     double squareSide = 90;
     
@@ -82,12 +82,12 @@ The following example demonstrates how to stretch the image in a square (the ima
         editor.DrawBlock(block);
     }
  
-{{endregion}}
+```
 
 The following example demonstrates how to crop the image in order to fill a square without changing the image aspect ratio.
-#### __[C#] Fill Frame Proportionally__
+#### __Fill Frame Proportionally__
 
-{{region kb-how-to-fit-graphics-to-frames3}}
+```csharp
 
     double squareSide = 90;
 
@@ -126,15 +126,15 @@ The following example demonstrates how to crop the image in order to fill a squa
         }
     }
  
-{{endregion}}
+```
 
 In the last scenario, we are finding the smallest side of the image and use it to calculate the factor which we are using to scale the position. After that, we are calculating the offset that we are going to use to create an image [Clipping](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/clipping) with the desired size. 
 
 
 The following example demonstrates how to insert an image in its original size.
-#### __[C#] Fit Frame to Content__
+#### __Fit Frame to Content__
 
-{{region kb-how-to-fit-graphics-to-frames4}}
+```csharp
 
     FixedContentEditor editor = new FixedContentEditor(document.Pages.AddPage());
     editor.DrawText("Fit Frame To Content");
@@ -147,4 +147,4 @@ The following example demonstrates how to insert an image in its original size.
         editor.DrawBlock(block);
     }
  
-{{endregion}}
+```

@@ -57,7 +57,7 @@ position: 3
 
  Both methods return the actual TextFragment instance, so you can modify it.
 
-#### __[C#] Example 1: Create TextFragments and add them to a page__
+#### __Example 1: Create TextFragments and add them to a page__
 
  <snippet id='libraries-pdf-model-text-fragment-create'/>
 
@@ -73,7 +73,7 @@ position: 3
 
 You can modify a **TextFragment** element using the properties listed in the [Public API](#public-api) section.
 
-#### __[C#] Example 2: Modifying TextFragment's properties__
+#### __Example 2: Modifying TextFragment's properties__
 
  <snippet id='libraries-pdf-model-text-fragment-modify'/>
 

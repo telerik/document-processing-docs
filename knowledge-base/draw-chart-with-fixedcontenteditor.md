@@ -7,16 +7,16 @@ slug: draw-chart-with-fixedcontenteditor
 tags:  pdfprocessing, chart, draw, pdf, fixedcontenteditor
 res_type: kb
 ---
-# Environment
+## Environment
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
 | 2024.1.124 | RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Description
+## Description
 
 This article demonstrates a sample solution how to draw a chart in PdfProcessing.
 
-# Solution
+## Solution
 The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) allows you to draw a simulation of a chart element at the desired [Position]({%slug radpdfprocessing-concepts-position%}):
 
  

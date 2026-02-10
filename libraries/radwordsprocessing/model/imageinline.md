@@ -33,7 +33,7 @@ With **WordsProcessing**, you can work with images from the following file forma
 __Example 1__ demonstrates how you can create an ImageInline and add it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}):
         
 
-#### __[C#] Example 1: Create an image inline and insert it in a paragraph__
+#### __Example 1: Create an image inline and insert it in a paragraph__
 
 <snippet id='codeblock-cqcq'/>
 
@@ -45,7 +45,7 @@ __Example 1__ demonstrates how you can create an ImageInline and add it to a [Pa
 You can add an image at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. Here is how to add an ImageInline at the beginning of a paragraph:
         
 
-#### __[C#] Example 2: Add an image inline to a specific position__
+#### __Example 2: Add an image inline to a specific position__
 
 <snippet id='codeblock-crcr'/>
 
@@ -54,7 +54,7 @@ You can add an image at a specific index in the __Inlines__ collection of a para
 You can also use the __AddImageInline()__ method of the __Inlines__ collection of a paragraph. The method creates a new ImageInline, adds it to the paragraph and returns it.
         
 
-#### __[C#] Example 3: Using AddImageInline() method__
+#### __Example 3: Using AddImageInline() method__
 
 <snippet id='codeblock-cscs'/>
 
@@ -63,7 +63,7 @@ You can also use the __AddImageInline()__ method of the __Inlines__ collection o
 Inserting __ImageInline__ element in RadFlowDocument can also be achieved with [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
         
 
-#### __[C#] Example 4: Insert an image inline using RadFlowDocumentEditor__
+#### __Example 4: Insert an image inline using RadFlowDocumentEditor__
 
 <snippet id='codeblock-ctct'/>
 

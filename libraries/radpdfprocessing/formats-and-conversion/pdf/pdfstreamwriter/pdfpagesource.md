@@ -17,7 +17,7 @@ The **PdfPageSource** class represents the page content of an existing PDF file.
 
 An instance of the PdfPageSource class can be obtained using the **Pages** property of [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}).
 
-#### **[C#] Example 1: Obtain an instance of PdfPageSource**
+#### **Example 1: Obtain an instance of PdfPageSource**
 
 <snippet id='pdf-obtain-page-source'/>
 
@@ -32,7 +32,7 @@ PdfPageSource exposes the following properties to give you information about the
 
 **Example 2** shows how you can use PdfPageSource to merge the pages of several documents into a single one.
 
-#### **[C#] Example 2: Merge the pages of several documents**
+#### **Example 2: Merge the pages of several documents**
 
 <snippet id='pdf-merge-documents-with-page-source'/>
 

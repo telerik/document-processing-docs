@@ -27,7 +27,7 @@ In order to export a document to plain text, you need to use the __Export()__ me
 __Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocument__ to a string.
         
 
-#### __[C#] Example 1: Export RadFixedDocument to string__
+#### __Example 1: Export RadFixedDocument to string__
 
 <snippet id='pdf-export-to-text'/>
 

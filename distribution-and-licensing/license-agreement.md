@@ -2,14 +2,12 @@
 title: License Agreement
 page_title: License Agreement
 slug: license-agreement
-tags: license,agreement
+tags: license,agreement, telerik, end, user
 published: True
 position: 2
 ---
 
 # License Agreement
-
-__Telerik End-User License Agreement__
 
 Telerik Document Processing is licensed under the conditions of the product you've obtained the libraries with. You can find the End-User License Agreements for the products on the following pages:
 

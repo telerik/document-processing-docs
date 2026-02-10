@@ -19,7 +19,7 @@ __FloatingImage__ is an inline-level anchor flow document element linked with a 
 __Example 1__ shows how to create a FloatingImage and add it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
         
 
-#### __[C#] Example 1: Create a floating image and insert it in a paragraph__
+#### __Example 1: Create a floating image and insert it in a paragraph__
 
 <snippet id='codeblock-chch'/>
 
@@ -31,7 +31,7 @@ __Example 1__ shows how to create a FloatingImage and add it to a [Paragraph]({%
 You can add an image at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. Here is how to add a FloatingImage at the beginning of a paragraph:
         
 
-#### __[C#] Example 2: Add a floating image to a specific position__
+#### __Example 2: Add a floating image to a specific position__
 
 <snippet id='codeblock-cici'/>
 
@@ -40,7 +40,7 @@ You can add an image at a specific index in the __Inlines__ collection of a para
 You can also use the __AddFloatingImage()__ method of the __Inlines__ collection of a paragraph. The method creates a new __FloatingImage__, adds it to the paragraph and returns it.
         
 
-#### __[C#] Example 3: Using AddFloatingImage() method__
+#### __Example 3: Using AddFloatingImage() method__
 
 <snippet id='codeblock-cjcj'/>
 
@@ -49,7 +49,7 @@ You can also use the __AddFloatingImage()__ method of the __Inlines__ collection
 Inserting __FloatingImage__ element in RadFlowDocument can also be achieved with [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
         
 
-#### __[C#] Example 4: Insert a floating image using RadFlowDocumentEditor__
+#### __Example 4: Insert a floating image using RadFlowDocumentEditor__
 
 <snippet id='codeblock-ckck'/>
 
