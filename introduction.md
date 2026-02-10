@@ -98,7 +98,7 @@ The Telerik Document Processing libraries are available in **.NET Framework**, *
 |[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
 |[UI for Silverlight (discontinued)](https://www.telerik.com/products/silverlight/overview.aspx)||[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
 
-You can find all packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article
+You can find all packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article.
 
 ## Getting Started
 
