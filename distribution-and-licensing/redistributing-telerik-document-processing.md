@@ -38,7 +38,7 @@ For the sake of the example it is assumed that the source distribution ZIP file 
             
 2\. Uncomment the following line:
 
-#### __Before
+#### Before
 
 ```csharp
 	public static bool IsValid()
@@ -49,7 +49,7 @@ For the sake of the example it is assumed that the source distribution ZIP file 
     }
 ```
 
-#### __After
+#### After
 
 ```csharp
 	public static bool IsValid()
@@ -61,13 +61,13 @@ For the sake of the example it is assumed that the source distribution ZIP file 
 
 3\. Change the ApplicationName constant to match the name of your application:
 
-#### __Before
+#### Before
 
 ```csharp
 	internal const string ApplicationName = "MyApp";
 ```
 
-#### __After
+#### After
 
 ```csharp
 	internal const string ApplicationName = "Sample Application Name v2.0 (tm)";
