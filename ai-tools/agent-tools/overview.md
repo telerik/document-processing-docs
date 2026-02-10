@@ -17,6 +17,10 @@ The Agent Tools API provides document processing capabilities designed to be exp
 
 The API is built around two key concepts: **repositories** for managing documents in memory, and **agent tool classes** that provide specific document processing capabilities that can be directly exposed to AI agents.
 
+## License Requirements
+
+Access to the Telerik Document Processing Agent Tools depends on your [Telerik license type](https://www.telerik.com/purchase.aspx?filter=web). It is available with a valid 30-day **trial** or DevCraft Complete or Ultimate **subscription** licenses.
+
 ## Base Classes and Interfaces
 
 The Agent Tools API provides foundational types that enable document management and tool creation across all document types:
