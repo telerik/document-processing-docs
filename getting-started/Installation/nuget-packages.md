@@ -62,7 +62,7 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Documents.CMapUtils</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">Provides a default implementation for getting the data of a predefined CMap table by a given name. The package is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}).</td>
+		<td colspan="2">Provides a default implementation for getting the data of a predefined CMap table by a given name. The package is optional and you will need to include a reference to it only if you need to process documents with <a href="{%slug radpdfprocessing-concepts-cmap-tables%}">CMap tables</a>.</td>
 	</tr>
 	<tr>
 		<td><b><em>N/A</em></b></td>
@@ -70,7 +70,7 @@ The following tables represent the available NuGet packages for the Document Pro
         <br><sub><i>This package is not available in UI for Xamarin.</i></sub></td>
 	</tr>
 	<tr>
-		<td colspan="2">This package is required when exporting to <code>PDF</code> format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article. The package also depends on SkiaSharp. In order to use it, you will need to add a reference to SkiaSharp.
+		<td colspan="2">This package is required when exporting to <code>PDF</code> format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the <a href="{%slug radpdfprocessing-cross-platform%}">PdfProcessing`s Cross-Platform Support</a> article. The package also depends on SkiaSharp. In order to use it, you will need to add a reference to SkiaSharp.
         </td>
 	</tr>
 	<tr>
@@ -140,7 +140,7 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Documents.Fixed.FormatProviders.Image.Skia</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">The package is required for the cross-patform [SkiaTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}#skiatextmeasurer). The package depends on SkiaSharp. In order to use this package, you will need to add a reference to SkiaSharp. The SkiaSharp.NativeAssets.* NuGet package is required as well. This package may differ according to the used platform. There are versions for Windows, MacOS, Linux, WebAssembly, Android, iOS, and others.</td>
+		<td colspan="2">The package is required for the cross-patform <a href="{%slug radspreadprocessing-cross-platform-text-measure%}#skiatextmeasurer">SkiaTextMeasurer</a>. The package depends on SkiaSharp. In order to use this package, you will need to add a reference to SkiaSharp. The SkiaSharp.NativeAssets.* NuGet package is required as well. This package may differ according to the used platform. There are versions for Windows, MacOS, Linux, WebAssembly, Android, iOS, and others.</td>
 	</tr>
 	<tr>
 		<td><b><em>N/A</em></b></td>
@@ -154,14 +154,14 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Documents.Fixed.FormatProviders.Ocr</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. This reference is recommended to always be in the form of a NuGet package, as it will add the required Tesseract references and files automatically. Otherwise, a manual intervention might be required.</td>
+		<td colspan="2">This package is needed for the <a href="{%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}">Optical Character Recognition (OCR)</a> functionality. This reference is recommended to always be in the form of a NuGet package, as it will add the required Tesseract references and files automatically. Otherwise, a manual intervention might be required.</td>
 	</tr>
 	<tr>
 		<td><b>Telerik.Windows.Documents.TesseractOcr</b></td>
 		<td><b>Telerik.Documents.TesseractOcr</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.</td>
+		<td colspan="2">This package is needed for the <a href="{%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}">Optical Character Recognition (OCR)</a> functionality.</td>
 	</tr>
 	<tr>
 		<td><b>Telerik.Documents.AI.Tools.Fixed.Core</b></td>
@@ -325,14 +325,14 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Zip</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">It is the main package of the [Telerik Zip Library]({%slug radziplibrary-overview%}). It can be used as a standalone library as well.</td>
+		<td colspan="2">It is the main package of the <a href="{%slug radziplibrary-overview%}">Telerik Zip Library</a>. It can be used as a standalone library as well.</td>
 	</tr>
 	<tr>
 		<td><b>Telerik.Windows.Zip.Extensions</b></td>
 		<td><b><em>N/A</em></b></td>
 	</tr>
 	<tr>
-		<td colspan="2">Extends <b>Telerik.Windows.Zip</b> package with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})). The package provides methods for working with files and platform specific operations.</td>
+		<td colspan="2">Extends <b>Telerik.Windows.Zip</b> package with additional helper methods (<a href="{%slug radziplibrary-zipextensions%}">Zip Extensions</a>). The package provides methods for working with files and platform specific operations.</td>
 	</tr>
 </tbody>
 </table>

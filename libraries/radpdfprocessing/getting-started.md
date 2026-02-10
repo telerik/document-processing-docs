@@ -13,7 +13,7 @@ This article will get you started in using the __RadPdfProcessing__ library.
 
 >noteIf you still don't have **Telerik Document Processing** installed, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
 
-## REquired References
+## Required References
 
 You can find the required references in the [PdfProcessing NuGet packages]({%slug available-nuget-packages%}#pdfprocessing-packages) section.
 
