@@ -15,55 +15,7 @@ position: 0
 
 >important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
 
-The following tables list all Telerik Document Processing packages for the different platforms and their roles:
-
->important The .NET Standard packages are compatible with any .NET version (e.g .NET 9), even if there are no packages explicitly available for the specific versions. The same applies to the .NET Framework packages.
-
-### Packages for .NET Standard (Support for {{site.dotnetversions}})
-
-| Packagea Name| Description |
-|-------|----------------|
-| **Telerik.Documents.Core** | The main package from the Telerik document processing libraries. You always need it when you intend to use the library. |
-| **Telerik.Documents.Flow** | Part of the words (text) processing library. It is needed for processing HTML, DOCX, RTF and TXT documents. |
-| **Telerik.Documents.DrawingML** | Part of the words (text) processing library. It is needed for working with shapes inside the documents. |
-| **Telerik.Documents.Flow.FormatProviders.Doc** | Allows importing of DOC and DOT document. |
-| **Telerik.Documents.Flow.FormatProviders.Pdf** | Allows exporting of flow documents (DOCX, DOC, DOT, RTF, and HTML) to PDF. |
-| **Telerik.Documents.Fixed** | Part of the PDF processing library. It is needed for working with PDF documents. |
-| **Telerik.Documents.Fixed.FormatProviders.Ocr** | This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
-| **Telerik.Documents.Tesseract.Ocr** | This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
-| **Telerik.Documents.ImageUtils** |  This package is required when exporting to `PDF` format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
-| **Telerik.Documents.CMapUtils** | Provides a default implementation for getting the data of a predefined CMap table by a given name. The package is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}). |
-| **Telerik.Documents.Spreadsheet** | The main package for the spreadsheet processing. It is needed for processing XLSX, CSV, TXT documents. |
-| **Telerik.Documents.Spreadsheet.FormatProviders.OpenXml** | This package is needed for processing XLSX documents. |
-| **Telerik.Documents.Spreadsheet.FormatProviders.Pdf** | This package is needed for exporting to PDF documents. |
-| **Telerik.Documents.Spreadsheet.FormatProviders.Xls** | This package is needed for processing XLS documents. |
-| **Telerik.Documents.SpreadsheetStreaming** | The main package for generating huge spreadsheet files using minimum resources. |
-| **Telerik.Zip** |It is the main package of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
-
-
-### Assemblies for .NET Framework 
-
-| package Name| Description |
-|-------|----------------|
-| **Telerik.Windows.Documents.Core** | The main package from the Telerik document processing libraries. You always need it when you intend to use the library. |
-| **Telerik.Windows.Documents.Flow** | Part of the words (text) processing library. It is needed for processing HTML, DOCX, RTF and TXT documents. |
-| **Telerik.Windows.Documents.DrawingML** | Part of the words (text) processing library. It is needed for working with shapes inside the documents. |
-| **Telerik.Windows.Documents.Flow.FormatProviders.Doc** | Allows importing of DOC and DOT document. |
-| **Telerik.Windows.Documents.Flow.FormatProviders.Pdf** | Allows exporting of flow documents (DOCX, DOC, DOT, RTF, and HTML) to PDF. |
-| **Telerik.Documents.SpreadsheetStreaming** | The main package for generating huge spreadsheet files using minimum resources. |
-| **Telerik.Windows.Documents.Spreadsheet** | The main package for the spreadsheet processing. It is needed for processing XLSX, CSV, TXT documents. |
-| **Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml** | This package is needed for processing XLSX documents. |
-| **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls** | This package is needed for processing XLS documents. |
-| **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf** | This package is needed for processing PDF documents. |
-| **Telerik.Windows.Documents.Fixed** | Part of the PDF processing library. It is needed for working with PDF documents. |
-| **Telerik.Windows.Documents.Fixed.FormatProviders.Ocr** | This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
-| **Telerik.Windows.Documents.Tesseract.Ocr** | This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality. |
-| **Telerik.Windows.Documents.CMapUtils** | Provides a default implementation for getting the data of a predefined CMap table by a given name. The package is optional and you will need to include a reference to it only if you need to process documents with [CMap tables]({%slug radpdfprocessing-concepts-cmap-tables%}). |
-| **Telerik.Windows.Zip** |It is the main package of the [Telerik Zip Library]({%slug radziplibrary-overview%}). |
-| **Telerik.Windows.Zip.Extensions** | Extends **Telerik.Windows.Zip** package with additional helper methods ([Zip Extensions]({%slug radziplibrary-zipextensions%})). |
-
-
->The libraries support .NET 4.6.2 and later. .NET Standard-compatible packages are available as well. The packages for .NET Standard don't include 'Windows' in their names.
+You can find all Document Processing Libraries packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article.
 
 ## Getting Started Resources by Library
 
