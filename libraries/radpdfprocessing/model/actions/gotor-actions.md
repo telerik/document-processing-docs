@@ -10,7 +10,10 @@ position: 4
 
 # GoToR Actions  
 
-As of **Q2 2025** RadPdfProcessing provides **partial** support for **GoToR actions**. A *remote go-to* action is similar to an ordinary go-to action but jumps to a destination in another PDF file instead of the current file. The **GoToRAction** class offers the following public properties: 
+|Minimum Version|Q2 2025|
+|----|----|
+
+RadPdfProcessing provides **partial** support for **GoToR actions**. A *remote go-to* action is similar to an ordinary go-to action but jumps to a destination in another PDF file instead of the current file. The **GoToRAction** class offers the following public properties: 
 
 |Property|Description|
 |----|----|

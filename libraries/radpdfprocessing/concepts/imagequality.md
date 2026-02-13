@@ -24,7 +24,7 @@ The [ImageQuality enumeration](https://docs.telerik.com/devtools/document-proces
 
 The quality of the images reflects the size of the PDF document. The higher the quality, the bigger the document size. This property can be set both in [PdfExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) and in the constructor of [ImageSource]({%slug radpdfprocessing-model-imagesource%}). 
 
->tipYou can download a runnable project, which demonstrates different approaches for working with images in __RadPdfProcessing__ from our [SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateDocumentWithImages).
+>tip You can download a runnable project, which demonstrates different approaches for working with images in __RadPdfProcessing__ from our [SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateDocumentWithImages).
 
 
 ### Set a Default Value for all Images in a Document
