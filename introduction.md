@@ -159,7 +159,7 @@ If you find an issue with our docs that needs to be addressed, the best way to l
 
 * **Update the Documentation at GitHub**
 
-Creating an issue is great, but what we really love are pull requests. This is the most direct method. So, if you find an issue in the docs, or even feel like creating new content, we’d be happy to have your contributions! The basic steps are that you fork our documentation and submit a pull request. That way you may contribute to exactly where you found the error. After that, our technical writing team just needs to approve your change request. Please use only standard markdown. For more detailed instructions, please follow [the contribution instructions] (https://github.com/telerik/document-processing-docs/blob/master/README.md) published on GitHub.
+Creating an issue is great, but what we really love are pull requests. This is the most direct method. So, if you find an issue in the docs, or even feel like creating new content, we’d be happy to have your contributions! The basic steps are that you fork our documentation and submit a pull request. That way you may contribute to exactly where you found the error. After that, our technical writing team just needs to approve your change request. Please use only standard markdown. For more detailed instructions, please follow [the contribution instructions](https://github.com/telerik/document-processing-docs/blob/master/README.md) published on GitHub.
 
 * **Forums**
 

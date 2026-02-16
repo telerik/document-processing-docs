@@ -28,7 +28,8 @@ In the validation, each font name (FontFamilyName) must be explicitly specified 
 >important If the **FontsProvider** property is not set, a default font will be used when exporting the document.
 
 #### **Creating custom implementation by inheriting the FontsProviderBase abstract class**
-	```csharp
+	
+```csharp
 	public class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
 	{
     	public override byte[] GetFontData(Telerik.Windows.Documents.Core.Fonts.FontProperties fontProperties)
@@ -107,14 +108,14 @@ In the validation, each font name (FontFamilyName) must be explicitly specified 
         	return null;
     	}
 	}
-	```
+```
 
 #### **Set the custom implementation inheriting the FontsProviderBase abstract class**
-    ```csharp
-
+    
+```csharp
         Telerik.Windows.Documents.Extensibility.FontsProviderBase fontsProvider = new FontsProvider();
         Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.FontsProvider = fontsProvider;
-    ```
+```
 
 ## See Also
  * [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})

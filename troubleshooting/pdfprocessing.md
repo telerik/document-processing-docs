@@ -23,21 +23,24 @@ The **.NET Standard** version of the [RadPdfProcessing]({%slug radpdfprocessing-
 In order to successfully export images different than **Jpeg** and **Jpeg2000** and **ImageQuality** different than **High** you will need to reference the **Telerik.Documents.ImageUtils** NuGet package in your project. The library also exposes the **FixedExtensibilityManager** class with two specific extensibility points: [ImagePropertiesResolver]({%slug radpdfprocessing-cross-platform-images%}#imagepropertiesresolver) and [JpegImageConverter]({%slug radpdfprocessing-cross-platform-images%}#jpegimageconverter). You would have to set the [ImagePropertiesResolver]({%slug radpdfprocessing-cross-platform-images%}#imagepropertiesresolver)/[JpegImageConverter]({%slug radpdfprocessing-cross-platform-images%}#jpegimageconverter) property or create a custom one inheriting the **ImagePropertiesResolverBase**/**JpegImageConverterBase** class.
 
 #### **Example 1: Set the default implementation of the ImagePropertiesResolver class**
-    ```csharp
+
+```csharp
 
         Telerik.Documents.ImageUtils.ImagePropertiesResolver defaultImagePropertiesResolver = new Telerik.Documents.ImageUtils.ImagePropertiesResolver();
         Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.ImagePropertiesResolver = defaultImagePropertiesResolver;
-    ```
+```
 
 #### **Example 2: Set the default implementation of the JpegImageConverter class**
-    ```csharp
+    
+```csharp
 
        Telerik.Windows.Documents.Extensibility.JpegImageConverterBase defaultJpegImageConverter = new Telerik.Documents.ImageUtils.JpegImageConverter();
        Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = defaultJpegImageConverter;
-    ```
+```
 
 #### **Example 3: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
-    ```csharp
+
+```csharp
 
         internal class CustomJpegImageConverter : Telerik.Windows.Documents.Extensibility.JpegImageConverterBase
         {
@@ -61,8 +64,7 @@ In order to successfully export images different than **Jpeg** and **Jpeg2000** 
                 return false;
             }
         }
-    ```
-
+```
 
 You can read more about the [requirements]({%slug radpdfprocessing-cross-platform-images%}#requirements) and implementation in the [PdfProcessing Cross-Platform Images]({%slug radpdfprocessing-cross-platform-images%}) article.
 

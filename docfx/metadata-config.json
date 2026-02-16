@@ -22,7 +22,16 @@
                         "src/Telerik.Documents.AI.Core.dll",
                         "src/Telerik.Documents.AI.RAG.dll",
                         "src/Telerik.Windows.Zip.dll",
-                        "src/Telerik.Windows.Zip.Extensions.dll"
+                        "src/Telerik.Windows.Zip.Extensions.dll",
+						"src/Telerik.Documents.AI.AgentTools.Conversion.dll",
+						"src/Telerik.Documents.AI.AgentTools.Fixed.dll",
+						"src/Telerik.Documents.AI.AgentTools.Spreadsheet.dll",
+						"src/Telerik.Documents.AI.Tools.Conversion.Core.dll",
+						"src/Telerik.Documents.AI.Tools.Core.dll",
+						"src/Telerik.Documents.AI.Tools.Fixed.Core.dll",
+						"src/Telerik.Documents.AI.Tools.Flow.Core.dll",
+						"src/Telerik.Documents.AI.Tools.Spreadsheet.Core.dll",
+						
                     ]
                 }
             ],
