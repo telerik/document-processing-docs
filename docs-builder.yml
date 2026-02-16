@@ -326,9 +326,15 @@ meta:
   installation-and-deployment:
     title: Installation and Deployment
     position: 4
-  ai-coding-assistant:
-    title: AI Coding Assistant
+  ai-tools:
+    title: AI Tools
     position: 10
+  ai-tools/ai-coding-assistant:
+    title: AI Coding Assistant
+    position: 1
+  ai-tools/agent-tools:
+    title: Agent Tools
+    position: 0
   release-notes/2024:
     title: "2024"
     position: 100
