@@ -44,16 +44,29 @@ The following list represents the available NuGet packages for the Document Proc
 * __Telerik.Windows.Documents.Core:__ The main NuGet package for the Telerik Document Processing libraries. Required when you plan to use the library.
 * __Telerik.Windows.Documents.Fixed:__ The package is required when processing `PDF` documents.
 * __Telerik.Windows.Documents.Fixed.FormatProviders.Ocr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
-* __Telerik.Windows.Documents.Tesseract.Ocr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
+* __Telerik.Windows.Documents.TesseractOcr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
 * __Telerik.Windows.Documents.CMapUtils:__ Provides a default implementation for getting the data of a predefined CMap table by a given name.
 * __Telerik.Windows.Documents.Flow:__ The package is part of the WordsProcessing library. Required for processing `HTML`, `DOCX`, `RTF`, and `TXT` documents.
 * __Telerik.Windows.Documents.DrawingML:__ Part of the WordsProcessing library. It is needed for working with shapes inside the documents. 
+* __Telerik.Windows.Documents.Flow.FormatProviders.Doc:__ This package is required for importing DOC documents.
 * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf:__ The package for exporting flow documents, such as `DOCX` and `RTF`, to `PDF`.
 * __Telerik.Windows.Documents.Spreadsheet:__ The main package for generating spreadsheets.
 * __Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml:__ This package is required for the import/export of `XLSX` documents. 
 * __Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls:__ This package is required for the import/export of `XLS` documents. 
 * __Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf:__ Required for the export of RadSpreadProcessing documents to `PDF`.
+* __Telerik.Windows.Documents.Spreadsheet.FormatProviders.Json:__ Required for the export of RadSpreadProcessing documents to `JSON` format.
 * __Telerik.Windows.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
+* __Telerik.Windows.Documents.AIConnector:__ This package is required for using the GenAI-powered Document Insights feature.
+    * __Telerik.Documents.AI.Core:__ This package is a dependency of __Telerik.Documents.AIConnector__.
+    * __Telerik.Documents.AI.RAG:__ This package is a dependency of __Telerik.Documents.AIConnector__. 
+* __Telerik.Documents.AI.Tools.Core:__ Core types and interfaces for the Agent Tools infrastructure.
+* __Telerik.Documents.AI.Tools.Spreadsheet.Core:__ Repository and core types for spreadsheet processing.
+* __Telerik.Documents.AI.Tools.Fixed.Core:__ Repository and core types for PDF document processing.
+* __Telerik.Documents.AI.Tools.Flow.Core:__ Repository and core types for flow document processing.
+* __Telerik.Documents.AI.Tools.Conversion.Core:__ Core types for document conversion operations.
+* __Telerik.Documents.AI.AgentTools.Spreadsheet:__ Agent tool classes for spreadsheet operations.
+* __Telerik.Documents.AI.AgentTools.Fixed:__ Agent tool classes for PDF document operations.
+* __Telerik.Documents.AI.AgentTools.Conversion:__ Agent tool classes for document conversion and merging.
 * __Telerik.Windows.Zip:__ It can be used as a standalone library as well. 
 * __Telerik.Windows.Zip.Extensions:__ The package provides methods for working with files and platform specific operations. 
 
@@ -63,18 +76,33 @@ The following list represents the available NuGet packages for the Document Proc
 
 * __Telerik.Documents.Core:__ The main NuGet package from the Telerik Document Processing libraries. Required when you plan to use the library.
 * __Telerik.Documents.Fixed:__ The package is required when processing `PDF` documents.
+* __Telerik.Documents.Fixed.FormatProviders.Image.Skia:__ The package is required for the cross-patform [SkiaTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}#skiatextmeasurer).
+    * __Telerik.Text.Skia:__ The package is a dependency of __Telerik.Documents.Fixed.FormatProviders.Image.Skia__.
 * __Telerik.Documents.Fixed.FormatProviders.Ocr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
-* __Telerik.Documents.Tesseract.Ocr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
+* __Telerik.Documents.TesseractOcr:__ This package is needed for the [Optical Character Recognition (OCR)]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) functionality.
 * __Telerik.Documents.ImageUtils:__ This package is required when exporting to `PDF` format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
 * __Telerik.Documents.CMapUtils:__ Provides a default implementation for getting the data of a predefined CMap table by a given name.
 * __Telerik.Documents.Flow:__ The package is part of the Words Processing Library. Required for processing `HTML`, `DOCX`, `RTF`, and `TXT` documents.
-* __Telerik.Documents.DrawingML:__ Part of the WordsProcessing library. It is needed for working with shapes inside the documents. 
+* __Telerik.Documents.DrawingML:__ Part of the WordsProcessing library. It is needed for working with shapes inside the documents.
+* __Telerik.Documents.Flow.FormatProviders.Doc:__ This package is required for importing DOC documents.
 * __Telerik.Documents.Flow.FormatProviders.Pdf:__ The package for exporting flow documents, such as `DOCX` and `RTF`, to PDF.
 * __Telerik.Documents.Spreadsheet:__ The main package for generating and editing spreadsheets.
 * __Telerik.Documents.Spreadsheet.FormatProviders.OpenXml:__ This package is required for the import/export of `XLSX` documents.
 * __Telerik.Documents.Spreadsheet.FormatProviders.Xls:__ This package is required for the import/export of `XLS` documents.
 * __Telerik.Documents.Spreadsheet.FormatProviders.Pdf:__ Required for the export of RadSpreadProcessing documents to `PDF`.
+* __Telerik.Documents.Spreadsheet.FormatProviders.Json:__ Required for the export of RadSpreadProcessing documents to `JSON` format.
 * __Telerik.Documents.SpreadsheetStreaming:__ The main package for generating huge spreadsheet files while using minimum resources.
+* __Telerik.Documents.AIConnector:__ This package is required for using the GenAI-powered Document Insights feature. 
+    * __Telerik.Documents.AI.Core:__ This package is a dependency of __Telerik.Documents.AIConnector__.
+    * __Telerik.Documents.AI.RAG:__ This package is a dependency of __Telerik.Documents.AIConnector__. 
+* __Telerik.Documents.AI.Tools.Core:__ Core types and interfaces for the Agent Tools infrastructure.
+* __Telerik.Documents.AI.Tools.Spreadsheet.Core:__ Repository and core types for spreadsheet processing.
+* __Telerik.Documents.AI.Tools.Fixed.Core:__ Repository and core types for PDF document processing.
+* __Telerik.Documents.AI.Tools.Flow.Core:__ Repository and core types for flow document processing.
+* __Telerik.Documents.AI.Tools.Conversion.Core:__ Core types for document conversion operations.
+* __Telerik.Documents.AI.AgentTools.Spreadsheet:__ Agent tool classes for spreadsheet operations.
+* __Telerik.Documents.AI.AgentTools.Fixed:__ Agent tool classes for PDF document operations.
+* __Telerik.Documents.AI.AgentTools.Conversion:__ Agent tool classes for document conversion and merging.
 * __Telerik.Zip:__ It can be used as a standalone library as well. 
 
 ## See Also

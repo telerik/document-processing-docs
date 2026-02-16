@@ -79,8 +79,6 @@ There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedd
 | Symbol|
 | ZapfDingbats|
 
-
-
 <snippet id='pdf-standard-font'/>
 
 >tip These fonts, or their font metrics and suitable substitution fonts, must be available to the consumer application.
@@ -91,6 +89,18 @@ FontsRepository will replace the provided standard font with the passed font dat
 #### Replace a Standard Font
 
 <snippet id='pdf-replace-standard-font'/>
+
+#### Set a Fallback Font
+
+You can configure fallback fonts for the standard fonts to ensure proper rendering when a standard font needs to be substituted with another font.
+
+The following exmaple demonstrates how to set a fallback font for a specific standard font:
+
+<snippet id='libraries-pdf-concepts-comply-with-pdfa-set-standard-font-fallback'/>
+
+To remove all configured fallback fonts, use the __ClearStandardFontFallbacks()__ method:
+
+<snippet id='libraries-pdf-concepts-comply-with-pdfa-clear-fallback-fonts'/>
 
 ## Embedded Fonts
 

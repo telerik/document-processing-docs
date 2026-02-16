@@ -3,7 +3,7 @@ title: MCP Server
 page_title: DPL MCP Server
 description: Learn how to add and use the Telerik Document Processing MCP Server as a .NET Document Processing AI coding assistant and code generator for better developer productivity. The Telerik Document Processing MCP server provides proprietary context about Telerik UI for .NET Document Processing to AI-powered software.
 slug: ai-mcp-server
-tags: telerik, dpl, ai, server, mcp, dotnet,coding, assistant
+tags: telerik, dpl, ai, server, mcp, dotnet,coding, assistant, npm
 published: True
 position: 2
 ---
@@ -17,7 +17,9 @@ img[alt$="><"] {
 
 The Telerik Document Processing [MCP (Model Context Protocol) server](https://modelcontextprotocol.io/introduction) lets you interact with AI and reach new levels of developer productivity. The MCP server provides proprietary context to AI-powered IDEs, apps and tools. You can use the MCP server for Document Processing code generation and successfully prompt more complex questions and tasks, and generate tailored code that includes the [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries).
 
->tip The Telerik DPL MCP server works in **Chat** (**Ask**) and **Agent** modes.
+>warning Кnown Issue: Hanging tool calls in Visual Studio, see ([Troubleshooting]({%slug ai-mcp-server%}#troubleshooting)).
+
+>tip The MCP server can be [installed also as a NuGet package]({%slug ai-mcp-server-as-a-nuget%}), instead of using __Node.js__ and `npm` commands as shown below.
 
 ## Supported Libraries
 
@@ -153,13 +155,46 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
 
   * In .NET 8 and .NET 9:
 
+    * Global Installation 
+
+      - Run `dotnet tool install --global(-g) Telerik.DPL.MCP` in the Terminal.
+
+      - Update global MCP config: %userprofile%.mcp.json with following configuration:
+
+    ```json
+    {
+      "servers": {
+			"telerik-dpl-assistant": {
+			"type": "stdio",
+			"command": "telerik-dpl-assistant",
+			"env": {
+            "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
+            // or
+            "TELERIK_LICENSE": "YOUR_LICENSE_KEY"
+          }
+        }
+      },
+      "inputs": []
+    }
+    ```
+
+    * Local Installation
+
+      - Navigate to the solution folder.
+
+      - Run `dotnet tool new-manifest` in the Terminal.
+
+      - Run `dotnet tool install Telerik.DPL.MCP` in the Terminal.
+
+      - Create/update solution based MCP Config %solutiondir%.mcp.json with following configuration:
+
     ```json
     {
       "servers": {
         "telerik-dpl-assistant": {
           "type": "stdio",
           "command": "dotnet",
-          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "args": ["tool", "run", "telerik-dpl-assistant"],
           "env": {
             "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
             // or
@@ -237,7 +272,7 @@ The basic setup in Visual Studio Code involves the following steps:
         "telerik-dpl-assistant": {
           "type": "stdio",
           "command": "dotnet",
-          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "args": ["tool", "run", "telerik-dpl-assistant"],
           "env": {
             "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
             // or
@@ -315,7 +350,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
         "telerik-dpl-assistant": {
           "type": "stdio",
           "command": "dotnet",
-          "args": ["tool", "run", "telerik-dpl-mcp"],
+          "args": ["tool", "run", "telerik-dpl-assistant"],
           "env": {
             "TELERIK_LICENSE_PATH": "THE_PATH_TO_YOUR_LICENSE_FILE",
             // or
@@ -413,7 +448,23 @@ You can use the Telerik DPL MCP server with local large language models (LLMs):
 
 This setup allows you to use the Telerik AI Coding Assistant without cloud-based AI models.
 
+## Troubleshooting
+
+>warning **Known Issue: Hanging tool calls in Visual Studio**
+> 
+>When using Telerik AI tools in Visual Studio, GitHub Copilot may:
+>- **hang** during tool invocation;
+>- show UI for a successful tool response, but actually **fail silently**;
+>- continue generation without waiting for **parallel tool calls**.
+>In these cases, the response may be generated but not provided to the Copilot Agent UI.
+>This is a known issue in Visual Studio Copilot, not related to Telerik MCP servers or AI tools, and does not reproduce in VS Code.
+>For more details, see the related Visual Studio Developer Community issue:  
+>https://developercommunity.visualstudio.com/t/Copilot-stopped-working-after-latest-upd/10936456
+>
+>Microsoft has acknowledged the issue and marked it as **Fixed - Pending Release**. A future Visual Studio update is expected to resolve it.
+
 ## See Also
 
 * [AI Coding Assistant Overview]({%slug ai-coding-assistant%})
 * [Telerik Document Processing Prompt Library]({%slug ai-prompt-library%})
+* [MCP Server as a NuGet Package]({%slug ai-mcp-server-as-a-nuget%})

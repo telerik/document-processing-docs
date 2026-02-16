@@ -58,11 +58,8 @@ Access to the Telerik Document Processing AI Coding Assistant depends on your [T
   * Includes a virtually unlimited number of requests, with a fair use threshold of 300 requests per day.
   * Best for ongoing and high-volume usage.
 * Perpetual License (Limited Access)
-  * Perpetual licenses include limited access of 50 requests per year.
-  * Intended for exploring and trying out the AI Coding Assistant.
-  * For continued or higher-volume access, upgrade to a Subscription license.
+  * Perpetual licenses have no access to the AI Coding Assistants. Start a trial license in order to use the AI coding tools.
 * Trial License
-  * Trial licenses include 300 requests per trial per year.
   * Reactivating the same trial for a new release does not grant additional requests.
   * Designed for evaluating the feature before purchasing.
 
