@@ -112,7 +112,7 @@ Exposes a set of methods designed for automations and AI agents to modify spread
     int fromColumnIndex,
     int toRowIndex,
     int toColumnIndex,
-    List<List<string>> styleNames,
+    List&lt;List&lt;string&gt;&gt; styleNames,
     string worksheetName = null,
     string documentId = null)</pre></td><td>Applies named styles to a rectangular range.</td></tr>
 <tr><td>AutoFitColumnsWidth</td><td><pre>public CallToolResult AutoFitColumnsWidth(
