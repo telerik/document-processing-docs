@@ -47,10 +47,10 @@ __Example 1__ creates a selection for cells in the range A1:F6.
 Once you have a __CellSelection__ instance, you can easily set and retrieve the properties of its cells. Each property is manipulated through three methods that get, set and clear the value of the property, respectively. Typically, the set methods take a single argument, which indicates the value to be set. Similarly, the clear methods have no parameters and reset the properties to their default values. The get methods, however, require more attention.
         
 
-With one minor exception, the get methods of all cell properties return an object of type __RangePropertyValue<T>__. The class exposes two properties that indicate the value of the property for the cell range:
+With one minor exception, the get methods of all cell properties return an object of type __RangePropertyValue&lt;T&gt;__. The class exposes two properties that indicate the value of the property for the cell range:
         
 
-* __IsIndeterminate__: Indicates whether the value of the retrieved property is consistent among all cells in the specified __CellSelection__. If the property has one and the same value for all cells, __IsIndeterminate__ is set to false. However, if the value of the retrieved property varies throughout the cells in the __CellSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue<T>__ class is set to its default value.
+* __IsIndeterminate__: Indicates whether the value of the retrieved property is consistent among all cells in the specified __CellSelection__. If the property has one and the same value for all cells, __IsIndeterminate__ is set to false. However, if the value of the retrieved property varies throughout the cells in the __CellSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue&lt;T&gt;__ class is set to its default value.
             
 
 * __Value__: Contains the value of the retrieved property. If the __IsIndeterminate__ property is set to false, __Value__ contains the value of the retrieved property for the whole __CellSelection__ region. If the __IsIndeterminate__ property is set to true, the __Value__ property is set to its default value.
@@ -124,7 +124,7 @@ Using the above approach you can set the value of almost all cell properties. Th
 The __Value__ property uses an instance of __ICellValue__ to retrieve and change its value. The property has support for the following types of cell values, all of which conform to the ICellValue interface: *EmptyCellValue*, *NumberCellValue*, *BooleanCellValue*, *TextCellValue*, *FormulaCellValue*. Similarly to the other properties, __Value__ has three methods that control the property: __GetValue()__, __SetValue()__ and __ClearValue()__. More information about different value types is available in the [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) article.
         
 
-The __GetValue()__ method retrieves the value of the property and returns an instance of __RangePropertyValue<ICellValue>__. The __Value__ property of the __RangePropertyValue__ instance returns the actual value of the selected region.
+The __GetValue()__ method retrieves the value of the property and returns an instance of __RangePropertyValue&lt;ICellValue&gt;__. The __Value__ property of the __RangePropertyValue__ instance returns the actual value of the selected region.
         
 
 __Example 3__ illustrates who to retrieve the value of cell B2.
@@ -172,7 +172,7 @@ __Example 4__ demonstrates how to set the value of a given selection.
 
 ## Borders Property
 
-The __Borders__ property uses a __CellBorders__ object for getting and setting its property value. The __CellBorders__ class contains eight instances of type __CellBorder__ that describe respectively the left, top, right, bottom, inside horizontal, inside vertical, diagonal up, and diagonal down borders. In turn, the __CellBorder__ object holds information about the style and color of the border. The __GetBorders()__ method returns an instance of RangePropertyValue<CellBorders>.
+The __Borders__ property uses a __CellBorders__ object for getting and setting its property value. The __CellBorders__ class contains eight instances of type __CellBorder__ that describe respectively the left, top, right, bottom, inside horizontal, inside vertical, diagonal up, and diagonal down borders. In turn, the __CellBorder__ object holds information about the style and color of the border. The __GetBorders()__ method returns an instance of RangePropertyValue&lt;CellBorders&gt;.
         
 
 __Example 5__ demonstrates how to set the value of the Borders of the regions B2:C4 and E2:F4.

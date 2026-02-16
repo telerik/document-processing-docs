@@ -178,7 +178,7 @@ There are two more overloads of DrawForm() that enable you to pass the size that
 
 The Widget annotations allow you visualize the content of a FormField. With the API of FixedContentEditor, you can easily create and insert widgets to the PDF document. The **DrawWidget**() method has two overloads:
 
-* **DrawWidget<T>(FormField<T> parentField, Size annotationSize)**: Creates new [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) representing the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instance passed as a parameter and draws the widget with the specified annotation size. This method will add widget only in cases when the root of the FixedContentEditor supports annotations. 
+* **DrawWidget&lt;T&gt;(FormField&lt;T&gt; parentField, Size annotationSize)**: Creates new [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) representing the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instance passed as a parameter and draws the widget with the specified annotation size. This method will add widget only in cases when the root of the FixedContentEditor supports annotations. 
 
 	#### **Example 10: Insert PushButtonField with PushButtonWidget using DrawWidget**
 	

@@ -20,7 +20,7 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 
 - IEnumerable&lt;CellRange&gt; **EnumerateCellRanges**(out Worksheet worksheet): Enumerates the cell ranges that contain the actual chart data.
 
-- bool **TryEnumerateCellRanges**(out IEnumerable<CellRange> resultCellRanges, out Worksheet worksheet): Enumerates the cell ranges that contain the actual chart data. Returns a value indicating whether the enumeration was successful.
+- bool **TryEnumerateCellRanges**(out IEnumerable&lt;CellRange&gt; resultCellRanges, out Worksheet worksheet): Enumerates the cell ranges that contain the actual chart data. Returns a value indicating whether the enumeration was successful.
 
 - IChartData **Clone**(): Creates a deep copy of the object.
 

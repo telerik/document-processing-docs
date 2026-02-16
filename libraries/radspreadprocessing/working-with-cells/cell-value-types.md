@@ -82,10 +82,10 @@ __Example 3__ retrieves the value created in Example 2.
 
 
 
-Note that the GetValue() method does not return an ICellValue directly, but it provides an RangePropertyValue<ICellValue> instance. The RangePropertyValue is used to determine whether the value of a region of cells is homogeneous. In other words, if you attempt to retrieve the value of the cell region A1:B2 and the values in these cells are different, the RangePropertyValue will specify that the values vary. The class exposes two properties that describe the values in the chosen cell range:
+Note that the GetValue() method does not return an ICellValue directly, but it provides an RangePropertyValue&lt;ICellValue&gt; instance. The RangePropertyValue is used to determine whether the value of a region of cells is homogeneous. In other words, if you attempt to retrieve the value of the cell region A1:B2 and the values in these cells are different, the RangePropertyValue will specify that the values vary. The class exposes two properties that describe the values in the chosen cell range:
         
 
-* __IsIndeterminate__: The Boolean property indicates whether the Value property is consistent among all cells in the specified CellSelection. If all cells have one and the same Value, __IsIndeterminate__ is set to false. However, if the Value property varies throughout the cells in the CellSelection, the IsIndetermine property is set to true and the __Value__ property of the __RangePropertyValue<ICellValue>__ instance is set to its default value – __EmptyCellValue__.
+* __IsIndeterminate__: The Boolean property indicates whether the Value property is consistent among all cells in the specified CellSelection. If all cells have one and the same Value, __IsIndeterminate__ is set to false. However, if the Value property varies throughout the cells in the CellSelection, the IsIndetermine property is set to true and the __Value__ property of the __RangePropertyValue&lt;ICellValue&gt;__ instance is set to its default value – __EmptyCellValue__.
             
 
 * __Value__: If the __IsIndeterminate__ property is set to false, __Value__ holds the ICellValue of the whole CellSelection region. If the __IsIndeterminate__ property is set to true, then the cells in the CellSelection region contain different values and the Value property is set to its default – __EmptyCellValue__.

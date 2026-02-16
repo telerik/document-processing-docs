@@ -70,7 +70,7 @@ All sorting conditions which can be applied to the sorted range implement the __
 * __SortIndex__: Gets the index of the column to which the sort condition is applied. The index is relative to the beginning of the sorted range.
             
 
-* __IComparer<SortValue> Comparer__: Determines the order of the sorted values.
+* __IComparer&lt;SortValue&gt; Comparer__: Determines the order of the sorted values.
             
 
 * __object GetValue(Cells cells, int rowIndex, int columnIndex)__: Gets the value of the cell at the specified index. This value is used to determine how the cell containing the value should be ordered during the sorting.
@@ -84,7 +84,7 @@ The diagram in __Figure 1__ shows the different types of conditions, which inher
 
 ## OrderedSortCondition
 
-The ordered sort condition is a type of condition which sorts the values in an ordered manner, in ascending or descending order. It is represented by the abstract class __OrderedSortConditionBase<T>__.
+The ordered sort condition is a type of condition which sorts the values in an ordered manner, in ascending or descending order. It is represented by the abstract class __OrderedSortConditionBase&lt;T&gt;__.
         
 
 This class has one additional member, other than the members of the __ISortCondition__ interface:

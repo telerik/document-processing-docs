@@ -34,10 +34,10 @@ The height of a row is retrieved and changed through an instance of type __RowHe
 In order to change the rows' height, you need to create a __RowSelection__ instance that includes the rows to be resized. The __RowSelection__ class exposes __GetHeight()__, __SetHeight()__ and __ClearHeight()__ methods that are used to manipulate the height of the selected rows.
         
 
-The __GetHeight()__ method returns a __RangePropertyValue<RowHeight>__ instance that holds information about the height of all selected rows. The object exposes two properties that indicate the value of __RowHeight__ for the cell range:
+The __GetHeight()__ method returns a __RangePropertyValue&lt;RowHeight&gt;__ instance that holds information about the height of all selected rows. The object exposes two properties that indicate the value of __RowHeight__ for the cell range:
         
 
-* __IsIndeterminate__: Indicates whether the value of __RowHeight__ is consistent among all rows in the specified __RowSelection__. If the __RowHeight__ has one and the same value for all rows, __IsIndeterminate__ is set to false. However, if the value of __RowHeight__ varies throughout the rows in the __RowSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue<T>__ class returns the default __RowHeight__.
+* __IsIndeterminate__: Indicates whether the value of __RowHeight__ is consistent among all rows in the specified __RowSelection__. If the __RowHeight__ has one and the same value for all rows, __IsIndeterminate__ is set to false. However, if the value of __RowHeight__ varies throughout the rows in the __RowSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue&lt;T&gt;__ class returns the default __RowHeight__.
             
 
 * __Value__: Holds the actual __RowHeight__. If the __IsIndeterminate__ property is set to false, __Value__ contains the __RowHeight__ for the whole __RowSelection__ region. If the __IsIndeterminate__ property is set to true, this indicates that the __RowHeight__ is not the same for all rows in the __RowSelection__ and the __Value__ property is set to its default value.
@@ -87,10 +87,10 @@ The width of a column is retrieved and changed through an instance of type __Col
 In order to change the columns' width, you need to create a __ColumnSelection__ instance that includes the columns to be resized. The __ColumnSelection__ class exposes __GetWidth()__, __SetWidth()__ and __ClearWidth()__ methods that are used to manipulate the width of the selected columns.
         
 
-The __GetWidth()__ method returns a __RangePropertyValue<ColumnWidth>__ instance that holds information about the width of all selected columns. The object exposes two properties that indicate the value of the property for the cell range:
+The __GetWidth()__ method returns a __RangePropertyValue&lt;ColumnWidth&gt;__ instance that holds information about the width of all selected columns. The object exposes two properties that indicate the value of the property for the cell range:
         
 
-* __IsIndeterminate__: Indicates whether the value of __ColumnWidth__ is consistent among all columns in the specified __ColumnSelection__. If the __ColumnWidth__ has one and the same value for all columns, __IsIndeterminate__ is set to false. However, if the value of __ColumnWidth__ varies throughout the columns in the __ColumnSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue<T>__ class is set to its default value.
+* __IsIndeterminate__: Indicates whether the value of __ColumnWidth__ is consistent among all columns in the specified __ColumnSelection__. If the __ColumnWidth__ has one and the same value for all columns, __IsIndeterminate__ is set to false. However, if the value of __ColumnWidth__ varies throughout the columns in the __ColumnSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue&lt;T&gt;__ class is set to its default value.
             
 
 * __Value__: Holds the actual __ColumnWidth__. If the __IsIndeterminate__ property is set to false, __Value__ contains the __ColumnWidth__ for the whole __ColumnSelection__ region. If the __IsIndeterminate__ property is set to true, this indicates that the __ColumnWidth__ is not the same for all columns in the __ColumnSelection__ and the __Value__ property is set to its default value.

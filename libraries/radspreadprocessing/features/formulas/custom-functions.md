@@ -75,10 +75,10 @@ Figure 1: Functions Inheritance
 * __FunctionWithArguments__: Handles the basic logic of converting __RadExpression__'s value to some other value type corresponding to the ArgumentType defined in FunctionInfo property. By inheriting from this class you need to override the __EvaluateOverride(object[] arguments)__ method and handle and array of already converted function argument values.
             
 
-* __FunctionWithSameTypeArguments<T>__: By inheriting this class you need to override __EvaluateOverride(T[] arguments)__ method and handle an array of arguments with same type T.
+* __FunctionWithSameTypeArguments&lt;T&gt;__: By inheriting this class you need to override __EvaluateOverride(T[] arguments)__ method and handle an array of arguments with same type T.
             
 
-* __StringInFunctions, NumbersInFunction, BooleansInFunction__: These classes inherit directly from __FunctionWithSameTypeArguments<String>, FunctionWithSameTypeArguments<double> and FunctionWithSameTypeArguments<bool>__. Using them is appropriate in cases when the function the respective argument type - String, double or Boolean.
+* __StringInFunctions, NumbersInFunction, BooleansInFunction__: These classes inherit directly from __FunctionWithSameTypeArguments&lt;String&gt;, FunctionWithSameTypeArguments&lt;double&gt; and FunctionWithSameTypeArguments&lt;bool&gt;__. Using them is appropriate in cases when the function the respective argument type - String, double or Boolean.
             
 
 ## ArgumentConversionRules

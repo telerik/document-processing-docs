@@ -40,7 +40,7 @@ The distance between automatic tab stops is determined by the __[RadFlowDocument
 
 ## TabStopCollection Overview
 
-This class derives from __System.Collections.Generic.IEnumerable<T>__ and represents a collection of __TabStop__ objects. The collection is immutable and it is used to hold the tab stops in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
+This class derives from __System.Collections.Generic.IEnumerable&lt;T&gt;__ and represents a collection of __TabStop__ objects. The collection is immutable and it is used to hold the tab stops in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
 
 The __TabStopCollection__ class exposes the following members:
 
