@@ -42,7 +42,7 @@ Provides read-only agent tools for querying and analyzing spreadsheet content wi
 <tr><td>FilterAndExtract</td><td><pre>CallToolResult FilterAndExtract(
     int filterColumnIndex,
     List&lt;string&gt; filterValues,
-    List<int> columnsToReturn,
+    List&lt;int&gt; columnsToReturn,
     string worksheetName = null,
     string documentId = null,
     int maxSampleRows = 5)</pre></td><td>Filters rows where the filter column matches any exact value from filterValues. Returns: Aggregated counts grouped by the values in columnsToReturn. Up to maxSampleRows sample rows (for verification) without reading the entire dataset.</td></tr>
