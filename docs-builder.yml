@@ -467,5 +467,16 @@ redirects:
   to: "/libraries/radpdfprocessing/concepts/comply-with-pdfa-standard"
   type: Permanent
 
+# Redirect /ai-coding-assistant/* to /ai-tools/ai-coding-assistant/*
+- from: "^/ai-coding-assistant/(.*)$"
+  to: "/ai-tools/ai-coding-assistant/$1"
+  type: Permanent
+
+# (Optional) handle the section root itself
+- from: "^/ai-coding-assistant$"
+  to: "/ai-tools/ai-coding-assistant"
+  type: Permanent
+
+
 
 
