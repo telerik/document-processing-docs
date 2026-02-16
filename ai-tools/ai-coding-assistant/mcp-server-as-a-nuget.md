@@ -141,7 +141,7 @@ You may substitute `TELERIK_LICENSE` instead of `TELERIK_LICENSE_PATH` (*see [Li
 
 After saving the file, restart Visual Studio and enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
 
-![An image demonstrating how to enable the Telerik DPL MCP tool in Visual Studio](images\vs-enable-dpl-mcp-tool.png) 
+![An image demonstrating how to enable the Telerik DPL MCP tool in Visual Studio](images/vs-enable-dpl-mcp-tool.png) 
 
 ### Global Setup
 
