@@ -50,7 +50,10 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
     SpreadExtensibilityManager.TextMeasurer = fixedTextMeasurer;
 ```
 
-## SkiaTextMeasurer <sup>Q3 2025 (or newer)</sup>
+## SkiaTextMeasurer
+
+|Minimum Version|Q3 2025|
+|----|----|
 
 The **SkiaTextMeasurer** is a cross-platform text measurer that provides consistent text layout behavior across all supported platforms. Unlike other available measurer implementations, it also supports advanced font features like *kerning*, *ligatures*, *contextual shaping*, and more. This implementation reduces the need for maintaining multiple text measurement implementations across different platforms.
 

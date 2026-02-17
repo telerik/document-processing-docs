@@ -7,17 +7,6 @@ tags: ai, document, analysis, summarization, processor, summary
 published: True
 position: 3
 ---
-<style>
-table, th, td {
-	border: 1px solid;
-}
-table th:first-of-type {
-	width: 30%;
-}
-table th:nth-of-type(2) {
-	width: 70%;
-} 
-</style>
 
 # SummarizationProcessor
 

@@ -10,7 +10,10 @@ position: 1
 
 # Using OcrFormatProvider
 
-Since _Q1 2025_ the __RadPdfProcessing__ library supports Optical Character Recognition (OCR). OCR is the electronic or mechanical conversion of images of typed, handwritten, or printed text into machine-encoded text from a scanned document. The library uses the **OcrFormatProvider** class that allows you to import an image which is returned as a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). By default, the **OcrFormatProvider** takes as a parameter a **TesseractOcrProvider** implementation which is achieved by using the third-party library [Tesseract](https://github.com/tesseract-ocr/tesseract), however you can provide any [custom implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}) instead.
+|Minimum Version|Q1 2025|
+|----|----|
+
+RadPdfProcessing supports **Optical Character Recognition (OCR)**. OCR is the electronic or mechanical conversion of images of typed, handwritten, or printed text into machine-encoded text from a scanned document. The library uses the **OcrFormatProvider** class that allows you to import an image which is returned as a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). By default, the **OcrFormatProvider** takes as a parameter a **TesseractOcrProvider** implementation which is achieved by using the third-party library [Tesseract](https://github.com/tesseract-ocr/tesseract), however you can provide any [custom implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}) instead.
 
 >note [PdfProcessing Optical Character Recognition (OCR) Demo](https://demos.telerik.com/document-processing/pdfprocessing/optical_character_recognition)
 

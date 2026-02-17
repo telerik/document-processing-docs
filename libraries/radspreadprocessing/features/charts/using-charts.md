@@ -157,7 +157,7 @@ The chart can then be used to replace the chart in an existing **FloatingChartSh
 	worksheet.Charts.Add(chartShape);
 ```
 
->noteFor more on Series, the [Series]({%slug radspreadprocessing-features-charts-series%}) help topic. Refer to [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}) for description of the axes objects of the chart.
+>note For more on Series, the [Series]({%slug radspreadprocessing-features-charts-series%}) help topic. Refer to [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}) for description of the axes objects of the chart.
 
 The initial data and the resulting chart are shown in **Figure 1**.
 

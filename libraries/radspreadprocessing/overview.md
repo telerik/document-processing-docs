@@ -17,8 +17,7 @@ In this article, we list the library's most popular features. If you want to sta
 
 ![Rad Spread Processing Overview 01](images/RadSpreadProcessing_Overview_01.png)
 
-
->noteIf you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
+>note If you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
 
 ## Key Features
 

@@ -12,31 +12,6 @@ position: 15
 
 
 This article describes what is filtering and filters and how to work with them through the document model. It contains the following sections:
-      
-
-* [What is Filtering?](#what-is-filtering?)
-
-* [AutoFilter](#autofilter)
-
-* [IFilter](#ifilter)
-
-* [ValuesCollectionFilter](#valuescollectionfilter)
-
-* [CustomFilter](#customfilter)
-
-* [TopFilter](#topfilter)
-
-* [DynamicFilter](#dynamicfilter)
-
-* [ForeColorFilter](#forecolorfilter)
-
-* [FillColorFilter](#fillcolorfilter)
-
-* [Setting a Filter](#setting-a-filter)
-
-* [Reapplying a Filter](#reapplying-a-filter)
-
-* [Removing and Clearing Filters](#removing-and-clearing-filters)
 
 ## What is Filtering?
 
@@ -102,6 +77,7 @@ The diagram in __Figure 1__ shows the different types of filters, which inherit 
         
 
 #### Figure 1: Filter types
+
 ![Rad Spread Processing Filtering 01](images/RadSpreadProcessing_Filtering_01.png)
 
 ## ValuesCollectionFilter
@@ -397,7 +373,7 @@ When a filter is set it is automatically applied. The application of a filter ha
 
 
 
->tipNote that attempting to reapply filter on a column which is not filtered causes an exception.
+>tip Note that attempting to reapply filter on a column which is not filtered causes an exception.
           
 
 ## Removing and Clearing Filters

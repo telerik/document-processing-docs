@@ -8,7 +8,10 @@ published: True
 position: 7
 ---
 
-# Viewer Preferences <sup>Q3 2025 (or newer)</sup>
+# Viewer Preferences
+
+|Minimum Version|Q3 2025|
+|----|----|
 
 The **ViewerPreferences** class designates a viewer preferences dictionary controlling the way the document is to be presented on the screen or in print. If no such dictionary is specified, viewing and printing applications should behave in accordance with their own current user preference settings.
 

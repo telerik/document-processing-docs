@@ -7,20 +7,6 @@ tags: ai, document, analysis, prerequisites, setup, installation, gen, excel, xl
 published: True
 position: 1
 ---
-<style>
-
-/* First table with two columns */
-table:nth-of-type(1) th:first-of-type {
-    width: 50%;
-}
-table:nth-of-type(1) th:nth-of-type(2) {
-    width: 50%;
-}
-/* Second table with three columns */
-table:nth-of-type(2) th {
-    width: 33.33%;
-}
-</style>
 
 # GenAI-powered Document Insights Prerequisites
 
