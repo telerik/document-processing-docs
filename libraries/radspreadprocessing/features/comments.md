@@ -11,7 +11,10 @@ platforms: mvc, ajax, blazor, wpf, winforms, xamarin, winui, core
 
 # Comments
 
-Since R2 2022 the SpreadProcessing library supports working with comments. Comments are used for marking information about a cell's data and can have one or multiple [Replies](#replies). All comments can be found in the __Comments__ property of the worksheet, which is of the type __CommentCollection__. This collection holds __SpreadsheetComment__ objects, which represent the comments. Each comment has the following members:
+|Minimum Version|R2 2022|
+|----|----|
+
+RadSpreadProcessing supports working with comments. Comments are used for marking information about a cell's data and can have one or multiple [Replies](#replies). All comments can be found in the __Comments__ property of the worksheet, which is of the type __CommentCollection__. This collection holds __SpreadsheetComment__ objects, which represent the comments. Each comment has the following members:
 
 ***Properties***:
 
@@ -35,7 +38,7 @@ Since R2 2022 the SpreadProcessing library supports working with comments. Comme
 
 To add a comment you need to specify the cell index to which the comment will be related, the author, the text content, and the creation date. Specifying the creation date is optional and by default, its value is the current date and time.
 
-#### __Example 1: Add comment__
+#### Example 1: Add comment
 
 ```csharp
 	
@@ -55,7 +58,7 @@ The above snippet will add a comment in cell B2.
 
 To remove a comment, you should specify the comment instance. This instance can be obtained from the __CommentCollection__.
 
-#### __Example 2: Remove comment__
+#### Example 2: Remove comment
 
 ```csharp
 	
@@ -83,7 +86,7 @@ Each comment can be replied to, forming a thread of information. All replies can
 * __CopyTo:__ Copies the entire __ReplySortedCollection__ to a compatible one-dimensional array, starting at the specified index of the target array.
 
 
-#### __Example 3: Working with Replies
+#### Example 3: Working with Replies
 
 ```csharp
 
@@ -148,7 +151,7 @@ The two events for both collections use similar enumeration types for event argu
 * __Add:__ Used when Adding a Comment or Reply
 * __Remove:__ Used when Removing a Comment or Reply
 
-#### __Example 4: Changing the author of a comment upon adding it to the CommentCollection using the Changing event__
+#### Example 4: Changing the author of a comment upon adding it to the CommentCollection using the Changing event
 
 ```csharp
 
@@ -163,7 +166,7 @@ The two events for both collections use similar enumeration types for event argu
 
 ```
 
-#### __Example 5: Changing the author of a reply upon adding it to the ReplySortedCollection using the Changing event__
+#### Example 5: Changing the author of a reply upon adding it to the ReplySortedCollection using the Changing event
 
 ```csharp
 

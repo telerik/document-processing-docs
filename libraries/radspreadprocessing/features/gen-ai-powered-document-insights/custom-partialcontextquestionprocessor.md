@@ -52,6 +52,7 @@ All extension points live in **Telerik.Documents.AI.Core** (as abstractions) wit
 The example below constructs a custom **PartialContextQuestionProcessor** by supplying a **DefaultContextRetriever** that mixes user implementations (custom **IContextFragmentsManager** and **IEmbedder**) with default components (**DefaultSimilarityCalculator**, **DefaultTokensCounter**, and the retriever's own orchestration). This hybrid approach lets you optimize the most impactful stages (fragmentation + embedding) without rewriting the entire retrieval pipeline.
 
 >note **DefaultEmbedder** is only available on **net8-windows** and higher. On other target frameworks you must supply your own **IEmbedder** (as shown below with [CustomOpenAIEmbedder]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder)).
+
 <snippet id='libraries-spread-features-gen-ai-custom-partial-processor'/>
 
 ## See Also

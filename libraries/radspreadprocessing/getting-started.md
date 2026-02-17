@@ -21,7 +21,7 @@ This article will get you started in using the __RadSpreadProcessing__ library. 
 
 * [Using RadSpreadsheet](#using-radspreadsheet)
 
->noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+>note If you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 ## Package References
 
