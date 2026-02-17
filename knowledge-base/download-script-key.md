@@ -71,3 +71,4 @@ public class Function
 ## See Also
 
 - [Setting Up License Key]({%slug setting-up-license-key%})  
+- [License Key vs. Script Key]({%slug license-key-vs-script-key%})
