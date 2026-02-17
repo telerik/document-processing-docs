@@ -34,7 +34,7 @@ If Telerik assemblies are referenced manually (DLLs in /bin) and the project doe
     <img style="border: 1px solid gray;" src="images/view-products.gif" alt="View Products" /> 
 
 
-The code snippet from the Script Key contains an assembly attribute called **EvidenceAttribute** that holds information about the script license key.
+    The code snippet from the Script Key contains an assembly attribute called **EvidenceAttribute** that holds information about the script license key.
 
 4.  Copy the whole key string to the bottom of the scrollbar in the Telerik.Licensing.EvidenceAttribute("script-key"):
 
