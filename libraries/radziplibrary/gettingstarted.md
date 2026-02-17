@@ -12,7 +12,7 @@ position: 1
 __RadZipLibrary__ allows you to load data from existing ZIP archives or create and edit ZIPs that can be used by other applications. You can also create ZIP archives in memory or use a stream to get data and add it to a ZIP archive.
       
 
->noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+>note If you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 The ZIP archive is represented by __ZipArchive__ class. It can be used in 3 modes:
       
@@ -61,19 +61,6 @@ The code snippet from __Example 1__ demonstrates how to open existing Zip archiv
 	}
 ```
 
-
-
-#### __Example 1: Open archive__
-
-```csharp
-	Using stream As Stream = File.Open("test.zip", FileMode.Open)
-	    Using archive As ZipArchive = ZipArchive.Create(stream)
-	        ' Display the list of the files in the selected zip file using the ZipArchive.Entries property.
-	    End Using
-	End Using
-```
-
-
 The *archive* variable holds the files that are compressed in the selected zip. You can access the list of these files through the __ZipArchive.Entries__ property. It holds a collection of [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) elements - the elements that describe the files archived in the zip file. You can use these elements to get the name of the compressed file, its uncompressed and compressed size and other file attributes.
         
 
@@ -100,25 +87,7 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
 	}
 ```
 
-
-
-#### __Example 2: Create archive__
-
-```csharp
-	Using stream As Stream = File.Open("test.zip", FileMode.Create)
-	    Using archive As ZipArchive = ZipArchive.Create(stream, Nothing)
-	        Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
-	            Dim writer As New StreamWriter(entry.Open())
-	            writer.WriteLine("Hello world!")
-	            writer.Flush()
-	        End Using
-	    End Using
-	End Using
-```
-
-
-
->tipIf you use __StreamWriter__ to write content to the stream, you should call the Flush() method in order to flush the data to the stream.
+>tip If you use __StreamWriter__ to write content to the stream, you should call the Flush() method in order to flush the data to the stream.
           
 
 >Do not close the stream opened by the __ZipArchiveEntry.Open()__ method. Otherwise the result is unpredictable.

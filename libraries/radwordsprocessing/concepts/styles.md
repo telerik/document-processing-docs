@@ -149,7 +149,7 @@ When evaluating the actual value of a style property in one of the style propert
 > __*__ If a style is of character or paragraph style type it takes into consideration the default style only if it is based on it.
 
 
->tipSome of the style properties always have a local value set.
+>tip Some of the style properties always have a local value set.
 
 
 Corresponding style property of the base style is determined depending on the style type using the following rules:

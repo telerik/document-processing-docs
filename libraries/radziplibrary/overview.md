@@ -30,9 +30,9 @@ This is a list with short descriptions of the top-of-the-line features of Teleri
             
 * **Support for [encryption]({%slug radziplibrary-protect-ziparchive%})**: You can protect your ZIP file with password for more security.
             
->noteIf you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+>note If you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
->noteFor details on the **usage of the library**, go to the **[Getting Started]({%slug radziplibrary-gettingstarted%})** article.
+>note For details on the **usage of the library**, go to the **[Getting Started]({%slug radziplibrary-gettingstarted%})** article.
 
 ## Online Demos
 

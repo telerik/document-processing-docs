@@ -60,7 +60,7 @@ Our primary goal is to prevent security issues before product delivery. We use t
 
 We leverage leading commercial tools to automatically monitor and update third-party dependencies in our Telerik and Kendo GitHub projects, ensuring they remain secure and up-to-date. Alerts are enabled for all GitHub-hosted products, and the identified vulnerable dependencies are addressed by the repository code owners and security champions.
 
->Note: Our definition of "Done" includes successful builds that are scanned using top security scanning tools, and the resolution of any security alerts.
+> Our definition of "Done" includes successful builds that are scanned using top security scanning tools, and the resolution of any security alerts.
 
 ## OWASP Top 10 Alignment
 

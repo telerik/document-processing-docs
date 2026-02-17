@@ -65,7 +65,7 @@ Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEdito
 	#### Figure 1: Hyperlink inserted in a document
 	![Rad Words Processing Concepts Hyperlinks 01](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_01.png)
 
-	>tipThe  **InsertHyperlink()** method also automatically applies the Hyperlink style to the result fragment of the inserted  field. More information about styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.	
+	>tip The  **InsertHyperlink()** method also automatically applies the Hyperlink style to the result fragment of the inserted  field. More information about styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.	
 
 * __InsertField()__ method. It accepts code as first argument and result as second argument.
 

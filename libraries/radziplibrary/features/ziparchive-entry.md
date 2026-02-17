@@ -149,7 +149,7 @@ Extract an entry to a specific folder/directory.
     }   
 ```
 
->tipThis functionality could be achieved by using the [Zip Extensions']({%slug radziplibrary-zipextensions%}) _ExtractToFile_ method as well.
+>tip This functionality could be achieved by using the [Zip Extensions']({%slug radziplibrary-zipextensions%}) _ExtractToFile_ method as well.
 
 ## Operating with ZipArchiveEntry
 Specific examples of using the ZipArchiveEntry.

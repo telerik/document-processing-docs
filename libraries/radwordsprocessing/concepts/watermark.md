@@ -66,7 +66,7 @@ __Example 3__ demonstrates how you can add the watermark created in __Example 1_
 
 <snippet id='codeblock-kka'/>
 
->tipBy default, if header is omitted for a __Section__ other than the first one, it is inherited from the previous __Section__. The watermark set in __Example 3__ will be implicitly inherited by all sections following the first one since watermarks are preserved in the header.
+>tip By default, if header is omitted for a __Section__ other than the first one, it is inherited from the previous __Section__. The watermark set in __Example 3__ will be implicitly inherited by all sections following the first one since watermarks are preserved in the header.
 
 
 There is another way to set a watermark in a document - through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. __RadFlowDocumentEditor__ exposes two overloads of the __SetWatermark()__ method that provide a simplified way to set a watermark. 

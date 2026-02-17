@@ -28,18 +28,6 @@ The code snippet from __Example 1__ opens a ZIP archive in update mode using __Z
 	}
 ```
 
-#### __Example 1: Open for update__
-
-```csharp
-	Using stream As Stream = File.Open("test.zip", FileMode.Open)
-	    Using archive As ZipArchive = ZipArchive.Update(stream, Nothing)
-	        ' Display the list of the files in the selected zip file using the ZipArchive.Entries property.
-	    End Using
-	End Using
-```
-
-
-
 ## Add Entry
 
 In order to add a new entry into the ZIP archive, you should perform the following steps:
@@ -70,20 +58,6 @@ In order to add a new entry into the ZIP archive, you should perform the followi
 	}
 ```
 
-
-
-#### __Example 2: Add entry__
-
-```csharp
-	Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
-	    Dim writer As New StreamWriter(entry.Open())
-	    writer.WriteLine("Hello world!")
-	    writer.Flush()
-	End Using
-```
-
-
-
 ## Delete Entry
 
 The __ZipArchive__ class provides a __GetEntry()__ method, which allows you access to a particular entry in the archive.
@@ -102,18 +76,6 @@ __Example 3__ shows how you could obtain an entry and delete it from the ZIP arc
 	    entry.Delete();
 	}
 ```
-
-
-
-#### __Example 3: Delete entry__
-
-```csharp
-	Dim entry As ZipArchiveEntry = archive.GetEntry("text.txt")
-	If entry IsNot Nothing Then
-	    entry.Delete()
-	End If
-```
-
 
 ## Update Entry
 
@@ -147,24 +109,6 @@ In order to update an existing entry in the ZIP archive, you should perform the 
 	    writer.WriteLine("Updated line.");
 	    writer.Flush();
 	}
-```
-
-
-
-#### __Example 4: Update entry__
-
-```csharp
-	Dim entry As ZipArchiveEntry = archive.GetEntry("text.txt")
-	If entry IsNot Nothing Then
-	    Dim entryStream As Stream = entry.Open()
-	    Dim reader As New StreamReader(entryStream)
-	    Dim content As String = reader.ReadToEnd()
-	
-	    entryStream.Seek(0, SeekOrigin.End)
-	    Dim writer As New StreamWriter(entryStream)
-	    writer.WriteLine("Updated line.")
-	    writer.Flush()
-	End If
 ```
 
 ## Copy Entry

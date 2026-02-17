@@ -34,14 +34,6 @@ __Example 1__ demonstrates how to create DeflateSettings.
 	compressionSettings.HeaderType = CompressedStreamHeader.ZLib;
 ```
 
-#### __Example 1: Create DeflateSettings__
-
-```csharp
-	Dim compressionSettings As New DeflateSettings()
-	compressionSettings.CompressionLevel = CompressionLevel.Best
-	compressionSettings.HeaderType = CompressedStreamHeader.ZLib
-```
-
 ## LZMA Settings
 
 LZMA settings are used for compressing your data using Lempel-Ziv-Markov chain algorithm (LZMA).
@@ -75,41 +67,15 @@ The configurable parameters of the __LzmaSettings__ class are as follows:
 	compressionSettings.PositionStateBits = 2;
 ```
 
-
-
-#### __Example 2: Create LzmaSettings__
-
-```csharp
-	Dim compressionSettings As New LzmaSettings()
-	compressionSettings.DictionarySize = 23
-	compressionSettings.FastBytes = 32
-	compressionSettings.LiteralContextBits = 3
-	compressionSettings.LiteralPositionBits = 3
-	compressionSettings.MatchFinderType = LzmaMatchFinderType.BT4
-	compressionSettings.PositionStateBits = 2
-```
-
-
-
 ## Store Settings
 
 Store settings are used to just store the data using no compression.
         
-
 #### __Example 3: Create StoreSettings__
 
 ```csharp
 	StoreSettings compressionSettings = new StoreSettings();
 ```
-
-
-
-#### __Example 3: Create StoreSettings__
-
-```csharp
-	Dim compressionSettings As New StoreSettings()
-```
-
 
 ## See Also
 

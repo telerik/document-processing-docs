@@ -58,34 +58,6 @@ In order to create a password-protected ZIP archive, you need to pass a **Passwo
 
 ```
 
-#### __Example 1: Create a password-protected ZIP archive__
-
-```csharp
-
-	Using stream As Stream = File.Open("test.zip", FileMode.Create)
-			'By default the EncryptionStrenght is 256 bits but it can be explicitly specified (EncryptionStrength.Aes128, EncryptionStrength.Aes192, and EncryptionStrength.Aes256) by passing it to the constructor
-    		Dim aesEncryptionSettings As PasswordEncryptionSettings = EncryptionSettings.CreateAesPasswordEncryptionSettings()
-
-			'You can also use the PKWARE encryption algorithm instead of the AES one
-			Dim pkwareEncryptionSettings As PasswordEncryptionSettings = EncryptionSettings.CreatePkzipPasswordEncryptionSettings()
-
-    		aesEncryptionSettings.Password = "password"
-    		Dim compressionSettings As CompressionSettings = Nothing
-    		Dim encoding As Encoding = Nothing
-
-    		Using archive As ZipArchive = ZipArchive.Create(stream, encoding, compressionSettings, aesEncryptionSettings)
-
-        		Using entry As ZipArchiveEntry = archive.CreateEntry("text.txt")
-            			Dim writer As StreamWriter = New StreamWriter(entry.Open())
-            			writer.WriteLine("Hello world!")
-            			writer.Flush()
-        		End Using
-    		End Using
-	End Using
-
-```
-
-
 >tip You must always dispose of the ZIP archive object when all operations that use it are completed. Telerik Support recommends that you declare and instantiate the ZIP archive object in a using statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
           
 ## Read a Password-Protected ZipArchive
@@ -111,32 +83,8 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
 
 ```
 
-#### __Example 2: Open and read a password-protected ZIP archive__
-
-```csharp
-
-	Sub Main()	
-		Using stream As FileStream = File.Open("test.zip", FileMode.Open)
-     			Dim decryptionSettings As DecryptionSettings = EncryptionSettings.CreateDecryptionSettings()
-     			AddHandler decryptionSettings.PasswordRequired, AddressOf DecryptionSettings_PasswordRequired
-     			Dim compressionSettings As CompressionSettings = Nothing
-     			Dim encoding As Encoding = Nothing
-
-     			Using zipArchive As ZipArchive = ZipArchive.Read(stream, encoding, compressionSettings, decryptionSettings)
-         			'  Display the list of the files in the selected zip file using the ZipArchive.Entries property. 
-     			End Using
- 		End Using
-   	End Sub
-
-	Private Sub DecryptionSettings_PasswordRequired(ByVal sender As Object, ByVal e As PasswordRequiredEventArgs)
-        	e.Password = "passw0rd"
-	End Sub
-     
-```
-
 >tip You must always dispose of the ZIP archive object when all operations that use it are completed. We recommend that you declare and instantiate the ZIP archive object in a **using** statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
           
-
 ## See Also
 
  * [Getting Started]({%slug radziplibrary-gettingstarted%})
