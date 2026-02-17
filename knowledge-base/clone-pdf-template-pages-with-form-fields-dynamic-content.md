@@ -25,6 +25,8 @@ This article demonstrates how to import a PDF template, calculate the required n
 
 To clone PDF template pages with form fields and add dynamic content, use the **Measure** method of the [Block]({%slug radpdfprocessing-editing-block%}) class to measure content, [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) to duplicate pages, and [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to position text blocks. The form fields are automatically duplicated with each page clone.
 
+First, define the boundaries where the content will be inserted in the template. These values depend on your specific template layout and available space for dynamic content.
+
 The following code demonstrates the complete implementation:
 
 ```csharp
@@ -40,6 +42,8 @@ static void Main(string[] args)
 
     RadFixedPage templatePage = document.Pages[0];
 
+    // Define the boundaries where the content will be inserted in the template
+    // These values are specific to the template layout and should be adjusted accordingly
     int rectangleX = 59;
     int rectangleY = 91;
     double rectangleWidth = 648;
@@ -48,34 +52,34 @@ static void Main(string[] args)
     // Create blocks of dummy text content
     string[] dummyTextBlocks = new string[]
     {
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-        "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
-        "Quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.",
-        "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.",
-        "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio.",
-        "Cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.",
-        "Omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-        "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
-        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
-        "Quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.",
-        "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.",
-        "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio.",
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+"Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
+"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
+"Quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.",
+"Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.",
+"Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio.",
+"Cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est.",
+"Omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.",
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+"Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+"Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.",
+"Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.",
+"Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
+"Quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa.",
+"Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.",
+"Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio.",
     };
 
     // Calculate how many pages are needed
@@ -87,48 +91,36 @@ static void Main(string[] args)
     // Now add the text blocks to the cloned pages
     AddTextBlocksToPages(document, dummyTextBlocks, rectangleX, rectangleY, rectangleWidth, rectangleHeight);
 
-    // Fill form fields with dummy values
+    // Populate form fields with values
     foreach (RadFixedPage page in document.Pages)
     {
-        foreach (FormField formField in document.AcroForm.FormFields)
+        foreach (Annotation annotation in page.Annotations)
         {
-            if (formField is TextBoxField textBoxField)
+            Widget widget = annotation as Widget;
+            if (widget != null)
             {
-                if (textBoxField.Name == "report_num")
+                // TextBox field example
+                TextBoxField textBoxField = widget.Field as TextBoxField;
+                if (textBoxField != null)
                 {
-                    textBoxField.Value = "1";
+                    if (textBoxField.Name == "test1")
+                    {
+                        textBoxField.Value = "Report 12345";
+                    }
+                    else if (textBoxField.Name == "test2")
+                    {
+                        textBoxField.Value = "John Doe";
+                    }
                 }
-                else if (textBoxField.Name == "gi_case_number")
+
+                // CheckBox field example
+                CheckBoxField checkBoxField = widget.Field as CheckBoxField;
+                if (checkBoxField != null)
                 {
-                    textBoxField.Value = "2";
-                }
-                else if (textBoxField.Name == "diagram_by")
-                {
-                    textBoxField.Value = "3";
-                }
-                else if (textBoxField.Name == "measurements_by")
-                {
-                    textBoxField.Value = "4";
-                }
-                else if (textBoxField.Name == "FOOT_report_num")
-                {
-                    textBoxField.Value = "5";
-                }
-                else if (textBoxField.Name == "FOOT_sheet_num")
-                {
-                    textBoxField.Value = "6";
-                }
-                else if (textBoxField.Name == "FOOT_diagram_by")
-                {
-                    textBoxField.Value = "7";
-                }
-                else if (textBoxField.Name == "FOOT_num_sheets")
-                {
-                    textBoxField.Value = "8";
-                }
-                else if (textBoxField.Name == "FOOT_case_number")
-                {
-                    textBoxField.Value = "9";
+                    if (checkBoxField.Name == "approved")
+                    {
+                        checkBoxField.IsChecked = true;
+                    }
                 }
             }
         }
@@ -161,7 +153,9 @@ private static int CalculatePagesNeeded(string[] textBlocks, double rectangleWid
         block.InsertText(textBlock);
         block.SpacingAfter = 10;
 
-        Size blockSize = block.Measure(new Size(rectangleWidth, double.PositiveInfinity));
+        CancellationTokenSource cancellationTokenSource = new CancellationTokenSource(TimeSpan.FromSeconds(10));
+        CancellationToken cancellationToken = cancellationTokenSource.Token;
+        Size blockSize = block.Measure(new Size(rectangleWidth, double.PositiveInfinity), cancellationToken);
 
         // Check if block fits in current page within the rectangle bounds
         if (currentY + blockSize.Height > rectangleY + rectangleHeight)
@@ -217,7 +211,7 @@ private static void AddTextBlocksToPages(RadFixedDocument document, string[] tex
 
     foreach (string textBlock in textBlocks)
     {
-        Telerik.Windows.Documents.Fixed.Model.Editing.Block block = new Telerik.Windows.Documents.Fixed.Model.Editing.Block();
+        Block block = new Block();
         block.InsertText(textBlock);
         block.SpacingAfter = 10;
 
