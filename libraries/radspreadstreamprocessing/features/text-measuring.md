@@ -23,7 +23,7 @@ CellContentSizeHelper is a static class and exposes two overloads of the GetCell
 
 >To use this class, you must add a reference to **Telerik.Windows.Documents.Spreadsheet** for .NET Framework projects or **Telerik.Documents.Spreadsheet** for .NET Standard projects.
 
->tipTo achieve accurate results in .NET Standard, it is suggested to use [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}#spreadfixedtextmeasurer).
+>tip To achieve accurate results in .NET Standard, it is suggested to use [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}#spreadfixedtextmeasurer).
 
 ### Measuring Cell Content with SpreadCellFormat
 

@@ -15,11 +15,11 @@ position: 0
 
 If you want to skip this introductory article and directly start using SpreadStreamProcessing, take a look at the **[Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})** help topic.
 
->noteIf you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites with Telerik controls.
+>note If you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites with Telerik controls.
 
 ![](images/SpreadStreamProcessing-Overview_01.png)
 
->tipYou can find the code example from the image above in our [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/SpreadStreamProcessing/GenerateDocument). This repository contains numerous examples that cover all Document Processing libraries.
+>tip You can find the code example from the image above in our [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/SpreadStreamProcessing/GenerateDocument). This repository contains numerous examples that cover all Document Processing libraries.
 
 
 ## What is Spread Streaming?

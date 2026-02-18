@@ -174,7 +174,7 @@ A Block can be drawn to the content using the __Draw()__ method. The method acce
 
 <snippet id='pdf-draw-block'/>
 
->importantEvery block can be drawn only once. Otherwise, an exception will be thrown.
+>important Every block can be drawn only once. Otherwise, an exception will be thrown.
           
 
 ## Measuring Block Size

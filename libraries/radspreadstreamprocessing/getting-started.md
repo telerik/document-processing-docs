@@ -17,7 +17,7 @@ This article will get you started in using the **RadSpreadStreamProcessing** lib
 
 * [Create a Spreadsheet Document](#create-a-spreadsheet-document)
 
->noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+>note If you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 ## Package References
 
