@@ -39,7 +39,7 @@ __Example 1__ demonstrates how you can create an ImageInline and add it to a [Pa
 
 
 
->tipThe parent __Paragraph__ should belong to the same document that is passed to the constructor of the __ImageInline__.
+>tip The parent __Paragraph__ should belong to the same document that is passed to the constructor of the __ImageInline__.
 
 
 You can add an image at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. Here is how to add an ImageInline at the beginning of a paragraph:
@@ -91,7 +91,7 @@ The __ImageInline__ element exposes the following properties:
 
 This section explains the behavior of the __Size__ property of The __Image__ object in an __ImageInline__ and how the image sizes are exported to the supported formats.
 
->important When using the **.NET Standard** version of the RadWordsProcessing packages, in order to **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
+>important When using the **.NET Standard** version of the RadWordsProcessing packages, in order to **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}).
 
 * __Insert image without specifying its size__
 	* Model: Size will be Size.Empty.

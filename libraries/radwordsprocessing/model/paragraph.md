@@ -32,7 +32,7 @@ The code snippet from __Example 1__ creates and inserts a __Paragraph__ in a __S
 
 <snippet id='codeblock-cu-cu'/>
 
->tipThe parent BlockContainer element (in this case - the *section*) should belong to the same document that is passed to the constructor of the __Paragraph__.
+>tip The parent BlockContainer element (in this case - the *section*) should belong to the same document that is passed to the constructor of the __Paragraph__.
           
 
 You can add a paragraph at a specific index in the __Blocks__ collection of a __BlockContainer__ using the __Insert()__ method. In __Example 2__ is demonstrated how to add a paragraph at the beginning of a section.

@@ -47,10 +47,10 @@ TableCell cell = row.Cells.AddTableCell();
 The __TableCell__ element exposes several properties that allow you to customize its layout. A part of these properties are Style properties and some of the values represent a themable object.
         
 
->tipStyle properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
+>tip Style properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
           
 
->tipThemable objects are objects that can be inherited from a theme. For more information about themes check [this article]({%slug radwordsprocessing-concepts-document-themes%}).
+>tip Themable objects are objects that can be inherited from a theme. For more information about themes check [this article]({%slug radwordsprocessing-concepts-document-themes%}).
           
 
 

@@ -35,7 +35,7 @@ The code snippet from __Example 1__ creates and inserts a Table to a Section.
 
 
 
->tipThe parent BlockContainer element (in this case - the *section*) should belong to the same document that is passed to the constructor of the __Table__.
+>tip The parent BlockContainer element (in this case - the *section*) should belong to the same document that is passed to the constructor of the __Table__.
           
 
 You can add a table at a specific index in the __Blocks__ collection of a __BlockContainer__ using the __Insert()__ method. __Example 2__ shows how to add a table at the beginning of a section.
@@ -69,10 +69,10 @@ Inserting a new __Table__ in the document can also be achieved with the [RadFlow
 
 __Properties__ exposes several properties that allow you to customize the layout of the elements placed underneath it. A part of these properties are Style properties and some of the values represent a themable object.
         
->tipStyle properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
+>tip Style properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
           
 
->tipThemable objects are objects that can be inherited from a theme. For more information about themes check [this article]({%slug radwordsprocessing-concepts-document-themes%}).
+>tip Themable objects are objects that can be inherited from a theme. For more information about themes check [this article]({%slug radwordsprocessing-concepts-document-themes%}).
 
 
 

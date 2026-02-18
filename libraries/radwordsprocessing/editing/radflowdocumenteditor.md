@@ -115,7 +115,9 @@ Inserting [Section]({%slug radwordsprocessing-model-section%}) elements can be a
 
 __Hyperlinks__ in the __RadFlowDocument__ model are actually [Fields]({%slug radwordsprocessing-concepts-fields%}), which means they have code and result parts separated by [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}) inlines. Inserting hyperlinks is simplified with __RadFlowDocumentEditor.InsertHyperlink()__  method:
             
+```C#
 public Hyperlink InsertHyperlink(string text, string uri, bool isAnchor, string toolTip)
+```
 
 It automatically applies "Hyperlink" built-in style to the inserted hyperlink if there is no explicitly set style in the __CharacterFormatting__ options of the editor.
             

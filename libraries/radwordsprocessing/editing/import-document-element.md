@@ -51,44 +51,14 @@ The merging of the styles between the two documents (target and source) is execu
 In **Table 1** is described the behavior of the Import&lt;T&gt;() method of **DocumentElementImporter** in different scenarios.
 
 #### Table 1
-<table>
-
-	<tr>
-		<th>Action</th>
-		<th>Result</th>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a document element.</td>
-		<td>Returns the document element cloned.</td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a paragraph, which contains unpaired annotation marker (e.g. there is a Bookmark, which is spanned between two paragraphs, one of which is passed as a parameter).</td>
-		<td>Returns the paragraph and all its inlines cloned. <b>The unpaired annotation marker is cleared.</b></td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a section, which contains paragraphs which contain by their side unpaired annotations (e.g. there is a Bookmark, which is spanned between two paragraphs and their parent section is passed as a parameter).</td>
-		<td>Returns the section and all its children cloned. The annotation markers are not cleared.</td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a paragraph, which has a style, renamed during the styles merging.</td>
-		<td>Returns the paragraph and all its children cloned with the correctly renamed StyleId property.</td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a paragraph, which has a style, renamed during the styles merging multiple times.</td>
-		<td>Returns the paragraph and all its children cloned with the correctly renamed StyleId property.</td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a document element, which is not a child of the source document.</td>
-		<td>Throws an <b> InvalidOperationException</b>.</td>
-	</tr>
-
-</table>
+| Action | Result |
+|--------|--------|
+| Invoke Import() method with a document element. | Returns the document element cloned. |
+| Invoke Import() method with a paragraph, which contains unpaired annotation marker (e.g. there is a Bookmark, which is spanned between two paragraphs, one of which is passed as a parameter). | Returns the paragraph and all its inlines cloned. **The unpaired annotation marker is cleared.** |
+| Invoke Import() method with a section, which contains paragraphs which contain by their side unpaired annotations (e.g. there is a Bookmark, which is spanned between two paragraphs and their parent section is passed as a parameter). | Returns the section and all its children cloned. The annotation markers are not cleared. |
+| Invoke Import() method with a paragraph, which has a style, renamed during the styles merging. | Returns the paragraph and all its children cloned with the correctly renamed StyleId property. |
+| Invoke Import() method with a paragraph, which has a style, renamed during the styles merging multiple times. | Returns the paragraph and all its children cloned with the correctly renamed StyleId property. |
+| Invoke Import() method with a document element, which is not a child of the source document. | Throws an **InvalidOperationException**. |
 
 ## See Also
 

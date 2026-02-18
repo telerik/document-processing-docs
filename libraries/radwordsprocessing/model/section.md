@@ -69,7 +69,7 @@ The __Section__ exposes several properties that allow you to customize the layou
 
 * __FooterBottomMargin__: Gets or sets the bottom margin of the footer. *The value is in device independent pixels (1/96 inch)*.
 
->tipMore information on how to work with the different types of headers and footer can be found in the [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%}) article.
+>tip More information on how to work with the different types of headers and footer can be found in the [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%}) article.
               
 
 * __SectionType__: Defines the section types:

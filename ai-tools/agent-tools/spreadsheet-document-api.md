@@ -192,7 +192,8 @@ Provides read-only formula and calculation tools for spreadsheets handled throug
 
 <table>
 <tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
-<tr><td>CalculateFormulaWithoutChangingTheDocument</td><td><pre>public CallToolResult CalculateFormulaWithoutChangingTheDocument(
+<tr><td>CalculateFormulaWithoutChangingTheDocument</td><td><pre>public CallToolResult 
+CalculateFormulaWithoutChangingTheDocument(
 string formula,
 string documentId = null)</pre></td><td>Evaluates a formula string (e.g., =SUM(A1:A10) or =(A1+A2)/2) without changing the document. Use this for any calculation, aggregation, count, or analysis instead of iterating raw cells.</td></tr>
 <tr><td>ListAllFormulas</td><td><pre>public CallToolResult ListAllFormulas(

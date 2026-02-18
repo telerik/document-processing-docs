@@ -25,7 +25,7 @@ __Example 1__ shows how to create a FloatingImage and add it to a [Paragraph]({%
 
 
 
->tipThe parent __Paragraph__ should belong to the same document that is passed to the constructor of the __FloatingImage__.
+>tip The parent __Paragraph__ should belong to the same document that is passed to the constructor of the __FloatingImage__.
           
 
 You can add an image at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. Here is how to add a FloatingImage at the beginning of a paragraph:

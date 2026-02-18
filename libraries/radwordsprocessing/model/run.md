@@ -23,7 +23,7 @@ The code in __Example 1__ creates a __Run__ element and adds it to a [Paragraph]
 
 <snippet id='codeblock-dn'/>
 
->tipThe parent __Paragraph__ should belong to the same document that is passed to the constructor of the __Run__.     
+>tip The parent __Paragraph__ should belong to the same document that is passed to the constructor of the __Run__.     
 
 You can add a run at a specific index in the __Inlines__ collection of a paragraph using the __Insert()__ method. __Example 2__ demonstrates how to add a run at the beginning of a paragraph.     
 
@@ -47,9 +47,9 @@ Inserting text in the document can also be achieved with the [RadFlowDocumentEdi
 
 The Run exposes several properties that allow you to customize how it is rendered and formatted. A part of these properties are Style properties and some of the values represent a themable object.
 
->tipStyle properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
+>tip Style properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
           
->tipThemable objects are objects that can be inherited from a theme. For more information about themes check [this article]({%slug radwordsprocessing-concepts-document-themes%}).
+>tip Themable objects are objects that can be inherited from a theme. For more information about themes check [this article]({%slug radwordsprocessing-concepts-document-themes%}).
             
 * __Properties__: Retrieves all __CharacterProperties__ for this element. For more information about the CharacterProperties see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
             

@@ -44,7 +44,7 @@ In order to create a __TableRow__ and add it in the document tree in the same ti
 The __TableRow__ element exposes several properties that allow you to customize its layout. Some of the properties are Style properties.
         
 
->tipStyle properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
+>tip Style properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
 
 
 * __Properties__: Gets all table row properties as TableRowProperties object. More info on how to use table row properties can be found in [Style Properties]({%slug radwordsprocessing-concepts-style-properties%}) article.

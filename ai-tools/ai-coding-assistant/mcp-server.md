@@ -344,7 +344,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 
 * In .NET 8 and .NET 9:
 
-    ```NET8/9
+    ```json
     {
       "mcpServers": {
         "telerik-dpl-assistant": {
@@ -364,7 +364,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 
 * In Node.js:
 
-    ```Nodejs
+    ```json
     {
       "mcpServers": {
         "telerik-dpl-assistant": {

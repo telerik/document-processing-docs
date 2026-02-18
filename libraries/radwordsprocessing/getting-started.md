@@ -17,7 +17,7 @@ This tutorial will take you through the creation of a sample application that us
 
 * [Exporting RadFlowDocument to Docx](#exporting-radflowdocument-to-docx)
 
->noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+>note If you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 ## Package References
 
@@ -97,7 +97,7 @@ Here is a list of packages that contain the __RadWordsProcessing__ functionality
 </table>
 
 <sub> 
-	\* _The Telerik.Documents.ImageUtils package is needed when exporting to PDF format a document containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High._
+	 * <i>The <b>Telerik.Documents.ImageUtils</b> package is needed when exporting to PDF format a document containing images different than <b>Jpeg</b> and <b>Jpeg2000</b> or <b>ImageQuality</b> different than <b>High</b></i>.
 </sub>
 
 >note The **Telerik.Documents.ImageUtils** package depends on **SkiaSharp**. In order to use this package, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
