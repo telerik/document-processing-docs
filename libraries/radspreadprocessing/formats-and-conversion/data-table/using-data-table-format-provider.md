@@ -20,7 +20,7 @@ To use the DataTableFormatProvider you need to reference the __Telerik.Windows.D
 
 Example 1 shows how you can import a DataTable. The sample instantiates a __DataTableFormatProvider__ and passes the table to its __Import__ method.   
 
-#### __Example 1: Import DataTable __
+#### Example 1: Import DataTable
 
 ```csharp
 
@@ -33,7 +33,7 @@ Example 1 shows how you can import a DataTable. The sample instantiates a __Data
 
 You can import the data from the DataTable to an existing worksheet as well.
 
-#### __Example 2: Import DataTable to an existing Worksheet __
+#### Example 2: Import DataTable to an existing Worksheet
 
 ```csharp
 
@@ -51,7 +51,7 @@ You can import the data from the DataTable to an existing worksheet as well.
 
 Example 3 demonstrates how you can export an existing Worksheet to a DataTable. The snippet assumes that you already have a Workbook with some data.
 
-#### __Example 3: Export Worksheet to a DataTable__
+#### Example 3: Export Worksheet to a DataTable
 
 ```csharp
 	

@@ -18,7 +18,7 @@ __XlsxFormatProvider__ makes it easy to import and export XLSX (Excel Workbook) 
 >Unlike the CSV and TXT format providers, the __XlsxFormatProvider__ requires references to the following package:    
 >* Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml        
 
->note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.           
+>note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.           
 
 Once you reference the aforementioned packages, you need to create an instance of the __XlsxFormatProvider__ in order to import and export XLSX (Excel Workbook) files. This provider appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx namespace. __XlsxFormatProvider__ implements the __IWorkbookFormatProvider__ interface, which in turn appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders. Depending on the whether you would like to work with the concrete class or the interface, you would need to include either the first or both namespaces.
 
