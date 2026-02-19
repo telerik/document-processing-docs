@@ -18,6 +18,10 @@ res_type: kb
 
 When performing a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) operation with a DOCX template, the merge data may include HTML formatted strings. By default, these HTML strings are not parsed and are displayed as raw text in the result document after the mail merge. However, you can process and parse these HTML strings to display them with their intended formatting in the final document.
 
+|Without HTML Parsing|With HTML Parsing|
+|----|----|
+|![Unparsed HTML Result](images/mail-merge-html-unparsed.png)|![Parsed HTML Result](images/mail-merge-html-result.png)|
+
 ## Solution
 
 The solution involves importing the HTML formatted strings as separate [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instances using the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}), then replacing the original HTML text with the parsed content.
@@ -32,8 +36,9 @@ The following example demonstrates the complete workflow:
 * Replace the raw HTML text with the parsed content using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
 * Export the final document
 
-> This is just an example approach. The implementation can vary depending on the template document structure and the HTML content.
+> The implementation can vary depending on the template document structure and the HTML content.
 
+#### Empty Template Document 
 ![Empty Template Document](images/mail-merge-html-template.png)
 
 #### **Mail Merge with HTML Formatted Strings**
@@ -183,12 +188,10 @@ public class Phone
 }
 ```
 
-![Final Result Document](images/mail-merge-html-result.png)
-
 ## See Also
 
 * [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
 * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
 * [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
-* [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
+* [Find and Replace Text and Style]({%slug radwordsprocessing-editing-find-and-replace%})
