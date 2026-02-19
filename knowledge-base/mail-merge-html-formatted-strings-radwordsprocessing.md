@@ -18,9 +18,13 @@ res_type: kb
 
 When performing a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) operation with a DOCX template, the merge data may include HTML formatted strings. By default, these HTML strings are not parsed and are displayed as raw text in the result document after the mail merge. However, you can process and parse these HTML strings to display them with their intended formatting in the final document.
 
-|Without HTML Parsing|With HTML Parsing|
-|----|----|
-|![Unparsed HTML Result](images/mail-merge-html-unparsed.png)|![Parsed HTML Result](images/mail-merge-html-result.png)|
+**Without HTML Parsing:**
+
+![Unparsed HTML Result](images/mail-merge-html-unparsed.png)
+
+**With HTML Parsing:**
+
+![Parsed HTML Result](images/mail-merge-html-result.png)
 
 ## Solution
 
