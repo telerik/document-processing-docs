@@ -38,9 +38,9 @@ The following code snippets shows how to:
 	3. Create a Table of Contents (TOC) using [Link]({%slug radpdfprocessing-model-annotations-links%}#link) annotations pointing to the merged document pages;
 	4. Export the merged document to a single PDF file.
 
-#### __[C#] Example__
+#### __Example__
 
-{{region pdfprocessing-create-table-of-contents-page1}}
+```csharp
 
 	PdfFormatProvider provider = new PdfFormatProvider();
 
@@ -52,11 +52,11 @@ The following code snippets shows how to:
 	CreateTOC(document1);
 
 	ExportToPdf(provider, document1);
-{{endregion}}
+```
 
-#### __[C#] Import PDF files__
+#### __Import PDF files__
 
-{{region pdfprocessing-create-table-of-contents-page2}}
+```csharp
 
 	private static void ImportDocuments(PdfFormatProvider provider, out RadFixedDocument document1, out RadFixedDocument document2)
 	{
@@ -70,11 +70,11 @@ The following code snippets shows how to:
 			document2 = provider.Import(stream);
 		}
 	}
-{{endregion}}
+```
 
-#### __[C#] Create the Table of Contents__
+#### __Create the Table of Contents__
 
-{{region pdfprocessing-create-table-of-contents-page3}}
+```csharp
 
 	private static void CreateTOC(RadFixedDocument document1)
 	{
@@ -117,11 +117,11 @@ The following code snippets shows how to:
 			}
 		}
 	}
-{{endregion}}
+```
 
-#### __[C#] Export to PDF file__
+#### __Export to PDF file__
 
-{{region pdfprocessing-create-table-of-contents-page4}}
+```csharp
 
 	private static void ExportToPdf(PdfFormatProvider provider, RadFixedDocument document1)
 	{
@@ -136,4 +136,4 @@ The following code snippets shows how to:
 			provider.Export(document1, output);
 		}
 	}
-{{endregion}}
+```

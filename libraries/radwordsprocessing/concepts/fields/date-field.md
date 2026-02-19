@@ -38,7 +38,7 @@ Inserting a Date Field is easily achieved through the [RadFlowDocumentEditor]({%
 __Example 1__ demonstrates how you can insert a date field.
         
 
-#### __[C#] Example 1: Insert date field__
+#### __Example 1: Insert date field__
 
 <snippet id='codeblock-nn'/>
 

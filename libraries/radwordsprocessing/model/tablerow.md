@@ -26,14 +26,14 @@ __TableRow__ is a flow document element that defines a row within a [Table]({%sl
 You can use the code snippet from __Example 1__ to create a __TableRow__ and add it in a __Table__.
         
 
-#### __[C#] Example 1: Create a TableRow and add it to a table__
+#### __Example 1: Create a TableRow and add it to a table__
 
 <snippet id='codeblock-dede'/> 
 
 In order to create a __TableRow__ and add it in the document tree in the same time, you can use the __AddTableRow()__ method of the [Rows](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Table.html#collapsible-Telerik_Windows_Documents_Flow_Model_Table_Rows) collection property of the table.
         
 
-#### __[C#] Example 2: Create a TableRow and add it to a table in the same time__
+#### __Example 2: Create a TableRow and add it to a table in the same time__
 
 <snippet id='codeblock-dfdf'/>
 
@@ -44,7 +44,7 @@ In order to create a __TableRow__ and add it in the document tree in the same ti
 The __TableRow__ element exposes several properties that allow you to customize its layout. Some of the properties are Style properties.
         
 
->tipStyle properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
+>tip Style properties are properties that can be inherited from a style. For more information about styles see [this article]({%slug radwordsprocessing-concepts-style-properties%}).
 
 
 * __Properties__: Gets all table row properties as TableRowProperties object. More info on how to use table row properties can be found in [Style Properties]({%slug radwordsprocessing-concepts-style-properties%}) article.
@@ -79,7 +79,7 @@ The __TableRow__ element exposes several properties that allow you to customize 
 __Example 3__ shows how to add a number of __TableCell__ elements in a TableRow.
             
 
-#### __[C#] Example 3: Add TableCell objects to a TableRow__
+#### __Example 3: Add TableCell objects to a TableRow__
 
 <snippet id='codeblock-dgdg'/>
 

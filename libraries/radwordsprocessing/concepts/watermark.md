@@ -41,7 +41,7 @@ Creating a watermark through the constructor of the class requires to pass as a 
 __Example 1__ demonstrates the creation of a text watermark.
 
 
-#### __[C#] Example 1: Create text watermark__
+#### __Example 1: Create text watermark__
 
 <snippet id='codeblock-iia'/>
 
@@ -49,7 +49,7 @@ __Example 1__ demonstrates the creation of a text watermark.
 Creating image watermark is very similar to creating a text one. __Example 2__ shows how to create an image watermark.
 
 
-#### __[C#] Example 2: Create image watermark__
+#### __Example 2: Create image watermark__
 
 <snippet id='codeblock-jja'/>
 
@@ -62,11 +62,11 @@ Watermarks are preserved in the header of the section to which the watermark is 
 
 __Example 3__ demonstrates how you can add the watermark created in __Example 1__ to a __RadFlowDocument__ by creating a __Header__ for its first __Section__.
 
-#### __[C#] Example 3: Add watermark to header__
+#### __Example 3: Add watermark to header__
 
 <snippet id='codeblock-kka'/>
 
->tipBy default, if header is omitted for a __Section__ other than the first one, it is inherited from the previous __Section__. The watermark set in __Example 3__ will be implicitly inherited by all sections following the first one since watermarks are preserved in the header.
+>tip By default, if header is omitted for a __Section__ other than the first one, it is inherited from the previous __Section__. The watermark set in __Example 3__ will be implicitly inherited by all sections following the first one since watermarks are preserved in the header.
 
 
 There is another way to set a watermark in a document - through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. __RadFlowDocumentEditor__ exposes two overloads of the __SetWatermark()__ method that provide a simplified way to set a watermark. 
@@ -74,7 +74,7 @@ There is another way to set a watermark in a document - through the [RadFlowDocu
 __Example 4__ demonstrates how to set the watermark created in __Example 2__ through __RadFlowDocumentEditor__ to the first page of a section. The method will create the __Header__ element for you, and you only need to specify its type.
 
 
-#### __[C#] Example 4: Set watermark with RadFlowDocumentEditor__
+#### __Example 4: Set watermark with RadFlowDocumentEditor__
 
 <snippet id='codeblock-lla'/>
 

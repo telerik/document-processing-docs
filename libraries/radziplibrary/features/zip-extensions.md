@@ -58,7 +58,7 @@ This class implements the [IPlatformManager](https://docs.telerik.com/devtools/d
 
 * __ICryptoProvider GetCryptoProvider(EncryptionSettingsBase settings)__: Gets crypto provider initialized using given encryption settings.
 
-* __bool IsEncodingSupported(Encoding encoding)__: Indicates whether specified encoding is supported for this platform. <returns>true if encoding is allowed in the ZIP file.
+* __bool IsEncodingSupported(Encoding encoding)__: Indicates whether specified encoding is supported for this platform. &lt;returns&gt;true if encoding is allowed in the ZIP file.
 
 
 ## See Also

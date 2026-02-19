@@ -7,15 +7,15 @@ slug: spreadprocessing-export-worksheet-to-image-netstandard
 tags: spreadprocessing, export, worksheet, image, netstandard, xlsx, spread
 res_type: kb
 ---
-# Environment
+## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.305 | RadSpreadProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)| 
 ---
-# Description
+## Description
 This article shows how to export a [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) to image in .NET Standard using the [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) library. Currently the [Document Processing libraries]({%slug introduction%}) provide image export only for PDF files. This is why the document must first be converted to PDF.
 
-# Solution
+## Solution
 
 1. [Import the file as __Workbook__](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsx/xlsxformatprovider#import).
 2. Set the desired [Worksheet Page Setup]({%slug radspreadprocessing-features-worksheetpagesetup%}) and [PDF Export Settings]({%slug radspreadprocessing-format-and-conversion-pdf-settings%}).
@@ -25,7 +25,7 @@ This article shows how to export a [Worksheet]({%slug radspreadprocessing-workin
 6. Make the PDF page the same size.
 7. Export the __PDF__ file to image using the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}).
 
-# Additional Requirements
+## Additional Requirements
 
 ### .NET Standard requirements
 * [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%})

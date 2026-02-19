@@ -20,22 +20,22 @@ To use the DataTableFormatProvider you need to reference the __Telerik.Windows.D
 
 Example 1 shows how you can import a DataTable. The sample instantiates a __DataTableFormatProvider__ and passes the table to its __Import__ method.   
 
-#### __[C#] Example 1: Import DataTable __
+#### Example 1: Import DataTable
 
-{{region cs-radspreadprocessing-formats-and-conversion-using-data-table-format-provider_0}}
+```csharp
 
 	DataTable table = GetTable();
 	DataTableFormatProvider provider = new DataTableFormatProvider();
 	
 	Workbook workbook = provider.Import(table, TimeSpan.FromSeconds(10));
 
-{{endregion}}
+```
 
 You can import the data from the DataTable to an existing worksheet as well.
 
-#### __[C#] Example 2: Import DataTable to an existing Worksheet __
+#### Example 2: Import DataTable to an existing Worksheet
 
-{{region cs-radspreadprocessing-formats-and-conversion-using-data-table-format-provider_1}}
+```csharp
 
 	DataTable table = GetTable();
 	DataTableFormatProvider provider = new DataTableFormatProvider();
@@ -45,22 +45,22 @@ You can import the data from the DataTable to an existing worksheet as well.
 	
 	provider.Import(table, worksheet, TimeSpan.FromSeconds(10));
 
-{{endregion}}
+```
 
 ## Export
 
 Example 3 demonstrates how you can export an existing Worksheet to a DataTable. The snippet assumes that you already have a Workbook with some data.
 
-#### __[C#] Example 3: Export Worksheet to a DataTable__
+#### Example 3: Export Worksheet to a DataTable
 
-{{region cs-radspreadprocessing-formats-and-conversion-using-data-table-format-provider_2}}
+```csharp
 	
 	Workbook workbook = GetWorkbook();
 	DataTableFormatProvider provider = new DataTableFormatProvider();
 	
 	DataTable table = provider.Export(workbook.ActiveWorksheet, TimeSpan.FromSeconds(10));
 
-{{endregion}}
+```
 
 # See Also
 

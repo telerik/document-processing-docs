@@ -42,7 +42,7 @@ Text that results when the comparison is true (TrueText) or false (FalseText). I
 
 Inserting an If field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument. 
 
-#### __[C#] Example 1: Insert If field__
+#### __Example 1: Insert If field__
 
 <snippet id='codeblock-bb'/>
 

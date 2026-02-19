@@ -38,7 +38,7 @@ Creating a __PermissionRange__ requires passing an instance of the __PermissionR
 __Example 1__ demonstrates how to create permission credentials for a single user specified by email and a permission range in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
 
 
-#### __[C#] Example 1: Add PermissionRange to paragraph__
+#### __Example 1: Add PermissionRange to paragraph__
 
 <snippet id='codeblock-dd'/>
 
@@ -49,7 +49,7 @@ Inserting a __PermissionRange__ in the document can be achieved through [RadFlow
 
 __Example 2__ demonstrates how to specify that a __TableCell__ can be edited by everyone when protection is enforced.
 
-#### __[C#] Example 2: Insert PermissionRange for TableCell__
+#### __Example 2: Insert PermissionRange for TableCell__
 
 <snippet id='codeblock-de'/>
 
@@ -70,7 +70,7 @@ __ProtectionMode__ exposes the following members:
 
 __Example 3__ shows how to protect and unprotect a document using the various overloads of the methods.
 
-#### __[C#] Example 3: Protect and unprotect document through RadFlowDocumentEditor__
+#### __Example 3: Protect and unprotect document through RadFlowDocumentEditor__
 
 <snippet id='codeblock-df'/>
 
@@ -81,7 +81,7 @@ __Example 3__ shows how to protect and unprotect a document using the various ov
 
 __RadFlowDocument__ exposes a property of type __ProtectionSettings__ - ProtectionSettings. Enforcing protection directly through the document is possible by setting the  __Enforced__ property as demonstrated in __Example 4__.
 
-#### __[C#] Example 4: Enforce protection through RadFlowDocument__
+#### __Example 4: Enforce protection through RadFlowDocument__
 
 <snippet id='codeblock-dg'/>
 

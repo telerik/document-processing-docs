@@ -22,9 +22,7 @@ The example is showing how to create a PDF file by using an image.
 
 In this example you will create a brand new PDF document, add a page to it, and draw the image using the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 
-#### __C#__
-
-{{region kb-radpdfprocessing-editing-fixedcontenteditor}}
+```csharp
 
 	// If you are working in a .NET Core application, you will need to also provide an image resolver. You can use the default implementation provided in Telerik.Documents.ImageUtils:
 	// Telerik.Documents.ImageUtils.ImagePropertiesResolver defaultImagePropertiesResolver = new Telerik.Documents.ImageUtils.ImagePropertiesResolver();
@@ -43,7 +41,7 @@ In this example you will create a brand new PDF document, add a page to it, and 
     File.WriteAllBytes(@"result.pdf", provider.Export(doc));
 
 
-{{endregion}}
+```
 
 
 

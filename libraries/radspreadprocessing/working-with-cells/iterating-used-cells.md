@@ -19,9 +19,9 @@ This topic shows how you can access only the cells that are used in a worksheet 
 The [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) class enables you to obtain all the cells that are used. A cell is considered used when it has any property applied to it - not matter whether it will be a value or a foreground. The **UsedCellRange** property of the Worksheet class returns a cell range that starts from cell **A1** and holds all cells containing data or formatting. **Example 1** shows how to obtain this range of cells and iterate it.  
 
 
-#### __[C#] Example 1: Iterate UsedCellRange__
+#### __Example 1: Iterate UsedCellRange__
 
-{{region radspreadprocessing-working-with-cells-iterating-used-cells_0}}
+```csharp
 
 	CellRange usedCellRange = worksheet.UsedCellRange;
 	for (int rowIndex = usedCellRange.FromIndex.RowIndex; rowIndex <= usedCellRange.ToIndex.RowIndex; rowIndex++)
@@ -31,16 +31,16 @@ The [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-works
 	        CellSelection cell = worksheet.Cells[rowIndex, columnIndex];
 	    }
 	}
-{{endregion}}
+```
 
 
 ## Working With a Filtered Range
 
 This section describes how you can obtain only the cells that have particular property applied to them and ignore the others. Often, the property that we are interested in is the value of a cell. With the **GetUsedCellRange()** method of [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) you can pass an IEnumerable&lt;[IPropertyDefinition](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.IPropertyDefinition-1.html)&gt; object to get the used cell range, holding only the cells with specific property definitions. **Example 2** demonstrates how to get the used cell range of cells with value and iterate it to process each value.
 
-#### __[C#] Example 2: Obtain and iterate a filtered UsedCellRange__
+#### __Example 2: Obtain and iterate a filtered UsedCellRange__
 
-{{region radspreadprocessing-working-with-cells-iterating-used-cells_1}}
+```csharp
 
 	CellRange usedCellRangeWithValues = worksheet.GetUsedCellRange(new IPropertyDefinition[] { CellPropertyDefinitions.ValueProperty });
 	for (int row = usedCellRangeWithValues.FromIndex.RowIndex; row <= usedCellRangeWithValues.ToIndex.RowIndex; row++)
@@ -50,7 +50,7 @@ This section describes how you can obtain only the cells that have particular pr
 	        ICellValue value = worksheet.Cells[row, column].GetValue().Value;
 	    }
 	}
-{{endregion}}
+```
 
 >tip For more information on working with the values of the cells, check the [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) topics.
 

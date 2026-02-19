@@ -7,22 +7,6 @@ tags: ai, document, analysis, prerequisites, setup, installation
 published: True
 position: 1
 ---
-<style>
-table, th, td {
-    border: 1px solid;
-}
-/* First table with two columns */
-table:nth-of-type(1) th:first-of-type {
-    width: 50%;
-}
-table:nth-of-type(1) th:nth-of-type(2) {
-    width: 50%;
-}
-/* Second table with three columns */
-table:nth-of-type(2) th {
-    width: 33.33%;
-}
-</style>
 
 # GenAI-powered Document Insights Prerequisites
 This article explains the requirements for using the GenAI-powered Document Insights functionality in the [RadWordsProcessing library]({%slug radwordsprocessing-overview%}).
@@ -39,8 +23,8 @@ In addition to the [standard RadWordsProcessing references]({%slug radwordsproce
 >
 >* **Telerik.Documents.AI.Core**
 >* **Telerik.Documents.AI.RAG**
->    * **Microsoft.Extensions.AI.Abstractions**
->    * **SharpToken**
+>   * **Microsoft.Extensions.AI.Abstractions**
+>   * **SharpToken**
 >
 >**Microsoft.Extensions.AI.Abstractions** is currently available only in **preview** version. 
 >If you are referencing an _assembly/dll_ of **Documents.AIConnector** instead of a NuGet package, you must manually add the **SharpToken** NuGet package.
@@ -69,7 +53,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 
 >caution The following code snippet is valid for Microsoft.Extensions.AI.OpenAI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
 
-#### __[C#] Example 1: Setting up Azure OpenAI__
+#### __Example 1: Setting up Azure OpenAI__
 
 <snippet id='libraries-flow-features-gen-ai-setup-azure-open-ai'/>
 
@@ -78,7 +62,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 1. Create an OpenAI account.
 2. Get your API key from the OpenAI dashboard.
 
-#### __[C#] Example 2: Setting up OpenAI__
+#### __Example 2: Setting up OpenAI__
 
 <snippet id='libraries-flow-features-gen-ai-setup-open-ai'/>
 
@@ -90,7 +74,7 @@ Ollama allows you to run AI models locally on your machine. This is useful for d
 2. Pull the model you want to use.
 3. Start the Ollama server.
 
-#### __[C#] Example 3: Setting up Ollama__
+#### __Example 3: Setting up Ollama__
 
 <snippet id='libraries-flow-features-gen-ai-setup-ollama-ai'/>
 

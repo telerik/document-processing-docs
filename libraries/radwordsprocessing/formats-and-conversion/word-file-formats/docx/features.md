@@ -433,7 +433,7 @@ Partial
 
 Through <a href={%slug radwordsprocessing-concepts-customcodefield%}>custom code fields</a>
 
-              </td></tr><tr><td>
+</td></tr><tr><td>
 
 <b>
                   Review

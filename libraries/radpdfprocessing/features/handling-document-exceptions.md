@@ -34,7 +34,7 @@ To use this functionality you should handle the __PdfImportSettings.DocumentUnha
 
 When using the **OnDemand** reading mode you should handle the __RadFixedDocument.DocumentUnhandledException__ event. The __Handled__ option in the event arguments indicates if the exception is handled by the code in the event handler or the exception should be thrown. 
 
-#### __C# Example 2: Using the DocumentUnhandledException event while loading on demand__
+#### __Example 2: Using the DocumentUnhandledException event while loading on demand__
 
 <snippet id='libraries-pdf-features-handling-exceptions-radfixeddocument'/>
 
@@ -42,7 +42,8 @@ When using the **OnDemand** reading mode you should handle the __RadFixedDocumen
 
 As of **Q1 2025** the [PdfExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings) offers the **DocumentUnhandledException** event which allows you to handle exceptions while exporting a document.
 
-#### __C# Example 3: Using the DocumentUnhandledException event while exporting__
+
+#### __Example 3: Using the DocumentUnhandledException event while exporting__
 
 <snippet id='libraries-pdf-features-handling-exceptions-export-settings'/>
 

@@ -10,7 +10,10 @@ position: 1
 
 # Configuring Document Processing Libraries
 
-With **Q2 2024** we are adding a Document Processing Configuration Wizard for **Visual Studio Code**. The wizard is included in the Visual Studio Code extension for [Telerik UI for Blazor ](https://marketplace.visualstudio.com/items?itemName=TelerikInc.blazortemplatewizard) and [Telerik UI for ASP.NET Core](https://dotnet.microsoft.com/en-us/apps/aspnet) and it enables you to easily add the required packages when working with the Telerik Document Processing Library.
+|Minimum Version|Q2 2024|
+|----|----|
+
+The **Document Processing Configuration Wizard** is included in the Visual Studio Code extension for [Telerik UI for Blazor ](https://marketplace.visualstudio.com/items?itemName=TelerikInc.blazortemplatewizard) and [Telerik UI for ASP.NET Core](https://dotnet.microsoft.com/en-us/apps/aspnet) and it enables you to easily add the required packages when working with the Telerik Document Processing Library.
 As of **Q1 2025** we offer the DPL wizard for the [Telerik UI for MAUI](https://marketplace.visualstudio.com/items?itemName=TelerikInc.telerik-maui-productivity-tools) as well.
 
 ## Getting the Wizard

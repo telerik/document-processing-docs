@@ -48,23 +48,23 @@ Most of the methods follow the same pattern for converting units:
 
 __Example 1__ shows how to obtain row height as DIPs and convert it to Points.    
 
-#### __[C#] Example 1: Convert from DIP to Point__
+#### __Example 1: Convert from DIP to Point__
 
-{{region dips_1}}
+```csharp
 
 	var rowHeightInDips = worksheet.Rows[0].GetHeight().Value.Value;
 	var rowHeightInPoints = UnitHelper.DipToPoint(rowHeightInDips);
-{{endregion}}
+```
 
 except the **DipToUnit** and **UnitToDip** methods which accepts not only the units but the [UnitType](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.media.unittype) as well as a parameter:
 
 __Example 2__ shows how to convert from Point to DIP and set the row height.    
 
-#### __[C#] Example 2: Convert from Point to DIP__
+#### __Example 2: Convert from Point to DIP__
 
-{{region dips_2}}
+```csharp
 
 	double dips = UnitHelper.UnitToDip(60, UnitType.Point);
 	RowHeight newRowHeight = new RowHeight(dips, isCustom: true);
 	worksheet.Rows[0].SetHeight(newRowHeight);
-{{endregion}}
+```

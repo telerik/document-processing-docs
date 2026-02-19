@@ -32,14 +32,14 @@ In **RadSpreadStreamProcessing**, a worksheet could be exported through the [**I
 
 A concrete instance of IWorksheetExporter could be created through the CreateWorksheetExporter() method of [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}). **Example 1** demonstrates how you can add a worksheet to a workbook.
 
-#### **[C#] Example 1: Create IWorksheetExporter**
+#### **Example 1: Create IWorksheetExporter**
 
-{{region cs-radspreadstreamprocessing-model-worksheet_0}}
+```csharp
 	using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("My sheet"))
 	{
 	    // Fill the worksheet with data and set the desired properties
 	}
-{{endregion}}
+```
 
 >IWorksheetExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 

@@ -10,7 +10,7 @@ res_type: kb
 ticketid: 1698635
 ---
 
-# Environment
+## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2025.3.806 | RadWordsProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)| 

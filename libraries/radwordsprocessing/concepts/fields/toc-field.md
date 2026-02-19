@@ -63,15 +63,14 @@ Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%sl
 
 __Example 1__ demonstrates how you can insert a TOC field.
         
+#### __Example 1: Insert TOC field__
 
-#### __[C#] Example 1: Insert TOC field__
-
-<pre><code>
+```C#
     var document = new RadFlowDocument();
     var editor = new RadFlowDocumentEditor(document);
 
     editor.InsertField("TOC \\f a ");
-</code></pre>
+```
 
 This makes a list of all TC fields with the 'a' identifier.
 

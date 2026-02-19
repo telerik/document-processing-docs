@@ -35,7 +35,7 @@ The FormField class provides the following properties:
 
 Each field type can be recognized from the FormField base class by getting the value from its **FieldType** property. This way you can convert the field to its inheritor type by doing a cast to some of the FormField class inheritors.
 
-#### **[C#] Example 1: Obtain fields from a document**
+#### **Example 1: Obtain fields from a document**
 
 <snippet id='pdf-obtain-fields-from-document'/>
 
@@ -62,7 +62,7 @@ The following list shows all the inheritors of the FormField class:
 
 In R2 2020 we introduced the __Rename__ method which allows you to rename the Form Fields. You need to pass the existing field name and the new name.  
 
-#### **[C#] Example 2: Rename Form Fields**
+#### **Example 2: Rename Form Fields**
 
 <snippet id='pdf-rename-form-field'/>
 
@@ -70,7 +70,7 @@ In R2 2020 we introduced the __Rename__ method which allows you to rename the Fo
 
 When merging documents that contain FormFields, you need to ensure that each field in the document will have a unique name. This can be achieved by using the __MergedFieldNameResolving__ event. This event gives you access to all used field names and allows you to change the current field, if it is already used. 
 
-#### **[C#] Example 2: Merge files with Form Fields**
+#### **Example 2: Merge files with Form Fields**
 
 <snippet id='pdf-fields-merge'/>
 

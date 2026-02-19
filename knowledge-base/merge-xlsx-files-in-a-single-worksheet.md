@@ -21,9 +21,9 @@ You have a multiple Xlsx files and you want to merge them in single file.
 
 You can iterate all files, import them, and copy their worksheets in a new Workbook. 
 
-#### __[C#] Merge multiple worksheet in a single Workbook__
+#### __Merge multiple worksheet in a single Workbook__
 
-{{region kb-merge-xlsx-files-in-a-single-worksheet_0}}
+```csharp
 
     List<string> files = new List<string>();
     files.Add("Book1.xlsx");
@@ -45,4 +45,4 @@ You can iterate all files, import them, and copy their worksheets in a new Workb
     var resultXlsx = provider.Export(workbook);
     File.WriteAllBytes("result.xlsx", resultXlsx);
 
-{{endregion}}
+```

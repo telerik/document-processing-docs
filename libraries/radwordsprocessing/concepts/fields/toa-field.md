@@ -31,26 +31,21 @@ Switches are a way for the code fragment to specify formatting for the result of
 |\\s Identifier|Includes a number, such as a case number or section number, before the page number. The item must be numbered with a SEQ field, and Identifier must match the identifier in the SEQ field.|
 |\\d "Separator"|Used with the \s switch, specifies the characters (up to fifteen) that separate the sequence numbers and page numbers. |
 
-
-
 # Inserting
 
 Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as argument.
 
 __Example 1__ demonstrates how you can insert a TOA field.
         
+#### __Example 1: Insert TOA field__
 
-#### __[C#] Example 1: Insert TOA field__
-
-<pre><code>
+```C#
     var document = new RadFlowDocument();
     var editor = new RadFlowDocumentEditor(document);
 
     editor.InsertField("TOA \\h \\c \"3\" \\p");
-</code></pre>
+```
  
-
-
 ## See Also 
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

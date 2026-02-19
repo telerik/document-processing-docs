@@ -37,13 +37,13 @@ __TxtFormatProvider__ exposes a __Settings__ property of type __TxtSettings__. T
 __Example 1__ shows how to create and specify a particular setting to a TxtFormatProvider.
         
 
-#### __[C#] Example 1: Use TxtSettings__
+#### __Example 1: Use TxtSettings__
 
-{{region cs-radspreadprocessing-formats-and-conversion-txt-settings_0}}
+```csharp
 	TxtFormatProvider provider = new TxtFormatProvider();
 	provider.Settings.Delimiter = ';';
 	provider.Settings.Quote = '^';
 	provider.Settings.HasHeaderRow = true;
-{{endregion}}
+```
 
 

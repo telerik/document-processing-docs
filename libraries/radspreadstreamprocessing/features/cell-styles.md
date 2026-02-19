@@ -81,12 +81,12 @@ When you apply a style to a cell with locally set properties, the end result is 
 
 **Example 1** shows what applying the Number group looks like.
 
-#### **[C#] Example 1: Get a built-in style and apply a number group**
+#### **Example 1: Get a built-in style and apply a number group**
 
-{{region cs-radspreadstreamprocessing-features-styling-cell-styles_0}}
+```csharp
 	SpreadCellStyle style = workbook.CellStyles.GetByName("Good");
 	style.ApplyNumberFormat = true;
-{{endregion}}
+```
 
 Through the API you can add, modify or remove styles from the **CellStyles** collection of [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}).
 
@@ -97,9 +97,9 @@ Through the API you can add, modify or remove styles from the **CellStyles** col
 
 Creating a new style is pretty straight-forward. All you have to do is invoke the Add() method of workbook's CellStyles collection. The method returns an object of type SpreadCellStyle, which you can manipulate. 
 
-#### **[C#] Example 2: Create SpreadCellStyle and apply it to a cell**
+#### **Example 2: Create SpreadCellStyle and apply it to a cell**
 
-{{region cs-radspreadstreamprocessing-features-styling-cell-styles_1}}
+```csharp
 	SpreadBorder border = new SpreadBorder(SpreadBorderStyle.Thick, new SpreadThemableColor(new SpreadColor(255, 0, 0)));
 	SpreadCellStyle style = workbook.CellStyles.Add("MyStyle");
 	
@@ -125,7 +125,7 @@ Creating a new style is pretty straight-forward. All you have to do is invoke th
 	{
 	    CellStyle = style
 	});
-{{endregion}}
+```
 
 ## Modify a Style
 
@@ -133,12 +133,12 @@ Modifying a style is even easier than creating one. All you need to do is retrie
 
 **Example 3** obtains the Bad style from the cell styles collection of a workbook and modifies it.
 
-#### **[C#] Example 3: Modify a built-in style**
+#### **Example 3: Modify a built-in style**
 
-{{region cs-radspreadstreamprocessing-features-styling-cell-styles_2}}
+```csharp
 	SpreadCellStyle style = workbook.CellStyles.GetByName("Bad");
 	style.IsBold = true;
-{{endregion}}
+```
 
 
 ## See Also

@@ -18,22 +18,22 @@ The following sections describe the members of the WorskheetViewState class.
 
 Allows you to get or set the current scale factor of the worksheet. You can use this property to zoom in or out according to your needs. The values you can apply are between 0.5 and 4, corresponding to 50% and 400% respectively.
 
-#### __[C#] Example 1: Set the zoom level of a worksheet to 50%__
-{{region cs-radspreadprocessing-working-with-worksheets-view-state_0}}
+#### __Example 1: Set the zoom level of a worksheet to 50%__
+```csharp
 
     workbook.Worksheets[0].ViewState.ScaleFactor = new Size(0.5, 0.5);
-{{endregion}}
+```
 
 
 ### **TopLeftCellIndex**
 
 Determines the top left cell visible on the screen. You can use this property to ensure that the data you would like to visualize when the worksheet is opened is in the user viewport.
 
-#### __[C#] Example 2: Set the top left cell to be C11__
-{{region cs-radspreadprocessing-working-with-worksheets-view-state_1}}
+#### __Example 2: Set the top left cell to be C11__
+```csharp
 
     workbook.Worksheets[0].ViewState.TopLeftCellIndex = new CellIndex(10, 2);
-{{endregion}}
+```
 
 ### **SelectionState**
 
@@ -41,8 +41,8 @@ Gets or sets the state of the selection inside the worksheet.
 
 **Example 3** demonsrates how you can create two selection ranges (one from B3 to E9 and one from D6 to G13) and change the active cell inside that selection.
 
-#### __[C#] Example 3: Change the selection__
-{{region cs-radspreadprocessing-working-with-worksheets-view-state_2}}
+#### __Example 3: Change the selection__
+```csharp
 
     CellIndex selectionActiveCellIndex = new CellIndex(5, 2); // C6
     List<CellRange> selectionRanges = new List<CellRange>()
@@ -53,7 +53,7 @@ Gets or sets the state of the selection inside the worksheet.
     
     SelectionState selectionState = new SelectionState(selectionRanges, selectionActiveCellIndex, ViewportPaneType.Scrollable);
     workbook.Worksheets[0].ViewState.SelectionState = selectionState;
-{{endregion}}
+```
 
 #### Figure 1: Selection in worksheet
 ![](images/ViewState_Selection.png)
@@ -66,19 +66,19 @@ Gets or sets a value indicating whether the sheet is selected.
 
 Allows you to get or set a boolean value determining whether the gridlines should be visualized when the document is rendered. 
 
-#### __[C#] Example 4: Remove grid lines__
-{{region cs-radspreadprocessing-working-with-worksheets-view-state_3}}
+#### __Example 4: Remove grid lines__
+```csharp
     workbook.Worksheets[0].ViewState.ShowGridLines = false;
-{{endregion}}
+```
 
 ### **ShowRowColHeaders**
 
 Determines whether the headers of the rows and columns should be visualized when the document is rendered.
 
-#### __[C#] Example 5: Remove row and column headers__
-{{region cs-radspreadprocessing-working-with-worksheets-view-state_4}}
+#### __Example 5: Remove row and column headers__
+```csharp
     workbook.Worksheets[0].ViewState.ShowRowColHeaders = false;
-{{endregion}}
+```
 
 #### Figure 2: Worksheet with hidden row/column headers and grid lines
 ![](images/ViewState_HideLinesHeaders.png)
@@ -99,10 +99,10 @@ Allows you to freeze panes. Read more about this feature and its usage in the [F
 
 Allows you to set the color of the worksheet's tab.
 
-#### __[C#] Example 6: Change the color of the tab__
-{{region cs-radspreadprocessing-working-with-worksheets-view-state_5}}
+#### __Example 6: Change the color of the tab__
+```csharp
     workbook.Worksheets[0].ViewState.TabColor = new ThemableColor(Colors.Green);
-{{endregion}}
+```
 
 #### Figure 3: Worskheet with green tab
 ![](images/ViewState_TabColor.png)

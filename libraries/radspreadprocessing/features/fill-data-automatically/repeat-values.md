@@ -34,9 +34,9 @@ To repeat the values, first you need to create a [CellSelection]({%slug radsprea
 __Example 1__ illustrates how the contents of column *A* can be copied to the rest of the columns in the range *A1:D4*. The code creates a new worksheet and populates the cells *A1*, *A2*, *A3* and *A4* with the values 5, 8, 13 and 21 respectively. Further, it invokes the __FillData()__ method for the specified range with __FillDirection Right__.
         
 
-#### __[C#] Example 1: Fill right__
+#### __Example 1: Fill right__
 
-{{region cs-radspreadprocessing-features-fill-data-automatically-repeat-values_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	Worksheet activeWorksheet = workbook.ActiveWorksheet;
@@ -48,7 +48,7 @@ __Example 1__ illustrates how the contents of column *A* can be copied to the re
 	
 	CellRange range = new CellRange(0, 0, 3, 3);
 	activeWorksheet.Cells[range].FillData(FillDirection.Right);
-{{endregion}}
+```
 
 
 
@@ -64,9 +64,9 @@ Similarly, you can automatically copy the values of a row to its adjacent rows.
 __Example 2__ invokes the __FillData()__ method with __FillDirection Down__ for the range *B2:D4*. The sample code creates an empty worksheet and enters values in the range *B2:D2*. These values are propagated to the rest of the rows in the specified region.
         
 
-#### __[C#] Example 2: Fill down__
+#### __Example 2: Fill down__
 
-{{region cs-radspreadprocessing-features-fill-data-automatically-repeat-values_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	Worksheet activeWorksheet = workbook.ActiveWorksheet;
@@ -77,7 +77,7 @@ __Example 2__ invokes the __FillData()__ method with __FillDirection Down__ for 
 	
 	CellRange range = new CellRange(1, 1, 3, 3);
 	activeWorksheet.Cells[range].FillData(FillDirection.Down);
-{{endregion}}
+```
 
 
 

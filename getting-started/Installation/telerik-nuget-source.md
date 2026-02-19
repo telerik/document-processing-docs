@@ -187,7 +187,7 @@ The NuGet v2 server at `https://nuget.telerik.com/nuget` was sunset in November 
 
 ### Troubleshooting
 
-See the [NuGet Troubleshooting](slug:troubleshooting-nuget) article for tips about common pitfalls when working with the Telerik NuGet feed.
+See the [NuGet Troubleshooting]({%slug dpl-troubleshooting-nuget%}) article for tips about common pitfalls when working with the Telerik NuGet feed.
 
 ## See Also
 

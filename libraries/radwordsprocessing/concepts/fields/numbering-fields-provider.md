@@ -19,7 +19,7 @@ To use the default implementation of the __NumberingFieldsProvider__ you need to
 
 The default provider can be set with the following code:
 
-#### __[C#] Example 1: Register the default NumberingFieldsProvider__
+#### __Example 1: Register the default NumberingFieldsProvider__
 
 <snippet id='codeblock-bf'/>
 
@@ -27,7 +27,7 @@ The default provider can be set with the following code:
 
 This method allows you to use a custom numbering style converter.
 
-#### __[C#] Example 2: Register custom NumberingStyleConverter__
+#### __Example 2: Register custom NumberingStyleConverter__
 
 <snippet id='codeblock-bg'/>
 

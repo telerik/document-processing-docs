@@ -34,9 +34,9 @@ This article describes how to import two PDF documents and merge their first pag
 
 The following example demonstrates how to use the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}) in order to import and merge the first pages of two different documents into a new single page.
 
-#### __[C#] Example__
+#### __Example__
 
-{{region pdfprocessing-merge-two-pages-from-different-documents-into-a-single-page1}}
+```csharp
 
 	string firstDocument = "SampleDocument1.pdf";
 	string secondDocument = "SampleDocument2.pdf";
@@ -71,6 +71,6 @@ The following example demonstrates how to use the [PdfStreamWriter]({%slug radpd
 			}
 		}
 	}
-{{endregion}}
+```
 
 More information you can find in the [PdfPageStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter%}), [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}), and [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}) help articles.

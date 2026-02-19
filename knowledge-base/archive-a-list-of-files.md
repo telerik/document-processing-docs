@@ -21,9 +21,7 @@ You need to create an archive from a list of files.
 
 Use [RadZipLibrary]({%slug radziplibrary-overview%}) to create and export the archive.
 
-#### __C#__
-
-{{region kb-archive-a-list-of-files1}}
+```csharp
     List<string> fileNames = new List<string>();
 
     fileNames.Add("text.txt");
@@ -52,4 +50,4 @@ Use [RadZipLibrary]({%slug radziplibrary-overview%}) to create and export the ar
         }
     }
 
-{{endregion}}
+```

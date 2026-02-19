@@ -10,7 +10,10 @@ position: 3
 
 # Launch Actions  
 
-As of **Q2 2025** RadPdfProcessing provides support for **Launch actions** that PDF viewer applications are expected to support. A launch action launches an application or opens or prints a document. The LaunchAction class offers the following public properties: 
+|Minimum Version|Q2 2025|
+|----|----|
+
+RadPdfProcessing provides support for **Launch actions** that PDF viewer applications are expected to support. A launch action launches an application or opens or prints a document. The LaunchAction class offers the following public properties: 
 
 |Property|Description|
 |----|----|

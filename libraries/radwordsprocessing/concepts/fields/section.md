@@ -27,7 +27,7 @@ Inserting a Section field is easily achieved through the [RadFlowDocumentEditor]
 
 __Example 1__ demonstrates how you can insert a section field.
          
-#### __[C#] Example 1: Insert section field__
+#### __Example 1: Insert section field__
 
 <snippet id='codeblock-bkm'/>
 

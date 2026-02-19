@@ -10,10 +10,10 @@ position: 3
 
 # Multiple Digital Signing with PdfStreamSigner
 
-|Minimum Version| Q2 2025|
+|Minimum Version|Q2 2025|
 |----|----|
 
-RadPdfProcessing offers the **PdfStreamSigner** class. The **SignDocument** method it exposes allows the user to insert one or more [Digital Signatures]({%slug radpdfprocessing-features-digital-signature%}) into a PDF document.
+RadPdfProcessing introduces the **PdfStreamSigner**. The **SignDocument** method it exposes allows the user to insert one or more [Digital Signatures]({%slug radpdfprocessing-features-digital-signature%}) into a PDF document.
 
 >important When adding multiple signatures, make sure the document is exported after each signature before importing it back again.
 

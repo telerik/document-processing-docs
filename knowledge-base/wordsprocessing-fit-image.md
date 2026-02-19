@@ -24,9 +24,9 @@ This article illustrates how you can insert an image in a [RadFlowDocument]({%sl
 
 Create an image and compare its size with the size available on the page. If the image is bigger, decrease its size:
 
-#### [C#] Insert and resize image
+#### Insert and resize image
 
-{{region kb-wordsprocessing-fit-image}}
+```csharp
 
     RadFlowDocument document = new RadFlowDocument();
     RadFlowDocumentEditor editor = new RadFlowDocumentEditor(document);
@@ -44,7 +44,7 @@ Create an image and compare its size with the size available on the page. If the
     }
     
     editor.InsertImageInline(image.ImageSource, image.Size);
-{{endregion}}
+```
 
 ## See Also
 

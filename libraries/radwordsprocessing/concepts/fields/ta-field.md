@@ -31,6 +31,7 @@ Switches are a way for the code fragment to specify formatting for the result of
 |\\l "Long"|Defines the long citation for the entry in the table of authorities.|
 |\\r Bookmark|Inserts as the entry's page number the range of pages marked by the specified bookmark.|
 |\\s "Short"|Defines the abbreviated form of the entry.| 
+
 # Inserting
 
 Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as argument.
@@ -38,14 +39,14 @@ Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%sl
 __Example 1__ demonstrates how you can insert a TA field.
         
 
-#### __[C#] Example 1: Insert TA field__
+#### __Example 1: Insert TA field__
 
-<pre><code>
+```C#
     var document = new RadFlowDocument();
     var editor = new RadFlowDocumentEditor(document);
 
     editor.InsertField("TA \"Item\" \\b");
-</code></pre>
+```
 
 This type of field does not have a result but when updated the switches are applied to the text.
 

@@ -38,14 +38,14 @@ The SetValue() method has multiple overloads that allow you to pass a double, a 
         
 __Example 1__ sets the Value of cell A1 to "Total".
         
-#### __[C#] Example 1: Set string value__
+#### __Example 1: Set string value__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
 	worksheet.Cells[0, 0].SetValue("Total");
-{{endregion}}
+```
 
 
 
@@ -55,15 +55,15 @@ Another option for setting the cell value is to use the Create() method of the C
 __Example 2__ creates a NumberCellValue with value 3.14 and assigns it to cell A1.
         
 
-#### __[C#] Example 2: Create NumberCellValue__
+#### __Example 2: Create NumberCellValue__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
 	ICellValue value = CellValueFactory.Create(3.14);
 	worksheet.Cells[0, 0].SetValue(value);
-{{endregion}}
+```
 
 
 
@@ -73,26 +73,26 @@ If you now retrieve the Value of cell A1, the GetValue() method will return an i
 __Example 3__ retrieves the value created in Example 2.
         
 
-#### __[C#] Example 3: Retrieve cell value__
+#### __Example 3: Retrieve cell value__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_2}}
+```csharp
 	RangePropertyValue<ICellValue> rangeValue = worksheet.Cells[0, 0].GetValue();
 	ICellValue value = rangeValue.Value;
-{{endregion}}
+```
 
 
 
-Note that the GetValue() method does not return an ICellValue directly, but it provides an RangePropertyValue<ICellValue> instance. The RangePropertyValue is used to determine whether the value of a region of cells is homogeneous. In other words, if you attempt to retrieve the value of the cell region A1:B2 and the values in these cells are different, the RangePropertyValue will specify that the values vary. The class exposes two properties that describe the values in the chosen cell range:
+Note that the GetValue() method does not return an ICellValue directly, but it provides an RangePropertyValue&lt;ICellValue&gt; instance. The RangePropertyValue is used to determine whether the value of a region of cells is homogeneous. In other words, if you attempt to retrieve the value of the cell region A1:B2 and the values in these cells are different, the RangePropertyValue will specify that the values vary. The class exposes two properties that describe the values in the chosen cell range:
         
 
-* __IsIndeterminate__: The Boolean property indicates whether the Value property is consistent among all cells in the specified CellSelection. If all cells have one and the same Value, __IsIndeterminate__ is set to false. However, if the Value property varies throughout the cells in the CellSelection, the IsIndetermine property is set to true and the __Value__ property of the __RangePropertyValue<ICellValue>__ instance is set to its default value – __EmptyCellValue__.
+* __IsIndeterminate__: The Boolean property indicates whether the Value property is consistent among all cells in the specified CellSelection. If all cells have one and the same Value, __IsIndeterminate__ is set to false. However, if the Value property varies throughout the cells in the CellSelection, the IsIndetermine property is set to true and the __Value__ property of the __RangePropertyValue&lt;ICellValue&gt;__ instance is set to its default value – __EmptyCellValue__.
             
 
 * __Value__: If the __IsIndeterminate__ property is set to false, __Value__ holds the ICellValue of the whole CellSelection region. If the __IsIndeterminate__ property is set to true, then the cells in the CellSelection region contain different values and the Value property is set to its default – __EmptyCellValue__.
             
-	#### __[C#] Example 4: Retrieve and use IsIndeterminate and Value properties__
+	#### __Example 4: Retrieve and use IsIndeterminate and Value properties__
 
-	{{region cs-radspreadprocessing-working-with-cells-cell-value-types_3}}
+	```csharp
 
 		Workbook workbook = new Workbook();
 		Worksheet worksheet = workbook.Worksheets.Add();
@@ -108,7 +108,7 @@ Note that the GetValue() method does not return an ICellValue directly, but it p
 		
 		RangePropertyValue<string> twoCellsValue = worksheet.Cells[0, 0, 0, 1].GetStyleName();
 		//cells at [0, 0, 0, 1] twoCellsValue.IsIndeterminate is True, twoCellsValue.Value is Normal
-	{{endregion}}
+	```
 
 
 ## Empty Cell Value
@@ -122,13 +122,13 @@ If a cell already contains another value, you can set an empty value for it usin
 __Example 5__ clears the value of cell A1.
         
 
-#### __[C#] Example 5: Clear value__
+#### __Example 5: Clear value__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_4}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Cells[0, 0].ClearValue();
-{{endregion}}
+```
 
 
 
@@ -140,14 +140,14 @@ As its name suggests, the __BooleanCellValue__ type contains a value of type boo
 __Example 6__ sets the values of cells A1 and B1 to true and false BooleanCellValues, respectively.
         
 
-#### __[C#] Example 6: Set boolean value__
+#### __Example 6: Set boolean value__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_5}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Cells[0, 0].SetValue(true);
 	worksheet.Cells[0, 1].SetValue(false);
-{{endregion}}
+```
 
 
 
@@ -157,16 +157,16 @@ Another way to assign cells Boolean values is through using the static __Create(
 __Example 7__ illustrates how to create a BooleanCellValue using the CellValueFactory class.
         
 
-#### __[C#] Example 7: Create a BooleanCellValue using CellValueFactory__
+#### __Example 7: Create a BooleanCellValue using CellValueFactory__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_6}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	ICellValue booleanCellValueTrue = CellValueFactory.Create(true);
 	ICellValue booleanCellValueFalse = CellValueFactory.Create(false);
 	worksheet.Cells[0, 0].SetValue(booleanCellValueTrue);
 	worksheet.Cells[0, 1].SetValue(booleanCellValueFalse);
-{{endregion}}
+```
 
 
 
@@ -181,13 +181,13 @@ The __SetValue()__ method has several overloads that produce a NumberCellValue. 
 __Example 8__ shows how to set the value of cell A1 to 1.23.
         
 
-#### __[C#] Example 8: Set number cell value__
+#### __Example 8: Set number cell value__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_7}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Cells[0, 0].SetValue("1.23");
-{{endregion}}
+```
 
 
 ## Date Values
@@ -198,13 +198,13 @@ You can use the SetValue(string) method to assign dates.
 __Example 9__ sets the value of cell A1 to 6 October 1987 (in culture "en-US"). Once set, the value of A1 is a NumberCellValue with RawValue 32056. Because the document model detects that this is a date string, a date format is automatically applied to the cell, so that the value appears as a date.
         
 
-#### __[C#] Example 9: Set date as number cell value__
+#### __Example 9: Set date as number cell value__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_8}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Cells[0, 0].SetValue("10/06/1987");
-{{endregion}}
+```
 
 
 
@@ -213,9 +213,9 @@ Applied format:   m/d/yyyy
 
 If you later access the value of the cell applied in **Example 9**, you will get its double representation - 32056. To obtain the date that this value represents, you can use the **ConvertDoubleToDateTime()** of the [FormatHelper](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Formatting.FormatHelper.html) class to convert the raw number to a date or the **GetValueAsString()** method, which will return the date as a string. Both approaches are demonstrated in **Example 10**.
         
-#### __[C#] Example 10: Get date value__
+#### __Example 10: Get date value__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_17}}
+```csharp
 
 	ICellValue cellValue = worksheet.Cells[0, 0].GetValue().Value;
 	CellValueFormat format = worksheet.Cells[0, 0].GetFormat().Value;
@@ -224,7 +224,7 @@ If you later access the value of the cell applied in **Example 9**, you will get
 
 	double rawValueAsNumber = Convert.ToDouble(cellValue.RawValue);
 	DateTime? resultAsDateTime = FormatHelper.ConvertDoubleToDateTime(rawValueAsNumber).Value.Date;
-{{endregion}}
+```
 
 
 ## Formula Cell Value
@@ -241,13 +241,13 @@ You can set a FormulaCellValue through the SetValue() method by passing a string
 __Example 11__ shows how you can create a formula that refers to another cell.
         
 
-#### __[C#] Example 11: Create formula referring to another cell__
+#### __Example 11: Create formula referring to another cell__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_9}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Cells[0, 0].SetValue("=A2");
-{{endregion}}
+```
 
 
 
@@ -260,13 +260,13 @@ An expression can also contain a predefined function that performs a given calcu
 __Example 12__ illustrates the use of the SUM built-in function.
         
 
-#### __[C#] Example 12: Use built-in function__
+#### __Example 12: Use built-in function__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_10}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Cells[0, 0].SetValue("=SUM(A2, 3)");
-{{endregion}}
+```
 
 
 
@@ -276,9 +276,9 @@ Another way of setting a FormulaCellValue is passing an __ICellValue__ object to
 __Example 13__ creates a FormulaCellValue using the CellValueFactory class.
         
 
-#### __[C#] Example 13: Create FormulaCellValue__
+#### __Example 13: Create FormulaCellValue__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_11}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellIndex cellIndex = new CellIndex(0, 0);
@@ -287,7 +287,7 @@ __Example 13__ creates a FormulaCellValue using the CellValueFactory class.
 	CellValueFormat newFormatValue;
 	CellValueFactory.Create("=A2 + B2", worksheet, cellIndex, CellValueFormat.GeneralFormat, out cellValue, out newFormatValue);
 	worksheet.Cells[cellIndex].SetValue(cellValue);
-{{endregion}}
+```
 
 
 Using the __SetValue()__ method executes internal checks for the current cell value type using the current format and other conditions. If you are sure that the passed value is a formula, you can use the __SetValueAsFormula(string text)__ method directly which will improve the performance.
@@ -296,20 +296,20 @@ Using the __SetValue()__ method executes internal checks for the current cell va
 __Example 14__ shows how you can use the method.
 
 
-#### __[C#] Example 14: Create FormulaCellValue through SetValueAsFormula()__
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_12}}
+#### __Example 14: Create FormulaCellValue through SetValueAsFormula()__
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellIndex cellIndex = new CellIndex(0, 0);
 	
 	worksheet.Cells[cellIndex].SetValueAsFormula("=B1+B2");
-{{endregion}}
+```
 
 
 Depending on your requirements, you can obtain the formula from the cell represented by its definition or by the evaluated result value. **Example 15** shows both possibilities.
 
-#### __[C#] Example 15: Get the value of a cell containing formula__
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_18}}
+#### __Example 15: Get the value of a cell containing formula__
+```csharp
 
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
@@ -320,7 +320,7 @@ Depending on your requirements, you can obtain the formula from the cell represe
 	
 	string valueAsString = cellValue.GetValueAsString(format); // =SUM(A2, 3)
 	string resultValue = cellValue.GetResultValueAsString(format); // 13
-{{endregion}}
+```
 
 ## Text Cell Value
 
@@ -333,13 +333,13 @@ You can set a TextCellValue using the __SetValue(string)__ method. Note that bef
 __Example 16__ sets the value of cell A1 to the string "some test".
         
 
-#### __[C#] Example 16: Set TextCellValue__
+#### __Example 16: Set TextCellValue__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_13}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Cells[0, 0].SetValue("some text");
-{{endregion}}
+```
 
 
 
@@ -349,23 +349,23 @@ If you would like to avoid the default parsing of the input string and always pr
 __Example 17__ enters the string "=1+2" into a cell, however, because of the applied cell value format, the cell is assigned a TextCellValue instead of a FormulaCellValue.
         
 
-#### __[C#] Example 17: Explicitly apply text value type__
+#### __Example 17: Explicitly apply text value type__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_14}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Cells[0, 0].SetFormat(new CellValueFormat("@"));
 	worksheet.Cells[0, 0].SetValue("=1+2");
-{{endregion}}
+```
 
 
 
 The same result could be achieved using the __Create()__ method of the __CellValueFactory__ class. __Example 18__ enters the string "=1+2" into a cell and applies cell value format.
         
 
-#### __[C#] Example 18: Create TextCellValue__
+#### __Example 18: Create TextCellValue__
 
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_15}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellIndex cellIndex = new CellIndex(0, 0);
@@ -374,7 +374,7 @@ The same result could be achieved using the __Create()__ method of the __CellVal
 	CellValueFormat newFormatValue;
 	CellValueFactory.Create("=1 + 2", worksheet, cellIndex, new CellValueFormat("@"), out cellValue, out newFormatValue);
 	worksheet.Cells[cellIndex].SetValue(cellValue);
-{{endregion}}
+```
 
 
 If you are sure that the value is a string and need to create a text cell value, you can use the __SetValueAsText(string text)__ method directly. This would avoid the internal checks and parsing that are usually executed and improve the performance.
@@ -382,14 +382,14 @@ If you are sure that the value is a string and need to create a text cell value,
 
 __Example 19__ shows how to utilize the __SetValueAsText()__ method.
 
-#### __[C#] Example 19: Create TextCellValue through SetValueAsText__
-{{region cs-radspreadprocessing-working-with-cells-cell-value-types_16}}
+#### __Example 19: Create TextCellValue through SetValueAsText__
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	CellIndex cellIndex = new CellIndex(0, 0);
 	
 	worksheet.Cells[cellIndex].SetValueAsText("This is most certainly a text.");
-{{endregion}}
+```
 
 
 

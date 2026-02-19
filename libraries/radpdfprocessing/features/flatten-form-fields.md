@@ -16,7 +16,7 @@ There are two methods that you can use for this. One to flatten all fields and o
 
 The __FlattenFormFields__ method does not take any parameters and will flatten all fields inside the document. 
 
-#### __[C#] Example 1:  Flatten all fields__
+#### __Example 1:  Flatten all fields__
 
 <snippet id='pdf-flatten-all-fields'/>
 
@@ -24,7 +24,7 @@ The __FlattenFormFields__ method does not take any parameters and will flatten a
 
 The __FlattenFormField__ method takes the field that should be flattened as a parameter. The field must belong to the same document.
 
-#### __[C#] Example 2:  Flatten single field__
+#### __Example 2:  Flatten single field__
 
 <snippet id='pdf-flatten-single-field'/>
 

@@ -32,7 +32,7 @@ Represents an ARGB (alpha, red, green, blue) color. The RgbColor class exposes t
             
 __Example 1__ demonstrates how you can create an RgbColor and assign it as Fill of a [Path]({%slug radpdfprocessing-model-path%}) element.
         
-#### __[C#] Example 1: Create RgbColor__
+#### __Example 1: Create RgbColor__
 
 <snippet id='pdf-create-rgb-color'/>
 
@@ -79,7 +79,7 @@ The __Gradient__ class is inherited by the following classes:
             
 	__Example 2__ shows how to create a LinearGradient and assign it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
             
-	#### __[C#] Example 2: Create LinearGradient__
+	#### __Example 2: Create LinearGradient__
 	
 	<snippet id='pdf-create-linear-gradient'/>
 	
@@ -97,7 +97,7 @@ The gradient created in __Example 2__ is shown in __Figure 1__.
               
 	__Example 3__ demonstrates how to create a RadialGradient and assing it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 	
-	#### __[C#] Example 3: Create RadialGradient__
+	#### __Example 3: Create RadialGradient__
 	
 	<snippet id='pdf-create-linear-gradient'/>
 	
@@ -141,7 +141,7 @@ The __TilingBase__ class is inherited from the following classes:
 Since the __TilingBase__ class implements the __IContentRootElement__ interface like [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}), the content of the tiling can be modified using the __FixedContentEditor__ class. __Example 4__ shows how a tiling pattern can be created.
             
 
-#### __[C#] Example 4: Create tiling__
+#### __Example 4: Create tiling__
 
 <snippet id='pdf-create-tiling'/>
 

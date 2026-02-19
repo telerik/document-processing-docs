@@ -57,9 +57,9 @@ The twelve color types above are used for creating __ThemableColor__ objects. Th
 __Example 1__ demonstrates how to create a __ThemeColorScheme__ object. Note that the example passes a name and twelve colors to the constructor. Every color has a comment next to it, so you can see its corresponding __ThemeColorType__.
         
 
-#### __[C#] Example 1: Create ThemeColorScheme__
+#### __Example 1: Create ThemeColorScheme__
 
-{{region cs-radspreadprocessing-features-styling-document-themes_0}}
+```csharp
 	ThemeColorScheme colorScheme = new ThemeColorScheme(
 	    "Mine",
 	    Colors.Black,     // background 1
@@ -74,7 +74,7 @@ __Example 1__ demonstrates how to create a __ThemeColorScheme__ object. Note tha
 	    Colors.Orange,    // accent 6
 	    Colors.Purple,    // hyperlink
 	    Colors.Red);      // followedHyperlink
-{{endregion}}
+```
 
 
 
@@ -102,11 +102,11 @@ In order to create colors that depend on the current document theme, you need to
 __Example 2__ shows how you can create a ThemableColor.
         
 
-#### __[C#] Example 2: Create ThemableColor__
+#### __Example 2: Create ThemableColor__
 
-{{region cs-radspreadprocessing-features-styling-document-themes_1}}
+```csharp
 	ThemableColor themableColor = new ThemableColor(ThemeColorType.Accent1);
-{{endregion}}
+```
 
 
 
@@ -125,14 +125,14 @@ To create a ThemeFontScheme you need to pass a name and two font family names to
 __Example 3__ illustrates how to create a __ThemeFontScheme__ object.
         
 
-#### __[C#] Example 3: Create ThemeFontScheme__
+#### __Example 3: Create ThemeFontScheme__
 
-{{region cs-radspreadprocessing-features-styling-document-themes_2}}
+```csharp
 	ThemeFontScheme fontScheme = new ThemeFontScheme(
 	    "Mine",
 	    "Times New Roman",  // latinMajor
 	    "Arial");           // latinMinor
-{{endregion}}
+```
 
 
 
@@ -151,11 +151,11 @@ When you need to create a font that depends on the current document theme, you c
 __Example 4__ shows how to create a ThemableFontFamily.
         
 
-#### __[C#] Example 4: Create ThemableFontFamily__
+#### __Example 4: Create ThemableFontFamily__
 
-{{region cs-radspreadprocessing-features-styling-document-themes_3}}
+```csharp
 	ThemableFontFamily themableFont = new ThemableFontFamily(ThemeFontType.Major);
-{{endregion}}
+```
 
 
 
@@ -167,11 +167,11 @@ Now that when you have a color and a font schemes, you can create a new __Docume
 __Example 5__ demonstrates how to create a DocumentTheme using the color scheme from __Example 1__ and the font scheme from __Example 3__.
         
 
-#### __[C#] Example 5: Create DocumentTheme__
+#### __Example 5: Create DocumentTheme__
 
-{{region cs-radspreadprocessing-features-styling-document-themes_4}}
+```csharp
 	DocumentTheme theme = new DocumentTheme("Mine", colorScheme, fontScheme);
-{{endregion}}
+```
 
 
 
@@ -181,11 +181,11 @@ In the predefined static class __PredefinedThemeSchemes__, you can find a number
 __Example 6__ shows how you can create a document theme using the predefined color and font schemes.
         
 
-#### __[C#] Example 6: Create DocumentTheme from predefined schemes__
+#### __Example 6: Create DocumentTheme from predefined schemes__
 
-{{region cs-radspreadprocessing-features-styling-document-themes_5}}
+```csharp
 	DocumentTheme theme = new DocumentTheme("From predefined schemes", PredefinedThemeSchemes.ColorSchemes[0], PredefinedThemeSchemes.FontSchemes[5]);
-{{endregion}}
+```
 
 
 
@@ -195,13 +195,13 @@ Changing the current document theme is as easy as setting a single property:
 __Example 7__ changes the theme of a newly created workbook.
         
 
-#### __[C#] Example 7: Change DocumentTheme__
+#### __Example 7: Change DocumentTheme__
 
-{{region cs-radspreadprocessing-features-styling-document-themes_6}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	workbook.Theme = theme;
-{{endregion}}
+```
 
 
 
@@ -210,21 +210,21 @@ __Example 7__ changes the theme of a newly created workbook.
 In order to get the actual value from __ThemableColor__ or __ThemableFontFamily__ you need to call the __GetActualValue()__ method on the corresponding object.
         
 
-#### __[C#] Example 8: Get actual color__
+#### __Example 8: Get actual color__
 
-{{region cs-radspreadprocessing-features-styling-document-themes_7}}
+```csharp
 	Color actualColor = themableColor.GetActualValue(theme);
 	// the actual color is the same as Accent1 color of the colorScheme
-{{endregion}}
+```
 
 
 
-#### __[C#] Example 9: Get actual font__
+#### __Example 9: Get actual font__
 
-{{region cs-radspreadprocessing-features-styling-document-themes_8}}
+```csharp
 	var actualFont = themableFont.GetActualValue(theme);
 	// the actualFont is the same as the Major font of the fontScheme
-{{endregion}}
+```
 
 
 

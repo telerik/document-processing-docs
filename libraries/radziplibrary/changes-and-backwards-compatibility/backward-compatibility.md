@@ -113,7 +113,7 @@ The __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.String[])__ method 
 
 ### What to do now
 
-You can use the __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.Collections.Generic.IEnumerable<string>)__   method instead.
+You can use the __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.Collections.Generic.IEnumerable&lt;string&gt;)__   method instead.
             
 
 ### Changed
@@ -123,7 +123,7 @@ The __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.String[])__ method 
 
 ### What to do now
 
-You can use the __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.Collections.Generic.IEnumerable<string>)__  method instead.
+You can use the __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.Collections.Generic.IEnumerable&lt;string&gt;)__  method instead.
             
 
 ### Changed

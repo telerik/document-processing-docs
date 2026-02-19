@@ -10,7 +10,10 @@ position: 2
 
 # Barcode FormSource
 
-As of **Q1 2025** RadPdfProcessing provides support for adding Barcodes (1D and 2D) into a PDF document. This is possible through the static FormSource.**FromBarcode** and FormSource.**From2DBarcode** methods. They utilize the **Symbology1DType** and **Symbology2DType** enums that represent the different types of 1D and 2D barcode symbologies supported by the barcode model. These are the publicly available overloads:
+|Minimum Version|Q1 2025|
+|----|----|
+
+RadPdfProcessing provides support for adding Barcodes (1D and 2D) into a PDF document. This is possible through the static FormSource.**FromBarcode** and FormSource.**From2DBarcode** methods. They utilize the **Symbology1DType** and **Symbology2DType** enums that represent the different types of 1D and 2D barcode symbologies supported by the barcode model. These are the publicly available overloads:
 
 |Method|Description|
 |----|----|

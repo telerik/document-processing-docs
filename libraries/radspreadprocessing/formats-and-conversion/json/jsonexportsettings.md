@@ -36,7 +36,7 @@ The [JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-
 | **IncludeBlankCells** | bool | false | Emit blank cells explicitly within the used range; otherwise they are skipped. |
 | **IncludeWorkbookProtectionFlag** | bool | true | Include workbook protection state (Workbook.IsProtected). |
 | **IncludeActiveSheet** | bool | true | Emit the name of the active worksheet in metadata. |
-| **SelectedRanges** | List<CellRange> | empty | Ranges to export when ExportWhat is Selection. Empty collection falls back to active sheet. |
+| **SelectedRanges** | List&lt;CellRange&gt; | empty | Ranges to export when ExportWhat is Selection. Empty collection falls back to active sheet. |
 | **IncludeChartStats** | bool | true | Include min, max, average, sum, stdev and count aggregates for chart series. |
 | **IncludeChartSummaries** | bool | true | Include natural language summary strings per chart. |
 | **IncludeChartTrends** | bool | true | Include simple trend classification (increasing / decreasing / flat) for eligible series. |

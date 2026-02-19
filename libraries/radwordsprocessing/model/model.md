@@ -57,7 +57,7 @@ Relationships between document elements can be additionally traversed using:
 * [Parent](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.DocumentElementBase.html#collapsible-Telerik_Windows_Documents_Flow_Model_DocumentElementBase_Parent) property. This property contains reference to document's parent and is automatically set when element is added/removed as a child of another element.
                 
 
-* [EnumerateChildrenOfType<T>](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.DocumentElementBase.html#collapsible-Telerik_Windows_Documents_Flow_Model_DocumentElementBase_EnumerateChildrenOfType__1) method. This method can be used to recursively traverse document tree and return all children of given type __T__.
+* [EnumerateChildrenOfType&lt;T&gt;](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.DocumentElementBase.html#collapsible-Telerik_Windows_Documents_Flow_Model_DocumentElementBase_EnumerateChildrenOfType__1) method. This method can be used to recursively traverse document tree and return all children of given type __T__.
                 
 
 ## See Also

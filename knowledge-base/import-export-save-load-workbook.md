@@ -66,7 +66,7 @@ Note that the code snippets in the [Examples section](#examples) use the **XLSX 
 
 ### Load workbook from Byte[] array
 
-````C#
+```csharp
 Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IBinaryWorkbookFormatProvider interface
 IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
@@ -77,11 +77,11 @@ var path = "MyWorkbook.xlsx";
 //https://docs.microsoft.com/en-us/dotnet/api/system.io.file.readallbytes?view=net-5.0
 byte[] fileAsByteArray = File.ReadAllBytes(path);
 workbook = formatProvider.Import(fileAsByteArray);
-````
+```
 
 ### Save workbook as Byte[] array
 
-````C#
+```csharp
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IBinaryWorkbookFormatProvider interface
 IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
@@ -93,13 +93,13 @@ var path = "MyWorkbook.xlsx";
 // var path = Server.MapPath("~/Resources/FromWorkbook.pdf"); // applicable only for ASP.NET project
 
 File.WriteAllBytes(path, bytesFromWorkbook);
-````
+```
 
 ## FileStream or MemoryStream
 
 ### Load Workbook from file as FileStream or MemoryStream
 
-````C#
+```csharp
 Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IWorkbookFormatProvider interface
 IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
@@ -110,12 +110,12 @@ using (Stream input = new MemoryStream(fileAsByteArray))
     workbook = formatProvider.Import(input);
 }
 
-````
+```
 
 
 ### Save Workbook to FileStream or MemoryStream
 
-````C#
+```csharp
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IWorkbookFormatProvider interface
 IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 var path = "MyWorkbook.pdf";
@@ -127,12 +127,12 @@ using (MemoryStream output = new MemoryStream())
     // use your own Workbook instance here
     formatProvider.Export(workbook, output);
 }
-````
+```
 
 
 ## Save Workbook as PDF
 
-````C#
+```csharp
 var pdfFormatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
 // var path = Server.MapPath("~/Resources/FromWorkbook.pdf"); // applicable only for ASP.NET project
 var path = "MyWorkbook.pdf";
@@ -151,7 +151,7 @@ var path = "MyWorkbook.xlsx";
 byte[] pdfBytes = pdfFormatProvider.Export(workbook);
 File.WriteAllBytes(path, pdfBytes);
 
-````
+```
 
 ## Uploaded file
 
@@ -159,7 +159,7 @@ File.WriteAllBytes(path, pdfBytes);
 
 _* Web application specific example_
 
-````C#
+```csharp
 //public Workbook LoadFromUploadedFile(HttpPostedFile uploadedFile) // General upload file type
 public Workbook LoadFromUploadedFile(UploadedFile uploadedFile) // Telerik RadAsyncUpload for ASP.NET AJAX specific upload file type
 {
@@ -171,7 +171,7 @@ public Workbook LoadFromUploadedFile(UploadedFile uploadedFile) // Telerik RadAs
 
     return workbook;
 }
-````
+```
 
 ## DataBase
 
@@ -179,7 +179,7 @@ public Workbook LoadFromUploadedFile(UploadedFile uploadedFile) // Telerik RadAs
 
 The SQL table used for the example below has the `FileContent` column as `varbinary(MAX)`. 
 
-````C#
+```csharp
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IBinaryWorkbookFormatProvider interface
 IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
@@ -188,9 +188,9 @@ var fileAsByteArray = ReadFileFromDatabaseAsByteArray(id);
 
 Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
 workbook = formatProvider.Import(fileAsByteArray);
-````
+```
 
-````C#
+```csharp
 public static byte[] ReadFileFromDatabaseAsByteArray(string id)
 {
     var connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["WorkbookTestsConnectionString"].ConnectionString;
@@ -229,21 +229,21 @@ public static byte[] ReadFileFromDatabaseAsByteArray(string id)
         }
     }
 }
-````
+```
 
 
 ### Save Workbook to SQL DataBase
 
-````C#
+```csharp
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IBinaryWorkbookFormatProvider interface
 IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
 byte[] bytesFromWorkbookForSqlSave = formatProvider.Export(workbook);
 // InsertFileAsByteArrayInDatabase is a demo method declared in the snippet below
 bool isSuccessful = InsertFileAsByteArrayInDatabase(bytesFromWorkbookForSqlSave, "WorkbookForSqlSave.xlsx");
-````
+```
 
-````C#
+```csharp
 public bool InsertFileAsByteArrayInDatabase(byte[] fileBytes, string fileName)
 {
     var connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["WorkbookTestsConnectionString"].ConnectionString;
@@ -266,13 +266,13 @@ public bool InsertFileAsByteArrayInDatabase(byte[] fileBytes, string fileName)
         }
     }
 }
-````
+```
 
 ## Web service
 
 ### Load Workbook from the Web
 
-````C#
+```csharp
 public Workbook LoadFromWeb(string url)
 {
     Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbookFromWebService;
@@ -287,24 +287,24 @@ public Workbook LoadFromWeb(string url)
 
     return workbookFromWebService;
 }
-````
+```
 
 ## Base64 string
 
 ### Load Workbook from Base64 string
 
-````C#
+```csharp
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IBinaryWorkbookFormatProvider interface
 IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
 byte[] fileAsByteArray = Convert.FromBase64String(fileAsBase64String);
 
 Workbook workbook = formatProvider.Import(fileAsByteArray);
-````
+```
 
 ### Save Workbook to Base64 string
 
-````C#
+```csharp
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IBinaryWorkbookFormatProvider interface
 IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 string base64FromByteArray;
@@ -312,13 +312,13 @@ string base64FromByteArray;
 // use your own Workbook instance here
 byte[] bytesFromWorkbook = formatProvider.Export(workbook);
 string base64FromByteArray = Convert.ToBase64String(bytesFromWorkbook);
-````
+```
 
 ## DataTable
 
 ### Load Workbook from DataTable
 
-````C#
+```csharp
 public Workbook LoadFromDataTable(DataTable dataTable)
 {
     // Convert a DataTable to Workbook
@@ -331,21 +331,21 @@ public Workbook LoadFromDataTable(DataTable dataTable)
 
     return workbook;
 }
-````
+```
 
 ### Save Workbook to DataTable
 
-````C#
+```csharp
 DataTableFormatProvider provider = new DataTableFormatProvider();
 // use your own Workbook instance here and choose the desired worksheet
 DataTable dataTableFromWorkbook = provider.Export(workbook.Worksheets[0]);
-````
+```
 
 
 ## Download 
 
 
-````C#
+```csharp
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IBinaryWorkbookFormatProvider interface
 IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
 
@@ -354,9 +354,9 @@ byte[] fileToDownloadAsByteArray = formatProvider.Export(workbook);
 
 // Demo method declared in the snippet below
 WriteFileToResponse(fileToDownloadAsByteArray);
-````
+```
 
-````C#
+```csharp
 private void WriteFileToResponse(byte[] content)
 {
     var fileName = "MyWorkbook.xlsx";
@@ -373,13 +373,13 @@ private void WriteFileToResponse(byte[] content)
     Response.BinaryWrite(content);
     Response.End();
 }
-````
+```
 
 ## OpenFileDialog
 
 _*Desktop application specific example_
 
-````C#
+```csharp
 OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog(); 
 openFileDialog.Filter = Telerik.Windows.Controls.Spreadsheet.Utilities.FileDialogsHelper.GetOpenFileDialogFilter(); 
 // the XLSX format provider is used for demo purposes and can be replaced with any format provider implementing the IWorkbookFormatProvider interface
@@ -398,14 +398,14 @@ if (openFileDialog.ShowDialog() == true)
         throw new IOException("The file cannot be opened. It might be locked by another application.", ex); 
     } 
 } 
-````
+```
 
 ## SaveFileDialog
 
 _*Desktop application specific example_
 
 
-````C#
+```csharp
 Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook(); 
 workbook.Worksheets.Add(); 
  
@@ -421,22 +421,13 @@ if (saveFileDialog.ShowDialog() == true)
         formatProvider.Export(workbook, output); 
     } 
 } 
-````
-
-## Related resources
-
-- [Getting Started with Telerik Document Processing]({%slug getting-started%})
-- [Installing Telerik Document Processing on Your Computer]({%slug installation-installing-on-your-computer%})
-- [Telerik Document Processing Developer Focused examples repository](https://github.com/telerik/document-processing-sdk)
-- [RadSpreadProcessing - Formats and conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}})
-- [RadSpreadProcessing - Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%})
-- [RadSpreadProcessing Workbook Overview]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
+```
 
 ## See Also
 
 - [Getting Started with Telerik Document Processing]({%slug getting-started%})
 - [Installing Telerik Document Processing on Your Computer]({%slug installation-installing-on-your-computer%})
 - [Telerik Document Processing Developer Focused examples repository](https://github.com/telerik/document-processing-sdk)
-- [RadSpreadProcessing - Formats and conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%}})
+- [RadSpreadProcessing - Formats and conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%})
 - [RadSpreadProcessing - Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%})
 - [RadSpreadProcessing Workbook Overview]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})

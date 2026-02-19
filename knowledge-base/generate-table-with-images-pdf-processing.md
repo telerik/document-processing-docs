@@ -8,16 +8,16 @@ tags: radpdfprocessing, radfixeddocument, image, height, width, retain
 res_type: kb
 ---
 
-# Environment
+## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.124 | RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Description
+## Description
 
 Learn how to create a PDF document containing a [Table]({%slug radpdfprocessing-editing-table-overview%}) with [images]({%slug radpdfprocessing-model-image%}).
 
-# Solution
+## Solution
 
 [RadPdfProcessing]({%slug radpdfprocessing-overview%}) is suitable for such a requirement and it allows a convenient API for creating a RadFixedDocument from scratch and populating a table with image content:
 
@@ -81,7 +81,7 @@ Here is an example of how to implement this solution:
   ![Table with Images](images/pdf-table-with-images.png)   
 
 # See Also
-- [RadPdfProcessing]({%slug radpdfprocessing-overview%}})
+- [RadPdfProcessing]({%slug radpdfprocessing-overview%})
 - [Table]({%slug radpdfprocessing-editing-table-overview%})
 - [Images]({%slug radpdfprocessing-model-image%})
 

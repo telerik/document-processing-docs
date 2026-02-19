@@ -23,7 +23,7 @@ The most common usage of __Block__ is to draw flowing content. Similarly to [Fix
 
 Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achieved with one of the overloads of the __Insert()__ method. __Example 1__ shows all the overloads which allow specifying the styles and font family.
             
-#### __[C#] Example 1: Insert text__
+#### __Example 1: Insert text__
 
 <snippet id='pdf-block-insert-text'/>
 
@@ -36,7 +36,7 @@ Inserting [TextFragments]({%slug radpdfprocessing-model-textfragment%}) is achie
 Inserting a line break results in the next element starting on a new line. The action is achieved with the __InsertLineBreak()__ method as shown in __Example 2__.
             
 
-#### __[C#] Example 2: Break the line__
+#### __Example 2: Break the line__
 
 <snippet id='pdf-block-line-break'/>
 
@@ -51,7 +51,7 @@ __Block__ provides the following methods for inserting images:
 * block.InsertImage(imageSource, width, height);
 * block.InsertImage(stream, width, height);
                 
-#### __[C#] Example 3: Inserting an image__
+#### __Example 3: Inserting an image__
 
 <snippet id='pdf-block-insert-image'/>
 
@@ -68,7 +68,7 @@ Information on images in the context of the library is available in the [ImageSo
 * block.**InsertPath**(geometry);
 * block.**InsertRectangle**(rectangle);
                 
-#### __[C#] Example 4: Inserting a geometry__
+#### __Example 4: Inserting a geometry__
 
 <snippet id='pdf-block-insert-geometry'/>
 
@@ -76,7 +76,7 @@ Information on images in the context of the library is available in the [ImageSo
 
 The Form (or also known as Form-XObject) is an object that can contain PDF content and can be sheared among the document. The Block class exposes the **InsertForm()** method that allows you insert a FormSource object in the document. 
 
-#### __[C#] Example 5: Insert a form__
+#### __Example 5: Insert a form__
 
 <snippet id='pdf-block-insert-form'/>
 
@@ -89,7 +89,7 @@ There are two more overloads of InsertForm() that enables you to pass the size t
 
 The following example shows how to insert a link inside the text:
 
-#### __[C#] Example: Insert a text link__
+#### __Example: Insert a text link__
 
 <snippet id='pdf-block-text-link'/>
 
@@ -160,7 +160,7 @@ The __Block__ class has some properties and methods that affect how it will be r
 * __Clear():__ Clears all elements in the block.
                 
 
-#### __[C#] Example 6: Change Block properties__
+#### __Example 6: Change Block properties__
 
 <snippet id='pdf-block-change-properties'/>
 
@@ -170,11 +170,11 @@ The __Block__ class has some properties and methods that affect how it will be r
 
 A Block can be drawn to the content using the __Draw()__ method. The method accepts as a parameter a __Rectangle__, specifying the desired size and position relatively to the editor of the element.
         
-#### __[C#] Example 7: Draw block__
+#### __Example 7: Draw block__
 
 <snippet id='pdf-draw-block'/>
 
->importantEvery block can be drawn only once. Otherwise, an exception will be thrown.
+>important Every block can be drawn only once. Otherwise, an exception will be thrown.
           
 
 ## Measuring Block Size
@@ -207,7 +207,7 @@ The __Split()__ method of a Block returns a new Block with the same properties. 
 
 The code in __Example 9__ splits a block in two. The first will contains text "Hello" and the second – "RadPdfProcessing!".
         
-#### __[C#] Example 9: Split block__
+#### __Example 9: Split block__
 
 <snippet id='pdf-block-split'/>
 

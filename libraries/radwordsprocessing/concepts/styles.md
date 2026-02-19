@@ -71,7 +71,7 @@ A style can contain one or more of five different sets of style properties, depe
 A style should be added to __RadFlowDocument__'s style repository in order to be further applied to elements and participate in style properties evaluation process. For example, the code from __Example 1__ creates a table style and adds it to the style repository.
         
 
-#### __[C#] Example 1: Create a table style and add it to the style repository__
+#### __Example 1: Create a table style and add it to the style repository__
 
 <snippet id='codeblock-x'/>
 
@@ -80,7 +80,7 @@ A style should be added to __RadFlowDocument__'s style repository in order to be
 
 To apply a style to a spesific element you neet to set its __StyleId__ proerty.
 
-#### __[C#] Example 2: Apply a custom style to an element__
+#### __Example 2: Apply a custom style to an element__
 
 <snippet id='codeblock-y'/>
 
@@ -99,7 +99,7 @@ Default style is a style which, according to its style type, is applied to objec
 
  You can change the default styling properties for a document through the DefaultStyle property of RadFlowDocument. **Example 3** shows how you can do that for the font-family, and similar code can be used for the other styling properties for the runs and paragraphs inside a document.
           
-#### __[C#] Example 3: Set a default font-family__
+#### __Example 3: Set a default font-family__
 
 <snippet id='codeblock-z'/>
 
@@ -112,7 +112,7 @@ Built-in styles are commonly used styles, which are predefined for convenience. 
 [BuiltInStyleNames](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.BuiltInStyleNames.html) static class contains properties and methods for getting the IDs of all built-in styles. __Example 4__ shows how to get the ID of the "Heading 1" built-in style.
         
 
-#### __[C#] Example 4: Get the ID of a built-in style__
+#### __Example 4: Get the ID of a built-in style__
 
 <snippet id='codeblock-aab'/>
 
@@ -149,7 +149,7 @@ When evaluating the actual value of a style property in one of the style propert
 > __*__ If a style is of character or paragraph style type it takes into consideration the default style only if it is based on it.
 
 
->tipSome of the style properties always have a local value set.
+>tip Some of the style properties always have a local value set.
 
 
 Corresponding style property of the base style is determined depending on the style type using the following rules:

@@ -34,9 +34,9 @@ How to replace image in a **PDF** document.
 
 In the example below, we are demonstrating how to find a specific image in the imported into a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument) PDF document, preserve its size and [Position](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/position) and replace it with another [Image](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/image).
 
-#### __[C#] Replace Image in Imported PDF Document__
+#### __Replace Image in Imported PDF Document__
 
-{{region kb-replace-image-in-pdf-document1}}
+```csharp
 
     RadFixedPage firstPage = document.Pages[0];
 
@@ -61,4 +61,4 @@ In the example below, we are demonstrating how to find a specific image in the i
     firstPage.Content.RemoveAt(imageIndex);
     firstPage.Content.Add(newImage);
 	
-{{endregion}}
+```

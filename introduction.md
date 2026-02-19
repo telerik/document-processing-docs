@@ -36,13 +36,36 @@ img[alt$="><"] {
 
 Telerik Document Processing features the following libraries:
 
-|Library|Description|
-|----|----|
-|![Pdf](images/dpl-pdf.png) [RadPdfProcessing]({%slug radpdfprocessing-overview%})|A processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.|
-|![Spread](images/dpl-spread.png) [RadSpreadProcessing]({%slug radspreadprocessing-overview%})|A powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.| 
-|![SpreadStream](images/dpl-spread.png) [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|Spread streaming is a document processing paradigm that allows you to create or read big spreadsheet documents with great performance and minimal memory footprint. The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory.| 
-|![Words](images/dpl-words.png) [RadWordsProcessing]({%slug radwordsprocessing-overview%})|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or sent it to the client browser.|  
-|![Zip](images/dpl-zip.png) [RadZipLibrary]({%slug radziplibrary-overview%})| It allows you to compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.|  
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+
+  |||
+  |----|----|
+  |![Pdf](images/dpl-pdf.png)|A processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.|
+
+* [RadSpreadProcessing]({%slug radspreadprocessing-overview%})
+
+  |||
+  |----|----|
+  |![Spread](images/dpl-spread.png)| A powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.|
+
+* [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})
+
+  |||
+  |----|----|
+  |![SpreadStream](images/dpl-spread.png)|Spread streaming is a document processing paradigm that allows you to create or read big spreadsheet documents with great performance and minimal memory footprint. The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory. |
+
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%})
+
+  |||
+  |----|----|
+  |![Words](images/dpl-words.png)|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or sent it to the client browser.|
+
+
+* [RadZipLibrary]({%slug radziplibrary-overview%})
+
+  |||
+  |----|----|
+  |![Zip](images/dpl-zip.png)|It allows you to compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.|
 
 ## Key Features
 
@@ -136,7 +159,7 @@ If you find an issue with our docs that needs to be addressed, the best way to l
 
 * **Update the Documentation at GitHub**
 
-Creating an issue is great, but what we really love are pull requests. This is the most direct method. So, if you find an issue in the docs, or even feel like creating new content, we’d be happy to have your contributions! The basic steps are that you fork our documentation and submit a pull request. That way you may contribute to exactly where you found the error. After that, our technical writing team just needs to approve your change request. Please use only standard markdown. For more detailed instructions, please follow [the contribution instructions] (https://github.com/telerik/document-processing-docs/blob/master/README.md) published on GitHub.
+Creating an issue is great, but what we really love are pull requests. This is the most direct method. So, if you find an issue in the docs, or even feel like creating new content, we’d be happy to have your contributions! The basic steps are that you fork our documentation and submit a pull request. That way you may contribute to exactly where you found the error. After that, our technical writing team just needs to approve your change request. Please use only standard markdown. For more detailed instructions, please follow [the contribution instructions](https://github.com/telerik/document-processing-docs/blob/master/README.md) published on GitHub.
 
 * **Forums**
 

@@ -39,7 +39,7 @@ In the table bellow are listed all the comparison operators.
 
 Inserting a Compare Field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.   
 
-#### __[C#] Example 1: Insert a CompareField__
+#### __Example 1: Insert a CompareField__
 
 <snippet id='codeblock-mm'/>
 

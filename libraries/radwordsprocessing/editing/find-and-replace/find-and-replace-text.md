@@ -35,7 +35,7 @@ Both methods return a collection of **FindResult** instances, which in turn expo
 
 **Example 1** shows how to create a **RadFlowDocumentEditor** instance and use it to find all matches of the word "code".
 
-#### **[C#] Example 1: Find text**
+#### **Example 1: Find text**
 
 <snippet id='codeblock-bmbm'/>
 
@@ -52,7 +52,7 @@ To find all instances of a string and replace it with another one, you can use t
 **Example 2** shows how to create a **RadFlowDocumentEditor** instance and use it to replace all matches of the word "code" with the phrase "source code".
 
 
-#### **[C#] Example 2: Replace text**
+#### **Example 2: Replace text**
 
 <snippet id='codeblock-bnbn'/>
 
@@ -72,7 +72,7 @@ __RadFlowDocumentEditor__ gives you the ability to format all occurrences of a s
 **Example 3** shows how to apply a red highlight color to all occurrences of the word "alert".
 
 
-#### **[C#] Example 3: Replace character properties**
+#### **Example 3: Replace character properties**
 
 <snippet id='codeblock-bobo'/>
 

@@ -8,11 +8,11 @@ published: True
 position: 7
 ---
 
-# Tagged PDF <sup>Q3 2025 (or newer)</sup>
+# Tagged PDF
 
-|Related Feature:|[Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})|
+|Minimum Version|Q3 2025|
 |----|----|
-
+|Related Feature:|[Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})|
 
 **RadPdfProcessing** provides support for a **Tagged PDF**. It is a stylized use of PDF which defines a set of standard structure types and attributes that allow page content (text, graphics, and images) to be extracted and reused for other purposes. It is intended to be used by tools that perform operations like:
 

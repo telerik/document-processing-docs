@@ -33,11 +33,7 @@ You have an HTML that needs to be converted to PDF or added to an existing docum
 ## Solution
 You can use the WordsProcessing library to convert the content to a RadFlowDocument and then insert it to the existing document along with other content.  
 
-#### __C#__
-
-{{region kb-convert-html-to-pdf}}
-
-```c#
+```csharp
 HtmlFormatProvider provider = new HtmlFormatProvider();
 var htmlConteont = provider.Import(File.ReadAllText(@"..\..\HtmlPage1.html"));
 
@@ -57,8 +53,6 @@ var pdfFProvider = new PdfFormatProvider();
 var pdfBytes = pdfFProvider.Export(document);
 File.WriteAllBytes("result.pdf", pdfBytes); 
 ```
-
-{{endregion}}
 
 # See Also
 
