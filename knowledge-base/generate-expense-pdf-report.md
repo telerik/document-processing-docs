@@ -20,6 +20,8 @@ ticketid: 1710179
 
 This article shows a sample approach of generating a PDF expense report. The report is purposed to contain receipt images (e.g. gas, toll, meal) or PDF attachments of receipts.
 
+<img style="border: 1px solid gray;" src="images/pdf-expense-report.png" /> 
+
 ## Solution
 
 To achieve this, use [RadPdfProcessing]({%slug radpdfprocessing-overview%}) from the Telerik Document Processing libraries. The library provides functionality for creating PDF documents, inserting images, embedding files, and merging multiple PDF documents.
