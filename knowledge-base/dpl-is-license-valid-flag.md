@@ -18,16 +18,11 @@ ticketid: 1710169
 
 ## Description
 
-When using the `TelerikLicensing.License()` method, the `IsLicenseValid` flag consistently returns `false` even though the license is handled correctly.
-
-This knowledge base article answers the following questions:
-- How to enable diagnostics for Telerik Document Processing license?
-- Why does `IsLicenseValid` return false for Telerik Document Processing license?
-- How to verify Telerik license on startup?
+When using the `TelerikLicensing.License()` method, the `IsLicenseValid` flag may consistently return `false` even though the license is handled correctly.
 
 ## Solution
 
-The TelerikLicensing.License method has several overloads accepting different parameters. If you call the License() method without passing any arguments, it checks the entry assembly of your project which explains the false result. However, you can pass a Telerik assembly explicitly to the `License` method to check the license validity. For example:
+The TelerikLicensing.License method has several overloads accepting different parameters. If you call the License() method without passing any arguments, it checks the entry assembly of your project (e.g. console application) which explains the false result. However, you can pass a Telerik assembly explicitly to the `License` method to check the license validity for this particular assembly. For example:
 
 ```csharp
 using Telerik.Windows.Documents.Fixed;
