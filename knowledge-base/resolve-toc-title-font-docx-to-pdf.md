@@ -1,9 +1,9 @@
 ---
-title: Resolving Distorted Font of TOC (Table of Content) Title When Converting DOCX to PDF
-description: Learn how to address text formatting issues and missing text when converting DocX to PDF using the Telerik WordsProcessing library.
+title: Resolving Distorted Font of TOC (Table of Contents) Title When Converting DOCX to PDF
+description: Learn how to address font issues with the TOC title when converting DOCX to PDF using the Telerik WordsProcessing library.
 type: how-to
-page_title: Resolving Distorted Font of TOC (Table of Content) Title When Converting DOCX to PDF
-meta_title: Resolving Distorted Font of TOC (Table of Content) Title When Converting DOCX to PDF
+page_title: Resolving Distorted Font of TOC (Table of Contents) Title When Converting DOCX to PDF
+meta_title: Resolving Distorted Font of TOC (Table of Contents) Title When Converting DOCX to PDF
 slug: resolve-toc-title-font-docx-to-pdf
 tags: word,processing, telerik, document, docx, pdf, toc, font, style, text, toc, title
 res_type: kb
@@ -15,19 +15,20 @@ ticketid: 1710417
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
 | 2026.1.210| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+|4.8.1|.NET Framework||
 
 ## Description
 
-When converting a DocX file to PDF using the Telerik WordsProcessing library, the text format may differ from the original file, and some text may be missing. Issues may include mismatched fonts, shifted "Table of Contents" lines, and missing reference notes represented as footnotes.
-
-This knowledge base article also answers the following questions:
-- How to fix distorted text formatting during DocX to PDF conversion?
-- Why are footnotes missing in PDF generated from DocX?
-- How to align "Table of Contents" entries correctly in PDF?
+When converting a DOCX file to PDF format using the [WordsProcessing]({%slug radwordsprocessing-overview%}) library, the text's font may differ from the original file for the TOC (`Table of contents`) title. This article explains why this is observed and how to handle this behavior.  
 
 ## Solution
 
-### Fixing Font Differences in Table of Contents Title
+The [TOC title]({%slug radwordsprocessing-concepts-toc-field%}) uses the **TOC Heading** style.
+In Word (and in RadWordsProcessing), the text `Table of Contents` is formatted by the built‑in [style]({%slug radwordsprocessing-concepts-styles%}) **TOC Heading**. If that style isn’t explicitly set (or you set it before the TOC updates), the export may fall back to defaults and you’ll see a different font in the PDF. 
+
+Once the DOCX file is imported in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) using the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}), there are two possible approaches to specify the font for the TOC title:
+
+### Applying a Custom Style 
 
 1. Define a custom style for the "Table of Contents" title.
 2. Apply the custom style to the corresponding paragraph in the document.
@@ -51,7 +52,11 @@ if (tocTitle != null)
 }
 ```
 
-Alternatively, adjust the imported style applied to the TOC title:
+### Modifying the Applied Style
+
+1. Get the style that is already applied to the TOC title.
+
+2. Adjust the imported style and apply the desired font:
 
 ```csharp
 var tocTitle = document
@@ -72,43 +77,7 @@ if (tocTitle != null)
     }
 }
 ```
-
-### Ensuring TOC Entries Align Correctly
-
-1. Define explicit paragraph properties for TOC entries.
-2. Set alignment and tab stops.
-
-```csharp
-string toc1Id = BuiltInStyleNames.GetTocStyleIdByIndex(1);
-document.StyleRepository.AddBuiltInStyle(toc1Id);
-var toc1 = document.StyleRepository.GetStyle(toc1Id);
-if (toc1 != null)
-{
-    var pp = toc1.ParagraphProperties;
-    pp.TextAlignment.LocalValue = Alignment.Left;
-    pp.TabStops.ClearValue();
-    pp.TabStops.LocalValue = new TabStopCollection().Insert(new TabStop(20, TabStopType.Left, TabStopLeader.Dot));
-}
-```
-
-### Keeping TOC on a Single Line
-
-Adjust the page margin for the document before exporting to PDF:
-
-```csharp
-foreach (var section in document.Sections)
-{
-    section.PageMargins = new Padding(50);
-}
-```
-
-### Addressing Missing Reference Notes
-
-Footnotes and endnotes are currently unsupported by Telerik WordsProcessing. Track progress and vote for this feature request [here](https://feedback.telerik.com/document-processing/1356023-wordsprocessing-footnotes-and-endnotes).
-
 ## See Also
 
-- [RadWordsProcessing Styles](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/styles)
-- [RadWordsProcessing Document Themes](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/document-themes)
-- [Changing Properties When Converting Flow to PDF](https://docs.telerik.com/devtools/document-processing/knowledge-base/change-properties-when-converting-flow-to-pdf)
-- [WordsProcessing: Footnotes and Endnotes Feature Request](https://feedback.telerik.com/document-processing/1356023-wordsprocessing-footnotes-and-endnotes)
+- [Styles]({%slug radwordsprocessing-concepts-styles%})
+- [TOC field]({%slug radwordsprocessing-concepts-toc-field%}) 
