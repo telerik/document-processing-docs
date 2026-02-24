@@ -51,7 +51,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 2. Deploy a model in your Azure OpenAI resource.
 3. Get your Azure OpenAI endpoint and key.
 
->caution The following code snippet is valid for Microsoft.Extensions.AI.OpenAI 9.3. The specific **IChatClient** initialization may be different according to the specific version.
+>caution The following code snippet is valid for Microsoft.Extensions.AI.OpenAI 10.3. The specific **IChatClient** initialization may be different according to the specific version.
 
 #### __Example 1: Setting up Azure OpenAI__
 
