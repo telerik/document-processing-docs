@@ -82,4 +82,5 @@ This makes a list of all TC fields with the 'a' identifier.
 * [Updating TOC Page Numberings in Word Documents Before Exporting to DOCX Format]({%slug update-toc-radwordsprocessing-before-docx-export%}) 
 * [Styling Table of Contents with Multilevel List Numbering in Telerik WordsProcessing]({%slug wordsprocessing-styling-table-of-contents-multilevel-list-numbering%})
 * [WordsProcessing Table Of Contents/Authorities Demo](https://demos.telerik.com/document-processing/wordsprocessing/table_of_contents_authorities)
+* [Resolving Distorted Font of TOC (Table of Contents) Title When Converting DOCX to PDF]({%slug resolve-toc-title-font-docx-to-pdf%})
 
