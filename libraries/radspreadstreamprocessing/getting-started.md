@@ -9,52 +9,13 @@ position: 1
 
 # Getting Started
 
-This article will get you started in using the **RadSpreadStreamProcessing** library. It contains the following sections:
-
-* [Package References](#package-references)
-
-* [Supported Formats](#supported-formats)
-
-* [Create a Spreadsheet Document](#create-a-spreadsheet-document)
+This article will get you started in using the **RadSpreadStreamProcessing** library.
 
 >note If you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 ## Package References
 
->The libraries support {{site.dotnetversions}}. .NET Standard-compatible packages are available as well. The packages for .NET Standard don't include 'Windows' in their names. (e.g. **Telerik.Zip.**).
-
-In order to use **RadSpreadStreamProcessing** in your project, you will need to add the references listed below.
-
-<table>
-<thead>
-	<tr>
-		<th>.NET Framework </th>
-		<th>.NET Standard-compatible</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td><b>Telerik.Documents.SpreadsheetStreaming</b></td>
-		<td><b>Telerik.Documents.SpreadsheetStreaming</b></td>
-	</tr>
-	<tr>
-	    <td colspan="2">&nbsp;</td>
-	</tr>
-	<tr>
-        <td colspan="2">To describe different colors, shapes and other properties, <b>RadSpreadStreamProcessing</b> depends on the listed below .NET assemblies, which you should also refer in your project:</td> 
-    </tr>
-    <tr>
-	    <td><b>WindowsBase.dll</b></td>
-		<td><b>-</b></td>
-	</tr>
-	<tr>
-	    <td><b>PresentationFramework.dll</b></td>
-		<td><b>-</b></td>
-	</tr>
-</tbody>
-</table>
-
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and {{site.dotnetversions}}. For the full list of suites including Telerik Document Processing, check the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) help topic. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+You can find the required references in the [SpreadStreamProcessing NuGet packages]({%slug available-nuget-packages%}#spreadstreamprocessing-packages) section.
 
 ## Create a Spreadsheet Document
 

@@ -10,7 +10,8 @@ position: 7
 
 # Install using NuGet Packages
 
-This article describes how you can install the Document Processing Libraries using a NuGet package. There are two ways for getting the NuGet packages:
+This article describes how you can install the Document Processing Libraries using a NuGet package. 
+You can find all Document Processing Libraries packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article. There are two ways for getting the NuGet packages:
 
 * [Manually download the packages](#manually-download-nuget-packages)
 
@@ -38,14 +39,6 @@ This approach allows you to setup a local NuGet package source, so you can insta
 4\. The final step is to select and install the desired packages. 
 
 ![install-using-nuget003](images/install-using-nuget003.png) 
-
->important The Telerik Document Processing libraries are available in two versions:
->
->* A version for __.Net Framework 4.6.2__ or later
->
->* A version for __.Net Standard 2.0__
->
->Both versions are available as NuGet packages but with different names. The packages for __.NET Standard__ do __not__ contain the word __Windows__ in their name.
 
 ## Download from the NuGet server
 
