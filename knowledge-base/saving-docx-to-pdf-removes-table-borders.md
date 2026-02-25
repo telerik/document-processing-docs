@@ -8,12 +8,12 @@ tags: radwordsprocessing, docx, pdf, table, borders, pdfformatprovider
 res_type: kb
 ---
 
-# Environment 
+## Environment 
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.124 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-# Description
+## Description
 Table borders are removed when saving a DOCX file to PDF using the PdfFormatProvider in RadWordsProcessing.
 
 The table in the DOCX file has standard Word border styles applied to all borders, including dotted lines. However, when using the PdfFormatProvider to save the document as PDF, the borders become invisible and are not displayed in the resulting PDF file. Even when setting the table border width to 3pt, the borders still do not appear in the PDF file.
@@ -22,7 +22,7 @@ The table in the DOCX file has standard Word border styles applied to all border
 |----|----|
 |![DOCX with table borders](images/saving-docx-to-pdf-removes-table-borders001.png) |![PDF without table borders](images/saving-docx-to-pdf-removes-table-borders002.png) |
 
-# Solution
+## Solution
 Currently, there is a limitation in RadWordsProcessing where the PdfFormatProvider does not support all types of border styles. However, there is a workaround that can be used to apply a single border to the table elements in the RadFlowDocument before exporting it to PDF.
 
 Here is an example in C# that demonstrates the workaround:

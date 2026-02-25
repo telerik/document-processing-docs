@@ -26,14 +26,14 @@ __Example 1__ illustrates how to create a workbook from scratch and protect it u
 
 >The protection functionality protects the workbook structure from being edited. If you need to protect the document so that it can be opened only after providing a password for it, you should encrypt it. The encryption functionality is currently not supported in SpreadProcessing and you can vote for its implementation using the [public request](https://feedback.telerik.com/document-processing/1356022-spreadprocessing-implement-encryption-of-workbook) for it. 
 
-#### __[C#] Example 1: Password-protect a Workbook__
+#### __Example 1: Password-protect a Workbook__
 
-{{region cs-radspreadprocessing-features-protection-workbook_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	
 	workbook.Protect("telerik");
-{{endregion}}
+```
 
 
 
@@ -45,16 +45,16 @@ Use the __Unprotect(string)__ method of the __Workbook__ class to remove the wor
 __Example 2__ demonstrates how to unprotect a workbook.
 
 
-#### __[C#] Example 2: Unprotect a Workbook__
+#### __Example 2: Unprotect a Workbook__
 
-{{region cs-radspreadprocessing-features-protection-workbook_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	
 	workbook.Protect("telerik");
 	
 	workbook.Unprotect("telerik");
-{{endregion}}
+```
 
 
 

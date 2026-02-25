@@ -34,7 +34,7 @@ The default value, for example, specifies that "b" elements should be imported w
 
 You can set the value of the property to any valid CSS document. **Example 1** shows how you can add styling in addition to the default ones. 
 
-#### [C#] Example 1: Add CSS to the DefaultStyleSheet
+#### Example 1: Add CSS to the DefaultStyleSheet
 
 <snippet id='codeblock-css-default'/>          
 
@@ -55,7 +55,7 @@ The __LoadImageFromUri__ event uses the __LoadImageFromUriEventArgs__ object whi
 
 __Example 2__ Shows how you can use the __LoadImageFromUri__ event to download an image.
 
-#### __[C#] Example 2: Use the LoadImageFromUri__
+#### __Example 2: Use the LoadImageFromUri__
 <snippet id='codeblock-load-image-from-uri'/>
 
 The __LoadStyleSheetFromUri__ event uses the __LoadStyleSheetFromUriEventArgs__ object which exposes the following properties: 
@@ -65,7 +65,7 @@ The __LoadStyleSheetFromUri__ event uses the __LoadStyleSheetFromUriEventArgs__ 
 
 __Example 3__ Shows how you can use the __LoadStyleSheetFromUri__ event.
             
-#### __[C#] Example 3: Use the LoadStyleSheetFromUri event__
+#### __Example 3: Use the LoadStyleSheetFromUri event__
 <snippet id='codeblock-load-stylesheet-from-uri'/>
 
 ## UriImageSource Class
@@ -76,7 +76,7 @@ When importing HTML, which contains images with URI source, the **HtmlFormatProv
 * __Data__: Gets a byte[], which represents the data of the image. Accessing this property will download the image data.
 * __Extension__: Gets the extension. Accessing this property will download the image data only if the extension is not predefined.
 
-> important Using __UriImageSource__ or the __LoadFromUri__ event will make an http request and will download the respected resource. Consider this fact if your application is not meant to freely access any remote resources.
+>important Using __UriImageSource__ or the __LoadFromUri__ event will make an http request and will download the respected resource. Consider this fact if your application is not meant to freely access any remote resources.
 
 > Exporting an **UriImageSource** object to other supported formats will download the image and save it according to the used format specification.
 
@@ -85,7 +85,7 @@ When importing HTML, which contains images with URI source, the **HtmlFormatProv
 
 The **UriImageSource** objects are always exported as images with URI as their source independently of the export settings. If you need to export this object as an embedded or external image, you could convert the **UriImageSource** to **ImageSource** object. 
 
-#### __[C#] Example 4: Convert UriImageSource to ImageSource__
+#### __Example 4: Convert UriImageSource to ImageSource__
 
 <snippet id='codeblock-ca'/>
 
@@ -120,8 +120,7 @@ This property is used to control how images are exported. The available options 
             
 > When an image with Uri source is imported, the ImageSource property of the Image contains object of type UriImageSource. Hence, the image is always exported with URI and the __ImagesExportMode__ property is not respected. If you need this property to be respected, you could convert the **UriImageSource** object to __ImageSource__.
           
-<p>
->When working with relative URI, the import/export functionalities only preserve the path to the image and do not modify it.
+> When working with relative URI, the import/export functionalities only preserve the path to the image and do not modify it.
 
 ### ImagesFolderPath
 
@@ -203,7 +202,7 @@ The event is only raised when the __StylesExportMode__ property is set to __Exte
 __Example 5__ demonstrates how you can create export settings.
             
 
-#### __[C#] Example 5: Create HtmlExportSettings__
+#### __Example 5: Create HtmlExportSettings__
 
 <snippet id='codeblock-cb'/>
 

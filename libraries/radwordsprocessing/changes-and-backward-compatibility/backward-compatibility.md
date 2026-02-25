@@ -19,7 +19,7 @@ The __TryGetSwitch__ method is marked obsolete.
 
 ### What to do now
 
-Use the __TryGetSwitch__ method where the second parameter is `IList<FieldSwitch>`. 
+Use the __TryGetSwitch__ method where the second parameter is `IList&lt;FieldSwitch&gt;`. 
 
 ### Changed
 

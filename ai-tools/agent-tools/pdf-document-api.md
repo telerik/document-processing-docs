@@ -42,7 +42,7 @@ This toolset enables intelligent agents, automation systems, and PDF‑processin
     string documentId = null)</pre></td><td>Extracts detailed, read‑only metadata about all interactive form fields in a PDF.</td></tr>
 <tr><td>FillPdfFormFields</td><td><pre>CallToolResult FillPdfFormFields(
     string documentId,
-    Dictionary<string, PdfFormFieldValue> fieldValues)</pre></td><td>Programmatically fills form fields and saves the completed form as a new PDF.
+    Dictionary&lt;string, PdfFormFieldValue&gt; fieldValues)</pre></td><td>Programmatically fills form fields and saves the completed form as a new PDF.
 Partial completion is supported—only supply the fields you want to set, and all others remain untouched for manual fill‑in later.</td></tr>
 </table>
 

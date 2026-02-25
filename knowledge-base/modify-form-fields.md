@@ -21,8 +21,7 @@ You have a document that has many form fields and you want to populate them with
 
 You can import the document and iterate all fields. This will allow you to set their value.
 
-#### __C#__
-{{region kb-modify-form-fields_0}}
+```csharp
 
     var provider = new PdfFormatProvider();
 
@@ -50,5 +49,5 @@ You can import the document and iterate all fields. This will allow you to set t
 
     File.WriteAllBytes("result.pdf", provider.Export(document));
 
-{{endregion}}
+```
 

@@ -19,7 +19,7 @@ __RadFlowDocument__ hosts flow document content and is the root element in the d
 The code from __Example 1__ shows how you can create a new __RadFlowDocument__.
         
 
-#### __[C#] Example 1: Create RadFlowDocument__
+#### __Example 1: Create RadFlowDocument__
 
 <snippet id='codeblock-dh'/>
 
@@ -66,7 +66,7 @@ There are different actions which you can execute with the help of the __RadFlow
 You can create a __RadFlowDocument__ from scratch and add Sections to it as follows:
             
 
-#### __[C#] Example 2: Add a Section to a RadFlowDocument__
+#### __Example 2: Add a Section to a RadFlowDocument__
 
 <snippet id='codeblock-di'/>
 
@@ -78,7 +78,7 @@ The Sections property of the document is of type __SectionCollection__ and allow
 Alternatively, you could create a section by passing to its constructor the document it should be associated with.
             
 
-#### __[C#] Example 3: Create a section__
+#### __Example 3: Create a section__
 
 <snippet id='codeblock-dj'/>
 
@@ -89,7 +89,7 @@ Alternatively, you could create a section by passing to its constructor the docu
 You can merge a __RadFlowDocument__ within another document by using the __Merge()__ method and pass the source document as a parameter to it:
             
 
-#### __[C#] Example 4: Merge documents__
+#### __Example 4: Merge documents__
 
 <snippet id='codeblock-dk'/>
 
@@ -104,7 +104,7 @@ Additionally, you have the opportunity to specify the __MergeOptions__ which con
     * __RenameSourceStyle__: If a conflict between styles with the same IDs appears, the style of the __source__ document is renamed and used.
                     
 
-#### __[C#] Example 5: Merge documents using MergeOptions__
+#### __Example 5: Merge documents using MergeOptions__
 
 <snippet id='codeblock-dl'/>
 
@@ -118,7 +118,7 @@ __RadFlowDocument__ exposes an __UpdateFields()__ method which allows you to upd
 The snippet from __Example 6__ shows how all fields in a document can be updated simultaneously.
             
 
-#### __[C#] Example 6: Update all fields in a document__
+#### __Example 6: Update all fields in a document__
 
 <snippet id='codeblock-dm'/>
 

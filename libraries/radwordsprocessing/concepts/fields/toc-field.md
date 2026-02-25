@@ -63,15 +63,14 @@ Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%sl
 
 __Example 1__ demonstrates how you can insert a TOC field.
         
+#### __Example 1: Insert TOC field__
 
-#### __[C#] Example 1: Insert TOC field__
-
-<pre><code>
+```C#
     var document = new RadFlowDocument();
     var editor = new RadFlowDocumentEditor(document);
 
     editor.InsertField("TOC \\f a ");
-</code></pre>
+```
 
 This makes a list of all TC fields with the 'a' identifier.
 
@@ -83,4 +82,5 @@ This makes a list of all TC fields with the 'a' identifier.
 * [Updating TOC Page Numberings in Word Documents Before Exporting to DOCX Format]({%slug update-toc-radwordsprocessing-before-docx-export%}) 
 * [Styling Table of Contents with Multilevel List Numbering in Telerik WordsProcessing]({%slug wordsprocessing-styling-table-of-contents-multilevel-list-numbering%})
 * [WordsProcessing Table Of Contents/Authorities Demo](https://demos.telerik.com/document-processing/wordsprocessing/table_of_contents_authorities)
+* [Resolving Distorted Font of TOC (Table of Contents) Title When Converting DOCX to PDF]({%slug resolve-toc-title-font-docx-to-pdf%})
 

@@ -8,9 +8,12 @@ published: True
 position: 2
 ---
 
-# Named Actions  
+# Named Actions 
 
-As of **Q1 2025** RadPdfProcessing provides support for **Named actions** that PDF viewer applications are expected to support. The NamedAction class offers the public **Type** property which specifies the type of the action representing the menu item to be executed.
+|Minimum Version|Q1 2025|
+|----|----|
+
+RadPdfProcessing provides support for **Named actions** that PDF viewer applications are expected to support. The NamedAction class offers the public **Type** property which specifies the type of the action representing the menu item to be executed.
 
 The available *Standard* **NamedActionType** options are listed in the table below. 
 

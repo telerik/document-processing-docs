@@ -32,7 +32,7 @@ position: 6
 __Example 1__ demonstrates how a RadFixedDocumentEditor instance can be created.
         
 
-#### __[C#] Example 1: Create RadFixedDocumentEditor__
+#### __Example 1: Create RadFixedDocumentEditor__
 
 <snippet id='pdf-create-fixed-document-editor'/>
 
@@ -59,7 +59,7 @@ The section properties are responsible for the page size, margins and orientatio
 	* __Rotate180__: The page is rotated to 180°.
 	* __Rotate270__: The page is rotated to 270°.
 
-#### __[C#] Example 2: Setting section properties__                    
+#### __Example 2: Setting section properties__                    
 
 <snippet id='pdf-create-fixed-document-editor-section-properties'/>
 
@@ -69,7 +69,7 @@ The first section of a document starts as soon as a content is inserted to the e
 
 Adding an additional section is achieved with the __InsertSectionBreak()__ method as demonstrated in __Example 2__.
             
-#### __[C#] Example 3: Start a section__
+#### __Example 3: Start a section__
 
 <snippet id='pdf-create-fixed-document-editor-start-section'/>
 
@@ -78,7 +78,7 @@ Adding an additional section is achieved with the __InsertSectionBreak()__ metho
 ### Starting New Page
 All pages that have the same __SectionProperties__ are part of the current section. To start a new page, you can use the following code:
 
-#### __[C#] Example 4: Start new page__
+#### __Example 4: Start new page__
 
 <snippet id='pdf-create-fixed-document-editor-start-page'/>
 
@@ -114,7 +114,7 @@ Similar to the section properties, paragraph has its own properties that are res
 
 * __ListLevel__: The list level the paragraph belongs to.
 
-#### __[C#] Example 5: Setting paragraph properties__
+#### __Example 5: Setting paragraph properties__
 
 <snippet id='pdf-create-fixed-document-editor-paragraph-properties'/>
 
@@ -124,7 +124,7 @@ The first paragraph is created as soon as content is inserted in the editor. You
 
 In order to start a new paragraph, use the code in __Example 4__.           
 
-#### __[C#] Example 6: Start a paragraph__
+#### __Example 6: Start a paragraph__
 
 <snippet id='pdf-create-fixed-document-editor-start-paragraph'/>
 
@@ -169,7 +169,7 @@ The character properties that are responsible for the look of the runs are liste
 
 * __StrikethroughColor__: The color of the strikethrough.
 
-#### __[C#] Example 7: Setting CharacterProperties__ 
+#### __Example 7: Setting CharacterProperties__ 
 
 <snippet id='pdf-create-fixed-document-editor-char-properties'/>
 
@@ -181,7 +181,7 @@ The character properties that are responsible for the look of the runs are liste
 
 There are a number of overloads that insert a run. The code snippet in __Example 5__ inserts new runs with specific font family, style and weight.         
 
-#### __[C#] Example 8: Insert run__
+#### __Example 8: Insert run__
 
 <snippet id='pdf-create-fixed-document-editor-insert-run'/>
 
@@ -192,7 +192,7 @@ There are a number of overloads that insert a run. The code snippet in __Example
 The code in __Example 9__ inserts a new run and a line break after it.
                 
 
-#### __[C#] Example 9: Insert run and line break__
+#### __Example 9: Insert run and line break__
 
 <snippet id='pdf-create-fixed-document-editor-insert-line-run'/>
 
@@ -204,7 +204,7 @@ Image inline is a combination of an [ImageSource]({%slug radpdfprocessing-model-
 
 You can insert image inline using one of the following methods:
          
-#### __[C#] Example 10: Insert image__    
+#### __Example 10: Insert image__    
    
 <snippet id='pdf-create-fixed-document-editor-insert-image'/>
 
@@ -213,7 +213,7 @@ You can insert image inline using one of the following methods:
 The __Table__ class implements the __IBlockElement__ interface and an instance of this class can be easily inserted as a new block in the document. You could insert the table using the __InsertTable()__ method like illustrated in __Example 8__. __RadFixedDocumentEditor__ takes care for positioning, measuring and splitting the table onto pages.
         
 
-#### __[C#] Example 11: Insert table__
+#### __Example 11: Insert table__
 
 <snippet id='pdf-fixed-document-editor-insert-table'/>     
 
@@ -223,7 +223,7 @@ For more detailed information on tables, check the [Table]({%slug radpdfprocessi
 
 The [IBlockElement](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.IBlockElement.html) interface allows you to easily draw and split some block content onto pages. The interface is implemented by [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table-overview%}) classes. You can easily add some block element instance with RadFixedDocumentEditor using the InsertBlock() method like illustrated in __Example 9__.
 
-#### __[C#] Example 12: Insert Block element__
+#### __Example 12: Insert Block element__
 
 <snippet id='pdf-fixed-document-editor-insert-block-element'/>
 
@@ -233,7 +233,7 @@ You can easily insert list items with __RadFixedDocumentEditor__. The first thin
 
 The following code snippet shows how to add a new list to __RadFixedDocumentEditor’s ListCollection__ and after that insert a paragraph with the corresponding list properties:
 
-#### __[C#] Example 13: Insert list__
+#### __Example 13: Insert list__
 
 <snippet id='pdf-fixed-document-editor-insert-list'/>
 
@@ -243,7 +243,7 @@ More detailed information about lists is available in the [List documentation ar
 
 With the RadFixedDocumentEditor class you can insert a Form (Form-XObject) element. 
 
-#### __[C#] Example 14: Insert a form__
+#### __Example 14: Insert a form__
 <snippet id='pdf-fixed-document-editor-insert-form'/>
 
 There is an additional overload of InsertFormInline() that enables you to pass the size that should be used for the form.

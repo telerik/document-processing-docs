@@ -17,6 +17,10 @@ The Agent Tools API provides document processing capabilities designed to be exp
 
 The API is built around two key concepts: **repositories** for managing documents in memory, and **agent tool classes** that provide specific document processing capabilities that can be directly exposed to AI agents.
 
+## License Requirements
+
+Access to the Telerik Document Processing Agent Tools depends on your [Telerik license type](https://www.telerik.com/purchase.aspx?filter=web). The Agent Tools are included with any valid 30‑day **Trial** or active **Subscription** license for Telerik products or bundles that include Document Processing Libraries entitlement.
+
 ## Base Classes and Interfaces
 
 The Agent Tools API provides foundational types that enable document management and tool creation across all document types:
@@ -48,11 +52,11 @@ The Agent Tools API provides optional dependency injection support for applicati
 
 The following extension methods are available for registering agent tools with IServiceCollection:
 
-  - **services.AddSpreadsheetAgentTools()**: Registers all spreadsheet agent tool classes (SpreadProcessingReadAgentTools, SpreadProcessingWriteAgentTools, SpreadProcessingWorksheetAgentTools, SpreadProcessingFileManagementAgentTools, and SpreadProcessingFormulaAgentTools) and their required dependencies, including the appropriate workbook repository.
+- **services.AddSpreadsheetAgentTools()**: Registers all spreadsheet agent tool classes (SpreadProcessingReadAgentTools, SpreadProcessingWriteAgentTools, SpreadProcessingWorksheetAgentTools, SpreadProcessingFileManagementAgentTools, and SpreadProcessingFormulaAgentTools) and their required dependencies, including the appropriate workbook repository.
   
-  - **services.AddFixedAgentTools()**: Registers all fixed document agent tool classes (FixedDocumentFormAgentTools, FixedDocumentContentAgentTools, and FixedFileManagementAgentTools) and their required dependencies, including the fixed document repository.
+- **services.AddFixedAgentTools()**: Registers all fixed document agent tool classes (FixedDocumentFormAgentTools, FixedDocumentContentAgentTools, and FixedFileManagementAgentTools) and their required dependencies, including the fixed document repository.
   
-  - **services.AddFlowAgentTools()**: Registers flow document repositories and related services for use with conversion and merge operations.
+- **services.AddFlowAgentTools()**: Registers flow document repositories and related services for use with conversion and merge operations.
 
 ## See Also
 

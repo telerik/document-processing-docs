@@ -7,7 +7,7 @@ slug: creating-colored-squares-radflowdocument
 tags: radflowdocument, colored-square, border, telerik-document-processing
 res_type: kb
 ---
-# Environment
+## Environment
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 

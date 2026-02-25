@@ -34,9 +34,9 @@ The __SetHidden()__ method is used to change the hidden state of the rows and co
 
 __Example 1__ shows how to retrieve and change the hidden state of several rows using the RowSelection class. The code checks if all the rows in the selection are visible and only then hides them. If the selection contains any hidden rows, the hidden state is cleared which will make all rows visible.
 
-#### __[C#] Example 1: Change row hidden state__
+#### __Example 1: Change row hidden state__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-hiding_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -50,7 +50,7 @@ __Example 1__ shows how to retrieve and change the hidden state of several rows 
 	{
 	    rowSelection.ClearHidden();
 	}
-{{endregion}}
+```
 
 
 ## Relationship with the Height and Width Properties
@@ -59,9 +59,9 @@ When the hidden state property of a RowSelection or a ColumnSelection is set, th
 
 __Example 2__ shows how you can set the width of a group of columns and it would not affect the hidden state.
 
-#### __[C#] Example 2: Change column width__
+#### __Example 2: Change column width__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-hiding_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -69,7 +69,7 @@ __Example 2__ shows how you can set the width of a group of columns and it would
 	columnSelection.SetWidth(new ColumnWidth(0, true));
 	
 	bool hiddenState = columnSelection.GetHidden().Value;
-{{endregion}}
+```
 
 ## Relationship with the AutoFit Method
 
@@ -77,9 +77,9 @@ Like setting the height or width through the SetHeight() and SetWidth() methods,
 
 __Example 3__ demonstrates this by hiding a row, autofitting it and then checking its hidden state.
 
-#### __[C#] Example 3: Auto fit on hidden rows__
+#### __Example 3: Auto fit on hidden rows__
 
-{{region cs-radspreadprocessing-working-with-rows-and-columns-hiding_2}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	
@@ -89,7 +89,7 @@ __Example 3__ demonstrates this by hiding a row, autofitting it and then checkin
 	rowSelection.AutoFitHeight();
 	
 	bool hiddenState = rowSelection.GetHidden().Value;
-{{endregion}}
+```
 
 
 ## See Also

@@ -56,7 +56,7 @@ The possible switches for a Hyperlink field are:
 Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). It provides two options for this:
 * __InsertHyperlink()__ method. It accepts the hyperlink text, URI, IsAnchor value and tooltip as parameters.
 
-	#### __[C#] Example 1: Insert a Hyperlink using InsertHyperlink method__
+	#### __Example 1: Insert a Hyperlink using InsertHyperlink method__
 
 	<snippet id='codeblock-yy'/>
 
@@ -65,11 +65,11 @@ Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEdito
 	#### Figure 1: Hyperlink inserted in a document
 	![Rad Words Processing Concepts Hyperlinks 01](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_01.png)
 
-	>tipThe  **InsertHyperlink()** method also automatically applies the Hyperlink style to the result fragment of the inserted  field. More information about styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.	
+	>tip The  **InsertHyperlink()** method also automatically applies the Hyperlink style to the result fragment of the inserted  field. More information about styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.	
 
 * __InsertField()__ method. It accepts code as first argument and result as second argument.
 
-	#### __[C#] Example 2: Insert a Hyperlink field using InsertField method__
+	#### __Example 2: Insert a Hyperlink field using InsertField method__
 
 	<snippet id='codeblock-zz'/>
 
@@ -81,7 +81,7 @@ Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEdito
 
 Hyperlinks can also point to a [Bookmark]({%slug radwordsprocessing-model-bookmark%}) inside the document. **Example 3** shows how to create a document containing a bookmark and a hyperlink pointing to that bookmark.
 
-#### __[C#] Example 3: Insert a hyperlink pointing to a bookmark__
+#### __Example 3: Insert a hyperlink pointing to a bookmark__
 
 <snippet id='codeblock-ba'/>
 

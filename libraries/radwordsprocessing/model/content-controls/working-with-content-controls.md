@@ -17,7 +17,7 @@ This article shows some examples of how you can insert content controls, access 
 
 The content controls can be retrieved by using the __EnumerateChildrenOfType()__ method of any document element. 
 
-#### __C# Example 1: Get all content controls__
+#### __Example 1: Get all content controls__
 
 <snippet id='codeblock-dndn'/>
 
@@ -25,7 +25,7 @@ The content controls can be retrieved by using the __EnumerateChildrenOfType()__
 
 This example shows how one can iterate the items and add an item to an existing ComboBox content control. 
 
-#### __C# Example 2: Adding items to a ComboBox or a DropDownList__
+#### __Example 2: Adding items to a ComboBox or a DropDownList__
 
 <snippet id='codeblock-dodo'/>
 
@@ -35,23 +35,23 @@ New content controls can be inserted through the **InsertStructuredDocumentTag**
 
 >note If adding content controls with the InsertStructuredDocumentTag(SdtType) method without specifying the content, the resulting document will only have the annotation range start and end of the control. The desired content should be manually added afterwards. 
 
-#### __C# Example 3: Inserting a content control using content control type__
+#### __Example 3: Inserting a content control using content control type__
 
 <snippet id='codeblock-dpdp'/>
 
-#### __C# Example 4: Inserting a Rich Text content control using content control properties__
+#### __Example 4: Inserting a Rich Text content control using content control properties__
 
 <snippet id='codeblock-dqdq'/>
 
-#### __C# Example 5: Inserting a CheckBox content control using content control properties__
+#### __Example 5: Inserting a CheckBox content control using content control properties__
 
 <snippet id='codeblock-drdr'/>
 
-#### __C# Example 6: Remove a content control__
+#### __Example 6: Remove a content control__
 
 <snippet id='codeblock-dsds'/>
 
-#### __C# Example 7: Insert a content control to a specific position__
+#### __Example 7: Insert a content control to a specific position__
 
 >note When using the InsertStructuredDocumentTag() method and passing start and end elements, make sure that the elements are not already part of a content control.  An exception to the rule are the rich text and repeating section content controls, which can fully contain other controls, with the restriction that they cannot intersect their ranges. 
 

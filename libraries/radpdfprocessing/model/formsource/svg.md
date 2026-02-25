@@ -10,7 +10,10 @@ position: 1
 
 # SVG FormSource
 
-As of **Q3 2024** RadPdfProcessing provides support for SVG FormSource (vector graphics image format). The static FormSource.**FromSvg** method allows the possibility to insert a vector image in the PDF document. The following overloads are publicly available:
+|Minimum Version|Q3 2024|
+|----|----|
+
+RadPdfProcessing provides support for SVG FormSource (vector graphics image format). The static FormSource.**FromSvg** method allows the possibility to insert a vector image in the PDF document. The following overloads are publicly available:
 
 |Method|Description|
 |----|----|

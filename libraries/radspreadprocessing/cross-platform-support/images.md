@@ -15,17 +15,17 @@ position: 2
 
 >note The **Telerik.Documents.ImageUtils** package provides a default implementation of the ImagePropertiesResolver class that could be used when exporting the document.
 
-#### [C#] Example 1: Set the default implementation of the ImagePropertiesResolver class
+#### Example 1: Set the default implementation of the ImagePropertiesResolver class
 
-{{region cs-radspreadprocessing-cross-platform_0}}
+```csharp
 
     ImagePropertiesResolverBase imagePropertiesResolver = new ImagePropertiesResolver();
     SpreadExtensibilityManager.ImagePropertiesResolver = imagePropertiesResolver;
-{{endregion}}
+```
 
-#### [C#] Example 2: Windows Example: Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class
+#### Example 2: Windows Example: Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class
 
-{{region cs-radspreadprocessing-cross-platform_0}}
+```csharp
 
     public class ImageInfo : ImagePropertiesResolverBase
     {
@@ -38,15 +38,15 @@ position: 2
             }
         }
     }
-{{endregion}}
+```
 
-#### [C#] Example 3: Set the custom implementation inheriting the ImagePropertiesResolverBase abstract class
+#### Example 3: Set the custom implementation inheriting the ImagePropertiesResolverBase abstract class
 
-{{region cs-radspreadprocessing-cross-platform_1}}
+```csharp
 
     ImagePropertiesResolverBase imagePropertiesResolver = new ImageInfo();
     SpreadExtensibilityManager.ImagePropertiesResolver = imagePropertiesResolver;
-{{endregion}}
+```
 
 
 

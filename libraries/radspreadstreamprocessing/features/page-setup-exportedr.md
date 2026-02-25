@@ -23,9 +23,9 @@ The __PageSetupExporter__ allows you to export the page settings for printing. T
 
 An important part is that you need to place the **PageSetupExporer** after the code for exporting all cells on the sheet. Example 1 demonstrates how you can create the **PageSetupExporter** and where to place it.
 
-#### **[C#] Example 1: Using  PageSetupExporter**
+#### **Example 1: Using  PageSetupExporter**
 
-{{region cs-radspreadstreamprocessing-features-page-setup-exporter_0}}
+```csharp
 
     using (FileStream stream = File.Open(fileName, FileMode.OpenOrCreate))
     {
@@ -48,7 +48,7 @@ An important part is that you need to place the **PageSetupExporer** after the c
         }
     }
 
-{{endregion}}
+```
 
 
 >IPageSetupExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.

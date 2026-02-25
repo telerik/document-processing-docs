@@ -41,7 +41,7 @@ TextBoxField exposes the following properties:
 
 * **MaxLengthOfInputCharacters**: Nullable integer value specifying the maximal length of the inputted text. When null, the text is not restricted to any specified length.
 
-#### **[C#] Example 1: Create a TextBoxField and add it to a page**
+#### **Example 1: Create a TextBoxField and add it to a page**
 <snippet id='pdf-textbox-field'/>
 
 >important In .NET Standard use __Telerik.Documents.Primitives.Rect__ instead of __System.Windows.Rect__.

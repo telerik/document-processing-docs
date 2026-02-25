@@ -10,7 +10,7 @@ res_type: kb
 ticketid: 1695747
 ---
 
-# Environment
+## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2025.3.806 | RadSpreadProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)| 

@@ -8,7 +8,10 @@ published: True
 position: 7
 ---
 
-# Viewer Preferences <sup>Q3 2025 (or newer)</sup>
+# Viewer Preferences
+
+|Minimum Version|Q3 2025|
+|----|----|
 
 The **ViewerPreferences** class designates a viewer preferences dictionary controlling the way the document is to be presented on the screen or in print. If no such dictionary is specified, viewing and printing applications should behave in accordance with their own current user preference settings.
 
@@ -34,7 +37,7 @@ The ViewerPreferences class provides the following properties:
 
 >important If a document is created with the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standard, the **ShouldDisplayDocumentTitle** setting is automatically set to **true** to comply with the standard's [accessability]({%slug create-accessible-pdf-documents%}) requirements.
 
-#### **[C#] Example: Setting viewer preferences**
+#### **Example: Setting viewer preferences**
 
 You can access and modify viewer preferences through the **ViewerPreferences** property of the **RadFixedDocument** class.
 

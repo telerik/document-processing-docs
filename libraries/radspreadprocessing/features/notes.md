@@ -11,7 +11,10 @@ platforms: mvc, ajax, blazor, wpf, winforms, xamarin, winui, core
 
 # Notes
 
-Since R1 2022 the SpreadProcessing library supports working with notes. The Notes are used for making notes or annotations about the data. All notes can be found in the __NoteCollection__ of the worksheet. This collection holds __SpreadsheetNote__ objects which represent the notes. Each note has the following properties:
+|Minimum Version|R1 2022|
+|----|----|
+
+RadSpreadProcessing supports working with notes. The Notes are used for making notes or annotations about the data. All notes can be found in the __NoteCollection__ of the worksheet. This collection holds __SpreadsheetNote__ objects which represent the notes. Each note has the following properties:
 
 * __CellIndex:__  Gets or sets the cell index where the top left corner of the shape is positioned.
 * __RelatedCellIndex:__ Gets or sets the cell index assigned to the note.
@@ -37,9 +40,9 @@ Since R1 2022 the SpreadProcessing library supports working with notes. The Note
 
 To add a note you need to specify the cell index to which the note will be related, the position where the note should be placed, the author, and the text content. Specifying the position is optional and by default, the note is placed next to the related cell.
 
-#### __[C#] Example 1: Add note__
+#### Example 1: Add note
 
-{{region cs-radspreadprocessing-features-notes_0}}
+```csharp
 	
     CellIndex relatedCellIndex = new CellIndex(1, 1);
     CellIndex cellIndex = new CellIndex(5, 5);
@@ -49,20 +52,20 @@ To add a note you need to specify the cell index to which the note will be relat
     worksheet.Notes.Add(relatedCellIndex, cellIndex, author, text);
     
 
-{{endregion}}
+```
 
 The above snippet will add a note in cell B2 with a position on cell F6.
 
 ### Removing Notes
 
-#### __[C#] Example 2: Remove note__
+#### Example 2: Remove note
 
-{{region cs-radspreadprocessing-features-notes_1}}
+```csharp
 	
     var note = worksheet.Notes[0];
     worksheet.Notes.Remove(note);
 
-{{endregion}}
+```
 
 
 ### Hide/Show notes
@@ -74,14 +77,14 @@ You can use one of the following methods to show/hide single or all notes:
 * __Hide(SpreadsheetNote note):__ Hide the specified note from the collection.
 * __Show(SpreadsheetNote note):__ Show the specified note from the collection.
 
-#### __[C#] Example 3:Hide note__
+#### Example 3:Hide note
 
-{{region cs-radspreadprocessing-features-notes_2}}
+```csharp
 	
     var note = worksheet.Notes[0];
     worksheet.Notes.Hide(note);
 
-{{endregion}}
+```
 
 ### Events
 

@@ -20,11 +20,11 @@ If you need to comply with the FIPS 140-2 standard, you can disable the forbiden
 >Enforcing FIPS compliance might cause exceptions when importing documents which use any of the forbidden algorithms. 
 
 
-#### [C#] Example 1: Enforce FIPS
-{{region radspreadprocessing-features-protection-fips-compliance-0}}
+#### Example 1: Enforce FIPS
+```csharp
 
     HashingAlgorithmsProvider.EnforceFips1402();
-{{endregion}}
+```
 
 Enforcing the FIPS compliance should be done before using the Protection feature.
 

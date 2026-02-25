@@ -94,9 +94,7 @@ Yes
 </td></tr><tr><td>
 
 Double Strikethrough
-              </td><td>
-
-              </td><td>
+              </td><td></td><td>
 
 </td></tr><tr><td>
 
@@ -266,8 +264,7 @@ Yes
 
 Nested Tables
               </td><td>
-
-              </td><td>
+</td><td>
 
 </td></tr><tr><td>
 
@@ -300,8 +297,7 @@ Yes
 
 Floating Images
               </td><td>
-
-              </td><td>
+</td><td>
 
 </td></tr><tr><td>
 
@@ -414,17 +410,14 @@ Yes
 
 Document Variables
               </td><td>
-
-              </td><td>
+</td><td>
 
 </td></tr><tr><td>
 
 Other Fields
               </td><td>
 
-              </td><td>
-
-              </td></tr><tr><td>
+</td></tr><tr><td>
 
 <b>
                   Review

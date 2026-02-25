@@ -29,7 +29,7 @@ This article shows how to change the content of an existing [Bookmark]({%slug ra
 * **Insert text**: Add the replacement content.
 * **Export DOCX**: Write the updated document using [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
 
-#### [C#] Replace bookmark content but keep formatting
+#### Replace bookmark content but keep formatting
 
 ```csharp
 RadFlowDocument document;

@@ -1,0 +1,483 @@
+top-navigation-product: document-processing
+path-prefix: /document-processing-libraries/documentation
+default-title-prefix: Document Processing Libraries
+
+primary-color: "#27A306"
+product-id: 1886
+product-code: TDP
+product-name: Telerik Document Processing
+product-url: https://www.telerik.com/document-processing-libraries
+product-trial-url: https://www.telerik.com/try/devcraft-ultimate
+contribute-url: https://github.com/telerik/document-processing-docs/edit/master  
+search-engine-id: 838a03f9d82384ae9
+avatar-path: ./images/avatar-ninja.svg
+no-results-image-path: ./images/ninja-no-results.svg
+enable-tabbed-code-blocks: true
+pdf-cover-png-path: ./images/pdf-cover.png
+img-max-width: 100%
+table-layout: fixed
+external-snippets-path: ../dpl-snippets
+gitLastCommitDateEnabled: true
+disable-html-redirect: true
+center-images: false
+
+cta-overview: The @Subject is part of @ProductLink, a professional grade .NET library for creating and manipulating PDF, Word, XLSX and HTML files. To try it out sign up for a free 30-day trial.
+cta-intro: "Telerik Document Processing is a professional grade .NET library for creating and manipulating PDF, Word, XLSX and HTML files. To try it out sign up for a free 30-day trial."
+
+# liquid variables
+liquid-output-delimiter-left: "{{"
+liquid-output-delimiter-right: "}}"
+liquid:
+  mindotnetversion: "8"
+  maxdotnetversion: "10"
+  dotnetversions: ".NET 8, .NET 9 and .NET 10"
+  skiasharpversion: "3.119.1"
+  harfbuzzsharp: "8.3.1.2"
+  cryptographypkcs: "9.0.9"
+
+excluded-files:
+- "**/README.md"
+- "**/copyright.md"
+
+meta:
+  knowledge-base:
+    title: Knowledge Base
+    position: 500
+    res_type: kb
+    relativeUrl: /knowledge-base
+    hideChildren: true
+  libraries/radziplibrary/features:
+    title: Features
+    position: 5
+  '*radziplibrary':
+    title: RadZipLibrary
+  libraries/radpdfprocessing/editing/table:
+    title: Table
+    position: 2
+  libraries/radpdfprocessing/model/formsource:
+    title: FormSource
+    position: 8
+  libraries/radpdfprocessing/model/annotations:
+    title: Annotations
+    position: 7
+  libraries/radpdfprocessing/concepts:
+    title: Concepts
+    position: 5
+  libraries/radpdfprocessing/editing:
+    title: Editing
+    position: 9
+  libraries/radpdfprocessing/formats-and-conversion/convert-to-image:
+    title: Convert to Image
+    position: 3
+  libraries/radpdfprocessing/formats-and-conversion/plain-text:
+    title: Plain Text
+    position: 0
+  libraries/radpdfprocessing/formats-and-conversion/pdf/expandablememorystream:
+    title: ExpandableMemoryStream
+    position: 3
+  libraries/radpdfprocessing/formats-and-conversion/pdf/pdfstreamwriter:
+    title: PdfStreamWriter
+    position: 2
+  libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider:
+    title: PdfFormatProvider
+    position: 1
+  libraries/radpdfprocessing/formats-and-conversion/pdf:
+    title: Pdf
+    position: 0
+  libraries/radpdfprocessing/formats-and-conversion/ocr:
+    title: OCR
+    position: 2
+  libraries/radpdfprocessing/formats-and-conversion:
+    title: Formats and Conversion
+    position: 8
+  libraries/radpdfprocessing/model/actions/js-actions:
+    title: Javascript Actions
+    position: 1
+  libraries/radpdfprocessing/model/actions:
+    title: Actions
+    position: 7
+  libraries/radpdfprocessing/model/interactive-forms/form-fields:
+    title: Form Fields
+  libraries/radpdfprocessing/model/interactive-forms:
+    title: Interactive Forms
+  libraries/radpdfprocessing/features/gen-ai-powered-document-insights/custom-partialcontextquestionprocessor:
+    title: Custom PartialContextQuestionProcessor
+    position: 6
+  libraries/radpdfprocessing/features/gen-ai-powered-document-insights/partial-context-question-processor:
+    title: PartialContextQuestionProcessor
+    position: 5
+  libraries/radpdfprocessing/features/gen-ai-powered-document-insights:
+    title: GenAI-powered Document Insights
+    position: 6
+  libraries/radpdfprocessing/features/embedded-file-streams:
+    title: Embedded File Streams
+    position: 5
+  libraries/radpdfprocessing/features/accessibility-support:
+    title: Accessibility Support
+    position: 0
+  libraries/radpdfprocessing/features/digital-signature:
+    title: Digital Signature
+    position: 2
+  libraries/radpdfprocessing/features:
+    title: Features
+    position: 6
+  libraries/radpdfprocessing/model:
+    title: Model
+    position: 4
+  libraries/radpdfprocessing/cross-platform:
+    title: Cross-Platform Support
+    position: 2
+  '*radpdfprocessing':
+    title: RadPdfProcessing
+  libraries/radspreadprocessing/features/styling:
+    title: Styling
+    position: 4
+  libraries/radspreadprocessing/features/protection:
+    title: Protection
+    position: 3
+  libraries/radspreadprocessing/features/formulas:
+    title: Formulas
+    position: 2
+  libraries/radspreadprocessing/features/fill-data-automatically:
+    title: Fill Data Automatically
+    position: 1
+  libraries/radspreadprocessing/features/charts:
+    title: Charts
+    position: 0
+  libraries/radspreadprocessing/features/gen-ai-powered-document-insights/custom-partialcontextquestionprocessor:
+    title: Custom PartialContextQuestionProcessor
+    position: 6
+  libraries/radspreadprocessing/features/gen-ai-powered-document-insights/partial-context-question-processor:
+    title: PartialContextQuestionProcessor
+    position: 5
+  libraries/radspreadprocessing/features/gen-ai-powered-document-insights:
+    title: GenAI-powered Document Insights
+    position: 7
+  libraries/radspreadprocessing/formats-and-conversion/json/jsonexportsettings:
+    title: JsonExportSettings
+    position: 2
+  libraries/radspreadprocessing/formats-and-conversion/json/jsonformatprovider:
+    title: JsonFormatProvider
+    position: 1
+  libraries/radspreadprocessing/formats-and-conversion/json:
+    title: Json
+    position: 7
+  libraries/radspreadprocessing/formats-and-conversion/data-table:
+    title: DataTable
+    position: 6
+  libraries/radspreadprocessing/formats-and-conversion/txt:
+    title: Txt
+    position: 5
+  libraries/radspreadprocessing/formats-and-conversion/csv:
+    title: Csv
+    position: 4
+  libraries/radspreadprocessing/formats-and-conversion/pdf:
+    title: Pdf
+    position: 3
+  libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsm:
+    title: Xlsm
+    position: 3
+  libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsx:
+    title: Xlsx
+    position: 2
+  libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xls:
+    title: Xls
+    position: 1
+  libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats:
+    title: Excel File Formats
+    position: 2
+  libraries/radspreadprocessing/formats-and-conversion:
+    title: Formats and Conversion
+    position: 10
+  libraries/radspreadprocessing/helpers:
+    title: Helpers
+    position: 9
+  libraries/radspreadprocessing/features:
+    title: Features
+    position: 7
+  libraries/radspreadprocessing/working-with-cells:
+    title: Cells
+    position: 6
+  libraries/radspreadprocessing/working-with-rows-and-columns:
+    title: Rows and Columns
+    position: 5
+  libraries/radspreadprocessing/working-with-worksheets:
+    title: Worksheets
+    position: 4
+  libraries/radspreadprocessing/working-with-workbooks:
+    title: Workbooks
+    position: 3
+  libraries/radspreadprocessing/cross-platform-support:
+    title: Cross-Platform Support
+    position: 2
+  '*radspreadprocessing':
+    title: RadSpreadProcessing
+  libraries/radspreadstreamprocessing/features/styling:
+    title: Styling
+    position: 0
+  libraries/radspreadstreamprocessing/features:
+    title: Features
+    position: 4
+  libraries/radspreadstreamprocessing/model:
+    title: Model
+    position: 3
+  '*radspreadstreamprocessing':
+    title: RadSpreadStreamProcessing
+  libraries/radwordsprocessing/model/shapes:
+    title: Shapes
+    position: 18
+  libraries/radwordsprocessing/model/content-controls:
+    title: Content Controls
+    position: 17
+  libraries/radwordsprocessing/concepts/fields:
+    title: Fields
+    position: 0
+  libraries/radwordsprocessing/formats-and-conversion/plain-text:
+    title: Plain text
+    position: 5
+  libraries/radwordsprocessing/formats-and-conversion/pdf:
+    title: Pdf
+    position: 4
+  libraries/radwordsprocessing/formats-and-conversion/html:
+    title: Html
+    position: 3
+  libraries/radwordsprocessing/formats-and-conversion/rtf:
+    title: Rtf
+    position: 2
+  libraries/radwordsprocessing/formats-and-conversion/word-file-formats/docx:
+    title: Docx
+    position: 2
+  libraries/radwordsprocessing/formats-and-conversion/word-file-formats/doc:
+    title: Doc
+    position: 1
+  libraries/radwordsprocessing/formats-and-conversion/word-file-formats:
+    title: Word File Formats
+    position: 1
+  libraries/radwordsprocessing/concepts:
+    title: Concepts
+    position: 6
+  libraries/radwordsprocessing/editing/gen-ai-powered-document-insights/custom-partialcontextquestionprocessor:
+    title: Custom PartialContextQuestionProcessor
+    position: 6
+  libraries/radwordsprocessing/editing/gen-ai-powered-document-insights/partial-context-question-processor:
+    title: PartialContextQuestionProcessor
+    position: 5
+  libraries/radwordsprocessing/editing/gen-ai-powered-document-insights:
+    title: GenAI-powered Document Insights
+    position: 7
+  libraries/radwordsprocessing/editing/find-and-replace:
+    title: Find and Replace
+    position: 6
+  libraries/radwordsprocessing/editing:
+    title: Features
+    position: 5
+  libraries/radwordsprocessing/formats-and-conversion:
+    title: Formats and Conversion
+    position: 7
+  libraries/radwordsprocessing/model:
+    title: Model
+    position: 4
+  '*radwordsprocessing':
+    title: RadWordsProcessing
+  '*howto':
+    title: How To
+    position: 100
+  '*changes-and-backwards-compatibility':
+    title: Changes and Backward Compatibility
+    position: 3
+  '*changes-and-backward-compatibility':
+    title: Changes and Backward Compatibility
+    position: 3
+  '*general-information':
+    title: General Information
+    position: 2
+  '*getting-started':
+    title: Getting Started
+    position: 2
+  '*overview':
+    title: Overview
+    position: 1
+  security:
+    title: Security
+    position: 97
+  common-information:
+    title: Common Information
+    position: 98
+  troubleshooting:
+    title: Troubleshooting
+    position: 99
+  for-more-help:
+    title: For More Help
+    position: 10
+  libraries:
+    title: Libraries
+    position: 8
+  integration:
+    title: Integration
+    position: 7
+  distribution-and-licensing/license-key:
+    title: License Key
+    position: 1
+  distribution-and-licensing:
+    title: Distribution and Licensing
+    position: 6
+  upgrade:
+    title: Upgrade
+    position: 5
+  installation-and-deployment:
+    title: Installation and Deployment
+    position: 4
+  ai-tools:
+    title: AI Tools
+    position: 10
+  ai-tools/ai-coding-assistant:
+    title: AI Coding Assistant
+    position: 1
+  ai-tools/agent-tools:
+    title: Agent Tools
+    position: 0
+  release-notes/2024:
+    title: "2024"
+    position: 100
+  release-notes/2025:
+    title: "2025"
+    position: 99
+  release-notes:
+    title: Release Notes
+    position: 110
+  api:
+    title: API Reference
+    position: 1000
+    pdfHidden: true
+
+redirects: 
+- from: "^/?$"
+  to: "/introduction"
+  type: Permanent
+
+
+- from: "^/licensing/copyright"
+  to: "/distribution-and-licensing/license-agreement"
+  type: Permanent
+
+- from: "^/licensing/license-agreement"
+  to: "/distribution-and-licensing/license-agreement"
+  type: Permanent
+
+- from: "^/personal-data-collection"
+  to: "/distribution-and-licensing/license-agreement"
+  type: Permanent
+
+- from: "/installation-and-deployment/redistributing-telerik-document-processing"
+  to: "/distribution-and-licensing/redistributing-telerik-document-processing"
+  type: Permanent
+
+- from: "^/licensing/trial-license-limitations"
+  to: "/distribution-and-licensing/trial-license-limitations"
+  type: Permanent
+
+- from: "^/installation/installing-on-your-computer"
+  to: "/getting-started/installation/installing-on-your-computer"
+  type: Permanent
+
+- from: "^/installation-and-deployment/installing-on-your-computer"
+  to: "/getting-started/installation/installing-on-your-computer"
+  type: Permanent
+
+- from: "^/getting-started/installing-on-your-computer"
+  to: "/getting-started/installation/installing-on-your-computer"
+  type: Permanent
+
+- from: "^/pdf-export"
+  to: "/getting-started/installation/pdf-export"
+  type: Permanent
+
+- from: "/installation-and-deployment/system-requirements"
+  to: "/getting-started/installation/system-requirements"
+  type: Permanent
+
+- from: "/installation-and-deployment/integration-with-visual-studio"
+  to: "/integration/integration-with-visual-studio"
+  type: Permanent
+
+- from: "/installation-and-deployment/upgrade-instructions"
+  to: "/upgrade/upgrade-instructions"
+  type: Permanent
+
+- from: "/for-more-help"
+  to: "/introduction"
+  type: Permanent
+
+- from: "/radspreadprocessing/formats-and-conversion/xls/(.*)"
+  to: "/libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xls/$1"
+  type: Permanent
+
+- from: "/radspreadprocessing/formats-and-conversion/xlsx/(.*)"
+  to: "/libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsx/$1"
+  type: Permanent
+
+- from: "/radwordsprocessing/formats-and-conversion/docx/(.*)"
+  to: "/libraries/radwordsprocessing/formats-and-conversion/word-file-formats/docx/$1"
+  type: Permanent
+
+- from: "/concepts/hyperlinks"
+  to: "/libraries/radwordsprocessing/concepts/fields/hyperlink-field"
+  type: Permanent
+
+- from: "/libraries/radspreadprocessing/cross-platform$"
+  to: "/libraries/radspreadprocessing/cross-platform-support/cross-platform"
+  type: Permanent
+
+- from: "/libraries/radpdfprocessing/cross-platform$"
+  to: "/libraries/radpdfprocessing/cross-platform/overview"
+  type: Permanent
+
+- from: "/libraries/radpdfprocessing/features/digital-signature$"
+  to: "/libraries/radpdfprocessing/features/digital-signature/overview"
+  type: Permanent
+
+- from: "/libraries/radpdfprocessing/model/interactive-forms/widgets$"
+  to: "/libraries/radpdfprocessing/model/annotations/widgets"
+  type: Permanent
+
+- from: "^/distribution-and-licensing/license-key$"
+  to: "/distribution-and-licensing/license-key/setting-up-license-key"
+  type: Permanent
+  
+- from: "^/libraries/radpdfprocessing/model/formsource$"
+  to: "/libraries/radpdfprocessing/model/formsource/overview"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/editing/tablerow$"
+  to: "/libraries/radpdfprocessing/editing/table/tablerow"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/editing/tablecell$"
+  to: "/libraries/radpdfprocessing/editing/table/tablecell"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/editing/table$"
+  to: "/libraries/radpdfprocessing/editing/table/overview"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/features/digital-signature$"
+  to: "/libraries/radpdfprocessing/features/digital-signature/overview"
+  type: Permanent
+
+- from: "^/libraries/radpdfprocessing/howto/comply-with-pdfa-standard$"
+  to: "/libraries/radpdfprocessing/concepts/comply-with-pdfa-standard"
+  type: Permanent
+
+# Redirect /ai-coding-assistant/* to /ai-tools/ai-coding-assistant/*
+- from: "^/ai-coding-assistant/(.*)$"
+  to: "/ai-tools/ai-coding-assistant/$1"
+  type: Permanent
+
+# (Optional) handle the section root itself
+- from: "^/ai-coding-assistant$"
+  to: "/ai-tools/ai-coding-assistant"
+  type: Permanent
+
+
+
+

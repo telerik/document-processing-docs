@@ -27,7 +27,7 @@ Inserting SectionPages field is easily achieved through the [RadFlowDocumentEdit
 
 __Example 1__ demonstrates how you can insert a SectionPages field.
  
-#### __[C#] Example 1: Insert SectionPages field__
+#### __Example 1: Insert SectionPages field__
 
 <snippet id='codeblock-bl'/>
 

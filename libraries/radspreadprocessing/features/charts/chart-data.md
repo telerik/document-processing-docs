@@ -20,15 +20,15 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 
 - IEnumerable&lt;CellRange&gt; **EnumerateCellRanges**(out Worksheet worksheet): Enumerates the cell ranges that contain the actual chart data.
 
-- bool **TryEnumerateCellRanges**(out IEnumerable<CellRange> resultCellRanges, out Worksheet worksheet): Enumerates the cell ranges that contain the actual chart data. Returns a value indicating whether the enumeration was successful.
+- bool **TryEnumerateCellRanges**(out IEnumerable&lt;CellRange&gt; resultCellRanges, out Worksheet worksheet): Enumerates the cell ranges that contain the actual chart data. Returns a value indicating whether the enumeration was successful.
 
 - IChartData **Clone**(): Creates a deep copy of the object.
 
 - Workbook **Workbook**: Gets the workbook that the formula refers to get the chart data.
 
-#### [C#] Example 1: Using IChartData
+#### Example 1: Using IChartData
 
-{{region radspreadprocessing-features-charts-chart-data_0}}
+```csharp
 
             FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(1, 1), new CellRange(1, 1, 1, 1), ChartType.Column)
             {
@@ -61,7 +61,7 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
             worksheet.Charts[0].Chart.SeriesGroups.First().Series.Last().Title = new TextTitle("Team 2");
             chartShape.Chart = chart;
 
-{{endregion}} 
+``` 
 
 >caption Using Chart Data in RadSpreadProcessing
 

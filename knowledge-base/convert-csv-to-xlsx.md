@@ -21,9 +21,9 @@ The below example shows how you can easily convert a CSV file to XLSX format.
 
 Use the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library to convert the file. 
 
-#### __C# Convert CSV to XLSX__
+#### __Convert CSV to XLSX__
 
-{{region kb-convert-to-xlsx1}}
+```csharp
     static void Main(string[] args)
     {
         string fileName = @"..\\..\FileName.csv";
@@ -53,5 +53,5 @@ Use the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library to con
         System.Diagnostics.Process.Start(resultFile);
     }
 
-{{endregion}}
+```
 

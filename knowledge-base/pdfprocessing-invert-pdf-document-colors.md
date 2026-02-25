@@ -34,9 +34,9 @@ This article describes how to invert the background and text colors within a PDF
 
 The provided code snippets demonstrates how to import a PDF document and invert its background and text color by iterating its content.
 
-#### __[C#] Import PDF file and Invert its Background and Content Color__
+#### __Import PDF file and Invert its Background and Content Color__
 
-{{region pdfprocessing-invert-pdf-document-colors1}}
+```csharp
 
 	RadFixedDocument document;
 	PdfFormatProvider provider = new PdfFormatProvider();
@@ -61,13 +61,13 @@ The provided code snippets demonstrates how to import a PDF document and invert 
 	{
 		provider.Export(document, output);
 	}
-{{endregion}}
+```
 
 As the PDF document has no background concept we are creating a [RectangleGeometry](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.model.graphics.rectanglegeometry) using the page size and setting the desired color to it.
 
-#### __[C#] Invert Document's Background Color__
+#### __Invert Document's Background Color__
 
-{{region pdfprocessing-invert-pdf-document-colors2}}
+```csharp
 
 	private static void InvertBackgroundColor(RadFixedDocument document)
 	{
@@ -80,13 +80,13 @@ As the PDF document has no background concept we are creating a [RectangleGeomet
 			page.Content.Insert(0, path);
 		}
 	}
-{{endregion}}
+```
 
 The following methods show how to invert the document elements' color by recursively iterating their content and setting the desired color using the relevant Fill property.
 
-#### __[C#] Invert Document Content`s Color__
+#### __Invert Document Content`s Color__
 
-{{region pdfprocessing-invert-pdf-document-colors3}}
+```csharp
 
 	private static void InvertContentColor(RadFixedDocument document)
 	{
@@ -114,4 +114,4 @@ The following methods show how to invert the document elements' color by recursi
 			}
 		}
 	}
-{{endregion}}
+```

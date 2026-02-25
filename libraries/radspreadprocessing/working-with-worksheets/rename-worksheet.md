@@ -48,21 +48,21 @@ The name of the worksheet cannot exceed 31 characters.
 __Example 1__ creates a new workbook, adds a single worksheet to it and renames the newly added worksheet.
         
 
-#### __[C#] Example 1: Create and rename a worksheet__
+#### __Example 1: Create and rename a worksheet__
 
-{{region cs-radspreadprocessing-working-with-worksheets-rename-worksheet_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
 	worksheet.Name = "Sam's Worksheet";
-{{endregion}}
+```
 
 
 
 __Example 2__ creates a new workbook and adds two worksheets to it. The snippet illustrates how to rename the worksheet with index 0 to "July's Worksheet". To ensure name uniqueness the sample code checks if the workbook already contains a worksheet with the name we would like to set.
         
-#### __[C#] Example 2: Rename a worksheet__
+#### __Example 2: Rename a worksheet__
 
-{{region cs-radspreadprocessing-working-with-worksheets-rename-worksheet_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.Worksheets.Add();
 	workbook.Worksheets.Add();
@@ -80,6 +80,6 @@ __Example 2__ creates a new workbook and adds two worksheets to it. The snippet 
 	{
 	    // There already exists worksheet with this name
 	}
-{{endregion}}
+```
 
 

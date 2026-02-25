@@ -29,7 +29,7 @@ The default value for this setting is __false__.
 The code from __Example 1__ demonstrates how you can create and specify particular export settings to RtfFormatProvider.
         
 
-#### __[C#] Example 1: Create a RtfExportSettings__
+#### __Example 1: Create a RtfExportSettings__
 
 <snippet id='codeblock-co'/>
 

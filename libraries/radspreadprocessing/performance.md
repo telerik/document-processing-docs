@@ -34,29 +34,29 @@ Calculating the layout is an operation computing the width of each column and th
 Internally there are many mechanisms used to lower the number of calculations, but sometimes they are not enough. For example, if you want to generate a document and then show it, you do not need to trigger any layout updates other than the one after you finish creating the document. The code snippet in __Example 1__ shows how the layout updates can be suspended and then resumed after document generation is completed.
         
 
-#### __[C#] Example 1: Suspend layout updates__
+#### __Example 1: Suspend layout updates__
 
-{{region cs-radspreadprocessing-performance_0}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.SuspendLayoutUpdate();
 	// The code which generates the document
 	workbook.ResumeLayoutUpdate();
-{{endregion}}
+```
 
 
 
 Note that if an exception is thrown between the two method calls, the resuming of the layout update will not be performed and the UI will stop updating. You could ensure the layout update will be resumed whatever happens using __UpdateScope__. The code snippet in __Example 2__ demonstrates how to use it.
         
 
-#### __[C#] Example 2: Suspend layout updates in UndoScope__
+#### __Example 2: Suspend layout updates in UndoScope__
 
-{{region cs-radspreadprocessing-performance_1}}
+```csharp
 	Workbook workbook = new Workbook();
 	using (new UpdateScope(workbook.SuspendLayoutUpdate, workbook.ResumeLayoutUpdate))
 	{
 	    // The code which generates the document
 	}
-{{endregion}}
+```
 
 
 
@@ -65,29 +65,29 @@ Note that if an exception is thrown between the two method calls, the resuming o
 Preserving information about the steps in the undo stack is usually not a time consuming operation, but even the lightest operation performed thousands of times may slow down your application. If you do not need to preserve each step in the document generation process as a separate undo step, you can simply combine a series of actions into one undo step. For example, if you want to set background color to the even rows in your table you have to set the fill for each row separately. This way each background setting will be preserved as a separate undo step. To combine them in a single undo step you can use the code in __Example 3__.
         
 
-#### __[C#] Example 3: Combine steps in undo group__
+#### __Example 3: Combine steps in undo group__
 
-{{region cs-radspreadprocessing-performance_2}}
+```csharp
 	Workbook workbook = new Workbook();
 	workbook.History.BeginUndoGroup();
 	// The code which generates the document
 	workbook.History.EndUndoGroup();
-{{endregion}}
+```
 
 
 
 Note that if an exception is thrown between the two method calls, the ending of the undo group will not be performed, all the following actions will not be added to the history either and the UI will stop updating. You could ensure that whatever happens the undo group will be closed using __UpdateScope__. The code snippet in __Example 4__ demonstrates how to use it.
         
 
-#### __[C#] Example 4: Combine steps in undo group using UndoScope__
+#### __Example 4: Combine steps in undo group using UndoScope__
 
-{{region cs-radspreadprocessing-performance_3}}
+```csharp
 	Workbook workbook = new Workbook();
 	using (new UpdateScope(workbook.History.BeginUndoGroup, workbook.History.EndUndoGroup))
 	{
 	    // The code which generates the document
 	}
-{{endregion}}
+```
 
 
 
@@ -96,29 +96,29 @@ Note that if an exception is thrown between the two method calls, the ending of 
 As you already know from the [Reduce the Number of Undo Steps section](#reduce-the-number-of-undo-steps), preserving the history steps can lower the performance of __RadSpreadProcessing__. If you do not want to preserve History while generating your document, you can simply turn the feature off. It can be easily switched on and off through the __IsEnabled__ Boolean property of the history like shown in __Example 5__.
         
 
-#### __[C#] Example 5: Disable history__
+#### __Example 5: Disable history__
 
-{{region cs-radspreadprocessing-performance_4}}
+```csharp
 	workbook.History.IsEnabled = false;
 	// The code which generates the document
 	workbook.History.IsEnabled = true;
-{{endregion}}
+```
 
 
 
 If an exception is thrown before enabling the history, it will not be enabled and the subsequent history steps will not be preserved. To ensure that the history will be enabled, you can use the __UpdateScope__ class. __Example 6__ shows how this can be achieved.
         
 
-#### __[C#] Example 6: Disable and enable history using UndoScope__
+#### __Example 6: Disable and enable history using UndoScope__
 
-{{region cs-radspreadprocessing-performance_5}}
+```csharp
 	using (new UpdateScope(
 	    () => { workbook.History.IsEnabled = false; },
 	    () => { workbook.History.IsEnabled = true; }))
 	{
 	    // The code which generates the document
 	}
-{{endregion}}
+```
 
 
 

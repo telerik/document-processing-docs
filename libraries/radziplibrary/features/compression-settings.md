@@ -25,22 +25,14 @@ The __DeflateSettings__ class exposes some configurable parameters:
             
 __Example 1__ demonstrates how to create DeflateSettings.       
 
-#### __[C#] Example 1: Create DeflateSettings__
+#### __Example 1: Create DeflateSettings__
 
-{{region cs-radziplibrary-compression-settings_0}}
+```csharp
 	            
 	DeflateSettings compressionSettings = new DeflateSettings();
 	compressionSettings.CompressionLevel = CompressionLevel.Best;
 	compressionSettings.HeaderType = CompressedStreamHeader.ZLib;
-{{endregion}}
-
-#### __[VB.NET] Example 1: Create DeflateSettings__
-
-{{region vb-radziplibrary-compression-settings_0}}
-	Dim compressionSettings As New DeflateSettings()
-	compressionSettings.CompressionLevel = CompressionLevel.Best
-	compressionSettings.HeaderType = CompressedStreamHeader.ZLib
-{{endregion}}
+```
 
 ## LZMA Settings
 
@@ -62,9 +54,9 @@ The configurable parameters of the __LzmaSettings__ class are as follows:
             
 * __MatchFinderType__: The type of the match finder. Allowed values are BT2(match finder that uses two bytes for the hash) and BT4(uses four bytes for the hash).
             
-#### __[C#] Example 2: Create LzmaSettings__
+#### __Example 2: Create LzmaSettings__
 
-{{region cs-radziplibrary-compression-settings_1}}
+```csharp
 	            
 	LzmaSettings compressionSettings = new LzmaSettings();
 	compressionSettings.DictionarySize = 23;
@@ -73,43 +65,17 @@ The configurable parameters of the __LzmaSettings__ class are as follows:
 	compressionSettings.LiteralPositionBits = 3;
 	compressionSettings.MatchFinderType = LzmaMatchFinderType.BT4;
 	compressionSettings.PositionStateBits = 2;
-{{endregion}}
-
-
-
-#### __[VB.NET] Example 2: Create LzmaSettings__
-
-{{region vb-radziplibrary-compression-settings_1}}
-	Dim compressionSettings As New LzmaSettings()
-	compressionSettings.DictionarySize = 23
-	compressionSettings.FastBytes = 32
-	compressionSettings.LiteralContextBits = 3
-	compressionSettings.LiteralPositionBits = 3
-	compressionSettings.MatchFinderType = LzmaMatchFinderType.BT4
-	compressionSettings.PositionStateBits = 2
-{{endregion}}
-
-
+```
 
 ## Store Settings
 
 Store settings are used to just store the data using no compression.
         
+#### __Example 3: Create StoreSettings__
 
-#### __[C#] Example 3: Create StoreSettings__
-
-{{region cs-radziplibrary-compression-settings_2}}
+```csharp
 	StoreSettings compressionSettings = new StoreSettings();
-{{endregion}}
-
-
-
-#### __[VB.NET] Example 3: Create StoreSettings__
-
-{{region vb-radziplibrary-compression-settings_2}}
-	Dim compressionSettings As New StoreSettings()
-{{endregion}}
-
+```
 
 ## See Also
 

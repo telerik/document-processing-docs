@@ -16,7 +16,7 @@ position: 1
 
 ### Creating an Embedded Electronic (ZUGFeRD) Invoice
 
-#### **[C#] Add ZUGFeRD invoice**
+#### **Add ZUGFeRD invoice**
 
 <snippet id='pdf-add-zugferd-invoice'/>
 
@@ -24,7 +24,7 @@ position: 1
 
 >important To comply with the PDF/A-3B standard all the fonts in the documents should be embedded, so please avoid using [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) because they are not being embedded in the document. In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
-#### **[C#] Remove ZUGFeRD invoice**
+#### **Remove ZUGFeRD invoice**
 
 <snippet id='pdf-remove-zugferd-invoice'/>
 

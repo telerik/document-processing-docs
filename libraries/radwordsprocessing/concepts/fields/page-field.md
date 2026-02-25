@@ -40,7 +40,7 @@ Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%sl
 __Example 1__ demonstrates how you can insert a date field.
         
 
-#### __[C#] Example 1: Insert page field__
+#### __Example 1: Insert page field__
 
 <snippet id='codeblock-bi'/>
 

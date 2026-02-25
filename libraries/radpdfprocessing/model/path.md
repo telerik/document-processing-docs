@@ -49,14 +49,14 @@ __Path__ is a content element that is designed to be added in the __Content__ co
 __Example 1__ shows how you can create a Path, assign a predefined Geometry to it and add it to a container.
         
 
-#### __[C#] Example 1: Create Path and add it to container__
+#### __Example 1: Create Path and add it to container__
 
 <snippet id='pdf-create-path'/>
 
 __Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__ that create a new path and insert it into the document.
         
 
-#### __[C#] Example 2: Add Path to container__
+#### __Example 2: Add Path to container__
 
 <snippet id='pdf-path-to-container'/>
 
@@ -68,7 +68,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 You can modify a __Path__ element using the properties the class exposes. The properties are listed listed in the [Public API](#public-api) section.
         
-#### __[C#] Example 3: Modifying Path properties__
+#### __Example 3: Modifying Path properties__
 
 <snippet id='pdf-modify-path'/>
 

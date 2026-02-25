@@ -368,9 +368,6 @@ Bookmarks</td><td>
 </div>
 
 >1. Double Strikethrough is currently not supported.
-
 >2. Floating images are treated as inline images when importing/exporting HTML.
-
 >3. The result of the fields is exported as text.
-
 >4. All fields are supported through custom code fields. More information is available [here]({%slug radwordsprocessing-concepts-customcodefield%}).

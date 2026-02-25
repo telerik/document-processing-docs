@@ -11,7 +11,7 @@ position: 1
 
 This article will get you started in using the **RadSpreadStreamProcessing** library.
 
->noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+>note If you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 ## Package References
 
@@ -38,9 +38,9 @@ When creating a document with **RadSpreadStreamProcessing**, the order in which 
 
 **Example 1** shows how you could create a simple document.
 
-#### [C#] Example 1: Create a document
+#### Example 1: Create a document
 
-{{region radspreadstreamprocessing-getting-started_0}}
+```csharp
 	using (FileStream stream = File.OpenWrite("sample.xlsx"))
 	{
 	    using (IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream))
@@ -92,7 +92,7 @@ When creating a document with **RadSpreadStreamProcessing**, the order in which 
 	        }
 	    }
 	}
-{{endregion}}
+```
 
 **Figure 1** shows the result of executing the code from **Example 1**.
 
@@ -117,9 +117,9 @@ When reading a document with **RadSpreadStreamProcessing**, the order of parsing
 
 **Example 2** demonstrates how you could read the data from an existing document.
 
-#### [C#] Example 2: Read data from a document
+#### Example 2: Read data from a document
 
-{{region radspreadstreamprocessing-getting-started_1}}
+```csharp
 
 	using (FileStream fs = new FileStream(fileName, FileMode.Open))
 	{
@@ -138,7 +138,7 @@ When reading a document with **RadSpreadStreamProcessing**, the order of parsing
 		}
 	}
 
-{{endregion}}
+```
 
 For more complete examples head to the [Developer Focused Examples]({%slug radspreadstreamprocessing-sdk-examples%}) section of the library.
 

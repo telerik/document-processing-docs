@@ -22,8 +22,8 @@ Refer to the scenario from **Figure 1**. The chart shown there has two axes: a d
 #### Figure 1: Sample data
 ![](images/SpreadProcessing-Features-Charts-Axes_1.png)
 
-#### [C#] Example 1: Axes properties
-{{region radspreadprocessing-features-charts-axes_0}}
+#### Example 1: Axes properties
+```csharp
 
 	DocumentChart chart = new FloatingChartShape(worksheet, new CellIndex(0,0), new CellRange(1, 1, 5, 2), ChartType.Column).Chart;
 	
@@ -42,26 +42,26 @@ Refer to the scenario from **Figure 1**. The chart shown there has two axes: a d
 	double? valMin = valAxis.Min; // 0
 	double? valMax = valAxis.Max; // 1800
 
-{{endregion}}
+```
 
 ## Changing the Axis of a Chart
 
 RadSpreadProcessing allows you to replace the axis of a chart with a new object. This is achieved through the **PrimaryAxes** and **SecondaryAxes** properties of **DocumentChart**.
 
-#### [C#] Example 2: Replace axis 
-{{region radspreadprocessing-features-charts-axes_1}}
+#### Example 2: Replace axis 
+```csharp
 	
 	DocumentChart chart = new FloatingChartShape(worksheet, new CellIndex(0, 0), new CellRange(1, 1, 5, 2), ChartType.Column).Chart;
 	chart.PrimaryAxes.CategoryAxis = new DateAxis();
-{{endregion}}
+```
 
 
 ## Changing the Appearance of the Axes
 
 You can customize the way the axes in the chart look like. The API of SpreadProcessing enables you to change the fill and width of the outline of an axis and its major gridlines.
 
-#### [C#] Example 3: Customize the major gridlines and outline of an axis
-{{region radspreadprocessing-features-charts-axes_2}}
+#### Example 3: Customize the major gridlines and outline of an axis
+```csharp
 
     FloatingChartShape chartShape = new FloatingChartShape(workbook.ActiveWorksheet, new CellIndex(2, 7), new CellRange(0, 0, 4, 3), ChartType.Column)
     {
@@ -73,7 +73,7 @@ You can customize the way the axes in the chart look like. The API of SpreadProc
 
     chartShape.Chart.PrimaryAxes.ValueAxis.MajorGridlines.Outline.Fill = new SolidFill(new ThemableColor(Colors.LightGray));
     chartShape.Chart.PrimaryAxes.ValueAxis.MajorGridlines.Outline.Width = 2;
-{{endregion}}
+```
 
 #### Figure 2: Custom appearance
 ![](images/SpreadProcessing-Features-Charts-Axes_3.png)

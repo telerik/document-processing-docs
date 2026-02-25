@@ -125,12 +125,13 @@ An active Document Processing license is required to use the Telerik DPL MCP ser
 
 The steps below describe the sample procedure for configuring the Telerik DPL MCP server in Visual Studio.
 
-1\. Add an `.mcp.json` file to either of the following locations:
+1. Add an `.mcp.json` file to either of the following locations:
 
   * For a workspace-specific setup, add the file to the solution's folder.
+  
   * For a global setup, add the file to your user directory, `%USERPROFILE%` (for example, `C:\Users\YourName\.mcp.json`).
 
-2\. Add the following configuration to the mcp.json file:
+2. Add the following configuration to the mcp.json file:
 
   * In .NET 10:
 
@@ -223,11 +224,11 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
       },
       "inputs": []
     }
-  ```
+    ```
 
-3\. Restart Visual Studio.
+3. Restart Visual Studio.
 
-4\. Enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
+4. Enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
 
 Add the `.mcp.json` file to your user directory (`%USERPROFILE%`, e.g., `C:\Users\YourName\.mcp.json`).
 
@@ -301,7 +302,7 @@ The basic setup in Visual Studio Code involves the following steps:
       },
       "inputs": []
     }
- ```
+    ```
 
 3. For global discovery, enable [`chat.mcp.discovery.enabled`](vscode://settings/chat.mcp.discovery.enabled) in `settings.json`:
 
@@ -343,7 +344,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 
 * In .NET 8 and .NET 9:
 
-    ```NET8/9
+    ```json
     {
       "mcpServers": {
         "telerik-dpl-assistant": {
@@ -363,7 +364,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 
 * In Node.js:
 
-    ```Nodejs
+    ```json
     {
       "mcpServers": {
         "telerik-dpl-assistant": {

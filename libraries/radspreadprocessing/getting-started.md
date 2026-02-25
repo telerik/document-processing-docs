@@ -11,7 +11,7 @@ position: 1
 
 This article will get you started in using the __RadSpreadProcessing__ library.
 
->noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+>note If you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
 ## Package References
 
@@ -23,21 +23,23 @@ The document model allows you to instantiate a new [workbook]({%slug radspreadpr
 
 __Example 1__ shows how you can create a workbook and add a new worksheet to it.
 
-#### __[C#] Example 1: Create Workbook__
 
-{{region cs-radspreadprocessing-getting-started_0}}
+#### __Example 1: Create Workbook__
+
+```csharp
 	Workbook workbook = new Workbook();
 	Worksheet worksheet = workbook.Worksheets.Add();
-{{endregion}}
+```
 
 You can then create a [CellSelection]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and set any value to the selected cells. __Example 2__ shows how you can create a cell and set a string value to it.
 
-#### __[C#] Example 2: Set value of cell__
 
-{{region cs-radspreadprocessing-getting-started_1}}
+#### __Example 2: Set value of cell__
+
+```csharp
 	CellSelection selection = worksheet.Cells[1, 1]; //B2 cell
 	selection.SetValue("Hello RadSpreadProcessing");
-{{endregion}}
+```
 
 ## Exporting
 
@@ -45,9 +47,10 @@ The __RadSpreadProcessing__ library supports a variety of formats to which you c
 
 For more examples and application scenarios of Importing and Exporting a Workbook to various formats check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
 
-#### __[C#] Example 3: Export to Xlsx__
 
-{{region cs-radspreadprocessing-getting-started_2}}
+#### __Example 3: Export to Xlsx__
+
+```csharp
 	string fileName = "SampleFile.xlsx";
 	
 	XlsxFormatProvider formatProvider = new XlsxFormatProvider();
@@ -56,7 +59,7 @@ For more examples and application scenarios of Importing and Exporting a Workboo
 	{
 	    formatProvider.Export(workbook, output);
 	}
-{{endregion}}
+```
 
 >More information about the import and export functionalities of RadSpreadProcessing is available in the [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-general-information%}).
 

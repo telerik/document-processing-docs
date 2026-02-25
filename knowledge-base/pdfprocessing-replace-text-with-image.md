@@ -19,9 +19,7 @@ A common scenario is to replace a temporary page content (a placeholder text) wi
 ## Solution
 The following example demonstrates the approach of iterating the page content and finding TextFragment elements matching the *$ImagePlaceholder* text. For each match, an Image instance is created and the TextFragment is replaced with it. The *Position* property is used to correctly position the image on the page.
 
-#### __C#__
-
-{{region kb-pdfprocessing-replace-text-with-image}}
+```csharp
 
     foreach (RadFixedPage page in pdfDocument.Pages)
     {
@@ -81,4 +79,4 @@ The following example demonstrates the approach of iterating the page content an
     		}
     	}
     }
-{{endregion}}
+```

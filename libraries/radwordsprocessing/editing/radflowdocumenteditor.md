@@ -26,7 +26,7 @@ Although __RadFlowDocument__ can be created and modified by using the style prop
 __RadFlowDocumentEditor__ is always associated with a single document, which it takes as a constructor parameter when it is created.
         
 
-#### __[C#] Example 1: Create a RadFlowDocumentEditor__
+#### __Example 1: Create a RadFlowDocumentEditor__
 
 <snippet id='codeblock-baba'/>
 
@@ -46,14 +46,14 @@ The editor maintains an internal position inside the document. This position poi
 The code from __Example 2__ demonstrates how to position the editor after the second inline in the first paragraph of the document.
         
 
-#### __[C#] Example 2: Changing the position of RadFlowDocumentEditor__
+#### __Example 2: Changing the position of RadFlowDocumentEditor__
 
 <snippet id='codeblock-bbbb'/>
 
 Note that it is possible to create a __RadFlowDocumentEditor__ for an empty document (one with no sections). In this case, a section and a paragraph are automatically created when you call an insert method. __Example 3__ creates a document with one section, containing one paragraph with the text "Hello word!".
         
 
-#### __[C#] Example 3: Insert text in a document__
+#### __Example 3: Insert text in a document__
 
 <snippet id='codeblock-bcbc'/>
 
@@ -74,7 +74,7 @@ Both methods return the newly inserted __Run__ element. If, however, there are n
 The code in __Example 4__ inserts a run containing a new line.
             
 
-#### __[C#] Example 4: Insert a run with a new line__
+#### __Example 4: Insert a run with a new line__
 
 <snippet id='codeblock-bdbd'/>
 
@@ -91,7 +91,7 @@ The result looks like __Figure 1__ shows.
 You can start a new [Paragraph]({%slug radwordsprocessing-model-paragraph%}) with the __InsertParagraph()__ method. The current __ParagraphFormatting__ is applied to the new paragraph and the paragraph is returned.
             
 
-#### __[C#] Example 5: Insert a paragraph__
+#### __Example 5: Insert a paragraph__
 
 <snippet id='codeblock-bebe'/>
 
@@ -106,7 +106,7 @@ If you call __InsertParagraph()__ method while the editor is positioned in the m
 
 Inserting [Section]({%slug radwordsprocessing-model-section%}) elements can be achieved with the __InsertSection()__ method. A paragraph with the new section’s properties will be added and the new __Section__ element will be returned.
 
-#### __[C#] Example 6: Insert a section__
+#### __Example 6: Insert a section__
 <snippet id='codeblock-bfbf'/>
 
 >If you call the __InsertSection()__ method while the editor is positioned in a TableCell, the Table will be split at the current row. This means that if the table contains 3 rows, and the editor is positioned in a cell which is on the second row, the table will be split into two tables – one with one row, which will be added to the previous section and one with 2 rows (containing the TableCell where the editor position was). The later will be added to the newly inserted Section.
@@ -115,12 +115,14 @@ Inserting [Section]({%slug radwordsprocessing-model-section%}) elements can be a
 
 __Hyperlinks__ in the __RadFlowDocument__ model are actually [Fields]({%slug radwordsprocessing-concepts-fields%}), which means they have code and result parts separated by [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}) inlines. Inserting hyperlinks is simplified with __RadFlowDocumentEditor.InsertHyperlink()__  method:
             
+```C#
 public Hyperlink InsertHyperlink(string text, string uri, bool isAnchor, string toolTip)
+```
 
 It automatically applies "Hyperlink" built-in style to the inserted hyperlink if there is no explicitly set style in the __CharacterFormatting__ options of the editor.
             
 
-#### __[C#] Example 7: Insert a hyperlink__
+#### __Example 7: Insert a hyperlink__
 
 <snippet id='codeblock-bgbg'/>
 
@@ -136,7 +138,7 @@ public Field InsertField(string code, string result)
 __Example 8__ shows how to add page numbering in the header of a document:
             
 
-#### __[C#] Example 8: Add page numbering in a header__
+#### __Example 8: Add page numbering in a header__
 
 <snippet id='codeblock-bhbh'/>
 
@@ -166,7 +168,7 @@ __RadFlowDocumentEditor__ provides several methods for inserting [ImageInline]({
 __Example 9__ shows how an image can be inserted using a stream:
             
 
-#### __[C#] Example 9: Insert an image from a Stream__
+#### __Example 9: Insert an image from a Stream__
 
 <snippet id='codeblock-bibi'/>
 
@@ -190,7 +192,7 @@ The following methods can be used to insert [Table]({%slug radwordsprocessing-mo
 Here is how to insert a table with the "TableGrid" built-in style:
             
 
-#### __[C#] Example 10: Insert a table with a style__
+#### __Example 10: Insert a table with a style__
 
 <snippet id='codeblock-bjbj'/>
 
@@ -218,7 +220,7 @@ When you use the insert methods of the __RadFlowDocumentEditor__ the editor crea
 Formatting options are most useful when inserting multiple elements that should have consistent styling. For example, the code  from __Example 11__ inserts multiple paragraphs with no spacing between them and with text (Runs) in "Consolas" font:
         
 
-#### __[C#] Example 11: Insert content with specified styles__
+#### __Example 11: Insert content with specified styles__
 
 <snippet id='codeblock-bkbk'/>
 
@@ -228,7 +230,7 @@ Formatting options are most useful when inserting multiple elements that should 
 
 ## Deleting Content
 
-#### __[C#] Example 12: Delete content between existing elements__
+#### __Example 12: Delete content between existing elements__
 
 <snippet id='codeblock-blbl'/>
 

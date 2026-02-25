@@ -12,31 +12,6 @@ position: 15
 
 
 This article describes what is filtering and filters and how to work with them through the document model. It contains the following sections:
-      
-
-* [What is Filtering?](#what-is-filtering?)
-
-* [AutoFilter](#autofilter)
-
-* [IFilter](#ifilter)
-
-* [ValuesCollectionFilter](#valuescollectionfilter)
-
-* [CustomFilter](#customfilter)
-
-* [TopFilter](#topfilter)
-
-* [DynamicFilter](#dynamicfilter)
-
-* [ForeColorFilter](#forecolorfilter)
-
-* [FillColorFilter](#fillcolorfilter)
-
-* [Setting a Filter](#setting-a-filter)
-
-* [Reapplying a Filter](#reapplying-a-filter)
-
-* [Removing and Clearing Filters](#removing-and-clearing-filters)
 
 ## What is Filtering?
 
@@ -102,6 +77,7 @@ The diagram in __Figure 1__ shows the different types of filters, which inherit 
         
 
 #### Figure 1: Filter types
+
 ![Rad Spread Processing Filtering 01](images/RadSpreadProcessing_Filtering_01.png)
 
 ## ValuesCollectionFilter
@@ -124,9 +100,9 @@ Other than the members of the __IFilter__ interface, the __ValuesCollectionFilte
 __Example 1__ shows how to create a __ValuesCollectionFilter__.
         
 
-#### __[C#] Example 1: Create ValuesCollectionFilter__
+#### __Example 1: Create ValuesCollectionFilter__
 
-{{region cs-radspreadprocessing-features-filtering_0}}
+```csharp
 	IEnumerable<string> stringItems = new List<string>() { "test", "1%", "1.0" };
 	IEnumerable<DateGroupItem> dateItems = new List<DateGroupItem>()
 	{
@@ -135,7 +111,7 @@ __Example 1__ shows how to create a __ValuesCollectionFilter__.
 	};
 	
 	ValuesCollectionFilter filter = new ValuesCollectionFilter(0, stringItems, dateItems, true);
-{{endregion}}
+```
 
 
 
@@ -189,13 +165,13 @@ The criteria is represented by the __CustomFilterCriteria__ class. Each criteria
 __Example 2__ shows how to create a custom filter.
         
 
-#### __[C#] Example 2: Create CustomFilter__
+#### __Example 2: Create CustomFilter__
 
-{{region cs-radspreadprocessing-features-filtering_1}}
+```csharp
 	CustomFilterCriteria critera1 = new CustomFilterCriteria(ComparisonOperator.EqualsTo, "Test string");
 	CustomFilterCriteria critera2 = new CustomFilterCriteria(ComparisonOperator.GreaterThan, "-5");
 	CustomFilter filter = new CustomFilter(0, critera1, LogicalOperator.Or, critera2);
-{{endregion}}
+```
 
 
 
@@ -231,11 +207,11 @@ Other than the members of the __IFilter__ interface, the __TopFilter__ class exp
 __Example 3__ shows how to create a top filter.
         
 
-#### __[C#] Example 3: Create TopFilter__
+#### __Example 3: Create TopFilter__
 
-{{region cs-radspreadprocessing-features-filtering_2}}
+```csharp
 	TopFilter filter = new TopFilter(0, TopFilterType.BottomPercent, 30);
-{{endregion}}
+```
 
 
 
@@ -256,11 +232,11 @@ Other than the members of the __IFilter__ interface, the __DynamicFilter__ class
 __Example 4__ demonstrates how to create a dynamic filter.
         
 
-#### __[C#] Example 4: Create DynamicFilter__
+#### __Example 4: Create DynamicFilter__
 
-{{region cs-radspreadprocessing-features-filtering_3}}
+```csharp
 	DynamicFilter filter = new DynamicFilter(0, DynamicFilterType.LastWeek);
-{{endregion}}
+```
 
 
 The filter will show only the values which are dates and which fall within the week prior to the application of the filter.
@@ -280,12 +256,12 @@ Other than the members of the __IFilter__ interface, the __ForeColorFilter__ cla
 __Example 5__ demonstrates how to create a fore color filter.
         
 
-#### __[C#] Example 5: Create ForeColorFilter__
+#### __Example 5: Create ForeColorFilter__
 
-{{region cs-radspreadprocessing-features-filtering_4}}
+```csharp
 	ThemableColor color = new ThemableColor(Colors.Red);
 	ForeColorFilter filter = new ForeColorFilter(0, color);
-{{endregion}}
+```
 
 
 
@@ -306,12 +282,12 @@ Other than the members of the __IFilter__ interface, the __FillColorFilter__ cla
 __Example 6__ shows hot to create a fill color filter.
         
 
-#### __[C#] Example 6: Create FillColorFilter__
+#### __Example 6: Create FillColorFilter__
 
-{{region cs-radspreadprocessing-features-filtering_5}}
+```csharp
 	IFill fill = new PatternFill(PatternType.Solid, Colors.Red, Colors.Red);
 	FillColorFilter filter = new FillColorFilter(0, fill);
-{{endregion}}
+```
 
 
 
@@ -326,25 +302,25 @@ In order to set a filter on a range, you need to follow the steps below:
 * Set the filter range.
 	 									           
 	
-	#### __[C#] Example 7: Set FilterRange__
+	#### __Example 7: Set FilterRange__
 	
-	{{region cs-radspreadprocessing-features-filtering_6}}
+	```csharp
 		Worksheet worksheet = workbook.ActiveWorksheet;
 		
 		CellRange filterRange = new CellRange(0, 1, 5, 2);
 		worksheet.Filter.FilterRange = filterRange;
-	{{endregion}}
+	```
 
 
 
 * Create a filter.
             
 	
-	#### __[C#] Example 8: Create DynamicFilter__
+	#### __Example 8: Create DynamicFilter__
 	
-	{{region cs-radspreadprocessing-features-filtering_7}}
+	```csharp
 		DynamicFilter filter = new DynamicFilter(1, DynamicFilterType.AboveAverage);
-	{{endregion}}
+	```
 	
 	The relative index specified in the constructor is 1, which means that the filter will be set on the second column of the range, that is, column C.
             
@@ -352,11 +328,11 @@ In order to set a filter on a range, you need to follow the steps below:
 * Set the filter on the necessary column.
             
 
-	#### __[C#] Example 9: Set Filter__
+	#### __Example 9: Set Filter__
 	
-	{{region cs-radspreadprocessing-features-filtering_8}}
+	```csharp
 		worksheet.Filter.SetFilter(filter);
-	{{endregion}}
+	```
 	
 	
 	**Figure 2** demonstrates the result of the filtering when applied on the values 1-9 in column B and 11-19 in column C.
@@ -368,12 +344,12 @@ In order to set a filter on a range, you need to follow the steps below:
 	Alternatively, you can set the filter through the cell selection like in __Example 10__. This approach will automatically set the filter range anew.
         
 
-	#### __[C#] Example 10: Set filter through selection__
+	#### __Example 10: Set filter through selection__
 	
-	{{region cs-radspreadprocessing-features-filtering_9}}
+	```csharp
 
 		worksheet.Cells[filterRange].Filter(filter);
-	{{endregion}}
+	```
 
 
 
@@ -389,15 +365,15 @@ In order to set a filter on a range, you need to follow the steps below:
 When a filter is set it is automatically applied. The application of a filter happens only once and if the values or properties of the filtered column change afterwards, the filter needs to be reapplied. This is done by using the overloads of the __ReapplyFilter()__ method. The first overload allows reapplying a filter by the relative index of the column it is applied to. The second - by a __IFilter__ instance.
         
 
-#### __[C#] Example 11: Set FilterRange__
+#### __Example 11: Set FilterRange__
 
-{{region cs-radspreadprocessing-features-filtering_10}}
+```csharp
 	worksheet.Filter.ReapplyFilter(1);
-{{endregion}}
+```
 
 
 
->tipNote that attempting to reapply filter on a column which is not filtered causes an exception.
+>tip Note that attempting to reapply filter on a column which is not filtered causes an exception.
           
 
 ## Removing and Clearing Filters
@@ -417,11 +393,11 @@ Removing and clearing filters is done using the following methods exposed by the
 As is the case with the __ReapplyFilter()__ method, you can remove a filter by instance and by relative index of the column it is applied to.
         
 
-#### __[C#] Example 12: Remove filter__
+#### __Example 12: Remove filter__
 
-{{region cs-radspreadprocessing-features-filtering_11}}
+```csharp
 	bool success = worksheet.Filter.RemoveFilter(1);
-{{endregion}}
+```
 
 
 

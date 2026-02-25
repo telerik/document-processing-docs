@@ -10,7 +10,7 @@ position: 0
 
 # JavaScript Actions  
 
-|Version|**Q4 2024** (or newer)|
+|Minimum Version|**Q4 2024**|
 |----|----|
 
 RadPdfProcessing provides support for:

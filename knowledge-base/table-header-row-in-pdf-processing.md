@@ -7,7 +7,7 @@ slug: table-header-row-in-pdf-processing
 tags: pdf, table, header, row, bold
 res_type: kb
 ---
-# Environment
+## Environment
 
 | Version | Product | Author | 
 | --- | --- | ---- | 
@@ -67,12 +67,12 @@ Table header row can be added as a standard TableRow with bold text.
 
 ![Table Row Header](images/pdf-table-header-row.png)    
 
->note For .NET Standard projects, it is necessary to implement a FontsProvider to get the correct font: [Fonts]({%slug radpdfprocessing-cross-platform-fonts%}}).
+>note For .NET Standard projects, it is necessary to implement a FontsProvider to get the correct font: [Fonts]({%slug radpdfprocessing-cross-platform-fonts%}).
 
 ## See Also
 
-* [How to implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}})
-* [Fonts]({%slug radpdfprocessing-cross-platform-fonts%}})
+* [How to implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
+* [Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
 * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
 * [Table]({%slug radpdfprocessing-editing-table-overview%})
-* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})

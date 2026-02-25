@@ -20,7 +20,7 @@ Merge fields are a type of [Fields]({%slug radwordsprocessing-concepts-fields%})
 The code snippet in __Example 1__ shows how to initialize a RadFlodDocumentEditor instance and insert a merge field.
         
 
-#### __[C#] Example 1: Insert a merge field__
+#### __Example 1: Insert a merge field__
 
 <snippet id='codeblock-bu'/>
 
@@ -29,7 +29,7 @@ The code snippet in __Example 1__ shows how to initialize a RadFlodDocumentEdito
 Additionally, a field can be added to a Paragraph manually by creating a __FieldInfo__ instance and placing its start, code, separator, result and end in the block. __Example 2__ shows the manual approach for adding a merge field.
         
 
-#### __[C#] Example 2: Add a merge field manually__
+#### __Example 2: Add a merge field manually__
 
 <snippet id='codeblock-bv'/>
 
@@ -46,7 +46,7 @@ During the operation, each MergeField is replaced with the corresponding informa
 Example 3 shows a simple example data source.
         
 
-#### __[C#] Example 3: Sample data source__
+#### __Example 3: Sample data source__
 
 <snippet id='codeblock-bw'/>
 
@@ -55,7 +55,7 @@ Example 3 shows a simple example data source.
 __Example 4__ performs the mail merge operation over a previously defined template document using the data source from __Example 3__.
         
 
-#### __[C#] Example 4: Perform mail merge__
+#### __Example 4: Perform mail merge__
 
 <snippet id='codeblock-bx'/>
 
@@ -70,7 +70,7 @@ The nested mail merge functionality is supported from R1 2022. It allows you to 
 
 Currently, all tag pairs work equally and more than one option exists in order to improve the readability of the documents.
 
->Exception: When a table row has only one cell, using the TableStart/TableEnd tags over the whole content of that cell will create a new row for each value. Every other pair of tags (BeginGroup/EndGroup, RangeStart/RangeEnd, GroupStart/GroupEnd) are interchangeable and will put the values on the same row inside that cell.
+> **Exception**: When a table row has only one cell, using the TableStart/TableEnd tags over the whole content of that cell will create a new row for each value. Every other pair of tags (BeginGroup/EndGroup, RangeStart/RangeEnd, GroupStart/GroupEnd) are interchangeable and will put the values on the same row inside that cell.
 
 >caption A single cell (spanning the whole row) with TableStart/TableEnd tags:
 
@@ -84,13 +84,13 @@ The following example demonstrates how you can use the nested mail merge:
 
 First you need to define a data source that contains an `IEnumerable` of objects.
 
-#### __[C#] Example 5: Nested mail merge data source__
+#### __Example 5: Nested mail merge data source__
 
 <snippet id='codeblock-by'/>
 
 Now you need to add the fields using the specific supported names. In this example, we are adding the fields to the table and we will use the TableStart/TableEnd tags, but this is not mandatory and you can use a tag of your choosing.
 
-#### __[C#] Example 6: Perform nested mail merge__
+#### __Example 6: Perform nested mail merge__
 
 <snippet id='codeblock-bz'/>
 
@@ -122,3 +122,4 @@ If you want to separate the items into several rows you need to close the group 
  * [How to Remove a MERGEFIELD While Replacing the Placeholders with Values in RadWordsProcessing]({%slug remove-mergefields-retain-values-radwordsprocessing%})
  * [Performing Nested MailMerge with Multiple Levels in RadWordsProcessing]({%slug nested-mailmerge-radwordsprocessing%}) 
  * [Simulating Mail Merge with HTML content by Utilizing the Find and Replace Functionality]({%slug simulating-mail-merge-with-html-content%})
+ * [Mail Merge with HTML Formatted Strings in RadWordsProcessing]({%slug mail-merge-html-formatted-strings-radwordsprocessing%})

@@ -24,9 +24,9 @@ EXIF data is useful information about a JPEG image, hidden inside the file`s met
 In the following example, we are using the _System.Drawing._**Bitmap** class in order to load a rotated **JPEG** image and then pass it to a helper method to rotate the image according to the appropriate rotation angle. 
 After the image is successfully rotated we are inserting it into the **RadFixedPage**.
 
-#### __[C#] Insert a JPEG image with orientation set in its metadata into a RadFixedDocument using a helper method__
+#### __Insert a JPEG image with orientation set in its metadata into a RadFixedDocument using a helper method__
 
-{{region pdfprocessing-rotate-jpeg-with-orientation-set-in-metadata1}}
+```csharp
 
 	string imagePath = "Progress_DevCraft_rotated.jpg";
 	Image bitmap = new Bitmap(imagePath);
@@ -45,13 +45,13 @@ After the image is successfully rotated we are inserting it into the **RadFixedP
 	RadFixedDocument document = new RadFixedDocument();
 	RadFixedPage page = document.Pages.AddPage();
 	page.Content.Add(image);
-{{endregion}}
+```
 
 Here is an example of rotating the image according to its EXIF orientation.
 
-#### __[C#] The helper method__
+#### __The helper method__
 
-{{region pdfprocessing-rotate-jpeg-with-orientation-set-in-metadata2}}
+```csharp
 
 	public static Image ExifRotate(Image img)
 	{
@@ -91,4 +91,4 @@ Here is an example of rotating the image according to its EXIF orientation.
 
 		return img;
 	}
-{{endregion}}
+```

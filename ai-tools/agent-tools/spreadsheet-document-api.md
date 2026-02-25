@@ -41,8 +41,8 @@ Provides read-only agent tools for querying and analyzing spreadsheet content wi
 <tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
 <tr><td>FilterAndExtract</td><td><pre>CallToolResult FilterAndExtract(
     int filterColumnIndex,
-    List<string> filterValues,
-    List<int> columnsToReturn,
+    List&lt;string&gt; filterValues,
+    List&lt;int&gt; columnsToReturn,
     string worksheetName = null,
     string documentId = null,
     int maxSampleRows = 5)</pre></td><td>Filters rows where the filter column matches any exact value from filterValues. Returns: Aggregated counts grouped by the values in columnsToReturn. Up to maxSampleRows sample rows (for verification) without reading the entire dataset.</td></tr>
@@ -71,7 +71,7 @@ Provides read-only agent tools for querying and analyzing spreadsheet content wi
 <tr><td>ListAvailableStyles</td><td><pre>CallToolResult ListAvailableStyles(
     string documentId = null)</pre></td><td>Lists all style names defined in the workbook.</td></tr>
 <tr><td>GetStyleProperties</td><td><pre>CallToolResult GetStyleProperties(
-    List<string> styleNames,
+    List&lt;string&gt; styleNames,
     string documentId = null)</pre></td><td>Returns detailed properties (font, border, alignment, fill, protection) for the specified existing style names.
 Use ListAvailableStyles first to discover valid names.</td></tr>
 <tr><td>GetCellStyles</td><td><pre>CallToolResult GetCellStyles(
@@ -98,7 +98,7 @@ Exposes a set of methods designed for automations and AI agents to modify spread
     int fromColumnIndex,
     int toRowIndex,
     int toColumnIndex,
-    List<List<string>> values,
+    List&lt;List&lt;string&gt;&gt; values,
     string documentId = null,
     string worksheetName = null)</pre></td><td>Writes values (or formulas) to a rectangular range.</td></tr>
 <tr><td>SetCellFormula</td><td><pre>public CallToolResult SetCellFormula(
@@ -112,7 +112,7 @@ Exposes a set of methods designed for automations and AI agents to modify spread
     int fromColumnIndex,
     int toRowIndex,
     int toColumnIndex,
-    List<List<string>> styleNames,
+    List&lt;List&lt;string&gt;&gt; styleNames,
     string worksheetName = null,
     string documentId = null)</pre></td><td>Applies named styles to a rectangular range.</td></tr>
 <tr><td>AutoFitColumnsWidth</td><td><pre>public CallToolResult AutoFitColumnsWidth(
@@ -192,13 +192,14 @@ Provides read-only formula and calculation tools for spreadsheets handled throug
 
 <table>
 <tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
-<tr><td>CalculateFormulaWithoutChangingTheDocument</td><td><pre>public CallToolResult CalculateFormulaWithoutChangingTheDocument(
+<tr><td>CalculateFormulaWithoutChangingTheDocument</td><td><pre>public CallToolResult 
+CalculateFormulaWithoutChangingTheDocument(
 string formula,
 string documentId = null)</pre></td><td>Evaluates a formula string (e.g., =SUM(A1:A10) or =(A1+A2)/2) without changing the document. Use this for any calculation, aggregation, count, or analysis instead of iterating raw cells.</td></tr>
 <tr><td>ListAllFormulas</td><td><pre>public CallToolResult ListAllFormulas(
 string documentId = null)</pre></td><td>Returns all supported formulas/expressions along with their category and description. Ideal for discovery and UI pickers.</td></tr>
 <tr><td>GetFormulaInfo</td><td><pre>public CallToolResult GetFormulaInfo(
-List<string> formulaNames,
+List&lt;string&gt; formulaNames,
 string documentId = null)</pre></td><td>Fetches description, syntax, and parameter metadata for the specified formula names.</td></tr>
 </table>
 

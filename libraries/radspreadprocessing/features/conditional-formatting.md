@@ -72,9 +72,9 @@ The **ConditionalFormattingDxfRule** class is a base class for all rules that su
 
 The Formatting property can be used for all rules listed in **Table 1** except **ColorScaleRule**, **IconSetRule**, and **DataBarRule**. Due to their specificity, these three rules inherit directly from `ConditionalFormattingRule` and **do not** expose the `Formatting` property. Their styling options are directly inside the rule class. 
 
-#### [C#] Example 1: Create formatting
+#### Example 1: Create formatting
 
-{{region radspreadprocessing-features-conditional-formatting_5}}
+```csharp
 
     DifferentialFormatting formatting = new DifferentialFormatting();
     formatting.FontSize = 22;
@@ -90,16 +90,16 @@ The Formatting property can be used for all rules listed in **Table 1** except *
     formatting.BottomBorder = cellBorder;
     formatting.LeftBorder = cellBorder;
     formatting.RightBorder = cellBorder;
-{{endregion}}
+```
 
 
 ## Create and Apply Conditional Formatting Rule
 
 Each of the classes listed in **Table 1** above expose constructors enabling you to instantiate the specific rule. The constructors of these classes take a `string` parameter allowing you to specify the values and conditions the rule must work with. You can pass any cell value for the parameter, inlcuding formulas.
 
-#### [C#] Example 2: Create Between rule
+#### Example 2: Create Between rule
 
-{{region radspreadprocessing-features-conditional-formatting_0}}
+```csharp
 
     // Get a value from the worksheet
     string capacityValue = worksheet.Cells[1, 0].GetValue().Value.GetValueAsString(CellValueFormat.GeneralFormat);
@@ -118,14 +118,14 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
     // Create conditional formatting and add it to the desired range of cells
     ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
     worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);
-{{endregion}}
+```
 
 #### Between rule applied on a range of values
 ![Between rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_Between.png)
 
-#### [C#] Example 3: Create GreaterThanOrEqualTo rule
+#### Example 3: Create GreaterThanOrEqualTo rule
 
-{{region radspreadprocessing-features-conditional-formatting_1}}
+```csharp
 
     GreaterThanOrEqualToRule rule = new GreaterThanOrEqualToRule("=$A$2");
     
@@ -137,14 +137,14 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
     
     ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
     worksheet.Cells[1, 2, 11, 2].AddConditionalFormatting(conditionalFormatting);
-{{endregion}}
+```
 
 #### GreaterThanOrEqualTo rule applied on a range of values
 ![GreaterThanOrEqualTo rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_GreaterThanOrEqualTo.png)
 
-#### [C#] Example 4: Create ColorScale rule
+#### Example 4: Create ColorScale rule
 
-{{region radspreadprocessing-features-conditional-formatting_2}}
+```csharp
 
     // Get a value from an existing worksheet
     string capacityValue = worksheet.Cells[1, 0].GetValue().Value.GetValueAsString(CellValueFormat.GeneralFormat);
@@ -166,16 +166,16 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
     ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
     worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);
 
-{{endregion}}
+```
 
 >note Depending on the exact number of colors you would like to apply for the ColorScaleRule, you can choose between **TwoColorScaleValueContext** and **ThreeColorScaleValueContext** classes.
 
 #### ColorScale rule applied on a range of values
 ![ColorScale rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_ColorScale.png)
 
-#### [C#] Example 5: Create DataBar rule
+#### Example 5: Create DataBar rule
 
-{{region radspreadprocessing-features-conditional-formatting_3}}
+```csharp
 
     // Create the context for the rule
     DataBarValueContext dataBarValueContext = new DataBarValueContext();
@@ -189,15 +189,15 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
     ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
     worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);
 
-{{endregion}}
+```
 
 #### DataBar rule applied on a range of values
 ![DataBar rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_DataBar.png)
 
 
-#### [C#] Example 6: Create IconSet rule
+#### Example 6: Create IconSet rule
 
-{{region radspreadprocessing-features-conditional-formatting_4}}
+```csharp
 
     // Create the rule using a predefined set of icons
     IconSetRule rule = new IconSetRule(PresetIconSet.ThreeArrowsColored);         
@@ -205,7 +205,7 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
     ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
     worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);
 
-{{endregion}}
+```
 
 #### IconSet rule applied on a range of values
 ![IconSet rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_IconSet.png)
@@ -231,20 +231,20 @@ The following list shows all implementations of `IRangeValue` that you can use:
 
 Any previously applied formatting can be obtained through the GetConditionalFormattings method of CellSelection. This method returns a collection of **ConditionalFormattingRange** object representing the formattings applied to the selection and the CellRange each formatting is applied on.
 
-#### [C#] Example 7: Get the conditional formatting
+#### Example 7: Get the conditional formatting
 
-{{region radspreadprocessing-features-conditional-formatting_6}}
+```csharp
 
     IEnumerable<ConditionalFormattingRange> formattingRanges = worksheet.Cells[0, 0, 10, 10].GetConditionalFormattings();
-{{endregion}}
+```
 
 ## Remove Conditional Formatting
 
 Through the CellSelection, you can also remove the formatting from the selected cells.
 
-#### [C#] Example 8: Remove the conditional formatting
+#### Example 8: Remove the conditional formatting
 
-{{region radspreadprocessing-features-conditional-formatting_7}}
+```csharp
 
     IEnumerable<ConditionalFormattingRange> formattingRanges = worksheet.Cells[0, 0, 10, 10].GetConditionalFormattings();
     
@@ -255,7 +255,7 @@ Through the CellSelection, you can also remove the formatting from the selected 
             worksheet.Cells[range.CellRange].RemoveConditionalFormatting(format);
         }
     }
-{{endregion}}
+```
 
 ## Resolve Conditional Formatting
 
@@ -263,26 +263,26 @@ Each of the formatting rule classes gives you the ability to evaluate the rule a
 
 For the rules that apply on all the values in the range, the return value is **between 0 and 1**, depending on where that value is positioned in the range of all values. Such rules are `ColorScaleRule`, `DataBarRule` and `IconSetRule`. For all other rules, the result of `Resolve` is **0 or 1**, depending on whether the specific cell value meets the rule requirements.
 
-#### [C#] Example 9: Resolve conditional formatting rule
+#### Example 9: Resolve conditional formatting rule
 
-{{region radspreadprocessing-features-conditional-formatting_8}}
+```csharp
 
     CellIndex cellIndex = new CellIndex(0, 0);
     ConditionalFormatting formatting = worksheet.Cells[cellIndex].GetConditionalFormattings().First().Formattings.First();
     bool isFormattingApplied = formatting.Resolve(cellIndex) > 0;
-{{endregion}}
+```
 
 ## Update the Rule for a Formatting
 
 In case you would like to change the rule used by a ConditionalFormatting object, you can do so using the UpdateRule() method.
 
-#### [C#] Example 10: Change the rule for existing conditional formatting
+#### Example 10: Change the rule for existing conditional formatting
 
-{{region radspreadprocessing-features-conditional-formatting_9}}
+```csharp
 
     ConditionalFormattingRange formattingRange = worksheet.Cells[0, 0, 10, 10].GetConditionalFormattings().First();
     formattingRange.Formattings.First().UpdateRule(new ContainsRule("test"));
-{{endregion}}
+```
 
 ## Update the Cell Range of Existing Formatting
 

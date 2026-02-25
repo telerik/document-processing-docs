@@ -9,7 +9,11 @@ position: 0
 
 # Using SkiaImageFormatProvider
 
-Since R3 2022 the __RadPdfProcessing__ library supports converting entire documents to images. This is achieved by using the third-party library [SkiaSharp](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/). You can convert to various formats, using synchronous or asynchronous export. 
+|Minimum Version|R3 2022|
+|----|----|
+|Target Framework|.NET Standard / .NET (Target OS: None)|
+
+RadPdfProcessing supports converting the entire document to images. This is achieved by using the third-party library [SkiaSharp](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/). You can convert to various formats, using synchronous or asynchronous export. 
 
 >important This feature is only available in the NET Standard version of the suite. For other versions check the following articles:
 >* [ThumbnailFactory](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
@@ -30,14 +34,14 @@ A [FontsProvider](https://docs.telerik.com/devtools/document-processing/librarie
 
 To convert your documents' pages to images, use the __Export__ method. Note that the export method does not accept a document but a page. This is why you need to iterate all pages. In this example, each page is saved in a separate file.
 
-#### __[C#] Example 1: Export RadFixedDocument to Image__
+#### __Example 1: Export RadFixedDocument to Image__
 
 <snippet id='pdf-export-to-image'/>
 
 ## Exporting Asynchronously
 The __ExportAsync__ method allows you to perform the conversion asynchronously.
 
-#### __[C#] Example 2: Export RadFixedDocument to Image Async__
+#### __Example 2: Export RadFixedDocument to Image Async__
 
 <snippet id='pdf-async-export-to-image'/>
 

@@ -11,7 +11,7 @@ position: 1
 
 __RadSpreadprocessing__ contains a __WorkbookFormatProvidersManager__ class that allows you to specify a set of format providers and import or export files letting the manager choose the appropriate format provider. The class also exposes methods that return all registered providers and supported file extensions. 
 
-````C#
+```csharp
 public class WorkbookFormatProvidersManager
 {
     public static IEnumerable<IWorkbookFormatProvider> FormatProviders { get; }
@@ -30,7 +30,7 @@ public class WorkbookFormatProvidersManager
     public static void RegisterFormatProvider(IWorkbookFormatProvider provider);
     public static void UnregisterFormatProvider(IWorkbookFormatProvider provider);
 }
-````
+```
       
       
 ## Registering and Unregistering Format Providers
@@ -41,43 +41,43 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
 > Some Format Providers require additional package references. Check the full list of the FormatProviders' additional reference requirements in [Format Providers - Additional package references]({%slug radspreadprocessing-formats-and-conversion-general-information%}#additional-package-references).
 
 
-#### __[C#] Example 1: Register provider__
+#### __Example 1: Register provider__
 
-{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
+```csharp
 	WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsxFormatProvider());
-{{endregion}}
+```
 
 
 
-#### __[VB.NET] Example 1: Register provider__
+#### __Example 1: Register provider__
 
-{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_0}}
+```csharp
 	WorkbookFormatProvidersManager.RegisterFormatProvider(New XlsxFormatProvider())
-{{endregion}}
+```
 
 
 You can also unregister format providers using the `UnregisterFormatProvider()` method. __Example 2__ demonstrates how to unregister the [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider %}).
         
-#### __[C#] Example 2: Unregister provider__
+#### __Example 2: Unregister provider__
 
-{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
+```csharp
 	IWorkbookFormatProvider provider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider");
 	if (provider != null)
 	{
 	    WorkbookFormatProvidersManager.UnregisterFormatProvider(provider);
 	}
-{{endregion}}
+```
 
 
 
-#### __[VB.NET] Example 2: Unregister provider__
+#### __Example 2: Unregister provider__
 
-{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_1}}
+```csharp
 	Dim provider As IWorkbookFormatProvider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider")
 	If provider IsNot Nothing Then
 	    WorkbookFormatProvidersManager.UnregisterFormatProvider(provider)
 	End If
-{{endregion}}
+```
 
 ## Import
 
@@ -90,9 +90,9 @@ The method tries to find a registered format provider that can handle the extens
 
 __Example 3__ demonstrates how to present the user with an `OpenFileDialog` and try to import the selected file. Note that you can use the __GetOpenFileDialogFilter()__ method of the __FileDialogHelper__ class to constructs the correct filter for all registered format providers.
 
-#### __[C#] Example 3: Import a file using OpenFileDialog__
+#### __Example 3: Import a file using OpenFileDialog__
 
-{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
+```csharp
 	OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
 	openFileDialog.Filter = Telerik.Windows.Controls.Spreadsheet.Utilities.FileDialogsHelper.GetOpenFileDialogFilter();
 	if (openFileDialog.ShowDialog() == true)
@@ -110,12 +110,12 @@ __Example 3__ demonstrates how to present the user with an `OpenFileDialog` and 
 	        throw new IOException("The file cannot be opened. It might be locked by another application.", ex);
 	    }
 	}
-{{endregion}}
+```
 
 
-#### __[VB.NET] Example 3: Import a file using OpenFileDialog__
+#### __Example 3: Import a file using OpenFileDialog__
 
-{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_2}}
+```csharp
 	Dim openFileDialog As New Microsoft.Win32.OpenFileDialog()
 	openFileDialog.Filter = FileDialogsHelper.GetOpenFileDialogFilter()
 	If openFileDialog.ShowDialog() = True Then
@@ -128,7 +128,7 @@ __Example 3__ demonstrates how to present the user with an `OpenFileDialog` and 
 	        Throw New IOException("The file cannot be opened. It might be locked by another application.", ex)
 	    End Try
 	End If
-{{endregion}}
+```
 
 
 > The OpenFileDialog class exposes a different API in Silverlight. The name of the file could be obtained through the File.Name property of `OpenFileDialog` and the stream you can get using `File.OpenRead()`.
@@ -150,9 +150,9 @@ The method attempts to find a provider that can handle a file of the specified e
 __Example 4__ illustrates how to use the __Export()__ method to save a file. The sample code presents the user with the SaveFileDialog. Note that here again you can use the __GetOpenFileDialogFilter()__ method of the __FileDialogHelper__ class to construct the correct filter for all registered format providers.
         
 
-#### __[C#] Example 4: Save a file using SaveFileDialog__
+#### __Example 4: Save a file using SaveFileDialog__
 
-{{region cs-radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
+```csharp
 	Microsoft.Win32.SaveFileDialog saveFileDialog = new Microsoft.Win32.SaveFileDialog();
 	saveFileDialog.Filter = Telerik.Windows.Controls.Spreadsheet.Utilities.FileDialogsHelper.GetSaveFileDialogFilter();
 	
@@ -164,12 +164,12 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 	        WorkbookFormatProvidersManager.Export(workbook, extension, output);
 	    }
 	}
-{{endregion}}
+```
 
 
-#### __[VB.NET] Example 4: Save a file using SaveFileDialog__
+#### __Example 4: Save a file using SaveFileDialog__
 
-{{region vb-radspreadprocessing-formats-and-conversion-format-providers-manager_3}}
+```csharp
 	Dim saveFileDialog As New Microsoft.Win32.SaveFileDialog()
 	saveFileDialog.Filter = FileDialogsHelper.GetSaveFileDialogFilter()
 	
@@ -179,7 +179,7 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 	        WorkbookFormatProvidersManager.Export(workbook, extension, output)
 	    End Using
 	End If
-{{endregion}}
+```
 
 
 You can achieve the same result through using the __SaveFile__ command. In fact, the command executes exactly the same code as above. That said, make sure you register the format providers you would like to use before using the command.

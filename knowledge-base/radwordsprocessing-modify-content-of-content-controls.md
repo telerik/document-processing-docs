@@ -21,7 +21,7 @@ Structured Document Tags (SDTs), also known as [Content Controls]({%slug wordspr
 
 The following example covers:
 
-* **Load and parse**: Imports an input DOCX using **DocxFormatProvider** and retrieves all SDTs via **EnumerateChildrenOfType<SdtRangeStart>()**.
+* **Load and parse**: Imports an input DOCX using **DocxFormatProvider** and retrieves all SDTs via **EnumerateChildrenOfType&lt;SdtRangeStart&gt;()**.
 * **Classify by alias**: Iterates each SDT and uses **SdtProperties.Alias** to route updates for specific control types: "RichText", "ComboBox", "CheckBox", and "DatePicker".
 * **Preserve formatting**: For inline SDTs, collects all **Run** elements between **SdtRangeStart** and **SdtRangeEnd**, removes all but the first **Run**, and reuses that first **Run** to keep existing text formatting.
 * **Update values**:

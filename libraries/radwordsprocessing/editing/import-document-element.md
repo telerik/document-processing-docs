@@ -26,7 +26,7 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 * **conflictingStylesResolutionMode**: Represents the resolution mode, which will be used if a style conflict appears during the style repositories merging. Could be set to one of the values of the [ConflictingStylesResolutionMode enumeration]( https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.ConflictingStylesResolutionMode.html).
 
 <a name="example1"><a/>
-#### __[C#] Example 1: Create DocumentElementImporter__
+#### __Example 1: Create DocumentElementImporter__
 
 <snippet id='codeblock-br'/>
 
@@ -36,7 +36,7 @@ The constructor of the **DocumentElementImporter** class accepts three parameter
 
 The **DocumentElementImporter** class exposes the Import&lt;T&gt;() method, which is used to prepare a document element from the source document for import into the target document. **Example 2** demonstrates how you could work with this method, using the **DocumentElementImporter** instance, created in [Example 1](#example1).
 
-#### __[C#] Example 2: Import a document element__
+#### __Example 2: Import a document element__
 
 <snippet id='codeblock-bs'/>
 
@@ -51,44 +51,14 @@ The merging of the styles between the two documents (target and source) is execu
 In **Table 1** is described the behavior of the Import&lt;T&gt;() method of **DocumentElementImporter** in different scenarios.
 
 #### Table 1
-<table>
-
-	<tr>
-		<th>Action</th>
-		<th>Result</th>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a document element.</td>
-		<td>Returns the document element cloned.</td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a paragraph, which contains unpaired annotation marker (e.g. there is a Bookmark, which is spanned between two paragraphs, one of which is passed as a parameter).</td>
-		<td>Returns the paragraph and all its inlines cloned. <b>The unpaired annotation marker is cleared.</b></td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a section, which contains paragraphs which contain by their side unpaired annotations (e.g. there is a Bookmark, which is spanned between two paragraphs and their parent section is passed as a parameter).</td>
-		<td>Returns the section and all its children cloned. The annotation markers are not cleared.</td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a paragraph, which has a style, renamed during the styles merging.</td>
-		<td>Returns the paragraph and all its children cloned with the correctly renamed StyleId property.</td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a paragraph, which has a style, renamed during the styles merging multiple times.</td>
-		<td>Returns the paragraph and all its children cloned with the correctly renamed StyleId property.</td>
-	</tr>
-
-	<tr>
-		<td>Invoke Import() method with a document element, which is not a child of the source document.</td>
-		<td>Throws an <b> InvalidOperationException</b>.</td>
-	</tr>
-
-</table>
+| Action | Result |
+|--------|--------|
+| Invoke Import() method with a document element. | Returns the document element cloned. |
+| Invoke Import() method with a paragraph, which contains unpaired annotation marker (e.g. there is a Bookmark, which is spanned between two paragraphs, one of which is passed as a parameter). | Returns the paragraph and all its inlines cloned. **The unpaired annotation marker is cleared.** |
+| Invoke Import() method with a section, which contains paragraphs which contain by their side unpaired annotations (e.g. there is a Bookmark, which is spanned between two paragraphs and their parent section is passed as a parameter). | Returns the section and all its children cloned. The annotation markers are not cleared. |
+| Invoke Import() method with a paragraph, which has a style, renamed during the styles merging. | Returns the paragraph and all its children cloned with the correctly renamed StyleId property. |
+| Invoke Import() method with a paragraph, which has a style, renamed during the styles merging multiple times. | Returns the paragraph and all its children cloned with the correctly renamed StyleId property. |
+| Invoke Import() method with a document element, which is not a child of the source document. | Throws an **InvalidOperationException**. |
 
 ## See Also
 
