@@ -20,6 +20,7 @@ external-snippets-path: ../dpl-snippets
 gitLastCommitDateEnabled: true
 disable-html-redirect: true
 center-images: false
+search-provider: nuclia
 
 cta-overview: The @Subject is part of @ProductLink, a professional grade .NET library for creating and manipulating PDF, Word, XLSX and HTML files. To try it out sign up for a free 30-day trial.
 cta-intro: "Telerik Document Processing is a professional grade .NET library for creating and manipulating PDF, Word, XLSX and HTML files. To try it out sign up for a free 30-day trial."
