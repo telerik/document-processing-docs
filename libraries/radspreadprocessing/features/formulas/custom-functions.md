@@ -340,3 +340,4 @@ __Example 5__ shows how to create the 'E' function.
  * [CustomFunctions SDK](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions)
  * [Implementing SUMPRODUCT Function in SpreadProcessing]({%slug sumproduct-function-nested-array-formulas-telerik-spreadprocessing%})
  * [Implementing TRANSPOSE(cells range) Function in SpreadProcessing]({%slug implementing-transpose-array-function-in-spreadprocessing%})
+ * [Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing]({%slug implementing-concat-array-function-in-spreadprocessing%})
