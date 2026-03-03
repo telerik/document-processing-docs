@@ -5,7 +5,7 @@ type: how-to
 page_title: Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing
 meta_title: Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing
 slug: implementing-concat-array-function-in-spreadprocessing
-tags: spread,telerik, document, processing,excel, formula, function, concat, array
+tags: spread,telerik, document, processing,excel, formula, function, concat, array, override
 res_type: kb
 ticketid: 1710562
 ---
@@ -18,7 +18,7 @@ ticketid: 1710562
 
 ## Description
 
-This article is expected to show a sample approach for defining a custom function which accepts a range of cells as an argument. For simplicity of the example and better understanding, we will use the [CONCAT](https://support.microsoft.com/en-us/office/concat-function-9b1a9a3f-94ff-41af-9736-694cbd6b4ca2) function which is expected to join several text items into one text item. It is listed in the [supported functions]({%slug radspreadprocessing-features-formulas-functions%}) by RadSpreadProcessing.
+This article is expected to show a sample approach for defining a custom function which accepts a range of cells as an argument. For simplicity of the example and better understanding, we will use the [CONCAT](https://support.microsoft.com/en-us/office/concat-function-9b1a9a3f-94ff-41af-9736-694cbd6b4ca2) function as an idea which is expected to join several text items into one text item. It is listed in the [supported functions]({%slug radspreadprocessing-features-formulas-functions%}) by RadSpreadProcessing.
 
 >note This approach can be adopted to other functions' implementation.
 
