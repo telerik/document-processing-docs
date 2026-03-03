@@ -1,9 +1,9 @@
 ---
-title: Implementing CONCAT(array) Function in SpreadProcessing
-description: Addressing import/export challenges in XLS workbooks using RadSpreadsheet, including missing comments, formula support, and image handling.
+title: Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing
+description: Learn how to implement your own custom function accepting an array argument in SpreadProcessing.
 type: how-to
-page_title: Implementing CONCAT(array) Function in SpreadProcessing
-meta_title: Implementing CONCAT(array) Function in SpreadProcessing
+page_title: Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing
+meta_title: Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing
 slug: implementing-concat-array-function-in-spreadprocessing
 tags: spread,telerik, document, processing,excel, formula, function, concat, array
 res_type: kb
@@ -18,13 +18,17 @@ ticketid: 1710562
 
 ## Description
 
-CONCAT function is expected to join several text items into one text item and it is listed in the supported by RadSpreadProcessing functions. However,  if the passed range includes more than two cells, then the functionality for [array formulas](https://feedback.telerik.com/document-processing/1356134-spreadprocessing-support-for-array-formulas) is required. 
-This article shows how to implement a custom function that concatenates all the cell values within a range, not simply two cell values. 
+This article is expected to show a sample approach for defining a custom function which accepts a range of cells as an argument. For simplicity of the example and better understanding, we will use the [CONCAT](https://support.microsoft.com/en-us/office/concat-function-9b1a9a3f-94ff-41af-9736-694cbd6b4ca2) function which is expected to join several text items into one text item. It is listed in the [supported functions]({%slug radspreadprocessing-features-formulas-functions%}) by RadSpreadProcessing.
+
+>note This approach can be adopted to other functions' implementation.
 
 ## Solution
 
+1. Unregister the built-in implementation for the custom function (if such exists).
+1. Implement your custom function.
+1. Register the custom function using the FunctionManager.RegisterFunction() method.
 
-#### Custom `CONCAT` Implementation
+#### Custom Function Implementation
 
 ```csharp
         static void Main(string[] args)
@@ -116,10 +120,6 @@ This article shows how to implement a custom function that concatenates all the 
         }
 ```
 
-
 ## See Also
 
-- [RadSpreadProcessing Supported Functions](https://www.telerik.com/document-processing-libraries/documentation/libraries/radspreadprocessing/features/formulas/functions)
-- [Feedback Portal: Array Formulas](https://feedback.telerik.com/document-processing/1356134-spreadprocessing-support-for-array-formulas)
-- [TRANSPOSE Function Documentation](https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027)
-- [RadSpreadProcessing Overview](https://www.telerik.com/document-processing-libraries/documentation/libraries/radspreadprocessing/overview)
+- [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%})
