@@ -1,11 +1,11 @@
 ---
-title: Implementing TRANSPOSE(array) Function in SpreadProcessing
-description: Learn how to implement  TRANSPOSE(array) function in Telerik Document Processing Libraries.
+title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
+description: Learn how to implement  TRANSPOSE(cells range) function in Telerik Document Processing Libraries.
 type: how-to
-page_title: Implementing TRANSPOSE(array) Function in SpreadProcessing
-meta_title: Implementing TRANSPOSE(array) Function in SpreadProcessing
+page_title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
+meta_title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
 slug: implementing-transpose-array-function-in-spreadprocessing
-tags: spread,processing,telerik,document,formula, function,transpose,array
+tags: spread,processing,telerik,document,formula, function,transpose,array,cells, range
 res_type: kb
 ticketid: 1710562
 ---
@@ -18,15 +18,17 @@ ticketid: 1710562
 
 ## Description
 
+This article demonstrates a sample approach how to implement a custom function that simulates the [TRANSPOSE](https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027)(A1:C1) functionality.
+
 If your original data is:
-|A|B|C|
+||||
 |----|----|----|
 |Apple|Banana|Cherry|
 |1|2|3|
 
-then =[TRANSPOSE](https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027)(A1:C1) will produce: 
+then `=TRANSPOSE(A1:C1)` will produce: 
 
-|A|B|C|
+||||
 |----|----|----|
 |Apple|1||
 |Banana|2||
@@ -35,7 +37,12 @@ then =[TRANSPOSE](https://support.microsoft.com/en-us/office/transpose-function-
 In other words, a horizontal range becomes vertical and a vertical range becomes horizontal. This article demonstrates a sample approach of a custom implementation for the TRANSPOSE. 
 
 ## Solution
+
+Follow the steps:
  
+1. Implement your custom function.
+1. Register the custom function using the FunctionManager.RegisterFunction() method. 
+1. Handle the returned ArrayExpression result and print the transposed cells range in the console Output.
 
 #### Custom TRANSPOSE Function
 
@@ -183,10 +190,7 @@ Create a custom `TRANSPOSE` function to transpose rows and columns.
             }
         }
 ```
-
  
 ## See Also
 
-- [SpreadProcessing Overview](https://www.telerik.com/document-processing-libraries/documentation/libraries/radspreadprocessing/overview)
-- [Supported Functions in SpreadProcessing](https://www.telerik.com/document-processing-libraries/documentation/libraries/radspreadprocessing/features/formulas/functions)
-- [Feedback Portal for SpreadProcessing](https://feedback.telerik.com/document-processing)
+- [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%})
