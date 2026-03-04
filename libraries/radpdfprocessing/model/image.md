@@ -72,3 +72,4 @@ The Image class exposes also the **GetBitmapSource()** method, enabling you to o
  * [Change file size of a PDF with images through ImageCompression and ImageQuality]({%slug pdfprocessing-change-file-size-through-image-quality-and-compression%})
  * [Adding a Barcode to a PDF Document using PdfProcessing and the WinForms BarcodeView]({%slug add-barcode-to-pdf-telerik%})
  * [Adding an Image Border in PdfProcessing]({%slug pdf-image-border%})
+ * [Adding a .HEIC Image to PDF Documents in PdfProcessing]({%slug convert-heic-images-to-jpg%})
