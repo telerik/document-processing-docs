@@ -19,7 +19,7 @@ ticketid: 1710179
 
 ## Description
 
-**.HEIC** images are not natively supported by RadPdfProcessing. The library supports JPEG, JPEG2000, and PNG formats for image insertion into PDF documents. To handle HEIC images in your PDF report, you need to convert them to a supported format (JPEG or PNG) before adding them to the PDF. This article shows a sample approach how to do the conversion from HEIC to JPG image format.
+**.HEIC** images are not natively supported by RadPdfProcessing. The library supports JPEG, JPEG2000, and PNG formats for image insertion into PDF documents. To handle HEIC images in your PDF document, you need to convert them to a supported format (JPEG or PNG) before adding them to the PDF. This article shows a sample approach how to do the conversion from HEIC to JPG image format.
 
 ## Solution
 
