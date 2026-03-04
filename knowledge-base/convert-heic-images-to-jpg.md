@@ -134,5 +134,5 @@ Use an external library or tool to convert HEIC files to JPEG or PNG. For .NET, 
 ```
 
 ## See Also
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
+- [Images in PdfProcessing]({%slug radpdfprocessing-model-image%})
 
