@@ -28,24 +28,18 @@ Below you can see a feature / format matrix that describes supported features by
 
 <style>
     table td {
-        color:#5ce500;
         text-align: center;
     }
-    table td:nth-child(1) {
-        color:black;
-    }
-    td.not-applicable {
-        color:black;
+      td.not-applicable {
         text-align: center;
     }
     td.partially-supported {
-        color:orange;
         text-align: center;
     }
 </style>
 
-<div>
-<table><tr><th>Feature</th>
+
+<table><thead><tr><th>Feature</th>
 <th>Docx Import</th>
 <th>Docx Export</th>
 <th>Doc Import</th>
@@ -53,7 +47,8 @@ Below you can see a feature / format matrix that describes supported features by
 <th>Rtf Export</th>
 <th>Html Import</th>
 <th>Html Export</th>
-<th>PDF Export</th></tr>
+<th>PDF Export</th></tr></thead>
+<tbody>
 <tr><td><b>Text Formatting</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
 Font Properties</td><td>
 ✔</td><td>
@@ -364,8 +359,7 @@ Bookmarks</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
-✔</td><td></td><td></td><td></td></tr></table>
-</div>
+✔</td><td></td><td></td><td></td></tr></tbody></table>
 
 >1. Double Strikethrough is currently not supported.
 >2. Floating images are treated as inline images when importing/exporting HTML.

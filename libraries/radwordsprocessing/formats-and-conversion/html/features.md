@@ -14,10 +14,10 @@ position: 1
 Below you can find list with all features that are supported by HtmlFormatProvider.
 
 ## 
-<table><tr><th>
+<table><thead><tr><th>
 Feature</th><th>
 Supported</th><th>
-Comment</th></tr><tr><td>
+Comment</th></tr></thead><tbody><tr><td>
 
 <b>
                   Text Formatting
@@ -441,4 +441,4 @@ Bookmarks
 
 </td><td>
 
-</td></tr></table>
+</td></tr></tbody></table>

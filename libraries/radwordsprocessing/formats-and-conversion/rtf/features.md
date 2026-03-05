@@ -14,9 +14,9 @@ position: 1
 Below you can find list with all features that are supported by RtfFormatProvider.
 
 ## 
-<table><tr><th>Feature</th><th>
+<table><thead><tr><th>Feature</th><th>
 Supported</th><th>
-Comment</th></tr>
+Comment</th></thead><tbody></tr>
 <tr><td>
 
 <b>
@@ -470,4 +470,4 @@ Bookmarks
 Yes
               </td><td>
 
-</td></tr></table>
+</td></tr></tbody></table>
