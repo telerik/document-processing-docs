@@ -13,9 +13,9 @@ position: 0
 Below you can find a list of all the features that are supported by DocFormatProvider.
 
 ## 
-<table><tr><th>Feature</th><th>
+<table><thead><tr><th>Feature</th><th>
 Supported</th><th>
-Comment</th></tr><tr><td>
+Comment</th></tr></thead><tbody><tr><td>
 
 <b>
                   Text Formatting
@@ -455,5 +455,5 @@ Bookmarks
 Yes
               </td><td>
 
-</td></tr></table>
+</td></tr></tbody></table>
 

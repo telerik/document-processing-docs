@@ -15,10 +15,10 @@ This article lists all HTML elements that are supported by __HtmlFormatProvider_
       
 
 ## 
-<table><tr><th>
+<table><thead><tr><th>
 HTML Element</th><th>
 Supported</th><th>
-Comment</th></tr><tr><td>
+Comment</th></tr></thead><tbody><tr><td>
 <table><tr><td>
 
 <b>Text Formatting</b></td></tr><tr><td>
@@ -373,4 +373,4 @@ Exported as styled paragraph.</td></tr><tr><td>
 
 -</td></tr><tr><td>
 
-Exported as paragraph with inlines.</td></tr></table></td></tr></table>
+Exported as paragraph with inlines.</td></tr></table></td></tr></tbody></table>
