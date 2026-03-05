@@ -28,18 +28,12 @@ Below you can see a feature / format matrix that describes supported features by
 
 <style>
     table td {
-        color:#5ce500;
         text-align: center;
     }
-    table td:nth-child(1) {
-        color:black;
-    }
     td.not-applicable {
-        color:black;
         text-align: center;
     }
     td.partially-supported {
-        color:orange;
         text-align: center;
     }
 </style>
