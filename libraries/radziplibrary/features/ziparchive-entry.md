@@ -166,7 +166,7 @@ A complete example including all the properties discussed above.
 
     using (Stream stream = File.Open(zipFileName, FileMode.Create))
     {
-        using (ZipArchive archive = new ZipArchive.Create(stream, null))
+        using (ZipArchive archive = ZipArchive.Create(stream, null))
         {
             foreach (string file in files)
             {
