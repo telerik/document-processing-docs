@@ -31,3 +31,4 @@ An alternative approach is using the [PdfStreamWriter]({%slug radpdfprocessing-f
 
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
 * [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%})
+* [Create a Table of Contents for Merged PDF Documents]({%slug create-toc-for-merged-pdf-radpdfprocessing%})
