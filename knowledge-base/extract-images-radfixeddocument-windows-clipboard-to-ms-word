@@ -1,50 +1,39 @@
 ---
-title: Copying Images from RadFixedDocument to MS Word Clipboard
-description: Learn how to extract and copy multiple images from a RadFixedDocument to the Windows clipboard and paste them into MS Word.
+title: Copying Images from RadFixedDocument to Windows Clipboard
+description: Learn how to extract and copy multiple images from a PDF to the Windows clipboard and paste them into MS Word as a single instance.
 type: how-to
 page_title: Extracting Images from PDF and Copying Them to Clipboard for MS Word
-meta_title: Extracting Images from PDF and Copying Them to Clipboard for MS Word
-slug: extract-images-radfixeddocument-clipboard-ms-word
-tags: radfixeddocument,raddocument,telerik-document-processing,clipboard,images,word
+slug: extract-images-radfixeddocument-windows-clipboard-to-ms-word
+tags: pdf, clipboard, images, extraction, html, windows, word, radfixeddocument, document, processing
 res_type: kb
 ticketid: 1709015
 ---
 
 ## Environment
 
-<table>
-<tbody>
-<tr>
-<td> Product </td>
-<td>
-WordsProcessing for Telerik Document Processing
-</td>
-</tr>
-<tr>
-<td> Version </td>
-<td> 2025.2.520 </td>
-</tr>
-</tbody>
-</table>
+| Version | Product | Author | 
+| --- | --- | ---- | 
+| 2026.1.304| RadPdfProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)| 
 
 ## Description
 
-I want to extract multiple images from a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument) and copy them to the Windows clipboard in a format that allows pasting into MS Word or other applications. The goal is to paste all images at once into MS Word.
+How to extract multiple images from a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and copy them to the Windows clipboard in a format that allows pasting into MS Word or other applications. The goal is to paste all images at once into MS Word as a single clipboard instance.
 
-This knowledge base article also answers the following questions:
-- How can I copy all images from a PDF to the clipboard?
-- How can I paste multiple images from a clipboard into MS Word?
-- How can I convert images in a RadFixedDocument to HTML format for clipboard use?
+This KB article also answers the following questions:
+
+* How can I copy all images from a PDF to the clipboard?
+* How can I paste multiple images from a clipboard into MS Word?
+* How can I convert images in a RadFixedDocument to HTML format for clipboard use?
 
 ## Solution
 
-To copy images from a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument) to the clipboard and paste them into MS Word, follow these steps:
+To copy images from a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) to the clipboard and paste them into MS Word, follow these steps:
 
 1. Extract all images from the document pages.
 2. Convert each image to PNG format and embed it in an HTML fragment as Base64 data URIs.
 3. Set both HTML and bitmap formats on the clipboard.
 
-Here is a sample implementation in C#:
+The following code snippet demonstrates the implementation:
 
 ```csharp
 using System;
@@ -135,12 +124,15 @@ static string CreateHtmlFormat(string html)
 }
 ```
 
-### Notes
-- The HTML format allows the clipboard to hold multiple images as Base64 data URIs.
-- Applications supporting HTML clipboard format, like MS Word, will paste all images simultaneously.
+**Notes:**
+
+* The HTML format allows the clipboard to hold multiple images as Base64 data URIs.
+* Applications supporting HTML clipboard format, like MS Word, will paste all images simultaneously.
+* The [GetBitmapSource]({%slug radpdfprocessing-model-imagesource%}#methods) method is used to extract images from the PDF.
 
 ## See Also
 
-- [RadFixedDocument Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument)
-- [Clipboard Class](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.clipboard)
-- [ImageSource.GetBitmapSource Method](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.model.objects.imagesource#getbitmapsource)
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [ImageSource]({%slug radpdfprocessing-model-imagesource%})
+* [Image]({%slug radpdfprocessing-model-image%})
