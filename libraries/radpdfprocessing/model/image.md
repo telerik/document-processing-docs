@@ -73,3 +73,7 @@ The Image class exposes also the **GetBitmapSource()** method, enabling you to o
  * [Adding a Barcode to a PDF Document using PdfProcessing and the WinForms BarcodeView]({%slug add-barcode-to-pdf-telerik%})
  * [Adding an Image Border in PdfProcessing]({%slug pdf-image-border%})
  * [Adding a .HEIC Image to PDF Documents in PdfProcessing]({%slug convert-heic-images-to-jpg%})
+ * [Copying Images from RadFixedDocument to Windows Clipboard]({%slug extract-images-radfixeddocument-windows-clipboard-to-ms-word%})
+
+
+ 
