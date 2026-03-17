@@ -498,13 +498,13 @@ Below you can find list with all features that are supported by XlsFormatProvide
 
   <tr>
     <td><b>Notes</b></td>
-    <td>No</td>
-    <td>Previously called "Comments"</td>
+    <td>Yes</td>
+    <td>Legacy "Comments" (now called Notes in modern Excel).</td>
   </tr>
   <tr>
     <td><b>Comments</b></td>
     <td>No</td>
-    <td>New version, also called "Threaded Comments"</td>
+    <td>Also called "Threaded Comments". Threaded comments require the newer XML-based formats: .xlsx, .xlsm, .xlsb.</td>
   </tr>
 
 </table>
