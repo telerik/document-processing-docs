@@ -352,8 +352,8 @@ Below you can find list with all features that are supported by XlsFormatProvide
   </tr>
   <tr>
     <td>Show/Hide Rows/Columns</td>
-    <td>Partially</td>
-    <td>Only columns can be hidden</td>
+    <td>Yes</td>
+    <td></td>
   </tr>
   <tr>
     <td>Center Horizontally/Vertically</td>
