@@ -34,7 +34,7 @@ In order to access cell properties, you have to create a __CellSelection__ objec
 __Example 1__ creates a selection for cells in the range A1:F6.
         
 
-#### __Example 1: Create CellSelection__
+#### Example 1: Create CellSelection
 
 ```csharp
 	Workbook workbook = new Workbook();
@@ -85,6 +85,10 @@ Cells in __RadSpreadProcessing__ offer a number of properties that allow you to 
 
 * IsWrapped
 
+* IsStrikethrough
+
+* VerticalTextAlignment ((none, superscript, or subscript))
+
 * StyleName
 
 * Underline
@@ -101,7 +105,7 @@ As already mentioned, the __CellSelection__ class exposes methods that get, set 
 __Example 2__ illustrates how to use these methods on the region A1:F6.
         
 
-#### __Example 2: Use GetIsBold(), SetIsBold() and ClearIsBold() methods__
+#### Example 2: Use GetIsBold(), SetIsBold() and ClearIsBold() methods
 
 ```csharp
 	Workbook workbook = new Workbook();
@@ -113,11 +117,33 @@ __Example 2__ illustrates how to use these methods on the region A1:F6.
 	selection.ClearIsBold();
 ```
 
-
-
 Using the above approach you can set the value of almost all cell properties. There are a few exceptions to the general get, set and clear rule, though, and each of them is described into one of the following sections.
 
 >When using **GetFontSize()** and **SetFontSize()** methods you have to keep in mind that measurement units used in **RadSpreadProcessing** are [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class. For more information go to [Measurement Units]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%}#measurement-units) help topic.
+ 
+**Example 3** demonstrates how to apply basic text formatting to worksheet cells. The first cell applies a strikethrough effect, while the following cells illustrate vertical text alignment by rendering text as superscript and subscript respectively.
+
+#### Example 3: Using SetIsStrikethrough and SetVerticalTextAlignment
+
+```csharp
+Workbook workbook = new Workbook();
+Worksheet worksheet = workbook.Worksheets.Add();
+
+CellSelection cell = worksheet.Cells[0, 0];
+cell.SetValue("This text is strikethrough");
+cell.SetIsStrikethrough(true);
+
+cell = worksheet.Cells[1, 0];
+cell.SetValue("This text is superscript");
+cell.SetVerticalTextAlignment(VerticalTextAlignment.Superscript);
+
+cell = worksheet.Cells[2, 0];
+cell.SetValue("This text is subscript");
+cell.SetVerticalTextAlignment(VerticalTextAlignment.Subscript);
+
+```
+
+<img style="border: 1px solid gray;" src="images/set-strikethrough-superscript-subscript-text.png" alt="Set Strikethrough Superscript Subscript-text" /> 
 
 ## Value Property
 
@@ -127,10 +153,10 @@ The __Value__ property uses an instance of __ICellValue__ to retrieve and change
 The __GetValue()__ method retrieves the value of the property and returns an instance of __RangePropertyValue&lt;ICellValue&gt;__. The __Value__ property of the __RangePropertyValue__ instance returns the actual value of the selected region.
         
 
-__Example 3__ illustrates who to retrieve the value of cell B2.
+__Example 4__ illustrates who to retrieve the value of cell B2.
         
 
-#### __Example 3: Retrieve value of cell__
+#### Example 4: Retrieve value of cell
 
 ```csharp
 	Workbook workbook = new Workbook();
@@ -145,10 +171,10 @@ __Example 3__ illustrates who to retrieve the value of cell B2.
 As the document model supports different types of cell values, the __CellSelection__ class offers multiple overloads of the __SetValue()__ method that allow you to produce different types of values. For example, if you choose the method that accepts a double instance, the __Value__ of the cell will be an instance of NumberCellValue. The __SetValue()__  method has three more overloads that take DateTime, string and ICellValue, respectively.
         
 
-__Example 4__ demonstrates how to set the value of a given selection.
+__Example 5__ demonstrates how to set the value of a given selection.
         
 
-#### __Example 4: Set value of CellSelection__
+#### Example 5: Set value of CellSelection
 
 ```csharp
 	// set DateTime value
@@ -175,10 +201,10 @@ __Example 4__ demonstrates how to set the value of a given selection.
 The __Borders__ property uses a __CellBorders__ object for getting and setting its property value. The __CellBorders__ class contains eight instances of type __CellBorder__ that describe respectively the left, top, right, bottom, inside horizontal, inside vertical, diagonal up, and diagonal down borders. In turn, the __CellBorder__ object holds information about the style and color of the border. The __GetBorders()__ method returns an instance of RangePropertyValue&lt;CellBorders&gt;.
         
 
-__Example 5__ demonstrates how to set the value of the Borders of the regions B2:C4 and E2:F4.
+__Example 6__ demonstrates how to set the value of the Borders of the regions B2:C4 and E2:F4.
         
 
-#### __Example 5: Set value of Borders__
+#### Example 6: Set value of Borders
 
 ```csharp
 	Workbook workbook = new Workbook();
@@ -204,7 +230,7 @@ __Example 5__ demonstrates how to set the value of the Borders of the regions B2
 
 
 
-The result of __Example 5__ is demonstrated in __Figure 1__.
+The result of __Example 6__ is demonstrated in __Figure 1__.
         
 
 #### Figure 1: Resulting Borders
@@ -218,10 +244,10 @@ The __Fill__ property uses an __IFill__ object for getting and setting its prope
 As its name suggests, the __PatternFill__ object is used to fill the background of a region of cells using a repeated pattern of shapes. To create a PatternFill instance, you need to specify the type of the pattern, the background color and pattern color of the fill. You can choose between [eighteen types of patterns](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.PatternType.html), such as HorizontalStripe, DiagonalCrossHatch, Gray75Percent and many more. The PatternFill object also allows you to set the background of a cell to a solid color.
         
 
-__Example 6__ creates two PatternFill objects with a DiagonalStripe and Solid PatternType respectively.
+__Example 7__ creates two PatternFill objects with a DiagonalStripe and Solid PatternType respectively.
         
 
-#### __Example 6: Create and set PatternFill__
+#### Example 7: Create and set PatternFill
 
 ```csharp
 	Workbook workbook = new Workbook();
@@ -236,7 +262,7 @@ __Example 6__ creates two PatternFill objects with a DiagonalStripe and Solid Pa
 
 
 
-The result of __Example 6__ is illustrated in __Figure 2__.
+The result of __Example 7__ is illustrated in __Figure 2__.
 
 #### Figure 2: Applied PatternFill
 ![Rad Spread Processing Working With Cells Get Set Clear Properties 02](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_02.png)
@@ -244,10 +270,10 @@ The result of __Example 6__ is illustrated in __Figure 2__.
 The __GradientFill__ is used to set the background of a region of cells to a gradual blending of two colors. To create a GradientFill, you need to specify a [GradientType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.GradientType.html) and the two colors that will blend.
         
 
-__Example 7__ assigns the region A1:F1 a smooth horizontal green gradient.
+__Example 8__ assigns the region A1:F1 a smooth horizontal green gradient.
         
 
-#### __Example 7: Create and set GradientFill__
+#### Example 8: Create and set GradientFill
 
 ```csharp
 	Workbook workbook = new Workbook();
@@ -260,7 +286,7 @@ __Example 7__ assigns the region A1:F1 a smooth horizontal green gradient.
 
 
 
-The result of __Example 7__ is illustrated in __Figure 3__.
+The result of __Example 8__ is illustrated in __Figure 3__.
         
 
 #### Figure 3: Applied GradientFill
@@ -268,10 +294,10 @@ The result of __Example 7__ is illustrated in __Figure 3__.
 
 ## Indent Property
 
-In addition to the __GetIndent()__, __SetIndent()__ and __ClearIndent()__ methods, __CellSelection__ offers two more methods that are used to increase and decrease the value of the __Indent__ property. Those methods are __IncreaseIndent()__ and __DecreaseIndent()__ and neither of them takes arguments. __Example 8__ snippet shows how to use the methods.
+In addition to the __GetIndent()__, __SetIndent()__ and __ClearIndent()__ methods, __CellSelection__ offers two more methods that are used to increase and decrease the value of the __Indent__ property. Those methods are __IncreaseIndent()__ and __DecreaseIndent()__ and neither of them takes arguments. __Example 9__ snippet shows how to use the methods.
         
 
-#### __Example 8: Increase and decrease indent__
+#### Example 9: Increase and decrease indent
 
 ```csharp
 	Workbook workbook = new Workbook();
