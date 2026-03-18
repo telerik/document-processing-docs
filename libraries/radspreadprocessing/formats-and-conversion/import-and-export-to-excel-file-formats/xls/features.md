@@ -284,14 +284,14 @@ Below you can find list with all features that are supported by XlsFormatProvide
   </tr>
 
   <tr>
-    <td>Images</td>
+    <td>Inline (in‑cell) Images</td>
     <td>No</td>
-    <td></td>
+    <td>XLS (Excel 97–2003) format does not support true inline (in‑cell) images</td>
   </tr>
   <tr>
     <td>Floating Images</td>
-    <td>No</td>
-    <td></td>
+    <td>Yes</td>
+    <td>XLS (Excel 97–2003) format supports floating images</td>
   </tr>
   <tr>
     <td>Charts</td>
