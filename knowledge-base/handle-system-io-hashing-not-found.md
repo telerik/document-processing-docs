@@ -1,9 +1,9 @@
 ---
 title: Dealing with FileNotFoundException - Could not Load File or Assembly System.IO.Hashing
-description: Learn how to handle the FileNotFoundException: Could not load file or assembly System.IO.Hashing.
+description: Learn how to handle the FileNotFoundException - Could not load file or assembly System.IO.Hashing.
 type: how-to
-page_title: How to Handle FileNotFoundException: Could not load file or assembly System.IO.Hashing
-meta_title: How to Handle FileNotFoundException: Could not load file or assembly System.IO.Hashing
+page_title: How to Handle FileNotFoundException - Could not load file or assembly System.IO.Hashing
+meta_title: How to Handle FileNotFoundException - Could not load file or assembly System.IO.Hashing
 slug: handle-system-io-hashing-not-found
 tags: document, processing, telerik, pdf, export, hash
 res_type: kb 
@@ -19,7 +19,7 @@ res_type: kb
 ## Description
 
 When exporting a PDF document using the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}), the following error occurs:
-`System.IO.FileNotFoundException: 'Could not load file or assembly 'System.IO.Hashing'`
+`System.IO.FileNotFoundException: 'Could not load file or assembly 'System.IO.Hashing'`.
 
 ## Solution
 
