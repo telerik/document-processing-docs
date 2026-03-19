@@ -17,7 +17,7 @@ res_type: kb
 
 ## Description
 
-RadSpreadStreamProcessing cannot directly edit existing cell values in-place. It is designed as a forward-only, low-memory streaming API. This design gives you great performance for very large Excel files, but it also introduces an important limitation:
+[RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) cannot directly edit existing cell values in-place. It is designed as a forward-only, low-memory streaming API. This design gives you great performance for very large Excel files, but it also introduces an important limitation:
 
 * Read existing Excel files sequentially
 * Generate new Excel files sequentially
@@ -26,6 +26,8 @@ RadSpreadStreamProcessing cannot directly edit existing cell values in-place. It
 Once a row or cell has been read from the stream, you cannot go back and change it. Likewise, you cannot open an XLSX file and update a cell while keeping the same file instance.
 
 This article demonstrates a sample approach how to achieve editing of cells in existing XLSX documents using the SpreadStreamProcessing library. 
+
+<img style="border: 1px solid gray;" src="images/edit-cell-values-with-spreadstreamprocessing.png" alt="Edit Cell Values With SpreadStreamProcessing" />
 
 ## Solution
 
@@ -122,8 +124,6 @@ You can effectively edit data by:
 
 ## See Also
 
-- [SpreadProcessing Overview](https://www.telerik.com/document-processing-libraries/documentation/libraries/radspreadprocessing/overview)
-- [Export Chart to PDF](https://www.telerik.com/document-processing-libraries/documentation/libraries/radspreadprocessing/features/charts/pdf-export)
-- [Exporting Spreadsheets with Charts to PDF with RadSpreadProcessing and WinForms RadChartView](https://www.telerik.com/document-processing-libraries/documentation/knowledge-base/export-charts-to-pdf-radspreadprocessing)
-- [SpreadStreamProcessing: Add Support for Charts](https://feedback.telerik.com/document-processing/1356233-spreadstreamprocessing-add-support-for-charts)
-- [SpreadProcessing: NetStandard: Export Charts to PDF](https://feedback.telerik.com/document-processing/1623065-spreadprocessing-netstandard-export-charts-to-pdf)
+
+- [SpreadStreamProcessing Overview]({%slug radspreadstreamprocessing-overview%})
+- [Getting Started with SpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})
