@@ -57,7 +57,7 @@ For more examples and application scenarios of Importing and Exporting a Workboo
 	
 	using (Stream output = new FileStream(fileName, FileMode.Create))
 	{
-	    formatProvider.Export(workbook, output);
+	    formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
 	}
 ```
 
