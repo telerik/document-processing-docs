@@ -53,15 +53,42 @@ Consider the following recommendations when working with the AI Coding Assistant
 
 Access to the Telerik Document Processing AI Coding Assistant depends on your [Telerik license type](https://www.telerik.com/purchase/faq/licensing-purchasing):
 
-* Subscription License
-  * A Subscription is the primary license that grants full access to the AI Coding Assistant.
-  * Includes a virtually unlimited number of requests, with a fair use threshold of 300 requests per day.
-  * Best for ongoing and high-volume usage.
-* Perpetual License (No Access)
-  * Perpetual licenses have no access to the AI Coding Assistants. Start a trial license in order to use the AI coding tools.
-* Trial License
-  * Reactivating the same trial for a new release does not grant additional requests.
-  * Designed for evaluating the feature before purchasing.
+<table>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr>
+<th>License Type</th>
+<th>AI Coding Assistant</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Subscription License</strong>
+</td>
+<td><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg></td><td>A Subscription is the primary license that grants full access to the AI Coding Assistant. It includes a virtually unlimited number of requests, with a fair use threshold of 300 requests per day. Best for ongoing and high-volume usage.</td>
+</tr><tr>
+<td><strong>Trial License</strong></td>
+<td><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" stroke="white" stroke-width="2"/></svg></td><td>Reactivating the same trial for a new release does not grant additional requests. It is designed for evaluating the feature before purchasing.</td>
+</tr>
+<tr>
+<td><strong>Perpetual License</strong></td>
+<td>No*</td><td>Perpetual licenses have no access to the AI Coding Assistants. Start a trial license in order to use the AI coding tools.</td>
+</tr>
+
+</tbody>
+</table>
+
+<p style="font-style: italic; color: #666; margin-top: 12px; line-height: 1.5;">
+<em>
+*  All AI tools are available with a <a href="https://www.telerik.com/mcp-servers-document-processing/thank-you">30-day AI Tools trial</a> or <a href="https://www.telerik.com/try/devcraft-ultimate">a Telerik UI trial</a>.
+</em> <br/>
+
+</p>
 
 > All Telerik AI tools share a single request limit for your Telerik account. For example, the [Telerik MCP server]({%slug ai-mcp-server%}) takes up from the same usage quota.
 > When using the Telerik Document Processing MCP server, one prompt may trigger several requests, depending on the prompt complexity.
