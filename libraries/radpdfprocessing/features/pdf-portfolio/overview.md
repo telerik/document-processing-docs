@@ -1,5 +1,5 @@
 ---
-title: PDF Portfolio
+title: Overview
 description: Learn how to create and manage PDF Portfolios (Collections) with RadPdfProcessing to organize multiple embedded files with structured metadata and customizable views.
 page_title: PDF Portfolio
 slug: radpdfprocessing-pdf-portfolio-overview
@@ -7,7 +7,7 @@ tags: pdf, portfolio, collection, package, embedded, files, schema, sorting, fix
 position: 0
 ---
 
-# PDF Portfolio
+# PDF Portfolio - Overview
 
 |Minimum Version|Q1 2026|
 |----|----|
@@ -28,9 +28,14 @@ A PDF Portfolio provides the following capabilities:
 
 ## Requirements
 
+NuGet packages:
+
+|.NET Framework|.NET Standard-compatible|
+|---|---|
+|**Telerik.Windows.Documents.Fixed**|**Telerik.Documents.Fixed**|
+
 To use PDF Portfolios, ensure the following:
 
-* **Telerik Document Processing Q1 2026** or later.
 * The **Portfolio.IsEnabled** property must be set to **true**.
 * The document must contain at least one [Embedded File]({%slug radpdfprocessing-embedded-file-streams-overview%}).
 * The portfolio schema should have at least one field defined for meaningful presentation.

@@ -255,7 +255,7 @@ navigation:
         position: 5
     libraries/radpdfprocessing/features/pdf-portfolio:
         title: PDF Portfolio
-        position: 6
+        position: 10
     libraries/radpdfprocessing/features/gen-ai-powered-document-insights:
         title: GenAI-powered Document Insights
         position: 6
