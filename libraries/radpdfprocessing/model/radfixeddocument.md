@@ -41,6 +41,7 @@ This article will get you familiar with the basics of __RadFixedDocument__. It c
 |**StructureTree**| Gets or sets the structure tree of the document. (introduced in Q3 2025)|
 |**AutoTag**|Gets a value indicating whether the document is set to automatically tag elements. If true, the document will automatically tag elements with structure tags when they are added. (introduced in Q3 2025)|
 |**ViewerPreferences**|Gets the viewer preferences controlling the way the document is to be presented on the screen or in print. If no such dictionary is specified, viewing and printing applications should behave in accordance with their own current user preference settings. (introduced in Q3 2025)|
+|**Portfolio**|Gets the PDF Portfolio/Collection settings for enhanced presentation of embedded files. Set **IsEnabled** to true to enable portfolio mode. (introduced in Q1 2026)|
 
 |Method|Description|
 |----|----|
@@ -119,4 +120,5 @@ __RadFixedDocument__ exposes a __DocumentInfo__ property of type [RadFixedDocume
 * [Export to PDF]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 * [Export to Image]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
 * [Merge PDF Documents]({%slug merge-pdf-documents%})
+* [PDF Portfolio]({%slug radpdfprocessing-pdf-portfolio-overview%})
 * [Accessibility Support]({%slug create-accessible-pdf-documents%})
