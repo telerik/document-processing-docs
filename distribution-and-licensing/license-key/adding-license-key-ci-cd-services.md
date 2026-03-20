@@ -129,4 +129,5 @@ public class Function
 * [Telerik.Licensing NuGet package is not available on the Telerik NuGet feed]({%slug dpl-telerik-licensing-nuget-feed%})
 * [Telerik License Approaches](https://github.com/LanceMcCarthy/DevOpsExamples?tab=readme-ov-file#telerik-license-approaches)
 * [How to Download a Script Key]({%slug download-script-key%})
+* [Resolving Trial Watermark Issues with the Generated Documents in MFC applications]({%slug resolving-trial-watermark-mfc-application%})
 
