@@ -42,17 +42,7 @@ To add a note you need to specify the cell index to which the note will be relat
 
 #### Example 1: Add note
 
-```csharp
-	
-    CellIndex relatedCellIndex = new CellIndex(1, 1);
-    CellIndex cellIndex = new CellIndex(5, 5);
-    string author = "John Doe";
-    string text = "Comment Content";
-    
-    worksheet.Notes.Add(relatedCellIndex, cellIndex, author, text);
-    
-
-```
+<snippet id='codeblock-cjv'/>
 
 The above snippet will add a note in cell B2 with a position on cell F6.
 
@@ -60,12 +50,7 @@ The above snippet will add a note in cell B2 with a position on cell F6.
 
 #### Example 2: Remove note
 
-```csharp
-	
-    var note = worksheet.Notes[0];
-    worksheet.Notes.Remove(note);
-
-```
+<snippet id='codeblock-cjw'/>
 
 
 ### Hide/Show notes
@@ -79,12 +64,7 @@ You can use one of the following methods to show/hide single or all notes:
 
 #### Example 3:Hide note
 
-```csharp
-	
-    var note = worksheet.Notes[0];
-    worksheet.Notes.Hide(note);
-
-```
+<snippet id='codeblock-cjx'/>
 
 ### Events
 

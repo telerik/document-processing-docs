@@ -102,16 +102,7 @@ __Example 1__ shows how to create a __ValuesCollectionFilter__.
 
 #### __Example 1: Create ValuesCollectionFilter__
 
-```csharp
-	IEnumerable<string> stringItems = new List<string>() { "test", "1%", "1.0" };
-	IEnumerable<DateGroupItem> dateItems = new List<DateGroupItem>()
-	{
-	    new DateGroupItem(2013),
-	    new DateGroupItem(2014, 3)
-	};
-	
-	ValuesCollectionFilter filter = new ValuesCollectionFilter(0, stringItems, dateItems, true);
-```
+<snippet id='codeblock-chm'/>
 
 
 
@@ -167,11 +158,7 @@ __Example 2__ shows how to create a custom filter.
 
 #### __Example 2: Create CustomFilter__
 
-```csharp
-	CustomFilterCriteria critera1 = new CustomFilterCriteria(ComparisonOperator.EqualsTo, "Test string");
-	CustomFilterCriteria critera2 = new CustomFilterCriteria(ComparisonOperator.GreaterThan, "-5");
-	CustomFilter filter = new CustomFilter(0, critera1, LogicalOperator.Or, critera2);
-```
+<snippet id='codeblock-chn'/>
 
 
 
@@ -209,9 +196,7 @@ __Example 3__ shows how to create a top filter.
 
 #### __Example 3: Create TopFilter__
 
-```csharp
-	TopFilter filter = new TopFilter(0, TopFilterType.BottomPercent, 30);
-```
+<snippet id='codeblock-cho'/>
 
 
 
@@ -234,9 +219,7 @@ __Example 4__ demonstrates how to create a dynamic filter.
 
 #### __Example 4: Create DynamicFilter__
 
-```csharp
-	DynamicFilter filter = new DynamicFilter(0, DynamicFilterType.LastWeek);
-```
+<snippet id='codeblock-chp'/>
 
 
 The filter will show only the values which are dates and which fall within the week prior to the application of the filter.
@@ -258,10 +241,7 @@ __Example 5__ demonstrates how to create a fore color filter.
 
 #### __Example 5: Create ForeColorFilter__
 
-```csharp
-	ThemableColor color = new ThemableColor(Colors.Red);
-	ForeColorFilter filter = new ForeColorFilter(0, color);
-```
+<snippet id='codeblock-chq'/>
 
 
 
@@ -284,10 +264,7 @@ __Example 6__ shows hot to create a fill color filter.
 
 #### __Example 6: Create FillColorFilter__
 
-```csharp
-	IFill fill = new PatternFill(PatternType.Solid, Colors.Red, Colors.Red);
-	FillColorFilter filter = new FillColorFilter(0, fill);
-```
+<snippet id='codeblock-chr'/>
 
 
 
@@ -304,12 +281,7 @@ In order to set a filter on a range, you need to follow the steps below:
 	
 	#### __Example 7: Set FilterRange__
 	
-	```csharp
-		Worksheet worksheet = workbook.ActiveWorksheet;
-		
-		CellRange filterRange = new CellRange(0, 1, 5, 2);
-		worksheet.Filter.FilterRange = filterRange;
-	```
+	<snippet id='codeblock-chs'/>
 
 
 
@@ -318,9 +290,7 @@ In order to set a filter on a range, you need to follow the steps below:
 	
 	#### __Example 8: Create DynamicFilter__
 	
-	```csharp
-		DynamicFilter filter = new DynamicFilter(1, DynamicFilterType.AboveAverage);
-	```
+	<snippet id='codeblock-cht'/>
 	
 	The relative index specified in the constructor is 1, which means that the filter will be set on the second column of the range, that is, column C.
             
@@ -330,9 +300,7 @@ In order to set a filter on a range, you need to follow the steps below:
 
 	#### __Example 9: Set Filter__
 	
-	```csharp
-		worksheet.Filter.SetFilter(filter);
-	```
+	<snippet id='codeblock-chu'/>
 	
 	
 	**Figure 2** demonstrates the result of the filtering when applied on the values 1-9 in column B and 11-19 in column C.
@@ -346,10 +314,7 @@ In order to set a filter on a range, you need to follow the steps below:
 
 	#### __Example 10: Set filter through selection__
 	
-	```csharp
-
-		worksheet.Cells[filterRange].Filter(filter);
-	```
+	<snippet id='codeblock-chv'/>
 
 
 
@@ -367,9 +332,7 @@ When a filter is set it is automatically applied. The application of a filter ha
 
 #### __Example 11: Set FilterRange__
 
-```csharp
-	worksheet.Filter.ReapplyFilter(1);
-```
+<snippet id='codeblock-chw'/>
 
 
 
@@ -395,9 +358,7 @@ As is the case with the __ReapplyFilter()__ method, you can remove a filter by i
 
 #### __Example 12: Remove filter__
 
-```csharp
-	bool success = worksheet.Filter.RemoveFilter(1);
-```
+<snippet id='codeblock-chx'/>
 
 
 

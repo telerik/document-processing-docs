@@ -17,36 +17,15 @@ position: 2
 
 #### Example 1: Set the default implementation of the ImagePropertiesResolver class
 
-```csharp
-
-    ImagePropertiesResolverBase imagePropertiesResolver = new ImagePropertiesResolver();
-    SpreadExtensibilityManager.ImagePropertiesResolver = imagePropertiesResolver;
-```
+<snippet id='codeblock-cgc'/>
 
 #### Example 2: Windows Example: Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class
 
-```csharp
-
-    public class ImageInfo : ImagePropertiesResolverBase
-    {
-        public override Size GetImageSize(byte[] imageData)
-        {
-            MemoryStream stream = new MemoryStream(imageData);
-            using (var image = new System.Drawing.Bitmap(stream))
-            {
-                return new Size(image.Width, image.Height);
-            }
-        }
-    }
-```
+<snippet id='codeblock-cgd'/>
 
 #### Example 3: Set the custom implementation inheriting the ImagePropertiesResolverBase abstract class
 
-```csharp
-
-    ImagePropertiesResolverBase imagePropertiesResolver = new ImageInfo();
-    SpreadExtensibilityManager.ImagePropertiesResolver = imagePropertiesResolver;
-```
+<snippet id='codeblock-cge'/>
 
 
 

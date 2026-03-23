@@ -24,20 +24,7 @@ __Example 1__ creates a new workbook with a single worksheet and assigns some sa
 
 #### __Example 1: Copy selected cells__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	worksheet.Cells[0, 0].SetValue("Product");
-	worksheet.Cells[1, 0].SetValue("Service");
-	worksheet.Cells[0, 1].SetValue(17.4);
-	worksheet.Cells[1, 1].SetValue(12.9);
-	worksheet.Cells[2, 0].SetValue("Total");
-	worksheet.Cells[2, 1].SetValue("=SUM(A1:B1)");
-	
-	CellRange copiedCellRange = new CellRange(0, 0, 2, 1);
-	WorksheetFragment worksheetFragment = worksheet.Cells[copiedCellRange].Copy();
-```
+<snippet id='codeblock-cgi'/>
 
 
 
@@ -72,18 +59,7 @@ __Example 2__ creates a new workbook with an empty worksheet. Further, the examp
 
 #### __Example 2: Copy all__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	worksheet.Cells[0, 0].SetValue("=CONCATENATE(\"Rad\", \"Spreadsheet\")");
-	worksheet.Cells[0, 0].SetForeColor(new ThemableColor(Colors.Green));
-	
-	WorksheetFragment worksheetFragment = worksheet.Cells[0, 0].Copy();
-	
-	PasteOptions pasteOptions = new PasteOptions(PasteType.All);
-	worksheet.Cells[1, 0].Paste(worksheetFragment, pasteOptions);
-```
+<snippet id='codeblock-cgj'/>
 
 
 
@@ -92,10 +68,7 @@ Using different __PasteType__, however, produces different output. __Example 3__
 
 #### __Example 3: Paste using PasteType.Values__
 
-```csharp
-	PasteOptions pasteOptionsValues = new PasteOptions(PasteType.Values);
-	worksheet.Cells[2, 0].Paste(worksheetFragment, pasteOptionsValues);
-```
+<snippet id='codeblock-cgk'/>
 
 
 
@@ -107,10 +80,7 @@ __Example 4__ combines the Value and Formats paste types and preserves both the 
 
 #### __Example 4: Combine Values and Formats PasteType__
 
-```csharp
-	PasteOptions valuesAndFormatting = new PasteOptions(PasteType.Formulas | PasteType.Formats);
-	worksheet.Cells[3, 0].Paste(worksheetFragment, valuesAndFormatting);
-```
+<snippet id='codeblock-cgl'/>
 
 
 

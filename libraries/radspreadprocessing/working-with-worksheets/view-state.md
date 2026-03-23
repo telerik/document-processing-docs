@@ -19,10 +19,7 @@ The following sections describe the members of the WorskheetViewState class.
 Allows you to get or set the current scale factor of the worksheet. You can use this property to zoom in or out according to your needs. The values you can apply are between 0.5 and 4, corresponding to 50% and 400% respectively.
 
 #### __Example 1: Set the zoom level of a worksheet to 50%__
-```csharp
-
-    workbook.Worksheets[0].ViewState.ScaleFactor = new Size(0.5, 0.5);
-```
+<snippet id='codeblock-cst'/>
 
 
 ### **TopLeftCellIndex**
@@ -30,10 +27,7 @@ Allows you to get or set the current scale factor of the worksheet. You can use 
 Determines the top left cell visible on the screen. You can use this property to ensure that the data you would like to visualize when the worksheet is opened is in the user viewport.
 
 #### __Example 2: Set the top left cell to be C11__
-```csharp
-
-    workbook.Worksheets[0].ViewState.TopLeftCellIndex = new CellIndex(10, 2);
-```
+<snippet id='codeblock-csu'/>
 
 ### **SelectionState**
 
@@ -42,18 +36,7 @@ Gets or sets the state of the selection inside the worksheet.
 **Example 3** demonsrates how you can create two selection ranges (one from B3 to E9 and one from D6 to G13) and change the active cell inside that selection.
 
 #### __Example 3: Change the selection__
-```csharp
-
-    CellIndex selectionActiveCellIndex = new CellIndex(5, 2); // C6
-    List<CellRange> selectionRanges = new List<CellRange>()
-    {
-        new CellRange(new CellIndex(3, 1), new CellIndex(8, 4)),// B3:E9 
-        new CellRange(new CellIndex(5, 3), new CellIndex(12, 6)),// D6:G13
-    };
-    
-    SelectionState selectionState = new SelectionState(selectionRanges, selectionActiveCellIndex, ViewportPaneType.Scrollable);
-    workbook.Worksheets[0].ViewState.SelectionState = selectionState;
-```
+<snippet id='codeblock-csv'/>
 
 #### Figure 1: Selection in worksheet
 ![](images/ViewState_Selection.png)
@@ -67,18 +50,14 @@ Gets or sets a value indicating whether the sheet is selected.
 Allows you to get or set a boolean value determining whether the gridlines should be visualized when the document is rendered. 
 
 #### __Example 4: Remove grid lines__
-```csharp
-    workbook.Worksheets[0].ViewState.ShowGridLines = false;
-```
+<snippet id='codeblock-csw'/>
 
 ### **ShowRowColHeaders**
 
 Determines whether the headers of the rows and columns should be visualized when the document is rendered.
 
 #### __Example 5: Remove row and column headers__
-```csharp
-    workbook.Worksheets[0].ViewState.ShowRowColHeaders = false;
-```
+<snippet id='codeblock-csx'/>
 
 #### Figure 2: Worksheet with hidden row/column headers and grid lines
 ![](images/ViewState_HideLinesHeaders.png)
@@ -100,9 +79,7 @@ Allows you to freeze panes. Read more about this feature and its usage in the [F
 Allows you to set the color of the worksheet's tab.
 
 #### __Example 6: Change the color of the tab__
-```csharp
-    workbook.Worksheets[0].ViewState.TabColor = new ThemableColor(Colors.Green);
-```
+<snippet id='codeblock-csy'/>
 
 #### Figure 3: Worskheet with green tab
 ![](images/ViewState_TabColor.png)

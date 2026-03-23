@@ -27,11 +27,7 @@ __Example 1__ creates a workbook with a single worksheet before setting the valu
 
 #### __Example 1: Set reference value__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	workbook.ActiveWorksheet.Cells[0, 2].SetValue("=A1+B1");
-```
+<snippet id='codeblock-cmn'/>
 
 
 
@@ -43,14 +39,7 @@ __Example 2__ adds a worksheet to the workbook and renames the newly created ins
 
 #### __Example 2: Set reference value from another sheet__
 
-```csharp
-	workbook.Worksheets.Add();
-	Worksheet sheet1 = workbook.Worksheets[0];
-	Worksheet samsWorksheet = workbook.Worksheets[1];
-	samsWorksheet.Name = "Sam'sWorksheet";
-	
-	sheet1.Cells[0, 0].SetValue("='Sam''sWorksheet'!B2");
-```
+<snippet id='codeblock-cmo'/>
 
 
 
@@ -63,10 +52,7 @@ __Example 3__ demonstrates how to add a reference to a cell range.
 
 #### __Example 3: Set reference to cell range__
 
-```csharp
-	sheet1.Cells[2, 2].SetValue("=SUM(A1:B2)");
-	samsWorksheet.Cells[0, 0].SetValue("=PRODUCT(D3:F5)");
-```
+<snippet id='codeblock-cmp'/>
 
 
 
@@ -105,19 +91,11 @@ SpreadProcessing supports references to whole columns and whole rows. You can us
 
 #### Example 4: Use reference to a column
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	workbook.ActiveWorksheet.Cells[1, 1].SetValue("=AVERAGE(A:A)");
-```
+<snippet id='codeblock-cmq'/>
 
 #### Example 5: Use reference to multuple rows
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	workbook.ActiveWorksheet.Cells[0, 0].SetValue("=AVERAGE(1:5)");
-```
+<snippet id='codeblock-cmr'/>
 
 
 ## See Also

@@ -91,11 +91,7 @@ __Example 1__ shows what including the __Number__ group looks like.
 
 #### __Example 1: Include Number group in CellStyle__
 
-```csharp
-	Workbook workbook = new Workbook();
-	CellStyle tempStyle = workbook.Styles["Bad"];
-	tempStyle.IncludeNumber = true;
-```
+<snippet id='codeblock-cng'/>
 
 
 
@@ -112,32 +108,7 @@ __Example 2__ creates a new style and applies it to cell *A1*.
 
 #### __Example 2: Create a style__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	
-	CellStyle cellStyle = workbook.Styles.Add("My style", CellStyleCategory.Custom);
-	
-	cellStyle.BeginUpdate();
-	
-	CellBorder border = new CellBorder(CellBorderStyle.DashDotDot, new ThemableColor(Colors.Red));
-	cellStyle.LeftBorder = border;
-	cellStyle.TopBorder = border;
-	cellStyle.RightBorder = border;
-	cellStyle.BottomBorder = border;
-	
-	ThemableColor patternColor = new ThemableColor(ThemeColorType.Accent1);
-	ThemableColor backgroundColor = new ThemableColor(ThemeColorType.Accent5, ColorShadeType.Shade2);
-	IFill fill = new PatternFill(PatternType.Gray75Percent, patternColor, backgroundColor);
-	cellStyle.Fill = fill;
-	
-	cellStyle.HorizontalAlignment = RadHorizontalAlignment.Left;
-	cellStyle.VerticalAlignment = RadVerticalAlignment.Center;
-	
-	cellStyle.EndUpdate();
-	
-	workbook.ActiveWorksheet.Cells[0, 0].SetStyleName("My style");
-```
+<snippet id='codeblock-cnh'/>
 
 
 
@@ -151,20 +122,7 @@ __Example 3__ obtains the *Bad* style from the styles collection of a workbook a
 
 #### __Example 3: Modify a style__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	
-	CellStyle style = workbook.Styles["Bad"];
-	
-	style.BeginUpdate();
-	
-	style.Fill = new PatternFill(PatternType.DiagonalCrosshatch, Colors.Red, Colors.Transparent);
-	style.FontSize = UnitHelper.PointToDip(20);
-	style.ForeColor = new ThemableColor(Colors.Black);
-	
-	style.EndUpdate();
-```
+<snippet id='codeblock-cni'/>
 
 ## Copy Existing Cell Style
 
@@ -172,22 +130,7 @@ The API enables you to copy the properties of an existing style so you can modif
 
 #### __Example 4: Copy an existing style and modify its properties__
 
-```csharp
-
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-
-	CellStyle originalStyle = workbook.Styles["Good"];
-
-	CellStyle customStyle = workbook.Styles.Add("My good style", CellStyleCategory.Custom);
-
-	customStyle.BeginUpdate();
-	
-	customStyle.CopyPropertiesFrom(originalStyle);
-	customStyle.Fill = new PatternFill(PatternType.Solid, Colors.LightSkyBlue, Colors.Transparent);
-	
-	customStyle.EndUpdate();
-```
+<snippet id='codeblock-cnj'/>
 
 ## Remove Cell Style
 
@@ -195,19 +138,7 @@ You can also remove a style from the __Styles__ collection. It is as easy as rem
         
 #### __Example 5: Remove a style__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	
-	if (workbook.Styles.Remove("Bad"))
-	{
-	    Debug.WriteLine("Style removed");
-	}
-	else
-	{
-	    Debug.WriteLine("The style does not exist");
-	}
-```
+<snippet id='codeblock-cnk'/>
 
 
 

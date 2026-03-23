@@ -44,30 +44,12 @@ __Example 1__ shows how to use __PdfFormatProvider__ to export a Workbook to a f
 
 #### __Example 1: PdfFormatProvider export example__
 
-```csharp
-
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider pdfFormatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
-    using (Stream output = File.OpenWrite("Sample.pdf"))
-    {
-        Workbook workbook = CreateSampleWorkbook(); // The CreateSampleWorkbook() method generates a sample spreadsheet document. Use your Workbook object here.
-
-        pdfFormatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
-    }
-
-```
+<snippet id='codeblock-cpc'/>
 
 The result from the export method is a document that can be opened in any application that supports PDF documents.
         
 #### __Example 2: Export to RadFixedDocument__
-```csharp
-
-     Workbook workbook = CreateSampleWorkbook();
-
-     Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider provider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
-
-     RadFixedDocument fixedDocument = provider.ExportToFixedDocument(workbook, TimeSpan.FromSeconds(10));
-
-```
+<snippet id='codeblock-cpd'/>
 
 >tip __RadFixedDocument__ is the base class of the __RadPdfProcessing__ library. Additional information on the library and its functionality can be found [here]({%slug radpdfprocessing-overview%}).
 

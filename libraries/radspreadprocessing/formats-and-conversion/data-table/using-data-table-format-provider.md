@@ -22,30 +22,13 @@ Example 1 shows how you can import a DataTable. The sample instantiates a __Data
 
 #### Example 1: Import DataTable
 
-```csharp
-
-	DataTable table = GetTable();
-	DataTableFormatProvider provider = new DataTableFormatProvider();
-	
-	Workbook workbook = provider.Import(table, TimeSpan.FromSeconds(10));
-
-```
+<snippet id='codeblock-con'/>
 
 You can import the data from the DataTable to an existing worksheet as well.
 
 #### Example 2: Import DataTable to an existing Worksheet
 
-```csharp
-
-	DataTable table = GetTable();
-	DataTableFormatProvider provider = new DataTableFormatProvider();
-	
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	provider.Import(table, worksheet, TimeSpan.FromSeconds(10));
-
-```
+<snippet id='codeblock-coo'/>
 
 ## Export
 
@@ -53,14 +36,7 @@ Example 3 demonstrates how you can export an existing Worksheet to a DataTable. 
 
 #### Example 3: Export Worksheet to a DataTable
 
-```csharp
-	
-	Workbook workbook = GetWorkbook();
-	DataTableFormatProvider provider = new DataTableFormatProvider();
-	
-	DataTable table = provider.Export(workbook.ActiveWorksheet, TimeSpan.FromSeconds(10));
-
-```
+<snippet id='codeblock-cop'/>
 
 # See Also
 

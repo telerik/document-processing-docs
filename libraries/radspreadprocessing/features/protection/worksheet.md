@@ -28,14 +28,7 @@ __Example 1__ sets the __IsLocked__ property of cell A1 to false and protects th
 
 #### __Example 1: Protect a Worksheet__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	worksheet.Cells[0, 0].SetIsLocked(false);
-	
-	worksheet.Protect("telerik", WorksheetProtectionOptions.Default);
-```
+<snippet id='codeblock-cnd'/>
 
 
 
@@ -47,13 +40,7 @@ __Example 2__ demonstrates how to unprotect a worksheet.
 
 #### __Example 2: Unprotect a Worksheet__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Protect("telerik", WorksheetProtectionOptions.Default);
-	
-	worksheet.Unprotect("telerik");
-```
+<snippet id='codeblock-cne'/>
 
 
 
@@ -70,12 +57,7 @@ __Example 3__ demonstrates how to protect a worksheet using WorksheetProtectionO
 
 #### __Example 3: Protect Worksheet with WorksheetProtectionOptions__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	WorksheetProtectionOptions options = new WorksheetProtectionOptions(allowInsertRows: true, allowDeleteRows: true);
-	worksheet.Protect("telerik", options);
-```
+<snippet id='codeblock-cnf'/>
 
 
 

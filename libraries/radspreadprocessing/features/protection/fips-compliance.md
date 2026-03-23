@@ -21,10 +21,7 @@ If you need to comply with the FIPS 140-2 standard, you can disable the forbiden
 
 
 #### Example 1: Enforce FIPS
-```csharp
-
-    HashingAlgorithmsProvider.EnforceFips1402();
-```
+<snippet id='codeblock-cna'/>
 
 Enforcing the FIPS compliance should be done before using the Protection feature.
 

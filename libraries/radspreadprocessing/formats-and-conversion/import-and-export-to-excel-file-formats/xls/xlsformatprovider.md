@@ -30,23 +30,7 @@ __Example 1__ shows how to import an XLS file using a FileStream. The code assur
 
 #### __Example 1: Import XLS (Excel 97-2003 Workbook) file__
 
-```csharp
-
-    string fileName = "SampleFile.xls";
-    if (!File.Exists(fileName))
-    {
-        throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
-    }
-
-    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
-
-    using (Stream input = new FileStream(fileName, FileMode.Open))
-    {
-        workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
-    }
-
-```
+<snippet id='codeblock-coq'/>
 
 
 
@@ -57,38 +41,12 @@ __Example 2__ demonstrates how to export an existing Workbook to an XLS file. Th
 
 #### __Example 2: Export spreadsheet document to XLS (Excel 97-2003 Workbook) file__
 
-```csharp
-    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
-    workbook.Worksheets.Add();
-    string fileName = "SampleFile.xls";
-
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
-
-    using (Stream output = new FileStream(fileName, FileMode.Create))
-    {
-        formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10)); 
-    }
-
-```
+<snippet id='codeblock-cor'/>
 
 
 #### __Example 3: Export spreadsheet document to a Stream and byte[]__
 
-```csharp
-
-    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
-    workbook.Worksheets.Add();
-
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls.XlsFormatProvider();
-
-    byte[] bytes;
-    using (MemoryStream output = new MemoryStream())
-    {
-        formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
-        bytes = output.ToArray();
-    }
-
-```
+<snippet id='codeblock-cos'/>
 
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.

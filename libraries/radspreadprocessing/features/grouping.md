@@ -42,50 +42,13 @@ There are two available options when grouping. The first option is to simply ass
 
 #### __Example 1: Grouping columns using outline level__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	worksheet.Columns[0].SetOutlineLevel(1);
-	worksheet.Columns[1, 2].SetOutlineLevel(2);
-	worksheet.Columns[3].SetOutlineLevel(1);
-```
-
-
-#### __Example 1: Grouping columns using outline level__
-
-```csharp
-	Dim workbook = New Workbook()
-	Dim worksheet = workbook.Worksheets.Add()
-	
-	worksheet.Columns(0).SetOutlineLevel(1)
-	worksheet.Columns(1, 2).SetOutlineLevel(2)
-	worksheet.Columns(3).SetOutlineLevel(1)
-```
+<snippet id='codeblock-cif'/>
 
 The other option is to use the Group method exposed by the row/column selection classes.
 
 #### __Example 2: Grouping columns using the group method__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	worksheet.Columns[0, 3].Group();
-	worksheet.Columns[1, 2].Group();
-```
-
-
-
-#### __Example 2: Grouping columns using the group method__
-
-```csharp
-	Dim workbook = New Workbook()
-	Dim worksheet = workbook.Worksheets.Add()
-	
-	worksheet.Columns(0, 3).Group()
-	worksheet.Columns(1, 2).Group()
-```
+<snippet id='codeblock-cih'/>
 
 __Figure 2__ shows the result of both approaches.
 
@@ -104,33 +67,13 @@ The following code snippets exemplify the two approaches to make these changes i
 
 #### __Example 3: Ungrouping columns using the ungroup method__
 
-```csharp
-	worksheet.Rows[0, 1].Ungroup();
-	worksheet.Rows[4, 6].Ungroup();
-```
-
-#### __Example 3: Ungrouping columns using the ungroup method__
-
-```csharp
-	worksheet.Rows(0, 1).Ungroup()
-	worksheet.Rows(4, 6).Ungroup()
-```
+<snippet id='codeblock-cij'/>
 
 You can achieve the same result with the code in __Example 4__.
 
 #### __Example 4: Ungrouping columns using outline level__
 
-```csharp
-	worksheet.Rows[0, 1].ClearOutlineLevel();
-	worksheet.Rows[4, 6].SetOutlineLevel(1);
-```
-
-#### __Example 4: Ungrouping columns using outline level__
-
-```csharp
-	worksheet.Rows(0, 1).ClearOutlineLevel()
-	worksheet.Rows(4, 6).SetOutlineLevel(1)
-```
+<snippet id='codeblock-cil'/>
 
 ## Getting the Outline Level
 
@@ -139,17 +82,8 @@ You can get the outline level of a row/column or a group of rows/columns using t
 
 #### __Example 5: Getting the OutlineLevel__
 
-```csharp
-	RangePropertyValue<int> outlineLevelRangeValue = worksheet.Rows[0, 1].GetOutlineLevel();
-	int outLineLevel = outlineLevelRangeValue.Value;
-```
+<snippet id='codeblock-cin'/>
 
-#### __Example 5: Getting the OutlineLevel__
-
-```csharp
-	Dim outlineLevelRangeValue As RangePropertyValue(Of Integer) = worksheet.Rows(0, 1).GetOutlineLevel()
-	Dim outLineLevel As Integer = outlineLevelRangeValue.Value
-```
 
 ## Setting the Position of the Summary Row or Column
 
@@ -170,17 +104,7 @@ Both properties have a default value of true. The following snippet shows how to
 
 #### __Example 6: Setting the position of the summary column to left__
 
-```csharp
-	worksheet.GroupingProperties.SummaryColumnIsToRight = false;
-```
-
-#### __Example 6: Setting the position of the summary column to left__
-
-```csharp
-
-	worksheet.GroupingProperties.SummaryColumnIsToRight = False
-
-```
+<snippet id='codeblock-cip'/>
 
 #### Figure 5: Left summary column
 ![](images/RadSpreadProcessing_Features_Grouping_05.png)

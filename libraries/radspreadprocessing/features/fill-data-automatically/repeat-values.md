@@ -36,19 +36,7 @@ __Example 1__ illustrates how the contents of column *A* can be copied to the re
 
 #### __Example 1: Fill right__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	Worksheet activeWorksheet = workbook.ActiveWorksheet;
-	
-	activeWorksheet.Cells[0, 0].SetValue(5);
-	activeWorksheet.Cells[1, 0].SetValue(8);
-	activeWorksheet.Cells[2, 0].SetValue(13);
-	activeWorksheet.Cells[3, 0].SetValue(21);
-	
-	CellRange range = new CellRange(0, 0, 3, 3);
-	activeWorksheet.Cells[range].FillData(FillDirection.Right);
-```
+<snippet id='codeblock-cme'/>
 
 
 
@@ -66,18 +54,7 @@ __Example 2__ invokes the __FillData()__ method with __FillDirection Down__ for 
 
 #### __Example 2: Fill down__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	Worksheet activeWorksheet = workbook.ActiveWorksheet;
-	
-	activeWorksheet.Cells[1, 1].SetValue(34);
-	activeWorksheet.Cells[1, 2].SetValue(55);
-	activeWorksheet.Cells[1, 3].SetValue(89);
-	
-	CellRange range = new CellRange(1, 1, 3, 3);
-	activeWorksheet.Cells[range].FillData(FillDirection.Down);
-```
+<snippet id='codeblock-cmf'/>
 
 
 

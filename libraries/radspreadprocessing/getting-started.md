@@ -26,20 +26,14 @@ __Example 1__ shows how you can create a workbook and add a new worksheet to it.
 
 #### __Example 1: Create Workbook__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-```
+<snippet id='codeblock-cfs'/>
 
 You can then create a [CellSelection]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and set any value to the selected cells. __Example 2__ shows how you can create a cell and set a string value to it.
 
 
 #### __Example 2: Set value of cell__
 
-```csharp
-	CellSelection selection = worksheet.Cells[1, 1]; //B2 cell
-	selection.SetValue("Hello RadSpreadProcessing");
-```
+<snippet id='codeblock-cft'/>
 
 ## Exporting
 
@@ -50,16 +44,7 @@ For more examples and application scenarios of Importing and Exporting a Workboo
 
 #### __Example 3: Export to Xlsx__
 
-```csharp
-	string fileName = "SampleFile.xlsx";
-	
-	XlsxFormatProvider formatProvider = new XlsxFormatProvider();
-	
-	using (Stream output = new FileStream(fileName, FileMode.Create))
-	{
-	    formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
-	}
-```
+<snippet id='codeblock-cfu'/>
 
 >More information about the import and export functionalities of RadSpreadProcessing is available in the [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-general-information%}).
 

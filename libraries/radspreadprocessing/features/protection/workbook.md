@@ -28,12 +28,7 @@ __Example 1__ illustrates how to create a workbook from scratch and protect it u
 
 #### __Example 1: Password-protect a Workbook__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	
-	workbook.Protect("telerik");
-```
+<snippet id='codeblock-cnb'/>
 
 
 
@@ -47,14 +42,7 @@ __Example 2__ demonstrates how to unprotect a workbook.
 
 #### __Example 2: Unprotect a Workbook__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	
-	workbook.Protect("telerik");
-	
-	workbook.Unprotect("telerik");
-```
+<snippet id='codeblock-cnc'/>
 
 
 

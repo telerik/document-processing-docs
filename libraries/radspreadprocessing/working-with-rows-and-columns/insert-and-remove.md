@@ -32,19 +32,7 @@ The __RowSelection__ class exposes __CanInsert()__ and __Insert()__ methods that
 
 #### __Example 1: Insert rows__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	int index = 2;
-	int itemCount = 3;
-	
-	if (worksheet.Rows.CanInsert(index, itemCount))
-	{
-	    RowSelection selection = worksheet.Rows[index, index + itemCount];
-	    selection.Insert();
-	}
-```
+<snippet id='codeblock-crm'/>
 
 
 
@@ -58,16 +46,7 @@ The __RowSelection__ class exposes a __Remove()__ method that performs the remov
 
 #### __Example 2: Remove rows__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	int startIndex = 2;
-	int endIndex = 4;
-	
-	RowSelection selection = worksheet.Rows[startIndex, endIndex];
-	selection.Remove();
-```
+<snippet id='codeblock-crn'/>
 
 
 
@@ -81,19 +60,7 @@ The __ColumnSelection__ class exposes __CanInsert()__ and __Insert()__ methods t
 
 #### __Example 3: Insert columns__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	int index = 2;
-	int itemCount = 3;
-	
-	if (worksheet.Columns.CanInsert(index, itemCount))
-	{
-	    ColumnSelection selection = worksheet.Columns[index, index + itemCount];
-	    selection.Insert();
-	}
-```
+<snippet id='codeblock-cro'/>
 
 
 
@@ -107,16 +74,7 @@ The __ColumnSelection__ class exposes a __Remove()__ method that executes the re
 
 #### __Example 4: Remove columns__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	int startIndex = 2;
-	int endIndex = 4;
-	
-	ColumnSelection selection = worksheet.Columns[startIndex, endIndex];
-	selection.Remove();
-```
+<snippet id='codeblock-crp'/>
 
 ## See Also
 

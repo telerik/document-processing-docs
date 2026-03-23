@@ -31,175 +31,89 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 **ConvertRowIndexToName** method converts the row index to name.
 #### __Example 1:__
 
-```csharp
-
-    int rowIndex = 0;
-    string rowName = NameConverter.ConvertRowIndexToName(rowIndex);
-```
+<snippet id='codeblock-cph'/>
 
 ### Convert Row Name to Index
 **ConvertRowNameToIndex** method converts the row name to index.
 #### __Example 2:__
 
-```csharp
-
-    string rowName = "1";
-    int rowIndex = NameConverter.ConvertRowNameToIndex(rowName);
-```
+<snippet id='codeblock-cpi'/>
 
 ### Convert Column Index to Name
 **ConvertColumnIndexToName** method converts the column index to name.
 #### __Example 3:__
 
-```csharp
-
-    int columnIndex = 0;
-    string columnName = NameConverter.ConvertColumnIndexToName(columnIndex);
-```
+<snippet id='codeblock-cpj'/>
 
 ### Convert Column Name to Index
 **ConvertColumnNameToIndex** converts the column name to index.
 #### __Example 4:__
 
-```csharp
-
-    string columnName = "A";
-    int columnIndex = NameConverter.ConvertColumnNameToIndex(columnName);
-```
+<snippet id='codeblock-cpk'/>
 
 ### Convert Cell Index to Name
 **ConvertCellIndexToName** method converts the cell index to name. This method exposes two overloads.
 #### __Example 5: first overload__
 
-```csharp
-
-    CellIndex cellIndex = new CellIndex(rowIndex: 0, columnIndex: 0);
-    string cellName = NameConverter.ConvertCellIndexToName(cellIndex);
-```
+<snippet id='codeblock-cpl'/>
 
 #### __Example 5: second overload__
-```csharp
-
-    string cellName = NameConverter.ConvertCellIndexToName(rowIndex: 0, columnIndex: 0);
-```
+<snippet id='codeblock-cpm'/>
 
 ### Try Convert Names to Cell Reference Range Expression
 **TryConvertNamesToCellReferenceRangeExpression** method tries to convert the cell ranges names to cell reference ranges.
 #### __Example 6:__
 
-```csharp
-    
-    string cellRangesName = "A1:F11";
-    Worksheet worksheet = workbook.ActiveWorksheet;
-    int rowIndex = 0;
-    int columnIndex = 0;
-    CellReferenceRangeExpression expression;
-    bool isConversionToCellReferenceRangeExpressionSuccessful = NameConverter.TryConvertNamesToCellReferenceRangeExpression(cellRangesName, worksheet, rowIndex, columnIndex, out expression);
-```
+<snippet id='codeblock-cpn'/>
 
 ### Convert Cell Reference to Name
 **ConvertCellReferenceToName** method converts the cell reference to name.
 #### __Example 7:__
 
-```csharp
-
-    CellReference fromCellReference = cellReferenceRangeExpression.CellReferenceRange.FromCellReference;
-    string fromCellReferenceName = NameConverter.ConvertCellReferenceToName(fromCellReference);
-
-    CellReference toCellReference = cellReferenceRangeExpression.CellReferenceRange.ToCellReference;
-    string toCellReferenceName = NameConverter.ConvertCellReferenceToName(toCellReference);
-```
+<snippet id='codeblock-cpo'/>
 
 ### Convert Cell Range to Name
 **ConvertCellRangeToName** method converts the cell range to a name.
 #### __Example 8:__
 
-```csharp
-
-    CellIndex fromIndex = new CellIndex(rowIndex: 0, columnIndex: 0);
-    CellIndex toIndex = new CellIndex(rowIndex: 10, columnIndex: 5);
-    string cellRangeName = NameConverter.ConvertCellRangeToName(fromIndex, toIndex);
-```
+<snippet id='codeblock-cpp'/>
 
 
 ### Try Convert Name to Cell Range
 **TryConvertNameToCellRange** method converts the name to a cell range. 
 #### __Example 9:__
 
-```csharp
-
-    CellIndex fromIndex = new CellIndex(rowIndex: 0, columnIndex: 0);
-    CellIndex toIndex = new CellIndex(rowIndex: 10, columnIndex: 5);
-    string cellRangeName = NameConverter.ConvertCellRangeToName(fromIndex, toIndex);
-
-    CellRange cellRange;
-    bool result = NameConverter.TryConvertCellRangeNameToCellRange(cellRangeName, out cellRange);
-```
+<snippet id='codeblock-cpq'/>
 
 ### Convert Cell Indexes to Name
 **ConvertCellIndexesToName** method converts the cell indexes to a name.
 #### __Example 10:__
 
-```csharp
-
-    string cellRangeName = NameConverter.ConvertCellIndexesToName(fromRowIndex: 0, fromColumnIndex: 0, toRowIndex: 10, toColumnIndex: 5);
-```
+<snippet id='codeblock-cpr'/>
 
 ### Convert Cell Name to Index
 **ConvertCellNameToIndex** method converts the cell name to a cell index. This method exposes two overloads.
 #### __Example 11: first overload__
 
-```csharp
-
-    string cellName = "A1";
-    int rowIndex;
-    int columnIndex;
-    NameConverter.ConvertCellNameToIndex(cellName, out rowIndex, out columnIndex);
-```
+<snippet id='codeblock-cps'/>
 
 #### __Example 11: second overload__
-```csharp
-
-    string cellName = "A1";
-    int rowIndex;
-    bool isRowAbsolute;
-    int columnIndex;
-    bool isColumnAbsolute;
-    NameConverter.ConvertCellNameToIndex(cellName, out isRowAbsolute, out rowIndex, out isColumnAbsolute, out columnIndex);
-```
+<snippet id='codeblock-cpt'/>
 
 ### Try Convert Cell Name to Index
 **TryConvertCellNameToIndex** method tries to convert the cell name to index. This method exposes two overloads.
 #### __Example 12: first overload__
-```csharp
-
-    string cellName = "A1";
-    int rowIndex;
-    int columnIndex;
-    bool isConversionSuccessful = NameConverter.TryConvertCellNameToIndex(cellName, out rowIndex, out columnIndex);
-```
+<snippet id='codeblock-cpu'/>
 
 #### __Example 12: second overload__
-```csharp
- 
-    string cellName = "A1";
-    int rowIndex;
-    bool isRowAbsolute;
-    int columnIndex;
-    bool isColumnAbsolute;
-    bool isConversionSuccessful = NameConverter.TryConvertCellNameToIndex(cellName, out isRowAbsolute, out rowIndex, out isColumnAbsolute, out columnIndex);
-```
+<snippet id='codeblock-cpv'/>
 
 
 ### Is Valid A1 Cell Name
 **IsValidA1CellName** method determines whether the name of the cell is valid.
 #### __Example 13:__
 
-```csharp
-
-    string cellName = "B2";
-    bool isValidCellName= NameConverter.IsValidA1CellName(cellName);
-```
+<snippet id='codeblock-cpw'/>
 
 ## See Also
 

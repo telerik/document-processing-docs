@@ -33,23 +33,7 @@ __Example 1__ shows how to import an Xlsm file using a FileStream. The code assu
 
 #### __Example 1: Import Xlsm (Excel Workbook) file__
 
-```csharp
-    string fileName = "SampleFile.Xlsm";
-    if (!File.Exists(fileName))
-    {
-        throw new FileNotFoundException(String.Format("File {0} was not found!", fileName));
-    }
-
-
-    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
-
-    using (Stream input = new FileStream(fileName, FileMode.Open))
-    {
-        workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
-    }
-
-```
+<snippet id='codeblock-cot'/>
 
 ## Export
 
@@ -59,40 +43,12 @@ __Example 2__ demonstrates how to export an existing Workbook to an Xlsm file. T
 
 #### __Example 2: Export spreadsheet document to Xlsm (Excel Workbook) file__
 
-```csharp
-    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
-    workbook.Worksheets.Add();
-    string fileName = "SampleFile.Xlsm";
-
-
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
-
-    using (Stream output = new FileStream(fileName, FileMode.Create))
-    {
-        formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
-    }
-
-
-```
+<snippet id='codeblock-cou'/>
 
 
 #### __Example 3: Export spreadsheet document to a Stream and byte[]__
 
-```csharp
-
-    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
-    workbook.Worksheets.Add();
-
-    Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsm.XlsmFormatProvider();
-
-    byte[] bytes;
-    using (MemoryStream output = new MemoryStream())
-    {
-        formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
-        bytes = output.ToArray();
-    }
-
-``` 
+<snippet id='codeblock-cov'/> 
 
 ## See Also
 

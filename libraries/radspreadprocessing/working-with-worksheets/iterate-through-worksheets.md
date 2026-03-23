@@ -17,40 +17,13 @@ __Example 1__ illustrates how to retrieve worksheets that have already been adde
 
 #### __Example 1: Retrieve worksheet__
 
-```csharp
-	Workbook workbook = new Workbook();
-	
-	WorksheetCollection worksheets = workbook.Worksheets;
-	worksheets.Add();
-	worksheets.Add();
-	
-	Worksheet firstWorksheet = worksheets[0];
-	Worksheet secondWorksheet = worksheets["Sheet2"];
-```
+<snippet id='codeblock-csl'/>
 
 __Example 2__ creates a new workbook with three worksheets. The code further iterates through all worksheets and sets the value of cell *A1* to the name of the corresponding worksheet. The example also sets the ForeColor and BackgrounFill of the cell.
         
 #### __Example 2: Iterate worksheets__
 
-```csharp
-	Workbook workbook = new Workbook();
-	
-	workbook.Worksheets.Add();
-	workbook.Worksheets.Add();
-	workbook.Worksheets.Add();
-	
-	ThemableColor foregroundColor = new ThemableColor(Colors.Red);
-	Color backgroundColor = Colors.Green;
-	IFill backgroundFill = new PatternFill(PatternType.Solid, backgroundColor, backgroundColor);
-	
-	foreach (Worksheet worksheet in workbook.Worksheets)
-	{
-	    CellSelection cell = worksheet.Cells[0, 0];
-	    cell.SetValue("The name of this worksheet is: " + worksheet.Name);
-	    cell.SetForeColor(foregroundColor);
-	    cell.SetFill(backgroundFill);
-	}
-```
+<snippet id='codeblock-csm'/>
 
 ## See Also 
 

@@ -21,22 +21,9 @@ __Example 1__ illustrates how to copy a specific worksheet from a source Workboo
 
 
 #### __Example 1: Copy worksheet__
-```csharp
-	Worksheet clonedSheet = target.Worksheets.Add();
-	clonedSheet.CopyFrom(source.Sheets[0] as Worksheet);
-```
-
-
-#### __Example 1: Copy worksheet__
-
-```csharp
-	Dim clonedSheet As Worksheet = target.Worksheets.Add()
-	clonedSheet.CopyFrom(TryCast(source.Sheets(0), Worksheet))
-```
-
+<snippet id='codeblock-csh'/>
 
 >If the sheet that you're copying is in a document where a [DocumentTheme]({%slug radspreadprocessing-features-styling-document-themes%}) has been applied, the theme will not be copied. Themes are information preserved in the __Workbook__ and you may need to transfer them additionally.
-
 
 Copying a worksheet can be done both in a newly created worksheet and an existing one. If you are copying the content into an existing worksheet, all previously available content in the target will be removed and replaced with the copied one. The sole exception of this is the [Name]({%slug radspreadprocessing-working-with-worksheets-rename-worksheet%}) of the sheet which will not be transferred.
 
@@ -44,51 +31,7 @@ __Example 2__ demonstrates a slightly more complex scenario in which a sheet is 
         
 
 #### __Example 2: Copy to existing workbook__
-```csharp
-	bool containsSameName = false;
-	
-	foreach (var worksheet in targetWorkbook.Worksheets)
-	{
-	    if (worksheet.Name == sheetToClone.Name)
-	    {
-	        containsSameName = true;
-	        break;
-	    }
-	}
-	
-	if (containsSameName)
-	{
-	    targetWorkbook.Worksheets[sheetToClone.Name].CopyFrom(sheetToClone);
-	}
-	else
-	{
-	    Worksheet clonedSheet = targetWorkbook.Worksheets.Add();
-	    clonedSheet.CopyFrom(sheetToClone);
-	    clonedSheet.Name = sheetToClone.Name;
-	}
-```
-
-
-#### __Example 2: Copy to existing workbook__
-
-```csharp
-	Dim containsSameName As Boolean = False
-	
-	For Each worksheet As var In targetWorkbook.Worksheets
-	    If worksheet.Name = sheetToClone.Name Then
-	        containsSameName = True
-	        Exit For
-	    End If
-	Next
-	
-	If containsSameName Then
-	    targetWorkbook.Worksheets(sheetToClone.Name).CopyFrom(sheetToClone)
-	Else
-	    Dim clonedSheet As Worksheet = targetWorkbook.Worksheets.Add()
-	    clonedSheet.CopyFrom(sheetToClone)
-	    clonedSheet.Name = sheetToClone.Name
-	End If
-```
+<snippet id='codeblock-csj'/>
 
 
 ## See Also

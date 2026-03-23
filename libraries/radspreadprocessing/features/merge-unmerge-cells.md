@@ -27,14 +27,7 @@ __Example 1__ constructs a worksheet that will be used as a starting point in th
 
 #### __Example 1: Construct worksheet__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].SetValue("A1");
-	worksheet.Cells[1, 0].SetValue("A2");
-	worksheet.Cells[0, 1].SetValue("B1");
-	worksheet.Cells[1, 1].SetValue("B2");
-```
+<snippet id='codeblock-cjk'/>
 
 
 
@@ -49,14 +42,7 @@ __Example 2__ illustrates how to perform a merge operation on the cell region *A
 
 #### __Example 2: Perform merge operation__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellIndex A1Cell = new CellIndex(0, 0);
-	CellIndex B2Cell = new CellIndex(1, 1);
-	
-	worksheet.Cells[A1Cell, B2Cell].Merge();
-```
+<snippet id='codeblock-cjl'/>
 
 
 
@@ -77,13 +63,7 @@ __Example 3__ illustrates how to perform a merge operation on the cell region *A
 
 #### __Example 3: Perform merge across__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellIndex A1Cell = new CellIndex(0, 0);
-	CellIndex B2Cell = new CellIndex(1, 1);
-	worksheet.Cells[A1Cell, B2Cell].MergeAcross();
-```
+<snippet id='codeblock-cjm'/>
 
 
 
@@ -104,13 +84,7 @@ __Example 4__ merges across the region *A1:B2* and then performs another merge o
 
 #### __Example 4: Intersect cell range with merged cell range__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellIndex B2Cell = new CellIndex(1, 1);
-	CellIndex C3Cell = new CellIndex(2, 2);
-	worksheet.Cells[B2Cell, C3Cell].Merge();
-```
+<snippet id='codeblock-cjn'/>
 
 
 
@@ -138,10 +112,7 @@ __Example 5__ checks if cell A1 is in a merged region.
 
 #### __Example 5: Check if cell is in merged cell range__
 
-```csharp
-	CellIndex A1CellIndex = new CellIndex(0, 0);
-	bool isA1merged = worksheet.Cells.GetIsMerged(A1CellIndex);
-```
+<snippet id='codeblock-cjo'/>
 
 
 
@@ -155,11 +126,7 @@ __Example 6__ shows how to use TryGetContainingMergedRange() method.
 
 #### __Example 6: Try get merged cell range__
 
-```csharp
-	CellIndex A1CellIndex = new CellIndex(0, 0);
-	CellRange mergedCellRange;
-	bool canGetContainingMergedCellRange = worksheet.Cells.TryGetContainingMergedRange(A1CellIndex, out mergedCellRange);
-```
+<snippet id='codeblock-cjp'/>
 
 
 
@@ -173,12 +140,7 @@ __Example 7__ shows how to use GetContainingMergedRanges() method.
 
 #### __Example 7: Get all containing merged ranges in a range__
 
-```csharp
-	CellIndex A1CellIndex = new CellIndex(0, 0);
-	CellIndex N33CellIndex = new CellIndex(32, 13);
-	CellRange A1N33CellRange = new CellRange(A1CellIndex, N33CellIndex);
-	IEnumerable<CellRange> containingMergedCellRanges = worksheet.Cells.GetContainingMergedRanges(A1N33CellRange);
-```
+<snippet id='codeblock-cjq'/>
 
 
 
@@ -192,11 +154,7 @@ __Example 8__ shows how to get all merged ranges in a worksheet.
 
 #### __Example 8: Get all merged ranges__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	IEnumerable<CellRange> mergedCellRanges = worksheet.Cells.GetMergedCellRanges();
-```
+<snippet id='codeblock-cjr'/>
 
 
 
@@ -213,12 +171,7 @@ __Example 9__ invokes the __Unmerge()__ method for the region *B2:D4* of the wor
 
 #### __Example 9: Unmerge cells__
 
-```csharp
-	CellIndex B2CellIndex = new CellIndex(1, 1);
-	CellIndex D4CellIndex = new CellIndex(3, 3);
-	CellRange B2D4CellSelection = new CellRange(B2CellIndex, D4CellIndex);
-	worksheet.Cells[B2D4CellSelection].Unmerge();
-```
+<snippet id='codeblock-cjs'/>
 
 
 

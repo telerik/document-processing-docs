@@ -30,18 +30,7 @@ The __CellSelection__ class exposes an __Insert()__ method that takes one argume
 
 #### __Example 1: Insert cells__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	CellRange range = new CellRange(1, 1, 10, 10);
-	CellSelection selection = worksheet.Cells[range];
-	
-	if (selection.CanInsertOrRemove(range, ShiftType.Right))
-	{
-	    selection.Insert(InsertShiftType.Right);
-	}
-```
+<snippet id='codeblock-crf'/>
 
 
 
@@ -58,17 +47,6 @@ The __CellSelection__ class exposes a __Remove()__ method that takes one argumen
 
 #### __Example 2: Remove cells__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	CellRange range = new CellRange(1, 1, 10, 10);
-	CellSelection selection = worksheet.Cells[range];
-	
-	if (selection.CanInsertOrRemove(range, ShiftType.Up))
-	{
-	    selection.Remove(RemoveShiftType.Up);
-	}
-```
+<snippet id='codeblock-crg'/>
 
 

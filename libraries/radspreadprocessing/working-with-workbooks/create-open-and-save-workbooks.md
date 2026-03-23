@@ -29,10 +29,7 @@ __Example 1__ creates a new workbook and adds its first worksheet, which also be
 
 #### __Example 1: Create a workbook and add a worksheet to it__
 
-```csharp
-	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
-	Telerik.Windows.Documents.Spreadsheet.Model.Worksheet worksheet = workbook.Worksheets.Add();
-```
+<snippet id='codeblock-crz'/>
 
 
 
@@ -47,18 +44,7 @@ __Example 2__ uses a WebClient to download a `xlsx` file stored on a server. Fur
 
 #### __Example 2: Download and import xlsx file__
 
-```csharp
-	const string FilePath = @"http://localhost:54352/Resourses/SampleFile.xlsx";
-	WebClient webClient = new WebClient();
-	
-	webClient.OpenReadCompleted += (sender, eventArgs) =>
-	{
-	    Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
-	    Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = formatProvider.Import(eventArgs.Result, TimeSpan.FromSeconds(10));
-	};
-	
-	webClient.OpenReadAsync(new Uri(FilePath));
-```
+<snippet id='codeblock-csa'/>
 
 
 
@@ -77,18 +63,7 @@ __Example 3__ demonstrates how to export an existing Workbook to a `XLSX` file. 
 
 #### __Example 3: Save XLSX file__
 
-```csharp
-	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
-	workbook.Worksheets.Add();
-	
-	string fileName = "SampleFile.xlsx";
-	XlsxFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
-	
-	using (Stream output = new FileStream(fileName, FileMode.Create))
-	{
-	    formatProvider.Export(workbook, output);
-	}
-```
+<snippet id='codeblock-csb'/>
 
 
 For security purposes accessing files in *Silverlight* can be achieved only through user-initiated dialogs. That said, to save workbook's contents into a `csv` file, you need to use the `SaveFileDialog`. 
@@ -98,22 +73,7 @@ __Example 4__ passes the stream returned by the dialog and the current workbook 
 
 #### __Example 4: Save csv file using SaveFileDialog__
 
-```csharp
-	Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook = new Telerik.Windows.Documents.Spreadsheet.Model.Workbook();
-	workbook.Worksheets.Add();
-	
-	SaveFileDialog saveFileDialog = new SaveFileDialog();
-	Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv.CsvFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Csv.CsvFormatProvider();
-	saveFileDialog.Filter = "CSV (comma delimited) (*.csv)|*.csv|All Files (*.*)|*.*";
-	
-	if (saveFileDialog.ShowDialog() == true)
-	{
-	    using (Stream output = saveFileDialog.OpenFile())
-	    {
-	        formatProvider.Export(workbook, output);
-	    }
-	}
-```
+<snippet id='codeblock-csc'/>
 
 
 >note Additional examples about export are available in the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.

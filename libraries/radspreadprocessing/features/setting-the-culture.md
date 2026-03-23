@@ -13,9 +13,5 @@ __RadSpreadProcessing__ allows you to set a culture that differs from the curren
 
 #### __Setting the Culture__
 
-```csharp
-
-    Telerik.Windows.Documents.Spreadsheet.Formatting.FormatHelper.CultureHelper = new SpreadsheetCultureHelper(new CultureInfo("en-US"));
-
-```
+<snippet id='codeblock-ckl'/>
 

@@ -44,11 +44,7 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
 
 #### Example 1: Set the SpreadFixedTextMeasurer as a text measurer
 
-```csharp
-
-    SpreadTextMeasurerBase fixedTextMeasurer = new SpreadFixedTextMeasurer();
-    SpreadExtensibilityManager.TextMeasurer = fixedTextMeasurer;
-```
+<snippet id='codeblock-cgf'/>
 
 ## SkiaTextMeasurer
 
@@ -85,59 +81,12 @@ You can assign any **SpreadTextMeasurerBase** implementation to the **SpreadExte
 
 #### **Example 3: Create a custom implementation inheriting the SpreadTextMeasurerBase abstract class**
 
-```csharp
-
-    public class CustomTextMeasurer : SpreadTextMeasurerBase 
-    { 
-        private static readonly double ratioX = 1.035; 
-        private static readonly double ratioY = 1; 
-        private static readonly double ratioBaseline = 1; 
-     
-        private readonly SpreadTextMeasurerBase originalMeasurer; 
-     
-        public CustomTextMeasurer(SpreadTextMeasurerBase originalMeasurer) 
-        { 
-            this.originalMeasurer = originalMeasurer; 
-        } 
-     
-        public override TextMeasurementInfo MeasureText(TextProperties textProperties, FontProperties fontProperties) 
-        { 
-            TextMeasurementInfo info = originalMeasurer.MeasureText(textProperties, fontProperties); 
-     
-            Size size = info.Size; 
-            return new TextMeasurementInfo() 
-            { 
-                BaselineOffset = info.BaselineOffset * ratioBaseline, 
-                Size = new Size( 
-                    size.Width * ratioX, 
-                    size.Height * ratioY), 
-            }; 
-        } 
-     
-        public override TextMeasurementInfo MeasureTextWithWrapping(TextProperties textProperties, FontProperties fontProperties, double wrappingWidth) 
-        { 
-            TextMeasurementInfo info = originalMeasurer.MeasureText(textProperties, fontProperties); 
-     
-            Size size = info.Size; 
-            return new TextMeasurementInfo() 
-            { 
-                BaselineOffset = info.BaselineOffset * ratioBaseline, 
-                Size = new Size( 
-                    size.Width * ratioX, 
-                    size.Height * ratioY), 
-            }; 
-        } 
-    } 
-```
+<snippet id='codeblock-cgg'/>
 
 
 #### **Example 4: Set the custom implementation as a text measurer**
 
-```csharp
-
-    SpreadTextMeasurerBase customTextMeasurer = new CustomTextMeasurer(); 
-    SpreadExtensibilityManager.TextMeasurer = customTextMeasurer; 
-```
+<snippet id='codeblock-cgh'/>
 
 
 ## See Also

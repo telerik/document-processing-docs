@@ -56,9 +56,7 @@ __Example 1__ creates a hyperlink to a web address.
 
 #### __Example 1: Create link to web address__
 
-```csharp
-	HyperlinkInfo webAddres = HyperlinkInfo.CreateHyperlink("http://www.telerik.com", "Telerik");
-```
+<snippet id='codeblock-ciz'/>
 
 
 
@@ -67,9 +65,7 @@ __Example 2__ creates a hyperlink to a cell range somewhere in the document.
 
 #### __Example 2: Create link to place in the document__
 
-```csharp
-	HyperlinkInfo inDocument = HyperlinkInfo.CreateInDocumentHyperlink("A1:B3", "Go to A1:B3");
-```
+<snippet id='codeblock-cja'/>
 
 
 __Example 3__ creates a hyperlink to a cell in another worksheet of the document.
@@ -77,9 +73,7 @@ __Example 3__ creates a hyperlink to a cell in another worksheet of the document
 
 #### __Example 3: Create link to a cell in another worksheet of the document__
 
-```csharp
-	HyperlinkInfo inDocument = HyperlinkInfo.CreateInDocumentHyperlink("'Sheet2'!A1", "Go to Sheet2");
-```
+<snippet id='codeblock-cjb'/>
 
 
 
@@ -88,9 +82,7 @@ __Example 4__ shows how you can create a hyperlink to an email address.
 
 #### __Example 4: Create link to email address__
 
-```csharp
-	HyperlinkInfo mailto = HyperlinkInfo.CreateMailtoHyperlink("someOne@someCompany.com", "someSubject", "Mail to someOne");
-```
+<snippet id='codeblock-cjc'/>
 
 
 
@@ -104,10 +96,7 @@ __Example 5__ assigns the hyperlink created in __Example 1__ to A1.
 
 #### __Example 5: Add hyperlink__
 
-```csharp
-	CellIndex a1Index = new CellIndex(0, 0);
-	SpreadsheetHyperlink spreadsheetHyperlink = worksheet.Hyperlinks.Add(a1Index, webAddres);
-```
+<snippet id='codeblock-cjd'/>
 
 
 
@@ -121,11 +110,7 @@ __Example 6__ defines two indexes and then a cell range out of those indexes.
 
 #### __Example 6: Define cell range__
 
-```csharp
-	CellIndex a1Index = new CellIndex(0, 0);
-	CellIndex b3Index = new CellIndex(2, 1);
-	CellRange a1b3Range = new CellRange(a1Index, b3Index);
-```
+<snippet id='codeblock-cje'/>
 
 
 
@@ -134,9 +119,7 @@ __Example 6__ defines two indexes and then a cell range out of those indexes.
 
 #### __Example 7: Get hyperlinks in cell range__
 
-```csharp
-	IEnumerable<SpreadsheetHyperlink> containingHyperlinks = worksheet.Hyperlinks.GetContainingHyperlinks(a1b3Range);
-```
+<snippet id='codeblock-cjf'/>
 
 
 
@@ -148,9 +131,7 @@ __Example 6__ defines two indexes and then a cell range out of those indexes.
 
 #### __Example 8: Get hyperlinks intersecting with cell range__
 
-```csharp
-	IEnumerable<SpreadsheetHyperlink> intersectingHyperlinks = worksheet.Hyperlinks.GetIntersectingHyperlinks(a1b3Range);
-```
+<snippet id='codeblock-cjg'/>
 
 
 
@@ -159,9 +140,7 @@ __Example 6__ defines two indexes and then a cell range out of those indexes.
 
 #### __Example 9: Get last hyperlink intersecting with cell range__
 
-```csharp
-	bool canGetHyperlink = worksheet.Hyperlinks.TryGetHyperlink(a1Index, out spreadsheetHyperlink);
-```
+<snippet id='codeblock-cjh'/>
 
 
 
@@ -173,9 +152,7 @@ __Example 6__ defines two indexes and then a cell range out of those indexes.
 
 #### __Example 10: Get hyperlink exactly matching cell range__
 
-```csharp
-	bool canGetHyperlinkExact = worksheet.Hyperlinks.TryGetHyperlinkExact(a1b3Range, out spreadsheetHyperlink);
-```
+<snippet id='codeblock-cji'/>
 
 
 
@@ -189,12 +166,6 @@ __Example 11__ removes a hyperlink.
 
 #### __Example 11: Remove hyperlink__
 
-```csharp
-	SpreadsheetHyperlink spreadsheetHyperlink;
-	if (worksheet.Hyperlinks.TryGetHyperlink(a1Index, out spreadsheetHyperlink))
-	{
-	    worksheet.Hyperlinks.Remove(spreadsheetHyperlink);
-	}
-```
+<snippet id='codeblock-cjj'/>
 
 

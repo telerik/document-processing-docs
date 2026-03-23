@@ -52,9 +52,7 @@ __Example 1__ shows how to register a function class ArgumentsFunction, inherito
 
 #### __Example 1: Register custom function__
 
-```csharp
-	FunctionManager.RegisterFunction(new ArgumentsFunction());
-```
+<snippet id='codeblock-cms'/>
 
 
 
@@ -130,15 +128,7 @@ __Example 2__ creates an instance of ArgumentConversionRules:
 
 #### __Example 2: Create ArgumentConversionRules__
 
-```csharp
-	public static readonly ArgumentConversionRules BoolFunctionConversion = new ArgumentConversionRules(
-	            emptyIndirectArgument: ArgumentInterpretation.Ignore,
-	            textNumberDirectArgument: ArgumentInterpretation.TreatAsError,
-	            textNumberIndirectArgument: ArgumentInterpretation.Ignore,
-	            nonTextNumberDirectArgument: ArgumentInterpretation.TreatAsError,
-	            nonTextNumberIndirectArgument: ArgumentInterpretation.Ignore,
-	            arrayArgument: ArrayArgumentInterpretation.UseAllElements);
-```
+<snippet id='codeblock-cmt'/>
 
 
 
@@ -198,23 +188,7 @@ __Example 3__ shows how to create an instance of FunctionInfo class.
 
 #### __Example 3: Create FunctionInfo__
 
-```csharp
-	string functionName = "ADD";
-	
-	string description = "Adds all the numbers in range of cells.";
-	
-	IEnumerable<ArgumentInfo> requiredArguments = new ArgumentInfo[]
-	{
-		new ArgumentInfo("Number", "number1, number2,... are the numbers to sum. Logical values and text are ignored in cells, included if typed as arguments.", ArgumentType.Number),
-	};
-	
-	IEnumerable<ArgumentInfo> optionalArguments = new ArgumentInfo[]
-	{
-		new ArgumentInfo("Number", "number1, number2,... are the numbers to sum. Logical values and text are ignored in cells, included if typed as arguments.", ArgumentType.Number),
-	};
-	
-	FunctionInfo sumFunctionInfo = new FunctionInfo(functionName, FunctionCategory.MathTrig, description, requiredArguments, optionalArguments, 254, true);
-```
+<snippet id='codeblock-cmu'/>
 
 
 
@@ -231,55 +205,7 @@ __Example 4__ shows how to create the 'ARGUMENTS' function.
 
 #### __Example 4: Create ARGUMENTS function__
 
-```csharp
-	public class Arguments : FunctionBase
-	{
-	    public static readonly string FunctionName = "ARGUMENTS";
-	    private static readonly FunctionInfo Info;
-	
-	    public override string Name
-	    {
-	        get
-	        {
-	            return FunctionName;
-	        }
-	    }
-	
-	    public override FunctionInfo FunctionInfo
-	    {
-	        get
-	        {
-	            return Info;
-	        }
-	    }
-	
-	    static Arguments()
-	    {
-	        string description = "Returns number of used arguments.";
-	
-	        IEnumerable<ArgumentInfo> requiredArguments = new ArgumentInfo[]
-		    {
-			    new ArgumentInfo("First", "First argument.", ArgumentType.Any),
-			    new ArgumentInfo("Second", "Second argument.", ArgumentType.Any),
-			    new ArgumentInfo("Third", "Third argument.", ArgumentType.Any),
-		    };
-	
-	        IEnumerable<ArgumentInfo> optionalArguments = new ArgumentInfo[]
-		    {
-			    new ArgumentInfo("First", "First argument.", ArgumentType.Any),
-			    new ArgumentInfo("Second", "Second argument.", ArgumentType.Any),
-			    new ArgumentInfo("Third", "Third argument.", ArgumentType.Any),
-		    };
-	
-	        Info = new FunctionInfo(FunctionName, FunctionCategory.MathTrig, description, requiredArguments, optionalArguments, optionalArgumentsRepeatCount: 3);
-	    }
-	
-	    protected override RadExpression EvaluateOverride(FunctionEvaluationContext<RadExpression> context)
-	    {
-	        return new NumberExpression(context.Arguments.Length);
-	    }
-	}
-```
+<snippet id='codeblock-cmv'/>
 
 
 
@@ -291,41 +217,7 @@ __Example 5__ shows how to create the 'E' function.
 
 #### __Example 5: Create E function__
 
-```csharp
-	public class E : FunctionBase
-	{
-	    public static readonly string FunctionName = "E";
-	    private static readonly FunctionInfo Info;
-	
-	    public override string Name
-	    {
-	        get
-	        {
-	            return FunctionName;
-	        }
-	    }
-	
-	    public override FunctionInfo FunctionInfo
-	    {
-	        get
-	        {
-	            return Info;
-	        }
-	    }
-	
-	    static E()
-	    {
-	        string description = "Returns the Napier's constant.";
-	
-	        Info = new FunctionInfo(FunctionName, FunctionCategory.MathTrig, description);
-	    }
-	
-	    protected override RadExpression EvaluateOverride(FunctionEvaluationContext<RadExpression> context)
-	    {
-	        return NumberExpression.E;
-	    }
-	}
-```
+<snippet id='codeblock-cmw'/>
 
 
 

@@ -74,23 +74,7 @@ The Formatting property can be used for all rules listed in **Table 1** except *
 
 #### Example 1: Create formatting
 
-```csharp
-
-    DifferentialFormatting formatting = new DifferentialFormatting();
-    formatting.FontSize = 22;
-    formatting.FontFamily = new ThemableFontFamily("Times New Roman");
-    formatting.ForeColor = new ThemableColor(Colors.Red);
-    formatting.IsBold = true;
-    formatting.IsItalic = true;
-    formatting.Fill = new PatternFill(PatternType.Solid, Color.FromArgb(255, 46, 204, 113), Colors.Transparent);
-    formatting.CellValueFormat = new CellValueFormat("@");
-        
-    CellBorder cellBorder = new CellBorder(CellBorderStyle.Thin, ThemableColor.FromColor(Colors.Red));
-    formatting.TopBorder = cellBorder;
-    formatting.BottomBorder = cellBorder;
-    formatting.LeftBorder = cellBorder;
-    formatting.RightBorder = cellBorder;
-```
+<snippet id='codeblock-cgr'/>
 
 
 ## Create and Apply Conditional Formatting Rule
@@ -99,74 +83,21 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
 
 #### Example 2: Create Between rule
 
-```csharp
-
-    // Get a value from the worksheet
-    string capacityValue = worksheet.Cells[1, 0].GetValue().Value.GetValueAsString(CellValueFormat.GeneralFormat);
-    double maxValue = double.Parse(capacityValue);
-    
-    // Create the rule by passing the two values the rule should match between
-    BetweenRule rule = new BetweenRule((maxValue / 2).ToString(), capacityValue);
-    
-    // Create the desired formatting and apply it to the rule
-    DifferentialFormatting formatting = new DifferentialFormatting();
-    formatting.IsBold = true;
-    formatting.IsItalic = true;
-    formatting.Fill = new PatternFill(PatternType.Solid, Colors.Red, Colors.Transparent);
-    rule.Formatting = formatting;
-    
-    // Create conditional formatting and add it to the desired range of cells
-    ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
-    worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);
-```
+<snippet id='codeblock-cgs'/>
 
 #### Between rule applied on a range of values
 ![Between rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_Between.png)
 
 #### Example 3: Create GreaterThanOrEqualTo rule
 
-```csharp
-
-    GreaterThanOrEqualToRule rule = new GreaterThanOrEqualToRule("=$A$2");
-    
-    DifferentialFormatting formatting = new DifferentialFormatting();
-    formatting.IsBold = true;
-    formatting.IsItalic = true;
-    formatting.Fill = new PatternFill(PatternType.Solid, Colors.Red, Colors.Transparent);
-    rule.Formatting = formatting;
-    
-    ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
-    worksheet.Cells[1, 2, 11, 2].AddConditionalFormatting(conditionalFormatting);
-```
+<snippet id='codeblock-cgt'/>
 
 #### GreaterThanOrEqualTo rule applied on a range of values
 ![GreaterThanOrEqualTo rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_GreaterThanOrEqualTo.png)
 
 #### Example 4: Create ColorScale rule
 
-```csharp
-
-    // Get a value from an existing worksheet
-    string capacityValue = worksheet.Cells[1, 0].GetValue().Value.GetValueAsString(CellValueFormat.GeneralFormat);
-    double maxValue = double.Parse(capacityValue);
-    
-    // Create the desired context and set its properties
-    TwoColorScaleValueContext twoColorsContext = new TwoColorScaleValueContext();
-    
-    twoColorsContext.MaximumValue = new NumericValue(maxValue);
-    twoColorsContext.MaximumColor = new ThemableColor(Colors.Red);
-    
-    twoColorsContext.MinimumValue = new MinimumValue();
-    twoColorsContext.MinimumColor = new ThemableColor(Colors.LightGreen);
-    
-    // Create the rule
-    ColorScaleRule rule = new ColorScaleRule(twoColorsContext);
-    
-    // Create the conditional formatting and apply it
-    ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
-    worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);
-
-```
+<snippet id='codeblock-cgu'/>
 
 >note Depending on the exact number of colors you would like to apply for the ColorScaleRule, you can choose between **TwoColorScaleValueContext** and **ThreeColorScaleValueContext** classes.
 
@@ -175,21 +106,7 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
 
 #### Example 5: Create DataBar rule
 
-```csharp
-
-    // Create the context for the rule
-    DataBarValueContext dataBarValueContext = new DataBarValueContext();
-    dataBarValueContext.MaximumValue = new MaximumValue();
-    dataBarValueContext.MinimumValue = new MinimumValue();
-
-    // Create the rule and set the desired formatting
-    DataBarRule rule = new DataBarRule(dataBarValueContext);
-    rule.FillColor = new ThemableColor(Colors.LightBlue);
-
-    ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
-    worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);
-
-```
+<snippet id='codeblock-cgv'/>
 
 #### DataBar rule applied on a range of values
 ![DataBar rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_DataBar.png)
@@ -197,15 +114,7 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
 
 #### Example 6: Create IconSet rule
 
-```csharp
-
-    // Create the rule using a predefined set of icons
-    IconSetRule rule = new IconSetRule(PresetIconSet.ThreeArrowsColored);         
-    
-    ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
-    worksheet.Cells[1, 2, 12, 2].AddConditionalFormatting(conditionalFormatting);
-
-```
+<snippet id='codeblock-cgw'/>
 
 #### IconSet rule applied on a range of values
 ![IconSet rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_IconSet.png)
@@ -233,10 +142,7 @@ Any previously applied formatting can be obtained through the GetConditionalForm
 
 #### Example 7: Get the conditional formatting
 
-```csharp
-
-    IEnumerable<ConditionalFormattingRange> formattingRanges = worksheet.Cells[0, 0, 10, 10].GetConditionalFormattings();
-```
+<snippet id='codeblock-cgx'/>
 
 ## Remove Conditional Formatting
 
@@ -244,18 +150,7 @@ Through the CellSelection, you can also remove the formatting from the selected 
 
 #### Example 8: Remove the conditional formatting
 
-```csharp
-
-    IEnumerable<ConditionalFormattingRange> formattingRanges = worksheet.Cells[0, 0, 10, 10].GetConditionalFormattings();
-    
-    foreach (ConditionalFormattingRange range in formattingRanges)
-    {
-        foreach (ConditionalFormatting format in range.Formattings)
-        {
-            worksheet.Cells[range.CellRange].RemoveConditionalFormatting(format);
-        }
-    }
-```
+<snippet id='codeblock-cgy'/>
 
 ## Resolve Conditional Formatting
 
@@ -265,12 +160,7 @@ For the rules that apply on all the values in the range, the return value is **b
 
 #### Example 9: Resolve conditional formatting rule
 
-```csharp
-
-    CellIndex cellIndex = new CellIndex(0, 0);
-    ConditionalFormatting formatting = worksheet.Cells[cellIndex].GetConditionalFormattings().First().Formattings.First();
-    bool isFormattingApplied = formatting.Resolve(cellIndex) > 0;
-```
+<snippet id='codeblock-cgz'/>
 
 ## Update the Rule for a Formatting
 
@@ -278,11 +168,7 @@ In case you would like to change the rule used by a ConditionalFormatting object
 
 #### Example 10: Change the rule for existing conditional formatting
 
-```csharp
-
-    ConditionalFormattingRange formattingRange = worksheet.Cells[0, 0, 10, 10].GetConditionalFormattings().First();
-    formattingRange.Formattings.First().UpdateRule(new ContainsRule("test"));
-```
+<snippet id='codeblock-cha'/>
 
 ## Update the Cell Range of Existing Formatting
 

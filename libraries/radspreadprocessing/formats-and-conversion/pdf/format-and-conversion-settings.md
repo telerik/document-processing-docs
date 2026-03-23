@@ -38,10 +38,7 @@ __Example 1__ shows how to export the Entire Workbook without ignoring the __Pri
 
 #### __Example 1: Export entire workbook__
 
-```csharp
-	PdfFormatProvider provider = new PdfFormatProvider();
-	provider.ExportSettings = new PdfExportSettings(ExportWhat.EntireWorkbook, false);
-```
+<snippet id='codeblock-coz'/>
 
 
 
@@ -50,16 +47,7 @@ __Example 2__ shows how to export only two selected ranges from the active works
 
 #### __Example 2: Export selection__
 
-```csharp
-	CellRange[] rangesToExport = new CellRange[]
-	{
-	    new CellRange(2, 3, 10, 15),
-	    new CellRange(4, 5, 8, 20)
-	};
-	
-	PdfFormatProvider provider = new PdfFormatProvider();
-	provider.ExportSettings = new PdfExportSettings(rangesToExport);
-```
+<snippet id='codeblock-cpa'/>
 
 
 >In order to specify file export settings to the __PdfFormatProvider__ you need to add both the Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export and Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export namespaces. In Example 3 the *Fixed* alias corresponds to the __Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export__ namespace.
@@ -70,14 +58,7 @@ Another export option is to specify settings specific to the PDF format to the e
 
 #### __Example 3: Export PDF/A compliant document__
 
-```csharp
-	PdfFormatProvider provider = new PdfFormatProvider();
-	
-	Fixed.PdfExportSettings fileSettings = new Fixed.PdfExportSettings();
-	fileSettings.ComplianceLevel = Fixed.PdfComplianceLevel.PdfA2B;
-	
-	provider.ExportSettings.PdfFileSettings = fileSettings;
-```
+<snippet id='codeblock-cpb'/>
 
 
 ## See Also

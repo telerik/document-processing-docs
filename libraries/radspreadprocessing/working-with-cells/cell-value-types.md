@@ -29,23 +29,13 @@ The SetValue() method has multiple overloads that allow you to pass a double, a 
 
 #### Get Formatted Cell's Value
 
-   ```csharp
-   CellSelection cell = worksheet.Cells[rowIndex, columnIndex];
-   ICellValue cellValue = cell.GetValue().Value;
-   CellValueFormat cellFormat = cell.GetFormat().Value;
-   string formattedValue = cellValue.GetResultValueAsString(cellFormat);
-   ```
+   <snippet id='codeblock-cqd'/>
         
 __Example 1__ sets the Value of cell A1 to "Total".
         
 #### __Example 1: Set string value__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	worksheet.Cells[0, 0].SetValue("Total");
-```
+<snippet id='codeblock-cqe'/>
 
 
 
@@ -57,13 +47,7 @@ __Example 2__ creates a NumberCellValue with value 3.14 and assigns it to cell A
 
 #### __Example 2: Create NumberCellValue__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	ICellValue value = CellValueFactory.Create(3.14);
-	worksheet.Cells[0, 0].SetValue(value);
-```
+<snippet id='codeblock-cqf'/>
 
 
 
@@ -75,10 +59,7 @@ __Example 3__ retrieves the value created in Example 2.
 
 #### __Example 3: Retrieve cell value__
 
-```csharp
-	RangePropertyValue<ICellValue> rangeValue = worksheet.Cells[0, 0].GetValue();
-	ICellValue value = rangeValue.Value;
-```
+<snippet id='codeblock-cqg'/>
 
 
 
@@ -92,23 +73,7 @@ Note that the GetValue() method does not return an ICellValue directly, but it p
             
 	#### __Example 4: Retrieve and use IsIndeterminate and Value properties__
 
-	```csharp
-
-		Workbook workbook = new Workbook();
-		Worksheet worksheet = workbook.Worksheets.Add();
-		
-		worksheet.Cells[0, 0].SetStyleName("Good");
-		worksheet.Cells[0, 1].SetStyleName("Bad");
-		
-		RangePropertyValue<string> cell00Value = worksheet.Cells[0, 0].GetStyleName();
-		//cell at [0, 0] cell00Value.IsIndeterminate is False, cell00Value.Value is Good
-		
-		RangePropertyValue<string> cell01Value = worksheet.Cells[0, 1].GetStyleName();
-		//cell at [0, 0] cell01Value.IsIndeterminate is False, cell01Value.Value is Bad
-		
-		RangePropertyValue<string> twoCellsValue = worksheet.Cells[0, 0, 0, 1].GetStyleName();
-		//cells at [0, 0, 0, 1] twoCellsValue.IsIndeterminate is True, twoCellsValue.Value is Normal
-	```
+	<snippet id='codeblock-cqh'/>
 
 
 ## Empty Cell Value
@@ -124,11 +89,7 @@ __Example 5__ clears the value of cell A1.
 
 #### __Example 5: Clear value__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].ClearValue();
-```
+<snippet id='codeblock-cqi'/>
 
 
 
@@ -142,12 +103,7 @@ __Example 6__ sets the values of cells A1 and B1 to true and false BooleanCellVa
 
 #### __Example 6: Set boolean value__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].SetValue(true);
-	worksheet.Cells[0, 1].SetValue(false);
-```
+<snippet id='codeblock-cqj'/>
 
 
 
@@ -159,14 +115,7 @@ __Example 7__ illustrates how to create a BooleanCellValue using the CellValueFa
 
 #### __Example 7: Create a BooleanCellValue using CellValueFactory__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	ICellValue booleanCellValueTrue = CellValueFactory.Create(true);
-	ICellValue booleanCellValueFalse = CellValueFactory.Create(false);
-	worksheet.Cells[0, 0].SetValue(booleanCellValueTrue);
-	worksheet.Cells[0, 1].SetValue(booleanCellValueFalse);
-```
+<snippet id='codeblock-cqk'/>
 
 
 
@@ -183,11 +132,7 @@ __Example 8__ shows how to set the value of cell A1 to 1.23.
 
 #### __Example 8: Set number cell value__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].SetValue("1.23");
-```
+<snippet id='codeblock-cql'/>
 
 
 ## Date Values
@@ -200,11 +145,7 @@ __Example 9__ sets the value of cell A1 to 6 October 1987 (in culture "en-US"). 
 
 #### __Example 9: Set date as number cell value__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].SetValue("10/06/1987");
-```
+<snippet id='codeblock-cqm'/>
 
 
 
@@ -215,16 +156,7 @@ If you later access the value of the cell applied in **Example 9**, you will get
         
 #### __Example 10: Get date value__
 
-```csharp
-
-	ICellValue cellValue = worksheet.Cells[0, 0].GetValue().Value;
-	CellValueFormat format = worksheet.Cells[0, 0].GetFormat().Value;
-	
-	string resultAsString = cellValue.GetValueAsString(format);
-
-	double rawValueAsNumber = Convert.ToDouble(cellValue.RawValue);
-	DateTime? resultAsDateTime = FormatHelper.ConvertDoubleToDateTime(rawValueAsNumber).Value.Date;
-```
+<snippet id='codeblock-cqn'/>
 
 
 ## Formula Cell Value
@@ -243,11 +175,7 @@ __Example 11__ shows how you can create a formula that refers to another cell.
 
 #### __Example 11: Create formula referring to another cell__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].SetValue("=A2");
-```
+<snippet id='codeblock-cqo'/>
 
 
 
@@ -262,11 +190,7 @@ __Example 12__ illustrates the use of the SUM built-in function.
 
 #### __Example 12: Use built-in function__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].SetValue("=SUM(A2, 3)");
-```
+<snippet id='codeblock-cqp'/>
 
 
 
@@ -278,16 +202,7 @@ __Example 13__ creates a FormulaCellValue using the CellValueFactory class.
 
 #### __Example 13: Create FormulaCellValue__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellIndex cellIndex = new CellIndex(0, 0);
-	
-	ICellValue cellValue;
-	CellValueFormat newFormatValue;
-	CellValueFactory.Create("=A2 + B2", worksheet, cellIndex, CellValueFormat.GeneralFormat, out cellValue, out newFormatValue);
-	worksheet.Cells[cellIndex].SetValue(cellValue);
-```
+<snippet id='codeblock-cqq'/>
 
 
 Using the __SetValue()__ method executes internal checks for the current cell value type using the current format and other conditions. If you are sure that the passed value is a formula, you can use the __SetValueAsFormula(string text)__ method directly which will improve the performance.
@@ -297,30 +212,13 @@ __Example 14__ shows how you can use the method.
 
 
 #### __Example 14: Create FormulaCellValue through SetValueAsFormula()__
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellIndex cellIndex = new CellIndex(0, 0);
-	
-	worksheet.Cells[cellIndex].SetValueAsFormula("=B1+B2");
-```
+<snippet id='codeblock-cqr'/>
 
 
 Depending on your requirements, you can obtain the formula from the cell represented by its definition or by the evaluated result value. **Example 15** shows both possibilities.
 
 #### __Example 15: Get the value of a cell containing formula__
-```csharp
-
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].SetValue("=SUM(A2, 3)");
-	worksheet.Cells[1, 0].SetValue(10);
-	ICellValue cellValue = worksheet.Cells[0, 0].GetValue().Value;
-	CellValueFormat format = worksheet.Cells[0, 0].GetFormat().Value;
-	
-	string valueAsString = cellValue.GetValueAsString(format); // =SUM(A2, 3)
-	string resultValue = cellValue.GetResultValueAsString(format); // 13
-```
+<snippet id='codeblock-cqs'/>
 
 ## Text Cell Value
 
@@ -335,11 +233,7 @@ __Example 16__ sets the value of cell A1 to the string "some test".
 
 #### __Example 16: Set TextCellValue__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].SetValue("some text");
-```
+<snippet id='codeblock-cqt'/>
 
 
 
@@ -351,12 +245,7 @@ __Example 17__ enters the string "=1+2" into a cell, however, because of the app
 
 #### __Example 17: Explicitly apply text value type__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Cells[0, 0].SetFormat(new CellValueFormat("@"));
-	worksheet.Cells[0, 0].SetValue("=1+2");
-```
+<snippet id='codeblock-cqu'/>
 
 
 
@@ -365,16 +254,7 @@ The same result could be achieved using the __Create()__ method of the __CellVal
 
 #### __Example 18: Create TextCellValue__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellIndex cellIndex = new CellIndex(0, 0);
-	
-	ICellValue cellValue;
-	CellValueFormat newFormatValue;
-	CellValueFactory.Create("=1 + 2", worksheet, cellIndex, new CellValueFormat("@"), out cellValue, out newFormatValue);
-	worksheet.Cells[cellIndex].SetValue(cellValue);
-```
+<snippet id='codeblock-cqv'/>
 
 
 If you are sure that the value is a string and need to create a text cell value, you can use the __SetValueAsText(string text)__ method directly. This would avoid the internal checks and parsing that are usually executed and improve the performance.
@@ -383,13 +263,7 @@ If you are sure that the value is a string and need to create a text cell value,
 __Example 19__ shows how to utilize the __SetValueAsText()__ method.
 
 #### __Example 19: Create TextCellValue through SetValueAsText__
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellIndex cellIndex = new CellIndex(0, 0);
-	
-	worksheet.Cells[cellIndex].SetValueAsText("This is most certainly a text.");
-```
+<snippet id='codeblock-cqw'/>
 
 
 

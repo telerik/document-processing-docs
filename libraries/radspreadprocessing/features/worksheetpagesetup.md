@@ -76,15 +76,7 @@ In order to fit the print content better, we use the Worksheet's page setup and 
 
 #### __Example 1: Use WorksheetPageSetup__
 
-```csharp
-
-	WorksheetPageSetup pageSetup = workbook.ActiveWorksheet.WorksheetPageSetup;
-	
-	pageSetup.PaperType = PaperTypes.A4;
-	pageSetup.PageOrientation = PageOrientation.Landscape;
-	pageSetup.ScaleFactor = new Size(0.9, 0.9);
-	pageSetup.CenterHorizontally = true;
-```
+<snippet id='codeblock-cld'/>
 
 As a result, we managed to fit the data into a single page with size A4 as shown in __Figure 2__.
       
@@ -114,16 +106,7 @@ The example shown in __Figure 3__ demonstrates how to use Worksheet's print area
 
 #### __Example 2: Set PrintArea__
 
-```csharp
-
-	PrintArea printArea = workbook.ActiveWorksheet.WorksheetPageSetup.PrintArea;
-	
-	printArea.SetPrintArea(new CellRange[]
-	{
-	    new CellRange(0, 0, 4, 8),
-	    new CellRange(1, 1, 25, 3)
-	});
-```
+<snippet id='codeblock-cle'/>
 
 
 
@@ -169,18 +152,7 @@ In order to separate semantically-correct the print data onto several pages, we 
 
 #### __Example 3: Insert PageBreaks__
 
-```csharp
-
-	PageBreaks pageBreaks = workbook.ActiveWorksheet.WorksheetPageSetup.PageBreaks;
-	
-	pageBreaks.TryInsertHorizontalPageBreak(5, 0);
-	pageBreaks.TryInsertHorizontalPageBreak(8, 0);
-	pageBreaks.TryInsertHorizontalPageBreak(11, 0);
-	pageBreaks.TryInsertHorizontalPageBreak(14, 0);
-	pageBreaks.TryInsertHorizontalPageBreak(17, 0);
-	pageBreaks.TryInsertHorizontalPageBreak(20, 0);
-	pageBreaks.TryInsertHorizontalPageBreak(23, 0);
-```
+<snippet id='codeblock-clf'/>
 
 
 
@@ -200,12 +172,7 @@ The __PrintTitles__ property of __WorksheetPageSetup__ enables you to set rows a
 
 #### __Example 4: Repeat the first two rows and two columns of the worksheet on each page__
 
-```csharp
-
-	WorksheetPageSetup pageSetup = workbook.ActiveWorksheet.WorksheetPageSetup;
-	pageSetup.PrintTitles.RepeatedRows = new RowRange(0, 1);
-	pageSetup.PrintTitles.RepeatedColumns = new ColumnRange(0, 1);
-```
+<snippet id='codeblock-clg'/>
 
 ## See Also
 

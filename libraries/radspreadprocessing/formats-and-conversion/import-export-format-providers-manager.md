@@ -11,26 +11,7 @@ position: 1
 
 __RadSpreadprocessing__ contains a __WorkbookFormatProvidersManager__ class that allows you to specify a set of format providers and import or export files letting the manager choose the appropriate format provider. The class also exposes methods that return all registered providers and supported file extensions. 
 
-```csharp
-public class WorkbookFormatProvidersManager
-{
-    public static IEnumerable<IWorkbookFormatProvider> FormatProviders { get; }
-
-    public static void Export(Workbook workbook, string extension, Stream output);
-    public static void Export(Workbook workbook, string extension, Stream output, IEnumerable<IWorkbookFormatProvider> formatProviders);
-
-    public static IWorkbookFormatProvider GetProviderByExtension(string extension);
-    public static IWorkbookFormatProvider GetProviderByName(string providerName);
-
-    public static IEnumerable<string> GetSupportedExtensions();
-    
-    public static Workbook Import(string extension, Stream input);
-    public static Workbook Import(string extension, Stream input, IEnumerable<IWorkbookFormatProvider> formatProviders);
-    
-    public static void RegisterFormatProvider(IWorkbookFormatProvider provider);
-    public static void UnregisterFormatProvider(IWorkbookFormatProvider provider);
-}
-```
+<snippet id='codeblock-cnz'/>
       
       
 ## Registering and Unregistering Format Providers
@@ -43,41 +24,26 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
 
 #### __Example 1: Register provider__
 
-```csharp
-	WorkbookFormatProvidersManager.RegisterFormatProvider(new XlsxFormatProvider());
-```
+<snippet id='codeblock-coa'/>
 
 
 
 #### __Example 1: Register provider__
 
-```csharp
-	WorkbookFormatProvidersManager.RegisterFormatProvider(New XlsxFormatProvider())
-```
+<snippet id='codeblock-cob'/>
 
 
 You can also unregister format providers using the `UnregisterFormatProvider()` method. __Example 2__ demonstrates how to unregister the [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider %}).
         
 #### __Example 2: Unregister provider__
 
-```csharp
-	IWorkbookFormatProvider provider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider");
-	if (provider != null)
-	{
-	    WorkbookFormatProvidersManager.UnregisterFormatProvider(provider);
-	}
-```
+<snippet id='codeblock-coc'/>
 
 
 
 #### __Example 2: Unregister provider__
 
-```csharp
-	Dim provider As IWorkbookFormatProvider = WorkbookFormatProvidersManager.GetProviderByName("TxtFormatProvider")
-	If provider IsNot Nothing Then
-	    WorkbookFormatProvidersManager.UnregisterFormatProvider(provider)
-	End If
-```
+<snippet id='codeblock-cod'/>
 
 ## Import
 
@@ -92,43 +58,12 @@ __Example 3__ demonstrates how to present the user with an `OpenFileDialog` and 
 
 #### __Example 3: Import a file using OpenFileDialog__
 
-```csharp
-	OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog();
-	openFileDialog.Filter = Telerik.Windows.Controls.Spreadsheet.Utilities.FileDialogsHelper.GetOpenFileDialogFilter();
-	if (openFileDialog.ShowDialog() == true)
-	{
-	    try
-	    {
-	        string extension = Path.GetExtension(openFileDialog.SafeFileName);
-	        using (Stream input = openFileDialog.OpenFile())
-	        {
-	            workbook = WorkbookFormatProvidersManager.Import(extension, input);
-	        }
-	    }
-	    catch (IOException ex)
-	    {
-	        throw new IOException("The file cannot be opened. It might be locked by another application.", ex);
-	    }
-	}
-```
+<snippet id='codeblock-coe'/>
 
 
 #### __Example 3: Import a file using OpenFileDialog__
 
-```csharp
-	Dim openFileDialog As New Microsoft.Win32.OpenFileDialog()
-	openFileDialog.Filter = FileDialogsHelper.GetOpenFileDialogFilter()
-	If openFileDialog.ShowDialog() = True Then
-	    Try
-	        Dim extension As String = Path.GetExtension(openFileDialog.GetFileName())
-	        Using input As Stream = openFileDialog.OpenFileStream()
-	            editor.Owner.Workbook = WorkbookFormatProvidersManager.Import(extension, input)
-	        End Using
-	    Catch ex As IOException
-	        Throw New IOException("The file cannot be opened. It might be locked by another application.", ex)
-	    End Try
-	End If
-```
+<snippet id='codeblock-cof'/>
 
 
 > The OpenFileDialog class exposes a different API in Silverlight. The name of the file could be obtained through the File.Name property of `OpenFileDialog` and the stream you can get using `File.OpenRead()`.
@@ -152,34 +87,12 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 
 #### __Example 4: Save a file using SaveFileDialog__
 
-```csharp
-	Microsoft.Win32.SaveFileDialog saveFileDialog = new Microsoft.Win32.SaveFileDialog();
-	saveFileDialog.Filter = Telerik.Windows.Controls.Spreadsheet.Utilities.FileDialogsHelper.GetSaveFileDialogFilter();
-	
-	if (saveFileDialog.ShowDialog() == true)
-	{
-	    string extension = Path.GetExtension(saveFileDialog.SafeFileName);
-	    using (Stream output = saveFileDialog.OpenFile())
-	    {
-	        WorkbookFormatProvidersManager.Export(workbook, extension, output);
-	    }
-	}
-```
+<snippet id='codeblock-cog'/>
 
 
 #### __Example 4: Save a file using SaveFileDialog__
 
-```csharp
-	Dim saveFileDialog As New Microsoft.Win32.SaveFileDialog()
-	saveFileDialog.Filter = FileDialogsHelper.GetSaveFileDialogFilter()
-	
-	If saveFileDialog.ShowDialog() = True Then
-	    Dim extension As String = Path.GetExtension(saveFileDialog.SafeFileName)
-	    Using output As Stream = saveFileDialog.OpenFile()
-	        WorkbookFormatProvidersManager.Export(workbook, extension, output)
-	    End Using
-	End If
-```
+<snippet id='codeblock-coh'/>
 
 
 You can achieve the same result through using the __SaveFile__ command. In fact, the command executes exactly the same code as above. That said, make sure you register the format providers you would like to use before using the command.

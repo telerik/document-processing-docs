@@ -45,67 +45,20 @@ All of the listed providers implement the `IWorkbookFormatProvider` and `IBinary
 
 ### IWorkbookFormatProvider interface methods
 
-```csharp
-public interface IWorkbookFormatProvider
-{
-    string Name { get; }
-    string FilesDescription { get; }
-    IEnumerable<string> SupportedExtensions { get; }
-    bool CanImport { get; }
-    bool CanExport { get; }
-
-    // Import and Export methods with Stream support
-    void Export(Workbook workbook, Stream output);
-    Workbook Import(Stream input);
-}
-```
+<snippet id='codeblock-cnu'/>
 
 __Example__: Use FormatProver's Import() and Export() methods with `Stream` array 
 
-```csharp
-var path = "MyWorkbook.xlsx";
-Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
-IWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
-
-// Import 
-using (Stream input = new FileStream(path, FileMode.Open))
-{
-    workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
-}
-
-// Export
-using (Stream output = new FileStream(path, FileMode.Create))
-{
-    formatProvider.Export(workbook, output);
-}
-```
+<snippet id='codeblock-cnv'/>
 
 
 ### IBinaryWorkbookFormatProvider interface methods
 
-```csharp
-public interface IBinaryWorkbookFormatProvider : IWorkbookFormatProvider
-{
-    // Overloading IWorkbookFormatProvider's Import and Export methods to support byte[]
-    byte[] Export(Workbook workbook);
-    Workbook Import(byte[] input);
-}
-```
+<snippet id='codeblock-cnw'/>
 
 __Example__: Use FormatProver's Import() and Export() methods with `byte[]` array 
 
-```csharp
-var path = "MyWorkbook.xlsx";
-Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
-IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.XlsxFormatProvider();
-
-// Import
-byte[] fileAsByteArray = File.ReadAllBytes(path);
-workbook = formatProvider.Import(fileAsByteArray, TimeSpan.FromSeconds(10));
-
-// Export
-byte[] workbookAsByteArray = formatProvider.Export(workbook, TimeSpan.FromSeconds(10));
-```
+<snippet id='codeblock-cnx'/>
 
 >note For more examples of importing and exporting workbooks check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
 
@@ -135,26 +88,7 @@ The document model of RadSpreadProcessing also contains a __WorkbookFormatProvid
 
 More information on the Format Providers Manager and the __WorkbookFormatProvidersManager__ class can be found in the dedicated [Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager %}) article.
       
-```csharp
-public class WorkbookFormatProvidersManager
-{
-    public static IEnumerable<IWorkbookFormatProvider> FormatProviders { get; }
-
-    public static void Export(Workbook workbook, string extension, Stream output);
-    public static void Export(Workbook workbook, string extension, Stream output, IEnumerable<IWorkbookFormatProvider> formatProviders);
-
-    public static IWorkbookFormatProvider GetProviderByExtension(string extension);
-    public static IWorkbookFormatProvider GetProviderByName(string providerName);
-
-    public static IEnumerable<string> GetSupportedExtensions();
-    
-    public static Workbook Import(string extension, Stream input);
-    public static Workbook Import(string extension, Stream input, IEnumerable<IWorkbookFormatProvider> formatProviders);
-    
-    public static void RegisterFormatProvider(IWorkbookFormatProvider provider);
-    public static void UnregisterFormatProvider(IWorkbookFormatProvider provider);
-}
-```
+<snippet id='codeblock-cny'/>
 
 ## See Also
 
