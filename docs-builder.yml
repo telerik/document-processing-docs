@@ -110,6 +110,9 @@ meta:
   libraries/radpdfprocessing/features/gen-ai-powered-document-insights:
     title: GenAI-powered Document Insights
     position: 6
+  libraries/radpdfprocessing/features/pdf-portfolio:
+    title: PDF Portfolio
+    position: 10
   libraries/radpdfprocessing/features/embedded-file-streams:
     title: Embedded File Streams
     position: 5
