@@ -125,23 +125,7 @@ Using the above approach you can set the value of almost all cell properties. Th
 
 #### Example 3: Using SetIsStrikethrough and SetVerticalTextAlignment
 
-```csharp
-Workbook workbook = new Workbook();
-Worksheet worksheet = workbook.Worksheets.Add();
-
-CellSelection cell = worksheet.Cells[0, 0];
-cell.SetValue("This text is strikethrough");
-cell.SetIsStrikethrough(true);
-
-cell = worksheet.Cells[1, 0];
-cell.SetValue("This text is superscript");
-cell.SetVerticalTextAlignment(VerticalTextAlignment.Superscript);
-
-cell = worksheet.Cells[2, 0];
-cell.SetValue("This text is subscript");
-cell.SetVerticalTextAlignment(VerticalTextAlignment.Subscript);
-
-```
+<snippet id='codeblock-strikethrough'/>
 
 <img style="border: 1px solid gray;" src="images/set-strikethrough-superscript-subscript-text.png" alt="Set Strikethrough Superscript Subscript-text" /> 
 
