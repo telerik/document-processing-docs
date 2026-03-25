@@ -205,6 +205,9 @@ string documentId = null)</pre></td><td>Fetches description, syntax, and paramet
 
 ### SpreadProcessingAnalysisAgentTools
 
+|Minimum Version|Q1 2026 (version 2026.1.401)|
+|----|----|
+
 Provides high-level data analysis agent tools that follow a **Split-Apply-Combine** pattern for working with tabular data without requiring knowledge of Excel formulas or cell addresses. These tools enable agents to:
 
   - Examine worksheet structure, column names, data types, and sample values.
