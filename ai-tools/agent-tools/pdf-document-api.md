@@ -93,6 +93,8 @@ Provides document lifecycle management tools for creating, listing, importing, a
 |Minimum Version|Q1 2026 (version 2026.1.401)|
 |----|----|
 
+Provides agent tools for reading and inspecting PDF document content. These tools handle text extraction, document description, text search, and bookmark reading.
+
 <table>
 <tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
 <tr><td>ExtractTextFromPdf</td><td><pre>CallToolResult ExtractTextFromPdf(
