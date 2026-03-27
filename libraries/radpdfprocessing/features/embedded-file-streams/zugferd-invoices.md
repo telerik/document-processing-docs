@@ -41,6 +41,10 @@ RadPdfProcessing offers the functionality to specify the **ZugferdConformanceLev
 
 <snippet id='pdf-specify-zugferd-conformance-level'/>
 
+## Validating Documents
+
+RadPdfProcessing follows the business‑rule validation for ZUGFeRD / Factur‑X XML published by European Committee for Standardization: [Open-source E-invoice Validator](https://interoperable-europe.ec.europa.eu/collection/eprocurement/news/open-source-e-invoice-validator).
+
 ## See Also
 
 * [Embedded File Streams]({%slug radpdfprocessing-embedded-file-streams-overview%})
