@@ -23,24 +23,11 @@ The __WorkbookFormatProvidersManager__ class contains two methods that allow you
 
 <snippet id='codeblock-coa'/>
 
-
-
-#### __Example 1: Register provider__
-
-<snippet id='codeblock-cob'/>
-
-
 You can also unregister format providers using the `UnregisterFormatProvider()` method. __Example 2__ demonstrates how to unregister the [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider %}).
         
 #### __Example 2: Unregister provider__
 
 <snippet id='codeblock-coc'/>
-
-
-
-#### __Example 2: Unregister provider__
-
-<snippet id='codeblock-cod'/>
 
 ## Import
 
@@ -56,12 +43,6 @@ __Example 3__ demonstrates how to present the user with an `OpenFileDialog` and 
 #### __Example 3: Import a file using OpenFileDialog__
 
 <snippet id='codeblock-coe'/>
-
-
-#### __Example 3: Import a file using OpenFileDialog__
-
-<snippet id='codeblock-cof'/>
-
 
 > The OpenFileDialog class exposes a different API in Silverlight. The name of the file could be obtained through the File.Name property of `OpenFileDialog` and the stream you can get using `File.OpenRead()`.
 
@@ -85,12 +66,6 @@ __Example 4__ illustrates how to use the __Export()__ method to save a file. The
 #### __Example 4: Save a file using SaveFileDialog__
 
 <snippet id='codeblock-cog'/>
-
-
-#### __Example 4: Save a file using SaveFileDialog__
-
-<snippet id='codeblock-coh'/>
-
 
 You can achieve the same result through using the __SaveFile__ command. In fact, the command executes exactly the same code as above. That said, make sure you register the format providers you would like to use before using the command.
         
