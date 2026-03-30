@@ -80,6 +80,9 @@ As of **Q1 2025** the [PdfExportSettings]({%slug radpdfprocessing-formats-and-co
 |**NotSupportedAnnotationException**|Represents an exception for an annotation which is not supported.|
 |**InvalidImageDataException**|Represents an exception for importing an invalid image data.|
 |**NotSupportedPdfPrimitivesConversionException**|Represents an exception thrown when attempting to convert unsupported PDF primitive types.|
+|**InvalidStructureTreeException**|Thrown when the PDF structure tree contains invalid or malformed elements during import. This exception wraps lower-level errors such as invalid page references or object references encountered while parsing the document's logical structure.|
+|**InvalidObjectReferenceException**|Thrown when a PDF object reference is invalid during import or processing. This occurs when a structure element's object reference points to an unrecognized object type.|
+|**InvalidPageReferenceException**|Thrown when a PDF page reference is invalid during import or processing. This occurs when a structure element's Page property references a non-page object.|
 
 # See Also
 
