@@ -68,7 +68,6 @@ Unlike the __CsvFormatProvider__, __TxtFormatProvider__ and __DataTableFormatPro
 
 - **XlsxFormatProvider** and **XlsmFormatProvider** additional package references
   * Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml
-  * ~~Telerik.Windows.Zip~~*
 
   >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
@@ -88,8 +87,6 @@ The document model of RadSpreadProcessing also contains a __WorkbookFormatProvid
 
 More information on the Format Providers Manager and the __WorkbookFormatProvidersManager__ class can be found in the dedicated [Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager %}) article.
       
-<snippet id='codeblock-cny'/>
-
 ## See Also
 
  * [Activate a Worksheet]({%slug radspreadprocessing-working-with-worksheets-activate-worksheet%})

@@ -9,10 +9,7 @@ position: 1
 
 # Format Providers Manager
 
-__RadSpreadprocessing__ contains a __WorkbookFormatProvidersManager__ class that allows you to specify a set of format providers and import or export files letting the manager choose the appropriate format provider. The class also exposes methods that return all registered providers and supported file extensions. 
-
-<snippet id='codeblock-cnz'/>
-      
+__RadSpreadprocessing__ contains a [WorkbookFormatProvidersManager](https://www.telerik.com/document-processing-libraries/documentation/api/telerik.windows.documents.spreadsheet.formatproviders.workbookformatprovidersmanager) class that allows you to specify a set of format providers and import or export files letting the manager choose the appropriate format provider. The class also exposes methods that return all registered providers and supported file extensions.     
       
 ## Registering and Unregistering Format Providers
 
