@@ -203,6 +203,53 @@ List&lt;string&gt; formulaNames,
 string documentId = null)</pre></td><td>Fetches description, syntax, and parameter metadata for the specified formula names.</td></tr>
 </table>
 
+### SpreadProcessingAnalysisAgentTools
+
+|Minimum Version|Q1 2026 (version 2026.1.401)|
+|----|----|
+
+Provides high-level data analysis agent tools that follow a **Split-Apply-Combine** pattern for working with tabular data without requiring knowledge of Excel formulas or cell addresses. These tools enable agents to:
+
+  - Examine worksheet structure, column names, data types, and sample values.
+  - Detect multiple separate data tables within a single worksheet.
+  - Retrieve and filter rows with pagination support for browsing large datasets.
+  - Perform aggregations (Sum, Average, Count, Min, Max, CountDistinct) with optional filtering and grouping.
+  - Compute grouped summaries (e.g., total sales per product category).
+
+The recommended workflow is: call **DescribeData** first to understand the worksheet layout, then use **GetRows** to inspect specific records, and **Aggregate** to compute summaries.
+
+<table>
+<tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
+<tr><td>DescribeData</td><td><pre>CallToolResult DescribeData(
+    string worksheetName = null,
+    string documentId = null,
+    bool detectAllRegions = false)</pre></td><td>Returns comprehensive information about the worksheet structure including column headers with their zero-based indices, data types, row count, and sample values. Call this tool first before using Aggregate or GetRows, as the output provides the column indices those tools require. When detectAllRegions is true, detects multiple data tables within the worksheet.</td></tr>
+<tr><td>GetRows</td><td><pre>CallToolResult GetRows(
+    List&lt;Criterion&gt; criteria = null,
+    CriteriaLogic criteriaLogic = CriteriaLogic.And,
+    List&lt;int&gt; returnColumns = null,
+    int offset = 0,
+    int limit = 20,
+    string worksheetName = null,
+    int? regionIndex = null,
+    string documentId = null)</pre></td><td>Returns actual row data matching specified filter criteria with pagination support. Use this when you need to display specific records rather than summary statistics. Filter using criteria with operators such as Equals, Contains, GreaterThan, and others. Select specific columns to return using returnColumns. Default limit is 20 rows (maximum 100); use offset for pagination. For date columns, use ISO date strings (YYYY-MM-DD) as criterion values.</td></tr>
+<tr><td>Aggregate</td><td><pre>CallToolResult Aggregate(
+    AggregationType function,
+    int? valueColumnIndex = null,
+    string valueExpression = null,
+    List&lt;Criterion&gt; criteria = null,
+    CriteriaLogic criteriaLogic = CriteriaLogic.And,
+    List&lt;int&gt; groupByColumns = null,
+    SortOrder? orderBy = null,
+    int? limit = null,
+    HavingCriterion havingCriteria = null,
+    string worksheetName = null,
+    string documentId = null,
+    int? regionIndex = null,
+    int? headerRowIndex = null,
+    int? dataStartColumnIndex = null)</pre></td><td>Performs data aggregation with optional filtering and grouping. Supports Count, Sum, Average, Min, Max, and CountDistinct functions. Filter rows using criteria with operators such as Equals, Contains, GreaterThan, and others. Group results by one or more columns, sort by aggregate value, and limit to top N results. Supports HAVING filters on aggregated values and computed value expressions (e.g., price × quantity). For date columns, use ISO date strings (YYYY-MM-DD) as criterion values.</td></tr>
+</table>
+
 ## See Also
 
 * [Getting Started with DPL Agent Tools]({%slug agent-tools-getting-started%})

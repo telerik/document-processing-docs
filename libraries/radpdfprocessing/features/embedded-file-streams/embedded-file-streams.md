@@ -24,6 +24,11 @@ RadFixedDocument stores the integrated files in an **EmbeddedFilesCollection** a
 |**Name**|Gets or sets the attachment's display file name (including extension) shown in viewer UIs.|
 |**Data**|Represents the file data as a byte array.|
 |**MimeType**|Gets or sets the MIME type of the embedded file. The MIME type string (e.g., "application/xml", "text/xml", etc.). If not specified, the default value of "application/octet-stream" will be used. (*introduced in Q1 2026*) |
+|**Description**|Gets or sets the description of the embedded file. This value is displayed in the Description column of a [PDF Portfolio]({%slug radpdfprocessing-pdf-portfolio-overview%}) when the schema includes an AddDescriptionField(). (*introduced in Q1 2026*)|
+|**CreationDate**|Gets or sets the creation date of the embedded file. This value is displayed in the Created column of a [PDF Portfolio]({%slug radpdfprocessing-pdf-portfolio-overview%}) when the schema includes an AddCreationDateField(). (*introduced in Q1 2026*)|
+|**ModificationDate**|Gets or sets the modification date of the embedded file. This value is displayed in the Modified column of a [PDF Portfolio]({%slug radpdfprocessing-pdf-portfolio-overview%}) when the schema includes an AddModificationDateField(). (*introduced in Q1 2026*)|
+|**Size**|Gets the size of the embedded file in bytes. This value is automatically calculated from the Data property. (*introduced in Q1 2026*)|
+|**CollectionItems**|Gets the collection item values for this embedded file in a [PDF Portfolio]({%slug radpdfprocessing-pdf-portfolio-overview%}). Use this property to set metadata that appears in the portfolio's columns when viewing embedded files. (*introduced in Q1 2026*)|
 
 >note [PdfProcessing Embedding File Streams Demo](https://demos.telerik.com/document-processing/pdfprocessing/embed_file_streams)
 
@@ -75,5 +80,6 @@ When importing a PDF document containing embedded files, the **DuplicatedEmbedde
 
 ## See Also
 
+* [PDF Portfolio]({%slug radpdfprocessing-pdf-portfolio-overview%})
 * [PdfProcessing Embedding File Streams Demo](https://demos.telerik.com/document-processing/pdfprocessing/embed_file_streams)
 
