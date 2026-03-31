@@ -45,8 +45,9 @@ This article will get you familiar with the basics of __RadFixedDocument__. It c
 
 |Method|Description|
 |----|----|
-|**Merge**|Merges this document with the specified source document.|
-|**Clone**|Clones the document content.|
+|**Merge**|Merge pages, form fields, destinations, actions, scripts, files, and bookmarks from the specified source document.|
+|**Clone**|Deep clone the document (pages, form fields, annotations, destinations, files, scripts, bookmarks) into a new instance.|
+|**Clone(int startPageIndex, int pageCount)**|Creates a new RadFixedDocument containing deep copies of the pages in the specified range. Form fields with widgets on included pages, named destinations pointing to included pages, embedded files, JavaScript actions, and bookmarks are also cloned into the new document.|
 |**ToSimpleTextDocument**|Converts the current document to a plain text document.|
 
 |Event|Description|
