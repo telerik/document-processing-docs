@@ -18,13 +18,11 @@ ticketid: 1712335
 
 ## Description
 
-When processing a PDF using [TextFragment](https://www.telerik.com/document-processing-libraries/documentation/libraries/radpdfprocessing/model/textfragment) objects in Telerik PdfProcessing, text may be split into fragments in an arbitrary manner due to the internal structure of PDF files. This behavior can lead to scenarios where text fragments do not align with the desired words or phrases, making it difficult to replace specific text. There is no direct way to edit text on a character-by-character basis within a `TextFragment`.
+When processing a PDF using [TextFragment]({%slug radpdfprocessing-model-textfragment%}) objects in Telerik PdfProcessing, text may be split into fragments in an arbitrary manner due to the internal structure of PDF files. This behavior can lead to scenarios where text fragments do not align with the desired words or phrases, making it difficult to replace specific text. There is no direct way to edit text on a character-by-character basis within a `TextFragment`.
 
-This knowledge base article also answers the following questions:
+This knowledge base article demonstrates a sample approach how to replace text spanning multiple TextFragments in Telerik PdfProcessing.
 
-- How can I replace text spanning multiple TextFragments in Telerik PdfProcessing?
-- How do I handle inconsistent text splitting in PDF text fragments?
-- What is the workaround for modifying specific text within a PDF?
+<img style="border: 1px solid gray;" src="images/replace-specific-text-spanning-textfragments-pdfprocessing.png" alt="Replacing Specific Text in PDF Spanning Multiple TextFragments" /> 
 
 ## Solution
 
@@ -141,6 +139,5 @@ private static void ReplaceTextInPage(RadFixedPage page, string textToRemove, st
 
 ## See Also
 
-- [TextFragment Documentation](https://www.telerik.com/document-processing-libraries/documentation/libraries/radpdfprocessing/model/textfragment)
-- [RadPdfProcessing Overview](https://www.telerik.com/document-processing-libraries/documentation/libraries/radpdfprocessing/overview)
-- [Feature Request: Introduce Replace API](https://feedback.telerik.com/document-processing/1454044-pdfprocessing-introduce-replace-api)
+- [TextFragment]({%slug radpdfprocessing-model-textfragment%}) 
+- [TextSearch]({%slug radwordsprocessing-features-search%})  
