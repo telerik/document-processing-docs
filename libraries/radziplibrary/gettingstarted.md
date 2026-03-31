@@ -33,16 +33,7 @@ The code snippet from __Example 1__ demonstrates how to open existing Zip archiv
 
 #### __Example 1: Open archive__
 
-```csharp
-	            
-	using (Stream stream = File.Open("test.zip", FileMode.Open))
-	{
-	    using (ZipArchive archive = ZipArchive.Create(stream))
-	    {
-	        // Display the list of the files in the selected zip file using the ZipArchive.Entries property.
-	    }
-	}
-```
+<snippet id='codeblock-dse'/>
 
 The *archive* variable holds the files that are compressed in the selected zip. You can access the list of these files through the __ZipArchive.Entries__ property. It holds a collection of [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) elements - the elements that describe the files archived in the zip file. You can use these elements to get the name of the compressed file, its uncompressed and compressed size and other file attributes.
         
@@ -53,21 +44,7 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
 
 #### __Example 2: Create archive__
 
-```csharp
-	    
-	using (Stream stream = File.Open("test.zip", FileMode.Create))
-	{
-	    using (ZipArchive archive = ZipArchive.Create(stream, null))
-	    {
-	        using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
-	        {
-	            StreamWriter writer = new StreamWriter(entry.Open());
-	            writer.WriteLine("Hello world!");
-	            writer.Flush();
-	        }
-	    }
-	}
-```
+<snippet id='codeblock-dsf'/>
 
 >tip If you use __StreamWriter__ to write content to the stream, you should call the Flush() method in order to flush the data to the stream.
           
@@ -77,25 +54,7 @@ The constructor of ZipArchive lets you specify whether you would like to keep th
 
 #### __Example 3: Create archive in a MemoryStream__
 
-```csharp
-
-    Stream memoryStream = new MemoryStream();
-
-    // The third parameter of ZipArchive's constructor specifies that the stream should be left open 
-    using (ZipArchive archive = ZipArchive.Create(memoryStream, null))
-    {
-        using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
-        {
-            Stream entryStream = entry.Open();
-            StreamWriter writer = new StreamWriter(entryStream);
-            writer.WriteLine("Hello world!");
-            writer.Flush();
-        }
-    }
-    
-    // Save memoryStream to a file or send it to client
-
-```
+<snippet id='codeblock-dsg'/>
 
 For more complete examples head to the [Developer Focused Examples]({%slug radziplibrary-sdk-examples%}) section of the library.
 

@@ -27,12 +27,7 @@ __Example 1__ demonstrates how to create DeflateSettings.
 
 #### __Example 1: Create DeflateSettings__
 
-```csharp
-	            
-	DeflateSettings compressionSettings = new DeflateSettings();
-	compressionSettings.CompressionLevel = CompressionLevel.Best;
-	compressionSettings.HeaderType = CompressedStreamHeader.ZLib;
-```
+<snippet id='codeblock-dsk'/>
 
 ## LZMA Settings
 
@@ -56,16 +51,7 @@ The configurable parameters of the __LzmaSettings__ class are as follows:
             
 #### __Example 2: Create LzmaSettings__
 
-```csharp
-	            
-	LzmaSettings compressionSettings = new LzmaSettings();
-	compressionSettings.DictionarySize = 23;
-	compressionSettings.FastBytes = 32;
-	compressionSettings.LiteralContextBits = 3;
-	compressionSettings.LiteralPositionBits = 3;
-	compressionSettings.MatchFinderType = LzmaMatchFinderType.BT4;
-	compressionSettings.PositionStateBits = 2;
-```
+<snippet id='codeblock-dsl'/>
 
 ## Store Settings
 
@@ -73,9 +59,7 @@ Store settings are used to just store the data using no compression.
         
 #### __Example 3: Create StoreSettings__
 
-```csharp
-	StoreSettings compressionSettings = new StoreSettings();
-```
+<snippet id='codeblock-dsm'/>
 
 ## See Also
 
