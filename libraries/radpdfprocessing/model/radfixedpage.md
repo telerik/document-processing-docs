@@ -31,7 +31,13 @@ __RadFixedPage__ exposes the following properties:
 |__CropBox__| Defines the region to which the contents of the page are clipped (cropped) when displayed or printed. This boundary determines the visible page content. The default value is the page’s media box. |
 |__Size__|Property of type Size representing the size of the page. Its value is determined by the width and height of the **MediaBox** in points. It defines the physical dimensions of the page in PDF units - where 1 point = 1/72 inch. So, for example: A page size of Size(612, 792) corresponds to 8.5 x 11 inches (standard US Letter size).|1
 |__Rotation__|Property of type [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) representing the page rotation.|
-|**Actions**|Gets the page [actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) collection.|        
+|**Actions**|Gets the page [actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) collection.|      
+
+**RadFixedPage** exposes the following methods:
+
+|Method Name|Description|
+|----|----|
+|**Clone**|Deep clone this page, including all content elements, annotations, and associated form fields. The cloned page has no parent document; add it to a RadFixedDocument.Pages collection to use it.|
 
 RadFixedPage is typically used when:
 
