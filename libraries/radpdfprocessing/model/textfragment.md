@@ -89,3 +89,4 @@ You can modify a **TextFragment** element using the properties listed in the [Pu
  * [Block]({%slug radpdfprocessing-editing-block%})
  * [Extracting Text Within a Specific Rectangle in PDF Documents]({%slug extract-text-specific-rectangle-pdf-radpdfprocessing%})
  * [Getting Position and Size of TextFragment in PDF Documents]({%slug get-textfragment-position-size-radpdfprocessing%})
+ * [Replacing Specific Text in PDF Spanning Multiple TextFragments inTelerik PdfProcessing]({%slug replace-specific-text-spanning-textfragments-pdfprocessing%})
