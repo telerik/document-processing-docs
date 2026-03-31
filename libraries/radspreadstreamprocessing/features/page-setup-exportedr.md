@@ -25,30 +25,7 @@ An important part is that you need to place the **PageSetupExporer** after the c
 
 #### **Example 1: Using  PageSetupExporter**
 
-```csharp
-
-    using (FileStream stream = File.Open(fileName, FileMode.OpenOrCreate))
-    {
-        using (IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(documentFormat, stream))
-        {
-            using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("Date"))
-            {
-    			// export cells here
-    
-                using (IPageSetupExporter pageSetupExporter = worksheet.CreatePageSetupExporter())
-                {
-                    pageSetupExporter.SetFitToPagesTall(2);
-                    pageSetupExporter.SetFitToPagesWide(3);
-                    pageSetupExporter.SetPageOrder(SpreadPageOrder.OverThenDown);
-                    pageSetupExporter.SetPageOrientation(SpreadPageOrientation.Landscape);
-                    pageSetupExporter.SetPaperSize(SpreadPaperSize.A5);
-                    pageSetupExporter.SetScaleFactor(1.5);
-                }
-            }
-        }
-    }
-
-```
+<snippet id='codeblock-dku'/>
 
 
 >IPageSetupExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.

@@ -29,11 +29,7 @@ A concrete instance of IRowExporter could be created through the CreateRowExport
 #### **Example 1: Create IRowExporter**
 
 
-```csharp
-	using (IRowExporter row = worksheet.CreateRowExporter())
-	{
-	}
-```
+<snippet id='codeblock-dlq'/>
 
 >IRowExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -50,12 +46,7 @@ In order to customize the way a row appears, you could use one of the following 
 
 #### **Example 2: Set properties to IRowExporter**
 
-```csharp
-	using (IRowExporter row = worksheet.CreateRowExporter())
-	{
-	    row.SetHeightInPixels(200);
-	}
-```
+<snippet id='codeblock-dlr'/>
 
 \* Due to the specifics of the library, RadSpreadStreamProcessing doesn't support auto fitting the height of the rows. You can find information on how you can calculate the height needed for specific content in the [Get Cell Content Size]({%slug radspreadstreamprocessing-features-text-measuring%}) topic.
 
@@ -67,13 +58,7 @@ In some cases you may need to skip several rows and start filling the data in th
 
 #### **Example 3: Skip rows**
 
-```csharp
-	worksheet.SkipRows(5);
-	using (IRowExporter row = worksheet.CreateRowExporter())
-	{
-	    row.SetHidden(true); // The sixth row will be hidden.
-	}
-```
+<snippet id='codeblock-dls'/>
 
 ## Read a Row
 
@@ -83,12 +68,7 @@ A concrete instance of IRowImporter could be obtained through the Rows collectio
 
 #### **Example 4: Create IRowImporter**
 
-```csharp
-
-	foreach (IRowImporter rowImporter in worksheetImporter.Rows)
-	{
-	}
-```
+<snippet id='codeblock-dlt'/>
 
 
 The IRowImporter interface exposes the following properties to allow you access its data:

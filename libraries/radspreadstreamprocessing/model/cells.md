@@ -30,11 +30,7 @@ A concrete instance of ICellExporter could be created through the **CreateCellEx
 #### **Example 1: Using ICellExporter**
 
 
-```csharp
-	using (ICellExporter cell = row.CreateCellExporter())
-	{
-	}
-```
+<snippet id='codeblock-dle'/>
 
 >ICellExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -53,12 +49,7 @@ The **SetValue()** method exposes several overloads allowing you to set values f
 
 #### **Example 2: Setting a value to a cell**
 
-```csharp
-	using (ICellExporter cell = row.CreateCellExporter())
-	{
-	    cell.SetValue(123.456);
-	}
-```
+<snippet id='codeblock-dlf'/>
 
 
 ### Set a Formula
@@ -67,12 +58,7 @@ In order to allow you setting a formula as a value of a cell, ICellExporter defi
 
 #### **Example 4: Setting a formula to a cell**
 
-```csharp
-	using (ICellExporter cell = row.CreateCellExporter())
-	{
-	    cell.SetFormula("=Sum(A1, B2)");
-	}
-```
+<snippet id='codeblock-dlg'/>
 
 
 >All formulas should be set in **InvariantCulture**. For example, the decimal separator should be “.”, the list separator should be “,”.
@@ -86,17 +72,7 @@ In some cases you may need to skip several cells and start filling the data in t
 
 #### **Example 3: Skip cells**
 
-```csharp
-	row.SkipCells(5);
-	using (ICellExporter cell = row.CreateCellExporter())
-	{
-	    cell.SetValue("Aligned cell");
-	    cell.SetFormat(new SpreadCellFormat()
-	    {
-	        VerticalAlignment = SpreadVerticalAlignment.Center
-	    });
-	}
-```
+<snippet id='codeblock-dlh'/>
 
 ### Merge Cells
 
@@ -104,12 +80,7 @@ In some cases you may need to skip several cells and start filling the data in t
 
 #### **Example 5: Merge cells**
 
-```csharp
-	using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("Sheet 1")) 
-	{
-	    worksheet.MergeCells(3, 3, 10, 10);
-	}
-```
+<snippet id='codeblock-dli'/>
 
 >important Due to the importance of the order the content is inserted in a document, the Merge operation must be the last operation before disposing IWorksheetExporter.
 
@@ -166,72 +137,13 @@ Another method, exposed by **ICellExporter** - SetFormat() - enables you to chan
 	
 
 #### **Example 6: Format cells**
-```csharp
-	SpreadBorder border = new SpreadBorder(SpreadBorderStyle.Thick, new SpreadThemableColor(new SpreadColor(255, 0, 0)));
-	
-	SpreadCellFormat cellFormat = new SpreadCellFormat()
-	{
-	    TopBorder = border,
-	    BottomBorder = border,
-	    DiagonalDownBorder = border,
-	    DiagonalUpBorder = border,
-	    LeftBorder = border,
-	    RightBorder = border,
-	    Fill = SpreadPatternFill.CreateSolidFill(new SpreadColor(255, 0, 0)),
-	    FontFamily = new SpreadThemableFontFamily(SpreadThemeFontType.Major),
-	    FontSize = 22,
-	    ForeColor = new SpreadThemableColor(new SpreadColor(0, 255, 0)),
-	    Underline = SpreadUnderlineType.DoubleAccounting,
-	    IsBold = true,
-	    IsItalic = true,
-	    HorizontalAlignment = SpreadHorizontalAlignment.Fill,
-	    Indent = 5,
-	    VerticalAlignment = SpreadVerticalAlignment.Top,
-	    WrapText = false
-	};
-	
-	cell.SetFormat(cellFormat);
-```
+<snippet id='codeblock-dlj'/>
 
 In addition to the listed properties, the SpreadCellFormat class allows you to set a style to a cell. For more information on cell styles, check [this topic]({%slug radspreadstreamprocessing-features-styling-cell-styles%})
 
 #### **Example 7: Set the value format to string, date or a number**
 
-```csharp
-	using (ICellExporter cell = row.CreateCellExporter())
-	{
-		SpreadCellFormat format = new SpreadCellFormat()
-		{
-			NumberFormat = "@",
-			IsBold = true
-		};
-		cell.SetFormat(format);
-		cell.SetValue("test");
-	}
-
-	using (ICellExporter cell = row.CreateCellExporter())
-	{
-		SpreadCellFormat format = new SpreadCellFormat()
-		{
-			NumberFormat = "dd/mm/yyyy",
-			IsBold = true
-		};
-		cell.SetFormat(format);
-		cell.SetValue(DateTime.Now.ToOADate());
-	}
-
-	using (ICellExporter cell = row.CreateCellExporter())
-	{
-		SpreadCellFormat format = new SpreadCellFormat()
-		{
-			NumberFormat = "#,##0.00",
-			IsBold = true
-		};
-		cell.SetFormat(format);
-		cell.SetValue(42370.12);
-	}
-
-```
+<snippet id='codeblock-dlk'/>
 
 A SpreadCellFormat instance could be applied on multiple cells. However, if a property of the format changes, the new settings will be applied to the cells formatted after the modification.
 
@@ -243,16 +155,7 @@ A concrete instance of ICellImporter could be obtained through the Cells collect
 
 #### **Example 8: Create ICellImporter**
 
-```csharp
-
-	foreach (ICellImporter cell in rowImporter.Cells)
-	{
-		string value = cell.Value;
-
-		SpreadCellFormat format = cell.Format;
-		SpreadCellStyle style = cell.Format.CellStyle;
-	}
-```
+<snippet id='codeblock-dll'/>
 
 The ICellImporter interface exposes the following properties:
 

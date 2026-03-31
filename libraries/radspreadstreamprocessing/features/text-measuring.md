@@ -54,72 +54,7 @@ The following example shows how you can create a spreadsheet document, measure t
 
 #### Example 1: Create spreadsheet with auto fit columns width
 
-```csharp
-
-    public static void ExportSpreadsheet(SpreadDocumentFormat documentFormat, string fileName)
-    {
-        SpreadBorder border = new SpreadBorder(SpreadBorderStyle.Thin, new SpreadThemableColor(new SpreadColor(125, 125, 0)));
-        SpreadCellFormat format = new SpreadCellFormat()
-        {
-            NumberFormat = "@",
-            IsBold = true,
-            IsItalic = true,
-            LeftBorder = border,
-            RightBorder = border,
-            TopBorder = border,
-            BottomBorder = border,
-            WrapText = false
-        };
-    
-        string[] vegetablesToExport = new string[] { "carrot", "broccoli", "cucumber", "eggplant", "lettuce", "cabbage", "tomato" };
-    
-        double vegetablesColumnWidth;
-        CalculateColumnWidth(format, vegetablesToExport, out vegetablesColumnWidth);
-    
-        using (FileStream stream = File.Open(fileName, FileMode.OpenOrCreate))
-        {
-            using (IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(documentFormat, stream))
-            {
-                using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("Vegetables List"))
-                {
-                    using (IColumnExporter column = worksheet.CreateColumnExporter())
-                    {
-                        column.SetWidthInPixels(vegetablesColumnWidth);
-                    }
-    
-                    for (int rowIndex = 1; rowIndex < vegetablesToExport.Length + 1; rowIndex++)
-                    {
-                        using (IRowExporter row = worksheet.CreateRowExporter())
-                        {
-                            string vegetable = vegetablesToExport[rowIndex - 1];
-    
-                            using (ICellExporter cell = row.CreateCellExporter())
-                            {
-                                cell.SetValue(vegetable);
-                                cell.SetFormat(format);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    private static void CalculateColumnWidth(SpreadCellFormat format, string[] values, out double columnWidth)
-    {
-        columnWidth = 0;
-    
-        foreach (var value in values)
-        {
-            double contentWidth = CellContentSizeHelper.GetCellContentSize(value, format).Width;
-            if (contentWidth > columnWidth)
-            {
-                columnWidth = contentWidth;
-            }
-        }
-    }
-    
-```
+<snippet id='codeblock-dkv'/>
 
 
 ## See Also

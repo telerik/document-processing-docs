@@ -40,59 +40,7 @@ When creating a document with **RadSpreadStreamProcessing**, the order in which 
 
 #### Example 1: Create a document
 
-```csharp
-	using (FileStream stream = File.OpenWrite("sample.xlsx"))
-	{
-	    using (IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream))
-	    {
-	        using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("My sheet"))
-	        {
-	            worksheet.SkipColumns(1);
-	            using (IColumnExporter column = worksheet.CreateColumnExporter())
-	            {
-	                column.SetWidthInPixels(80);
-	            }
-	
-	            worksheet.SkipRows(3);
-	            using (IRowExporter row = worksheet.CreateRowExporter())
-	            {
-	                row.SkipCells(3);
-	                using (ICellExporter cell = row.CreateCellExporter())
-	                {
-	                    cell.SetValue("Merged cell.");
-	                    cell.SetFormat(new SpreadCellFormat()
-	                    {
-	                        HorizontalAlignment = SpreadHorizontalAlignment.Center,
-	                        VerticalAlignment = SpreadVerticalAlignment.Center
-	                    });
-	                }
-	            }
-	
-	            using (IRowExporter row = worksheet.CreateRowExporter())
-	            {
-	                row.SetHeightInPixels(200);
-	                using (ICellExporter cell = row.CreateCellExporter())
-	                {
-	                    cell.SetValue(123.456);
-	                }
-	
-	                using (ICellExporter cell = row.CreateCellExporter())
-	                {
-	                    SpreadCellFormat format = new SpreadCellFormat()
-	                    {
-	                        NumberFormat = "dd/mm/yyyy",
-	                        IsBold = true
-	                    };
-	                    cell.SetFormat(format);
-	                    cell.SetValue(42370);
-	                }
-	            }
-	
-	            worksheet.MergeCells(3, 3, 6, 6);
-	        }
-	    }
-	}
-```
+<snippet id='codeblock-dkn'/>
 
 **Figure 1** shows the result of executing the code from **Example 1**.
 
@@ -119,26 +67,7 @@ When reading a document with **RadSpreadStreamProcessing**, the order of parsing
 
 #### Example 2: Read data from a document
 
-```csharp
-
-	using (FileStream fs = new FileStream(fileName, FileMode.Open))
-	{
-		using (IWorkbookImporter workBookImporter = SpreadImporter.CreateWorkbookImporter(SpreadDocumentFormat.Xlsx, fs))
-		{
-			foreach (IWorksheetImporter worksheetImporter in workBookImporter.WorksheetImporters)
-			{
-				foreach (IRowImporter rowImporter in worksheetImporter.Rows)
-				{
-					foreach (ICellImporter cell in rowImporter.Cells)
-					{
-						string value = cell.Value;
-					}
-				}
-			}
-		}
-	}
-
-```
+<snippet id='codeblock-dko'/>
 
 For more complete examples head to the [Developer Focused Examples]({%slug radspreadstreamprocessing-sdk-examples%}) section of the library.
 

@@ -83,10 +83,7 @@ When you apply a style to a cell with locally set properties, the end result is 
 
 #### **Example 1: Get a built-in style and apply a number group**
 
-```csharp
-	SpreadCellStyle style = workbook.CellStyles.GetByName("Good");
-	style.ApplyNumberFormat = true;
-```
+<snippet id='codeblock-dkq'/>
 
 Through the API you can add, modify or remove styles from the **CellStyles** collection of [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}).
 
@@ -99,33 +96,7 @@ Creating a new style is pretty straight-forward. All you have to do is invoke th
 
 #### **Example 2: Create SpreadCellStyle and apply it to a cell**
 
-```csharp
-	SpreadBorder border = new SpreadBorder(SpreadBorderStyle.Thick, new SpreadThemableColor(new SpreadColor(255, 0, 0)));
-	SpreadCellStyle style = workbook.CellStyles.Add("MyStyle");
-	
-	style.TopBorder = border;
-	style.BottomBorder = border;
-	style.DiagonalDownBorder = border;
-	style.DiagonalUpBorder = border;
-	style.LeftBorder = border;
-	style.RightBorder = border;
-	style.Fill = SpreadPatternFill.CreateSolidFill(new SpreadColor(255, 0, 0));
-	style.FontFamily = new SpreadThemableFontFamily(SpreadThemeFontType.Major);
-	style.FontSize = 22;
-	style.ForeColor = new SpreadThemableColor(new SpreadColor(0, 255, 0));
-	style.Underline = SpreadUnderlineType.DoubleAccounting;
-	style.IsBold = true;
-	style.IsItalic = true;
-	style.HorizontalAlignment = SpreadHorizontalAlignment.Fill;
-	style.Indent = 5;
-	style.VerticalAlignment = SpreadVerticalAlignment.Top;
-	style.WrapText = false;
-	
-	cell.SetFormat(new SpreadCellFormat()
-	{
-	    CellStyle = style
-	});
-```
+<snippet id='codeblock-dkr'/>
 
 ## Modify a Style
 
@@ -135,10 +106,7 @@ Modifying a style is even easier than creating one. All you need to do is retrie
 
 #### **Example 3: Modify a built-in style**
 
-```csharp
-	SpreadCellStyle style = workbook.CellStyles.GetByName("Bad");
-	style.IsBold = true;
-```
+<snippet id='codeblock-dks'/>
 
 
 ## See Also

@@ -32,20 +32,7 @@ The code from **Example 1** creates an empty workbook and exports it to an XLSX 
 
 #### **Example 1: Create IWorkbookExporter**
 
-```csharp
-	using (FileStream stream = File.OpenWrite("sample.xlsx"))
-	{
-	    using (IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream))
-	    {
-	        using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("First sheet"))
-	        {
-	            using (IRowExporter row = worksheet.CreateRowExporter())
-	            {
-	            }
-	        }
-	    }
-	}
-```
+<snippet id='codeblock-dlu'/>
 
 ### Append Content to an Existing Document 
 
@@ -53,9 +40,7 @@ The __CreateWorkbookExporter__ method creates a new workbook which overrides the
 
 #### **Example 2: Create IWorkbookExporter and append the content from the stream**
 
-```csharp
-	IWorkbookExporter workbook = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream, SpreadExportMode.Append);
-```
+<snippet id='codeblock-dlv'/>
 
 >IWorkbookExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -63,14 +48,7 @@ In the spreadsheet documents, the names of the sheets are unique. If you try to 
 
 #### **Example 3: Using IWorkbookExporter.GetSheetInfos()**
 
-```csharp
-
-	using (IWorkbookExporter workbookExporter = SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream))
-	{
-	    IEnumerable<SheetInfo> sheetInfos = workbookExporter.GetSheetInfos();
-	    string firstNameSheet = sheetInfos.First().Name;
-	}
-```
+<snippet id='codeblock-dlw'/>
 
 Since the CSV format doesn't have the concept for multiple sheets, invoking GetSheetInfos() for a CSV document returns an empty collection.
 
