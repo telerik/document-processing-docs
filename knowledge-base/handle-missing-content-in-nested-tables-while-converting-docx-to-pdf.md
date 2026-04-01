@@ -15,6 +15,7 @@ ticketid: 1705627
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
 | 2025.4.1104| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+
 ## Description
 
 This article shows how to achieve strict alignment for nested tables in both DOCX and PDF output using Telerik [WordsProcessing]({%slug radwordsprocessing-overview%}). The generated DOCX document meets the desired layout, but the PDF output does not match due to differences in format rendering. The following approach shows how to achieve consistent table layout in exported documents.
