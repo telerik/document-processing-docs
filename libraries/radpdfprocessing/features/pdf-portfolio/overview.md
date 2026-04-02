@@ -9,7 +9,7 @@ position: 0
 
 # PDF Portfolio - Overview
 
-|Minimum Version|Q1 2026 (version 2026.1.401)|
+|Minimum Version|Q1 2026 (version 2026.1.402)|
 |----|----|
 
 PDF Portfolios (also known as PDF Collections or PDF Packages) allow organizing multiple embedded files within a single PDF with a structured user interface showing file metadata in columns (details view) or icons (tile view). This feature was introduced in PDF 1.7.
