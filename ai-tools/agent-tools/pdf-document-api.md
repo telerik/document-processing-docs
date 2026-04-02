@@ -37,7 +37,7 @@ Provides AI‑assistant–ready operations for inspecting and filling interactiv
 This toolset enables intelligent agents, automation systems, and PDF‑processing pipelines to collaborate efficiently with interactive PDF forms.
 
 <table>
-<tr><th>Tool</th><th>Signature</th><th style="width:40%;">Description</th></tr>
+<tr><th>Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>GetPdfFormFields</td><td><pre>CallToolResult GetPdfFormFields(
     string documentId = null)</pre></td><td>Extracts detailed, read‑only metadata about all interactive form fields in a PDF.</td></tr>
 <tr><td>FillPdfFormFields</td><td><pre>CallToolResult FillPdfFormFields(
@@ -57,7 +57,7 @@ Note: This operation modifies the document in place and cannot be undone. <i>Int
 Provides high-level agent tools for creating and manipulating PDF document content via structured content segments. It is designed to add multiple, heterogeneous content types—text, images, tables, and document structure breaks—in a single operation, preserving content flow and layout consistency by using one RadFixedDocumentEditor instance under the hood.
   
 <table>
-<tr><th>Tool</th><th>Signature</th><th style="width:40%;">Description</th></tr>
+<tr><th>Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>AddContentSegmentsToPdf</td><td><pre>CallToolResult AddContentSegmentsToPdf(
     string documentId,
     ContentSegment[] contentSegments)</pre></td><td>Adds multiple content segments to an existing PDF document as one cohesive operation. Intended for agent-driven or automation scenarios where the content is provided as an array of segment objects.</td></tr>
@@ -75,7 +75,7 @@ Use DescribePdfDocument or ExtractTextFromPdf to identify page indices before re
 Provides document lifecycle management tools for creating, listing, importing, and exporting fixed documents (PDFs). This agent tool sits on top of a repository abstraction and ensures fixed documents are discoverable and usable across tools. Export/import operations bridge between the in‑memory repository and the file system.
 
 <table>
-<tr><th>Tool</th><th>Signature</th><th style="width:40%;">Description</th></tr>
+<tr><th>Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>CreateFixedDocument</td><td><pre>CallToolResult CreateFixedDocument(
     string documentId)</pre></td><td>Creates a new, empty fixed document (PDF) in the repository and returns its document ID. The PDF is not written to disk until ExportFixedDocument is called.</td></tr>
 <tr><td>ListFixedDocuments</td><td><pre>CallToolResult ListFixedDocuments()</pre></td><td>Returns all fixed documents currently known to the repository, including document IDs and associated metadata.</td></tr>
@@ -96,7 +96,7 @@ Provides document lifecycle management tools for creating, listing, importing, a
 Provides agent tools for reading and inspecting PDF document content. These tools handle text extraction, document description, text search, and bookmark reading.
 
 <table>
-<tr><th>Tool</th><th>Signature</th><th style="width:40%;">Description</th></tr>
+<tr><th>Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>ExtractTextFromPdf</td><td><pre>CallToolResult ExtractTextFromPdf(
             string documentId = null,
             int startPage = 0,
