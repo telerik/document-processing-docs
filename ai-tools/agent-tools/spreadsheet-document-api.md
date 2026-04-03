@@ -38,7 +38,7 @@ Provides read-only agent tools for querying and analyzing spreadsheet content wi
   - Filter rows by exact match and aggregate results.
 
 <table>
-<tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
+<tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>FilterAndExtract</td><td><pre>CallToolResult FilterAndExtract(
     int filterColumnIndex,
     List&lt;string&gt; filterValues,
@@ -92,7 +92,7 @@ Use ListAvailableStyles first to discover valid names.</td></tr>
 Exposes a set of methods designed for automations and AI agents to modify spreadsheet content and formatting in a controlled way.
 
 <table>
-<tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
+<tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>SetCellValues</td><td><pre>public CallToolResult SetCellValues(
     int fromRowIndex,
     int fromColumnIndex,
@@ -147,7 +147,7 @@ Exposes a set of methods designed for automations and AI agents to modify spread
 Provides worksheet management tools for creating, deleting, and renaming worksheets in a workbook. These tools modify the workbook structure only (they do not alter cell content, formatting, or data). It is designed to be used as part of agent/execution pipelines and exposes high-level operations through [Tool]-annotated methods for agent frameworks.
 
 <table>
-<tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
+<tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>AddWorksheets</td><td><pre>public CallToolResult AddWorksheets(
 string[] worksheetNames, 
 tring documentId = null)</pre></td><td>Adds one or more new worksheets to a workbook. Each worksheet name must be unique within the target workbook.</td></tr>
@@ -166,7 +166,7 @@ Provides document lifecycle management tools for spreadsheet workbooks—creatin
 This class serves as a high-level agent tool wrapper that delegates core operations to an internal FileManagementTools instance backed by an IWorkbookRepository. The repository acts as the central document store (in-memory, file-based, or custom). Exports/Imports integrate with the file system via the configured outputDir.
 
 <table>
-<tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
+<tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>CreateWorkbook</td><td><pre>public CallToolResult CreateWorkbook(
 string documentId,
 string[] worksheetNames)</pre></td><td>Creates a new workbook in the repository with one or more worksheets. If documentId is null/empty, a unique ID is generated. Worksheet names must be unique within the workbook.</td></tr>
@@ -191,7 +191,7 @@ Provides read-only formula and calculation tools for spreadsheets handled throug
 
 
 <table>
-<tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
+<tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>CalculateFormulaWithoutChangingTheDocument</td><td><pre>public CallToolResult 
 CalculateFormulaWithoutChangingTheDocument(
 string formula,
@@ -205,7 +205,7 @@ string documentId = null)</pre></td><td>Fetches description, syntax, and paramet
 
 ### SpreadProcessingAnalysisAgentTools
 
-|Minimum Version|Q1 2026 (version 2026.1.401)|
+|Minimum Version|Q1 2026 (version 2026.1.402)|
 |----|----|
 
 Provides high-level data analysis agent tools that follow a **Split-Apply-Combine** pattern for working with tabular data without requiring knowledge of Excel formulas or cell addresses. These tools enable agents to:
@@ -219,7 +219,7 @@ Provides high-level data analysis agent tools that follow a **Split-Apply-Combin
 The recommended workflow is: call **DescribeData** first to understand the worksheet layout, then use **GetRows** to inspect specific records, and **Aggregate** to compute summaries.
 
 <table>
-<tr><th>Tool</th><th style="width:40%;">Signature</th><th>Description</th></tr>
+<tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
 <tr><td>DescribeData</td><td><pre>CallToolResult DescribeData(
     string worksheetName = null,
     string documentId = null,
