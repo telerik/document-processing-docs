@@ -11,6 +11,13 @@ position: 4
 
 Learn about the latest changes, improvements and bug fixes in the Telerik Document Processing Libraries AI Coding Assistant. The updates are structured in a chronological order with the newest ones appearing first.
 
+## January, 2026 Changelog
+
+- **NuGet distribution** - The MCP server is now distributed via NuGet instead of npm.
+
+- **Automatic License Recognition** - The MCP server automatically detects your Telerik license when configured globally, simplifying the setup process.
+
+
 ## November, 2025 Changelog
 
 ### Highlights
