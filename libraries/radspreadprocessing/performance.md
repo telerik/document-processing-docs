@@ -36,12 +36,7 @@ Internally there are many mechanisms used to lower the number of calculations, b
 
 #### __Example 1: Suspend layout updates__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.SuspendLayoutUpdate();
-	// The code which generates the document
-	workbook.ResumeLayoutUpdate();
-```
+<snippet id='codeblock-cfv'/>
 
 
 
@@ -50,13 +45,7 @@ Note that if an exception is thrown between the two method calls, the resuming o
 
 #### __Example 2: Suspend layout updates in UndoScope__
 
-```csharp
-	Workbook workbook = new Workbook();
-	using (new UpdateScope(workbook.SuspendLayoutUpdate, workbook.ResumeLayoutUpdate))
-	{
-	    // The code which generates the document
-	}
-```
+<snippet id='codeblock-cfw'/>
 
 
 
@@ -67,12 +56,7 @@ Preserving information about the steps in the undo stack is usually not a time c
 
 #### __Example 3: Combine steps in undo group__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.History.BeginUndoGroup();
-	// The code which generates the document
-	workbook.History.EndUndoGroup();
-```
+<snippet id='codeblock-cfx'/>
 
 
 
@@ -81,13 +65,7 @@ Note that if an exception is thrown between the two method calls, the ending of 
 
 #### __Example 4: Combine steps in undo group using UndoScope__
 
-```csharp
-	Workbook workbook = new Workbook();
-	using (new UpdateScope(workbook.History.BeginUndoGroup, workbook.History.EndUndoGroup))
-	{
-	    // The code which generates the document
-	}
-```
+<snippet id='codeblock-cfy'/>
 
 
 
@@ -98,11 +76,7 @@ As you already know from the [Reduce the Number of Undo Steps section](#reduce-t
 
 #### __Example 5: Disable history__
 
-```csharp
-	workbook.History.IsEnabled = false;
-	// The code which generates the document
-	workbook.History.IsEnabled = true;
-```
+<snippet id='codeblock-cfz'/>
 
 
 
@@ -111,14 +85,7 @@ If an exception is thrown before enabling the history, it will not be enabled an
 
 #### __Example 6: Disable and enable history using UndoScope__
 
-```csharp
-	using (new UpdateScope(
-	    () => { workbook.History.IsEnabled = false; },
-	    () => { workbook.History.IsEnabled = true; }))
-	{
-	    // The code which generates the document
-	}
-```
+<snippet id='codeblock-cga'/>
 
 
 

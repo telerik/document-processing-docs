@@ -54,69 +54,34 @@ The number format is represented by the **CellValueFormat** class. You can set i
 The following examples demonstrate how to apply a predefined format to a **CellSelection**:
 
 #### **Example 1: Apply general format**
-```csharp
-
-	CellValueFormat generalFormat = new CellValueFormat("General");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
-	cellSelectionA1.SetFormat(generalFormat);
-```
+<snippet id='codeblock-cjy'/>
 
 **Example 1** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 00](images/RadSpreadProcessing_Features_Number_Formatting_00.jpg)
 
 #### **Example 2: Apply number format**
-```csharp
-
-	CellValueFormat numberFormat = new CellValueFormat("0.00");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
-	cellSelectionA1.SetFormat(numberFormat);
-```
+<snippet id='codeblock-cjz'/>
 
 **Example 2** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 01](images/RadSpreadProcessing_Features_Number_Formatting_01.jpg)
 
 #### **Example 3: Apply currency format**
 
-```csharp
-
-	CellValueFormat currencyFormat = new CellValueFormat("$#,##0.00");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
-	cellSelectionA1.SetFormat(currencyFormat);
-```
+<snippet id='codeblock-cka'/>
 
 **Example 3** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 02](images/RadSpreadProcessing_Features_Number_Formatting_02.jpg)
 
 #### **Example 4: Apply accounting format**
 
-```csharp
-
-	CellValueFormat accountingFormat = new CellValueFormat("_($* #,##0.00_);_($* (#,##0.00);_($* \" - \"??_);_(@_)");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
-	cellSelectionA1.SetFormat(accountingFormat);
-```
+<snippet id='codeblock-ckb'/>
 
 **Example 4** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 3](images/RadSpreadProcessing_Features_Number_Formatting_03.jpg)
 
 #### **Example 5: Apply date format**
 
-```csharp
-
-	CellValueFormat dateFormat = new CellValueFormat("m/d/yyyy");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789); // OR cellSelectionA1.SetValue(new DateTime(1903, 5, 18, 13, 37, 46));
-	cellSelectionA1.SetFormat(dateFormat);
-```
+<snippet id='codeblock-ckc'/>
 
 **Example 5** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 04](images/RadSpreadProcessing_Features_Number_Formatting_04.jpg)
@@ -125,14 +90,7 @@ In order to show **milliseconds** in **Date Format** the predefined format could
 
 #### **Example 6: Apply time format**
 
-```csharp
-
-	CellValueFormat timeFormat = new CellValueFormat("h:mm:ss AM/PM");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789); // OR cellSelectionA1.SetValue(new DateTime(1903, 5, 18, 13, 37, 46));
-	cellSelectionA1.SetFormat(timeFormat);
-```
+<snippet id='codeblock-ckd'/>
 
 **Example 6** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 05](images/RadSpreadProcessing_Features_Number_Formatting_05.jpg)
@@ -141,96 +99,42 @@ In order to show **milliseconds** in **Time Format** the predefined format could
 
 #### **Example 7: Apply percentage format**
 
-```csharp
-
-	CellValueFormat percentageFormat = new CellValueFormat("0.00%");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
-	cellSelectionA1.SetFormat(percentageFormat);
-```
+<snippet id='codeblock-cke'/>
 
 **Example 7** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 06](images/RadSpreadProcessing_Features_Number_Formatting_06.jpg)
 
 #### **Example 8: Apply fraction format**
 
-```csharp
-
-	CellValueFormat fractionFormat = new CellValueFormat("# ?/?");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
-	cellSelectionA1.SetFormat(fractionFormat);
-```
+<snippet id='codeblock-ckf'/>
 
 **Example 8** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 07](images/RadSpreadProcessing_Features_Number_Formatting_07.jpg)
 
 #### **Example 9: Apply scientific format**
 
-```csharp
-
-	CellValueFormat scientificFormat = new CellValueFormat("0.00E+00");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
-	cellSelectionA1.SetFormat(scientificFormat);
-```
+<snippet id='codeblock-ckg'/>
 
 **Example 9** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 08](images/RadSpreadProcessing_Features_Number_Formatting_08.jpg)
 
 #### **Example 10: Apply text format**
 
-```csharp
-
-	CellValueFormat textFormat = new CellValueFormat("@");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
-	cellSelectionA1.SetFormat(textFormat);
-```
+<snippet id='codeblock-ckh'/>
 
 **Example 10** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 09](images/RadSpreadProcessing_Features_Number_Formatting_09.jpg)
 
 #### **Example 11: Apply special format**
 
-```csharp
-
-	CellValueFormat specialFormat = new CellValueFormat("00000-0000");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(1234.56789);
-	cellSelectionA1.SetFormat(specialFormat);
-```
+<snippet id='codeblock-cki'/>
 
 **Example 11** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 10](images/RadSpreadProcessing_Features_Number_Formatting_10.jpg)
 
 #### **Example 12: Apply custom format**
 
-```csharp
-
-	CellValueFormat specialFormat = new CellValueFormat("[Green]$#,##0_);[Red]$(#,##0);\"zero\";[Blue]\"Text: \" @");
-
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-	cellSelectionA1.SetValue(123456789);
-	cellSelectionA1.SetFormat(specialFormat);
-
-	CellSelection cellSelectionB1 = worksheet.Cells[new CellIndex(0, 1)];
-	cellSelectionB1.SetValueAsText("Progress");
-	cellSelectionB1.SetFormat(specialFormat);
-
-	CellSelection cellSelectionA2 = worksheet.Cells[new CellIndex(1, 0)];
-	cellSelectionA2.SetValue(0);
-	cellSelectionA2.SetFormat(specialFormat);
-
-	CellSelection cellSelectionB2 = worksheet.Cells[new CellIndex(1, 1)];
-	cellSelectionB2.SetValue(-1234.56789);
-	cellSelectionB2.SetFormat(specialFormat);
-```
+<snippet id='codeblock-ckj'/>
 
 **Example 12** produces the following result:	
 ![Rad Spread Processing Features Number Formatting 11](images/RadSpreadProcessing_Features_Number_Formatting_11.jpg)
@@ -253,11 +157,6 @@ __Example 13__ demonstrates how to get the __Number__ format of cell *A1*:
 
 #### __Example 13: Get number format__
 
-```csharp
-	
-	CellSelection cellSelectionA1 = worksheet.Cells[new CellIndex(0, 0)];
-
-	CellValueFormat cellSelectioA1Format = cellSelectionA1.GetFormat().Value;
-```
+<snippet id='codeblock-ckk'/>
 
 

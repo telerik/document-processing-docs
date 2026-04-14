@@ -23,37 +23,14 @@ Refer to the scenario from **Figure 1**. The chart shown there has two axes: a d
 ![](images/SpreadProcessing-Features-Charts-Axes_1.png)
 
 #### Example 1: Axes properties
-```csharp
-
-	DocumentChart chart = new FloatingChartShape(worksheet, new CellIndex(0,0), new CellRange(1, 1, 5, 2), ChartType.Column).Chart;
-	
-	DateAxis dateAxis = chart.PrimaryAxes.CategoryAxis as DateAxis;
-	ValueAxis valAxis = chart.PrimaryAxes.ValueAxis as ValueAxis;
-	
-	ISupportAxes chartComponentWithAxes = chart.SeriesGroups.First() as ISupportAxes;
-	AxisGroupName axisGroup = chartComponentWithAxes.AxisGroupName; // Primary
-	
-	bool dateIsVisible = dateAxis.IsVisible; // true
-	bool valIsVisible = valAxis.IsVisible; // true
-	
-	double? dateMin = dateAxis.Min; // 1
-	double? dateMax = dateAxis.Max; // 4
-	
-	double? valMin = valAxis.Min; // 0
-	double? valMax = valAxis.Max; // 1800
-
-```
+<snippet id='codeblock-clh'/>
 
 ## Changing the Axis of a Chart
 
 RadSpreadProcessing allows you to replace the axis of a chart with a new object. This is achieved through the **PrimaryAxes** and **SecondaryAxes** properties of **DocumentChart**.
 
 #### Example 2: Replace axis 
-```csharp
-	
-	DocumentChart chart = new FloatingChartShape(worksheet, new CellIndex(0, 0), new CellRange(1, 1, 5, 2), ChartType.Column).Chart;
-	chart.PrimaryAxes.CategoryAxis = new DateAxis();
-```
+<snippet id='codeblock-cli'/>
 
 
 ## Changing the Appearance of the Axes
@@ -61,19 +38,7 @@ RadSpreadProcessing allows you to replace the axis of a chart with a new object.
 You can customize the way the axes in the chart look like. The API of SpreadProcessing enables you to change the fill and width of the outline of an axis and its major gridlines.
 
 #### Example 3: Customize the major gridlines and outline of an axis
-```csharp
-
-    FloatingChartShape chartShape = new FloatingChartShape(workbook.ActiveWorksheet, new CellIndex(2, 7), new CellRange(0, 0, 4, 3), ChartType.Column)
-    {
-        Width = 480,
-        Height = 288,
-    };
-    chartShape.Chart.PrimaryAxes.ValueAxis.Outline.Fill = new SolidFill(new ThemableColor(Colors.LightBlue));
-    chartShape.Chart.PrimaryAxes.ValueAxis.Outline.Width = 5;
-
-    chartShape.Chart.PrimaryAxes.ValueAxis.MajorGridlines.Outline.Fill = new SolidFill(new ThemableColor(Colors.LightGray));
-    chartShape.Chart.PrimaryAxes.ValueAxis.MajorGridlines.Outline.Width = 2;
-```
+<snippet id='codeblock-clj'/>
 
 #### Figure 2: Custom appearance
 ![](images/SpreadProcessing-Features-Charts-Axes_3.png)

@@ -23,10 +23,7 @@ __Example 1__ creates a workbook from scratch and adds a single worksheet to it.
 
 #### __Example 1: Create a workbook and add a worksheet to it__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet newWorksheet = workbook.Worksheets.Add();
-```
+<snippet id='codeblock-cse'/>
 
 
 
@@ -40,18 +37,7 @@ __Example 2__ creates a workbook and adds four worksheets. All worksheets are wi
 
 #### __Example 2: Add and remove worksheets__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add(); // Sheet1
-	Worksheet secondWorksheet = workbook.Worksheets.Add(); // Sheet2
-	workbook.Worksheets.Add(); // Sheet3
-	workbook.Worksheets.Add(); // Sheet4
-	
-	workbook.Worksheets.RemoveAt(3); // Removed Sheet4
-	workbook.Worksheets.Remove("Sheet1"); // Removed Sheet1
-	workbook.Worksheets.Remove(secondWorksheet); // Removed Sheet2
-	// the only worksheet left is Sheet3
-```
+<snippet id='codeblock-csf'/>
 
 
 ## Reorder Worksheets
@@ -60,13 +46,4 @@ If you would like to change the order the worksheets appear inside the workbook,
 
 #### __Example 3: Add and reorder worksheets__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add(); // Sheet1
-	workbook.Worksheets.Add(); // Sheet2
-	workbook.Worksheets.Add(); // Sheet3
-	workbook.Worksheets.Add(); // Sheet4
-	
-	workbook.Sheets.Move(3, 1, 0); // Move the fourth sheet to the first place
-
-```
+<snippet id='codeblock-csg'/>

@@ -40,21 +40,7 @@ Once you have created a FloatingChartShape, you can insert it in the document th
 
 #### Example 1: Create a chart through FloatingChartShape and add it to a worksheet
 
-```csharp
-	
-	FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(6, 4), new CellRange(1, 1, 5, 2), ChartType.Column)
-	{
-	    Width = 460,
-	    Height = 250
-	};
-	
-	worksheet.Charts.Add(chartShape);
-	
-	SeriesGroup seriesGroup = chartShape.Chart.SeriesGroups.First(); // type BarChart
-	int seriesCount = seriesGroup.Series.Count(); // 1
-	SeriesBase series = seriesGroup.Series.First(); // type BarSeries
-
-```
+<snippet id='codeblock-cly'/>
 
 The result of executing the code in **Example 1** would look like in **Figure 1**.
 
@@ -66,17 +52,7 @@ The Chart property of FloatingChartShape holds an object of type [DocumentChart]
 
 #### Example 2: Create a combo (Column and Line) chart through FloatingChartShape and add it to a worksheet
 
-```csharp
-	
-	FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(0, 5), new CellRange(0, 0, 12, 3), new[] { ChartType.Line, ChartType.Line, ChartType.Column })
-        {
-	    Width = 400,
-	    Height = 250
-	};
-	
-	worksheet.Charts.Add(chartShape);
-
-```
+<snippet id='codeblock-clz'/>
 
 The result of executing the code in **Example 2** would look like in **Figure 2**.
 
@@ -88,18 +64,7 @@ The result of executing the code in **Example 2** would look like in **Figure 2*
 The FloatingChartShape class exposes properties allowing you to customize how the shape looks like. You can control the outline of the shape as well as its fill.
 
 #### Example 3: Customize the fill and outline of FloatingChartShape
-```csharp
-
-    FloatingChartShape chartShape = new FloatingChartShape(workbook.ActiveWorksheet, new CellIndex(2, 7), new CellRange(0, 0, 4, 3), ChartType.Column)
-    {
-        Width = 480,
-        Height = 288,
-    };
-
-    chartShape.Outline.Fill = new SolidFill(new ThemableColor(Colors.SlateGray));
-    chartShape.Outline.Width = 5;
-    chartShape.Fill = new SolidFill(new ThemableColor(Colors.Cornsilk));
-```
+<snippet id='codeblock-cma'/>
 
 The result of executing the code in **Example 3** over a cell range containing sample data would look like in **Figure 3**.
 
@@ -128,34 +93,13 @@ You can create a simple DocumentChart object, which is empty and then set the de
 
 #### Example 4: Creating an empty chart and setting its values manually
 
-```csharp
-
-	DocumentChart chart = new DocumentChart();
-	// Fill the chart with data
-	SeriesGroup seriesGroup = new BarSeriesGroup();
-	chart.SeriesGroups.Add(seriesGroup);
-	
-	WorkbookFormulaChartData seriesValuesData = new WorkbookFormulaChartData(worksheet, new CellRange(2, 2, 5, 2));
-	WorkbookFormulaChartData seriesCategoriesData = new WorkbookFormulaChartData(worksheet, new CellRange(2, 1, 5, 1));
-	seriesGroup.Series.Add(seriesCategoriesData, seriesValuesData);
-
-	chart.PrimaryAxes.CategoryAxis = new DateAxis();
-	chart.PrimaryAxes.ValueAxis = new ValueAxis();
-	
-	(seriesGroup as ISupportAxes).AxisGroupName = AxisGroupName.Primary;
-
-```
+<snippet id='codeblock-cmb'/>
 
 The chart can then be used to replace the chart in an existing **FloatingChartShape**.
 
 #### Example 5: Add the DocumentChart to a worksheet
 
-```csharp
-
-	chartShape.Chart = chart;
-	
-	worksheet.Charts.Add(chartShape);
-```
+<snippet id='codeblock-cmc'/>
 
 >note For more on Series, the [Series]({%slug radspreadprocessing-features-charts-series%}) help topic. Refer to [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}) for description of the axes objects of the chart.
 
@@ -167,12 +111,4 @@ You can access the Charts collection of the Shape collection of the Worksheet in
 
 #### Example 6: Iterate all the charts in a worksheet
 
-```csharp
-
-	foreach (FloatingChartShape chartShape in worksheet.Charts)
-	{
-	    DocumentChart chart = chartShape.Chart;
-	    SeriesGroup group = chart.SeriesGroups.First();
-	    SeriesBase series = group.Series.First();
-	}
-```
+<snippet id='codeblock-cmd'/>

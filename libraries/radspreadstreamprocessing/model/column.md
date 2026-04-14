@@ -28,11 +28,7 @@ A concrete instance of IColumnExporter could be created through the CreateColumn
 #### **Example 1: Create IColumnExporter**
 
 
-```csharp
-	using (IColumnExporter column = worksheet.CreateColumnExporter())
-	{
-	}
-```
+<snippet id='codeblock-dlm'/>
 
 >IColumnExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -49,12 +45,7 @@ In order to customize the way a column appears, you could use one of the followi
 
 #### **Example 2: Set properties to IColumnExporter**
 
-```csharp
-	using (IColumnExporter column = worksheet.CreateColumnExporter())
-	{
-	    column.SetWidthInPixels(100);
-	}
-```
+<snippet id='codeblock-dln'/>
 
 \* Due to the specifics of the library, RadSpreadStreamProcessing doesn't support auto fitting the width of the columns. You can find information on how you can calculate the width needed for specific content in the [Get Cell Content Size]({%slug radspreadstreamprocessing-features-text-measuring%}) topic.
 
@@ -66,13 +57,7 @@ In some cases you may need to skip several columns and start filling the data in
 
 #### **Example 3: Skip columns**
 
-```csharp
-	worksheet.SkipColumns(5);
-	using (IColumnExporter column = worksheet.CreateColumnExporter())
-	{
-	    column.SetHidden(true); // The sixth (F) column will be hidden.
-	}
-```
+<snippet id='codeblock-dlo'/>
 
 ## Read a Column
 
@@ -82,12 +67,7 @@ A concrete instance of IColumnImporter could be obtained through the Columns col
 
 #### **Example 4: Create IColumnImporter**
 
-```csharp
-
-	foreach (IColumnImporter column in worksheetImporter.Columns)
-	{
-	}
-```
+<snippet id='codeblock-dlp'/>
 
 
 The IColumnImporter interface exposes the following properties:

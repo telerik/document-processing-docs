@@ -109,9 +109,7 @@ __Example 1__ shows how to create a __ValuesSortCondition__.
 
 #### __Example 1: Create ValuesSortCondition__
 
-```csharp
-	ValuesSortCondition condition = new ValuesSortCondition(0, SortOrder.Ascending);
-```
+<snippet id='codeblock-ckv'/>
 
 
 
@@ -131,9 +129,7 @@ __Example 2__ shows how to create a CustomValuesSortCondition.
 
 #### __Example 2: Create CustomValuesSortCondition__
 
-```csharp
-	CustomValuesSortCondition condition = new CustomValuesSortCondition(0, new string[] { "regular", "1 day", "2 days", "express" }, SortOrder.Ascending);
-```
+<snippet id='codeblock-ckw'/>
 
 
 
@@ -150,9 +146,7 @@ __Example 3__ demonstrates how to create a __ForeColorSortCondition__. This cond
 
 #### __Example 3: Create ForeColorSortCondition__
 
-```csharp
-	ForeColorSortCondition condition = new ForeColorSortCondition(0, new ThemableColor(Colors.Red), SortOrder.Ascending);
-```
+<snippet id='codeblock-ckx'/>
 
 
 
@@ -166,9 +160,7 @@ __Example 4__ shows how to create a __FillColorSortCondition__.
 
 #### __Example 4: Create FillColorSortCondition__
 
-```csharp
-	FillColorSortCondition condition = new FillColorSortCondition(0, PatternFill.CreateSolidFill(Color.FromArgb(255, 181, 18, 27)), SortOrder.Ascending);
-```
+<snippet id='codeblock-cky'/>
 
 
 
@@ -191,13 +183,7 @@ __Example 5__ shows how to create three sorting conditions.
 
 #### __Example 5: Create Conditions__
 
-```csharp
-	Worksheet worksheet = workbook.ActiveWorksheet;
-	
-	CustomValuesSortCondition condition1 = new CustomValuesSortCondition(5, new string[] { "regular", "1 day", "2 days", "express" }, SortOrder.Ascending);
-	FillColorSortCondition condition2 = new FillColorSortCondition(7, PatternFill.CreateSolidFill(Color.FromArgb(255, 181, 18, 27)), SortOrder.Ascending);
-	FillColorSortCondition condition3 = new FillColorSortCondition(7, PatternFill.CreateSolidFill(Color.FromArgb(255, 94, 151, 50)), SortOrder.Ascending);
-```
+<snippet id='codeblock-ckz'/>
 
 
 
@@ -206,9 +192,7 @@ Further, __Example 6__ shows how to apply the sorting conditions through the __S
 
 #### __Example 6: Set conditions through SortState__
 
-```csharp
-	worksheet.SortState.Set(new CellRange(3, 0, 17, 7), condition1, condition2, condition3);
-```
+<snippet id='codeblock-cla'/>
 
 
 
@@ -217,9 +201,7 @@ Alternatively, __Example 7__ shows how to apply the sorting conditions through t
 
 #### __Example 7: Set conditions through selection__
 
-```csharp
-	worksheet.Cells[3, 0, 17, 7].Sort(condition1, condition2, condition3);
-```
+<snippet id='codeblock-clb'/>
 
 
 
@@ -239,9 +221,7 @@ __Example 8__ shows how to clear the sorting.
 
 #### __Example 8: Clear sorting__
 
-```csharp
-	worksheet.SortState.Clear();
-```
+<snippet id='codeblock-clc'/>
 
 
 

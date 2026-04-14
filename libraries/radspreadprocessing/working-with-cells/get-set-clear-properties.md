@@ -36,11 +36,7 @@ __Example 1__ creates a selection for cells in the range A1:F6.
 
 #### Example 1: Create CellSelection
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellSelection selection = worksheet.Cells[0, 0, 5, 5];
-```
+<snippet id='codeblock-cqx'/>
 
 
 
@@ -107,15 +103,7 @@ __Example 2__ illustrates how to use these methods on the region A1:F6.
 
 #### Example 2: Use GetIsBold(), SetIsBold() and ClearIsBold() methods
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellSelection selection = worksheet.Cells[0, 0, 5, 5];
-	
-	selection.SetIsBold(true);
-	bool isBold = selection.GetIsBold().Value;
-	selection.ClearIsBold();
-```
+<snippet id='codeblock-cqy'/>
 
 Using the above approach you can set the value of almost all cell properties. There are a few exceptions to the general get, set and clear rule, though, and each of them is described into one of the following sections.
 
@@ -142,13 +130,7 @@ __Example 4__ illustrates who to retrieve the value of cell B2.
 
 #### Example 4: Retrieve value of cell
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellSelection selection = worksheet.Cells[1, 1];
-	
-	ICellValue cellValue = selection.GetValue().Value;
-```
+<snippet id='codeblock-cqz'/>
 
 
 
@@ -160,23 +142,7 @@ __Example 5__ demonstrates how to set the value of a given selection.
 
 #### Example 5: Set value of CellSelection
 
-```csharp
-	// set DateTime value
-	selection.SetValue(DateTime.Now);
-	
-	// set double value
-	selection.SetValue(51.345);
-	
-	// set ICellValue
-	ICellValue value = worksheet.Cells[5, 5].GetValue().Value;
-	selection.SetValue(value);
-	
-	// set string value
-	selection.SetValue("Total");
-	
-	// set formula value
-	selection.SetValue("=C1+C10");
-```
+<snippet id='codeblock-cra'/>
 
 
 
@@ -190,27 +156,7 @@ __Example 6__ demonstrates how to set the value of the Borders of the regions B2
 
 #### Example 6: Set value of Borders
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	ThemableColor purple = new ThemableColor(Color.FromArgb(255, 155, 89, 182));
-	ThemableColor darkBlue = new ThemableColor(Color.FromArgb(255, 44, 62, 80));
-	
-	CellBorders purpleBorders = new CellBorders(new CellBorder(CellBorderStyle.Dotted, purple));
-	worksheet.Cells[1, 1, 2, 2].SetBorders(purpleBorders);
-	
-	CellBorders darkBlueBorders = new CellBorders(
-	    new CellBorder(CellBorderStyle.Medium, darkBlue),   // Left border
-	    new CellBorder(CellBorderStyle.Medium, darkBlue),   // Top border
-	    new CellBorder(CellBorderStyle.Medium, darkBlue),   // Right border
-	    new CellBorder(CellBorderStyle.Medium, darkBlue),   // Bottom border
-	    new CellBorder(CellBorderStyle.Thin, purple),       // Inside horizontal border
-	    new CellBorder(CellBorderStyle.Thin, purple),       // Inside vertical border
-	    new CellBorder(CellBorderStyle.None, darkBlue),     // Diagonal up border
-	    new CellBorder(CellBorderStyle.None, darkBlue));    // Diagonal down border
-	
-	worksheet.Cells[1, 4, 2, 5].SetBorders(darkBlueBorders);
-```
+<snippet id='codeblock-crb'/>
 
 
 
@@ -233,16 +179,7 @@ __Example 7__ creates two PatternFill objects with a DiagonalStripe and Solid Pa
 
 #### Example 7: Create and set PatternFill
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	PatternFill diagonalStripePatternFill = new PatternFill(PatternType.DiagonalStripe, Color.FromArgb(255, 231, 76, 60), Color.FromArgb(255, 241, 196, 15));
-	worksheet.Cells[0, 0, 0, 5].SetFill(diagonalStripePatternFill);
-	
-	PatternFill solidPatternFill = new PatternFill(PatternType.Solid, Color.FromArgb(255, 46, 204, 113), Colors.Transparent);
-	worksheet.Cells[1, 0, 5, 5].SetFill(solidPatternFill);
-```
+<snippet id='codeblock-crc'/>
 
 
 
@@ -259,14 +196,7 @@ __Example 8__ assigns the region A1:F1 a smooth horizontal green gradient.
 
 #### Example 8: Create and set GradientFill
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Rows[0].SetHeight(new RowHeight(50, true));
-	
-	GradientFill greenGradientFill = new GradientFill(GradientType.Horizontal, Color.FromArgb(255, 46, 204, 113), Color.FromArgb(255, 0, 134, 56));
-	worksheet.Cells[0, 0, 0, 5].SetFill(greenGradientFill);
-```
+<snippet id='codeblock-crd'/>
 
 
 
@@ -283,14 +213,7 @@ In addition to the __GetIndent()__, __SetIndent()__ and __ClearIndent()__ method
 
 #### Example 9: Increase and decrease indent
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	CellSelection selection = worksheet.Cells[0, 0, 5, 5];
-	
-	selection.IncreaseIndent();
-	selection.DecreaseIndent();
-```
+<snippet id='codeblock-cre'/>
 
 
 

@@ -21,17 +21,7 @@ The [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-works
 
 #### __Example 1: Iterate UsedCellRange__
 
-```csharp
-
-	CellRange usedCellRange = worksheet.UsedCellRange;
-	for (int rowIndex = usedCellRange.FromIndex.RowIndex; rowIndex <= usedCellRange.ToIndex.RowIndex; rowIndex++)
-	{
-	    for (int columnIndex = usedCellRange.FromIndex.ColumnIndex; columnIndex <= usedCellRange.ToIndex.ColumnIndex; columnIndex++)
-	    {
-	        CellSelection cell = worksheet.Cells[rowIndex, columnIndex];
-	    }
-	}
-```
+<snippet id='codeblock-crh'/>
 
 
 ## Working With a Filtered Range
@@ -40,17 +30,7 @@ This section describes how you can obtain only the cells that have particular pr
 
 #### __Example 2: Obtain and iterate a filtered UsedCellRange__
 
-```csharp
-
-	CellRange usedCellRangeWithValues = worksheet.GetUsedCellRange(new IPropertyDefinition[] { CellPropertyDefinitions.ValueProperty });
-	for (int row = usedCellRangeWithValues.FromIndex.RowIndex; row <= usedCellRangeWithValues.ToIndex.RowIndex; row++)
-	{
-	    for (int column = usedCellRangeWithValues.FromIndex.ColumnIndex; column <= usedCellRangeWithValues.ToIndex.ColumnIndex; column++)
-	    {
-	        ICellValue value = worksheet.Cells[row, column].GetValue().Value;
-	    }
-	}
-```
+<snippet id='codeblock-cri'/>
 
 >tip For more information on working with the values of the cells, check the [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) topics.
 

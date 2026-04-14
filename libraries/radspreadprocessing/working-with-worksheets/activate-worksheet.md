@@ -24,23 +24,6 @@ __Example 1__ creates a new workbook from scratch and subscribes to its __Active
 
 #### __Example 1: Change active sheet__
 
-```csharp
-	public void ActivateWorksheetDemo()
-	{
-	    Workbook workbook = new Workbook();
-	
-	    workbook.ActiveSheetChanged += this.Workbook_ActiveSheetChanged;
-	
-	    workbook.Worksheets.Add();
-	    workbook.Worksheets.Add();
-	
-	    workbook.ActiveWorksheet = workbook.Worksheets[1];
-	}
-	
-	private void Workbook_ActiveSheetChanged(object sender, EventArgs e)
-	{
-	    // the active worksheet is changed
-	}
-```
+<snippet id='codeblock-csd'/>
 
 

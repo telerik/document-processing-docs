@@ -39,9 +39,7 @@ The main characteristics of worksheets can be summarized in the following list:
 
 	#### __Example 1: Get the used cell range of cells with value__
 	
-	```csharp
-		CellRange result = worksheet.GetUsedCellRange(new IPropertyDefinition[] { CellPropertyDefinitions.ValueProperty });
-	```
+	<snippet id='codeblock-csz'/>
 
 	>More information and examples of working with the used cell range of a worksheet are available in the [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}) topic.
 

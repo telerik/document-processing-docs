@@ -17,16 +17,7 @@ The code snippet from __Example 1__ opens a ZIP archive in update mode using __Z
 
 #### __Example 1: Open for update__
 
-```csharp
-	            
-	using (Stream stream = File.Open("test.zip", FileMode.Open))
-	{
-	    using (ZipArchive archive = ZipArchive.Update(stream, null))
-	    {
-	        // Display the list of the files in the selected zip file using the ZipArchive.Entries property.
-	    }
-	}
-```
+<snippet id='codeblock-dsp'/>
 
 ## Add Entry
 
@@ -48,15 +39,7 @@ In order to add a new entry into the ZIP archive, you should perform the followi
 
 #### __Example 2: Add entry__
 
-```csharp
-	    
-	using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
-	{
-	    StreamWriter writer = new StreamWriter(entry.Open());
-	    writer.WriteLine("Hello world!");
-	    writer.Flush();
-	}
-```
+<snippet id='codeblock-dsq'/>
 
 ## Delete Entry
 
@@ -68,14 +51,7 @@ __Example 3__ shows how you could obtain an entry and delete it from the ZIP arc
 
 #### __Example 3: Delete entry__
 
-```csharp
-	            
-	ZipArchiveEntry entry = archive.GetEntry("text.txt");
-	if (entry != null)
-	{
-	    entry.Delete();
-	}
-```
+<snippet id='codeblock-dsr'/>
 
 ## Update Entry
 
@@ -96,20 +72,7 @@ In order to update an existing entry in the ZIP archive, you should perform the 
 
 #### __Example 4: Update entry__
 	
-```csharp
-	ZipArchiveEntry entry = archive.GetEntry("text.txt");
-	if (entry != null)
-	{
-	    Stream entryStream = entry.Open();
-	    StreamReader reader = new StreamReader(entryStream);
-	    string content = reader.ReadToEnd();
-	        
-	    entryStream.Seek(0, SeekOrigin.End);
-	    StreamWriter writer = new StreamWriter(entryStream);
-	    writer.WriteLine("Updated line.");
-	    writer.Flush();
-	}
-```
+<snippet id='codeblock-dss'/>
 
 ## Copy Entry
 

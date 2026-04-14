@@ -32,17 +32,7 @@ There are two available options when hiding sheets. The first option is by setti
 
 #### **Example 1: Setting the SheetVisibility to Hidden/VeryHidden**
 
-```csharp
-
-    // Change the visibility of the active sheet
-    workbook.ActiveSheet.Visibility = SheetVisibility.Hidden;
-    
-    // OR change the visibility of the first sheet from the SheetCollection
-    workbook.Sheets[0].Visibility = SheetVisibility.Hidden;
-    
-    // OR change the visibility of the first sheet from the WorksheetCollection
-    workbook.Worksheets[0].Visibility = SheetVisibility.Hidden;
-```
+<snippet id='codeblock-csp'/>
 
 The other option is to use the **Hide** method exposed by both the SheetCollection and WorksheetCollection classes. The Hide method provides several overloads and supports hiding a sheet by passing:  
 * a sheet at the specified index; 
@@ -51,12 +41,7 @@ The other option is to use the **Hide** method exposed by both the SheetCollecti
 
 #### **Example 2: Hiding sheets using the Hide method**
 
-```csharp
-
-    Worksheet worksheet = workbook.Worksheets.First();
-    // Hiding the first sheet from the WorksheetCollection
-    workbook.Worksheets.Hide(worksheet);
-```
+<snippet id='codeblock-csq'/>
 
 
 ## Unhiding Sheets
@@ -67,11 +52,7 @@ The following code snippets exemplify the two approaches.
 
 #### **Example 3: Setting the SheetVisibility to Visible**
 
-```csharp
-
-    // Change the visibility of the first sheet from the SheetCollection
-    workbook.Sheets[0].Visibility = SheetVisibility.Visible;
-```
+<snippet id='codeblock-csr'/>
 
 The **Unhide** method provides two overloads and supports unhiding a sheet by:  
 * a sheet at the specified index.  
@@ -79,14 +60,7 @@ The **Unhide** method provides two overloads and supports unhiding a sheet by:
 
 #### **Example 4: Unhiding sheets using the Unhide method**
 
-```csharp
-
-    // Unhiding sheet at the specified index
-	workbook.Worksheets.Unhide(0);
-	
-	// OR unhiding the first sheet from the WorksheetCollection
-    workbook.Worksheets.Unhide(workbook.Worksheets.First());
-```
+<snippet id='codeblock-css'/>
 
 ## See Also
 

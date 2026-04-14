@@ -50,11 +50,7 @@ __Example 1__ creates a new workbook, adds a single worksheet to it and renames 
 
 #### __Example 1: Create and rename a worksheet__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	worksheet.Name = "Sam's Worksheet";
-```
+<snippet id='codeblock-csn'/>
 
 
 
@@ -62,24 +58,6 @@ __Example 2__ creates a new workbook and adds two worksheets to it. The snippet 
         
 #### __Example 2: Rename a worksheet__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	workbook.Worksheets.Add();
-	
-	string newWorksheetName = "July's Worksheet";
-	int indexOfWorksheetToRename = 0;
-	
-	int index = workbook.Worksheets.IndexOf(newWorksheetName);
-	
-	if (index == -1 || index == indexOfWorksheetToRename)
-	{
-	    workbook.Worksheets[indexOfWorksheetToRename].Name = newWorksheetName;
-	}
-	else
-	{
-	    // There already exists worksheet with this name
-	}
-```
+<snippet id='codeblock-cso'/>
 
 

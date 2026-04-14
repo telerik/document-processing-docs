@@ -31,10 +31,7 @@ __Example 1__ enables the history of a workbook.
 
 #### __Example 1: Enable history__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.History.IsEnabled = true;
-```
+<snippet id='codeblock-civ'/>
 
 
 
@@ -48,17 +45,7 @@ __Example 2__ creates a new workbook with a single worksheet and sets the value 
 
 #### __Example 2: Perform undo and redo__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.History.IsEnabled = true;
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	worksheet.Cells[0, 0].SetValue("First cell value");
-	worksheet.Cells[0, 0].SetValue("Second cell value");
-	
-	workbook.History.Undo();
-	workbook.History.Redo();
-```
+<snippet id='codeblock-ciw'/>
 
 
 
@@ -72,21 +59,7 @@ __Example 3__ demonstrates how to create an undo group.
 
 #### __Example 3: Create undo group__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.History.IsEnabled = true;
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	workbook.History.BeginUndoGroup();
-	
-	worksheet.Cells[0, 0].SetValue(15);
-	worksheet.Cells[0, 0].SetFormat(new CellValueFormat("0.00"));
-	
-	workbook.History.EndUndoGroup();
-	
-	workbook.History.Undo();
-	workbook.History.Redo();
-```
+<snippet id='codeblock-cix'/>
 
 
 
@@ -100,8 +73,6 @@ __Example 4__ clears the history of a workbook.
 
 #### __Example 4: Clear history__
 
-```csharp
-	workbook.History.Clear();
-```
+<snippet id='codeblock-ciy'/>
 
 

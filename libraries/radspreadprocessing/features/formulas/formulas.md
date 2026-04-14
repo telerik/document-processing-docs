@@ -37,11 +37,7 @@ __Example 1__ creates a workbook from scratch and adds a worksheet. Further, the
 
 #### __Example 1: Set formula__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	workbook.ActiveWorksheet.Cells[0, 0].SetValue("=3+4");
-```
+<snippet id='codeblock-cmx'/>
 
 
 
@@ -53,27 +49,7 @@ A closer look at the value of cell A1 will reveal that the two methods __GetValu
 
 #### __Example 2: Get formula value__
 
-```csharp
-	FormulaCellValue formulaCellValue = workbook.ActiveWorksheet.Cells[0, 0].GetValue().Value as FormulaCellValue;
-	if (formulaCellValue != null)
-	{
-	    RadExpression expression = formulaCellValue.Value;
-	    //expression is AdditionExpression with operands 3 and 4
-	
-	    CellValueFormat format = workbook.ActiveWorksheet.Cells[0, 0].GetFormat().Value;
-	    string valueAsString = formulaCellValue.GetValueAsString(format);
-	    //valueAsString = "=3+4"
-	
-	    string resultValueAsString = formulaCellValue.GetResultValueAsString(format);
-	    //resultAsString = "7"
-	
-	    CellValueType valueType = formulaCellValue.ValueType;
-	    //valueType = Formula
-	
-	    CellValueType resultValueType = formulaCellValue.ResultValueType;
-	    //resultValueType = Number
-	}
-```
+<snippet id='codeblock-cmy'/>
 
 
 

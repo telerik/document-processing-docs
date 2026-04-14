@@ -52,29 +52,7 @@ __Example 1__ creates a new workbook with two empty worksheets and assigns sampl
 
 #### __Example 1: Perform find an find all__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet1 = workbook.Worksheets.Add();
-	Worksheet worksheet2 = workbook.Worksheets.Add();
-	
-	worksheet1.Cells[1, 1].SetValue("SUMMARY");
-	worksheet1.Cells[1, 2].SetValue("=SUM(5, 6)");
-	
-	worksheet2.Cells[2, 2].SetValue("=SUM(4, 4)");
-	worksheet2.Cells[2, 3].SetValue("SUM");
-	
-	FindOptions options = new FindOptions()
-	{
-	    StartCell = new WorksheetCellIndex(worksheet1, 0, 0),
-	    FindBy = FindBy.Rows,
-	    FindIn = FindInContentType.Formulas,
-	    FindWhat = "SUM",
-	    FindWithin = FindWithin.Workbook,
-	};
-	
-	FindResult findResult = workbook.Find(options);
-	IEnumerable<FindResult> findResults = workbook.FindAll(options);
-```
+<snippet id='codeblock-chy'/>
 
 
 
@@ -91,37 +69,7 @@ __Example 2__ creates a workbook from scratch with two empty worksheets and adds
 
 #### __Example 2: Perform replace and replace all__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet1 = workbook.Worksheets.Add();
-	Worksheet worksheet2 = workbook.Worksheets.Add();
-	
-	worksheet1.Cells[1, 1].SetValue("SUMMARY");
-	worksheet1.Cells[1, 2].SetValue("=SUM(5, 6)");
-	
-	worksheet2.Cells[2, 2].SetValue("=SUM(4, 4)");
-	worksheet2.Cells[2, 3].SetValue("SUM");
-	
-	ReplaceOptions options = new ReplaceOptions()
-	{
-	    StartCell = new WorksheetCellIndex(worksheet1, 0, 0),
-	    FindBy = FindBy.Rows,
-	    FindIn = FindInContentType.Formulas,
-	    FindWhat = "SUM",
-	    ReplaceWith = "Test",
-	    FindWithin = FindWithin.Workbook,
-	};
-	
-	FindResult findResult = workbook.Find(options);
-	options.StartCell = findResult.FoundCell;
-	
-	if (workbook.Replace(options))
-	{
-	    RadWindow.Alert("Replace was successful!");
-	}
-	
-	workbook.ReplaceAll(options);
-```
+<snippet id='codeblock-chz'/>
 
 
 

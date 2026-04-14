@@ -18,28 +18,12 @@ You can access and set the **Title** property of the **DocumentChart** object, w
 
 #### Example 1: Setting the title of a chart to a string
 
-```csharp
-	
-	FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(0, 4), new CellRange(1, 1, 5, 2), ChartType.Pie)
-	{
-		Width = 460,
-		Height = 250
-	};
-	DocumentChart chart = chartShape.Chart;
-
-	chart.Title = new TextTitle("Text title");
-```
+<snippet id='codeblock-clv'/>
 
 
 #### Example 1: Setting the title of a series to a CellRange
 
-```csharp
-	
-	BarSeriesGroup columnGroup = chart.SeriesGroups.First() as BarSeriesGroup;
-	SeriesBase firstSeries = columnGroup.Series.First();
-
-	firstSeries.Title = new FormulaTitle(new WorkbookFormulaChartData(worksheet, new CellRange(0, 0, 0, 1)));
-```
+<snippet id='codeblock-clw'/>
 
 #### Figure 1: Chart title
 ![](images/SpreadProcessing-Features-ChartTitle_1.png)
@@ -52,11 +36,7 @@ The charts use a legend to help users to understand the data plotted on the char
 The legend of the chart can be added or edited through the **Legend** property of the **DocumentChart** object. The property is of type **Legend**. The **Legend** type contains one property: **LegendPosition** of type **LegendPosition**, which is an enumeration with four members: **Top**, **Bottom**, **Left** and **Right**. The actual entries of the legend are constructed by the titles of the series.
 
 #### Example 3: Adding a chart legend
-```csharp
-
-	chart.Legend = new Legend();
-	chart.Legend.Position = LegendPosition.Left;
-```
+<snippet id='codeblock-clx'/>
 
 #### Figure 2: Chart legend
 ![](images/SpreadProcessing-Features-ChartLegend_1.png)

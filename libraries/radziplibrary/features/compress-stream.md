@@ -59,26 +59,13 @@ You can create a compressed stream by initializing a new instance of the __Compr
 
 #### __Example 1: Write to compressed stream__
 
-```csharp
-	            
-	using (CompressedStream compressedStream = new CompressedStream(outputStream, StreamOperationMode.Write, new DeflateSettings()))
-	{
-	    // write to compressed stream
-	}
-```
+<snippet id='codeblock-dsh'/>
 
 If you want to compress a specific stream (*inputStream*), you need to copy it to the compressed stream that you've created.   
 
 #### __Example 2: Write stream to compressed stream__
 
-```csharp
-	    
-	using (CompressedStream compressedStream = new CompressedStream(outputStream, StreamOperationMode.Write, new DeflateSettings()))
-	{
-	    inputStream.CopyTo(compressedStream);
-	    compressedStream.Flush();
-	}
-```
+<snippet id='codeblock-dsi'/>
 
 ## Decompressing a Stream
 
@@ -87,13 +74,7 @@ Decompressing a stream is just as simple as compressing it. All you need to do i
 
 #### __Example 3: Decompressed stream__
 
-```csharp
-	            
-	using (CompressedStream compressedStream = new CompressedStream(inputStream, StreamOperationMode.Read, new DeflateSettings()))
-	{
-	    compressedStream.CopyTo(outputStream);
-	}
-```
+<snippet id='codeblock-dsj'/>
 
 ## CompressedStream Properties
 

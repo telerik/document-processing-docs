@@ -29,29 +29,7 @@ The __CellImportedEventArgs__ contains information about the current cell:
 
 #### __Example 1: Using the CellImported event to format the cells__
 
-```csharp
-	private void ImportTable()
-    {
-        DataTable table = GetTable();
-        DataTableFormatProvider provider = new DataTableFormatProvider();
-        provider.ImportSettings.CellImported += ImportSettings_CellImported;
-
-        Workbook workbook = new Workbook();
-        Worksheet worksheet = workbook.Worksheets.Add();
-    
-        provider.Import(table, worksheet);
-    
-        this.radSpreadsheet.Workbook = workbook;
-    }
-    private void ImportSettings_CellImported(object sender, CellImportedEventArgs e)
-    {
-        if (e.DataTableColumnIndex == 1 && e.WorksheetRowIndex > 1)
-        {
-            e.Worksheet.Cells[e.WorksheetRowIndex, e.WorksheetColumnIndex].SetForeColor(new ThemableColor(Colors.Red));
-        }
-    }
-
-```
+<snippet id='codeblock-col'/>
 
 # Export Settings
 
@@ -70,23 +48,7 @@ The __ColumnExportingEventArgs__ object contains the current column instance and
 
 #### __Example 2: Using the ColumnExporting event to set the AllowDBNull property__
 
-```csharp
-
-    private void ExportTable()
-    {
-        DataTableFormatProvider provider = new DataTableFormatProvider();
-        provider.ExportSettings.ColumnExporting += this.ExportSettings_ColumnExporting;
-        var table = provider.Export(radSpreadsheet.Workbook.ActiveWorksheet);
-    }
-    private void ExportSettings_ColumnExporting(object sender, ColumnExportingEventArgs e)
-    {
-        if (e.ColumnIndex == 3)
-        {
-            e.DataColumn.AllowDBNull = true;
-        } 
-    }
-
-```
+<snippet id='codeblock-com'/>
 
 # See Also
 

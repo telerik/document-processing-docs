@@ -38,12 +38,6 @@ __Example 1__ shows how to create and specify a particular setting to a CsvForma
 
 #### __Example 1: Use CsvSettings__
 
-```csharp
-	CsvFormatProvider provider = new CsvFormatProvider();
-	provider.Settings.Delimiter = ';';
-	provider.Settings.Quote = '^';
-	provider.Settings.HasHeaderRow = true;
-	provider.Settings.Encoding = new UTF8Encoding();
-```
+<snippet id='codeblock-cok'/>
 
 

@@ -38,26 +38,7 @@ To read the data from a file, you should parse the desired elements in a sequenc
 
 #### Example 1: Read data from a document
 
-```csharp
-
-	using (System.IO.FileStream fs = new System.IO.FileStream(fileName, FileMode.Open))
-	{
-		using (IWorkbookImporter workBookImporter = SpreadImporter.CreateWorkbookImporter(SpreadDocumentFormat.Xlsx, fs))
-		{
-			foreach (IWorksheetImporter worksheetImporter in workBookImporter.WorksheetImporters)
-			{
-				foreach (IRowImporter rowImporter in worksheetImporter.Rows)
-				{
-					foreach (ICellImporter cell in rowImporter.Cells)
-					{
-						string value = cell.Value;
-					}
-				}
-			}
-		}
-	}
-
-```
+<snippet id='codeblock-dkp'/>
 
 Through the importer objects, you can access the properties of the different elements.
 

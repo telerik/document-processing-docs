@@ -36,21 +36,7 @@ __Example 1__ shows how to retrieve and change the hidden state of several rows 
 
 #### __Example 1: Change row hidden state__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	RowSelection rowSelection = worksheet.Rows[5, 7];
-	RangePropertyValue<bool> rowsHiddenState = rowSelection.GetHidden();
-	if (!rowsHiddenState.IsIndeterminate && !rowsHiddenState.Value)
-	{
-	    rowSelection.SetHidden(true);
-	}
-	else
-	{
-	    rowSelection.ClearHidden();
-	}
-```
+<snippet id='codeblock-crj'/>
 
 
 ## Relationship with the Height and Width Properties
@@ -61,15 +47,7 @@ __Example 2__ shows how you can set the width of a group of columns and it would
 
 #### __Example 2: Change column width__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	ColumnSelection columnSelection = worksheet.Columns[5, 7];
-	columnSelection.SetWidth(new ColumnWidth(0, true));
-	
-	bool hiddenState = columnSelection.GetHidden().Value;
-```
+<snippet id='codeblock-crk'/>
 
 ## Relationship with the AutoFit Method
 
@@ -79,17 +57,7 @@ __Example 3__ demonstrates this by hiding a row, autofitting it and then checkin
 
 #### __Example 3: Auto fit on hidden rows__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	RowSelection rowSelection = worksheet.Rows[3];
-	rowSelection.SetHidden(true);
-	
-	rowSelection.AutoFitHeight();
-	
-	bool hiddenState = rowSelection.GetHidden().Value;
-```
+<snippet id='codeblock-crl'/>
 
 
 ## See Also

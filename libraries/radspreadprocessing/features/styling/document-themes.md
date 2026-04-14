@@ -59,22 +59,7 @@ __Example 1__ demonstrates how to create a __ThemeColorScheme__ object. Note tha
 
 #### __Example 1: Create ThemeColorScheme__
 
-```csharp
-	ThemeColorScheme colorScheme = new ThemeColorScheme(
-	    "Mine",
-	    Colors.Black,     // background 1
-	    Colors.Blue,      // text 1
-	    Colors.Brown,     // background 2
-	    Colors.Cyan,      // text 2
-	    Colors.DarkGray,  // accent 1
-	    Colors.Gray,      // accent 2
-	    Colors.Green,     // accent 3
-	    Colors.LightGray, // accent 4
-	    Colors.Magenta,   // accent 5
-	    Colors.Orange,    // accent 6
-	    Colors.Purple,    // hyperlink
-	    Colors.Red);      // followedHyperlink
-```
+<snippet id='codeblock-cnl'/>
 
 
 
@@ -104,9 +89,7 @@ __Example 2__ shows how you can create a ThemableColor.
 
 #### __Example 2: Create ThemableColor__
 
-```csharp
-	ThemableColor themableColor = new ThemableColor(ThemeColorType.Accent1);
-```
+<snippet id='codeblock-cnm'/>
 
 
 
@@ -127,12 +110,7 @@ __Example 3__ illustrates how to create a __ThemeFontScheme__ object.
 
 #### __Example 3: Create ThemeFontScheme__
 
-```csharp
-	ThemeFontScheme fontScheme = new ThemeFontScheme(
-	    "Mine",
-	    "Times New Roman",  // latinMajor
-	    "Arial");           // latinMinor
-```
+<snippet id='codeblock-cnn'/>
 
 
 
@@ -153,9 +131,7 @@ __Example 4__ shows how to create a ThemableFontFamily.
 
 #### __Example 4: Create ThemableFontFamily__
 
-```csharp
-	ThemableFontFamily themableFont = new ThemableFontFamily(ThemeFontType.Major);
-```
+<snippet id='codeblock-cno'/>
 
 
 
@@ -169,9 +145,7 @@ __Example 5__ demonstrates how to create a DocumentTheme using the color scheme 
 
 #### __Example 5: Create DocumentTheme__
 
-```csharp
-	DocumentTheme theme = new DocumentTheme("Mine", colorScheme, fontScheme);
-```
+<snippet id='codeblock-cnp'/>
 
 
 
@@ -183,9 +157,7 @@ __Example 6__ shows how you can create a document theme using the predefined col
 
 #### __Example 6: Create DocumentTheme from predefined schemes__
 
-```csharp
-	DocumentTheme theme = new DocumentTheme("From predefined schemes", PredefinedThemeSchemes.ColorSchemes[0], PredefinedThemeSchemes.FontSchemes[5]);
-```
+<snippet id='codeblock-cnq'/>
 
 
 
@@ -197,11 +169,7 @@ __Example 7__ changes the theme of a newly created workbook.
 
 #### __Example 7: Change DocumentTheme__
 
-```csharp
-	Workbook workbook = new Workbook();
-	workbook.Worksheets.Add();
-	workbook.Theme = theme;
-```
+<snippet id='codeblock-cnr'/>
 
 
 
@@ -212,19 +180,13 @@ In order to get the actual value from __ThemableColor__ or __ThemableFontFamily_
 
 #### __Example 8: Get actual color__
 
-```csharp
-	Color actualColor = themableColor.GetActualValue(theme);
-	// the actual color is the same as Accent1 color of the colorScheme
-```
+<snippet id='codeblock-cns'/>
 
 
 
 #### __Example 9: Get actual font__
 
-```csharp
-	var actualFont = themableFont.GetActualValue(theme);
-	// the actualFont is the same as the Major font of the fontScheme
-```
+<snippet id='codeblock-cnt'/>
 
 
 

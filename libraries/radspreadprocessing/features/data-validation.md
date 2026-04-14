@@ -84,14 +84,7 @@ __Example 1__ shows hot to create any value validation rule and set it to a cell
 
 #### __Example 1: Apply any value rule__
 
-```csharp
-	AnyValueDataValidationRuleContext context = new AnyValueDataValidationRuleContext();
-	context.InputMessageContent = "Sample input message content";
-	context.InputMessageTitle = "Sample input message title";
-	AnyValueDataValidationRule rule = new AnyValueDataValidationRule(context);
-	
-	worksheet.Cells[0, 0].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-chb'/>
 
 The result from the code snippet in __Example 1__ is shown on the snapshot in __Figure 1__.
 
@@ -107,24 +100,7 @@ The code snippet in __Example 2__ shows how to create a whole number data valida
 
 #### __Example 2: Apply whole number rule with two arguments__
 
-```csharp
-	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
-	
-	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
-	context.InputMessageTitle = "Restricted input";
-	context.InputMessageContent = "The input is restricted to whole number values between 0 and 100";
-	context.ErrorStyle = ErrorStyle.Stop;
-	context.ErrorAlertTitle = "Wrong value";
-	context.ErrorAlertContent = "The entered value is not valid. Allowed values are in the range between 0 and 100!";
-	context.IgnoreBlank = false;
-	context.ComparisonOperator = ComparisonOperator.Between;
-	context.Argument1 = "0";
-	context.Argument2 = "100";
-	
-	WholeNumberDataValidationRule rule = new WholeNumberDataValidationRule(context);
-	
-	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-chc'/>
 
 The result from __Example 2__ is shown in __Figure 2__.
 
@@ -142,48 +118,13 @@ The code snippet in __Example 3__ shows how to create a whole number data valida
 
 #### __Example 3: Apply whole number rule with one argument__
 
-```csharp
-	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
-	
-	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
-	context.InputMessageTitle = "Restricted input";
-	context.InputMessageContent = "The input is restricted to whole number values greater than 100";
-	context.ErrorStyle = ErrorStyle.Stop;
-	context.ErrorAlertTitle = "Wrong value";
-	context.ErrorAlertContent = "The entered value is not valid. Allowed values are all whole number values greater than 100!";
-	context.ComparisonOperator = ComparisonOperator.GreaterThan;
-	context.Argument1 = "100";
-	
-	WholeNumberDataValidationRule rule = new WholeNumberDataValidationRule(context);
-	
-	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-chd'/>
 
 You are allowed to enter any valid [formula]({%slug radspreadprocessing-features-formulas-general-information%}) as a rule argument that returns a number. __Example 4__ shows how to restrict the user input to the values less than the sum of the values in cells A1 and B1.
 
 #### __Example 4: Apply whole number rule with formula__
 
-```csharp
-	// The value of A1
-	worksheet.Cells[0, 0].SetValue(60);
-	// The value of B1
-	worksheet.Cells[0, 1].SetValue(40);
-	
-	CellIndex dataValidationRuleCellIndex = new CellIndex(1, 0);
-	
-	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
-	context.InputMessageTitle = "Restricted input";
-	context.InputMessageContent = "The input is restricted to whole number values greater than 100";
-	context.ErrorStyle = ErrorStyle.Warning;
-	context.ErrorAlertTitle = "Wrong value";
-	context.ErrorAlertContent = "The entered value is not valid. Allowed values are all whole number values greater than 100!";
-	context.ComparisonOperator = ComparisonOperator.LessThan;
-	context.Argument1 = "=Sum(A1+B1)";
-	
-	WholeNumberDataValidationRule rule = new WholeNumberDataValidationRule(context);
-	
-	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-che'/>
 
 
 #### Figure 4: Whole number rule based on formula
@@ -201,23 +142,7 @@ __Example 5__ demonstrates how to create a decimal data validation rule that res
 
 #### __Example 5: Apply decimal rule__
 
-```csharp
-	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
-	
-	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
-	context.InputMessageTitle = "Restricted input";
-	context.InputMessageContent = "The input is restricted to decimal number values out of the range between 0 and 100";
-	context.ErrorStyle = ErrorStyle.Stop;
-	context.ErrorAlertTitle = "Wrong value";
-	context.ErrorAlertContent = "The entered value is not valid. Allowed values are all decimal number values out of the range between 0 and 100!";
-	context.ComparisonOperator = ComparisonOperator.Between;
-	context.Argument1 = "0";
-	context.Argument2 = "100";
-	
-	DecimalDataValidationRule rule = new DecimalDataValidationRule(context);
-	
-	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-chf'/>
 
 ## List Rule
 
@@ -227,22 +152,7 @@ __Example 6__ shows the creation of a list data validation rule that restricts t
 
 #### __Example 6: Apply list rule__
 
-```csharp
-	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
-	
-	ListDataValidationRuleContext context = new ListDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
-	context.InputMessageTitle = "Restricted input";
-	context.InputMessageContent = "The input is restricted to the week days.";
-	context.ErrorStyle = ErrorStyle.Stop;
-	context.ErrorAlertTitle = "Wrong value";
-	context.ErrorAlertContent = "The entered value is not valid. Allowed values are the week days!";
-	context.InCellDropdown = true;
-	context.Argument1 = "Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday";
-	
-	ListDataValidationRule rule = new ListDataValidationRule(context);
-	
-	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-chg'/>
 
 __Figure 5__ shows the result from __Example 6__.
 
@@ -258,23 +168,7 @@ __Example 7__ shows how to restrict the user input to the dates in the range bet
 
 #### __Example 7: Apply date rule__
 
-```csharp
-	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
-	
-	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
-	context.InputMessageTitle = "Restricted input";
-	context.InputMessageContent = "The input is restricted to dates in the range from 12 February 2013 to 22 May 2017.";
-	context.ErrorStyle = ErrorStyle.Stop;
-	context.ErrorAlertTitle = "Wrong value";
-	context.ErrorAlertContent = "The entered value is not valid. Allowed values are all dates between 12 February 2013 and 22 May 2017";
-	context.ComparisonOperator = ComparisonOperator.Between;
-	context.Argument1 = new DateTime(2013, 2, 12).ToShortDateString();
-	context.Argument2 = new DateTime(2017, 5, 22).ToShortDateString();
-	
-	DateDataValidationRule rule = new DateDataValidationRule(context);
-	
-	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-chh'/>
 
 ## Time Rule
 
@@ -284,23 +178,7 @@ The code snippet in __Example 8__ shows how to restrict the user input to the ra
 
 #### __Example 8: Apply time rule__
 
-```csharp
-	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
-	
-	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
-	context.InputMessageTitle = "Restricted input";
-	context.InputMessageContent = "The input is restricted to times in the range from 10:25 AM to 3:45 PM.";
-	context.ErrorStyle = ErrorStyle.Stop;
-	context.ErrorAlertTitle = "Wrong value";
-	context.ErrorAlertContent = "The entered value is not valid. Allowed values are all times between 10:25 AM to 3:45 PM.";
-	context.ComparisonOperator = ComparisonOperator.Between;
-	context.Argument1 = new DateTime(2015, 2, 2, 10, 25, 0).ToShortTimeString();
-	context.Argument2 = new DateTime(2015, 2, 2, 15, 45, 0).ToShortTimeString();
-	
-	TimeDataValidationRule rule = new TimeDataValidationRule(context);
-	
-	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-chi'/>
 
 ## Text Length Rule
 
@@ -310,23 +188,7 @@ __Example 9__ shows how to restrict the user input to text with a length between
 
 #### __Example 9: Apply text length rule__
 
-```csharp
-	CellIndex dataValidationRuleCellIndex = new CellIndex(0, 0);
-	
-	NumberDataValidationRuleContext context = new NumberDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
-	context.InputMessageTitle = "Restricted input";
-	context.InputMessageContent = "The input is restricted to text with length between 5 and 10 symbols";
-	context.ErrorStyle = ErrorStyle.Stop;
-	context.ErrorAlertTitle = "Wrong value";
-	context.ErrorAlertContent = "The entered value is not valid. It is allowed to enter only text with length between 5 and 10 symbols.";
-	context.ComparisonOperator = ComparisonOperator.Between;
-	context.Argument1 = "5";
-	context.Argument2 = "10";
-	
-	TextLengthDataValidationRule rule = new TextLengthDataValidationRule(context);
-	
-	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-chj'/>
 
 ## Custom Rule
 
@@ -336,21 +198,7 @@ The code snippet in __Example 10__ shows how to restrict the user input to value
 
 #### __Example 10: Apply custom rule__
 
-```csharp
-	CellIndex dataValidationRuleCellIndex = new CellIndex(1, 0);
-	
-	SingleArgumentDataValidationRuleContext context = new SingleArgumentDataValidationRuleContext(worksheet, dataValidationRuleCellIndex);
-	context.InputMessageTitle = "Restricted input";
-	context.InputMessageContent = "The input is restricted to values that are greater or equal to the sum of the values in the cells A1 and B1.";
-	context.ErrorStyle = ErrorStyle.Stop;
-	context.ErrorAlertTitle = "Wrong value";
-	context.ErrorAlertContent = "The entered value is not valid. It is allowed to enter only values that are greater or equal to the sum of the values in the cells A1 and B1";
-	context.Argument1 = "=A2=Sum(A1, B1)";
-	
-	CustomDataValidationRule rule = new CustomDataValidationRule(context);
-	
-	worksheet.Cells[dataValidationRuleCellIndex].SetDataValidationRule(rule);
-```
+<snippet id='codeblock-chk'/>
 
 ## Evaluate Rules
 
@@ -359,18 +207,7 @@ In order to check if the cell value satisfies a rule, you have to evaluate the r
 __Example 11__ demonstrates how to evaluate a rule using the __Evaluate()__ method.
 
 #### __Example 11: Evaluate rule__
-```csharp
-	double value = 125;
-	ICellValue cellValue = value.ToCellValue();
-	if (rule.Evaluate(worksheet, 0, 0, cellValue))
-	{
-	    // the rule is satisfied, the value 125 is valid
-	}
-	else
-	{
-	    // the rule is not satisfied
-	}
-```
+<snippet id='codeblock-chl'/>
 
 
 ## See Also

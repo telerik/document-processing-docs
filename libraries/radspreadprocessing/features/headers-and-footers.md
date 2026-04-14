@@ -31,9 +31,7 @@ This article aims to present the Headers and Footers API in **RadSpreadprocessin
 
 
 #### **Example 1: Get HeaderFooterSettings**
-```csharp
-	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
-```
+<snippet id='codeblock-cir'/>
 
 
 
@@ -91,11 +89,7 @@ The **HeaderFooterSection** class defines the content of a particular header/foo
 
 #### **Example 2: Set a content to a header/footer section**
 
-```csharp
-	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
-	settings.Header.RightSection.Text = "Printed by Telerik";
-	settings.Footer.CenterSection.Text = "RadSpreadProcessing";
-```
+<snippet id='codeblock-cis'/>
 
 The header and footer of the first page in the worksheet from the snippet above will be evaluated and rendered as shown in **Figure 1**.
 
@@ -152,11 +146,7 @@ The following list describes all valid uses of the ampersand symbol sequences. I
 
 #### **Example 3: Insert fields in header/footer**
 
-```csharp
-	HeaderFooterSettings settings = worksheet.WorksheetPageSetup.HeaderFooterSettings;
-	settings.Header.RightSection.Text = "Printed by Telerik on &D";
-	settings.Footer.CenterSection.Text = "Page &P of &N";
-```
+<snippet id='codeblock-cit'/>
 
 **Figure 2** shows how the document will look like after applying the settings demonstrated in **Example 3**.
 
@@ -178,10 +168,7 @@ In order to control the vertical positioning of the headers and footers on the p
 
 #### **Example 4: Setting margins to header/footer**
 
-```csharp
-	PageMargins normalMargins = PageMargins.NormalMargins;
-	worksheet.WorksheetPageSetup.Margins = new PageMargins(normalMargins.Left, normalMargins.Top, normalMargins.Right, normalMargins.Bottom, Unit.DipToInch(0), Unit.DipToInch(1));
-```
+<snippet id='codeblock-ciu'/>
 
 The [Unit class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html), used in **Example 4** provides convenient methods that can help you convert a value between different measurement units.
 

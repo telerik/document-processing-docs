@@ -78,21 +78,14 @@ If the top left cell indices of the fixed pane and of the scrollable pane are no
 The result illustrated in __Figure 3__ can be achieved with the code from __Example 1__.
 
 #### __Example 1: Freezing panes__
-```csharp
-	CellIndex fixedPaneTopLeftCellIndex = new CellIndex(2, 2);
-	CellIndex scrollableTopLeftCellIndex = new CellIndex(5, 8);
-	workbook.ActiveWorksheet.ViewState.FreezePanes(fixedPaneTopLeftCellIndex, 1, 4, scrollableTopLeftCellIndex);
-```
+<snippet id='codeblock-cia'/>
 
 ### Horizontal and Vertical Split
 
 If you would like to create a vertical or horizontal split, all you need to do is specify either the row count or the column count to be equal to zero.
 
 #### __Example 2: Vertical split__
-```csharp
-	CellIndex fixedPaneTopLeftCellIndex = new CellIndex(2, 2);
-	workbook.ActiveWorksheet.ViewState.FreezePanes(fixedPaneTopLeftCellIndex, 0, 4);
-```
+<snippet id='codeblock-cib'/>
 
 The result from __Example 2__ is shown on __Figure 4__.
 
@@ -119,11 +112,7 @@ The state from __Figure 3__ can be achieved with the code from __Example 3__.
 
 
 #### __Example 3: Freeze panes through the Pane class__
-```csharp
-	CellIndex scrollableTopLeftCellIndex = new CellIndex(5, 8);
-	Pane pane = new Pane(scrollableTopLeftCellIndex, 4, 1, ViewportPaneType.Scrollable);
-	workbook.ActiveWorksheet.ViewState.Pane = pane;
-```
+<snippet id='codeblock-cic'/>
 
 > Regardless of the method used to freeze the panes of a worksheet, you should take care not to place the top left index of the frozen pane below or to the right of the index determined by the frozen row count and the frozen column count. Doing so may result in an invalid document and unexpected behavior.
 
@@ -133,16 +122,12 @@ In order to unfreeze the panes of the worksheet, you need to use the same method
 
 
 #### __Example 4: Unfreezing panes__
-```csharp
-	workbook.ActiveWorksheet.ViewState.FreezePanes(0, 0);
-```
+<snippet id='codeblock-cid'/>
 
 Another option is to set the Pane property of the ViewState to null.
 
 #### __Example 4: Unfreezing panes through the Pane class__
-```csharp
-	workbook.ActiveWorksheet.ViewState.Pane = null;
-```
+<snippet id='codeblock-cie'/>
 
 ## See Also
 

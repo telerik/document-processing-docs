@@ -28,40 +28,7 @@ The **FormulaChartData** type is abstract and it is implemented by the **Workboo
 
 #### Example 1: Using IChartData
 
-```csharp
-
-            FloatingChartShape chartShape = new FloatingChartShape(worksheet, new CellIndex(1, 1), new CellRange(1, 1, 1, 1), ChartType.Column)
-            {
-                Width = 460,
-                Height = 250
-            };
-
-            DocumentChart chart = new DocumentChart();
-            BarSeriesGroup barSeriesGroup = new BarSeriesGroup();
-            barSeriesGroup.BarDirection = BarDirection.Column;
-
-            StringChartData barCategoryData = new StringChartData(new List<string> { "New", "In Progress", "Ready for Test", "Done", "Declined" });
-            NumericChartData barValueScore1Data = new NumericChartData(new List<double> { 75.31, 66.3, 62.78, 61.72, 63.9 });
-            NumericChartData barValueScore2Data = new NumericChartData(new List<double> { 78.56, 70.7, 67.63, 66.71, 63.9 });         
-            barSeriesGroup.Series.Add(barCategoryData, barValueScore1Data);
-            barSeriesGroup.Series.Add(barCategoryData, barValueScore2Data);
-            chart.SeriesGroups.Add(barSeriesGroup);
-            ValueAxis valueAxis = new ValueAxis();
-            valueAxis.Outline.Fill = new SolidFill(new ThemableColor(ThemeColorType.Text1, 0.85));
-            valueAxis.Outline.Width = 0.75;
-
-            CategoryAxis categoryAxis = new CategoryAxis();
-            categoryAxis.Outline.Fill = new SolidFill(new ThemableColor(ThemeColorType.Text1, 0.85));
-            categoryAxis.Outline.Width = 0.75;
-
-            chart.PrimaryAxes = new AxisGroup(categoryAxis, valueAxis);
-            worksheet.Charts.Add(chartShape);
-
-            worksheet.Charts[0].Chart.SeriesGroups.First().Series.First().Title = new TextTitle("Team 1");
-            worksheet.Charts[0].Chart.SeriesGroups.First().Series.Last().Title = new TextTitle("Team 2");
-            chartShape.Chart = chart;
-
-``` 
+<snippet id='codeblock-clk'/> 
 
 >caption Using Chart Data in RadSpreadProcessing
 

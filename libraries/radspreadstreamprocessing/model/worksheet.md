@@ -34,12 +34,7 @@ A concrete instance of IWorksheetExporter could be created through the CreateWor
 
 #### **Example 1: Create IWorksheetExporter**
 
-```csharp
-	using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("My sheet"))
-	{
-	    // Fill the worksheet with data and set the desired properties
-	}
-```
+<snippet id='codeblock-dlx'/>
 
 >IWorksheetExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 

@@ -30,50 +30,13 @@ The [**PdfFormatProvider**]({%slug radspreadprocessing-formats-and-conversion-pd
 
 #### Example 1: Implementing a renderer
 
-```csharp
-	
- 	public class WpfPdfChartImageRenderer : IPdfChartRenderer
-    {
-        private readonly ChartModelToImageConverter chartToImageConverter;
-
-        public WpfPdfChartImageRenderer()
-        {
-            this.chartToImageConverter = new ChartModelToImageConverter();
-        }
-
-        // This is the method that will be called when the internal logic of the PdfFormatProvider reaches a chart that has to be rendered.
-        public void RenderChart(FixedContentEditor editor, FloatingChartShape chartShape)
-        {
-            // The ChartModelToImageConverter object is readily available in the Telerik.Windows.Controls.Spreadsheet assembly and
-            // uses internally the RadChartView control to visualize the chart and create an image.
-            BitmapSource source = this.chartToImageConverter.GetBitmapSourceFromFloatingChartShape(chartShape);
-
-            // The editor draws the image in the PDF.
-            editor.DrawImage(this.StreamFromBitmapSource(source));
-        }
-
-        public Stream StreamFromBitmapSource(BitmapSource writeBmp)
-        {
-            Stream bmp = new MemoryStream();
-
-            BitmapEncoder enc = new BmpBitmapEncoder();
-            enc.Frames.Add(BitmapFrame.Create(writeBmp));
-            enc.Save(bmp);
-
-            return bmp;
-        }
-    }
-```
+<snippet id='codeblock-cll'/>
 
 When you have the renderer implemented, you will need to assign it to the PdfFormatProvider instance through the **ChartRenderer** property of its [ExportSettings]({%slug radspreadprocessing-format-and-conversion-pdf-settings%}). 
 
 #### Example 2: Registering the renderer
 
-```csharp
-	
-	PdfFormatProvider pdfFormatProvider = new PdfFormatProvider();
-	pdfFormatProvider.ExportSettings.ChartRenderer = new WpfPdfChartImageRenderer();
-```
+<snippet id='codeblock-clm'/>
 
 Now the chart objects in the spreadsheet will be exported along with the other content after invoking the **Export()** method of **PdfFormatProvider**.
 

@@ -26,18 +26,7 @@ __Example 1__ shows how to import a txt file using a FileStream. The sample inst
 
 #### __Example 1: Import TXT file__
 
-```csharp
-
-    Workbook workbook;
-    string fileName = "input.txt";
-    TxtFormatProvider formatProvider = new TxtFormatProvider();
-
-    using (Stream input = new FileStream(fileName, FileMode.Open))
-    {
-        workbook = formatProvider.Import(input, TimeSpan.FromSeconds(10));
-    }
-
-```
+<snippet id='codeblock-cpf'/>
 
 
 
@@ -48,20 +37,7 @@ __Example 2__ demonstrates how to export an existing Workbook to a TXT file. The
 
 #### __Example 2: Export TXT file__
 
-```csharp
-
-    Workbook workbook = new Workbook();
-    workbook.Worksheets.Add();
-
-    string fileName = "SampleFile.txt";
-    TxtFormatProvider formatProvider = new TxtFormatProvider();
-
-    using (Stream output = new FileStream(fileName, FileMode.Create))
-    {
-        formatProvider.Export(workbook, output, TimeSpan.FromSeconds(10));
-    }
-
-```
+<snippet id='codeblock-cpg'/>
 
 ## See Also
 

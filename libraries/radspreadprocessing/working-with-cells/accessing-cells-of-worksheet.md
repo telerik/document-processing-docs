@@ -17,69 +17,32 @@ Using a **CellIndex** object allows you to specify a single cell (identified by 
 
 #### __Example 1: Create CellSelection using CellIndex__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	CellIndex cellIndex = new CellIndex(0, 5);
-	CellSelection selection1 = worksheet.Cells[cellIndex];
-```
+<snippet id='codeblock-cpx'/>
 
 
 #### __Example 2: Create CellSelection using CellRange__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	CellRange cellRange = new CellRange(0, 0, 5, 5);
-	CellSelection selection2 = worksheet.Cells[cellRange];
-```
+<snippet id='codeblock-cpy'/>
             
 
 #### __Example 3: Create CellSelection using multiple CellRange objects__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	List<CellRange> ranges = new List<CellRange>();
-	ranges.Add(new CellRange(0, 0, 5, 5));
-	ranges.Add(new CellRange(0, 10, 5, 15));
-	CellSelection selection3 = worksheet.Cells[ranges];
-```
+<snippet id='codeblock-cpz'/>
 
 
 #### __Example 4: Create CellSelection using two CellIndex instances that specify a CellRange__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	CellIndex fromIndex = new CellIndex(0, 0);
-	CellIndex toIndex = new CellIndex(5, 5);
-	CellSelection selection4 = worksheet.Cells[fromIndex, toIndex];
-```
+<snippet id='codeblock-cqa'/>
 
 
 #### __Example 5:  Create CellSelection using two integers that indicate the CellIndex__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	CellSelection selection5 = worksheet.Cells[0, 5];
-```
+<snippet id='codeblock-cqb'/>
  
 
 #### __Example 6: Create CellSelection using four integers that specify the CellRange__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet worksheet = workbook.Worksheets.Add();
-	
-	CellSelection selection6 = worksheet.Cells[0, 0, 5, 5];
-```
+<snippet id='codeblock-cqc'/>
 
 
 

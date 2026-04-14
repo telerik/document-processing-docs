@@ -92,10 +92,7 @@ In order to create an instance of __FloatingImage__ you need the worksheet in wh
 
 #### __Example 1: Create FloatingImage__
 
-```csharp
-	Worksheet worksheet = workbook.ActiveWorksheet;
-	Telerik.Windows.Documents.Spreadsheet.Model.Shapes.FloatingImage image = new Telerik.Windows.Documents.Spreadsheet.Model.Shapes.FloatingImage(worksheet, new CellIndex(7, 1), 35, 10);
-```
+<snippet id='codeblock-ckm'/>
 
 
 The next step is to configure the other properties of the image as needed.
@@ -103,18 +100,7 @@ The next step is to configure the other properties of the image as needed.
 
 #### __Example 2: Configure image properties__
 
-```csharp
-	Stream stream = File.Open(filePath, FileMode.Open);
-	
-	using (stream)
-	{
-	    image.ImageSource = new Telerik.Windows.Documents.Media.ImageSource(stream, "png");
-	}
-	
-	image.Width = 330;
-	image.Height = 45;
-	image.RotationAngle = 20;
-```
+<snippet id='codeblock-ckn'/>
 
 
 
@@ -125,9 +111,7 @@ Insert the image into the collection of shapes of the worksheet.  Note that the 
 
 #### __Example 3: Add image to worksheet__
 
-```csharp
-	worksheet.Images.Add(image);
-```
+<snippet id='codeblock-cko'/>
 
 
 
@@ -141,9 +125,7 @@ __Example 4__ demonstrates how you can remove the image added in __Example 3__.
 
 #### __Example 4: Delete shape__
 
-```csharp
-	worksheet.Images.Remove(image);
-```
+<snippet id='codeblock-ckp'/>
 
 
 
@@ -157,21 +139,14 @@ After the initial values of the properties of the shapes have been assigned, the
 	
 	#### __Example 5: Move image__
 	
-	```csharp
-		image.CellIndex = new CellIndex(4, 5);
-		image.OffsetX = 10;
-		image.OffsetY = 10;
-	```
+	<snippet id='codeblock-ckq'/>
 
 * Changing the shape's width and height
             
 	
 	#### __Example 6: Change width and height__
 	
-	```csharp
-		image.Width -= 50;
-		image.Height += 50;
-	```
+	<snippet id='codeblock-ckr'/>
 	
 	The Width and Height properties do not take the LockAspectRatio property into account. If you would like more control on whether the aspect ratio of the shape should be observed, you can also use the following methods.
 	            
@@ -184,10 +159,7 @@ After the initial values of the properties of the shapes have been assigned, the
 
 	#### __Example 7: Set width and whether lock aspect ratio is respected__
 	
-	```csharp
-		image.SetWidth(false, 330);
-		image.SetHeight(true, 45);
-	```
+	<snippet id='codeblock-cks'/>
 	
 	These two methods will be further explained in the next section.
 
@@ -196,9 +168,7 @@ After the initial values of the properties of the shapes have been assigned, the
 	
 	#### __Example 8: Rotate__
 	
-	```csharp
-		image.RotationAngle = 40;
-	```
+	<snippet id='codeblock-ckt'/>
 	
 	The rotation angle of the shape can affect the __CellIndexM__ property and the offset. The relationship between these properties is described in more detail in the next section of this article.
         
@@ -207,9 +177,7 @@ After the initial values of the properties of the shapes have been assigned, the
 	
 	#### __Example 9: Flip__
 	
-	```csharp
-		image.IsHorizontallyFlipped = true;
-	```
+	<snippet id='codeblock-cku'/>
 
 
 

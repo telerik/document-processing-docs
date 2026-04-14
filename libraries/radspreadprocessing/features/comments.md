@@ -40,16 +40,7 @@ To add a comment you need to specify the cell index to which the comment will be
 
 #### Example 1: Add comment
 
-```csharp
-	
-    CellIndex relatedCellIndex = new CellIndex(1, 1);
-    string author = "John Doe";
-    string text = "Comment Content";
-	DateTime creationDate = DateTime.Now;
-
-	worksheet.Comments.Add(relatedCellIndex, author, text, creationDate);
-
-```
+<snippet id='codeblock-cgm'/>
 
 The above snippet will add a comment in cell B2.
 
@@ -60,12 +51,7 @@ To remove a comment, you should specify the comment instance. This instance can 
 
 #### Example 2: Remove comment
 
-```csharp
-	
-    SpreadsheetComment comment = worksheet.Comments[0];
-	worksheet.Comments.Remove(comment);
-
-```
+<snippet id='codeblock-cgn'/>
 
 
 ## Replies
@@ -88,56 +74,7 @@ Each comment can be replied to, forming a thread of information. All replies can
 
 #### Example 3: Working with Replies
 
-```csharp
-
-	void MyProgram()
-        {
-            Workbook workbook = new Workbook();
-            Worksheet worksheet = workbook.Worksheets.Add();
-
-            string text = "First Comment";
-            CellIndex relatedCellIndex = new CellIndex(0, 0); // Cell A1
-            AddCommentWithRepliesToWorksheet(worksheet, relatedCellIndex, text, 2); // First comment will have 2 replies
-
-            relatedCellIndex = new CellIndex(1, 1); // Cell B2
-            text = "Second Comment";
-            AddCommentWithRepliesToWorksheet(worksheet, relatedCellIndex, text, 0); // Second comment will have 0 replies
-
-            // Add existing reply using the Add() method of __SpreadsheetCommentReply__
-            var firstComment = worksheet.Comments[0];
-            var secondComment = worksheet.Comments[1];
-
-            SpreadsheetCommentReply reply = firstComment.Replies[0];
-            secondComment.Replies.Add(reply); // Copies reply #1 from firstComment to secondComment
-
-            //Remove
-            firstComment.Replies.Remove(reply);
-
-            //Clear
-            firstComment.Replies.Clear();
-
-            //Contains
-            firstComment.Replies.Contains(reply); // Returns false
-
-            //CopyTo
-            SpreadsheetCommentReply[] replyArray = new SpreadsheetCommentReply[1];
-            secondComment.Replies.CopyTo(replyArray, 0);
-        }
-
-        void AddCommentWithRepliesToWorksheet(Worksheet worksheet, CellIndex relatedCellIndex, string commentText, int repliesCount)
-        {
-            string authorName = "Jane Doe";
-            DateTime creationDate = DateTime.Now;
-            SpreadsheetComment comment = worksheet.Comments.Add(relatedCellIndex, authorName, commentText, creationDate);
-
-            for (int i = 0; i < repliesCount; i++)
-            {
-                string replyText = "Reply #" + (i + 1);
-                comment.AddReply(authorName, replyText, creationDate); // Add new reply using the SpreadsheetComment.AddReply() method 
-            }
-        }
-
-```
+<snippet id='codeblock-cgo'/>
 
 
 ### Events
@@ -153,32 +90,11 @@ The two events for both collections use similar enumeration types for event argu
 
 #### Example 4: Changing the author of a comment upon adding it to the CommentCollection using the Changing event
 
-```csharp
-
-    void Comments_Changing(object sender, ShapeCollectionChangingEventArgs<SpreadsheetComment> e)
-	{
-		SpreadsheetComment comment = e.Shape;
-		if (e.ChangeType == ShapeCollectionChangeType.Add)
-		{
-			comment.Author = "Comment Author";
-		}
-	}
-
-```
+<snippet id='codeblock-cgp'/>
 
 #### Example 5: Changing the author of a reply upon adding it to the ReplySortedCollection using the Changing event
 
-```csharp
-
-	void Replies_Changing(object sender, ReplySortedCollectionChangingEventArgs e)
-	{
-		if (e.ChangeType == ReplySortedCollectionChangeType.Add)
-		{
-			e.Reply.Author = "Reply Author";
-		}
-	}
-
-```
+<snippet id='codeblock-cgq'/>
 
 
 

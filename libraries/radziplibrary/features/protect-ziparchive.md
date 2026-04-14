@@ -31,32 +31,7 @@ In order to create a password-protected ZIP archive, you need to pass a **Passwo
  
 #### __Example 1: Create a password-protected ZIP archive__
 
-```csharp
-
-	using (Stream stream = File.Open("test.zip", FileMode.Create))
-	{
-
-		//By default the EncryptionStrenght is 256 bits but it can be explicitly specified (EncryptionStrength.Aes128, EncryptionStrength.Aes192, and EncryptionStrength.Aes256) by passing it to the constructor
-		PasswordEncryptionSettings aesEncryptionSettings = EncryptionSettings.CreateAesPasswordEncryptionSettings();
-
-		//You can also use the PKWARE encryption algorithm instead of the AES one
-		PasswordEncryptionSettings pkwareEncryptionSettings = EncryptionSettings.CreatePkzipPasswordEncryptionSettings();
-
-    	aesEncryptionSettings.Password = "password"; 
-    	CompressionSettings compressionSettings = null;
-    	Encoding encoding = null;
-    	using (ZipArchive archive = ZipArchive.Create(stream, encoding, compressionSettings, aesEncryptionSettings))
-    	{
-        	using (ZipArchiveEntry entry = archive.CreateEntry("text.txt"))
-        	{
-            	StreamWriter writer = new StreamWriter(entry.Open());
-            	writer.WriteLine("Hello world!");
-            	writer.Flush();
-        	}
-    	}
-	}
-
-```
+<snippet id='codeblock-dsn'/>
 
 >tip You must always dispose of the ZIP archive object when all operations that use it are completed. Telerik Support recommends that you declare and instantiate the ZIP archive object in a using statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
           
@@ -67,21 +42,7 @@ In order to open a password-protected __ZipArchive__, you need to pass a __Defau
 
 #### __Example 2: Open and read a password-protected ZIP archive__
 
-```csharp
-	    
-	using (FileStream stream = File.Open("test.zip", FileMode.Open))
-	{ 
-    		DecryptionSettings decryptionSettings = EncryptionSettings.CreateDecryptionSettings();
-    		decryptionSettings.PasswordRequired += (s, a) => a.Password = "password";
-    		CompressionSettings compressionSettings = null;
-    		Encoding encoding = null;
-    		using (ZipArchive zipArchive = ZipArchive.Read(stream, encoding, compressionSettings, decryptionSettings))
-    		{
-        		// Display the list of the files in the selected zip file using the ZipArchive.Entries property. 
-    		}
-	}
-
-```
+<snippet id='codeblock-dso'/>
 
 >tip You must always dispose of the ZIP archive object when all operations that use it are completed. We recommend that you declare and instantiate the ZIP archive object in a **using** statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
           

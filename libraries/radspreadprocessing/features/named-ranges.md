@@ -88,22 +88,7 @@ __Example 1__ demonstrates how to add and use defined names. The code creates a 
 
 #### __Example 1: Add and use names__
 
-```csharp
-	Workbook workbook = new Workbook();
-	Worksheet sheet1 = workbook.Worksheets.Add();
-	
-	sheet1.Cells[0, 0].SetValue(23738);
-	sheet1.Cells[1, 0].SetValue(19012);
-	sheet1.Cells[2, 0].SetValue(22544);
-	sheet1.Cells[3, 0].SetValue(27690);
-	
-	workbook.Names.Add("CorporateTax", "=0.16", new CellIndex(0, 0), "Corporate Tax for Canada");
-	sheet1.Names.Add("GrossProfit", "=Sheet1!$A$1:$A$4", new CellIndex(0, 0), "Gross Profit");
-	sheet1.Cells[4, 0].SetValue("=SUM(GrossProfit) * CorporateTax");
-	
-	workbook.Names.Remove("CorporateTax");
-	sheet1.Names.Remove("GrossProfit");
-```
+<snippet id='codeblock-cjt'/>
 
 > Other than the name, the __RefersTo__ value and the comment parameter, the Add method requires a cell index. The reason for this is that with some defined names, the cell index associated with their creation is relevant to the resulting value. More specifically, this is the case when the __RefersTo__ property includes a relative cell reference. For example, in the case of a name where the __RefersTo__ field is "=C3" (as opposed to "=$C$3") and the cell index is CellIndex(0,0), i.e. A1, the defined name will always point two rows lower and two columns to the right of the current cell it is used in: if you enter =Name in A1, A1 will have the value of C3 and if you enter the same in B2, it will have the value of D4.
 >
@@ -120,10 +105,7 @@ __Example 2__ shows how to remove one of the names added in __Example 1__.
 
 #### __Example 2: Remove name__
 
-```csharp
-	workbook.Names.Remove("CorporateTax");
-	sheet1.Names.Remove("GrossProfit");
-```
+<snippet id='codeblock-cju'/>
 
 
 ## See Also

@@ -73,25 +73,7 @@ To better illustrate how you can change the series of a chart, let's take the sa
 
 #### Example 1: Add and remove series from a chart
 
-```csharp
-	
-	// The worksheet contains a chart of type bar.
-	DocumentChart chart = (worksheet.Charts.First() as FloatingChartShape).Chart;
-	SeriesGroup chartComponent = chart.SeriesGroups.First();
-	SeriesBase firstSeries = chartComponent.Series.First();
-	chartComponent.Series.Remove(firstSeries);
-	
-	CellRange valuesRange = new CellRange(2, 3, 5, 3); // D3:D6
-	CellRange categoriesRange = new CellRange(2, 1, 5, 1); // B3:B6
-	CellRange titleRange = new CellRange(1, 3, 1, 3); // B3:B6
-	
-	WorkbookFormulaChartData valuesData = new WorkbookFormulaChartData(worksheet, valuesRange);
-	WorkbookFormulaChartData categoriesData = new WorkbookFormulaChartData(worksheet, categoriesRange);
-	Title chartTitle = new FormulaTitle(new WorkbookFormulaChartData(worksheet, titleRange));
-	
-	SeriesBase newSeries = chartComponent.Series.Add(categoriesData, valuesData, chartTitle);
-	Type seriesType = newSeries.GetType(); // Will be of type BarSeries
-```
+<snippet id='codeblock-cln'/>
 
 #### Figure 2: Modified series of a chart
 ![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_2.png)
@@ -100,10 +82,7 @@ The same methods for adding and removing series can be accessed through the conc
 
 #### Example 2: Add series to a chart using concrete SeriesGroup object
 
-```csharp
-	
-	BarSeriesGroup chartComponent = chart.SeriesGroups.First() as BarSeriesGroup; BarSeries newSeries = chartComponent.Series.Add(categoriesData, valuesData, chartTitle);
-```
+<snippet id='codeblock-clo'/>
 
 ##	Iterating the Series of a Chart
 
@@ -112,26 +91,7 @@ You can access the **Series** property of the **SeriesGroup** object contained i
 
 #### Example 3: Iterate series
 
-```csharp
-	
-	DocumentChart chart = (worksheet.Charts.First() as FloatingChartShape).Chart;
-	SeriesGroup seriesGroup = chart.SeriesGroups.First();
-	
-	foreach (CategorySeriesBase series in seriesGroup.Series.Where(s => s is CategorySeriesBase))
-	{
-	    if (series.Categories.ChartDataType == ChartDataType.Formula)
-	    {
-	        Worksheet dataWorksheet;
-	        IEnumerable<CellRange> categories = (series.Categories as WorkbookFormulaChartData).EnumerateCellRanges(out dataWorksheet);
-	    }
-	
-	    if (series.Values.ChartDataType == ChartDataType.Formula)
-	    {
-	        Worksheet dataWorksheet;
-	        IEnumerable<CellRange> values = (series.Values as WorkbookFormulaChartData).EnumerateCellRanges(out dataWorksheet);
-	    }
-	}
-```
+<snippet id='codeblock-clp'/>
 
 ## Making Changes to the Series
 
@@ -139,15 +99,7 @@ You can modify the properties of the base class for all series - SeriesBase.
 
 #### Example 4: Change series
 
-```csharp
-		
-	DocumentChart chart = (worksheet.Charts.First() as FloatingChartShape).Chart;
-	SeriesGroup seriesGroup = chart.SeriesGroups.First();
-	CategorySeriesBase firstSeries = seriesGroup.Series.Where(s => s is CategorySeriesBase).First() as CategorySeriesBase;
-	
-	firstSeries.Title = new TextTitle("New title");
-	firstSeries.Values = new WorkbookFormulaChartData(worksheet, new CellRange(2, 3, 5, 3));
-```
+<snippet id='codeblock-clq'/>
 
 
 ## SeriesGroup Class and Properties Related to Specific Series Types
@@ -194,15 +146,7 @@ These properties enable you to control the options for each of the series indepe
 
 #### **Example 5: Customize the appearance of ScatterSeries**
 
-```csharp
-
-    SeriesGroup scatterSeriesGroup = chart.Chart.SeriesGroups.First() as ScatterSeriesGroup;
-    ScatterSeries scatterSeries = scatterSeriesGroup.Series.First() as ScatterSeries;
-    scatterSeries.Marker = new Marker();
-    scatterSeries.Marker.Symbol = MarkerStyle.Plus;
-    scatterSeries.Marker.Size = 22;
-    scatterSeries.Outline.Fill = new SolidFill(Colors.Red);
-```
+<snippet id='codeblock-clr'/>
 
 
 ## Series Grouping
@@ -214,22 +158,14 @@ Some series groups (Bar, Line and Area) implement the **ISupportGrouping** inter
 
 #### Example 6: Creating standard/clustered bar chart with vertical orientation
 
-```csharp
-	
-	FloatingChartShape chartShape = worksheet.Charts.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
-	(chartShape.Chart.SeriesGroups.First() as ISupportGrouping).Grouping = SeriesGrouping.Standard;
-```
+<snippet id='codeblock-cls'/>
 
 #### Figure 4: Standard/clustered bar chart with vertical orientation
 ![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_4.png)
 
 #### Example 7: Creating stacked bar chart with vertical orientation
 
-```csharp
-	
-	FloatingChartShape chartShape = worksheet.Charts.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
-	(chartShape.Chart.SeriesGroups.First() as ISupportGrouping).Grouping = SeriesGrouping.Stacked;
-```
+<snippet id='codeblock-clt'/>
 
 #### Figure 5: Stacked bar chart with vertical orientation
 ![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_5.png)
@@ -237,11 +173,7 @@ Some series groups (Bar, Line and Area) implement the **ISupportGrouping** inter
 
 #### Example 8: Creating percent-stacked bar chart with vertical orientation
 
-```csharp
-	
-	FloatingChartShape chartShape = worksheet.Charts.AddChart(new CellIndex(10, 1), selectedRange, ChartType.Bar);
-	(chartShape.Chart.SeriesGroups.First() as ISupportGrouping).Grouping = SeriesGrouping.PercentStacked;
-```
+<snippet id='codeblock-clu'/>
 
 #### Figure 6: Percent-stacked bar chart with vertical orientation
 ![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_6.png)

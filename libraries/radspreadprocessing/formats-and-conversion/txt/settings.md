@@ -39,11 +39,6 @@ __Example 1__ shows how to create and specify a particular setting to a TxtForma
 
 #### __Example 1: Use TxtSettings__
 
-```csharp
-	TxtFormatProvider provider = new TxtFormatProvider();
-	provider.Settings.Delimiter = ';';
-	provider.Settings.Quote = '^';
-	provider.Settings.HasHeaderRow = true;
-```
+<snippet id='codeblock-cpe'/>
 
 

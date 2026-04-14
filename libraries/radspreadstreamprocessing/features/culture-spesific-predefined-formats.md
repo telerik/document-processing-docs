@@ -56,15 +56,4 @@ Example 1 demonstrates how you can get specific format and set it when exporting
 
 #### Example 1: Using BuiltInNumberFormats class
 
-```csharp
-
-    SpreadCellFormat format = new SpreadCellFormat();
-    format.NumberFormat = BuiltInNumberFormats.GetFraction();
-    
-    using (ICellExporter cell = row.CreateCellExporter())
-    {
-        cell.SetValue(0.5);
-        cell.SetFormat(format);
-    }
-
-```
+<snippet id='codeblock-dkt'/>
