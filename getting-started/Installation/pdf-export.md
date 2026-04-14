@@ -24,7 +24,15 @@ Depending on the scenario, you could take advantage of the different functionali
 
 ## Create a PDF Document From Scratch
 
-**RadPdfProcessing** is intended to work with fixed documents and provides a convenient API to create, modify and export PDF documents. To use its import and export functionalities, you will need to add a reference to the **Telerik.Windows.Documents.Fixed** package. 
+#### Required packages
+
+* **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows 
+    * Telerik.Windows.Documents.Fixed
+
+* **.NET Standard 2.0 ({{site.dotnetversions}})** 
+    * Telerik.Documents.Fixed
+
+**RadPdfProcessing** is intended to work with fixed documents and provides a convenient API to create, modify and export PDF documents.
 
 You can import and export a document through the respective methods of the **PdfFormatProvider** class.
 
@@ -34,12 +42,17 @@ You can import and export a document through the respective methods of the **Pdf
 
 In scenarios where you need to convert a document from another file format to PDF, you could take advantage of the capabilities of **RadWordsProcessing**. This library allows you to import documents from the most common rich text formats (Docx, HTML, RTF) as well as plain text and export them to PDF. All the supported document formats and the corresponding format providers are listed in the [Formats and Conversion section]({%slug radwordsprocessing-formats-and-conversion%}). 
 
-In order to use the **PdfFormatProvider** of **RadWordsProcessing**, you should add a reference to  the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf** package.
-
 >The **PdfFormatProvider** class of RadWordsProcessing resides in the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf namespace**. For more information on how to work with this provider, please read [this topic]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
-
 ### Convert HTML to PDF
+
+#### Required packages
+
+* **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows 
+    * Telerik.Windows.Documents.Flow.FormatProviders.Pdf
+
+* **.NET Standard 2.0 ({{site.dotnetversions}})** 
+    * Telerik.Documents.Flow.FormatProviders.Pdf
 
 **Example 1** demonstrates how you can convert an HTML string to a PDF document. The [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) and [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) classes of [RadWordsProcessing]({%slug radwordsprocessing-overview%}) are used to import/export the [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance. 
 
@@ -61,9 +74,15 @@ In order to use the **PdfFormatProvider** of **RadWordsProcessing**, you should 
 
 ## Convert a Spreadsheet Document to PDF
 
-While the so far discussed libraries allow working with text documents, with RadSpreadProcessing you can create, import and export tabular data. This library supports the most common file formats for storing spreadsheet documents - Xlsx, CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
+#### Required packages
 
-In order to enable the export to PDF in RadSpreadProcessing, you will need to add a reference to the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf** package.
+* **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows 
+    * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf
+
+* **.NET Standard 2.0 ({{site.dotnetversions}})** 
+    * Telerik.Documents.Spreadsheet.FormatProviders.Pdf
+
+While the so far discussed libraries allow working with text documents, with RadSpreadProcessing you can create, import and export tabular data. This library supports the most common file formats for storing spreadsheet documents - Xlsx, CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
 
 >The **PdfFormatProvider** class of RadSpreadProcessing resides in the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf namespace**. For more information on how to work with this provider, please read [this topic]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 

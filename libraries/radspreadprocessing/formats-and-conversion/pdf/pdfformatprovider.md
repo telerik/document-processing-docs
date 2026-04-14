@@ -25,11 +25,13 @@ __PdfFormatProvider__ makes it easy to export a Workbook to a PDF format. Each W
 
 In order to use __PdfFormatProvider__ you need to add references to the packages listed below:
         
+* **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows 
+    * Telerik.Windows.Documents.Spreadsheet
+    * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf
 
-* Telerik.Windows.Documents.Spreadsheet
-            
-
-* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf
+* **.NET Standard 2.0 ({{site.dotnetversions}})** 
+    * Telerik.Documents.Spreadsheet
+    * Telerik.Documents.Spreadsheet.FormatProviders.Pdf
             
 
 ## Export
