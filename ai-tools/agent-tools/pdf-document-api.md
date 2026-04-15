@@ -23,8 +23,9 @@ A repository is a place in memory where we keep the documents we currently work 
 |**IFixedDocumentRepository**|Provides a unified interface for managing PDF (Fixed) documents. Extends IDocumentRepository with PDF-specific capabilities.|
 |**InMemoryFixedDocumentRepository**|Repository for multi-document orchestration scenarios. Manages multiple PDF documents in memory with support for creation and import.|
 
-
 ## Agent Tools
+
+>note Please refer to the [Agent Tools in PdfViewer](https://github.com/telerik/document-processing-sdk/tree/master/AITools/AgentToolsInPdfViewerWPF) SDK example which demonstrates the integration between the PDF Agent tools offered by RadPdfProcessing and RadPdfViewer offered by the UI for WPF suite.
 
 ### FixedDocumentFormAgentTools
 
