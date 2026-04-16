@@ -1,5 +1,6 @@
 ---
 title: Redistributing Telerik Document Processing
+description: Technical guidelines for protecting and redistributing Telerik Document Processing binaries with your integrated product across supported Telerik UI suites.
 page_title: Redistributing Telerik Document Processing
 slug: installation-deploying-telerik-document-processing
 tags: distributing,instructions,document,processing

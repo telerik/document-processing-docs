@@ -1,5 +1,6 @@
 ---
 title: Worksheet
+description: Learn about the worksheet model in RadSpreadStreamProcessing, including how to create and work with worksheets in a workbook.
 page_title: Worksheet
 slug: radspreadstreamprocessing-model-worksheet
 tags: worksheet

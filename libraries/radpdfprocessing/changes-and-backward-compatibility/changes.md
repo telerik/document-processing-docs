@@ -1,5 +1,6 @@
 ---
 title: Changes
+description: Summary of the new features and functionality introduced in RadPdfProcessing across releases.
 page_title: Get familiar with the new functionality introduced in the RadPdfProcessing. 
 slug: radpdfprocessing-changes
 tags: changes, pdf, processing, dpl, document, timeout

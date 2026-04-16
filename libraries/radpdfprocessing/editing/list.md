@@ -1,5 +1,6 @@
 ---
 title: List
+description: Learn how to create numbered and bulleted list paragraphs in PDF documents using the List class in RadPdfProcessing.
 page_title: List
 slug: radpdfprocessing-editing-list
 tags: list

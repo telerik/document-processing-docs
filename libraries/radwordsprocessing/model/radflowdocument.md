@@ -1,5 +1,6 @@
 ---
 title: RadFlowDocument
+description: Learn about the RadFlowDocument class in RadWordsProcessing, the root element that hosts all flow document content.
 page_title: RadFlowDocument
 slug: radwordsprocessing-model-radflowdocument
 tags: radflowdocument

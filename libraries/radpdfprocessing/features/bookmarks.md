@@ -1,5 +1,6 @@
 ---
 title: Bookmarks (Outlines)
+description: Learn how to create, modify, and navigate PDF bookmarks (document outlines) using RadPdfProcessing.
 page_title: Bookmarks (Outlines)
 slug: radpdfprocessing-features-bookmarks
 tags: bookmarks, outlines

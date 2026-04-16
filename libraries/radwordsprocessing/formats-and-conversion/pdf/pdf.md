@@ -1,5 +1,6 @@
 ---
 title: Pdf
+description: Learn about PDF format support in RadWordsProcessing for exporting flow documents as device-independent PDF files.
 page_title: Pdf
 slug: radwordsprocessing-formats-and-conversion-pdf
 tags: pdf

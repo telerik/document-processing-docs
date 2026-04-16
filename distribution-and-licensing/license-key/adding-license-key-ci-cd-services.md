@@ -1,5 +1,6 @@
 ---
 title: Adding the License Key to CI/CD Services
+description: Learn how to activate your Telerik Document Processing license key in CI/CD environments such as GitHub Actions and Azure Pipelines using environment variables.
 page_title: Adding the License Key to CI/CD Services
 slug: adding-license-key-ci-cd-services
 tags: ci, cd, service, services, license, key, document, processing, libraries, lambda, plugin, vsto, extension, function

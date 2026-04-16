@@ -1,5 +1,6 @@
 ---
 title: Overview
+description: Learn about PdfStreamWriter in RadPdfProcessing, a high-performance API for creating PDF files with minimal memory footprint by writing directly to a stream.
 page_title: Pdf Stream Writer - Overview
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview
 tags: pdf,stream,writer

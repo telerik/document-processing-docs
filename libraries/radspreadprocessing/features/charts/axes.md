@@ -1,5 +1,6 @@
 ---
 title: Axes
+description: Learn how to configure the primary and secondary axes of charts in RadSpreadProcessing spreadsheet documents.
 page_title: Axes
 slug: radspreadprocessing-features-charts-axes
 tags: chart, axes, axis

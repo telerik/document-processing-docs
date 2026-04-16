@@ -1,5 +1,6 @@
 ---
 title: Using RtfFormatProvider
+description: Learn how to import and export RadFlowDocument to and from RTF format using the RtfFormatProvider in RadWordsProcessing.
 page_title: Using RtfFormatProvider
 slug: radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider
 tags: using,rtfformatprovider

@@ -1,5 +1,6 @@
 ---
 title: FieldCharacter
+description: Learn about the FieldCharacter inline element in RadWordsProcessing that delimits field starts, ends, and separates field codes from results.
 page_title: FieldCharacter
 slug: radwordsprocessing-model-fieldcharacter
 tags: fieldcharacter

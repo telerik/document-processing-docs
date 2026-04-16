@@ -1,5 +1,6 @@
 ---
 title: Explore Features
+description: Explore the features of Telerik Document Processing libraries through live demos, SDK examples, and other developer-focused learning resources.
 page_title: Explore Features
 slug: getting-started-explore-features
 sdk_example: true

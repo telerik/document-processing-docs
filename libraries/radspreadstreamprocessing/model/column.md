@@ -1,5 +1,6 @@
 ---
 title: Columns
+description: Learn about columns in RadSpreadStreamProcessing, including how to define and configure column properties.
 page_title: Columns
 slug: radspreadstreamprocessing-model-columns
 tags: column

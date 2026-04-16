@@ -1,5 +1,6 @@
 ---
 title: Watermark
+description: Learn how to add text or image watermarks behind document content in RadWordsProcessing to identify the document status.
 page_title: Watermark
 slug: radwordsprocessing-concepts-watermark
 tags: watermark

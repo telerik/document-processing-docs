@@ -1,5 +1,6 @@
 ---
 title: Title and Legend
+description: Learn how to configure the title and legend of charts in RadSpreadProcessing spreadsheet documents.
 page_title: Title and Legend
 slug: radspreadprocessing-features-charts-title-and-legend
 tags: chart, title, legend

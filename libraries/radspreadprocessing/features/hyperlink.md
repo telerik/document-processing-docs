@@ -1,5 +1,6 @@
 ---
 title: Hyperlink
+description: Learn how to add and manage hyperlinks to web pages, workbook locations, and email addresses in RadSpreadProcessing.
 page_title: Hyperlink
 slug: radspreadprocessing-features-hyperlink
 tags: hyperlink

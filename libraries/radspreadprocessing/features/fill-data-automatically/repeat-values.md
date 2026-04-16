@@ -1,5 +1,6 @@
 ---
 title: Repeat Values
+description: Learn how to use the auto-fill feature in RadSpreadProcessing to automatically repeat existing cell data across adjacent rows or columns.
 page_title: Repeat Values
 slug: radspreadprocessing-features-fill-data-automatically-repeat-values
 tags: repeat,values

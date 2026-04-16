@@ -1,5 +1,6 @@
 ---
 title: Using CsvFormatProvider
+description: Learn how to import and export CSV files using the CsvFormatProvider in RadSpreadProcessing.
 page_title: Using CsvFormatProvider
 slug: radspreadprocessing-formats-and-conversion-csv-csvformatprovider
 tags: using,csvformatprovider

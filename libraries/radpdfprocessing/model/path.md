@@ -1,5 +1,6 @@
 ---
 title: Path
+description: Learn how to work with Path content elements in RadPdfProcessing to draw vector graphics defined by connected lines and curves.
 page_title: Path
 slug: radpdfprocessing-model-path
 tags: path

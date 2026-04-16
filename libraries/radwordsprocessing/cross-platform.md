@@ -1,5 +1,6 @@
 ---
 title: Cross-Platform Support
+description: Learn about the .NET Standard and .NET Core support in RadWordsProcessing and how to use the cross-platform NuGet packages.
 page_title: Cross-Platform Support
 slug: radwordsprocessing-cross-platform
 tags: cross,platform

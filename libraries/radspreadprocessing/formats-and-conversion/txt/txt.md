@@ -1,5 +1,6 @@
 ---
 title: Txt
+description: Learn about plain text (TXT) format support in RadSpreadProcessing for importing and exporting spreadsheet data as tab-delimited text.
 page_title: Txt
 slug: radspreadprocessing-formats-and-conversion-txt-txt
 tags: txt

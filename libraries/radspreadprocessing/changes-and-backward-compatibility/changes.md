@@ -1,5 +1,6 @@
 ---
 title: Changes
+description: Summary of the new features and functionality introduced in RadSpreadProcessing across releases.
 page_title: Get familiar with the new functionality introduced in RadSpreadProcessing. 
 slug: radspreadprocessing-changes
 tags: changes, spread, processing, dpl, document, excel, sheet, timeout

@@ -1,5 +1,6 @@
 ---
 title: General Information
+description: Overview of the supported file formats, format providers, and package references for importing and exporting spreadsheet documents in RadSpreadProcessing.
 page_title: General Information
 slug: radspreadprocessing-formats-and-conversion-general-information
 tags: formats,and,conversion

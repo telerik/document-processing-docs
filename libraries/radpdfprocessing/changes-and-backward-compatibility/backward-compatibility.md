@@ -1,5 +1,6 @@
 ---
 title: Backward Compatibility 
+description: Breaking changes and migration guidance for upgrading RadPdfProcessing between versions.
 page_title: Backward Compatibility 
 slug: radpdfprocessing-backward-compatibility
 tags: backward,compatibility

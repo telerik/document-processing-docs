@@ -1,5 +1,6 @@
 ---
 title: Settings
+description: Configure the TextFormatProvider export settings in RadPdfProcessing, such as line and page separators for plain text output.
 page_title: Settings
 slug: radpdfprocessing-formats-and-conversion-plain-text-settings
 tags: using,textformatprovider, settings

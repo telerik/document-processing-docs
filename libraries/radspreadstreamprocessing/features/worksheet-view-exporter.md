@@ -1,5 +1,6 @@
 ---
 title: Worksheet View Exporter
+description: Learn how to use the IWorksheetViewExporter interface in RadSpreadStreamProcessing to control the appearance of exported documents when opened in an application.
 page_title: Worksheet View Exporter
 slug: radspreadstreamprocessing-features-worksheetviewexporter
 tags: worksheet, view, viewport, freeze panes, scale, active cell, selection, gridlines

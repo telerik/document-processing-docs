@@ -1,5 +1,6 @@
 ---
 title: FormFieldCollection 
+description: Learn how to use the FormFieldCollection class in RadPdfProcessing to access, add, and remove interactive form fields in a PDF document.
 page_title: FormFieldCollection 
 slug: radpdfprocessing-model-interactive-forms-formfieldcollection
 tags: FormFieldCollection

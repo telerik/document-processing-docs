@@ -1,5 +1,6 @@
 ---
 title: Number Formatting
+description: Learn how to apply predefined number formats to cells in RadSpreadProcessing to control how numeric values are displayed.
 page_title: Number Formatting
 slug: radspreadprocessing-features-number-formats
 tags: number,formatting

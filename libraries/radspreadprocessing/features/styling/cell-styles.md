@@ -1,5 +1,6 @@
 ---
 title: Cell Styles
+description: Learn how to create, apply, and modify cell styles in RadSpreadProcessing to apply consistent formatting to spreadsheet cells.
 page_title: Cell Styles
 slug: radspreadprocessing-features-styling-cell-styles
 tags: cell,styles

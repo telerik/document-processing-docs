@@ -1,5 +1,6 @@
 ---
 title: Merge and Unmerge Cells
+description: Learn how to merge and unmerge adjacent cells across rows and columns in RadSpreadProcessing spreadsheet documents.
 page_title: Merge and Unmerge Cells
 slug: radspreadprocessing-features-merge-unmerge-cells
 tags: merge,and,unmerge,cells

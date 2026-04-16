@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+description: Learn how to get started with RadSpreadStreamProcessing, the high-performance library for generating large spreadsheet documents.
 page_title: Getting Started
 slug: radspreadstreamprocessing-getting-started
 tags: getting started

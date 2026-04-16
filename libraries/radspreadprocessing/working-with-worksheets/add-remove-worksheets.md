@@ -1,5 +1,6 @@
 ---
 title: Add, Remove and Reorder Worksheets
+description: Learn how to add, remove, and reorder worksheets inside a workbook in RadSpreadProcessing.
 page_title: Add, Remove and Reorder Worksheets
 slug: radspreadprocessing-working-with-worksheets-add-remove-worksheets
 tags: add,and,remove,worksheets, move, reorder

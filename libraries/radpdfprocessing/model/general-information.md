@@ -1,5 +1,6 @@
 ---
 title: General Information
+description: Overview of the RadPdfProcessing document model structure, including the hierarchy of document elements and how to add content to a PDF.
 page_title: General Information
 slug: radpdfprocessing-model-general-information
 tags: model

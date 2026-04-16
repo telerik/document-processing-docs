@@ -1,5 +1,6 @@
 ---
 title: Insert and Remove Rows and Columns
+description: Learn how to insert and remove rows and columns in RadSpreadProcessing worksheets by shifting surrounding content.
 page_title: Insert and Remove Rows and Columns
 slug: radspreadprocessing-working-with-rows-and-columns-insert-and-remove
 tags: insert,and,remove,rows,and,columns

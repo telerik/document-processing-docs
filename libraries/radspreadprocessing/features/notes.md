@@ -1,5 +1,6 @@
 ---
 title: Notes
+description: Learn how to add and manage notes in spreadsheet documents using RadSpreadProcessing.
 page_title: Notes 
 slug: radspreadprocessing-features-notes
 tags: notes, xlsx

@@ -1,5 +1,6 @@
 ---
 title: Sorting
+description: Learn how to sort data in spreadsheet worksheets using RadSpreadProcessing.
 page_title: Sorting
 slug: radspreadprocessing-features-sorting
 tags: sorting

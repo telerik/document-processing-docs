@@ -1,5 +1,6 @@
 ---
 title: Clone and Merge
+description: Learn how to clone and merge RadFlowDocument instances in RadWordsProcessing.
 page_title: Clone and Merge
 slug: radwordsprocessing-editing-clone-and-merge
 tags: clone,and,merge

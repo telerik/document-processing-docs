@@ -1,5 +1,6 @@
 ---
 title: Csv
+description: Learn about CSV (comma-separated values) format support in RadSpreadProcessing for storing and exchanging tabular spreadsheet data.
 page_title: Csv
 slug: radspreadprocessing-formats-and-conversion-csv-csv
 tags: csv

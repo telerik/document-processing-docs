@@ -1,5 +1,6 @@
 ---
 title: Lists
+description: Learn how to create and manage numbered and bulleted lists in RadWordsProcessing flow documents.
 page_title: Lists
 slug: radwordsprocessing-concepts-lists
 tags: lists

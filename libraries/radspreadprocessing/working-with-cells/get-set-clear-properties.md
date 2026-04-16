@@ -1,5 +1,6 @@
 ---
 title: Get, Set and Clear Cell Properties
+description: Learn how to get, set, and clear cell properties such as values, borders, fill, format, and styles in RadSpreadProcessing.
 page_title: Get, Set and Clear Cell Properties
 slug: radspreadprocessing-working-with-cells-get-set-clear-properties
 tags: get,set,and,clear,cell,properties,selection,spreadprocessing

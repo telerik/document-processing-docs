@@ -1,5 +1,6 @@
 ---
 title: Using PdfFormatProvider
+description: Learn how to export spreadsheet documents to PDF using the PdfFormatProvider in RadSpreadProcessing.
 page_title: Using PdfFormatProvider
 slug: radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider
 tags: using,pdfformatprovider

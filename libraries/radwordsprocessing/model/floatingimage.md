@@ -1,5 +1,6 @@
 ---
 title: FloatingImage
+description: Learn how to work with FloatingImage elements in RadWordsProcessing, which are inline anchors linked to floating images in flow documents.
 page_title: FloatingImage
 slug: radwordsprocessing-model-floatingimage
 tags: floatingimage

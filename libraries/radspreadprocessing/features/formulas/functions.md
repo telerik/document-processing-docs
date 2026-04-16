@@ -1,5 +1,6 @@
 ---
 title: Functions
+description: Learn about the built-in formula functions available in RadSpreadProcessing, including Date/Time, Financial, Math, Statistical, and Text functions.
 page_title: Functions
 slug: radspreadprocessing-features-formulas-functions
 tags: functions
