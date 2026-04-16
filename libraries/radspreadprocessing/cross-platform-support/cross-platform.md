@@ -4,7 +4,7 @@ page_title: Cross-Platform Support
 description: Learn how to use SpreadProcessing for .NET Standard in your cross-platform applications.
 slug: radspreadprocessing-cross-platform
 tags: cross,platform,excel, spreadsheet, pdf, net standard
-platforms: core, blazor, xamarin, winui, maui
+platforms: core, blazor, winui, maui
 published: True
 position: 0
 ---
@@ -13,7 +13,7 @@ position: 0
 
 **Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of packages built against the .NET Core & .NET Standard which you can reference in an application.
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the packages through the **UI for ASP.NET Core**, **UI for Blazor**, **UI for Xamarin**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can obtain the packages through the **UI for ASP.NET Core**, **UI for Blazor**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Package References
 
@@ -29,7 +29,7 @@ To use the model of **RadSpreadProcessing** in your cross-platform project, you 
 | **Telerik.Documents.Fixed**          | Required for exporting to PDF files.     |
 | **Telerik.Documents.Spreadsheet.FormatProviders.Pdf** | Required for exporting to PDF files.     |
 | ~~Telerik.Zip~~*                      | ~~Required for working with XSLX, XLS and PDF files.~~ |
-| **Telerik.Documents.ImageUtils** <br><sub>_This package is not available in UI for Xamarin._</sub> | Required when you need to export to PDF documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High. |
+| **Telerik.Documents.ImageUtils** | Required when you need to export to PDF documents containing images different than **Jpeg** and **Jpeg2000** or **ImageQuality** different than High. |
 
 >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 

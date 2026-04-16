@@ -5,7 +5,7 @@ slug: radspreadprocessing-features-conditional-formatting
 tags: conditional, format, values
 published: True
 position: 7
-platforms: mvc, ajax, blazor, wpf, winforms, xamarin, winui, core
+platforms: mvc, ajax, blazor, wpf, winforms, winui, core
 ---
 
 # Conditional Formatting

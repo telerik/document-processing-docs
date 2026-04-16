@@ -40,12 +40,6 @@ Telerik Document Processing is part of several Telerik bundles and could be upgr
 
 >Due to the specifics of Telerik Document Processing, a project that uses only packages of this product cannot be upgraded using the Upgrade Wizard of Visual Studio Extensions. You can manually replace the packages with the new ones or change the project's references to point to the location of the new version. 
 
-## UI for Xamarin
-
-[Upgrading Telerik UI for Xamarin on Windows](https://docs.telerik.com/devtools/xamarin/upgrade/upgrading-windows)
-
-[Upgrading Telerik UI for Xamarin on Mac](https://docs.telerik.com/devtools/xamarin/upgrade/upgrading-mac)
-
 ## See Also
 
 - [Telerik.Licensing NuGet Package Information]({%slug dpl-telerik-licensing-nuget-feed%})

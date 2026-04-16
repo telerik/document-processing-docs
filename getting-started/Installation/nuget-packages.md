@@ -10,7 +10,7 @@ position: 6
 
 # Available NuGet Packages 
 
-Telerik provides NuGet packages with the assemblies for all five Document Processing libraries: __RadPdfProcessing__, __RadSpreadProcessing__, __RadSpreadStreamProcessing__, __RadWordsProcessing__, and __RadZipLibrary__. These UI-independent cross-platform libraries enable you to process and convert content in various formats and even work with archive files. We deliver these libraries as a complement to the Telerik UI component suites (UI for ASP.NET, Kendo UI, UI for WPF, UI for WinForms, UI for Xamarin, UI for Blazor), and you don't need to purchase an additional license to use them.
+Telerik provides NuGet packages with the assemblies for all five Document Processing libraries: __RadPdfProcessing__, __RadSpreadProcessing__, __RadSpreadStreamProcessing__, __RadWordsProcessing__, and __RadZipLibrary__. These UI-independent cross-platform libraries enable you to process and convert content in various formats and even work with archive files. We deliver these libraries as a complement to the Telerik UI component suites (UI for ASP.NET, Kendo UI, UI for WPF, UI for WinForms, UI for Blazor), and you don't need to purchase an additional license to use them.
 
 If your workflow relies on NuGet for package management, you can take advantage of the packages that we describe in this article. There is no need to download and install the Document Processing libraries by using other methods. 
 
@@ -59,7 +59,6 @@ The following tables represent the available NuGet packages for the Document Pro
 	<tr>
 		<td><b><em>N/A</em></b></td>
 		<td><b>Telerik.Documents.ImageUtils</b>
-        <br><sub><i>This package is not available in UI for Xamarin.</i></sub></td>
 	</tr>
 	<tr>
 		<td colspan="2">This package is required when exporting to <code>PDF</code> format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the <a href="{%slug radpdfprocessing-cross-platform%}">PdfProcessing`s Cross-Platform Support</a> article. The package also depends on SkiaSharp. In order to use it, you will need to add a reference to SkiaSharp.

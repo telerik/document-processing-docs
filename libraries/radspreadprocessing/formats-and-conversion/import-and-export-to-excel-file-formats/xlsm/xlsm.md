@@ -5,7 +5,7 @@ slug: radspreadprocessing-formats-and-conversion-Xlsm-Xlsm
 tags: Xlsm
 published: True
 position: 0
-platforms: core, mvc, ajax, blazor, wpf, winforms, xamarin, winui
+platforms: core, mvc, ajax, blazor, wpf, winforms, winui
 
 ---
 
