@@ -58,10 +58,6 @@ The libraries can be used through the available NuGet packages.
 
 [Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
 
-## UI for Xamarin
-
-[Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/download-product-files)
-
 ## UI for WinUI
 
 [Installing Telerik UI for WinUI](https://docs.telerik.com/devtools/winui/installation-and-deployment/installationsteps)

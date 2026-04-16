@@ -66,7 +66,6 @@ In order to use the **OcrFormatProvider** you need to add the following packages
 	<tr>
 	    <td><b>-</b></td>
 		<td><b>Telerik.Documents.ImageUtils</b>
-			<br><sub><i>This assembly is not available in UI for Xamarin.</i></sub>
 	</tr>
     <tr>
 	    <td><b>-</b></td>
