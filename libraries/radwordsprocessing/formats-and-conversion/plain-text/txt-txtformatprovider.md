@@ -71,3 +71,4 @@ You can also export the document to a string and preserve it in a database.
 ## See Also
 
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
+* [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})
