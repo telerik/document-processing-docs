@@ -1,5 +1,6 @@
 ---
 title: Bookmark
+description: Learn how to create and use bookmarks in RadWordsProcessing flow documents to mark specific locations by name.
 page_title: Bookmark
 slug: radwordsprocessing-model-bookmark
 tags: bookmark

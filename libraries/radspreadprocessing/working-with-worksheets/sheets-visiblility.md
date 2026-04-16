@@ -1,5 +1,6 @@
 ---
 title: Sheets Visibility
+description: Learn how to control the visibility of worksheet sheets in RadSpreadProcessing spreadsheet documents.
 page_title: Sheets Visibility
 slug: radspreadprocessing-working-with-worksheets-sheets-visibility
 tags: grouping

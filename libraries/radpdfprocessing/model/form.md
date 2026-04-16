@@ -1,5 +1,6 @@
 ---
 title: Form
+description: Learn how to use Form XObjects in RadPdfProcessing to define reusable content elements within a PDF document.
 page_title: Form
 slug: radpdfprocessing-model-form
 tags: form

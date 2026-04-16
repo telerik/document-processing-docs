@@ -1,5 +1,6 @@
 ---
 title: Rename a Worksheet
+description: Learn how to rename worksheets within a workbook in RadSpreadProcessing for better data organization.
 page_title: Rename a Worksheet
 slug: radspreadprocessing-working-with-worksheets-rename-worksheet
 tags: rename,a,worksheet

@@ -1,5 +1,6 @@
 ---
 title: Overview
+description: Learn how to create and configure tables in PDF documents using the Table class in RadPdfProcessing.
 page_title: Table Overview
 slug: radpdfprocessing-editing-table-overview
 tags: table, overview, pdfprocessing, pdf, fixed, tablerow, tablecell

@@ -1,5 +1,6 @@
 ---
 title: Using TextFormatProvider
+description: Learn how to export a RadFixedDocument to plain text format using the TextFormatProvider in RadPdfProcessing.
 page_title: Using TextFormatProvider
 slug: radpdfprocessing-formats-and-conversion-plain-text-textformatprovider
 tags: using,textformatprovider

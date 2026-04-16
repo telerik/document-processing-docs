@@ -1,5 +1,6 @@
 ---
 title: Xls
+description: Learn about XLS (Excel 97-2003 BIFF8) format support in RadSpreadProcessing for importing and exporting legacy Excel spreadsheet files.
 page_title: Xls
 slug: radspreadprocessing-formats-and-conversion-xls-xls
 tags: xls

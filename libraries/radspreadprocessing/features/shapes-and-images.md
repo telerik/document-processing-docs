@@ -1,5 +1,6 @@
 ---
 title: Shapes and Images
+description: Learn how to create and work with shapes and images in RadSpreadProcessing spreadsheet documents.
 page_title: Shapes and Images
 slug: radspreadprocessing-features-shapes-and-images
 tags: shapes,and,images

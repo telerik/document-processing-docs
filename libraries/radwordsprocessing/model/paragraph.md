@@ -1,5 +1,6 @@
 ---
 title: Paragraph
+description: Learn about the Paragraph element in RadWordsProcessing and how it organizes inline content in flow documents.
 page_title: Paragraph
 slug: radwordsprocessing-model-paragraph
 tags: paragraph

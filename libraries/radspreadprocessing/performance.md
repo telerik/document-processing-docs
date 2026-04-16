@@ -1,5 +1,6 @@
 ---
 title: Performance Tips and Tricks
+description: Tips and best practices for maximizing the performance of RadSpreadProcessing when working with large amounts of spreadsheet data.
 page_title: Performance Tips and Tricks
 slug: radspreadprocessing-performance
 tags: performance,tips,and,tricks

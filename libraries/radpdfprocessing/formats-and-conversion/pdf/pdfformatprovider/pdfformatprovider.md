@@ -1,5 +1,6 @@
 ---
 title: Using PdfFormatProvider
+description: Learn how to import and export PDF documents using the PdfFormatProvider in RadPdfProcessing.
 page_title: Using PdfFormatProvider
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider
 tags: using,pdfformatprovider

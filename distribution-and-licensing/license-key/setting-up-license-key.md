@@ -1,5 +1,6 @@
 ---
 title: Setting Up Document Processing Libraries License Key
+description: Step-by-step instructions for downloading and installing your Telerik Document Processing license key to activate the libraries starting with the Q1 2025 release.
 page_title: Setting Up Document Processing Libraries License Key
 slug: setting-up-license-key
 tags: setting, up, license, key, document, processing, libraries

@@ -1,5 +1,6 @@
 ---
 title: Series
+description: Learn how to insert and remove chart series, and configure the data plotted on charts in RadSpreadProcessing.
 page_title: Series
 slug: radspreadprocessing-features-charts-series
 tags: series, insert, remove

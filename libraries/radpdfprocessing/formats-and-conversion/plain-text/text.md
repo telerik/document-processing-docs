@@ -1,5 +1,6 @@
 ---
 title: Plain text
+description: Learn about plain text format support in RadPdfProcessing and how to extract textual content from a PDF document.
 page_title: Plain text
 slug: radpdfprocessing-formats-and-conversion-plain-text-text
 tags: plain,text

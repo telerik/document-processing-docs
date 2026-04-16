@@ -1,5 +1,6 @@
 ---
 title: Cells
+description: Learn about cells in RadSpreadStreamProcessing, including how to define and configure cell content and properties.
 page_title: Cells
 slug: radspreadstreamprocessing-model-cells
 tags: cell

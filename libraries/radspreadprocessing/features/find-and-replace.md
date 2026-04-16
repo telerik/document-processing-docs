@@ -1,5 +1,6 @@
 ---
 title: Find and Replace
+description: Learn how to find and replace text and numbers across workbooks, worksheets, and cell ranges in RadSpreadProcessing.
 page_title: Find and Replace
 slug: radspreadprocessing-features-find-and-replace
 tags: find,and,replace

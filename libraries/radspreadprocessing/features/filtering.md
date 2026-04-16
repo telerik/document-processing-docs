@@ -1,5 +1,6 @@
 ---
 title: Filtering
+description: Learn how to apply and manage data filters in spreadsheet worksheets using RadSpreadProcessing.
 page_title: Filtering
 slug: radspreadprocessing-features-filtering
 tags: filtering

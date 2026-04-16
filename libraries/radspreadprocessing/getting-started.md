@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+description: Learn how to get started with RadSpreadProcessing, add the required NuGet references, and create your first spreadsheet document.
 page_title: Getting Started
 slug: radspreadprocessing-getting-started
 tags: getting,started

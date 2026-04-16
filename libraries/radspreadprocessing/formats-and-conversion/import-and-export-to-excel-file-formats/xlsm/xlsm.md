@@ -1,5 +1,6 @@
 ---
 title: Xlsm
+description: Learn about XLSM (macro-enabled Excel spreadsheet) format support in RadSpreadProcessing for importing and exporting macro-enabled workbooks.
 page_title: Xlsm
 slug: radspreadprocessing-formats-and-conversion-Xlsm-Xlsm
 tags: Xlsm

@@ -1,5 +1,6 @@
 ---
 title: Handling Exceptions
+description: Learn how to intercept and handle exceptions during PDF document import and export using RadPdfProcessing's exception handling events.
 page_title: Handling Exceptions
 slug: radpdfprocessing-handling-exceptions
 tags: exception, import

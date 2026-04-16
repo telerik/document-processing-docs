@@ -1,5 +1,6 @@
 ---
 title: Chart Data
+description: Learn how to set and work with data sources for charts in RadSpreadProcessing, including numeric, string, and formula-based chart data.
 page_title: Chart Data
 slug: radspreadprocessing-features-charts-chart-data
 tags: chart, data

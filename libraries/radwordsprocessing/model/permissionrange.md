@@ -1,5 +1,6 @@
 ---
 title: PermissionRange
+description: Learn how to use PermissionRange elements in RadWordsProcessing to define protected regions in flow documents.
 page_title: PermissionRange
 slug: radwordsprocessing-model-permissionrange
 tags: permission,range

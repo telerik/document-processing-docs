@@ -1,5 +1,6 @@
 ---
 title: Next Steps
+description: Browse recommended next steps and learning resources for Telerik Document Processing, including installation, integration, upgrade guidance, and SDK examples.
 page_title: Next Steps
 slug: getting-started-next-steps
 tags: Next Steps

@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+description: Learn how to get started with RadZipLibrary to create, load, and edit ZIP archives in your .NET applications.
 page_title: Getting Started
 slug: radziplibrary-gettingstarted
 tags: getting,started

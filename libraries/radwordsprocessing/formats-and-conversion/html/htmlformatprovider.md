@@ -1,5 +1,6 @@
 ---
 title: Using HtmlFormatProvider
+description: Learn how to import and export RadFlowDocument to and from HTML format using the HtmlFormatProvider in RadWordsProcessing.
 page_title: Using HtmlFormatProvider
 slug: radwordsprocessing-formats-and-conversion-html-htmlformatprovider
 tags: using,htmlformatprovider

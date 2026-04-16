@@ -1,5 +1,6 @@
 ---
 title: Features
+description: Overview of all HTML features supported by the HtmlFormatProvider in RadWordsProcessing for importing and exporting documents.
 page_title: Features
 slug: radwordsprocessing-formats-and-conversion-html-features
 tags: features

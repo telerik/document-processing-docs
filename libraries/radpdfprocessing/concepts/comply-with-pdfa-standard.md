@@ -1,5 +1,6 @@
 ---
 title: How to Comply with PDF/A Standard
+description: Learn how to create PDF documents that comply with the ISO-standardized PDF/A archiving standard using RadPdfProcessing.
 page_title: How to Comply with PDF/A Standard
 slug: radpdfprocessing-concepts-comply-with-pdfa-standard
 tags: pdfa,standard

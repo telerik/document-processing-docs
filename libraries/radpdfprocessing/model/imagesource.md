@@ -1,5 +1,6 @@
 ---
 title: ImageSource
+description: Learn how to create and use ImageSource objects in RadPdfProcessing to represent pixel data for images drawn in PDF documents.
 page_title: ImageSource
 slug: radpdfprocessing-model-imagesource
 tags: imagesource

@@ -1,5 +1,6 @@
 ---
 title: Overview
+description: RadSpreadStreamProcessing is a high-performance .NET library for generating large XLSX and CSV spreadsheet documents with minimal memory footprint.
 page_title: Overview
 slug: radspreadstreamprocessing-overview
 tags: overview

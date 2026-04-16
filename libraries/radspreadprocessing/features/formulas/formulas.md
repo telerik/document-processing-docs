@@ -1,5 +1,6 @@
 ---
 title: General Information
+description: Learn about formulas in RadSpreadProcessing, including values, operators, functions, and cell references used in algebraic expressions.
 page_title: General Information
 slug: radspreadprocessing-features-formulas-general-information
 tags: formulas

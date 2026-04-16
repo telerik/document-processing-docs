@@ -1,5 +1,6 @@
 ---
 title: ImageQuality
+description: Learn how to use the ImageQuality enumeration in RadPdfProcessing to control the quality of images when exporting to PDF.
 page_title: ImageQuality
 slug: radpdfprocessing-concepts-imagequality
 tags: image, quality

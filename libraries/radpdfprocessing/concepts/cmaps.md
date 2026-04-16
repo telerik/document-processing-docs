@@ -1,5 +1,6 @@
 ---
 title: CMap Tables
+description: Learn about CMap tables in RadPdfProcessing, how they map character codes to character selectors, and how to work with predefined CMap tables.
 page_title: CMap Tables
 slug: radpdfprocessing-concepts-cmap-tables
 tags: cmap

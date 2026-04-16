@@ -1,5 +1,6 @@
 ---
 title: CheckBoxField 
+description: Learn about the CheckBoxField class in RadPdfProcessing for creating and working with checkbox form fields in interactive PDF forms.
 page_title: CheckBoxField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-checkboxfield
 tags: checkboxfield

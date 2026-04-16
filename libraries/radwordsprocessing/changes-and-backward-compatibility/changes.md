@@ -1,5 +1,6 @@
 ---
 title: Changes
+description: Summary of the new features and functionality introduced in RadWordsProcessing across releases.
 page_title: Get familiar with the new functionality introduced in RadWordsProcessing.
 slug: radwordsprocessing-changes
 tags: changes

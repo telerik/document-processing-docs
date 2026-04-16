@@ -1,5 +1,6 @@
 ---
 title: Freeze Panes
+description: Learn how to freeze rows and columns in a worksheet using RadSpreadProcessing to keep headers visible while scrolling.
 page_title: Freeze Panes
 slug: radspreadprocessing-features-freeze-panes
 tags: freeze,panes

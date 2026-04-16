@@ -1,5 +1,6 @@
 ---
 title: Features
+description: Overview of the features supported by PdfStreamWriter in RadPdfProcessing for high-performance, low-memory PDF file writing.
 page_title: Pdf Stream Writer - Features
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-features
 tags: pdf,stream,writer, features

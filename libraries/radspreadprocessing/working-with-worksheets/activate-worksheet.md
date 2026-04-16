@@ -1,5 +1,6 @@
 ---
 title: Activate a Worksheet
+description: Learn how to set the active worksheet in a RadSpreadProcessing workbook.
 page_title: Activate a Worksheet
 slug: radspreadprocessing-working-with-worksheets-activate-worksheet
 tags: activate,a,worksheet

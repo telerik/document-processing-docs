@@ -1,5 +1,6 @@
 ---
 title: Json
+description: Learn about JSON format support in RadSpreadProcessing for exporting spreadsheet data as structured key-value pairs.
 page_title: Json
 slug: radspreadprocessing-formats-and-conversion-json-json
 tags: json

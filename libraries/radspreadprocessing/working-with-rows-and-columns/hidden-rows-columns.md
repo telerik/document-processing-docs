@@ -1,5 +1,6 @@
 ---
 title: Hidden Rows and Columns
+description: Learn how to hide and show rows and columns in RadSpreadProcessing spreadsheet documents.
 page_title: Hidden Rows and Columns
 slug: radspreadprocessing-working-with-rows-and-columns-hiding
 tags: hiding,hidden,rows,and,columns

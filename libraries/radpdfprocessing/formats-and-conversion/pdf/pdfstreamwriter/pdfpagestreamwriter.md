@@ -1,5 +1,6 @@
 ---
 title: PdfPageStreamWriter 
+description: Learn how to use the PdfPageStreamWriter class in RadPdfProcessing to write and position content on a page within a new PDF file.
 page_title: PdfPageStreamWriter 
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter
 tags: pdf,page,stream,writer

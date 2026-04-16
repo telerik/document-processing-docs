@@ -1,5 +1,6 @@
 ---
 title: Colors and Color Spaces
+description: Explore the color and color space classes available in RadPdfProcessing, including SimpleColor, PatternColor, and LabColor.
 page_title: Colors and Color Spaces
 slug: radpdfprocessing-concepts-colors-and-color-spaces
 tags: colors,and,color,spaces

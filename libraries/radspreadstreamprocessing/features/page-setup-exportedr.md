@@ -1,5 +1,6 @@
 ---
 title: Page Setup Exporter
+description: Learn how to configure page setup settings for printing in RadSpreadStreamProcessing using the PageSetupExporter.
 page_title: Page Setup Exporter
 slug: radspreadstreamprocessing-features-page-setup-exporter
 tags: worksheet, page, exporter

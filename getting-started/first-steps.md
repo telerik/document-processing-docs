@@ -1,5 +1,6 @@
 ---
 title: First Steps
+description: A step-by-step guide to creating your first application with Telerik Document Processing libraries—create a DOCX document and export it as a PDF file.
 page_title: First Steps
 slug: getting-started-first-steps
 tags: get,started,first,steps

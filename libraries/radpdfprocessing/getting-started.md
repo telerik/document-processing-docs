@@ -1,5 +1,6 @@
 ---
 title: Getting Started
+description: Learn how to get started with RadPdfProcessing, add the required NuGet references, and create your first PDF document.
 page_title: Getting Started
 slug: radpdfprocessing-getting-started
 tags: getting,started

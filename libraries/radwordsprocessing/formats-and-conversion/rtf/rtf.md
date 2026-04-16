@@ -1,5 +1,6 @@
 ---
 title: Rtf
+description: Learn about RTF (Rich Text Format) support in RadWordsProcessing for creating and editing cross-platform word processing documents.
 page_title: Rtf
 slug: radwordsprocessing-formats-and-conversion-rtf
 tags: rtf

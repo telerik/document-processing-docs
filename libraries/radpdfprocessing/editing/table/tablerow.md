@@ -1,5 +1,6 @@
 ---
 title: TableRow
+description: Learn how to insert and configure TableRow instances within tables in RadPdfProcessing PDF documents.
 page_title: TableRow
 slug: radpdfprocessing-editing-table-tablerow
 tags: table, overview, pdfprocessing, pdf, fixed, tablerow, tablecell

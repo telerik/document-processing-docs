@@ -1,5 +1,6 @@
 ---
 title: Converting other formats to PDF
+description: Learn how to convert other document formats such as DOCX, RTF, HTML, and XLSX to PDF using the Telerik Document Processing libraries.
 page_title: Converting other formats to PDF
 slug: radpdfprocessing-formats-and-conversion-converting-other-formats-to-pdf
 tags: pdf,docx,doc,rtf,xlsx,html

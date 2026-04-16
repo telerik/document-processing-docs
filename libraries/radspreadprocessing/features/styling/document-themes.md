@@ -1,5 +1,6 @@
 ---
 title: Document Themes
+description: Learn how to work with document themes in RadSpreadProcessing to apply consistent colors, fonts, and graphic effects across workbooks.
 page_title: Document Themes
 slug: radspreadprocessing-features-styling-document-themes
 tags: document,themes

@@ -1,5 +1,6 @@
 ---
 title: Comments
+description: Learn how to add and manage comments in spreadsheet documents using RadSpreadProcessing.
 page_title: Comments 
 slug: radspreadprocessing-features-comments
 tags: comments, xlsx

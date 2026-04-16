@@ -1,5 +1,6 @@
 ---
 title: What is a Workbook?
+description: Learn about the concept of a workbook in RadSpreadProcessing and how it represents an Excel spreadsheet document.
 page_title: What is a Workbook?
 slug: radspreadprocessing-working-with-workbooks-what-is-workbook
 tags: what,is,a,workbook?,excel

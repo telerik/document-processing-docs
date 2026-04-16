@@ -1,5 +1,6 @@
 ---
 title: Using JsonFormatProvider
+description: Learn how to export workbook data to a structured JSON representation using the JsonFormatProvider in RadSpreadProcessing.
 page_title: Using JsonFormatProvider
 slug: radspreadprocessing-formats-and-conversion-json-jsonformatprovider
 tags: json, export, settings, spread, processing, excel, xlsx, xls, settings

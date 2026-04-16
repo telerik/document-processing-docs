@@ -1,5 +1,6 @@
 ---
 title: Using TxtFormatProvider
+description: Learn how to import and export TXT files using the TxtFormatProvider in RadSpreadProcessing.
 page_title: Using TxtFormatProvider
 slug: radspreadprocessing-formats-and-conversion-txt-txtformatprovider
 tags: using,txtformatprovider
