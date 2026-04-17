@@ -315,6 +315,8 @@ The MockDataGenerator is responsible for returning sample data:
     }
 ```
 
+>note Complete SDK demo is available [here](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing/CloneAndPopulateRepeatingSectionContentControls).
+
 Usually, the content controls are mostly used by the editor controls like MS Word that allow the end user fill the required data. In case you are planning to edit the document programmatically, the [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) functionality should be also considered as an appropriate solution.
 
 
