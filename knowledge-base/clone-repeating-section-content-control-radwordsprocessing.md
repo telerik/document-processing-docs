@@ -41,6 +41,13 @@ Let's have an Employee object defined below. We need to use the  [RepeatingSecti
         public List<Telephone> Phones { get; set; } = new List<Telephone>();
     }
 
+    public class WorkLocation
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+    }
+
     public class Telephone
     {
         public int Id { get; set; }
