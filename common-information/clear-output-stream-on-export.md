@@ -51,7 +51,7 @@ Even when opening the file with `FileMode.OpenOrCreate`, the stream is cleared a
 
 >important This is a **behavioral change** in existing **Export()** methods. Code that intentionally preserves prior stream content before calling **Export()** is affected. The stream is now always truncated before writing. If you need to prepend content, write it after the export completes, or use a separate stream and combine them afterward.
 
-For the majority of usage scenarios — where the stream is either freshly created or being reused for a new export — this change is transparent and prevents potential file corruption.
+For the majority of usage scenarios, where the stream is either freshly created or being reused for a new export, this change is transparent and prevents potential file corruption.
 
 ## See Also
 
