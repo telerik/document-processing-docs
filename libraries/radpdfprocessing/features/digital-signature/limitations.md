@@ -4,7 +4,7 @@ description: Learn what are the limitations related to the usage of digital sign
 page_title: Limitations
 slug: radpdfprocessing-features-digital-signature-limitations
 tags: digital, signature, limitations
-position: 5
+position: 7
 ---
 
 # Limitations
