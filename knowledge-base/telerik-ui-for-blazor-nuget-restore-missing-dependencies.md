@@ -15,7 +15,7 @@ ticketid: 1712515
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
 | 2026.1.210| Telerik Document Processing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
-|13.1.0|Telerik.UI.for.Blazor|Trial|
+|13.1.0 (Trial)|Telerik.UI.for.Blazor||
 
 ## Description
 
