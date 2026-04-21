@@ -3,7 +3,7 @@ title: Integration with VS Code
 page_title: Integration with VS Code
 description: Learn how to add a reference to the Telerik Document Processing Libraries (DPL) packages in an existing Telerik UI for Blazor application using the Document Processing Libraries Wizard.
 slug: integration-with-vs-code
-tags: integration, vscode, document, processing, configure, wizard
+tags: integration, vscode, blazor, document, processing, wizard, configuration, telerik
 published: True
 position: 1
 ---

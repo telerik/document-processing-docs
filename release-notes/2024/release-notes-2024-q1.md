@@ -3,7 +3,7 @@ title: Version 2024.1.124 (2024 Q1)
 page_title: What is new in Q1 2024 for the Document Processing Libraries
 description: version 2024.1.124 (2024 Q1)
 slug: release-notes-2024-q1
-tags: q1, 2024, release, notes
+tags: release, notes, 2024, Q1, radpdfprocessing, telerik, document, changelog
 published: True
 position: 100
 ---

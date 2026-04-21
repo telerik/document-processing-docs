@@ -3,7 +3,7 @@ title: Overview
 page_title: Agent Tools - Overview
 description: Telerik Document Processing Agent Tools provide document processing capabilities designed to be exposed to AI agents.
 slug: agent-tools-overview
-tags: ai, dpl, document, processing, agent, tool, telerik, excel, pdf, word, docx, pdf, xlsx 
+tags: agent, tools, ai, pdf, docx, xlsx, telerik, document
 published: True
 position: 0
 ---

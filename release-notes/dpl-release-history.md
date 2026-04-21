@@ -3,7 +3,7 @@ title: Release History
 page_title: Release History
 description: What is new for the Document Processing Libraries
 slug: dpl-release-history
-tags: release, notes, history, dpl, version, telerik, document, processing, library, libraries
+tags: release, history, telerik, document, processing, versions, libraries, changelog
 published: True
 position: 98
 ---

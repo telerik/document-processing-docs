@@ -3,7 +3,7 @@ title: Prompt Library
 page_title: Prompt Library
 description: Explore prompt engineering techniques and ready-to-use prompt templates for the AI coding assistant of Telerik Document Processing Libraries.
 slug: ai-prompt-library
-tags: telerik, dpl, ai, server, mcp, dotnet,coding, assistant, prompt, library
+tags: prompt, library, ai, mcp, coding, assistant, telerik, templates
 published: True
 position: 3
 ---

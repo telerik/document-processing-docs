@@ -3,7 +3,7 @@ title: Introduction
 page_title: Welcome to Telerik Document Processing Libraries
 description: Telerik Document Processing is a bundle of UI-independent, cross-platform APIs enabling you to process the most commonly used flow, fixed and spreadsheet document formats. 
 slug: introduction
-tags: introduction, dpl, document, processing, pdf, word, excel
+tags: document, processing, pdf, docx, xlsx, telerik, libraries, dotnet
 published: True
 position: 0
 ---

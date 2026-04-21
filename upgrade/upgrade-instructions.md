@@ -3,7 +3,7 @@ title: Upgrade Instructions
 page_title: Upgrade Instructions
 description: Telerik Document Processing is part of several Telerik UI bundles, between you can choose. Learn more about the needed steps and the available options. 
 slug: installation-upgrade-instructions
-tags: upgrade,instructions,document,processing
+tags: upgrade, telerik, document, processing, versions, assemblies, migration, libraries
 published: True
 position: 2
 ---

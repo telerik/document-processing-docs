@@ -3,7 +3,7 @@ title: Personal Data Collection
 description: Learn how Telerik Document Processing collects and uses personal data, and how you can view or request deletion of your stored data under GDPR.
 page_title: Personal Data Collection
 slug: personal-data-collection
-tags: personaldatacollection, gdpr
+tags: privacy, gdpr, personal, data, telerik, compliance, collection, processing
 position: 4
 published: false
 ---

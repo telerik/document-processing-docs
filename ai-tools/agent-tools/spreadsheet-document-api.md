@@ -3,7 +3,7 @@ title: Spreadsheet Tools
 page_title: Spreadsheet Tools
 description: Telerik Document Processing Agent Tools provides a set of Spreadsheet document APIs exposing document processing capabilities to agentic workflows.
 slug: agent-tools-spreadsheet-document-api
-tags: ai, dpl, document, processing, agent, tool, telerik, spreadsheet, api
+tags: agent, spreadsheet, api, radspreadprocessing, ai, telerik, document, xlsx
 published: True
 position: 2
 ---

@@ -3,7 +3,7 @@ title: Convert and Merge Tools
 page_title: Convert and Merge
 description: Telerik Document Processing Agent Tools expose document processing conversion and merging capabilities to agentic workflows.
 slug: agent-tools-convert-merge-document-api
-tags: ai, dpl, document, processing, agent, tool, telerik, convert, api, merge
+tags: agent, conversion, merge, api, ai, telerik, pdf, docx
 published: True
 position: 4
 ---
