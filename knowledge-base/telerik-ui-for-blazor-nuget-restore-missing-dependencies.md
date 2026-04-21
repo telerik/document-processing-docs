@@ -23,7 +23,9 @@ When a client with an active Blazor **trial** license is attempting to restore T
 
 ## Solution
 
-Instead of using the NuGet packages, you can try downloading the zip (e.g. telerik.ui.for.blazor.13.1.0.zip) from your Telerik account. 
+It is recommended to activate a [trial for DevCraft](https://www.telerik.com/download), which is expected to enable the Document Processing's Downloads section in your Telerik account.
+
+Alternatively, instead of using the NuGet packages, you can try downloading the zip (e.g. telerik.ui.for.blazor.13.1.0.zip) from your Telerik account. 
 
 <img style="border: 1px solid gray;" src="images/blazor-zip.png" alt="Blazor Zip" /> 
 
