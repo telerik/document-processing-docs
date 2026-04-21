@@ -3,7 +3,7 @@ title: System Requirements
 page_title: System Requirements
 description: System Requirements
 slug: installation-system-requirements
-tags: system,requirements
+tags: system, requirements, windows, compatibility, dotnet, installation, telerik, framework
 published: True
 position: 4
 ---

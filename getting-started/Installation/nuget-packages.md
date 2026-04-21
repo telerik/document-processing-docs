@@ -3,7 +3,7 @@ title: Available NuGet Packages
 page_title: Available NuGet Packages
 description: Learn how you can use the Telerik Document Processing libraries through NuGet.
 slug: available-nuget-packages
-tags: nuget, document, processing, assembly, package
+tags: nuget, packages, assemblies, telerik, radpdfprocessing, radwordsprocessing, libraries, dotnet
 published: True
 position: 6
 ---

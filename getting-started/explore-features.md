@@ -4,7 +4,7 @@ description: Explore the features of Telerik Document Processing libraries throu
 page_title: Explore Features
 slug: getting-started-explore-features
 sdk_example: true
-tags: Explore Features
+tags: demos, sdk, documentation, api, radwordsprocessing, telerik, features, libraries
 published: True
 position: 2
 ---
