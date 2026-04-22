@@ -80,7 +80,7 @@ This approach allows you to setup a local NuGet package source, so you can insta
 
 ![install-using-nuget003](images/install-using-nuget003.png) 
 
-## Download from the Telerik NuGet Server
+## Download from the NuGet Server
 
 >note As of Q2 2026, NuGet.org is the recommended source for Telerik Document Processing packages. The Telerik NuGet server remains available for backward compatibility and for installing older versions that predate the NuGet.org release.
 
