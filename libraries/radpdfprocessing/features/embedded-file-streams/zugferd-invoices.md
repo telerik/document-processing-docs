@@ -3,7 +3,7 @@ title: ZUGFeRD invoices
 description: Learn how to embed a ZUGFeRD invoice into a PDF document utilizing the Telerik PdfProcessing library. 
 page_title: ZUGFeRD invoices
 slug: radpdfprocessing-embedded-file-streams-zugferd-invoices
-tags: pdf, file, stream, embedded, zugferd, invoice
+tags: zugferd, invoice, pdf, xml, radpdfprocessing, embedded, finance, ereceiving
 position: 1
 ---
 

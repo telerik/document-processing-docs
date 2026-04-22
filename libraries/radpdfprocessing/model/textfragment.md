@@ -3,7 +3,7 @@ title: TextFragment
 page_title: TextFragment
 description: RadPdfProcessing offers a TextFragment that represents a single-line text object.
 slug: radpdfprocessing-model-textfragment
-tags: textfragment
+tags: textfragment, pdf, text, radpdfprocessing, singleline, font, content, model
 published: True
 position: 3
 ---

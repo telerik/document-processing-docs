@@ -3,7 +3,7 @@ title: PushButtonField
 description: Learn about the PushButtonField class in RadPdfProcessing for creating clickable button form fields in interactive PDF forms.
 page_title: PushButtonField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield
-tags: pushbuttonfield
+tags: pushbuttonfield, pdf, formfields, radpdfprocessing, acroform, interactive, button, model
 published: True
 ---
 

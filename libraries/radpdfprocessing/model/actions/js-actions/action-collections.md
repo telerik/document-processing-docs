@@ -3,7 +3,7 @@ title: Action Collections
 description: Learn about the action collection types in RadPdfProcessing that store and manage PDF actions associated with document elements.
 page_title: Action Collections
 slug: radpdfprocessing-model-action-collections
-tags: js, action, pdf, javascript
+tags: actioncollections, pdf, javascript, radpdfprocessing, actions, triggers, model, events, collection
 published: True
 position: 1
 ---

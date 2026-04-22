@@ -3,7 +3,7 @@ title: TableCell
 description: Learn how to insert and configure TableCell instances within tables to organize and layout tabular data in RadPdfProcessing PDF documents.
 page_title: TableCell
 slug: radpdfprocessing-editing-table-tablecell
-tags: table, overview, pdfprocessing, pdf, fixed, tablerow, tablecell
+tags: tablecell, pdf, row, borders, padding, radpdfprocessing, span, layout
 published: True
 position: 2
 ---

@@ -3,7 +3,7 @@ title: Images
 description: Discover how to work with images in Telerik RadPdfProcessing for cross-platform .NET applications.
 page_title: Images
 slug: radpdfprocessing-cross-platform-images
-tags: cross, platform, image, blazor, core, winui, maui, net, standard, linux, ios 
+tags: images, crossplatform, pdf, jpeg, skiasharp, imagesharp, radpdfprocessing, dotnet 
 platforms: blazor, core, winui, maui
 published: True
 position: 2

@@ -3,7 +3,7 @@ title: FixedContentEditor
 page_title: FixedContentEditor
 description: RadPdfProcessing is a processing library that allows you to create, import and export PDF documents.
 slug: radpdfprocessing-editing-fixedcontenteditor
-tags: fixedcontenteditor
+tags: fixedcontenteditor, pdf, editing, annotations, drawing, radpdfprocessing, widgets, position
 published: True
 position: 4
 ---

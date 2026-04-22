@@ -3,7 +3,7 @@ title: Block
 description: Learn how to use the Block class in RadPdfProcessing to arrange content elements in a flow-like manner for measuring, drawing, and splitting.
 page_title: Block
 slug: radpdfprocessing-editing-block
-tags: block
+tags: block, pdf, layout, textfragment, images, radpdfprocessing, flowlayout, drawing
 published: True
 position: 0
 ---

@@ -3,7 +3,7 @@ title: Externally Sign a PDF Document
 description: Learn how to sign externally a PDF document using PdfProcessing.
 page_title: Externally Sign a PDF Document
 slug: external-digital-signing
-tags: pdf, sign, document, external, hash, telerik, processing
+tags: external, signing, pdf, hash, radpdfprocessing, digitalsignature, hsm, pkcs, certificates, sign
 published: True
 position: 3
 ---

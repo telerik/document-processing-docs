@@ -3,7 +3,7 @@ title: Position
 description: Learn how to use the Position property in RadPdfProcessing to manipulate the placement of content elements in PDF documents.
 page_title: Position
 slug: radpdfprocessing-concepts-position
-tags: position
+tags: position, pdf, matrix, transformation, coordinates, radpdfprocessing, rotation, scaling
 published: True
 position: 8
 ---

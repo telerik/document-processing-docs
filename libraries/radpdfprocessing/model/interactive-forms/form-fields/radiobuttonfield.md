@@ -3,7 +3,7 @@ title: RadioButtonField
 description: Learn about the RadioButtonField class in RadPdfProcessing for creating and working with radio button form fields in interactive PDF forms.
 page_title: RadioButtonField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield
-tags: radiobuttonfield
+tags: radiobuttonfield, pdf, formfields, radpdfprocessing, acroform, interactive, radiobutton, model
 published: True
 ---
 

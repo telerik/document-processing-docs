@@ -3,7 +3,7 @@ title: Overview
 description: RadPdfProcessing provides support for JavaScript actions and trigger events.
 page_title: JavaScript Actions - Overview  
 slug: radpdfprocessing-model-javascript-actions 
-tags: js, action, pdf,javascript
+tags: javascript, pdf, actions, js, radpdfprocessing, triggers, events, model, scripting
 published: True
 position: 0
 ---

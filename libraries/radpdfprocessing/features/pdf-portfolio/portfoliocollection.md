@@ -3,7 +3,7 @@ title: PortfolioCollection
 description: Explore the public API for creating and managing PDF Portfolios with RadPdfProcessing, including schema fields, sorting, collection items, and view modes.
 page_title: PortfolioCollection
 slug: radpdfprocessing-pdf-portfolio-portfoliocollection
-tags: pdf, portfolio, collection, schema, sorting, api, fixed, radfixeddocument
+tags: portfoliocollection, pdf, schema, sorting, radpdfprocessing, api, portfolio, items
 position: 1
 ---
 

@@ -3,7 +3,7 @@ title: Fonts
 page_title: Fonts
 description: RadPdfProcessing is a processing library that allows you to create, import and export PDF documents.
 slug: radpdfprocessing-concepts-fonts
-tags: fonts, pdf, framework, standard, embed
+tags: fonts, pdf, embedding, truetype, opentype, radpdfprocessing, encoding, glyphs
 published: True
 position: 5
 ---

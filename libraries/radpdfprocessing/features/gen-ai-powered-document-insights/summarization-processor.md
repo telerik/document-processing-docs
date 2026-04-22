@@ -3,7 +3,7 @@ title: SummarizationProcessor
 description: SummarizationProcessor class enables you to generate concise summaries of PDF documents using Large Language Models.
 page_title: SummarizationProcessor
 slug: radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor
-tags: ai, document, analysis, summarization, processor, summary
+tags: summarization, genai, pdf, llm, radpdfprocessing, processor, ai, documents
 published: True
 position: 3
 ---

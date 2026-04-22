@@ -3,7 +3,7 @@ title: StructureTree
 description: The StructureTree class represents the root of the structure elements tree of the document in RadPdfProcessing offered by Telerik Document Processing libraries.
 page_title: StructureTree
 slug: radpdfprocessing-model-structure-tree
-tags: fixeddocument, pdf, accessibility, structure, document, tree, fixed
+tags: structuretree, pdf, accessibility, radpdfprocessing, tagged, hierarchy, elements, structure
 published: True
 position: 7
 ---
