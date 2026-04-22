@@ -3,7 +3,7 @@ title: Culture Specific Predefined Formats
 page_title: Culture Specific Predefined Formats
 description: This article describes how you can use the predefined culture specific format strings. 
 slug: radspreadstreamprocessing-features-culture-spesific-predefined-formats
-tags: culture, format, currency, number
+tags: culture, formats, spread, stream, processing, spreadsheet, number, currency, localization, predefined
 published: True
 position: 4
 ---

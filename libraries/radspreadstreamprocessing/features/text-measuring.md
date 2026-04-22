@@ -3,7 +3,7 @@ title: Get Cell Content Size
 page_title: Get Cell Content Size
 description: Learn how you can measure the size of the cell content in SpreadStreamProcessing for .NET Standard.
 slug: radspreadstreamprocessing-features-text-measuring
-tags: cell, text, size, measure, content, width, height, autofit, fit
+tags: text, measuring, spread, stream, processing, spreadsheet, cells, width, height, auto, fit, dotnet
 platforms: core,blazor,winui, wpf, ajax, mvc, silverlight
 published: True
 position: 1

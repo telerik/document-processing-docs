@@ -3,7 +3,7 @@ title: Cell Styles
 description: Learn how to use cell styles in RadSpreadStreamProcessing to apply consistent formatting to cells in exported spreadsheet documents.
 page_title: Cell Styles
 slug: radspreadstreamprocessing-features-styling-cell-styles
-tags: cell, styles
+tags: cellstyles, spread, stream, processing, spreadsheet, formatting, cells, export, styles, xlsx
 published: True
 position: 1
 ---

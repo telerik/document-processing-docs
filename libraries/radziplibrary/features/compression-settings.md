@@ -2,7 +2,7 @@
 title: Compression Settings
 page_title: Compression Settings
 slug: radziplibrary-compression-settings
-tags: compression,settings
+tags: compression, settings, radziplibrary, zip, deflate, algorithm, level, zlib, archive
 published: True
 position: 4
 ---

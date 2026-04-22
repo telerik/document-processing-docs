@@ -2,7 +2,7 @@
 title: Protect ZipArchive
 page_title: Protect ZipArchive
 slug: radziplibrary-protect-ziparchive
-tags: protect,ziparchive
+tags: protection, archive, radziplibrary, zip, password, encryption, aes, pkware
 published: True
 position: 1
 ---

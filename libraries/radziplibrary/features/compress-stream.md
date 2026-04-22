@@ -2,7 +2,7 @@
 title: Compressing a Stream
 page_title: Compressing a Stream
 slug: radziplibrary-compress-stream
-tags: compressing,a,stream
+tags: compression, stream, radziplibrary, zip, compressedstream, decompress, dotnet, archive
 published: True
 position: 3
 ---

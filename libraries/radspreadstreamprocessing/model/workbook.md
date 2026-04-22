@@ -3,7 +3,7 @@ title: Workbook
 description: Learn about the workbook model in RadSpreadStreamProcessing, the top-level container for worksheets in a spreadsheet document.
 page_title: Workbook
 slug: radspreadstreamprocessing-model-workbook
-tags: workbook, read, save
+tags: workbook, spread, stream, processing, spreadsheet, model, worksheets, streaming, export, container
 published: True
 position: 1
 ---
