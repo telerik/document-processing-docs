@@ -3,7 +3,7 @@ title: Overview
 page_title: Cross-Platform Support
 description: Learn how to use SpreadProcessing for .NET Standard in your cross-platform applications.
 slug: radspreadprocessing-cross-platform
-tags: cross,platform,excel, spreadsheet, pdf, net standard
+tags: crossplatform, spreadsheet, dotnet, standard, radspreadprocessing, pdf, excel, blazor
 platforms: core, blazor, winui, maui
 published: True
 position: 0

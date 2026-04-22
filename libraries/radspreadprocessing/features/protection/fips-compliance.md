@@ -3,7 +3,7 @@ title: FIPS Compliance
 description: Learn how to produce FIPS 140-2 compliant spreadsheet documents using RadSpreadProcessing with only approved cryptographic algorithms.
 page_title: FIPS Compliance
 slug: radspreadprocessing-features-protection-fips-compliance
-tags: workbook,protection, fips
+tags: fips, protection, spreadsheet, radspreadprocessing, compliance, encryption, workbook, security
 published: True
 position: 3
 ---

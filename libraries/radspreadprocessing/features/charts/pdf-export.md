@@ -3,7 +3,7 @@ title: Export Chart to PDF
 description: Learn how to export spreadsheet charts to PDF using RadSpreadProcessing and the IPdfChartRenderer interface in WPF.
 page_title: Export Chart to PDF
 slug: radspreadprocessing-features-charts-pdf-export
-tags: chart, pdf, export
+tags: charts, pdf, export, spreadsheet, radspreadprocessing, wpf, renderer, excel, spread, xlsx
 published: True
 position: 7
 platforms: wpf

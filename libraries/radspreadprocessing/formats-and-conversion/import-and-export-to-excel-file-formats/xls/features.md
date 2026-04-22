@@ -3,7 +3,7 @@ title: Features
 description: Overview of all features supported by the XlsFormatProvider in RadSpreadProcessing for importing and exporting XLS files.
 page_title: Features
 slug: radspreadprocessing-formats-and-conversion-xls-features
-tags: features, xls
+tags: xls, format, provider, features, xls, spreadsheet, radspreadprocessing, excel, import, export
 published: True
 position: 1
 platforms: core, mvc, ajax, blazor, wpf, winforms, winui

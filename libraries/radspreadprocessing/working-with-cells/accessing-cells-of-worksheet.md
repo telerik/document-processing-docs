@@ -3,7 +3,7 @@ title: Accessing Cells of a Worksheet
 description: Learn how to access and manipulate cells in RadSpreadProcessing worksheets using the CellSelection class.
 page_title: Accessing Cells of a Worksheet
 slug: radspreadprocessing-working-with-cells-accessing-cells-of-worksheet
-tags: accessing,cells,worksheet,selection,workbook,xlsx,spreadprocessing,
+tags: cells, spreadsheet, radspreadprocessing, cell, selection, worksheet, access, index, range
 published: True
 position: 2
 ---

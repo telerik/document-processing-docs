@@ -3,7 +3,7 @@ title: Conditional Formatting
 description: Learn how to use conditional formatting in RadSpreadProcessing to visually highlight data based on rules and conditions.
 page_title: Conditional Formatting
 slug: radspreadprocessing-features-conditional-formatting
-tags: conditional, format, values
+tags: conditional, formatting, spreadsheet, spreadprocessing, cells, rules, formatting, styles, data, excel, xlsx
 published: True
 position: 7
 platforms: mvc, ajax, blazor, wpf, winforms, winui, core

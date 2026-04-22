@@ -3,7 +3,7 @@ title: Prerequisites
 description: Get familiar with the requirements for using the GenAI-powered Document Insights functionality in the SpreadProcessing library. 
 page_title: Prerequisites
 slug: radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites
-tags: ai, document, analysis, prerequisites, setup, installation, gen, excel, xlsx, spread, processing
+tags: genai, prerequisites, spreadsheet, radspreadprocessing, llm, nuget, setup, ai, analysis, excel, xlsx, spread, processing
 published: True
 position: 1
 ---

@@ -2,8 +2,7 @@
 title: Features
 description: Overview of all features supported by the PdfFormatProvider when exporting spreadsheet documents in RadSpreadProcessing.
 page_title: Features
-slug: radspreadprocessing-formats-and-conversion-pdf-features
-tags: features
+tags: pdf, format, provider, features, pdf, spreadsheet, radspreadprocessing, export, charts, print
 published: True
 position: 1
 ---

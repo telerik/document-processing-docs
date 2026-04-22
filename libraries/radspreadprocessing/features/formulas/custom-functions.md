@@ -3,7 +3,7 @@ title: Custom Functions
 description: Learn how to create custom formula functions in RadSpreadProcessing to extend the built-in function library.
 page_title: Custom Functions
 slug: radspreadprocessing-features-formulas-custom-functions
-tags: custom,functions
+tags: custom, functions, formulas, spreadsheet, radspreadprocessing, functions, extension, plugin, calculation, spread, xlsx
 published: True
 position: 5
 ---

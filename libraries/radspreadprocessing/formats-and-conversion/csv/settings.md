@@ -2,8 +2,7 @@
 title: Settings
 description: Learn about the import and export settings available for the CsvFormatProvider in RadSpreadProcessing.
 page_title: Settings
-slug: radspreadprocessing-formats-and-conversion-csv-settings
-tags: settings
+tags: csv, format, provider, settings, spreadsheet, radspreadprocessing, csv, import, export, configuration, spread
 published: True
 position: 2
 ---

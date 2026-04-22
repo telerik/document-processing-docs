@@ -3,7 +3,7 @@ title: Data Validation
 description: Learn how to use data validation in RadSpreadProcessing to control the type and range of data users enter into spreadsheet cells.
 page_title: Data Validation
 slug: radspreadprocessing-features-data-validation
-tags: data,validation
+tags: data, validation, spreadsheet, radspreadprocessing, cells, rules, input, worksheet, excel, xlsx
 published: True
 position: 18
 ---

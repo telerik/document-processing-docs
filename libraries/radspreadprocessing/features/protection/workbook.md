@@ -3,7 +3,7 @@ title: Workbook Protection
 description: Learn how to protect the structure of a workbook in RadSpreadProcessing to prevent users from adding, removing, renaming, or reordering sheets.
 page_title: Workbook Protection
 slug: radspreadprocessing-features-protection-workbook
-tags: workbook,protection
+tags: workbook, protection, spreadsheet, radspreadprocessing, password, security, sheets
 published: True
 position: 0
 ---

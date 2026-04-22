@@ -3,7 +3,7 @@ title: Overview
 description: Learn how to add, remove, and manipulate chart objects in spreadsheet documents using RadSpreadProcessing.
 page_title: Charts
 slug: radspreadprocessing-features-charts
-tags: chart
+tags: charts, spreadsheet, radspreadprocessing, excel, xlsx, worksheet, visualization, overview
 published: True
 position: 1
 platforms: ajax, mvc, wpf, winforms
