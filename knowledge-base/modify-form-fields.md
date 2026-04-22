@@ -5,7 +5,7 @@ type: how-to
 page_title:  Iterate and modify form fields in code
 slug: modify-form-fields
 position: 0
-tags: form, fields, modify
+tags: radpdfprocessing, pdf, form, fields, acroform, document, processing, fixed
 res_type: kb
 ---
 

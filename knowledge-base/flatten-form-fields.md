@@ -5,7 +5,7 @@ type: how-to
 page_title: Flatten Form Fields
 slug: flatten-form-fields
 position: 0
-tags: pdf, page, flatten, form, field
+tags: radpdfprocessing, pdf, form, fields, flatten, acroform, document, processing
 res_type: kb
 ---
 

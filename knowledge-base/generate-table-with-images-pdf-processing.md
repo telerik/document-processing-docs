@@ -4,7 +4,7 @@ description: Learn how to generate a table with images with PdfProcessing.
 type: how-to
 page_title: How to Generate a Table with Images with PdfProcessing
 slug: generate-table-with-images-pdf-processing
-tags: radpdfprocessing, radfixeddocument, image, height, width, retain
+tags: radpdfprocessing, pdf, table, image, radfixeddocument, document, processing, fixed
 res_type: kb
 ---
 

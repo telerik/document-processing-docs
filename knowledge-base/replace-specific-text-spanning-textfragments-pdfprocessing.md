@@ -5,7 +5,7 @@ type: how-to
 page_title: Replace Specific Text Spanning Multiple TextFragments in Telerik PdfProcessing
 meta_title: Replace Specific Text Spanning Multiple TextFragments in Telerik PdfProcessing
 slug: replace-specific-text-spanning-textfragments-pdfprocessing
-tags: pdfprocessing, telerik document processing, textfragment, replace text, pdf
+tags: radpdfprocessing, pdf, text, textfragment, replace, document, processing, fixed
 res_type: kb
 ticketid: 1712335
 ---

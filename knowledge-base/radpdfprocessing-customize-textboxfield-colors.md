@@ -4,7 +4,7 @@ description: Learn how to alter the text and border colors to highlight a TextBo
 type: how-to
 page_title: How to Change Text and Border Colors to Highlight a TextBoxField with RadPdfProcessing
 slug: radpdfprocessing-customize-textboxfield-colors
-tags: pdfprocessing, document, processing, textbox, field, color, border, customization, pdf, highlight 
+tags: radpdfprocessing, pdf, textbox, field, color, border, document, processing
 res_type: kb
 ticketid: 1673638
 ---

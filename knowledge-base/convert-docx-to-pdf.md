@@ -5,7 +5,7 @@ type: how-to
 page_title: Convert Docx to PDF
 slug: convert-docx-to-pdf
 position: 0
-tags: docx, pdf, word
+tags: radwordsprocessing, docx, pdf, conversion, word, document, processing, export
 res_type: kb
 ---
 

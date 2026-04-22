@@ -5,7 +5,7 @@ type: how-to
 page_title: Retain Numeric Values in Excel Import with DataTableFormatProvider
 meta_title: Retain Numeric Values in Excel Import with DataTableFormatProvider
 slug: retain-numeric-values-datatable-excel-datatableformatprovider
-tags: spread, processing,telerik, document,datatable, table,formatprovider,worksheet,numeric, value
+tags: radspreadprocessing, datatable, excel, numeric, formatprovider, worksheet, document, processing
 res_type: kb
 ticketid: 1707296
 ---

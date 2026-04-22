@@ -4,7 +4,7 @@ description: Learn how to draw a PDF page background by adding a colored rectang
 type: how-to
 page_title: Draw PDF Page Background
 slug: radpdfprocessing-draw-pdf-page-background
-tags: pdf, processing, background, page, content, rectangle, color, fixed, document, draw
+tags: radpdfprocessing, pdf, background, page, rectangle, document, processing, fixed
 res_type: kb
 ---
 

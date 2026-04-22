@@ -5,7 +5,7 @@ type: how-to
 page_title: Identifying incomplete or corrupted font files causing content issues in exported PDF dcouments
 meta_title: Identifying incomplete or corrupted font files causing content issues in exported PDF documents
 slug: validating-fonts-pdf-document-processing
-tags: word, document, processing, ttf, font, validation, pdf, export, spread, fixed, flow, excel
+tags: radpdfprocessing, pdf, font, ttf, validation, export, document, processing
 res_type: kb
 ticketid: 1690314
 ---

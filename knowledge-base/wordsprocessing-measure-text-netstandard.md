@@ -4,7 +4,7 @@ description: Learn how to measure text using the WordsProcessing library in .NET
 type: how-to
 page_title: How to Measure Text in WordsProcessing .NET Standard
 slug: wordsprocessing-measure-text-netstandard
-tags: word, docx, flow, measure, netstandard, wordsprocessing 
+tags: radwordsprocessing, docx, text, measure, netstandard, document, processing, word
 res_type: kb
 ---
 

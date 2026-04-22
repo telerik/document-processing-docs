@@ -4,7 +4,7 @@ description: Learn how to programmatically convert WMF images to PNG within RTF 
 type: how-to
 page_title: How to Convert WMF to PNG in RTF Files Using Telerik Document Processing
 slug: convert-wmf-to-png-radwordsprocessing
-tags: wordsprocessing, rtf, wmf, png, document, processing, image, conversion
+tags: radwordsprocessing, rtf, wmf, png, image, conversion, document, processing
 res_type: kb
 ticketid: 1662500
 ---

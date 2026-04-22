@@ -5,7 +5,7 @@ type: how-to
 page_title: Adding a .HEIC Image to PDF Documents in PdfProcessing
 meta_title: Adding a .HEIC Image to PDF Documents in PdfProcessing
 slug: convert-heic-images-to-jpg
-tags: pdf, processing, telerik, document, heic, image, convert
+tags: radpdfprocessing, pdf, heic, image, conversion, document, processing, jpeg
 res_type: kb
 ticketid: 1710179
 ---

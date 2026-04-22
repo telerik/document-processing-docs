@@ -5,7 +5,7 @@ type: how-to
 page_title: Resolving Telerik UI for Blazor NuGet Restore Failures Due to Missing Dependencies
 meta_title: Resolving Telerik UI for Blazor NuGet Restore Failures Due to Missing Dependencies
 slug: telerik-ui-for-blazor-nuget-restore-missing-dependencies
-tags: dpl,blazor, nuget, restore, dependencies, document, telerik
+tags: blazor, nuget, restore, dependencies, telerik, document, processing, packages
 res_type: kb
 ticketid: 1712515
 ---

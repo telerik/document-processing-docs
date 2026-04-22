@@ -5,7 +5,7 @@ type: how-to
 page_title: Create Custom Text Measurer .NET Standard
 slug: create-custom-text-measurer-net-standard
 position: 0
-tags: spreadsheet, custom, text, measurer, netstandard
+tags: radspreadprocessing, text, measurer, netstandard, spreadsheet, document, processing, extension
 res_type: kb
 ---
 

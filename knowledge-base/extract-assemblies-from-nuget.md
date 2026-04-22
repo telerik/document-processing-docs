@@ -4,7 +4,7 @@ description: Learn How to Extract Assemblies Contained inside a NuGet Package.
 type: how-to
 page_title: How to Extract Assemblies Contained inside a NuGet Package
 slug: extract-assemblies-from-nuget
-tags: extract, dll, reference, assembly, nuget, package 
+tags: nuget, assembly, dll, telerik, document, processing, extract, packages
 res_type: kb 
 ---
 

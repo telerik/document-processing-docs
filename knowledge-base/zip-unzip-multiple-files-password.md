@@ -5,7 +5,7 @@ type: how-to
 page_title: Example on how to zip and unzip multiple files with a password
 slug: zip-unzip-multiple-files-password
 position: 
-tags: 
+tags: radziplibrary, zip, password, encryption, files, document, processing, archive
 ticketid: 1493695
 res_type: kb
 ---

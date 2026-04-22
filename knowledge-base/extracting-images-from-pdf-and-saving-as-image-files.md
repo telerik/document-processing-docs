@@ -4,7 +4,7 @@ description: This article explains how to extract images from a PDF document and
 type: how-to
 page_title: Extracting Images from a PDF and Saving Them as Image Files
 slug: extracting-images-from-pdf-and-saving-as-image-files
-tags: pdf, images, extraction, save, byte arrays, files
+tags: radpdfprocessing, pdf, image, extraction, files, document, processing, fixed
 res_type: kb
 ---
 

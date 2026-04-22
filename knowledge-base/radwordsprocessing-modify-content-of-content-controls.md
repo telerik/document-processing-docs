@@ -4,7 +4,7 @@ description: Learn how to change the content inside Structured Document Tags (Co
 type: how-to
 page_title: How to Modify the Content of Structured Document Tags (Content Controls)
 slug: radwordsprocessing-modify-content-controls
-tags: content, controls, sdt, words, processing, structured, document, tags, flow, docx, fields
+tags: radwordsprocessing, docx, content, controls, sdt, document, processing, structured
 res_type: kb
 ---
 

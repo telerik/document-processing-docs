@@ -4,7 +4,7 @@ description: Learn how to iterate over form fields in a PDF document and extract
 type: how-to
 page_title: How to Extract Input Values from PDF Form Fields with RadPdfProcessing
 slug: extract-pdf-form-fields-data-radpdfprocessing
-tags: pdfprocessing, document, pdf, form, input, fields, extract, data
+tags: radpdfprocessing, pdf, form, fields, data, extraction, document, processing
 res_type: kb
 ticketid: 1658908
 ---

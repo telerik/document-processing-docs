@@ -5,7 +5,7 @@ type: how-to
 page_title: Creating List Data Validation Rules Using Cell Ranges in SpreadProcessing
 meta_title: Creating List Data Validation Rules Using Cell Ranges in SpreadProcessing
 slug: spreadprocessing-list-data-validation-cell-range
-tags: spreadprocessing, list, data, validation, rule, cell, range, telerik, document, processing, libraries
+tags: radspreadprocessing, excel, validation, list, cell, range, document, processing
 res_type: kb
 ticketid: 1695747
 ---

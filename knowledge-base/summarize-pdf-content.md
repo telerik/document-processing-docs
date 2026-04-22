@@ -4,7 +4,7 @@ description: Learn how to summarize the text content from a PDF document using R
 type: how-to
 page_title: How to Summarize the Text Content of PDF documents using Text Analytics with Azure AI services
 slug: summarize-pdf-content
-tags: pdf, document, processing, text, summarize, summary, content, azure 
+tags: radpdfprocessing, pdf, azure, ai, text, summary, document, processing
 res_type: kb
 ticketid: 1657503
 ---

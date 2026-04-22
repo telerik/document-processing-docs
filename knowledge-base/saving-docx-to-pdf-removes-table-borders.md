@@ -4,7 +4,7 @@ description: This article provides a solution to the issue where table borders a
 type: troubleshooting
 page_title: Saving DOCX to PDF Removes Table Borders | Troubleshooting | RadWordsProcessing
 slug: saving-docx-to-pdf-removes-table-borders
-tags: radwordsprocessing, docx, pdf, table, borders, pdfformatprovider
+tags: radwordsprocessing, docx, pdf, table, border, document, processing, troubleshooting
 res_type: kb
 ---
 

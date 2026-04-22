@@ -5,7 +5,7 @@ type: how-to
 page_title: Resolving Distorted Font of TOC (Table of Contents) Title When Converting DOCX to PDF
 meta_title: Resolving Distorted Font of TOC (Table of Contents) Title When Converting DOCX to PDF
 slug: resolve-toc-title-font-docx-to-pdf
-tags: word,processing, telerik, document, docx, pdf, toc, font, style, text, toc, title
+tags: radwordsprocessing, pdf, docx, toc, font, style, document, processing
 res_type: kb
 ticketid: 1710417
 ---

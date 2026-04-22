@@ -5,7 +5,7 @@ type: how-to
 page_title: Extract the contents of a zip file to a directory
 slug: zip-library-extract-files-from-archive
 position: 0
-tags: extract, zip, archive
+tags: radziplibrary, zip, archive, extract, files, document, processing, compression
 ticketid: 1070451
 res_type: kb
 ---

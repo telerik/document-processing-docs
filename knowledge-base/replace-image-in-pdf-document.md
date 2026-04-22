@@ -5,7 +5,7 @@ type: how-to
 page_title: Replace Image in PDF Document
 slug: replace-image-in-pdf-document
 position: 0
-tags: pdf, image, replace
+tags: radpdfprocessing, pdf, image, replace, document, processing, fixed, content
 res_type: kb
 ---
 

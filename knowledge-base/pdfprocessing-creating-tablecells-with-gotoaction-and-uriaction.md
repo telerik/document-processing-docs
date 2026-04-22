@@ -5,7 +5,7 @@ type: how-to
 page_title: Creating TableCells with GoToAction and UriAction
 slug: kb-create-table-cells
 position: 0
-tags: pdf, cells, actions
+tags: radpdfprocessing, pdf, table, cell, action, hyperlink, document, processing
 res_type: kb
 ---
 

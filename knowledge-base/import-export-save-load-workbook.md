@@ -5,7 +5,7 @@ type: how-to
 page_title: Import/Load and Export/Save RadSpreadProcessing Workbook
 slug: import-export-save-load-workbook
 position: 
-tags: 
+tags: radspreadprocessing, workbook, xlsx, csv, pdf, export, import, document
 res_type: kb
 ---
 

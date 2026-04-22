@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Insert HTML Content in a Word Document while Preserving its Styles and Formatting
 meta_title: How to Insert HTML Content in a Word Document while Preserving its Styles and Formatting
 slug: inserting-html-and-styling-radwordsprocessing
-tags: word, processing, telerik, document, html, styling, insert, docx, flow, words, formatting
+tags: radwordsprocessing, html, docx, styling, formatting, document, processing, word
 res_type: kb
 ticketid: 1698628
 ---

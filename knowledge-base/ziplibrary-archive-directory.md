@@ -5,7 +5,7 @@ type: how-to
 page_title: Create archive from a directory
 slug: archive-directory
 position: 0
-tags: zip, archive, files, folder
+tags: radziplibrary, zip, archive, folder, directory, document, processing, compression
 res_type: kb
 ---
 

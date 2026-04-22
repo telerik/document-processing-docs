@@ -5,7 +5,7 @@ type: how-to
 page_title: Create Repeating Table Header Row in PdfProcessing
 slug: pdfprocessing-create-repeat-header-row
 position: 0
-tags:  repeat, header, row, PdfProcessing
+tags: radpdfprocessing, pdf, table, header, row, document, processing, repeat
 res_type: kb
 ---
 

@@ -5,7 +5,7 @@ type: how-to troubleshooting
 page_title:  Change Flow Document Properties when converting to PDF
 slug: change-properties-when-converting-flow-to-pdf
 position: 0
-tags: pdf, html, docx, page, margin  
+tags: radwordsprocessing, pdf, docx, html, margin, conversion, document, processing
 res_type: kb
 ---
 

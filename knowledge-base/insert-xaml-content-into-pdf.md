@@ -4,7 +4,7 @@ description: Learn how to insert XAML content from RadRichTextBox into an existi
 type: how-to
 page_title: How to Convert XAML to PDF While Preserving Formatting
 slug: insert-xaml-content-into-pdf
-tags: radpdfprocessing, documentprocessing, xamlformatprovider, radrichtextbox, docxformatprovider, radwordsprocessing, pdfstreamwriter, xaml, convert, pdf, wpf
+tags: radpdfprocessing, radwordsprocessing, xaml, pdf, wpf, conversion, document, processing
 res_type: kb
 category: knowledge-base
 ticketid: 1654120

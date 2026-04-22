@@ -4,7 +4,7 @@ description: Learn how to create DOCX documents dynamically, including tables an
 type: how-to
 page_title: Dynamic DOCX Document Generation with RadWordsProcessing
 slug: dynamic-docx-document-generation-radwordsprocessing
-tags: wordsprocessing, document, processing, docx, generation, dynamic, tables, checkboxes
+tags: radwordsprocessing, docx, generation, tables, checkboxes, document, processing, word
 res_type: kb
 ticketid: 1658864
 ---

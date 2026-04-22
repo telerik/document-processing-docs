@@ -4,7 +4,7 @@ description: This article demonstrates how to resolve namespace conflicts when u
 type: how-to
 page_title: How to Fix Namespace Conflicts in RadSpreadProcessing for Document Processing
 slug: radspreadprocessing-resolving-namespace-conflicts
-tags: spreadprocessing, document, processing, namespace, extern, alias, net, core, standard
+tags: radspreadprocessing, namespace, netstandard, netframework, alias, document, processing, conflicts
 res_type: kb
 ticketid: 1673450
 ---

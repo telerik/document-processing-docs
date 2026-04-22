@@ -4,7 +4,7 @@ description: Learn how to configure bullet list indents including bullet positio
 type: how-to
 page_title: How to Set Bullet List Indents in RadWordsProcessing Documents
 slug: set-bullet-list-indents-radwordsprocessing
-tags: radwordsprocessing, document, bullet, list, indent, text, position
+tags: radwordsprocessing, docx, bullet, list, indent, document, processing, word
 res_type: kb
 ticketid: 1681870
 ---

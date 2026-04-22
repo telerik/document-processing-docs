@@ -4,7 +4,7 @@ description: Learn how to change the file size of a PDF with images by changing 
 type: how-to
 page_title: How to change the file size of a PDF with images
 slug: pdfprocessing-change-file-size-through-image-quality-and-compression
-tags: pdf, pdfprocessing, fixed, size, reduce, change, image, compression, quality 
+tags: radpdfprocessing, pdf, image, compression, size, quality, document, processing
 res_type: kb
 ---
 

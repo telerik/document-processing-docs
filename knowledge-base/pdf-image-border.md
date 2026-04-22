@@ -5,7 +5,7 @@ type: how-to
 page_title: Drawing Borders for Images in Telerik PdfProcessing
 meta_title: Drawing Borders for Images in Telerik PdfProcessing
 slug: pdf-image-border
-tags: pdf, processing, telerik, document, image, export, border, table
+tags: radpdfprocessing, pdf, image, border, table, document, processing, telerik
 res_type: kb
 ticketid: 1698380
 ---

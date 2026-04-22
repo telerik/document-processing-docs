@@ -4,7 +4,7 @@ description: Learn how to create tables with various column layouts using RadPdf
 type: how-to
 page_title: How to Customize Table Layouts in RadPdfProcessing Documents
 slug: customize-table-layout-radpdfprocessing
-tags: pdfprocessing, document, processing, table, layout, customize, col, span, columnspan
+tags: radpdfprocessing, pdf, table, layout, columnspan, document, processing, fixed
 res_type: kb
 ticketid: 1660148
 ---

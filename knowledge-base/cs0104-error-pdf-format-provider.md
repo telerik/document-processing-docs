@@ -4,7 +4,7 @@ description: Learn how to resolve the ambiguous reference error (Compiler Error 
 type: troubleshooting
 page_title: Compiler Error CS0104 with PdfFormatProvider
 slug: cs0104-error-pdf-format-provider
-tags: troubleshooting, PdfFormatProvider, Compiler Error, CS0104,  ambiguous, reference
+tags: troubleshooting, radpdfprocessing, compiler, error, ambiguous, reference, document, processing
 res_type: kb
 
 ---

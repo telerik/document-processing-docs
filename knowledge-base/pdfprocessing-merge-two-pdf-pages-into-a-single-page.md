@@ -5,7 +5,7 @@ type: how-to
 page_title: Invert the Colors within a PDF Document
 slug: pdfprocessing-merge-two-pdf-pages-into-a-single-page
 position: 0
-tags: merge, single, page, A4, A5
+tags: radpdfprocessing, pdf, merge, pages, document, processing, fixed, layout
 res_type: kb
 ---
 

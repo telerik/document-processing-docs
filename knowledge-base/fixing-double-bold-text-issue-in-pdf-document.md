@@ -5,7 +5,7 @@ type: how-to
 page_title: Fixing Double-Bold Text Issue in PDFs Exported from Telerik WordsProcessing
 meta_title: Fixing Double-Bold Text Issue in PDFs Exported from Telerik WordsProcessing
 slug: fixing-double-bold-text-issue-in-pdf-document
-tags: word, processing, pdf, provider, font, embed, arial, narrow, register, bold, flow, double, export
+tags: radwordsprocessing, pdf, font, bold, export, document, processing, embedding
 res_type: kb
 ticketid: 1698628
 ---

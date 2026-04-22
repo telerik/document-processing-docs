@@ -4,7 +4,7 @@ description: Learn how to change the font style of numbered lists in PDF documen
 type: how-to
 page_title: How to Change the Font Style of Numbered Lists in PDFs Using RadPdfProcessing
 slug: customize-font-numbered-lists-radpdfprocessing
-tags: radpdfprocessing, document processing, fonts, lists, pdf, customization
+tags: radpdfprocessing, pdf, font, list, numbered, document, processing, customization
 res_type: kb
 ticketid: 1655319
 ---

@@ -4,7 +4,7 @@ description: Learn how to handle Telerik.Licensing error after upgrade.
 type: troubleshooting
 page_title: Could Not Load File Or Assembly Telerik.Licensing.Runtime, Version 1.4.6.0 Runtime Error
 slug: dpl-package-update-failure-license
-tags: dpl, license, upgrade, fail, nuget, update, load, assembly
+tags: licensing, nuget, telerik, document, processing, upgrade, assembly, error
 res_type: kb
 ticketid: 1678555
 ---

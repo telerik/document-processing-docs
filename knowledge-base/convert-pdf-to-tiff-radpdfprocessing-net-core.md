@@ -4,7 +4,7 @@ description: This article demonstrates how to convert PDF documents to TIFF imag
 type: how-to
 page_title: How to Convert PDF Documents to TIFF Images Using RadPdfProcessing in .NET Standard
 slug: convert-pdf-to-tiff-radpdfprocessing-net-core
-tags: radpdfprocessing, document, processing, pdf, tiff, conversion, net, standard
+tags: radpdfprocessing, pdf, tiff, conversion, netstandard, image, document, processing
 res_type: kb
 ticketid: 1682497
 ---

@@ -5,7 +5,7 @@ type: how-to
 page_title:  Implement FontsProvider
 slug: pdfprocessing-implement-fontsprovider
 position: 0
-tags: pdf, font, PdfProcessing, provider, netstandard, export
+tags: radpdfprocessing, pdf, font, fontsprovider, netstandard, document, processing, provider
 res_type: kb
 ---
 

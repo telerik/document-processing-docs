@@ -4,7 +4,7 @@ description: Learn how to generate a new PDF document by cropping a page from an
 type: how-to
 page_title: How to Crop a Page from an Existing PDF and Create a New Document with RadPdfProcessing
 slug: create-cropped-pdf-radpdfprocessing
-tags: radpdfprocessing, document processing, pdf, crop, pdfstreamwriter
+tags: radpdfprocessing, pdf, crop, pdfstreamwriter, page, document, processing, fixed
 res_type: kb
 ticketid: 1653594
 ---

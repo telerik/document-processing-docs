@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Group Data in RadSpreadProcessing
 meta_title: How to Group Data in RadSpreadProcessing
 slug: grouping-data-using-radspreadprocessing
-tags: document, processing, group, column, excel, spread
+tags: radspreadprocessing, excel, group, worksheet, column, spreadsheet, document, processing
 res_type: kb
 ticketid: 1692310
 ---

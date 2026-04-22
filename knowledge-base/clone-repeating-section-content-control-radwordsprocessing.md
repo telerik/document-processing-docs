@@ -4,7 +4,7 @@ description: Learn how to programmatically clone and populate repeating section 
 type: how-to
 page_title: How to Clone and Populate Repeating Section Content Controls in RadWordsProcessing
 slug: clone-repeating-section-content-control-radwordsprocessing
-tags: wordsprocessing, document, processing, content, controls, clone, repeating, section
+tags: radwordsprocessing, docx, content, controls, clone, repeating, document, processing
 res_type: kb
 ticketid: 1668130
 ---

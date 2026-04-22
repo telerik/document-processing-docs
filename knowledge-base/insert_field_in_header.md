@@ -5,7 +5,7 @@ type: how-to
 page_title: Insert Field in Header 
 slug: insert_field_in_header
 position: 0
-tags: header, field 
+tags: radwordsprocessing, docx, header, field, document, processing, word, words
 res_type: kb
 ---
 

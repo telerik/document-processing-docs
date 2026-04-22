@@ -5,7 +5,7 @@ type: how-to
 page_title: Merge two document pages into new a single page
 slug: pdfprocessing-merge-two-pages-from-different-documents-into-a-single-page
 position: 0
-tags: pdf, processing, create, table, contents, toc
+tags: radpdfprocessing, pdf, merge, pages, documents, document, processing, fixed
 res_type: kb
 ---
 

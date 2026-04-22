@@ -4,7 +4,7 @@ description: Learn how to update the Table of Contents (TOC) in a Word document 
 type: how-to
 page_title: How to Update TOC Page Numberings in Word Documents Before Exporting to DOCX Format
 slug: update-toc-radwordsprocessing-before-docx-export
-tags: wordsprocessing, document, processing, toc, table, contents, update, fields, docx, export
+tags: radwordsprocessing, docx, toc, table, contents, export, document, processing
 res_type: kb
 ticketid: 1657401
 ---

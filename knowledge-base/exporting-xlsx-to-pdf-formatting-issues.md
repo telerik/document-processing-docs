@@ -4,7 +4,7 @@ description: This article provides a solution to formatting difficulties when ex
 type: troubleshooting
 page_title: How to Eliminate Formatting Issues when Exporting XLSX to PDF Format
 slug: exporting-xlsx-to-pdf-formatting-issues
-tags: excel, pdf, font, width, column, standard
+tags: radspreadprocessing, xlsx, pdf, export, font, formatting, document, processing
 res_type: kb
 ---
 

@@ -4,7 +4,7 @@ description: This article provides instructions on how to digitally sign an exis
 type: how-to
 page_title: Signing a PDF Document with a SignatureWidget
 slug: sign-pdf-with-signature-widget
-tags: pdf, sign, widget
+tags: radpdfprocessing, pdf, signature, digital, widget, document, processing, sign
 res_type: kb
 ---
 

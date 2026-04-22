@@ -4,7 +4,7 @@ description: Learn how to perform Mail Merge with HTML formatted strings in RadW
 type: how-to
 page_title: Mail Merge with HTML Formatted Strings in RadWordsProcessing
 slug: mail-merge-html-formatted-strings-radwordsprocessing
-tags: mail, merge, html, words, processing, docx, formatting, import, parse, word
+tags: radwordsprocessing, mailmerge, html, docx, formatting, document, processing, word
 res_type: kb
 ---
 

@@ -5,7 +5,7 @@ type: how-to
 page_title: Replace Text Content With Image
 slug: pdfprocessing-replace-text-with-image
 position: 0
-tags: image, text, PdfProcessing, Telerik Document Processing, Telerik, pdf, replace, modify
+tags: radpdfprocessing, pdf, text, image, replace, document, processing, fixed
 res_type: kb
 ---
 

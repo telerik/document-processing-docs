@@ -4,7 +4,7 @@ description: This article shows how to export a Worksheet to image with RadSprea
 type: how-to
 page_title: How to export a Worksheet to image with RadSpreadProcessing in .NET Standard
 slug: spreadprocessing-export-worksheet-to-image-netstandard
-tags: spreadprocessing, export, worksheet, image, netstandard, xlsx, spread
+tags: radspreadprocessing, xlsx, worksheet, image, netstandard, export, document, processing
 res_type: kb
 ---
 ## Environment

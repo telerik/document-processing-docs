@@ -5,7 +5,7 @@ type: how-to
 page_title: Runtime Licensing Diagnostics
 meta_title: Runtime Licensing Diagnostics
 slug: runtime-licensing-diagnostics
-tags: licensing, diagnostics, runtime, watermark, plugins, webforms, aspnet, blazor, wpf, winforms, license, key, register
+tags: licensing, diagnostics, runtime, watermark, telerik, document, processing, troubleshooting
 ticketid: 1697496
 res_type: kb
 ---

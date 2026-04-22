@@ -4,7 +4,7 @@ description: Learn what to have in mind when upgrading Telerik Document Processi
 type: how-to
 page_title: How to Upgrade Telerik Document Processing Libraries Without Upgrading WPF Libraries
 slug: upgrade-document-processing-libraries-separately-from-wpf
-tags: document, processing, libraries, upgrade, dependencies, wpf, telerik, winforms
+tags: telerik, document, processing, upgrade, wpf, winforms, libraries, dependencies
 res_type: kb
 ticketid: 1681608
 ---

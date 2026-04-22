@@ -5,7 +5,7 @@ type: how-to
 page_title: How to generate an expense report
 meta_title: How to generate an expense report
 slug: generate-expense-pdf-report
-tags: pdf, expense, report, receipt, attachment, file, embed, document, processing, telerik
+tags: radpdfprocessing, pdf, report, expense, attachment, document, processing, telerik
 res_type: kb
 ticketid: 1710179
 ---

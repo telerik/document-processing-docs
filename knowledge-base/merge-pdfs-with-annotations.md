@@ -5,7 +5,7 @@ type: how-to
 page_title:  Merge PDF files while preserving their annotations
 slug: merge-pdf-files-while-preserving-their-annotations
 position: 0
-tags: merge, pdf, annotations, PdfProcessing,  
+tags: radpdfprocessing, pdf, merge, annotations, pdfstreamwriter, document, processing, fixed
 res_type: kb
 ---
 

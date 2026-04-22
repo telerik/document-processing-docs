@@ -4,7 +4,7 @@ description: Learn how to use the ArcSegment class in RadPdfProcessing to draw a
 type: how-to
 page_title: How to Draw Figures in PDF documents
 slug: pdf-processing-draw-figures-arcsegment
-tags: arcsegment, draw, circle, lines, RadPdfProcessing
+tags: radpdfprocessing, pdf, arcsegment, drawing, geometry, document, processing, figures
 ---
 
 ## How to Draw Figures in PDF documents

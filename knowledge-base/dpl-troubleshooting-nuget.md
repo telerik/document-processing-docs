@@ -4,7 +4,7 @@ description: Common issues that may occur when you use the Telerik NuGet server 
 type: troubleshooting
 page_title: How to Fix Error 503 from Telerik NuGet Server by Migrating to NuGet v3 API
 slug: dpl-troubleshooting-nuget
-tags: error, nuget, package, installation, long, wait
+tags: nuget, telerik, troubleshooting, error, server, document, processing, packages
 res_type: kb
 ticketid: 1671187
 ---

@@ -4,7 +4,7 @@ description: Learn how to duplicate PDF template pages containing form fields an
 type: how-to
 page_title: How to Clone PDF Template Pages with Form Fields and Annotations for Dynamic Content
 slug: clone-pdf-template-pages-with-form-fields-dynamic-content
-tags: pdfprocessing, pdf, template, clone, form, fields, annotations, pdfstreamwriter, block, radfixeddocument, dynamic, content, measure, remaining, space
+tags: radpdfprocessing, pdf, template, form, fields, clone, document, processing
 res_type: kb
 ticketid: 1709987
 ---

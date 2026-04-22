@@ -5,7 +5,7 @@ type: how-to
 page_title: Replace existing text with Inline element
 slug: replace-text-with-inline-element
 position: 0
-tags: text, inline, element, line, break, replace, c#, docx
+tags: radwordsprocessing, docx, text, inline, element, replace, document, processing
 res_type: kb
 ---
 

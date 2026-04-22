@@ -4,7 +4,7 @@ description: This article explains how to insert special symbols, such as "↓",
 type: how-to
 page_title: Inserting Special Symbols in PDF using RadPdfProcessing
 slug: inserting-special-symbols-pdf-radpdfprocessing
-tags: radpdfprocessing, pdf, special symbols, insert, visual studio
+tags: radpdfprocessing, pdf, symbols, unicode, font, document, processing, text
 res_type: kb
 ---
 

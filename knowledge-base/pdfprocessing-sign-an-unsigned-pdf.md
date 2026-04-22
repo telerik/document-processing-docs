@@ -4,7 +4,7 @@ description: This article provides a guide on how to sign an empty signature fie
 type: how-to
 page_title: Signing a PDF Document that Contains a Signature Field with RadPdfProcessing
 slug: pdfprocessing-sign-an-unsigned-pdf
-tags: processing, pdf, sign, image, document, digital, signature, field, empty
+tags: radpdfprocessing, pdf, signature, digital, sign, document, processing, field
 res_type: kb
 ticketid: 1676495
 ---

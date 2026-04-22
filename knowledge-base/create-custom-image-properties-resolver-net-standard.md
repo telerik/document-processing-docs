@@ -5,7 +5,7 @@ type: how-to
 page_title: Create a custom implementation of ImagePropertiesResolverBase in .Net Standard
 slug: create-custom-image-properties-resolver-net-standard
 position: 0
-tags: image, resolver, jpeg, imagepropertiesresolver, netstandard
+tags: radpdfprocessing, image, resolver, jpeg, netstandard, document, processing, extension
 res_type: kb
 ---
 
