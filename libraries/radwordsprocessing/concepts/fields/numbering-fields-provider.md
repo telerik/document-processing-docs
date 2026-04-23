@@ -3,7 +3,7 @@ title: Using NumberingFieldsProvider
 description: Learn how to use the NumberingFieldsProvider in RadWordsProcessing to calculate field values such as total page numbers during document layout.
 page_title: Using NumberingFieldsProvider
 slug: radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider
-tags: using, numbering-fields-provider
+tags: numbering, word, flow, docx, fields, pages, layout, provider, document, calculation
 published: True
 position: 20
 ---

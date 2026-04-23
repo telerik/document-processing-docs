@@ -3,7 +3,7 @@ title: Working with Content Controls
 page_title:  Working with Content Controls
 description: This article show how you can access the content controls in code.
 slug: wordsprocessing-model-working-with-content-controls
-tags: content controls, wordsprocessing
+tags: content, controls, word, flow, document, docx, editing, sdt, access, api
 published: True
 ---
 

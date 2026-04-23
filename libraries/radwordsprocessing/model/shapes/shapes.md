@@ -3,7 +3,7 @@ title: General Information
 description: Learn how to use shapes in RadWordsProcessing to wrap and visually display text in configurable containers within DOCX documents.
 page_title: General Information
 slug: radwordsprocessing-shapes-shapes
-tags: shape, rectangle, docx
+tags: shapes, word, flow, document, docx, model, text, containers, drawing
 published: True
 position: 12
 ---

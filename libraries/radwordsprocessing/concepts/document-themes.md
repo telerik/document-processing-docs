@@ -3,7 +3,7 @@ title: Document Themes
 description: Learn how to use document themes in Telerik Document Processing to apply consistent colors and fonts across your documents. Explore color schemes, font schemes, ThemableColor and ThemableFontFamily objects, and how to dynamically resolve actual values based on the current theme.
 page_title: Document Themes
 slug: radwordsprocessing-concepts-document-themes
-tags: document,themes
+tags: themes, word, processing, colors, fonts, styles, document, scheme, formatting, flow
 published: True
 position: 3
 ---

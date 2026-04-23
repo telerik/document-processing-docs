@@ -3,7 +3,7 @@ title: Compare Field
 page_title: Compare Field
 description: Compare field is a Field element that compares two values and displays the comparison result.
 slug: radwordsprocessing-concepts-compare-field
-tags: compare,field
+tags: compare, field, word, flow, docx, fields, document, comparison, values, model, logic
 published: True
 position: 1
 ---

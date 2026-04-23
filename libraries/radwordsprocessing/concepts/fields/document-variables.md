@@ -3,7 +3,7 @@ title: Document Variable Field
 page_title: Document Variable Field
 description: Document Variable field is a Field element used to access and display the value, which correspond to a given field-argument.
 slug: radwordsprocessing-concepts-document-variables
-tags: document,variables
+tags: documentvariables, word, flow, docx, fields, document, variables, values, model, dynamic
 published: True
 position: 4
 ---

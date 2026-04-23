@@ -3,7 +3,7 @@ title: Section
 description: Learn about the Section block container element in RadWordsProcessing and how to configure its layout properties.
 page_title: Section
 slug: radwordsprocessing-model-section
-tags: section
+tags: section, word, docx, document, flow, model, layout, headers, footers
 published: True
 position: 2
 ---

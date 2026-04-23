@@ -3,7 +3,7 @@ title: Supported Html Elements
 description: List of all HTML elements supported by the HtmlFormatProvider during import and export in RadWordsProcessing.
 page_title: Supported Html Elements
 slug: radwordsprocessing-formats-and-conversion-html-supported-elements
-tags: supported,html,elements
+tags: html, format, provider, elements, html, word, flow, docx, import, export, supported, tags
 published: True
 position: 2
 ---

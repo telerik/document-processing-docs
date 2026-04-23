@@ -3,7 +3,7 @@ title: Table of Contents Field
 page_title: Table of Contents Field
 description: Table of Contents Field is a Field element that inserts a table of contents in the document.
 slug: radwordsprocessing-concepts-toc-field
-tags: table of contents,field
+tags: toc, word, flow, docx, fields, contents, document, table, model, navigation
 published: True
 position: 0
 ---

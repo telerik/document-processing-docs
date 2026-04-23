@@ -3,7 +3,7 @@ title: Table of Authorities Field
 page_title: Table of Authorities Field
 description: TOA field is a Field element that creates and inserts a table of authorities.
 slug: radwordsprocessing-concepts-toa-field
-tags: table of authorities,field
+tags: toa, word, flow, docx, fields, authorities, document, table, model, index
 published: True
 position: 0
 ---

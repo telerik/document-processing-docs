@@ -3,7 +3,7 @@ title: Page Field
 page_title: Page Field
 description: Page field is a Field element that represents the page number.
 slug: radwordsprocessing-concepts-page-field
-tags: page,field
+tags: page, word, flow, docx, field, document, pagenumber, model, numbering, display
 published: True
 position: 0
 ---

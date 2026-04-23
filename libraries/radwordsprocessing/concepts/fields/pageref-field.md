@@ -3,7 +3,7 @@ title: PageRef Field
 page_title: PageRef Field
 description: PageRef field is a Field element that inserts the page number of a bookmark.
 slug: radwordsprocessing-concepts-pageref-field
-tags: pageref,field
+tags: pageref, word, flow, docx, field, document, bookmark, pagenumber, model, reference
 published: True
 position: 0
 ---

@@ -3,7 +3,7 @@ title: Styles
 description: Learn how to work with character, paragraph, and table styles in RadWordsProcessing to apply consistent formatting across document content.
 page_title: Styles
 slug: radwordsprocessing-concepts-styles
-tags: styles
+tags: styles, word, flow, docx, formatting, character, paragraph, table, document, inheritance
 published: True
 position: 4
 ---

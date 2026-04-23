@@ -3,7 +3,7 @@ title: Lists
 description: Learn how to create and manage numbered and bulleted lists in RadWordsProcessing flow documents.
 page_title: Lists
 slug: radwordsprocessing-concepts-lists
-tags: lists
+tags: lists, word, processing, bullets, numbered, paragraphs, document, formatting, levels, docx
 published: True
 position: 6
 ---

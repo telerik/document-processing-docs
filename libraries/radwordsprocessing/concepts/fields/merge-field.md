@@ -3,7 +3,7 @@ title: MergeField Field
 page_title: MergeField Field
 description: MergeField field is a Field element that contains a reference to a data field by its name.
 slug: radwordsprocessing-concepts-merge-field
-tags: merge,field
+tags: merge, word, flow, docx, fields, document, mailmerge, data, model, template
 published: True
 position: 8
 ---

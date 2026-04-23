@@ -3,7 +3,7 @@ title: Using DocxFormatProvider
 page_title: Using DocxFormatProvider
 description: Learn how you can import and export documents from/to DOCX using WordsProcessing.
 slug: radwordsprocessing-formats-and-conversion-docx-docxformatprovider
-tags: using,docxformatprovider
+tags: format, provider, docx, flow, docx, import, export, word, document, openxml
 published: True
 position: 1
 ---

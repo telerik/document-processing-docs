@@ -3,7 +3,7 @@ title: Model Overview
 description: Overview of the RadFlowDocument document model structure in RadWordsProcessing, including sections, paragraphs, runs, tables, and other flow elements.
 page_title: Model
 slug: radwordsprocessing-model
-tags: model
+tags: model, word, flow, docx, document, sections, paragraphs, overview, structure
 published: True
 position: 0
 ---

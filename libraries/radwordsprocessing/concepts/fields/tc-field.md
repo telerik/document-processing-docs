@@ -3,7 +3,7 @@ title: TC Field
 page_title: TC Field
 description: TC field is a field element that represents a table of contents entry.
 slug: radwordsprocessing-concepts-tc-field
-tags: table of contents,field
+tags: tcfield, word, flow, docx, fields, toc, contents, document, model, entry, tc
 published: True
 position: 0
 ---
