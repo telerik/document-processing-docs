@@ -3,7 +3,7 @@ title: Activation Errors and Warnings
 description: Learn about the license activation errors and warnings in Telerik Document Processing that appear when using an expired, missing, or invalid license key.
 page_title: License Activation Errors and Warnings
 slug: activation-errors-and-warnings
-tags: activation, activate, errors, warnings, license, key, document, processing, libraries
+tags: activation, license, key, errors, warnings, telerik, document, processing
 published: True
 position: 2
 ---

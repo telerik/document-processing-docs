@@ -3,7 +3,7 @@ title: Annotations Overview
 page_title: Annotations Overview
 description: Learn what annotation types are supported in the PdfProcessing library offered by the Telerik Document Processing. 
 slug: radpdfprocessing-model-annotations-overview
-tags: annotations,overview,pdfprocessing
+tags: annotations, pdf, radpdfprocessing, overview, model, types, links, widgets
 published: True
 position: 0
 ---

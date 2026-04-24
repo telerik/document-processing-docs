@@ -4,7 +4,7 @@ description: Learn how to customize headers in PDF documents to have left, cente
 type: how-to
 page_title: How to Customize Headers in PDF Documents with RadWordsProcessing
 slug: customize-headers-pdf-radwordsprocessing
-tags: wordsprocessing, document, processing, header, alignment, pdf, convert, html
+tags: radwordsprocessing, pdf, header, alignment, docx, document, processing, export
 res_type: kb
 ticketid: 1665701
 ---

@@ -4,7 +4,7 @@ description: Learn how to optimize and reduce the size of PDF files through the 
 type: how-to
 page_title: How to Optimize PDF File Size with RadPdfProcessing
 slug: optimize-and-reduce-pdf-size-radpdfprocessing
-tags: pdfprocessing, document processing, pdf, optimize, reduce, size, compression, image, quality, font, embed
+tags: radpdfprocessing, pdf, optimization, compression, image, font, document, processing
 res_type: kb
 ticketid: 1356271
 ---

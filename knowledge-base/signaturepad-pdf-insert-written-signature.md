@@ -5,7 +5,7 @@ type: how-to
 page_title: Use a SignaturePad Signature with PDF
 slug: signaturepad-pdf-insert-written-signature
 position: 
-tags: pdfprocessing, signaturewidget, signaturefield, radsignaturepad, pdf, signature, sign, signing, image, png, jpg, jpeg
+tags: radpdfprocessing, pdf, signature, signaturepad, image, document, processing, sign
 res_type: kb
 ---
 

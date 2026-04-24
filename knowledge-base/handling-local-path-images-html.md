@@ -5,7 +5,7 @@ type: how-to
 page_title: Resolving Local Path Image Rendering Issue When Importing HTML Documents
 meta_title: Resolving Local Path Image Rendering Issue When Importing HTML Documents 
 slug: handling-local-path-images-html
-tags: word,processing,html,image,conversion,load,uri,path
+tags: radwordsprocessing, html, image, path, docx, document, processing, conversion
 res_type: kb
 ticketid: 1699078
 ---

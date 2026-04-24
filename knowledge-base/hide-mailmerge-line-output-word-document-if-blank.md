@@ -4,7 +4,7 @@ description: Learn how to hide the empty lines in the output Word document when 
 type: how-to
 page_title: Hide MailMerge Line in Output Word Document If Blank | RadWordsProcessing for Document Processing
 slug: hide-mailmerge-line-output-word-document-if-blank
-tags: how-to, word, mailmerge, hide, blank, RadWordsProcessing
+tags: radwordsprocessing, mailmerge, word, docx, blank, fields, document, processing
 res_type: kb
 ---
 

@@ -3,7 +3,7 @@ title: Overview
 description: The digital signature feature enables you to sign and validate a PDF document. 
 page_title: Digital Signature - Overview
 slug: radpdfprocessing-features-digital-signature
-tags: digital, signature, overview
+tags: digital, signature, pdf, signing, validation, radpdfprocessing, x509, certificates, overview
 position: 0
 ---
 

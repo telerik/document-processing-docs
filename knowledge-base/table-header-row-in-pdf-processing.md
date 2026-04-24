@@ -4,7 +4,7 @@ description: Learn how to simulate table header row in PdfProcessing.
 type: how-to
 page_title: How to Achieve a Table Header Row in PdfProcessing
 slug: table-header-row-in-pdf-processing
-tags: pdf, table, header, row, bold
+tags: radpdfprocessing, pdf, table, header, row, document, processing, bold
 res_type: kb
 ---
 ## Environment

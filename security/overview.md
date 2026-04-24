@@ -3,7 +3,7 @@ title: Overview
 page_title: Overview
 description: "Learn Telerik's best security practices, vulnerability reporting, and control-specific security guidelines."
 slug: security-overview
-tags: telerik, security, dpl, document, processing, redistributing, report
+tags: security, telerik, document, processing, vulnerability, compliance, practices, guidelines
 published: True
 position: 1
 ---

@@ -5,7 +5,7 @@ type: how-to
 page_title: How to identify the actual document type when the filename extension is not correct 
 slug: how-to-identify-document-type
 position: 0
-tags: processing, file, filename, extension, incorrect
+tags: fileformatdetector, document, format, detection, file, processing, telerik, extension
 res_type: kb
 ---
 

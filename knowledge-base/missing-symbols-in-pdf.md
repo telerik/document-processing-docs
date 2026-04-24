@@ -5,7 +5,7 @@ type: how-to troubleshooting
 page_title:  Missing symbols in PdfProcessing
 slug: missing-symbols-in-pdf
 position: 0
-tags: pdf, umlaut, symbol
+tags: radpdfprocessing, pdf, symbols, font, umlaut, document, processing, encoding
 res_type: kb
 ---
 

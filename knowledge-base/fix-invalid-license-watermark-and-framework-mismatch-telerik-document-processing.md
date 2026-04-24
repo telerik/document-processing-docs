@@ -5,7 +5,7 @@ type: troubleshooting
 page_title: Handling 'Telerik.Licensing.EvidenceAttribute is not defined' Error
 meta_title: Handling 'Telerik.Licensing.EvidenceAttribute is not defined' Error
 slug: handle-telerik-licensing-evidence-attribute-not-defined-error
-tags: pdfprocessing, telerik document processing, licensing, framework, error,evidence, attribute
+tags: licensing, watermark, telerik, document, processing, framework, error, troubleshooting
 res_type: kb
 ticketid: 1704877
 ---

@@ -3,7 +3,7 @@ title: License Agreement
 description: Telerik Document Processing is licensed under the conditions of the product it is bundled with. Find the End-User License Agreements for all supported Telerik UI products.
 page_title: License Agreement
 slug: license-agreement
-tags: license,agreement, telerik, end, user
+tags: license, agreement, telerik, eula, document, processing, distribution, terms
 published: True
 position: 2
 ---

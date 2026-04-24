@@ -3,7 +3,7 @@ title: Using OcrFormatProvider
 description: Learn how to convert scanned images to PDF format using OcrFormatProvider.
 page_title: Using OcrFormatProvider
 slug: radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider
-tags: pdf, processing, ocr, image, optical, character, recognition
+tags: ocrformatprovider, pdf, ocr, radpdfprocessing, recognition, image, conversion, scanned
 published: True
 position: 1
 ---

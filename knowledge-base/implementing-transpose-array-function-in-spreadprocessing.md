@@ -5,7 +5,7 @@ type: how-to
 page_title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
 meta_title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
 slug: implementing-transpose-array-function-in-spreadprocessing
-tags: spread,processing,telerik,document,formula, function,transpose,array,cells, range
+tags: radspreadprocessing, excel, formula, function, transpose, array, document, processing
 res_type: kb
 ticketid: 1710562
 ---

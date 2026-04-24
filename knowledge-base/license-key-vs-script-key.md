@@ -5,7 +5,7 @@ type: how-to
 page_title: What is the difference between the license key and script key
 meta_title: What is the difference between the license key and script key
 slug: license-key-vs-script-key
-tags: telerik, license, licensing, document, processing, dpl, script, key
+tags: telerik, license, key, script, document, processing, dpl, licensing
 res_type: kb
 ticketid: 1709949
 ---

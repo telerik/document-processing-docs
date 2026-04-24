@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Handle FileNotFoundException - Could not load file or assembly System.IO.Hashing
 meta_title: How to Handle FileNotFoundException - Could not load file or assembly System.IO.Hashing
 slug: handle-system-io-hashing-not-found
-tags: document, processing, telerik, pdf, export, hash
+tags: document, processing, telerik, pdf, export, exception, dotnet, assembly
 res_type: kb 
 ---
 

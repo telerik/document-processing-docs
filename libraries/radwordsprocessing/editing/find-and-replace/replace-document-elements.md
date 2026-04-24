@@ -3,7 +3,7 @@ title: Replace Text with Document Elements
 page_title: Replace Text with Document Elements
 description: Learn how to find and replace text with various elements in a document using WordsProcessing.
 slug: radwordsprocessing-editing-replace-document-elements
-tags: find,search,replace
+tags: replace, word, flow, docx, editing, document, elements, text, search
 published: True
 position: 6
 ---

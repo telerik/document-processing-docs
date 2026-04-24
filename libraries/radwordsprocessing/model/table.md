@@ -3,7 +3,7 @@ title: Table
 description: Learn about the Table block element in RadWordsProcessing that provides grid-based organization using rows and cells.
 page_title: Table
 slug: radwordsprocessing-model-table
-tags: table
+tags: table, word, docx, document, flow, model, rows, cells, layout
 published: True
 position: 5
 ---

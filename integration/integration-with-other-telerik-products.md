@@ -3,7 +3,7 @@ title: Integration with Other Telerik Products
 page_title: Integration with Other Telerik Products
 description: Integration with Other Telerik Products
 slug: integration-with-other-telerik-products
-tags: integration, telerik, products, dependency, version, specific, upgrade
+tags: integration, telerik, products, dependency, version, upgrade, compatibility, libraries
 published: True
 position: 3
 ---

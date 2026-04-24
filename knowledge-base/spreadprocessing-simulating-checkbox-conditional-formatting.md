@@ -5,7 +5,7 @@ type: how-to
 page_title: Simulating a Checkbox Using Conditional Formatting with Telerik SpreadProcessing
 meta_title: Simulating a Checkbox Using Conditional Formatting with Telerik SpreadProcessing
 slug: spreadprocessing-simulating-checkbox-conditional-formatting
-tags: spread, processing, conditional, formatting, check, box, telerik, document, xlsx
+tags: radspreadprocessing, excel, checkbox, conditional, formatting, document, processing, xlsx
 res_type: kb
 ticketid: 1667088
 ---

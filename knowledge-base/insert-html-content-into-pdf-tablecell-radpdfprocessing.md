@@ -4,7 +4,7 @@ description: Learn how to insert HTML content into a TableCell in a PDF document
 type: how-to
 page_title: How to Insert HTML Content into PDF TableCell Using RadPdfProcessing
 slug: insert-html-content-into-pdf-tablecell-radpdfprocessing
-tags: pdfprocessing, document, processing, pdf, html, table, cell, insert, wordsprocessing
+tags: radpdfprocessing, radwordsprocessing, pdf, html, table, cell, document, processing
 res_type: kb
 ticketid: 1671595
 ---

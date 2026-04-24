@@ -4,7 +4,7 @@ description: Learn how to create bullet lists using paragraph styles instead of 
 type: how-to
 page_title: Create Bullet Lists Using Paragraph Styles in RadWordsProcessing
 slug: create-bullet-list-using-paragraph-styles-radwordsprocessing
-tags: words, document, processing, bullet, lists, styles, paragraph, formatting, word, flow, docx
+tags: radwordsprocessing, docx, bullet, lists, paragraph, styles, document, processing
 res_type: kb
 ---
 

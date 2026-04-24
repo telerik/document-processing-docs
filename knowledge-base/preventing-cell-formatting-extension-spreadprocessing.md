@@ -5,7 +5,7 @@ type: how-to
 page_title: Avoiding Automatic Formatting Extension Below a Range in Excel with SpreadProcessing
 meta_title: Avoiding Automatic Formatting Extension Below a Range in Excel with SpreadProcessing
 slug: preventing-cell-formatting-extension-spreadprocessing
-tags: spread, processing, excel, formatting, cell, worksheet
+tags: radspreadprocessing, excel, cell, formatting, worksheet, document, processing, range
 res_type: kb
 ticketid: 1693269
 ---

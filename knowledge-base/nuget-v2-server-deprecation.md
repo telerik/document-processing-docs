@@ -4,7 +4,7 @@ description: Learn how to migrate from Telerik's deprecated NuGet v2 server to t
 type: how-to
 page_title: Telerik NuGet v2 Server Deprecation
 slug: nuget-v2-server-deprecation
-tags: telerik, nuget, server, v2, v3, api, deprecation, migration, document, processing
+tags: nuget, telerik, server, migration, v3, document, processing, feed
 res_type: kb
 ---
 

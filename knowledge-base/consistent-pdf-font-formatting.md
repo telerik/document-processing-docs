@@ -5,7 +5,7 @@ type: how-to
 page_title: Resolving PDF Formatting Differences Between Client and Server in Telerik Document Processing
 meta_title: Resolving PDF Formatting Differences Between Client and Server in Telerik Document Processing
 slug: consistent-pdf-font-formatting
-tags: pdf, font,telerik, document, processing,formatting,server-side,client-side,export
+tags: radpdfprocessing, pdf, font, formatting, export, server, document, processing
 res_type: kb
 ticketid: 1700632
 ---

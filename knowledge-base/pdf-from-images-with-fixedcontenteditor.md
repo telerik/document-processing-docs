@@ -4,7 +4,7 @@ description: This article explains how to create a PDF document from a collectio
 type: how-to
 page_title: How to Generate a PDF Document from Images with FixedContentEditor
 slug: pdf-from-images-with-fixedcontenteditor
-tags: pdf,images,editor
+tags: radpdfprocessing, pdf, image, fixedcontenteditor, document, processing, fixed, creation
 res_type: kb
 ---
 ## Environment

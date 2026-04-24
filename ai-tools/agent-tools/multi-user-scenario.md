@@ -3,7 +3,7 @@ title: Multi‑User AI Agent Sessions
 page_title: Agent Tools Multi‑User AI Agent Sessions
 description: Learn how to implement secure multi-user document processing with AI agents, including per-user repository isolation, session management, and production-ready patterns for web APIs and desktop applications.
 slug: agent-tools-multi-user-scenario
-tags: ai, dpl, document, processing, agent, tool, telerik, excel, pdf, word, docx, pdf, xlsx, multi, user, session
+tags: agent, multiuser, session, isolation, ai, document, processing, security
 published: True
 position: 5
 ---

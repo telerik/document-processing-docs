@@ -3,7 +3,7 @@ title: Backward Compatibility
 description: Breaking changes and migration guidance for upgrading RadZipLibrary between versions.
 page_title: Backward Compatibility
 slug: radziplibrary-backward-compatibility
-tags: backward,compatibility
+tags: migration, compatibility, radziplibrary, zip, breaking, versions, upgrade, archive
 published: True
 position: 1
 ---

@@ -3,7 +3,7 @@ title: Getting Started
 description: Learn how to use the GenAI-powered Document Insights functionality to summarize an Excel document with SpreadProcessing.
 page_title: Getting Started
 slug: radspreadprocessing-features-gen-ai-powered-document-insights-getting-started
-tags: ai, document, analysis, overview, spread, xlsx, processing, genai, powered, insights, xls, csv, excel
+tags: genai, spreadsheet, excel, radspreadprocessing, llm, ai, summarization, started, genai, insights
 published: True
 position: 2
 ---

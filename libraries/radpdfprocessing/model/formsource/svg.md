@@ -3,7 +3,7 @@ title: SVG
 description: Learn how to add SVG FormSource images into a PDF document using RadPdfProcessing.
 page_title: SVG FormSource
 slug: radpdfprocessing-model-formsource-svg
-tags: formsource, pdfprocessing, document, processing, pdf, svg
+tags: svg, pdf, formsource, radpdfprocessing, vector, graphics, model, images
 published: True
 position: 1
 ---

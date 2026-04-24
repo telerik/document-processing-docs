@@ -4,7 +4,7 @@ description: Learn how to build a table using the RadFixedDocumentEditor for flo
 type: how-to
 page_title: How to Generate a Table with RadFixedDocumentEditor
 slug: generate-table-with-radfixeddocumenteditor
-tags: pdf, document, processing, fixedcontenteditor, fixeddocumenteditor, edit, table, flow, position
+tags: radpdfprocessing, pdf, table, fixeddocumenteditor, document, processing, flow, fixed
 res_type: kb
 ticketid: 1674934
 ---

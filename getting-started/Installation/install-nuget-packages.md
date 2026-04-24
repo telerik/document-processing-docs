@@ -3,7 +3,7 @@ title: Install using NuGet Packages
 page_title: Install using NuGet Packages
 description: Learn how you can install the Telerik Document Processing libraries through NuGet.
 slug: installation-nuget-packages
-tags: nuget, document, processing, install, server, manual, download
+tags: nuget, packages, telerik, server, document, processing, installation, feed
 published: True
 position: 7
 ---

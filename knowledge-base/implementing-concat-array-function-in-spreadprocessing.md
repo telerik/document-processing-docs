@@ -5,7 +5,7 @@ type: how-to
 page_title: Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing
 meta_title: Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing
 slug: implementing-concat-array-function-in-spreadprocessing
-tags: spread,telerik, document, processing,excel, formula, function, concat, array, override
+tags: spread, document, processing, excel, formula, function, concat, array, override
 res_type: kb
 ticketid: 1710562
 ---

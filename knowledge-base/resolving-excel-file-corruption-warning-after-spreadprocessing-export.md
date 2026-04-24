@@ -5,7 +5,7 @@ type: how-to
 page_title: Resolve Exporting Corrupted Excel Files With SpreadProcessing
 meta_title: Resolve Exporting Corrupted Excel Files With SpreadProcessing
 slug: resolving-excel-file-corruption-warning-after-spreadprocessing-export
-tags: telerik, document, processing, spread, excel, export, memory, stream, corrupted, file
+tags: radspreadprocessing, excel, export, corruption, stream, document, processing, troubleshooting
 res_type: kb
 ticketid: 1695962
 ---

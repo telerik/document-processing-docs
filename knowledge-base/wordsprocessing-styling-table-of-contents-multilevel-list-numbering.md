@@ -5,7 +5,7 @@ type: how-to
 page_title: Applying Multilevel List Numbering to Table of Contents in Telerik WordsProcessing
 meta_title: Applying Multilevel List Numbering to Table of Contents in Telerik WordsProcessing
 slug: wordsprocessing-styling-table-of-contents-multilevel-list-numbering
-tags: words, processing, telerik, document, processing, table, contents, toc, hierarchical, numbering, styling, multilevel, list, word, docx
+tags: radwordsprocessing, docx, toc, numbering, list, multilevel, document, processing
 res_type: kb
 ticketid: 1698635
 ---

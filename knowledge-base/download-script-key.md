@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Download a Script Key
 meta_title: How to Download a Script Key
 slug: download-script-key
-tags: telerik, license, licensing, document, processing, dpl, script, key
+tags: telerik, license, key, script, document, processing, download, licensing
 res_type: kb
 ticketid: 1709949
 ---

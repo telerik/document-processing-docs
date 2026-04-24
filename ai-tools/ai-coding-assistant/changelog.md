@@ -3,7 +3,7 @@ title: Changelog
 page_title: Telerik Document Processing Libraries AI Coding Assistant Changelog
 description: Find out about the latest changes and improvements in the Telerik Document Processing Libraries AI Coding Assistant.
 slug: ai-coding-assistant-changelog
-tags: telerik,dpl,ai,coding assistant,changelog,release,notes, document, processing, libraries
+tags: changelog, ai, coding, assistant, telerik, document, processing, releases
 position: 4
 ---
 

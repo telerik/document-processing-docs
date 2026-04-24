@@ -4,7 +4,7 @@ description: Learn how to extract and copy multiple images from a PDF to the Win
 type: how-to
 page_title: Extracting Images from PDF and Copying Them to Clipboard for MS Word
 slug: extract-images-radfixeddocument-windows-clipboard-to-ms-word
-tags: pdf, clipboard, images, extraction, html, windows, word, radfixeddocument, document, processing
+tags: radpdfprocessing, pdf, image, extraction, clipboard, word, document, processing
 res_type: kb
 ticketid: 1709015
 ---

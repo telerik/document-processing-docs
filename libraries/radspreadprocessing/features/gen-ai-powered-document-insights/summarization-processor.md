@@ -3,7 +3,7 @@ title: SummarizationProcessor
 description: SummarizationProcessor class enables you to generate concise summaries of Excel documents using Large Language Models.
 page_title: SummarizationProcessor
 slug: radspreadprocessing-features-gen-ai-powered-document-insights-summarization-processor
-tags: ai, document, analysis, summarization, processor, summary, excel, xlsx, spread, xls, csv, workbook, worksheet
+tags: summarization, genai, spreadsheet, excel, radspreadprocessing, llm, ai, workbook, analysis, summary, xls, csv, workbook, worksheet
 published: True
 position: 3
 ---

@@ -5,7 +5,7 @@ type: how-to
 page_title: Why Does the IsLicenseValid Flag Return False
 meta_title: Why Does the IsLicenseValid Flag Return False
 slug: verify-license-runtime-telerik-document-processing
-tags: licensing, telerik, document, processing, runtime, license, valid, check, diagnostic, islicensevalid
+tags: licensing, telerik, document, processing, runtime, diagnostics, validation, islicensevalid
 res_type: kb
 ticketid: 1710169
 ---

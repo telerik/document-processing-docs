@@ -4,7 +4,7 @@ description: Learn how an active trial user using a Q1 2025 version can update t
 type: how-to
 page_title: How to Upgrade Q1 2025 Trial to Q2 2025 Licensed Version
 slug: upgrade-q1-2025-trial-to-q2-2025-purchase-license
-tags: trial, message, license, document, processing, library 
+tags: telerik, license, trial, upgrade, nuget, document, processing, 2025
 res_type: kb
 ---
 

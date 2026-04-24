@@ -4,7 +4,7 @@ description: Learn how to merge headers, footers, and content in DOCX documents 
 type: how-to
 page_title: How to Merge Headers, Footers, and Content in DOCX Documents | RadWordsProcessing
 slug: merge-headers-footers-content-docx-documents
-tags: how-to, merge, headers, footers, content, DOCX, RadWordsProcessing
+tags: radwordsprocessing, docx, merge, header, footer, document, processing, word
 res_type: kb
 ---
 

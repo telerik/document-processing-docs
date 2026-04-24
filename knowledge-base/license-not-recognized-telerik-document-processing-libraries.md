@@ -5,7 +5,7 @@ type: troubleshooting
 page_title: License Not Recognized in Telerik Document Processing Libraries
 meta_title: License Not Recognized in Telerik Document Processing Libraries
 slug: license-not-recognized-telerik-document-processing-libraries
-tags: telerik, document, processing, license, validation, runtime, issues, licensing, diagnostics
+tags: licensing, telerik, document, processing, validation, runtime, diagnostics, watermark
 res_type: kb
 ticketid: 1690929
 ---

@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Add an Image to a Worksheet Cell Range and Preserve Aspect Ratio with SpreadProcessing
 meta_title: How to Add an Image to a Worksheet Cell Range and Preserve Aspect Ratio with SpreadProcessing
 slug: spreadprocessing-insert-image-cell-range-aspect-ratio
-tags: spread, processing, telerik, document, processing, image, worksheet, aspect, ratio, excel, cell, range, insert, preserve
+tags: radspreadprocessing, excel, image, cell, aspect, ratio, worksheet, document
 res_type: kb
 ticketid: 1708189
 ---

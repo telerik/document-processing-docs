@@ -3,7 +3,7 @@ title: Flatten Form Fields
 description: Learn how to flatten form fields in PDF documents using RadPdfProcessing, preserving content while making the document non-editable.
 page_title: Flatten Form Fields
 slug: radpdfprocessing-flatten-form-fields
-tags: flatten, form, field
+tags: flatten, form, fields, pdf, acroform, radpdfprocessing, readonly, interactive, forms
 position: 5
 ---
 

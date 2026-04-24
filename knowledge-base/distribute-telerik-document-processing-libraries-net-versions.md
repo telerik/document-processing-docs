@@ -4,7 +4,7 @@ description: Learn how to obtain Telerik Document Processing libraries suitable 
 type: how-to
 page_title: How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}} and newer versions
 slug: distribute-telerik-document-processing-libraries-net-versions
-tags: telerik, document, processing, net, core, nuget, packages, framework, windows, distribute, libraries, standard
+tags: telerik, document, processing, nuget, dotnet, framework, netstandard, libraries
 res_type: kb
 ticketid: 1658084
 ---

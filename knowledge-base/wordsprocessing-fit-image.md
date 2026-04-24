@@ -5,7 +5,7 @@ type: how-to
 page_title: Fit image to page using WordsProcessing
 slug: wordsprocessing-fit-image
 position: 0
-tags: fit, image, aspect, ratio, docx, rtf, html, document, resize
+tags: radwordsprocessing, docx, image, aspect, ratio, resize, document, processing
 ticketid: 1531113
 res_type: kb
 ---

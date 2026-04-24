@@ -3,7 +3,7 @@ title: Version 2024.3.806 (2024 Q3)
 page_title: What is new in 2024.3.806 (2024 Q3) for the Document Processing Libraries
 description: 2024.3.806 (2024 Q3)
 slug: release-notes-2024-3-806
-tags: 2024.3.806,2024,Q3
+tags: release, notes, 2024, Q3, radpdfprocessing, telerik, document, changelog
 published: True
 position: 96
 ---

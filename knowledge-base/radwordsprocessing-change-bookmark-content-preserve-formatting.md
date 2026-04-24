@@ -5,7 +5,7 @@ type: how-to
 page_title: Change Bookmark Content While Preserving Formatting
 slug: radwordsprocessing-change-bookmark-content-preserve-formatting
 position: 0
-tags: bookmarks, formatting, words, processing, content, replace, change, flow, docx
+tags: radwordsprocessing, docx, bookmarks, content, formatting, document, processing, word
 res_type: kb
 ---
 

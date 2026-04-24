@@ -3,7 +3,7 @@ title: Style Properties
 description: Learn about style properties in RadWordsProcessing and how they store formatting values and support inheritance from base styles.
 page_title: Style Properties
 slug: radwordsprocessing-concepts-style-properties
-tags: style,properties
+tags: style, properties, word, flow, docx, formatting, inheritance, document, styles, character, paragraph
 published: True
 position: 5
 ---

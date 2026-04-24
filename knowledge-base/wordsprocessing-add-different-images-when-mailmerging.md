@@ -5,7 +5,7 @@ type: how-to
 page_title: Populate RadFlowDocument with different Images when performing a Mail Merge
 slug: wordsprocessing-add-different-images-when-mailmerging
 position: 0
-tags: word, processing, insert, image, radflowdocument, mailmerging, mail, merge
+tags: radwordsprocessing, mailmerge, image, radflowdocument, word, document, processing, docx
 res_type: kb
 ---
 

@@ -3,7 +3,7 @@ title: Version 2025.1.205 (2025 Q1)
 page_title: What is new in 2025.1.205 (2025 Q1) for the Document Processing Libraries
 description: 2025.1.205 (2025 Q1)
 slug: release-notes-2025-1-205
-tags: 2025.1.205,2025,Q1
+tags: release, notes, 2025, Q1, telerik, document, processing, changelog
 published: True
 position: 99
 ---

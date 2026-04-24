@@ -3,7 +3,7 @@ title: Content Controls (Structured Document Tags)
 page_title: Content Controls
 description: This article describes which content controls are supported in the WordsProcessing library.
 slug: wordsprocessing-model-content-controls
-tags: content controls, wordsprocessing
+tags: content, controls, word, flow, document, docx, model, sdt, structured, tags
 published: True
 ---
 

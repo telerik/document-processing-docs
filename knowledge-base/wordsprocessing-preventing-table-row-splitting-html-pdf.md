@@ -5,7 +5,7 @@ type: how-to
 page_title: Avoiding Table Row Splitting in HTML to PDF Conversion
 meta_title: Avoiding Table Row Splitting in HTML to PDF Conversion
 slug: wordsprocessing-preventing-table-row-splitting-html-pdf
-tags: words, processing, telerik, document, html, pdf, conversion, table, row, splitting, split, flow, word, measure, calculate
+tags: radwordsprocessing, html, pdf, table, row, splitting, document, processing
 res_type: kb
 ticketid: 1700721
 ---

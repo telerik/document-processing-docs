@@ -5,7 +5,7 @@ type: how-to
 page_title: Generating PDF with Headers and Footers from Separate HTML Files
 meta_title: Generating PDF with Headers and Footers from Separate HTML Files
 slug: generate-pdf-with-headers-footers-from-separate-html-files
-tags: telerik, document, processing, word, header, footer, pdf, html, merge
+tags: radwordsprocessing, pdf, header, footer, html, document, processing, export
 res_type: kb
 ticketid: 1702165
 ---

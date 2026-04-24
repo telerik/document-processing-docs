@@ -5,7 +5,7 @@ type: how-to
 page_title: Displaying Extended Latin Characters with the FixedContentEditor's DrawText in PDF
 meta_title: Displaying Extended Latin Characters with FixedContentEditor's DrawText in PDF
 slug: fixedcontenteditor-drawtext-extended-latin-characters-pdf
-tags: pdf,processing,fixedcontenteditor,draw,text,unicode,extended,latin,font, polish
+tags: radpdfprocessing, pdf, fixedcontenteditor, font, unicode, latin, document, processing
 res_type: kb
 ticketid: 1699876
 ---

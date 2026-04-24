@@ -3,7 +3,7 @@ title: Mail Merge
 description: Learn how to use mail merge in RadWordsProcessing to produce personalized documents from a template with merge fields and a data source.
 page_title: Mail Merge
 slug: radwordsprocessing-editing-mail-merge
-tags: mail,merge
+tags: mail, merge, word, flow, docx, document, template, fields, data, source, personalization, editing
 published: True
 position: 4
 ---

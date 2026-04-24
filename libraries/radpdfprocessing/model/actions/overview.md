@@ -3,7 +3,7 @@ title: Actions Overview
 page_title: Actions Overview
 description: Learn what Action types are supported in the PdfProcessing library offered by the Telerik Document Processing. 
 slug: radpdfprocessing-model-actions
-tags: action, overview, pdfprocessing
+tags: actions, pdf, radpdfprocessing, overview, model, types, javascript, navigation
 published: True
 position: 0
 ---

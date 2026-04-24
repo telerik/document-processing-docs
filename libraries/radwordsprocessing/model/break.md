@@ -3,7 +3,7 @@ title: Break
 description: Learn about the Break inline element in RadWordsProcessing that inserts line, page, or column breaks in flow documents.
 page_title: Break
 slug: radwordsprocessing-model-break
-tags: break
+tags: break, word, docx, document, flow, model, inline, page, column
 published: True
 position: 12
 ---

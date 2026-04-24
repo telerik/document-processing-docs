@@ -3,7 +3,7 @@ title: What is a Cell?
 description: Learn about the concept of cells in RadSpreadProcessing worksheets, including their structure and properties.
 page_title: What is a Cell?
 slug: radspreadprocessing-working-with-cells-what-is-cell
-tags: what,is,a,cell?
+tags: cells, spreadsheet, radspreadprocessing, worksheet, model, concept, structure, properties, xlsx, spread
 published: True
 position: 0
 ---

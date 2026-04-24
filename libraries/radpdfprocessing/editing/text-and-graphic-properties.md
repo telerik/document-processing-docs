@@ -3,7 +3,7 @@ title: Text and Graphic Properties
 description: Learn how to control the appearance of text and graphic content elements in RadPdfProcessing using GraphicProperties and TextProperties.
 page_title: Text and Graphic Properties
 slug: radpdfprocessing-editing-text-and-graphic-properties
-tags: text,and,graphic,properties
+tags: text, properties, graphic, properties, pdf, font, colors, radpdfprocessing, rendering, editing
 published: True
 position: 5
 ---

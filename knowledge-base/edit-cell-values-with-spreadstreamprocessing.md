@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Edit Cell Values of Existing Documents using SpreadStreamProcessing
 meta_title: How to Edit Cell Values of Existing Documents using SpreadStreamProcessing
 slug: edit-cell-values-with-spreadstreamprocessing
-tags: spread, stream, processing, document, worksheet, workbook, excel, cell, update, edit
+tags: radspreadstreamprocessing, excel, cell, worksheet, edit, document, processing, stream
 res_type: kb
 ---
 

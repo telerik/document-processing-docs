@@ -4,7 +4,7 @@ description: Learn how to multiply the values of two TextBoxField values using R
 type: how-to
 page_title: How to Multiply the TextBoxField Values with JavaScript Actions and RadPdfProcessing
 slug: multiply-form-field-with-javascript-action-radpdfprocessing
-tags: pdf, multiply, value, action, js, javascript, field, textbox
+tags: radpdfprocessing, pdf, form, javascript, textbox, field, document, processing
 res_type: kb 
 ---
 

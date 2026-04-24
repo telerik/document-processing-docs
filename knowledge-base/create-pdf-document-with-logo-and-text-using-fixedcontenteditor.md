@@ -4,7 +4,7 @@ description: Learn how to create a PDF document from scratch containing a logo a
 type: how-to
 page_title: How to Generate a PDF Document with Logo and Text using FixedContentEditor 
 slug: create-pdf-document-with-logo-and-text-using-fixedcontenteditor
-tags: pdf, fixedcontenteditor, editor, logo, image, text
+tags: radpdfprocessing, pdf, fixedcontenteditor, logo, image, text, document, processing
 res_type: kb
 ---
 ## Environment

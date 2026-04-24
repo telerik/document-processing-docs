@@ -3,7 +3,7 @@ title: Getting Started
 description: Learn how to use the GenAI-powered Document Insights functionality to summarize a PDF document with PdfProcessing.
 page_title: Getting Started
 slug: radpdfprocessing-features-gen-ai-powered-document-insights-getting-started
-tags: ai, document, analysis, overview, pdf, processing, genai, powered, insights
+tags: genai, pdf, summarization, radpdfprocessing, llm, ai, insights, started
 published: True
 position: 2
 ---

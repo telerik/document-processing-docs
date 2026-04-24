@@ -3,7 +3,7 @@ title: Using Charts
 description: Learn how to add and manipulate charts in RadSpreadProcessing spreadsheet documents using the FloatingChartShape API.
 page_title: Using Charts
 slug: radspreadprocessing-features-charts-using-charts
-tags: chart, insert, remove
+tags: charts, spreadsheet, radspreadprocessing, insert, remove, floating, chart, shape, excel, api, spread, xlsx
 published: True
 position: 2
 platforms: ajax, mvc, wpf, winforms

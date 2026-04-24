@@ -4,7 +4,7 @@ description: Learn how to recursively change all fonts in a document before expo
 type: how-to
 page_title: How to Globally Change the Font of a RadFlowDocument Before Export
 slug: wordsprocessing-globally-change-font-radflowdocument
-tags: font, radflowdocument, wordsprocessing, document, processing, pdf, export, global, font, change
+tags: radwordsprocessing, radflowdocument, font, pdf, export, document, processing, word
 res_type: kb
 ---
 

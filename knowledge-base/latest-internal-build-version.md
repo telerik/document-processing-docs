@@ -4,7 +4,7 @@ description: This article explains what the Latest Internal Build (Preview Versi
 type: how-to
 page_title: How to Obtain and Use the Latest Internal Build (Preview Version)
 slug: obtain-use-latest-internal-build-version
-tags: internal-build, LIB, version, distribution, bug fixes
+tags: telerik, document, processing, internal, preview, version, distribution, build
 res_type: kb
 ---
 

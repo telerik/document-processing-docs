@@ -5,7 +5,7 @@ type: how-to
 page_title: Export RadFixedPage to image
 slug: export-radfixedpage-to-image
 position: 0
-tags: pdf, page, export, image
+tags: radpdfprocessing, pdf, page, image, export, document, processing, fixed
 res_type: kb
 ---
 

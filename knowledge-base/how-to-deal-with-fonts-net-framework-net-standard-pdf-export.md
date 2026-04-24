@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Deal with Fonts in .NET Framework and .NET Standard when Exporting to PDF Format using Telerik Document Processing
 meta_title: How to Deal with Fonts in .NET Framework and .NET Standard when Exporting to PDF Format using Telerik Document Processing
 slug: how-to-deal-with-fonts-net-framework-net-standard-pdf-export
-tags: pdf,telerik, document, processing,font style,export,fontsprovider, provider
+tags: radpdfprocessing, pdf, font, netstandard, fontsprovider, export
 res_type: kb
 ticketid: 1707405
 ---

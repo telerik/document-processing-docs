@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Create Password-Protected ZIP Archives with Folder Structure
 meta_title: How to Create Password-Protected ZIP Archives with Folder Structure
 slug: read-folder-encrypted-archive
-tags: zip, library, telerik, document, processing, aes, encryption, archive, folders, password, protection
+tags: radziplibrary, zip, encryption, archive, password, folders, document, processing
 res_type: kb
 ticketid: 1702323
 ---

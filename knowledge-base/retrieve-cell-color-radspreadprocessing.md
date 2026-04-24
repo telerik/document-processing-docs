@@ -4,7 +4,7 @@ description: Learn how to retrieve the actual cell color in RadSpreadProcessing 
 type: how-to
 page_title: How to Retrieve Cell Color from Theme in RadSpreadProcessing
 slug: retrieve-cell-color-radspreadprocessing
-tags: radspreadprocessing, document processing, cell color, themable color, pattern fill
+tags: radspreadprocessing, excel, cell, color, theme, spreadsheet, document, processing
 res_type: kb
 ticketid: 1656165
 ---

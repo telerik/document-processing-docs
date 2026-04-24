@@ -3,7 +3,7 @@ title: Overview
 page_title: Telerik Document Processing AI Tooling Overview
 description: Learn about the Telerik Document Processing Libraries AI-powered developer tools that integrate with your IDE or code editor for greater productivity and enhanced developer experience.
 slug: ai-coding-assistant
-tags: ai, dpl, document, processing, coding, assistant
+tags: ai, coding, assistant, mcp, document, processing, telerik, productivity
 published: True
 position: 0
 ---

@@ -3,7 +3,7 @@ title: Comments
 description: Learn how to add and manage comments in spreadsheet documents using RadSpreadProcessing.
 page_title: Comments 
 slug: radspreadprocessing-features-comments
-tags: comments, xlsx
+tags: comments, xlsx, spreadsheet, radspreadprocessing, cells, annotations, workbook, notes
 published: True
 position: 23
 platforms: mvc, ajax, blazor, wpf, winforms, winui, core

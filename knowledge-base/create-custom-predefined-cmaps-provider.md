@@ -5,7 +5,7 @@ type: how-to
 page_title: Create Custom Predefined CMaps Provider
 slug: create-custom-predefined-cmaps-provider
 position: 0
-tags: pdf, cmap, cff, font
+tags: radpdfprocessing, pdf, cmap, font, provider, document, processing, encoding
 res_type: kb
 ---
 

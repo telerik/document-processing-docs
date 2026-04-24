@@ -4,7 +4,7 @@ description: This article demonstrates how to identify and retrieve the table th
 type: how-to
 page_title: How to Retrieve a Table by Bookmark in RadWordsProcessing
 slug: radwordsprocessing-find-table-by-bookmark
-tags: radwordsprocessing, document, processing, bookmarks, table, nested, tables
+tags: radwordsprocessing, docx, bookmark, table, document, processing, word, nested
 res_type: kb
 ticketid: 1657970
 ---

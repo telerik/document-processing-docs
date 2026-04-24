@@ -3,7 +3,7 @@ title: Headers and Footers
 description: Learn how to add rich text content in page margins as headers and footers when exporting spreadsheet worksheets in RadSpreadProcessing.
 page_title: Headers and Footers
 slug: radspreadprocessing-features-headers-and-footers
-tags: header, footer
+tags: headers, footers, spreadsheet, radspreadprocessing, print, pages, worksheet, export, spread, xlsx
 published: True
 position: 7
 ---

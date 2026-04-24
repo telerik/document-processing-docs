@@ -5,7 +5,7 @@ type: how-to
 page_title: Proper Font Registration for Custom Font Variants (Regular, Bold, Italic) in DOCX to PDF Conversion
 meta_title: Proper Font Registration for Custom Font Variants (Regular, Bold, Italic) in DOCX to PDF Conversion
 slug: registering-custom-font-pdf-processing
-tags: pdf,processing,telerik, document ,font,register,bold, italic, regular
+tags: radpdfprocessing, pdf, font, bold, italic, register, document, processing
 res_type: kb
 ticketid: 1704494
 ---

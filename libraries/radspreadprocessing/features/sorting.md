@@ -3,7 +3,7 @@ title: Sorting
 description: Learn how to sort data in spreadsheet worksheets using RadSpreadProcessing.
 page_title: Sorting
 slug: radspreadprocessing-features-sorting
-tags: sorting
+tags: sorting, spreadsheet, radspreadprocessing, data, worksheet, rows, order, columns, spread, xlsx
 published: True
 position: 17
 ---

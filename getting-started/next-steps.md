@@ -3,7 +3,7 @@ title: Next Steps
 description: Browse recommended next steps and learning resources for Telerik Document Processing, including installation, integration, upgrade guidance, and SDK examples.
 page_title: Next Steps
 slug: getting-started-next-steps
-tags: Next Steps
+tags: installation, integration, upgrade, sdk, radpdfprocessing, radwordsprocessing, radziplibrary, resources
 published: True
 position: 3
 ---

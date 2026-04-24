@@ -3,7 +3,7 @@ title: Manage View State
 page_title: Manage View State
 description: Learn how to set scale factor, tab color, how to show or hide gridlines or row/column headers in the worksheet.
 slug: radspreadprocessing-working-with-worksheets-view-state
-tags: scroll, scale factor, view state, zoom
+tags: view, state, spreadsheet, radspreadprocessing, zoom, scroll, gridlines, worksheet, headers
 published: True
 position: 5
 ---

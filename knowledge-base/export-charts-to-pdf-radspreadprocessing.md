@@ -4,7 +4,7 @@ description: Learn how to export charts from Excel files to PDF format using Rad
 type: how-to
 page_title: How to Export Charts from Excel to PDF with RadSpreadProcessing and WinForms RadChartView
 slug: export-charts-to-pdf-radspreadprocessing
-tags: spreadprocessing, document, processing, export, chart, pdf, excel, image, winforms, sheet, worksheet, xslx
+tags: radspreadprocessing, chart, pdf, excel, export, image, document, processing
 res_type: kb
 ticketid: 1659898
 ---

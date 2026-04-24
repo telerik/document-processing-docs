@@ -3,7 +3,7 @@ title: Formats and Conversion Overview
 page_title: Formats and Conversion
 description: You can use RadWordsProcessing to convert among variety of formats.
 slug: radwordsprocessing-formats-and-conversion
-tags: doc,dot,docx,html,rtf,pdf,txt,formats,import,export,conversion,features
+tags: formats, word, flow, docx, html, rtf, pdf, import, export, conversion
 published: True
 position: 0
 ---

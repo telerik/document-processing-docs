@@ -4,7 +4,7 @@ description: This article provides a solution to draw a bar chart with PdfProces
 type: how-to
 page_title: How to Draw a Chart with FixedContentEditor in PdfProcessing
 slug: draw-chart-with-fixedcontenteditor
-tags:  pdfprocessing, chart, draw, pdf, fixedcontenteditor
+tags: radpdfprocessing, pdf, chart, fixedcontenteditor, drawing, document, processing, bar
 res_type: kb
 ---
 ## Environment

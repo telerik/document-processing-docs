@@ -5,7 +5,7 @@ type: how-to
 page_title: How to find and replace text
 slug: pdfprocessing-replace-text
 position: 0
-tags: pdf, replace, find, text, content
+tags: radpdfprocessing, pdf, text, replace, find, document, processing, content
 ticketid: 1525237
 res_type: kb
 ---

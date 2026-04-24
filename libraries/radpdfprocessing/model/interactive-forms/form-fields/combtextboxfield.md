@@ -3,7 +3,7 @@ title: CombTextBoxField
 description: Learn about the CombTextBoxField class in RadPdfProcessing for working with comb text box form fields that equally distribute characters across a fixed-length field.
 page_title: CombTextBoxField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield
-tags: combtextboxfield
+tags: combtextboxfield, pdf, formfields, radpdfprocessing, acroform, interactive, comb, model
 published: True
 ---
 

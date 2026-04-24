@@ -3,7 +3,7 @@ title: Version 2024.4.1106 (2024 Q4)
 page_title: What is new in 2024.4.1106 (2024 Q4) for the Document Processing Libraries
 description: 2024.4.1106 (2024 Q4)
 slug: release-notes-2024-4-1106
-tags: 2024.4.1106,Q4,2024
+tags: release, notes, 2024, Q4, telerik, document, processing, changelog
 published: True
 position: 0
 ---

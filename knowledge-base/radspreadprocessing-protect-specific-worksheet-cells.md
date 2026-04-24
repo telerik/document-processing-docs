@@ -4,7 +4,7 @@ description: Learn how to lock only specific worksheet cells while keeping the r
 type: how-to
 page_title: Protect Specific Cells in RadSpreadProcessing
 slug: radspreadprocessing-protect-specific-worksheet-cells
-tags: spread, processing, worksheet, protection, lock, cells, used, range, performance, document
+tags: radspreadprocessing, excel, worksheet, protection, cells, document, processing, lock
 res_type: kb
 ---
 

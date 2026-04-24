@@ -3,7 +3,7 @@ title: Headers and Footers
 description: Learn how to insert and configure headers and footers in sections of RadWordsProcessing flow documents.
 page_title: Headers and Footers
 slug: radwordsprocessing-model-headers-footers
-tags: headers,and,footers
+tags: headers, footers, word, docx, document, flow, model, sections, pages
 published: True
 position: 10
 ---

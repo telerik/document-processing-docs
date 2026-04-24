@@ -2,7 +2,7 @@
 title: Zip Extensions
 page_title: Zip Extensions
 slug: radziplibrary-zipextensions
-tags: zip, extensions
+tags: extensions, radziplibrary, zip, zipfile, extract, create, dotnet, helpers
 published: True
 position: 6
 platforms: ajax, mvc, wpf, winforms

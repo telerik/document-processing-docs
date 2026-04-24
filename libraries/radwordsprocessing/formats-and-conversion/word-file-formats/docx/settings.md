@@ -2,8 +2,7 @@
 title: Settings
 page_title: Settings
 description: This article describes the settings that you can use to control how the DOCX documents are imported/exported in WordsProcessing.
-slug: radwordsprocessing-formats-and-conversion-docx-settings
-tags: settings
+tags: docx, format, provider, settings, flow, import, export, configuration, word
 published: True
 position: 2
 ---

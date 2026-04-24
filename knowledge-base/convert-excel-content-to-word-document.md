@@ -4,7 +4,7 @@ description: Learn how to convert a snippet of an Excel document into an image a
 type: how-to
 page_title: Converting XLSX Content to DOCX Document
 slug: convert-excel-content-to-word-document
-tags: conversion, excel, word, snippet, image, insert, SpreadProcessing, WordsProcessing, xlsx, docx
+tags: radspreadprocessing, radwordsprocessing, xlsx, docx, image, conversion, document, processing
 res_type: kb
 ---
 ## Environment

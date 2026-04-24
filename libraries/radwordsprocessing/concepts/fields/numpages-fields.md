@@ -3,7 +3,7 @@ title: NumPages Field
 page_title: NumPages Field
 description: NumPages field is a Field element that contains the total number of pages.
 slug: radwordsprocessing-concepts-numpages-field
-tags: numpages,field
+tags: numpages, word, flow, docx, fields, document, pages, total, model, numbering
 published: True
 position: 6
 ---

@@ -4,7 +4,7 @@ description: Learn how to achieve bold text for a specific part of an inline ele
 type: how-to
 page_title: How to Make Bold only a Part of the Text in a Paragraph with RadWordsProcessing
 slug: create-bold-text-run-wordsprocessing
-tags: wordsprocessing, document, processing, run, bold, text
+tags: radwordsprocessing, docx, text, bold, run, document, processing, word
 res_type: kb
 ---
 ## Environment

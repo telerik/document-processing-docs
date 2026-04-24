@@ -3,7 +3,7 @@ title: Generating API Keys
 page_title: Generating API Keys
 description: Learn how to use API Keys to authenticate with the Telerik NuGet server and restore Telerik Document Processing packages in your CI or desktop environment.
 slug: generating-api-keys
-tags: telerik, document, processing, restore, nuget, packages, ci, continuous, integration, installation, api, key
+tags: api, key, nuget, authentication, ci, telerik, security, packages
 published: True
 position: 9
 ---

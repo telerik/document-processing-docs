@@ -2,8 +2,7 @@
 title: Settings
 description: Learn about the import and export settings available for the HtmlFormatProvider in RadWordsProcessing.
 page_title: Settings
-slug: radwordsprocessing-formats-and-conversion-html-settings
-tags: settings
+tags: html, format, provider, settings, html, word, flow, docx, import, export, configuration, document
 published: True
 position: 4
 ---

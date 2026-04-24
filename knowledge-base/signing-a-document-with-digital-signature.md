@@ -5,7 +5,7 @@ type: how-to
 page_title: Signing a document with a digital signature
 slug: signing-a-document-with-digital-signature
 position: 0
-tags: pdf, sign, digital, signature, HSM, USB, certificate, X509Certificate2
+tags: radpdfprocessing, pdf, signature, digital, certificate, document, processing, sign
 res_type: kb
 ---
 

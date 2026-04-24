@@ -3,7 +3,7 @@ title: Xlsx
 description: Learn about XLSX (Office Open XML) format support in RadSpreadProcessing for importing and exporting modern Excel spreadsheet files.
 page_title: Xlsx
 slug: radspreadprocessing-formats-and-conversion-xlsx-xlsx
-tags: xlsx
+tags: xlsx, spreadsheet, radspreadprocessing, excel, import, export, openxml, format
 published: True
 position: 0
 ---

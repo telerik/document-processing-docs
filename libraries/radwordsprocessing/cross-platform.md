@@ -3,7 +3,7 @@ title: Cross-Platform Support
 description: Learn about the .NET Standard and .NET Core support in RadWordsProcessing and how to use the cross-platform NuGet packages.
 page_title: Cross-Platform Support
 slug: radwordsprocessing-cross-platform
-tags: cross,platform
+tags: cross, platform, word, processing, dotnet, standard, nuget, blazor, maui, document
 platforms: core, blazor, winui, maui
 published: True
 position: 2

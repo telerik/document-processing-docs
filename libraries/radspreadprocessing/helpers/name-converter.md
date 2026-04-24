@@ -3,7 +3,7 @@ title: Name Converter
 description: Learn how to use the NameConverter utility class in RadSpreadProcessing to convert between cell names and index-based references.
 page_title: Name Converter
 slug: radspreadprocessing-name-converter
-tags: convert,name,index
+tags: name, converter, cells, spreadsheet, radspreadprocessing, index, reference, utility, conversion
 published: True
 position: 0
 ---

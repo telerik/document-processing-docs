@@ -4,7 +4,7 @@ description: This article demonstrates how to properly handle non-breaking space
 type: how-to
 page_title: How to Ensure Non-Breaking Spaces Are Rendered Correctly in PDFs Generated from HTML
 slug: radwordsprocessing-correctly-render-non-breaking-spaces-in-pdf
-tags: radwordsprocessing, document, processing, html,formatprovider, pdf, fontsprovider, nonbreaking,spaces
+tags: radwordsprocessing, pdf, html, spaces, fontsprovider, document, processing, rendering
 res_type: kb
 ticketid: 1683368
 ---

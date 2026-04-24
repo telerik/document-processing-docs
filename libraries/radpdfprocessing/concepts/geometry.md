@@ -3,7 +3,7 @@ title: Geometry
 description: Learn about the geometry classes in RadPdfProcessing that describe 2D shapes used for clipping and drawing in PDF documents.
 page_title: Geometry
 slug: radpdfprocessing-concepts-geometry
-tags: geometry
+tags: geometry, pdf, shapes, path, clipping, radpdfprocessing, rectangle, bezier
 published: True
 position: 6
 ---

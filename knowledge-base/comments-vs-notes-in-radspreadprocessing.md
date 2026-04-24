@@ -4,7 +4,7 @@ description: Learn how to set comments and notes on cells in RadSpreadProcessing
 type: how-to
 page_title: Comments vs Notes in RadSpreadProcessing
 slug: comments-vs-notes-in-radspreadprocessing
-tags: comments, notes, excel, spreadprocessing
+tags: radspreadprocessing, excel, comments, notes, spreadsheet, cells, document, processing
 res_type: kb
 ---
 

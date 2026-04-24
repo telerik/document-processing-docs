@@ -5,7 +5,7 @@ type: how-to
 page_title: Fixing Trial Watermark in the Generated Documents in MFC applications
 meta_title: Fixing Trial Watermark in the Generated Documents in MFC applications
 slug: resolving-trial-watermark-mfc-application
-tags: licensing, telerik-document-processing, troubleshooting, pdf-generation, license-validation
+tags: licensing, watermark, mfc, telerik, document, processing, troubleshooting, pdf
 res_type: kb
 ticketid: 1711260
 ---

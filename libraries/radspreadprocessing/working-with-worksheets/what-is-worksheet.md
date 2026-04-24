@@ -3,7 +3,7 @@ title: What is a Worksheet?
 description: Learn about the concept of a worksheet in RadSpreadProcessing and its features for organizing spreadsheet data.
 page_title: What is a Worksheet?
 slug: radspreadprocessing-working-with-worksheets-what-is-worksheet
-tags: what,is,a,worksheet?,excel
+tags: worksheet, spreadsheet, radspreadprocessing, model, concept, excel, structure, workbook
 published: True
 position: 0
 ---

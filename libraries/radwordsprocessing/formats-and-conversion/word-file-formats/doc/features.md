@@ -2,8 +2,7 @@
 title: Features
 page_title: Features
 description: This article describes all the features that are supported by DocFormatProvider
-slug: radwordsprocessing-formats-and-conversion-doc-features
-tags: features
+tags: format, provider, features, doc, word, flow, docx, import, legacy, supported
 published: True
 position: 0
 ---

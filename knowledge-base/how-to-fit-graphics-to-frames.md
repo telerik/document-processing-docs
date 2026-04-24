@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Fit Graphics
 slug: how-to-fit-graphics-to-frames
 position: 0
-tags: pdf, image, graphic, frame
+tags: radpdfprocessing, pdf, image, graphics, frame, document, processing, fixed
 res_type: kb
 ---
 

@@ -3,7 +3,7 @@ title: RadFixedDocument
 description: RadFixedDocument is the main document unit of the PdfProcessing library offered by Telerik Document Processing libraries.
 page_title: RadFixedDocument
 slug: radpdfprocessing-model-radfixeddocument
-tags: radfixeddocument, pdf, merge, create, document, page, fixed
+tags: radfixeddocument, pdf, document, radpdfprocessing, pages, merge, create, root
 published: True
 position: 1
 ---

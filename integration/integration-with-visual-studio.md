@@ -3,7 +3,7 @@ title: Integration with Visual Studio
 page_title: Integration with Visual Studio
 description: Integration with Visual Studio
 slug: integration-with-visual-studio
-tags: integration,visual-studio,document,processing,configure,wizard
+tags: integration, visualstudio, document, processing, wizard, configuration, extensions, telerik
 published: True
 position: 2
 ---

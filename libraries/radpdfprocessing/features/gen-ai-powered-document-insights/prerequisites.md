@@ -3,7 +3,7 @@ title: Prerequisites
 description: Get familiar with the requirements for using the GenAI-powered Document Insights functionality in the PdfProcessing library. 
 page_title: Prerequisites
 slug: radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites
-tags: ai, document, analysis, prerequisites, setup, installation
+tags: genai, prerequisites, pdf, radpdfprocessing, llm, nuget, setup, ai
 published: True
 position: 1
 ---

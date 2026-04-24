@@ -3,7 +3,7 @@ title: Prerequisites
 description: Learn how to convert scanned images to PDF format using OcrFormatProvider.
 page_title: Prerequisites for Using OcrFormatProvider
 slug: radpdfprocessing-formats-and-conversion-ocr-prerequisites
-tags: pdf, processing, ocr, image, prerequisites
+tags: ocr, prerequisites, pdf, radpdfprocessing, recognition, images, nuget, setup
 published: True
 position: 0
 ---

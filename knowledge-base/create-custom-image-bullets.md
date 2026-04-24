@@ -5,7 +5,7 @@ type: how-to
 page_title: Create Custom Image Bullets
 slug: create-custom-image-bullets
 position: 0
-tags: bullets, image, listlevel, bulletnumbering, bulletnumberingformat
+tags: radwordsprocessing, docx, bullets, image, list, styles, document, processing
 res_type: kb
 ---
 

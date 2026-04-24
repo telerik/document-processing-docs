@@ -3,7 +3,7 @@ title: Date Field
 page_title: Date Field
 description: Date field is a Field element that can display a date, a time, or both.
 slug: radwordsprocessing-concepts-date-field
-tags: date,field
+tags: datefield, word, flow, docx, fields, document, date, time, model, display
 published: True
 position: 3
 ---

@@ -4,7 +4,7 @@ description: This article explains how to create colored squares with borders in
 type: how-to
 page_title: Creating Colored Squares in RadFlowDocument | Telerik Document Processing
 slug: creating-colored-squares-radflowdocument
-tags: radflowdocument, colored-square, border, telerik-document-processing
+tags: radwordsprocessing, radflowdocument, docx, shapes, border, document, processing, word
 res_type: kb
 ---
 ## Environment

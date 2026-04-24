@@ -3,7 +3,7 @@ title: Getting Started
 description: The digital signature feature enables you to sign and validate a PDF document. 
 page_title: Digital Signature - Getting Started
 slug: radpdfprocessing-features-digital-signature-getting-started
-tags: digital, signature, getting, started
+tags: digital, signature, pdf, signing, certificates, radpdfprocessing, x509, nuget, started
 position: 1
 ---
 

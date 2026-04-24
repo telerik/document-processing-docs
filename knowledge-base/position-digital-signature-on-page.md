@@ -5,7 +5,7 @@ type: how-to
 page_title: Position Digital Signature widget and replace an existing page content
 slug: position-digital-signature-on-page
 position: 0
-tags: digital, signature, PdfProcessing, Telerik Document Processing, Telerik, pdf, Reporting, sign, replace, modify
+tags: radpdfprocessing, pdf, signature, digital, page, document, processing, sign
 res_type: kb
 ---
 

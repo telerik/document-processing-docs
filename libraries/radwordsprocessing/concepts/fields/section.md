@@ -3,7 +3,7 @@ title: Section Field
 page_title: Section Field
 description: Section field is a Field element that inserts the number of the current section.
 slug: radwordsprocessing-concepts-section-field
-tags: section,field
+tags: sectionfield, word, flow, docx, fields, document, section, number, model, numbering
 published: True
 position: 0
 ---

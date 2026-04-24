@@ -3,7 +3,7 @@ title: PartialContextQuestionProcessor
 description: PartialContextQuestionProcessor class enables you to ask questions about a Word document and receive answers based on the most relevant parts of the document content.
 page_title: PartialContextQuestionProcessor
 slug: radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor
-tags: ai, document, analysis, question, processor, partial, context, embeddings, flow, docx, word
+tags: question, processor, genai, radwordsprocessing, document, embeddings, ai, retrieval, context, partial, embeddings, analysis
 published: True
 position: 4
 ---

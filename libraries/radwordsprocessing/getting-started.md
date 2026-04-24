@@ -3,7 +3,7 @@ title: Getting Started
 description: Learn how to get started with RadWordsProcessing by creating a sample application that imports and exports flow documents.
 page_title: Getting Started
 slug: radwordsprocessing-getting-started
-tags: getting,started
+tags: word, processing, document, started, nuget, docx, flow, document, import, export
 published: True
 position: 1
 ---

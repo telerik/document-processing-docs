@@ -4,7 +4,7 @@ description: Learn how to crop specific parts of a PDF page and save them as ima
 type: how-to
 page_title: How to Crop and Save PDF Pages as Images with RadPdfProcessing
 slug: crop-save-pdf-pages-as-images-radpdfprocessing
-tags: radpdfprocessing, cropbox, pdf, image, export, crop
+tags: radpdfprocessing, pdf, crop, image, export, page, document, processing
 res_type: kb
 category: knowledge-base
 ticketid: 1653594

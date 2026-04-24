@@ -5,7 +5,7 @@ page_title: FileFormatDetector
 slug: fileformatdetector
 position: 1
 published: True
-tags: file, format, detection, detector, pdf, docx, xlsx, zip, doc, xls, xlsm, txt, document, processing, libraries
+tags: fileformatdetector, detection, pdf, docx, xlsx, zip, document, formats
 ---
 
 # FileFormatDetector
