@@ -1,6 +1,6 @@
 ---
 name: seo-meta-tags
-description: Use this skill to validate and improve the `tags:` SEO frontmatter field of Markdown documentation articles in the Telerik Document Processing docs repository. Apply it when the user asks to enrich, fix, audit, or optimize SEO tags on one article, a folder, or the entire repo. Also use when asked to "check tags", "improve tags", "add SEO tags", "fix article tags", or "run a tag audit". The skill enforces the established house rules: 6–12 single-word, comma-separated, article-specific tags per page—no filler, no duplicates, no multi-word tags with spaces.
+description: 'Use this skill to validate and improve the tags: SEO frontmatter field of Markdown documentation articles in the Telerik Document Processing docs repository. Apply it when the user asks to enrich, fix, audit, or optimize SEO tags on one article, a folder, or the entire repo. Also use when asked to "check tags", "improve tags", "add SEO tags", "fix article tags", or "run a tag audit". The skill enforces the established house rules: 6-12 single-word, comma-separated, article-specific tags per page — no filler, no duplicates, no multi-word tags with spaces.'
 ---
 
 # SEO Meta Tags — Telerik Document Processing Docs
