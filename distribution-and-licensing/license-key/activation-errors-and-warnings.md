@@ -39,6 +39,7 @@ When using the product in a project with an expired or missing license, the _Tel
 |`Your current license has expired.`|TKL102|You are using a product version released outside the validity period of your perpetual license. To remove the error message, do either of the following: <br> - Renew your subscription and [download a new license key]({%slug setting-up-license-key%}#downloading-the-license-key). <br> - Downgrade to a product version included in your perpetual license as indicated in the message.|
 |`Your subscription license has expired.`|TKL103; TKL104|Renew your subscription and [download a new license key]({%slug setting-up-license-key%}).|
 |`Your trial license has expired.`|TKL105|Purchase a commercial license to continue using the product.|
+|`Services associated with Telerik Document Processing Libraries require a subscription or trial license. Please obtain a subscription license`|TKL403|Purchase a subscription license to continue using the services/tools.|
 
 ## See Also
 
