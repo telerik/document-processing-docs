@@ -2,7 +2,7 @@
 title: Features
 description: Overview of all PDF features supported by the PdfFormatProvider in RadWordsProcessing for exporting flow documents to PDF.
 page_title: Features
-tags: pdf, format, provider, features, pdf, word, flow, docx, export, document, supported, flow
+tags: pdf, format, provider, features, word, flow, docx, export, document, supported
 published: True
 position: 1
 ---

@@ -3,7 +3,7 @@ title: ImageInline
 description: Learn how to use the ImageInline element in RadWordsProcessing to embed inline images within flow document content.
 page_title: ImageInline
 slug: radwordsprocessing-model-imageinline
-tags: image, inline, word, docx, document, flow, model, image, inline, embedded
+tags: image, inline, word, docx, document, flow, model, embedded
 published: True
 position: 8
 ---

@@ -5,7 +5,7 @@ type: how-to
 page_title: Avoiding Format Symbol Conversion in CellValueFormat
 meta_title: Avoiding Format Symbol Conversion in CellValueFormat
 slug: avoiding-format-symbol-conversion-cellvalueformat
-tags: spreadstreamprocessing,telerik document processing,cellvalueformat,spreadsheetculturehelper,cultureinfo,formathelper
+tags: radspreadstreamprocessing, cellvalueformat, spreadsheetculturehelper, cultureinfo, formathelper, spreadsheet, format
 res_type: kb
 ticketid: 1676276
 ---

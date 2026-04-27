@@ -4,7 +4,7 @@ description: Learn how to programmatically change the state of a checkbox in a W
 type: how-to
 page_title: How to Programmatically Modify Checkbox States in Word Document Templates Using RadWordsProcessing
 slug: change-checkbox-state-radwordsprocessing
-tags: radwordsprocessing, document processing, checkbox, word, template
+tags: radwordsprocessing, document, processing, checkbox, word, template
 res_type: kb
 ticketid: 1656247
 ---

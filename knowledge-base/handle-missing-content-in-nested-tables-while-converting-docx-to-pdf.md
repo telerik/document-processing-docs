@@ -5,7 +5,7 @@ type: how-to
 page_title: How To Handle Missing Content in Nested Tables While  Converting DOCX to PDF Format
 meta_title: How To Handle Missing Content in Nested Tables While  Converting DOCX to PDF Format
 slug: handle-missing-content-in-nested-tables-while-converting-docx-to-pdf
-tags: telerik document, processing, words,processing, tables, alignment, pdf, docx,width,column,table, nested
+tags: radwordsprocessing, docx, pdf, tables, alignment, conversion, nested, columns
 res_type: kb
 ticketid: 1705627
 ---

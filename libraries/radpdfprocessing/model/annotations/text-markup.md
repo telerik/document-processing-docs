@@ -3,7 +3,7 @@ title: Text Markup
 page_title: Text Markup Annotation  
 description: Text markup annotations appear as highlights, underlines, strikeouts, or squiggly underlines in the text of a document. 
 slug: radpdfprocessing-model-annotations-text-markup 
-tags: textmarkup, pdf, annotations, radpdfprocessing, highlight, underline, strikeout, markup 
+tags: textmarkup, pdf, annotations, radpdfprocessing, highlight, underline, strikeout, markup
 published: True
 position: 4
 ---

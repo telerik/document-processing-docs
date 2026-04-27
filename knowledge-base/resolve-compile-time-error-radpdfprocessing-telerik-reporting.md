@@ -4,7 +4,7 @@ description: This article explains how to solve the compile time error caused by
 type: how-to
 page_title: Fixing Compile Time Error Between Telerik.Documents.Fixed and Telerik.Reporting after Upgrading to Q4 2024
 slug: resolve-compile-time-error-radpdfprocessing-telerik-reporting
-tags: pdfprocessing, document, processing, compile, error, size, conflict, extern, alias, reporting
+tags: radpdfprocessing, document, processing, compile, error, conflict, alias, reporting
 res_type: kb
 ticketid: 1670534
 ---

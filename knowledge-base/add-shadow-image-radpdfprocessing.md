@@ -4,7 +4,7 @@ description: Learn how to add a shadow effect when inserting images into PDF doc
 type: how-to
 page_title: How to Simulate Shadow Effects for Images in PDFs with RadPdfProcessing
 slug: add-shadow-image-radpdfprocessing
-tags: radpdfprocessing, document processing, image, shadow, insertimage, path, geometry
+tags: radpdfprocessing, document, processing, image, shadow, insertimage, path, geometry
 res_type: kb
 ticketid: 1655064
 ---

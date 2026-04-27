@@ -5,7 +5,7 @@ type: troubleshooting
 page_title: Blank PDF on iPhone When Using Telerik PdfProcessing Encryption
 meta_title: Fix for Blank PDF on iPhone Due to Telerik PdfProcessing Encryption
 slug: blank-pdf-iphone-telerik-pdf-encryption
-tags: pdf, processing, telerik, document, aes, aes256, 256, 128, aes128, encrypt, linearization, iphone, ios, apple
+tags: radpdfprocessing, pdf, encryption, aes, linearization, iphone, ios, document
 res_type: kb
 ticketid: 1701327
 ---

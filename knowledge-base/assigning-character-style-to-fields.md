@@ -4,7 +4,7 @@ description: Learn how to apply a custom character style to fields in RadWordsPr
 type: how-to
 page_title: Applying Custom Character Style to Fields in RadWordsProcessing
 slug: assigning-character-style-to-fields
-tags: wordsprocessing, document, processing, fields, character, style, pdf, export
+tags: radwordsprocessing, document, processing, fields, character, style, pdf, export
 res_type: kb
 ticketid: 1686361
 ---

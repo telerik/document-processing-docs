@@ -3,7 +3,7 @@ title: Using JsonFormatProvider
 description: Learn how to export workbook data to a structured JSON representation using the JsonFormatProvider in RadSpreadProcessing.
 page_title: Using JsonFormatProvider
 slug: radspreadprocessing-formats-and-conversion-json-jsonformatprovider
-tags: json, format, provider, json, spreadsheet, radspreadprocessing, export, workbook, data, serialization, spread
+tags: json, format, provider, spreadsheet, radspreadprocessing, export, workbook, data, serialization
 published: True
 position: 1
 ---

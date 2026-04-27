@@ -4,7 +4,7 @@ description: Learn how to insert charts into a PDF document using RadPdfProcessi
 type: how-to
 page_title: How to Include Charts in PDF Files with RadPdfProcessing
 slug: add-charts-to-pdf-radpdfprocessing
-tags: pdfprocessing, document, processing, chart, pdf, image, export
+tags: radpdfprocessing, document, processing, chart, pdf, image, export
 res_type: kb
 ticketid: 1679135
 ---

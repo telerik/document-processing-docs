@@ -4,7 +4,7 @@ description: Learn how to generate a barcode and incorporate it into a PDF docum
 type: how-to
 page_title: How to Add a Barcode to a PDF with PdfProcessing and the WinForms BarcodeView
 slug: add-barcode-to-pdf-telerik
-tags: radpdfprocessing, document processing, barcode, pdf, telerik reporting, winforms, barcodeview
+tags: radpdfprocessing, barcode, pdf, winforms, barcodeview, document, processing
 res_type: kb
 ticketid: 1657503
 ---

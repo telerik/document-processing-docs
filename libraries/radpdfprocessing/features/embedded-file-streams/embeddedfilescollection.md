@@ -3,7 +3,7 @@ title: EmbeddedFilesCollection
 description: Learn how to access, add, and remove embedded file streams in a PDF document using the EmbeddedFilesCollection class in RadPdfProcessing.
 page_title: EmbeddedFilesCollection
 slug: radpdfprocessing-embeddedfilescollection
-tags: embedded, files, collection, pdf, streams, radpdfprocessing, attachments, collection, files, api
+tags: embedded, files, collection, pdf, streams, radpdfprocessing, attachments, api
 position: 1
 ---
 

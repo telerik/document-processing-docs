@@ -3,7 +3,7 @@ title: Worksheet Page Setup
 description: Learn how to use the WorksheetPageSetup class in RadSpreadProcessing to control how worksheet content is split across pages when printing or exporting.
 page_title: Worksheet Page Setup
 slug: radspreadprocessing-features-worksheetpagesetup
-tags: page, setup, spreadsheet, radspreadprocessing, print, worksheet, headers, footers, margins, pdf, export, spread, xlsx
+tags: page, setup, spreadsheet, radspreadprocessing, print, worksheet, headers, footers, margins, pdf, export, xlsx
 published: True
 position: 14
 ---

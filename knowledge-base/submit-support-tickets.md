@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Get the Most Out of the Telerik Document Processing Support   
 slug: submit-support-tickets
 position: 0
-tags: support, telerik, document, processing, ticket, dpl, help, community
+tags: support, telerik, document, processing, ticket, help, community, forum
 res_type: kb
 ---
 

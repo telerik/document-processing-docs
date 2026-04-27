@@ -3,7 +3,7 @@ title: Using PdfFormatProvider
 description: Learn how to export RadFlowDocument to PDF using the PdfFormatProvider in RadWordsProcessing.
 page_title: Using PdfFormatProvider
 slug: radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider
-tags: format, provider, pdf, word, flow, docx, export, document, flow, conversion, rendering
+tags: format, provider, pdf, word, flow, docx, export, document, conversion, rendering
 published: True
 position: 2
 ---

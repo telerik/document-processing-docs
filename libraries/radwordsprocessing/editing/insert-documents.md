@@ -3,7 +3,7 @@ title: Insert Documents
 description: Learn how to insert one RadFlowDocument into another document at a specified position using RadWordsProcessing.
 page_title: Insert Documents
 slug: radwordsprocessing-editing-insert-documents
-tags: insert, word, flow, docx, editing, merge, flow, document, position, combine
+tags: insert, word, flow, docx, editing, merge, document, position, combine
 published: True
 position: 1
 ---

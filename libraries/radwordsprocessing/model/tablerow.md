@@ -3,7 +3,7 @@ title: TableRow
 description: Learn about the TableRow flow document element in RadWordsProcessing that defines a row of cells within a table.
 page_title: TableRow
 slug: radwordsprocessing-model-tablerow
-tags: table, row, word, docx, document, flow, model, table, cells, layout
+tags: table, row, word, docx, document, flow, model, cells, layout
 published: True
 position: 6
 ---

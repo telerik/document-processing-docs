@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Retrieve Specific Cells Using RadSpreadStreamProcessing
 meta_title: How to Retrieve Specific Cells Using RadSpreadStreamProcessing
 slug: accessing-specific-cells-radspreadstreamprocessing
-tags: spread,processing,telerik, document ,stream,cell, access,performance
+tags: radspreadstreamprocessing, spreadsheet, stream, cell, access, performance, document, xlsx
 res_type: kb
 ticketid: 1707561
 ---

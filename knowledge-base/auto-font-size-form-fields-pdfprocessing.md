@@ -5,7 +5,7 @@ type: how-to
 page_title: Adjust Font Size and Flatten Form Fields in PDFs with PdfProcessing
 meta_title: Adjust Font Size and Flatten Form Fields in PDFs with PdfProcessing
 slug: auto-font-size-form-fields-pdfprocessing
-tags: pdf, processing, text, box, field, flatten, font, size, recalculation, acroform, fixed, calculate, auto, fit
+tags: radpdfprocessing, pdf, form, field, flatten, font, size, acroform, auto, fit
 res_type: kb
 ticketid: 1697695
 ---
