@@ -2,6 +2,7 @@
 title: Settings
 description: Learn about the export settings available for the PdfFormatProvider in RadWordsProcessing to customize PDF output.
 page_title: Settings
+slug: radwordsprocessing-formats-and-conversion-pdf-settings
 tags: format, provider, settings, pdf, word, flow, docx, export, document, configuration
 published: True
 position: 3

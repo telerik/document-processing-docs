@@ -2,6 +2,7 @@
 title: Features
 description: Overview of all features supported by the XlsxFormatProvider in RadSpreadProcessing for importing and exporting XLSX files.
 page_title: Features
+slug: radspreadprocessing-formats-and-conversion-xlsx-features
 tags: xlsx, format, provider, features, xlsx, spreadsheet, radspreadprocessing, excel, import, export
 published: True
 position: 1
