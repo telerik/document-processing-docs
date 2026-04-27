@@ -3,7 +3,7 @@ title: RadFlowDocumentEditor
 description: Learn how to use RadFlowDocumentEditor in RadWordsProcessing to simplify inserting and building flow document content.
 page_title: RadFlowDocumentEditor
 slug: radwordsprocessing-editing-radflowdocumenteditor
-tags: document, editor, word, docx, editing, document, insert, flow, content, builder
+tags: document, editor, word, docx, editing, insert, flow, content, builder
 published: True
 position: 3
 ---

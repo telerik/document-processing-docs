@@ -3,7 +3,7 @@ title: Viewer Preferences
 description: The ViewerPreferences class controls how PDF documents are displayed and behave in PDF viewers.
 page_title: Viewer Preferences
 slug: radpdfprocessing-features-viewer-preferences
-tags: viewer, preferences, pdf, display, print, radpdfprocessing, settings, viewer, behavior
+tags: viewer, preferences, pdf, display, print, radpdfprocessing, settings, behavior
 published: True
 position: 7
 ---

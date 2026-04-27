@@ -2,7 +2,7 @@
 title: Settings
 description: Learn about the export settings available for the PdfFormatProvider in RadSpreadProcessing to customize PDF output.
 page_title: Settings
-tags: pdf, format, provider, settings, pdf, spreadsheet, radspreadprocessing, export, configuration, margins
+tags: pdf, format, provider, settings, spreadsheet, radspreadprocessing, export, configuration, margins
 published: True
 position: 3
 ---

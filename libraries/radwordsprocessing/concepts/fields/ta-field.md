@@ -3,7 +3,7 @@ title: TA Field
 page_title: TA Field
 description: TA field is a field element that represents the and entry in a Table of Authorities table.
 slug: radwordsprocessing-concepts-ta-field
-tags: tafield, word, flow, docx, fields, toa, authorities, document, model, reference, ta
+tags: tafield, word, flow, docx, fields, toa, authorities, document, model, reference
 published: True
 position: 0
 ---

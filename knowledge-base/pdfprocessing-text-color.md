@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Set Text Color Using PdfProcessing
 meta_title: How to Set Text Color Using PdfProcessing
 slug: pdfprocessing-text-color
-tags: pdf, processing, text, color, block, color, graphic, set, change
+tags: radpdfprocessing, pdf, text, color, block, graphic, editing, document
 res_type: kb
 ticketid: 1695311
 ---

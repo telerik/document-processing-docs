@@ -3,7 +3,7 @@ title: Text
 page_title: Text Annotation  
 description: Text annotations represents a sticky note attached to a point in the PDF document. 
 slug: radpdfprocessing-model-annotations-text 
-tags: text, pdf, annotations, radpdfprocessing, stickynote, note, comment, model 
+tags: text, pdf, annotations, radpdfprocessing, stickynote, note, comment, model
 published: True
 position: 3
 ---

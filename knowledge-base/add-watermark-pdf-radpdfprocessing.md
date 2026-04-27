@@ -4,7 +4,7 @@ description: Learn how to add custom watermarks to PDF documents using the RadPd
 type: how-to
 page_title: How to Add Watermarks to PDF Documents with RadPdfProcessing
 slug: add-watermark-pdf-radpdfprocessing
-tags: radpdfprocessing, document processing, watermark, pdf, text watermark
+tags: radpdfprocessing, pdf, watermark, text, image, document, processing
 res_type: kb
 ticketid: 1653970
 ---

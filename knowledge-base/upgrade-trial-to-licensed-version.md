@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Upgrade Trial to Licensed Version
 slug: upgrade-trial-to-licensed-version
 position: 0
-tags: telerik, license, trial, upgrade, document, processing, purchase, dpl
+tags: telerik, license, trial, upgrade, document, processing, purchase, commercial
 res_type: kb
 ---
 

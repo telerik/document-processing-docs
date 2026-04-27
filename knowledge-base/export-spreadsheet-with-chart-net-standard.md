@@ -5,7 +5,7 @@ type: how-to
 page_title: Export Spreadsheet with Bar Charts in .NET Standard
 meta_title: Export Spreadsheet with Bar Charts in .NET Standard
 slug: export-spreadsheet-with-chart-net-standard
-tags: spreadprocessing,telerik document processing,charts,pdf-export,images
+tags: radspreadprocessing, spreadsheet, charts, pdf, export, images, netstandard, conversion
 res_type: kb
 ticketid: 1663021
 ---

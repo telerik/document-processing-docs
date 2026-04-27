@@ -3,7 +3,7 @@ title: Copyright
 page_title: Copyright
 description: Copyright
 slug: license-copyright
-tags: copyright
+tags: copyright, telerik, progress, license, terms, trademarks
 published: false
 position: 25
 ---
