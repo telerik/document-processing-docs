@@ -2,6 +2,7 @@
 title: Features
 description: Overview of all RTF features supported by the RtfFormatProvider in RadWordsProcessing for importing and exporting flow documents.
 page_title: Features
+slug: radwordsprocessing-formats-and-conversion-rtf-features
 tags: format, provider, features, rtf, word, flow, docx, import, export, document, supported
 published: True
 position: 1

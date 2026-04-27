@@ -2,6 +2,7 @@
 title: Settings
 description: Learn about the import and export settings available for the RtfFormatProvider in RadWordsProcessing.
 page_title: Settings
+slug: radwordsprocessing-formats-and-conversion-rtf-settings
 tags: format, provider, settings, rtf, word, flow, docx, import, export, configuration, document
 published: True
 position: 3

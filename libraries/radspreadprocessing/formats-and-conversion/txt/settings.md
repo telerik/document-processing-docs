@@ -2,6 +2,7 @@
 title: Settings
 description: Learn about the import and export settings available for the TxtFormatProvider in RadSpreadProcessing.
 page_title: Settings
+slug: radspreadprocessing-formats-and-conversion-txt-settings
 tags: txt, format, provider, settings, spreadsheet, radspreadprocessing, import, export, configuration
 published: True
 position: 2
