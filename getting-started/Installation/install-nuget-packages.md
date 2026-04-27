@@ -26,7 +26,7 @@ This approach allows you to setup a local NuGet package source, so you can insta
 ![install-using-nuget001](images/install-using-nuget001.png)
 
 
-**Telerik Document Processing** is also available as a separate distibution in your account: [Download Product Files]({%slug installation-nuget-packages%})
+**Telerik Document Processing** is also available as a separate distribution in your account: [Download Product Files]({%slug installation-nuget-packages%})
 	
 2\. Then, you need to add packages to Visual Studio. Open the NuGet manager and then click the Options button:
 	

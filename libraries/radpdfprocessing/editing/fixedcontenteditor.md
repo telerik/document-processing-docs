@@ -34,8 +34,8 @@ position: 4
 |**DrawEllipse**|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
 |**DrawCircle**|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
 |**DrawPath**|Draws a path ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|**DrawTable**|Draws a [Table]({%slug radpdfprocessing-editing-table-overview%}) with size depening on the overload.|
-|**DrawBlock**|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depening on the overload.|
+|**DrawTable**|Draws a [Table]({%slug radpdfprocessing-editing-table-overview%}) with size depending on the overload.|
+|**DrawBlock**|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depending on the overload.|
 |**Draw**|Draws the specified element.|
 
 ## Creating FixedContentEditor with a Specified Position

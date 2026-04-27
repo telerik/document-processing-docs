@@ -14,7 +14,7 @@ ticketid: 1709949
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
-| 2026.1.210| Telerik Document Procesing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| 2026.1.210| Telerik Document Processing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 |Target Framework|.NET Framework||
 
 ## Description

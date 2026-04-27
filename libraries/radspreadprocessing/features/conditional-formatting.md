@@ -26,7 +26,7 @@ SpreadProcessing supports many different types of formatting rules. Each rule im
 
 | Rule | Description |
 |---|---|
-| **ColorScaleRule** | Specificies a gradient range of colors that is used to give additional meaning to data by assigning certain values to colors in the gradient spectrum. |
+| **ColorScaleRule** | Specifies a gradient range of colors that is used to give additional meaning to data by assigning certain values to colors in the gradient spectrum. |
 | **DataBarRule** | A graphical representation of the cells’ content. |
 | **IconSetRule** | Specifies a collection of icons that can be used to comment and classify data into categories. |
 | **BetweenRule** | This conditional formatting rule determines whether a cell value is inside a specified range. |
@@ -80,7 +80,7 @@ The Formatting property can be used for all rules listed in **Table 1** except *
 
 ## Create and Apply Conditional Formatting Rule
 
-Each of the classes listed in **Table 1** above expose constructors enabling you to instantiate the specific rule. The constructors of these classes take a `string` parameter allowing you to specify the values and conditions the rule must work with. You can pass any cell value for the parameter, inlcuding formulas.
+Each of the classes listed in **Table 1** above expose constructors enabling you to instantiate the specific rule. The constructors of these classes take a `string` parameter allowing you to specify the values and conditions the rule must work with. You can pass any cell value for the parameter, including formulas.
 
 #### Example 2: Create Between rule
 
@@ -120,7 +120,7 @@ Each of the classes listed in **Table 1** above expose constructors enabling you
 #### IconSet rule applied on a range of values
 ![IconSet rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_IconSet.png)
 
-The `PresetIconSet` enum exposes multiple definitions for predefined sets of icons. You can also use custom icons through the other construcor of IconSetRule. This overload accepts object of type IconSetValueContextBase whose implementations allow you to register three, four or five icons: `ThreeIconSetValueContext`, `FourIconSetValueContext`, `FiveIconSetValueContext`.
+The `PresetIconSet` enum exposes multiple definitions for predefined sets of icons. You can also use custom icons through the other constructor of IconSetRule. This overload accepts object of type IconSetValueContextBase whose implementations allow you to register three, four or five icons: `ThreeIconSetValueContext`, `FourIconSetValueContext`, `FiveIconSetValueContext`.
 
 ### Working With IRangeValue
 

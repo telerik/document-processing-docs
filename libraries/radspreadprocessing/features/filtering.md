@@ -112,19 +112,19 @@ This filter created in __Example 1__ will hide all rows which contain dates whic
 
 ## CustomFilter
 
-The custom filter is a filter which contains one or two critera which are used to filter the column to which the filter is assigned. If the value of the cell doesn't satisfy the criteria, the respective row is hidden by the filter.
+The custom filter is a filter which contains one or two criteria which are used to filter the column to which the filter is assigned. If the value of the cell doesn't satisfy the criteria, the respective row is hidden by the filter.
         
 
 Other than the members of the __IFilter__ interface, the __CustomFilter__ class exposes the following members specific to it:
         
 
-* __Criteria1__: Property of type CustomFilterCriteria specisying the first criteria.
+* __Criteria1__: Property of type CustomFilterCriteria specifying the first criteria.
             
 
-* __Criteria2__: Property of type CustomFilterCriteria specisying the second criteria. The second critera can be null.
+* __Criteria2__: Property of type CustomFilterCriteria specifying the second criteria. The second criteria can be null.
             
 
-* __LogicalOperator__: The logical operator which determines the logical relationship between the critera. It can have two values:
+* __LogicalOperator__: The logical operator which determines the logical relationship between the criteria. It can have two values:
             
 
 	* And

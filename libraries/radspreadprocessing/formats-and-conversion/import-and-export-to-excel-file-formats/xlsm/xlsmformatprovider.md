@@ -39,7 +39,7 @@ __Example 1__ shows how to import an Xlsm file using a FileStream. The code assu
 
 __Example 2__ demonstrates how to export an existing Workbook to an Xlsm file. The snippet creates a new workbook with a single worksheet. Further, the example creates an __XlsmFormatProvider__ and invokes its __Export()__ method. Note that the __Export()__ method accepts a parameter of type __Stream__ so you can work with any of its inheritors.
 
->Exporting worbook created with RadSpreadProcessing will result in a file with empty Macros (VBA Project).
+>Exporting workbook created with RadSpreadProcessing will result in a file with empty Macros (VBA Project).
 
 #### __Example 2: Export spreadsheet document to Xlsm (Excel Workbook) file__
 

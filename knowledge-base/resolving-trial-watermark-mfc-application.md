@@ -29,7 +29,7 @@ To resolve a license issue with Telerik Document Processing in MFC applications,
 
 3. Call the TelerikLicensing.[Register]({%slug adding-license-key-ci-cd-services%}#using-teleriklicensing-register-method-on-aws-lambdas) method as early as possible in your project since there is not strict entry point.
 
-4. Use Document Processing version that matches the corresponding Teleri.Licensing version. MFC C++ application have no binding redirect and it is possible to load different versions of Telerik.Licensing, respectively you call .Register() on one, and the libraries look for a license on another. That is why we should strictly follow the corresponding versions. For example: 
+4. Use Document Processing version that matches the corresponding Telerik.Licensing version. MFC C++ application have no binding redirect and it is possible to load different versions of Telerik.Licensing, respectively you call .Register() on one, and the libraries look for a license on another. That is why we should strictly follow the corresponding versions. For example: 
 
     * Document Processing Version **2025.4.1319** matches Telerik.Licensing **1.6.36**.
 

@@ -25,7 +25,7 @@ RadPdfProcessing doesn't provide functionality for generating chart elements ins
 
 To embed a chart into a PDF document using RadPdfProcessing, follow these steps:
 
-1\. **Export the Chart as an Image**: First, generate the chart you want to include in your PDF with the appropriate UI control offered by the Telerik family and convert it an image format. 
+1\. **Export the Chart as an Image**: First, generate the chart you want to include in your PDF with the appropriate UI control offered by the Telerik family and convert it to an image format. 
 
 - For **.NET Standard** scenario, it is suitable to use the Telerik UI for Blazor Chart, and utilize the [Export Chart as Image](https://www.telerik.com/blazor-ui/documentation/knowledge-base/chart-export-to-image) feature. Refer to [forum post](https://www.telerik.com/forums/export-chart-as-image-47277c4c2e77) for detailed instructions.
 

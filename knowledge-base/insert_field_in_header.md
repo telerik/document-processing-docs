@@ -21,7 +21,7 @@ You need to add a field in the header for example to display page numbering.
 
 This can be achieved by adding a paragraph to the header and then moving the editor position to this paragraph. Once this is done you can insert the field and move the position to another paragraph in the document. 
 
-#### __Insert page numbering in he header__
+#### __Insert page numbering in the header__
 
 ```csharp
 

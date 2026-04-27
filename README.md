@@ -8,7 +8,7 @@ publish: false
 
 Welcome to the GitHub repo for [Telerik Document Processing](). This repository contains the source content — written in Markdown — that we use to power the Telerik Document Processing Documentation at [docs.telerik.com/devtools/document-processing](http://docs.telerik.com/devtools/document-processing). If you've arrived here wanting to search and peruse our docs, you'd be better served heading over to [docs.telerik.com/devtools/document-processing](http://docs.telerik.com/devtools/document-processing) where our content is prettified and searchable.
 
-We believe that the documentation for a product is at its best when the content is a collaboration between the builders and consumers of that product. As such, this documentation is both public, and open sourced under and MIT license (see below). That means you can clone this repository, read the docs off line, or even load the entire thing to an Apple Newton, if that's your thing.
+We believe that the documentation for a product is at its best when the content is a collaboration between the builders and consumers of that product. As such, this documentation is both public, and open sourced under an MIT license (see below). That means you can clone this repository, read the docs off line, or even load the entire thing to an Apple Newton, if that's your thing.
 
 It also means that you can play a role in making our docs better for everyone, and if helping us make the Telerik Document Processing docs better sounds interesting to you, read on.
 
@@ -53,7 +53,7 @@ There are two ways you can contribute to the public Telerik Document Processing 
          ---
          
 
-    - When adding content or making changes, please use only standard Markdown syntax, and make to preview your additions or changes before sending us a pull request. You can use an online tool like [Dillinger.io](http://dillinger.io/) or [Marked](http://markedapp.com/) on OSX to view what your changes will look like when ported to HTML.
+    - When adding content or making changes, please use only standard Markdown syntax, and make sure to preview your additions or changes before sending us a pull request. You can use an online tool like [Dillinger.io](http://dillinger.io/) or [Marked](http://markedapp.com/) on OSX to view what your changes will look like when ported to HTML.
 
     - The [documentation Wiki](https://github.com/telerik/document-processing-docs/wiki) contains the latest authoring guidelines.
 
@@ -63,7 +63,7 @@ There are two ways you can contribute to the public Telerik Document Processing 
 
 You can generate a static web site from the Telerik Document Processing the documentation and browse it locally.
 
-For the Telerik Document Processing documentaion:
+For the Telerik Document Processing documentation:
 
  1. Clone the repository `git clone git@github.com:telerik/document-processing-docs.git`
  2. Run `bundle install` (you must have ruby and bundler installed beforehand)

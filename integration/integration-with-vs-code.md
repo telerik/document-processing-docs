@@ -18,7 +18,7 @@ As of **Q1 2025** we offer the DPL wizard for the [Telerik UI for MAUI](https://
 
 ## Getting the Wizard
 
-To use the Document Processing Libraries Wizard, install the VS Code extension for the desired produckt:
+To use the Document Processing Libraries Wizard, install the VS Code extension for the desired product:
 
 * [Telerik UI for Blazor Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=TelerikInc.blazortemplatewizard)
 

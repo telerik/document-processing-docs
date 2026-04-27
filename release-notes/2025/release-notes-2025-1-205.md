@@ -88,7 +88,7 @@ position: 99
 
 * The Export method does not respect the timeout parameter.
 * A NullReferenceException is thrown when exporting a workbook with no sheets. A message indicating that a workbook should contain at least one visible sheet is now displayed.
-* Name Conflict window is displayed when an XLS file is imported and then exported to XSLX.
+* Name Conflict window is displayed when an XLS file is imported and then exported to XLSX.
 * Export to PDF fails in single-threaded platforms.  **<sup>.NET Standard</sup>**
 * Duplicating a worksheet with the CopyFrom method does not copy the defined conditional formatting rules.
 * An ArgumentNullException is thrown when importing a document containing a rule with no format set.

@@ -14,7 +14,7 @@ ticketid: 1709949
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
-| Q2 2025 or newer| Telerik Document Procesing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|  
+| Q2 2025 or newer| Telerik Document Processing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|  
 
 ## Description
 

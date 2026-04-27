@@ -49,5 +49,5 @@ __Example 2__ demonstrates how to unprotect a workbook.
 
 ## See Also
 
- * [Whats is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
+ * [What is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
  * [Worksheet Protection]({%slug radspreadprocessing-features-protection-worksheet%})

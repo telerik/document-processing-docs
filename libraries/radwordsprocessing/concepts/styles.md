@@ -79,7 +79,7 @@ A style should be added to __RadFlowDocument__'s style repository in order to be
 
 >If a style is not added to the StyleRepository, applying it to a document element would not take any effect.
 
-To apply a style to a spesific element you neet to set its __StyleId__ proerty.
+To apply a style to a specific element you need to set its __StyleId__ property.
 
 #### __Example 2: Apply a custom style to an element__
 

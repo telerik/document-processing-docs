@@ -29,7 +29,7 @@ Learn how to address the issue where a special symbol (e.g. apostrophe character
 
 ![apostrophe-character-replaced-copyright-symbol-acroform ><](images/apostrophe-character-replaced-copyright-symbol-acroform.gif)  
 
->note This might be reproduced with other symbols as well, not only with the apostrophe character. Usually, such behavior may occur with XFA forms. However, from PDF 2.0 (ISO 32000-2) the XFA forms are depreciated.
+>note This might be reproduced with other symbols as well, not only with the apostrophe character. Usually, such behavior may occur with XFA forms. However, from PDF 2.0 (ISO 32000-2) the XFA forms are deprecated.
 
 ## Solution
 

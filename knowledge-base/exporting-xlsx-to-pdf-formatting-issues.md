@@ -96,7 +96,7 @@ This class provides a mechanism to read the fonts used in the document:
 ```
 Now, the font in the exported PDF document is the correct one and the text is not clipped.
 
-![Hande Export Differences](images/exporting-xlsx-to-pdf-formatting-issues02.png)    
+![Handle Export Differences](images/exporting-xlsx-to-pdf-formatting-issues02.png)    
 
 ## See Also
 - [Cross-Platform Support]({%slug radspreadprocessing-cross-platform%})

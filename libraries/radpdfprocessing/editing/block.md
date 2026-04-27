@@ -147,7 +147,7 @@ The __Block__ class has some properties and methods that affect how it will be r
 * __SaveGraphicProperties():__ Saves the GraphicProperties. It returns an IDisposable object which when disposed calls __RestoreTextProperties()__ and can be used in using statement.
                 
 
-* __RestoreGraphicProperties():__ Restores the GrahpicPropertie to their previous state.
+* __RestoreGraphicProperties():__ Restores the GraphicProperties to their previous state.
                 
 
 * __SaveProperties():__ Saves both text and graphic properties. It returns an IDisposable object which when disposed calls __RestoreTextProperties()__ and can be used in using statement.
@@ -194,7 +194,7 @@ __Example 8__ Creates a __Block__ with text, measures the text, and sets the blo
 The second overload accepts available __Size__. Calling it measures the block content as if the __Block__ was in that specific size. 		
 Additionally to setting the __DesiredSize__ property, it also sets the __PendingElements__ property with a collection of the elements that could not fit in the available size.
         
-__Example 9__ Creates a __Block__ with text and draws it with a specific size using the [RadFixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}). The block content auto fits to the dimentions of the __Block__. The size of the auto fitted content can then be measured.
+__Example 9__ Creates a __Block__ with text and draws it with a specific size using the [RadFixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}). The block content auto fits to the dimensions of the __Block__. The size of the auto fitted content can then be measured.
 
 <snippet id='libraries-pdf-editing-block-measure-with-parameter'/>
 

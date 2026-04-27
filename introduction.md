@@ -58,7 +58,7 @@ Telerik Document Processing features the following libraries:
 
   |||
   |----|----|
-  |![Words](images/dpl-words.png)|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or sent it to the client browser.|
+  |![Words](images/dpl-words.png)|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.|
 
 
 * [RadZipLibrary]({%slug radziplibrary-overview%})

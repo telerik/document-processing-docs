@@ -15,7 +15,7 @@ position: 10
 
 ## Field Syntax
 
-This is how the syntax of a If field looks like:
+This is how the syntax of a Time field looks like:
 
 | Syntax   						        |
 | :---     						        |

@@ -50,7 +50,7 @@ The **CompleteContextProcessorSettings** class defines configuration options for
 * **ModelMaxInputTokenLimit**: The maximum input token limit the model allows.
 * **ModelId**: The ID of the model.
 * **TokenizationEncoding**: The tokenization encoding.
-* **ProduceJsonFormattedContext**: Determines whether the context sent to the model is in JSON or plain text format, if json format is applicable (dafault is *false*).
+* **ProduceJsonFormattedContext**: Determines whether the context sent to the model is in JSON or plain text format, if json format is applicable (default is *false*).
 
 ## Usage Example
 

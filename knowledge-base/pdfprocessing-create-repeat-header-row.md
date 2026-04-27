@@ -19,7 +19,7 @@ This example demonstrates how one can create the repeating row functionality. Wh
 
 ## Solution
 
-The solution would be to split the table on each page and draw a second table that contains only the headers. The bellow example looks complex but I believe that it can be easily pugged in a real application. 
+The solution would be to split the table on each page and draw a second table that contains only the headers. The bellow example looks complex but I believe that it can be easily plugged in a real application. 
 
 ```csharp
 

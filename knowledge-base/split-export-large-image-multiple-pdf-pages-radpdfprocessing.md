@@ -18,7 +18,7 @@ ticketid: 1569728
 
 ## Description
 
-RadPdfProcessing doesn't have a built-in mechanism to split a large image accross the pages when it doesn't fit within a single page's boundaries.
+RadPdfProcessing doesn't have a built-in mechanism to split a large image across the pages when it doesn't fit within a single page's boundaries.
 This article demonstrates a sample approach how to do it.
 
 ## Solution

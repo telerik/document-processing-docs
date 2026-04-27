@@ -61,7 +61,7 @@ This article shows how to export a [Worksheet]({%slug radspreadprocessing-workin
     WorksheetPageSetup pageSetup = workbook.ActiveWorksheet.WorksheetPageSetup;
     pageSetup.PageOrientation = PageOrientation.Landscape;
     pageSetup.Margins = new PageMargins(0,0,0,0);
-    pageSetup.PaperType = PaperTypes.A1; /*make sure the size of the PaperType is bigger than the dimentions of worksheetTableSizetableSize*/
+    pageSetup.PaperType = PaperTypes.A1; /*make sure the size of the PaperType is bigger than the dimensions of worksheetTableSizetableSize*/
 
     Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider spreadPdfFormatProvider = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.PdfFormatProvider();
     spreadPdfFormatProvider.ExportSettings = new Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf.Export.PdfExportSettings(ExportWhat.ActiveSheet, true);
