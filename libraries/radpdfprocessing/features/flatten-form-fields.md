@@ -11,7 +11,7 @@ position: 5
 
 The form field flattening feature removes all fields but preserves their content in the document. After this operation the document no longer can be edited. This functionality was added in R2 2021 version. 
 
-There are two methods that you can use for this. One to flatten all fields and one to flatten a single field. The bellow examples demonstrate how to use them. 
+There are two methods that you can use for this. One to flatten all fields and one to flatten a single field. The below examples demonstrate how to use them. 
 
 ### Using the FlattenFormFields method 
 

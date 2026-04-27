@@ -24,7 +24,7 @@ This is how the syntax of a compare field looks like:
 Values to compare.
 
 ### Operators
-In the table bellow are listed all the comparison operators.
+In the table below are listed all the comparison operators.
 
 | Operator    | Description              |
 | :---        | :---                     |

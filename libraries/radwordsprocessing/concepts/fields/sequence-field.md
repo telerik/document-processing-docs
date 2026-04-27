@@ -12,7 +12,7 @@ position: 8
 
 
 
-SeqField is a [Field]({%slug radwordsprocessing-concepts-fields%}) element that sequally numbers chapters, tables, figures, and other items in the document. 
+SeqField is a [Field]({%slug radwordsprocessing-concepts-fields%}) element that sequentially numbers chapters, tables, figures, and other items in the document. 
 If you add, delete, or move an item and its respective Sequence field, you can update remaining Seq fields in the document to reflect the new sequence.
 
 ## Field Syntax

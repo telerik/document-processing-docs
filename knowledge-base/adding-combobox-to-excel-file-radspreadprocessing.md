@@ -2,7 +2,7 @@
 title: Adding a DropDown/ComboBox to an Excel File Using RadSpreadProcessing
 description: Explains how to add a combo box with specific options to an Excel file using RadSpreadProcessing.
 type: how-to
-page_title: Adding a /ComboBox in Excel Using RadSpreadProcessing
+page_title: Adding a DropDown/ComboBox in Excel Using RadSpreadProcessing
 slug: adding-combobox-to-excel-file-radspreadprocessing
 tags: spread, processing, combobox, excel, listdata, validation, document, dropdown, comma, delimiter
 res_type: kb

@@ -46,7 +46,7 @@ position: 98
 * An InvalidOperationException is thrown when exporting font that is available but not used.
 * The read-only flag is not respected when importing a document.
 * A dictionary with invalid entry cannot be imported correctly and breaks the import process.
-* The Form field height is wrong after export with a specific document..
+* The Form field height is wrong after export with a specific document.
 * Wrong character widths when merging documents with exactly the same font but different character widths.
 
 ## SpreadProcessing

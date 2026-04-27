@@ -69,7 +69,7 @@ Some functionalities require additional settings to be done:
 
 ## See Also
 
- * [Whats is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
+ * [What is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
  * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
  * [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})

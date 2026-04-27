@@ -10,7 +10,7 @@ position: 6
 
 # NumPages Field
  
-This field insers the total nuber of pages in the document.  
+This field inserts the total number of pages in the document.  
 
 ## Syntax
 

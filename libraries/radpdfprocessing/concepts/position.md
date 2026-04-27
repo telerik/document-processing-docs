@@ -52,7 +52,7 @@ The __MatrixPosition__ class exposes a static __Default__ property, which repres
 __Example 1__ shows how transformations can be appended.
         
 
-#### __Example 1: Trasform MatrixPosition__
+#### __Example 1: Transform MatrixPosition__
 
 <snippet id='pdf-matrix-position'/>
 

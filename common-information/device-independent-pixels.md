@@ -1,6 +1,6 @@
 ---
 title: Device Independent Pixels
-description: Device Independent Pixels (DIPs) measuremnt unit.
+description: Device Independent Pixels (DIPs) measurement unit.
 page_title:  Device Independent Pixels
 slug: device-independent-pixels
 position: 0

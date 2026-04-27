@@ -14,7 +14,7 @@ res_type: kb
 |N/A|RadPdfProcessing|Maria Terzieva|
 
 ## Description
-This article describes how to create a table cells with GoToAction and UriAction in PDF document with Telerik Document Processing.
+This article describes how to create table cells with GoToAction and UriAction in PDF document with Telerik Document Processing.
 With the PDF format, each content element has a specific position, and in some cases, each character is positioned separately. PDF standard does not have any information about tables as well, once exported the tables in the document are represented by lines and text fragments. 
 For this reason we use Action which defines the behaviour for an annotation. And annotation element associates an object with a location on a RadFixedPage.
 
@@ -25,7 +25,7 @@ The following example demonstrates how to create TableCells with GoToAction and 
 
 1.First we need to create a table in the document. 
 
-2.Next we have to iterate throught the elements of the page and to find the text fragment which we want. 
+2.Next we have to iterate through the elements of the page and to find the text fragment which we want. 
 
 3.After that for creating Links to URLs or Locations within the document, we use Actions - UriAction or GoToAction.
 

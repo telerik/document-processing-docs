@@ -21,7 +21,7 @@ This is how the syntax of an If field looks like:
 | { **IF** _Expression1_ _Operator_ _Expression2_ TrueText FalseText } |
 
 ### Operators
-In the table bellow are listed all the comparison operators.
+In the table below are listed all the comparison operators.
 
 | Operator    | Description              |
 | :---        | :---                     |

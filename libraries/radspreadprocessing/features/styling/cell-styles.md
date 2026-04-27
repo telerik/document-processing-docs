@@ -146,6 +146,6 @@ You can also remove a style from the __Styles__ collection. It is as easy as rem
 ## See Also
 
  * [Document Themes]({%slug radspreadprocessing-features-styling-document-themes%})
- * [Whats is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
+ * [What is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
  * [Retrieving Themable Cell Color in RadSpreadProcessing]({%slug retrieve-cell-color-radspreadprocessing%})
  * [Preventing Excel From Extending Cell Formatting Below Formatted Range Using SpreadProcessing]({%slug preventing-cell-formatting-extension-spreadprocessing%})

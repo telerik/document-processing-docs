@@ -24,7 +24,7 @@ The TOC (Table of Contents) field creates a table of contents. It is created fro
 
 # Switches
 
-### Switches that control whats included in the table of contents.
+### Switches that control what's included in the table of contents.
 
 |Switch|Description|
 |:---  |:---  |

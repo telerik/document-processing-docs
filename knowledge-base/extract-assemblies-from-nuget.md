@@ -26,7 +26,7 @@ This article demonstrates how to extract the signed Tesseract.dll from the Teler
 
 ![Extract from NuGet](images/extract-from-nuget.png)     
 
-2\. Find the contained assemvlies in the lib folder:
+2\. Find the contained assemblies in the lib folder:
 
 ![Extracted Assemblies](images/extracted-assemblies.png)    
 

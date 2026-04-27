@@ -18,7 +18,7 @@ position: 4
 Merge fields are a type of [Fields]({%slug radwordsprocessing-concepts-fields%}) and can be added in a template document via [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. The method requires the code representation of the field and the result which is shown in the template before the document is mail-merged.
         
 
-The code snippet in __Example 1__ shows how to initialize a RadFlodDocumentEditor instance and insert a merge field.
+The code snippet in __Example 1__ shows how to initialize a RadFlowDocumentEditor instance and insert a merge field.
         
 
 #### __Example 1: Insert a merge field__

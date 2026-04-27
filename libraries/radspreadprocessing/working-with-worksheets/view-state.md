@@ -12,7 +12,7 @@ position: 5
 
 **RadSpreadProcessing** enables you to apply different properties on the Worksheet that affect its visualization when the document is rendered in an application. These properties can be used through the **ViewState** property of the **Worksheet** object.
 
-The following sections describe the members of the WorskheetViewState class.
+The following sections describe the members of the WorksheetViewState class.
 
 ### **ScaleFactor**
 

@@ -20,7 +20,7 @@ __Example 1__ illustrates how to retrieve worksheets that have already been adde
 
 <snippet id='codeblock-csl'/>
 
-__Example 2__ creates a new workbook with three worksheets. The code further iterates through all worksheets and sets the value of cell *A1* to the name of the corresponding worksheet. The example also sets the ForeColor and BackgrounFill of the cell.
+__Example 2__ creates a new workbook with three worksheets. The code further iterates through all worksheets and sets the value of cell *A1* to the name of the corresponding worksheet. The example also sets the ForeColor and BackgroundFill of the cell.
         
 #### __Example 2: Iterate worksheets__
 

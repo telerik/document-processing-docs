@@ -67,7 +67,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 ### Modifying a Path
 
-You can modify a __Path__ element using the properties the class exposes. The properties are listed listed in the [Public API](#public-api) section.
+You can modify a __Path__ element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.
         
 #### __Example 3: Modifying Path properties__
 

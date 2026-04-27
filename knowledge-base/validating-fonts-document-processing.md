@@ -2,7 +2,7 @@
 title: Validating Fonts when Using Telerik Document Processing
 description: Learn how to identify incomplete or corrupt TTF font files that cause content issues while exporting PDF files using Telerik Document Processing.
 type: how-to
-page_title: Identifying incomplete or corrupted font files causing content issues in exported PDF dcouments
+page_title: Identifying incomplete or corrupted font files causing content issues in exported PDF documents
 meta_title: Identifying incomplete or corrupted font files causing content issues in exported PDF documents
 slug: validating-fonts-pdf-document-processing
 tags: radpdfprocessing, pdf, font, ttf, validation, export, document, processing
@@ -18,7 +18,7 @@ ticketid: 1690314
 
 ## Description
 
-When exporting a document to PDF format using the Telerik [Document Processing Librararies]({%slug introduction%}), content issues may occur due to incomplete or corrupted font files. These issues can arise if the font file is incomplete, corrupted, or missing required font tables. This results in missing or improperly rendered text in the exported PDF.
+When exporting a document to PDF format using the Telerik [Document Processing Libraries]({%slug introduction%}), content issues may occur due to incomplete or corrupted font files. These issues can arise if the font file is incomplete, corrupted, or missing required font tables. This results in missing or improperly rendered text in the exported PDF.
 
 This knowledge base article gives some tips and tricks how to validate fonts used in Telerik Document Processing and what tools can check for font file's integrity.
 

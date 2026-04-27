@@ -54,7 +54,7 @@ The parameters accepted by the constructors serve the following functions:
 
 ## Compressing a Stream
 
-You can create a compressed stream by initializing a new instance of the __CompressedStream__ class and passing as a parameter the stream in which the compressed data will be written. You need to specify the operation mode to __Wrtie__ and the compression settings that should be used.
+You can create a compressed stream by initializing a new instance of the __CompressedStream__ class and passing as a parameter the stream in which the compressed data will be written. You need to specify the operation mode to __Write__ and the compression settings that should be used.
         
 
 #### __Example 1: Write to compressed stream__

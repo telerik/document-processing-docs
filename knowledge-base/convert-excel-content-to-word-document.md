@@ -13,7 +13,7 @@ res_type: kb
 | 2024.1.124 | Document Processing Libraries (.NET Standard)|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-A common requirement is to convert XSLX documents to DOCX format. However, direct conversion is not supported.
+A common requirement is to convert XLSX documents to DOCX format. However, direct conversion is not supported.
 
 This tutorial demonstrates a sample approach how to convert an Excel document into an image and insert it into a Word document.
 
