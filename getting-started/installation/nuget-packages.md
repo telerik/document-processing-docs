@@ -333,3 +333,4 @@ The following tables represent the available NuGet packages for the Document Pro
  * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
  * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
  * [Resolving Namespace Conflicts in Telerik Document Processing Libraries]({%slug radspreadprocessing-resolving-namespace-conflicts%})
+ * [Telerik.Windows.Documents.* vs Telerik.Documents.*]({%slug telerik-windows-documents-vs-telerik-documents-namespace%})
