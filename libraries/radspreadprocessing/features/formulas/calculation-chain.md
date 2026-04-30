@@ -47,7 +47,6 @@ The `SuspendLayoutUpdate` method prevents the workbook from recalculating its la
 
 ## See Also
 
-* [Cell value types in RadSpreadProcessing]({%slug radspreadprocessing-features-cell-value-types%})
+* [Cell value types in RadSpreadProcessing]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
 * [Formulas overview in RadSpreadProcessing]({%slug radspreadprocessing-features-formulas-general-information%})
-* [Performance tips for RadSpreadProcessing]({%slug radspreadprocessing-performance%})
-* [Workbook API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Workbook.html)
+* [Performance tips for RadSpreadProcessing]({%slug radspreadprocessing-performance%}) 
