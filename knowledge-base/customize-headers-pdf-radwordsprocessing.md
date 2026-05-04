@@ -13,7 +13,7 @@ ticketid: 1665701
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
-| 2024.3.806| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| 2026.1.402| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 This article demonstrates how to generate a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}), divide a header into three sections, and customize the font settings for each section respectively using the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library.
@@ -34,13 +34,29 @@ To achieve a header with left, center, and right aligned sections in a PDF docum
 8. Use the [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the document to a PDF file.
 
 ```csharp
-static void Main(string[] args)
-{
+            //Required for .NET Standard when exporting images to PDF format
+            //Requires installing Telerik.Documents.ImageUtils NuGet package
+            //Telerik.Documents.ImageUtils.ImagePropertiesResolver defaultImagePropertiesResolver = new Telerik.Documents.ImageUtils.ImagePropertiesResolver();
+            //Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.ImagePropertiesResolver = defaultImagePropertiesResolver;
+
+            //.NET Standard
+            //Telerik.Documents.Core.Fonts.FontWeight regularFontWeight = Telerik.Documents.Core.Fonts.FontWeights.Normal;
+            //Telerik.Documents.Core.Fonts.FontWeight boldFontWeight = Telerik.Documents.Core.Fonts.FontWeights.Bold;
+            //Telerik.Documents.Primitives.Size size = Telerik.Windows.Documents.Model.PaperTypeConverter.ToSize(Telerik.Windows.Documents.Model.PaperTypes.A4);
+            //Telerik.Windows.Documents.Primitives.Padding pageMargins = new Telerik.Windows.Documents.Primitives.Padding(40, 40, 40, 40);
+            //Telerik.Documents.Core.Fonts.FontStyle italicFontStyle = Telerik.Documents.Core.Fonts.FontStyles.Italic;
+
+            //.NET (Target OS: Windows)
+            System.Windows.FontWeight regularFontWeight = System.Windows.FontWeights.Normal;
+            System.Windows.FontWeight boldFontWeight = System.Windows.FontWeights.Bold;
+            System.Windows.Size size = Telerik.Windows.Documents.Model.PaperTypeConverter.ToSize(Telerik.Windows.Documents.Model.PaperTypes.A4);
+            Telerik.Windows.Documents.Primitives.Padding pageMargins = new Telerik.Windows.Documents.Primitives.Padding(40, 40, 40, 40);
+            System.Windows.FontStyle italicFontStyle = System.Windows.FontStyles.Italic;
+
             RadFlowDocument document = new RadFlowDocument();
-            Section contentSection = document.Sections.AddSection();
-            contentSection.PageMargins = new Telerik.Windows.Documents.Primitives.Padding(40, 40, 40, 40);
-            Size size = Telerik.Windows.Documents.Model.PaperTypeConverter.ToSize(PaperTypes.A4);
-            contentSection.PageSize = size;
+            Telerik.Windows.Documents.Flow.Model.Section contentSection = document.Sections.AddSection();
+            contentSection.PageMargins = pageMargins;
+            contentSection.PageSize =  size;
             contentSection.Blocks.AddParagraph().Inlines.AddRun("Hello RadWordsProcessing!");
 
             Header header = document.Sections.First().Headers.Add();
@@ -52,9 +68,9 @@ static void Main(string[] args)
 
             Run leftHeader = new Run(document);
             leftHeader.Text = "Left";
-            leftHeader.FontWeight = FontWeights.Bold;
-            leftHeader.FontSize = 16;  
-            cell.Blocks.AddParagraph().Inlines.Add (leftHeader);
+            leftHeader.FontWeight = boldFontWeight;
+            leftHeader.FontSize = 16;
+            cell.Blocks.AddParagraph().Inlines.Add(leftHeader);
             cell.PreferredWidth = new TableWidthUnit(size.Width / 3);
             row.Cells.Add(cell);
 
@@ -63,9 +79,9 @@ static void Main(string[] args)
 
             Run centerHeader = new Run(document);
             centerHeader.Text = "Center";
-            centerHeader.FontWeight = FontWeights.Regular;
-            centerHeader.FontStyle = FontStyles.Italic; 
-            centerHeader.FontSize = 18; 
+            centerHeader.FontWeight = regularFontWeight;
+            centerHeader.FontStyle = italicFontStyle;
+            centerHeader.FontSize = 18;
             p.Inlines.Add(centerHeader);
 
             p = cell.Blocks.AddParagraph();
@@ -73,7 +89,7 @@ static void Main(string[] args)
             imageInline.Image.Width = 50;
             imageInline.Image.Height = 50;
             byte[] data = File.ReadAllBytes("ProgressNinjas.png");
-            imageInline.Image.ImageSource = new ImageSource(data, "png");
+            imageInline.Image.ImageSource = new Telerik.Windows.Documents.Media.ImageSource(data, "png");
             p.Inlines.Add(imageInline);
             cell.PreferredWidth = new TableWidthUnit(size.Width / 3);
             row.Cells.Add(cell);
@@ -81,26 +97,35 @@ static void Main(string[] args)
             cell = new TableCell(document);
             Run rightHeader = new Run(document);
             rightHeader.Text = "Right";
-            rightHeader.FontWeight = FontWeights.Bold;
-            rightHeader.FontStyle = FontStyles.Italic;
-            rightHeader.FontSize = 20; 
+            rightHeader.FontWeight = boldFontWeight;
+            rightHeader.FontStyle = italicFontStyle;
+            rightHeader.FontSize = 20;
             cell.Blocks.AddParagraph().Inlines.Add(rightHeader);
             cell.PreferredWidth = new TableWidthUnit(size.Width / 3);
             row.Cells.Add(cell);
 
-            PdfFormatProvider provider = new PdfFormatProvider();
+            Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider provider = new PdfFormatProvider();
 
             string outputFilePath = "output.pdf";
             using (Stream output = File.OpenWrite(outputFilePath))
             {
-                provider.Export(document, output);
+                provider.Export(document, output, TimeSpan.FromSeconds(10));
             }
 
             Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
-}
 ```
 
 This method allows for flexible customization of headers in PDF documents, enabling the addition of left, center, and right aligned text within the same header.
+
+### Required NuGet Packages
+
+Depending on the target framework, install the following NuGet packages:
+
+| .NET Standard / .NET (Target OS: None) | .NET Framework / .NET (Target OS: Windows) |
+| --- | --- |
+| Telerik.Documents.Flow | Telerik.Windows.Documents.Flow |
+| Telerik.Documents.Flow.FormatProviders.Pdf | Telerik.Windows.Documents.Flow.FormatProviders.Pdf |
+| Telerik.Documents.ImageUtils | - |
 
 ## See Also
 
