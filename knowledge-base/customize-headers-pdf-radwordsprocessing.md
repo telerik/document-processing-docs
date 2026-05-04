@@ -117,6 +117,8 @@ To achieve a header with left, center, and right aligned sections in a PDF docum
 
 This method allows for flexible customization of headers in PDF documents, enabling the addition of left, center, and right aligned text within the same header.
 
+>note A complete SDK example is available [here](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing/CreateHeaderWithLeftCenterRightContent). 
+
 ### Required NuGet Packages
 
 Depending on the target framework, install the following NuGet packages:
