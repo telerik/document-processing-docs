@@ -1,4 +1,4 @@
----
+﻿---
 title: Setting Up Document Processing Libraries License Key
 description: Step-by-step instructions for downloading and installing your Telerik Document Processing license key to activate the libraries starting with the Q1 2025 release.
 page_title: Setting Up Document Processing Libraries License Key
@@ -17,11 +17,11 @@ img[alt$="><"] {
 # Setting Up Your Telerik Document Processing Libraries License Key
 Starting with the Q1 2025 release, the Telerik Document Processing libraries require activation through a license key (trial or commercial). This article describes how to download and use your personal license key to activate the product.
 
-An invalid license results in [errors and warnings]({%slug activation-errors-and-warnings%}) during build and run-time indicators such as watermarks and banners.
+An invalid license results in [errors and warnings]({%slug activation-errors-and-warnings%}) during build and runtime indicators such as watermarks and banners.
 
 ## Downloading the License Key
 
-The Telerik Document Processing Libraries are only distributed as a part of several Telerik bundles and are licensed only according to the terms of the bundle under which they are obtained. In the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) article you can find specific license key instruction for each respective bundle.
+The Telerik Document Processing Libraries are distributed only as part of several Telerik bundles and are licensed only according to the terms of the bundle under which they are obtained. In the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) article you can find specific license key instructions for each respective bundle.
 
 To download a license key, you must have either a developer license or a trial license. If you are new, you can sign up for a [free trial](https://www.telerik.com/account/trials) first, and then follow the steps below.
 
@@ -46,14 +46,14 @@ To activate the Document Processing Libraries:
 <PackageReference Include="Telerik.Licensing" Version="1.*" />
 ```
 
->important The **Telerik.Licensing** verifies the DevSeat association at the time your classlib is built, and also provisions at runtime licenses in the Root app. When you have a setup such as **"Root app -> classlib -> Telerik UI"**, the Telerik UI will execute and verify the licensing for the classlib, but will not be applied transitively in the Root app. That's why you **need to add the Telerik.Licensing NuGet package reference to Root app manually**.
+>important The `Telerik.Licensing` verifies the DevSeat association at the time your classlib is built, and also provisions at runtime licenses in the Root app. When you have a setup such as **"Root app -> classlib -> Telerik UI"**, the Telerik UI will execute and verify the licensing for the classlib, but will not be applied transitively in the Root app. That's why you **need to add the Telerik.Licensing NuGet package reference to Root app manually**.
 
-When you build the project, the _Telerik.Licensing_ NuGet package automatically locates the license file and uses it to activate the product.
+When you build the project, the `Telerik.Licensing` NuGet package automatically locates the license file and uses it to activate the product.
 
 >important If your project doesn’t use NuGet packages, see [Adding a License Key to Projects without NuGet References](#adding-a-license-key-to-projects-without-nuget-references).
 
 ### Adding a License Key to Projects without NuGet References
-Telerik strongly recommends the use of NuGet packages whenever possible. Only include the license key as a code snippet when NuGet packages are not an option.
+Telerik strongly recommends the use of NuGet packages whenever possible. Include the license key as a code snippet only when NuGet packages are not an option.
 
 If you’re not using NuGet packages in your project, add the license as a code snippet:
 

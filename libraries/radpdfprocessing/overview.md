@@ -1,7 +1,7 @@
 ---
 title: Overview
 page_title: Overview - RadPdfProcessing
-description: RadPdfProcessing is a processing library that allows you to create, import and export PDF documents.
+description: RadPdfProcessing is a processing library that allows you to create, import, and export PDF documents with text, images, forms, tables, and digital signatures.
 slug: radpdfprocessing-overview
 tags: pdf, radpdfprocessing, processing, documents, export, import, forms, signatures
 published: True
@@ -64,7 +64,7 @@ The document model of the library provides support for:
 |[**JavaScript Actions and Trigger Events**]({%slug radpdfprocessing-model-javascript-actions%})|As of Q4 2024 you can import or export the javascript actions associated with pages, form fields, etc. so that they can be executed when the exported document is opened with Adobe Acrobat. |
 |[**Accessibility Support**]({%slug create-accessible-pdf-documents%})|Offers accessibility support of documents to users with disabilities.|
 | [**Viewer Preferences**]({%slug radpdfprocessing-features-viewer-preferences%}) | Control how PDF documents are displayed and behave in PDF viewers, including window behavior, UI visibility, and print settings. |
-|**GenAI-powered Document Insights**|Enables you to easily extract insights from PDF documents using Large Language Models (LLMs). This functionality enables you to summarize document content and ask questions about it, with the AI providing relevant answers based on the document's content. [Read More]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
+|[**GenAI-powered Document Insights**]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|Extract insights from PDF documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content.|
 
 
 ## Online Demos
@@ -88,10 +88,9 @@ The document model of the library provides support for:
 
 
 
-# See Also
+## See Also
 
 - [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
 - [First Steps]({%slug getting-started-first-steps%})
 - [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
 - [Accessibility Support]({%slug create-accessible-pdf-documents%})
-

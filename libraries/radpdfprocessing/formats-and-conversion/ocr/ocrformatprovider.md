@@ -1,6 +1,6 @@
----
+﻿---
 title: Using OcrFormatProvider
-description: Learn how to convert scanned images to PDF format using OcrFormatProvider.
+description: Learn how to convert scanned images to searchable PDF format using the OcrFormatProvider class in RadPdfProcessing with Tesseract OCR.
 page_title: Using OcrFormatProvider
 slug: radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider
 tags: ocrformatprovider, pdf, ocr, radpdfprocessing, recognition, image, conversion, scanned
@@ -13,7 +13,7 @@ position: 1
 |Minimum Version|Q1 2025|
 |----|----|
 
-RadPdfProcessing supports **Optical Character Recognition (OCR)**. OCR is the electronic or mechanical conversion of images of typed, handwritten, or printed text into machine-encoded text from a scanned document. The library uses the **OcrFormatProvider** class that allows you to import an image which is returned as a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). By default, the **OcrFormatProvider** takes as a parameter a **TesseractOcrProvider** implementation which is achieved by using the third-party library [Tesseract](https://github.com/tesseract-ocr/tesseract), however you can provide any [custom implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}) instead.
+RadPdfProcessing supports **Optical Character Recognition (OCR)**. OCR is the electronic or mechanical conversion of images of typed, handwritten, or printed text into machine-encoded text from a scanned document. The library uses the `OcrFormatProvider` class that allows you to import an image which is returned as a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). By default, the `OcrFormatProvider` takes as a parameter a `TesseractOcrProvider` implementation which uses the third-party library [Tesseract](https://github.com/tesseract-ocr/tesseract). However, you can provide any [custom implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}) instead.
 
 >note [PdfProcessing Optical Character Recognition (OCR) Demo](https://demos.telerik.com/document-processing/pdfprocessing/optical_character_recognition)
 
@@ -21,15 +21,17 @@ You can find all the dependencies and required steps for the implementation in t
 
 ## TesseractOcrProvider Public API
 
+The following table lists the available methods and properties:
+
 |Method/Property|Description|
 |----|----|
 |**TesseractOcrProvider(string dataPath)**|Constructor that takes as a parameter the path to the **parent** directory that contains the "**tessdata**" folder.|
-|**LanguageCodes**|The language codes to use for the Tesseract OCR engine. You can find the corresponding trained data for each language and their codes [here](https://github.com/tesseract-ocr/tessdata). The value is "_eng_" by default.|
-|**CorrectVerticalPosition**|Indicates whether the OCR processor will try to correct the vertical position of the text. (**Not available in .NET Framework**)|
-|**DataPath**|The path to the **parent** directory that contains the "**tessdata**" folder.|
-|**ParseLevel**|Indicates the level of parsing that the OCR processor will perform - OcrParseLevel.**Line** or OcrParseLevel.**Word**.|
-|**GetAllTextFromImage**|Extracts all text from an image and returns it as a single string.|
-|**GetTextFromImage**|Extracts the text from an image and returns the words and their bounding rectangles.|
+|`LanguageCodes`|The language codes to use for the Tesseract OCR engine. You can find the corresponding trained data for each language and their codes [here](https://github.com/tesseract-ocr/tessdata). The value is "_eng_" by default.|
+|`CorrectVerticalPosition`|Indicates whether the OCR processor will try to correct the vertical position of the text. (**Not available in .NET Framework**)|
+|`DataPath`|The path to the **parent** directory that contains the "**tessdata**" folder.|
+|`ParseLevel`|Indicates the level of parsing that the OCR processor performs - `OcrParseLevel.Line` or `OcrParseLevel.Word`.|
+|`GetAllTextFromImage`|Extracts all text from an image and returns it as a single string.|
+|`GetTextFromImage`|Extracts the text from an image and returns the words and their bounding rectangles.|
 
 <snippet id='libraries-pdf-formatsandconversion-ocr-ocrformatprovider'/>
 

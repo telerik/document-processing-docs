@@ -1,6 +1,6 @@
----
+﻿---
 title: Getting Started 
-description: The digital signature feature enables you to sign and validate a PDF document. 
+description: Learn how to sign and validate PDF documents using digital signatures with RadPdfProcessing, including X509 certificates and signature settings.
 page_title: Digital Signature - Getting Started
 slug: radpdfprocessing-features-digital-signature-getting-started
 tags: digital, signature, pdf, signing, certificates, radpdfprocessing, x509, nuget, started
@@ -9,15 +9,15 @@ position: 1
 
 # Getting Started with Digital Signature
 
-RadPdfProcessing allows adding a digital signature while editing a created from scratch document (or importing an existing one).
+`RadPdfProcessing` allows adding a digital signature while editing a document created from scratch or importing an existing one.
 
->To use the signing functionality in PdfProcessing for **.NET Standard/.NET Core**, you must add a reference to the **System.Security.Cryptography.Pkcs** NuGet package, version 6 or newer (This functionality is available since R1 2022 SP1).
+>To use the signing functionality in PdfProcessing for **.NET Standard/.NET Core**, you must add a reference to the **System.Security.Cryptography.Pkcs** NuGet package, version 6 or later (this functionality is available starting with R1 2022 SP1).
 
 >note [PdfProcessing Digitally Sign Document Demo](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document)
 
 ## Signing a Document
 
-To sign a document, follow the steps:
+To sign a document, follow these steps:
 
 1\. Create a **Signature** object which takes a [X509Certificate2](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2(v=vs.110).aspx) object as a parameter. This is the certificate that will be used to sign the PDF document.
 
@@ -37,7 +37,7 @@ The following example shows a full code snippet for a simple signing of a newly 
 
 ![Signed PDF](images/radpdfprocessing-features-digital-signature.png)
 
->important When signing an existing document (after the import) we must be sure the AcroForm's ViewersShouldRecalculateWidgetAppearances property is set to false, otherwise, the exported and signed PDF document could not be shown as a signed. 
+>important When signing an existing document (after the import) you must verify that the AcroForm `ViewersShouldRecalculateWidgetAppearances` property is set to false. Otherwise, the exported and signed PDF document may not be displayed as signed.
 
 ## Signature Settings
 
@@ -67,16 +67,16 @@ RadPdfProcessing enables you to sign and validate signature fields using standar
 
 ## Signature Flags
 
-The signature flags were introduced in R2022 SP1. You can set the flags with the following code:
+The signature flags were introduced in R2 2022 SP1. You can set the flags with the following code:
 
 #### **Example: Set signature flags**
 
 <snippet id='pdf-signature-flags'/>
 
-The possible values are: 
-* __None__: Indicates no signature fields exist.
-* __SignaturesExist:__ If set, the document contains at least one signature field. This flag allows a viewer application to enable user interface items (such as menu items or pushbuttons) related to signature processing without having to scan the entire document for the presence of signature fields. 
-* __AppendOnly:__ The document contains signatures that may be invalidated if the file is saved in a way that alters its previous contents. Viewer applications can use this flag to present a user requesting a full save with an additional alert box warning that signatures will be invalidated and requiring explicit confirmation before continuing with the operation. 
+The possible values are:
+* **None**: Indicates no signature fields exist.
+* **SignaturesExist**: If set, the document contains at least one signature field. This flag allows a viewer application to enable user interface items (such as menu items or pushbuttons) related to signature processing without having to scan the entire document for the presence of signature fields.
+* **AppendOnly**: The document contains signatures that may be invalidated if the file is saved in a way that alters its previous contents. Viewer applications can use this flag to present a user requesting a full save with an additional alert box warning that signatures will be invalidated and requiring explicit confirmation before continuing with the operation.
 
 ## See Also
 

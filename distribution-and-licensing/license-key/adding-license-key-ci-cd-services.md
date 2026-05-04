@@ -1,4 +1,4 @@
----
+﻿---
 title: Adding the License Key to CI/CD Services
 description: Learn how to activate your Telerik Document Processing license key in CI/CD environments such as GitHub Actions and Azure Pipelines using environment variables.
 page_title: Adding the License Key to CI/CD Services
@@ -17,7 +17,7 @@ The license activation process in a CI/CD environment involves the following ste
 1. [Create an environment variable](#creating-an-environment-variable) named **TELERIK_LICENSE** and add your license key as a value. Alternatively, use the [Azure Secure files approach](#using-secure-files-on-azure-devops).
 
 ### Creating an Environment Variable
-The recommended approach for providing your license key to the _Telerik.Licensing_ NuGet package is to use environment variables. Each CI/CD platform has a different process for setting environment variables and this article lists only some of the most popular examples.
+The recommended approach for providing your license key to the `Telerik.Licensing` NuGet package is to use environment variables. Each CI/CD platform has a different process for setting environment variables and this article lists only some of the most popular examples.
 
 >important If your CI/CD service is not listed in this article, don’t hesitate to contact the Telerik technical support.
 
@@ -92,9 +92,9 @@ echo "Copying $(telerikLicense.secureFilePath) to $(Build.Repository.LocalPath)/
 Copy-Item -Path $(telerikLicense.secureFilePath) -Destination "$(Build.Repository.LocalPath)/telerik-license.txt" -Force
 ```
 
-### Using TelerikLicensing.Register method on AWS Lambdas
+### Using TelerikLicensing.Register Method on AWS Lambdas
 
-As of version **1.6.7** [ Telerik.Licensing](https://www.nuget.org/packages/Telerik.Licensing) offers the parameterless **TelerikLicensing.Register()** method and the **TelerikLicensing.Register(…script key…)** method allowing the developers to validate the Telerik license when running [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) functions, plugins, or a class library that uses Telerik Document Processing consumed by any third-party software (Word, Excel, Revit, AutoCAD, MFC app, etc.). It is necessary to upgrade the Telerik.Licensing NuGet package at least to **1.6.7** and call the Register method in the body of the function. Thus, the Telerik license will be validated, and the trial message is not expected to be printed (for licensed users) in the generated document:
+As of version **1.6.7**, [Telerik.Licensing](https://www.nuget.org/packages/Telerik.Licensing) offers the parameterless `TelerikLicensing.Register()` method and the `TelerikLicensing.Register(…script key…)` method. These methods allow developers to validate the Telerik license when running [AWS Lambda](https://docs.aws.amazon.com/lambda/latest/dg/welcome.html) functions, plugins, or a class library that uses Telerik Document Processing consumed by any third-party software (Word, Excel, Revit, AutoCAD, MFC app, and so on). You need to upgrade the Telerik.Licensing NuGet package at least to **1.6.7** and call the Register method in the body of the function. This way, the Telerik license is validated and the trial message is not printed (for licensed users) in the generated document:
 
 ```csharp
 namespace LicensingInLambda;
