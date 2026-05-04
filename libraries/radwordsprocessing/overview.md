@@ -1,7 +1,7 @@
 ---
 title: Overview
 page_title: Overview
-description: RadWordsProcessing is a processing library that allows you to create, modify and export documents to a variety of formats.
+description: RadWordsProcessing is a processing library that allows you to create, modify, and export documents to DOCX, RTF, HTML, TXT, and PDF formats.
 slug: radwordsprocessing-overview
 tags: radwordsprocessing, word, processing, docx, rtf, html, pdf, import, export
 published: True
@@ -10,7 +10,7 @@ position: 0
 
 # Overview
 
-**Telerik WordsProcessing Library** allows you to create and modify various document formats like DOCX, RTF, HTML, TXT, convert from one format to another, and export to PDF. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.
+**Telerik WordsProcessing Library** allows you to create and modify various document formats like DOCX, RTF, HTML, and TXT, convert from one format to another, and export to PDF. Through the API, you can access each element in the document and modify it, remove it, or add a new one. You can save the generated content as a stream, as a file, or send it to the client browser.
 
 ![WordsProcessing](images/words-processing-overview.jpg)   
 
@@ -22,13 +22,13 @@ position: 0
 
 ## Key Features 
 
-* Create and modify documents from various document formats: DOCX, RTF, HTML, plain text.
+* Create and modify documents from various document formats: DOCX, RTF, HTML, and plain text.
 * Convert documents to PDF (export only).
 * Convert between the different formats.
 * Full rich-text capabilities.
-* Font and paragraphs formatting, tables, images, comments, hyperlinks, fields and a lot more are supported.
-* Mail merge: Generate documents using template document and a data set, e.g. "Thank you" letters to all employees.
-* Merge different documents into a single one controlling how their styles should be merged.
+* Font and paragraph formatting, tables, images, comments, hyperlinks, fields, and more are supported.
+* Mail merge: Generate documents using a template document and a dataset, for example, "Thank you" letters to all employees.
+* Merge different documents into a single one while controlling how their styles merge.
 * GenAI-powered Document Insights
 
 The document model of the library provides support for:
@@ -42,7 +42,7 @@ The document model of the library provides support for:
 |[**Find and Replace**]({%slug radwordsprocessing-editing-find-and-replace%})|RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone.|
 |[**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%})|It is intended to simplify the process of creating and modifying a document and achieve the same results as you would using the style properties and child collections of the document elements with less amount of code.|
 |**Formatting**|In addition to the styles, RadWordsProcessing provides support for different types of formatting so you can format any of the document elements: - **Character formatting**: Font size, font color, font name, bold, italic, underline, etc. - **Paragraph formatting**: Line spacing, alignment, indentation, spacing before and after, etc. - **Table formatting**: Enables you to change the alignment, borders, shading, spacing and padding, and more. - **Modifying the section properties** to adjust the page size, orientation, margins, headers and footers, etc.|
-|**GenAI-powered Document Insights**|Enables you to easily extract insights from Word documents using Large Language Models (LLMs). This functionality enables you to summarize document content and ask questions about it, with the AI providing relevant answers based on the document's content. [Read More]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-overview%})|
+|[**GenAI-powered Document Insights**]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-overview%})|Extract insights from Word documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content.|
 
 ## Model
 
@@ -72,7 +72,7 @@ The model of **RadWordsProcessing** includes:
 
 * [**Shapes**]({%slug radwordsprocessing-shapes-shapes%}): Their variation in shape and style makes them very useful for drawing attention to specific text.
 
-## Supported formats:
+## Supported Formats
 
 The library comes with support for the following document formats:
 
@@ -100,7 +100,7 @@ You can import and export documents of these formats as well as convert the form
 |[WordsProcessing Table Of Contents/Authorities](https://demos.telerik.com/document-processing/wordsprocessing/table_of_contents_authorities)|This example illustrates how to add Table of Contents (TOC) of Table of Authorities (TOA) fields in WordsProcessing.|
 |[WordsProcessing GenAI Document Insights](https://demos.telerik.com/document-processing/wordsprocessing/genai_document_insights)|This example demonstrates how to use the GenAI-powered Document Insights feature in Telerik RadWordsProcessing to extract meaningful insights from Word documents and receive context-aware responses based on their content.|
 
-# See Also
+## See Also
 
 - [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
 - [First Steps]({%slug getting-started-first-steps%})

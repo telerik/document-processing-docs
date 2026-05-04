@@ -1,6 +1,6 @@
 ---
 title: First Steps
-description: A step-by-step guide to creating your first application with Telerik Document Processing libraries—create a DOCX document and export it as a PDF file.
+description: A step-by-step guide to creating your first application with Telerik Document Processing libraries - create a DOCX document and export it as a PDF file.
 page_title: First Steps
 slug: getting-started-first-steps
 tags: document, processing, installation, nuget, docx, pdf, radwordsprocessing, application
@@ -18,7 +18,7 @@ The Telerik Document Processing libraries that we use in this guide are UI-indep
 
 >important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
 
-Since we distribute Telerik Document Processing libraries as an addition to several Telerik UI component bundles, chances are that the libraries are already installed on your system. In this case, all you need is to locate them. The table below provides links to the installation instructions for each of the Telerik UI component suites that give you access to the Telerik Document Processing libraries. If the standard installation of your Telerik UI component suite includes the Document Processing packages, the table also shows their default location.
+Since we distribute Telerik Document Processing libraries as an addition to several Telerik UI component bundles, chances are that the libraries are already installed on your system. In this case, all you need is to locate them. The following table provides links to the installation instructions for each of the Telerik UI component suites that give you access to the Telerik Document Processing libraries. If the standard installation of your Telerik UI component suite includes the Document Processing packages, the table also shows their default location.
 
 >tip Regardless of the Telerik UI components suite that you use, you can always get the Document Processing packages as NuGet packages from the [Telerik NuGet server]({%slug installation-nuget-packages%}).
 
@@ -146,7 +146,7 @@ Run the project and you should see something like this:
 
 ## Next Steps
 
-Now that you have run your first project example with Telerik Document Processing Libraries, you may want to explore some additional features like __clone, edit, merge, insert__ documents and more. Below you can find guidance on getting started with such tasks:
+Now that you have run your first project example with Telerik Document Processing Libraries, you may want to explore additional features like __clone, edit, merge, insert__ documents and more. The following resources provide guidance on getting started with such tasks:
 
 * [Explore Features]({%slug getting-started-explore-features%})
 * [Further Information]({%slug getting-started-next-steps%})

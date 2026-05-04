@@ -1,7 +1,7 @@
 ---
 title: Introduction
 page_title: Welcome to Telerik Document Processing Libraries
-description: Telerik Document Processing is a bundle of UI-independent, cross-platform APIs enabling you to process the most commonly used flow, fixed and spreadsheet document formats. 
+description: Telerik Document Processing is a bundle of UI-independent, cross-platform libraries that let you create, import, modify, and export flow, fixed, and spreadsheet document formats without external dependencies.
 slug: introduction
 tags: document, processing, pdf, docx, xlsx, telerik, libraries, dotnet
 published: True
@@ -24,7 +24,7 @@ img[alt$="><"] {
 
 # Welcome to Telerik Document Processing Libraries
 
-**Telerik Document Processing** is a bundle of **UI-independent** *cross-platform* libraries that enable you to process the most commonly used flow, fixed and spreadsheet document formats for web and desktop. The Document Processing library allows you to create, import, modify and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
+**Telerik Document Processing** is a bundle of **UI-independent**, *cross-platform* libraries that let you process the most commonly used flow, fixed, and spreadsheet document formats for web and desktop. The Document Processing libraries allow you to create, import, modify, and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
 
 ![DPL Ninja](images/dpl-ninja.png) 
 
@@ -72,13 +72,13 @@ Telerik Document Processing features the following libraries:
 |Feature|Description|
 |----|----|
 |**UI-Independent**|The libraries are UI-Independent and cover all .NET technologies, from desktop and web to mobile, and can be deployed in client, server-side and cloud apps.|
-|**No need for 3rd party software - No Server Deployment Fees**|Enable document manipulation within your application without relying on 3rd party software such as Microsoft Office or Adobe Acrobat Reader.|
-|**Convenient API**|Add document processing capabilities to your applications in no time by utilizing the convenient APIs. Enable creating, editing and converting documents with just a few lines of code.|
-|**Performance and Speed**|The libraries are decoupled from UI and can provide a great performance in different cases, especially when dealing with huge excel files.|
-|**Any document. Any Business.**|The Telerik Document Processing is suitable for various business cases and scenarios, where document creation or manipulation is required|
-|**Support for Variety of File Formats**|The Telerik Document Processing includes 5 libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.|
+|**No Need for Third-Party Software - No Server Deployment Fees**|Enable document manipulation within your application without relying on third-party software such as Microsoft Office or Adobe Acrobat Reader.|
+|**Convenient API**|Add document processing capabilities to your applications quickly by using the convenient APIs. Create, edit, and convert documents with a few lines of code.|
+|**Performance and Speed**|The libraries are decoupled from UI and deliver great performance in different cases, especially when you work with large Excel files.|
+|**Any Document. Any Business.**|Telerik Document Processing is suitable for various business cases and scenarios where document creation or manipulation is required.|
+|**Support for a Variety of File Formats**|Telerik Document Processing includes five libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.|
 |**Timeout Mechanism**|[Timeout Mechanism]({%slug timeout-mechanism-in-dpl%}) for importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled.|
-|**GenAI-powered Document Insights**|Enables you to easily extract insights from PDF documents using Large Language Models (LLMs). This functionality enables you to summarize document content and ask questions about it, with the AI providing relevant answers based on the document's content. [[Read More]]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
+|**GenAI-powered Document Insights**|Extract insights from PDF documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content. [[Read More]]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
 |**AI Coding Assistant**|Provides specialized context to AI models, enabling them to produce higher-quality code samples. [[Read More]]({%slug ai-coding-assistant%})|
 
 For more details about the benefits of using Telerik Document Processing, see the [Telerik Document Processing product overview page](https://www.telerik.com/document-processing-libraries).
@@ -148,7 +148,7 @@ For any issues you might encounter while working with Telerik Document Processin
 * [Knowledge Base](https://docs.telerik.com/devtools/document-processing/knowledge-base)
 * [Virtual Classroom](https://www.telerik.com/account/support/virtual-classroom)
 
-## Help us Improve the Telerik Document Processing Libraries' Documentation
+## Help Us Improve the Telerik Document Processing Documentation
 
 We believe that the documentation for a product is at its best when the content is a collaboration between the builders and consumers of that product. Everybody can play a role in making our documentation better and we encourage you to help us with that task in the way that you choose:
 
@@ -164,7 +164,7 @@ Creating an issue is great, but what we really love are pull requests. This is t
 
 You can visit the [Telerik Document Processing forum](https://www.telerik.com/forums/telerik-document-processing) and leave us feedback. Please notice that this method will take a bit longer to reach our documentation team. However, if you need a fast reply from our support team, leaving feedback in the forum guarantees a support number for your suggestions, and that we will follow up on it.
 
-Thank you for your contribution to the Telerik Document Processing Libraries' Documentation!
+Thank you for your contribution to the Telerik Document Processing documentation!
 
 ## Next Steps
 

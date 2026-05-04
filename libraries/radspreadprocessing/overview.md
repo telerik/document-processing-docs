@@ -22,16 +22,16 @@ In this article, we list the library's most popular features. If you want to sta
 
 ## Key Features
 
-* Create from scratch and modify existing documents from spreadsheet formats: XLSX, CSV.
+* Create from scratch and modify existing documents from spreadsheet formats: XLSX and CSV.
 * Export to PDF.
 * Convert between the different formats.
-* Extracting and populating cells with data.
-* Built-in support for computation of more than 200 functions, like SUM, AVERAGE, etc.
-* Custom functions could be added as well.
-* Protection from editing operations using passwords/removing such passwords.
+* Extract and populate cells with data.
+* Built-in support for computation of more than 200 functions, like SUM, AVERAGE, and more.
+* Add custom functions as well.
+* Protection from editing operations using passwords or removing such passwords.
 * Most of the important Excel features are supported:
-    * Data validation - restrict the types of input to cells (e.g. allow only numbers).
-    * Grouping to organize data (e.g. collapse some rows/columns).
+    * Data validation - restrict the types of input to cells (for example, allow only numbers).
+    * Grouping to organize data (for example, collapse some rows/columns).
     * Filtering, sorting, freeze panes, hidden rows, and more.
 * GenAI-powered Document Insights
 
@@ -65,15 +65,15 @@ The following table describes the most popular features of the RadSpreadProcessi
 | [**History**]({%slug radspreadprocessing-features-history%}) | The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. Each worksheet has its own history stack. |
 | [**Comments**]({%slug radspreadprocessing-features-comments%}) | You can leave comments and replies on cells, which allows for easier team communication. |
 | [**Notes**]({%slug radspreadprocessing-features-notes%}) | Note important information in your worksheet.|
-|[**GenAI-powered Document Insights**]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})| Enables you to easily extract insights from Excel documents using Large Language Models (LLMs). |
+|[**GenAI-powered Document Insights**]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})| Extract insights from Excel documents using Large Language Models (LLMs). |
 
-## Supported formats
+## Supported Formats
 
 * Excel formats: [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [**XLS**]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
 
 * Text formats: [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}), [**JSON**]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider%}) (export only)
 
-* Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only), [__DataTable__]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
+* Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only), [`DataTable`]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
 
