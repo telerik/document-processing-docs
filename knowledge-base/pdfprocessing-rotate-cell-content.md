@@ -219,19 +219,21 @@ static void DrawTableWithRotatedBlocks(RadFixedDocument document)
     Border border = new Border(BorderStyle.Single);
     table.DefaultCellProperties.Borders = new TableCellBorders(border, border, border, border);
 
+    TableRow row = table.Rows.AddTableRow();
+
     RotatedBlock rotatedBlock = new RotatedBlock(30);
     rotatedBlock.InsertText("Sample text rotated 30°");
-    table.Rows.AddTableRow().Cells.AddTableCell().Blocks.Add(rotatedBlock);
-
-    table.Rows.AddTableRow().Cells.AddTableCell().Blocks.AddBlock().InsertText("Sample text");
+    row.Cells.AddTableCell().Blocks.Add(rotatedBlock);
+    
+    row.Cells.AddTableCell().Blocks.AddBlock().InsertText("Sample text");
 
     rotatedBlock = new RotatedBlock(90);
     rotatedBlock.InsertText("Sample text rotated 90°");
-    table.Rows.AddTableRow().Cells.AddTableCell().Blocks.Add(rotatedBlock);
+    row.Cells.AddTableCell().Blocks.Add(rotatedBlock);
 
     rotatedBlock = new RotatedBlock(-45);
     rotatedBlock.InsertText("Sample text rotated -45°");
-    table.Rows.AddTableRow().Cells.AddTableCell().Blocks.Add(rotatedBlock);
+    row.Cells.AddTableCell().Blocks.Add(rotatedBlock);
 
     using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
     {
