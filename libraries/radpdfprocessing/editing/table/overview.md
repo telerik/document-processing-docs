@@ -13,18 +13,6 @@ The **Table** class helps you easily create tabular data content. All you need t
 
 ![Rad Pdf Processing Editing Table 01](images/RadPdfProcessing_Editing_Table_01.png)
 
-This article aims to present the table-related API in __RadPdfProcessing__. It contains the following sections:     
-
-* [Defining Table Content](#defining-table-content)
-
-* [Using DefaultCellProperties](#using-defaultcellproperties)
-
-* [Modifying a Table](#modifying-a-table)
-
-* [Drawing Table with RadFixedDocumentEditor](#drawing-table-with-radfixeddocumenteditor)
-
-* [Drawing Table with FixedContentEditor](#drawing-table-with-fixedcontenteditor)
-
 
 ## Defining Table Content
 
@@ -176,6 +164,19 @@ As a result, on __Figure 7__ you can see a 45-degree rotated table similar to th
 
 #### Figure 7: FixedWidth table
 ![Rad Pdf Processing Editing Table 08](images/RadPdfProcessing_Editing_Table_08.png)
+
+## Measuring a Table
+
+The `Table` class exposes `Measure` overloads that calculate and return the desired size of the table without drawing it. This is useful when you need to know the table dimensions before inserting it into a document—for example, to decide whether to use a new page or to position other content relative to the table.
+
+- **`Measure(CancellationToken)`** – Measures the table against an infinite available size and returns the resulting `Size`. Pass a `CancellationToken` to allow the operation to be cancelled.
+- **`Measure(Size, CancellationToken)`** – Measures the table against a constrained available size. Use this overload when the table must fit within a known width or height.
+
+**Example 11** demonstrates how to measure a table both with infinite available size and with a specific size constraint.
+
+#### __Example 11: Measure a table__
+
+<snippet id='libraries-pdf-editing-table-overview-measure-table'/>
 
 ## Supported Border Styles
 
