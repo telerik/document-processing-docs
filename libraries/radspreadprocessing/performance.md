@@ -135,3 +135,5 @@ More information regarding cell value types is available in the [Cell Value Type
  * [Shapes and Images]({%slug radspreadprocessing-features-shapes-and-images%})
  
  * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
+
+ * [Splitting Worksheet Sections into Separate Sheets with a Hybrid SpreadProcessing and SpreadStreamProcessing Approach]({%slug split-worksheet-sections-hybrid-spreadprocessing-spreadstreamprocessing%})
