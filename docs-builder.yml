@@ -236,6 +236,9 @@ meta:
   libraries/radwordsprocessing/concepts/fields:
     title: Fields
     position: 0
+  libraries/radwordsprocessing/formats-and-conversion/markdown:
+    title: Markdown
+    position: 6
   libraries/radwordsprocessing/formats-and-conversion/plain-text:
     title: Plain text
     position: 5
