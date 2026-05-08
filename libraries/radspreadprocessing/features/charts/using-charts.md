@@ -27,11 +27,14 @@ The FloatingChartShape class exposes the following constructors, which parse the
 * **FloatingChartShape(Worksheet worksheet, CellIndex cellIndex, CellRange chartDataRange, SeriesRangesOrientation seriesRangesOrientation, params ChartType[] chartTypes)**
 
 	The parameters accepted by the constructors are as follows:
-	* *worksheet*: The worksheet that the shape is associated with.
-	* *cellIndex*: The cell index where the top left corner of the shape is positioned.
-	* *chartDataRange*: The range containing the chart data.
-	* *seriesRangesOrientation*: A value indicating whether the series of the chart will refer to vertical or horizontal ranges or the direction will be determined automatically.
-	* *chartTypes*: The types of chart that will be created. **Passing more than one type will create a combo chart.**
+
+	| Parameter | Description |
+	|---|---|
+	| `worksheet` | The worksheet that the shape is associated with. |
+	| `cellIndex` | The cell index where the top left corner of the shape is positioned. |
+	| `chartDataRange` | The range containing the chart data. |
+	| `seriesRangesOrientation` | A value indicating whether the series of the chart will refer to vertical or horizontal ranges or the direction will be determined automatically. |
+	| `chartTypes` | The types of chart that will be created. **Passing more than one type will create a combo chart.** |
 
 	>The number of chartTypes must be no more than the number of columns inside the chartDataRange minus one (the first column is used to populate the X axis), otherwise you will get an exception of type **System.NullReferenceException**.
 
@@ -78,15 +81,13 @@ The result of executing the code in **Example 3** over a cell range containing s
 
 This is the object representing the chart itself and contains the following properties:
 
-* **SeriesGroup**: Represents a collection of the groups in which the series of the chart are organized.
-
-* **PrimaryAxes**: Represents the primary group of axes of the chart.
-
-* **SecondaryAxes**: Represents the secondary group of axes of the chart. It is used when there is more than one group of series (combo chart).
-
-* **Title**: Represents the title of the chart.
-
-* **Legend**: Represents the legend of the chart.
+| Property | Description |
+|---|---|
+| `SeriesGroup` | Represents a collection of the groups in which the series of the chart are organized. |
+| `PrimaryAxes` | Represents the primary group of axes of the chart. |
+| `SecondaryAxes` | Represents the secondary group of axes of the chart. Used when there is more than one group of series (combo chart). |
+| `Title` | Represents the title of the chart. |
+| `Legend` | Represents the legend of the chart. |
 
 Also, a **Clone()** method is exposed, which creates a deep copy of the object.
 

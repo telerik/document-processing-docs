@@ -25,23 +25,20 @@ Similarly, a **column** is a group of cells that are vertically stacked and appe
 ## Row Height
 
 Rows offer several approaches for determining their height:
-        
 
-* **Default Height**: Each row has a default height of 20. When the row does not have an explicitly set height, it appears with its default height.
-
-* **Height**: The height property allows you to make a given set of rows appear with a fixed height.
-
-* **Auto Fit**: The auto fit feature sets the height of a specific row based on the content of all cells in the row. The height of the row is determined by the cell that contains the highest content.
-            
+| Option | Description |
+|---|---|
+| Default Height | Each row has a default height of 20. When the row does not have an explicitly set height, it appears with its default height. |
+| Height | Allows you to make a given set of rows appear with a fixed height. |
+| Auto Fit | Sets the height of a specific row based on the content of all cells in the row. The height is determined by the cell with the tallest content. |
 
 Similarly, columns expose several ways to set their width:
-        
 
-* **Default Width**: Each column has a default width of 65. When the column does not have an explicit width set, it appears with its default width.
-
-* **Width**: The width property allows you to make a given set of columns appear with a fixed width.
-
-* **Auto Fit**: The auto fit feature sets the width of a specified column based on the content of all cells in the column. The width of the column is determined by the cell that contains the widest content.
+| Option | Description |
+|---|---|
+| Default Width | Each column has a default width of 65. When the column does not have an explicit width set, it appears with its default width. |
+| Width | Allows you to make a given set of columns appear with a fixed width. |
+| Auto Fit | Sets the width of a specified column based on the content of all cells in the column. The width is determined by the cell with the widest content. |
             
 
 More information about setting row's height and column's width is available in the [Resizing Rows and Columns]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%}) article.

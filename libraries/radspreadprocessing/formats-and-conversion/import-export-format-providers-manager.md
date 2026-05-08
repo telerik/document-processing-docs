@@ -33,8 +33,11 @@ You can also unregister format providers using the `UnregisterFormatProvider()` 
 ## Import
 
 The format providers manager exposes an `Import()` method that takes two arguments:
-- `string` argument - specifies the extension of the file to be imported, 
-- `Stream` argument -  provides access to the file. 
+
+| Argument | Type | Description |
+|---|---|---|
+| *(first)* | `string` | Specifies the extension of the file to be imported. |
+| *(second)* | `Stream` | Provides access to the file. |
 
 The method tries to find a registered format provider that can handle the extension of the file you would like to import, and if such a provider is registered the file is imported. If the manager does not have an appropriate format registered, an __UnsupportedFileFormatException__ is thrown.
         
@@ -53,10 +56,13 @@ You can achieve the same result through using the __OpenFile__ command. In fact,
 
 ## Export
 
-The format providers manager contains an __Export()__ method that takes three arguments: 
-- `Workbook` argument - the workbook to be exported
-- `string` argument - specifies the extension of the saved file
-- `Stream` argument - the Stream that will contain the data. 
+The format providers manager contains an `Export()` method that takes three arguments:
+
+| Argument | Type | Description |
+|---|---|---|
+| *(first)* | `Workbook` | The workbook to be exported. |
+| *(second)* | `string` | Specifies the extension of the saved file. |
+| *(third)* | `Stream` | The stream that will contain the data. |
 
 The method attempts to find a provider that can handle a file of the specified extension and if such a provider is registered, the file is saved. If the manager does not have an appropriate registered provider, an __UnsupportedFileFormatException__ is raised.
         

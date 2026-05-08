@@ -25,17 +25,14 @@ This class corresponds to FormFieldType.ListBox enum value and represents a list
 
 ListBoxField provides the following properties:
 
-* **Value**: Gets or sets an array of selected choices. Each choice is represented by the ChoiceOption class that has a single Value and UserInterfaceValue properties. The UserInterfaceValue property is optional and, when null, the Value property is used to display the choice in the user interface.
-
-* **DefaultValue**: Gets or sets the default selected choices, used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) is reset to its default values.
-
-* **Widgets**: A collection of Widget annotations, which represent the field on the PDF pages. The widgets are created by using the collection **AddWidget()** method and can be removed by using the collection's **Remove()** method. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
-
-* **Options**: A ChoiceOptionCollection instance containing all available choices for this field. In order to modify this collection, you can use its indexer property and its **Add()**, **RemoveAt()** and **Clear()** methods. Each ChoiceOption instance can be added only once to such a collection. If you try adding the same instance more than once in the collection, an exception will be thrown.
-
-* **ShouldCommitOnSelectionChange**: Boolean value indicating whether to commit the selected value on selection change.
-
-* **TopIndex**: Gets or sets integer value providing the index of the choice that should be visualized on top of the list box viewport rectangle.
+| Property | Description |
+|---|---|
+| `Value` | Gets or sets an array of selected choices. Each choice is a `ChoiceOption` with `Value` and `UserInterfaceValue` properties. `UserInterfaceValue` is optional; when `null`, `Value` is used to display the choice in the UI. |
+| `DefaultValue` | Gets or sets the default selected choices used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) is reset to its default values. |
+| `Widgets` | A collection of Widget annotations representing the field on the PDF pages. Widgets are created using `AddWidget()` and can be removed using `Remove()`. Implements `IEnumerable`. |
+| `Options` | A `ChoiceOptionCollection` containing all available choices for this field. Modify via the indexer, `Add()`, `RemoveAt()`, and `Clear()`. Each `ChoiceOption` instance can be added only once. |
+| `ShouldCommitOnSelectionChange` | Indicates whether to commit the selected value on selection change. |
+| `TopIndex` | Gets or sets the index of the choice that should be visualized at the top of the list box viewport rectangle. |
 
 
 #### **Example 1: Create a ListBoxField and add it to a page**

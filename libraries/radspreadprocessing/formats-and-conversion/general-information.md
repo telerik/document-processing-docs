@@ -14,14 +14,18 @@ __RadSpreadProcessing__'s document model allows you to easily open and save file
 
 ## Supported formats      
 
-* __Xlsx__: Rich text format, which exports the whole content of a workbook: worksheets, formula values, formatting, hyperlinks etc.
-* __Xls__: Rich text format, which exports the content of a workbook: worksheets, formula values, formatting, hyperlinks etc. Supported in older applications. This format is not supported in Silverlight.
-* __Xlsm__: Rich text format, which exports all that is included in the Xlsx format with the addition of macro instructions.
-* __Pdf__(*export only*): Fixed format, which preserves the content of a workbook in independent from software or hardware manner.
-* __Csv__(comma separated): Plain text format that saves the content of the cell in the active worksheet. The format strips all formatting and keeps only the result values of cells. These values are separated by a culture dependent delimiter.
-* __Txt__(tab delimited): Plain text format, which preserves only the content of the cells in the active worksheet. The format does not save any formatting and keeps only the result values of the cells. These values are delimited via tabs.
-* __Json__(*export only*): Structured text format that serializes worksheet data and metadata (values, number formats, named ranges, charts, active sheet info, etc.) to JSON. Styling is not preserved fully as in XLSX;
-* **DataTable**: This allows you to convert the DataTable that is coming form your database to a spreadsheet and vice versa. 
+The following table lists the supported formats:
+
+| Format | Description |
+|---|---|
+| `Xlsx` | Rich text format that exports the whole content of a workbook: worksheets, formula values, formatting, hyperlinks, etc. |
+| `Xls` | Rich text format that exports the content of a workbook: worksheets, formula values, formatting, hyperlinks, etc. Supported in older applications. This format is not supported in Silverlight. |
+| `Xlsm` | Rich text format that exports all that is included in the Xlsx format with the addition of macro instructions. |
+| `Pdf` *(export only)* | Fixed format that preserves the content of a workbook in a manner independent from software or hardware. |
+| `Csv` *(comma separated)* | Plain text format that saves the content of the cell in the active worksheet. The format strips all formatting and keeps only the result values of cells. These values are separated by a culture-dependent delimiter. |
+| `Txt` *(tab delimited)* | Plain text format that preserves only the content of the cells in the active worksheet. The format does not save any formatting and keeps only the result values of the cells. These values are delimited via tabs. |
+| `Json` *(export only)* | Structured text format that serializes worksheet data and metadata (values, number formats, named ranges, charts, active sheet info, etc.) to JSON. Styling is not preserved fully as in XLSX. |
+| `DataTable` | Allows you to convert a `DataTable` from your database to a spreadsheet and vice versa. |
 
 >note In **Q4 2024** Telerik Document Processing Libraries introduced a new timeout mechanism for importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled.  
 
@@ -65,21 +69,16 @@ __Example__: Use FormatProver's Import() and Export() methods with `byte[]` arra
 
 ## Additional package references
 
-Unlike the __CsvFormatProvider__, __TxtFormatProvider__ and __DataTableFormatProvider__ classes, the other RadSpreadProcessing format providers require references to additional packages.
+Unlike the `CsvFormatProvider`, `TxtFormatProvider`, and `DataTableFormatProvider` classes, the other RadSpreadProcessing format providers require references to additional packages:
 
-- **XlsxFormatProvider** and **XlsmFormatProvider** additional package references
-  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml
+| Format Provider | Required Package |
+|---|---|
+| `XlsxFormatProvider` and `XlsmFormatProvider` | `Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml` |
+| `PdfFormatProvider` *(export only)* | `Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf` |
+| `XlsFormatProvider` | `Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls` |
+| `JsonFormatProvider` *(export only)* | `Telerik.Windows.Documents.Spreadsheet.FormatProviders.Json` |
 
-  >note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
-
-- **PdfFormatProvider** (export only)
-  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf
-
-- **XlsFormatProvider**
-  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Xls
-  
-- **JsonFormatProvider** (export only)
-  * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Json
+>note *As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
 
 ## Format Providers Manager

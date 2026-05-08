@@ -51,9 +51,11 @@ With the __EncodedImageData__ class you can also create an __ImageSource__ with 
 
 The properties exposed by the **ImageSource** class are as follows:
 
-* **Width**: Gets the width of the image.
-* **Height**: Gets the height of the image.
-* **DecodeArray**: Gets or sets the decode array, which specifies a linear mapping of each component value to a number that would be appropriate as a component value in the color space of the image. It could be used to manipulate the tones of the image, depending on its color space.
+| Property | Description |
+|---|---|
+| `Width` | Gets the width of the image. |
+| `Height` | Gets the height of the image. |
+| `DecodeArray` | Gets or sets the decode array, which specifies a linear mapping of each component value to an appropriate component value in the image's color space. Can be used to manipulate the tones of the image. |
 
 ## Methods
 
@@ -61,8 +63,10 @@ The ImageSource class exposes two methods, which could help you get the data fro
 
 > These methods are not available in the .NET Standard version of the PdfProcessing packages.
 
-* __BitmapSource GetBitmapSource()__: Gets the BitmapSource of the image.
-* __EncodedImageData GetEncodedImageData()__: Returns the encoded image data. This method can be used if you need to directly export the images from the PDF document.
+| Method | Description |
+|---|---|
+| `GetBitmapSource()` | Gets the `BitmapSource` of the image. |
+| `GetEncodedImageData()` | Returns the encoded image data. Use this if you need to directly export images from the PDF document. |
 
 >tip This [example in our SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateDocumentWithImages) demonstrates how to insert JPEG and JPEG2000 images in a PDF document without requiring that you decode the images on import. This way the exported images will not be re-encoded and their image quality will be preserved.
 

@@ -41,19 +41,13 @@ The following example shows a full code snippet for a simple signing of a newly 
 
 ## Signature Settings
 
-The **SignatureSettings** class (*introduced in Q4 2025*) provides configurable options for producing digital signatures in PDF documents. It allows developers to specify the digest (hash) algorithm used during certificate-based signing. The SignatureSettings are accessed by the Signature.**Settings** public property and it offers the following settings to be specified:
+The **SignatureSettings** class (*introduced in Q4 2025*) provides configurable options for producing digital signatures in PDF documents. It allows developers to specify the digest (hash) algorithm used during certificate-based signing. `SignatureSettings` are accessed via the `Signature.Settings` property and expose the following settings:
 
-* **DigestAlgorithm**&mdash;Gets or sets the digest (hash) algorithm used when producing the CMS (PKCS#7) signature. The default is *DigestAlgorithmType.Sha256* to provide a modern, interoperable baseline (SHA-256). The supported digest (hash) algorithms for producing CMS (PKCS#7) PDF signature values are: <ul><li>**Sha256**&mdash;SHA-256 (256-bit). Recommended default: strong, widely supported, and efficient.</li><li>**Sha384**&mdash;SHA-384 (384-bit). Use when organizational policy or key size (e.g. P-384) mandates higher strength.</li><li>**Sha512**&mdash;SHA-512 (512-bit). Use for highest SHA-2 family strength or long‑term archival policies; may have slightly higher computational cost.</li></ul>
-
-* **TimeStampServer**&mdash;Gets or sets the [timestamp server]({%slug pdf-sign-timestamp-server%}) settings used to obtain a trusted timestamp for the signature.
-
-* **CertificateChainIncludeOption**&mdash;Gets or sets the option that determines which certificates are included in the certificate chain when exporting or processing certificates. Use this property to specify whether only the end-entity certificate, the entire chain, or a partial chain should be included. The selected option may affect compatibility with external systems and the ability to validate the certificate. [*Introduced in Q1 2026*]
-
-    The available options are:
-    * **None**&mdash;No certificate chain information is included.
-    * **ExcludeRoot**&mdash;The entire certificate chain is included except for the root certificate.
-    * **EndCertOnly**&mdash;Only the end certificate is included in the certificate chain information.
-    * **WholeChain**&mdash;The entire certificate chain is included.
+| Property | Description |
+|---|---|
+| `DigestAlgorithm` | Gets or sets the digest (hash) algorithm used when producing the CMS (PKCS#7) signature. Default is `DigestAlgorithmType.Sha256`. Supported values: `Sha256` (recommended default), `Sha384` (for higher strength or P-384 key policy), `Sha512` (highest SHA-2 strength or long-term archival). |
+| `TimeStampServer` | Gets or sets the [timestamp server]({%slug pdf-sign-timestamp-server%}) settings used to obtain a trusted timestamp for the signature. |
+| `CertificateChainIncludeOption` | Gets or sets the option that determines which certificates are included in the certificate chain. Available values: `None` (no chain info), `ExcludeRoot` (entire chain except root), `EndCertOnly` (only the end certificate), `WholeChain` (entire chain). [*Introduced in Q1 2026*] |
 
 ## Signature Encodings
 
@@ -74,9 +68,12 @@ The signature flags were introduced in R2 2022 SP1. You can set the flags with t
 <snippet id='pdf-signature-flags'/>
 
 The possible values are:
-* **None**: Indicates no signature fields exist.
-* **SignaturesExist**: If set, the document contains at least one signature field. This flag allows a viewer application to enable user interface items (such as menu items or pushbuttons) related to signature processing without having to scan the entire document for the presence of signature fields.
-* **AppendOnly**: The document contains signatures that may be invalidated if the file is saved in a way that alters its previous contents. Viewer applications can use this flag to present a user requesting a full save with an additional alert box warning that signatures will be invalidated and requiring explicit confirmation before continuing with the operation.
+
+| Value | Description |
+|---|---|
+| `None` | Indicates no signature fields exist. |
+| `SignaturesExist` | If set, the document contains at least one signature field. This flag allows a viewer to enable signature-related UI (such as menu items or buttons) without scanning the entire document. |
+| `AppendOnly` | The document contains signatures that may be invalidated if the file is saved in a way that alters its previous contents. Viewer applications can use this flag to warn users that saving will invalidate signatures. |
 
 ## See Also
 

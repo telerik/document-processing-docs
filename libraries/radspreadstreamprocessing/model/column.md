@@ -35,13 +35,12 @@ A concrete instance of IColumnExporter could be created through the CreateColumn
 
 In order to customize the way a column appears, you could use one of the following methods:
 
-* **SetWidthInPixels()**: Sets the column width in pixels.
-
-* **SetWidthInCharacters()**: Sets the column width in characters count.
-
-* **SetOutlineLevel()**: Sets the column outline level. The outline level is used when grouping columns. To group several columns, they should have the same OutlineLevel and if you would like to create nested grouping, you can use different levels for the outer and for the nested columns. 
-
-* **SetHidden()**: Sets a boolean value that indicates whether the column should be hidden or not.
+| Method | Description |
+|---|---|
+| `SetWidthInPixels()` | Sets the column width in pixels. |
+| `SetWidthInCharacters()` | Sets the column width in characters count. |
+| `SetOutlineLevel()` | Sets the column outline level, used when grouping columns. Columns with the same `OutlineLevel` are grouped together; use different levels for nested grouping. |
+| `SetHidden()` | Sets a boolean value indicating whether the column should be hidden. |
 
 
 #### **Example 2: Set properties to IColumnExporter**
@@ -73,12 +72,14 @@ A concrete instance of IColumnImporter could be obtained through the Columns col
 
 The IColumnImporter interface exposes the following properties:
 
-* **FromIndex**: Gets the first index of the column range with same properties.
-* **ToIndex**: Gets the last index of the column range with same properties.
-* **OutlineLevel**: Gets the outline level (used when grouping columns).
-* **IsCustomWidth**: Gets a value indicating whether the width applied to the current column is a custom one.
-* **WidthInPixels** and **WidthInCharacters**: Gets the width of the column in pixels and in characters, respectively.
-* **IsHidden**: Gets a value determining whether the row is hidden.
+| Property | Description |
+|---|---|
+| `FromIndex` | Gets the first index of the column range with the same properties. |
+| `ToIndex` | Gets the last index of the column range with the same properties. |
+| `OutlineLevel` | Gets the outline level (used when grouping columns). |
+| `IsCustomWidth` | Gets a value indicating whether the width applied to the current column is a custom one. |
+| `WidthInPixels` / `WidthInCharacters` | Gets the width of the column in pixels and in characters, respectively. |
+| `IsHidden` | Gets a value determining whether the column is hidden. |
 
 ## See Also
 

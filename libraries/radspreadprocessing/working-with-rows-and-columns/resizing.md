@@ -13,19 +13,6 @@ position: 2
 
 
 Worksheets in __RadSpreadProcessing__'s document model consist of cells organized in rows and columns. The API of the model allows you to set the width of each column and the height of each row. Additionally, you can choose to use the autofit feature that sizes the rows and columns based on their current content. This article demonstrates the different options for changing row height and column width.
-      
-
-* [Row Height](#row-height)
-
-* [Auto Fit Rows Height](#auto-fit-rows-height)
-
-* [Columns Width](#columns-width)
-
-* [Auto Fit Columns Width](#auto-fit-columns-width)
-
-* [Measurement Units](#measurement-units)
-
-* [LayoutHelper class](#layouthelper-class)
 
 ## Row Height
 
@@ -35,13 +22,12 @@ The height of a row is retrieved and changed through an instance of type __RowHe
 In order to change the rows' height, you need to create a __RowSelection__ instance that includes the rows to be resized. The __RowSelection__ class exposes __GetHeight()__, __SetHeight()__ and __ClearHeight()__ methods that are used to manipulate the height of the selected rows.
         
 
-The __GetHeight()__ method returns a __RangePropertyValue&lt;RowHeight&gt;__ instance that holds information about the height of all selected rows. The object exposes two properties that indicate the value of __RowHeight__ for the cell range:
-        
+The __GetHeight()__ method returns a __RangePropertyValue&lt;RowHeight&gt;__ instance that holds information about the height of all selected rows. The object exposes two properties that indicate the value of `RowHeight` for the cell range:
 
-* __IsIndeterminate__: Indicates whether the value of __RowHeight__ is consistent among all rows in the specified __RowSelection__. If the __RowHeight__ has one and the same value for all rows, __IsIndeterminate__ is set to false. However, if the value of __RowHeight__ varies throughout the rows in the __RowSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue&lt;T&gt;__ class returns the default __RowHeight__.
-            
-
-* __Value__: Holds the actual __RowHeight__. If the __IsIndeterminate__ property is set to false, __Value__ contains the __RowHeight__ for the whole __RowSelection__ region. If the __IsIndeterminate__ property is set to true, this indicates that the __RowHeight__ is not the same for all rows in the __RowSelection__ and the __Value__ property is set to its default value.
+| Property | Description |
+|---|---|
+| `IsIndeterminate` | Indicates whether the value of `RowHeight` is consistent among all rows in the specified `RowSelection`. If the `RowHeight` has one and the same value for all rows, `IsIndeterminate` is `false`. However, if the value varies throughout the rows, `IsIndeterminate` is `true` and `Value` returns the default `RowHeight`. |
+| `Value` | Holds the actual `RowHeight`. If `IsIndeterminate` is `false`, `Value` contains the `RowHeight` for the whole `RowSelection` region. If `IsIndeterminate` is `true`, `Value` is set to its default value. |
             
 
 The __SetHeight()__ method is used to change the height of rows. It takes a single argument of type __RowHeight__ which specifies the new height. The __ClearHeight()__ method is used to reset the __RowHeight__ of the selected rows to the default height. Note that the default row height can be manipulated through the __GetDefaultHeight()__ and __SetDefaultHeight()__ methods exposed by the __Rows__ class.
@@ -76,12 +62,11 @@ In order to change the columns' width, you need to create a __ColumnSelection__ 
         
 
 The __GetWidth()__ method returns a __RangePropertyValue&lt;ColumnWidth&gt;__ instance that holds information about the width of all selected columns. The object exposes two properties that indicate the value of the property for the cell range:
-        
 
-* __IsIndeterminate__: Indicates whether the value of __ColumnWidth__ is consistent among all columns in the specified __ColumnSelection__. If the __ColumnWidth__ has one and the same value for all columns, __IsIndeterminate__ is set to false. However, if the value of __ColumnWidth__ varies throughout the columns in the __ColumnSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue&lt;T&gt;__ class is set to its default value.
-            
-
-* __Value__: Holds the actual __ColumnWidth__. If the __IsIndeterminate__ property is set to false, __Value__ contains the __ColumnWidth__ for the whole __ColumnSelection__ region. If the __IsIndeterminate__ property is set to true, this indicates that the __ColumnWidth__ is not the same for all columns in the __ColumnSelection__ and the __Value__ property is set to its default value.
+| Property | Description |
+|---|---|
+| `IsIndeterminate` | Indicates whether the value of `ColumnWidth` is consistent among all columns in the specified `ColumnSelection`. If the `ColumnWidth` has one and the same value for all columns, `IsIndeterminate` is `false`. However, if the value varies throughout the columns, `IsIndeterminate` is `true` and `Value` returns the default value. |
+| `Value` | Holds the actual `ColumnWidth`. If `IsIndeterminate` is `false`, `Value` contains the `ColumnWidth` for the whole `ColumnSelection` region. If `IsIndeterminate` is `true`, `Value` is set to its default value. |
             
 
 The __SetWidth()__ method is used to change the width of columns. It takes a single argument of type __ColumnWidth__ that specifies the new width. The __ClearWidth()__ method is used to reset the __ColumnWidth__ of the selected columns to the default width. Note that the default column width can be manipulated through the __GetDefaultWidth()__ and __SetDefaultWidth()__ methods exposed by the __Columns__ class.
@@ -115,17 +100,18 @@ Another way to auto fit column widths is to use the __ExpandToFitNumberValuesWid
 
 ### Telerik RadSpreadProcessing vs MS Excel 
 
- In the other hand, MS Excel uses its [own measurement unit](https://docs.microsoft.com/en-sg/office/troubleshoot/excel/determine-column-widths), so in order to convert between pixel and MS Excel width you can use the following methods of the UnitHelper class in combination with the **SetWidth**() method: 
+ In the other hand, MS Excel uses its [own measurement unit](https://docs.microsoft.com/en-sg/office/troubleshoot/excel/determine-column-widths), so in order to convert between pixel and MS Excel width you can use the following methods of the UnitHelper class in combination with the `SetWidth()` method:
 
-* PixelWidthToExcelColumnWidth: Converts column width in pixels to MS Excel column width.
+| Method | Description |
+|---|---|
+| `PixelWidthToExcelColumnWidth` | Converts column width in pixels to MS Excel column width. |
+| `ExcelColumnWidthToPixelWidth` | Converts MS Excel column width to pixel width. |
 
 __Example 6__ shows how to convert and set from pixel to MS Excel column width.    
 
 #### __Example 6: Convert from pixel column width to MS Excel column width__
 
 <snippet id='codeblock-crv'/>
-
-* ExcelColumnWidthToPixelWidth: Converts MS Excel column width to pixels width.
 
 __Example 7__ shows how to convert and set from MS Excel to pixel column width.    
 
@@ -140,13 +126,18 @@ The row height in MS Excel is measured in points so in order to set them you can
 
 The [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.layout.layouthelper) class exposes the following methods that help to calculate the size of the page content:
 
-* **CalculateCellContentSize**: Calculates the size of the cell content.
+| Method | Description |
+|---|---|
+| `CalculateCellContentSize` | Calculates the size of the cell content. |
+| `CalculateCellLayoutBox` | Creates, arranges and returns the cell layout box. |
+
+__Example 8__ shows how to get the size of the cell content.
 
 #### __Example 8: Get the Size of the cell content__
 
 <snippet id='codeblock-crx'/>
 
-* **CalculateCellLayoutBox**: Creates, arranges and returns the cell layout box.
+__Example 9__ shows how to get the cell layout box.
 
 #### __Example 9: Get the cell layout box__
 

@@ -47,12 +47,13 @@ The result table is shown in **Figure 1**.
 
 ## Using DefaultCellProperties
 
-If you want to apply default styling to all the cells in a table, you can use the Table `DefaultCellProperties` property. This allows you to modify the default cell presentation.
-        
+If you want to apply default styling to all the cells in a table, you can use the Table `DefaultCellProperties` property. This allows you to modify the default cell presentation:
 
-* **Padding**: Specifies the distances between the inner cell border contour and the cell content.
-* **Borders**: Property of type `TableCellBorders`, which specifies the borders of a single cell. The available borders are left, right, top, bottom, diagonal up, and diagonal down.
-* **Background**: Specifies the background of the cell.
+| Property | Description |
+|---|---|
+| `Padding` | Specifies the distances between the inner cell border contour and the cell content. |
+| `Borders` | Of type `TableCellBorders`. Specifies the borders of a single cell. The available borders are left, right, top, bottom, diagonal up, and diagonal down. |
+| `Background` | Specifies the background of the cell. |
             
 
 **Example 2** shows how to use the **DefaultCellProperties** of a table
@@ -70,25 +71,16 @@ The result of the snippet in **Example 2** is demonstrated on **Figure 2**.
 
 ## Modifying a Table
 
-There are several factors that affect table measuring calculations. Some of them are listed and explained below:
-        
+The following table lists the properties that affect table measuring calculations:
 
-* **Margin**: Specifies the distances between the table borders outline and the rest of the document content.
-         
-* **Padding**: Set through the TableCell `Padding` property, it specifies the distances between cell borders inner contour and the cell content.
-            
-* **LayoutType**: Specifies the algorithm which is used to layout table contents. There are two options available in the `TableLayoutType` enumeration:
-	
-	* **AutoFit** – The table width fits the content unless the needed width is bigger than the available measuring width.
-	* **FixedWidth** – The table width always fits the available measuring width.
-
-* **HorizontalAlignment**: Specifies the alignment of the table inside the page. 
-
-* **BorderSpacing**: Specifies the distance between all the borders in the table. This distance is measured differently depending on the **BorderCollapse** option.
-         
-* **BorderCollapse**: Specifies the way the border spacing calculations are done. There are two options:         
-	* **Collapse**: The distance between borders is measured from the middle lines of the borders.
-	* **Separate**: The distance between borders is measured from the outer border contour.
+| Property | Description |
+|---|---|
+| `Margin` | Specifies the distances between the table borders outline and the rest of the document content. |
+| `Padding` | Set through the `TableCell.Padding` property, it specifies the distances between cell borders inner contour and the cell content. |
+| `LayoutType` | Specifies the algorithm used to lay out table contents. Options in the `TableLayoutType` enumeration: `AutoFit` (table width fits the content unless wider than available space) and `FixedWidth` (table width always fits the available measuring width). |
+| `HorizontalAlignment` | Specifies the alignment of the table inside the page. |
+| `BorderSpacing` | Specifies the distance between all borders in the table. Measured differently depending on the `BorderCollapse` option. |
+| `BorderCollapse` | Specifies how border spacing calculations are done. `Collapse`: distance is measured from the middle lines of the borders. `Separate`: distance is measured from the outer border contour. |
                 
 
 **Example 3** demonstrates how border calculations occur with different **BorderCollapse** option. The code in this example creates an empty table and sets default cell padding and red table border with thickness 10 to it.

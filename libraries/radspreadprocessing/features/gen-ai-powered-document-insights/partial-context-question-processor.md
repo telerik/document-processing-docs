@@ -56,12 +56,14 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 
 The settings are created only through **EmbeddingSettingsFactory**'s **CreateSettingsForSpreadDocuments** method and can only be passed to the constructor of the processor. They expose configuration options for the question-answering process through the following properties:
 
-* **ModelMaxInputTokenLimit**: Maximum input token limit the model allows
-* **ModelId**: ID of the AI model (default: **null**)
-* **TokenizationEncoding**: Tokenization encoding used (default: **null**)
-* **EmbeddingTokenSize**: Size in tokens of each context chunk (default: **null**)
-* **ProduceJsonFormattedContext**: Whether the context should be formatted as JSON (default: **false**)
-* **TotalContextTokenLimit**: The total token limit for the context which will be sent to the answering model (default: **null** - *takes half of the max limit*)
+| Property | Description |
+|---|---|
+| `ModelMaxInputTokenLimit` | Maximum input token limit the model allows. |
+| `ModelId` | ID of the AI model. Default is `null`. |
+| `TokenizationEncoding` | Tokenization encoding used. Default is `null`. |
+| `EmbeddingTokenSize` | Size in tokens of each context chunk. Default is `null`. |
+| `ProduceJsonFormattedContext` | Whether the context should be formatted as JSON. Default is `false`. |
+| `TotalContextTokenLimit` | The total token limit for the context sent to the answering model. Default is `null` (takes half of the max limit). |
 
 <snippet id='libraries-spread-features-gen-ai-partial-context-create-iembeddingsettings'/>
 

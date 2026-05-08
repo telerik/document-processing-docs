@@ -17,11 +17,14 @@ means of the mouse and keyboard. PDF includes a wide variety of standard [annota
 
 >note [PdfProcessing Annotations Demo](https://demos.telerik.com/document-processing/pdfprocessing/annotations)
 
-The abstract **Annotation** element associates an object with a location on a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). Annotation exposes the following properties:
-      
-* **Rect**: The rectangle, which defines the location of the annotation on the page.
-          
-* **Type**: Property of type [AnnotationType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html), which determines the type of the annotation. The supported types are listed in the following table:
+The abstract **Annotation** element associates an object with a location on a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). `Annotation` exposes the following properties:
+
+| Property | Description |
+|---|---|
+| `Rect` | The rectangle that defines the location of the annotation on the page. |
+| `Type` | Of type [AnnotationType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html), this property determines the type of the annotation. The supported types are listed in the table below. |
+| `Border` | Represents the annotation borders. Of type [AnnotationBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationBorder.html), which uses an [AnnotationBorderStyle](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.model.annotations.annotationborderstyle). |
+| `IsPrintable` | Indicates whether the annotation should be visualized when printing the document. When `false`, the annotation will not appear when the document is printed. |
 
 |Annotation Type|Description|
 |----|----|
@@ -32,10 +35,6 @@ The abstract **Annotation** element associates an object with a location on a [R
 |[Stamp]({%slug radpdfprocessing-model-annotations-stamp%})|Stamp annotations display text or graphics intended to look as if they were stamped on the page with a rubber stamp.|
 |[TextMarkup]({%slug radpdfprocessing-model-annotations-text-markup%})| Text markup annotations appear as **Highlights**, **Underlines**, **Strikeouts** or **Squiggly** underlines in the text of a document. When opened, they display a pop-up window containing the text of the associated note.|
 |[Popup]({%slug radpdfprocessing-model-annotations-popup%})|A popup annotation is associated with another [markup annotation]({%slug radpdfprocessing-model-annotations-overview%}) and displays its content in a pop-up window for entry and editing. It typically appears as a pop-up note.|  
-   
-* **Border**: Represents the annotation borders. This property is of type [AnnotationBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationBorder.html) that uses an [AnnotationBorderStyle](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.model.annotations.annotationborderstyle).
-
-* **IsPrintable**: A boolean value that indicates whether the annotation instance should be visualized when printing the document. When set to *false*, the annotation won't appear when the document is printed. 
 
 ## See Also
 

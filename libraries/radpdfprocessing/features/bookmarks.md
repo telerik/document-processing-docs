@@ -15,21 +15,16 @@ Bookmarks or Outlines are a tree-structured hierarchy that the reader presents a
 
 This is the class representing a single bookmark inside the model of PdfProcessing. Each bookmark can have the following characteristics described in the respective properties:
 
-* **IsExpanded**: Determines whether the bookmark item is open or closed by default. An item is open when its children are visible upon opening the document in a viewer.
-
-* **Action**: Gets the action to be performed when this bookmark item is activated. For more information on how to work with actions, check the [Action]({%slug radpdfprocessing-model-annotations-links%}#action) help topic.
-
-* **Destination**: Gets the destination to be displayed when this bookmark item is activated. For more information on how to work with destinations, check the [Destination]({%slug radpdfprocessing-model-annotations-links%}#destination) help topic.
-
-* **NamedDestination**: Gets the named destination to be displayed when this bookmark item is activated. Check the [Named Destinations]({%slug radpdfprocessing-model-named-destinations%}) topic for more details about these objects.
-
-* **TextStyle**: Gets or sets the style characteristics for displaying the bookmark item's text. This property is of type **BookmarkItemStyles**. This type is a set of flags and can have the following values: **Normal**, **Italic** and/or **Bold**.
-
-* **TextColor**: Gets or sets the color of the bookmark item's text in RGB color space.
-
-* **Title**: Gets or sets the text to be displayed in the viewer's navigation pane for this bookmark item.
-
-* **Children**: Gets the immediate child elements for this bookmark item.
+| Property | Description |
+|---|---|
+| `IsExpanded` | Determines whether the bookmark item is open or closed by default. An item is open when its children are visible upon opening the document in a viewer. |
+| `Action` | Gets the action to be performed when this bookmark item is activated. See the [Action]({%slug radpdfprocessing-model-annotations-links%}#action) help topic. |
+| `Destination` | Gets the destination to be displayed when this bookmark item is activated. See the [Destination]({%slug radpdfprocessing-model-annotations-links%}#destination) help topic. |
+| `NamedDestination` | Gets the named destination to be displayed when this bookmark item is activated. See the [Named Destinations]({%slug radpdfprocessing-model-named-destinations%}) topic. |
+| `TextStyle` | Gets or sets the style characteristics for displaying the bookmark item's text. Of type `BookmarkItemStyles` (a flags enum with values `Normal`, `Italic`, and/or `Bold`). |
+| `TextColor` | Gets or sets the color of the bookmark item's text in RGB color space. |
+| `Title` | Gets or sets the text to be displayed in the viewer's navigation pane for this bookmark item. |
+| `Children` | Gets the immediate child elements for this bookmark item. |
 
 
 ### Working with BookmarkItem

@@ -19,10 +19,12 @@ This topic describes the default and the extended implementations used to measur
 
 The **SpreadExtensibilityManager** static class exposes the **TextMeasurer** property. This property defines the specific implementation that is used to measure the text content when needed. You can use the following values for this property:
 
-- [SimpleTextMeasurer](#simpletextmeasurer): This is the default value.
-- [SpreadFixedTextMeasurer](#spreadfixedtextmeasurer): An additional implementation that provides more accurate results than the SimpleTextMeasurer.
-- [SkiaTextMeasurer](#skiatextmeasurer): A cross-platform text measurer that supports advanced font features such as kerning, ligatures, and contextual shaping, with a trade-off in performance. It relies on the fonts registered on the current machine.
-- [Custom implementation](#custom-text-measurer): Implementing the abstract SpreadTextMeasurerBase class enables you to provide your own implementation for text measuring.
+| Value | Description |
+|---|---|
+| [`SimpleTextMeasurer`](#simpletextmeasurer) | The default value. Provides basic text measuring using pre-measured digit widths. |
+| [`SpreadFixedTextMeasurer`](#spreadfixedtextmeasurer) | An additional implementation that provides more accurate results than the `SimpleTextMeasurer`. |
+| [`SkiaTextMeasurer`](#skiatextmeasurer) | A cross-platform text measurer that supports advanced font features such as kerning, ligatures, and contextual shaping, with a trade-off in performance. Relies on the fonts registered on the current machine. |
+| [Custom implementation](#custom-text-measurer) | Implementing the abstract `SpreadTextMeasurerBase` class enables you to provide your own implementation for text measuring. |
 
 ## SimpleTextMeasurer
 
@@ -30,7 +32,9 @@ This is the measurer used by default when exporting to PDF.
 
 The width of the columns in Excel is stored as a character count calculated based on the maximum width of the digits from 0 to 9 with the Normal Style of the document applied to them. SimpleTextMeasurer uses the measured width of the digits for a predefined set of font families to calculate the column width based on the length of the text multiplied by the calculated character size. 
 
-* **TextMeasurer**: Gets or sets a *SpreadTextMeasurerBase* instance used to provide text measuring. The TextMeasurer has a *SimpleTextMeasurer* as a default value.
+| Property | Description |
+|---|---|
+| `TextMeasurer` | Gets or sets a `SpreadTextMeasurerBase` instance used to provide text measuring. The default value is `SimpleTextMeasurer`. |
 
 > The SimpleTextMeasurer provides basic functionality for text measuring and the results might not be satisfying in each case. For better results, use [SpreadFixedTextMeasurer](#spreadfixedtextmeasurer).
 

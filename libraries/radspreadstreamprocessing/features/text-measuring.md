@@ -27,26 +27,30 @@ CellContentSizeHelper is a static class and exposes two overloads of the GetCell
 
 ### Measuring Cell Content with SpreadCellFormat
 
-One of overloads of **GetCellContentSize** enables you to obtain the size needed for a specific cell value with applied a [SpreadCellFormat]({%slug radspreadstreamprocessing-model-cells%}#set-a-format) to it. The following list describes the parameters of that method:
+One of overloads of **GetCellContentSize** enables you to obtain the size needed for a specific cell value with applied a [SpreadCellFormat]({%slug radspreadstreamprocessing-model-cells%}#set-a-format) to it. The following table describes the parameters of that method:
 
-- **string value**: The cell value. If formula is passed, the method will throw an ArgumentException.
-- **SpreadCellFormat spreadCellFormat**: The formatting of the cell.
-- **double cellWidth**: Optional. The width of the cell in pixels. This value is only respected if the value of the `WrapText` property of the `spreadCellFormat` is `true`. *The default column width is 65 pixels*.
+| Parameter | Type | Description |
+|---|---|---|
+| `value` | `string` | The cell value. If formula is passed, the method will throw an `ArgumentException`. |
+| `spreadCellFormat` | `SpreadCellFormat` | The formatting of the cell. |
+| `cellWidth` | `double` | Optional. The width of the cell in pixels. This value is only respected if the value of the `WrapText` property of the `spreadCellFormat` is `true`. The default column width is 65 pixels. |
 
 ### Measuring Cell Content with Separate Formatting Values
 
-GetCellContentSize exposes an overload that allows you pass separate values for the formatting properties of a cell that can affect the size of that cell's content. Following are the parameters that overload accepts:
+GetCellContentSize exposes an overload that allows you pass separate values for the formatting properties of a cell that can affect the size of that cell's content. The following table describes the parameters that overload accepts:
 
-- **string value**: The cell value. If formula is passed the method will throw an ArgumentException.
-- **string cellValueFormat**: The number format of the cell.
-- **string fontFamily**: The font family name.
-- **double fontSize**: The size of the font.
-- **bool isBold**: A value indicating whether the text is bold.
-- **bool isItalic**: A value indicating whether the text is italic.
-- **SpreadHorizontalAlignment horizontalAlignment**: The horizontal alignment.
-- **bool isWrapped**: A value indicating whether the text is wrapped.
-- **int indent**: The cell indentation.
-- **double cellWidth**: Optional. The width of the cell in pixels. This value is only respected if the value of the `WrapText` property of the `spreadCellFormat` is `true`. *The default column width is 65 pixels*.
+| Parameter | Type | Description |
+|---|---|---|
+| `value` | `string` | The cell value. If formula is passed the method will throw an `ArgumentException`. |
+| `cellValueFormat` | `string` | The number format of the cell. |
+| `fontFamily` | `string` | The font family name. |
+| `fontSize` | `double` | The size of the font. |
+| `isBold` | `bool` | A value indicating whether the text is bold. |
+| `isItalic` | `bool` | A value indicating whether the text is italic. |
+| `horizontalAlignment` | `SpreadHorizontalAlignment` | The horizontal alignment. |
+| `isWrapped` | `bool` | A value indicating whether the text is wrapped. |
+| `indent` | `int` | The cell indentation. |
+| `cellWidth` | `double` | Optional. The width of the cell in pixels. This value is only respected if the value of the `WrapText` property of the `spreadCellFormat` is `true`. The default column width is 65 pixels. |
 
 ## Example
 

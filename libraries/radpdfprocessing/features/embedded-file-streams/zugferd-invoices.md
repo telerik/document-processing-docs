@@ -34,10 +34,12 @@ As of **Q4 2025** RadPdfProcessing provides support for specifying the ZUGFeRD (
 
 RadPdfProcessing offers the functionality to specify the **ZugferdConformanceLevel** when embedding the invoice. The available options are:
 
-* **Minimum**: The minimal profile providing only the essential data needed for a compliant e-invoice. Suitable for simple use cases with limited automation.
-* **Basic**: The basic profile providing core structured data for improved interoperability and basic automated processing between trading partners. This is the default value. 
-* **Comfort**: The comfort profile with richer structured content, typically aligned with common business requirements to enable advanced automation.
-* **Extended**: The most comprehensive profile including extended data elements to cover advanced or industry-specific scenarios beyond the comfort profile.
+| Level | Description |
+|---|---|
+| `Minimum` | The minimal profile providing only the essential data needed for a compliant e-invoice. Suitable for simple use cases with limited automation. |
+| `Basic` | The basic profile providing core structured data for improved interoperability and basic automated processing between trading partners. This is the default value. |
+| `Comfort` | The comfort profile with richer structured content, typically aligned with common business requirements to enable advanced automation. |
+| `Extended` | The most comprehensive profile including extended data elements to cover advanced or industry-specific scenarios beyond the comfort profile. |
 
 <snippet id='pdf-specify-zugferd-conformance-level'/>
 

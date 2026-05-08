@@ -36,13 +36,12 @@ A concrete instance of IRowExporter could be created through the CreateRowExport
 
 In order to customize the way a row appears, you could use one of the following methods:
 
-* **SetHeightInPixels()**: Sets the row height in pixels.
-
-* **SetHeightInPoints()**: Sets the row height in points.
-
-* **SetOutlineLevel()**: Sets the row outline level. The outline level is used when grouping rows. To group several rows, they should have the same OutlineLevel and if you would like to create nested grouping, you can use different levels for the outer and for the nested rows. 
-
-* **SetHidden()**: Sets a boolean value that indicates whether the row should be hidden or not.
+| Method | Description |
+|---|---|
+| `SetHeightInPixels()` | Sets the row height in pixels. |
+| `SetHeightInPoints()` | Sets the row height in points. |
+| `SetOutlineLevel()` | Sets the row outline level, used when grouping rows. Rows with the same `OutlineLevel` are grouped together; use different levels for nested grouping. |
+| `SetHidden()` | Sets a boolean value indicating whether the row should be hidden. |
 
 
 #### **Example 2: Set properties to IRowExporter**
@@ -74,12 +73,14 @@ A concrete instance of IRowImporter could be obtained through the Rows collectio
 
 The IRowImporter interface exposes the following properties to allow you access its data:
 
-* **RowIndex**: Gets the index of the row in the worksheet.
-* **OutlineLevel**: Gets the outline level (used when grouping rows).
-* **IsCustomHeight**: Gets a value indicating whether the height applied to the current row is a custom one.
-* **HeightInPixels** and **HeightInPoints**: Gets the height of the row in pixels and in points, respectively.
-* **IsHidden**: Gets a value determining whether the row is hidden.
-* **Cells**: Collection of ICellImporter objects, enabling you to iterate the cells inside the worksheet using.
+| Property | Description |
+|---|---|
+| `RowIndex` | Gets the index of the row in the worksheet. |
+| `OutlineLevel` | Gets the outline level (used when grouping rows). |
+| `IsCustomHeight` | Gets a value indicating whether the height applied to the current row is a custom one. |
+| `HeightInPixels` / `HeightInPoints` | Gets the height of the row in pixels and in points, respectively. |
+| `IsHidden` | Gets a value determining whether the row is hidden. |
+| `Cells` | Collection of `ICellImporter` objects, enabling you to iterate the cells inside the row. |
 
 
 

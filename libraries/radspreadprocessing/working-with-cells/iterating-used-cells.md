@@ -35,31 +35,33 @@ This section describes how you can obtain only the cells that have particular pr
 
 >tip For more information on working with the values of the cells, check the [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) topics.
 
-Following is a list of the property definitions defined by the [CellPropertyDefinitions class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.CellPropertyDefinitions.html), which you can use to filter the used cell range:
+The following table lists the property definitions defined by the [CellPropertyDefinitions class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.CellPropertyDefinitions.html), which you can use to filter the used cell range:
 
-* **AllPropertyDefinitions**: Gets all property definitions. It has the same behavior as the UsedCellRange property - no filtering is applied to the range.
-* **BottomBorderProperty**: Gets all cells that have defined a bottom border.
-* **TopBorderProperty**: Gets all cells that have applied a top border.
-* **LeftBorderProperty**: Gets all cells that have applied a left border.
-* **RightBorderProperty**: Gets all cells that have applied a right border.
-* **DiagonalDownBorderProperty**: Gets all cells that have defined a diagonal down border.
-* **DiagonalUpBorderProperty**: Gets all cells that have defined a diagonal up border.
-* **DataValidationRuleProperty**: Gets all cells that have applied a data validation rule.
-* **FillProperty**: Gets all cells that have defined fill color.
-* **FontFamilyProperty**: Gets all cells that have applied font family.
-* **FontSizeProperty**: Gets all cells that have applied font size.
-* **ForeColorProperty**: Gets all cells that have applied fore color.
-* **FormatProperty**: Gets all cells that have defined a specific number format.
-* **HorizontalAlignmentProperty**: Gets all cells that have applied horizontal alignment.
-* **VerticalAlignmentProperty**: Gets all cells that are vertically aligned.
-* **IndentProperty**: Gets all cells that have applied indentation.
-* **IsBoldProperty**: Gets all cells that are bold.
-* **IsItalicProperty**: Gets all cells that have applied italic font style.
-* **IsLockedProperty**: Gets all cells that are locked and will be protected when protection is applied.
-* **IsWrappedProperty**: Gets all cells that have applied text wrapping.
-* **StyleNameProperty**: Gets all cells that have applied a style.
-* **UnderlineProperty**: Gets all cells that have underlining.
-* **ValueProperty**: Gets all cells that have a value.
+| Property | Description |
+|---|---|
+| `AllPropertyDefinitions` | Gets all property definitions. Same behavior as `UsedCellRange` — no filtering is applied. |
+| `BottomBorderProperty` | Gets all cells that have a defined bottom border. |
+| `TopBorderProperty` | Gets all cells that have a defined top border. |
+| `LeftBorderProperty` | Gets all cells that have a defined left border. |
+| `RightBorderProperty` | Gets all cells that have a defined right border. |
+| `DiagonalDownBorderProperty` | Gets all cells that have a defined diagonal down border. |
+| `DiagonalUpBorderProperty` | Gets all cells that have a defined diagonal up border. |
+| `DataValidationRuleProperty` | Gets all cells that have a data validation rule applied. |
+| `FillProperty` | Gets all cells that have a defined fill color. |
+| `FontFamilyProperty` | Gets all cells that have a font family applied. |
+| `FontSizeProperty` | Gets all cells that have a font size applied. |
+| `ForeColorProperty` | Gets all cells that have a fore color applied. |
+| `FormatProperty` | Gets all cells that have a specific number format defined. |
+| `HorizontalAlignmentProperty` | Gets all cells that have horizontal alignment applied. |
+| `VerticalAlignmentProperty` | Gets all cells that have vertical alignment applied. |
+| `IndentProperty` | Gets all cells that have indentation applied. |
+| `IsBoldProperty` | Gets all cells that are bold. |
+| `IsItalicProperty` | Gets all cells that have italic font style applied. |
+| `IsLockedProperty` | Gets all cells that are locked and will be protected when protection is applied. |
+| `IsWrappedProperty` | Gets all cells that have text wrapping applied. |
+| `StyleNameProperty` | Gets all cells that have a style applied. |
+| `UnderlineProperty` | Gets all cells that have underlining applied. |
+| `ValueProperty` | Gets all cells that have a value. |
 
 
 ## See Also 
