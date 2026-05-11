@@ -14,18 +14,6 @@ The **Table** class helps you easily create tabular data content. All you need t
 
 ![Rad Pdf Processing Editing Table 01](images/RadPdfProcessing_Editing_Table_01.png)
 
-This article aims to present the table-related API in `RadPdfProcessing`. It contains the following sections:
-
-* [Defining Table Content](#defining-table-content)
-
-* [Using DefaultCellProperties](#using-defaultcellproperties)
-
-* [Modifying a Table](#modifying-a-table)
-
-* [Drawing Table with RadFixedDocumentEditor](#drawing-table-with-radfixeddocumenteditor)
-
-* [Drawing Table with FixedContentEditor](#drawing-table-with-fixedcontenteditor)
-
 ## Defining Table Content
 
 Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instances each of which contains a series of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances. To define a simple table, you need to generate the table cells and add some content to them.
