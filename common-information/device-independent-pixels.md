@@ -20,29 +20,35 @@ tags: dip, pixels, measurement, unit, radspreadprocessing, radpdfprocessing, rad
 The [UnitHelper](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.utilities.unithelper) class provides a bunch of methods for converting from DIPs to other measurement units and vice versa (e.g. points, picas, centimeters, inches, etc.).
 
 #### Convert From Dip to Unit:
-* **DipToPoint**: Converts dips to points.
-* **DipToPointI**: Converts dips to points.
-* **DipToPica**: Converts dips to picas.
-* **DipToCm**: Converts dips to centimeters.
-* **DipToMm**: Converts dips to millimeters.
-* **DipToInch**: Converts dips to inches.
-* **DipToTwip**: Converts dips to twips.
-* **DipToEmu**: Converts dips to EMUs.
-* **DipToTwipI**: Converts dips to twips.
-* **DipToTwipF**: Converts dips to twips.
-* **DipToUnit**: Converts DIPs to units.
+
+| Method | Description |
+|---|---|
+| `DipToPoint` | Converts dips to points. |
+| `DipToPointI` | Converts dips to points. |
+| `DipToPica` | Converts dips to picas. |
+| `DipToCm` | Converts dips to centimeters. |
+| `DipToMm` | Converts dips to millimeters. |
+| `DipToInch` | Converts dips to inches. |
+| `DipToTwip` | Converts dips to twips. |
+| `DipToEmu` | Converts dips to EMUs. |
+| `DipToTwipI` | Converts dips to twips. |
+| `DipToTwipF` | Converts dips to twips. |
+| `DipToUnit` | Converts DIPs to units. |
 
 #### Convert From Unit to Dip:
-* **PointToDip**: Converts points to dips.
-* **PicaToDip**: Converts picas to dips.
-* **EmuToDip**: Converts EMUs to dips.
-* **CmToDip**: Converts centimeters to dips.
-* **MmToDip**: Converts millimeters to dips.
-* **InchToDip**: Converts inches to dips.
-* **TwipToDip**: Converts twips to dips.
-* **TwipToDipF**: Converts twips to dips.
-* **TwipToDipI**: Converts twips to dips.
-* **UnitToDip**: Converts Units to dips.
+
+| Method | Description |
+|---|---|
+| `PointToDip` | Converts points to dips. |
+| `PicaToDip` | Converts picas to dips. |
+| `EmuToDip` | Converts EMUs to dips. |
+| `CmToDip` | Converts centimeters to dips. |
+| `MmToDip` | Converts millimeters to dips. |
+| `InchToDip` | Converts inches to dips. |
+| `TwipToDip` | Converts twips to dips. |
+| `TwipToDipF` | Converts twips to dips. |
+| `TwipToDipI` | Converts twips to dips. |
+| `UnitToDip` | Converts Units to dips. |
 
 Most of the methods follow the same pattern for converting units:
 
