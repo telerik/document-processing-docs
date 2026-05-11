@@ -18,7 +18,12 @@ ticketid: 1714155
 
 ## Description
 
-The TKL403 licensing warning occurs when using Telerik Document Processing Libraries version 2026.1.402.80. The error states: "Services associated with Telerik Document Processing Libraries require a subscription or trial license. Please obtain a subscription license." This issue commonly arises when using the Telerik.UI.for.Wpf.AllControls NuGet package, which includes references to the Telerik Document Processing Agent Tools. These AI tools require a subscription license, which is not covered under a perpetual license.
+The `TKL403` licensing warning occurs when using Telerik Document Processing Libraries version 2026.1.402.80. The error states: *"Services associated with Telerik Document Processing Libraries require a subscription or trial license. Please obtain a subscription license."* This issue commonly arises when using one of the following NuGet packages:
+
+* Telerik.UI.for.Wpf.AllControls
+* UI.for.WinForms.AllControls 
+
+Both packages include references to the Telerik Document Processing [Agent Tools]({%slug agent-tools-overview%}). These AI tools require a **subscription** license, which is not covered under a **perpetual** license.
 
 This knowledge base article also answers the following questions:
 - How to resolve TKL403 warning for Telerik Document Processing Libraries?
@@ -29,14 +34,13 @@ This knowledge base article also answers the following questions:
 
 To resolve the TKL403 licensing warning, follow these steps:
 
-1. Verify if the Telerik.UI.for.Wpf.AllControls NuGet package is in use. This package includes unnecessary dependencies like Telerik Document Processing Agent Tools, which require a subscription license.
-2. If using the Telerik.UI.for.Wpf.AllControls package, replace it with individual NuGet packages for the specific components used in your project. This ensures the AI tools are not included and prevents licensing warnings.
-3. If the AI tools are required, obtain a subscription license to remove the warning. Refer to [License Requirements](https://www.telerik.com/document-processing-libraries/documentation/ai-tools/agent-tools/overview#license-requirements) for more details.
-4. Confirm that your documents are not watermarked. The warnings do not indicate issues with the core Telerik Document Processing libraries.
+1. Verify if the Telerik.UI.for.Wpf.AllControls or the UI.for.WinForms.AllControls NuGet package is in use. This package includes unnecessary dependencies like Telerik Document Processing Agent Tools, which require a subscription license.
+2. If using one of the combined packages package, replace it with individual NuGet packages for the specific components used in your project. This ensures the AI tools are not included and prevents licensing warnings.
+3. If the AI tools are required, obtain a subscription license to remove the warning. Refer to [License Requirements]({%slug agent-tools-overview%}#license-requirements) for more details.
+4. The generated documents are not expected to be watermarked and your license for the core Telerik Document Processing libraries remains valid. The warnings do not indicate a license problem for the packages you are actively using.
 5. If the warning persists, ensure that only relevant NuGet packages are installed and no unnecessary dependencies are included.
 
 ## See Also
 
-- [Telerik Document Processing Overview](https://www.telerik.com/document-processing)
-- [License Requirements for AI Tools](https://www.telerik.com/document-processing-libraries/documentation/ai-tools/agent-tools/overview#license-requirements)
-- [Troubleshooting Licensing Warnings and Errors](https://www.telerik.com/document-processing-libraries/documentation/distribution-and-licensing/license-key/activation-errors-and-warnings)
+- [License Requirements for AI Tools]({%slug agent-tools-overview%}#license-requirements)
+- [Troubleshooting Licensing Warnings and Errors]({%slug activation-errors-and-warnings%})
