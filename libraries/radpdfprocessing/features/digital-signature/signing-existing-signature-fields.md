@@ -13,7 +13,7 @@ position: 5
 |Minimum Version|Q2 2026|
 |----|----|
 
-**RadPdfProcessing** enables you to sign multiple pre-existing signature fields in a PDF document while preserving the validity of previously applied signatures. The `PdfStreamSigner` class applies each signature through an *incremental update*, which appends data to the original PDF instead of rewriting it. This approach ensures that each subsequent signature does not invalidate earlier ones.
+**RadPdfProcessing** enables you to sign multiple pre-existing signature fields in a PDF document while preserving the validity of previously applied signatures. The `PdfStreamSigner` class applies each signature through an *incremental update*, which appends data to the original PDF instead of rewriting it. This approach ensures that each subsequent signature does not invalidate earlier ones. 
 
 PDF documents often contain multiple unsigned signature fields, for example, a contract that requires approval from several parties. When you sign these fields one at a time, each signing operation must preserve the integrity of all previous signatures. The `SignExistingField` method of the `PdfStreamSigner` class addresses this requirement. It locates a pre-existing signature field by name, applies a digital signature, and writes the result as an incremental update to the output stream. You can chain multiple signing operations by feeding the output of one step as the input to the next.
 
