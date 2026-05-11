@@ -10,7 +10,7 @@ position: 2
 
 # Settings
 
-The `MarkdownFormatProvider` exposes `ImportSettings` and `ExportSettings` properties that let you customize how the document is parsed and serialized.
+The `MarkdownFormatProvider` exposes `ImportSettings` and `ExportSettings` properties that let you customize how the document is parsed and serialized into the document model.
 
 ### Import Settings
 
@@ -21,7 +21,7 @@ The `ImportSettings` property returns a `MarkdownImportSettings` instance. This 
 | `Encoding` | Gets or sets the encoding used when reading the Markdown stream. Defaults to UTF-8. Throws `ArgumentNullException` if set to `null`. |
 | `MaxDocumentSizeBytes` | Gets or sets the maximum number of bytes that may be read from the input stream. Documents exceeding this limit throw an `InvalidOperationException` during import. Default is **52,428,800 (50 MB)**. Set to `0` to disable the check. |
 | `MaxDataUriImageTotalBytes` | Gets or sets the maximum cumulative decoded bytes that may be embedded from data URI images across the entire document. Subsequent data URI images are skipped and a warning is added to `Warnings` once the limit is exceeded. Default is **0 (no limit)**. |
-| `AllowLocalFileSystemImages` | Gets or sets whether images referenced by `file://` URLs are read from the local file system and embedded during import. Default is **`false`** (local file images are skipped and a warning is added). Only enable for trusted sources — can expose arbitrary local files (CWE-22). |
+| `AllowLocalFileSystemImages` | Gets or sets whether images referenced by `file://` URLs are read from the local file system and embedded during import. Default is **`false`** (local file images are skipped and a warning is added). Only enable for trusted sources - can expose arbitrary local files (CWE-22). |
 | `StyleSettings` | Gets the style customization settings applied during import. Use to override styles for Markdown elements or customize visual properties of auto-created styles. |
 | `Warnings` | Gets the list of non-fatal warnings generated during the last import. Cleared and repopulated on each import. Typical entries describe images that could not be loaded. Do not modify while an import is in progress. |
 
