@@ -5,7 +5,7 @@ type: how-to
 page_title: Fixing TKL403 Warning for Telerik Document Processing Libraries
 meta_title: Fixing TKL403 Warning for Telerik Document Processing Libraries
 slug: tkl403-warning-telerik-document-processing
-tags: telerik document processing, licensing, tkl403, subscription license
+tags: telerik, document, processing, licensing, tkl403, subscription, license, wpf, winforms, allcontrols
 res_type: kb
 ticketid: 1714155
 ---
@@ -18,7 +18,7 @@ ticketid: 1714155
 
 ## Description
 
-The `TKL403` licensing warning occurs when using Telerik Document Processing Libraries version 2026.1.402.80. The error states: *"Services associated with Telerik Document Processing Libraries require a subscription or trial license. Please obtain a subscription license."* This issue commonly arises when using one of the following NuGet packages:
+The `TKL403` licensing warning occurs when using Telerik Document Processing Libraries version 2026.1.402 (Q1 2026). The error states: *"Services associated with Telerik Document Processing Libraries require a subscription or trial license. Please obtain a subscription license."* This issue commonly arises when using one of the following NuGet packages:
 
 * Telerik.UI.for.Wpf.AllControls
 * UI.for.WinForms.AllControls 
