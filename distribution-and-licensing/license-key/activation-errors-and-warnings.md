@@ -51,4 +51,5 @@ When using the product in a project with an expired or missing license, the _Tel
 * [Unable to find package Telerik.Licensing]({%slug dpl-package-update-failure-license%})
 * [Handling License Key File Name and Environment Variable Name Changes in the 2025 Q1 Release]({%slug handling-license-file-name-changes%})
 * [Telerik.Licensing NuGet package is not available on the Telerik NuGet feed]({%slug dpl-telerik-licensing-nuget-feed%})
+* [Resolving TKL403 Licensing Warning for Telerik Document Processing]({%slug tkl403-warning-telerik-document-processing%})
 
