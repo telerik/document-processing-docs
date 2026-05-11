@@ -13,15 +13,19 @@ position: 4
 
 **RadPdfProcessing** has an exception handling mechanism. It allows to intercept and handle exceptions when the document is imported or loaded. This functionality introduces the following events:
 
-* __PdfImportSettings.DocumentUnhandledException:__ The event is fired when an exception occurs during document import. If the **ReadingMode** is set to **AllAtOnce** the entire document will be loaded on document import and there is no need to use the other event.
-* __RadFixedDocument.DocumentUnhandledException:__ The event is fired when an exception occurs while loading the document pages. This event can be fired when the document is imported with **OnDemand ReadingMode** and a particular page is loaded after the import.
-* **PdfExportSettings.DocumentUnhandledException:** The event is fired when an exception occurs while exporting the document pages. Introduced in **Q1 2025**. 
+| Event | Description |
+|---|---|
+| `PdfImportSettings.DocumentUnhandledException` | Fired when an exception occurs during document import. If `ReadingMode` is `AllAtOnce`, the entire document is loaded on import and this event covers the full load. |
+| `RadFixedDocument.DocumentUnhandledException` | Fired when an exception occurs while loading document pages. Raised when the document is imported with **OnDemand** `ReadingMode` and a particular page is loaded after import. |
+| `PdfExportSettings.DocumentUnhandledException` | Fired when an exception occurs while exporting document pages. Introduced in **Q1 2025**. |
+| `SkiaImageExportSettings.DocumentUnhandledException` | Fired when an exception occurs while exporting a PDF page. Introduced in **Q3 2025**. *(Available in the .NET Standard version of the libraries.)* |
 
-* **SkiaImageExportSettings.DocumentUnhandledException**: The event is fired when an exception occurs while exporting a PDF page. Introduced in **Q3 2025**. (*Available in the NET Standard version of the libraries*).
+When the events are raised, the __DocumentUnhandledExceptionEventArgs__ argument is passed. This argument contains the following properties:
 
-When the events are raised, the  __DocumentUnhandledExceptionEventArgs__ argument is passed. This argument contains two properties:
-* __Exception:__ Gets the document exception.
-* __Handled:__ Gets or sets if the exception should be handled. The default value is *false*. 
+| Property | Description |
+|---|---|
+| `Exception` | Gets the document exception. |
+| `Handled` | Gets or sets whether the exception should be handled. The default value is `false`. |
 
 >note The exception handling mechanism handles exceptions at the very beginning of the import as well. In such a case, the event will be raised and an empty document instance is returned. The exception handling mechanism **does not handle** exceptions while parsing **fonts glyph data** or parsing **images** during document rendering in the UI viewers.
 

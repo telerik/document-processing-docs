@@ -26,34 +26,20 @@ The code from __Example 1__ shows how you can create a new __RadFlowDocument__.
 
 
 
-__RadFlowDocument__ exposes properties which allow you to customize the way content is presented. The following properties are available for change:
-        
-* **DocumentInfo**: This property enables you to set and obtain metadata information for the document file. It is of type **DocumentInfo** and allows you get and set the **Author**, **Title**, **Subject**, **Keywords** and **Description**.        
+**RadFlowDocument** exposes the following properties to customize the way content is presented:
 
-* __ViewType__: An enumeration which specifies how the document should be laid out when displayed. It depends on the application with which the document is opened after it has been created whether this property is respected. 
-            
-
-* __Theme__: Specifies the theme which is applied to the document. The document theme enables you to specify colors, fonts and a variety of graphic effects which affect the look of the whole document. More information is available [here]({%slug radwordsprocessing-concepts-document-themes%}).
-            
-
-* __StyleRepository__: Represents the document' StyleRepository. The repository allows to add, remove or enumerate the styles of the document.
-            
-
-* __DefaultStyle__: The default styles that are used for __Paragraph__ and __Run__ elements. More information on default styles is available [here]({%slug radwordsprocessing-concepts-styles%}).
-            
-
-* __HasDifferentEvenOddPageHeadersFooters__: Gets or sets whether pages in this document should have different headers and footers for even and odd pages.
-            
-
-* __ListCollection__: Represents the collection of [Lists]({%slug radwordsprocessing-concepts-lists%}) in the document.
-            
-
-* __CommentCollection__: Represents the collection of [Comments]({%slug radwordsprocessing-model-comment%}) in the document.
-
-
-* __ProtectionSettings:__ Corresponds to the settings that are used when the document is protected. More information is available [here]({%slug radwordsprocessing-model-permissionrange%}). 
-
-* __DefaultTabStopWidth__: The distance between automatic [TabStops]({%slug radwordsprocessing-concepts-tabstop%}).
+| Property | Description |
+|---|---|
+| `DocumentInfo` | Enables you to set and obtain metadata for the document file. Of type `DocumentInfo`, it allows you to get and set `Author`, `Title`, `Subject`, `Keywords`, and `Description`. |
+| `ViewType` | An enumeration that specifies how the document should be laid out when displayed. Whether this property is respected depends on the application used to open the document. |
+| `Theme` | Specifies the theme applied to the document. The document theme enables you to specify colors, fonts, and graphic effects that affect the look of the whole document. More information is available [here]({%slug radwordsprocessing-concepts-document-themes%}). |
+| `StyleRepository` | Represents the document's `StyleRepository`. The repository allows you to add, remove, or enumerate the styles of the document. |
+| `DefaultStyle` | The default styles used for `Paragraph` and `Run` elements. More information on default styles is available [here]({%slug radwordsprocessing-concepts-styles%}). |
+| `HasDifferentEvenOddPageHeadersFooters` | Gets or sets whether pages in this document should have different headers and footers for even and odd pages. |
+| `ListCollection` | Represents the collection of [Lists]({%slug radwordsprocessing-concepts-lists%}) in the document. |
+| `CommentCollection` | Represents the collection of [Comments]({%slug radwordsprocessing-model-comment%}) in the document. |
+| `ProtectionSettings` | Corresponds to the settings used when the document is protected. More information is available [here]({%slug radwordsprocessing-model-permissionrange%}). |
+| `DefaultTabStopWidth` | The distance between automatic [TabStops]({%slug radwordsprocessing-concepts-tabstop%}). |
 
             
 

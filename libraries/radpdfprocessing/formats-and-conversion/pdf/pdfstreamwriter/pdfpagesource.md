@@ -1,4 +1,4 @@
----
+﻿---
 title: PdfPageSource
 description: Learn how to use the PdfPageSource class in RadPdfProcessing to represent and work with individual pages from an existing PDF file.
 page_title: PdfPageSource
@@ -26,10 +26,12 @@ An instance of the PdfPageSource class can be obtained using the **Pages** prope
 
 PdfPageSource exposes the following properties to give you information about the pages:
 
-* **MediaBox**: Defines the boundaries of the physical medium on which the page will be printed. Any content falling outside this boundary is discarded without affecting the meaning of the PDF file. 
-* **CropBox**: Defines the region to which the contents of the page are clipped (cropped) when displayed or printed. This boundary determines the visible page content. The default value is the page’s media box. 
-* **Size**: Property of type Size representing the size of the page. Its value is determined by the width and height of the **MediaBox**.
-* **Rotation**: Property of type [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) representing the page rotation. 
+| Property | Description |
+|---|---|
+| `MediaBox` | Defines the boundaries of the physical medium on which the page will be printed. Any content falling outside this boundary is discarded without affecting the meaning of the PDF file. |
+| `CropBox` | Defines the region to which the contents of the page are clipped (cropped) when displayed or printed. This boundary determines the visible page content. The default value is the page's media box. |
+| `Size` | Property of type `Size` representing the size of the page. Its value is determined by the width and height of the `MediaBox`. |
+| `Rotation` | Property of type [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) representing the page rotation. |
 
 **Example 2** shows how you can use PdfPageSource to merge the pages of several documents into a single one.
 

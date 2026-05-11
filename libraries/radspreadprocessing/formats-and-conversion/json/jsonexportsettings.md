@@ -45,19 +45,28 @@ The [JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-
 ### Enum Values
 
 **ExportWhat**
-* **ActiveSheet** - Exports only the currently active worksheet.
-* **EntireWorkbook** - Exports all worksheets in the workbook. (Default)
-* **Selection** - Exports only the currently selected cell ranges.
+
+| Value | Description |
+|---|---|
+| `ActiveSheet` | Exports only the currently active worksheet. |
+| `EntireWorkbook` | Exports all worksheets in the workbook. (Default) |
+| `Selection` | Exports only the currently selected cell ranges. |
 
 **ChartDataMode**
-* **ReferencesOnly** - Only formula / reference expressions are exported. (Default)
-* **ResolvedValues** - Only resolved literal value arrays are exported.
-* **Both** - Both references and resolved value arrays are exported.
+
+| Value | Description |
+|---|---|
+| `ReferencesOnly` | Only formula/reference expressions are exported. (Default) |
+| `ResolvedValues` | Only resolved literal value arrays are exported. |
+| `Both` | Both references and resolved value arrays are exported. |
 
 **ValueRenderMode**
-* **Raw** - Underlying raw cell value is exported.
-* **Display** - Formatted display value is exported. (Default)
-* **Both** - Both raw and display representations are exported.
+
+| Value | Description |
+|---|---|
+| `Raw` | Underlying raw cell value is exported. |
+| `Display` | Formatted display value is exported. (Default) |
+| `Both` | Both raw and display representations are exported. |
 
 ## Basic Usage
 

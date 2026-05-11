@@ -47,10 +47,12 @@ However, if you're working with larger documents or want to optimize token usage
 
 The **CompleteContextProcessorSettings** class defines configuration options for the question-answering process. The following read-only properties can be set only through the constructor:
 
-* **ModelMaxInputTokenLimit**: The maximum input token limit the model allows.
-* **ModelId**: The ID of the model.
-* **TokenizationEncoding**: The tokenization encoding.
-* **ProduceJsonFormattedContext**: Determines whether the context sent to the model is in JSON or plain text format, if json format is applicable (default is *false*).
+| Property | Description |
+|---|---|
+| `ModelMaxInputTokenLimit` | The maximum input token limit the model allows. |
+| `ModelId` | The ID of the model. |
+| `TokenizationEncoding` | The tokenization encoding. |
+| `ProduceJsonFormattedContext` | Determines whether the context sent to the model is in JSON or plain text format, if JSON format is applicable. Default is `false`. |
 
 ## Usage Example
 

@@ -20,13 +20,12 @@ You could merge documents at a specific position using the InsertDocument() meth
 
 * **public void InsertDocument(RadFlowDocument sourceDocument, InsertDocumentOptions insertOptions)**
 
-	* The *sourceDocument* variable represents the document, which should be inserted (merged) at the specified location.
-	
-	* [**InsertDocumentOptions**](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Editing.InsertDocumentOptions.html): Represents the options, which should be used while inserting is performed. This class contains information about: 
-	
-		* [**ConflictingStylesResolutionMode**](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.ConflictingStylesResolutionMode.html): Determines how conflicts between styles should be resolved (rename the style of the source or keep the target settings). The default value is *RenameSourceStyle*.
+The [**InsertDocumentOptions**](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Editing.InsertDocumentOptions.html) class contains the following options to control the insert behavior:
 
-		* **InsertLastParagraphMarker**: Determines whether the last paragraph marker (last paragraph formatting symbol) should be inserted. If the value is *true*, then a new paragraph with the same formatting will be inserted. Otherwise, only the inlines from that paragraph will be inserted. The default value is *true*.
+| Property | Description |
+|---|---|
+| `ConflictingStylesResolutionMode` | Of type [ConflictingStylesResolutionMode](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.ConflictingStylesResolutionMode.html). Determines how conflicts between styles are resolved (rename the source style or keep the target settings). Default: `RenameSourceStyle`. |
+| `InsertLastParagraphMarker` | Determines whether the last paragraph marker (last paragraph formatting symbol) should be inserted. If `true`, a new paragraph with the same formatting is inserted. If `false`, only the inlines from that paragraph are inserted. Default: `true`. |
 
 **Example 1** demonstrates how to use the InsertDocument() method.
 

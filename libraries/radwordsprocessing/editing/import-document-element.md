@@ -20,11 +20,13 @@ This article explains how you could import a document element from one document 
 
 ### Create a DocumentElementImporter
 
-The constructor of the **DocumentElementImporter** class accepts three parameters:
+The constructor of the **DocumentElementImporter** class accepts the following parameters:
 
-* **targetDocument**: The **RadFlowDocument** instance for which the elements will be prepared for inserting.
-* **sourceDocument**: The **RadFlowDocument** from where the elements will be imported.
-* **conflictingStylesResolutionMode**: Represents the resolution mode, which will be used if a style conflict appears during the style repositories merging. Could be set to one of the values of the [ConflictingStylesResolutionMode enumeration]( https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.ConflictingStylesResolutionMode.html).
+| Parameter | Description |
+|---|---|
+| `targetDocument` | The `RadFlowDocument` instance for which the elements will be prepared for inserting. |
+| `sourceDocument` | The `RadFlowDocument` from where the elements will be imported. |
+| `conflictingStylesResolutionMode` | The resolution mode used when a style conflict appears during style repository merging. One of the [ConflictingStylesResolutionMode](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.ConflictingStylesResolutionMode.html) values. |
 
 <a name="example1"><a/>
 #### __Example 1: Create DocumentElementImporter__

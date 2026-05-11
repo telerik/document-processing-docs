@@ -26,13 +26,10 @@ This class corresponds to FormFieldType.Signature enum value and represents a pl
 
 SignatureField provides the following properties:
 
-* **Signature**: Gets or sets the Signature value. 
-	* Setting this property will sign the document during export. At this point, signing with multiple signatures is not supported.
-	* To validate a signature, you can use the Validate() and TryValidate() methods. Note, that the validation requires that the stream, from which the document is imported, to be opened. The validation is performed for the current field, and against the state of the document in the moment of importing.
-
-    > More information on how you can digitally sign a document is available in the [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) topic.
-
-* **Widgets**: The collection of Widget annotations, which represent the field on the PDF pages. The widgets can be added and removed from the collection using the collection's **AddWidget()** and **Remove()** methods respectively. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
+| Property | Description |
+|---|---|
+| `Signature` | Gets or sets the `Signature` value. Setting this property will sign the document during export. Signing with multiple signatures is not currently supported. To validate a signature, use the `Validate()` and `TryValidate()` methods. Validation requires that the source stream be open and is performed against the document state at import time. See [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) for more details. |
+| `Widgets` | The collection of Widget annotations representing the field on the PDF pages. Widgets can be added using `AddWidget()` and removed using `Remove()`. Implements `IEnumerable`. |
 
 
 #### **Example 1: Create a SignatureField and add it to a page**

@@ -24,12 +24,14 @@ The simple colors represent colors, which are defined with color components. The
 
 ### RgbColor
 
-Represents an ARGB (alpha, red, green, blue) color. The RgbColor class exposes the following properties: 
+Represents an ARGB (alpha, red, green, blue) color. The RgbColor class exposes the following properties:
 
-* __A__: The alpha component value.
-* __R__: The red component value.
-* __G__: The green component value.
-* __B__: The blue component value.
+| Property | Description |
+|---|---|
+| `A` | The alpha component value. |
+| `R` | The red component value. |
+| `G` | The green component value. |
+| `B` | The blue component value. |
             
 __Example 1__ demonstrates how you can create an RgbColor and assign it as Fill of a [Path]({%slug radpdfprocessing-model-path%}) element.
         
@@ -41,10 +43,12 @@ __Example 1__ demonstrates how you can create an RgbColor and assign it as Fill 
 
 Represents a CMYK (cyan, magenta, yellow, key) color. The CmykColor class was introduced in **Q4 2024** and it exposes the following properties:
 
-* **C**: The cyan component of the color, a value between 0.0 and 1.0.
-* **M**: The magenta component of the color, a value between 0.0 and 1.0.
-* **Y**: The yellow component of the color, a value between 0.0 and 1.0.
-* **K**: The key (black) component of the color, a value between 0.0 and 1.0.
+| Property | Description |
+|---|---|
+| `C` | The cyan component of the color, a value between 0.0 and 1.0. |
+| `M` | The magenta component of the color, a value between 0.0 and 1.0. |
+| `Y` | The yellow component of the color, a value between 0.0 and 1.0. |
+| `K` | The key (black) component of the color, a value between 0.0 and 1.0. |
 
 #### Create CmykColor
 
@@ -60,19 +64,16 @@ The abstract __PatternColor__ class represents colors, which are defined with th
         
 ### Gradient
 
-Gradient provides a smooth transition between colors across an area which is painted. The gradient color is represented by the __Gradient__ abstract class which exposes the following properties:         
+Gradient provides a smooth transition between colors across an area which is painted. The gradient color is represented by the __Gradient__ abstract class which exposes the following properties:
 
-* __StartPoint__: A __Point__ object representing the starting two-dimensional coordinates of the gradient.
-
-* __EndPoint__: A __Point__ object representing the ending two-dimensional coordinates of the gradient.
-
-* __ExtendBefore__: Specifies whether to extend the gradient beyond the starting point.
-
-* __ExtendAfter__: Specifies whether to extend the gradient beyond the ending point.
-
-* __Background__: __SimpleColor__ object representing the background color.
-
-* __GradientStops__: A collection of [GradientStop](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.GradientStop.html) objects representing the gradient stops collection.
+| Property | Description |
+|---|---|
+| `StartPoint` | A `Point` object representing the starting two-dimensional coordinates of the gradient. |
+| `EndPoint` | A `Point` object representing the ending two-dimensional coordinates of the gradient. |
+| `ExtendBefore` | Specifies whether to extend the gradient beyond the starting point. |
+| `ExtendAfter` | Specifies whether to extend the gradient beyond the ending point. |
+| `Background` | A `SimpleColor` object representing the background color. |
+| `GradientStops` | A collection of [GradientStop](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.GradientStop.html) objects representing the gradient stops. |
                 
 The __Gradient__ class is inherited by the following classes:
             
@@ -90,45 +91,38 @@ The gradient created in __Example 2__ is shown in __Figure 1__.
 
 ![Rad Pdf Processing Concepts Colors And Color Spaces 01](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
     
-* __RadialGradient__: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The __RadialGradient__ class exposes the following properties:
-                
+* __RadialGradient__: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The __RadialGradient__ class exposes the following additional properties:
 
-	 * __StartRadius__: Decimal number determining the radius of the starting circle.
-	 * __EndRadius__: Decimal number determining the radius of the ending circle.
+| Property | Description |
+|---|---|
+| `StartRadius` | Decimal number determining the radius of the starting circle. |
+| `EndRadius` | Decimal number determining the radius of the ending circle. |
               
-	__Example 3__ demonstrates how to create a RadialGradient and assing it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
+__Example 3__ demonstrates how to create a RadialGradient and assing it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 	
-	#### __Example 3: Create RadialGradient__
+#### __Example 3: Create RadialGradient__
 	
-	<snippet id='pdf-create-linear-gradient'/>
+<snippet id='pdf-create-linear-gradient'/>
 	
-	The result from __Example 3__ is shown in __Figure 2__.
+The result from __Example 3__ is shown in __Figure 2__.
 	
-	#### Figure 2: RadialGradient
+#### Figure 2: RadialGradient
 	
-	![Rad Pdf Processing Concepts Colors And Color Spaces 03](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_03.png)
+![Rad Pdf Processing Concepts Colors And Color Spaces 03](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_03.png)
 
 ### Tiling Pattern
 
 A tiling pattern consists of a small graphical figure called a pattern cell. Painting with the pattern replicates the cell at fixed horizontal and vertical intervals to fill an area. The tiling pattern is represented by the __TilingBase__ abstract class, which exposes the following properties:
-            
 
-* __BoundingBox__: Property of type __Rect__ representing the dimensions pattern cell.
-
-* __VerticalSpacing__: Decimal number determining the vertical spacing between pattern cells.               
-
-* __HorizontalSpacing__: Decimal number determining the horizontal spacing between pattern cells.             
-
-* __Size__: The size of the bounding box.             
-
-* __Content__: The collection of content elements inside a pattern cell.                
-
-* __Position__: The position of the tiling pattern.               
-
-* __TilingType__: Property of type [TilingType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.TilingType.html) that represents the tiling type.The possible values are:
-	 * __AllowSmallDistortion__: Pattern cells are spaces consistently. To achieve this, the pattern cell might be slightly distorted by making small adjustments to the __HorizontalSpacing__ and __VerticalSpacing__.
-	 * __NoDistortion__: Pattern cells are not distorted, but the spacing between pattern cells may vary. This achieves the spacing requested by __HorizontalSpacing__ and __VerticalSpacing__ on average, but not necessarily for each individual pattern cell.
-	 * __FastTiling__: Pattern cells are spaced consistently as in __AllowSmallDistortion__ type but with additional distortion permitted to enable a more efficient painting.
+| Property | Description |
+|---|---|
+| `BoundingBox` | Of type `Rect`, representing the dimensions of the pattern cell. |
+| `VerticalSpacing` | Decimal number determining the vertical spacing between pattern cells. |
+| `HorizontalSpacing` | Decimal number determining the horizontal spacing between pattern cells. |
+| `Size` | The size of the bounding box. |
+| `Content` | The collection of content elements inside a pattern cell. |
+| `Position` | The position of the tiling pattern. |
+| `TilingType` | Of type [TilingType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.TilingType.html), represents the tiling type. Possible values: `AllowSmallDistortion` (cells spaced consistently with slight distortion), `NoDistortion` (cells not distorted but spacing may vary), `FastTiling` (consistent spacing with additional distortion for efficient painting). |
 	                    
 
 The __TilingBase__ class is inherited from the following classes:

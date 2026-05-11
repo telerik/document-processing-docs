@@ -30,10 +30,12 @@ The **SummarizationProcessor** class enables you to generate concise summaries o
 
 ## SummarizationProcessorSettings
 
-The **SummarizationProcessorSettings** class defines configuration options for the summarization process. The following read-only properties can be set only through the constructor:
+The `SummarizationProcessorSettings` class defines configuration options for the summarization process. The following read-only properties can be set only through the constructor:
 
-* **ModelMaxInputTokenLimit**: The maximum input token limit for the model.
-* **PromptAddition**: An addition for the prompt used for summarization. It can be used for clarification purposes.
+| Property | Description |
+|---|---|
+| `ModelMaxInputTokenLimit` | The maximum input token limit for the model. |
+| `PromptAddition` | An addition for the prompt used for summarization. Can be used for clarification purposes. |
 
 #### __Example 1: Configuring SummarizationProcessorSettings__
 

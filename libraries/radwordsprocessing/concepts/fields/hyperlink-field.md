@@ -29,11 +29,12 @@ The destination you want to navigate to.
 ## Properties
 
 The __Hyperlink__ field exposes the following properties:
-        
 
-* **Uri**: Specifies the URI of the hyperlink.           
-* **IsAnchor**: Specifies whether the hyperlink points to a bookmark. The value is **true** if the hyperlink is pointing to a bookmark inside the document. Default value is **false**.          
-* **ToolTip**: Specifies the hyperlink tooltip.
+| Property | Description |
+|---|---|
+| `Uri` | Specifies the URI of the hyperlink. |
+| `IsAnchor` | Specifies whether the hyperlink points to a bookmark. `true` if pointing to a bookmark inside the document. Default: `false`. |
+| `ToolTip` | Specifies the hyperlink tooltip. |
 
 ## Switches
 
