@@ -5,7 +5,7 @@ type: how-to
 page_title: Formatting Date Columns in Exported Excel Files from Blazor Grid
 meta_title: Formatting Date Columns in Exported Excel Files from Blazor Grid
 slug: changing-date-format-exported-excel-blazor-grid
-tags: spread,processing, telerik, document, grid, excel, date, format
+tags: radspreadprocessing, excel, blazor, date, format, export, document, processing
 res_type: kb
 ticketid: 1702751
 ---

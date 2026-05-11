@@ -1,8 +1,9 @@
 ---
 title: Insert and Remove Cells
+description: Learn how to insert and remove cells in RadSpreadProcessing worksheets by shifting surrounding cell contents.
 page_title: Insert and Remove Cells
 slug: radspreadprocessing-working-with-cells-insert-remove-cells
-tags: insert,and,remove,cells
+tags: cells, spreadsheet, radspreadprocessing, insert, remove, shift, worksheet, range, xlsx, spread
 published: True
 position: 1
 ---

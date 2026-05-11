@@ -1,8 +1,9 @@
 ---
 title: Path
+description: Learn how to work with Path content elements in RadPdfProcessing to draw vector graphics defined by connected lines and curves.
 page_title: Path
 slug: radpdfprocessing-model-path
-tags: path
+tags: path, pdf, vector, radpdfprocessing, geometry, graphics, lines, curves
 published: True
 position: 8
 ---
@@ -66,7 +67,7 @@ __Example 2__ demonstrates how to use one of the factory methods of the __Conten
 
 ### Modifying a Path
 
-You can modify a __Path__ element using the properties the class exposes. The properties are listed listed in the [Public API](#public-api) section.
+You can modify a __Path__ element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.
         
 #### __Example 3: Modifying Path properties__
 

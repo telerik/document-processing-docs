@@ -1,8 +1,9 @@
----
+﻿---
 title: Overview
+description: Learn how to add, remove, and manipulate chart objects in spreadsheet documents using RadSpreadProcessing.
 page_title: Charts
 slug: radspreadprocessing-features-charts
-tags: chart
+tags: charts, spreadsheet, radspreadprocessing, excel, xlsx, worksheet, visualization, overview
 published: True
 position: 1
 platforms: ajax, mvc, wpf, winforms
@@ -10,7 +11,7 @@ platforms: ajax, mvc, wpf, winforms
 
 # Charts
 
-The charts enable you to summarize the data in your spreadsheet document and make it easily readable and understandable. With RadSpreadProcessing you can add, remove and manipulate chart objects in your spreadsheet documents.
+The charts let you summarize the data in your spreadsheet document and make it readable and understandable. With RadSpreadProcessing you can add, remove, and manipulate chart objects in your spreadsheet documents.
 
 ## Supported Chart Types
 

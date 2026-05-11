@@ -5,7 +5,7 @@ type: how-to
 page_title: Create Table of Contents (TOC)
 slug: pdfprocessing-create-table-of-contents-page
 position: 0
-tags: pdf, processing, create, table, contents, toc
+tags: radpdfprocessing, pdf, toc, table, contents, merge, document, processing
 res_type: kb
 ---
 

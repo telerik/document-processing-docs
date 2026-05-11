@@ -1,8 +1,9 @@
 ---
 title: Settings
+description: Learn about the export settings available for the PdfFormatProvider in RadSpreadProcessing to customize PDF output.
 page_title: Settings
 slug: radspreadprocessing-format-and-conversion-pdf-settings
-tags: settings
+tags: pdf, format, provider, settings, spreadsheet, radspreadprocessing, export, configuration, margins
 published: True
 position: 3
 ---
@@ -24,7 +25,7 @@ __PdfExportSettings__ allow controlling how a __Workbook__ is exported to PDF. U
 
 * __IgnorePrintArea__: Boolean value indicating whether or not to ignore print area when exporting worksheets.
             
-* __IncludeHiddenSheets__: Bolean value indicating whether to include the hidden sheets or to skip them. Default value is `false`.
+* __IncludeHiddenSheets__: Boolean value indicating whether to include the hidden sheets or to skip them. Default value is `false`.
 
 * __SelectedRanges property__: A list of ranges specifying which areas of the active worksheet should be exported. Using the __ExportWhat.Selection__ option you may specify that you need to export exactly this __SelectedRanges__ from the current worksheet, __ignoring PrintArea and PageBreaks__ from __WorksheetPageSetup__.
 

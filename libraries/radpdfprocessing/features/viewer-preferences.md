@@ -3,7 +3,7 @@ title: Viewer Preferences
 description: The ViewerPreferences class controls how PDF documents are displayed and behave in PDF viewers.
 page_title: Viewer Preferences
 slug: radpdfprocessing-features-viewer-preferences
-tags: viewer, preferences, pdf, display, print, settings, behavior, processing
+tags: viewer, preferences, pdf, display, print, radpdfprocessing, settings, behavior
 published: True
 position: 7
 ---
@@ -35,7 +35,7 @@ The ViewerPreferences class provides the following properties:
 |**NumberOfCopies**|NumberOfCopiesType|The number of copies to be printed when the print dialog is opened.|One|
 |**Direction**|DirectionType|The predominant reading order for text. Affects relative positioning of pages when displayed side by side or printed n-up.|L2R|
 
->important If a document is created with the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standard, the **ShouldDisplayDocumentTitle** setting is automatically set to **true** to comply with the standard's [accessability]({%slug create-accessible-pdf-documents%}) requirements.
+>important If a document is created with the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standard, the **ShouldDisplayDocumentTitle** setting is automatically set to **true** to comply with the standard's [accessibility]({%slug create-accessible-pdf-documents%}) requirements.
 
 #### **Example: Setting viewer preferences**
 

@@ -4,7 +4,7 @@ description: Learn how to populate a table with data using the Nested Mail Merge
 type: how-to
 page_title: Populate a Table with Data using Nested Mail Merge Functionality
 slug: populate-table-data-mail-merge
-tags: mail, merge, mailmerge, word, table, data, nested
+tags: radwordsprocessing, mailmerge, table, word, document, processing, nested, docx
 res_type: kb
 ---
 

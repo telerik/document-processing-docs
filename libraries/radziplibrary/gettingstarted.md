@@ -1,8 +1,9 @@
 ---
 title: Getting Started
+description: Learn how to get started with RadZipLibrary to create, load, and edit ZIP archives in your .NET applications.
 page_title: Getting Started
 slug: radziplibrary-gettingstarted
-tags: getting,started
+tags: radziplibrary, zip, archive, started, nuget, create, extract, dotnet
 published: True
 position: 1
 ---
@@ -50,7 +51,7 @@ __Example 2__ shows how to create a new Zip archive using the __ZipArchive__ cla
           
 >Do not close the stream opened by the __ZipArchiveEntry.Open()__ method. Otherwise the result is unpredictable.
           
-The constructor of ZipArchive lets you specify whether you would like to keep the stream associated to the instance open. If you decide to set the `leaveOpen` parameter to `false`, the underlying stream will be closed once the ZipArchive instance is disposed. In case you need to continue working with that stream (to send it as a responce, for example), you should pass `true` for the `leaveOpen` parameter.
+The constructor of ZipArchive lets you specify whether you would like to keep the stream associated to the instance open. If you decide to set the `leaveOpen` parameter to `false`, the underlying stream will be closed once the ZipArchive instance is disposed. In case you need to continue working with that stream (to send it as a response, for example), you should pass `true` for the `leaveOpen` parameter.
 
 #### __Example 3: Create archive in a MemoryStream__
 

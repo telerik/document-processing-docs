@@ -1,8 +1,9 @@
 ---
 title: Section
+description: Learn about the Section block container element in RadWordsProcessing and how to configure its layout properties.
 page_title: Section
 slug: radwordsprocessing-model-section
-tags: section
+tags: section, word, docx, document, flow, model, layout, headers, footers
 published: True
 position: 2
 ---
@@ -47,7 +48,7 @@ The __Section__ exposes several properties that allow you to customize the layou
 
 * __PageOrientation__: Specifies whether the pages in the section should be in *Portrait* or in *Landscape* orientation. This property is used to determine the actual size of the paper to use on the printer and does not reflect document's visualization. In order to affect __Section__'s appearance you should change PageSize and PageMargin properties, or use the [Rotate method](#rotating-a-section), which will change them according to the desired page orientation.
             
-	#### __Example 4: Change orienation of a section__
+	#### __Example 4: Change orientation of a section__
 	
 	<snippet id='codeblock-du'/>
 

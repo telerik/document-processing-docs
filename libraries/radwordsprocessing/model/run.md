@@ -1,8 +1,9 @@
 ---
 title: Run
+description: Learn about the Run inline element in RadWordsProcessing that contains a formatted text run within a paragraph.
 page_title: Run
 slug: radwordsprocessing-model-run
-tags: run
+tags: run, word, docx, document, flow, model, text, inline, formatting
 published: True
 position: 4
 ---

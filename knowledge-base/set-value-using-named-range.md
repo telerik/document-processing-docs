@@ -5,7 +5,7 @@ type: how-to
 page_title: Set Value using Named Range
 slug: set-value-using-named-range
 position: 0
-tags: workbook, cellselection, named, range
+tags: radspreadprocessing, excel, named, range, cell, worksheet, document, processing
 res_type: kb
 ---
 

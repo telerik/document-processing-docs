@@ -3,7 +3,7 @@ title: FAQ
 page_title: FAQ
 description: "Find answers to common questions about Telerik's Document Processing best security practices and guidelines"
 slug: security-faq
-tags: telerik, security, document, processing, dpl, faq
+tags: security, faq, telerik, vulnerability, document, processing, compliance, guidelines
 published: True
 position: 2
 ---

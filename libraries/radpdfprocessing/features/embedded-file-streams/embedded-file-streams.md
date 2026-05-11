@@ -1,8 +1,9 @@
 ---
 title: Overview
+description: Learn how to embed file streams directly into PDF documents using RadPdfProcessing's EmbeddedFile support.
 page_title: Overview
 slug: radpdfprocessing-embedded-file-streams-overview
-tags: pdf, file, stream, embedded
+tags: embeddedfiles, pdf, streams, radpdfprocessing, attachments, portfolio, filestreams, overview, embedded
 position: 0
 ---
 

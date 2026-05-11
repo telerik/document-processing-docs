@@ -4,7 +4,7 @@ description: Learn how to handle license key file and environment variable name 
 type: troubleshooting
 page_title: Handling License Key File Name and Environment Variable Name Changes in the 2025 Q1 Release
 slug: handling-license-file-name-changes
-tags: license,key,file,name,2025,change
+tags: license, key, file, name, 2025, telerik, document, processing
 res_type: kb 
 ---
 

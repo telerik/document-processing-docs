@@ -1,8 +1,9 @@
 ---
 title: TableCell
+description: Learn how to insert and configure TableCell instances within tables to organize and layout tabular data in RadPdfProcessing PDF documents.
 page_title: TableCell
 slug: radpdfprocessing-editing-table-tablecell
-tags: table, overview, pdfprocessing, pdf, fixed, tablerow, tablecell
+tags: tablecell, pdf, row, borders, padding, radpdfprocessing, span, layout
 published: True
 position: 2
 ---
@@ -87,4 +88,7 @@ The result from __Example 3__ is illustrated on __Figure 1__.
  * [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})
  * [Implementing Column Span in RadPdfProcessing Tables]({%slug table-column-span-radpdfprocessing%})
  * [Creating a PDF Table with Form Fields Inside the Cells]({%slug insert-form-xobject-elements-pdf-table-cell%})
- * [ Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
+ * [Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
+ * [How To Rotate Cell Content]({%slug pdfprocessing-rotate-cell-content%})
+
+

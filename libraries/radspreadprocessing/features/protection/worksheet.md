@@ -1,8 +1,9 @@
 ---
 title: Worksheet Protection
+description: Learn how to apply worksheet protection in RadSpreadProcessing to restrict user modifications to cell content and structure.
 page_title: Worksheet Protection
 slug: radspreadprocessing-features-protection-worksheet
-tags: worksheet,protection
+tags: worksheet, protection, spreadsheet, radspreadprocessing, password, cells, security, xlsx, spread
 published: True
 position: 1
 ---

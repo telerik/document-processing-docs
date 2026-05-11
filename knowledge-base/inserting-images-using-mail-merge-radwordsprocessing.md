@@ -4,7 +4,7 @@ description: Learn how to insert images into a merge field using Mail Merge in R
 type: how-to
 page_title: How to Insert Images using Mail Merge in RadWordsProcessing
 slug: inserting-images-using-mail-merge-radwordsprocessing
-tags: radwordsprocessing, mail merge, images, insert
+tags: radwordsprocessing, mailmerge, image, docx, word, document, processing, fields
 res_type: kb
 ---
 

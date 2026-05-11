@@ -4,7 +4,7 @@ description: Learn how to effectively use column spanning in tables with Telerik
 type: how-to
 page_title: How to Use Column Span in RadPdfProcessing for Complex Table Layouts
 slug: table-column-span-radpdfprocessing
-tags: pdfprocessing, document, processing, table, columnspan, layout
+tags: radpdfprocessing, pdf, table, columnspan, layout, document, processing, fixed
 res_type: kb
 ticketid: 1660148
 ---

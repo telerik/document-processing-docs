@@ -5,7 +5,7 @@ type: how-to
 page_title: Generating a PDF Product Catalog with Telerik PdfProcessing
 meta_title: Generating a PDF Product Catalog with Telerik PdfProcessing
 slug: generating-pdf-product-catalog
-tags: telerik, pdf, processing, catalog, product, item, fixed, editor
+tags: radpdfprocessing, pdf, catalog, product, fixedcontenteditor, document, processing, telerik
 res_type: kb
 ticketid: 1697233
 ---

@@ -5,7 +5,7 @@ type: how-to
 page_title: Convert rich text documents and spreadsheets to PDF
 slug: convert-to-pdf
 position: 0
-tags: pdf, xlsx, xls, datatable, plain text, string, docx, doc, rtf, html, Word, Excel
+tags: radpdfprocessing, radwordsprocessing, pdf, docx, xlsx, conversion, document, processing
 res_type: kb
 ---
 

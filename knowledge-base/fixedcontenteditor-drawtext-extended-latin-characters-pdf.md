@@ -1,11 +1,11 @@
 ---
 title: Using FixedContentEditor's DrawText method to Write Extended Latin Characters in PDF Document
-description: Learn how to resolve the issue when the FixedContentEditor's DrawText methodin the PdfProcessing library does not display extended Latin characters like Polish letters correctly.
+description: Learn how to resolve the issue when the FixedContentEditor's DrawText method in the PdfProcessing library does not display extended Latin characters like Polish letters correctly.
 type: how-to
 page_title: Displaying Extended Latin Characters with the FixedContentEditor's DrawText in PDF
 meta_title: Displaying Extended Latin Characters with FixedContentEditor's DrawText in PDF
 slug: fixedcontenteditor-drawtext-extended-latin-characters-pdf
-tags: pdf,processing,fixedcontenteditor,draw,text,unicode,extended,latin,font, polish
+tags: radpdfprocessing, pdf, fixedcontenteditor, font, unicode, latin, document, processing
 res_type: kb
 ticketid: 1699876
 ---

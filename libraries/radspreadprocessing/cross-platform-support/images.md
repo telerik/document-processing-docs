@@ -3,8 +3,8 @@ title: Exporting Images
 page_title: Exporting Images
 description: Check this topic to learn how you can handle the PDF export of spreadsheets with images in SpreadProcessing for .NET Standard.
 slug: radspreadprocessing-cross-platform-images
-tags: cross,platform,net,standard,images,pdf,spreadsheet,excel
-platforms: core, blazor, xamarin, winui, maui
+tags: images, crossplatform, pdf, spreadsheet, radspreadprocessing, export, dotnet, standard, excel, xlsx
+platforms: core, blazor, winui, maui
 published: True
 position: 2
 ---
@@ -32,7 +32,7 @@ position: 2
 ## See Also
 
  * [Cross-Platform Support]({%slug radspreadprocessing-cross-platform%})
- * [Whats is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
+ * [What is a Workbook?]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
  * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
  * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
  * [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})

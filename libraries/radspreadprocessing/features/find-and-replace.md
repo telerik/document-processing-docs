@@ -1,8 +1,9 @@
 ---
 title: Find and Replace
+description: Learn how to find and replace text and numbers across workbooks, worksheets, and cell ranges in RadSpreadProcessing.
 page_title: Find and Replace
 slug: radspreadprocessing-features-find-and-replace
-tags: find,and,replace
+tags: find, replace, spreadsheet, radspreadprocessing, search, text, workbook, cells, spread, xlsx
 published: True
 position: 5
 ---
@@ -50,7 +51,7 @@ Both Workbook and Worksheet classes expose methods that search their contents fo
 __Example 1__ creates a new workbook with two empty worksheets and assigns sample values to the sheets. The __FindOptions__ created below specifies that the search will be conducted for the whole workbook and will start from cell A1 of the first worksheet. The sample snippet illustrates how to use __Find()__ and __FindAll()__ methods.
         
 
-#### __Example 1: Perform find an find all__
+#### __Example 1: Perform find and find all__
 
 <snippet id='codeblock-chy'/>
 

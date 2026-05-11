@@ -5,7 +5,7 @@ type: how-to
 page_title: SUMPRODUCT Function Implementation in Telerik SpreadProcessing
 meta_title: SUMPRODUCT Function Implementation  in Telerik SpreadProcessing
 slug: sumproduct-function-nested-array-formulas-telerik-spreadprocessing
-tags: spread, processing, formula, custom, function, sumproduct, array
+tags: radspreadprocessing, excel, formula, sumproduct, array, document, processing, function
 res_type: kb
 ticketid: 1694608
 ---

@@ -1,8 +1,9 @@
 ---
 title: Flatten Form Fields
+description: Learn how to flatten form fields in PDF documents using RadPdfProcessing, preserving content while making the document non-editable.
 page_title: Flatten Form Fields
 slug: radpdfprocessing-flatten-form-fields
-tags: flatten, form, field
+tags: flatten, form, fields, pdf, acroform, radpdfprocessing, readonly, interactive, forms
 position: 5
 ---
 
@@ -10,7 +11,7 @@ position: 5
 
 The form field flattening feature removes all fields but preserves their content in the document. After this operation the document no longer can be edited. This functionality was added in R2 2021 version. 
 
-There are two methods that you can use for this. One to flatten all fields and one to flatten a single field. The bellow examples demonstrate how to use them. 
+There are two methods that you can use for this. One to flatten all fields and one to flatten a single field. The below examples demonstrate how to use them. 
 
 ### Using the FlattenFormFields method 
 

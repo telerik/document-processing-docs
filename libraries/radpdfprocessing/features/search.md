@@ -3,7 +3,7 @@ title: Search
 page_title: Search
 description: This article shows how one can use the search feature to find text in a PDF Document.
 slug: radwordsprocessing-features-search
-tags: pdf,search
+tags: search, pdf, text, radpdfprocessing, find, pattern, document, results
 published: True
 position: 0
 ---

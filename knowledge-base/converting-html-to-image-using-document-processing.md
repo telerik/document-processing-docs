@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Convert HTML to Image Using Telerik Document Processing Libraries
 meta_title: How to Convert HTML to Image Using Telerik Document Processing Libraries
 slug: converting-html-to-image-using-document-processing
-tags: pdf,processing, word, flow,document, pdf, image, skia, html
+tags: radwordsprocessing, html, image, conversion, pdf, skia, document, processing
 res_type: kb
 ticketid: 1675204
 ---

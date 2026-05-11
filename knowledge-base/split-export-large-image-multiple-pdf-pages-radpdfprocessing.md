@@ -4,7 +4,7 @@ description: Learn how to split a large image across multiple pages when exporti
 type: how-to
 page_title: How to Split and Export a Large Image Across Multiple PDF Pages with RadPdfProcessing
 slug: split-export-large-image-multiple-pdf-pages-radpdfprocessing
-tags: radpdfprocessing, document, export, image, pdf, bitmap
+tags: radpdfprocessing, pdf, image, pages, export, document, processing, bitmap
 res_type: kb
 category: knowledge-base
 ticketid: 1569728
@@ -18,7 +18,7 @@ ticketid: 1569728
 
 ## Description
 
-RadPdfProcessing doesn't have a built-in mechanism to split a large image accross the pages when it doesn't fit within a single page's boundaries.
+RadPdfProcessing doesn't have a built-in mechanism to split a large image across the pages when it doesn't fit within a single page's boundaries.
 This article demonstrates a sample approach how to do it.
 
 ## Solution

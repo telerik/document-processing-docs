@@ -1,8 +1,9 @@
 ---
 title: Plain text
+description: Learn about plain text format support in RadWordsProcessing for extracting textual content from flow documents.
 page_title: Plain text
 slug: radwordsprocessing-formats-and-conversion-txt
-tags: plain,text
+tags: plain, word, flow, docx, export, document, text, format, extraction, txt
 published: True
 position: 0
 ---

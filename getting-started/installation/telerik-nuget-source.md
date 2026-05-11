@@ -3,7 +3,7 @@ title: Telerik NuGet Source
 page_title: Telerik NuGet Feed
 description: Explore the different ways to add the Telerik NuGet feed to your system, and start using NuGet packages to install the Telerik Document Processing libraries.
 slug: telerik-nuget-source
-tags: get, started, installation, nuget, feed
+tags: nuget, feed, installation, telerik, authentication, cli, configuration, api
 published: True
 position: 8
 ---

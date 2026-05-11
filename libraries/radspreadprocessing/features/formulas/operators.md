@@ -1,8 +1,9 @@
 ---
 title: Operator
+description: Learn about the arithmetic, comparison, text concatenation, and reference operators supported in RadSpreadProcessing formulas.
 page_title: Operator
 slug: radspreadprocessing-features-formulas-operators
-tags: operator
+tags: operators, formulas, spreadsheet, radspreadprocessing, arithmetic, comparison, text, reference, spread, xlsx
 published: True
 position: 1
 ---

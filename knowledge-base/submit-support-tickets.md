@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Get the Most Out of the Telerik Document Processing Support   
 slug: submit-support-tickets
 position: 0
-tags: support, submit, ticket, telerik, processing, document, dpl
+tags: support, telerik, document, processing, ticket, help, community, forum
 res_type: kb
 ---
 
@@ -63,7 +63,7 @@ Let's continue with a few steps how to contact the Telerik Document Processing T
 
 The trick of obtaining a "one response resolution", is to give as much information as you can about your issue in your ticket when you initially submit it. If you are able to do this, it will pay huge dividends for you in terms of success in getting your questions answered in the first 1 to 2 exchanges. Here is how it works:
 
-* Give a suitable **Subject** for the ticket - it should summarize what you are tying to accomplish or what error message you get. 
+* Give a suitable **Subject** for the ticket - it should summarize what you are trying to accomplish or what error message you get. 
 
 * Have in mind that the support agent is out of the scope of your project and the specific implementation that you have in it. Hence, some information that may seem obvious for you, it may be unknown for the support engineer. That is why strive to provide as much details as possible to describe the precise case.
 

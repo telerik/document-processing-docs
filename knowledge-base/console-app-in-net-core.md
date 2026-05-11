@@ -5,7 +5,7 @@ type: troubleshooting
 page_title: Console app with .Net Core
 slug: console-app-with.net-core
 position: 0
-tags:  console, net, core
+tags: dotnet, console, netcore, references, document, processing, assembly, packages
 res_type: kb
 ---
 

@@ -3,7 +3,7 @@ title: Settings
 page_title: Settings
 description: This article shows the settings that you can use to control the DataTable import/export operations. 
 slug: radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings
-tags: datatable, workbook, worksheet, settings
+tags: data, table, settings, spreadsheet, radspreadprocessing, worksheet, conversion, import, export, spread
 published: True
 position: 2
 ---

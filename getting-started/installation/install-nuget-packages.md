@@ -1,16 +1,16 @@
 ---
-title: Installing NuGet Packages
+title: Install using NuGet Packages
 page_title: Install Telerik Document Processing Libraries via NuGet Packages
 description: Install the Telerik Document Processing libraries from NuGet.org, the Telerik NuGet server, or a local feed. Includes setup steps for Visual Studio and .NET CLI.
 slug: installation-nuget-packages
-tags: nuget, document, processing, install, server, manual, download, package
+tags: nuget, packages, telerik, document, processing, installation, feed, server
 published: True
 position: 7
 ---
 
 # Install using NuGet Packages
 
-This article describes how you can install the Document Processing Libraries using a NuGet package. 
+This article describes how you can install the Document Processing Libraries using a NuGet package.
 You can find all Document Processing Libraries packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article. There are three ways to get the NuGet packages:
 
 * [Download from NuGet.org (Recommended)](#download-from-nugetorg)
@@ -59,46 +59,46 @@ Install-Package Telerik.Documents.Fixed
 
 ## Manually Download NuGet Packages
 
-This approach allows you to setup a local NuGet package source, so you can install the Telerik products without an active Internet connection and without setting up our private feed.
+This approach allows you to set up a local NuGet package source, so you can install the Telerik products without an active Internet connection and without setting up the private feed.
 
 1\. Copy all the .nupkg files we provide to your preferred local feed location. First you need to log in using your Telerik licensed account. Telerik Document Processing is a part of several Telerik bundles and is available in the Downloads section of the suite with which you've obtained the product, e.g. UI for Blazor. This way you will be able to download the packages:
 
 ![install-using-nuget001](images/install-using-nuget001.png)
 
 
-**Telerik Document Processing** is also available as a separate distibution in your account: [Download Product Files]({%slug installation-nuget-packages%})
-	
+**Telerik Document Processing** is also available as a separate distribution in your account: [Download Product Files]({%slug installation-nuget-packages%})
+
 2\. Then, you need to add packages to Visual Studio. Open the NuGet manager and then click the Options button:
-	
+
 ![installation-nuget-packages 002](images/installation-nuget-packages001.png)
 
 3\. Add new package source. The __Source__ should point to the local folder with the NuGets:
-	
-![install-using-nuget002](images/install-using-nuget002.png) 
 
-4\. The final step is to select and install the desired packages. 
+![install-using-nuget002](images/install-using-nuget002.png)
 
-![install-using-nuget003](images/install-using-nuget003.png) 
+4\. The final step is to select and install the desired packages.
+
+![install-using-nuget003](images/install-using-nuget003.png)
 
 ## Download from the NuGet Server
 
 >note As of Q2 2026, NuGet.org is the recommended source for Telerik Document Processing packages. The Telerik NuGet server remains available for backward compatibility and for installing older versions that predate the NuGet.org release.
 
-To install the Telerik Document Processing Libraries, you can use the NuGet packages hosted on the Telerik NuGet server. This online source lets you download and install various versions of the Document Processing libraries and enables quick updates with minimal manual intervention.
+To install the Telerik Document Processing Libraries, you can use the NuGet packages hosted on the public Telerik NuGet server. This online source lets you download and install various versions of the Document Processing libraries and allows quick updates with minimal manual intervention.
 
 Before adding the Telerik NuGet server to Visual Studio, make sure you have:
 
-* A commercial or trial license that includes Document Processing. Note that the Telerik NuGet server requires authentication and checks if you have a valid license.
+* A commercial or trial license that includes Document Processing. The Telerik NuGet server requires authentication and checks if you have a valid license.
 
-* Generate an API key - As the Telerik NuGet server requires authentication, the first step is to obtain an API key.
+* An API key - As the Telerik NuGet server requires authentication, the first step is to obtain an API key.
 
 ### Generate an API Key
 
-It is necessary to [obtain an API key]({%slug generating-api-keys%}) that you will use instead of a password. Using an API key instead of a password is a more secure approach, especially when working with .NET CLI or the NuGet.Config file.
+It is necessary to [obtain an API key]({%slug generating-api-keys%}) that you will use instead of a password. Using an API key instead of a password is a more secure approach, especially when you work with .NET CLI or the NuGet.Config file.
 
 ### Add the Telerik NuGet Package Source to Visual Studio
 
-Before you can install Telerik NuGet packages, you must configure the Telerik NuGet server as a package source in Visual Studio: 
+Before you can install Telerik NuGet packages, you must configure the Telerik NuGet server as a package source in Visual Studio:
 
 ```
 https://nuget.telerik.com/v3/index.json
@@ -112,7 +112,7 @@ https://nuget.telerik.com/v3/index.json
 
 ![installation-nuget-packages 002](images/installation-nuget-packages002.png)
 
-3\. Select **Telerik NuGet Server** from the __Package Source__ dropdown, and you will be prompted for a user name and a password. Use the credentials for your [Telerik Account](https://www.telerik.com/account/).
+3\. Select **Telerik NuGet Server** from the **Package Source** dropdown, and you will be prompted for a user name and a password. Use the credentials for your [Telerik Account](https://www.telerik.com/account/).
 
 ![installation-nuget-packages 003](images/installation-nuget-packages003.png)
 
@@ -124,7 +124,7 @@ You have successfully added the Telerik NuGet feed as a Package source.
 
 ### Reset Store Credentials
 
-If you previously stored credentials for the Telerik NuGet server, you need to reset them to be able to authenticate with your new API key. Here are the steps you need to follow:
+If you previously stored credentials for the Telerik NuGet server, you need to reset them to authenticate with your new API key. Follow these steps:
 
 1. Remove the saved credentials in the [Windows Credential Manager](https://support.microsoft.com/en-us/windows/accessing-credential-manager-1b5c916a-6a16-889f-8581-fc16e8165ac0). These credentials will appear as `nuget.telerik.com` or `VSCredentials_nuget.telerik.com` entries.
 2. Remove the Telerik NuGet package source from Visual Studio.

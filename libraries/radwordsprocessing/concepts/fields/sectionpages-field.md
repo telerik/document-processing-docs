@@ -3,7 +3,7 @@ title: SectionPages Field
 page_title: SectionPages Field
 description: SectionPages field is a Field element that inserts the total number of pages in a section.
 slug: radwordsprocessing-concepts-sectionpages-field
-tags: sectionpages,field
+tags: sectionpages, word, flow, docx, fields, document, section, pages, model, total
 published: True
 position: 0
 ---

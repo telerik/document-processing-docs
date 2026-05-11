@@ -1,8 +1,9 @@
 ---
 title: ComboBoxField 
+description: Learn about the ComboBoxField class in RadPdfProcessing for creating and working with combo box form fields in interactive PDF forms.
 page_title: ComboBoxField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-comboboxfield
-tags: comboboxfield
+tags: comboboxfield, pdf, formfields, radpdfprocessing, acroform, interactive, dropdown, model
 published: True
 ---
 

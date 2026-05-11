@@ -5,7 +5,7 @@ type: how-to
 page_title: Change Cells Content
 slug: change-cells-content
 position: 0
-tags:  
+tags: radwordsprocessing, docx, table, cell, content, word, document, template
 res_type: kb
 ---
 

@@ -4,7 +4,7 @@ description: Learn how to preserve the bold text when converting Excel documents
 type: how-to
 page_title: How to Preserve Text Boldness in PDF Conversion with RadSpreadProcessing
 slug: preserve-font-boldness-pdf-export-radspreadprocessing
-tags: spreadprocessing, document, processing, pdf export, font, registration, bold, text, pdf, export
+tags: radspreadprocessing, pdf, font, bold, export, document, processing, excel
 res_type: kb
 ticketid: 1659898
 ---

@@ -4,7 +4,7 @@ description: Learn how to get the values of merged cells when reading Excel file
 type: how-to
 page_title: How to Read the Values of Merged Cells in a Worksheet
 slug: read-xls-file-merged-cells-radspreadprocessing
-tags: spreadprocessing, merge, value, cell , workbook, worksheet
+tags: radspreadprocessing, excel, xls, merged, cells, worksheet, document, processing
 res_type: kb
 category: knowledge-base
 ticketid: 1651835

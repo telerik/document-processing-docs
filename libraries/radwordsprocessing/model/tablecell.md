@@ -1,8 +1,9 @@
 ---
 title: TableCell
+description: Learn about the TableCell block container element in RadWordsProcessing that defines individual cells within a table.
 page_title: TableCell
 slug: radwordsprocessing-model-tablecell
-tags: tablecell
+tags: table, cell, word, docx, document, flow, model, content, container
 published: True
 position: 7
 ---

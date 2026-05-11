@@ -3,7 +3,7 @@ title: Fields Overview
 page_title: Fields Overview
 description: Fields are special constructions that hold data, which can be updated.
 slug: radwordsprocessing-concepts-fields
-tags: fields
+tags: fields, word, flow, docx, document, merge, dynamic, content, model, overview
 published: True
 position: 0
 ---
@@ -124,7 +124,7 @@ All fields in the document can be updated using __UpdateFields()__ of __RadFlowD
 
 ### Updating PageRef, Page, NumPages, and SectionPages fields. 
 
-In R3 2022 the above fields were introduced. Their evaluation requires calculating the size of the document elements. This is why to update them you need to provide an implementation of a [**NumberingFieldsProvider**]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) which can provide the needed layout logic. In the default implementation we are using the the layout logic from the [RadPdfPRocessing]({%slug radpdfprocessing-overview%}) library. To use it you need to add reference to the following package: 
+In R3 2022 the above fields were introduced. Their evaluation requires calculating the size of the document elements. This is why to update them you need to provide an implementation of a [**NumberingFieldsProvider**]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) which can provide the needed layout logic. In the default implementation we are using the layout logic from the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library. To use it you need to add reference to the following package: 
 
 * **Telerik.Windows.Documents.Fixed**
 

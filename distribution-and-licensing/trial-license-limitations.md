@@ -1,8 +1,9 @@
 ---
 title: Trial License Limitations
+description: Learn about the limitations of the Telerik Document Processing trial license. The trial is fully functional but adds a copyright message watermark to produced documents.
 page_title: Trial License Limitations
 slug: trial-license-limitations
-tags: license, trial, limitations
+tags: trial, license, limitations, watermark, telerik, document, processing, evaluation
 published: True
 position: 3
 ---

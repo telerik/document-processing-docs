@@ -3,7 +3,7 @@ title: Overview
 description: The digital signature feature enables you to sign and validate a PDF document. 
 page_title: Digital Signature - Overview
 slug: radpdfprocessing-features-digital-signature
-tags: digital, signature, overview
+tags: digital, signature, pdf, signing, validation, radpdfprocessing, x509, certificates, overview
 position: 0
 ---
 
@@ -16,7 +16,7 @@ The **digital signature** feature enables you to sign and validate a PDF documen
 Telerik **RadPdfProcessing** provides an easy-to-use API that allows you to:
 
 * [Create a PDF document from scratch and add a signature field]({%slug radpdfprocessing-features-digital-signature-getting-started%}). 
-* [Sign PDF documents that contain a predifined signature field](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document).
+* [Sign PDF documents that contain a predefined signature field](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document).
 * [Verify existing signed PDF documents]({%slug radpdfprocessing-features-digital-signature-validation%}).
 * [Multiple Digital Signing with PdfStreamSigner]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%}). 
 

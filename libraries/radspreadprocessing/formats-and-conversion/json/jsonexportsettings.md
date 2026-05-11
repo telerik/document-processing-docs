@@ -1,8 +1,9 @@
 ---
 title: Settings
+description: Learn about the export settings available for the JsonFormatProvider in RadSpreadProcessing to control JSON output behavior.
 page_title: Using JsonExportSettings
 slug: radspreadprocessing-formats-and-conversion-json-jsonexportsettings
-tags: json, export, settings, spread, processing, excel, xlsx, xls
+tags: json, export, settings, spreadsheet, radspreadprocessing, configuration, workbook
 published: True
 position: 2
 ---

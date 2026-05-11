@@ -1,8 +1,9 @@
 ---
 title: Series
+description: Learn how to automatically construct data series using patterns in RadSpreadProcessing, including linear, growth, date, and auto fill series.
 page_title: Series
 slug: radspreadprocessing-features-fill-data-automatically-series
-tags: series
+tags: series, auto, fill, spreadsheet, radspreadprocessing, cells, linear, growth, dates, spread, xlsx
 published: True
 position: 1
 ---

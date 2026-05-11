@@ -1,8 +1,9 @@
 ---
 title: First Steps
+description: A step-by-step guide to creating your first application with Telerik Document Processing libraries - create a DOCX document and export it as a PDF file.
 page_title: First Steps
 slug: getting-started-first-steps
-tags: get,started,first,steps
+tags: document, processing, installation, nuget, docx, pdf, radwordsprocessing, application
 published: True
 position: 1
 ---
@@ -17,7 +18,7 @@ The Telerik Document Processing libraries that we use in this guide are UI-indep
 
 >important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
 
-Since we distribute Telerik Document Processing libraries as an addition to several Telerik UI component bundles, chances are that the libraries are already installed on your system. In this case, all you need is to locate them. The table below provides links to the installation instructions for each of the Telerik UI component suites that give you access to the Telerik Document Processing libraries. If the standard installation of your Telerik UI component suite includes the Document Processing packages, the table also shows their default location.
+Since we distribute Telerik Document Processing libraries as an addition to several Telerik UI component bundles, chances are that the libraries are already installed on your system. In this case, all you need is to locate them. The following table provides links to the installation instructions for each of the Telerik UI component suites that give you access to the Telerik Document Processing libraries. If the standard installation of your Telerik UI component suite includes the Document Processing packages, the table also shows their default location.
 
 >tip Regardless of the Telerik UI components suite that you use, you can always get the Document Processing packages as NuGet packages from the [Telerik NuGet server]({%slug installation-nuget-packages%}).
 
@@ -30,7 +31,6 @@ Since we distribute Telerik Document Processing libraries as an addition to seve
 | UI for WPF | [Installing Telerik UI for WPF](http://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries.NoXaml`</li></ul> |
 | UI for Silverlight | [Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries\Silverlight`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries.NoXaml\Silverlight`</li></ul> |
 | UI for WinForms | [Installing Telerik UI for WinForms](http://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for WinForms [version]\Bin40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WinForms [version]\Bin50`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WinForms [version]\BinNetCore`</li></ul> |
-| UI for Xamarin | [Installing Telerik UI for Xamarin]([https://docs.telerik.com/devtools/xamarin/installation-and-deployment/system-requirements](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/download-product-files)) | `[installation_path]\Binaries\Portable`|
 | UI for WinUI | [Installing Telerik UI for WinUI](https://docs.telerik.com/devtools/winui/installation-and-deployment/installationsteps) | `C:\Program Files (x86)\Progress\Telerik UI for WinUI [version]\DPL`|
 | UI for .NET MAUI | [Installing Telerik UI for .NET MAUI](https://docs.telerik.com/devtools/maui/installation/download-product-files) | `[installation_path]/Binaries/Shared`|
 
@@ -146,7 +146,7 @@ Run the project and you should see something like this:
 
 ## Next Steps
 
-Now that you have run your first project example with Telerik Document Processing Libraries, you may want to explore some additional features like __clone, edit, merge, insert__ documents and more. Below you can find guidance on getting started with such tasks:
+Now that you have run your first project example with Telerik Document Processing Libraries, you may want to explore additional features like __clone, edit, merge, insert__ documents and more. The following resources provide guidance on getting started with such tasks:
 
 * [Explore Features]({%slug getting-started-explore-features%})
 * [Further Information]({%slug getting-started-next-steps%})

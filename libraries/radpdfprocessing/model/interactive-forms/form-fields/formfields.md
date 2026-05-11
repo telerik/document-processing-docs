@@ -1,8 +1,9 @@
 ---
 title: FormField 
+description: Learn about the form field types and the FormField base class in RadPdfProcessing for managing interactive PDF form data containers.
 page_title: FormField 
 slug: radpdfprocessing-model-interactive-forms-form-fields 
-tags: formfield
+tags: formfield, pdf, interactive, radpdfprocessing, acroform, model, types, input
 published: True
 position: 0
 ---

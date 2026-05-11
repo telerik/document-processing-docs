@@ -1,8 +1,9 @@
 ---
 title: Page Setup Exporter
+description: Learn how to configure page setup settings for printing in RadSpreadStreamProcessing using the PageSetupExporter.
 page_title: Page Setup Exporter
 slug: radspreadstreamprocessing-features-page-setup-exporter
-tags: worksheet, page, exporter
+tags: pagesetup, spread, stream, processing, spreadsheet, print, export, worksheet, margins, headers
 published: True
 position: 3
 ---
@@ -21,7 +22,7 @@ The __PageSetupExporter__ allows you to export the page settings for printing. T
 
 ## Working with PageSetupExporter
 
-An important part is that you need to place the **PageSetupExporer** after the code for exporting all cells on the sheet. Example 1 demonstrates how you can create the **PageSetupExporter** and where to place it.
+An important part is that you need to place the **PageSetupExporter** after the code for exporting all cells on the sheet. Example 1 demonstrates how you can create the **PageSetupExporter** and where to place it.
 
 #### **Example 1: Using  PageSetupExporter**
 

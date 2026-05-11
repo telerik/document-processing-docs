@@ -1,8 +1,9 @@
 ---
 title: Names (Named Ranges)
+description: Learn how to create, use, and manage named ranges in RadSpreadProcessing spreadsheet documents.
 page_title: Names (Named Ranges)
 slug: radspreadprocessing-features-named-ranges
-tags: names,(named,ranges)
+tags: named, ranges, spreadsheet, radspreadprocessing, cells, names, references, workbook, formulas, spread, xlsx
 published: True
 position: 10
 ---

@@ -4,7 +4,7 @@ description: Learn how to extract the text from a PDF document using RadPdfProce
 type: how-to
 page_title: How to Extract the Text from PDF documents 
 slug: extract-text-from-pdf
-tags: pdf, document, processing, text, extract, content 
+tags: radpdfprocessing, pdf, text, extraction, content, document, processing, fixed
 res_type: kb
 ticketid: 1657503
 ---

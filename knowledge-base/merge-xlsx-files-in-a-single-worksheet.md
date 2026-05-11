@@ -5,7 +5,7 @@ type: how-to
 page_title:  Merge Xlsx files in a single Workbook
 slug: merge-xlsx-files-in-a-single-worksheet
 position: 0
-tags: merge, xlsx, Excel, Workbook  
+tags: radspreadprocessing, xlsx, excel, merge, workbook, document, processing, spreadsheet
 res_type: kb
 ---
 

@@ -5,7 +5,7 @@ type: how-to
 page_title: Insert Field in Header 
 slug: insert_field_in_header
 position: 0
-tags: header, field 
+tags: radwordsprocessing, docx, header, field, document, processing, word, words
 res_type: kb
 ---
 
@@ -21,7 +21,7 @@ You need to add a field in the header for example to display page numbering.
 
 This can be achieved by adding a paragraph to the header and then moving the editor position to this paragraph. Once this is done you can insert the field and move the position to another paragraph in the document. 
 
-#### __Insert page numbering in he header__
+#### __Insert page numbering in the header__
 
 ```csharp
 

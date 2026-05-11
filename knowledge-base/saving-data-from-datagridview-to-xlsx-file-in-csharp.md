@@ -5,7 +5,7 @@ type: how-to
 page_title: Saving Data from DataGridView to XLSX File in C# Windows Forms
 meta_title: Saving Data from DataGridView to XLSX File in C# Windows Forms
 slug: saving-data-from-datagridview-to-xlsx-file-in-csharp
-tags: telerik, document, processing, spread, datagridview, export, xlsx, c#, windows, forms, winforms
+tags: radspreadprocessing, excel, xlsx, datagridview, winforms, document, processing, export
 res_type: kb
 ticketid: 1707838
 ---

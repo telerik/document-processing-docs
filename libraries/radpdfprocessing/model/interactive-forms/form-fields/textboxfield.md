@@ -1,8 +1,9 @@
 ---
 title: TextBoxField 
+description: Learn about the TextBoxField class in RadPdfProcessing for working with text input form fields in interactive PDF forms.
 page_title: TextBoxField 
 slug: radpdfprocessing-model-interactive-forms-form-fields-textboxfield
-tags: textboxfield
+tags: textboxfield, pdf, formfields, radpdfprocessing, acroform, interactive, textinput, model, text, box, field
 published: True
 ---
 

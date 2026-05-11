@@ -1,8 +1,9 @@
 ---
 title: Overview
+description: RadZipLibrary is a .NET library for creating, editing, and extracting ZIP archives with support for large files and encryption.
 page_title: Overview
 slug: radziplibrary-overview
-tags: overview
+tags: radziplibrary, zip, archive, compression, encryption, dotnet, extract, files, overview
 published: True
 position: 0
 ---

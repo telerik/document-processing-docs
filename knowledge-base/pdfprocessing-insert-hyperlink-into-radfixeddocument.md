@@ -5,7 +5,7 @@ type: how-to
 page_title: Insert Hyperlink into the RadFixedDocument
 slug: pdfprocessing-insert-hyperlink-into-radfixeddocument
 position: 0
-tags: pdf, processing, insert, hyperlink, radfixeddocument
+tags: radpdfprocessing, pdf, hyperlink, link, document, processing, fixed, uriaction
 res_type: kb
 ---
 

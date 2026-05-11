@@ -4,7 +4,7 @@ description: Learn how to merge two Word documents and generate a unified table 
 type: how-to
 page_title: How to Create a Table of Contents in Merged Word Documents with RadWordsProcessing
 slug: generate-table-of-contents-radwordsprocessing
-tags: wordsprocessing, document, processing, merge, table, contents, toc, docx, pdf
+tags: radwordsprocessing, docx, toc, merge, table, contents, document, processing
 res_type: kb
 ticketid: 1657796
 ---

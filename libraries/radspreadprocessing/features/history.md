@@ -1,8 +1,9 @@
 ---
 title: History
+description: Learn how to use the undo/redo history stack in RadSpreadProcessing to track and revert changes to workbook content.
 page_title: History
 slug: radspreadprocessing-features-history
-tags: history
+tags: history, spreadsheet, radspreadprocessing, undo, redo, workbook, changes, stack, spread, xlsx
 published: True
 position: 7
 ---

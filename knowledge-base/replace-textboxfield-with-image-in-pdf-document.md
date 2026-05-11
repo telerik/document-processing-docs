@@ -5,7 +5,7 @@ type: how-to
 page_title: Replace TextBoxField with Image in PDF Document
 slug: replace-textboxfield-with-image-in-pdf-document
 position: 0
-tags: pdf, textbox, field, image, replace
+tags: radpdfprocessing, pdf, textbox, field, image, replace, document, processing
 res_type: kb
 ---
 

@@ -3,7 +3,7 @@ title: Prerequisites
 description: Learn how to convert scanned images to PDF format using OcrFormatProvider.
 page_title: Prerequisites for Using OcrFormatProvider
 slug: radpdfprocessing-formats-and-conversion-ocr-prerequisites
-tags: pdf, processing, ocr, image, prerequisites
+tags: ocr, prerequisites, pdf, radpdfprocessing, recognition, images, nuget, setup
 published: True
 position: 0
 ---
@@ -66,7 +66,6 @@ In order to use the **OcrFormatProvider** you need to add the following packages
 	<tr>
 	    <td><b>-</b></td>
 		<td><b>Telerik.Documents.ImageUtils</b>
-			<br><sub><i>This assembly is not available in UI for Xamarin.</i></sub>
 	</tr>
     <tr>
 	    <td><b>-</b></td>
@@ -125,7 +124,7 @@ If these requirements are not met, go through the following steps:
 1. Download the "_tesseract50.dll_" and "_leptonica-1.82.0.dll_" native assemblies from the listed links:
     * https://github.com/charlesw/tesseract/tree/master/src/Tesseract/x64.
     * https://github.com/charlesw/tesseract/tree/master/src/Tesseract/x86.
-1. Create the following structure and add the two folders to the root of the applicaiton.
+1. Create the following structure and add the two folders to the root of the application.
     * Folder Structure:
     ```plaintext
     RootFolder
@@ -142,7 +141,7 @@ Execute the following commands in the environment:
 
 |Ubuntu|Alpine|Fedora|
 |----|----|----|
-|```sudo apt update```|```dsudo apk update```|```sudo dnf install tesseract```|
+|```sudo apt update```|```sudo apk update```|```sudo dnf install tesseract```|
 |```sudo apt install tesseract-ocr```|```sudo apk add tesseract-ocr```|```sudo dnf install leptonica```|
 |```sudo apt install libleptonica-dev```|```sudo apk add leptonica```||
  

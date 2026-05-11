@@ -5,7 +5,7 @@ type: how-to
 page_title: Handling Decimal Columns as Numbers when Importing a DataTable into a Workbook using RadSpreadProcessing
 meta_title: Handling Decimal Columns as Numbers when Importing a DataTable into a Workbook using RadSpreadProcessing
 slug: processing-decimal-columns-as-double-from-datatable
-tags: spread,processing,telerik, document,decimal,double,datatable,worksheet
+tags: radspreadprocessing, excel, datatable, decimal, numeric, worksheet, document, processing
 res_type: kb
 ticketid: 1707296
 ---

@@ -3,7 +3,7 @@ title: Expression Field
 page_title: Expression Field
 description: Expression field is a Field element that calculates a number by using a mathematical formula.
 slug: radwordsprocessing-concepts-expression-field
-tags: expression,field
+tags: expression, word, flow, docx, fields, document, formula, math, calculation, model
 published: True
 position: 5
 ---

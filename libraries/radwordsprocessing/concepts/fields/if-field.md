@@ -3,7 +3,7 @@ title: If Field
 page_title: If Field
 description: If field is a Field element that compares two values and inserts the text appropriate to the result of the comparison.
 slug: radwordsprocessing-concepts-if-field
-tags: if,field
+tags: iffield, word, flow, docx, fields, document, conditional, comparison, model, logic
 published: True
 position: 7
 ---
@@ -21,7 +21,7 @@ This is how the syntax of an If field looks like:
 | { **IF** _Expression1_ _Operator_ _Expression2_ TrueText FalseText } |
 
 ### Operators
-In the table bellow are listed all the comparison operators.
+In the table below are listed all the comparison operators.
 
 | Operator    | Description              |
 | :---        | :---                     |

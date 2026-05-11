@@ -5,7 +5,7 @@ type: how-to
 page_title: Handle the import of JPEG images with orientation set in their metadata different than 0 (normal)
 slug: pdfprocessing-rotate-jpeg-with-orientation-set-in-metadata
 position: 0
-tags: rotation, orientation, metadata, jpeg, image, exif
+tags: radpdfprocessing, pdf, jpeg, image, rotation, metadata, document, processing
 res_type: kb
 ---
 

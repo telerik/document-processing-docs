@@ -3,7 +3,7 @@ title: CompleteContextQuestionProcessor
 description: CompleteContextQuestionProcessor class enables you to ask questions about a Word document and receive answers based on the entire document content.
 page_title: CompleteContextQuestionProcessor
 slug: radwordsprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor
-tags: ai, document, analysis, question, processor, complete, context
+tags: question, processor, genai, word, flow, docx, document, ai, context, complete, llm
 published: True
 position: 5
 ---
@@ -50,7 +50,7 @@ The **CompleteContextProcessorSettings** class defines configuration options for
 * **ModelMaxInputTokenLimit**: The maximum input token limit the model allows.
 * **ModelId**: The ID of the model.
 * **TokenizationEncoding**: The tokenization encoding.
-* **ProduceJsonFormattedContext**: Determines whether the context sent to the model is in JSON or plain text format, if json format is applicable (dafault is *false*).
+* **ProduceJsonFormattedContext**: Determines whether the context sent to the model is in JSON or plain text format, if json format is applicable (default is *false*).
 
 ## Usage Example
 

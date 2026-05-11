@@ -3,7 +3,7 @@ title: Tagged PDF
 description: Learn how to identify a portion of a PDF content stream as a marked-content element with the PdfProcessing library.
 page_title: Tagged PDF
 slug: radpdfprocessing-model-tagged-pdf
-tags: marked, content, tag, pdf, accessibility
+tags: taggedpdf, pdf, accessibility, radpdfprocessing, structuretree, markedcontent, tagged
 published: True
 position: 7
 ---

@@ -3,7 +3,7 @@ title: Using DocFormatProvider
 page_title: Using DocFormatProvider
 description: Import from Word 97 - Word 2003 Binary file format Using DocFormatProvider
 slug: radwordsprocessing-formats-and-conversion-doc-docformatprovider
-tags: using,docformatprovider
+tags: format, provider, doc, word, flow, docx, import, word, legacy, document, binary
 published: True
 position: 1
 ---

@@ -1,8 +1,9 @@
 ---
 title: Clipping
+description: Learn how to use the Clipping content element in RadPdfProcessing to define the outline of images and paths in PDF documents.
 page_title: Clipping
 slug: radpdfprocessing-concepts-clipping
-tags: clipping
+tags: clipping, pdf, geometry, image, path, radpdfprocessing, outline, rectangle
 published: True
 position: 3
 ---

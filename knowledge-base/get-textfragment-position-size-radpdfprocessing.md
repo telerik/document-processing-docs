@@ -4,7 +4,7 @@ description: Learn how to retrieve the (x,y) position and dimensions of a TextFr
 type: how-to
 page_title: How to Determine TextFragment Position and Size in PDFs with RadPdfProcessing
 slug: get-textfragment-position-size-radpdfprocessing
-tags: radpdfprocessing, textfragment, position, size, document processing
+tags: radpdfprocessing, pdf, textfragment, position, size, document, processing, fixed
 res_type: kb
 ticketid: 1662399
 ---

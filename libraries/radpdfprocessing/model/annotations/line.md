@@ -3,7 +3,7 @@ title: Line
 page_title: Line Annotation  
 description: Line annotations display a single straight line on the page.
 slug: radpdfprocessing-model-annotations-line
-tags: annotation, overview, pdfprocessing, line
+tags: line, pdf, annotations, radpdfprocessing, drawing, graphics, shape, model
 published: True
 position: 5
 ---

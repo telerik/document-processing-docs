@@ -3,7 +3,7 @@ title: Prerequisites
 description: Get familiar with the requirements for using the GenAI-powered Document Insights functionality in the WordProcessing library. 
 page_title: Prerequisites
 slug: radwordsprocessing-features-gen-ai-powered-document-insights-prerequisites
-tags: ai, document, analysis, prerequisites, setup, installation
+tags: genai, prerequisites, word, flow, docx, document, llm, nuget, setup, ai
 published: True
 position: 1
 ---

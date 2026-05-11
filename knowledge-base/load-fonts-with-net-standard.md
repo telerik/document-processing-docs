@@ -5,7 +5,7 @@ type: how-to
 page_title: RadPdfProcessing manually register font
 slug: load-fonts-with-net-standard
 position: 0
-tags: pdf, register, fonts
+tags: radpdfprocessing, pdf, font, netstandard, provider, document, processing, register
 res_type: kb
 ---
 

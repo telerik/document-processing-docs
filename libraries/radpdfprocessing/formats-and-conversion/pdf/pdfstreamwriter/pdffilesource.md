@@ -1,8 +1,9 @@
 ---
 title: PdfFileSource
+description: Learn how to use the PdfFileSource class in RadPdfProcessing to represent and access the content of an existing PDF file.
 page_title: PdfFileSource
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource
-tags: pdf,stream,file,source
+tags: pdffilesource, pdf, file, stream, radpdfprocessing, source
 published: True
 position: 4
 ---

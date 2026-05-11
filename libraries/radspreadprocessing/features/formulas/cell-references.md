@@ -1,8 +1,9 @@
 ---
 title: Reference Ranges
+description: Learn how to use cell and range references in formulas in RadSpreadProcessing to work with data already in the workbook.
 page_title: Reference Ranges
 slug: radspreadprocessing-features-formulas-cell-references
-tags: cell,references
+tags: references, formulas, spreadsheet, radspreadprocessing, cells, ranges, worksheet, absolute, spread, xlsx
 published: True
 position: 2
 ---

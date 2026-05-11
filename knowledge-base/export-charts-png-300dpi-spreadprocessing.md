@@ -5,7 +5,7 @@ type: how-to
 page_title: Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing
 meta_title: Exporting Charts from Excel Documents to PNG Images with a Specific DPI Resolution Using SpreadProcessing
 slug: export-charts-png-300dpi-spreadprocessing
-tags: spread, processing,telerik, document ,chart, image, export, png, dpi, resolution
+tags: radspreadprocessing, chart, image, png, dpi, export, document, processing
 res_type: kb
 ticketid: 1695547
 ---

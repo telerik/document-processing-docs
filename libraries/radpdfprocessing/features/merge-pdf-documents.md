@@ -3,7 +3,7 @@ title: Merge PDF Documents
 description: RadPdfProcessing provides support for merging PDF documents.
 page_title: How to Merge PDF Documents
 slug: merge-pdf-documents
-tags: pdf, merge, document, file, telerik, processing, library
+tags: merge, pdf, documents, radpdfprocessing, combine, pages, radfixeddocument, export
 position: 5
 ---
 

@@ -3,7 +3,7 @@ title: PartialContextQuestionProcessor
 description: PartialContextQuestionProcessor class enables you to ask questions about a PDF document and receive answers based on the most relevant parts of the document content.
 page_title: PartialContextQuestionProcessor
 slug: radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor
-tags: ai, document, analysis, question, processor, partial, context, embeddings
+tags: questionprocessor, genai, pdf, embeddings, radpdfprocessing, ai, retrieval, context
 published: True
 position: 4
 ---

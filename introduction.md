@@ -1,9 +1,9 @@
 ---
 title: Introduction
 page_title: Welcome to Telerik Document Processing Libraries
-description: Telerik Document Processing is a bundle of UI-independent, cross-platform APIs enabling you to process the most commonly used flow, fixed and spreadsheet document formats. 
+description: Telerik Document Processing is a bundle of UI-independent, cross-platform libraries that let you create, import, modify, and export flow, fixed, and spreadsheet document formats without external dependencies.
 slug: introduction
-tags: introduction, dpl, document, processing, pdf, word, excel
+tags: document, processing, pdf, docx, xlsx, telerik, libraries, dotnet
 published: True
 position: 0
 ---
@@ -24,7 +24,7 @@ img[alt$="><"] {
 
 # Welcome to Telerik Document Processing Libraries
 
-**Telerik Document Processing** is a bundle of **UI-independent** *cross-platform* libraries that enable you to process the most commonly used flow, fixed and spreadsheet document formats for web and desktop. The Document Processing library allows you to create, import, modify and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
+**Telerik Document Processing** is a bundle of **UI-independent**, *cross-platform* libraries that let you process the most commonly used flow, fixed, and spreadsheet document formats for web and desktop. The Document Processing libraries allow you to create, import, modify, and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
 
 ![DPL Ninja](images/dpl-ninja.png) 
 
@@ -58,7 +58,7 @@ Telerik Document Processing features the following libraries:
 
   |||
   |----|----|
-  |![Words](images/dpl-words.png)|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or sent it to the client browser.|
+  |![Words](images/dpl-words.png)|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.|
 
 
 * [RadZipLibrary]({%slug radziplibrary-overview%})
@@ -72,13 +72,13 @@ Telerik Document Processing features the following libraries:
 |Feature|Description|
 |----|----|
 |**UI-Independent**|The libraries are UI-Independent and cover all .NET technologies, from desktop and web to mobile, and can be deployed in client, server-side and cloud apps.|
-|**No need for 3rd party software - No Server Deployment Fees**|Enable document manipulation within your application without relying on 3rd party software such as Microsoft Office or Adobe Acrobat Reader.|
-|**Convenient API**|Add document processing capabilities to your applications in no time by utilizing the convenient APIs. Enable creating, editing and converting documents with just a few lines of code.|
-|**Performance and Speed**|The libraries are decoupled from UI and can provide a great performance in different cases, especially when dealing with huge excel files.|
-|**Any document. Any Business.**|The Telerik Document Processing is suitable for various business cases and scenarios, where document creation or manipulation is required|
-|**Support for Variety of File Formats**|The Telerik Document Processing includes 5 libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.|
+|**No Need for Third-Party Software - No Server Deployment Fees**|Enable document manipulation within your application without relying on third-party software such as Microsoft Office or Adobe Acrobat Reader.|
+|**Convenient API**|Add document processing capabilities to your applications quickly by using the convenient APIs. Create, edit, and convert documents with a few lines of code.|
+|**Performance and Speed**|The libraries are decoupled from UI and deliver great performance in different cases, especially when you work with large Excel files.|
+|**Any Document. Any Business.**|Telerik Document Processing is suitable for various business cases and scenarios where document creation or manipulation is required.|
+|**Support for a Variety of File Formats**|Telerik Document Processing includes five libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.|
 |**Timeout Mechanism**|[Timeout Mechanism]({%slug timeout-mechanism-in-dpl%}) for importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory *TimeSpan?* timeout parameter after which the operation will be cancelled.|
-|**GenAI-powered Document Insights**|Enables you to easily extract insights from PDF documents using Large Language Models (LLMs). This functionality enables you to summarize document content and ask questions about it, with the AI providing relevant answers based on the document's content. [[Read More]]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
+|**GenAI-powered Document Insights**|Extract insights from PDF documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content. [[Read More]]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
 |**AI Coding Assistant**|Provides specialized context to AI models, enabling them to produce higher-quality code samples. [[Read More]]({%slug ai-coding-assistant%})|
 |**Automatic Output Stream Clearing on Export**|Automatically clears the output stream before writing new content. [[Read More]]({%slug common-export-output-stream-clearing%})|
 
@@ -117,11 +117,11 @@ The Telerik Document Processing libraries are available in **.NET Framework**, *
 
 |.NET Framework Products|{{site.dotnetversions}} *for Windows*|.NET Standard|
 |----|----|----|
-|[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)||[UI for Xamarin](https://www.telerik.com/xamarin-ui)|
+|[UI for ASP.NET MVC](https://www.telerik.com/aspnet-mvc)||[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
 |[UI for ASP.NET AJAX](https://www.telerik.com/products/aspnet-ajax.aspx)||[UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui)|
 |[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for Blazor](https://www.telerik.com/blazor-ui)|
 |[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
-|[UI for Silverlight (discontinued)](https://www.telerik.com/products/silverlight/overview.aspx)||[UI for .NET MAUI](https://www.telerik.com/maui-ui)|
+|[UI for Silverlight (discontinued)](https://www.telerik.com/products/silverlight/overview.aspx)|||
 
 You can find all packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article.
 
@@ -133,7 +133,7 @@ To start using the libraries right away, see the [First Steps]({%slug getting-st
 
 Telerik Document Processing is a commercial library. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to [purchase a license](https://www.telerik.com/purchase.aspx). Feel free to review the Telerik [License Agreement](https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s) to get acquainted with the full terms of use.	
 
->Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for Xamarin**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight***. The libraries are subject to the license under which you've obtained the packages. ( * [Learn about Telerik UI for Silverlight discontinuation, end user options and alternatives.](https://www.telerik.com/products/silverlight/overview.aspx)).
+>Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for WPF**, **UI for WinForms**, **UI for Silverlight***. The libraries are subject to the license under which you've obtained the packages. ( * [Learn about Telerik UI for Silverlight discontinuation, end user options and alternatives.](https://www.telerik.com/products/silverlight/overview.aspx)).
 
 ## Support Options
 
@@ -150,7 +150,7 @@ For any issues you might encounter while working with Telerik Document Processin
 * [Knowledge Base](https://docs.telerik.com/devtools/document-processing/knowledge-base)
 * [Virtual Classroom](https://www.telerik.com/account/support/virtual-classroom)
 
-## Help us Improve the Telerik Document Processing Libraries' Documentation
+## Help Us Improve the Telerik Document Processing Documentation
 
 We believe that the documentation for a product is at its best when the content is a collaboration between the builders and consumers of that product. Everybody can play a role in making our documentation better and we encourage you to help us with that task in the way that you choose:
 
@@ -166,7 +166,7 @@ Creating an issue is great, but what we really love are pull requests. This is t
 
 You can visit the [Telerik Document Processing forum](https://www.telerik.com/forums/telerik-document-processing) and leave us feedback. Please notice that this method will take a bit longer to reach our documentation team. However, if you need a fast reply from our support team, leaving feedback in the forum guarantees a support number for your suggestions, and that we will follow up on it.
 
-Thank you for your contribution to the Telerik Document Processing Libraries' Documentation!
+Thank you for your contribution to the Telerik Document Processing documentation!
 
 ## Next Steps
 

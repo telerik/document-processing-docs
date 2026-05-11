@@ -5,7 +5,7 @@ type: how-to
 page_title: Create archive from a list of files
 slug: archive-a-list-of-files
 position: 0
-tags: zip, archive, files  
+tags: radziplibrary, zip, archive, files, create, compression, dotnet, stream
 res_type: kb
 ---
 

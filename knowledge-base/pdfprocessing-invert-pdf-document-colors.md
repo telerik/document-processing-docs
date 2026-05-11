@@ -5,7 +5,7 @@ type: how-to
 page_title: Invert the Colors within a PDF Document
 slug: pdfprocessing-invert-pdf-document-colors
 position: 0
-tags: pdf, processing, invert, color, background
+tags: radpdfprocessing, pdf, colors, invert, background, document, processing, fixed
 res_type: kb
 ---
 

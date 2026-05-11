@@ -1,8 +1,9 @@
 ---
 title: Cell Value Types
+description: Learn about the different cell value types supported in RadSpreadProcessing and how to work with the Value property of cells.
 page_title: Cell Value Types
 slug: radspreadprocessing-working-with-cells-cell-value-types
-tags: cell,value,types
+tags: cell, values, spreadsheet, radspreadprocessing, types, numeric, text, formula, boolean
 published: True
 position: 5
 ---

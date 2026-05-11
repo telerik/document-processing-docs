@@ -3,7 +3,7 @@ title: Compare Field
 page_title: Compare Field
 description: Compare field is a Field element that compares two values and displays the comparison result.
 slug: radwordsprocessing-concepts-compare-field
-tags: compare,field
+tags: compare, field, word, flow, docx, fields, document, comparison, values, model, logic
 published: True
 position: 1
 ---
@@ -24,7 +24,7 @@ This is how the syntax of a compare field looks like:
 Values to compare.
 
 ### Operators
-In the table bellow are listed all the comparison operators.
+In the table below are listed all the comparison operators.
 
 | Operator    | Description              |
 | :---        | :---                     |

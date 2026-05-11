@@ -5,7 +5,7 @@ type: how-to
 page_title: Changing Formatting While Importing and Exporting CSV Files in SpreadProcessing
 meta_title: Changing Formatting While Importing and Exporting CSV Files in SpreadProcessing
 slug: spreadprocessing-import-export-csv-formatting
-tags: telerik, document, processing, spread, csv, culture, delimiter, decimal, separator, formatting, export, import
+tags: radspreadprocessing, csv, culture, delimiter, formatting, export, document, processing
 res_type: kb
 ticketid: 1700417
 ---

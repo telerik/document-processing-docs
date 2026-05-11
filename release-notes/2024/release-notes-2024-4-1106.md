@@ -3,7 +3,7 @@ title: Version 2024.4.1106 (2024 Q4)
 page_title: What is new in 2024.4.1106 (2024 Q4) for the Document Processing Libraries
 description: 2024.4.1106 (2024 Q4)
 slug: release-notes-2024-4-1106
-tags: 2024.4.1106,Q4,2024
+tags: release, notes, 2024, Q4, telerik, document, processing, changelog
 published: True
 position: 0
 ---
@@ -59,12 +59,12 @@ position: 0
 * SkiaImageFormatProvider: Export to image is blocked when Export method is used instead of ExportAsync.
 * A NullReferenceException is thrown when writing image content with the PdfPageStreamWriter.
 * ArgumentNullException is thrown when resolving DecodeParms collection in Image XObject.
-* Form XObject does not takes graphic state color from its content stream context.
+* Form XObject does not take graphic state color from its content stream context.
 * Document text overlaps and is not possible to read for a specific document.
 * Decreased performance when loading thumbnails.
 * Wrong color appears when the Separation color space with name is set to None.
 * Watermark transparency is not imported correctly.
-* The Form object does no inherit the graphics state of the page.
+* The Form object does not inherit the graphics state of the page.
 * RTL (right-to-left) text is reversed when inserting it directly to a document.
 
 ## SpreadProcessing

@@ -3,8 +3,8 @@ title: Images
 description: Discover how to work with images in Telerik RadPdfProcessing for cross-platform .NET applications.
 page_title: Images
 slug: radpdfprocessing-cross-platform-images
-tags: cross, platform, image, blazor, core, xamarin, winui, maui, net, standard, linux, ios 
-platforms: blazor, core, xamarin, winui, maui
+tags: images, crossplatform, pdf, jpeg, skiasharp, imagesharp, radpdfprocessing, dotnet
+platforms: blazor, core, winui, maui
 published: True
 position: 2
 ---
@@ -26,7 +26,7 @@ To export images different than Jpeg and Jpeg2000 or ImageQuality different than
 
 |NuGet package|Description|
 |----|----|
-|**Telerik.Documents.ImageUtils**|This package is currently not available in UI for Xamarin.|
+|**Telerik.Documents.ImageUtils**||
 |**SkiaSharp.NativeAssets.*** (version {{site.skiasharpversion}})|May differ according to the used platform. For **Linux** use <b>SkiaSharp.NativeAssets.Linux.NoDependencies|
 |**SkiaSharp.Views.Blazor** and **wasm-tools**|For Blazor Web Assembly.|
 

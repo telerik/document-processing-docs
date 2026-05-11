@@ -3,7 +3,7 @@ title: Overview
 description: Learn how to create and manage PDF Portfolios (Collections) with RadPdfProcessing to organize multiple embedded files with structured metadata and customizable views.
 page_title: PDF Portfolio
 slug: radpdfprocessing-pdf-portfolio-overview
-tags: pdf, portfolio, collection, package, embedded, files, schema, sorting, fixed, radfixeddocument
+tags: pdfportfolio, pdf, collection, embedded, radpdfprocessing, schema, sorting, metadata
 position: 0
 ---
 

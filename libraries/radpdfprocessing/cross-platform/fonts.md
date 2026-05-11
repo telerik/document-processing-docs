@@ -3,8 +3,8 @@ title: Fonts
 description: Learn how to manage and embed fonts in PDF documents using Telerik RadPdfProcessing for cross-platform .NET applications.
 page_title: Fonts
 slug: radpdfprocessing-cross-platform-fonts
-tags: cross, platform, font, blazor, core, xamarin, winui, maui, net, standard, linux, ios 
-platforms: blazor, core, xamarin, winui, maui
+tags: fonts, crossplatform, pdf, embedding, provider, radpdfprocessing, dotnet, standard
+platforms: blazor, core, winui, maui
 published: True
 position: 1
 ---

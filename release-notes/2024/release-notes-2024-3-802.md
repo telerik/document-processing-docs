@@ -3,7 +3,7 @@ title: Version 2024.3.802 (2024 Q3)
 page_title: What is new in 2024.3.802 (2024 Q3) for the Document Processing Libraries
 description: 2024.3.802 (2024 Q3)
 slug: release-notes-2024-3-731
-tags: 2024.3.802,2024,Q3
+tags: release, notes, 2024, Q3, radpdfprocessing, telerik, document, changelog
 published: True
 position: 97
 ---
@@ -28,7 +28,7 @@ position: 97
 * Handle documents with mismatched font Subtype and FontFile type.
 * Introduced support for Strikethrough text property.
 * Introduced support for Dotted, Dashed, and DashSmallGap borders.
-* Added System.Formats.Asn1 to address CVE-2024-38095 (CVSS 7.5) in System.Security.Cryptography.Pcks.
+* Added System.Formats.Asn1 to address CVE-2024-38095 (CVSS 7.5) in System.Security.Cryptography.Pkcs.
 
 ![fixed](../images/fixed.png)
 

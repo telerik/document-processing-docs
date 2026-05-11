@@ -3,7 +3,7 @@ title: Popup
 page_title: Popup Annotation  
 description: Popup annotations display a pop-up window containing comments or notes associated with the document content. 
 slug: radpdfprocessing-model-annotations-popup
-tags: annotation, overview, pdfprocessing, popup 
+tags: popup, pdf, annotations, radpdfprocessing, comments, notes, window, model
 published: True
 position: 7
 ---

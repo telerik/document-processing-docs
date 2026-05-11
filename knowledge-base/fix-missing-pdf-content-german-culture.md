@@ -5,7 +5,7 @@ type: how-to
 page_title: Resolving Missing Text with Specific Cultures 
 meta_title: Resolving Missing Text with Specific Cultures 
 slug: radfixeddocument-import-wrong-document-size
-tags: pdf, processing, telerik, document, fixed, pdfformatprovider, culture, truncate
+tags: radpdfprocessing, pdf, culture, content, missing, document, processing, localization
 res_type: kb
 ticketid: 1674854
 ---

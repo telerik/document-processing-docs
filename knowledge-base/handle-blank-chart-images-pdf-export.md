@@ -4,7 +4,7 @@ description: Learn how to convert charts to images using the RadSpreadProcessing
 type: how-to
 page_title: How to Handle Blank Charts Images when exporting XLSX documents to PDF format 
 slug: handle-blank-chart-images-pdf-export
-tags: spreadprocessing, chart, image, convert, pdf
+tags: radspreadprocessing, xlsx, chart, image, pdf, export, document, processing
 res_type: kb
 ---
 

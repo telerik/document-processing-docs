@@ -5,7 +5,7 @@ type: how-to
 page_title: Create Pdf from Image
 slug: pdfprocessing-create-pdf-from-image
 position: 0
-tags: pdf, image, create, convert, insert
+tags: radpdfprocessing, pdf, image, creation, document, processing, fixed, convert
 ticketid: 1518025
 res_type: kb
 ---

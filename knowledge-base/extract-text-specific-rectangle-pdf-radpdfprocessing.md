@@ -4,7 +4,7 @@ description: Learn how to extract text from a specified rectangle area within PD
 type: how-to
 page_title: How to Extract Text from a Specified Area in PDF Pages
 slug: extract-text-specific-rectangle-pdf-radpdfprocessing
-tags: radpdfprocessing, pdf, textfragment, cropbox, extract, text
+tags: radpdfprocessing, pdf, text, extraction, rectangle, textfragment, document, processing
 res_type: kb
 category: knowledge-base
 ticketid: 1653594

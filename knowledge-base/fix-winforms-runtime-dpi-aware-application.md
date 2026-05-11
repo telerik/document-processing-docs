@@ -5,7 +5,7 @@ type: how-to
 page_title: Why Your WinForms App Resizes - DPI Awareness and Telerik Document Processing Explained
 slug: fix-winforms-runtime-dpi-aware-application
 position: 0
-tags: winforms,windows, forms, dpi, scaling, document, processing, pdf, viewer, rich, text, editor, spreadsheet, control, aware, shrink, scale
+tags: winforms, dpi, scaling, document, processing, pdf, viewer, spreadsheet, awareness
 res_type: kb
 ---
 

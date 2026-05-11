@@ -5,7 +5,7 @@ type: how-to
 page_title: Export RadFixedPage to image
 slug: export-radfixedpage-to-image
 position: 0
-tags: pdf, page, export, image
+tags: radpdfprocessing, pdf, page, image, export, document, processing, fixed
 res_type: kb
 ---
 
@@ -19,12 +19,12 @@ res_type: kb
 </thead>
 <tbody>
 	<tr>
-		<td>bellow 2020.2.513 or above*</td>
+		<td>below 2020.2.513 or above*</td>
 		<td>RadPdfProcessing</td>
 		<td rowspan="2"><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
 	</tr>
 	<tr>
-	    <td>bellow 2020.2.513 or above*</td>
+	    <td>below 2020.2.513 or above*</td>
 		<td>RadPdfViewer</td>
 	</tr>	
 </tbody>
@@ -38,11 +38,11 @@ How to export RadFixedPage to TIFF file.
 
 ## Solution
 
-To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/overview) control form the [UI for WPF](https://docs.telerik.com/devtools/wpf/introduction) suite to create images from the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) pages using the **ThumbnailFactory** class.
-	q
+To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/overview) control from the [UI for WPF](https://docs.telerik.com/devtools/wpf/introduction) suite to create images from the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) pages using the **ThumbnailFactory** class.
+
 >note The COM threading model for the application has to be a single-threaded apartment (STA). A STAThreadAttribute tag "[STAThread]" should be placed on the class. 
 
-#### __Assemblies version bellow 2020.2.513__
+#### __Assemblies version below 2020.2.513__
 ```csharp
 
 	[STAThread]

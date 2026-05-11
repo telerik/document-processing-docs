@@ -4,7 +4,7 @@ description: How to fix the FileNotFoundException for 'System.Text.Encoding.Code
 type: how-to
 page_title: How to Solve FileNotFoundException for Encoding.CodePages in RadWordsProcessing
 slug: resolve-file-not-found-exception-system-text-encoding-codepages-radwordsprocessing
-tags: radwordsprocessing, document-processing, filenotfoundexception, system.text.encoding.codepages, .net6, workaround
+tags: radwordsprocessing, exception, encoding, dotnet, netstandard, document, processing, codepages
 res_type: kb
 ticketid: 1655041
 ---

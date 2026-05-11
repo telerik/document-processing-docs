@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Open Locked Excel Files in Read-Only Mode with Telerik SpreadProcessing
 meta_title: How to Open Locked Excel Files in Read-Only Mode with Telerik SpreadProcessing
 slug: spreadprocessing-open-locked-files-read-only
-tags: telerik, document, processing, spread, file, access, locked, read, only, libraries, excel, xlsx, xlsm, xls
+tags: radspreadprocessing, excel, xlsx, locked, readonly, document, processing, file
 res_type: kb
 ticketid: 1707647
 ---

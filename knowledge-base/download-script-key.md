@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Download a Script Key
 meta_title: How to Download a Script Key
 slug: download-script-key
-tags: telerik, license, licensing, document, processing, dpl, script, key
+tags: telerik, license, key, script, document, processing, download, licensing
 res_type: kb
 ticketid: 1709949
 ---
@@ -14,7 +14,7 @@ ticketid: 1709949
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
-| 2026.1.210| Telerik Document Procesing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| 2026.1.210| Telerik Document Processing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 |Target Framework|.NET Framework||
 
 ## Description

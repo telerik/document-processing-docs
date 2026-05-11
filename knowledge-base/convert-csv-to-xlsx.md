@@ -5,7 +5,7 @@ type: how-to
 page_title: Convert CSV to XLSX
 slug: convert-csv-to-xlsx
 position: 0
-tags: csv, xlsx, excel, spreadprocessing
+tags: radspreadprocessing, csv, xlsx, excel, conversion, spreadsheet, document, processing
 res_type: kb
 ---
 

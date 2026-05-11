@@ -1,8 +1,9 @@
 ---
 title: TableRow
+description: Learn how to insert and configure TableRow instances within tables in RadPdfProcessing PDF documents.
 page_title: TableRow
 slug: radpdfprocessing-editing-table-tablerow
-tags: table, overview, pdfprocessing, pdf, fixed, tablerow, tablecell
+tags: tablerow, pdf, tablecell, height, radpdfprocessing, table, pixels, layout
 published: True
 position: 1
 ---
@@ -44,7 +45,7 @@ __Example 2__ shows how to add two cells in a row and get the cells count.
 
 ## Setting TableRow Height
 
-Since **Q1 2025** you can easily configure the TablRow's height through its **Height** property which accepts the following options defined in the **HeightType** enum:     
+Since **Q1 2025** you can easily configure the TableRow's height through its **Height** property which accepts the following options defined in the **HeightType** enum:     
 
 * __Auto__: Automatically determines the row height.
             

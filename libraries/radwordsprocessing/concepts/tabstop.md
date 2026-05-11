@@ -1,8 +1,9 @@
 ---
 title: TabStop
+description: Learn about tab stops in RadWordsProcessing and how to use them to align text by inserting tab characters in paragraphs.
 page_title: TabStop
 slug: radwordsprocessing-concepts-tabstop
-tags: tab, stop
+tags: tab, stop, word, flow, docx, alignment, paragraphs, text, document, indentation
 published: True
 position: 3
 ---

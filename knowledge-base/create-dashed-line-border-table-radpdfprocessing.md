@@ -4,7 +4,7 @@ description: Learn how to add a dashed line border to a table in RadPdfProcessin
 type: how-to
 page_title: Create a Dashed Line Border for a Table in RadPdfProcessing
 slug: create-dashed-line-border-table-radpdfprocessing
-tags: pdfprocessing, table, border, dash, line
+tags: radpdfprocessing, pdf, table, border, dashed, document, processing, fixed
 res_type: kb
 ---
 ## Environment

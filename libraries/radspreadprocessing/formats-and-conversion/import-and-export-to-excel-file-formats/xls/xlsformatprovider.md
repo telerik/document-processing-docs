@@ -3,10 +3,10 @@ title: Using XlsFormatProvider
 page_title: Import and Export to Excel 97-2003 File Format Using XlsFormatProvider
 description: Import and Export to Excel 97-2003 File Format Using XlsFormatProvider.
 slug: radspreadprocessing-formats-and-conversion-xls-xlsformatprovider
-tags: xlsformatprovider,excel97-2003,workbook,xls,import,export,save
+tags: xls, format, provider, xls, spreadsheet, radspreadprocessing, excel, import, export, workbook
 published: True
 position: 2
-platforms: core, mvc, ajax, blazor, wpf, winforms, xamarin, winui
+platforms: core, mvc, ajax, blazor, wpf, winforms, winui
 ---
 
 # Using XlsFormatProvider

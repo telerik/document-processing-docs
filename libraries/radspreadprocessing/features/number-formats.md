@@ -1,8 +1,9 @@
 ---
 title: Number Formatting
+description: Learn how to apply predefined number formats to cells in RadSpreadProcessing to control how numeric values are displayed.
 page_title: Number Formatting
 slug: radspreadprocessing-features-number-formats
-tags: number,formatting
+tags: number, formats, spreadsheet, radspreadprocessing, cells, formatting, numeric, display, codes, spread, xlsx, formatting
 published: True
 position: 11
 ---
@@ -10,7 +11,7 @@ position: 11
 
 # Number Formatting
 
-Applying different formats to a number changes the appearance of the number. It is important to note, however, that a format does not change the value it is applied to. It only changes the way the value appears in the cell. This article explains the how to use the predefined number formats.
+Applying different formats to a number changes the appearance of the number. It is important to note, however, that a format does not change the value it is applied to. It only changes the way the value appears in the cell. This article explains how to use the predefined number formats.
 
 >note More information of how to create your own number format or modify one of the predefined types you can find in [Format Codes]({%slug radspreadprocessing-features-format-codes%}) help article.
 
@@ -146,7 +147,7 @@ More information of how to create your own number format or modify one of the pr
 You can retrieve the number format of any cell selection using the __GetFormat()__ method of __CellSelection__ class. The method returns an object of type __RangePropertyValue&lt;CellValueFormat&gt;__, which exposes two properties:
 
 
-* __IsIndeterminate__: Determines if the __CellValueFormat__ is consistent among all cells in the specified __CellSelection__. If the __CellValueFormat__ is one and the same for all cells, __IsIndeterminate__ is set to false. However, if the __CellValueFormat__ varies throughout the cells in the __CellSelection__, the __IsIndetermine__ property is set to true and the __Value__ property of the __RangePropertyValue&gt;T&gt;__ object is set to its default value.
+* __IsIndeterminate__: Determines if the __CellValueFormat__ is consistent among all cells in the specified __CellSelection__. If the __CellValueFormat__ is one and the same for all cells, __IsIndeterminate__ is set to false. However, if the __CellValueFormat__ varies throughout the cells in the __CellSelection__, the __IsIndeterminate__ property is set to true and the __Value__ property of the __RangePropertyValue&gt;T&gt;__ object is set to its default value.
             
 
 * __Value__: Holds the __CellValueFormat__ for the cells. If the __IsIndeterminate__ property is set to false, __Value__ contains __CellValueFormat__ of the whole __CellSelection__ region. If the __IsIndeterminate__ property is set to true, this indicates that the __CellValueFormat__ is not the same for all cells in the __CellSelection__ and the __Value__ property is set to the default __CellValueFormat__.

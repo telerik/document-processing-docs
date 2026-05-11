@@ -4,7 +4,7 @@ description: Learn how to convert TIFF images to PDF format using RadPdfProcessi
 type: how-to
 page_title: How to Convert TIFF to PDF with Full Content Visibility Using RadPdfProcessing
 slug: convert-tiff-to-pdf-radpdfprocessing
-tags: radpdfprocessing, document, processing, tiff, pdf, conversion, image, fit,
+tags: radpdfprocessing, tiff, pdf, conversion, image, document, processing, fit
 res_type: kb
 category: knowledge-base
 ticketid: 1651927

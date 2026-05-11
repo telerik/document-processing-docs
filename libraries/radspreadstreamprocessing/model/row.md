@@ -1,8 +1,9 @@
 ---
 title: Rows
+description: Learn about rows in RadSpreadStreamProcessing, including how to define and configure row properties.
 page_title: Rows
 slug: radspreadstreamprocessing-model-rows
-tags: row
+tags: rows, spread, stream, processing, spreadsheet, model, properties, height, worksheet, export
 published: True
 position: 4
 ---

@@ -1,8 +1,9 @@
 ---
 title: Backwards Compatibility
+description: Breaking changes and migration guidance for upgrading RadSpreadProcessing between versions.
 page_title: Backwards Compatibility
 slug: radspreadprocessing-backwards-compatibility
-tags: backward,compatibility
+tags: migration, compatibility, radspreadprocessing, breaking, spreadsheet, excel, versions, upgrade
 published: True
 position: 1
 ---

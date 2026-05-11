@@ -4,7 +4,7 @@ description: Learn how to configure NuGet feeds to efficiently manage Telerik Do
 type: how-to
 page_title: Telerik.Licensing NuGet package is not available on the Telerik NuGet feed
 slug: dpl-telerik-licensing-nuget-feed
-tags: telerik, document, processing, nuget, licensing, feed, config, license, libraries, package, source
+tags: telerik, nuget, licensing, feed, document, processing, configuration, packages
 res_type: kb
 ticketid: 1679127
 ---

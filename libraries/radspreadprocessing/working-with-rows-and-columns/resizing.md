@@ -1,8 +1,9 @@
 ---
 title: Resizing Rows and Columns
+description: Learn how to resize rows and columns in RadSpreadProcessing, including setting custom dimensions and using the autofit feature.
 page_title: Resizing Rows and Columns
 slug: radspreadprocessing-working-with-rows-and-columns-resizing
-tags: resizing,rows,and,columns
+tags: resizing, rows, columns, spreadsheet, radspreadprocessing, width, height, autofit, xlsx, spread, workbook
 published: True
 position: 2
 ---

@@ -5,7 +5,7 @@ type: how-to
 page_title: Convert Xlsx to PDF
 slug: convert-xlsx-to-pdf
 position: 0
-tags: xlsx, pdf, Excel
+tags: radspreadprocessing, xlsx, pdf, excel, conversion, document, processing, export
 res_type: kb
 ---
 

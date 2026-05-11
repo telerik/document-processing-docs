@@ -1,8 +1,9 @@
 ---
 title: Frequently Asked Questions
+description: Answers to the most frequently asked questions about working with the Telerik Document Processing license key, including expiration, renewal, and deployment scenarios.
 page_title: License Key Frequently Asked Questions
 slug: frequently-asked-questions
-tags: frequently, asked, questions, license, key, document, processing, libraries
+tags: license, key, faq, expiration, renewal, telerik, deployment, document
 published: True
 position: 3
 ---

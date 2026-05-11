@@ -3,7 +3,7 @@ title: Barcode
 description: Learn how to add barcodes into a PDF document using RadPdfProcessing.
 page_title: Barcode FormSource
 slug: radpdfprocessing-model-formsource-barcode
-tags: formsource, pdfprocessing, document, processing, pdf, barcode
+tags: barcode, pdf, formsource, radpdfprocessing, qrcode, code128, model, graphics
 published: True
 position: 2
 ---

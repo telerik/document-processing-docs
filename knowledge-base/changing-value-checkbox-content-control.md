@@ -4,7 +4,7 @@ description: Learn how to check or uncheck a checkbox content control based on a
 type: how-to
 page_title: How to Change the Value of a Checkbox Content Control
 slug: changing-value-checkbox-content-control
-tags: checkbox, content control, object property, WordsProcessing
+tags: radwordsprocessing, checkbox, content, docx, document, processing, fields, word
 res_type: kb
 ---
 

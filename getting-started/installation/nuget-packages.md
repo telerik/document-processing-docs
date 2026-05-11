@@ -1,18 +1,18 @@
 ---
 title: Available NuGet Packages
 page_title: Available NuGet Packages
-description: Learn how you can use the Telerik Document Processing libraries through NuGet.
+description: Learn about the available Telerik Document Processing NuGet packages for RadPdfProcessing, RadSpreadProcessing, RadWordsProcessing, and RadZipLibrary.
 slug: available-nuget-packages
-tags: nuget, document, processing, assembly, package
+tags: nuget, packages, assemblies, telerik, radpdfprocessing, radwordsprocessing, libraries, dotnet
 published: True
 position: 6
 ---
 
 # Available NuGet Packages 
 
-Telerik provides NuGet packages with the assemblies for all five Document Processing libraries: __RadPdfProcessing__, __RadSpreadProcessing__, __RadSpreadStreamProcessing__, __RadWordsProcessing__, and __RadZipLibrary__. These UI-independent cross-platform libraries enable you to process and convert content in various formats and even work with archive files. We deliver these libraries as a complement to the Telerik UI component suites (UI for ASP.NET, Kendo UI, UI for WPF, UI for WinForms, UI for Xamarin, UI for Blazor), and you don't need to purchase an additional license to use them.
+Telerik provides NuGet packages with the assemblies for all five Document Processing libraries: `RadPdfProcessing`, `RadSpreadProcessing`, `RadSpreadStreamProcessing`, `RadWordsProcessing`, and `RadZipLibrary`. These UI-independent cross-platform libraries let you process and convert content in various formats and work with archive files. We deliver these libraries as a complement to the Telerik UI component suites (UI for ASP.NET, Kendo UI, UI for WPF, UI for WinForms, UI for Blazor), and you do not need to purchase an additional license to use them.
 
-If your workflow relies on NuGet for package management, you can take advantage of the packages that we describe in this article. There is no need to download and install the Document Processing libraries by using other methods. 
+If your workflow relies on NuGet for package management, you can take advantage of the packages that we describe in this article. There is no need to download and install the Document Processing libraries by using other methods.
 
 >important The Telerik Document Processing libraries are available in two versions:
 >
@@ -20,7 +20,7 @@ If your workflow relies on NuGet for package management, you can take advantage 
 >
 >* A version for **.NET Standard 2.0 (Support for {{site.dotnetversions}})**
 >
->Both versions are available as NuGet packages but with different names. The packages for __.NET Standard__ do __not__ contain the word __Windows__ in their name.
+>Both versions are available as NuGet packages but with different names. The packages for **.NET Standard** do **not** contain the word **Windows** in their name.
 
 >caption Package lists to use with .NET Standard (left) and .NET Framework (right)
 
@@ -59,7 +59,6 @@ The following tables represent the available NuGet packages for the Document Pro
 	<tr>
 		<td><b><em>N/A</em></b></td>
 		<td><b>Telerik.Documents.ImageUtils</b>
-        <br><sub><i>This package is not available in UI for Xamarin.</i></sub></td>
 	</tr>
 	<tr>
 		<td colspan="2">This package is required when exporting to <code>PDF</code> format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the <a href="{%slug radpdfprocessing-cross-platform%}">PdfProcessing`s Cross-Platform Support</a> article. The package also depends on SkiaSharp. In order to use it, you will need to add a reference to SkiaSharp.
@@ -334,3 +333,4 @@ The following tables represent the available NuGet packages for the Document Pro
  * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
  * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
  * [Resolving Namespace Conflicts in Telerik Document Processing Libraries]({%slug radspreadprocessing-resolving-namespace-conflicts%})
+ * [Telerik.Windows.Documents.* vs Telerik.Documents.*]({%slug telerik-windows-documents-vs-telerik-documents-namespace%})

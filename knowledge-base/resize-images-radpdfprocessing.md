@@ -4,7 +4,7 @@ description: Learn how to adjust large images to fit within the PDF page dimensi
 type: how-to
 page_title: How to Resize Images for PDF Documents in RadPdfProcessing
 slug: resize-images-radpdfprocessing
-tags: pdfprocessing, document, processing, image, pdf, resize, aspect, ratio
+tags: radpdfprocessing, pdf, image, resize, aspect, ratio, document, processing
 res_type: kb
 ticketid: 1656650
 ---

@@ -1,8 +1,9 @@
 ---
 title: RadFixedPage
+description: Learn about the RadFixedPage class in RadPdfProcessing, which represents a single page within a RadFixedDocument PDF document.
 page_title: RadFixedPage
 slug: radpdfprocessing-model-radfixedpage
-tags: radfixedpage
+tags: radfixedpage, pdf, page, radpdfprocessing, size, rotation, content, layout
 published: True
 position: 2
 ---

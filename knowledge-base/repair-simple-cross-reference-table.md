@@ -5,7 +5,8 @@ type: how-to
 page_title: Repair Simple Cross-Reference Table
 slug: repair-simple-cross-reference-table
 position: 0
-tags: 
+tags: radpdfprocessing, pdf, cross, reference, repair, document, processing, fixed
+
 res_type: kb
 ---
 

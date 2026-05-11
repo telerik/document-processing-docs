@@ -1,8 +1,9 @@
 ---
 title: Redistributing Telerik Document Processing
+description: Technical guidelines for protecting and redistributing Telerik Document Processing binaries with your integrated product across supported Telerik UI suites.
 page_title: Redistributing Telerik Document Processing
 slug: installation-deploying-telerik-document-processing
-tags: distributing,instructions,document,processing
+tags: redistribution, telerik, document, processing, binaries, licensing, distribution, guidelines
 published: True
 position: 1
 ---
@@ -22,7 +23,6 @@ Telerik Document Processing is part of several Telerik bundles and is licensed u
 | UI for WinUI | [ WinUI Document Processing Overview](https://docs.telerik.com/devtools/winui/controls/document-processing/overview) |
 | UI for Silverlight ([Discontinued](https://www.telerik.com/products/silverlight/overview.aspx)) | [Protecting the Telerik UI for Silverlight Assemblies](https://docs.telerik.com/devtools/silverlight/licensing/protecting-telerik-assembly#protect-the-telerik-documents-assemblies-by-editing-the-source-code) |
 | UI for .NET MAUI ||
-| UI for Xamarin ||
 
 >important Protecting the Telerik dlls is required only with versions prior to **2025 Q2 (2025.2.520)**. With the introduction of our new [licensing mechanism](https://www.telerik.com/blogs/license-key-files-telerik-kendo-ui-products-2025-update), Telerik UI suites have simplified deployment requirements. __Starting with 2025 Q2, users are no longer required to protect the Telerik assemblies__. Instead, the respective Telerik product now requires [installing a license key]({%slug setting-up-license-key%}). Applications without a valid license will continue to function normally, but will contain a watermark.
 

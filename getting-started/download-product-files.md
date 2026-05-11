@@ -3,7 +3,7 @@ title: Download Product Files
 description: Learn how to download the source code, pdf documentation, different versions from your Telerik account.
 page_title: Download Product Files
 slug: download-product-files
-tags: download, dpl, product, file, assets, distribution
+tags: download, product, nuget, distribution, telerik, assemblies, versions, account
 published: True
 position: 4
 ---

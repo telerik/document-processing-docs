@@ -1,8 +1,9 @@
 ---
 title: Named Destinations
+description: Learn how to create and use named destinations in RadPdfProcessing for indirect document navigation references by name.
 page_title: Named Destinations
 slug: radpdfprocessing-model-named-destinations
-tags: named,destinations
+tags: nameddestinations, pdf, navigation, radpdfprocessing, links, destinations, bookmarks, references
 published: True
 position: 10
 ---

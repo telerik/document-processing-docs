@@ -3,7 +3,7 @@ title: MCP Server as a NuGet Package
 page_title: Telerik DPL MCP (Model Context Protocol) Server as a NuGet Package
 description: Learn how to add and use the Telerik Document Processing MCP Server via a NuGet package with the dnx command as a .NET Document Processing AI coding assistant and code generator for better developer productivity. The Telerik Document Processing MCP server provides proprietary context about Telerik UI for .NET Document Processing to AI-powered software.
 slug: ai-mcp-server-as-a-nuget
-tags: telerik, dpl, ai, server, mcp, dotnet,coding, assistant, nuget
+tags: mcp, server, nuget, ai, dotnet, telerik, coding, assistant
 published: True
 position: 2
 ---

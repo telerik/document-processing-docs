@@ -4,7 +4,7 @@ description: Learn how to better diagnose the issues of the trial version messag
 type: how-to
 page_title: Diagnostic Options for Telerik Licensing
 slug: telerik-trial-version-message-diagnostic-options
-tags: progress, telerik, license, document, processing, devcraft, diagnostic, trial
+tags: telerik, license, trial, diagnostics, document, processing, devcraft, watermark
 res_type: kb
 ticketid: 1688475
 ---

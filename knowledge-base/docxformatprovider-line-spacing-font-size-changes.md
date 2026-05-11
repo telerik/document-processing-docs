@@ -5,7 +5,7 @@ type: how-to
 page_title: Fixing Changes in Style Properties During DOCX Export Using DocxFormatProvider
 meta_title: Fixing Changes in Style Properties During DOCX Export Using DocxFormatProvider
 slug: docxformatprovider-line-spacing-font-size-changes
-tags: wordsprocessing, telerik document processing, docxformatprovider, glossary, ziplibrary, styles.xml
+tags: radwordsprocessing, docxformatprovider, docx, font, spacing, styles, document, processing
 res_type: kb
 ticketid: 1686104
 ---

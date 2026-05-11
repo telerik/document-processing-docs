@@ -4,7 +4,7 @@ description: This article provides solutions for updating the used cell range fo
 type: troubleshooting
 page_title: How to Update the CellRange used for the FloatingChartShape in RadSpreadProcessing
 slug: update-cell-range-used-in-charts
-tags: chart, cell, range, spread, worksheet, empty, blank
+tags: radspreadprocessing, chart, cell, range, worksheet, document, processing, floating
 res_type: kb
 ---
 ## Environment

@@ -5,7 +5,7 @@ type: how-to
 page_title: Create custom implementation of JpegImageConverterBase in .Net Standard
 slug: create-custom-jpeg-image-converter-net-standard
 position: 0
-tags: image, converter, jpeg, jpegimageconverter, netstandard
+tags: radpdfprocessing, jpeg, converter, image, netstandard, document, processing, extension
 res_type: kb
 ---
 

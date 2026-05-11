@@ -1,8 +1,9 @@
 ---
 title: Headers and Footers
+description: Learn how to add rich text content in page margins as headers and footers when exporting spreadsheet worksheets in RadSpreadProcessing.
 page_title: Headers and Footers
 slug: radspreadprocessing-features-headers-and-footers
-tags: header, footer
+tags: headers, footers, spreadsheet, radspreadprocessing, print, pages, worksheet, export, spread, xlsx
 published: True
 position: 7
 ---
@@ -10,7 +11,7 @@ position: 7
 # Headers and Footers
 
 
-Headers and Footers functionality allows you add rich text content in the page margins when exporting a worksheet to pages. This feature is useful in scenarios like [exporting to PDF]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}), [printing with RadSpreadsheet control](http://docs.telerik.com/devtools/wpf/controls/radspreadsheet/features/ui-printing) or import/export to XLSX. 
+Headers and Footers functionality allows you to add rich text content in the page margins when exporting a worksheet to pages. This feature is useful in scenarios like [exporting to PDF]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}), [printing with RadSpreadsheet control](http://docs.telerik.com/devtools/wpf/controls/radspreadsheet/features/ui-printing) or import/export to XLSX. 
 
 This article aims to present the Headers and Footers API in **RadSpreadprocessing**. It contains the following subsections:
 

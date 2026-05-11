@@ -1,8 +1,9 @@
 ---
 title: Grouping
+description: Learn how to group rows and columns in spreadsheet worksheets using RadSpreadProcessing.
 page_title: Grouping
 slug: radspreadprocessing-features-grouping
-tags: grouping
+tags: grouping, spreadsheet, radspreadprocessing, rows, columns, worksheet, outline, collapse, spread, xlsx
 published: True
 position: 16
 ---

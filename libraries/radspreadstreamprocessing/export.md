@@ -1,8 +1,9 @@
 ---
 title: Export
+description: Learn how to export spreadsheet documents to XLSX and CSV formats using RadSpreadStreamProcessing.
 page_title: Export
 slug: radspreadstreamprocessing-export
-tags: export
+tags: export, spread, stream, processing, xlsx, csv, spreadsheet, streaming, workbook, worksheet
 published: True
 position: 5
 ---

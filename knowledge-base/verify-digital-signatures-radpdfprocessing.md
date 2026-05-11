@@ -4,7 +4,7 @@ description: Learn how to check for digital signatures in a PDF document and ret
 type: how-to
 page_title: How to Verify Digital Signatures and Retrieve Signing Dates in PDFs with RadPdfProcessing
 slug: verify-digital-signatures-radpdfprocessing
-tags: pdfprocessing, document, processing, digital, signature, verification, sign, date
+tags: radpdfprocessing, pdf, signature, digital, verification, document, processing, sign
 res_type: kb
 ticketid: 1659606
 ---

@@ -1,8 +1,9 @@
 ---
 title: Backward Compatibility 
+description: Breaking changes and migration guidance for upgrading RadPdfProcessing between versions.
 page_title: Backward Compatibility 
 slug: radpdfprocessing-backward-compatibility
-tags: backward,compatibility
+tags: migration, compatibility, radpdfprocessing, pdf, breaking, skiasharp, imagesharp, fontembedding
 published: True
 position: 1
 ---

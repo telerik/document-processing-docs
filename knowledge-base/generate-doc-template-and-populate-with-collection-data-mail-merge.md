@@ -4,7 +4,7 @@ description: Learn how to create a Word document template with a collection of d
 type: how-to
 page_title: How to Generate a Word Document and Populate it with Data Using MailMerge in RadWordsProcessing
 slug: generate-doc-template-and-populate-with-collection-data-mail-merge
-tags: word, documentprocessing, mailmerge, nestedmailmerge, docx, word, template, populate
+tags: radwordsprocessing, docx, mailmerge, template, word, document, processing, nested
 res_type: kb
 category: knowledge-base
 ticketid: 1651971

@@ -3,7 +3,7 @@ title: GoToR Actions
 description: RadPdfProcessing provides support for GoToR actions.
 page_title: GoToR Actions    
 slug: radpdfprocessing-model-actions-gotor
-tags: gotor, go to r, action, pdf, processing
+tags: gotoractions, gotor, action, pdf, radpdfprocessing, navigation, remote, destinations, model
 published: True
 position: 4
 ---

@@ -5,7 +5,7 @@ type: how-to
 page_title: How to Achieve Alternating Row Color for Tables in PdfProcessing
 meta_title: How to Achieve Alternating Row Color for Tables in PdfProcessing
 slug: alternating-row-color-in-pdf-tables
-tags: pdf, processing, telerik, document, table ,style, border, alternating, row, color, header
+tags: radpdfprocessing, pdf, table, style, border, alternating, row, color, header
 res_type: kb
 ticketid: 1700632
 ---

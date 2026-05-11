@@ -4,7 +4,7 @@ description: Learn how to create a PDF document with an empty signature field us
 type: how-to
 page_title: How to Add an Empty Signature Field to a PDF Document in RadPdfProcessing
 slug: create-pdf-with-empty-signature-field-radpdfprocessing
-tags: pdfprocessing, document, processing, pdf, signature, field, empty, unsigned
+tags: radpdfprocessing, pdf, signature, field, acroform, document, processing, unsigned
 res_type: kb
 ticketid: 1687482
 ---

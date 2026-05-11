@@ -1,8 +1,9 @@
 ---
 title: Overview
+description: RadSpreadProcessing is a cross-platform library for creating, importing, and exporting spreadsheet documents in XLSX, CSV, TXT, and PDF formats with support for 200+ functions.
 page_title: Overview
 slug: radspreadprocessing-overview
-tags: overview
+tags: spread, processing, spreadsheet, excel, xlsx, csv, pdf, import, export
 published: True
 position: 0
 ---
@@ -21,16 +22,16 @@ In this article, we list the library's most popular features. If you want to sta
 
 ## Key Features
 
-* Create from scratch and modify existing documents from spreadsheet formats: XLSX, CSV.
+* Create from scratch and modify existing documents from spreadsheet formats: XLSX and CSV.
 * Export to PDF.
 * Convert between the different formats.
-* Extracting and populating cells with data.
-* Built-in support for computation of more than 200 functions, like SUM, AVERAGE, etc.
-* Custom functions could be added as well.
-* Protection from editing operations using passwords/removing such passwords.
+* Extract and populate cells with data.
+* Built-in support for computation of more than 200 functions, like SUM, AVERAGE, and more.
+* Add custom functions as well.
+* Protection from editing operations using passwords or removing such passwords.
 * Most of the important Excel features are supported:
-    * Data validation - restrict the types of input to cells (e.g. allow only numbers).
-    * Grouping to organize data (e.g. collapse some rows/columns).
+    * Data validation - restrict the types of input to cells (for example, allow only numbers).
+    * Grouping to organize data (for example, collapse some rows/columns).
     * Filtering, sorting, freeze panes, hidden rows, and more.
 * GenAI-powered Document Insights
 
@@ -64,15 +65,15 @@ The following table describes the most popular features of the RadSpreadProcessi
 | [**History**]({%slug radspreadprocessing-features-history%}) | The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. Each worksheet has its own history stack. |
 | [**Comments**]({%slug radspreadprocessing-features-comments%}) | You can leave comments and replies on cells, which allows for easier team communication. |
 | [**Notes**]({%slug radspreadprocessing-features-notes%}) | Note important information in your worksheet.|
-|[**GenAI-powered Document Insights**]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})| Enables you to easily extract insights from Excel documents using Large Language Models (LLMs). |
+|[**GenAI-powered Document Insights**]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})| Extract insights from Excel documents using Large Language Models (LLMs). |
 
-## Supported formats
+## Supported Formats
 
 * Excel formats: [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [**XLS**]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
 
 * Text formats: [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}), [**JSON**]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider%}) (export only)
 
-* Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only), [__DataTable__]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
+* Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only), [`DataTable`]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
 
@@ -81,7 +82,7 @@ The following table describes the most popular features of the RadSpreadProcessi
 |Demo|Description|
 |----|----|
 |[SpreadProcessing Basic Usage](https://demos.telerik.com/document-processing/spreadprocessing)|With RadSpreadProcessing, you can convert spreadsheet documents between various formats, including XLSX, CSV, XLSM, and TXT. Additionally, you can export any of these formats to PDF.|
-|[SpreadProcessing Document Generation](https://demos.telerik.com/document-processing/spreadprocessing/generate_documents)|RadSpreadProcessing allows you to create a document from scratch using only code. This is particulary convenient when you need to export large amount of data to one of the supported formats - XLSX, CSV, TXT, XLSM.|
+|[SpreadProcessing Document Generation](https://demos.telerik.com/document-processing/spreadprocessing/generate_documents)|RadSpreadProcessing allows you to create a document from scratch using only code. This is particularly convenient when you need to export large amount of data to one of the supported formats - XLSX, CSV, TXT, XLSM.|
 |[SpreadProcessing Grid Integration](https://demos.telerik.com/document-processing/spreadprocessing/grid_integration)|This example illustrates integration between Telerik SpreadProcessing and the Kendo ASP.NET Core Grid component. You can visualize data in Grid and easily export it to XLSX, CSV, XLSM or TXT format.|
 |[SpreadProcessing Chart Generation](https://demos.telerik.com/document-processing/spreadprocessing/charts)|RadSpreadProcessing allows you to create a document with a chart from scratch using only code.|
 |[SpreadProcessing Add Notes](https://demos.telerik.com/document-processing/spreadprocessing/notes)|With RadSpreadProcessing, you can insert a Note related to a cell on a specific document position. The current example demonstrates how you can add notes with custom Author and Text while generating a document, and then export it to Xlsx format.|

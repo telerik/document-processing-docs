@@ -1,8 +1,9 @@
 ---
 title: Setting the Culture
+description: Learn how to set a specific culture for number and date formatting in RadSpreadProcessing workbooks.
 page_title:  Setting the Culture
 slug: radspreadprocessing-features-setting-the-culture
-tags: culture, workbook, spreadsheet
+tags: culture, spreadsheet, radspreadprocessing, workbook, localization, numberformat, date, globalization, spread, xlsx
 published: True
 position: 18
 ---

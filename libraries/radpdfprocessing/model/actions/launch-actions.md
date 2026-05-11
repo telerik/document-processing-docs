@@ -3,7 +3,7 @@ title: Launch Actions
 description: RadPdfProcessing provides support for Launch actions.
 page_title: Launch Actions    
 slug: radpdfprocessing-model-actions-launch
-tags: launch, action, pdf, processing
+tags: launchactions, pdf, actions, radpdfprocessing, model, execution, commands, launch
 published: True
 position: 3
 ---

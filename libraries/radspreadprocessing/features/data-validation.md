@@ -1,8 +1,9 @@
 ---
 title: Data Validation
+description: Learn how to use data validation in RadSpreadProcessing to control the type and range of data users enter into spreadsheet cells.
 page_title: Data Validation
 slug: radspreadprocessing-features-data-validation
-tags: data,validation
+tags: data, validation, spreadsheet, radspreadprocessing, cells, rules, input, worksheet, excel, xlsx
 published: True
 position: 18
 ---
@@ -47,7 +48,7 @@ To be able to create data validation rules you have to pass parameters to the ru
 
 The __AnyValueDataValidationRuleContext__ class exposes the following properties:
 
-* __ShowInputMessag__: Specifies whether to show input message or not.
+* __ShowInputMessage__: Specifies whether to show input message or not.
 * __InputMessageTitle__: The title of the input message.
 * __InputMessageContent__: The content of the input message.
 * __ShowErrorMessage__: Specifies whether to show error message or not.

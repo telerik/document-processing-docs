@@ -3,7 +3,7 @@ title: Getting Started
 page_title: Agent Tools - Getting Started
 description: How to get started with Telerik Document Processing Agent Tools.
 slug: agent-tools-getting-started
-tags: ai, dpl, document, processing, agent, tool, telerik, start
+tags: agent, tools, ai, document, processing, telerik, repository, integration
 published: True
 position: 1
 ---

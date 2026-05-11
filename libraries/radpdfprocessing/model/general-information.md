@@ -1,8 +1,9 @@
 ---
 title: General Information
+description: Overview of the RadPdfProcessing document model structure, including the hierarchy of document elements and how to add content to a PDF.
 page_title: General Information
 slug: radpdfprocessing-model-general-information
-tags: model
+tags: model, pdf, radfixeddocument, radpdfprocessing, hierarchy, elements, content, structure
 published: True
 position: 0
 ---
@@ -72,7 +73,7 @@ __RadFixedDocument__ represents a tree of [RadFixedPage]({%slug radpdfprocessing
 
 ## Creating or Editing document content 
 
-The RadPdfProcessing library provides API for editing existing or crating brand new documents. This is achieve via the following editors: 
+The RadPdfProcessing library provides API for editing existing or creating brand new documents. This is achieved via the following editors: 
 * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}): This editor is suitable for creating new documents or adding content to existing documents. It allows you to add elements in a flow-like manner without explicitly setting positions and sizes. The RadFixedDocumentEditor takes care to arrange the document elements automatically and separates the content on different pages when needed.
 
 

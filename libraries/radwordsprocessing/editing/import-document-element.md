@@ -1,8 +1,9 @@
 ---
 title: Import Document Element
+description: Learn how to import document elements from one RadFlowDocument into another using RadWordsProcessing.
 page_title: Import Document Element
 slug: radwordsprocessing-editing-import-document-element
-tags: import, document, element
+tags: import, word, flow, docx, editing, document, element, copy, transfer
 published: True
 position: 2
 ---

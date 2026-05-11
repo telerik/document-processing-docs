@@ -4,7 +4,7 @@ description: Learn how to use Telerik Document Processing libraries to convert c
 type: how-to
 page_title: How to Convert Color PDF Reports to Black & White Using Telerik Document Processing
 slug: convert-color-pdf-to-black-and-white-telerik-document-processing
-tags: document, processing, pdf, conversion, black, white, gray, image, convert
+tags: radpdfprocessing, pdf, grayscale, conversion, image, document, processing, color
 res_type: kb
 ticketid: 1675661
 ---

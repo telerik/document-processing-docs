@@ -1,8 +1,9 @@
 ---
 title: Iterating Used Cells
+description: Learn how to access and iterate only the used cells in a RadSpreadProcessing worksheet.
 page_title: Iterating Used Cells
 slug: radspreadprocessing-working-with-cells-iterating-used-cells
-tags: iterate, used,cells, range,of,a,worksheet
+tags: cells, spreadsheet, radspreadprocessing, iterate, used, range, worksheet, selection
 published: True
 position: 3
 ---

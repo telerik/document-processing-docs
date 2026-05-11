@@ -3,7 +3,7 @@ title: Multiple Digital Signatures
 description: Learn how to add multiple Digital Signatures to a PDF document using PdfStreamSigner.
 page_title: Multiple Digital Signatures
 slug: radpdfprocessing-features-digital-signature-pdfstreamsigner
-tags: pdfprocessing, document, processing, pdf, digital, signature, stream, writer, multiple, sign
+tags: pdfstreamsigner, digital, signature, pdf, multiple, radpdfprocessing, incremental, stream, signing
 published: True
 position: 3
 ---

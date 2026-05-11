@@ -1,8 +1,9 @@
 ---
 title: Using TxtFormatProvider
+description: Learn how to import and export RadFlowDocument to plain text format using the TxtFormatProvider in RadWordsProcessing.
 page_title: Using TxtFormatProvider
 slug: radwordsprocessing-formats-and-conversion-txt-txtformatprovider
-tags: using,txtformatprovider
+tags: format, provider, txt, word, flow, docx, import, export, document, plaintext
 published: True
 position: 1
 ---

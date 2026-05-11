@@ -1,9 +1,10 @@
 ---
 title: Cross-Platform Support
+description: Learn about the .NET Standard and .NET Core support in RadWordsProcessing and how to use the cross-platform NuGet packages.
 page_title: Cross-Platform Support
 slug: radwordsprocessing-cross-platform
-tags: cross,platform
-platforms: core, blazor, xamarin, winui, maui
+tags: cross, platform, word, processing, dotnet, standard, nuget, blazor, maui, document
+platforms: core, blazor, winui, maui
 published: True
 position: 2
 ---
@@ -12,7 +13,7 @@ position: 2
 
 **Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of packages built against the .NET Core & .NET Standard which you can reference in an application.
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can get the packages through the **UI for ASP.NET Core**, **UI for Blazor**, **UI for Xamarin**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can get the packages through the **UI for ASP.NET Core**, **UI for Blazor**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Package References
 
@@ -49,7 +50,6 @@ To use the model of the **RadWordsProcessing** library in your cross-platform pr
 	<tr>
 		<td>	
 			<b>Telerik.Documents.ImageUtils</b>
-			<br><sub><i>This pckage is not available in UI for Xamarin.</i></sub>
 		</td>
         <td>Required when exporting to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High.</td>
 	</tr>

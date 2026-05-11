@@ -2,7 +2,7 @@
 title: ZipArchive Entry
 page_title: ZipArchive Entry
 slug: radziplibrary-ziparchive-entry
-tags: zip, ziparchive
+tags: ziparchiveentry, radziplibrary, zip, archive, entry, compressed, stream, files
 published: True
 position: 2
 platforms: ajax, mvc, wpf, winforms

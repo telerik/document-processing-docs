@@ -5,7 +5,7 @@ type: how-to
 page_title: Handle WEBP Images in Word Documents using Telerik WordsProcessing
 meta_title: Handle WEBP Images in Word Documents using Telerik WordsProcessing
 slug: convert-webp-to-png-radwordsprocessing
-tags: words, processing, telerik, document, image, webp, html, import, docx, export, png, convert
+tags: radwordsprocessing, webp, png, image, conversion, docx, document, processing
 res_type: kb
 ticketid: 1695863
 ---

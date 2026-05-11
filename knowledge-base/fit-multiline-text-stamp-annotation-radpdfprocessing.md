@@ -5,7 +5,7 @@ type: how-to
 page_title: Fit Multiline Text Inside a Custom Stamp Annotation in PDFs with RadPdfProcessing
 meta_title: Fit Multiline Text Inside a Custom Stamp Annotation in PDFs with RadPdfProcessing
 slug: fit-multiline-text-stamp-annotation-radpdfprocessing
-tags: pdf, stamp, annotation, font, size, multiline, measure, text, appearance, autosize, fit, aouto, fixed, editor, auto
+tags: radpdfprocessing, pdf, stamp, annotation, font, multiline, text, autosize, fixedcontenteditor
 res_type: kb
 ---
 

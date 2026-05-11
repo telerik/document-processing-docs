@@ -5,7 +5,7 @@ type: how-to
 page_title: Simulating Mail Merge with formatted HTML content by Utilizing the Find and Replace Functionality
 meta_title: Simulating Mail Merge with formatted HTML content by Utilizing the Find and Replace Functionality
 slug: simulating-mail-merge-with-html-content
-tags: words, processing, telerik, document, mail, merge, html, content, find, replace
+tags: radwordsprocessing, mailmerge, html, find, replace, document, processing, word
 res_type: kb
 ticketid: 1694621
 ---

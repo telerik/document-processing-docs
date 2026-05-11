@@ -4,7 +4,7 @@ description: Learn how to convert a snippet of an Excel document into an image a
 type: how-to
 page_title: Converting XLSX Content to DOCX Document
 slug: convert-excel-content-to-word-document
-tags: conversion, excel, word, snippet, image, insert, SpreadProcessing, WordsProcessing, xlsx, docx
+tags: radspreadprocessing, radwordsprocessing, xlsx, docx, image, conversion, document, processing
 res_type: kb
 ---
 ## Environment
@@ -13,7 +13,7 @@ res_type: kb
 | 2024.1.124 | Document Processing Libraries (.NET Standard)|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-A common requirement is to convert XSLX documents to DOCX format. However, direct conversion is not supported.
+A common requirement is to convert XLSX documents to DOCX format. However, direct conversion is not supported.
 
 This tutorial demonstrates a sample approach how to convert an Excel document into an image and insert it into a Word document.
 

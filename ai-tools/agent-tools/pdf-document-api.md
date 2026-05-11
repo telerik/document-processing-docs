@@ -3,7 +3,7 @@ title: PDF Tools
 page_title: PDF Tools
 description: Telerik Document Processing Agent Tools provides a set of Fixed (PDF) document APIs exposing document processing capabilities to agentic workflows.
 slug: agent-tools-pdf-document-api
-tags: ai, dpl, document, processing, agent, tool, telerik, pdf, fixed, api
+tags: agent, pdf, api, radpdfprocessing, ai, telerik, document, extraction
 published: True
 position: 3
 ---

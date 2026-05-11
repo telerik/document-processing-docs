@@ -1,15 +1,16 @@
 ---
 title: Getting Started
+description: Learn how to get started with RadPdfProcessing, add the required NuGet references, and create your first PDF document.
 page_title: Getting Started
 slug: radpdfprocessing-getting-started
-tags: getting,started
+tags: pdf, radpdfprocessing, nuget, document, export, fixed, content, editor, text, fragment, radfixeddocument
 published: True
 position: 1
 ---
 
 # Getting Started
 
-This article will get you started in using the __RadPdfProcessing__ library. 
+This article will get you started in using the `RadPdfProcessing` library.
 
 >note If you still don't have **Telerik Document Processing** installed, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
 
@@ -19,24 +20,24 @@ You can find the required references in the [PdfProcessing NuGet packages]({%slu
 
 ## Creating a Document
 
-[RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) is the root element in the library. It consists of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) objects and instructions for annotations and destinations in the document. __Example 1__ shows how to create a document and add a page to it.  
+[RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) is the root element in the library. It consists of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) objects and instructions for annotations and destinations in the document. **Example 1** shows how to create a document and add a page to it.
 
-#### __Example 1: Create RadFixedDocument__
+#### **Example 1: Create RadFixedDocument**
 
 <snippet id='pdf-create-fixed'/>
 
-The page can then be edited through a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) instance. __Example 2__ creates an editor and adds a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) to the page object created in __Example 1__.     
+The page can then be edited through a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) instance. **Example 2** creates an editor and adds a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) to the page object created in **Example 1**.
 
-#### __Example 2: Add text__
+#### **Example 2: Add text**
 
 <snippet id='pdf-create-editor'/>
 
 ## Exporting to PDF
 
-Exporting to PDF format can be achieved with the __PdfFormatProvider__ class. __Example 3__ shows how to export the __RadFixedDocument__  created in __Examples 1 and 2__ to a file.
+Exporting to PDF format can be achieved with the `PdfFormatProvider` class. **Example 3** shows how to export the `RadFixedDocument` created in **Examples 1 and 2** to a file.
         
 
-#### __Example 3: Export to PDF__
+#### **Example 3: Export to PDF**
 
 <snippet id='pdf-export'/>
 

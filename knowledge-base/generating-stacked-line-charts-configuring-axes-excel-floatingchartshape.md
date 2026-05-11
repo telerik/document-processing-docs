@@ -1,11 +1,11 @@
 ---
 title: Generating Stacked Line Charts and Configuring Axes in Excel Using FloatingChartShape
-description: Learn how to generate stacked line dharts and configure axes in Excel spreadsheets using Telerik Document Processing's SpreadProcessing library.
+description: Learn how to generate stacked line charts and configure axes in Excel spreadsheets using Telerik Document Processing's SpreadProcessing library.
 type: how-to
 page_title: Creating Stacked Line Charts and Setting Axes in Excel with the SpreadProcessing library
 meta_title: Creating Stacked Line Charts and Setting Axes in Excel with the SpreadProcessing library
 slug: generating-stacked-line-charts-configuring-axes-excel-floatingchartshape
-tags: spread, processing, telerik, document, processing, floating, chart, shape, line, graph, stacked, line, chart, x, axis, y
+tags: radspreadprocessing, excel, chart, axes, floating, spreadsheet, document, processing
 res_type: kb
 ticketid: 1695510
 ---

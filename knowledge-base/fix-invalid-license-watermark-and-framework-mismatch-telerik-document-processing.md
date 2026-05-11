@@ -5,7 +5,7 @@ type: troubleshooting
 page_title: Handling 'Telerik.Licensing.EvidenceAttribute is not defined' Error
 meta_title: Handling 'Telerik.Licensing.EvidenceAttribute is not defined' Error
 slug: handle-telerik-licensing-evidence-attribute-not-defined-error
-tags: pdfprocessing, telerik document processing, licensing, framework, error,evidence, attribute
+tags: licensing, watermark, telerik, document, processing, framework, error, troubleshooting
 res_type: kb
 ticketid: 1704877
 ---
@@ -19,7 +19,7 @@ ticketid: 1704877
 
 ## Description
 
-It is possible to observe build errors related to the `Telerik.Licensing.Runtime.dll` assembly in a .NET Framework roject, such as:
+It is possible to observe build errors related to the `Telerik.Licensing.Runtime.dll` assembly in a .NET Framework project, such as:
 
 - `Type 'Telerik.Licensing.EvidenceAttribute' is not defined.`
 - `warning MSB3274: The primary reference "Telerik.Licensing.Runtime, Version=1.6.5.0, Culture=neutral, PublicKeyToken=98bb5b04e55c09ef, processorArchitecture=MSIL" could not be resolved because it was built against the ".NETFramework,Version=v4.6.2" framework. This is a higher version than the currently targeted framework ".NETFramework,Version=v4.6".`

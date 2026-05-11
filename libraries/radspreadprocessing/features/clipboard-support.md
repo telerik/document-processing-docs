@@ -1,8 +1,9 @@
 ---
 title: Clipboard Support
+description: Learn how to copy and paste cell values in RadSpreadProcessing with flexible paste options for content and formatting.
 page_title: Clipboard Support
 slug: radspreadprocessing-features-clipboard-support
-tags: clipboard,support
+tags: clipboard, paste, spreadsheet, radspreadprocessing, cells, copy, formatting, values, excel, xlsx
 published: True
 position: 4
 ---

@@ -1,8 +1,9 @@
 ---
 title: PdfPageSource
+description: Learn how to use the PdfPageSource class in RadPdfProcessing to represent and work with individual pages from an existing PDF file.
 page_title: PdfPageSource
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource
-tags: pdf,stream,page,source
+tags: pdfpagesource, pdf, page, stream, radpdfprocessing, source, existing, access
 published: True
 position: 5
 ---

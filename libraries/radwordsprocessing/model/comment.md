@@ -1,8 +1,9 @@
 ---
 title: Comment
+description: Learn how to add and manage annotation comments in RadWordsProcessing flow documents.
 page_title: Comment
 slug: radwordsprocessing-model-comment
-tags: comment
+tags: comment, word, docx, document, flow, model, annotation, review, inline
 published: True
 position: 14
 ---

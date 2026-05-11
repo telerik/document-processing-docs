@@ -3,7 +3,7 @@ title: Installing on Your Computer
 page_title: Installing on Your Computer
 description: Installing Telerik Document Processing on Your Computer
 slug: installation-installing-on-your-computer
-tags: installing,document,processing
+tags: installation, telerik, document, processing, nuget
 published: True
 position: 5
 ---
@@ -57,10 +57,6 @@ The libraries can be used through the available NuGet packages.
 ## UI for Silverlight
 
 [Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
-
-## UI for Xamarin
-
-[Installing Telerik UI for Xamarin](https://docs.telerik.com/devtools/xamarin/installation-and-deployment/download-product-files)
 
 ## UI for WinUI
 

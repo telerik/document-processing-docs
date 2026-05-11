@@ -1,8 +1,9 @@
 ---
 title: Format Providers Manager
+description: Learn how to use the WorkbookFormatProvidersManager in RadSpreadProcessing to manage format providers for importing and exporting spreadsheet files.
 page_title: Format Providers Manager
 slug: radspreadprocessing-formats-and-conversion-format-providers-manager
-tags: format,providers,manager
+tags: format, providers, spreadsheet, radspreadprocessing, manager, import, export, workbook, registration, xlsx, spread
 published: True
 position: 1
 ---
@@ -73,7 +74,7 @@ You can achieve the same result through using the __SaveFile__ command. In fact,
 
 Currently RadSpreadProcessing supports the following extensions: `.xlsx`, `.xls`, `.csv`, `.txt`, `.json` (export only) and `.pdf` (export only). The format providers available for them are respectively [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%}), [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}), [JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider%}) (export only) and [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only).
 
-The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the `GetProviderByName()` static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __GetSupportedExtensions()__ that returns an `IEnumeable` of the currently supported file extensions.
+The __WorkbookFormatProvidersManager__ class offers several approaches to retrieve the registered format providers. The class offers the `GetProviderByName()` static method that searches through the registered providers to find a provider with a specific name. Also, the manager exposes the __GetProvderByExtension__ extension. The class also contains a static method  __GetSupportedExtensions()__ that returns an `IEnumerable` of the currently supported file extensions.
 
 >note For more examples and application scenarios of Importing and Exporting a Workbook to various formats using a FormatProvider check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
   

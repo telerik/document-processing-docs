@@ -3,7 +3,7 @@ title: ExpandableMemoryStream
 page_title: ExpandableMemoryStream
 description: Learn about the segmented, dynamically growing in-memory stream implementation used for large PDF processing scenarios.
 slug: radpdfprocessing-formats-and-conversion-pdf-expandablememorystream
-tags: pdf, memory, performance, stream, fixed, document, processing, dpl, format, expandablememorystream, large, file, size
+tags: expandablememorystream, pdf, memory, stream, radpdfprocessing, performance, segments, large
 published: True
 position: 3
 ---

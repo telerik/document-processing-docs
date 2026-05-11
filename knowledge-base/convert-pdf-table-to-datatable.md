@@ -4,7 +4,7 @@ description: Learn how to transform a table from a PDF file into a DataTable obj
 type: how-to
 page_title: How to Convert PDF Table to DataTable with Telerik Document Processing
 slug: convert-pdf-table-to-datatable
-tags: document, processing, table, datatable, convert, pdf, excel
+tags: radpdfprocessing, pdf, datatable, table, conversion, radspreadprocessing, document, processing
 res_type: kb
 ticketid: 1675626
 ---

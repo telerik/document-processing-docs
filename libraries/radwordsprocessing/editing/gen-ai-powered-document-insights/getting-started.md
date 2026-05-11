@@ -3,7 +3,7 @@ title: Getting Started
 description: Learn how to use the GenAI-powered Document Insights functionality to summarize a Word document with WordsProcessing.
 page_title: Getting Started
 slug: radwordsprocessing-features-gen-ai-powered-document-insights-getting-started
-tags: ai, document, analysis, overview, word, flow, processing, genai, powered, insights
+tags: genai, word, flow, docx, document, llm, ai, summarization, started
 published: True
 position: 2
 ---

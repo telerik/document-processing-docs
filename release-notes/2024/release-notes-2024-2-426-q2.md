@@ -3,7 +3,7 @@ title: Version 2024.2.426 (2024 Q2)
 page_title: What is new in 2024.2.426 (2024 Q2) for the Document Processing Libraries
 description: 2024.2.426 (2024 Q2)
 slug: release-notes-2024-2-426 
-tags: 2024.2.426,2024,Q2
+tags: release, notes, 2024, Q2, telerik, document, processing, changelog
 published: True
 position: 98
 ---
@@ -46,7 +46,7 @@ position: 98
 * An InvalidOperationException is thrown when exporting font that is available but not used.
 * The read-only flag is not respected when importing a document.
 * A dictionary with invalid entry cannot be imported correctly and breaks the import process.
-* The Form field height is wrong after export with a specific document..
+* The Form field height is wrong after export with a specific document.
 * Wrong character widths when merging documents with exactly the same font but different character widths.
 
 ## SpreadProcessing

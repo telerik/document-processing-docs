@@ -3,8 +3,8 @@ title: Overview
 description: Learn how to use Telerik RadPdfProcessing for cross-platform PDF generation, editing, and digital signing in .NET applications.
 page_title: Overview
 slug: radpdfprocessing-cross-platform
-tags: cross, platform, font, image, blazor, core, xamarin, winui, maui, net, standard, linux, ios 
-platforms: blazor, core, xamarin, winui, maui
+tags: crossplatform, pdf, blazor, maui, nuget, dotnet, radpdfprocessing, standard
+platforms: blazor, core, winui, maui
 published: True
 position: 0
 ---
@@ -13,7 +13,7 @@ position: 0
 
 The [Telerik Document Processing]({%slug introduction%}) libraries are compatible across different .NET implementations, including .NET Standard, {{site.dotnetversions}} (Target OS: *None*), and newer versions. There is a set of packages built against the .NET Standard version which you can reference in an application.
 
->note The binaries compatible with .NET Standard, {{site.dotnetversions}} (Target OS: *None*) are distributed with the packages targeting .NET Standard. You can obtain the packages through the **UI for ASP.NET Core**, **UI for Blazor**, **UI for Xamarin**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard, {{site.dotnetversions}} (Target OS: *None*) are distributed with the packages targeting .NET Standard. You can obtain the packages through the **UI for ASP.NET Core**, **UI for Blazor**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
 
 ## Package References
 
@@ -27,7 +27,6 @@ In order to use the model of the **RadPdfProcessing** library in your cross-plat
 To export images different than Jpeg and Jpeg2000 or ImageQuality different than High you will need to add references to the following **.Net Standard** package:
 
 * **Telerik.Documents.ImageUtils**
-<br><sub>_This package is not available in UI for Xamarin._</sub>
 
 > Note that for .NET Framework, {{site.dotnetversions}} with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core**)
 

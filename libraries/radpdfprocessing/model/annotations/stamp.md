@@ -3,7 +3,7 @@ title: Stamp
 page_title: Stamp Annotation  
 description: Stamp annotations display text or graphics intended to look as if they were stamped on the page with a rubber stamp.
 slug: radpdfprocessing-model-annotations-stamp
-tags: annotation, overview, pdfprocessing, stamp 
+tags: stamp, pdf, annotations, radpdfprocessing, graphics, text, model
 published: True
 position: 6
 ---

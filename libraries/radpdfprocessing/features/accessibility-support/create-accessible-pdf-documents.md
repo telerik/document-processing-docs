@@ -3,7 +3,7 @@ title: Creating Accessible PDF Documents
 description: Learn how to generate an accessible PDF document using Telerik Document Processing Libraries.
 page_title: How to Create Accessible PDF Documents with RadPdfProcessing
 slug: create-accessible-pdf-documents
-tags: marked, content, tag, pdf, accessibility
+tags: accessibility, pdf, tagged, marked, content, radpdfprocessing
 published: True
 position: 1
 ---

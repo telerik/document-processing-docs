@@ -1,8 +1,9 @@
 ---
 title: Backward Compatibility
+description: Breaking changes and migration guidance for upgrading RadWordsProcessing between versions.
 page_title: Backward Compatibility
 slug: radwordsprocessing-backward-compatibility
-tags: backward,compatibility
+tags: migration, compatibility, docx, processing, breaking, document, versions, upgrade, word, flow
 published: True
 position: 1
 ---

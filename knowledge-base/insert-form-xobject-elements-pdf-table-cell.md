@@ -4,7 +4,7 @@ description: Learn how to insert interactive form fields such as radio buttons a
 type: how-to
 page_title: How to Add Interactive Form Fields to Table Cells in PDF Documents with RadPdfProcessing
 slug: insert-form-xobject-elements-pdf-table-cell
-tags: pdfprocessing, document, processing, pdf, table, interactive, forms, radio, button, textbox, cell, acroform
+tags: radpdfprocessing, pdf, table, interactive, forms, textbox, acroform, document, processing
 res_type: kb
 ticketid: 1663177
 ---

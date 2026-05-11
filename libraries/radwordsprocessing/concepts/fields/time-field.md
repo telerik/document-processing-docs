@@ -3,7 +3,7 @@ title: Time Field
 page_title: Time Field
 description: Time field is a Field element that inserts the current time in your document.
 slug: radwordsprocessing-concepts-time-field
-tags: time,field
+tags: timefield, word, flow, docx, field, document, time, current, model, display
 published: True
 position: 10
 ---
@@ -15,7 +15,7 @@ position: 10
 
 ## Field Syntax
 
-This is how the syntax of a If field looks like:
+This is how the syntax of a Time field looks like:
 
 | Syntax   						        |
 | :---     						        |

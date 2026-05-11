@@ -3,7 +3,7 @@ title: Manage View State
 page_title: Manage View State
 description: Learn how to set scale factor, tab color, how to show or hide gridlines or row/column headers in the worksheet.
 slug: radspreadprocessing-working-with-worksheets-view-state
-tags: scroll, scale factor, view state, zoom
+tags: view, state, spreadsheet, radspreadprocessing, zoom, scroll, gridlines, worksheet, headers
 published: True
 position: 5
 ---
@@ -12,7 +12,7 @@ position: 5
 
 **RadSpreadProcessing** enables you to apply different properties on the Worksheet that affect its visualization when the document is rendered in an application. These properties can be used through the **ViewState** property of the **Worksheet** object.
 
-The following sections describe the members of the WorskheetViewState class.
+The following sections describe the members of the WorksheetViewState class.
 
 ### **ScaleFactor**
 

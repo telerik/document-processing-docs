@@ -4,7 +4,7 @@ description: Learn how to programmatically clone and populate repeating section 
 type: how-to
 page_title: How to Clone and Populate Repeating Section Content Controls in RadWordsProcessing
 slug: clone-repeating-section-content-control-radwordsprocessing
-tags: wordsprocessing, document, processing, content, controls, clone, repeating, section
+tags: radwordsprocessing, docx, content, controls, clone, repeating, document, processing
 res_type: kb
 ticketid: 1668130
 ---
@@ -39,6 +39,13 @@ Let's have an Employee object defined below. We need to use the  [RepeatingSecti
         public int WorkLocationId { get; set; }
         public WorkLocation WorkLocation { get; set; }
         public List<Telephone> Phones { get; set; } = new List<Telephone>();
+    }
+
+    public class WorkLocation
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
     }
 
     public class Telephone
@@ -307,6 +314,8 @@ The MockDataGenerator is responsible for returning sample data:
         }
     }
 ```
+
+>note Complete SDK demo is available [here](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing/CloneAndPopulateRepeatingSectionContentControls).
 
 Usually, the content controls are mostly used by the editor controls like MS Word that allow the end user fill the required data. In case you are planning to edit the document programmatically, the [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) functionality should be also considered as an appropriate solution.
 

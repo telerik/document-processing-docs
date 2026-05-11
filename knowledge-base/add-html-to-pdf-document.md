@@ -5,7 +5,7 @@ type: how-to
 page_title: Add Html to a PDF document 
 slug: add-html-to-pdf-document
 position: 
-tags: 
+tags: radwordsprocessing, radpdfprocessing, html, pdf, conversion, document, import, export
 ticketid: 1545269
 res_type: kb
 ---

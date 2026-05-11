@@ -3,7 +3,7 @@ title: SummarizationProcessor
 description: SummarizationProcessor class enables you to generate concise summaries of Word documents using Large Language Models.
 page_title: SummarizationProcessor
 slug: radwordsprocessing-features-gen-ai-powered-document-insights-summarization-processor
-tags: ai, document, analysis, summarization, processor, summary
+tags: summarization, genai, word, flow, docx, document, llm, ai, processor
 published: True
 position: 3
 ---

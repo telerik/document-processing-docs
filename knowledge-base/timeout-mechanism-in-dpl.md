@@ -4,7 +4,7 @@ description: Compiler Warning (level 2) CS0618 in Document Processing Libraries 
 type: how-to
 page_title: Timeout Mechanism in Document Processing Libraries
 slug: timeout-mechanism-in-dpl
-tags: timeout, obsolete, import, export, CS0618, warning, document, processing
+tags: timeout, document, processing, import, export, warning, telerik, obsolete
 res_type: kb 
 ---
 

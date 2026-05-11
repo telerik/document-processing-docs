@@ -4,7 +4,7 @@ description: Learn how to efficiently export subsets of pages from a RadFixedDoc
 type: how-to
 page_title: How to Split Large PDFs into Smaller Chunks Using RadPdfProcessing
 slug: split-big-pdf-documents
-tags: pdf, large, big, slow, memory, split, document, processing
+tags: radpdfprocessing, pdf, split, pages, pdfstreamwriter, document, processing, memory
 res_type: kb
 ticketid: 1679749
 ---

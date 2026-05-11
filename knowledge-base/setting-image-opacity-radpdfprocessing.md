@@ -4,7 +4,7 @@ description: Learn how to set the opacity of images in RadPdfProcessing when cre
 type: how-to
 page_title: Setting Image Opacity in RadPdfProcessing for Document Processing | Telerik UI for PDF Processing
 slug: setting-image-opacity-radpdfprocessing
-tags: pdfprocessing, image-opacity, pdf-processing, radpdfviewer
+tags: radpdfprocessing, pdf, image, opacity, transparency, document, processing, fixed
 res_type: kb
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: Image
+description: Learn how to work with Image content elements in RadPdfProcessing to add and configure images in PDF documents.
 page_title: Image
 slug: radpdfprocessing-model-image
-tags: image
+tags: image, pdf, imagesource, radpdfprocessing, content, model, graphics, embedded
 published: True
 position: 4
 ---

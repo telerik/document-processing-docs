@@ -4,7 +4,7 @@ description: Learn how to merge multiple PDF files into a single document and th
 type: how-to
 page_title: How to Create a Table of Contents After Merging PDF Documents with RadPdfProcessing
 slug: create-toc-for-merged-pdf-radpdfprocessing
-tags: pdf, processing, merge, toc, table, contents, fixedcontenteditor, block, measure, first, page
+tags: radpdfprocessing, pdf, toc, merge, fixedcontenteditor, document, processing, table
 res_type: kb
 ticketid: 1711193
 ---
