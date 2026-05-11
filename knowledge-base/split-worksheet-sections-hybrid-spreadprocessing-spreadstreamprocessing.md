@@ -30,8 +30,8 @@ This knowledge base article also answers the following questions:
 
 To achieve a fully automated, high-performance split that preserves column widths, merged cells, and number formatting, use a **hybrid approach** that combines both libraries:
 
-* **[RadSpreadProcessing]({%slug radspreadprocessing-overview%})** — used to read column widths and merged cell ranges from the source document.
-* **[RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})** — used to write the output document efficiently with minimal memory usage.
+* **[RadSpreadProcessing]({%slug radspreadprocessing-overview%})** - used to read column widths and merged cell ranges from the source document.
+* **[RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})** - used to write the output document efficiently with minimal memory usage.
 
 ### Step 1: Read Column Widths and Merged Cell Ranges with SpreadProcessing
 
