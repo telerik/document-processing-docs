@@ -92,5 +92,5 @@ namespace ReplaceImageInPdf
 
 | Target | Packages |
 | --- | --- |
-| .NET Standard | `Telerik.Documents.Fixed`<br/>`Telerik.Documents.Fixed.FormatProviders.Pdf`<br/>`Telerik.Documents.ImageUtils` |
-| Windows / .NET Framework | `Telerik.Windows.Documents.Fixed`<br/>`Telerik.Windows.Documents.Fixed.FormatProviders.Pdf` |
+| .NET Standard | `Telerik.Documents.Fixed`<br/>`Telerik.Documents.ImageUtils` |
+| Windows / .NET Framework | `Telerik.Windows.Documents.Fixed` |
