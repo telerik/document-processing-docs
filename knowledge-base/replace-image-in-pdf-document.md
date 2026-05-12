@@ -28,37 +28,67 @@ res_type: kb
 
 ## Description
 
-How to replace image in a **PDF** document.
+How to replace an image in a **PDF** document.
 
 ## Solution
 
-In the example below, we are demonstrating how to find a specific image in the imported into a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument) PDF document, preserve its size and [Position](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/position) and replace it with another [Image](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/image).
+In the example below, we are demonstrating how to find a specific image in an imported into a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument) PDF document, preserve its size and [Position](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/position) and replace it with another [Image](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/image).
 
-#### __Replace Image in Imported PDF Document__
+#### Replace Image in Imported PDF Document
 
 ```csharp
+using System.Diagnostics;
+using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Windows.Documents.Fixed.Model;
 
-    RadFixedPage firstPage = document.Pages[0];
-
-    Image image = firstPage.Content.First(ce => ce is Image) as Image;
-
-    string newImagePath = "image.png";
-    ImageSource newImageSource;
-    using (FileStream source = File.Open(newImagePath, FileMode.Open))
+namespace ReplaceImageInPdf
+{
+    internal class Program
     {
-        newImageSource = new ImageSource(source);
+        static void Main(string[] args)
+        {
+            // Necessary for .NET Standard image exporting
+            Telerik.Documents.ImageUtils.ImagePropertiesResolver defaultImagePropertiesResolver = new Telerik.Documents.ImageUtils.ImagePropertiesResolver();
+            Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.ImagePropertiesResolver = defaultImagePropertiesResolver;
+
+            string inputFilePath = "input.pdf";
+            PdfFormatProvider provider= new PdfFormatProvider();
+            RadFixedDocument document = provider.Import(File.ReadAllBytes(inputFilePath), TimeSpan.FromSeconds(10));
+            RadFixedPage firstPage = document.Pages[0];
+
+            Telerik.Windows.Documents.Fixed.Model.Objects.Image image = firstPage.Content.First(ce => ce is Telerik.Windows.Documents.Fixed.Model.Objects.Image) as Telerik.Windows.Documents.Fixed.Model.Objects.Image;
+
+            string newImagePath = "ProgressNinjas.png";
+            Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource newImageSource;
+            using (FileStream source = File.Open(newImagePath, FileMode.Open))
+            {
+                newImageSource = new Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource(source);
+            }
+
+            Telerik.Windows.Documents.Fixed.Model.Objects.Image newImage = new Telerik.Windows.Documents.Fixed.Model.Objects.Image
+            {
+                ImageSource = newImageSource,
+                Position = image.Position,
+                Width = image.Width,
+                Height = image.Height
+            };
+
+            int imageIndex = firstPage.Content.IndexOf(image);
+            firstPage.Content.RemoveAt(imageIndex);
+            firstPage.Content.Add(newImage);
+
+            string outputFilePath = "output.pdf";
+            using (Stream output = File.OpenWrite(outputFilePath))
+            {
+                provider.Export(document, output, TimeSpan.FromSeconds(10));
+            }
+            Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
+        }
     }
-
-    Image newImage = new Image
-    {
-        ImageSource = newImageSource,
-        Position = image.Position,
-        Width = image.Width,
-        Height = image.Height
-    };
-
-    int imageIndex = firstPage.Content.IndexOf(image);
-    firstPage.Content.RemoveAt(imageIndex);
-    firstPage.Content.Add(newImage);
-	
+}
 ```
+
+### Required NuGet Packages
+
+* Telerik.Documents.Fixed
+* Telerik.Documents.ImageUtils
