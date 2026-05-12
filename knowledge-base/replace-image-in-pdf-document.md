@@ -75,7 +75,7 @@ namespace ReplaceImageInPdf
 
             int imageIndex = firstPage.Content.IndexOf(image);
             firstPage.Content.RemoveAt(imageIndex);
-            firstPage.Content.Add(newImage);
+            firstPage.Content.Insert(imageIndex, newImage);
 
             string outputFilePath = "output.pdf";
             using (Stream output = File.OpenWrite(outputFilePath))
