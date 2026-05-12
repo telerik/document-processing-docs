@@ -32,7 +32,7 @@ How to replace an image in a **PDF** document.
 
 ## Solution
 
-In the example below, we are demonstrating how to find a specific image in an imported into a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument) PDF document, preserve its size and [Position](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/position) and replace it with another [Image](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/image).
+In the example below, we are demonstrating how to find a specific image in a PDF document imported into a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument), preserve its size and [Position](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/position), and replace it with another [Image](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/image).
 
 #### Replace Image in Imported PDF Document
 
