@@ -19,11 +19,12 @@ position: 10
 ## Inserting Header/Footer
 
 Headers and Footers are properties of the **Section** element and each Section can have the following types of Headers and Footers:
-        
 
-* **Default**: Default header/footer for the **Section** pages.
-* **First**: Used on the first page of the **Section**.
-* **Even**: Used on even numbered pages of the **Section**.
+| Type | Description |
+|---|---|
+| `Default` | Default header/footer for the **Section** pages. |
+| `First` | Used on the first page of the **Section**. |
+| `Even` | Used on even-numbered pages of the **Section**. |
             
 
 >Visualization of headers and footers is additionally affected by the following properties:

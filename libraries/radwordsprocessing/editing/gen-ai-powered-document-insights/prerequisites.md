@@ -33,9 +33,11 @@ In addition to the [standard RadWordsProcessing references]({%slug radwordsproce
 
 You will also need to install a package for your specific AI provider:
 
-* **Microsoft.Extensions.AI.OpenAI** and **Azure.AI.OpenAI** - For using Azure OpenAI
-* **Microsoft.Extensions.AI.OpenAI** and **OpenAI** - For using OpenAI
-* **Microsoft.Extensions.AI.Ollama** - For using Ollama (local AI models)
+| Package | Use case |
+|---|---|
+| `Microsoft.Extensions.AI.OpenAI` + `Azure.AI.OpenAI` | For using Azure OpenAI. |
+| `Microsoft.Extensions.AI.OpenAI` + `OpenAI` | For using OpenAI. |
+| `Microsoft.Extensions.AI.Ollama` | For using Ollama (local AI models). |
 
 ## AI Provider Setup
 

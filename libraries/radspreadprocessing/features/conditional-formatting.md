@@ -56,20 +56,20 @@ SpreadProcessing supports many different types of formatting rules. Each rule im
 
 The **ConditionalFormattingDxfRule** class is a base class for all rules that support formatting. All of its inheritors, expose the `Formatting` property. This property is of type `DifferentialFormatting` and holds the formatting that will be applied to all cells inside the range that fit the rule requirement. You can set the following properties:
 
-- Font size
-- Font family
-- Fore color
-- Bold
-- Italic
-- Underline
-- Fill
-- LeftBorder
-- RightBorder
-- TopBorder
-- BottomBorder
-- DiagonalUpBorder
-- DiagonalDownBorder
-- CellValueFormat: Allows you to set the number format string for the cell value. For more information, check the [Number Formatting]({%slug radspreadprocessing-features-number-formats%}) topic.
+- `FontSize`
+- `FontFamily`
+- `ForeColor`
+- `Bold`
+- `Italic`
+- `Underline`
+- `Fill`
+- `LeftBorder`
+- `RightBorder`
+- `TopBorder`
+- `BottomBorder`
+- `DiagonalUpBorder`
+- `DiagonalDownBorder`
+- `CellValueFormat` — allows you to set the number format string for the cell value. For more information, check the [Number Formatting]({%slug radspreadprocessing-features-number-formats%}) topic.
 
 The Formatting property can be used for all rules listed in **Table 1** except **ColorScaleRule**, **IconSetRule**, and **DataBarRule**. Due to their specificity, these three rules inherit directly from `ConditionalFormattingRule` and **do not** expose the `Formatting` property. Their styling options are directly inside the rule class. 
 
@@ -128,14 +128,16 @@ Some of the rules enable you to set values for their ranges. Examples for simila
 
 The following list shows all implementations of `IRangeValue` that you can use:
 
-- **AutomaticMaximumValue**: A value that is automatically determined depending on the current context.
-- **AutomaticMinimumValue**: A value that is automatically determined depending on the current context.
-- **MaximumValue**: The highest value in the applied range.
-- **MinimumValue**: The lowest value in the applied range.
-- **NumericValue**: A simple numeric value.
-- **FormulaValue**: A formula whose result is used as a range value.
-- **PercentValue**: A percentage numeric value.
-- **PercentileValue**: A numeric value that takes values up to a certain percentile of the range.
+| Name | Description |
+|---|---|
+| `AutomaticMaximumValue` | A value that is automatically determined depending on the current context. |
+| `AutomaticMinimumValue` | A value that is automatically determined depending on the current context. |
+| `MaximumValue` | The highest value in the applied range. |
+| `MinimumValue` | The lowest value in the applied range. |
+| `NumericValue` | A simple numeric value. |
+| `FormulaValue` | A formula whose result is used as a range value. |
+| `PercentValue` | A percentage numeric value. |
+| `PercentileValue` | A numeric value that takes values up to a certain percentile of the range. |
 
 ## Get the Conditional Formatting from a CellRange
 

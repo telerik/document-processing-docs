@@ -65,10 +65,11 @@ Most of the insert methods of __RadFlowDocumentEditor__ return the newly inserte
 ### Inserting Text
 
 Inserting text [Runs]({%slug radwordsprocessing-model-run%}) can be done with the following methods:
-            
-* public Run InsertText(string text): Inserts a new __Run__ with the given text in the current paragraph.
 
-* public Run InsertLine(string text): Inserts a new __Run__ with the given text in the current paragraph and starts a new paragraph.
+| Method | Description |
+|---|---|
+| `InsertText(string text)` | Inserts a new `Run` with the given text in the current paragraph. |
+| `InsertLine(string text)` | Inserts a new `Run` with the given text in the current paragraph and starts a new paragraph. |
 
 Both methods return the newly inserted __Run__ element. If, however, there are new lines in the text parameter – a new paragraph is also inserted for each new line. In this case, the returned run is the last one that is inserted.
 
@@ -181,10 +182,11 @@ __Example 9__ shows how an image can be inserted using a stream:
 ### Inserting Tables
 
 The following methods can be used to insert [Table]({%slug radwordsprocessing-model-table%}) in the document:
-            
 
-* public Table InsertTable(): Inserts an empty table in the document.
-* public Table InsertTable(int rows, int columns): Inserts table with specified number of rows and columns.
+| Method | Description |
+|---|---|
+| `InsertTable()` | Inserts an empty table in the document. |
+| `InsertTable(int rows, int columns)` | Inserts a table with the specified number of rows and columns. |
             
 
 >The formatting specified with the [TableFormatting](#changing-current-styles) property is applied to the inserted table. After the insert operation the editor is automatically placed directly __after__ the inserted table (not inside it).
@@ -207,15 +209,12 @@ Here is how to insert a table with the "TableGrid" built-in style:
 ## Changing Current Styles
 
 When you use the insert methods of the __RadFlowDocumentEditor__ the editor creates different document elements. You can control the formatting of the newly created elements with the following properties:
-        
 
-* __CharacterFormatting__: This formatting is applied to all newly created __Run__ elements. When inserting hyperlinks the "Hyperlink" built-in style is applied to the resulting fragment only if no style is set in the __CharacterFormatting__.
-            
-
-* __ParagraphFormatting__: This formatting is applied to all newly created __Paragraph__ elements. This also includes paragraphs that are inserted through __InsertText()__ and __InsertLine()__ methods.
-            
-
-* __TableFormatting__: This formatting is applied to all newly created __Table__ elements.
+| Property | Description |
+|---|---|
+| `CharacterFormatting` | Applied to all newly created `Run` elements. When inserting hyperlinks, the "Hyperlink" built-in style is applied only if no style is set in `CharacterFormatting`. |
+| `ParagraphFormatting` | Applied to all newly created `Paragraph` elements, including paragraphs inserted through `InsertText()` and `InsertLine()`. |
+| `TableFormatting` | Applied to all newly created `Table` elements. |
             
 
 Formatting options are most useful when inserting multiple elements that should have consistent styling. For example, the code  from __Example 11__ inserts multiple paragraphs with no spacing between them and with text (Runs) in "Consolas" font:

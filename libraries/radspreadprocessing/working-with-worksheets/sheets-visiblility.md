@@ -24,12 +24,13 @@ Sheets Visibility is a mechanism to change the visibility of certain sheet, in o
 
 ## Hiding Sheets
 
-There are two available options when hiding sheets. The first option is by setting the sheet **Visibility** property exposed both by the SheetCollection and WorksheetCollection classes. This property is of type *SheetVisibility*, an enum describing the types of visibility of the sheets:
-* **Visible**: Visible sheet visibility.
-* **Hidden**: Hidden sheet visibility.
-* **VeryHidden**: Very hidden sheet visibility.  
+There are two available options when hiding sheets. The first option is by setting the sheet **Visibility** property exposed both by the `SheetCollection` and `WorksheetCollection` classes. This property is of type `SheetVisibility`, an enum describing the visibility states of sheets:
 
-> The VeryHidden can be set only from the provided API, while the Hidden state is designed for UI purposes.
+| Value | Description |
+|---|---|
+| `Visible` | The sheet is visible. |
+| `Hidden` | The sheet is hidden. Designed for UI purposes. |
+| `VeryHidden` | The sheet is very hidden. Can only be set through the API. |
 
 #### **Example 1: Setting the SheetVisibility to Hidden/VeryHidden**
 

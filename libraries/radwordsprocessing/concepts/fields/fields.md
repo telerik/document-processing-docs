@@ -1,4 +1,4 @@
----
+﻿---
 title: Fields Overview
 page_title: Fields Overview
 description: Fields are special constructions that hold data, which can be updated.
@@ -13,9 +13,11 @@ position: 0
 __Fields__ in the __RadFlowDocument__ model are special constructions that hold data, which can change/be updated – for example page numbers or merge fields. Fields consist of field code and field result. The field code fragment defines how the field result should be calculated when the field is updated. The field result fragment holds the latest calculated result. In the model these two fragments are separated by a special type of inline – [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}). __FieldCharacters__ are 3 types:
       
 
-* __Start__: Defines the start of the field.
-* __End__: Defines the end of the field.
-* __Separate__: Separates the code and result fragments.
+| Type | Description |
+|---|---|
+| `Start` | Defines the start of the field. |
+| `End` | Defines the end of the field. |
+| `Separate` | Separates the code and result fragments. |
           
 
 The inlines between the __start__ and __separate__ field characters form the __code fragment__ and the inlines between the __separate__ and __end__ field characters form the __result fragment__.

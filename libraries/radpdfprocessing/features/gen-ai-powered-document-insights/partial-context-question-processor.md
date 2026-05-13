@@ -55,11 +55,13 @@ The **PartialContextQuestionProcessor** is ideal for the following scenarios:
 
 The settings are created only through **EmbeddingSettingsFactory**'s **CreateSettingsForTextDocuments** method and can only be passed to the constructor of the processor. They expose configuration options for the question-answering process through the following properties:
 
-* **ModelMaxInputTokenLimit**: Maximum input token limit the model allows
-* **TokenizationEncoding**: Tokenization encoding used (default: **null**)
-* **ModelId**: ID of the AI model (default: **null**)
-* **MaxNumberOfEmbeddingsSent**: Maximum number of context chunks sent (default: **null**)
-* **EmbeddingTokenSize**: Size in tokens of each context chunk (default: **null**)
+| Property | Description |
+|---|---|
+| `ModelMaxInputTokenLimit` | Maximum input token limit the model allows. |
+| `TokenizationEncoding` | Tokenization encoding used. Default is `null`. |
+| `ModelId` | ID of the AI model. Default is `null`. |
+| `MaxNumberOfEmbeddingsSent` | Maximum number of context chunks sent. Default is `null`. |
+| `EmbeddingTokenSize` | Size in tokens of each context chunk. Default is `null`. |
 
 <snippet id='libraries-pdf-features-gen-ai-partial-context-create-iembeddingsettings'/>
 

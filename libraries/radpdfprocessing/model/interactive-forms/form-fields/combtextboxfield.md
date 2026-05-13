@@ -24,13 +24,12 @@ This class corresponds to FormFieldType.CombTextBox enum value and represents a 
 
 CombTextBoxField provides the following properties:
 
-* **Value**: Gets or sets the current text value of the field.
-
-* **DefaultValue**: Gets or sets the default value used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) is reset to its default values.
-
-* **Widgets**: The collection of Widget annotations which represent the field on the PDF pages. The widgets are created by using the collection's **AddWidget()** method and can be removed by using the **Remove()** method. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
-
-* **MaxLengthOfInputCharacters**: Integer value specifying the number of characters that can be inputted.
+| Property | Description |
+|---|---|
+| `Value` | Gets or sets the current text value of the field. |
+| `DefaultValue` | Gets or sets the default value used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) is reset to its default values. |
+| `Widgets` | The collection of Widget annotations representing the field on the PDF pages. Widgets are created using `AddWidget()` and can be removed using `Remove()`. Implements `IEnumerable`. |
+| `MaxLengthOfInputCharacters` | Specifies the number of characters that can be inputted. |
 
 #### **Example 1: Create a CombTextBoxField and add it to a page**
 <snippet id='pdf-combtetbox-field'/>

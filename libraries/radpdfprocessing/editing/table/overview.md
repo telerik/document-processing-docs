@@ -34,12 +34,13 @@ The result table is shown in **Figure 1**.
 
 ## Using DefaultCellProperties
 
-If you want to apply default styling to all the cells in a table, you can use the Table `DefaultCellProperties` property. This allows you to modify the default cell presentation.
-        
+If you want to apply default styling to all the cells in a table, you can use the Table `DefaultCellProperties` property. This allows you to modify the default cell presentation:
 
-* **Padding**: Specifies the distances between the inner cell border contour and the cell content.
-* **Borders**: Property of type `TableCellBorders`, which specifies the borders of a single cell. The available borders are left, right, top, bottom, diagonal up, and diagonal down.
-* **Background**: Specifies the background of the cell.
+| Property | Description |
+|---|---|
+| `Padding` | Specifies the distances between the inner cell border contour and the cell content. |
+| `Borders` | Of type `TableCellBorders`. Specifies the borders of a single cell. The available borders are left, right, top, bottom, diagonal up, and diagonal down. |
+| `Background` | Specifies the background of the cell. |
             
 
 **Example 2** shows how to use the **DefaultCellProperties** of a table
@@ -57,8 +58,7 @@ The result of the snippet in **Example 2** is demonstrated on **Figure 2**.
 
 ## Modifying a Table
 
-There are several factors that affect table measuring calculations. Some of them are listed and explained below:
-        
+The following table lists the properties that affect table measuring calculations:
 
 * **Margin**: Specifies the distances between the table borders outline and the rest of the document content.
          

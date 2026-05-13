@@ -33,9 +33,10 @@ After registering the **PredefinedCMapsProvider** class, you will be able to imp
 
 The deafult implementation covers the majority of the scenarios but in some pretty rare cases, users might need to provide a custom CMap. The API enables you also create a custom implementation for a CMap provider so you can provide the data for the custom CMap table. To achieve that, you will need to inherit the **PredefinedCMapsProviderBase** abstract class and implement the following members:
 
- * **byte[] GetCidCMapData(string name)**: Used to retrieve the *character code to CID mapping* of a predefined CMap. It should return the the CMap resource data depending on the specified name.
-
-* **byte[] GetUnicodeCMapData(string name)**: Used to retrieve the *character code to Unicode mapping* of a predefined CMap. It should return the the CMap resource data depending on the specified name.
+| Member | Description |
+|---|---|
+| `byte[] GetCidCMapData(string name)` | Retrieves the *character code to CID mapping* of a predefined CMap. Returns the CMap resource data for the specified name. |
+| `byte[] GetUnicodeCMapData(string name)` | Retrieves the *character code to Unicode mapping* of a predefined CMap. Returns the CMap resource data for the specified name. |
 
 ## See Also
  * [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html)

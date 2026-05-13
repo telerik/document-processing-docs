@@ -13,9 +13,10 @@ position: 9
 
 The **ResetFormType** property represents the type of the reset form behavior. The available options are:
 
-* **Include**: Specifies that the reset form should include the specified form fields.
-
-* **Exclude**: Specifies that the reset form should exclude the specified form fields.
+| Value | Description |
+|---|---|
+| `Include` | Specifies that the reset form should include the specified form fields. |
+| `Exclude` | Specifies that the reset form should exclude the specified form fields. |
 
 ## Creating a PushButtonWidget with a ResetFormAction 
 

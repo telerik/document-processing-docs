@@ -18,53 +18,56 @@ The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the 
 
 ### Properties
 
-* **CompressedLength**: Gets the compressed size of the entry in the zip archive. 
+The following table describes the properties of **ZipArchiveEntry**:
 
-    > The archive compressed length can be obtained only after the **ZipArchiveEntry** is disposed of, so in the following example, we are ensuring the correct disposing of the object by [using statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement).
+| Property | Description |
+|---|---|
+| `CompressedLength` | Gets the compressed size of the entry in the zip archive. Note: this value is available only after the `ZipArchiveEntry` is disposed. |
+| `ExternalAttributes` | Gets or sets external [file attributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view). |
+| `FullName` | Gets the relative path of the entry in the zip archive. |
+| `LastWriteTime` | Gets or sets the last time the entry in the zip archive was changed. |
+| `Length` | Gets the uncompressed size of the entry in the zip archive. Note: this value is available only after the `ZipArchiveEntry` is disposed. |
+| `Name` | Gets the file name of the entry in the zip archive. |
 
-    #### **Example 1: Get entry's compressed length**
-    <snippet id='codeblock-dst'/>
+#### **Example 1: Get entry's compressed length**
+<snippet id='codeblock-dst'/>
 
-* **ExternalAttributes**: Gets or sets external [file attributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view).
-    
-    #### **Example 2: Set entry's external attributes**
+#### **Example 2: Set entry's external attributes**
 
-    <snippet id='codeblock-dsu'/>
+<snippet id='codeblock-dsu'/>
 
-* **FullName**: Gets the relative path of the entry in the zip archive.
-  
-    #### **Example 3: Get entry's relative path**
-    
-    <snippet id='codeblock-dsv'/>
+#### **Example 3: Get entry's relative path**
 
-* **LastWriteTime**: Gets or sets the last time the entry in the zip archive was changed.
-    
-    #### **Example 4: Set last entry's write time**
+<snippet id='codeblock-dsv'/>
 
-    <snippet id='codeblock-dsw'/>
+#### **Example 4: Set last entry's write time**
 
-* **Length**: Gets the uncompressed size of the entry in the zip archive.
-    > The archive length can be obtained only after the **ZipArchiveEntry** is disposed of, so in the following example, we are ensuring the correct disposing of the object by [using statement](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/using-statement).
+<snippet id='codeblock-dsw'/>
 
-    #### **Example 5: Get entry's length**
+#### **Example 5: Get entry's length**
 
-    <snippet id='codeblock-dsx'/>
+<snippet id='codeblock-dsx'/>
 
-* **Name**: Gets the file name of the entry in the zip archive.
+#### **Example 6: Get entry's name**
 
-    #### **Example 6: Get entry's name**
-
-    <snippet id='codeblock-dsy'/>
+<snippet id='codeblock-dsy'/>
 
 
 ### Methods
 
-* **Delete**: Deletes the entry from the zip archive.
-* **Dispose**: Releases the resources used by the current instance of the ZipArchiveEntry class.
-* **Open**: Opens the entry from the zip archive.
+The following table describes the methods of **ZipArchiveEntry**:
+
+| Method | Description |
+|---|---|
+| `Delete` | Deletes the entry from the zip archive. |
+| `Dispose` | Releases the resources used by the current instance of the `ZipArchiveEntry` class. |
+| `Open` | Opens the entry from the zip archive. |
 
 ### Events
-* **PropertyChanged**: Occurs when a property value changes.
+
+| Event | Description |
+|---|---|
+| `PropertyChanged` | Occurs when a property value changes. |
 
 ## ZipArchive and ZipArchiveEntry
 There are several operations, which you can execute over a **ZipArchive** instance.

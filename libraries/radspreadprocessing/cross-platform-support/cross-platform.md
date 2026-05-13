@@ -47,9 +47,10 @@ The [Limitations in .Net Standard](#limitations-in-net-standard) require some ad
 
 The **SpreadExtensibilityManager** class has the following properties:
 
-* **ImagePropertiesResolver**: Gets or sets an *ImagePropertiesResolverBase* instance used to resolve image properties when exporting to PDF. Check the [Export Images to PDF]({%slug radspreadprocessing-cross-platform-images%}) topic for more details.
-
-* **TextMeasurer**: Gets or sets a *SpreadTextMeasurerBase* instance used to provide text measuring. Check the [Text Measuring]({%slug radspreadprocessing-cross-platform-text-measure%}) topic for more details.
+| Property | Description |
+|---|---|
+| `ImagePropertiesResolver` | Gets or sets an `ImagePropertiesResolverBase` instance used to resolve image properties when exporting to PDF. See [Export Images to PDF]({%slug radspreadprocessing-cross-platform-images%}) for more details. |
+| `TextMeasurer` | Gets or sets a `SpreadTextMeasurerBase` instance used to provide text measuring. See [Text Measuring]({%slug radspreadprocessing-cross-platform-text-measure%}) for more details. |
 
 ## Limitations in .Net Standard
 

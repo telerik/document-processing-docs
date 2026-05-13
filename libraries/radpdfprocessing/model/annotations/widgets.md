@@ -10,21 +10,6 @@ position: 2
 
 # Widgets
 
-This topic describes what the widgets represent and what are the different types of widgets.
-
-* [Overview](#overview)
-* [Defining Widget Content](#defining-widget-content)
-* [Widget Class](#widget-class)
-* [Widget Properties](#widget-properties)
-* [Widget Types](#widget-types)
-	* [VariableContentWidget](#variablecontentwidget-class)
-	* [SignatureWidget](#signaturewidget-class)
-	* [PushButtonWidget](#pushbuttonwidget-class)
-	* [TwoStatesButtonWidget](#twostatesbuttonwidget-class)
-	* [RadioButtonWidget](#radiobuttonwidget-class)
-
-## Overview
-
 Widget annotations are used for visual representation of some [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) value on a PDF page. There are different widget annotations depending on the type of content that they should visualize. All Widget annotations are created from the FormField class inheritor Widgets property through the **AddWidget()** method in the corresponding Widgets collection.
 
 ## Defining Widget Content
@@ -72,17 +57,13 @@ All widgets are created using the Widgets collection of the [FormField]({%slug r
 
 The Widget class provides the following common widget properties and methods:
 
-* **WidgetContentType**: Provides the widget content type of the specifying widget instance. This property can be used to easily recognize the type of the concrete widget and cast the instance to the concrete Widget class inheritor.
-
-* **Field**: Provides reference to the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) object, which this widget should visualize.
-
-* **TextProperties**: Provides a [VariableTextProperties]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}#variabletextproperties-class) instance specifying how to dynamically construct the text in the widget appearance. 
-
-* **HighlightingMode**: The highlighting effect that should be used by the PDF viewer when the mouse is over the widget.
-
-* **RecalculateContent()**: This method is used to recalculate the AnnotationContentSource properties, so that their content corresponds to the [Dynamic appearance properties]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}) of the widget. 
- 
-	>If you modify the [VariableTextProperties]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}#variabletextproperties-class) and the [DynamicAppearanceCharacteristics]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}#dynamicappearancecharacteristics-class) properties and do not call the **RecalculateContent()** method, the changes will not be visually displayed when viewing the file as the AnnotationContentSource properties are with higher priority.
+| Member | Description |
+|---|---|
+| `WidgetContentType` | Provides the widget content type of this widget instance. Use it to recognize the type and cast to the concrete Widget class inheritor. |
+| `Field` | Provides a reference to the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) object that this widget visualizes. |
+| `TextProperties` | Provides a [VariableTextProperties]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}#variabletextproperties-class) instance specifying how to dynamically construct the text in the widget appearance. |
+| `HighlightingMode` | The highlighting effect used by the PDF viewer when the mouse is over the widget. |
+| `RecalculateContent()` | Recalculates the `AnnotationContentSource` properties so their content corresponds to the [Dynamic appearance properties]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}) of the widget. Changes to `VariableTextProperties` and `DynamicAppearanceCharacteristics` are not visually displayed until this method is called. |
 
 The inherited from the Annotation class property **IsPrintable** is set to *true* for the widgets by default. If you want to exclude a widget from the document when printing, you can set its **IsPrintable** property to *false*. 
 
@@ -97,43 +78,48 @@ This class corresponds to the WidgetContentType.VariableContent enum value and r
 
 VariableContentWidget provides the following properties:
 
-* **Content**: Provides the AnnotationContentSource, used for the initial visualization of the field value in the PDF viewer. As the content of this widget type is dynamically modified during the user interaction, the Content property is used only for **initial visualization** before the user has interacted with the field value.
-
-* **AppearanceCharacteristics**: A [DynamicAppearanceCharacteristics class]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}#dynamicappearancecharacteristics-class) instance, providing information on how to dynamically recalculate the widget appearance.
+| Property | Description |
+|---|---|
+| `Content` | Provides the `AnnotationContentSource` used for the initial visualization of the field value in the PDF viewer. This is used only for **initial visualization** before the user has interacted with the field value. |
+| `AppearanceCharacteristics` | A [DynamicAppearanceCharacteristics]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties %}#dynamicappearancecharacteristics-class) instance providing information on how to dynamically recalculate the widget appearance. |
 
 
 ### SignatureWidget Class
 
-This class corresponds to WidgetContentType.SignatureContent enum value and represents a widget, which visualizes a digital signature. This widget type is used by the [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) class and provides the following properties:
+This class corresponds to WidgetContentType.SignatureContent enum value and represents a widget that visualizes a digital signature. This widget type is used by the [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) class and provides the following properties:
 
-* **Content**: Provides the AnnotationContentSource, used to visualize the digital signature in the PDF viewer. This property is with higher priority compared to AppearanceCharacteristics property.
-
-* **AppearanceCharacteristics**: A [DynamicAppearanceCharacteristics class]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}#dynamicappearancecharacteristics-class) instance providing information on how to dynamically recalculate the widget appearance. This property is used only when the [AcroForm class]({%slug radpdfprocessing-model-interactive-forms-acroform %}) has ViewersShouldRecalculateWidgetAppearances property set to *true*, which forces the PDF viewer to ignore the provided AnnotationContentSource.
+| Property | Description |
+|---|---|
+| `Content` | Provides the `AnnotationContentSource` used to visualize the digital signature in the PDF viewer. This property takes higher priority over `AppearanceCharacteristics`. |
+| `AppearanceCharacteristics` | A [DynamicAppearanceCharacteristics]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}#dynamicappearancecharacteristics-class) instance providing information on how to dynamically recalculate the widget appearance. Used only when `AcroForm.ViewersShouldRecalculateWidgetAppearances` is `true`. |
 
 
 ### PushButtonWidget Class
 
-This class corresponds to WidgetContentType.PushButtonContent enum value and represents a widget, which visualizes a push button. This widget type is used by the [PushButtonField class]({%slug radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield%}) and provides the following properties:
+This class corresponds to WidgetContentType.PushButtonContent enum value and represents a widget that visualizes a push button. This widget type is used by the [PushButtonField class]({%slug radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield%}) and provides the following properties:
 
-* **Content**: Provides the AnnotationContentSource, used to visualize the button in the PDF viewer. This property is with higher priority compared to AppearanceCharacteristics property.
-
-* **AppearanceCharacteristics**: A [PushButtonAppearanceCharacteristics class]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}#pushbuttonappearancecharacteristics-class) instance providing information on how to dynamically recalculate the widget appearance. This property is used only when the [AcroForm class]({%slug radpdfprocessing-model-interactive-forms-acroform %}) has ViewersShouldRecalculateWidgetAppearances property set to *true*, which forces the PDF viewer to ignore the provided AnnotationContentSource. In order to apply these properties, you should call **RecalculateContent()** method, which will modify the Content property value so that it corresponds to the appearance characteristics.
+| Property | Description |
+|---|---|
+| `Content` | Provides the `AnnotationContentSource` used to visualize the button in the PDF viewer. This property takes higher priority over `AppearanceCharacteristics`. |
+| `AppearanceCharacteristics` | A [PushButtonAppearanceCharacteristics]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}#pushbuttonappearancecharacteristics-class) instance providing information on how to dynamically recalculate the widget appearance. Used only when `AcroForm.ViewersShouldRecalculateWidgetAppearances` is `true`. Call `RecalculateContent()` to apply these properties to `Content`. |
 
 ### TwoStatesButtonWidget Class
 
-This class corresponds to WidgetContentType.TwoStatesContent enum value and represents a widget, which visualizes a button that has ON and OFF states. This widget type is used by the [CheckBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-checkboxfield%}) and provides the following properties:
+This class corresponds to WidgetContentType.TwoStatesContent enum value and represents a widget that visualizes a button with ON and OFF states. This widget type is used by the [CheckBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-checkboxfield%}) and provides the following properties:
 
-* **OnStateContent**: Provides the AnnotationContentSource, which is used to visualize the selected state of the corresponding field in the PDF viewer. This property is with higher priority compared to AppearanceCharacteristics property.
-
-* **OffStateContent**: Provides the AnnotationContentSource, which is used to visualize the deselected state of the corresponding field in the PDF viewer. This property is with higher priority compared to AppearanceCharacteristics property.
-
-* **AppearanceCharacteristics**: A [ButtonAppearanceCharacteristics class]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}#buttonappearancecharacteristics-class) instance providing information on how to dynamically recalculate the widget appearance. This property is used only when the [AcroForm class]({%slug radpdfprocessing-model-interactive-forms-acroform %}) has ViewersShouldRecalculateWidgetAppearances property set to *true*, which forces the PDF viewer to ignore the provided AnnotationContentSource. In order to apply these properties, you can call the **RecalculateContent()** method, which will modify the OnStateContent and OffStateContent property values so that they correspond to the appearance characteristics.
+| Property | Description |
+|---|---|
+| `OnStateContent` | Provides the `AnnotationContentSource` used to visualize the selected state of the field in the PDF viewer. This property takes higher priority over `AppearanceCharacteristics`. |
+| `OffStateContent` | Provides the `AnnotationContentSource` used to visualize the deselected state of the field in the PDF viewer. This property takes higher priority over `AppearanceCharacteristics`. |
+| `AppearanceCharacteristics` | A [ButtonAppearanceCharacteristics]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}#buttonappearancecharacteristics-class) instance providing information on how to dynamically recalculate the widget appearance. Used only when `AcroForm.ViewersShouldRecalculateWidgetAppearances` is `true`. Call `RecalculateContent()` to apply these properties to `OnStateContent` and `OffStateContent`. |
 
 ### RadioButtonWidget Class
 
-This class inherits the [TwoStatesButtonWidget](#twostatesbuttonwidget-class) class and represents a widget, which visualizes a radio button option. It is used by the [RadioButtonField class]({%slug radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield%}) and adds the following property to TwoStatesButtonWidget implementation:
+This class inherits the [TwoStatesButtonWidget](#twostatesbuttonwidget-class) class and represents a widget that visualizes a radio button option. It is used by the [RadioButtonField class]({%slug radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield%}) and adds the following property to `TwoStatesButtonWidget`:
 
-* **Option**: The concrete RadioOption which this widget represents.
+| Property | Description |
+|---|---|
+| `Option` | The concrete `RadioOption` that this widget represents. |
 
 
 ## See Also

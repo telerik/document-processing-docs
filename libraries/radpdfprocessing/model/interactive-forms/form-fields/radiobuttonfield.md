@@ -26,18 +26,14 @@ The RadioButtonField class corresponds to FormFieldType.RadioButton enum value a
 
 RadioButtonField provides the following properties:
 
-* **Value**: Gets or sets single choice that is selected. This choice is represented by RadioOption class that has a single **Value** text property.
-
-* **DefaultValue**: Gets or sets the default selected option used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) is reset to its default values.
-
-* **Widgets**: The collection of Widget annotations, which represent the field on the PDF pages. Each Widget is of type  [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets%}#radiobuttonwidget-class) and represents a single radio button option provided by the RadioButtonWidget’s **Option** property. The widgets are created using the collection **AddWidget()** method and can be removed by using the collection's **Remove()** method. As the widget collection implements  the IEnumerable interface, the available widget instances can be iterated.
-
-* **Options**: A RadioOptionCollection instance containing all available options for this field. In order to modify this collection, you can use its indexer property and its **Add()**, **RemoveAt()** and **Clear()** methods. Each RadioOption instance can be added only once to such a collection. If you try adding the same instance more than once in the collection, an exception will be thrown.
-
-* **AllowToggleOff**: Boolean value indicating whether radio buttons can be deselected by a mouse click on a selected radio button.
-
-* **ShouldUpdateRadiosInUnison**: Boolean value indicating whether all radio buttons that have RadioOption with the same value should be selected in unison. If false, then at most on radio button will have selected state even if some other radio button has the same option value.
-
+| Property | Description |
+|---|---|
+| `Value` | Gets or sets the single choice that is selected. `RadioOption` has a single `Value` text property. |
+| `DefaultValue` | Gets or sets the default selected option used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) is reset to its default values. |
+| `Widgets` | The collection of [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets%}#radiobuttonwidget-class) annotations representing the field. Each widget represents a single radio button option via its `Option` property. Widgets are created using `AddWidget()` and removed using `Remove()`. Implements `IEnumerable`. |
+| `Options` | A `RadioOptionCollection` containing all available options for this field. Modify via the indexer, `Add()`, `RemoveAt()`, and `Clear()`. Each `RadioOption` instance can be added only once. |
+| `AllowToggleOff` | Indicates whether radio buttons can be deselected by clicking on an already-selected radio button. |
+| `ShouldUpdateRadiosInUnison` | Indicates whether all radio buttons sharing the same `RadioOption` value should be selected in unison. When `false`, at most one radio button will be selected even if multiple share the same option value. |
 
 #### **Example 1: Create RadioButtonFields and add them to a page**
 <snippet id='pdf-radio-button-field'/>

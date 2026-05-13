@@ -1,4 +1,4 @@
----
+﻿---
 title: Settings
 description: Learn about the export settings available for the PdfFormatProvider in RadSpreadProcessing to customize PDF output.
 page_title: Settings
@@ -20,18 +20,14 @@ __PdfFormatProvider__ allows to export PDF documents. Additionally, there are a 
 __PdfExportSettings__ allow controlling how a __Workbook__ is exported to PDF. Using __PdfExportSettings__ you may specify:
         
 
-* __ExportWhat__: Enumeration specifying whether to export the __Active Sheet__, the __Entire Workbook__ or the current __Selection__.
-            
-
-* __IgnorePrintArea__: Boolean value indicating whether or not to ignore print area when exporting worksheets.
-            
-* __IncludeHiddenSheets__: Boolean value indicating whether to include the hidden sheets or to skip them. Default value is `false`.
-
-* __SelectedRanges property__: A list of ranges specifying which areas of the active worksheet should be exported. Using the __ExportWhat.Selection__ option you may specify that you need to export exactly this __SelectedRanges__ from the current worksheet, __ignoring PrintArea and PageBreaks__ from __WorksheetPageSetup__.
-
-* __PdfFileSettings__:  A property of type __Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.PdfExportSettings__ which is a class related to the [RadPdfProcessing library]({%slug radpdfprocessing-overview%}). Thus, the property allows you to control the image quality, encryption, compliance level and other PDF format related properties. More information on the settings is available in the [export settings article for RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
-
-* **ChartRenderer**: A property of type [IPdfChartRenderer](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.formatproviders.pdf.export.ipdfchartrenderer) that gets or sets the renderer which will be used to render charts. It is not relevant for the .NET Standard version of the Telerik Document Processing libraries. Read more in the [Export Chart to PDF]({%slug radspreadprocessing-features-charts-pdf-export%}) article. 
+| Property | Description |
+|---|---|
+| `ExportWhat` | Enumeration specifying whether to export the Active Sheet, the Entire Workbook, or the current Selection. |
+| `IgnorePrintArea` | Boolean value indicating whether or not to ignore print area when exporting worksheets. |
+| `IncludeHiddenSheets` | Boolean value indicating whether to include the hidden sheets or to skip them. Default value is `false`. |
+| `SelectedRanges` | A list of ranges specifying which areas of the active worksheet should be exported. Using the `ExportWhat.Selection` option you may specify that you need to export exactly this `SelectedRanges` from the current worksheet, ignoring `PrintArea` and `PageBreaks` from `WorksheetPageSetup`. |
+| `PdfFileSettings` | A property of type `PdfExportSettings` related to the [RadPdfProcessing library]({%slug radpdfprocessing-overview%}). Allows you to control the image quality, encryption, compliance level, and other PDF format-related properties. More information is available in the [export settings article for RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}). |
+| `ChartRenderer` | A property of type [IPdfChartRenderer](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.formatproviders.pdf.export.ipdfchartrenderer) that gets or sets the renderer used to render charts. Not relevant for the .NET Standard version of the Telerik Document Processing libraries. Read more in the [Export Chart to PDF]({%slug radspreadprocessing-features-charts-pdf-export%}) article. |
 
 
 __Example 1__ shows how to export the Entire Workbook without ignoring the __PrintArea__ property in all worksheets.

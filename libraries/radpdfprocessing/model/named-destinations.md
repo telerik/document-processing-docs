@@ -15,14 +15,12 @@ Named destinations are destinations in the document which can be referred to ind
 ## NamedDestination Class
 
 The **NamedDestination** class is the one that represents the named destinations in PDF documents. It exposes the following properties:
-      
 
-* **Name**: Gets or sets the destination name. Changing this property also affects the name of the named destination inside the document collection.
-          
-
-* **Destination**: Property of type [Destination](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Navigation.Destination.html), which determines the actual destination the named destination points to. 
-          
-* **GoToAction**: Gets or sets the [GoToAction](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Actions.GoToAction.html) of the named destination.
+| Property | Description |
+|---|---|
+| `Name` | Gets or sets the destination name. Changing this property also affects the name of the named destination inside the document collection. |
+| `Destination` | Of type [Destination](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Navigation.Destination.html), determines the actual destination this named destination points to. |
+| `GoToAction` | Gets or sets the [GoToAction](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Actions.GoToAction.html) of the named destination. |
 
 
 ## NamedDestinations Collection

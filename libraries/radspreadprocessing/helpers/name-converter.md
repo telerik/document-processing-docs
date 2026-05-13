@@ -14,19 +14,23 @@ The [NameConverter](https://docs.telerik.com/devtools/document-processing/api/te
 
 ## Methods
 
-* **[ConvertRowIndexToName](#convert-row-index-to-name)**: Converts the row index to name.
-* **[ConvertRowNameToIndex](#convert-row-name-to-index)**: Converts the row name to index.
-* **[ConvertColumnIndexToName](#convert-column-index-to-name)**: Converts the column index to name.
-* **[ConvertColumnNameToIndex](#convert-column-name-to-index)**: Converts the column name to index.
-* **[ConvertCellIndexToName](#convert-cell-index-to-name)**: Converts the cell index to name.
-* **[TryConvertNamesToCellReferenceRangeExpression](#try-convert-names-to-cell-reference-range-expression)**: Tries to convert the cell ranges names to cell reference ranges.
-* **[ConvertCellReferenceToName](#convert-cell-reference-to-name)**: Converts the cell reference to name.
-* **[ConvertCellRangeToName](#convert-cell-range-to-name)**: Converts the cell range to a name.
-* **[TryConvertNameToCellRange](#try-convert-name-to-cell-range)**: Tries to convert the name to a cell range. 
-* **[ConvertCellIndexesToName](#convert-cell-indexes-to-name)**: Converts the cell indexes to a name.
-* **[ConvertCellNameToIndex](#convert-cell-name-to-index)**: Converts the cell name to a cell index.
-* **[TryConvertCellNameToIndex](#try-convert-cellName-to-index)**: Tries to convert the cell name to index.
-* **[IsValidA1CellName](#is-valid-a1-cell-name)**: Determines whether the name of the cell is valid.
+The following table lists the available methods:
+
+| Method | Description |
+|---|---|
+| [`ConvertRowIndexToName`](#convert-row-index-to-name) | Converts the row index to name. |
+| [`ConvertRowNameToIndex`](#convert-row-name-to-index) | Converts the row name to index. |
+| [`ConvertColumnIndexToName`](#convert-column-index-to-name) | Converts the column index to name. |
+| [`ConvertColumnNameToIndex`](#convert-column-name-to-index) | Converts the column name to index. |
+| [`ConvertCellIndexToName`](#convert-cell-index-to-name) | Converts the cell index to name. |
+| [`TryConvertNamesToCellReferenceRangeExpression`](#try-convert-names-to-cell-reference-range-expression) | Tries to convert the cell ranges names to cell reference ranges. |
+| [`ConvertCellReferenceToName`](#convert-cell-reference-to-name) | Converts the cell reference to name. |
+| [`ConvertCellRangeToName`](#convert-cell-range-to-name) | Converts the cell range to a name. |
+| [`TryConvertNameToCellRange`](#try-convert-name-to-cell-range) | Tries to convert the name to a cell range. |
+| [`ConvertCellIndexesToName`](#convert-cell-indexes-to-name) | Converts the cell indexes to a name. |
+| [`ConvertCellNameToIndex`](#convert-cell-name-to-index) | Converts the cell name to a cell index. |
+| [`TryConvertCellNameToIndex`](#try-convert-cellName-to-index) | Tries to convert the cell name to index. |
+| [`IsValidA1CellName`](#is-valid-a1-cell-name) | Determines whether the name of the cell is valid. |
 
 ### Convert Row Index to Name
 **ConvertRowIndexToName** method converts the row index to name.

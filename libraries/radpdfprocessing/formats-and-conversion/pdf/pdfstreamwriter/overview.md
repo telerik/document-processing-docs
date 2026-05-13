@@ -38,22 +38,15 @@ __PdfStreamWriter__ can help you achieve the following scenarios when creating t
 
 ## PdfStreamWriter Structure
 
-There are several classes responsible for writing the different parts of a PDF file.
+There are several classes responsible for writing the different parts of a PDF file:
 
-* **PdfStreamWriter**: The root class, responsible to write the PDF file content to a Stream.
-
-	* **WritePage() methods**: The WritePage() methods of PdfStreamWriter write a PDF page directly into the PDF file Stream. There are two overloads allowing you to write either PdfPageSource or RadFixedPage.
-	
-* **PdfStreamWriterSettings**: Provides options for customizing the exported PDF file. An instance of this class can be obtained through the Settings property of **PdfStreamWriter**. The provided customization properties are **DocumentInfo**, **ImageQuality** and **WriteAnnotations**.
-
-
-* **PdfPageStreamWriter**: This class is responsible for writing the PDF page content to the PDF file stream. An instance of this class can be created by calling the **BeginPage()** method of **PdfStreamWriter**.
-
-	* **WriteContent() methods**: The WriteContent() methods of PdfPageStreamWriter allow you to write content to the current PDF page Stream. There are two overloads allowing to add content either from PdfPageSource or RadFixedPage.
-
-* **PdfFileSource**: Represents the content of an existing PDF file.
-
-* **PdfPageSource**: A class representing the page content of an existing PDF file. Instances of this class can be obtained using the **Pages** property of **PdfFileSource**.
+| Class | Description |
+|---|---|
+| `PdfStreamWriter` | The root class responsible for writing PDF file content to a `Stream`. The `WritePage()` methods write a PDF page directly into the stream; overloads accept `PdfPageSource` or `RadFixedPage`. |
+| `PdfStreamWriterSettings` | Provides options for customizing the exported PDF file. Obtained through the `Settings` property of `PdfStreamWriter`. Exposes `DocumentInfo`, `ImageQuality`, and `WriteAnnotations`. |
+| `PdfPageStreamWriter` | Responsible for writing PDF page content to the file stream. Created by calling `BeginPage()` on `PdfStreamWriter`. The `WriteContent()` methods write content to the current page; overloads accept `PdfPageSource` or `RadFixedPage`. |
+| `PdfFileSource` | Represents the content of an existing PDF file. |
+| `PdfPageSource` | Represents the page content of an existing PDF file. Instances are obtained from the `Pages` property of `PdfFileSource`. |
 
 
 ## PdfStreamWriter or PdfFormatProvider?

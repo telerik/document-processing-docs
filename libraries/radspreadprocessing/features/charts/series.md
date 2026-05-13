@@ -23,11 +23,13 @@ There are several base classes used to unite the different kinds of series and v
 
 The SeriesBase class is the base class for all series in RadSpreadProcessing. It exposes the following members:
 
-* **SeriesType**: Gets the type of the series.
-* **Title**: Gets or sets the title of the series.
-* **Outline**: Represents the outline of a chart. It is of type [Outline](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Model.Drawing.Theming.Outline.html).
-* __Fill__: Represents the fill of the series. You can use the [SolidFill](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.model.drawing.theming.solidfill) type to set the series color. 
-* **Clone()**: Creates a deep copy of the object and returns the cloning.
+| Member | Description |
+|---|---|
+| `SeriesType` | Gets the type of the series. |
+| `Title` | Gets or sets the title of the series. |
+| `Outline` | Represents the outline of a chart. It is of type [Outline](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Model.Drawing.Theming.Outline.html). |
+| `Fill` | Represents the fill of the series. You can use the [SolidFill](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.model.drawing.theming.solidfill) type to set the series color. |
+| `Clone()` | Creates a deep copy of the object and returns the cloning. |
 
 The differnt types of charts support different types of series. To meet this need, the base class is inherited by the CategoriesSeriesBase and PointSerierBase base classes representing the different series types.
 
@@ -35,8 +37,10 @@ The differnt types of charts support different types of series. To meet this nee
 
 A base class for all series that use Values and Categories.
 
-* **Values**: Gets or sets the data for the values of the series.
-* **Categories**: Gets or sets the data for the categories of the series.
+| Member | Description |
+|---|---|
+| `Values` | Gets or sets the data for the values of the series. |
+| `Categories` | Gets or sets the data for the categories of the series. |
 
 
 The CategorySeriesBase is inherited by the following classes, which represent concrete different types of series:
@@ -50,8 +54,10 @@ The CategorySeriesBase is inherited by the following classes, which represent co
 
 A base class for all series that use X values and Y values.
 
-* **XValues**: Gets or sets the data for the X values of the series.
-* **YValues**: Gets or sets the data for the Y values of the series.
+| Member | Description |
+|---|---|
+| `XValues` | Gets or sets the data for the X values of the series. |
+| `YValues` | Gets or sets the data for the Y values of the series. |
 
 PointSeriesBase is inherited by the following classes, which represent concrete different types of series:
 
@@ -61,11 +67,13 @@ PointSeriesBase is inherited by the following classes, which represent concrete 
 
 ## Add and Remove Series
 
-The adding of the new series is done through the **SeriesCollection** Add() method overloads and removing is done through the Remove() method. The first overload throws an exception when the series parameter passed is not of the correct type and the other Add ()overloads create a series of the appropriate type. The overloads of the base **SeriesCollection** type are listed below:
+The adding of the new series is done through the **SeriesCollection** `Add()` method overloads and removing is done through the `Remove()` method. The first overload throws an exception when the series parameter passed is not of the correct type and the other `Add()` overloads create a series of the appropriate type. The overloads of the base **SeriesCollection** type are listed below:
 
-- public SeriesBase **Add(IChartData categoriesData, IChartData valuesData, Title title = null)**
-- public SeriesBase **Add()**
-- public void **Remove(SeriesBase series)**
+| Overload | Description |
+|---|---|
+| `Add(IChartData categoriesData, IChartData valuesData, Title title = null)` | Adds a series with the specified categories, values, and optional title. Returns a `SeriesBase` instance. |
+| `Add()` | Adds a new empty series. Returns a `SeriesBase` instance. |
+| `Remove(SeriesBase series)` | Removes the specified series from the collection. |
 
 To better illustrate how you can change the series of a chart, let's take the sample data and chart from **Figure 1**.
 
@@ -109,11 +117,15 @@ There are properties defined on SeriesGroup level. The SeriesGroup base class re
 
 ### BarSeriesGroup
 
- - **BarDirection**: The property is of Type **BarDirection** and its possible values are **BarDirection.Bar** and **BarDirection.Column**. Setting the BarDirection to **Bar** results in a **bar chart (horizontal)** and setting it to **Column** results in a **column chart (vertical)**.
+| Property | Type | Description |
+|---|---|---|
+| `BarDirection` | `BarDirection` | Determines the orientation of the bar chart. `BarDirection.Bar` results in a horizontal bar chart; `BarDirection.Column` results in a vertical column chart. |
 
 ### DoughnutSeriesGroup
 
-- **HoleSizePercent**: **DoughnutSeriesGroup** defines the **HoleSizePercent** property. This property enables you to get or set the size of the hole of the doughnut relative to the size of the doughnut. *The value of the property is limited to values between 0 and 90*.
+| Property | Type | Description |
+|---|---|---|
+| `HoleSizePercent` | `int` | Gets or sets the size of the hole relative to the size of the doughnut. The value is limited to values between 0 and 90. |
 
 
 ## Properties Related to Specific Series Types and Defined in Concrete SeriesBase Implementations
@@ -122,28 +134,35 @@ These properties enable you to control the options for each of the series indepe
 
 ### BubbleSeries
 
- - **BubbleSizes**: Gets or sets the data for the bubble size of the series. It is of type [IChartData]({%slug radspreadprocessing-features-charts-chart-data%}) and you can set it to a specific cell range or directly using values. 
+| Property | Type | Description |
+|---|---|---|
+| `BubbleSizes` | `IChartData` | Gets or sets the data for the bubble size of the series. You can set it to a specific cell range or directly using values. |
 
 ### LineSeries
 
-- **IsSmooth**: A boolean property which determines whether the line of the series is smooth.
-
-- **Marker**: Represents the marker of the series. It is of type **Marker**.
-
+| Property | Type | Description |
+|---|---|---|
+| `IsSmooth` | `bool` | Determines whether the line of the series is smooth. |
+| `Marker` | `Marker` | Represents the marker of the series. |
 
 ### ScatterSeries
 
-- **IsSmooth**: A boolean property which determines whether the line of the series is smooth.
+| Property | Type | Description |
+|---|---|---|
+| `IsSmooth` | `bool` | Determines whether the line of the series is smooth. |
+| `Marker` | `Marker` | Represents the marker of the series. |
+| `ScatterStyle` | `ScatterStyle` | Determines the style of the scatter series. See the table below for possible values. |
 
-- **Marker**: Represents the marker of the series. It is of type **Marker**.
+The `ScatterStyle` enumeration supports the following values:
 
-- **ScatterStyle**: Determines the style of the scatter series. It is of type ScatterStyle and can have the following values:
-    -  **None**: The points on the scatter chart are not connected with straight lines and markers are not drawn.
-    - **Line**: The points on the scatter chart are connected with straight lines but markers are not drawn.
-    - **LineMarker**: The points on the scatter chart are connected with straight lines and markers are drawn.
-    - **Marker**: The points on the scatter chart are not connected with lines and markers are drawn.
-    - **Smooth**: The points on the scatter chart are connected with smoothed lines but markers are not drawn.
-    - **SmoothMarker**: The points on the scatter chart are connected with smoothed lines and markers are drawn.
+| Value | Description |
+|---|---|
+| `None` | Points on the scatter chart are not connected with straight lines and markers are not drawn. |
+| `Line` | Points on the scatter chart are connected with straight lines but markers are not drawn. |
+| `LineMarker` | Points on the scatter chart are connected with straight lines and markers are drawn. |
+| `Marker` | Points on the scatter chart are not connected with lines and markers are drawn. |
+| `Smooth` | Points on the scatter chart are connected with smoothed lines but markers are not drawn. |
+| `SmoothMarker` | Points on the scatter chart are connected with smoothed lines and markers are drawn. |
 
 #### **Example 5: Customize the appearance of ScatterSeries**
 

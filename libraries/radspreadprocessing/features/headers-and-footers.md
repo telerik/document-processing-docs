@@ -1,4 +1,4 @@
----
+﻿---
 title: Headers and Footers
 description: Learn how to add rich text content in page margins as headers and footers when exporting spreadsheet worksheets in RadSpreadProcessing.
 page_title: Headers and Footers
@@ -38,47 +38,30 @@ This article aims to present the Headers and Footers API in **RadSpreadprocessin
 
 **HeaderFooterSettings** class has the following properties:
 
-* **DifferentOddAndEvenPages**: A *boolean* value, indicating whether there should be different headers and footers for the odd and for the even pages.
-
-
-* **DifferentFirstPage**: A *boolean* value, indicating whether there should be different header and footer on the first page.
-
-
-* **ScaleWithDocument**: A *boolean* value, indicating whether headers and footers should be scaled using the **ScaleFactor** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}) when being rendered. When ScaleWithDocument is set to *false*, then headers and footers are always rendered at 100% scale.
-
-
-* **AlignWithPageMargins**: A *boolean* value, indicating whether headers and footers should align with the left and right margins according to the value of the **Margins** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). When AlignWithPageMargins value is set to *false*, headers and footers are aligned with the left and right margins according to the value of the **NormalMargins** static property of [PageMargins](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Printing.PageMargins.html). 
-
-
-* **Header**: Represents the default header content. When DifferentOddAndEvenPages is set to *true* then Header property represents the header content of the *odd* pages only. The property is of type [HeaderFooterContent](#headerfootercontent).
-
-
-* **Footer**: Represents the default footer content. When DifferentOddAndEvenPages is set to *true* then Footer property represents the footer content of the *odd* pages only. The property is of type [HeaderFooterContent](#headerfootercontent).
-
-
-* **FirstPageHeader**: Represents the header content of the first page. This content is used only when DifferentFirstPage property is set to *true*. The property is of type [HeaderFooterContent](#headerfootercontent).
-
-
-* **FirstPageFooter**: Represents the footer content of the first page. This content is used only when DifferentFirstPage property is set to *true*. The property is of type [HeaderFooterContent](#headerfootercontent).
-
-
-* **EvenPageHeader**: Represents the header content of the even pages. This content is used only when DifferentOddAndEvenPages property is set to *true*. The property is of type [HeaderFooterContent](#headerfootercontent).
-
-
-* **EvenPageFooter**: Represents the footer content of the even pages. This content is used only when DifferentOddAndEvenPages property is set to *true*. The property is of type [HeaderFooterContent](#headerfootercontent).
+| Property | Description |
+|---|---|
+| `DifferentOddAndEvenPages` | A `bool` value indicating whether there should be different headers and footers for odd and even pages. |
+| `DifferentFirstPage` | A `bool` value indicating whether there should be a different header and footer on the first page. |
+| `ScaleWithDocument` | A `bool` value indicating whether headers and footers should be scaled using the `ScaleFactor` property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). When `false`, headers and footers are always rendered at 100% scale. |
+| `AlignWithPageMargins` | A `bool` value indicating whether headers and footers should align with left and right margins per the `Margins` property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). When `false`, alignment uses `NormalMargins`. |
+| `Header` | The default header content. When `DifferentOddAndEvenPages` is `true`, represents the header of odd pages only. Of type [HeaderFooterContent](#headerfootercontent). |
+| `Footer` | The default footer content. When `DifferentOddAndEvenPages` is `true`, represents the footer of odd pages only. Of type [HeaderFooterContent](#headerfootercontent). |
+| `FirstPageHeader` | The header content of the first page. Used only when `DifferentFirstPage` is `true`. Of type [HeaderFooterContent](#headerfootercontent). |
+| `FirstPageFooter` | The footer content of the first page. Used only when `DifferentFirstPage` is `true`. Of type [HeaderFooterContent](#headerfootercontent). |
+| `EvenPageHeader` | The header content of even pages. Used only when `DifferentOddAndEvenPages` is `true`. Of type [HeaderFooterContent](#headerfootercontent). |
+| `EvenPageFooter` | The footer content of even pages. Used only when `DifferentOddAndEvenPages` is `true`. Of type [HeaderFooterContent](#headerfootercontent). |
 
 
 ## HeaderFooterContent
 
 The **HeaderFooterContent** class defines the content of a header or a footer. This class exposes the following properties:
 
-* **LeftSection**: Represents the content of the left header/footer section. The content of this section is flowing from the left  to the right page margin with left horizontal alignment. The property is of type [HeaderFooterSection](#headerfootersection).
-
-* **CenterSection**: Represents the content of the center header/footer section. The content of this section is flowing from the left to the right page margin with horizontal alignment center. The property is of type [HeaderFooterSection](#headerfootersection).
-
-* **RightSection**: Represents the content of the right header/footer section. The content of this section is flowing from the left to the right page margin with right horizontal alignment. The property is of type [HeaderFooterSection](#headerfootersection).
-
-* **HasValidLength**: A *boolean* value, indicating whether the length of the header/footer content is valid. There is a limitation in the amount of text, which can be inserted in the three sections of the header/footer content. When the value of HasValidLength is *false*, this indicates that the total length from the three sections exceeds the limitation. In this case, some of the header/footer content will be trimmed when exporting to XLSX and PDF or when printing the worksheet.
+| Property | Description |
+|---|---|
+| `LeftSection` | The content of the left header/footer section, flowing from the left to right margin with left alignment. Of type [HeaderFooterSection](#headerfootersection). |
+| `CenterSection` | The content of the center header/footer section, flowing from the left to right margin with center alignment. Of type [HeaderFooterSection](#headerfootersection). |
+| `RightSection` | The content of the right header/footer section, flowing from the left to right margin with right alignment. Of type [HeaderFooterSection](#headerfootersection). |
+| `HasValidLength` | A `bool` value indicating whether the total length of the three sections is within the allowed limit. When `false`, content may be trimmed when exporting to XLSX/PDF or printing. |
 
 
 
@@ -104,44 +87,28 @@ The header and footer of the first page in the worksheet from the snippet above 
 
 The ampersand symbol (‘&’) has a special meaning in the context of headers and footers section text. Depending on what follows after this symbol, the text formatting may be changed or some special field may be inserted. 
 
-The following list describes all valid uses of the ampersand symbol sequences. If none of the below cases is fulfilled, then the ampersand symbol is skipped. 
+The following table describes all valid uses of the ampersand symbol sequences. If none of the below cases is fulfilled, then the ampersand symbol is skipped.
 
-
-* **&&**: This text sequence is evaluated as a **single ampersand symbol**. This way, the ampersand is escaped and inserted in header/footer section.
-
-* **&B**: This text sequence changes the **bold** state. The text right after this sequence will have a different FontWeight compared to the text just before it.
-
-* **&I**: This text sequence changes the **italic** state. The text right after this sequence will have a different FontStyle compared to the text just before it.
-
-* **&U**: This text sequence changes the **underline** state. If the text before this sequence has applied an underline pattern different than *single*, then the text after it will be single underlined. Otherwise, the text after the sequence will not be underlined.
-
-* **&E**: This text sequence changes the underline state. If the text before this sequence has applied an underline pattern different than *double underline*, then the text after it will be double underlined. Otherwise, the text after the sequence will not be underlined. Note that double underline is currently supported only in xlsx import/export and not supported in PDF export.
-
-* **&S**: This text sequence changes the **strikethrough** state. Note that strikethrough is supported in XLSX import/export, but it is not supported in PDF export.
-
-* **&Y**: This text sequence changes the **baseline alignment** state. If the text right before this sequence has a baseline alignment different than *subscript*, then the text right after it will be *subscript*. Otherwise, the text after the sequence will have the default baseline alignment. 
-
-* **&X**: This text sequence changes the **baseline alignment** state. If the text right before this sequence has a baseline alignment different than *superscript*, then the text right after it will be *superscript*. Otherwise the text after the sequence will have the default baseline alignment. 
-
-* **&”&lt;FontFamily&gt;,&lt;FontStyle&gt;”**: This text sequence allow you to change the **font family** and the **font style**. The new font definition is surrounded by quotation marks and the font family is separated from the font style by a single comma. In place of &lt;FontFamily&gt; there should be the font family name or a single dash (‘-‘) in case you want to use the Normal font family from the Workbook’s theme. In place of &lt;FontStyle&gt; there should be one of the following – “Regular”, “Bold”, “Italic” and “Bold Italic”. For example, if you want to set the normal font family with regular FontWeight and FontStyle, you may use the following text sequence – &”-,Regular”. If you want to show text with Arial font family that is bold and italic you should use the following text sequence - &”Arial,Bold Italic”.
-
-* **&K&lt;ColorValue&gt;**: This text sequence allows you to change the **color of the text**. In place of &lt;ColorValue&gt; you should place a text with length 6 that represents the color value. The color value may be a hex string that defines the RGB values. For example, if you want to show red text, you may use the following sequence - &KFF0000. The color value may also be set as a ThemableColor with tint and shade. For example, if you want to set ThemableColor with ThemeColorType value of 5 and tint and shade value of +0.39, you should use the following sequence - &K05+039.
-
-* **&&lt;FontSize&gt;**: This text sequence allows you to change the **font size** of the text. In place of &lt;FontSize&gt; there should be an integer number representing the font size in Points. For example, if you want to show text with font size 14pt, then you should use the following code sequence - &14.
-
-* **&P**: This text sequence allows you to insert a **page number** field. This field is evaluated for each page and is rendered as the current page number value.
-
-* **&N**: This text sequence allows you to insert a **number of pages** field. This field is evaluated and displayed as the total number of pages.
-
-* **&D**: This text sequence allows you to insert a **date** field. This field is evaluated as the date on which the printing or PDF export has started.
-
-* **&T**: This text sequence allows you to insert a **time** field. This field is evaluated as the time when the printing or PDF export has started.
-
-* **&Z**: This text sequence allows you to insert the **file folder** field. This field is evaluated as the full folder path to the currently opened file. Note that when exporting a Workbook, this field is evaluated as empty string because the Workbook instance is not related to any concrete file in the file system.
-
-* **&F**: This text sequence allows you to insert a **Workbook name** field. This field is evaluated as the Workbook Name property value.
-
-* **&A**: This text sequence allows you to insert a **Sheet name** field. This field is evaluated as the Sheet Name property value.
+| Sequence | Description |
+|---|---|
+| `&&` | Evaluated as a **single ampersand symbol**. Escapes the ampersand so it is inserted literally. |
+| `&B` | Changes the **bold** state. Text after this sequence has a different `FontWeight` compared to text before it. |
+| `&I` | Changes the **italic** state. Text after this sequence has a different `FontStyle` compared to text before it. |
+| `&U` | Changes the **underline** state. Text after gets single underline unless it was already single-underlined, in which case underline is removed. |
+| `&E` | Changes underline to **double underline** (or removes it). Note: double underline is supported only in XLSX import/export, not in PDF export. |
+| `&S` | Changes the **strikethrough** state. Supported in XLSX import/export; not supported in PDF export. |
+| `&Y` | Changes **baseline alignment** to subscript (or restores default if already subscript). |
+| `&X` | Changes **baseline alignment** to superscript (or restores default if already superscript). |
+| `&"<FontFamily>,<FontStyle>"` | Changes the **font family** and **font style**. Use `'-'` for the normal font family from the workbook theme. `<FontStyle>` must be one of `Regular`, `Bold`, `Italic`, or `Bold Italic`. Example: `&"-,Regular"` or `&"Arial,Bold Italic"`. |
+| `&K<ColorValue>` | Changes the **text color**. `<ColorValue>` is a 6-character string — either a hex RGB value (e.g. `&KFF0000` for red) or a themable color with tint/shade (e.g. `&K05+039`). |
+| `&<FontSize>` | Changes the **font size** (in points). Example: `&14` sets 14pt. |
+| `&P` | Inserts a **page number** field (evaluated per page). |
+| `&N` | Inserts a **number of pages** field. |
+| `&D` | Inserts a **date** field (evaluated as the date when printing/PDF export started). |
+| `&T` | Inserts a **time** field (evaluated as the time when printing/PDF export started). |
+| `&Z` | Inserts the **file folder** field (full folder path of the opened file; empty string when exporting a `Workbook` not tied to a file). |
+| `&F` | Inserts a **Workbook name** field (value of `Workbook.Name`). |
+| `&A` | Inserts a **sheet name** field (value of the sheet's `Name` property). |
 
 **Example 3** demonstrates how you could insert a date field in the header, a page number filed combined with a number of pages field in the footer of a worksheet .
 
@@ -158,11 +125,12 @@ The following list describes all valid uses of the ampersand symbol sequences. I
 
 ## Header/Footer Margins
 
-In order to control the vertical positioning of the headers and footers on the page, you can use the **Margins** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). Within the [PageMargins class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Printing.PageMargins.html), there are two properties that define headers and footers positioning:
+In order to control the vertical positioning of the headers and footers on the page, you can use the **Margins** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). The [PageMargins class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Printing.PageMargins.html) exposes the following properties that define header and footer positioning:
 
-* **Header**: This margin defines the distance between the Header and the top page side. The default value is 0.3 inches.
-
-* **Footer**: This margin defines the distance between the Footer and the bottom page side. The default value is 0.3 inches.
+| Property | Description |
+|---|---|
+| `Header` | Defines the distance between the header and the top page edge. Default value is 0.3 inches. |
+| `Footer` | Defines the distance between the footer and the bottom page edge. Default value is 0.3 inches. |
 
 **Example 4** shows how you could set the margins of a worksheet using the predefined NormalMargins of PageMargins for the page margins, 0 inches for the footer margin and 1 inch for the header.
 
