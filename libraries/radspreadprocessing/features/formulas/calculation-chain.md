@@ -13,7 +13,7 @@ position: 6
 |Minimum Version|Q2 2026|
 |----|----|
 
-**RadSpreadProcessing** uses a *calculation chain* (also known as a *reference map*) to track how formula cells depend on one another and to recalculate them in the optimal order. The calculation chain activates automatically when you work with a `Workbook` that contains formulas — no additional API calls are required.
+**RadSpreadProcessing** uses a *calculation chain* (also known as a *reference map*) to track how formula cells depend on one another and to recalculate them in the optimal order. The calculation chain activates automatically when you work with a `Workbook` that contains formulas, no additional API calls are required.
 
 ## How the Calculation Chain Works
 
@@ -31,9 +31,9 @@ The calculation chain covers the following scenarios:
 
 The calculation chain addresses common performance issues when you work with workbooks that contain many complex or interdependent formulas:
 
-* **Optimal recalculation order** — Formulas recalculate in topological dependency order, which prevents redundant evaluations and ensures that each formula reads up-to-date input values.
-* **Minimal recalculation scope** — Only the formulas affected by a change recalculate, instead of re-evaluating every formula in the workbook.
-* **Faster import of formula-heavy documents** — Documents with large numbers of formulas that reference wide cell ranges import faster because the evaluation is dependency-driven.
+* **Optimal recalculation order**: Formulas recalculate in topological dependency order, which prevents redundant evaluations and ensures that each formula reads up-to-date input values.
+* **Minimal recalculation scope**: Only the formulas affected by a change recalculate, instead of re-evaluating every formula in the workbook.
+* **Faster import of formula-heavy documents**: Documents with large numbers of formulas that reference wide cell ranges import faster because the evaluation is dependency-driven.
 
 ## Performance Considerations
 
