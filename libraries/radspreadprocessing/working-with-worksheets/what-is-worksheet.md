@@ -1,6 +1,6 @@
 ---
 title: What is a Worksheet?
-description: Learn about the concept of a worksheet in RadSpreadProcessing and its features for organizing spreadsheet data.
+description: Learn what a worksheet is in RadSpreadProcessing, how it fits in a workbook, and what features it provides for organizing spreadsheet data.
 page_title: What is a Worksheet?
 slug: radspreadprocessing-working-with-worksheets-what-is-worksheet
 tags: worksheet, spreadsheet, radspreadprocessing, model, concept, excel, structure, workbook
@@ -10,48 +10,51 @@ position: 0
 
 # What is a Worksheet?
 
+A worksheet is a type of `Sheet` and the primary working surface in a `Workbook`. It organizes data in a grid of rows and columns, where each intersection forms a cell. A workbook can contain multiple worksheets with related content, and only one worksheet is active at a time.
 
+>note In [SpreadProcessing]({%slug radspreadprocessing-overview%}), `Worksheet` is the only type of `Sheet` currently supported.
 
-This article will help you get familiar with the concept of a worksheet and its features.
-      
+## Worksheet Dimensions
 
-## What is a Worksheet
+Each worksheet provides a grid of **1,048,576 rows** and **16,384 columns**, matching the capacity of an Excel worksheet. Rows are identified by zero-based numeric indexes and columns by zero-based column indexes. In the spreadsheet UI, rows are labeled with numbers (1, 2, 3, ...) and columns with letters (A, B, C, ..., XFD).
 
-A __Worksheet__ is a type of __Sheet__ and inherits the base __Sheet__ class. The term __Worksheet__ used in Excel documents is a collection of cells organized in rows and columns. It is the working surface you interact with to enter data. Each worksheet contains 1048576 rows and 16384 columns and serves as a giant table that allows you to organize information. Typically, a workbook contains several worksheets with related content and only one of the worksheets is active at a time.
-        
->Currently, in [SpreadProcessing]({%slug radspreadprocessing-overview%}) the __Worksheet__ is the only type of __Sheet__.
+## Key Features
 
+The following list summarizes the main features that a worksheet exposes:
 
-## What is in it?
+* **Cells**: Each worksheet contains a large number of cells that can hold values and formatting options. The `Cells` property lets you insert, manipulate, and delete cells. For more information, refer to the article on [what a cell is]({%slug radspreadprocessing-working-with-cells-what-is-cell%}).
 
-The main characteristics of worksheets can be summarized in the following list:
-        
+* **Rows and Columns**: Cells are organized in rows and columns. The worksheet API lets you insert, manipulate, and delete rows and columns, and adjust their height and width. For more information, refer to the article on [working with rows and columns]({%slug radspreadprocessing-working-with-rows-and-columns-what-is-row-column%}).
 
-* __Cells__: Each worksheet has a significant number of cells that can be assigned values and various formatting options. The Cells property allows you to insert, manipulate and delete worksheet cells. More information about worksheet cells is available in the [What is a Cell?]({%slug radspreadprocessing-working-with-cells-what-is-cell%}) section.
-            
+* **Named Ranges**: The `Worksheet` class exposes a `Names` property of type `NameCollection` that lets you create, update, and manage named ranges. For more information, refer to the [Names]({%slug radspreadprocessing-features-named-ranges%}) article.
 
-* __Rows and Columns__: Cells in a worksheet are organized in rows and columns. The API of a worksheet allows you insert, manipulate and delete rows and columns. Additionally, you can adjust the height of specific rows and the width of columns. For more info about rows refer to the [Working with Rows and Columns]({%slug radspreadprocessing-working-with-rows-and-columns-what-is-row-column%}) section.
-            
+* **Used Cell Range**: The `UsedCellRange` property returns the smallest cell range that starts from A1 and contains all cells with data or formatting. The `GetUsedCellRange()` method accepts an `IEnumerable<`[`IPropertyDefinition`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.IPropertyDefinition-1.html)`>` parameter and narrows the result to cells with specific property definitions.
 
-* __Names (Named Ranges)__: the __Worksheet__ class exposes a Names property of type NameCollection that allows you to create, update and manage names. More about the feature is available in the [Names]({%slug radspreadprocessing-features-named-ranges%}) article.
-            
+  The following example demonstrates how to get the used cell range of cells with a value.
 
-* __UsedCellRange and GetUsedCellRange()__: Since each worksheet contains over a million rows and more than sixteen thousand columns, it is unlikely to use the full capacity of a worksheet. Typically, a worksheet uses only a part of the available cells. That said, in a number of scenarios you might want to know which part of the worksheet contains your data and ignore the rest of the cells. The UsedCellRange property of the __Worksheet__ class returns a cell range that starts from cell A1 and holds all cells containing data or formatting. With the GetUsedCellRange() method you can pass and IEnumerable&lt;[IPropertyDefinition](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.IPropertyDefinition-1.html)&gt; object to get the used cell range, holding only the cells with specific property definitions. __Example 1__ demonstrates how to get the used cell range of cells with value.
+  #### Example 1: Get the used cell range of cells with a value
 
-	#### __Example 1: Get the used cell range of cells with value__
-	
-	<snippet id='codeblock-csz'/>
+  <snippet id='codeblock-csz'/>
 
-	>More information and examples of working with the used cell range of a worksheet are available in the [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}) topic.
+  >note For more information and examples, refer to the article on [iterating used cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}).
 
-* __Collection of Hyperlinks__: Each worksheet can contain numerous hyperlinks to web pages, particular cells in the workbook or email addresses. More information on the topic is available in the [Hyperlink]({%slug radspreadprocessing-features-hyperlink%}) article.
-            
+* **Hyperlinks**: Each worksheet can contain hyperlinks to web pages, specific cells in the workbook, or email addresses. For more information, refer to the [Hyperlinks]({%slug radspreadprocessing-features-hyperlink%}) article.
 
-* __Find and Replace__: You can easily find and replace text and numbers in the content of a worksheet. For more information about the feature see the [Find and Replace]({%slug radspreadprocessing-features-find-and-replace%}) article.
-            
+* **Find and Replace**: You can search for and replace text and numbers in the content of a worksheet. For more information, refer to the [Find and Replace]({%slug radspreadprocessing-features-find-and-replace%}) article.
 
-* __Protection__: You can restrict the user from modifying the content and structure of the worksheet. When a worksheet is protected the user can edit the contents only of the cells that were explicitly marked as unlocked. Additionally, you can choose what options will be available to the user when protection is enabled. More about the feature is available in the [Worksheet Protection]({%slug radspreadprocessing-features-protection-worksheet%}) article.
+* **Protection**: You can restrict users from modifying the content and structure of a worksheet. When protection is enabled, users can only edit cells explicitly marked as unlocked. You can also control which options remain available when protection is active. For more information, refer to the [Worksheet Protection]({%slug radspreadprocessing-features-protection-worksheet%}) article.
 
+* **View State**: Each worksheet provides properties for controlling how it is displayed, including frozen rows and columns, the active cell, the current selection, and the zoom level. For more information, refer to the [View State]({%slug radspreadprocessing-working-with-worksheets-view-state%}) article.
 
-            
-*This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
+* **Visibility**: Worksheets can be hidden from view without being removed from the workbook. For more information, refer to the [Sheets Visibility]({%slug radspreadprocessing-working-with-worksheets-sheets-visibility%}) article.
+
+## See Also
+
+* [What is a Cell?]({%slug radspreadprocessing-working-with-cells-what-is-cell%})
+* [Working with Rows and Columns]({%slug radspreadprocessing-working-with-rows-and-columns-what-is-row-column%})
+* [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%})
+* [Named Ranges]({%slug radspreadprocessing-features-named-ranges%})
+* [Worksheet Protection]({%slug radspreadprocessing-features-protection-worksheet%})
+* [View State]({%slug radspreadprocessing-working-with-worksheets-view-state%})
+
+*This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.*
