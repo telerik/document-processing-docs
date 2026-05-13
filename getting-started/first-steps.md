@@ -72,21 +72,15 @@ You can find all Document Processing Libraries packages in the [Available NuGet 
 
 ## Step 4: Create a Document
 
-#### __Example 1: Create RadFlowDocument__
+#### Example 1: Create RadFlowDocument
 
-```csharp
-	Telerik.Windows.Documents.Flow.Model.RadFlowDocument document = new Telerik.Windows.Documents.Flow.Model.RadFlowDocument();
-	Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor editor = new Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor(document);
-	editor.InsertText("Hello world!");
-```
+<snippet id='first-steps-create-document'/>
 
-#### __Example 1: Create RadFlowDocument__
+## Step 4-A: Import an Existing Document
 
-```csharp
-    Dim document As Telerik.Windows.Documents.Flow.Model.RadFlowDocument = New Telerik.Windows.Documents.Flow.Model.RadFlowDocument()
-    Dim editor As Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor = New Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor(document)
-    editor.InsertText("Hello world!")
-```
+#### Example 1-A: Import a DOCX File
+
+<snippet id='first-steps-import-docx'/>
 
 ## Step 5: Export the Generated Document
 
@@ -95,52 +89,21 @@ You can find all Document Processing Libraries packages in the [Available NuGet 
 To export the document as a docx file, use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). Using the below code will create a provider instance and save a document with it. The document will be exported in the bin folder of your current project.
         
 
-#### __Example 2: Export RadFlowDocument to DOCX__
+#### Example 2: Export RadFlowDocument to DOCX
 
-```csharp
-	using (Stream output = new FileStream("output.docx", FileMode.OpenOrCreate))
-	{
-	    Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider docxProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
-	    docxProvider.Export(document, output);
-	}
-```
-
-
-#### __Example 2: Export RadFlowDocument to DOCX__
-
-```csharp
-	Using output As Stream = New FileStream("output.docx", FileMode.OpenOrCreate)
-        Dim docxProvider As Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider = New Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider()
-        docxProvider.Export(document, output, TimeSpan.FromSeconds(10))
-    End Using
-```
+<snippet id='first-steps-export-docx'/>
 
 ### Export the RadFlowDocument to PDF
 
 To export the document as a PDF file, use [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}). __Example 3__ shows how to export the __RadFlowDocument__  created in Examples 1 to a file.
         
-#### __Example 3: Export RadFlowDocument to PDF__
+#### Example 3: Export RadFlowDocument to PDF
 
-```csharp
-	using (Stream output = File.OpenWrite("Output.pdf"))
-    {
-		Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider flowPdfProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
-        flowPdfProvider.Export(document, output);
-	}
-```
-
-#### __Example 2: Export RadFlowDocument to PDF__
-
-```csharp
-	Using output As Stream = File.OpenWrite("Output.pdf")
-        Dim flowPdfProvider As Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider = New Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider()
-        flowPdfProvider.Export(document, output, TimeSpan.FromSeconds(10))
-    End Using
-```
-
+<snippet id='first-steps-export-pdf'/>
 
 Run the project and you should see something like this:
-#### __Figure 2: The final result__
+
+#### Figure 2: The final result
 
 ![Exported files](images/FinalResult.png "Exported files")
 

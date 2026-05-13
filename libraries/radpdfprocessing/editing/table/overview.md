@@ -14,19 +14,6 @@ The **Table** class helps you easily create tabular data content. All you need t
 
 ![Rad Pdf Processing Editing Table 01](images/RadPdfProcessing_Editing_Table_01.png)
 
-This article aims to present the table-related API in `RadPdfProcessing`. It contains the following sections:
-
-* [Defining Table Content](#defining-table-content)
-
-* [Using DefaultCellProperties](#using-defaultcellproperties)
-
-* [Modifying a Table](#modifying-a-table)
-
-* [Drawing Table with RadFixedDocumentEditor](#drawing-table-with-radfixeddocumenteditor)
-
-* [Drawing Table with FixedContentEditor](#drawing-table-with-fixedcontenteditor)
-
-
 ## Defining Table Content
 
 Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instances each of which contains a series of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances. To define a simple table, you need to generate the table cells and add some content to them.
@@ -73,14 +60,22 @@ The result of the snippet in **Example 2** is demonstrated on **Figure 2**.
 
 The following table lists the properties that affect table measuring calculations:
 
-| Property | Description |
-|---|---|
-| `Margin` | Specifies the distances between the table borders outline and the rest of the document content. |
-| `Padding` | Set through the `TableCell.Padding` property, it specifies the distances between cell borders inner contour and the cell content. |
-| `LayoutType` | Specifies the algorithm used to lay out table contents. Options in the `TableLayoutType` enumeration: `AutoFit` (table width fits the content unless wider than available space) and `FixedWidth` (table width always fits the available measuring width). |
-| `HorizontalAlignment` | Specifies the alignment of the table inside the page. |
-| `BorderSpacing` | Specifies the distance between all borders in the table. Measured differently depending on the `BorderCollapse` option. |
-| `BorderCollapse` | Specifies how border spacing calculations are done. `Collapse`: distance is measured from the middle lines of the borders. `Separate`: distance is measured from the outer border contour. |
+* **Margin**: Specifies the distances between the table borders outline and the rest of the document content.
+         
+* **Padding**: Set through the TableCell `Padding` property, it specifies the distances between cell borders inner contour and the cell content.
+            
+* **LayoutType**: Specifies the algorithm which is used to layout table contents. There are two options available in the `TableLayoutType` enumeration:
+	
+	* **AutoFit** – The table width fits the content unless the needed width is bigger than the available measuring width.
+	* **FixedWidth** – The table width always fits the available measuring width.
+
+* **HorizontalAlignment**: Specifies the alignment of the table inside the page.
+
+* **BorderSpacing**: Specifies the distance between all the borders in the table. This distance is measured differently depending on the **BorderCollapse** option.
+         
+* **BorderCollapse**: Specifies the way the border spacing calculations are done. There are two options:
+	* **Collapse**: The distance between borders is measured from the middle lines of the borders.
+	* **Separate**: The distance between borders is measured from the outer border contour.
                 
 
 **Example 3** demonstrates how border calculations occur with different **BorderCollapse** option. The code in this example creates an empty table and sets default cell padding and red table border with thickness 10 to it.
@@ -170,6 +165,19 @@ As a result, on **Figure 7** you can see a 45-degree rotated table similar to th
 #### Figure 7: FixedWidth table
 ![Rad Pdf Processing Editing Table 08](images/RadPdfProcessing_Editing_Table_08.png)
 
+## Measuring a Table
+
+The `Table` class exposes `Measure` overloads that calculate and return the desired size of the table without drawing it. This is useful when you need to know the table dimensions before inserting it into a document—for example, to decide whether to use a new page or to position other content relative to the table.
+
+- **`Measure(CancellationToken)`** – Measures the table against an infinite available size and returns the resulting `Size`. Pass a `CancellationToken` to allow the operation to be cancelled.
+- **`Measure(Size, CancellationToken)`** – Measures the table against a constrained available size. Use this overload when the table must fit within a known width or height.
+
+**Example 11** demonstrates how to measure a table both with infinite available size and with a specific size constraint.
+
+#### __Example 11: Measure a table__
+
+<snippet id='libraries-pdf-editing-table-overview-measure-table'/>
+
 ## Supported Border Styles
 
 As of **Q3 2024**, along with the BorderStyle.*Single*, RadPdfProcessing offers *Dotted*, *Dashed*, and *DashSmallGap* border styles. With this update, the Dotted, Dashed, DashSmallGap, and Thick border lines are now exported from [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) as well.
@@ -193,4 +201,3 @@ As of **Q3 2024**, along with the BorderStyle.*Single*, RadPdfProcessing offers 
  * [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})
  * [Avoiding Table Splits Across Pages Using FixedContentEditor in RadPdfProcessing]({%slug  avoid-table-splits-across-pages-radpdfprocessing%})
  * [How to Achieve Alternating Row Color for Tables in PdfProcessing]({%slug alternating-row-color-in-pdf-tables%})
-

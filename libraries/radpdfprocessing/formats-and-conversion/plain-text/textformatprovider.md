@@ -40,3 +40,4 @@ __Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocume
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Extracting Text from PDF Documents]({%slug extract-text-from-pdf%})
 * [Summarizing the Text Content of PDF Documents using Text Analytics with Azure AI services]({%slug summarize-pdf-content%})
+* [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})

@@ -1,21 +1,61 @@
-﻿---
+---
 title: Install using NuGet Packages
-page_title: Install using NuGet Packages
-description: Learn how to install the Telerik Document Processing libraries through NuGet packages from a local source or the Telerik NuGet server.
+page_title: Install Telerik Document Processing Libraries via NuGet Packages
+description: Install the Telerik Document Processing libraries from NuGet.org, the Telerik NuGet server, or a local feed. Includes setup steps for Visual Studio and .NET CLI.
 slug: installation-nuget-packages
-tags: nuget, packages, telerik, server, document, processing, installation, feed
+tags: nuget, packages, telerik, document, processing, installation, feed, server
 published: True
 position: 7
 ---
 
 # Install using NuGet Packages
 
-This article describes how you can install the Document Processing Libraries using a NuGet package. 
-You can find all Document Processing Libraries packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article. There are two ways for getting the NuGet packages:
+This article describes how you can install the Document Processing Libraries using a NuGet package.
+You can find all Document Processing Libraries packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article. There are three ways to get the NuGet packages:
+
+* [Download from NuGet.org (Recommended)](#download-from-nugetorg)
 
 * [Manually download the packages](#manually-download-nuget-packages)
 
 * [Get the packages from the Telerik NuGet server](#download-from-the-nuget-server)
+
+## Download from NuGet.org
+
+As of **Q2 2026**, the Telerik Document Processing NuGet packages are available on <a href="https://www.nuget.org/" target="_blank">NuGet.org</a>. This is the recommended way to install the libraries because NuGet.org is the default package source in Visual Studio and the .NET CLI, so no additional feed configuration is required.
+
+### Install through the Visual Studio NuGet Package Manager
+
+1\. In the Visual Studio Solution Explorer, right-click a project and select **Manage NuGet Packages...**.
+
+2\. Make sure the **Package source** dropdown is set to **nuget.org** (this is the default).
+
+3\. In the **Browse** tab, search for the desired Telerik Document Processing package, for example, `Telerik.Documents.Fixed`.
+
+4\. Select the package and click **Install**.
+
+### Install through the .NET CLI
+
+Run the following command in a terminal, replacing `Telerik.Documents.Fixed` with the name of the package you need:
+
+```
+dotnet add package Telerik.Documents.Fixed
+```
+
+The .NET CLI resolves packages from NuGet.org by default. You can install a specific version by appending the `--version` parameter:
+
+```
+dotnet add package Telerik.Documents.Fixed --version 2024.3.1015
+```
+
+### Install through the Package Manager Console
+
+Run the following command in the Visual Studio **Package Manager Console**:
+
+```
+Install-Package Telerik.Documents.Fixed
+```
+
+>tip You can find the exact package names and available versions for all Document Processing Libraries in the [Available NuGet Packages]({%slug available-nuget-packages%}) article.
 
 ## Manually Download NuGet Packages
 
@@ -27,20 +67,22 @@ This approach allows you to set up a local NuGet package source, so you can inst
 
 
 **Telerik Document Processing** is also available as a separate distribution in your account: [Download Product Files]({%slug installation-nuget-packages%})
-	
+
 2\. Then, you need to add packages to Visual Studio. Open the NuGet manager and then click the Options button:
-	
+
 ![installation-nuget-packages 002](images/installation-nuget-packages001.png)
 
 3\. Add new package source. The __Source__ should point to the local folder with the NuGets:
-	
-![install-using-nuget002](images/install-using-nuget002.png) 
 
-4\. The final step is to select and install the desired packages. 
+![install-using-nuget002](images/install-using-nuget002.png)
 
-![install-using-nuget003](images/install-using-nuget003.png) 
+4\. The final step is to select and install the desired packages.
 
-## Download from the NuGet server
+![install-using-nuget003](images/install-using-nuget003.png)
+
+## Download from the NuGet Server
+
+>note As of Q2 2026, NuGet.org is the recommended source for Telerik Document Processing packages. The Telerik NuGet server remains available for backward compatibility and for installing older versions that predate the NuGet.org release.
 
 To install the Telerik Document Processing Libraries, you can use the NuGet packages hosted on the public Telerik NuGet server. This online source lets you download and install various versions of the Document Processing libraries and allows quick updates with minimal manual intervention.
 

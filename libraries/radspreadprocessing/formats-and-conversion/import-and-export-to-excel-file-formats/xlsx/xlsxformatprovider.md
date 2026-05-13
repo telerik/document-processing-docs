@@ -59,3 +59,4 @@ __Example 2__ demonstrates how to export an existing Workbook to an xlsx file. T
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Resolve Exporting Corrupted Excel Files With SpreadProcessing]({%slug resolving-excel-file-corruption-warning-after-spreadprocessing-export%})
 * [Opening Excel Files Locked by Another User/Process with Telerik SpreadProcessing]({%slug spreadprocessing-open-locked-files-read-only%})
+* [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})

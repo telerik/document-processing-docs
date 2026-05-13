@@ -73,3 +73,4 @@ The resulting documents can be opened in any application that supports DOCX docu
 ## See Also
 
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
+* [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})

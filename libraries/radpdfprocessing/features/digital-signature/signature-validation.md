@@ -4,7 +4,7 @@ description: The digital signature feature enables you to sign and validate a PD
 page_title: Signature Validation
 slug: radpdfprocessing-features-digital-signature-validation
 tags: signature, validation, pdf, certificates, radpdfprocessing, x509, revocation, chain
-position: 4
+position: 6
 ---
 
 ## Validating a Signature
