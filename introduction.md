@@ -112,7 +112,7 @@ Telerik Document Processing features the following libraries:
     <article-card
         href="slug://agent-tools-overview"
         src="./images/dpl-ai.png"
-        darkSrc="./images/dpl-zip.png"
+        darkSrc="./images/dpl-ai.png"
         title="AI Tools"
         subTitle="Agent Tools"
         description="The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations for spreadsheets, PDFs, and flow (Word) documents to an LLM via tool calls.">
