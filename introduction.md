@@ -67,6 +67,58 @@ Telerik Document Processing features the following libraries:
   |----|----|
   |![Zip](images/dpl-zip.png)|It allows you to compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.|
 
+
+<article-card-container>
+  <article-card
+        href="slug://radpdfprocessing-overview"
+        src="./images/dpl-pdf.png"
+        darkSrc="./images/dpl-pdf.png"
+        title="RadPdfProcessing"
+        subTitle="PDF Processing"
+        description="A processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.">
+  </article-card>
+  <article-card
+        href="slug://radspreadprocessing-overview"
+        src="./images/dpl-spread.png"
+        darkSrc="./images/dpl-spread.png"
+        title="RadSpreadProcessing"
+        subTitle="Spreadsheet Processing"
+        description="A powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common formats, and save them to files or streams.">
+  </article-card>
+  <article-card
+        href="slug://radspreadstreamprocessing-overview"
+        src="./images/dpl-spread.png"
+        darkSrc="./images/dpl-spread.png"
+        title="RadSpreadStreamProcessing"
+        subTitle="Stream Spreadsheet Processing"
+        description="A streaming library that allows you to create or read large spreadsheet documents with high performance and minimal memory usage by writing content directly to a stream without keeping the document model in memory.">
+  </article-card>
+  <article-card
+        href="slug://radwordsprocessing-overview"
+        src="./images/dpl-words.png"
+        darkSrc="./images/dpl-words.png"
+        title="RadWordsProcessing"
+        subTitle="Document Processing"
+        description="A processing library for creating, modifying, and exporting documents in various formats. You can access, edit, or add document elements and save the output to files, streams, or send it directly to the browser.">
+  </article-card>
+  <article-card
+        href="slug://radziplibrary-overview"
+        src="./images/dpl-zip.png"
+        darkSrc="./images/dpl-zip.png"
+        title="RadZipLibrary"
+        subTitle="ZIP Processing"
+        description="A library that allows you to compress and combine files into ZIP archives, extract existing archives, and compress streams for easier file transfer and reduced storage usage.">
+  </article-card>
+    <article-card
+        href="slug://agent-tools-overview"
+        src="./images/dpl-ai.png"
+        darkSrc="./images/dpl-zip.png"
+        title="AI Tools"
+        subTitle="Agent Tools"
+        description="The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations for spreadsheets, PDFs, and flow (Word) documents to an LLM via tool calls.">
+  </article-card>
+</article-card-container>
+
 ## Key Features
 
 |Feature|Description|
