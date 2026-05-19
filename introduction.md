@@ -43,7 +43,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/pdfprocessing-banner.png"
         title="RadPdfProcessing"
         subTitle="Document Processing"
-        description="A processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.">
+        description="Enables the creation, edit and export of PDF files in your .NET applications. The library supports interactive forms and form filling, as well as digital signatures.">
   </article-card>
   <article-card
         href="slug://radspreadprocessing-overview"
@@ -51,7 +51,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/spreadprocessing-banner.jpg"
         title="RadSpreadProcessing"
         subTitle="Document Processing"
-        description="A powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common formats, and save them to files or streams.">
+        description="Enables you to work with spreadsheet documents in your application – create ones from scratch, modify existing documents or convert between the most common spreadsheet formats.">
   </article-card>
   <article-card
         href="slug://radspreadstreamprocessing-overview"
@@ -59,7 +59,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/spreadstreamprocessing-banner.png"
         title="RadSpreadStreamProcessing"
         subTitle="Document Processing"
-        description="A streaming library that allows you to create or read large spreadsheet documents with high performance and minimal memory usage by writing content directly to a stream without keeping the document model in memory.">
+        description="Generates big spreadsheet documents with great performance and minimal memory footprint in your .NET applications. ">
   </article-card>
   <article-card
         href="slug://radwordsprocessing-overview"
@@ -67,7 +67,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/wordsprocessing-banner.png"
         title="RadWordsProcessing"
         subTitle="Document Processing"
-        description="A processing library for creating, modifying, and exporting documents in various formats. You can access, edit, or add document elements and save the output to files, streams, or send it directly to the browser.">
+        description="Allows Word-like document manipulations in .NET applications and enables end-users to create, modify and export documents to various formats.">
   </article-card>
   <article-card
         href="slug://radziplibrary-overview"
@@ -75,7 +75,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/ziplibrary-banner.png"
         title="RadZipLibrary"
         subTitle="Document Processing"
-        description="A library that allows you to compress and combine files into ZIP archives, extract existing archives, and compress streams for easier file transfer and reduced storage usage.">
+        description="Can compress data like images, DOCX, PDF, or any other type of files and send them over the wire. Thus, you will achieve fast and secure transactions.">
   </article-card>
     <article-card
         href="slug://agent-tools-overview"
@@ -83,7 +83,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/agent-tools-banner.png"
         title="AI Tools"
         subTitle="Agent Tools"
-        description="The Agent Tools API provides document processing capabilities designed to be exposed to AI agents. This functionality is suitable for engineers who want to expose safe, composable document operations for spreadsheets, PDFs, and flow (Word) documents to an LLM via tool calls.">
+        description="Provides document processing capabilities designed to be exposed to AI agents.">
   </article-card>
 </article-card-container>
 
