@@ -51,7 +51,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/spreadprocessing-banner.jpg"
         title="RadSpreadProcessing"
         subTitle="Document Processing"
-        description="Enables you to work with spreadsheet documents in your application – create ones from scratch, modify existing documents or convert between the most common spreadsheet formats.">
+        description="Enables you to work with spreadsheet documents – create ones from scratch, modify existing documents or convert between the most common spreadsheet formats.">
   </article-card>
   <article-card
         href="slug://radspreadstreamprocessing-overview"
