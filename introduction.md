@@ -26,8 +26,6 @@ img[alt$="><"] {
 
 **Telerik Document Processing** is a bundle of **UI-independent**, *cross-platform* libraries that let you process the most commonly used flow, fixed, and spreadsheet document formats for web and desktop. The Document Processing libraries allow you to create, import, modify, and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
 
-![DPL Ninja](images/dpl-ninja.png) 
-
 {% if site.has_cta_panels == true %}
 {% include cta-panel-introduction.html %}
 {% endif %}
@@ -36,36 +34,59 @@ img[alt$="><"] {
 
 Telerik Document Processing features the following libraries:
 
-* [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+<article-card-container>
+  <article-card
+        href="slug://radpdfprocessing-overview"
+        src="./images/pdfprocessing-banner.png"
+        darkSrc="./images/pdfprocessing-banner.png"
+        title="RadPdfProcessing"
+        subTitle="Document Processing"
+        description="Enables the creation, edit and export of PDF files in your .NET applications. The library supports interactive forms and form filling, as well as digital signatures.">
+  </article-card>
+  <article-card
+        href="slug://radspreadprocessing-overview"
+        src="./images/spreadprocessing-banner.jpg"
+        darkSrc="./images/spreadprocessing-banner.jpg"
+        title="RadSpreadProcessing"
+        subTitle="Document Processing"
+        description="Enables you to work with spreadsheet documents – create ones from scratch, modify existing documents or convert between the most common spreadsheet formats.">
+  </article-card>
+  <article-card
+        href="slug://radspreadstreamprocessing-overview"
+        src="./images/spreadstreamprocessing-banner.png"
+        darkSrc="./images/spreadstreamprocessing-banner.png"
+        title="RadSpreadStreamProcessing"
+        subTitle="Document Processing"
+        description="Generates big spreadsheet documents with great performance and minimal memory footprint in your .NET applications. ">
+  </article-card>
+  <article-card
+        href="slug://radwordsprocessing-overview"
+        src="./images/wordsprocessing-banner.png"
+        darkSrc="./images/wordsprocessing-banner.png"
+        title="RadWordsProcessing"
+        subTitle="Document Processing"
+        description="Allows Word-like document manipulations in .NET applications and enables end-users to create, modify and export documents to various formats.">
+  </article-card>
+  <article-card
+        href="slug://radziplibrary-overview"
+        src="./images/ziplibrary-banner.png"
+        darkSrc="./images/ziplibrary-banner.png"
+        title="RadZipLibrary"
+        subTitle="Document Processing"
+        description="Can compress data like images, DOCX, PDF, or any other type of files and send them over the wire. Thus, you will achieve fast and secure transactions.">
+  </article-card>
+    <article-card
+        href="slug://agent-tools-overview"
+        src="./images/agent-tools-banner.png"
+        darkSrc="./images/agent-tools-banner.png"
+        title="AI Tools"
+        subTitle="Agent Tools"
+        description="Provides document processing capabilities designed to be exposed to AI agents.">
+  </article-card>
+</article-card-container>
 
-  |||
-  |----|----|
-  |![Pdf](images/dpl-pdf.png)|A processing library that allows you to create, import, and export PDF documents from your code. You can use it in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.|
 
-* [RadSpreadProcessing]({%slug radspreadprocessing-overview%})
-
-  |||
-  |----|----|
-  |![Spread](images/dpl-spread.png)| A powerful library that enables you to create applications with native support for spreadsheet documents. With RadSpreadProcessing, you can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.|
-
-* [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})
-
-  |||
-  |----|----|
-  |![SpreadStream](images/dpl-spread.png)|Spread streaming is a document processing paradigm that allows you to create or read big spreadsheet documents with great performance and minimal memory footprint. The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory. |
-
-* [RadWordsProcessing]({%slug radwordsprocessing-overview%})
-
-  |||
-  |----|----|
-  |![Words](images/dpl-words.png)|A processing library that allows you to create, modify and export documents to a variety of formats. Through the API, you can access each element in the document and modify, remove it or add a new one. The generated content you can save as a stream, as a file, or send it to the client browser.|
-
-
-* [RadZipLibrary]({%slug radziplibrary-overview%})
-
-  |||
-  |----|----|
-  |![Zip](images/dpl-zip.png)|It allows you to compress and combine files in ZIP archives, browse and extract files from existing ZIP archives and compress streams for easy file shipping and reduced storage space.|
+![DPL Ninja ><](images/dpl-ninja-banner.png) 
 
 ## Key Features
 
