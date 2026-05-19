@@ -26,8 +26,6 @@ img[alt$="><"] {
 
 **Telerik Document Processing** is a bundle of **UI-independent**, *cross-platform* libraries that let you process the most commonly used flow, fixed, and spreadsheet document formats for web and desktop. The Document Processing libraries allow you to create, import, modify, and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
 
-![DPL Ninja](images/dpl-ninja.png) 
-
 {% if site.has_cta_panels == true %}
 {% include cta-panel-introduction.html %}
 {% endif %}
@@ -86,6 +84,9 @@ Telerik Document Processing features the following libraries:
         description="Provides document processing capabilities designed to be exposed to AI agents.">
   </article-card>
 </article-card-container>
+
+
+![DPL Ninja ><](images/dpl-ninja-banner.png) 
 
 ## Key Features
 
