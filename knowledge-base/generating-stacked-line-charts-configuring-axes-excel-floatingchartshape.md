@@ -41,6 +41,8 @@ To create a stacked line chart and configure the axes as desired, follow these s
 ```csharp
 var fileBytes = File.ReadAllBytes("fileWithChartData.xlsx");
 
+XlsxFormatProvider xlsxFormatProvider = new XlsxFormatProvider();
+
 Workbook workbook = xlsxFormatProvider.Import(fileBytes, null);
 Worksheet worksheet = workbook.ActiveWorksheet;
 
