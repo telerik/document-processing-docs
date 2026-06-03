@@ -7,37 +7,28 @@ tags: combtextboxfield, pdf, formfields, radpdfprocessing, acroform, interactive
 published: True
 ---
 
-# CombTextBoxField class
+# CombTextBoxField Class
 
-This article describes the following topics:
-
-* [CombTextBoxField Class Overview](#overview)
-
-* [CombTextBoxField Class Properties](#properties)
-
-
-## Overview
-
-This class corresponds to FormFieldType.CombTextBox enum value and represents a text input data container which restricts its text to some specific length and the characters are equally distributed through the field appearance length. 
+The `CombTextBoxField` class corresponds to the `FormFieldType.CombTextBox` enum value and represents a text input data container. It restricts text to a specific maximum length and distributes characters equally across the field appearance.
 
 ## Properties
 
-CombTextBoxField provides the following properties:
+`CombTextBoxField` provides the following properties:
 
 | Property | Description |
 |---|---|
 | `Value` | Gets or sets the current text value of the field. |
-| `DefaultValue` | Gets or sets the default value used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) is reset to its default values. |
-| `Widgets` | The collection of Widget annotations representing the field on the PDF pages. Widgets are created using `AddWidget()` and can be removed using `Remove()`. Implements `IEnumerable`. |
-| `MaxLengthOfInputCharacters` | Specifies the number of characters that can be inputted. |
+| `DefaultValue` | Gets or sets the default value used when the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%}) is reset to its default values. |
+| `Widgets` | The collection of Widget annotations representing the field on the PDF pages. Widgets are created with `AddWidget()` and can be removed with `Remove()`. Implements `IEnumerable`. |
+| `MaxLengthOfInputCharacters` | Specifies the number of characters that can be entered. |
 
-#### **Example 1: Create a CombTextBoxField and add it to a page**
+**Example 1: Create a CombTextBoxField and add it to a page**
+
 <snippet id='pdf-combtetbox-field'/>
-
 
 ## See Also
 
-* [Form Field]({%slug radpdfprocessing-model-interactive-forms-form-fields %})
-* [Widgets]({%slug radpdfprocessing-model-annotations-widgets %})
-* [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
-* [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 
+* [Form Field]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
+* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
+* [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
+* [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms)

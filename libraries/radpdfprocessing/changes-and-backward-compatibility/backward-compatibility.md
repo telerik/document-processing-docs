@@ -10,128 +10,105 @@ position: 1
 
 # Backward Compatibility
 
-This article lists the breaking changes and how they can be fixed when upgrading from a specific version of the controls to another.
+The following sections list the breaking changes and how to address them when upgrading from a specific version of the controls to another.
 
-## What's Different in 2024 R2 
-
-### Changed
-
-The PdfExportSettings.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property uses the **FontEmbeddingType** enum
-
-## What to do now
-
-Instead of setting the PdfExportSettings.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property to a boolean value, use the None, Full, Subset enum options.
-
-## What's Different in 2023 R2  
-
+## What Is Different in 2024 R2
 
 ### Changed
 
-The default implementation of ImageUtils assembly is now using SkiaSharp instead of ImageSharp.
+The `PdfExportSettings`.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property uses the `FontEmbeddingType` enum.
 
-Before 2023 R2 the default implementation of ImageUtils required the ImageSharp library with the minimum required version of **v.2.0.0**.
+### What to Do Now
 
-## What's Different in 2016 R3  
+Instead of setting the `PdfExportSettings`.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property to a Boolean value, use the `None`, `Full`, or `Subset` enum options.
 
+## What Is Different in 2023 R2
+
+### Changed
+
+The default implementation of the ImageUtils assembly now uses SkiaSharp instead of ImageSharp.
+
+Before 2023 R2, the default implementation of ImageUtils required the ImageSharp library with the minimum required version of **v.2.0.0**.
+
+## What Is Different in 2016 R3
 
 ### Changed
 
 Assemblies with a version number ending with .45 suffix are **not** distributed.
 
-### What to do now
+### What to Do Now
 
-Use the assemblies with a version number ending with .40 suffix. The library doesn't contain code specific for .NET Framework 4.5, thus an additional version is not needed.
-
-
-### Changed
-
-Telerik.Windows.Documents.Fixed.Model.RadFixedDocument::Merge() doesn't remove the content from the source document after appending it to the targeted one.
-
-
-## What's Different in 2015 Q1      
-
+Use the assemblies with a version number ending with .40 suffix. The library does not contain code specific to .NET Framework 4.5, so an additional version is not needed.
 
 ### Changed
 
-Telerik.Windows.Documents.Fixed.Model.Editing.RadFixedDocumentEditor::TableProperties is removed.
+`Telerik.Windows.Documents.Fixed.Model.RadFixedDocument::Merge()` does not remove the content from the source document after appending it to the targeted one.
 
-### What to do now
-
-__TableLayoutType__ can now be set directly in the __Table__ class using the __LayoutType__ property.
-
-
-## What's Different in 2014 Q3
-
+## What Is Different in 2015 Q1
 
 ### Changed
 
+`Telerik.Windows.Documents.Fixed.Model.Editing.RadFixedDocumentEditor::TableProperties` is removed.
 
-Telerik.Windows.Documents.Fixed.Model.Editing.TextProperties::TextBlockHeight and
-Telerik.Windows.Documents.Fixed.Model.Editing.TextProperties::TextBlockWidth are removed.
-            
+### What to Do Now
 
-### What to do now
+You can now set `TableLayoutType` directly in the `Table` class by using the `LayoutType` property.
 
-
-You can specify the block size when [Measuring or Drawing the block]({%slug radpdfprocessing-editing-block%}).
-
+## What Is Different in 2014 Q3
 
 ### Changed
 
-Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor::BeginText() and Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor::EndText() are removed.
-            
+`Telerik.Windows.Documents.Fixed.Model.Editing.TextProperties::TextBlockHeight` and `Telerik.Windows.Documents.Fixed.Model.Editing.TextProperties::TextBlockWidth` are removed.
 
-### What to do now
+### What to Do Now
 
-Use [Block]({%slug radpdfprocessing-editing-block%}) class to create blocks of text and other flowing content.
-            
+You can specify the block size when [measuring or drawing the block]({%slug radpdfprocessing-editing-block%}).
 
 ### Changed
 
-Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor::DrawImage(Stream, ImageFormat) is removed.
-            
+`Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor::BeginText()` and `Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor::EndText()` are removed.
 
-### What to do now
+### What to Do Now
 
-Use Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor::DrawImage(Stream).
-            
+Use the [Block]({%slug radpdfprocessing-editing-block%}) class to create blocks of text and other flowing content.
 
 ### Changed
 
-Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource::.ctor(System.IO.Stream,Telerik.Windows.Documents.Fixed.Model.Data.ImageFormat) is removed.
-            
+`Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor::DrawImage(Stream, ImageFormat)` is removed.
 
-### What to do now
+### What to Do Now
 
-Use Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource::.ctor(System.IO.Stream).
-            
+Use `Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor::DrawImage(Stream)`.
 
 ### Changed
 
-StartColor and EndColor properties from the Gradient class are removed.
-            
+`Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource::.ctor(System.IO.Stream,Telerik.Windows.Documents.Fixed.Model.Data.ImageFormat)` is removed.
 
-### What to do now
+### What to Do Now
 
-Use GradientStops property to add appropriate gradient stops for the start and the end colors.
-            
+Use `Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource::.ctor(System.IO.Stream)`.
 
 ### Changed
 
-Telerik.Windows.Documents.Fixed.Model.Editing.HorizontalTextAlignment and Telerik.Windows.Documents.Fixed.Model.Editing.VerticalTextAlignment are renamed.
-            
+The `StartColor` and `EndColor` properties from the `Gradient` class are removed.
 
-### What to do now
+### What to Do Now
 
-Use Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment and Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment instead.
-            
+Use the `GradientStops` property to add appropriate gradient stops for the start and end colors.
 
 ### Changed
 
-Telerik.Windows.Documents.Fixed.Model.Text.TextDecorations is renamed.
-            
+`Telerik.Windows.Documents.Fixed.Model.Editing.HorizontalTextAlignment` and `Telerik.Windows.Documents.Fixed.Model.Editing.VerticalTextAlignment` are renamed.
 
-### What to do now
+### What to Do Now
 
-Use Telerik.Windows.Documents.Fixed.Model.Editing.Flow.UnderlinePattern.
-            
+Use `Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment` and `Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment` instead.
+
+### Changed
+
+`Telerik.Windows.Documents.Fixed.Model.Text.TextDecorations` is renamed.
+
+### What to Do Now
+
+Use `Telerik.Windows.Documents.Fixed.Model.Editing.Flow.UnderlinePattern`.
+

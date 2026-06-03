@@ -1,7 +1,7 @@
 ---
 title: RadFixedDocumentEditor
 page_title: RadFixedDocumentEditor
-description: RadFixedDocumentEditor
+description: Learn how to use RadFixedDocumentEditor to create PDF documents in a flow-like manner with automatic page management, sections, paragraphs, tables, and lists.
 slug: radpdfprocessing-editing-radfixeddocumenteditor
 tags: radfixeddocumenteditor, pdf, editing, sections, tables, radpdfprocessing, flowlayout, paragraphs
 published: True
@@ -10,7 +10,7 @@ position: 6
 
 # RadFixedDocumentEditor 
 
-**RadFixedDocumentEditor** allows you to create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in a flow-like manner and insert all desired elements one after another. When the document is rendered, the size of the elements will be automatically calculated. The editor provides a convenient API that enables the generation of documents, which automatically flow to pages.    
+`RadFixedDocumentEditor` allows you to create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in a flow-like manner and insert all desired elements one after another. When the document is rendered, the size of the elements is automatically calculated. The editor provides a convenient API that allows the generation of documents, which automatically flow to pages.    
 
 * [Creating RadFixedDocumentEditor](#creating-radfixeddocumenteditor)
 
@@ -30,211 +30,212 @@ position: 6
 
 ## Creating RadFixedDocumentEditor
 
-__Example 1__ demonstrates how a RadFixedDocumentEditor instance can be created.
+**Example 1** demonstrates how to create a `RadFixedDocumentEditor` instance.
         
 
-#### __Example 1: Create RadFixedDocumentEditor__
+#### **Example 1: Create RadFixedDocumentEditor**
 
 <snippet id='pdf-create-fixed-document-editor'/>
 
->__RadFixedDocumentEditor__ inherits from __IDisposable__ so it should be properly disposed when the document is created. Otherwise, some of the content may not be finished, i.e. it might not appear on the PDF document.
+>`RadFixedDocumentEditor` inherits from `IDisposable` so you must properly dispose it when the document is created. Otherwise, some of the content may not be finished, that is, it might not appear on the PDF document.
           
 
 ## Sections
 
-__Section__ is a sequence of [RadFixedPages]({%slug radpdfprocessing-model-radfixedpage%}) with the same properties.
+A `Section` is a sequence of [RadFixedPages]({%slug radpdfprocessing-model-radfixedpage%}) with the same properties.
         
 
 ### SectionProperties
 
-The section properties are responsible for the page size, margins and orientation of __RadFixedPages__ in a section. Below is the complete list of section properties:
+The section properties control the page size, margins, and orientation of `RadFixedPages` in a section. The following is the complete list of section properties:
             
 
-* __PageSize__: The size of the pages that are part of the section.                
+* `PageSize`: The size of the pages that are part of the section.                
 
-* __PageMargins__: The page margins of a page.
+* `PageMargins`: The page margins of a page.
 
-* __PageRotation__: The page rotation. This is enum that can take one of the following values:
-	* __Rotate0__: The page is not rotated. This is the default value.
-	* __Rotate90__: The page is rotated to 90°.
-	* __Rotate180__: The page is rotated to 180°.
-	* __Rotate270__: The page is rotated to 270°.
+* `PageRotation`: The page rotation. This is an enum that can take one of the following values:
+	* `Rotate0`: The page is not rotated. This is the default value.
+	* `Rotate90`: The page is rotated to 90°.
+	* `Rotate180`: The page is rotated to 180°.
+	* `Rotate270`: The page is rotated to 270°.
 
-#### __Example 2: Setting section properties__                    
+#### **Example 2: Setting section properties**                    
 
 <snippet id='pdf-create-fixed-document-editor-section-properties'/>
 
 ### Starting New Section
 
-The first section of a document starts as soon as a content is inserted to the editor. You can change the Section properties before inserting any content and they will be applied to the section that is automatically created.     
+The first section of a document starts as soon as content is inserted to the editor. You can change the section properties before inserting any content and they are applied to the section that is automatically created.     
 
-Adding an additional section is achieved with the __InsertSectionBreak()__ method as demonstrated in __Example 2__.
-            
-#### __Example 3: Start a section__
+Add an additional section with the `InsertSectionBreak()` method as demonstrated in **Example 2**.
+             
+#### **Example 3: Start a section**
 
 <snippet id='pdf-create-fixed-document-editor-start-section'/>
 
->If you want to change the properties of the next section, make sure to do it __before__ you insert the section break. New properties are only used for newly created sections.
-            
+>To change the properties of the next section, ensure you do it **before** you insert the section break. New properties are only used for newly created sections.
+             
 ### Starting New Page
-All pages that have the same __SectionProperties__ are part of the current section. To start a new page, you can use the following code:
 
-#### __Example 4: Start new page__
+All pages that have the same `SectionProperties` are part of the current section. To start a new page, use the following code:
+
+#### **Example 4: Start new page**
 
 <snippet id='pdf-create-fixed-document-editor-start-page'/>
 
 ## Paragraphs
 
-__Paragraphs__ are blocks of flowing inlines - images and text.
+Paragraphs are blocks of flowing inlines—images and text.
         
 
 ### ParagraphProperties
 
-Similar to the section properties, paragraph has its own properties that are responsible for the way it looks.
+Similar to the section properties, a paragraph has its own properties that control its appearance.
             
 
-* __SpacingBefore__: Represents the spacing before.
+* `SpacingBefore`: Represents the spacing before.
 
-* __SpacingAfter__: Represents the spacing after.
+* `SpacingAfter`: Represents the spacing after.
 
-* __LineSpacing__: The spacing between the lines.
+* `LineSpacing`: The spacing between the lines.
 
-* __LineSpacingType__: Specifies how to interpret the line spacing.
+* `LineSpacingType`: Specifies how to interpret the line spacing.
 
-* __FirstLineIndent__: The indent for the first line.
+* `FirstLineIndent`: The indent for the first line.
 
-* __LeftIndent__: The left indent.
+* `LeftIndent`: The left indent.
 
-* __RightIndent__: The right indent.
+* `RightIndent`: The right indent.
 
-* __BackgroundColor__: The background color.
+* `BackgroundColor`: The background color.
 
-* __HorizontalAlignment__: The horizontal alignment of the content.
+* `HorizontalAlignment`: The horizontal alignment of the content.
 
-* __ListId__: The id of the list the paragraph belongs to. If null, then the paragraph belongs to no list.
+* `ListId`: The ID of the list the paragraph belongs to. If null, then the paragraph belongs to no list.
 
-* __ListLevel__: The list level the paragraph belongs to.
+* `ListLevel`: The list level the paragraph belongs to.
 
-#### __Example 5: Setting paragraph properties__
+#### **Example 5: Setting paragraph properties**
 
 <snippet id='pdf-create-fixed-document-editor-paragraph-properties'/>
 
 ### Starting New Paragraph
 
-The first paragraph is created as soon as content is inserted in the editor. You can change paragraph properties before inserting content and when the first paragraph is created automatically, it will use the desired properties.            
+The first paragraph is created as soon as content is inserted in the editor. You can change paragraph properties before inserting content and when the first paragraph is created automatically, it uses the desired properties.            
 
-In order to start a new paragraph, use the code in __Example 4__.           
+To start a new paragraph, use the code in **Example 4**.           
 
-#### __Example 6: Start a paragraph__
+#### **Example 6: Start a paragraph**
 
 <snippet id='pdf-create-fixed-document-editor-start-paragraph'/>
 
-The result of this method is that a new paragraph is started and it uses the current paragraph properties. Until a new paragraph is started, changes in the paragraph properties are not applied.      
+The result of this method is that a new paragraph starts and uses the current paragraph properties. Until a new paragraph starts, changes in the paragraph properties are not applied.
 
 ## Inlines
 
-A Paragraph is built of two types of inlines - runs and images.
+A paragraph is built of two types of inlines—runs and images.
             
 ### Runs
 
-__Run__ represents a collection of characters that have the same properties.
+A `Run` represents a collection of characters that have the same properties.
                 
 
-__CharacterProperties__
+**CharacterProperties**
 
-The character properties that are responsible for the look of the runs are listed below.
+The following character properties control the appearance of runs:
                 
 
-* __FontSize__: The font size.
+* `FontSize`: The font size.
 
-* __Font__: The font.
+* `Font`: The font.
 
-* __ForegroundColor__: The foreground color.
+* `ForegroundColor`: The foreground color.
 
-* __HighlightColor__: The highlight color.
+* `HighlightColor`: The highlight color.
 
-* __BaselineAlignment__: Describes how the baseline for a text-based element is positioned on the vertical axis, relative to the established baseline for text.
-	* __Baseline__: A baseline that is aligned at the actual baseline of the containing box.
-	* __Subscript__: A baseline that is aligned at the subscript position of the containing box.
-	* __Superscript__: A baseline that is aligned at the superscript position of the containing box.
+* `BaselineAlignment`: Describes how the baseline for a text-based element is positioned on the vertical axis, relative to the established baseline for text.
+	* `Baseline`: A baseline that is aligned at the actual baseline of the containing box.
+	* `Subscript`: A baseline that is aligned at the subscript position of the containing box.
+	* `Superscript`: A baseline that is aligned at the superscript position of the containing box.
 
-* __UnderlinePattern__: The underline pattern. Two patterns are supported.
-	* __None__: There is no underline. This is the default value.
-	* __Single__: The underline is a single line.
+* `UnderlinePattern`: The underline pattern. Two patterns are supported.
+	* `None`: There is no underline. This is the default value.
+	* `Single`: The underline is a single line.
 
-* __UnderlineColor__: The color of the underline.
+* `UnderlineColor`: The color of the underline.
 
-* __StrikethroughPattern__: The strikethrough pattern. Two patterns are supported.
-	* __None__: There is no strikethrough. This is the default value.
-	* __Single__: The strikethrough is a single line.
+* `StrikethroughPattern`: The strikethrough pattern. Two patterns are supported.
+	* `None`: There is no strikethrough. This is the default value.
+	* `Single`: The strikethrough is a single line.
 
-* __StrikethroughColor__: The color of the strikethrough.
+* `StrikethroughColor`: The color of the strikethrough.
 
-#### __Example 7: Setting CharacterProperties__ 
+#### **Example 7: Setting CharacterProperties** 
 
 <snippet id='pdf-create-fixed-document-editor-char-properties'/>
 
->In order for the character properties to be respected, make sure to set them __before__ inserting the Run.
+>For the character properties to take effect, set them **before** inserting the run.
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
 ### Inserting a Run
 
-There are a number of overloads that insert a run. The code snippet in __Example 5__ inserts new runs with specific font family, style and weight.         
+Several overloads insert a run. The code snippet in **Example 8** inserts new runs with specific font family, style, and weight.         
 
-#### __Example 8: Insert run__
+#### **Example 8: Insert run**
 
 <snippet id='pdf-create-fixed-document-editor-insert-run'/>
 
-There are a number of overloads that insert a run. The code snippet in __Example 5__ inserts a couple of new runs, one of which with a specific font family.
+Several overloads insert a run. The code snippet in **Example 8** inserts a couple of new runs, one of which with a specific font family.
                 
->The '\r' and '\n' characters don't have the usual meaning of "go to next line" when they are inserted into a PDF document and you cannot simply insert text containing these characters to produce multiline text. Instead, you should split the text and insert a line break.
+>The '\r' and '\n' characters do not have the usual meaning of "go to next line" when inserted into a PDF document, and you cannot insert text containing these characters to produce multiline text. Instead, split the text and insert a line break.
 
-The code in __Example 9__ inserts a new run and a line break after it.
+The code in **Example 9** inserts a new run and a line break after it.
                 
 
-#### __Example 9: Insert run and line break__
+#### **Example 9: Insert run and line break**
 
 <snippet id='pdf-create-fixed-document-editor-insert-line-run'/>
 
 ### Images
 
-Image inline is a combination of an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) object and its desired size.
+An image inline is a combination of an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) object and its desired size.
                 
 ### Inserting Image
 
-You can insert image inline using one of the following methods:
+You can insert an image inline using one of the following methods:
          
-#### __Example 10: Insert image__    
+#### **Example 10: Insert image**    
    
 <snippet id='pdf-create-fixed-document-editor-insert-image'/>
 
 ## Tables
 
-The __Table__ class implements the __IBlockElement__ interface and an instance of this class can be easily inserted as a new block in the document. You could insert the table using the __InsertTable()__ method like illustrated in __Example 8__. __RadFixedDocumentEditor__ takes care for positioning, measuring and splitting the table onto pages.
+The `Table` class implements the `IBlockElement` interface and you can insert an instance of this class as a new block in the document. Insert the table using the `InsertTable()` method as illustrated in **Example 11**. `RadFixedDocumentEditor` takes care of positioning, measuring, and splitting the table onto pages.
         
 
-#### __Example 11: Insert table__
+#### **Example 11: Insert table**
 
 <snippet id='pdf-fixed-document-editor-insert-table'/>     
 
-For more detailed information on tables, check the [Table]({%slug radpdfprocessing-editing-table-overview%}) documentation article.
+For more detailed information on tables, see the [Table]({%slug radpdfprocessing-editing-table-overview%}) documentation article.
         
 ## Block Elements
 
-The [IBlockElement](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.IBlockElement.html) interface allows you to easily draw and split some block content onto pages. The interface is implemented by [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table-overview%}) classes. You can easily add some block element instance with RadFixedDocumentEditor using the InsertBlock() method like illustrated in __Example 9__.
+The [IBlockElement](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.IBlockElement.html) interface allows you to draw and split block content onto pages. The [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table-overview%}) classes implement this interface. Add a block element instance with `RadFixedDocumentEditor` using the `InsertBlock()` method as illustrated in **Example 12**.
 
-#### __Example 12: Insert Block element__
+#### **Example 12: Insert Block element**
 
 <snippet id='pdf-fixed-document-editor-insert-block-element'/>
 
 ## Lists
 
-You can easily insert list items with __RadFixedDocumentEditor__. The first thing you have to do is add a __List__ in editor’s __ListCollection__ by using the __Lists__ property. Then, each time you want to add list item you have to set the appropriate __ListId__ and __ListLevel__ property values through __RadFixedDocumentEditor__’s __ParagraphProperties__. Inserting a new paragraph will result in adding a new list item.
+You can insert list items with `RadFixedDocumentEditor`. First, add a `List` to the editor `ListCollection` by using the `Lists` property. Then, each time you want to add a list item, set the appropriate `ListId` and `ListLevel` property values through the `RadFixedDocumentEditor` `ParagraphProperties`. Inserting a new paragraph results in adding a new list item.
 
-The following code snippet shows how to add a new list to __RadFixedDocumentEditor’s ListCollection__ and after that insert a paragraph with the corresponding list properties:
+The following code snippet shows how to add a new list to the `RadFixedDocumentEditor` `ListCollection` and then insert a paragraph with the corresponding list properties:
 
-#### __Example 13: Insert list__
+#### **Example 13: Insert list**
 
 <snippet id='pdf-fixed-document-editor-insert-list'/>
 
@@ -242,22 +243,22 @@ More detailed information about lists is available in the [List documentation ar
 
 ### Forms
 
-With the RadFixedDocumentEditor class you can insert a Form (Form-XObject) element. 
+With the `RadFixedDocumentEditor` class you can insert a Form (Form-XObject) element. 
 
-#### __Example 14: Insert a form__
+#### **Example 14: Insert a form**
 <snippet id='pdf-fixed-document-editor-insert-form'/>
 
-There is an additional overload of InsertFormInline() that enables you to pass the size that should be used for the form.
+There is an additional overload of `InsertFormInline()` that allows you to pass the size that should be used for the form.
 
->For more information on how to create a form, check the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) articles.
+>For more information on how to create a form, see the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) articles.
 
 
 ## See Also
 
- * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
- * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
- * [ImageSource]({%slug radpdfprocessing-model-imagesource%})
- * [Table]({%slug radpdfprocessing-editing-table-overview%})
- * [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
- * [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})
- * [Generating a PDF Product Catalog]({%slug generating-pdf-product-catalog%})
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [ImageSource]({%slug radpdfprocessing-model-imagesource%})
+* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
+* [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})
+* [Generating a PDF Product Catalog]({%slug generating-pdf-product-catalog%})

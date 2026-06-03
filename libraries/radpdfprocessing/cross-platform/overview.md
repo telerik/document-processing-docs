@@ -11,41 +11,38 @@ position: 0
 
 # Cross-Platform Support
 
-The [Telerik Document Processing]({%slug introduction%}) libraries are compatible across different .NET implementations, including .NET Standard, {{site.dotnetversions}} (Target OS: *None*), and newer versions. There is a set of packages built against the .NET Standard version which you can reference in an application.
+The [Telerik Document Processing]({%slug introduction%}) libraries are compatible across different .NET implementations, including .NET Standard, {{site.dotnetversions}} (Target OS: *None*), and later versions. A set of packages built against the .NET Standard version is available for you to reference in an application.
 
->note The binaries compatible with .NET Standard, {{site.dotnetversions}} (Target OS: *None*) are distributed with the packages targeting .NET Standard. You can obtain the packages through the **UI for ASP.NET Core**, **UI for Blazor**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard, {{site.dotnetversions}} (Target OS: *None*) are distributed with the packages targeting .NET Standard. You can get the packages through the **UI for ASP.NET Core**, **UI for Blazor**, and **UI for WinUI** suites. NuGet packages are also available if you have a license for one of the suites listed.
 
 ## Package References
 
-In order to use the model of the **RadPdfProcessing** library in your cross-platform project, you need to add references to the following **.Net Standard** NuGet packages:
+To use the model of the `RadPdfProcessing` library in your cross-platform project, add references to the following .NET Standard NuGet packages:
 
 * **Telerik.Documents.Core**
 * **Telerik.Documents.Fixed**
 
->note As of [Q2 2025](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history/progress-telerik-document-processing-2025-2-520-changelog) the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
+>note Starting with [Q2 2025](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history/progress-telerik-document-processing-2025-2-520-changelog), the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing libraries (PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing). It will be replaced by `System.IO.Compression`. The Telerik Zip Library will continue to ship as a standalone library so you can still use it separately.
 
-To export images different than Jpeg and Jpeg2000 or ImageQuality different than High you will need to add references to the following **.Net Standard** package:
+To export images other than JPEG and JPEG2000, or to use `ImageQuality` other than High, add a reference to the following .NET Standard package:
 
 * **Telerik.Documents.ImageUtils**
 
-> Note that for .NET Framework, {{site.dotnetversions}} with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core**)
+>note For .NET Framework and {{site.dotnetversions}} with Windows Compatibility Pack projects, the references contain "Windows" in their names (for example, **Telerik.Windows.Documents.Core**).
 
 ## Fonts and Images
 
-The .NET Framework and .NET (Target OS: *Windows*) versions of PdfProcessing comes with out-of-the-box functionality to read fonts, convert images, and scale their quality. The .NET Standard specification, however, does not specify APIs to provide such functionalities built in the library.
-In order to provide the necessary extensibility mechanisms for working with fonts and images, the .NET Standard version of **RadPdfProcessing** exposes the **FixedExtensibilityManager** class. 
-More information, including code samples on how to configure the **FixedExtensibilityManager** is available in the [**Fonts**]({%slug radpdfprocessing-cross-platform-fonts%}) and [**Images**]({%slug radpdfprocessing-cross-platform-images%}) articles respectively.
+The .NET Framework and .NET (Target OS: *Windows*) versions of PdfProcessing come with built-in functionality to read fonts, convert images, and scale their quality. The .NET Standard specification, however, does not define APIs that provide such functionality within the library.
+
+To provide the necessary extensibility mechanisms for working with fonts and images, the .NET Standard version of `RadPdfProcessing` exposes the `FixedExtensibilityManager` class. For more information, including code samples on how to configure `FixedExtensibilityManager`, see the [Fonts]({%slug radpdfprocessing-cross-platform-fonts%}) and [Images]({%slug radpdfprocessing-cross-platform-images%}) articles.
 
 ## See Also
 
- * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
- * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
- * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
- * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
- * [What Versions of Document Processing Libraries are Distributed with the Telerik Products](%slug distribute-telerik-document-processing-libraries-net-versions%)
- * [Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
- * [Images]({%slug radpdfprocessing-cross-platform-images%})
-
-
-
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [TextFragment]({%slug radpdfprocessing-model-textfragment%})
+* [What Versions of Document Processing Libraries Are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
+* [Images]({%slug radpdfprocessing-cross-platform-images%})
 

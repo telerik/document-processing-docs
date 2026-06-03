@@ -10,79 +10,76 @@ position: 5
 
 # ImageSource
 
-**ImageSource** represents a single, constant set of pixels at a certain size. It can be used by multiple [Image]({%slug radpdfprocessing-model-image%}) objects in order to be drawn in a PDF file.
+`ImageSource` represents a single, constant set of pixels at a certain size. Multiple [Image]({%slug radpdfprocessing-model-image%}) objects can use it to draw in a PDF file.
 
 ## Creating an ImageSource
 
-The ImageSource class has several public constructor overloads and can be created from a [Stream](http://msdn.microsoft.com/en-us/library/system.io.stream(v=vs.110).aspx), [BitmapSource](http://msdn.microsoft.com/en-us/library/system.windows.media.imaging.bitmapsource(v=vs.110).aspx) object or using the [__EncodedImageData__](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Resources.EncodedImageData.html) class:
+The `ImageSource` class has several public constructor overloads. You can create it from a [Stream](https://learn.microsoft.com/en-us/dotnet/api/system.io.stream), [BitmapSource](https://learn.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) object, or by using the [`EncodedImageData`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Resources.EncodedImageData.html) class:
 
-* __public ImageSource(Stream stream)__: Creates an __ImageSource__ object from a stream that contains image.
+* `public ImageSource(Stream stream)`: Creates an `ImageSource` object from a stream that contains an image.
 
-* __public ImageSource(Stream stream, FormatProviders.Pdf.Export.ImageQuality imageQuality)__: Creates an __ImageSource__ object from a stream and allows you to specify the image quality through the [ImageQuality enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.ImageQuality.html). More information about the ImageQuality and its behavior is available in [this article]({%slug radpdfprocessing-concepts-imagequality%}). This overload might throw an exception if the image format is not supported.
+* `public ImageSource(Stream stream, FormatProviders.Pdf.Export.ImageQuality imageQuality)`: Creates an `ImageSource` object from a stream and allows you to specify the image quality through the [ImageQuality enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.ImageQuality.html). For more information about the `ImageQuality` and its behavior, see the [ImageQuality]({%slug radpdfprocessing-concepts-imagequality%}) article. This overload can throw an exception if the image format is not supported.
 
-* __public ImageSource(BitmapSource bitmapSource)__: Creates a new __ImageSource__ object from a BitmapSource object. This overload is not available in the .NET Standard version of the PdfProcessing packages.
+* `public ImageSource(BitmapSource bitmapSource)`: Creates a new `ImageSource` object from a `BitmapSource` object. This overload is not available in the .NET Standard version of the PdfProcessing packages.
 
-* __public ImageSource(BitmapSource bitmapSource, FormatProviders.Pdf.Export.ImageQuality imageQuality)__: Creates an __ImageSource__ instance from a BitmapSource object and allows you to specify the image quality. This overload is not available in the .NET Standard version of the PdfProcessing packages.
+* `public ImageSource(BitmapSource bitmapSource, FormatProviders.Pdf.Export.ImageQuality imageQuality)`: Creates an `ImageSource` instance from a `BitmapSource` object and allows you to specify the image quality. This overload is not available in the .NET Standard version of the PdfProcessing packages.
 
-* __public ImageSource(EncodedImageData imageSourceInfo)__: Initializes a new instance of __ImageSource__ using the  [EncodedImageData class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Resources.EncodedImageData.html).
-        
+* `public ImageSource(EncodedImageData imageSourceInfo)`: Initializes a new instance of `ImageSource` using the [`EncodedImageData`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Resources.EncodedImageData.html) class.
 
-__Example 1__ illustrates how you can create an ImageSource using a __FileStream__.
-        
+**Example 1** shows how to create an `ImageSource` using a `FileStream`.
 
-#### __Example 1: Create ImageSource from Stream__
+#### **Example 1: Create ImageSource from Stream**
 
 <snippet id='pdf-image-source-from-stream'/>
 
 
-With the __EncodedImageData__ class you can create an __ImageSource__ with encoded image data. This way the image quality will not be reduced on import.
+With the `EncodedImageData` class you can create an `ImageSource` with encoded image data. This way the image quality is not reduced on import.
 
-__Example 2__ demonstrates how you can create an __ImageSource__ using the __EncodedImageData__ class.
+**Example 2** demonstrates how to create an `ImageSource` using the `EncodedImageData` class.
 
-#### __Example 2: Create ImageSource from EncodedImageData__
+#### **Example 2: Create ImageSource from EncodedImageData**
 <snippet id='pdf-image-source-from-encoded-image-data'/>
 
-With the __EncodedImageData__ class you can also create an __ImageSource__ with encoded image data and set its transparency. The __EncodedImageData__ class provides a second constructor overload where you can set the alpha-channel bytes of the image as a second constructor parameter in order to apply transparency to this image.
+With the `EncodedImageData` class you can also create an `ImageSource` with encoded image data and set its transparency. The `EncodedImageData` class provides a second constructor overload where you can set the alpha-channel bytes of the image as a second constructor parameter to apply transparency to this image.
 
-#### __Example 3: Create ImageSource from EncodedImageData with transparency__
+#### **Example 3: Create ImageSource from EncodedImageData with transparency**
 <snippet id='pdf-transparency-image-source-from-encoded-image-data'/>
 
 ## Properties
 
-The properties exposed by the **ImageSource** class are as follows:
+The `ImageSource` class exposes the following properties:
 
 | Property | Description |
 |---|---|
 | `Width` | Gets the width of the image. |
 | `Height` | Gets the height of the image. |
-| `DecodeArray` | Gets or sets the decode array, which specifies a linear mapping of each component value to an appropriate component value in the image's color space. Can be used to manipulate the tones of the image. |
+| `DecodeArray` | Gets or sets the decode array, which specifies a linear mapping of each component value to an appropriate component value in the color space of the image. You can use it to manipulate the tones of the image. |
 
 ## Methods
 
-The ImageSource class exposes two methods, which could help you get the data from the ImageSource object.
+The `ImageSource` class exposes two methods that help you get the data from the `ImageSource` object.
 
 > These methods are not available in the .NET Standard version of the PdfProcessing packages.
 
 | Method | Description |
 |---|---|
 | `GetBitmapSource()` | Gets the `BitmapSource` of the image. |
-| `GetEncodedImageData()` | Returns the encoded image data. Use this if you need to directly export images from the PDF document. |
+| `GetEncodedImageData()` | Returns the encoded image data. Use this method to directly export images from the PDF document. |
 
->tip This [example in our SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateDocumentWithImages) demonstrates how to insert JPEG and JPEG2000 images in a PDF document without requiring that you decode the images on import. This way the exported images will not be re-encoded and their image quality will be preserved.
+>tip The [CreateDocumentWithImages example in the SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateDocumentWithImages) demonstrates how to insert JPEG and JPEG2000 images in a PDF document without decoding the images on import. The exported images are not re-encoded and their image quality is preserved.
 
 ## Extensions
 
-__RadPdfProcessing__ exposes an extension method allowing you to convert every BitmapSource to an ImageSource that can be used for the creation of [Image]({%slug radpdfprocessing-model-image%}) elements. __Example 4__ shows how you can use the ToImageSource() extension method over a previously created bitmap.
-        
+RadPdfProcessing exposes an extension method that allows you to convert every `BitmapSource` to an `ImageSource` that you can use for the creation of [Image]({%slug radpdfprocessing-model-image%}) elements. **Example 4** shows how to use the `ToImageSource()` extension method over a previously created bitmap.
 
-#### __Example 4: Create ImageSource with extension method__
+#### **Example 4: Create ImageSource with extension method**
 
 <snippet id='pdf-image-source-extensions'/>
 
->The code from __Example 4__ won't compile in Silverlight due to differences in the BitmapImage API for this platform. You could pass the image as a stream to the SetSource() method of BitmapImage instead.
+> The code from **Example 4** does not compile in Silverlight due to differences in the `BitmapImage` API for this platform. You can pass the image as a stream to the `SetSource()` method of `BitmapImage` instead.
 
 ## See Also
 
- * [Image]({%slug radpdfprocessing-model-image%})
- * [Adding SVG FormSource into a Document]({%slug radpdfprocessing-model-formsource-svg%})
- * [ImageSource API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.html)
+* [Image]({%slug radpdfprocessing-model-image%})
+* [Adding SVG FormSource into a Document]({%slug radpdfprocessing-model-formsource-svg%})
+* [ImageSource API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Resources.ImageSource.html)

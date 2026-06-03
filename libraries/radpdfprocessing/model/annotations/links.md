@@ -8,41 +8,37 @@ published: True
 position: 1
 ---
 
-## Link
+# Links
 
-The __Link__ class inherits the abstract __Annotation__ class. Link annotations represent either a hypertext link to a destination elsewhere in the document or an action to be performed. For this reason, there are two separate constructors in the [Link class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html) - one requiring a __Destination__ object and one requiring an __Action__ object.
-        
+The `Link` class inherits the abstract `Annotation` class. Link annotations represent either a hypertext link to a destination elsewhere in the document or an action to be performed. The [Link class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html) has two separate constructors—one that requires a `Destination` object and one that requires an `Action` object.
 
-**Link** exposes the following properties:
+`Link` exposes the following properties:
 
 | Property | Description |
 |---|---|
-| `Destination` | A destination to be displayed when the annotation is activated. See **Example 1** below. |
+| `Destination` | A destination to display when the annotation is activated. See **Example 1**. |
 | `NamedDestination` | A named destination associated with the link. |
-| `Action` | An [action]({%slug radpdfprocessing-model-actions%}) to be performed when the annotation is activated. See **Example 2** below. |
+| `Action` | An [action]({%slug radpdfprocessing-model-actions%}) to perform when the annotation is activated. See **Example 2**. |
 
-#### __Example 1: Add link to destination__
+**Example 1: Add link to destination**
 
 <snippet id='pdf-add-link-to-destination'/>
 
-#### __Example 2: Add link with action__
+**Example 2: Add link with action**
 
 <snippet id='pdf-link-with-action'/>
 
->important In __Example 2__, the *action* object should be from the `Telerik.Windows.Documents.Fixed.Model.Actions.Action` type.
-              
+>important In **Example 2**, the *action* object must be from the `Telerik.Windows.Documents.Fixed.Model.Actions.Action` type.
 
 ## Destination
 
-The abstract __Destination__ class defines a particular view of a document, consisting of the following items:
-        
+The abstract `Destination` class defines a particular view of a document, consisting of the following items:
 
-* The page, which needs to be displayed.  
+* The page to display.
 * The location on that page.
-* The magnification (zoom) factor, which should be used when displaying the page.
-            
+* The magnification (zoom) factor to use when displaying the page.
 
-The __Destination__ class itself only exposes a __Page__ property specifying the page of the destination. The other properties of the view are determined by the classes that inherit __Destination__:
+The `Destination` class itself only exposes a `Page` property specifying the page of the destination. The other properties of the view are determined by the classes that inherit `Destination`:
 
 | Class | Description |
 |---|---|
@@ -54,33 +50,28 @@ The __Destination__ class itself only exposes a __Page__ property specifying the
 | `BoundingRectangleFit` | Displays the specified page magnified to fit its bounding box within the window. |
 | `BoundingRectangleHorizontalFit` | Exposes `Top` property. Displays the specified page with `Top` at the top edge, magnified to fit the entire width of its bounding box. |
 | `BoundingRectangleVerticalFit` | Exposes `Left` property. Displays the specified page with `Left` at the left edge, magnified to fit the entire height of its bounding box. |
-            
 
-__Example 3__ shows how you can create a Location object, associate it with a Link and add it to a RadFixedPage.
-        
+**Example 3** shows how to create a `Location` object, associate it with a `Link`, and add it to a `RadFixedPage`.
 
-#### __Example 3: Add link with location__
+**Example 3: Add link with location**
 
 <snippet id='pdf-link-with-location'/>
 
+## Action
 
+**Example 4** demonstrates how to create an action of type `GoToAction`, associate it with a `Link`, and add it to a `RadFixedPage`. The *location* object can be of type `Location` like the one in **Example 3**.
 
-## Action              
-
-__Example 4__ demonstrates how to create an action of type __GoToAction__, associate it with a Link and add it to a RadFixedPage. The *location* object can be of type Location like the one in __Example 3__.
-        
-
-#### __Example 4: Add link with action__
+**Example 4: Add link with action**
 
 <snippet id='pdf-add-link-with-action'/>
 
 ## See Also
 
- * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
- * [AnnotationType API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html)
- * [Link API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html)
- * [JavaScript Actions]({%slug radpdfprocessing-model-javascript-actions%})
- * [Creating TableCells with GoToAction and UriAction]({%slug kb-create-table-cells%})
- * [LaunchAction]({%slug radpdfprocessing-model-actions-launch%})
- * [GoToRAction]({%slug radpdfprocessing-model-actions-gotor%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [AnnotationType API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.AnnotationType.html)
+* [Link API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Annotations.Link.html)
+* [JavaScript Actions]({%slug radpdfprocessing-model-javascript-actions%})
+* [Creating TableCells with GoToAction and UriAction]({%slug kb-create-table-cells%})
+* [LaunchAction]({%slug radpdfprocessing-model-actions-launch%})
+* [GoToRAction]({%slug radpdfprocessing-model-actions-gotor%})
 

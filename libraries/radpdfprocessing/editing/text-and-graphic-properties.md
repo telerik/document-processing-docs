@@ -10,104 +10,104 @@ position: 5
 
 # Text and Graphic Properties
 
-When using the methods of [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) or [Block]({%slug radpdfprocessing-editing-block%}) classes they will create different content elements. You can control the look of the newly created elements with the following properties:
+The methods of the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) and [Block]({%slug radpdfprocessing-editing-block%}) classes create different content elements. Control the appearance of the newly created elements with the following properties:
       
 
 ## GraphicProperties
 
-These properties are used to hold the current graphics control parameters. The following parameters can be modified using the __GraphicProperties__:
+These properties hold the current graphics control parameters. You can modify the following parameters through `GraphicProperties`:
         
 
-* __IsFilled__: A boolean property specifying whether content elements should be filled.
+* `IsFilled`: A boolean property specifying whether content elements are filled.
 
-* __IsStroked__: A boolean property specifying whether content elements should be stroked.
+* `IsStroked`: A boolean property specifying whether content elements are stroked.
 
-* __FillColor__: The color which will be used to fill the content elements. The property is of type [ColorBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.ColorBase.html).
+* `FillColor`: The color used to fill the content elements. The property is of type [ColorBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.ColorBase.html).
 
-* __StrokeColor__: The color which will be used to stroke the content elements. The property is of type [ColorBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.ColorBase.html).
+* `StrokeColor`: The color used to stroke the content elements. The property is of type [ColorBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.ColorBase.html).
 
-* __StrokeThickness__: The width of the stroke outline of content elements. The property is of type `double`.
+* `StrokeThickness`: The width of the stroke outline of content elements. The property is of type `double`.
 
-* __MiterLimit__: Specifies the miter limit for graphic elements. The property is of type `double?`.
+* `MiterLimit`: Specifies the miter limit for graphic elements. The property is of type `double?`.
 
-* __StrokeDashOffset__: The dash array for graphic elements. The property is of type `double`.
+* `StrokeDashOffset`: The dash offset for graphic elements. The property is of type `double`.
 
-* __StrokeDashArray__: The stroke dash array for graphic elements. The property is of type `IEnumerable<double>`.
+* `StrokeDashArray`: The stroke dash array for graphic elements. The property is of type `IEnumerable<double>`.
 
-* __StrokeLineJoin__: The stroke line join for graphic elements. The property is of type [LineJoin](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Graphics.LineJoin.html).
+* `StrokeLineJoin`: The stroke line join for graphic elements. The property is of type [LineJoin](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Graphics.LineJoin.html).
 
-* __StrokeLineCap__: The stroke line cap for graphic elements. The property is of type [LineCap](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Graphics.LineCap.html).
+* `StrokeLineCap`: The stroke line cap for graphic elements. The property is of type [LineCap](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Graphics.LineCap.html).
             
-#### Example 1: Using GraphicProperties with FixedContentEditor
+#### **Example 1: Using GraphicProperties with FixedContentEditor**
 
 <snippet id='pdf-graphic-properties-editor'/>
 
 ## TextProperties
 
-These properties hold the parameters used for text fragments. The following parameters can be modified using the __TextProperties__:
+These properties hold the parameters for text fragments. You can modify the following parameters through `TextProperties`:
         
 
-* __UnderlinePattern__: The underline pattern. The property is an enumeration of type [UnderlinePattern](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.UnderlinePattern.html). Two patterns are supported:   
-	* __None__: There is no underline. This is the default value.      
-	* __Single__: The underline is a single line.
+* `UnderlinePattern`: The underline pattern. The property is an enumeration of type [UnderlinePattern](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.UnderlinePattern.html). Two patterns are supported:   
+	* `None`: There is no underline. This is the default value.      
+	* `Single`: The underline is a single line.
 
-* __UnderlineColor__: The color of the underline.
+* `UnderlineColor`: The color of the underline.
 
-* __StrikethroughPattern__: The strikethrough pattern. The property is an enumeration of type [StrikethroughPattern](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.StrikethroughPattern.html). Two patterns are supported:   
-	* __None__: There is no strikethrough. This is the default value.      
-	* __Single__: The strikethrough is a single line.
+* `StrikethroughPattern`: The strikethrough pattern. The property is an enumeration of type [StrikethroughPattern](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.StrikethroughPattern.html). Two patterns are supported:   
+	* `None`: There is no strikethrough. This is the default value.      
+	* `Single`: The strikethrough is a single line.
 
-* __StrikethroughColor__: The color of the strikethrough.
+* `StrikethroughColor`: The color of the strikethrough.
 	
-* __CharacterSpacing__: The character spacing for text fragments. The property is of type `double?`.
+* `CharacterSpacing`: The character spacing for text fragments. The property is of type `double?`.
 
-* __WordSpacing__: The word spacing for text fragments. The property is of type `double?`.
+* `WordSpacing`: The word spacing for text fragments. The property is of type `double?`.
 
-* __HorizontalScaling__: The horizontal scaling for text fragments. The property is of type `double?`.
+* `HorizontalScaling`: The horizontal scaling for text fragments. The property is of type `double?`.
 
-* __FontSize__: The font size for text fragments. The property is of type `double`. The measurement unit used for font size is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
+* `FontSize`: The font size for text fragments. The property is of type `double`. The measurement unit used for font size is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
 
-* __RenderingMode__: The rendering mode for text fragments. The property is of type [RenderingMode](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Text.RenderingMode.html).
+* `RenderingMode`: The rendering mode for text fragments. The property is of type [RenderingMode](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Text.RenderingMode.html).
 
-* __BaselineAlignment__: Describes how the baseline for a text-based element is positioned on the vertical axis, relative to the established baseline for text. The property is an enumeration of type [BaselineAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.BaselineAlignment.html) and exposes the following values:
-	* __Baseline__: A baseline that is aligned at the actual baseline of the containing box.
-	* __Subscript__: A baseline that is aligned at the subscript position of the containing box.
-	* __Superscript__: A baseline that is aligned at the superscript position of the containing box.
+* `BaselineAlignment`: Describes how the baseline for a text-based element is positioned on the vertical axis, relative to the established baseline for text. The property is an enumeration of type [BaselineAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.BaselineAlignment.html) and exposes the following values:
+	* `Baseline`: A baseline that is aligned at the actual baseline of the containing box.
+	* `Subscript`: A baseline that is aligned at the subscript position of the containing box.
+	* `Superscript`: A baseline that is aligned at the superscript position of the containing box.
 
-* __Font__: The font for the inserted text, of type [FontBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontBase.html).
+* `Font`: The font for the inserted text, of type [FontBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontBase.html).
 
-* __HorizontalAlignment__: The horizontal positioning of the inserted text in the text block. The property is of type [HorizontalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.html).
+* `HorizontalAlignment`: The horizontal positioning of the inserted text in the text block. The property is of type [HorizontalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.HorizontalAlignment.html).
 
-* __VerticalAlignment__: The vertical positioning of the inserted text in the text block. The property is of type [VerticalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.html).
+* `VerticalAlignment`: The vertical positioning of the inserted text in the text block. The property is of type [VerticalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.html).
             
-#### Example 2: Using TextProperties with Block
+#### **Example 2: Using TextProperties with Block**
 
 <snippet id='pdf-text-properties-block'/>
 
-The TextProperties also exposes the following methods, which can be used for changing the current font:
+`TextProperties` also exposes the following methods for changing the current font:
         
 
-* __TextProperties.TrySetFont(FontFamily fontFamily);__
+* `TextProperties.TrySetFont(FontFamily fontFamily)`
 
-* __TextProperties.TrySetFont(fontFamily, fontStyle, fontWeight);__
+* `TextProperties.TrySetFont(fontFamily, fontStyle, fontWeight)`
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
 ## Preserving Current State
 
-Both Text and Graphic properties contain methods that can preserve and restore the current state.
+Both text and graphic properties contain methods that preserve and restore the current state.
         
 
-* __properties.Save();__
+* `properties.Save()`
 
-* __properties.Restore();__
+* `properties.Restore()`
 
->The Save() method returns __IDisposable__ object that will execute Restore() as soon as the dispose method is called and can be used in a using statement.
+> The `Save()` method returns an `IDisposable` object that executes `Restore()` when the dispose method is called. You can use it in a `using` statement.
           
 
 ## See Also
 
- * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
- * [Block]({%slug radpdfprocessing-editing-block%})
- * [Changing Block's Text Color in PDF Documents Using RadPdfProcessing]({%slug change-text-color-pdf-radpdfprocessing%})
- * [How to Change Text Color Using PdfProcessing]({%slug pdfprocessing-text-color%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Block]({%slug radpdfprocessing-editing-block%})
+* [Changing Block's Text Color in PDF Documents Using RadPdfProcessing]({%slug change-text-color-pdf-radpdfprocessing%})
+* [How to Change Text Color Using PdfProcessing]({%slug pdfprocessing-text-color%})

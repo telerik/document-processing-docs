@@ -1,7 +1,7 @@
 ---
 title: TextFragment
 page_title: TextFragment
-description: RadPdfProcessing offers a TextFragment that represents a single-line text object.
+description: Learn how to create and modify TextFragment objects in RadPdfProcessing to render single-line text content with custom fonts, colors, and positioning.
 slug: radpdfprocessing-model-textfragment
 tags: textfragment, pdf, text, radpdfprocessing, singleline, font, content, model
 published: True
@@ -10,27 +10,26 @@ position: 3
 
 # TextFragment
 
-[RadPdfProcessing]({%slug radpdfprocessing-overview%}) offers a **TextFragment** that represents a **single-line** text object.    
+The `TextFragment` class in [RadPdfProcessing]({%slug radpdfprocessing-overview%}) represents a single-line text object that you can add to a PDF page.
 
-* [Creating a TextFragment](#inserting-a-textfragment)
-
-* [Modifying a TextFragment](#modifying-a-textfragment) 
+* [Creating a TextFragment](#creating-a-textfragment)
+* [Modifying a TextFragment](#modifying-a-textfragment)
 
 ## Public API
 
 | **Property**          | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
 | **CharacterSpacing**  | The spacing between the characters in the text.                                                |
-| **WordSpacing**       | The spacing between the words in the text. (*Only space character (Unicode 0x32) is considered a word break in RadPdfProcessing's document model.*) |
+| **WordSpacing**       | The spacing between the words in the text. (*Only space character (Unicode 0x32) is considered a word break in the RadPdfProcessing document model.*) |
 | **HorizontalScaling** | The horizontal scaling that is applied to the characters.                                      |
 | **Font**              | The font that is used to draw the text.                                                        |
-| **FontSize**          | The font size. The measurement unit used for font size is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class. |
-| **RenderingMode**     | Enumeration representing the way the text should be rendered. It can have one of the following values: <table><tr><td>**Fill**</td><td>Fill text (the default value).</td></tr><tr><td>**Stroke**</td><td>Stroke text.</td></tr><tr><td>**FillAndStroke**</td><td>Fill, then stroke text.</td></tr><tr><td>**None**</td><td>Neither fill nor stroke text (invisible).</tr><tr></td><td>**FillAndAddToClippingPath**</td><td>Fill text and add to path for clipping (see above).</td></tr><tr><td>**StrokeAndAddToClippingPath**</td><td>Stroke text and add to path for clipping.</td></tr><tr><td>**FillStrokeAndAddToClippingPath**</td><td>Fill, then stroke text and add to path for clipping</td></tr><tr><td>**AddToClippingPath**</td><td>Add text to path for clipping.</td></tr></table> |
+| **FontSize**          | The font size. The measurement unit used for font size is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units with the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class. |
+| **RenderingMode**     | Enumeration representing the way the text is rendered. It can have one of the following values: <table><tr><td>**Fill**</td><td>Fill text (the default value).</td></tr><tr><td>**Stroke**</td><td>Stroke text.</td></tr><tr><td>**FillAndStroke**</td><td>Fill, then stroke text.</td></tr><tr><td>**None**</td><td>Neither fill nor stroke text (invisible).</td></tr><tr><td>**FillAndAddToClippingPath**</td><td>Fill text and add to path for clipping.</td></tr><tr><td>**StrokeAndAddToClippingPath**</td><td>Stroke text and add to path for clipping.</td></tr><tr><td>**FillStrokeAndAddToClippingPath**</td><td>Fill, then stroke text and add to path for clipping.</td></tr><tr><td>**AddToClippingPath**</td><td>Add text to path for clipping.</td></tr></table> |
 | **TextRise**          | Specifies the distance, in unscaled text space units, to move the baseline up or down from its default location. |
 | **Fill**              | The color that is used to fill the text. The default value is Black.                            |
 | **Stroke**            | The color that is used to stroke text. The default value is Black.                              |
 | **StrokeThickness**   | The width of the stroke line.                                                                   |
-| **StrokeLineCap**     | Specifies the shape, which is used at the ends of open paths, used to draw a letter, when they are stroked. It can have one of the following values:<table><tr><td>**Flat**</td><td>Flat line cap.</td></tr><tr><td>**Round**</td><td>Round line cap.</td></tr><tr><td>**Square**</td><td>Square line cap.</td></tr></table> |
+| **StrokeLineCap**     | Specifies the shape used at the ends of open paths when they are stroked. It can have one of the following values:<table><tr><td>**Flat**</td><td>Flat line cap.</td></tr><tr><td>**Round**</td><td>Round line cap.</td></tr><tr><td>**Square**</td><td>Square line cap.</td></tr></table> |
 | **StrokeLineJoin**    | Specifies the shape to be used at the corners of paths that are stroked. Join styles are significant only at the points where consecutive segments of a path connect at an angle. Available options: <table><tr><td>**Bevel**</td><td>Produces a diagonal corner.</td></tr><tr><td>**Miter**</td><td>Produces a sharp corner. If the segments meet at too sharp an angle, a bevel join is used instead.</td></tr><tr><td>**Round**</td><td>Produces a smooth, circular arc between the lines.</td></tr></table> |
 | **StrokeDashArray**   | The pattern of dashes and gaps used to stroke paths.                                            |
 | **StrokeDashOffset**  | The distance from the start of a line to the beginning of a dash pattern.                       |
@@ -42,51 +41,51 @@ position: 3
 
 | **Method**            | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| **Clone** (_since Q2 2025_)            | Creates a deep copy of this document element.                                                  |
+| **Clone** (*Introduced in Q2 2025*)            | Creates a deep copy of this document element.                                                  |
 
->note If you want to use a font, that is not part of the [standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts), you can register it using the [RegisterFont()]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font) method of the FontRepository static class. 
+>note To use a font that is not part of the [standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts), register it with the [RegisterFont()]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font) method of the `FontRepository` static class.
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
 ### Creating a TextFragment
 
-**TextFragment** is a content element that can be added to the **Content** collection of an **IContainerElement** such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches that can be adopted:
+`TextFragment` is a content element that you can add to the `Content` collection of an `IContainerElement` such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). There are several approaches you can use:
 
-* Create a TextFragment and add it to a page container
-* Use one of the factory methods of the __ContentElementCollection__ to create a new text fragment and insert it into the respective container
+* Create a `TextFragment` and add it to a page container.
+* Use one of the factory methods of the `ContentElementCollection` to create a new text fragment and insert it into the respective container.
 
- Both methods return the actual TextFragment instance, so you can modify it.
+Both methods return the actual `TextFragment` instance so you can modify it.
 
-#### __Example 1: Create TextFragments and add them to a page__
+#### **Example 1: Create TextFragments and Add Them to a Page**
 
- <snippet id='libraries-pdf-model-text-fragment-create'/>
+<snippet id='libraries-pdf-model-text-fragment-create'/>
 
 >caption Figure 1: Inserted TextFragments
 
-![TextFragments in PdfProcessing](images/radpdfprocessing-model-textfragment.png)  
+![TextFragments in PdfProcessing](images/radpdfprocessing-model-textfragment.png)
 
->tip **TextFragment** represents a **single line of text**. In order to make your text "flow" in a document you should make sure all fragments you add can fit in a line or you can use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
-          
->The '\r' and '\n' characters don't have the usual meaning of *"go to next line"* when they are inserted into a PDF document and you cannot simply insert text, containing these characters, to produce multiline text. Instead, you should split the text and insert it line by line. An alternative approach is to use the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which allows you to create a document in a flow-like manner. 
+>tip `TextFragment` represents a single line of text. To make your text flow in a document, verify that all fragments you add can fit in a line, or use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
+
+> The `\r` and `\n` characters do not have the usual meaning of *"go to next line"* when inserted into a PDF document. You cannot insert text that contains these characters and produce multiline text. Instead, split the text and insert it line by line. An alternative approach is to use the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which allows you to create a document in a flow-like manner.
 
 ### Modifying a TextFragment
 
-You can modify a **TextFragment** element using the properties listed in the [Public API](#public-api) section.
+Modify a `TextFragment` element with the properties listed in the [Public API](#public-api) section.
 
-#### __Example 2: Modifying TextFragment's properties__
+#### **Example 2: Modify TextFragment Properties**
 
- <snippet id='libraries-pdf-model-text-fragment-modify'/>
+<snippet id='libraries-pdf-model-text-fragment-modify'/>
 
 >caption Figure 2: Modified TextFragments
 
-![Modified TextFragments in PdfProcessing](images/radpdfprocessing-model-modified-textfragments.png)  
+![Modified TextFragments in PdfProcessing](images/radpdfprocessing-model-modified-textfragments.png)
 
 ## See Also
 
- * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
- * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
- * [Position]({%slug radpdfprocessing-concepts-position%})
- * [Block]({%slug radpdfprocessing-editing-block%})
- * [Extracting Text Within a Specific Rectangle in PDF Documents]({%slug extract-text-specific-rectangle-pdf-radpdfprocessing%})
- * [Getting Position and Size of TextFragment in PDF Documents]({%slug get-textfragment-position-size-radpdfprocessing%})
- * [Replacing Specific Text in PDF Spanning Multiple TextFragments inTelerik PdfProcessing]({%slug replace-specific-text-spanning-textfragments-pdfprocessing%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Position]({%slug radpdfprocessing-concepts-position%})
+* [Block]({%slug radpdfprocessing-editing-block%})
+* [Extracting Text Within a Specific Rectangle in PDF Documents]({%slug extract-text-specific-rectangle-pdf-radpdfprocessing%})
+* [Getting Position and Size of TextFragment in PDF Documents]({%slug get-textfragment-position-size-radpdfprocessing%})
+* [Replacing Specific Text in PDF Spanning Multiple TextFragments in Telerik PdfProcessing]({%slug replace-specific-text-spanning-textfragments-pdfprocessing%})

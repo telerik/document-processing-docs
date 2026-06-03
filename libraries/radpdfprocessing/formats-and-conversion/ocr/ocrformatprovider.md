@@ -13,11 +13,11 @@ position: 1
 |Minimum Version|Q1 2025|
 |----|----|
 
-RadPdfProcessing supports **Optical Character Recognition (OCR)**. OCR is the electronic or mechanical conversion of images of typed, handwritten, or printed text into machine-encoded text from a scanned document. The library uses the `OcrFormatProvider` class that allows you to import an image which is returned as a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). By default, the `OcrFormatProvider` takes as a parameter a `TesseractOcrProvider` implementation which uses the third-party library [Tesseract](https://github.com/tesseract-ocr/tesseract). However, you can provide any [custom implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}) instead.
+RadPdfProcessing supports **Optical Character Recognition (OCR)**. OCR is the electronic or mechanical conversion of images of typed, handwritten, or printed text into machine-encoded text from a scanned document. The `OcrFormatProvider` class imports an image and returns it as a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). By default, `OcrFormatProvider` takes a `TesseractOcrProvider` implementation as a parameter. This implementation uses the third-party library [Tesseract](https://github.com/tesseract-ocr/tesseract). You can also provide any [custom implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}) instead.
 
 >note [PdfProcessing Optical Character Recognition (OCR) Demo](https://demos.telerik.com/document-processing/pdfprocessing/optical_character_recognition)
 
-You can find all the dependencies and required steps for the implementation in the [Prerequisites]({%slug radpdfprocessing-formats-and-conversion-ocr-prerequisites%}) article.
+You can find all the dependencies and required steps in the [Prerequisites]({%slug radpdfprocessing-formats-and-conversion-ocr-prerequisites%}) article.
 
 ## TesseractOcrProvider Public API
 
@@ -25,9 +25,9 @@ The following table lists the available methods and properties:
 
 |Method/Property|Description|
 |----|----|
-|**TesseractOcrProvider(string dataPath)**|Constructor that takes as a parameter the path to the **parent** directory that contains the "**tessdata**" folder.|
-|`LanguageCodes`|The language codes to use for the Tesseract OCR engine. You can find the corresponding trained data for each language and their codes [here](https://github.com/tesseract-ocr/tessdata). The value is "_eng_" by default.|
-|`CorrectVerticalPosition`|Indicates whether the OCR processor will try to correct the vertical position of the text. (**Not available in .NET Framework**)|
+|**TesseractOcrProvider(string dataPath)**|Constructor that takes the path to the **parent** directory containing the "**tessdata**" folder.|
+|`LanguageCodes`|The language codes to use for the Tesseract OCR engine. You can find the corresponding trained data for each language and their codes in the [Tesseract tessdata repository](https://github.com/tesseract-ocr/tessdata). The value is "_eng_" by default.|
+|`CorrectVerticalPosition`|Indicates whether the OCR processor tries to correct the vertical position of the text. (**Not available in .NET Framework**)|
 |`DataPath`|The path to the **parent** directory that contains the "**tessdata**" folder.|
 |`ParseLevel`|Indicates the level of parsing that the OCR processor performs - `OcrParseLevel.Line` or `OcrParseLevel.Word`.|
 |`GetAllTextFromImage`|Extracts all text from an image and returns it as a single string.|
@@ -35,7 +35,7 @@ The following table lists the available methods and properties:
 
 <snippet id='libraries-pdf-formatsandconversion-ocr-ocrformatprovider'/>
 
->note You can find a complete example of [implementing an OcrFormatProvider](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/TesseractOcrProviderDemo) in our SDK repository.
+>note You can find a complete example of [implementing an OcrFormatProvider](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/TesseractOcrProviderDemo) in the SDK repository.
         
 ## See Also
 

@@ -12,7 +12,7 @@ position: 1
 
 
 
-__TableRow__ class represents a single row in a [Table]({%slug radpdfprocessing-editing-table-overview%}). Each row contains a collection of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances.
+`TableRow` represents a single row in a [Table]({%slug radpdfprocessing-editing-table-overview%}). Each row contains a collection of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances.
       
 
 * [Inserting a Row](#inserting-a-row-)
@@ -21,43 +21,43 @@ __TableRow__ class represents a single row in a [Table]({%slug radpdfprocessing-
 
 ## Inserting a TableRow 
 
-You can easily add a __TableRow__ instance by using the __AddTableRow()__ method of the __Table__ class.
+You can add a `TableRow` instance by using the `AddTableRow()` method of the `Table` class.
         
 
-The code snippet in __Example 1__ shows how to create a table and add a single row to it.
+The code in **Example 1** shows how to create a table and add a single row to it.
         
 
-#### __Example 1: Create TableRow__
+#### **Example 1: Create TableRow**
 
 <snippet id='libraries-pdf-editing-table-tablerow-create-tablerow'/>
 
 ## Using TableCellCollection
 
-In order to manipulate the cells in a row you can use TableRow's __Cells__ property. The property represents the collection of cells added to this row and provides easy access to each of them.
+To manipulate the cells in a row, use the `Cells` property of `TableRow`. The property represents the collection of cells added to this row and provides access to each of them.
         
 
-__Example 2__ shows how to add two cells in a row and get the cells count.
+**Example 2** shows how to add two cells in a row and get the cells count.
         
 
-#### __Example 2: Access cells in a TableRow__
+#### **Example 2: Access cells in a TableRow**
 
 <snippet id='libraries-pdf-editing-table-tablerow-add-cells'/>
 
 ## Setting TableRow Height
 
-Since **Q1 2025** you can easily configure the TableRow's height through its **Height** property which accepts the following options defined in the **HeightType** enum:     
+Starting with **Q1 2025**, you can configure the `TableRow` height through its `Height` property which accepts the following options defined in the `HeightType` enum:     
 
-* __Auto__: Automatically determines the row height.
+* `Auto`: Automatically determines the row height.
             
-* __Exact__: Sets an exact row height. The value is in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).      
+* `Exact`: Sets an exact row height. The value is in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).      
 
-* __AtLeast__: Sets a minimum row height. The value is in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).
+* `AtLeast`: Sets a minimum row height. The value is in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).
 
 >note You can convert DIPs to other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
             
-__Example 3__ creates a table with three single-cell rows, each with a different **HeightType**.
+**Example 3** creates a table with three single-cell rows, each with a different `HeightType`.
         
-#### __Example 3: Set TableRow height__
+#### **Example 3: Set TableRow height**
 
 <snippet id='libraries-pdf-editing-table-tablerow-set-tablerow-height'/>
 
@@ -65,6 +65,6 @@ __Example 3__ creates a table with three single-cell rows, each with a different
 
 ## See Also
 
- * [Table]({%slug radpdfprocessing-editing-table-overview%})
- * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
- * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
+* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
+* [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})

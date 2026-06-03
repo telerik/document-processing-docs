@@ -10,71 +10,67 @@ position: 4
 
 # Image
 
-**Image** is a content element, which contains an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and represents an image. It can be added in the **Content** collection of a **IContainerElement** such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). 
+`Image` is a content element that contains an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and represents an image. You can add it to the `Content` collection of an `IContainerElement` such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
 
 ## Public API
 
 | **Property**          | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| **ImageSource**       | Specifies the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) that will be visualized in the Image object. |
-| **Width**             | The width of the image.                                                                     |
-| **Height**            | The height of the image.                                                                    |
-| **Position**          | The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the **IContainerElement**. |
-| **AlphaConstant**     | Specifies the constant shape or constant opacity value to be used for nonstroking operations.   |
+| `ImageSource`       | Specifies the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) that the Image object visualizes. |
+| `Width`             | The width of the image.                                                                     |
+| `Height`            | The height of the image.                                                                    |
+| `Position`          | The [Position]({%slug radpdfprocessing-concepts-position%}) of the image inside the `IContainerElement`. |
+| `AlphaConstant`     | Specifies the constant shape or constant opacity value for nonstroking operations.   |
 
 | **Method**            | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| **GetBitmapSource**  (_Unavailable in .NET Standard_) | Creates a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) from the image element.|
-| **Clone** (_since Q2 2025_)                | Creates a deep copy of this document element.                                                  |
+| `GetBitmapSource` (not available in .NET Standard) | Creates a [BitmapSource](https://learn.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) from the image element.|
+| `Clone` (starting with Q2 2025)                | Creates a deep copy of this document element.                                                  |
 
-### Working With an Image
+### Working with an Image
 
-You can edit an __Image__ element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.       
+You can edit an `Image` element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.
 
->note As of **Q3 2024** RadPdfProcessing provides support for SVG FormSource(vector graphics image format): [Adding SVG FormSource into a Document]({%slug radpdfprocessing-model-formsource-svg%}).
-            
-__Example 1__ shows how to initialize an Image object, assigns an ImageSource to it and add it to a previously defined container (page).
-      
-#### __Example 1: Create image__
+>note Starting with **Q3 2024** RadPdfProcessing provides support for SVG FormSource (vector graphics image format): [Adding SVG FormSource into a Document]({%slug radpdfprocessing-model-formsource-svg%}).
+
+**Example 1** shows how to initialize an `Image` object, assign an `ImageSource` to it, and add it to a previously defined container (page).
+
+#### **Example 1: Create image**
 
 <snippet id='pdf-create-image'/>
 
-Once the above RadFixedDocument is [exported]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}), the following document with an image is created:
+Once you [export]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) the `RadFixedDocument`, the following document with an image is created:
 
-![Image in RadFixedPage](images/pdf-processing-image.png)    
+![Image in RadFixedPage](images/pdf-processing-image.png)
 
-__Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__ to create a new image and insert it into the respective container.     
+**Example 2** demonstrates how to use one of the factory methods of the `ContentElementCollection` to create a new image and insert it into the respective container.
 
-#### __Example 2: Add image to container__
+#### **Example 2: Add image to container**
 
 <snippet id='pdf-image-source'/>
 
->tip There are other methods that allow adding an image to a document by passing image size, format and source. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).     
+>tip There are other methods that allow adding an image to a document by passing image size, format, and source. You can use them through the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) class.
 
-The Image class exposes also the **GetBitmapSource()** method, enabling you to obtain a [BitmapSource](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) instance representing the image.
+The `Image` class also exposes the `GetBitmapSource()` method, which allows you to obtain a [BitmapSource](https://learn.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.bitmapsource) instance representing the image.
 
->  The GetBitmapSource() method is not available in the .NET Standard version of the PdfProcessing packages.
+> The `GetBitmapSource()` method is not available in the .NET Standard version of the PdfProcessing packages.
 
-#### __Example 3: Obtain BitmapSource__
+#### **Example 3: Obtain BitmapSource**
 
 <snippet id='pdf-obtain-botmap-source'/>
 
 ## See Also
- 
- * [ImageSource]({%slug radpdfprocessing-model-imagesource%})
- * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
- * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
- * [Position]({%slug radpdfprocessing-concepts-position%})
- * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
- * [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
- * [Change file size of a PDF with images through ImageCompression and ImageQuality]({%slug pdfprocessing-change-file-size-through-image-quality-and-compression%})
- * [Adding Images with a Shadow in PDF Documents]({%slug add-shadow-image-radpdfprocessing%})
- * [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
- * [Change file size of a PDF with images through ImageCompression and ImageQuality]({%slug pdfprocessing-change-file-size-through-image-quality-and-compression%})
- * [Adding a Barcode to a PDF Document using PdfProcessing and the WinForms BarcodeView]({%slug add-barcode-to-pdf-telerik%})
- * [Adding an Image Border in PdfProcessing]({%slug pdf-image-border%})
- * [Adding a .HEIC Image to PDF Documents in PdfProcessing]({%slug convert-heic-images-to-jpg%})
- * [Copying Images from RadFixedDocument to Windows Clipboard]({%slug extract-images-radfixeddocument-windows-clipboard-to-ms-word%})
 
-
- 
+* [ImageSource]({%slug radpdfprocessing-model-imagesource%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Position]({%slug radpdfprocessing-concepts-position%})
+* [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
+* [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
+* [Change File Size of a PDF with Images Through ImageCompression and ImageQuality]({%slug pdfprocessing-change-file-size-through-image-quality-and-compression%})
+* [Adding Images with a Shadow in PDF Documents]({%slug add-shadow-image-radpdfprocessing%})
+* [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
+* [Adding a Barcode to a PDF Document Using PdfProcessing and the WinForms BarcodeView]({%slug add-barcode-to-pdf-telerik%})
+* [Adding an Image Border in PdfProcessing]({%slug pdf-image-border%})
+* [Adding a .HEIC Image to PDF Documents in PdfProcessing]({%slug convert-heic-images-to-jpg%})
+* [Copying Images from RadFixedDocument to Windows Clipboard]({%slug extract-images-radfixeddocument-windows-clipboard-to-ms-word%})

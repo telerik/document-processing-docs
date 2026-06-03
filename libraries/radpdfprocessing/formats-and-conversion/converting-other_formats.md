@@ -10,8 +10,7 @@ position: 3
 
 # Convert from Other Formats to PDF
 
- Converting to PDF from other formats is supported but you need to use the other libraries from the suite. 
+RadPdfProcessing does not directly convert other formats to PDF. Use the other libraries from the Telerik Document Processing suite for this purpose:
 
- * __Converting Docx, Doc, RTF, and HTML:__ Use the WordsProcessing library. More information is available here: [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}).
- * __Converting Xlsx, Csv, Xls, DataTable:__ Use the SpreadProcessing library. More information is available here:  [Using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
-
+* **Converting DOCX, DOC, RTF, and HTML:** Use the WordsProcessing library. For more details, see [WordsProcessing Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}).
+* **Converting XLSX, CSV, XLS, and DataTable:** Use the SpreadProcessing library. For more details, see [SpreadProcessing PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).

@@ -9,7 +9,7 @@ position: 1
 
 # Getting Started with Digital Signature
 
-`RadPdfProcessing` allows adding a digital signature while editing a document created from scratch or importing an existing one.
+`RadPdfProcessing` allows you to add a digital signature while editing a document created from scratch or importing an existing one.
 
 >To use the signing functionality in PdfProcessing for **.NET Standard/.NET Core**, you must add a reference to the **System.Security.Cryptography.Pkcs** NuGet package, version 6 or later (this functionality is available starting with R1 2022 SP1).
 
@@ -19,35 +19,35 @@ position: 1
 
 To sign a document, follow these steps:
 
-1\. Create a **Signature** object which takes a [X509Certificate2](https://msdn.microsoft.com/en-us/library/system.security.cryptography.x509certificates.x509certificate2(v=vs.110).aspx) object as a parameter. This is the certificate that will be used to sign the PDF document.
+1\. Create a `Signature` object which takes a [X509Certificate2](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificate2) object as a parameter. This is the certificate that signs the PDF document.
 
-2\. When instantiated, add the **Signature** to the document's content using a [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}).
+2\. When instantiated, add the `Signature` to the document content using a [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}).
 
-3\. To create a signature, which has a visual representation, you must create a [SignatureWidget]({%slug radpdfprocessing-model-annotations-widgets%}) and associate the Widget annotation with the signed [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}). The widget also needs a [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) object applied to its Content.**NormalContentSource** property. A **FormSource** could be filled with data using the FixedContentEditor.
+3\. To create a signature which has a visual representation, create a [SignatureWidget]({%slug radpdfprocessing-model-annotations-widgets%}) and associate the widget annotation with the signed [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}). The widget also needs a [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) object applied to its Content.`NormalContentSource` property. A `FormSource` can be filled with data using the `FixedContentEditor`.
 
->caution When exporting a digitally signed document, a stream that allows both, reading and writing, should be passed. Otherwise, an exception is thrown: *NotSupportedException: 'Stream does not support reading.'*.
+>caution When exporting a digitally signed document, pass a stream that allows both reading and writing. Otherwise, an exception is thrown: *NotSupportedException: 'Stream does not support reading.'*.
 
-The following example shows a full code snippet for a simple signing of a newly created document:
+The following example shows a full code snippet for signing a newly created document:
 
-#### **Example: Sign a document**
+### Example: Sign a Document
 
 <snippet id='pdf-sign-document'/>
 
->important In .NET Standard use __Telerik.Documents.Primitives.Rect__ instead of __System.Windows.Rect__.
+>important In .NET Standard, use `Telerik.Documents.Primitives.Rect` instead of `System.Windows.Rect`.
 
 ![Signed PDF](images/radpdfprocessing-features-digital-signature.png)
 
->important When signing an existing document (after the import) you must verify that the AcroForm `ViewersShouldRecalculateWidgetAppearances` property is set to false. Otherwise, the exported and signed PDF document may not be displayed as signed.
+>important When signing an existing document (after the import), verify that the `AcroForm` `ViewersShouldRecalculateWidgetAppearances` property is set to `false`. Otherwise, the exported and signed PDF document may not appear as signed.
 
 ## Signature Settings
 
-The **SignatureSettings** class (*introduced in Q4 2025*) provides configurable options for producing digital signatures in PDF documents. It allows developers to specify the digest (hash) algorithm used during certificate-based signing. `SignatureSettings` are accessed via the `Signature.Settings` property and expose the following settings:
+The `SignatureSettings` class (introduced in Q4 2025) provides configurable options for producing digital signatures in PDF documents. It allows you to specify the digest (hash) algorithm used during certificate-based signing. Access `SignatureSettings` through the `Signature.Settings` property. The class exposes the following settings:
 
 | Property | Description |
 |---|---|
 | `DigestAlgorithm` | Gets or sets the digest (hash) algorithm used when producing the CMS (PKCS#7) signature. Default is `DigestAlgorithmType.Sha256`. Supported values: `Sha256` (recommended default), `Sha384` (for higher strength or P-384 key policy), `Sha512` (highest SHA-2 strength or long-term archival). |
 | `TimeStampServer` | Gets or sets the [timestamp server]({%slug pdf-sign-timestamp-server%}) settings used to obtain a trusted timestamp for the signature. |
-| `CertificateChainIncludeOption` | Gets or sets the option that determines which certificates are included in the certificate chain. Available values: `None` (no chain info), `ExcludeRoot` (entire chain except root), `EndCertOnly` (only the end certificate), `WholeChain` (entire chain). [*Introduced in Q1 2026*] |
+| `CertificateChainIncludeOption` | Gets or sets the option that determines which certificates are included in the certificate chain. Available values: `None` (no chain info), `ExcludeRoot` (entire chain except root), `EndCertOnly` (only the end certificate), `WholeChain` (entire chain). [Introduced in Q1 2026] |
 
 ## Signature Encodings
 
@@ -61,9 +61,9 @@ RadPdfProcessing enables you to sign and validate signature fields using standar
 
 ## Signature Flags
 
-The signature flags were introduced in R2 2022 SP1. You can set the flags with the following code:
+The signature flags were introduced in R2 2022 SP1. Set the flags with the following code:
 
-#### **Example: Set signature flags**
+### Example: Set Signature Flags
 
 <snippet id='pdf-signature-flags'/>
 

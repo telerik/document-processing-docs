@@ -10,8 +10,8 @@ position: 0
 
 # Plain text
 
-Plain text is the contents of an ordinary sequential document readable as textual material without much processing.
+Plain text represents the contents of an ordinary sequential document readable as textual material without additional processing.
  
-![Rad Pdf Processing Formats And Conversion Txt 02](images/RadPdfProcessing_Formats_And_Conversion_Txt_01.png)
+![Plain text export from a PDF document](images/RadPdfProcessing_Formats_And_Conversion_Txt_01.png)
 
-[__TextFormatProvider__]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%}) allows you to extract the text content of a document.
+[`TextFormatProvider`]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%}) extracts the text content of a document.

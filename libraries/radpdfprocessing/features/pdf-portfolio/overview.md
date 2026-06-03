@@ -12,19 +12,19 @@ position: 0
 |Minimum Version|Q1 2026 (version 2026.1.402)|
 |----|----|
 
-PDF Portfolios (also known as PDF Collections or PDF Packages) allow organizing multiple embedded files within a single PDF with a structured user interface showing file metadata in columns (details view) or icons (tile view). This feature was introduced in PDF 1.7.
+PDF Portfolios (also known as PDF Collections or PDF Packages) organize multiple embedded files within a single PDF with a structured user interface showing file metadata in columns (details view) or icons (tile view). PDF 1.7 introduced this feature.
 
-**RadPdfProcessing** provides a comprehensive API for creating and configuring PDF Portfolios through the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}).**Portfolio** property. A portfolio enhances the presentation of [Embedded File Streams]({%slug radpdfprocessing-embedded-file-streams-overview%}) by defining a schema of metadata columns, sort order, and a preferred view mode.
+**RadPdfProcessing** provides a comprehensive API for creating and configuring PDF Portfolios through the `RadFixedDocument.Portfolio` property. A portfolio enhances the presentation of [Embedded File Streams]({%slug radpdfprocessing-embedded-file-streams-overview%}) by defining a schema of metadata columns, sort order, and a preferred view mode.
 
 ## Overview
 
 A PDF Portfolio provides the following capabilities:
 
-* **Schema definition**: Define custom fields (columns) that describe the embedded files—text, date, and number fields, as well as built-in fields like file name, size, and dates.
-* **Sorting**: Specify how the embedded files are ordered using one or more sort keys.
-* **View modes**: Choose between a details view (multi-column table), tile view (icon-based), or hidden mode.
-* **Initial document**: Designate which embedded file is displayed when the portfolio is first opened.
-* **Per-file metadata**: Assign custom field values to each embedded file through the `CollectionItems` property.
+* **Schema definition**—Define custom fields (columns) that describe the embedded files: text, date, and number fields, and built-in fields like file name, size, and dates.
+* **Sorting**—Specify how the embedded files are ordered using one or more sort keys.
+* **View modes**—Choose between a details view (multi-column table), tile view (icon-based), or hidden mode.
+* **Initial document**—Designate which embedded file is displayed when the portfolio is first opened.
+* **Per-file metadata**—Assign custom field values to each embedded file through the `CollectionItems` property.
 
 ## Requirements
 
@@ -32,19 +32,19 @@ NuGet packages:
 
 |.NET Framework|.NET Standard-compatible|
 |---|---|
-|**Telerik.Windows.Documents.Fixed**|**Telerik.Documents.Fixed**|
+|`Telerik.Windows.Documents.Fixed`|`Telerik.Documents.Fixed`|
 
-To use PDF Portfolios, ensure the following:
+To use PDF Portfolios, verify the following:
 
-* The **Portfolio.IsEnabled** property must be set to **true**.
+* The `Portfolio.IsEnabled` property must be set to `true`.
 * The document must contain at least one [Embedded File]({%slug radpdfprocessing-embedded-file-streams-overview%}).
-* The portfolio schema should have at least one field defined for meaningful presentation.
+* The portfolio schema must have at least one field defined for meaningful presentation.
 
-For a detailed description of each class, property, and method in the PDF Portfolio API, see the [PortfolioCollection]({%slug radpdfprocessing-pdf-portfolio-portfoliocollection%}) article.
+For a detailed description of each class, property, and method in the PDF Portfolio API, see [PortfolioCollection]({%slug radpdfprocessing-pdf-portfolio-portfoliocollection%}).
 
 ## Example Implementation
 
-The following example demonstrates how to create a PDF Portfolio with a fully configured schema, sorting, and per-file metadata modeling an email-like collection of embedded files.
+The following example shows how to create a PDF Portfolio with a fully configured schema, sorting, and per-file metadata modeling an email-like collection of embedded files.
 
 ![PdfProcessing PDF Portfolio](images/pdf-processing-pdf-portfolio.png)
 

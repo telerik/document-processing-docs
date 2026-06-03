@@ -10,17 +10,17 @@ position: 0
 
 # Prerequisites
 
-**Optical Character Recognition** (a.k.a. OCR) is the electronic or mechanical conversion of images of typed, handwritten, or printed text into a machine-encoded text from a scanned document.
+**Optical Character Recognition** (also known as OCR) is the electronic or mechanical conversion of images of typed, handwritten, or printed text into machine-encoded text from a scanned document.
 
-This topic describes the requirements needed by the [PdfProcessing]({%slug radpdfprocessing-overview%}) library to start using the **OcrFormatProvider**.
+This topic describes the requirements for the [PdfProcessing]({%slug radpdfprocessing-overview%}) library to use `OcrFormatProvider`.
 
 >important The default Tesseract implementation is at this point **Windows** and **Linux-only**. You can still use the OCR feature with a [custom implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}).
 
->note Used images should be **300 DPI** for best results.
+>note Used images must be **300 DPI** for best results.
 
 ## Required Packages
 
-In order to use the **OcrFormatProvider** you need to add the following packages:
+To use `OcrFormatProvider`, add the following packages:
 
 <table>
 <thead>
@@ -48,8 +48,8 @@ In order to use the **OcrFormatProvider** you need to add the following packages
 	</tr>
     <tr>
     <td colspan="2">
-        This reference is recommended to always be in the form of a NuGet package, as it will add the required Tesseract references and files automatically. Otherwise, a 
-        <a href="#manually-set-up-the-tesseract-native-assemblies">manual intervention</a> might be required.
+        Always add this reference as a NuGet package. It adds the required Tesseract references and files automatically. Otherwise, a 
+        <a href="#manually-set-up-the-tesseract-native-assemblies">manual setup</a> might be required.
     </td>
 </tr>
         <tr>
@@ -61,7 +61,7 @@ In order to use the **OcrFormatProvider** you need to add the following packages
 	    <td colspan="2">&nbsp;</td>
 	</tr>
 	<tr>
-        <td colspan="2">To export images different than <b>Jpeg</b> and <b>Jpeg2000</b> or ImageQuality different than High you will need to add a reference to the following assembly:</td> 
+        <td colspan="2">To export images different than <b>Jpeg</b> and <b>Jpeg2000</b> or ImageQuality different than High, add a reference to the following assembly:</td> 
     </tr>
 	<tr>
 	    <td><b>-</b></td>
@@ -80,7 +80,7 @@ In order to use the **OcrFormatProvider** you need to add the following packages
 		<td>
         <b>SkiaSharp.NativeAssets.*</b> (version {{site.skiasharpversion}})
         <br>
-        <sub><i>May differ according to the used platform. For <b>Linux</b> (since <b>Q2 2025</b>) use <b>SkiaSharp.NativeAssets.Linux.NoDependencies</b> and execute the <a href="#linux-specific-steps">required commands.</a></i></sub>
+        <sub><i>May differ according to the used platform. For <b>Linux</b> (starting with <b>Q2 2025</b>) use <b>SkiaSharp.NativeAssets.Linux.NoDependencies</b> and execute the <a href="#linux-specific-steps">required commands.</a></i></sub>
 	</tr>
 	<tr>
         <td><b>-</b></td>
@@ -92,7 +92,7 @@ In order to use the **OcrFormatProvider** you need to add the following packages
 </tbody>
 </table>
 
->important Ensure that all [Tesseract dependencies are properly set up](#manually-set-up-the-tesseract-native-assemblies).
+>important Verify that all [Tesseract dependencies are properly set up](#manually-set-up-the-tesseract-native-assemblies).
 
 ## Language Data Setup
 
@@ -100,7 +100,7 @@ Create a "**tessdata**" folder and populate it with the desired languages. The l
 
 ![Tesseract Languages Version](images/tesseract-languages-version.png)
 
-The "**tessdata**" folder's placement is determined by the user. The **DataPath** property of the [TesseractOcrProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}#tesseractocrprovider-public-api) points to the parent folder containing "**tessdata**", allowing the provider to locate and use it.
+The "**tessdata**" folder placement is determined by the user. The `DataPath` property of the [TesseractOcrProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}#tesseractocrprovider-public-api) points to the parent folder that contains "**tessdata**", which allows the provider to locate and use it.
 
 #### "tessdata" Structure:
 
@@ -111,17 +111,18 @@ tessdata
 └── spa.traineddata
 ```
 
-## Manually set up the Tesseract native assemblies
+## Manually Set Up the Tesseract Native Assemblies
 
-Ensure that the following already exist in the root directory of your project:
-- The "_Tesseract.dll_" assembly.
-- The Tesseract native assemblies (x86, x64): 
+Verify that the following files exist in the root directory of your project:
+
+* The `Tesseract.dll` assembly.
+* The Tesseract native assemblies (x86, x64): 
 
 ![Tesseract Native Assemblies Structure](images/tesseract-native-assemblies-structure.png)
 
 If these requirements are not met, go through the following steps:
 
-1. Download the "_tesseract50.dll_" and "_leptonica-1.82.0.dll_" native assemblies from the listed links:
+1. Download the `tesseract50.dll` and `leptonica-1.82.0.dll` native assemblies from the listed links:
     * https://github.com/charlesw/tesseract/tree/master/src/Tesseract/x64.
     * https://github.com/charlesw/tesseract/tree/master/src/Tesseract/x86.
 1. Create the following structure and add the two folders to the root of the application.
@@ -136,7 +137,8 @@ If these requirements are not met, go through the following steps:
         └── leptonica-1.82.0.dll
     ```
 
-### Linux-specific steps
+### Linux-Specific Steps
+
 Execute the following commands in the environment:
 
 |Ubuntu|Alpine|Fedora|
@@ -145,10 +147,10 @@ Execute the following commands in the environment:
 |```sudo apt install tesseract-ocr```|```sudo apk add tesseract-ocr```|```sudo dnf install leptonica```|
 |```sudo apt install libleptonica-dev```|```sudo apk add leptonica```||
  
->caution If the generated **tesseract/leptonica** .so files cannot be found, it is likely that they were installed with different names than expected. To resolve this, you can copy their names and location, and set them to the corresponding properties:
-> * **TesseractEnvironment.TesseractUnixLibName**
-> * **TesseractEnvironment.LeptonicaUnixLibName**
-> * **TesseractEnvironment.CustomSearchPath**
+>caution If the generated **tesseract/leptonica** .so files cannot be found, they were likely installed with different names than expected. Copy their names and location, and set them to the corresponding properties:
+> * `TesseractEnvironment.TesseractUnixLibName`
+> * `TesseractEnvironment.LeptonicaUnixLibName`
+> * `TesseractEnvironment.CustomSearchPath`
 
 ## See Also
 

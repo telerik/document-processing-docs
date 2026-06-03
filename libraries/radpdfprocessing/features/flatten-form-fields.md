@@ -9,24 +9,27 @@ position: 5
 
 # Flatten Form Fields
 
-The form field flattening feature removes all fields but preserves their content in the document. After this operation the document no longer can be edited. This functionality was added in R2 2021 version. 
+The form field flattening feature removes all fields but preserves their content in the document. After this operation, the document can no longer be edited. This feature is available starting with the R2 2021 release.
 
-There are two methods that you can use for this. One to flatten all fields and one to flatten a single field. The below examples demonstrate how to use them. 
+Two methods are available for flattening. One flattens all fields and the other flattens a single field. The following examples demonstrate how to use them.
 
-### Using the FlattenFormFields method 
+## Using the FlattenFormFields Method
 
-The __FlattenFormFields__ method does not take any parameters and will flatten all fields inside the document. 
+The `FlattenFormFields` method does not take any parameters and flattens all fields inside the document.
 
-#### __Example 1:  Flatten all fields__
+**Example 1: Flatten All Fields**
 
 <snippet id='pdf-flatten-all-fields'/>
 
-### Using the FlattenFormField method
+## Using the FlattenFormField Method
 
-The __FlattenFormField__ method takes the field that should be flattened as a parameter. The field must belong to the same document.
+The `FlattenFormField` method takes the field that you want to flatten as a parameter. The field must belong to the same document.
 
-#### __Example 2:  Flatten single field__
+**Example 2: Flatten a Single Field**
 
 <snippet id='pdf-flatten-single-field'/>
 
+## See Also
 
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})
