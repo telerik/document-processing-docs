@@ -45,11 +45,11 @@ The Agent Tools API provides foundational types that enable document management 
 
 ## Dependency Injection Support
 
-The Agent Tools API provides optional dependency injection support for applications that use the IServiceCollection pattern. These extension methods simplify registration of agent tools and their dependencies.
+The Agent Tools API provides optional dependency injection support for applications that use the `IServiceCollection` pattern. These extension methods simplify registration of agent tools and their dependencies.
 
 >note Using dependency injection is **not required**. The agent tool classes and repositories can be instantiated and used directly without a DI container.
 
-The following extension methods are available for registering agent tools with IServiceCollection:
+The following extension methods are available for registering agent tools with `IServiceCollection`:
 
 | Method | Description |
 |---|---|

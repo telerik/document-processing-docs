@@ -40,16 +40,16 @@ Output:
 
 You can see that **0,00** has been changed to **0.00** and **#.##** has been changed to **#,##**.
 
-This happens due to culture settings. For instance, using the German culture (`de-DE`) where the decimal separator is a comma and the group separator is a period, versus the English culture (`en-US`) where these separators are reversed, can lead to a different output format.
+This happens because of culture settings. For instance, the German culture (`de-DE`) uses a comma as the decimal separator and a period as the group separator. The English culture (`en-US`) reverses these separators, which can lead to a different output format.
 
 This knowledge base article also answers the following questions:
-- How to prevent undesired format conversion in Telerik Spreadsheet?
-- How to set custom culture settings for CellValueFormat?
-- How to retain original format string in CellValueFormat?
+* How to prevent undesired format conversion in Telerik Spreadsheet?
+* How to set custom culture settings for CellValueFormat?
+* How to retain original format string in CellValueFormat?
 
 ## Solution
 
-To prevent undesired format symbol exchanges, explicitly set the desired culture in your application using the [SpreadsheetCultureHelper]({%slug radspreadprocessing-features-setting-the-culture%}). Follow these steps:
+To prevent undesired format symbol exchanges, explicitly set the desired culture in your application by using the [SpreadsheetCultureHelper]({%slug radspreadprocessing-features-setting-the-culture%}). Follow these steps:
 
 1. Import the required namespaces:
    ```csharp
@@ -70,5 +70,5 @@ This approach ensures consistent handling of format strings regardless of the us
 
 ## See Also
 
-- [Number Formats in Telerik Document Processing]({%slug radspreadprocessing-features-number-formats%})
-- [Setting the Culture for Telerik Spreadsheet]({%slug radspreadprocessing-features-setting-the-culture%})
+* [Number Formats in Telerik Document Processing]({%slug radspreadprocessing-features-number-formats%})
+* [Setting the Culture for Telerik Spreadsheet]({%slug radspreadprocessing-features-setting-the-culture%})

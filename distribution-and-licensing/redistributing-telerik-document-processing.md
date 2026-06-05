@@ -10,7 +10,7 @@ position: 1
 
 # Redistributing Telerik Document Processing
 
-Telerik Document Processing is part of several Telerik bundles and is licensed under the conditions with which you've obtained the product. This topic contains technical guidelines for protecting the Telerik Document Processing binaries when redistributing them with your integrated product. 
+Telerik Document Processing is part of several Telerik bundles and is licensed under the conditions with which you have obtained the product. This topic contains technical guidelines for protecting the Telerik Document Processing binaries when redistributing them with your integrated product.
 
 | UI Components suite | Guidelines |
 |--------------------|---------------------------|
@@ -24,15 +24,15 @@ Telerik Document Processing is part of several Telerik bundles and is licensed u
 | UI for Silverlight ([Discontinued](https://www.telerik.com/products/silverlight/overview.aspx)) | [Protecting the Telerik UI for Silverlight Assemblies](https://docs.telerik.com/devtools/silverlight/licensing/protecting-telerik-assembly#protect-the-telerik-documents-assemblies-by-editing-the-source-code) |
 | UI for .NET MAUI ||
 
->important Protecting the Telerik dlls is required only with versions prior to **2025 Q2 (2025.2.520)**. With the introduction of our new [licensing mechanism](https://www.telerik.com/blogs/license-key-files-telerik-kendo-ui-products-2025-update), Telerik UI suites have simplified deployment requirements. __Starting with 2025 Q2, users are no longer required to protect the Telerik assemblies__. Instead, the respective Telerik product now requires [installing a license key]({%slug setting-up-license-key%}). Applications without a valid license will continue to function normally, but will contain a watermark.
+>important Protecting the Telerik dlls is required only with versions prior to **2025 Q2 (2025.2.520)**. With the introduction of the new [licensing mechanism](https://www.telerik.com/blogs/license-key-files-telerik-kendo-ui-products-2025-update), Telerik UI suites have simplified deployment requirements. **Starting with 2025 Q2, users are no longer required to protect the Telerik assemblies**. Instead, the respective Telerik product now requires [installing a license key]({%slug setting-up-license-key%}). Applications without a valid license will continue to function normally, but will contain a watermark.
 
 ## Using the Telerik Document Processing Libraries in Your Solutions
 
-In order to include the Telerik Document Processing libraries in your application, you should build the source code as described below. The source code of the Document Processing libraries is distributed together with the above-listed products' source code and is available for download from the client's account. 
+To include the Telerik Document Processing libraries in your application, build the source code as described below. The source code of the Document Processing libraries is distributed together with the above-listed products' source code and is available for download from your account.
 
-For the sake of the example it is assumed that the source distribution ZIP file is extracted in C:\DPL.         		         
+For the purpose of this example, the source distribution ZIP file is extracted in `C:\DPL`.         		         
  		 
- __Instructions__
+ **Instructions**
 
 1\. Open `C:\DPL\Documents\Licensing\AssemblyProtection.cs` in a text editor (notepad, Visual Studio, etc.). In versions of the suite prior to R2 2016, the path is `C:\DPL\Documents\Core\Core\Licensing\AssemblyProtection.cs`.   
             
@@ -59,7 +59,7 @@ For the sake of the example it is assumed that the source distribution ZIP file 
     }
 ```
 
-3\. Change the ApplicationName constant to match the name of your application:
+3\. Change the `ApplicationName` constant to match the name of your application:
 
 #### Before
 
@@ -74,8 +74,8 @@ For the sake of the example it is assumed that the source distribution ZIP file 
 ```
 
 
-4\. Save __AssemblyProtection.cs__ and rebuild.           
+4\. Save `AssemblyProtection.cs` and rebuild.           
 
 5\. In your application replace the existing references to the Telerik assemblies with the ones built from the source code.
 
-6\. If you run the application now you should get an exception with message “This version of *Product* is licensed only for use by Sample Application Name v2.0 (tm)”. Note that “Sample Application Name v2.0 (tm)” will be replaced with the value of the ApplicationName constant.
+6\. If you run the application now you will get an exception with the message "This version of *Product* is licensed only for use by Sample Application Name v2.0 (tm)". The "Sample Application Name v2.0 (tm)" text is replaced with the value of the `ApplicationName` constant.

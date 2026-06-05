@@ -1,22 +1,26 @@
 ---
 title: How to Make Bold only a Part of the Text in a Paragraph with RadWordsProcessing
-description: Learn how to achieve bold text for a specific part of an inline element using Telerik RadWordsProcessing.
+description: Learn how to apply bold formatting to a specific part of the text in a paragraph by using separate Run objects with RadWordsProcessing.
 type: how-to
 page_title: How to Make Bold only a Part of the Text in a Paragraph with RadWordsProcessing
 slug: create-bold-text-run-wordsprocessing
 tags: radwordsprocessing, docx, text, bold, run, document, processing, word
 res_type: kb
 ---
+
 ## Environment
+
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
 | 2024.1.124 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-Learn how to create a bold text part in a paragraph using RadWordsProcessing, while keeping the rest of the information regular. 
+
+Learn how to create a bold text part in a paragraph with RadWordsProcessing while keeping the rest of the text regular. 
 
 ## Solution
-To achieve bold text for a specific part of an inline element, such as a [Run]({%slug radwordsprocessing-model-run%}), you need to use two separate [Run]({%slug radwordsprocessing-model-run%}) objects with different font weights and sizes. Here is an example of how to accomplish this using Telerik [RadWordsProcessing]({%slug radwordsprocessing-overview%}):
+
+To apply bold formatting to a specific part of an inline element, such as a [Run]({%slug radwordsprocessing-model-run%}), use two separate [Run]({%slug radwordsprocessing-model-run%}) objects with different font weights and sizes. The following example shows the approach with [RadWordsProcessing]({%slug radwordsprocessing-overview%}):
 
 ```csharp
 RadFlowDocument document = new RadFlowDocument();
@@ -45,7 +49,7 @@ using (Stream output = File.OpenWrite(outputFilePath))
 
 Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
->note This code creates a `RadFlowDocument` and inserts a section and a paragraph. Two separate `Run` objects are used to define the bold and the regular text. Finally, the document is exported to a DOCX file and opened.
+>note This code creates a `RadFlowDocument` and inserts a section and a paragraph. Two separate `Run` objects define the bold and regular text. The document is then exported to a DOCX file and opened.
 
 ![Create Bold Text](images/create-bold-text-run-wordsprocessing.png)  
 

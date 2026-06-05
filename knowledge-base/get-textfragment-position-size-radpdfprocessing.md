@@ -22,9 +22,9 @@ Determining the precise location and size of a [TextFragment]({%slug radpdfproce
 ![TextFragment Position and Size](images/text-fragment-position-and-size.png)   
 
 This KB article also answers the following questions:
-- How can I find the exact location of a text in a PDF document?
-- What is the method to determine the dimensions of a text segment within a PDF file?
-- How to use the `MatrixPosition` for locating text in a PDF document?
+* How can I find the exact location of a text in a PDF document?
+* What is the method to determine the dimensions of a text segment within a PDF file?
+* How to use the `MatrixPosition` for locating text in a PDF document?
 
 ## Solution
 
@@ -41,7 +41,7 @@ To obtain the (x,y) coordinates and the dimensions (width and height) of a `Text
 
 2. **Calculate the Size (Width and Height):**
    
-   To determine the width and height of a `TextFragment`, leverage the measuring functionality of the `Block` object. First, insert the `TextFragment` into a `Block`, and then use the `Measure` method to find its size.
+   To determine the width and height of a `TextFragment`, use the measuring capability of the `Block` object. First, insert the `TextFragment` into a `Block`, and then use the `Measure` method to find its size.
 
    ```csharp
    private static Size GetFragmentSize(TextFragment textFragment)
@@ -53,12 +53,12 @@ To obtain the (x,y) coordinates and the dimensions (width and height) of a `Text
    }
    ```
 
-By following these steps, you can accurately locate a `TextFragment` within a PDF document and determine its size, enabling enhanced document processing and manipulation capabilities.
+By following these steps, you can accurately locate a `TextFragment` within a PDF document and determine its size for document processing and manipulation tasks.
 
 ## Notes
 
-- The `OffsetX` and `OffsetY` values pinpoint the location relative to the top-left corner of the PDF page.
-- The `Measure` method of the `Block` object provides the width and height of the contained `TextFragment`, facilitating precise layout and positioning operations.
+* The `OffsetX` and `OffsetY` values pinpoint the location relative to the top-left corner of the PDF page.
+* The `Measure` method of the `Block` object provides the width and height of the contained `TextFragment`. Use this for precise layout and positioning operations.
 
 ## See Also
 

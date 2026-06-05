@@ -16,13 +16,13 @@ Telerik Document Processing provides a set of Spreadsheet document APIs exposing
 
 ## Repositories
 
-A repository is a place in memory where we keep the documents we currently work with. The available repositories for managing workbooks are:
+A repository is a place in memory that stores the documents you currently work with. The available repositories for managing workbooks are:
 
 |Repository|Description|
 |----|----|
-|**IWorkbookRepository**|Provides a unified interface for managing spreadsheet workbooks. Extends IDocumentRepository with spreadsheet-specific creation capabilities.|
-|**InMemoryWorkbookRepository**|Repository for multi-document orchestration scenarios. Manages multiple workbooks in memory with support for creation and import.|
-|**SingleWorkbookRepository**|Provider for single-document analysis scenarios. Wraps an existing Workbook instance and does not support document creation.|
+|`IWorkbookRepository`|Provides a unified interface for managing spreadsheet workbooks. Extends `IDocumentRepository` with spreadsheet-specific creation capabilities.|
+|`InMemoryWorkbookRepository`|Repository for multi-document orchestration scenarios. Manages multiple workbooks in memory with support for creation and import.|
+|`SingleWorkbookRepository`|Provider for single-document analysis scenarios. Wraps an existing `Workbook` instance and does not support document creation.|
 
 ## Agent Tools
 
@@ -30,12 +30,12 @@ A repository is a place in memory where we keep the documents we currently work 
 
 Provides read-only agent tools for querying and analyzing spreadsheet content without modifying the underlying document. It is designed for safe analysis-only scenarios, enabling agents to:
 
-  - Inspect used ranges and worksheet metadata.
-  - Read small cell ranges for display/inspection.
-  - Find all occurrences of text/patterns with sampling.
-  - Extract unique values from ranges.
-  - Explore workbook and cell styles (names and properties).
-  - Filter rows by exact match and aggregate results.
+* Inspect used ranges and worksheet metadata.
+* Read small cell ranges for display/inspection.
+* Find all occurrences of text/patterns with sampling.
+* Extract unique values from ranges.
+* Explore workbook and cell styles (names and properties).
+* Filter rows by exact match and aggregate results.
 
 <table>
 <tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
@@ -144,7 +144,7 @@ Exposes a set of methods designed for automations and AI agents to modify spread
 
 ### SpreadProcessingWorksheetAgentTools
 
-Provides worksheet management tools for creating, deleting, and renaming worksheets in a workbook. These tools modify the workbook structure only (they do not alter cell content, formatting, or data). It is designed to be used as part of agent/execution pipelines and exposes high-level operations through [Tool]-annotated methods for agent frameworks.
+Provides worksheet management tools for creating, deleting, and renaming worksheets in a workbook. These tools modify the workbook structure only (they do not alter cell content, formatting, or data). It is designed to be used as part of agent/execution pipelines and exposes high-level operations through `[Tool]`-annotated methods for agent frameworks.
 
 <table>
 <tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
@@ -163,7 +163,7 @@ string documentId = null)</pre></td><td>Deletes a worksheet from a workbook by n
 ### SpreadProcessingFileManagementAgentTools 
 
 Provides document lifecycle management tools for spreadsheet workbooks—creating, listing, exporting, and importing in a way that is aligned with the Telerik AI Tools agent model.
-This class serves as a high-level agent tool wrapper that delegates core operations to an internal FileManagementTools instance backed by an IWorkbookRepository. The repository acts as the central document store (in-memory, file-based, or custom). Exports/Imports integrate with the file system via the configured outputDir.
+This class serves as a high-level agent tool wrapper that delegates core operations to an internal `FileManagementTools` instance backed by an `IWorkbookRepository`. The repository acts as the central document store (in-memory, file-based, or custom). Exports and imports integrate with the file system through the configured `outputDir`.
 
 <table>
 <tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>
@@ -183,11 +183,11 @@ string documentName = null)</pre></td><td>Imports a workbook from a given file i
 
 ### SpreadProcessingFormulaAgentTools
 
-Provides read-only formula and calculation tools for spreadsheets handled through Telerik’s SpreadProcessing stack. It enables you to:
+Provides read-only formula and calculation tools for spreadsheets handled through the Telerik SpreadProcessing stack. It enables you to:
 
-- Evaluate spreadsheet formulas/expressions without modifying the underlying document.
-- Discover all available formulas/expressions.
-- Retrieve syntax and parameter information for one or more formulas before using them.
+* Evaluate spreadsheet formulas/expressions without modifying the underlying document.
+* Discover all available formulas/expressions.
+* Retrieve syntax and parameter information for one or more formulas before using them.
 
 
 <table>
@@ -210,11 +210,11 @@ string documentId = null)</pre></td><td>Fetches description, syntax, and paramet
 
 Provides high-level data analysis agent tools that follow a **Split-Apply-Combine** pattern for working with tabular data without requiring knowledge of Excel formulas or cell addresses. These tools enable agents to:
 
-  - Examine worksheet structure, column names, data types, and sample values.
-  - Detect multiple separate data tables within a single worksheet.
-  - Retrieve and filter rows with pagination support for browsing large datasets.
-  - Perform aggregations (Sum, Average, Count, Min, Max, CountDistinct) with optional filtering and grouping.
-  - Compute grouped summaries (e.g., total sales per product category).
+* Examine worksheet structure, column names, data types, and sample values.
+* Detect multiple separate data tables within a single worksheet.
+* Retrieve and filter rows with pagination support for browsing large datasets.
+* Perform aggregations (Sum, Average, Count, Min, Max, CountDistinct) with optional filtering and grouping.
+* Compute grouped summaries (for example, total sales per product category).
 
 The recommended workflow is: call **DescribeData** first to understand the worksheet layout, then use **GetRows** to inspect specific records, and **Aggregate** to compute summaries.
 

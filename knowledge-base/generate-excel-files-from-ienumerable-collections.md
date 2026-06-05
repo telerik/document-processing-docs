@@ -1,6 +1,6 @@
 ---
 title: Generating Excel Documents from IEnumerable Collections
-description: Learn how to create Excel files from IEnumerable Collections using the RadSpreadProcessing library.
+description: Learn how to create Excel files from IEnumerable collections by iterating custom objects and filling worksheet cells using the RadSpreadProcessing library.
 type: how-to
 page_title: How to generate Excel Documents from IEnumerable Collections 
 slug: generate-excel-files-from-ienumerable-collections
@@ -18,12 +18,11 @@ ticketid: 1653503
 
 ## Description
 
-This article demonstrates a sample approach how to generate Excel documents from IEnumerable collections.
+This article demonstrates how to generate Excel documents from `IEnumerable` collections.
 
 ## Solution
 
-RadSpreadProcessing is the perfect fit for the requirement. It is possible to iterate a collection of any custom objects and populate the worksheet's cells with the values coming from the respective fields in the custom objects. A good example how to do it is available in the following code snippet which fills the data in a worksheet from a collection of Employee objects.
-This approach can be adapted to any custom collection that can be obtained as an input.
+`RadSpreadProcessing` is the ideal fit for this requirement. You can iterate a collection of custom objects and fill the worksheet cells with the values from the respective fields. The following code snippet shows how to fill data in a worksheet from a collection of `Employee` objects. You can adapt this approach to any custom collection that you receive as input.
 
 ```csharp
         static void Main(string[] args)
@@ -37,7 +36,7 @@ This approach can be adapted to any custom collection that can be obtained as an
             worksheet.Cells[5, 4].SetValue("Salary");
             List<Employee> employees = PopulateWithData();
 
-            //Let’s fill the document with the employee data:
+            //Let's fill the document with the employee data:
 
             int startRowIndex = 6;
             for (int i = 0; i < employees.Count; i++)
@@ -129,7 +128,7 @@ This approach can be adapted to any custom collection that can be obtained as an
 
 ## See Also
 
-- [RadSpreadProcessing]({%slug radspreadprocessing-overview%})
-- [Getting Started with RadSpreadProcessing Volume 1](https://www.telerik.com/blogs/getting-started-with-radspreadprocessing-volume-1)
-- [Getting Started with RadSpreadProcessing Volume 2](https://www.telerik.com/blogs/getting-started-with-radspreadprocessing-vol2)
-- [Getting Started with RadSpreadProcessing Vol3](https://www.telerik.com/blogs/getting-started-with-radspreadprocessing-vol3)
+* [RadSpreadProcessing]({%slug radspreadprocessing-overview%})
+* [Getting Started with RadSpreadProcessing Volume 1](https://www.telerik.com/blogs/getting-started-with-radspreadprocessing-volume-1)
+* [Getting Started with RadSpreadProcessing Volume 2](https://www.telerik.com/blogs/getting-started-with-radspreadprocessing-vol2)
+* [Getting Started with RadSpreadProcessing Vol3](https://www.telerik.com/blogs/getting-started-with-radspreadprocessing-vol3)

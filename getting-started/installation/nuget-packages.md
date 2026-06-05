@@ -10,9 +10,9 @@ position: 6
 
 # Available NuGet Packages 
 
-Telerik provides NuGet packages with the assemblies for all five Document Processing libraries: `RadPdfProcessing`, `RadSpreadProcessing`, `RadSpreadStreamProcessing`, `RadWordsProcessing`, and `RadZipLibrary`. These UI-independent cross-platform libraries let you process and convert content in various formats and work with archive files. We deliver these libraries as a complement to the Telerik UI component suites (UI for ASP.NET, Kendo UI, UI for WPF, UI for WinForms, UI for Blazor), and you do not need to purchase an additional license to use them.
+Telerik provides NuGet packages with the assemblies for all five Document Processing libraries: `RadPdfProcessing`, `RadSpreadProcessing`, `RadSpreadStreamProcessing`, `RadWordsProcessing`, and `RadZipLibrary`. These UI-independent cross-platform libraries let you process and convert content in various formats and work with archive files. The libraries are delivered as a complement to the Telerik UI component suites (UI for ASP.NET, Kendo UI, UI for WPF, UI for WinForms, UI for Blazor), and you do not need to purchase an additional license to use them.
 
-If your workflow relies on NuGet for package management, you can take advantage of the packages that we describe in this article. There is no need to download and install the Document Processing libraries by using other methods.
+If your workflow relies on NuGet for package management, you can take advantage of the packages described in this article. There is no need to download and install the Document Processing libraries by using other methods.
 
 >important The Telerik Document Processing libraries are available in two versions:
 >
@@ -24,13 +24,13 @@ If your workflow relies on NuGet for package management, you can take advantage 
 
 >caption Package lists to use with .NET Standard (left) and .NET Framework (right)
 
-![installation-nuget-packages 000](images/installation-nuget-packages000.png)
+![The NuGet package lists for .NET Standard and .NET Framework](images/installation-nuget-packages000.png)
 
->important The .NET Standard packages are compatible with any .NET version (e.g .NET 9), even if there are no packages explicitly available for the specific versions. The same applies to the .NET Framework packages.
+>important The .NET Standard packages are compatible with any .NET version (for example, .NET 9), even if there are no packages explicitly available for the specific versions. The same applies to the .NET Framework packages.
 
->note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
+>note Starting with **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. Telerik will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
 
-The following tables represent the available NuGet packages for the Document Processing libraries. Each table shows the package names for both .NET Framework and {{site.dotnetversions}} for Windows, as well as .NET Standard 2.0 (Support for {{site.dotnetversions}}) versions. Although we offer them as an addition to the Telerik UI components, you can use them without any UI components.
+The following tables represent the available NuGet packages for the Document Processing libraries. Each table shows the package names for both .NET Framework and {{site.dotnetversions}} for Windows, and .NET Standard 2.0 (Support for {{site.dotnetversions}}) versions. Although Telerik offers them as an addition to the Telerik UI components, you can use them without any UI components.
 
 ### Core Packages
 
@@ -61,7 +61,7 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Documents.ImageUtils</b>
 	</tr>
 	<tr>
-		<td colspan="2">This package is required when exporting to <code>PDF</code> format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the <a href="{%slug radpdfprocessing-cross-platform%}">PdfProcessing`s Cross-Platform Support</a> article. The package also depends on SkiaSharp. In order to use it, you will need to add a reference to SkiaSharp.
+		<td colspan="2">This package is required when exporting to <code>PDF</code> format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the <a href="{%slug radpdfprocessing-cross-platform%}">PdfProcessing Cross-Platform Support</a> article. The package also depends on SkiaSharp. To use it, you need to add a reference to SkiaSharp.
         </td>
 	</tr>
 	<tr>
@@ -131,7 +131,7 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Documents.Fixed.FormatProviders.Image.Skia</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">The package is required for the cross-patform <a href="{%slug radspreadprocessing-cross-platform-text-measure%}#skiatextmeasurer">SkiaTextMeasurer</a>. The package depends on SkiaSharp. In order to use this package, you will need to add a reference to SkiaSharp. The SkiaSharp.NativeAssets.* NuGet package is required as well. This package may differ according to the used platform. There are versions for Windows, MacOS, Linux, WebAssembly, Android, iOS, and others.</td>
+		<td colspan="2">The package is required for the cross-platform <a href="{%slug radspreadprocessing-cross-platform-text-measure%}#skiatextmeasurer">SkiaTextMeasurer</a>. The package depends on SkiaSharp. To use this package, you need to add a reference to SkiaSharp. The SkiaSharp.NativeAssets.* NuGet package is required as well. This package may differ according to the used platform. There are versions for Windows, MacOS, Linux, WebAssembly, Android, iOS, and others.</td>
 	</tr>
 	<tr>
 		<td><b><em>N/A</em></b></td>
@@ -145,7 +145,7 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Documents.Fixed.FormatProviders.Ocr</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">This package is needed for the <a href="{%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}">Optical Character Recognition (OCR)</a> functionality. This reference is recommended to always be in the form of a NuGet package, as it will add the required Tesseract references and files automatically. Otherwise, a manual intervention might be required.</td>
+		<td colspan="2">This package is needed for the <a href="{%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}">Optical Character Recognition (OCR)</a> feature. This reference is recommended to always be in the form of a NuGet package, as it adds the required Tesseract references and files automatically. Otherwise, a manual intervention might be required.</td>
 	</tr>
 	<tr>
 		<td><b>Telerik.Windows.Documents.TesseractOcr</b></td>

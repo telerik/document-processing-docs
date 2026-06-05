@@ -12,7 +12,7 @@ position: 5
 
 When building AI-powered document processing applications that serve multiple users, proper isolation and session management are critical. This article demonstrates production-ready patterns for managing multi-user scenarios where each user interacts with their own set of documents through AI agents.
 
-In single-user applications, you can create document repositories once and use them throughout the application lifecycle. However, in multi-user environments—such as web applications, SaaS platforms, or enterprise systems, you must ensure that:
+In single-user applications, you can create document repositories once and use them throughout the application lifecycle. However, in multi-user environments—such as web applications, SaaS platforms, or enterprise systems—you must ensure that:
 
 * Each user's documents remain isolated and inaccessible to other users
 * Document state persists appropriately across user interactions
@@ -38,11 +38,11 @@ Multi-user document processing systems face several critical risks:
 2. **[Multi-User Agentic Application](#multi-user-agentic-application)**: A standalone application pattern that manages multiple user agent sessions, each with isolated repositories and conversation history, suitable for desktop applications or microservices.
 
 Both implementations share the same core principles:
-- Strict per-user repository isolation
-- Safe execution of AI tools
-- Concurrency-safe session handling
+* Strict per-user repository isolation
+* Safe execution of AI tools
+* Concurrency-safe session handling
 
->important The provided examples in this article are purposed to show a sample approach for managing the documents storage. They can be further extended according to the complete requirement of the application.
+>important The provided examples in this article demonstrate a sample approach for managing the documents storage. They can be further extended according to the complete requirement of the application.
 
 ## Per-User Isolated Storage
 
@@ -52,7 +52,7 @@ This example implements a production-ready ASP.NET Core controller that addresse
 
 * **Avoiding Session Confusion**: The `UserSessionManager` uses a `ConcurrentDictionary<string, UserSession>` to maintain isolated sessions keyed by user ID. Each HTTP request—even if stateless—retrieves the same session for the same authenticated user, providing stateful behavior across multiple requests.
 
-* **Managing Resource Exhaustion**: The `SessionCleanupService` background service runs every 15 minutes to identify and remove sessions that haven't been accessed in the past 2 hours. This prevents indefinite memory growth from abandoned sessions.
+* **Managing Resource Exhaustion**: The `SessionCleanupService` background service runs every 15 minutes to identify and remove sessions that have not been accessed in the past 2 hours. This prevents indefinite memory growth from abandoned sessions.
 
 * **Handling Concurrent Access**: The `ConcurrentDictionary` ensures thread-safe session storage and retrieval, allowing multiple users to make simultaneous requests without race conditions. The `LastAccessedAt` timestamp is updated atomically on each access.
 
@@ -307,7 +307,7 @@ This example implements a self-contained multi-user agent system that addresses 
 
 * **Avoiding Session Confusion**: Unlike the web API pattern that relies on HTTP authentication, this pattern uses explicit user identification through the `GetSession(userId)` method. Each session maintains its own complete conversation history (`_history`) and tool collection, ensuring context never bleeds between users.
 
-* **Managing Resource Exhaustion**: While this pattern doesn't include automatic cleanup (since it's designed for scenarios where session lifecycle is explicitly managed), it provides `EndSession(userId)` for explicit cleanup and `Dispose()` methods on sessions. Applications using this pattern should implement their own timeout logic based on their specific requirements.
+* **Managing Resource Exhaustion**: While this pattern does not include automatic cleanup (because it is designed for scenarios where session lifecycle is explicitly managed), it provides `EndSession(userId)` for explicit cleanup and `Dispose()` methods on sessions. Applications using this pattern should implement their own timeout logic based on their specific requirements.
 
 * **Handling Concurrent Access**: The `ConcurrentDictionary<string, UserAgentSession>` in `MultiUserAgentApplication` ensures thread-safe session management. Multiple users can interact with their sessions simultaneously, and the `FunctionInvokingChatClient` wrapper handles tool execution safely.
 

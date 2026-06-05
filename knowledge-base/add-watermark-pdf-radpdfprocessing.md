@@ -1,6 +1,6 @@
 ---
 title: Adding a Watermark to PDF Files Using RadPdfProcessing
-description: Learn how to add custom watermarks to PDF documents using the RadPdfProcessing library.
+description: Learn how to add text watermarks across all pages of a PDF document using the RadPdfProcessing library with FixedContentEditor.
 type: how-to
 page_title: How to Add Watermarks to PDF Documents with RadPdfProcessing
 slug: add-watermark-pdf-radpdfprocessing
@@ -17,7 +17,7 @@ ticketid: 1653970
 
 ## Description
 
-This KB article demonstrates how to add a text watermark across all pages of a PDF document using RadPdfProcessing.
+This article shows how to add a text watermark across all pages of a PDF document using RadPdfProcessing.
 
 ## Solution
 
@@ -26,10 +26,10 @@ To add a watermark to PDF pages using RadPdfProcessing, follow these steps:
 1. Import the PDF document using [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 2. Iterate through each page of the document.
 3. Use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to add a watermark text block to each page.
-4. Customize the watermark's text properties, color, and position.
+4. Customize the watermark text properties, color, and position.
 5. [Export](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/pdfformatprovider#export) the document with watermarks back to a PDF file.
 
-Here is a complete code snippet demonstrating these steps:
+The following example shows these steps:
 
 ```csharp
         static void Main(string[] args)
@@ -77,5 +77,5 @@ Here is a complete code snippet demonstrating these steps:
 
 ## See Also
 
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
-- [SDK Example: Add Watermark](https://github.com/telerik/document-processing-sdk/blob/master/PdfProcessing/AddWatermark/Program.cs)
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
+* [SDK Example: Add Watermark](https://github.com/telerik/document-processing-sdk/blob/master/PdfProcessing/AddWatermark/Program.cs)

@@ -17,17 +17,17 @@ ticketid: 1709015
 
 ## Description
 
-How to extract multiple images from a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and copy them to the Windows clipboard in a format that allows pasting into MS Word or other applications. The goal is to paste all images at once into MS Word as a single clipboard instance.
+How to extract multiple images from a [`RadFixedDocument`]({%slug radpdfprocessing-model-radfixeddocument%}) and copy them to the Windows clipboard in a format that allows pasting into MS Word or other applications. The goal is to paste all images at once into MS Word as a single clipboard instance.
 
 This KB article also answers the following questions:
 
-* How can I copy all images from a PDF to the clipboard?
-* How can I paste multiple images from a clipboard into MS Word?
-* How can I convert images in a RadFixedDocument to HTML format for clipboard use?
+* How do I copy all images from a PDF to the clipboard?
+* How do I paste multiple images from a clipboard into MS Word?
+* How do I convert images in a `RadFixedDocument` to HTML format for clipboard use?
 
 ## Solution
 
-To copy images from a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) to the clipboard and paste them into MS Word, follow these steps:
+To copy images from a [`RadFixedDocument`]({%slug radpdfprocessing-model-radfixeddocument%}) to the clipboard and paste them into MS Word, follow these steps:
 
 1. Extract all images from the document pages.
 2. Convert each image to PNG format and embed it in an HTML fragment as Base64 data URIs.
@@ -127,8 +127,8 @@ static string CreateHtmlFormat(string html)
 **Notes:**
 
 * The HTML format allows the clipboard to hold multiple images as Base64 data URIs.
-* Applications supporting HTML clipboard format, like MS Word, will paste all images simultaneously.
-* The [GetBitmapSource]({%slug radpdfprocessing-model-imagesource%}#methods) method is used to extract images from the PDF.
+* Applications that support HTML clipboard format, such as MS Word, paste all images simultaneously.
+* The [`GetBitmapSource`]({%slug radpdfprocessing-model-imagesource%}#methods) method extracts images from the PDF.
 
 ## See Also
 

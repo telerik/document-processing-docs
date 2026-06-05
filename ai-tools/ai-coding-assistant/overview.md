@@ -25,7 +25,7 @@ The major features are listed in the table below.
 | Feature| MCP Server|
 |-----|----|
 |Prompt Handling|Handles complex, multi-step prompts|
-|Client Compatibility|Works with MCP-enabled clients (e.g., Cursor, Copilot Agent mode)|
+|Client Compatibility|Works with MCP-enabled clients (for example, Cursor, Copilot Agent mode)|
 |Code Suggestions|Can directly suggest changes and rebuild applications to verify code|
 |Response Focus|Primarily code-focused|
 
@@ -35,19 +35,19 @@ The major features are listed in the table below.
 
 You can use the AI Coding Assistant for:
 
-* **Initial code generation:** Quickly create / update / convert documents in your app to speed up the initial development.
-* **Basic document library configuration:** Enable or disable specific document library features, or fine tune the configuration through prompting. More complex configurations are possible but may require additional manual work to be production-ready.
+* **Initial code generation:** Quickly create, update, or convert documents in your app to speed up the initial development.
+* **Basic document library configuration:** Enable or disable specific document library features, or fine-tune the configuration through prompting. More complex configurations are possible but may require additional manual work to be production-ready.
 * **Dummy data generation:** Quickly add data to your app for testing and prototyping purposes. Avoid exposing or providing access to your proprietary or production data to AI-enabled tools.
 * **Step-by-step explanations:** Understand the solutions provided by the AI Coding Assistant through the detailed explanations (depends on the tool, mode, and model used). To further develop your knowledge, check the respective documentation.
-* **Preliminary troubleshooting:** Resolve obvious and easy-to-solve issues affecting your code. For more complex issues, look for assistance from the community or contact the support team.
+* **Preliminary troubleshooting:** Resolve common issues affecting your code. For more complex issues, look for assistance from the community or contact the support team.
 
 ## Recommendations
 
 Consider the following recommendations when working with the AI Coding Assistant:
 
 * When switching between tasks and files, start a new session in a new chat window to avoid polluting the context with irrelevant or outdated information.
-* At the time of publishing, **Claude Sonnet 4** and **GPT-5** produce optimal results.
-* Specify the [Target Framework]({%slug available-nuget-packages%}) (e.g. .NET Framework, .NET Standard, .NET  {{site.mindotnetversion}} or later (Target OS: *None*), .NET  {{site.mindotnetversion}} or later (Target OS: *Windows*)) for producing as high-quality results as possible.
+* At the time of publishing, **Claude Sonnet 4** and **GPT-5** produce the best results.
+* Specify the [Target Framework]({%slug available-nuget-packages%}) (for example, .NET Framework, .NET Standard, .NET  {{site.mindotnetversion}} or later (Target OS: *None*), .NET  {{site.mindotnetversion}} or later (Target OS: *Windows*)) to produce the best results.
 
 ## Usage Limits
 
@@ -77,7 +77,7 @@ Access to the Telerik Document Processing AI Coding Assistant depends on your [T
 </tr>
 <tr>
 <td><strong>Perpetual License</strong></td>
-<td>No*</td><td>Perpetual licenses have no access to the AI Coding Assistants. Start a trial license in order to use the AI coding tools.</td>
+<td>No*</td><td>Perpetual licenses have no access to the AI Coding Assistants. Start a trial license to use the AI coding tools.</td>
 </tr>
 
 </tbody>
@@ -97,15 +97,13 @@ Access to the Telerik Document Processing AI Coding Assistant depends on your [T
 
 The Telerik Document Processing AI Coding Assistant operates under strict privacy guidelines:
 
-* The Assistant does not have access to your workspace and application code. Note that when using the Telerik Document Processing MCP server (or any other MCP server), the LLM generates parameters for the MCP server request, which may include parts of your application code.
-
-* The Assistant does not have access to your workspace and application code. Note that when using the DPL MCP server (or any other MCP server), the LLM generates parameters for the MCP server request, which may include parts of your application code.
+* The Assistant does not have access to your workspace and application code. When you use the Telerik Document Processing MCP server (or any other MCP server), the LLM generates parameters for the MCP server request, which may include parts of your application code.
 * The Assistant does not use your prompts to train Telerik AI models.
 * The Assistant does not generate the actual responses and has no access to these responses. The Assistant only provides a better context that helps your selected model (for example, GPT, Gemini, Claude) provide better responses.
 * The Assistant does not associate your prompts to your Telerik user account. Your prompts and generated context are anonymized and stored for statistical and troubleshooting purposes.
-* The Assistant stores metrics about how often and how much you use it in order to ensure compliance with the [allowed number of requests that correspond to your current license](#usage-limits).
+* The Assistant stores metrics about how often and how much you use it to ensure compliance with the [allowed number of requests that correspond to your current license](#usage-limits).
 
-Make sure to also get familiar with the terms and privacy policy of your selected AI model and AI client.
+Review the terms and privacy policy of your selected AI model and AI client.
  
 ## Next Steps
 

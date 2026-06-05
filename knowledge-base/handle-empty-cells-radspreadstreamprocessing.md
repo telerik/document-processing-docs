@@ -1,6 +1,6 @@
 ---
 title: Handling Empty Cells with RadSpreadStreamProcessing
-description: This article demonstrates how to manage empty cells when importing an Excel file into a DataTable using RadSpreadStreamProcessing.
+description: Learn how to handle empty cells when importing an Excel file into a DataTable using RadSpreadStreamProcessing to prevent column misalignment.
 type: how-to
 page_title: How to Handle Empty Cells with RadSpreadStreamProcessing
 slug: handle-empty-cells-radspreadstreamprocessing
@@ -18,13 +18,13 @@ ticketid: 1678225
 
 ## Description
 
-When importing an Excel file into a [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-9.0) using [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}), empty cells are skipped, resulting in misalignment of the data with the columns. This article explains how to correctly handle empty cells during the import process, ensuring data is accurately represented in the DataTable.
+When importing an Excel file into a [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-9.0) using [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}), empty cells are skipped. This results in misalignment of the data with the columns. This article explains how to correctly handle empty cells during the import process and ensure that data is accurately represented in the DataTable.
 
 ![Empty Cells in SpreadStreamProcessing ><](images/spread-stream-processing-empty-cells.png)   
 
 ## Solution
 
-To handle empty cells correctly and maintain the alignment of data with the columns in the DataTable, manually verify when a skip in the cells occurs. Calculate how many cells this skip is and insert the same amount of DBNull.Value entries in the DataTable. This approach ensures that the structure of the DataTable accurately reflects the structure of the Excel file, including the empty cells.
+To handle empty cells correctly and maintain the alignment of data with the columns in the DataTable, manually verify when a skip in the cells occurs. Calculate how many cells this skip covers and insert the same number of `DBNull.Value` entries in the DataTable. This approach ensures that the structure of the DataTable accurately reflects the structure of the Excel file, including the empty cells.
 
 The following code snippet demonstrates how to implement this solution:
 

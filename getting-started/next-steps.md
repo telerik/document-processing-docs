@@ -10,14 +10,14 @@ position: 3
 
 # Next Steps
 
-If you are just getting started, you can find guidance in the following articles:
+If you are getting started, you can find guidance in the following articles:
 
 * [First Steps]({%slug getting-started-first-steps%})
 * [Explore features]({% slug getting-started-explore-features %})
 
 ## More Learning Resources
 
-You don't need all of this immediately, but you can use this list as a starting point for future reference. 
+You do not need all of this immediately, but you can use this list as a starting point for future reference. 
 
 Installation, Distribution and Licensing
 * [System Requirements]({%slug installation-system-requirements%})

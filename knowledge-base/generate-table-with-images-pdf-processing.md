@@ -1,8 +1,8 @@
 ---
-title: How to Generate a Table with Images with PdfProcessing
-description: Learn how to generate a table with images with PdfProcessing.
+title: Generating a Table with Images Using PdfProcessing
+description: Learn how to create a PDF document containing a table with images by using the RadPdfProcessing library and the FixedContentEditor class.
 type: how-to
-page_title: How to Generate a Table with Images with PdfProcessing
+page_title: Generating a Table with Images Using PdfProcessing
 slug: generate-table-with-images-pdf-processing
 tags: radpdfprocessing, pdf, table, image, radfixeddocument, document, processing, fixed
 res_type: kb
@@ -15,13 +15,13 @@ res_type: kb
 
 ## Description
 
-Learn how to create a PDF document containing a [Table]({%slug radpdfprocessing-editing-table-overview%}) with [images]({%slug radpdfprocessing-model-image%}).
+This article shows how to create a PDF document containing a [Table]({%slug radpdfprocessing-editing-table-overview%}) with [images]({%slug radpdfprocessing-model-image%}).
 
 ## Solution
 
-[RadPdfProcessing]({%slug radpdfprocessing-overview%}) is suitable for such a requirement and it allows a convenient API for creating a RadFixedDocument from scratch and populating a table with image content:
+[RadPdfProcessing]({%slug radpdfprocessing-overview%}) provides a convenient API for creating a `RadFixedDocument` from scratch and filling a table with image content.
 
-Here is an example of how to implement this solution:
+The following example shows how to implement this solution:
 
 ```csharp
          static void Main(string[] args)
@@ -78,11 +78,12 @@ Here is an example of how to implement this solution:
         }
 ```
 
-  ![Table with Images](images/pdf-table-with-images.png)   
+![Table with Images](images/pdf-table-with-images.png)
 
-# See Also
-- [RadPdfProcessing]({%slug radpdfprocessing-overview%})
-- [Table]({%slug radpdfprocessing-editing-table-overview%})
-- [Images]({%slug radpdfprocessing-model-image%})
+Adjust the code according to your specific requirements and environment.
 
-Remember to adjust the code according to your specific requirements and environment.
+## See Also
+
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [Images]({%slug radpdfprocessing-model-image%})

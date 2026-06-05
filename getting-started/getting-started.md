@@ -14,15 +14,15 @@ position: 0
 
 >tip More information about the suites that include Telerik Document Processing and how to install them is available in the [Installing on Your Computer]({%slug installation-installing-on-your-computer%}) article.
 
->important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
+>important Install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
 
 You can find all Document Processing Libraries packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article.
 
 ## Getting Started Resources by Library
 
-More information about each of the Telerik Document Processing libraries is available in the articles listed below.
+More information about each of the Telerik Document Processing libraries is available in the following articles.
 
-### Words (text) processing
+### Words (Text) Processing
 
 * [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%})
 
@@ -34,7 +34,7 @@ More information about each of the Telerik Document Processing libraries is avai
 
 * [Export to TXT (plain text) using TxtFormatProvider]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%})
 
-### Spreadsheet processing
+### Spreadsheet Processing
 
 * [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%})
 
@@ -50,19 +50,19 @@ More information about each of the Telerik Document Processing libraries is avai
 
 * [Export to TXT (plain text) using TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
 
-### Fast spreadsheet generation
+### Fast Spreadsheet Generation
 
 * [Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})
 
-### PDF processing
+### PDF Processing
 
 * [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
 
 * [Import/export from/to PDF using PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 
-### Working with ZIP files
+### Working with ZIP Files
 
-* [Getting started with RadZipLibrary]({%slug radziplibrary-gettingstarted%})
+* [Getting Started with RadZipLibrary]({%slug radziplibrary-gettingstarted%})
 
 ## See Also
 

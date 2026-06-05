@@ -17,22 +17,23 @@ ticketid: 1656247
 
 ## Description
 
-When working with Word templates that include checkboxes as content controls, you may need to change the state of a checkbox based on certain conditions. This KB article provides a method to programmatically check or uncheck a checkbox using the RadWordsProcessing library.
+When working with Word templates that include checkboxes as content controls, you may need to change the state of a checkbox based on certain conditions. This article shows how to programmatically check or uncheck a checkbox using the RadWordsProcessing library.
 
-This KB article also answers the following questions:
-- How can I programmatically check a checkbox in a Word document?
-- How do I modify the state of a checkbox in a Word template?
-- What is the method to change checkbox states in Word documents using C#?
+This article also answers the following questions:
+
+* How can I programmatically check a checkbox in a Word document?
+* How do I change the state of a checkbox in a Word template?
+* What is the method to change checkbox states in Word documents using C#?
 
 ## Solution
 
 To change the state of a checkbox in a Word document, follow these steps:
 
 1. Identify the content control that represents the checkbox.
-2. Change the checkbox's state to either checked or unchecked.
+2. Change the checkbox state to either checked or unchecked.
 3. Update the visual representation of the checkbox accordingly.
 
-Below is a method that demonstrates how to achieve this:
+The following method shows how to achieve this:
 
 ```csharp
 private static void ChangeCheckboxState(SdtRangeStart sdt)
@@ -74,7 +75,7 @@ private static void ChangeCheckboxState(SdtRangeStart sdt)
 }
 ```
 
-To apply this method, iterate through the content controls in your document, and call `ChangeCheckboxState` for each checkbox you wish to modify. Alternatively, get the first SdtRangeStart and update its state:
+To apply this method, iterate through the content controls in your document and call `ChangeCheckboxState` for each checkbox you want to change. Alternatively, get the first `SdtRangeStart` and update its state:
 
 ```csharp
 SdtRangeStart stdStart = document.EnumerateChildrenOfType<SdtRangeStart>().First();
@@ -84,10 +85,10 @@ ChangeCheckboxState(stdStart);
 
 ## Notes
 
-- Ensure that you have identified the correct content control by checking its tag or other properties.
-- The visual representation of the checkbox is determined by the font family and character code specified in the `CheckedState` and `UncheckedState` of the `CheckBoxProperties`.
+* Verify that you have identified the correct content control by checking its tag or other properties.
+* The visual representation of the checkbox is determined by the font family and character code specified in the `CheckedState` and `UncheckedState` of the `CheckBoxProperties`.
 
 ## See Also
 
-- [Working with Content Controls]({%slug wordsprocessing-model-working-with-content-controls%})
-- [Content Controls (Structured Document Tags)]({%slug wordsprocessing-model-content-controls%})
+* [Working with Content Controls]({%slug wordsprocessing-model-working-with-content-controls%})
+* [Content Controls (Structured Document Tags)]({%slug wordsprocessing-model-content-controls%})

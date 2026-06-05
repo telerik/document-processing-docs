@@ -17,16 +17,16 @@ ticketid: 1675626
 
 ## Description
 
-Learn how to convert a specific table from a PDF file into a [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-5.0) object using **Telerik Document Processing** libraries.
+Learn how to convert a specific table from a PDF file into a [DataTable](https://learn.microsoft.com/en-us/dotnet/api/system.data.datatable?view=net-5.0) object using the **Telerik Document Processing** libraries.
 
 ## Solution
 
-Telerik Document Processing libraries **do not** offer a **direct** method to convert a PDF table to a DataTable object. However, a feasible workaround is available. This method involves utilizing MS Excel or [RadSpreadsheet](https://docs.telerik.com/devtools/winforms/controls/spreadsheet/overview) for the intermediary conversion step.
+The Telerik Document Processing libraries **do not** offer a **direct** method to convert a PDF table to a `DataTable` object. However, a feasible workaround is available. This method uses MS Excel or [RadSpreadsheet](https://docs.telerik.com/devtools/winforms/controls/spreadsheet/overview) for the intermediary conversion step.
 
-1. Select and copy the desired table's content from the PDF file.
+1. Select and copy the desired table content from the PDF file.
 2. Paste the copied content into **MS Excel** or **RadSpreadsheet**. This step converts the PDF table into an Excel format.
 3. Save the document into XLSX with [RadSpreadProcessing]({%slug radspreadprocessing-overview%}).
-4. Use the RadSpreadProcessing library to convert the Excel document into a DataTable. Utilize the [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%}) from RadSpreadProcessing for this conversion.
+4. Use the RadSpreadProcessing library to convert the Excel document into a `DataTable`. Use the [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%}) from RadSpreadProcessing for this conversion.
 
 Here is a code snippet demonstrating the conversion of an XLSX document to a DataTable using RadSpreadProcessing:
 
@@ -52,11 +52,11 @@ DataTableFormatProvider dataTableFormatProvider = new DataTableFormatProvider();
 dataTable = dataTableFormatProvider.Export(worksheet);
 ```
 
-This solution provides a way to parse PDF table content and use it as a DataTable, leveraging the powerful features of Telerik Document Processing libraries.
+This solution provides a way to parse PDF table content and use it as a `DataTable`, using the features of the Telerik Document Processing libraries.
 
 ## See Also
 
-- [RadWordsProcessing Overview]({%slug radwordsprocessing-overview%})
-- [RadSpreadProcessing Overview]({%slug radspreadprocessing-overview%})
-- [Using DataTable Format Provider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
-- [Import and Export to Excel File Formats]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
+* [RadWordsProcessing Overview]({%slug radwordsprocessing-overview%})
+* [RadSpreadProcessing Overview]({%slug radspreadprocessing-overview%})
+* [Using DataTable Format Provider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
+* [Import and Export to Excel File Formats]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})

@@ -1,6 +1,6 @@
 ---
 title: Generating PDF with Headers and Footers from Separate HTML Files
-description: Learn how to generate PDF documents with headers and footers using separate HTML files.
+description: Learn how to combine separate HTML files for header, footer, and body content into a single PDF document using the RadWordsProcessing HtmlFormatProvider and DocumentElementImporter.
 type: how-to
 page_title: Generating PDF with Headers and Footers from Separate HTML Files
 meta_title: Generating PDF with Headers and Footers from Separate HTML Files
@@ -18,15 +18,15 @@ ticketid: 1702165
 
 ## Description
 
-Learn how to combine **separate** HTML files for **header**, **footer** and **content** into one common document and product a PDF document with the result.
+This article shows how to combine separate HTML files for header, footer, and content into one document and produce a PDF with the result.
 
 ## Solution
 
-To generate a PDF with separate headers and footers, process the HTML files using RadWordsProcessing. Follow these steps:
+To generate a PDF with separate headers and footers, process the HTML files with `RadWordsProcessing`. Follow these steps:
 
-1. **Import the HTML content**: Use the [HtmlFormatProvider]({%slug radwordsprocessing-overview%}) to import the HTML content into [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) objects.
-2. **Add headers and footers**: Use the [DocumentElementImporter]({%slug radwordsprocessing-editing-import-document-element%}) to insert [header and footer]({%slug radwordsprocessing-model-headers-footers%}) content into the main document.
-3. **Export the document to PDF**: Use the [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the final document to PDF format.
+1. **Import the HTML content**: Use the [`HtmlFormatProvider`]({%slug radwordsprocessing-overview%}) to import the HTML content into [`RadFlowDocument`]({%slug radwordsprocessing-model-radflowdocument%}) objects.
+2. **Add headers and footers**: Use the [`DocumentElementImporter`]({%slug radwordsprocessing-editing-import-document-element%}) to insert [header and footer]({%slug radwordsprocessing-model-headers-footers%}) content into the main document.
+3. **Export the document to PDF**: Use the [`PdfFormatProvider`]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the final document to PDF format.
 
 ### Code Example
 
@@ -75,7 +75,7 @@ To generate a PDF with separate headers and footers, process the HTML files usin
             Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
         }
 ```
-Let's have the following 3 separate HTML files: 
+The following three separate HTML files serve as input:
 
 * Header HTML:
 
@@ -93,7 +93,7 @@ Let's have the following 3 separate HTML files:
 ``` 
 ![HTML Header](images/html-header-preview.png)
 
-* Footer HTML
+* Footer HTML:
 
 ```html
 <p style="text-align: center; font-size: 10pt;">
@@ -106,7 +106,7 @@ Let's have the following 3 separate HTML files:
 ``` 
 ![HTML Footer](images/html-footer-preview.png)    
 
-* Content HTML
+* Content HTML:
 
 ```html
 <p>This is the main content of the document.</p>
@@ -114,11 +114,11 @@ Let's have the following 3 separate HTML files:
 ``` 
 ![HTML Content](images/html-content-preview.png)
 
-The result PDF document combined all of the HTML files in one common document:
+The resulting PDF document combines all of the HTML files into one common document:
 
 ![Combined PDF](images/combined_pdf.png)  
 
 ## See Also
 
-- [DocumentElementImporter]({%slug radwordsprocessing-editing-import-document-element%}) 
-- [Headers and footers]({%slug radwordsprocessing-model-headers-footers%}) 
+* [DocumentElementImporter]({%slug radwordsprocessing-editing-import-document-element%})
+* [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})

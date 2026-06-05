@@ -1,7 +1,7 @@
 ---
 title: MCP Server as a NuGet Package
 page_title: Telerik DPL MCP (Model Context Protocol) Server as a NuGet Package
-description: Learn how to add and use the Telerik Document Processing MCP Server via a NuGet package with the dnx command as a .NET Document Processing AI coding assistant and code generator for better developer productivity. The Telerik Document Processing MCP server provides proprietary context about Telerik UI for .NET Document Processing to AI-powered software.
+description: Learn how to add and use the Telerik Document Processing MCP Server through a NuGet package with the dnx command as a .NET Document Processing AI coding assistant and code generator for better developer productivity. The Telerik Document Processing MCP server provides proprietary context about Telerik UI for .NET Document Processing to AI-powered software.
 slug: ai-mcp-server-as-a-nuget
 tags: mcp, server, nuget, ai, dotnet, telerik, coding, assistant
 published: True
@@ -12,14 +12,14 @@ position: 2
 
 The Telerik Document Processing [MCP (Model Context Protocol) server](https://modelcontextprotocol.io/introduction) is also available as a NuGet package. This NuGet distribution exposes the same AI Coding Assistant functionality as the npm package. 
 
-Beginning with **.NET 10**, it can be executed directly via the `dnx` command. For **.NET 8 and .NET 9** (where `dnx` is not available), you can [install it as a global dotnet tool](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install) and invoke its executable.
+Starting with **.NET 10**, you can execute it directly through the `dnx` command. For **.NET 8 and .NET 9** (where `dnx` is not available), you can [install it as a global dotnet tool](https://learn.microsoft.com/dotnet/core/tools/dotnet-tool-install) and invoke its executable.
 
 ## Prerequisites 
 
 | Target Runtime | Required SDK | Invocation Method | Notes |
 |----------------|--------------|-------------------|-------|
-| .NET 8 / .NET 9 | .NET 8 or .NET 9 SDK | [dotnet tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools) | `dnx` not supported; install tool manually |
-| .NET 10 | .NET 10 SDK (Preview 6 or newer) | `dnx` dynamic execution | Simplest approach; no prior install step |
+| .NET 8 / .NET 9 | .NET 8 or .NET 9 SDK | [dotnet tool](https://learn.microsoft.com/dotnet/core/tools/global-tools) | `dnx` not supported. Install tool manually. |
+| .NET 10 | .NET 10 SDK (Preview 6 or later) | `dnx` dynamic execution | Simplest approach. No prior install step. |
 
 Additional requirements:
 
@@ -44,7 +44,7 @@ Additional requirements:
 
   * Global installation
 
-Install the MCP server as a local tool in your solution root (or another chosen path):
+Install the MCP server as a global tool in your solution root (or another chosen path):
 
 ````powershell
 dotnet tool install -g Telerik.DPL.MCP
@@ -56,16 +56,16 @@ If updating:
 dotnet tool update -g Telerik.DPL.MCP
 ````
 
-These commands install/update the Telerik DPL MCP [dotnet tool](https://learn.microsoft.com/en-us/dotnet/core/tools/global-tools) globally. Global tools are installed in the following directories by default when you specify the **-g** or **--global** option:
+These commands install/update the Telerik DPL MCP [dotnet tool](https://learn.microsoft.com/dotnet/core/tools/global-tools) globally. Global tools are installed in the following directories by default when you specify the **-g** or **--global** option:
 
-- Windows - `%USERPROFILE%\.dotnet\tools`
-- Linux/MacOS - `$HOME/.dotnet/tools`
+* Windows - `%USERPROFILE%\.dotnet\tools`
+* Linux/MacOS - `$HOME/.dotnet/tools`
 
   * Local installation
 
-    - Navigate to the solution folder.
-    - Run `dotnet tool new-manifest` in the Terminal.
-    - Run `dotnet tool install Telerik.DPL.MCP` in the Terminal.
+    1. Navigate to the solution folder.
+    2. Run `dotnet tool new-manifest` in the Terminal.
+    3. Run `dotnet tool install Telerik.DPL.MCP` in the Terminal.
 
 ### .NET 10
 
@@ -137,9 +137,9 @@ Use these settings when configuring the server in your MCP client:
     }
 ```
 
-You may substitute `TELERIK_LICENSE` instead of `TELERIK_LICENSE_PATH` (*see [License Configuration](#license-configuration) section below for details and recommendations*). The `inputs` array is optional and not required for the current functionality.
+You can substitute `TELERIK_LICENSE` instead of `TELERIK_LICENSE_PATH` (*see [License Configuration](#license-configuration) section below for details and recommendations*). The `inputs` array is optional and not required for the current functionality.
 
-After saving the file, restart Visual Studio and enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/en-us/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
+After saving the file, restart Visual Studio and enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
 
 ![An image demonstrating how to enable the Telerik DPL MCP tool in Visual Studio](images/vs-enable-dpl-mcp-tool.png) 
 
@@ -151,7 +151,7 @@ To enable the server globally for all projects, add the `.mcp.json` file to your
 
 Add your [Telerik license key]({%slug setting-up-license-key%}) using one of these options in the `env` section.
 
-__Option 1: License File Path (Recommended)__
+**Option 1: License File Path (Recommended)**
 
 ````json
 "env": {
@@ -163,7 +163,7 @@ The `THE_PATH_TO_YOUR_LICENSE_FILE` should point to the `telerik-license.txt` fi
 
 `"TELERIK_LICENSE_PATH": "%appdata%/Telerik/telerik-license.txt"`
 
-__Option 2: Direct License Key__
+**Option 2: Direct License Key**
 
 ````json
 "env": {
@@ -171,7 +171,7 @@ __Option 2: Direct License Key__
 }
 ````
 
-> Option 1 is recommended unless you're sharing settings across different systems. Remember to [update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
+> Option 1 is recommended unless you share settings across different systems. Remember to [update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
 
 ## Visual Studio Usage
 

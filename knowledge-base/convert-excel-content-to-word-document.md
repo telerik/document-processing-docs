@@ -13,14 +13,16 @@ res_type: kb
 | 2024.1.124 | Document Processing Libraries (.NET Standard)|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-A common requirement is to convert XLSX documents to DOCX format. However, direct conversion is not supported.
 
-This tutorial demonstrates a sample approach how to convert an Excel document into an image and insert it into a Word document.
+A common requirement is to convert XLSX documents to DOCX format. However, the libraries do not support direct conversion.
+
+This article demonstrates how to convert an Excel document into an image and insert it into a Word document.
 
 ![Excel to Word document](images/xlsx-to-docx.png)  
 
 ## Solution
-To accomplish this task, we will need to use [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), [RadPdfProcessing]({%slug radpdfprocessing-overview%}) and [RadWordsProcessing]({%slug radwordsprocessing-overview%}) libraries. Follow the steps below:
+
+To accomplish this task, use the [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), [RadPdfProcessing]({%slug radpdfprocessing-overview%}), and [RadWordsProcessing]({%slug radwordsprocessing-overview%}) libraries. Follow the steps below:
 
 1. Import the Excel file as a Workbook using the [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) from the SpreadProcessing library.
 2. Select the desired range of the content to export.
@@ -146,9 +148,10 @@ Size CalculateRangeSize(Worksheet worksheet, CellRange range)
     return new Size(totalWidth, totalHeight);
 }
 ```
->note Please be aware that the resolution of the exported images may vary depending on the settings used. You can adjust the image quality, compression, scale factor, and anti-aliasing properties in the SkiaImageFormatProvider to achieve the desired results.
+>note The resolution of the exported images may vary depending on the settings used. You can adjust the image quality, compression, scale factor, and anti-aliasing properties in the `SkiaImageFormatProvider` to achieve the desired results.
 
-# See Also
-- [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) 
-- [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
-- [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+## See Also
+
+* [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) 
+* [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
+* [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})

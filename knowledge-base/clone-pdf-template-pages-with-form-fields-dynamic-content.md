@@ -19,11 +19,11 @@ ticketid: 1709987
 
 When working with PDF templates that contain form fields and annotations, you may need to dynamically populate them with content that exceeds the available space on a single page. In such cases, you need to clone the template page multiple times to accommodate all the content while preserving the form fields and annotations on each duplicated page.
 
-This article demonstrates how to import a PDF template, calculate the required number of pages based on the content length, clone the template page using [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}), add dynamic text content, and populate form fields.
+This article shows how to import a PDF template, calculate the required number of pages based on the content length, clone the template page using [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}), add dynamic text content, and populate form fields.
 
 ## Solution
 
-To clone PDF template pages with form fields and add dynamic content, use the **Measure** method of the [Block]({%slug radpdfprocessing-editing-block%}) class to measure content, [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) to duplicate pages, and [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to position text blocks. The form fields are automatically duplicated with each page clone.
+To clone PDF template pages with form fields and add dynamic content, use the `Measure` method of the [Block]({%slug radpdfprocessing-editing-block%}) class to measure content, [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) to duplicate pages, and [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to position text blocks. The form fields are automatically duplicated with each page clone.
 
 First, define the boundaries where the content will be inserted in the template. These values depend on your specific template layout and available space for dynamic content.
 
@@ -246,8 +246,9 @@ private static void AddTextBlocksToPages(RadFixedDocument document, string[] tex
 ```
 
 ## See Also
-- [Block]({%slug radpdfprocessing-editing-block%})
-- [PdfStreamWriter Overview]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-- [FormFields]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
-- [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+
+* [Block]({%slug radpdfprocessing-editing-block%})
+* [PdfStreamWriter Overview]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [FormFields]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
+* [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})

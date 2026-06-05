@@ -1,6 +1,6 @@
 ---
 title: Merging Headers, Footers, and Content in DOCX Documents
-description: Learn how to merge headers, footers, and content in DOCX documents using RadWordsProcessing for Document Processing.
+description: Learn how to merge headers, footers, and content from multiple DOCX documents into a single file using RadWordsProcessing and DocumentElementImporter.
 type: how-to
 page_title: How to Merge Headers, Footers, and Content in DOCX Documents | RadWordsProcessing
 slug: merge-headers-footers-content-docx-documents
@@ -9,20 +9,23 @@ res_type: kb
 ---
 
 ## Environment
+
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2023.3.1106 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-This tutorial shows how to merge headers, footers, and content from multiple DOCX documents - specifically, append headers and merge the content inside a final document.
 
-#### Headers
+This article shows how to merge headers, footers, and content from multiple DOCX documents. Specifically, it demonstrates how to append headers and merge the content inside a final document.
+
+### Headers
 ![Headers](images/merge-headers.png)
 
-#### Footers 
+### Footers 
 ![Footers](images/merge-footers.png)
 
 ## Solution
+
 To merge the headers, footers, and content in DOCX documents, follow these steps:
 
 1. Use the [DocumentElementImporter]({%slug radwordsprocessing-editing-import-document-element%}) to prepare a document element from the source document for import into the target document.
@@ -30,10 +33,10 @@ To merge the headers, footers, and content in DOCX documents, follow these steps
 3. Merge the footers of the source document with the target document.
 4. Use the `RadFlowDocumentEditor` to insert the content of the documents into the final document.
 
-#### Final document 
-![Final ](images/merged-headers-footers.png)
+### Final Document 
+![Final document with merged headers and footers](images/merged-headers-footers.png)
 
-Here is a sample code snippet that demonstrates how to accomplish this:
+The following code snippet shows how to accomplish this:
 
 ```csharp
 DocxFormatProvider _DocXProvider = new DocxFormatProvider(); 
@@ -99,11 +102,13 @@ private static void MergeFooters(RadFlowDocument target, RadFlowDocument source)
 ```
 
 ## Notes
-- This solution assumes you have the necessary references and dependencies set up in your project.
-- Make sure to adjust the file paths in the code snippet to match the location of your files.
-- This code snippet uses the `RadFlowDocument` class from the RadWordsProcessing library.
+
+* This solution assumes you have the necessary references and dependencies set up in your project.
+* Adjust the file paths in the code snippet to match the location of your files.
+* This code snippet uses the `RadFlowDocument` class from the RadWordsProcessing library.
 
 ## See Also
-- [RadWordsProcessing Documentation]({%slug radwordsprocessing-overview%})
-- [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
-- [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})
+
+* [RadWordsProcessing Documentation]({%slug radwordsprocessing-overview%})
+* [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})

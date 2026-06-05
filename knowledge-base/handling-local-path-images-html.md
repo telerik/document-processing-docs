@@ -18,24 +18,24 @@ ticketid: 1699078
 
 ## Description
 
-When importing an HTML document using Telerik WordsProcessing, images with local file paths (e.g., "C:\temp\image.png") may fail to load which leads to missing image content once the document gets exported. Instead, blank placeholders appear in the media section of the exported document. This happens due to the lack of handling for external resources during the import process. Embedding images as base64-encoded data in the HTML works, but a more flexible solution involves using the `HtmlImportSettings` with the `LoadImageFromUri` event.
+When importing an HTML document using Telerik WordsProcessing, images with local file paths (for example, "C:\temp\image.png") may fail to load. This leads to missing image content once the document is exported. Blank placeholders appear in the media section of the exported document because external resources are not handled during the import process. Embedding images as base64-encoded data in the HTML works, but a more flexible solution uses the `HtmlImportSettings` with the `LoadImageFromUri` event.
 <img style="border: 1px solid gray;" src="images/handling-local-path-images-html.png" /> 
 
 This knowledge base article also answers the following questions:
 
-- How to load local path images in Telerik WordsProcessing during HTML to DocX conversion?
-- Why are images with local paths not rendering in DocX files?
-- What is the best way to handle images in HTML for DocX conversion?
+* How to load local path images in Telerik WordsProcessing during HTML to DocX conversion?
+* Why are images with local paths not rendering in DocX files?
+* What is the best way to handle images in HTML for DocX conversion?
 
 ## Solution
 
-To ensure images with local paths render properly during HTML import , use the `LoadImageFromUri` event in the `HtmlImportSettings`. This event allows loading external image files during the import process.
+To ensure images with local paths render properly during HTML import, use the `LoadImageFromUri` event in the `HtmlImportSettings`. This event allows you to load external image files during the import process.
 
 1. Create an instance of `HtmlImportSettings` and set up the `LoadImageFromUri` event.
 2. Implement a method to handle the event and load image data from the specified file path.
 3. Attach the `HtmlImportSettings` to the `HtmlFormatProvider` before importing the HTML document.
 
-Here is an example code snippet:
+The following example demonstrates this approach:
 
 ```csharp
             string html = @"<html><body><p>Hello!</p><img src=""ProgressNinjas.png"" /></body></html>";
@@ -70,13 +70,13 @@ Here is an example code snippet:
             Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
 
-### Key Notes:
+### Key Notes
 
-- Replace the `path` in the `LoadImageFromUri ` event handler with the path to your local image directory.
-- Ensure the file extension and image format are correctly set using `SetImageInfo`.
+* Replace the `path` in the `LoadImageFromUri` event handler with the path to your local image directory.
+* Ensure the file extension and image format are correctly set using `SetImageInfo`.
 
 For a more robust approach, consider embedding images as base64-encoded data directly in the HTML source. This avoids dependencies on file paths and ensures image data is always available during the conversion process.
 
 ## See Also
 
-- [HtmlImportSettings Documentation]({%slug radwordsprocessing-formats-and-conversion-html-settings%})  
+* [HtmlImportSettings Documentation]({%slug radwordsprocessing-formats-and-conversion-html-settings%})  

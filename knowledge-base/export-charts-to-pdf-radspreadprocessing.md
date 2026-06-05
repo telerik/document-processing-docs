@@ -17,19 +17,19 @@ ticketid: 1659898
 
 ## Description
 
-When converting an Excel file with charts to PDF format using the Telerik Document Processing libraries, the charts may not display as expected in the PDF document. This may occur when exporting charts to PDF in .NET Framework applications. This KB article shows a sample approach how to utilize the chart engine that [WinForms RadChartView](https://docs.telerik.com/devtools/winforms/controls/chartview/overview) control offers and ensure charts are properly exported from Excel files to PDF.
+When you convert an Excel file with charts to PDF format using the Telerik Document Processing libraries, the charts may not display as expected in the PDF document. This may occur when exporting charts to PDF in .NET Framework applications. This KB article shows a sample approach for using the chart engine that the [WinForms RadChartView](https://docs.telerik.com/devtools/winforms/controls/chartview/overview) control offers to ensure charts are properly exported from Excel files to PDF.
 
 ## Solution
 
 To export charts from Excel files to PDF format using RadSpreadProcessing, follow these steps:
 
-1. **Implement a Custom IPdfChartRenderer**: The export process requires providing an [IPdfChartRenderer]({%slug radspreadprocessing-features-charts-pdf-export%}) implementation. This renderer is responsible for converting the chart shapes from the Excel file into images that can be inserted into the PDF. 
+1. **Implement a Custom IPdfChartRenderer**: The export process requires an [IPdfChartRenderer]({%slug radspreadprocessing-features-charts-pdf-export%}) implementation. This renderer converts the chart shapes from the Excel file into images that can be inserted into the PDF. 
 
-2. **Use the WinForms RadChartView control**: The [WinForms RadSpreadsheet](https://docs.telerik.com/devtools/winforms/controls/spreadsheet/overview) control (that supports charts) internally uses the WinForms RadChartView for visualization and it provides a convenient API for image creation having the [FloatingChartShape]({%slug radspreadprocessing-features-charts-using-charts%}) from the SpreadProcessing model.
+2. **Use the WinForms RadChartView control**: The [WinForms RadSpreadsheet](https://docs.telerik.com/devtools/winforms/controls/spreadsheet/overview) control (that supports charts) internally uses the WinForms RadChartView for visualization. It provides a convenient API for image creation from the [FloatingChartShape]({%slug radspreadprocessing-features-charts-using-charts%}) in the SpreadProcessing model.
 
-3. **Export the Excel to PDF**: Use the [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the workbook to PDF, setting the `ChartRenderer` property to your custom renderer implementation.
+3. **Export the Excel to PDF**: Use the [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the workbook to PDF. Set the `ChartRenderer` property to your custom renderer implementation.
 
-Below is a sample implementation using the WinForms RadChartView for chart visualization:
+The following is a sample implementation using the WinForms RadChartView for chart visualization:
 
 ```csharp
 using System.IO;
@@ -60,7 +60,7 @@ public class WinFormsPdfChartImageRenderer : IPdfChartRenderer
 }
 ```
 
-Using the custom chart renderer:
+Use the custom chart renderer:
 
 ```csharp
             Workbook workbook;
@@ -107,8 +107,8 @@ Using the custom chart renderer:
 
 ## See Also
 
-- [RadSpreadProcessing Overview]({%slug radspreadprocessing-overview%})
-- [Export Chart to PDF]({%slug radspreadprocessing-features-charts-pdf-export%})
-- [RadChartView for WinForms Overview](https://docs.telerik.com/devtools/winforms/controls/chartview/overview)
-- [Export Chart to Image in WinForms](https://docs.telerik.com/devtools/winforms/controls/chartview/features/export)
-- [WinForms RadSpreadsheet](https://docs.telerik.com/devtools/winforms/controls/spreadsheet/overview)
+* [RadSpreadProcessing Overview]({%slug radspreadprocessing-overview%})
+* [Export charts to PDF]({%slug radspreadprocessing-features-charts-pdf-export%})
+* [RadChartView for WinForms Overview](https://docs.telerik.com/devtools/winforms/controls/chartview/overview)
+* [Export charts to images in WinForms](https://docs.telerik.com/devtools/winforms/controls/chartview/features/export)
+* [WinForms RadSpreadsheet](https://docs.telerik.com/devtools/winforms/controls/spreadsheet/overview)

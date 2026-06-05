@@ -21,16 +21,16 @@ This article describes how to merge multiple PDF documents into a single file an
 
 ## Solution
 
-The TOC must be created **after** all source documents have been merged. The key considerations are:
+Create the TOC **after** you merge all source documents. The key considerations are:
 
 * The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) requires manual position calculations when placing content elements on a page.
-* Use the **Measure** method of the [Block]({%slug radpdfprocessing-editing-block%}) to determine whether the next TOC entry will exceed the page boundary. If so, insert a new TOC page and continue from there.
-* Track the start page index of each source document before merging, so you can later build accurate [Link]({%slug radpdfprocessing-model-annotations-links%}) annotations using a [GoToAction]({%slug radpdfprocessing-model-annotations-links%}) pointing to the correct [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
+* Use the `Measure` method of the [Block]({%slug radpdfprocessing-editing-block%}) to determine whether the next TOC entry exceeds the page boundary. If so, insert a new TOC page and continue from there.
+* Track the start page index of each source document before merging so you can later build accurate [Link]({%slug radpdfprocessing-model-annotations-links%}) annotations that use a [GoToAction]({%slug radpdfprocessing-model-annotations-links%}) pointing to the correct [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
 * When new TOC pages are inserted at the beginning of the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}), adjust the target page index by the number of TOC pages added.
 
-The following example demonstrates the complete approach:
+The following example shows the complete approach:
 
-#### **Merge PDF files and create a TOC**
+**Example 1: Merge PDF Files and Create a TOC**
 
 ```csharp
 static void Main(string[] args)
@@ -134,9 +134,9 @@ static void CreateTOC(RadFixedDocument document, System.Collections.Generic.List
 
 ## Notes
 
-* The `documentStartPages` list records the zero-based start page index of each source document **before** it is merged. This ensures correct navigation targets even after the TOC pages are prepended.
-* The `adjustedPageIndex` calculation (`docInfo.Item2 + tocPageIndex + 1`) compensates for the TOC pages that are inserted before the merged content.
-* Each TOC entry is drawn as a [Block]({%slug radpdfprocessing-editing-block%}) and wrapped in a [Link]({%slug radpdfprocessing-model-annotations-links%}) annotation whose rectangle exactly matches the measured block bounds.
+* The `documentStartPages` list records the zero-based start page index of each source document **before** the merge. This ensures correct navigation targets even after the TOC pages are prepended.
+* The `adjustedPageIndex` calculation (`docInfo.Item2 + tocPageIndex + 1`) compensates for the TOC pages inserted before the merged content.
+* Each TOC entry is drawn as a [Block]({%slug radpdfprocessing-editing-block%}) and wrapped in a [Link]({%slug radpdfprocessing-model-annotations-links%}) annotation whose rectangle matches the measured block bounds.
 
 ## See Also
 

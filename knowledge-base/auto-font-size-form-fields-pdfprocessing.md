@@ -30,7 +30,7 @@ Learn how to adjust the font size of textbox fields to fit the whole text conten
 
 ## Solution
 
-To auto-size text in [TextBoxFields]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}), set the `TextBoxField.TextProperties.FontSize` property to `0`. This enables the font size to adjust automatically to fit the content when the document is **displayed** in a viewer. 
+To auto-size text in [TextBoxFields]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}), set the `TextBoxField.TextProperties.FontSize` property to `0`. This allows the font size to adjust automatically to fit the content when the document is **displayed** in a viewer. 
 
 ```csharp
 TextBoxField textBoxField = new TextBoxField("AutoSizeTextBox");
@@ -39,9 +39,9 @@ textBoxField.TextProperties.Font = FontsRepository.HelveticaBold;
 textBoxField.Value = "Sample text for auto-sizing.";
 ```
 
-However, if you want to adjust the font size and flatten the [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) to produce a non-editable PDF document, it would be necessary to calculate the appropriate font size according to the rectangle occupied by the [widget]({%slug radpdfprocessing-model-annotations-widgets%}).
+However, to adjust the font size and flatten the [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) to produce a non-editable PDF document, you need to calculate the appropriate font size according to the rectangle occupied by the [widget]({%slug radpdfprocessing-model-annotations-widgets%}).
 
-The following code snippet shows how to calculate the font size manually to fit the content using the following approach:
+The following code snippet shows how to calculate the font size manually to fit the content:
 
 ```csharp
 public static double CalculateFontSizeForRectangle(string text, Rect rect, FontBase font)
@@ -137,7 +137,7 @@ Use this calculated font size to create the textbox field:
 
 ## See Also
 
-- [PdfProcessing Overview]({%slug radpdfprocessing-overview%})
-- [Flatten Form Fields]({%slug radpdfprocessing-flatten-form-fields%})
-- [TextBoxFields]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%})
-- [Widget]({%slug radpdfprocessing-model-annotations-widgets%})
+* [PdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [Flatten Form Fields]({%slug radpdfprocessing-flatten-form-fields%})
+* [TextBoxFields]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%})
+* [Widget]({%slug radpdfprocessing-model-annotations-widgets%})

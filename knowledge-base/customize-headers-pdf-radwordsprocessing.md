@@ -16,13 +16,13 @@ ticketid: 1665701
 | 2026.1.402| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-This article demonstrates how to generate a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}), divide a header into three sections, and customize the font settings for each section respectively using the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library.
+This article shows how to generate a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}), divide a header into three sections, and customize the font settings for each section using the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library.
 
 ![Left, Center, Right Headers](images/left-center-right-header.png)    
 
 ## Solution
 
-To achieve a header with left, center, and right aligned sections in a PDF document, use the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library to create a header and then insert a [Table]({%slug radwordsprocessing-model-table%}) with three [cells]({%slug radwordsprocessing-model-tablecell%}) into the header. Each cell represents one section of the header (left, center, right) and can contain text or an image. The following steps and code snippet demonstrate this process:
+To achieve a header with left, center, and right aligned sections in a PDF document, use the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library to create a header and then insert a [Table]({%slug radwordsprocessing-model-table%}) with three [cells]({%slug radwordsprocessing-model-tablecell%}) into the header. Each cell represents one section of the header (left, center, right) and can contain text or an image. The following steps and code snippet show this process:
 
 1. Create a new [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and add a section to it.
 2. Define the page size and margins for the section.
@@ -115,9 +115,9 @@ To achieve a header with left, center, and right aligned sections in a PDF docum
             Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
 
-This method allows for flexible customization of headers in PDF documents, enabling the addition of left, center, and right aligned text within the same header.
+This approach provides flexible customization of headers in PDF documents. You can add left, center, and right aligned text within the same header.
 
->note A complete SDK example is available [here](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing/CreateHeaderWithLeftCenterRightContent). 
+>note A complete SDK example is available in the [WordsProcessing CreateHeaderWithLeftCenterRightContent sample](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing/CreateHeaderWithLeftCenterRightContent).
 
 ### Required NuGet Packages
 
@@ -131,6 +131,6 @@ Depending on the target framework, install the following NuGet packages:
 
 ## See Also
 
-- [RadWordsProcessing]({%slug radwordsprocessing-overview%})
-- [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
-- [Working with Tables in RadWordsProcessing]({%slug radwordsprocessing-model-table%})
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%})
+* [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [Working with Tables in RadWordsProcessing]({%slug radwordsprocessing-model-table%})

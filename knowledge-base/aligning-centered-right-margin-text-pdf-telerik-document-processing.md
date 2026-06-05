@@ -23,9 +23,10 @@ img[alt$="><"] {
 
 ## Description
 
-Learn how to generate a PDF document with centered text and right-aligned text on the same line. The centered text varies in length, as does the text in the right margin. The goal is to manually position each text block as there is no built-in feature for this layout.
+This article shows how to generate a PDF document with centered text and right-aligned text on the same line. The centered text varies in length, as does the text in the right margin. The goal is to manually position each text block because there is no built-in feature for this layout.
 
 This knowledge base article also shows how to:
+
 * Align text to the center and right margin on the same line in a PDF
 * Calculate positions for text blocks in RadPdfProcessing
 * Measure text width and adjust its position in the PDF
@@ -36,17 +37,17 @@ This knowledge base article also shows how to:
 
 To position centered and right-aligned text on the same line, follow these steps:
 
-1. Measure Text Widths: Use the `Block.Measure()` method to determine the width of both the centered text and the right-margin text. Refer to [Measuring Block Size]({%slug radpdfprocessing-editing-block%}#measuring-block-size) for details.
+1. Measure Text Widths: Use the `Block.Measure()` method to find the width of both the centered text and the right-margin text. Refer to [Measuring Block Size]({%slug radpdfprocessing-editing-block%}#measuring-block-size) for details.
 
 2. Calculate Positions:
-   - For centered text, calculate the X position by subtracting the text width from the page width and dividing by two.
-   - For right-margin text, set the X position close to the right edge by subtracting the text width and any desired margin.
+   * For centered text, calculate the X position by subtracting the text width from the page width and dividing by two.
+   * For right-margin text, set the X position close to the right edge by subtracting the text width and any desired margin.
 
 3. Draw Blocks Separately:
-   - Use `FixedContentEditor.Position.Translate(x, y)` to move to the calculated positions.
-   - Draw each block using individual `Block` objects.
+   * Use `FixedContentEditor.Position.Translate(x, y)` to move to the calculated positions.
+   * Draw each block using individual `Block` objects.
 
-Here is an example:
+The following example shows this approach:
 
 ```csharp
 RadFixedDocument document = new RadFixedDocument();
@@ -89,5 +90,5 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 
 ## See Also
 
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-- [Block Element]({%slug radpdfprocessing-editing-block%}) 
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Block Element]({%slug radpdfprocessing-editing-block%})

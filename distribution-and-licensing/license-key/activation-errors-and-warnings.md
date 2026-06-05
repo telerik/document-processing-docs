@@ -9,25 +9,25 @@ position: 2
 ---
 
 # License Activation Errors and Warnings
-Starting with the 2025 Q1 release, using a product without a license or with an invalid license causes specific license warnings and errors. This article defines what an invalid license is, explains what is causing it, and describes the related license warnings and errors.
+Starting with the 2025 Q1 release, using a product without a license or with an invalid license causes specific license warnings and errors. This article defines what an invalid license is, explains what causes it, and describes the related license warnings and errors.
 
-A missing, expired, or invalid license will result in:
-- A watermark appearing on application startup.
-- A modal dialog appearing on application startup. Clicking the **OK** button of the dialog closes the dialog and removes the banner until the next application startup.
-- A warning message can appear in the build log.
+A missing, expired, or invalid license results in:
+* A watermark appearing on application startup.
+* A modal dialog appearing on application startup. Click the **OK** button of the dialog to close the dialog and remove the banner until the next application startup.
+* A warning message appearing in the build log.
 
-### Invalid License
+## Invalid License
 An invalid license can be caused by any of the following:
 
-- Using an expired subscription license-subscription licenses expire at the end of the subscription term.
-- Using a perpetual license for product versions released outside the validity period of your license.
-- Using an expired trial license.
-- A missing license for the product.
-- Not installing a license key in your application.
-- Not updating the license key after renewing your product license.
+* Using an expired subscription license—subscription licenses expire at the end of the subscription term.
+* Using a perpetual license for product versions released outside the validity period of your license.
+* Using an expired trial license.
+* A missing license for the product.
+* Not installing a license key in your application.
+* Not updating the license key after renewing your product license.
 
-### License Warnings and Errors
-When using the product in a project with an expired or missing license, the _Telerik.Licensing_ build task will indicate the following errors or conditions:
+## License Warnings and Errors
+When using the product in a project with an expired or missing license, the _Telerik.Licensing_ build task indicates the following errors or conditions:
 
 |**Condition**|**Message Code**|**Solution**|
 |----|----|----|
@@ -39,7 +39,7 @@ When using the product in a project with an expired or missing license, the _Tel
 |`Your current license has expired.`|TKL102|You are using a product version released outside the validity period of your perpetual license. To remove the error message, do either of the following: <br> - Renew your subscription and [download a new license key]({%slug setting-up-license-key%}#downloading-the-license-key). <br> - Downgrade to a product version included in your perpetual license as indicated in the message.|
 |`Your subscription license has expired.`|TKL103; TKL104|Renew your subscription and [download a new license key]({%slug setting-up-license-key%}).|
 |`Your trial license has expired.`|TKL105|Purchase a commercial license to continue using the product.|
-|`Services associated with Telerik Document Processing Libraries require a subscription or trial license. Please obtain a subscription license.`|TKL403|Purchase a subscription license to continue using the services/tools.|
+|`Services associated with Telerik Document Processing Libraries require a subscription or trial license. Obtain a subscription license.`|TKL403|Purchase a subscription license to continue using the services/tools.|
 
 ## See Also
 

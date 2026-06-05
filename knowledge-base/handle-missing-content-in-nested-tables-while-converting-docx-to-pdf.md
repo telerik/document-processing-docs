@@ -1,6 +1,6 @@
 ---
 title: How To Handle Missing Content in Nested Tables While  Converting DOCX to PDF Format
-description: Learn how to achieve strict table alignment for nested tables in DOCX and PDF documents using Telerik WordsProcessing.
+description: Learn how to achieve strict table alignment for nested tables in DOCX and PDF documents using Telerik WordsProcessing with fixed table layout.
 type: how-to
 page_title: How To Handle Missing Content in Nested Tables While  Converting DOCX to PDF Format
 meta_title: How To Handle Missing Content in Nested Tables While  Converting DOCX to PDF Format
@@ -18,13 +18,13 @@ ticketid: 1705627
 
 ## Description
 
-This article shows how to achieve strict alignment for nested tables in both DOCX and PDF output using Telerik [WordsProcessing]({%slug radwordsprocessing-overview%}). The generated DOCX document meets the desired layout, but the PDF output does not match due to differences in format rendering. The following approach shows how to achieve consistent table layout in exported documents.
+This article shows how to achieve strict alignment for nested tables in both DOCX and PDF output using Telerik [WordsProcessing]({%slug radwordsprocessing-overview%}). The generated DOCX document meets the desired layout, but the PDF output does not match due to differences in format rendering. The following approach demonstrates how to achieve consistent table layout in exported documents.
 
 <img style="border: 1px solid gray;" src="images/handle-missing-content-in-nested-tables-while-converting-docx-to-pdf.png" />
 
 ## Solution 
 
-To achieve strict alignment in both DOCX and PDF, set the table's layout type to `TableLayoutType.FixedWidth`. Define column widths explicitly to ensure consistent rendering across formats. Follow these steps:
+To achieve strict alignment in both DOCX and PDF, set the table layout type to `TableLayoutType.FixedWidth`. Define column widths explicitly to ensure consistent rendering across formats. Follow these steps:
 
 1. Create a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and initialize a [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
 2. Insert a main [Table]({%slug radwordsprocessing-model-table%}) with predefined column widths and set the layout type to `TableLayoutType.FixedWidth`.

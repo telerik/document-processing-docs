@@ -1,6 +1,6 @@
 ---
 title: Converting PDF to TIFF with RadPdfProcessing in .NET Standard
-description: This article demonstrates how to convert PDF documents to TIFF images in .NET Standard applications using RadPdfProcessing.
+description: Learn how to convert PDF documents to TIFF images in .NET Standard applications using RadPdfProcessing and the SkiaImageFormatProvider.
 type: how-to
 page_title: How to Convert PDF Documents to TIFF Images Using RadPdfProcessing in .NET Standard
 slug: convert-pdf-to-tiff-radpdfprocessing-net-core
@@ -24,9 +24,9 @@ Learn how to convert PDF documents to TIFF format in .NET Standard.
 To convert PDF documents to TIFF images in .NET Standard, follow these steps:
 
 1. Use the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) to export the PDF pages to images.
-2. Utilize the [System.Drawing.Common](https://www.nuget.org/packages/System.Drawing.Common/) library to assemble these images into a multi-page TIFF file.
+2. Use the [System.Drawing.Common](https://www.nuget.org/packages/System.Drawing.Common/) library to assemble these images into a multi-page TIFF file.
 
-Here's an example code snippet demonstrating the process:
+The following example demonstrates the process:
 
 ```csharp
 using System.Diagnostics;
@@ -103,9 +103,9 @@ namespace PdfToTIFFNetCore
 }
 ```
 
-Replace `"your-pdf-file.pdf"` with the path to your PDF file. This code will create a TIFF file named `Exported.tiff` containing all the pages from the PDF document.
+Replace `"your-pdf-file.pdf"` with the path to your PDF file. This code creates a TIFF file named `Exported.tiff` that contains all the pages from the PDF document.
 
 ## See Also
 
-- [Converting a PDF Document to a Multipage TIFF Image]({%slug convert-pdf-to-multipage-tiff-radpdfprocessing%})
+* [Converting a PDF Document to a Multipage TIFF Image]({%slug convert-pdf-to-multipage-tiff-radpdfprocessing%})
 

@@ -16,11 +16,11 @@ When you need to restore the [Telerik NuGet packages]({%slug installation-nuget-
 
 ## Generating API Keys
 
-As the Telerik NuGet server requires authentication, the first step is to [obtain an API key]({%slug generating-api-keys%}) that you will use instead of a password. Using an API key instead of a password is a more secure approach, especially when working with .NET CLI or the NuGet.Config file.
+As the Telerik NuGet server requires authentication, the first step is to [obtain an API key]({%slug generating-api-keys%}) that you use instead of a password. Using an API key instead of a password is a more secure approach, especially when you work with .NET CLI or the `NuGet.Config` file.
 
 ## Storing a NuGet Key
 
-> Never check-in NuGet API Keys with your source code or leave it publicly visible in plain text, for example, as a raw key value in a `nuget.config` file. A NuGet API Key is valuable as bad actors can use it to access the NuGet packages that are licensed under your account. A potential key abuse could lead to a review of the affected account.
+> Never check in NuGet API keys with your source code or leave them publicly visible in plain text, for example, as a raw key value in a `nuget.config` file. A NuGet API key is valuable because bad actors can use it to access the NuGet packages that are licensed under your account. A potential key abuse can lead to a review of the affected account.
 
 To protect the NuGet Key, store it as a secret environment variable. The exact steps depend on your workflow:
 
@@ -74,23 +74,23 @@ The exact steps to set the `TELERIK_NUGET_KEY` environment variable depend on yo
 
 ### Using Only CLI Commands
 
-You can use the CLI `add source` (or `update source`) command to set the credentials of a package source. This CLI approach is applicable if your CI system doesn't support default environment variable secrets or if you do not use a custom `nuget.config`.
+You can use the CLI `add source` (or `update source`) command to set the credentials of a package source. This CLI approach is applicable if your CI system does not support default environment variable secrets or if you do not use a custom `nuget.config`.
 
 * To set the credentials in Azure DevOps:
 
-    ```
+    ```powershell
     dotnet nuget add source 'MyTelerikFeed' --source 'https://nuget.telerik.com/v3/index.json' --username 'api-key' --password '$(TELERIK_NUGET_KEY)' --configfile './nuget.config' --store-password-in-clear-text
     ```
 
 * To set the credentials in GitHub Actions:
 
-    ```
+    ```powershell
     dotnet nuget add source 'MyTelerikFeed' --source 'https://nuget.telerik.com/v3/index.json' --username 'api-key' --password '${{ secrets.TELERIK_NUGET_KEY }}' --configfile './nuget.config' --store-password-in-clear-text
     ```
 
 ## Additional Resources
 
-If you just start using the Telerik NuGet server in your CI or inter-department workflows, check the two blog posts below. You will learn about the various use cases and find practical implementation details.
+If you are starting to use the Telerik NuGet server in your CI or inter-department workflows, check the two blog posts below. You will learn about the various use cases and find practical implementation details.
 
 * [Azure DevOps and Telerik NuGet Packages (Blog Post)](https://www.telerik.com/blogs/azure-devops-and-telerik-nuget-packages)
 

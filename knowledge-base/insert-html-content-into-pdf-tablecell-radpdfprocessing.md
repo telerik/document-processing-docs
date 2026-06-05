@@ -16,7 +16,7 @@ ticketid: 1671595
 | 2024.4.1106.NET Standard| RadWordsProcessing-RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-When generating PDF documents, a common requirement is to insert HTML content into specific sections of the document, such as a [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}). This article demonstrates how to achieve this using the smooth integration between [RadPdfProcessing]({%slug radpdfprocessing-overview%}) and [RadWordsProcessing]({%slug radwordsprocessing-overview%}) libraries. 
+When you generate PDF documents, a common requirement is to insert HTML content into specific sections of the document, such as a [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}). This article demonstrates how to achieve this through the integration between [RadPdfProcessing]({%slug radpdfprocessing-overview%}) and [RadWordsProcessing]({%slug radwordsprocessing-overview%}) libraries.
 
 >caption Sample HTML content to Insert
 
@@ -35,15 +35,15 @@ When generating PDF documents, a common requirement is to insert HTML content in
 ![HTML Displayed in the Browser](images/sample-html-content.png)  
 
 ## Solution
-To insert HTML content into a `TableCell` in a PDF document, you can obtain the HTML content as an image and insert the image inside the PDF table cell. Below are the steps and complete code snippet for achieving this:
+To insert HTML content into a `TableCell` in a PDF document, obtain the HTML content as an image and insert the image inside the PDF table cell. The following steps and code snippet demonstrate this approach:
 
-1. **Import HTML Content**: Use the RadWordsProcessing's [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) to import the HTML content into a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}).
+1. **Import HTML Content**: Use the `HtmlFormatProvider` from RadWordsProcessing to import the HTML content into a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}).
 
-1. **Export the HTML Content to PDF Format**: Use the RadWordsProcessing's [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to convert the `RadFlowDocument` into PDF format.
+1. **Export the HTML Content to PDF Format**: Use the `PdfFormatProvider` from RadWordsProcessing to convert the `RadFlowDocument` into PDF format.
 
-1. **Convert the exported PDF content to an Image**: Use the RadPdfProcessing's [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the PDF-converted HTML content to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) to export the PDF pages to images.
+1. **Convert the Exported PDF Content to an Image**: Use the `PdfFormatProvider` from RadPdfProcessing to import the PDF-converted HTML content to a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}). Then use the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) to export the PDF pages to images.
 
-1. **Insert the exported Images into the PDF TableCell**: Use RadPdfProcessing's [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to create the main PDF document with a table and insert the converted PDF images into the desired [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}).
+1. **Insert the Exported Images into the PDF TableCell**: Use the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) from RadPdfProcessing to create the main PDF document with a table and insert the converted PDF images into the desired [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}).
 
 ### Inserting HTML Content as PDF
 
@@ -135,4 +135,4 @@ To insert HTML content into a `TableCell` in a PDF document, you can obtain the 
 ![HTML Inside the PDF Table](images/html-inside-pdf-table.png) 
 
 ## See Also
-- [Generate Table with Images using RadPdfProcessing]({%slug generate-table-with-images-pdf-processing%})
+* [Generate Table with Images using RadPdfProcessing]({%slug generate-table-with-images-pdf-processing%})

@@ -25,17 +25,17 @@ res_type: kb
 
 Once a row or cell has been read from the stream, you cannot go back and change it. Likewise, you cannot open an XLSX file and update a cell while keeping the same file instance.
 
-This article demonstrates a sample approach how to achieve editing of cells in existing XLSX documents using the SpreadStreamProcessing library. 
+This article shows how to edit cells in existing XLSX documents using the SpreadStreamProcessing library. 
 
-<img style="border: 1px solid gray;" src="images/edit-cell-values-with-spreadstreamprocessing.png" alt="Edit Cell Values With SpreadStreamProcessing" />
+![Edit Cell Values With SpreadStreamProcessing](images/edit-cell-values-with-spreadstreamprocessing.png)
 
 ## Solution
 
 You can effectively edit data by:
 
 1. Reading the existing Excel file with RadSpreadStreamProcessing
-1. Modifying values during the read
-1. Writing everything to a new XLSX file
+2. Modifying values during the read
+3. Writing everything to a new XLSX file
 
 
    ```csharp
@@ -125,5 +125,5 @@ You can effectively edit data by:
 ## See Also
 
 
-- [SpreadStreamProcessing Overview]({%slug radspreadstreamprocessing-overview%})
-- [Getting Started with SpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})
+* [SpreadStreamProcessing Overview]({%slug radspreadstreamprocessing-overview%})
+* [Getting Started with SpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})

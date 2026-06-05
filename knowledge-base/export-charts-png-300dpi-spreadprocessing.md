@@ -18,11 +18,11 @@ ticketid: 1695547
 
 ## Description
 
-Learn how to extract the [charts]({%slug radspreadprocessing-features-charts%}) from Excel documents and save them as PNG files, while specifying the desired resolution (e.g. 300 DPI).
+Learn how to extract the [charts]({%slug radspreadprocessing-features-charts%}) from Excel documents and save them as PNG files while specifying the desired resolution (for example, 300 DPI).
 
 ## Solution
 
-Exporting charts directly from Excel files to images is not yet supported by the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library. As an alternative, you can benefit the export option to PDF format which allows you to plug into the chart rendering process, export the chart and handle the DPI settings
+The [SpreadProcessing]({%slug radspreadprocessing-overview%}) library does not yet support exporting charts directly from Excel files to images. As an alternative, use the export option to PDF format, which allows you to plug into the chart rendering process, export the chart, and handle the DPI settings.
 
 ### Suggested Workflow Using Charting Controls
 
@@ -32,9 +32,9 @@ Exporting charts directly from Excel files to images is not yet supported by the
 
 ### Alternative Approach: Exporting to PDF
 
-Export the XLSX document to PDF format using SpreadProcessing. This method internally uses a **chart renderer** for rendering charts in the PDF. Implement a custom [IPdfChartRenderer]({%slug radspreadprocessing-features-charts-pdf-export%}) to manipulate chart resolution and save the chart as a PNG image in the ongoing export process.
+Export the XLSX document to PDF format using SpreadProcessing. This method internally uses a **chart renderer** for rendering charts in the PDF. Implement a custom [IPdfChartRenderer]({%slug radspreadprocessing-features-charts-pdf-export%}) to control chart resolution and save the chart as a PNG image during the export process.
 
-#### Sample implementation for exporting charts as PNG with 300 DPI:
+#### Sample Implementation for Exporting Charts as PNG with 300 DPI
 
 ```csharp
 public class WinFormsPdfChartImageRenderer : IPdfChartRenderer
@@ -64,9 +64,9 @@ public class WinFormsPdfChartImageRenderer : IPdfChartRenderer
 }
 ```
 
-To export charts to PNG, use the custom renderer in conjunction with SpreadProcessing’s PDF export functionalities. Charts saved as PNG images can then be adjusted for resolution.
+To export charts to PNG, use the custom renderer together with the SpreadProcessing PDF export features. Charts saved as PNG images can then be adjusted for resolution.
 
-#### Applying the custom renderer:
+#### Applying the Custom Renderer
 
 ```csharp
 Telerik.Windows.Documents.Spreadsheet.Model.Workbook workbook;
@@ -86,9 +86,9 @@ using (Stream output = File.OpenWrite("Sample.pdf"))
 }
 ```
 
-Note: Recreating the chart using RadChartView may require extra effort if the charts are highly customized or complex.
+> Recreating the chart with `RadChartView` may require extra effort if the charts are highly customized or complex.
 
 ## See Also
 
-- [SpreadProcessing PDF Export]({%slug radspreadprocessing-features-charts-pdf-export%})
-- [Exporting Spreadsheets with Charts to PDF with RadSpreadProcessing and WinForms RadChartView]({%slug export-charts-to-pdf-radspreadprocessing%})
+* [SpreadProcessing PDF Export]({%slug radspreadprocessing-features-charts-pdf-export%})
+* [Exporting spreadsheets with charts to PDF using RadSpreadProcessing and WinForms RadChartView]({%slug export-charts-to-pdf-radspreadprocessing%})

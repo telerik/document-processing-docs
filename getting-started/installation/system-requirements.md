@@ -1,7 +1,7 @@
 ---
 title: System Requirements
 page_title: System Requirements
-description: System Requirements
+description: Learn the system requirements for Telerik Document Processing including supported operating systems, development environments, .NET versions, and hardware specifications.
 slug: installation-system-requirements
 tags: system, requirements, windows, compatibility, dotnet, installation, telerik, framework
 published: True
@@ -30,7 +30,7 @@ This topic describes the system requirements needed by Telerik Document Processi
 
 * [Windows Server 2003 (excluding IA-64)](https://learn.microsoft.com/en-us/dotnet/framework/get-started/system-requirements#server-operating-systems)
 
->note Check [here](https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies?source=recommendations#net-framework-462) for a complete list of the supported operating systems.
+>note For a complete list of the supported operating systems, check the [.NET Framework system requirements](https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies?source=recommendations#net-framework-462) article.
 
 ## Development Environment
 
@@ -43,7 +43,7 @@ Supported Development Tools and Environments:
 * **.NET Standard 2.0** 
 	* [.NET {{site.mindotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.mindotnetversion}}.0) to [.NET {{site.maxdotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.maxdotnetversion}}.0) 
 
-* __Microsoft Visual Studio 2010/2012/2013/2015/2019/2022/2026__ - download from [here](http://www.microsoft.com/visualstudio/eng/downloads).
+* **Microsoft Visual Studio 2010/2012/2013/2015/2019/2022/2026** - download from the [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/) page.
   
 ## Hardware Environment
 

@@ -1,6 +1,6 @@
 ---
 title: Create Custom Text Measurer in .NET Standard
-description: How to implement custom text measuring functionality in SpreadProcessing for .NET Standard.
+description: Learn how to create a custom text measurer implementation for SpreadProcessing in .NET Standard to measure text with higher precision.
 type: how-to
 page_title: Create Custom Text Measurer .NET Standard
 slug: create-custom-text-measurer-net-standard
@@ -28,13 +28,13 @@ res_type: kb
 
 ## Description
 
-Due to **.NET Standard** APIs limitations, the _SimpleTextMeasurer_ provides basic functionality for text measuring and it is not expected to be an all-purpose measurer. So in order to measure the specific text in a more precise way, you will need to create a custom implementation of a text measure and set it to the _TextMeasurer_ property of the _SpreadExtensibilityManager_.
+Due to **.NET Standard** API limitations, the `SimpleTextMeasurer` provides basic text measuring functionality and is not an all-purpose measurer. To measure specific text with higher precision, create a custom implementation of a text measurer and set it to the `TextMeasurer` property of the `SpreadExtensibilityManager`.
 
 ## Solution
 
-In the example below, we are demonstrating how to create a custom [TextMeasurer](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.core.textmeasurer) inheriting the _SpreadTextMeasurerBase_ abstract class and set it to the _TextMeasurer_ property of the _SpreadExtensibilityManager_.
+The following example shows how to create a custom [`TextMeasurer`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.core.textmeasurer) that inherits the `SpreadTextMeasurerBase` abstract class and set it to the `TextMeasurer` property of the `SpreadExtensibilityManager`.
 
-#### __Creating a CustomTextMeasurer__
+**Example 1: Create a CustomTextMeasurer**
 
 ```csharp
 
@@ -81,9 +81,9 @@ In the example below, we are demonstrating how to create a custom [TextMeasurer]
     }
 ```
 
-The following example shows how to set the custom implementation inheriting the SpreadTextMeasurerBase abstract class to the TextMeasurer property of the SpreadExtensibilityManager.
+The following example shows how to set the custom implementation inheriting the `SpreadTextMeasurerBase` abstract class to the `TextMeasurer` property of the `SpreadExtensibilityManager`.
 
-#### __Setting the CustomTextMeasurer__
+**Example 2: Set the CustomTextMeasurer**
 
 ```csharp
 
@@ -92,5 +92,6 @@ The following example shows how to set the custom implementation inheriting the 
 ```
 
 ## See Also
- * [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})
- * [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})
+
+* [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})
+* [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})

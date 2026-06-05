@@ -1,6 +1,6 @@
 ---
 title: Import/Load and Export/Save RadSpreadProcessing Workbook
-description: Examples of Import/Load and Export/Save RadSpreadProcessing Workbook to facilitate working with text, Excel and PDF documents
+description: Examples of how to import, load, export, and save a RadSpreadProcessing Workbook when working with text, Excel, and PDF documents.
 type: how-to
 page_title: Import/Load and Export/Save RadSpreadProcessing Workbook
 slug: import-export-save-load-workbook
@@ -15,20 +15,20 @@ res_type: kb
 
 ## Description
 
-The **UI-independent cross-platform** [Telerik Document Processing Libraries](https://docs.telerik.com/devtools/document-processing/introduction) allows you to *create*, *import*, *modify* and *export* documents **without relying** on external dependencies like *Adobe Acrobat* or *Microsoft Office*.
+The **UI-independent cross-platform** [Telerik Document Processing Libraries](https://docs.telerik.com/devtools/document-processing/introduction) allow you to *create*, *import*, *modify*, and *export* documents **without relying** on external dependencies like *Adobe Acrobat* or *Microsoft Office*.
 
-The [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) library uses various [FormatProviders]({%slug radspreadprocessing-formats-and-conversion-general-information%}) to support working with different file types such as `.xslx`/`.xls`/`.csv`, `.txt`, `.pdf`. An extensive list of links for each format and its provider can be found here: 
-- [Getting Started Resources by Library - Spreadsheet processing]({%slug getting-started%}#spreadsheet-processing)
-- [RadSpreadProcessing - Required assemblies]({%slug radspreadprocessing-getting-started%}#assembly-references)
+The [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) library uses various [FormatProviders]({%slug radspreadprocessing-formats-and-conversion-general-information%}) to support working with different file types such as `.xslx`/`.xls`/`.csv`, `.txt`, `.pdf`. An extensive list of links for each format and its provider is available here: 
+* [Getting Started Resources by Library - Spreadsheet processing]({%slug getting-started%}#spreadsheet-processing)
+* [RadSpreadProcessing - Required assemblies]({%slug radspreadprocessing-getting-started%}#assembly-references)
 
 
 ## Solution
 
 All **FormatProviders** implement the `IWorkbookFormatProvider` and `IBinaryWorkbookFormatProvider` interface so they all have the same Import/Export methods that work with `Stream` and `byte[]` array. 
 
-This article shows examples of the most common scenarios where the Workbook could be used. The [Table of Contents in the Examples](#table-of-contents) section below contains the full list of covered examples for easy and quick navigation.
+This article shows examples of the most common scenarios where the Workbook is used. The [Table of Contents in the Examples](#table-of-contents) section below contains the full list of covered examples for quick navigation.
 
-Note that the code snippets in the [Examples section](#examples) use the **XLSX format provider** for demo purposes. It can be replaced with any format provider implementing the `IWorkbookFormatProvider` or `IBinaryWorkbookFormatProvider` interface depending on if you are working with a `Stream` or a `byte[]` array. The [Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%}) can help with choosing the best provider based on a file extension.
+The code snippets in the [Examples section](#examples) use the **XLSX format provider** for demo purposes. You can replace it with any format provider that implements the `IWorkbookFormatProvider` or `IBinaryWorkbookFormatProvider` interface depending on whether you work with a `Stream` or a `byte[]` array. The [Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%}) can help with choosing the best provider based on a file extension.
 
 >note The Telerik Document Processing Libraries are **UI-independent cross-platform** libraries so some of the examples might be applicable only in desktop applications or ASP.NET projects.
 
@@ -36,30 +36,30 @@ Note that the code snippets in the [Examples section](#examples) use the **XLSX 
 
 ### Table of Contents
 
-- [File as Byte[] array](#file-as-byte-array)
-  - [Load workbook from Byte[] array](#load-workbook-from-byte-array)
-  - [Save workbook as Byte[] array](#save-workbook-as-byte-array)
-- [FileStream or MemoryStream](#filestream-or-memorystream)
-  - [Load Workbook from file as FileStream or MemoryStream](#load-workbook-from-file-as-filestream-or-memorystream)
-  - [Save Workbook to FileStream or MemoryStream](#save-workbook-to-filestream-or-memorystream)
-- [Save Workbook as PDF](#save-workbook-as-pdf)
-- [Uploaded file](#uploaded-file)
-  - [Load Workbook from an Uploaded File](#load-workbook-from-an-uploaded-file)
-- [DataBase](#database)
-  - [Load Workbook from SQL DataBase](#load-workbook-from-sql-database)
-  - [Save Workbook to SQL DataBase](#save-workbook-to-sql-database)
-- [Web service](#web-service)
-  - [Load Workbook from the Web](#load-workbook-from-the-web)
-- [Base64 string](#base64-string)
-  - [Load Workbook from Base64 string](#load-workbook-from-base64-string)
-  - [Save Workbook to Base64 string](#save-workbook-to-base64-string)
-- [DataTable](#datatable)
-  - [Load Workbook from DataTable](#load-workbook-from-datatable)
-  - [Save Workbook to DataTable](#save-workbook-to-datatable)
-- [Download](#download)
-- [OpenFileDialog](#openfiledialog)
-- [SaveFileDialog](#savefiledialog)
-- [Related resources](#related-resources)
+* [File as Byte[] array](#file-as-byte-array)
+  * [Load workbook from Byte[] array](#load-workbook-from-byte-array)
+  * [Save workbook as Byte[] array](#save-workbook-as-byte-array)
+* [FileStream or MemoryStream](#filestream-or-memorystream)
+  * [Load Workbook from file as FileStream or MemoryStream](#load-workbook-from-file-as-filestream-or-memorystream)
+  * [Save Workbook to FileStream or MemoryStream](#save-workbook-to-filestream-or-memorystream)
+* [Save Workbook as PDF](#save-workbook-as-pdf)
+* [Uploaded file](#uploaded-file)
+  * [Load Workbook from an Uploaded File](#load-workbook-from-an-uploaded-file)
+* [DataBase](#database)
+  * [Load Workbook from SQL DataBase](#load-workbook-from-sql-database)
+  * [Save Workbook to SQL DataBase](#save-workbook-to-sql-database)
+* [Web service](#web-service)
+  * [Load Workbook from the Web](#load-workbook-from-the-web)
+* [Base64 string](#base64-string)
+  * [Load Workbook from Base64 string](#load-workbook-from-base64-string)
+  * [Save Workbook to Base64 string](#save-workbook-to-base64-string)
+* [DataTable](#datatable)
+  * [Load Workbook from DataTable](#load-workbook-from-datatable)
+  * [Save Workbook to DataTable](#save-workbook-to-datatable)
+* [Download](#download)
+* [OpenFileDialog](#openfiledialog)
+* [SaveFileDialog](#savefiledialog)
+* [Related resources](#related-resources)
 
 
 ## File as Byte[] array
@@ -74,7 +74,7 @@ IBinaryWorkbookFormatProvider formatProvider = new Telerik.Windows.Documents.Spr
 var path = "MyWorkbook.xlsx";
 // var path = Server.MapPath("~/Resources/FromWorkbook.pdf"); // applicable only for ASP.NET project
 
-//https://docs.microsoft.com/en-us/dotnet/api/system.io.file.readallbytes?view=net-5.0
+//https://learn.microsoft.com/en-us/dotnet/api/system.io.file.readallbytes?view=net-5.0
 byte[] fileAsByteArray = File.ReadAllBytes(path);
 workbook = formatProvider.Import(fileAsByteArray);
 ```
@@ -425,10 +425,10 @@ if (saveFileDialog.ShowDialog() == true)
 
 ## See Also
 
-- [Getting Started with Telerik Document Processing]({%slug getting-started%})
-- [Installing Telerik Document Processing on Your Computer]({%slug installation-installing-on-your-computer%})
-- [Telerik Document Processing Developer Focused examples repository](https://github.com/telerik/document-processing-sdk)
-- [RadSpreadProcessing - Formats and conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%})
-- [RadSpreadProcessing - Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%})
-- [RadSpreadProcessing Workbook Overview]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
-- [Worksheet Page Setup]({%slug radspreadprocessing-features-worksheetpagesetup%})
+* [Getting Started with Telerik Document Processing]({%slug getting-started%})
+* [Installing Telerik Document Processing on Your Computer]({%slug installation-installing-on-your-computer%})
+* [Telerik Document Processing Developer Focused examples repository](https://github.com/telerik/document-processing-sdk)
+* [RadSpreadProcessing - Formats and conversion]({%slug radspreadprocessing-formats-and-conversion-general-information%})
+* [RadSpreadProcessing - Format Providers Manager]({%slug radspreadprocessing-formats-and-conversion-format-providers-manager%})
+* [RadSpreadProcessing Workbook Overview]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%})
+* [Worksheet Page Setup]({%slug radspreadprocessing-features-worksheetpagesetup%})

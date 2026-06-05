@@ -16,9 +16,9 @@ img[alt$="><"] {
 
 # Download Product Files
 
-As of **Q2 2025** the [Telerik Document Processing]({%slug introduction%}) libraries are available as a separate distribution in the **Downloads** section of your [Telerik account](https://www.telerik.com/account/). 
+Starting with **Q2 2025**, the [Telerik Document Processing]({%slug introduction%}) libraries are available as a separate distribution in the **Downloads** section of your [Telerik account](https://www.telerik.com/account/).
 
-Since the **Telerik Document Processing** is a part of several [Telerik bundles](https://www.telerik.com/purchase.aspx) and it is installed following the steps for installing the suite with which you've obtained the product, when you purchase a Telerik license, you can download the following files:
+The **Telerik Document Processing** libraries are part of several [Telerik bundles](https://www.telerik.com/purchase.aspx) and follow the installation steps for the suite with which you have obtained the product. When you purchase a Telerik license, you can download the following files:
 
 * Latest Public version
 
@@ -46,9 +46,9 @@ To download these files, follow the steps below:
 
 ![DPL Product Files ><](images/dpl-product-files.png)   
 
-4\. You can choose between official Public versions or Preview versions (if such exist) according to the activation date of your license. From the **Version** drop down list, you can also select which specific version to download.
+4\. You can choose between official Public versions or Preview versions (if such exist) according to the activation date of your license. From the **Version** dropdown list, you can also select which specific version to download.
 
->important If you are looking for a specific version, but it isn't listed in the Version list, please contact our sales team: **sales@telerik.com**. They will make the required version available for download.
+>important If you are looking for a specific version, but it is not listed in the Version list, contact the sales team: **sales@telerik.com**. They will make the required version available for download.
 
 ## See Also
 

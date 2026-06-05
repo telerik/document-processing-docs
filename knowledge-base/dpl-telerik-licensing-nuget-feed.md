@@ -9,7 +9,7 @@ res_type: kb
 ticketid: 1679127
 ---
 
-##Environment 
+## Environment
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
@@ -17,16 +17,16 @@ ticketid: 1679127
 
 ## Description
 
-Starting with [2025.1.205 (2025 Q1)]({%slug release-notes-2025-1-205%}), all users of the Telerik and Kendo UI components and tools, will need to apply a valid license key file to both, new and existing projects. For details, see our [Licensing Documentation]({%slug setting-up-license-key%}).
+Starting with [2025.1.205 (2025 Q1)]({%slug release-notes-2025-1-205%}), all users of the Telerik and Kendo UI components and tools will need to apply a valid license key file to both new and existing projects. For details, see the [Licensing Documentation]({%slug setting-up-license-key%}).
 
-When working with Telerik Document Processing libraries, managing NuGet package sources efficiently becomes crucial, especially with the introduction of the **Telerik.Licensing** package. The Telerik NuGet Packages can be downloaded from the [Telerik NuGet Server]({%slug installation-nuget-packages%}#manually-download-nuget-packages). However, the **Telerik.Licensing** NuGet package is not available for download from the same feed.
+When working with Telerik Document Processing libraries, you must manage NuGet package sources efficiently, especially with the introduction of the **Telerik.Licensing** package. You can download the Telerik NuGet Packages from the [Telerik NuGet Server]({%slug installation-nuget-packages%}#manually-download-nuget-packages). However, the **Telerik.Licensing** NuGet package is not available for download from the same feed.
 
-This knowledge base article demonstrates how to configure NuGet package sources to facilitate smooth package restoration for both, Telerik Document Processing libraries and the Telerik.Licensing package. 
+This knowledge base article shows how to configure NuGet package sources to enable smooth package restoration for both Telerik Document Processing libraries and the Telerik.Licensing package. 
 
-This knowledge-base article also answers the following questions:
-- How do I manage Telerik packages using the _NuGet.config_ file?
-- What is the best way to configure NuGet package sources for Telerik Document Processing libraries?
-- How can I ensure the Telerik.Licensing package is restored correctly in my projects?
+This knowledge base article also answers the following questions:
+* How do I manage Telerik packages using the _NuGet.config_ file?
+* What is the best way to configure NuGet package sources for Telerik Document Processing libraries?
+* How can I ensure the Telerik.Licensing package is restored correctly in my projects?
 
 ## Solution
 
@@ -48,12 +48,12 @@ To ensure the Telerik.Licensing package and the Telerik Document Processing libr
 
 3\. For **Continuous Integration (CI)** environments, ensure the Telerik.Licensing package is accessible via `nuget.org` and the CI environment has access to the internet to restore the package. Alternatively, consider [manually downloading the NuGet packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages) and hosting them in a local feed or directory accessible by your CI environment.
 
-By following these steps, you can efficiently manage the NuGet package sources for your projects that use Telerik Document Processing libraries and ensure the Telerik.Licensing package is restored correctly.
+These steps allow you to manage the NuGet package sources for your projects that use Telerik Document Processing libraries and ensure the Telerik.Licensing package restores correctly.
 
 ## See Also
 
-- [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%}) 
-- [Download Telerik NuGet Packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages)
-- [Introducing New Subscription Packages for Telerik and Kendo UI Libraries in 2025](https://www.telerik.com/blogs/introducing-new-subscription-packages-telerik-kendo-ui-libraries-2025)
+* [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%}) 
+* [Download Telerik NuGet Packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages)
+* [Introducing New Subscription Packages for Telerik and Kendo UI Libraries in 2025](https://www.telerik.com/blogs/introducing-new-subscription-packages-telerik-kendo-ui-libraries-2025)
 
 ---
