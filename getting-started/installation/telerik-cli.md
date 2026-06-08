@@ -86,7 +86,6 @@ The Telerik CLI stores a session token in:
 | --- | --- |
 | Windows | `%AppData%\Telerik` |
 | macOS / Linux | `~/.telerik` |
-
 The session token is valid for one month.
 
 #### Check Login State
