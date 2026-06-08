@@ -129,12 +129,11 @@ By default, the command creates or updates the global `.mcp.json` configuration 
 | IDE | Operating System | Configuration File Path |
 | --- | --- | --- |
 | Visual Studio | Windows | `%USERPROFILE%\.mcp.json` |
-| VS Code | Windows | `%APPDATA%\Code\User\mcp.json`  |
+| VS Code | Windows | `%APPDATA%\Code\User\mcp.json` |
 | VS Code | macOS | `~/Library/Application Support/Code/User/mcp.json` |
-| VS Code | Linux | `~/.config/Code/User/mcp.json`  |
-| Cursor  | Windows | `%USERPROFILE%\.cursor\mcp.json` |
+| VS Code | Linux | `~/.config/Code/User/mcp.json` |
+| Cursor | Windows | `%USERPROFILE%\.cursor\mcp.json` |
 | Cursor | macOS, Linux | `~/.cursor/mcp.json` |
-
 ## Install DPL MCP Server
 
 You can also fine-tune the process with the following options:
