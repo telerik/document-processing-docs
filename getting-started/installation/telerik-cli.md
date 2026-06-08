@@ -20,7 +20,7 @@ The Telerik CLI works on Windows, macOS, and Linux. It requires the .NET SDK (ve
 The following table lists all Telerik CLI commands with their purpose and usage.
 
 | Command | Description | Usage |
-|---|---|---|
+| --- | --- | --- |
 | `dotnet tool install -g Telerik.CLI` | Installs the Telerik CLI as a .NET global tool. | Run once to install the CLI on your machine. |
 | `dotnet tool update -g Telerik.CLI` | Updates the Telerik CLI to the latest version. | Run periodically to get the latest features and fixes. |
 | `telerik nuget config` | Configures the Telerik NuGet server to your package sources. | Run to set up the `https://nuget.telerik.com/v3/index.json` feed in your NuGet configuration. |
@@ -29,7 +29,6 @@ The following table lists all Telerik CLI commands with their purpose and usage.
 | `telerik login` | Authenticates with your Telerik account. | Run to store credentials for subsequent commands. |
 | `telerik whoami` | Displays the currently logged-in Telerik user account email. | Run to verify your authentication state. |
 | `telerik logout` | Logs out from the Telerik CLI. | Run to log out the credentials from your Telerik account. |
-
 ## How to Install the Telerik CLI
 
 The [Telerik CLI NuGet](https://www.nuget.org/packages/Telerik.CLI) package is hosted on `nuget.org`. 
