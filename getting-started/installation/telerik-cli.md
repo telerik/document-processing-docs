@@ -5,7 +5,7 @@ description: Install and use the Telerik CLI to set up the Telerik NuGet feed, a
 slug: dpl-telerik-cli
 tags: telerik,cli,command, line,dotnet,tool,nuget,setup,install,create,update,dpl,getting, started,environment
 published: True
-position: 2
+position: 1
 tag: new
 ---
 
