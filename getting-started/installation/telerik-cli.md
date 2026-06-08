@@ -3,10 +3,9 @@ title: Telerik CLI
 page_title: Telerik CLI - Installation, Setup, and Command Reference for Telerik Document Processing
 description: Install and use the Telerik CLI to set up the Telerik NuGet feed, and update Telerik Document Processing packages from the command line.
 slug: dpl-telerik-cli
-tags: telerik,cli,command, line,dotnet,tool,nuget,setup,install,create,update,dpl,getting, started,environment
+tags: telerik, cli, command, line, dotnet, tool, nuget, setup, install, create, update, dpl, getting, started, environment, new
 published: True
 position: 1
-tag: new
 ---
 
 # Telerik CLI
