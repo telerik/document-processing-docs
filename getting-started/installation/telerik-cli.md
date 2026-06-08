@@ -174,11 +174,10 @@ telerik nuget config --scope project --path . --force
 The following table lists the requirements to run the Telerik CLI.
 
 | Requirement | Minimum version | Notes |
-|---|---|---|
+| --- | --- | --- |
 | .NET SDK | 6.0 | Required to install and run .NET global tools. |
 | Operating system | Windows, macOS, or Linux | Any OS supported by the .NET SDK. |
 | Telerik account | N/A | Active Subscription or Trial license required. |
-
 ## See Also
 
 * [Telerik NuGet Source]({%slug telerik-nuget-source%})
