@@ -157,7 +157,7 @@ telerik nuget config
 
 By default, the `nuget config` command updates your [global `NuGet.Config` file](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior). The newly added Telerik NuGet feed name is `TelerikNuGetV3`. The command generates a new API key that you can delete and revoke from the [API Keys page in your Telerik account](https://www.telerik.com/account/downloads/api-keys).
 
-> Telerik NuGet API keys expire in two years.
+>important Telerik NuGet API keys expire in two years.
 
 You can use the `nuget config` command with the following options:
 
