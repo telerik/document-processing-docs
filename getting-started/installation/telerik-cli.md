@@ -123,7 +123,7 @@ To install the Telerik MCP server, use the `mcp config` command:
 telerik mcp config
 ```
 
-By default, the command creates or updates the global `.mcp.json` configuration files of all supported IDEs with all available Telerik MCP servers for all Telerik products.
+By default, the command creates or updates the global MCP configuration file for each supported IDE and adds entries for all available Telerik MCP servers for all Telerik products.
 
 | IDE | Operating System | Configuration File Path |
 | --- | --- | --- |
