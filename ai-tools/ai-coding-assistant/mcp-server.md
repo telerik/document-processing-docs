@@ -43,7 +43,7 @@ To use the Telerik Document Processing Libraries (DPL) MCP Server, you need:
 
 Depending on your environment, you can install the Telerik DPL MCP server either by using the .NET tooling or Node.js.
 
-## Install with Telerik CLI (Recommended)
+### Install with Telerik CLI (Recommended)
 
 The easiest way to install and configure the Telerik DPL MCP Server is through the [Telerik CLI]({%slug dpl-telerik-cli%}). A single command line sets up the MCP server for your IDE automatically:
 
