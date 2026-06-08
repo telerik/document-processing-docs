@@ -114,8 +114,7 @@ To download or update your [Telerik license key]({%slug setting-up-license-key%}
 telerik license get-key
 ```
 
-The `license get-key` command downloads your up-to-date Telerik license key and creates a `telerik-license.txt` file in your operating system user's folder.
-
+The `license get-key` command downloads your up-to-date Telerik license key and saves it as `telerik-license.txt` in your home directory (`%AppData%\Telerik\telerik-license.txt` on Windows and `~/.telerik/telerik-license.txt` on macOS / Linux).
 
 ## Install MCP Server
 
