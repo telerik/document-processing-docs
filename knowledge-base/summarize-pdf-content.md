@@ -21,16 +21,16 @@ Learn how to summarize the text content of a PDF document using [Text Analytics 
 
 ## Solution
 
-Follow the steps:
+Follow these steps to summarize the text content of a PDF document:
 
-1\. Before going further, you can find listed below the **required** assemblies/NuGet packages that should be added to your project:
+1\. Add the following **required** assemblies and NuGet packages to your project:
 
 * [Azure.AI.TextAnalytics](https://www.nuget.org/packages/Azure.AI.TextAnalytics)
 * Telerik.Documents.Fixed
 * Telerik.Documents.Core
 * Telerik.Zip
 
-2\. It is necessary to generate your Azure AI key and endpoint: [Get your credentials from your Azure AI services resource](https://learn.microsoft.com/en-us/azure/ai-services/use-key-vault?tabs=azure-cli&pivots=programming-language-csharp)
+2\. Generate your Azure AI key and endpoint: [Get your credentials from your Azure AI services resource](https://learn.microsoft.com/en-us/azure/ai-services/use-key-vault?tabs=azure-cli&pivots=programming-language-csharp)
 
 ![Azure AI key](images/azure-ai-key.png)  
 
@@ -142,7 +142,7 @@ Follow the steps:
 
 ## See Also
 
-- [Extracting Text from PDF Documents]({%slug extract-text-from-pdf%})
-- [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%})
-- [TextFormatProvider]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%}) 
+* [Extracting Text from PDF Documents]({%slug extract-text-from-pdf%})
+* [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%})
+* [TextFormatProvider]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%})
 

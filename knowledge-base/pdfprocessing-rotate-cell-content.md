@@ -35,7 +35,7 @@ Key points about the `RotatedBlock` implementation:
 * It contains an inner [Block]({%slug radpdfprocessing-editing-block%}) instance that holds the actual content.
 * When measured, the `RotatedBlock` returns the rotated bounding box of the inner block.
 * When drawn, it applies additional matrix transformations to the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) so that the content is rendered at the desired rotation angle.
-* The sample implementation always measures the inner block to infinity. If you need to split the block across pages or wrap text onto multiple lines, additional custom logic is required depending on the desired behavior.
+* The sample implementation always measures the inner block to infinity. If you need to split the block across pages or wrap text onto multiple lines, extra custom logic is required depending on the behavior you want.
 
 **Step 1:** Add the `RotatedBlock` class to your project:
 
@@ -244,7 +244,7 @@ static void DrawTableWithRotatedBlocks(RadFixedDocument document)
 
 ## See Also
 
-- [Block]({%slug radpdfprocessing-editing-block%})
-- [Table]({%slug radpdfprocessing-editing-table-overview%})
-- [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Block]({%slug radpdfprocessing-editing-block%})
+* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})

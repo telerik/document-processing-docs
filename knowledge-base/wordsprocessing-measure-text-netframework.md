@@ -1,6 +1,6 @@
 ---
 title: How to Measure Text in WordsProcessing .NET Framework
-description: Learn how to measure text using the WordsProcessing library in .NET Framework.
+description: Learn how to measure text dimensions using the RadWordsProcessing library in a .NET Framework application with the Block.Measure method.
 type: how-to
 page_title: How to Measure Text in WordsProcessing .NET Framework
 slug: wordsprocessing-measure-text-netframework
@@ -16,11 +16,11 @@ res_type: kb
 
 ## Description
 
-This article shows how to measure text in [WordsProcessing]({%slug radwordsprocessing-overview%}) in the .NET Framework environment. 
+This article demonstrates how to measure text in [WordsProcessing]({%slug radwordsprocessing-overview%}) in the .NET Framework environment.
 
 ## Solution
 
-You can create a __Telerik.Windows.Documents.Fixed.Model.Editing.[Block]({%slug radpdfprocessing-editing-block%})__ instance with the same content and font properties as the [Run]({%slug radwordsprocessing-model-run%}) you want to insert. Then you can call the __Measure__ method of the block in order to obtain its measurements:
+Create a `Telerik.Windows.Documents.Fixed.Model.Editing.`[Block]({%slug radpdfprocessing-editing-block%}) instance with the same content and font properties as the [Run]({%slug radwordsprocessing-model-run%}) you want to insert. Then call the `Measure` method of the block to obtain its measurements:
 
 ```csharp
 using System;
@@ -163,10 +163,11 @@ namespace ConsoleNetFramework
 }
 
 ```
-#### Result:
-![WordsProcessing Measure Text .NET Framework](images/wordsprocessing-measure-text-netframework.png) 
+### Result
+
+![WordsProcessing Measure Text .NET Framework](images/wordsprocessing-measure-text-netframework.png)
 
 ## See Also
 
-* [PdfProcessing Fonts]({%slug radpdfprocessing-concepts-fonts%})
-* [WordsProcessing Measure Text in .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})
+* [RadPdfProcessing Fonts]({%slug radpdfprocessing-concepts-fonts%})
+* [Measure Text in .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})

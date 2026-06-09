@@ -1,8 +1,8 @@
 ---
-title: How to Prevent Text with Special Characters from Being Cut Off when converting HTML to PDF using RadWordsProcessing
-description: How to prevent text with special characters from being cut off when converting HTML to PDF using RadWordsProcessing.
+title: Preventing Text with Special Characters from Being Cut Off when Converting HTML to PDF
+description: Learn how to prevent text with special characters from being cut off when converting HTML to PDF by implementing a custom FontsProvider in RadWordsProcessing.
 type: how-to
-page_title: How to prevent text with special characters from being cut off when converting HTML to PDF using RadWordsProcessing
+page_title: Preventing Text Cut Off in HTML to PDF Conversion with RadWordsProcessing
 slug: prevent-text-cut-off-pdf-conversion-radwordsprocessing
 tags: radwordsprocessing, pdf, font, text, characters, conversion, document, processing
 res_type: kb
@@ -16,25 +16,28 @@ ticketid: 1665364
 | 2024.3.806| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-When converting HTML documents to PDF format using [RadWordsProcessing ]({%slug radwordsprocessing-overview%}) and its [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}), text containing special characters such as **å, ä, or ö** gets cut off. This issue arises due to the library's requirement for explicit access to [font]({%slug radpdfprocessing-concepts-fonts%}) data, which is **not** automatically provided in the .NET Standard version of Telerik Document Processing.
+
+When you convert HTML documents to PDF format by using [RadWordsProcessing]({%slug radwordsprocessing-overview%}) and its [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}), text that contains special characters such as **å, ä, or ö** gets cut off. This issue occurs because the library requires explicit access to [font]({%slug radpdfprocessing-concepts-fonts%}) data, which is **not** automatically available in the .NET Standard version of Telerik Document Processing.
 
 This KB article also answers the following questions:
-- How can I include special characters in PDFs using RadWordsProcessing?
-- What steps are needed to support non-standard fonts in PDF conversion?
-- How do I ensure all text is properly displayed when converting HTML to PDF?
+
+* How can I include special characters in PDFs using RadWordsProcessing?
+* What steps are needed to support non-standard fonts in PDF conversion?
+* How do I ensure all text displays correctly when converting HTML to PDF?
 
 |Before|After|
 |----|----|
 |![HTML to Pdf with Cut Off Text](images/html-to-pdf-cutoff-text.png)|![HTML to Pdf with Full Text](images/html-to-pdf-full-text.png)| 
 
 ## Solution
-To resolve the issue with text cut off and ensure all characters, including special ones, are correctly displayed, implement a custom `FontsProvider`. This provider will supply the necessary font data to the PdfProcessing library, enabling it to correctly render all characters.
 
-1/. Implement a custom [FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) by extending `FontsProviderBase` and override the `GetFontData` method. This method should return the font data for the required fonts, including those with special characters.
+To resolve the text cut-off issue and ensure all characters display correctly, implement a custom `FontsProvider`. This provider supplies the necessary font data to the PdfProcessing library and enables it to render all characters correctly.
 
-The following example shows how to handle *Tahoma, Arial and Segoe UI* fonts. When using other fonts, the custom implementation should be modified and further extended with the respective fonts.
+1. Implement a custom [FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) by extending `FontsProviderBase` and override the `GetFontData` method. This method returns the font data for the required fonts, including those with special characters.
 
- ```csharp
+The following example shows how to handle *Tahoma, Arial, and Segoe UI* fonts. When you use other fonts, modify and extend the custom implementation with the respective fonts.
+
+```csharp
     internal class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
     {
         private readonly string fontFolder = Environment.GetFolderPath(Environment.SpecialFolder.Fonts);
@@ -79,20 +82,21 @@ The following example shows how to handle *Tahoma, Arial and Segoe UI* fonts. Wh
             }
         }
     }
-  ```
+```
 
-2/. Before converting your HTML document to PDF, set the custom `FontsProvider` to the `FontsProvider` property of the `FixedExtensibilityManager`.
+2. Before you convert the HTML document to PDF, set the custom `FontsProvider` to the `FontsProvider` property of the `FixedExtensibilityManager`.
 
 ```csharp
     Telerik.Windows.Documents.Extensibility.FontsProviderBase fontsProvider = new FontsProvider();
     Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.FontsProvider = fontsProvider;
 ```
 
-Following these steps will ensure access to the necessary font data, preventing text from being cut off and ensuring all characters, including those with special characters, are properly rendered in the PDF document.
+These steps provide access to the necessary font data and ensure all characters, including special ones, render correctly in the PDF document.
 
 ## See Also
-- [PDF Format Provider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-- [Fonts in RadPdfProcessing]({%slug radpdfprocessing-concepts-fonts%})
-- [How to Implement a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
-- [RadWordsProcessing Documentation]({%slug radwordsprocessing-overview%})
-- [Preserving the Font in PDF Export from Excel]({%slug preserve-font-boldness-pdf-export-radspreadprocessing%})
+
+* [PDF Format Provider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+* [Fonts in RadPdfProcessing]({%slug radpdfprocessing-concepts-fonts%})
+* [How to Implement a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
+* [RadWordsProcessing Documentation]({%slug radwordsprocessing-overview%})
+* [Preserving the Font in PDF Export from Excel]({%slug preserve-font-boldness-pdf-export-radspreadprocessing%})

@@ -1,6 +1,6 @@
 ---
 title: Extract the contents of a zip file to a directory
-description: The example is showing how to extract the contents of a zip file to a directory.
+description: Learn how to extract the contents of a zip file to a directory while preserving the file structure using the RadZipLibrary.
 type: how-to
 page_title: Extract the contents of a zip file to a directory
 slug: zip-library-extract-files-from-archive
@@ -11,20 +11,21 @@ res_type: kb
 ---
 
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
 |2021.1.325|RadZipLibrary|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
 
 ## Description
 
-The example is showing how to extract the contents of a zip file to a directory. The example preserves the file structure inside the archive. 
+This article demonstrates how to extract the contents of a zip file to a directory. The example preserves the file structure inside the archive.
 
 ## Solution
 
-The following code snippet is iterating all the files in the archive and extracts each file in the respected directory.
+The following code snippet iterates all the files in the archive and extracts each file to the corresponding directory:
 
 ```csharp
-
     using (Stream stream = File.Open("test.zip", FileMode.Open))
     {
         using (ZipArchive archive = new ZipArchive(stream))
@@ -52,5 +53,8 @@ The following code snippet is iterating all the files in the archive and extract
             }
         }
     }
-
 ```
+
+## See Also
+
+* [RadZipLibrary Overview]({%slug radziplibrary-overview%})

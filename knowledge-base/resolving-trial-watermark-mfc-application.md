@@ -17,27 +17,27 @@ ticketid: 1711260
 
 ## Description
 
-When generating documents in MFC (Microsoft Foundation Class) applications with Telerik Document Processing libraries, a trial watermark may be observed even though the [license is properly setup]({%slug setting-up-license-key%}). This issue can occur even if a valid license is detected during the build phase, as indicated by the build output. 
+When you generate documents in MFC (Microsoft Foundation Class) applications with Telerik Document Processing libraries, a trial watermark may appear even though the [license is properly set up]({%slug setting-up-license-key%}). This issue can occur even if a valid license is detected during the build phase, as indicated by the build output.
 
 ## Solution
 
-To resolve a license issue with Telerik Document Processing in MFC applications, follow the steps:
+To resolve a license issue with Telerik Document Processing in MFC applications, follow these steps:
 
-1. Ensure that the [Telerik.Licensing](https://www.nuget.org/packages/Telerik.Licensing) NuGet package is directly referenced in the startup project. For .NET Framework startup projects that do not use the [SDK-style](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview) project structure, ensure that there is one or more Telerik Document Processing NuGet packages/assemblies referenced in the project. If the startup project contains no Telerik Document Processing references and is not defined as SDK-style project, and is instead referencing other projects that contain the Document Processing-related code, our licensing mechanism cannot determine that any Telerik products are used, thus the license check will be False at runtime. 
+1. Verify that the [Telerik.Licensing](https://www.nuget.org/packages/Telerik.Licensing) NuGet package is directly referenced in the startup project. For .NET Framework startup projects that do not use the [SDK-style](https://learn.microsoft.com/en-us/dotnet/core/project-sdk/overview) project structure, verify that one or more Telerik Document Processing NuGet packages or assemblies are referenced in the project. If the startup project contains no Telerik Document Processing references and is not an SDK-style project, the licensing mechanism cannot determine that any Telerik products are in use. As a result, the license check returns `False` at runtime.
 
-2. Ensure that a [valid license key is present and correctly configured]({%slug setting-up-license-key%}). 
+2. Verify that a [valid license key is present and correctly configured]({%slug setting-up-license-key%}).
 
-3. Call the TelerikLicensing.[Register]({%slug adding-license-key-ci-cd-services%}#using-teleriklicensing-register-method-on-aws-lambdas) method as early as possible in your project since there is not strict entry point.
+3. Call the `TelerikLicensing`.[Register]({%slug adding-license-key-ci-cd-services%}#using-teleriklicensing-register-method-on-aws-lambdas) method as early as possible in your project because there is no strict entry point.
 
-4. Use Document Processing version that matches the corresponding Telerik.Licensing version. MFC C++ application have no binding redirect and it is possible to load different versions of Telerik.Licensing, respectively you call .Register() on one, and the libraries look for a license on another. That is why we should strictly follow the corresponding versions. For example: 
+4. Use a Document Processing version that matches the corresponding `Telerik.Licensing` version. MFC C++ applications have no binding redirect, and it is possible to load different versions of `Telerik.Licensing`. You may call `.Register()` on one version while the libraries look for a license on another. Strictly follow the corresponding versions. For example:
 
-    * Document Processing Version **2025.4.1319** matches Telerik.Licensing **1.6.36**.
+    * Document Processing version **2025.4.1319** matches `Telerik.Licensing` **1.6.36**.
 
-    * Document Processing Version **2026.1.210** matches Telerik.Licensing **1.6.40**.
+    * Document Processing version **2026.1.210** matches `Telerik.Licensing` **1.6.40**.
 
-    * Document Processing Version **2026.1.304** matches Telerik.Licensing **1.7.0**.
+    * Document Processing version **2026.1.304** matches `Telerik.Licensing` **1.7.0**.
 
-5. Troubleshooting Steps: Check the loaded assemblies after the code for producing the document: 
+5. Check the loaded assemblies after the code that produces the document:
 
 ```csharp
             Assembly entryAssembly = Assembly.GetEntryAssembly();
@@ -50,4 +50,4 @@ To resolve a license issue with Telerik Document Processing in MFC applications,
 
 ## See Also
 
-- [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%})
+* [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%})

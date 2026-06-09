@@ -24,7 +24,7 @@ The approach is to import the PDF, create a rectangle path sized to the page, an
 
 ### Key Points
 * PDF pages don't have a built-in background property. Draw a rectangle to create a background.
-* Backgrounds are typically the first element in the page content, subsequent elements render above earlier ones.
+* Backgrounds are typically the first element in the page content. Subsequent elements render above earlier ones.
 * Insert at index `0` to draw a background behind all content.
 * Size the rectangle to match `firstPage.Size` for full-page coverage.
 
@@ -60,6 +60,7 @@ using (System.IO.Stream output = System.IO.File.OpenWrite(pdfOutputPath))
     pdfFormatProvider.Export(inputDocument, output, TimeSpan.FromSeconds(10));
 }
 ```
+
 ## See Also
 * [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
 

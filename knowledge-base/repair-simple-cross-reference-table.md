@@ -1,41 +1,29 @@
 ---
-title: Repair Simple Cross-Reference Table 
-description: Describes how to repair a document containing simple invalid cross-reference table.
+title: Repairing a PDF Document with an Invalid Cross-Reference Table Offset
+description: Learn how to repair a PDF document that contains an invalid cross-reference (XREF) table offset by using RadPdfProcessing.
 type: how-to
 page_title: Repair Simple Cross-Reference Table
 slug: repair-simple-cross-reference-table
 position: 0
 tags: radpdfprocessing, pdf, cross, reference, repair, document, processing, fixed
-
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2020.1.316</td>
-		<td>RadPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-</tbody>
-</table>
+## Environment
+
+| Version | Product | Author |
+| --- | --- | --- |
+| 2020.1.316 | RadPdfProcessing | [Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov) |
 
 ## Description
 
-How to repair a **PDF** document with invalid **Cross-Reference**(**XREF**) table offset. 
+This article shows how to repair a PDF document with an invalid Cross-Reference (XREF) table offset.
 
 ## Solution
 
-The provided code snippets demonstrates how to repair an invalid XREF table offset by using the **RepairDocumentWithSimpleCrossReferenceTable** method.
+The following code snippet demonstrates how to repair an invalid XREF table offset by using the `RepairDocumentWithSimpleCrossReferenceTable` method.
 
-> The provided solution, however, can handle only simple cases in which the document contains a single XREF table.
+>tip The provided solution can handle only simple cases in which the document contains a single XREF table.
 
 ```csharp
 
@@ -55,7 +43,7 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 ```
 
 
-#### __Repair Document With Simple Cross-Reference Table__
+**Example 1: Repair Document with Simple Cross-Reference Table**
 
 ```csharp
 
@@ -100,7 +88,7 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 
 ```
 
-#### __Extensions class providing some static methods used in RepairDocumentWithSimpleCrossReferenceTable method__
+**Example 2: Extensions Class with Static Methods Used in the RepairDocumentWithSimpleCrossReferenceTable Method**
 
 ```csharp
 
@@ -213,3 +201,6 @@ The provided code snippets demonstrates how to repair an invalid XREF table offs
 
 ```
 
+## See Also
+
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})

@@ -1,6 +1,6 @@
 ---
 title: Replace Image in PDF Document
-description: Check this topic to learn how to replace image in PDF document with PdfProcessing.
+description: Learn how to find and replace a specific image in a PDF document while preserving its size and position by using RadPdfProcessing.
 type: how-to
 page_title: Replace Image in PDF Document
 slug: replace-image-in-pdf-document
@@ -9,22 +9,11 @@ tags: radpdfprocessing, pdf, image, replace, document, processing, fixed, conten
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2021.1.212</td>
-		<td>RadPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-</tbody>
-</table>
+## Environment
+
+| Version | Product | Author |
+| --- | --- | --- |
+| 2021.1.212 | RadPdfProcessing | [Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov) |
 
 ## Description
 
@@ -32,9 +21,9 @@ How to replace an image in a **PDF** document.
 
 ## Solution
 
-In the example below, we are demonstrating how to find a specific image in a PDF document imported into a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument), preserve its size and [Position](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/position), and replace it with another [Image](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/image).
+The following example shows how to find a specific image in a PDF document imported into a [RadFixedDocument](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/radfixeddocument), preserve its size and [Position](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/position), and replace it with another [Image](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/image).
 
-#### Replace Image in Imported PDF Document
+**Example 1: Replace an Image in an Imported PDF Document**
 
 ```csharp
 using System.Diagnostics;
@@ -94,3 +83,8 @@ namespace ReplaceImageInPdf
 | --- | --- |
 | .NET Standard | `Telerik.Documents.Fixed`<br/>`Telerik.Documents.ImageUtils` |
 | Windows / .NET Framework | `Telerik.Windows.Documents.Fixed` |
+
+## See Also
+
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [ImageSource]({%slug radpdfprocessing-model-imagesource%})

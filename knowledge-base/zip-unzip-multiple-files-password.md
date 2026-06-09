@@ -1,6 +1,6 @@
 ---
 title: How to zip and unzip multiple files with a password
-description: The example is showing how to zip and unzip multiple files with a password.
+description: Learn how to compress and extract multiple files with password protection by using the RadZipLibrary DefaultEncryptionSettings class.
 type: how-to
 page_title: Example on how to zip and unzip multiple files with a password
 slug: zip-unzip-multiple-files-password
@@ -26,11 +26,12 @@ res_type: kb
 
 
 ## Description
-The example is showing how to all files from a directory to a password-protected zip archive.
+
+This article demonstrates how to add all files from a directory to a password-protected zip archive and then extract them.
 
 ## Solution
 
-The following code snippet is traversing all the files in a directory then add the contents of each file to a new Entry in the ZipArchive. The password for the archive is passed through the DefaultEncryptionSettings class. After zipping all the files a new folder named TestZip is created and the contents of the ZipArchive are unzipped into the new folder.
+The following code example traverses all files in a directory and adds the contents of each file to a new entry in the `ZipArchive`. The `DefaultEncryptionSettings` class provides the password for the archive. After zipping all files, the code creates a new folder named `TestZip` and extracts the contents of the `ZipArchive` into that folder.
 
 ```csharp
 
@@ -81,3 +82,7 @@ The following code snippet is traversing all the files in a directory then add t
 
 ```
 
+## See Also
+
+* [ZipArchive Class]({%slug radziplibrary-gettingstarted%})
+* [Protect a ZipArchive]({%slug radziplibrary-protect-ziparchive%})

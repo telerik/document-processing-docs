@@ -20,25 +20,26 @@ ticketid: 1700721
 This article shows how to use [WordsProcessing]({%slug radwordsprocessing-overview%}) and [PdfProcessing]({%slug radpdfprocessing-overview%}) libraries to convert HTML with tables to a PDF, without splitting rows across pages.
 
 This knowledge base article also answers the following questions:
-- How can I prevent table rows from splitting across pages during HTML to PDF conversion?
-- How do I handle uneven row heights in tables when exporting to PDF?
-- How can I ensure HTML table rows are preserved on a single page during HTML to PDF conversion?
+
+* How can I prevent table rows from splitting across pages during HTML to PDF conversion?
+* How do I handle uneven row heights in tables when exporting to PDF?
+* How can I ensure HTML table rows stay on a single page during HTML to PDF conversion?
 
 ## Solution
 
-To prevent table rows from splitting across pages, manually recreate the PDF table from scratch by copying the HTML table content to a new PDF table. Use the **Measure** method to check whether the table exceeds the page boundary. If it does, create a new page and continue building the table.
+To prevent table rows from splitting across pages, manually recreate the PDF table from scratch by copying the HTML table content to a new PDF table. Use the `Measure` method to check whether the table exceeds the page boundary. If it does, create a new page and continue building the table.
 
 ### Steps to Implement
 
-1. **Set up the HTML import settings:** Use the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) and implement the [LoadImageFromUri]({%slug radwordsprocessing-formats-and-conversion-html-settings%}#loadimagefromuri-and-loadstylesheetfromuri-events) event for resolving images in the HTML content.
+1. **Set up the HTML import settings:** Use the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) and implement the [`LoadImageFromUri`]({%slug radwordsprocessing-formats-and-conversion-html-settings%}#loadimagefromuri-and-loadstylesheetfromuri-events) event for resolving images in the HTML content.
 
 2. **Load the HTML document:** Import the HTML content into a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) object.
 
 3. **Extract rows from the HTML table:** Enumerate the rows from the HTML table.
 
-4. **Create and format a new PDF table:** For each page, create a new table and add rows while ensuring they fit within the page boundaries, while also setting the desired formatting.
+4. **Create and format a new PDF table:** For each page, create a new table and add rows while ensuring they fit within the page boundaries. Set the desired formatting as well.
 
-5. **Check row measurements:** After adding each row, use the **Measure** method to verify whether the table exceeds the page height. If it does, move the remaining rows to a new page.
+5. **Check row measurements:** After adding each row, use the `Measure` method to verify whether the table exceeds the page height. If it does, move the remaining rows to a new page.
 
 6. **Export the PDF:** Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to save the final PDF document.
 
@@ -156,6 +157,7 @@ private static void AddRowToTable(Telerik.Windows.Documents.Fixed.Model.Editing.
 ```
 
 ## See Also
+
 * [Table]({%slug radpdfprocessing-editing-table-overview%})
 * [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
 * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})

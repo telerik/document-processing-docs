@@ -18,49 +18,49 @@ res_type: kb
 
 ## Description
 
-In certain environments an application may still show a trial watermark (or trial sheet) **at runtime** even though everything looked correct at **build time**:
+In certain environments an application may still show a trial watermark (or trial sheet) **at runtime** even though everything looks correct at **build time**:
 
-* Valid **telerik-license.txt** file is present.
+* Valid `telerik-license.txt` file is present.
 * Build logs indicate Telerik products detected (class library and executable).
 * No licensing build errors are reported.
 
 Yet the rendered UI (document, control, page) contains a watermark.
 
-These issues surface mainly in two categories:
+These issues surface in two categories:
 
 1. **Web products (ASP.NET AJAX, MVC, Core, Blazor)** – Incorrect script load order or duplicate script imports where one import overrides a previously applied license.
-2. **.NET applications with extensibility / plugins (WPF, WinForms, class libraries, host wrappers)** - The entry assembly at runtime differs (e.g. a host like **SentinelDotNetFx.dll**), changing the licensing evaluation path.
+2. **.NET applications with extensibility or plugins (WPF, WinForms, class libraries, host wrappers)** – The entry assembly at runtime differs (for example, a host like `SentinelDotNetFx.dll`), which changes the licensing evaluation path.
 
-Runtime diagnostics in **Telerik.Licensing** help correlate what the licensing engine sees (entry assembly, loaded assemblies, product metadata, license evidences) with the final **IsLicenseValid** result.
+Runtime diagnostics in `Telerik.Licensing` help correlate what the licensing engine sees (entry assembly, loaded assemblies, product metadata, and license evidences) with the final `IsLicenseValid` result.
 
 ## Solution
 
 ### 1. Enable Diagnostics Early
-Call **Telerik.Licensing.TelerikLicensing.EnableDiagnostics();** **as early as possible**, before any Telerik UI controls or Document Processing code is first reached/loaded.
+Call `Telerik.Licensing.TelerikLicensing.EnableDiagnostics()` **as early as possible**, before any Telerik UI controls or Document Processing code is first reached or loaded.
 
-### 2. Plugin / Non-Standard Entry Scenarios
-If the code runs as a plugin or a dynamically loaded context (no traditional entry assembly, or an unexpected wrapper assembly), call **TelerikLicensing.Register()** **after** enabling diagnostics to provision runtime script keys.
+### 2. Plugin or Non-Standard Entry Scenarios
+If the code runs as a plugin or a dynamically loaded context (no traditional entry assembly, or an unexpected wrapper assembly), call `TelerikLicensing.Register()` **after** enabling diagnostics to provision runtime script keys.
 
 ### 3. Execute
 Trigger the Telerik code so the licensing pipeline executes.
 
 ### 4. Collect the Log
-Read the accumulated diagnostics text from **Telerik.Licensing.TelerikLicensing.Diagnostics** and persist it (file, console). The log grows for the life of the process (restart to clear).
+Read the accumulated diagnostics text from `Telerik.Licensing.TelerikLicensing.Diagnostics` and persist it (file, console). The log grows for the life of the process. Restart the process to clear it.
 
 ### 5. Analyze Key Sections
 Look for:
-- Entry assembly (**Assembly.GetEntryAssembly()**)
-- Product metadata extraction (**ProductMetadataForAssembly ...**)
-- License evidences (subscription / perpetual tokens)
-- Final resolution line (**Resolved: IsLicenseValid: ...**)
+* Entry assembly (`Assembly.GetEntryAssembly()`)
+* Product metadata extraction (`ProductMetadataForAssembly ...`)
+* License evidences (subscription or perpetual tokens)
+* Final resolution line (`Resolved: IsLicenseValid: ...`)
 
 ### 6. Disable When Done
-Diagnostics add overhead and should not remain enabled indefinitely in production.
+Diagnostics add overhead and must not remain enabled in production indefinitely.
 
-### Performance & Operational Notes
-- Diagnostics add measurable overhead. Use only during investigation.
-- Log size grows monotonically until process restart.
-- Capture the log after reproducing the watermark; then disable diagnostics.
+### Performance and Operational Notes
+* Diagnostics add measurable overhead. Use them only during investigation.
+* Log size grows monotonically until you restart the process.
+* Capture the log after reproducing the watermark, then disable diagnostics.
 
 ## See Also
 

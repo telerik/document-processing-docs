@@ -27,12 +27,12 @@ The API of RadPdfProcessing contains two different editors,  [RadFixedDocumentEd
 * Add content to existing document: all features of the existing PDF document are preserved, and just some content is added.
 * Merge document pages: Combine pages from different documents into a single document.
 * Interactive forms
-    * Automatic filling of forms (e.g. tax forms).
+    * Automatic filling of forms (for example, tax forms).
     * Automatic extraction of data from already filled forms.
 * Flexible options for digitally signing PDF documents
     * Sign PDF documents using X.509 certificates
     * Validate signatures including certificate chain and revocation checks
-    * Add trusted timestamps via timestamp servers for long-term validation
+    * Add trusted timestamps through timestamp servers for long-term validation
     * Support external signing with hardware security modules or third-party providers
     * Apply multiple signatures with incremental updates without invalidating previous ones
 * GenAI-powered Document Insights
@@ -43,13 +43,13 @@ The document model of the library provides support for:
 | Feature | Description |
 |---------|-------------|
 | [**Pages**]({%slug radpdfprocessing-model-radfixedpage%}) | Adding, modifying or removing of pages in a document. The properties enable you to change the size of the page, its rotation, and more. |
-| **Automatic layout** | Although the PDF format is fixed, sometimes you will need to insert the content in a way that flows on the page. RadPdfProcessing enables to achieve this easily by using  [blocks]({%slug radpdfprocessing-editing-block%}), [tables]({%slug radpdfprocessing-editing-table-overview%}) and [lists]({%slug radpdfprocessing-editing-list%}). |
-| [**Images**]({%slug radpdfprocessing-model-image%}) | Decoded on demand to achieve better performance. The API enables you to obtain the encoded image data. You can also control the image quality when saving the document. As of **Q3 2024** RadPdfProcessing provides support for SVG FormSource (vector graphics image format).|
+| **Automatic layout** | Although the PDF format is fixed, sometimes you need to insert content in a way that flows on the page. RadPdfProcessing achieves this by using  [blocks]({%slug radpdfprocessing-editing-block%}), [tables]({%slug radpdfprocessing-editing-table-overview%}) and [lists]({%slug radpdfprocessing-editing-list%}). |
+| [**Images**]({%slug radpdfprocessing-model-image%}) | Decoded on demand to achieve better performance. The API enables you to obtain the encoded image data. You can also control the image quality when saving the document. Starting with **Q3 2024** RadPdfProcessing provides support for SVG FormSource (vector graphics image format).|
 | [**Geometries**]({%slug radpdfprocessing-concepts-geometry%}) | Enable you to describe the geometry of a 2D shape. |
-| [**Form XObjects**]({%slug radpdfprocessing-model-form%}) | The Form XObjects enables you to describe composite objects (consisting of text, images, vector elements, etc.) within a PDF file and reuse this content among the document, for smaller document size and better rendering performance. |
-| [**Interactive Forms**]({%slug radpdfprocessing-model-interactive-forms-overview%}) | Create and modify PDF files containing textboxes, buttons, list boxes, and other interactive controls making available for the PDF file user to interactively fill some data in the PDF document and/or digitally sign the filled document. You can flatten the fields as well. |
+| [**Form XObjects**]({%slug radpdfprocessing-model-form%}) | The Form XObjects enable you to describe composite objects (consisting of text, images, vector elements, and other content) within a PDF file and reuse this content among the document, for smaller document size and better rendering performance. |
+| [**Interactive Forms**]({%slug radpdfprocessing-model-interactive-forms-overview%}) | Create and modify PDF files containing textboxes, buttons, list boxes, and other interactive controls that allow users to fill data in the PDF document and digitally sign the filled document. You can flatten the fields as well. |
 | [**Digital Signature**]({%slug radpdfprocessing-features-digital-signature%}) | The digital signature feature enables you to sign and validate PDF documents. It supports signing PDF documents [using a TimeStamp Server]({%slug pdf-sign-timestamp-server%}) or [external signing]({%slug external-digital-signing%}). |
-|[**Embedded File Streams**]({%slug radpdfprocessing-embedded-file-streams-overview%})|The embed a file stream feature allows adding external files to the PDF document.|
+|[**Embedded File Streams**]({%slug radpdfprocessing-embedded-file-streams-overview%})|The embedded file stream feature allows adding external files to the PDF document.|
 | [**Clipping**]({%slug radpdfprocessing-concepts-clipping%}) | You can define the outline of other content elements like images and paths. |
 | [**Bookmarks (Outlines)**]({%slug radpdfprocessing-features-bookmarks%}) | Add, remove or modify the bookmarks in a PDF document. |
 | [**Annotations**]({%slug radpdfprocessing-model-annotations-overview%}) | Associate an object with a location on a page of the PDF document. |
@@ -59,9 +59,9 @@ The document model of the library provides support for:
 | [**Text and Graphic properties**]({%slug radpdfprocessing-editing-text-and-graphic-properties%}) | Provide options for changing the properties of the different elements in the document elements so you can achieve a unique look. |
 | [**Password Protection**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings) | Support for documents encrypted with **Encryption Algorithm 4 (RC4/AES-128) and Encryption Algorithm 5 with AES 256** |
 | [**Merge documents**]({%slug radpdfprocessing-model-radfixeddocument%}) and [**document pages**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}) | You can combine the pages from multiple documents into a single document. |
-| [**PdfStreamWriter**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})| The API exposes a functionality that provides an option for exporting PDF files with unmatched performance and minimized memory footprint. Extremely useful when you need to add some content to an existing document, merge or split documents. |
+| [**PdfStreamWriter**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})| The API provides PDF export with high performance and minimized memory footprint. This is useful when you need to add content to an existing document, merge, or split documents. |
 | [**Import of PDF and export to PDF or plain text**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) | You can import or export PDF files and convert PDF files to plain text. |
-|[**JavaScript Actions and Trigger Events**]({%slug radpdfprocessing-model-javascript-actions%})|As of Q4 2024 you can import or export the javascript actions associated with pages, form fields, etc. so that they can be executed when the exported document is opened with Adobe Acrobat. |
+|[**JavaScript Actions and Trigger Events**]({%slug radpdfprocessing-model-javascript-actions%})|Starting with Q4 2024, you can import or export the JavaScript actions associated with pages, form fields, and other elements so that they execute when the exported document is opened with Adobe Acrobat. |
 |[**Accessibility Support**]({%slug create-accessible-pdf-documents%})|Offers accessibility support of documents to users with disabilities.|
 | [**Viewer Preferences**]({%slug radpdfprocessing-features-viewer-preferences%}) | Control how PDF documents are displayed and behave in PDF viewers, including window behavior, UI visibility, and print settings. |
 |[**GenAI-powered Document Insights**]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|Extract insights from PDF documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content.|
@@ -90,7 +90,7 @@ The document model of the library provides support for:
 
 ## See Also
 
-- [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
-- [First Steps]({%slug getting-started-first-steps%})
-- [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
-- [Accessibility Support]({%slug create-accessible-pdf-documents%})
+* [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
+* [First Steps]({%slug getting-started-first-steps%})
+* [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
+* [Accessibility Support]({%slug create-accessible-pdf-documents%})

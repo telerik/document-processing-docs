@@ -17,19 +17,19 @@ ticketid: 1683368
 
 ## Description
 
-When converting HTML content to PDF format using [RadWordsProcessing]({%slug radwordsprocessing-overview%}), non-breaking spaces (`&nbsp;`) within and surrounding HTML tags are not rendered correctly in the generated PDF document, although they appear as expected in the DOCX output. This issue occurs only when exporting to PDF format due to the .NET Standard version of RadPdfProcessing lacking a default mechanism for reading font data, which is required for accurate space rendering in PDFs.
+When converting HTML content to PDF format using [RadWordsProcessing]({%slug radwordsprocessing-overview%}), non-breaking spaces (`&nbsp;`) within and surrounding HTML tags do not render correctly in the generated PDF document. They appear as expected in the DOCX output. This issue occurs only when exporting to PDF format because the .NET Standard version of RadPdfProcessing lacks a default mechanism for reading font data. Font data is required for accurate space rendering in PDFs.
 
-This knowledge base article shows how to ensure that non-breaking spaces in HTML are correctly rendered in the exported PDF documents using RadWordsProcessing.
+This article shows how to ensure that non-breaking spaces in HTML render correctly in the exported PDF documents using RadWordsProcessing.
 
 ![HTML to PDF with Non-Breaking Spaces](images/non-breaking-spaces-in-exported-pdf.png)
 
 ## Solution
 
-To resolve the issue of non-breaking spaces not being rendered correctly in PDF documents generated from HTML content, it is necessary to implement a custom [FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}). This ensures [RadPdfProcessing]({%slug radpdfprocessing-overview%}) has access to font data for accurately rendering spaces and other font-related features in the PDF output.
+To resolve the issue of non-breaking spaces not rendering correctly in PDF documents generated from HTML content, implement a custom [FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}). This ensures [RadPdfProcessing]({%slug radpdfprocessing-overview%}) has access to font data for accurately rendering spaces and other font-related features in the PDF output.
 
 1. **Implement a Custom FontsProvider**
 
-   Create a class that extends `FontsProviderBase` and override the `GetFontData` method to provide the necessary font data. This method should return the font data as a byte array for the specified font properties.
+   Create a class that extends `FontsProviderBase` and override the `GetFontData` method to provide the necessary font data. This method returns the font data as a byte array for the specified font properties.
 
     ```csharp
         public class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
@@ -113,9 +113,9 @@ To resolve the issue of non-breaking spaces not being rendered correctly in PDF 
     Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.FontsProvider = fontsProvider;
     ```
 
-3. **Generate PDF Document from HTML Content**
+3. **Generate the PDF Document from HTML Content**
 
-   Utilize the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) to import HTML content and convert it to a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). Then, use the [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the document to PDF, ensuring non-breaking spaces and other font-related elements are rendered correctly.
+   Use the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) to import HTML content and convert it to a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). Then, use the [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the document to PDF. This ensures non-breaking spaces and other font-related elements render correctly.
 
     ```csharp
     // Example method implementation for converting HTML to PDF
@@ -125,10 +125,10 @@ To resolve the issue of non-breaking spaces not being rendered correctly in PDF 
     }
     ```
 
-For a detailed guide on implementing a `FontsProvider`, refer to the [How to implement a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) article. This implementation ensures that non-breaking spaces and other font-related elements are accurately rendered in PDF documents generated from HTML content using RadWordsProcessing.
+For a detailed guide on implementing a `FontsProvider`, refer to the [How to Implement a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) article. This implementation ensures that non-breaking spaces and other font-related elements render accurately in PDF documents generated from HTML content using RadWordsProcessing.
 
->note There is also an alternative option of [manually registering the fonts]({%slug load-fonts-with-net-standard%}).
+>note You can also [manually register the fonts]({%slug load-fonts-with-net-standard%}) as an alternative option.
 
 ## See Also
 
-- [How to Implement a FontsProvider for RadPdfProcessing]({%slug pdfprocessing-implement-fontsprovider%})
+* [How to Implement a FontsProvider for RadPdfProcessing]({%slug pdfprocessing-implement-fontsprovider%})

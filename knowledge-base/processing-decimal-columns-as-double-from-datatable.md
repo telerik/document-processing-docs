@@ -18,22 +18,23 @@ ticketid: 1707296
 
 ## Description
 
-When importing a DataTable into a worksheet using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), columns defined as `decimal` in the DataTable appear as text in the worksheet instead of numeric values. This happens because the import functionality checks if the data type is primitive and only interprets primitive types as numeric.Primitive types narrow to CLR primitives (sbyte, byte, short, ushort, int, uint, long, ulong, float, double, char, IntPtr, UIntPtr, bool). Since `decimal` is not a primitive type, it is treated as text.
+When importing a `DataTable` into a worksheet using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), columns defined as `decimal` appear as text instead of numeric values. The import functionality checks whether the data type is primitive and only interprets primitive types as numeric. Primitive types narrow to CLR primitives (`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, `char`, `IntPtr`, `UIntPtr`, `bool`). Because `decimal` is not a primitive type, the library treats it as text.
 
-This knowledge base article also answers the following questions:
-- How to convert decimal columns to double for proper import in Telerik Document Processing?
-- How to ensure numeric semantics for decimal columns in SpreadProcessing?
-- How to fix dataset column type issues in Telerik Document Processing SpreadProcessing?
+This article also answers the following questions:
+
+* How to convert decimal columns to double for proper import in Telerik Document Processing?
+* How to ensure numeric semantics for decimal columns in SpreadProcessing?
+* How to fix dataset column type issues in Telerik Document Processing SpreadProcessing?
 
 ## Solution
 
-To process `decimal` columns as numeric values, clone the `DataTable`, change the column type from `decimal` to `double`, and import the modified table. Follow these steps:
+To process `decimal` columns as numeric values, clone the `DataTable`, change the column type from `decimal` to `double`, and import the modified table:
 
 1. Clone the original `DataTable`. 
 2. Update the column type for `decimal` columns to `double`. 
 3. Import the cloned table into the worksheet using the [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%}).
 
-Example code implementation:
+The following example demonstrates the full implementation:
 
 ```csharp
 using Telerik.Windows.Documents.Spreadsheet.Model;
@@ -79,12 +80,13 @@ static void Main(string[] args)
 }
 ```
 
-### Key Notes:
-- The `DataTable.Clone()` method creates a copy of the schema, allowing you to modify column types without affecting the original data.
-- Changing the column type ensures numeric semantics for `decimal` values during import.
-- Use the `DataTableFormatProvider` to facilitate the import process.
+### Key Notes
+
+* The `DataTable.Clone()` method creates a copy of the schema. This allows you to modify column types without affecting the original data.
+* Changing the column type ensures numeric semantics for `decimal` values during import.
+* Use the `DataTableFormatProvider` to simplify the import process.
 
 ## See Also
 
-- [Telerik Document Processing SpreadProcessing Overview]({%slug radspreadprocessing-overview%})
-- [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
+* [Telerik Document Processing SpreadProcessing Overview]({%slug radspreadprocessing-overview%})
+* [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})

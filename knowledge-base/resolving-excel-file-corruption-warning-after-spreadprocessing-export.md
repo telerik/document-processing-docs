@@ -1,6 +1,6 @@
 ---
 title: Resolve Exporting Corrupted Excel Files With SpreadProcessing
-description: Resolve corrupted Excel files exported with SpreadProcessing in versions 2025.2.520 and newer.
+description: Learn how to resolve corrupted Excel files exported with SpreadProcessing in versions 2025.2.520 and later by resetting or truncating the MemoryStream.
 type: how-to
 page_title: Resolve Exporting Corrupted Excel Files With SpreadProcessing
 meta_title: Resolve Exporting Corrupted Excel Files With SpreadProcessing
@@ -60,5 +60,5 @@ To ensure the exported files are not corrupted, reset or truncate the `MemoryStr
 
 ## See Also
 
-- [SpreadProcessing]({%slug radspreadprocessing-overview%}) 
-- [Release Notes for Telerik Document Processing Libraries 2025.2.520](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history/progress-telerik-document-processing-2025-2-520-changelog)
+* [SpreadProcessing overview]({%slug radspreadprocessing-overview%})
+* [Release Notes for Telerik Document Processing Libraries 2025.2.520](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history/progress-telerik-document-processing-2025-2-520-changelog)

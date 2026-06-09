@@ -17,16 +17,17 @@ ticketid: 1657970
 
 ## Description
 
-When working with documents, it's a common requirement to find a table that contains a specific bookmark. This can become complex when dealing with nested tables, as a bookmark could be situated within multiple layers of tables. This KB article outlines methods to find either the innermost or outermost table containing a given bookmark, catering to scenarios involving nested tables.
+When working with documents, finding a table that contains a specific bookmark is a common requirement. This task can become complex with nested tables, as a bookmark can reside within multiple layers of tables. This article outlines methods to find either the innermost or outermost table that contains a given bookmark.
 
-This KB article also answers the following questions:
-- How can I find a table containing a specific bookmark in a document?
-- What method can I use to retrieve the innermost table with a bookmark in RadWordsProcessing?
-- How do I determine the outermost table that includes a specific bookmark in nested table scenarios?
+This article also answers the following questions:
+
+* How can I find a table containing a specific bookmark in a document?
+* What method can I use to retrieve the innermost table with a bookmark in RadWordsProcessing?
+* How do I determine the outermost table that includes a specific bookmark in nested table scenarios?
 
 ## Solution
 
-To find a table containing a specific bookmark, especially in documents with nested tables, you can use the following custom methods: `GetInnermostTableContainingBookmark` and `GetOutermostTableContainingBookmark`. These methods help in identifying either the innermost or outermost table that contains the bookmark, depending on the nesting level of tables in the document.
+To find a table containing a specific bookmark in documents with nested tables, use the following custom methods: `GetInnermostTableContainingBookmark` and `GetOutermostTableContainingBookmark`. These methods identify either the innermost or outermost table that contains the bookmark, depending on the nesting level.
 
 1. **Load the document and identify the bookmark:**
 2. **Define methods to get the innermost and outermost tables containing the bookmark:**
@@ -86,9 +87,9 @@ private static Table GetTableContainingAnotherTable(Table table)
 }
 ```
 
-If the bookmark is in a single table, both methods will yield the same result. These methods ensure you can accurately find the table containing a specific bookmark, regardless of the complexity of the document's table structure.
+If the bookmark is in a single table, both methods yield the same result. These methods ensure accurate table retrieval regardless of the document table structure complexity.
 
 ## See Also
 
-- [RadWordsProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/overview)
-- [Bookmark]({%slug radwordsprocessing-model-bookmark%})
+* [RadWordsProcessing Overview]({%slug radwordsprocessing-overview%})
+* [Bookmark]({%slug radwordsprocessing-model-bookmark%})

@@ -1,36 +1,41 @@
 ---
 title: How to export a Worksheet to image with RadSpreadProcessing in .NET Standard
-description: This article shows how to export a Worksheet to image with RadSpreadProcessing in .NET Standard.
+description: Learn how to export a worksheet to an image using RadSpreadProcessing in .NET Standard by first converting the document to PDF and then exporting to an image format.
 type: how-to
 page_title: How to export a Worksheet to image with RadSpreadProcessing in .NET Standard
 slug: spreadprocessing-export-worksheet-to-image-netstandard
 tags: radspreadprocessing, xlsx, worksheet, image, netstandard, export, document, processing
 res_type: kb
 ---
+
 ## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.305 | RadSpreadProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)| 
----
+
 ## Description
-This article shows how to export a [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) to image in .NET Standard using the [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) library. Currently the [Document Processing libraries]({%slug introduction%}) provide image export only for PDF files. This is why the document must first be converted to PDF.
+
+This article shows how to export a [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) to an image in .NET Standard using the [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) library. The [Document Processing libraries]({%slug introduction%}) provide image export only for PDF files. Therefore, you must first convert the document to PDF.
 
 ## Solution
 
-1. [Import the file as __Workbook__](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsx/xlsxformatprovider#import).
+1. [Import the file as **Workbook**](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsx/xlsxformatprovider#import).
 2. Set the desired [Worksheet Page Setup]({%slug radspreadprocessing-features-worksheetpagesetup%}) and [PDF Export Settings]({%slug radspreadprocessing-format-and-conversion-pdf-settings%}).
-3. [Export the __Workbook__ to __PDF__](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/pdf/pdfformatprovider#export).
-4. [Import the __PDF__ file](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/pdfformatprovider#import).
-5. Calculate the size of the used range in the __Worksheet__.
-6. Make the PDF page the same size.
-7. Export the __PDF__ file to image using the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}).
+3. [Export the **Workbook** to **PDF**](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/formats-and-conversion/pdf/pdfformatprovider#export).
+4. [Import the **PDF** file](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/pdfformatprovider#import).
+5. Calculate the size of the used range in the **Worksheet**.
+6. Set the PDF page to the same size.
+7. Export the **PDF** file to an image using the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}).
 
 ## Additional Requirements
 
-### .NET Standard requirements
+### .NET Standard Requirements
+
 * [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%})
-### General requirements
-* [SkiaSharp Nuget package](https://www.nuget.org/packages/SkiaSharp/)
+
+### General Requirements
+
+* [SkiaSharp NuGet package](https://www.nuget.org/packages/SkiaSharp/)
 
 ```csharp
     using Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx;
@@ -116,14 +121,15 @@ This article shows how to export a [Worksheet]({%slug radspreadprocessing-workin
     }
 
 ```
-__Before:__
+**Before:**
 
-  ![Worksheet](images/worksheet-to-image-netstandard-before.png)
+![Worksheet before export](images/worksheet-to-image-netstandard-before.png)
 
-__After:__
+**After:**
 
-  ![Worksheet as image](images/worksheet-to-image-netstandard-after.png)
+![Worksheet exported as image](images/worksheet-to-image-netstandard-after.png)
 
-# See Also
-* [SpreadProcessing .NET Standard limitations]({%slug radspreadprocessing-cross-platform%}) 
-* [PdfProcessing .NET Standard limitations]({%slug radpdfprocessing-cross-platform%}) 
+## See Also
+
+* [SpreadProcessing .NET Standard Limitations]({%slug radspreadprocessing-cross-platform%}) 
+* [PdfProcessing .NET Standard Limitations]({%slug radpdfprocessing-cross-platform%}) 

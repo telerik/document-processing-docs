@@ -19,16 +19,16 @@ ticketid: 1710417
 
 ## Description
 
-When converting a DOCX file to PDF format using the [WordsProcessing]({%slug radwordsprocessing-overview%}) library, the text's font may differ from the original file for the TOC (`Table of contents`) title. This article explains why this is observed and how to handle this behavior.  
+When converting a DOCX file to PDF format using the [WordsProcessing]({%slug radwordsprocessing-overview%}) library, the font for the TOC (`Table of contents`) title may differ from the original file. This article explains why this happens and how to handle this behavior.  
 
 ## Solution
 
 The [TOC title]({%slug radwordsprocessing-concepts-toc-field%}) uses the **TOC Heading** style.
-In Word (and in RadWordsProcessing), the text `Table of Contents` is formatted by the built‑in [style]({%slug radwordsprocessing-concepts-styles%}) **TOC Heading**. If that style isn’t explicitly set (or you set it before the TOC updates), the export may fall back to defaults and you’ll see a different font in the PDF. 
+In Word (and in RadWordsProcessing), the text `Table of Contents` is formatted by the built‑in [style]({%slug radwordsprocessing-concepts-styles%}) **TOC Heading**. If that style is not explicitly set (or you set it before the TOC updates), the export may fall back to defaults and you see a different font in the PDF. 
 
 Once the DOCX file is imported in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) using the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}), there are two possible approaches to specify the font for the TOC title:
 
-### Applying a Custom Style 
+### Applying a Custom Style
 
 1. Define a custom style for the "Table of Contents" title.
 2. Apply the custom style to the corresponding paragraph in the document.
@@ -77,7 +77,8 @@ if (tocTitle != null)
     }
 }
 ```
+
 ## See Also
 
-- [Styles]({%slug radwordsprocessing-concepts-styles%})
-- [TOC field]({%slug radwordsprocessing-concepts-toc-field%}) 
+* [Styles]({%slug radwordsprocessing-concepts-styles%})
+* [TOC field]({%slug radwordsprocessing-concepts-toc-field%})

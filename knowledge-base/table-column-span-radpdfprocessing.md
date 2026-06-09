@@ -1,6 +1,6 @@
 ---
 title: Implementing Column Span in RadPdfProcessing Tables
-description: Learn how to effectively use column spanning in tables with Telerik's RadPdfProcessing library to create complex PDF layouts.
+description: Learn how to use column spanning in tables with RadPdfProcessing to create complex PDF layouts.
 type: how-to
 page_title: How to Use Column Span in RadPdfProcessing for Complex Table Layouts
 slug: table-column-span-radpdfprocessing
@@ -17,10 +17,11 @@ ticketid: 1660148
 
 ## Description
 
-Creating [tables]({%slug radpdfprocessing-editing-table-overview%}) with varying column counts and sizes in a PDF can be challenging, especially when trying to merge cells across columns to achieve a specific layout. This article demonstrates how to use the `ColumnSpan` property in the RadPdfProcessing library to merge cells across columns and adjust the layout of tables as required. This KB article also answers the following questions:
-- How do I merge cells across columns in a PDF table using RadPdfProcessing?
-- How can I adjust the column count dynamically in a table created with RadPdfProcessing?
-- What is the correct way to apply `ColumnSpan` in RadPdfProcessing tables for custom layouts? 
+Creating [tables]({%slug radpdfprocessing-editing-table-overview%}) with varying column counts and sizes in a PDF can be challenging, especially when merging cells across columns to achieve a specific layout. This article demonstrates how to use the `ColumnSpan` property in the RadPdfProcessing library to merge cells across columns and adjust the layout of tables as required. This KB article also answers the following questions:
+
+* How do I merge cells across columns in a PDF table using RadPdfProcessing?
+* How can I adjust the column count dynamically in a table created with RadPdfProcessing?
+* What is the correct way to apply `ColumnSpan` in RadPdfProcessing tables for custom layouts?
 
 ## Solution
 
@@ -34,7 +35,7 @@ To correctly implement column spanning in tables using RadPdfProcessing, follow 
 
 4. Optionally, for visual distinction, change the background color of the spanning cell.
 
-Here is a simplified example demonstrating these steps:
+The following example demonstrates these steps:
 
 ```csharp
             RadFixedDocument fixedDocument = new RadFixedDocument();
@@ -110,10 +111,10 @@ The achieved result is illustrated below:
 
 ## Notes
 
-- The `ColumnSpan` property allows a cell to cover multiple columns, effectively merging them for that row. Adjust subsequent cells in the row to reflect the merged space.
-- The example illustrates a simplified scenario. Depending on the specific requirements, adjust the logic to dynamically set the `ColumnSpan` and modify the cell addition logic accordingly.
+* The `ColumnSpan` property allows a cell to cover multiple columns, effectively merging them for that row. Adjust subsequent cells in the row to reflect the merged space.
+* The example illustrates a simplified scenario. Depending on the specific requirements, adjust the logic to dynamically set the `ColumnSpan` and modify the cell addition logic accordingly.
 
 ## See Also
 
-- [Tables in RadPdfProcessing]({%slug radpdfprocessing-editing-table-overview%})
-- [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
+* [Tables in RadPdfProcessing]({%slug radpdfprocessing-editing-table-overview%})
+* [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})

@@ -16,7 +16,7 @@ res_type: kb
 
 ## Description
 
-This article shows how to protect only certain cells in a [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) using [SpreadProcessing]({%slug radspreadprocessing-overview%}). The example demonstrates the most efficient way to keep all cells unlocked except the first row of a used range, which will remain locked and protected.
+This article shows how to protect only certain cells in a [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) using [SpreadProcessing]({%slug radspreadprocessing-overview%}). The example keeps all cells unlocked except the first row of a used range, which remains locked and protected.
 
 ## Solution
 

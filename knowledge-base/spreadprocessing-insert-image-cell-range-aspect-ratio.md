@@ -18,7 +18,7 @@ ticketid: 1708189
 
 ## Description
 
-This article shows how to use the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library to insert an image within a defined cell range, while ensuring that the image retains its original aspect ratio. For that, manual calculations are required to determine the image's dimensions based on the cell range.
+This article shows how to use the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library to insert an image within a defined cell range while preserving its original aspect ratio. This approach requires manual calculations to determine the image dimensions based on the cell range.
 
 This knowledge base article also answers the following questions:
 * How to calculate image dimensions for a cell range in [SpreadProcessing]({%slug radspreadprocessing-overview%})?
@@ -31,9 +31,9 @@ To insert an image within a specified cell range while preserving its aspect rat
 
 1. Define the target cell range.
 2. Calculate the total width and height of the cell range.
-3. Create the Image and set its Source.
+3. Create the image and set its source.
 4. Calculate the scaling factor to fit the image within the cell range while maintaining its aspect ratio.
-5. Use either **SetWidth** or **SetHeight** methods to adjust dimensions based on the limiting factor.
+5. Use either `SetWidth` or `SetHeight` methods to adjust dimensions based on the limiting factor.
 6. Add the image to the worksheet.
 
 ```csharp
@@ -88,9 +88,10 @@ else
 worksheet.Images.Add(image);
 ```
 
-### Notes:
-* Use the **SetWidth** and **SetHeight** methods with **true** for the **respectLockAspectRatio** parameter to maintain the aspect ratio.
-* Ensure the target cell range is correctly defined before performing calculations.
+### Notes
+
+* Use the `SetWidth` and `SetHeight` methods with `true` for the `respectLockAspectRatio` parameter to maintain the aspect ratio.
+* Verify that the target cell range is correctly defined before performing calculations.
 
 ## See Also
 

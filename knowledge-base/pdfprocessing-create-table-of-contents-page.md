@@ -9,6 +9,8 @@ tags: radpdfprocessing, pdf, toc, table, contents, merge, document, processing
 res_type: kb
 ---
 
+## Environment
+
 <table>
 <thead>
 	<tr>
@@ -32,13 +34,14 @@ This article describes how to import PDF documents, merge them, and create a Tab
 
 ## Solution
 
-The following code snippets shows how to:
-	1. Import two PDF documents into [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) instances using the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%});
-	2. Merge them into a single RadFixedDocument using the RadFixedDocument`s _Merge()_ method;
-	3. Create a Table of Contents (TOC) using [Link]({%slug radpdfprocessing-model-annotations-links%}#link) annotations pointing to the merged document pages;
-	4. Export the merged document to a single PDF file.
+The following code snippets show how to:
 
-#### __Example__
+1. Import two PDF documents into [`RadFixedDocument`]({%slug radpdfprocessing-model-radfixeddocument%}) instances by using the [`PdfFormatProvider`]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+2. Merge them into a single `RadFixedDocument` by using the `Merge()` method.
+3. Create a Table of Contents (TOC) by using [`Link`]({%slug radpdfprocessing-model-annotations-links%}#link) annotations pointing to the merged document pages.
+4. Export the merged document to a single PDF file.
+
+**Example 1: Main Method**
 
 ```csharp
 
@@ -54,7 +57,7 @@ The following code snippets shows how to:
 	ExportToPdf(provider, document1);
 ```
 
-#### __Import PDF files__
+**Example 2: Import PDF Files**
 
 ```csharp
 
@@ -72,7 +75,7 @@ The following code snippets shows how to:
 	}
 ```
 
-#### __Create the Table of Contents__
+**Example 3: Create the Table of Contents**
 
 ```csharp
 
@@ -119,7 +122,7 @@ The following code snippets shows how to:
 	}
 ```
 
-#### __Export to PDF file__
+**Example 4: Export to PDF File**
 
 ```csharp
 
@@ -137,3 +140,9 @@ The following code snippets shows how to:
 		}
 	}
 ```
+
+## See Also
+
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+* [Link Annotations]({%slug radpdfprocessing-model-annotations-links%})
