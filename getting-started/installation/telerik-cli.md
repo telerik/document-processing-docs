@@ -28,6 +28,7 @@ The following table lists all Telerik CLI commands with their purpose and usage.
 | `telerik login` | Authenticates with your Telerik account. | Run to store credentials for subsequent commands. |
 | `telerik whoami` | Displays the currently logged-in Telerik user account email. | Run to verify your authentication state. |
 | `telerik logout` | Logs out from the Telerik CLI. | Run to log out the credentials from your Telerik account. |
+
 ## How to Install the Telerik CLI
 
 The [Telerik CLI NuGet](https://www.nuget.org/packages/Telerik.CLI) package is hosted on `nuget.org`. 
@@ -133,6 +134,7 @@ By default, the command creates or updates the global MCP configuration file for
 | VS Code | Linux | `~/.config/Code/User/mcp.json` |
 | Cursor | Windows | `%USERPROFILE%\.cursor\mcp.json` |
 | Cursor | macOS, Linux | `~/.cursor/mcp.json` |
+
 ## Install DPL MCP Server
 
 You can also fine-tune the process with the following options:
