@@ -26,7 +26,7 @@ Use a **local NuGet feed** when you need offline installation, reproducible rest
 
 Use the **Telerik NuGet server** only when you need older package versions that predate the NuGet.org release or when your organization already standardizes on the Telerik private feed.
 
-## Which PackageReference Entries Should You Add?
+## Use Explicit PackageReference Entries
 
 Add the package references in the application project that generates, imports, or exports documents. Install `Telerik.Licensing` in the same project, keep all Telerik Document Processing packages on the same release version, and do not mix `Telerik.Documents.*` with `Telerik.Windows.Documents.*` in the same application. For the full package inventory, see [Available NuGet Packages]({%slug available-nuget-packages%}), and for package-family guidance, see [Telerik.Windows.Documents.* vs Telerik.Documents.*]({%slug telerik-windows-documents-vs-telerik-documents-namespace%}).
 
@@ -71,7 +71,7 @@ Use the following `PackageReference` entries for .NET Framework or other Windows
 
 If you prefer command-line installation, use package names from the same package family throughout the project and keep all versions aligned.
 
-## How to Avoid Package-Source Confusion and Restore Issues
+## Avoid Package-Source Confusion and Restore Issues
 
 Package restore issues often come from mixed package families, stale private-feed credentials, or multiple package sources that resolve different versions of the same dependency. Use the following rules to avoid those failures:
 
