@@ -1,89 +1,111 @@
 ---
 title: Overview
-page_title: Overview - RadPdfProcessing
-description: RadPdfProcessing is a processing library that allows you to create, import, and export PDF documents with text, images, forms, tables, and digital signatures.
+page_title: RadPdfProcessing Overview
+description: Explore RadPdfProcessing features, editors, document model capabilities, and next steps for creating, importing, and exporting PDF documents.
 slug: radpdfprocessing-overview
 tags: pdf, radpdfprocessing, processing, documents, export, import, forms, signatures
 published: True
 position: 0
 ---
 
-# Overview
+# RadPdfProcessing Overview
 
-**Telerik PdfProcessing Library** enables code-only generation, import, and export of PDF documents with text blocks, images, forms, tables, shapes, and more. The library supports flow-like editing as well as great control over native PDF elements. You can use **RadPdfProcessing** in any web or desktop .NET application without relying on third-party software like Adobe Acrobat.
+**RadPdfProcessing** is the Telerik Document Processing library for creating, importing, editing, and exporting PDF documents in .NET applications. You can use it to generate PDF files from code, work with existing documents, add forms, tables, annotations, digital signatures, accessibility metadata, and more without relying on Adobe Acrobat or other third-party desktop software.
 
-![PdfProcessing](images/pdf-processing-overview.jpg)  
+This overview explains what RadPdfProcessing is designed for, which editors and features it provides, and where to continue next based on the task you need to complete.
 
-In this article, we list the library's most popular features. If you want to learn how to use the library, head straight to the **[Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})** article.
+![Diagram showing RadPdfProcessing document creation and editing workflows](images/pdf-processing-overview.jpg)
 
->note If you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
+>note
+>
+> If you still need to install **Telerik Document Processing**, see [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%}) for the available package options.
 
-The API of RadPdfProcessing contains two different editors,  [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) and  [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}), enabling you to choose between editing in a **flow-like** manner or using the much more powerful and flexible **fixed** document structure that allows you to draw on the page.
+If you want a first working example, continue to [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%}).
 
-## Key Features 
+## Key Features
 
-* Generate PDF documents from scratch.
-* Edit existing documents - delete headers/footers or watermarks, change images and colors.
-* Add content to existing document: all features of the existing PDF document are preserved, and just some content is added.
-* Merge document pages: Combine pages from different documents into a single document.
-* Interactive forms
-    * Automatic filling of forms (e.g. tax forms).
-    * Automatic extraction of data from already filled forms.
-* Flexible options for digitally signing PDF documents
-    * Sign PDF documents using X.509 certificates
-    * Validate signatures including certificate chain and revocation checks
-    * Add trusted timestamps via timestamp servers for long-term validation
-    * Support external signing with hardware security modules or third-party providers
-    * Apply multiple signatures with incremental updates without invalidating previous ones
-* GenAI-powered Document Insights
-* Accessibility Support
-            
-The document model of the library provides support for:
+Use RadPdfProcessing for these common tasks:
+
+* Generate PDF documents from code.
+* Import existing PDF files and update selected content.
+* Add text, images, shapes, tables, lists, forms, annotations, and bookmarks.
+* Merge, split, and append PDF content.
+* Sign documents digitally and validate signatures.
+* Export PDF content to PDF or plain text.
+* Create accessible PDF output and control viewer preferences.
+* Extract insights from documents with GenAI-powered Document Insights.
+
+The following table summarizes the capabilities that most users need first:
 
 | Feature | Description |
-|---------|-------------|
-| [**Pages**]({%slug radpdfprocessing-model-radfixedpage%}) | Adding, modifying or removing of pages in a document. The properties enable you to change the size of the page, its rotation, and more. |
-| **Automatic layout** | Although the PDF format is fixed, sometimes you will need to insert the content in a way that flows on the page. RadPdfProcessing enables to achieve this easily by using  [blocks]({%slug radpdfprocessing-editing-block%}), [tables]({%slug radpdfprocessing-editing-table-overview%}) and [lists]({%slug radpdfprocessing-editing-list%}). |
-| [**Images**]({%slug radpdfprocessing-model-image%}) | Decoded on demand to achieve better performance. The API enables you to obtain the encoded image data. You can also control the image quality when saving the document. As of **Q3 2024** RadPdfProcessing provides support for SVG FormSource (vector graphics image format).|
-| [**Geometries**]({%slug radpdfprocessing-concepts-geometry%}) | Enable you to describe the geometry of a 2D shape. |
-| [**Form XObjects**]({%slug radpdfprocessing-model-form%}) | The Form XObjects enables you to describe composite objects (consisting of text, images, vector elements, etc.) within a PDF file and reuse this content among the document, for smaller document size and better rendering performance. |
-| [**Interactive Forms**]({%slug radpdfprocessing-model-interactive-forms-overview%}) | Create and modify PDF files containing textboxes, buttons, list boxes, and other interactive controls making available for the PDF file user to interactively fill some data in the PDF document and/or digitally sign the filled document. You can flatten the fields as well. |
-| [**Digital Signature**]({%slug radpdfprocessing-features-digital-signature%}) | The digital signature feature enables you to sign and validate PDF documents. It supports signing PDF documents [using a TimeStamp Server]({%slug pdf-sign-timestamp-server%}) or [external signing]({%slug external-digital-signing%}). |
-|[**Embedded File Streams**]({%slug radpdfprocessing-embedded-file-streams-overview%})|The embed a file stream feature allows adding external files to the PDF document.|
-| [**Clipping**]({%slug radpdfprocessing-concepts-clipping%}) | You can define the outline of other content elements like images and paths. |
-| [**Bookmarks (Outlines)**]({%slug radpdfprocessing-features-bookmarks%}) | Add, remove or modify the bookmarks in a PDF document. |
-| [**Annotations**]({%slug radpdfprocessing-model-annotations-overview%}) | Associate an object with a location on a page of the PDF document. |
-| [**Destinations**]({%slug radpdfprocessing-model-annotations-links%}#destination) | Defines a particular view of a document.|
-| [**Colors and Color Spaces**]({%slug radpdfprocessing-concepts-colors-and-color-spaces%}) | Support for different types of both. |
-| [**Fonts**]({%slug radpdfprocessing-concepts-fonts%}) | Support for the standard PDF fonts, Type0, Type1, Type 3, CIDFontType2, TrueType and more. |
-| [**Text and Graphic properties**]({%slug radpdfprocessing-editing-text-and-graphic-properties%}) | Provide options for changing the properties of the different elements in the document elements so you can achieve a unique look. |
-| [**Password Protection**]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings) | Support for documents encrypted with **Encryption Algorithm 4 (RC4/AES-128) and Encryption Algorithm 5 with AES 256** |
-| [**Merge documents**]({%slug radpdfprocessing-model-radfixeddocument%}) and [**document pages**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}) | You can combine the pages from multiple documents into a single document. |
-| [**PdfStreamWriter**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})| The API exposes a functionality that provides an option for exporting PDF files with unmatched performance and minimized memory footprint. Extremely useful when you need to add some content to an existing document, merge or split documents. |
-| [**Import of PDF and export to PDF or plain text**]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) | You can import or export PDF files and convert PDF files to plain text. |
-|[**JavaScript Actions and Trigger Events**]({%slug radpdfprocessing-model-javascript-actions%})|As of Q4 2024 you can import or export the javascript actions associated with pages, form fields, etc. so that they can be executed when the exported document is opened with Adobe Acrobat. |
-|[**Accessibility Support**]({%slug create-accessible-pdf-documents%})|Offers accessibility support of documents to users with disabilities.|
-| [**Viewer Preferences**]({%slug radpdfprocessing-features-viewer-preferences%}) | Control how PDF documents are displayed and behave in PDF viewers, including window behavior, UI visibility, and print settings. |
-|[**GenAI-powered Document Insights**]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|Extract insights from PDF documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content.|
+|---|---|
+| Create and edit PDF documents | Generate documents from scratch, edit existing content, or append new content while preserving the original PDF structure where supported. |
+| Automatic and fixed layout | Build flowing content by using [blocks]({%slug radpdfprocessing-editing-block%}), [tables]({%slug radpdfprocessing-editing-table-overview%}), and [lists]({%slug radpdfprocessing-editing-list%}), or draw content directly on the page. |
+| Interactive forms | Create, fill, extract, flatten, and sign PDF forms by using [interactive forms]({%slug radpdfprocessing-model-interactive-forms-overview%}). |
+| Digital signatures | Sign and validate PDF documents, use [timestamp servers]({%slug pdf-sign-timestamp-server%}), support [external signing]({%slug external-digital-signing%}), and apply multiple signatures. |
+| Merge and export workflows | Merge documents, split content, and optimize large-output scenarios by using [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}). |
+| Accessibility and AI scenarios | Create [accessible PDF documents]({%slug create-accessible-pdf-documents%}) and use [GenAI-powered Document Insights]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%}). |
+
+## Choose an Editor
+
+RadPdfProcessing provides two editors that serve different document-generation styles:
+
+| Editor | Best for | Learn More |
+|---|---|---|
+| [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) | Flow-like editing where content is inserted in a more automatic layout sequence. | [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) |
+| [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) | Precise drawing and positioning when you need detailed control over the page. | [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) |
+
+Choose `RadFixedDocumentEditor` when you want a higher-level editing flow. Choose `FixedContentEditor` when you need lower-level control over exact PDF page content.
+
+## Document Model Overview
+
+The document model includes the following major areas:
+
+| Area | Description |
+|---|---|
+| [Pages]({%slug radpdfprocessing-model-radfixedpage%}) | Add, remove, and modify pages, including page size and rotation. |
+| [Images]({%slug radpdfprocessing-model-image%}) | Work with encoded image data, control image quality, and use SVG form sources starting with **Q3 2024**. |
+| [Geometries]({%slug radpdfprocessing-concepts-geometry%}) | Define 2D shapes and path geometry. |
+| [Form XObjects]({%slug radpdfprocessing-model-form%}) | Reuse composite content for better rendering performance and smaller file sizes. |
+| [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) and [destinations]({%slug radpdfprocessing-model-annotations-links%}#destination) | Associate content with locations and define document views. |
+| [Bookmarks]({%slug radpdfprocessing-features-bookmarks%}) | Add and manage outlines for document navigation. |
+| [Clipping]({%slug radpdfprocessing-concepts-clipping%}) | Define clipping outlines for images and paths. |
+| [Fonts]({%slug radpdfprocessing-concepts-fonts%}) and [colors]({%slug radpdfprocessing-concepts-colors-and-color-spaces%}) | Control typography and color spaces for document content. |
+| [Text and graphic properties]({%slug radpdfprocessing-editing-text-and-graphic-properties%}) | Customize visual appearance across document elements. |
+| [Viewer preferences]({%slug radpdfprocessing-features-viewer-preferences%}) | Control how the document behaves in PDF viewers. |
+| [Embedded file streams]({%slug radpdfprocessing-embedded-file-streams-overview%}) | Attach external files to the document. |
+| [Password protection]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings) | Import documents encrypted with supported RC4, AES-128, and AES-256 algorithms. |
+| [JavaScript actions and trigger events]({%slug radpdfprocessing-model-javascript-actions%}) | Import and export JavaScript actions associated with pages and form fields. |
+
+## Typical Next Steps
+
+Most users continue with one of these paths:
+
+1. Start with [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%}) for a first working sample.
+2. Review [Using PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) if you need import and export details.
+3. Explore [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) or [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to choose an editing approach.
+4. Review [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) or [Interactive Forms]({%slug radpdfprocessing-model-interactive-forms-overview%}) for specialized PDF workflows.
 
 
 ## Online Demos
 
-|Demo|Description|
+Review these demos to see common RadPdfProcessing scenarios in action:
+
+| Demo | Description |
 |----|----|
-|[PdfProcessing Basic Usage](https://demos.telerik.com/document-processing/pdfprocessing)|This example demonstrates how to create a document containing images, text and shapes and export it to PDF.|
-|[PdfProcessing Bar Chart Export](https://demos.telerik.com/document-processing/pdfprocessing/bar_chart_export)|This example demonstrates how to create a document containing Bar Chart, Data Table and export it to PDF.|
-|[PdfProcessing Form Fields Reading and Writing](https://demos.telerik.com/document-processing/pdfprocessing/read_write_form_fields)|This example demonstrates how to use a PDF from the server, modify its fields based on user input and export it to PDF on the client.|
-|[PdfProcessing Content Merging, Splitting, and Adding](https://demos.telerik.com/document-processing/pdfprocessing/merge_split_add_content)|This example demonstrates how to merge, split or add content to PDF document.|
-|[PdfProcessing Embedding File Streams](https://demos.telerik.com/document-processing/pdfprocessing/embed_file_streams)|This example demonstrates how to use a PDF from the server, select a file or an Embedded Electronic (ZUGFeRD) Invoice and embed it into the PDF document.|
-|[PdfProcessing Optical Character Recognition (OCR)](https://demos.telerik.com/document-processing/pdfprocessing/optical_character_recognition)|This example demonstrates how to import an image into the PdfProcessing library, retrieve the text from it and export it to a PDF document.|
-|[PdfProcessing Annotations](https://demos.telerik.com/document-processing/pdfprocessing/annotations)|This example demonstrates how to create a PDF file and insert annotations in it.|
-|[PdfProcessing Digitally Sign Document](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document)|This example demonstrates how to digitally sign a PDF.|
-|[PdfProcessing Validate Digital Signature](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature)|This example demonstrates how to validate a digitally signed PDF.|
-|[PdfProcessing Multiple Digital Signatures](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)|This example demonstrates how to digitally sign a PDF without invalidating any existing signatures.|
-|[PdfProcessing Accessibility](https://demos.telerik.com/document-processing/pdfprocessing/accessibility)|This example demonstrates how to create accessible PDF documents programmatically, ensuring compliance with standards such as PDF/UA by supporting features like tagged content, document structure, and metadata. Downloaded documents will adhere to the selected compliance level.|
-|[PdfProcessing GenAI Document Insights](https://demos.telerik.com/document-processing/pdfprocessing/genai_document_insights)|This example demonstrates how to use the GenAI-powered Document Insights feature in Telerik RadPdfProcessing to extract meaningful insights from PDF documents.|
-|[PdfProcessing Add Digital Signature External](https://demos.telerik.com/document-processing/pdfprocessing/external_digitally_sign_document)|This example demonstrates how to digitally sign a PDF with the option to provide a TimeStamp Server for enhanced security and validation.|
+| [PdfProcessing Basic Usage](https://demos.telerik.com/document-processing/pdfprocessing) | Create a document with images, text, and shapes and export it to PDF. |
+| [PdfProcessing Bar Chart Export](https://demos.telerik.com/document-processing/pdfprocessing/bar_chart_export) | Create a PDF document that contains a bar chart and a data table. |
+| [PdfProcessing Form Fields Reading and Writing](https://demos.telerik.com/document-processing/pdfprocessing/read_write_form_fields) | Read an existing PDF, update form fields, and export the result. |
+| [PdfProcessing Content Merging, Splitting, and Adding](https://demos.telerik.com/document-processing/pdfprocessing/merge_split_add_content) | Merge, split, or append PDF content. |
+| [PdfProcessing Embedding File Streams](https://demos.telerik.com/document-processing/pdfprocessing/embed_file_streams) | Embed a file or a ZUGFeRD electronic invoice in a PDF document. |
+| [PdfProcessing Optical Character Recognition (OCR)](https://demos.telerik.com/document-processing/pdfprocessing/optical_character_recognition) | Import an image, recognize text, and export searchable PDF content. |
+| [PdfProcessing Annotations](https://demos.telerik.com/document-processing/pdfprocessing/annotations) | Create a PDF document and insert annotations. |
+| [PdfProcessing Digitally Sign Document](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document) | Apply a digital signature to a PDF document. |
+| [PdfProcessing Validate Digital Signature](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature) | Validate an existing digital signature in a PDF file. |
+| [PdfProcessing Multiple Digital Signatures](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures) | Apply a new digital signature without invalidating existing signatures. |
+| [PdfProcessing Accessibility](https://demos.telerik.com/document-processing/pdfprocessing/accessibility) | Create accessible PDF documents that support PDF/UA-oriented structure and metadata. |
+| [PdfProcessing GenAI Document Insights](https://demos.telerik.com/document-processing/pdfprocessing/genai_document_insights) | Use GenAI-powered Document Insights to extract meaningful information from PDF documents. |
+| [PdfProcessing Add Digital Signature External](https://demos.telerik.com/document-processing/pdfprocessing/external_digitally_sign_document) | Sign a PDF document with external signing support and optional timestamp server usage. |
 
 
 
@@ -91,6 +113,7 @@ The document model of the library provides support for:
 ## See Also
 
 - [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
-- [First Steps]({%slug getting-started-first-steps%})
+- [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%})
 - [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
+- [Using PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 - [Accessibility Support]({%slug create-accessible-pdf-documents%})

@@ -1,3 +1,4 @@
+---
 title: Getting Started
 description: Learn how to create a RadWordsProcessing sample app, build a RadFlowDocument in code, and export it to a DOCX file.
 page_title: Getting Started with RadWordsProcessing
