@@ -19,7 +19,7 @@ An invalid license results in [errors and warnings]({%slug activation-errors-and
 Use the following decision flow before you configure licensing:
 
 1. If the project uses NuGet packages, use the `Telerik.Licensing` NuGet package and a `telerik-license.txt` file.
-2. If the project does not use NuGet packages, use the script-key workflow in [How to Add a License Key without NuGet References](#how-to-add-a-license-key-without-nuget-references).
+2. If the project does not use NuGet packages, use the script-key workflow in [How to Add a License Key without NuGet References](#adding-a-license-key-to-projects-without-nuget-references).
 3. If the app runs only on a local development machine, place the license key in the user home directory or in the project root.
 4. If the app runs in CI/CD, integration, staging, or production, make the license key available on the machine or container that performs the build or runs the app. Do not commit the key to source control.
 5. If licensing still fails after setup, use the checklist in [How to Validate and Debug the Licensing Setup](#how-to-validate-and-debug-the-licensing-setup).

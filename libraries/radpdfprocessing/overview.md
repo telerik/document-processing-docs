@@ -50,10 +50,10 @@ The following table summarizes the capabilities that most users need first:
 
 RadPdfProcessing provides two editors that serve different document-generation styles:
 
-| Editor | Best for | Learn More |
-|---|---|---|
-| [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) | Flow-like editing where content is inserted in a more automatic layout sequence. | [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) |
-| [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) | Precise drawing and positioning when you need detailed control over the page. | [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) |
+| Editor | Best for | 
+|---|---|
+| [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) | Flow-like editing where content is inserted in a more automatic layout sequence. |
+| [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) | Precise drawing and positioning when you need detailed control over the page. | 
 
 Choose `RadFixedDocumentEditor` when you want a higher-level editing flow. Choose `FixedContentEditor` when you need lower-level control over exact PDF page content.
 
