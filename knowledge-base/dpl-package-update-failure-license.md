@@ -1,17 +1,13 @@
 ---
-title: Fix Telerik.Licensing Package Errors After Upgrading
+title: Unable to find package Telerik.Licensing
 description: Learn how to fix Telerik.Licensing package restore and runtime assembly errors after upgrading Telerik Document Processing to Q1 2025 or later.
 type: troubleshooting
-page_title: Fix Telerik.Licensing Package and Runtime Errors After Upgrade
+page_title: Could Not Load File Or Assembly Telerik.Licensing.Runtime, Version 1.4.6.0 Runtime Error
 slug: dpl-package-update-failure-license
 tags: licensing, nuget, telerik, document, processing, upgrade, assembly, error
 res_type: kb
 ticketid: 1678555
 ---
-
-# Fix Telerik.Licensing Package Errors After Upgrading
-
-After you upgrade Telerik Document Processing to [Q1 2025]({%slug release-notes-2025-1-205%}) or later, your project can fail during package restore or at runtime if the new licensing dependency is missing or blocked by package source mapping. This article explains why the problem occurs and how to fix it.
 
 ## Environment
 
@@ -21,7 +17,9 @@ After you upgrade Telerik Document Processing to [Q1 2025]({%slug release-notes-
 
 ## Problem
 
-After upgrading Telerik Document Processing to [Q1 2025]({%slug release-notes-2025-1-205%}), you may see one of these errors:
+After you upgrade Telerik Document Processing to [Q1 2025]({%slug release-notes-2025-1-205%}) or later, your project can fail during package restore or at runtime if the new licensing dependency is missing or blocked by package source mapping. This article explains why the problem occurs and how to fix it.
+
+You may see one of these errors:
 
 * `The file or assembly cannot be loaded 'Telerik.Licensing.Runtime, Version=1.4.6.0, Culture=neutral, PublicKeyToken=token_here' or one of its dependencies. The system cannot find the specified file.`
 * `NU1101: Unable to find package Telerik.Licensing. No packages exist with this id in source(s): Telerik nuget. PackageSourceMapping is enabled, the following source(s) were not considered: Microsoft Visual Studio Offline Packages, nuget.org.`

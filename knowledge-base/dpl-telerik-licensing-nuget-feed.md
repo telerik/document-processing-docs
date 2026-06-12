@@ -1,59 +1,86 @@
 ---
 title: Telerik.Licensing NuGet package is not available on the Telerik NuGet feed
-description: Learn how to configure NuGet feeds to efficiently manage Telerik Document Processing libraries and the Telerik.Licensing package.
+description: Learn why Telerik.Licensing is not on the Telerik NuGet feed and how to configure NuGet sources so Telerik Document Processing packages restore correctly.
 type: how-to
-page_title: Telerik.Licensing NuGet package is not available on the Telerik NuGet feed
+page_title: Fix Telerik.Licensing NuGet Feed Configuration
 slug: dpl-telerik-licensing-nuget-feed
 tags: telerik, nuget, licensing, feed, document, processing, configuration, packages
 res_type: kb
 ticketid: 1679127
 ---
 
-##Environment 
+## Environment
 
-| Version | Product | Author | 
-| ---- | ---- | ---- | 
-| Q1 2025| Telerik Document Processing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| Version | Product | Author |
+|---|---|---|
+| Q1 2025 | Telerik Document Processing | [Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova) |
 
-## Description
+## Problem
 
-Starting with [2025.1.205 (2025 Q1)]({%slug release-notes-2025-1-205%}), all users of the Telerik and Kendo UI components and tools, will need to apply a valid license key file to both, new and existing projects. For details, see our [Licensing Documentation]({%slug setting-up-license-key%}).
+Starting with [Q1 2025]({%slug release-notes-2025-1-205%}), Telerik Document Processing projects need both the Telerik product packages and the `Telerik.Licensing` package. This article explains why `Telerik.Licensing` is not available from the Telerik NuGet feed and how to configure package sources so restore works reliably in local and CI environments.
 
-When working with Telerik Document Processing libraries, managing NuGet package sources efficiently becomes crucial, especially with the introduction of the **Telerik.Licensing** package. The Telerik NuGet Packages can be downloaded from the [Telerik NuGet Server]({%slug installation-nuget-packages%}#manually-download-nuget-packages). However, the **Telerik.Licensing** NuGet package is not available for download from the same feed.
+You may expect all Telerik-related packages to restore from the Telerik NuGet feed. However, the `Telerik.Licensing` package is distributed through `nuget.org`, not through the Telerik feed.
 
-This knowledge base article demonstrates how to configure NuGet package sources to facilitate smooth package restoration for both, Telerik Document Processing libraries and the Telerik.Licensing package. 
-
-This knowledge-base article also answers the following questions:
-- How do I manage Telerik packages using the _NuGet.config_ file?
-- What is the best way to configure NuGet package sources for Telerik Document Processing libraries?
-- How can I ensure the Telerik.Licensing package is restored correctly in my projects?
+If your `NuGet.config` points Telerik packages only to the Telerik feed, package restore can fail or your build can miss the licensing dependency.
 
 ## Solution
 
-With Q1 2025, all Telerik and Kendo UI products require the Telerik.Licensing NuGet package. The [Telerik.Licensing NuGet package](https://www.nuget.org/packages/Telerik.Licensing) can be obtained through the `nuget.org` feed with **Package source**: *"https://api.nuget.org/v3/index.json"* and is not available for download from the Telerik NuGet feed. **This prevents having to upload the package separately for each product in the Download system, which can lead to duplication and needing to do corresponding product releases.**
+Configure your package sources so the project can restore Telerik Document Processing packages from the Telerik feed and `Telerik.Licensing` from `nuget.org`.
 
-To ensure the Telerik.Licensing package and the Telerik Document Processing libraries are restored correctly, follow the steps below to configure your NuGet.config file:
+### Step 1: Add both required package sources
 
-1\. **Modify the NuGet.config file** to include both the `nuget.org` and the [Telerik NuGet feed]({%slug installation-nuget-packages%}). This setup allows the restoration of the Telerik Document Processing libraries from the Telerik NuGet feed and the Telerik.Licensing package from `nuget.org`.
+Update `NuGet.config` to include both `nuget.org` and the [Telerik NuGet feed]({%slug installation-nuget-packages%}).
 
 ```xml
-  <packageSources>
-    <clear/>
-    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
-    <add key="Telerik_v3_Feed" value="https://nuget.telerik.com/v3/index.json" protocolVersion="3"/>
-  </packageSources>
+<packageSources>
+  <clear />
+  <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+  <add key="Telerik_v3_Feed" value="https://nuget.telerik.com/v3/index.json" protocolVersion="3" />
+</packageSources>
 ```
 
-2\. Ensure that your **Telerik account** has the appropriate licenses and that you are authenticated correctly in the Telerik NuGet feed to avoid issues with accessing the Telerik Document Processing libraries.
+This setup allows:
 
-3\. For **Continuous Integration (CI)** environments, ensure the Telerik.Licensing package is accessible via `nuget.org` and the CI environment has access to the internet to restore the package. Alternatively, consider [manually downloading the NuGet packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages) and hosting them in a local feed or directory accessible by your CI environment.
+* Telerik Document Processing packages to restore from the Telerik feed.
+* `Telerik.Licensing` to restore from `nuget.org`.
 
-By following these steps, you can efficiently manage the NuGet package sources for your projects that use Telerik Document Processing libraries and ensure the Telerik.Licensing package is restored correctly.
+### Step 2: Check package source mapping if you use it
+
+If your solution uses package source mapping, make sure the mapping does not force `Telerik.Licensing` to the Telerik feed. Allow `Telerik.Licensing` to restore from `nuget.org`.
+
+This is a common cause of restore errors when a rule such as `Telerik.*` points only to Telerik sources.
+
+### Step 3: Verify Telerik feed authentication
+
+Make sure the Telerik feed is configured with valid credentials and that the Telerik account has access to the Document Processing packages you need.
+
+If Telerik packages fail to restore while `Telerik.Licensing` succeeds, the issue is usually Telerik feed authentication rather than the licensing package itself.
+
+### Step 4: Configure CI environments
+
+For CI environments, make sure the agent can reach both package sources:
+
+* The Telerik feed for Telerik Document Processing packages.
+* `nuget.org` for `Telerik.Licensing`.
+
+If the CI environment cannot access external feeds directly, consider [manually downloading the NuGet packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages) and hosting them in an internal or local feed that the build agent can reach.
+
+## How to Verify the Configuration
+
+After you update the package sources, confirm that:
+
+* `Telerik.Licensing` restores successfully from `nuget.org`.
+* Telerik Document Processing packages restore successfully from the Telerik feed.
+* The build completes without package source or missing assembly errors.
+* The project license setup is complete according to the [license key documentation]({%slug setting-up-license-key%}).
+
+## Additional Guidance
+
+This configuration is expected behavior, not a packaging defect. The important requirement is to keep both feeds available or provide an equivalent internal feed strategy that supplies both the Telerik product packages and the `Telerik.Licensing` package.
 
 ## See Also
 
-- [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%}) 
-- [Download Telerik NuGet Packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages)
-- [Introducing New Subscription Packages for Telerik and Kendo UI Libraries in 2025](https://www.telerik.com/blogs/introducing-new-subscription-packages-telerik-kendo-ui-libraries-2025)
-
----
+* [Set up the Telerik Document Processing license key]({%slug setting-up-license-key%})
+* [Download Telerik NuGet packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages)
+* [Q1 2025 release notes]({%slug release-notes-2025-1-205%})
+* [Telerik.Licensing NuGet package](https://www.nuget.org/packages/Telerik.Licensing)
