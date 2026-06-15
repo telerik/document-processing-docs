@@ -1,115 +1,122 @@
 ---
-title: First Steps
-description: A step-by-step guide to creating your first application with Telerik Document Processing libraries - create a DOCX document and export it as a PDF file.
-page_title: First Steps
+title: Create Your First DOCX-to-PDF App with Telerik Document Processing
+description: Learn how to create a console app with Telerik Document Processing, add the required NuGet packages for RadWordsProcessing, generate a DOCX file, and export the same document to PDF.
+page_title: Create Your First DOCX-to-PDF App with Telerik Document Processing
 slug: getting-started-first-steps
 tags: document, processing, installation, nuget, docx, pdf, radwordsprocessing, application
 published: True
 position: 1
 ---
 
-# First Steps
+# Create Your First DOCX-to-PDF App with Telerik Document Processing
 
-In this getting started guide, we create a simple application that uses the Telerik Document Processing libraries to create a DOCX document and then export it as a PDF file.
+This getting started guide shows how to create a simple application that uses Telerik Document Processing to generate a DOCX document and then export the same document to PDF.
 
-The Telerik Document Processing libraries that we use in this guide are UI-independent and cover all .NET technologies, from desktop and web to mobile. They can also be deployed in client, server-side and cloud apps.
+The Telerik Document Processing libraries in this guide are UI-independent and work across .NET desktop, web, mobile, client-side, server-side, and cloud applications. The example uses RadWordsProcessing to create the document content and a PDF format provider to export it.
 
-## Step 1: Installing on Your Computer
+## Step 1: Locate or Install Telerik Document Processing
 
->important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
+Install `Telerik.Licensing` in the same project where you add the Telerik Document Processing packages.
 
-Since we distribute Telerik Document Processing libraries as an addition to several Telerik UI component bundles, chances are that the libraries are already installed on your system. In this case, all you need is to locate them. The following table provides links to the installation instructions for each of the Telerik UI component suites that give you access to the Telerik Document Processing libraries. If the standard installation of your Telerik UI component suite includes the Document Processing packages, the table also shows their default location.
+Telerik Document Processing is available with several Telerik UI component bundles, so the libraries may already be present on your machine. If you already installed one of the supported Telerik UI suites, use the following table to find the installation instructions and the default package location for that suite.
 
->tip Regardless of the Telerik UI components suite that you use, you can always get the Document Processing packages as NuGet packages from the [Telerik NuGet server]({%slug installation-nuget-packages%}).
+>tip For new development, the recommended installation path is NuGet. For current feed options and setup steps, see [Install using NuGet Packages]({%slug installation-nuget-packages%}).
 
 | UI Components suite | Installation instructions | Default location of the Document Processing packages |
 |--------------------|---------------------------|------------------------------------------------|
-| UI for ASP.NET AJAX | [Installing Telerik UI for ASP.NET AJAX](http://docs.telerik.com/devtools/aspnet-ajax/installation/which-file-do-i-need-to-install) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX [version]\AdditionalLibraries\Bin40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX [version]\AdditionalLibraries\Bin45`</li></ul> |
-| UI for ASP.NET MVC | [Installing Telerik UI for ASP.NET MVC](http://docs.telerik.com/kendo-ui/aspnet-mvc/introduction#installation) |  <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET MVC [version]\dpl\net40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET MVC [version]\dpl\netstandard`</li></ul> |
-| UI for ASP.NET Core | [Installing Telerik UI for ASP.NET Core](https://docs.telerik.com/aspnet-core/getting-started/installation/document-processing) | The Telerik Document Processing libraries are available as NuGet packages on the Telerik NuGet server: https://nuget.telerik.com/v3/index.json. |
-| UI for Blazor | [Installing Telerik UI for Blazor](https://docs.telerik.com/blazor-ui/common-features/document-processing) | The Telerik Document Processing libraries are available as NuGet packages on the Telerik NuGet server: https://nuget.telerik.com/v3/index.json. |
-| UI for WPF | [Installing Telerik UI for WPF](http://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries.NoXaml`</li></ul> |
-| UI for Silverlight | [Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries\Silverlight`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries.NoXaml\Silverlight`</li></ul> |
-| UI for WinForms | [Installing Telerik UI for WinForms](http://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for WinForms [version]\Bin40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WinForms [version]\Bin50`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WinForms [version]\BinNetCore`</li></ul> |
+| UI for ASP.NET AJAX | [Installing Telerik UI for ASP.NET AJAX](https://docs.telerik.com/devtools/aspnet-ajax/installation/which-file-do-i-need-to-install) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX [version]\AdditionalLibraries\Bin40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET AJAX [version]\AdditionalLibraries\Bin45`</li></ul> |
+| UI for ASP.NET MVC | [Installing Telerik UI for ASP.NET MVC](https://docs.telerik.com/kendo-ui/aspnet-mvc/introduction#installation) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET MVC [version]\dpl\net40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for ASP.NET MVC [version]\dpl\netstandard`</li></ul> |
+| UI for ASP.NET Core | [Installing Telerik UI for ASP.NET Core](https://docs.telerik.com/aspnet-core/getting-started/installation/document-processing) | Install the libraries as NuGet packages. See [Install using NuGet Packages]({%slug installation-nuget-packages%}) for the current package source and feed configuration steps. |
+| UI for Blazor | [Installing Telerik UI for Blazor](https://docs.telerik.com/blazor-ui/common-features/document-processing) | Install the libraries as NuGet packages. See [Install using NuGet Packages]({%slug installation-nuget-packages%}) for the current package source and feed configuration steps. |
+| UI for WPF | [Installing Telerik UI for WPF](https://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries.NoXaml`</li></ul> |
+| UI for Silverlight | [Installing Telerik UI for Silverlight](https://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries\Silverlight`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WPF [version]\Binaries.NoXaml\Silverlight`</li></ul> |
+| UI for WinForms | [Installing Telerik UI for WinForms](https://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer) | <ul><li>`C:\Program Files (x86)\Progress\Telerik UI for WinForms [version]\Bin40`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WinForms [version]\Bin50`</li><li>`C:\Program Files (x86)\Progress\Telerik UI for WinForms [version]\BinNetCore`</li></ul> |
 | UI for WinUI | [Installing Telerik UI for WinUI](https://docs.telerik.com/devtools/winui/installation-and-deployment/installationsteps) | `C:\Program Files (x86)\Progress\Telerik UI for WinUI [version]\DPL`|
 | UI for .NET MAUI | [Installing Telerik UI for .NET MAUI](https://docs.telerik.com/devtools/maui/installation/download-product-files) | `[installation_path]/Binaries/Shared`|
 
 
-## Step 2: Creating Application with Visual Studio
+## Step 2: Create a Console Application in Visual Studio
 
-As we are going to create a UI-Independent example, we will use a console project for this guide:
+This guide uses a console application because Telerik Document Processing is UI-independent.
 
-* Open Microsoft Visual Studio and create a new console project. It could be a .NET Framework, .NET Standard, {{site.dotnetversions}} project.
+Open Microsoft Visual Studio and create a new console project. The sample can use a .NET Framework, .NET Standard, or {{site.dotnetversions}} target framework.
 
-#### __Figure 1: Go to File > New > Project > Console App (.Net Framework) > Next > Create__
+### Figure 1: Create a Console Project in Visual Studio
+
+Use the Visual Studio path shown in the following image to create the console application.
+
 ![Create Console Project](images/VisualStudio_NewProject_Console3.gif "Create new Console Project")
 
-## Step 3: Add a Telerik Document Processing Library to a Project
+## Step 3: Add the Required Telerik Document Processing Packages
 
-This sample application will use [RadWordsProcessing]({%slug radwordsprocessing-overview%}). In this step, we must add the required packages.
+This sample uses [RadWordsProcessing]({%slug radwordsprocessing-overview%}) to create the DOCX file. Add the required packages to the console project before you insert the sample code.
 
-1. Reference the packages that provide the __RadWordsProcessing__ functionality:
+1. Add the packages that provide the RadWordsProcessing document model and DOCX functionality.
 
-	For .NET Framework project:
-	  * __Telerik.Windows.Documents.Core__
-	  * __Telerik.Windows.Documents.Flow__
+	For a .NET Framework project:
+	* `Telerik.Windows.Documents.Core`
+	* `Telerik.Windows.Documents.Flow`
 
-	For .NET Standard ({{site.dotnetversions}}) project:
-	  * __Telerik.Documents.Core__
-	  * __Telerik.Documents.Flow__
+	For a .NET Standard or {{site.dotnetversions}} project:
+	* `Telerik.Documents.Core`
+	* `Telerik.Documents.Flow`
 
-	>note As of **Q2 2025** the Zip Library will no longer be used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It will be replaced by the System.IO.Compression. We will continue to ship the Telerik Zip Library as a standalone library so clients can still use it separately.
+1. Add the package that exports the generated document to PDF.
 
-1. Reference the package that allows you to export the content as a PDF file:
+	For a .NET Framework project:
+	* `Telerik.Windows.Documents.Flow.FormatProviders.Pdf`
 
-	For .NET Framework project:
-	  * __Telerik.Windows.Documents.Flow.FormatProviders.Pdf__
+	For a .NET Standard or {{site.dotnetversions}} project:
+	* `Telerik.Documents.Flow.FormatProviders.Pdf`
 
-	For .NET Standard ({{site.dotnetversions}}) project:
-	  * __Telerik.Documents.Flow.FormatProviders.Pdf__
+You can find the complete Telerik Document Processing package list in [Available NuGet Packages]({%slug available-nuget-packages%}).
 
-You can find all Document Processing Libraries packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article.
+## Step 4: Create a RadFlowDocument
 
-## Step 4: Create a Document
+Use the following snippet to create the `RadFlowDocument` instance that the sample exports later.
 
-#### Example 1: Create RadFlowDocument
+### Example 1: Create a RadFlowDocument
 
 <snippet id='first-steps-create-document'/>
 
-## Step 4-A: Import an Existing Document
+## Step 5: Import an Existing DOCX File
 
-#### Example 1-A: Import a DOCX File
+Use this optional step if you want to start from an existing DOCX file instead of building the document content entirely in code.
+
+### Example 2: Import a DOCX File
 
 <snippet id='first-steps-import-docx'/>
 
-## Step 5: Export the Generated Document
+## Step 6: Export the Generated Document
 
 ### Export the RadFlowDocument to DOCX
 
-To export the document as a docx file, use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). Using the below code will create a provider instance and save a document with it. The document will be exported in the bin folder of your current project.
+Use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) to save the `RadFlowDocument` as a DOCX file. The following snippet creates the provider instance and exports the generated document to the `bin` folder of the current project.
         
 
-#### Example 2: Export RadFlowDocument to DOCX
+### Example 3: Export a RadFlowDocument to DOCX
 
 <snippet id='first-steps-export-docx'/>
 
 ### Export the RadFlowDocument to PDF
 
-To export the document as a PDF file, use [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}). __Example 3__ shows how to export the __RadFlowDocument__  created in Examples 1 to a file.
+Use [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the same `RadFlowDocument` to a PDF file.
         
-#### Example 3: Export RadFlowDocument to PDF
+### Example 4: Export a RadFlowDocument to PDF
 
 <snippet id='first-steps-export-pdf'/>
 
-Run the project and you should see something like this:
+## Step 7: Run the Project and Verify the Output
 
-#### Figure 2: The final result
+Run the console application and verify that the `bin` folder contains the generated DOCX and PDF files.
+
+### Figure 2: Generated DOCX and PDF Files
 
 ![Exported files](images/FinalResult.png "Exported files")
 
 ## Next Steps
 
-Now that you have run your first project example with Telerik Document Processing Libraries, you may want to explore additional features like __clone, edit, merge, insert__ documents and more. The following resources provide guidance on getting started with such tasks:
+After you complete this first sample, continue with the following articles to explore editing, merging, inserting, and other document-processing tasks.
 
 * [Explore Features]({%slug getting-started-explore-features%})
 * [Further Information]({%slug getting-started-next-steps%})

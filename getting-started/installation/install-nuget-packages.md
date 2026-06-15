@@ -1,143 +1,264 @@
 ---
-title: Install using NuGet Packages
-page_title: Install Telerik Document Processing Libraries via NuGet Packages
-description: Install the Telerik Document Processing libraries from NuGet.org, the Telerik NuGet server, or a local feed. Includes setup steps for Visual Studio and .NET CLI.
+title: Install with NuGet Packages
+page_title: Install Telerik Document Processing with NuGet Packages
+description: Learn how to install Telerik Document Processing with NuGet.org, a local feed, or the Telerik NuGet server, with PackageReference examples and Blazor guidance.
 slug: installation-nuget-packages
 tags: nuget, packages, telerik, document, processing, installation, feed, server
 published: True
 position: 7
 ---
 
-# Install using NuGet Packages
+# Install Telerik Document Processing with NuGet Packages
 
-This article describes how you can install the Document Processing Libraries using a NuGet package.
-You can find all Document Processing Libraries packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article. There are three ways to get the NuGet packages:
+This article explains how to install Telerik Document Processing with NuGet packages, choose the correct package source, and add the package references that your application needs. For the full package list, see [Available NuGet Packages]({%slug available-nuget-packages%}).
 
-* [Download from NuGet.org (Recommended)](#download-from-nugetorg)
+Use one of the following installation paths:
 
-* [Manually download the packages](#manually-download-nuget-packages)
+* [How to install from NuGet.org](#how-to-install-telerik-document-processing-from-nugetorg)
+* [How to install from a local NuGet feed](#how-to-install-from-a-local-nuget-feed)
+* [How to install from the Telerik NuGet server](#how-to-install-from-the-telerik-nuget-server)
 
-* [Get the packages from the Telerik NuGet server](#download-from-the-nuget-server)
+## How to Choose the Right NuGet Installation Path
 
-## Download from NuGet.org
+For current Telerik Document Processing releases, use **NuGet.org**. NuGet.org is the default package source in Visual Studio and the .NET CLI, so it requires the least configuration and avoids unnecessary package-source ambiguity.
 
-As of **Q2 2026**, the Telerik Document Processing NuGet packages are available on <a href="https://www.nuget.org/" target="_blank">NuGet.org</a>. This is the recommended way to install the libraries because NuGet.org is the default package source in Visual Studio and the .NET CLI, so no additional feed configuration is required.
+Use a **local NuGet feed** when you need offline installation, reproducible restores inside a controlled network, or a mirrored package source for build agents.
 
-### Install through the Visual Studio NuGet Package Manager
+Use the **Telerik NuGet server** only when you need older package versions that predate the NuGet.org release or when your organization already standardizes on the Telerik private feed.
 
-1\. In the Visual Studio Solution Explorer, right-click a project and select **Manage NuGet Packages...**.
+## Use Explicit PackageReference Entries
 
-2\. Make sure the **Package source** dropdown is set to **nuget.org** (this is the default).
+Add the package references in the application project that generates, imports, or exports documents. Install `Telerik.Licensing` in the same project, keep all Telerik Document Processing packages on the same release version, and do not mix `Telerik.Documents.*` with `Telerik.Windows.Documents.*` in the same application. For the full package inventory, see [Available NuGet Packages]({%slug available-nuget-packages%}), and for package-family guidance, see [Telerik.Windows.Documents.* vs Telerik.Documents.*]({%slug telerik-windows-documents-vs-telerik-documents-namespace%}).
 
-3\. In the **Browse** tab, search for the desired Telerik Document Processing package, for example, `Telerik.Documents.Fixed`.
+### Cross-Platform PackageReference Example
 
-4\. Select the package and click **Install**.
+Use the following `PackageReference` entries for ASP.NET Core, Blazor, console apps, services, and other modern .NET workloads that rely on the `Telerik.Documents.*` package family.
 
-### Install through the .NET CLI
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <TelerikDocumentProcessingVersion>2026.1.210</TelerikDocumentProcessingVersion>
+    </PropertyGroup>
 
-Run the following command in a terminal, replacing `Telerik.Documents.Fixed` with the name of the package you need:
-
-```
-dotnet add package Telerik.Documents.Fixed
-```
-
-The .NET CLI resolves packages from NuGet.org by default. You can install a specific version by appending the `--version` parameter:
-
-```
-dotnet add package Telerik.Documents.Fixed --version 2024.3.1015
-```
-
-### Install through the Package Manager Console
-
-Run the following command in the Visual Studio **Package Manager Console**:
-
-```
-Install-Package Telerik.Documents.Fixed
+    <ItemGroup>
+        <PackageReference Include="Telerik.Licensing" Version="1.*" />
+        <PackageReference Include="Telerik.Documents.Core" Version="$(TelerikDocumentProcessingVersion)" />
+        <PackageReference Include="Telerik.Documents.Flow" Version="$(TelerikDocumentProcessingVersion)" />
+        <PackageReference Include="Telerik.Documents.Flow.FormatProviders.Pdf" Version="$(TelerikDocumentProcessingVersion)" />
+    </ItemGroup>
+</Project>
 ```
 
->tip You can find the exact package names and available versions for all Document Processing Libraries in the [Available NuGet Packages]({%slug available-nuget-packages%}) article.
+### Windows-Only PackageReference Example
 
-## Manually Download NuGet Packages
+Use the following `PackageReference` entries for .NET Framework or other Windows-only applications that rely on the `Telerik.Windows.Documents.*` package family.
 
-This approach allows you to set up a local NuGet package source, so you can install the Telerik products without an active Internet connection and without setting up the private feed.
+```xml
+<Project>
+    <PropertyGroup>
+        <TelerikDocumentProcessingVersion>2026.1.210</TelerikDocumentProcessingVersion>
+    </PropertyGroup>
 
-1\. Copy all the .nupkg files we provide to your preferred local feed location. First you need to log in using your Telerik licensed account. Telerik Document Processing is a part of several Telerik bundles and is available in the Downloads section of the suite with which you've obtained the product, e.g. UI for Blazor. This way you will be able to download the packages:
-
-![install-using-nuget001](images/install-using-nuget001.png)
-
-
-**Telerik Document Processing** is also available as a separate distribution in your account: [Download Product Files]({%slug installation-nuget-packages%})
-
-2\. Then, you need to add packages to Visual Studio. Open the NuGet manager and then click the Options button:
-
-![installation-nuget-packages 002](images/installation-nuget-packages001.png)
-
-3\. Add new package source. The __Source__ should point to the local folder with the NuGets:
-
-![install-using-nuget002](images/install-using-nuget002.png)
-
-4\. The final step is to select and install the desired packages.
-
-![install-using-nuget003](images/install-using-nuget003.png)
-
-## Download from the NuGet Server
-
->note As of Q2 2026, NuGet.org is the recommended source for Telerik Document Processing packages. The Telerik NuGet server remains available for backward compatibility and for installing older versions that predate the NuGet.org release.
-
-To install the Telerik Document Processing Libraries, you can use the NuGet packages hosted on the public Telerik NuGet server. This online source lets you download and install various versions of the Document Processing libraries and allows quick updates with minimal manual intervention.
-
-Before adding the Telerik NuGet server to Visual Studio, make sure you have:
-
-* A commercial or trial license that includes Document Processing. The Telerik NuGet server requires authentication and checks if you have a valid license.
-
-* An API key - As the Telerik NuGet server requires authentication, the first step is to obtain an API key.
-
-### Generate an API Key
-
-It is necessary to [obtain an API key]({%slug generating-api-keys%}) that you will use instead of a password. Using an API key instead of a password is a more secure approach, especially when you work with .NET CLI or the NuGet.Config file.
-
-### Add the Telerik NuGet Package Source to Visual Studio
-
-Before you can install Telerik NuGet packages, you must configure the Telerik NuGet server as a package source in Visual Studio:
-
+    <ItemGroup>
+        <PackageReference Include="Telerik.Licensing" Version="1.*" />
+        <PackageReference Include="Telerik.Windows.Documents.Core" Version="$(TelerikDocumentProcessingVersion)" />
+        <PackageReference Include="Telerik.Windows.Documents.Flow" Version="$(TelerikDocumentProcessingVersion)" />
+        <PackageReference Include="Telerik.Windows.Documents.Flow.FormatProviders.Pdf" Version="$(TelerikDocumentProcessingVersion)" />
+    </ItemGroup>
+</Project>
 ```
+
+If you prefer command-line installation, use package names from the same package family throughout the project and keep all versions aligned.
+
+## Avoid Package-Source Confusion and Restore Issues
+
+Package restore issues often come from mixed package families, stale private-feed credentials, or multiple package sources that resolve different versions of the same dependency. Use the following rules to avoid those failures:
+
+* Prefer NuGet.org for current Telerik Document Processing releases.
+* Keep all Telerik Document Processing packages on the same release version.
+* Use only one Telerik package family per application: `Telerik.Documents.*` or `Telerik.Windows.Documents.*`.
+* When a project uses multiple feeds, configure `NuGet.Config` so restore uses the intended source order and mappings.
+* Store feed credentials as secrets in CI/CD systems instead of committing them to source control.
+
+If your build uses more than one package source, start from a minimal `NuGet.Config` file similar to the following example and then adjust it for your environment:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <packageSources>
+        <clear />
+        <add key="nuget.org" value="https://api.nuget.org/v3/index.json" />
+    </packageSources>
+</configuration>
+```
+
+If an agent or build script installs packages automatically, verify the package family and package source before restore. Most dependency-confusion issues come from automated restores that resolve a similarly named package from the wrong feed or from mixed `Telerik.Documents.*` and `Telerik.Windows.Documents.*` references.
+
+## How to Install Telerik Document Processing from NuGet.org
+
+As of **Q2 2026**, Telerik Document Processing packages are available on [NuGet.org](https://www.nuget.org/). This is the recommended installation path for new development because both Visual Studio and the .NET CLI use NuGet.org by default.
+
+### How to Install from NuGet.org in Visual Studio
+
+1. In Solution Explorer, right-click the project and select **Manage NuGet Packages...**.
+2. In **Package source**, verify that **nuget.org** is selected.
+3. In the **Browse** tab, search for the package you need, for example `Telerik.Documents.Fixed`.
+4. Select the package and then select **Install**.
+
+### How to Install from NuGet.org with the .NET CLI
+
+Use the .NET CLI when you want repeatable setup steps for local development, containers, or automation scripts.
+
+```bash
+dotnet add package Telerik.Licensing
+dotnet add package Telerik.Documents.Core --version 2026.1.210
+dotnet add package Telerik.Documents.Fixed --version 2026.1.210
+```
+
+To install a different library, replace `Telerik.Documents.Fixed` with the package that matches your document type.
+
+For example, use `Telerik.Documents.Flow` for Word processing, `Telerik.Documents.Spreadsheet` for spreadsheet processing, and `Telerik.Documents.SpreadsheetStreaming` for large spreadsheet generation.
+
+### How to Install from NuGet.org with Package Manager Console
+
+Use the Visual Studio Package Manager Console when you manage packages inside Visual Studio and want PowerShell-based commands.
+
+```powershell
+Install-Package Telerik.Licensing
+Install-Package Telerik.Documents.Core -Version 2026.1.210
+Install-Package Telerik.Documents.Fixed -Version 2026.1.210
+```
+
+>tip You can find the exact package names and supported combinations in [Available NuGet Packages]({%slug available-nuget-packages%}).
+
+## How to Choose NuGet Setup for Your Environment
+
+The package source is only one part of setup. Use the following guidance to choose the correct package family and restore approach for your environment.
+
+### How to Configure Blazor Web App, Blazor Server, and ASP.NET Core
+
+Use the cross-platform `Telerik.Documents.*` package family. Add `Telerik.Licensing`, `Telerik.Documents.Core`, and the library packages that match the document formats you work with.
+
+For example, a Blazor Web App that creates DOCX files and exports them to PDF typically uses the following packages:
+
+```xml
+<ItemGroup>
+    <PackageReference Include="Telerik.Licensing" Version="1.*" />
+    <PackageReference Include="Telerik.Documents.Core" Version="2026.1.210" />
+    <PackageReference Include="Telerik.Documents.Flow" Version="2026.1.210" />
+    <PackageReference Include="Telerik.Documents.Flow.FormatProviders.Pdf" Version="2026.1.210" />
+</ItemGroup>
+```
+
+### How to Configure Blazor WebAssembly
+
+Use the `Telerik.Documents.*` package family in Blazor WebAssembly projects. Do not use `Telerik.Windows.Documents.*` packages in WebAssembly applications.
+
+For PDF processing in Blazor WebAssembly, start with the following package references:
+
+```xml
+<ItemGroup>
+    <PackageReference Include="Telerik.Licensing" Version="1.*" />
+    <PackageReference Include="Telerik.Documents.Core" Version="2026.1.210" />
+    <PackageReference Include="Telerik.Documents.Fixed" Version="2026.1.210" />
+</ItemGroup>
+```
+
+If the application exports PDF content that contains non-JPEG images or uses image quality settings other than `High`, also add the image-processing dependencies described in [Images]({%slug radpdfprocessing-cross-platform-images%}).
+
+### How to Configure CI/CD and Build Agents
+
+For CI/CD pipelines and self-hosted build agents, prefer NuGet.org for current releases because it removes the need to configure private-feed credentials. Commit package references and, when needed, a repository-level `NuGet.Config` file, but keep any secrets outside source control.
+
+If your pipeline must restore from the Telerik NuGet server or another authenticated feed, store the API key or credentials in the pipeline secret store and inject them during restore. For CI-specific guidance, see [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%}).
+
+When you automate restores, add one validation step that checks package-family consistency before build. For example, fail the build if the project file contains both `Telerik.Documents.` and `Telerik.Windows.Documents.` package references.
+
+## How to Install from a Local NuGet Feed
+
+Use a local feed when you need offline development, an internal mirror, or controlled package availability inside a secured network.
+
+1. Download the `.nupkg` files for the Telerik suite or distribution that includes Telerik Document Processing from your Telerik account.
+
+![Download Telerik Document Processing NuGet packages from your Telerik account](images/install-using-nuget001.png)
+
+2. Copy the `.nupkg` files to a local or network folder that will act as the package source.
+3. In Visual Studio, open **Manage NuGet Packages...** and then select the **Settings** icon.
+
+![Open NuGet package source settings in Visual Studio](images/installation-nuget-packages001.png)
+
+4. Add a new package source. Set **Source** to the folder that contains the `.nupkg` files.
+
+![Add a local NuGet package source in Visual Studio](images/install-using-nuget002.png)
+
+5. Select the local package source and install the required Telerik Document Processing packages.
+
+![Install Telerik Document Processing packages from a local NuGet feed](images/install-using-nuget003.png)
+
+If you also restore from NuGet.org or another feed, configure `NuGet.Config` so your local feed is used intentionally rather than accidentally.
+
+## How to Install from the Telerik NuGet Server
+
+>note As of Q2 2026, NuGet.org is the recommended source for current Telerik Document Processing packages. Use the Telerik NuGet server for backward compatibility, for older releases, or when your organization requires the Telerik private feed.
+
+The Telerik NuGet server provides authenticated access to Telerik packages and older versions that may not be part of your standard NuGet.org-based workflow.
+
+Before you add the Telerik NuGet server, make sure that you have:
+
+* A commercial or trial license that includes Telerik Document Processing.
+* An API key for package restore and automated environments.
+
+### How to Generate a Telerik NuGet API Key
+
+Create an API key as described in [Generate API Keys]({%slug generating-api-keys%}). Use the API key instead of a password when you configure the Telerik feed in automation, in `NuGet.Config`, or in command-line restore steps.
+
+### How to Add the Telerik NuGet Server to Visual Studio
+
+Configure the Telerik NuGet server as a package source in Visual Studio with the following feed URL:
+
+```text
 https://nuget.telerik.com/v3/index.json
 ```
 
-1\. In the Visual Studio Solution Explorer, right-click a Project, select **Manage NuGet Packages...**, and then select the **Settings** icon:
+1. In Solution Explorer, right-click the project, select **Manage NuGet Packages...**, and then select the **Settings** icon.
 
-![installation-nuget-packages 001](images/installation-nuget-packages001.png)
+![Open NuGet package source settings for the Telerik feed](images/installation-nuget-packages001.png)
 
-2\. Select **+** to add a new package source and enter https://nuget.telerik.com/v3/index.json in the **Source** field. Add a name for the new package source, for example, **Telerik NuGet Server**:
+2. Select **+** to add a new package source. Enter `https://nuget.telerik.com/v3/index.json` in **Source** and use a descriptive name such as **Telerik NuGet Server**.
 
-![installation-nuget-packages 002](images/installation-nuget-packages002.png)
+![Add the Telerik NuGet server as a package source in Visual Studio](images/installation-nuget-packages002.png)
 
-3\. Select **Telerik NuGet Server** from the **Package Source** dropdown, and you will be prompted for a user name and a password. Use the credentials for your [Telerik Account](https://www.telerik.com/account/).
+3. Select **Telerik NuGet Server** from **Package source** and authenticate with your Telerik account or API-key-based configuration.
 
-![installation-nuget-packages 003](images/installation-nuget-packages003.png)
+![Authenticate to the Telerik NuGet server in Visual Studio](images/installation-nuget-packages003.png)
 
-4\. Select and install the desired NuGet packages.
+4. Select and install the required NuGet packages.
 
-![installation-nuget-packages 004](images/installation-nuget-packages004.png)
+![Install Telerik Document Processing packages from the Telerik NuGet server](images/installation-nuget-packages004.png)
 
-You have successfully added the Telerik NuGet feed as a Package source.
+### How to Reset Stored Telerik Feed Credentials
 
-### Reset Store Credentials
+If restore fails because Visual Studio or NuGet is using outdated Telerik feed credentials, reset the stored credentials and add the feed again.
 
-If you previously stored credentials for the Telerik NuGet server, you need to reset them to authenticate with your new API key. Follow these steps:
+1. Remove the saved credentials in [Windows Credential Manager](https://support.microsoft.com/en-us/windows/accessing-credential-manager-1b5c916a-6a16-889f-8581-fc16e8165ac0). Look for entries such as `nuget.telerik.com` or `VSCredentials_nuget.telerik.com`.
+2. Remove the Telerik package source from Visual Studio.
+3. If you added the Telerik package source with the .NET CLI, remove it with the following commands:
 
-1. Remove the saved credentials in the [Windows Credential Manager](https://support.microsoft.com/en-us/windows/accessing-credential-manager-1b5c916a-6a16-889f-8581-fc16e8165ac0). These credentials will appear as `nuget.telerik.com` or `VSCredentials_nuget.telerik.com` entries.
-2. Remove the Telerik NuGet package source from Visual Studio.
-3. If you have added the Telerik package source by using the .NET CLI, try to remove it by running the following commands:
-    * [`dotnet nuget list source`](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-list-source)
-    * [`dotnet nuget remove source`](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-remove-source)
-4. Check if you have any credentials stored in `%AppData%\NuGet\Nuget.Config`. If so, remove them.
-5. Try to reset the Visual Studio user data by [forcing NuGet to ask for authentication](https://stackoverflow.com/questions/43550797/how-to-force-nuget-to-ask-for-authentication-when-connecting-to-a-private-feed).
+```bash
+dotnet nuget list source
+dotnet nuget remove source "Telerik NuGet Server"
+```
+
+4. Check `%AppData%\NuGet\NuGet.Config` for persisted Telerik credentials and remove them if they are no longer valid.
+5. If Visual Studio still does not prompt for new credentials, follow the steps in [Force NuGet to ask for authentication again](https://stackoverflow.com/questions/43550797/how-to-force-nuget-to-ask-for-authentication-when-connecting-to-a-private-feed).
 6. Restart Visual Studio.
-7. Add the Telerik NuGet package source again through Visual Studio or .NET CLI. If you are using the Telerik NuGet feed in a .NET Core application, use a NuGet API key in the [NuGet.Config file]({%slug telerik-nuget-source%}#edit-the-nugetconfig-file).
+7. Add the Telerik NuGet package source again. If you use the Telerik feed in automated restore or .NET applications, configure the API key in [NuGet.Config]({%slug telerik-nuget-source%}#edit-the-nugetconfig-file).
 
 ## See Also
 
- * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
- * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
- * [Handling the 'No packages found" Message when Using the Telerik NuGet Server]({%slug handle-no-nuget-packages-found-message%})
+* [Available NuGet Packages]({%slug available-nuget-packages%})
+* [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
+* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [Handling the "No packages found" Message when Using the Telerik NuGet Server]({%slug handle-no-nuget-packages-found-message%})
+* [Telerik CLI]({%slug dpl-telerik-cli%})
