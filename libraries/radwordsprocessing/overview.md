@@ -1,107 +1,134 @@
 ---
 title: Overview
-page_title: Overview
-description: RadWordsProcessing is a processing library that allows you to create, modify, and export documents to DOCX, RTF, HTML, TXT, and PDF formats.
+page_title: RadWordsProcessing Overview
+description: Explore RadWordsProcessing features, document model elements, supported formats, and next steps for creating and exporting Word documents.
 slug: radwordsprocessing-overview
 tags: radwordsprocessing, word, processing, docx, rtf, html, pdf, import, export
 published: True
 position: 0
 ---
 
-# Overview
+# RadWordsProcessing Overview
 
-**Telerik WordsProcessing Library** allows you to create and modify various document formats like DOCX, RTF, HTML, and TXT, convert from one format to another, and export to PDF. Through the API, you can access each element in the document and modify, remove, or add a new one. You can save the generated content as a stream, as a file, or send it to the client browser.
+**RadWordsProcessing** is the Telerik Document Processing library for creating, editing, importing, converting, and exporting Word-processing documents in .NET applications. Use it when you need programmatic control over document content, formatting, document structure, and format conversion without automating Microsoft Word.
 
-![WordsProcessing](images/words-processing-overview.jpg)   
+This overview explains what the library does, which document elements it supports, which formats you can work with, and where to continue next based on your scenario.
 
->note If you still don't have **Telerik Document Processing** installed, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
+![Diagram showing the RadWordsProcessing document workflow from creation to export](images/words-processing-overview.jpg)
 
->note For details on using the library, go to the [Getting Started]({%slug radwordsprocessing-getting-started%}) article.
+>note
+>
+> If you still need to install **Telerik Document Processing**, see [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%}) for the available installation options.
 
-   ![Rad Words Processing Overview 02](images/RadWordsProcessing_Overview_01.png)
+>note
+>
+> For a step-by-step first project, see [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%}).
 
-## Key Features 
+![Illustration of the RadWordsProcessing document object model](images/RadWordsProcessing_Overview_01.png)
 
-* Create and modify documents from various document formats: DOCX, RTF, HTML, and plain text.
-* Convert documents to PDF (export only).
-* Convert between the different formats.
-* Full rich-text capabilities.
-* Font and paragraph formatting, tables, images, comments, hyperlinks, fields, and more are supported.
-* Mail merge: Generate documents using a template document and a dataset, for example, "Thank you" letters to all employees.
-* Merge different documents into a single one while controlling how their styles merge.
-* GenAI-powered Document Insights
+## Key Features
 
-The document model of the library provides support for:
+Use RadWordsProcessing for these common tasks:
 
-|Feature|Description|
+* Create a new `RadFlowDocument` in code.
+* Import content from supported document formats.
+* Edit document text, structure, formatting, tables, images, fields, and hyperlinks.
+* Convert documents between supported formats.
+* Export documents to `.docx`, `.rtf`, `.html`, `.txt`, or `.pdf`.
+* Generate personalized output through mail merge.
+* Merge multiple documents while controlling style resolution.
+* Extract insights from documents with GenAI-powered Document Insights.
+
+The following table summarizes the main capabilities that users typically need first:
+
+| Feature | Description |
 |----|----|
-|[**Mail Merge**]({%slug radwordsprocessing-editing-mail-merge%})|Provides ability to produce personalized documents from a template holding fixed content merged with variable data from a data source (database or any other collection of data items).|
-|[**Merge documents**]({%slug radwordsprocessing-editing-insert-documents%})|Insert a document into another one at the desired position, controlling the way the styles of both are merged.|
-|[**Import of document elements**]({%slug radwordsprocessing-editing-import-document-element%})|Import a document element from one document into another.|
-|[**Clone**]({%slug radwordsprocessing-editing-clone-and-merge%})| Clone documents and document elements.|
-|[**Find and Replace**]({%slug radwordsprocessing-editing-find-and-replace%})|RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone.|
-|[**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%})|Simplifies the process of creating and modifying a document. You can achieve the same results as using the style properties and child collections of the document elements with less code.|
-|**Formatting**|Besides the styles, RadWordsProcessing provides support for different types of formatting so you can format any of the document elements: - **Character formatting**: Font size, font color, font name, bold, italic, underline, and more. - **Paragraph formatting**: Line spacing, alignment, indentation, spacing before and after, and more. - **Table formatting**: Change the alignment, borders, shading, spacing, and padding. - **Modifying the section properties** to adjust the page size, orientation, margins, headers, and footers.|
-|[**GenAI-powered Document Insights**]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-overview%})|Extract insights from Word documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content.|
+| [Mail merge]({%slug radwordsprocessing-editing-mail-merge%}) | Generate personalized documents from a template and a data source such as a database table or object collection. |
+| [Merge documents]({%slug radwordsprocessing-editing-insert-documents%}) | Insert one document into another and control how styles from both documents are combined. |
+| [Import document elements]({%slug radwordsprocessing-editing-import-document-element%}) | Reuse specific elements from one document inside another document. |
+| [Clone documents and elements]({%slug radwordsprocessing-editing-clone-and-merge%}) | Duplicate documents or individual elements before further processing. |
+| [Find and replace]({%slug radwordsprocessing-editing-find-and-replace%}) | Search for text in a `RadFlowDocument` and replace the matches or update their formatting. |
+| [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) | Create and modify document content with a higher-level API that reduces manual element management. |
+| Formatting support | Apply character, paragraph, table, and section formatting to control the appearance and layout of document content. |
+| [GenAI-powered Document Insights]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-overview%}) | Summarize document content and ask questions about a Word document by using Large Language Models (LLMs). |
 
-## Model
+## Document Model Overview
 
-The model of **RadWordsProcessing** includes:
-            
-* [**Sections**]({%slug radwordsprocessing-model-section%}): You can customize the sections using the properties exposed by the corresponding class. The library provides support for customizing the headers, footers, and watermarks for a section as well.
+The RadWordsProcessing model is built around `RadFlowDocument`. Each document contains structured elements that you can create, inspect, and update through the API.
 
-* [**Paragraphs**]({%slug radwordsprocessing-model-paragraph%}): The properties and methods related to paragraphs enable you to change its collection of inlines and appearance.
+### Block-Level Elements
 
-* [**Tables**]({%slug radwordsprocessing-model-table%}): An API for inserting, editing and removing tables. You can also change their rows, cells, appearance, and content.
+Use these elements to organize document structure:
 
-* **Inlines**:
-	* [Runs]({%slug radwordsprocessing-model-run%})
-	* Images: Including [inline]({%slug radwordsprocessing-model-imageinline%}) and [floating images]({%slug radwordsprocessing-model-floatingimage%}).
-	* [Fields]({%slug radwordsprocessing-concepts-fields%}): Merge fields, Document Variables and custom code fields, enabling you to insert any fields using its code representation.
-	* [Breaks]({%slug radwordsprocessing-model-break%}): Support for different types of breaks, so you can achieve the desired layout.
-	* [Bookmarks]({%slug radwordsprocessing-model-bookmark%}): Inserting, modifying and removing bookmarks.
-	* [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlink-field%}): You can work with hyperlinks pointing to a website or to a bookmark inside the document.
-	* [Tab stops]({%slug radwordsprocessing-concepts-tabstop%}): Working with a tab stops collection for each paragraph.
+| Element | Description |
+|----|----|
+| [Sections]({%slug radwordsprocessing-model-section%}) | Split a document into logical parts and configure page settings, headers, footers, and watermarks. |
+| [Paragraphs]({%slug radwordsprocessing-model-paragraph%}) | Store text and inline content while exposing paragraph-level formatting and layout settings. |
+| [Tables]({%slug radwordsprocessing-model-table%}) | Insert and edit rows, cells, layout, borders, spacing, and table content. |
 
-* [**Styles**]({%slug radwordsprocessing-concepts-styles%})
-	* The document model includes a repository of Style objects which contain sets of character, paragraph or table style properties.
-	* The API allows you create custom styles and use them throughout the document.
-	* [List styles]({%slug radwordsprocessing-concepts-lists%}).
+### Inline Elements and Content
 
-* [**Content Controls**]({%slug wordsprocessing-model-content-controls%}): Content controls or Structured Document Tags (SDT) enable users to add specific semantics to part of the document: restricting input, modifying editing behavior etc. This functionality allows adding of checkboxes, combo boxes and other controls to the document as well. 
+Use inline elements to control the content that appears inside paragraphs:
 
-* [**Shapes**]({%slug radwordsprocessing-shapes-shapes%}): Their variation in shape and style makes them very useful for drawing attention to specific text.
+| Element | Description |
+|----|----|
+| [Runs]({%slug radwordsprocessing-model-run%}) | Hold text with specific character formatting. |
+| [Inline images]({%slug radwordsprocessing-model-imageinline%}) and [floating images]({%slug radwordsprocessing-model-floatingimage%}) | Insert pictures that flow with text or float independently on the page. |
+| [Fields]({%slug radwordsprocessing-concepts-fields%}) | Insert merge fields, document variables, and custom code fields. |
+| [Breaks]({%slug radwordsprocessing-model-break%}) | Control line, page, and other document breaks. |
+| [Bookmarks]({%slug radwordsprocessing-model-bookmark%}) | Add named locations that you can target from other content. |
+| [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlink-field%}) | Link to websites or bookmarks inside the same document. |
+| [Tab stops]({%slug radwordsprocessing-concepts-tabstop%}) | Control horizontal alignment points within a paragraph. |
+
+### Styles, Controls, and Shapes
+
+Use these features to extend formatting and document behavior:
+
+| Feature | Description |
+|----|----|
+| [Styles]({%slug radwordsprocessing-concepts-styles%}) | Define reusable character, paragraph, and table styles, including [list styles]({%slug radwordsprocessing-concepts-lists%}). |
+| [Content controls]({%slug wordsprocessing-model-content-controls%}) | Add Structured Document Tags (SDT) such as checkboxes and combo boxes and apply editing constraints. |
+| [Shapes]({%slug radwordsprocessing-shapes-shapes%}) | Add visual elements that highlight or emphasize content. |
 
 ## Supported Formats
 
-The library comes with support for the following document formats:
+RadWordsProcessing supports these formats for import, export, or both:
 
-* [**DOC & DOT**]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) (import only)
+| Format | Support |
+|----|----|
+| [DOC and DOT]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) | Import only |
+| [DOCX]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) | Import and export |
+| [RTF]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%}) | Import and export |
+| [HTML]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) | Import and export |
+| [PDF]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) | Export only |
+| [Plain text]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%}) | Import and export |
 
-* [**DOCX**]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
+Use the corresponding format providers when you need to open an existing document, save a generated document, or convert content from one format to another.
 
-* [**RTF**]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})
+## Typical Next Steps
 
-* [**HTML**]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
+Most users continue with one of these paths:
 
-* [**PDF**]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only)
-
-* [**Plain text**]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%})
-
-You can import and export documents of these formats as well as convert the format of the document.
+1. Start with [RadWordsProcessing Getting Started with DOCX Export]({%slug radwordsprocessing-getting-started%}) if you want a first working sample.
+2. Review [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}) if you need to import or export a specific file format.
+3. Explore the [RadWordsProcessing Model]({%slug radwordsprocessing-model%}) if you plan to build or edit documents in code.
+4. Browse [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%}) if you want larger end-to-end scenarios.
 
 ## Online Demos
 
-|Demo|Description|
+Review these demos to see the library in action:
+
+| Demo | Description |
 |----|----|
-|[WordsProcessing Basic Usage](https://demos.telerik.com/document-processing/wordsprocessing)|The WordsProcessing API enables effortless conversion of documents between the supported DOCX, RTF, HTML, and TXT formats.|
-|[WordsProcessing PDF Export](https://demos.telerik.com/document-processing/wordsprocessing/pdf_export)|This example demonstrates export of documents to PDF using WordsProcessing. You can upload Word(docx), RTF, HTML or plain text document and convert it to PDF.|
-|[WordsProcessing Replacement](https://demos.telerik.com/document-processing/wordsprocessing/replace)|This example illustrates the Replace functionality in WordsProcessing. You can import a document of your choice, replace or highlight text in it, using regular expressions or strings and then export the document to view the result.|
-|[WordsProcessing Table Of Contents/Authorities](https://demos.telerik.com/document-processing/wordsprocessing/table_of_contents_authorities)|This example illustrates how to add Table of Contents (TOC) of Table of Authorities (TOA) fields in WordsProcessing.|
-|[WordsProcessing GenAI Document Insights](https://demos.telerik.com/document-processing/wordsprocessing/genai_document_insights)|This example demonstrates how to use the GenAI-powered Document Insights feature in Telerik RadWordsProcessing to extract meaningful insights from Word documents and receive context-aware responses based on their content.|
+| [WordsProcessing Basic Usage](https://demos.telerik.com/document-processing/wordsprocessing) | Convert documents between the supported DOCX, RTF, HTML, and TXT formats. |
+| [WordsProcessing PDF Export](https://demos.telerik.com/document-processing/wordsprocessing/pdf_export) | Upload a Word, RTF, HTML, or plain-text document and export it to PDF. |
+| [WordsProcessing Replacement](https://demos.telerik.com/document-processing/wordsprocessing/replace) | Replace or highlight text by using strings or regular expressions and then export the result. |
+| [WordsProcessing Table of Contents and Authorities](https://demos.telerik.com/document-processing/wordsprocessing/table_of_contents_authorities) | Insert Table of Contents (TOC) and Table of Authorities (TOA) fields. |
+| [WordsProcessing GenAI Document Insights](https://demos.telerik.com/document-processing/wordsprocessing/genai_document_insights) | Use GenAI-powered Document Insights to summarize documents and answer questions about their content. |
 
 ## See Also
 
-* [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
-* [First Steps]({%slug getting-started-first-steps%})
-* [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%})
+- [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
+- [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%})
+- [RadWordsProcessing Getting Started with DOCX Export]({%slug radwordsprocessing-getting-started%})
+- [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%})

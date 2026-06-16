@@ -1,61 +1,106 @@
 ---
 title: Using PdfFormatProvider
-description: Learn how to import and export PDF documents using the PdfFormatProvider in RadPdfProcessing.
-page_title: Using PdfFormatProvider
+description: Learn how to import and export PDF documents with PdfFormatProvider, including package setup, stream requirements, and document handling guidance.
+page_title: Using PdfFormatProvider in RadPdfProcessing
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider
 tags: pdfformatprovider, pdf, import, export, radpdfprocessing, stream, document, serialization
 published: True
 position: 1
 ---
 
-# Using PdfFormatProvider
+# Using PdfFormatProvider in RadPdfProcessing
 
-The `PdfFormatProvider` class makes it easy to import and export a `RadFixedDocument` from/to PDF format, preserving the entire document structure and formatting.
+Use `PdfFormatProvider` to import a PDF file into a `RadFixedDocument` or export a `RadFixedDocument` to PDF. This article explains the required packages, the stream requirements for import and export, and the common points to verify before you integrate the provider into your application.
 
-To use the format provider, add references to the following packages:
+`PdfFormatProvider` preserves the document structure and formatting that RadPdfProcessing supports. After import, you work with the resulting [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in the same way as a code-generated document.
+
+To use the format provider, add references to these packages:
 
 * `Telerik.Windows.Documents.Core`
 * `Telerik.Windows.Documents.Fixed`
-          
->note Starting with **Q2 2025**, the Zip Library is no longer used as an internal dependency in the rest of the Document Processing Libraries (PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing). It is replaced by `System.IO.Compression`. The Telerik Zip Library continues to ship as a standalone library so you can still use it separately.
-	  
-The `PdfFormatProvider` class of RadPdfProcessing is located in the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf` namespace.
+
+The `PdfFormatProvider` class is in the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf` namespace.
+
+Use this article when you need to:
+
+* Open an existing PDF file as a `RadFixedDocument`.
+* Save a `RadFixedDocument` to a PDF stream or file.
+* Understand which stream capabilities the import and export APIs require.
+* Avoid common issues such as disposing a stream too early.
+
+>note
+>
+> Starting with **Q2 2025**, the Document Processing libraries use `System.IO.Compression` instead of the Telerik Zip Library as an internal dependency. The Telerik Zip Library continues to ship as a standalone library for separate use.
 
 ## Import
 
-To import a PDF document, use the `Import()` method of `PdfFormatProvider`.
+Use the `Import()` method of `PdfFormatProvider` to load a PDF document.
 
-**Example 1** shows how to use `PdfFormatProvider` to import a PDF document from a file.
+Example 1 shows how to import a PDF document from a file.
 
->PDF files can be opened as long as you can obtain a stream with their content that supports Read and Seek operations. If the stream supports only Read, copy its content to a `MemoryStream`, which enables the Seek operation as well.
-        
->Starting with Q2 2015, the `RadPdfProcessing` library exposes [an API for working with image sources]({%slug radpdfprocessing-model-imagesource%}#methods), which needs to use the stream while working with images in a `RadFixedDocument`. This requires keeping the stream open and not disposing it.
+Before you call `Import()`, verify these requirements:
 
-#### __Example 1: Import PDF file__
+* The input stream supports both read and seek operations.
+* If the original stream supports only read operations, copy it to a `MemoryStream` first.
+* If the document contains images, keep the stream open for as long as the `RadFixedDocument` needs access to those image resources.
+
+>important
+>
+> When the imported document contains images, keep the stream open instead of disposing it immediately. The [ImageSource API]({%slug radpdfprocessing-model-imagesource%}#methods) can continue to use the stream while the `RadFixedDocument` works with those images.
+
+### Example 1: Import a PDF File
 
 <snippet id='pdf-import-file'/>
 
-The result from the import method is a [`RadFixedDocument`]({%slug radpdfprocessing-model-radfixeddocument%}), which can be used like any code-generated document.
+The result of `Import()` is a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) that you can inspect, modify, render, or export again.
 
->Import support is limited to the features that are supported by the export. You may not be able to import all custom PDF documents.
-          	 
->note Complete examples showing importing and exporting a document are available in the [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing).
+Import support is limited to the PDF features that RadPdfProcessing can export, so some custom PDF constructs might not be imported exactly as they appear in the original file.
+
+>note
+>
+> Complete import and export examples are available in the [Document Processing SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing).
 
 ## Export
 
-**Example 2** shows how to use the `Export()` method of `PdfFormatProvider` to export a `RadFixedDocument` to a file.
+Use the `Export()` method to serialize a `RadFixedDocument` to PDF.
 
-#### __Example 2: Export PDF file__
+Example 2 shows how to export a `RadFixedDocument` to a file.
+
+Before you call `Export()`, verify these points:
+
+* The output stream is writable.
+* The destination file path exists or can be created by your application.
+* If the document is digitally signed, the stream supports both reading and writing.
+
+### Example 2: Export a PDF File
 
 <snippet id='pdf-export-file'/>
 
->important When exporting a digitally signed document, pass a stream that allows both reading and writing. Otherwise, an exception is thrown: `NotSupportedException: 'Stream does not support reading.'` For example, create the output stream as follows: `new FileStream("signed.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite)`.
+>important
+>
+> When you export a digitally signed document, pass a stream that supports both reading and writing. Otherwise, the export throws `NotSupportedException` with the message `Stream does not support reading.` For example, create the output stream with `new FileStream("signed.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite)`.
 
-The resulting document can be opened in any application that supports PDF documents.
+After export, you can open the resulting document in any application that supports PDF files.
+
+In most applications, the PdfFormatProvider workflow looks like this:
+
+1. Create a `PdfFormatProvider` instance.
+2. Open a readable and seekable stream to import a PDF file, or prepare a writable stream to export one.
+3. Import the PDF to a `RadFixedDocument`, or export an existing `RadFixedDocument` to PDF.
+4. Keep the stream open when the imported document still depends on image resources from that stream.
+5. Validate the result by opening the exported PDF in a PDF viewer or by inspecting the imported document in code.
+
+## Troubleshooting
+
+Check these common issues if import or export does not behave as expected:
+
+* Import fails on stream access: Confirm that the input stream supports read and seek operations.
+* Imported images are missing later: Make sure that you do not dispose the underlying stream too early.
+* Export of signed PDFs fails: Use a stream with both read and write access.
+* Imported content differs from the original file: Confirm whether the source PDF uses features outside the supported RadPdfProcessing export surface.
 
 ## See Also
 
-* [PdfFormatProvider API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.PdfFormatProvider.html)
 * [Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})
