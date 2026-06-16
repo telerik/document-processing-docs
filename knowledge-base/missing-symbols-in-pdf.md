@@ -34,4 +34,3 @@ FontsRepository.TryCreateFont(new FontFamily("Segoe UI"), FontStyles.Normal, Fon
 ## See Also
 
 * [Fonts]({%slug radpdfprocessing-concepts-fonts%})
-* [FontsRepository]({%slug radpdfprocessing-fontsrepository%})

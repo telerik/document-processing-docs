@@ -175,5 +175,5 @@ The solution is to split the table on each page and draw a second table that con
 ## See Also
 
 * [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
-* [Table]({%slug radpdfprocessing-editing-table%})
+* [Table]({%slug radpdfprocessing-editing-table-overview%})
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
