@@ -12,7 +12,7 @@ position: 98
 # 2024.2.426 (2024 Q2)
 
 
-## What's New
+## What Is New
 
 
 ![new](../images/new.png)
@@ -24,7 +24,7 @@ position: 98
 
 ![new](../images/new.png)
 
-* Document Processing Libraries Versions built against .Net Framework 4.0 and NetCore 3.1 are now removed.
+* Document Processing Libraries versions built against .NET Framework 4.0 and .NET Core 3.1 are now removed.
 
 ## PdfProcessing
 
@@ -39,11 +39,11 @@ position: 98
 ![fixed](../images/fixed.png)
 
 * Text rendering is not correct in scenarios with negative font and/or negative horizontal scaling.
-* A NotSupportedCompressionMethodException with the message - Cannot decode stream with a not supported compression method.
-* Incorrect characters are displayed when merging multiple PDF documents with the RadFixedDocument.Merge method.
-* A NullReferenceException is thrown when exporting a document with CFF Type1 font.
+* A `NotSupportedCompressionMethodException` with the message - Cannot decode stream with a not supported compression method.
+* Incorrect characters are displayed when merging multiple PDF documents with the `RadFixedDocument.Merge` method.
+* A `NullReferenceException` is thrown when exporting a document with CFF Type1 font.
 * Import-export causes missing characters with specific document.
-* An InvalidOperationException is thrown when exporting font that is available but not used.
+* An `InvalidOperationException` is thrown when exporting font that is available but not used.
 * The read-only flag is not respected when importing a document.
 * A dictionary with invalid entry cannot be imported correctly and breaks the import process.
 * The Form field height is wrong after export with a specific document.
@@ -54,7 +54,7 @@ position: 98
 
 ![new](../images/new.png)
 
-* Introduces Description property for FloatingShapeBase.
+* Introduces `Description` property for `FloatingShapeBase`.
 
 ## SpreadStreamProcessing
 
@@ -68,8 +68,8 @@ position: 98
 
 ![fixed](../images/fixed.png)
 
-* A NullReferenceException is thrown when a Hyperlink is placed before a MailMerge group.
-* Image in Header or Footer with IsBehindDocument set to True is rendered on top of the text.
+* A `NullReferenceException` is thrown when a Hyperlink is placed before a `MailMerge` group.
+* Image in Header or Footer with `IsBehindDocument` set to `true` is rendered on top of the text.
 
 ## ZipLibrary
 

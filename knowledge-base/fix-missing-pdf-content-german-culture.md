@@ -1,6 +1,6 @@
 ---
 title: Fixing Missing Text with Specific Cultures 
-description: Learn how to address the issue where RadFixedDocument recognizes incorrect document size during import.
+description: Learn how to resolve missing text and incorrect document size when importing PDF files with German or other specific culture settings using RadPdfProcessing.
 type: how-to
 page_title: Resolving Missing Text with Specific Cultures 
 meta_title: Resolving Missing Text with Specific Cultures 
@@ -18,14 +18,15 @@ ticketid: 1674854
 
 ## Description
 
-When loading some PDF documents with German culture, part of the text got missing. It is possible to observe the following error:
+When you load PDF documents with German culture, part of the text may be missing. The following error may appear:
 `The dimensions of this page are out-of-range. Page content might be truncated`. 
-When importing a PDF file using RadFixedDocument with PdfFormatProvider, the document may recognize an incorrect size. For example, an A4-sized document may display a width value thousands of times larger than expected. This issue can occur due to culture settings on the machine (e.g. German).
+When you import a PDF file with `RadFixedDocument` and `PdfFormatProvider`, the document may recognize an incorrect size. For example, an A4-sized document may display a width value thousands of times larger than expected. This issue can occur because of culture settings on the machine (for example, German).
 
 This knowledge base article also answers the following questions:
-- How to fix the incorrect document size when using PdfFormatProvider in RadFixedDocument?
-- Why does RadFixedDocument import PDFs with wrong size values?
-- How to ensure the correct document size during import with RadFixedDocument?
+
+* How to fix the incorrect document size when using `PdfFormatProvider` in `RadFixedDocument`?
+* Why does `RadFixedDocument` import PDFs with wrong size values?
+* How to verify the correct document size during import with `RadFixedDocument`?
 
 ## Solution
 
@@ -34,15 +35,16 @@ To resolve the incorrect document size issue, follow these steps:
 ### Option 1: Set English Culture Before Import
 
 Add the following code before loading the document:
-   ```csharp
-   Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
-   ```
-   
+
+```csharp
+Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("en-US");
+```
+
 ### Option 2: Version Upgrade
 
-1. Download and install the  preview version 2024.4.1127 (or newer).
+1. Download and install the preview version 2024.4.1127 (or later).
 2. Use this version to render and process the PDF.
 
 ## See Also
 
-- [Feedback Item: Missing Text with Specific Cultures](https://feedback.telerik.com/document-processing/1670849-pdfprocessing-missing-text-with-specific-cultures-e-g-german)
+* [Feedback Item: Missing Text with Specific Cultures](https://feedback.telerik.com/document-processing/1670849-pdfprocessing-missing-text-with-specific-cultures-e-g-german)

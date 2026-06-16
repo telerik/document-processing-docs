@@ -1,23 +1,29 @@
 ---
-title: Replace Text Content With Image | Telerik Document Processing
-description: This article shows how to locate a specific text in a PDF document and replace it with an image.
+title: Replace Text Content with Image
+description: Learn how to locate specific text in a PDF document and replace it with an image by using RadPdfProcessing.
 type: how-to
-page_title: Replace Text Content With Image
+page_title: Replace Text Content with Image
 slug: pdfprocessing-replace-text-with-image
 position: 0
 tags: radpdfprocessing, pdf, text, image, replace, document, processing, fixed
 res_type: kb
 ---
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
 |2021.1.118|RadPdfProcessing|[Tanya Dimitrova](https://www.telerik.com/blogs/author/tanya-dimitrova)|
 
 ## Description
-A common scenario is to replace a temporary page content (a placeholder text) with an image. This allows already created PDF documents to be modified by adding an image on a position defined by the existing content of the document.
+
+A common scenario is to replace temporary page content (a placeholder text) with an image. This approach allows you to modify existing PDF documents by adding an image at a position defined by the existing content of the document.
 
 ## Solution
-The following example demonstrates the approach of iterating the page content and finding TextFragment elements matching the *$ImagePlaceholder* text. For each match, an Image instance is created and the TextFragment is replaced with it. The *Position* property is used to correctly position the image on the page.
+
+The following example iterates the page content and finds `TextFragment` elements that match the `$ImagePlaceholder` text. For each match, an `Image` instance is created and the `TextFragment` is replaced with it. The `Position` property positions the image correctly on the page.
+
+**Example 1: Replace Text with Image**
 
 ```csharp
 
@@ -80,3 +86,8 @@ The following example demonstrates the approach of iterating the page content an
     	}
     }
 ```
+
+## See Also
+
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})

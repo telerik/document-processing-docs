@@ -17,15 +17,15 @@ ticketid: 1657503
 
 ## Description
 
-Learn how to extract the text content in a PDF document.
+Learn how to extract the text content from a PDF document.
 
 ## Solution
 
-Follow the steps:
+Follow these steps:
 
-1\. Import the PDF document using the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+1. Import the PDF document with the [`PdfFormatProvider`]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
-2\. Export the RadFixedDocument's content to text using the [TextFormatProvider]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%}). Thus, if the PDF document contains text fragments, it will be exported to the plain text result.
+2. Export the `RadFixedDocument` content to text with the [`TextFormatProvider`]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%}). If the PDF document contains text fragments, the provider exports them to a plain text result.
 
 ```csharp
             string filePath = "input.pdf";
@@ -40,12 +40,13 @@ Follow the steps:
             string documentContent = provider.Export(fixed_document);
             Debug.WriteLine(documentContent);
 ```
->important However, depending on the internal document's content, the **TextFormatProvider** may not be applicable for covering all the cases. A common scenario is a document with scanned images which contain text information. In this case, the above approach wouldn't parse the content to plain text because all the text inside is actually not text but [Path]({%slug radpdfprocessing-model-path%}) elements. Here comes the benefit of using the [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) allowing you to convert images of typed, handwritten, or printed text into machine-encoded text from a scanned document.
+
+>important The `TextFormatProvider` may not cover all scenarios depending on the internal document content. A common case is a document with scanned images that contain text information. In this case, the above approach does not parse the content to plain text because the text is represented as [`Path`]({%slug radpdfprocessing-model-path%}) elements. Use the [`OcrFormatProvider`]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) to convert images of typed, handwritten, or printed text into machine-encoded text from a scanned document.
 
 ## See Also
 
-- [RadPdfProcessing]({%slug radpdfprocessing-overview%})
-- [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%})
-- [TextFormatProvider]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%}) 
-- [Summarizing the Text Content of PDF Documents using Text Analytics with Azure AI services]({%slug summarize-pdf-content%})
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+* [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%})
+* [TextFormatProvider]({%slug radpdfprocessing-formats-and-conversion-plain-text-textformatprovider%}) 
+* [Summarizing the Text Content of PDF Documents using Text Analytics with Azure AI services]({%slug summarize-pdf-content%})
 

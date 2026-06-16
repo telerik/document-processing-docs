@@ -24,12 +24,12 @@ img[alt$="><"] {
 
 ## Description
 
-This article aims to demonstrate a sample approach of extracting comments from Word (DOCX) documents and add them as annotations to the converted PDF document. Currently, comments in Word documents are not preserved during the conversion to PDF.  
+This article demonstrates how to extract comments from Word (DOCX) documents and add them as annotations to the converted PDF document. Currently, the conversion to PDF does not preserve comments from Word documents.  
 
 This knowledge base article also answers the following questions:
-- How to extract comments from Word documents using RadWordsProcessing?
-- How to convert the DOCX file to PDF format?
-- How to convert Word document comments to PDF annotations?
+* How to extract comments from Word documents using RadWordsProcessing?
+* How to convert a DOCX file to PDF format?
+* How to convert Word document comments to PDF annotations?
 
 ![Word Document with Comments ><](images/docx-with-comments.png)   
 
@@ -37,13 +37,13 @@ This knowledge base article also answers the following questions:
 
 To achieve the desired behavior, follow these steps:
 
-1. Import the existing DOCX file to [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}).
+1. Import the existing DOCX file to [`RadFlowDocument`]({%slug radwordsprocessing-model-radflowdocument%}).
 
-1. Convert the RadFlowDocument to PDF format ([RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})).
+2. Convert the `RadFlowDocument` to PDF format ([`RadFixedDocument`]({%slug radpdfprocessing-model-radfixeddocument%})).
 
-1. Extract the [Comments]({%slug radwordsprocessing-model-comment%}) from the RadFlowDocument and add programmatically [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) to the RadFixedDocument.
+3. Extract the [Comments]({%slug radwordsprocessing-model-comment%}) from the `RadFlowDocument` and programmatically add [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) to the `RadFixedDocument`.
 
-1. Export the RadFixedDocument to PDF file.
+4. Export the `RadFixedDocument` to a PDF file.
 
 ```csharp
         static void Main(string[] args)
@@ -139,6 +139,6 @@ To achieve the desired behavior, follow these steps:
 
 ## See Also
 
-- [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
-- [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
  

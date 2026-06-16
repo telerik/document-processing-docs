@@ -20,13 +20,13 @@ ticketid: 1695747
 This article describes how to set a [List Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule) rule in the [SpreadProcessing]({%slug radspreadprocessing-overview%}) library that uses a cell range as the validation source instead of a comma-delimited list of values. This avoids the 256-character limit imposed by Excel for comma-separated values.
 
 This knowledge base article also answers the following questions:
-- How to define validation rules with a cell range in SpreadProcessing?
-- How to bypass the character limit in validation rules by using cell ranges?
-- How to set up list validation using cell ranges in Telerik's SpreadProcessing?
+* How to define validation rules with a cell range in SpreadProcessing?
+* How to bypass the character limit in validation rules by using cell ranges?
+* How to set up list validation using cell ranges in Telerik SpreadProcessing?
 
 ## Solution
 
-To set a [List Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule) rule that references a cell range, use the **ListDataValidationRule** and specify the cell range as the **Argument1**. Follow the steps below:
+To set a [List Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule) rule that references a cell range, use the `ListDataValidationRule` and set the cell range as the `Argument1`. Follow the steps below:
 
 1. Import the workbook using the [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}).
 2. Specify the cell where the validation rule will apply using [CellIndex]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}#accessing-cells-of-a-worksheet).
@@ -34,7 +34,7 @@ To set a [List Data Validation]({%slug radspreadprocessing-features-data-validat
 4. Create and assign the [ListDataValidationRule]({%slug radspreadprocessing-features-data-validation%}#list-rule) to the target cell.
 5. Export the updated workbook using the [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}).
 
-Here is an example:
+**Example 1: Setting List Data Validation with a Cell Range**
 
 ```csharp
 // Import the workbook
@@ -76,7 +76,7 @@ using (Stream output = new FileStream(xlsxOutputPath, FileMode.Create))
 }
 ```
 
-# See Also
+## See Also
 
 * [Data Validation]({%slug radspreadprocessing-features-data-validation%}#data-validation)
 * [List Rule]({%slug radspreadprocessing-features-data-validation%}#list-rule)

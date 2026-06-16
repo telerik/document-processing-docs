@@ -10,15 +10,15 @@ position: 3
 
 # Prompt Library
 
-The prompts provided here are intended and optimized for use with Telerik Document Processing [AI Coding Assistant]({%slug ai-coding-assistant%}). When you run them in the [MCP Server]({%slug ai-mcp-server%}), these prompts will help you kick start your app development, speed up the component configuration process, and troubleshoot your code.
+The prompts provided here are intended and optimized for use with the Telerik Document Processing [AI Coding Assistant]({%slug ai-coding-assistant%}). When you run them in the [MCP Server]({%slug ai-mcp-server%}), these prompts help you kick-start your app development, speed up the configuration process, and troubleshoot your code.
 
-You can use the provided prompts as they are or modify them to fit your use case. Make sure to start your prompt with the respective [MCP Server]({%slug ai-mcp-server%}) handle).
+You can use the provided prompts as they are or modify them to fit your use case. Verify that you start your prompt with the respective [MCP Server]({%slug ai-mcp-server%}) handle.
 
 You can also use the prompts with any AI-powered tool of your choice. However, the Telerik Document Processing AI Coding Assistant is developed to provide highly accurate results based extensively on the documentation, APIs, and community knowledge for Telerik Document Processing. Running the prompts outside the AI Coding Assistant may not produce as relevant results.
 
 The list of prompts is not exhaustive and the Telerik Document Processing team is constantly working on adding more prompts to the library.
 
->caution Always double-check the code and solutions proposed by AI-powered tool before applying them to your project.
+>caution Always double-check the code and solutions proposed by any AI-powered tool before applying them to your project.
 
 ## How to Use This Library
 

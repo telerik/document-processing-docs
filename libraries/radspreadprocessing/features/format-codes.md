@@ -10,28 +10,26 @@ position: 11
 
 # Format Codes
 
-__RadSpreadProcessing__ allows to control the appearance of the number values using Number Formats. There is a variety of predefined formats and you can define a custom one in case they are not suitable for your scenario. This article explains how to use the codes in order to create your own number format or modify one of the predefined types. More information about the predefined types can be found in [Number Formatting]({%slug radspreadprocessing-features-number-formats%}) article.
+**RadSpreadProcessing** allows you to control the appearance of number values through Number Formats. A variety of predefined formats exist, and you can define a custom format if they do not suit your scenario. The following sections explain how to use format codes to create your own number format or modify one of the predefined types. For more information about the predefined types, see the [Number Formatting]({%slug radspreadprocessing-features-number-formats%}) article.
 
 ## Overview
 
-A number format could contain up to four sections. Each of them defines a format for different values as shown in __Figure 1__.
+A number format can contain up to four sections. Each section defines a format for different values as shown in **Figure 1**.
+
+**Figure 1: Number format sections**
+
+![Number format sections diagram](images/RadSpreadProcessing-Features-Format-Codes_01.png)
+
+These sections are not required and can be omitted. If only one section is specified, its code is used for all numbers. If two sections are specified, the first one is used for positive numbers and zeros and the second one for negative numbers.
+
+> If a number format is not explicitly set, the default format is General. It represents an empty string, which provides default behavior for the different types of values.
 
 
-#### Figure 1: Number format sections
+## Format with Text Values
 
-![](images/RadSpreadProcessing-Features-Format-Codes_01.png)
+You can display a combination of text and numbers in a cell by enclosing the text in the format string in double quotation marks. If it is a single character, you can precede it with a backslash ('\').  The '@' sign is useful when you need to include text typed by the user in the cell.
 
-
-These sections are not required and could be omitted. If only one section is specified, its code is used for all numbers. In case the specified sections are two, the first one is used for positive numbers and zeros and the second one for negative numbers.
-
-> If a number format is not explicitly set, the default one is General. It represents an empty string, which has a default behavior for the different types of values.
-
-
-## Format With Text Values
-
-You could display a combination of text and numbers in a cell by enclosing the text in the format string in double quotation marks or, if it is a single character, you could precede it with a backslash (‘\’).  The ‘@’ sign is useful when you need to include a text typed from the user in the cell.
-
-#### Table 1
+**Table 1**
 <table>
 <tr>
 	<th>Number Format Code</th>
@@ -62,9 +60,9 @@ You could display a combination of text and numbers in a cell by enclosing the t
 > If the format code consists only of an ‘@’ sign, the value in the cell will be visualized as it is typed.
 
 
-Some characters like the percentage sign (%) do not require using quotation marks when including them in a format code. They are listed in Table 2.
+Some characters like the percentage sign (%) do not require quotation marks when you include them in a format code. The following table lists them.
 
-#### Table 2
+**Table 2**
 <table>
 	<tr>
 		<td>$</td>
@@ -93,9 +91,9 @@ Some characters like the percentage sign (%) do not require using quotation mark
 
 ## Decimal Places and Spaces
 
-With the number sign (#) you could display only the significant digits in a number. In order to display non-significant zeros when a number consist of fewer digits than the specified in the format code you could use the numerical character for zero (0).
+With the number sign (#) you can display only the significant digits in a number. To display non-significant zeros when a number consists of fewer digits than specified in the format code, use the numerical character for zero (0).
 
-#### Table 3
+**Table 3**
 <table border=1 frame=void rules=rows>
 	<tr>
 		<th>Number Format Code</th>
@@ -191,7 +189,7 @@ The name of the color must be defined as the first item in a section and enclose
 
 ### Conditions
 
-The number formats could be applied according to conditions. Each condition is enclosed in square brackets and consists of a comparison operator and a value. For example, the following number format will display numbers that are less than or equal to 50 in a red font and numbers that are greater than 50 in a blue font. 
+The number formats can be applied according to conditions. Each condition is enclosed in square brackets and consists of a comparison operator and a value. For example, the following number format displays numbers less than or equal to 50 in a red font and numbers greater than 50 in a blue font.
 
 
 <table>
@@ -200,10 +198,11 @@ The number formats could be applied according to conditions. Each condition is e
 </tr></td>
 </table>
 
-## Currency, percentages, and scientific notation
+## Currency, Percentages, and Scientific Notation
 
-Adding a currency symbol to a number format helps to display numbers as monetary value.
-#### Table 4: Currencies
+Adding a currency symbol to a number format displays numbers as monetary values.
+
+**Table 4: Currencies**
 <table>
 	<tr>
 		<th>Number Format Code</th>
@@ -224,8 +223,9 @@ Adding a currency symbol to a number format helps to display numbers as monetary
 
 > The Currency format is influenced by your OS regional settings. For more information, go to [Localization](#localization).
 
-Adding a percent sign (%) in the number format helps to display numbers as a percentage of 100.
-#### Table 5: Percentage
+Adding a percent sign (%) in the number format displays numbers as a percentage of 100.
+
+**Table 5: Percentage**
 <table>
 	<tr>
 		<th>Number Format Code</th>
@@ -247,8 +247,9 @@ Adding a percent sign (%) in the number format helps to display numbers as a per
 	</tr>
 </table>
 
-Using one of the exponent codes (E–, E+, e–, or e+) in the number format code helps to display numbers in scientific notation. The number after the exponent code (if any) displays the number in scientific notation.
-#### Table 6: Scientific
+Using one of the exponent codes (E–, E+, e–, or e+) in the number format code displays numbers in scientific notation.
+
+**Table 6: Scientific**
 <table>
 	<tr>
 		<th>Number Format Code</th>
@@ -277,8 +278,9 @@ Using one of the exponent codes (E–, E+, e–, or e+) in the number format cod
 
 ## Date and Time Formatting
 
-The format codes about date and time are listed in the following table:
-#### Table 7
+The following table lists the format codes for date and time:
+
+**Table 7**
 <table>
 	<tr>
 		<th>Number Format Code</th>
@@ -386,10 +388,11 @@ The format codes about date and time are listed in the following table:
 
 ## Localization
 
-Your regional settings will influence how your date/time and currency data types appear when you apply formatting options. You can control these settings from Region & language settings (for Windows) or Language & Region (for Mac).
+Your regional settings influence how date/time and currency data types appear when you apply formatting options. You can control these settings from Region & language settings (for Windows) or Language & Region (for Mac).
 
-The regional currency settings determine the position of the currency symbol relative to the number as well as the decimal symbol and the thousands separator. The regional settings also determine the appearance of the date/time data types.
-#### Table 8: Examples
+The regional currency settings determine the position of the currency symbol relative to the number, the decimal symbol, and the thousands separator. The regional settings also determine the appearance of the date/time data types.
+
+**Table 8: Examples**
 <table>
 	<tr>
 		<th>Region</th>

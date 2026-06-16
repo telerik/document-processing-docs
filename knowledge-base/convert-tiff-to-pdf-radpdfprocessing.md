@@ -18,18 +18,18 @@ ticketid: 1651927
 
 ## Description
 
-A common requirement is to generate a PDF document from a multi-page TIFF file. This article demonstrates a sample approach how to achieve it, ensuring the entire TIFF image fits onto the PDF page without any content being cut off.
+This article demonstrates how to generate a PDF document from a multi-page TIFF file. The approach ensures the entire TIFF image fits on the PDF page without any content being cut off.
 
 ## Solution
 
-To prevent TIFF images from being cut off when converted to PDF, consider creating a list of images from the TIFF frames. Then, adjust the PDF page dimensions to fit the image size. Here's a step-by-step guide:
+To prevent TIFF images from being cut off when converted to PDF, create a list of images from the TIFF frames. Then, adjust the PDF page dimensions to fit the image size. The following is a step-by-step guide:
 
-1. Convert the TIFF image to individual JPEG or PNG images. Ensure each image size matches the TIFF frame size to avoid scaling issues.
-2. Create a new `RadFixedDocument`, setting the page size based on the image dimensions.
-3. Use `RadFixedDocumentEditor` to add the images to the document pages, ensuring each image fits the page.
-4. Export the document to PDF format using `PdfFormatProvider`.
+1. Convert the TIFF image to individual JPEG or PNG images. Match each image size to the TIFF frame size to avoid scaling issues.
+2. Create a new `RadFixedDocument` and set the page size based on the image dimensions.
+3. Use `RadFixedDocumentEditor` to add the images to the document pages. Each image must fit the page.
+4. Export the document to PDF format with `PdfFormatProvider`.
 
-Below is a code snippet demonstrating this process:
+The following code snippet demonstrates this process:
 
 ```csharp
 static void Main(string[] args)
@@ -105,12 +105,12 @@ This approach ensures the TIFF images are converted to PDF format without any pa
 
 ## Notes
 
-- The conversion process involves saving each TIFF frame as a separate image (JPEG or PNG) to accurately size the document pages.
-- The `offset` variable adds a margin around the image to ensure it fits comfortably on the page without touching the edges.
+* The conversion process saves each TIFF frame as a separate image (JPEG or PNG) to accurately size the document pages.
+* The `offset` variable adds a margin around the image to keep it from touching the page edges.
 
 ## See Also
 
-- [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
-- [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
-- [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
-- [Converting a PDF Document to a Multipage TIFF Image]({%slug convert-pdf-to-multipage-tiff-radpdfprocessing%})
+* [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
+* [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
+* [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
+* [Converting a PDF Document to a Multipage TIFF Image]({%slug convert-pdf-to-multipage-tiff-radpdfprocessing%})

@@ -17,12 +17,12 @@ ticketid: 1690314
 
 ## Description
 
-When generating PDF files using [RadWordsProcessing]({%slug radwordsprocessing-overview%}) from HTML or DOCX templates, specific content may be **missing** in the output due to the fonts used in the document. This occurs because the .NET Standard version of [RadPdfProcessing]({%slug radpdfprocessing-overview%}) does not have a default mechanism to read fonts. To resolve this issue, the font data must be provided explicitly using the **FixedExtensibilityManager** and a custom implementation of the [FontsProviderBase]({%slug pdfprocessing-implement-fontsprovider%}) class.
+When you generate PDF files with [RadWordsProcessing]({%slug radwordsprocessing-overview%}) from HTML or DOCX templates, specific content may be **missing** in the output due to the fonts used in the document. This occurs because the .NET Standard version of [RadPdfProcessing]({%slug radpdfprocessing-overview%}) does not have a default mechanism to read fonts. To resolve this issue, provide the font data explicitly through the **FixedExtensibilityManager** and a custom implementation of the [FontsProviderBase]({%slug pdfprocessing-implement-fontsprovider%}) class.
 
 This knowledge base article also answers the following questions:
-- Why is some text missing in RadWordsProcessing-generated PDFs?
-- How do I add support for custom fonts in RadPdfProcessing?
-- How can I fix missing content in exported PDF files?
+* Why is some text missing in RadWordsProcessing-generated PDFs?
+* How do I add support for custom fonts in RadPdfProcessing?
+* How do I fix missing content in exported PDF files?
 
 ## Solution
 
@@ -31,7 +31,7 @@ To ensure that custom fonts are correctly embedded in the PDF files:
 1. **Implement a FontsProvider**:
    Create a custom class that inherits from `FontsProviderBase` and override the `GetFontData` method to provide the font data for the required fonts.
 
-   Example implementation:
+   The following example shows the implementation:
    ```csharp
    internal class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
    {
@@ -76,12 +76,12 @@ To ensure that custom fonts are correctly embedded in the PDF files:
    ```
 
 3. **Ensure Font Availability**:
-   Download and include all necessary font files (e.g., `David.ttf`) used in your document. Place them in an accessible location relative to your application.
+   Download and include all necessary font files (for example, `David.ttf`) used in your document. Place them in an accessible location relative to your application.
 
 4. **Rebuild and Run**:
    Integrate the FontsProvider implementation into your application, rebuild, and test the PDF generation process. The previously missing content should now appear in the exported PDF files.
 
 ## See Also
 
-- [Implementing FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
-- [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})
+* [Implementing FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
+* [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})

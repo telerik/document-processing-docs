@@ -9,22 +9,11 @@ tags: radpdfprocessing, pdf, merge, pages, documents, document, processing, fixe
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2021.2.614</td>
-		<td>RadPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-</tbody>
-</table>
+## Environment
+
+| Product Version | Product | Author |
+| --- | --- | --- |
+| 2021.2.614 | RadPdfProcessing | [Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov) |
 
 ## Description
 
@@ -32,9 +21,9 @@ This article describes how to import two PDF documents and merge their first pag
 
 ## Solution
 
-The following example demonstrates how to use the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}) in order to import and merge the first pages of two different documents into a new single page.
+The following example demonstrates how to use the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}) to import and merge the first pages of two different documents into a new single page.
 
-#### __Example__
+**Example 1: Merge the First Pages of Two Documents into a Single Page**
 
 ```csharp
 
@@ -73,4 +62,8 @@ The following example demonstrates how to use the [PdfStreamWriter]({%slug radpd
 	}
 ```
 
-More information you can find in the [PdfPageStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter%}), [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}), and [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}) help articles.
+## See Also
+
+* [PdfPageStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter%})
+* [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%})
+* [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%})

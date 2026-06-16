@@ -10,10 +10,7 @@ position: 2
 
 # Supported Html Elements
 
-
-
-This article lists all HTML elements that are supported by __HtmlFormatProvider__.
-      
+This article lists all HTML elements that `HtmlFormatProvider` supports.
 
 ## 
 <table><thead><tr><th>

@@ -1,6 +1,6 @@
 ---
 title: How to implement FontsProvider
-description: How to implement FontsProvider in .NET Standard due to font limitations in PdfProcessing.
+description: Learn how to implement FontsProvider in .NET Standard to resolve font limitations when exporting PDF documents with RadPdfProcessing.
 type: how-to 
 page_title:  Implement FontsProvider
 slug: pdfprocessing-implement-fontsprovider
@@ -9,25 +9,27 @@ tags: radpdfprocessing, pdf, font, fontsprovider, netstandard, document, process
 res_type: kb
 ---
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
 |2023.3.1106|PdfProcessing|[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)|
 
 ## Description
  
-This article describes how to implement a **FontsProvider** in .NET Standard due to font limitations in [PdfProcessing]({%slug radpdfprocessing-overview%}). 
+This article describes how to implement a `FontsProvider` in .NET Standard due to font limitations in [PdfProcessing]({%slug radpdfprocessing-overview%}). 
 
-[PdfProcessing]({%slug radpdfprocessing-overview%}) needs to have access to the font data so that it can read it and add it to the PDF file. The .NET Standard version of the library does not offer a default mechanism to do that which is why, to allow the library to create and use fonts, an implementation of the **FontsProviderBase** abstract class needs to be provided and set to the **FontsProvider** property of the **FixedExtensibilityManager**.
+[PdfProcessing]({%slug radpdfprocessing-overview%}) must have access to the font data so that it can read it and add it to the PDF file. The .NET Standard version of the library does not offer a default mechanism for this. To allow the library to create and use fonts, provide an implementation of the `FontsProviderBase` abstract class and set it to the `FontsProvider` property of the `FixedExtensibilityManager`.
 
 ## Solution
 
-You must know the fonts the PDF file contains beforehand. Then all fonts must be manually added to the implementation in a similar pattern in order to obtain each font file. Through validation, the corresponding font files are extracted.
+You must know the fonts the PDF file contains beforehand. Then all fonts must be manually added to the implementation in a similar pattern to obtain each font file. Through validation, the corresponding font files are extracted.
 
-In the validation, each font name (FontFamilyName) must be explicitly specified (e.g. "Calibri", "Century Gothic") along with the different font styles (e.g. "Italic", "Bold", "Bold Italic"). Depending on the combination of the font name and font properties a corresponding font file is obtained. The font file names must also be manually specified and known beforehand because each font has a different naming convention which cannot be predicted or automated (e.g. "calibri**z** - gothic**bi**" - both used for the Bold Italic style).
+In the validation, each font name (`FontFamilyName`) must be explicitly specified (for example, "Calibri", "Century Gothic") along with the different font styles (for example, "Italic", "Bold", "Bold Italic"). Depending on the combination of the font name and font properties, the implementation obtains a corresponding font file. The font file names must also be manually specified and known beforehand because each font has a different naming convention that cannot be predicted or automated (for example, "calibri**z** - gothic**bi**" — both used for the Bold Italic style).
 
->important If the **FontsProvider** property is not set, a default font will be used when exporting the document.
+>important If the `FontsProvider` property is not set, a default font is used when exporting the document.
 
-#### **Creating custom implementation by inheriting the FontsProviderBase abstract class**
+### Creating a Custom Implementation by Inheriting the FontsProviderBase Abstract Class
 	
 ```csharp
 	public class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
@@ -110,7 +112,7 @@ In the validation, each font name (FontFamilyName) must be explicitly specified 
 	}
 ```
 
-#### **Set the custom implementation inheriting the FontsProviderBase abstract class**
+### Setting the Custom FontsProvider Implementation
     
 ```csharp
         Telerik.Windows.Documents.Extensibility.FontsProviderBase fontsProvider = new FontsProvider();
@@ -118,7 +120,8 @@ In the validation, each font name (FontFamilyName) must be explicitly specified 
 ```
 
 ## See Also
- * [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})
- * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) 
- * [Inserting Special Symbols in PDF using RadPdfProcessing]({%slug inserting-special-symbols-pdf-radpdfprocessing%})
+
+* [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})
+* [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
+* [Inserting Special Symbols in PDF using RadPdfProcessing]({%slug inserting-special-symbols-pdf-radpdfprocessing%})
 * [How to Prevent Text with Special Characters from Being Cut Off when converting HTML to PDF using RadWordsProcessing]({%slug prevent-text-cut-off-pdf-conversion-radwordsprocessing%})

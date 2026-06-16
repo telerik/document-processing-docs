@@ -10,35 +10,31 @@ position: 20
 
 # Using NumberingFieldsProvider
 
-The __NumberingFieldsProvider__ is used for calculating the layout of the document. This is necessary when updating the fields values. For example to calculate the total number of pages. 
+The `NumberingFieldsProvider` calculates the layout of the document. This is necessary when updating field values, for example, to calculate the total number of pages.
 
-### Requirements
+## Requirements
 
-To use the default implementation of the __NumberingFieldsProvider__ you need to reference the __**Telerik.Documents.Flow.FormatProviders.Pdf**__ package.
+To use the default implementation of the `NumberingFieldsProvider`, reference the `Telerik.Documents.Flow.FormatProviders.Pdf` package.
 
-### Setting the default implementation
+## Setting the Default Implementation
 
-The default provider can be set with the following code:
+Set the default provider with the following code:
 
-#### __Example 1: Register the default NumberingFieldsProvider__
+**Example 1: Register the default NumberingFieldsProvider**
 
 <snippet id='codeblock-bf'/>
 
-### Using the RegisterNumberingStyleConverter
+## Using the RegisterNumberingStyleConverter
 
-This method allows you to use a custom numbering style converter.
+The `RegisterNumberingStyleConverter` method allows you to register a custom numbering style converter.
 
-#### __Example 2: Register custom NumberingStyleConverter__
+**Example 2: Register a custom NumberingStyleConverter**
 
 <snippet id='codeblock-bg'/>
 
-The NumberingStyleConverter must implement the **INumberingStyleConverter** interface which has one method that takes a number and converts it to a string.
+The `NumberingStyleConverter` must implement the `INumberingStyleConverter` interface. This interface has one method that takes a number and converts it to a string.
 
 ## See Also
 
-- [Updating TOC Page Numberings in Word Documents Before Exporting to DOCX Format]({%slug update-toc-radwordsprocessing-before-docx-export%}) 
-
-
-
-
+* [Updating TOC Page Numberings in Word Documents Before Exporting to DOCX Format]({%slug update-toc-radwordsprocessing-before-docx-export%})
 

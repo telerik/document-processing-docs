@@ -1,6 +1,6 @@
 ---
 title: Generate PDF Expense Report
-description: Learn how to generate a pdf expense report with attachments using Telerik Document Processing libraries.
+description: Learn how to generate a PDF expense report with image and PDF attachments using the RadPdfProcessing library from Telerik Document Processing.
 type: how-to
 page_title: How to generate an expense report
 meta_title: How to generate an expense report
@@ -18,7 +18,7 @@ ticketid: 1710179
 
 ## Description
 
-This article shows a sample approach of generating a PDF expense report. The report is purposed to contain receipt images (e.g. gas, toll, meal) or PDF attachments of receipts.
+This article shows how to generate a PDF expense report. The report contains receipt images (for example, gas, toll, meal) or PDF attachments of receipts.
 
 <img style="border: 1px solid gray;" src="images/pdf-expense-report.png" /> 
 
@@ -26,17 +26,17 @@ This article shows a sample approach of generating a PDF expense report. The rep
 
 To achieve this, use [RadPdfProcessing]({%slug radpdfprocessing-overview%}) from the Telerik Document Processing libraries. The library provides functionality for creating PDF documents, inserting images, embedding files, and merging multiple PDF documents.
 
-### Steps to generate the PDF report
+### Steps to Generate the PDF Report
 
 1. Create a new instance of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}).
 2. Add a new [page]({%slug radpdfprocessing-model-radfixedpage%}) to the document.
 3. Use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to draw text, images, and other content onto the page.
-4. Embed images and PDF files as attachments using [EmbeddedFiles.Add()]({%slug radpdfprocessing-embedded-file-streams-overview%}).
-6. Export the constructed document to a PDF file using [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+4. Embed images and PDF files as attachments by using [EmbeddedFiles.Add()]({%slug radpdfprocessing-embedded-file-streams-overview%}).
+5. Export the constructed document to a PDF file by using [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
 ### Code Example
 
-The following code demonstrates creating a PDF report containing embedded images and PDF files:
+The following code demonstrates how to create a PDF report that contains embedded images and PDF files:
 
 ```csharp
 internal class Program
@@ -123,5 +123,5 @@ internal class Program
 
 ## See Also
 
-- [RadPdfProcessing]({%slug radpdfprocessing-overview%})
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})

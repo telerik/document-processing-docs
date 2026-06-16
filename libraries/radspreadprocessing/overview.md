@@ -14,11 +14,11 @@ position: 0
 
 ![SpreadProcessing](images/spread-processing-overview.jpg) 
 
-In this article, we list the library's most popular features. If you want to start using the library right away, see **[Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%})**.
+In this article, we list the library's most popular features. If you want to start using the library right away, see [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%}).
 
 ![Rad Spread Processing Overview 01](images/RadSpreadProcessing_Overview_01.png)
 
->note If you still don't have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
+>note If you still do not have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
 
 ## Key Features
 
@@ -35,11 +35,11 @@ In this article, we list the library's most popular features. If you want to sta
     * Filtering, sorting, freeze panes, hidden rows, and more.
 * GenAI-powered Document Insights
 
-The following table describes the most popular features of the RadSpreadProcessing library.
+The following table describes the most popular features of the `RadSpreadProcessing` library.
 
 | Feature | Description |
 |---------|-------------|
-| [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | API for insertion, positioning and deletion of images in worksheets. As of **Q3 2024** RadSpreadProcessing provides support for SVG FormSource (vector graphics image format). |
+| [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | API for insertion, positioning and deletion of images in worksheets. Starting with Q3 2024, RadSpreadProcessing provides support for SVG FormSource (vector graphics image format). |
 | [**Charts**]({%slug radspreadprocessing-features-charts%}) | Add, remove and manipulate chart objects in your spreadsheet documents. |
 | [**Conditional Formatting**]({%slug radspreadprocessing-features-conditional-formatting%}) |Make it easy to analyze data, find critical issues, patterns and trends by representing the data inside in a user-friendly manner. |
 | [**Hyperlinks**]({%slug radspreadprocessing-features-hyperlink%}) | The API enables you to add, remove, edit and search for hyperlinks in the worksheets of the document. |
@@ -61,7 +61,7 @@ The following table describes the most popular features of the RadSpreadProcessi
 | [**Hidden rows and columns**]({%slug radspreadprocessing-working-with-rows-and-columns-hiding%}) | The API of the workbook model allows you to set the hidden state of each row or column. |
 | [**Merge and unmerge cells**]({%slug radspreadprocessing-features-merge-unmerge-cells%}) | You have the ability to merge two or more adjacent cells into a single cell that spans over multiple rows and columns. |
 | **[Auto fill]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}) and [Series]({%slug radspreadprocessing-features-fill-data-automatically-series%})** | Fill cells automatically with data following a specific pattern. |
-| [**Page Setup**]({%slug radspreadprocessing-features-worksheetpagesetup%}) | Set and get header and footer settings and apply various page setup options like paper size, orientation, automatic scaling, margins, breaks, etc. Apply print settings. |
+| [**Page Setup**]({%slug radspreadprocessing-features-worksheetpagesetup%}) | Set and get header and footer settings and apply various page setup options like paper size, orientation, automatic scaling, margins, breaks, and print settings. |
 | [**History**]({%slug radspreadprocessing-features-history%}) | The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. Each worksheet has its own history stack. |
 | [**Comments**]({%slug radspreadprocessing-features-comments%}) | You can leave comments and replies on cells, which allows for easier team communication. |
 | [**Notes**]({%slug radspreadprocessing-features-notes%}) | Note important information in your worksheet.|

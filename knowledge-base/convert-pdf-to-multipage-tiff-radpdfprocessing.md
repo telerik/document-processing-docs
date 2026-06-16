@@ -17,7 +17,7 @@ ticketid: 1660512
 
 ## Description
 
-When working with PDF documents, a common task might be to convert the PDF pages into multipage TIFF images. This scenario arises due to the need for image-based representations of document pages, often for archival or compatibility reasons with certain systems that prefer image formats. Converting a PDF document to a multipage TIFF file can be challenging, as this functionality is not directly supported by many graphic applications, including Adobe. This KB article demonstrates how to convert PDF documents to multipage TIFF images using RadPdfProcessing.
+You may need to convert PDF pages into multipage TIFF images for archival purposes or for compatibility with systems that require image formats. Many graphic applications do not directly support this conversion. This article demonstrates how to convert PDF documents to multipage TIFF images with `RadPdfProcessing`.
 
 ![Convert PDF to Multipage TIFF](images/pdf-to-multiple-page-tiff.gif)  
 
@@ -26,13 +26,13 @@ When working with PDF documents, a common task might be to convert the PDF pages
 To convert a PDF document to a multipage TIFF image, follow the steps below:
 
 1. Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the PDF document.
-2. Iterate through all the pages ([RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})) of the imported [RadFixedDocument](%slug radpdfprocessing-model-radfixeddocument%).
+2. Iterate through all the pages ([RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})) of the imported [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}).
 3. For each page, create a thumbnail image.
-4. Render each thumbnail image onto a `RenderTargetBitmap`.
-5. Add each rendered bitmap as a frame to a [TiffBitmapEncoder](https://learn.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.tiffbitmapencoder?view=windowsdesktop-8.0).
+4. Render each thumbnail image to a `RenderTargetBitmap`.
+5. Add each rendered bitmap as a frame to a [TiffBitmapEncoder](https://learn.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.tiffbitmapencoder).
 6. Save the encoded TIFF image to a file.
 
-Here is the code snippet demonstrating this process:
+The following code snippet demonstrates this process:
 
 ```csharp
 [STAThread]
@@ -79,15 +79,15 @@ private static void Main(string[] args)
 
 ## Notes
 
-- Ensure you have added references to the necessary Telerik Document Processing and WPF libraries in your project.
-- Adjust the `inputFilePath` variable to point to your PDF document.
-- The generated TIFF file will be saved with the name "Exported.tiff" in the project's directory. You can modify the `exportedFileName` variable to change the output file's name and location.
+* Add references to the required Telerik Document Processing and WPF libraries in your project.
+* Adjust the `inputFilePath` variable to point to your PDF document.
+* The generated TIFF file is saved with the name "Exported.tiff" in the project directory. Change the `exportedFileName` variable to modify the output file name and location.
 
 ## See Also
 
-- [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
-- [Export RadFixedPage to TIFF Image]({%slug export-radfixedpage-to-image%})
-- [TiffBitmapEncoder Class Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.tiffbitmapencoder)
-- [Using SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
-- [Converting Multi-page TIFF Images to PDF]({%slug convert-tiff-to-pdf-radpdfprocessing%})
-- [Converting PDF to TIFF with RadPdfProcessing in .NET Standard]({%slug convert-pdf-to-tiff-radpdfprocessing-net-core%})
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [Export RadFixedPage to TIFF Image]({%slug export-radfixedpage-to-image%})
+* [TiffBitmapEncoder Class Documentation](https://learn.microsoft.com/en-us/dotnet/api/system.windows.media.imaging.tiffbitmapencoder)
+* [Using SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
+* [Converting Multi-page TIFF Images to PDF]({%slug convert-tiff-to-pdf-radpdfprocessing%})
+* [Converting PDF to TIFF with RadPdfProcessing in .NET Standard]({%slug convert-pdf-to-tiff-radpdfprocessing-net-core%})

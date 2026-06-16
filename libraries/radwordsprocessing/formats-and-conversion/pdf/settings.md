@@ -10,32 +10,31 @@ position: 3
 
 # Settings
 
-__PdfFormatProvider__ allows to export of __RadFlowDocument__ to PDF. Using the provider’s ExportSettings property you can control how exactly the result file should be exported.
-      
+`PdfFormatProvider` allows you to export a `RadFlowDocument` to PDF. The provider's `ExportSettings` property controls the export output.
+
 ## Export Settings
 
-The __PdfExportSettings__ class derives from the __Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.PdfExportSettings__ class related to the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library. Thus, the export allows you to control the  image quality, encryption, compliance level and other PDF format related properties. More information on the settings are available in the [export settings article for RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
+The `PdfExportSettings` class derives from the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export.PdfExportSettings` class related to the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library. The export allows you to control the image quality, encryption, compliance level, and other PDF-related properties. For more information, refer to the [export settings article for RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
 
-__Example 1__ demonstrates how to export a __RadFlowDocument__ instance to PDF and specify that it needs to be PDF/A compliant.
+**Example 1** demonstrates how to export a `RadFlowDocument` instance to PDF and specify that it must be PDF/A compliant.
 
->tip In order to specify export settings to the PdfFormatProvider you need to add both the Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export and Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export namespaces. In __Example 1__ the *Fixed* alias corresponds to the *Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export* namespace.
+>tip To specify export settings to the `PdfFormatProvider`, you need to add both the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export` and `Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export` namespaces. In **Example 1** the *Fixed* alias corresponds to the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export` namespace.
 
-#### __Example 1: Export PDF/A compliant document__
+**Example 1: Export PDF/A Compliant Document**
 
 <snippet id='codeblock-ce'/>
 
->PDF/A standard requires documents to contain all fonts used in them within the document. RadPdfProcessing does not support embedding of the standard 14 fonts used in PDF documents that are listed [here]({%slug radpdfprocessing-concepts-fonts%}), so using them will prevent the document from complying with the standard.
+>The PDF/A standard requires documents to contain all fonts used in them within the document. RadPdfProcessing does not support embedding of the standard 14 fonts used in PDF documents listed [here]({%slug radpdfprocessing-concepts-fonts%}). Using these fonts prevents the document from complying with the standard.
 
 ## Extensibility Manager
 
-The __ExtensibilityManager__ property of the PdfExportSettings class allows to easily extend the currently supported functionality of the RadFlowDocument export to PDF. 
+The `ExtensibilityManager` property of the `PdfExportSettings` class allows you to extend the currently supported functionality of the `RadFlowDocument` export to PDF.
 
-ExtensibilityManager provides an option to control how lists with different __NumberingStyle__ options are exported to PDF. This can be achieved by registering custom implementation of the __INumberingStyleConverter__ interface for some concrete __NumberingStyle__ enumeration value. 
+`ExtensibilityManager` provides an option to control how lists with different `NumberingStyle` options are exported to PDF. You can achieve this by registering a custom implementation of the `INumberingStyleConverter` interface for a concrete `NumberingStyle` enumeration value.
 
-__Example 2__ shows how to register a custom *ChineseCountingConverter* class instance that converts a number with NumberingStyle.ChineseCounting.
+**Example 2** shows how to register a custom `ChineseCountingConverter` class instance that converts a number with `NumberingStyle.ChineseCounting`.
 
-
-#### __Example 2: Register numbering style converter__
+**Example 2: Register Numbering Style Converter**
 
 <snippet id='codeblock-cf'/>
 
@@ -43,6 +42,3 @@ __Example 2__ shows how to register a custom *ChineseCountingConverter* class in
 
 * [PdfProcessing Export Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})
 * [PdfProcessing PDF/A Compliancy]({%slug radpdfprocessing-concepts-comply-with-pdfa-standard%})
-
-
-

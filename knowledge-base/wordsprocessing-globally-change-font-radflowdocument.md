@@ -16,22 +16,23 @@ res_type: kb
 
 ## Description
 
-When working with documents in various Word formats, you might need to ensure consistent font usage across the entire document before exporting it. This is particularly useful when:
+When working with documents in various Word formats, you may need to ensure consistent font usage across the entire document before exporting it. This is particularly useful when:
 
-- You need to ensure proper font display in the exported document
-- You want to maintain consistent styling across different sections
-- You need to replace fonts that might not be available in the target environment or format
-This article demonstrates how to recursively iterate through all text runs in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and apply a global font change before export. The solution supports various document formats that can be imported as a **RadFlowDocument**, including DOCX, DOC, RTF, HTML, and plain text.
+* You need to ensure proper font display in the exported document
+* You want to maintain consistent styling across different sections
+* You need to replace fonts that may not be available in the target environment or format
+
+This article demonstrates how to recursively iterate through all text runs in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and apply a global font change before export. The solution supports various document formats that can be imported as a `RadFlowDocument`, including DOCX, DOC, RTF, HTML, and plain text.
 
 ## Solution
 
 The solution involves three key steps:
 
 1. Import the document from your source format
-2. Recursively iterate through all [Run]({%slug radwordsprocessing-model-run%}) elements in the document and change their font
+2. Recursively iterate through all [`Run`]({%slug radwordsprocessing-model-run%}) elements in the document and change their font
 3. Export the document to your desired format
 
-Here's a complete code example that demonstrates how to change all fonts in a **RadFlowDocument** to _Arial_ before exporting to PDF:
+Here is a complete code example that demonstrates how to change all fonts in a `RadFlowDocument` to _Arial_ before exporting to PDF:
 
 ```csharp
 using System;
@@ -138,7 +139,7 @@ foreach (Run run in radFlowDocument.EnumerateChildrenOfType<Run>())
 }
 ```
 
->note In **.NET Standard**, font handling for PDF export differs from other frameworks. System fonts may not be properly embedded or may use fallback fonts which can affect text appearance and layout in documents exported to PDF. For more details on how to resolve this, see the [Export section of the Flow PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}#export).
+>note In **.NET Standard**, font handling for PDF export differs from other frameworks. System fonts may not be properly embedded or may use fallback fonts. This can affect text appearance and layout in documents exported to PDF. For more details on how to resolve this, see the [Export section of the Flow PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}#export).
 
 ## See Also
 

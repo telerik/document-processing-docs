@@ -18,34 +18,34 @@ ticketid: 1707296
 
 ## Description
 
-When using the [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})'s `Import` method to import data from a `DataTable` to an Excel worksheet, numeric fields may appear as text in Excel. This occurs because the `DataTableFormatProvider` converts data into cells where numeric values are often treated as text, depending on their storage format.
+When you use the [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%}) `Import` method to import data from a `DataTable` to an Excel worksheet, numeric fields may appear as text in Excel. This occurs because the `DataTableFormatProvider` converts data into cells where numeric values are often treated as text, depending on their storage format.
 
 This knowledge base article also answers the following questions:
-- How to ensure numeric fields are retained as numbers in Excel using DataTableFormatProvider?
-- What settings are available to control numeric data import in Telerik SpreadProcessing?
-- How to configure DataTableFormatProvider to handle numeric values properly?
+* How to ensure numeric fields are retained as numbers in Excel using DataTableFormatProvider?
+* What settings are available to control numeric data import in Telerik SpreadProcessing?
+* How to configure DataTableFormatProvider to handle numeric values properly?
 
 ## Solution
 
-The DataTableFormatProvider converts your DataTable into a worksheet. Each cell in RadSpreadProcessing exposes an [ICellValue]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) whose ValueType can be Empty, Boolean, Number, Text, or Formula. ICellValue has ValueType (what the cell contains) and ResultValueType (what the cell evaluates to, e.g., a formula’s result). If the importer writes strings for the cells, you’ll get ValueType = Text. Even if the text looks numeric (“1299.99”), it is still Text unless the cell’s value is actually stored as a number.
+The `DataTableFormatProvider` converts your `DataTable` into a worksheet. Each cell in RadSpreadProcessing exposes an [ICellValue]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) whose `ValueType` can be Empty, Boolean, Number, Text, or Formula. `ICellValue` has `ValueType` (what the cell contains) and `ResultValueType` (what the cell evaluates to, for example, a formula result). If the importer writes strings for the cells, you get `ValueType` = Text. Even if the text looks numeric ("1299.99"), it is still Text unless the cell value is stored as a number.
 
-The DataTableFormatProvider  offers [ImportSettings]({%slug radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings%}). The ImportSettings.**ShouldImportColumnHeaders** property controls whether the DataTable’s column names are written as a header row into the worksheet when you import with DataTableFormatProvider.
+The `DataTableFormatProvider` offers [ImportSettings]({%slug radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings%}). The `ImportSettings`.**ShouldImportColumnHeaders** property controls whether the `DataTable` column names are written as a header row into the worksheet when you import with `DataTableFormatProvider`.
 
-`true` - the first worksheet row contains the column names; your data starts from the next row.
-`false` - no header row is created; your data starts from the first row at the import start position.
+* `true`—the first worksheet row contains the column names. Your data starts from the next row.
+* `false`—no header row is created. Your data starts from the first row at the import start position.
 
-This setting affects where your data lands, how you index rows after import, and what the CellImported event reports for the worksheet row indices. By default, the headers are imported. They are represented as TextCellValue since they store the column name.
+This setting affects where your data lands, how you index rows after import, and what the `CellImported` event reports for the worksheet row indices. By default, the headers are imported. They are represented as `TextCellValue` because they store the column name.
 
-When you access your cell values, it is necessary to adjust the starting row index accordingly for the data rows. Hence, if you skip importing the headers by setting the **ShouldImportColumnHeaders** property to false, you can start from row index 0. Otherwise, start from index 1.
+When you access your cell values, adjust the starting row index for the data rows. If you skip importing the headers by setting the **ShouldImportColumnHeaders** property to `false`, start from row index 0. Otherwise, start from index 1.
 
-To retain numeric values as numbers in Excel, follow these steps:
+To keep numeric values as numbers in Excel, follow these steps:
 
 1. Define the `DataTable` columns with explicit data types such as `int`, `double`, or `decimal` for numeric fields.
 2. Use the `DataTableFormatProvider` to import the table into a workbook.
-3. Identify the `ICellValue` of each cell after import, and confirm its `ValueType` is `Number` for numeric fields.
+3. Confirm the `ICellValue` of each cell after import and verify that its `ValueType` is `Number` for numeric fields.
 4. If necessary, adjust the `ImportSettings.ShouldImportColumnHeaders` property to control whether column headers are included as text rows.
 
-Here is an example implementation:
+The following example shows the implementation:
 
 ```csharp
 // Define the DataTable with explicit types for numeric fields
@@ -85,10 +85,10 @@ Debug.WriteLine("Price ValueType: " + cellValue.ValueType); // Expected: Number
 
 ### Additional Notes
 
-- Ensure columns in the `DataTable` are defined with appropriate types to avoid unintended type conversions.
-- Headers are imported as text by default. Set `ShouldImportColumnHeaders` to `false` if you want to exclude them.
+* Ensure columns in the `DataTable` are defined with appropriate types to avoid unintended type conversions.
+* Headers are imported as text by default. Set `ShouldImportColumnHeaders` to `false` if you want to exclude them.
 
 ## See Also
 
-- [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
-- [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
+* [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
+* [DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})

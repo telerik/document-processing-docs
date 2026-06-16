@@ -3,7 +3,7 @@ title: Implementing SUMPRODUCT Function in SpreadProcessing
 description: Explains how to implement a custom SUMPRODUCT function in Telerik SpreadProcessing for results similar to Excel.
 type: how-to
 page_title: SUMPRODUCT Function Implementation in Telerik SpreadProcessing
-meta_title: SUMPRODUCT Function Implementation  in Telerik SpreadProcessing
+meta_title: SUMPRODUCT Function Implementation in Telerik SpreadProcessing
 slug: sumproduct-function-nested-array-formulas-telerik-spreadprocessing
 tags: radspreadprocessing, excel, formula, sumproduct, array, document, processing, function
 res_type: kb
@@ -128,5 +128,5 @@ Follow the steps:
 
 ## See Also
 
-- [Functions]({%slug radspreadprocessing-features-formulas-functions%})
-- [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%})
+* [Functions]({%slug radspreadprocessing-features-formulas-functions%})
+* [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%})

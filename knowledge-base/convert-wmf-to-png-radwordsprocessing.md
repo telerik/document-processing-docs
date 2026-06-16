@@ -17,21 +17,21 @@ ticketid: 1662500
 
 ## Description
 
-This article demonstrates a sample approach how to convert the images in WMF format to PNG within an [RTF]({%slug radwordsprocessing-formats-and-conversion-rtf%}) document.
+This article demonstrates how to convert images in WMF format to PNG within an [RTF]({%slug radwordsprocessing-formats-and-conversion-rtf%}) document.
 
 ## Solution
 
 To convert WMF images to PNG format within an RTF document using RadWordsProcessing, follow these steps:
 
-1. [Import the RTF file](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/rtf/rtfformatprovider#import) as a `RadFlowDocument`.
+1. [Import the RTF file]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%}) as a `RadFlowDocument`.
 
 2. Iterate through the [floating images]({%slug radwordsprocessing-model-floatingimage%}) in the document.
 
 3. Convert each WMF image to PNG format.
 
-4. [Export the modified document](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/rtf/rtfformatprovider#export).
+4. [Export the modified document]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%}).
 
-Here is a sample code snippet demonstrating this process:
+The following code snippet demonstrates this process:
 
 ```csharp
 using System.Diagnostics;
@@ -84,14 +84,14 @@ private static void ConvertInlineWmfImagesToPng(RadFlowDocument document)
 }
 ```
 
-### Notes
+## Notes
 
-- Ensure you have referenced all necessary assemblies and namespaces, particularly those related to Telerik Document Processing and System.Drawing for image conversion.
-- The code snippet assumes the presence of a WMF image in the document. If your document contains images in formats other than WMF, they won't be affected.
-- This solution applies to floating images. For inline images, a similar approach can be taken with slight adjustments to target [InlineImage]({%slug radwordsprocessing-model-imageinline%}) instances if necessary.
+* Add references to all required assemblies and namespaces, particularly those related to Telerik Document Processing and `System.Drawing` for image conversion.
+* The code snippet assumes the document contains a WMF image. Images in formats other than WMF are not affected.
+* This solution applies to floating images. For inline images, take a similar approach with slight adjustments to target [ImageInline]({%slug radwordsprocessing-model-imageinline%}) instances.
 
 ## See Also
 
-- [RadWordsProcessing Documentation]({%slug radwordsprocessing-overview%})
-- [RadFlowDocument Overview]({%slug radwordsprocessing-model-radflowdocument%})
-- [RtfFormatProvider Documentation]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})
+* [RadWordsProcessing Documentation]({%slug radwordsprocessing-overview%})
+* [RadFlowDocument Overview]({%slug radwordsprocessing-model-radflowdocument%})
+* [RtfFormatProvider Documentation]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})

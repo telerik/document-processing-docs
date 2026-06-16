@@ -18,7 +18,7 @@ ticketid: 1700632
 
 ## Description
 
-This knowledge base article shows how to resolve font differences between server-side and client-side PDF generation.
+This article shows how to resolve font differences between server-side and client-side PDF generation.
 
 ## Solution
 
@@ -49,7 +49,7 @@ block1.InsertText(reportItem.JobNumber ?? string.Empty);
 ```
 
 ### Option 2: Use FontFamily for Text Insertion
-Alternatively, utilize the `FontFamily` directly during text insertion:
+Alternatively, use the `FontFamily` directly during text insertion:
 
 ```csharp
 byte[] fontData = File.ReadAllBytes(@"C:\Windows\Fonts\calibri.ttf");
@@ -61,10 +61,10 @@ c10.PreferredWidth = preferredWidths[10];
 c10.Blocks.AddBlock().InsertText(fontFamily, reportItem.StatusDate?.ToString("dd/MM/yyyy") ?? string.Empty);
 ```
 
-Ensure consistent usage of fonts between client-side and server-side export processes. Use the same font family and size as implemented in the client-side export.
+Use consistent fonts between client-side and server-side export processes. Apply the same font family and size as implemented in the client-side export.
 
 ## See Also
 
-- [Cross-Platform Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
-- [Registering a Font]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font)
+* [Cross-Platform Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
+* [Registering a Font]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font)
 

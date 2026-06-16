@@ -1,6 +1,7 @@
 ---
 title: Update ZipArchive
 page_title: Update ZipArchive
+description: Learn how to update existing ZIP archives with RadZipLibrary by adding, deleting, updating, and copying entries programmatically.
 slug: radziplibrary-update-ziparchive
 tags: ziparchive, update, radziplibrary, zip, entries, add, delete, archive
 published: True
@@ -9,85 +10,72 @@ position: 0
 
 # Update ZipArchive
 
-With __RadZipLibrary__ you can update existing ZIP archive in order to add new entries to it, delete or update existing ones.
-      
-The __ZipArchive__ class provides three modes: *Read*, *Create* and *Update*. More information on creating and reading an archive is available [here]({%slug radziplibrary-gettingstarted%}).     
+With **RadZipLibrary** you can update an existing ZIP archive to add new entries to it, delete entries, or update existing ones.
 
-The code snippet from __Example 1__ opens a ZIP archive in update mode using __ZipArchive__ class.    
+The `ZipArchive` class provides three modes: `Read`, `Create`, and `Update`. More information on creating and reading an archive is available in the [Getting Started]({%slug radziplibrary-gettingstarted%}) article.
 
-#### __Example 1: Open for update__
+The code snippet from **Example 1** opens a ZIP archive in update mode using the `ZipArchive` class.
+
+**Example 1: Open for update**
 
 <snippet id='codeblock-dsp'/>
 
 ## Add Entry
 
-In order to add a new entry into the ZIP archive, you should perform the following steps:
-        
-1. Use __CreateEntry()__ method of the __ZipArchive__ object to create a new entry.
-            
+To add a new entry into the ZIP archive, perform the following steps:
 
-1. Open the entry to obtain a stream for writing.
-            
+1. Use the `CreateEntry()` method of the `ZipArchive` object to create a new entry.
+
+1. Open the entry to get a stream for writing.
 
 1. Write the necessary information into the entry.
-            
 
-1. Dispose entry when all necessary information is written. In the *Update* mode this step is optional. You can omit it if you are going to add/delete/update other entries in the archive.
+1. Dispose the entry when all necessary information is written. In the `Update` mode this step is optional. You can omit it if you need to add, delete, or update other entries in the archive.
 
->note More information about ZipArchiveEntry you can find in [ZipArchiveEntry]({%slug radziplibrary-ziparchive-entry%}) help article. 
-            
+>note More information about `ZipArchiveEntry` is available in the [ZipArchiveEntry]({%slug radziplibrary-ziparchive-entry%}) help article.
 
-#### __Example 2: Add entry__
+**Example 2: Add entry**
 
 <snippet id='codeblock-dsq'/>
 
 ## Delete Entry
 
-The __ZipArchive__ class provides a __GetEntry()__ method, which allows you access to a particular entry in the archive.
-        
+The `ZipArchive` class provides a `GetEntry()` method, which allows you access to a particular entry in the archive.
 
-__Example 3__ shows how you could obtain an entry and delete it from the ZIP archive using the __Delete()__ method.
-        
+**Example 3** shows how to get an entry and delete it from the ZIP archive using the `Delete()` method.
 
-#### __Example 3: Delete entry__
+**Example 3: Delete entry**
 
 <snippet id='codeblock-dsr'/>
 
 ## Update Entry
 
-In order to update an existing entry in the ZIP archive, you should perform the following steps:
-        
+To update an existing entry in the ZIP archive, perform the following steps:
 
-1. Use __GetEntry()__ method of the __ZipArchive__ object to obtain existing entry.
-            
+1. Use the `GetEntry()` method of the `ZipArchive` object to get an existing entry.
 
-1. Open entry to get a stream for reading/writing.
-            
+1. Open the entry to get a stream for reading and writing.
 
-1. Read/Write the necessary information from/to the entry.
-            
+1. Read or write the necessary information from or to the entry.
 
-1. Dispose entry when all necessary information is written. In the __Update__ mode this step is optional. You can omit it if you are going to add/delete/update other entries in the archive.
-            
+1. Dispose the entry when all necessary information is written. In the `Update` mode this step is optional. You can omit it if you need to add, delete, or update other entries in the archive.
 
-#### __Example 4: Update entry__
-	
+**Example 4: Update entry**
+
 <snippet id='codeblock-dss'/>
 
 ## Copy Entry
 
-Starting with the **Q2 2025** release, the __RadZipLibrary__ introduces a new extension method `CopyTo` for the `Stream` class. This method allows you to copy data from one stream to another with an optional timeout parameter, providing more control over long-running operations. This is particularly useful when working with large files in ZIP archives.
+Starting with the **Q2 2025** release, **RadZipLibrary** introduces a new extension method `CopyTo` for the `Stream` class. Use this method to copy data from one stream to another with an optional timeout parameter for more control over long-running operations. This is particularly useful when you work with large files in ZIP archives.
 
-The following example demonstrates how to use the `CopyTo` method to copy the contents of a large file from a ZIP archive to a memory stream with a specified timeout.
+The following example shows how to use the `CopyTo` method to copy the contents of a large file from a ZIP archive to a memory stream with a specified timeout.
 
-#### __Example 5: Copy entry with timeout__
+**Example 5: Copy entry with timeout**
 
 <snippet id='libraries-zip-features-update-ziparchive-copy-entry'/>
 
-This method ensures that the operation will not hang indefinitely, making it a valuable addition for scenarios involving large files or limited resources.
-
-
+This method ensures that the operation does not hang indefinitely. It is useful for scenarios that involve large files or limited resources.
 
 ## See Also
 
- * [Getting Started]({%slug radziplibrary-gettingstarted%})
+* [Getting Started]({%slug radziplibrary-gettingstarted%})

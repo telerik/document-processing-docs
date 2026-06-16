@@ -1,7 +1,7 @@
 ---
 title: Page Field
 page_title: Page Field
-description: Page field is a Field element that represents the page number.
+description: Learn how to use the Page field element in RadWordsProcessing to insert the current page number in flow documents.
 slug: radwordsprocessing-concepts-page-field
 tags: page, word, flow, docx, field, document, pagenumber, model, numbering, display
 published: True
@@ -10,44 +10,42 @@ position: 0
 
 # Page Field
 
-Inserts the current page number. 
+The Page field inserts the current page number.
 
->In order to update the field within the TOC field you need to set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
+> To update the field within the TOC field, set the [FlowExtensibilityManager.NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}).
 
 ## Field Syntax
 
-This is how the syntax of a Page field looks like:
+The following table shows the syntax of a Page field:
 
-| Syntax   |
-| :---     	 |
-| { **PAGE** [\\*_Format Switch_] } |    
-
+| Syntax |
+| :--- |
+| { **PAGE** [\\*_Format Switch_] } |
 
 ## Switches
 
-Switches are a way for the code fragment to specify formatting for the result of the field. More information is available in the [Syntax and Switches](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#syntax-and-switches) section of the _Fields_ article.
+Switches allow the code fragment to specify formatting for the result of the field. More information is available in the [Syntax and Switches](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#syntax-and-switches) section of the *Fields* article.
 
 The possible switches for a Page field are:
 
 | Switch                 | Description                                                   |
 | :---                   | :---                                                          |
-| \\* Format Switch | Optional switch that specifies the format |
+| \\* Format Switch | Optional switch that specifies the format. |
 
 ## Inserting
 
-Inserting this field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
+You can insert this field through the `InsertField()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method accepts code as the first argument and result as the second argument.
 
-__Example 1__ demonstrates how you can insert a date field.
-        
+**Example 1** demonstrates how to insert a Page field.
 
-#### __Example 1: Insert page field__
+**Example 1: Insert a Page field**
 
 <snippet id='codeblock-bi'/>
 
+After updating the field, the result is "Page 3 of 6" (see [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
 
-After updating the field the result would be "Page 3 of 6" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
-
-## See Also 
+## See Also
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
 * [Assigning Character Style to Fields in RadWordsProcessing]({%slug assigning-character-style-to-fields%})
+

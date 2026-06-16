@@ -10,48 +10,48 @@ position: 2
 
 # FormFieldCollection
 
-This class holds a collection of [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instances, assigned to the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) of the document. The collection exposes useful [properties](#properties) and [methods](#methods) allowing you to access, add or remove the form fields in a document.
+The `FormFieldCollection` class holds a collection of [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instances, assigned to the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) of the document. The collection exposes useful [properties](#properties) and [methods](#methods) that allow you to access, add, or remove the form fields in a document.
 
 ## Properties
 
-The FormFieldCollection class exposes an **indexer** and a **Count** property allowing you to respectively get a [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instance by its name or get the number of all form fields in the document. 
+The `FormFieldCollection` class exposes an indexer and a `Count` property. Use the indexer to get a [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instance by its name, or use `Count` to get the number of all form fields in the document.
 
 ## Methods
 
-There are methods allowing you to easily construct a form field and add it to the collection. Any of those methods accepts a string parameter representing the **unique name** of the form field. The generated field is then returned from the method so you can customize it if needed. Here is a list of all the methods:
+The following methods allow you to construct a form field and add it to the collection. Each method accepts a string parameter representing the unique name of the form field. The generated field is returned from the method so you can customize it.
 
-* **AddPushButton()**: Creates a [PushButton]({%slug radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield%}) field and adds it to the collection. The created field is returned as a result from the method.
+* `AddPushButton()`: Creates a [PushButton]({%slug radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield%}) field and adds it to the collection. Returns the created field.
 
-* **AddCheckBox()**: Creates a [CheckBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-checkboxfield%}) field and adds it to the collection. The created field is returned as a result from the method.
+* `AddCheckBox()`: Creates a [CheckBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-checkboxfield%}) field and adds it to the collection. Returns the created field.
 
-* **AddRadioButton()**: Creates a [RadioButton]({%slug radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield%}) field and adds it to the collection. The created field is returned as a result from the method.
+* `AddRadioButton()`: Creates a [RadioButton]({%slug radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield%}) field and adds it to the collection. Returns the created field.
 
-* **AddCombTextBox()**: Creates a [CombTextBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield%}) field and adds it to the collection. The created field is returned as a result from the method.
+* `AddCombTextBox()`: Creates a [CombTextBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield%}) field and adds it to the collection. Returns the created field.
 
-* **AddTextBox()**: Creates a [TextBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) field and adds it to the collection. The created field is returned as a result from the method.
+* `AddTextBox()`: Creates a [TextBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) field and adds it to the collection. Returns the created field.
 
-* **AddComboBox()**: Creates a [ComboBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-comboboxfield%}) field and adds it to the collection. The created field is returned as a result from the method.
+* `AddComboBox()`: Creates a [ComboBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-comboboxfield%}) field and adds it to the collection. Returns the created field.
 
-* **AddListBox()**: Creates a [ListBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-listboxfield%}) field and adds it to the collection. The created field is returned as a result from the method.
+* `AddListBox()`: Creates a [ListBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-listboxfield%}) field and adds it to the collection. Returns the created field.
 
-* **AddSignature()**: Creates a [Signature]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) field and adds it to the collection. The created field is returned as a result from the method.
+* `AddSignature()`: Creates a [Signature]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) field and adds it to the collection. Returns the created field.
 
+**Example 1** shows how to use the previous methods to generate a form field and add it to the collection.
 
-**Example 1** shows how you can use the listed above methods to generate a form field and add it to the collection. 
+**Example 1: Create a Form Field**
 
-#### **Example 1: Creating a form field**
 <snippet id='pdf-form-field-creation'/>
 
+You can also use the following methods to modify the collection of form fields in the document [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}):
 
-You can also use several more methods of the class to modify the collection of form fields in the document's [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}).
+* `Add()`: Accepts a parameter of type [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) and inserts it to the collection.
 
-* **Add()**: Accepts parameter of type [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) and inserts it to the collection.
+* `Remove()`: Accepts a parameter of type [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) and removes it from the collection.
 
-* **Remove()**: Accepts parameter of type [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) and removes it from the collection.
+* `Contains()`: Accepts a string representing the form field name. Returns `true` when a field with such a name is present in the collection, otherwise `false`.
 
-* **Contains()**: Accepts a string representing the form field name. Returns *true* when a field with such a name is present in the collection, otherwise *false*.
- 
-#### **Example 2: Using the methods of FormFieldCollection**
+**Example 2: Use the Methods of FormFieldCollection**
+
 <snippet id='pdf-form-field-collection-methods'/>
 
 ## See Also

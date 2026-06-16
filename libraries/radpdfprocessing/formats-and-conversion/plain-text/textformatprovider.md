@@ -10,34 +10,28 @@ position: 1
 
 # Using TextFormatProvider
 
+`TextFormatProvider` exports a `RadFixedDocument` to plain text format while preserving the document structure.
 
-__TextFormatProvider__ makes it easy to export __RadFixedDocument__ to plain text format, preserving the document structure.
-
-All you have to do in order to use __TextFormatProvider__ is add references to the packages listed below:
-      
+To use `TextFormatProvider`, add references to the following packages:
 
 * Telerik.Windows.Documents.Core
 * Telerik.Windows.Documents.Fixed
 
-
 ## Export
 
-In order to export a document to plain text, you need to use the __Export()__ method of __TextFormatProvider__.
-        
+To export a document to plain text, use the `Export()` method of `TextFormatProvider`.
 
-__Example 1__ shows how to use __TextFormatProvider__ to export __RadFixedDocument__ to a string.
-        
+**Example 1** shows how to use `TextFormatProvider` to export a `RadFixedDocument` to a string.
 
-#### __Example 1: Export RadFixedDocument to string__
+#### **Example 1: Export RadFixedDocument to string**
 
 <snippet id='pdf-export-to-text'/>
 
-
 ## See Also
 
-* [Plain text]({%slug radpdfprocessing-formats-and-conversion-plain-text-text%})
+* [Plain Text Format Overview]({%slug radpdfprocessing-formats-and-conversion-plain-text-text%})
 * [TextFormatProvider Settings]({%slug radpdfprocessing-formats-and-conversion-plain-text-settings%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Extracting Text from PDF Documents]({%slug extract-text-from-pdf%})
-* [Summarizing the Text Content of PDF Documents using Text Analytics with Azure AI services]({%slug summarize-pdf-content%})
+* [Summarizing PDF Text Content with Azure AI Text Analytics]({%slug summarize-pdf-content%})
 * [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})

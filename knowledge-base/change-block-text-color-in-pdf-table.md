@@ -17,16 +17,16 @@ ticketid: 1674934
 
 ## Description
 
-When working with PDF documents using [RadPdfProcessing]({%slug radpdfprocessing-overview%}), you may need to change the foreground color of the text inside a table to differentiate between various pieces of information, such as an account number and its value. This knowledge base article also answers the following questions:
-- How to change the text color within a PDF table using RadPdfProcessing?
-- How to differentiate text elements in a PDF document by color?
-- How to apply foreground colors to the text of Blocks within a PDF table?
+When working with PDF documents using [RadPdfProcessing]({%slug radpdfprocessing-overview%}), you can change the foreground color of the text inside a table to differentiate between various pieces of information, such as an account number and its value. This knowledge base article also answers the following questions:
+* How to change the text color within a PDF table using RadPdfProcessing?
+* How to differentiate text elements in a PDF document by color?
+* How to apply foreground colors to the text of Blocks within a PDF table?
 
 ## Solution
 
-To change the text color inside a table in a PDF document using RadPdfProcessing, use the **FillColor** property of [GraphicProperties]({%slug radpdfprocessing-editing-text-and-graphic-properties%}). This property controls the color used for drawing the content elements of a `Block`. You can temporarily change the graphic properties for specific text elements by using the `SaveGraphicProperties()` and `RestoreGraphicProperties()` methods. This allows you to apply different colors, at different stages, to different parts of the text inside a table cell. 
+To change the text color inside a table in a PDF document using RadPdfProcessing, use the `FillColor` property of [GraphicProperties]({%slug radpdfprocessing-editing-text-and-graphic-properties%}). This property controls the color used for drawing the content elements of a `Block`. You can temporarily change the graphic properties for specific text elements by using the `SaveGraphicProperties()` and `RestoreGraphicProperties()` methods. This allows you to apply different colors, at different stages, to different parts of the text inside a table cell.
 
-Here's how to achieve this:
+The following steps describe how to achieve this:
 
 1. Create a [Table]({%slug radpdfprocessing-editing-table-overview%}) and add a [Row]({%slug radpdfprocessing-editing-table-tablerow%}) and a [Cell]({%slug radpdfprocessing-editing-table-tablecell%}) to it.
 2. Add a [Block]({%slug radpdfprocessing-editing-block%}) to the cell for the text you want to display.
@@ -34,7 +34,7 @@ Here's how to achieve this:
 4. Set the [FillColor]({%slug radpdfprocessing-concepts-colors-and-color-spaces%}) property of [GraphicProperties]({%slug radpdfprocessing-editing-text-and-graphic-properties%}) to the desired color.
 5. Insert the text into the block.
 6. Use `RestoreGraphicProperties()` to revert to the previous graphic state.
-7. Repeat steps 2-6 for any additional text blocks with different colors.
+7. Repeat steps 2–6 for any additional text blocks with different colors.
 
 ```csharp
 Table table = new Table();
@@ -60,10 +60,10 @@ block.RestoreGraphicProperties();
 
 ![Change Text Color in PDF](images/change-text-color-pdf-radpdfprocessing.png) 
 
-By following these steps, you can successfully differentiate text elements in a PDF document by changing their foreground colors.
+Use these steps to differentiate text elements in a PDF document with different foreground colors.
 
 ## See Also
 
-- [Text and Graphic Properties in RadPdfProcessing]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
-- [Block Content in RadPdfProcessing]({%slug radpdfprocessing-editing-block%})
-- [Colors and Color Spaces]({%slug radpdfprocessing-concepts-colors-and-color-spaces%})
+* [Text and Graphic Properties in RadPdfProcessing]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
+* [Block Content in RadPdfProcessing]({%slug radpdfprocessing-editing-block%})
+* [Colors and Color Spaces]({%slug radpdfprocessing-concepts-colors-and-color-spaces%})

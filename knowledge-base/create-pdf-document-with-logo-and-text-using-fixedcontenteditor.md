@@ -14,13 +14,13 @@ res_type: kb
 
 ## Description
 
-This tutorial demonstrates a sample approach how to create a PDF document from scratch that contains a logo and text. 
+This article shows how to create a PDF document from scratch that contains a logo and text.
 
 ## Solution
 
-The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) allows you draw any element at the desired [Position]({%slug radpdfprocessing-concepts-position%}):
+The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) allows you to draw any element at the desired [Position]({%slug radpdfprocessing-concepts-position%}):
 
-```
+```csharp
         public static System.Windows.Size pageSize = new System.Windows.Size(Unit.MmToDip(210), Telerik.Windows.Documents.Media.Unit.MmToDip(297));
         public static Padding pageMarginsValue = new Telerik.Windows.Documents.Primitives.Padding(
              Unit.MmToDip(20),//left
@@ -163,10 +163,11 @@ The powerful [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontented
         }
 
 ```
-The achieved result is illustrated below:
+The following image shows the achieved result:
 
 ![PDF document with Logo and Text](images/pdf-with-logo-and-text.png)
 
-# See Also
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-- [Position]({%slug radpdfprocessing-concepts-position%})
+## See Also
+
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Position]({%slug radpdfprocessing-concepts-position%})

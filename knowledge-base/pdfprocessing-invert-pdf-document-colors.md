@@ -1,6 +1,6 @@
 ---
 title: Invert PDF Document Colors
-description: Invert the Colors within a PDF Document by iterating its content using PdfProcessing.
+description: Learn how to invert the background and text colors within a PDF document by iterating its content with RadPdfProcessing.
 type: how-to
 page_title: Invert the Colors within a PDF Document
 slug: pdfprocessing-invert-pdf-document-colors
@@ -9,22 +9,11 @@ tags: radpdfprocessing, pdf, colors, invert, background, document, processing, f
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2021.1.322</td>
-		<td>RadPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-</tbody>
-</table>
+## Environment
+
+|Product Version|Product|Author|
+|----|----|----|
+|2021.1.322|RadPdfProcessing|[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)|
 
 ## Description
 
@@ -32,9 +21,9 @@ This article describes how to invert the background and text colors within a PDF
 
 ## Solution
 
-The provided code snippets demonstrates how to import a PDF document and invert its background and text color by iterating its content.
+The following code snippets demonstrate how to import a PDF document and invert its background and text color by iterating its content.
 
-#### __Import PDF file and Invert its Background and Content Color__
+**Example 1: Import a PDF File and Invert Its Background and Content Color**
 
 ```csharp
 
@@ -63,9 +52,9 @@ The provided code snippets demonstrates how to import a PDF document and invert 
 	}
 ```
 
-As the PDF document has no background concept we are creating a [RectangleGeometry](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.model.graphics.rectanglegeometry) using the page size and setting the desired color to it.
+The PDF document has no background concept. To achieve the inverted background, create a [RectangleGeometry](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.model.graphics.rectanglegeometry) by using the page size and setting the desired color to it.
 
-#### __Invert Document's Background Color__
+**Example 2: Invert the Document Background Color**
 
 ```csharp
 
@@ -82,9 +71,9 @@ As the PDF document has no background concept we are creating a [RectangleGeomet
 	}
 ```
 
-The following methods show how to invert the document elements' color by recursively iterating their content and setting the desired color using the relevant Fill property.
+The following methods invert the document elements' color by recursively iterating their content and setting the desired color through the relevant `Fill` property.
 
-#### __Invert Document Content`s Color__
+**Example 3: Invert the Document Content Color**
 
 ```csharp
 
@@ -115,3 +104,8 @@ The following methods show how to invert the document elements' color by recursi
 		}
 	}
 ```
+
+## See Also
+
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})

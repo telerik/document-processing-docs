@@ -10,7 +10,7 @@ position: 1
 
 # Features
 
-Below you can find list with all features that are supported by XlsxFormatProvider.
+The following table lists all features that the `XlsxFormatProvider` supports.
        
 <table>
     <tr>

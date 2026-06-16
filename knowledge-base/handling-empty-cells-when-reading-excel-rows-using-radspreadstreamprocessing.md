@@ -18,20 +18,21 @@ ticketid: 1680377
 
 ## Description
 
-While using [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) to read an Excel file, unexpected results may occur when reading rows that contain **empty** cells. Empty cells are skipped, causing misalignment of data with columns. For example, when a row has blank values in the first columns, the value of the subsequent column with data shifts to the wrong column index.
+When you use [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) to read an Excel file, unexpected results occur when reading rows that contain **empty** cells. Empty cells are skipped, which causes misalignment of data with columns. For example, when a row has blank values in the first columns, the value of the subsequent column with data shifts to the wrong column index.
 
 <img style="border: 1px solid gray;" src="images/handling-empty-cells-when-reading-excel-rows-using-radspreadstreamprocessing.png" /> 
 
-This may lead to unexpected difficulties if you need to traverse the data rows stored in the Excel document and populate a DataTable. 
+This leads to unexpected results if you need to traverse the data rows stored in the Excel document and populate a `DataTable`. 
 
 This knowledge base article also answers the following questions:
-- How to read Excel rows with empty cells using RadSpreadStreamProcessing?
-- How to maintain column alignment when reading Excel rows with empty cells?
-- How to insert DBNull.Value for empty cells in imported Excel rows?
+
+* How to read Excel rows with empty cells using RadSpreadStreamProcessing?
+* How to maintain column alignment when reading Excel rows with empty cells?
+* How to insert `DBNull.Value` for empty cells in imported Excel rows?
 
 ## Solution
 
-To ensure empty cells are correctly handled and data aligns with the columns, adjust the reading logic to account for skipped cells. Use the following code snippet:
+To ensure that empty cells are correctly handled and data aligns with the columns, adjust the reading logic to account for skipped cells:
 
 ```csharp
 DataTable dt = new DataTable();
@@ -91,5 +92,5 @@ This logic ensures that all cells, including empty ones, are accounted for, main
 
 ## See Also
 
-- [SpreadStreamProcessing Overview]({%slug radspreadstreamprocessing-overview%})
-- [Cells in RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-model-cells%})
+* [SpreadStreamProcessing Overview]({%slug radspreadstreamprocessing-overview%})
+* [Cells in RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-model-cells%})

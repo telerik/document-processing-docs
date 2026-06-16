@@ -1,6 +1,6 @@
 ---
 title: Timeout Mechanism in Document Processing Libraries
-description: Compiler Warning (level 2) CS0618 in Document Processing Libraries after upgrading.
+description: Learn how to use the timeout mechanism for importing and exporting documents in Telerik Document Processing Libraries.
 type: how-to
 page_title: Timeout Mechanism in Document Processing Libraries
 slug: timeout-mechanism-in-dpl
@@ -16,7 +16,7 @@ res_type: kb
 
 ## Description
 
-After upgrading to **Q4 2024** (or a newer version) of Telerik Document Processing Libraries and you have any logic for importing or exporting documents in your application, one of the following warning messages may occur if you try building the project:
+After upgrading to **Q4 2024** (or a later version) of Telerik Document Processing Libraries, one of the following warning messages may occur when you build a project that contains any logic for importing or exporting documents:
 
 ![CS0618 Warning](images/cs0618-warning.png)  
 
@@ -26,11 +26,11 @@ The [Compiler Warning (level 2) CS0618](https://learn.microsoft.com/en-us/dotnet
 
 ## Solution
 
-In Q4 2024 Telerik Document Processing Libraries introduced a new **timeout mechanism** for importing and exporting documents. The Import and Export methods of the FormatProviders have a mandatory **TimeSpan?** timeout parameter after which the operation will be canceled and **OperationCanceledException** is thrown:
+Starting with Q4 2024, Telerik Document Processing Libraries introduce a new **timeout mechanism** for importing and exporting documents. The `Import` and `Export` methods of the format providers have a mandatory `TimeSpan?` timeout parameter. After the specified interval elapses, the operation is canceled and an `OperationCanceledException` is thrown:
 
 >note This is valid for WordsProcessing, PdfProcessing and SpreadProcessing.
 
-#### Import XLSX (Excel Workbook) file
+### Import XLSX (Excel Workbook) File
 
    ```csharp
     using (Stream input = new FileStream("input-file.xlsx", FileMode.Open))
@@ -41,15 +41,15 @@ In Q4 2024 Telerik Document Processing Libraries introduced a new **timeout mech
     }
    ```
 
->note The [TimeSpan](https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-timespan) interval is up to the developer and should be considered with the environment-specific configurations. In case of developing a web application for example, set such a timeout interval value that would be safe enough to protect the application from potential [DDoS attacks](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack). If the application is expected to be delivered directly to the end-users, it is possible to use TimeSpan=null as well. 
+>note The [TimeSpan](https://learn.microsoft.com/en-us/dotnet/fundamentals/runtime-libraries/system-timespan) interval depends on the developer and must account for environment-specific configurations. When developing a web application, set a timeout interval value that is safe enough to protect the application from potential [DDoS attacks](https://www.microsoft.com/en-us/security/business/security-101/what-is-a-ddos-attack). If the application is delivered directly to end-users, you can use `TimeSpan` = `null` as well. 
   
-Note that there is a Visual Studio setting that controls whether the [warnings will be treated as errors](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings):
+There is a Visual Studio setting that controls whether the [warnings are treated as errors](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings):
 
 ![Treat Warning as Errors](images/treat-warning-as-errors.png)    
 
-Make sure that it is not toggled. Otherwise, the application wouldn't be compiled due to the obsolete API.
+Make sure that this setting is not toggled. Otherwise, the application does not compile due to the obsolete API.
 
-#### Handling the OperationCanceledException
+### Handling the OperationCanceledException
 
    ```csharp
            static void Main(string[] args)
@@ -101,5 +101,5 @@ Make sure that it is not toggled. Otherwise, the application wouldn't be compile
 
 ## See Also
 
-- [Using PdfFormatProvider in RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-- [Using DocxFormatProvider in RadWordsProcessing]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
+* [Using PdfFormatProvider in RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+* [Using DocxFormatProvider in RadWordsProcessing]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})

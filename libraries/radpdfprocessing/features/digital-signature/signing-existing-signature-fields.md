@@ -44,7 +44,7 @@ To sign multiple existing signature fields in a PDF document:
 3. Call `SignExistingField` for each field, passing the current document stream and the field name.
 4. Use the output stream from each step as the input for the next signing operation.
 
-#### Example 1: Import a PDF and Sign All Signature Fields
+### Example 1: Import a PDF and Sign All Signature Fields
 
 The following example imports an existing PDF that contains unsigned signature fields and signs each field sequentially using incremental updates.
 
@@ -56,7 +56,7 @@ The code first imports the document to discover the names of all unsigned `Signa
 
 When a PDF contains empty (unsigned) signature fields, you can generate and apply a visual appearance during signing. Create a `FormSource`, draw content into it with `FixedContentEditor`, and pass it to the `SignExistingField` overload that accepts an `appearance` parameter. Each signing step produces an incremental update, so previously applied signatures remain valid.
 
-#### Example 2: Sign Existing Fields with Custom Appearance
+### Example 2: Sign Existing Fields with Custom Appearance
 
 The following example signs two signature fields and applies a custom visual appearance to each widget at signing time.
 

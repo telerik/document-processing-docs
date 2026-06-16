@@ -17,13 +17,13 @@ ticketid: 1686584
 
 ## Description
 
-When adding tables in [RadPdfProcessing]({%slug radpdfprocessing-overview%}) using the [RadFixedDocumentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/radfixeddocumenteditor), tables may sometimes split across pages if they cannot fit within the remaining space on the current page. To ensure a table fits entirely on one page and starts on a new page if necessary, you can adopt a strategy to measure the table size and calculate the remaining page height.
+When you add tables in [RadPdfProcessing]({%slug radpdfprocessing-overview%}) using the [RadFixedDocumentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/radfixeddocumenteditor), tables may split across pages if they do not fit within the remaining space on the current page. To ensure a table fits entirely on one page and starts on a new page if necessary, measure the table size and calculate the remaining page height.
 
-This article demonstrates how to prevent tables from splitting across pages and apply page breaks before adding tables using FixedContentEditor.
+This article shows how to prevent tables from splitting across pages and apply page breaks before adding tables using `FixedContentEditor`.
 
 ## Solution
 
-Measuring the table and calculating the remaining page height is the suitable approach. For precise positioning, you can use the [FixedContentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/fixedcontenteditor). This editor allows you to measure and draw tables with exact positioning. Below is an example implementation:
+Measure the table and calculate the remaining page height. For precise positioning, use the [FixedContentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/fixedcontenteditor). This editor allows you to measure and draw tables with exact positioning. The following example shows an implementation:
 
 ```csharp
         static void Main(string[] args)
@@ -90,5 +90,5 @@ Measuring the table and calculating the remaining page height is the suitable ap
 
 ## See Also
 
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-- [Tables]({%slug radpdfprocessing-editing-table-overview%}) 
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Tables]({%slug radpdfprocessing-editing-table-overview%})

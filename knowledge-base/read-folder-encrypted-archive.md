@@ -1,9 +1,9 @@
 ---
-title: How to Read Folder's Content from a Protected Archive Using Telerik ZipLibrary
-description: Learn how to pack a folder and subfolders into an encrypted archive using Telerik ZipLibrary while maintaining the correct ZIP structure.
+title: Creating and Reading Password-Protected ZIP Archives with Folder Structure Using ZipLibrary
+description: Learn how to create a password-protected ZIP archive that maintains the folder structure and extract files from it using ZipLibrary.
 type: how-to
-page_title: How to Create Password-Protected ZIP Archives with Folder Structure
-meta_title: How to Create Password-Protected ZIP Archives with Folder Structure
+page_title: Creating Password-Protected ZIP Archives with Folder Structure
+meta_title: Creating Password-Protected ZIP Archives with Folder Structure
 slug: read-folder-encrypted-archive
 tags: radziplibrary, zip, encryption, archive, password, folders, document, processing
 res_type: kb
@@ -18,18 +18,18 @@ ticketid: 1702323
 
 ## Description
 
-This article aims to demonstrate a sample approach how to create a password-protected ZIP archive with Telerik ZipLibrary that maintains the folder structure and includes subfolders and files. Then, extract all files from the encrypted ZIP archive reading the text content of each file.
+This article shows how to create a password-protected ZIP archive with ZipLibrary that maintains the folder structure and includes subfolders and files. It also shows how to extract all files from the encrypted ZIP archive and read the text content of each file.
 
 This knowledge base article also answers the following questions:
-- How to create a ZIP archive with subfolders using Telerik ZipLibrary?
-- How to encrypt a ZIP file using Telerik ZipLibrary?
-- How to extract files from an encrypted ZIP archive?
+* How to create a ZIP archive with subfolders using ZipLibrary?
+* How to encrypt a ZIP file using ZipLibrary?
+* How to extract files from an encrypted ZIP archive?
 
 ## Solution
 
 ### Creating a Password-Protected ZIP Archive
 
-Let's have the following folders structure and we want to zip the root folder with all of its content:
+Consider the following folder structure where the goal is to zip the root folder with all of its content:
 
 * MyFolder
     * Subfolder1
@@ -39,13 +39,13 @@ Let's have the following folders structure and we want to zip the root folder wi
         * textFile3.txt
         * textFile4.txt
 
-To create a password-protected ZIP archive with the correct folder structure, perform the following steps:
+To create a password-protected ZIP archive with the correct folder structure, follow these steps:
 
 1. Iterate through all files in the source directory and subdirectories.
-2. Create a separate entry for each file using its relative path.
-3. Apply password protection using `PasswordEncryptionSettings`.
+2. Create a separate entry for each file by using its relative path.
+3. Apply password protection by using `PasswordEncryptionSettings`.
 
-Here is the modified code:
+**Example 1: Creating a Password-Protected ZIP Archive**
 
 ```csharp
         static void Main(string[] args)
@@ -92,13 +92,13 @@ Here is the modified code:
 
 ### Extracting Files from an Encrypted ZIP Archive
 
-To extract files from an encrypted ZIP archive and read the content, perform the following steps:
+To extract files from an encrypted ZIP archive and read the content, follow these steps:
 
 1. Use `EncryptionSettings.CreateDecryptionSettings()` for decryption settings.
 2. Handle the `PasswordRequired` event to assign the correct password.
 3. Iterate through the entries and extract the desired files.
 
-Here is the code for extracting files:
+**Example 2: Extracting Files from an Encrypted ZIP Archive**
 
 ```csharp
         public static bool ExtractFile(string zipFileName, string targetPath)
@@ -142,6 +142,6 @@ Here is the code for extracting files:
         }
 ```
 
-### See Also
+## See Also
 
-- [Protect ZipArchive]({%slug radziplibrary-protect-ziparchive%})
+* [Protect ZipArchive]({%slug radziplibrary-protect-ziparchive%})

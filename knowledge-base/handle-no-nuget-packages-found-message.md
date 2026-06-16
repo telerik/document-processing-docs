@@ -1,6 +1,6 @@
 ---
 title: Handling the 'No packages found' Message when Using the Telerik NuGet Server
-description: Learn how to handle the 'No packages found' message when using the Telerik NuGet Server
+description: Learn how to resolve the 'No packages found' message when using the Telerik NuGet Server by verifying credentials, source URL, and account subscription status.
 type: how-to
 page_title: How to handle the 'No packages found' message when using the Telerik NuGet Server
 slug: handle-no-nuget-packages-found-message
@@ -17,25 +17,25 @@ ticketid: 1672286
 
 ## Description
 
-When adding the [Telerik NuGet source]({%slug installation-nuget-packages%}#download-from-the-nuget-server) to your Visual Studio, the expected Telerik Document Processing NuGet packages may not appear in the *Manage NuGet Packages* window. This knowledge base article shows how to troubleshoot this scenario and properly setup the NuGet feed.
+When adding the [Telerik NuGet source]({%slug installation-nuget-packages%}#download-from-the-nuget-server) to your Visual Studio, the expected Telerik Document Processing NuGet packages may not appear in the *Manage NuGet Packages* window. This knowledge base article shows how to troubleshoot this scenario and properly set up the NuGet feed.
 
->note Make sure that your firewall or proxy doesn't prevent the access to the Telerik NuGet server.
+>note Verify that your firewall or proxy does not prevent access to the Telerik NuGet server.
 
 ## Solution
 
 To resolve the issue of Telerik NuGet packages not appearing in Visual Studio, follow these steps:
 
-1. **Add Telerik NuGet Source Correctly**: Make sure the Telerik NuGet source is added correctly to Visual Studio. The correct source URL is `https://nuget.telerik.com/v3/index.json`. Refer to the [Download from the NuGet server section]({%slug installation-nuget-packages%}#download-from-the-nuget-server) for detailed instructions.
+1. **Add Telerik NuGet Source Correctly**: Verify that the Telerik NuGet source is added correctly to Visual Studio. The correct source URL is `https://nuget.telerik.com/v3/index.json`. Refer to the [Download from the NuGet server section]({%slug installation-nuget-packages%}#download-from-the-nuget-server) for detailed instructions.
 
     ![NuGet server Authentication](images/telerik-nuget-server.png)
 
-If the setup is proper and you still don't have access to the Telerik Document Processing NuGet packages from the server, it may be related to the specific account used for authentication. 
+If the setup is proper and you still do not have access to the Telerik Document Processing NuGet packages from the server, the issue may be related to the specific account used for authentication. 
 
-2. **Enter Correct Credentials**: When prompted, enter the correct Telerik account credentials. Ensure you are using an account with an active subscription or trial. 
+2. **Enter Correct Credentials**: When prompted, enter the correct Telerik account credentials. Verify that you are using an account with an active subscription or trial. 
 
     ![NuGet server Authentication](images/nuget-server-authentication.png)
 
-3. **Check for Multiple Accounts**: Verify if you have multiple Telerik accounts and ensure you are using the one with an active subscription. Packages may not appear if the account used has no active licenses or expired trials.
+3. **Check for Multiple Accounts**: Verify if you have multiple Telerik accounts and confirm that you are using the one with an active subscription. Packages may not appear if the account used has no active licenses or expired trials.
 
 4. **Reset Telerik NuGet Credentials**: If you have verified the above steps and still face issues, try resetting your Telerik NuGet credentials. This ensures that Visual Studio is using the correct account for authentication. Instructions for resetting credentials can be found in the [Troubleshooting Telerik NuGet]({%slug troubleshooting-telerik-nuget%}#issue-resetting-telerik-nuget-credentials) guide.
 
@@ -49,5 +49,3 @@ If the setup is proper and you still don't have access to the Telerik Document P
 - [Install Using NuGet Packages]({%slug installation-nuget-packages%})
 - [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
 - [Troubleshooting Telerik NuGet]({%slug troubleshooting-telerik-nuget%})
-
----

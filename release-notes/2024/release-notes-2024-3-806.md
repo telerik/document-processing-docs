@@ -17,4 +17,4 @@ position: 96
 
 ![fixed](../images/fixed.png)
 
-* An InvalidCastException is thrown on import when a culture is set with comma (,) decimal separator.
+* An `InvalidCastException` is thrown on import when a culture is set with comma (,) decimal separator.

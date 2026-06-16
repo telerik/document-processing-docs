@@ -1,6 +1,6 @@
 ---
 title: Grouping Data Example Using RadSpreadProcessing
-description: Learn how to group data in a worksheet using RadSpreadProcessing for Document Processing.
+description: Learn how to group data in a worksheet by generating grouped rows with outline levels using RadSpreadProcessing for Document Processing.
 type: how-to
 page_title: How to Group Data in RadSpreadProcessing
 meta_title: How to Group Data in RadSpreadProcessing
@@ -32,15 +32,15 @@ This article shows how to generate a worksheet with **grouped** data from a **fl
 
 ## Solution
 
-Note that the grouping should be performed separately beforehand, and only then can the Worksheet be populated with the grouped data.
+The grouping must be performed separately beforehand. Only then can the Worksheet be populated with the grouped data.
 
-Once you have the grouped data, the SpreadProcessing functionality (in a similar way to MS Excel) allows you to assign the outline level to all rows that belong to the same group. 
-To make it clear and simple, let's take the following example - a flat list of products stored in CSV data:
+Once you have the grouped data, the SpreadProcessing feature (in a similar way to MS Excel) allows you to assign the outline level to all rows that belong to the same group. 
+The following example uses a flat list of products stored in CSV data:
 
 ### Preparing Grouped Data
 
-1. Group your flat data (e.g. Northwind.Products) before populating the worksheet.
-2. Use LINQ or other methods to group rows based on a specific column (e.g. CategoryID).
+1. Group your flat data (for example, Northwind.Products) before populating the worksheet.
+2. Use LINQ or other methods to group rows based on a specific column (for example, CategoryID).
 
 Use the following code snippet to group rows in a worksheet:
 
@@ -173,7 +173,7 @@ Use the following code snippet to group rows in a worksheet:
         }
     }
 ```
-Modify the example to suit your specific data structure and requirements.
+Modify the example to suit your specific data structure and needs.
 
 ## See Also
 

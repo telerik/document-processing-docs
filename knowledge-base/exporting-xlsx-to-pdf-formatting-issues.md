@@ -1,6 +1,6 @@
 ---
 title: How to Eliminate Formatting Issues when Exporting XLSX to PDF Format
-description: This article provides a solution to formatting difficulties when exporting an XLSX file to PDF using the RadSpreadProcessing library.
+description: This article provides a solution to formatting issues when exporting an XLSX file to PDF using the RadSpreadProcessing library in .NET Standard applications.
 type: troubleshooting
 page_title: How to Eliminate Formatting Issues when Exporting XLSX to PDF Format
 slug: exporting-xlsx-to-pdf-formatting-issues
@@ -8,13 +8,13 @@ tags: radspreadprocessing, xlsx, pdf, export, font, formatting, document, proces
 res_type: kb
 ---
 
-##Environment
+## Environment
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | .NET Standard | RadSpreadProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-This article demonstrates how to deal with formatting difficulties when exporting an XLSX file to PDF using the RadSpreadProcessing library in .NET Standard. 
+This article shows how to handle formatting difficulties when exporting an XLSX file to PDF using the `RadSpreadProcessing` library in .NET Standard.
 
 The most common scenario is:
 
@@ -23,9 +23,9 @@ The most common scenario is:
 2\. Observe the resulting PDF file with truncated columns or a different font.![Export Differences](images/exporting-xlsx-to-pdf-formatting-issues01.png)   
 
 ## Solution
-The limitations of .NET Standard may cause differences in the font and text size (text measuring) when converting to PDF format.
+The limitations of .NET Standard may cause differences in the font and text size (text measuring) when you convert to PDF format.
 
-1\. To address the issue with the size discrepancy, set a [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}) to handle the problem with the size:
+1\. To address the size discrepancy, set a [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}) to handle the text measurement:
 
 ```csharp
         SpreadTextMeasurerBase fixedTextMeasurer = new SpreadFixedTextMeasurer();
@@ -94,12 +94,12 @@ This class provides a mechanism to read the fonts used in the document:
         }
     }
 ```
-Now, the font in the exported PDF document is the correct one and the text is not clipped.
+Now, the font in the exported PDF document is correct and the text is not clipped.
 
 ![Handle Export Differences](images/exporting-xlsx-to-pdf-formatting-issues02.png)    
 
 ## See Also
-- [Cross-Platform Support]({%slug radspreadprocessing-cross-platform%})
-- [Text Measuring]({%slug radspreadprocessing-cross-platform-text-measure%})
-- [Fonts in PdfProcessing]({%slug radpdfprocessing-cross-platform-fonts%})
-- [How to implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
+* [Cross-Platform Support]({%slug radspreadprocessing-cross-platform%})
+* [Text Measuring]({%slug radspreadprocessing-cross-platform-text-measure%})
+* [Fonts in PdfProcessing]({%slug radpdfprocessing-cross-platform-fonts%})
+* [How to implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})

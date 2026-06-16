@@ -1,6 +1,6 @@
 ---
 title: Iterate Through Worksheets
-description: Learn how to iterate through all worksheets in a workbook using RadSpreadProcessing.
+description: Learn how to iterate through all worksheets in a workbook using the Worksheets collection of the Workbook class in RadSpreadProcessing.
 page_title: Iterate Through Worksheets
 slug: radspreadprocessing-working-with-worksheets-iterate-through-worksheets
 tags: worksheet, spreadsheet, radspreadprocessing, iterate, workbook, collection, loop, sheets
@@ -10,23 +10,23 @@ position: 4
 
 # Iterate Through Worksheets
 
-In a number of scenarios you may need to iterate through all worksheets in a given workbook. The API of the __Workbook__ class exposes a __Worksheets__ collection that allows you to retrieve worksheets both by name and index. Also, the collection allows you to iterate all worksheets effortlessly. The [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}) article shows how to iterate the cells inside a worksheet respectively.
-      
-## 
+In many scenarios you need to iterate through all worksheets in a given workbook. The API of the `Workbook` class exposes a `Worksheets` collection that allows you to retrieve worksheets both by name and index. The collection also allows you to iterate all worksheets. The [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}) article shows how to iterate the cells inside a worksheet.
 
-__Example 1__ illustrates how to retrieve worksheets that have already been added to the workbook.      
+## Retrieving and Iterating Worksheets
 
-#### __Example 1: Retrieve worksheet__
+**Example 1** illustrates how to retrieve worksheets that have already been added to the workbook.
+
+**Example 1: Retrieve Worksheet**
 
 <snippet id='codeblock-csl'/>
 
-__Example 2__ creates a new workbook with three worksheets. The code further iterates through all worksheets and sets the value of cell *A1* to the name of the corresponding worksheet. The example also sets the ForeColor and BackgroundFill of the cell.
-        
-#### __Example 2: Iterate worksheets__
+**Example 2** creates a new workbook with three worksheets. The code further iterates through all worksheets and sets the value of cell *A1* to the name of the corresponding worksheet. The example also sets the `ForeColor` and `BackgroundFill` of the cell.
+
+**Example 2: Iterate Worksheets**
 
 <snippet id='codeblock-csm'/>
 
-## See Also 
+## See Also
 
 * [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%})
 * [What is a Cell?]({%slug radspreadprocessing-working-with-cells-what-is-cell%})

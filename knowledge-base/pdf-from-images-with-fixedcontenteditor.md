@@ -7,18 +7,22 @@ slug: pdf-from-images-with-fixedcontenteditor
 tags: radpdfprocessing, pdf, image, fixedcontenteditor, document, processing, fixed, creation
 res_type: kb
 ---
+
 ## Environment
+
 | Version | Product | Author | 
-| --- | --- | ---- | 
-| 2024.1.124 | RadPdfProcessing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| --- | --- | --- | 
+| 2024.1.124 | RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-This tutorial demonstrates a sample approach how to generate a PDF document from a collection of images located in a local folder.
+
+This article demonstrates how to generate a PDF document from a collection of images located in a local folder.
 
 ![Folder with images](images/images-folder.png)
 
 ## Solution
-To create the PDF document, we will use a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) which is always associated with a single [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the page at which the image block element will be inserted and drawn. The Position is adjusted after the image is rendered. If there is no remaining space on the page to draw the next image, a new page will be created and the editor's position will be moved to the beginning of the new page. 
+
+To create the PDF document, use a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) which is always associated with a single [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}). The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-position%}) inside the page at which the image block element is inserted and drawn. The `Position` is adjusted after the image is rendered. If there is no remaining space on the page to draw the next image, a new page is created and the editor position moves to the beginning of the new page.
  
 ```csharp
         private static void GeneratePdfFromImagesWithFixedContentEditor(string imageFolderPath)
@@ -77,14 +81,15 @@ To create the PDF document, we will use a [FixedContentEditor]({%slug radpdfproc
             Process.Start(outputFilePath);
         }
 ```
-The produced document is illustrated in the screenshot:
+The following screenshot shows the produced document:
 
 ![PDF with images](images/pdf-with-images.png)
 
-# See Also
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-- [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
-- [Position]({%slug radpdfprocessing-concepts-position%})
-- [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-- [RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Converting Colored PDF Documents to GrayScale with Telerik Document Processing]({%slug convert-color-pdf-to-black-and-white-telerik-document-processing%})
+## See Also
+
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [Position]({%slug radpdfprocessing-concepts-position%})
+* [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+* [RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
+* [Converting Colored PDF Documents to GrayScale with Telerik Document Processing]({%slug convert-color-pdf-to-black-and-white-telerik-document-processing%})

@@ -1,12 +1,13 @@
 ---
 title: Creating Colored Squares in RadFlowDocument
-description: This article explains how to create colored squares with borders in a RadFlowDocument using Telerik Document Processing.
+description: Learn how to create colored squares with borders in a RadFlowDocument using the Telerik Document Processing libraries.
 type: how-to
 page_title: Creating Colored Squares in RadFlowDocument | Telerik Document Processing
 slug: creating-colored-squares-radflowdocument
 tags: radwordsprocessing, radflowdocument, docx, shapes, border, document, processing, word
 res_type: kb
 ---
+
 ## Environment
 
 | Version | Product | Author | 
@@ -15,19 +16,19 @@ res_type: kb
 
 ## Description
 
-A common requirement is to insert [shapes]({%slug radwordsprocessing-shapes-shapes%}) in a RadFlowDocument (or a DOCX file). Currently, RadWordsProcessing doesn't support such functionality.
+A common requirement is to insert [shapes]({%slug radwordsprocessing-shapes-shapes%}) in a `RadFlowDocument` (or a DOCX file). `RadWordsProcessing` does not support this feature natively.
 
-This article demonstrates a sample approach how to create a RadFlowDocument with colored squares with borders using the library.
+This article shows how to create a `RadFlowDocument` with colored squares with borders using the library.
 
->note A similar approach can be used for any other shapes such as circles, triangles, etc. 
+>note A similar approach works for other shapes such as circles, triangles, and rectangles.
 
 ## Solution
 
-The easiest way to achieve the colored square is to generate an image with the desired size and insert it in the RadFlowDocument. Then, exporting the document to DOCX or any supported format will give you the following result:
+The recommended approach to achieve the colored square is to generate an image with the desired size and insert it in the `RadFlowDocument`. Export the document to DOCX or any supported format to produce the following result:
 
 ![Draw shapes](images/words-processing-draw-squares.png) 
 
-Here is a code snippet that demonstrates the process:
+The following code snippet shows the process:
 
 ```csharp
 using System.IO; 
@@ -96,4 +97,4 @@ namespace DrawSquareShapesInFlowDocument
 
 ## See Also
 
- * [Shapes]({%slug radwordsprocessing-shapes-shapes%})
+* [Shapes]({%slug radwordsprocessing-shapes-shapes%})

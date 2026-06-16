@@ -13,12 +13,14 @@ res_type: kb
 | 2024.1.124 | RadPdfProcessing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-This tutorial demonstrates a sample approach how to generate a PDF document from a collection of images located in a local folder.
+
+This article demonstrates how to generate a PDF document from a collection of images in a local folder.
 
 ![Folder with images](images/images-folder.png) 
 
 ## Solution
-To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which generates the document in a flow-like manner. The editor provides methods that enable the generation of documents, which automatically flows to pages.
+
+To create the PDF document, use the [`RadFixedDocumentEditor`]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) class. This class generates content in a flow-like manner and automatically distributes it across pages.
  
 ```csharp
          private static void GeneratePdfFromImagesWithRadFixedDocumentEditor(string imageFolderPath)
@@ -54,12 +56,13 @@ To create the PDF document, we will use a [RadFixedDocumentEditor]({%slug radpdf
             Process.Start(outputFilePath);
         }        
 ```
-The produced document is illustrated in the screenshot:
+The following screenshot shows the produced document:
 
 ![PDF with images](images/pdf-document-with-images.png) 
 
-# See Also
-- [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})  
-- [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-- [RadPdfProcessing]({%slug radpdfprocessing-overview%})
-- [Converting Colored PDF Documents to GrayScale with Telerik Document Processing]({%slug convert-color-pdf-to-black-and-white-telerik-document-processing%})
+## See Also
+
+* [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
+* [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+* [Converting Colored PDF Documents to Grayscale]({%slug convert-color-pdf-to-black-and-white-telerik-document-processing%})

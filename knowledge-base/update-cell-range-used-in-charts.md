@@ -11,18 +11,19 @@ res_type: kb
 | Version | Product | Author | 
 | --- | --- | ---- | 
 | 2024.1.124 | RadSpreadProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
----
+
 ## Description
- When the CellRange used for generating the [chart object]({%slug radspreadprocessing-features-charts-using-charts%}) in a worksheet contains blank/empty values, they are converted to zero values which may change the chart line in an unexpected way. This article demonstrates how to update the chart's CellRange and update the range's end when such empty values are found. Thus, the range with null values is cut.
+
+When the `CellRange` used for generating the [chart object]({%slug radspreadprocessing-features-charts-using-charts%}) in a worksheet contains blank or empty values, they are converted to zero values. This may change the chart line in an unexpected way. This article shows how to update the chart's `CellRange` and set the range's end when such empty values are found. The range with null values is cut.
 
  ![Zero values](images/update-cell-range-used-in-charts01.png) 
 
 ## Solution
 
-After importing the XLSX document into a Workbook, iterate the chart shapes and limit the CellRange to the first found blank/empty value:
+After importing the XLSX document into a `Workbook`, iterate the chart shapes and limit the `CellRange` to the first found blank or empty value:
 
 
-   ```
+   ```csharp
     Worksheet worksheet = this.Workbook.ActiveSheet as Worksheet;
             foreach (FloatingChartShape chartShape in worksheet.Charts)
             {
@@ -68,5 +69,6 @@ After importing the XLSX document into a Workbook, iterate the chart shapes and 
  
   ![Eliminate zero values](images/update-cell-range-used-in-charts02.png)
 
-# See Also
-- [Using Charts]({%slug radspreadprocessing-features-charts-using-charts%}) 
+## See Also
+
+* [Using Charts]({%slug radspreadprocessing-features-charts-using-charts%}) 

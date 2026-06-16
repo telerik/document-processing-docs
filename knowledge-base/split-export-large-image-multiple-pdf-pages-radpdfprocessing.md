@@ -18,12 +18,11 @@ ticketid: 1569728
 
 ## Description
 
-RadPdfProcessing doesn't have a built-in mechanism to split a large image across the pages when it doesn't fit within a single page's boundaries.
-This article demonstrates a sample approach how to do it.
+`RadPdfProcessing` does not have a built-in mechanism to split a large image across pages when it does not fit within a single page boundary. This article shows a sample approach for achieving this.
 
 ## Solution
 
-To export a large image across multiple PDF pages without adding headers or blank spaces, manually split (horizontally or vertically depending on the image dimensions) the image and add each part to a separate page. Below is a sample implementation using [RadPdfProcessing]({%slug radpdfprocessing-overview%}) that demonstrates how to split an image into two parts and export it to a PDF file:
+To export a large image across multiple PDF pages without headers or blank spaces, split the image manually (horizontally or vertically depending on its dimensions) and add each part to a separate page. The following implementation uses [RadPdfProcessing]({%slug radpdfprocessing-overview%}) to split an image into two parts and export it to a PDF file:
 
 ```csharp
          static void Main(string[] args)
@@ -79,12 +78,12 @@ To export a large image across multiple PDF pages without adding headers or blan
         }
 ```
 
-This example splits the image into two parts, but you can adjust the logic to split the image into as many parts as necessary, depending on the image size and the desired size of each part on the PDF pages.
+This example splits the image into two parts. You can adjust the logic to split the image into as many parts as necessary, depending on the image size and the desired size of each part on the PDF pages.
 
-![PdfProcessing Split Images](images/pdf-processing-split-images.png)  
+![Splitting a large image across PDF pages](images/pdf-processing-split-images.png)  
  
 ## See Also
 
- * [RadPdfProcessing]({%slug radpdfprocessing-overview%}) 
- * [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%}) 
+* [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
 

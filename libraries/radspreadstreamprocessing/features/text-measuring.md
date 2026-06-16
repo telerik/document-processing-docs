@@ -11,37 +11,37 @@ position: 1
 
 # Get Cell Content Size
 
-With the text measuring functionality of SpreadStreamProcessing you can obtain the size of specific content and use it to apply height and width to the rows and columns, respectively.
+With the text measuring functionality of SpreadStreamProcessing you can get the size of specific content and use it to apply height and width to the rows and columns, respectively.
 
-## Why is it needed?
+## Why Is It Needed
 
-SpreadStreamProcessing is designed to directly write the content inside the stream while you generate the document. While this brings great benefits in terms of performance and memory usage, it also comes with a limitation for the automatic sizing of the content. To automatically fit the cell content into a column means that the library should measure each cell content inside that column and change its width if that needed. However, at the time the cell content is written into the stream, the column is already defined and it cannot be further modified. To overcome that limitation, SpreadStreamProcessing exposes the **CellContentSizeHelper** class.
+SpreadStreamProcessing is designed to write the content directly inside the stream while you generate the document. While this brings great benefits in terms of performance and memory usage, it also introduces a limitation for automatic content sizing. To automatically fit the cell content into a column, the library must measure each cell content inside that column and change its width if needed. However, at the time the cell content is written into the stream, the column is already defined and cannot be further modified. To overcome that limitation, SpreadStreamProcessing exposes the `CellContentSizeHelper` class.
 
 ## Using CellContentSizeHelper
 
-CellContentSizeHelper is a static class and exposes two overloads of the GetCellContentSize method. These overloads allow you to pass the formatting applied to the cell as a SpreadCellFormat or as separate values.
+`CellContentSizeHelper` is a static class and exposes two overloads of the `GetCellContentSize` method. These overloads allow you to pass the formatting applied to the cell as a `SpreadCellFormat` or as separate values.
 
 >To use this class, you must add a reference to **Telerik.Windows.Documents.Spreadsheet** for .NET Framework projects or **Telerik.Documents.Spreadsheet** for .NET Standard projects.
 
->tip To achieve accurate results in .NET Standard, it is suggested to use [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}#spreadfixedtextmeasurer).
+>tip To achieve accurate results in .NET Standard, use [SpreadFixedTextMeasurer]({%slug radspreadprocessing-cross-platform-text-measure%}#spreadfixedtextmeasurer).
 
 ### Measuring Cell Content with SpreadCellFormat
 
-One of overloads of **GetCellContentSize** enables you to obtain the size needed for a specific cell value with applied a [SpreadCellFormat]({%slug radspreadstreamprocessing-model-cells%}#set-a-format) to it. The following table describes the parameters of that method:
+One of the overloads of `GetCellContentSize` enables you to get the size needed for a specific cell value with an applied [SpreadCellFormat]({%slug radspreadstreamprocessing-model-cells%}#set-a-format). The following table describes the parameters of that method:
 
 | Parameter | Type | Description |
 |---|---|---|
-| `value` | `string` | The cell value. If formula is passed, the method will throw an `ArgumentException`. |
+| `value` | `string` | The cell value. If a formula is passed, the method throws an `ArgumentException`. |
 | `spreadCellFormat` | `SpreadCellFormat` | The formatting of the cell. |
 | `cellWidth` | `double` | Optional. The width of the cell in pixels. This value is only respected if the value of the `WrapText` property of the `spreadCellFormat` is `true`. The default column width is 65 pixels. |
 
 ### Measuring Cell Content with Separate Formatting Values
 
-GetCellContentSize exposes an overload that allows you pass separate values for the formatting properties of a cell that can affect the size of that cell's content. The following table describes the parameters that overload accepts:
+`GetCellContentSize` exposes an overload that allows you to pass separate values for the formatting properties of a cell that can affect the size of that cell content. The following table describes the parameters that overload accepts:
 
 | Parameter | Type | Description |
 |---|---|---|
-| `value` | `string` | The cell value. If formula is passed the method will throw an `ArgumentException`. |
+| `value` | `string` | The cell value. If a formula is passed, the method throws an `ArgumentException`. |
 | `cellValueFormat` | `string` | The number format of the cell. |
 | `fontFamily` | `string` | The font family name. |
 | `fontSize` | `double` | The size of the font. |
@@ -54,9 +54,9 @@ GetCellContentSize exposes an overload that allows you pass separate values for 
 
 ## Example
 
-The following example shows how you can create a spreadsheet document, measure the content of the cells and apply width to the columns in a way that these columns auto fit their content.
+The following example shows how to create a spreadsheet document, measure the content of the cells, and apply width to the columns so that these columns auto fit their content.
 
-#### Example 1: Create spreadsheet with auto fit columns width
+**Example 1: Create Spreadsheet with Auto Fit Columns Width**
 
 <snippet id='codeblock-dkv'/>
 

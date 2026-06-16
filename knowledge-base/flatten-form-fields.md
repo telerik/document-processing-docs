@@ -1,6 +1,6 @@
 ---
 title: Flatten Form Fields
-description: Flatten the interactive forms in your PDF documents using PdfProcessing.
+description: Learn how to flatten interactive form fields in PDF documents by iterating annotations and converting widget appearances using RadPdfProcessing.
 type: how-to
 page_title: Flatten Form Fields
 slug: flatten-form-fields
@@ -9,32 +9,21 @@ tags: radpdfprocessing, pdf, form, fields, flatten, acroform, document, processi
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2020.1.316</td>
-		<td>RadPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-</tbody>
-</table>
+## Environment
+
+| Product Version | Product | Author |
+| ---- | ---- | ---- |
+| 2020.1.316 | RadPdfProcessing | [Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov) |
 
 ## Description
 
-How to flatten [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields %}).
+This article demonstrates how to flatten [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}).
 
 ## Solution
 
->In R2 2021 this can be achieved with a single method of the AcroForm. Check the [Flatten Form Fields]({%slug radpdfprocessing-flatten-form-fields%}) topic for more details.
+> Starting with R2 2021, you can achieve this with a single method of the `AcroForm`. Check the [Flatten Form Fields]({%slug radpdfprocessing-flatten-form-fields%}) topic for more details.
 
-This could be achieved by iterating the [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})`s [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) and if the type of the annotation is [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) to flatten its appearance.
+To flatten form fields, iterate the [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) [Annotations]({%slug radpdfprocessing-model-annotations-overview%}) and check whether the annotation type is [Widget]({%slug radpdfprocessing-model-annotations-widgets%}). If it is, flatten its appearance.
 
 ```csharp
 
@@ -138,3 +127,8 @@ This could be achieved by iterating the [RadFixedPage]({%slug radpdfprocessing-m
 	}
 
 ```
+
+## See Also
+
+* [Flatten Form Fields]({%slug radpdfprocessing-flatten-form-fields%})
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})

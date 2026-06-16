@@ -1,6 +1,6 @@
 ---
 title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
-description: Learn how to implement  TRANSPOSE(cells range) function in Telerik Document Processing Libraries.
+description: Learn how to implement the TRANSPOSE(cells range) function in Telerik Document Processing Libraries.
 type: how-to
 page_title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
 meta_title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
@@ -18,7 +18,7 @@ ticketid: 1710562
 
 ## Description
 
-This article demonstrates a sample approach how to implement a custom function that simulates the [TRANSPOSE](https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027)(A1:C1) functionality.
+This article demonstrates a sample approach for implementing a custom function that simulates the [TRANSPOSE](https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027)(A1:C1) functionality.
 
 If your original data is:
 ||||
@@ -34,17 +34,17 @@ then `=TRANSPOSE(A1:C1)` will produce:
 |Banana|2||
 |Cherry|3||
 
-In other words, a horizontal range becomes vertical and a vertical range becomes horizontal. This article demonstrates a sample approach of a custom implementation for the TRANSPOSE. 
+In other words, a horizontal range becomes vertical and a vertical range becomes horizontal. This article demonstrates a sample approach for a custom implementation of the TRANSPOSE function.
 
 ## Solution
 
-Follow the steps:
+Follow these steps:
  
 1. Implement your custom function.
-1. Register the custom function using the FunctionManager.RegisterFunction() method. 
-1. Handle the returned ArrayExpression result and print the transposed cells range in the console Output.
+1. Register the custom function with the `FunctionManager.RegisterFunction()` method. 
+1. Handle the returned `ArrayExpression` result and print the transposed cells range in the console output.
 
-#### Custom TRANSPOSE Function
+**Example 1: Custom TRANSPOSE Function**
 
 Create a custom `TRANSPOSE` function to transpose rows and columns.
 
@@ -193,4 +193,4 @@ Create a custom `TRANSPOSE` function to transpose rows and columns.
  
 ## See Also
 
-- [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%})
+* [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%})

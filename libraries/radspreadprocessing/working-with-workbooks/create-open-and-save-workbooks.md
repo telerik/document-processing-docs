@@ -12,7 +12,7 @@ position: 1
 
 
 
-You have the possibility to create workbooks from scratch, open existing files as workbooks and save workbooks into different file formats. This article aims to help you get familiar with these operations.
+You can create workbooks from scratch, open existing files as workbooks, and save workbooks into different file formats. The following sections describe these operations.
       
 
 * [Create a Workbook](#create-a-workbook)
@@ -23,12 +23,12 @@ You have the possibility to create workbooks from scratch, open existing files a
 
 ## Create a Workbook
 
-The fact that __RadSpreadProcessing__ is completely decoupled from UI enables numerous server side scenarios that build a document from scratch. The model allows you to instantiate a new workbook using the nullary constructor of the __Workbook__ class. Note that when a new workbook is created in this manner its __Worksheet__'s collection is still empty. 
+The fact that RadSpreadProcessing is completely decoupled from UI enables numerous server side scenarios that build a document from scratch. The model allows you to create a new workbook using the nullary constructor of the `Workbook` class. When a new workbook is created in this manner, its `Worksheets` collection is still empty. 
 
-__Example 1__ creates a new workbook and adds its first worksheet, which also becomes the __ActiveWorksheet__ of the workbook.
+**Example 1** creates a new workbook and adds its first worksheet, which also becomes the `ActiveWorksheet` of the workbook.
         
 
-#### __Example 1: Create a workbook and add a worksheet to it__
+**Example 1: Create a Workbook and Add a Worksheet to It**
 
 <snippet id='codeblock-crz'/>
 
@@ -36,14 +36,14 @@ __Example 1__ creates a new workbook and adds its first worksheet, which also be
 
 ## Open a Workbook
 
-__RadSpreadProcessing__ allows you to easily import a workbook from a number of formats. Currently, the model supports `csv`, `txt`, `xlsx`, `xls` file formats and `DataTable` objects. 
+RadSpreadProcessing allows you to import a workbook from a number of formats. The model supports `csv`, `txt`, `xlsx`, `xls` file formats, and `DataTable` objects. 
 
-To import a workbook, you need to instantiate a specific [FormatProvider]({%slug radspreadprocessing-formats-and-conversion-general-information%}), invoke its __Import()__ method and pass a `Stream` or `byte[]` array as an argument. 
+To import a workbook, instantiate a specific [FormatProvider]({%slug radspreadprocessing-formats-and-conversion-general-information%}), invoke its `Import()` method, and pass a `Stream` or `byte[]` array as an argument. 
 
-__Example 2__ uses a WebClient to download a `xlsx` file stored on a server. Further, the code creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public Workbook Import(Stream stream)` method.
+**Example 2** uses a `WebClient` to download a `xlsx` file stored on a server. The code then creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public Workbook Import(Stream stream)` method.
         
 
-#### __Example 2: Download and import xlsx file__
+**Example 2: Download and Import XLSX File**
 
 <snippet id='codeblock-csa'/>
 
@@ -55,24 +55,24 @@ __Example 2__ uses a WebClient to download a `xlsx` file stored on a server. Fur
 ## Save a Workbook
 
 
-__RadSpreadProcessing__ also allows you to save a workbook into a `XLSX`, `XLS`, `CSV`, `TXT`, and `PDF` file formats as well as into a `DataTable` object. 
+RadSpreadProcessing also allows you to save a workbook into a `XLSX`, `XLS`, `CSV`, `TXT`, and `PDF` file format as well as into a `DataTable` object. 
 
-To export a workbook, you need to instantiate the [FormatProvider]({%slug radspreadprocessing-formats-and-conversion-general-information%}) you would like to use and invoke its __Export()__ method. 
+To export a workbook, instantiate the [FormatProvider]({%slug radspreadprocessing-formats-and-conversion-general-information%}) you want to use and invoke its `Export()` method. 
 
-__Example 3__ demonstrates how to export an existing Workbook to a `XLSX` file. The snippet creates a new workbook with a single worksheet. Further, it creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public void Export(Workbook workbook, Stream output)`. Saving to the other formats is done in the same way, using a different format provider class.
+**Example 3** demonstrates how to export an existing `Workbook` to a `XLSX` file. The snippet creates a new workbook with a single worksheet. It then creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public void Export(Workbook workbook, Stream output)` method. Saving to the other formats works the same way with a different format provider class.
           
 
-#### __Example 3: Save XLSX file__
+**Example 3: Save XLSX File**
 
 <snippet id='codeblock-csb'/>
 
 
 For security purposes accessing files in *Silverlight* can be achieved only through user-initiated dialogs. That said, to save workbook's contents into a `csv` file, you need to use the `SaveFileDialog`. 
 
-__Example 4__ passes the stream returned by the dialog and the current workbook to the __Export()__ method of the [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider %}).
+**Example 4** passes the stream returned by the dialog and the current workbook to the `Export()` method of the [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider %}).
           
 
-#### __Example 4: Save csv file using SaveFileDialog__
+**Example 4: Save CSV File Using SaveFileDialog**
 
 <snippet id='codeblock-csc'/>
 

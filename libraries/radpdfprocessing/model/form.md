@@ -10,65 +10,59 @@ position: 6
 
 # Form
 
-__Form__ is a content element, which contains a form source and represents a Form XObject. The Form XObjects enables you to describe objects (text, images, vector elements, etc.) within a PDF file and reuse this content among the document.
-      
+`Form` is a content element that contains a form source and represents a Form XObject. Form XObjects allow you to describe objects (text, images, vector elements, and so on) within a PDF file and reuse this content throughout the document.
 
 * [Creating and Inserting a Form](#creating-and-inserting-a-form)
-
 * [Form Properties](#form-properties)
 
 ## Public API
 
 | **Property**          | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| **FormSource**        | Specifies the content that will be visualized in the Form object. It is of type [**FormSource**]({%slug radpdfprocessing-model-formsource-overview%}). |
-| **Clipping**          | Gets or sets the clipping of the form object.                                                  |
-| **Width**             | The width of the form.                                                                          |
-| **Height**            | The height of the form.                                                                         |
-| **AlphaConstant**     | Specifies the constant shape or constant opacity value to be used for nonstroking operations.   |
-| **StrokeAlphaConstant** | Specifies the constant shape or constant opacity value to be used for stroking operations.      |
-| **Position**          | The [Position]({%slug radpdfprocessing-concepts-position%}) of the form inside the __IContainerElement__. |
-| **Parent**            | Allows you to obtain the parent page of the form.                                               |
+| `FormSource`        | Specifies the content that the Form object visualizes. It is of type [FormSource]({%slug radpdfprocessing-model-formsource-overview%}). |
+| `Clipping`          | Gets or sets the clipping of the form object.                                                  |
+| `Width`             | The width of the form.                                                                          |
+| `Height`            | The height of the form.                                                                         |
+| `AlphaConstant`     | Specifies the constant shape or constant opacity value for nonstroking operations.   |
+| `StrokeAlphaConstant` | Specifies the constant shape or constant opacity value for stroking operations.      |
+| `Position`          | The [Position]({%slug radpdfprocessing-concepts-position%}) of the form inside the `IContainerElement`. |
+| `Parent`            | Gets the parent page of the form.                                               |
 
 | **Method**            | **Description**                                                                                 |
 |-----------------------|-------------------------------------------------------------------------------------------------|
-| **Clone** (_since Q2 2025_) | Creates a deep copy of this document element.                                                  |
+| `Clone` (starting with Q2 2025) | Creates a deep copy of this document element.                                                  |
 
 
 ### Creating and Inserting a Form
 
-The **Form** class exposes a default public constructor to allow you create instances of it. __Form__ is a content element and you can add such an object to the __Content__ collection of an __IContainerElement__ such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
-        
+The `Form` class exposes a default public constructor that allows you to create instances of it. `Form` is a content element and you can add such an object to the `Content` collection of an `IContainerElement` such as [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
 
-__Example 1__ shows how to initialize a Form object and add it to a previously defined container.
-    
+**Example 1** shows how to initialize a `Form` object and add it to a previously defined container.
 
-#### __Example 1: Create a form and add it to an IContainerElement__
+#### **Example 1: Create a form and add it to an IContainerElement**
 
 <snippet id='pdf-create-form'/>
 
 
-__Example 2__ demonstrates how to use one of the factory methods of the __ContentElementCollection__ to create a new form and insert it into the respective container.
-        
+**Example 2** demonstrates how to use one of the factory methods of the `ContentElementCollection` to create a new form and insert it into the respective container.
 
-#### __Example 2: Add a form to a container__
+#### **Example 2: Add a form to a container**
 
 <snippet id='pdf-form-to-container'/>
 
 
->tip There are other methods that allow adding a form to a document by passing it size and source. They could be used through the [FixedContentEditor class]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
-          
->You can add content to the form by setting its FormSource property. The API allows you also to directly pass the FormSource to a method which will automatically generate a form in the document content. For more information on this topic, check the [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) article.
+>tip There are other methods that allow adding a form to a document by passing its size and source. You can use them through the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) class.
 
+> You can add content to the form by setting its `FormSource` property. The API also allows you to directly pass the `FormSource` to a method that automatically generates a form in the document content. For more information, see the [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) article.
 
->There’s no nesting limit for [Form XObjects]({%slug radpdfprocessing-model-form%}), but PDF viewers may restrict depth to avoid memory or performance issues and improve responsiveness, which can affect rendering depending on the viewer.
+> There is no nesting limit for [Form XObjects]({%slug radpdfprocessing-model-form%}), but PDF viewers may restrict depth to avoid memory or performance issues and improve responsiveness. This can affect rendering depending on the viewer.
 
 
 ### Modifying Form Properties
 
-You can modify a __Form__ element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.  
+You can modify a `Form` element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.
 
-#### __Example 3: Modify Form properties__
+#### **Example 3: Modify Form properties**
 
 <snippet id='pdf-modify-form'/>
 
@@ -76,7 +70,7 @@ You can modify a __Form__ element using the properties the class exposes. The pr
 
 ## See Also
 
- * [Form Source]({%slug radpdfprocessing-model-formsource-overview%})
- * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
- * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
- * [Position]({%slug radpdfprocessing-concepts-position%})
+* [FormSource]({%slug radpdfprocessing-model-formsource-overview%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Position]({%slug radpdfprocessing-concepts-position%})

@@ -1,6 +1,6 @@
 ---
 title: How to Fit Graphics to Frames
-description: Learn how to fit graphics and images in specific frames using PdfProcessing.
+description: Learn how to fit graphics and images to predefined frames using the FixedContentEditor API in Telerik RadPdfProcessing with proportional and stretch fitting options.
 type: how-to
 page_title: How to Fit Graphics
 slug: how-to-fit-graphics-to-frames
@@ -28,19 +28,20 @@ res_type: kb
 
 ## Description
 
-How to fit images to frames (predefined shapes, or in our case a square with a side length of 90) or vice versa.
+This article shows how to fit images to frames (predefined shapes, or in this case a square with a side length of 90) or vice versa.
 
 ## Solution
 
-This functionality could be achieved by using the [FixedContentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/fixedcontenteditor) API. Below are demonstrated the following four different scenarios:
+Use the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) API to achieve this. The following four scenarios demonstrate different fitting approaches:
 
 * Fit Content Proportionally
 * Fit Content To Frame (or Stretch fit)
 * Fill Frame Proportionally (or Center fit)
 * Fit Frame to Content
 
-The following example demonstrates how to fit the image in a square without changing the image sides aspect ratio.
-#### __Fit Content Proportionally__
+The following example demonstrates how to fit the image in a square without changing the image aspect ratio.
+
+**Example 1: Fit Content Proportionally**
 
 ```csharp
 
@@ -65,8 +66,9 @@ The following example demonstrates how to fit the image in a square without chan
 	
 ```
 
-The following example demonstrates how to stretch the image in a square (the image aspect ratio is changed).
-#### __Fit Content To Frame__
+The following example demonstrates how to stretch the image in a square (the image aspect ratio changes).
+
+**Example 2: Fit Content to Frame**
 
 ```csharp
 
@@ -84,8 +86,9 @@ The following example demonstrates how to stretch the image in a square (the ima
  
 ```
 
-The following example demonstrates how to crop the image in order to fill a square without changing the image aspect ratio.
-#### __Fill Frame Proportionally__
+The following example demonstrates how to crop the image to fill a square without changing the image aspect ratio.
+
+**Example 3: Fill Frame Proportionally**
 
 ```csharp
 
@@ -128,11 +131,12 @@ The following example demonstrates how to crop the image in order to fill a squa
  
 ```
 
-In the last scenario, we are finding the smallest side of the image and use it to calculate the factor which we are using to scale the position. After that, we are calculating the offset that we are going to use to create an image [Clipping](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/clipping) with the desired size. 
+In the last scenario, the code finds the smallest side of the image and uses it to calculate the scale factor. It then calculates the offset used to create an image [Clipping]({%slug radpdfprocessing-concepts-clipping%}) with the desired size.
 
 
 The following example demonstrates how to insert an image in its original size.
-#### __Fit Frame to Content__
+
+**Example 4: Fit Frame to Content**
 
 ```csharp
 

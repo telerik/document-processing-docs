@@ -11,7 +11,7 @@ platforms: core, mvc, ajax, blazor, wpf, winforms, winui
 
 # Features
 
-Below you can find list with all features that are supported by XlsFormatProvider.
+The following table lists all features that the `XlsFormatProvider` supports.
       
 <table>
   <tr>

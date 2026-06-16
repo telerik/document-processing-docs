@@ -1,6 +1,6 @@
 ---
 title: Populate RadFlowDocument with different Images when performing a Mail Merge
-description: This knowledge base article describes how to populate a RadFlowDocument with different images while performing a Mail Merge.
+description: Learn how to populate a RadFlowDocument with different images while performing a mail merge with RadWordsProcessing.
 type: how-to
 page_title: Populate RadFlowDocument with different Images when performing a Mail Merge
 slug: wordsprocessing-add-different-images-when-mailmerging
@@ -9,30 +9,19 @@ tags: radwordsprocessing, mailmerge, image, radflowdocument, word, document, pro
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2021.2.507</td>
-		<td>WordsPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-</tbody>
-</table>
+## Environment
+
+| Version | Product | Author |
+| --- | --- | --- |
+| 2021.2.507 | RadWordsProcessing |[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)|
 
 ## Description
 
-This article describes how to populate a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) with different Images when performing a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}).
+This article shows how to populate a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) with different images when you perform a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}).
 
 ## Solution
 
-The following example demonstrates how to import a document template using the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). Then by iterating an array of custom Person elements to implement the logic for inserting differing images in the RadFlowDocument's header ([Headers and Footers]({%slug radspreadprocessing-features-headers-and-footers%})) according to the Person's Account type while performing a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}).
+The following example demonstrates how to import a document template with the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). It then iterates an array of custom `Person` elements and inserts different images in the `RadFlowDocument` header ([Headers and Footers]({%slug radspreadprocessing-features-headers-and-footers%})) according to the person's account type while performing a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}).
 
 #### __Add Different Images While Mailmerging__
 
@@ -91,7 +80,7 @@ The following example demonstrates how to import a document template using the [
 	}
 ```
 
-#### __Person class__
+#### __Person Class__
 
 ```csharp
 
@@ -120,3 +109,9 @@ The following example demonstrates how to import a document template using the [
         }
     }
 ```
+
+## See Also
+
+* [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
+* [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})

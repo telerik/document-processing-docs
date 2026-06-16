@@ -13,7 +13,7 @@ Content controls let you add structured, reusable regions to a RadWordsProcessin
 
 This article explains how to retrieve existing content controls, update their properties, insert new controls, remove controls, and place controls at specific positions in the document.
 
-## Manipulate Existing Content Controls
+## Manipulating Existing Content Controls
 
 Use the existing document tree when you want to inspect or update content controls that are already part of the document.
 
@@ -21,7 +21,7 @@ Use the existing document tree when you want to inspect or update content contro
 
 Retrieve content controls by calling `EnumerateChildrenOfType()` on a document element such as the document, section, paragraph, or another container element.
 
-#### **Example 1: Get all content controls**
+**Example 1: Get All Content Controls**
 
 <snippet id='codeblock-dndn'/>
 
@@ -31,7 +31,7 @@ This approach is useful when you need to find all controls before applying filte
 
 After you retrieve the controls, you can inspect their type and update the matching properties. For example, a combo box or drop-down list control can be updated by adding items to its collection.
 
-#### **Example 2: Adding items to a ComboBox or a DropDownList**
+**Example 2: Adding Items to a ComboBox or a DropDownList**
 
 <snippet id='codeblock-dodo'/>
 
@@ -45,7 +45,7 @@ Insert new content controls through the `InsertStructuredDocumentTag()` method o
 
 ### How to Insert a Content Control by Type
 
-#### **Example 3: Inserting a content control using content control type**
+**Example 3: Inserting a Content Control Using Content Control Type**
 
 <snippet id='codeblock-dpdp'/>
 
@@ -57,7 +57,7 @@ Use this overload when you know the control type and want to populate its conten
 
 <snippet id='codeblock-dqdq'/>
 
-#### **Example 5: Inserting a CheckBox content control using content control properties**
+**Example 5: Inserting a CheckBox Content Control Using Content Control Properties**
 
 <snippet id='codeblock-drdr'/>
 

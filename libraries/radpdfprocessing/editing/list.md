@@ -10,13 +10,13 @@ position: 1
 
 # List
 
-List is a class that helps you easily create a list of numbered paragraphs. You can use lists by adding them to [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})’s Lists collection or by simply creating List class instances and setting the list bullets to some [Block]({%slug radpdfprocessing-editing-block%}) instances.
+The `List` class helps you create a list of numbered paragraphs. You can use lists by adding them to the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) `Lists` collection or by creating `List` class instances and setting the list bullets to some [Block]({%slug radpdfprocessing-editing-block%}) instances.
 
 #### Figure 1
-![](images/RadPdfProcessing_Editing_List_01.png)
+![List example showing numbered and bulleted paragraphs](images/RadPdfProcessing_Editing_List_01.png)
 
 
-This article aims to present the lists related API in __RadPdfProcessing__. It contains the following sections:
+The following sections present the list-related API in RadPdfProcessing:
 
 * [Creating List from ListTemplateType](#creating-list-from-listtemplatetype)
 
@@ -31,101 +31,101 @@ This article aims to present the lists related API in __RadPdfProcessing__. It c
 
 ## Creating List from ListTemplateType
 
-Each List contains a __ListLevelCollection__ where the presentation of each list level is defined by a __ListLevel__ class instance. For the most common cases you do not need to define each separate list level. Instead, you can use the __ListTemplateType__ enumeration to create a list with one of the predefined list templates.
+Each `List` contains a `ListLevelCollection` where the presentation of each list level is defined by a `ListLevel` class instance. For the most common cases you do not need to define each separate list level. Instead, you can use the `ListTemplateType` enumeration to create a list with one of the predefined list templates.
 
-The code snippet from __Example 1__ shows how to create a list with NumberedParentheses template.
+The code snippet from **Example 1** shows how to create a list with the NumberedParentheses template.
 
-#### __Example 1: Create numbered parentheses list template type__
+#### **Example 1: Create numbered parentheses list template type**
 
 <snippet id='pdf-list-numbered-parentheses'/>
 
-On the following image you may see the available list template types and how they look:
+The following image shows the available list template types and their appearance:
 
 #### Figure 2
-![](images/RadPdfProcessing_Editing_List_02.png)
+![Available list template types and their appearance](images/RadPdfProcessing_Editing_List_02.png)
 
 >In .NET Standard due to font limitations, the **BulletDefault** list requires a Wingdings font be provided so its bullets are rendered properly. You can read how to handle these restrictions in the [Fonts]({%slug radpdfprocessing-cross-platform-fonts%}) and [FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) articles.
 
 ## Creating Custom ListLevel
 
 
-When you need to create a custom List, you should define the presentation of each list level. The appearance of the list level is defined with the properties of the __ListLevel__ class. The following list level properties are available in __RadPdfProcessing__:
+When you need to create a custom `List`, define the presentation of each list level. The appearance of the list level is defined with the properties of the `ListLevel` class. The following list level properties are available in RadPdfProcessing:
 
-* __StartIndex__: Specifies the index from which the list items' numbering will start. The default value of this property is 1.
+* `StartIndex`: Specifies the index from which the list items numbering starts. The default value of this property is 1.
 
-* __RestartAfterLevel__: Specifies the index of the level, which restarts the current level numbering. The default value is negative, which means that all previous levels should restart the current level numbering. If this property has non-negative value, all previous levels that have level index less than or equal to the RestartAfterLevel value should restart the current level numbering.
+* `RestartAfterLevel`: Specifies the index of the level, which restarts the current level numbering. The default value is negative, which means that all previous levels restart the current level numbering. If this property has a non-negative value, all previous levels that have a level index less than or equal to the `RestartAfterLevel` value restart the current level numbering.
 
-* __ParagraphProperties__: Specifies the paragraph properties of the paragraphs from this list level.
+* `ParagraphProperties`: Specifies the paragraph properties of the paragraphs from this list level.
 
-* __CharacterProperties__: Specifies the character properties of the bullet element on this list level.
+* `CharacterProperties`: Specifies the character properties of the bullet element on this list level.
 
-* __BulletNumberingFormat__: Specifies how the bullet element should be formatted on this list level.
+* `BulletNumberingFormat`: Specifies how the bullet element is formatted on this list level.
 
-* __IndentAfterBullet__: Specifies the amount of indent after the bullet element.
+* `IndentAfterBullet`: Specifies the amount of indent after the bullet element.
 
 
-__Example 2__ shows how to create an empty list and add two custom list levels to its __ListLevelsCollection__. Level 0 has a bullet which displays its current numbering as two digit number with a leading zero. Level 1 displays a checkbox as a bullet symbol for all of the corresponding list items. Additionally, each of the levels defines custom values for the __LeftIndent__, __ForegroundColor__ and __IndentAfterBullet__ properties. 
+**Example 2** shows how to create an empty list and add two custom list levels to its `ListLevelsCollection`. Level 0 has a bullet which displays its current numbering as a two-digit number with a leading zero. Level 1 displays a checkbox as a bullet symbol for all of the corresponding list items. Additionally, each of the levels defines custom values for the `LeftIndent`, `ForegroundColor`, and `IndentAfterBullet` properties. 
 
-#### __Example 2: Create custom list levels__
+#### **Example 2: Create custom list levels**
 
 <snippet id='pdf-list-custom-levels'/>
 
-The image in __Figure 3__ shows how the list created in __Example 2__ will look like when used.
+The image in **Figure 3** shows how the list created in **Example 2** looks when used.
 
 #### Figure 3
-![](images/RadPdfProcessing_Editing_List_03.png)
+![Custom list levels with two-digit numbering and checkbox bullets](images/RadPdfProcessing_Editing_List_03.png)
 
 ## Creating Custom Bullet
 
-When you are creating custom list level, you need to specify how the bullet numbering should be formatted. With __RadPdfProcessing__ by implementing __IBulletNumberingFormat__ you may choose what __PositionContentElement__ should be used for each bullet appearance. This way knowing the current indexes of all list levels you can easily create bullets with text, geometry or image.
+When you create a custom list level, you need to specify how the bullet numbering is formatted. With RadPdfProcessing, by implementing `IBulletNumberingFormat` you can choose what `PositionContentElement` to use for each bullet appearance. This way, knowing the current indexes of all list levels, you can create bullets with text, geometry, or image.
 
-If you require using a text bullet, you may use __TextBulletNumberingFormat__ class. This class implements __IBulletNumberingFormat__. When initializing an instance of this class, its constructor requires a function that returns the string representation of the bullet.
+If you need a text bullet, use the `TextBulletNumberingFormat` class. This class implements `IBulletNumberingFormat`. When you initialize an instance of this class, its constructor requires a function that returns the string representation of the bullet.
 
-The following code snippet shows how to create the bullets of a numbered hierarchical list using __TextBulletNumberingFormat__ class:
+The following code snippet shows how to create the bullets of a numbered hierarchical list using the `TextBulletNumberingFormat` class:
 
-#### __Example 3: Create custom text numbering bullet__
+#### **Example 3: Create custom text numbering bullet**
 
 <snippet id='pdf-list-custom-numbering-bullet'/>
 
-When using the list created in __Example 3__ its bullets will look as shown in __Figure 4__.
+When using the list created in **Example 3**, its bullets look as shown in **Figure 4**.
 
 #### Figure 4
-![](images/RadPdfProcessing_Editing_List_04.png)
+![Custom hierarchical numbered list bullets](images/RadPdfProcessing_Editing_List_04.png)
 
 
 ## Using Lists with RadFixedDocumentEditor
 
-In order to use lists with __RadFixedDocumentEditor__, you should first add them to the editor’s __ListCollection__. Each time you add a list item you should simply set the __ListId__ and __ListLevel__ values in the editor’s __Paragraph__ properties and call the InsertParagraph() method.
+To use lists with `RadFixedDocumentEditor`, first add them to the editor `ListCollection`. Each time you add a list item, set the `ListId` and `ListLevel` values in the editor `Paragraph` properties and call the `InsertParagraph()` method.
 
-__Example 4__ shows how to create a list with __RadFixedDocumentEditor__ and insert a single item for each of the list levels. The appearance of the list is from the values in the predefined __ListTemplateType__ enumeration
+**Example 4** shows how to create a list with `RadFixedDocumentEditor` and insert a single item for each of the list levels. The appearance of the list comes from the values in the predefined `ListTemplateType` enumeration.
 
-#### __Example 4: Using lists with RadFixedDocumentEditor__
+#### **Example 4: Using lists with RadFixedDocumentEditor**
 
 <snippet id='pdf-list-using-raddocumentfixededitor'/>
 
 The resulting document looks like the image in **Figure 5**.
 
 #### Figure 5
-![](images/RadPdfProcessing_Editing_List_05.png)
+![List created with RadFixedDocumentEditor showing items at different levels](images/RadPdfProcessing_Editing_List_05.png)
 
 
 ## Using Lists with Block Class
 
-As the __Block__ class has __Bullet__ and __IndentAfterBullet__ properties you can easily set some custom bullet to any __Block__ instance. However, if you want to get automatically formatted bullet corresponding to some __List__ class instance, you should use the __SetBullet(List list, int listLevel)__ method. This way you can easily set the bullet-related properties so that the bullet displays the correct list numbering and formatting.
+As the `Block` class has `Bullet` and `IndentAfterBullet` properties, you can set a custom bullet to any `Block` instance. However, if you want to get an automatically formatted bullet corresponding to some `List` class instance, use the `SetBullet(List list, int listLevel)` method. This way you can set the bullet-related properties so that the bullet displays the correct list numbering and formatting.
 
-The following code snippet shows how to create __List__ with __BulletDefault__ template and set the bullet of the first list level to a Block:
+The following code snippet shows how to create a `List` with `BulletDefault` template and set the bullet of the first list level to a Block:
 
 
-#### __Example 5: Using lists with Block class__
+#### **Example 5: Using lists with Block class**
 
 <snippet id='pdf-list-using-with-blocks'/>
 
->The list style is applied for the whole Block element. Generating a list consisting of several paragraphs in different list items should be done using the same count of Block instances as the number of the different list items.
+>The list style is applied for the whole Block element. To generate a list consisting of several paragraphs in different list items, use the same count of Block instances as the number of the different list items.
 
-**Figure 6** demonstrates how the block form __Example 5__ will look like when exported.
+**Figure 6** demonstrates how the block from **Example 5** looks when exported.
 
 #### Figure 6
-![](images/RadPdfProcessing_Editing_List_06.png)
+![Block with BulletDefault list style applied](images/RadPdfProcessing_Editing_List_06.png)
 
 
 ## See Also

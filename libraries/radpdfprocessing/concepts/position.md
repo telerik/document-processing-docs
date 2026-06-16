@@ -10,71 +10,67 @@ position: 8
 
 # Position
 
-The __Position__ property exposed by the __PositionContentElement__ abstract class is used for manipulating the position of elements.
+The `Position` property exposed by the `PositionContentElement` abstract class is used for manipulating the position of elements.
 
->tip You can find a diagram representing the structure in __RadPdfProcessing__ [here]({%slug radpdfprocessing-model-general-information%}).
+>tip You can find a diagram representing the structure in **RadPdfProcessing** in the [Model]({%slug radpdfprocessing-model-general-information%}) article.
         
-The position is represented by the __IPosition__ interface which provides the following methods:      
+The position is represented by the `IPosition` interface which provides the following methods:      
 
-- __void Scale(double scaleX, double scaleY)__: Applies the specified scale.
+* `void Scale(double scaleX, double scaleY)`: Applies the specified scale.
 
-- __void ScaleAt(double scaleX, double scaleY, double centerX, double centerY)__: Applies the specified scale about the specified coordinates.
+* `void ScaleAt(double scaleX, double scaleY, double centerX, double centerY)`: Applies the specified scale about the specified coordinates.
 
-- __void Rotate(double angle)__: Applies the specified rotation.
+* `void Rotate(double angle)`: Applies the specified rotation.
 
-- __void RotateAt(double angle, double centerX, double centerY)__: Applies the specified rotation about the specified coordinates.
+* `void RotateAt(double angle, double centerX, double centerY)`: Applies the specified rotation about the specified coordinates.
 
-- __void Translate(double offsetX, double offsetY)__: Applies the specified translation.
+* `void Translate(double offsetX, double offsetY)`: Applies the specified translation.
 
-- __void Clear()__: Clears the position, restoring it to its initial state.
+* `void Clear()`: Clears the position, restoring it to its initial state.
 
-- __IPosition Clone()__: Clones the position.
-      
+* `IPosition Clone()`: Clones the position.
 
-The IPosition interface exposes a __Matrix__ property which represents the matrix constructed from the applied transformations.
-      
-IPosition interface is implemented by the following classes:
-      
+The `IPosition` interface exposes a `Matrix` property which represents the matrix constructed from the applied transformations.
+
+The `IPosition` interface is implemented by the following classes:
 
 * [MatrixPosition](#matrixposition)
 
 * [SimplePosition](#simpleposition)
 
-By default, PositionContentElements use MatrixPosition, whereas [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) uses SimplePosition.
+By default, `PositionContentElement` objects use `MatrixPosition`, whereas [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) uses `SimplePosition`.
       
 ## MatrixPosition
 
-Each of the applied transformations is being appended to all the previously applied ones. When the Matrix property is calculated, the order of the applied transformations is the same as the order of the invocation of the transform methods.
-        
-The __MatrixPosition__ class exposes a static __Default__ property, which represents the default __MatrixPosition__. The default Matrix of the default MatrixPosition is the __Identity matrix__.
-        
+Each applied transformation is appended to all the previously applied ones. When the `Matrix` property is calculated, the order of the applied transformations is the same as the order of the invocation of the transform methods.
 
-__Example 1__ shows how transformations can be appended.
-        
+The `MatrixPosition` class exposes a static `Default` property, which represents the default `MatrixPosition`. The default Matrix of the default `MatrixPosition` is the **Identity matrix**.
+
+**Example 1** shows how transformations can be appended.
 
 #### __Example 1: Transform MatrixPosition__
 
 <snippet id='pdf-matrix-position'/>
 
-The resulting matrix position was translated both horizontally and vertically by 50.
+The resulting matrix position is translated both horizontally and vertically by 50.
         
 ## SimplePosition
 
-Each of the applied transformations overwrites the previous transformations of the same type. When the value of the __Matrix__ property is being calculated, the order of the transformations is the following:
+Each applied transformation overwrites the previous transformations of the same type. When the value of the `Matrix` property is calculated, the order of the transformations is the following:
         
 1. Scale
 1. Rotate    
 1. Translate
-            
-The __SimplePosition__ class exposes a static __Default__ property which represents the default SimplePosition.
-        
-__Example 2__ shows how transformations overwrite the previous transformations of the same type.
+
+The `SimplePosition` class exposes a static `Default` property which represents the default `SimplePosition`.
+
+**Example 2** shows how transformations overwrite the previous transformations of the same type.
         
 #### __Example 2: Transform SimplePosition__
 
 <snippet id='pdf-simple-position'/>
 
-The resulting simple position was translated both horizontally and vertically by 30, because of the transformation overwriting.
+The resulting simple position is translated both horizontally and vertically by 30, because of the transformation overwriting.
         
 ## See Also
 

@@ -12,11 +12,11 @@ position: 2
 
 # Explore Features
 
-Once you have your [first project working]({%slug getting-started-first-steps%}), it's time to explore some additional features. This article provides a short overview of how to get started with finding additional functionality and use them in your projects.
+Once you have your [first project working]({%slug getting-started-first-steps%}), it is time to explore additional features. This article provides a short overview of the available functionality and how to use it in your projects.
 
 ## Demos
 
-The fastest way to get an overview of how you can implement Telerik Document Processing Libraries with our UI products, will be to go to our Live Demos:
+The fastest way to get an overview of how to use the Telerik Document Processing libraries with the Telerik UI products is to explore the Live Demos:
 
 ||||
 |----|----|----|
@@ -27,13 +27,13 @@ The fastest way to get an overview of how you can implement Telerik Document Pro
 |[Telerik UI for Blazor](https://demos.telerik.com/blazor-ui)|||
 |[Telerik UI for Silverlight](http://demos.telerik.com/silverlight/)|||
 
-## Developer Focused Examples
+## Developer-Focused Examples
 
-The [Telerik SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/) provides additional demos for the document processing libraries. The examples demonstrate many specific user case scenarios, that might be really helpful. In this article you can find the complete list of all SDK examples for __RadWordsProcessing__.
+The [Telerik SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/) provides additional demos for the document processing libraries. The examples demonstrate many specific use-case scenarios that can help you get started quickly.
 
-### List of all RadWordsProcessing SDK examples:
+### List of All RadWordsProcessing SDK Examples
 
-You can find the complete list of all SDK examples for __RadWordsProcessing__ [here](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing).
+Find the complete list of all SDK examples for `RadWordsProcessing` in the [WordsProcessing SDK examples](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing) repository.
 
 ## Documentation
 
@@ -45,9 +45,9 @@ The **documentation** provides a section for each library that contains help art
 
 ## Next Steps
 
-Below you can find some additional steps you want to explore:
+Explore the following resources for additional guidance:
 
-* [Further information]({%slug getting-started-next-steps%})
+* [Further Information]({%slug getting-started-next-steps%})
 
 ## See Also
 

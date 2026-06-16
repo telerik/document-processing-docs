@@ -18,9 +18,9 @@ ticketid: 1712335
 
 ## Description
 
-When processing a PDF using [TextFragment]({%slug radpdfprocessing-model-textfragment%}) objects in Telerik PdfProcessing, text may be split into fragments in an arbitrary manner due to the internal structure of PDF files. This behavior can lead to scenarios where text fragments do not align with the desired words or phrases, making it difficult to replace specific text. There is no direct way to edit text on a character-by-character basis within a `TextFragment`.
+When you process a PDF with [TextFragment]({%slug radpdfprocessing-model-textfragment%}) objects in RadPdfProcessing, the internal PDF structure may split text into fragments in an arbitrary manner. This behavior can lead to scenarios where text fragments do not align with the desired words or phrases. There is no direct way to edit text on a character-by-character basis within a `TextFragment`.
 
-This knowledge base article demonstrates a sample approach how to replace text spanning multiple TextFragments in Telerik PdfProcessing.
+This article demonstrates a sample approach for replacing text that spans multiple `TextFragment` objects in RadPdfProcessing.
 
 <img style="border: 1px solid gray;" src="images/replace-specific-text-spanning-textfragments-pdfprocessing.png" alt="Replacing Specific Text in PDF Spanning Multiple TextFragments" /> 
 
@@ -133,11 +133,11 @@ private static void ReplaceTextInPage(RadFixedPage page, string textToRemove, st
 }
 ```
 
-### Notes:
-- This approach handles text that spans multiple fragments by first concatenating all text and then mapping the text back to the fragments.
-- Modify and extend this sample as necessary to fit the specific requirements of your PDF documents.
+### Notes
+* This approach handles text that spans multiple fragments by first concatenating all text and then mapping the text back to the fragments.
+* Modify and extend this sample as needed to fit the specific requirements of your PDF documents.
 
 ## See Also
 
-- [TextFragment]({%slug radpdfprocessing-model-textfragment%}) 
-- [TextSearch]({%slug radwordsprocessing-features-search%})  
+* [TextFragment]({%slug radpdfprocessing-model-textfragment%}) 
+* [TextSearch]({%slug radwordsprocessing-features-search%})

@@ -10,31 +10,30 @@ position: 0
 
 # Changes
 
-This topic summarizes the new functionality introduced in the library with helpful links to places in the documentation that describe in greater detail the new functionality and how it can be used.
+The following sections summarize the new functionality introduced in the library with links to the relevant documentation that describes how to use the new features.
 
-## What's New in 2024 Q4
+## What Is New in 2024 Q4
 
-* Introduced timeout mechanism for import and export of documents. The new Import and Export methods for all FormatProviders have a mandatory timeout parameter.  [Read more.]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) 
+* Introduced a timeout mechanism for import and export of documents. The new `Import` and `Export` methods for all format providers have a mandatory timeout parameter. [Read more.]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 
-## What's New in 2024 Q2
+## What Is New in 2024 Q2
 
-* Instead of using the PdfExportSettings.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property, use the **FontEmbeddingType** property allowing to specify whether the full font will be embedded in the document or a subset of it.
-* Support for OTF (OpenType Font) font file format
-      
-## What's New in 2014 Q3
+* Instead of using the `PdfExportSettings`.[ShouldEmbedFont]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}) property, use the `FontEmbeddingType` property to specify whether the full font or a subset is embedded in the document.
+* Support for OTF (OpenType Font) font file format.
 
-__What's New__
+## What Is New in 2014 Q3
 
-* RadFixedDocumentEditor class which creates fixed content in a flow-like manner. [Read more.]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
+**New Features**
 
-* Introduced Tables generator allowing easy export of tabular data content. [Read more.]({%slug radpdfprocessing-editing-table-overview%})
+* `RadFixedDocumentEditor` class which creates fixed content in a flow-like manner. [Read more.]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
 
-* Exposed Block class allowing to draw and split in parts groups of text, images and shapes. [Read more.]({%slug radpdfprocessing-editing-block%})
+* Introduced a Tables generator that allows easy export of tabular data content. [Read more.]({%slug radpdfprocessing-editing-table-overview%})
+
+* Exposed `Block` class that allows you to draw and split groups of text, images, and shapes into parts. [Read more.]({%slug radpdfprocessing-editing-block%})
 
 * Introduced hyperlink concept that combines Link annotation and fixed content.
-            
 
-__What's Fixed__
+**Bug Fixes**
 
 * Rounding double values causes offsets in rendering.
-            
+

@@ -1,6 +1,6 @@
 ---
 title: Creating TableCells with GoToAction and UriAction
-description: This article demonstrates how to create table cells with GoToAction and UriAction in PDF document with Telerik Document Processing.
+description: Learn how to create table cells with GoToAction and UriAction links in a PDF document by using RadPdfProcessing from the Telerik Document Processing libraries.
 type: how-to 
 page_title: Creating TableCells with GoToAction and UriAction
 slug: kb-create-table-cells
@@ -9,25 +9,25 @@ tags: radpdfprocessing, pdf, table, cell, action, hyperlink, document, processin
 res_type: kb
 ---
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
 |N/A|RadPdfProcessing|Maria Terzieva|
 
 ## Description
-This article describes how to create table cells with GoToAction and UriAction in PDF document with Telerik Document Processing.
-With the PDF format, each content element has a specific position, and in some cases, each character is positioned separately. PDF standard does not have any information about tables as well, once exported the tables in the document are represented by lines and text fragments. 
-For this reason we use Action which defines the behaviour for an annotation. And annotation element associates an object with a location on a RadFixedPage.
 
+This article shows how to create table cells with `GoToAction` and `UriAction` in a PDF document with Telerik Document Processing.
+
+With the PDF format, each content element has a specific position. In some cases, each character is positioned separately. The PDF standard does not have information about tables. Once exported, the tables in the document are represented by lines and text fragments. For this reason, use an Action that defines the behavior for an annotation. The annotation element associates an object with a location on a `RadFixedPage`.
 
 ## Solution
 
-The following example demonstrates how to create TableCells with GoToAction and UriAction:
+The following example shows how to create table cells with `GoToAction` and `UriAction`:
 
-1.First we need to create a table in the document. 
-
-2.Next we have to iterate through the elements of the page and to find the text fragment which we want. 
-
-3.After that for creating Links to URLs or Locations within the document, we use Actions - UriAction or GoToAction.
+1. Create a table in the document.
+2. Iterate through the elements of the page and find the target text fragment.
+3. Create links to URLs or locations within the document by using actions (`UriAction` or `GoToAction`).
 
 ```csharp
 
@@ -112,4 +112,4 @@ The following example demonstrates how to create TableCells with GoToAction and 
 
 ## See Also
 
- * [Link annotations]({%slug radpdfprocessing-model-annotations-links%})
+* [Link annotations]({%slug radpdfprocessing-model-annotations-links%})

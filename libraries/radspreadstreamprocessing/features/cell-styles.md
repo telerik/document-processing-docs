@@ -10,102 +10,96 @@ position: 1
 
 # Cell Styles
 
-A cell style is a predefined set of formatting options, such as cell borders, fonts, font sizes and number formats. Using cell styles allows you to apply multiple format options in one step and also offers an easy approach to achieve consistency in cell formatting. When a style is updated, all the cells that has already applied this style will be updated with the new value. 
+A cell style is a predefined set of formatting options, such as cell borders, fonts, font sizes, and number formats. Cell styles allow you to apply multiple format options in one step and also offer an easy approach to achieve consistency in cell formatting. When you update a style, all cells that have already applied this style update with the new value. 
 
 
 ## Cell Style Properties
 
-A cell style is represented by the **SpreadCellStyle** class. The properties of the class can be categorized in five groups: number, alignment, font, border and fill. Following are all properties distributed in their corresponding groups:
+A cell style is represented by the `SpreadCellStyle` class. The properties of the class can be categorized in five groups: number, alignment, font, border, and fill. The following list shows all properties distributed in their corresponding groups:
 
-- Number group
+* Number group
 	
-	- **NumberFormat**: Gets or sets the number format.
+	* `NumberFormat`: Gets or sets the number format.
 
-- Alignment group
+* Alignment group
 	
-	- **HorizontalAlignment**: Gets or sets the horizontal alignment. The property is of type [SpreadHorizontalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.html).
+	* `HorizontalAlignment`: Gets or sets the horizontal alignment. The property is of type [SpreadHorizontalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.html).
 	
-	- **VerticalAlignment**: Gets or sets the vertical alignment. The property is of type [SpreadVerticalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment.html).
+	* `VerticalAlignment`: Gets or sets the vertical alignment. The property is of type [SpreadVerticalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment.html).
 	
-	- **Indent**: Gets or sets the indent.
+	* `Indent`: Gets or sets the indent.
 	
-	- **WrapText**: Gets or sets a value indicating if the text in a cell should be line-wrapped within the cell.
+	* `WrapText`: Gets or sets a value indicating if the text in a cell is line-wrapped within the cell.
 
-- Font group
+* Font group
 	
-	- **ForeColor**: Gets or sets the fore color. The property is of type [SpreadThemableColor](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.html).
+	* `ForeColor`: Gets or sets the fore color. The property is of type [SpreadThemableColor](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadThemableColor.html).
 	
-	- **FontFamily**: Gets or sets the font family. The property is of type [SpreadThemableFontFamily](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.html).
+	* `FontFamily`: Gets or sets the font family. The property is of type [SpreadThemableFontFamily](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadThemableFontFamily.html).
 	
-	- **FontSize**: Gets or sets the size of the font.
+	* `FontSize`: Gets or sets the size of the font.
 	
-	- **IsBold**: Gets or sets a value indicating whether the text is bold.
+	* `IsBold`: Gets or sets a value indicating whether the text is bold.
 	
-	- **IsItalic**: Gets or sets a value indicating whether the text is italic.
+	* `IsItalic`: Gets or sets a value indicating whether the text is italic.
 	
-	- **Underline**: Gets or sets the underline type. The property is of type [SpreadUnderlineType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadUnderlineType.html).
+	* `Underline`: Gets or sets the underline type. The property is of type [SpreadUnderlineType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadUnderlineType.html).
 
-- Border group
+* Border group
 	
-	- **LeftBorder**: Gets or sets the left border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
+	* `LeftBorder`: Gets or sets the left border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 	
-	- **RightBorder**: Gets or sets the right border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
+	* `RightBorder`: Gets or sets the right border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 	
-	- **TopBorder**: Gets or sets the top border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
+	* `TopBorder`: Gets or sets the top border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 	
-	- **BottomBorder**: Gets or sets the bottom border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
+	* `BottomBorder`: Gets or sets the bottom border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 	
-	- **DiagonalUpBorder**: Gets or sets the diagonal up border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
+	* `DiagonalUpBorder`: Gets or sets the diagonal up border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 		
-	- **DiagonalDownBorder**: Gets or sets the diagonal down border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
+	* `DiagonalDownBorder`: Gets or sets the diagonal down border. The property is of type [SpreadBorder](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html).
 
-- Fill group
+* Fill group
 	
-	- **Fill**: Gets or sets the fill. The property could be of type [SpreadGradientFill](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.html) or [SpreadPatternFill](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.html).
+	* `Fill`: Gets or sets the fill. The property can be of type [SpreadGradientFill](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadGradientFill.html) or [SpreadPatternFill](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadPatternFill.html).
 
-In addition to the properties above, the SpreadCellStyle class exposes five Boolean properties that indicate whether the groups above will be applied:
+In addition to the previous properties, the `SpreadCellStyle` class exposes six Boolean properties that indicate whether the groups are applied:
 
-- ApplyNumberFormat
+* `ApplyNumberFormat`
+* `ApplyAlignment`
+* `ApplyFont`
+* `ApplyBorder`
+* `ApplyFill`
+* `ApplyProtection`
 
-- ApplyAlignment
-
-- ApplyFont
-
-- ApplyBorder
-
-- ApplyFill
-
-- ApplyProtection
-
-
-When you apply a style to a cell with locally set properties, the end result is an addition of the style properties to the cell's local properties. The end result of such an addition of styles depends on which elements (groups) of the style have been selected as being applied when using the particular style. You can select a group to be applied along with the style by setting the appropriate property to *true*.
+When you apply a style to a cell with locally set properties, the result is an addition of the style properties to the cell local properties. The result of such an addition depends on which elements (groups) of the style you have selected as applied when using the particular style. You can select a group to be applied along with the style by setting the appropriate property to `true`.
 
 **Example 1** shows what applying the Number group looks like.
 
-#### **Example 1: Get a built-in style and apply a number group**
+**Example 1: Get a Built-In Style and Apply a Number Group**
 
 <snippet id='codeblock-dkq'/>
 
-Through the API you can add, modify or remove styles from the **CellStyles** collection of [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}).
+Through the API you can add, modify, or remove styles from the `CellStyles` collection of [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}).
 
 
->If you would like to set a particular property of a cell, you could do it through the [cell format]({%slug radspreadstreamprocessing-model-cells%}#set-a-format).
+>If you want to set a particular property of a cell, you can do it through the [cell format]({%slug radspreadstreamprocessing-model-cells%}#set-a-format).
 
 ## Create a Style
 
-Creating a new style is pretty straight-forward. All you have to do is invoke the Add() method of workbook's CellStyles collection. The method returns an object of type SpreadCellStyle, which you can manipulate. 
+To create a new style, invoke the `Add()` method of the workbook `CellStyles` collection. The method returns an object of type `SpreadCellStyle`, which you can manipulate. 
 
-#### **Example 2: Create SpreadCellStyle and apply it to a cell**
+**Example 2: Create SpreadCellStyle and Apply It to a Cell**
 
 <snippet id='codeblock-dkr'/>
 
 ## Modify a Style
 
-Modifying a style is even easier than creating one. All you need to do is retrieve the style from the CellStyles collection and set the properties you need.
+To modify a style, retrieve it from the `CellStyles` collection and set the properties you need.
 
 **Example 3** obtains the Bad style from the cell styles collection of a workbook and modifies it.
 
-#### **Example 3: Modify a built-in style**
+**Example 3: Modify a Built-In Style**
 
 <snippet id='codeblock-dks'/>
 

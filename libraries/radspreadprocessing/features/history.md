@@ -12,7 +12,7 @@ position: 7
 
 
 
-The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. The history is implemented via the __WorkbookHistory__ class and the __Workbook__ exposes a property of this type. All changes introduced to the workbook are automatically recorded, however, the model also allows manual control over the history.
+The document model provides the ability to maintain a history stack that tracks all changes to the content of the workbook. The history is implemented through the `WorkbookHistory` class and the `Workbook` exposes a property of this type. All changes introduced to the workbook are automatically recorded. The model also allows manual control over the history.
       
 * [Enable / Disable History](#enable-/-disable-history)
 
@@ -24,13 +24,13 @@ The document model provides the possibility to maintain a history stack that tra
 
 ## Enable / Disable History
 
-By default, the __WorkbookHistory__ class does not record all changes introduced to the workbook, but there are scenarios that need the history feature. For example, if you construct an entire document from code behind, you do not need to record each action you perform. In such cases you do not need to enable the history for the workbook via the __IsEnabled__ property of the __WorkbookHistory__ class. However, if you want to be able to undo one or several of the recent changes, you would need to enable the history.
+By default, the `WorkbookHistory` class does not record all changes introduced to the workbook, but there are scenarios that need the history feature. For example, if you construct an entire document from code behind, you do not need to record each action you perform. In such cases you do not need to enable the history for the workbook through the `IsEnabled` property of the `WorkbookHistory` class. However, if you want to undo one or several of the recent changes, you need to enable the history.
         
 
-__Example 1__ enables the history of a workbook.
+**Example 1** enables the history of a workbook.
         
 
-#### __Example 1: Enable history__
+**Example 1: Enable History**
 
 <snippet id='codeblock-civ'/>
 
@@ -38,13 +38,13 @@ __Example 1__ enables the history of a workbook.
 
 ## Undo / Redo Actions
 
-Once the history is enabled you can invoke its __Undo()__ and __Redo()__ methods to perform undo and redo actions respectively. Both methods return a __Boolean__ value that indicates whether the operations were successful. The __Workbook__ class exposes the *Boolean* properties __CanUndo__ and __CanRedo__ that indicate whether the respective action is applicable.
+Once the history is enabled you can invoke its `Undo()` and `Redo()` methods to perform undo and redo actions respectively. Both methods return a Boolean value that indicates whether the operations were successful. The `Workbook` class exposes the Boolean properties `CanUndo` and `CanRedo` that indicate whether the respective action is applicable.
         
 
-__Example 2__ creates a new workbook with a single worksheet and sets the value of cell *A1* twice. Further, the snippet performs the undo and redo actions.
+**Example 2** creates a new workbook with a single worksheet and sets the value of cell *A1* twice. Further, the snippet performs the undo and redo actions.
         
 
-#### __Example 2: Perform undo and redo__
+**Example 2: Perform Undo and Redo**
 
 <snippet id='codeblock-ciw'/>
 
@@ -52,13 +52,13 @@ __Example 2__ creates a new workbook with a single worksheet and sets the value 
 
 ## Smart Undo
 
-The __Workbook__ history offers a friendly API that allows grouping multiple changes into one undo step. For example, you may want to set the value of a cell and apply formatting to the same cell, and treat these two actions as a single undo operation. This can be easily achieved by enclosing the assignments with __BeginUndoGroup()__ and __EndUndoGroup()__ methods.
+The `Workbook` history offers a friendly API that allows grouping multiple changes into one undo step. For example, you may want to set the value of a cell and apply formatting to the same cell, and treat these two actions as a single undo operation. You can achieve this by enclosing the assignments with `BeginUndoGroup()` and `EndUndoGroup()` methods.
         
 
-__Example 3__ demonstrates how to create an undo group.
+**Example 3** demonstrates how to create an undo group.
         
 
-#### __Example 3: Create undo group__
+**Example 3: Create Undo Group**
 
 <snippet id='codeblock-cix'/>
 
@@ -66,13 +66,13 @@ __Example 3__ demonstrates how to create an undo group.
 
 ## Clear History
 
-To clear the history you just have to call the __Clear()__ method of the __WorkbookHistory__ class. Note that you cannot clear the history if you are recording an undo group. If you attempt to call the method after invoking __BeginUndoGroup()__ an exception is be thrown. The following snippet illustrates how to clear workbook's history.
+To clear the history, call the `Clear()` method of the `WorkbookHistory` class. You cannot clear the history if you are recording an undo group. If you attempt to call the method after invoking `BeginUndoGroup()`, an exception is thrown. The following snippet illustrates how to clear the workbook history.
         
 
-__Example 4__ clears the history of a workbook.
+**Example 4** clears the history of a workbook.
         
 
-#### __Example 4: Clear history__
+**Example 4: Clear History**
 
 <snippet id='codeblock-ciy'/>
 

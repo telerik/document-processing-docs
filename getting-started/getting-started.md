@@ -166,7 +166,7 @@ Choose the next article based on the document type or application type you are w
 
 Use the following library-specific articles when you need API-level guidance after installation.
 
-### Words (text) processing
+### Words (Text) Processing
 
 * [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%})
 
@@ -178,7 +178,7 @@ Use the following library-specific articles when you need API-level guidance aft
 
 * [Export to TXT (plain text) using TxtFormatProvider]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%})
 
-### Spreadsheet processing
+### Spreadsheet Processing
 
 * [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%})
 
@@ -194,19 +194,19 @@ Use the following library-specific articles when you need API-level guidance aft
 
 * [Export to TXT (plain text) using TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%})
 
-### Fast spreadsheet generation
+### Fast Spreadsheet Generation
 
 * [Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})
 
-### PDF processing
+### PDF Processing
 
 * [Getting Started with RadPdfProcessing]({%slug radpdfprocessing-getting-started%})
 
 * [Import/export from/to PDF using PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 
-### Working with ZIP files
+### Working with ZIP Files
 
-* [Getting started with RadZipLibrary]({%slug radziplibrary-gettingstarted%})
+* [Getting Started with RadZipLibrary]({%slug radziplibrary-gettingstarted%})
 
 ## See Also
 

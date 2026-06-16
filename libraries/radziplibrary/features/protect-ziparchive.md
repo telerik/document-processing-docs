@@ -1,6 +1,7 @@
 ---
 title: Protect ZipArchive
 page_title: Protect ZipArchive
+description: Learn how to create and read password-protected ZIP archives with RadZipLibrary using PKWARE and AES encryption algorithms.
 slug: radziplibrary-protect-ziparchive
 tags: protection, archive, radziplibrary, zip, password, encryption, aes, pkware
 published: True
@@ -9,15 +10,15 @@ position: 1
 
 # Protect ZipArchive
 
-__RadZipLibrary__ lets you protect a ZIP archive with a password. This help article will teach you how to use __RadZipLibrary__ to password-protect files and how to open files that are protected with a password. To protect a ZIP archive and all [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) items in it, you should specify encryption settings when creating the [ZipArchive]({%slug radziplibrary-gettingstarted%}) object.     
+**RadZipLibrary** lets you protect a ZIP archive with a password. This article describes how to use **RadZipLibrary** to password-protect files and how to open files that are protected with a password. To protect a ZIP archive and all [`ZipArchiveEntry`]({%slug radziplibrary-update-ziparchive%}) items in it, specify encryption settings when creating the [`ZipArchive`]({%slug radziplibrary-gettingstarted%}) object.
 
-__RadZipLibrary__ supports the following encryption algorithms:
+**RadZipLibrary** supports the following encryption algorithms:
 
-* Traditional **PKWARE** encryption algorithm - the settings for this encryption type are represented by the **PasswordEncryptionSettings** class.
+* Traditional **PKWARE** encryption algorithm—the settings for this encryption type are represented by the `PasswordEncryptionSettings` class.
 
-*  Strong **AES** encryption algorithm - introduced in **2024 Q1**.
+* Strong **AES** encryption algorithm—introduced in **2024 Q1**.
 
->note AES encryption (Advanced Encryption Standard) is commonly used to secure sensitive information, such as credit card numbers, passwords, and personal data. It uses a symmetric-key algorithm, meaning the same key is used for both encrypting and decrypting the data. AES encryption uses a fixed-length key of 128, 192, or 256 bits to encrypt and decrypt data.
+>note AES encryption (Advanced Encryption Standard) is commonly used to secure sensitive information, such as credit card numbers, passwords, and personal data. It uses a symmetric-key algorithm, meaning the same key encrypts and decrypts the data. AES encryption uses a fixed-length key of 128, 192, or 256 bits to encrypt and decrypt data.
 
 * [Create a Password-protected ZipArchive](#create-a-password-protected-ziparchive)
 
@@ -25,30 +26,29 @@ __RadZipLibrary__ supports the following encryption algorithms:
 
 ## Create a Password-Protected ZipArchive
 
-In order to create a password-protected ZIP archive, you need to pass a **PasswordEncryptionSettings** object to the __ZipArchive__'s constructor along with the **CompressionSettings** and **Encoding** parameter.
-        
-**PasswordEncryptionSettings** has a __Password__ property of type string, which represents the used password.
- 
-#### __Example 1: Create a password-protected ZIP archive__
+To create a password-protected ZIP archive, pass a `PasswordEncryptionSettings` object to the `ZipArchive` constructor along with the `CompressionSettings` and `Encoding` parameter.
+
+`PasswordEncryptionSettings` has a `Password` property of type `string`, which represents the used password.
+
+**Example 1: Create a password-protected ZIP archive**
 
 <snippet id='codeblock-dsn'/>
 
->tip You must always dispose of the ZIP archive object when all operations that use it are completed. Telerik Support recommends that you declare and instantiate the ZIP archive object in a using statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
-          
+>tip Always dispose of the ZIP archive object when all operations are completed. Declare and instantiate the ZIP archive object in a `using` statement. If that is not possible, call the `Dispose()` method when you complete all operations.
+
 ## Read a Password-Protected ZipArchive
 
-In order to open a password-protected __ZipArchive__, you need to pass a __DefaultEncryptionSettings__ object with the password that was used to create the archive in the first place.
-                
+To open a password-protected `ZipArchive`, pass a `DefaultEncryptionSettings` object with the password that was used to create the archive in the first place.
 
-#### __Example 2: Open and read a password-protected ZIP archive__
+**Example 2: Open and read a password-protected ZIP archive**
 
 <snippet id='codeblock-dso'/>
 
->tip You must always dispose of the ZIP archive object when all operations that use it are completed. We recommend that you declare and instantiate the ZIP archive object in a **using** statement. If it is not possible for some reason, then do not forget to call the __Dispose()__ method when you complete all operations.
-          
+>tip Always dispose of the ZIP archive object when all operations are completed. Declare and instantiate the ZIP archive object in a `using` statement. If that is not possible, call the `Dispose()` method when you complete all operations.
+
 ## See Also
 
- * [Getting Started]({%slug radziplibrary-gettingstarted%})
- * [Update ZipArchive]({%slug radziplibrary-update-ziparchive%})
- * [ZipLibrary Archive Protection Demo](https://demos.telerik.com/document-processing/ziplibrary/archive_protection)
- * [How to Read Folder's Content from a Protected Archive Using Telerik ZipLibrary]({%slug read-folder-encrypted-archive%})
+* [Getting Started]({%slug radziplibrary-gettingstarted%})
+* [Update ZipArchive]({%slug radziplibrary-update-ziparchive%})
+* [ZipLibrary Archive Protection Demo](https://demos.telerik.com/document-processing/ziplibrary/archive_protection)
+* [How to Read Folder's Content from a Protected Archive Using Telerik ZipLibrary]({%slug read-folder-encrypted-archive%})

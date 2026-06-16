@@ -17,7 +17,7 @@ ticketid: 1675661
 
 ## Description
 
-This article shows a sample approach how to convert a **colored** PDF document to a **grayscale** one with [RadPdfProcessing]({%slug radpdfprocessing-overview%}). 
+This article shows how to convert a **colored** PDF document to a **grayscale** one with [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
 ![Converting Colored PDF Documents to GrayScale](images/convert-grascale-pdf.png)   
 
@@ -29,7 +29,7 @@ To convert a colored PDF file to black and white using Telerik Document Processi
 2. Iterate through the content of the PDF file, including [Path]({%slug radpdfprocessing-model-path%}), [TextFragment]({%slug radpdfprocessing-model-textfragment%}), and [Image]({%slug radpdfprocessing-model-image%}) instances.
 3. Modify the colors to grayscale and export the processed file as a new PDF document.
 
-Here is a complete code snippet that demonstrates how to achieve this conversion:
+The following code example shows how to achieve this conversion:
 
 ```csharp
         static void Main(string[] args)
@@ -195,11 +195,11 @@ Here is a complete code snippet that demonstrates how to achieve this conversion
         }
 ```
 
-Ensure to adjust the `MakeGrayscale` methods for `ColorBase`, `Path`, and `Image` according to your specific needs. This sample demonstrates the basic approach to converting document elements to grayscale but might require adjustments for complex scenarios or specific color processing requirements.
+Adjust the `MakeGrayscale` methods for `ColorBase`, `Path`, and `Image` according to your specific needs. This sample shows the basic approach to converting document elements to grayscale and may require adjustments for complex scenarios or specific color processing requirements.
 
 ## See Also
 
-- [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
-- [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%}) 
-- [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
-- [Converting Colored PDF Document Images to GrayScale in .NET Standard]({%slug convert-pdf-grayscale-aspnet-core%})
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [Generating a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
+* [Generating a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
+* [Converting Colored PDF Document Images to Grayscale in .NET Standard]({%slug convert-pdf-grayscale-aspnet-core%})

@@ -22,7 +22,7 @@ Learn how to extract the text from specific rectangular areas within PDF pages.
 
 ## Solution
 
-To extract text from a specific rectangle or crop box within a PDF page, you can utilize the [TextFragment]({%slug radpdfprocessing-model-textfragment%}) class along with its [MatrixPosition]({%slug radpdfprocessing-concepts-position%}) property. The following code snippet demonstrates how to load a PDF document, define a rectangle that represents the desired area from which text should be extracted, and iterate through the text fragments within each page. It checks if the position of the text fragment is contained within the specified rectangle and, if so, outputs the text.
+To extract text from a specific rectangle or crop box within a PDF page, use the [TextFragment]({%slug radpdfprocessing-model-textfragment%}) class together with its [MatrixPosition]({%slug radpdfprocessing-concepts-position%}) property. The following example loads a PDF document, defines a rectangle for the target area, and iterates through the text fragments on each page. If the position of a text fragment falls within the specified rectangle, the code outputs the text.
 
 ```csharp
         static void Main(string[] args)
@@ -54,17 +54,17 @@ To extract text from a specific rectangle or crop box within a PDF page, you can
             }
         }
 ```
-The cropped middle part of the page is represented in the below screenshot:
+The following screenshot shows the cropped middle part of the page:
 
 ![Rectangle with text in PdfProcessing](images/radpdfprocessing-text-rectangle.png)   
 
-The detected text is printed in the Output console:
+The Output console displays the detected text:
 
 ![Extracted text in PdfProcessing](images/radpdfprocessing-extracted-text.png)   
 
 
 ## See Also
 
-- [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
-- [TextFragment]({%slug radpdfprocessing-model-textfragment%})
-- [MatrixPosition]({%slug radpdfprocessing-concepts-position%})
+* [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
+* [TextFragment]({%slug radpdfprocessing-model-textfragment%})
+* [MatrixPosition]({%slug radpdfprocessing-concepts-position%})

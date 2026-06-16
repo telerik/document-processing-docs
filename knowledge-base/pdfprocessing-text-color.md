@@ -1,6 +1,6 @@
 ---
 title: Setting Text Color Using PdfProcessing
-description: Learn how to set/change text color using the Telerik PdfProcessing library.
+description: Learn how to set or change the text color of a Block element by using the FillColor property with the RadPdfProcessing library.
 type: how-to
 page_title: How to Set Text Color Using PdfProcessing
 meta_title: How to Set Text Color Using PdfProcessing
@@ -24,9 +24,9 @@ Learn how to change the text color of a [Block]({%slug radpdfprocessing-editing-
 
 ## Solution
 
-To set the text color of a block, use the `FillColor` property of the [Block]({%slug radpdfprocessing-editing-block%})'s `GraphicProperties`. This property determines the color used for rendering the content elements of a block. To apply the change only to specific text, use the `SaveGraphicProperties()` and `RestoreGraphicProperties()` methods. These methods allow you to apply a temporary change and revert to the previous settings.
+To set the text color of a block, use the `FillColor` property of the [Block]({%slug radpdfprocessing-editing-block%})'s `GraphicProperties`. This property determines the color used for rendering the content elements of a block. To apply the change only to specific text, use the `SaveGraphicProperties()` and `RestoreGraphicProperties()` methods. These methods let you apply a temporary change and revert to the previous settings.
 
-### Example Code
+**Example 1: Set Text Color with FillColor**
 
 ```csharp
 RadFixedDocument document = new RadFixedDocument();
@@ -65,4 +65,4 @@ Process.Start(new ProcessStartInfo() { UseShellExecute = true, FileName = fileNa
 
 ## See Also
 
-- [Text and Graphic Properties in PdfProcessing]({%slug radpdfprocessing-editing-text-and-graphic-properties%})  
+* [Text and Graphic Properties in PdfProcessing]({%slug radpdfprocessing-editing-text-and-graphic-properties%})

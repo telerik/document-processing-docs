@@ -20,7 +20,7 @@ This article shows how to measure text in [WordsProcessing]({%slug radwordsproce
 
 ## Solution
 
-You can measure a text by passing the text- and font properties of the [Run]({%slug radwordsprocessing-model-run%}) you want to insert to the __MeasureText__ method of a __Telerik.Windows.Documents.Spreadsheet.Extensibility.[SpreadFixedTextMeasurer](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/cross-platform-support/text-measure#spreadfixedtextmeasurer)__ instance. Due to [Font Limitations]({%slug radpdfprocessing-cross-platform-fonts%}) of the [PdfProcessing]({%slug radpdfprocessing-overview%}) library in .NET Standard you would have to provide a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) as well:
+You can measure text by passing the text and font properties of the [Run]({%slug radwordsprocessing-model-run%}) you want to insert to the `MeasureText` method of a `Telerik.Windows.Documents.Spreadsheet.Extensibility.`[SpreadFixedTextMeasurer](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/cross-platform-support/text-measure#spreadfixedtextmeasurer) instance. Due to [Font Limitations]({%slug radpdfprocessing-cross-platform-fonts%}) of the [PdfProcessing]({%slug radpdfprocessing-overview%}) library in .NET Standard, you must provide a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) as well:
 
 ```csharp
 using System.Diagnostics;
@@ -230,8 +230,9 @@ public class FontsProvider : FontsProviderBase
     }
 }
 ```
-#### Result:
-![WordsProcessing Measure Text .NET Standard](images/wordsprocessing-measure-text-netstandard.png) 
+### Result
+
+![WordsProcessing Measure Text .NET Standard](images/wordsprocessing-measure-text-netstandard.png)
 
 ## See Also
 

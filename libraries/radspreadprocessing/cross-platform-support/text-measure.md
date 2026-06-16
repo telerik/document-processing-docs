@@ -1,7 +1,7 @@
 ---
 title: Text Measuring
 page_title: Text Measuring
-description: Read the topic to get a better understanding of how you can control the way the text is measured when exporting spreadsheets to PDF using SpreadProcessing for .NET Standard.
+description: Learn how to control text measuring when exporting spreadsheets to PDF with SpreadProcessing for .NET Standard using built-in or custom text measurers.
 slug: radspreadprocessing-cross-platform-text-measure
 tags: textmeasuring, crossplatform, pdf, spreadsheet, radspreadprocessing, export, dotnet, fonts, excel, xlsx
 platforms: blazor, core, winui, maui
@@ -11,13 +11,13 @@ position: 1
 
 # Text Measuring
 
-SpreadProcessing provides a built-in functionality and an extensibility point for text measuring to overcome the limitation of .NET Standard. Since the platform is intended to work on different devices, it doesn't expose text measuring API and SpreadProcessing must have its own one to find out the letters and words size when exporting to PDF.
+SpreadProcessing provides a built-in functionality and an extensibility point for text measuring to overcome the limitation of .NET Standard. Because the platform is intended to work on different devices, it does not expose a text measuring API. SpreadProcessing must have its own API to find out the letter and word sizes when exporting to PDF.
 
-This topic describes the default and the extended implementations used to measure text while exporting to PDF.
+The following sections describe the default and the extended implementations used to measure text while exporting to PDF.
 
 ## Using a Text Measurer
 
-The **SpreadExtensibilityManager** static class exposes the **TextMeasurer** property. This property defines the specific implementation that is used to measure the text content when needed. You can use the following values for this property:
+The `SpreadExtensibilityManager` static class exposes the `TextMeasurer` property. This property defines the specific implementation that measures the text content when needed. You can use the following values for this property:
 
 | Value | Description |
 |---|---|
@@ -30,23 +30,23 @@ The **SpreadExtensibilityManager** static class exposes the **TextMeasurer** pro
 
 This is the measurer used by default when exporting to PDF.
 
-The width of the columns in Excel is stored as a character count calculated based on the maximum width of the digits from 0 to 9 with the Normal Style of the document applied to them. SimpleTextMeasurer uses the measured width of the digits for a predefined set of font families to calculate the column width based on the length of the text multiplied by the calculated character size. 
+The width of the columns in Excel is stored as a character count calculated based on the maximum width of the digits from 0 to 9 with the Normal Style of the document applied to them. `SimpleTextMeasurer` uses the measured width of the digits for a predefined set of font families to calculate the column width based on the length of the text multiplied by the calculated character size.
 
 | Property | Description |
 |---|---|
 | `TextMeasurer` | Gets or sets a `SpreadTextMeasurerBase` instance used to provide text measuring. The default value is `SimpleTextMeasurer`. |
 
-> The SimpleTextMeasurer provides basic functionality for text measuring and the results might not be satisfying in each case. For better results, use [SpreadFixedTextMeasurer](#spreadfixedtextmeasurer).
+> The `SimpleTextMeasurer` provides basic functionality for text measuring and the results might not be satisfying in each case. For better results, use [SpreadFixedTextMeasurer](#spreadfixedtextmeasurer).
 
 ## SpreadFixedTextMeasurer
 
-This implementation uses PdfProcessing to obtain the size of the text and provides great precision. You need to explicitly set it to the **TextMeasurer** property of **SpreadExtensibilityManager**.
+This implementation uses PdfProcessing to obtain the size of the text and provides great precision. You need to explicitly set it to the `TextMeasurer` property of `SpreadExtensibilityManager`.
 
->note Due to the [Font Limitations]({%slug radpdfprocessing-cross-platform-fonts%}) of the [PdfProcessing]({%slug radpdfprocessing-overview%}) library in .NET Standard, you should provide a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) as well.
+>note Due to the [Font Limitations]({%slug radpdfprocessing-cross-platform-fonts%}) of the [PdfProcessing]({%slug radpdfprocessing-overview%}) library in .NET Standard, you must provide a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) as well.
 
->important To use the **SpreadFixedTextMeasurer** class, you must add a reference to **Telerik.Documents.Fixed**.
+>important To use the `SpreadFixedTextMeasurer` class, you must add a reference to **Telerik.Documents.Fixed**.
 
-#### Example 1: Set the SpreadFixedTextMeasurer as a text measurer
+**Example 1: Set the SpreadFixedTextMeasurer as a text measurer**
 
 <snippet id='codeblock-cgf'/>
 
@@ -55,15 +55,15 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
 |Minimum Version|Q3 2025|
 |----|----|
 
-The **SkiaTextMeasurer** is a cross-platform text measurer that provides consistent text layout behavior across all supported platforms. Unlike other available measurer implementations, it also supports advanced font features like *kerning*, *ligatures*, *contextual shaping*, and more. This implementation reduces the need for maintaining multiple text measurement implementations across different platforms.
+The `SkiaTextMeasurer` is a cross-platform text measurer that provides consistent text layout behavior across all supported platforms. Unlike other available measurer implementations, it also supports advanced font features like *kerning*, *ligatures*, *contextual shaping*, and more. This implementation reduces the need for maintaining multiple text measurement implementations across different platforms.
 
 ### Required References
 
-To use the **SkiaTextMeasurer** class, you can reference it in one of the following ways:
+To use the `SkiaTextMeasurer` class, reference it in one of the following ways:
 
 #### Using NuGet Packages (Recommended)
 
-- **Telerik.Documents.TextMeasurer.Skia** - This package automatically includes all required dependencies
+* **Telerik.Documents.TextMeasurer.Skia** - This package automatically includes all required dependencies
 
 #### Using Assembly References
 
@@ -71,33 +71,32 @@ If you prefer to reference assemblies directly, you need:
 
 |Assembly|Description|
 |----|----|
-|**Telerik.Documents.TextMeasurer.Skia.dll**|Main assembly containing the SkiaTextMeasurer class|
+|**Telerik.Documents.TextMeasurer.Skia.dll**|Main assembly containing the `SkiaTextMeasurer` class|
 |**Telerik.Text.Skia.dll**|Required dependency of Telerik.Documents.TextMeasurer.Skia.|
 |**SkiaSharp.HarfBuzz.dll** (version {{site.harfbuzzsharp}}) (and all of its dependencies)|Required dependency of Telerik.Text.Skia.dll, along with all its dependencies|
 
-#### Example 2: Set the SkiaTextMeasurer as a text measurer
+**Example 2: Set the SkiaTextMeasurer as a text measurer**
 
 <snippet id='libraries-spread-crossplatform-textmeasuring-setskiatextmeasurer'/>
 
 ## Custom Text Measurer
 
-You can assign any **SpreadTextMeasurerBase** implementation to the **SpreadExtensibilityManager.TextMeasurer** property. All you should do is to inherit the abstract **SpreadTextMeasurerBase**, implement the required members and set the new implementation to the TextMeasurer property.
+You can assign any `SpreadTextMeasurerBase` implementation to the `SpreadExtensibilityManager.TextMeasurer` property. Inherit the abstract `SpreadTextMeasurerBase` class, implement the required members, and set the new implementation to the `TextMeasurer` property.
 
-#### **Example 3: Create a custom implementation inheriting the SpreadTextMeasurerBase abstract class**
+**Example 3: Create a custom implementation inheriting the SpreadTextMeasurerBase abstract class**
 
 <snippet id='codeblock-cgg'/>
 
-
-#### **Example 4: Set the custom implementation as a text measurer**
+**Example 4: Set the custom implementation as a text measurer**
 
 <snippet id='codeblock-cgh'/>
 
-
 ## See Also
- * [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
- * [Cross-Platform Support]({%slug radspreadprocessing-cross-platform%})
- * [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
- * [Using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
- * [PdfProcessing Library Documentation]({%slug radpdfprocessing-overview%})
- * [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})
- * [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})
+
+* [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
+* [Cross-Platform Support]({%slug radspreadprocessing-cross-platform%})
+* [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
+* [Using PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+* [PdfProcessing Library Documentation]({%slug radpdfprocessing-overview%})
+* [How to Measure Text in WordsProcessing .NET Framework]({%slug wordsprocessing-measure-text-netframework%})
+* [How to Measure Text in WordsProcessing .NET Standard]({%slug wordsprocessing-measure-text-netstandard%})

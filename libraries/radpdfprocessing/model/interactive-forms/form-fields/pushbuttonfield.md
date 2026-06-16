@@ -7,25 +7,16 @@ tags: pushbuttonfield, pdf, formfields, radpdfprocessing, acroform, interactive,
 published: True
 ---
 
+# PushButtonField Class
 
-# PushButtonField class
-
-This article describes the following topics:
-
-* [PushButtonField Class Overview](#overview)
-
-* [PushButtonField Class Properties](#properties)
-
-## Overview
-
-This class corresponds to FormFieldType.PushButton enum value and represents a simple button that may be clicked with the mouse. This is the only field that does not preserve any data. It is usually used to execute some action on mouse click. For the supported by PdfProcessing actions, check the [Links]({%slug radpdfprocessing-model-annotations-links%}#action) help topic.
+The `PushButtonField` class corresponds to the `FormFieldType.PushButton` enum value and represents a simple button that you can click with the mouse. This is the only field that does not preserve any data. It is typically used to execute an action on mouse click. For the actions supported by RadPdfProcessing, see the [Links]({%slug radpdfprocessing-model-annotations-links%}#action) article.
 
 ## Properties
 
-PushButtonField provides a single property called **Widgets**. It represents the collection of Widget annotations, which visualize the field on the PDF pages. The widgets can be added and removed from the collection using the collection's **AddWidget()** and **Remove()** methods respectively. As the widget collection implements the **IEnumerable** interface, the available widget instances can be iterated.
+`PushButtonField` provides a single property called `Widgets`. It represents the collection of Widget annotations, which visualize the field on the PDF pages. You can add and remove widgets from the collection with the `AddWidget()` and `Remove()` methods. The widget collection implements the `IEnumerable` interface, so you can iterate the available widget instances.
 
+**Example 1: Create a PushButtonField and add it to a page**
 
-#### **Example 1: Create a PushButtonField and add it to a page**
 <snippet id='pdf-push-button-field'/>
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
@@ -34,5 +25,5 @@ PushButtonField provides a single property called **Widgets**. It represents the
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
-* [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms) 
-* [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms) 
+* [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
+* [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms)

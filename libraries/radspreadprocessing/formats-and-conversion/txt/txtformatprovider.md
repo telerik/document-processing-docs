@@ -12,31 +12,26 @@ position: 1
 
 
 
-__TxtFormatProvider__ makes it easy to import and export TXT files. Note that TXT is a plain text format and holds only the contents of the worksheet without its formatting. Exporting a file to this format strips all styling and saves only cell's result value with their format applied using tab as a delimiter. Moreover, it exports only the contents of the active worksheet – no support for exporting multiple worksheets into a txt at once is available. Importing from TXT respectively creates a new workbook with a single worksheet named *Sheet1*.
-      
+`TxtFormatProvider` makes it easy to import and export TXT files. TXT is a plain text format and holds only the contents of the worksheet without its formatting. Export to this format strips all styling and saves only the cell result value with the applied format, using tab as a delimiter. The provider exports only the contents of the active worksheet. Import from TXT creates a new workbook with a single worksheet named *Sheet1*.
 
-In order to import and export txt files, you need an instance of __TxtFormatProvider__, which is contained in the Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt namespace. The __TxtFormatProvider__ implements the interface __IWorkbookFormatProvider__ that appears in the Telerik.Windows.Documents.Spreadsheet.FormatProviders namespace.
-      
->note For more examples and application scenarios of Importing and Exporting a Workbook to various formats using a FormatProvider check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
+To import and export TXT files, you need an instance of `TxtFormatProvider`, which is contained in the `Telerik.Windows.Documents.Spreadsheet.FormatProviders.TextBased.Txt` namespace. The `TxtFormatProvider` implements the `IWorkbookFormatProvider` interface that appears in the `Telerik.Windows.Documents.Spreadsheet.FormatProviders` namespace.
+
+>note For more examples and application scenarios of importing and exporting a Workbook to various formats using a FormatProvider, check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
   
 
 ## Import
 
-__Example 1__ shows how to import a txt file using a FileStream. The sample instantiates a __TxtFormatProvider__ and passes a FileStream to its __Import()__ method:
-        
+**Example 1** shows how to import a TXT file using a FileStream. The sample creates a `TxtFormatProvider` instance and passes a FileStream to its `Import()` method:
 
-#### __Example 1: Import TXT file__
+**Example 1: Import TXT File**
 
 <snippet id='codeblock-cpf'/>
 
-
-
 ## Export
 
-__Example 2__ demonstrates how to export an existing Workbook to a TXT file. The snippet creates a new workbook with a single worksheet. Further, it creates a __TxtFormatProvider__ and invokes its __Export()__ method:
-        
+**Example 2** demonstrates how to export an existing Workbook to a TXT file. The snippet creates a new workbook with a single worksheet, creates a `TxtFormatProvider`, and invokes its `Export()` method:
 
-#### __Example 2: Export TXT file__
+**Example 2: Export TXT File**
 
 <snippet id='codeblock-cpg'/>
 

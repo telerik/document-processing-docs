@@ -41,7 +41,7 @@ To simulate a checkbox using conditional formatting in Telerik SpreadProcessing,
 
 ![Conditional Formatting CheckBox](images/conditional-formatting-checkbox.png) 
 
-Here’s an example implementation:
+The following example shows the implementation:
 
 ```csharp
 Workbook workbook = new Workbook();

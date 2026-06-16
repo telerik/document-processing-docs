@@ -82,6 +82,7 @@ Paragraph paragrahLevel3 = section.Blocks.AddParagraph();
 Run runLevel3 = paragrahLevel3.Inlines.AddRun(string.Format("Level 3"));
 paragrahLevel3.StyleId = "Numbering bullet 3";
 ```
+ 
 ![WordsProcessing Paragraph Styles Bullet List](images/words-processing-paragraph-styles-bullet-list.png)
 
 ## See Also

@@ -1,6 +1,6 @@
 ---
 title: Add Html to a PDF document 
-description: Describes how you can add a HTML content to a RadFlowDocument and convert it to PDF 
+description: Learn how to add HTML content to a RadFlowDocument and convert it to a PDF document using RadWordsProcessing and RadPdfProcessing.
 type: how-to
 page_title: Add Html to a PDF document 
 slug: add-html-to-pdf-document
@@ -28,10 +28,12 @@ res_type: kb
 
 
 ## Description
-You have an HTML that needs to be converted to PDF or added to an existing document. 
+
+You have HTML content that you need to convert to PDF or add to an existing document. 
 
 ## Solution
-You can use the WordsProcessing library to convert the content to a RadFlowDocument and then insert it to the existing document along with other content.  
+
+Use the WordsProcessing library to convert the content to a `RadFlowDocument` and then insert it into the existing document along with other content.
 
 ```csharp
 HtmlFormatProvider provider = new HtmlFormatProvider();
@@ -54,7 +56,7 @@ var pdfBytes = pdfFProvider.Export(document);
 File.WriteAllBytes("result.pdf", pdfBytes); 
 ```
 
-# See Also
+## See Also
 
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
 * [Using HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})

@@ -1,6 +1,6 @@
 ---
 title: Create Custom Image Bullets
-description: Learn how to create a list that has custom image bullets and use it in a PDF document.
+description: Learn how to create a list that has custom image bullets and use it in a PDF document with RadPdfProcessing.
 type: how-to
 page_title: Create Custom Image Bullets
 slug: create-custom-image-bullets
@@ -8,6 +8,8 @@ position: 0
 tags: radwordsprocessing, docx, bullets, image, list, styles, document, processing
 res_type: kb
 ---
+
+## Environment
 
 <table>
 <thead>
@@ -28,11 +30,11 @@ res_type: kb
 
 ## Description
 
-How to create a custom [ListLevel](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html) with custom bullets containing images.
+Create a custom [ListLevel](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html) with custom bullets that contain images.
 
 ## Solution
 
-This functionality could be achieved by creating a custom class implementing [IBulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.IBulletNumberingFormat.html) and passing it to [BulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html#collapsible-Telerik_Windows_Documents_Fixed_Model_Editing_Lists_ListLevel_BulletNumberingFormat) property of the [ListLevel](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html) class.
+Create a custom class that implements [IBulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.IBulletNumberingFormat.html) and pass it to the [BulletNumberingFormat](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html#collapsible-Telerik_Windows_Documents_Fixed_Model_Editing_Lists_ListLevel_BulletNumberingFormat) property of the [ListLevel](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html) class.
 
 ```csharp
 
@@ -61,7 +63,7 @@ This functionality could be achieved by creating a custom class implementing [IB
  
 ```
 
-#### __Create custom image numbering bullet__
+**Example 1: Creating a Custom Image Numbering Bullet**
 
 ```csharp
 
@@ -98,7 +100,7 @@ This functionality could be achieved by creating a custom class implementing [IB
 
 ```
 
-#### __Creating a custom class implementing IBulletNumberingFormat__
+**Example 2: Creating a Custom Class That Implements IBulletNumberingFormat**
 
 ```csharp
 
@@ -119,3 +121,8 @@ This functionality could be achieved by creating a custom class implementing [IB
     }
 	
 ```
+
+## See Also
+
+* [ListLevel API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.ListLevel.html)
+* [IBulletNumberingFormat API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Lists.IBulletNumberingFormat.html)

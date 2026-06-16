@@ -7,32 +7,32 @@ tags: zugferd, invoice, pdf, xml, radpdfprocessing, embedded, finance, ereceivin
 position: 1
 ---
 
-# ZUGFeRD invoices
+# ZUGFeRD Invoices
 
 |Minimum Version|Q4 2025|
 |----|----|
 
-[ZUGFeRD](https://de.wikipedia.org/wiki/ZUGFeRD) (acronym for Zentraler User Guide des Forums elektronische Rechnung Deutschland) is a specification for the electronic invoice format of the same name. **RadPdfProcessing** provides support for embedding of ZUGFeRD invoices.
+[ZUGFeRD](https://de.wikipedia.org/wiki/ZUGFeRD) (acronym for Zentraler User Guide des Forums elektronische Rechnung Deutschland) is a specification for the electronic invoice format of the same name. **RadPdfProcessing** supports embedding ZUGFeRD invoices.
 
-### Creating an Embedded Electronic (ZUGFeRD) Invoice
+## Creating an Embedded Electronic (ZUGFeRD) Invoice
 
-#### **Add ZUGFeRD invoice**
+### Add ZUGFeRD Invoice
 
 <snippet id='pdf-add-zugferd-invoice'/>
 
 >note Only a single XML invoice attachment is allowed according to the ZUGFeRD standard.
 
->important To comply with the PDF/A-3B standard all the fonts in the documents should be embedded, so please avoid using [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) because they are not being embedded in the document. In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+>important To comply with the PDF/A-3B standard, all the fonts in the documents must be embedded. Avoid using [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) because they are not embedded in the document. In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
-#### **Remove ZUGFeRD invoice**
+### Remove ZUGFeRD Invoice
 
 <snippet id='pdf-remove-zugferd-invoice'/>
 
 ## ZugferdConformanceLevel 
 
-As of **Q4 2025** RadPdfProcessing provides support for specifying the ZUGFeRD (Factur-X) **conformance level** to use when exporting PDF invoices. Higher levels generally include all requirements of the lower levels and add more structured data to support automated processing and validation scenarios.
+Starting with **Q4 2025**, RadPdfProcessing supports specifying the ZUGFeRD (Factur-X) **conformance level** when exporting PDF invoices. Higher levels generally include all requirements of the lower levels and add more structured data to support automated processing and validation scenarios.
 
-RadPdfProcessing offers the functionality to specify the **ZugferdConformanceLevel** when embedding the invoice. The available options are:
+RadPdfProcessing allows you to set the `ZugferdConformanceLevel` when embedding the invoice. The available options are:
 
 | Level | Description |
 |---|---|
@@ -45,7 +45,7 @@ RadPdfProcessing offers the functionality to specify the **ZugferdConformanceLev
 
 ## Validating Documents
 
-RadPdfProcessing follows the business‑rule validation for ZUGFeRD / Factur‑X XML published by European Committee for Standardization: [Open-source E-invoice Validator](https://interoperable-europe.ec.europa.eu/collection/eprocurement/news/open-source-e-invoice-validator).
+RadPdfProcessing follows the business-rule validation for ZUGFeRD / Factur-X XML published by European Committee for Standardization: [Open-source E-invoice Validator](https://interoperable-europe.ec.europa.eu/collection/eprocurement/news/open-source-e-invoice-validator).
 
 ## See Also
 

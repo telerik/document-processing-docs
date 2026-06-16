@@ -51,7 +51,7 @@ Use this workflow for every project that references Telerik Document Processing 
 <PackageReference Include="Telerik.Licensing" Version="1.*" />
 ```
 
->important The `Telerik.Licensing` verifies the DevSeat association at the time your classlib is built, and also provisions at runtime licenses in the Root app. When you have a setup such as **"Root app -> classlib -> Telerik UI"**, the Telerik UI will execute and verify the licensing for the classlib, but will not be applied transitively in the Root app. That's why you **need to add the Telerik.Licensing NuGet package reference to Root app manually**.
+>important The `Telerik.Licensing` verifies the DevSeat association at the time your classlib is built, and also provisions at runtime licenses in the Root app. When you have a setup such as **"Root app -> classlib -> Telerik UI"**, the Telerik UI will execute and verify the licensing for the classlib, but will not be applied transitively in the Root app. That is why you **need to add the Telerik.Licensing NuGet package reference to Root app manually**.
 
 When you build the project, the `Telerik.Licensing` NuGet package automatically locates the license file and uses it to activate the product.
 
@@ -102,7 +102,7 @@ If you use a class library between the root app and Telerik Document Processing,
 
 Telerik strongly recommends the use of NuGet packages whenever possible. Include the license key as a code snippet only when NuGet packages are not an option.
 
-If you’re not using NuGet packages in your project, add the license as a code snippet:
+If you are not using NuGet packages in your project, add the license as a code snippet:
 
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
 1. On the corresponding product row, click the **Script Key** link in the **SCRIPT KEY** column.

@@ -17,7 +17,7 @@ ticketid: 1695863
 
 ## Description
 
-The current implementation of the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library cannot handle `WEBP` images when exporting Word documents. This article shows how to convert `WEBP` images to any of the already [supported formats]({%slug radwordsprocessing-model-imageinline%}) (like PNG), so they can be exported successfully.
+The current implementation of the [RadWordsProcessing]({%slug radwordsprocessing-overview%}) library does not handle `WEBP` images when exporting Word documents. This article shows how to convert `WEBP` images to any of the [supported formats]({%slug radwordsprocessing-model-imageinline%}) (such as PNG), so they can be exported successfully.
 
 ## Solution
 
@@ -33,7 +33,7 @@ This solution uses an HTML document as an example. To handle its `WEBP` images b
 
 5. Export the document to [DOCX]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
 
-Here is the complete implementation:
+The following is the complete implementation:
 
 ```csharp
 using Telerik.Windows.Documents.Flow.Model;
@@ -88,5 +88,5 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 
 ## See Also
 
-- [Supported Image Formats]({%slug radwordsprocessing-model-imageinline%})
-- [RadWordsProcessing]({%slug radwordsprocessing-overview%})
+* [Supported Image Formats]({%slug radwordsprocessing-model-imageinline%})
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%})

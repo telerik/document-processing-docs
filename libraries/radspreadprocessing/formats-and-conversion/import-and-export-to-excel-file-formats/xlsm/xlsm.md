@@ -13,8 +13,8 @@ platforms: core, mvc, ajax, blazor, wpf, winforms, winui
 # Xlsm
 
 
-An XLSM file is a **macro-enabled spreadsheet created by Microsoft Excel** for representing spreadsheets that support Macros and is one of the supported formats by __RadSpreadProcessing__.
+An XLSM file is a **macro-enabled spreadsheet created by Microsoft Excel** for representing spreadsheets that support macros. It is one of the supported formats in `RadSpreadProcessing`.
 
-If you would like to work with Xlsm files in SpreadProcessing, check the [Using XlsmFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider%}) article.
+To work with XLSM files in SpreadProcessing, see the [XlsmFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider%}) article.
 
-> Currently, the Macros are only preserved during import and export. They cannot be executed or changed in the code.
+> Currently, macros are only preserved during import and export. They cannot be executed or changed in the code.

@@ -18,21 +18,21 @@ ticketid: 1653594
 
 ## Description
 
-This article shows a sample approach how to load an original PDF document, crop the central 1/3 part of the PDF page, and extract this part to an image.
+This article shows how to load an original PDF document, crop the central 1/3 part of the PDF page, and extract this part to an image.
 
 ## Solution
 
-To achieve the desired functionality of cropping parts of a PDF page and saving them as images, follow the steps below. Note that OCR functionality is not directly supported by RadPdfProcessing, but you can use external libraries for that purpose after exporting the images.
+To crop parts of a PDF page and save them as images, follow the steps below. OCR is not directly supported by `RadPdfProcessing`, but you can use external libraries for that purpose after exporting the images.
 
 1. **Load the PDF document** using the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) and create a `RadFixedDocument`.
 
-2. Set the **CropBox** for each page to define the area you want to crop. The CropBox property specifies the region of the page to be displayed or printed.
+2. Set the `CropBox` for each page to define the area you want to crop. The `CropBox` property specifies the region of the page to display or print.
 
-3. **Export the cropped pages as images**. You can use the [RadPdfViewer](https://docs.telerik.com/devtools/winforms/controls/pdfviewer/overview) which offers [export to image](https://docs.telerik.com/devtools/winforms/controls/pdfviewer/export-to-image) functionality out of the box.
+3. **Export the cropped pages as images**. You can use the [RadPdfViewer](https://docs.telerik.com/devtools/winforms/controls/pdfviewer/overview) which offers the [export to image](https://docs.telerik.com/devtools/winforms/controls/pdfviewer/export-to-image) feature without additional configuration.
 
->note For covering .NET Standard scenarios, use the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}).
+>note For .NET Standard scenarios, use the [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}).
 
-Here is a simplified code example demonstrating these steps:
+Here is a simplified code example that shows these steps:
 
 ```csharp
          static void Main(string[] args)
@@ -76,9 +76,9 @@ Here is a simplified code example demonstrating these steps:
 ```
 ![Pdf CropBox](images/pdf-cropbox.png) 
 
-The above example is just a sample approach. Feel free to further fine-tune or adjust the crop rectangle according to the specific part of the page that should be extracted as an image.
+The above example is a sample approach. You can further adjust the crop rectangle according to the specific part of the page that you want to extract as an image.
 
 ## See Also
 
-- [How to Export Each Page as an Image in PDF Documents](https://docs.telerik.com/devtools/winforms/knowledge-base/pdfviewer-export-page-images-with-no-ui)
+* [How to Export Each Page as an Image in PDF Documents](https://docs.telerik.com/devtools/winforms/knowledge-base/pdfviewer-export-page-images-with-no-ui)
 

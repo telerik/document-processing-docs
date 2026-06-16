@@ -12,43 +12,43 @@ position: 0
 
 
 
-A formula is an algebraic expression that contains values, operators, functions, and references to cells. The following list takes a closer look at the compound parts of formulas:
+A formula is an algebraic expression that contains values, operators, functions, and references to cells. The following list describes the compound parts of formulas:
       
 
-* __Values__: Expressions can contain numbers, booleans, strings, arrays. For example, all of the following formulas represent valid expressions that contain values of different type: *=3+4, ="Rad"&"Spreadsheet", =AND(TRUE, FALSE), =SUM({1, 2; 3, 4})*.
+* **Values**: Expressions can contain numbers, booleans, strings, and arrays. For example, all of the following formulas represent valid expressions that contain values of different type: *=3+4, ="Rad"&"Spreadsheet", =AND(TRUE, FALSE), =SUM({1, 2; 3, 4})*.
           
 
-* __Operators__: Formulas can include arithmetic, comparison, cell reference, and text operators. Examples of expressions that use operators are:*=-1+2, =B1<=4, =SUM(A1:B4), ="Rad"&"Spreadsheet"*. More information about the supported operators can be found in the [Operator]({%slug radspreadprocessing-features-formulas-operators%}) article.
+* **Operators**: Formulas can include arithmetic, comparison, cell reference, and text operators. Examples of expressions that use operators are: *=-1+2, =B1<=4, =SUM(A1:B4), ="Rad"&"Spreadsheet"*. For more information about the supported operators, see the [Operator]({%slug radspreadprocessing-features-formulas-operators%}) article.
           
 
-* __Cell references__: Formulas can contain references to cells or ranges of cells. For example, the expression *=B1+B2* adds the values of cells B1 and B2 of the current worksheet, while the formula *=SUM(B1:B5)* sums up the values of all cells between B1 and B5. Further information about cell references is available in the [Cell References]({%slug radspreadprocessing-features-formulas-cell-references%}) article.
+* **Cell references**: Formulas can contain references to cells or ranges of cells. For example, the expression *=B1+B2* adds the values of cells B1 and B2 of the current worksheet, while the formula *=SUM(B1:B5)* sums up the values of all cells between B1 and B5. For more information about cell references, see the [Cell References]({%slug radspreadprocessing-features-formulas-cell-references%}) article.
           
 
-* __Built-in functions__: You can take advantage of a large set of predefined functions that can be directly included in expressions. Examples of formulas that use built-in functions are: *=ABS(-5), =COS(PI()), =AND(B1, B2)<>OR(C1, C2)*. You can find the full list in the [Functions]({%slug radspreadprocessing-features-formulas-functions%}) article.
+* **Built-in functions**: You can use a large set of predefined functions that can be directly included in expressions. Examples of formulas that use built-in functions are: *=ABS(-5), =COS(PI()), =AND(B1, B2)<>OR(C1, C2)*. You can find the full list in the [Functions]({%slug radspreadprocessing-features-formulas-functions%}) article.
           
 
 ## Get and Set Formulas in Cells
 
-In order to set the value of a cell to a formula use the __SetValue()__ method of the [CellSelection]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}) class and pass the formula string as an argument. In order to produce a formula value the string you enter should start with either __=__ (equal) or __–__ (minus) sign, otherwise, the method treats the input as plain text.
+To set the value of a cell to a formula, use the `SetValue()` method of the [CellSelection]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}) class and pass the formula string as an argument. To produce a formula value, the string you enter must start with either `=` (equal) or `–` (minus) sign. Otherwise, the method treats the input as plain text.
         
-> The examples in the topic use numbers for simplicity. It doesn't matter whether the formula is with numbers or with cell references and you can work with any formula.
+> The examples in this topic use numbers for simplicity. The formula works the same way with numbers or with cell references.
 
-__Example 1__ creates a workbook from scratch and adds a worksheet. Further, the code assigns the value =3+4 to cell A1.
+**Example 1** creates a workbook from scratch and adds a worksheet. The code then assigns the value =3+4 to cell A1.
         
 
-#### __Example 1: Set formula__
+**Example 1: Set Formula**
 
 <snippet id='codeblock-cmx'/>
 
 
 
-Additionally to entering formulas in cells, you can retrieve and inspect formula values. If you get the value of Cell[0, 0], the result will be an object of type __FormulaCellValue__. Just like other cell values, the __FormulaCellValue__ class inherits from __CellValueBase__ class and conforms to the __ICellValue__ interface. Thus, the class exposes several important properties and useful methods that allow you to get information about both the entered value and its result value.
+In addition to entering formulas in cells, you can retrieve and inspect formula values. If you get the value of Cell[0, 0], the result is an object of type `FormulaCellValue`. Like other cell values, the `FormulaCellValue` class inherits from `CellValueBase` and conforms to the `ICellValue` interface. The class exposes several important properties and useful methods that allow you to get information about both the entered value and its result value.
         
 
-A closer look at the value of cell A1 will reveal that the two methods __GetValueAsString()__ and __GetResultValueAsString()__ return the original string of the expression and string of the computed result, respectively. Similarly, the __FormulaCellValue__ offers information about the __CellValueType__ of its value and result value through the __ValueType__ and __ResultValueType__ properties.
+A closer look at the value of cell A1 reveals that the two methods `GetValueAsString()` and `GetResultValueAsString()` return the original string of the expression and the string of the computed result, respectively. Similarly, `FormulaCellValue` offers information about the `CellValueType` of its value and result value through the `ValueType` and `ResultValueType` properties.
         
 
-#### __Example 2: Get formula value__
+**Example 2: Get Formula Value**
 
 <snippet id='codeblock-cmy'/>
 
@@ -56,5 +56,5 @@ A closer look at the value of cell A1 will reveal that the two methods __GetValu
 
 ## See Also
 
- * [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
- * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
+* [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
+* [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})

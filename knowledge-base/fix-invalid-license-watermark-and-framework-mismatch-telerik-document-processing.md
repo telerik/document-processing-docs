@@ -21,8 +21,8 @@ ticketid: 1704877
 
 It is possible to observe build errors related to the `Telerik.Licensing.Runtime.dll` assembly in a .NET Framework project, such as:
 
-- `Type 'Telerik.Licensing.EvidenceAttribute' is not defined.`
-- `warning MSB3274: The primary reference "Telerik.Licensing.Runtime, Version=1.6.5.0, Culture=neutral, PublicKeyToken=98bb5b04e55c09ef, processorArchitecture=MSIL" could not be resolved because it was built against the ".NETFramework,Version=v4.6.2" framework. This is a higher version than the currently targeted framework ".NETFramework,Version=v4.6".`
+* `Type 'Telerik.Licensing.EvidenceAttribute' is not defined.`
+* `warning MSB3274: The primary reference "Telerik.Licensing.Runtime, Version=1.6.5.0, Culture=neutral, PublicKeyToken=98bb5b04e55c09ef, processorArchitecture=MSIL" could not be resolved because it was built against the ".NETFramework,Version=v4.6.2" framework. This is a higher version than the currently targeted framework ".NETFramework,Version=v4.6".`
 
 ## Cause
 
@@ -32,16 +32,16 @@ Build errors indicate a mismatch between the project's target framework and the 
 
 ### Step 1: Add Telerik.Licensing.Runtime.dll Assembly Reference
 
-1. Locate the `Telerik.Licensing.Runtime.dll` file in the installation folder of the Telerik product you're using. For example:  
+1. Locate the `Telerik.Licensing.Runtime.dll` file in the installation folder of the Telerik product you are using. For example:  
    `C:\Program Files (x86)\Progress\Telerik Reporting 2025 Q4\Bin`
 2. Add a reference to this assembly in your project.
 
 ### Step 2: Update Target Framework
 
 1. Open your project in Visual Studio.
-2. Right-click your project → Select `Properties`.
-3. Navigate to the `Application` tab.
-4. Change the `Target Framework` to `.NET Framework 4.6.2` or higher.
+2. Right-click your project → select **Properties**.
+3. Navigate to the **Application** tab.
+4. Change the **Target Framework** to `.NET Framework 4.6.2` or later.
 5. Save changes and rebuild your solution.
 
 ### Step 3: Verify Licensing Integration
@@ -51,11 +51,11 @@ Build errors indicate a mismatch between the project's target framework and the 
 
 ### Step 4: Rebuild Solution
 
-1. Rebuild your project after ensuring the above steps have been completed.
-2. Check if the errors and watermark are resolved.
+1. Rebuild your project after completing the steps listed in the previous sections.
+2. Check whether the errors and watermark are resolved.
 
 ## See Also
 
-- [System Requirements]({%slug installation-system-requirements%})
-- [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%})
+* [System Requirements]({%slug installation-system-requirements%})
+* [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%})
 

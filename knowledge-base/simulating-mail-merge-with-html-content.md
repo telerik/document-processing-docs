@@ -1,9 +1,9 @@
 ---
-title: Simulating Mail Merge with formatted HTML content by Utilizing the Find and Replace Functionality
-description: Learn how to simulate Mail Merge with formatted HTML content using Telerik Document Processing Library.
+title: Simulating Mail Merge with Formatted HTML Content by Using the Find and Replace Functionality
+description: Learn how to simulate mail merge with formatted HTML content by using the Find and Replace functionality of RadWordsProcessing.
 type: how-to
-page_title: Simulating Mail Merge with formatted HTML content by Utilizing the Find and Replace Functionality
-meta_title: Simulating Mail Merge with formatted HTML content by Utilizing the Find and Replace Functionality
+page_title: Simulating Mail Merge with Formatted HTML Content by Using the Find and Replace Functionality
+meta_title: Simulating Mail Merge with Formatted HTML Content by Using the Find and Replace Functionality
 slug: simulating-mail-merge-with-html-content
 tags: radwordsprocessing, mailmerge, html, find, replace, document, processing, word
 res_type: kb
@@ -18,11 +18,11 @@ ticketid: 1694621
 
 ## Description
 
-This article demonstrates a sample approach how to simulate [mail merge]({%slug radwordsprocessing-editing-mail-merge%}), where formatted HTML content needs to replace placeholders in a DOCX template. When performing a mail merge, the WordProcessing library binds plain HTML text, instead of rendering the HTML with its original formatting.
+This article shows how to simulate [mail merge]({%slug radwordsprocessing-editing-mail-merge%}) when formatted HTML content needs to replace placeholders in a DOCX template. When you perform a mail merge, the `RadWordsProcessing` library binds plain HTML text instead of rendering the HTML with its original formatting.
 
 ## Solution
 
-To successfully insert the formatted HTML content, you can use the [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%}) functionality instead. Replace placeholders with the styled HTML content using the following steps:
+To insert the formatted HTML content, use the [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%}) functionality instead. Replace placeholders with the styled HTML content by following these steps:
 
 1. Import the HTML content using [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}).
 2. Import the DOCX template using [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
@@ -74,14 +74,15 @@ using (Stream output = File.OpenWrite(outputFilePath))
 Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
 
-### Notes:
-- Replace `<<EXSUSection>>` with your placeholder text.
-- Modify the code to suit your template and requirements.
-- Ensure the provided HTML content is [supported]({%slug radwordsprocessing-formats-and-conversion-html-supported-elements%}) by HtmlFormatProvider.
+### Notes
+
+* Replace `<<EXSUSection>>` with your placeholder text.
+* Modify the code to suit your template and requirements.
+* Ensure the provided HTML content is [supported]({%slug radwordsprocessing-formats-and-conversion-html-supported-elements%}) by `HtmlFormatProvider`.
 
 ## See Also
 
-- [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
-- [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
-- [Mail Merge Documentation]({%slug radwordsprocessing-editing-mail-merge%})
-- [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%}) 
+* [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
+* [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
+* [Mail Merge Documentation]({%slug radwordsprocessing-editing-mail-merge%})
+* [Find-and-Replace]({%slug radwordsprocessing-editing-find-and-replace%})

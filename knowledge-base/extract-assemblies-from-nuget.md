@@ -1,6 +1,6 @@
 ---
 title: How to Extract Assemblies Contained inside a NuGet Package
-description: Learn How to Extract Assemblies Contained inside a NuGet Package.
+description: Learn how to extract assemblies contained inside a NuGet package by renaming it to a .zip file or using 7-Zip with the Telerik Document Processing libraries.
 type: how-to
 page_title: How to Extract Assemblies Contained inside a NuGet Package
 slug: extract-assemblies-from-nuget
@@ -16,21 +16,21 @@ res_type: kb
 
 ## Description
 
-This article demonstrates how to extract the signed Tesseract.dll from the Telerik.Windows.Documents.TesseractOcr NuGet package.
+This article demonstrates how to extract the signed `Tesseract.dll` from the `Telerik.Windows.Documents.TesseractOcr` NuGet package.
 
->note A similar approach can be followed for any other NuGet package in order to extract the assemblies contained inside the **.nupkg**.
+>note You can follow a similar approach for any other NuGet package to extract the assemblies contained inside the `.nupkg` file.
 
 ## Solution
 
-1\. Right-click on the Telerik.Windows.Documents.TesseractOcr NuGet package and select **Extract** Using 7-Zip:
+1. Right-click the `Telerik.Windows.Documents.TesseractOcr` NuGet package and select **Extract** with 7-Zip:
 
-![Extract from NuGet](images/extract-from-nuget.png)     
+    ![Extract from NuGet](images/extract-from-nuget.png)     
 
-2\. Find the contained assemblies in the lib folder:
+2. Find the contained assemblies in the `lib` folder:
 
-![Extracted Assemblies](images/extracted-assemblies.png)    
+    ![Extracted Assemblies](images/extracted-assemblies.png)    
 
-3\. Use explicitly this Tesseract.dll in your project.
+3. Reference the extracted `Tesseract.dll` in your project.
 
 ## See Also
 

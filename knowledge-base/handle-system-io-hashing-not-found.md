@@ -23,11 +23,11 @@ When exporting a PDF document using the [PdfFormatProvider]({%slug radpdfprocess
 
 ## Solution
 
-The **Telerik.Windows.Documents.Fixed** NuGet package has a dependency to the System.IO.Hashing introduced in version 2026.1.304.
+The `Telerik.Windows.Documents.Fixed` NuGet package has a dependency on `System.IO.Hashing` introduced in version 2026.1.304.
 
-In case your project throws the exception at runtime, install the [System.IO.Hashing](https://www.nuget.org/packages/System.IO.Hashing/) NuGet package manually.
+If your project throws the exception at runtime, install the [System.IO.Hashing](https://www.nuget.org/packages/System.IO.Hashing/) NuGet package manually.
 
 ## See Also
 
-- [PdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [PdfProcessing Overview]({%slug radpdfprocessing-overview%})
 

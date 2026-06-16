@@ -10,13 +10,9 @@ position: 6
 
 # Geometry
 
+The `GeometryBase` class and the classes that derive from it enable you to describe the geometry of a 2D shape. You can use these geometric descriptions for clipping and drawing.
 
-
-The __GeometryBase__ class and the classes which derive from it enable you to describe the geometry of a 2D shape. These geometric descriptions can be used for clipping and drawing.
-      
-
-This article covers the supported geometry types.
-      
+This article covers the supported geometry types:
 
 * [RectangleGeometry](#rectanglegeometry)
 
@@ -37,14 +33,11 @@ This article covers the supported geometry types.
 
 ## RectangleGeometry
 
-__RectangleGeometry__ represents a two-dimensional rectangle. The class exposes the following properties:
-        
+`RectangleGeometry` represents a two-dimensional rectangle. The class exposes the following properties:
 
-* __Rect__: The dimensions of the rectangle.
-            
+* `Rect`: The dimensions of the rectangle.
 
-__Example 1__ shows how to create a RectangleGeometry.
-        
+**Example 1** shows how to create a `RectangleGeometry`.
 
 #### __Example 1: Create RectangleGeometry__
 
@@ -54,19 +47,16 @@ __Example 1__ shows how to create a RectangleGeometry.
 
 ## PathGeometry
 
-PathGeometry represents a complex shape that may be composed of curves and lines. The class exposes the following properties:
-        
+`PathGeometry` represents a complex shape that may be composed of curves and lines. The class exposes the following properties:
 
-* __Figures__: A collection of __PathFigure__ objects which describe the contents of the PathGeometry.
+* `Figures`: A collection of `PathFigure` objects that describe the contents of the `PathGeometry`.
 
-* __FillRule__: Specifies how the intersecting areas contained in the PathGeometry are combined.
-	 * __EvenOdd__: Determines whether a point is inside a path by drawing a ray from that point in any direction and simply counting the number of path segments that cross the ray. If the number is odd, the point is inside. If even, the point is outside.
+* `FillRule`: Specifies how the intersecting areas contained in the `PathGeometry` are combined.
+	 * `EvenOdd`: Determines whether a point is inside a path by drawing a ray from that point in any direction and counting the number of path segments that cross the ray. If the number is odd, the point is inside. If even, the point is outside.
 	 
-	 * __Nonzero__: Determines whether a given point is inside a path by conceptually drawing a ray from that point to infinity in any direction and then examining the places where a segment of the path crosses the ray. Starting with a count of zero, the rule adds one each time a path segment crosses the ray from left to right and subtracts one each time a segment crosses from right to left. After counting all the crossings, if the result is zero, the point is outside the path. Otherwise, it is inside.
-                
+	 * `Nonzero`: Determines whether a given point is inside a path by conceptually drawing a ray from that point to infinity in any direction and then examining the places where a segment of the path crosses the ray. Starting with a count of zero, the rule adds one each time a path segment crosses the ray from left to right and subtracts one each time a segment crosses from right to left. After counting all the crossings, if the result is zero, the point is outside the path. Otherwise, it is inside.
 
-__Example 2__ shows how to create a PathGeometry, which consists of line segments and bezier segments.
-        
+**Example 2** shows how to create a `PathGeometry` that consists of line segments and Bezier segments.
 
 #### __Example 2: Create PathGeometry__
 
@@ -76,73 +66,64 @@ __Example 2__ shows how to create a PathGeometry, which consists of line segment
 
 ## PathFigure
 
-__PathFigure__ represents a subsection of a __PathGeometry__.The class exposes the following properties:
-        
+`PathFigure` represents a subsection of a `PathGeometry`. The class exposes the following properties:
 
-* __Segments__: A collection of __PathSegment__ objects that define the shape of this PathFigure.
+* `Segments`: A collection of `PathSegment` objects that define the shape of this `PathFigure`.
 
-* __StartPoint__: The point where the PathFigure begins.
+* `StartPoint`: The point where the `PathFigure` begins.
 
-* __IsClosed__: Specifies whether the first and the last segments are connected.
-            
+* `IsClosed`: Specifies whether the first and the last segments are connected.
 
 ## PathSegment
 
-__PathSegment__ represents a segment of a __PathFigure__ object. This abstract class is inherited from:
-        
-* __LineSegment__
+`PathSegment` represents a segment of a `PathFigure` object. This abstract class is inherited by:
 
-* __BezierSegment__
+* `LineSegment`
 
-* __QuadraticBezierSegment__
+* `BezierSegment`
+
+* `QuadraticBezierSegment`
 
 
 ## LineSegment
 
-Represents a segment, which creates a line between two points.The __LineSegment__ class exposes the following properties:
-        
+Represents a segment that creates a line between two points. The `LineSegment` class exposes the following properties:
 
-* __Point__: The end point of the line segment.
-            
+* `Point`: The end point of the line segment.
 
 ## BezierSegment
 
 Represents a cubic Bezier curve drawn between two points.
-        
 
-* __Point1__: The first control point of the curve.            
+* `Point1`: The first control point of the curve.            
 
-* __Point2__: The second control point of the curve.
+* `Point2`: The second control point of the curve.
 
-* __Point3__: The end point of the curve.
-            
+* `Point3`: The end point of the curve.
 
 ## QuadraticBezierSegment
 
-Represents a quadratic Bezier curve between two points. The __QuadraticBezierSegment__ exposes the following properties:
-        
+Represents a quadratic Bezier curve between two points. The `QuadraticBezierSegment` class exposes the following properties:
 
-* __Point1__: The control point of the curve.
+* `Point1`: The control point of the curve.
 
-* __Point2__: The end point of the QuadraticBezierSegment.
-            
+* `Point2`: The end point of the `QuadraticBezierSegment`.
 
 ## ArcSegment
 
-Represents an elliptical arc between two points. The __ArcSegment__ exposes the following properties:
-        
+Represents an elliptical arc between two points. The `ArcSegment` class exposes the following properties:
 
-* __Point__: The endpoint of the elliptical arc.
+* `Point`: The endpoint of the elliptical arc.
 
-* __RadiusX__: The X radius of the arc.
+* `RadiusX`: The X radius of the arc.
 
-* __RadiusY__: The Y radius of the arc.
+* `RadiusY`: The Y radius of the arc.
 
-* __IsLargeArc__: Specifies whether the arc should be greater than 180 degrees.
+* `IsLargeArc`: Specifies whether the arc is greater than 180 degrees.
 
-* __SweepDirection__: Specifies whether the arc is drawn in the Clockwise or Counterclockwise direction.
+* `SweepDirection`: Specifies whether the arc is drawn in the Clockwise or Counterclockwise direction.
 
-* __RotationAngle__: Specifies the amount (in degrees) by which the ellipse is rotated about the x-axis.
+* `RotationAngle`: Specifies the amount (in degrees) by which the ellipse is rotated about the x-axis.
             
 ## See Also
 

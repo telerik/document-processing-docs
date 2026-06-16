@@ -10,35 +10,24 @@ position: 2
 
 # Settings
 
+`CsvFormatProvider` allows you to import and export CSV documents. Additionally, several settings allow you to modify the import and export behavior. The following sections outline the available settings.
 
+## Settings Properties
 
-__CsvFormatProvider__ allows to import and export CSV documents. Additionally, there are a number of settings that allow you to modify the import/export. The current article outlines the available settings.
-      
+`CsvFormatProvider` exposes a `Settings` property of type `CsvSettings`. This allows you to specify the following:
 
-## 
+* `Delimiter`: Gets or sets the list separator. By default the `CsvFormatProvider` class imports and exports files using the list separator specified by the current culture of the system.
 
-__CsvFormatProvider__ exposes a __Settings__ property of type __CsvSettings__. This allows you to specify the following:
-        
+* `Quote`: Gets or sets the quote symbol.
 
-* __Delimiter__: Gets or sets the list separator. By default the CsvFormatProvider class imports and exports files using the list separator specified by the current culture of the system.
-            
+* `HasHeaderRow`: Specifies whether the document has a header row. The default value is `false`.
 
-* __Quote__: Gets or sets the quote symbol.
-            
+* `Encoding`: Gets or sets the character encoding that is used when importing or exporting a file. The default value is UTF8 with BOM.
 
-* __HasHeaderRow__: Specifies whether the document has a header row. The default value is __false__.
-            
+* `ShouldExportEmptyValues`: Gets or sets a value indicating whether the empty values are exported.
 
-* __Encoding__: Gets or sets the character encoding that is used when importing or exporting a file. The default value is UTF8 with BOM.
-  
-* __ShouldExportEmptyValues__: Gets or Sets a value indicating whether the empty values are exported.
-            
+**Example 1** shows how to create and specify a particular setting to a `CsvFormatProvider`.
 
-__Example 1__ shows how to create and specify a particular setting to a CsvFormatProvider.
-        
-
-#### __Example 1: Use CsvSettings__
+**Example 1: Use CsvSettings**
 
 <snippet id='codeblock-cok'/>
-
-

@@ -25,14 +25,11 @@ when building a simple console app with the Telerik Document Processing librarie
 
 ## Solution
 
-It may be caused by an old [KENDO_UI_LICENSE environment variable](https://docs.telerik.com/kendo-ui/knowledge-base/license-key-file-name-and-environment-variable). So, delete it and invoke `refreshenv` command. If the rebuild has the same error again:
+An old [KENDO_UI_LICENSE environment variable](https://docs.telerik.com/kendo-ui/knowledge-base/license-key-file-name-and-environment-variable) may cause this error. Delete it and run the `refreshenv` command. If the rebuild produces the same error again, follow these steps:
 
-1\. Go to telerik.com and generate a new [License Key](https://www.telerik.com/account/your-licenses/license-keys). 
-
-2\. Compare the license key with the one downloaded from the extensions. If it indeed looks different than the one VS2022 got, replace the original telerik-license.txt file with the newly downloaded one.
-
-3\. Next, restart VS2022 (to ensure it has a fresh copy env vars) and compile the project. It is expected to work:
-
+1. Go to telerik.com and generate a new [License Key](https://www.telerik.com/account/your-licenses/license-keys). 
+2. Compare the license key with the one downloaded from the extensions. If it differs from the one VS2022 downloaded, replace the original `telerik-license.txt` file with the newly downloaded one.
+3. Restart VS2022 to ensure it loads fresh environment variables and compile the project. The build succeeds:
 
 ![License Fixed](images/license-fixed.png)   
 

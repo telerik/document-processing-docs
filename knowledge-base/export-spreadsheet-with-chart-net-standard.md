@@ -18,22 +18,22 @@ ticketid: 1663021
 
 ## Description
 
-[RadSpreadProcessing]({%slug radspreadprocessing-overview%}) provides support for exporting worksheets with chart objects to PDF format only in .NET Framework and .NET (Target OS: Windows). This article demonstrates a custom approach to exporting Excel workbooks containing bar chart objects to PDF format using the Telerik Document Processing libraries. Since the standard PDF export does not natively render [FloatingChartShape]({%slug radspreadprocessing-features-charts-chart-data%}) objects, this solution **converts each chart into a PNG image** and replaces the original chart shape with a [FloatingImage]({%slug radspreadprocessing-features-shapes-and-images%}) at the same position before exporting to PDF.
+[RadSpreadProcessing]({%slug radspreadprocessing-overview%}) provides support for exporting worksheets with chart objects to PDF format only in .NET Framework and .NET (Target OS: Windows). This article shows a custom approach to exporting Excel workbooks containing bar chart objects to PDF format using the Telerik Document Processing libraries. Because the standard PDF export does not natively render [FloatingChartShape]({%slug radspreadprocessing-features-charts-chart-data%}) objects, this solution **converts each chart into a PNG image** and replaces the original chart shape with a [FloatingImage]({%slug radspreadprocessing-features-shapes-and-images%}) at the same position before exporting to PDF.
 
 <img style="border: 1px solid gray;" src="images/export-spreadsheet-with-chart-net-standard.png" alt="Exporting Spreadsheet with Bar Charts in .NET Standard" /> 
 
 ## Solution
 
-The provided solution follows the steps: 
+The provided solution follows these steps: 
 
-1. Generate Workbook with Charts: The `GenerateWorkbookWithChart()` method builds a `Workbook` with a `Worksheet` containing a column chart. The chart is constructed programmatically using the Telerik SpreadProcessing model. The workbook is first exported to `.xlsx` format for verification.
-2. Convert the Charts to images format: Calls `ChartToImageConverter.ConvertChartToImage()` to render the chart as a PNG byte array.
-3. Replace the Charts with the Images: Constructs a `FloatingImage` at the same `CellIndex`, offset, width, and height as the original chart. Removes all original `FloatingChartShape` objects from the worksheet, then adds the generated `FloatingImage` objects.
+1. Generate a Workbook with Charts: The `GenerateWorkbookWithChart()` method builds a `Workbook` with a `Worksheet` containing a column chart. The chart is constructed programmatically using the Telerik SpreadProcessing model. The workbook is first exported to `.xlsx` format for verification.
+2. Convert the Charts to image format: Call `ChartToImageConverter.ConvertChartToImage()` to render the chart as a PNG byte array.
+3. Replace the Charts with the Images: Construct a `FloatingImage` at the same `CellIndex`, offset, width, and height as the original chart. Remove all original `FloatingChartShape` objects from the worksheet, then add the generated `FloatingImage` objects.
 4. Export to PDF format: After replacement, the workbook (now containing images instead of charts) is exported to PDF using `PdfFormatProvider`.
 
 >note The `ChartToImageConverter` class is the core of the custom implementation. It uses the **Telerik Fixed Document API** (`RadFixedDocument`, `FixedContentEditor`) to draw a visual representation of the chart, then exports the rendered page to PNG using `SkiaImageFormatProvider`.
 
-The class **Program**:
+The `Program` class:
 
 ```csharp
     internal class Program
@@ -142,7 +142,7 @@ The class **Program**:
         }
     }
 ```
-The class ChartToImageConverter:
+The `ChartToImageConverter` class:
 
 ```csharp
     internal static class ChartToImageConverter
@@ -400,15 +400,15 @@ The class ChartToImageConverter:
 
 ## Limitations
 
-- The rendered chart image is a **simplified column/bar chart**. Other chart types (line, pie, scatter, etc.) are not currently supported by the converter.
-- The visual output is an approximation — font rendering, exact spacing, and styling may differ from Excel's native chart rendering.
-- Theme color resolution requires passing the `DocumentTheme`; if the theme is unavailable, the converter falls back to `ThemableColor.LocalValue`.
+* The rendered chart image is a **simplified column/bar chart**. Other chart types (line, pie, scatter, and so on) are not currently supported by the converter.
+* The visual output is an approximation—font rendering, exact spacing, and styling may differ from the native Excel chart rendering.
+* Theme color resolution requires passing the `DocumentTheme`. If the theme is unavailable, the converter falls back to `ThemableColor.LocalValue`.
 
 ## See Also
 
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-- [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
-- [Export Chart to PDF]({%slug radspreadprocessing-features-charts-pdf-export%})
-- [Exporting Images to PDF format in .NET Standard]({%slug radpdfprocessing-cross-platform-images%})
-- [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
+* [Export Chart to PDF]({%slug radspreadprocessing-features-charts-pdf-export%})
+* [Exporting Images to PDF format in .NET Standard]({%slug radpdfprocessing-cross-platform-images%})
+* [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
 

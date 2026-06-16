@@ -10,11 +10,11 @@ position: 10
 
 # Named Destinations
 
-Named destinations are destinations in the document which can be referred to indirectly by means of a name object or a byte string.
+Named destinations are destinations in a document that you can refer to indirectly through a name object or a byte string.
 
 ## NamedDestination Class
 
-The **NamedDestination** class is the one that represents the named destinations in PDF documents. It exposes the following properties:
+The `NamedDestination` class represents named destinations in PDF documents. It exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -25,41 +25,41 @@ The **NamedDestination** class is the one that represents the named destinations
 
 ## NamedDestinations Collection
 
-The **NamedDestinations** collection is exposed by RadFixedDocument and is used to add, remove, modify and iterate the **NamedDestination** objects in a PDF document. This collection implements **IEnumerable** and you can obtain a **NamedDestination** using its name.
+The `NamedDestinations` collection is exposed by `RadFixedDocument` and allows you to add, remove, modify, and iterate the `NamedDestination` objects in a PDF document. This collection implements `IEnumerable` and you can obtain a `NamedDestination` by its name.
 
-## Create  
+## Create
 
-**NamedDestination** objects can be created through the Add() method of the **NamedDestinations** collection exposed by RadFixedDocument.
+You can create `NamedDestination` objects through the `Add()` method of the `NamedDestinations` collection exposed by `RadFixedDocument`.
 
-#### __Example 1: Create NamedDestination with Destination of type Link__
+#### **Example 1: Create NamedDestination with Destination of type Link**
 
 <snippet id='pdf-create-named-destination'/>
 
 ## Remove
 
-You can remove a named destination as you would do with any item in a collection.
+You can remove a named destination as you do with any item in a collection.
 
-#### __Example 2: Remove NamedDestination__
+#### **Example 2: Remove NamedDestination**
 
 <snippet id='pdf-remove-named-destination'/>
 
-## Rename 
+## Rename
 
-In addition to the **Name** property of the **NamedDestination** class which provides you with a setter, you can use the **Rename()** method of the **RadFixedDocument.NamedDestinations** collection.
+In addition to the `Name` property of the `NamedDestination` class, which has a setter, you can use the `Rename()` method of the `RadFixedDocument.NamedDestinations` collection.
 
-#### __Example 3: Rename NamedDestination__
+#### **Example 3: Rename NamedDestination**
 
 <snippet id='pdf-rename-named-destination'/>
 
 ## Check If a Name Exists
 
-The **NamedDestinations** collection provides you with the ContainsName() method which is convenient to check whether the name you would like to use has been already applied to a NamedDestination or to check whether the NamedDestination you are searching for exists.
+The `NamedDestinations` collection provides the `ContainsName()` method. Use it to check whether a name is already applied to a `NamedDestination` or whether the `NamedDestination` you are searching for exists.
 
-#### __Example 4: Check if a NamedDestination already exists__
+#### **Example 4: Check if a NamedDestination already exists**
 
 <snippet id='pdf-exist-named-destination'/>
 
-## See Also 
+## See Also
 
 * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})

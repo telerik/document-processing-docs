@@ -10,7 +10,7 @@ position: 1
 
 # Getting Started
 
-This article will get you started in using the `RadPdfProcessing` library.
+This article helps you get started with the `RadPdfProcessing` library.
 
 >note If you still don't have **Telerik Document Processing** installed, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
 
@@ -45,9 +45,9 @@ For more complete examples head to the [Developer Focused Examples]({%slug radpd
 
 ## See Also
 
- * [Using Telerik Document Processing First Steps]({%slug getting-started-first-steps%})
- * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
- * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
- * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
- * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
- * [PdfProcessing Basic Usage Demo](https://demos.telerik.com/document-processing/pdfprocessing)
+* [Using Telerik Document Processing First Steps]({%slug getting-started-first-steps%})
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [TextFragment]({%slug radpdfprocessing-model-textfragment%})
+* [PdfProcessing Basic Usage Demo](https://demos.telerik.com/document-processing/pdfprocessing)

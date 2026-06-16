@@ -1,6 +1,6 @@
 ---
 title: Merging two pages from different documents into a single page
-description: This article shows how to merge two pages from different documents into a single page
+description: Learn how to merge two pages from different PDF documents into a single page using PdfStreamWriter and PdfFileSource in RadPdfProcessing.
 type: how-to
 page_title: Invert the Colors within a PDF Document
 slug: pdfprocessing-merge-two-pdf-pages-into-a-single-page
@@ -9,22 +9,11 @@ tags: radpdfprocessing, pdf, merge, pages, document, processing, fixed, layout
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2021.2.615</td>
-		<td>RadPdfProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-</tbody>
-</table>
+## Environment
+
+| Product Version | Product | Author |
+| --- | --- | --- |
+| 2021.2.615 | RadPdfProcessing | [Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov) |
 
 ## Description
 
@@ -32,9 +21,9 @@ This article shows how to merge two pages from different documents into a single
 
 ## Solution
 
-The provided code snippet demonstrates how to import two **PDF** documents using the [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}), get their first pages using the [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}), and merge them on a single page using the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}).
+The provided code snippet demonstrates how to import two PDF documents using the [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}), get their first pages using the [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%}), and merge them on a single page using the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}).
 
-#### __Merge two pages from different documents into a single page__
+**Example 1: Merge Two Pages from Different Documents into a Single Page**
 
 ```csharp
 
@@ -67,3 +56,9 @@ The provided code snippet demonstrates how to import two **PDF** documents using
 		}
 	}
 ```
+
+## See Also
+
+* [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%})
+* [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%})
+* [PdfPageSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource%})

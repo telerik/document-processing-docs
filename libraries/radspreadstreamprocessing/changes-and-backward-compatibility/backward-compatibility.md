@@ -1,6 +1,6 @@
 ---
 title: Backward Compatibility
-description: Breaking changes and migration guidance for upgrading RadSpreadStreamProcessing between versions.
+description: Breaking changes and migration guidance for upgrading RadSpreadStreamProcessing between versions. Find solutions for each breaking change listed by release.
 page_title: Backward Compatibility
 slug: radspreadstreamprocessing-backward-compatibility
 tags: migration, compatibility, radspreadstreamprocessing, breaking, spreadsheet, versions, upgrade, streaming
@@ -10,27 +10,24 @@ position: 1
 
 # Backward Compatibility
 
+The following sections list the breaking changes and the steps to resolve them when you upgrade from one version to the next.
 
-
-This article lists the breaking changes and how they can be fixed when upgrading from a specific version of the controls to the next one.
-
-## What's Different in 2023 R1 SP1
+## What Is Different in 2023 R1 SP1
 
 ### Changed
 
-There are separate properties for the formula and the value in the ICellImporter.
+There are separate properties for the formula and the value in the `ICellImporter`.
 
-### What to do now
+### What to Do Now
 
 Use each property depending on your desired result. 
 
-## What's Different in 2016 R3  
-
+## What Is Different in 2016 R3  
 
 ### Changed
 
 Assemblies with a version number ending with .45 suffix are **not** distributed.
 
-### What to do now
+### What to Do Now
 
-Use the assemblies with a version number ending with .40 suffix. The library doesn't contain code specific for .NET Framework 4.5, thus an additional version is not needed.
+Use the assemblies with a version number ending with .40 suffix. The library does not contain code specific for .NET Framework 4.5, so an additional version is not needed.

@@ -1,6 +1,6 @@
 ---
 title: Adding an Image Border in PdfProcessing
-description: Learn how to draw borders around images with the Telerik PdfProcessing library.
+description: Learn how to draw borders around images in a PDF document by using a table cell or a rectangle with the RadPdfProcessing library.
 type: how-to
 page_title: Drawing Borders for Images in Telerik PdfProcessing
 meta_title: Drawing Borders for Images in Telerik PdfProcessing
@@ -23,15 +23,15 @@ img[alt$="><"] {
 
 ## Description
 
-Learn how to add borders around [images]({%slug radpdfprocessing-model-image%}) in the generated PDF document.
+This article shows how to add borders around [images]({%slug radpdfprocessing-model-image%}) in a generated PDF document.
 
 ## Solution
 
-To draw borders around images follow one of the approaches below:
+To draw borders around images, use one of the following approaches:
 
 ### Approach 1: Using a Table with Borders
 
-Insert a table with a single [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) and put the image in the cell:
+Insert a table with a single [`TableCell`]({%slug radpdfprocessing-editing-table-tablecell%}) and place the image in the cell:
 
 ```csharp
 RadFixedDocument document = new RadFixedDocument();
@@ -65,7 +65,7 @@ using (Stream output = File.OpenWrite(@"..\..\exported.pdf"))
 
 ### Approach 2: Using FixedContentEditor to Draw a Rectangle Border
 
-An alternative approach is to draw a rectangular border around an image in a PDF using RadPdfProcessing, you can use the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to draw both the image and the rectangle:
+As an alternative, use the [`FixedContentEditor`]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to draw a rectangular border around the image:
 
 ```csharp
 RadFixedDocument document = new RadFixedDocument();
@@ -113,6 +113,7 @@ using (Stream output = File.OpenWrite(@"..\..\exported.pdf"))
 ![Using a FixedContentEditor to Draw the Image Border ><](images/image-fixedcontenteditor-border.png)   
 
 ## See Also
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
-- [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
-- [Images]({%slug radpdfprocessing-model-image%}) 
+
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
+* [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
+* [Images]({%slug radpdfprocessing-model-image%}) 

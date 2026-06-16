@@ -10,44 +10,44 @@ position: 3
 
 # TabStop
 
-A tab stop is a term used to describe the location the caret stops after tab key is pressed. Tab stops are used in words processing to enable users to align text by inserting the Tab symbol. Each paragraph contains a number of tabs, which could be placed wherever you want. 
+A *tab stop* is the location where the caret stops after you press the Tab key. Tab stops allow you to align text by inserting the Tab symbol. Each paragraph contains a number of tabs, which you can place wherever needed.
 
 
 ## TabStop Overview
 
-The __TabStop__ class is immutable, meaning you should set its properties when initializing an instance.
+The `TabStop` class is immutable, meaning you must set its properties when initializing an instance.
 
-* __Position__: The position of the tab stop. The value is in device independent pixels (1/96 inch).
+* `Position`: The position of the tab stop. The value is in device-independent pixels (1/96 inch).
 
-* __Type__: The type of the tab stop, defines the behavior of the tab stop. All possibilities are described with the [TabStopType enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.TabStopType.html):
+* `Type`: The type of the tab stop. Defines the behavior of the tab stop. All possibilities are described with the [`TabStopType` enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.TabStopType.html):
 
-	* __Left__: The text following the tab stop will be left aligned with respect to the tab stop position. This is the *default* value.
-	* __Center__: The text following the tab stop will be centered around the tab stop position. 
-	* __Right__: The text following the tab stop will be right aligned with respect to the tab stop position. 
-	* __Decimal__: Text before the decimal point will be positioned to the left and text after the decimal point will be positioned to the right side of the tab stop.
-	* __Bar__: A vertical bar is shown at the tab position.
-	* __Clear__: Clears an inherited tab stop.
+	* `Left`: The text following the tab stop is left aligned with respect to the tab stop position. This is the *default* value.
+	* `Center`: The text following the tab stop is centered around the tab stop position.
+	* `Right`: The text following the tab stop is right aligned with respect to the tab stop position.
+	* `Decimal`: Text before the decimal point is positioned to the left and text after the decimal point is positioned to the right side of the tab stop.
+	* `Bar`: A vertical bar is shown at the tab position.
+	* `Clear`: Clears an inherited tab stop.
 
-* __Leader__: Specifies the character which shall be used to fill the space in front of a tab. All possibilities are described with the [TabStopLeader enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.TabStopLeader.html):
+* `Leader`: Specifies the character that fills the space in front of a tab. All possibilities are described with the [`TabStopLeader` enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.TabStopLeader.html):
 
-	* __None__: The space before the tab will be left empty. This is the default value.
-	* __Dot__: The space before the tab will be filled with dots.
-	* __Hyphen__: The space before the tab will be filled with hyphens.
-	* __Underscore__: The space before the tab will be filled with underscores.
-	* __MiddleDot__: The space before the tab will be filled with middle dots.
+	* `None`: The space before the tab is left empty. This is the default value.
+	* `Dot`: The space before the tab is filled with dots.
+	* `Hyphen`: The space before the tab is filled with hyphens.
+	* `Underscore`: The space before the tab is filled with underscores.
+	* `MiddleDot`: The space before the tab is filled with middle dots.
 
-The distance between automatic tab stops is determined by the __[RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}).DefaultTabStopWidth__ property. Automatic tab stops refer to the tab stop location which occurs after all custom tab stops in the current paragraph have been surpassed.
+The distance between automatic tab stops is determined by the [`RadFlowDocument`]({%slug radwordsprocessing-model-radflowdocument%}).`DefaultTabStopWidth` property. Automatic tab stops refer to the tab stop locations that occur after all custom tab stops in the current paragraph have been surpassed.
 
 
 ## TabStopCollection Overview
 
-This class derives from __System.Collections.Generic.IEnumerable&lt;T&gt;__ and represents a collection of __TabStop__ objects. The collection is immutable and it is used to hold the tab stops in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
+This class derives from `System.Collections.Generic.IEnumerable<T>` and represents a collection of `TabStop` objects. The collection is immutable, and it holds the tab stops in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
 
-The __TabStopCollection__ class exposes the following members:
+The `TabStopCollection` class exposes the following members:
 
-* __Count__: The count of __TabStop__ elements in the collection.
-* __Insert()__: This method will return a new instance of __TabStopCollection__ with the specified tab stop inserted in it.
-* __Remove()__: This method will return a new instance of __TabStopCollection__ with the specified tab stop removed.
+* `Count`: The count of `TabStop` elements in the collection.
+* `Insert()`: Returns a new instance of `TabStopCollection` with the specified tab stop inserted in it.
+* `Remove()`: Returns a new instance of `TabStopCollection` with the specified tab stop removed.
 
 
 ## Working with TabStopCollection
@@ -55,65 +55,67 @@ The __TabStopCollection__ class exposes the following members:
 
 ### Create a TabStopCollection
 
-Excluding the default constructor, the __TabStopCollection__ class exposes an overload allowing you to directly pass a collection of __TabStop__ objects:
+Excluding the default constructor, the `TabStopCollection` class exposes an overload that allows you to directly pass a collection of `TabStop` objects:
 
-<a name="example1"><a/>
-#### __Example 1: Create a TabStopCollection__
+<a name="example1"></a>
+
+**Example 1: Create a TabStopCollection**
 
 <snippet id='codeblock-bba'/>
 
 
 ### Insert Item in a TabStopCollection
 
-In __Example 2__ is illustrated how to insert items in the __TabStopCollection__ created in [Example 1](#example1). Keep in mind that due to the fact that this collection is immutable, the __Insert()__ method will return a **new instance** of the class.
+**Example 2** demonstrates how to insert items in the `TabStopCollection` created in [Example 1](#example1). Keep in mind that this collection is immutable, so the `Insert()` method returns a **new instance** of the class.
 
-#### __Example 2: Insert item in a TabStopCollection__
+**Example 2: Insert item in a TabStopCollection**
 <snippet id='codeblock-cca'/>
 
 
 ### Remove Item from a TabStopCollection
 
-The snippet below shows how to remove an item from the __TabStopCollection__ created in [Example 1](#example1). Keep in mind that due to the fact that this collection is immutable, the Remove() method will return new instance of the class.
+The following snippet shows how to remove an item from the `TabStopCollection` created in [Example 1](#example1). Keep in mind that this collection is immutable, so the `Remove()` method returns a new instance of the class.
 
-#### __Example 3: Remove item from a TabStopCollection__
+**Example 3: Remove item from a TabStopCollection**
 <snippet id='codeblock-dda'/>
 
 
 ## Working with TabStop
 
-In __RadWordsProcessing__ the tab stops are stored as a collection in the [Paragraph]({%slug radwordsprocessing-model-paragraph%}). This section will show you how to work with the __TabStop__ element.
+In RadWordsProcessing, the tab stops are stored as a collection in the [Paragraph]({%slug radwordsprocessing-model-paragraph%}). This section shows how to work with the `TabStop` element.
 
 
 ### Create a TabStop
 
-The code from __Example 4__ demonstrates how to create a tab stop.
+The code from **Example 4** demonstrates how to create a tab stop.
 
-<a name="example4"><a/>
-#### __Example 4: Create a TabStop__
+<a name="example4"></a>
+
+**Example 4: Create a TabStop**
 
 <snippet id='codeblock-eea'/>
 
-### Adding a TabStop
+### Add a TabStop
 
-__Example 5__ shows how to add the tab stop created in [Example 1](#example1) to an existing __Paragraph__ through the _TabStops_ property of type __TabStopCollection__.
+**Example 5** shows how to add the tab stop created in [Example 1](#example1) to an existing `Paragraph` through the `TabStops` property of type `TabStopCollection`.
 
-#### __Example 5: Insert a TabStop__
+**Example 5: Insert a TabStop**
 
 <snippet id='codeblock-ffa'/>
 
 ### Remove a TabStop
 
-The following code-snippet illustrates how to remove the created in [Example 4](#example4) TabStop:
+The following code-snippet shows how to remove the tab stop created in [Example 4](#example4):
 
-#### __Example 6: Remove a TabStop__
+**Example 6: Remove a TabStop**
 
 <snippet id='codeblock-gga'/>
 
-### Using TabStop In the Content
+### Use a TabStop in the Content
 
-Once you have applied the desired tab stops to a paragraph, you need to insert tabs (\t) so that the content can be aligned to the specified tab stops. The code in **Example 7** inserts tab stops at three positions with different properties and aligns three words on the tab stop positions using tabs.
+Once you have applied the desired tab stops to a paragraph, insert tabs (\t) so that the content aligns to the specified tab stops. The code in **Example 7** inserts tab stops at three positions with different properties. It then aligns three words on the tab stop positions using tabs.
 
-#### __Example 7: Add tabs to align to the tab stops__
+**Example 7: Add tabs to align to the tab stops**
 
 <snippet id='codeblock-hha'/>
 

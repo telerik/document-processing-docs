@@ -10,12 +10,11 @@ position: 0
 
 # Formats and Conversion
 
+RadWordsProcessing does not need any external dependencies to convert documents from/to the supported formats. The document model is independent from UI and can be used on the server side and on the client.
 
-RadWordsProcessing does not need any external dependencies in order to convert documents from/to the supported formats. The document model is independent from UI and can be used on the server side as well as on the client.   
+You can use RadWordsProcessing to convert among variety of formats.
 
-You can use RadWordsProcessing to convert among variety of formats. 
-
->note As of **Q4 2024** RadWordsProcessing offers timeout mechanism for import and export of documents. The new Import and Export methods for all FormatProviders have a mandatory timeout parameter. The old **Import** and **Export** methods are Obsolete now.
+>note Starting with **Q4 2024** RadWordsProcessing offers a timeout mechanism for import and export of documents. The new `Import` and `Export` methods for all FormatProviders have a mandatory timeout parameter. The old `Import` and `Export` methods are obsolete now.
 
 Below you can see a feature / format matrix that describes supported features by file format. The currently supported formats are:
 
@@ -24,7 +23,7 @@ Below you can see a feature / format matrix that describes supported features by
 * [Rtf]({%slug radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider%})
 * [Html]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
 * [Pdf]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only)
-* [Plain text]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%}) - plain text is excluded from the comparison.
+* [Plain text]({%slug radwordsprocessing-formats-and-conversion-txt-txtformatprovider%}) — plain text is excluded from the comparison.
 
 <style>
     table td {

@@ -1,6 +1,6 @@
 ---
 title: Generating a PDF Product Catalog
-description: Learn how to generate a PDF catalog from business objects adding images, and text fields into a PDF using Telerik PdfProcessing.
+description: Learn how to generate a PDF product catalog from business objects by adding images, text, and price fields into a PDF document using the RadPdfProcessing library.
 type: how-to
 page_title: Generating a PDF Product Catalog with Telerik PdfProcessing
 meta_title: Generating a PDF Product Catalog with Telerik PdfProcessing
@@ -23,13 +23,13 @@ img[alt$="><"] {
 
 ## Description
 
-Learn how to generate a PDF catalog from business objects, including images, text, and prices.
+This article shows how to generate a PDF catalog from business objects, including images, text, and prices.
 
 ![Generating a PDF Product Catalog ><](images/generate-pdf-product-catalog.png) 
 
 ## Solution
 
-To achieve this, use the Telerik [PdfProcessing]({%slug radpdfprocessing-overview%}) library, which supports creating and modifying PDF documents. Below is a sample implementation to generate a PDF catalog using the [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}):
+To achieve this, use the Telerik [PdfProcessing]({%slug radpdfprocessing-overview%}) library, which supports creating and modifying PDF documents. The following sample implementation generates a PDF catalog with the [`RadFixedDocumentEditor`]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}):
 
 ### Code Example
 
@@ -154,6 +154,6 @@ internal class Program
 
 ## See Also
 
-- [PdfProcessing]({%slug radpdfprocessing-overview%})
-- [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
+* [PdfProcessing]({%slug radpdfprocessing-overview%})
+* [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
 

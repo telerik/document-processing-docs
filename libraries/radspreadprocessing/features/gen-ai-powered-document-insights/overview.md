@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Learn more about the GenAI-powered Document Insights feature of the SpreadProcessing library. 
+description: Learn how to use the GenAI-powered Document Insights feature of SpreadProcessing to summarize documents and ask questions with AI-powered analysis.
 page_title: Overview
 slug: radspreadprocessing-features-gen-ai-powered-document-insights-overview
 tags: genai, spreadsheet, excel, radspreadprocessing, llm, ai, insights, overview, analysis, insights, xlsx, csv, xls
@@ -13,7 +13,7 @@ position: 0
 |Minimum Version:|Q4 2025|
 |----|----|
 
-The GenAI-powered Document Insights feature enables you to easily extract insights from Excel documents using Large Language Models (LLMs). This functionality allows you to summarize document content and ask questions about the document, with the AI providing relevant answers based on the document's content.
+The GenAI-powered Document Insights feature enables you to extract insights from Excel documents using Large Language Models (LLMs). You can summarize document content and ask questions about the document, with the AI providing relevant answers based on the document content.
 
 ## Key Features
 

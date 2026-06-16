@@ -42,7 +42,7 @@ This exception is thrown when the packages for .NET Framework are used in a proj
 
 ## Solution
 
-Remove all the binaries or NuGet packages related to Telerik Document Processing and make sure you add them again in their .NET Standard-Compatible version that does not include the word 'Windows'.
+Remove all the binaries or NuGet packages related to Telerik Document Processing and ensure you add them again in their .NET Standard-compatible version that does not include the word "Windows".
 
 **Example:**
 
@@ -69,13 +69,13 @@ Remove all the binaries or NuGet packages related to Telerik Document Processing
 </tbody>
 </table>
 
->Although the word 'Windows' is removed from the assembly names for .NET Core, the namespaces still contain it.
+>Although the word "Windows" is removed from the assembly names for .NET Core, the namespaces still contain it.
 
 ## See Also
 
-- [PdfProcessing Dependencies]({%slug radpdfprocessing-getting-started%}#assembly-references)
-- [WordsProcessing Dependencies]({%slug radwordsprocessing-getting-started%}#assembly-references)
-- [SpreadProcessing Dependencies]({%slug radspreadprocessing-getting-started%}#assembly-references)
-- [SpreadStreamProcessing Dependencies]({%slug radspreadstreamprocessing-getting-started%}#assembly-references)
-- [ZipLibrary Dependencies]({%slug radziplibrary-gettingstarted%}#assembly-references)
+* [PdfProcessing Dependencies]({%slug radpdfprocessing-getting-started%}#assembly-references)
+* [WordsProcessing Dependencies]({%slug radwordsprocessing-getting-started%}#assembly-references)
+* [SpreadProcessing Dependencies]({%slug radspreadprocessing-getting-started%}#assembly-references)
+* [SpreadStreamProcessing Dependencies]({%slug radspreadstreamprocessing-getting-started%}#assembly-references)
+* [ZipLibrary Dependencies]({%slug radziplibrary-gettingstarted%}#assembly-references)
 

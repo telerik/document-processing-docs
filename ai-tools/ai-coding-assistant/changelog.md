@@ -9,20 +9,20 @@ position: 4
 
 # Telerik Document Processing Libraries AI Coding Assistant Changelog
 
-Learn about the latest changes, improvements and bug fixes in the Telerik Document Processing Libraries AI Coding Assistant. The updates are structured in a chronological order with the newest ones appearing first.
+Learn about the latest changes, improvements, and bug fixes in the Telerik Document Processing Libraries AI Coding Assistant. The updates are structured in chronological order with the newest ones appearing first.
 
 ## January, 2026 Changelog
 
-- **NuGet distribution** - The MCP server is now distributed via NuGet instead of npm.
+* **NuGet Distribution** - The MCP server is now distributed through NuGet instead of npm.
 
-- **Automatic License Recognition** - The MCP server automatically detects your Telerik license when configured globally, simplifying the setup process.
+* **Automatic License Recognition** - The MCP server automatically detects your Telerik license when configured globally. This simplifies the setup process.
 
 
 ## November, 2025 Changelog
 
 ### Highlights
 
-- Added support for the following libraries
+* Added support for the following libraries:
     * [WordsProcessing]({%slug radwordsprocessing-overview%})
     * [SpreadProcessing]({%slug radspreadprocessing-overview%})
     * [SpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})
@@ -32,9 +32,9 @@ Learn about the latest changes, improvements and bug fixes in the Telerik Docume
 
 ### Highlights
 
-- Initial launch of the AI Coding Assistant for the [PdfProcessing]({%slug radpdfprocessing-overview%}) library.
-- Provides intelligent code suggestions, context-aware documentation, and quick access to component APIs.
-- Streamlines development workflow with automated code generation and error detection.
+* Initial launch of the AI Coding Assistant for the [PdfProcessing]({%slug radpdfprocessing-overview%}) library.
+* Provides intelligent code suggestions, context-aware documentation, and quick access to component APIs.
+* Streamlines development workflow with automated code generation and error detection.
 
 ## See Also
 

@@ -1,6 +1,6 @@
 ---
 title: How to Achieve Alternating Row Color for Tables in PdfProcessing
-description: Learn how to achieve alternating row styles for PDF tables export using Telerik PdfProcessing.
+description: Learn how to create alternating row color styles for PDF tables with styled headers using Telerik RadPdfProcessing.
 type: how-to
 page_title: How to Achieve Alternating Row Color for Tables in PdfProcessing
 meta_title: How to Achieve Alternating Row Color for Tables in PdfProcessing
@@ -18,9 +18,9 @@ ticketid: 1700632
 
 ## Description
 
-This article shows how to generate a PDF table with styled header cells with border and background color. For the data rows an alternating row color style is applied.
+This article shows how to generate a PDF table with styled header cells that include borders and background color. The data rows use an alternating row color style.
 
-A similar design can be produced with the demonstrated approach:
+You can produce a similar design with the following approach:
 
 <img style="border: 1px solid gray;" src="images/alternating-row-color-in-pdf-tables.png" />
 
@@ -28,8 +28,8 @@ A similar design can be produced with the demonstrated approach:
 
 To achieve **Alternating Row Style** for Tables using RadPdfProcessing, follow these steps:
 
-1. Generate dummy Report data.
-1. Create a PDF document and generate a table using the sample data records.
+1. Generate placeholder report data.
+2. Create a PDF document and generate a table using the sample data records.
 
 ```csharp
      internal class Report
@@ -197,5 +197,5 @@ To achieve **Alternating Row Style** for Tables using RadPdfProcessing, follow t
 
 ## See Also
 
-- [ Tables in PdfProcessing]({%slug radpdfprocessing-editing-table-overview%})
+* [Tables in PdfProcessing]({%slug radpdfprocessing-editing-table-overview%})
 

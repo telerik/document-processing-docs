@@ -10,10 +10,7 @@ position: 5
 
 # Find and Replace
 
-
-
-The document model offers a convenient way to find and replace text and numbers in a workbook, worksheet or a specified range of cells. This article provides information about the options of the find and replace features and demonstrates how they can be used.
-      
+The document model offers a convenient way to find and replace text and numbers in a workbook, worksheet, or a specified range of cells.
 
 * [Find and FindAll](#find-and-findall)
 
@@ -21,59 +18,42 @@ The document model offers a convenient way to find and replace text and numbers 
 
 ## Find and FindAll
 
-Both Workbook and Worksheet classes expose methods that search their contents for a specific value. The two classes offer a __Find()__ method that returns the first occurrence of the sought string and a __FindAll()__ method that displays all occurrences of the specified value. Both methods require a single parameter of type __FindOptions__ that determines how the search is performed. The following list outlines the properties of the __FindOptions__ class:
-        
+Both `Workbook` and `Worksheet` classes expose methods that search their contents for a specific value. The two classes offer a `Find()` method that returns the first occurrence of the sought string and a `FindAll()` method that returns all occurrences of the specified value. Both methods require a single parameter of type `FindOptions` that determines how the search is performed. The following list describes the properties of the `FindOptions` class:
 
-* __FindWhat__: Specifies the sought string.
-            
+* `FindWhat`: Specifies the sought string.
 
-* __FindWithin__: Determines if the search is conducted for the whole Workbook or for a particular Worksheet. If you call the __Find()__ method of the Workbook class and the __FindWithin__ option is set to Workbook, the search is done for the entire workbook and if the option is Worksheet – the search is performed only for the active worksheet. Note that if you call the __Find()__ method of the Worksheet class, the __FindWithin__ property is ignored and the search is done for the worksheet instance that invokes the search.
-            
+* `FindWithin`: Determines if the search covers the whole `Workbook` or a particular `Worksheet`. If you call the `Find()` method of the `Workbook` class and the `FindWithin` option is set to `Workbook`, the search covers the entire workbook. If the option is `Worksheet`, the search covers only the active worksheet. If you call the `Find()` method of the `Worksheet` class, the `FindWithin` property is ignored and the search covers the worksheet instance that invokes it.
 
-* __FindBy__: Indicates whether the search is performed by rows or by columns.
-            
+* `FindBy`: Indicates whether the search is performed by rows or by columns.
 
-* __FindIn__: Shows if the search includes formulas or only result values.
-            
+* `FindIn`: Indicates if the search includes formulas or only result values.
 
-* __MatchCase__: Determines if the search should match the casing of the sought string.
-            
+* `MatchCase`: Determines if the search must match the casing of the sought string.
 
-* __MatchEntireCellContents__: Indicates whether the sought string should match the entire cell content.
-            
+* `MatchEntireCellContents`: Indicates whether the sought string must match the entire cell content.
 
-* __StartCell__: Marks the cell from which the search begins.
-            
+* `StartCell`: Marks the cell from which the search begins.
 
-* __SearchRanges__: If the property is set to __null__, the search is performed in the entire workbook or worksheet, depending on the __FindWithin__ property. If ranges are defined, the search is performed only for these ranges of the active sheet. Note that this property is taken into account only in the __Find()__ and __Replace()__ methods and disregarded in the __FindAll()__ and __ReplaceAll()__ methods.
-            
+* `SearchRanges`: If the property is set to `null`, the search covers the entire workbook or worksheet, depending on the `FindWithin` property. If ranges are defined, the search covers only those ranges of the active sheet. This property applies only to the `Find()` and `Replace()` methods and is disregarded in the `FindAll()` and `ReplaceAll()` methods.
 
-__Example 1__ creates a new workbook with two empty worksheets and assigns sample values to the sheets. The __FindOptions__ created below specifies that the search will be conducted for the whole workbook and will start from cell A1 of the first worksheet. The sample snippet illustrates how to use __Find()__ and __FindAll()__ methods.
-        
+**Example 1** creates a new workbook with two empty worksheets and assigns sample values to the sheets. The `FindOptions` instance specifies that the search covers the whole workbook and starts from cell A1 of the first worksheet. The snippet shows how to use the `Find()` and `FindAll()` methods.
 
-#### __Example 1: Perform find and find all__
+**Example 1: Perform Find and Find All**
 
 <snippet id='codeblock-chy'/>
 
-
-
 ## Replace and ReplaceAll
 
-As a supplement to the __Find()__ and __FindAll()__ methods, the Workbook and Worksheet classes offer two more methods that allow you to alter the found strings: __Replace()__ and __ReplaceAll()__. The former method replaces the string of the first occurrence while the latter alters all encountered occurrences. The two methods take one argument of type __ReplaceOptions__ that specifies how the search is performed and also the string that should replace the occurrences. The class derives from __FindOptions__ and defines one more property:
-        
+In addition to the `Find()` and `FindAll()` methods, the `Workbook` and `Worksheet` classes offer two more methods that allow you to alter the found strings: `Replace()` and `ReplaceAll()`. The `Replace()` method replaces the string of the first occurrence while `ReplaceAll()` alters all encountered occurrences. The two methods take one argument of type `ReplaceOptions` that specifies how the search is performed and the string that replaces the occurrences. The class derives from `FindOptions` and defines one more property:
 
-* __ReplaceWith__: Specifies the string that will replace any found value.
-            
+* `ReplaceWith`: Specifies the string that replaces any found value.
 
-__Example 2__ creates a workbook from scratch with two empty worksheets and adds some sample values. The __ReplaceOptions__ instance specifies that the replace is performed on the whole workbook and includes formula values. The operation starts from cell A1 of the first worksheet and the search is done by columns.
-        
+**Example 2** creates a workbook from scratch with two empty worksheets and adds sample values. The `ReplaceOptions` instance specifies that the replace covers the whole workbook and includes formula values. The operation starts from cell A1 of the first worksheet and the search proceeds by columns.
 
-#### __Example 2: Perform replace and replace all__
+**Example 2: Perform Replace and Replace All**
 
 <snippet id='codeblock-chz'/>
 
-
-
 ## See Also
 
- * [Activate a Worksheet]({%slug radspreadprocessing-working-with-worksheets-activate-worksheet%})
+* [Activate a Worksheet]({%slug radspreadprocessing-working-with-worksheets-activate-worksheet%})

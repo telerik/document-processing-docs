@@ -2,7 +2,7 @@
 title: Unable to find package Telerik.Licensing
 description: Learn how to fix Telerik.Licensing package restore and runtime assembly errors after upgrading Telerik Document Processing to Q1 2025 or later.
 type: troubleshooting
-page_title: Could Not Load File Or Assembly Telerik.Licensing.Runtime, Version 1.4.6.0 Runtime Error
+page_title: Could Not Load File or Assembly Telerik.Licensing.Runtime, Version 1.4.6.0 Runtime Error
 slug: dpl-package-update-failure-license
 tags: licensing, nuget, telerik, document, processing, upgrade, assembly, error
 res_type: kb

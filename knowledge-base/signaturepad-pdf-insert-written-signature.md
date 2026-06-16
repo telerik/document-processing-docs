@@ -1,6 +1,6 @@
 ---
 title: Use a SignaturePad Signature with PDF
-description: How to insert the SignaturePad written signature to sign a PDF document
+description: Learn how to use RadPdfProcessing to replace a SignatureWidget with a written signature captured by the SignaturePad as a JPG or PNG image in a PDF document.
 type: how-to
 page_title: Use a SignaturePad Signature with PDF
 slug: signaturepad-pdf-insert-written-signature
@@ -17,26 +17,26 @@ res_type: kb
 
 ## Description
 
-This article will show you how to use [PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview) to replace a `SignatureWidget` with a written signature. The signature was captured by the UI for Xamarin [SignaturePad](https://docs.telerik.com/devtools/xamarin/controls/signaturepad/overview) as a jpg or png image.
+This article shows how to use [PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview) to replace a `SignatureWidget` with a written signature. The signature is captured by the UI for Xamarin [SignaturePad](https://docs.telerik.com/devtools/xamarin/controls/signaturepad/overview) as a JPG or PNG image.
 
-Here is a screenshot of the document in the UI for Xamarin [PdfViewer](https://docs.telerik.com/devtools/xamarin/controls/pdfviewer/pdfviewer-overview), before and after modification:
+The following screenshot shows the document in the UI for Xamarin [PdfViewer](https://docs.telerik.com/devtools/xamarin/controls/pdfviewer/pdfviewer-overview), before and after modification:
 
 ![Before and After](./images/signaturepad-pdf-insert-written-signature.png)
 
 ## Solution
 
-This approach uses four phases to achieve the result.
+This approach uses four phases to achieve the result:
 
 1. Import the original PDF file into a `RadFixedDocument`, then load it in the `RadPdfViewer`.
 2. Use a `RadSignaturePad` to capture the user's written signature as a JPEG or PNG image.
-3. Use `PdfProcessing` to locate the `SignatureWidget` in the FixedDocument, then use the `FixedContentEditor` to insert the user's signature at the the same location and remove the SignatureWidget when done.
+3. Use `PdfProcessing` to locate the `SignatureWidget` in the `FixedDocument`, then use the `FixedContentEditor` to insert the user's signature at the same location and remove the `SignatureWidget` when done.
 4. Export the modified `RadFixedDocument` as a new PDF file, then show the new version in the `RadPdfViewer`.
 
 > The [RadPdfViewer](https://docs.telerik.com/devtools/xamarin/controls/pdfviewer/pdfviewer-overview) is not required. It is only present to view the document before and after the operation.
 
 ### XAML
 
-The UI in this example contains a Grid with three rows containing: RadPdfViewer, RadSignaturePad, RadComboBox and two RadButtons.
+The UI in this example contains a `Grid` with three rows: `RadPdfViewer`, `RadSignaturePad`, `RadComboBox`, and two `RadButton` elements.
 
 ```xml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -81,14 +81,14 @@ The UI in this example contains a Grid with three rows containing: RadPdfViewer,
 
 In the code-behind, the logic flow is:
 
-- In OnAppearing, we call `ImportPdfFileToFixedDocument`, which loads the PDF file into a RadFixedDocument and show the document in the platform's PdfViewer 
-- In the `SignAndSaveButton_OnClicked` event handler, we:
-    1. Check what image format the user wants and then save the signature image as a file in the `SaveSignatureImageAsync` method.
-    2. Pass the image file's path to `AddSignatureToDocument`, this uses PdfProcessing to locate the SignatureWidget in the document and replace it with the signature's image and return an new, modified, RadFicedDocument
-    3. Save the modified document as a new PDF file, then load it into the PdfViewer.
-- The other event handlers and objects are to support the demo's superfluous features. For example, a the list of image formats to show in the RadComboBox or a button to clear the signature.
+* In `OnAppearing`, the code calls `ImportPdfFileToFixedDocument`, which loads the PDF file into a `RadFixedDocument` and shows the document in the `PdfViewer`.
+* In the `SignAndSaveButton_OnClicked` event handler, the code:
+    1. Checks what image format the user wants and then saves the signature image as a file in the `SaveSignatureImageAsync` method.
+    2. Passes the image file path to `AddSignatureToDocument`. This method uses PdfProcessing to locate the `SignatureWidget` in the document, replace it with the signature image, and return a new, modified `RadFixedDocument`.
+    3. Saves the modified document as a new PDF file, then loads it into the `PdfViewer`.
+* The other event handlers and objects support the demo supplementary features. For example, the list of image formats to show in the `RadComboBox` or a button to clear the signature.
 
-> Important: This demo can handle both JPEG (the default) and PNG. Jpeg is much easier to do, but if you want to use PNG, there's an extra step to take. The cocde comments explain in more detail.
+>important This demo can handle both JPEG (the default) and PNG. JPEG is much easier to use. If you want to use PNG, there is an extra step to take. The code comments explain in more detail.
 
 ```csharp
 using System;
@@ -313,7 +313,7 @@ namespace YourAppNamespace
 
 ### JpegImageConverter
 
-As mentioned above, if you want to use the PNG option, you will need to use a Jpg to Png converter for the `FixedExtensibilityManager`. This article's demo uses ImageSharp from SixLabors for the Jpeg converter, but you can use whatever option you like best. To learn more about the converter, see the [Create Custom JpegImageConverter](https://docs.telerik.com/devtools/document-processing/knowledge-base/create-custom-jpeg-image-converter-net-standard). To learn more about ImageSharp, see [SixLabors ImageSharp Introduction](https://docs.sixlabors.com/articles/imagesharp/index.html?tabs=tabid-1).
+As mentioned above, if you want to use the PNG option, you need a JPG to PNG converter for the `FixedExtensibilityManager`. This demo uses ImageSharp from SixLabors for the JPEG converter, but you can use any option that fits your needs. To learn more about the converter, see [Create Custom JpegImageConverter](https://docs.telerik.com/devtools/document-processing/knowledge-base/create-custom-jpeg-image-converter-net-standard). To learn more about ImageSharp, see [SixLabors ImageSharp Introduction](https://docs.sixlabors.com/articles/imagesharp/index.html?tabs=tabid-1).
 
 
 ```csharp
@@ -353,7 +353,7 @@ public class CustomJpegImageConverter : JpegImageConverterBase
 
 ## See Also
 
-Here are links to the documentation for the components we use above.
+The following links provide documentation for the components used in this article:
 
 * Telerik UI for Xamarin - [PdfViewer](https://docs.telerik.com/devtools/xamarin/controls/pdfviewer/pdfviewer-overview)
   * [Key Features - Loading a Document](https://docs.telerik.com/devtools/xamarin/controls/pdfviewer/pdfviewer-key-features)
@@ -363,6 +363,6 @@ Here are links to the documentation for the components we use above.
   * [Understanding the Document Model](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/general-information)
     * [Interactive Forms](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/interactive-forms/overview)
     * [Widgets](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/interactive-forms/widgets)
-    * [SignatureFeild](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/interactive-forms/form-fields/signaturefield)
+    * [SignatureField](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/model/interactive-forms/form-fields/signaturefield)
   * [FixedContentEditor](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/editing/fixedcontenteditor)
   * [PdfFormatProvider - Import and Export](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/pdfformatprovider)

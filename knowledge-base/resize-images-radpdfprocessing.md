@@ -17,27 +17,27 @@ ticketid: 1656650
 
 ## Description
 
-When inserting an image to a PDF file using [RadPdfProcessing]({%slug radpdfprocessing-overview%}), the resulting PDF may cut off parts of the image if its dimensions exceed the PDF page size. The goal is to:
+When inserting an image to a PDF file with [RadPdfProcessing]({%slug radpdfprocessing-overview%}), the resulting PDF may cut off parts of the image if its dimensions exceed the PDF page size. The goal is to:
 
 1. Display the image as is if it fits on the page without resizing.
 2. If the image is too large, shrink it to fit on the page while preserving the aspect ratio.
 
 This KB article also answers the following questions:
-- How do I convert an image to a PDF while fitting it on the page in RadPdfProcessing?
-- How can I preserve the aspect ratio of an image when converting it to PDF?
-- What is the method to resize images for PDF conversion in RadPdfProcessing?
+* How do I convert an image to a PDF while fitting it on the page with RadPdfProcessing?
+* How can I preserve the aspect ratio of an image when converting it to PDF?
+* What is the method to resize images for PDF conversion with RadPdfProcessing?
 
 ## Solution
 
 To resize a large image to fit within the PDF page dimensions while preserving its aspect ratio, follow these steps:
 
-1. Determine the dimensions of the image by creating an [ImageSource({%slug radpdfprocessing-model-imagesource%}) instance from the image file.
+1. Determine the dimensions of the image by creating an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) instance from the image file.
 
 2. Check if the image dimensions exceed the page size. If they do, calculate the new size of the image that preserves the aspect ratio and fits within the page.
 
 3. Use the `DrawImage(ImageSource source, Size size)` method to draw the resized image on the PDF page.
 
-4. To preserve the aspect ratio, use the following code snippet that automatically adjusts the image size based on the page dimensions:
+4. Preserve the aspect ratio with the following code snippet that automatically adjusts the image size based on the page dimensions:
 
 ```csharp
 Telerik.Documents.ImageUtils.ImagePropertiesResolver defaultImagePropertiesResolver = new Telerik.Documents.ImageUtils.ImagePropertiesResolver();
@@ -91,7 +91,7 @@ foreach (string imageFilePath in imageFiles)
 }
 ``` 
 
-This approach ensures that images are resized to fit within the PDF page dimensions without losing their aspect ratio.
+This approach ensures that images are resized to fit within the PDF page dimensions without losing the aspect ratio.
 
 |Vertical Image|Horizontal Image|
 |----|----|
@@ -99,5 +99,5 @@ This approach ensures that images are resized to fit within the PDF page dimensi
 
 ## See Also
 
-- [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
-- [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})
+* [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
+* [How to Generate a PDF Document from Images with FixedContentEditor]({%slug pdf-from-images-with-fixedcontenteditor%})

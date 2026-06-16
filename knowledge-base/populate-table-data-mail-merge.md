@@ -1,6 +1,6 @@
 ---
 title: Populate a Table with Data using Nested Mail Merge Functionality
-description: Learn how to populate a table with data using the Nested Mail Merge functionality.
+description: Learn how to populate a table with data by using the Nested Mail Merge functionality in RadWordsProcessing to generate Word documents.
 type: how-to
 page_title: Populate a Table with Data using Nested Mail Merge Functionality
 slug: populate-table-data-mail-merge
@@ -16,13 +16,13 @@ res_type: kb
 
 ## Description
 
-Learn how to generate a Word (.DOCX) document that contains a [Table]({%slug radwordsprocessing-model-table%}) with a header row and an item row merge field. Then, passing a collection of records automatically creates and populates the data rows. 
+Learn how to generate a Word (.DOCX) document that contains a [Table]({%slug radwordsprocessing-model-table%}) with a header row and an item row merge field. When you pass a collection of records, the merge operation automatically creates and populates the data rows. 
 
 ## Solution
 
-To achieve the desired result, you can use the [Nested Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) functionality that [RadWordsProcessing]({%slug radwordsprocessing-overview%}) offers and populate the data rows automatically.
+To achieve this result, use the [Nested Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) functionality that [RadWordsProcessing]({%slug radwordsprocessing-overview%}) offers and populate the data rows automatically.
 
-Here's a sample code snippet that demonstrates how to achieve this:
+The following code snippet demonstrates the approach:
 
 ```csharp
 internal class Program
@@ -97,12 +97,12 @@ public class Player {
 }
 ```
 
-This code snippet will produce the desired result, merging the data into the table in the Word document.
+This code snippet produces the desired result and merges the data into the table in the Word document.
 
 ![Populate Table Data](images/populate-table-data-mail-merge.png) 
 
 
-If you skip the MailMerge step, the following template will be produced:
+If you skip the `MailMerge` step, the following template is produced:
 
 ![Populate Table Data](images/populate-table-data-mail-merge-original.png) 
 

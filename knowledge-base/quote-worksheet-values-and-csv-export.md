@@ -14,13 +14,13 @@ res_type: kb
 |2024.1.124| RadSpreadProcessing |[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)|
 
 ## Description
-This example shows how to export the values of a worksheet to a CSV file using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}), while also specifying the delimiter and surrounding the cell values with quotes.
+This article shows how to export the values of a worksheet to a CSV file using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}). The example specifies the delimiter and surrounds the cell values with quotes.
 
->important Please note that this approach is slower than using the integrated SpreadProcessing API. 
+>important This approach is slower than using the integrated SpreadProcessing API.
 
 ## Solution
-1. Define the delimiter character and quote character to be used in the CSV file. 
-2. Open a stream and create a StreamWriter to write the CSV file. The example below opens a file named "output.csv".
+1. Define the delimiter character and quote character for the CSV file. 
+2. Open a stream and create a `StreamWriter` to write the CSV file.
 3. Get the range of used cells in the worksheet.
 4. Iterate over each row and column in the used cell range and export the cell values to the CSV file.
 

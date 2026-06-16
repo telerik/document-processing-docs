@@ -10,36 +10,29 @@ position: 1
 
 # Worksheet Protection
 
-
-
-__Worksheet__ protection is designed to restrict the user from modifying the content and structure of the worksheet. When a worksheet is protected the user can edit the contents only of the cells that were explicitly marked as unlocked. Additionally, the model offers protection options that let you choose a set of commands that will be available to the user when protection is enabled.
-      
+`Worksheet` protection restricts the user from modifying the content and structure of the worksheet. When a worksheet is protected, the user can edit only the cells that were explicitly marked as unlocked. Additionally, the model offers protection options that let you choose a set of commands available to the user when protection is enabled.
 
 You can enforce worksheet protection with or without a password and you can always unprotect the workbook as needed. You can also let the user remove the protection by entering the correct password.
-      
-The protection functionality protects the worksheet content from being edited. If you need to protect the document so that it can be opened only after providing a password for it, you should encrypt it. The encryption functionality is currently not supported in SpreadProcessing and you can vote for its implementation using the [public request](https://feedback.telerik.com/document-processing/1356022-spreadprocessing-implement-encryption-of-workbook) for it. 
+
+The protection functionality protects the worksheet content from editing. If you need to protect the document so that it can be opened only after providing a password, you must encrypt it. The encryption functionality is not yet supported in SpreadProcessing and you can vote for its implementation through the [public request](https://feedback.telerik.com/document-processing/1356022-spreadprocessing-implement-encryption-of-workbook).
 
 ## How to Protect and Unprotect a Worksheet
 
-The __Worksheet__ class exposes a __Protect()__ method that takes two parameters: the password string and the worksheet protection options.
-        
+The `Worksheet` class exposes a `Protect()` method that takes two parameters: the password string and the worksheet protection options.
 
-__Example 1__ sets the __IsLocked__ property of cell A1 to false and protects the worksheet using a password and the default protection options. Since by default all cells are locked, after the sheet is protected, the user will be able to edit the value only in cell A1 as it is explicitly marked as unlocked.
-        
+**Example 1** sets the `IsLocked` property of cell A1 to false and protects the worksheet with a password and the default protection options. By default all cells are locked. After the sheet is protected, the user can edit the value only in cell A1 as it is explicitly marked as unlocked.
 
-#### __Example 1: Protect a Worksheet__
+**Example 1: Protect a Worksheet**
 
 <snippet id='codeblock-cnd'/>
 
 
 
-Use the __Unprotect(string)__ method of the Worksheet class to remove the protection. The method returns a Boolean value that indicates whether the sheet is successfully unprotected.
-        
+Use the `Unprotect(string)` method of the `Worksheet` class to remove the protection. The method returns a Boolean value that indicates whether the sheet is successfully unprotected.
 
-__Example 2__ demonstrates how to unprotect a worksheet.
-        
+**Example 2** demonstrates how to unprotect a worksheet.
 
-#### __Example 2: Unprotect a Worksheet__
+**Example 2: Unprotect a Worksheet**
 
 <snippet id='codeblock-cne'/>
 
@@ -47,22 +40,19 @@ __Example 2__ demonstrates how to unprotect a worksheet.
 
 ## Protection Options
 
-The worksheet protection feature lets specify a set of options that will be available to the user when protection is enforced. For example, you may want to allow the user to insert and delete rows, but restrict the insertion and deletion of columns.
-        
+The worksheet protection feature lets you specify a set of options available to the user when protection is enforced. For example, you may want to allow the user to insert and delete rows, but restrict the insertion and deletion of columns.
 
-To achieve that, you need to pass a __WorksheetProtectionOptions__ instance as the second argument of the Protect() method.
-        
+To achieve that, pass a `WorksheetProtectionOptions` instance as the second argument of the `Protect()` method.
 
-__Example 3__ demonstrates how to protect a worksheet using WorksheetProtectionOptions.
-        
+**Example 3** demonstrates how to protect a worksheet with `WorksheetProtectionOptions`.
 
-#### __Example 3: Protect Worksheet with WorksheetProtectionOptions__
+**Example 3: Protect Worksheet with WorksheetProtectionOptions**
 
 <snippet id='codeblock-cnf'/>
 
 
 
-The `WorksheetProtectionOptions` class exposes the following properties so you can control what actions the users will be able to perform:
+The `WorksheetProtectionOptions` class exposes the following properties so you can control what actions the users can perform:
 
 | Property | Description |
 |---|---|
@@ -79,6 +69,6 @@ The `WorksheetProtectionOptions` class exposes the following properties so you c
 
 ## See Also
 
- * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
- * [Workbook Protection]({%slug radspreadprocessing-features-protection-workbook%})
- * [Protect Specific Worksheet Cells Using RadSpreadProcessing]({%slug radspreadprocessing-protect-specific-worksheet-cells%})
+* [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
+* [Workbook Protection]({%slug radspreadprocessing-features-protection-workbook%})
+* [Protect Specific Worksheet Cells Using RadSpreadProcessing]({%slug radspreadprocessing-protect-specific-worksheet-cells%})

@@ -86,12 +86,13 @@ using (Stream output = File.OpenWrite(outputFilePath))
 Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
 
-### Key Points:
-- The `StyleId` property of `Run` objects allows you to associate a custom style.
-- Fields consist of `Start` and `End` characters; you can apply styles to these elements or to the containing paragraph.
-- Use the `UpdateFields` method to update the field content before export.
+### Key Points
+
+* The `StyleId` property of `Run` objects allows you to associate a custom style.
+* Fields consist of `Start` and `End` characters. You can apply styles to these elements or to the containing paragraph.
+* Use the `UpdateFields` method to update the field content before export.
 
 ## See Also
 
-- [Fields]({%slug radwordsprocessing-concepts-fields%})
-- [Styles]({%slug radwordsprocessing-concepts-styles%})
+* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Styles]({%slug radwordsprocessing-concepts-styles%})
