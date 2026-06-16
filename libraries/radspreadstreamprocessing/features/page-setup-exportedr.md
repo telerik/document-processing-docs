@@ -10,23 +10,28 @@ position: 3
 
 # Page Setup Exporter
 
-The __PageSetupExporter__ allows you to export the page settings for printing. The following methods are exposed:
+The `PageSetupExporter` allows you to export the page settings for printing. The following methods are available:
 
-* __SetFitToPagesTall:__ Sets the number of pages tall the worksheet will be scaled to when it's printed.
-* __SetFitToPagesWide:__ Sets the number of pages wide the worksheet will be scaled to when it's printed.
-* __SetPageOrder:__ Sets the page order.
-* __SetPageOrientation:__ Sets the page orientation.
-* __SetPaperSize:__ Sets the size of the paper.
-* __SetScaleFactor:__ Sets the scale factor of the printed worksheet. The valid values are from 0.1 to 4.
+* `SetFitToPagesTall`: Sets the number of pages tall the worksheet is scaled to when printed.
+* `SetFitToPagesWide`: Sets the number of pages wide the worksheet is scaled to when printed.
+* `SetPageOrder`: Sets the page order.
+* `SetPageOrientation`: Sets the page orientation.
+* `SetPaperSize`: Sets the size of the paper.
+* `SetScaleFactor`: Sets the scale factor of the printed worksheet. The valid values are from 0.1 to 4.
 
 
 ## Working with PageSetupExporter
 
-An important part is that you need to place the **PageSetupExporter** after the code for exporting all cells on the sheet. Example 1 demonstrates how you can create the **PageSetupExporter** and where to place it.
+You must place the `PageSetupExporter` after the code for exporting all cells on the sheet. The following example demonstrates how to create the `PageSetupExporter` and where to place it.
 
-#### **Example 1: Using  PageSetupExporter**
+**Example 1: Using PageSetupExporter**
 
 <snippet id='codeblock-dku'/>
 
 
->IPageSetupExporter inherits from [IDisposable](https://msdn.microsoft.com/en-us/library/system.idisposable(v=vs.110).aspx). Make sure the object is disposed when you are done with it. Otherwise, the content won't be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
+>`IPageSetupExporter` inherits from [IDisposable](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Make sure the object is disposed when you are done with it. Otherwise, the content will not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
+
+## See Also
+
+* [Worksheet]({%slug radspreadstreamprocessing-model-worksheet%})
+* [Workbook]({%slug radspreadstreamprocessing-model-workbook%})

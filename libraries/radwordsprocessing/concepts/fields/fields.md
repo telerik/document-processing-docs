@@ -1,7 +1,7 @@
-﻿---
+---
 title: Fields Overview
 page_title: Fields Overview
-description: Fields are special constructions that hold data, which can be updated.
+description: Learn how fields in RadWordsProcessing work as special constructions that hold dynamic data such as page numbers, merge fields, and dates.
 slug: radwordsprocessing-concepts-fields
 tags: fields, word, flow, docx, document, merge, dynamic, content, model, overview
 published: True
@@ -10,24 +10,21 @@ position: 0
 
 # Fields
 
-__Fields__ in the __RadFlowDocument__ model are special constructions that hold data, which can change/be updated – for example page numbers or merge fields. Fields consist of field code and field result. The field code fragment defines how the field result should be calculated when the field is updated. The field result fragment holds the latest calculated result. In the model these two fragments are separated by a special type of inline – [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}). __FieldCharacters__ are 3 types:
-      
+Fields in the `RadFlowDocument` model are special constructions that hold data, which can change or be updated. Examples include page numbers and merge fields. Fields consist of a field code and a field result. The field code fragment defines how the field result is calculated when the field is updated. The field result fragment holds the latest calculated result. In the model, these two fragments are separated by a special type of inline—[FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}). `FieldCharacter` instances are three types:
 
 | Type | Description |
 |---|---|
 | `Start` | Defines the start of the field. |
 | `End` | Defines the end of the field. |
 | `Separate` | Separates the code and result fragments. |
-          
 
-The inlines between the __start__ and __separate__ field characters form the __code fragment__ and the inlines between the __separate__ and __end__ field characters form the __result fragment__.
-      
+The inlines between the start and separate field characters form the code fragment. The inlines between the separate and end field characters form the result fragment.
 
-Here is how simple page field looks like inside the document:
+Here is how a simple page field looks inside the document:
 
 ![Rad Words Processing Concepts Fields 01](images/RadWordsProcessing_Concepts_Fields_01.png)
 
-In the document object model Fields are represented by the [Field](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Fields.Field.html) abstract class, which holds references to the __Start__, __Separate__ and __End__ field characters that are related to the field.
+In the document object model, fields are represented by the [Field](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Fields.Field.html) abstract class. This class holds references to the `Start`, `Separate`, and `End` field characters that are related to the field.
 
 ## Supported Fields
 
@@ -76,30 +73,29 @@ In the document object model Fields are represented by the [Field](https://docs.
 
 ## Inserting Fields
 
-The suggested way to insert field is to use the __InsertField()__ method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. It takes care of creating and inserting the code and result fragments as well as placing the appropriate field character inlines to separate them. The __InsertField()__ method returns an instance of the __FieldInfo__ class. It holds references to the start, separate and end field characters and also provides an API for getting the code and result fragments and updating the field.
-        
+The recommended way to insert a field is to use the `InsertField()` method of the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. It takes care of creating and inserting the code and result fragments as well as placing the appropriate field character inlines to separate them. The `InsertField()` method returns an instance of the `FieldInfo` class. It holds references to the start, separate, and end field characters and also provides an API for getting the code and result fragments and updating the field.
 
-#### __Example 1: Create a document containing a Date field using RadFlowDocumentEditor__
+**Example 1: Create a document containing a Date field using RadFlowDocumentEditor**
 
 <snippet id='codeblock-ss'/>
 
 
-You can also create and insert all the parts of the field manually by creating a __FieldInfo__ instance and adding all the inlines to the document structure. **Example 2** demonstrates how to achieve the same result as in **Example 1**.
-        
-#### __Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo__
+You can also create and insert all the parts of the field manually by creating a `FieldInfo` instance and adding all the inlines to the document structure. **Example 2** demonstrates how to achieve the same result as in **Example 1**.
+
+**Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo**
 
 <snippet id='codeblock-tt'/>
 
 
-You can see that the manual approach is more verbose and prone to errors. If not all of the field characters are inserted the result is an invalid document. Using the __RadFlowDocumentEditor__ on the other hand, guarantees that the document integrity is maintained.
-        
+The manual approach is more verbose and prone to errors. If not all of the field characters are inserted, the result is an invalid document. Using the `RadFlowDocumentEditor`, on the other hand, guarantees that the document integrity is maintained.
+
 ## Updating Fields
 
-__RadWordsProcessing__ supports updating of some fields types. When a field is updated, its result fragment is replaced with the calculated result value. Also the __Field__ property of the corresponding __FieldInfo__ object will be initialized to an instance of a __Field__ class that matches the recognized field type.
-        
+RadWordsProcessing supports updating of some field types. When a field is updated, its result fragment is replaced with the calculated result value. Also, the `Field` property of the corresponding `FieldInfo` object is initialized to an instance of a `Field` class that matches the recognized field type.
+
 Here is a list of the field types that support updating:
 
-* Formulas and Expressions (formulas and expressions begin with "=") 
+* Formulas and Expressions (formulas and expressions begin with "=")
 * IF
 * COMPARE
 * DATE
@@ -107,32 +103,32 @@ Here is a list of the field types that support updating:
 * HYPERLINK
 * SECTION
 
-If the field type is not one of the above, the result will not be updated and the Field property of the FieldInfo class will be set to an instance of a CustomCodeField. The complete list of field codes and the switches for each of them can be found in the [Docx specification](http://www.ecma-international.org/publications/standards/Ecma-376.htm).
+If the field type is not one of the above, the result is not updated and the `Field` property of the `FieldInfo` class is set to an instance of a `CustomCodeField`. The complete list of field codes and the switches for each of them can be found in the [Docx specification](https://www.ecma-international.org/publications/standards/Ecma-376.htm).
 
-Updating a single field is done with the __UpdateField()__ method of the __FieldInfo__ class as demonstrated in **Example 3**.
+You can update a single field with the `UpdateField()` method of the `FieldInfo` class as demonstrated in **Example 3**.
 
-#### __Example 3: Update a field__
+**Example 3: Update a field**
 
 <snippet id='codeblock-uu'/>
 
 
->Note that field result is not automatically updated upon insertion. The initial result fragment is passed as a parameter to the __InsertField()__ method.
+> The field result is not automatically updated upon insertion. The initial result fragment is passed as a parameter to the `InsertField()` method.
 
-All fields in the document can be updated using __UpdateFields()__ of __RadFlowDocument__. **Example 4** shows how to use this method.        
+You can update all fields in the document by using the `UpdateFields()` method of `RadFlowDocument`. **Example 4** shows how to use this method.
 
-#### __Example 4: Update all fields in a document__
+**Example 4: Update all fields in a document**
 
 <snippet id='codeblock-vv'/>
 
-### Updating PageRef, Page, NumPages, and SectionPages fields. 
+### Updating PageRef, Page, NumPages, and SectionPages Fields
 
-In R3 2022 the above fields were introduced. Their evaluation requires calculating the size of the document elements. This is why to update them you need to provide an implementation of a [**NumberingFieldsProvider**]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) which can provide the needed layout logic. In the default implementation we are using the layout logic from the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library. To use it you need to add reference to the following package: 
+Starting with R3 2022, the above fields were introduced. Their evaluation requires calculating the size of the document elements. To update them, you need to provide an implementation of a [NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) which can provide the needed layout logic. The default implementation uses the layout logic from the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library. To use it, add a reference to the following package:
 
 * **Telerik.Windows.Documents.Fixed**
 
 You can register the provider with the following code:
 
-#### __Example 5: Register the default NumberingFieldsProvider__
+**Example 5: Register the default NumberingFieldsProvider**
 
 <snippet id='codeblock-ww'/>
 
@@ -144,20 +140,20 @@ The syntax of a field code is as follows:
 | :---     					                 |
 | **field-type** [field-argument] [switches] |
 
-* *field-type*: The type of the field. For example: HYPERLINK.  
+* *field-type*: The type of the field. For example: HYPERLINK.
 
-* _argument_: The argument of the field. This is optional as some of the fields do not require an argument.
+* *argument*: The argument of the field. This is optional as some of the fields do not require an argument.
 
-* _switches_: One or several additional properties of the field.<br/>
-  The syntax of a switch is the following: <br/> 
+* *switches*: One or several additional properties of the field.<br/>
+  The syntax of a switch is the following: <br/>
 
 	| Syntax   		                      |
 	| :---     					          |
 	| _\switch-character_ _[switch-argument]_ |
 
-    * _switch-character_: Character defining the switch. For example, the "\o" switch for HYPERLINK fields defines the tooltip switch.
+    * *switch-character*: Character defining the switch. For example, the "\o" switch for HYPERLINK fields defines the tooltip switch.
 
-    * _switch-argument_: The argument of the switch. The argument is optional as not all switches require an argument.
+    * *switch-argument*: The argument of the switch. The argument is optional as not all switches require an argument.
                 
 
 Below is an example of field code:
@@ -166,44 +162,43 @@ Below is an example of field code:
 
 ## Nested Fields
 
-Fields can also be nested in each other. If there are nested fields inside the code fragment of a field – their result will be used when calculating the result of the outer field.
+Fields can also be nested in each other. If there are nested fields inside the code fragment of a field, their result is used when calculating the result of the outer field.
 
-**Example 5** creates a field, which will be evaluated to appropriate greeting based on the time of the day.
+**Example 6** creates a field, which is evaluated to an appropriate greeting based on the time of the day.
 
-#### __Example 6: Create a nested field__
+**Example 6: Create a nested field**
 
 <snippet id='codeblock-xx'/>
 
 ![Rad Words Processing Concepts Fields 02](images/RadWordsProcessing_Concepts_Fields_02.png)
 
-When calling the UpdateField() method all nested fields inside the code fragment of the field are also be updated. This is also true when using the UpdateFields() method of RadFlowDocument.
+When you call the `UpdateField()` method, all nested fields inside the code fragment of the field are also updated. This is also true when using the `UpdateFields()` method of `RadFlowDocument`.
 
 
 ## FieldInfo Class
 
-__FieldInfo__ is the main entry point when working with fields. It serves as "glue" between the start, separate and end field characters of a field. Each field character also holds a reference to its FieldInfo class through the FieldInfo property.
+`FieldInfo` is the main entry point when working with fields. It serves as "glue" between the start, separate, and end field characters of a field. Each field character also holds a reference to its `FieldInfo` class through the `FieldInfo` property.
 
->The only way to create __FieldCharacter__ is by creating __FieldInfo__ instance. To preserve the document integrity all field characters should be inserted and removed from the document together. If the RadFlowDocumentEditor class is used for insertion – this is done automatically.
+> The only way to create a `FieldCharacter` is by creating a `FieldInfo` instance. To preserve the document integrity, insert and remove all field characters from the document together. If you use the `RadFlowDocumentEditor` class for insertion, this is done automatically.
 
 
-__FieldInfo__ exposes several properties and methods for working with fields:
+`FieldInfo` exposes several properties and methods for working with fields:
 
-* __Start__: A reference to the Start field character.
-* __Separator__: A reference to the Separator field character.
-* __End__: A reference to the End field character.
-* __IsLocked__: Specifies if the field is locked. Locked fields are not updated.
-* __IsDirty__: Specifies if the field should be updated before it is displayed. This property is useful when creating a document and you want to assure the field is updated when the document is opened by an application.
-* __UpdateField()__: Recalculates the field result fragment and updates the Field property.
-* __GetCode()__: Gets the current code fragment as a string.
-* __GetResult()__: Gets the current result fragment as a string.
-* __Field__: Gets the current Field object (e.g. DateField) associated to the field info. Note, that this property is updated every time the field is updated.    
+* `Start`: A reference to the Start field character.
+* `Separator`: A reference to the Separator field character.
+* `End`: A reference to the End field character.
+* `IsLocked`: Specifies if the field is locked. Locked fields are not updated.
+* `IsDirty`: Specifies if the field must be updated before it is displayed. This property is useful when creating a document and you want to ensure the field is updated when the document is opened by an application.
+* `UpdateField()`: Recalculates the field result fragment and updates the `Field` property.
+* `GetCode()`: Gets the current code fragment as a string.
+* `GetResult()`: Gets the current result fragment as a string.
+* `Field`: Gets the current `Field` object (for example, `DateField`) associated to the field info. This property is updated every time the field is updated.
 
-When exporting documents to DOCX format you can use the __IsDirty__ property of an individual fields or the __AutoUpdateFields__ property of the export settings of the __DocxFormatProvider__, which will cause the consumer to update the fields when the document is opened. More information about the export settings of the provider is available [here]({%slug radwordsprocessing-formats-and-conversion-docx-settings%}).
-        
+When exporting documents to DOCX format, you can use the `IsDirty` property of individual fields or the `AutoUpdateFields` property of the export settings of the `DocxFormatProvider`. This causes the consumer to update the fields when the document is opened. More information about the export settings of the provider is available in the [DOCX Export Settings]({%slug radwordsprocessing-formats-and-conversion-docx-settings%}) article.
 
 ## See Also
 
- * [Document model]({%slug radwordsprocessing-model%})
- * [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%})
- * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
- * [Assigning Character Style to Fields in RadWordsProcessing]({%slug assigning-character-style-to-fields%})
+* [Document model]({%slug radwordsprocessing-model%})
+* [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%})
+* [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [Assigning Character Style to Fields in RadWordsProcessing]({%slug assigning-character-style-to-fields%})

@@ -12,8 +12,7 @@ position: 5
 
 
 
-__Style property__ is part of the style system, used to hold information about a formatting value of the document elements. It can be used to check if the value is local or it is inherited from base style. Information about how the style system works and how values are inherited from base styles can be found in the Style Evaluation and Inheritance section of the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
-      
+*Style property* is part of the style system, used to hold information about a formatting value of the document elements. You can use it to check if the value is local or inherited from a base style. Information about how the style system works and how values are inherited from base styles is available in the Style Evaluation and Inheritance section of the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
 
 * [Style Property Implementation Overview](#style-property-implementation-overview)
 
@@ -26,63 +25,50 @@ __Style property__ is part of the style system, used to hold information about a
 
 ## Style Property Implementation Overview
 
-Style properties are exposed through [IStyleProperty&lt;T&gt; interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStyleProperty-1.html), which contains the following properties and methods:
-        
+Style properties are exposed through the [`IStyleProperty<T>` interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStyleProperty-1.html), which contains the following properties and methods:
 
-* __LocalValue__: Used to get or set the local value. If it is not set, the value is __null__.
-            
+* `LocalValue`: Gets or sets the local value. If it is not set, the value is `null`.
 
-* __HasLocalValue__: Returns value indicating whether the style property has local value.
-            
+* `HasLocalValue`: Returns a value indicating whether the style property has a local value.
 
-* __GetActualValue()__: Returns the actual value of the property. This value is evaluated on every call by the style system using the evaluation rules described in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
-            
+* `GetActualValue()`: Returns the actual value of the property. The style system evaluates this value on every call using the evaluation rules described in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
 
-* __ClearValue()__: Clears the local value.
-            
+* `ClearValue()`: Clears the local value.
 
-* __PropertyDefinition__: The [property definition](#style-property-definitions) is exposed through the [IStylePropertyDefinition interface]( https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStylePropertyDefinition.html) and specifies some details for the style property as:
-            
+* `PropertyDefinition`: The [property definition](#style-property-definitions) is exposed through the [`IStylePropertyDefinition` interface](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStylePropertyDefinition.html) and specifies the following details for the style property:
 
-    * __PropertyName__: Returns the name of the style property.
-    * __StylePropertyType__: Returns the type of the style property.                
-    * __Validation__: Used to determine if a value is valid for this style property.
-    * __GetDefaultValueAsObject()__: This method returns the default value as object.
-                
+    * `PropertyName`: Returns the name of the style property.
+    * `StylePropertyType`: Returns the type of the style property.
+    * `Validation`: Determines if a value is valid for this style property.
+    * `GetDefaultValueAsObject()`: Returns the default value as an object.
 
-Some of the style properties always contain local value and are normally referred to as local style properties. They are used only by the document elements and their values are not respected by styles and style inheritance.
-        
+Some of the style properties always contain a local value and are referred to as local style properties. They are used only by the document elements and their values are not respected by styles and style inheritance.
 
 ## Style Property Definitions
 
-Style property definition is represented by the __StylePropertyDefinition&lt;T&gt;__ class and can be accessed from the style property itself (through its base interface __IStylePropertyDefinition__) or as a static member of [Run]({%slug radwordsprocessing-model-run%}), [Paragraph]({%slug radwordsprocessing-model-paragraph%}), [Table]({%slug radwordsprocessing-model-table%}), [TableRow]({%slug radwordsprocessing-model-tablerow%}) and [TableCell]({%slug radwordsprocessing-model-tablecell%}) document elements. Style property definitions specify the following details of the style property:
-        
+Style property definition is represented by the `StylePropertyDefinition<T>` class and can be accessed from the style property itself (through its base interface `IStylePropertyDefinition`) or as a static member of [Run]({%slug radwordsprocessing-model-run%}), [Paragraph]({%slug radwordsprocessing-model-paragraph%}), [Table]({%slug radwordsprocessing-model-table%}), [TableRow]({%slug radwordsprocessing-model-tablerow%}), and [TableCell]({%slug radwordsprocessing-model-tablecell%}) document elements. Style property definitions specify the following details of the style property:
 
-* __PropertyName__: Specifies the name of the style property.       
-* __DefaultValue__: Specifies the default value of the style property.           
-* __StylePropertyType__: Specifies the type of the style property as [StylePropertyType enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.StylePropertyType.html).
-* __Validation__: Used to determine if a value is valid for the style property associated with this style property definition.
-            
+* `PropertyName`: Specifies the name of the style property.
+* `DefaultValue`: Specifies the default value of the style property.
+* `StylePropertyType`: Specifies the type of the style property as [`StylePropertyType` enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.StylePropertyType.html).
+* `Validation`: Determines if a value is valid for the style property associated with this style property definition.
 
 ## Using Style Properties
 
 ### Style Properties in Document Elements
 
-Document elements expose sets of style properties through the __Properties__ property. For convenience, style properties can be also used through CLR shorthand properties exposed directly from the document elements. Shorthand property getter gets the *actual value* of the property while property setter sets the *local* value of the property.
-            
+Document elements expose sets of style properties through the `Properties` property. For convenience, style properties can also be used through CLR shorthand properties exposed directly from the document elements. The shorthand property getter returns the *actual value* of the property while the property setter sets the *local* value of the property.
 
-__Example 1__ is an example for equivalent getting of a value with CLR property and style property.
-            
+**Example 1** demonstrates how to get a value with CLR property and style property.
 
-#### __Example 1: Get a value__
+**Example 1: Get a value**
 
 <snippet id='codeblock-s'/>
 
 
-__Example 2__ is an example for an equivalent setting of a value with CLR property and style property.
-            
+**Example 2** demonstrates how to set a value with CLR property and style property.
 
-#### __Example 2: Set a value__
+**Example 2: Set a value**
 
 <snippet id='codeblock-t'/>
 
@@ -90,22 +76,19 @@ __Example 2__ is an example for an equivalent setting of a value with CLR proper
 
 ### Style Properties in Styles
 
-The style properties in a style are accessible through the following property sets: __CharacterProperties__, __ParagraphProperties__, __TableProperties__, __TableRowProperties__ and __TableCellProperties__.
-            
+The style properties in a style are accessible through the following property sets: `CharacterProperties`, `ParagraphProperties`, `TableProperties`, `TableRowProperties`, and `TableCellProperties`.
 
-__Example 3__ illustrates how to get the local value of a style property in a style.
-            
+**Example 3** illustrates how to get the local value of a style property in a style.
 
-#### __Example 3: Get the local value__
+**Example 3: Get the local value**
 
 <snippet id='codeblock-u'/>
 
 
 
-__Example 4__ shows how to get the actual value of style property in style.
-            
+**Example 4** shows how to get the actual value of a style property in a style.
 
-#### __Example 4: Get the actual value__
+**Example 4: Get the actual value**
 
 <snippet id='codeblock-v'/>
 
@@ -113,20 +96,18 @@ __Example 4__ shows how to get the actual value of style property in style.
 
 ## Style Properties Default Values
 
-The default values of all style properties are available in their [StylePropertyDefinitions](#style-property-definitions) and cannot be changed. To set the default values of properties for a particular document, you can change the default styles for the document.
-        
+The default values of all style properties are available in their [StylePropertyDefinitions](#style-property-definitions) and cannot be changed. To set the default values of properties for a particular document, change the default styles for the document.
 
-The code in __Example 5__ illustrates how to get the default value for a style property.
-        
+The code in **Example 5** illustrates how to get the default value for a style property.
 
-#### __Example 5: Get the default value__
+**Example 5: Get the default value**
 
 <snippet id='codeblock-w'/>
 
 
 
 Following is a list of all available style properties and their default values:
-        
+
 <table>
 <tr>
   <th>Name</th>
@@ -629,7 +610,7 @@ Following is a list of all available style properties and their default values:
 
 ## See Also
 
- * [Styles]({%slug radwordsprocessing-concepts-styles%})
- * [IStyleProperty&lt;T&gt; API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStyleProperty-1.html)
- * [IStylePropertyDefinition API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStylePropertyDefinition.html)
- * [Setting Bullet List Indents in RadWordsProcessing]({%slug set-bullet-list-indents-radwordsprocessing%})
+* [Styles]({%slug radwordsprocessing-concepts-styles%})
+* [`IStyleProperty<T>` API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStyleProperty-1.html)
+* [`IStylePropertyDefinition` API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStylePropertyDefinition.html)
+* [Setting Bullet List Indents in RadWordsProcessing]({%slug set-bullet-list-indents-radwordsprocessing%})

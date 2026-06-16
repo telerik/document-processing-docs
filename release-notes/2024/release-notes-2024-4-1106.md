@@ -12,7 +12,7 @@ position: 0
 # 2024.4.1106 (Q4 2024)
 
 
-## What's New
+## What Is New
 
 
 ![new](../images/new.png)
@@ -21,7 +21,7 @@ position: 0
 * PDF Processing: Introduced support for ligatures.
 * WordsProcessing: Introduced support for Justify text alignment.
 
-## What's Changed
+## What Is Changed
 
 
 ![changed](../images/changed.png)
@@ -36,29 +36,29 @@ position: 0
 * Introduced support for Matte color for Soft-Mask Images (SMasks).
 * Introduced support for creating documents using CMYK colors.
 * Introduced support for JavaScript actions API.
-* SkiaImageFormatProvider: Introduced support for Text, TextMarkup, Line, and Stamp annotations.
-* Respect the ExtGState`s current stroking alpha constant (CA &amp; ca) when rendering images.
+* `SkiaImageFormatProvider`: Introduced support for Text, TextMarkup, Line, and Stamp annotations.
+* Respect the `ExtGState` current stroking alpha constant (CA &amp; ca) when rendering images.
 * Introduced support for ligatures.
 * Introduced handling the import of documents with the wrong type of action key.
 * Introduced support for Trigger Events API related to JS actions.
-* Introduced API for setting Image opacity.
+* Introduced API for setting `Image` opacity.
 * Introduced support for RTL (Right-To-Left) text.
-* Introduced Soft-Mask Dictionaries in ExtGState object.
-* Implemented Blend Mode parameter of ExtGState object.
+* Introduced Soft-Mask Dictionaries in `ExtGState` object.
+* Implemented Blend Mode parameter of `ExtGState` object.
 * Introduced support for Trigger Events.
 * Justified text is now supported.
 * Introduced support for Transparency Group XObjects.
 
 ![fixed](../images/fixed.png)
 
-* An InvalidOperationException is thrown while parsing the Post table of a specific font file on export.
+* An `InvalidOperationException` is thrown while parsing the Post table of a specific font file on export.
 * Wrong colors are exported in Separation colorspaces with ICCBased containing LabColor due to incorrect calculations in Tint transformation function.
-* Win32Exception is thrown during a long-running process importing many documents with images.
+* `Win32Exception` is thrown during a long-running process importing many documents with images.
 * An unexpected trace warning when SVG document does not contain clipping.
 * Distorted SVG after exporting.
-* SkiaImageFormatProvider: Export to image is blocked when Export method is used instead of ExportAsync.
-* A NullReferenceException is thrown when writing image content with the PdfPageStreamWriter.
-* ArgumentNullException is thrown when resolving DecodeParms collection in Image XObject.
+* `SkiaImageFormatProvider`: Export to image is blocked when `Export` method is used instead of `ExportAsync`.
+* A `NullReferenceException` is thrown when writing image content with the `PdfPageStreamWriter`.
+* `ArgumentNullException` is thrown when resolving `DecodeParms` collection in Image XObject.
 * Form XObject does not take graphic state color from its content stream context.
 * Document text overlaps and is not possible to read for a specific document.
 * Decreased performance when loading thumbnails.
@@ -95,10 +95,10 @@ position: 0
 
 ![fixed](../images/fixed.png)
 
-* RtfFormatProvider: Heading color is not properly exported.
-* An InvalidOperationException is thrown when exporting a document containing table with no cells.
-* DocFormatProvider: IndexOutOfRangeException is thrown when importing a specific document with defined section columns.
-* ArgumentException is thrown during MailMerge of a document with an inline shape.
+* `RtfFormatProvider`: Heading color is not properly exported.
+* An `InvalidOperationException` is thrown when exporting a document containing table with no cells.
+* `DocFormatProvider`: `IndexOutOfRangeException` is thrown when importing a specific document with defined section columns.
+* `ArgumentException` is thrown during `MailMerge` of a document with an inline shape.
 
 ## ZipLibrary
 

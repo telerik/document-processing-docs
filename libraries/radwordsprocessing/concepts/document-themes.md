@@ -10,8 +10,8 @@ position: 3
 
 # Document Themes
 
-Document themes enable you to specify colors, fonts and a variety of graphic effects in a document and affect the look and feel of the whole document. Each theme contains a color scheme and a font scheme and is represented by the __DocumentTheme__ class and can be modified by the __Theme__ property of [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). Document theme contains two parts – color scheme – responsible for the colors, and font scheme – responsible for the fonts.
-      
+Document themes let you specify colors, fonts, and a variety of graphic effects in a document and affect the look and feel of the whole document. Each theme contains a color scheme and a font scheme and is represented by the `DocumentTheme` class. You can modify the theme through the `Theme` property of [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). A document theme contains two parts—a color scheme responsible for the colors, and a font scheme responsible for the fonts.
+
 * [Color Schemes](#color-schemes)
 
 * [Font Schemes](#font-schemes)
@@ -22,7 +22,7 @@ Document themes enable you to specify colors, fonts and a variety of graphic eff
 
 ## Color Schemes
 
-A color scheme has a unique name and contains a number of predefined colors. Its representation in __RadFlowDocument__'s model is the __ThemeColorScheme__ class. A scheme defines twelve colors and each of these is assigned a sole __ThemeColorType__. The following list contains all __ThemeColorType__ values:      
+A color scheme has a unique name and contains a number of predefined colors. Its representation in the `RadFlowDocument` model is the `ThemeColorScheme` class. A scheme defines twelve colors and each of these is assigned a sole `ThemeColorType`. The following list contains all `ThemeColorType` values:
 
 * background1
 * text1
@@ -37,40 +37,31 @@ A color scheme has a unique name and contains a number of predefined colors. Its
 * hyperlink
 * followed hyperlink
 
-The twelve color types above are used for creating __ThemableColor__ objects. They determine the color of the scheme that appears as the actual color of the __ThemableColor__ instance. As you change the theme or the color scheme, the actual color of the __ThemeableColor__ object changes as well. For example, if you set the fill of a cell to be a __ThemableColor__, applying a new theme or another scheme also affects the solid fill.
-        
+The twelve color types listed previously are used for creating `ThemableColor` objects. They determine the color of the scheme that appears as the actual color of the `ThemableColor` instance. As you change the theme or the color scheme, the actual color of the `ThemableColor` object changes as well. For example, if you set the fill of a cell to be a `ThemableColor`, applying a new theme or another scheme also affects the solid fill.
 
-__Example 1__ demonstrates how to create a __ThemeColorScheme__ object. Note that the example passes a name and twelve colors to the constructor. Every color has a comment next to it, so you can see its corresponding __ThemeColorType__.
-        
+The following example demonstrates how to create a `ThemeColorScheme` object. Note that the example passes a name and twelve colors to the constructor. Every color has a comment next to it, so you can see its corresponding `ThemeColorType`.
 
-#### __Example 1: Create a ThemeColorScheme object__
+**Example 1: Create a ThemeColorScheme Object**
 
 <snippet id='codeblock-d'/>
 
 
 
-There are several ways to create a __ThemableColor__ object:
-        
+There are several ways to create a `ThemableColor` object:
 
-* Passing two parameters to the constructor – *ThemeColorType* and *double*.
-            
+* Passing two parameters to the constructor—*ThemeColorType* and *double*.
 
-	* __ThemeColorType__ is an enum which has twelve possible values (the aforementioned color types).
-	                
+	* `ThemeColorType` is an enum which has twelve possible values (the color types listed previously).
 	
-	* The second parameter is of type __double__ and should be between -1 and 1. It represents the tint and shade to be applied to the selected color.
-                
+	* The second parameter is of type `double` and must be between -1 and 1. It represents the tint and shade to be applied to the selected color.
 
 * Passing *ThemeColorType* and *ColorShadeType*.
-            
 
-	* __ThemeColorType__ is the same as in the previously mentioned constructor.
-                
+	* `ThemeColorType` is the same as in the previously mentioned constructor.
 
-In order to create colors that depend on the current document theme, you need to use __ThemableColor__ objects. 
-        
+To create colors that depend on the current document theme, use `ThemableColor` objects.
 
-#### __Example 2: Create a ThemableColor object__
+**Example 2: Create a ThemableColor Object**
 
 <snippet id='codeblock-e'/>
 
@@ -78,35 +69,29 @@ In order to create colors that depend on the current document theme, you need to
 
 ## Font Schemes
 
-A font scheme is represented by the __ThemeFontScheme__ class. Every font scheme consists of a name and a number of predefined font families. Each font family corresponds to one of two font types:
-        
+A font scheme is represented by the `ThemeFontScheme` class. Every font scheme consists of a name and a number of predefined font families. Each font family corresponds to one of two font types:
 
 * Major
 
 * Minor
 
-The code in __Example 3__ illustrates how to create a __ThemeFontScheme__ object. A name and two font family names are passed to the font scheme constructor. The former font family name corresponds to the Major ThemeFontType and the latter - to the Minor.
-        
+The code in the following example illustrates how to create a `ThemeFontScheme` object. A name and two font family names are passed to the font scheme constructor. The former font family name corresponds to the Major `ThemeFontType` and the latter to the Minor.
 
-#### __Example 3: Create a ThemeFontScheme__
+**Example 3: Create a ThemeFontScheme**
 
 <snippet id='codeblock-f'/>
 
 
 
-In order to use the document theme's fonts you need to use __ThemableFontFamily__ objects. Again, there are several ways you can create one:
-        
+To use the document theme fonts, you need to use `ThemableFontFamily` objects. There are several ways you can create one:
 
-* Passing a __ThemeFontType__ object as a constructor parameter – this way you will bind the object being created to the currently selected document theme.
-            
+* Passing a `ThemeFontType` object as a constructor parameter—this binds the object to the currently selected document theme.
 
-* Passing a __FontFamily__ object or a string representing a FontFamily name – the result would be a static FontFamily, meaning it will not be changed when the document theme is changed.
-            
+* Passing a `FontFamily` object or a string representing a FontFamily name—the result is a static FontFamily that does not change when the document theme changes.
 
-When you need to create a font that depends on the current document theme, you need to use __ThemableFontFamily__ objects. 
-        
+When you need to create a font that depends on the current document theme, use `ThemableFontFamily` objects.
 
-#### __Example 4: Create a ThemableFontFamily object__
+**Example 4: Create a ThemableFontFamily Object**
 
 <snippet id='codeblock-g'/>
 
@@ -114,21 +99,21 @@ When you need to create a font that depends on the current document theme, you n
 
 ## Document Themes
 
-Now that you have a color and a font schemes, you can create a new __DocumentTheme__. You need to specify a name and pass the already created color and font schemes.       
+Now that you have a color and a font scheme, you can create a new `DocumentTheme`. Specify a name and pass the already created color and font schemes.
 
-#### __Example 5: Create a DocumentTheme object__
+**Example 5: Create a DocumentTheme Object**
 
 <snippet id='codeblock-h'/>
 
-There are a number of predefined color and font schemes. You can find them in a static class called [PredefinedThemeSchemes](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Theming.PredefinedThemeSchemes.html). The class exposes the properties __ColorSchemes__ and __FontSchemes__ that hold all predefined schemes. 
+There are a number of predefined color and font schemes. You can find them in a static class called [PredefinedThemeSchemes](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Theming.PredefinedThemeSchemes.html). The class exposes the properties `ColorSchemes` and `FontSchemes` that hold all predefined schemes.
 
-#### __Example 6: Using a predefined scheme__
+**Example 6: Using a Predefined Scheme**
 
 <snippet id='codeblock-i'/>
 
-Changing the current document theme is as easy as setting a single property.
-        
-#### __Example 7: Change the document theme__
+Changing the current document theme requires setting a single property.
+
+**Example 7: Change the Document Theme**
 
 <snippet id='codeblock-j'/>
 
@@ -235,19 +220,18 @@ RadWordsProcessing offers a set of predefined ThemeFontSchemes listed in the tab
 
 ## Getting Actual Values
 
-In order to get the actual value from __ThemableColor__ or __ThemableFontFamily__, you need to call the __GetActualValue()__ method on the corresponding object.
-        
+To get the actual value from `ThemableColor` or `ThemableFontFamily`, call the `GetActualValue()` method on the corresponding object.
 
-#### __Example 8: Get actual value from ThemableColor__
+**Example 8: Get Actual Value from ThemableColor**
 
 <snippet id='codeblock-k'/>
 
 
-#### __Example 9: Get actual value from ThemableFont__
+**Example 9: Get Actual Value from ThemableFont**
 
 <snippet id='codeblock-l'/>
 
 ## See Also
 
- * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
- * [Styles]({%slug radwordsprocessing-concepts-styles%})
+* [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [Styles]({%slug radwordsprocessing-concepts-styles%})

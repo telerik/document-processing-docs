@@ -12,12 +12,9 @@ position: 1
 
 
 
-This article lists and explains all supported operators.
-      
-
 ## Supported Operators
 
-The document model supports four groups of operators: arithmetic, comparison, text and reference.
+The document model supports four groups of operators: arithmetic, comparison, text, and reference.
         
 <table><tr><th>
 
@@ -104,7 +101,7 @@ Intersection operator. Returns a reference to the cells that two ranges have in 
 
 ## Operator Precedence
 
-If you combine multiple operators in a single formula, the expression is evaluated in order determined by the precedence of the operators. If two operators have equal precedence, they are evaluated from left to right. The following table contains all operators sorted by precedence in descending order:
+If you combine multiple operators in a single formula, the document model evaluates the expression in the order determined by the precedence of the operators. If two operators have equal precedence, the document model evaluates them from left to right. The following table contains all operators sorted by precedence in descending order:
         
 <table><tr><td>
 
@@ -146,4 +143,4 @@ Concatenates two strings</td></tr><tr><td>
 
 Comparison operators</td></tr></table>
 
-The order of operations within an expression can be changed through applying parenthesis.
+Use parentheses to change the order of operations within an expression.

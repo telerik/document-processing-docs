@@ -10,47 +10,45 @@ position: 15
 
 # PermissionRange
 
+A `PermissionRange` object holds annotation markers that specify the range of document elements it refers to. Every permission has a corresponding `PermissionRangeStart` and `PermissionRangeEnd`, which are inline elements. These two elements specify the range's location as follows:
 
-A __PermissionRange__ object holds annotation markers which specify for which range of document elements it refers. Every permission has a corresponding __PermissionRangeStart__ and __PermissionRangeEnd__, which are inline elements. These two elements specify the range's location as follows.
 
-
-* __PermissionRangeStart__: Specifies the start of a permission annotation.
-* __PermissionRangeEnd__: Specifies the end of a permission annotation.
+* `PermissionRangeStart`: Specifies the start of a permission annotation.
+* `PermissionRangeEnd`: Specifies the end of a permission annotation.
 
 
 ## Inserting a PermissionRange
 
+Creating a `PermissionRange` requires passing an instance of the `PermissionRangeCredentials` class to the constructor. You can create credentials in either one of the following ways:
 
-Creating a __PermissionRange__ requires passing an instance of the __PermissionRangeCredentials__ class to the constructor, which can be created in either one of the following ways:
-
-* __PermissionRangeCredentials(EditingGroup editingGroup):__ Initialize credentials with a type of user group. The enumeration exposes the following members:
-	* __None:__ Specifies that none of the users that open the document shall be allowed to edit range permissions using this editing group when document protection is enforced.
-	* __Everyone:__ Specifies that all users that open the document shall be allowed to edit range permissions using this editing group when document protection is enforced.
-	* __Administrators:__ Specifies that only user(s) who the viewing application associates with the Administrators group shall be allowed to edit the contents between the start and end permission ranges when document protection is enforced.
-	* __Contributors:__  Specifies that only user(s) who the viewing application associates with the Contributors group shall be allowed to edit the contents between the start and end permission ranges when document protection is enforced.
-	* __Editors:__ Specifies that only user(s) who the viewing application associates with the Editors group shall be allowed to edit the contents between the start and end permission ranges when document protection is enforced.
-	* __Owners:__ Specifies that only user(s) who the viewing application associates with the Owners group shall be allowed to edit the contents between the start and end permission ranges when document protection is enforced.
-	* __Current:__ Specifies that only user(s) who the viewing application associates with the Current group shall be allowed to edit the contents between the start and end permission ranges when document protection is enforced.
-* __PermissionRangeCredentials(string editor):__ Initialize credentials by passing the single user's name, email or domain credentials.
-
-
->importantThe credentials you specify to a permission range are used by the consumer of the generated document and it is responsible for making sure they are enforced when the document is protected. A protected document can still be edited with the API of __RadWordsProcessing__.
-
-__Example 1__ demonstrates how to create permission credentials for a single user specified by email and a permission range in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
+* `PermissionRangeCredentials(EditingGroup editingGroup)`: Initializes credentials with a type of user group. The enumeration exposes the following members:
+	* `None`: Specifies that none of the users that open the document are allowed to edit range permissions using this editing group when document protection is enforced.
+	* `Everyone`: Specifies that all users that open the document are allowed to edit range permissions using this editing group when document protection is enforced.
+	* `Administrators`: Specifies that only users who the viewing application associates with the Administrators group are allowed to edit the contents between the start and end permission ranges when document protection is enforced.
+	* `Contributors`: Specifies that only users who the viewing application associates with the Contributors group are allowed to edit the contents between the start and end permission ranges when document protection is enforced.
+	* `Editors`: Specifies that only users who the viewing application associates with the Editors group are allowed to edit the contents between the start and end permission ranges when document protection is enforced.
+	* `Owners`: Specifies that only users who the viewing application associates with the Owners group are allowed to edit the contents between the start and end permission ranges when document protection is enforced.
+	* `Current`: Specifies that only users who the viewing application associates with the Current group are allowed to edit the contents between the start and end permission ranges when document protection is enforced.
+* `PermissionRangeCredentials(string editor)`: Initializes credentials by passing the single user's name, email, or domain credentials.
 
 
-#### __Example 1: Add PermissionRange to paragraph__
+>important The credentials you specify to a permission range are used by the consumer of the generated document and it is responsible for enforcing them when the document is protected. A protected document can still be edited with the API of `RadWordsProcessing`.
+
+**Example 1** demonstrates how to create permission credentials for a single user specified by email and a permission range in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
+
+
+**Example 1: Add PermissionRange to paragraph**
 
 <snippet id='codeblock-dd'/>
 
-The paragraph should belong to the same document that is passed to the constructor of the __PermissionRange__ object, otherwise, an exception is thrown.
+The paragraph must belong to the same document that is passed to the constructor of the `PermissionRange` object. Otherwise, an exception is thrown.
 
 
-Inserting a __PermissionRange__ in the document can be achieved through [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) as well. Since a permission range refers to a specific document element or a range of elements, there are several overloads for the __InsertPermissionRange()__ method - accepting a __TableCell__, __TableRow__ or two inline elements representing the start and end of the range.
+You can also insert a `PermissionRange` in the document through [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). Since a permission range refers to a specific document element or a range of elements, there are several overloads for the `InsertPermissionRange()` method—accepting a `TableCell`, `TableRow`, or two inline elements representing the start and end of the range.
 
-__Example 2__ demonstrates how to specify that a __TableCell__ can be edited by everyone when protection is enforced.
+**Example 2** demonstrates how to specify that a `TableCell` can be edited by everyone when protection is enforced.
 
-#### __Example 2: Insert PermissionRange for TableCell__
+**Example 2: Insert PermissionRange for TableCell**
 
 <snippet id='codeblock-de'/>
 
@@ -59,42 +57,37 @@ __Example 2__ demonstrates how to specify that a __TableCell__ can be edited by 
 
 ### Enforcing Protection
 
-Including permission ranges in a document is not enough to protect them from editing, you also need to enforce the protection. Protecting and unprotecting a document is achieved with the __Protect()__ and __Unprotect()__ methods of __RadFlowDocumentEditor__ respectively. When enforcing and stopping the protection you have the option to pass a string password to the methods and specify the type of editing restrictions using the __ProtectionMode__ enumeration.
+Including permission ranges in a document is not enough to protect them from editing. You also need to enforce the protection. Protect and unprotect a document with the `Protect()` and `Unprotect()` methods of `RadFlowDocumentEditor` respectively. When enforcing and stopping the protection, you have the option to pass a string password to the methods and specify the type of editing restrictions using the `ProtectionMode` enumeration.
 
-__ProtectionMode__ exposes the following members:
+`ProtectionMode` exposes the following members:
 
-* __NoProtection:__ Specifies that no editing restrictions are applied.
-* __AllowComments:__ Specifies that working with comments is allowed in addition to editing in permission ranges.
-* __ReadOnly:__ Specifies that editing is allowed only in permission regions by the users or groups that have permissions for edition. This mode is applied when __ProtectionMode__ parameter is not passed to the __Protect()__ method.
+* `NoProtection`: Specifies that no editing restrictions are applied.
+* `AllowComments`: Specifies that working with comments is allowed in addition to editing in permission ranges.
+* `ReadOnly`: Specifies that editing is allowed only in permission regions by the users or groups that have permissions for edition. This mode is applied when the `ProtectionMode` parameter is not passed to the `Protect()` method.
 
->note In MS Word [passwords are case-sensitive and can be a maximum of 15 characters long](https://support.microsoft.com/en-us/office/protect-a-document-with-a-password-05084cc3-300d-4c1a-8416-38d3e37d6826). 
+>note In MS Word, [passwords are case-sensitive and can be a maximum of 15 characters long](https://support.microsoft.com/en-us/office/protect-a-document-with-a-password-05084cc3-300d-4c1a-8416-38d3e37d6826).
 
-__Example 3__ shows how to protect and unprotect a document using the various overloads of the methods.
+**Example 3** shows how to protect and unprotect a document using the various overloads of the methods.
 
-#### __Example 3: Protect and unprotect document through RadFlowDocumentEditor__
+**Example 3: Protect and unprotect document through RadFlowDocumentEditor**
 
 <snippet id='codeblock-df'/>
 
 
->The last call to the __Unprotect()__ method in __Example 3__ will enforce protection of type __NoProtection__ to the document. Protecting a document is intended to notify the user that changes are unadvised, but stopping the protection is still possible. The __Unprotect(string password)__ overload is introduced for your convenience to use in your applications and returns a *Boolean* result of the action. 
+>The last call to the `Unprotect()` method in **Example 3** enforces protection of type `NoProtection` to the document. Protecting a document notifies the user that changes are not recommended, but stopping the protection is still possible. The `Unprotect(string password)` overload is provided for your convenience and returns a *Boolean* result of the action.
 
 ### Modifying Document Protection Settings
 
-__RadFlowDocument__ exposes a property of type __ProtectionSettings__ - ProtectionSettings. Enforcing protection directly through the document is possible by setting the  __Enforced__ property as demonstrated in __Example 4__.
+`RadFlowDocument` exposes a property of type `ProtectionSettings`—`ProtectionSettings`. You can enforce protection directly through the document by setting the `Enforced` property as demonstrated in **Example 4**.
 
-#### __Example 4: Enforce protection through RadFlowDocument__
+**Example 4: Enforce protection through RadFlowDocument**
 
 <snippet id='codeblock-dg'/>
 
-The settings provide a number of other modification options, including changing the algorithm used to protect the document with one of the predefined in the __ProtectionAlgorithmNames__ enumeration.
-
+The settings provide several other modification options, including changing the algorithm used to protect the document with one of the predefined values in the `ProtectionAlgorithmNames` enumeration.
 
 
 ## See Also
 
 * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
-
-
-
-          

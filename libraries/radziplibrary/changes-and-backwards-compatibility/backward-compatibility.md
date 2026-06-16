@@ -1,6 +1,6 @@
 ---
 title: Backward Compatibility
-description: Breaking changes and migration guidance for upgrading RadZipLibrary between versions.
+description: Learn about the breaking changes in RadZipLibrary and how to migrate your code when upgrading between different versions of the library.
 page_title: Backward Compatibility
 slug: radziplibrary-backward-compatibility
 tags: migration, compatibility, radziplibrary, zip, breaking, versions, upgrade, archive
@@ -9,150 +9,129 @@ position: 1
 ---
 
 # Backward Compatibility
-This article lists the breaking changes and how they can be fixed when upgrading from a specific version of the controls to the next one.
 
-## What's Different in 2024 Q1  
+This article lists the breaking changes and how to fix them when upgrading from a specific version of the library to the next one.
+
+## What Is Different in 2024 Q1
 
 ### Changed
 
 The following constructors are obsolete:
 
-* **ZipArchive(Stream stream)**
-* **ZipArchive(Stream stream, ZipArchiveMode mode, bool leaveOpen, Encoding entryNameEncoding)** 
-* **ZipArchive(Stream stream, ZipArchiveMode mode, bool leaveOpen, Encoding entryNameEncoding, CompressionSettings compressionSettings, EncryptionSettingsBase encryptionSettings)**
+* `ZipArchive(Stream stream)`
+* `ZipArchive(Stream stream, ZipArchiveMode mode, bool leaveOpen, Encoding entryNameEncoding)`
+* `ZipArchive(Stream stream, ZipArchiveMode mode, bool leaveOpen, Encoding entryNameEncoding, CompressionSettings compressionSettings, EncryptionSettingsBase encryptionSettings)`
 
-### What to do now
+### What to Do Now
 
 Use the static methods instead:
 
-* **ZipArchive.Create(Stream stream)**
-* **ZipArchive.Create(Stream stream, Encoding entryNameEncoding)**
-* **ZipArchive.Create(Stream stream, Encoding entryNameEncoding, CompressionSettings compressionSettings, EncryptionSettings encryptionSettings)**
-* **ZipArchive.Read(Stream stream)**
-* **ZipArchive.Read(Stream stream, Encoding entryNameEncoding)**
-* **ZipArchive.Read(Stream stream, Encoding entryNameEncoding, CompressionSettings compressionSettings, DecryptionSettings decryptionSettings)**
-* **ZipArchive.Update(Stream stream)**
-* **ZipArchive.Update(Stream stream, Encoding entryNameEncoding)**
-* **ZipArchive.Update(Stream stream, Encoding entryNameEncoding, CompressionSettings compressionSettings, DecryptionSettings decryptionSettings)**
+* `ZipArchive.Create(Stream stream)`
+* `ZipArchive.Create(Stream stream, Encoding entryNameEncoding)`
+* `ZipArchive.Create(Stream stream, Encoding entryNameEncoding, CompressionSettings compressionSettings, EncryptionSettings encryptionSettings)`
+* `ZipArchive.Read(Stream stream)`
+* `ZipArchive.Read(Stream stream, Encoding entryNameEncoding)`
+* `ZipArchive.Read(Stream stream, Encoding entryNameEncoding, CompressionSettings compressionSettings, DecryptionSettings decryptionSettings)`
+* `ZipArchive.Update(Stream stream)`
+* `ZipArchive.Update(Stream stream, Encoding entryNameEncoding)`
+* `ZipArchive.Update(Stream stream, Encoding entryNameEncoding, CompressionSettings compressionSettings, DecryptionSettings decryptionSettings)`
 
->note The new static methods are leaving the stream open (the previously provided parameter "leave stream open" is obsoleted and the customer has the care to close the stream.
+>note The new static methods leave the stream open. The previously provided parameter "leave stream open" is obsolete and the consumer is responsible for closing the stream.
 
 ### Changed
 
-The **GetCryptoProvider** method accepts **EncryptionSettingsBase** instead of **EncryptionSettings**.
+The `GetCryptoProvider` method accepts `EncryptionSettingsBase` instead of `EncryptionSettings`.
 
-The **DefaultCryptoProvider** class is obsolete. Use PkzipCryptoProvider instead.
+The `DefaultCryptoProvider` class is obsolete. Use `PkzipCryptoProvider` instead.
 
-The **DefaultEncryptionSettings** class is obsolete. Use the static creation methods of the EncryptionSettings class instead.
+The `DefaultEncryptionSettings` class is obsolete. Use the static creation methods of the `EncryptionSettings` class instead.
 
-## What's Different in 2016 R3  
-
+## What Is Different in 2016 R3
 
 ### Changed
 
 Assemblies with a version number ending with .45 suffix are **not** distributed.
 
-### What to do now
+### What to Do Now
 
-Use the assemblies with a version number ending with .40 suffix. The library doesn't contain code specific for .NET Framework 4.5, thus an additional version is not needed.
+Use the assemblies with a version number ending with .40 suffix. The library does not contain code specific to .NET Framework 4.5, so an additional version is not needed.
 
-
-## What's Different in 2015 Q1 - 2015.1.0225
-
+## What Is Different in 2015 Q1 - 2015.1.0225
 
 ### Changed
 
-The __Telerik.Windows.Zip.ZipPackage__ class is obsolete.
+The `Telerik.Windows.Zip.ZipPackage` class is obsolete.
 
+### What to Do Now
 
-### What to do now
-
-Use the [__Telerik.Windows.Zip.ZipArchive__]({%slug radziplibrary-gettingstarted%}) class instead.            
-
+Use the [`Telerik.Windows.Zip.ZipArchive`]({%slug radziplibrary-gettingstarted%}) class instead.
 
 ### Changed
 
-The __Telerik.Windows.Zip.ZipPackageEntry__ class is obsolete.
+The `Telerik.Windows.Zip.ZipPackageEntry` class is obsolete.
 
+### What to Do Now
 
-### What to do now
-
-Use the [__Telerik.Windows.Zip.ZipArchiveEntry__]({%slug radziplibrary-gettingstarted%}) class instead.
-
+Use the [`Telerik.Windows.Zip.ZipArchiveEntry`]({%slug radziplibrary-gettingstarted%}) class instead.
 
 ### Changed
 
-The __Telerik.Windows.Zip.ZipOutputSrteam__ and __Telerik.Windows.Zip.ZipInputSrteam__ classes are obsolete.
+The `Telerik.Windows.Zip.ZipOutputSrteam` and `Telerik.Windows.Zip.ZipInputSrteam` classes are obsolete.
 
+### What to Do Now
 
-### What to do now
+Use the [`Telerik.Windows.Zip.CompressedStream`]({%slug radziplibrary-compress-stream%}) class instead.
 
-Use the [__Telerik.Windows.Zip.CompressedStream__]({%slug radziplibrary-compress-stream%}) class instead.
-
-
-## What's Different in 2014 Q1 - 2014.1.0226
+## What Is Different in 2014 Q1 - 2014.1.0226
 
 ### Changed
 
-The __Telerik.Windows.Zip.LZMA.LzmaEncoder__ class is removed as it is intended for internal use only.
-            
+The `Telerik.Windows.Zip.LZMA.LzmaEncoder` class is removed because it is intended for internal use only.
 
 ### Changed
 
-The __Telerik.Windows.Zip.ZipInputStream(System.IO.Stream, System.Boolean)__ constructor is removed.
-            
+The `Telerik.Windows.Zip.ZipInputStream(System.IO.Stream, System.Boolean)` constructor is removed.
 
-### What to do now
+### What to Do Now
 
-Use the __Telerik.Windows.Zip.ZipInputStream(System.IO.Stream)__ constructor instead.
-            
+Use the `Telerik.Windows.Zip.ZipInputStream(System.IO.Stream)` constructor instead.
 
 ### Changed
 
-The __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.String[])__ method is removed.
-            
+The `System.Void Telerik.Windows.Zip.ZipPackage::Add(System.String[])` method is removed.
 
-### What to do now
+### What to Do Now
 
-You can use the __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.Collections.Generic.IEnumerable&lt;string&gt;)__   method instead.
-            
+Use the `System.Void Telerik.Windows.Zip.ZipPackage::Add(System.Collections.Generic.IEnumerable<string>)` method instead.
 
 ### Changed
 
-The __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.String[])__ method is removed.
-            
+The `System.Void Telerik.Windows.Zip.ZipPackage::Add(System.String[])` method is removed.
 
-### What to do now
+### What to Do Now
 
-You can use the __System.Void Telerik.Windows.Zip.ZipPackage::Add(System.Collections.Generic.IEnumerable&lt;string&gt;)__  method instead.
-            
+Use the `System.Void Telerik.Windows.Zip.ZipPackage::Add(System.Collections.Generic.IEnumerable<string>)` method instead.
 
 ### Changed
 
-The __System.Void Telerik.Windows.Zip.ZipPackage::AddStream(System.String, System.IO.Stream)__ method is removed.
-            
+The `System.Void Telerik.Windows.Zip.ZipPackage::AddStream(System.String, System.IO.Stream)` method is removed.
 
-### What to do now
+### What to Do Now
 
-You can use the __System.Void Telerik.Windows.Zip.ZipPackage::AddStream(System.IO.Stream, System.String)__ method instead.
-            
+Use the `System.Void Telerik.Windows.Zip.ZipPackage::AddStream(System.IO.Stream, System.String)` method instead.
 
 ### Changed
 
-The __System.Void Telerik.Windows.Zip.ZipPackage::AddStream(Telerik.Windows.Zip.ZipCompression, System.String, System.IO.Stream, System.DateTime)__ method is removed.
-            
+The `System.Void Telerik.Windows.Zip.ZipPackage::AddStream(Telerik.Windows.Zip.ZipCompression, System.String, System.IO.Stream, System.DateTime)` method is removed.
 
-### What to do now
+### What to Do Now
 
-You can use the __System.Void Telerik.Windows.Zip.ZipPackage::AddStream(System.IO.Stream, System.String, Telerik.Windows.Zip.ZipCompression, System.DateTime)__ method instead.
-            
+Use the `System.Void Telerik.Windows.Zip.ZipPackage::AddStream(System.IO.Stream, System.String, Telerik.Windows.Zip.ZipCompression, System.DateTime)` method instead.
 
 ### Changed
 
-The __Telerik.Windows.Zip.ZipPackage Telerik.Windows.Zip.ZipPackage::Open(System.IO.Stream, System.IO.FileAccess)__ method is removed.
-            
+The `Telerik.Windows.Zip.ZipPackage Telerik.Windows.Zip.ZipPackage::Open(System.IO.Stream, System.IO.FileAccess)` method is removed.
 
-### What to do now
+### What to Do Now
 
-You can use the __Telerik.Windows.Zip.ZipPackage Telerik.Windows.Zip.ZipPackage::Open(System.IO.Stream)__ method instead.
-            
+Use the `Telerik.Windows.Zip.ZipPackage Telerik.Windows.Zip.ZipPackage::Open(System.IO.Stream)` method instead.

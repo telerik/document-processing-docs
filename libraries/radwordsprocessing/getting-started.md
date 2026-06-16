@@ -10,7 +10,7 @@ position: 1
 
 # Getting Started
 
-This tutorial will take you through the creation of a sample application that uses RadWordsProcessing.
+This tutorial takes you through the creation of a sample application that uses RadWordsProcessing.
 
 >noteIf you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
 
@@ -20,33 +20,26 @@ You can find the required references in the [WordsProcessing NuGet packages]({%s
 
 ## Creating RadFlowDocument from Code
 
-Here is how to create a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and insert some text content with the help of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
-        
+The following example shows how to create a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and insert some text content with the help of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
 
-#### __Example 1: Create RadFlowDocument programmatically__
+**Example 1: Create RadFlowDocument Programmatically**
 
 <snippet id='codeblock-b'/>
 
-
-
 You need to add using directive to the following namespaces:
-        
 
 * Telerik.Windows.Documents.Flow.Model
 * Telerik.Windows.Documents.Flow.Model.Editing
-            
 
 ## Exporting RadFlowDocument to Docx
 
-Exporting the document to Docx file can be achieved with the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). Here is how to create a provider instance and save a document with it:
-        
+You can export the document to a Docx file with the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). The following example shows how to create a provider instance and save a document with it:
 
-#### __Example 2: Export RadFlowDocument to Docx__
+**Example 2: Export RadFlowDocument to Docx**
 
 <snippet id='codeblock-c'/>
 
-Detailed information about the supported formats and features can be found in the [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}) article. For more complete examples head to the [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%}) section of the library.
-        
+For detailed information about the supported formats and features, see the [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}) article. For more complete examples, see the [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%}) section of the library.
 
 ## See Also
 
@@ -54,5 +47,3 @@ Detailed information about the supported formats and features can be found in th
 * [Model]({%slug radwordsprocessing-model%})
 * [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%})
 * [WordsProcessing Basic Usage Demo](https://demos.telerik.com/document-processing/wordsprocessing)
-
-

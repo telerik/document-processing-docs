@@ -10,9 +10,7 @@ position: 1
 
 # Features
 
-
-
-Below you can find list with all features that are supported by HtmlFormatProvider.
+The following table lists all features that `HtmlFormatProvider` supports.
 
 ## 
 <table><thead><tr><th>

@@ -1,7 +1,7 @@
 ---
 title: Date Field
 page_title: Date Field
-description: Date field is a Field element that can display a date, a time, or both.
+description: Learn how to use the DateField element to display a date, a time, or both in RadWordsProcessing documents.
 slug: radwordsprocessing-concepts-date-field
 tags: datefield, word, flow, docx, fields, document, date, time, model, display
 published: True
@@ -10,15 +10,15 @@ position: 3
 
 # Date Field
 
-[DateField](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.datefield) is a [Field]({%slug radwordsprocessing-concepts-fields%}) element that can display a date, a time, or both, depending on the format you specify in a date-time picture switch.
+[`DateField`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.datefield) is a [Field]({%slug radwordsprocessing-concepts-fields%}) element that can display a date, a time, or both, depending on the format you specify in a date-time picture switch.
 
 ## Field Syntax
 
-This is how the syntax of a Date field looks like:
+The syntax of a Date field is as follows:
 
 | Syntax   											  |
 | :---     											  |
-| { **DATE** [ \@ "Date-Time Picture"] [_Switches_] } |    
+| { **DATE** [ \@ "Date-Time Picture"] [_Switches_] } |
 
 
 ## Switches
@@ -33,17 +33,16 @@ The possible switches for a Date field are:
 
 ## Inserting
 
-Inserting a Date Field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
+You can insert a Date Field through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s `InsertField()` method. It accepts code as the first argument and result as the second argument.
 
-__Example 1__ demonstrates how you can insert a date field.
-        
+**Example 1** demonstrates how to insert a date field.
 
-#### __Example 1: Insert date field__
+**Example 1: Insert date field**
 
 <snippet id='codeblock-nn'/>
 
 
-After updating the field the result would be "_12/03/2021_" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
+After updating the field, the result is "_12/03/2021_" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
 
 ## See Also
 

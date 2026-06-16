@@ -12,17 +12,17 @@ position: 2
 
 
 
-Worksheets in __RadSpreadProcessing__'s document model consist of cells organized in rows and columns. The API of the model allows you to set the width of each column and the height of each row. Additionally, you can choose to use the autofit feature that sizes the rows and columns based on their current content. This article demonstrates the different options for changing row height and column width.
+Worksheets in the RadSpreadProcessing document model consist of cells organized in rows and columns. The API of the model allows you to set the width of each column and the height of each row. Additionally, you can choose to use the autofit feature that sizes the rows and columns based on their current content. The following sections demonstrate the different options for changing row height and column width.
 
 ## Row Height
 
-The height of a row is retrieved and changed through an instance of type __RowHeight__. The class exposes two properties: __Value__, which holds the height of the row, and __IsCustom__ that indicates whether the height is set by the user. If the __IsCustom__ property is set to false, the row height changes automatically in certain cases, for example when you increase the font size of a cell that contains a number value and its content no longer fits in the available size. However, if you increase the font size and the __IsCustom__ property is set to true, the row height is not going to change and part of the cell content would stay hidden.
+The height of a row is retrieved and changed through an instance of type `RowHeight`. The class exposes two properties: `Value`, which holds the height of the row, and `IsCustom` that indicates whether the height is set by the user. If the `IsCustom` property is set to `false`, the row height changes automatically in certain cases, for example when you increase the font size of a cell that contains a number value and its content no longer fits in the available size. However, if you increase the font size and the `IsCustom` property is set to `true`, the row height does not change and part of the cell content stays hidden.
         
 
-In order to change the rows' height, you need to create a __RowSelection__ instance that includes the rows to be resized. The __RowSelection__ class exposes __GetHeight()__, __SetHeight()__ and __ClearHeight()__ methods that are used to manipulate the height of the selected rows.
+To change the row height, create a `RowSelection` instance that includes the rows to be resized. The `RowSelection` class exposes `GetHeight()`, `SetHeight()`, and `ClearHeight()` methods that are used to manipulate the height of the selected rows.
         
 
-The __GetHeight()__ method returns a __RangePropertyValue&lt;RowHeight&gt;__ instance that holds information about the height of all selected rows. The object exposes two properties that indicate the value of `RowHeight` for the cell range:
+The `GetHeight()` method returns a `RangePropertyValue<RowHeight>` instance that holds information about the height of all selected rows. The object exposes two properties that indicate the value of `RowHeight` for the cell range:
 
 | Property | Description |
 |---|---|
@@ -30,13 +30,13 @@ The __GetHeight()__ method returns a __RangePropertyValue&lt;RowHeight&gt;__ ins
 | `Value` | Holds the actual `RowHeight`. If `IsIndeterminate` is `false`, `Value` contains the `RowHeight` for the whole `RowSelection` region. If `IsIndeterminate` is `true`, `Value` is set to its default value. |
             
 
-The __SetHeight()__ method is used to change the height of rows. It takes a single argument of type __RowHeight__ which specifies the new height. The __ClearHeight()__ method is used to reset the __RowHeight__ of the selected rows to the default height. Note that the default row height can be manipulated through the __GetDefaultHeight()__ and __SetDefaultHeight()__ methods exposed by the __Rows__ class.
+The `SetHeight()` method changes the height of rows. It takes a single argument of type `RowHeight` which specifies the new height. The `ClearHeight()` method resets the `RowHeight` of the selected rows to the default height. The default row height can be manipulated through the `GetDefaultHeight()` and `SetDefaultHeight()` methods exposed by the `Rows` class.
         
 
-__Example 1__ shows how to retrieve and change the height of several rows.
+**Example 1** shows how to get and change the height of several rows.
         
 
-#### __Example 1: Change row height__
+**Example 1: Change Row Height**
 
 <snippet id='codeblock-crq'/>
 
@@ -44,24 +44,24 @@ __Example 1__ shows how to retrieve and change the height of several rows.
 
 ## Auto Fit Rows Height
 
-The autofit feature offers a handy approach for resizing multiple rows so that each of them chooses a height that fits its content. To autofit the height of rows, you need to create a __RowSelection__ instance that contains the rows that need to be resized and invoke the __AutoFitHeight()__ method of the __RowSelection__ object. __Example 2__ shows how to fit the height of rows with indexes 6, 7 and 8.
+The autofit feature offers a handy approach for resizing multiple rows so that each of them chooses a height that fits its content. To autofit the height of rows, create a `RowSelection` instance that contains the rows that need to be resized and invoke the `AutoFitHeight()` method of the `RowSelection` object. **Example 2** shows how to fit the height of rows with indexes 6, 7, and 8.
         
 
-#### __Example 2: Fit height of rows__
+**Example 2: Fit Height of Rows**
 
 <snippet id='codeblock-crr'/>
 
-> The expected behavior when calling the **AutoFitHeight** method on a row that contains merged and wrapped cells is to set the default [RowHeight](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.rowheight) value instead of calculating the row height according to its content. In order to measure the cell content you can check the exposed by the [LayoutHelper class](#layouthelper-class) methods. 
+> The expected behavior when calling the `AutoFitHeight` method on a row that contains merged and wrapped cells is to set the default [RowHeight](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.rowheight) value instead of calculating the row height according to its content. To measure the cell content, you can check the methods exposed by the [LayoutHelper class](#layouthelper-class). 
 
 ## Columns Width
 
-The width of a column is retrieved and changed through an instance of type __ColumnWidth__. The class exposes two properties: __Value__, which holds the width of the column, and __IsCustom__ that indicates whether the width is set by the user. If the __IsCustom__ property is set to false, the column width changes automatically in certain cases, for example when you increase the font size of a cell that contains a number value and its content no longer fits in the available size. However, if you increase the font size and the __IsCustom__ property is set to true, the column width is not going to change and part of the cell content would stay hidden.
+The width of a column is retrieved and changed through an instance of type `ColumnWidth`. The class exposes two properties: `Value`, which holds the width of the column, and `IsCustom` that indicates whether the width is set by the user. If the `IsCustom` property is set to `false`, the column width changes automatically in certain cases, for example when you increase the font size of a cell that contains a number value and its content no longer fits in the available size. However, if you increase the font size and the `IsCustom` property is set to `true`, the column width does not change and part of the cell content stays hidden.
         
 
-In order to change the columns' width, you need to create a __ColumnSelection__ instance that includes the columns to be resized. The __ColumnSelection__ class exposes __GetWidth()__, __SetWidth()__ and __ClearWidth()__ methods that are used to manipulate the width of the selected columns.
+To change the column width, create a `ColumnSelection` instance that includes the columns to be resized. The `ColumnSelection` class exposes `GetWidth()`, `SetWidth()`, and `ClearWidth()` methods that are used to manipulate the width of the selected columns.
         
 
-The __GetWidth()__ method returns a __RangePropertyValue&lt;ColumnWidth&gt;__ instance that holds information about the width of all selected columns. The object exposes two properties that indicate the value of the property for the cell range:
+The `GetWidth()` method returns a `RangePropertyValue<ColumnWidth>` instance that holds information about the width of all selected columns. The object exposes two properties that indicate the value of the property for the cell range:
 
 | Property | Description |
 |---|---|
@@ -69,77 +69,77 @@ The __GetWidth()__ method returns a __RangePropertyValue&lt;ColumnWidth&gt;__ in
 | `Value` | Holds the actual `ColumnWidth`. If `IsIndeterminate` is `false`, `Value` contains the `ColumnWidth` for the whole `ColumnSelection` region. If `IsIndeterminate` is `true`, `Value` is set to its default value. |
             
 
-The __SetWidth()__ method is used to change the width of columns. It takes a single argument of type __ColumnWidth__ that specifies the new width. The __ClearWidth()__ method is used to reset the __ColumnWidth__ of the selected columns to the default width. Note that the default column width can be manipulated through the __GetDefaultWidth()__ and __SetDefaultWidth()__ methods exposed by the __Columns__ class.
+The `SetWidth()` method changes the width of columns. It takes a single argument of type `ColumnWidth` that specifies the new width. The `ClearWidth()` method resets the `ColumnWidth` of the selected columns to the default width. The default column width can be manipulated through the `GetDefaultWidth()` and `SetDefaultWidth()` methods exposed by the `Columns` class.
         
 
-__Example 3__ shows how to retrieve and change the width of several columns.
+**Example 3** shows how to get and change the width of several columns.
         
 
-#### __Example 3: Change columns width__
+**Example 3: Change Columns Width**
 
 <snippet id='codeblock-crs'/>
 
 ## Auto Fit Columns Width
 
-The autofit feature offers a handy approach for resizing multiple columns so that each of them chooses a width that fits its content. To autofit the columns, you need to create a __ColumnSelection__ instance that holds the columns to be resized, and invoke its __AutoFitWidth()__ method. __Example 4__ shows how to fit the column width of columns F to H.
+The autofit feature offers a handy approach for resizing multiple columns so that each of them chooses a width that fits its content. To autofit the columns, create a `ColumnSelection` instance that holds the columns to be resized, and invoke its `AutoFitWidth()` method. **Example 4** shows how to fit the column width of columns F to H.
         
 
-#### __Example 4: Fit width of columns__
+**Example 4: Fit Width of Columns**
 
 <snippet id='codeblock-crt'/>
 
 
-Another way to auto fit column widths is to use the __ExpandToFitNumberValuesWidth()__ method. It affects cells that contain only number values and have a __ColumnWidth__ with __IsCustom__ property set to true. __Example 5__ demonstrates the alternative way to fit the column width.
+Another way to auto fit column widths is to use the `ExpandToFitNumberValuesWidth()` method. It affects cells that contain only number values and have a `ColumnWidth` with `IsCustom` property set to `true`. **Example 5** demonstrates the alternative way to fit the column width.
         
 
-#### __Example 5: Fit with ExpandToFitNumberValuesWidth()__
+**Example 5: Fit with ExpandToFitNumberValuesWidth()**
 
 <snippet id='codeblock-cru'/>
 
 > The unit type used to set the width of the columns and the height of the rows in RadSpreadProcessing is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
 
-### Telerik RadSpreadProcessing vs MS Excel 
+### Telerik RadSpreadProcessing Compared to MS Excel 
 
- In the other hand, MS Excel uses its [own measurement unit](https://docs.microsoft.com/en-sg/office/troubleshoot/excel/determine-column-widths), so in order to convert between pixel and MS Excel width you can use the following methods of the UnitHelper class in combination with the `SetWidth()` method:
+ On the other hand, MS Excel uses its [own measurement unit](https://learn.microsoft.com/en-sg/office/troubleshoot/excel/determine-column-widths), so to convert between pixel and MS Excel width you can use the following methods of the `UnitHelper` class in combination with the `SetWidth()` method:
 
 | Method | Description |
 |---|---|
 | `PixelWidthToExcelColumnWidth` | Converts column width in pixels to MS Excel column width. |
 | `ExcelColumnWidthToPixelWidth` | Converts MS Excel column width to pixel width. |
 
-__Example 6__ shows how to convert and set from pixel to MS Excel column width.    
+**Example 6** shows how to convert and set from pixel to MS Excel column width.    
 
-#### __Example 6: Convert from pixel column width to MS Excel column width__
+**Example 6: Convert from Pixel Column Width to MS Excel Column Width**
 
 <snippet id='codeblock-crv'/>
 
-__Example 7__ shows how to convert and set from MS Excel to pixel column width.    
+**Example 7** shows how to convert and set from MS Excel to pixel column width.    
 
-#### __Example 7: Convert from MS Excel column width to pixel column width__
+**Example 7: Convert from MS Excel Column Width to Pixel Column Width**
 
 <snippet id='codeblock-crw'/>
 
-The row height in MS Excel is measured in points so in order to set them you can convert this unit and set the exact number you are passing to the **SetHeight**() method for the height using the UnitHelper class.
+The row height in MS Excel is measured in points so to set them you can convert this unit and set the exact number you are passing to the `SetHeight()` method for the height using the `UnitHelper` class.
 
 
-## LayoutHelper class
+## LayoutHelper Class
 
 The [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.layout.layouthelper) class exposes the following methods that help to calculate the size of the page content:
 
 | Method | Description |
 |---|---|
 | `CalculateCellContentSize` | Calculates the size of the cell content. |
-| `CalculateCellLayoutBox` | Creates, arranges and returns the cell layout box. |
+| `CalculateCellLayoutBox` | Creates, arranges, and returns the cell layout box. |
 
-__Example 8__ shows how to get the size of the cell content.
+**Example 8** shows how to get the size of the cell content.
 
-#### __Example 8: Get the Size of the cell content__
+**Example 8: Get the Size of the Cell Content**
 
 <snippet id='codeblock-crx'/>
 
-__Example 9__ shows how to get the cell layout box.
+**Example 9** shows how to get the cell layout box.
 
-#### __Example 9: Get the cell layout box__
+**Example 9: Get the Cell Layout Box**
 
 <snippet id='codeblock-cry'/>
 

@@ -1,65 +1,66 @@
 ---
 title: Working with Content Controls
-page_title:  Working with Content Controls
+page_title: Working with Content Controls
 description: Learn how to access, insert, modify, and remove content controls programmatically in RadWordsProcessing documents.
 slug: wordsprocessing-model-working-with-content-controls
 tags: content, controls, word, flow, document, docx, editing, sdt, access, api
 published: True
 ---
 
-# Working with Content Controls 
+# Working with Content Controls
 
-This article shows some examples of how you can insert content controls, access existing and modify their properties from the code. 
+This article shows examples of how to insert content controls, access existing ones, and modify their properties in code.
 
-## Manipulate Existing Content Controls
+## Manipulating Existing Content Controls
 
-### Get the Content Controls 
+### Getting the Content Controls
 
-The content controls can be retrieved by using the `EnumerateChildrenOfType()` method of any document element.
+You can retrieve the content controls by using the `EnumerateChildrenOfType()` method of any document element.
 
-#### **Example 1: Get all content controls**
+**Example 1: Get All Content Controls**
 
 <snippet id='codeblock-dndn'/>
 
-### Set Content Controls Properties
+### Setting Content Controls Properties
 
-This example shows how you can iterate the items and add an item to an existing ComboBox content control.
+This example shows how to iterate the items and add an item to an existing `ComboBox` content control.
 
-#### **Example 2: Adding items to a ComboBox or a DropDownList**
+**Example 2: Adding Items to a ComboBox or a DropDownList**
 
 <snippet id='codeblock-dodo'/>
 
-## Insert or Remove Content Controls
+## Inserting or Removing Content Controls
 
-New content controls can be inserted through the **InsertStructuredDocumentTag** method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method has several overloads that allow you to insert the content control by passing its type, properties, and relative document elements.
+You can insert new content controls through the `InsertStructuredDocumentTag` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method has several overloads that allow you to insert the content control by passing its type, properties, and relative document elements.
 
->note If adding content controls with the `InsertStructuredDocumentTag(SdtType)` method without specifying the content, the resulting document will only have the annotation range start and end of the control. The desired content should be manually added afterwards. 
+>note If you add content controls with the `InsertStructuredDocumentTag(SdtType)` method without specifying the content, the resulting document only has the annotation range start and end of the control. Add the desired content manually afterwards.
 
-#### **Example 3: Inserting a content control using content control type**
+**Example 3: Inserting a Content Control Using Content Control Type**
 
 <snippet id='codeblock-dpdp'/>
 
-#### **Example 4: Inserting a Rich Text content control using content control properties**
+**Example 4: Inserting a Rich Text Content Control Using Content Control Properties**
 
 <snippet id='codeblock-dqdq'/>
 
-#### **Example 5: Inserting a CheckBox content control using content control properties**
+**Example 5: Inserting a CheckBox Content Control Using Content Control Properties**
 
 <snippet id='codeblock-drdr'/>
 
-#### **Example 6: Remove a content control**
+**Example 6: Remove a Content Control**
 
 <snippet id='codeblock-dsds'/>
 
-#### **Example 7: Insert a content control to a specific position**
+**Example 7: Insert a Content Control to a Specific Position**
 
->note When using the `InsertStructuredDocumentTag()` method and passing start and end elements, make sure that the elements are not already part of a content control.  An exception to the rule are the rich text and repeating section content controls, which can fully contain other controls, with the restriction that they cannot intersect their ranges. 
+>note When using the `InsertStructuredDocumentTag()` method and passing start and end elements, ensure that the elements are not already part of a content control. An exception to the rule are the rich text and repeating section content controls, which can fully contain other controls, with the restriction that they cannot intersect their ranges.
 
->caption Figure 1: Examples of correct/incorrect adding of content controls
+>caption Figure 1: Examples of correct and incorrect adding of content controls
 
-![working-with-content-controls001](images/working-with-content-controls001.png)		
+![working-with-content-controls001](images/working-with-content-controls001.png)
 
 <snippet id='codeblock-dtdt'/>
 
 ## See Also
+
 * [Content Controls Overview]({%slug wordsprocessing-model-content-controls%})

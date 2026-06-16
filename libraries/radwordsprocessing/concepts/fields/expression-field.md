@@ -1,7 +1,7 @@
 ---
 title: Expression Field
 page_title: Expression Field
-description: Expression field is a Field element that calculates a number by using a mathematical formula.
+description: Learn how to use the Expression field element in RadWordsProcessing to calculate numbers by using mathematical formulas in documents.
 slug: radwordsprocessing-concepts-expression-field
 tags: expression, word, flow, docx, fields, document, formula, math, calculation, model
 published: True
@@ -14,13 +14,14 @@ position: 5
 
 ## Field Syntax
 
-This is how the syntax of an Expression field looks like:
+The following table shows the syntax of an Expression field:
 
 | Syntax   											     |
 | :---     											     |
 | { **= Formula** [_Bookmark_ ] [_\\#Numeric Picture_ ] } |
 
 ### Operators
+
 In an Expression field, you can use any combination of values and the following mathematical and relational operators.
 
 | Operator | Description              |
@@ -62,12 +63,14 @@ In an Expression field, you can use any combination of values and the following 
 | TRUE       | Returns the value 1.                                                                                                                            |
 
 ### Bookmark
+
 The name of a bookmark that refers to one or more values.
 
-### \\# Numeric picture
-Specifies the display of a numeric result. This switch is called a "picture" switch because you use symbols to represent the format of the field result. Check the implementation in **Example 1** and its result in **Figure 1**.
+### \\# Numeric Picture
 
-#### Picture items
+Specifies the display of a numeric result. This switch is called a "picture" switch because you use symbols to represent the format of the field result. See the implementation in **Example 1** and its result in **Figure 1**.
+
+### Picture Items
 
 | Operator                   | Description                                                                                                          |
 | :---                       | :---                                                                                                                 |
@@ -83,24 +86,24 @@ Specifies the display of a numeric result. This switch is called a "picture" swi
 | "positive; negative; zero" | Specifies different number formats for a positive result, a negative result, and a 0 (zero) result. For example, depending on the value of the Sales bookmark, { Sales \# "$#,##0.00;($#,##0.00);$0" } displays positive, negative, and 0 (zero) values as follows: $100,000.00, ($100.00), $0 |
 | 'text'                     | Adds text to the result. Enclose the text in single quotation marks. For example, { = { Sales }  \# "$##0.00 'is the initial amount.' " } displays "$100000.00 is the initial amount.". |
 
->On Windows, use the decimal symbol (".") or the digit grouping symbol (",") specified as part of the regional settings in Control Panel.
+> On Windows, use the decimal symbol (".") or the digit grouping symbol (",") specified as part of the regional settings in Control Panel.
 
 ## Inserting
 
-Inserting an Expression Field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s **InsertField()** method. It accepts code as first argument and result as second argument.
-       
+You can insert an Expression field through the `InsertField()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method accepts code as first argument and result as second argument.
 
-#### __Example 1: Insert an Expression field__
+**Example 1: Insert an Expression field**
 
 <snippet id='codeblock-rr'/>
 
-The result is shown in Figure 1.
+The result is shown in **Figure 1**.
 
-#### Figure 1: Expression field and bookmarks in a document
-  ![RadWordsProcessing Concepts Fields Expression Field 01](images/RadWordsProcessing_Concepts_Fields_Expression_Field_01.png)
+**Figure 1: Expression field and bookmarks in a document**
+
+![RadWordsProcessing Concepts Fields Expression Field 01](images/RadWordsProcessing_Concepts_Fields_Expression_Field_01.png)
 
 ## See Also
 
- * [Fields]({%slug radwordsprocessing-concepts-fields%})
- * [Custom Code Field]({%slug radwordsprocessing-concepts-customcodefield%})
- * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Custom Code Field]({%slug radwordsprocessing-concepts-customcodefield%})
+* [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

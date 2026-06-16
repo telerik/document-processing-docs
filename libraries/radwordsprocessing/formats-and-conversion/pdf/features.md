@@ -10,7 +10,7 @@ position: 1
 
 # Features
 
-Below you can find a list of all the features that are supported by PdfFormatProvider.
+Below you can find a list of all the features that the `PdfFormatProvider` supports.
 
 <table>
 <tr>

@@ -1,6 +1,6 @@
 ---
 title: PartialContextQuestionProcessor
-description: PartialContextQuestionProcessor class enables you to ask questions about a Word document and receive answers based on the most relevant parts of the document content.
+description: The PartialContextQuestionProcessor class enables you to ask questions about a Word document and receive answers based on the most relevant parts of the document content.
 page_title: PartialContextQuestionProcessor
 slug: radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor
 tags: question, processor, genai, radwordsprocessing, document, embeddings, ai, retrieval, context, analysis
@@ -24,36 +24,36 @@ table th:nth-of-type(3) {
 
 # PartialContextQuestionProcessor
 
-The **PartialContextQuestionProcessor** class enables you to ask questions about a Word document and receive answers based on the most relevant parts of the document content. This processor uses embeddings to identify and send only the relevant portions of the document to the AI model, making it more efficient for token usage and more suitable for large documents. This class inherits from the abstract **AIProcessorBase** class, which provides common functionality for all AI processors.
+The `PartialContextQuestionProcessor` class enables you to ask questions about a Word document and receive answers based on the most relevant parts of the document content. This processor uses embeddings to identify and send only the relevant portions of the document to the AI model. This approach is more efficient for token usage and more suitable for large documents. This class inherits from the abstract `AIProcessorBase` class, which provides common features for all AI processors.
 
-The **PartialContextQuestionProcessor** is ideal for the following scenarios:
+The `PartialContextQuestionProcessor` is ideal for the following scenarios:
 
-1. **Large Documents**: When the document exceeds the token limit of the AI model and cannot be processed in a single call.
-2. **Efficient Token Usage**: When you want to minimize token consumption and optimize costs.
-3. **Specific Questions**: When questions are targeted at specific information within the document rather than requiring complete document understanding.
+* **Large Documents**—When the document exceeds the token limit of the AI model and cannot be processed in a single call.
+* **Efficient Token Usage**—When you want to minimize token consumption and optimize costs.
+* **Specific Questions**—When questions target specific information within the document rather than requiring complete document understanding.
 
 ## Public API and Configuration
 
-|Constructor|Platform|Description|
+| Constructor | Platform | Description |
 |---|---|---|
-|**PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingSettings settings, SimpleTextDocument document)**|_Specific*_ |Creates an instance with built-in embeddings storage|
-|**PartialContextQuestionProcessor(IChatClient chatClient, IEmbedder embedder, IEmbeddingSettings settings, SimpleTextDocument document)**|Any|Creates an instance with custom embedding|
-|**PartialContextQuestionProcessor(IChatClient chatClient, IContextRetriever contextRetriever, IEmbeddingSettings settings, SimpleTextDocument document)**|Any|Allows [custom **PartialContextQuestionProcessor** configuration]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-custom-partialcontextquestionprocessor%})|
+| `PartialContextQuestionProcessor(IChatClient chatClient, IEmbeddingSettings settings, SimpleTextDocument document)` | _Specific*_ | Creates an instance with built-in embeddings storage |
+| `PartialContextQuestionProcessor(IChatClient chatClient, IEmbedder embedder, IEmbeddingSettings settings, SimpleTextDocument document)` | Any | Creates an instance with custom embedding |
+| `PartialContextQuestionProcessor(IChatClient chatClient, IContextRetriever contextRetriever, IEmbeddingSettings settings, SimpleTextDocument document)` | Any | Allows [custom `PartialContextQuestionProcessor` configuration]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-custom-partialcontextquestionprocessor%}) |
 
-> _*Specific_ The .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows) constructor uses a default **IEmbedder** internally, while the cross-platform and .NET Framework constructor requires a custom implementation of **IEmbedder** as shown in the [Custom IEmbedder Setup]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section.
+> _*Specific_ The .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows) constructor uses a default `IEmbedder` internally. The cross-platform and .NET Framework constructor requires a custom implementation of `IEmbedder` as shown in the [Custom IEmbedder Setup]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section.
 
 ### Properties and Methods
 
-|Member|Type|Description|
+| Member | Type | Description |
 |---|---|---|
-|**Settings**|Property|Gets the *readonly* [IEmbeddingSettings]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#iembeddingsettings) that configure the AI process|
-|**AnswerQuestion(string question)**|Method|Returns an answer to the question using relevant document context|
+| `Settings` | Property | Gets the read-only [IEmbeddingSettings]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#iembeddingsettings) that configure the AI process |
+| `AnswerQuestion(string question)` | Method | Returns an answer to the question using relevant document context |
 
->caution **Security Warning:** The output produced by this API is generated by a Large Language Model (LLM). As such, the content should be considered untrusted and may include unexpected or unsafe data. It is strongly recommended to properly sanitize or encode all output before displaying it in a user interface, logging, or using it in any security-sensitive context.
+>caution **Security Warning:** The output produced by this API is generated by a Large Language Model (LLM). The content must be considered untrusted and may include unexpected or unsafe data. Properly sanitize or encode all output before displaying it in a user interface, logging, or using it in any security-sensitive context.
 
 ### IEmbeddingSettings
 
-The settings are created only through **EmbeddingSettingsFactory**'s **CreateSettingsForTextDocuments** method and can only be passed to the constructor of the processor. They expose configuration options for the question-answering process through the following properties:
+The `EmbeddingSettingsFactory` class creates the settings through the `CreateSettingsForTextDocuments` method. You can only pass these settings to the constructor of the processor. They expose configuration options for the question-answering process through the following properties:
 
 | Property | Description |
 |---|---|
@@ -67,27 +67,27 @@ The settings are created only through **EmbeddingSettingsFactory**'s **CreateSet
 
 ## Usage Examples
 
-#### Example 1: Using PartialContextQuestionProcessor with default embedding.
+**Example 1: Using PartialContextQuestionProcessor with Default Embedding**
 
-This example demonstrates how to use the **PartialContextQuestionProcessor** with the built-in embedding on .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows). For setting up the AI client, see the [AI Provider Setup]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
+This example demonstrates how to use the `PartialContextQuestionProcessor` with the built-in embedding on .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows). For setting up the AI client, see the [AI Provider Setup]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
 <snippet id='libraries-flow-features-gen-ai-ask-questions-using-partial-context'/>
 
-#### Example 2: Using PartialContextQuestionProcessor with Custom IEmbedder
+**Example 2: Using PartialContextQuestionProcessor with Custom IEmbedder**
 
-This example demonstrates how to use the **PartialContextQuestionProcessor** with a custom IEmbedder implementation as described in the [Implementing Custom IEmbedder]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section:
+This example demonstrates how to use the `PartialContextQuestionProcessor` with a custom `IEmbedder` implementation as described in the [Implementing Custom IEmbedder]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section:
 
 <snippet id='libraries-flow-features-gen-ai-ask-questions-using-partial-context-iembedder'/>
 
-### Implementing custom IEmbedder
+### Implementing Custom IEmbedder
 
-A sample custom CustomOpenAIEmbedder implementation for the IEmbedder is shown in the below code snippet:
+The following code snippet shows a sample custom `CustomOpenAIEmbedder` implementation for the `IEmbedder` interface:
 
 >note Requires installing the following NuGet packages:
-> * **Azure.AI.OpenAI**
-> * **Microsoft.Extensions.AI.OpenAI** (v9.3)
-> * **Telerik.Windows.Documents.AIConnector**
-> * **Telerik.Windows.Documents.Flow**  
+> * `Azure.AI.OpenAI`
+> * `Microsoft.Extensions.AI.OpenAI` (v9.3)
+> * `Telerik.Windows.Documents.AIConnector`
+> * `Telerik.Windows.Documents.Flow`
 
 <snippet id='libraries-flow-features-gen-ai-ask-questions-using-partial-context-custom-openai-embedder'/>
 

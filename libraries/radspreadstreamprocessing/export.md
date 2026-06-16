@@ -1,6 +1,6 @@
 ---
 title: Export
-description: Learn how to export spreadsheet documents to XLSX and CSV formats using RadSpreadStreamProcessing.
+description: Learn how to export spreadsheet documents to XLSX and CSV formats using RadSpreadStreamProcessing with streaming and minimal memory usage.
 page_title: Export
 slug: radspreadstreamprocessing-export
 tags: export, spread, stream, processing, xlsx, csv, spreadsheet, streaming, workbook, worksheet
@@ -13,26 +13,25 @@ position: 5
 With **RadSpreadStreamProcessing** you can export spreadsheet documents to the following file formats:
 
 * XLSX
-
 * CSV
 
 ## Specifics
 
-The library writes dynamically the document content into a specified stream. To achieve this, each of the classes responsible for exporting the elements of the document implement **IDisposable** and writes the corresponding content and settings to the stream once it is disposed. 
+The library dynamically writes the document content into a specified stream. To achieve this, each class responsible for exporting document elements implements `IDisposable` and writes the corresponding content and settings to the stream once disposed. 
 
-This is why the elements in **RadSpreadStreamProcessing** must be created and disposed following a predefined sequence, which is described in the [Getting Started article]({%slug radspreadstreamprocessing-getting-started%}#create-a-spreadsheet-document).
+The elements in **RadSpreadStreamProcessing** must be created and disposed in a predefined sequence, which is described in the [Getting Started article]({%slug radspreadstreamprocessing-getting-started%}#create-a-spreadsheet-document).
 
 ## Setting Export Format
 
-The supported formats require to follow different patterns when writing a document and because each element is written in the stream once you are done with it instead of writing the whole document at once, the desired format must be specified when you start creating the document. In other words, when instantiating [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}).
+The supported formats require different patterns when writing a document. Because each element is written to the stream once you finish with it instead of writing the whole document at once, you must specify the desired format when you start creating the document. In other words, you set the format when you instantiate [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}).
 
->As of R3 2017, the encoding used to export **CSV** documents is **UTF-8 with BOM**.
+>Starting with R3 2017, the encoding used to export **CSV** documents is **UTF-8 with BOM**.
 
-#### **Example 1: Specify export format**
+**Example 1: Specify Export Format**
 
 <snippet id='codeblock-dkm'/>
 
-Instantiating IWorkbookExporter directly starts the creation of the file using the Stream instance passed as a parameter to the CreateWorkbookExporter() method. Writing the document content finishes once the [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}) instance is disposed.
+Creating an `IWorkbookExporter` instance directly starts the file creation through the `Stream` instance passed as a parameter to the `CreateWorkbookExporter()` method. The document content writing completes once the [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}) instance is disposed.
 
 ## See Also
 

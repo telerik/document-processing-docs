@@ -1,6 +1,6 @@
 ---
 title: Iterating Used Cells
-description: Learn how to access and iterate only the used cells in a RadSpreadProcessing worksheet.
+description: Learn how to access and iterate only the used cells in a RadSpreadProcessing worksheet using cell range filtering and property definitions.
 page_title: Iterating Used Cells
 slug: radspreadprocessing-working-with-cells-iterating-used-cells
 tags: cells, spreadsheet, radspreadprocessing, iterate, used, range, worksheet, selection
@@ -10,26 +10,26 @@ position: 3
 
 # Iterating Used Cells
 
-This topic shows how you can access only the cells that are used in a worksheet and iterate them.
+You can access only the cells that are used in a worksheet and iterate through them.
 
 * [Working With The Whole Range of Used Cells](#working-with-the-whole-range-of-used-cells)
 * [Working With a Filtered Range](#working-with-a-filtered-range)
 
 ## Working With The Whole Range of Used Cells 
 
-The [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) class enables you to obtain all the cells that are used. A cell is considered used when it has any property applied to it - not matter whether it will be a value or a foreground. The **UsedCellRange** property of the Worksheet class returns a cell range that starts from cell **A1** and holds all cells containing data or formatting. **Example 1** shows how to obtain this range of cells and iterate it.  
+The [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) class allows you to get all the cells that are used. A cell is considered used when it has any property applied to it, no matter whether it is a value or a foreground. The `UsedCellRange` property of the `Worksheet` class returns a cell range that starts from cell `A1` and holds all cells containing data or formatting. **Example 1** shows how to get this range of cells and iterate through it.
 
 
-#### __Example 1: Iterate UsedCellRange__
+**Example 1: Iterate UsedCellRange**
 
 <snippet id='codeblock-crh'/>
 
 
 ## Working With a Filtered Range
 
-This section describes how you can obtain only the cells that have particular property applied to them and ignore the others. Often, the property that we are interested in is the value of a cell. With the **GetUsedCellRange()** method of [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) you can pass an IEnumerable&lt;[IPropertyDefinition](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.IPropertyDefinition-1.html)&gt; object to get the used cell range, holding only the cells with specific property definitions. **Example 2** demonstrates how to get the used cell range of cells with value and iterate it to process each value.
+You can get only the cells that have a particular property applied and ignore the others. Often, the property you need is the value of a cell. With the `GetUsedCellRange()` method of [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) you can pass an IEnumerable&lt;[IPropertyDefinition](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.IPropertyDefinition-1.html)&gt; object to get the used cell range holding only the cells with specific property definitions. **Example 2** shows how to get the used cell range of cells with a value and iterate through it to process each value.
 
-#### __Example 2: Obtain and iterate a filtered UsedCellRange__
+**Example 2: Obtain and Iterate a Filtered UsedCellRange**
 
 <snippet id='codeblock-cri'/>
 

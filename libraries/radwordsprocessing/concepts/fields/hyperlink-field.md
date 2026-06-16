@@ -1,7 +1,7 @@
 ---
 title: Hyperlink Field
 page_title: Hyperlink Field
-description: Hyperlink field is a Field element that contains a reference to another location.
+description: Learn how to use the Hyperlink field element in RadWordsProcessing to insert references to web pages or bookmarks inside documents.
 slug: radwordsprocessing-concepts-hyperlink-field
 tags: hyperlink, word, flow, docx, fields, document, links, url, navigation, model
 published: True
@@ -14,7 +14,7 @@ position: 6
 
 ## Field Syntax
 
-This is how the syntax of a Hyperlink field looks like:
+The following table shows the syntax of a Hyperlink field:
 
 | Syntax   									   |
 | :---     									   |
@@ -28,7 +28,7 @@ The destination you want to navigate to.
 
 ## Properties
 
-The __Hyperlink__ field exposes the following properties:
+The `Hyperlink` field exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -38,7 +38,7 @@ The __Hyperlink__ field exposes the following properties:
 
 ## Switches
 
-Switches are a way for the code fragment to specify formatting for the result of the field. More information is available in the [Syntax and Switches](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#syntax-and-switches) section of the _Fields_ article.
+Switches are a way for the code fragment to specify formatting for the result of the field. More information is available in the [Syntax and Switches](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#syntax-and-switches) section of the *Fields* article.
 
 The possible switches for a Hyperlink field are:
 
@@ -54,45 +54,49 @@ The possible switches for a Hyperlink field are:
 
 ## Inserting
 
-Inserting a Hyperlink field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). It provides two options for this:
-* __InsertHyperlink()__ method. It accepts the hyperlink text, URI, IsAnchor value and tooltip as parameters.
+You can insert a Hyperlink field through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). It provides two options for this:
 
-	#### __Example 1: Insert a Hyperlink using InsertHyperlink method__
+* `InsertHyperlink()` method: Accepts the hyperlink text, URI, IsAnchor value, and tooltip as parameters.
+
+	**Example 1: Insert a Hyperlink using the InsertHyperlink method**
 
 	<snippet id='codeblock-yy'/>
 
 	The result looks like shown in **Figure 1**.
 
-	#### Figure 1: Hyperlink inserted in a document
+	**Figure 1: Hyperlink inserted in a document**
+
 	![Rad Words Processing Concepts Hyperlinks 01](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_01.png)
 
-	>tip The  **InsertHyperlink()** method also automatically applies the Hyperlink style to the result fragment of the inserted  field. More information about styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.	
+	>tip The `InsertHyperlink()` method also automatically applies the Hyperlink style to the result fragment of the inserted field. More information about styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
 
-* __InsertField()__ method. It accepts code as first argument and result as second argument.
+* `InsertField()` method: Accepts code as first argument and result as second argument.
 
-	#### __Example 2: Insert a Hyperlink field using InsertField method__
+	**Example 2: Insert a Hyperlink field using the InsertField method**
 
 	<snippet id='codeblock-zz'/>
 
 	The result looks like shown in **Figure 2**.
 
-	#### Figure 2: Hyperlink inserted in a document
+	**Figure 2: Hyperlink inserted in a document**
+
 	![Rad Words Processing Concepts Hyperlinks 02](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_02.png)
           
 
 Hyperlinks can also point to a [Bookmark]({%slug radwordsprocessing-model-bookmark%}) inside the document. **Example 3** shows how to create a document containing a bookmark and a hyperlink pointing to that bookmark.
 
-#### __Example 3: Insert a hyperlink pointing to a bookmark__
+**Example 3: Insert a hyperlink pointing to a bookmark**
 
 <snippet id='codeblock-ba'/>
 
 The result of the above snippet is illustrated in **Figure 3**.
 
-#### Figure 3: Hyperlink and bookmark in a document
-  ![Rad Words Processing Concepts Hyperlinks 03](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_03.png)
+**Figure 3: Hyperlink and bookmark in a document**
+
+![Rad Words Processing Concepts Hyperlinks 03](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_03.png)
 
 ## See Also
 
- * [Fields]({%slug radwordsprocessing-concepts-fields%})
- * [Bookmark]({%slug radwordsprocessing-model-bookmark%})
- * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Bookmark]({%slug radwordsprocessing-model-bookmark%})
+* [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

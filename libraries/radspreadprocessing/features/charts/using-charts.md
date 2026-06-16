@@ -11,20 +11,19 @@ platforms: ajax, mvc, wpf, winforms
 
 # Using Charts
 
-RadSpreadProcessing allows you to add and manipulate charts in your spreadsheet document. This article describes the available API for inserting and modifying different types of charts.
+RadSpreadProcessing allows you to add and manipulate charts in your spreadsheet documents. The available API enables you to insert and modify different types of charts.
 
-The chart objects are preserved in the Charts collection of the worksheet and are represented by the FloatingChartShape class. The FloatingChartShape object exposes a property called Chart, which is of type DocumentChart.
-
+The chart objects are stored in the `Charts` collection of the worksheet and are represented by the `FloatingChartShape` class. The `FloatingChartShape` object exposes a `Chart` property of type `DocumentChart`.
 
 ## FloatingChartShape
 
-The charts are wrapped in shapes. The FloatingChartShape class derives from FloatingShapeBase and represents the link between the two object or, in other words, is the wrapper allowing you to add chart to a document. 
+The charts are wrapped in shapes. The `FloatingChartShape` class derives from `FloatingShapeBase` and represents the wrapper that allows you to add a chart to a document.
 
-The FloatingChartShape class exposes the following constructors, which parse the data in the *chartDataRange* parameter and create a chart with all data already filled. 
+The `FloatingChartShape` class exposes the following constructors, which parse the data in the *chartDataRange* parameter and create a chart with all data already filled:
 
-* **FloatingChartShape(Worksheet worksheet, CellIndex cellIndex, CellRange chartDataRange, params ChartType[] chartTypes)**
+* `FloatingChartShape(Worksheet worksheet, CellIndex cellIndex, CellRange chartDataRange, params ChartType[] chartTypes)`
 
-* **FloatingChartShape(Worksheet worksheet, CellIndex cellIndex, CellRange chartDataRange, SeriesRangesOrientation seriesRangesOrientation, params ChartType[] chartTypes)**
+* `FloatingChartShape(Worksheet worksheet, CellIndex cellIndex, CellRange chartDataRange, SeriesRangesOrientation seriesRangesOrientation, params ChartType[] chartTypes)`
 
 	The parameters accepted by the constructors are as follows:
 
@@ -33,53 +32,53 @@ The FloatingChartShape class exposes the following constructors, which parse the
 	| `worksheet` | The worksheet that the shape is associated with. |
 	| `cellIndex` | The cell index where the top left corner of the shape is positioned. |
 	| `chartDataRange` | The range containing the chart data. |
-	| `seriesRangesOrientation` | A value indicating whether the series of the chart will refer to vertical or horizontal ranges or the direction will be determined automatically. |
-	| `chartTypes` | The types of chart that will be created. **Passing more than one type will create a combo chart.** |
+	| `seriesRangesOrientation` | A value indicating whether the series of the chart refer to vertical or horizontal ranges, or if the direction is determined automatically. |
+	| `chartTypes` | The types of chart to create. **Passing more than one type creates a combo chart.** |
 
-	>The number of chartTypes must be no more than the number of columns inside the chartDataRange minus one (the first column is used to populate the X axis), otherwise you will get an exception of type **System.NullReferenceException**.
+	>The number of `chartTypes` must be no more than the number of columns inside the `chartDataRange` minus one (the first column populates the X axis). Otherwise, a `System.NullReferenceException` is thrown.
 
-Once you have created a FloatingChartShape, you can insert it in the document through the Add() method of worksheet's Charts property.
+Once you have created a `FloatingChartShape`, you can insert it in the document through the `Add()` method of the worksheet `Charts` property.
 
->Make sure that you have set the size of the FloatingChartShape object. Otherwise, it will be inserted in the worksheet with zero size and will be invisible.
+>Ensure that you have set the size of the `FloatingChartShape` object. Otherwise, it is inserted in the worksheet with zero size and is invisible.
 
-#### Example 1: Create a chart through FloatingChartShape and add it to a worksheet
+**Example 1: Create a Chart Through FloatingChartShape and Add It to a Worksheet**
 
 <snippet id='codeblock-cly'/>
 
-The result of executing the code in **Example 1** would look like in **Figure 1**.
+The result of executing the code in **Example 1** looks like **Figure 1**.
 
+#### Figure 1: Chart added to a worksheet
+![Chart created through FloatingChartShape and added to a worksheet](images/SpreadProcessing-Features-UsingCharts_1.png)
 
-#### Figure 1: 
-![](images/SpreadProcessing-Features-UsingCharts_1.png)
+The `Chart` property of `FloatingChartShape` holds an object of type [DocumentChart](#documentchart).
 
-The Chart property of FloatingChartShape holds an object of type [DocumentChart](#documentchart).
-
-#### Example 2: Create a combo (Column and Line) chart through FloatingChartShape and add it to a worksheet
+**Example 2: Create a Combo (Column and Line) Chart Through FloatingChartShape and Add It to a Worksheet**
 
 <snippet id='codeblock-clz'/>
 
-The result of executing the code in **Example 2** would look like in **Figure 2**.
+The result of executing the code in **Example 2** looks like **Figure 2**.
 
-#### Figure 2: 
-![](images/SpreadProcessing-Features-UsingCharts_3.png)
+#### Figure 2: Combo chart added to a worksheet
+![Combo chart with Column and Line series added to a worksheet](images/SpreadProcessing-Features-UsingCharts_3.png)
 
 ### Changing the Appearance of FloatingChartShape
 
-The FloatingChartShape class exposes properties allowing you to customize how the shape looks like. You can control the outline of the shape as well as its fill.
+The `FloatingChartShape` class exposes properties that allow you to customize the shape appearance. You can control the outline of the shape and its fill.
 
-#### Example 3: Customize the fill and outline of FloatingChartShape
+**Example 3: Customize the Fill and Outline of FloatingChartShape**
+
 <snippet id='codeblock-cma'/>
 
-The result of executing the code in **Example 3** over a cell range containing sample data would look like in **Figure 3**.
+The result of executing the code in **Example 3** over a cell range containing sample data looks like **Figure 3**.
 
-#### Figure 3: 
-![](images/SpreadProcessing-Features-UsingCharts_2.png)
+#### Figure 3: Customized FloatingChartShape
+![FloatingChartShape with customized fill and outline](images/SpreadProcessing-Features-UsingCharts_2.png)
 
 >note The series are styled using the colors defined in the [Document Theme]({%slug radspreadprocessing-features-styling-document-themes%}).
 
-## DocumentChart 
+## DocumentChart
 
-This is the object representing the chart itself and contains the following properties:
+The `DocumentChart` object represents the chart itself and contains the following properties:
 
 | Property | Description |
 |---|---|
@@ -89,28 +88,28 @@ This is the object representing the chart itself and contains the following prop
 | `Title` | Represents the title of the chart. |
 | `Legend` | Represents the legend of the chart. |
 
-Also, a **Clone()** method is exposed, which creates a deep copy of the object.
+The class also exposes a `Clone()` method, which creates a deep copy of the object.
 
-You can create a simple DocumentChart object, which is empty and then set the desired values manually.
+You can create an empty `DocumentChart` object and then set the desired values manually.
 
-#### Example 4: Creating an empty chart and setting its values manually
+**Example 4: Create an Empty Chart and Set Its Values Manually**
 
 <snippet id='codeblock-cmb'/>
 
-The chart can then be used to replace the chart in an existing **FloatingChartShape**.
+You can then use the chart to replace the chart in an existing `FloatingChartShape`.
 
-#### Example 5: Add the DocumentChart to a worksheet
+**Example 5: Add the DocumentChart to a Worksheet**
 
 <snippet id='codeblock-cmc'/>
 
->note For more on Series, the [Series]({%slug radspreadprocessing-features-charts-series%}) help topic. Refer to [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}) for description of the axes objects of the chart.
+>note For more information about series, see the [Series]({%slug radspreadprocessing-features-charts-series%}) article. For a description of the axes objects, see [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}).
 
 The initial data and the resulting chart are shown in **Figure 1**.
 
-##	Iterating the charts of a worksheet
+## Iterating the Charts of a Worksheet
 
-You can access the Charts collection of the Shape collection of the Worksheet instance and enumerate the Charts.
+You can access the `Charts` collection of the `Shapes` collection of the `Worksheet` instance and enumerate the charts.
 
-#### Example 6: Iterate all the charts in a worksheet
+**Example 6: Iterate All the Charts in a Worksheet**
 
 <snippet id='codeblock-cmd'/>

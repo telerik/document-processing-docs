@@ -10,34 +10,35 @@ position: 1
 
 # Insert Documents
 
-With **RadWordsProcessing**, you have the ability to insert a document into another document at specified position. 
+With **RadWordsProcessing**, you can insert a document into another document at a specified position.
 
 ## Inserting Documents at a Specific Position
 
-You could merge documents at a specific position using the InsertDocument() method of the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. When called, this method inserts the source document at the current editor position. 
+You can merge documents at a specific position using the `InsertDocument()` method of the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. When called, this method inserts the source document at the current editor position.
 
-* **public void InsertDocument(RadFlowDocument sourceDocument)**
+* `public void InsertDocument(RadFlowDocument sourceDocument)`
 
-* **public void InsertDocument(RadFlowDocument sourceDocument, InsertDocumentOptions insertOptions)**
+* `public void InsertDocument(RadFlowDocument sourceDocument, InsertDocumentOptions insertOptions)`
 
-The [**InsertDocumentOptions**](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Editing.InsertDocumentOptions.html) class contains the following options to control the insert behavior:
+The [`InsertDocumentOptions`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Editing.InsertDocumentOptions.html) class contains the following options to control the insert behavior:
 
 | Property | Description |
 |---|---|
 | `ConflictingStylesResolutionMode` | Of type [ConflictingStylesResolutionMode](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.ConflictingStylesResolutionMode.html). Determines how conflicts between styles are resolved (rename the source style or keep the target settings). Default: `RenameSourceStyle`. |
-| `InsertLastParagraphMarker` | Determines whether the last paragraph marker (last paragraph formatting symbol) should be inserted. If `true`, a new paragraph with the same formatting is inserted. If `false`, only the inlines from that paragraph are inserted. Default: `true`. |
+| `InsertLastParagraphMarker` | Determines whether the last paragraph marker (last paragraph formatting symbol) is inserted. If `true`, a new paragraph with the same formatting is inserted. If `false`, the inlines from that paragraph are inserted without creating a new paragraph. Default: `true`. |
 
-**Example 1** demonstrates how to use the InsertDocument() method.
+**Example 1** demonstrates how to use the `InsertDocument()` method.
 
-#### __Example 1: Insert source document into target document__
+**Example 1: Insert Source Document into Target Document**
 
 <snippet id='codeblock-bt'/>
 
 ## Behavior
 
-**Table 1** lists some scenarios where the InsertDocument() method could be used. 
+**Table 1** lists some scenarios where the `InsertDocument()` method can be used.
 
-#### Table 1
+**Table 1**
+
 <table>
 	<tr>
 		<th>Action</th>
@@ -45,27 +46,27 @@ The [**InsertDocumentOptions**](https://docs.telerik.com/devtools/document-proce
 	</tr>
 	<tr>
 		<td>Insert the source document in an empty document (without any sections).</td>
-		<td>All of the content of the source document will be inserted in the target one. The section properties will be obtained from the source document. </td>
+		<td>All of the content of the source document is inserted in the target one. The section properties are obtained from the source document.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document between runs. Source document contains a single section.</td>
-		<td>All of the blocks (Paragraphs and Tables) in the source document’s section will be inserted at the specific location. The section properties will be omitted. This means if the target document page orientation is portrait and the source is landscape, the result document will have portrait orientation. </td>
+		<td>All of the blocks (Paragraphs and Tables) in the source document's section are inserted at the specific location. The section properties are omitted. This means if the target document page orientation is portrait and the source is landscape, the result document has portrait orientation.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document between runs. Source document contains multiple sections.</td>
-		<td>All of the blocks in the source document’s first section will be inserted at the current editor position. All the next sections from the source document will be inserted as separate sections. The last section in the result document will have section properties of the section from the target document where the editor position is when the InsertDocument() method is invoked.</td>
+		<td>All of the blocks in the source document's first section are inserted at the current editor position. All the next sections from the source document are inserted as separate sections. The last section in the result document has section properties of the section from the target document where the editor position is when the InsertDocument() method is invoked.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document at the beginning of the target document. Source document contains single section.</td>
-		<td>All of the blocks in the source document’s section will be inserted at the specific location. The section properties will be omitted. This means if the target document page orientation is portrait and the source is landscape, the result document will have portrait orientation.</td>
+		<td>All of the blocks in the source document's section are inserted at the specific location. The section properties are omitted. This means if the target document page orientation is portrait and the source is landscape, the result document has portrait orientation.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document at the beginning of the target document. Source document contains multiple sections.</td>
-		<td>All of the blocks in the source document’s first section will be inserted at the specific location. The whole next sections from the source document will be inserted as separate sections. The last section in the result document will have section properties of the insert target section.</td>
+		<td>All of the blocks in the source document's first section are inserted at the specific location. The whole next sections from the source document are inserted as separate sections. The last section in the result document has section properties of the insert target section.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document at the end of the target document. Source document contains single section.</td>
-		<td>All of the blocks in the source document’s section will be inserted at the specific location. The section properties will be omitted. This means if the target document page orientation is portrait and the source is landscape, the result document will have portrait orientation.</td>
+		<td>All of the blocks in the source document's section are inserted at the specific location. The section properties are omitted. This means if the target document page orientation is portrait and the source is landscape, the result document has portrait orientation.</td>
 	</tr>
 	<tr>
 		<td>Insert the source document at the end of the target document. Source document contains multiple sections.</td>

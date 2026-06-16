@@ -10,21 +10,21 @@ position: 5
 
 # Find and Replace Text and Style
 
-**RadWordsProcessing** gives you the ability to search for a string in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance and replace all matches. The library also allows you to replace the styling of the matches alone.
+**RadWordsProcessing** lets you search for a string in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance and replace all matches. The library also allows you to replace the styling of the matches alone.
 
-You can search and replace text or styling using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). This article lists the available methods and describes how you can use them. This feature is available since **R2 2021** release version.
+You can search and replace text or styling through [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). This article lists the available methods and describes how to use them. This feature is available starting with the **R2 2021** release.
 
 
 ## Find Text
 
-**RadFlowDocumentEditor** exposes the **FindAll()** method to enable you to find all instances of a string. You can choose between the following overloads:
+`RadFlowDocumentEditor` exposes the `FindAll()` method to enable you to find all instances of a string. You can choose between the following overloads:
 
 | Method | Description |
 |---|---|
 | `FindAll(string text, bool matchCase=true, bool matchWholeWord=false)` | Finds all occurrences of the specified string. Default values: `matchCase = true`, `matchWholeWord = false`. |
 | `FindAll(Regex regex)` | Finds all matches of the passed `Regex`. |
 
-Both methods return a collection of **FindResult** instances, which in turn expose the following properties:
+Both methods return a collection of `FindResult` instances, which in turn expose the following properties:
 
 | Property | Description |
 |---|---|
@@ -33,15 +33,15 @@ Both methods return a collection of **FindResult** instances, which in turn expo
 | `RelativeEndIndex` | Gets the index of the last character in the searched text inside the last `Run`. |
 | `FullMatchText` | Gets the matched text. |
 
-**Example 1** shows how to create a **RadFlowDocumentEditor** instance and use it to find all matches of the word "code".
+**Example 1** shows how to create a `RadFlowDocumentEditor` instance and use it to find all matches of the word "code".
 
-#### **Example 1: Find text**
+**Example 1: Find Text**
 
 <snippet id='codeblock-bmbm'/>
 
 ## Replace Text
 
-To find all instances of a string and replace it with another one, you can use the **ReplaceText()** method of **RadFlowDocumentEditor**. The method features the following overloads:
+To find all instances of a string and replace it with another one, you can use the `ReplaceText()` method of `RadFlowDocumentEditor`. The method features the following overloads:
 
 | Method | Description |
 |---|---|
@@ -49,17 +49,17 @@ To find all instances of a string and replace it with another one, you can use t
 | `ReplaceText(Regex regex, string newText)` | Replaces all matches of the specified `Regex` with the new text. |
 
 
-**Example 2** shows how to create a **RadFlowDocumentEditor** instance and use it to replace all matches of the word "code" with the phrase "source code".
+**Example 2** shows how to create a `RadFlowDocumentEditor` instance and use it to replace all matches of the word "code" with the phrase "source code".
 
 
-#### **Example 2: Replace text**
+**Example 2: Replace Text**
 
 <snippet id='codeblock-bnbn'/>
 
 
 ## Replace Styling
 
-__RadFlowDocumentEditor__ gives you the ability to format all occurrences of a string in a document. This can be achieved by using one of the overloads of the __ReplaceStyling()__ method:
+`RadFlowDocumentEditor` gives you the ability to format all occurrences of a string in a document. Use one of the overloads of the `ReplaceStyling()` method:
 
 | Method | Description |
 |---|---|
@@ -71,15 +71,15 @@ __RadFlowDocumentEditor__ gives you the ability to format all occurrences of a s
 **Example 3** shows how to apply a red highlight color to all occurrences of the word "alert".
 
 
-#### **Example 3: Replace character properties**
+**Example 3: Replace Character Properties**
 
 <snippet id='codeblock-bobo'/>
 
 ## See Also
 
- * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
- * [CharacterProperties]({%slug radwordsprocessing-concepts-style-properties%}) 
- * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) 
- * [Simulating Mail Merge with HTML content by Utilizing the Find and Replace Functionality]({%slug simulating-mail-merge-with-html-content%})
- * [WordsProcessing Replacement Demo](https://demos.telerik.com/document-processing/wordsprocessing/replace)
- * [Mail Merge with HTML Formatted Strings in RadWordsProcessing]({%slug mail-merge-html-formatted-strings-radwordsprocessing%})
+* [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [CharacterProperties]({%slug radwordsprocessing-concepts-style-properties%})
+* [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [Simulating Mail Merge with HTML content by Utilizing the Find and Replace Functionality]({%slug simulating-mail-merge-with-html-content%})
+* [WordsProcessing Replacement Demo](https://demos.telerik.com/document-processing/wordsprocessing/replace)
+* [Mail Merge with HTML Formatted Strings in RadWordsProcessing]({%slug mail-merge-html-formatted-strings-radwordsprocessing%})

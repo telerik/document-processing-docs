@@ -10,54 +10,51 @@ position: 1
 
 # Getting Started
 
-__RadZipLibrary__ allows you to load data from existing ZIP archives or create and edit ZIPs that can be used by other applications. You can also create ZIP archives in memory or use a stream to get data and add it to a ZIP archive.
-      
+**RadZipLibrary** allows you to load data from existing ZIP archives or create and edit ZIPs that can be used by other applications. You can also create ZIP archives in memory or use a stream to get data and add it to a ZIP archive.
 
->note If you still don't have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can obtain the packages through the different suites. 
+>note If you do not have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can get the packages through the different suites.
 
-The ZIP archive is represented by __ZipArchive__ class. It can be used in 3 modes:
+The `ZipArchive` class represents the ZIP archive. You can use it in the following modes:
 
-* __Read__: Allows reading of the existing ZIP archive. In this mode it is not possible to add or update archive entries.
-          
-* __Create__: Allows creation of a new archive. In this mode you can add new entries in the archive but cannot read or update content of the entries which have been written already.
-          
-* __Update__: Allows update of the existing ZIP archive. In this mode you can add new entries, read and update existing entries.
+* `Read`: Allows reading from an existing ZIP archive. In this mode, you cannot add or update archive entries.
+
+* `Create`: Allows creation of a new archive. In this mode, you can add new entries to the archive but cannot read or update entries that are already written.
+
+* `Update`: Allows updating an existing ZIP archive. In this mode, you can add new entries, read existing entries, and update existing entries.
 
 ## Required References
 
-You can find the required references in the [ZipLibrary NuGet packages]({%slug available-nuget-packages%}#ziplibrary-packages) section.
+Find the required references in the [ZipLibrary NuGet packages]({%slug available-nuget-packages%}#ziplibrary-packages) section.
 
-## Open Zip Archive
+## Open ZIP Archive
 
-The code snippet from __Example 1__ demonstrates how to open existing Zip archive using the __ZipArchive__ class.
-        
+The following code snippet shows how to open an existing ZIP archive with the `ZipArchive` class.
 
-#### __Example 1: Open archive__
+**Example 1: Open Archive**
 
 <snippet id='codeblock-dse'/>
 
-The *archive* variable holds the files that are compressed in the selected zip. You can access the list of these files through the __ZipArchive.Entries__ property. It holds a collection of [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) elements - the elements that describe the files archived in the zip file. You can use these elements to get the name of the compressed file, its uncompressed and compressed size and other file attributes.
-        
-## Create Zip Archive
+The `archive` variable holds the compressed files in the selected ZIP. You can access these files through the `ZipArchive.Entries` property. It holds a collection of [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) elements that describe the archived files. Use these elements to get the name of the compressed file, its uncompressed and compressed size, and other file attributes.
 
-__Example 2__ shows how to create a new Zip archive using the __ZipArchive__ class and place a text file in it.
-        
+## Create ZIP Archive
 
-#### __Example 2: Create archive__
+**Example 2** shows how to create a new ZIP archive with the `ZipArchive` class and add a text file to it.
+
+**Example 2: Create Archive**
 
 <snippet id='codeblock-dsf'/>
 
->tip If you use __StreamWriter__ to write content to the stream, you should call the Flush() method in order to flush the data to the stream.
-          
->Do not close the stream opened by the __ZipArchiveEntry.Open()__ method. Otherwise the result is unpredictable.
-          
-The constructor of ZipArchive lets you specify whether you would like to keep the stream associated to the instance open. If you decide to set the `leaveOpen` parameter to `false`, the underlying stream will be closed once the ZipArchive instance is disposed. In case you need to continue working with that stream (to send it as a response, for example), you should pass `true` for the `leaveOpen` parameter.
+>tip If you use `StreamWriter` to write content to the stream, call the `Flush()` method to flush the data to the stream.
 
-#### __Example 3: Create archive in a MemoryStream__
+>important Do not close the stream opened by the `ZipArchiveEntry.Open()` method. Otherwise, the result is unpredictable.
+
+The constructor of `ZipArchive` lets you set whether to keep the stream associated with the instance open. If you set the `leaveOpen` parameter to `false`, the library closes the underlying stream when the `ZipArchive` instance is disposed. If you need to continue working with that stream (to send it as a response, for example), pass `true` for the `leaveOpen` parameter.
+
+**Example 3: Create Archive in a MemoryStream**
 
 <snippet id='codeblock-dsg'/>
 
-For more complete examples head to the [Developer Focused Examples]({%slug radziplibrary-sdk-examples%}) section of the library.
+For more examples, go to the [Developer Focused Examples]({%slug radziplibrary-sdk-examples%}) section of the library.
 
 ## See Also
 

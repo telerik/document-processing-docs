@@ -10,13 +10,13 @@ position: 3
 
 # Functions
 
-The document model provides a number of built-in functions that you can use in formula values.
+The document model provides many built-in functions that you can use in formula values.
       
 
-The model offers functions in the following categories: Date and Time, Financial, Information, Logical, Lookup and Reference, Math and Trigonometry, Statistical, and Text. To use a predefined function in a formula, enter its name followed by opening bracket. Further, if the function has parameters, list the arguments separated by the current culture list separator. Finally, add the closing bracket.
+The model offers functions in the following categories: Date and Time, Financial, Information, Logical, Lookup and Reference, Math and Trigonometry, Statistical, and Text. To use a predefined function in a formula, enter its name followed by an opening bracket. If the function has parameters, list the arguments separated by the current culture list separator. Then add the closing bracket.
       
 
-For example, the formula *=SUM(1, A2)* adds one to the value of cell A2. Note that if the function does not have parameters, you still have to place the opening and closing brackets after its name, e.g. *=PI()*. Functions can be used as standalone values, operands and arguments of other functions.
+For example, the formula *=SUM(1, A2)* adds one to the value of cell A2. If the function does not have parameters, you still need to place the opening and closing brackets after its name (for example, *=PI()*). Functions can be used as standalone values, operands, and arguments of other functions.
       
 
 ## Supported Functions
@@ -898,7 +898,7 @@ Returns the smallest value in a list of arguments, including numbers, text, and 
 
 MODE</td><td>
 
-Returns the most common value in a data set</td></tr><tr><td>
+Returns the most common value in a dataset</td></tr><tr><td>
 
 STDEV</td><td>
 
@@ -969,7 +969,7 @@ Finds one text value within another (not case-sensitive)</td></tr><tr><td>
 
 TRIM</td><td>
 
-Removes duplicate spaces, and spaces at the start and end of a text string. The TRIM function doesn't remove non-breaking space characters</td></tr><tr><td>
+Removes duplicate spaces, and spaces at the start and end of a text string. The TRIM function does not remove non-breaking space characters</td></tr><tr><td>
 
 UPPER</td><td>
 
@@ -977,5 +977,5 @@ Converts text to uppercase</td></tr></table>
 
 ## See Also
 
- * [CustomFunctions SDK](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions)
- * [Implementing SUMPRODUCT Function in SpreadProcessing]({%slug sumproduct-function-nested-array-formulas-telerik-spreadprocessing%})
+* [CustomFunctions SDK](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions)
+* [Implementing SUMPRODUCT Function in SpreadProcessing]({%slug sumproduct-function-nested-array-formulas-telerik-spreadprocessing%})

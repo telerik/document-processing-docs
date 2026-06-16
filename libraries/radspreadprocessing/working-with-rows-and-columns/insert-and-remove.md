@@ -12,7 +12,7 @@ position: 1
 
 
 
-Worksheets in __RadSpreadProcessing__'s document model consist of cells organized in rows and columns. Each worksheet allows you to insert and remove rows and columns through shifting the contents of the surrounding rows and columns. This article demonstrates how to insert and remove rows and columns.
+Worksheets in the RadSpreadProcessing document model consist of cells organized in rows and columns. Each worksheet allows you to insert and remove rows and columns through shifting the contents of the surrounding rows and columns. The following sections show how to insert and remove rows and columns.
       
 
 * [Insert Rows](#insert-rows)
@@ -25,13 +25,13 @@ Worksheets in __RadSpreadProcessing__'s document model consist of cells organize
 
 ## Insert Rows
 
-In order to insert rows, you need to create a __RowSelection__ instance that indicates where the new rows are to be inserted in the worksheet. Whenever rows insertion is performed, all values that appear down of the __RowSelection__ region including the selected region are shifted down, thus, causing no loss of data.
+To insert rows, create a `RowSelection` instance that indicates where the new rows are to be inserted in the worksheet. When row insertion is performed, all values that appear below the `RowSelection` region including the selected region are shifted down, causing no loss of data.
         
 
-The __RowSelection__ class exposes __CanInsert()__ and __Insert()__ methods that indicate whether the insert is possible and perform the insert operation respectively. __Example 1__ shows how to insert rows using the two methods.
+The `RowSelection` class exposes `CanInsert()` and `Insert()` methods that indicate whether the insert is possible and perform the insert operation respectively. **Example 1** shows how to insert rows using the two methods.
         
 
-#### __Example 1: Insert rows__
+**Example 1: Insert Rows**
 
 <snippet id='codeblock-crm'/>
 
@@ -39,13 +39,13 @@ The __RowSelection__ class exposes __CanInsert()__ and __Insert()__ methods that
 
 ## Remove Rows
 
-In order to remove rows, you need to create a __RowSelection__ instance that specifies the region of rows you would like to remove. Whenever you remove rows, all values that appear down of the __RowSelection__ region are shifted up.
+To remove rows, create a `RowSelection` instance that specifies the region of rows you want to remove. When you remove rows, all values that appear below the `RowSelection` region are shifted up.
         
 
-The __RowSelection__ class exposes a __Remove()__ method that performs the removal of the selected rows. __Example 2__ shows how to remove rows.
+The `RowSelection` class exposes a `Remove()` method that performs the removal of the selected rows. **Example 2** shows how to remove rows.
         
 
-#### __Example 2: Remove rows__
+**Example 2: Remove Rows**
 
 <snippet id='codeblock-crn'/>
 
@@ -53,13 +53,13 @@ The __RowSelection__ class exposes a __Remove()__ method that performs the remov
 
 ## Insert Columns
 
-In order to insert columns, you need to create a __ColumnSelection__ instance that specifies where the new columns are to be inserted in the worksheet. Whenever columns insertion is performed, all values that appear to the right of the __ColumnSelection__ region including the selected region are shifted right, thus, causing no loss of data.
+To insert columns, create a `ColumnSelection` instance that specifies where the new columns are to be inserted in the worksheet. When column insertion is performed, all values that appear to the right of the `ColumnSelection` region including the selected region are shifted right, causing no loss of data.
         
 
-The __ColumnSelection__ class exposes __CanInsert()__ and __Insert()__ methods that indicate whether the insert is possible and perform the insert operation respectively. __Example 3__ shows how to insert columns using the two methods.
+The `ColumnSelection` class exposes `CanInsert()` and `Insert()` methods that indicate whether the insert is possible and perform the insert operation respectively. **Example 3** shows how to insert columns using the two methods.
         
 
-#### __Example 3: Insert columns__
+**Example 3: Insert Columns**
 
 <snippet id='codeblock-cro'/>
 
@@ -67,13 +67,13 @@ The __ColumnSelection__ class exposes __CanInsert()__ and __Insert()__ methods t
 
 ## Remove Columns
 
-In order to remove columns, you need to create a __ColumnSelection__ instance that indicates the region of columns you would like to remove. Whenever you remove columns, all values that appear to the right of the __ColumnSelection__ region are shifted to the left.
+To remove columns, create a `ColumnSelection` instance that indicates the region of columns you want to remove. When you remove columns, all values that appear to the right of the `ColumnSelection` region are shifted to the left.
         
 
-The __ColumnSelection__ class exposes a __Remove()__ method that executes the removal of the selected columns. __Example 4__ illustrates how to remove columns.
+The `ColumnSelection` class exposes a `Remove()` method that executes the removal of the selected columns. **Example 4** shows how to remove columns.
         
 
-#### __Example 4: Remove columns__
+**Example 4: Remove Columns**
 
 <snippet id='codeblock-crp'/>
 

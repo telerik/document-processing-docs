@@ -32,7 +32,7 @@ The following list summarizes the main features that a worksheet exposes:
 
   The following example demonstrates how to get the used cell range of cells with a value.
 
-  #### Example 1: Get the used cell range of cells with a value
+  **Example 1: Get the Used Cell Range of Cells with a Value**
 
   <snippet id='codeblock-csz'/>
 

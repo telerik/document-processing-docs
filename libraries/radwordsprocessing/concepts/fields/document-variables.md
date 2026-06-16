@@ -1,7 +1,7 @@
 ---
 title: Document Variable Field
 page_title: Document Variable Field
-description: Document Variable field is a Field element used to access and display the value, which correspond to a given field-argument.
+description: Learn how to use the Document Variable field to access and display values that correspond to a given field-argument in RadWordsProcessing.
 slug: radwordsprocessing-concepts-document-variables
 tags: documentvariables, word, flow, docx, fields, document, variables, values, model, dynamic
 published: True
@@ -10,30 +10,25 @@ position: 4
 
 # Document Variables
 
-**Document Variables** provide a mechanism to store information in the document in a key-value format. [DocumentVariableField](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.documentvariablefield) is a [Field]({%slug radwordsprocessing-concepts-fields%}) element used to access and display the value, which corresponds to the given field-argument. The argument is the name of the variable.
-      
+*Document variables* provide a mechanism to store information in the document in a key-value format. [`DocumentVariableField`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.documentvariablefield) is a [Field]({%slug radwordsprocessing-concepts-fields%}) element used to access and display the value that corresponds to the given field-argument. The argument is the name of the variable.
 
 ## DocumentVariableCollection
 
-[RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) has a __DocumentVariableCollection__ property, which holds document variable records. The collection maps string keys to string values. You can add a record in it through an indexer or with the collection's __Add()__ method. __Example 1__ demonstrates both approaches.
-        
+[`RadFlowDocument`]({%slug radwordsprocessing-model-radflowdocument%}) has a `DocumentVariableCollection` property, which holds document variable records. The collection maps string keys to string values. You can add a record through an indexer or with the collection's `Add()` method. **Example 1** demonstrates both approaches.
 
-#### __Example 1: Add document variable record__
+**Example 1: Add document variable record**
 
 <snippet id='codeblock-oo'/>
 
 
 
-The code in __Example 1__ adds two document variables – *"Name"*, which will be evaluated to *"Nancy Davolio"*, and *"Job"* with *"Software Engineer"* value.
-        
+The code in **Example 1** adds two document variables—*"Name"*, which evaluates to *"Nancy Davolio"*, and *"Job"* with a *"Software Engineer"* value.
 
-The same two methods can be used to modify the value of an existing variable in the collection.
-        
+You can use the same two methods to modify the value of an existing variable in the collection.
 
-Removing defined variables can be achieved by using the __Remove()__ method of the variables collection. It accepts the name of the variable as a parameter.
-        
+To remove defined variables, use the `Remove()` method of the variables collection. It accepts the name of the variable as a parameter.
 
-#### __Example 2: Remove document variable record__
+**Example 2: Remove document variable record**
 
 <snippet id='codeblock-pp'/>
 
@@ -43,27 +38,25 @@ Removing defined variables can be achieved by using the __Remove()__ method of t
 
 | Syntax   				     |
 | :---     				     |
-| { **DOCVARIABLE** "Name" } |  
+| { **DOCVARIABLE** "Name" } |
 
 
-The syntax of a document variable field code is pretty simple as demonstrated on __Figure 1__.
-        
+The syntax of a document variable field code is demonstrated in **Figure 1**.
 
-#### Figure 1: Document variable field code syntax
+**Figure 1: Document variable field code syntax**
 ![Rad Words Processing Concepts Document Variables 01](images/RadWordsProcessing_Concepts_Document_Variables_01.png)
 
 ## Inserting
 
-A __DocumentVariable__ field can be inserted through [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. 
-__Example 3__ shows insertion of the field created in __Example 1__.
-        
+You can insert a `DocumentVariableField` through the [`RadFlowDocumentEditor`]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s `InsertField()` method.
+**Example 3** shows insertion of the field created in **Example 1**.
 
-#### __Example 3: Insert document variable field__
+**Example 3: Insert document variable field**
 
 <snippet id='codeblock-qq'/>
 
 
 ## See Also
 
- * [Fields]({%slug radwordsprocessing-concepts-fields%})
- * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})

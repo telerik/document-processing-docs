@@ -12,78 +12,78 @@ position: 9
 
 
 
-You have the ability to merge two or more adjacent cells into a single cell that spans over multiple rows and columns. The content of the top-left cell is displayed in the newly created merged cell. The content of the rest of the cells in the merged region is cleared. Once merged, a cell can be easily unmerged back to its compound cells.
+You can merge two or more adjacent cells into a single cell that spans over multiple rows and columns. The content of the top-left cell is displayed in the newly created merged cell. The content of the rest of the cells in the merged region is cleared. Once merged, a cell can be unmerged back to its compound cells.
       
 
 ## Merge Cells
 
-To merge cells you have to create a __CellSelection__ object which determines the region of cells that will be merged. The __CellSelection__ class offers two methods that perform different types of merge: __Merge()__ and __MergeAcross()__. The former method joins all cells to create one big cell, while the latter combines all cells that appear in the same row, thus, creating a merged cell for every row in the selected region.
+To merge cells, create a `CellSelection` object which determines the region of cells that will be merged. The `CellSelection` class offers two methods that perform different types of merge: `Merge()` and `MergeAcross()`. The former method joins all cells to create one big cell, while the latter combines all cells that appear in the same row, thus creating a merged cell for every row in the selected region.
         
 
-Let's take a closer look at how the two methods for merging change the following worksheet.
+The following examples show how the two methods for merging change a worksheet.
         
 
-__Example 1__ constructs a worksheet that will be used as a starting point in the next few examples.
+**Example 1** constructs a worksheet that is used as a starting point in the next few examples.
         
 
-#### __Example 1: Construct worksheet__
+**Example 1: Construct Worksheet**
 
 <snippet id='codeblock-cjk'/>
 
 
 
-__Figure 1__ shows the result of the snippet in __Example 1__.
+**Figure 1** shows the result of the snippet in **Example 1**.
         
 
-#### Figure 1: Worksheet
-![Rad Spread Processing Features Merge Unmerge Cells 01](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_01.png)
+**Figure 1: Worksheet**
+![Worksheet with sample data](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_01.png)
 
-__Example 2__ illustrates how to perform a merge operation on the cell region *A1:B2*.
+**Example 2** illustrates how to perform a merge operation on the cell region *A1:B2*.
         
 
-#### __Example 2: Perform merge operation__
+**Example 2: Perform Merge Operation**
 
 <snippet id='codeblock-cjl'/>
 
 
 
-As a result of the merge, the four cells appear as one. The content of the newly created cell is equal to the top left cell of the merged region, i.e. *A1*. At this point, the values of the rest of the cells in the merged region are cleared, so now cells *A2, B1 and B2* have no values.
+As a result of the merge, the four cells appear as one. The content of the newly created cell is equal to the top left cell of the merged region, that is *A1*. At this point, the values of the rest of the cells in the merged region are cleared, so now cells *A2, B1 and B2* have no values.
         
 
-__Figure 2__ demonstrates the result of __Example 2__ executed over the worksheet created in __Example 1__.
+**Figure 2** demonstrates the result of **Example 2** executed over the worksheet created in **Example 1**.
         
 
-#### Figure 2: Merge operation result
-![Rad Spread Processing Features Merge Unmerge Cells 02.](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_02..png)
+**Figure 2: Merge Operation Result**
+![Merge operation result](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_02..png)
 
-Let’s see how the __MergeAcross()__ method will change the same region in the original worksheet.
+The following example shows how the `MergeAcross()` method changes the same region in the original worksheet.
         
 
-__Example 3__ illustrates how to perform a merge operation on the cell region *A1:B2*.
+**Example 3** illustrates how to perform a merge operation on the cell region *A1:B2*.
         
 
-#### __Example 3: Perform merge across__
+**Example 3: Perform Merge Across**
 
 <snippet id='codeblock-cjm'/>
 
 
 
-Note that unlike __Merge()__, the __MergeAcross()__ method creates a new cell for every row. Each newly created cell contains the value of the leftmost cell that is in the same row and in the merged region. The value of the rest of the merged cells is cleared, so cells *B1* and *B2* have an empty value.
+Unlike `Merge()`, the `MergeAcross()` method creates a new cell for every row. Each newly created cell contains the value of the leftmost cell that is in the same row and in the merged region. The value of the rest of the merged cells is cleared, so cells *B1* and *B2* have an empty value.
         
 
-__Figure 3__ demonstrates the result of __Example 3__ executed over the worksheet created in __Example 1__.
+**Figure 3** demonstrates the result of **Example 3** executed over the worksheet created in **Example 1**.
         
 
-#### Figure 3: Merge across operation result
-![Rad Spread Processing Features Merge Unmerge Cells 03](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_03.png)
+**Figure 3: Merge Across Operation Result**
+![Merge across operation result](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_03.png)
 
-If you now try to merge a cell range that intersects with another merged cell range, a third merged cell range will be produced out of the top-left and bottom-right cells of the two ranges.
+If you now try to merge a cell range that intersects with another merged cell range, a third merged cell range is produced out of the top-left and bottom-right cells of the two ranges.
         
 
-__Example 4__ merges across the region *A1:B2* and then performs another merge on the cells in the region *B2:C3*:
+**Example 4** merges across the region *A1:B2* and then performs another merge on the cells in the region *B2:C3*:
         
 
-#### __Example 4: Intersect cell range with merged cell range__
+**Example 4: Intersect Cell Range with Merged Cell Range**
 
 <snippet id='codeblock-cjn'/>
 
@@ -92,40 +92,40 @@ __Example 4__ merges across the region *A1:B2* and then performs another merge o
 The result is a merged cell that ranges from *A1* to *C3*.
         
 
-__Figure 4__ demonstrates the result of __Example 4__ executed over the worksheet created in __Example 1__.
+**Figure 4** demonstrates the result of **Example 4** executed over the worksheet created in **Example 1**.
         
 
-#### Figure 4: Merge cell range with merged cell range result
-![Rad Spread Processing Features Merge Unmerge Cells 04](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_04.png)
+**Figure 4: Merge Cell Range with Merged Cell Range Result**
+![Merge cell range with merged cell range result](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_04.png)
 
 ## Get Merged Cell Ranges
 
 In some scenarios you may want to know if a particular cell is part of a merged region. In others, you may need to retrieve all merged ranges. This section outlines the possible approaches for getting the merged regions.
         
 
-### How to Check if a Cell is Merged? 
+### How to Check if a Cell Is Merged?
 
-The Cells class exposes a __GetIsMerged()__ method that allows you to determine if a cell belongs to a merged cell. The method takes a single parameter of type __CellIndex__ which designates a cell you would like to inspect and returns a Boolean value that indicates whether the cell is contained in a merged cell.
+The `Cells` class exposes a `GetIsMerged()` method that allows you to determine if a cell belongs to a merged cell. The method takes a single parameter of type `CellIndex` which designates a cell you want to inspect and returns a Boolean value that indicates whether the cell is contained in a merged cell.
             
 
-__Example 5__ checks if cell A1 is in a merged region.
+**Example 5** checks if cell A1 is in a merged region.
             
 
-#### __Example 5: Check if cell is in merged cell range__
+**Example 5: Check if Cell Is in Merged Cell Range**
 
 <snippet id='codeblock-cjo'/>
 
 
 
-### How to Get the Containing Merged Cell Range, if the Cell is Merged?
+### How to Get the Containing Merged Cell Range, if the Cell Is Merged?
 
-Another way to check if a cell belongs to a merged range is to use the __TryGetContainingMergedRange()__ method of the __Cells__ class. Similarly to the GetIsMerged(), this method returns a Boolean value which indicates if the cell actually is contained in a merged cell. It requires a __CellIndex__ parameter that points the cell to be checked. The method also has one additional out parameter of type CellRange that holds the merged range of the cell, if the cell belongs to such.
+Another way to check if a cell belongs to a merged range is to use the `TryGetContainingMergedRange()` method of the `Cells` class. Similarly to the `GetIsMerged()` method, this method returns a Boolean value which indicates if the cell actually is contained in a merged cell. It requires a `CellIndex` parameter that points the cell to be checked. The method also has one additional out parameter of type `CellRange` that holds the merged range of the cell, if the cell belongs to such.
             
 
-__Example 6__ shows how to use TryGetContainingMergedRange() method.
+**Example 6** shows how to use the `TryGetContainingMergedRange()` method.
             
 
-#### __Example 6: Try get merged cell range__
+**Example 6: Try Get Merged Cell Range**
 
 <snippet id='codeblock-cjp'/>
 
@@ -133,13 +133,13 @@ __Example 6__ shows how to use TryGetContainingMergedRange() method.
 
 ### How to Get All Merged Cell Ranges Contained in a Given Cell Range?
 
-Use the __GetContainingMergedRanges()__ method of the __Cells__ class to retrieve all merged cells in a specified range. The method takes a single argument of type __CellRange__ that determines the range of the search and returns an enumerable that contains all merged cell ranges.
+Use the `GetContainingMergedRanges()` method of the `Cells` class to retrieve all merged cells in a specified range. The method takes a single argument of type `CellRange` that determines the range of the search and returns an enumerable that contains all merged cell ranges.
             
 
-__Example 7__ shows how to use GetContainingMergedRanges() method.
+**Example 7** shows how to use the `GetContainingMergedRanges()` method.
             
 
-#### __Example 7: Get all containing merged ranges in a range__
+**Example 7: Get All Containing Merged Ranges in a Range**
 
 <snippet id='codeblock-cjq'/>
 
@@ -147,13 +147,13 @@ __Example 7__ shows how to use GetContainingMergedRanges() method.
 
 ### How to Get All Merged Ranges?
 
-The __GetMergedCellRanges()__ method of the __Cells__ class returns an enumeration holding all merged cell ranges in the worksheet.
+The `GetMergedCellRanges()` method of the `Cells` class returns an enumeration holding all merged cell ranges in the worksheet.
             
 
-__Example 8__ shows how to get all merged ranges in a worksheet.
+**Example 8** shows how to get all merged ranges in a worksheet.
             
 
-#### __Example 8: Get all merged ranges__
+**Example 8: Get All Merged Ranges**
 
 <snippet id='codeblock-cjr'/>
 
@@ -161,27 +161,27 @@ __Example 8__ shows how to get all merged ranges in a worksheet.
 
 ## Unmerge Cells
 
-Once a cell is merged, the API offers an easy way to split it back to its composing cells. This is achieved through the __Unmerge()__ method of the __CellSelection__ class. When this method is invoked it unmerges all merged cell ranges that intersect with the selected cell range. For example, consider the worksheet in __Figure 5__ that has the regions *A1:B2* and *D4:E5* merged.
+Once a cell is merged, the API offers an easy way to split it back to its composing cells. Use the `Unmerge()` method of the `CellSelection` class. When this method is invoked it unmerges all merged cell ranges that intersect with the selected cell range. For example, consider the worksheet in **Figure 5** that has the regions *A1:B2* and *D4:E5* merged.
         
 
-Figure 5: Sample worksheet
-![Rad Spread Processing Features Merge Unmerge Cells 05](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_05.png)
+**Figure 5: Sample Worksheet**
+![Sample worksheet with merged regions](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_05.png)
 
-__Example 9__ invokes the __Unmerge()__ method for the region *B2:D4* of the worksheet from __Figure 5__, which intersects with the two merged ranges.
+**Example 9** invokes the `Unmerge()` method for the region *B2:D4* of the worksheet from **Figure 5**, which intersects with the two merged ranges.
         
 
-#### __Example 9: Unmerge cells__
+**Example 9: Unmerge Cells**
 
 <snippet id='codeblock-cjs'/>
 
 
 
-__Figure 6__ shows that as a result, the two ranges are unmerged.
+**Figure 6** shows that as a result, the two ranges are unmerged.
         
 
-#### Figure 6: Result of unmerge action
-![Rad Spread Processing Features Merge Unmerge Cells 06](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_06.png)
+**Figure 6: Result of Unmerge Action**
+![Result of unmerge action](images/RadSpreadProcessing_Features_Merge_Unmerge_Cells_06.png)
 
 ## See Also
 
-- [How to Read the Values of Merged Cells in a Worksheet]({%slug read-xls-file-merged-cells-radspreadprocessing%})
+* [How to Read the Values of Merged Cells in a Worksheet]({%slug read-xls-file-merged-cells-radspreadprocessing%})

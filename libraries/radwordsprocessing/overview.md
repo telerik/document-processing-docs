@@ -10,13 +10,13 @@ position: 0
 
 # Overview
 
-**Telerik WordsProcessing Library** allows you to create and modify various document formats like DOCX, RTF, HTML, and TXT, convert from one format to another, and export to PDF. Through the API, you can access each element in the document and modify it, remove it, or add a new one. You can save the generated content as a stream, as a file, or send it to the client browser.
+**Telerik WordsProcessing Library** allows you to create and modify various document formats like DOCX, RTF, HTML, and TXT, convert from one format to another, and export to PDF. Through the API, you can access each element in the document and modify, remove, or add a new one. You can save the generated content as a stream, as a file, or send it to the client browser.
 
 ![WordsProcessing](images/words-processing-overview.jpg)   
 
->note If you still don't have **Telerik Document Processing installed**, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
+>note If you still don't have **Telerik Document Processing** installed, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
 
->note For details on the **usage of the library**, go to the **[Getting Started]({%slug radwordsprocessing-getting-started%})** article.
+>note For details on using the library, go to the [Getting Started]({%slug radwordsprocessing-getting-started%}) article.
 
    ![Rad Words Processing Overview 02](images/RadWordsProcessing_Overview_01.png)
 
@@ -40,8 +40,8 @@ The document model of the library provides support for:
 |[**Import of document elements**]({%slug radwordsprocessing-editing-import-document-element%})|Import a document element from one document into another.|
 |[**Clone**]({%slug radwordsprocessing-editing-clone-and-merge%})| Clone documents and document elements.|
 |[**Find and Replace**]({%slug radwordsprocessing-editing-find-and-replace%})|RadWordsProcessing gives you the ability to search for a string in a RadFlowDocument instance and replace all matches. The library also allows you to replace the styling of the matches alone.|
-|[**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%})|It is intended to simplify the process of creating and modifying a document and achieve the same results as you would using the style properties and child collections of the document elements with less amount of code.|
-|**Formatting**|In addition to the styles, RadWordsProcessing provides support for different types of formatting so you can format any of the document elements: - **Character formatting**: Font size, font color, font name, bold, italic, underline, etc. - **Paragraph formatting**: Line spacing, alignment, indentation, spacing before and after, etc. - **Table formatting**: Enables you to change the alignment, borders, shading, spacing and padding, and more. - **Modifying the section properties** to adjust the page size, orientation, margins, headers and footers, etc.|
+|[**RadFlowDocumentEditor**]({%slug radwordsprocessing-editing-radflowdocumenteditor%})|Simplifies the process of creating and modifying a document. You can achieve the same results as using the style properties and child collections of the document elements with less code.|
+|**Formatting**|Besides the styles, RadWordsProcessing provides support for different types of formatting so you can format any of the document elements: - **Character formatting**: Font size, font color, font name, bold, italic, underline, and more. - **Paragraph formatting**: Line spacing, alignment, indentation, spacing before and after, and more. - **Table formatting**: Change the alignment, borders, shading, spacing, and padding. - **Modifying the section properties** to adjust the page size, orientation, margins, headers, and footers.|
 |[**GenAI-powered Document Insights**]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-overview%})|Extract insights from Word documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content.|
 
 ## Model
@@ -102,6 +102,6 @@ You can import and export documents of these formats as well as convert the form
 
 ## See Also
 
-- [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
-- [First Steps]({%slug getting-started-first-steps%})
-- [Getting Started with RadPdfProcessing]({%slug radwordsprocessing-getting-started%})
+* [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
+* [First Steps]({%slug getting-started-first-steps%})
+* [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%})

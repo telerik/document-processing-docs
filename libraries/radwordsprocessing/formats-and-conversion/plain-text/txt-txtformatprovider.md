@@ -10,62 +10,44 @@ position: 1
 
 # Using TxtFormatProvider
 
+`TxtFormatProvider` allows you to import and export a `RadFlowDocument` to and from plain text format, preserving the document structure.
 
+To use `TxtFormatProvider`, add references to the following packages:
 
-__TxtFormatProvider__ makes it easy to import and export __RadFlowDocument__ to/from plain text format, preserving the document structure.
-      
-
-All you have to do in order to use __TxtFormatProvider__ is add references to the packages listed below:
-      
-
-* Telerik.Windows.Documents.Core
-* Telerik.Windows.Documents.Flow
-          
+* `Telerik.Windows.Documents.Core`
+* `Telerik.Windows.Documents.Flow`
 
 ## Import
 
-In order to import a plain text document, you need to use the __Import()__ method of __TxtFormatProvider__.
-        
+To import a plain text document, use the `Import()` method of `TxtFormatProvider`.
 
-__Example 1__ shows how to use __TxtFormatProvider__ to import a document from a file.
-        
+**Example 1** shows how to use `TxtFormatProvider` to import a document from a file.
 
-#### __Example 1: Import document from a file__
+**Example 1: Import Document from a File**
 
 <snippet id='codeblock-cg'/>
 
+You can also import a document from a string:
 
-
-And here is how you can import a document from string:
-        
-
-#### __Example 2: Import document from a string__
+**Example 2: Import Document from a String**
 
 <snippet id='codeblock-ch'/>
 
-
-
-The resulting __RadFlowDocument__ can be manipulated like any code-generated document.
-        
+The resulting `RadFlowDocument` can be manipulated like any code-generated document.
 
 ## Export
 
-In order to export a document to plain text, you need to use the __Export()__ method of __TxtFormatProvider__.
-        
+To export a document to plain text, use the `Export()` method of `TxtFormatProvider`.
 
-__Example 3__ shows how to use __TxtFormatProvider__ to export __RadFlowDocument__ to a file.
-        
+**Example 3** shows how to use `TxtFormatProvider` to export a `RadFlowDocument` to a file.
 
-#### __Example 3: Export a document to a file__
+**Example 3: Export a Document to a File**
 
 <snippet id='codeblock-ci'/>
 
-
-
 You can also export the document to a string and preserve it in a database.
-        
 
-#### __Example 4: Export a document to a string__
+**Example 4: Export a Document to a String**
 
 <snippet id='codeblock-cj'/>
 
