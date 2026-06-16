@@ -1,7 +1,7 @@
 ---
 title: Headers and Footers
-description: Learn how to insert and configure headers and footers in sections of RadWordsProcessing flow documents.
-page_title: Headers and Footers
+description: Learn how headers and footers work in RadWordsProcessing sections, how to create them, and how to control first, even, and default page behavior.
+page_title: Headers and Footers in RadWordsProcessing
 slug: radwordsprocessing-model-headers-footers
 tags: headers, footers, word, docx, document, flow, model, sections, pages
 published: True
@@ -10,88 +10,95 @@ position: 10
 
 # Headers and Footers
 
-`Header` and `Footer` elements are block-container elements. They can contain tables and paragraphs. Each [Section]({%slug radwordsprocessing-model-section%}) contains three `Header` and three `Footer` instances.
+`Header` and `Footer` elements are block containers in the RadWordsProcessing document model, so they can contain paragraphs and tables. Each [Section]({%slug radwordsprocessing-model-section%}) exposes three header slots and three footer slots that let you define different content for the first page, even pages, and the default page flow.
 
-* [Inserting Header/Footer](#inserting-headerfooter)
-* [Operating with Headers and Footers](#operating-with-headers-and-footers)
+Use this article to understand the available header and footer types, how section settings affect them, and how to create, retrieve, and reuse them in a flow document.
 
-## Inserting Header/Footer
+## Available Types
 
-Headers and footers are properties of the `Section` element and each section can have the following types of headers and footers:
+Headers and footers are properties of a `Section`. Each section can define these header and footer types:
 
 | Type | Description |
 |---|---|
-| `Default` | Default header/footer for the section pages. |
-| `First` | Used on the first page of the section. |
-| `Even` | Used on even-numbered pages of the section. |
+| `Default` | Used for the section pages unless a more specific first-page or even-page header or footer applies. |
+| `First` | Used only on the first page of the section. |
+| `Even` | Used on even-numbered pages of the section when even and odd headers or footers are enabled. |
 
->Visualization of headers and footers is additionally affected by the following properties:
->
-> * `RadFlowDocument.HasDifferentEvenOddPageHeadersFooters`: If set to `true`, the **Even** header/footer is used for even document pages. If set to `false` (which is the default), the **Even** header/footer is not respected.
->
-> * `Section.HasDifferentFirstPageHeaderFooter`: If set to `true`, the **First** header/footer is used for the first page of the section. If set to `false` (which is the default), the **First** header/footer is not respected.
->
-> * `Section.HeaderTopMargin`: Gets or sets the top margin of the header. The value is in device independent pixels (1/96 inch).
->
-> * `Section.FooterBottomMargin`: Gets or sets the bottom margin of the footer. The value is in device independent pixels (1/96 inch).
+## Which Settings Control Header and Footer Output
 
-You can create headers of all `HeaderFooterType` types using the code snippet in **Example 1**:
+The header or footer that appears on a page depends on both the content you assign and the section-level settings that enable specific variants:
 
-**Example 1: Create a Header**
+* `RadFlowDocument.HasDifferentEvenOddPageHeadersFooters` controls whether the `Even` header and footer are used for even-numbered document pages.
+* `Section.HasDifferentFirstPageHeaderFooter` controls whether the `First` header and footer are used on the first page of the section.
+* `Section.HeaderTopMargin` sets the top margin for the header area in device-independent pixels, where `96` pixels equal `1` inch.
+* `Section.FooterBottomMargin` sets the bottom margin for the footer area in device-independent pixels.
+
+If the even and odd setting is `false`, the section ignores the `Even` header and footer. If the first-page setting is `false`, the section ignores the `First` header and footer.
+
+## Inserting Header/Footer
+
+Create headers and footers through the section properties for the required `HeaderFooterType`.
+
+Use the following example to create a header:
+
+### Example: Create a header
 
 <snippet id='codeblock-clcl'/>
 
-You can create footers using the code snippet from **Example 2**:
+Use the following example to create a footer:
 
-**Example 2: Create a Footer**
+### Example: Create a footer
 
 <snippet id='codeblock-cmcm'/>
 
->The `Parent` property of `Header` and `Footer` contains a reference to the `Section` from which it is obtained.
+>note The `Parent` property of `Header` and `Footer` contains a reference to the `Section` from which the object is obtained.
 
 ## Operating with Headers and Footers
 
-You can obtain the headers and footers in a section through the `Default`, `Even`, and `First` properties of its `Headers` or `Footers` property. For example, if you want to get the default `Header` element of a `Section` element, you can use the following line of code:
+You can access the headers and footers of a section through the `Default`, `Even`, and `First` properties of the section `Headers` and `Footers` collections.
 
-**Example 3: Get the Default Header of a Section**
+The following example gets the default header of a section:
+
+### Example: Get the default header of a section
 
 <snippet id='codeblock-cncn'/>
 
-Similarly to the `Header`, you can obtain the `Footer` element as follows:
+The following example gets the default footer of a section:
 
-**Example 4: Get the Default Footer of a Section**
+### Example: Get the default footer of a section
 
 <snippet id='codeblock-coco'/>
 
->If a header or footer of a particular type is not added, the value of the corresponding property is `null`.
+>note If a header or footer of a given type is not added, the corresponding property value is `null`.
 
-**Example 5** demonstrates how to add different headers for odd and even pages:
+The following example adds different headers for odd and even pages:
 
-**Example 5: Add Headers for Even and Odd Pages**
+### Example: Add headers for even and odd pages
 
 <snippet id='codeblock-cpcp'/>
 
 ### Linking Headers/Footers to Previous Section Headers/Footers
 
-When visualizing flow documents, applications may apply additional rules for evaluating the header/footer that appears on a particular page. If a header/footer of a given type is omitted for a section, the previous section provides it (also known as "linked to previous"). If this is the first section, a blank header/footer is used.
+When a section omits a header or footer of a given type, applications that visualize the flow document can inherit that header or footer from the previous section. This behavior is commonly described as linked to previous. If the document has no previous section, a blank header or footer is used instead.
 
-For example, if a document with two sections is created and the `Default`, `Even`, and `Odd` properties are set to headers (footers) only for the first section, the second section is visualized with the same set of headers (footers). If you want to set blank headers (footers) for a given section, set them to blank headers (footers) explicitly.
+For example, if a document has two sections and only the first section defines the `Default`, `Even`, and `First` headers or footers, the second section can render with the same content. If you want the second section to display blank headers or footers, assign explicit blank header or footer content for that section.
 
 ### Adding Watermarks to Header
 
-Elements of type `Header` have a property corresponding to a collection of watermarks—`Watermarks`. The property allows you to add a `Watermark` to the specific header with the `Add()` method.
+`Header` elements expose a `Watermarks` collection. Use its `Add()` method to add a `Watermark` to a specific header instance.
 
-Information on the types of watermarks and their use is available in the [Watermark]({%slug radwordsprocessing-concepts-watermark%}) help article.
+For more information about supported watermark types and usage patterns, see [Watermark]({%slug radwordsprocessing-concepts-watermark%}).
 
-### Adding Fields to Header/Footer
+## Adding Fields to Header/Footer
 
-You can add PAGE, DATE, or other fields to the headers and footers of a document. For more information, refer to the [Fields]({%slug radwordsprocessing-concepts-fields%}) help topic.
+You can add `PAGE`, `DATE`, and other fields to headers and footers so the content updates automatically as the document changes. For implementation details, see [Fields]({%slug radwordsprocessing-concepts-fields%}).
 
 ## See Also
 
 * [HeaderFooterBase API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.HeaderFooterBase.html)
-* [Document Model]({%slug radwordsprocessing-model%})
+* [Document model]({%slug radwordsprocessing-model%})
 * [Section]({%slug radwordsprocessing-model-section%})
+* [Fields]({%slug radwordsprocessing-concepts-fields%})
 * [Watermark]({%slug radwordsprocessing-concepts-watermark%})
 * [Draw Header/Footer in RadFixedDocument](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/DrawHeaderFooter)
-* [Creating Headers with Left, Center, and Right Text/Image in Exported PDF Documents Using RadWordsProcessing]({%slug customize-headers-pdf-radwordsprocessing%})
+* [Create headers with left, center, and right text or images in exported PDF documents]({%slug customize-headers-pdf-radwordsprocessing%})

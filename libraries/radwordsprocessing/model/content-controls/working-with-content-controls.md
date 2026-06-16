@@ -1,7 +1,7 @@
 ---
 title: Working with Content Controls
-page_title: Working with Content Controls
-description: Learn how to access, insert, modify, and remove content controls programmatically in RadWordsProcessing documents.
+page_title: Working with Content Controls in RadWordsProcessing
+description: Learn how to find, insert, update, position, and remove content controls programmatically in RadWordsProcessing flow documents.
 slug: wordsprocessing-model-working-with-content-controls
 tags: content, controls, word, flow, document, docx, editing, sdt, access, api
 published: True
@@ -9,37 +9,51 @@ published: True
 
 # Working with Content Controls
 
-This article shows examples of how to insert content controls, access existing ones, and modify their properties in code.
+Content controls let you add structured, reusable regions to a RadWordsProcessing document. You can use them to mark editable areas, constrain input, expose lists such as combo boxes, and prepare document templates for later automation.
+
+This article explains how to retrieve existing content controls, update their properties, insert new controls, remove controls, and place controls at specific positions in the document.
 
 ## Manipulating Existing Content Controls
 
-### Getting the Content Controls
+Use the existing document tree when you want to inspect or update content controls that are already part of the document.
 
-You can retrieve the content controls by using the `EnumerateChildrenOfType()` method of any document element.
+### Get the Content Controls
+
+Retrieve content controls by calling `EnumerateChildrenOfType()` on a document element such as the document, section, paragraph, or another container element.
 
 **Example 1: Get All Content Controls**
 
 <snippet id='codeblock-dndn'/>
 
-### Setting Content Controls Properties
+This approach is useful when you need to find all controls before applying filtering, validation, or targeted updates.
 
-This example shows how to iterate the items and add an item to an existing `ComboBox` content control.
+### Set Content Controls Properties
+
+After you retrieve the controls, you can inspect their type and update the matching properties. For example, a combo box or drop-down list control can be updated by adding items to its collection.
 
 **Example 2: Adding Items to a ComboBox or a DropDownList**
 
 <snippet id='codeblock-dodo'/>
 
-## Inserting or Removing Content Controls
+Use the same pattern when you need to modify titles, tags, locking behavior, placeholder content, or other settings exposed by a specific content control type.
 
-You can insert new content controls through the `InsertStructuredDocumentTag` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method has several overloads that allow you to insert the content control by passing its type, properties, and relative document elements.
+## Insert or Remove Content Controls
 
->note If you add content controls with the `InsertStructuredDocumentTag(SdtType)` method without specifying the content, the resulting document only has the annotation range start and end of the control. Add the desired content manually afterwards.
+Insert new content controls through the `InsertStructuredDocumentTag()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The available overloads let you insert a control by type, by properties, or by targeting specific document elements.
+
+>note If you call `InsertStructuredDocumentTag(SdtType)` without specifying content, the resulting document contains only the annotation range start and end for the control. Add the intended content after you create the control.
+
+### How to Insert a Content Control by Type
 
 **Example 3: Inserting a Content Control Using Content Control Type**
 
 <snippet id='codeblock-dpdp'/>
 
-**Example 4: Inserting a Rich Text Content Control Using Content Control Properties**
+Use this overload when you know the control type and want to populate its content in a later step.
+
+### How to Insert a Content Control by Properties
+
+#### **Example 4: Inserting a Rich Text content control using content control properties**
 
 <snippet id='codeblock-dqdq'/>
 
@@ -47,19 +61,39 @@ You can insert new content controls through the `InsertStructuredDocumentTag` me
 
 <snippet id='codeblock-drdr'/>
 
-**Example 6: Remove a Content Control**
+Use the overloads that accept properties when you want to configure the control during insertion instead of modifying it afterwards.
+
+### How to Remove a Content Control
+
+#### **Example 6: Remove a content control**
 
 <snippet id='codeblock-dsds'/>
 
-**Example 7: Insert a Content Control to a Specific Position**
+Removing a content control is useful when you need to clean up document templates or replace one control type with another.
 
->note When using the `InsertStructuredDocumentTag()` method and passing start and end elements, ensure that the elements are not already part of a content control. An exception to the rule are the rich text and repeating section content controls, which can fully contain other controls, with the restriction that they cannot intersect their ranges.
+### How to Insert a Content Control at a Specific Position
 
->caption Figure 1: Examples of correct and incorrect adding of content controls
+#### **Example 7: Insert a content control to a specific position**
 
-![working-with-content-controls001](images/working-with-content-controls001.png)
+>note When you use `InsertStructuredDocumentTag()` and pass start and end elements, make sure those elements are not already part of another content control. The exception is rich text and repeating section content controls, which can fully contain other controls as long as their ranges do not intersect.
+
+>caption Figure 1: Examples of correct and incorrect content control placement
+
+![Diagram showing valid and invalid ways to nest or place content controls](images/working-with-content-controls001.png)
 
 <snippet id='codeblock-dtdt'/>
+
+Use element-based insertion when you need exact placement in a document template or when you wrap an existing content range with a new control.
+
+## Common Guidance for Working with Content Controls
+
+Keep these rules in mind when you build document-editing workflows with content controls:
+
+* Retrieve controls from the document tree before you update them, especially when the document can contain multiple control types.
+* Choose the insertion overload based on how much configuration you need at creation time.
+* Add content after insertion when you create a control only by type.
+* Avoid overlapping control ranges unless you use a supported container type such as rich text or repeating section content controls.
+* Remove unused controls when you convert a template into a finalized document.
 
 ## See Also
 
