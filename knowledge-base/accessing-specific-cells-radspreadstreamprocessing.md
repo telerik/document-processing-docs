@@ -20,9 +20,9 @@ ticketid: 1707561
 [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) does not provide direct cell access like `Worksheet.Cell[rowIndex,columnIndex]`. It is optimized for high-performance scenarios, working with flat worksheet data. Accessing specific cells requires iterating through all cells and mapping them to their respective indices. For formatted documents and advanced features, RadSpreadProcessing is the recommended solution.
 
 This knowledge base article also answers the following questions:
-- How can I access specific cells using RadSpreadStreamProcessing?
-- Is it possible to retrieve cell values directly in RadSpreadStreamProcessing?
-- How to process formatted data with Telerik's spreadsheet libraries?
+* How can I access specific cells using RadSpreadStreamProcessing?
+* Is it possible to retrieve cell values directly in RadSpreadStreamProcessing?
+* How to process formatted data with the Telerik spreadsheet libraries?
 
 ## Solution
 
@@ -84,10 +84,11 @@ static string IndexToColumnLetter(int colIndex)
 }
 ```
 
-### Key Points:
-- `ICellImporter.Value` returns the raw stored value or cached formula result.
-- The `ICellImporter.Format.NumberFormat` provides the effective number format.
-- For advanced formatting, use RadSpreadProcessing.
+### Key Points
+
+* `ICellImporter.Value` returns the raw stored value or cached formula result.
+* The `ICellImporter.Format.NumberFormat` provides the effective number format.
+* For advanced formatting, use `RadSpreadProcessing`.
 
 ```csharp
 //Get format and value with SpreadStreamProcessing
@@ -105,5 +106,5 @@ RadSpreadStreamProcessing is ideal for scenarios requiring high performance and 
 
 ## See Also
 
-- [RadSpreadStreamProcessing Overview]({%slug radspreadstreamprocessing-overview%})
-- [RadSpreadProcessing Overview]({%slug radspreadprocessing-overview%})
+* [RadSpreadStreamProcessing Overview]({%slug radspreadstreamprocessing-overview%})
+* [RadSpreadProcessing Overview]({%slug radspreadprocessing-overview%})

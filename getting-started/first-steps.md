@@ -75,7 +75,7 @@ You can find the complete Telerik Document Processing package list in [Available
 
 Use the following snippet to create the `RadFlowDocument` instance that the sample exports later.
 
-### Example 1: Create a RadFlowDocument
+#### **Example 1: Create a RadFlowDocument**
 
 <snippet id='first-steps-create-document'/>
 

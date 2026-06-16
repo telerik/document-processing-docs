@@ -11,13 +11,13 @@ position: 2
 
 # Cross-Platform Support
 
-**Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of packages built against the .NET Core & .NET Standard which you can reference in an application.
+**Telerik Document Processing** comes with **.NET Core** & **.NET Standard** support. There is a set of packages built against .NET Core & .NET Standard which you can reference in an application.
 
->note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can get the packages through the **UI for ASP.NET Core**, **UI for Blazor**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the above mentioned suites.
+>note The binaries compatible with .NET Standard are distributed with the packages targeting .NET Standard and .NET Core. You can get the packages through the **UI for ASP.NET Core**, **UI for Blazor**, and **UI for WinUI** suites. There are **NuGet** packages as well that you can access if you have a license for one of the suites mentioned previously.
 
 ## Package References
 
-To use the model of the **RadWordsProcessing** library in your cross-platform project, you need to add references to the following **.Net Standard** packages:
+To use the model of the **RadWordsProcessing** library in your cross-platform project, add references to the following **.NET Standard** packages:
 
 <table>
 <thead>
@@ -56,29 +56,31 @@ To use the model of the **RadWordsProcessing** library in your cross-platform pr
 </tbody>
 </table>
 
->note The **Telerik.Documents.ImageUtils** package depends on **SkiaSharp**. To use this package, you will need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
+>note The **Telerik.Documents.ImageUtils** package depends on **SkiaSharp**. To use this package, you need to add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
-> Note that for .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (e.g. **Telerik.Windows.Documents.Core**)
- 
-## Limitations in .Net Standard
+> For .NET Framework & .NET Core with Windows Compatibility Pack projects, the references contain "Windows" in their names (for example, **Telerik.Windows.Documents.Core**).
 
-### Additional settings required
+## Limitations in .NET Standard
 
-Some functionalities require additional settings:
-* To **export to PDF** format documents containing fonts different than the [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}), the **FontsProvider** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}).
-* To **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}).
+### Additional Settings Required
+
+Some features require additional settings:
+
+* To **export to PDF** format documents containing fonts different than the [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}), set the **FontsProvider** property inside the **FixedExtensibilityManager**. For more information, see the FixedExtensibilityManager in the [PdfProcessing Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}).
+* To **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, set the **JpegImageConverter** property inside the **FixedExtensibilityManager**. For more information, see the FixedExtensibilityManager in the [PdfProcessing Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}).
 
 ## Limitations in Windows Server
 
-### Additional settings required
- When importing HTML with images that are not included in the file and need to be loaded:
- * Make sure **.NET 4.8** is installed.
- * Or subscribe to the [LoadImageFromUri](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/html/settings#loadimagefromuri-and-loadstylesheetfromuri-events) event.
+### Additional Settings Required
+
+When importing HTML with images that are not included in the file and need to be loaded:
+
+* Ensure **.NET 4.8** is installed.
+* Or subscribe to the [LoadImageFromUri](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/formats-and-conversion/html/settings#loadimagefromuri-and-loadstylesheetfromuri-events) event.
 
 ## See Also
 
- * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
- * [Section]({%slug radwordsprocessing-model-section%})
- * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
- * [Run]({%slug radwordsprocessing-model-run%})
-
+* [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [Section]({%slug radwordsprocessing-model-section%})
+* [Paragraph]({%slug radwordsprocessing-model-paragraph%})
+* [Run]({%slug radwordsprocessing-model-run%})

@@ -31,16 +31,16 @@ To update the TOC in a [RadFlowDocument]({%slug radwordsprocessing-model-radflow
 
 2. Before exporting the document to PDF, use the `UpdateFields()` method to update all fields, including the TOC, in the `RadFlowDocument`. This ensures that the TOC reflects the correct page numbers.
 
-3. To accurately update the TOC, including the correct page numbering, it's necessary to calculate the layout of the document. RadWordsProcessing provides the [NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) for this purpose.
+3. To accurately update the TOC, including the correct page numbering, you need to calculate the layout of the document. RadWordsProcessing provides the [NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) for this purpose.
 
 ```csharp
 FlowExtensibilityManager.NumberingFieldsProvider = new NumberingFieldsProvider();
 document.UpdateFields();
 ```
 
-By setting the `NumberingFieldsProvider` and then calling `RadFlowDocument.UpdateFields()`, the document will update the TOC to reflect the correct page numbering.
+By setting the `NumberingFieldsProvider` and then calling `RadFlowDocument.UpdateFields()`, the document updates the TOC to reflect the correct page numbering.
 
-It is possible to [update just a single field](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields), not all of them:
+It is possible to [update a single field]({%slug radwordsprocessing-concepts-fields%}#updating-fields), not all of them:
 
 ```csharp
 FieldCharacter fieldCharacter = document.EnumerateChildrenOfType<FieldCharacter>().First(x=> x.FieldInfo.Field is TocField);
@@ -52,11 +52,11 @@ fieldInfo.UpdateField();
 
 ## Notes
 
-- The `UpdateFields()` method updates all fields in the document, not just the TOC. Ensure that this behavior is acceptable for your document's needs before proceeding.
-- The `NumberingFieldsProvider` plays a crucial role in ensuring that page numbers are correctly calculated and reflected in the TOC. Make sure to set it before updating the fields.
+* The `UpdateFields()` method updates all fields in the document, not only the TOC. Ensure that this behavior is acceptable for your document before you proceed.
+* The `NumberingFieldsProvider` is essential for correct page number calculation in the TOC. Set it before you update the fields.
 
 ## See Also
 
-- [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
-- [Table of Contents Field]({%slug radwordsprocessing-concepts-toc-field%})
-- [NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%})
+* [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [Table of Contents Field]({%slug radwordsprocessing-concepts-toc-field%})
+* [NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%})

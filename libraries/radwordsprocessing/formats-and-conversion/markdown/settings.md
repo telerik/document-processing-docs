@@ -12,7 +12,7 @@ position: 2
 
 The `MarkdownFormatProvider` exposes `ImportSettings` and `ExportSettings` properties that let you customize how the document is parsed and serialized into the document model.
 
-### Import Settings
+## Import Settings
 
 The `ImportSettings` property returns a `MarkdownImportSettings` instance. This object contains a `StyleSettings` property of type `MarkdownImportStyleSettings` that allows you to customize how Markdown constructs are mapped to document styles when importing. All properties are listed in the following table:
 
@@ -25,11 +25,11 @@ The `ImportSettings` property returns a `MarkdownImportSettings` instance. This 
 | `StyleSettings` | Gets the style customization settings applied during import. Use to override styles for Markdown elements or customize visual properties of auto-created styles. |
 | `Warnings` | Gets the list of non-fatal warnings generated during the last import. Cleared and repopulated on each import. Typical entries describe images that could not be loaded. Do not modify while an import is in progress. |
 
-#### Example 1: Configure Import Settings
+**Example 1: Configure Import Settings**
 
 <snippet id='markdownformatprovider-import-settings'/>
 
-### Export Settings
+## Export Settings
 
 The `ExportSettings` property returns a `MarkdownExportSettings` instance. This object contains a `StyleSettings` property of type `MarkdownExportStyleSettings` that allows you to override the Markdown delimiters used for specific inline styles, such as the delimiter characters for bold and italic text. All properties are listed in the following table:
 
@@ -44,7 +44,7 @@ The `ExportSettings` property returns a `MarkdownExportSettings` instance. This 
 | `Warnings` | Gets the list of non-fatal warnings generated during the last export operation. Cleared and repopulated on each export. |
 | `MonospaceFontNames` | Gets the set of font family names treated as monospace (code) fonts during export. Runs using one of these fonts are exported as inline code spans. Pre-seeded with common monospace fonts; case-insensitive. |
 
-#### Example 2: Configure Export Settings
+**Example 2: Configure Export Settings**
 
 <snippet id='markdownformatprovider-export-settings'/>
 

@@ -18,17 +18,17 @@ ticketid: 1710562
 
 ## Description
 
-This article is expected to show a sample approach for defining a custom function which accepts a range of cells as an argument. For simplicity of the example and better understanding, we will use the [CONCAT](https://support.microsoft.com/en-us/office/concat-function-9b1a9a3f-94ff-41af-9736-694cbd6b4ca2) function as an idea which is expected to join several text items into one text item. It is listed in the [supported functions]({%slug radspreadprocessing-features-formulas-functions%}) by RadSpreadProcessing.
+This article shows a sample approach for defining a custom function that accepts a range of cells as an argument. For better understanding, the example uses the [CONCAT](https://support.microsoft.com/en-us/office/concat-function-9b1a9a3f-94ff-41af-9736-694cbd6b4ca2) function as a basis. The CONCAT function joins several text items into one text item. It is listed in the [supported functions]({%slug radspreadprocessing-features-formulas-functions%}) by RadSpreadProcessing.
 
->note This approach can be adopted to other functions' implementation.
+>note You can adapt this approach to other custom function implementations.
 
 ## Solution
 
-1. Unregister the built-in implementation for the custom function (if such exists).
+1. Unregister the built-in implementation for the custom function (if one exists).
 1. Implement your custom function.
-1. Register the custom function using the FunctionManager.RegisterFunction() method.
+1. Register the custom function with the `FunctionManager.RegisterFunction()` method.
 
-#### Custom Function Implementation
+**Example 1: Custom Function Implementation**
 
 ```csharp
         static void Main(string[] args)
@@ -122,4 +122,4 @@ This article is expected to show a sample approach for defining a custom functio
 
 ## See Also
 
-- [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%})
+* [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%})

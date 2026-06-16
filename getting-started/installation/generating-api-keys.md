@@ -20,15 +20,15 @@ Using API Keys provides a secure way to authenticate. This method does not requi
 
 1. In the **Key Note** field, add a note that describes the API key.
 
-1. Click `Generate Key`.
+1. Click **Generate Key**.
 
     ![Generate API key](images/generate-key-button.png) 
 
-1. Select `Copy and Close`. Once you close the window, you can no longer copy the generated key. For security reasons, the API Keys page displays only a portion of the key.
+1. Select **Copy and Close**. Once you close the window, you can no longer copy the generated key. For security reasons, the API Keys page displays only a portion of the key.
 
     ![Copy and Close API key](images/generated-api-key-copy-close.png)   
 
-    >note The illustrated API key above is used just for demonstration purposes and it is not valid!
+    >note The illustrated API key is used for demonstration purposes only and is not valid.
 
     ![Generated API key](images/generatee-api-key.png)  
 

@@ -1,6 +1,6 @@
 ---
 title: Preventing Excel From Extending Cell Formatting Below Formatted Range Using SpreadProcessing
-description: Resolve the issue where cells below a formatted range inherit formatting when using SpreadProcessing to generate Excel files.
+description: Learn how to resolve the issue where cells below a formatted range inherit formatting when using RadSpreadProcessing to generate Excel files.
 type: how-to
 page_title: Avoiding Automatic Formatting Extension Below a Range in Excel with SpreadProcessing
 meta_title: Avoiding Automatic Formatting Extension Below a Range in Excel with SpreadProcessing
@@ -12,30 +12,30 @@ ticketid: 1693269
 
 ## Environment
 
- Version | Product | Author | 
+| Version | Product | Author | 
 | ---- | ---- | ---- | 
 | 2025.2.520| RadSpreadProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|
 
 ## Description
 
-When exporting an Excel file using [SpreadProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/overview) and applying formatting to a range of cells, entering data immediately below the formatted range may cause Excel to automatically extend the formatting: 
+When you export an Excel file with [SpreadProcessing]({%slug radspreadprocessing-overview%}) and apply formatting to a range of cells, entering data immediately below the formatted range may cause Excel to automatically extend the formatting: 
 
 >caption Extend Data Range Formats and Formulas
 ![Microsoft Excel's built-in "Extend data range formats and formulas" feature ><](images/excel-extend-data-range-formatting.gif)
 
-This occurs due to Excel's built-in *"Extend data range formats and formulas"* feature. The behavior is controlled by Excel itself and cannot be disabled programmatically from within the SpreadProcessing library:
+This occurs because of the Excel built-in *"Extend data range formats and formulas"* feature. Excel itself controls the behavior and you cannot disable it programmatically from within the SpreadProcessing library:
 
 ![Microsoft Excel's built-in "Extend data range formats and formulas" setting ><](images/excel-extend-data-range-formatting.png)
 
-Clearing the formatting of cells in a range below the formatted data helps mitigate behavior. However, this approach works only for pre-defined ranges and does not override Excel's internal settings permanently. This article demonstrates a sample approach how to rectify such a behavior. 
+Clearing the formatting of cells in a range below the formatted data helps mitigate this behavior. This approach works only for predefined ranges and does not override the Excel internal settings permanently. This article demonstrates a sample approach for how to rectify this behavior. 
 
 ## Solution
 
-To prevent Excel's automatic formatting extension, clear the formatting of cells in a specified range below the formatted and populated range. Use the following steps and code:
+To prevent the Excel automatic formatting extension, clear the formatting of cells in a specified range below the formatted and populated range. Follow these steps:
 
 1. Identify the used cell range in the worksheet.
 2. Define a range below the used cells that you want to clear formatting from.
-3. Apply default formatting (e.g., transparent fill, no borders, default alignment, etc.) to the defined range.
+3. Apply default formatting (for example, transparent fill, no borders, and default alignment) to the defined range.
 
 Use the following code example:
 
@@ -86,5 +86,5 @@ This approach minimizes the chances of Excel automatically extending formatting 
 
 ## See Also
 
-- [SpreadProcessing Overview]({%slug radspreadprocessing-overview%})
-- [Cell Styles]({%slug radspreadprocessing-features-styling-cell-styles%}) 
+* [SpreadProcessing Overview]({%slug radspreadprocessing-overview%})
+* [Cell Styles]({%slug radspreadprocessing-features-styling-cell-styles%})

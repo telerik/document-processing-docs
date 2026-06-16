@@ -11,9 +11,9 @@ position: 7
 # Headers and Footers
 
 
-Headers and Footers functionality allows you to add rich text content in the page margins when exporting a worksheet to pages. This feature is useful in scenarios like [exporting to PDF]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}), [printing with RadSpreadsheet control](http://docs.telerik.com/devtools/wpf/controls/radspreadsheet/features/ui-printing) or import/export to XLSX. 
+Headers and Footers functionality allows you to add rich text content in the page margins when exporting a worksheet to pages. This feature is useful in scenarios like [exporting to PDF]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}), [printing with RadSpreadsheet control](https://docs.telerik.com/devtools/wpf/controls/radspreadsheet/features/ui-printing) or import/export to XLSX. 
 
-This article aims to present the Headers and Footers API in **RadSpreadprocessing**. It contains the following subsections:
+The following subsections describe the Headers and Footers API in **RadSpreadProcessing**:
 
 
 * [HeaderFooterSettings](#headerfootersettings)
@@ -28,15 +28,15 @@ This article aims to present the Headers and Footers API in **RadSpreadprocessin
 
 ## HeaderFooterSettings
 
-**HeaderFooterSettings** is the class that defines how the headers and footers of some worksheet should look like. An instance of this class can be obtained through the propertied of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}#worksheetpagesetup-properties). 
+`HeaderFooterSettings` is the class that defines how the headers and footers of a worksheet look. An instance of this class can be obtained through the properties of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}#worksheetpagesetup-properties). 
 
 
-#### **Example 1: Get HeaderFooterSettings**
+**Example 1: Get HeaderFooterSettings**
 <snippet id='codeblock-cir'/>
 
 
 
-**HeaderFooterSettings** class has the following properties:
+The `HeaderFooterSettings` class has the following properties:
 
 | Property | Description |
 |---|---|
@@ -54,7 +54,7 @@ This article aims to present the Headers and Footers API in **RadSpreadprocessin
 
 ## HeaderFooterContent
 
-The **HeaderFooterContent** class defines the content of a header or a footer. This class exposes the following properties:
+The `HeaderFooterContent` class defines the content of a header or a footer. This class exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -67,19 +67,19 @@ The **HeaderFooterContent** class defines the content of a header or a footer. T
 
 ## HeaderFooterSection
 
-The **HeaderFooterSection** class defines the content of a particular header/footer section. Using the Text property, you can set a string that defines the content in the section. Within the text content you may use special escaped sequences that allow you achieve rich text content and insert fields that are going to be evaluated when creating the Worksheet pages. 
+The `HeaderFooterSection` class defines the content of a particular header/footer section. Using the `Text` property, you can set a string that defines the content in the section. Within the text content you can use special escaped sequences that allow you to achieve rich text content and insert fields that are evaluated when creating the worksheet pages. 
 
-**Example 2** shows how to set a sample content to header and footer sections. The code demonstrates how to insert a “*Date*” field in the right section of the header and a “*Page*” and a “*Number of pages*” fields in the center section of the footer.
+**Example 2** shows how to set sample content to header and footer sections. The code demonstrates how to insert a "*Date*" field in the right section of the header and a "*Page*" and a "*Number of pages*" fields in the center section of the footer.
 
-#### **Example 2: Set a content to a header/footer section**
+**Example 2: Set Content to a Header/Footer Section**
 
 <snippet id='codeblock-cis'/>
 
-The header and footer of the first page in the worksheet from the snippet above will be evaluated and rendered as shown in **Figure 1**.
+The header and footer of the first page in the worksheet from the snippet will be evaluated and rendered as shown in **Figure 1**.
 
 
-#### **Figure 1: Text in header and footer of a spreadsheet document**
-![](images/RadSpreadProcessing_Features_Headers_and_Footers_01.png)
+**Figure 1: Text in Header and Footer of a Spreadsheet Document**
+![Text in header and footer of a spreadsheet document](images/RadSpreadProcessing_Features_Headers_and_Footers_01.png)
 
 
 
@@ -110,36 +110,36 @@ The following table describes all valid uses of the ampersand symbol sequences. 
 | `&F` | Inserts a **Workbook name** field (value of `Workbook.Name`). |
 | `&A` | Inserts a **sheet name** field (value of the sheet's `Name` property). |
 
-**Example 3** demonstrates how you could insert a date field in the header, a page number filed combined with a number of pages field in the footer of a worksheet .
+**Example 3** demonstrates how to insert a date field in the header and a page number field combined with a number of pages field in the footer of a worksheet.
 
-#### **Example 3: Insert fields in header/footer**
+**Example 3: Insert Fields in Header/Footer**
 
 <snippet id='codeblock-cit'/>
 
-**Figure 2** shows how the document will look like after applying the settings demonstrated in **Example 3**.
+**Figure 2** shows how the document looks after applying the settings demonstrated in **Example 3**.
 
-#### **Figure 2: Evaluated fields in header and footer**
-![](images/RadSpreadProcessing_Features_Headers_and_Footers_02.png)
+**Figure 2: Evaluated Fields in Header and Footer**
+![Evaluated fields in header and footer](images/RadSpreadProcessing_Features_Headers_and_Footers_02.png)
 
 
 
 ## Header/Footer Margins
 
-In order to control the vertical positioning of the headers and footers on the page, you can use the **Margins** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). The [PageMargins class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Printing.PageMargins.html) exposes the following properties that define header and footer positioning:
+To control the vertical positioning of the headers and footers on the page, use the **Margins** property of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}). The [PageMargins class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Printing.PageMargins.html) exposes the following properties that define header and footer positioning:
 
 | Property | Description |
 |---|---|
 | `Header` | Defines the distance between the header and the top page edge. Default value is 0.3 inches. |
 | `Footer` | Defines the distance between the footer and the bottom page edge. Default value is 0.3 inches. |
 
-**Example 4** shows how you could set the margins of a worksheet using the predefined NormalMargins of PageMargins for the page margins, 0 inches for the footer margin and 1 inch for the header.
+**Example 4** shows how to set the margins of a worksheet using the predefined `NormalMargins` of `PageMargins` for the page margins, 0 inches for the footer margin, and 1 inch for the header.
 
 
-#### **Example 4: Setting margins to header/footer**
+**Example 4: Setting Margins to Header/Footer**
 
 <snippet id='codeblock-ciu'/>
 
-The [Unit class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html), used in **Example 4** provides convenient methods that can help you convert a value between different measurement units.
+The [Unit class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html), used in **Example 4**, provides convenient methods that help you convert a value between different measurement units.
 
 ## See Also
 

@@ -16,22 +16,22 @@ ticketid: 1701327
 | ---- | ---- | ---- | 
 | 2025.3.806| RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-## Problem
-
-When generating and encrypting a PDF using Telerik Document Processing, the file appears blank when opened on iPhone devices. However, the same PDF opens correctly on other platforms, including the mobile version of Adobe Acrobat on iPhone. 
-
 ## Description
 
-iOS viewers are sensitive to PDF structure and metadata. Many mobile PDF viewers, including those on iOS, expect linearized PDFs for optimal compatibility, especially when encryption is applied. Non-linearized encrypted PDFs may fail to render properly or show as empty.
-The **AES256** encryption used by Telerik PdfProcessing is broadly compatible, but some viewers require specific encryption flags or additional metadata that may not be present in the generated PDF. 
+When you generate and encrypt a PDF using Telerik Document Processing, the file appears blank when opened on iPhone devices. However, the same PDF opens correctly on other platforms, including the mobile version of Adobe Acrobat on iPhone.
+
+## Cause
+
+iOS viewers are sensitive to PDF structure and metadata. Many mobile PDF viewers, including those on iOS, expect linearized PDFs for optimal compatibility, especially when encryption is applied. Non-linearized encrypted PDFs may fail to render properly or appear as empty.
+The `AES256` encryption used by Telerik PdfProcessing is broadly compatible, but some viewers require specific encryption flags or additional metadata that may not be present in the generated PDF.
 
 ## Solution
 
-If you intend to display the generated PDF documents on Apple devices, make sure that you are encrypting the document with the **AES128** algorithm.
+To display the generated PDF documents on Apple devices, encrypt the document with the `AES128` algorithm.
 
 ## See Also
 
-- [Telerik PdfProcessing Encryption Types](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.formatproviders.pdf.export.encryptiontype)
-- [AES Encryption in Telerik PdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings)
-- [Feedback Portal: Add Support to Linearize PDFs](https://feedback.telerik.com/document-processing/1701394-pdfprocessing-add-support-to-linearize-pdfs)
-- [Feedback Portal: Add AES-128 Encryption Support](https://feedback.telerik.com/document-processing/1699425-pdfprocessing-add-support-for-encrypting-documents-with-an-aes-128-algorithm)
+* [Telerik PdfProcessing Encryption Types](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.fixed.formatproviders.pdf.export.encryptiontype)
+* [AES Encryption in Telerik PdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings)
+* [Feedback Portal: Add Support to Linearize PDFs](https://feedback.telerik.com/document-processing/1701394-pdfprocessing-add-support-to-linearize-pdfs)
+* [Feedback Portal: Add AES-128 Encryption Support](https://feedback.telerik.com/document-processing/1699425-pdfprocessing-add-support-for-encrypting-documents-with-an-aes-128-algorithm)

@@ -16,7 +16,8 @@ ticketid: 1687482
 | 2025.1.205| RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-Learn how to create a PDF document with an empty signature field, which allows signing the document in any PDF viewer. The document should only contain the empty signature field, and when opened in a viewer, it should provide the option to sign.
+
+This article shows how to create a PDF document with an empty signature field that allows signing the document in any PDF viewer. The document contains only the empty signature field, and when opened in a viewer, it provides the option to sign.
 
 ![UnSigned PDF](images/unsigned-pdf.png) 
 
@@ -64,11 +65,12 @@ Process.Start(new ProcessStartInfo() { FileName = filePath, UseShellExecute = tr
 ```
 
 ### Notes
-- The code creates an empty signature field without assigning a certificate or signature.
-- The resulting PDF can be opened in any PDF viewer that supports signing, allowing the user to sign the document.
+
+* The code creates an empty signature field without assigning a certificate or signature.
+* The resulting PDF can be opened in any PDF viewer that supports signing. The user can then sign the document.
 
 ## See Also
 
-- [Digital Signature]({%slug radpdfprocessing-features-digital-signature%})
-- [Signature Field]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
-- [Signing an Unsigned PDF Document that Contains a Signature Field with RadPdfProcessing]({%slug pdfprocessing-sign-an-unsigned-pdf%})
+* [Digital Signature]({%slug radpdfprocessing-features-digital-signature%})
+* [Signature Field]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
+* [Signing an Unsigned PDF Document that Contains a Signature Field with RadPdfProcessing]({%slug pdfprocessing-sign-an-unsigned-pdf%})

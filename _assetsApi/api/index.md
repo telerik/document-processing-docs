@@ -84,7 +84,7 @@ article:not(.api-reference)>p:first-child, article:not(.api-reference) h1+p {
 
 # API Reference Overview
 
-The API reference section of the documentation contains a list and descriptions of all public available classes, methods and properties of the Telerik Document Processing product.
+The API reference section of the documentation contains a list and descriptions of all publicly available classes, methods, and properties of the Telerik Document Processing product.
 
 > This documentation refers to the latest version of Telerik Document Processing libraries.
 
@@ -108,7 +108,7 @@ The following tables list the most used members of the different libraries.
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Editing">Telerik.Windows.Documents.Flow.Model.Editing</a></td>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Editing.RadFlowDocumentEditor.html">RadFlowDocumentEditor</a></td>
-            <td>Provides methods that allow you to easily modify a RadFlowDocument.</td>
+            <td>Provides methods that allow you to modify a RadFlowDocument.</td>
         </tr>
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.html">Telerik.Windows.Documents.Flow.Model</a></td>
@@ -165,12 +165,12 @@ The following tables list the most used members of the different libraries.
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.html">Telerik.Windows.Documents.Fixed.Model.Editing</a></td>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.RadFixedDocumentEditor.html">RadFixedDocumentEditor</a></td>
-            <td>Represents editor that will allow you to modify RadFixedDocument using an automatic layout in a flow-like manner.</td>
+            <td>Represents an editor that allows you to modify RadFixedDocument using an automatic layout in a flow-like manner.</td>
         </tr>
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.html"><span style="font-weight: 400; font-style: normal; text-decoration: none;">Telerik.Windows.Documents.Fixed.Model.Editing</span></a></td>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.FixedContentEditor.html">FixedContentEditor</a></td>
-            <td>Intended to simplify the process of creating and editing the content of an IContentRootElement such as RadFixedPage.It provides methods for working with fixed content.</td>
+            <td>Simplifies creating and editing the content of an IContentRootElement such as RadFixedPage. It provides methods for working with fixed content.</td>
         </tr>
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.FormatProviders.Text.html">Telerik.Windows.Documents.Fixed.FormatProviders.Text</a></td>
@@ -202,7 +202,7 @@ The following tables list the most used members of the different libraries.
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.html">Telerik.Windows.Documents.Spreadsheet.Model</a></td>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Workbook.html">Workbook</a></td>
-            <td>The main object that represents the spreadsheet document. It contains collection of Worksheets.</td>
+            <td>The main object that represents the spreadsheet document. It contains a collection of Worksheets.</td>
         </tr>
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.html"><span style="font-weight: 400; font-style: normal; text-decoration: none;">Telerik.Windows.Documents.Spreadsheet.Model</span></a></td>
@@ -212,7 +212,7 @@ The following tables list the most used members of the different libraries.
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.html"><span style="font-weight: 400; font-style: normal; text-decoration: none;">Telerik.Windows.Documents.Spreadsheet.Model</span></a></td>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Cells.html">Cells</a></td>
-            <td>Represents a collection of cells inside worksheet.</td>
+            <td>Represents a collection of cells inside a worksheet.</td>
         </tr>
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx.html">Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx</a></td>
@@ -294,7 +294,7 @@ The following tables list the most used members of the different libraries.
         </tr>
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Zip.CompressedStream.html">CompressedStream</a></td>
-            <td>Represents stream that allows you to read/write compressed information from/to given input stream.</td>
+            <td>Represents a stream that allows you to read/write compressed information from/to a given input stream.</td>
         </tr>
         <tr>
             <td><a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Zip.Extensions.html">Telerik.Windows.Zip.Extensions</a></td>

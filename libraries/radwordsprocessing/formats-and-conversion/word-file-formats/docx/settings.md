@@ -1,7 +1,7 @@
 ---
 title: Settings
 page_title: Settings
-description: This article describes the settings that you can use to control how the DOCX documents are imported/exported in WordsProcessing.
+description: Learn how to configure the import and export settings for the DocxFormatProvider to control DOCX document handling in RadWordsProcessing.
 slug: radwordsprocessing-formats-and-conversion-docx-settings
 tags: docx, format, provider, settings, flow, import, export, configuration, word
 published: True
@@ -10,38 +10,29 @@ position: 2
 
 # Settings
 
-
-
-__DocxFormatProvider__ allows for import of docx documents and respectively export of RadFlowDocument to docx. Additionally, the import/export settings provide modification options. The current article outlines the available settings.
-      
+`DocxFormatProvider` allows you to import DOCX documents and export a `RadFlowDocument` to DOCX. The import/export settings provide modification options. This article outlines the available settings.
 
 ## Export Settings
 
-The export settings which you can specify are as follows:
+You can specify the following export settings:
 
 ### InvalidDocumentAction
 
-This setting allows you to define the action which should be executed in case the __RadFlowDocument__ that is about to be exported is not compliant with Open Office XML standard. The possible values for the enumeration are:
-              
+This setting defines the action to take when the exported `RadFlowDocument` does not comply with the Office Open XML standard. The possible values for the enumeration are:
 
-* __None__: The RadFlowDocument will be exported as is without making any validations. This can result in invalid document that may not be opened correctly.
-                  
+* `None`: The provider exports the `RadFlowDocument` as is without running validation. This can result in a document that is not valid and may not open correctly.
 
-* __ThrowAnException__: DocxFormatProvider runs validation over the document passed for export. If the document is invalid, the provider throws an __InvalidDocumentException__ which contains the list with the validation errors. This is particularly useful when you want to assure you are building valid docx documents.
-                  
+* `ThrowAnException`: `DocxFormatProvider` validates the document before export. If the document is not valid, the provider throws an `InvalidDocumentException` that contains the list of validation errors. This is useful when you want to verify that you build valid DOCX documents.
 
-* __Repair__: DocxFormatProvider runs validation over the document passed for export. If there is a validation exception, the provider tries to repair it. The result is a valid docx document, but the method changes the structure of the input document.
-                  
+* `Repair`: `DocxFormatProvider` validates the document before export. If validation fails, the provider tries to repair the document. The result is a valid DOCX document, but the method changes the structure of the input document.
+
 ### AutoUpdateFields
 
-The __AutoUpdateFields__ setting indicates if fields should be auto-updated when the exported document is opened. The default value is __False__.
-              
+The `AutoUpdateFields` setting indicates whether fields update automatically when a user opens the exported document. The default value is `false`.
 
-__Example 1__ shows how you can create and specify particular export settings to DocxFormatProvider.
-        
+The following code shows how to create and specify particular export settings for `DocxFormatProvider`.
 
-#### __Example 1: Create DocxExportSettings__
+**Example 1: Create DocxExportSettings**
 
 <snippet id='codeblock-cv'/>
-
 

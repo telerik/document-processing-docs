@@ -10,7 +10,7 @@ position: 5
 
 # Dynamic Appearance Properties
 
-Some Widgets are visualizing variable content, which should be dynamically reconstructed after each field value change. In order to define the way this content is evaluated, all widgets provide two type of properties – VariableTextProperties defining the text specific properties and DynamicAppearanceCharacteristics defining the geometry specific properties. This article describes these two types.
+Some widgets visualize variable content, which must be dynamically reconstructed after each field value change. To define the way this content is evaluated, all widgets provide two types of properties – `VariableTextProperties` defining the text-specific properties, and `DynamicAppearanceCharacteristics` defining the geometry-specific properties.
 
 * [VariableTextProperties Class](#variabletextproperties-class)
 
@@ -18,9 +18,9 @@ Some Widgets are visualizing variable content, which should be dynamically recon
 
 ## VariableTextProperties Class
 
-This class is used by **Widget annotations** to specify the properties needed for the dynamic construction widget text. An instance of this class may also be found in the [FormField class]({%slug radpdfprocessing-model-interactive-forms-form-fields%}), proving easy way to ensure that all widgets created from this field will use similar text properties. 
+The `VariableTextProperties` class is used by [Widget annotations]({%slug radpdfprocessing-model-annotations-widgets%}) to specify the properties needed for the dynamic construction of widget text. An instance of this class can also be found in the [FormField class]({%slug radpdfprocessing-model-interactive-forms-form-fields%}), providing an easy way to ensure that all widgets created from this field use similar text properties.
 
-These properties are as follows:
+The following table lists the available properties:
 
 | Property | Description |
 |---|---|
@@ -45,7 +45,7 @@ These properties are as follows:
 
 ## DynamicAppearanceCharacteristics Class
 
-This class is used by [VariableContentWidget]({%slug radpdfprocessing-model-annotations-widgets %}#variablecontentwidget-class) and [SignatureWidget]({%slug radpdfprocessing-model-annotations-widgets  %}#signaturewidget-class) classes in order to specify the dynamic construction of widget geometry representation. It provides the following properties:
+The `DynamicAppearanceCharacteristics` class is used by [VariableContentWidget]({%slug radpdfprocessing-model-annotations-widgets %}#variablecontentwidget-class) and [SignatureWidget]({%slug radpdfprocessing-model-annotations-widgets  %}#signaturewidget-class) classes to specify the dynamic construction of widget geometry representation. It provides the following properties:
 
 | Property | Description |
 |---|---|
@@ -56,7 +56,7 @@ This class is used by [VariableContentWidget]({%slug radpdfprocessing-model-anno
 
 ### ButtonAppearanceCharacteristics Class
 
-This class inherits DynamicAppearanceChanacteristics and is used by [TwoStateButtonWidget]({%slug radpdfprocessing-model-annotations-widgets  %}#twostatebuttonwidget-class) and [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets  %}#radiobuttonwidget-class) for dynamically constructing button appearances. It adds the following property to its parent class implementation:
+The `ButtonAppearanceCharacteristics` class inherits `DynamicAppearanceCharacteristics` and is used by [TwoStateButtonWidget]({%slug radpdfprocessing-model-annotations-widgets  %}#twostatebuttonwidget-class) and [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets  %}#radiobuttonwidget-class) for dynamically constructing button appearances. It adds the following property to its parent class implementation:
 
 | Property | Description |
 |---|---|
@@ -65,7 +65,7 @@ This class inherits DynamicAppearanceChanacteristics and is used by [TwoStateBut
 
 ### PushButtonAppearanceCharacteristics Class
 
-This class inherits ButtonAppearanceCharacteristics and is used by [PushButtonWidget]({%slug radpdfprocessing-model-annotations-widgets %}#pushbuttonwidget-class) for dynamically constructing button appearances. It adds the following properties to its parent class implementation:
+The `PushButtonAppearanceCharacteristics` class inherits `ButtonAppearanceCharacteristics` and is used by [PushButtonWidget]({%slug radpdfprocessing-model-annotations-widgets %}#pushbuttonwidget-class) for dynamically constructing button appearances. It adds the following properties to its parent class implementation:
 
 | Property | Description |
 |---|---|

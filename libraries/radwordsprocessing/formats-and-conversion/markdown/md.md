@@ -10,9 +10,9 @@ position: 0
 
 # Markdown
 
-[Markdown](https://en.wikipedia.org/wiki/Markdown) (.md and .markdown) is a lightweight text format used to write structured documents using plain text. It is commonly used for:
+[Markdown](https://en.wikipedia.org/wiki/Markdown) (.md and .markdown) is a lightweight plain-text format for structured documents. Common uses include:
 
-* README files on GitHub, GitLab, Azure DevOps, etc.
+* README files on GitHub, GitLab, Azure DevOps, and similar platforms
 * Documentation
 * Notes
 * Blog posts
@@ -20,7 +20,7 @@ position: 0
 * Technical instructions
 * Formatting text for web publishing
 
-<img style="border: 1px solid gray;" src="images/radwordsprocessing-formats-md.png" alt="Markdown format" /> 
+<img style="border: 1px solid gray;" src="images/radwordsprocessing-formats-md.png" alt="Markdown format" />
 
 ## See Also
 

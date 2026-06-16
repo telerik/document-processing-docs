@@ -1,6 +1,6 @@
 ---
 title: Convert Document to PDF
-description: This article demonstrates how you can convert different types of documents to PDF with Telerik Document Processing.
+description: Learn how to convert different types of documents to PDF format using the Telerik Document Processing libraries, including DOCX, HTML, RTF, XLSX, and CSV.
 type: how-to 
 page_title: Convert rich text documents and spreadsheets to PDF
 slug: convert-to-pdf
@@ -9,42 +9,43 @@ tags: radpdfprocessing, radwordsprocessing, pdf, docx, xlsx, conversion, documen
 res_type: kb
 ---
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
-|N/A|Telerik Document Processing|[Tanya Dimitrova](https://www.telerik.com/blogs/author/tanya-dimitrova)|
+|Not applicable|Telerik Document Processing|[Tanya Dimitrova](https://www.telerik.com/blogs/author/tanya-dimitrova)|
 
 ## Description
 
-The libraries included in Telerik Document Processing allow you to create, modify and export PDF documents, as well as convert a document from different file format to PDF.
+The Telerik Document Processing libraries allow you to create, modify, and export PDF documents. You can also convert documents from different file formats to PDF.
 
-Depending on the scenario, you could take advantage of the different functionalities each library provides. This article contains examples of the most common approaches for converting a document to PDF using Telerik Document Processing.
+Depending on the scenario, you can use the different features each library provides. This article contains examples of the most common approaches for converting a document to PDF.
 
 ## Solution
 
-This article shows examples of the most common scenarios for converting documents of different types to PDF. The Table of Contents section below contains the full list of covered examples for easy and quick navigation.
+This article shows examples of the most common scenarios for converting documents of different types to PDF. The following Table of Contents section contains the full list of covered examples for quick navigation.
 
 ## Table of Contents
 
- - [Convert a Document to PDF](#convert-a-document-to-pdf)
-	- [DOCX to PDF](#convert-docx-to-pdf)
-	- [DOC to PDF](#convert-doc-to-pdf)
-	- [HTML to PDF](#convert-html-to-pdf)
-	- [RTF to PDF](#convert-rtf-to-pdf)
-	- [Plain text to PDF](#convert-txt-to-pdf)
-- [Convert a Spreadsheet Document to PDF](#convert-a-spreadsheet-document-to-pdf)
-	- [XLSX to PDF](#convert-xlsx-to-pdf)
-	- [XLS to PDF](#convert-xls-to-pdf)
-	- [CSV to PDF](#convert-csv-to-pdf)	
-	- [DataTable object to PDF](#convert-datatable-to-pdf)	
-	
+* [Convert a Document to PDF](#convert-a-document-to-pdf)
+	* [DOCX to PDF](#convert-docx-to-pdf)
+	* [DOC to PDF](#convert-doc-to-pdf)
+	* [HTML to PDF](#convert-html-to-pdf)
+	* [RTF to PDF](#convert-rtf-to-pdf)
+	* [Plain text to PDF](#convert-txt-to-pdf)
+* [Convert a Spreadsheet Document to PDF](#convert-a-spreadsheet-document-to-pdf)
+	* [XLSX to PDF](#convert-xlsx-to-pdf)
+	* [XLS to PDF](#convert-xls-to-pdf)
+	* [CSV to PDF](#convert-csv-to-pdf)
+	* [DataTable object to PDF](#convert-datatable-to-pdf)
 
 ## Convert a Document to PDF
 
-In scenarios where you need to convert a document from another file format to PDF, you could take advantage of the capabilities of **WordsProcessing**. This library allows you to import documents from the most common rich text formats (Docx, Doc, HTML, RTF) as well as plain text and export them to PDF. All the supported document formats and the corresponding format providers are listed in the [Formats and Conversion section]({%slug radwordsprocessing-formats-and-conversion%}). 
+When you need to convert a document from another file format to PDF, use the capabilities of **WordsProcessing**. This library allows you to import documents from the most common rich text formats (DOCX, DOC, HTML, RTF) and plain text, and export them to PDF. All the supported document formats and the corresponding format providers are listed in the [Formats and Conversion section]({%slug radwordsprocessing-formats-and-conversion%}).
 
->note In order to use the **PdfFormatProvider** of **WordsProcessing**, you should add a reference to  the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf** assembly. For the full list of dependencies required by WordsProcessing, check the [Getting Started]({%slug radwordsprocessing-getting-started%}) topic.
+>note To use the **PdfFormatProvider** of **WordsProcessing**, add a reference to the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf** assembly. For the full list of dependencies required by WordsProcessing, check the [Getting Started]({%slug radwordsprocessing-getting-started%}) topic.
 
->The **PdfFormatProvider** class of WordsProcessing resides in the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf namespace**. For more information on how to work with this provider, please read [this topic]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+>The **PdfFormatProvider** class of WordsProcessing resides in the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf namespace**. For more information on how to work with this provider, read [the PdfFormatProvider documentation]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
 ### Convert DOCX to PDF
 
@@ -117,7 +118,7 @@ In scenarios where you need to convert a document from another file format to PD
 ```
 
 
-### Convert Plain text to PDF
+### Convert Plain Text to PDF
 
 ```csharp
 	Telerik.Windows.Documents.Flow.Model.RadFlowDocument flowDocument;
@@ -134,11 +135,11 @@ In scenarios where you need to convert a document from another file format to PD
 
 ## Convert a Spreadsheet Document to PDF
 
-While the so far discussed libraries allow working with text documents, with **SpreadProcessing** you can create, import and export tabular data. This library supports the most common file formats for storing spreadsheet documents - XLSX, XLS, XLSM, CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
+While the previously discussed libraries work with text documents, **SpreadProcessing** allows you to create, import, and export tabular data. This library supports the most common file formats for storing spreadsheet documents: XLSX, XLS, XLSM, and CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
->note In order to enable the export to PDF in SpreadProcessing, you will need to add a reference to the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf** assembly. For the full list of dependencies required by SpreadProcessing, check the [Getting Started]({%slug radspreadprocessing-getting-started%}) topic.
+>note To enable the export to PDF in SpreadProcessing, add a reference to the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf** assembly. For the full list of dependencies required by SpreadProcessing, check the [Getting Started]({%slug radspreadprocessing-getting-started%}) topic.
 
->The **PdfFormatProvider** class of SpreadProcessing resides in the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf namespace**. For more information on how to work with this provider, please read [this topic]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
+>The **PdfFormatProvider** class of SpreadProcessing resides in the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf namespace**. For more information on how to work with this provider, read [the SpreadProcessing PdfFormatProvider documentation]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
 
 ### Convert XLSX to PDF
@@ -215,6 +216,6 @@ While the so far discussed libraries allow working with text documents, with **S
 ## See Also
 
 * [Getting Started with Telerik Document Processing]({%slug getting-started%})
-* [PdfProcessing]([%slug radpdfprocessing-overview%])
-* [WordsProcessing]([%slug radwordsprocessing-overview%])
-* [SpreadProcessing]([%slug radspreadprocessing-overview%])
+* [PdfProcessing]({%slug radpdfprocessing-overview%})
+* [WordsProcessing]({%slug radwordsprocessing-overview%})
+* [SpreadProcessing]({%slug radspreadprocessing-overview%})

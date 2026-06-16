@@ -10,11 +10,8 @@ position: 2
 
 # Features
 
+The following table lists all features that the `PdfFormatProvider` supports for PDF import and export operations.
 
-
-Below you can find a list of all the features that are supported by PdfFormatProvider.
-
-## 
 <table><tr><th>
 
 Feature
@@ -103,7 +100,7 @@ Horizontal Alignment
 
 Yes
               </td><td>
-Left, Right, Center - and Justified (since Q4 2024)
+Left, Right, Center - and Justified (starting with Q4 2024)
 </td></tr><tr><td>
 
 Vertical Alignment

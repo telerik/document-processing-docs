@@ -18,7 +18,7 @@ ticketid: 1675204
 
 ## Description
 
-This knowledge base article shows how to convert a string with HTML content to an image (JPEG or PNG) in a Blazor WASM application running on .NET 8 (or newer).
+This article shows how to convert a string with HTML content to an image (JPEG or PNG) in a Blazor WASM application running on .NET 8 (or later).
 
 ## Solution
 
@@ -64,11 +64,12 @@ foreach (RadFixedPage page in pdfHtml.Pages)
 ```
 
 For .NET Framework, consider these articles for image export:
-- [PDF to Image - WPF]({%slug export-radfixedpage-to-image%})
-- [PDF to Image - WinForms](https://docs.telerik.com/devtools/winforms/knowledge-base/pdfviewer-export-page-images-with-no-ui)
-- [ThumbnailFactory - WPF](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
+
+* [PDF to Image - WPF]({%slug export-radfixedpage-to-image%})
+* [PDF to Image - WinForms](https://docs.telerik.com/devtools/winforms/knowledge-base/pdfviewer-export-page-images-with-no-ui)
+* [ThumbnailFactory - WPF](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
 
 ## See Also
 
-- [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
-- [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})
+* [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
+* [SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%})

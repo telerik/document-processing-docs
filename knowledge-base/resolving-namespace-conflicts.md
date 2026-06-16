@@ -1,6 +1,6 @@
 ---
 title: Resolving Namespace Conflicts in Telerik Document Processing Libraries
-description: This article demonstrates how to resolve namespace conflicts when using Telerik Document Processing in a .NET Core project with both .NET Standard and .NET Framework packages/assemblies referenced.
+description: Learn how to resolve namespace conflicts when using Telerik Document Processing in a .NET Core project with both .NET Standard and .NET Framework packages referenced.
 type: how-to
 page_title: How to Fix Namespace Conflicts in RadSpreadProcessing for Document Processing
 slug: radspreadprocessing-resolving-namespace-conflicts
@@ -17,33 +17,34 @@ ticketid: 1673450
 
 ## Description
 
-When working on a .NET Core project that utilizes both, the .NET Standard and .NET Framework version of a specific Document Processing library, e.g. `Telerik.Documents.Spreadsheet` and `Telerik.Windows.Documents.Spreadsheet` packages, a namespace conflict arises due to the `Workbook` class existing in both packages. This conflict results in a compiler error, preventing successful compilation.
+When a .NET Core project uses both the .NET Standard and .NET Framework versions of a Document Processing library (for example, `Telerik.Documents.Spreadsheet` and `Telerik.Windows.Documents.Spreadsheet`), a namespace conflict occurs because the `Workbook` class exists in both packages. This conflict causes a compiler error that prevents successful compilation.
 
 ![Installed Packages](images/installed-packages.png) 
 
->note It is not recommended to install the .NET Standard and .NET Framework version of the Document Processing libraries simultaneously in the same project. Install the NuGet package which is compatible with the application's Target framework and Target OS. 
+>note Do not install the .NET Standard and .NET Framework versions of the Document Processing libraries simultaneously in the same project. Install the NuGet package that is compatible with the application's target framework and target OS.
 
 ![Conflicting Assemblies Error](images/conflicting-assemblies-error.png)  
 
-This knowledge base article also answers the following questions:
-- How can I resolve type conflicts in .NET Core projects using Telerik Document Processing libraries?
-- What is the correct way to handle namespace conflicts when using Telerik Document Processing in mixed .NET environments?
-- How do I use the C# extern alias feature to differentiate between similar types in different assemblies?
+This article also answers the following questions:
+
+* How do you resolve type conflicts in .NET Core projects that use Telerik Document Processing libraries?
+* What is the correct way to handle namespace conflicts when you use Telerik Document Processing in mixed .NET environments?
+* How do you use the C# `extern alias` feature to differentiate between similar types in different assemblies?
 
 ## Solution
 
-Depending on the target framework of your project (NET Framework, .NET Standard, {{site.dotnetversions}}, etc.), you should install the library version accordingly. However, if you need to install both versions for any reason, to resolve the compile-time error caused by the conflicting `Workbook` type in both assemblies, utilize the C# [extern alias](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern-alias) feature. This approach allows you to differentiate between assemblies and use types from both without conflict. Follow the steps below:
+Depending on the target framework of your project (.NET Framework, .NET Standard, {{site.dotnetversions}}, and so on), install the matching library version. If you need to install both versions, use the C# [extern alias](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern-alias) feature to resolve the compile-time error caused by the conflicting `Workbook` type. This approach lets you differentiate between assemblies and use types from both without conflict. Follow these steps:
 
 1. **Assign Alias to NuGet Packages**
-   - For the `Telerik.Documents.Spreadsheet` NuGet package, set its alias to `StandardHelper` (or any preferred alias).
-   - For the `Telerik.Windows.Documents.Spreadsheet` NuGet package, set its alias to `FrameworkHelper` (or any preferred alias).
+   * For the `Telerik.Documents.Spreadsheet` NuGet package, set its alias to `StandardHelper` (or any preferred alias).
+   * For the `Telerik.Windows.Documents.Spreadsheet` NuGet package, set its alias to `FrameworkHelper` (or any preferred alias).
 
    ![StandardHelper Alias](images/standardhelper-alias.png)  
 
    ![FrameworkHelper Alias](images/frameworkhelper-alias.png) 
 
 2. **Use Extern Alias in Your Code**
-   - At the top of your source file where you intend to use the conflicting types, add the `extern alias` directive for each alias you assigned. This directive differentiates the assemblies, allowing you to reference each type explicitly.
+   * At the top of your source file where you intend to use the conflicting types, add the `extern alias` directive for each alias you assigned. This directive differentiates the assemblies and allows you to reference each type explicitly.
 
 ```csharp
 extern alias StandardHelper;
@@ -64,10 +65,10 @@ namespace YourNamespace
 }
 ```
 
-By following these steps, you can successfully resolve the namespace conflict and use the `Workbook` class from the desired NuGet package in your .NET Core project.
+These steps resolve the namespace conflict and allow you to use the `Workbook` class from the desired NuGet package in your .NET Core project.
 
 ## See Also
 
-- [Installation: NuGet Packages for Document Processing]({%slug installation-deploying-telerik-document-processing%})
-- [C# Language Reference: extern alias](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern-alias)
-- [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [Installation: NuGet Packages for Document Processing]({%slug installation-deploying-telerik-document-processing%})
+* [C# Language Reference: extern alias](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/extern-alias)
+* [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})

@@ -10,11 +10,11 @@ position: 0
 
 # General Information
 
-This article explains the structure of __RadPdfProcessing__'s document model and how you can add content to it.
+The RadPdfProcessing document model defines a hierarchy of elements that represent PDF content. The following sections describe the element structure and how to add content.
 
 ## Document Elements
 
-[RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) is the root element of all document elements. All document elements inherit from the __FixedDocumentElementBase__ abstract class. The diagram below describes the hierarchy in __RadPdfProcessing__:
+[RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) is the root element of all document elements. All document elements inherit from the `FixedDocumentElementBase` abstract class. The following diagram describes the hierarchy in RadPdfProcessing:
 
 * **FixedDocumentElementBase**
   * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
@@ -56,10 +56,10 @@ This article explains the structure of __RadPdfProcessing__'s document model and
 
 ## Composition of Document Elements
 
-__RadFixedDocument__ represents a tree of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) where the fixed content is hosted. The diagram below describes the composition of the fixed content. The document elements are denoted in black and collections - in orange.
+`RadFixedDocument` represents a tree of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) instances where the fixed content is hosted. The following diagram describes the composition of the fixed content. Document elements are denoted in black and collections in orange.
 
  * RadFixedDocument
-   * [Pages]({%slug radpdfprocessing-model-radfixedpage%}) 
+   * [Pages]({%slug radpdfprocessing-model-radfixedpage%})
      * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
      * [Actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) (PageActionCollection)
    * [NamedDestinations]({%slug radpdfprocessing-model-named-destinations%})
@@ -71,15 +71,15 @@ __RadFixedDocument__ represents a tree of [RadFixedPage]({%slug radpdfprocessing
 
 <!-- ![Rad Pdf Processing Model 02](images/RadPdfProcessing_Model_02.png) -->
 
-## Creating or Editing document content 
+## Creating or Editing Document Content
 
-The RadPdfProcessing library provides API for editing existing or creating brand new documents. This is achieved via the following editors: 
-* [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}): This editor is suitable for creating new documents or adding content to existing documents. It allows you to add elements in a flow-like manner without explicitly setting positions and sizes. The RadFixedDocumentEditor takes care to arrange the document elements automatically and separates the content on different pages when needed.
+The RadPdfProcessing library provides an API for editing existing or creating new documents. You can use the following editors:
 
+* [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}): This editor is suitable for creating new documents or adding content to existing documents. It allows you to add elements in a flow-like manner without explicitly setting positions and sizes. The `RadFixedDocumentEditor` arranges document elements automatically and separates the content on different pages when needed.
 
-* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}): This editor provides you with the great flexibility of the PDF format. It is suitable for adding content to existing pages. With it, you must specify the exact position of each new element and manually separate the content on different pages when needed.
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}): This editor provides the flexibility of the PDF format. It is suitable for adding content to existing pages. With it, you must specify the exact position of each new element and manually separate the content on different pages when needed.
 
 ## See Also
 
- * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
- * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})

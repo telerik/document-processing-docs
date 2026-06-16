@@ -1,6 +1,6 @@
 ---
 title: Add Digital Signatures on an existing page | Telerik Document Processing
-description: Position Digital Signature widget and replace an existing page content in a PDF document.
+description: Learn how to position a Digital Signature widget and replace existing page content in a PDF document using RadPdfProcessing.
 type: how-to
 page_title: Position Digital Signature widget and replace an existing page content
 slug: position-digital-signature-on-page
@@ -9,15 +9,19 @@ tags: radpdfprocessing, pdf, signature, digital, page, document, processing, sig
 res_type: kb
 ---
 
-|Product Version|Product|Author|
-|----|----|----|
-|2021.1.118|RadPdfProcessing|[Georgi Georgiev](https://www.telerik.com/blogs/author/georgi-georgiev-2)|
+## Environment
+
+| Version | Product | Author |
+| ---- | ---- | ---- |
+| 2021.1.118 | RadPdfProcessing | [Georgi Georgiev](https://www.telerik.com/blogs/author/georgi-georgiev-2) |
 
 ## Description
-A common scenario is to replace a temporary page content (a templated text) with a Digital Signature widget. This allows already created PDF documents, e.g. using the *Telerik Report Designer*, to be modified by adding a Digital Signature on a position defined by the existing content of the document.
+
+A common scenario is to replace temporary page content (a templated text) with a Digital Signature widget. This allows previously created PDF documents, for example using **Telerik Report Designer**, to be updated by adding a Digital Signature on a position defined by the existing content of the document.
 
 ## Solution
-The following example demonstrates the approach of iterating the page content and finding TextFragment elements matching the *$CollectSignature* text. For each found match, a Signature Field is created and the TextFragment is replaced with a Signature widget. The *Rect* property is used to position and outline the Signature widget on the page.
+
+The following example shows the approach of iterating the page content and finding `TextFragment` elements matching the `$CollectSignature` text. For each found match, a Signature Field is created and the `TextFragment` is replaced with a Signature widget. The `Rect` property is used to position and outline the Signature widget on the page.
 
 ```csharp
 
@@ -51,3 +55,8 @@ The following example demonstrates the approach of iterating the page content an
 	}
 
 ```
+
+## See Also
+
+* [Signing a Document with a Digital Signature]({%slug signing-a-document-with-digital-signature%})
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})

@@ -1,6 +1,6 @@
 ---
 title: Create Custom ImagePropertiesResolver in .Net Standard
-description: Describes how to create a custom implementation of ImagePropertiesResolver in .Net Standard.
+description: Learn how to create a custom implementation of ImagePropertiesResolverBase in .NET Standard for exporting PDF documents that contain non-JPEG images.
 type: how-to
 page_title: Create a custom implementation of ImagePropertiesResolverBase in .Net Standard
 slug: create-custom-image-properties-resolver-net-standard
@@ -8,6 +8,8 @@ position: 0
 tags: radpdfprocessing, image, resolver, jpeg, netstandard, document, processing, extension
 res_type: kb
 ---
+
+## Environment
 
 <table>
 <thead>
@@ -33,15 +35,15 @@ res_type: kb
 
 ## Description
 
-**.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why to export to PDF format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to provide an implementation of the **ImagePropertiesResolver** abstract class. This property enables you to set a resolver implementation that can parse the image's raw data to separate its colors and alpha channels. This implementation should be passed to the **ImagePropertiesResolver** property of the **FixedExtensibilityManager**.
+The **.NET Standard** specification does not define APIs for converting images or scaling their quality. To export a document that contains images different than JPEG and JPEG2000, or `ImageQuality` different than High, to PDF format, you must provide an implementation of the `ImagePropertiesResolverBase` abstract class. This implementation parses the raw image data to separate its color and alpha channels. Pass this implementation to the `ImagePropertiesResolver` property of the `FixedExtensibilityManager`.
 
->caution The Telerik.Documents.ImageUtils.dll assembly depends on SkiaSharp. To use this assembly, you will need to add a reference to SkiaSharp. With the **R2 2023** changes, SkiaSharp replaced ImageSharp as the required dependency. That is why the suggested sample implementation is applicable up to version 2023.1.315.
+>caution The Telerik.Documents.ImageUtils.dll assembly depends on SkiaSharp. To use this assembly, add a reference to SkiaSharp. Starting with **R2 2023**, SkiaSharp replaced ImageSharp as the required dependency. The following sample implementation is applicable up to version 2023.1.315.
 
 ## Solution
 
-The following code snippets demonstrate how to create a custom implementation of the ImagePropertiesResolver abstract class using the [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp) (2.0.0) library and set it to the **ImagePropertiesResolver** property of the **FixedExtensibilityManager**.
+The following code snippets show how to create a custom implementation of the `ImagePropertiesResolverBase` abstract class with the [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp) (2.0.0) library and set it to the `ImagePropertiesResolver` property of the `FixedExtensibilityManager`.
 
-#### __Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class__
+**Example 1: Creating a Custom Implementation That Inherits ImagePropertiesResolverBase**
 
 ```csharp
 
@@ -186,7 +188,7 @@ public class ImagePropertiesResolver : ImagePropertiesResolverBase
 
 ```
 
-#### __Set the custom implementation to the ImagePropertiesResolver property of the FixedExtensibilityManager__
+**Example 2: Setting the Custom Implementation to the ImagePropertiesResolver Property**
 
 ```csharp
 
@@ -196,4 +198,4 @@ public class ImagePropertiesResolver : ImagePropertiesResolverBase
 
 ## See Also
 
-- [Cross-Platform Images Support in PdfProcessing]({%slug radpdfprocessing-cross-platform-images%})
+* [Cross-Platform Images Support in PdfProcessing]({%slug radpdfprocessing-cross-platform-images%})

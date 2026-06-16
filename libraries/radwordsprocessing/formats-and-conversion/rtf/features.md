@@ -10,11 +10,8 @@ position: 1
 
 # Features
 
+The following table lists all features that the `RtfFormatProvider` supports.
 
-
-Below you can find list with all features that are supported by RtfFormatProvider.
-
-## 
 <table><thead><tr><th>Feature</th><th>
 Supported</th><th>
 Comment</th></thead><tbody></tr>

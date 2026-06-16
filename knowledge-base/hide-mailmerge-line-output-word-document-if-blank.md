@@ -14,6 +14,7 @@ res_type: kb
 | 2024.1.124 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
+
 This article demonstrates how to hide the empty lines in the output Word document when the fields are blank during the [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) process using RadWordsProcessing.
 
 |Original Document|Merged Document|
@@ -21,13 +22,14 @@ This article demonstrates how to hide the empty lines in the output Word documen
 |![Original Document](images/originalMailMerge.png)|![Actual Merged Document](images/actualMailMerge.png)|
 
 ## Solution
-To achieve this, you can follow these steps:
+
+To achieve this, follow these steps:
 
 1. Instead of leaving the fields blank, insert some specific text that will serve as a placeholder. For example, you can use "{remove_Empty_field}" as the placeholder text.
 2. Perform the MailMerge process as usual.
 3. After the MailMerge process is complete, iterate through the document and remove the paragraphs that contain the placeholder text.
 
-Here's a code snippet demonstrating this solution:
+The following code snippet demonstrates this solution:
 
 ```csharp
 using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
@@ -118,4 +120,5 @@ internal class Program
 |![Result Document](images/expectedMailMerge.png)| 
 
 ## See Also
-- [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) 
+
+* [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) 

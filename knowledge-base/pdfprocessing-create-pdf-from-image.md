@@ -1,6 +1,6 @@
 ---
 title: Create Pdf from Image
-description: The example is showing how create a pdf file from an image using PdfProcessing.
+description: Learn how to create a PDF file from an image by using the FixedContentEditor and PdfFormatProvider classes in RadPdfProcessing.
 type: how-to
 page_title: Create Pdf from Image
 slug: pdfprocessing-create-pdf-from-image
@@ -10,17 +10,19 @@ ticketid: 1518025
 res_type: kb
 ---
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
 |2022.2.613|RadPdfProcessing|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
 
 ## Description
 
-The example is showing how to create a PDF file by using an image. 
+This article shows how to create a PDF file from an image. 
 
 ## Solution
 
-In this example you will create a brand new PDF document, add a page to it, and draw the image using the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
+Create a new PDF document, add a page to it, and draw the image by using the [`FixedContentEditor`]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 
 ```csharp
 
@@ -47,7 +49,7 @@ In this example you will create a brand new PDF document, add a page to it, and 
 
 ## See Also
 
-- [Getting Started with PdfProcessing]({%slug radpdfprocessing-getting-started%})
-- [Cross-Platform Support | Images]({%slug radpdfprocessing-cross-platform-images%})
-- [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Getting Started with PdfProcessing]({%slug radpdfprocessing-getting-started%})
+* [Cross-Platform Support | Images]({%slug radpdfprocessing-cross-platform-images%})
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})

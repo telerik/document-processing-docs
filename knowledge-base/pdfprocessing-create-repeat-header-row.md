@@ -1,6 +1,6 @@
 ---
 title: Create Repeating Table Header Row in PdfProcessing
-description: Learn how to create repeating table header row using the PdfProcessing library.
+description: Learn how to create a repeating table header row that appears on every page when a table spans multiple pages using the RadPdfProcessing library.
 type: how-to  
 page_title: Create Repeating Table Header Row in PdfProcessing
 slug: pdfprocessing-create-repeat-header-row
@@ -9,17 +9,19 @@ tags: radpdfprocessing, pdf, table, header, row, document, processing, repeat
 res_type: kb
 ---
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
 |2021.1.113|RadPdfProcessing|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
 
 ## Description
 
-This example demonstrates how one can create the repeating row functionality. When you have a table that does not fit on a single page you may need to repeat the header row on each page so the column headers are visible. 
+This article demonstrates how to create repeating header row functionality. When a table does not fit on a single page, you can repeat the header row on each subsequent page so the column headers remain visible.
 
 ## Solution
 
-The solution would be to split the table on each page and draw a second table that contains only the headers. The bellow example looks complex but I believe that it can be easily plugged in a real application. 
+The solution is to split the table on each page and draw a second table that contains only the headers. The following example shows the complete implementation that you can integrate into your application.
 
 ```csharp
 
@@ -170,4 +172,8 @@ The solution would be to split the table on each page and draw a second table th
 
 ```
 
+## See Also
 
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})

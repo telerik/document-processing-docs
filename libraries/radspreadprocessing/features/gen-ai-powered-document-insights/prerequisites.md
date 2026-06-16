@@ -8,35 +8,35 @@ published: True
 position: 1
 ---
 
-# GenAI-powered Document Insights Prerequisites
+# Prerequisites
 
 |Minimum Version:|Q4 2025|
 |----|----|
 
-This article explains the requirements for using the GenAI-powered Document Insights functionality in the [RadSpreadProcessing library]({%slug radspreadprocessing-overview%}).
+To use the GenAI-powered Document Insights functionality in the [RadSpreadProcessing library]({%slug radspreadprocessing-overview%}), you need the following references and AI provider setup.
 
 ## Required References
 
-In addition to the [standard RadSpreadProcessing references]({%slug radspreadprocessing-getting-started%}#package-references), you will need to add the following references to use the GenAI-powered Document Insights features:
+In addition to the [standard RadSpreadProcessing references]({%slug radspreadprocessing-getting-started%}#package-references), you need to add the following references to use the GenAI-powered Document Insights features:
 
 |.NET Framework|.NET Standard-compatible|
 |---|---|
 |**Telerik.Windows.Documents.AIConnector** * |**Telerik.Documents.AIConnector** *|
 |**Telerik.Windows.Documents.Spreadsheet.FormatProviders.Json** * |**Telerik.Documents.Spreadsheet.FormatProviders.Json** *|
 
-> __*__ The **Documents.AIConnector** NuGet package internally depends on:
+> **\*** The **Documents.AIConnector** NuGet package internally depends on:
 >
 >* **Telerik.Documents.AI.Core**
 >* **Telerik.Documents.AI.RAG**
 >    * **Microsoft.Extensions.AI.Abstractions**
 >    * **SharpToken**
 >
->**Microsoft.Extensions.AI.Abstractions** is currently available only in **preview** version. 
->If you are referencing an _assembly/dll_ of **Documents.AIConnector** instead of a NuGet package, you must manually add the **SharpToken** NuGet package.
+>**Microsoft.Extensions.AI.Abstractions** is now available only in **preview** version. 
+>If you reference an _assembly/dll_ of **Documents.AIConnector** instead of a NuGet package, you must manually add the **SharpToken** NuGet package.
 
 ## NuGet Packages
 
-You will also need to install a package for your specific AI provider:
+You also need to install a package for your specific AI provider:
 
 | Package | Use case |
 |---|---|
@@ -60,7 +60,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 
 >caution The following code snippet is valid for Microsoft.Extensions.AI.OpenAI 10.3. The specific **IChatClient** initialization may be different according to the specific version.
 
-#### __Example 1: Setting up Azure OpenAI__
+**Example 1: Setting Up Azure OpenAI**
 
 <snippet id='libraries-spread-features-gen-ai-setup-azure-open-ai'/>
 
@@ -69,19 +69,19 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 1. Create an OpenAI account.
 2. Get your API key from the OpenAI dashboard.
 
-#### __Example 2: Setting up OpenAI__
+**Example 2: Setting Up OpenAI**
 
 <snippet id='libraries-spread-features-gen-ai-setup-open-ai'/>
 
 ### Ollama Setup (Local AI)
 
-Ollama allows you to run AI models locally on your machine. This is useful for development or when dealing with sensitive data.
+Ollama allows you to run AI models locally on your machine. This is useful for development or for working with sensitive data.
 
 1. Install Ollama from [ollama.com](https://ollama.com/).
 2. Pull the model you want to use.
 3. Start the Ollama server.
 
-#### __Example 3: Setting up Ollama__
+**Example 3: Setting Up Ollama**
 
 <snippet id='libraries-spread-features-gen-ai-setup-ollama-ai'/>
 

@@ -18,25 +18,21 @@ ticketid: 1707405
 
 ## Description
 
-When exporting  a document (DOCX, XLSX, HTML) to **PDF** format with Telerik Document Processing Libraries in .NET Standard (or .NET with Target OS: None), it requires some extra implementation to preserve the font, font family, font style (like **bold**, *italic*), etc. 
+When you export a document (DOCX, XLSX, HTML) to **PDF** format with Telerik Document Processing Libraries in .NET Standard (or .NET with Target OS: None), extra implementation is required to preserve the font, font family, and font style (such as **bold** and *italic*). 
 
 ## Solution
 
-There are differences between handling fonts in .NET Framework (or .NET target OS Windows) and .NET Standard  (or .NET target OS None): 
+There are differences between handling fonts in .NET Framework (or .NET target OS Windows) and .NET Standard (or .NET target OS None): 
 
-- .NET Framework (Windows‑only): Has access to Windows font stacks and APIs (GDI/GDI+, system font folders like C:\Windows\Fonts). Telerik’s Windows-targeted build can rely on those mechanisms to resolve fonts without extra code. Most fonts “just work” and are embedded or referenced as needed.
+* **.NET Framework (Windows-only)**—Has access to Windows font stacks and APIs (GDI/GDI+, system font folders such as `C:\Windows\Fonts`). The Windows-targeted build relies on those mechanisms to resolve fonts without extra code. Most fonts are embedded or referenced as needed.
+* **.NET Standard / .NET (Target OS: None)**—Designed to be OS-agnostic and intentionally does not define APIs to get specific fonts. Because the runtime might be Linux, macOS, or sandboxed, the library cannot automatically read system fonts. You must provide font data explicitly by [implementing a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) or registering fonts yourself. Otherwise, `RadPdfProcessing` falls back to one of the [14 standard PDF fonts]({%slug radpdfprocessing-concepts-fonts%}) (Helvetica, Times, Courier, and others).
 
-- .NET Standard / .NET (Target OS: None): Designed to be OS‑agnostic—it intentionally does not define APIs to get specific fonts. Because the runtime might be Linux, macOS, or sandboxed, the library cannot automatically read system fonts. You must provide font data explicitly by [implementing a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) or registering fonts yourself; otherwise RadPdfProcessing falls back to one of the [14 standard PDF fonts]({%slug radpdfprocessing-concepts-fonts%}) (Helvetica, Times, Courier, etc.).
+The following code snippet shows a custom `FontsProvider` to supply Arial font files for PDF export:
 
-The following code snippet shows a custom FontsProvider to supply Arial font files for PDF export:
-
-* arial.ttf for regular
-
-* arialbd.ttf for bold
-
-* ariali.ttf for italic
-
-* arialbi.ttf for bold italic
+* `arial.ttf` for regular
+* `arialbd.ttf` for bold
+* `ariali.ttf` for italic
+* `arialbi.ttf` for bold italic
 
 ```csharp
         public class FontsProvider : Telerik.Windows.Documents.Extensibility.FontsProviderBase
@@ -93,9 +89,9 @@ The following code snippet shows a custom FontsProvider to supply Arial font fil
         }
 
 ```
-Please verify that all four font files (.ttf) are present in the specified directory or adjust the `fontFolder` accordingly. If the font files are not available in that folder, the exported font style in the PDF document wouldn't be properly resolved. Usually, for Windows machines, the Arial font files are available in Environment.GetFolderPath(Environment.SpecialFolder.Fonts). 
+Verify that all four font files (.ttf) are present in the specified directory or adjust the `fontFolder` accordingly. If the font files are not available in that folder, the exported font style in the PDF document is not properly resolved. For Windows machines, the Arial font files are typically available in `Environment.GetFolderPath(Environment.SpecialFolder.Fonts)`. 
 
 ## See Also
 
-- [PDF Fonts - Cross-Platform Support]({%slug radpdfprocessing-cross-platform-fonts%})
-- [How to implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) 
+* [PDF Fonts - Cross-Platform Support]({%slug radpdfprocessing-cross-platform-fonts%})
+* [How to Implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) 

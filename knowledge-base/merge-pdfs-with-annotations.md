@@ -1,13 +1,15 @@
 ---
 title: Merge PDF files while preserving their annotations
-description:  Merge several PDF documents while preserving their annotations in the result document using PdfStreamWriter and PdfFileSource.
+description: Learn how to merge several PDF documents while preserving their annotations in the result document using PdfStreamWriter and PdfFileSource.
 type: how-to 
-page_title:  Merge PDF files while preserving their annotations
+page_title: Merge PDF files while preserving their annotations
 slug: merge-pdf-files-while-preserving-their-annotations
 position: 0
 tags: radpdfprocessing, pdf, merge, annotations, pdfstreamwriter, document, processing, fixed
 res_type: kb
 ---
+
+## Environment
 
 |Product Version|Product|Author|
 |----|----|----|
@@ -15,13 +17,13 @@ res_type: kb
 
 ## Description
  
-This article describes how to merge PDF documents without loss of supported annotations with the help of the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) and [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}). 
+This article shows how to merge PDF documents without loss of supported annotations by using [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) and [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}). 
 
 ## Solution
 
-The following approach takes a collection of paths, creates a new [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) instance, appends the documents from those paths to the newly created [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and returns it as a result.
+The following approach takes a collection of paths, creates a new [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) instance, appends the documents from those paths to the newly created `RadFixedDocument`, and returns it as a result.
 
-#### __Merge PDF files
+### **Example 1: Merge PDF Files**
 
 ```csharp
 
@@ -57,3 +59,9 @@ The following approach takes a collection of paths, creates a new [RadFixedDocum
 	}
 
 ```
+
+## See Also
+
+* [PdfStreamWriter Overview]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})
+* [PdfFileSource]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%})
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})

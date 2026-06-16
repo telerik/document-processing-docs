@@ -1,7 +1,7 @@
 ---
 title: Installing on Your Computer
 page_title: Installing on Your Computer
-description: Installing Telerik Document Processing on Your Computer
+description: Learn how to install Telerik Document Processing libraries on your computer through the various Telerik UI suite installers or through the Telerik NuGet server.
 slug: installation-installing-on-your-computer
 tags: installation, telerik, document, processing, nuget
 published: True
@@ -10,15 +10,15 @@ position: 5
 
 # Installing on Your Computer
 
->important Please install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
+>important Install **&lt;PackageReference Include="Telerik.Licensing" Version="1.*" /&gt;**.
 
-Telerik Document Processing is part of several Telerik bundles and is installed following the steps for installing the suite with which you've obtained the product.
+Telerik Document Processing is part of several Telerik bundles and is installed following the steps for installing the suite with which you have obtained the product.
 
->Starting from Q1 2016, the Document Processing packages have a package version which may differ from the package version of the other packages in the particular suite. 
+>Starting with Q1 2016, the Document Processing packages have a package version which may differ from the package version of the other packages in the particular suite. 
 >
->Starting from R3 2016, only packages with a version number ending with .40 suffix are distributed. The libraries don't contain code specific for .NET Framework 4.5, thus an additional version is not needed.
+>Starting with R3 2016, only packages with a version number ending with .40 suffix are distributed. The libraries do not contain code specific for .NET Framework 4.5, so an additional version is not needed.
 >
->The changes are synced between the controls that have a dependency on Telerik Document Processing and while the referenced files are from the same release, they should work as expected regardless of the version distinction. 
+>The changes are synced between the controls that have a dependency on Telerik Document Processing. While the referenced files are from the same release, they work as expected regardless of the version distinction. 
 
 ## UI for ASP.NET Core
 
@@ -28,15 +28,15 @@ The libraries can be used through the available NuGet packages.
 
 ## UI for ASP.NET AJAX
 
-[Installing Telerik UI for ASP.NET AJAX](http://docs.telerik.com/devtools/aspnet-ajax/installation/which-file-do-i-need-to-install)
+[Installing Telerik UI for ASP.NET AJAX](https://docs.telerik.com/devtools/aspnet-ajax/installation/which-file-do-i-need-to-install)
 
-When the installation completes, the Telerik Document Processing packages will be available in the *AdditionalLibraries* sub-folder.
+When the installation completes, the Telerik Document Processing packages are available in the *AdditionalLibraries* sub-folder.
 
 ## UI for ASP.NET MVC
 
 [Installing Telerik UI for ASP.NET MVC](https://docs.telerik.com/aspnet-mvc/getting-started/installation/overview)
 
-When the installation completes, the Telerik Document Processing packages will be available in the *spreadsheet* sub-folder.
+When the installation completes, the Telerik Document Processing packages are available in the *spreadsheet* sub-folder.
 
 ## UI for Blazor
 
@@ -46,17 +46,17 @@ The libraries can be used through the available NuGet packages.
 
 ## UI for WPF
 
-[Installing Telerik UI for WPF](http://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
+[Installing Telerik UI for WPF](https://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
 
 
 ## UI for WinForms
 
-[Installing Telerik UI for WinForms](http://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer)
+[Installing Telerik UI for WinForms](https://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer)
 
 
 ## UI for Silverlight
 
-[Installing Telerik UI for Silverlight](http://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
+[Installing Telerik UI for Silverlight](https://docs.telerik.com/devtools/silverlight/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
 
 ## UI for WinUI
 
@@ -68,4 +68,4 @@ The libraries can be used through the available NuGet packages.
 
 ## See Also
 
-- [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})

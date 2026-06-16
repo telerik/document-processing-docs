@@ -10,69 +10,48 @@ position: 2
 
 # Using RtfFormatProvider
 
+`RtfFormatProvider` allows you to import and export a `RadFlowDocument` to/from RTF format. The provider preserves the entire document structure and formatting.
 
-
-__RtfFormatProvider__ makes it easy to import and export __RadFlowDocument__ to/from RTF format, preserving the entire document structure and formatting.
-      
-
-All you have to do in order to use __RtfFormatProvider__ is add references to the packages listed below:
-      
+To use `RtfFormatProvider`, add references to the following packages:
 
 * Telerik.Windows.Documents.Core
 * Telerik.Windows.Documents.Flow
-          
 
 ## Import
 
-In order to import an RTF document, you need to use the __Import()__ method of __RtfFormatProvider__.
-        
+To import an RTF document, use the `Import()` method of `RtfFormatProvider`.
 
-The code from __Example 1__ shows how to use __RtfFormatProvider__ to import an RTF document from a file.
-        
+The following code shows how to use `RtfFormatProvider` to import an RTF document from a file.
 
-#### __Example 1: Import document from a file__
+**Example 1: Import document from a file**
 
 <snippet id='codeblock-ck'/>
 
+You can also import a document from a string containing the RTF document:
 
-
-And here is how you can import a document from string containing the RTF document:
-        
-
-#### __Example 2: Import document from a string__
+**Example 2: Import document from a string**
 
 <snippet id='codeblock-cl'/>
 
-
-
-The resulting __RadFlowDocument__ can be used like any code-generated document.
-        
+The resulting `RadFlowDocument` can be used like any code-generated document.
 
 ## Export
 
-In order to export a document to RTF, you need to use the __Export()__ method of __RtfFormatProvider__.
-        
+To export a document to RTF, use the `Export()` method of `RtfFormatProvider`.
 
-__Example 3__ shows how to use __RtfFormatProvider__ to export __RadFlowDocument__ to a file.
-        
+The following code shows how to use `RtfFormatProvider` to export a `RadFlowDocument` to a file.
 
-#### __Example 3: Export a document to a file__
+**Example 3: Export a document to a file**
 
 <snippet id='codeblock-cm'/>
 
-
-
 You can also export the document to a string and preserve it in a database.
-        
 
-#### __Example 4: Export a document to a string__
+**Example 4: Export a document to a string**
 
 <snippet id='codeblock-cn'/>
 
-
-
 The resulting documents can be opened in any application that supports RTF documents.
-
 
 ## See Also
 
@@ -81,4 +60,3 @@ The resulting documents can be opened in any application that supports RTF docum
 * [Using PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})
-        

@@ -1,6 +1,6 @@
 ---
 title: What is a Row? What is a Column?
-description: Learn about the concepts of rows and columns in RadSpreadProcessing spreadsheet worksheets.
+description: Learn about the concepts of rows and columns in RadSpreadProcessing spreadsheet worksheets, including height, width, and auto fit options.
 page_title: What is a Row? What is a Column?
 slug: radspreadprocessing-working-with-rows-and-columns-what-is-row-column
 tags: rows, columns, spreadsheet, radspreadprocessing, worksheet, model, concept, structure, xlsx, spread, workbook
@@ -12,13 +12,13 @@ position: 0
 
 
 
-This article will help you get familiar with the concepts of rows and columns.
+The following sections describe the concepts of rows and columns in the RadSpreadProcessing document model.
 
 ## What is a Row? What is a Column?
 
-**Rows** in the document model of `RadSpreadProcessing` are groups of cells that are on the same **horizontal line**. Each row is identified by a number. For example, the first row has an index 1, the second – 2, and the last – 1048576. 
+**Rows** in the document model of `RadSpreadProcessing` are groups of cells that are on the same **horizontal line**. Each row is identified by a number. For example, the first row has an index 1, the second is 2, and the last is 1048576. 
 
-Similarly, a **column** is a group of cells that are vertically stacked and appear on the same **vertical line**. Columns in `RadSpreadProcessing` are identified by a letter or a combination of letters. For example, the first column is called A, the second – B, and the last column is XFD.
+Similarly, a **column** is a group of cells that are vertically stacked and appear on the same **vertical line**. Columns in `RadSpreadProcessing` are identified by a letter or a combination of letters. For example, the first column is called A, the second is B, and the last column is XFD.
         
 ![Rows and columns in a spreadsheet](images/RowAndColumn.png)
 
@@ -41,5 +41,5 @@ Similarly, columns expose several ways to set their width:
 | Auto Fit | Sets the width of a specified column based on the content of all cells in the column. The width is determined by the cell with the widest content. |
             
 
-More information about setting row's height and column's width is available in the [Resizing Rows and Columns]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%}) article.
+For more information about setting row height and column width, see the [Resizing Rows and Columns]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%}) article.
         

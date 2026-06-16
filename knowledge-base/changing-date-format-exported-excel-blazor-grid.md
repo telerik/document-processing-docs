@@ -18,7 +18,7 @@ ticketid: 1702751
 
 ## Description
 
-Learn how to apply a custom date format (e.g., "yyyy-MM-dd") to the relevant columns in the exported Excel file generated from UI Grid components offered by the Telerik family.
+Learn how to apply a custom date format (for example, "yyyy-MM-dd") to the relevant columns in the exported Excel file generated from UI Grid components offered by the Telerik family.
 
 <img style="border: 1px solid gray;" src="images/changing-date-format-exported-excel-blazor-grid.png" /> 
 
@@ -59,12 +59,12 @@ static void Main(string[] args)
 
 ### Explanation
 
-- **Step 1:** Reads the exported Excel file into a `MemoryStream`.
-- **Step 2:** Utilizes `XlsxFormatProvider` to parse the stream into a `Workbook` object for manipulation.
-- **Step 3:** Sets a custom date format for the targeted column using `SetFormat`.
-- **Step 4:** Saves the updated workbook and opens the file using the default application.
+* **Step 1:** Reads the exported Excel file into a `MemoryStream`.
+* **Step 2:** Uses `XlsxFormatProvider` to parse the stream into a `Workbook` object for manipulation.
+* **Step 3:** Sets a custom date format for the targeted column using `SetFormat`.
+* **Step 4:** Saves the updated workbook and opens the file using the default application.
 
 ## See Also
 
-- [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
-- [Date and Time Formatting]({%slug radspreadprocessing-features-format-codes%}#date-and-time-formatting) 
+* [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
+* [Date and Time Formatting]({%slug radspreadprocessing-features-format-codes%}#date-and-time-formatting)

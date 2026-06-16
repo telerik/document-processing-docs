@@ -10,16 +10,16 @@ position: 2
 
 # Colors and Color Spaces
 
-The **ColorBase** abstract class is used to encapsulate colors in different color spaces. The classes which inherit from **ColorBase** are:
+The `ColorBase` abstract class encapsulates colors in different color spaces. The classes that inherit from `ColorBase` are:
       
 
 ## SimpleColor
 
-Simple colors are defined with color components. The following colors are categorized as simple:
+Simple colors represent colors defined with color components. The following colors are categorized as simple:
 
 ### RgbColor
 
-Represents an ARGB (alpha, red, green, blue) color. The RgbColor class exposes the following properties:
+Represents an ARGB (alpha, red, green, blue) color. The `RgbColor` class exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -28,7 +28,7 @@ Represents an ARGB (alpha, red, green, blue) color. The RgbColor class exposes t
 | `G` | The green component value. |
 | `B` | The blue component value. |
             
-The following example shows how to create an RgbColor and assign it as Fill of a [Path]({%slug radpdfprocessing-model-path%}) element.
+The following example shows how to create an `RgbColor` and assign it as Fill of a [Path]({%slug radpdfprocessing-model-path%}) element.
         
 #### **Create RgbColor**
 
@@ -52,7 +52,7 @@ The following example covers the most common `GrayColor` scenarios: default and 
 
 ### CmykColor
 
-Represents a CMYK (cyan, magenta, yellow, key) color. The CmykColor class was introduced in **Q4 2024** and it exposes the following properties:
+Represents a CMYK (cyan, magenta, yellow, key) color. The `CmykColor` class was introduced in **Q4 2024** and it exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -71,11 +71,11 @@ Represents a CMYK (cyan, magenta, yellow, key) color. The CmykColor class was in
 
 ## PatternColor
 
-The abstract **PatternColor** class represents colors defined with the pattern color space. A pattern color paints with a pattern rather than a single color. **PatternColor** is inherited by the **Gradient** and **TilingBase** classes.
+The abstract `PatternColor` class represents colors defined with the pattern color space. A pattern color paints with a pattern rather than a single color. `PatternColor` is inherited by the `Gradient` and `TilingBase` classes.
         
 ### Gradient
 
-Gradient provides a smooth transition between colors across an area. The gradient color is represented by the **Gradient** abstract class, which exposes the following properties:
+Gradient provides a smooth transition between colors across an area. The gradient color is represented by the `Gradient` abstract class, which exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -86,11 +86,11 @@ Gradient provides a smooth transition between colors across an area. The gradien
 | `Background` | A `SimpleColor` object representing the background color. |
 | `GradientStops` | A collection of [GradientStop](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.GradientStop.html) objects representing the gradient stops. |
                 
-The **Gradient** class is inherited by the following classes:
+The `Gradient` class is inherited by the following classes:
             
-* **LinearGradient**: Defines a color blend along a line between two points, optionally extended beyond the boundary points by continuing the boundary colors.
+* `LinearGradient`: Defines a color blend along a line between two points, optionally extended beyond the boundary points by continuing the boundary colors.
             
-	**Example 2** shows how to create a LinearGradient and assign it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
+	**Example 2** shows how to create a `LinearGradient` and assign it as the `FillColor` of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
             
 	#### **Example 2: Create LinearGradient**
 	
@@ -102,14 +102,14 @@ The gradient created in **Example 2** is shown in **Figure 1**.
 
 ![Rad Pdf Processing Concepts Colors And Color Spaces 01](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
     
-* **RadialGradient**: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The **RadialGradient** class exposes the following additional properties:
+* `RadialGradient`: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The `RadialGradient` class exposes the following additional properties:
 
 | Property | Description |
 |---|---|
 | `StartRadius` | Decimal number determining the radius of the starting circle. |
 | `EndRadius` | Decimal number determining the radius of the ending circle. |
               
-**Example 3** demonstrates how to create a RadialGradient and assign it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
+**Example 3** demonstrates how to create a `RadialGradient` and assign it as the `FillColor` of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 	
 #### **Example 3: Create RadialGradient**
 	
@@ -123,7 +123,7 @@ The result from **Example 3** is shown in **Figure 2**.
 
 ### Tiling Pattern
 
-A tiling pattern consists of a small graphical figure called a pattern cell. Painting with the pattern replicates the cell at fixed horizontal and vertical intervals to fill an area. The tiling pattern is represented by the **TilingBase** abstract class, which exposes the following properties:
+A tiling pattern consists of a small graphical figure called a pattern cell. Painting with the pattern replicates the cell at fixed horizontal and vertical intervals to fill an area. The tiling pattern is represented by the `TilingBase` abstract class, which exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -136,22 +136,19 @@ A tiling pattern consists of a small graphical figure called a pattern cell. Pai
 | `TilingType` | Of type [TilingType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.TilingType.html), represents the tiling type. Possible values: `AllowSmallDistortion` (cells spaced consistently with slight distortion), `NoDistortion` (cells not distorted but spacing may vary), `FastTiling` (consistent spacing with additional distortion for efficient painting). |
 	                    
 
-The **TilingBase** class is inherited by the following classes:
-            
+The `TilingBase` class is inherited by the following classes:
 
-* **Tiling**: Represents a tiling pattern.
+* `Tiling`: Represents a tiling pattern.
 
-* **UncoloredTiling**: Represents an uncolored tiling pattern. This type of tiling pattern can be defined with specific content and then reused with a different color. It exposes two additional properties: **Tiling**, which represents the tiling to be used, and **Color**, which represents the color of the content of the specified tiling.
-                
+* `UncoloredTiling`: Represents an uncolored tiling pattern. You can define this type of tiling pattern with some specific content, and then reuse it with a different color. It exposes two additional properties: `Tiling` which represents the tiling to be used, and `Color` representing the color of the content of the specified tiling.
 
-Since the **TilingBase** class implements the **IContentRootElement** interface, like [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}), you can modify the content of the tiling using the **FixedContentEditor** class. **Example 4** shows how to create a tiling pattern.
-            
+Because the `TilingBase` class implements the `IContentRootElement` interface like [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}), you can modify the content of the tiling using the `FixedContentEditor` class. **Example 4** shows how to create a tiling pattern.
 
-#### **Example 4: Create Tiling**
+#### __Example 4: Create Tiling__
 
 <snippet id='pdf-create-tiling'/>
 
-The tiling created in **Example 4** is shown in **Figure 3**.        
+The tiling created in **Example 4** is shown in **Figure 3**.
 
 #### Figure 3: Tiling
 ![Rad Pdf Processing Concepts Colors And Color Spaces 02](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_02.png)

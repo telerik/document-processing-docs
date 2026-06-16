@@ -18,13 +18,13 @@ res_type: kb
 
 ## Description
 
-This article illustrates how you can insert an image in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance and resize that image to fit into the page while keeping its aspect ratio.
+This article shows how to insert an image in a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance and resize that image to fit into the page while keeping its aspect ratio.
 
 ## Solution
 
 Create an image and compare its size with the size available on the page. If the image is bigger, decrease its size:
 
-#### Insert and resize image
+#### __Insert and Resize Image__
 
 ```csharp
 

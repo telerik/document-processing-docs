@@ -10,20 +10,15 @@ position: 4
 
 # Clipboard Support
 
-
-
-The document model offers an easy way to copy and paste multiple values. The library provides flexible API that allows you to choose the content and formatting that gets included in the pasted region. This article demonstrates how to copy and paste data with different paste options.
-      
+The document model offers a way to copy and paste multiple values. The library provides a flexible API that allows you to choose the content and formatting included in the pasted region.
 
 ## Copy
 
-In order to copy values that appear in your worksheet, create a __CellSelection__ for the desired cell region and invoke its __Copy()__ method. The method returns a __WorksheetFragment__ instance that holds only the values you copied. The __WorksheetFragment__ is a piece of worksheet designed to keep the data you copy and its properties. You can later pass the worksheet fragment to the __Paste()__ method in order to get the values pasted in another worksheet.
-        
+To copy values from your worksheet, create a `CellSelection` for the desired cell region and invoke its `Copy()` method. The method returns a `WorksheetFragment` instance that holds the copied values. The `WorksheetFragment` is a piece of worksheet designed to keep the data and its properties. You can later pass the worksheet fragment to the `Paste()` method to get the values pasted in another worksheet.
 
-__Example 1__ creates a new workbook with a single worksheet and assigns some sample values to the A1:B3 region. Further, the code creates a selection for the cell region and calls its __Copy()__ method. The returned __WorksheetFragment__ can later be used for pasting operation.
-        
+**Example 1** creates a new workbook with a single worksheet and assigns sample values to the A1:B3 region. The code then creates a selection for the cell region and calls its `Copy()` method. The returned `WorksheetFragment` can later be used for pasting.
 
-#### __Example 1: Copy selected cells__
+#### __Example 1: Copy Selected Cells__
 
 <snippet id='codeblock-cgi'/>
 
@@ -31,53 +26,41 @@ __Example 1__ creates a new workbook with a single worksheet and assigns some sa
 
 ## Paste
 
-The document model provides control over the content and the formatting included in the pasted region. The __Paste()__ method requires two arguments: a __WorksheetFragment__ that contains the values to be pasted and a __PasteOptions__ instance that determines the type of information that will be pasted from the fragment. The __PasteOptions__ class introduces a __PasteType__ property that indicates the type of the paste. These are the supported paste types:
-        
+The document model provides control over the content and the formatting included in the pasted region. The `Paste()` method requires two arguments: a `WorksheetFragment` that contains the values to paste, and a `PasteOptions` instance that determines the type of information pasted from the fragment. The `PasteOptions` class introduces a `PasteType` property that indicates the type of the paste. The following paste types are supported:
 
-* __All__: Pastes everything, including text, numbers, formulas and their formatting.
-            
+* `All`: Pastes everything, including text, numbers, formulas, and their formatting.
 
-* __Formulas__: Pastes text, numbers and formulas. However, this option ignores cells formatting.
-            
+* `Formulas`: Pastes text, numbers, and formulas. This option ignores cell formatting.
 
-* __Formulas and Number Formatting__: Pastes text, numbers and formulas, and applies formatting of the copied cells to the pasted cells.
-            
+* `Formulas and Number Formatting`: Pastes text, numbers, and formulas, and applies formatting of the copied cells to the pasted cells.
 
-* __Column Widths__: Pastes text, numbers and formulas, and applies the column widths of the copied cells to the pasted cells.
-            
+* `Column Widths`: Pastes text, numbers, and formulas, and applies the column widths of the copied cells to the pasted cells.
 
-* __Values__: Pastes the calculated result of the formulas, ignoring formatting and column width.
-            
+* `Values`: Pastes the calculated result of the formulas, ignoring formatting and column width.
 
-* __Values and Number Formatting__: Pastes the calculated results of any formula and the formatting of the copied cells to the pasted cells.
-            
+* `Values and Number Formatting`: Pastes the calculated results of any formula and the formatting of the copied cells to the pasted cells.
 
-* __Formatting__: Pastes only the formatting of the copied cells to the pasted cells.
-            
+* `Formatting`: Pastes only the formatting of the copied cells to the pasted cells.
 
-__Example 2__ creates a new workbook with an empty worksheet. Further, the example sets the __Value__ of cell *A1* to =CONCATENATE("Rad" ,"Spreadsheet") and its __ForeColor__ to green. The code copies the contents of *A1* and pastes it in *A2* using __All__ PasteType.
-        
+**Example 2** creates a new workbook with an empty worksheet. It sets the `Value` of cell *A1* to =CONCATENATE("Rad" ,"Spreadsheet") and its `ForeColor` to green. The code copies the contents of *A1* and pastes it in *A2* using the `All` PasteType.
 
-#### __Example 2: Copy all__
+#### __Example 2: Copy All__
 
 <snippet id='codeblock-cgj'/>
 
 
 
-Using different __PasteType__, however, produces different output. __Example 3__ pastes the contents of *A1* with __Values__ PasteType, which results in a value "RadSpreadsheet" instead of =CONCATENATE("Rad" ,"Spreadsheet") and default __ForeColor__ instead of green:
-        
+Using a different `PasteType` produces different output. **Example 3** pastes the contents of *A1* with `Values` PasteType, which results in a value "RadSpreadsheet" instead of =CONCATENATE("Rad" ,"Spreadsheet") and a default `ForeColor` instead of green:
 
-#### __Example 3: Paste using PasteType.Values__
+#### __Example 3: Paste Using PasteType.Values__
 
 <snippet id='codeblock-cgk'/>
 
 
 
-If you would like to paste the formula contained in *A1*, not only its result, and keep its formatting, combine the __Values__ and __Formats__ paste types:
-        
+If you want to paste the formula contained in *A1* (not only its result) and keep its formatting, combine the `Values` and `Formats` paste types:
 
-__Example 4__ combines the Value and Formats paste types and preserves both the contents and formatting of the copied cell selection.
-        
+**Example 4** combines the Value and Formats paste types and preserves both the contents and formatting of the copied cell selection.
 
 #### __Example 4: Combine Values and Formats PasteType__
 
@@ -87,4 +70,4 @@ __Example 4__ combines the Value and Formats paste types and preserves both the 
 
 ## See Also
 
- * [CellSelection]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
+* [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})

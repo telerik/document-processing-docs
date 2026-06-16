@@ -15,19 +15,19 @@ ticketid: 1668130
 | --- | --- | ---- | 
 | 2024.3.806| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
-## Description 
+## Description
 
-When working with MS Word documents that contain [Content Controls]({%slug wordsprocessing-model-content-controls%}), it's straightforward to map model properties to the appropriate content control. However, cloning a [RepeatingSection][Content Controls]({%slug wordsprocessing-model-content-controls%}#repeatingsection) with content controls inside presents a challenge as there seems to be no direct method to clone a repeating section content control along with its contents. 
+When working with MS Word documents that contain [Content Controls]({%slug wordsprocessing-model-content-controls%}), it is straightforward to map model properties to the appropriate content control. However, cloning a [RepeatingSection]({%slug wordsprocessing-model-content-controls%}#repeatingsection) with content controls inside presents a challenge because there is no direct method to clone a repeating section content control along with its contents.
 
-This KB article shows a sample approach how to duplicate the content controls inside a [RepeatingSection][Content Controls]({%slug wordsprocessing-model-content-controls%}#repeatingsection) in a Word document and populate them with data considering the mapped object.   
+This article demonstrates how to duplicate the content controls inside a [RepeatingSection]({%slug wordsprocessing-model-content-controls%}#repeatingsection) in a Word document and populate them with data from the mapped object.
 
 |Original Document|Result Document|
 |----|----|
 |![Original Document](images/originalRepeatingSection.png)|![Result Document](images/resultRepeatingSection.png)|
 
-## Solution 
+## Solution
 
-Let's have an Employee object defined below. We need to use the  [RepeatingSection][Content Controls]({%slug wordsprocessing-model-content-controls%}#repeatingsection) to list all of the telephones associated with the respective Employee.
+The following example uses an `Employee` object defined below. The [RepeatingSection]({%slug wordsprocessing-model-content-controls%}#repeatingsection) lists all of the telephones associated with the respective employee.
 
 ```csharp
     public class Employee
@@ -68,9 +68,9 @@ Let's have an Employee object defined below. We need to use the  [RepeatingSecti
         }
     }
 ```
-To simulate the MS Word behavior of duplicating a repeating section with all the content controls within the section, you can follow the custom approach detailed below. This solution involves generating table rows based on the number of instances in a collection, such as a list of telephone numbers associated with an employee. Note that this solution is custom and may require adjustments to fit specific requirements.
+To simulate the MS Word behavior of duplicating a repeating section with all the content controls within the section, follow the custom approach detailed below. This solution generates table rows based on the number of instances in a collection, such as a list of telephone numbers associated with an employee. This solution is custom and may require adjustments to fit specific requirements.
 
-1. **Enumerate Content Controls and Identify Repeating Sections**: Iterate through all content controls in the document and identify those that are type `SdtType.RepeatingSection`.
+1. **List Content Controls and Identify Repeating Sections**: Iterate through all content controls in the document and identify those that are of type `SdtType.RepeatingSection`.
 
 2. **Clone Repeating Sections Programmatically**: For each identified repeating section, dynamically create and populate new table rows based on the data in the collection associated with the repeating section.
 
@@ -213,7 +213,7 @@ The following code snippet demonstrates how to populate a template document with
         }
 ```
 
-The MockDataGenerator is responsible for returning sample data:
+The `MockDataGenerator` is responsible for returning sample data:
 
 ```csharp
     public static class MockDataGenerator
@@ -315,14 +315,14 @@ The MockDataGenerator is responsible for returning sample data:
     }
 ```
 
->note Complete SDK demo is available [here](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing/CloneAndPopulateRepeatingSectionContentControls).
+>tip A complete SDK demo is available in the [CloneAndPopulateRepeatingSectionContentControls](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing/CloneAndPopulateRepeatingSectionContentControls) sample project.
 
-Usually, the content controls are mostly used by the editor controls like MS Word that allow the end user fill the required data. In case you are planning to edit the document programmatically, the [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) functionality should be also considered as an appropriate solution.
+Content controls are primarily used by editor controls like MS Word that allow the end user to fill the required data. If you plan to edit the document programmatically, consider using the [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) functionality as an alternative solution.
 
 
 ## See Also
 
-- [Content Controls]({%slug wordsprocessing-model-content-controls%})
-- [Populate a Table with Data using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
-- [Generating a Word Document with Data Using MailMerge in RadWordsProcessing]({%slug generate-doc-template-and-populate-with-collection-data-mail-merge%})
-- [Mail Merge Functionality in RadWordsProcessing]({%slug radwordsprocessing-editing-mail-merge%})
+* [Content Controls]({%slug wordsprocessing-model-content-controls%})
+* [Populate a Table with Data Using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
+* [Generating a Word Document with Data Using MailMerge in RadWordsProcessing]({%slug generate-doc-template-and-populate-with-collection-data-mail-merge%})
+* [Mail Merge Functionality in RadWordsProcessing]({%slug radwordsprocessing-editing-mail-merge%})

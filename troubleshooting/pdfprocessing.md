@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting PdfProcessing
 page_title: Troubleshooting PdfProcessing
-description: Troubleshooting PdfProcessing
+description: Learn how to resolve common PdfProcessing issues such as InvalidOperationException for image export in .NET Standard environments.
 slug: troubleshooting-pdfprocessing
 tags: troubleshooting, radpdfprocessing, pdf, image, telerik, exceptions, resolver, converter
 published: True
@@ -12,17 +12,17 @@ position: 1
 
 This article provides solutions to common issues that you may observe when working with the [PdfProcessing]({%slug radpdfprocessing-overview%}) library.
 
-## Issue: "InvalidOperationException: 'FixedExtensibilityManager.ImagePropertiesResolver and FixedExtensibilityManager.JpegImageConverter cannot be both null.
+## Issue: InvalidOperationException for ImagePropertiesResolver and JpegImageConverter
 
-You get this error when exporting PDF files containing [unsupported images]({%slug radpdfprocessing-cross-platform-images%}) in a [.NET Standard]({%slug distribute-telerik-document-processing-libraries-net-versions%}) environment.
+You get this error when exporting PDF files that contain [unsupported images]({%slug radpdfprocessing-cross-platform-images%}) in a [.NET Standard]({%slug distribute-telerik-document-processing-libraries-net-versions%}) environment.
 
-The **.NET Standard** version of the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library has limitations in handling image conversion and quality scaling compared to the **.NET Framework** version. Unlike the **.NET Framework**, which includes built-in image processing capabilities, **.NET Standard** requires manual configuration to process non-JPEG/JPEG2000 images or to adjust image quality. Without the required configurations, attempting to export unsupported images or quality levels will cause an **InvalidOperationException**.
+The **.NET Standard** version of the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library has limitations in image conversion and quality scaling compared to the **.NET Framework** version. Unlike **.NET Framework**, which includes built-in image processing capabilities, **.NET Standard** requires manual configuration to process non-JPEG/JPEG2000 images or to adjust image quality. Without the required configurations, exporting unsupported images or quality levels causes an `InvalidOperationException`.
 
 ### Solution
 
-In order to successfully export images different than **Jpeg** and **Jpeg2000** and **ImageQuality** different than **High** you will need to reference the **Telerik.Documents.ImageUtils** NuGet package in your project. The library also exposes the **FixedExtensibilityManager** class with two specific extensibility points: [ImagePropertiesResolver]({%slug radpdfprocessing-cross-platform-images%}#imagepropertiesresolver) and [JpegImageConverter]({%slug radpdfprocessing-cross-platform-images%}#jpegimageconverter). You would have to set the [ImagePropertiesResolver]({%slug radpdfprocessing-cross-platform-images%}#imagepropertiesresolver)/[JpegImageConverter]({%slug radpdfprocessing-cross-platform-images%}#jpegimageconverter) property or create a custom one inheriting the **ImagePropertiesResolverBase**/**JpegImageConverterBase** class.
+To successfully export images other than **Jpeg** and **Jpeg2000** or with `ImageQuality` other than **High**, reference the `Telerik.Documents.ImageUtils` NuGet package in your project. The library also exposes the `FixedExtensibilityManager` class with two specific extensibility points: [ImagePropertiesResolver]({%slug radpdfprocessing-cross-platform-images%}#imagepropertiesresolver) and [JpegImageConverter]({%slug radpdfprocessing-cross-platform-images%}#jpegimageconverter). You must set the [ImagePropertiesResolver]({%slug radpdfprocessing-cross-platform-images%}#imagepropertiesresolver)/[JpegImageConverter]({%slug radpdfprocessing-cross-platform-images%}#jpegimageconverter) property or create a custom implementation that inherits the `ImagePropertiesResolverBase`/`JpegImageConverterBase` class.
 
-#### **Example 1: Set the default implementation of the ImagePropertiesResolver class**
+#### **Example 1: Set the Default Implementation of the ImagePropertiesResolver Class**
 
 ```csharp
 
@@ -30,7 +30,7 @@ In order to successfully export images different than **Jpeg** and **Jpeg2000** 
         Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.ImagePropertiesResolver = defaultImagePropertiesResolver;
 ```
 
-#### **Example 2: Set the default implementation of the JpegImageConverter class**
+#### **Example 2: Set the Default Implementation of the JpegImageConverter Class**
     
 ```csharp
 
@@ -38,7 +38,7 @@ In order to successfully export images different than **Jpeg** and **Jpeg2000** 
        Telerik.Windows.Documents.Extensibility.FixedExtensibilityManager.JpegImageConverter = defaultJpegImageConverter;
 ```
 
-#### **Example 3: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
+#### **Example 3: Create a Custom Implementation That Inherits the JpegImageConverterBase Abstract Class**
 
 ```csharp
 

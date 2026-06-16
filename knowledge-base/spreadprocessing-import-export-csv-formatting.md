@@ -35,14 +35,16 @@ Example result data (*a semicolon (";") as the delimiter, a comma (",") as the d
 
 ![Output CSV](images/import-export-csv-formatting-output.png) 
 
-To import and process the input file correctly you must:
-* Set the **Delimiter** property of the [CsvFormatProvider Settings]({%slug radspreadprocessing-formats-and-conversion-csv-settings%}) to a comma (",")
-* Set the [culture]({%slug radspreadprocessing-features-setting-the-culture%}) to English ("en-EN"), since its default decimal separator is a dot (".") and must match the file decimal separator
+To import and process the input file correctly, you must:
+
+* Set the `Delimiter` property of the [CsvFormatProvider Settings]({%slug radspreadprocessing-formats-and-conversion-csv-settings%}) to a comma (",")
+* Set the [culture]({%slug radspreadprocessing-features-setting-the-culture%}) to English ("en-EN"), because its default decimal separator is a dot (".") and must match the file decimal separator
 
 Once the document is imported and parsed, you can:
-* Switch to a culture that has a comma (",") as its default decimal separator (e.g German - "de-DE")
+
+* Switch to a culture that has a comma (",") as its default decimal separator (for example, German - "de-DE")
 * Set a new [Number Format]({%slug radspreadprocessing-features-number-formats%}) with a comma ("#,##") to the number values
-* Set the **Delimiter** property of the [CsvFormatProvider Settings]({%slug radspreadprocessing-formats-and-conversion-csv-settings%}) to a semicolon (";")
+* Set the `Delimiter` property of the [CsvFormatProvider Settings]({%slug radspreadprocessing-formats-and-conversion-csv-settings%}) to a semicolon (";")
 
 ### Full Code Example
 

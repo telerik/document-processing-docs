@@ -1,8 +1,8 @@
 ---
 title: Performing Nested MailMerge with Multiple Levels in RadWordsProcessing
-description: Learn how to implement nested MailMerge operations with multiple levels of data, such as handling lists within lists, in RadWordsProcessing.
+description: Learn how to perform nested MailMerge operations with multiple levels of data such as lists within lists in RadWordsProcessing.
 type: how-to
-page_title: How to Handle Nested MailMerge with Multi-Level Data in RadWordsProcessing
+page_title: Performing Nested MailMerge with Multiple Levels in RadWordsProcessing
 slug: nested-mailmerge-radwordsprocessing
 tags: radwordsprocessing, mailmerge, nested, docx, word, document, processing, template
 res_type: kb
@@ -11,28 +11,30 @@ ticketid: 1668943
 
 ## Environment
 
-| Version | Product | Author | 
-| --- | --- | ---- | 
-| 2024.3.806| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| Version | Product | Author |
+| --- | --- | --- |
+| 2024.3.806 | RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)|
 
 ## Description
 
-Learn how to perform a [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) operation with multiple levels of nested data, such as a list within a list (e.g., `Incident` > `Person` > `Phones`) in [RadWordsProcessing]({%slug radwordsprocessing-overview%}).
+This article shows how to perform a [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) operation with multiple levels of nested data, such as a list within a list (for example, `Incident` > `Person` > `Phones`) in [RadWordsProcessing]({%slug radwordsprocessing-overview%}).
 
 ## Solution
 
-To achieve a nested [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) operation with multiple levels of data, follow the steps below:
+To perform a nested [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) operation with multiple levels of data, follow these steps:
 
-1. Prepare your data model to reflect the nested structure. In this case, the model includes `Incident`, `Person`, and `Phone` classes.
+1. Prepare your data model to reflect the nested structure. In this case, the model includes the `Incident`, `Person`, and `Phone` classes.
 
 2. Use the [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) method to merge the data with the document template. Ensure your document template has the appropriate merge fields defined for each level of data.
 
 3. Use special merge fields (`TableStart`, `TableEnd`, `RangeStart`, and `RangeEnd`) to denote the beginning and end of each nested collection.
 
-Here is an example demonstrating how to set up your data model and perform the nested MailMerge:
+The following example shows how to set up your data model and perform the nested MailMerge:
+
+**Example 1: Set Up Nested Data Model and Perform MailMerge**
 
 ```csharp
-// Define your data models
+// Define your data models.
 public class Incident
 {
     public string ReportNumber { get; set; }
@@ -51,7 +53,7 @@ public class Phone
     public string PhoneNumber { get; set; }
 }
 
-// Preparing the data
+// Prepare the data.
 var mergeData = new List<Incident>{
     new Incident{
         ReportNumber = "INC-2024-001",
@@ -64,35 +66,35 @@ var mergeData = new List<Incident>{
                     new Phone{ PhoneNumber = "310-555-0102" }
                 }
             },
-            // Add more Person instances as needed
+            // Add more Person instances as needed.
         }
     }
 };
 
-// Perform the MailMerge operation
+// Perform the MailMerge operation.
 RadFlowDocument document = new RadFlowDocument();
-// Assume 'provider' is initialized and points to the appropriate document format provider
+// Assume 'provider' is initialized and points to the appropriate document format provider.
 var mailMergeResult = document.MailMerge(mergeData);
 ```
 
 In your document template, ensure you have the corresponding merge fields:
 
-- For the start and end of the `People` list: `TableStart:People` and `TableEnd:People`.
-- For the start and end of the `Phones` list within each `Person`: `RangeStart:Phones` and `RangeEnd:Phones`.
-- For merging individual property values, use merge fields named after the properties, such as `FirstName`, `LastName`, and `PhoneNumber`.
+* For the start and end of the `People` list: `TableStart:People` and `TableEnd:People`.
+* For the start and end of the `Phones` list within each `Person`: `RangeStart:Phones` and `RangeEnd:Phones`.
+* For merging individual property values, use merge fields named after the properties, such as `FirstName`, `LastName`, and `PhoneNumber`.
 
-![Nested mail merge template](images/nested-mail-merge-template.png)  
+![Nested mail merge template](images/nested-mail-merge-template.png)
 
-### Generating the Necessary Table Structure in the Document
+### Generating the Table Structure in the Document
 
-When dealing with nested collections, it's crucial to dynamically create table structures that can accommodate the varying lengths of these collections.
+When you work with nested collections, you must dynamically create table structures that accommodate the varying lengths of these collections.
 
-By following these steps and utilizing the provided code snippets, you can effectively perform nested MailMerge operations with multiple levels of data in RadWordsProcessing.
+The following image shows the result of the nested MailMerge operation:
 
-![Nested mail merge](images/nested-mail-merge-result.png) 
+![Nested mail merge result](images/nested-mail-merge-result.png)
 
 ## See Also
 
-- [MailMerge]({%slug radwordsprocessing-editing-mail-merge%})
-- [Generating a Word Document with Data Using MailMerge in RadWordsProcessing]({%slug generate-doc-template-and-populate-with-collection-data-mail-merge%})
-- [Populate a Table with Data using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
+* [MailMerge]({%slug radwordsprocessing-editing-mail-merge%})
+* [Generating a Word Document with Data Using MailMerge in RadWordsProcessing]({%slug generate-doc-template-and-populate-with-collection-data-mail-merge%})
+* [Populate a Table with Data Using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})

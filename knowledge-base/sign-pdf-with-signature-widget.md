@@ -1,6 +1,6 @@
 ---
 title: Signing a PDF Document with a SignatureWidget
-description: This article provides instructions on how to digitally sign an existing PDF document using RadPdfProcessing.
+description: Learn how to digitally sign an existing PDF document that contains a SignatureField by using the RadPdfProcessing library.
 type: how-to
 page_title: Signing a PDF Document with a SignatureWidget
 slug: sign-pdf-with-signature-widget
@@ -18,11 +18,11 @@ res_type: kb
 
 This article shows how to digitally sign an existing PDF document that already contains a [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}).
 
- ![Unsigned PDF](images/sign-pdf-with-signature-widget01.png) 
+ ![Unsigned PDF](images/sign-pdf-with-signature-widget01.png)
 
 ## Solution
 
-Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the existing document and find the SignatureField to sign the document:
+Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the existing document and find the `SignatureField` to sign the document:
 
    ```csharp
    PdfFormatProvider provider = new PdfFormatProvider();
@@ -62,7 +62,7 @@ Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-p
    }
 
    ```
- ![Signed PDF](images/sign-pdf-with-signature-widget02.png) 
+ ![Signed PDF](images/sign-pdf-with-signature-widget02.png)
 
 ## See Also
 

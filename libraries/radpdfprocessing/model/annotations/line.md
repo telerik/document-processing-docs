@@ -8,36 +8,36 @@ published: True
 position: 5
 ---
 
-# Line Annotation  
+# Line Annotation
 
 A **Line annotation** displays a single straight line on the page. When opened, it displays a pop-up window containing the text of the associated note.
 
-The **LineAnnotation** class is a derivative of the **MarkupAnnotation** (descendent of **ContentAnnotation**) and it exposes the following properties:
+The `LineAnnotation` class is a derivative of `MarkupAnnotation` (descendent of `ContentAnnotation`) and it exposes the following properties:
 
-|Property|Description|
+| Property | Description |
 |---|---|
-|**Start**|Gets or sets the starting point of the annotation.|
-|**End**|Gets or sets the ending point of the annotation.|
-|**StartLineEndingType**|Gets or sets the line ending type for the start of the line.|
-|**EndLineEndingType**|Gets or sets the line ending type for the end of the line.|
-|**Opacity**|Gets or sets the opacity of the annotation.|
-|**Contents**|Gets or sets the text that shall be displayed for the annotation.|
-|**Color**|Gets or sets the color of the annotation.|
-|**Content**|Gets the source defining the visual content of the annotation. This content is with bigger priority compared to the annotation appearance characteristics and text properties and it is visualized by default when opening the exported document in some PDF viewer.|
+| `Start` | Gets or sets the starting point of the annotation. |
+| `End` | Gets or sets the ending point of the annotation. |
+| `StartLineEndingType` | Gets or sets the line ending type for the start of the line. |
+| `EndLineEndingType` | Gets or sets the line ending type for the end of the line. |
+| `Opacity` | Gets or sets the opacity of the annotation. |
+| `Contents` | Gets or sets the text displayed for the annotation. |
+| `Color` | Gets or sets the color of the annotation. |
+| `Content` | Gets the source defining the visual content of the annotation. This content has higher priority compared to the annotation appearance characteristics and text properties and is visualized by default when opening the exported document in a PDF viewer. |
 
-### Creating a LineAnnotation
+## Creating a LineAnnotation
 
 <snippet id='pdf-create-line-annotation'/>
 
-![Create LineAnnotation](images/pdf-processing-create-lineannotation.png)  
+![Create LineAnnotation](images/pdf-processing-create-lineannotation.png)
 
-### Creating a LineAnnotation with FixedContentEditor
+## Creating a LineAnnotation with FixedContentEditor
 
-The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) offers the public **DrawLineAnnotation** method which creates a new __LineAnnotation__ with starting point the current point of the editor and end point the current point of the editor plus the given distances.
+The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) offers the public `DrawLineAnnotation` method which creates a new `LineAnnotation` with a starting point at the current position of the editor and an end point at the current position of the editor plus the given distances.
 
 <snippet id='pdf-fixed-editor-create-line-annotation'/>
 
-![Create LineAnnotation with FixedContentEditor](images/pdf-processing-create-lineannotation-with-fixedcontenteditor.png)   
+![Create LineAnnotation with FixedContentEditor](images/pdf-processing-create-lineannotation-with-fixedcontenteditor.png)
 
 ## See Also
 

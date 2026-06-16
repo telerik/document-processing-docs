@@ -10,17 +10,17 @@ position: 2
 
 # License Agreement
 
-Telerik Document Processing is licensed under the conditions of the product you've obtained the libraries with. You can find the End-User License Agreements for the products on the following pages:
+Telerik Document Processing is licensed under the conditions of the product you have obtained the libraries with. You can find the End-User License Agreements for the products on the following pages:
 
-__UI for ASP.NET AJAX__ : [http://www.telerik.com/purchase/license-agreement/aspnet-ajax](http://www.telerik.com/purchase/license-agreement/aspnet-ajax)
+**UI for ASP.NET AJAX** : [https://www.telerik.com/purchase/license-agreement/aspnet-ajax](https://www.telerik.com/purchase/license-agreement/aspnet-ajax)
 
-__UI for WPF__: [http://www.telerik.com/purchase/license-agreement/wpf-dlw-s](http://www.telerik.com/purchase/license-agreement/wpf-dlw-s)
+**UI for WPF**: [https://www.telerik.com/purchase/license-agreement/wpf-dlw-s](https://www.telerik.com/purchase/license-agreement/wpf-dlw-s)
 
-__UI for WinForms__: [http://www.telerik.com/purchase/license-agreement/winforms-dlw-s](http://www.telerik.com/purchase/license-agreement/winforms-dlw-s)
+**UI for WinForms**: [https://www.telerik.com/purchase/license-agreement/winforms-dlw-s](https://www.telerik.com/purchase/license-agreement/winforms-dlw-s)
 
-__UI for Silverlight__: [http://www.telerik.com/purchase/license-agreement/silverlight-dlw-s](http://www.telerik.com/purchase/license-agreement/silverlight-dlw-s)
+**UI for Silverlight**: [https://www.telerik.com/purchase/license-agreement/silverlight-dlw-s](https://www.telerik.com/purchase/license-agreement/silverlight-dlw-s)
 
-__UI for WinUI__: [https://www.telerik.com/purchase/license-agreement/winui](https://www.telerik.com/purchase/license-agreement/winui?_ga=2.104003584.145105266.1615285037-1571667030.1570715481)
+**UI for WinUI**: [https://www.telerik.com/purchase/license-agreement/winui](https://www.telerik.com/purchase/license-agreement/winui)
 
 ## See Also
 

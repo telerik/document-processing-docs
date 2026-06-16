@@ -9,9 +9,9 @@ position: 4
 platforms: ajax, mvc, wpf, winforms
 ---
 
-# Working with Series
+# Series
 
-A series is a set of data - a line or a set of columns, for example. All data plotted on a chart comes from the series object. 
+A series is a set of data—a line or a set of columns, for example. All data plotted on a chart comes from the series object.
 
 ## Series Classes
 
@@ -21,7 +21,7 @@ There are several base classes used to unite the different kinds of series and v
 
 ### SeriesBase Class
 
-The SeriesBase class is the base class for all series in RadSpreadProcessing. It exposes the following members:
+The `SeriesBase` class is the base class for all series in RadSpreadProcessing. It exposes the following members:
 
 | Member | Description |
 |---|---|
@@ -31,7 +31,7 @@ The SeriesBase class is the base class for all series in RadSpreadProcessing. It
 | `Fill` | Represents the fill of the series. You can use the [SolidFill](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.model.drawing.theming.solidfill) type to set the series color. |
 | `Clone()` | Creates a deep copy of the object and returns the cloning. |
 
-The differnt types of charts support different types of series. To meet this need, the base class is inherited by the CategoriesSeriesBase and PointSerierBase base classes representing the different series types.
+The different types of charts support different types of series. To meet this need, the base class is inherited by the `CategoriesSeriesBase` and `PointSeriesBase` base classes representing the different series types.
 
 ### CategorySeriesBase
 
@@ -43,12 +43,12 @@ A base class for all series that use Values and Categories.
 | `Categories` | Gets or sets the data for the categories of the series. |
 
 
-The CategorySeriesBase is inherited by the following classes, which represent concrete different types of series:
+The `CategorySeriesBase` is inherited by the following classes, which represent concrete different types of series:
 
-* **AreaSeries**
-* **LineSeries**
-* **BarSeries**
-* **PieSeries**
+* `AreaSeries`
+* `LineSeries`
+* `BarSeries`
+* `PieSeries`
 
 ### PointSeriesBase
 
@@ -59,15 +59,15 @@ A base class for all series that use X values and Y values.
 | `XValues` | Gets or sets the data for the X values of the series. |
 | `YValues` | Gets or sets the data for the Y values of the series. |
 
-PointSeriesBase is inherited by the following classes, which represent concrete different types of series:
+`PointSeriesBase` is inherited by the following classes, which represent concrete different types of series:
 
-* **ScatterSeries**
-* **BubbleSeries**
+* `ScatterSeries`
+* `BubbleSeries`
 
 
 ## Add and Remove Series
 
-The adding of the new series is done through the **SeriesCollection** `Add()` method overloads and removing is done through the `Remove()` method. The first overload throws an exception when the series parameter passed is not of the correct type and the other `Add()` overloads create a series of the appropriate type. The overloads of the base **SeriesCollection** type are listed below:
+Add new series through the `SeriesCollection` `Add()` method overloads and remove series through the `Remove()` method. The first overload throws an exception when the series parameter passed is not of the correct type, and the other `Add()` overloads create a series of the appropriate type. The overloads of the base `SeriesCollection` type are listed in the following table:
 
 | Overload | Description |
 |---|---|
@@ -75,51 +75,53 @@ The adding of the new series is done through the **SeriesCollection** `Add()` me
 | `Add()` | Adds a new empty series. Returns a `SeriesBase` instance. |
 | `Remove(SeriesBase series)` | Removes the specified series from the collection. |
 
-To better illustrate how you can change the series of a chart, let's take the sample data and chart from **Figure 1**.
+To better illustrate how you can change the series of a chart, consider the sample data and chart from **Figure 1**.
 
-#### Figure 1: Initial state of a chart
-![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_1.png)
+**Figure 1: Initial State of a Chart**
 
-#### Example 1: Add and remove series from a chart
+![Initial state of a chart](images/SpreadProcessing-Features-Charts-WorkingWithSeries_1.png)
+
+**Example 1: Add and Remove Series from a Chart**
 
 <snippet id='codeblock-cln'/>
 
-#### Figure 2: Modified series of a chart
-![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_2.png)
+**Figure 2: Modified Series of a Chart**
 
-The same methods for adding and removing series can be accessed through the concrete SeriesCollection of the concrete SeriesGroup and they will return concrete Series object. 
+![Modified series of a chart](images/SpreadProcessing-Features-Charts-WorkingWithSeries_2.png)
 
-#### Example 2: Add series to a chart using concrete SeriesGroup object
+The same methods for adding and removing series can be accessed through the concrete `SeriesCollection` of the concrete `SeriesGroup`, and they return concrete Series objects.
+
+**Example 2: Add Series to a Chart Using Concrete SeriesGroup Object**
 
 <snippet id='codeblock-clo'/>
 
-##	Iterating the Series of a Chart
+## Iterating the Series of a Chart
 
 
-You can access the **Series** property of the **SeriesGroup** object contained in the **SeriesGroups** property of the **Chart** object and iterate the **SeriesBase** objects in it. 
+You can access the `Series` property of the `SeriesGroup` object contained in the `SeriesGroups` property of the `Chart` object and iterate the `SeriesBase` objects in it.
 
-#### Example 3: Iterate series
+**Example 3: Iterate Series**
 
 <snippet id='codeblock-clp'/>
 
 ## Making Changes to the Series
 
-You can modify the properties of the base class for all series - SeriesBase.
+You can modify the properties of the base class for all series—`SeriesBase`.
 
-#### Example 4: Change series
+**Example 4: Change Series**
 
 <snippet id='codeblock-clq'/>
 
 
 ## SeriesGroup Class and Properties Related to Specific Series Types
 
-There are properties defined on SeriesGroup level. The SeriesGroup base class represents a group of series and is inherited by the classes holding specific types of series. In addition to the **SeriesType** and **Series** properties, which give you access to the type of the series and the series collection respectively, there are properties implemented in the inheritors. The additional properties are specific for the type of series and give you control over the appearance of all the series in the group.
+There are properties defined on `SeriesGroup` level. The `SeriesGroup` base class represents a group of series and is inherited by the classes holding specific types of series. In addition to the `SeriesType` and `Series` properties, which give you access to the type of the series and the series collection respectively, there are properties implemented in the inheritors. The additional properties are specific for the type of series and give you control over the appearance of all the series in the group.
 
 ### BarSeriesGroup
 
 | Property | Type | Description |
 |---|---|---|
-| `BarDirection` | `BarDirection` | Determines the orientation of the bar chart. `BarDirection.Bar` results in a horizontal bar chart; `BarDirection.Column` results in a vertical column chart. |
+| `BarDirection` | `BarDirection` | Determines the orientation of the bar chart. `BarDirection.Bar` results in a horizontal bar chart. `BarDirection.Column` results in a vertical column chart. |
 
 ### DoughnutSeriesGroup
 
@@ -151,7 +153,7 @@ These properties enable you to control the options for each of the series indepe
 |---|---|---|
 | `IsSmooth` | `bool` | Determines whether the line of the series is smooth. |
 | `Marker` | `Marker` | Represents the marker of the series. |
-| `ScatterStyle` | `ScatterStyle` | Determines the style of the scatter series. See the table below for possible values. |
+| `ScatterStyle` | `ScatterStyle` | Determines the style of the scatter series. See the following table for possible values. |
 
 The `ScatterStyle` enumeration supports the following values:
 
@@ -164,37 +166,41 @@ The `ScatterStyle` enumeration supports the following values:
 | `Smooth` | Points on the scatter chart are connected with smoothed lines but markers are not drawn. |
 | `SmoothMarker` | Points on the scatter chart are connected with smoothed lines and markers are drawn. |
 
-#### **Example 5: Customize the appearance of ScatterSeries**
+**Example 5: Customize the Appearance of ScatterSeries**
 
 <snippet id='codeblock-clr'/>
 
 
 ## Series Grouping
 
-Some series groups (Bar, Line and Area) implement the **ISupportGrouping** interface. It defines the **Grouping** property which is of type **SeriesGrouping** enum. The enum contains the following members: **SeriesGrouping.Standard**, **SeriesGrouping.Stacked** and **SeriesGrouping.PercentStacked**. For the Bar chart, the Standard grouping results in a clustered chart. See the following examples for what the results of different grouping looks like.
+Some series groups (Bar, Line, and Area) implement the `ISupportGrouping` interface. It defines the `Grouping` property which is of type `SeriesGrouping` enum. The enum contains the following members: `SeriesGrouping.Standard`, `SeriesGrouping.Stacked`, and `SeriesGrouping.PercentStacked`. For the Bar chart, the Standard grouping results in a clustered chart. See the following examples for what the results of different grouping look like.
 
-#### Figure 3: Sample data
-![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_3.png)
+**Figure 3: Sample Data**
 
-#### Example 6: Creating standard/clustered bar chart with vertical orientation
+![Sample data for series grouping](images/SpreadProcessing-Features-Charts-WorkingWithSeries_3.png)
+
+**Example 6: Creating Standard/Clustered Bar Chart with Vertical Orientation**
 
 <snippet id='codeblock-cls'/>
 
-#### Figure 4: Standard/clustered bar chart with vertical orientation
-![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_4.png)
+**Figure 4: Standard/Clustered Bar Chart with Vertical Orientation**
 
-#### Example 7: Creating stacked bar chart with vertical orientation
+![Standard clustered bar chart with vertical orientation](images/SpreadProcessing-Features-Charts-WorkingWithSeries_4.png)
+
+**Example 7: Creating Stacked Bar Chart with Vertical Orientation**
 
 <snippet id='codeblock-clt'/>
 
-#### Figure 5: Stacked bar chart with vertical orientation
-![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_5.png)
+**Figure 5: Stacked Bar Chart with Vertical Orientation**
+
+![Stacked bar chart with vertical orientation](images/SpreadProcessing-Features-Charts-WorkingWithSeries_5.png)
 
 
-#### Example 8: Creating percent-stacked bar chart with vertical orientation
+**Example 8: Creating Percent-Stacked Bar Chart with Vertical Orientation**
 
 <snippet id='codeblock-clu'/>
 
-#### Figure 6: Percent-stacked bar chart with vertical orientation
-![](images/SpreadProcessing-Features-Charts-WorkingWithSeries_6.png)
+**Figure 6: Percent-Stacked Bar Chart with Vertical Orientation**
+
+![Percent-stacked bar chart with vertical orientation](images/SpreadProcessing-Features-Charts-WorkingWithSeries_6.png)
 

@@ -14,37 +14,37 @@ position: 7
 |----|----|
 |Related Feature:|[Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})|
 
-**RadPdfProcessing** provides support for a **Tagged PDF**. It is a stylized use of PDF which defines a set of standard structure types and attributes that allow page content (text, graphics, and images) to be extracted and reused for other purposes. It is intended to be used by tools that perform operations like:
+**RadPdfProcessing** provides support for Tagged PDF documents. A Tagged PDF is a stylized use of PDF that defines a set of standard structure types and attributes. These types allow page content (text, graphics, and images) to be extracted and reused for other purposes. Tagged PDF is intended to be used by tools that perform operations such as:
 
 * Making content accessible to users with visual impairments
 * Simple extraction of text and graphics
-* Automatic reflow of text and associated graphics to fit a page of a different size than was assumed for the original layout 
-* Processing text for such purposes as searching, indexing, and spell-checking 
+* Automatic reflow of text and associated graphics to fit a page of a different size than assumed for the original layout
+* Processing text for purposes such as searching, indexing, and spell-checking
 * Conversion to other common file formats with document structure and basic styling information preserved
 
 ## Tagging Strategy
 
-Represents the strategy for handling tagging in PDF documents. The available options are:
+The tagging strategy represents how tagging is handled in PDF documents. The available options are:
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
-* **UseExisting** - Specifies whether the document should not be tagged on export automatically and the existing StructureTree will be used. The *default* option.
+* **UseExisting**—Specifies that the document is not tagged on export automatically and the existing `StructureTree` is used. This is the *default* option.
 
-* **Build** - Specifies whether the document should be automatically tagged on export and a new StructureTree should be created.
+* **Build**—Specifies that the document is automatically tagged on export and a new `StructureTree` is created.
 
 ## Tagging Document Elements
 
-The following sections demonstrate how to tag the different elements of a RadFixedDocument:
+The following sections demonstrate how to tag the different elements of a `RadFixedDocument`:
 
 ### Tagging a TextFragment
 
 <snippet id='libraries-pdf-tagged-pdf-text-fragment'/>
 
-### Tagging an Annotation 
+### Tagging an Annotation
 
 <snippet id='libraries-pdf-tagged-pdf-annotation'/>
 
-### Tagging a Link Annotation 
+### Tagging a Link Annotation
 
 <snippet id='libraries-pdf-tag-link-annotation'/>
 
@@ -60,7 +60,7 @@ The following sections demonstrate how to tag the different elements of a RadFix
 
 <snippet id='libraries-pdf-tagged-pdf-advanced'/>
 
-### Auto-Tagging 
+### Auto-Tagging
 
 <snippet id='libraries-pdf-tagged-pdf-auto-tagging'/>
 
@@ -68,11 +68,11 @@ The following sections demonstrate how to tag the different elements of a RadFix
 
 <snippet id='libraries-pdf-tagged-pdf-form-field'/>
 
-### Tagging a FormField using FixedContentEditor
+### Tagging a FormField with FixedContentEditor
 
 <snippet id='libraries-pdf-tagged-pdf-form-field-with-fixed-content-editor'/>
 
-### Auto-Tagging a FormField using FixedContentEditor
+### Auto-Tagging a FormField with FixedContentEditor
 
 <snippet id='libraries-pdf-tagged-pdf-form-field-with-fixed-content-editor-auto-tagging'/>
 
@@ -90,8 +90,8 @@ The following sections demonstrate how to tag the different elements of a RadFix
 
 ## See Also
 
- * [Marked Content]({%slug radpdfprocessing-model-marked-content%})
- * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
- * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
- * [StructureTree]({%slug radpdfprocessing-model-structure-tree%})
- * [Accessibility Support]({%slug create-accessible-pdf-documents%})
+* [Marked Content]({%slug radpdfprocessing-model-marked-content%})
+* [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [StructureTree]({%slug radpdfprocessing-model-structure-tree%})
+* [Accessibility Support]({%slug create-accessible-pdf-documents%})

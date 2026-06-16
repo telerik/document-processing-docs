@@ -71,7 +71,7 @@ Use a secret pipeline variable when the value fits inside the supported size lim
 >
 > Always consider the variable-size limit. If you use a [Variable Group](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/variable-groups?view=azure-pipelines-ui%2Cyaml), the license key will usually exceed the character limit for variable values. To store a long value in a Variable Group, [link the value from Azure Key Vault](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/link-variable-groups-to-key-vaults?view=azure-devops). If you cannot use Key Vault, use a normal secret pipeline variable or the [secure-files approach](#using-secure-files-on-azure-devops).
 
-### Using Secure Files on Azure DevOps
+## Using Secure Files on Azure DevOps
 
 [Secure files](https://learn.microsoft.com/en-us/azure/devops/pipelines/library/secure-files?view=azure-devops) are an alternative approach for sharing the license key file in Azure Pipelines that does not have the size limitations of environment variables.
 

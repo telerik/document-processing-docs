@@ -22,8 +22,8 @@ Learn how to read spreadsheet documents that contain [merged cells]({%slug radsp
 
 ## Solution
 
-With the help of [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) it is easy to [identify merged cells](https://docs.telerik.com/devtools/document-processing/libraries/radspreadprocessing/features/merge-unmerge-cells#how-to-check-if-a-cell-is-merged) and extract their values no matter which cell of the merged region is accessed. 
-With the following example we will iterate through the cells in the used range of the worksheet. If a cell is part of a merged region, obtain the value from the top-left cell of the merged region.
+[RadSpreadProcessing]({%slug radspreadprocessing-overview%}) allows you to [identify merged cells]({%slug radspreadprocessing-features-merge-unmerge-cells%}) and extract their values no matter which cell of the merged region is accessed. 
+The following example iterates through the cells in the used range of the worksheet. If a cell is part of a merged region, the code obtains the value from the top-left cell of the merged region.
 
 ```csharp
             string fileName = "Sample.xls";
@@ -88,4 +88,4 @@ This approach ensures that you correctly read the values of merged cells in a wo
 
 ## See Also
 
-- [Merge Cells in SpreadProcessing]({%slug radspreadprocessing-features-merge-unmerge-cells%})
+* [Merge Cells in SpreadProcessing]({%slug radspreadprocessing-features-merge-unmerge-cells%})

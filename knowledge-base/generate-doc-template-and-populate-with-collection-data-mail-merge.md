@@ -1,6 +1,6 @@
 ---
 title: Generating a Word Document with Data Using MailMerge in RadWordsProcessing
-description: Learn how to create a Word document template with a collection of data using the Mail Merge functionality in RadWordsProcessing.
+description: Learn how to create a Word document template and fill it with a collection of data using the Mail Merge functionality in RadWordsProcessing.
 type: how-to
 page_title: How to Generate a Word Document and Populate it with Data Using MailMerge in RadWordsProcessing
 slug: generate-doc-template-and-populate-with-collection-data-mail-merge
@@ -18,19 +18,19 @@ ticketid: 1651971
 
 ## Description
 
-A common requirement when working with Word documents is to generate and populate a document with data/collection of data, such as a list of products, without rebuilding the application. This operation can be achieved using the Mail Merge functionality provided by RadWordsProcessing. 
+A common requirement when you work with Word documents is to generate and fill a document with a collection of data, such as a list of products, without rebuilding the application. You can achieve this operation by using the Mail Merge functionality provided by `RadWordsProcessing`. 
 
 ## Solution
 
-To generate a Word document and populate it with a collection of data using RadWordsProcessing, follow these steps:
+To generate a Word document and fill it with a collection of data using `RadWordsProcessing`, follow these steps:
 
-1. **Prepare the Template**: Ensure that the Word document template contains the appropriate merge fields for the data that will be populated. For nested collections, use [nested merge fields]({%slug radwordsprocessing-editing-mail-merge%}).
+1. **Prepare the Template**: Verify that the Word document template contains the appropriate merge fields for the data that will be filled. For nested collections, use [nested merge fields]({%slug radwordsprocessing-editing-mail-merge%}).
 
-2. **Create a Data Source**: Prepare the data source that will be used to populate the template. This can include simple properties or nested collections.
+2. **Create a Data Source**: Prepare the data source that will fill the template. This can include simple properties or nested collections.
 
-3. **Perform the Mail Merge Operation**: Use the Mail Merge functionality of RadWordsProcessing to populate the template with data from your data source.
+3. **Perform the Mail Merge Operation**: Use the Mail Merge functionality of `RadWordsProcessing` to fill the template with data from your data source.
 
-4. **Save and Open the Result Document**: Save the populated document to a file and, if needed, open it for review or further processing.
+4. **Save and Open the Result Document**: Save the filled document to a file and, if needed, open it for review or further processing.
 
 The following code snippet demonstrates these steps, including the setup for a nested Mail Merge operation:
 
@@ -155,12 +155,11 @@ static void Main(string[] args)
             public decimal Amount { get; set; }
         }
 ```
+
 ![MailMerge with Collections](images/words-processing-mailmerge-collections.jpg)  
 
 ## See Also
 
-- [Populate a Table with Data using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
-- [RadWordsProcessing]({%slug radwordsprocessing-overview%})
-- [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
-
-
+* [Populate a Table with Data using Nested Mail Merge Functionality]({%slug populate-table-data-mail-merge%})
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%})
+* [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})

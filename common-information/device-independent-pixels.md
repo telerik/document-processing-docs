@@ -11,50 +11,50 @@ tags: dip, pixels, measurement, unit, radspreadprocessing, radpdfprocessing, rad
 
 [Device Independent Pixels](https://en.wikipedia.org/wiki/Device-independent_pixel) (DIPs) is a unit type used in the [Document Processing libraries]({%slug introduction%}) in the following cases:
 
-* [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) - setting the width of the columns and the height of the rows.
-* [RadPdfProcessing]({%slug radpdfprocessing-overview%}) - setting the FontSize of TextFragment or TextProperties.
-* [RadWordsProcessing]({%slug radwordsprocessing-overview%}) - setting the FontSize of a Run.
+* [RadSpreadProcessing]({%slug radspreadprocessing-overview%})&mdash;setting the width of the columns and the height of the rows.
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%})&mdash;setting the `FontSize` of `TextFragment` or `TextProperties`.
+* [RadWordsProcessing]({%slug radwordsprocessing-overview%})&mdash;setting the `FontSize` of a `Run`.
 
-### UnitHelper class
+## UnitHelper Class
 
-The [UnitHelper](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.utilities.unithelper) class provides a bunch of methods for converting from DIPs to other measurement units and vice versa (e.g. points, picas, centimeters, inches, etc.).
+The [UnitHelper](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.utilities.unithelper) class provides several methods for converting from DIPs to other measurement units and vice versa (for example, points, picas, centimeters, and inches).
 
-#### Convert From Dip to Unit:
+### Convert from DIP to Unit
 
 | Method | Description |
 |---|---|
-| `DipToPoint` | Converts dips to points. |
-| `DipToPointI` | Converts dips to points. |
-| `DipToPica` | Converts dips to picas. |
-| `DipToCm` | Converts dips to centimeters. |
-| `DipToMm` | Converts dips to millimeters. |
-| `DipToInch` | Converts dips to inches. |
-| `DipToTwip` | Converts dips to twips. |
-| `DipToEmu` | Converts dips to EMUs. |
-| `DipToTwipI` | Converts dips to twips. |
-| `DipToTwipF` | Converts dips to twips. |
+| `DipToPoint` | Converts DIPs to points. |
+| `DipToPointI` | Converts DIPs to points. |
+| `DipToPica` | Converts DIPs to picas. |
+| `DipToCm` | Converts DIPs to centimeters. |
+| `DipToMm` | Converts DIPs to millimeters. |
+| `DipToInch` | Converts DIPs to inches. |
+| `DipToTwip` | Converts DIPs to twips. |
+| `DipToEmu` | Converts DIPs to EMUs. |
+| `DipToTwipI` | Converts DIPs to twips. |
+| `DipToTwipF` | Converts DIPs to twips. |
 | `DipToUnit` | Converts DIPs to units. |
 
-#### Convert From Unit to Dip:
+### Convert from Unit to DIP
 
 | Method | Description |
 |---|---|
-| `PointToDip` | Converts points to dips. |
-| `PicaToDip` | Converts picas to dips. |
-| `EmuToDip` | Converts EMUs to dips. |
-| `CmToDip` | Converts centimeters to dips. |
-| `MmToDip` | Converts millimeters to dips. |
-| `InchToDip` | Converts inches to dips. |
-| `TwipToDip` | Converts twips to dips. |
-| `TwipToDipF` | Converts twips to dips. |
-| `TwipToDipI` | Converts twips to dips. |
-| `UnitToDip` | Converts Units to dips. |
+| `PointToDip` | Converts points to DIPs. |
+| `PicaToDip` | Converts picas to DIPs. |
+| `EmuToDip` | Converts EMUs to DIPs. |
+| `CmToDip` | Converts centimeters to DIPs. |
+| `MmToDip` | Converts millimeters to DIPs. |
+| `InchToDip` | Converts inches to DIPs. |
+| `TwipToDip` | Converts twips to DIPs. |
+| `TwipToDipF` | Converts twips to DIPs. |
+| `TwipToDipI` | Converts twips to DIPs. |
+| `UnitToDip` | Converts units to DIPs. |
 
-Most of the methods follow the same pattern for converting units:
+Most of the methods follow the same pattern for converting units.
 
-__Example 1__ shows how to obtain row height as DIPs and convert it to Points.    
+**Example 1** shows how to obtain row height as DIPs and convert it to points.
 
-#### __Example 1: Convert from DIP to Point__
+**Example 1: Convert from DIP to Point**
 
 ```csharp
 
@@ -62,11 +62,11 @@ __Example 1__ shows how to obtain row height as DIPs and convert it to Points.
 	var rowHeightInPoints = UnitHelper.DipToPoint(rowHeightInDips);
 ```
 
-except the **DipToUnit** and **UnitToDip** methods which accepts not only the units but the [UnitType](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.media.unittype) as well as a parameter:
+The `DipToUnit` and `UnitToDip` methods accept not only the units but also the [UnitType](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.media.unittype) as a parameter:
 
-__Example 2__ shows how to convert from Point to DIP and set the row height.    
+**Example 2** shows how to convert from point to DIP and set the row height.
 
-#### __Example 2: Convert from Point to DIP__
+**Example 2: Convert from Point to DIP**
 
 ```csharp
 

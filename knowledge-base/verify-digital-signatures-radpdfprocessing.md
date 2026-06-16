@@ -17,7 +17,7 @@ ticketid: 1659606
 
 ## Description
 
-When working with PDF documents, it might be necessary to verify whether the document is digitally signed. This includes checking if one or more digital signatures exist and determining the dates they were signed. This KB article provides guidance on achieving this with the RadPdfProcessing library.
+When working with PDF documents, you may need to verify whether the document is digitally signed. This includes checking if one or more digital signatures exist and determining the dates they were signed. This article shows how to achieve this with the RadPdfProcessing library.
 
 ## Solution
 
@@ -25,11 +25,11 @@ To verify digital signatures in a PDF document and extract their signing dates, 
 
 1. Use the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to import the PDF document into a `RadFixedDocument`.
 
-2. Check if the document is [digitally signed]({%slug radpdfprocessing-features-digital-signature%}) by searching for [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) objects in the [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}) of the document. 
+2. Check if the document is [digitally signed]({%slug radpdfprocessing-features-digital-signature%}) by searching for [`SignatureField`]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) objects in the [`AcroForm`]({%slug radpdfprocessing-model-interactive-forms-acroform %}) of the document. 
 
 3. For each `SignatureField` found, access the `Signature` property and then the `Properties` to retrieve the `TimeOfSigning`.
 
-Here is a code snippet demonstrating these steps and including the creation of a document with digital signature as well:
+Here is a code snippet that demonstrates these steps and includes creating a document with a digital signature:
 
 ```csharp
         static void Main(string[] args)
@@ -108,9 +108,9 @@ Here is a code snippet demonstrating these steps and including the creation of a
         }
 ```
 
-To validate a signature, utilize the `Validate()` or `TryValidate()` methods available within the RadPdfProcessing library. Detailed information on signature validation can be found in the [Signature Validation]({%slug radpdfprocessing-features-digital-signature-validation%}) documentation.
+To validate a signature, use the `Validate()` or `TryValidate()` methods available in the RadPdfProcessing library. For more information, see the [Signature Validation]({%slug radpdfprocessing-features-digital-signature-validation%}) documentation.
 
 ## See Also
 
-- [Digital Signature Overview in RadPdfProcessing]({%slug radpdfprocessing-features-digital-signature%})
-- [Signature Validation]({%slug radpdfprocessing-features-digital-signature-validation%})
+* [Digital Signature Overview in RadPdfProcessing]({%slug radpdfprocessing-features-digital-signature%})
+* [Signature Validation]({%slug radpdfprocessing-features-digital-signature-validation%})

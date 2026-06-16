@@ -16,14 +16,14 @@ res_type: kb
 
 ## Description
 
-To insert images into a merge field using [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) in RadWordsProcessing, follow these steps:
+To insert images into a merge field using [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) in `RadWordsProcessing`, follow these steps:
 
 1. Use specific text as a placeholder for the image in your DOCX template.
-2. Utilize the [Find and Replace]({%slug radwordsprocessing-editing-replace-document-elements%}) functionality to insert the image.
+2. Use the [Find and Replace]({%slug radwordsprocessing-editing-replace-document-elements%}) functionality to insert the image.
 
 ## Solution
 
-Here is a sample code snippet that demonstrates how to replace the placeholder text with an image using RadWordsProcessing:
+The following code snippet demonstrates how to replace the placeholder text with an image using `RadWordsProcessing`:
 
 ```csharp
 static void Main(string[] args)
@@ -73,13 +73,13 @@ public class MailMergeRecord
 
 }
 ```
-The achieved result is illustrated below:
+The following image shows the achieved result:
 
-![Image mail merge](images/image_mail_merge.png)
+![Image mail merge result showing the inserted image in the merged document](images/image_mail_merge.png)
 
 ## See Also
 
- * [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
- * [Hiding MailMerge Line in Output Word Document If Blank]({%slug hide-mailmerge-line-output-word-document-if-blank%})
- * [Find and Replace]({%slug radwordsprocessing-editing-replace-document-elements%})
+* [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
+* [Hiding MailMerge Line in Output Word Document If Blank]({%slug hide-mailmerge-line-output-word-document-if-blank%})
+* [Find and Replace]({%slug radwordsprocessing-editing-replace-document-elements%})
 

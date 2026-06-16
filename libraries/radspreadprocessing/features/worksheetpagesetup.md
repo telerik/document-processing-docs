@@ -10,77 +10,61 @@ position: 14
 
 # Worksheet Page Setup
 
-
-There are cases, such as printing or exporting scenarios, when you need to present the __Worksheet__'s content on a set of pages. In these cases, particularly handy comes the __WorksheetPageSetup__ class which provides you with the needed properties for controlling how the content is split and presented into pages. This article presents the WorksheetPageSetup API and demonstrates how to use it. 
-
+When you need to present the `Worksheet` content on a set of pages, such as in printing or exporting scenarios, the `WorksheetPageSetup` class provides the needed properties for controlling how the content is split and presented into pages.
 
 ## WorksheetPageSetup Properties
 
-Through the Worksheet's __WorksheetPageSetup__ property you can change the following worksheet's page setup properties:
-        
+Through the `Worksheet` `WorksheetPageSetup` property you can change the following page setup properties:
 
-* __PaperType__: Specify paper type using the [PaperTypes enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Model.PaperTypes.html).
-            
+* `PaperType`: Specify paper type using the [PaperTypes enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Model.PaperTypes.html).
 
-* __PageOrientation__: Specify whether the page orientation should be Portrait or Landscape.
-            
+* `PageOrientation`: Specify whether the page orientation is Portrait or Landscape.
 
-* __Margins__: Specify the sizes of the page margins.
+* `Margins`: Specify the sizes of the page margins.
 
+* `HeaderFooterSettings`: Allows you to specify a header or a footer for a worksheet. For more information on how to achieve this, check the [Headers and Footers topic]({%slug radspreadprocessing-features-headers-and-footers%}).
 
-* __HeaderFooterSettings__: Allows you to specify a header and/or a footer for a worksheet. For more information on how to achieve this, please check the [Headers and Footers topic]({%slug radspreadprocessing-features-headers-and-footers%}).
-            
+* `PageOrder`: Specify whether the page order is "Down, then over" or "Over, then down".
 
-* __PageOrder__: Specify whether the page order should be "Down, then over" or "Over, then down".
-            
+* `CenterHorizontally`: Specify whether the print content is centered horizontally within the area between the page margins.
 
-* __CenterHorizontally__: Specify whether the print content should be centered horizontally within the area between the page margins.
-            
+* `CenterVertically`: Specify whether the print content is centered vertically within the area between the page margins.
 
-* __CenterVertically__: Specify whether the print content should be centered vertically within the area between the page margins.
-            
+* `ScaleFactor`: Specify the scale factor to print with value in the range from 50% to 400%.
 
-* __ScaleFactor__: Specify the scale factor to print with value in the range from 50% to 400%. 
-	
-	 In case you need to calculate the custom scale factor in order for the worksheet to fit in a specific number of pages when printed, you can use the methods provided by the **PageScaleFactorCalculator** static class:
+	 If you need to calculate the custom scale factor for the worksheet to fit in a specific number of pages when printed, you can use the methods provided by the `PageScaleFactorCalculator` static class:
 
-	- **CalculateScaleAccordingToFitToPages(Worksheet worksheet)**: Calculates the maximum scale factor that can be set to a worksheet in order for it to fit into the number of pages specified in the FitToPagesWide and FitToPagesTall properties.
-	
-	- **CalculateScaleAccordingToFitToPages(Worksheet worksheet, IEnumerable&lt;CellRange&gt; includedRanges)**:  Calculates the maximum scale factor that can be set to a worksheet in order for the **specified ranges** to fit into the number of pages specified in the FitToPagesWide and FitToPagesTall properties.
-            
+	* `CalculateScaleAccordingToFitToPages(Worksheet worksheet)`: Calculates the maximum scale factor that can be set to a worksheet for it to fit into the number of pages specified in the `FitToPagesWide` and `FitToPagesTall` properties.
 
-* __FitToPagesTall__: Specify the number of pages tall the worksheet will be scaled to when it's printed. The default value is 1.
+	* `CalculateScaleAccordingToFitToPages(Worksheet worksheet, IEnumerable<CellRange> includedRanges)`: Calculates the maximum scale factor that can be set to a worksheet for the **specified ranges** to fit into the number of pages specified in the `FitToPagesWide` and `FitToPagesTall` properties.
 
-* __FitToPagesWide__: Specify the number of pages wide the worksheet will be scaled to when it's printed. The default value is 1.
+* `FitToPagesTall`: Specify the number of pages tall the worksheet will be scaled to when printed. The default value is 1.
 
-* __FitToPages__: Allows you to specify whether the worksheet will be scaled according to a number of pages. If the value of this property is *true*, the worksheet will be scaled according to the **FitToPagesWide** and **FitToPagesTall** values. Otherwise, it will be scaled according to the **ScaleFactor** value. Additionally, if **FitToPagesTall** is 0, it will only fit to width, and if **FitToPagesWide** has value of 0, it will fit to height only.
+* `FitToPagesWide`: Specify the number of pages wide the worksheet will be scaled to when printed. The default value is 1.
 
-* __PrintOptions__: Specify print options such as whether to print gridlines or row and column headings.
-            
+* `FitToPages`: Allows you to specify whether the worksheet will be scaled according to a number of pages. If the value of this property is *true*, the worksheet is scaled according to the `FitToPagesWide` and `FitToPagesTall` values. Otherwise, it is scaled according to the `ScaleFactor` value. Additionally, if `FitToPagesTall` is 0, the worksheet fits to width only, and if `FitToPagesWide` has a value of 0, it fits to height only.
 
-* __PrintArea__: Change the print area in the selected worksheet.
-            
+* `PrintOptions`: Specify print options such as whether to print gridlines or row and column headings.
 
-* __PageBreaks__: Change the page breaks collection in the selected worksheet.
+* `PrintArea`: Change the print area in the selected worksheet.
 
-* __PrintTitles__: Enables you to specify rows and/or columns that should be repeated on each page for the worksheet. 
-            
+* `PageBreaks`: Change the page breaks collection in the selected worksheet.
 
-__Figures 1 and 2__ show an example of Worksheet's page setup usage. In the example, we have spreadsheet data that has bigger width than height. Previewing the print pages with the default settings we can see that it doesn't fit well as the print content is split into two pages.
-        
+* `PrintTitles`: Enables you to specify rows or columns that are repeated on each page for the worksheet.
+
+**Figures 1 and 2** show an example of the worksheet page setup usage. In the example, the spreadsheet data has bigger width than height. Previewing the print pages with the default settings shows that the content does not fit well as the print content is split into two pages.
 
 #### Figure 1: Initial print preview of data
 ![Print preview without settings](images/RadSpreadProcessing_Features_WorksheetPageSetup_01.png)
 
-In order to fit the print content better, we use the Worksheet's page setup and change the page orientation as well as the scale factor and some additional print settings. __Example 1__ shows the code that needs to be executed.
-        
+To fit the print content better, use the worksheet page setup and change the page orientation, the scale factor, and some additional print settings. **Example 1** shows the code that needs to be executed.
 
 #### __Example 1: Use WorksheetPageSetup__
 
 <snippet id='codeblock-cld'/>
 
-As a result, we managed to fit the data into a single page with size A4 as shown in __Figure 2__.
-      
+As a result, the data fits into a single page with size A4 as shown in **Figure 2**.
+
 #### Figure 2: Result after page setup
 ![Print preview after setting the worksheet page setup settings](images/RadSpreadProcessing_Features_WorksheetPageSetup_02.png)
 
@@ -88,22 +72,18 @@ As a result, we managed to fit the data into a single page with size A4 as shown
 ## Using Print Area
 
 When printing a worksheet, by default the whole used cell range is used for printing. If you do not need to print the whole content of the worksheet, you can set a print area by specifying a list of ranges to print.
-        
 
-Through WorksheetPageSetup's __PrintArea__ property you can access the print area of a worksheet and change its print ranges with the following methods:
-        
+Through the `WorksheetPageSetup` `PrintArea` property you can access the print area of a worksheet and change its print ranges with the following methods:
 
-* __SetPrintArea()__: Sets the print area ranges using a given set of CellRange instances. This method clears all previously set ranges.
-            
-* __CanAddToPrintArea()__: Returns a Boolean indicating whether the passed set of print ranges can be added in the existing print area. If some of the given ranges intersects with an already existing print area range, the result is *false*. 
+* `SetPrintArea()`: Sets the print area ranges using a given set of `CellRange` instances. This method clears all previously set ranges.
 
-* __TryAddToPrintArea()__: Tries to add a given set of CellRange instances to the collection of areas and returns a Boolean indicating the success of this operation.            
+* `CanAddToPrintArea()`: Returns a Boolean indicating whether the passed set of print ranges can be added in the existing print area. If some of the given ranges intersect with an already existing print area range, the result is *false*.
 
-* __Clear()__: Clears the existing print area ranges.
-            
+* `TryAddToPrintArea()`: Tries to add a given set of `CellRange` instances to the collection of areas and returns a Boolean indicating the success of this operation.
 
-The example shown in __Figure 3__ demonstrates how to use Worksheet's print area. In this example, we have a big table with data and we want to print only two specific ranges. To achieve that, the print area is set with these cell ranges in the code snippet from __Example 2__.
-        
+* `Clear()`: Clears the existing print area ranges.
+
+The example shown in **Figure 3** demonstrates how to use the worksheet print area. In this example, a big table with data exists and you want to print only two specific ranges. To achieve that, set the print area with these cell ranges in the code snippet from **Example 2**.
 
 #### __Example 2: Set PrintArea__
 
@@ -116,40 +96,30 @@ The example shown in __Figure 3__ demonstrates how to use Worksheet's print area
 
 ## Using Page Breaks
 
-When a big cell range cannot fit into a single page, it gets split into multiple pages. If you need your pages to be split at some concrete places, you can specify these places by inserting a PageBreak.
-        
+When a big cell range cannot fit into a single page, it gets split into multiple pages. If you need your pages to be split at specific places, you can specify these places by inserting a page break.
 
-Through WorksheetPageSetup's __PageBreaks__ property you can manipulate the page breaks collection of a worksheet using the following methods:
-        
+Through the `WorksheetPageSetup` `PageBreaks` property you can manipulate the page breaks collection of a worksheet using the following methods:
 
-* __TryInsertHorizontalPageBreak()__: Tries to insert a horizontal page break at some specific index. Returns true when a page break is inserted.
-            
-* __TryInsertVerticalPageBreak()__: Tries to insert a vertical page break at some specific index. Returns true when a page break is inserted.
-            
+* `TryInsertHorizontalPageBreak()`: Tries to insert a horizontal page break at a specific index. Returns true when a page break is inserted.
 
-* __TryRemoveHorizontalPageBreak()__: Tries to remove a horizontal page break at some specific index. Returns true when a page break is removed.
-            
+* `TryInsertVerticalPageBreak()`: Tries to insert a vertical page break at a specific index. Returns true when a page break is inserted.
 
-* __TryRemoveVerticalPageBreak()__: Tries to remove a vertical page break at some specific index. Returns true when a page break is removed.
-            
+* `TryRemoveHorizontalPageBreak()`: Tries to remove a horizontal page break at a specific index. Returns true when a page break is removed.
 
-* __TryInsertPageBreaks()__: Tries to insert horizontal and vertical page break at some specific index. Returns true when at least one page break is inserted.
-            
+* `TryRemoveVerticalPageBreak()`: Tries to remove a vertical page break at a specific index. Returns true when a page break is removed.
 
-* __TryRemovePageBreaks()__: Tries to remove horizontal and vertical page break at some specific index. Returns true when at least one page break is removed.
-            
+* `TryInsertPageBreaks()`: Tries to insert horizontal and vertical page breaks at a specific index. Returns true when at least one page break is inserted.
 
-* __Clear()__: Clears all existing page breaks from the page breaks collection.
-            
+* `TryRemovePageBreaks()`: Tries to remove horizontal and vertical page breaks at a specific index. Returns true when at least one page break is removed.
 
-__Figure 4__ shows a preview of large amount of data.
-        
+* `Clear()`: Clears all existing page breaks from the page breaks collection.
+
+**Figure 4** shows a preview of a large amount of data.
 
 #### Figure 4: Initial preview of data
 ![Print preview without changing settings](images/RadSpreadProcessing_Features_WorksheetPageSetup_04.png)
 
-In order to separate semantically-correct the print data onto several pages, we are going to place horizontal page breaks at the place where we need the splitting to happen. __Example 3__ shows how this can be achieved.
-        
+To separate the print data semantically onto several pages, place horizontal page breaks at the positions where you need the splitting to happen. **Example 3** shows how to achieve this.
 
 #### __Example 3: Insert PageBreaks__
 
@@ -157,18 +127,17 @@ In order to separate semantically-correct the print data onto several pages, we 
 
 
 
-As a result of inserting these horizontal page breaks we have eight pages to print. The first one is shown in __Figure 5__.
-        
+As a result of inserting these horizontal page breaks, you have eight pages to print. The first one is shown in **Figure 5**.
 
 #### Figure 5: Result of PageBreaks
 ![Print preview after inserting page breaks](images/RadSpreadProcessing_Features_WorksheetPageSetup_05.png)
 
 ## Repeating Rows/Columns
 
-The __PrintTitles__ property of __WorksheetPageSetup__ enables you to set rows and/or columns to be repeated on each page when printing or exporting the worksheet to PDF. The property is of type PrintTitles and exposes the following properties:
+The `PrintTitles` property of `WorksheetPageSetup` enables you to set rows or columns to be repeated on each page when printing or exporting the worksheet to PDF. The property is of type `PrintTitles` and exposes the following properties:
 
-* __RepeatedColumns__: Gets or sets a value of type ColumnRange that represents the range of columns that should be repeated. 
-* __RepeatedRows__: Gets or sets a value of type RowRange that represents the range of rows that should be repeated. 
+* `RepeatedColumns`: Gets or sets a value of type `ColumnRange` that represents the range of columns that are repeated.
+* `RepeatedRows`: Gets or sets a value of type `RowRange` that represents the range of rows that are repeated.
 
 
 #### __Example 4: Repeat the first two rows and two columns of the worksheet on each page__

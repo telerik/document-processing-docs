@@ -1,6 +1,6 @@
 ---
 title: Generating a Table of Contents in a Merged Document Using RadWordsProcessing
-description: Learn how to merge two Word documents and generate a unified table of contents using the RadWordsProcessing library.
+description: Learn how to merge two Word documents and generate a unified table of contents that reflects the merged content by using the RadWordsProcessing library.
 type: how-to
 page_title: How to Create a Table of Contents in Merged Word Documents with RadWordsProcessing
 slug: generate-table-of-contents-radwordsprocessing
@@ -23,12 +23,12 @@ This article shows how to merge two DOCX documents into a single document and ge
 
 To merge two Word documents and generate a unified TOC, follow these steps:
 
-1. Import the documents using the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
-2. [Merge]({%slug radwordsprocessing-editing-clone-and-merge%}) the documents using the `Merge` method with appropriate [MergeOptions](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/editing/clone-and-merge#merging-documents).
+1. Import the documents with the [`DocxFormatProvider`]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
+2. [Merge]({%slug radwordsprocessing-editing-clone-and-merge%}) the documents with the `Merge` method and the appropriate `MergeOptions`.
 3. Insert a unified TOC at the desired location in the merged document.
-4. [Update the TOC field](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields) to reflect the merged content accurately.
+4. Update the TOC field to reflect the merged content.
 
-Here is an example code that demonstrates this process:
+The following example shows this process:
 
 ```csharp
 using Telerik.Windows.Documents.Flow.Model;
@@ -111,19 +111,19 @@ class Program
 }
 ```
 
-This example demonstrates merging two DOCX files, positioning the document editor at the beginning of the merged document, inserting a page break followed by a unified TOC title, and finally, inserting the TOC field. The document is then saved as both a PDF and a DOCX file.
+This example merges two DOCX files and positions the document editor at the beginning of the merged document. It inserts a page break followed by a unified TOC title and the TOC field. The code then saves the document as both a PDF and a DOCX file.
 
-The achieved result is illustrated below:
+The following image shows the result:
 
 ![TOC of Merged Documents](images/toc-of-merged-documents.png)  
 
 ## Notes
 
-- Ensure that the documents you are merging have compatible styles to avoid conflicts in the merged document.
-- The TOC will need to be manually updated in the output document to reflect the current headings and page numbers accurately.
+* Ensure that the documents you merge have compatible styles to avoid conflicts in the merged document.
+* Update the TOC manually in the output document to reflect the current headings and page numbers.
 
 ## See Also
 
-- [Fields Overview]({%slug radwordsprocessing-concepts-fields%})
-- [Working with Fields in RadWordsProcessing]({%slug radwordsprocessing-concepts-toc-field%})
-- [Merge Documents in RadWordsProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/editing/clone-and-merge#merging-documents)
+* [Fields Overview]({%slug radwordsprocessing-concepts-fields%})
+* [Working with Fields in RadWordsProcessing]({%slug radwordsprocessing-concepts-toc-field%})
+* [Merge Documents in RadWordsProcessing]({%slug radwordsprocessing-editing-clone-and-merge%})

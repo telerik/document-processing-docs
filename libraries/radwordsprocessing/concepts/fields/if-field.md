@@ -1,7 +1,7 @@
 ---
 title: If Field
 page_title: If Field
-description: If field is a Field element that compares two values and inserts the text appropriate to the result of the comparison.
+description: Learn how to use the If field element in RadWordsProcessing to compare two values and insert text appropriate to the result of the comparison.
 slug: radwordsprocessing-concepts-if-field
 tags: iffield, word, flow, docx, fields, document, conditional, comparison, model, logic
 published: True
@@ -14,14 +14,15 @@ position: 7
 
 ## Field Syntax
 
-This is how the syntax of an If field looks like:
+The following table shows the syntax of an If field:
 
 | Syntax   											                   |
 | :---     											                   |
 | { **IF** _Expression1_ _Operator_ _Expression2_ TrueText FalseText } |
 
 ### Operators
-In the table below are listed all the comparison operators.
+
+The following table lists all the comparison operators.
 
 | Operator    | Description              |
 | :---        | :---                     |
@@ -33,26 +34,29 @@ In the table below are listed all the comparison operators.
 | <=          | Less than or equal to    |
 
 ### Expression1, Expression2
+
 Values to compare.
 
 ### TrueText, FalseText
-Text that results when the comparison is true (TrueText) or false (FalseText). If FalseText isn't specified and the comparison is false, the IF field has no result. Each string containing multiple words must be enclosed in quotation marks.
+
+Text that results when the comparison is true (TrueText) or false (FalseText). If FalseText is not specified and the comparison is false, the IF field has no result. Each string containing multiple words must be enclosed in quotation marks.
 
 ## Inserting
 
-Inserting an If field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument. 
+You can insert an If field through the `InsertField()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method accepts code as first argument and result as second argument.
 
-#### __Example 1: Insert If field__
+**Example 1: Insert an If field**
 
 <snippet id='codeblock-bb'/>
 
 The result of the above snippet is illustrated in **Figure 1**.
 
-#### Figure 1: If field in a document
-  ![RadWordsProcessing Concepts Fields If Field 01](images/RadWordsProcessing_Concepts_Fields_If_Field_01.png)
+**Figure 1: If field in a document**
+
+![RadWordsProcessing Concepts Fields If Field 01](images/RadWordsProcessing_Concepts_Fields_If_Field_01.png)
 
 ## See Also
 
- * [Fields]({%slug radwordsprocessing-concepts-fields%})
- * [Custom Code Field]({%slug radwordsprocessing-concepts-customcodefield%})
- * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Custom Code Field]({%slug radwordsprocessing-concepts-customcodefield%})
+* [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

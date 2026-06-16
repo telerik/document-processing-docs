@@ -23,7 +23,7 @@ Learn how to insert interactive [form fields]({%slug radpdfprocessing-model-inte
 
 ## Solution
 
-To insert interactive form fields like radio buttons and textboxes into table cells in a PDF document, follow the steps below:
+To insert interactive form fields like radio buttons and textboxes into table cells in a PDF document, follow these steps:
 
 1. Create a new [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and add a page to it.
 2. Initialize a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) on the page for drawing content.
@@ -34,7 +34,7 @@ To insert interactive form fields like radio buttons and textboxes into table ce
    - Create a [TextBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}), set its value, and draw it in another table cell.
 5. [Export](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/pdfformatprovider#export) the `RadFixedDocument` to a PDF file.
 
-Below is a simplified code snippet demonstrating these steps:
+The following simplified code snippet demonstrates these steps:
 
 ```csharp
         private readonly string[] _questions = new string[] { "Question 1", "Question 2", "Question 3" };
@@ -130,7 +130,5 @@ Below is a simplified code snippet demonstrating these steps:
 
 ## See Also
 
-- [Create Interactive Forms SDK Example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
-- [Modify Form Values SDK Example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms)
-
----
+* [Create Interactive Forms SDK Example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
+* [Modify Form Values SDK Example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms)

@@ -12,124 +12,120 @@ position: 6
 
 
 
-This article briefly describes what frozen panes are, and how to create and work with them.  It contains the following sections:
-
-* [What are frozen panes?](#what-are-frozen-panes)
-
-* [Types of panes](#types-of-panes)
-
-* [What defines the panes positioning?](#what-defines-the-panes-positioning)
-
-* [Freezing panes](#freezing-panes)
-
-* [Unfreezing panes](#unfreezing-panes)
-
-
-## What are Frozen Panes?
+## What Are Frozen Panes?
 
 Frozen panes are a method to keep part of the worksheet visible at all times when scrolling. 
    
-#### Figure 1: A document with frozen top rows and first left column
-![Rad Spread Processing Features Freeze Panes 01](images/RadSpreadProcessing_Features_Freeze_Panes_01.png)
+**Figure 1: A document with frozen top rows and first left column**
+
+![A document with frozen top rows and first left column](images/RadSpreadProcessing_Features_Freeze_Panes_01.png)
 
 ## Types of Panes
 
 Panes have the following properties:
         
 
-There are four types of panes, as marked on the image below:
+There are four types of panes, as marked on the following image:
 
 1.	Fixed
 2.	Horizontal scrollable
 3.	Vertical scrollable
 4.	Scrollable
 
-#### Figure 2: Types of panes
-![Rad Spread Processing Features Freeze Panes 02](images/RadSpreadProcessing_Features_Freeze_Panes_02.png)             
+**Figure 2: Types of panes**
+
+![Types of panes in a worksheet](images/RadSpreadProcessing_Features_Freeze_Panes_02.png)
 
 When the panes are split only horizontally the panes present are horizontal scrollable and scrollable. When the panes are split vertically, the two panes are vertical scrollable and scrollable.
 
 ## What Defines the Panes Positioning?
 
-In order to describe fully the state of the frozen panes, the following need to be specified:
+To fully describe the state of the frozen panes, you need to specify the following:
 
-* __Top left cell index of the fixed pane__: This property determines the position to which the viewport is scrolled. When this is different from A1, any areas above and to the left of the index become unreachable. In __Figure 3__ this is C3.
+* **Top left cell index of the fixed pane**: This property determines the position to which the viewport is scrolled. When this is different from A1, any areas above and to the left of the index become unreachable. In **Figure 3** this is C3.
 
-* __Frozen rows count__: The number of visible rows contained by the horizontal scrollable pane. In __Figure 3__ this value is 1
+* **Frozen rows count**: The number of visible rows contained by the horizontal scrollable pane. In **Figure 3** this value is 1.
 
-* __Frozen columns count__: The number of visible columns contained by the vertical scrollable pane. In __Figure 3__ this value is 4.
+* **Frozen columns count**: The number of visible columns contained by the vertical scrollable pane. In **Figure 3** this value is 4.
 
-* __Top left cell index of the scrollable pane__: This property determines the scroll position of the scrollable pane. In __Figure 3__ this is I6. Note that this index is different from the topmost and leftmost point of the scrollable pane.
+* **Top left cell index of the scrollable pane**: This property determines the scroll position of the scrollable pane. In **Figure 3** this is I6. This index is different from the topmost and leftmost point of the scrollable pane.
 
-#### Figure 3: Panes positioning
-![Rad Spread Processing Features Freeze Panes 03](images/RadSpreadProcessing_Features_Freeze_Panes_03.png) 
-    
+**Figure 3: Panes positioning**
+
+![Panes positioning in a worksheet](images/RadSpreadProcessing_Features_Freeze_Panes_03.png)
 
 ## Freezing Panes
+
 ### FreezePanes Methods
 
-Panes can be frozen through the [ViewState]({%slug radspreadprocessing-working-with-worksheets-view-state%}) property of the Worksheet. It is of type WorksheetViewState and exposes the following overloads of the FreezePanes method:
+You can freeze panes through the [ViewState]({%slug radspreadprocessing-working-with-worksheets-view-state%}) property of the `Worksheet`. It is of type `WorksheetViewState` and exposes the following overloads of the `FreezePanes` method:
 
-* void FreezePanes(int frozenRowsCount, int frozenColumnsCount)
-* void FreezePanes(CellIndex fixedPaneTopLeftCellIndex, int frozenRowsCount, int frozenColumnsCount)
-* void FreezePanes(CellIndex fixedPaneTopLeftCellIndex, int frozenRowsCount, int frozenColumnsCount, CellIndex scrollableTopLeftCellIndex)
+* `void FreezePanes(int frozenRowsCount, int frozenColumnsCount)`
+* `void FreezePanes(CellIndex fixedPaneTopLeftCellIndex, int frozenRowsCount, int frozenColumnsCount)`
+* `void FreezePanes(CellIndex fixedPaneTopLeftCellIndex, int frozenRowsCount, int frozenColumnsCount, CellIndex scrollableTopLeftCellIndex)`
 
-If the top left cell indices of the fixed pane and of the scrollable pane are not specified, it will be assumed that the top left index of the fixed pane is the current top left index of the viewport and that the scrollable pane is not scrolled.
+If the top left cell indices of the fixed pane and of the scrollable pane are not specified, the method assumes that the top left index of the fixed pane is the current top left index of the viewport and that the scrollable pane is not scrolled.
 
-The result illustrated in __Figure 3__ can be achieved with the code from __Example 1__.
+The result illustrated in **Figure 3** can be achieved with the code from **Example 1**.
 
-#### __Example 1: Freezing panes__
+**Example 1: Freezing Panes**
+
 <snippet id='codeblock-cia'/>
 
 ### Horizontal and Vertical Split
 
-If you would like to create a vertical or horizontal split, all you need to do is specify either the row count or the column count to be equal to zero.
+If you want to create a vertical or horizontal split, set either the row count or the column count to zero.
 
-#### __Example 2: Vertical split__
+**Example 2: Vertical Split**
+
 <snippet id='codeblock-cib'/>
 
-The result from __Example 2__ is shown on __Figure 4__.
+The result from **Example 2** is shown in **Figure 4**.
 
-#### Figure 4: Vertical split
-![Rad Spread Processing Features Freeze Panes 04](images/RadSpreadProcessing_Features_Freeze_Panes_04.png) 
+**Figure 4: Vertical split**
 
-Since the two panes present are only vertical scrollable and scrollable the columns A and B will remain unreachable. However, the user will be able to scroll to the first two rows. Even though there are two rows from the start of the document at the time of freezing, the document will not be split horizontally.
+![Vertical split in a worksheet](images/RadSpreadProcessing_Features_Freeze_Panes_04.png)
+
+Because the two panes present are only vertical scrollable and scrollable, columns A and B remain unreachable. However, you can scroll to the first two rows. Even though there are two rows from the start of the document at the time of freezing, the document is not split horizontally.
 
 ### The Pane Class
 
-Another option to freeze the panes in a worksheet is to use the Pane property of type Pane of the WorksheetViewState. The functionality you can achieve is almost identical to the FreezePanes() methods. The Pane class has the following properties:
+Another option to freeze the panes in a worksheet is to use the `Pane` property of type `Pane` of the `WorksheetViewState`. The functionality you can achieve is almost identical to the `FreezePanes()` methods. The `Pane` class has the following properties:
 
-* __TopLeftCellIndex__: The top left cell index of the scrollable pane
+* `TopLeftCellIndex`: The top left cell index of the scrollable pane.
 
-* __XSplit__: The number of visible columns contained by the vertical scrollable pane
+* `XSplit`: The number of visible columns contained by the vertical scrollable pane.
 
-* __YSplit__: The number of visible rows contained by the horizontal scrollable pane.
+* `YSplit`: The number of visible rows contained by the horizontal scrollable pane.
 
-* __ActivePane__: The current active pane.
+* `ActivePane`: The current active pane.
 
-* __State__: The state of the frozen panes. At the moment only the Frozen state is supported.
+* `State`: The state of the frozen panes. Currently, only the Frozen state is supported.
 
-The state from __Figure 3__ can be achieved with the code from __Example 3__.
+The state from **Figure 3** can be achieved with the code from **Example 3**.
 
 
-#### __Example 3: Freeze panes through the Pane class__
+**Example 3: Freeze Panes Through the Pane Class**
+
 <snippet id='codeblock-cic'/>
 
-> Regardless of the method used to freeze the panes of a worksheet, you should take care not to place the top left index of the frozen pane below or to the right of the index determined by the frozen row count and the frozen column count. Doing so may result in an invalid document and unexpected behavior.
+> Regardless of the method used to freeze the panes of a worksheet, do not place the top left index of the frozen pane after or to the right of the index determined by the frozen row count and the frozen column count. Doing so may result in an invalid document and unexpected behavior.
 
 ## Unfreezing Panes
 
-In order to unfreeze the panes of the worksheet, you need to use the same methods as above but specify zero for number of frozen rows and columns.
+To unfreeze the panes of the worksheet, use the same methods described previously but specify zero for the number of frozen rows and columns.
 
 
-#### __Example 4: Unfreezing panes__
+**Example 4: Unfreezing Panes**
+
 <snippet id='codeblock-cid'/>
 
-Another option is to set the Pane property of the ViewState to null.
+Another option is to set the `Pane` property of the `ViewState` to `null`.
 
-#### __Example 4: Unfreezing panes through the Pane class__
+**Example 5: Unfreezing Panes Through the Pane Class**
+
 <snippet id='codeblock-cie'/>
 
 ## See Also
 
- * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
+* [What Is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})

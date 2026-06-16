@@ -1,7 +1,7 @@
 ---
 title: Search
 page_title: Search
-description: This article shows how one can use the search feature to find text in a PDF Document.
+description: Learn how to use the TextSearch class in RadPdfProcessing to find text in PDF documents with plain text or regular expression patterns.
 slug: radwordsprocessing-features-search
 tags: search, pdf, text, radpdfprocessing, find, pattern, document, results
 published: True
@@ -10,20 +10,19 @@ position: 0
 
 # Search
 
-This feature allows you to search for a specific text in a PDF document. You can use plain text or a regex for the search criteria. There are various methods that allow you to find all occurrences at once or one by one.
+The search feature allows you to find specific text in a PDF document. You can use plain text or a regular expression for the search criteria. Various methods allow you to find all occurrences at once or one by one.
 
-## The TextSearch class
+## The TextSearch Class
 
-This class exposes methods for searching. You need to pass an instance of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) when creating a new instance. This is the document that will be searched. 
+The `TextSearch` class exposes methods for searching. Pass an instance of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) when you create a new instance. This is the document that the search targets.
 
-
-#### __Example 1:  Create TextSearch Instance__
+**Example 1: Create a TextSearch Instance**
 
 <snippet id='search-find-all'/>
 
 ### Search Methods
 
-The **TextSeach** class exposes the following methods which allow you to search the document:
+The `TextSearch` class exposes the following methods for searching the document:
 
 | Method | Description |
 |---|---|
@@ -31,9 +30,9 @@ The **TextSeach** class exposes the following methods which allow you to search 
 | `FindPrevious(string text, TextSearchOptions options)` | Finds the previous occurrence of the specified text. Optionally accepts a start position or a specific range. |
 | `FindAll(string text, TextSearchOptions options)` | Finds all occurrences of the specified text. Optionally accepts a start position or a specific range. |
 
-### SearchResult class
+### SearchResult Class
 
-All of the above methods return one or more instances of the **SearchResult** class. This class exposes the following public members that provide information about the results:
+All of the listed methods return one or more instances of the `SearchResult` class. This class exposes the following public members that provide information about the results:
 
 | Member | Description |
 |---|---|
@@ -42,19 +41,20 @@ All of the above methods return one or more instances of the **SearchResult** cl
 | `GetWordBoundingRect()` | Gets the rectangle of the current match. |
 | `GetResultPage()` | Gets the page where the current result is. |
 
-#### __Example 2:  Searching in a document__
+**Example 2: Searching in a Document**
 
 <snippet id='search-highlight-results'/>
 
 ### TextSearchOptions
 
-The **TextSearchOptions** class exposes the following properties which allow you to set the search parameters:
+The `TextSearchOptions` class exposes the following properties for setting the search parameters:
 
 | Property | Description |
 |---|---|
-| `UseRegularExpression` | Gets or sets a value indicating whether a regular expression should be used for searching. |
-| `CaseSensitive` | Gets or sets a value indicating whether the search should be case sensitive. |
-| `WholeWordsOnly` | Gets or sets a value indicating whether only whole words should be matched. |
+| `UseRegularExpression` | Gets or sets a value indicating whether a regular expression is used for searching. |
+| `CaseSensitive` | Gets or sets a value indicating whether the search is case sensitive. |
+| `WholeWordsOnly` | Gets or sets a value indicating whether only whole words are matched. |
 
+## See Also
 
-
+* [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})

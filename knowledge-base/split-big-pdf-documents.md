@@ -17,15 +17,15 @@ ticketid: 1679749
 
 ## Description
 
-When working with large PDF documents, it might be necessary to split these documents into smaller "chunks" of a specified number of pages. This article shows a sample approach how to export efficiently subsets of pages without having to repeatedly re-import the entire document for each chunk. 
+When working with large PDF documents, you may need to split them into smaller "chunks" of a specified number of pages. This article shows how to export subsets of pages efficiently without repeatedly re-importing the entire document for each chunk.
 
 ## Solution
 
-To efficiently export subsets of pages from a large PDF document, the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) functionality of [RadPdfProcessing]({%slug radpdfprocessing-overview%}) can be leveraged. This approach significantly improves performance and reduces memory usage, making it ideal for processing large volumes of PDFs. Below is a step-by-step guide on how to split a PDF document into smaller "chunks" using `PdfStreamWriter`.
+To efficiently export subsets of pages from a large PDF document, use the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) feature of [RadPdfProcessing]({%slug radpdfprocessing-overview%}). This approach improves performance and reduces memory usage, making it ideal for processing large volumes of PDFs. The following steps show how to split a PDF document into smaller "chunks" using `PdfStreamWriter`.
 
-### Step 1: Include Necessary Namespaces
+### Step 1: Include the Necessary Namespaces
 
-Ensure you include the necessary namespaces in your project:
+Include the following namespaces in your project:
 
 ```csharp
 using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Streaming;
@@ -92,11 +92,11 @@ internal class Program
 }
 ```
 
-This solution efficiently processes the splitting operation by writing each chunk directly to a new file without the need to re-import the original document multiple times:
+This solution processes the splitting operation by writing each chunk directly to a new file without the need to re-import the original document multiple times:
 
 ![Split Large PDF](images/split-big-pdf.png)  
 
 ## See Also
 
-- [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})
-- [RadPdfProcessing]({%slug radpdfprocessing-overview%})
+* [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%})
+* [RadPdfProcessing]({%slug radpdfprocessing-overview%})

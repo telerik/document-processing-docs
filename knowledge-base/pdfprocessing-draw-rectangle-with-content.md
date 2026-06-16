@@ -20,19 +20,20 @@ ticketid: 1677969
 This article shows how to draw rectangles with formatted text or image content with the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) in the [PdfProcessing]({%slug radpdfprocessing-overview%}) library.
 
 This knowledge base article also answers the following questions:
-- How can I draw a rectangle and style it using RadPdfProcessing?
-- How to add centered text within a rectangle in a PDF document?
-- How to insert an image and center it within a rectangle using RadPdfProcessing?
+
+* How can I draw a rectangle and style it using RadPdfProcessing?
+* How to add centered text within a rectangle in a PDF document?
+* How to insert an image and center it within a rectangle using RadPdfProcessing?
 
 ## Solution
 
-To draw a rectangle with a black stroke and a light blue background, add centered text, and insert a centered image within the rectangle using the RadPdfProcessing library, follow these steps:
+To draw a rectangle with a black stroke and a light blue background, add centered text, and insert a centered image within the rectangle, follow these steps:
 
-1. Draw a rectangle by creating a [Path]({%slug radpdfprocessing-model-path%}) with a [RectangleGeometry]({%slug radpdfprocessing-concepts-geometry%}#rectanglegeometry), defining its dimensions, formatting it, and inserting it in the page.
-2. Create a **Block** of text, format it, and draw it on top of the rectangle with the **FixedContentEditor** by specifying its **Position**.
+1. Draw a rectangle by creating a [Path]({%slug radpdfprocessing-model-path%}) with a [RectangleGeometry]({%slug radpdfprocessing-concepts-geometry%}#rectanglegeometry). Define its dimensions, format it, and insert it in the page.
+2. Create a `Block` of text, format it, and draw it on top of the rectangle with the `FixedContentEditor` by specifying its `Position`.
 3. Draw a second rectangle at a different position.
-4. Create an image **Block** and draw it on top of the second rectangle with the **FixedContentEditor** while specifying its **Position**.
-5. Export the **RadFixedDocument** to PDF.
+4. Create an image `Block` and draw it on top of the second rectangle with the `FixedContentEditor` while specifying its `Position`.
+5. Export the `RadFixedDocument` to PDF.
 
 ![RadPdfProcessing Draw Rectangles With Text and Image content](images/draw-rectangles-text-images-radpdfprocessing-result.png)
 
@@ -130,8 +131,7 @@ Process.Start(psi);
 
 ## See Also
 
-- [Text and Graphic Properties]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
-- [Path]({%slug radpdfprocessing-model-path%})
-- [Geometry]({%slug radpdfprocessing-concepts-geometry%})
-- [PdfProcessing Image]({%slug radpdfprocessing-model-image%})
----
+* [Text and Graphic Properties]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
+* [Path]({%slug radpdfprocessing-model-path%})
+* [Geometry]({%slug radpdfprocessing-concepts-geometry%})
+* [PdfProcessing Image]({%slug radpdfprocessing-model-image%})

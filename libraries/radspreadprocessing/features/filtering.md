@@ -10,96 +10,65 @@ position: 15
 
 # Filtering
 
+Filtering allows you to hide and show certain rows of a range, based on different criteria. It provides a way to work with the relevant set of data.
 
-
-This article describes what is filtering and filters and how to work with them through the document model. It contains the following sections:
-
-## What is Filtering?
-
-The filtering feature allows the user to hide and show certain rows of a range, based on different criteria. It provides an easy way to work with just the relevant set of data.
-        
-
-The information about the filtering applied to a worksheet is contained in the [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})'s property __Filter__, which is of type __AutoFilter__. Through it, you can set and modify the current range which is filtered and add and remove filters to its columns. Each column can have only one filter applied to it. The interface implemented by all filters is __IFilter__.
-        
+The information about the filtering applied to a worksheet is contained in the [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) `Filter` property, which is of type `AutoFilter`. Through it, you can set and modify the filtered range and add and remove filters to its columns. Each column can have only one filter applied to it. The interface implemented by all filters is `IFilter`.
 
 ## AutoFilter
 
-The __AutoFilter__ class exposes the following public members:
-        
+The `AutoFilter` class exposes the following public members:
 
-* __FilterRange__: Property of type __CellRange__. Represents the range to which a filter is currently applied. The worksheet can have only one range filtered at a time. If filtering is not applied, the filtered range is __null__.
-            
+* `FilterRange`: Property of type `CellRange`. Represents the range to which a filter is applied. The worksheet can have only one range filtered at a time. If filtering is not applied, the filtered range is `null`.
 
-* __void SetFilters(IEnumerable&lt;IFilter&gt; filters)__: Sets multiple filters on the filtered range and applies them.
-            
+* `void SetFilters(IEnumerable<IFilter> filters)`: Sets multiple filters on the filtered range and applies them.
 
-* __void SetFilter(IFilter filter)__: Sets a single filter on the filtered range and applies it.
-            
+* `void SetFilter(IFilter filter)`: Sets a single filter on the filtered range and applies it.
 
-* __IFilter GetFilter(int relativeColumnIndex)__: Retrieves the filter applied on the column with the specified index.
-            
+* `IFilter GetFilter(int relativeColumnIndex)`: Retrieves the filter applied on the column with the specified index.
 
-* __bool RemoveFilter(IFilter filter)__: Removes the specified filter and shows all rows which were hidden by it.
-            
+* `bool RemoveFilter(IFilter filter)`: Removes the specified filter and shows all rows that were hidden by it.
 
-* __bool RemoveFilter(int relativeColumnIndex)__: Removes the filter applied on the column with the specified index and shows all rows which were hidden by it.
-            
+* `bool RemoveFilter(int relativeColumnIndex)`: Removes the filter applied on the column with the specified index and shows all rows that were hidden by it.
 
-* __void ClearFilters()__: Removes all filters and shows all rows of the filtered range.
-            
+* `void ClearFilters()`: Removes all filters and shows all rows of the filtered range.
 
-* __void ReapplyFilter(IFilter filter)__: Reapplies the specified filter.
-            
+* `void ReapplyFilter(IFilter filter)`: Reapplies the specified filter.
 
-* __void ReapplyFilter(int relativeColumnIndex)__: Reapplies the filter applied to the column with the specified index.
-            
+* `void ReapplyFilter(int relativeColumnIndex)`: Reapplies the filter applied to the column with the specified index.
 
->The column indices which are used to work with the filters are zero-based and relative to the filtered range.
-          
+>The column indices used to work with the filters are zero-based and relative to the filtered range.
 
 ## IFilter
 
-All the filters which can be applied to the filter range implement the __IFilter__ interface. The interface exposes the following members:
-        
+All the filters that can be applied to the filter range implement the `IFilter` interface. The interface exposes the following members:
 
-* __RelativeColumnIndex__: Gets the index of the column to which the filter is applied. The index is relative to the beginning of the filter range.
-            
+* `RelativeColumnIndex`: Gets the index of the column to which the filter is applied. The index is relative to the beginning of the filter range.
 
-* __object GetValue(Cells cells, int rowIndex, int columnIndex)__: Gets the value of the cell at the specified index. This value is used to determine whether the row should be hidden by the filter.
-            
+* `object GetValue(Cells cells, int rowIndex, int columnIndex)`: Gets the value of the cell at the specified index. This value determines whether the row is hidden by the filter.
 
-* __bool ShouldShowValue(object value)__: Determines whether the row which contains the specified value should be shown.
-            
+* `bool ShouldShowValue(object value)`: Determines whether the row that contains the specified value is shown.
 
-The __GetValue()__ method provides the value which the __ShouldShowValue()__ method uses to evaluate whether the current row should be hidden or shown.
-        
+The `GetValue()` method provides the value that the `ShouldShowValue()` method uses to evaluate whether the row is hidden or shown.
 
-The diagram in __Figure 1__ shows the different types of filters, which inherit the __IFilter__ interface, and the classes which implement them:
-        
+The diagram in **Figure 1** shows the different types of filters that inherit the `IFilter` interface and the classes that implement them:
 
 #### Figure 1: Filter types
 
-![Rad Spread Processing Filtering 01](images/RadSpreadProcessing_Filtering_01.png)
+![Filter types class diagram](images/RadSpreadProcessing_Filtering_01.png)
 
 ## ValuesCollectionFilter
 
-The values collection filter is a filter which holds a collection of strings and date group items. If the filter encounters a date in the column it filters, it compares it to the date group items in its collection. If there isn't a date group item which matches it, the row is hidden. If the value is not a date the filter compares the formatted string representation of the cell value with the collection of string values. If it is present in the collection, the row is shown, otherwise it is hidden. If the cell is empty, the filter uses the value of the boolean property __Blank__ to determine whether the row should be shown or hidden.
-        
+The values collection filter holds a collection of strings and date group items. If the filter encounters a date in the column it filters, it compares the date to the date group items in its collection. If no date group item matches, the row is hidden. If the value is not a date, the filter compares the formatted string representation of the cell value with the collection of string values. If the value is present in the collection, the row is shown. Otherwise the row is hidden. If the cell is empty, the filter uses the value of the Boolean property `Blank` to determine whether the row is shown or hidden.
 
-Other than the members of the __IFilter__ interface, the __ValuesCollectionFilter__ class exposes the following members specific to it:
-        
+In addition to the members of the `IFilter` interface, the `ValuesCollectionFilter` class exposes the following members:
 
-* __StringValues__: The collection of strings values.
-            
+* `StringValues`: The collection of string values.
 
-* __DateItems__: The collection of date group items.
-            
+* `DateItems`: The collection of date group items.
 
-* __Blank__: The value indicating whether the blank cells will be shown or not.
-            
+* `Blank`: The value indicating whether blank cells are shown.
 
-__Example 1__ shows how to create a __ValuesCollectionFilter__.
-        
+**Example 1** shows how to create a `ValuesCollectionFilter`.
 
 #### __Example 1: Create ValuesCollectionFilter__
 
@@ -107,40 +76,29 @@ __Example 1__ shows how to create a __ValuesCollectionFilter__.
 
 
 
-This filter created in __Example 1__ will hide all rows which contain dates which are not within the year of 2013 or within March 2014. It will also hide the rows where the formatted string value of the cell does not correspond to any of the strings of the stringItems list. The blank items will be shown.
-        
+The filter created in **Example 1** hides all rows that contain dates not within the year 2013 or within March 2014. It also hides the rows where the formatted string value of the cell does not correspond to any of the strings in the stringItems list. Blank items are shown.
 
 ## CustomFilter
 
-The custom filter is a filter which contains one or two criteria which are used to filter the column to which the filter is assigned. If the value of the cell doesn't satisfy the criteria, the respective row is hidden by the filter.
-        
+The custom filter contains one or two criteria used to filter the column to which the filter is assigned. If the value of the cell does not satisfy the criteria, the respective row is hidden by the filter.
 
-Other than the members of the __IFilter__ interface, the __CustomFilter__ class exposes the following members specific to it:
-        
+In addition to the members of the `IFilter` interface, the `CustomFilter` class exposes the following members:
 
-* __Criteria1__: Property of type CustomFilterCriteria specifying the first criteria.
-            
+* `Criteria1`: Property of type `CustomFilterCriteria` specifying the first criteria.
 
-* __Criteria2__: Property of type CustomFilterCriteria specifying the second criteria. The second criteria can be null.
-            
+* `Criteria2`: Property of type `CustomFilterCriteria` specifying the second criteria. The second criteria can be null.
 
-* __LogicalOperator__: The logical operator which determines the logical relationship between the criteria. It can have two values:
-            
+* `LogicalOperator`: The logical operator that determines the logical relationship between the criteria. It can have two values:
 
 	* And
-                
 
 	* Or
-                
 
-The criteria is represented by the __CustomFilterCriteria__ class. Each criteria contains the following:
-        
+The criteria is represented by the `CustomFilterCriteria` class. Each criteria contains the following:
 
-* __FilterValue__: The value to which the cell value is compared.
-            
+* `FilterValue`: The value to which the cell value is compared.
 
-* __ComparisonOperator__: The operator which indicates how the cell value should compare to the FilterValue. The comparison operator can be:
-            
+* `ComparisonOperator`: The operator that indicates how the cell value compares to the `FilterValue`. The comparison operator can be:
 
 	* EqualsTo
 
@@ -154,8 +112,7 @@ The criteria is represented by the __CustomFilterCriteria__ class. Each criteria
 
 	* NotEqualsTo
 
-__Example 2__ shows how to create a custom filter.
-        
+**Example 2** shows how to create a custom filter.
 
 #### __Example 2: Create CustomFilter__
 
@@ -163,37 +120,27 @@ __Example 2__ shows how to create a custom filter.
 
 
 
-Note that even though the __FilterValue__ is of type string, internally the filter will attempt to parse it. This is the opposite behavior to the __ValuesCollectionFilter__ which compares only the string representations of the values. In this case, the filter will display all rows which contain a number value greater than -5 or a text value equal to "Test string".
-        
+Note that even though the `FilterValue` is of type string, internally the filter attempts to parse it. This is the opposite behavior to the `ValuesCollectionFilter`, which compares only the string representations of the values. In this case, the filter displays all rows that contain a number value greater than -5 or a text value equal to "Test string".
 
 ## TopFilter
 
-The top filter is a filter which displays a given number or percent of the total values in the column it filters, taking the first top or bottom values. It hides all other rows.
-        
+The top filter displays a given number or percent of the total values in the column it filters, taking the first top or bottom values. It hides all other rows.
 
-Other than the members of the __IFilter__ interface, the __TopFilter__ class exposes the following members specific to it:
-        
+In addition to the members of the `IFilter` interface, the `TopFilter` class exposes the following members:
 
-* __TopFilterType__: The value indicating whether the filter should display the top or bottom values and whether the number of values will be indicated as a number of items or as percent of the total number of items. The top filter type can be:
-            
+* `TopFilterType`: The value indicating whether the filter displays the top or bottom values, and whether the number of values is indicated as a number of items or as a percent of the total number of items. The top filter type can be:
 
 	* TopNumber
-                
 
 	* BottomNumber
-                
 
 	* TopPercent
-                
 
 	* BottomPercent
-                
 
-* __Value__: The number of items or the percent of the total number of items which will be displayed by the filter.
-            
+* `Value`: The number of items or the percent of the total number of items displayed by the filter.
 
-__Example 3__ shows how to create a top filter.
-        
+**Example 3** shows how to create a top filter.
 
 #### __Example 3: Create TopFilter__
 
@@ -201,44 +148,34 @@ __Example 3__ shows how to create a top filter.
 
 
 
-The filter will show the top 30 percent of all values in the filtered column. Note that the filter includes only number values both in its estimate how many values to show and which values to show. If the filtered column includes for example a text value, it will be hidden, even if the filter is supposed to show the top 100 percent of values.
-        
+The filter shows the top 30 percent of all values in the filtered column. Note that the filter includes only number values both in its estimate of how many values to show and which values to show. If the filtered column includes a text value, it is hidden, even if the filter shows the top 100 percent of values.
 
 ## DynamicFilter
 
-The dynamic filter is a filter which shows or hides the rows in the column it filters based on a condition chosen from a set of predetermined conditions.
-        
+The dynamic filter shows or hides the rows in the column it filters based on a condition chosen from a set of predetermined conditions.
 
-Other than the members of the __IFilter__ interface, the __DynamicFilter__ class exposes only one property specific to it:
-        
+In addition to the members of the `IFilter` interface, the `DynamicFilter` class exposes only one property:
 
-* __DynamicFilterType__: The type of the dynamic filter, which determines what condition the filter should use to filter the column it is assigned to. The dynamic filter type can be used from the values of the [DynamicFilterType enumaration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Filtering.DynamicFilterType.html).
-            
+* `DynamicFilterType`: The type of the dynamic filter, which determines what condition the filter uses to filter the column. The dynamic filter type can be used from the values of the [DynamicFilterType enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.Filtering.DynamicFilterType.html).
 
-__Example 4__ demonstrates how to create a dynamic filter.
-        
+**Example 4** demonstrates how to create a dynamic filter.
 
 #### __Example 4: Create DynamicFilter__
 
 <snippet id='codeblock-chp'/>
 
 
-The filter will show only the values which are dates and which fall within the week prior to the application of the filter.
-        
+The filter shows only dates that fall within the week prior to the application of the filter.
 
 ## ForeColorFilter
 
-The fore color filter hides or displays the cells in the column it filters based on the color of the text in it.
-        
+The fore color filter hides or displays the cells in the column it filters based on the color of the text.
 
-Other than the members of the __IFilter__ interface, the __ForeColorFilter__ class exposes only one property specific to it:
-        
+In addition to the members of the `IFilter` interface, the `ForeColorFilter` class exposes only one property:
 
-* __Color__: A __ThemableColor__ object representing the color which should be set on the text of the cell in order for it to be displayed. All other cells of the column are hidden.
-            
+* `Color`: A `ThemableColor` object representing the color that must be set on the text of the cell for it to be displayed. All other cells of the column are hidden.
 
-__Example 5__ demonstrates how to create a fore color filter.
-        
+**Example 5** demonstrates how to create a fore color filter.
 
 #### __Example 5: Create ForeColorFilter__
 
@@ -246,22 +183,17 @@ __Example 5__ demonstrates how to create a fore color filter.
 
 
 
-This filter will hide all cells whose text color is not red.
-        
+This filter hides all cells whose text color is not red.
 
 ## FillColorFilter
 
 The fill color filter hides or displays the cells in the column it filters based on their fill.
-        
 
-Other than the members of the __IFilter__ interface, the __FillColorFilter__ class exposes only one property specific to it:
-        
+In addition to the members of the `IFilter` interface, the `FillColorFilter` class exposes only one property:
 
-* __Fill__: The fill the cell needs to have in order for it to be displayed. All other cells of the column are hidden.
-            
+* `Fill`: The fill the cell needs to have for it to be displayed. All other cells of the column are hidden.
 
-__Example 6__ shows hot to create a fill color filter.
-        
+**Example 6** shows how to create a fill color filter.
 
 #### __Example 6: Create FillColorFilter__
 
@@ -269,13 +201,11 @@ __Example 6__ shows hot to create a fill color filter.
 
 
 
-This filter will hide all cells whose fill is not solid red.
-        
+This filter hides all cells whose fill is not solid red.
 
 ## Setting a Filter
 
-In order to set a filter on a range, you need to follow the steps below:
-        
+To set a filter on a range, follow these steps:
 
 * Set the filter range.
 	 									           
@@ -293,7 +223,7 @@ In order to set a filter on a range, you need to follow the steps below:
 	
 	<snippet id='codeblock-cht'/>
 	
-	The relative index specified in the constructor is 1, which means that the filter will be set on the second column of the range, that is, column C.
+	The relative index specified in the constructor is 1, which means that the filter is set on the second column of the range (column C).
             
 
 * Set the filter on the necessary column.
@@ -304,74 +234,63 @@ In order to set a filter on a range, you need to follow the steps below:
 	<snippet id='codeblock-chu'/>
 	
 	
-	**Figure 2** demonstrates the result of the filtering when applied on the values 1-9 in column B and 11-19 in column C.
+	**Figure 2** demonstrates the result of the filtering when applied on the values 1–9 in column B and 11–19 in column C.
 	
     #### Figure 2: Result of the filtering
-    ![Filtering](images/RadSpreadProcessing_Features_Filtering_01.png)
+    ![Filtering result applied on columns B and C](images/RadSpreadProcessing_Features_Filtering_01.png)
 	
 	
-	Alternatively, you can set the filter through the cell selection like in __Example 10__. This approach will automatically set the filter range anew.
+	Alternatively, you can set the filter through the cell selection as in **Example 10**. This approach automatically sets the filter range anew.
         
 
-	#### __Example 10: Set filter through selection__
+	#### __Example 10: Set Filter Through Selection__
 	
 	<snippet id='codeblock-chv'/>
 
 
 
 
->Keep in mind that the first row of the FilterRange is reserved for column headers and will not be included in the actual filtering.
-          
+>The first row of the `FilterRange` is reserved for column headers and is not included in the actual filtering.
 
->tip Note that the filter cannot be set before the range. Attempting to do so will cause an exception.
-          
+>tip The filter cannot be set before the range. Attempting to do so causes an exception.
 
 ## Reapplying a Filter
 
-When a filter is set it is automatically applied. The application of a filter happens only once and if the values or properties of the filtered column change afterwards, the filter needs to be reapplied. This is done by using the overloads of the __ReapplyFilter()__ method. The first overload allows reapplying a filter by the relative index of the column it is applied to. The second - by a __IFilter__ instance.
-        
+When a filter is set, it is automatically applied. The application of a filter happens only once. If the values or properties of the filtered column change afterwards, the filter needs to be reapplied. Use the overloads of the `ReapplyFilter()` method. The first overload reapplies a filter by the relative index of the column it applies to. The second overload reapplies by an `IFilter` instance.
 
-#### __Example 11: Set FilterRange__
+#### __Example 11: Reapply a Filter__
 
 <snippet id='codeblock-chw'/>
 
 
 
->tip Note that attempting to reapply filter on a column which is not filtered causes an exception.
-          
+>tip Attempting to reapply a filter on a column that is not filtered causes an exception.
 
 ## Removing and Clearing Filters
 
-Removing and clearing filters is done using the following methods exposed by the __AutoFilter__ class:
-        
+Remove and clear filters using the following methods exposed by the `AutoFilter` class:
 
-* __RemoveFilter(IFilter filter)__: Removes the specified filter and shows all rows which were hidden by it. Returns true if successful.
-            
+* `RemoveFilter(IFilter filter)`: Removes the specified filter and shows all rows that were hidden by it. Returns true if successful.
 
-* __RemoveFilter(int relativeColumnIndex)__: Removes the filter applied on the column with the specified index and shows all rows which were hidden by it. Returns true if successful.
-            
+* `RemoveFilter(int relativeColumnIndex)`: Removes the filter applied on the column with the specified index and shows all rows that were hidden by it. Returns true if successful.
 
-* __ClearFilters()__: Removes all filters and shows all rows of the filtered range.
-            
+* `ClearFilters()`: Removes all filters and shows all rows of the filtered range.
 
-As is the case with the __ReapplyFilter()__ method, you can remove a filter by instance and by relative index of the column it is applied to.
-        
+As with the `ReapplyFilter()` method, you can remove a filter by instance and by relative index of the column it applies to.
 
-#### __Example 12: Remove filter__
+#### __Example 12: Remove Filter__
 
 <snippet id='codeblock-chx'/>
 
 
 
-In order to remove all applied filters at once use the __ClearFilters()__ method. __ClearFilters()__ will display all rows which were hidden by filtering on the worksheet. However, it will not remove the filtering itself. In order to do this, you need to set the __FilteredRange__ property to __null__.
-        
+To remove all applied filters at once, use the `ClearFilters()` method. `ClearFilters()` displays all rows that were hidden by filtering on the worksheet. It does not remove the filtering itself. To do this, set the `FilteredRange` property to `null`.
 
-Setting the __FilteredRange__ property to null without removing the filters beforehand will automatically remove them.
-        
+Setting the `FilteredRange` property to null without removing the filters beforehand automatically removes them.
 
 ## See Also
 
- * [Sorting]({%slug radspreadprocessing-features-sorting%})
- * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
- * [Document Themes]({%slug radspreadprocessing-features-styling-document-themes%})
- * [Grouping]({%slug radspreadprocessing-features-grouping%})
+* [Sorting]({%slug radspreadprocessing-features-sorting%})
+* [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
+* [Document Themes]({%slug radspreadprocessing-features-styling-document-themes%})
+* [Grouping]({%slug radspreadprocessing-features-grouping%})

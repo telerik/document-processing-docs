@@ -1,19 +1,19 @@
 ---
 title: Overview
-description: The digital signature feature enables you to sign and validate a PDF document. 
+description: The digital signature feature in RadPdfProcessing enables you to sign and validate PDF documents using X509 certificates and signature fields.
 page_title: Digital Signature - Overview
 slug: radpdfprocessing-features-digital-signature
 tags: digital, signature, pdf, signing, validation, radpdfprocessing, x509, certificates, overview
 position: 0
 ---
 
-# What is Digital Signature?
+# Overview
 
-The **digital signature** feature enables you to sign and validate a PDF document. A signature confirms that the document's content originated from the signer and has not been modified in any way. A signed document is considered valid when it has not been changed after the signing, and all of its certificates have a valid trusted root certificate.
+The **digital signature** feature enables you to sign and validate a PDF document. A signature confirms that the document content originated from the signer and has not been modified. A signed document is considered valid when it has not been changed after signing, and all of its certificates have a valid trusted root certificate.
 
 <a name="signing-a-document"><a/>
 
-Telerik **RadPdfProcessing** provides an easy-to-use API that allows you to:
+Telerik **RadPdfProcessing** provides an API that allows you to:
 
 * [Create a PDF document from scratch and add a signature field]({%slug radpdfprocessing-features-digital-signature-getting-started%}). 
 * [Sign PDF documents that contain a predefined signature field](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document).
@@ -26,9 +26,9 @@ Telerik **RadPdfProcessing** provides an easy-to-use API that allows you to:
 
 |Demo|Description|
 |----|----|
-|[PdfProcessing Digitally Sign Document](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document)|This example demonstrates how to digitally sign a PDF.|
-|[PdfProcessing Validate Digital Signature](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature)|This example demonstrates how to validate a digitally signed PDF.|
-|[PdfProcessing Multiple Digital Signatures](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)|This example demonstrates how to digitally sign a PDF without invalidating any existing signatures.|
+|[PdfProcessing Digitally Sign Document](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document)|Demonstrates how to digitally sign a PDF.|
+|[PdfProcessing Validate Digital Signature](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature)|Demonstrates how to validate a digitally signed PDF.|
+|[PdfProcessing Multiple Digital Signatures](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)|Demonstrates how to digitally sign a PDF without invalidating existing signatures.|
 
 
 ## See Also

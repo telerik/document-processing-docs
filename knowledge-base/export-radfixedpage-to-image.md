@@ -1,48 +1,35 @@
 ---
-title: Export RadFixedPage to image
-description: Check this topic to learn how you can create images from PDF pages.
+title: Export RadFixedPage to Image
+description: Learn how to export RadFixedPage instances from PDF documents to image files such as TIFF using the RadPdfViewer ThumbnailFactory class.
 type: how-to
-page_title: Export RadFixedPage to image
+page_title: Export RadFixedPage to Image
 slug: export-radfixedpage-to-image
 position: 0
 tags: radpdfprocessing, pdf, page, image, export, document, processing, fixed
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>below 2020.2.513 or above*</td>
-		<td>RadPdfProcessing</td>
-		<td rowspan="2"><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-	<tr>
-	    <td>below 2020.2.513 or above*</td>
-		<td>RadPdfViewer</td>
-	</tr>	
-</tbody>
-</table>
+## Environment
 
-\* Due to the new PdfViewer's document model transition, there is a difference in the implementation between different assemblies version.
+|Product Version|Product|Author|
+|----|----|----|
+|below 2020.2.513 or above*|RadPdfProcessing|[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)|
+|below 2020.2.513 or above*|RadPdfViewer|[Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov)|
+
+\* Due to the new `RadPdfViewer` document model transition, there is a difference in the implementation between different assembly versions.
 
 ## Description
- 
-How to export RadFixedPage to TIFF file.
+
+How to export a `RadFixedPage` to a TIFF file.
 
 ## Solution
 
-To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/overview) control from the [UI for WPF](https://docs.telerik.com/devtools/wpf/introduction) suite to create images from the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) pages using the **ThumbnailFactory** class.
+To achieve this, use the [RadPdfViewer](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/overview) control from the [UI for WPF](https://docs.telerik.com/devtools/wpf/introduction) suite to create images from the [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) pages by using the `ThumbnailFactory` class.
 
->note The COM threading model for the application has to be a single-threaded apartment (STA). A STAThreadAttribute tag "[STAThread]" should be placed on the class. 
+>note The COM threading model for the application must be a single-threaded apartment (STA). Place a `[STAThread]` attribute on the entry point method.
 
-#### __Assemblies version below 2020.2.513__
+**Example 1: Assembly Versions below 2020.2.513**
+
 ```csharp
 
 	[STAThread]
@@ -87,7 +74,8 @@ To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/
 
 ```
 
-#### __Assemblies version 2020.2.513 or above__
+**Example 2: Assembly Versions 2020.2.513 or Later**
+
 ```csharp
 
 	[STAThread]
@@ -124,3 +112,8 @@ To achieve this we can use the [RadPdfViewer](https://docs.telerik.com/devtools/
 	}
 
 ```
+
+## See Also
+
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})

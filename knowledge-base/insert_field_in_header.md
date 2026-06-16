@@ -1,6 +1,6 @@
 ---
 title: Insert Field in Header
-description: Learn how you can insert a field in the header of a document using WordsProcessing.
+description: Learn how to insert a field in the header of a document to display page numbering or other dynamic content using the RadWordsProcessing library.
 type: how-to 
 page_title: Insert Field in Header 
 slug: insert_field_in_header
@@ -9,19 +9,21 @@ tags: radwordsprocessing, docx, header, field, document, processing, word, words
 res_type: kb
 ---
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
 |2020.3.1019|RadWordsProcessing|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
 
 ## Description
 
-You need to add a field in the header for example to display page numbering. 
+Add a field to the header, for example, to display page numbering. 
 
 ## Solution
 
-This can be achieved by adding a paragraph to the header and then moving the editor position to this paragraph. Once this is done you can insert the field and move the position to another paragraph in the document. 
+Add a paragraph to the header and then move the editor position to this paragraph. After that, insert the field and move the position to another paragraph in the document. 
 
-#### __Insert page numbering in the header__
+**Example 1: Insert Page Numbering in the Header**
 
 ```csharp
 
@@ -47,3 +49,8 @@ This can be achieved by adding a paragraph to the header and then moving the edi
     document.UpdateFields();
     
 ```
+
+## See Also
+
+* [Fields in RadWordsProcessing]({%slug radwordsprocessing-concepts-fields%})
+* [Headers and Footers]({%slug radwordsprocessing-model-headers-footers%})

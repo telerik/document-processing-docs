@@ -15,10 +15,11 @@ res_type: kb
 
 ## Description
 
-[RadPdfProcessing]({%slug radpdfprocessing-overview%}) allows you to create [Tables]({%slug radpdfprocessing-editing-table-overview%}). A common requirement is to have a header row for the table. This article shows how to simulate such functionality.
+[RadPdfProcessing]({%slug radpdfprocessing-overview%}) allows you to create [Tables]({%slug radpdfprocessing-editing-table-overview%}). A common requirement is to have a header row for the table. This article shows how to simulate this feature.
 
 ## Solution
-Table header row can be added as a standard TableRow with bold text. 
+
+Add a table header row as a standard `TableRow` with bold text.
 
 ```csharp        
             FontFamily fFamily = new FontFamily("Verdana");
@@ -67,7 +68,7 @@ Table header row can be added as a standard TableRow with bold text.
 
 ![Table Row Header](images/pdf-table-header-row.png)    
 
->note For .NET Standard projects, it is necessary to implement a FontsProvider to get the correct font: [Fonts]({%slug radpdfprocessing-cross-platform-fonts%}).
+>note For .NET Standard projects, you must implement a `FontsProvider` to get the correct font: [Fonts]({%slug radpdfprocessing-cross-platform-fonts%}).
 
 ## See Also
 

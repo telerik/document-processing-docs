@@ -1,6 +1,6 @@
 ---
 title: Setting Image Opacity in RadPdfProcessing for Document Processing
-description: Learn how to set the opacity of images in RadPdfProcessing when creating RadFixedDocument
+description: Learn how to set the opacity of images in RadPdfProcessing when creating a RadFixedDocument with semi-transparent images.
 type: how-to
 page_title: Setting Image Opacity in RadPdfProcessing for Document Processing | Telerik UI for PDF Processing
 slug: setting-image-opacity-radpdfprocessing
@@ -21,15 +21,15 @@ How to create PDFs with images that have less than 100% opacity (semi-transparen
 
 ## Solution
 
-Currently, PdfProcessing does not provide an API for setting the opacity of images. However, you can work around this limitation by modifying the opacity of the image before inserting it into the RadFixedDocument.
+`RadPdfProcessing` does not provide an API for setting the opacity of images. You can work around this limitation by changing the opacity of the image before you insert it into the `RadFixedDocument`.
 
-Here's an example of how you can achieve this using the provided code:
+The following example shows how to achieve this:
 
-1. Create a new `Bitmap` object from the original image and set its opacity using the `SetImageOpacity` method.
-2. Save the modified image to a stream in PNG format.
+1. Create a new `Bitmap` object from the original image and set its opacity with the `SetImageOpacity` method.
+2. Save the changed image to a stream in PNG format.
 3. Create an `ImageSource` from the image stream.
-4. Use a `FixedContentEditor` to draw the image onto the RadFixedPage.
-5. Export the RadFixedDocument to a PDF file using the PdfFormatProvider.
+4. Use a `FixedContentEditor` to draw the image onto the `RadFixedPage`.
+5. Export the `RadFixedDocument` to a PDF file with the `PdfFormatProvider`.
 6. Open the PDF file.
 
 ```csharp
@@ -99,8 +99,8 @@ internal class Program
 }
 ```
 
-Please note that this is a workaround and not an official feature of the PdfProcessing. There is a feature request logged in our backlog to add an API for setting image opacity using PdfProcessing. You can vote for and subscribe to this feature request to receive updates on its progress: [PdfProcessing: Add API for setting Image opacity](https://feedback.telerik.com/document-processing/1634368-pdfprocessing-add-api-for-setting-image-opacity)
+This approach is a workaround and not an official feature of `RadPdfProcessing`. A feature request exists in the backlog to add an API for setting image opacity. You can vote for and subscribe to the feature request to receive updates on its progress: [PdfProcessing: Add API for setting Image opacity](https://feedback.telerik.com/document-processing/1634368-pdfprocessing-add-api-for-setting-image-opacity)
 
 ## See Also
 
-- [RadPdfProcessing Documentation](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})

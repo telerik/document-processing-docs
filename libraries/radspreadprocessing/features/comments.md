@@ -15,85 +15,86 @@ platforms: mvc, ajax, blazor, wpf, winforms, winui, core
 |Minimum Version|R2 2022|
 |----|----|
 
-RadSpreadProcessing supports working with comments. Comments are used for marking information about a cell's data and can have one or multiple [Replies](#replies). All comments can be found in the __Comments__ property of the worksheet, which is of the type __CommentCollection__. This collection holds __SpreadsheetComment__ objects, which represent the comments. Each comment has the following members:
+RadSpreadProcessing supports working with comments. Comments mark information about a cell's data and can have one or multiple [Replies](#replies). All comments are stored in the `Comments` property of the worksheet, which is of type `CommentCollection`. This collection holds `SpreadsheetComment` objects that represent the comments. Each comment has the following members:
 
 ***Properties***:
 
-* __CellIndex:__  Gets or sets the cell index the comment is assigned to. 
-* __Text:__ Gets or sets the text of the comment. 
-* __CreationDate:__ Gets or sets the date when the comment is created. Nullable.
-* __Author:__ Gets or sets the author assigned to the comment.
-* __Replies:__ Gets the comment replies. The list is sorted by CreationDate.
-* __IsResolved:__ Gets or sets a value indicating whether the comment is resolved.
+* `CellIndex`: Gets or sets the cell index the comment is assigned to.
+* `Text`: Gets or sets the text of the comment.
+* `CreationDate`: Gets or sets the date when the comment is created. Nullable.
+* `Author`: Gets or sets the author assigned to the comment.
+* `Replies`: Gets the comment replies. The list is sorted by CreationDate.
+* `IsResolved`: Gets or sets a value indicating whether the comment is resolved.
 
- >note All of the above properties will push a change to the undo stack when modified. 
+ >note All of the above properties push a change to the undo stack when modified. 
  
 ***Methods***:
 
-* __AddReply:__ Adds a SpreadsheetCommentReply to the ReplySortedCollection. The collection will be re-sorted by SpreadsheetReply`s CreationDate in ascending order after adding an object.
-* __RemoveReply:__ Removes the specified reply from the collection.
+* `AddReply`: Adds a `SpreadsheetCommentReply` to the `ReplySortedCollection`. The collection is re-sorted by the reply's `CreationDate` in ascending order after adding an object.
+* `RemoveReply`: Removes the specified reply from the collection.
 
 ## Working with CommentCollection
 
-### Adding comments
+### Adding Comments
 
-To add a comment you need to specify the cell index to which the comment will be related, the author, the text content, and the creation date. Specifying the creation date is optional and by default, its value is the current date and time.
+To add a comment, specify the cell index to which the comment relates, the author, the text content, and the creation date. The creation date is optional and defaults to the current date and time.
 
-#### Example 1: Add comment
+**Example 1: Add a Comment**
 
 <snippet id='codeblock-cgm'/>
 
-The above snippet will add a comment in cell B2.
+The previous snippet adds a comment in cell B2.
 
 
 ### Removing Comments
 
-To remove a comment, you should specify the comment instance. This instance can be obtained from the __CommentCollection__.
+To remove a comment, specify the comment instance. You can obtain this instance from the `CommentCollection`.
 
-#### Example 2: Remove comment
+**Example 2: Remove a Comment**
 
 <snippet id='codeblock-cgn'/>
 
 
 ## Replies
 
-Each comment can be replied to, forming a thread of information. All replies can be found in the __Replies__ property of the comment, which is of the type __ReplySortedCollection__. This collection holds __SpreadsheetCommentReply__ objects which represent the replies. The __ReplySortedCollection__ has the following members:
+Each comment can be replied to, forming a thread of information. All replies are stored in the `Replies` property of the comment, which is of type `ReplySortedCollection`. This collection holds `SpreadsheetCommentReply` objects that represent the replies. The `ReplySortedCollection` has the following members:
 
 ***Properties***:
 
-* __Count:__ Gets the number of elements contained in the ReplySortedCollection.
+* `Count`: Gets the number of elements contained in the `ReplySortedCollection`.
 
 ***Methods***:
 
-* __Add:__ Adds a __SpreadsheetCommentReply__ to the __ReplySortedCollection__. The collection will be re-sorted by __SpreadsheetReply`s__ CreationDate in ascending order after adding an object. Requires an object of type __SpreadsheetCommentReply__ and can be used for adding existing replies. For adding a new reply, it is best to use the __SpreadsheetComment.AddReply()__ method.
-* __Remove:__ Removes the specified __SpreadsheetCommentReply__ object from the ReplySortedCollection.
-* __RemoveAt:__ Removes the element at the specified index of the __ReplySortedCollection__.
-* __Clear:__ Removes all elements from the __ReplySortedCollection__.
-* __Contains:__ Determines whether an element is in the __ReplySortedCollection__.
-* __CopyTo:__ Copies the entire __ReplySortedCollection__ to a compatible one-dimensional array, starting at the specified index of the target array.
+* `Add`: Adds a `SpreadsheetCommentReply` to the `ReplySortedCollection`. The collection is re-sorted by `CreationDate` in ascending order after adding an object. Requires an object of type `SpreadsheetCommentReply` and can be used for adding existing replies. For adding a new reply, use the `SpreadsheetComment.AddReply()` method.
+* `Remove`: Removes the specified `SpreadsheetCommentReply` object from the `ReplySortedCollection`.
+* `RemoveAt`: Removes the element at the specified index of the `ReplySortedCollection`.
+* `Clear`: Removes all elements from the `ReplySortedCollection`.
+* `Contains`: Determines whether an element is in the `ReplySortedCollection`.
+* `CopyTo`: Copies the entire `ReplySortedCollection` to a compatible one-dimensional array, starting at the specified index of the target array.
 
 
-#### Example 3: Working with Replies
+**Example 3: Working with Replies**
 
 <snippet id='codeblock-cgo'/>
 
 
 ### Events
 
-Both __CommentCollection__ and __ReplySortedCollection__ expose the following events, which work identically for both types:
-* __Changing:__ Occurs prior to changing the collection.
-* __Changed:__ Occurs after the collection has changed.
+Both `CommentCollection` and `ReplySortedCollection` expose the following events, which work identically for both types:
+
+* `Changing`: Occurs prior to changing the collection.
+* `Changed`: Occurs after the collection has changed.
 
 The two events for both collections use similar enumeration types for event arguments, with two possible values:
  
-* __Add:__ Used when Adding a Comment or Reply
-* __Remove:__ Used when Removing a Comment or Reply
+* `Add`: Used when adding a comment or reply.
+* `Remove`: Used when removing a comment or reply.
 
-#### Example 4: Changing the author of a comment upon adding it to the CommentCollection using the Changing event
+**Example 4: Change the Author of a Comment upon Adding It to the CommentCollection Using the Changing Event**
 
 <snippet id='codeblock-cgp'/>
 
-#### Example 5: Changing the author of a reply upon adding it to the ReplySortedCollection using the Changing event
+**Example 5: Change the Author of a Reply upon Adding It to the ReplySortedCollection Using the Changing Event**
 
 <snippet id='codeblock-cgq'/>
 
@@ -101,7 +102,7 @@ The two events for both collections use similar enumeration types for event argu
 
 ## See Also
 
- * [Working with Notes]({%slug radspreadprocessing-features-notes%})
- * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
- * [Comments vs Notes in RadSpreadProcessing]({%slug comments-vs-notes-in-radspreadprocessing%})
- * [SpreadProcessing Add Comments Demo](https://demos.telerik.com/document-processing/spreadprocessing/comments)
+* [Working with Notes]({%slug radspreadprocessing-features-notes%})
+* [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
+* [Comments vs Notes in RadSpreadProcessing]({%slug comments-vs-notes-in-radspreadprocessing%})
+* [SpreadProcessing Add Comments Demo](https://demos.telerik.com/document-processing/spreadprocessing/comments)

@@ -1,6 +1,6 @@
 ---
 title: Resolving Unexpected Per-Monitor DPI Awareness in WinForms Apps
-description: Fix a WinForms application that unexpectedly becomes (per‑monitor) DPI aware and changes size when using controls depending on the Telerik Document Processing libraries.
+description: Fix a WinForms application that unexpectedly becomes per-monitor DPI aware and changes size when using controls that depend on the Telerik Document Processing libraries.
 type: how-to 
 page_title: Why Your WinForms App Resizes - DPI Awareness and Telerik Document Processing Explained
 slug: fix-winforms-runtime-dpi-aware-application
@@ -17,23 +17,23 @@ res_type: kb
 
 ## Description
 
-A WinForms application may appear smaller (or larger) at runtime after using [Document Processing Libraries]({%slug introduction%}) (**DPL**) functionality or [DPL-dependent Telerik controls](https://docs.telerik.com/devtools/winforms/integration-with-other-telerik-products/document-processing-libraries#telerik-ui-for-winforms-integration) (e. g. **RadPdfViewer**, **RadSpreadsheet**). This can occur, for example, when **exporting data**, loading a document, or instantiating types from assemblies used by:
+A WinForms application may appear smaller (or larger) at runtime after using [Document Processing Libraries]({%slug introduction%}) (**DPL**) functionality or [DPL-dependent Telerik controls](https://docs.telerik.com/devtools/winforms/integration-with-other-telerik-products/document-processing-libraries#telerik-ui-for-winforms-integration) (for example, **RadPdfViewer**, **RadSpreadsheet**). This can occur when you export data, load a document, or initialize types from assemblies used by these controls.
 
 These dependencies internally rely on WPF assemblies where DPI awareness is enabled at the assembly level. The moment a type from such an assembly is initialized, the hosting WinForms process can become DPI-aware.
 
 ## Solution
 
-You can choose between two approaches:
+Choose between two approaches:
 
-### 1. Make the application explicitly DPI-aware
+### 1. Make the Application Explicitly DPI-Aware
 
-With this approach your app will look smaller when started. It will not look blurry on HDPI displays. Detailed information is available in the [DPI Support](https://docs.telerik.com/devtools/winforms/telerik-presentation-framework/dpi-support) article.
+With this approach your application looks smaller when started. It does not look blurry on HDPI displays. Detailed information is available in the [DPI Support](https://docs.telerik.com/devtools/winforms/telerik-presentation-framework/dpi-support) article.
 
-### 2. Keep (or force) the application DPI-unaware (Windows 10 only)
+### 2. Keep (or Force) the Application DPI-Unaware (Windows 10 Only)
 
-This approach works only on Windows 10. If you intend to use your application on machines where the DPI scaling is larger than 100 percent, you should explicitly set the application to be DPI-unaware
+This approach works only on Windows 10. If you intend to use your application on machines where the DPI scaling is larger than 100 percent, explicitly set the application to be DPI-unaware:
 
-#### Force process DPI unaware before using a Document Processing type
+#### Force Process DPI Unaware Before Using a Document Processing Type
 
 ```csharp
 private void workbookTestButton_Click(object sender, EventArgs e)

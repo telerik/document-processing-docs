@@ -1,6 +1,6 @@
 ---
 title: Add, Remove and Reorder Worksheets
-description: Learn how to add, remove, and reorder worksheets inside a workbook in RadSpreadProcessing.
+description: Learn how to add, remove, and reorder worksheets inside a workbook using the Worksheets collection in RadSpreadProcessing.
 page_title: Add, Remove and Reorder Worksheets
 slug: radspreadprocessing-working-with-worksheets-add-remove-worksheets
 tags: worksheet, spreadsheet, radspreadprocessing, add, remove, reorder, workbook, move
@@ -10,19 +10,15 @@ position: 1
 
 # Add, Remove and Reorder Worksheets
 
+The following sections describe how to add, remove, and reorder worksheets inside a workbook.
 
-
-This article demonstrates how to add, remove and reorder worksheets inside a workbook.
-      
 ## Add Worksheets
 
-Adding a new worksheet to a workbook can be easily achieved through its __Worksheets__ collection. The collection exposes an __Add()__ method that does not take arguments and returns the instance of the newly created worksheet. By default worksheets are assigned the first available name in the sequence Sheet1, Sheet2, Sheet3… You can easily change the name of the worksheet through the __Worksheet.Name__ property. More information about renaming a worksheet is available in the [Rename a Worksheet]({%slug radspreadprocessing-working-with-worksheets-rename-worksheet%}) article.
-        
+To add a new worksheet to a workbook, use its `Worksheets` collection. The collection exposes an `Add()` method that does not take arguments and returns the instance of the newly created worksheet. By default, worksheets are assigned the first available name in the sequence Sheet1, Sheet2, Sheet3, and so on. You can change the name of the worksheet through the `Worksheet.Name` property. For more information about renaming a worksheet, refer to [Rename a Worksheet]({%slug radspreadprocessing-working-with-worksheets-rename-worksheet%}).
 
-__Example 1__ creates a workbook from scratch and adds a single worksheet to it. Since this is the first worksheet in the workbook, it is also set as the active worksheet. All worksheets added after it will not become active.
-        
+**Example 1** creates a workbook from scratch and adds a single worksheet to it. Since this is the first worksheet in the workbook, it is also set as the active worksheet. All worksheets added after it do not become active.
 
-#### __Example 1: Create a workbook and add a worksheet to it__
+**Example 1: Create a Workbook and Add a Worksheet to It**
 
 <snippet id='codeblock-cse'/>
 
@@ -30,21 +26,19 @@ __Example 1__ creates a workbook from scratch and adds a single worksheet to it.
 
 ## Remove Worksheets
 
-The __Worksheets__ collection of the workbook offers two methods for removing worksheets: __Remove()__ and __RemoveAt()__. The former method requires the worksheet name or the worksheet instance to be passed as an argument. The latter allows you specify the index of the worksheet you would like to remove.
-        
+The `Worksheets` collection of the workbook offers two methods for removing worksheets: `Remove()` and `RemoveAt()`. The `Remove()` method requires the worksheet name or the worksheet instance as an argument. The `RemoveAt()` method allows you to specify the index of the worksheet you want to remove.
 
-__Example 2__ creates a workbook and adds four worksheets. All worksheets are with their default names: Sheet1, Sheet2, Sheet3 and Sheet4. The code further demonstrates how to remove three worksheets using all of the aforementioned remove methods.
-        
+**Example 2** creates a workbook and adds four worksheets. All worksheets have their default names: Sheet1, Sheet2, Sheet3, and Sheet4. The code further demonstrates how to remove three worksheets using the remove methods listed previously.
 
-#### __Example 2: Add and remove worksheets__
+**Example 2: Add and Remove Worksheets**
 
 <snippet id='codeblock-csf'/>
 
 
 ## Reorder Worksheets
 
-If you would like to change the order the worksheets appear inside the workbook, you can use the **Move()** method of the **Sheets** collection. The method allows you to move one or more consecutive sheets to a specified position. In **Example 3**, you can see how you can insert 4 sheets and move the last one to the first position in the collection. When the workbook is visualized, the fourth sheet will be the first one visible in the sheet tabs.
+To change the order in which worksheets appear inside the workbook, use the `Move()` method of the `Sheets` collection. The method allows you to move one or more consecutive sheets to a specified position. **Example 3** shows how to insert four sheets and move the last one to the first position in the collection. When the workbook is visualized, the fourth sheet is the first one visible in the sheet tabs.
 
-#### __Example 3: Add and reorder worksheets__
+**Example 3: Add and Reorder Worksheets**
 
 <snippet id='codeblock-csg'/>

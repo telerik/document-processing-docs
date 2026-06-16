@@ -17,22 +17,23 @@ ticketid: 1698635
 
 ## Description
 
-This article describes how to apply multilevel list numbering and other specific styles to each level of [Table Of Contents]({%slug radwordsprocessing-concepts-toc-field%}) (TOC) in a DOCX document, such as font size, indentations, and font weight.
+This article shows how to apply multilevel list numbering and other specific styles to each level of [Table Of Contents]({%slug radwordsprocessing-concepts-toc-field%}) (TOC) in a DOCX document, such as font size, indentations, and font weight.
 
 This knowledge base article also answers the following questions:
-- How to add multilevel list numbering to a TOC in Telerik WordsProcessing?
-- How to customize TOC level styles programmatically?
-- How to use ParagraphProperties and CharacterProperties to style a TOC?
+
+* How to add multilevel list numbering to a TOC in Telerik WordsProcessing?
+* How to customize TOC level styles programmatically?
+* How to use `ParagraphProperties` and `CharacterProperties` to style a TOC?
 
 ## Solution
 
-To achieve a multilevel list numbering in your [Table Of Contents]({%slug radwordsprocessing-concepts-toc-field%}) (TOC) and apply custom styles to each level, follow these steps:
+To achieve multilevel list numbering in your [Table Of Contents]({%slug radwordsprocessing-concepts-toc-field%}) (TOC) and apply custom styles to each level, follow these steps:
 
-1. Set the [NumberingFieldsProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) for the hierarchical numbering functionality.
+1. Set the [`NumberingFieldsProvider`]({%slug radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider%}) for the hierarchical numbering functionality.
 2. Load your document using the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
 3. Add a table of contents field using the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
-4. Configure hierarchical numbering by adding a list of type [NumberedHierarchical]({%slug radwordsprocessing-concepts-lists%}).
-5. Style each TOC level by specifying its properties using [ParagraphProperties]({%slug radwordsprocessing-concepts-style-properties%}#style-properties-in-styles) and [CharacterProperties]({%slug radwordsprocessing-concepts-style-properties%}#style-properties-in-styles).
+4. Configure hierarchical numbering by adding a list of type [`NumberedHierarchical`]({%slug radwordsprocessing-concepts-lists%}).
+5. Style each TOC level by specifying its properties with [ParagraphProperties]({%slug radwordsprocessing-concepts-style-properties%}#style-properties-in-styles) and [CharacterProperties]({%slug radwordsprocessing-concepts-style-properties%}#style-properties-in-styles).
 
 ### Implementation
 

@@ -1,6 +1,6 @@
 ---
 title: Adding a Barcode to a PDF Document using PdfProcessing and the WinForms BarcodeView
-description: Learn how to generate a barcode and incorporate it into a PDF document using Telerik products.
+description: Learn how to generate a barcode image and add it to a PDF document using RadPdfProcessing and the WinForms BarcodeView control.
 type: how-to
 page_title: How to Add a Barcode to a PDF with PdfProcessing and the WinForms BarcodeView
 slug: add-barcode-to-pdf-telerik
@@ -21,15 +21,15 @@ Learn how to generate a PDF document and add a barcode to it.
 
 ![Pdf with Barcodes](images/pdf-with-barcodes.png)  
 
->note As of **Q1 2025** RadPdfProcessing provides support for adding Barcodes (1D and 2D) into a PDF document: [Adding Barcode into a Document]({%slug radpdfprocessing-model-formsource-barcode%}).
+>note Starting with **Q1 2025**, RadPdfProcessing provides support for adding barcodes (1D and 2D) to a PDF document: [Adding Barcode into a Document]({%slug radpdfprocessing-model-formsource-barcode%}).
 
 ## Solution
 
 To add a barcode to a PDF document, consider using the [WinForms BarcodeView](https://docs.telerik.com/devtools/winforms/controls/barcodeview/overview): 
 
-1\. First, [generate an image of the barcode](https://docs.telerik.com/devtools/winforms/controls/barcodeview/how-to/export-to-image)
+1. [Generate an image of the barcode](https://docs.telerik.com/devtools/winforms/controls/barcodeview/how-to/export-to-image).
 
-2\. Then, add the [image to the PDF document]({%slug pdf-from-images-with-radfixeddocumenteditor%}). Here is a sample code snippet:
+2. Add the [image to the PDF document]({%slug pdf-from-images-with-radfixeddocumenteditor%}). The following example demonstrates this approach:
 
  ```csharp
     Telerik.WinControls.UI.Barcode.QRCode qrCode1 = new Telerik.WinControls.UI.Barcode.QRCode();
@@ -63,12 +63,12 @@ To add a barcode to a PDF document, consider using the [WinForms BarcodeView](ht
 
 ## Notes
 
-- The WinForms BarcodeView method is suitable for applications where a barcode image can be generated and saved before adding it to the PDF: [Generating a Bar Code Image outside WinForms](https://docs.telerik.com/devtools/winforms/knowledge-base/gridview-generating-barcode-image-non-winforms).
+* The WinForms BarcodeView method is suitable for applications where a barcode image can be generated and saved before adding it to the PDF: [Generating a Bar Code Image outside WinForms](https://docs.telerik.com/devtools/winforms/knowledge-base/gridview-generating-barcode-image-non-winforms).
 
 ## See Also
 
-- [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
-- [WinForms BarcodeView](https://docs.telerik.com/devtools/winforms/controls/barcodeview/overview)
-- [Exporting BarcodeView to Image](https://docs.telerik.com/devtools/winforms/controls/barcodeview/how-to/export-to-image)
-- [Generating a Barcode Image outside WinForms](https://docs.telerik.com/devtools/winforms/knowledge-base/gridview-generating-barcode-image-non-winforms)
+* [RadPdfProcessing Documentation]({%slug radpdfprocessing-overview%})
+* [WinForms BarcodeView](https://docs.telerik.com/devtools/winforms/controls/barcodeview/overview)
+* [Exporting BarcodeView to Image](https://docs.telerik.com/devtools/winforms/controls/barcodeview/how-to/export-to-image)
+* [Generating a Barcode Image outside WinForms](https://docs.telerik.com/devtools/winforms/knowledge-base/gridview-generating-barcode-image-non-winforms)
 

@@ -10,37 +10,27 @@ position: 3
 
 # Clipping
 
-
-
-__Clipping__ is a content element that can be used to define the outline of other content elements like [Image]({%slug radpdfprocessing-model-image%}) and [Path]({%slug radpdfprocessing-model-path%}).
-      
+`Clipping` is a content element that defines the outline of other content elements like [Image]({%slug radpdfprocessing-model-image%}) and [Path]({%slug radpdfprocessing-model-path%}).
 
 ## Creating a Clipping
 
-The __Clipping__ element exposes a single property.
-        
+The `Clipping` element exposes a single property:
 
-* __Clip__: Property of type __GeometryBase__ representing the [Geometry]({%slug radpdfprocessing-concepts-geometry%}) that is used to clip the content element.
-            
+* `Clip`: Property of type `GeometryBase` representing the [Geometry]({%slug radpdfprocessing-concepts-geometry%}) used to clip the content element.
 
-__Example 1__ demonstrates how you can create a Clipping element and assign a __RectangleGeometry__ to its Clip property.
-        
+**Example 1** demonstrates how to create a `Clipping` element and assign a `RectangleGeometry` to its `Clip` property.
 
-#### __Example 1: Create clipping__
+#### __Example 1: Create Clipping__
 
 <snippet id='pdf-clipping-geometry'/>
 
-
-
 ## Using Clipping
 
-All inheritors of the __ContentElementBase__ class expose a __Clipping__ property. Setting it clips the respective content element with the specified clipping. 
-        
+All inheritors of the `ContentElementBase` class expose a `Clipping` property. Setting it clips the respective content element with the specified clipping. 
 
-__Example 2__ demonstrates how to clip an image using the Clipping created in __Example 1__.
-        
+**Example 2** demonstrates how to clip an image using the `Clipping` created in **Example 1**.
 
-#### __Example 2: Use clipping__
+#### __Example 2: Use Clipping__
 
 <snippet id='pdf-image-clipping'/>
 

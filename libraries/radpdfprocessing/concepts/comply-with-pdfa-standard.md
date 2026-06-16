@@ -10,16 +10,16 @@ position: 1
 
 # How to Comply with PDF/A Standard
 
-[PDF/A](http://en.wikipedia.org/?title=PDF/A) is an ISO-standardized version of the PDF (Portable Document Format) specialized for the digital preservation of electronic documents. 
+[PDF/A](https://en.wikipedia.org/?title=PDF/A) is an ISO-standardized version of the PDF (Portable Document Format) specialized for the digital preservation of electronic documents. 
 
-PDF/A standard is designed to use the PDF format for archiving documents. This means that the compliant documents should contain all the information necessary for displaying the document embedded in the file. This includes all content, fonts, and color information. A PDF/A document is not permitted to rely on information from external sources. Other key elements to PDF/A conformance include:
+The PDF/A standard uses the PDF format for archiving documents. Compliant documents must contain all the information necessary to display the document embedded in the file. This includes all content, fonts, and color information. A PDF/A document cannot rely on information from external sources. Other key elements of PDF/A conformance include:
 
 * Audio and video content is forbidden.
-* JS and executable file launches are forbidden.
+* JavaScript and executable file launches are forbidden.
 * All fonts must be embedded. This applies to the Standard 14 fonts as well.
-* Color spaces should be specified in a device-independent manner.
+* Color spaces must be specified in a device-independent manner.
 * Encryption is forbidden.
-* Use of standards-based metadata. 
+* Use of standards-based metadata is required.
 * Transparent objects and layers are forbidden.
 * LZW and JPEG2000 image compression models are forbidden.
 
@@ -50,31 +50,31 @@ RadPdfProcessing supports the following PDF/A compliance levels:
 
 ## How to Conform to PDF/A Standard
 
-The **PdfFormatProvider** class allows the export of a **RadFixedDocument** to PDF while also specifying available [export settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings). 
+The `PdfFormatProvider` class exports a `RadFixedDocument` to PDF and allows you to specify the available [export settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings). 
 
-To comply with any of the standards, you need to set the **ComplianceLevel** property to a value different than **None**:
+To comply with any of the standards, set the `ComplianceLevel` property to a value different than `None`:
 
 <snippet id='libraries-pdf-concepts-compliance-ensure-compliance'/>
 
 ### Accessibility Compliance
 
-To comply with the [accessibility]({%slug create-accessible-pdf-documents%}) requirements of the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standards, you must also set the [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}) property of the PdfFormatProvider's **PdfExportSettings**. 
+To comply with the [accessibility]({%slug create-accessible-pdf-documents%}) requirements of the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standards, you must also set the [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}) property of the `PdfFormatProvider` `PdfExportSettings`. 
 
 <snippet id='libraries-pdf-concepts-compliance-ensure-accessability-compliance'/>
 
 This ensures that the exported PDF document is properly tagged, which is essential for meeting these standards' requirements.
 
->important If you specify an encryption for the document, it will be ignored since the standard does not allow documents to be encrypted.
+>important If you specify encryption for the document, the export ignores it because the standard does not allow documents to be encrypted.
 
->important The PDF/A standard requires all fonts used in a document to be embedded. Prior to **Q3 2025**, the [14 standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) were not embedded in the file, which caused the document to be non-compliant. As of **Q3 2025**, these standard fonts are automatically embedded when PDF/A compliance is enabled. More information about font embedding is available in the [Fonts]({%slug radpdfprocessing-concepts-fonts%}) article.
+>important The PDF/A standard requires all fonts used in a document to be embedded. Before **Q3 2025**, the [14 standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) were not embedded in the file, which caused the document to be non-compliant. Starting with **Q3 2025**, these standard fonts are automatically embedded when PDF/A compliance is enabled. For more information about font embedding, see the [Fonts]({%slug radpdfprocessing-concepts-fonts%}) article.
 
 ### Setting Fallback Fonts for Standard Fonts
 
-When working with PDF/A-compliant documents, you can specify fallback fonts for the standard fonts to ensure proper rendering when the standard font is unavailable or needs to be replaced:
+When you work with PDF/A-compliant documents, you can specify fallback fonts for the standard fonts to ensure proper rendering when the standard font is unavailable or needs to be replaced:
 
 <snippet id='libraries-pdf-concepts-comply-with-pdfa-set-standard-font-fallback'/>
 
-If you need to remove all configured fallback fonts, you can use the __ClearStandardFontFallbacks()__ method:
+If you need to remove all configured fallback fonts, use the `ClearStandardFontFallbacks()` method:
 
 <snippet id='libraries-pdf-concepts-comply-with-pdfa-clear-fallback-fonts'/>
 

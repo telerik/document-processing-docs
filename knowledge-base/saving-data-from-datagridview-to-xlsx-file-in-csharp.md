@@ -17,7 +17,7 @@ ticketid: 1707838
 
 ## Description
 
-Export the data from a [WinForms DataGridView](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview?view=windowsdesktop-10.0) control to an Excel file in XLSX format, including header information. I want to achieve this using Telerik Document Processing RadSpreadProcessing in a Visual Studio C# Windows Forms application.
+Export the data from a [WinForms DataGridView](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview?view=windowsdesktop-10.0) control to an Excel file in XLSX format, including header information. You can achieve this with Telerik Document Processing RadSpreadProcessing in a Visual Studio C# Windows Forms application.
 
 <img style="border: 1px solid gray;" src="images/saving-data-from-datagridview-to-xlsx-file-in-csharp.png" />
 
@@ -29,7 +29,7 @@ Use Telerik Document Processing [RadSpreadProcessing]({%slug radspreadprocessing
 2. Add a button to trigger the export functionality.
 3. Use RadSpreadProcessing to export data from the DataGridView to an Excel file.
 
-Here is the complete example:
+The following example shows the complete implementation:
 
 ```csharp
     public partial class Form1 : Form
@@ -264,4 +264,4 @@ Here is the complete example:
 
 ## See Also
 
-- [Generating Excel Documents from IEnumerable Collections]({%slug generate-excel-files-from-ienumerable-collections%})
+* [Generating Excel Documents from IEnumerable Collections]({%slug generate-excel-files-from-ienumerable-collections%})

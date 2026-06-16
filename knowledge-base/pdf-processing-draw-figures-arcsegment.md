@@ -1,13 +1,11 @@
 ---
 title: How to Draw Figures in PDF documents
-description: Learn how to use the ArcSegment class in RadPdfProcessing to draw a part of a circle.
+description: Learn how to use the ArcSegment and LineSegment classes in RadPdfProcessing to draw arcs, lines, and geometric figures in PDF documents.
 type: how-to
 page_title: How to Draw Figures in PDF documents
 slug: pdf-processing-draw-figures-arcsegment
 tags: radpdfprocessing, pdf, arcsegment, drawing, geometry, document, processing, figures
 ---
-
-## How to Draw Figures in PDF documents
 
 ## Environment
 
@@ -17,7 +15,7 @@ tags: radpdfprocessing, pdf, arcsegment, drawing, geometry, document, processing
 
 ## Description
 
-This article demonstrates a sample approach on how to draw a small figure containing an arc and some lines using RadPdfProcessing. 
+This article demonstrates how to draw a small figure containing an arc and lines using RadPdfProcessing.
 
 ## Solution
 
@@ -58,7 +56,7 @@ private static void AddArcSegment(RadFixedPage page)
 }
 ```
 
-To draw lines, you can use the [LineSegment]({%slug radpdfprocessing-concepts-geometry%}) class. Here is an example of how to draw a triangle:
+To draw lines, use the [LineSegment]({%slug radpdfprocessing-concepts-geometry%}) class. The following example draws a triangle:
 
 ```csharp
 private void AddLineSegment(RadFixedPage page)
@@ -94,7 +92,7 @@ private static void ApplyLine(PathFigure figure, Point startPoint, Point endPoin
     figure.Segments.Add(segment);
 }
 ```
-The following code snippet shows how to use the above methods:
+The following code snippet shows how to use the above methods to produce a PDF document:
 
 ```csharp
 
@@ -112,10 +110,13 @@ The following code snippet shows how to use the above methods:
    }
 
 ```
-For more information on using geometries, figures, and segments, you can refer to our [Geometry]({%slug radpdfprocessing-concepts-geometry%}) help article. 
+For more information on geometries, figures, and segments, refer to the [Geometry]({%slug radpdfprocessing-concepts-geometry%}) article.
 
-You can find the result of the combined arc and triangle in the below screenshot:
+The following screenshot shows the result of the combined arc and triangle:
 
-![Draw figures](images/pdf-processing-draw-figures.png)   
+![Draw figures result showing an arc and triangle](images/pdf-processing-draw-figures.png)
 
+## See Also
 
+* [Geometry]({%slug radpdfprocessing-concepts-geometry%})
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})

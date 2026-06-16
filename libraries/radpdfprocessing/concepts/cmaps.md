@@ -8,30 +8,30 @@ published: True
 position: 4
 ---
 
-# What is a CMap
+# CMap Tables
 
 A CMap specifies the mapping from character codes to character selectors and serves the role of a font encoding. 
 
-The CMaps are usually fully embedded into the PDF document and obtained from it during the reading of the content. A CMap can be also defined by a PDF name object, where the name identifies a well-known predefined CMap. The list of predefined cmaps can be found at [https://github.com/adobe-type-tools/cmap-resources](https://github.com/adobe-type-tools/cmap-resources).
+CMaps are usually fully embedded into the PDF document and obtained from it during reading. A CMap can also be defined by a PDF name object, where the name identifies a well-known predefined CMap. The list of predefined CMaps is available at [https://github.com/adobe-type-tools/cmap-resources](https://github.com/adobe-type-tools/cmap-resources).
 
-# Working with Documents Containing Predefined CMap Tables
+## Working with Documents Containing Predefined CMap Tables
 
-PdfProcessing enables you to use a default implementation for the known predefined CMap tables and you can also create a custom one if you encounter specific scenario in which the resources are not available for the default class.
+RadPdfProcessing enables you to use a default implementation for the known predefined CMap tables. You can also create a custom one if you encounter a specific scenario in which the resources are not available for the default class.
 
 ## Default Implementation
 
-The **Telerik[.Windows].Documents.CMapUtils** package provides a default implementation for obtaining the data of a predefined CMap table by a given name. The class that contains implementations for all the CMap tables defined by the PDF Format Specification is called **PredefinedCMapsProvider**. In order to register an instance of the default implementation, the **FixedExtensibilityManager** class should be used.
+The **Telerik[.Windows].Documents.CMapUtils** package provides a default implementation for obtaining the data of a predefined CMap table by a given name. The class that contains implementations for all the CMap tables defined by the PDF Format Specification is called `PredefinedCMapsProvider`. To register an instance of the default implementation, use the `FixedExtensibilityManager` class.
 
->To use this functionality, you must add a reference to the **Telerik[.Windows].Documents.CMapUtils package**.
+>To use this feature, you must add a reference to the **Telerik[.Windows].Documents.CMapUtils package**.
 
-#### Example 1: Register default CMapsProvider
+#### Example 1: Register Default CMapsProvider
 <snippet id='pdf-cmaps'/>
 
-After registering the **PredefinedCMapsProvider** class, you will be able to import any document containing a predefined CMap table. 
+After you register the `PredefinedCMapsProvider` class, you can import any document containing a predefined CMap table. 
 
 ## Creating a Custom Implementation
 
-The deafult implementation covers the majority of the scenarios but in some pretty rare cases, users might need to provide a custom CMap. The API enables you also create a custom implementation for a CMap provider so you can provide the data for the custom CMap table. To achieve that, you will need to inherit the **PredefinedCMapsProviderBase** abstract class and implement the following members:
+The default implementation covers the majority of the scenarios but in some rare cases, you might need to provide a custom CMap. The API enables you to create a custom implementation for a CMap provider so you can provide the data for the custom CMap table. To achieve that, inherit the `PredefinedCMapsProviderBase` abstract class and implement the following members:
 
 | Member | Description |
 |---|---|
@@ -39,6 +39,6 @@ The deafult implementation covers the majority of the scenarios but in some pret
 | `byte[] GetUnicodeCMapData(string name)` | Retrieves the *character code to Unicode mapping* of a predefined CMap. Returns the CMap resource data for the specified name. |
 
 ## See Also
- * [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html)
+ * [FontsRepository API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html)
  * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
 

@@ -8,23 +8,23 @@ published: True
 position: 4
 ---
 
-# TextMarkup 
+# TextMarkup
 
-**Text Markup annotations** appear as highlights, underlines, strikeouts, or jagged ("squiggly") underlines in the text of a document. When opened, they display a pop-up window containing the text of the associated note. 
+**Text Markup annotations** appear as highlights, underlines, strikeouts, or jagged ("squiggly") underlines in the text of a document. When opened, they display a pop-up window containing the text of the associated note.
 
-![Text Markup Annotation](images/pdf-processing-create-text-markup-annotation.png)    
+![Text Markup Annotation](images/pdf-processing-create-text-markup-annotation.png)
 
-The **TextMarkupAnnotation** class is a derivative of the **MarkupAnnotation** (descendent of **ContentAnnotation**) and it exposes the following properties:
+The `TextMarkupAnnotation` class is a derivative of `MarkupAnnotation` (descendent of `ContentAnnotation`) and it exposes the following properties:
 
-|Property|Description|
+| Property | Description |
 |---|---|
-|**TextMarkupType**|Gets the type of the annotation. The **TextMarkupAnnotationType** enum offers *Highlight*, *StrikeOut*, *Underline*, *Squiggly* options.|
-|**Opacity**|Gets or sets the opacity of the annotation.|
-|**Contents**|Gets or sets the text that shall be displayed for the annotation.|
-|**Color**|Gets or sets the color of the annotation.|
-|**Content**|Gets the source defining the visual content of the annotation. This content is with bigger priority compared to the annotation appearance characteristics and text properties and it is visualized by default when opening the exported document in some PDF viewer.|
+| `TextMarkupType` | Gets the type of the annotation. The `TextMarkupAnnotationType` enum offers `Highlight`, `StrikeOut`, `Underline`, and `Squiggly` options. |
+| `Opacity` | Gets or sets the opacity of the annotation. |
+| `Contents` | Gets or sets the text displayed for the annotation. |
+| `Color` | Gets or sets the color of the annotation. |
+| `Content` | Gets the source defining the visual content of the annotation. This content has higher priority compared to the annotation appearance characteristics and text properties and is visualized by default when opening the exported document in a PDF viewer. |
 
-Depending on the TextMarkupAnnotationType the respective type of the TextMarkup annotation can be added to the PDF document using the below examples:
+Depending on the `TextMarkupAnnotationType`, you can add the respective type of TextMarkup annotation to the PDF document using the following examples.
 
 ## Highlight
 
@@ -32,14 +32,13 @@ Depending on the TextMarkupAnnotationType the respective type of the TextMarkup 
 
 <snippet id='pdf-highlight-annotation'/>
 
-![Create Highlight Annotation](images/pdf-processing-create-highlight-annotation.png)   
+![Create Highlight Annotation](images/pdf-processing-create-highlight-annotation.png)
 
 ### Creating a Highlight Annotation with Appearance
 
-
 <snippet id='pdf-appearance-highlight-annotation'/>
 
-![Create Highlight Annotation with Appearance](images/pdf-processing-create-highlight-annotation-with-appearance.gif)    
+![Create Highlight Annotation with Appearance](images/pdf-processing-create-highlight-annotation-with-appearance.gif)
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
@@ -47,21 +46,19 @@ Depending on the TextMarkupAnnotationType the respective type of the TextMarkup 
 
 <snippet id='pdf-text-markup-underline'/>
 
-![Create Underline Annotation](images/pdf-processing-create-underline-annotation.png)     
+![Create Underline Annotation](images/pdf-processing-create-underline-annotation.png)
 
 ## Squiggly
 
 <snippet id='pdf-text-markup-squiggly'/>
 
-![Create Squiggly Annotation](images/pdf-processing-create-squiggly-annotation.png)    
+![Create Squiggly Annotation](images/pdf-processing-create-squiggly-annotation.png)
 
 ## StrikeOut
 
 <snippet id='pdf-text-markup-strikeout'/>
 
-![Create StrikeOut Annotation](images/pdf-processing-create-strikeOut-annotation.png)      
-
-
+![Create StrikeOut Annotation](images/pdf-processing-create-strikeOut-annotation.png)
 
 ## See Also
 

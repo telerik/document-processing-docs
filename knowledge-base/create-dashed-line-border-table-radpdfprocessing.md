@@ -1,6 +1,6 @@
 ---
 title: Creating a Dashed Line Border for a Table in RadPdfProcessing
-description: Learn how to add a dashed line border to a table in RadPdfProcessing.
+description: Learn how to create a dashed line border for a table in RadPdfProcessing by using the StrokeDashArray property of the FixedContentEditor.
 type: how-to
 page_title: Create a Dashed Line Border for a Table in RadPdfProcessing
 slug: create-dashed-line-border-table-radpdfprocessing
@@ -15,10 +15,11 @@ res_type: kb
 
 ## Description
 
-Learn how to add a dashed line border in a table using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
+This article shows how to add a dashed line border in a table by using [RadPdfProcessing]({%slug radpdfprocessing-overview%}).
 
 ## Solution
-To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-table-overview%}) in RadPdfProcessing, you can follow these steps:
+
+To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-table-overview%}) in RadPdfProcessing, follow these steps:
 
 1. Set the desired font style properties for the table.
 2. Create a `Border` object with the desired thickness, style, and color.
@@ -29,7 +30,7 @@ To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-tab
 7. Use a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) to draw the table on the document page.
 8. Specify the desired dashed line style by setting the `StrokeDashArray` property of the `GraphicProperties` of the `FixedContentEditor`.
 
-Here is a sample code snippet that demonstrates how to create a dashed line border for a table in RadPdfProcessing:
+The following code snippet shows how to create a dashed line border for a table in RadPdfProcessing:
 
 ![Dashed Table Border](images/pdf-dashed-table-border.png) 
 
@@ -69,14 +70,14 @@ using (Stream output = File.OpenWrite(outputFilePath))
 Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
 
-Please note that you can modify the `Borders` property of the `DefaultCellProperties` to specify different border styles for each side of the cell or render a border only at the bottom:
+You can change the `Borders` property of the `DefaultCellProperties` to specify different border styles for each side of the cell or render a border only at the bottom:
 ![Bottom Dashed Table Border](images/pdf-bottom-dashed-table-border.png) 
 
 ```csharp
 table.DefaultCellProperties.Borders = new TableCellBorders(null, null, null,b);
 ```
 
->note As of **Q3 2024** RadPdfProcessing offers *Dotted*, *Dashed*, and *DashSmallGap* [border styles]({%slug radpdfprocessing-editing-table-overview%}) out-of-the-box without the necessity to play with the **StrokeDashArray** of the **FixedContentEditor**. With this update, the Dotted, Dashed, DashSmallGap, and Thick border lines are now exported from [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) as well.
+>note Starting with **Q3 2024** RadPdfProcessing offers *Dotted*, *Dashed*, and *DashSmallGap* [border styles]({%slug radpdfprocessing-editing-table-overview%}) without the need to use the **StrokeDashArray** of the **FixedContentEditor**. With this update, the Dotted, Dashed, DashSmallGap, and Thick border lines are now exported from [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) to [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) as well.
 
 ## See Also
 

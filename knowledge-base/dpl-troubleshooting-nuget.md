@@ -37,7 +37,7 @@ After changing your Telerik password, you must reset your credentials in the `Nu
 
 The password must contain only ASCII characters.
 
-As an alternative, you can [reset your Telerik NuGet Feed credentials from the Windows Credentials Manager](#solution-2-windows-credentials-manager)
+As an alternative, you can [reset your Telerik NuGet Feed credentials from the Windows Credentials Manager](#solution-2-windows-credentials-manager).
 
 ## Issue: Unable to load the service index for source https://nuget.telerik.com/v3/index.json
 
@@ -55,7 +55,7 @@ Try resetting your credentials by using the approach suggested in the [Telerik N
 
 Alternatively, use Windows Credentials Manager to remove the saved credentials:
 
-1. In Visual Studio navigate to **Tools** > **NuGet Package Manager** > **Package Manager Settings**. Select **NuGet Package Manager**, click **Package Sources**, and remove the listed Telerik NuGet package source.
+1. In Visual Studio, navigate to **Tools** > **NuGet Package Manager** > **Package Manager Settings**. Select **NuGet Package Manager**, click **Package Sources**, and remove the listed Telerik NuGet package source.
 1. Close Visual Studio.
 1. Open the Windows Credentials Manager. To access it, navigate to **Control Panel** > **User Accounts** > **Credential Manager**.
 1. Click **Windows Credentials**.
@@ -65,13 +65,11 @@ Alternatively, use Windows Credentials Manager to remove the saved credentials:
     
 	![Remove credentials from Windows Credential Manager](images/windows-credential-manager.png)
 
-1. Add the Telerik NuGet Feed again, and then enter the correct credentials. For more details, see the [Installing with Nuget]({%slug installation-nuget-packages%}) article.
+1. Add the Telerik NuGet Feed again, and then enter the correct credentials. For more details, see the [Installing with NuGet]({%slug installation-nuget-packages%}) article.
 
-1. If desired, verify the NuGet credentials by inspecting the `NuGet.config` file located in `%AppData%\NuGet\NuGet.config`
+1. If desired, verify the NuGet credentials by inspecting the `NuGet.config` file located in `%AppData%\NuGet\NuGet.config`.
 
 ## See Also
 
-- [Install using NuGet Packages]({%slug installation-nuget-packages%})
-- [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
-
----
+* [Install using NuGet Packages]({%slug installation-nuget-packages%})
+* [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})

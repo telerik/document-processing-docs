@@ -1,7 +1,7 @@
 ---
 title: Features
 page_title: Features
-description: This article describes all the features that are supported by DocFormatProvider
+description: Learn about all the features supported by DocFormatProvider for importing DOC and DOT files in RadWordsProcessing.
 slug: radwordsprocessing-formats-and-conversion-doc-features
 tags: format, provider, features, doc, word, flow, docx, import, legacy, supported
 published: True
@@ -10,9 +10,9 @@ position: 0
 
 # Features
 
-Below you can find a list of all the features that are supported by DocFormatProvider.
+The following table lists all features supported by `DocFormatProvider`.
 
-## 
+##
 <table><thead><tr><th>Feature</th><th>
 Supported</th><th>
 Comment</th></tr></thead><tbody><tr><td>

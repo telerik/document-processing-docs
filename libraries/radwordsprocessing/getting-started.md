@@ -82,5 +82,3 @@ After you complete this basic flow, continue with the articles that cover the ne
 * [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%})
 * [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%})
 * [WordsProcessing Basic Usage Demo](https://demos.telerik.com/document-processing/wordsprocessing)
-
-

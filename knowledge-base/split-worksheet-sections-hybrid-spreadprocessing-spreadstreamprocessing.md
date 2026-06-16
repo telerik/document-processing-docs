@@ -18,7 +18,7 @@ ticketid: 171142
 
 ## Description
 
-When working with large Excel files that contain multiple sections in a single worksheet, splitting those sections into individual worksheets using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) alone can be very slow for large datasets. While [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) offers high-performance streaming for large datasets, it does not support directly copying rows or retaining column widths and merged cell ranges from the source document.
+When working with large Excel files that contain multiple sections in a single worksheet, splitting those sections into individual worksheets using [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) alone can be very slow for large datasets. [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) offers high-performance streaming for large datasets, but it does not support directly copying rows or retaining column widths and merged cell ranges from the source document.
 
 This knowledge base article also answers the following questions:
 
@@ -30,8 +30,8 @@ This knowledge base article also answers the following questions:
 
 To achieve a fully automated, high-performance split that preserves column widths, merged cells, and number formatting, use a **hybrid approach** that combines both libraries:
 
-* **[RadSpreadProcessing]({%slug radspreadprocessing-overview%})** - used to read column widths and merged cell ranges from the source document.
-* **[RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})** - used to write the output document efficiently with minimal memory usage.
+* **[RadSpreadProcessing]({%slug radspreadprocessing-overview%})**—used to read column widths and merged cell ranges from the source document.
+* **[RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})**—used to write the output document efficiently with minimal memory usage.
 
 ### Step 1: Read Column Widths and Merged Cell Ranges with SpreadProcessing
 
@@ -62,7 +62,7 @@ IEnumerable<CellRange> mergedCellRanges = activeWorksheet.Cells.GetMergedCellRan
 
 ### Step 2: Stream the Sections with SpreadStreamProcessing
 
-Once the structural data is available, use [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) to import each row and detect section boundaries. The logic relies on a **repeating marker value** - a cell value that appears exactly once at the beginning of each section and nowhere else in the data. Each time this marker is encountered, a new section is started. Replace `"Section Title"` with the actual repeating value present in your document:
+Once the structural data is available, use [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) to import each row and detect section boundaries. The logic relies on a **repeating marker value**—a cell value that appears exactly once at the beginning of each section and nowhere else in the data. Each time this marker is encountered, a new section starts. Replace `"Section Title"` with the actual repeating value present in your document:
 
 ```csharp
 string sectionMarker = "Section Title"; // replace with the value that identifies the start of each section
@@ -177,10 +177,10 @@ using (IWorkbookExporter workbookExporter = SpreadExporter.CreateWorkbookExporte
 
 ### Important Notes
 
-* **Repeating section marker**: This implementation requires that each section in the source worksheet starts with an identical, repeating cell value (e.g., a report title or header label). Every occurrence of this value is treated as the beginning of a new section. If your document uses a different structure to delimit sections, adjust the detection logic accordingly.
-* **Number formatting**: Values like currency amounts and percentages must be set as numeric types (e.g., `double`) rather than strings. Calling `cellOut.SetValue("900")` stores the value as text, which causes number formats to be ignored. Use `double.TryParse` to detect numeric values and set them correctly.
+* **Repeating section marker**: This implementation requires that each section in the source worksheet starts with an identical, repeating cell value (for example, a report title or header label). Every occurrence of this value is treated as the beginning of a new section. If your document uses a different structure to delimit sections, adjust the detection logic accordingly.
+* **Number formatting**: Values like currency amounts and percentages must be set as numeric types (for example, `double`) rather than strings. Calling `cellOut.SetValue("900")` stores the value as text, which causes number formats to be ignored. Use `double.TryParse` to detect numeric values and set them correctly.
 * **Column widths**: [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) does not support auto-fitting column widths. You must either supply widths manually or retrieve them from SpreadProcessing as shown above. See [Columns]({%slug radspreadstreamprocessing-model-columns%}) and [Get Cell Content Size]({%slug radspreadstreamprocessing-features-text-measuring%}) for more details.
-* **Merged cells**: [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) supports merging cells via [IWorksheetExporter.MergeCells]({%slug radspreadstreamprocessing-model-cells%}#merge-cells), but the source ranges must be obtained externally (e.g., from SpreadProcessing).
+* **Merged cells**: [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) supports merging cells through [IWorksheetExporter.MergeCells]({%slug radspreadstreamprocessing-model-cells%}#merge-cells), but you must obtain the source ranges externally (for example, from SpreadProcessing).
 
 ## See Also
 

@@ -9,6 +9,8 @@ tags: radwordsprocessing, docx, bookmarks, content, formatting, document, proces
 res_type: kb
 ---
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
 |2025.4.1104|RadWordsProcessing|[Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov)|
@@ -22,14 +24,14 @@ This article shows how to change the content of an existing [Bookmark]({%slug ra
 * **Import DOCX**: Use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) to read the input DOCX and obtain a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}).
 * **Initialize editor**: Create a [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) for cursor movement and editing.
 * **Find bookmark**: Enumerate [BookmarkRangeStart]({%slug radwordsprocessing-model-bookmark%}) elements and select the bookmark by **Name**.
-* **Capture formatting**: Get the first [Run]({%slug radwordsprocessing-model-run%}) within the bookmark and copy its **CharacterFormatting** properties.
+* **Capture formatting**: Get the first [Run]({%slug radwordsprocessing-model-run%}) within the bookmark and copy its `CharacterFormatting` properties.
 * **Delete original bookmark content**: Delete only the content between the start and end markers while keeping the bookmark structure intact.
 * **Position cursor**: Move the editor back to the start of the bookmark to insert new text in place.
 * **Copy formatting**: Apply the formatting of the original bookmark content to the editor properties.
 * **Insert text**: Add the replacement content.
 * **Export DOCX**: Write the updated document using [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
 
-#### Replace bookmark content but keep formatting
+### Replacing Bookmark Content and Keeping Formatting
 
 ```csharp
 RadFlowDocument document;

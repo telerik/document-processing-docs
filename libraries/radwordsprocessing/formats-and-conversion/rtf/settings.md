@@ -10,28 +10,21 @@ position: 3
 
 # Settings
 
-
-
-__RtfFormatProvider__ allows for import of RTF documents and respectively export of RadFlowDocument to RTF. Additionally, the import/export settings provide modification options. The current article outlines the available settings.
-      
+`RtfFormatProvider` allows you to import RTF documents and export a `RadFlowDocument` to RTF. The import/export settings provide modification options. This article outlines the available settings.
 
 ## Export Settings
 
-The export settings which you can specify are as follows:
+You can specify the following export settings:
 
-### ExportImagesInCompatibilityMode 
+### ExportImagesInCompatibilityMode
 
-Specifies if the images should be exported in compatibility mode. This option is convenient when the exported document is going to be consumed by older RTF readers.
-              
+Specifies whether the provider exports images in compatibility mode. This option is useful when earlier RTF readers open the exported document.
 
-The default value for this setting is __false__.
-              
+The default value for this setting is `false`.
 
-The code from __Example 1__ demonstrates how you can create and specify particular export settings to RtfFormatProvider.
-        
+The following code demonstrates how to create and specify particular export settings for `RtfFormatProvider`.
 
-#### __Example 1: Create a RtfExportSettings__
+**Example 1: Create RtfExportSettings**
 
 <snippet id='codeblock-co'/>
-
 

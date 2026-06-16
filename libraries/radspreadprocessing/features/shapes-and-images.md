@@ -1,6 +1,6 @@
 ---
 title: Shapes and Images
-description: Learn how to create and work with shapes and images in RadSpreadProcessing spreadsheet documents.
+description: Learn how to create and work with shapes and images in RadSpreadProcessing spreadsheet documents including positioning, rotation, and supported formats.
 page_title: Shapes and Images
 slug: radspreadprocessing-features-shapes-and-images
 tags: shapes, images, spreadsheet, radspreadprocessing, floating, drawing, worksheet, graphics, spread, xlsx
@@ -10,7 +10,7 @@ position: 13
 
 # Shapes and Images
 
-This article briefly describes what are shapes and images, and how to create and work with them.  It contains the following sections:
+The following sections describe shapes and images, and how to create and work with them:
 
 * [What Are Shapes and Images?](#what-are-shapes-and-images?)
 
@@ -20,15 +20,15 @@ This article briefly describes what are shapes and images, and how to create and
 
 * [Deleting a Shape](#deleting-a-shape)
 
-* [Changing the Shape's Position and Size](#changing-the-shape's-position-and-size)
+* [Changing the Position and Size of a Shape](#changing-the-shape's-position-and-size)
 
 * [Relationship Between the Cell Index of the Shape and Its Rotation Angle](#relationship-between-the-cell-index-of-the-shape-and-its-rotation-angle)
 
 ## What Are Shapes and Images?
 
-The shapes are objects that represent a visual illustration that can be inserted into a worksheet. In the document model, they are represented by the abstract class __FloatingShapeBase__.
-        
-The image is a kind of shape that is characterized by having an image source. They are represented by the __FloatingImage__ class, which inherits FloatingShapeBase.     
+Shapes are objects that represent a visual illustration that you can insert into a worksheet. In the document model, the abstract class `FloatingShapeBase` represents them.
+
+An image is a kind of shape that has an image source. The `FloatingImage` class represents images and inherits `FloatingShapeBase`.
 
 ## Supported Formats
 
@@ -49,68 +49,59 @@ The supported formats are:
 
 ## Properties of Shapes and Images
 
-Shapes have the following properties:       
+Shapes have the following properties:
 
 |Property|Description|
 |----|----|
-|__CellIndex__| The cell index where the top left corner of the shape is located when the shape is not rotated.|            
-|__OffsetX__| The offset between the left side of the shape and the left side of the cell index.|           
-|__OffsetY__| The offset between the top of the shape and the top of the cell index.|           
-|__Width__| The width of the shape.|
-|__Height__| The height of the shape.|          
-|__RotationAngle__| The angle (in degrees) by which the shape is rotated about its center.|           
-|__IsHorizontallyFlipped__| Indicates whether the shape has been flipped across the y-axis.|        
-|__IsVerticallyFlipped__| Indicates whether the shape has been flipped across the x-axis.|          
-|__Name__| The name of the shape.|         
-|__LockAspectRatio__| Determines whether the aspect ratio between the width and the height of the image will be preserved.|
-|__Id__| A unique number assigned to the image after it has been added to a worksheet.|
-|__Worksheet__| The worksheet in which the shape is or will be inserted.|
-|**Description**| Gets or sets the description of the shape. (*introduced in 2024 Q2*)|
+|`CellIndex`| The cell index where the top left corner of the shape is located when the shape is not rotated.|
+|`OffsetX`| The offset between the left side of the shape and the left side of the cell index.|
+|`OffsetY`| The offset between the top of the shape and the top of the cell index.|
+|`Width`| The width of the shape.|
+|`Height`| The height of the shape.|
+|`RotationAngle`| The angle (in degrees) by which the shape is rotated about its center.|
+|`IsHorizontallyFlipped`| Indicates whether the shape has been flipped across the y-axis.|
+|`IsVerticallyFlipped`| Indicates whether the shape has been flipped across the x-axis.|
+|`Name`| The name of the shape.|
+|`LockAspectRatio`| Determines whether the aspect ratio between the width and the height of the image is preserved.|
+|`Id`| A unique number assigned to the image after it has been added to a worksheet.|
+|`Worksheet`| The worksheet in which the shape is or will be inserted.|
+|`Description`| Gets or sets the description of the shape. (*introduced in 2024 Q2*)|
             
 
 Images have one additional property:
-        
 
-* __ImageSource:__ Represents the source of the image.
-            
+* `ImageSource`: Represents the source of the image.
 
 ## Creating and Inserting an Image
 
-To insert an image into a worksheet do the following:
-        
+To insert an image into a worksheet, do the following:
 
-1. Create a __FloatingImage__ instance as in __Example 1__.
-            
+1. Create a `FloatingImage` instance as in **Example 1**.
 
-1. Configure its properties as in __Example 2__.
-            
+1. Configure its properties as in **Example 2**.
 
-1. Insert the image into the worksheet as shown in __Example 3__.
-            
+1. Insert the image into the worksheet as shown in **Example 3**.
 
-In order to create an instance of __FloatingImage__ you need the worksheet in which you want to insert the image, the cell index and the offset.
-        
+To create an instance of `FloatingImage`, you need the worksheet in which you want to insert the image, the cell index, and the offset.
 
-#### __Example 1: Create FloatingImage__
+**Example 1: Create FloatingImage**
 
 <snippet id='codeblock-ckm'/>
 
 
 The next step is to configure the other properties of the image as needed.
-        
 
-#### __Example 2: Configure image properties__
+**Example 2: Configure Image Properties**
 
 <snippet id='codeblock-ckn'/>
 
 
 
-Insert the image into the collection of shapes of the worksheet.  Note that the worksheet needs to be the same as the one passed in the FloatingImage constructor, otherwise an exception is thrown.
+Insert the image into the collection of shapes of the worksheet. The worksheet must be the same as the one passed in the `FloatingImage` constructor. Otherwise, an exception is thrown.
 
->important When using the **.NET Standard** version of the RadSpreadProcessing packages, in order to **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing`s Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
-        
+>important When using the **.NET Standard** version of the RadSpreadProcessing packages, to **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
 
-#### __Example 3: Add image to worksheet__
+**Example 3: Add Image to Worksheet**
 
 <snippet id='codeblock-cko'/>
 
@@ -118,125 +109,108 @@ Insert the image into the collection of shapes of the worksheet.  Note that the 
 
 ## Deleting a Shape
 
-In order to delete a shape from a worksheet, you need the shape's instance. The collection of shapes of the worksheet exposes a __Remove()__ method with two overloads which you can use.
-        
+To delete a shape from a worksheet, you need the instance of the shape. The collection of shapes of the worksheet exposes a `Remove()` method with two overloads which you can use.
 
-__Example 4__ demonstrates how you can remove the image added in __Example 3__.
-        
+**Example 4** demonstrates how you can remove the image added in **Example 3**.
 
-#### __Example 4: Delete shape__
+**Example 4: Delete Shape**
 
 <snippet id='codeblock-ckp'/>
 
 
 
-## Changing the Shape's Position and Size
+## Changing the Position and Size of a Shape
 
-After the initial values of the properties of the shapes have been assigned, they can always be changed in order to reposition, resize and rotate the shape. You can change the following characteristics of the shapes:
-        
+After the initial values of the properties of the shapes have been assigned, you can always change them to reposition, resize, and rotate the shape. You can change the following characteristics of the shapes:
 
 * Repositioning the shape
-            
-	
-	#### __Example 5: Move image__
-	
+
+	**Example 5: Move Image**
+
 	<snippet id='codeblock-ckq'/>
 
-* Changing the shape's width and height
-            
-	
-	#### __Example 6: Change width and height__
-	
-	<snippet id='codeblock-ckr'/>
-	
-	The Width and Height properties do not take the LockAspectRatio property into account. If you would like more control on whether the aspect ratio of the shape should be observed, you can also use the following methods.
-	            
-	
-	* void SetWidth(bool respectLockAspectRatio, double width, bool adjustCellIndex = false)
-	                
-	
-	* void SetHeight(bool respectLockAspectRatio, double height, bool adjustCellIndex = false)
-                
+* Changing the width and height of the shape
 
-	#### __Example 7: Set width and whether lock aspect ratio is respected__
-	
+	**Example 6: Change Width and Height**
+
+	<snippet id='codeblock-ckr'/>
+
+	The `Width` and `Height` properties do not take the `LockAspectRatio` property into account. If you want more control on whether the aspect ratio of the shape is observed, you can also use the following methods:
+
+	* void SetWidth(bool respectLockAspectRatio, double width, bool adjustCellIndex = false)
+
+	* void SetHeight(bool respectLockAspectRatio, double height, bool adjustCellIndex = false)
+
+	**Example 7: Set Width and Whether Lock Aspect Ratio Is Respected**
+
 	<snippet id='codeblock-cks'/>
-	
-	These two methods will be further explained in the next section.
+
+	The following section explains these two methods in more detail.
 
 * Rotating the shape
-	            
-	
-	#### __Example 8: Rotate__
-	
+
+	**Example 8: Rotate**
+
 	<snippet id='codeblock-ckt'/>
-	
-	The rotation angle of the shape can affect the __CellIndexM__ property and the offset. The relationship between these properties is described in more detail in the next section of this article.
-        
+
+	The rotation angle of the shape can affect the `CellIndex` property and the offset. The following section describes the relationship between these properties in more detail.
+
 * Flipping the shape
-	            
-	
-	#### __Example 9: Flip__
-	
+
+	**Example 9: Flip**
+
 	<snippet id='codeblock-cku'/>
 
 
 
 ## Relationship Between the Cell Index of the Shape and Its Rotation Angle
 
-The __CellIndex__ of the shape and the cell index where the top left corner of the shape is visually located do not necessarily coincide when there is rotation applied. Consider the following image which has CellIndex B8.
+The `CellIndex` of the shape and the cell index where the top left corner of the shape is visually located do not necessarily coincide when rotation is applied. Consider the following image which has `CellIndex` B8.
 
-#### Figure 1: Image in a worksheet 
+#### Figure 1: Image in a Worksheet
 ![Rad Spread Processing Features Shapes And Images 01](images/RadSpreadProcessing_Features_Shapes_And_Images_01.png)
 
-If we increase the rotation angle of the image, it will be visualized differently.
+If you increase the rotation angle of the image, it is visualized differently.
 
-#### Figure 2: Image with bigger rotation angle 
+#### Figure 2: Image with Bigger Rotation Angle
 ![Rad Spread Processing Features Shapes And Images 02](images/RadSpreadProcessing_Features_Shapes_And_Images_02.png)
 
-It appears that the top left cell index is B5, however, the CellIndex property of the image will remain unchanged, B8, as will the offset.
-        
+It appears that the top left cell index is B5. However, the `CellIndex` property of the image remains unchanged at B8, as does the offset.
 
-This set up is convenient as it allows more intuitive rotation of the shapes. However, when the rotation angle increases substantially, the underlying CellIndex of the shape might become too distant to be useful. In order to avoid this, once the rotation angle becomes 45° and more, the CellIndex should switch to where the top left corner would be at 90° rotation.      
+This setup is convenient as it allows more intuitive rotation of the shapes. However, when the rotation angle increases substantially, the underlying `CellIndex` of the shape might become too distant to be useful. To avoid this, once the rotation angle becomes 45 degrees or more, the `CellIndex` switches to where the top left corner would be at 90 degree rotation.
 
-This is illustrated in the following images:
+The following images illustrate this:
 
 ![Rad Spread Processing Features Shapes And Images 03](images/RadSpreadProcessing_Features_Shapes_And_Images_03.png)
 
-At this point, the CellIndex property of the shape is D1 and the offset should also be recalculated accordingly.
+At this point, the `CellIndex` property of the shape is D1 and the offset is also recalculated accordingly.
 
 ![Rad Spread Processing Features Shapes And Images 04](images/RadSpreadProcessing_Features_Shapes_And_Images_04.png)
 
-As rotation increases, the CellIndex of the shape will switch between B8 and D1, depending on what is closer to the visual top left corner of the shape. The result will be the following:
-        
+As rotation increases, the `CellIndex` of the shape switches between B8 and D1, depending on what is closer to the visual top left corner of the shape. The result is the following:
 
-* 0° - 45° (excluded): __B8__
+* 0–45 degrees (excluded): **B8**
 
-* 45° (included) - 135° (excluded): __D1__
+* 45 degrees (included)–135 degrees (excluded): **D1**
 
-* 135° (included) - 225° (excluded): __B8__
+* 135 degrees (included)–225 degrees (excluded): **B8**
 
-* 225° (included) - 315° (excluded): __D1__
+* 225 degrees (included)–315 degrees (excluded): **D1**
 
-* 315° (included) - 360°: __B8__
+* 315 degrees (included)–360 degrees: **B8**
 
-Another occasion when adjustments to the top left cell index and offset of a shape might be necessary is when the size of a rotated image is changed. Changing the top left position of the image might be necessary if it is desired that the visual top left corner of the shape remains unmoved.
-        
+Another occasion when adjustments to the top left cell index and offset of a shape might be necessary is when the size of a rotated image changes. You may need to change the top left position of the image if you want the visual top left corner of the shape to remain unmoved.
 
-Additionally, if the size and the rotation angle of the image will result in a top left position outside of the worksheet, the position needs to be automatically adjusted to fit inside it.
-        
+Additionally, if the size and the rotation angle of the image result in a top left position outside of the worksheet, the position is automatically adjusted to fit inside it.
 
-In order to provide more flexibility, the model gives the option to have these changes of the top left position of the shape automatically performed or not. The properties __RotationAngle__, __Width__ and __Height__ do not make any adjustments to the position of the shape. If you would like to enable the adjustments, you can use the following methods:
-        
+To provide more flexibility, the model gives the option to have these changes of the top left position of the shape automatically performed or not. The properties `RotationAngle`, `Width`, and `Height` do not make any adjustments to the position of the shape. If you want to enable the adjustments, use the following methods:
 
 * void SetWidth(bool respectLockAspectRatio, double width, bool adjustCellIndex = false)
-            
 
 * void SetHeight(bool respectLockAspectRatio, double height, bool adjustCellIndex = false)
-            
 
 * void SetRotationAngle(double rotationAngle, bool adjustCellIndex = false)
-            
+
 ## See Also
 
 * [Inserting an Image in a Specified Worksheet Cell Range With SpreadProcessing While Preserving Aspect Ratio]({%slug spreadprocessing-insert-image-cell-range-aspect-ratio%})

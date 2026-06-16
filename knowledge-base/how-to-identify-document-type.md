@@ -1,6 +1,6 @@
 ---
 title: How to identify the actual document type when the filename extension is not correct
-description: This knowledge base article describes how to identify the actual document type when the filename extension is not correct 
+description: Learn how to identify the actual document type when the filename extension is incorrect and determine the appropriate format provider for import.
 type: how-to
 page_title: How to identify the actual document type when the filename extension is not correct 
 slug: how-to-identify-document-type
@@ -28,14 +28,13 @@ res_type: kb
 
 ## Description
 
-This article describes how to identify the actual document type when the filename extension is incorrect which helps us to determine the appropriate format provider.
+This article describes how to identify the actual document type when the filename extension is incorrect. Identifying the document type helps you determine the appropriate format provider.
 
 ## Solution
 
-The following example demonstrates how to read two documents with ".doc" filename extensions but actually different document types. Using the [`StringBuilder`](https://docs.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-6.0) class we are creating the document signature (header) string, which later to compare with predefined values.
-Once having the right document type we can determine which format provider to use to import the document.
+The following example demonstrates how to read two documents with ".doc" filename extensions that have different actual document types. The [`StringBuilder`](https://learn.microsoft.com/en-us/dotnet/api/system.text.stringbuilder?view=net-6.0) class creates the document signature (header) string. You can then compare the signature with predefined values to determine which format provider to use for importing the document.
 
-#### __Example__
+**Example 1: Identify Document Type by File Signature**
 
 ```csharp
 
@@ -63,7 +62,8 @@ Once having the right document type we can determine which format provider to us
 	}
 ```
 
-#### __Getting document header__
+**Example 2: Get Document Header**
+
 ```csharp
 
 	private static string GetHeaderInfo(byte[] documentData)
@@ -79,3 +79,7 @@ Once having the right document type we can determine which format provider to us
 		return sb.ToString();
 	}
 ```
+
+## See Also
+
+* [Getting Started with Telerik Document Processing]({%slug getting-started%})

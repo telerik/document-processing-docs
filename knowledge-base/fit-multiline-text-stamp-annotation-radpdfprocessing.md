@@ -19,7 +19,7 @@ res_type: kb
 
 This article shows how to render multiple lines of text so they fit inside the fixed rectangle of a custom [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}) by dynamically determining the maximum usable font size. Unlike predefined stamp names, a custom stamp appearance requires supplying a visual form (a **FormSource**) that draws both background styling and text content.
 
->important When using a custom name (not one of the predefined **StampAnnotationPredefinedNames**), it is recommended to prefix the name with **#** (e.g., **#CustomStamp**) so external PDF viewers (like Adobe Acrobat) don't overwrite the custom appearance if the stamp is moved.
+>important When using a custom name (not one of the predefined **StampAnnotationPredefinedNames**), prefix the name with **#** (for example, **#CustomStamp**) so external PDF viewers (such as Adobe Acrobat) do not overwrite the custom appearance if the stamp is moved.
 
 ## Solution
 
@@ -34,9 +34,9 @@ To fit multiline text inside a stamp rectangle:
 
 ![Stamp With Auto-Fitted Multiline Text](images/stamp-auto-fitted-multiline-text.png) 
 
-Below is a complete example demonstrating these steps.
+The following example shows these steps.
 
-#### Measure and Fit Multiline Text in a StampAnnotation
+### Measure and Fit Multiline Text in a StampAnnotation
 
 ```csharp
 using System;
@@ -142,7 +142,7 @@ static double MeasureFontSize(FormSource textForm, FixedContentEditor formEditor
 
 ## See Also
 
-- [Stamp Annotation]({%slug radpdfprocessing-model-annotations-stamp%})
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-- [FormSource Overview]({%slug radpdfprocessing-model-formsource-overview%})
-- [PdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [Stamp Annotation]({%slug radpdfprocessing-model-annotations-stamp%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [FormSource Overview]({%slug radpdfprocessing-model-formsource-overview%})
+* [PdfProcessing Overview]({%slug radpdfprocessing-overview%})

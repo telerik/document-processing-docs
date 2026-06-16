@@ -18,13 +18,13 @@ ticketid: 1699876
 
 ## Description
 
-When using the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) **DrawText** method in the Telerik PdfProcessing library to generate PDF documents, extended Latin characters (e.g., Polish letters like "ż", "ł", "ć", "ę", "ś", "ą") may not display correctly. Instead, characters are replaced or omitted, leading to incomplete text in the PDF. This happens because standard PDF fonts like TimesRoman do not support extended Latin characters. This knowledge base article shows how to handle this situation.
+When using the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) `DrawText` method in the Telerik PdfProcessing library to generate PDF documents, extended Latin characters (for example, Polish letters like "ż", "ł", "ć", "ę", "ś", "ą") may not display correctly. Instead, characters are replaced or omitted, which leads to incomplete text in the PDF. This happens because standard PDF fonts like TimesRoman do not support extended Latin characters.
 
 ## Solution
 
 To correctly display extended Latin characters, use a Unicode-compliant TrueType font and [register]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font) it with the Telerik Document Processing library. Follow these steps:
 
-1. Add the desired TrueType font file (e.g., Segoe UI) to your project.
+1. Add the desired TrueType font file (for example, Segoe UI) to your project.
 2. Write the following code to load, register, and use the font for drawing text:
 
 ```csharp
@@ -71,12 +71,12 @@ using (Stream output = File.OpenWrite(outputFilePath))
 Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
 
-### Notes:
-- In ASP.NET Core, system fonts are not directly accessible. Include the font file in your project.
-- Ensure the font file is part of the deployment package for your application.
+### Notes
+* In ASP.NET Core, system fonts are not directly accessible. Include the font file in your project.
+* Ensure the font file is part of the deployment package for your application.
 
 ## See Also
 
-- [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-- [Fonts in PdfProcessing]({%slug radpdfprocessing-concepts-fonts%})
-- [Cross-Platform Support]({%slug radpdfprocessing-cross-platform-fonts%})
+* [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Fonts in PdfProcessing]({%slug radpdfprocessing-concepts-fonts%})
+* [Cross-Platform Support]({%slug radpdfprocessing-cross-platform-fonts%})

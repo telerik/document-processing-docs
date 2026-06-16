@@ -10,7 +10,7 @@ position: 2
 
 # TableCell
 
-__TableCell__ class represents a single cell in a [Table]({%slug radpdfprocessing-editing-table-overview%}). Cells are added to a [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instance in the rows collection of a table. The main purpose of the cell is to contain, organize and layout tabular data.
+The `TableCell` class represents a single cell in a [Table]({%slug radpdfprocessing-editing-table-overview%}). Cells are added to a [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instance in the rows collection of a table. The main purpose of the cell is to contain, organize, and layout tabular data.
       
 
 * [Inserting a TableCell](#inserting-a-tablecell)
@@ -22,73 +22,73 @@ __TableCell__ class represents a single cell in a [Table]({%slug radpdfprocessin
 
 ## Inserting a TableCell
 
-In order to add a cell to a __Table__, you should add it in the __TableCellCollection__ of a __TableRow__.
+To add a cell to a `Table`, add it in the `TableCellCollection` of a `TableRow`.
         
 
-The code snippet in __Example 1__ shows how to create a table with a single row and add a cell in the first row.
+The code in **Example 1** shows how to create a table with a single row and add a cell in the first row.
         
 
-#### __Example 1: Create TableCell__
+#### **Example 1: Create TableCell**
 
 <snippet id='libraries-pdf-editing-table-tablecell-create-tablecell'/>
 
 ## Adding Cell Content
 
-Using __TableCell__'s __Blocks__ property you can easily add one or several __IBlockElement__ instances to the cell.
+Use the `Blocks` property of `TableCell` to add one or several `IBlockElement` instances to the cell.
         
 
-__Example 2__ shows how to create a cell with a single [Block]({%slug radpdfprocessing-editing-block%}) in it.
+**Example 2** shows how to create a cell with a single [Block]({%slug radpdfprocessing-editing-block%}) in it.
         
 
-#### __Example 2: Add content to TableCell__
+#### **Example 2: Add content to TableCell**
 
 <snippet id='libraries-pdf-editing-table-tablecell-add-content-to-tablecell'/>
 
 ## Modifying a TableCell
 
-You can easily change the cell's presentation by using the following properties:
+You can change the cell presentation by using the following properties:
         
 
-* __RowSpan__: Defines the number or rows that the TableCell instance should occupy.
+* `RowSpan`: Defines the number of rows that the `TableCell` instance occupies.
             
 
-* __ColumnSpan__: Defines the number of columns that the TableCell instance should occupy.
+* `ColumnSpan`: Defines the number of columns that the `TableCell` instance occupies.
             
 
-* __Padding__: Specifies the distances between the cells borders inner contour and the cell content. If the value is null, the cell will use the padding from the table's DefaultCellProperties.
+* `Padding`: Specifies the distances between the cell borders inner contour and the cell content. If the value is null, the cell uses the padding from the table `DefaultCellProperties`.
             
 
-* __Borders__: Specifies the borders of the cells. If the value is null the cell uses the value from table's DefaultCellProperties.
+* `Borders`: Specifies the borders of the cell. If the value is null, the cell uses the value from the table `DefaultCellProperties`.
             
 
-* __Background__: Specifies the background of the cell. If null, the cell uses the background from table's DefaultCellProperties.
+* `Background`: Specifies the background of the cell. If null, the cell uses the background from the table `DefaultCellProperties`.
             
-* __PreferredWidth__: Specifies the preferred width of the cell. The final width of the cell may be bigger of the set value in case when another cell from the same column requires bigger PreferredWidth.
+* `PreferredWidth`: Specifies the preferred width of the cell. The final width of the cell may be bigger than the set value if another cell from the same column requires a bigger `PreferredWidth`.
  
-* __VerticalAlignment__: Specifies the vertical alignment of the content inside the cell.
+* `VerticalAlignment`: Specifies the vertical alignment of the content inside the cell.
 
-__Example 3__ demonstrates how to set locally the cell properties to a specific cell. This helps achieve different appearance for this cell by changing its borders and background. Additionally, the cell will span onto two rows and two columns.
+**Example 3** demonstrates how to set the cell properties locally to a specific cell. This helps achieve a different appearance for this cell by changing its borders and background. Additionally, the cell spans two rows and two columns.
         
 
-#### __Example 1: Change TableCell appearance__
+#### **Example 3: Change TableCell appearance**
 
 <snippet id='libraries-pdf-editing-table-tablecell-change-tablecell-appearance'/>
 
-The result from __Example 3__ is illustrated on __Figure 1__.
+The result from **Example 3** is illustrated in **Figure 1**.
 
 #### Figure 1: TableCell 
 ![Rad Pdf Processing Editing Table Cell 01](images/RadPdfProcessing_Editing_TableCell_01.png)
 
 ## See Also
 
- * [Table]({%slug radpdfprocessing-editing-table-overview%})
- * [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
- * [Block]({%slug radpdfprocessing-editing-block%})
- * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
- * [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})
- * [Implementing Column Span in RadPdfProcessing Tables]({%slug table-column-span-radpdfprocessing%})
- * [Creating a PDF Table with Form Fields Inside the Cells]({%slug insert-form-xobject-elements-pdf-table-cell%})
- * [Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
- * [How To Rotate Cell Content]({%slug pdfprocessing-rotate-cell-content%})
+* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
+* [Block]({%slug radpdfprocessing-editing-block%})
+* [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
+* [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})
+* [Implementing Column Span in RadPdfProcessing Tables]({%slug table-column-span-radpdfprocessing%})
+* [Creating a PDF Table with Form Fields Inside the Cells]({%slug insert-form-xobject-elements-pdf-table-cell%})
+* [Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
+* [How To Rotate Cell Content]({%slug pdfprocessing-rotate-cell-content%})
 
 

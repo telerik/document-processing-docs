@@ -19,15 +19,15 @@ ticketid: 1710179
 
 ## Description
 
-**.HEIC** images are not natively supported by RadPdfProcessing. The library supports JPEG, JPEG2000, and PNG formats for image insertion into PDF documents. To handle HEIC images in your PDF document, you need to convert them to a supported format (JPEG or PNG) before adding them to the PDF. This article shows a sample approach how to do the conversion from HEIC to JPG image format.
+**.HEIC** images are not natively supported by RadPdfProcessing. The library supports JPEG, JPEG2000, and PNG formats for image insertion into PDF documents. To handle HEIC images in your PDF document, convert them to a supported format (JPEG or PNG) before adding them to the PDF. This article shows how to convert from HEIC to JPG image format.
 
 ## Solution
 
 Use an external library or tool to convert HEIC files to JPEG or PNG. For .NET, libraries such as ImageMagick or SixLabors.ImageSharp can perform this conversion.
 
-1. Install `Magick.NET-Q16-AnyCPU`  (version 14.10.3)  via NuGet for HEIC conversion.
-1. Implement the custom logic for converting .HEIC images to JPG.
-1. Add a check for the image format before processing. If the image is HEIC, convert it to JPEG or PNG first, then proceed as usual to add it to the PDF.
+1. Install `Magick.NET-Q16-AnyCPU` (version 14.10.3) through NuGet for HEIC conversion.
+2. Implement the custom logic for converting .HEIC images to JPG.
+3. Add a check for the image format before processing. If the image is HEIC, convert it to JPEG or PNG first, then proceed as usual to add it to the PDF.
 
 ```csharp
 
@@ -134,5 +134,6 @@ Use an external library or tool to convert HEIC files to JPEG or PNG. For .NET, 
 ```
 
 ## See Also
-- [Images in PdfProcessing]({%slug radpdfprocessing-model-image%})
+
+* [Images in PdfProcessing]({%slug radpdfprocessing-model-image%})
 

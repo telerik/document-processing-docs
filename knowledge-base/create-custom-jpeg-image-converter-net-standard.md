@@ -1,6 +1,6 @@
 ---
 title: Create Custom JpegImageConverter in .Net Standard
-description: Describes how to create a custom implementation of JpegImageConverterBase in .Net Standard.
+description: Learn how to create a custom implementation of the JpegImageConverterBase abstract class for .NET Standard to convert images to JPEG format in RadPdfProcessing.
 type: how-to
 page_title: Create custom implementation of JpegImageConverterBase in .Net Standard
 slug: create-custom-jpeg-image-converter-net-standard
@@ -32,15 +32,15 @@ res_type: kb
 
 ## Description
 
-**.NET Standard** specification does not define APIs for converting images or scaling their quality. That is why, when inserting images in a PDF document different than Jpeg and Jpeg2000 or ImageQuality different than High, you will need to implement the **JpegImageConverterBase** abstract class. This implementation should be passed to the **JpegImageConverter** property of the **FixedExtensibilityManager**.
+The **.NET Standard** specification does not define APIs for converting images or scaling their quality. When you insert images in a PDF document in a format different than JPEG and JPEG2000, or with `ImageQuality` different than High, you must implement the `JpegImageConverterBase` abstract class. Pass this implementation to the `JpegImageConverter` property of the `FixedExtensibilityManager`.
 
 >important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2) SkiaSharp replaced ImageSharp as the required dependency.
 
 ## Solution
 
-The following code snippets demonstrate how to create a custom implementation of the JpegImageConverterBase abstract class using the [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp) library and set it to the JpegImageConverter property of the FixedExtensibilityManager. We are using the ImageSharp library to convert the images from one of the library's supported formats to Jpeg and to change their quality if it is set. Note that this approach is valid up to version 2023.1.410 of RadPdfProcessing.
+The following code snippets show how to create a custom implementation of the `JpegImageConverterBase` abstract class by using the [SixLabors.ImageSharp](https://github.com/SixLabors/ImageSharp) library and set it to the `JpegImageConverter` property of the `FixedExtensibilityManager`. The ImageSharp library converts the images from one of its supported formats to JPEG and changes their quality if set. This approach is valid up to version 2023.1.410 of RadPdfProcessing.
 
-#### __Create a custom implementation inheriting the JpegImageConverterBase abstract class__
+**Example 1: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
 
 ```csharp
 
@@ -91,7 +91,7 @@ The following code snippets demonstrate how to create a custom implementation of
  
 ```
 
-#### __Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager__
+**Example 2: Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
 
 ```csharp
 
@@ -126,6 +126,6 @@ The following code snippets demonstrate how to create a custom implementation of
 ```
 
 
-# See Also
+## See Also
 
-- [Cross platform >> Images]({%slug radpdfprocessing-cross-platform-images%})
+* [Cross-Platform Images]({%slug radpdfprocessing-cross-platform-images%})

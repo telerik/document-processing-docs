@@ -10,42 +10,38 @@ position: 0
 
 # Changes
 
-This topic will summarize the new functionality introduced in the library with helpful links to places in the documentation that describe in greater detail the new functionality and how it can be used.
+The following sections summarize the new features introduced in each release with links to the relevant documentation.
 
-## What's New in 2024 Q4
+## What Is New in 2024 Q4
 
-* Introduced timeout mechanism for import and export of documents. The new Import and Export methods for all FormatProviders have a mandatory timeout parameter.[Read more.]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) 
+* Introduced a timeout mechanism for document import and export. The new Import and Export methods for all format providers have a mandatory timeout parameter. [Read more.]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
 
-## What's New in 2014 Q3
+## What Is New in 2014 Q3
 
-__What's New__
+**New Features**
 
-* Improved import and export performance.    
-* Improve FillSeries performance.       
-* Performance optimizations for shapes and images.  
-* Include option to unregister function from FunctionManager.     
+* Improved import and export performance.
+* Improved FillSeries performance.
+* Performance optimizations for shapes and images.
+* Included option to unregister a function from `FunctionManager`.
 * Exposed API for getting the cell content size and the cell layout box from the model.
 
-__What's Fixed__
+**Fixes**
 
-* Setting empty string as font family in a cell and exporting the workbook makes corrupted document.       
-* Copy and paste named ranges with isolated scope in different worksheet refers to the source worksheet.      
-* Importing document containing predefined Normal style causes exception.        
-* Some documents cannot be imported due to the used theme.       
-* Cannot import xlsx files containing images with uppercase extensions.
-* Theme dependent fills are not updated when the theme is changed.        
-* The currency number format is not exported correctly in cultures that contain “.” or “,” in the currency symbol, e.g. Bulgarian and Serbian.
-* When the worksheet name is changed from code this does not affect existing CellReferenceRangeExpressions.       
-* The currency number format is not exported correctly in cultures that contain “.” or “,” in the currency symbol, e.g. Bulgarian and Serbian.        
-* The currency number format is not exported correctly in cultures that contain “.” or “,” in the currency symbol, e.g. Bulgarian and Serbian.       
-* The currency number format is not exported correctly in cultures that contain “.” or “,” in the currency symbol, e.g. Bulgarian and Serbian.
-        
-## What's New in 2014 Q2
+* Setting an empty string as font family in a cell and exporting the workbook produces a corrupted document.
+* Copy and paste of named ranges with isolated scope in a different worksheet refers to the source worksheet.
+* Importing a document that contains a predefined Normal style causes an exception.
+* Some documents cannot be imported due to the theme in use.
+* Cannot import XLSX files that contain images with uppercase extensions.
+* Theme-dependent fills are not updated when the theme changes.
+* The currency number format is not exported correctly in cultures that contain "." or "," in the currency symbol, for example Bulgarian and Serbian.
+* When the worksheet name changes from code, existing `CellReferenceRangeExpressions` are not updated.
+
+## What Is New in 2014 Q2
 
 * [Filtering]({%slug radspreadprocessing-features-filtering%})
 * [Sorting]({%slug radspreadprocessing-features-sorting%})
 * [Export to PDF]({%slug radspreadprocessing-formats-and-conversion-pdf-pdf%})
-* Error cell value           
-* Automatic update for all defined names and cell references when the workbook name is changed          
-* Automatic translation of cell references when cells/rows/columns are inserted or deleted
-            
+* Error cell value
+* Automatic update for all defined names and cell references when the workbook name changes
+* Automatic translation of cell references when cells, rows, or columns are inserted or deleted

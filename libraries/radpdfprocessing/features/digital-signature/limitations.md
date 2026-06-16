@@ -1,6 +1,6 @@
 ---
 title: Limitations
-description: Learn what are the limitations related to the usage of digital signatures in RadPdfProcessing. 
+description: Learn about the limitations related to the use of digital signatures in RadPdfProcessing, including stream requirements and validation constraints.
 page_title: Limitations
 slug: radpdfprocessing-features-digital-signature-limitations
 tags: digital, signature, limitations, pdf, radpdfprocessing, signing, constraints, certificates, forms
@@ -9,13 +9,13 @@ position: 7
 
 # Limitations
 
-There are a few limitations related to the usage of digital signatures in RadPdfProcessing.
+The following limitations apply to digital signatures in RadPdfProcessing:
 
-* Exporting a document that is signed must be done using a stream that supports **reading**. To ensure compatibility, always use a stream that supports both reading and writing when exporting signed documents with Telerik.
+* Export a signed document using a stream that supports **reading**. To ensure compatibility, always use a stream that supports both reading and writing when you export signed documents.
 
-* The validation of a signature depends on the bytes representing the document. Thus, to validate a signature, the stream, used to import the document, must be still **open**.
+* Signature validation depends on the bytes that represent the document. To validate a signature, the stream used to import the document must remain **open**.
 
-* The validation is always performed for the current field, against the state of the document at the moment of importing.
+* The validation always runs for the current field, against the state of the document at the moment of import.
 
 ## See Also
 

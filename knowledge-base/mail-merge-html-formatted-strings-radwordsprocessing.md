@@ -1,6 +1,6 @@
 ---
 title: Mail Merge with HTML Formatted Strings in RadWordsProcessing
-description: Learn how to perform Mail Merge with HTML formatted strings in RadWordsProcessing
+description: Learn how to perform a mail merge with HTML formatted strings in RadWordsProcessing by importing HTML content and replacing raw text with parsed formatting.
 type: how-to
 page_title: Mail Merge with HTML Formatted Strings in RadWordsProcessing
 slug: mail-merge-html-formatted-strings-radwordsprocessing
@@ -16,7 +16,7 @@ res_type: kb
 
 ## Description
 
-When performing a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) operation with a DOCX template, the merge data may include HTML formatted strings. By default, these HTML strings are not parsed and are displayed as raw text in the result document after the mail merge. However, you can process and parse these HTML strings to display them with their intended formatting in the final document.
+When you perform a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) operation with a DOCX template, the merge data may include HTML formatted strings. By default, the library does not parse these HTML strings and displays them as raw text in the result document after the mail merge. However, you can process and parse these HTML strings to display them with their intended formatting in the final document.
 
 **Without HTML Parsing:**
 
@@ -28,24 +28,24 @@ When performing a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}) o
 
 ## Solution
 
-The solution involves importing the HTML formatted strings as separate [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instances using the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}), then replacing the original HTML text with the parsed content.
+The solution involves importing the HTML formatted strings as separate [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instances with the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}), then replacing the original HTML text with the parsed content.
 
-The following example demonstrates the complete workflow:
+The following example shows the complete workflow:
 
-* Import the template document using [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
-* Perform the mail merge operation with data containing HTML strings
+* Import the template document with [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})
+* Perform the mail merge operation with data that contains HTML strings
 * Iterate through all table cells in the merged document
-* Detect lines containing HTML tags (using regex to find "<" or ">")
-* Import each HTML string as a separate document using [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
-* Replace the raw HTML text with the parsed content using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* Detect lines that contain HTML tags (use regex to find "<" or ">")
+* Import each HTML string as a separate document with [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
+* Replace the raw HTML text with the parsed content with [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
 * Export the final document
 
 > The implementation can vary depending on the template document structure and the HTML content.
 
-#### Empty Template Document 
+### Empty Template Document 
 ![Empty Template Document](images/mail-merge-html-template.png)
 
-#### **Mail Merge with HTML Formatted Strings**
+### **Example 1: Mail Merge with HTML Formatted Strings**
 
 ```csharp
 using System;

@@ -1,6 +1,6 @@
 ---
 title: Create Custom Predefined CMaps Provider
-description: Create Custom Predefined CMaps Provider so you can use a custom CMAP table in your PDF documents.
+description: Learn how to create a custom implementation of the PredefinedCMapsProviderBase class to use a custom CMap table in PDF documents with RadPdfProcessing.
 type: how-to
 page_title: Create Custom Predefined CMaps Provider
 slug: create-custom-predefined-cmaps-provider
@@ -28,14 +28,14 @@ res_type: kb
 
 ## Description
 
-How to create a custom implementation of the [PredefinedCMapsProviderBase](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.predefinedcmapsproviderbase) in order to use a custom CMAP table.
+This article shows how to create a custom implementation of the [`PredefinedCMapsProviderBase`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.predefinedcmapsproviderbase) to use a custom CMap table.
 
 ## Solution
 
-This functionality could be achieved by creating a custom class inheriting the [PredefinedCMapsProviderBase](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.predefinedcmapsproviderbase) and passing it to [PredefinedCMapsProvider](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.cmaputils.predefinedcmapsprovider) property of the [FixedExtensibilityManager](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.fixedextensibilitymanager) class.
+Create a custom class that inherits [`PredefinedCMapsProviderBase`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.predefinedcmapsproviderbase) and pass it to the [`PredefinedCMapsProvider`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.cmaputils.predefinedcmapsprovider) property of the [`FixedExtensibilityManager`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.fixedextensibilitymanager) class.
 
 
-#### __Creating a custom class inheriting PredefinedCMapsProviderBase__
+**Example 1: Create a custom class inheriting PredefinedCMapsProviderBase**
 
 ```csharp
 
@@ -66,10 +66,15 @@ This functionality could be achieved by creating a custom class inheriting the [
 	
 ```
 
-#### __Set the custom PredefinedCMapsProvider the FixedExtensibilityManager.PredefinedCMapsProvider__
+**Example 2: Set the custom PredefinedCMapsProvider to the FixedExtensibilityManager**
 
 ```csharp
 
 	FixedExtensibilityManager.PredefinedCMapsProvider = new CustomPredefinedCMapsProvider(new PredefinedCMapsProvider());
  
 ```
+
+## See Also
+
+* [PredefinedCMapsProviderBase API Reference](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.predefinedcmapsproviderbase)
+* [FixedExtensibilityManager API Reference](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.extensibility.fixedextensibilitymanager)

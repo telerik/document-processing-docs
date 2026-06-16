@@ -1,40 +1,29 @@
 ---
-title: Set Value using Named Range
+title: Setting a Value Using a Named Range
 description: Learn how to set a value to a named range in a worksheet using SpreadProcessing.
 type: how-to
-page_title: Set Value using Named Range
+page_title: Setting a Value Using a Named Range
 slug: set-value-using-named-range
 position: 0
 tags: radspreadprocessing, excel, named, range, cell, worksheet, document, processing
 res_type: kb
 ---
 
-<table>
-<thead>
-	<tr>
-		<th>Product Version</th>
-		<th>Product</th>
-		<th>Author</th>
-	</tr>
-</thead>
-<tbody>
-	<tr>
-		<td>2021.1.222</td>
-		<td>SpreadProcessing</td>
-		<td><a href="https://www.telerik.com/blogs/author/martin-velikov">Martin Velikov</a></td>
-	</tr>
-</tbody>
-</table>
+## Environment
+
+| Version | Product | Author |
+| --- | --- | --- |
+| 2021.1.222 | RadSpreadProcessing | [Martin Velikov](https://www.telerik.com/blogs/author/martin-velikov) |
 
 ## Description
 
-How to set the value to a [CellSelection](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.cellselection) using its [Named Range]({%slug radspreadprocessing-features-named-ranges%}).
+This article shows how to set the value of a [CellSelection](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.cellselection) by using its [Named Range]({%slug radspreadprocessing-features-named-ranges%}).
 
 ## Solution
 
-The solution would be to iterate the imported [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook %})`s Names in order to find the desired one. Then to split its [RefersTo](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.definedname#collapsible-Telerik_Windows_Documents_Spreadsheet_Model_DefinedName_RefersTo) property to use its elements to match the exact [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) and to get the name of the indexes describing the **CellSelection**. We are using the [NameConverter]({%slug radspreadprocessing-name-converter%})._TryConvertCellNameToIndex()_ method to convert the already obtained cell name to an index.
+Iterate the imported [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook %}) names to find the desired one. Split the [RefersTo](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.definedname#collapsible-Telerik_Windows_Documents_Spreadsheet_Model_DefinedName_RefersTo) property to match the exact [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) and get the indexes describing the `CellSelection`. Use the [NameConverter]({%slug radspreadprocessing-name-converter%}) `TryConvertCellNameToIndex()` method to convert the obtained cell name to an index.
 
-#### __Set Value using Named Range__
+**Example 1: Set Value Using Named Range**
 
 ```csharp
 
@@ -71,4 +60,9 @@ The solution would be to iterate the imported [Workbook]({%slug radspreadprocess
     }
 ```
 
-There is an item logged in our backlog to provide an API to make this easier: [SpreadProcessing: Add API to get the list of ranges to which a defined name refers](https://feedback.telerik.com/document-processing/1356055-spreadprocessing-add-api-to-get-the-list-of-ranges-to-which-a-defined-name-refers). You can cast your vote for the implementation as well as subscribe to the task by clicking the _Follow_ button to receive updates when its status changes.
+There is an item logged in the backlog to provide an API for this scenario: [SpreadProcessing: Add API to get the list of ranges to which a defined name refers](https://feedback.telerik.com/document-processing/1356055-spreadprocessing-add-api-to-get-the-list-of-ranges-to-which-a-defined-name-refers). You can cast your vote for the implementation and subscribe to the task by clicking the **Follow** button to receive updates when the status changes.
+
+## See Also
+
+* [Named Ranges]({%slug radspreadprocessing-features-named-ranges%})
+* [NameConverter]({%slug radspreadprocessing-name-converter%})

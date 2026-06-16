@@ -1,6 +1,6 @@
 ---
 title: How to change the file size of PDF with images
-description: Learn how to change the file size of a PDF with images by changing the image compression and image quality
+description: Learn how to change the file size of a PDF document with images by adjusting the image compression and image quality settings in RadPdfProcessing.
 type: how-to
 page_title: How to change the file size of a PDF with images
 slug: pdfprocessing-change-file-size-through-image-quality-and-compression
@@ -16,15 +16,15 @@ res_type: kb
 
 ## Description
 
-This article shows how to change the file size of a PDF with images by changing the image compression and image quality.
+This article shows how to change the file size of a PDF with images by adjusting the image compression and image quality.
 
 ## Solution
 
-The size of the exported PDF file depends on the value of the [ImageQuality]({%slug radpdfprocessing-concepts-imagequality%}) and [ImageCompression](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#imagecompression) properties of the [PDF Export Setting](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#export-settings). You can try different combinations with these values in order to achieve different results. 
+The size of the exported PDF file depends on the value of the [`ImageQuality`]({%slug radpdfprocessing-concepts-imagequality%}) and [`ImageCompression`](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#imagecompression) properties of the [PDF Export Settings](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#export-settings). You can try different combinations with these values to achieve different results. 
 
-This example showcases all four __ImageCompression__ options and how each option behaves with a different __ImageQuality__. In general, lowering the image quality will lower the file size.
+This example shows all four `ImageCompression` options and how each option behaves with a different `ImageQuality`. In general, lowering the image quality lowers the file size.
 
->The result file sizes seen in the comments are based on a sample document and should be just used as reference.
+> The result file sizes seen in the comments are based on a sample document and are for reference only.
 
 ```csharp
     using Telerik.Windows.Documents.Fixed.FormatProviders.Pdf;

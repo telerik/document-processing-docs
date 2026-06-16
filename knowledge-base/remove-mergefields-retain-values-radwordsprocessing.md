@@ -1,6 +1,6 @@
 ---
 title: How to Remove a MERGEFIELD While Replacing the Placeholders with Values in RadWordsProcessing
-description: Learn how to remove a MERGEFIELD from a document while replacing the placeholders with actual values, facilitating the MailMerge process in RadWordsProcessing.
+description: Learn how to remove a MERGEFIELD from a document while replacing the placeholders with actual values using the MailMerge process in RadWordsProcessing.
 type: how-to
 page_title: How to Remove a MERGEFIELD While Replacing the Placeholders with Values in RadWordsProcessing
 slug: remove-mergefields-retain-values-radwordsprocessing
@@ -16,17 +16,17 @@ ticketid: 1667593
 | 2024.3.806| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-When preparing a document for the [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) operation in RadWordsProcessing, it might be necessary to remove a [MERGEFIELD]({%slug radwordsprocessing-concepts-merge-field%}) without losing its inserted value. This process ensures that the document is clean and ready for MailMerge without encountering issues related to leftover `MERGEFIELD`.
+When preparing a document for the [MailMerge]({%slug radwordsprocessing-editing-mail-merge%}) operation in RadWordsProcessing, you may need to remove a [MERGEFIELD]({%slug radwordsprocessing-concepts-merge-field%}) without losing its inserted value. This process keeps the document clean and ready for MailMerge without issues related to leftover `MERGEFIELD` entries.
 
 This KB article also answers the following questions:
-- How can I delete `MERGEFIELD` fields but keep their content in the document?
-- What is the correct approach to prepare a document for MailMerge in RadWordsProcessing?
-- Is there a way to clean up `MERGEFIELD` from a document without affecting its content?
+* How can I delete `MERGEFIELD` fields but keep their content in the document?
+* What is the correct approach to prepare a document for MailMerge in RadWordsProcessing?
+* Is there a way to clean up `MERGEFIELD` entries from a document without affecting its content?
 
 ## Solution
-To remove a `MERGEFIELD` while retaining its values, you can use the `RadFlowDocumentEditor`'s `DeleteContent` method. This approach involves deleting the field codes but leaving the field values as plain text in the document. Additionally, the [Find and Replace]({%slug radwordsprocessing-editing-find-and-replace%}) functionality provides a straightforward way to handle any leftover text from the fields.
+To remove a `MERGEFIELD` while keeping its values, use the `RadFlowDocumentEditor`'s `DeleteContent` method. This approach deletes the field codes but leaves the field values as plain text in the document. The [Find and Replace]({%slug radwordsprocessing-editing-find-and-replace%}) feature provides a straightforward way to handle any leftover text from the fields.
 
-Here is an example code snippet demonstrating how to accomplish this:
+The following example shows how to accomplish this:
 
 ```csharp
 using Telerik.Windows.Documents.Flow.Model.Editing;
@@ -71,7 +71,7 @@ using (Stream output = File.OpenWrite(outputFilePath))
 Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
 ```
 
-This method ensures that the `MERGEFIELD ` is removed effectively, leaving only the value in the document.
+This method removes the `MERGEFIELD` effectively, leaving only the value in the document.
 
 |Before|After|
 |----|----|
@@ -79,6 +79,6 @@ This method ensures that the `MERGEFIELD ` is removed effectively, leaving only 
 
 ## See Also
 
-- [Find and Replace Text and Style in RadWordsProcessing]({%slug radwordsprocessing-editing-find-and-replace%})
-- [RadFlowDocumentEditor Class Overview]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
-- [FieldCharacter Class in RadWordsProcessing]({%slug radwordsprocessing-model-fieldcharacter%})
+* [Find and Replace Text and Style in RadWordsProcessing]({%slug radwordsprocessing-editing-find-and-replace%})
+* [RadFlowDocumentEditor Class Overview]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [FieldCharacter Class in RadWordsProcessing]({%slug radwordsprocessing-model-fieldcharacter%})

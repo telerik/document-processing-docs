@@ -1,6 +1,6 @@
 ---
 title: Registering Custom Font Variants (Regular, Bold, Italic) for Conversion in Telerik Document Processing
-description: Learn how to register custom font variants in Telerik Document Processing to ensure proper rendering during DOCX to PDF conversion.
+description: Learn how to register custom font variants (Regular, Bold, Italic) in Telerik Document Processing for accurate rendering during DOCX to PDF conversion.
 type: how-to
 page_title: Proper Font Registration for Custom Font Variants (Regular, Bold, Italic) in DOCX to PDF Conversion
 meta_title: Proper Font Registration for Custom Font Variants (Regular, Bold, Italic) in DOCX to PDF Conversion
@@ -17,11 +17,11 @@ ticketid: 1704494
 
 ## Description
 
-When converting DOCX files to PDF using [PdfProcessing]({%slug radpdfprocessing-concepts-fonts%}) for Telerik Document Processing, missing or incorrectly registered font variants may result in fallback fonts being applied in the output PDF. This article explains how to properly register custom font variants (Regular, Bold, Italic) for the Barlow (or other) font family in Telerik Document Processing to ensure accurate rendering during DOCX to PDF conversion. It covers why fonts may fall back to defaults, and provides step-by-step code examples for registering each font style and weight using FontsRepository. Finally, it demonstrates how to perform the conversion with the registered fonts, ensuring consistent output in PDF documents.
+When converting DOCX files to PDF with [PdfProcessing]({%slug radpdfprocessing-concepts-fonts%}), missing or incorrectly registered font variants may cause fallback fonts to appear in the output PDF. This article shows how to register custom font variants (Regular, Bold, Italic) for the Barlow font family (or any other) and perform the conversion with consistent output.
 
 ## Solution
 
-To ensure proper rendering of the custom (e.g. Barlow) font family in converted PDFs, register each font variant and style individually before conversion. Follow the steps below:
+To ensure proper rendering of the custom (for example, Barlow) font family in converted PDFs, register each font variant and style individually before conversion. Follow these steps:
 
 1. Register the Regular variant of the Barlow font:
    ```csharp
@@ -76,10 +76,10 @@ To ensure proper rendering of the custom (e.g. Barlow) font family in converted 
        pdfProvider.Export(document, outputStream, TimeSpan.FromSeconds(10));
    }
    ```
-Ensure the font name matches exactly in the DOCX and in the system font list. If the DOCX uses "Barlow Semi Condensed SemiBold", but the registered font is "Barlow Semi Condensed Bold", fallback occurs. 
+Verify that the font name matches exactly in the DOCX and in the system font list. If the DOCX uses "Barlow Semi Condensed SemiBold", but the registered font is "Barlow Semi Condensed Bold", fallback occurs. 
 
 ## See Also
 
-- [PdfProcessing Overview]({%slug radpdfprocessing-overview%})  
-- [Registering Fonts]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font)    
+* [PdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [Registering Fonts]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font)
 

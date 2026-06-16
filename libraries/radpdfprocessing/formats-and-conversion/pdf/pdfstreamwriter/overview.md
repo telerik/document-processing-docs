@@ -10,31 +10,27 @@ position: 0
 
 # Overview
 
-This article explains the PDF Stream Writer functionality - how it works and how you can use it.
+The PDF Stream Writer functionality enables high-performance PDF file creation with minimal memory usage.
 
 
-## What is PdfStreamWriter?
+## What Is PdfStreamWriter
 
-The API of __PdfStreamWriter__ exposes a functionality that provides option for exporting PDF files with unmatched performance and minimized memory footprint. 
+The **PdfStreamWriter** API exports PDF files with high performance and a minimized memory footprint.
 
-The key for the memory efficiency is that the writer writes the PDF content directly to a stream without creating and preserving the PDF document model in the memory. The performance efficiency is achieved by reading PDF page content from existing PDF files without decoding or parsing the existing page content. The read content is then written unmodified directly into the new file stream. Although the existing PDF page content is not modified, it may be positioned differently into the new PDF file as well as combined with some other existing or newly generated PDF page content. 
+The writer achieves memory efficiency by writing PDF content directly to a stream without creating or preserving the PDF document model in memory. Performance efficiency comes from reading PDF page content from existing PDF files without decoding or parsing the page content. The read content is then written unmodified directly into the new file stream. Although the existing PDF page content is not modified, you can position it differently in the new PDF file and combine it with other existing or newly generated PDF page content.
 
-__PdfStreamWriter__ can help you achieve the following scenarios when creating the pages of the new PDF file:
+**PdfStreamWriter** supports the following scenarios when creating pages of the new PDF file:
 
-- Merge pages from different PDF documents.
+* Merge pages from different PDF documents.
+* Split PDF document pages.
+* Add and position page content from existing PDF files.
+* Add and position page content from newly generated `RadFixedPage` instances.
+* Merge and position content from existing PDF pages and generated `RadFixedPage` instances onto a single page in the new PDF file stream.
 
-- Split PDF document pages.
-
-- Add and position page content from existing PDF files.
-
-- Add and position page content from newly generated RadFixedPage instances.
-
-- Merge and position content from existing PDF pages and generated RadFixedPage instances onto a single page in the newly written PDF file stream.
-
-> The XAML SDK repository on GitHub contains examples showing the capabilities of PdfStreamWriter: 
+> The XAML SDK repository on GitHub contains examples showing the capabilities of `PdfStreamWriter`:
 > 
-> - The [PdfStreamWriterPerformance](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/PdfStreamWriterPerformance) sample shows the performance you can achieve using PdfStreamWriter
-> - The [Manipulate Pages](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) example shows different use cases of PdfStreamWriter
+> * The [PdfStreamWriterPerformance](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/PdfStreamWriterPerformance) sample shows the performance you can achieve with `PdfStreamWriter`.
+> * The [Manipulate Pages](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) example shows different use cases of `PdfStreamWriter`.
 
 ## PdfStreamWriter Structure
 
@@ -49,14 +45,14 @@ There are several classes responsible for writing the different parts of a PDF f
 | `PdfPageSource` | Represents the page content of an existing PDF file. Instances are obtained from the `Pages` property of `PdfFileSource`. |
 
 
-## PdfStreamWriter or PdfFormatProvider?
+## PdfStreamWriter or PdfFormatProvider
 
-**RadPdfProcessing** provides two options for import and export - using **PdfStreamWriter** and through the **PdfFormatProvider** class. This section describes the benefits of the two approaches in different scenarios. 
+**RadPdfProcessing** provides two options for import and export—**PdfStreamWriter** and the **PdfFormatProvider** class.
 
-If you need to import a PDF document in order to add content to it and save it back, you can take advantage of the **PdfStreamWriter** API. Choosing this approach, you will gain a great performance with minimal memory usage as well as support for the majority of the PDF format features. 
+Use the **PdfStreamWriter** API when you need to import a PDF document, add content to it, and save it back. This approach delivers high performance with minimal memory usage and supports the majority of PDF format features.
 
+Use **PdfFormatProvider** when your scenario requires reading or modifying existing page content. When you work with **PdfStreamWriter**, the existing page content is preserved unmodified and you can only add elements below or above the existing content.
 
-If the scenario requires you to read or modify the existing page content, you should use **PdfFormatProvider** to parse the required data. When working with **PdfStreamWriter**, the existing page content is preserved unmodified and you are only allowed to add elements below or above the existing content. 
 
 ## See Also
 

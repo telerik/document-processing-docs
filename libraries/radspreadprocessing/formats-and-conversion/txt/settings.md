@@ -12,33 +12,25 @@ position: 2
 
 
 
-__TxtFormatProvider__ allows to import and export TXT documents. Additionally, there are a number of settings that allow you to modify the import/export. The current article outlines the available settings.
-      
+`TxtFormatProvider` allows you to import and export TXT documents. Additionally, several settings allow you to modify the import and export behavior.
 
-## 
+## TxtSettings Properties
 
-__TxtFormatProvider__ exposes a __Settings__ property of type __TxtSettings__. This allows you to specify the following:
-        
+`TxtFormatProvider` exposes a `Settings` property of type `TxtSettings`. This allows you to specify the following:
 
-* __Delimiter__: Gets or sets the list separator. By default the TxtFormatProvider class imports and exports files using the list separator specified by the current culture of the system.
+* `Delimiter`: Gets or sets the list separator. By default, the `TxtFormatProvider` class imports and exports files using the list separator specified by the current culture of the system.
 
+* `ShouldExportEmptyValues`: Gets or sets a value indicating whether the empty values are exported.
 
-* __ShouldExportEmptyValues__: Gets or sets a value indicating whether the empty values are exported.
+* `Encoding`: Gets or sets the encoding.
 
+* `Quote`: Gets or sets the quote symbol.
 
-* __Encoding__: Gets or sets the encoding.
+* `HasHeaderRow`: Specifies whether the document has a header row. The default value is `false`.
 
+**Example 1** shows how to create and specify a particular setting to a `TxtFormatProvider`.
 
-* __Quote__: Gets or sets the quote symbol
-            
-
-* __HasHeaderRow__: Specifies whether the document has a header row. The default value is __false__.
-            
-
-__Example 1__ shows how to create and specify a particular setting to a TxtFormatProvider.
-        
-
-#### __Example 1: Use TxtSettings__
+**Example 1: Use TxtSettings**
 
 <snippet id='codeblock-cpe'/>
 

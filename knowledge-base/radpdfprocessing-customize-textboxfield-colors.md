@@ -17,17 +17,17 @@ ticketid: 1673638
 
 ## Description
 
-When creating PDF documents containing [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}), you might need to update the text and border colors of a [TextBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) and highlight specific fields. This article demonstrates how to customize the appearance of `TextBoxField` elements, including changing their text and border colors.
+When you create PDF documents that contain [form fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%}), you may need to update the text and border colors of a [TextBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) and highlight specific fields. This article shows how to customize the appearance of `TextBoxField` elements, including changing their text and border colors.
 
 ![Highlight TextBox Field](images/highlight-textbox-field.gif)    
 
 ## Solution
 
-To change the text and border colors of a `TextBoxField` in a PDF document, utilize the `TextProperties` and `AppearanceCharacteristics` properties provided by the [VariableContentWidget]({%slug radpdfprocessing-model-annotations-widgets%}) class. The following example demonstrates how to customize these aspects.
+To change the text and border colors of a `TextBoxField` in a PDF document, use the `TextProperties` and `AppearanceCharacteristics` properties provided by the [VariableContentWidget]({%slug radpdfprocessing-model-annotations-widgets%}) class. The following example shows how to customize these aspects.
 
 1. Create a new [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) and add a page to it.
-2. Instantiate a `TextBoxField` and configure its properties as needed.
-3. Add a widget to the `TextBoxField` and set up the text and border colors using the `TextProperties` and [AppearanceCharacteristics]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}) properties.
+2. Create a `TextBoxField` and configure its properties as needed.
+3. Add a widget to the `TextBoxField` and set the text and border colors through the `TextProperties` and [AppearanceCharacteristics]({%slug radpdfprocessing-model-interactive-forms-dynamic-appearance-properties%}) properties.
 4. Recalculate the content of the widget and add the `TextBoxField` to the document.
 5. Save the document to a file.
 
@@ -66,12 +66,12 @@ File.WriteAllBytes(fileName, new PdfFormatProvider().Export(fixedDocument, TimeS
 Console.WriteLine("Document with customized TextBoxField created.");
 ```
 
-The demonstrated approach is applicable not only for creating new documents, but for importing documents that already contains form fields as well. 
+This approach applies not only to creating new documents but also to importing documents that already contain form fields.
 
 ## See Also
 
-- [TextBoxField Documentation]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%})
-- [Text and Graphic Properties]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
-- [Create Interactive Forms SDK Example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
-- [Modify Form Values SDK Example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms)
+* [TextBoxField Documentation]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%})
+* [Text and Graphic Properties]({%slug radpdfprocessing-editing-text-and-graphic-properties%})
+* [Create Interactive Forms SDK Example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
+* [Modify Form Values SDK Example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms)
 

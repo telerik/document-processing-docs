@@ -1,7 +1,7 @@
 ---
 title: SectionPages Field
 page_title: SectionPages Field
-description: SectionPages field is a Field element that inserts the total number of pages in a section.
+description: The SectionPages field inserts the total number of pages in a section of a document.
 slug: radwordsprocessing-concepts-sectionpages-field
 tags: sectionpages, word, flow, docx, fields, document, section, pages, model, total
 published: True
@@ -10,29 +10,28 @@ position: 0
 
 # SectionPages Field
 
-This field inserts the total number of pages in a section.
+The `SectionPages` field inserts the total number of pages in a section.
 
 ## Field Syntax
 
-This is how the syntax of a SectionPages field looks like:
+The following table shows the syntax of a `SectionPages` field:
 
-| Syntax   											  |
-| :---     											  |
-| { **SECTIONPAGES** } |    
+| Syntax |
+| :--- |
+| { **SECTIONPAGES** } |
 
- 
+
 ## Inserting
 
-Inserting SectionPages field is easily achieved through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s __InsertField()__ method. It accepts code as first argument and result as second argument.
+You can insert a `SectionPages` field through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s `InsertField()` method. It accepts code as the first argument and result as the second argument.
 
-__Example 1__ demonstrates how you can insert a SectionPages field.
- 
-#### __Example 1: Insert SectionPages field__
+**Example 1** demonstrates how you can insert a `SectionPages` field.
+
+**Example 1: Insert SectionPages Field**
 
 <snippet id='codeblock-bl'/>
 
-
-After updating the field the result would be "Page 3 of 19" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
+After updating the field, the result is "Page 3 of 19" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
 
 ## See Also
 
@@ -40,4 +39,3 @@ After updating the field the result would be "Page 3 of 19" (check [Updating Fie
 * [Time Field]({%slug radwordsprocessing-concepts-time-field%})
 * [Custom Code Field]({%slug radwordsprocessing-concepts-customcodefield%})
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
-

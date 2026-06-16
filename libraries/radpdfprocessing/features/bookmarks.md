@@ -9,31 +9,31 @@ position: 1
 
 # Bookmarks (Outlines) 
 
-Bookmarks or Outlines are a tree-structured hierarchy that the reader presents as a visual table of contents separated from the actual content as a side panel. The Bookmark items allow users, by interacting with them, to navigate through parts of the document and/or invoke different actions. PdfProcessing enables you to create bookmarks, modify existing ones and save the changes into the PDF document.
+Bookmarks, or outlines, are a tree-structured hierarchy that the reader presents as a visual table of contents separated from the actual content as a side panel. Bookmark items allow users to navigate through parts of the document and invoke different actions. RadPdfProcessing enables you to create bookmarks, modify existing ones, and save the changes into the PDF document.
 
 ## BookmarkItem Class
 
-This is the class representing a single bookmark inside the model of PdfProcessing. Each bookmark can have the following characteristics described in the respective properties:
+The `BookmarkItem` class represents a single bookmark inside the RadPdfProcessing model. Each bookmark can have the following characteristics described in the respective properties:
 
 | Property | Description |
 |---|---|
 | `IsExpanded` | Determines whether the bookmark item is open or closed by default. An item is open when its children are visible upon opening the document in a viewer. |
-| `Action` | Gets the action to be performed when this bookmark item is activated. See the [Action]({%slug radpdfprocessing-model-annotations-links%}#action) help topic. |
-| `Destination` | Gets the destination to be displayed when this bookmark item is activated. See the [Destination]({%slug radpdfprocessing-model-annotations-links%}#destination) help topic. |
-| `NamedDestination` | Gets the named destination to be displayed when this bookmark item is activated. See the [Named Destinations]({%slug radpdfprocessing-model-named-destinations%}) topic. |
-| `TextStyle` | Gets or sets the style characteristics for displaying the bookmark item's text. Of type `BookmarkItemStyles` (a flags enum with values `Normal`, `Italic`, and/or `Bold`). |
-| `TextColor` | Gets or sets the color of the bookmark item's text in RGB color space. |
-| `Title` | Gets or sets the text to be displayed in the viewer's navigation pane for this bookmark item. |
+| `Action` | Gets the action to perform when this bookmark item is activated. See the [Action]({%slug radpdfprocessing-model-annotations-links%}#action) help topic. |
+| `Destination` | Gets the destination to display when this bookmark item is activated. See the [Destination]({%slug radpdfprocessing-model-annotations-links%}#destination) help topic. |
+| `NamedDestination` | Gets the named destination to display when this bookmark item is activated. See the [Named Destinations]({%slug radpdfprocessing-model-named-destinations%}) topic. |
+| `TextStyle` | Gets or sets the style characteristics for displaying the bookmark item text. Of type `BookmarkItemStyles` (a flags enum with values `Normal`, `Italic`, and/or `Bold`). |
+| `TextColor` | Gets or sets the color of the bookmark item text in RGB color space. |
+| `Title` | Gets or sets the text to display in the viewer navigation pane for this bookmark item. |
 | `Children` | Gets the immediate child elements for this bookmark item. |
 
 
 ### Working with BookmarkItem
 
-The **BookmarkItem** class exposes several constructor overloads which enable you to set the title of the bookmark as well as what should be executed when the users click on it.
+The `BookmarkItem` class exposes several constructor overloads that enable you to set the title of the bookmark and what action executes when users click it:
 
-*  BookmarkItem(string title, Action action)
-*  BookmarkItem(string title, Destination destination) 
-*  BookmarkItem(string title, NamedDestination namedDestination)
+* `BookmarkItem(string title, Action action)`
+* `BookmarkItem(string title, Destination destination)`
+* `BookmarkItem(string title, NamedDestination namedDestination)`
 
 <a name="example1"><a/>
 
@@ -41,17 +41,17 @@ The **BookmarkItem** class exposes several constructor overloads which enable yo
 
 ## Bookmarks Collection
 
-The **Bookmarks** property exposed through the **RadFixedDocument** class allows you to access all the bookmarks in a document so you can add, remove or reorder them. This property is a collection of [**BookmarkItem**](#bookmarkitem-class) objects which represent each bookmark.
+The `Bookmarks` property exposed through the `RadFixedDocument` class allows you to access all the bookmarks in a document so you can add, remove, or reorder them. This property is a collection of [BookmarkItem](#bookmarkitem-class) objects that represent each bookmark.
 
-Inserting a bookmark in a document is achieved by adding it to the Bookmarks collection. **Example 2** shows adding the **BookmarkItem** created in [**Example 1**](#example-1)
+To insert a bookmark in a document, add it to the `Bookmarks` collection. The following example shows how to add the `BookmarkItem` created in the previous example:
 
 <snippet id='pdf-add-bookmark-to-document'/>
 
-Removing a bookmark is pretty similar to adding one. In **Example 3**, the second bookmark inside the document is removed.
+To remove a bookmark, use the same collection. In the following example, the second bookmark inside the document is removed:
 
 <snippet id='pdf-remove-bookmark-from-document'/>
  
-In case you need to iterate all the bookmarks in a document, keep in mind that each BookmarkItem can contain other bookmarks in its Children collection. If you are encountering such a case, you will need to iterate the Bookmarks collection recursively.
+If you need to iterate all bookmarks in a document, note that each `BookmarkItem` can contain other bookmarks in its `Children` collection. In such cases, you need to iterate the `Bookmarks` collection recursively.
  
 <snippet id='pdf-iterate-bookmarks'/>
 

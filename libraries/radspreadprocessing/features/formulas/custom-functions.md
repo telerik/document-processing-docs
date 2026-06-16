@@ -12,8 +12,7 @@ position: 5
 
 
 
-This article provides information about the possible approaches for creating a custom function. It contains the following sections:
-      
+The following sections describe the possible approaches for creating a custom function:
 
 * [Inheriting FunctionBase Abstract Class](#inheriting-functionbase-abstract-class)
 
@@ -25,33 +24,25 @@ This article provides information about the possible approaches for creating a c
 
 * [Custom Function Examples](#custom-function-examples)
 
-## Inheriting FunctionBase abstract class
+## Inheriting FunctionBase Abstract Class
 
-The document model provides powerful API for creating custom functions. All functions must inherit from the abstract __FunctionBase__ class, providing basic methods and properties for each function instance.
-        
+The document model provides a powerful API for creating custom functions. All functions must inherit from the abstract `FunctionBase` class, which provides basic methods and properties for each function instance.
 
-These are the basic __FunctionBase__ members:
-        
+The following are the basic `FunctionBase` members:
 
-* __Name__: Property of type String, defining the name of the function. The property is used for registering the function, so the name of the function must be unique (case insensitive). If a function with repeating name is registered, it overrides the previous function registered with this name.
-            
+* `Name`: Property of type `String` that defines the name of the function. The property is used for registering the function, so the name must be unique (case insensitive). If a function with a repeating name is registered, it overrides the previous function registered with this name.
 
-* __FunctionInfo__: Property of type FunctionInfo providing description of the function and its arguments. For more detailed description of this class you may follow [this](#functioninfo) link.
-            
+* `FunctionInfo`: Property of type `FunctionInfo` that provides a description of the function and its arguments. For more information, see [FunctionInfo](#functioninfo).
 
-* __ArgumentConversionRules__: Property describing the way different argument types are interpreted. The functions API works with 5 argument types (Logical, Number, Text, Reference and Array) and each function may interpret each of this argument types differently. For more information you may follow [this](#argumentconversionrules) link.
-            
+* `ArgumentConversionRules`: Property describing how different argument types are interpreted. The functions API works with five argument types (Logical, Number, Text, Reference, and Array) and each function may interpret each of these argument types differently. For more information, see [ArgumentConversionRules](#argumentconversionrules).
 
-* __Evaluate__ and __EvaluateOverride methods__: The methods where the function calculations take place. In order to define custom function you need to override the __EvaluateOverride__ method so that later you may obtain function calculations value through the __Evaluate__ method.
-            
+* `Evaluate` and `EvaluateOverride` methods: The methods where the function calculations take place. To define a custom function, override the `EvaluateOverride` method so that you can later obtain the function calculation value through the `Evaluate` method.
 
-Additionally each custom function needs to be registered through the __FunctionManager__ class. This is easily done by passing an instance of the function class to the static __Register()__ method.
-        
+Additionally, each custom function needs to be registered through the `FunctionManager` class. Pass an instance of the function class to the static `Register()` method.
 
-__Example 1__ shows how to register a function class ArgumentsFunction, inheritor of FunctionBase.
-        
+**Example 1** shows how to register a function class `ArgumentsFunction`, an inheritor of `FunctionBase`.
 
-#### __Example 1: Register custom function__
+**Example 1: Register Custom Function**
 
 <snippet id='codeblock-cms'/>
 
@@ -59,75 +50,56 @@ __Example 1__ shows how to register a function class ArgumentsFunction, inherito
 
 ## Functions Inheritance Tree
 
-The document model provides an inheritance tree of classes providing ready to use functionalities for different function types depending on the function arguments and the desired result.
-        
+The document model provides an inheritance tree of classes that offer ready-to-use features for different function types, depending on the function arguments and the desired result.
 
-__Figure 1__ the base abstract function classes.
-        
+**Figure 1** shows the base abstract function classes.
 
-Figure 1: Functions Inheritance
-![Rad Spread Processing Features Formulas Custom Functions 01](images/RadSpreadProcessing_Features_Formulas_Custom_Functions_01.png)
+**Figure 1: Functions Inheritance**
 
-* __FunctionBase__: Provides the base functions properties (__Name, FunctionInfo, ArgumentConvertionRules__). Also provides the logic of the __IsArgumentNumberValid()__ method which handles the logic when invalid arguments count is inputted by the user. By inheriting __FunctionBase__ you must override the __EvaluateOverride(RadExpression[] arguments)__ method, so you need to handle the whole logic of converting __RadExpression__ arguments to function arguments.
-            
+![Functions inheritance diagram](images/RadSpreadProcessing_Features_Formulas_Custom_Functions_01.png)
 
-* __FunctionWithArguments__: Handles the basic logic of converting __RadExpression__'s value to some other value type corresponding to the ArgumentType defined in FunctionInfo property. By inheriting from this class you need to override the __EvaluateOverride(object[] arguments)__ method and handle and array of already converted function argument values.
-            
+* `FunctionBase`: Provides the base function properties (`Name`, `FunctionInfo`, `ArgumentConversionRules`). Also provides the logic of the `IsArgumentNumberValid()` method which handles the scenario when an invalid arguments count is passed by the user. By inheriting `FunctionBase` you must override the `EvaluateOverride(RadExpression[] arguments)` method, so you need to handle the full logic of converting `RadExpression` arguments to function arguments.
 
-* __FunctionWithSameTypeArguments&lt;T&gt;__: By inheriting this class you need to override __EvaluateOverride(T[] arguments)__ method and handle an array of arguments with same type T.
-            
+* `FunctionWithArguments`: Handles the basic logic of converting a `RadExpression` value to another value type corresponding to the `ArgumentType` defined in the `FunctionInfo` property. By inheriting from this class, you need to override the `EvaluateOverride(object[] arguments)` method and handle an array of already converted function argument values.
 
-* __StringInFunctions, NumbersInFunction, BooleansInFunction__: These classes inherit directly from __FunctionWithSameTypeArguments&lt;String&gt;, FunctionWithSameTypeArguments&lt;double&gt; and FunctionWithSameTypeArguments&lt;bool&gt;__. Using them is appropriate in cases when the function the respective argument type - String, double or Boolean.
+* `FunctionWithSameTypeArguments<T>`: By inheriting this class, you need to override the `EvaluateOverride(T[] arguments)` method and handle an array of arguments with the same type T.
+
+* `StringInFunctions`, `NumbersInFunction`, `BooleansInFunction`: These classes inherit directly from `FunctionWithSameTypeArguments<String>`, `FunctionWithSameTypeArguments<double>`, and `FunctionWithSameTypeArguments<bool>`. Use them when the function requires the respective argument type (String, double, or Boolean).
             
 
 ## ArgumentConversionRules
 
-The __ArgumentConversionRules__ class provides properties describing the way different function argument types are interpreted. The functions API works with 5 argument types (Logical, Number, Text, Reference and Array) and each function may interpret each of these argument types differently. Additionally, RadSpreadProcessing allows to be made difference between __direct arguments__ (value passed directly into the formula) and __indirect arguments__ (values that depending on some other cells referencing).
-        
+The `ArgumentConversionRules` class provides properties that describe how different function argument types are interpreted. The functions API works with five argument types (Logical, Number, Text, Reference, and Array) and each function may interpret each of these argument types differently. Additionally, RadSpreadProcessing differentiates between **direct arguments** (values passed directly into the formula) and **indirect arguments** (values that depend on some other cells referencing).
 
-ArgumentConversionRules has the following properties:
-        
+`ArgumentConversionRules` has the following properties:
 
-* __EmptyDirectArgument__: The ArgumentInterpretation of an Empty cell value, passed as direct argument.
-            
+* `EmptyDirectArgument`: The `ArgumentInterpretation` of an Empty cell value, passed as a direct argument.
 
-* __NumberDirectArgument__: The ArgumentInterpretation of a Number cell value, passed as direct argument.
-            
+* `NumberDirectArgument`: The `ArgumentInterpretation` of a Number cell value, passed as a direct argument.
 
-* __BoolDirectArgument__: The ArgumentInterpretation of a Boolean cell value, passed as direct argument.
-            
+* `BoolDirectArgument`: The `ArgumentInterpretation` of a Boolean cell value, passed as a direct argument.
 
-* __TextNumberDirectArgument__: The ArgumentInterpretation of a String cell value that may successfully be parsed to a number, passed as direct argument.
-            
+* `TextNumberDirectArgument`: The `ArgumentInterpretation` of a String cell value that can be parsed to a number, passed as a direct argument.
 
-* __NonTextNumberDirectArgument__: The ArgumentInterpretation of a String cell value that cannot be parsed to a number, passed as direct argument.
-            
+* `NonTextNumberDirectArgument`: The `ArgumentInterpretation` of a String cell value that cannot be parsed to a number, passed as a direct argument.
 
-* __EmptyIndirectArgument__: The ArgumentInterpretation of an Empty cell value, passed as indirect argument.
-            
+* `EmptyIndirectArgument`: The `ArgumentInterpretation` of an Empty cell value, passed as an indirect argument.
 
-* __NumberIndirectArgument__: The ArgumentInterpretation of a Number cell value, passed as direct argument.
-            
+* `NumberIndirectArgument`: The `ArgumentInterpretation` of a Number cell value, passed as an indirect argument.
 
-* __BoolIndirectArgument__: The ArgumentInterpretation of a Boolean cell value, passed as indirect argument.
-            
+* `BoolIndirectArgument`: The `ArgumentInterpretation` of a Boolean cell value, passed as an indirect argument.
 
-* __TextNumberIndirectArgument__: The ArgumentInterpretation of a String cell value that may successfully be parsed to a number, passed as indirect argument.
-            
+* `TextNumberIndirectArgument`: The `ArgumentInterpretation` of a String cell value that can be parsed to a number, passed as an indirect argument.
 
-* __NonTextNumberIndirectArgument__: The ArgumentInterpretation of a String cell value that cannot be parsed to a number, passed as indirect argument.
-            
+* `NonTextNumberIndirectArgument`: The `ArgumentInterpretation` of a String cell value that cannot be parsed to a number, passed as an indirect argument.
 
-* __ArrayArgument__: The ArrayArgumentInterpretaion.
-            
+* `ArrayArgument`: The `ArrayArgumentInterpretation`.
 
-The value of these properties are from the enumerations [ArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArgumentInterpretation.html) and [ArrayArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArrayArgumentInterpretation.html) and they are set through the constructor of __ArgumentConversionRules__. The default values of these interpretations in the constructor are accordingly __ArgumentInterpretation.UseAsIs__ and __ArrayArgumentInterpretation.UseFirstElement__.
-        
+The values of these properties come from the [ArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArgumentInterpretation.html) and [ArrayArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArrayArgumentInterpretation.html) enumerations and are set through the constructor of `ArgumentConversionRules`. The default values of these interpretations in the constructor are `ArgumentInterpretation.UseAsIs` and `ArrayArgumentInterpretation.UseFirstElement`.
 
-__Example 2__ creates an instance of ArgumentConversionRules:
-        
+**Example 2** creates an instance of `ArgumentConversionRules`:
 
-#### __Example 2: Create ArgumentConversionRules__
+**Example 2: Create ArgumentConversionRules**
 
 <snippet id='codeblock-cmt'/>
 
@@ -135,59 +107,47 @@ __Example 2__ creates an instance of ArgumentConversionRules:
 
 ## FunctionInfo
 
-The __FunctionInfo__ class provides properties describing the purpose of the function and each of its arguments.
-        
+The `FunctionInfo` class provides properties that describe the purpose of the function and each of its arguments.
 
-__FunctionInfo__ has the following properties:
-        
+`FunctionInfo` has the following properties:
 
-* __Category__: The FunctionCategory to which the function belongs.
-            
+* `Category`: The `FunctionCategory` to which the function belongs.
 
-* __Description__: Description of the function as string value.
-            
+* `Description`: Description of the function as a string value.
 
-* __RequiredArgumentsCount__: Returns the number of required arguments of the function. If the user inputs less arguments than the RequiredArgumentsCount an error is raised.
-            
+* `RequiredArgumentsCount`: Returns the number of required arguments of the function. If the user passes fewer arguments than the `RequiredArgumentsCount`, an error is raised.
 
-* __OptionalArgumentsCount__: Returns the count of the optional arguments group.
-            
+* `OptionalArgumentsCount`: Returns the count of the optional arguments group.
 
-* __OptionalArgumentsRepetitionCount__: Returns the number of repetitions of the optional group. The valid count of all arguments depends on this value by satisfying the following conditions:
-            
+* `OptionalArgumentsRepetitionCount`: Returns the number of repetitions of the optional group. The valid count of all arguments depends on this value by satisfying the following conditions:
 
-* When __OptionalArgumentsRepetionCount <= 1:__
+* When `OptionalArgumentsRepetitionCount <= 1`:
 
-* __ValidArgumentsCount >= RequiredArgumentsCount__
+* `ValidArgumentsCount >= RequiredArgumentsCount`
 
-* __ValidArgumentsCount <= RequiredArgumentsCount + OptionalArgumentsCount__
+* `ValidArgumentsCount <= RequiredArgumentsCount + OptionalArgumentsCount`
 
-* When __OptionalArgumentsRepetitionsCount > 1:__
+* When `OptionalArgumentsRepetitionsCount > 1`:
 
-* __ValidArgumentsCount = RequiredArgumentsCount + i * OptionalArgumentsCount__
+* `ValidArgumentsCount = RequiredArgumentsCount + i * OptionalArgumentsCount`
 
-* __i >= 0__
+* `i >= 0`
 
-* __i <= OptionalArgumentsRepetitionsCount__
+* `i <= OptionalArgumentsRepetitionsCount`
 
-* __i is integer number__
+* `i is integer number`
 
-* __IsDefaultValueFunction__: Returns Boolean indicating whether the function is default value function.
-            
+* `IsDefaultValueFunction`: Returns a Boolean value that indicates whether the function is a default value function.
 
-* When __true__ – the function returns some default value when __all inputted values__ have __ArgumentInterpretation.Ignore__ in ArgumentConversionRules of the function.
-                
+* When `true`: The function returns some default value when all passed values have `ArgumentInterpretation.Ignore` in `ArgumentConversionRules` of the function.
 
-* When __false__ – the function returns ErrorExpressions.ValueError when __all inputted values__ are invalid even if they have __ArgumentInterpretation.Ignore__ in ArgumentConversionRules of the function.
-                
+* When `false`: The function returns `ErrorExpressions.ValueError` when all passed values are not valid, even if they have `ArgumentInterpretation.Ignore` in `ArgumentConversionRules` of the function.
 
-* __Format__: Returns the CellValueFormat of the function result, if the result needs specific formatting (for example DateTime or Currency).
-            
+* `Format`: Returns the `CellValueFormat` of the function result, if the result needs specific formatting (for example, DateTime or Currency).
 
-__Example 3__ shows how to create an instance of FunctionInfo class.
-        
+**Example 3** shows how to create an instance of the `FunctionInfo` class.
 
-#### __Example 3: Create FunctionInfo__
+**Example 3: Create FunctionInfo**
 
 <snippet id='codeblock-cmu'/>
 
@@ -195,42 +155,37 @@ __Example 3__ shows how to create an instance of FunctionInfo class.
 
 ## Custom Function Examples
 
-The next example is of a custom function named __"ARGUMENTS"__ inheriting from the __FunctionBase__ class. In the __FunctionInfo__ definition you can see that the function has three required arguments and three optional arguments with __optionalArgumentsRepeatsCount__ equal to 3.
-        
+The following example defines a custom function named "ARGUMENTS" that inherits from the `FunctionBase` class. In the `FunctionInfo` definition, the function has three required arguments and three optional arguments with `optionalArgumentsRepeatsCount` equal to 3.
 
-The result of the function's calculations is the number of arguments passed to the function, as you can see in the EvaluateOverride() method.
-        
+The result of the function calculations is the number of arguments passed to the function, as shown in the `EvaluateOverride()` method.
 
-__Example 4__ shows how to create the 'ARGUMENTS' function.
-        
+**Example 4** shows how to create the "ARGUMENTS" function.
 
-#### __Example 4: Create ARGUMENTS function__
+**Example 4: Create ARGUMENTS Function**
 
 <snippet id='codeblock-cmv'/>
 
 
 
-The next example is of a custom function named "E" that inherits from the __FunctionBase__ class. The function takes no arguments and it always returns the Napier's constant.
-        
+The following example defines a custom function named "E" that inherits from the `FunctionBase` class. The function takes no arguments and always returns the Napier constant.
 
-__Example 5__ shows how to create the 'E' function.
-        
+**Example 5** shows how to create the "E" function.
 
-#### __Example 5: Create E function__
+**Example 5: Create E Function**
 
 <snippet id='codeblock-cmw'/>
 
 
 
->tip You can download a runnable project of the previous and several other examples of custom functions from our online SDK repository [here](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions).
+>tip You can download a runnable project with the previous and several other custom function examples from the [SDK repository on GitHub](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions).
           
 
 ## See Also
 
- * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
- * [ArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArgumentInterpretation.html)
- * [ArrayArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArrayArgumentInterpretation.html)
- * [CustomFunctions SDK](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions)
- * [Implementing SUMPRODUCT Function in SpreadProcessing]({%slug sumproduct-function-nested-array-formulas-telerik-spreadprocessing%})
- * [Implementing TRANSPOSE(cells range) Function in SpreadProcessing]({%slug implementing-transpose-array-function-in-spreadprocessing%})
- * [Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing]({%slug implementing-concat-array-function-in-spreadprocessing%})
+* [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
+* [ArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArgumentInterpretation.html)
+* [ArrayArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArrayArgumentInterpretation.html)
+* [CustomFunctions SDK](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions)
+* [Implementing SUMPRODUCT Function in SpreadProcessing]({%slug sumproduct-function-nested-array-formulas-telerik-spreadprocessing%})
+* [Implementing TRANSPOSE(cells range) Function in SpreadProcessing]({%slug implementing-transpose-array-function-in-spreadprocessing%})
+* [Implementing Custom Functions with a Cells Range as an Argument in SpreadProcessing]({%slug implementing-concat-array-function-in-spreadprocessing%})

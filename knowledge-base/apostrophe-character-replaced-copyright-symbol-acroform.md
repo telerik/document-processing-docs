@@ -25,11 +25,11 @@ img[alt$="><"] {
 
 ## Description
 
-Learn how to address the issue where a special symbol (e.g. apostrophe character) is replaced by a copyright (or other) symbol in a filled PDF AcroForm using RadPdfProcessing. When the form is opened for editing in a viewer (like Adobe Acrobat), the character appears correctly as an apostrophe in the editor itself. 
+Learn how to address the issue where a special symbol (for example, apostrophe character) is replaced by a copyright (or other) symbol in a filled PDF AcroForm using RadPdfProcessing. When the form is opened for editing in a viewer (like Adobe Acrobat), the character appears correctly as an apostrophe in the editor itself. 
 
 ![apostrophe-character-replaced-copyright-symbol-acroform ><](images/apostrophe-character-replaced-copyright-symbol-acroform.gif)  
 
->note This might be reproduced with other symbols as well, not only with the apostrophe character. Usually, such behavior may occur with XFA forms. However, from PDF 2.0 (ISO 32000-2) the XFA forms are deprecated.
+>note This behavior can occur with other symbols as well, not only with the apostrophe character. Usually, such behavior may occur with XFA forms. However, starting with PDF 2.0 (ISO 32000-2), XFA forms are deprecated.
 
 ## Solution
 
@@ -37,7 +37,7 @@ This issue is likely caused by the font encoding used in the [AcroForm]({%slug r
 
 To resolve this issue, set the font of the AcroForm fields to one of the [14 standard PDF fonts]({%slug radpdfprocessing-concepts-fonts%}), such as Helvetica, Times, or Courier. These fonts have broad character support and do not require embedding.
 
-### Steps:
+### Steps
 
 1. Iterate through all form fields in `RadFixedDocument.AcroForm.FormFields`.
 2. Check if the field type is [TextBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) or [CombTextBox]({%slug radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield%}).
@@ -62,11 +62,10 @@ foreach (FormField field in document.AcroForm.FormFields)
     }
 }
 ```
-After applying the code, the apostrophe character will render correctly in the filled PDF.
+After applying the code, the apostrophe character renders correctly in the filled PDF.
 
 ## See Also
-- [Fonts in RadPdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/concepts/fonts)
-- [RadPdfProcessing Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [Working with AcroForm Fields](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/features/interactive-forms)
 
----
+* [Fonts in RadPdfProcessing]({%slug radpdfprocessing-concepts-fonts%})
+* [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [Working with AcroForm Fields]({%slug radpdfprocessing-model-interactive-forms-acroform%})

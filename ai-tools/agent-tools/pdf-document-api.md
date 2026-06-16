@@ -16,24 +16,25 @@ Telerik Document Processing provides a set of fixed (PDF) document APIs exposing
 
 ## Repositories
 
-A repository is a place in memory where we keep the documents we currently work with. The available repositories for managing fixed (PDF) documents are:
+A repository is a place in memory that stores the documents you currently work with. The available repositories for managing fixed (PDF) documents are:
 
 |Repository|Description|
 |----|----|
-|**IFixedDocumentRepository**|Provides a unified interface for managing PDF (Fixed) documents. Extends IDocumentRepository with PDF-specific capabilities.|
-|**InMemoryFixedDocumentRepository**|Repository for multi-document orchestration scenarios. Manages multiple PDF documents in memory with support for creation and import.|
+|`IFixedDocumentRepository`|Provides a unified interface for managing PDF (Fixed) documents. Extends `IDocumentRepository` with PDF-specific capabilities.|
+|`InMemoryFixedDocumentRepository`|Repository for multi-document orchestration scenarios. Manages multiple PDF documents in memory with support for creation and import.|
 
 ## Agent Tools
 
->note Please refer to the [Agent Tools in PdfViewer](https://github.com/telerik/document-processing-sdk/tree/master/AITools/AgentToolsInPdfViewerWPF) SDK example which demonstrates the integration between the PDF Agent tools offered by RadPdfProcessing and RadPdfViewer offered by the UI for WPF suite.
+>note Refer to the [Agent Tools in PdfViewer](https://github.com/telerik/document-processing-sdk/tree/master/AITools/AgentToolsInPdfViewerWPF) SDK example. It demonstrates the integration between the PDF agent tools from `RadPdfProcessing` and `RadPdfViewer` from the Telerik UI for WPF suite.
 
 ### FixedDocumentFormAgentTools
 
-Provides AI‑assistant–ready operations for inspecting and filling interactive form fields in PDF documents. It is built on top of the Telerik Documents AI Tooling framework and extends FixedDocumentAgentToolsBase to support workflows that involve:
-- Reading PDF form structure and metadata
-- Extracting field properties for analysis or downstream logic
-- Filling form fields programmatically with user‑supplied values
-- Saving new PDFs populated with partial or complete form data
+Provides AI‑assistant–ready operations for inspecting and filling interactive form fields in PDF documents. It is built on top of the Telerik Documents AI Tooling framework and extends `FixedDocumentAgentToolsBase` to support workflows that involve:
+
+* Reading PDF form structure and metadata
+* Extracting field properties for analysis or downstream logic
+* Filling form fields programmatically with user‑supplied values
+* Saving new PDFs populated with partial or complete form data
 
 This toolset enables intelligent agents, automation systems, and PDF‑processing pipelines to collaborate efficiently with interactive PDF forms.
 
@@ -55,7 +56,7 @@ Note: This operation modifies the document in place and cannot be undone. <i>Int
 
 ### FixedDocumentContentAgentTools
 
-Provides high-level agent tools for creating and manipulating PDF document content via structured content segments. It is designed to add multiple, heterogeneous content types—text, images, tables, and document structure breaks—in a single operation, preserving content flow and layout consistency by using one RadFixedDocumentEditor instance under the hood.
+Provides high-level agent tools for creating and manipulating PDF document content through structured content segments. It is designed to add multiple, heterogeneous content types—text, images, tables, and document structure breaks—in a single operation, preserving content flow and layout consistency by using one `RadFixedDocumentEditor` instance under the hood.
   
 <table>
 <tr><th style="width:20%;">Tool</th><th>Signature</th><th style="width:30%;">Description</th></tr>

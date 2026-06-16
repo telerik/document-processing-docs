@@ -97,11 +97,11 @@ static void Main(string[] args)
 ```
 
 
-For more examples and details on working with content controls and other features of RadWordsProcessing, refer to the [SDK examples](https://github.com/telerik/document-processing-sdk/blob/master/WordsProcessing/ContentControls/DocumentGenerator.cs).
+For more examples and details on content controls and other features of RadWordsProcessing, see the [SDK examples](https://github.com/telerik/document-processing-sdk/blob/master/WordsProcessing/ContentControls/DocumentGenerator.cs).
 
 ## See Also
 
-- [RadWordsProcessing Overview]({%slug radwordsprocessing-overview%})
-- [Working with Tables in RadWordsProcessing]({%slug radwordsprocessing-model-table%})
-- [Content Controls in RadWordsProcessing]({%slug wordsprocessing-model-content-controls%}) 
+* [RadWordsProcessing Overview]({%slug radwordsprocessing-overview%})
+* [Working with Tables in RadWordsProcessing]({%slug radwordsprocessing-model-table%})
+* [Content Controls in RadWordsProcessing]({%slug wordsprocessing-model-content-controls%}) 
 

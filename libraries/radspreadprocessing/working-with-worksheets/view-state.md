@@ -1,7 +1,7 @@
 ---
 title: Manage View State
 page_title: Manage View State
-description: Learn how to set scale factor, tab color, how to show or hide gridlines or row/column headers in the worksheet.
+description: Learn how to set the scale factor, tab color, selection state, and how to show or hide gridlines and row or column headers in the worksheet.
 slug: radspreadprocessing-working-with-worksheets-view-state
 tags: view, state, spreadsheet, radspreadprocessing, zoom, scroll, gridlines, worksheet, headers
 published: True
@@ -10,93 +10,93 @@ position: 5
 
 # Manage View State
 
-**RadSpreadProcessing** enables you to apply different properties on the Worksheet that affect its visualization when the document is rendered in an application. These properties can be used through the **ViewState** property of the **Worksheet** object.
+**RadSpreadProcessing** enables you to apply different properties on the worksheet that affect its visualization when the document is rendered in an application. You can access these properties through the `ViewState` property of the `Worksheet` object.
 
-The following sections describe the members of the WorksheetViewState class.
+The following sections describe the members of the `WorksheetViewState` class.
 
-### **ScaleFactor**
+## ScaleFactor
 
-Allows you to get or set the current scale factor of the worksheet. You can use this property to zoom in or out according to your needs. The values you can apply are between 0.5 and 4, corresponding to 50% and 400% respectively.
+Gets or sets the current scale factor of the worksheet. Use this property to zoom in or out according to your needs. The values you can apply are between 0.5 and 4, corresponding to 50% and 400% respectively.
 
-#### __Example 1: Set the zoom level of a worksheet to 50%__
+**Example 1: Set the Zoom Level of a Worksheet to 50%**
+
 <snippet id='codeblock-cst'/>
 
 
-### **TopLeftCellIndex**
+## TopLeftCellIndex
 
-Determines the top left cell visible on the screen. You can use this property to ensure that the data you would like to visualize when the worksheet is opened is in the user viewport.
+Determines the top left cell visible on the screen. Use this property to make sure that the data you want to visualize when the worksheet is opened is in the user viewport.
 
-#### __Example 2: Set the top left cell to be C11__
+**Example 2: Set the Top Left Cell to Be C11**
+
 <snippet id='codeblock-csu'/>
 
-### **SelectionState**
+## SelectionState
 
 Gets or sets the state of the selection inside the worksheet.
 
-**Example 3** demonsrates how you can create two selection ranges (one from B3 to E9 and one from D6 to G13) and change the active cell inside that selection.
+**Example 3** demonstrates how you can create two selection ranges (one from B3 to E9 and one from D6 to G13) and change the active cell inside that selection.
 
-#### __Example 3: Change the selection__
+**Example 3: Change the Selection**
+
 <snippet id='codeblock-csv'/>
 
-#### Figure 1: Selection in worksheet
-![](images/ViewState_Selection.png)
-    
-### **IsSelected**
+![Selection state showing two selected ranges in a worksheet](images/ViewState_Selection.png)
+
+## IsSelected
 
 Gets or sets a value indicating whether the sheet is selected.
 
-### **ShowGridLines**
+## ShowGridLines
 
-Allows you to get or set a boolean value determining whether the gridlines should be visualized when the document is rendered. 
+Gets or sets a boolean value determining whether the gridlines are visualized when the document is rendered.
 
-#### __Example 4: Remove grid lines__
+**Example 4: Remove Grid Lines**
+
 <snippet id='codeblock-csw'/>
 
-### **ShowRowColHeaders**
+## ShowRowColHeaders
 
-Determines whether the headers of the rows and columns should be visualized when the document is rendered.
+Determines whether the headers of the rows and columns are visualized when the document is rendered.
 
-#### __Example 5: Remove row and column headers__
+**Example 5: Remove Row and Column Headers**
+
 <snippet id='codeblock-csx'/>
 
-#### Figure 2: Worksheet with hidden row/column headers and grid lines
-![](images/ViewState_HideLinesHeaders.png)
+![Worksheet with hidden row and column headers and grid lines](images/ViewState_HideLinesHeaders.png)
 
-### **Pane**
+## Pane
 
 Gets or sets the pane of the worksheet. Applicable when the worksheet contains [frozen panes]({%slug radspreadprocessing-features-freeze-panes%}).
 
-### **CircleInvalidData**
+## CircleInvalidData
 
-Gets or sets a value indicating whether to circle the invalid data. Applicable when using the [Data Validation]({%slug radspreadprocessing-features-data-validation%}) feature. Note that this property is not preserved when exporting the document as there is no alternative representation in the supported formats. Its value is used only by viewers integrated with SpreadProcessing.
+Gets or sets a value indicating whether to circle the not valid data. Applicable when using the [Data Validation]({%slug radspreadprocessing-features-data-validation%}) feature. This property is not preserved when exporting the document because there is no alternative representation in the supported formats. Its value is used only by viewers integrated with SpreadProcessing.
 
-### **FreezePanes()**
+## FreezePanes
 
-Allows you to freeze panes. Read more about this feature and its usage in the [Freeze Panes]({%slug radspreadprocessing-features-freeze-panes%}) topic.
+Allows you to freeze panes. For more information about this feature and its usage, refer to the [Freeze Panes]({%slug radspreadprocessing-features-freeze-panes%}) topic.
 
-### **TabColor**
+## TabColor
 
-Allows you to set the color of the worksheet's tab.
+Sets the color of the worksheet tab.
 
-#### __Example 6: Change the color of the tab__
+**Example 6: Change the Color of the Tab**
+
 <snippet id='codeblock-csy'/>
 
-#### Figure 3: Worskheet with green tab
-![](images/ViewState_TabColor.png)
-    
-### **IsInvalidated**
+![Worksheet with green tab color](images/ViewState_TabColor.png)
+
+## IsInvalidated
 
 Boolean property determining whether the view state must be updated.
 
+## ViewType
 
-### **ViewType**
-
-Allows you to set the view type. The supported values are **Normal**, **PageBreakPreview**, and **PageLayout**.
-
-
+Sets the view type. The supported values are `Normal`, `PageBreakPreview`, and `PageLayout`.
 
 ## See Also
 
-* [Iterate through Worksheets]({%slug radspreadprocessing-working-with-worksheets-iterate-through-worksheets%})
+* [Iterate Through Worksheets]({%slug radspreadprocessing-working-with-worksheets-iterate-through-worksheets%})
 * [Rename a Worksheet]({%slug radspreadprocessing-working-with-worksheets-rename-worksheet%})
 * [Add and Remove Worksheets]({%slug radspreadprocessing-working-with-worksheets-add-remove-worksheets%})

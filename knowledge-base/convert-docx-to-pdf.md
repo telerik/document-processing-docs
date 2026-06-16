@@ -1,6 +1,6 @@
 ---
 title: Convert Docx to PDF
-description: This article demonstrates how you can convert a docx file to a PDF with the WordsProcessing library.
+description: Learn how to convert a DOCX file to PDF format by importing with DocxFormatProvider and exporting with PdfFormatProvider in the WordsProcessing library.
 type: how-to 
 page_title: Convert Docx to PDF
 slug: convert-docx-to-pdf
@@ -9,33 +9,36 @@ tags: radwordsprocessing, docx, pdf, conversion, word, document, processing, exp
 res_type: kb
 ---
 
+## Environment
+
 |Product Version|Product|Author|
 |----|----|----|
 |2021.3.909|RadWordsProcessing|[Dimitar Karamfilov](https://www.telerik.com/blogs/author/dimitar-karamfilov)|
 
 ## Description
 
-This article demonstrates how you can convert a Docx file to a PDF with the [WordsProcessing]({%slug radwordsprocessing-overview%}) library. In the [WordsProcessing Getting Started]({%slug radwordsprocessing-getting-started%}) article you can find all the required assembly references.
+This article shows how to convert a DOCX file to PDF with the [WordsProcessing]({%slug radwordsprocessing-overview%}) library. For the required assembly references, see the [WordsProcessing Getting Started]({%slug radwordsprocessing-getting-started%}) article.
 
 ## Solution
 
-The solution is to import the file with the DocxFormatProvider and export it with the PdfFormatProvider. 
+Import the file with the `DocxFormatProvider` and export it with the `PdfFormatProvider`:
 
-#### Convert Docx to PDF
+```csharp
+public static void ConvertDocxToPdf(string path, string resultPath)
+{
+    var docxProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
+    var pdfProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
 
-```csharp.
+    var docBytes = File.ReadAllBytes(path);
+    var document = docxProvider.Import(docBytes);
 
-    public static void ConverDocxToPdf(string path, string resultPath)
-    {
-        var docxPRovider = new Telerik.Windows.Documents.Flow.FormatProviders.Docx.DocxFormatProvider();
-        var pdfProvider = new Telerik.Windows.Documents.Flow.FormatProviders.Pdf.PdfFormatProvider();
-    
-        var docBytes = File.ReadAllBytes(path);
-        var document = docxPRovider.Import(docBytes);
-    
-        var resultBytes = pdfProvider.Export(document);
-        File.WriteAllBytes(resultPath, resultBytes);
-    }
-
+    var resultBytes = pdfProvider.Export(document);
+    File.WriteAllBytes(resultPath, resultBytes);
+}
 ```
+
+## See Also
+
+* [WordsProcessing Overview]({%slug radwordsprocessing-overview%})
+* [WordsProcessing Getting Started]({%slug radwordsprocessing-getting-started%})
 

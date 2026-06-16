@@ -72,11 +72,11 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 ```
 
 ### Key Points
-- Use a cell range to define options if the values include commas or other special characters that are not allowed out-of-the-box.
-- The `Argument1` property supports referencing a range of cells (e.g., `=A1:D1`) as dropdown options.
+* Use a cell range to define options if the values include commas or other special characters that are not supported by default.
+* The `Argument1` property supports referencing a range of cells (for example, `=A1:D1`) as dropdown options.
 
 ## See Also
 
-- [RadSpreadProcessing Overview]({%slug radspreadprocessing-overview%})
-- [List Rule Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule)
-- [Setting the Culture]({%slug radspreadprocessing-features-setting-the-culture%}) 
+* [RadSpreadProcessing Overview]({%slug radspreadprocessing-overview%})
+* [List Rule Data Validation]({%slug radspreadprocessing-features-data-validation%}#list-rule)
+* [Setting the Culture]({%slug radspreadprocessing-features-setting-the-culture%}) 

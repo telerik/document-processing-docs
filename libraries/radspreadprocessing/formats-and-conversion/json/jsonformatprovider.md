@@ -8,16 +8,17 @@ published: True
 position: 1
 ---
 
-# JsonFormatProvider
+# Using JsonFormatProvider
 
-The __JsonFormatProvider__ (introduced in **Q4 2025**) makes it easy to export [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%}) data to a structured JSON representation. Unlike the other text-based providers (CSV / TXT), the JSON export can include richer metadata such as number formats, named ranges, chart data and workbook level flags. Currently the provider is **Export-only**. 
+The `JsonFormatProvider` (introduced in **Q4 2025**) makes it easy to export [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%}) data to a structured JSON representation. Unlike the other text-based providers (CSV / TXT), the JSON export can include richer metadata such as number formats, named ranges, chart data, and workbook level flags. The provider is **export-only**.
 
-The provider also exposes an [ExportSettings]({%slug radspreadprocessing-formats-and-conversion-json-jsonexportsettings%}) property, that allows you to control the export behavior.
+The provider also exposes an [ExportSettings]({%slug radspreadprocessing-formats-and-conversion-json-jsonexportsettings%}) property that allows you to control the export behavior.
 
 ## Prerequisites
 
-To use the __JsonFormatProvider__ class you need to reference the following NuGet package:
-* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Json 
+To use the `JsonFormatProvider` class, you need to reference the following NuGet package:
+
+* Telerik.Windows.Documents.Spreadsheet.FormatProviders.Json
 
 ## Export
 

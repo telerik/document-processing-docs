@@ -15,21 +15,21 @@ res_type: kb
 | 2025.4.1104 | RadWordsProcessing | [Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov) |
 
 ## Description
-Structured Document Tags (SDTs), also known as [Content Controls]({%slug wordsprocessing-model-content-controls%}), are implemented in [WordsProcessing]({%slug radwordsprocessing-overview%}) using annotation markers. The markers are placed before and after the control’s content - **SdtRangeStart** at the beginning and **SdtRangeEnd** at the end. To modify the content of a content control, you must change the document elements between these two markers.
+Structured Document Tags (SDTs), also known as [Content Controls]({%slug wordsprocessing-model-content-controls%}), are implemented in [WordsProcessing]({%slug radwordsprocessing-overview%}) using annotation markers. The markers are placed before and after the control content—`SdtRangeStart` at the beginning and `SdtRangeEnd` at the end. To modify the content of a content control, you must change the document elements between these two markers.
 
 ## Solution
 
 The following example covers:
 
-* **Load and parse**: Imports an input DOCX using **DocxFormatProvider** and retrieves all SDTs via **EnumerateChildrenOfType&lt;SdtRangeStart&gt;()**.
-* **Classify by alias**: Iterates each SDT and uses **SdtProperties.Alias** to route updates for specific control types: "RichText", "ComboBox", "CheckBox", and "DatePicker".
-* **Preserve formatting**: For inline SDTs, collects all **Run** elements between **SdtRangeStart** and **SdtRangeEnd**, removes all but the first **Run**, and reuses that first **Run** to keep existing text formatting.
+* **Load and parse**: Imports an input DOCX using `DocxFormatProvider` and retrieves all SDTs through `EnumerateChildrenOfType<SdtRangeStart>()`.
+* **Classify by alias**: Iterates each SDT and uses `SdtProperties.Alias` to route updates for specific control types: "RichText", "ComboBox", "CheckBox", and "DatePicker".
+* **Preserve formatting**: For inline SDTs, collects all `Run` elements between `SdtRangeStart` and `SdtRangeEnd`, removes all but the first `Run`, and reuses that first `Run` to keep existing text formatting.
 * **Update values**:
-    * **RichText**: Sets the first run’s **Text** to the new string.
-    * **ComboBox**: Sets the first run’s **Text** to the selected item display text (e.g., "Item 3").
-    * **CheckBox**: Toggles **CheckBoxProperties.Checked** and updates the glyph in the first run using the appropriate **SdtCheckBoxState** (font + character code).
-    * **DatePicker**: Formats **DateTime.Now** using the SDT’s **DateProperties.DateFormat** and assigns the result to the first run’s **Text**.
-* **Save and open**: Exports the modified **RadFlowDocument** back to DOCX and opens the file to verify the changes.
+    * **RichText**: Sets the first run `Text` to the new string.
+    * **ComboBox**: Sets the first run `Text` to the selected item display text (for example, "Item 3").
+    * **CheckBox**: Toggles `CheckBoxProperties.Checked` and updates the glyph in the first run using the appropriate `SdtCheckBoxState` (font + character code).
+    * **DatePicker**: Formats `DateTime.Now` using the SDT `DateProperties.DateFormat` and assigns the result to the first run `Text`.
+* **Save and open**: Exports the modified `RadFlowDocument` back to DOCX and opens the file to verify the changes.
 
 ```csharp
 const string InputFile = "input.docx";
@@ -158,9 +158,10 @@ private static IList<Run> GetRunsInsideSdt(SdtRangeStart sdtRangeStart)
 ![WordsProcessing Change SDT Content](images/words-processing-change-sdt-content.png)
 
 ### Notes
-* Use [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) for higher-level operations like inserting SDTs via **InsertStructuredDocumentTag**.
-* The content control type (plain text, combo box, checkbox, etc.) is available through **SdtProperties.Type**. Adjust the replacement logic based on the control type when necessary.
-* Content controls can exist at different levels (block, inline, row, cell). Ensure you modify the correct collection (**Inlines**, **Blocks**, **Cells**, etc.) depending on where the SDT is placed. See [**Content Controls**]({%slug wordsprocessing-model-content-controls%}).
+
+* Use [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) for higher-level operations like inserting SDTs through `InsertStructuredDocumentTag`.
+* The content control type (plain text, combo box, checkbox, and others) is available through `SdtProperties.Type`. Adjust the replacement logic based on the control type when necessary.
+* Content controls can exist at different levels (block, inline, row, cell). Ensure you modify the correct collection (`Inlines`, `Blocks`, `Cells`, and others) depending on where the SDT is placed. See [Content Controls]({%slug wordsprocessing-model-content-controls%}).
 
 ## See Also
 * [Content Controls]({%slug wordsprocessing-model-content-controls%})

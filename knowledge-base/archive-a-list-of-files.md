@@ -1,6 +1,6 @@
 ---
 title: Create archive from a list of files
-description: Learn on how you can create an archive from a list of files using ZipLibrary, part of Telerik Document Processing.
+description: Learn how to create a zip archive from a list of files using the ZipLibrary, part of Telerik Document Processing.
 type: how-to
 page_title: Create archive from a list of files
 slug: archive-a-list-of-files
@@ -8,6 +8,8 @@ position: 0
 tags: radziplibrary, zip, archive, files, create, compression, dotnet, stream
 res_type: kb
 ---
+
+## Environment
 
 |Product Version|Product|Author|
 |----|----|----|
@@ -51,3 +53,7 @@ Use [RadZipLibrary]({%slug radziplibrary-overview%}) to create and export the ar
     }
 
 ```
+
+## See Also
+
+* [RadZipLibrary Overview]({%slug radziplibrary-overview%})

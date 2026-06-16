@@ -1,6 +1,6 @@
 ---
 title: Notes
-description: Learn how to add and manage notes in spreadsheet documents using RadSpreadProcessing.
+description: Learn how to add, remove, and manage notes and annotations in spreadsheet documents using the RadSpreadProcessing library.
 page_title: Notes 
 slug: radspreadprocessing-features-notes
 tags: notes, xlsx, spreadsheet, radspreadprocessing, cells, annotations, worksheet, comments, spread, xlsx
@@ -15,67 +15,68 @@ platforms: mvc, ajax, blazor, wpf, winforms, winui, core
 |Minimum Version|R1 2022|
 |----|----|
 
-RadSpreadProcessing supports working with notes. The Notes are used for making notes or annotations about the data. All notes can be found in the __NoteCollection__ of the worksheet. This collection holds __SpreadsheetNote__ objects which represent the notes. Each note has the following properties:
+RadSpreadProcessing supports working with notes. Notes are used for making annotations about the data. All notes are available in the `NoteCollection` of the worksheet. This collection holds `SpreadsheetNote` objects which represent the notes. Each note has the following properties:
 
-* __CellIndex:__  Gets or sets the cell index where the top left corner of the shape is positioned.
-* __RelatedCellIndex:__ Gets or sets the cell index assigned to the note.
-* __AlternateText:__ Gets or sets the alternate text. 
-* __IsVisible:__ Gets or sets a value indicating whether this SpreadsheetNote is visible.
-* __OffsetX:__ Gets or sets the left offset of the top left corner of the shape relative to the top left corner of the cell index.
-* __OffsetY:__ Gets or sets the top offset of the top left corner of the shape relative to the top left corner of the cell index.
-* __Width:__  Gets or sets the width of the shape.
-* __Height:__ Gets or sets the height of the shape.
-* __MoveWithCells:__ Gets or sets a value indicating whether this SpreadsheetNote moves with its underlying cells.
-* __SizeWithCells:__ Gets or sets a value indicating whether this SpreadsheetNote resizes with its underlying cells.
-* __Author:__ Gets or sets the author assigned to the note.  
-* __Text:__ Gets or sets the text. 
-* __Id:__  Gets the id of the shape, which is unique for the worksheet it belongs to.
-* __Name:__ Gets or sets the name of the shape.
-* __LockAspectRatio:__ Gets or sets the value indicating whether the aspect ratio between the width and height should remain constant.
+* `CellIndex`: Gets or sets the cell index where the top left corner of the shape is positioned.
+* `RelatedCellIndex`: Gets or sets the cell index assigned to the note.
+* `AlternateText`: Gets or sets the alternate text.
+* `IsVisible`: Gets or sets a value indicating whether this `SpreadsheetNote` is visible.
+* `OffsetX`: Gets or sets the left offset of the top left corner of the shape relative to the top left corner of the cell index.
+* `OffsetY`: Gets or sets the top offset of the top left corner of the shape relative to the top left corner of the cell index.
+* `Width`: Gets or sets the width of the shape.
+* `Height`: Gets or sets the height of the shape.
+* `MoveWithCells`: Gets or sets a value indicating whether this `SpreadsheetNote` moves with its underlying cells.
+* `SizeWithCells`: Gets or sets a value indicating whether this `SpreadsheetNote` resizes with its underlying cells.
+* `Author`: Gets or sets the author assigned to the note.
+* `Text`: Gets or sets the text.
+* `Id`: Gets the id of the shape, which is unique for the worksheet it belongs to.
+* `Name`: Gets or sets the name of the shape.
+* `LockAspectRatio`: Gets or sets the value indicating whether the aspect ratio between the width and height remains constant.
 
->note All of the above properties will push a change to the undo stack when modified. 
+>note All of the listed properties push a change to the undo stack when modified.
 
-# Working with the NoteCollection
+## Working with the NoteCollection
 
-### Adding notes
+### Adding Notes
 
-To add a note you need to specify the cell index to which the note will be related, the position where the note should be placed, the author, and the text content. Specifying the position is optional and by default, the note is placed next to the related cell.
+To add a note, specify the cell index to which the note relates, the position where the note appears, the author, and the text content. The position is optional. By default, the note is placed next to the related cell.
 
-#### Example 1: Add note
+**Example 1: Add Note**
 
 <snippet id='codeblock-cjv'/>
 
-The above snippet will add a note in cell B2 with a position on cell F6.
+The previous snippet adds a note in cell B2 with a position on cell F6.
 
 ### Removing Notes
 
-#### Example 2: Remove note
+**Example 2: Remove Note**
 
 <snippet id='codeblock-cjw'/>
 
 
-### Hide/Show notes
+### Hide and Show Notes
 
-You can use one of the following methods to show/hide single or all notes:
+You can use one of the following methods to show or hide single or all notes:
 
-* __ShowAll:__ Shows all notes in the collection.
-* __HideAll:__ Hides all notes in the collection.
-* __Hide(SpreadsheetNote note):__ Hide the specified note from the collection.
-* __Show(SpreadsheetNote note):__ Show the specified note from the collection.
+* `ShowAll`: Shows all notes in the collection.
+* `HideAll`: Hides all notes in the collection.
+* `Hide(SpreadsheetNote note)`: Hides the specified note from the collection.
+* `Show(SpreadsheetNote note)`: Shows the specified note from the collection.
 
-#### Example 3:Hide note
+**Example 3: Hide Note**
 
 <snippet id='codeblock-cjx'/>
 
 ### Events
 
 The notes collection exposes the following events:
-* __Changing:__ Occurs when the collection is being changed.
-* __Changed:__ Occurs when the collection has changed.
-* __NotesVisiblilityChanged:__ Occurs when the visibility of all notes has been changed at the same time.
+
+* `Changing`: Occurs when the collection is changing.
+* `Changed`: Occurs when the collection has changed.
+* `NotesVisibilityChanged`: Occurs when the visibility of all notes changes at the same time.
 
 ## See Also
 
- * [Comments vs Notes in RadSpreadProcessing]({%slug comments-vs-notes-in-radspreadprocessing%})
- * [SpreadProcessing Add Notes Demo](https://demos.telerik.com/document-processing/spreadprocessing/notes)
+* [Comments vs Notes in RadSpreadProcessing]({%slug comments-vs-notes-in-radspreadprocessing%})
+* [SpreadProcessing Add Notes Demo](https://demos.telerik.com/document-processing/spreadprocessing/notes)
 

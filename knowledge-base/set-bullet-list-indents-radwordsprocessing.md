@@ -17,11 +17,9 @@ ticketid: 1681870
  
 ## Description
 
-When working with bullet lists in [RadWordsProcessing]({%slug radwordsprocessing-overview%}) documents, you might need to adjust the bullet position and text indentation to meet specific formatting requirements. This knowledge base article demonstrates how to set the text indent or adjust the bullet position for bullet lists in RadWordsProcessing.
+When you work with bullet lists in [RadWordsProcessing]({%slug radwordsprocessing-overview%}) documents, you may need to adjust the bullet position and text indentation to meet specific formatting requirements. This article shows how to set the text indent and adjust the bullet position for bullet lists in RadWordsProcessing.
 
 ![Bullet Text Indentation](images/bullet-text-indentation.png) 
-
-
 
 ## Solution
 
@@ -31,7 +29,7 @@ To set the bullet position and text indentation for a bullet list in RadWordsPro
 2. Create a [bullet list]({%slug radwordsprocessing-concepts-lists%}) and configure its levels as needed.
 3. Use the `ParagraphProperties`.[LeftIndent]({%slug radwordsprocessing-concepts-style-properties%}) and `ParagraphProperties`.[HangingIndent]({%slug radwordsprocessing-concepts-style-properties%}) properties to adjust the bullet position and text indentation.
 
-### Example
+**Example 1: Setting Bullet List Indents**
 
 ```csharp
             RadFlowDocument document = new RadFlowDocument();
@@ -82,11 +80,10 @@ To set the bullet position and text indentation for a bullet list in RadWordsPro
 
 
 
->tip The conversion from [device-independent pixels]({%slug device-independent-pixels%}) (DIP) to centimeters (cm) is based on the formula:[ text{cm} = text{DIP} / {96} * 2.54 ]. For instance, to convert 18.9 DIP to cm: 
-[ text{cm} = 18.9 / 96 * 2.54 = 0.5cm ].
+>tip The conversion from [device-independent pixels]({%slug device-independent-pixels%}) (DIP) to centimeters (cm) uses the formula: cm = DIP / 96 * 2.54. For example, to convert 18.9 DIP to cm: 18.9 / 96 * 2.54 = 0.5 cm.
 
 ## See Also
 
-- [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})
-- [Lists]({%slug radwordsprocessing-concepts-lists%})
-- [Device Independent Pixels]({%slug device-independent-pixels%})
+* [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})
+* [Lists]({%slug radwordsprocessing-concepts-lists%})
+* [Device Independent Pixels]({%slug device-independent-pixels%})

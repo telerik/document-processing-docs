@@ -11,9 +11,9 @@ position: 2
 
 # Settings
 
-__TextFormatProvider__ allows you export a __RadFixedDocument__ to plain text. Additionally, the export settings provide modification options. This article outlines the available settings.
+`TextFormatProvider` exports a `RadFixedDocument` to plain text. The export settings provide options to customize the output.
 
-Through the __TextFormatProviderSettings__ class you could specify the following export settings:
+Through the `TextFormatProviderSettings` class you can specify the following export settings:
 
 | Property | Description |
 |---|---|
@@ -23,7 +23,7 @@ Through the __TextFormatProviderSettings__ class you could specify the following
 
 ## Create TextFormatProviderSettings
 
-The constructor of the **TextFormatProviderSettings** class has two overloads:
+The constructor of the `TextFormatProviderSettings` class has two overloads:
 
 | Constructor | Description |
 |---|---|
@@ -38,7 +38,7 @@ The constructor of the **TextFormatProviderSettings** class has two overloads:
 
 ## Using TextFormatProviderSettings
 
-The __Export()__ method of **TextFormatProvider** allows you to pass a **TextFormatProviderSettings** instance. **Example 2** illustrates how to apply the settings created in **Example 1**, when exporting a **RadFixedDocument** to string.
+The `Export()` method of `TextFormatProvider` accepts a `TextFormatProviderSettings` instance. **Example 2** shows how to apply the settings created in **Example 1** when exporting a `RadFixedDocument` to a string.
 
 
 #### **Example 2: Apply TextFormatProviderSettings**

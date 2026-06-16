@@ -16,6 +16,8 @@ This overview explains the table building blocks, the main layout properties, an
 
 ![Diagram of the RadPdfProcessing table model with rows and cells](images/RadPdfProcessing_Editing_Table_01.png)
 
+Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instances each of which contains a series of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances. To define a simple table, generate the table cells and add some content to them.
+        
 Use this article when you need to:
 
 * Create a PDF table from code.
@@ -61,13 +63,15 @@ The most common default cell properties are:
 | `Borders` | Of type `TableCellBorders`. Specifies the borders of a single cell. The available borders are left, right, top, bottom, diagonal up, and diagonal down. |
 | `Background` | Specifies the background of the cell. |
 
-Example 2 shows how to apply `DefaultCellProperties` to a table.
+**Example 2** shows how to use the `DefaultCellProperties` of a table.
+        
 
 ### Example 2: Use `DefaultCellProperties` on a Table
 
 <snippet id='libraries-pdf-editing-table-overview-use-default-cell-properties-of-table'/>
 
-Figure 2 shows the result.
+The result of the snippet in **Example 2** is demonstrated in **Figure 2**.
+        
 
 #### Figure 2: Result of DefaultCellProperties modification
 ![Table with shared background, padding, and border styling](images/RadPdfProcessing_Editing_Table_03.png)
@@ -76,22 +80,22 @@ Figure 2 shows the result.
 
 Several table properties affect measurement, spacing, and rendering behavior:
 
-* **Margin**: Sets the distance between the table border outline and surrounding document content.
-* **Padding**: Sets the distance between the inner cell border contour and the cell content.
-* **LayoutType**: Chooses how the table width is calculated.
-* **HorizontalAlignment**: Aligns the table inside the available page area.
-* **BorderSpacing**: Sets the distance between table borders.
-* **BorderCollapse**: Controls how borders and border spacing are calculated.
+* **Margin**: Specifies the distances between the table borders outline and the rest of the document content.
+         
+* **Padding**: Set through the `TableCell` `Padding` property, it specifies the distances between cell borders inner contour and the cell content.
+            
+* **LayoutType**: Specifies the algorithm used to layout table contents. Two options are available in the `TableLayoutType` enumeration:
+	
+	* **AutoFit** – The table width fits the content unless the needed width is bigger than the available measuring width.
+	* **FixedWidth** – The table width always fits the available measuring width.
 
-The `TableLayoutType` enumeration provides these layout modes:
+* **HorizontalAlignment**: Specifies the alignment of the table inside the page.
 
-* **AutoFit**: The table width follows the content until the required width exceeds the available measuring width.
-* **FixedWidth**: The table width always fits the available measuring width.
-
-The `BorderCollapse` property supports these options:
-
-* **Collapse**: The distance between borders is measured from the middle lines of the borders.
-* **Separate**: The distance between borders is measured from the outer border contour.
+* **BorderSpacing**: Specifies the distance between all the borders in the table. This distance is measured differently depending on the **BorderCollapse** option.
+         
+* **BorderCollapse**: Specifies the way the border spacing calculations are done. Two options are available:
+	* **Collapse**: The distance between borders is measured from the middle lines of the borders.
+	* **Separate**: The distance between borders is measured from the outer border contour.
 
 Examples 3 through 6 show how border calculations change when you switch the `BorderCollapse` option. Example 3 creates an empty table and applies default cell padding and a red table border with thickness `10`.
 
@@ -105,7 +109,8 @@ Example 4 adds a single row with two cells to the table from Example 3. The firs
 
 <snippet id='libraries-pdf-editing-table-overview-add-green-and-blue-cells-to-table'/>
 
-Figure 3 shows the table from Examples 3 and 4 with `BorderCollapse` set to `Collapse`, so the border middle lines coincide.
+**Figure 3** shows the table from Example 3 and 4 with the `BorderCollapse` property set to `Collapse`. All borders are drawn so that their middle lines coincide.
+        
 
 ### Example 5: Collapse Borders
 
@@ -133,13 +138,15 @@ Example 7 creates a simple table with two cells.
 
 <snippet id='libraries-pdf-editing-table-overview-create-table'/>
 
-Example 8 inserts the table from Example 7 into `RadFixedDocumentEditor` and sets the table layout type to `AutoFit`.
+**Example 8** inserts the table from **Example 7** in a `RadFixedDocumentEditor` and specifies the table layout type to `AutoFit`.
+        
 
-### Example 8: Insert an `AutoFit` Table
+#### **Example 8: Insert `AutoFit` table**
 
 <snippet id='libraries-pdf-editing-table-overview-insert-autofit-table'/>
 
-Figure 5 shows the result. The table width grows only as much as the cell content requires.
+The result is that the table width is exactly as needed for fitting the cell content as visible in **Figure 5**.
+        
 
 #### Figure 5: AutoFit table
 ![AutoFit table sized to its cell content](images/RadPdfProcessing_Editing_Table_06.png)

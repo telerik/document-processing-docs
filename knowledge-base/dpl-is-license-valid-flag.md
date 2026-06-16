@@ -1,6 +1,6 @@
 ---
 title: Why Does the IsLicenseValid Flag Return False
-description: Learn how to check the license at runtime for Telerik Document Processing and understand scenarios where `IsLicenseValid` returns false.
+description: Learn how to check the license at runtime for Telerik Document Processing and understand scenarios where the IsLicenseValid property returns false.
 type: how-to
 page_title: Why Does the IsLicenseValid Flag Return False
 meta_title: Why Does the IsLicenseValid Flag Return False
@@ -22,7 +22,7 @@ When using the `TelerikLicensing.License()` method, the `IsLicenseValid` flag ma
 
 ## Solution
 
-The TelerikLicensing.License method has several overloads accepting different parameters. If you call the License() method without passing any arguments, it checks the entry assembly of your project (e.g. console application) which explains the false result. However, you can pass a Telerik assembly explicitly to the `License` method to check the license validity for this particular assembly. For example:
+The `TelerikLicensing.License` method has several overloads that accept different parameters. If you call the `License()` method without passing any arguments, it checks the entry assembly of your project (for example, a console application). This explains the `false` result. You can pass a Telerik assembly explicitly to the `License` method to check the license validity for that particular assembly. For example:
 
 ```csharp
 using Telerik.Windows.Documents.Fixed;
@@ -31,8 +31,8 @@ Assembly fixedAssembly = typeof(RadFixedDocument).Assembly;
 var license = Telerik.Licensing.TelerikLicensing.License(fixedAssembly);
 bool isValid = license.IsLicenseValid;
 ```
-Thus, if the [license is properly setup]({%slug setting-up-license-key%}), the `IsLicenseValid` flag is expected to return `true`.
+If the [license is properly set up]({%slug setting-up-license-key%}), the `IsLicenseValid` flag returns `true`.
 
 ## See Also
 
-- [Runtime Licensing Diagnostics]({%slug runtime-licensing-diagnostics%})
+* [Runtime Licensing Diagnostics]({%slug runtime-licensing-diagnostics%})

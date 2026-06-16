@@ -1,6 +1,6 @@
 ---
 title: Creating Custom Layout Tables with RadPdfProcessing
-description: Learn how to create tables with various column layouts using RadPdfProcessing.
+description: Learn how to create tables with various column layouts and column spans using the RadPdfProcessing library for document generation.
 type: how-to
 page_title: How to Customize Table Layouts in RadPdfProcessing Documents
 slug: customize-table-layout-radpdfprocessing
@@ -16,27 +16,28 @@ ticketid: 1660148
 | 2024.3.806| RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
-Creating tables with customized layouts, including varying column spans, is a common requirement for document processing. This article demonstrates how to achieve a table with multiple rows, each having a different column layout, using the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library. 
 
-Here is demonstrated a sample design for such a custom layout:
+Creating tables with customized layouts, including varying column spans, is a common requirement for document processing. This article demonstrates how to achieve a table with multiple rows, each with a different column layout, by using the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library. 
+
+The following image shows a sample design for such a custom layout:
 
 ![Custom Table design](images/custom-table-design.png)  
 
 ## Solution
 
-Before starting with the solution, let's divide the table columns with red lines for better understanding how to build the layout:
+Before starting with the solution, divide the table columns with red lines for better understanding of how to build the layout:
 
 ![Divided Table design](images/divided-table-design.png)   
 
 To create a table with varying column layouts, follow the steps below:
 
 1. Define a `Table` and set its `LayoutType` to `AutoFit`. Customize the `DefaultCellProperties` to set padding and borders for the cells.
-2. Add table rows using `table.Rows.AddTableRow()`.
-3. For each row, add cells using `row.Cells.AddTableCell()`. Customize each cell's content by adding blocks of text with specific styles (e.g., font family, font style, font weight).
+2. Add table rows by using `table.Rows.AddTableRow()`.
+3. For each row, add cells by using `row.Cells.AddTableCell()`. Customize each cell's content by adding blocks of text with specific styles (for example, font family, font style, and font weight).
 4. To change the column layout, set the `ColumnSpan` property of the cells accordingly.
 5. To adjust the row height, insert content with the desired height in each cell or use the `Padding` property for minor adjustments.
 
-Here's an example code snippet demonstrating the setup:
+The following example demonstrates the setup:
 
 ```csharp
 
@@ -175,18 +176,18 @@ Here's an example code snippet demonstrating the setup:
         }
 
 ```
- The code snippet achieves the below result:
+ The code snippet produces the following result:
 
  ![Achieved Table design](images/achieved-table-design.png)   
 
- When dealing the ColumnSpan functionality, pay attention to two important things:
+ When using the `ColumnSpan` functionality, pay attention to two important things:
 
-* The rows which contain cells with ColumnSpan should contain less text blocks, e.g. if ColumnSpan=4, you need to insert 4 text blocks less for this row. Hence, skip adding the text block for the cells participating in the ColumnSpan functionality.
+* The rows that contain cells with `ColumnSpan` must contain fewer text blocks. For example, if `ColumnSpan` is 4, you need to insert four fewer text blocks for this row. Skip adding the text block for the cells that participate in the `ColumnSpan` functionality.
 
 * For a column to exist and have a calculated width, it must contain at least one cell with content among the rows within the table.
 
 
 ## See Also
 
-- [Tables in RadPdfProcessing]({%slug radpdfprocessing-editing-table-overview%})
-- [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
+* [Tables in RadPdfProcessing]({%slug radpdfprocessing-editing-table-overview%})
+* [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})

@@ -26,11 +26,11 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-To open a file locked by another user or process, load it into a **MemoryStream** using a read-only **FileStream**. This approach allows concurrent access and bypasses the file lock. Follow these steps:
+To open a file locked by another user or process, load it into a `MemoryStream` using a read-only `FileStream`. This approach allows concurrent access and bypasses the file lock. Follow these steps:
 
-1. The **FileStream** opens the file with read-only access (**FileAccess.Read**) and allows sharing (**FileShare.ReadWrite**).
-2. The **MemoryStream** receives the file contents, enabling the file lock to be released.
-3. The [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) imports the workbook from the **MemoryStream**.
+1. The `FileStream` opens the file with read-only access (`FileAccess.Read`) and allows sharing (`FileShare.ReadWrite`).
+2. The `MemoryStream` receives the file contents, enabling the file lock to be released.
+3. The [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) imports the workbook from the `MemoryStream`.
 
 Here is the code example:
 

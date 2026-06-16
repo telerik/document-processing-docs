@@ -1,6 +1,7 @@
 ---
 title: ZipArchive Entry
 page_title: ZipArchive Entry
+description: Learn how to use ZipArchiveEntry to work with individual compressed files in a ZIP archive using RadZipLibrary properties and methods.
 slug: radziplibrary-ziparchive-entry
 tags: ziparchiveentry, radziplibrary, zip, archive, entry, compressed, stream, files
 published: True
@@ -10,58 +11,58 @@ platforms: ajax, mvc, wpf, winforms
 
 # ZipArchive Entry
 
-**ZipArchiveEntry** represents every single compressed file within a zip archive. 
+`ZipArchiveEntry` represents each compressed file within a ZIP archive.
 
 ## What Is ZipArchiveEntry
 
-The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the [ZipArchive](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.zip.ziparchive). The **ZipArchive**, on the other hand, consists of **ZipArchiveEntries** hosting all entries in the zip archive. You can [Get ZipArchiveEntry](#get-ziparchiveentry) or [Create ZipArchiveEntry](#create-ziparchiveentry) using the **ZipArchive** instance.
+The root element of the [RadZipLibrary]({%slug radziplibrary-overview%}) is the [`ZipArchive`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.zip.ziparchive). The `ZipArchive` consists of `ZipArchiveEntry` objects that host all entries in the ZIP archive. You can [get a ZipArchiveEntry](#get-ziparchiveentry) or [create a ZipArchiveEntry](#create-ziparchiveentry) by using the `ZipArchive` instance.
 
 ### Properties
 
-The following table describes the properties of **ZipArchiveEntry**:
+The following table describes the properties of `ZipArchiveEntry`:
 
 | Property | Description |
 |---|---|
-| `CompressedLength` | Gets the compressed size of the entry in the zip archive. Note: this value is available only after the `ZipArchiveEntry` is disposed. |
-| `ExternalAttributes` | Gets or sets external [file attributes](https://docs.microsoft.com/en-us/dotnet/api/system.io.fileattributes?view). |
-| `FullName` | Gets the relative path of the entry in the zip archive. |
-| `LastWriteTime` | Gets or sets the last time the entry in the zip archive was changed. |
-| `Length` | Gets the uncompressed size of the entry in the zip archive. Note: this value is available only after the `ZipArchiveEntry` is disposed. |
-| `Name` | Gets the file name of the entry in the zip archive. |
+| `CompressedLength` | Gets the compressed size of the entry in the ZIP archive. This value is available only after the `ZipArchiveEntry` is disposed. |
+| `ExternalAttributes` | Gets or sets external [file attributes](https://learn.microsoft.com/en-us/dotnet/api/system.io.fileattributes). |
+| `FullName` | Gets the relative path of the entry in the ZIP archive. |
+| `LastWriteTime` | Gets or sets the last time the entry in the ZIP archive was changed. |
+| `Length` | Gets the uncompressed size of the entry in the ZIP archive. This value is available only after the `ZipArchiveEntry` is disposed. |
+| `Name` | Gets the filename of the entry in the ZIP archive. |
 
-#### **Example 1: Get entry's compressed length**
+**Example 1: Get the compressed length of an entry**
+
 <snippet id='codeblock-dst'/>
 
-#### **Example 2: Set entry's external attributes**
+**Example 2: Set external attributes of an entry**
 
 <snippet id='codeblock-dsu'/>
 
-#### **Example 3: Get entry's relative path**
+**Example 3: Get the relative path of an entry**
 
 <snippet id='codeblock-dsv'/>
 
-#### **Example 4: Set last entry's write time**
+**Example 4: Set the last write time of an entry**
 
 <snippet id='codeblock-dsw'/>
 
-#### **Example 5: Get entry's length**
+**Example 5: Get the length of an entry**
 
 <snippet id='codeblock-dsx'/>
 
-#### **Example 6: Get entry's name**
+**Example 6: Get the name of an entry**
 
 <snippet id='codeblock-dsy'/>
 
-
 ### Methods
 
-The following table describes the methods of **ZipArchiveEntry**:
+The following table describes the methods of `ZipArchiveEntry`:
 
 | Method | Description |
 |---|---|
-| `Delete` | Deletes the entry from the zip archive. |
+| `Delete` | Deletes the entry from the ZIP archive. |
 | `Dispose` | Releases the resources used by the current instance of the `ZipArchiveEntry` class. |
-| `Open` | Opens the entry from the zip archive. |
+| `Open` | Opens the entry from the ZIP archive. |
 
 ### Events
 
@@ -70,50 +71,54 @@ The following table describes the methods of **ZipArchiveEntry**:
 | `PropertyChanged` | Occurs when a property value changes. |
 
 ## ZipArchive and ZipArchiveEntry
-There are several operations, which you can execute over a **ZipArchive** instance.
+
+You can perform several operations on a `ZipArchive` instance.
 
 ### Get ZipArchiveEntry
-Retrieves a wrapper for the specified entry in the zip archive.
 
-#### **Example 7: Get ZipArchiveEntry**
+Retrieves a wrapper for the specified entry in the ZIP archive.
+
+**Example 7: Get ZipArchiveEntry**
 
 <snippet id='codeblock-dsz'/>
 
-
 ### Create ZipArchiveEntry
-Creates an empty entry that has the specified path and entry name in the zip archive.
 
-#### **Example 8: Create ZipArchiveEntry**
+Creates an empty entry that has the specified path and entry name in the ZIP archive.
+
+**Example 8: Create ZipArchiveEntry**
 
 <snippet id='codeblock-dta'/>
 
-
 ### Extract ZipArchiveEntry
-Extract an entry to a specific folder/directory.
 
-#### **Example 9: Extracting a ZipArchiveEntry to folder/directory**
+Extracts an entry to a specific folder or directory.
+
+**Example 9: Extract a ZipArchiveEntry to a folder**
 
 <snippet id='codeblock-dtb'/>
 
->tip This functionality could be achieved by using the [Zip Extensions']({%slug radziplibrary-zipextensions%}) _ExtractToFile_ method as well.
+>tip You can also achieve this by using the [Zip Extensions]({%slug radziplibrary-zipextensions%}) `ExtractToFile` method.
 
 ## Operating with ZipArchiveEntry
-Specific examples of using the ZipArchiveEntry.
+
+The following examples show specific uses of `ZipArchiveEntry`.
 
 ### Using ZipArchiveEntry Properties
-A complete example including all the properties discussed above.
 
-#### **Example 10: Complete example**
+The following example includes all the properties discussed in the previous section.
+
+**Example 10: Complete example**
 
 <snippet id='codeblock-dtc'/>
 
-### Working with Folders/Directories
+### Working with Folders and Directories
 
-#### **Example 11: Creating folders/directories**
+**Example 11: Create folders and directories**
 
 <snippet id='codeblock-dtd'/>
 
-#### **Example 12: Opening Files in folders/directories**
+**Example 12: Open files in folders and directories**
 
 <snippet id='codeblock-dte'/>
 

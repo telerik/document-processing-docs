@@ -10,8 +10,7 @@ position: 98
 
 # Release History
 
-As of Q2 2025 [Telerik Document Processing]({%slug introduction%}) libraries are available as a separate distribution in the **Downloads** section of your [Telerik account](https://www.telerik.com/account/). This new functionality comes with a separate 
-[Release History](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history) page where our clients can track the releases in detail and get familiar with the introduced improvements.
+Starting with Q2 2025, the [Telerik Document Processing]({%slug introduction%}) libraries are available as a separate distribution in the **Downloads** section of your [Telerik account](https://www.telerik.com/account/). This distribution includes a separate [Release History](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history) page where you can track releases in detail and review the introduced improvements.
 
 ## See Also
 

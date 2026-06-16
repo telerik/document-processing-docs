@@ -18,13 +18,14 @@ img[alt$="><"] {
 </style>
 
 ## Environment
+
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
 | 2025.3.806| RadWordsProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
 
 ## Description
 
-Learn how to insert HTML content at specific locations within a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) using Telerik [WordsProcessing]({%slug radwordsprocessing-overview%}). 
+Learn how to insert HTML content at specific locations within a `RadFlowDocument` using Telerik [WordsProcessing]({%slug radwordsprocessing-overview%}). 
 
 |Input Content|Output Content|
 |----|----|
@@ -32,13 +33,13 @@ Learn how to insert HTML content at specific locations within a [RadFlowDocument
 
 ## Solution
 
-To insert HTML content at specific locations in a RadFlowDocument, follow these steps:
+To insert HTML content at specific locations in a `RadFlowDocument`, follow these steps:
 
 1. Use the [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) to import HTML content into a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). 
 
-1. Use the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) to insert the imported document (step 1) into a specific location in your target document.
+2. Use the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) to insert the imported document (step 1) into a specific location in your target document.
 
-Example:
+**Example 1: Insert HTML Content into a Specific Table Cell**
 
 ```csharp
             RadFlowDocument originalDocument = new RadFlowDocument();
@@ -73,11 +74,11 @@ Example:
 
 ### Additional Notes
 
-- To target specific locations in the document, use the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) to navigate to the desired position.
-- Ensure the original document and imported HTML content are compatible in terms of styles and formatting.
+* To target specific locations in the document, use the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) to navigate to the desired position.
+* Verify that the original document and imported HTML content are compatible in terms of styles and formatting.
 
 ## See Also
 
-- [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) 
-- [Insert Documents]({%slug radwordsprocessing-editing-insert-documents%})
-- [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) 
+* [Insert Documents]({%slug radwordsprocessing-editing-insert-documents%})
+* [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

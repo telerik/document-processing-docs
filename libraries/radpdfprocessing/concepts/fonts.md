@@ -1,7 +1,7 @@
 ---
 title: Fonts
 page_title: Fonts
-description: RadPdfProcessing is a processing library that allows you to create, import and export PDF documents.
+description: Learn how RadPdfProcessing uses fonts to specify text appearance in PDF documents, including standard and embedded font types.
 slug: radpdfprocessing-concepts-fonts
 tags: fonts, pdf, embedding, truetype, opentype, radpdfprocessing, encoding, glyphs
 published: True
@@ -10,13 +10,13 @@ position: 5
 
 # Fonts
 
-**RadPdfProcessing** uses fonts represented by **FontBase** objects to specify the look of the text that is exported to PDF format. Currently, it supports two font types: 
+**RadPdfProcessing** uses fonts represented by `FontBase` objects to specify the look of the text that is exported to PDF format. It supports two font types: 
 
 * Standard 
 
 * Embedded
 
->note As of **Q2 2024** RadPdfProcessing offers support for OTF (OpenType Font) font file format.
+>note Starting with **Q2 2024** RadPdfProcessing offers support for OTF (OpenType Font) font file format.
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
@@ -60,7 +60,7 @@ When the current font is *Composite*, the text-showing operators behave differen
 
 ## Standard Fonts
 
-There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedded in the document when you use them. These fonts can be accessed through the [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html) class. The standard fonts are listed below:
+There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedded in the document when you use them. You can access these fonts through the [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html) class. The standard fonts are listed in the following table:
        
 |Font Name|
 |----|
@@ -83,8 +83,7 @@ There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedd
 
 >tip These fonts, or their font metrics and suitable substitution fonts, must be available to the consumer application.
 
-RadPdfProcessing introduced suitable API for replacing the predefined Standard Fonts in **R2 2023**. The public static method **ReplaceStandardFont**(StandardFontNames name, byte[] data) offered by the 
-FontsRepository will replace the provided standard font with the passed font data:
+RadPdfProcessing introduced a suitable API for replacing the predefined Standard Fonts in **R2 2023**. The public static method `ReplaceStandardFont(StandardFontNames name, byte[] data)` offered by `FontsRepository` replaces the provided standard font with the passed font data:
 
 #### Replace a Standard Font
 
@@ -94,25 +93,25 @@ FontsRepository will replace the provided standard font with the passed font dat
 
 You can configure fallback fonts for the standard fonts to ensure proper rendering when a standard font needs to be substituted with another font.
 
-The following exmaple demonstrates how to set a fallback font for a specific standard font:
+The following example demonstrates how to set a fallback font for a specific standard font:
 
 <snippet id='libraries-pdf-concepts-comply-with-pdfa-set-standard-font-fallback'/>
 
-To remove all configured fallback fonts, use the __ClearStandardFontFallbacks()__ method:
+To remove all configured fallback fonts, use the `ClearStandardFontFallbacks()` method:
 
 <snippet id='libraries-pdf-concepts-comply-with-pdfa-clear-fallback-fonts'/>
 
 ## Embedded Fonts
 
-All fonts, which are not included in the 14 standard ones, should be **embedded** in the PDF document. Otherwise, the result may be unpredictable when the document is rendered. In __RadPdfProcessing__ you have the ability to embed fonts following the approaches described below.
+All fonts that are not included in the 14 standard ones must be **embedded** in the PDF document. Otherwise, the result may be unpredictable when the document is rendered. In **RadPdfProcessing** you can embed fonts following the approaches described in the following sections.
         
->If you do not wish to embed the fonts in the document set the **FontEmbeddingType** property of the [ExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
+>If you do not want to embed the fonts in the document, set the `FontEmbeddingType` property of the [ExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
 
 ### Registering a Font
 
-If you want to use a font, that is not part of the standard ones, you can register it using the __RegisterFont()__ method of the __FontRepository__ static class. The method requires four parameters - FontFamily, FontStyle and FontWeight objects describing the font and a byte array containing the raw font data.
+If you want to use a font that is not part of the standard ones, register it using the `RegisterFont()` method of the `FontRepository` static class. The method requires four parameters: `FontFamily`, `FontStyle`, and `FontWeight` objects describing the font, and a byte array containing the raw font data.
          
-__Example 1__ demonstrates how you can use the RegisterFont() method.
+**Example 1** demonstrates how to use the `RegisterFont()` method.
             
 #### __Example 1: Register font in .NET Framework application__
 
@@ -124,19 +123,19 @@ __Example 1__ demonstrates how you can use the RegisterFont() method.
 
 ### Creating a Font
 
->tip Each registered font can be obtained from the font repository as __FontBase__ object and applied to a __[TextFragment]({%slug radpdfprocessing-model-textfragment%})__ through its __Font__ property.
+>tip Each registered font can be obtained from the font repository as a `FontBase` object and applied to a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) through its `Font` property.
 
 <snippet id='pdf-text-fragment-font'/>
 
-__Example 2__ shows how to create a font using the FontsRepository.
+**Example 2** shows how to create a font using `FontsRepository`.
             
 #### __Example 2: Create FontBase__
 
 <snippet id='pdf-bool-font-creation'/>
 
-You can create fonts that are not explicitly registered. Creating a font that is not registered in the repository with the code from __Example 2__ tries to find the font from the ones installed on the machine. 
+You can create fonts that are not explicitly registered. Creating a font that is not registered in the repository with the code from **Example 2** tries to find the font from the ones installed on the machine. 
 
->caution Due to security limitations in Silverlight, creating a font that is not present in the repository with the code from __Example 2__ is expected to fail - the application doesn't have the permissions to get the font from the file system.
+>caution Due to security limitations in Silverlight, creating a font that is not present in the repository with the code from **Example 2** is expected to fail because the application does not have the permissions to get the font from the file system.
 
 ## See Also
  * [Cross-Platform Support for Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
