@@ -1,26 +1,21 @@
 ---
 title: Colors and Color Spaces
-description: Explore the color and color space classes available in RadPdfProcessing, including SimpleColor, PatternColor, and LabColor.
+description: Explore the color and color space classes available in RadPdfProcessing, including SimpleColor, GrayColor, PatternColor, and LabColor.
 page_title: Colors and Color Spaces
 slug: radpdfprocessing-concepts-colors-and-color-spaces
-tags: colors, colorspaces, pdf, rgb, cmyk, gradient, radpdfprocessing, pattern
+tags: colors, colorspaces, pdf, rgb, gray, cmyk, gradient, radpdfprocessing, pattern
 published: True
 position: 2
 ---
 
 # Colors and Color Spaces
 
-The __ColorBase__ abstract class is used to encapsulate colors in different color spaces. The classes which inherit from __ColorBase__ are:
+The **ColorBase** abstract class is used to encapsulate colors in different color spaces. The classes which inherit from **ColorBase** are:
       
-* [SimpleColor](#simplecolor)
-
-* [PatternColor](#patterncolor)
-
-* [LabColor](#labcolor)
 
 ## SimpleColor
 
-The simple colors represent colors, which are defined with color components. The following colors are categorized as simple:
+Simple colors are defined with color components. The following colors are categorized as simple:
 
 ### RgbColor
 
@@ -33,11 +28,27 @@ Represents an ARGB (alpha, red, green, blue) color. The RgbColor class exposes t
 | `G` | The green component value. |
 | `B` | The blue component value. |
             
-__Example 1__ demonstrates how you can create an RgbColor and assign it as Fill of a [Path]({%slug radpdfprocessing-model-path%}) element.
+The following example shows how to create an RgbColor and assign it as Fill of a [Path]({%slug radpdfprocessing-model-path%}) element.
         
-#### __Example 1: Create RgbColor__
+#### **Create RgbColor**
 
 <snippet id='pdf-create-rgb-color'/>
+
+### GrayColor
+
+Represents a grayscale color with a single component. RadPdfProcessing exposes `GrayColor` publicly so you can read the gray value through its `G` property. The GrayColor class exposes the following property:
+
+| Property | Description |
+|---|---|
+| `G` | The gray component value, from 0 (black) to 255 (white). |
+
+Use GrayColor when importing PDFs that contain grayscale fills or strokes. You can convert it to RGB by using the `G` component for the red, green, and blue values.
+
+The following example covers the most common `GrayColor` scenarios: default and explicit grayscale values, reading `G`, converting to RGB, checking equality, and getting the string representation.
+
+#### Create GrayColor
+
+<snippet id='pdf-create-gray-color'/>
 
 ### CmykColor
 
@@ -60,11 +71,11 @@ Represents a CMYK (cyan, magenta, yellow, key) color. The CmykColor class was in
 
 ## PatternColor
 
-The abstract __PatternColor__ class represents colors, which are defined with the pattern color space. A pattern color paints with a pattern rather than a single color. PatternColor is inherited by the __Gradient__ and __TilingBase__ classes.
+The abstract **PatternColor** class represents colors defined with the pattern color space. A pattern color paints with a pattern rather than a single color. **PatternColor** is inherited by the **Gradient** and **TilingBase** classes.
         
 ### Gradient
 
-Gradient provides a smooth transition between colors across an area which is painted. The gradient color is represented by the __Gradient__ abstract class which exposes the following properties:
+Gradient provides a smooth transition between colors across an area. The gradient color is represented by the **Gradient** abstract class, which exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -75,36 +86,36 @@ Gradient provides a smooth transition between colors across an area which is pai
 | `Background` | A `SimpleColor` object representing the background color. |
 | `GradientStops` | A collection of [GradientStop](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.GradientStop.html) objects representing the gradient stops. |
                 
-The __Gradient__ class is inherited by the following classes:
+The **Gradient** class is inherited by the following classes:
             
-* __LinearGradient__: Defines a color blend along a line between two points, optionally extended beyond the boundary points by continuing the boundary colors.
+* **LinearGradient**: Defines a color blend along a line between two points, optionally extended beyond the boundary points by continuing the boundary colors.
             
-	__Example 2__ shows how to create a LinearGradient and assign it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
+	**Example 2** shows how to create a LinearGradient and assign it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
             
-	#### __Example 2: Create LinearGradient__
+	#### **Example 2: Create LinearGradient**
 	
 	<snippet id='pdf-create-linear-gradient'/>
 	
-The gradient created in __Example 2__ is shown in __Figure 1__.
+The gradient created in **Example 2** is shown in **Figure 1**.
 	            
 #### Figure 1: LinearGradient	
 
 ![Rad Pdf Processing Concepts Colors And Color Spaces 01](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
     
-* __RadialGradient__: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The __RadialGradient__ class exposes the following additional properties:
+* **RadialGradient**: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The **RadialGradient** class exposes the following additional properties:
 
 | Property | Description |
 |---|---|
 | `StartRadius` | Decimal number determining the radius of the starting circle. |
 | `EndRadius` | Decimal number determining the radius of the ending circle. |
               
-__Example 3__ demonstrates how to create a RadialGradient and assing it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
+**Example 3** demonstrates how to create a RadialGradient and assign it as the FillColor of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 	
-#### __Example 3: Create RadialGradient__
+#### **Example 3: Create RadialGradient**
 	
 <snippet id='pdf-create-linear-gradient'/>
 	
-The result from __Example 3__ is shown in __Figure 2__.
+The result from **Example 3** is shown in **Figure 2**.
 	
 #### Figure 2: RadialGradient
 	
@@ -112,7 +123,7 @@ The result from __Example 3__ is shown in __Figure 2__.
 
 ### Tiling Pattern
 
-A tiling pattern consists of a small graphical figure called a pattern cell. Painting with the pattern replicates the cell at fixed horizontal and vertical intervals to fill an area. The tiling pattern is represented by the __TilingBase__ abstract class, which exposes the following properties:
+A tiling pattern consists of a small graphical figure called a pattern cell. Painting with the pattern replicates the cell at fixed horizontal and vertical intervals to fill an area. The tiling pattern is represented by the **TilingBase** abstract class, which exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -125,31 +136,31 @@ A tiling pattern consists of a small graphical figure called a pattern cell. Pai
 | `TilingType` | Of type [TilingType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.ColorSpaces.TilingType.html), represents the tiling type. Possible values: `AllowSmallDistortion` (cells spaced consistently with slight distortion), `NoDistortion` (cells not distorted but spacing may vary), `FastTiling` (consistent spacing with additional distortion for efficient painting). |
 	                    
 
-The __TilingBase__ class is inherited from the following classes:
+The **TilingBase** class is inherited by the following classes:
             
 
-* __Tiling__: Represents a tiling pattern.
+* **Tiling**: Represents a tiling pattern.
 
-* __UncoloredTiling__: Represents an uncolored tiling pattern. This type of tiling patterns can be defined with some specific content, and then reused with a different color of their content. It exposes two additional properties - __Tiling__ which represents the tiling to be used and __Color__ representing the color of the content of the specified tiling.
+* **UncoloredTiling**: Represents an uncolored tiling pattern. This type of tiling pattern can be defined with specific content and then reused with a different color. It exposes two additional properties: **Tiling**, which represents the tiling to be used, and **Color**, which represents the color of the content of the specified tiling.
                 
 
-Since the __TilingBase__ class implements the __IContentRootElement__ interface like [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}), the content of the tiling can be modified using the __FixedContentEditor__ class. __Example 4__ shows how a tiling pattern can be created.
+Since the **TilingBase** class implements the **IContentRootElement** interface, like [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}), you can modify the content of the tiling using the **FixedContentEditor** class. **Example 4** shows how to create a tiling pattern.
             
 
-#### __Example 4: Create tiling__
+#### **Example 4: Create Tiling**
 
 <snippet id='pdf-create-tiling'/>
 
-The tiling created in __Example 4__ is shown in __Figure 3__.        
+The tiling created in **Example 4** is shown in **Figure 3**.        
 
 #### Figure 3: Tiling
 ![Rad Pdf Processing Concepts Colors And Color Spaces 02](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_02.png)
 
 ## LabColor
 
- **LAB** is a device-independent color space: **L** represents lightness or brightness, **A** represents the red-green axis, and **B** represents the yellow-blue axis.
+The **LAB** color space is device-independent. **L** represents lightness or brightness, **A** represents the red-green axis, and **B** represents the yellow-blue axis.
 
-#### Create LabColor
+#### **Create LabColor**
 
 <snippet id='pdf-create-lab-color'/>
 
