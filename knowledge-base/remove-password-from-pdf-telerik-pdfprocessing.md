@@ -5,29 +5,20 @@ type: how-to
 page_title: How to Remove Password from a PDF Using Telerik PdfProcessing
 meta_title: How to Remove Password from a PDF Using Telerik PdfProcessing
 slug: remove-password-from-pdf-telerik-pdfprocessing
-tags: pdfprocessing,telerik document processing,password,remove password,exportsettings,isencrypted
+tags: pdf,pdfprocessing,password,encryption,import,export
 res_type: kb
 ticketid: 1715470
 ---
 
 ## Environment
 
-<table>
-<tbody>
-<tr>
-<td>Product</td>
-<td>Telerik Document Processing PdfProcessing</td>
-</tr>
-<tr>
-<td>Version</td>
-<td>2026.2.519</td>
-</tr>
-</tbody>
-</table>
+| Version | Product | Author |
+| --- | --- | --- |
+| 2026.2.519 | [RadPdfProcessing]({%slug radpdfprocessing-overview%}) | [Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov) |
 
 ## Description
 
-I want to remove the password from a PDF file using Telerik PdfProcessing. The file is currently password-protected, but I need to save it as a new document without any password or encryption.
+Use [RadPdfProcessing]({%slug radpdfprocessing-overview%}) to open a password-protected PDF file and save it again as a new document without password protection or encryption.
 
 This knowledge base article also answers the following questions:
 - How to open a password-protected PDF and save it without a password?
@@ -36,12 +27,12 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-To remove a password from a PDF using Telerik PdfProcessing, import the password-protected PDF by providing the password, and then export it without encryption or passwords.
+To remove a password from a PDF using [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}), import the password-protected document with [PdfImportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings), then export it with [PdfExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings) without encryption.
 
-1. Use the `PdfFormatProvider`'s `ImportSettings` to supply the password for the protected PDF.
-2. Handle the `UserPasswordNeeded` or `OwnerPasswordNeeded` event to provide the password when required.
-3. Import the document.
-4. When exporting, ensure that the `ExportSettings.IsEncrypted` property is set to `false` (default) and do not set values for `UserPassword` or `OwnerPassword`. This will export the document without password protection.
+1. Use the [ImportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings) property of [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to supply the password for the protected PDF.
+2. Handle the [UserPasswordNeeded]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings) or [OwnerPasswordNeeded]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#import-settings) event to provide the password when required.
+3. Import the document into a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}).
+4. When exporting, keep [ExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings) configured so that [IsEncrypted]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings) is `false` and leave [UserPassword]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings) and [OwnerPassword]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings) unset.
 
 The following example demonstrates this process:
 
@@ -94,5 +85,5 @@ using (Stream output = File.OpenWrite(pdfOutputPath))
 
 ## See Also
 
-- [PdfFormatProvider Export Settings](https://www.telerik.com/document-processing-libraries/documentation/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#export-settings)
-- [PdfFormatProvider Overview](https://www.telerik.com/document-processing-libraries/documentation/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/overview)
+* [PdfFormatProvider Export Settings](https://www.telerik.com/document-processing-libraries/documentation/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#export-settings)
+* [PdfFormatProvider Overview](https://www.telerik.com/document-processing-libraries/documentation/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/overview)
