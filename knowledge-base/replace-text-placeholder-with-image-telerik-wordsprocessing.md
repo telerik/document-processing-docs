@@ -1,35 +1,24 @@
 ---
-title: Replacing Word Placeholders with Images Using Telerik WordsProcessing
-description: Learn how to use Telerik WordsProcessing to replace placeholders in a Word document with images programmatically.
+title: Replace Placeholder Text with Images in Telerik WordsProcessing
+description: Learn how to replace placeholder text in a Word document with images by using RadWordsProcessing.
 type: how-to
 page_title: Replace Placeholder Text with Images in Telerik WordsProcessing
 meta_title: Replace Placeholder Text with Images in Telerik WordsProcessing
-slug: replace-word-placeholder-with-image-telerik-wordsprocessing
-tags: telerik, wordsprocessing, radflowdocumenteditor, replace-text, imageinline
+slug: replace-text-placeholder-with-image-telerik-wordsprocessing
+tags: radwordsprocessing, wordsprocessing, placeholder, replace, image, editor, docx, telerik, word
 res_type: kb
 ticketid: 1715583
 ---
 
 ## Environment
 
-<table>
-<tbody>
-<tr>
-<td> Product </td>
-<td>
-Telerik Document Processing WordsProcessing
-</td>
-</tr>
-<tr>
-<td> Version </td>
-<td> 2025.4.1216 </td>
-</tr>
-</tbody>
-</table>
+| Version | Product | Author |
+| --- | --- | --- |
+| 2026.2.519 | [RadWordsProcessing]({%slug radwordsprocessing-overview%}) | [Yoan Karamanov](https://www.telerik.com/blogs/author/yoan-karamanov) |
 
 ## Description
 
-I want to programmatically replace placeholders in a Word document, such as [*1], [*2], etc., with images using Telerik WordsProcessing. The images can be in formats like .jpg, .tiff, or .png, and I would like to use the `RadFlowDocumentEditor` for this purpose.
+I want to programmatically replace placeholders in a Word document, such as [*1], [*2], and so on, with images by using [RadWordsProcessing]({%slug radwordsprocessing-overview%}). The [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) API can do this by replacing the placeholder text with an [ImageInline]({%slug radwordsprocessing-model-imageinline%}).
 
 This knowledge base article also answers the following questions:
 - How to use Telerik WordsProcessing to replace text with an image.
@@ -38,11 +27,11 @@ This knowledge base article also answers the following questions:
 
 ## Solution
 
-To replace placeholders in a Word document with images using Telerik WordsProcessing, follow these steps:
+To replace placeholders in a Word document with images using [RadWordsProcessing]({%slug radwordsprocessing-overview%}), follow these steps:
 
-1. Load the Word document using the `DocxFormatProvider`.
-2. Use the `RadFlowDocumentEditor` to search for placeholder text.
-3. Replace the placeholder text with an `ImageInline` element.
+1. Load the Word document with [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}).
+2. Create a [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) and prepare an [ImageInline]({%slug radwordsprocessing-model-imageinline%}).
+3. Use [ReplaceText()]({%slug radwordsprocessing-editing-replace-document-elements%}) to swap the placeholder with the image.
 
 Below is a sample implementation in C#:
 
@@ -52,13 +41,13 @@ using System.IO;
 using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
 using Telerik.Windows.Documents.Flow.Model;
 using Telerik.Windows.Documents.Flow.Model.Editing;
+using Telerik.Windows.Documents.Flow.Model.Shapes;
 using Telerik.Windows.Documents.Media;
 
 class Program
 {
     static void Main()
     {
-        // Load the Word document
         RadFlowDocument flowDocument;
         DocxFormatProvider docxFormatProvider = new DocxFormatProvider();
         using (Stream input = File.OpenRead("TestDocument.docx"))
@@ -66,20 +55,11 @@ class Program
             flowDocument = docxFormatProvider.Import(input, null);
         }
 
-        // Initialize the document editor
         RadFlowDocumentEditor editor = new RadFlowDocumentEditor(flowDocument);
 
-        // Create an ImageInline object
-        ImageInline imageInline = new ImageInline(flowDocument);
-        byte[] imageData = File.ReadAllBytes("image.jpeg"); // Replace with your image file path
-        imageInline.Image.ImageSource = new ImageSource(imageData, "jpeg");
-        imageInline.Image.Size = new System.Windows.Size(100, 100); // Set image dimensions
+        ReplacePlaceholderWithImage(editor, flowDocument, "text placeholder 1", "image.jpeg");
+        ReplacePlaceholderWithImage(editor, flowDocument, "text placehodler 2", "image.jpeg");
 
-        // Replace placeholders with the image
-        editor.ReplaceText("[*1]", imageInline, true, true); // Replace [*1]
-        editor.ReplaceText("[*7]", imageInline, true, true); // Replace [*7]
-
-        // Save the modified document
         string outputPath = "output.docx";
         using (Stream output = File.OpenWrite(outputPath))
         {
@@ -88,17 +68,33 @@ class Program
 
         Console.WriteLine("Document updated successfully.");
     }
+
+    private static void ReplacePlaceholderWithImage(
+        RadFlowDocumentEditor editor,
+        RadFlowDocument document,
+        string placeholderText,
+        string imagePath)
+    {
+        ImageInline imageInline = new ImageInline(document);
+        byte[] imageData = File.ReadAllBytes(imagePath);
+        imageInline.Image.ImageSource = new ImageSource(imageData, "jpeg");
+        imageInline.Image.Size = new System.Windows.Size(100, 100);
+
+        editor.ReplaceText(placeholderText, imageInline, true, true);
+    }
 }
 ```
 
 ### Key Points
-- Use the `ReplaceText` method of `RadFlowDocumentEditor` to locate and replace placeholders.
-- The `ImageInline` object handles embedding images into the document.
-- Customize the `ImageInline.Image.Size` property to set the dimensions of the image.
+
+* Use the `ReplaceText()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) to locate and replace placeholders.
+* The [ImageInline]({%slug radwordsprocessing-model-imageinline%}) object handles embedding images into the document.
+* Customize the `ImageInline.Image.Size` property to set the dimensions of the image.
 
 ## See Also
 
-- [WordsProcessing Documentation](https://www.telerik.com/document-processing-libraries/documentation/libraries/radwordsprocessing/overview)
-- [RadFlowDocument Overview](https://www.telerik.com/document-processing-libraries/documentation/libraries/radwordsprocessing/model/radflowdocument)
-- [RadFlowDocumentEditor Overview](https://www.telerik.com/document-processing-libraries/documentation/libraries/radwordsprocessing/editing/radflowdocumenteditor)
-- [Replace Text with Document Elements](https://www.telerik.com/document-processing-libraries/documentation/libraries/radwordsprocessing/editing/find-and-replace/replace-document-elements)
+* [RadWordsProcessing Overview]({%slug radwordsprocessing-overview%})
+* [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
+* [ImageInline]({%slug radwordsprocessing-model-imageinline%})
+* [Replace Text with Document Elements]({%slug radwordsprocessing-editing-replace-document-elements%})
