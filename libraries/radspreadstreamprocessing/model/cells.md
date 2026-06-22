@@ -56,31 +56,48 @@ The `SetValue()` method exposes several overloads that allow you to set values f
 
 ### Set a Formula
 
-To allow you to set a formula as a value of a cell, `ICellExporter` defines the `SetFormula()` method. This method accepts a string that represents the formula as a parameter. **Example 4** shows how to use it.
+To allow you to set a formula as a value of a cell, `ICellExporter` defines the `SetFormula()` method. This method accepts a string that represents the formula as a parameter. **Example 3** shows how to use it.
 
-**Example 4: Setting a Formula to a Cell**
+**Example 3: Setting a Formula to a Cell**
 
 <snippet id='codeblock-dlg'/>
 
 
 >All formulas must be set in `InvariantCulture`. For example, the decimal separator must be ".", and the list separator must be ",".
 
+### Set a Formula with a Cached Value
+
+An overload of `SetFormula` accepts a second `cachedValue` string argument. The cached value is the pre-computed result of the formula and is used by `RadSpreadStreamProcessing` for filter evaluation when you export an AutoFilter with automatic row hiding (see [AutoFilter]({%slug radspreadstreamprocessing-features-autofilter%}#filtering-with-automatic-row-hiding)). Providing a cached value lets the library evaluate whether a row matches the filter rules without recalculating formulas.
+
+#### __Example 4: Setting a Formula with a Cached Value__
+
+```csharp
+using (ICellExporter cellExporter = rowExporter.CreateCellExporter())
+{
+    // Store the formula and its pre-computed result so that the AutoFilter
+    // can evaluate whether this row matches the filter criteria.
+    cellExporter.SetFormula("SUM(B2:B10)", "12500");
+}
+```
+
+>important The `cachedValue` argument must not contain XML 1.0 illegal control characters (U+0000–U+0008, U+000B, U+000C, U+000E–U+001F). Passing a value with such characters throws an `ArgumentException`.
+
 
 ### Skip Cells
 
 The cells in a document are exported one by one from left to right starting from the one with index [0, 0] or, in other words, A1. To export a cell with a bigger index, you need to export all the previous cells or skip them.
 
-In some cases you may need to skip several cells and start filling the data in the next one. The [`IRowExporter`]({%slug radspreadstreamprocessing-model-rows%}) interface declares a method that allows you to implement such a scenario. **Example 3** shows how to skip 5 cells and set a value and a vertical alignment to the sixth one.
+In some cases you may need to skip several cells and start filling the data in the next one. The [`IRowExporter`]({%slug radspreadstreamprocessing-model-rows%}) interface declares a method that allows you to implement such a scenario. **Example 5** shows how to skip 5 cells and set a value and a vertical alignment to the sixth one.
 
-**Example 3: Skip Cells**
+**Example 5: Skip Cells**
 
 <snippet id='codeblock-dlh'/>
 
 ### Merge Cells
 
-**Example 5** shows how to merge several cells into a single one through [IWorksheetExporter]({%slug  radspreadstreamprocessing-model-worksheet%}).
+**Example 6** shows how to merge several cells into a single one through [IWorksheetExporter]({%slug  radspreadstreamprocessing-model-worksheet%}).
 
-**Example 5: Merge Cells**
+**Example 6: Merge Cells**
 
 <snippet id='codeblock-dli'/>
 
@@ -112,13 +129,13 @@ Another method exposed by `ICellExporter`—`SetFormat()`—enables you to chang
 | `DiagonalUpBorder` | Gets or sets the diagonal up border. Of type [`SpreadBorder`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html). |
 | `DiagonalDownBorder` | Gets or sets the diagonal down border. Of type [`SpreadBorder`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html). |
 
-**Example 6: Format Cells**
+**Example 7: Format Cells**
 
 <snippet id='codeblock-dlj'/>
 
 In addition to the listed properties, the `SpreadCellFormat` class allows you to set a style to a cell. For more information on cell styles, see the [Cell Styles]({%slug radspreadstreamprocessing-features-styling-cell-styles%}) topic.
 
-**Example 7: Set the Value Format to String, Date, or a Number**
+**Example 8: Set the Value Format to String, Date, or a Number**
 
 <snippet id='codeblock-dlk'/>
 
@@ -128,9 +145,9 @@ You can apply a `SpreadCellFormat` instance on multiple cells. However, if a pro
 
 ### Using ICellImporter
 
-You can get a concrete instance of `ICellImporter` through the `Cells` collection of [IRowImporter]({%slug radspreadstreamprocessing-model-rows%}). **Example 8** demonstrates how to read the cells of a row.
+You can get a concrete instance of `ICellImporter` through the `Cells` collection of [IRowImporter]({%slug radspreadstreamprocessing-model-rows%}). **Example 9** demonstrates how to read the cells of a row.
 
-**Example 8: Create ICellImporter**
+**Example 9: Create ICellImporter**
 
 <snippet id='codeblock-dll'/>
 
