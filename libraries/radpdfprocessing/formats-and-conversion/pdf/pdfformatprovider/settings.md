@@ -85,3 +85,4 @@ The following example shows how to create a `PdfExportSettings` object with cust
 * [Handling Exceptions]({%slug radpdfprocessing-handling-exceptions%})
 * [How to Comply with PDF/A Standard]({%slug radpdfprocessing-concepts-comply-with-pdfa-standard%})
 * [Optimizing and Reducing the Size of PDF Files with RadPdfProcessing]({%slug optimize-and-reduce-pdf-size-radpdfprocessing%})
+* [Removing Password from a PDF Using Telerik PdfProcessing]({%slug remove-password-from-pdf-telerik-pdfprocessing%})
