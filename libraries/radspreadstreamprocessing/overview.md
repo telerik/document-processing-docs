@@ -53,6 +53,8 @@ The following list describes the features you can take advantage of:
 
 * **Hidden [rows]({%slug radspreadstreamprocessing-model-rows%}) and [columns]({%slug radspreadstreamprocessing-model-columns%})**: The API allows you to set the hidden state of each row or column.
 
+* [**AutoFilter**]({%slug radspreadstreamprocessing-features-autofilter%}): Set AutoFilters to show or hide rows based on column values. Supports value, custom comparison, top/bottom N, and dynamic date filters.
+
 * [**Cell formatting**]({%slug radspreadstreamprocessing-model-cells%}#set-a-format): Several properties enable you to apply the desired look to a cell.
 
 * [**Cell styles**]({%slug radspreadstreamprocessing-features-styling-cell-styles%}): Cell styles allow you to apply multiple format options in one step and achieve consistency in cell formatting.

@@ -29,7 +29,7 @@ The `EmbeddedFilesCollection` class holds a collection of `EmbeddedFile` instanc
 |`Add(string name, byte[] data)`|Adds a named embedded file with the specified name and value to the collection and returns it.|
 |`ContainsName(string name)`|Determines whether the collection contains the specified name.|
 |`Clear()`|Removes all embedded files from the collection.| 
-|`AddZugferdInvoice(byte[] data)`|Adds an embedded ZUGFeRD-compliant file to the collection and returns it. The conformance level is set to Basic. Only a single XML invoice attachment is allowed in ZUGFeRD.|
+|`AddZugferdInvoice(byte[] data, ZugferdConformanceLevel level)`|Adds an embedded ZUGFeRD-compliant file to the collection and returns it. The `level` parameter specifies the conformance level (defaults to `Basic`). When the level is `XRechnung`, the embedded file name is `xrechnung.xml`; otherwise it is `factur-x.xml`. Only a single XML invoice attachment is allowed in ZUGFeRD.|
 |`RemoveZugferdInvoice()`|Removes the embedded ZUGFeRD file with the specified name from the collection.|
 
 ## See Also

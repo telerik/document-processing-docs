@@ -3,7 +3,7 @@ title: Convert and Merge Tools
 page_title: Convert and Merge
 description: Telerik Document Processing Agent Tools expose document processing conversion and merging capabilities to agentic workflows.
 slug: agent-tools-convert-merge-document-api
-tags: agent, conversion, merge, api, ai, telerik, pdf, docx
+tags: agent, conversion, merge, api, ai, telerik, pdf, docx, markdown, md
 published: True
 position: 4
 ---
@@ -27,7 +27,7 @@ The **ConvertDocumentsAgentTool** class provides an agent‑tool wrapper around 
 
 The tool handles conversions for the following file types:
 
-* Flow documents: .docx, .doc (import only), .rtf, .html
+* Flow documents: .docx, .doc (import only), .rtf, .html, .md
 * Fixed documents: .pdf
 * Spreadsheet documents: .xlsx, .xls, .xlsm, .csv
 * Text documents: .txt
@@ -49,4 +49,5 @@ This class supports merging files directly from the file system, avoiding the us
 ## See Also
 
 * [Getting Started with DPL Agent Tools]({%slug agent-tools-getting-started%})
-* [Overview]({%slug agent-tools-overview%}) 
+* [Overview]({%slug agent-tools-overview%})
+* [Using MarkdownFormatProvider]({%slug radwordsprocessing-formats-markdownformatprovider%})

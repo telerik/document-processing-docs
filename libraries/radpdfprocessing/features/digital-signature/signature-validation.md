@@ -18,6 +18,8 @@ The `Signature` class exposes two methods for validating a signature:
 | `Validate()` | Accepts a `SignatureValidationProperties` parameter and validates the signature using those properties. Returns a [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html). |
 | `TryValidate()` | Returns a `bool` indicating whether validation succeeded. The first overload accepts an `out` parameter containing a [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html); the second overload also accepts `SignatureValidationProperties`. |
 
+## Validation Properties
+
 The `SignatureValidationProperties` class exposes the following properties:
 
 | Property | Description |
@@ -27,12 +29,26 @@ The `SignatureValidationProperties` class exposes the following properties:
 
 >important The validation requires that the stream from which the document is imported remains open. The validation runs for the current field and checks against the state of the document at the moment of import.
 
+## Validation Result
+
+The `Validate()` and `TryValidate()` methods return a `SignatureValidationResult` that describes the outcome of the verification. The following table lists its properties:
+
+| Property | Type | Description |
+|---|---|---|
+| `FieldName` | `string` | The name of the signature form field associated with this result. |
+| `IsDocumentModified` | `bool` | Indicates whether the signed byte ranges were altered after signing. |
+| `IsCertificateValid` | `bool` | Indicates whether the signing certificate builds a valid chain. Check `CertificatesChainElements` for details when the certificate is invalid. |
+| `Certificates` | `X509Certificate2Collection` | The certificates included with the signature, used to validate the chain. |
+| `CertificatesChainElements` | `X509ChainElementCollection` | Chain elements produced during validation that describe any issues with the certificate path. |
+| `SignerInformation` | `string` | Signer information, typically the name or entity extracted from the signature. |
+| `HashAlgorithm` | `Oid` | The hash algorithm OID used to compute the message digest for this signature. |
+| `HashAlgorithmName` | `string` | The friendly name of the hash algorithm (for example, `SHA1` or `SHA256`), falling back to the OID value string when no friendly name is available. Returns `null` when `HashAlgorithm` is not set. |
+
 The following example shows how to validate a signature field:
 
 >note [PdfProcessing Validate Digital Signature Demo](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature)
 
-### Example: Validate a Field
-
+#### __Example 1: Validate a Field__
 
 <snippet id='pdf-validate-signature'/>
 
