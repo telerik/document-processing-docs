@@ -1,9 +1,9 @@
 ---
 title: Colors and Color Spaces
-description: Explore the color and color space classes available in RadPdfProcessing, including SimpleColor, PatternColor, and LabColor.
+description: Explore the color and color space classes available in RadPdfProcessing, including SimpleColor, GrayColor, PatternColor, and LabColor.
 page_title: Colors and Color Spaces
 slug: radpdfprocessing-concepts-colors-and-color-spaces
-tags: colors, colorspaces, pdf, rgb, cmyk, gradient, radpdfprocessing, pattern
+tags: colors, colorspaces, pdf, rgb, gray, cmyk, gradient, radpdfprocessing, pattern
 published: True
 position: 2
 ---
@@ -12,11 +12,6 @@ position: 2
 
 The `ColorBase` abstract class encapsulates colors in different color spaces. The classes that inherit from `ColorBase` are:
       
-* [SimpleColor](#simplecolor)
-
-* [PatternColor](#patterncolor)
-
-* [LabColor](#labcolor)
 
 ## SimpleColor
 
@@ -33,11 +28,27 @@ Represents an ARGB (alpha, red, green, blue) color. The `RgbColor` class exposes
 | `G` | The green component value. |
 | `B` | The blue component value. |
             
-**Example 1** demonstrates how to create an `RgbColor` and assign it as the Fill of a [Path]({%slug radpdfprocessing-model-path%}) element.
+The following example shows how to create an `RgbColor` and assign it as Fill of a [Path]({%slug radpdfprocessing-model-path%}) element.
         
-#### __Example 1: Create RgbColor__
+#### **Create RgbColor**
 
 <snippet id='pdf-create-rgb-color'/>
+
+### GrayColor
+
+Represents a grayscale color with a single component. RadPdfProcessing exposes `GrayColor` publicly so you can read the gray value through its `G` property. The GrayColor class exposes the following property:
+
+| Property | Description |
+|---|---|
+| `G` | The gray component value, from 0 (black) to 255 (white). |
+
+Use GrayColor when importing PDFs that contain grayscale fills or strokes. You can convert it to RGB by using the `G` component for the red, green, and blue values.
+
+The following example covers the most common `GrayColor` scenarios: default and explicit grayscale values, reading `G`, converting to RGB, checking equality, and getting the string representation.
+
+#### Create GrayColor
+
+<snippet id='pdf-create-gray-color'/>
 
 ### CmykColor
 
@@ -64,7 +75,7 @@ The abstract `PatternColor` class represents colors defined with the pattern col
         
 ### Gradient
 
-`Gradient` provides a smooth transition between colors across a painted area. The gradient color is represented by the `Gradient` abstract class which exposes the following properties:
+Gradient provides a smooth transition between colors across an area. The gradient color is represented by the `Gradient` abstract class, which exposes the following properties:
 
 | Property | Description |
 |---|---|
@@ -81,7 +92,7 @@ The `Gradient` class is inherited by the following classes:
             
 	**Example 2** shows how to create a `LinearGradient` and assign it as the `FillColor` of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
             
-	#### __Example 2: Create LinearGradient__
+	#### **Example 2: Create LinearGradient**
 	
 	<snippet id='pdf-create-linear-gradient'/>
 	
@@ -100,7 +111,7 @@ The gradient created in **Example 2** is shown in **Figure 1**.
               
 **Example 3** demonstrates how to create a `RadialGradient` and assign it as the `FillColor` of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 	
-#### __Example 3: Create RadialGradient__
+#### **Example 3: Create RadialGradient**
 	
 <snippet id='pdf-create-linear-gradient'/>
 	
@@ -144,9 +155,9 @@ The tiling created in **Example 4** is shown in **Figure 3**.
 
 ## LabColor
 
- **LAB** is a device-independent color space: **L** represents lightness or brightness, **A** represents the red-green axis, and **B** represents the yellow-blue axis.
+The **LAB** color space is device-independent. **L** represents lightness or brightness, **A** represents the red-green axis, and **B** represents the yellow-blue axis.
 
-#### Create LabColor
+#### **Create LabColor**
 
 <snippet id='pdf-create-lab-color'/>
 
