@@ -71,17 +71,9 @@ An overload of `SetFormula` accepts a second `cachedValue` string argument. The 
 
 #### __Example 4: Setting a Formula with a Cached Value__
 
-```csharp
-using (ICellExporter cellExporter = rowExporter.CreateCellExporter())
-{
-    // Store the formula and its pre-computed result so that the AutoFilter
-    // can evaluate whether this row matches the filter criteria.
-    cellExporter.SetFormula("SUM(B2:B10)", "12500");
-}
-```
+<snippet id='setting-formula-cached-value'/>
 
 >important The `cachedValue` argument must not contain XML 1.0 illegal control characters (U+0000–U+0008, U+000B, U+000C, U+000E–U+001F). Passing a value with such characters throws an `ArgumentException`.
-
 
 ### Skip Cells
 
