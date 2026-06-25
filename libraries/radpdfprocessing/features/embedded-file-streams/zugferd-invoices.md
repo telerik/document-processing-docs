@@ -53,17 +53,7 @@ When you set the conformance level to `XRechnung`, **RadPdfProcessing** automati
 * Sets the conformance level metadata to `XRECHNUNG` in the XMP metadata.
 * Embeds the invoice XML with the file name `xrechnung.xml` instead of the default `factur-x.xml`.
 
-```csharp
-RadFixedDocument document = new RadFixedDocument();
-byte[] invoiceXml = File.ReadAllBytes("xrechnung-invoice.xml");
-
-document.EmbeddedFiles.AddZugferdInvoice(invoiceXml, ZugferdConformanceLevel.XRechnung);
-
-PdfFormatProvider provider = new PdfFormatProvider();
-// Export as PDF/A-3B for ZUGFeRD compliance.
-provider.ExportSettings.ComplianceLevel = PdfComplianceLevel.PdfA3B;
-File.WriteAllBytes("output.pdf", provider.Export(document, TimeSpan.FromSeconds(10)));
-```
+<snippet id='libraries-pdf-features-embeddedfilestreams-zugferdinvoices-xrechnung'/>
 
 >note When using the `XRechnung` conformance level, the embedded file name is fixed to `xrechnung.xml`. For all other conformance levels the file name is `factur-x.xml`.
 
