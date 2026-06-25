@@ -1,47 +1,75 @@
 ---
-title: What is a Cell?
-description: Learn about the concept of cells in RadSpreadProcessing worksheets, including their structure and properties.
-page_title: What is a Cell?
+title: What Is a Cell?
+description: Learn what a cell represents in a RadSpreadProcessing worksheet, how it is addressed, and which cell tasks to use next.
+page_title: What Is a Cell in RadSpreadProcessing Worksheets
 slug: radspreadprocessing-working-with-cells-what-is-cell
 tags: cells, spreadsheet, radspreadprocessing, worksheet, model, concept, structure, properties, xlsx, spread
 published: True
 position: 0
 ---
 
-# What is a Cell?
+# What Is a Cell?
 
+Use this article to understand what a cell represents in a RadSpreadProcessing worksheet. It explains how cell addresses work, what a cell can contain, and which related articles to use for common cell tasks.
 
+## Cell Addresses
 
-This article will help you get familiar with the concept of cells.
-      
+A cell is the smallest addressable data unit in a worksheet. It sits at the intersection of one row and one column, so every cell has a unique address.
 
-## What is a Cell?
+The address combines the column letters and the row number:
 
-A cell is the basic data unit in a worksheet. Cells are organized in rows and columns and can also be referred as an intersection point of a column and a row. Cells are identified by a letter and number combination that indicates the letter of their column and the number of their row. For example, the top left cell is referred to as *A1* and the bottom right cell is – *XFD1048576*.
-        
+| Address | Meaning |
+|---|---|
+| `A1` | The cell in the first column and first row |
+| `C5` | The cell in the third column and fifth row |
+| `XFD1048576` | The last address in an Excel-compatible worksheet |
 
-## What are its characteristics?
+When you work with the document model, you also use `CellIndex` to identify a single cell and `CellRange` to identify a rectangular group of cells.
 
-Cells have the following characteristics:
-        
+## Cell Content and Formatting
 
-* __Value and Formatting__: A cell serves as a rudimentary storage unit in a worksheet and it can be assigned any text, number, Boolean or formula value. Additionally, each cell can be styled using various fonts, font sizes, fore and background colors, bold, italics, underline. Cells also have support for how text is aligned both horizontally and vertically, as well as indentation and text rotation settings, and so on.
-            
+A cell can store both data and the formatting that controls how that data appears.
 
-* __Fill__: Cells can be styled with pattern fills with various colors and pattern styles. The model also supports gradient fills that allow you to specify two colors and choose between six shading styles.
-            
+Cells can contain the following information:
 
-* __Borders__: Each cell can have left, right, top, bottom and diagonal borders or any combination of these. Additionally, the borders can appear with different styles and color.
-            
+* Text, numbers, Boolean values, dates, and formulas. For details about supported value types, see [cell value types in RadSpreadProcessing]({%slug radspreadprocessing-working-with-cells-cell-value-types%}).
+* Fonts, font sizes, foreground colors, background colors, borders, alignment, indentation, and rotation.
+* Pattern fills and gradient fills that affect the visual appearance of the cell.
+* Text wrapping that displays long content on multiple lines inside the same cell.
 
-* __Text Wrap__: The wrapping text option formats the cell so that its contained text appears on multiple lines.
-            
+## Cell Access in Code
 
-* __Copy and Paste__: The document model allows you to copy the contents of an arbitrary region of cells and choose the data and formatting to be included in the paste region. The model supports seven types of special paste options: All, Formulas, Formulas and Number Formatting, Column Widths, Values, Values and Number Formatting, Formatting. More information on the copy/paste feature is available in the [Clipboard Support]({%slug radspreadprocessing-features-clipboard-support%}) article.
-            
+In RadSpreadProcessing, you usually do not manipulate a cell through a standalone cell object. Instead, you create a `CellSelection` that points to one cell or a cell range, and then call the appropriate APIs on that selection.
 
-* __Fill Data Automatically__: The document model helps you fill the contents of a specified set of cells automatically, based on some initial values. You can simply repeat or construct linear, exponential, date and auto fill data series. For more information see the [Fill Data Automatically]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}) section.
-            
+>note
+>
+> Use `CellSelection` even when you work with a single cell. Most value, formatting, and copy operations are exposed through the selection API.
 
-* __Merge and Unmerge__: Adjacent cells can be merged so that they appear as one. In this way, a single cell can span over several rows and/or columns. For more information refer to the [Merge and Unmerge Cells]({%slug radspreadprocessing-features-merge-unmerge-cells%}) article.
-            
+To learn how to create a `CellSelection`, see [access cells in a worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}). To learn how to update values and formatting, see [get, set, and clear cell properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}).
+
+## Common Cell Operations
+
+After you select a cell or a cell range, you can perform these common tasks:
+
+* Read, set, or clear cell values.
+* Apply number formats, fonts, fills, borders, alignment, and text wrapping.
+* Copy and paste data or formatting by using [clipboard support for worksheet cells]({%slug radspreadprocessing-features-clipboard-support%}).
+* Fill neighboring cells automatically by using [automatic fill for repeated and series-based values]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}).
+* Merge adjacent cells or split them again by using [merge and unmerge worksheet cells]({%slug radspreadprocessing-features-merge-unmerge-cells%}).
+
+## Next Steps
+
+Use the article that matches your next task:
+
+* [Access cells in a worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}) to create `CellSelection` objects.
+* [Review cell value types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) to understand how the `Value` property stores data.
+* [Get, set, and clear cell properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) to update values, formats, and styling.
+* [Insert and remove cells]({%slug radspreadprocessing-working-with-cells-insert-remove-cells%}) to change worksheet layout.
+* [Iterate through used cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%}) to inspect populated worksheet content.
+
+## See Also
+
+* [Access cells in a worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
+* [Review cell value types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
+* [Get, set, and clear cell properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
+
