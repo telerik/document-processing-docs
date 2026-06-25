@@ -28,13 +28,7 @@ The following table describes the properties of `SpreadAutoFilter`.
 
 `SpreadAutoFilter` provides two constructors:
 
-```csharp
-// Range only — no filter definitions.
-SpreadAutoFilter autoFilter = new SpreadAutoFilter(fromRowIndex, fromColumnIndex, toRowIndex, toColumnIndex);
-
-// Range with filter column definitions.
-SpreadAutoFilter autoFilter = new SpreadAutoFilter(fromRowIndex, fromColumnIndex, toRowIndex, toColumnIndex, filterColumns);
-```
+<snippet id='libraries-spreadstream-features-autofilter-1'/>
 
 >note Each column in a `SpreadAutoFilter` must have a unique `RelativeColumnIndex`. Passing duplicate values causes the constructor to throw an `ArgumentException`.
 
@@ -45,9 +39,7 @@ Each `SpreadFilterColumn` pairs a column offset with a filter rule:
 | `RelativeColumnIndex` | `int` | The zero-based column offset relative to `FromColumnIndex` of the parent `SpreadAutoFilter`. |
 | `Filter` | `ISpreadFilter` | The filter rule for the column. |
 
-```csharp
-SpreadFilterColumn column = new SpreadFilterColumn(relativeColumnIndex, filter);
-```
+<snippet id='libraries-spreadstream-features-autofilter-2'/>
 
 ## Filter Types
 
@@ -65,22 +57,7 @@ All filter types implement the `ISpreadFilter` interface. The following subsecti
 
 `SpreadValuesFilter` provides several constructors:
 
-```csharp
-// String values only.
-new SpreadValuesFilter(new string[] { "Apple", "Banana" })
-
-// String values and blank flag.
-new SpreadValuesFilter(new string[] { "Apple" }, blank: true)
-
-// Date group items only.
-new SpreadValuesFilter(new SpreadDateGroupItem[] { new SpreadDateGroupItem(2024, 6) })
-
-// All three (pass null for any unused parameter).
-new SpreadValuesFilter(
-    new string[] { "Active" },
-    new SpreadDateGroupItem[] { new SpreadDateGroupItem(2023, 11, 15) },
-    blank: false)
-```
+<snippet id='libraries-spreadstream-features-autofilter-3'/>
 
 A `SpreadDateGroupItem` defines a date criterion at a specific granularity. The constructor overloads determine the granularity automatically:
 
@@ -103,16 +80,7 @@ A `SpreadDateGroupItem` defines a date criterion at a specific granularity. The 
 | `Criteria2` | `SpreadCustomFilterCriteria` | An optional second criterion. |
 | `LogicalOperator` | `SpreadLogicalOperator` | Combines the two criteria: `And` or `Or`. |
 
-```csharp
-// Single criterion.
-new SpreadCustomFilter(new SpreadCustomFilterCriteria(SpreadComparisonOperator.GreaterThan, "100"))
-
-// Two criteria with logical operator.
-new SpreadCustomFilter(
-    new SpreadCustomFilterCriteria(SpreadComparisonOperator.GreaterThanOrEqualsTo, "10"),
-    SpreadLogicalOperator.And,
-    new SpreadCustomFilterCriteria(SpreadComparisonOperator.LessThan, "500"))
-```
+<snippet id='libraries-spreadstream-features-autofilter-4'/>
 
 `SpreadCustomFilterCriteria` defines a single comparison:
 
@@ -132,9 +100,7 @@ new SpreadCustomFilter(
 | `FilterType` | `SpreadTop10FilterType` | `TopNumber`, `BottomNumber`, `TopPercent`, or `BottomPercent`. |
 | `Value` | `double` | The count or percentage threshold. Must be a finite number greater than zero. |
 
-```csharp
-new SpreadTop10Filter(SpreadTop10FilterType.TopNumber, 10)
-```
+<snippet id='libraries-spreadstream-features-autofilter-5'/>
 
 >note `SpreadTop10Filter` throws `ArgumentException` when `Value` is `NaN` or `Infinity`, and `ArgumentOutOfRangeException` when `Value` is less than or equal to zero.
 
@@ -146,9 +112,8 @@ new SpreadTop10Filter(SpreadTop10FilterType.TopNumber, 10)
 |---|---|---|
 | `DynamicFilterType` | `SpreadDynamicFilterType` | The type of dynamic filter. |
 
-```csharp
-new SpreadDynamicFilter(SpreadDynamicFilterType.ThisMonth)
-```
+<snippet id='libraries-spreadstream-features-autofilter-6'/>
+
 
 The following table lists the available `SpreadDynamicFilterType` values.
 
@@ -173,27 +138,7 @@ To add AutoFilter drop-down arrows to a header row without defining filter rules
 
 #### __Example 1: Set an AutoFilter Range__
 
-```csharp
-using (Telerik.Documents.SpreadsheetStreaming.IWorkbookExporter workbookExporter =
-    SpreadExporter.CreateWorkbookExporter(SpreadDocumentFormat.Xlsx, stream))
-{
-    using (IWorksheetExporter worksheetExporter =
-        workbookExporter.CreateWorksheetExporter("Sheet 1"))
-    {
-        using (IRowExporter headerRow = worksheetExporter.CreateRowExporter())
-        {
-            using (ICellExporter cell = headerRow.CreateCellExporter()) { cell.SetValue("Name"); }
-            using (ICellExporter cell = headerRow.CreateCellExporter()) { cell.SetValue("Department"); }
-            using (ICellExporter cell = headerRow.CreateCellExporter()) { cell.SetValue("Salary"); }
-        }
-
-        // Export data rows...
-
-        // Apply AutoFilter to the range A1:C11 after all rows are written.
-        worksheetExporter.SetAutoFilter(0, 0, 10, 2);
-    }
-}
-```
+<snippet id='libraries-spreadstream-features-autofilter-7'/>
 
 The AutoFilter drop-down arrows appear on the header row when you open the file in Excel, but all rows remain visible.
 
@@ -205,46 +150,13 @@ To control which rows are visible, create a `SpreadAutoFilter` with one or more 
 
 #### __Example 2: Set an AutoFilter with a Values Filter__
 
-```csharp
-List<SpreadFilterColumn> filterColumns = new List<SpreadFilterColumn>(1)
-{
-    new SpreadFilterColumn(1, new SpreadValuesFilter(new string[] { "Engineering", "Marketing" }))
-};
-
-SpreadAutoFilter autoFilter = new SpreadAutoFilter(0, 0, 10, 2, filterColumns);
-
-using (IWorksheetExporter worksheetExporter = workbookExporter.CreateWorksheetExporter("Sheet 1"))
-{
-    // Export rows...
-
-    worksheetExporter.SetAutoFilter(autoFilter);
-}
-```
+<snippet id='libraries-spreadstream-features-autofilter-8'/>
 
 When the document is opened in Excel, the Department column (offset 1 relative to column 0) shows only the "Engineering" and "Marketing" rows.
 
 #### __Example 3: Set an AutoFilter with a Custom Filter__
 
-```csharp
-SpreadCustomFilterCriteria criteria1 =
-    new SpreadCustomFilterCriteria(SpreadComparisonOperator.GreaterThanOrEqualsTo, "30000");
-SpreadCustomFilterCriteria criteria2 =
-    new SpreadCustomFilterCriteria(SpreadComparisonOperator.LessThan, "80000");
-
-List<SpreadFilterColumn> filterColumns = new List<SpreadFilterColumn>(1)
-{
-    new SpreadFilterColumn(2, new SpreadCustomFilter(criteria1, SpreadLogicalOperator.And, criteria2))
-};
-
-SpreadAutoFilter autoFilter = new SpreadAutoFilter(0, 0, 10, 2, filterColumns);
-
-using (IWorksheetExporter worksheetExporter = workbookExporter.CreateWorksheetExporter("Sheet 1"))
-{
-    // Export rows...
-
-    worksheetExporter.SetAutoFilter(autoFilter);
-}
-```
+<snippet id='libraries-spreadstream-features-autofilter-9'/>
 
 Only rows where the Salary column value is at least 30000 and less than 80000 are visible in Excel.
 
@@ -268,52 +180,7 @@ Use `BeginFiltering` and `EndFiltering` to let `RadSpreadStreamProcessing` evalu
 
 #### __Example 4: Export with Automatic Row Hiding (Values Filter)__
 
-```csharp
-List<SpreadFilterColumn> filterColumns = new List<SpreadFilterColumn>(1)
-{
-    // RelativeColumnIndex = 1 targets the Department column (FromColumnIndex 0 + offset 1).
-    new SpreadFilterColumn(1, new SpreadValuesFilter(new string[] { "Engineering" }))
-};
-
-// Pass FromRowIndex = 0 (the header row) and ToRowIndex = 0.
-// The range auto-extends to the last data row on EndFiltering.
-SpreadAutoFilter autoFilter = new SpreadAutoFilter(0, 0, 0, 1, filterColumns);
-
-using (IWorksheetExporter worksheetExporter = workbookExporter.CreateWorksheetExporter("Sheet 1"))
-{
-    // Step 1: Write the header row.
-    using (IRowExporter headerRow = worksheetExporter.CreateRowExporter())
-    {
-        using (ICellExporter cell = headerRow.CreateCellExporter()) { cell.SetValue("Name"); }
-        using (ICellExporter cell = headerRow.CreateCellExporter()) { cell.SetValue("Department"); }
-    }
-
-    // Step 2: Begin filtering immediately after the header row.
-    worksheetExporter.BeginFiltering(autoFilter);
-
-    // Step 3: Write data rows. Rows where Department (column 0) is not "Engineering"
-    // are automatically hidden in the output document.
-    string[][] data = new string[][]
-    {
-        new string[] { "Alice", "Engineering" },
-        new string[] { "Bob", "Marketing" },
-        new string[] { "Carol", "Engineering" },
-        new string[] { "Dave", "Sales" }
-    };
-
-    foreach (string[] record in data)
-    {
-        using (IRowExporter row = worksheetExporter.CreateRowExporter())
-        {
-            using (ICellExporter cell = row.CreateCellExporter()) { cell.SetValue(record[0]); }
-            using (ICellExporter cell = row.CreateCellExporter()) { cell.SetValue(record[1]); }
-        }
-    }
-
-    // Step 4: End filtering.
-    worksheetExporter.EndFiltering();
-}
-```
+<snippet id='libraries-spreadstream-features-autofilter-10'/>
 
 The "Bob" (Marketing) and "Dave" (Sales) rows are hidden in the exported file. The AutoFilter drop-down on the Department column reflects the active filter.
 
@@ -321,45 +188,7 @@ The "Bob" (Marketing) and "Dave" (Sales) rows are hidden in the exported file. T
 
 When multiple `SpreadFilterColumn` entries are present in the `SpreadAutoFilter`, a row must satisfy all column filters to remain visible.
 
-```csharp
-List<SpreadFilterColumn> filterColumns = new List<SpreadFilterColumn>(2)
-{
-    new SpreadFilterColumn(0, new SpreadValuesFilter(new string[] { "East" })),
-    new SpreadFilterColumn(1, new SpreadValuesFilter(new string[] { "Apple" }))
-};
-
-SpreadAutoFilter autoFilter = new SpreadAutoFilter(0, 0, 0, 1, filterColumns);
-
-using (IWorksheetExporter worksheetExporter = workbookExporter.CreateWorksheetExporter("Sheet 1"))
-{
-    using (IRowExporter headerRow = worksheetExporter.CreateRowExporter())
-    {
-        using (ICellExporter cell = headerRow.CreateCellExporter()) { cell.SetValue("Region"); }
-        using (ICellExporter cell = headerRow.CreateCellExporter()) { cell.SetValue("Product"); }
-    }
-
-    worksheetExporter.BeginFiltering(autoFilter);
-
-    string[][] rows = new string[][]
-    {
-        new string[] { "East", "Apple" },   // visible
-        new string[] { "East", "Banana" },  // hidden (Product does not match)
-        new string[] { "West", "Apple" },   // hidden (Region does not match)
-        new string[] { "West", "Cherry" }   // hidden (neither matches)
-    };
-
-    foreach (string[] record in rows)
-    {
-        using (IRowExporter row = worksheetExporter.CreateRowExporter())
-        {
-            using (ICellExporter cell = row.CreateCellExporter()) { cell.SetValue(record[0]); }
-            using (ICellExporter cell = row.CreateCellExporter()) { cell.SetValue(record[1]); }
-        }
-    }
-
-    worksheetExporter.EndFiltering();
-}
-```
+<snippet id='libraries-spreadstream-features-autofilter-11'/>
 
 Only the "East / Apple" row is visible. All other rows are hidden because they fail at least one column filter.
 
@@ -367,42 +196,7 @@ Only the "East / Apple" row is visible. All other rows are hidden because they f
 
 When a filtered cell contains a formula, pass the pre-computed result as the second argument to `SetFormula`. The cached value is used for filter evaluation. A formula cell without a cached value always keeps the row visible.
 
-```csharp
-List<SpreadFilterColumn> filterColumns = new List<SpreadFilterColumn>(1)
-{
-    new SpreadFilterColumn(0, new SpreadCustomFilter(
-        new SpreadCustomFilterCriteria(SpreadComparisonOperator.GreaterThan, "100")))
-};
-
-SpreadAutoFilter autoFilter = new SpreadAutoFilter(0, 0, 0, 0, filterColumns);
-
-using (IWorksheetExporter worksheetExporter = workbookExporter.CreateWorksheetExporter("Sheet 1"))
-{
-    using (IRowExporter headerRow = worksheetExporter.CreateRowExporter())
-    using (ICellExporter cell = headerRow.CreateCellExporter())
-    {
-        cell.SetValue("Total");
-    }
-
-    worksheetExporter.BeginFiltering(autoFilter);
-
-    // Cached value "50" is used for evaluation: 50 is not > 100, so this row is hidden.
-    using (IRowExporter row = worksheetExporter.CreateRowExporter())
-    using (ICellExporter cell = row.CreateCellExporter())
-    {
-        cell.SetFormula("1+1", "50");
-    }
-
-    // Cached value "150" is used for evaluation: 150 > 100, so this row is visible.
-    using (IRowExporter row = worksheetExporter.CreateRowExporter())
-    using (ICellExporter cell = row.CreateCellExporter())
-    {
-        cell.SetFormula("100+50", "150");
-    }
-
-    worksheetExporter.EndFiltering();
-}
-```
+<snippet id='libraries-spreadstream-features-autofilter-12'/>
 
 For more details on the `SetFormula` overload, see [Cells]({%slug radspreadstreamprocessing-model-cells%}#set-a-formula-with-a-cached-value).
 
@@ -414,41 +208,7 @@ After iterating all rows of an imported worksheet, read the `AutoFilter` propert
 
 #### __Example 7: Read AutoFilter on Import__
 
-```csharp
-using (Telerik.Documents.SpreadsheetStreaming.IWorkbookImporter workbookImporter =
-    SpreadImporter.CreateWorkbookImporter(SpreadDocumentFormat.Xlsx, stream))
-{
-    foreach (IWorksheetImporter worksheetImporter in workbookImporter.WorksheetImporters)
-    {
-        // Consume all rows first.
-        foreach (IRowImporter rowImporter in worksheetImporter.Rows)
-        {
-            foreach (ICellImporter cellImporter in rowImporter.Cells)
-            {
-                // Process cell data.
-            }
-        }
-
-        // Access AutoFilter only after all rows have been consumed.
-        SpreadAutoFilter autoFilter = worksheetImporter.AutoFilter;
-        if (autoFilter != null)
-        {
-            System.Console.WriteLine(
-                "AutoFilter: rows {0}–{1}, columns {2}–{3}",
-                autoFilter.FromRowIndex, autoFilter.ToRowIndex,
-                autoFilter.FromColumnIndex, autoFilter.ToColumnIndex);
-
-            foreach (SpreadFilterColumn col in autoFilter.FilterColumns)
-            {
-                System.Console.WriteLine(
-                    "  Column offset {0}: {1}",
-                    col.RelativeColumnIndex,
-                    col.Filter.GetType().Name);
-            }
-        }
-    }
-}
-```
+<snippet id='libraries-spreadstream-features-autofilter-13'/>
 
 ## See Also
 
