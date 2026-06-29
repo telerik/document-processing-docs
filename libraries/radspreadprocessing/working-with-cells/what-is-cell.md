@@ -42,17 +42,15 @@ Cells participate in worksheet operations that affect one cell, many cells, or a
 
 This behavior matters because many RadSpreadProcessing APIs work with selections and ranges rather than with a standalone cell object. If your next task is to read or update content, formatting, or other properties, start with [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}).
 
-## Next Articles for Common Tasks
+## Next Steps
 
-Use the following table to move from the concept of a cell to the task you want to complete next.
+Continue with the article that matches your next task:
 
-| If you want to... | Read this next |
-|---|---|
-| Access a single cell or cell range | [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}) |
-| Understand supported data types and formulas | [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) |
-| Read or update formatting and other properties | [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) |
-| Populate neighboring cells automatically | [Fill Data Automatically]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}) |
-| Merge or unmerge a cell region | [Merge and Unmerge Cells]({%slug radspreadprocessing-features-merge-unmerge-cells%}) |
+* [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})—Access a single cell or a range of cells in code
+* [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})—Understand supported data types and formula values
+* [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})—Read or update formatting and other cell properties
+* [Fill Data Automatically]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%})—Populate neighboring cells with repeated or sequential data
+* [Merge and Unmerge Cells]({%slug radspreadprocessing-features-merge-unmerge-cells%})—Combine adjacent cells into a single visual region
 
 ## See Also
 
