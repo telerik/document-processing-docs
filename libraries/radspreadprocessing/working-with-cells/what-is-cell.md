@@ -1,5 +1,5 @@
 ---
-title: Understanding Worksheet Cells
+title: What is a Cell?
 description: Learn how RadSpreadProcessing models worksheet cells, what data and formatting each cell stores, and which cell APIs to use next.
 page_title: RadSpreadProcessing Worksheet Cell Overview
 slug: radspreadprocessing-working-with-cells-what-is-cell
