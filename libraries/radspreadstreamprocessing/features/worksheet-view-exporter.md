@@ -32,7 +32,7 @@ You can create an instance of the `IWorksheetViewExporter` interface through the
 
 **Example 1: Create IWorksheetViewExporter Instance**
 
-<snippet id='codeblock-dkw'/>
+<snippet id='libraries-spreadstream-features-worksheet-view-exporter-1'/>
 
 >`IWorksheetViewExporter` inherits from [IDisposable](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Make sure the object is disposed when you are done with it. Otherwise, the content will not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -46,7 +46,7 @@ With the `IWorksheetViewExporter` interface you can set the first visible cell. 
 
 **Example 2: Export a Document with First Visible Cell C5**
 
-<snippet id='codeblock-dkx'/>
+<snippet id='libraries-spreadstream-features-worksheet-view-exporter-2'/>
 
 
 ### Add Selection to a Document
@@ -55,12 +55,12 @@ With the `IWorksheetViewExporter` interface you can set the first visible cell. 
 
 **Example 3: Export a Document with Applied Multiple Selection Ranges**
 
-<snippet id='codeblock-dky'/>
+<snippet id='libraries-spreadstream-features-worksheet-view-exporter-3'/>
 
 
 **Example 4: Export a Document with Selection Range and Specified Active Cell of the Selection**
 
-<snippet id='codeblock-dkz'/>
+<snippet id='libraries-spreadstream-features-worksheet-view-exporter-4'/>
 
 #### Figure 1: Selection with specified active cell
 ![Selection with a specified active cell in the exported spreadsheet](images/RadSpreadStreamProcessing_Features_WorksheetViewExporter_01.png)
@@ -72,7 +72,7 @@ You can apply a scale factor to the exported document.
 
 **Example 5: Set Scale Factor**
 
-<snippet id='codeblock-dla'/>
+<snippet id='libraries-spreadstream-features-worksheet-view-exporter-5'/>
 
 
 ### Hide Grid Lines and Row or Column Headers
@@ -81,7 +81,7 @@ You can apply a scale factor to the exported document.
 
 **Example 6: Hide Grid Lines and Row/Column Headers**
 
-<snippet id='codeblock-dlb'/>
+<snippet id='libraries-spreadstream-features-worksheet-view-exporter-6'/>
 
 
 ### Freeze Panes
@@ -90,7 +90,7 @@ You can freeze panes in the spreadsheet document through the `SetFreezePanes()` 
 
 **Example 7: Set Freeze Panes**
 
-<snippet id='codeblock-dlc'/>
+<snippet id='libraries-spreadstream-features-worksheet-view-exporter-7'/>
 
 #### Figure 2: Frozen panes
 ![Frozen panes in the exported spreadsheet document](images/RadSpreadStreamProcessing_Features_WorksheetViewExporter_02.png)
@@ -99,7 +99,7 @@ An overload of the `SetFreezePanes()` method enables you to change the first vis
 
 **Example 8: Set Freeze Panes and Change the First Visible Cell of the Scrollable Pane**
 
-<snippet id='codeblock-dld'/>
+<snippet id='libraries-spreadstream-features-worksheet-view-exporter-8'/>
 
 In **Figure 3**, you can see that the first visible cell of the scrollable pane is K11.
 

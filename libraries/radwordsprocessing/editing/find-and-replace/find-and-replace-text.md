@@ -37,7 +37,7 @@ Both methods return a collection of `FindResult` instances, which in turn expose
 
 **Example 1: Find Text**
 
-<snippet id='codeblock-bmbm'/>
+<snippet id='libraries-flow-editing-find-and-replace-find-and-replace-text-1'/>
 
 ## Replace Text
 
@@ -54,7 +54,7 @@ To find all instances of a string and replace it with another one, you can use t
 
 **Example 2: Replace Text**
 
-<snippet id='codeblock-bnbn'/>
+<snippet id='libraries-flow-editing-find-and-replace-find-and-replace-text-2'/>
 
 
 ## Replace Styling
@@ -73,7 +73,7 @@ To find all instances of a string and replace it with another one, you can use t
 
 **Example 3: Replace Character Properties**
 
-<snippet id='codeblock-bobo'/>
+<snippet id='libraries-flow-editing-find-and-replace-find-and-replace-text-3'/>
 
 ## See Also
 

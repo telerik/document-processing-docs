@@ -44,13 +44,13 @@ To use `PdfFormatProvider`, add references to the following packages:
 
 **Example 1: PdfFormatProvider Export Example**
 
-<snippet id='codeblock-cpc'/>
+<snippet id='libraries-spread-formats-and-conversion-pdf-pdfformatprovider-1'/>
 
 The result from the export method is a document that you can open in any application that supports PDF documents.
 
 **Example 2: Export to RadFixedDocument**
 
-<snippet id='codeblock-cpd'/>
+<snippet id='libraries-spread-formats-and-conversion-pdf-pdfformatprovider-2'/>
 
 >tip `RadFixedDocument` is the base class of the `RadPdfProcessing` library. For more information about the library and its features, see the [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%}).
 

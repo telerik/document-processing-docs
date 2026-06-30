@@ -58,7 +58,7 @@ Both methods return the actual `TextFragment` instance so you can modify it.
 
 #### **Example 1: Create TextFragments and Add Them to a Page**
 
-<snippet id='libraries-pdf-model-text-fragment-create'/>
+<snippet id='libraries-pdf-model-textfragment-text-fragment-create'/>
 
 >caption Figure 1: Inserted TextFragments
 
@@ -74,7 +74,7 @@ Modify a `TextFragment` element with the properties listed in the [Public API](#
 
 #### **Example 2: Modify TextFragment Properties**
 
-<snippet id='libraries-pdf-model-text-fragment-modify'/>
+<snippet id='libraries-pdf-model-textfragment-text-fragment-modify'/>
 
 >caption Figure 2: Modified TextFragments
 

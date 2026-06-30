@@ -61,7 +61,7 @@ Excluding the default constructor, the `TabStopCollection` class exposes an over
 
 **Example 1: Create a TabStopCollection**
 
-<snippet id='codeblock-bba'/>
+<snippet id='libraries-flow-concepts-tabstop-1'/>
 
 
 ### Insert Item in a TabStopCollection
@@ -69,7 +69,7 @@ Excluding the default constructor, the `TabStopCollection` class exposes an over
 **Example 2** demonstrates how to insert items in the `TabStopCollection` created in [Example 1](#example1). Keep in mind that this collection is immutable, so the `Insert()` method returns a **new instance** of the class.
 
 **Example 2: Insert item in a TabStopCollection**
-<snippet id='codeblock-cca'/>
+<snippet id='libraries-flow-concepts-tabstop-2'/>
 
 
 ### Remove Item from a TabStopCollection
@@ -77,7 +77,7 @@ Excluding the default constructor, the `TabStopCollection` class exposes an over
 The following snippet shows how to remove an item from the `TabStopCollection` created in [Example 1](#example1). Keep in mind that this collection is immutable, so the `Remove()` method returns a new instance of the class.
 
 **Example 3: Remove item from a TabStopCollection**
-<snippet id='codeblock-dda'/>
+<snippet id='libraries-flow-concepts-tabstop-3'/>
 
 
 ## Working with TabStop
@@ -93,7 +93,7 @@ The code from **Example 4** demonstrates how to create a tab stop.
 
 **Example 4: Create a TabStop**
 
-<snippet id='codeblock-eea'/>
+<snippet id='libraries-flow-concepts-tabstop-4'/>
 
 ### Add a TabStop
 
@@ -101,7 +101,7 @@ The code from **Example 4** demonstrates how to create a tab stop.
 
 **Example 5: Insert a TabStop**
 
-<snippet id='codeblock-ffa'/>
+<snippet id='libraries-flow-concepts-tabstop-5'/>
 
 ### Remove a TabStop
 
@@ -109,7 +109,7 @@ The following code-snippet shows how to remove the tab stop created in [Example 
 
 **Example 6: Remove a TabStop**
 
-<snippet id='codeblock-gga'/>
+<snippet id='libraries-flow-concepts-tabstop-6'/>
 
 ### Use a TabStop in the Content
 
@@ -117,7 +117,7 @@ Once you have applied the desired tab stops to a paragraph, insert tabs (\t) so 
 
 **Example 7: Add tabs to align to the tab stops**
 
-<snippet id='codeblock-hha'/>
+<snippet id='libraries-flow-concepts-tabstop-7'/>
 
 ## See Also
 

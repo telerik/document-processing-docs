@@ -43,7 +43,7 @@ To add a note, specify the cell index to which the note relates, the position wh
 
 **Example 1: Add Note**
 
-<snippet id='codeblock-cjv'/>
+<snippet id='libraries-spread-features-notes-1'/>
 
 The previous snippet adds a note in cell B2 with a position on cell F6.
 
@@ -51,7 +51,7 @@ The previous snippet adds a note in cell B2 with a position on cell F6.
 
 **Example 2: Remove Note**
 
-<snippet id='codeblock-cjw'/>
+<snippet id='libraries-spread-features-notes-2'/>
 
 
 ### Hide and Show Notes
@@ -65,7 +65,7 @@ You can use one of the following methods to show or hide single or all notes:
 
 **Example 3: Hide Note**
 
-<snippet id='codeblock-cjx'/>
+<snippet id='libraries-spread-features-notes-3'/>
 
 ### Events
 

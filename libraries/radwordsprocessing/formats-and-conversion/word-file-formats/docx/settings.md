@@ -34,5 +34,5 @@ The following code shows how to create and specify particular export settings fo
 
 **Example 1: Create DocxExportSettings**
 
-<snippet id='codeblock-cv'/>
+<snippet id='libraries-flow-formats-and-conversion-word-file-formats-docx-settings'/>
 

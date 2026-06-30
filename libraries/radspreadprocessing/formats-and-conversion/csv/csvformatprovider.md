@@ -22,7 +22,7 @@ To import and export CSV files, use the `CsvFormatProvider` class that appears i
 
 **Example 1: Import CSV File**
 
-<snippet id='codeblock-coi'/>
+<snippet id='libraries-spread-formats-and-conversion-csv-csvformatprovider-1'/>
 
 ## Export
 
@@ -30,7 +30,7 @@ To import and export CSV files, use the `CsvFormatProvider` class that appears i
 
 **Example 2: Export CSV File**
 
-<snippet id='codeblock-coj'/>
+<snippet id='libraries-spread-formats-and-conversion-csv-csvformatprovider-2'/>
 
 
 ## See Also

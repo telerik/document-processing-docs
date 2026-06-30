@@ -25,13 +25,13 @@ To import a plain text document, use the `Import()` method of `TxtFormatProvider
 
 **Example 1: Import Document from a File**
 
-<snippet id='codeblock-cg'/>
+<snippet id='libraries-flow-formats-and-conversion-plain-text-txt-txtformatprovider-1'/>
 
 You can also import a document from a string:
 
 **Example 2: Import Document from a String**
 
-<snippet id='codeblock-ch'/>
+<snippet id='libraries-flow-formats-and-conversion-plain-text-txt-txtformatprovider-2'/>
 
 The resulting `RadFlowDocument` can be manipulated like any code-generated document.
 
@@ -43,13 +43,13 @@ To export a document to plain text, use the `Export()` method of `TxtFormatProvi
 
 **Example 3: Export a Document to a File**
 
-<snippet id='codeblock-ci'/>
+<snippet id='libraries-flow-formats-and-conversion-plain-text-txt-txtformatprovider-3'/>
 
 You can also export the document to a string and preserve it in a database.
 
 **Example 4: Export a Document to a String**
 
-<snippet id='codeblock-cj'/>
+<snippet id='libraries-flow-formats-and-conversion-plain-text-txt-txtformatprovider-4'/>
 
 ## See Also
 

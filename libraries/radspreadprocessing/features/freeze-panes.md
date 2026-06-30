@@ -70,7 +70,7 @@ The result illustrated in **Figure 3** can be achieved with the code from **Exam
 
 **Example 1: Freezing Panes**
 
-<snippet id='codeblock-cia'/>
+<snippet id='libraries-spread-features-freeze-panes-1'/>
 
 ### Horizontal and Vertical Split
 
@@ -78,7 +78,7 @@ If you want to create a vertical or horizontal split, set either the row count o
 
 **Example 2: Vertical Split**
 
-<snippet id='codeblock-cib'/>
+<snippet id='libraries-spread-features-freeze-panes-2'/>
 
 The result from **Example 2** is shown in **Figure 4**.
 
@@ -107,7 +107,7 @@ The state from **Figure 3** can be achieved with the code from **Example 3**.
 
 **Example 3: Freeze Panes Through the Pane Class**
 
-<snippet id='codeblock-cic'/>
+<snippet id='libraries-spread-features-freeze-panes-3'/>
 
 > Regardless of the method used to freeze the panes of a worksheet, do not place the top left index of the frozen pane after or to the right of the index determined by the frozen row count and the frozen column count. Doing so may result in an invalid document and unexpected behavior.
 
@@ -118,13 +118,13 @@ To unfreeze the panes of the worksheet, use the same methods described previousl
 
 **Example 4: Unfreezing Panes**
 
-<snippet id='codeblock-cid'/>
+<snippet id='libraries-spread-features-freeze-panes-4'/>
 
 Another option is to set the `Pane` property of the `ViewState` to `null`.
 
 **Example 5: Unfreezing Panes Through the Pane Class**
 
-<snippet id='codeblock-cie'/>
+<snippet id='libraries-spread-features-freeze-panes-5'/>
 
 ## See Also
 

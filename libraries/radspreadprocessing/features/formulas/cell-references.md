@@ -28,7 +28,7 @@ To display the sum of cells A1 and B1 in cell C1, invoke the `SetValue()` method
 
 **Example 1: Set Reference Value**
 
-<snippet id='codeblock-cmn'/>
+<snippet id='libraries-spread-features-formulas-cell-references-1'/>
 
 
 
@@ -40,7 +40,7 @@ References may optionally specify the worksheet of the referenced cell or range.
 
 **Example 2: Set Reference Value from Another Sheet**
 
-<snippet id='codeblock-cmo'/>
+<snippet id='libraries-spread-features-formulas-cell-references-2'/>
 
 
 
@@ -53,7 +53,7 @@ References to whole rows or columns must always contain a colon separating the s
 
 **Example 3: Set Reference to Cell Range**
 
-<snippet id='codeblock-cmp'/>
+<snippet id='libraries-spread-features-formulas-cell-references-3'/>
 
 
 
@@ -93,11 +93,11 @@ SpreadProcessing supports references to whole columns and whole rows. You can us
 
 **Example 4: Use Reference to a Column**
 
-<snippet id='codeblock-cmq'/>
+<snippet id='libraries-spread-features-formulas-cell-references-4'/>
 
 **Example 5: Use Reference to Multiple Rows**
 
-<snippet id='codeblock-cmr'/>
+<snippet id='libraries-spread-features-formulas-cell-references-5'/>
 
 
 ## See Also

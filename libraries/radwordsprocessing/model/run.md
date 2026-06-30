@@ -22,7 +22,7 @@ The code in **Example 1** creates a `Run` element and adds it to a [Paragraph]({
 
 **Example 1: Create and add a run to a paragraph**
 
-<snippet id='codeblock-dn'/>
+<snippet id='libraries-flow-model-run-1'/>
 
 >tip The parent `Paragraph` must belong to the same document that is passed to the constructor of the `Run`.
 
@@ -30,19 +30,19 @@ You can add a run at a specific index in the `Inlines` collection of a paragraph
 
 **Example 2: Create and add a run at a specific index of a paragraph's Inlines collection**
 
-<snippet id='codeblock-do'/>
+<snippet id='libraries-flow-model-run-2'/>
 
 You can also use the `AddRun()` method of the `Inlines` collection of a paragraph. The method creates a new `Run` instance, adds it to the container, and returns it:
 
 **Example 3: Create and add a run to a paragraph**
 
-<snippet id='codeblock-dp'/>
+<snippet id='libraries-flow-model-run-3'/>
 
 You can also insert text in the document with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class:
 
 **Example 4: Insert a run using RadFlowDocumentEditor**
 
-<snippet id='codeblock-dq'/>
+<snippet id='libraries-flow-model-run-4'/>
 
 ## Modifying a Run
 

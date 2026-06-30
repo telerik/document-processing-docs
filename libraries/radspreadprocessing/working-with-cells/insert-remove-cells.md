@@ -27,7 +27,7 @@ The `CellSelection` class exposes an `Insert()` method that takes one argument w
 
 **Example 1: Insert Cells**
 
-<snippet id='codeblock-crf'/>
+<snippet id='libraries-spread-working-with-cells-insert-remove-cells-1'/>
 
 ## Remove Cells
 
@@ -39,6 +39,6 @@ The `CellSelection` class exposes a `Remove()` method that takes one argument wh
 
 **Example 2: Remove Cells**
 
-<snippet id='codeblock-crg'/>
+<snippet id='libraries-spread-working-with-cells-insert-remove-cells-2'/>
 
 

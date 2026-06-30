@@ -26,7 +26,7 @@ RadPdfProcessing supports adding barcodes (1D and 2D) into a PDF document. The s
 
 The following example shows how to create a barcode as a `FormSource` object and insert it in a page by using the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}):
 
-<snippet id='libraries-pdf-model-formsource-adding-barcode'/>
+<snippet id='libraries-pdf-model-formsource-barcode'/>
 
 ![RadPdfProcessing Insert Barcode FormSource result](images/pdf-processing-insert-barcode.png)
 

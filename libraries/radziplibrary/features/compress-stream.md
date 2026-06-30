@@ -48,13 +48,13 @@ You can create a compressed stream by initializing a new instance of the `Compre
 
 **Example 1: Write to a compressed stream**
 
-<snippet id='codeblock-dsh'/>
+<snippet id='libraries-zip-features-compress-stream-1'/>
 
 If you want to compress a specific stream (`inputStream`), you need to copy it to the compressed stream that you created.
 
 **Example 2: Write a stream to a compressed stream**
 
-<snippet id='codeblock-dsi'/>
+<snippet id='libraries-zip-features-compress-stream-2'/>
 
 ## Decompressing a Stream
 
@@ -62,7 +62,7 @@ Decompressing a stream follows the same pattern as compressing it. Create a new 
 
 **Example 3: Decompress a stream**
 
-<snippet id='codeblock-dsj'/>
+<snippet id='libraries-zip-features-compress-stream-3'/>
 
 ## CompressedStream Properties
 

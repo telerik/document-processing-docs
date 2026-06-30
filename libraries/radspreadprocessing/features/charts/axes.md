@@ -25,7 +25,7 @@ Refer to the scenario from **Figure 1**. The chart shown there has two axes: a d
 
 **Example 1: Axes Properties**
 
-<snippet id='codeblock-clh'/>
+<snippet id='libraries-spread-features-charts-axes-1'/>
 
 ## Changing the Axis of a Chart
 
@@ -33,7 +33,7 @@ RadSpreadProcessing allows you to replace the axis of a chart with a new object.
 
 **Example 2: Replace Axis**
 
-<snippet id='codeblock-cli'/>
+<snippet id='libraries-spread-features-charts-axes-2'/>
 
 
 ## Changing the Appearance of the Axes
@@ -42,7 +42,7 @@ You can customize the way the axes in the chart look. The API of SpreadProcessin
 
 **Example 3: Customize the Major Gridlines and Outline of an Axis**
 
-<snippet id='codeblock-clj'/>
+<snippet id='libraries-spread-features-charts-axes-3'/>
 
 **Figure 2: Custom Appearance**
 

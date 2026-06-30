@@ -22,7 +22,7 @@ The `Clipping` element exposes a single property:
 
 #### __Example 1: Create Clipping__
 
-<snippet id='pdf-clipping-geometry'/>
+<snippet id='libraries-pdf-concepts-clipping-geometry'/>
 
 ## Using Clipping
 
@@ -32,7 +32,7 @@ All inheritors of the `ContentElementBase` class expose a `Clipping` property. S
 
 #### __Example 2: Use Clipping__
 
-<snippet id='pdf-image-clipping'/>
+<snippet id='libraries-pdf-concepts-clipping-image-clipping'/>
 
 
 

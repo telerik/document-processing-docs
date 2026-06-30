@@ -27,7 +27,7 @@ The `ComboBoxField` class corresponds to the `FormFieldType.ComboBox` enum value
 
 **Example 1: Create a ComboBoxField and add it to a page**
 
-<snippet id='pdf-combobox-field'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-comboboxfield'/>
 
 ## See Also
 

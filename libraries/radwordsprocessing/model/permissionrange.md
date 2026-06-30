@@ -39,7 +39,7 @@ Creating a `PermissionRange` requires passing an instance of the `PermissionRang
 
 **Example 1: Add PermissionRange to paragraph**
 
-<snippet id='codeblock-dd'/>
+<snippet id='libraries-flow-model-permissionrange-1'/>
 
 The paragraph must belong to the same document that is passed to the constructor of the `PermissionRange` object. Otherwise, an exception is thrown.
 
@@ -50,7 +50,7 @@ You can also insert a `PermissionRange` in the document through [RadFlowDocument
 
 **Example 2: Insert PermissionRange for TableCell**
 
-<snippet id='codeblock-de'/>
+<snippet id='libraries-flow-model-permissionrange-2'/>
 
 
 ## Operating with Permission Ranges
@@ -71,7 +71,7 @@ Including permission ranges in a document is not enough to protect them from edi
 
 **Example 3: Protect and unprotect document through RadFlowDocumentEditor**
 
-<snippet id='codeblock-df'/>
+<snippet id='libraries-flow-model-permissionrange-3'/>
 
 
 >The last call to the `Unprotect()` method in **Example 3** enforces protection of type `NoProtection` to the document. Protecting a document notifies the user that changes are not recommended, but stopping the protection is still possible. The `Unprotect(string password)` overload is provided for your convenience and returns a *Boolean* result of the action.
@@ -82,7 +82,7 @@ Including permission ranges in a document is not enough to protect them from edi
 
 **Example 4: Enforce protection through RadFlowDocument**
 
-<snippet id='codeblock-dg'/>
+<snippet id='libraries-flow-model-permissionrange-4'/>
 
 The settings provide several other modification options, including changing the algorithm used to protect the document with one of the predefined values in the `ProtectionAlgorithmNames` enumeration.
 

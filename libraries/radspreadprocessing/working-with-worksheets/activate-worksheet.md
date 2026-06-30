@@ -20,6 +20,6 @@ The `Workbook` class exposes an `ActiveWorksheet` property that gets and sets th
 
 **Example 1: Change Active Sheet**
 
-<snippet id='codeblock-csd'/>
+<snippet id='libraries-spread-working-with-worksheets-activate-worksheet'/>
 
 

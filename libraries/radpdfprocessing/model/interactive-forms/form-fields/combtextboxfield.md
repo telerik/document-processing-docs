@@ -24,7 +24,7 @@ The `CombTextBoxField` class corresponds to the `FormFieldType.CombTextBox` enum
 
 **Example 1: Create a CombTextBoxField and add it to a page**
 
-<snippet id='pdf-combtetbox-field'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-combtextboxfield'/>
 
 ## See Also
 

@@ -37,7 +37,7 @@ The code snippet from **Example 1** shows how to create a list with the Numbered
 
 #### **Example 1: Create numbered parentheses list template type**
 
-<snippet id='pdf-list-numbered-parentheses'/>
+<snippet id='libraries-pdf-editing-list-numbered-parentheses'/>
 
 The following image shows the available list template types and their appearance:
 
@@ -68,7 +68,7 @@ When you need to create a custom `List`, define the presentation of each list le
 
 #### **Example 2: Create custom list levels**
 
-<snippet id='pdf-list-custom-levels'/>
+<snippet id='libraries-pdf-editing-list-custom-levels'/>
 
 The image in **Figure 3** shows how the list created in **Example 2** looks when used.
 
@@ -85,7 +85,7 @@ The following code snippet shows how to create the bullets of a numbered hierarc
 
 #### **Example 3: Create custom text numbering bullet**
 
-<snippet id='pdf-list-custom-numbering-bullet'/>
+<snippet id='libraries-pdf-editing-list-custom-numbering-bullet'/>
 
 When using the list created in **Example 3**, its bullets look as shown in **Figure 4**.
 
@@ -101,7 +101,7 @@ To use lists with `RadFixedDocumentEditor`, first add them to the editor `ListCo
 
 #### **Example 4: Using lists with RadFixedDocumentEditor**
 
-<snippet id='pdf-list-using-raddocumentfixededitor'/>
+<snippet id='libraries-pdf-editing-list-using-raddocumentfixededitor'/>
 
 The resulting document looks like the image in **Figure 5**.
 
@@ -118,7 +118,7 @@ The following code snippet shows how to create a `List` with `BulletDefault` tem
 
 #### **Example 5: Using lists with Block class**
 
-<snippet id='pdf-list-using-with-blocks'/>
+<snippet id='libraries-pdf-editing-list-using-with-blocks'/>
 
 >The list style is applied for the whole Block element. To generate a list consisting of several paragraphs in different list items, use the same count of Block instances as the number of the different list items.
 

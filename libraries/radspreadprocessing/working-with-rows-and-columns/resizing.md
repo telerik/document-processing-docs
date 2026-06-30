@@ -38,7 +38,7 @@ The `SetHeight()` method changes the height of rows. It takes a single argument 
 
 **Example 1: Change Row Height**
 
-<snippet id='codeblock-crq'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-resizing-1'/>
 
 
 
@@ -49,7 +49,7 @@ The autofit feature offers a handy approach for resizing multiple rows so that e
 
 **Example 2: Fit Height of Rows**
 
-<snippet id='codeblock-crr'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-resizing-2'/>
 
 > The expected behavior when calling the `AutoFitHeight` method on a row that contains merged and wrapped cells is to set the default [RowHeight](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.model.rowheight) value instead of calculating the row height according to its content. To measure the cell content, you can check the methods exposed by the [LayoutHelper class](#layouthelper-class). 
 
@@ -77,7 +77,7 @@ The `SetWidth()` method changes the width of columns. It takes a single argument
 
 **Example 3: Change Columns Width**
 
-<snippet id='codeblock-crs'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-resizing-3'/>
 
 ## Auto Fit Columns Width
 
@@ -86,7 +86,7 @@ The autofit feature offers a handy approach for resizing multiple columns so tha
 
 **Example 4: Fit Width of Columns**
 
-<snippet id='codeblock-crt'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-resizing-4'/>
 
 
 Another way to auto fit column widths is to use the `ExpandToFitNumberValuesWidth()` method. It affects cells that contain only number values and have a `ColumnWidth` with `IsCustom` property set to `true`. **Example 5** demonstrates the alternative way to fit the column width.
@@ -94,7 +94,7 @@ Another way to auto fit column widths is to use the `ExpandToFitNumberValuesWidt
 
 **Example 5: Fit with ExpandToFitNumberValuesWidth()**
 
-<snippet id='codeblock-cru'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-resizing-5'/>
 
 > The unit type used to set the width of the columns and the height of the rows in RadSpreadProcessing is [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs). You can convert it to points or other units using the [Unit](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html) class.
 
@@ -111,13 +111,13 @@ Another way to auto fit column widths is to use the `ExpandToFitNumberValuesWidt
 
 **Example 6: Convert from Pixel Column Width to MS Excel Column Width**
 
-<snippet id='codeblock-crv'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-resizing-6'/>
 
 **Example 7** shows how to convert and set from MS Excel to pixel column width.    
 
 **Example 7: Convert from MS Excel Column Width to Pixel Column Width**
 
-<snippet id='codeblock-crw'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-resizing-7'/>
 
 The row height in MS Excel is measured in points so to set them you can convert this unit and set the exact number you are passing to the `SetHeight()` method for the height using the `UnitHelper` class.
 
@@ -135,13 +135,13 @@ The [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/tel
 
 **Example 8: Get the Size of the Cell Content**
 
-<snippet id='codeblock-crx'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-resizing-8'/>
 
 **Example 9** shows how to get the cell layout box.
 
 **Example 9: Get the Cell Layout Box**
 
-<snippet id='codeblock-cry'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-resizing-9'/>
 
 ## See Also
 

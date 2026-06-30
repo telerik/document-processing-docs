@@ -41,7 +41,7 @@ When you create a document with **RadSpreadStreamProcessing**, the order in whic
 
 **Example 1: Create a Document**
 
-<snippet id='codeblock-dkn'/>
+<snippet id='libraries-spreadstream-getting-started-1'/>
 
 **Figure 1** shows the result of executing the code from **Example 1**.
 
@@ -68,7 +68,7 @@ When you read a document with **RadSpreadStreamProcessing**, the order of parsin
 
 **Example 2: Read Data from a Document**
 
-<snippet id='codeblock-dko'/>
+<snippet id='libraries-spreadstream-getting-started-2'/>
 
 For more complete examples, go to the [Developer Focused Examples]({%slug radspreadstreamprocessing-sdk-examples%}) section of the library.
 

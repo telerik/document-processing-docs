@@ -32,6 +32,6 @@ position: 2
 
 **Example 1: Use TxtSettings**
 
-<snippet id='codeblock-cpe'/>
+<snippet id='libraries-spread-formats-and-conversion-txt-settings'/>
 
 

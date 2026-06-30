@@ -18,7 +18,7 @@ The code from **Example 1** shows how you can create a new `RadFlowDocument`.
 
 **Example 1: Create RadFlowDocument**
 
-<snippet id='codeblock-dh'/>
+<snippet id='libraries-flow-model-radflowdocument-1'/>
 
 `RadFlowDocument` exposes the following properties to customize the way content is presented:
 
@@ -45,7 +45,7 @@ You can create a `RadFlowDocument` from scratch and add Sections to it as follow
 
 **Example 2: Add a Section to a RadFlowDocument**
 
-<snippet id='codeblock-di'/>
+<snippet id='libraries-flow-model-radflowdocument-2'/>
 
 The `Sections` property of the document is of type `SectionCollection` and allows you to add sections to the document.
 
@@ -53,7 +53,7 @@ Alternatively, you can create a section by passing to its constructor the docume
 
 **Example 3: Create a section**
 
-<snippet id='codeblock-dj'/>
+<snippet id='libraries-flow-model-radflowdocument-3'/>
 
 ### Merge with Another Document
 
@@ -61,7 +61,7 @@ You can merge a `RadFlowDocument` within another document by using the `Merge()`
 
 **Example 4: Merge documents**
 
-<snippet id='codeblock-dk'/>
+<snippet id='libraries-flow-model-radflowdocument-4'/>
 
 You can also specify the `MergeOptions` that control the merge operation:
 
@@ -72,7 +72,7 @@ You can also specify the `MergeOptions` that control the merge operation:
 
 **Example 5: Merge documents using MergeOptions**
 
-<snippet id='codeblock-dl'/>
+<snippet id='libraries-flow-model-radflowdocument-5'/>
 
 ### Update Fields
 
@@ -82,7 +82,7 @@ The snippet from **Example 6** shows how to update all fields in a document simu
 
 **Example 6: Update all fields in a document**
 
-<snippet id='codeblock-dm'/>
+<snippet id='libraries-flow-model-radflowdocument-6'/>
 
 ## See Also
 

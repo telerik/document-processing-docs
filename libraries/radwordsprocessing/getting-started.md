@@ -41,7 +41,7 @@ The following example creates a new document instance and inserts sample content
 
 ### Example 1: Create a RadFlowDocument Programmatically
 
-<snippet id='codeblock-b'/>
+<snippet id='libraries-flow-getting-started-1'/>
 
 After you run the code in Example 1, you should have an in-memory `RadFlowDocument` that contains the text you inserted. At this stage, the document exists only in memory, so the next step is to export it to a file format.
 
@@ -53,7 +53,7 @@ The next example creates a provider instance and exports the document:
 
 ### Example 2: Export a RadFlowDocument to DOCX
 
-<snippet id='codeblock-c'/>
+<snippet id='libraries-flow-getting-started-2'/>
 
 When you integrate this example into your project, verify these points:
 

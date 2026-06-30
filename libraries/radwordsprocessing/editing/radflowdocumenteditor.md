@@ -23,7 +23,7 @@ Although `RadFlowDocument` can be created and modified by using the style proper
 
 **Example 1: Create a RadFlowDocumentEditor**
 
-<snippet id='codeblock-baba'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-1'/>
 
 The editor maintains an internal position inside the document. This position points either inside a paragraph (to an inline) or directly after the end of a table element. The following methods are available for changing the position of the editor within a document:
 
@@ -37,13 +37,13 @@ The code from **Example 2** demonstrates how to position the editor after the se
 
 **Example 2: Change the Position of RadFlowDocumentEditor**
 
-<snippet id='codeblock-bbbb'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-2'/>
 
 You can create a `RadFlowDocumentEditor` for an empty document (one with no sections). In this case, a section and a paragraph are automatically created when you call an insert method. **Example 3** creates a document with one section, containing one paragraph with the text "Hello word!".
 
 **Example 3: Insert Text in a Document**
 
-<snippet id='codeblock-bcbc'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-3'/>
 
 ## Inserting Document Elements
 
@@ -64,7 +64,7 @@ The code in **Example 4** inserts a run containing a new line.
 
 **Example 4: Insert a Run with a New Line**
 
-<snippet id='codeblock-bdbd'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-4'/>
 
 The result looks like **Figure 1** shows.
 
@@ -80,7 +80,7 @@ You can start a new [Paragraph]({%slug radwordsprocessing-model-paragraph%}) wit
 
 **Example 5: Insert a Paragraph**
 
-<snippet id='codeblock-bebe'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-5'/>
 
 **Figure 2** shows the result from **Example 5**.
 
@@ -94,7 +94,7 @@ If you call the `InsertParagraph()` method while the editor is positioned in the
 You can insert [Section]({%slug radwordsprocessing-model-section%}) elements with the `InsertSection()` method. A paragraph with the new section's properties is added and the new `Section` element is returned.
 
 **Example 6: Insert a Section**
-<snippet id='codeblock-bfbf'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-6'/>
 
 >If you call the `InsertSection()` method while the editor is positioned in a `TableCell`, the `Table` is split at the current row. This means that if the table contains three rows, and the editor is positioned in a cell which is on the second row, the table is split into two tables—one with one row, which is added to the previous section, and one with two rows (containing the `TableCell` where the editor position was). The latter is added to the newly inserted `Section`.
 
@@ -110,7 +110,7 @@ It automatically applies the "Hyperlink" built-in style to the inserted hyperlin
 
 **Example 7: Insert a Hyperlink**
 
-<snippet id='codeblock-bgbg'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-7'/>
 
 **Figure 3: Hyperlink**
 ![RadFlowDocumentEditor hyperlink result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_03.png)
@@ -127,7 +127,7 @@ public Field InsertField(string code, string result)
 
 **Example 8: Add Page Numbering in a Header**
 
-<snippet id='codeblock-bhbh'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-8'/>
 
 **Figure 4: The Page Numbering Inserted in Example 8**
 ![RadFlowDocumentEditor page numbering result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_04.png)
@@ -150,7 +150,7 @@ In this case the result is automatically updated when a document is opened in MS
 
 **Example 9: Insert an Image from a Stream**
 
-<snippet id='codeblock-bibi'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-9'/>
 
 **Figure 5: The Image Inserted in Example 9**
 ![RadFlowDocumentEditor insert image result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_05.png)
@@ -173,7 +173,7 @@ The following example inserts a table with the "TableGrid" built-in style:
 
 **Example 10: Insert a Table with a Style**
 
-<snippet id='codeblock-bjbj'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-10'/>
 
 
 **Figure 6: The Table in the Document**
@@ -196,7 +196,7 @@ Formatting options are most useful when inserting multiple elements that must ha
 
 **Example 11: Insert Content with Specified Styles**
 
-<snippet id='codeblock-bkbk'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-11'/>
 
 
 **Figure 7: The Content Inserted in Example 11**
@@ -206,7 +206,7 @@ Formatting options are most useful when inserting multiple elements that must ha
 
 **Example 12: Delete Content Between Existing Elements**
 
-<snippet id='codeblock-blbl'/>
+<snippet id='libraries-flow-editing-radflowdocumenteditor-12'/>
 
 The method deletes everything between the "start" and "end" elements. You can choose if the "start" and "end" elements are deleted with the last parameter.
 

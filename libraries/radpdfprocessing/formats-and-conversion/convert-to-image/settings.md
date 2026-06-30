@@ -27,11 +27,11 @@ Starting with **Q3 2025**, `SkiaImageExportSettings` exposes the `DocumentUnhand
 
 The following example demonstrates how to create a `SkiaImageExportSettings` object with custom settings and handle unexpected errors while exporting a PDF page (built from scratch) that is not associated with a document:
 
-<snippet id='libraries-pdf-skiaimageformatprovider-exportsettings'/>
+<snippet id='libraries-pdf-formats-and-conversion-convert-to-image-settings-skiaimageformatprovider-exportsettings'/>
 
 The next example shows how to import an existing PDF document, iterate all of its pages, and export each page to an image:
 
-<snippet id='radpdfprocessing-formats-and-conversion-imageformatprovider'/>
+<snippet id='libraries-pdf-formats-and-conversion-convert-to-image-settings-radpdfprocessing-formats-and-conversion-imageformatprovider'/>
 
 ## See Also
 

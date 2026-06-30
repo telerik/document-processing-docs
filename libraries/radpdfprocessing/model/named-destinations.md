@@ -33,7 +33,7 @@ You can create `NamedDestination` objects through the `Add()` method of the `Nam
 
 #### **Example 1: Create NamedDestination with Destination of type Link**
 
-<snippet id='pdf-create-named-destination'/>
+<snippet id='libraries-pdf-model-named-destinations-create-named-destination'/>
 
 ## Remove
 
@@ -41,7 +41,7 @@ You can remove a named destination as you do with any item in a collection.
 
 #### **Example 2: Remove NamedDestination**
 
-<snippet id='pdf-remove-named-destination'/>
+<snippet id='libraries-pdf-model-named-destinations-remove-named-destination'/>
 
 ## Rename
 
@@ -49,7 +49,7 @@ In addition to the `Name` property of the `NamedDestination` class, which has a 
 
 #### **Example 3: Rename NamedDestination**
 
-<snippet id='pdf-rename-named-destination'/>
+<snippet id='libraries-pdf-model-named-destinations-rename-named-destination'/>
 
 ## Check If a Name Exists
 
@@ -57,7 +57,7 @@ The `NamedDestinations` collection provides the `ContainsName()` method. Use it 
 
 #### **Example 4: Check if a NamedDestination already exists**
 
-<snippet id='pdf-exist-named-destination'/>
+<snippet id='libraries-pdf-model-named-destinations-exist-named-destination'/>
 
 ## See Also
 

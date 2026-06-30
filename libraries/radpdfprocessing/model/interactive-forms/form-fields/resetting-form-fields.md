@@ -22,7 +22,7 @@ The `ResetFormType` property defines the type of the reset form behavior. The av
 
 The following example shows how to create a document from scratch, add a form field (for example, `CheckBoxField`), and a push button that triggers the reset action for the checkbox when you click the button.
 
-<snippet id='libraries-pdf-model-interactiveforms-formfields-resettingformfields-create-pushbuttonwidget-with-resetformaction'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-resetting-interactiveforms-formfields-resettingformfields-create-pushbuttonwidget-with-resetformaction'/>
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
@@ -30,7 +30,7 @@ The following example shows how to create a document from scratch, add a form fi
 
 If the document already contains form fields and a `PushButtonWidget`, you can access the existing button and add the `ResetFormAction`.
 
-<snippet id='libraries-pdf-model-interactiveforms-formfields-resettingformfields-update-existing-pushbuttonwidget-field'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-resetting-interactiveforms-formfields-resettingformfields-update-existing-pushbuttonwidget-field'/>
 
 ## See Also
 

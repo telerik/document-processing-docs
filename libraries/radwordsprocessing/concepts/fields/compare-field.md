@@ -43,7 +43,7 @@ You can insert a Compare Field through the [RadFlowDocumentEditor]({%slug radwor
 
 **Example 1: Insert a CompareField**
 
-<snippet id='codeblock-mm'/>
+<snippet id='libraries-flow-concepts-fields-compare-field'/>
 
 
 ## See Also

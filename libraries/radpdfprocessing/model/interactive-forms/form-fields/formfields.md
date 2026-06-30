@@ -39,7 +39,7 @@ You can recognize each field type from the `FormField` base class by getting the
 
 **Example 1: Obtain fields from a document**
 
-<snippet id='pdf-obtain-fields-from-document'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-formfields-obtain-fields-from-document'/>
 
 The following list shows all the inheritors of the `FormField` class:
 
@@ -58,7 +58,7 @@ Starting with R2 2020, the `Rename` method allows you to rename form fields. Pas
 
 **Example 2: Rename form fields**
 
-<snippet id='pdf-rename-form-field'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-formfields-rename-form-field'/>
 
 ## Merging Documents with Form Fields
 
@@ -66,7 +66,7 @@ When merging documents that contain form fields, you must ensure that each field
 
 **Example 3: Merge files with form fields**
 
-<snippet id='pdf-fields-merge'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-formfields-fields-merge'/>
 
 ## See Also
 

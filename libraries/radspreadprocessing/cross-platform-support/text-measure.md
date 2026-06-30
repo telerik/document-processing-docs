@@ -48,7 +48,7 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
 
 **Example 1: Set the SpreadFixedTextMeasurer as a text measurer**
 
-<snippet id='codeblock-cgf'/>
+<snippet id='libraries-spread-cross-platform-support-text-measure-1'/>
 
 ## SkiaTextMeasurer
 
@@ -77,7 +77,7 @@ If you prefer to reference assemblies directly, you need:
 
 **Example 2: Set the SkiaTextMeasurer as a text measurer**
 
-<snippet id='libraries-spread-crossplatform-textmeasuring-setskiatextmeasurer'/>
+<snippet id='libraries-spread-cross-platform-support-text-measure-crossplatform-textmeasuring-setskiatextmeasurer'/>
 
 ## Custom Text Measurer
 
@@ -85,11 +85,11 @@ You can assign any `SpreadTextMeasurerBase` implementation to the `SpreadExtensi
 
 **Example 3: Create a custom implementation inheriting the SpreadTextMeasurerBase abstract class**
 
-<snippet id='codeblock-cgg'/>
+<snippet id='libraries-spread-cross-platform-support-text-measure-3'/>
 
 **Example 4: Set the custom implementation as a text measurer**
 
-<snippet id='codeblock-cgh'/>
+<snippet id='libraries-spread-cross-platform-support-text-measure-4'/>
 
 ## See Also
 

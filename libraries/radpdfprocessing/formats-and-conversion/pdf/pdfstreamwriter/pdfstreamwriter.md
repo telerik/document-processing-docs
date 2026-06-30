@@ -30,7 +30,7 @@ To create a `PdfStreamWriter` instance, pass the stream of the file you want to 
 
 #### **Example 1: Instantiate PdfStreamWriter**
 
-<snippet id='pdf-stream-writer-instance'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfstreamwriter-stream-writer-instance'/>
 
 `PdfStreamWriter` also exposes an additional overload that allows you to keep the stream open after disposing the writer instance. Pass **true** as the value for the second constructor parameter (`leaveStreamOpen`).
 
@@ -48,7 +48,7 @@ The constructor of `PdfStreamWriter` accepts any class inheriting from `Stream`.
 
 #### **Example 2: Instantiate PdfStreamWriter with MemoryStream**
 
-<snippet id='pdf-stream-writer-instance-memory'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfstreamwriter-stream-writer-instance-memory'/>
 
 ## PdfStreamWriter Members
 
@@ -58,13 +58,13 @@ The members of the class allow you to set several properties of the document and
 	
 	#### **Example 3: Insert a new page into a document**
 	
-	<snippet id='pdf-stream-writer-insert-new-page'/>
+	<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfstreamwriter-stream-writer-insert-new-page'/>
 
 * `WritePage()`: Enables you to pass an already constructed page object. With the different overloads, you can pass an instance of [`RadFixedPage`]({%slug radpdfprocessing-model-radfixedpage%}) or [`PdfPageStreamWriter`]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter%}).
 	
 	#### **Example 4: Insert an already generated page into a document**
 	
-	<snippet id='pdf-insert-generated-page-in-doc'/>
+	<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfstreamwriter-insert-generated-page-in-doc'/>
 
 ### Settings of PdfStreamWriter
 
@@ -80,7 +80,7 @@ Through the `Settings` property of `PdfStreamWriter`, you can control how the do
 
 When merging document pages with `PdfStreamWriter`, the form fields may be duplicated. Starting with **Q2 2025**, the `PdfStreamWriterSettings` class offers the `MergedFieldNameResolving` event. This event occurs when resolving conflicts between field names while merging instances with duplicated names:
 
-<snippet id='libraries-pdf-formats-and-conversion-pdfstreamwritersettings'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwritersettings'/>
 
 > The XAML SDK repository on GitHub contains examples showing the capabilities of `PdfStreamWriter`:
 > 

@@ -49,7 +49,7 @@ The supported formats follow different output patterns, so you must choose the e
 
 ### Example 1: Specify the Export Format
 
-<snippet id='codeblock-dkm'/>
+<snippet id='libraries-spreadstream-export'/>
 
 Creating `IWorkbookExporter` starts writing the file by using the `Stream` instance that you pass to the `CreateWorkbookExporter()` method. Writing finishes when the [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}) instance is disposed.
 

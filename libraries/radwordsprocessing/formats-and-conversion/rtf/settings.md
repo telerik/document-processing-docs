@@ -26,5 +26,5 @@ The following code demonstrates how to create and specify particular export sett
 
 **Example 1: Create RtfExportSettings**
 
-<snippet id='codeblock-co'/>
+<snippet id='libraries-flow-formats-and-conversion-rtf-settings'/>
 

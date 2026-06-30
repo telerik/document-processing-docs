@@ -43,13 +43,13 @@ There are two available options when grouping. The first option is to assign the
 
 **Example 1: Grouping Columns Using Outline Level**
 
-<snippet id='codeblock-cif'/>
+<snippet id='libraries-spread-features-grouping-1'/>
 
 The other option is to use the `Group` method exposed by the row/column selection classes.
 
 **Example 2: Grouping Columns Using the Group Method**
 
-<snippet id='codeblock-cih'/>
+<snippet id='libraries-spread-features-grouping-2'/>
 
 **Figure 2** shows the result of both approaches.
 
@@ -68,13 +68,13 @@ The following code snippets show the two approaches to make these changes in a f
 
 **Example 3: Ungrouping Columns Using the Ungroup Method**
 
-<snippet id='codeblock-cij'/>
+<snippet id='libraries-spread-features-grouping-3'/>
 
 You can achieve the same result with the code in **Example 4**.
 
 **Example 4: Ungrouping Columns Using Outline Level**
 
-<snippet id='codeblock-cil'/>
+<snippet id='libraries-spread-features-grouping-4'/>
 
 ## Getting the Outline Level
 
@@ -83,7 +83,7 @@ You can get the outline level of a row/column or a group of rows/columns using t
 
 **Example 5: Getting the OutlineLevel**
 
-<snippet id='codeblock-cin'/>
+<snippet id='libraries-spread-features-grouping-5'/>
 
 
 ## Setting the Position of the Summary Row or Column
@@ -105,7 +105,7 @@ Both properties have a default value of `true`. The following snippet shows how 
 
 **Example 6: Setting the Position of the Summary Column to Left**
 
-<snippet id='codeblock-cip'/>
+<snippet id='libraries-spread-features-grouping-6'/>
 
 **Figure 5: Left Summary Column**
 ![Left summary column example](images/RadSpreadProcessing_Features_Grouping_05.png)

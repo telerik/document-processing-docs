@@ -19,7 +19,7 @@ The `FlattenFormFields` method does not take any parameters and flattens all fie
 
 **Example 1: Flatten All Fields**
 
-<snippet id='pdf-flatten-all-fields'/>
+<snippet id='libraries-pdf-features-flatten-form-fields-flatten-all-fields'/>
 
 ## Using the FlattenFormField Method
 
@@ -27,7 +27,7 @@ The `FlattenFormField` method takes the field that you want to flatten as a para
 
 **Example 2: Flatten a Single Field**
 
-<snippet id='pdf-flatten-single-field'/>
+<snippet id='libraries-pdf-features-flatten-form-fields-flatten-single-field'/>
 
 ## See Also
 

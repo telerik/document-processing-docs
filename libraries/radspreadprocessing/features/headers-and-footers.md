@@ -1,4 +1,4 @@
-﻿---
+---
 title: Headers and Footers
 description: Learn how to add rich text content in page margins as headers and footers when exporting spreadsheet worksheets in RadSpreadProcessing.
 page_title: Headers and Footers
@@ -32,7 +32,7 @@ The following subsections describe the Headers and Footers API in **RadSpreadPro
 
 
 **Example 1: Get HeaderFooterSettings**
-<snippet id='codeblock-cir'/>
+<snippet id='libraries-spread-features-headers-and-footers-1'/>
 
 
 
@@ -73,7 +73,7 @@ The `HeaderFooterSection` class defines the content of a particular header/foote
 
 **Example 2: Set Content to a Header/Footer Section**
 
-<snippet id='codeblock-cis'/>
+<snippet id='libraries-spread-features-headers-and-footers-2'/>
 
 The header and footer of the first page in the worksheet from the snippet will be evaluated and rendered as shown in **Figure 1**.
 
@@ -114,7 +114,7 @@ The following table describes all valid uses of the ampersand symbol sequences. 
 
 **Example 3: Insert Fields in Header/Footer**
 
-<snippet id='codeblock-cit'/>
+<snippet id='libraries-spread-features-headers-and-footers-3'/>
 
 **Figure 2** shows how the document looks after applying the settings demonstrated in **Example 3**.
 
@@ -137,7 +137,7 @@ To control the vertical positioning of the headers and footers on the page, use 
 
 **Example 4: Setting Margins to Header/Footer**
 
-<snippet id='codeblock-ciu'/>
+<snippet id='libraries-spread-features-headers-and-footers-4'/>
 
 The [Unit class](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Media.Unit.html), used in **Example 4**, provides convenient methods that help you convert a value between different measurement units.
 

@@ -41,7 +41,7 @@ The `PdfFormatProvider` class exposes the `ImportSettings` property, which allow
         
 The following example shows how to create a `PdfImportSettings` object with the desired settings and handle the offered events:
 
-<snippet id='libraries-pdf-formats-and-conversion-pdfformatprovider-import-settings'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfformatprovider-settings-import-settings'/>
 
 ## Export Settings
 
@@ -78,7 +78,7 @@ Starting with **Q1 2025**, the `PdfExportSettings` class exposes the `DocumentUn
 
 The following example shows how to create a `PdfExportSettings` object with custom settings and handle unexpected errors while exporting the PDF document:
 
-<snippet id='libraries-pdf-formats-and-conversion-pdfformatprovider-export-settings'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfformatprovider-settings-export-settings'/>
 
 ## See Also
 

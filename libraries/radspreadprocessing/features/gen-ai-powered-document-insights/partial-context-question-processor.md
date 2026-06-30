@@ -65,7 +65,7 @@ The settings are created only through `EmbeddingSettingsFactory`'s `CreateSettin
 | `ProduceJsonFormattedContext` | Whether the context should be formatted as JSON. Default is `false`. |
 | `TotalContextTokenLimit` | The total token limit for the context sent to the answering model. Default is `null` (takes half of the max limit). |
 
-<snippet id='libraries-spread-features-gen-ai-partial-context-create-iembeddingsettings'/>
+<snippet id='libraries-spread-features-gen-ai-powered-document-insights-partial-context-question-processor-gen-ai-partial-context-create-iembeddingsettings'/>
 
 ## Usage Examples
 
@@ -73,13 +73,13 @@ The settings are created only through `EmbeddingSettingsFactory`'s `CreateSettin
 
 This example demonstrates how to use the `PartialContextQuestionProcessor` with the built-in embedding on .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows). For setting up the AI client, see the [AI Provider Setup]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
-<snippet id='libraries-spread-features-gen-ai-ask-questions-using-partial-context'/>
+<snippet id='libraries-spread-features-gen-ai-powered-document-insights-partial-context-question-processor-gen-ai-ask-questions-using-partial-context'/>
 
 **Example 2: Using PartialContextQuestionProcessor with Custom IEmbedder**
 
 This example demonstrates how to use the `PartialContextQuestionProcessor` with a custom `IEmbedder` implementation as described in the [Implementing Custom IEmbedder]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section:
 
-<snippet id='libraries-spread-features-gen-ai-ask-questions-using-partial-context-iembedder'/>
+<snippet id='libraries-spread-features-gen-ai-powered-document-insights-partial-context-question-processor-gen-ai-ask-questions-using-partial-context-iembedder'/>
 
 ### Implementing Custom IEmbedder
 
@@ -91,7 +91,7 @@ A sample custom `CustomOpenAIEmbedder` implementation for the `IEmbedder` is sho
 > * **Telerik.Windows.Documents.AIConnector**
 > * **Telerik.Windows.Documents.Spreadsheet**
 
-<snippet id='libraries-spread-features-gen-ai-ask-questions-using-partial-context-custom-openai-embedder'/>
+<snippet id='libraries-spread-features-gen-ai-powered-document-insights-partial-context-question-processor-gen-ai-ask-questions-using-partial-context-custom-openai-embedder'/>
 
 ## See Also
 

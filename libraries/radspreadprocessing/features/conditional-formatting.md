@@ -75,7 +75,7 @@ The `Formatting` property can be used for all rules listed in **Table 1** except
 
 **Example 1: Create Formatting**
 
-<snippet id='codeblock-cgr'/>
+<snippet id='libraries-spread-features-conditional-formatting-1'/>
 
 
 ## Create and Apply Conditional Formatting Rule
@@ -84,21 +84,21 @@ Each of the classes listed in **Table 1** exposes constructors that enable you t
 
 **Example 2: Create a Between Rule**
 
-<snippet id='codeblock-cgs'/>
+<snippet id='libraries-spread-features-conditional-formatting-2'/>
 
 #### Between rule applied on a range of values
 ![Between rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_Between.png)
 
 **Example 3: Create a GreaterThanOrEqualTo Rule**
 
-<snippet id='codeblock-cgt'/>
+<snippet id='libraries-spread-features-conditional-formatting-3'/>
 
 #### GreaterThanOrEqualTo rule applied on a range of values
 ![GreaterThanOrEqualTo rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_GreaterThanOrEqualTo.png)
 
 **Example 4: Create a ColorScale Rule**
 
-<snippet id='codeblock-cgu'/>
+<snippet id='libraries-spread-features-conditional-formatting-4'/>
 
 >note Depending on the exact number of colors you want to apply for the `ColorScaleRule`, you can choose between `TwoColorScaleValueContext` and `ThreeColorScaleValueContext` classes.
 
@@ -107,7 +107,7 @@ Each of the classes listed in **Table 1** exposes constructors that enable you t
 
 **Example 5: Create a DataBar Rule**
 
-<snippet id='codeblock-cgv'/>
+<snippet id='libraries-spread-features-conditional-formatting-5'/>
 
 #### DataBar rule applied on a range of values
 ![DataBar rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_DataBar.png)
@@ -115,7 +115,7 @@ Each of the classes listed in **Table 1** exposes constructors that enable you t
 
 **Example 6: Create an IconSet Rule**
 
-<snippet id='codeblock-cgw'/>
+<snippet id='libraries-spread-features-conditional-formatting-6'/>
 
 #### IconSet rule applied on a range of values
 ![IconSet rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_IconSet.png)
@@ -145,7 +145,7 @@ Any previously applied formatting can be obtained through the `GetConditionalFor
 
 **Example 7: Get the Conditional Formatting**
 
-<snippet id='codeblock-cgx'/>
+<snippet id='libraries-spread-features-conditional-formatting-7'/>
 
 ## Remove Conditional Formatting
 
@@ -153,7 +153,7 @@ Through the `CellSelection`, you can also remove the formatting from the selecte
 
 **Example 8: Remove the Conditional Formatting**
 
-<snippet id='codeblock-cgy'/>
+<snippet id='libraries-spread-features-conditional-formatting-8'/>
 
 ## Resolve Conditional Formatting
 
@@ -163,7 +163,7 @@ For the rules that apply on all the values in the range, the return value is **b
 
 **Example 9: Resolve a Conditional Formatting Rule**
 
-<snippet id='codeblock-cgz'/>
+<snippet id='libraries-spread-features-conditional-formatting-9'/>
 
 ## Update the Rule for a Formatting
 
@@ -171,7 +171,7 @@ If you want to change the rule used by a `ConditionalFormatting` object, use the
 
 **Example 10: Change the Rule for Existing Conditional Formatting**
 
-<snippet id='codeblock-cha'/>
+<snippet id='libraries-spread-features-conditional-formatting-10'/>
 
 ## Update the Cell Range of Existing Formatting
 

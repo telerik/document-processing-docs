@@ -22,7 +22,7 @@ The `PdfExportSettings` class derives from the `Telerik.Windows.Documents.Fixed.
 
 **Example 1: Export PDF/A Compliant Document**
 
-<snippet id='codeblock-ce'/>
+<snippet id='libraries-flow-formats-and-conversion-pdf-settings-1'/>
 
 >The PDF/A standard requires documents to contain all fonts used in them within the document. RadPdfProcessing does not support embedding of the standard 14 fonts used in PDF documents listed [here]({%slug radpdfprocessing-concepts-fonts%}). Using these fonts prevents the document from complying with the standard.
 
@@ -36,7 +36,7 @@ The `ExtensibilityManager` property of the `PdfExportSettings` class allows you 
 
 **Example 2: Register Numbering Style Converter**
 
-<snippet id='codeblock-cf'/>
+<snippet id='libraries-flow-formats-and-conversion-pdf-settings-2'/>
 
 ## See Also
 

@@ -36,7 +36,7 @@ The `FillDataSeriesLinear()` method of the `CellSelection` class constructs line
 
 #### __Example 1: Fill Linear Series__
 
-<snippet id='codeblock-cmg'/>
+<snippet id='libraries-spread-features-fill-data-automatically-series-1'/>
 
 
 
@@ -53,7 +53,7 @@ The `FillDataSeriesLinearTrend()` method produces series using a linear fitting 
 
 #### __Example 2: Fill Linear Trend Series__
 
-<snippet id='codeblock-cmh'/>
+<snippet id='libraries-spread-features-fill-data-automatically-series-2'/>
 
 
 
@@ -75,7 +75,7 @@ The `FillDataSeriesExponential()` method calculates the values of each cell afte
 
 #### __Example 3: Fill Exponential Series__
 
-<snippet id='codeblock-cmi'/>
+<snippet id='libraries-spread-features-fill-data-automatically-series-3'/>
 
 
 
@@ -92,7 +92,7 @@ The `FillDataSeriesExponentialTrend()` method calculates the values of the serie
 
 #### __Example 4: Exponential Trend Series__
 
-<snippet id='codeblock-cmj'/>
+<snippet id='libraries-spread-features-fill-data-automatically-series-4'/>
 
 
 
@@ -114,7 +114,7 @@ The `FillDataSeriesDate()` method fills date values incrementally using a specif
 
 #### __Example 5: Fill Date Series__
 
-<snippet id='codeblock-cmk'/>
+<snippet id='libraries-spread-features-fill-data-automatically-series-5'/>
 
 
 
@@ -193,7 +193,7 @@ Similarly to the other auto fill methods, `FillDataSeriesAuto()` takes three arg
 
 #### __Example 6: Auto Fill__
 
-<snippet id='codeblock-cml'/>
+<snippet id='libraries-spread-features-fill-data-automatically-series-6'/>
 
 
 
@@ -206,7 +206,7 @@ Similarly to the other auto fill methods, `FillDataSeriesAuto()` takes three arg
 
 #### __Example 7: Auto Fill Reversed Direction__
 
-<snippet id='codeblock-cmm'/>
+<snippet id='libraries-spread-features-fill-data-automatically-series-7'/>
 
 
 

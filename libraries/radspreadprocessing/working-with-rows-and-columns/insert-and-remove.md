@@ -33,7 +33,7 @@ The `RowSelection` class exposes `CanInsert()` and `Insert()` methods that indic
 
 **Example 1: Insert Rows**
 
-<snippet id='codeblock-crm'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-insert-and-remove-1'/>
 
 
 
@@ -47,7 +47,7 @@ The `RowSelection` class exposes a `Remove()` method that performs the removal o
 
 **Example 2: Remove Rows**
 
-<snippet id='codeblock-crn'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-insert-and-remove-2'/>
 
 
 
@@ -61,7 +61,7 @@ The `ColumnSelection` class exposes `CanInsert()` and `Insert()` methods that in
 
 **Example 3: Insert Columns**
 
-<snippet id='codeblock-cro'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-insert-and-remove-3'/>
 
 
 
@@ -75,7 +75,7 @@ The `ColumnSelection` class exposes a `Remove()` method that executes the remova
 
 **Example 4: Remove Columns**
 
-<snippet id='codeblock-crp'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-insert-and-remove-4'/>
 
 ## See Also
 

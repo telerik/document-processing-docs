@@ -35,7 +35,7 @@ The code snippet in **Example 1** shows how to create a `PdfFormatProvider` inst
 
 **Example 1: Export to PDF File**
 
-<snippet id='codeblock-cc'/>
+<snippet id='libraries-flow-formats-and-conversion-pdf-pdfformatprovider-1'/>
 
 The result from the method is a document that you can open in any application that supports PDF documents.
 
@@ -43,7 +43,7 @@ The result from the method is a document that you can open in any application th
 
 **Example 2: Export to RadFixedDocument**
 
-<snippet id='codeblock-cd'/>
+<snippet id='libraries-flow-formats-and-conversion-pdf-pdfformatprovider-2'/>
 
 >tip `RadFixedDocument` is the base class of the RadPdfProcessing library. Additional information on the library and its functionality is available in the [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%}).
 

@@ -46,13 +46,13 @@ position: 8
 
 #### **Example 1: Create Path and add it to container**
 
-<snippet id='pdf-create-path'/>
+<snippet id='libraries-pdf-model-path-create-path'/>
 
 **Example 2** demonstrates how to use one of the factory methods of the `ContentElementCollection` to create a new path and insert it into the document.
 
 #### **Example 2: Add Path to container**
 
-<snippet id='pdf-path-to-container'/>
+<snippet id='libraries-pdf-model-path-to-container'/>
 
 > There are other methods that allow adding a path to a document. You can use them through the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) class.
 
@@ -62,7 +62,7 @@ You can modify a `Path` element using the properties the class exposes. The prop
 
 #### **Example 3: Modifying Path properties**
 
-<snippet id='pdf-modify-path'/>
+<snippet id='libraries-pdf-model-path-modify-path'/>
 
 ## See Also
 

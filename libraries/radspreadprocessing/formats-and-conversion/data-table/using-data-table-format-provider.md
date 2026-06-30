@@ -22,13 +22,13 @@ The following example shows how to import a `DataTable`. The sample creates a `D
 
 **Example 1: Import DataTable**
 
-<snippet id='codeblock-con'/>
+<snippet id='libraries-spread-formats-and-conversion-data-table-using-data-table-format-provider-1'/>
 
 You can also import the data from a `DataTable` to an existing worksheet.
 
 **Example 2: Import DataTable to an Existing Worksheet**
 
-<snippet id='codeblock-coo'/>
+<snippet id='libraries-spread-formats-and-conversion-data-table-using-data-table-format-provider-2'/>
 
 ## Export
 
@@ -36,7 +36,7 @@ The following example demonstrates how to export an existing worksheet to a `Dat
 
 **Example 3: Export Worksheet to a DataTable**
 
-<snippet id='codeblock-cop'/>
+<snippet id='libraries-spread-formats-and-conversion-data-table-using-data-table-format-provider-3'/>
 
 ## See Also
 

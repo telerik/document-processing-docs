@@ -44,7 +44,7 @@ Additionally, each custom function needs to be registered through the `FunctionM
 
 **Example 1: Register Custom Function**
 
-<snippet id='codeblock-cms'/>
+<snippet id='libraries-spread-features-formulas-custom-functions-1'/>
 
 
 
@@ -101,7 +101,7 @@ The values of these properties come from the [ArgumentInterpretation](https://do
 
 **Example 2: Create ArgumentConversionRules**
 
-<snippet id='codeblock-cmt'/>
+<snippet id='libraries-spread-features-formulas-custom-functions-2'/>
 
 
 
@@ -149,7 +149,7 @@ The `FunctionInfo` class provides properties that describe the purpose of the fu
 
 **Example 3: Create FunctionInfo**
 
-<snippet id='codeblock-cmu'/>
+<snippet id='libraries-spread-features-formulas-custom-functions-3'/>
 
 
 
@@ -163,7 +163,7 @@ The result of the function calculations is the number of arguments passed to the
 
 **Example 4: Create ARGUMENTS Function**
 
-<snippet id='codeblock-cmv'/>
+<snippet id='libraries-spread-features-formulas-custom-functions-4'/>
 
 
 
@@ -173,7 +173,7 @@ The following example defines a custom function named "E" that inherits from the
 
 **Example 5: Create E Function**
 
-<snippet id='codeblock-cmw'/>
+<snippet id='libraries-spread-features-formulas-custom-functions-5'/>
 
 
 

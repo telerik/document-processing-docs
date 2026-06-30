@@ -27,13 +27,13 @@ To import a DOC or DOT file, use the `Import()` method of `DocFormatProvider`.
 
 **Example 1: Import document from a file**
 
-<snippet id='codeblock-cp'/>
+<snippet id='libraries-flow-formats-and-conversion-word-file-formats-doc-docformatprovider-1'/>
 
 You can also import a document from a byte array containing the document:
 
 **Example 2: Import document from a byte array**
 
-<snippet id='codeblock-cq'/>
+<snippet id='libraries-flow-formats-and-conversion-word-file-formats-doc-docformatprovider-2'/>
 
 The resulting `RadFlowDocument` can be manipulated like any code-generated document.
 

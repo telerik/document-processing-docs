@@ -20,7 +20,7 @@ To copy values from your worksheet, create a `CellSelection` for the desired cel
 
 #### __Example 1: Copy Selected Cells__
 
-<snippet id='codeblock-cgi'/>
+<snippet id='libraries-spread-features-clipboard-support-1'/>
 
 
 
@@ -46,7 +46,7 @@ The document model provides control over the content and the formatting included
 
 #### __Example 2: Copy All__
 
-<snippet id='codeblock-cgj'/>
+<snippet id='libraries-spread-features-clipboard-support-2'/>
 
 
 
@@ -54,7 +54,7 @@ Using a different `PasteType` produces different output. **Example 3** pastes th
 
 #### __Example 3: Paste Using PasteType.Values__
 
-<snippet id='codeblock-cgk'/>
+<snippet id='libraries-spread-features-clipboard-support-3'/>
 
 
 
@@ -64,7 +64,7 @@ If you want to paste the formula contained in *A1* (not only its result) and kee
 
 #### __Example 4: Combine Values and Formats PasteType__
 
-<snippet id='codeblock-cgl'/>
+<snippet id='libraries-spread-features-clipboard-support-4'/>
 
 
 

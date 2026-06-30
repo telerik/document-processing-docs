@@ -24,7 +24,7 @@ The `Worksheet` class exposes a `Protect()` method that takes two parameters: th
 
 **Example 1: Protect a Worksheet**
 
-<snippet id='codeblock-cnd'/>
+<snippet id='libraries-spread-features-protection-worksheet-1'/>
 
 
 
@@ -34,7 +34,7 @@ Use the `Unprotect(string)` method of the `Worksheet` class to remove the protec
 
 **Example 2: Unprotect a Worksheet**
 
-<snippet id='codeblock-cne'/>
+<snippet id='libraries-spread-features-protection-worksheet-2'/>
 
 
 
@@ -48,7 +48,7 @@ To achieve that, pass a `WorksheetProtectionOptions` instance as the second argu
 
 **Example 3: Protect Worksheet with WorksheetProtectionOptions**
 
-<snippet id='codeblock-cnf'/>
+<snippet id='libraries-spread-features-protection-worksheet-3'/>
 
 
 

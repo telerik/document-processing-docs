@@ -30,7 +30,7 @@ The following example shows how to import an XLS file through a `FileStream`. Th
 
 **Example 1: Import XLS (Excel 97-2003 Workbook) File**
 
-<snippet id='codeblock-coq'/>
+<snippet id='libraries-spread-formats-and-conversion-import-and-export-to-excel-file-formats-xls-xlsformatprovider-1'/>
 
 
 
@@ -41,12 +41,12 @@ The following example demonstrates how to export an existing workbook to an XLS 
 
 **Example 2: Export Spreadsheet Document to XLS (Excel 97-2003 Workbook) File**
 
-<snippet id='codeblock-cor'/>
+<snippet id='libraries-spread-formats-and-conversion-import-and-export-to-excel-file-formats-xls-xlsformatprovider-2'/>
 
 
 **Example 3: Export Spreadsheet Document to a Stream and byte[]**
 
-<snippet id='codeblock-cos'/>
+<snippet id='libraries-spread-formats-and-conversion-import-and-export-to-excel-file-formats-xls-xlsformatprovider-3'/>
 
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.

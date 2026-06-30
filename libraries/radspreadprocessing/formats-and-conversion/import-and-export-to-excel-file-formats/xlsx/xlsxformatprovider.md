@@ -27,7 +27,7 @@ The following example shows how to import an XLSX file using a FileStream. The c
 
 **Example 1: Import XLSX (Excel Workbook) File**
 
-<snippet id='codeblock-cow'/>
+<snippet id='libraries-spread-formats-and-conversion-import-and-export-to-excel-file-formats-xlsx-xlsxformatprovider-1'/>
 
 ## Export
 
@@ -35,11 +35,11 @@ The following example demonstrates how to export an existing Workbook to an XLSX
 
 **Example 2: Export Spreadsheet Document to XLSX (Excel Workbook) File**
 
-<snippet id='codeblock-cox'/>
+<snippet id='libraries-spread-formats-and-conversion-import-and-export-to-excel-file-formats-xlsx-xlsxformatprovider-2'/>
 
 **Example 3: Export Spreadsheet Document to a Stream and Byte Array**
 
-<snippet id='codeblock-coy'/>
+<snippet id='libraries-spread-formats-and-conversion-import-and-export-to-excel-file-formats-xlsx-xlsxformatprovider-3'/>
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
 

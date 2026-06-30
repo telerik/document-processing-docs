@@ -21,7 +21,7 @@ Obtain an instance of the `PdfPageStreamWriter` class by using the `BeginPage()`
 
 #### **Example 1: Instantiate PdfPageStreamWriter**
 	
-<snippet id='pdf-page-stream-writer-instance'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter'/>
 
 
 >You can find an example of how to use the `PdfPageStreamWriter` class in the [Manipulate Pages](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) example in the XAML SDK repository on GitHub.

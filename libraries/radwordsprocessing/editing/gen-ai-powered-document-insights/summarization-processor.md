@@ -50,7 +50,7 @@ The `SummarizationProcessorSettings` class defines configuration options for the
 
 **Example 1: Configuring SummarizationProcessorSettings**
 
-<snippet id='libraries-flow-features-gen-ai-summarize-configure'/>
+<snippet id='libraries-flow-editing-gen-ai-powered-document-insights-summarization-processor-features-gen-ai-summarize-configure'/>
 
 ## Usage Example
 
@@ -68,7 +68,7 @@ This approach allows the processor to handle documents of any size, but it incre
 
 **Example 2: Using SummarizationProcessor**
 
-<snippet id='libraries-flow-features-gen-ai-summarize-document'/>
+<snippet id='libraries-flow-editing-gen-ai-powered-document-insights-summarization-processor-features-gen-ai-summarize-document'/>
 
 ## See Also
 

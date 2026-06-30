@@ -29,7 +29,7 @@ You can insert a `Section` field through the [RadFlowDocumentEditor]({%slug radw
 
 **Example 1: Insert Section Field**
 
-<snippet id='codeblock-bkm'/>
+<snippet id='libraries-flow-concepts-fields-section'/>
 
 After updating the field, the result is "Page 4 of Section 2" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
 

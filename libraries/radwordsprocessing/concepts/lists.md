@@ -80,7 +80,7 @@ The following example adds a default bulleted list to a predefined `RadFlowDocum
 
 **Example 1: Add List Template**
 
-<snippet id='codeblock-m'/>
+<snippet id='libraries-flow-concepts-lists-1'/>
 
 
 
@@ -92,7 +92,7 @@ The following tutorial walks you through the creation of a list.
 
 	**Step 1: Create RadFlowDocument**
 	
-	<snippet id='codeblock-n'/>
+	<snippet id='libraries-flow-concepts-lists-2'/>
 
 
 
@@ -100,7 +100,7 @@ The following tutorial walks you through the creation of a list.
 
 	**Step 2: Create List**
 	
-	<snippet id='codeblock-o'/>
+	<snippet id='libraries-flow-concepts-lists-3'/>
 	
 	In this case, the default `HybridMultilevel` type of list is created.
 
@@ -108,7 +108,7 @@ The following tutorial walks you through the creation of a list.
 
 	**Step 3: Iterate Levels**
 	
-	<snippet id='codeblock-p'/>
+	<snippet id='libraries-flow-concepts-lists-4'/>
 
 
 
@@ -116,7 +116,7 @@ The following tutorial walks you through the creation of a list.
 
 	**Step 4: Customize List Levels**
 	
-	<snippet id='codeblock-q'/>
+	<snippet id='libraries-flow-concepts-lists-5'/>
 	
 	With this step the list is ready to use.
 
@@ -128,7 +128,7 @@ The following example demonstrates how you can apply the list created in Steps 1
 
 **Example 6: Apply List**
 
-<snippet id='codeblock-r'/>
+<snippet id='libraries-flow-concepts-lists-6'/>
 
 
 

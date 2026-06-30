@@ -28,7 +28,7 @@ To take advantage of the accessibility feature, the document must be **PDF/A-1a*
 
 When exporting the document, specify the [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}#tagging-strategy) so the document is not tagged automatically and uses the existing StructureTree:
 
-<snippet id='libraries-pdf-features-accessible-pdf'/>
+<snippet id='libraries-pdf-features-accessibility-support-create-accessible-pdf-documents-accessible-pdf'/>
 
 <table style="width:100%;">
 <th width=45%>PDF Accessibility Checker tool</th><th>Logical Structure</th>
@@ -43,7 +43,7 @@ When exporting the document, specify the [TaggingStrategy]({%slug radpdfprocessi
 
 The following example shows how to add content to a PDF document and leave the PdfProcessing engine to build the [StructureTree]({%slug radpdfprocessing-model-structure-tree%}) automatically:
 
-<snippet id='libraries-pdf-features-accessible-pdf-with-auto-tagging'/>
+<snippet id='libraries-pdf-features-accessibility-support-create-accessible-pdf-documents-accessible-pdf-with-auto-tagging'/>
 
 ## See Also
 

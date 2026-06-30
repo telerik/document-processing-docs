@@ -25,7 +25,7 @@ To protect a workbook, use the `Protect(string)` method of the `Workbook` class.
 
 **Example 1: Password-Protect a Workbook**
 
-<snippet id='codeblock-cnb'/>
+<snippet id='libraries-spread-features-protection-workbook-1'/>
 
 
 
@@ -37,7 +37,7 @@ Use the `Unprotect(string)` method of the `Workbook` class to remove the workboo
 
 **Example 2: Unprotect a Workbook**
 
-<snippet id='codeblock-cnc'/>
+<snippet id='libraries-spread-features-protection-workbook-2'/>
 
 
 

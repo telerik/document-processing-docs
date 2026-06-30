@@ -29,7 +29,7 @@ The `FormulaChartData` type is abstract and it is implemented by the `WorkbookFo
 
 **Example 1: Using IChartData**
 
-<snippet id='codeblock-clk'/> 
+<snippet id='libraries-spread-features-charts-chart-data'/> 
 
 >caption Using Chart Data in RadSpreadProcessing
 

@@ -27,7 +27,7 @@ The `LineAnnotation` class is a derivative of `MarkupAnnotation` (descendent of 
 
 ## Creating a LineAnnotation
 
-<snippet id='pdf-create-line-annotation'/>
+<snippet id='libraries-pdf-model-annotations-line-create-line-annotation'/>
 
 ![Create LineAnnotation](images/pdf-processing-create-lineannotation.png)
 
@@ -35,7 +35,7 @@ The `LineAnnotation` class is a derivative of `MarkupAnnotation` (descendent of 
 
 The [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) offers the public `DrawLineAnnotation` method which creates a new `LineAnnotation` with a starting point at the current position of the editor and an end point at the current position of the editor plus the given distances.
 
-<snippet id='pdf-fixed-editor-create-line-annotation'/>
+<snippet id='libraries-pdf-model-annotations-line-fixed-editor-create-line-annotation'/>
 
 ![Create LineAnnotation with FixedContentEditor](images/pdf-processing-create-lineannotation-with-fixedcontenteditor.png)
 

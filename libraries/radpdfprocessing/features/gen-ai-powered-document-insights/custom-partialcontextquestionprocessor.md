@@ -51,7 +51,7 @@ The example below constructs a custom `PartialContextQuestionProcessor` by suppl
 
 >note `DefaultEmbedder` is only available on **net8-windows** and higher. On other target frameworks you must supply your own `IEmbedder` (as shown with the [CustomOpenAIEmbedder]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder)).
 
-<snippet id='libraries-pdf-features-gen-ai-custom-partial-processor'/>
+<snippet id='libraries-pdf-features-gen-ai-powered-document-insights-custom-partialcontextquestionprocessor'/>
 
 ## See Also
 

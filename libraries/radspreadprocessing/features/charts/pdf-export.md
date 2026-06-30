@@ -31,13 +31,13 @@ The [`PdfFormatProvider`]({%slug radspreadprocessing-formats-and-conversion-pdf-
 
 **Example 1: Implementing a Renderer**
 
-<snippet id='codeblock-cll'/>
+<snippet id='libraries-spread-features-charts-pdf-export-1'/>
 
 When you have the renderer implemented, you need to assign it to the `PdfFormatProvider` instance through the `ChartRenderer` property of its [ExportSettings]({%slug radspreadprocessing-format-and-conversion-pdf-settings%}).
 
 **Example 2: Registering the Renderer**
 
-<snippet id='codeblock-clm'/>
+<snippet id='libraries-spread-features-charts-pdf-export-2'/>
 
 Now the chart objects in the spreadsheet are exported along with the other content after you invoke the `Export()` method of `PdfFormatProvider`.
 

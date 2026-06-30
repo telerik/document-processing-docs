@@ -24,7 +24,7 @@ The `CheckBoxField` class corresponds to the `FormFieldType.CheckBox` enum value
 
 **Example 1: Create a CheckBoxField and add it to a page**
 
-<snippet id='pdf-checkbox-field'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-checkboxfield'/>
 
 ## See Also
 

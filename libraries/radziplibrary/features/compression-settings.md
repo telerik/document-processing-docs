@@ -26,7 +26,7 @@ The `DeflateSettings` class exposes the following configurable parameters:
 
 **Example 1: Create DeflateSettings**
 
-<snippet id='codeblock-dsk'/>
+<snippet id='libraries-zip-features-compression-settings-1'/>
 
 ## LZMA Settings
 
@@ -50,7 +50,7 @@ The configurable parameters of the `LzmaSettings` class are as follows:
 
 **Example 2: Create LzmaSettings**
 
-<snippet id='codeblock-dsl'/>
+<snippet id='libraries-zip-features-compression-settings-2'/>
 
 ## Store Settings
 
@@ -58,7 +58,7 @@ Store settings store the data without applying any compression.
 
 **Example 3: Create StoreSettings**
 
-<snippet id='codeblock-dsm'/>
+<snippet id='libraries-zip-features-compression-settings-3'/>
 
 ## See Also
 

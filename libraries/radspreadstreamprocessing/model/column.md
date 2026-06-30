@@ -29,7 +29,7 @@ You can create a concrete instance of `IColumnExporter` through the `CreateColum
 **Example 1: Create IColumnExporter**
 
 
-<snippet id='codeblock-dlm'/>
+<snippet id='libraries-spreadstream-model-column-1'/>
 
 >`IColumnExporter` inherits from [`IDisposable`](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Ensure the object is disposed when you are done with it. Otherwise, the content will not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -45,7 +45,7 @@ To customize the way a column appears, use one of the following methods:
 
 **Example 2: Set Properties to IColumnExporter**
 
-<snippet id='codeblock-dln'/>
+<snippet id='libraries-spreadstream-model-column-2'/>
 
 \* Due to the specifics of the library, `RadSpreadStreamProcessing` does not support auto fitting the width of the columns. You can find information on how to calculate the width needed for specific content in the [Get Cell Content Size]({%slug radspreadstreamprocessing-features-text-measuring%}) topic.
 
@@ -57,7 +57,7 @@ In some cases you may need to skip several columns and start filling the data in
 
 **Example 3: Skip Columns**
 
-<snippet id='codeblock-dlo'/>
+<snippet id='libraries-spreadstream-model-column-3'/>
 
 ## Read a Column
 
@@ -67,7 +67,7 @@ You can get a concrete instance of `IColumnImporter` through the `Columns` colle
 
 **Example 4: Create IColumnImporter**
 
-<snippet id='codeblock-dlp'/>
+<snippet id='libraries-spreadstream-model-column-4'/>
 
 
 The `IColumnImporter` interface exposes the following properties:

@@ -40,7 +40,7 @@ You can insert this field through the `InsertField()` method of [RadFlowDocument
 
 **Example 1: Insert a Page field**
 
-<snippet id='codeblock-bi'/>
+<snippet id='libraries-flow-concepts-fields-page-field'/>
 
 After updating the field, the result is "Page 3 of 6" (see [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
 

@@ -22,11 +22,11 @@ The `Link` class inherits the abstract `Annotation` class. Link annotations repr
 
 **Example 1: Add link to destination**
 
-<snippet id='pdf-add-link-to-destination'/>
+<snippet id='libraries-pdf-model-annotations-links-add-link-to-destination'/>
 
 **Example 2: Add link with action**
 
-<snippet id='pdf-link-with-action'/>
+<snippet id='libraries-pdf-model-annotations-links-link-with-action'/>
 
 >important In **Example 2**, the *action* object must be from the `Telerik.Windows.Documents.Fixed.Model.Actions.Action` type.
 
@@ -55,7 +55,7 @@ The `Destination` class itself only exposes a `Page` property specifying the pag
 
 **Example 3: Add link with location**
 
-<snippet id='pdf-link-with-location'/>
+<snippet id='libraries-pdf-model-annotations-links-link-with-location'/>
 
 ## Action
 
@@ -63,7 +63,7 @@ The `Destination` class itself only exposes a `Page` property specifying the pag
 
 **Example 4: Add link with action**
 
-<snippet id='pdf-add-link-with-action'/>
+<snippet id='libraries-pdf-model-annotations-links-add-link-with-action'/>
 
 ## See Also
 

@@ -31,7 +31,7 @@ The [`InsertDocumentOptions`](https://docs.telerik.com/devtools/document-process
 
 **Example 1: Insert Source Document into Target Document**
 
-<snippet id='codeblock-bt'/>
+<snippet id='libraries-flow-editing-insert-documents'/>
 
 ## Behavior
 

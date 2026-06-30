@@ -23,7 +23,7 @@ To import an HTML document, use the overloads of the `HtmlFormatProvider.Import(
 
 **Example 1: Import HTML file**
 
-<snippet id='codeblock-bubu'/>
+<snippet id='libraries-flow-formats-and-conversion-html-htmlformatprovider-1'/>
 
 
 
@@ -31,7 +31,7 @@ To import an HTML document, use the overloads of the `HtmlFormatProvider.Import(
 
 **Example 2: Import HTML string**
 
-<snippet id='codeblock-bvbv'/>
+<snippet id='libraries-flow-formats-and-conversion-html-htmlformatprovider-2'/>
 
 
 
@@ -45,7 +45,7 @@ To export a document to HTML, use the overloads of the `HtmlFormatProvider.Expor
 
 **Example 3: Export HTML to file**
 
-<snippet id='codeblock-bwbw'/>
+<snippet id='libraries-flow-formats-and-conversion-html-htmlformatprovider-3'/>
 
 
 
@@ -53,7 +53,7 @@ You can also export the document to a string variable as shown in **Example 4**.
 
 **Example 4: Export HTML to string**
 
-<snippet id='codeblock-bxbx'/>
+<snippet id='libraries-flow-formats-and-conversion-html-htmlformatprovider-4'/>
 
 
 ## See Also

@@ -25,13 +25,13 @@ The following code shows how to use `RtfFormatProvider` to import an RTF documen
 
 **Example 1: Import document from a file**
 
-<snippet id='codeblock-ck'/>
+<snippet id='libraries-flow-formats-and-conversion-rtf-rtfformatprovider-1'/>
 
 You can also import a document from a string containing the RTF document:
 
 **Example 2: Import document from a string**
 
-<snippet id='codeblock-cl'/>
+<snippet id='libraries-flow-formats-and-conversion-rtf-rtfformatprovider-2'/>
 
 The resulting `RadFlowDocument` can be used like any code-generated document.
 
@@ -43,13 +43,13 @@ The following code shows how to use `RtfFormatProvider` to export a `RadFlowDocu
 
 **Example 3: Export a document to a file**
 
-<snippet id='codeblock-cm'/>
+<snippet id='libraries-flow-formats-and-conversion-rtf-rtfformatprovider-3'/>
 
 You can also export the document to a string and preserve it in a database.
 
 **Example 4: Export a document to a string**
 
-<snippet id='codeblock-cn'/>
+<snippet id='libraries-flow-formats-and-conversion-rtf-rtfformatprovider-4'/>
 
 The resulting documents can be opened in any application that supports RTF documents.
 

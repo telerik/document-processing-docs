@@ -25,7 +25,7 @@ The `FormSource` class exposes a default constructor that you can use to create 
 
 **Example 1: Create FormSource**
 
-<snippet id='pdf-create-form-source'/>
+<snippet id='libraries-pdf-model-formsource-overview-create-form-source'/>
 
 The snippet from **Example 1** creates an empty `FormSource` object. To fill this object with content, use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) as described later in this article.
 
@@ -46,7 +46,7 @@ The `FormSource` class inherits from the `IContentRootElement` interface. This i
 
 **Example 2: Add content to a FormSource**
 
-<snippet id='pdf-add-content-to-form-source'/>
+<snippet id='libraries-pdf-model-formsource-overview-add-content-to-form-source'/>
 
 ## Inserting a FormSource into a Document
 
@@ -58,7 +58,7 @@ After you generate the `FormSource` object and fill it with content, insert it i
 
     **Example 3: Add a FormSource to a document using FixedContentEditor**
 
-    <snippet id='pdf-fixed-editor-add-content-to-form-source'/>
+    <snippet id='libraries-pdf-model-formsource-overview-fixed-editor-add-content-to-form-source'/>
 
     There are several overloads of the `DrawForm()` method that let you specify the size of the form.
 

@@ -18,7 +18,7 @@ The following example demonstrates how to use the GenAI-powered Document Insight
 
 **Example 1: Using GenAI-powered Document Insights**
 
-<snippet id='libraries-flow-features-gen-ai-getting-started'/>
+<snippet id='libraries-flow-editing-gen-ai-powered-document-insights-getting-started'/>
 
 When you run this code, the AI processes your document, generates a summary, and answers your questions.
 

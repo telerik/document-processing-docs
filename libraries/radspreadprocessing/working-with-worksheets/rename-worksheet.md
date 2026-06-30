@@ -46,7 +46,7 @@ The name of the worksheet cannot exceed 31 characters.
 
 **Example 1: Create and Rename a Worksheet**
 
-<snippet id='codeblock-csn'/>
+<snippet id='libraries-spread-working-with-worksheets-rename-worksheet-1'/>
 
 
 
@@ -54,6 +54,6 @@ The name of the worksheet cannot exceed 31 characters.
 
 **Example 2: Rename a Worksheet**
 
-<snippet id='codeblock-cso'/>
+<snippet id='libraries-spread-working-with-worksheets-rename-worksheet-2'/>
 
 

@@ -28,11 +28,11 @@ The following example demonstrates how to implement the `IExternalSigner` interf
 
 ### CMS External Signer
 
-<snippet id='libraries-pdf-features-digital-signature-cms-external-signing'/>
+<snippet id='libraries-pdf-features-digital-signature-external-digital-signing-cms-external-signing'/>
 
 Then, initialize a `Signature` instance using the CMS External Signer:
 
-<snippet id='libraries-pdf-features-digital-signature-externally-cms-sign-pdf'/>
+<snippet id='libraries-pdf-features-digital-signature-external-digital-signing-externally-cms-sign-pdf'/>
 
 ## Using ExternalSignerBase
 
@@ -43,11 +43,11 @@ The following example implements external RSA-based digital signing for PDF docu
 
 ### RSA External Signer
 
-<snippet id='libraries-pdf-features-digital-signature-rsa-external-signing'/>
+<snippet id='libraries-pdf-features-digital-signature-external-digital-signing-rsa-external-signing'/>
 
 Now, create a `Signature` that uses the above implementation:
 
-<snippet id='libraries-pdf-features-digital-signature-externally-rsa-sign-pdf'/>
+<snippet id='libraries-pdf-features-digital-signature-external-digital-signing-externally-rsa-sign-pdf'/>
 
 ## See Also
 

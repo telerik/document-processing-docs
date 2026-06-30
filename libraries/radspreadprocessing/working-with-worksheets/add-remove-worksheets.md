@@ -20,7 +20,7 @@ To add a new worksheet to a workbook, use its `Worksheets` collection. The colle
 
 **Example 1: Create a Workbook and Add a Worksheet to It**
 
-<snippet id='codeblock-cse'/>
+<snippet id='libraries-spread-working-with-worksheets-add-remove-worksheets-1'/>
 
 
 
@@ -32,7 +32,7 @@ The `Worksheets` collection of the workbook offers two methods for removing work
 
 **Example 2: Add and Remove Worksheets**
 
-<snippet id='codeblock-csf'/>
+<snippet id='libraries-spread-working-with-worksheets-add-remove-worksheets-2'/>
 
 
 ## Reorder Worksheets
@@ -41,4 +41,4 @@ To change the order in which worksheets appear inside the workbook, use the `Mov
 
 **Example 3: Add and Reorder Worksheets**
 
-<snippet id='codeblock-csg'/>
+<snippet id='libraries-spread-working-with-worksheets-add-remove-worksheets-3'/>

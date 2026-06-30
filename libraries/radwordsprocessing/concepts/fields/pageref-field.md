@@ -42,7 +42,7 @@ You can insert this field through the [RadFlowDocumentEditor]({%slug radwordspro
 
 **Example 1: Insert PageRef field**
 
-<snippet id='codeblock-bj'/>
+<snippet id='libraries-flow-concepts-fields-pageref-field'/>
 
 After updating the field, the result is "Bookmark Page: 2" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
 

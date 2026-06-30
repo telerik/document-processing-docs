@@ -51,20 +51,20 @@ All of the listed providers implement the `IWorkbookFormatProvider` and `IBinary
 
 ### IWorkbookFormatProvider Interface Methods
 
-<snippet id='codeblock-cnu'/>
+<snippet id='libraries-spread-formats-and-conversion-general-information-1'/>
 
 **Example: Use the Import() and Export() Methods with Stream**
 
-<snippet id='codeblock-cnv'/>
+<snippet id='libraries-spread-formats-and-conversion-general-information-2'/>
 
 
 ### IBinaryWorkbookFormatProvider Interface Methods
 
-<snippet id='codeblock-cnw'/>
+<snippet id='libraries-spread-formats-and-conversion-general-information-3'/>
 
 **Example: Use the Import() and Export() Methods with byte[] Array**
 
-<snippet id='codeblock-cnx'/>
+<snippet id='libraries-spread-formats-and-conversion-general-information-4'/>
 
 >note For more examples of importing and exporting workbooks, check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
 

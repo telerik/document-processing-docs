@@ -26,13 +26,13 @@ The following example shows how to create a workbook and add a new worksheet to 
 
 **Example 1: Create Workbook**
 
-<snippet id='codeblock-cfs'/>
+<snippet id='libraries-spread-getting-started-1'/>
 
 You can then create a [CellSelection]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and set any value to the selected cells. The following example shows how to create a cell and set a string value to it.
 
 **Example 2: Set Value of Cell**
 
-<snippet id='codeblock-cft'/>
+<snippet id='libraries-spread-getting-started-2'/>
 
 ## Exporting
 
@@ -42,7 +42,7 @@ For more examples and application scenarios of importing and exporting a Workboo
 
 **Example 3: Export to Xlsx**
 
-<snippet id='codeblock-cfu'/>
+<snippet id='libraries-spread-getting-started-3'/>
 
 >More information about the import and export features of RadSpreadProcessing is available in the [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-general-information%}).
 

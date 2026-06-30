@@ -43,13 +43,13 @@ Use the following example to create a header:
 
 ### Example: Create a header
 
-<snippet id='codeblock-clcl'/>
+<snippet id='libraries-flow-model-headers-footers-1'/>
 
 Use the following example to create a footer:
 
 ### Example: Create a footer
 
-<snippet id='codeblock-cmcm'/>
+<snippet id='libraries-flow-model-headers-footers-2'/>
 
 >note The `Parent` property of `Header` and `Footer` contains a reference to the `Section` from which the object is obtained.
 
@@ -61,13 +61,13 @@ The following example gets the default header of a section:
 
 ### Example: Get the default header of a section
 
-<snippet id='codeblock-cncn'/>
+<snippet id='libraries-flow-model-headers-footers-3'/>
 
 The following example gets the default footer of a section:
 
 ### Example: Get the default footer of a section
 
-<snippet id='codeblock-coco'/>
+<snippet id='libraries-flow-model-headers-footers-4'/>
 
 >note If a header or footer of a given type is not added, the corresponding property value is `null`.
 
@@ -75,7 +75,7 @@ The following example adds different headers for odd and even pages:
 
 ### Example: Add headers for even and odd pages
 
-<snippet id='codeblock-cpcp'/>
+<snippet id='libraries-flow-model-headers-footers-5'/>
 
 ### Linking Headers/Footers to Previous Section Headers/Footers
 

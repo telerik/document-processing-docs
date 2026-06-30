@@ -26,7 +26,7 @@ Insert [TextFragments]({%slug radpdfprocessing-model-textfragment%}) with one of
             
 #### **Example 1: Insert text**
 
-<snippet id='pdf-block-insert-text'/>
+<snippet id='libraries-pdf-editing-block-insert-text'/>
 
 >The '\r' and '\n' characters do not have the usual meaning of "go to next line" when inserted into a PDF document, and you cannot insert text containing these characters to produce multiline text. Instead, insert a line break.
 
@@ -39,7 +39,7 @@ Inserting a line break results in the next element starting on a new line. Use t
 
 #### **Example 2: Break the line**
 
-<snippet id='pdf-block-line-break'/>
+<snippet id='libraries-pdf-editing-block-line-break'/>
 
 ### Inserting Image
 
@@ -54,7 +54,7 @@ Inserting a line break results in the next element starting on a new line. Use t
                 
 #### **Example 3: Inserting an image**
 
-<snippet id='pdf-block-insert-image'/>
+<snippet id='libraries-pdf-editing-block-insert-image'/>
 
 Information on images in the context of the library is available in the [ImageSource]({%slug radpdfprocessing-model-imagesource%}) and [Image]({%slug radpdfprocessing-model-image%}) articles.
             
@@ -71,7 +71,7 @@ Information on images in the context of the library is available in the [ImageSo
                 
 #### **Example 4: Inserting a geometry**
 
-<snippet id='pdf-block-insert-geometry'/>
+<snippet id='libraries-pdf-editing-block-insert-geometry'/>
 
 ### Inserting Form-XObject Elements
 
@@ -79,7 +79,7 @@ The Form (also known as Form-XObject) is an object that can contain PDF content 
 
 #### **Example 5: Insert a form**
 
-<snippet id='pdf-block-insert-form'/>
+<snippet id='libraries-pdf-editing-block-insert-form'/>
 
 There are two more overloads of `InsertForm()` that allow you to pass the size that should be used for the form.
 
@@ -92,7 +92,7 @@ The following example shows how to insert a link inside the text:
 
 #### **Example: Insert a text link**
 
-<snippet id='pdf-block-text-link'/>
+<snippet id='libraries-pdf-editing-block-text-link'/>
 
 ### Changing Current Styles
 
@@ -163,7 +163,7 @@ The `Block` class has properties and methods that affect how it is rendered:
 
 #### **Example 6: Change Block properties**
 
-<snippet id='pdf-block-change-properties'/>
+<snippet id='libraries-pdf-editing-block-change-properties'/>
 
 ![Block Properties Result](images/radpdfprocessing-editing-block_5_result.png)
 
@@ -173,7 +173,7 @@ A Block can be drawn to the content using the `Draw()` method. The method accept
         
 #### **Example 7: Draw block**
 
-<snippet id='pdf-draw-block'/>
+<snippet id='libraries-pdf-editing-block-draw-block'/>
 
 >important Every block can be drawn only once. Otherwise, an exception is thrown.
           
@@ -209,7 +209,7 @@ The code in **Example 10** splits a block in two. The first contains text "Hello
         
 #### **Example 10: Split block**
 
-<snippet id='pdf-block-split'/>
+<snippet id='libraries-pdf-editing-block-split'/>
 
 
 ## See Also

@@ -28,7 +28,7 @@ To repeat the values, first create a [CellSelection]({%slug radspreadprocessing-
 
 #### __Example 1: Fill Right__
 
-<snippet id='codeblock-cme'/>
+<snippet id='libraries-spread-features-fill-data-automatically-repeat-values-1'/>
 
 
 
@@ -43,7 +43,7 @@ Similarly, you can automatically copy the values of a row to its adjacent rows.
 
 #### __Example 2: Fill Down__
 
-<snippet id='codeblock-cmf'/>
+<snippet id='libraries-spread-features-fill-data-automatically-repeat-values-2'/>
 
 
 

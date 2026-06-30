@@ -41,7 +41,7 @@ To add a comment, specify the cell index to which the comment relates, the autho
 
 **Example 1: Add a Comment**
 
-<snippet id='codeblock-cgm'/>
+<snippet id='libraries-spread-features-comments-1'/>
 
 The previous snippet adds a comment in cell B2.
 
@@ -52,7 +52,7 @@ To remove a comment, specify the comment instance. You can obtain this instance 
 
 **Example 2: Remove a Comment**
 
-<snippet id='codeblock-cgn'/>
+<snippet id='libraries-spread-features-comments-2'/>
 
 
 ## Replies
@@ -75,7 +75,7 @@ Each comment can be replied to, forming a thread of information. All replies are
 
 **Example 3: Working with Replies**
 
-<snippet id='codeblock-cgo'/>
+<snippet id='libraries-spread-features-comments-3'/>
 
 
 ### Events
@@ -92,11 +92,11 @@ The two events for both collections use similar enumeration types for event argu
 
 **Example 4: Change the Author of a Comment upon Adding It to the CommentCollection Using the Changing Event**
 
-<snippet id='codeblock-cgp'/>
+<snippet id='libraries-spread-features-comments-4'/>
 
 **Example 5: Change the Author of a Reply upon Adding It to the ReplySortedCollection Using the Changing Event**
 
-<snippet id='codeblock-cgq'/>
+<snippet id='libraries-spread-features-comments-5'/>
 
 
 

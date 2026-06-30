@@ -17,15 +17,15 @@ The .NET Standard specification does not define APIs for getting image propertie
 
 **Example 1: Set the default implementation of the ImagePropertiesResolver class**
 
-<snippet id='codeblock-cgc'/>
+<snippet id='libraries-spread-cross-platform-support-images-1'/>
 
 **Example 2: Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class (Windows)**
 
-<snippet id='codeblock-cgd'/>
+<snippet id='libraries-spread-cross-platform-support-images-2'/>
 
 **Example 3: Set the custom implementation inheriting the ImagePropertiesResolverBase abstract class**
 
-<snippet id='codeblock-cge'/>
+<snippet id='libraries-spread-cross-platform-support-images-3'/>
 
 ## See Also
 

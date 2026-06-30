@@ -39,7 +39,7 @@ The `SummarizationProcessorSettings` class defines configuration options for the
 
 #### **Example 1: Configuring SummarizationProcessorSettings**
 
-<snippet id='libraries-pdf-features-gen-ai-summirize-configure'/>
+<snippet id='libraries-pdf-features-gen-ai-powered-document-insights-summarization-processor-gen-ai-summirize-configure'/>
 
 ## Usage Example
 
@@ -57,7 +57,7 @@ This approach allows the processor to handle documents of any size, but it incre
 
 #### **Example 2: Using SummarizationProcessor**
 
-<snippet id='libraries-pdf-features-gen-ai-summarize-document'/>
+<snippet id='libraries-pdf-features-gen-ai-powered-document-insights-summarization-processor-gen-ai-summarize-document'/>
 
 ## See Also
 

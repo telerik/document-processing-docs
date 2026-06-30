@@ -18,7 +18,7 @@ position: 4
 
 **Example 1: Add document variable record**
 
-<snippet id='codeblock-oo'/>
+<snippet id='libraries-flow-concepts-fields-document-variables-1'/>
 
 
 
@@ -30,7 +30,7 @@ To remove defined variables, use the `Remove()` method of the variables collecti
 
 **Example 2: Remove document variable record**
 
-<snippet id='codeblock-pp'/>
+<snippet id='libraries-flow-concepts-fields-document-variables-2'/>
 
 
 
@@ -53,7 +53,7 @@ You can insert a `DocumentVariableField` through the [`RadFlowDocumentEditor`]({
 
 **Example 3: Insert document variable field**
 
-<snippet id='codeblock-qq'/>
+<snippet id='libraries-flow-concepts-fields-document-variables-3'/>
 
 
 ## See Also

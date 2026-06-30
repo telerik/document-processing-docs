@@ -77,14 +77,14 @@ The recommended way to insert a field is to use the `InsertField()` method of th
 
 **Example 1: Create a document containing a Date field using RadFlowDocumentEditor**
 
-<snippet id='codeblock-ss'/>
+<snippet id='libraries-flow-concepts-fields-1'/>
 
 
 You can also create and insert all the parts of the field manually by creating a `FieldInfo` instance and adding all the inlines to the document structure. **Example 2** demonstrates how to achieve the same result as in **Example 1**.
 
 **Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo**
 
-<snippet id='codeblock-tt'/>
+<snippet id='libraries-flow-concepts-fields-2'/>
 
 
 The manual approach is more verbose and prone to errors. If not all of the field characters are inserted, the result is an invalid document. Using the `RadFlowDocumentEditor`, on the other hand, guarantees that the document integrity is maintained.
@@ -109,7 +109,7 @@ You can update a single field with the `UpdateField()` method of the `FieldInfo`
 
 **Example 3: Update a field**
 
-<snippet id='codeblock-uu'/>
+<snippet id='libraries-flow-concepts-fields-3'/>
 
 
 > The field result is not automatically updated upon insertion. The initial result fragment is passed as a parameter to the `InsertField()` method.
@@ -118,7 +118,7 @@ You can update all fields in the document by using the `UpdateFields()` method o
 
 **Example 4: Update all fields in a document**
 
-<snippet id='codeblock-vv'/>
+<snippet id='libraries-flow-concepts-fields-4'/>
 
 ### Updating PageRef, Page, NumPages, and SectionPages Fields
 
@@ -130,7 +130,7 @@ You can register the provider with the following code:
 
 **Example 5: Register the default NumberingFieldsProvider**
 
-<snippet id='codeblock-ww'/>
+<snippet id='libraries-flow-concepts-fields-5'/>
 
 ## Syntax and Switches
 
@@ -168,7 +168,7 @@ Fields can also be nested in each other. If there are nested fields inside the c
 
 **Example 6: Create a nested field**
 
-<snippet id='codeblock-xx'/>
+<snippet id='libraries-flow-concepts-fields-6'/>
 
 ![Rad Words Processing Concepts Fields 02](images/RadWordsProcessing_Concepts_Fields_02.png)
 
