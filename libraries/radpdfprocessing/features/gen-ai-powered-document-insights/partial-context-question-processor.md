@@ -63,7 +63,7 @@ The settings are created only through the `EmbeddingSettingsFactory` `CreateSett
 | `MaxNumberOfEmbeddingsSent` | Maximum number of context chunks sent. Default is `null`. |
 | `EmbeddingTokenSize` | Size in tokens of each context chunk. Default is `null`. |
 
-<snippet id='libraries-pdf-features-gen-ai-partial-context-create-iembeddingsettings'/>
+<snippet id='libraries-pdf-features-gen-ai-powered-document-insights-partial-context-question-processor-gen-ai-partial-context-create-iembeddingsettings'/>
 
 ## Usage Examples
 
@@ -71,13 +71,13 @@ The settings are created only through the `EmbeddingSettingsFactory` `CreateSett
 
 This example demonstrates how to use the `PartialContextQuestionProcessor` with the built-in embedding on .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows). To set up the AI client, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
-<snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context'/>
+<snippet id='libraries-pdf-features-gen-ai-powered-document-insights-partial-context-question-processor-gen-ai-ask-questions-using-partial-context'/>
 
 #### **Example 2: Using PartialContextQuestionProcessor with Custom IEmbedder**
 
 This example demonstrates how to use the `PartialContextQuestionProcessor` with a custom `IEmbedder` implementation as described in the [Implementing Custom IEmbedder]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section:
 
-<snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-iembedder'/>
+<snippet id='libraries-pdf-features-gen-ai-powered-document-insights-partial-context-question-processor-gen-ai-ask-questions-using-partial-context-iembedder'/>
 
 ### Implementing Custom IEmbedder
 
@@ -89,11 +89,11 @@ The following code snippet shows a sample custom `CustomOpenAIEmbedder` implemen
 > * `Telerik.Windows.Documents.AIConnector`
 > * `Telerik.Windows.Documents.Fixed`  
 
-<snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-custom-openai-embedder'/>
+<snippet id='libraries-pdf-features-gen-ai-powered-document-insights-partial-context-question-processor-gen-ai-ask-questions-using-partial-context-custom-openai-embedder'/>
 
 #### **Example 3: Processing Specific Pages**
 
-<snippet id='libraries-pdf-features-gen-ai-summarize-process-specific-pages'/>
+<snippet id='libraries-pdf-features-gen-ai-powered-document-insights-partial-context-question-processor-gen-ai-summarize-process-specific-pages'/>
 
 ## See Also
 

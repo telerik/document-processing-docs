@@ -35,7 +35,7 @@ You can create a concrete instance of `IWorksheetExporter` through the `CreateWo
 
 **Example 1: Create IWorksheetExporter**
 
-<snippet id='codeblock-dlx'/>
+<snippet id='libraries-spreadstream-model-worksheet'/>
 
 >`IWorksheetExporter` inherits from [`IDisposable`](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Ensure the object is disposed when you are done with it. Otherwise, the content will not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 

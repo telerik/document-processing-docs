@@ -25,7 +25,7 @@ To export a document to plain text, use the `Export()` method of `TextFormatProv
 
 #### **Example 1: Export RadFixedDocument to string**
 
-<snippet id='pdf-export-to-text'/>
+<snippet id='libraries-pdf-formats-and-conversion-plain-text-textformatprovider'/>
 
 ## See Also
 

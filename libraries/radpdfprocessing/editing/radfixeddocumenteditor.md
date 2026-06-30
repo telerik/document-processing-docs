@@ -35,7 +35,7 @@ position: 6
 
 #### **Example 1: Create RadFixedDocumentEditor**
 
-<snippet id='pdf-create-fixed-document-editor'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor'/>
 
 >`RadFixedDocumentEditor` inherits from `IDisposable` so you must properly dispose it when the document is created. Otherwise, some of the content may not be finished, that is, it might not appear on the PDF document.
           
@@ -62,7 +62,7 @@ The section properties control the page size, margins, and orientation of `RadFi
 
 #### **Example 2: Setting section properties**                    
 
-<snippet id='pdf-create-fixed-document-editor-section-properties'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor-section-properties'/>
 
 ### Starting New Section
 
@@ -72,7 +72,7 @@ Add an additional section with the `InsertSectionBreak()` method as demonstrated
              
 #### **Example 3: Start a section**
 
-<snippet id='pdf-create-fixed-document-editor-start-section'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor-start-section'/>
 
 >To change the properties of the next section, ensure you do it **before** you insert the section break. New properties are only used for newly created sections.
              
@@ -82,7 +82,7 @@ All pages that have the same `SectionProperties` are part of the current section
 
 #### **Example 4: Start new page**
 
-<snippet id='pdf-create-fixed-document-editor-start-page'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor-start-page'/>
 
 ## Paragraphs
 
@@ -118,7 +118,7 @@ Similar to the section properties, a paragraph has its own properties that contr
 
 #### **Example 5: Setting paragraph properties**
 
-<snippet id='pdf-create-fixed-document-editor-paragraph-properties'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor-paragraph-properties'/>
 
 ### Starting New Paragraph
 
@@ -128,7 +128,7 @@ To start a new paragraph, use the code in **Example 4**.
 
 #### **Example 6: Start a paragraph**
 
-<snippet id='pdf-create-fixed-document-editor-start-paragraph'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor-start-paragraph'/>
 
 The result of this method is that a new paragraph starts and uses the current paragraph properties. Until a new paragraph starts, changes in the paragraph properties are not applied.
 
@@ -173,7 +173,7 @@ The following character properties control the appearance of runs:
 
 #### **Example 7: Setting CharacterProperties** 
 
-<snippet id='pdf-create-fixed-document-editor-char-properties'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor-char-properties'/>
 
 >For the character properties to take effect, set them **before** inserting the run.
 
@@ -185,7 +185,7 @@ Several overloads insert a run. The code snippet in **Example 8** inserts new ru
 
 #### **Example 8: Insert run**
 
-<snippet id='pdf-create-fixed-document-editor-insert-run'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor-insert-run'/>
 
 Several overloads insert a run. The code snippet in **Example 8** inserts a couple of new runs, one of which with a specific font family.
                 
@@ -196,7 +196,7 @@ The code in **Example 9** inserts a new run and a line break after it.
 
 #### **Example 9: Insert run and line break**
 
-<snippet id='pdf-create-fixed-document-editor-insert-line-run'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor-insert-line-run'/>
 
 ### Images
 
@@ -208,7 +208,7 @@ You can insert an image inline using one of the following methods:
          
 #### **Example 10: Insert image**    
    
-<snippet id='pdf-create-fixed-document-editor-insert-image'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-create-fixed-document-editor-insert-image'/>
 
 ## Tables
 
@@ -217,7 +217,7 @@ The `Table` class implements the `IBlockElement` interface and you can insert an
 
 #### **Example 11: Insert table**
 
-<snippet id='pdf-fixed-document-editor-insert-table'/>     
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-fixed-document-editor-insert-table'/>     
 
 For more detailed information on tables, see the [Table]({%slug radpdfprocessing-editing-table-overview%}) documentation article.
         
@@ -227,7 +227,7 @@ The [IBlockElement](https://docs.telerik.com/devtools/document-processing/api/Te
 
 #### **Example 12: Insert Block element**
 
-<snippet id='pdf-fixed-document-editor-insert-block-element'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-fixed-document-editor-insert-block-element'/>
 
 ## Lists
 
@@ -237,7 +237,7 @@ The following code snippet shows how to add a new list to the `RadFixedDocumentE
 
 #### **Example 13: Insert list**
 
-<snippet id='pdf-fixed-document-editor-insert-list'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-fixed-document-editor-insert-list'/>
 
 More detailed information about lists is available in the [List documentation article]({%slug  radpdfprocessing-editing-list%}).
 
@@ -246,7 +246,7 @@ More detailed information about lists is available in the [List documentation ar
 With the `RadFixedDocumentEditor` class you can insert a Form (Form-XObject) element. 
 
 #### **Example 14: Insert a form**
-<snippet id='pdf-fixed-document-editor-insert-form'/>
+<snippet id='libraries-pdf-editing-radfixeddocumenteditor-fixed-document-editor-insert-form'/>
 
 There is an additional overload of `InsertFormInline()` that allows you to pass the size that should be used for the form.
 

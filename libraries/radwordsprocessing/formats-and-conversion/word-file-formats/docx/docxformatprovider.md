@@ -31,13 +31,13 @@ The following code shows how to use `DocxFormatProvider` to import a DOCX docume
 
 **Example 1: Import document from a file**
 
-<snippet id='codeblock-cr'/>
+<snippet id='libraries-flow-formats-and-conversion-word-file-formats-docx-docxformatprovider-1'/>
 
 You can also import a document from a byte array containing the DOCX document:
 
 **Example 2: Import document from a byte array**
 
-<snippet id='codeblock-cs'/>
+<snippet id='libraries-flow-formats-and-conversion-word-file-formats-docx-docxformatprovider-2'/>
 
 The resulting `RadFlowDocument` can be manipulated like any code-generated document.
 
@@ -49,13 +49,13 @@ The following code shows how to use `DocxFormatProvider` to export a `RadFlowDoc
 
 **Example 3: Export a document to a file**
 
-<snippet id='codeblock-ct'/>
+<snippet id='libraries-flow-formats-and-conversion-word-file-formats-docx-docxformatprovider-3'/>
 
 You can also export the document to a byte array and preserve it in a database.
 
 **Example 4: Export a document to a byte array**
 
-<snippet id='codeblock-cu'/>
+<snippet id='libraries-flow-formats-and-conversion-word-file-formats-docx-docxformatprovider-4'/>
 
 The resulting documents can be opened in any application that supports DOCX documents.
 

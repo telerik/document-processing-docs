@@ -21,7 +21,7 @@ A `Comment` holds annotation markers, which specify the range of document elemen
 
 **Example 1: Add a Comment to a Paragraph**
 
-<snippet id='codeblock-cdcd'/>
+<snippet id='libraries-flow-model-comment-1'/>
 
 The `AddComment()` method of the `Comments` collection of a document creates a new comment and returns it. The comment location is around a run with text "*text*". The paragraph must belong to the same document as the one passed to the constructor of the `Comment`. Otherwise, an exception is thrown.
 
@@ -29,13 +29,13 @@ The `AddComment()` method of the `Comments` collection of a document creates a n
 
 **Example 2: Insert a Previously Created Comment**
 
-<snippet id='codeblock-cece'/>
+<snippet id='libraries-flow-model-comment-2'/>
 
 **Example 3** demonstrates how to use another overload of the `InsertComment()` method of `RadFlowDocumentEditor`. In this case, a string representing the text of the `Comment` and two inline elements are passed. The two inline elements specify the element before which the `CommentRangeStart` is added and the element after which the `CommentRangeEnd` is added.
 
 **Example 3: Insert a Comment Around a Run**
 
-<snippet id='codeblock-cfcf'/>
+<snippet id='libraries-flow-model-comment-3'/>
 
 ## Modifying a Comment
 
@@ -53,7 +53,7 @@ The `Comment` class exposes several properties that allow you to customize infor
 
 **Example 4: Add Blocks to a Comment**
 
-<snippet id='codeblock-cgcg'/>
+<snippet id='libraries-flow-model-comment-4'/>
 
 ## See Also
 

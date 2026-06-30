@@ -54,7 +54,7 @@ The twelve color types are used for creating `ThemableColor` objects. They deter
 
 **Example 1: Create ThemeColorScheme**
 
-<snippet id='codeblock-cnl'/>
+<snippet id='libraries-spread-features-styling-document-themes-1'/>
 
 There are several ways to create a `ThemableColor` object:
 
@@ -74,7 +74,7 @@ To create colors that depend on the current document theme, you need to use `The
 
 **Example 2: Create ThemableColor**
 
-<snippet id='codeblock-cnm'/>
+<snippet id='libraries-spread-features-styling-document-themes-2'/>
 
 ## Font Schemes
 
@@ -90,7 +90,7 @@ To create a `ThemeFontScheme` you need to pass a name and two font family names 
 
 **Example 3: Create ThemeFontScheme**
 
-<snippet id='codeblock-cnn'/>
+<snippet id='libraries-spread-features-styling-document-themes-3'/>
 
 To use the document theme fonts, you need to use `ThemableFontFamily` objects. There are several ways you can create one:
 
@@ -104,7 +104,7 @@ When you need to create a font that depends on the current document theme, use t
 
 **Example 4: Create ThemableFontFamily**
 
-<snippet id='codeblock-cno'/>
+<snippet id='libraries-spread-features-styling-document-themes-4'/>
 
 ## Document Themes
 
@@ -114,7 +114,7 @@ Now that you have a color and a font scheme, you can create a new `DocumentTheme
 
 **Example 5: Create DocumentTheme**
 
-<snippet id='codeblock-cnp'/>
+<snippet id='libraries-spread-features-styling-document-themes-5'/>
 
 In the predefined static class `PredefinedThemeSchemes`, you can find several predefined color and font schemes. The class exposes the properties `ColorSchemes` and `FontSchemes` that hold all predefined schemes.
 
@@ -122,7 +122,7 @@ In the predefined static class `PredefinedThemeSchemes`, you can find several pr
 
 **Example 6: Create DocumentTheme from Predefined Schemes**
 
-<snippet id='codeblock-cnq'/>
+<snippet id='libraries-spread-features-styling-document-themes-6'/>
 
 To change the current document theme, set a single property:
 
@@ -130,7 +130,7 @@ To change the current document theme, set a single property:
 
 **Example 7: Change DocumentTheme**
 
-<snippet id='codeblock-cnr'/>
+<snippet id='libraries-spread-features-styling-document-themes-7'/>
 
 ## Getting Actual Values
 
@@ -138,11 +138,11 @@ To get the actual value from `ThemableColor` or `ThemableFontFamily`, call the `
 
 **Example 8: Get Actual Color**
 
-<snippet id='codeblock-cns'/>
+<snippet id='libraries-spread-features-styling-document-themes-8'/>
 
 **Example 9: Get Actual Font**
 
-<snippet id='codeblock-cnt'/>
+<snippet id='libraries-spread-features-styling-document-themes-9'/>
 
 ## See Also
 

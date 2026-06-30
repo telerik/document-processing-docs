@@ -22,14 +22,14 @@ You can use the code snippet from **Example 1** to create a `Section` element an
 
 **Example 1: Create a section and add it to a RadFlowDocument**
 
-<snippet id='codeblock-dr'/>
+<snippet id='libraries-flow-model-section-1'/>
 
 
 You can also use the `AddSection()` method of the `Sections` collection of a document. The method creates a new `Section` element, adds it to the document, and returns it.
 
 **Example 2: Create a section and add it to a RadFlowDocument**
 
-<snippet id='codeblock-ds'/>
+<snippet id='libraries-flow-model-section-2'/>
 
 
 ## Modifying a Section
@@ -40,27 +40,27 @@ The `Section` exposes several properties that allow you to customize the layout 
 
 	**Example 3: Change margins of a section**
 	
-	<snippet id='codeblock-dt'/>
+	<snippet id='libraries-flow-model-section-3'/>
 
 * `PageOrientation`: Specifies whether the pages in the section are in `Portrait` or in `Landscape` orientation. This property determines the actual size of the paper to use on the printer and does not reflect the document visualization. To affect the `Section` appearance, change the `PageSize` and `PageMargin` properties, or use the [Rotate method](#rotating-a-section), which changes them according to the desired page orientation.
 
 	**Example 4: Change orientation of a section**
 	
-	<snippet id='codeblock-du'/>
+	<snippet id='libraries-flow-model-section-4'/>
 
 
 * `PageSize`: Specifies the size of the pages in the section. The width and height are in device independent pixels (1/96 inch). The `PaperTypeConverter` class and the [PaperTypes](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Model.PaperTypes.html) enumeration provide a convenient API and predefined sizes.
 	
 	**Example 5: Change page size of a section**
 	
-	<snippet id='codeblock-dv'/>
+	<snippet id='libraries-flow-model-section-5'/>
 
 
 * **Headers and Footers**: Each `Section` has three Headers and three Footers—**Default** (used all through the section), **First** (used on the first page of the section), and **Even** (used on even pages of the document). The three Headers are contained in the `Headers` class accessible through the `Section.Headers` property. The three Footers are contained in the `Footers` class accessible through the `Section.Footers` property. **Example 6** shows how to create a default Header.
 
 	**Example 6: Create a header of a section**
 	
-	<snippet id='codeblock-dw'/>
+	<snippet id='libraries-flow-model-section-6'/>
 
 * `HeaderTopMargin`: Gets or sets the top margin of the header. The value is in device independent pixels (1/96 inch).
 
@@ -102,7 +102,7 @@ The `Section` exposes several properties that allow you to customize the layout 
 
 **Example 7: Add elements to a section**
 
-<snippet id='codeblock-dx'/>
+<snippet id='libraries-flow-model-section-7'/>
 
 
 ### Rotating a Section
@@ -111,7 +111,7 @@ You can rotate the `Section` to visualize its pages in Portrait or Landscape mod
 
 **Example 8: Rotate a section**
 
-<snippet id='codeblock-dy'/>
+<snippet id='libraries-flow-model-section-8'/>
 
 ## See Also
 

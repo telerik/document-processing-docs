@@ -40,7 +40,7 @@ Both `Workbook` and `Worksheet` classes expose methods that search their content
 
 **Example 1: Perform Find and Find All**
 
-<snippet id='codeblock-chy'/>
+<snippet id='libraries-spread-features-find-and-replace-1'/>
 
 ## Replace and ReplaceAll
 
@@ -52,7 +52,7 @@ In addition to the `Find()` and `FindAll()` methods, the `Workbook` and `Workshe
 
 **Example 2: Perform Replace and Replace All**
 
-<snippet id='codeblock-chz'/>
+<snippet id='libraries-spread-features-find-and-replace-2'/>
 
 ## See Also
 

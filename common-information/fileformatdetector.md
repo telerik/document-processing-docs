@@ -48,7 +48,7 @@ Represents the result of a file format detection operation.
 
 The following example demonstrates how to detect the format of a document from a file stream:
 
-<snippet id='libraries-common-fileformatdetector-detect-format'/>
+<snippet id='common-information-fileformatdetector'/>
 
 ## See Also
 

@@ -28,7 +28,7 @@ The following examples show how the two methods for merging change a worksheet.
 
 **Example 1: Construct Worksheet**
 
-<snippet id='codeblock-cjk'/>
+<snippet id='libraries-spread-features-merge-unmerge-cells-1'/>
 
 
 
@@ -43,7 +43,7 @@ The following examples show how the two methods for merging change a worksheet.
 
 **Example 2: Perform Merge Operation**
 
-<snippet id='codeblock-cjl'/>
+<snippet id='libraries-spread-features-merge-unmerge-cells-2'/>
 
 
 
@@ -64,7 +64,7 @@ The following example shows how the `MergeAcross()` method changes the same regi
 
 **Example 3: Perform Merge Across**
 
-<snippet id='codeblock-cjm'/>
+<snippet id='libraries-spread-features-merge-unmerge-cells-3'/>
 
 
 
@@ -85,7 +85,7 @@ If you now try to merge a cell range that intersects with another merged cell ra
 
 **Example 4: Intersect Cell Range with Merged Cell Range**
 
-<snippet id='codeblock-cjn'/>
+<snippet id='libraries-spread-features-merge-unmerge-cells-4'/>
 
 
 
@@ -113,7 +113,7 @@ The `Cells` class exposes a `GetIsMerged()` method that allows you to determine 
 
 **Example 5: Check if Cell Is in Merged Cell Range**
 
-<snippet id='codeblock-cjo'/>
+<snippet id='libraries-spread-features-merge-unmerge-cells-5'/>
 
 
 
@@ -127,7 +127,7 @@ Another way to check if a cell belongs to a merged range is to use the `TryGetCo
 
 **Example 6: Try Get Merged Cell Range**
 
-<snippet id='codeblock-cjp'/>
+<snippet id='libraries-spread-features-merge-unmerge-cells-6'/>
 
 
 
@@ -141,7 +141,7 @@ Use the `GetContainingMergedRanges()` method of the `Cells` class to retrieve al
 
 **Example 7: Get All Containing Merged Ranges in a Range**
 
-<snippet id='codeblock-cjq'/>
+<snippet id='libraries-spread-features-merge-unmerge-cells-7'/>
 
 
 
@@ -155,7 +155,7 @@ The `GetMergedCellRanges()` method of the `Cells` class returns an enumeration h
 
 **Example 8: Get All Merged Ranges**
 
-<snippet id='codeblock-cjr'/>
+<snippet id='libraries-spread-features-merge-unmerge-cells-8'/>
 
 
 
@@ -172,7 +172,7 @@ Once a cell is merged, the API offers an easy way to split it back to its compos
 
 **Example 9: Unmerge Cells**
 
-<snippet id='codeblock-cjs'/>
+<snippet id='libraries-spread-features-merge-unmerge-cells-9'/>
 
 
 

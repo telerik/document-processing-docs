@@ -33,7 +33,7 @@ You can set the value of the property to any valid CSS document. **Example 1** s
 
 **Example 1: Add CSS to the DefaultStyleSheet**
 
-<snippet id='codeblock-css-default'/>
+<snippet id='libraries-flow-formats-and-conversion-html-settings-1'/>
 
 ### GenericFonts
 
@@ -54,7 +54,7 @@ The `LoadImageFromUri` event uses the `LoadImageFromUriEventArgs` object which e
 **Example 2** shows how to use the `LoadImageFromUri` event to download an image.
 
 **Example 2: Use the LoadImageFromUri**
-<snippet id='codeblock-load-image-from-uri'/>
+<snippet id='libraries-flow-formats-and-conversion-html-settings-2'/>
 
 The `LoadStyleSheetFromUri` event uses the `LoadStyleSheetFromUriEventArgs` object which exposes the following properties:
 
@@ -64,7 +64,7 @@ The `LoadStyleSheetFromUri` event uses the `LoadStyleSheetFromUriEventArgs` obje
 **Example 3** shows how to use the `LoadStyleSheetFromUri` event.
 
 **Example 3: Use the LoadStyleSheetFromUri event**
-<snippet id='codeblock-load-stylesheet-from-uri'/>
+<snippet id='libraries-flow-formats-and-conversion-html-settings-3'/>
 
 ## UriImageSource Class
 
@@ -85,7 +85,7 @@ The provider always exports `UriImageSource` objects as images with URI as their
 
 **Example 4: Convert UriImageSource to ImageSource**
 
-<snippet id='codeblock-ca'/>
+<snippet id='libraries-flow-formats-and-conversion-html-settings-4'/>
 
 
 ## Export Settings
@@ -166,7 +166,7 @@ The event is only raised when the `StylesExportMode` property is set to `Externa
 
 **Example 5: Create HtmlExportSettings**
 
-<snippet id='codeblock-cb'/>
+<snippet id='libraries-flow-formats-and-conversion-html-settings-5'/>
 
 
 

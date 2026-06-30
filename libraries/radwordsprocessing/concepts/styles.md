@@ -57,7 +57,7 @@ A style must be added to the `RadFlowDocument` style repository to be further ap
 
 **Example 1: Create a table style and add it to the style repository**
 
-<snippet id='codeblock-x'/>
+<snippet id='libraries-flow-concepts-styles-1'/>
 
 
 >If a style is not added to the `StyleRepository`, applying it to a document element does not take any effect.
@@ -66,7 +66,7 @@ To apply a style to a specific element, set its `StyleId` property.
 
 **Example 2: Apply a custom style to an element**
 
-<snippet id='codeblock-y'/>
+<snippet id='libraries-flow-concepts-styles-2'/>
 
 ## Default Styles
 
@@ -82,7 +82,7 @@ Default style is a style which, according to its style type, is applied to objec
 
 **Example 3: Set a default font-family**
 
-<snippet id='codeblock-z'/>
+<snippet id='libraries-flow-concepts-styles-3'/>
 
 
 ## Built-in Styles
@@ -93,7 +93,7 @@ Built-in styles are commonly used styles, which are predefined for convenience. 
 
 **Example 4: Get the ID of a built-in style**
 
-<snippet id='codeblock-aab'/>
+<snippet id='libraries-flow-concepts-styles-4'/>
 
 
 

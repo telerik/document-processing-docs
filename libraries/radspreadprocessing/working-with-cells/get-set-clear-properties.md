@@ -34,7 +34,7 @@ To access cell properties, create a `CellSelection` object that contains the reg
 
 **Example 1: Create CellSelection**
 
-<snippet id='codeblock-cqx'/>
+<snippet id='libraries-spread-working-with-cells-get-set-clear-properties-1'/>
 
 
 
@@ -96,7 +96,7 @@ As already mentioned, the `CellSelection` class exposes methods that get, set, a
 
 **Example 2: Use GetIsBold(), SetIsBold() and ClearIsBold() Methods**
 
-<snippet id='codeblock-cqy'/>
+<snippet id='libraries-spread-working-with-cells-get-set-clear-properties-2'/>
 
 Using the previous approach you can set the value of almost all cell properties. There are a few exceptions to the general get, set, and clear rule, and each of them is described in one of the following sections.
 
@@ -106,7 +106,7 @@ Using the previous approach you can set the value of almost all cell properties.
 
 **Example 3: Using SetIsStrikethrough and SetVerticalTextAlignment**
 
-<snippet id='codeblock-strikethrough'/>
+<snippet id='libraries-spread-working-with-cells-get-set-clear-properties-3'/>
 
 <img style="border: 1px solid gray;" src="images/set-strikethrough-superscript-subscript-text.png" alt="Set Strikethrough Superscript Subscript-text" /> 
 
@@ -120,7 +120,7 @@ The `GetValue()` method retrieves the value of the property and returns an insta
 
 **Example 4: Retrieve Value of Cell**
 
-<snippet id='codeblock-cqz'/>
+<snippet id='libraries-spread-working-with-cells-get-set-clear-properties-4'/>
 
 
 
@@ -130,7 +130,7 @@ As the document model supports different types of cell values, the `CellSelectio
 
 **Example 5: Set Value of CellSelection**
 
-<snippet id='codeblock-cra'/>
+<snippet id='libraries-spread-working-with-cells-get-set-clear-properties-5'/>
 
 
 
@@ -142,7 +142,7 @@ The `Borders` property uses a `CellBorders` object for getting and setting its p
 
 **Example 6: Set Value of Borders**
 
-<snippet id='codeblock-crb'/>
+<snippet id='libraries-spread-working-with-cells-get-set-clear-properties-6'/>
 
 
 
@@ -161,7 +161,7 @@ As its name suggests, the `PatternFill` object fills the background of a region 
 
 **Example 7: Create and Set PatternFill**
 
-<snippet id='codeblock-crc'/>
+<snippet id='libraries-spread-working-with-cells-get-set-clear-properties-7'/>
 
 
 
@@ -176,7 +176,7 @@ The `GradientFill` sets the background of a region of cells to a gradual blendin
 
 **Example 8: Create and Set GradientFill**
 
-<snippet id='codeblock-crd'/>
+<snippet id='libraries-spread-working-with-cells-get-set-clear-properties-8'/>
 
 
 
@@ -191,7 +191,7 @@ In addition to the `GetIndent()`, `SetIndent()`, and `ClearIndent()` methods, `C
 
 **Example 9: Increase and Decrease Indent**
 
-<snippet id='codeblock-cre'/>
+<snippet id='libraries-spread-working-with-cells-get-set-clear-properties-9'/>
 
 
 

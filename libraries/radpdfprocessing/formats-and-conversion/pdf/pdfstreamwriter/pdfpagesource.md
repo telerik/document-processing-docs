@@ -1,4 +1,4 @@
-﻿---
+---
 title: PdfPageSource
 description: Learn how to use the PdfPageSource class in RadPdfProcessing to represent and work with individual pages from an existing PDF file.
 page_title: PdfPageSource
@@ -20,7 +20,7 @@ Obtain an instance of the `PdfPageSource` class by using the `Pages` property of
 
 #### **Example 1: Obtain an instance of PdfPageSource**
 
-<snippet id='pdf-obtain-page-source'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource-obtain-page-source'/>
 
 ### Members
 
@@ -37,7 +37,7 @@ Obtain an instance of the `PdfPageSource` class by using the `Pages` property of
 
 #### **Example 2: Merge the pages of several documents**
 
-<snippet id='pdf-merge-documents-with-page-source'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource-merge-documents-with-page-source'/>
 
 ## See Also
 

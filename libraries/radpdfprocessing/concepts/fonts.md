@@ -79,7 +79,7 @@ There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedd
 | Symbol|
 | ZapfDingbats|
 
-<snippet id='pdf-standard-font'/>
+<snippet id='libraries-pdf-concepts-fonts-standard-font'/>
 
 >tip These fonts, or their font metrics and suitable substitution fonts, must be available to the consumer application.
 
@@ -87,7 +87,7 @@ RadPdfProcessing introduced a suitable API for replacing the predefined Standard
 
 #### Replace a Standard Font
 
-<snippet id='pdf-replace-standard-font'/>
+<snippet id='libraries-pdf-concepts-fonts-replace-standard-font'/>
 
 #### Set a Fallback Font
 
@@ -95,11 +95,11 @@ You can configure fallback fonts for the standard fonts to ensure proper renderi
 
 The following example demonstrates how to set a fallback font for a specific standard font:
 
-<snippet id='libraries-pdf-concepts-comply-with-pdfa-set-standard-font-fallback'/>
+<snippet id='libraries-pdf-concepts-fonts-comply-with-pdfa-set-standard-font-fallback'/>
 
 To remove all configured fallback fonts, use the `ClearStandardFontFallbacks()` method:
 
-<snippet id='libraries-pdf-concepts-comply-with-pdfa-clear-fallback-fonts'/>
+<snippet id='libraries-pdf-concepts-fonts-comply-with-pdfa-clear-fallback-fonts'/>
 
 ## Embedded Fonts
 
@@ -115,23 +115,23 @@ If you want to use a font that is not part of the standard ones, register it usi
             
 #### __Example 1: Register font in .NET Framework application__
 
-<snippet id='pdf-register-font-net-framework'/>
+<snippet id='libraries-pdf-concepts-fonts-register-font-net-framework'/>
 
 #### __Example 1: Register font in .NET Standard application__
 
-<snippet id='pdf-register-font-net-standard'/>
+<snippet id='libraries-pdf-concepts-fonts-register-font-net-standard'/>
 
 ### Creating a Font
 
 >tip Each registered font can be obtained from the font repository as a `FontBase` object and applied to a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) through its `Font` property.
 
-<snippet id='pdf-text-fragment-font'/>
+<snippet id='libraries-pdf-concepts-fonts-text-fragment-font'/>
 
 **Example 2** shows how to create a font using `FontsRepository`.
             
 #### __Example 2: Create FontBase__
 
-<snippet id='pdf-bool-font-creation'/>
+<snippet id='libraries-pdf-concepts-fonts-bool-font-creation'/>
 
 You can create fonts that are not explicitly registered. Creating a font that is not registered in the repository with the code from **Example 2** tries to find the font from the ones installed on the machine. 
 

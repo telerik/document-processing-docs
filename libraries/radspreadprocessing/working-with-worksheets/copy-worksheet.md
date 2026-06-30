@@ -18,7 +18,7 @@ The `CopyFrom(Worksheet source)` method of a worksheet copies the passed *source
 
 **Example 1: Copy Worksheet**
 
-<snippet id='codeblock-csh'/>
+<snippet id='libraries-spread-working-with-worksheets-copy-worksheet-1'/>
 
 >If the sheet that you are copying is in a document where a [DocumentTheme]({%slug radspreadprocessing-features-styling-document-themes%}) has been applied, the theme is not copied. Themes are information preserved in the `Workbook` and you may need to transfer them separately.
 
@@ -28,7 +28,7 @@ You can copy a worksheet both into a newly created worksheet and an existing one
 
 **Example 2: Copy to Existing Workbook**
 
-<snippet id='codeblock-csj'/>
+<snippet id='libraries-spread-working-with-worksheets-copy-worksheet-2'/>
 
 
 ## See Also

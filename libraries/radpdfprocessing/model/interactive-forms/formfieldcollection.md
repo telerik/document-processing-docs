@@ -40,7 +40,7 @@ The following methods allow you to construct a form field and add it to the coll
 
 **Example 1: Create a Form Field**
 
-<snippet id='pdf-form-field-creation'/>
+<snippet id='libraries-pdf-model-interactive-forms-formfieldcollection-form-field-creation'/>
 
 You can also use the following methods to modify the collection of form fields in the document [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %}):
 
@@ -52,7 +52,7 @@ You can also use the following methods to modify the collection of form fields i
 
 **Example 2: Use the Methods of FormFieldCollection**
 
-<snippet id='pdf-form-field-collection-methods'/>
+<snippet id='libraries-pdf-model-interactive-forms-formfieldcollection-form-field-collection-methods'/>
 
 ## See Also
 

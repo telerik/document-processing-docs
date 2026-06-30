@@ -50,7 +50,7 @@ The following example shows how to validate a signature field:
 
 #### __Example 1: Validate a Field__
 
-<snippet id='pdf-validate-signature'/>
+<snippet id='libraries-pdf-features-digital-signature-signature-validation'/>
 
 >tip To evaluate a certificate as trusted, add it to the [trusted certificates on your machine](https://learn.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
 

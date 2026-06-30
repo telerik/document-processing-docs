@@ -37,7 +37,7 @@ To convert document pages to images, use the `Export` method. The `Export` metho
 
 #### __Example 1: Export RadFixedDocument to Image__
 
-<snippet id='pdf-export-to-image'/>
+<snippet id='libraries-pdf-formats-and-conversion-convert-to-image-using-image-format-provider-export-to-image'/>
 
 ## Exporting Asynchronously
 
@@ -45,7 +45,7 @@ The `ExportAsync` method allows you to perform the conversion asynchronously.
 
 #### __Example 2: Export RadFixedDocument to Image Async__
 
-<snippet id='pdf-async-export-to-image'/>
+<snippet id='libraries-pdf-formats-and-conversion-convert-to-image-using-image-format-provider-async-export-to-image'/>
 
 ## Export Settings
 

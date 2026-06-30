@@ -61,7 +61,7 @@ To fit the print content better, use the worksheet page setup and change the pag
 
 #### __Example 1: Use WorksheetPageSetup__
 
-<snippet id='codeblock-cld'/>
+<snippet id='libraries-spread-features-worksheetpagesetup-1'/>
 
 As a result, the data fits into a single page with size A4 as shown in **Figure 2**.
 
@@ -87,7 +87,7 @@ The example shown in **Figure 3** demonstrates how to use the worksheet print ar
 
 #### __Example 2: Set PrintArea__
 
-<snippet id='codeblock-cle'/>
+<snippet id='libraries-spread-features-worksheetpagesetup-2'/>
 
 
 
@@ -123,7 +123,7 @@ To separate the print data semantically onto several pages, place horizontal pag
 
 #### __Example 3: Insert PageBreaks__
 
-<snippet id='codeblock-clf'/>
+<snippet id='libraries-spread-features-worksheetpagesetup-3'/>
 
 
 
@@ -142,7 +142,7 @@ The `PrintTitles` property of `WorksheetPageSetup` enables you to set rows or co
 
 #### __Example 4: Repeat the first two rows and two columns of the worksheet on each page__
 
-<snippet id='codeblock-clg'/>
+<snippet id='libraries-spread-features-worksheetpagesetup-4'/>
 
 ## See Also
 

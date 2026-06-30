@@ -57,7 +57,7 @@ You can create instances of each of those types using the static methods of the 
 
 **Example 1: Create Link to Web Address**
 
-<snippet id='codeblock-ciz'/>
+<snippet id='libraries-spread-features-hyperlink-1'/>
 
 
 
@@ -66,7 +66,7 @@ You can create instances of each of those types using the static methods of the 
 
 **Example 2: Create Link to Place in the Document**
 
-<snippet id='codeblock-cja'/>
+<snippet id='libraries-spread-features-hyperlink-2'/>
 
 
 **Example 3** creates a hyperlink to a cell in another worksheet of the document.
@@ -74,7 +74,7 @@ You can create instances of each of those types using the static methods of the 
 
 **Example 3: Create Link to a Cell in Another Worksheet of the Document**
 
-<snippet id='codeblock-cjb'/>
+<snippet id='libraries-spread-features-hyperlink-3'/>
 
 
 
@@ -83,7 +83,7 @@ You can create instances of each of those types using the static methods of the 
 
 **Example 4: Create Link to Email Address**
 
-<snippet id='codeblock-cjc'/>
+<snippet id='libraries-spread-features-hyperlink-4'/>
 
 
 
@@ -97,7 +97,7 @@ To add a hyperlink, you need to specify a cell range that contains the hyperlink
 
 **Example 5: Add Hyperlink**
 
-<snippet id='codeblock-cjd'/>
+<snippet id='libraries-spread-features-hyperlink-5'/>
 
 
 
@@ -111,7 +111,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
 
 **Example 6: Define Cell Range**
 
-<snippet id='codeblock-cje'/>
+<snippet id='libraries-spread-features-hyperlink-6'/>
 
 
 
@@ -120,7 +120,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
 
 **Example 7: Get Hyperlinks in Cell Range**
 
-<snippet id='codeblock-cjf'/>
+<snippet id='libraries-spread-features-hyperlink-7'/>
 
 
 
@@ -132,7 +132,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
 
 **Example 8: Get Hyperlinks Intersecting with Cell Range**
 
-<snippet id='codeblock-cjg'/>
+<snippet id='libraries-spread-features-hyperlink-8'/>
 
 
 
@@ -141,7 +141,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
 
 **Example 9: Get Last Hyperlink Intersecting with Cell Range**
 
-<snippet id='codeblock-cjh'/>
+<snippet id='libraries-spread-features-hyperlink-9'/>
 
 
 
@@ -153,7 +153,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
 
 **Example 10: Get Hyperlink Exactly Matching Cell Range**
 
-<snippet id='codeblock-cji'/>
+<snippet id='libraries-spread-features-hyperlink-10'/>
 
 
 
@@ -167,6 +167,6 @@ To remove a hyperlink you need to retrieve a `SpreadsheetHyperlink` object and t
 
 **Example 11: Remove Hyperlink**
 
-<snippet id='codeblock-cjj'/>
+<snippet id='libraries-spread-features-hyperlink-11'/>
 
 

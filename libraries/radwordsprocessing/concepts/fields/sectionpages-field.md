@@ -29,7 +29,7 @@ You can insert a `SectionPages` field through the [RadFlowDocumentEditor]({%slug
 
 **Example 1: Insert SectionPages Field**
 
-<snippet id='codeblock-bl'/>
+<snippet id='libraries-flow-concepts-fields-sectionpages-field'/>
 
 After updating the field, the result is "Page 3 of 19" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
 

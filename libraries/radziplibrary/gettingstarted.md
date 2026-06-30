@@ -32,7 +32,7 @@ The following code snippet shows how to open an existing ZIP archive with the `Z
 
 **Example 1: Open Archive**
 
-<snippet id='codeblock-dse'/>
+<snippet id='libraries-zip-gettingstarted-1'/>
 
 The `archive` variable holds the compressed files in the selected ZIP. You can access these files through the `ZipArchive.Entries` property. It holds a collection of [ZipArchiveEntry]({%slug radziplibrary-update-ziparchive%}) elements that describe the archived files. Use these elements to get the name of the compressed file, its uncompressed and compressed size, and other file attributes.
 
@@ -42,7 +42,7 @@ The `archive` variable holds the compressed files in the selected ZIP. You can a
 
 **Example 2: Create Archive**
 
-<snippet id='codeblock-dsf'/>
+<snippet id='libraries-zip-gettingstarted-2'/>
 
 >tip If you use `StreamWriter` to write content to the stream, call the `Flush()` method to flush the data to the stream.
 
@@ -52,7 +52,7 @@ The constructor of `ZipArchive` lets you set whether to keep the stream associat
 
 **Example 3: Create Archive in a MemoryStream**
 
-<snippet id='codeblock-dsg'/>
+<snippet id='libraries-zip-gettingstarted-3'/>
 
 For more examples, go to the [Developer Focused Examples]({%slug radziplibrary-sdk-examples%}) section of the library.
 

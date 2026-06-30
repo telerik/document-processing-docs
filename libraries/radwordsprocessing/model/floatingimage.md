@@ -18,7 +18,7 @@ position: 9
 
 **Example 1: Create a Floating Image and Insert It in a Paragraph**
 
-<snippet id='codeblock-chch'/>
+<snippet id='libraries-flow-model-floatingimage-1'/>
 
 >tip The parent `Paragraph` must belong to the same document that is passed to the constructor of the `FloatingImage`.
 
@@ -26,19 +26,19 @@ You can add an image at a specific index in the `Inlines` collection of a paragr
 
 **Example 2: Add a Floating Image to a Specific Position**
 
-<snippet id='codeblock-cici'/>
+<snippet id='libraries-flow-model-floatingimage-2'/>
 
 You can also use the `AddFloatingImage()` method of the `Inlines` collection of a paragraph. The method creates a new `FloatingImage`, adds it to the paragraph, and returns it.
 
 **Example 3: Using the AddFloatingImage Method**
 
-<snippet id='codeblock-cjcj'/>
+<snippet id='libraries-flow-model-floatingimage-3'/>
 
 You can also insert a `FloatingImage` element in a `RadFlowDocument` with [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
 
 **Example 4: Insert a Floating Image Using RadFlowDocumentEditor**
 
-<snippet id='codeblock-ckck'/>
+<snippet id='libraries-flow-model-floatingimage-4'/>
 
 ## Modifying a FloatingImage
 

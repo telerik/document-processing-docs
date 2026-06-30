@@ -54,13 +54,13 @@ The `PdfFormatProvider` class exports a `RadFixedDocument` to PDF and allows you
 
 To comply with any of the standards, set the `ComplianceLevel` property to a value different than `None`:
 
-<snippet id='libraries-pdf-concepts-compliance-ensure-compliance'/>
+<snippet id='libraries-pdf-concepts-comply-with-pdfa-standard-compliance-ensure-compliance'/>
 
 ### Accessibility Compliance
 
 To comply with the [accessibility]({%slug create-accessible-pdf-documents%}) requirements of the PDF/A-1a, PDF/A-2a, PDF/A-3a, or PDF/UA-1 standards, you must also set the [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}) property of the `PdfFormatProvider` `PdfExportSettings`. 
 
-<snippet id='libraries-pdf-concepts-compliance-ensure-accessability-compliance'/>
+<snippet id='libraries-pdf-concepts-comply-with-pdfa-standard-compliance-ensure-accessability-compliance'/>
 
 This ensures that the exported PDF document is properly tagged, which is essential for meeting these standards' requirements.
 
@@ -72,11 +72,11 @@ This ensures that the exported PDF document is properly tagged, which is essenti
 
 When you work with PDF/A-compliant documents, you can specify fallback fonts for the standard fonts to ensure proper rendering when the standard font is unavailable or needs to be replaced:
 
-<snippet id='libraries-pdf-concepts-comply-with-pdfa-set-standard-font-fallback'/>
+<snippet id='libraries-pdf-concepts-comply-with-pdfa-standard-comply-with-pdfa-set-standard-font-fallback'/>
 
 If you need to remove all configured fallback fonts, use the `ClearStandardFontFallbacks()` method:
 
-<snippet id='libraries-pdf-concepts-comply-with-pdfa-clear-fallback-fonts'/>
+<snippet id='libraries-pdf-concepts-comply-with-pdfa-standard-comply-with-pdfa-clear-fallback-fonts'/>
 
 ## See Also
 

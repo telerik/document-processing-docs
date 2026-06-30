@@ -17,13 +17,13 @@ position: 5
 
 You can merge PDF documents with the `Merge` method of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}). This method clones the source document and appends it to the current instance of `RadFixedDocument`:
 
-<snippet id='libraries-pdf-features-merge-documents-with-radfixeddocument'/>
+<snippet id='libraries-pdf-features-merge-pdf-documents-merge-documents-with-radfixeddocument'/>
 
 ## Using the PdfStreamWriter
 
 An alternative approach is to use the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) to merge pages from different PDF documents:
  
-<snippet id='libraries-pdf-features-merge-documents-with-pdfstreamwriter'/>
+<snippet id='libraries-pdf-features-merge-pdf-documents-merge-documents-with-pdfstreamwriter'/>
 
 >note The following SDK example demonstrates this topic: [Manipulate Pages SDK Demo](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages).
 

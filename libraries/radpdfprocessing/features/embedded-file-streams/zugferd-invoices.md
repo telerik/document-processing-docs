@@ -18,7 +18,7 @@ position: 1
 
 ### Add ZUGFeRD Invoice
 
-<snippet id='pdf-add-zugferd-invoice'/>
+<snippet id='libraries-pdf-features-embedded-file-streams-zugferd-invoices-add-zugferd-invoice'/>
 
 >note Only a single XML invoice attachment is allowed according to the ZUGFeRD standard.
 
@@ -26,7 +26,7 @@ position: 1
 
 ### Remove ZUGFeRD Invoice
 
-<snippet id='pdf-remove-zugferd-invoice'/>
+<snippet id='libraries-pdf-features-embedded-file-streams-zugferd-invoices-remove-zugferd-invoice'/>
 
 ## ZugferdConformanceLevel 
 
@@ -42,7 +42,7 @@ RadPdfProcessing allows you to set the `ZugferdConformanceLevel` when embedding 
 | `Extended` | The most comprehensive profile including extended data elements to cover advanced or industry-specific scenarios beyond the comfort profile. |
 | `XRechnung` | The German CIUS (Core Invoice Usage Specification) reference profile based on EN 16931. Used for public-sector electronic invoicing in Germany. Exports with `XRECHNUNG` conformance metadata and embeds the invoice XML as `xrechnung.xml`. |
 
-<snippet id='pdf-specify-zugferd-conformance-level'/>
+<snippet id='libraries-pdf-features-embedded-file-streams-zugferd-invoices-specify-zugferd-conformance-level'/>
 
 ### XRechnung Profile
 

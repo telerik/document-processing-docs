@@ -18,7 +18,7 @@ The code snippet from **Example 1** opens a ZIP archive in update mode using the
 
 **Example 1: Open for update**
 
-<snippet id='codeblock-dsp'/>
+<snippet id='libraries-zip-features-update-ziparchive-1'/>
 
 ## Add Entry
 
@@ -36,7 +36,7 @@ To add a new entry into the ZIP archive, perform the following steps:
 
 **Example 2: Add entry**
 
-<snippet id='codeblock-dsq'/>
+<snippet id='libraries-zip-features-update-ziparchive-2'/>
 
 ## Delete Entry
 
@@ -46,7 +46,7 @@ The `ZipArchive` class provides a `GetEntry()` method, which allows you access t
 
 **Example 3: Delete entry**
 
-<snippet id='codeblock-dsr'/>
+<snippet id='libraries-zip-features-update-ziparchive-3'/>
 
 ## Update Entry
 
@@ -62,7 +62,7 @@ To update an existing entry in the ZIP archive, perform the following steps:
 
 **Example 4: Update entry**
 
-<snippet id='codeblock-dss'/>
+<snippet id='libraries-zip-features-update-ziparchive-4'/>
 
 ## Copy Entry
 

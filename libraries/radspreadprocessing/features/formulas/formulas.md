@@ -38,7 +38,7 @@ To set the value of a cell to a formula, use the `SetValue()` method of the [Cel
 
 **Example 1: Set Formula**
 
-<snippet id='codeblock-cmx'/>
+<snippet id='libraries-spread-features-formulas-1'/>
 
 
 
@@ -50,7 +50,7 @@ A closer look at the value of cell A1 reveals that the two methods `GetValueAsSt
 
 **Example 2: Get Formula Value**
 
-<snippet id='codeblock-cmy'/>
+<snippet id='libraries-spread-features-formulas-2'/>
 
 
 

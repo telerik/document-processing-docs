@@ -85,7 +85,7 @@ The any value data validation rule is the default rule. It applies to all cells 
 
 #### __Example 1: Apply Any Value Rule__
 
-<snippet id='codeblock-chb'/>
+<snippet id='libraries-spread-features-data-validation-1'/>
 
 The result from the code snippet in **Example 1** is shown in **Figure 1**.
 
@@ -101,7 +101,7 @@ The code snippet in **Example 2** shows how to create a whole number data valida
 
 #### __Example 2: Apply Whole Number Rule with Two Arguments__
 
-<snippet id='codeblock-chc'/>
+<snippet id='libraries-spread-features-data-validation-2'/>
 
 The result from **Example 2** is shown in **Figure 2**.
 
@@ -119,13 +119,13 @@ The code snippet in **Example 3** shows how to create a whole number data valida
 
 #### __Example 3: Apply Whole Number Rule with One Argument__
 
-<snippet id='codeblock-chd'/>
+<snippet id='libraries-spread-features-data-validation-3'/>
 
 You can enter any valid [formula]({%slug radspreadprocessing-features-formulas-general-information%}) as a rule argument that returns a number. **Example 4** shows how to restrict user input to the values less than the sum of the values in cells A1 and B1.
 
 #### __Example 4: Apply Whole Number Rule with Formula__
 
-<snippet id='codeblock-che'/>
+<snippet id='libraries-spread-features-data-validation-4'/>
 
 
 #### Figure 4: Whole number rule based on formula
@@ -143,7 +143,7 @@ The decimal data validation rule allows you to restrict user input to decimal nu
 
 #### __Example 5: Apply Decimal Rule__
 
-<snippet id='codeblock-chf'/>
+<snippet id='libraries-spread-features-data-validation-5'/>
 
 ## List Rule
 
@@ -153,7 +153,7 @@ The list data validation rule allows you to restrict user input to a predefined 
 
 #### __Example 6: Apply List Rule__
 
-<snippet id='codeblock-chg'/>
+<snippet id='libraries-spread-features-data-validation-6'/>
 
 **Figure 5** shows the result from **Example 6**.
 
@@ -169,7 +169,7 @@ The date rule allows you to restrict user input to a certain range of dates spec
 
 #### __Example 7: Apply Date Rule__
 
-<snippet id='codeblock-chh'/>
+<snippet id='libraries-spread-features-data-validation-7'/>
 
 ## Time Rule
 
@@ -179,7 +179,7 @@ The code snippet in **Example 8** shows how to restrict user input to the range 
 
 #### __Example 8: Apply Time Rule__
 
-<snippet id='codeblock-chi'/>
+<snippet id='libraries-spread-features-data-validation-8'/>
 
 ## Text Length Rule
 
@@ -189,7 +189,7 @@ The text length rule allows you to restrict user input to text with a length in 
 
 #### __Example 9: Apply Text Length Rule__
 
-<snippet id='codeblock-chj'/>
+<snippet id='libraries-spread-features-data-validation-9'/>
 
 ## Custom Rule
 
@@ -199,7 +199,7 @@ The code snippet in **Example 10** shows how to restrict user input to values gr
 
 #### __Example 10: Apply Custom Rule__
 
-<snippet id='codeblock-chk'/>
+<snippet id='libraries-spread-features-data-validation-10'/>
 
 ## Evaluate Rules
 
@@ -208,7 +208,7 @@ To check if a cell value satisfies a rule, evaluate the rule using the desired c
 **Example 11** demonstrates how to evaluate a rule using the `Evaluate()` method.
 
 #### __Example 11: Evaluate Rule__
-<snippet id='codeblock-chl'/>
+<snippet id='libraries-spread-features-data-validation-11'/>
 
 
 ## See Also

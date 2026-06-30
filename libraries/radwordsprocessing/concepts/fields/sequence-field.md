@@ -51,7 +51,7 @@ You can insert SEQ fields when adding numbers to tables, figures, and other item
 
 The suggested approach for inserting code fields is to use [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The `InsertField()` method accepts code as the first argument and the result as the second argument.
 
-<snippet id='codeblock-bm'/>
+<snippet id='libraries-flow-concepts-fields-sequence-field'/>
 
 ## See Also
 

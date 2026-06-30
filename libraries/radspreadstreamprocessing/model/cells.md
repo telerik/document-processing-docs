@@ -31,7 +31,7 @@ You can create a concrete instance of `ICellExporter` through the `CreateCellExp
 **Example 1: Using ICellExporter**
 
 
-<snippet id='codeblock-dle'/>
+<snippet id='libraries-spreadstream-model-cells-1'/>
 
 >`ICellExporter` inherits from [IDisposable](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Ensure the object is disposed when you are done with it. Otherwise, the content will not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -51,7 +51,7 @@ The `SetValue()` method exposes several overloads that allow you to set values f
 
 **Example 2: Setting a Value to a Cell**
 
-<snippet id='codeblock-dlf'/>
+<snippet id='libraries-spreadstream-model-cells-2'/>
 
 
 ### Set a Formula
@@ -60,7 +60,7 @@ To allow you to set a formula as a value of a cell, `ICellExporter` defines the 
 
 **Example 3: Setting a Formula to a Cell**
 
-<snippet id='codeblock-dlg'/>
+<snippet id='libraries-spreadstream-model-cells-3'/>
 
 
 >All formulas must be set in `InvariantCulture`. For example, the decimal separator must be ".", and the list separator must be ",".
@@ -83,7 +83,7 @@ In some cases you may need to skip several cells and start filling the data in t
 
 **Example 5: Skip Cells**
 
-<snippet id='codeblock-dlh'/>
+<snippet id='libraries-spreadstream-model-cells-4'/>
 
 ### Merge Cells
 
@@ -91,7 +91,7 @@ In some cases you may need to skip several cells and start filling the data in t
 
 **Example 6: Merge Cells**
 
-<snippet id='codeblock-dli'/>
+<snippet id='libraries-spreadstream-model-cells-5'/>
 
 >important Due to the importance of the order the content is inserted in a document, the Merge operation must be the last operation before disposing `IWorksheetExporter`.
 
@@ -123,13 +123,13 @@ Another method exposed by `ICellExporter`—`SetFormat()`—enables you to chang
 
 **Example 7: Format Cells**
 
-<snippet id='codeblock-dlj'/>
+<snippet id='libraries-spreadstream-model-cells-6'/>
 
 In addition to the listed properties, the `SpreadCellFormat` class allows you to set a style to a cell. For more information on cell styles, see the [Cell Styles]({%slug radspreadstreamprocessing-features-styling-cell-styles%}) topic.
 
 **Example 8: Set the Value Format to String, Date, or a Number**
 
-<snippet id='codeblock-dlk'/>
+<snippet id='libraries-spreadstream-model-cells-7'/>
 
 You can apply a `SpreadCellFormat` instance on multiple cells. However, if a property of the format changes, the new settings apply to the cells formatted after the modification.
 
@@ -141,7 +141,7 @@ You can get a concrete instance of `ICellImporter` through the `Cells` collectio
 
 **Example 9: Create ICellImporter**
 
-<snippet id='codeblock-dll'/>
+<snippet id='libraries-spreadstream-model-cells-8'/>
 
 The `ICellImporter` interface exposes the following properties:
 

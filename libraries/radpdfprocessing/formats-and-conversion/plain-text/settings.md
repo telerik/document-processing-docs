@@ -33,7 +33,7 @@ The constructor of the `TextFormatProviderSettings` class has two overloads:
 **Example 1** shows how to create and specify a particular setting.
 
 #### **Example 1: Create TextFormatProviderSettings**
-<snippet id='pdf-create-text-provider-settings'/>
+<snippet id='libraries-pdf-formats-and-conversion-plain-text-settings-create-text-provider-settings'/>
 
 
 ## Using TextFormatProviderSettings
@@ -43,7 +43,7 @@ The `Export()` method of `TextFormatProvider` accepts a `TextFormatProviderSetti
 
 #### **Example 2: Apply TextFormatProviderSettings**
 
-<snippet id='pdf-apply-text-provider-settings'/>
+<snippet id='libraries-pdf-formats-and-conversion-plain-text-settings-apply-text-provider-settings'/>
 
 ## See Also
 

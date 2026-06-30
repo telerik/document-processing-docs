@@ -58,7 +58,7 @@ To import a Markdown file, create a `MarkdownFormatProvider` instance and call i
 
 **Example 1: Import from a File**
 
-<snippet id='markdownformatprovider-import'/>
+<snippet id='libraries-flow-formats-and-conversion-markdown-markdownformatprovider-import'/>
 
 The provider parses the Markdown content and builds a `RadFlowDocument` with the corresponding paragraphs, headings, tables, and inline formatting. The provider maps inline elements such as bold, italic, code, and strikethrough to the equivalent character properties in the document model.
 
@@ -68,7 +68,7 @@ To export a `RadFlowDocument` to Markdown, create a `MarkdownFormatProvider` ins
 
 **Example 2: Export to a File**
 
-<snippet id='markdownformatprovider-export'/>
+<snippet id='libraries-flow-formats-and-conversion-markdown-markdownformatprovider-export'/>
 
 The exporter traverses the document structure and writes the equivalent Markdown constructs. The exporter maps heading styles to ATX-style heading markers (`#`–`######`), renders tables as GitHub-Flavored Markdown pipe tables, and writes lists with the appropriate indentation.
 

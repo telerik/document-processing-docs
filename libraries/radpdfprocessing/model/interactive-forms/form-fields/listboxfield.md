@@ -26,7 +26,7 @@ The `ListBoxField` class provides the following properties:
 
 **Example 1: Create a ListBoxField and Add It to a Page**
 
-<snippet id='pdf-listboxfield'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-listboxfield'/>
 
 ## See Also
 

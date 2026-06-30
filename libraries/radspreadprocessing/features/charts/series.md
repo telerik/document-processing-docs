@@ -83,7 +83,7 @@ To better illustrate how you can change the series of a chart, consider the samp
 
 **Example 1: Add and Remove Series from a Chart**
 
-<snippet id='codeblock-cln'/>
+<snippet id='libraries-spread-features-charts-series-1'/>
 
 **Figure 2: Modified Series of a Chart**
 
@@ -93,7 +93,7 @@ The same methods for adding and removing series can be accessed through the conc
 
 **Example 2: Add Series to a Chart Using Concrete SeriesGroup Object**
 
-<snippet id='codeblock-clo'/>
+<snippet id='libraries-spread-features-charts-series-2'/>
 
 ## Iterating the Series of a Chart
 
@@ -102,7 +102,7 @@ You can access the `Series` property of the `SeriesGroup` object contained in th
 
 **Example 3: Iterate Series**
 
-<snippet id='codeblock-clp'/>
+<snippet id='libraries-spread-features-charts-series-3'/>
 
 ## Making Changes to the Series
 
@@ -110,7 +110,7 @@ You can modify the properties of the base class for all series—`SeriesBase`.
 
 **Example 4: Change Series**
 
-<snippet id='codeblock-clq'/>
+<snippet id='libraries-spread-features-charts-series-4'/>
 
 
 ## SeriesGroup Class and Properties Related to Specific Series Types
@@ -168,7 +168,7 @@ The `ScatterStyle` enumeration supports the following values:
 
 **Example 5: Customize the Appearance of ScatterSeries**
 
-<snippet id='codeblock-clr'/>
+<snippet id='libraries-spread-features-charts-series-5'/>
 
 
 ## Series Grouping
@@ -181,7 +181,7 @@ Some series groups (Bar, Line, and Area) implement the `ISupportGrouping` interf
 
 **Example 6: Creating Standard/Clustered Bar Chart with Vertical Orientation**
 
-<snippet id='codeblock-cls'/>
+<snippet id='libraries-spread-features-charts-series-6'/>
 
 **Figure 4: Standard/Clustered Bar Chart with Vertical Orientation**
 
@@ -189,7 +189,7 @@ Some series groups (Bar, Line, and Area) implement the `ISupportGrouping` interf
 
 **Example 7: Creating Stacked Bar Chart with Vertical Orientation**
 
-<snippet id='codeblock-clt'/>
+<snippet id='libraries-spread-features-charts-series-7'/>
 
 **Figure 5: Stacked Bar Chart with Vertical Orientation**
 
@@ -198,7 +198,7 @@ Some series groups (Bar, Line, and Area) implement the `ISupportGrouping` interf
 
 **Example 8: Creating Percent-Stacked Bar Chart with Vertical Orientation**
 
-<snippet id='codeblock-clu'/>
+<snippet id='libraries-spread-features-charts-series-8'/>
 
 **Figure 6: Percent-Stacked Bar Chart with Vertical Orientation**
 

@@ -37,7 +37,7 @@ You can edit an `Image` element using the properties the class exposes. The prop
 
 #### **Example 1: Create image**
 
-<snippet id='pdf-create-image'/>
+<snippet id='libraries-pdf-model-image-create-image'/>
 
 Once you [export]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) the `RadFixedDocument`, the following document with an image is created:
 
@@ -47,7 +47,7 @@ Once you [export]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatpr
 
 #### **Example 2: Add image to container**
 
-<snippet id='pdf-image-source'/>
+<snippet id='libraries-pdf-model-image-source'/>
 
 >tip There are other methods that allow adding an image to a document by passing image size, format, and source. You can use them through the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) class.
 
@@ -57,7 +57,7 @@ The `Image` class also exposes the `GetBitmapSource()` method, which allows you 
 
 #### **Example 3: Obtain BitmapSource**
 
-<snippet id='pdf-obtain-botmap-source'/>
+<snippet id='libraries-pdf-model-image-obtain-botmap-source'/>
 
 ## See Also
 

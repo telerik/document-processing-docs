@@ -73,11 +73,11 @@ The `CheckBox` content control exposes two properties: `CheckedState` and `Unche
 
 **Example 1: Setting CheckBox Properties**
 
-<snippet id='codeblock-dhdh'/>
+<snippet id='libraries-flow-model-content-controls-1'/>
 
 You can visualize the toggle states with any characters specified in the properties. The following example demonstrates a complete code snippet for inserting toggled and untoggled checkboxes:
 
-<snippet id='codeblock-dmdm'/>
+<snippet id='libraries-flow-model-content-controls-2'/>
 
 ![Insert CheckBoxes](images/insert-checkboxes.gif)
 
@@ -93,7 +93,7 @@ The `ComboBox` and `DropDownList` provide the user with options to choose from. 
 
 **Example 2: Setting ComboBox Properties**
 
-<snippet id='codeblock-didi'/>
+<snippet id='libraries-flow-model-content-controls-3'/>
 
 ### Date
 
@@ -107,7 +107,7 @@ The `Date` content control allows you to enter a date by using a calendar. The d
 
 **Example 3: Setting Date Properties**
 
-<snippet id='codeblock-djdj'/>
+<snippet id='libraries-flow-model-content-controls-4'/>
 
 ### Text
 
@@ -117,7 +117,7 @@ The `Text` content control allows you to enter plain text. The text content cont
 
 **Example 4: Setting Text Properties**
 
-<snippet id='codeblock-dkdk'/>
+<snippet id='libraries-flow-model-content-controls-5'/>
 
 ### RepeatingSection
 
@@ -128,7 +128,7 @@ The `RepeatingSection` content control has the following properties:
 
 **Example 5: Setting RepeatingSection Properties**
 
-<snippet id='codeblock-dldl'/>
+<snippet id='libraries-flow-model-content-controls-6'/>
 
 ## See Also
 

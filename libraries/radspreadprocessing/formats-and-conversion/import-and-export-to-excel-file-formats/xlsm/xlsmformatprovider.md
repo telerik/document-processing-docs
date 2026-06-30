@@ -33,7 +33,7 @@ The following example shows how to import an XLSM file through a `FileStream`. T
 
 **Example 1: Import XLSM (Excel Workbook) File**
 
-<snippet id='codeblock-cot'/>
+<snippet id='libraries-spread-formats-and-conversion-import-and-export-to-excel-file-formats-xlsm-xlsmformatprovider-1'/>
 
 ## Export
 
@@ -43,12 +43,12 @@ The following example demonstrates how to export an existing workbook to an XLSM
 
 **Example 2: Export Spreadsheet Document to XLSM (Excel Workbook) File**
 
-<snippet id='codeblock-cou'/>
+<snippet id='libraries-spread-formats-and-conversion-import-and-export-to-excel-file-formats-xlsm-xlsmformatprovider-2'/>
 
 
 **Example 3: Export Spreadsheet Document to a Stream and byte[]**
 
-<snippet id='codeblock-cov'/> 
+<snippet id='libraries-spread-formats-and-conversion-import-and-export-to-excel-file-formats-xlsm-xlsmformatprovider-3'/> 
 
 ## See Also
 

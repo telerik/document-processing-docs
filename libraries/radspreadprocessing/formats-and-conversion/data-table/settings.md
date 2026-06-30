@@ -34,7 +34,7 @@ The `CellImportedEventArgs` contains information about the current cell:
 
 **Example 1: Using the CellImported Event to Format the Cells**
 
-<snippet id='codeblock-col'/>
+<snippet id='libraries-spread-formats-and-conversion-data-table-settings-1'/>
 
 ## Export Settings
 
@@ -54,7 +54,7 @@ The `ColumnExportingEventArgs` object contains the current column instance and i
 
 **Example 2: Using the ColumnExporting Event to Set the AllowDBNull Property**
 
-<snippet id='codeblock-com'/>
+<snippet id='libraries-spread-formats-and-conversion-data-table-settings-2'/>
 
 ## See Also
 

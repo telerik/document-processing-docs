@@ -35,7 +35,7 @@ With WordsProcessing, you can work with images from the following file formats:
 
 **Example 1: Create an image inline and insert it in a paragraph**
 
-<snippet id='codeblock-cqcq'/>
+<snippet id='libraries-flow-model-imageinline-1'/>
 
 >tip The parent `Paragraph` must belong to the same document that is passed to the constructor of the `ImageInline`.
 
@@ -44,19 +44,19 @@ You can add an image at a specific index in the `Inlines` collection of a paragr
 
 **Example 2: Add an image inline to a specific position**
 
-<snippet id='codeblock-crcr'/>
+<snippet id='libraries-flow-model-imageinline-2'/>
 
 You can also use the `AddImageInline()` method of the `Inlines` collection of a paragraph. The method creates a new `ImageInline`, adds it to the paragraph, and returns it.
 
 **Example 3: Using the AddImageInline() method**
 
-<snippet id='codeblock-cscs'/>
+<snippet id='libraries-flow-model-imageinline-3'/>
 
 You can also insert an `ImageInline` element in a `RadFlowDocument` with [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
 
 **Example 4: Insert an image inline using RadFlowDocumentEditor**
 
-<snippet id='codeblock-ctct'/>
+<snippet id='libraries-flow-model-imageinline-4'/>
 
 ## Modifying an ImageInline
 

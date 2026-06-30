@@ -28,7 +28,7 @@ You can insert this field through the `InsertField()` method of [RadFlowDocument
 
 **Example 1: Insert a NumPages field**
 
-<snippet id='codeblock-bh'/>
+<snippet id='libraries-flow-concepts-fields-numpages'/>
 
 After updating the field, the result is "Page 5 of 60" (see [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).
 

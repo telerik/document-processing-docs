@@ -60,7 +60,7 @@ You can insert a Hyperlink field through the [RadFlowDocumentEditor]({%slug radw
 
 	**Example 1: Insert a Hyperlink using the InsertHyperlink method**
 
-	<snippet id='codeblock-yy'/>
+	<snippet id='libraries-flow-concepts-fields-hyperlink-field-1'/>
 
 	The result looks like shown in **Figure 1**.
 
@@ -74,7 +74,7 @@ You can insert a Hyperlink field through the [RadFlowDocumentEditor]({%slug radw
 
 	**Example 2: Insert a Hyperlink field using the InsertField method**
 
-	<snippet id='codeblock-zz'/>
+	<snippet id='libraries-flow-concepts-fields-hyperlink-field-2'/>
 
 	The result looks like shown in **Figure 2**.
 
@@ -87,7 +87,7 @@ Hyperlinks can also point to a [Bookmark]({%slug radwordsprocessing-model-bookma
 
 **Example 3: Insert a hyperlink pointing to a bookmark**
 
-<snippet id='codeblock-ba'/>
+<snippet id='libraries-flow-concepts-fields-hyperlink-field-3'/>
 
 The result of the above snippet is illustrated in **Figure 3**.
 

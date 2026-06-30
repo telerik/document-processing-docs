@@ -51,7 +51,7 @@ The `SummarizationProcessorSettings` class defines configuration options for the
 
 **Example 1: Configuring SummarizationProcessorSettings**
 
-<snippet id='libraries-spread-features-gen-ai-summarize-configure'/>
+<snippet id='libraries-spread-features-gen-ai-powered-document-insights-summarization-processor-gen-ai-summarize-configure'/>
 
 ## Usage Example
 
@@ -69,7 +69,7 @@ This approach allows the processor to handle documents of any size efficiently, 
 
 **Example 2: Using SummarizationProcessor**
 
-<snippet id='libraries-spread-features-gen-ai-summarize-document'/>
+<snippet id='libraries-spread-features-gen-ai-powered-document-insights-summarization-processor-gen-ai-summarize-document'/>
 
 ## See Also
 

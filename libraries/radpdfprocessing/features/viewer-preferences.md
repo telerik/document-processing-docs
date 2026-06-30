@@ -41,7 +41,7 @@ The `ViewerPreferences` class provides the following properties:
 
 You can access and modify viewer preferences through the `ViewerPreferences` property of the `RadFixedDocument` class.
 
-<snippet id='libraries-pdf-features-pdf-viewerpreferences-setviewerpreferences'/>
+<snippet id='libraries-pdf-features-viewer-preferences'/>
 
 >note Viewer preferences are suggestions to the PDF viewer application. Not all viewers support all preferences, and some may ignore certain settings based on their own configuration or capabilities.
 

@@ -17,7 +17,7 @@ The `PushButtonField` class corresponds to the `FormFieldType.PushButton` enum v
 
 **Example 1: Create a PushButtonField and add it to a page**
 
-<snippet id='pdf-push-button-field'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-pushbuttonfield'/>
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 

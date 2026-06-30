@@ -58,7 +58,7 @@ The following example shows how to create a spreadsheet document, measure the co
 
 **Example 1: Create Spreadsheet with Auto Fit Columns Width**
 
-<snippet id='codeblock-dkv'/>
+<snippet id='libraries-spreadstream-features-text-measuring'/>
 
 
 ## See Also

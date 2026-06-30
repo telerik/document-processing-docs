@@ -41,14 +41,14 @@ The `Form` class exposes a default public constructor that allows you to create 
 
 #### **Example 1: Create a form and add it to an IContainerElement**
 
-<snippet id='pdf-create-form'/>
+<snippet id='libraries-pdf-model-form-create-form'/>
 
 
 **Example 2** demonstrates how to use one of the factory methods of the `ContentElementCollection` to create a new form and insert it into the respective container.
 
 #### **Example 2: Add a form to a container**
 
-<snippet id='pdf-form-to-container'/>
+<snippet id='libraries-pdf-model-form-to-container'/>
 
 
 >tip There are other methods that allow adding a form to a document by passing its size and source. You can use them through the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) class.
@@ -64,7 +64,7 @@ You can modify a `Form` element using the properties the class exposes. The prop
 
 #### **Example 3: Modify Form properties**
 
-<snippet id='pdf-modify-form'/>
+<snippet id='libraries-pdf-model-form-modify-form'/>
 
 ![PdfProcessing Modify Form Properties](images/pdf-processing-modify-form-properties.png)
 

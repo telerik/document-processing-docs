@@ -33,7 +33,7 @@ The code from **Example 1** creates an empty workbook and exports it to an XLSX 
 
 **Example 1: Create IWorkbookExporter**
 
-<snippet id='codeblock-dlu'/>
+<snippet id='libraries-spreadstream-model-workbook-1'/>
 
 ### Append Content to an Existing Document
 
@@ -41,7 +41,7 @@ The `CreateWorkbookExporter` method creates a new workbook which overrides the c
 
 **Example 2: Create IWorkbookExporter and Append the Content from the Stream**
 
-<snippet id='codeblock-dlv'/>
+<snippet id='libraries-spreadstream-model-workbook-2'/>
 
 >`IWorkbookExporter` inherits from [`IDisposable`](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Ensure the object is disposed when you are done with it. Otherwise, the content will not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -49,7 +49,7 @@ In the spreadsheet documents, the names of the sheets are unique. If you try to 
 
 **Example 3: Using IWorkbookExporter.GetSheetInfos()**
 
-<snippet id='codeblock-dlw'/>
+<snippet id='libraries-spreadstream-model-workbook-3'/>
 
 The CSV format does not have the concept of multiple sheets. Invoking `GetSheetInfos()` for a CSV document returns an empty collection.
 

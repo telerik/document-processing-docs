@@ -1,4 +1,4 @@
-﻿---
+---
 title: Using OcrFormatProvider
 description: Learn how to convert scanned images to searchable PDF content with OcrFormatProvider, including setup, Tesseract usage, platform constraints, and troubleshooting.
 page_title: RadPdfProcessing OcrFormatProvider Overview
@@ -57,7 +57,7 @@ This flow gives you a PDF page that contains the recognized text in a searchable
 
 The following example shows the usual setup for `OcrFormatProvider` and `TesseractOcrProvider`.
 
-<snippet id='libraries-pdf-formatsandconversion-ocr-ocrformatprovider'/>
+<snippet id='libraries-pdf-formats-and-conversion-ocr-ocrformatprovider'/>
 
 After the import completes, the provider returns a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) that you can add to a document, inspect, or export.
 

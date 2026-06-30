@@ -21,7 +21,7 @@ A `Bookmark` refers to a location in the document and has a unique name, which i
 
 **Example 1: Add a Bookmark to a Paragraph**
 
-<snippet id='codeblock-cw'/>
+<snippet id='libraries-flow-model-bookmark-1'/>
 
 The paragraph must belong to the same document that is passed to the constructor of the `Bookmark` object. Otherwise, an exception is thrown. The bookmark location is specified around a run with text "*text*".
 
@@ -29,7 +29,7 @@ You can also insert a `Bookmark` in the document with the [RadFlowDocumentEditor
 
 **Example 2: Insert a Bookmark Using RadFlowDocumentEditor**
 
-<snippet id='codeblock-cx'/>
+<snippet id='libraries-flow-model-bookmark-2'/>
 
 The `InsertBookmark()` method from **Example 2** creates a `Bookmark` with name "*MyBookmark*" and inserts its `BookmarkRangeStart` and `BookmarkRangeEnd` elements one after another.
 
@@ -41,7 +41,7 @@ You can remove an inserted `Bookmark` by using the `DeleteBookmark()` method of 
 
 **Example 3: Delete a Bookmark Using RadFlowDocumentEditor**
 
-<snippet id='codeblock-cy'/>
+<snippet id='libraries-flow-model-bookmark-3'/>
 
 ## See Also
 

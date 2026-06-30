@@ -62,7 +62,7 @@ Below is a comprehensive example demonstrating the entire workflow from setup to
 
 >warning If you are building a multi-user application, see the [Multi-User AI Agent Sessions]({%slug agent-tools-multi-user-scenario%}) article for patterns on isolating document repositories per user and managing concurrent sessions safely.
 
-<snippet id='ai-tools-agent-tools-getting-started-complete-example'/>
+<snippet id='ai-tools-agent-tools-getting-started'/>
 
 ## Security Considerations
 

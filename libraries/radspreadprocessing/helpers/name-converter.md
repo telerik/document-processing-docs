@@ -38,7 +38,7 @@ The `ConvertRowIndexToName` method converts the row index to a name.
 
 **Example 1: Convert Row Index to Name**
 
-<snippet id='codeblock-cph'/>
+<snippet id='libraries-spread-helpers-name-converter-1'/>
 
 ### Convert Row Name to Index
 
@@ -46,7 +46,7 @@ The `ConvertRowNameToIndex` method converts the row name to an index.
 
 **Example 2: Convert Row Name to Index**
 
-<snippet id='codeblock-cpi'/>
+<snippet id='libraries-spread-helpers-name-converter-2'/>
 
 ### Convert Column Index to Name
 
@@ -54,7 +54,7 @@ The `ConvertColumnIndexToName` method converts the column index to a name.
 
 **Example 3: Convert Column Index to Name**
 
-<snippet id='codeblock-cpj'/>
+<snippet id='libraries-spread-helpers-name-converter-3'/>
 
 ### Convert Column Name to Index
 
@@ -62,7 +62,7 @@ The `ConvertColumnNameToIndex` method converts the column name to an index.
 
 **Example 4: Convert Column Name to Index**
 
-<snippet id='codeblock-cpk'/>
+<snippet id='libraries-spread-helpers-name-converter-4'/>
 
 ### Convert Cell Index to Name
 
@@ -70,11 +70,11 @@ The `ConvertCellIndexToName` method converts the cell index to a name. This meth
 
 **Example 5: First Overload**
 
-<snippet id='codeblock-cpl'/>
+<snippet id='libraries-spread-helpers-name-converter-5'/>
 
 **Example 5: Second Overload**
 
-<snippet id='codeblock-cpm'/>
+<snippet id='libraries-spread-helpers-name-converter-6'/>
 
 ### Try Convert Names to Cell Reference Range Expression
 
@@ -82,7 +82,7 @@ The `TryConvertNamesToCellReferenceRangeExpression` method tries to convert the 
 
 **Example 6: Convert Names to Cell Reference Range Expression**
 
-<snippet id='codeblock-cpn'/>
+<snippet id='libraries-spread-helpers-name-converter-7'/>
 
 ### Convert Cell Reference to Name
 
@@ -90,7 +90,7 @@ The `ConvertCellReferenceToName` method converts the cell reference to a name.
 
 **Example 7: Convert Cell Reference to Name**
 
-<snippet id='codeblock-cpo'/>
+<snippet id='libraries-spread-helpers-name-converter-8'/>
 
 ### Convert Cell Range to Name
 
@@ -98,7 +98,7 @@ The `ConvertCellRangeToName` method converts the cell range to a name.
 
 **Example 8: Convert Cell Range to Name**
 
-<snippet id='codeblock-cpp'/>
+<snippet id='libraries-spread-helpers-name-converter-9'/>
 
 ### Try Convert Name to Cell Range
 
@@ -106,7 +106,7 @@ The `TryConvertNameToCellRange` method converts the name to a cell range.
 
 **Example 9: Convert Name to Cell Range**
 
-<snippet id='codeblock-cpq'/>
+<snippet id='libraries-spread-helpers-name-converter-10'/>
 
 ### Convert Cell Indexes to Name
 
@@ -114,7 +114,7 @@ The `ConvertCellIndexesToName` method converts the cell indexes to a name.
 
 **Example 10: Convert Cell Indexes to Name**
 
-<snippet id='codeblock-cpr'/>
+<snippet id='libraries-spread-helpers-name-converter-11'/>
 
 ### Convert Cell Name to Index
 
@@ -122,11 +122,11 @@ The `ConvertCellNameToIndex` method converts the cell name to a cell index. This
 
 **Example 11: First Overload**
 
-<snippet id='codeblock-cps'/>
+<snippet id='libraries-spread-helpers-name-converter-12'/>
 
 **Example 11: Second Overload**
 
-<snippet id='codeblock-cpt'/>
+<snippet id='libraries-spread-helpers-name-converter-13'/>
 
 ### Try Convert Cell Name to Index
 
@@ -134,11 +134,11 @@ The `TryConvertCellNameToIndex` method tries to convert the cell name to an inde
 
 **Example 12: First Overload**
 
-<snippet id='codeblock-cpu'/>
+<snippet id='libraries-spread-helpers-name-converter-14'/>
 
 **Example 12: Second Overload**
 
-<snippet id='codeblock-cpv'/>
+<snippet id='libraries-spread-helpers-name-converter-15'/>
 
 ### Is Valid A1 Cell Name
 
@@ -146,7 +146,7 @@ The `IsValidA1CellName` method determines whether the name of the cell is valid.
 
 **Example 13: Validate A1 Cell Name**
 
-<snippet id='codeblock-cpw'/>
+<snippet id='libraries-spread-helpers-name-converter-16'/>
 
 ## See Also
 

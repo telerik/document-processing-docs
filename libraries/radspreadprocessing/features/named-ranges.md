@@ -89,7 +89,7 @@ The document model has support only for Defined Names.
 
 **Example 1: Add and Use Names**
 
-<snippet id='codeblock-cjt'/>
+<snippet id='libraries-spread-features-named-ranges-1'/>
 
 > Other than the name, the `RefersTo` value and the comment parameter, the `Add` method requires a cell index. The reason for this is that with some defined names, the cell index associated with their creation is relevant to the resulting value. More specifically, this is the case when the `RefersTo` property includes a relative cell reference. For example, in the case of a name where the `RefersTo` field is "=C3" (as opposed to "=$C$3") and the cell index is CellIndex(0,0), that is A1, the defined name always points two rows lower and two columns to the right of the current cell it is used in: if you enter =Name in A1, A1 has the value of C3 and if you enter the same in B2, it has the value of D4.
 >
@@ -106,7 +106,7 @@ The `NameCollection` class exposes a `Remove()` method that takes a string param
 
 **Example 2: Remove Name**
 
-<snippet id='codeblock-cju'/>
+<snippet id='libraries-spread-features-named-ranges-2'/>
 
 
 ## See Also

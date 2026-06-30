@@ -24,7 +24,7 @@ All inline-level elements in a `RadFlowDocument` must be placed within another e
 
 **Example 1: Create a Break**
 
-<snippet id='codeblock-cz'/>
+<snippet id='libraries-flow-model-break-1'/>
 
 The paragraph must belong to the same document that is passed to the constructor of the `Break` element. The code in **Example 1** inserts a `Break` element of the default break type—line break. You can change the type of a break through its `BreakType` property.
 
@@ -32,7 +32,7 @@ The paragraph must belong to the same document that is passed to the constructor
 
 **Example 2: Change the BreakType**
 
-<snippet id='codeblock-caca'/>
+<snippet id='libraries-flow-model-break-2'/>
 
 You can also insert a break in the document with the `InsertBreak()` method of the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
 
@@ -40,7 +40,7 @@ You can also insert a break in the document with the `InsertBreak()` method of t
 
 **Example 3: Insert a Break Using RadFlowDocumentEditor**
 
-<snippet id='codeblock-cbcb'/>
+<snippet id='libraries-flow-model-break-3'/>
 
 ## Modifying a Break
 
@@ -57,7 +57,7 @@ The `Break` element exposes several properties that allow you to customize it:
 
 **Example 4: Customize a Break**
 
-<snippet id='codeblock-cccc'/>
+<snippet id='libraries-flow-model-break-4'/>
 
 ## See Also
 

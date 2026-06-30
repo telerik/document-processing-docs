@@ -22,7 +22,7 @@ The [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-works
 
 **Example 1: Iterate UsedCellRange**
 
-<snippet id='codeblock-crh'/>
+<snippet id='libraries-spread-working-with-cells-iterating-used-cells-1'/>
 
 
 ## Working With a Filtered Range
@@ -31,7 +31,7 @@ You can get only the cells that have a particular property applied and ignore th
 
 **Example 2: Obtain and Iterate a Filtered UsedCellRange**
 
-<snippet id='codeblock-cri'/>
+<snippet id='libraries-spread-working-with-cells-iterating-used-cells-2'/>
 
 >tip For more information on working with the values of the cells, check the [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) topics.
 

@@ -29,7 +29,7 @@ The `TextBoxField` class exposes the following properties:
 
 **Example 1: Create a TextBoxField and Add It to a Page**
 
-<snippet id='pdf-textbox-field'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-textboxfield'/>
 
 >important In .NET Standard, use `Telerik.Documents.Primitives.Rect` instead of `System.Windows.Rect`.
 

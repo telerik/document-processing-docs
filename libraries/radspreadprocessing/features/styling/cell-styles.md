@@ -84,7 +84,7 @@ When you apply a style to a cell with locally set properties, the end result is 
 
 **Example 1: Include Number Group in CellStyle**
 
-<snippet id='codeblock-cng'/>
+<snippet id='libraries-spread-features-styling-cell-styles-1'/>
 
 Through the API you can add, modify, or remove styles from the `Styles` collection residing in the worksheet.
 
@@ -96,7 +96,7 @@ To create a new style, invoke the `Add()` method of the workbook `Styles` collec
 
 **Example 2: Create a Style**
 
-<snippet id='codeblock-cnh'/>
+<snippet id='libraries-spread-features-styling-cell-styles-2'/>
 
 ## Modify Cell Style
 
@@ -106,7 +106,7 @@ To modify a style, retrieve it from the `Styles` collection and set the properti
 
 **Example 3: Modify a Style**
 
-<snippet id='codeblock-cni'/>
+<snippet id='libraries-spread-features-styling-cell-styles-3'/>
 
 ## Copy Existing Cell Style
 
@@ -114,7 +114,7 @@ The API enables you to copy the properties of an existing style so you can modif
 
 **Example 4: Copy an Existing Style and Modify Its Properties**
 
-<snippet id='codeblock-cnj'/>
+<snippet id='libraries-spread-features-styling-cell-styles-4'/>
 
 ## Remove Cell Style
 
@@ -122,7 +122,7 @@ You can also remove a style from the `Styles` collection. Invoke the `Remove()` 
 
 **Example 5: Remove a Style**
 
-<snippet id='codeblock-cnk'/>
+<snippet id='libraries-spread-features-styling-cell-styles-5'/>
 
 ## See Also
 

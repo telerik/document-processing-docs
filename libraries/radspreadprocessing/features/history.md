@@ -32,7 +32,7 @@ By default, the `WorkbookHistory` class does not record all changes introduced t
 
 **Example 1: Enable History**
 
-<snippet id='codeblock-civ'/>
+<snippet id='libraries-spread-features-history-1'/>
 
 
 
@@ -46,7 +46,7 @@ Once the history is enabled you can invoke its `Undo()` and `Redo()` methods to 
 
 **Example 2: Perform Undo and Redo**
 
-<snippet id='codeblock-ciw'/>
+<snippet id='libraries-spread-features-history-2'/>
 
 
 
@@ -60,7 +60,7 @@ The `Workbook` history offers a friendly API that allows grouping multiple chang
 
 **Example 3: Create Undo Group**
 
-<snippet id='codeblock-cix'/>
+<snippet id='libraries-spread-features-history-3'/>
 
 
 
@@ -74,6 +74,6 @@ To clear the history, call the `Clear()` method of the `WorkbookHistory` class. 
 
 **Example 4: Clear History**
 
-<snippet id='codeblock-ciy'/>
+<snippet id='libraries-spread-features-history-4'/>
 
 

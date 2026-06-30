@@ -20,13 +20,13 @@ The `WorkbookFormatProvidersManager` class contains two methods that allow you t
 
 **Example 1: Register Provider**
 
-<snippet id='codeblock-coa'/>
+<snippet id='libraries-spread-formats-and-conversion-import-export-format-providers-manager-1'/>
 
 You can also unregister format providers using the `UnregisterFormatProvider()` method. **Example 2** demonstrates how to unregister the [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider %}).
 
 **Example 2: Unregister Provider**
 
-<snippet id='codeblock-coc'/>
+<snippet id='libraries-spread-formats-and-conversion-import-export-format-providers-manager-2'/>
 
 ## Import
 
@@ -43,7 +43,7 @@ The method tries to find a registered format provider that can handle the extens
 
 **Example 3: Import a File Using OpenFileDialog**
 
-<snippet id='codeblock-coe'/>
+<snippet id='libraries-spread-formats-and-conversion-import-export-format-providers-manager-3'/>
 
 > The OpenFileDialog class exposes a different API in Silverlight. The name of the file could be obtained through the File.Name property of `OpenFileDialog` and the stream you can get using `File.OpenRead()`.
 
@@ -65,7 +65,7 @@ The method attempts to find a provider that can handle a file of the specified e
 
 **Example 4: Save a File Using SaveFileDialog**
 
-<snippet id='codeblock-cog'/>
+<snippet id='libraries-spread-formats-and-conversion-import-export-format-providers-manager-4'/>
 
 You can achieve the same result through using the `SaveFile` command. The command executes exactly the same code as the previous example. Verify that you register the format providers you want to use before using the command.
 

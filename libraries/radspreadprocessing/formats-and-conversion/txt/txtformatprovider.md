@@ -25,7 +25,7 @@ To import and export TXT files, you need an instance of `TxtFormatProvider`, whi
 
 **Example 1: Import TXT File**
 
-<snippet id='codeblock-cpf'/>
+<snippet id='libraries-spread-formats-and-conversion-txt-txtformatprovider-1'/>
 
 ## Export
 
@@ -33,7 +33,7 @@ To import and export TXT files, you need an instance of `TxtFormatProvider`, whi
 
 **Example 2: Export TXT File**
 
-<snippet id='codeblock-cpg'/>
+<snippet id='libraries-spread-formats-and-conversion-txt-txtformatprovider-2'/>
 
 ## See Also
 

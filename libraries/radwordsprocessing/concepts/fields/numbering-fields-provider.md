@@ -22,7 +22,7 @@ Set the default provider with the following code:
 
 **Example 1: Register the default NumberingFieldsProvider**
 
-<snippet id='codeblock-bf'/>
+<snippet id='libraries-flow-concepts-fields-numbering-fields-provider-1'/>
 
 ## Using the RegisterNumberingStyleConverter
 
@@ -30,7 +30,7 @@ The `RegisterNumberingStyleConverter` method allows you to register a custom num
 
 **Example 2: Register a custom NumberingStyleConverter**
 
-<snippet id='codeblock-bg'/>
+<snippet id='libraries-flow-concepts-fields-numbering-fields-provider-2'/>
 
 The `NumberingStyleConverter` must implement the `INumberingStyleConverter` interface. This interface has one method that takes a number and converts it to a string.
 

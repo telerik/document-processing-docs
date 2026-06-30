@@ -26,7 +26,7 @@ You must place the `PageSetupExporter` after the code for exporting all cells on
 
 **Example 1: Using PageSetupExporter**
 
-<snippet id='codeblock-dku'/>
+<snippet id='libraries-spreadstream-features-page-setup-exportedr'/>
 
 
 >`IPageSetupExporter` inherits from [IDisposable](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Make sure the object is disposed when you are done with it. Otherwise, the content will not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.

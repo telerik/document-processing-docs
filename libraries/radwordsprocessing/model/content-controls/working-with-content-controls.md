@@ -23,7 +23,7 @@ Retrieve content controls by calling `EnumerateChildrenOfType()` on a document e
 
 **Example 1: Get All Content Controls**
 
-<snippet id='codeblock-dndn'/>
+<snippet id='libraries-flow-model-content-controls-working-with-1'/>
 
 This approach is useful when you need to find all controls before applying filtering, validation, or targeted updates.
 
@@ -33,7 +33,7 @@ After you retrieve the controls, you can inspect their type and update the match
 
 **Example 2: Adding Items to a ComboBox or a DropDownList**
 
-<snippet id='codeblock-dodo'/>
+<snippet id='libraries-flow-model-content-controls-working-with-2'/>
 
 Use the same pattern when you need to modify titles, tags, locking behavior, placeholder content, or other settings exposed by a specific content control type.
 
@@ -47,7 +47,7 @@ Insert new content controls through the `InsertStructuredDocumentTag()` method o
 
 **Example 3: Inserting a Content Control Using Content Control Type**
 
-<snippet id='codeblock-dpdp'/>
+<snippet id='libraries-flow-model-content-controls-working-with-3'/>
 
 Use this overload when you know the control type and want to populate its content in a later step.
 
@@ -55,11 +55,11 @@ Use this overload when you know the control type and want to populate its conten
 
 #### **Example 4: Inserting a Rich Text content control using content control properties**
 
-<snippet id='codeblock-dqdq'/>
+<snippet id='libraries-flow-model-content-controls-working-with-4'/>
 
 **Example 5: Inserting a CheckBox Content Control Using Content Control Properties**
 
-<snippet id='codeblock-drdr'/>
+<snippet id='libraries-flow-model-content-controls-working-with-5'/>
 
 Use the overloads that accept properties when you want to configure the control during insertion instead of modifying it afterwards.
 
@@ -67,7 +67,7 @@ Use the overloads that accept properties when you want to configure the control 
 
 #### **Example 6: Remove a content control**
 
-<snippet id='codeblock-dsds'/>
+<snippet id='libraries-flow-model-content-controls-working-with-6'/>
 
 Removing a content control is useful when you need to clean up document templates or replace one control type with another.
 
@@ -81,7 +81,7 @@ Removing a content control is useful when you need to clean up document template
 
 ![Diagram showing valid and invalid ways to nest or place content controls](images/working-with-content-controls001.png)
 
-<snippet id='codeblock-dtdt'/>
+<snippet id='libraries-flow-model-content-controls-working-with-7'/>
 
 Use element-based insertion when you need exact placement in a document template or when you wrap an existing content range with a new control.
 

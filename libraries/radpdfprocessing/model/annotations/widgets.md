@@ -37,7 +37,7 @@ All widgets are created through the `Widgets` collection of the [FormField]({%sl
 
 **Example 1: Creating a widget**
 
-<snippet id='pdf-create-widget'/>
+<snippet id='libraries-pdf-model-annotations-widgets-create-widget'/>
 
 >important Specify the size of the widget. Otherwise, it is not visualized in the PDF document.
 
@@ -45,7 +45,7 @@ All widgets are created through the `Widgets` collection of the [FormField]({%sl
 
 **Example 2: Iterating the widgets in the FormField collection**
 
-<snippet id='pdf-iterate-widgets'/>
+<snippet id='libraries-pdf-model-annotations-widgets-iterate-widgets'/>
 
 >note The `Widget` class inherits from [Annotation]({%slug radpdfprocessing-model-annotations-overview%}). Add each annotation to the `Annotations` collection of `RadFixedPage`.
 

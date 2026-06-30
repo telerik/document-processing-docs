@@ -48,7 +48,7 @@ To sign multiple existing signature fields in a PDF document:
 
 The following example imports an existing PDF that contains unsigned signature fields and signs each field sequentially using incremental updates.
 
-<snippet id='pdf-signature-sign-all-signature-fields'/>
+<snippet id='libraries-pdf-features-digital-signature-signing-existing-signature-fields-sign-all-signature-fields'/>
 
 The code first imports the document to discover the names of all unsigned `SignatureField` instances. It then iterates over the field names and calls `SignExistingField` for each one. Because each call produces an incremental update, previously applied signatures remain valid in the final output.
 
@@ -60,11 +60,11 @@ When a PDF contains empty (unsigned) signature fields, you can generate and appl
 
 The following example signs two signature fields and applies a custom visual appearance to each widget at signing time.
 
-<snippet id='pdf-signature-sign-signature-fields-with-appearance'/>
+<snippet id='libraries-pdf-features-digital-signature-signing-existing-signature-fields-sign-signature-fields-with-appearance'/>
 
 The helper method below builds a visual appearance that displays the signer name, role, and signing date:
 
-<snippet id='pdf-signature-build-appearance'/>
+<snippet id='libraries-pdf-features-digital-signature-signing-existing-signature-fields-build-appearance'/>
 
 Each call to `SignExistingField` with a `FormSource` replaces the widget appearance of the target field. Pass `null` for the `appearance` parameter to preserve the existing widget appearance.
 

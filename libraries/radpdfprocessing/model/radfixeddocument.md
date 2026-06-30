@@ -67,7 +67,7 @@ position: 1
 
 #### **Example 1: Create RadFixedDocument**
 
-<snippet id='pdf-create-fixed-document'/>
+<snippet id='libraries-pdf-model-radfixeddocument-create-fixed-document'/>
 
 ## Operating with RadFixedDocument
 
@@ -77,7 +77,7 @@ You can execute different actions with the help of `RadFixedDocument`. For examp
 
 #### **Example 2: Add Page to RadFixedDocument**
 
-<snippet id='pdf-create-fixed-page'/>
+<snippet id='libraries-pdf-model-radfixeddocument-create-fixed-page'/>
 
 
 Alternatively, you can create a new `RadFixedPage` and add it to the `Pages` collection of a document.
@@ -86,20 +86,20 @@ Alternatively, you can create a new `RadFixedPage` and add it to the `Pages` col
 
 #### **Example 3: Create and Add a Page to RadFixedDocument**
 
-<snippet id='pdf-add-fixed-page'/>
+<snippet id='libraries-pdf-model-radfixeddocument-add-fixed-page'/>
 
 **Example 4** shows how to obtain a copy of a `RadFixedDocument`.
 
 #### **Example 4: Clone a Document**
 
-<snippet id='pdf-clone-document'/>
+<snippet id='libraries-pdf-model-radfixeddocument-clone-document'/>
 
 
 You can merge PDF documents with the `Merge()` method of `RadFixedDocument`. This method clones the source document and appends it to the current instance of `RadFixedDocument`.
 
 #### **Example 5: Merge Documents**
 
-<snippet id='pdf-merge-fixed-documents'/>
+<snippet id='libraries-pdf-model-radfixeddocument-merge-fixed-documents'/>
 
 The code from **Example 5** merges the document created in [**Example 1**](#example1) with another `RadFixedDocument`.
 

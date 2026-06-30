@@ -32,27 +32,27 @@ The following table describes the properties of `ZipArchiveEntry`:
 
 **Example 1: Get the compressed length of an entry**
 
-<snippet id='codeblock-dst'/>
+<snippet id='libraries-zip-features-ziparchive-entry-1'/>
 
 **Example 2: Set external attributes of an entry**
 
-<snippet id='codeblock-dsu'/>
+<snippet id='libraries-zip-features-ziparchive-entry-2'/>
 
 **Example 3: Get the relative path of an entry**
 
-<snippet id='codeblock-dsv'/>
+<snippet id='libraries-zip-features-ziparchive-entry-3'/>
 
 **Example 4: Set the last write time of an entry**
 
-<snippet id='codeblock-dsw'/>
+<snippet id='libraries-zip-features-ziparchive-entry-4'/>
 
 **Example 5: Get the length of an entry**
 
-<snippet id='codeblock-dsx'/>
+<snippet id='libraries-zip-features-ziparchive-entry-5'/>
 
 **Example 6: Get the name of an entry**
 
-<snippet id='codeblock-dsy'/>
+<snippet id='libraries-zip-features-ziparchive-entry-6'/>
 
 ### Methods
 
@@ -80,7 +80,7 @@ Retrieves a wrapper for the specified entry in the ZIP archive.
 
 **Example 7: Get ZipArchiveEntry**
 
-<snippet id='codeblock-dsz'/>
+<snippet id='libraries-zip-features-ziparchive-entry-7'/>
 
 ### Create ZipArchiveEntry
 
@@ -88,7 +88,7 @@ Creates an empty entry that has the specified path and entry name in the ZIP arc
 
 **Example 8: Create ZipArchiveEntry**
 
-<snippet id='codeblock-dta'/>
+<snippet id='libraries-zip-features-ziparchive-entry-8'/>
 
 ### Extract ZipArchiveEntry
 
@@ -96,7 +96,7 @@ Extracts an entry to a specific folder or directory.
 
 **Example 9: Extract a ZipArchiveEntry to a folder**
 
-<snippet id='codeblock-dtb'/>
+<snippet id='libraries-zip-features-ziparchive-entry-9'/>
 
 >tip You can also achieve this by using the [Zip Extensions]({%slug radziplibrary-zipextensions%}) `ExtractToFile` method.
 
@@ -110,17 +110,17 @@ The following example includes all the properties discussed in the previous sect
 
 **Example 10: Complete example**
 
-<snippet id='codeblock-dtc'/>
+<snippet id='libraries-zip-features-ziparchive-entry-10'/>
 
 ### Working with Folders and Directories
 
 **Example 11: Create folders and directories**
 
-<snippet id='codeblock-dtd'/>
+<snippet id='libraries-zip-features-ziparchive-entry-11'/>
 
 **Example 12: Open files in folders and directories**
 
-<snippet id='codeblock-dte'/>
+<snippet id='libraries-zip-features-ziparchive-entry-12'/>
 
 ## See Also
 

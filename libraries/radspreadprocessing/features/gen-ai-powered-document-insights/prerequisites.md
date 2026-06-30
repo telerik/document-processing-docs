@@ -62,7 +62,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 
 **Example 1: Setting Up Azure OpenAI**
 
-<snippet id='libraries-spread-features-gen-ai-setup-azure-open-ai'/>
+<snippet id='libraries-spread-features-gen-ai-powered-document-insights-prerequisites-gen-ai-setup-azure-open-ai'/>
 
 ### OpenAI Setup
 
@@ -71,7 +71,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 
 **Example 2: Setting Up OpenAI**
 
-<snippet id='libraries-spread-features-gen-ai-setup-open-ai'/>
+<snippet id='libraries-spread-features-gen-ai-powered-document-insights-prerequisites-gen-ai-setup-open-ai'/>
 
 ### Ollama Setup (Local AI)
 
@@ -83,7 +83,7 @@ Ollama allows you to run AI models locally on your machine. This is useful for d
 
 **Example 3: Setting Up Ollama**
 
-<snippet id='libraries-spread-features-gen-ai-setup-ollama-ai'/>
+<snippet id='libraries-spread-features-gen-ai-powered-document-insights-prerequisites-gen-ai-setup-ollama-ai'/>
 
 ## See Also
 

@@ -40,7 +40,7 @@ These properties hold the current graphics control parameters. You can modify th
             
 #### **Example 1: Using GraphicProperties with FixedContentEditor**
 
-<snippet id='pdf-graphic-properties-editor'/>
+<snippet id='libraries-pdf-editing-text-and-graphic-properties-editor'/>
 
 ## TextProperties
 
@@ -82,7 +82,7 @@ These properties hold the parameters for text fragments. You can modify the foll
             
 #### **Example 2: Using TextProperties with Block**
 
-<snippet id='pdf-text-properties-block'/>
+<snippet id='libraries-pdf-editing-text-and-graphic-properties-text-properties-block'/>
 
 `TextProperties` also exposes the following methods for changing the current font:
         

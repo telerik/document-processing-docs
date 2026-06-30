@@ -30,7 +30,7 @@ The fact that RadSpreadProcessing is completely decoupled from UI enables numero
 
 **Example 1: Create a Workbook and Add a Worksheet to It**
 
-<snippet id='codeblock-crz'/>
+<snippet id='libraries-spread-working-with-workbooks-create-open-and-save-workbooks-1'/>
 
 
 
@@ -45,7 +45,7 @@ To import a workbook, instantiate a specific [FormatProvider]({%slug radspreadpr
 
 **Example 2: Download and Import XLSX File**
 
-<snippet id='codeblock-csa'/>
+<snippet id='libraries-spread-working-with-workbooks-create-open-and-save-workbooks-2'/>
 
 
 
@@ -64,7 +64,7 @@ To export a workbook, instantiate the [FormatProvider]({%slug radspreadprocessin
 
 **Example 3: Save XLSX File**
 
-<snippet id='codeblock-csb'/>
+<snippet id='libraries-spread-working-with-workbooks-create-open-and-save-workbooks-3'/>
 
 
 For security purposes accessing files in *Silverlight* can be achieved only through user-initiated dialogs. That said, to save workbook's contents into a `csv` file, you need to use the `SaveFileDialog`. 
@@ -74,7 +74,7 @@ For security purposes accessing files in *Silverlight* can be achieved only thro
 
 **Example 4: Save CSV File Using SaveFileDialog**
 
-<snippet id='codeblock-csc'/>
+<snippet id='libraries-spread-working-with-workbooks-create-open-and-save-workbooks-4'/>
 
 
 >note Additional examples about export are available in the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.

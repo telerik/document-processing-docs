@@ -27,7 +27,7 @@ The `ImportSettings` property returns a `MarkdownImportSettings` instance. This 
 
 **Example 1: Configure Import Settings**
 
-<snippet id='markdownformatprovider-import-settings'/>
+<snippet id='libraries-flow-formats-and-conversion-markdown-settings-markdownformatprovider-import-settings'/>
 
 ## Export Settings
 
@@ -46,7 +46,7 @@ The `ExportSettings` property returns a `MarkdownExportSettings` instance. This 
 
 **Example 2: Configure Export Settings**
 
-<snippet id='markdownformatprovider-export-settings'/>
+<snippet id='libraries-flow-formats-and-conversion-markdown-settings-markdownformatprovider-export-settings'/>
 
 ## See Also
 

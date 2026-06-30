@@ -25,7 +25,7 @@ The code snippet from **Example 1** creates and inserts a `Table` to a `Section`
 
 **Example 1: Create and insert a table to a section**
 
-<snippet id='codeblock-dz'/>
+<snippet id='libraries-flow-model-table-1'/>
 
 >tip The parent `BlockContainer` element (in this case, the `Section`) must belong to the same document that is passed to the constructor of the `Table`.
 
@@ -33,19 +33,19 @@ You can add a table at a specific index in the `Blocks` collection of a `BlockCo
 
 **Example 2: Insert a table at a specific index**
 
-<snippet id='codeblock-dada'/>
+<snippet id='libraries-flow-model-table-2'/>
 
 You can also use the `AddTable()` method of the `Blocks` collection of a `BlockContainer`. The method creates a new `Table` instance, adds it to the container, and returns it.
 
 **Example 3: Insert a new table to a container**
 
-<snippet id='codeblock-dbdb'/>
+<snippet id='libraries-flow-model-table-3'/>
 
 You can also insert a new `Table` in the document with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
 
 **Example 4: Insert a table using RadFlowDocumentEditor**
 
-<snippet id='codeblock-dcdc'/>
+<snippet id='libraries-flow-model-table-4'/>
 
 ## Modifying a Table
 
@@ -99,7 +99,7 @@ The `Table` element exposes several properties that allow you to customize the l
 
 **Example 5: Create a table with content and add it to a RadFlowDocument**
 
-<snippet id='codeblock-dddd'/>
+<snippet id='libraries-flow-model-table-5'/>
 
 ## See Also
 

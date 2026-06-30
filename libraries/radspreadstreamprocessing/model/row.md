@@ -30,7 +30,7 @@ You can create a concrete instance of `IRowExporter` through the `CreateRowExpor
 **Example 1: Create IRowExporter**
 
 
-<snippet id='codeblock-dlq'/>
+<snippet id='libraries-spreadstream-model-row-1'/>
 
 >`IRowExporter` inherits from [`IDisposable`](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Ensure the object is disposed when you are done with it. Otherwise, the content will not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
 
@@ -46,7 +46,7 @@ To customize the way a row appears, use one of the following methods:
 
 **Example 2: Set Properties to IRowExporter**
 
-<snippet id='codeblock-dlr'/>
+<snippet id='libraries-spreadstream-model-row-2'/>
 
 \* Due to the specifics of the library, `RadSpreadStreamProcessing` does not support auto fitting the height of the rows. You can find information on how to calculate the height needed for specific content in the [Get Cell Content Size]({%slug radspreadstreamprocessing-features-text-measuring%}) topic.
 
@@ -58,7 +58,7 @@ In some cases you may need to skip several rows and start filling the data in th
 
 **Example 3: Skip Rows**
 
-<snippet id='codeblock-dls'/>
+<snippet id='libraries-spreadstream-model-row-3'/>
 
 ## Read a Row
 
@@ -68,7 +68,7 @@ You can get a concrete instance of `IRowImporter` through the `Rows` collection 
 
 **Example 4: Create IRowImporter**
 
-<snippet id='codeblock-dlt'/>
+<snippet id='libraries-spreadstream-model-row-4'/>
 
 
 The `IRowImporter` interface exposes the following properties to allow you to access its data:

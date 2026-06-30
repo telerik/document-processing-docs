@@ -62,7 +62,7 @@ The following example gets the used cell range for cells that contain a value.
 
 #### Example 1: Get the Used Cell Range of Cells with a Value
 
-<snippet id='codeblock-csz'/>
+<snippet id='libraries-spread-working-with-worksheets-what-is-worksheet'/>
 
 >note
 >

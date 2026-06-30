@@ -19,12 +19,12 @@ You can access and set the `Title` property of the `DocumentChart` object, which
 
 **Example 1: Setting the Title of a Chart to a String**
 
-<snippet id='codeblock-clv'/>
+<snippet id='libraries-spread-features-charts-title-and-legend-1'/>
 
 
 **Example 2: Setting the Title of a Series to a CellRange**
 
-<snippet id='codeblock-clw'/>
+<snippet id='libraries-spread-features-charts-title-and-legend-2'/>
 
 **Figure 1: Chart Title**
 
@@ -39,7 +39,7 @@ You can add or edit the legend of the chart through the `Legend` property of the
 
 **Example 3: Adding a Chart Legend**
 
-<snippet id='codeblock-clx'/>
+<snippet id='libraries-spread-features-charts-title-and-legend-3'/>
 
 **Figure 2: Chart Legend**
 

@@ -32,7 +32,7 @@ To create a password-protected ZIP archive, pass a `PasswordEncryptionSettings` 
 
 **Example 1: Create a password-protected ZIP archive**
 
-<snippet id='codeblock-dsn'/>
+<snippet id='libraries-zip-features-protect-ziparchive-1'/>
 
 >tip Always dispose of the ZIP archive object when all operations are completed. Declare and instantiate the ZIP archive object in a `using` statement. If that is not possible, call the `Dispose()` method when you complete all operations.
 
@@ -42,7 +42,7 @@ To open a password-protected `ZipArchive`, pass a `DefaultEncryptionSettings` ob
 
 **Example 2: Open and read a password-protected ZIP archive**
 
-<snippet id='codeblock-dso'/>
+<snippet id='libraries-zip-features-protect-ziparchive-2'/>
 
 >tip Always dispose of the ZIP archive object when all operations are completed. Declare and instantiate the ZIP archive object in a `using` statement. If that is not possible, call the `Dispose()` method when you complete all operations.
 

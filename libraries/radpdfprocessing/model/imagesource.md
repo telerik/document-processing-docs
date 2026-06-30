@@ -30,7 +30,7 @@ The `ImageSource` class has several public constructor overloads. You can create
 
 #### **Example 1: Create ImageSource from Stream**
 
-<snippet id='pdf-image-source-from-stream'/>
+<snippet id='libraries-pdf-model-imagesource-image-source-from-stream'/>
 
 
 With the `EncodedImageData` class you can create an `ImageSource` with encoded image data. This way the image quality is not reduced on import.
@@ -38,12 +38,12 @@ With the `EncodedImageData` class you can create an `ImageSource` with encoded i
 **Example 2** demonstrates how to create an `ImageSource` using the `EncodedImageData` class.
 
 #### **Example 2: Create ImageSource from EncodedImageData**
-<snippet id='pdf-image-source-from-encoded-image-data'/>
+<snippet id='libraries-pdf-model-imagesource-image-source-from-encoded-image-data'/>
 
 With the `EncodedImageData` class you can also create an `ImageSource` with encoded image data and set its transparency. The `EncodedImageData` class provides a second constructor overload where you can set the alpha-channel bytes of the image as a second constructor parameter to apply transparency to this image.
 
 #### **Example 3: Create ImageSource from EncodedImageData with transparency**
-<snippet id='pdf-transparency-image-source-from-encoded-image-data'/>
+<snippet id='libraries-pdf-model-imagesource-transparency-image-source-from-encoded-image-data'/>
 
 ## Properties
 
@@ -74,7 +74,7 @@ RadPdfProcessing exposes an extension method that allows you to convert every `B
 
 #### **Example 4: Create ImageSource with extension method**
 
-<snippet id='pdf-image-source-extensions'/>
+<snippet id='libraries-pdf-model-imagesource-image-source-extensions'/>
 
 > The code from **Example 4** does not compile in Silverlight due to differences in the `BitmapImage` API for this platform. You can pass the image as a stream to the `SetSource()` method of `BitmapImage` instead.
 

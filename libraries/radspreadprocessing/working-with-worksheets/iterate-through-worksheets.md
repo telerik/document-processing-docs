@@ -18,13 +18,13 @@ In many scenarios you need to iterate through all worksheets in a given workbook
 
 **Example 1: Retrieve Worksheet**
 
-<snippet id='codeblock-csl'/>
+<snippet id='libraries-spread-working-with-worksheets-iterate-through-worksheets-1'/>
 
 **Example 2** creates a new workbook with three worksheets. The code further iterates through all worksheets and sets the value of cell *A1* to the name of the corresponding worksheet. The example also sets the `ForeColor` and `BackgroundFill` of the cell.
 
 **Example 2: Iterate Worksheets**
 
-<snippet id='codeblock-csm'/>
+<snippet id='libraries-spread-working-with-worksheets-iterate-through-worksheets-2'/>
 
 ## See Also
 

@@ -126,7 +126,7 @@ If you need to keep the document with A4 `PaperType`, apply this setting before 
 
 **Set PaperType**
 
-<snippet id='codeblock-cgb'/>
+<snippet id='libraries-spread-changes-and-backward-compatibility-backward-compatibility'/>
 
 ## What Is Different in 2016 R3
 

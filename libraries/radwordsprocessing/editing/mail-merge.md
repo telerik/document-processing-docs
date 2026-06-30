@@ -20,13 +20,13 @@ The code snippet in **Example 1** shows how to initialize a `RadFlowDocumentEdit
 
 **Example 1: Insert a Merge Field**
 
-<snippet id='codeblock-bu'/>
+<snippet id='libraries-flow-editing-mail-merge-1'/>
 
 Additionally, you can add a field to a `Paragraph` manually by creating a `FieldInfo` instance and placing its start, code, separator, result, and end in the block. **Example 2** shows the manual approach for adding a merge field.
 
 **Example 2: Add a Merge Field Manually**
 
-<snippet id='codeblock-bv'/>
+<snippet id='libraries-flow-editing-mail-merge-2'/>
 
 ## Performing Mail Merge
 
@@ -38,13 +38,13 @@ During the operation, each `MergeField` is replaced with the corresponding infor
 
 **Example 3: Sample Data Source**
 
-<snippet id='codeblock-bw'/>
+<snippet id='libraries-flow-editing-mail-merge-3'/>
 
 **Example 4** performs the mail merge operation over a previously defined template document using the data source from **Example 3**.
 
 **Example 4: Perform Mail Merge**
 
-<snippet id='codeblock-bx'/>
+<snippet id='libraries-flow-editing-mail-merge-4'/>
 
 ## Nested Mail Merge
 
@@ -73,13 +73,13 @@ First, define a data source that contains an `IEnumerable` of objects.
 
 **Example 5: Nested Mail Merge Data Source**
 
-<snippet id='codeblock-by'/>
+<snippet id='libraries-flow-editing-mail-merge-5'/>
 
 Then, add the fields using the specific supported names. In this example, the fields are added to the table using the TableStart/TableEnd tags. This is not mandatory and you can use a tag of your choosing.
 
 **Example 6: Perform Nested Mail Merge**
 
-<snippet id='codeblock-bz'/>
+<snippet id='libraries-flow-editing-mail-merge-6'/>
 
 ### One Row vs Multiline Mail Merge
 

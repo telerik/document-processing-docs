@@ -39,7 +39,7 @@ You can insert a Date Field through the [RadFlowDocumentEditor]({%slug radwordsp
 
 **Example 1: Insert date field**
 
-<snippet id='codeblock-nn'/>
+<snippet id='libraries-flow-concepts-fields-date-field'/>
 
 
 After updating the field, the result is "_12/03/2021_" (check [Updating Fields](https://docs.telerik.com/devtools/document-processing/libraries/radwordsprocessing/concepts/fields/fields#updating-fields)).

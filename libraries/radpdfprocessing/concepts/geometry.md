@@ -41,7 +41,7 @@ This article covers the supported geometry types:
 
 #### __Example 1: Create RectangleGeometry__
 
-<snippet id='pdf-create-rectangle-geometry'/>
+<snippet id='libraries-pdf-concepts-geometry-create-rectangle-geometry'/>
 
 
 
@@ -60,7 +60,7 @@ This article covers the supported geometry types:
 
 #### __Example 2: Create PathGeometry__
 
-<snippet id='pdf-create-path-geometry'/>
+<snippet id='libraries-pdf-concepts-geometry-create-path-geometry'/>
 
 
 

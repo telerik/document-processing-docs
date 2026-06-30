@@ -38,7 +38,7 @@ To read the data from a file, parse the desired elements in sequence keeping the
 
 **Example 1: Read Data from a Document**
 
-<snippet id='codeblock-dkp'/>
+<snippet id='libraries-spreadstream-import'/>
 
 Through the importer objects, you can access the properties of the different elements.
 

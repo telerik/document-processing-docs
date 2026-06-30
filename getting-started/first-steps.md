@@ -77,7 +77,7 @@ Use the following snippet to create the `RadFlowDocument` instance that the samp
 
 #### **Example 1: Create a RadFlowDocument**
 
-<snippet id='first-steps-create-document'/>
+<snippet id='getting-started-first-steps-create-document'/>
 
 ## Step 5: Import an Existing DOCX File
 
@@ -85,7 +85,7 @@ Use this optional step if you want to start from an existing DOCX file instead o
 
 ### Example 2: Import a DOCX File
 
-<snippet id='first-steps-import-docx'/>
+<snippet id='getting-started-first-steps-import-docx'/>
 
 ## Step 6: Export the Generated Document
 
@@ -96,7 +96,7 @@ Use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-d
 
 ### Example 3: Export a RadFlowDocument to DOCX
 
-<snippet id='first-steps-export-docx'/>
+<snippet id='getting-started-first-steps-export-docx'/>
 
 ### Export the RadFlowDocument to PDF
 
@@ -104,7 +104,7 @@ Use [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdffo
         
 ### Example 4: Export a RadFlowDocument to PDF
 
-<snippet id='first-steps-export-pdf'/>
+<snippet id='getting-started-first-steps-export-pdf'/>
 
 ## Step 7: Run the Project and Verify the Output
 

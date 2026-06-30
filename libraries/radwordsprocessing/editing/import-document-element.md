@@ -31,7 +31,7 @@ The constructor of the `DocumentElementImporter` class accepts the following par
 
 **Example 1: Create DocumentElementImporter**
 
-<snippet id='codeblock-br'/>
+<snippet id='libraries-flow-editing-import-document-element-1'/>
 
 
 
@@ -41,7 +41,7 @@ The `DocumentElementImporter` class exposes the `Import<T>()` method, which prep
 
 **Example 2: Import a Document Element**
 
-<snippet id='codeblock-bs'/>
+<snippet id='libraries-flow-editing-import-document-element-2'/>
 
 You can then insert the imported document element into the target document through the `RadFlowDocumentEditor` class. For more information, refer to [Inserting Document Elements]({% slug radwordsprocessing-editing-radflowdocumenteditor%}#inserting-document-elements).
 

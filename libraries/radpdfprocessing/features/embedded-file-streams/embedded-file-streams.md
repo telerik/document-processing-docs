@@ -37,7 +37,7 @@ RadPdfProcessing allows you to embed file streams into the document. The content
  
 #### Creating an Embedded File Stream
 
-<snippet id='pdf-create-embedded-file-stream'/>
+<snippet id='libraries-pdf-features-embedded-file-streams-create-embedded-file-stream'/>
 
 >important `DuplicatedEmbeddedFileNameException` is thrown when you add an embedded file with a name that already exists in the collection.
 
@@ -52,7 +52,7 @@ RadPdfProcessing allows you to embed file streams into the document. The content
 
 RadPdfProcessing allows you to set the correct MIME type when embedding the file into the PDF. This is especially important for standards like PDF/A-3 and Factur-X, which require strict metadata and MIME type declarations for embedded files.
 
-<snippet id='pdf-set-mime-type'/>
+<snippet id='libraries-pdf-features-embedded-file-streams-set-mime-type'/>
 
 ### Creating an Embedded Electronic (ZUGFeRD) Invoice
 
@@ -70,7 +70,7 @@ The `MergedEmbeddedFileNameResolving` event occurs when trying to resolve confli
 
 #### Resolving Duplicated Names
 
-<snippet id='pdf-duplicated-file-names'/>
+<snippet id='libraries-pdf-features-embedded-file-streams-duplicated-file-names'/>
 
 #### Resolved Duplicated Names 
 ![Resolving duplicated Names in Embedded Files](images/embedded_files_1.png) 

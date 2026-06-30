@@ -23,7 +23,7 @@ RadPdfProcessing supports SVG FormSource (vector graphics image format). The sta
 
 The following example shows how to insert an SVG image into a `FormSource` object by using `FixedContentEditor`:
 
-<snippet id='pdf-add-svg'/>
+<snippet id='libraries-pdf-model-formsource-svg'/>
 
 ![RadPdfProcessing Insert SVG FormSource result](images/pdf-processing-insert-svg.png)
 

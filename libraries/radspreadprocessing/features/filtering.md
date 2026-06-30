@@ -72,7 +72,7 @@ In addition to the members of the `IFilter` interface, the `ValuesCollectionFilt
 
 #### __Example 1: Create ValuesCollectionFilter__
 
-<snippet id='codeblock-chm'/>
+<snippet id='libraries-spread-features-filtering-1'/>
 
 
 
@@ -116,7 +116,7 @@ The criteria is represented by the `CustomFilterCriteria` class. Each criteria c
 
 #### __Example 2: Create CustomFilter__
 
-<snippet id='codeblock-chn'/>
+<snippet id='libraries-spread-features-filtering-2'/>
 
 
 
@@ -144,7 +144,7 @@ In addition to the members of the `IFilter` interface, the `TopFilter` class exp
 
 #### __Example 3: Create TopFilter__
 
-<snippet id='codeblock-cho'/>
+<snippet id='libraries-spread-features-filtering-3'/>
 
 
 
@@ -162,7 +162,7 @@ In addition to the members of the `IFilter` interface, the `DynamicFilter` class
 
 #### __Example 4: Create DynamicFilter__
 
-<snippet id='codeblock-chp'/>
+<snippet id='libraries-spread-features-filtering-4'/>
 
 
 The filter shows only dates that fall within the week prior to the application of the filter.
@@ -179,7 +179,7 @@ In addition to the members of the `IFilter` interface, the `ForeColorFilter` cla
 
 #### __Example 5: Create ForeColorFilter__
 
-<snippet id='codeblock-chq'/>
+<snippet id='libraries-spread-features-filtering-5'/>
 
 
 
@@ -197,7 +197,7 @@ In addition to the members of the `IFilter` interface, the `FillColorFilter` cla
 
 #### __Example 6: Create FillColorFilter__
 
-<snippet id='codeblock-chr'/>
+<snippet id='libraries-spread-features-filtering-6'/>
 
 
 
@@ -212,7 +212,7 @@ To set a filter on a range, follow these steps:
 	
 	#### __Example 7: Set FilterRange__
 	
-	<snippet id='codeblock-chs'/>
+	<snippet id='libraries-spread-features-filtering-7'/>
 
 
 
@@ -221,7 +221,7 @@ To set a filter on a range, follow these steps:
 	
 	#### __Example 8: Create DynamicFilter__
 	
-	<snippet id='codeblock-cht'/>
+	<snippet id='libraries-spread-features-filtering-8'/>
 	
 	The relative index specified in the constructor is 1, which means that the filter is set on the second column of the range (column C).
             
@@ -231,7 +231,7 @@ To set a filter on a range, follow these steps:
 
 	#### __Example 9: Set Filter__
 	
-	<snippet id='codeblock-chu'/>
+	<snippet id='libraries-spread-features-filtering-9'/>
 	
 	
 	**Figure 2** demonstrates the result of the filtering when applied on the values 1–9 in column B and 11–19 in column C.
@@ -245,7 +245,7 @@ To set a filter on a range, follow these steps:
 
 	#### __Example 10: Set Filter Through Selection__
 	
-	<snippet id='codeblock-chv'/>
+	<snippet id='libraries-spread-features-filtering-10'/>
 
 
 
@@ -260,7 +260,7 @@ When a filter is set, it is automatically applied. The application of a filter h
 
 #### __Example 11: Reapply a Filter__
 
-<snippet id='codeblock-chw'/>
+<snippet id='libraries-spread-features-filtering-11'/>
 
 
 
@@ -280,7 +280,7 @@ As with the `ReapplyFilter()` method, you can remove a filter by instance and by
 
 #### __Example 12: Remove Filter__
 
-<snippet id='codeblock-chx'/>
+<snippet id='libraries-spread-features-filtering-12'/>
 
 
 

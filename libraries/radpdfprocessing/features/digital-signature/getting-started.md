@@ -1,4 +1,4 @@
-﻿---
+---
 title: Getting Started with Digital Signature
 description: Learn how to add, configure, and validate digital signatures in PDF documents with RadPdfProcessing by using certificates, widgets, and signature settings.
 page_title: Digital Signatures in RadPdfProcessing Getting Started
@@ -41,7 +41,7 @@ The following example signs a newly created document:
 
 ### Example: Sign a document
 
-<snippet id='pdf-sign-document'/>
+<snippet id='libraries-pdf-features-digital-signature-getting-started-sign-document'/>
 
 >important In **.NET Standard**, use `Telerik.Documents.Primitives.Rect` instead of `System.Windows.Rect`.
 
@@ -79,7 +79,7 @@ The signature flags were introduced in R2 2022 SP1. The following example shows 
 
 ### Example: Set signature flags
 
-<snippet id='pdf-signature-flags'/>
+<snippet id='libraries-pdf-features-digital-signature-getting-started-flags'/>
 
 Use these values:
 

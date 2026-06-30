@@ -58,7 +58,7 @@ Excel number formats differ from .NET formats. To get the correctly formatted ce
 
 ### Example: Get a Formatted Cell Value
 
-<snippet id='codeblock-cqd'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-1'/>
 
 ## Set and Read Cell Values
 
@@ -66,7 +66,7 @@ Example 1 sets the value of cell `A1` to `Total`.
 
 ### Example 1: Set a String Value
 
-<snippet id='codeblock-cqe'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-2'/>
 
 Another option is to use the `Create()` method of `CellValueFactory` to produce an `ICellValue` instance and then pass that instance to `SetValue(ICellValue)`. Like `SetValue()`, `Create()` provides overloads for common value types such as `string`, `double`, and `bool`.
 
@@ -74,7 +74,7 @@ Example 2 creates `NumberCellValue` with value `3.14` and assigns it to cell `A1
 
 ### Example 2: Create NumberCellValue
 
-<snippet id='codeblock-cqf'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-3'/>
 
 If you retrieve the value of cell `A1`, `GetValue()` returns `NumberCellValue` with `RawValue` equal to `3.14` and both `ValueType` and `ResultValueType` equal to `Number`.
 
@@ -82,7 +82,7 @@ Example 3 retrieves the value created in Example 2.
 
 ### Example 3: Retrieve a Cell Value
 
-<snippet id='codeblock-cqg'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-4'/>
 
 ## How RangePropertyValue<ICellValue> Works
 
@@ -97,7 +97,7 @@ The class exposes these two key properties:
 
 ### Example 4: Use IsIndeterminate and Value
 
-<snippet id='codeblock-cqh'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-5'/>
 
 ## Empty Cell Value
 
@@ -107,7 +107,7 @@ If a cell already contains another value, clear it by using `ClearValue()`.
 
 ### Example 5: Clear a Value
 
-<snippet id='codeblock-cqi'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-6'/>
 
 ## Boolean Cell Value
 
@@ -117,13 +117,13 @@ Example 6 sets cells `A1` and `B1` to `true` and `false`.
 
 ### Example 6: Set a Boolean Value
 
-<snippet id='codeblock-cqj'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-7'/>
 
 You can also create `BooleanCellValue` explicitly by using `CellValueFactory.Create()` and then passing the result to `SetValue()`.
 
 ### Example 7: Create BooleanCellValue by Using CellValueFactory
 
-<snippet id='codeblock-cqk'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-8'/>
 
 ## Number Cell Value
 
@@ -141,7 +141,7 @@ If `SetValue(string)` cannot parse the input as another supported type, it falls
 
 ### Example 8: Set a Number Cell Value
 
-<snippet id='codeblock-cql'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-9'/>
 
 ## Date Values
 
@@ -151,7 +151,7 @@ Example 9 sets the value of cell `A1` to `6 October 1987` in the `en-US` culture
 
 ### Example 9: Set a Date as NumberCellValue
 
-<snippet id='codeblock-cqm'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-10'/>
 
 Contained double value:   32056
 Applied format:   m/d/yyyy
@@ -160,7 +160,7 @@ If you later access the value from Example 9, you receive its numeric representa
 
 ### Example 10: Get a Date Value
 
-<snippet id='codeblock-cqn'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-11'/>
 
 ## Formula Cell Value
 
@@ -175,7 +175,7 @@ Both methods create `FormulaCellValue` only when the current `CellValueFormat` i
 
 ### Example 11: Create a Formula That Refers to Another Cell
 
-<snippet id='codeblock-cqo'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-12'/>
 
 After this code runs, the value of cell `A1` matches the value of cell `A2`. When `A2` changes, `A1` updates automatically.
 
@@ -183,25 +183,25 @@ An expression can also contain a built-in function. For the full list of availab
 
 ### Example 12: Use a Built-In Function
 
-<snippet id='codeblock-cqp'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-13'/>
 
 You can also pass `ICellValue` to `SetValue()` after creating it with `CellValueFactory.Create()`. Unlike the Boolean and Number overloads, formula creation also requires `Worksheet` and `CellIndex` parameters because the expression can reference other cells and worksheets. This overload also takes the current cell format and can return an updated format to apply.
 
 ### Example 13: Create FormulaCellValue
 
-<snippet id='codeblock-cqq'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-14'/>
 
 `SetValue()` performs internal checks that consider the current cell format and other conditions. If you already know that the incoming text is a formula, use `SetValueAsFormula(string text)` directly to improve performance.
 
 ### Example 14: Create FormulaCellValue by Using SetValueAsFormula()
 
-<snippet id='codeblock-cqr'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-15'/>
 
 Depending on your requirements, you can read either the formula definition or the evaluated result value.
 
 ### Example 15: Get the Value of a Cell That Contains a Formula
 
-<snippet id='codeblock-cqs'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-16'/>
 
 ## Text Cell Value
 
@@ -211,25 +211,25 @@ You can set `TextCellValue` by using `SetValue(string)`. Before the method creat
 
 ### Example 16: Set TextCellValue
 
-<snippet id='codeblock-cqt'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-17'/>
 
 If you want to skip the default parsing and always create `TextCellValue`, set the cell value format to `Text` (`@`) before you assign the value.
 
 ### Example 17: Explicitly Apply the Text Value Type
 
-<snippet id='codeblock-cqu'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-18'/>
 
 You can achieve the same result by using `CellValueFactory.Create()`.
 
 ### Example 18: Create TextCellValue
 
-<snippet id='codeblock-cqv'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-19'/>
 
 If you already know that the value must be text, use `SetValueAsText(string text)` directly to avoid the internal parsing checks and improve performance.
 
 ### Example 19: Create TextCellValue by Using SetValueAsText()
 
-<snippet id='codeblock-cqw'/>
+<snippet id='libraries-spread-working-with-cells-cell-value-types-20'/>
 
 ## Next Steps
 

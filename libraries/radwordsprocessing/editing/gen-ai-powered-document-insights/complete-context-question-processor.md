@@ -60,7 +60,7 @@ The following example demonstrates how to use the `CompleteContextQuestionProces
 
 **Example 1: Using CompleteContextQuestionProcessor**
 
-<snippet id='libraries-flow-features-gen-ai-ask-questions-using-complete-context'/>
+<snippet id='libraries-flow-editing-gen-ai-powered-document-insights-complete-context-question-processor'/>
 
 ## See Also
 

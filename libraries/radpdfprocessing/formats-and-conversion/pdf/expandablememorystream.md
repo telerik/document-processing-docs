@@ -33,7 +33,7 @@ Use `ExpandableMemoryStream` when you need to:
 
 The following example shows two common ways to load a large PDF document into memory before further processing. The first approach constructs the stream directly from a byte array and passes an explicit segment size (`bufferSize`). The second approach creates an empty instance and copies a file stream into it. The constructor's second parameter (`bufferSize`) is optional and defaults to 1,000,000 bytes (1 MB). You can omit it unless you want a different segment size.
 
-<snippet id='libraries-pdf-formats-and-conversion-expandablememorystream-implementation'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-expandablememorystream'/>
 
 In both cases, the segmented internal structure avoids reallocating a single large contiguous buffer. This helps performance and memory stability for very large PDF files.
 

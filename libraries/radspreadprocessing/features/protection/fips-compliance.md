@@ -23,7 +23,7 @@ If you need to comply with the FIPS 140-2 standard, you can disable the forbidde
 
 **Example 1: Enforce FIPS**
 
-<snippet id='codeblock-cna'/>
+<snippet id='libraries-spread-features-protection-fips-compliance'/>
 
 Enforce the FIPS compliance before using the Protection feature.
 

@@ -51,15 +51,15 @@ You can insert a Merge field through the `InsertField()` method of [RadFlowDocum
 
 **Example 1: Insert a Merge field**
 
-<snippet id='codeblock-bc'/>
+<snippet id='libraries-flow-concepts-fields-merge-field-1'/>
 
 **Example 2: Insert a Merge field with switches**
 
-<snippet id='codeblock-bd'/>
+<snippet id='libraries-flow-concepts-fields-merge-field-2'/>
 
 **Example 3: Insert a Merge field with a Date-Time format switch**
 
-<snippet id='codeblock-be'/>
+<snippet id='libraries-flow-concepts-fields-merge-field-3'/>
 
 After updating the field, the result is "05/13/21".
 

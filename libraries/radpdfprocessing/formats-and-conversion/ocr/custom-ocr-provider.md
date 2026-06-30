@@ -32,11 +32,11 @@ The [Azure AI Vision](https://learn.microsoft.com/en-us/azure/ai-services/comput
 
 3\. Create the custom `AzureAIOcrProvider` class that implements the `IOcrProvider` interface: 
 
-<snippet id='libraries-pdf-formats-and-conversion-ocrformatprovider-azureaiocrprovider'/>
+<snippet id='libraries-pdf-formats-and-conversion-ocr-custom-ocr-provider-ocrformatprovider-azureaiocrprovider'/>
  
 4\. Use the custom implementation with the [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) that RadPdfProcessing offers:
 
-<snippet id='libraries-pdf-formats-and-conversion-ocrformatprovider-use-custom-iocrprovider'/>
+<snippet id='libraries-pdf-formats-and-conversion-ocr-custom-ocr-provider-ocrformatprovider-use-custom-iocrprovider'/>
 
 After iterating all images in the specified folder (which contain content in different languages), the provider generates a PDF document with the respective content recognized as text fragments:
 

@@ -42,14 +42,14 @@ To create a watermark through the constructor of the class, pass an object of ty
 
 **Example 1: Create text watermark**
 
-<snippet id='codeblock-iia'/>
+<snippet id='libraries-flow-concepts-watermark-1'/>
 
 
 Creating an image watermark is similar to creating a text one. **Example 2** shows how to create an image watermark.
 
 **Example 2: Create image watermark**
 
-<snippet id='codeblock-jja'/>
+<snippet id='libraries-flow-concepts-watermark-2'/>
 
 
 ## Set Watermark
@@ -61,7 +61,7 @@ Watermarks are preserved in the header of the section to which the watermark is 
 
 **Example 3: Add watermark to header**
 
-<snippet id='codeblock-kka'/>
+<snippet id='libraries-flow-concepts-watermark-3'/>
 
 >tip By default, if a header is omitted for a `Section` other than the first one, it is inherited from the previous `Section`. The watermark set in **Example 3** is implicitly inherited by all sections following the first one because watermarks are preserved in the header.
 
@@ -73,7 +73,7 @@ You can also set a watermark in a document through the [`RadFlowDocumentEditor`]
 
 **Example 4: Set watermark with RadFlowDocumentEditor**
 
-<snippet id='codeblock-lla'/>
+<snippet id='libraries-flow-concepts-watermark-4'/>
 
 
 ## See Also

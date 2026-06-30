@@ -43,7 +43,7 @@ The following example demonstrates how to create a `ThemeColorScheme` object. No
 
 **Example 1: Create a ThemeColorScheme Object**
 
-<snippet id='codeblock-d'/>
+<snippet id='libraries-flow-concepts-document-themes-1'/>
 
 
 
@@ -63,7 +63,7 @@ To create colors that depend on the current document theme, use `ThemableColor` 
 
 **Example 2: Create a ThemableColor Object**
 
-<snippet id='codeblock-e'/>
+<snippet id='libraries-flow-concepts-document-themes-2'/>
 
 
 
@@ -79,7 +79,7 @@ The code in the following example illustrates how to create a `ThemeFontScheme` 
 
 **Example 3: Create a ThemeFontScheme**
 
-<snippet id='codeblock-f'/>
+<snippet id='libraries-flow-concepts-document-themes-3'/>
 
 
 
@@ -93,7 +93,7 @@ When you need to create a font that depends on the current document theme, use `
 
 **Example 4: Create a ThemableFontFamily Object**
 
-<snippet id='codeblock-g'/>
+<snippet id='libraries-flow-concepts-document-themes-4'/>
 
 
 
@@ -103,19 +103,19 @@ Now that you have a color and a font scheme, you can create a new `DocumentTheme
 
 **Example 5: Create a DocumentTheme Object**
 
-<snippet id='codeblock-h'/>
+<snippet id='libraries-flow-concepts-document-themes-5'/>
 
 There are a number of predefined color and font schemes. You can find them in a static class called [PredefinedThemeSchemes](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Theming.PredefinedThemeSchemes.html). The class exposes the properties `ColorSchemes` and `FontSchemes` that hold all predefined schemes.
 
 **Example 6: Using a Predefined Scheme**
 
-<snippet id='codeblock-i'/>
+<snippet id='libraries-flow-concepts-document-themes-6'/>
 
 Changing the current document theme requires setting a single property.
 
 **Example 7: Change the Document Theme**
 
-<snippet id='codeblock-j'/>
+<snippet id='libraries-flow-concepts-document-themes-7'/>
 
 ## Predefined ThemeColorSchemes
 
@@ -224,12 +224,12 @@ To get the actual value from `ThemableColor` or `ThemableFontFamily`, call the `
 
 **Example 8: Get Actual Value from ThemableColor**
 
-<snippet id='codeblock-k'/>
+<snippet id='libraries-flow-concepts-document-themes-8'/>
 
 
 **Example 9: Get Actual Value from ThemableFont**
 
-<snippet id='codeblock-l'/>
+<snippet id='libraries-flow-concepts-document-themes-9'/>
 
 ## See Also
 

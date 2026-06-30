@@ -34,7 +34,7 @@ To specify the default `ImageQuality` value when exporting to PDF, use the [PdfE
 
 #### __Example 1: Set a default value for all images in a document__
 
-<snippet id='pdf-image-quality'/>
+<snippet id='libraries-pdf-concepts-imagequality-image-quality'/>
 
 > The `PdfExportSettings.ImageQuality` property does not affect the quality of images imported from a PDF document. Such images are preserved using `EncodedImageData` (see [ImageQuality and EncodedImageData Class](#imagequality-and-encodedimagedata-class)). `PdfExportSettings.ImageQuality` only affects the export quality of images created using an image stream or a `BitmapSource`.
 
@@ -44,7 +44,7 @@ If you need a particular image to be exported with a different `ImageQuality` va
 
 #### __Example 2: Set the image quality of an image__
 
-<snippet id='pdf-image-source-quality'/>
+<snippet id='libraries-pdf-concepts-imagequality-image-source-quality'/>
 
 
 ### ImageQuality and EncodedImageData Class

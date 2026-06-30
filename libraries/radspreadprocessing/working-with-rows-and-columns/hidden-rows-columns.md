@@ -37,7 +37,7 @@ The `SetHidden()` method changes the hidden state of the rows and columns. It ta
 
 **Example 1: Change Row Hidden State**
 
-<snippet id='codeblock-crj'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-hidden-rows-columns-1'/>
 
 
 ## Relationship with the Height and Width Properties
@@ -48,7 +48,7 @@ When the hidden state property of a `RowSelection` or a `ColumnSelection` is set
 
 **Example 2: Change Column Width**
 
-<snippet id='codeblock-crk'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-hidden-rows-columns-2'/>
 
 ## Relationship with the AutoFit Method
 
@@ -58,7 +58,7 @@ Like setting the height or width through the `SetHeight()` and `SetWidth()` meth
 
 **Example 3: Auto Fit on Hidden Rows**
 
-<snippet id='codeblock-crl'/>
+<snippet id='libraries-spread-working-with-rows-and-columns-hidden-rows-columns-3'/>
 
 
 ## See Also

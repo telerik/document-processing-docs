@@ -41,7 +41,7 @@ When you modify cell values or formulas in bulk, use the `SuspendLayoutUpdate` a
 
 **Example 1: Batch-Modify Cell Values with Suspended Layout Updates**
 
-<snippet id='calculation-chain-batch-modify-suspended-layout'/>
+<snippet id='libraries-spread-features-formulas-calculation-chain'/>
 
 The `SuspendLayoutUpdate` method prevents the workbook from recalculating its layout on each cell change. Call `ResumeLayoutUpdate` after you finish the batch to trigger a single layout pass.
 

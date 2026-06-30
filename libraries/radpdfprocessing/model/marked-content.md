@@ -23,19 +23,19 @@ You can add marked content to a `RadFixedDocument` in the following ways:
 
 ## Adding Marked Content Using the PDF Model
 
-<snippet id='libraries-pdf-model-markedcontent-in-model'/>
+<snippet id='libraries-pdf-model-marked-content-markedcontent-in-model'/>
 
 ## Adding Marked Content Using the FixedContentEditor
 
-<snippet id='libraries-pdf-model-markedcontent-with-fixedcontenteditor'/>
+<snippet id='libraries-pdf-model-marked-content-markedcontent-with-fixedcontenteditor'/>
 
 ## Adding Marked Content Using the RadFixedDocumentEditor
 
-<snippet id='libraries-pdf-model-markedcontent-with-radfixeddocumenteditor'/>
+<snippet id='libraries-pdf-model-marked-content-markedcontent-with-radfixeddocumenteditor'/>
 
 ## Adding Marked Content Using the Block
 
-<snippet id='libraries-pdf-model-markedcontent-in-block'/>
+<snippet id='libraries-pdf-model-marked-content-markedcontent-in-block'/>
 
 ## See Also
 

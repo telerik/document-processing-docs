@@ -50,7 +50,7 @@ Before you call `Import()`, verify these requirements:
 
 ### Example 1: Import a PDF File
 
-<snippet id='pdf-import-file'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfformatprovider-import-file'/>
 
 The result of `Import()` is a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) that you can inspect, modify, render, or export again.
 
@@ -74,7 +74,7 @@ Before you call `Export()`, verify these points:
 
 ### Example 2: Export a PDF File
 
-<snippet id='pdf-export-file'/>
+<snippet id='libraries-pdf-formats-and-conversion-pdf-pdfformatprovider-export-file'/>
 
 >important
 >

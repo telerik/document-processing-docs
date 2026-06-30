@@ -28,11 +28,11 @@ You can search and replace text using [RadFlowDocumentEditor]({%slug radwordspro
 
 **Example 1: Replace Text with a Single Inline**
 
-<snippet id='codeblock-bpbp'/>
+<snippet id='libraries-flow-editing-find-and-replace-replace-document-elements-1'/>
 
 **Example 2: Replace Text with Multiple Inlines**
 
-<snippet id='codeblock-bqbq'/>
+<snippet id='libraries-flow-editing-find-and-replace-replace-document-elements-2'/>
 
 ## Replace Text with One or More Blocks
 
@@ -43,11 +43,11 @@ You can search and replace text using [RadFlowDocumentEditor]({%slug radwordspro
 
 **Example 3: Replace Text with a Single Block**
 
-<snippet id='codeblock-brbr'/>
+<snippet id='libraries-flow-editing-find-and-replace-replace-document-elements-3'/>
 
 **Example 4: Replace Text with Multiple Blocks**
 
-<snippet id='codeblock-bsbs'/>
+<snippet id='libraries-flow-editing-find-and-replace-replace-document-elements-4'/>
 
 ## See Also
 

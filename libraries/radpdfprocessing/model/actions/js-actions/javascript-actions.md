@@ -41,13 +41,13 @@ The following example demonstrates how to create a PDF document with three `Text
 
 ![JS Action Sum FormField result showing automatic calculation](images/js-action-sum-form-field.gif)
 
-<snippet id='pdf-js-action-sum'/>
+<snippet id='libraries-pdf-model-actions-js-actions-javascript-actions-js-action-sum'/>
 
 ### Using the MergedJavaScriptNameResolving Event
 
 The `MergedJavaScriptNameResolving` event fires when resolving conflicts between JavaScript names while merging `RadFixedDocument` instances.
 
-<snippet id='pdf-merged-js-script-name-resolving'/>
+<snippet id='libraries-pdf-model-actions-js-actions-javascript-actions-merged-js-script-name-resolving'/>
 
 ## See Also
 

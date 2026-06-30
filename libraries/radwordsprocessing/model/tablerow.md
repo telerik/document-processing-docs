@@ -23,13 +23,13 @@ You can use the code snippet from **Example 1** to create a `TableRow` and add i
 
 **Example 1: Create a TableRow and add it to a table**
 
-<snippet id='codeblock-dede'/>
+<snippet id='libraries-flow-model-tablerow-1'/>
 
 To create a `TableRow` and add it in the document tree at the same time, you can use the `AddTableRow()` method of the [Rows](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Table.html#collapsible-Telerik_Windows_Documents_Flow_Model_Table_Rows) collection property of the table.
 
 **Example 2: Create a TableRow and add it to a table at the same time**
 
-<snippet id='codeblock-dfdf'/>
+<snippet id='libraries-flow-model-tablerow-2'/>
 
 ## Modifying a TableRow
 
@@ -61,7 +61,7 @@ The `TableRow` element exposes several properties that allow you to customize it
 
 **Example 3: Add TableCell objects to a TableRow**
 
-<snippet id='codeblock-dgdg'/>
+<snippet id='libraries-flow-model-tablerow-3'/>
 
 ## See Also
 

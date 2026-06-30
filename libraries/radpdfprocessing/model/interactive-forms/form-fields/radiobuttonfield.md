@@ -26,7 +26,7 @@ The `RadioButtonField` class corresponds to the `FormFieldType.RadioButton` enum
 
 **Example 1: Create RadioButtonFields and add them to a page**
 
-<snippet id='pdf-radio-button-field'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-radiobuttonfield'/>
 
 ## See Also
 

@@ -87,7 +87,7 @@ The values sort condition is a condition which uses the values of the cells to s
 
 **Example 1: Create ValuesSortCondition**
 
-<snippet id='codeblock-ckv'/>
+<snippet id='libraries-spread-features-sorting-1'/>
 
 
 
@@ -104,7 +104,7 @@ Sometimes the behavior of the predefined comparers is not sufficient. In this ca
 
 **Example 2: Create CustomValuesSortCondition**
 
-<snippet id='codeblock-ckw'/>
+<snippet id='libraries-spread-features-sorting-2'/>
 
 
 
@@ -119,7 +119,7 @@ A fore color sort condition orders the cells according to the color of the text 
 
 **Example 3: Create ForeColorSortCondition**
 
-<snippet id='codeblock-ckx'/>
+<snippet id='libraries-spread-features-sorting-3'/>
 
 
 
@@ -131,7 +131,7 @@ A fill color sort condition orders the cells according to their fill color. Each
 
 **Example 4: Create FillColorSortCondition**
 
-<snippet id='codeblock-cky'/>
+<snippet id='libraries-spread-features-sorting-4'/>
 
 
 
@@ -150,7 +150,7 @@ Unlike the case with [Filtering]({%slug radspreadprocessing-features-filtering%}
 
 **Example 5: Create Conditions**
 
-<snippet id='codeblock-ckz'/>
+<snippet id='libraries-spread-features-sorting-5'/>
 
 
 
@@ -158,7 +158,7 @@ Unlike the case with [Filtering]({%slug radspreadprocessing-features-filtering%}
 
 **Example 6: Set Conditions Through SortState**
 
-<snippet id='codeblock-cla'/>
+<snippet id='libraries-spread-features-sorting-6'/>
 
 
 
@@ -166,7 +166,7 @@ Alternatively, **Example 7** shows how to apply the sorting conditions through t
 
 **Example 7: Set Conditions Through Selection**
 
-<snippet id='codeblock-clb'/>
+<snippet id='libraries-spread-features-sorting-7'/>
 
 
 
@@ -183,7 +183,7 @@ To clear the sorting, use the `Clear()` method of the `SortState` property. Ther
 
 **Example 8: Clear Sorting**
 
-<snippet id='codeblock-clc'/>
+<snippet id='libraries-spread-features-sorting-8'/>
 
 
 

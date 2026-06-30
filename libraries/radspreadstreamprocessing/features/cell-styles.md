@@ -78,7 +78,7 @@ When you apply a style to a cell with locally set properties, the result is an a
 
 **Example 1: Get a Built-In Style and Apply a Number Group**
 
-<snippet id='codeblock-dkq'/>
+<snippet id='libraries-spreadstream-features-cell-styles-1'/>
 
 Through the API you can add, modify, or remove styles from the `CellStyles` collection of [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}).
 
@@ -91,7 +91,7 @@ To create a new style, invoke the `Add()` method of the workbook `CellStyles` co
 
 **Example 2: Create SpreadCellStyle and Apply It to a Cell**
 
-<snippet id='codeblock-dkr'/>
+<snippet id='libraries-spreadstream-features-cell-styles-2'/>
 
 ## Modify a Style
 
@@ -101,7 +101,7 @@ To modify a style, retrieve it from the `CellStyles` collection and set the prop
 
 **Example 3: Modify a Built-In Style**
 
-<snippet id='codeblock-dks'/>
+<snippet id='libraries-spreadstream-features-cell-styles-3'/>
 
 
 ## See Also

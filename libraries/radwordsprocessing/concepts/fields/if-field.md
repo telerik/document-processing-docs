@@ -47,7 +47,7 @@ You can insert an If field through the `InsertField()` method of [RadFlowDocumen
 
 **Example 1: Insert an If field**
 
-<snippet id='codeblock-bb'/>
+<snippet id='libraries-flow-concepts-fields-if-field'/>
 
 The result of the above snippet is illustrated in **Figure 1**.
 

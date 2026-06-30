@@ -32,7 +32,7 @@ The following example shows how to create an `RgbColor` and assign it as Fill of
         
 #### **Create RgbColor**
 
-<snippet id='pdf-create-rgb-color'/>
+<snippet id='libraries-pdf-concepts-colors-and-color-spaces-create-rgb-color'/>
 
 ### GrayColor
 
@@ -48,7 +48,7 @@ The following example covers the most common `GrayColor` scenarios: default and 
 
 #### Create GrayColor
 
-<snippet id='pdf-create-gray-color'/>
+<snippet id='libraries-pdf-concepts-colors-and-color-spaces-create-gray-color'/>
 
 ### CmykColor
 
@@ -63,7 +63,7 @@ Represents a CMYK (cyan, magenta, yellow, key) color. The `CmykColor` class was 
 
 #### Create CmykColor
 
-<snippet id='pdf-create-cmyk-color'/>
+<snippet id='libraries-pdf-concepts-colors-and-color-spaces-create-cmyk-color'/>
 
 ![CMYK Color](images/cmyk-color.png) 
 
@@ -94,7 +94,7 @@ The `Gradient` class is inherited by the following classes:
             
 	#### **Example 2: Create LinearGradient**
 	
-	<snippet id='pdf-create-linear-gradient'/>
+	<snippet id='libraries-pdf-concepts-colors-and-color-spaces-create-linear-gradient'/>
 	
 The gradient created in **Example 2** is shown in **Figure 1**.
 	            
@@ -113,7 +113,7 @@ The gradient created in **Example 2** is shown in **Figure 1**.
 	
 #### **Example 3: Create RadialGradient**
 	
-<snippet id='pdf-create-linear-gradient'/>
+<snippet id='libraries-pdf-concepts-colors-and-color-spaces-create-linear-gradient'/>
 	
 The result from **Example 3** is shown in **Figure 2**.
 	
@@ -146,7 +146,7 @@ Because the `TilingBase` class implements the `IContentRootElement` interface li
 
 #### __Example 4: Create Tiling__
 
-<snippet id='pdf-create-tiling'/>
+<snippet id='libraries-pdf-concepts-colors-and-color-spaces-create-tiling'/>
 
 The tiling created in **Example 4** is shown in **Figure 3**.
 
@@ -159,7 +159,7 @@ The **LAB** color space is device-independent. **L** represents lightness or bri
 
 #### **Create LabColor**
 
-<snippet id='pdf-create-lab-color'/>
+<snippet id='libraries-pdf-concepts-colors-and-color-spaces-create-lab-color'/>
 
 ## See Also
 

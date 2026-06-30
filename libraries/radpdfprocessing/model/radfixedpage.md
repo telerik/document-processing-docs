@@ -59,7 +59,7 @@ The following example creates a new page and adds it to a document:
 
 #### Example: Create RadFixedPage and add it to a document
 
-<snippet id='add-radfixedpage'/>
+<snippet id='libraries-pdf-model-radfixedpage-add-radfixedpage'/>
 
 ### Add Content
 
@@ -69,7 +69,7 @@ The following example adds a previously created content element to a page:
 
 #### Example: Add a content element to RadFixedPage
 
-<snippet id='add-link-annotation-in-radfixedpage'/>
+<snippet id='libraries-pdf-model-radfixedpage-add-link-annotation-in-radfixedpage'/>
 
 For simpler scenarios, use the `Add[Element]()` methods on the `Content` collection. Methods such as `AddPath()`, `AddTextFragment()`, and `AddImage()` create the element, add it to the page, and return it for further configuration.
 
@@ -83,7 +83,7 @@ The following example adds a previously created annotation to a page:
 
 #### Example: Add an annotation to RadFixedPage
 
-<snippet id='add-annotation-to-radfixedpage'/>
+<snippet id='libraries-pdf-model-radfixedpage-add-annotation-to-radfixedpage'/>
 
 You can also call `AddLink()` on the `Annotations` collection. That method creates the link annotation, adds it to the page, and returns it so you can configure it immediately. For more detail, see [link annotations in RadPdfProcessing]({%slug radpdfprocessing-model-annotations-links%}).
 
@@ -95,7 +95,7 @@ The following example changes the `Rotation` and `Size` properties of a page:
 
 #### Example: Change RadFixedPage properties
 
-<snippet id='modify-radfixedpage-properties'/>
+<snippet id='libraries-pdf-model-radfixedpage-modify-radfixedpage-properties'/>
 
 Changing `Size`, `MediaBox`, `CropBox`, or `Rotation` affects how PDF viewers display and print the page. Apply those settings before final export whenever possible so layout decisions remain predictable.
 

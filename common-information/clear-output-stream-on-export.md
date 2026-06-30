@@ -35,13 +35,13 @@ No code changes are required on the consumer side. The clearing happens automati
 
 **Example 1: Reusing a MemoryStream for Multiple Exports**
 
-<snippet id='reuse-stream-for-multiple-exports'/>
+<snippet id='common-information-clear-output-stream-on-export-reuse-stream-for-multiple-exports'/>
 
 When reusing a stream, the second `Export()` call truncates the stream to zero length before writing, so only the new document data is present.
 
 **Example 2: Exporting to a FileStream**
 
-<snippet id='export-to-filestream'/>
+<snippet id='common-information-clear-output-stream-on-export-to-filestream'/>
 
 Even when opening the file with `FileMode.OpenOrCreate`, the stream is cleared automatically so no leftover data from a previous file remains.
 

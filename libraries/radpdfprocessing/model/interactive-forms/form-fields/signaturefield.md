@@ -23,7 +23,7 @@ The `SignatureField` class provides the following properties:
 
 **Example 1: Create a SignatureField and Add It to a Page**
 
-<snippet id='pdf-signature-field'/>
+<snippet id='libraries-pdf-model-interactive-forms-form-fields-signaturefield'/>
 
 ## See Also
 

@@ -72,7 +72,7 @@ The [JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-
 
 The following example shows how to create a `JsonExportSettings` instance with the desired settings while exporting a [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%}) to JSON format:
 
-<snippet id='libraries-spread-formats-and-conversion-json-jsonexportsettings-apply'/>
+<snippet id='libraries-spread-formats-and-conversion-json-jsonexportsettings'/>
 
 ## See Also
 

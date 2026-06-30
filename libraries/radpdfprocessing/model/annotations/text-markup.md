@@ -30,13 +30,13 @@ Depending on the `TextMarkupAnnotationType`, you can add the respective type of 
 
 ### Creating a Highlight Annotation
 
-<snippet id='pdf-highlight-annotation'/>
+<snippet id='libraries-pdf-model-annotations-text-markup-highlight-annotation'/>
 
 ![Create Highlight Annotation](images/pdf-processing-create-highlight-annotation.png)
 
 ### Creating a Highlight Annotation with Appearance
 
-<snippet id='pdf-appearance-highlight-annotation'/>
+<snippet id='libraries-pdf-model-annotations-text-markup-appearance-highlight-annotation'/>
 
 ![Create Highlight Annotation with Appearance](images/pdf-processing-create-highlight-annotation-with-appearance.gif)
 
@@ -44,19 +44,19 @@ Depending on the `TextMarkupAnnotationType`, you can add the respective type of 
 
 ## Underline
 
-<snippet id='pdf-text-markup-underline'/>
+<snippet id='libraries-pdf-model-annotations-text-markup-underline'/>
 
 ![Create Underline Annotation](images/pdf-processing-create-underline-annotation.png)
 
 ## Squiggly
 
-<snippet id='pdf-text-markup-squiggly'/>
+<snippet id='libraries-pdf-model-annotations-text-markup-squiggly'/>
 
 ![Create Squiggly Annotation](images/pdf-processing-create-squiggly-annotation.png)
 
 ## StrikeOut
 
-<snippet id='pdf-text-markup-strikeout'/>
+<snippet id='libraries-pdf-model-annotations-text-markup-strikeout'/>
 
 ![Create StrikeOut Annotation](images/pdf-processing-create-strikeOut-annotation.png)
 

@@ -64,7 +64,7 @@ Insert a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) with the `
 
 #### **Example 3: Insert TextFragment**
 
-<snippet id='fixed-content-editor-insert-text-fragment'/>
+<snippet id='libraries-pdf-editing-fixedcontenteditor-insert-text-fragment'/>
 
 **Figure 1** shows the result of **Example 3**.         
 
@@ -80,7 +80,7 @@ Insert a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) with the `
 
 #### **Example 4: Insert paragraph**
 
-<snippet id='fixed-content-editor-insert-paragraph'/>
+<snippet id='libraries-pdf-editing-fixedcontenteditor-insert-paragraph'/>
 
 **Figure 2** shows the result of **Example 4**.        
 
@@ -105,7 +105,7 @@ Insert a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) with the `
             
 #### **Example 5: Insert image**
 
-<snippet id='fixed-content-editor-insert-image'/>
+<snippet id='libraries-pdf-editing-fixedcontenteditor-insert-image'/>
 
 #### Figure 3: Image result
 ![Rad Pdf Processing Editing Fixed Content Editor 04](images/RadPdfProcessing_Editing_FixedContentEditor_04.png)
@@ -124,7 +124,7 @@ The following methods can be used to insert different [Geometries]({%slug radpdf
             
 #### **Example 6: Insert ellipse**
 
-<snippet id='fixed-content-editor-insert-ellipse'/>
+<snippet id='libraries-pdf-editing-fixedcontenteditor-insert-ellipse'/>
 
 ### Inserting Clipping
 
@@ -155,7 +155,7 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
 
 #### **Example 8: Insert table**
 
-<snippet id='fixed-content-editor-insert-table'/>
+<snippet id='libraries-pdf-editing-fixedcontenteditor-insert-table'/>
 
 #### The Table Created in Example 8
 
@@ -168,7 +168,7 @@ More detailed information about tables is available in the [Table]({%slug radpdf
 With the `FixedContentEditor` class you can insert a Form (Form-XObject) element. 
 
 #### **Example 9: Insert a form**
-<snippet id='fixed-content-editor-insert-form'/>
+<snippet id='libraries-pdf-editing-fixedcontenteditor-insert-form'/>
 
 There are two more overloads of `DrawForm()` that allow you to pass the size that should be used for the form.
 
@@ -182,13 +182,13 @@ The Widget annotations allow you to visualize the content of a FormField. With t
 
 	#### **Example 10: Insert PushButtonField with PushButtonWidget using DrawWidget**
 	
-	<snippet id='fixed-content-editor-insert-pushbuttonfield'/>
+	<snippet id='libraries-pdf-editing-fixedcontenteditor-insert-pushbuttonfield'/>
 
 * **DrawWidget(RadioButtonField parentField, RadioOption option, Size annotationSize)**: Creates a new [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets%}#radiobuttonwidget-class) and draws the widget with the specified annotation size. This method adds a widget only in cases when the root of the FixedContentEditor supports annotations. The second parameter represents the option that the widget visualizes.
 	
 	#### **Example 11: Insert RadioButtonField with RadioButtonWidget using DrawWidget**
 	
-	<snippet id='fixed-content-editor-insert-radiobuttonfield'/>
+	<snippet id='libraries-pdf-editing-fixedcontenteditor-insert-radiobuttonfield'/>
 
 ## Positioning
 
@@ -198,7 +198,7 @@ The code in **Example 12** shows how to manipulate the position of the inserted 
 
 #### **Example 12: Scale and rotate content**
 
-<snippet id='fixed-content-editor-scale-rotate'/>
+<snippet id='libraries-pdf-editing-fixedcontenteditor-scale-rotate'/>
 
 #### Figure 5: Positioning result
 

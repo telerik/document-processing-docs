@@ -32,13 +32,13 @@ Internally there are many mechanisms used to lower the number of calculations, b
 
 **Example 1: Suspend Layout Updates**
 
-<snippet id='codeblock-cfv'/>
+<snippet id='libraries-spread-performance-1'/>
 
 If an exception is thrown between the two method calls, the resuming of the layout update will not execute and the UI will stop updating. You can ensure the layout update resumes regardless of exceptions by using `UpdateScope`. The following code snippet demonstrates how to use it.
 
 **Example 2: Suspend Layout Updates in UpdateScope**
 
-<snippet id='codeblock-cfw'/>
+<snippet id='libraries-spread-performance-2'/>
 
 ## Reduce the Number of Undo Steps
 
@@ -46,13 +46,13 @@ Preserving information about the steps in the undo stack is usually not a time c
 
 **Example 3: Combine Steps in Undo Group**
 
-<snippet id='codeblock-cfx'/>
+<snippet id='libraries-spread-performance-3'/>
 
 If an exception is thrown between the two method calls, the ending of the undo group will not execute. All the following actions will not be added to the history and the UI will stop updating. You can ensure the undo group closes regardless of exceptions by using `UpdateScope`. The following code snippet demonstrates how to use it.
 
 **Example 4: Combine Steps in Undo Group Using UpdateScope**
 
-<snippet id='codeblock-cfy'/>
+<snippet id='libraries-spread-performance-4'/>
 
 ## Disabling History
 
@@ -60,13 +60,13 @@ As described in the [Reduce the Number of Undo Steps section](#reduce-the-number
 
 **Example 5: Disable History**
 
-<snippet id='codeblock-cfz'/>
+<snippet id='libraries-spread-performance-5'/>
 
 If an exception is thrown before enabling the history, it will not be enabled and the subsequent history steps will not be preserved. To ensure that the history is enabled, use the `UpdateScope` class. The following example shows how to achieve this.
 
 **Example 6: Disable and Enable History Using UpdateScope**
 
-<snippet id='codeblock-cga'/>
+<snippet id='libraries-spread-performance-6'/>
 
 ## Apply Values or Formatting on Large Range at Once
 

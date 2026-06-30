@@ -63,14 +63,14 @@ Document elements expose sets of style properties through the `Properties` prope
 
 **Example 1: Get a value**
 
-<snippet id='codeblock-s'/>
+<snippet id='libraries-flow-concepts-style-properties-1'/>
 
 
 **Example 2** demonstrates how to set a value with CLR property and style property.
 
 **Example 2: Set a value**
 
-<snippet id='codeblock-t'/>
+<snippet id='libraries-flow-concepts-style-properties-2'/>
 
 
 
@@ -82,7 +82,7 @@ The style properties in a style are accessible through the following property se
 
 **Example 3: Get the local value**
 
-<snippet id='codeblock-u'/>
+<snippet id='libraries-flow-concepts-style-properties-3'/>
 
 
 
@@ -90,7 +90,7 @@ The style properties in a style are accessible through the following property se
 
 **Example 4: Get the actual value**
 
-<snippet id='codeblock-v'/>
+<snippet id='libraries-flow-concepts-style-properties-4'/>
 
 
 
@@ -102,7 +102,7 @@ The code in **Example 5** illustrates how to get the default value for a style p
 
 **Example 5: Get the default value**
 
-<snippet id='codeblock-w'/>
+<snippet id='libraries-flow-concepts-style-properties-5'/>
 
 
 

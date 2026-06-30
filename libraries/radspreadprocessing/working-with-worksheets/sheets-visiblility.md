@@ -24,7 +24,7 @@ There are two available options when hiding sheets. The first option is to set t
 
 **Example 1: Set the SheetVisibility to Hidden or VeryHidden**
 
-<snippet id='codeblock-csp'/>
+<snippet id='libraries-spread-working-with-worksheets-sheets-visiblility-1'/>
 
 The other option is to use the `Hide` method exposed by both the `SheetCollection` and `WorksheetCollection` classes. The `Hide` method provides several overloads and supports hiding a sheet by passing:
 
@@ -34,7 +34,7 @@ The other option is to use the `Hide` method exposed by both the `SheetCollectio
 
 **Example 2: Hide Sheets Using the Hide Method**
 
-<snippet id='codeblock-csq'/>
+<snippet id='libraries-spread-working-with-worksheets-sheets-visiblility-2'/>
 
 
 ## Unhiding Sheets
@@ -45,7 +45,7 @@ The following code snippets show the two approaches.
 
 **Example 3: Set the SheetVisibility to Visible**
 
-<snippet id='codeblock-csr'/>
+<snippet id='libraries-spread-working-with-worksheets-sheets-visiblility-3'/>
 
 The `Unhide` method provides two overloads and supports unhiding a sheet by:
 
@@ -54,7 +54,7 @@ The `Unhide` method provides two overloads and supports unhiding a sheet by:
 
 **Example 4: Unhide Sheets Using the Unhide Method**
 
-<snippet id='codeblock-css'/>
+<snippet id='libraries-spread-working-with-worksheets-sheets-visiblility-4'/>
 
 ## See Also
 

@@ -18,7 +18,7 @@ The `TimeStampServer` class encapsulates the details needed to communicate with 
 
 >note [PdfProcessing Add Digital Signature External Demo](https://demos.telerik.com/document-processing/pdfprocessing/external_digitally_sign_document)
 
-<snippet id='libraries-pdf-features-digital-signature-timestampserver'/>
+<snippet id='libraries-pdf-features-digital-signature-pdf-sign-timestamp-server-timestampserver'/>
 
 The produced result document indicates a valid embedded timestamp:
 
@@ -28,7 +28,7 @@ The produced result document indicates a valid embedded timestamp:
 
 The following example shows how to initialize a new instance of the `TimeStampServer` class with the specified URL, credentials, and timeout:
 
-<snippet id='libraries-pdf-features-digital-signature-create-timestampserver'/>
+<snippet id='libraries-pdf-features-digital-signature-pdf-sign-timestamp-server-create-timestampserver'/>
 
 ## See Also
 

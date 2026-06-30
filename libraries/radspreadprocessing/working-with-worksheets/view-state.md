@@ -20,7 +20,7 @@ Gets or sets the current scale factor of the worksheet. Use this property to zoo
 
 **Example 1: Set the Zoom Level of a Worksheet to 50%**
 
-<snippet id='codeblock-cst'/>
+<snippet id='libraries-spread-working-with-worksheets-view-state-1'/>
 
 
 ## TopLeftCellIndex
@@ -29,7 +29,7 @@ Determines the top left cell visible on the screen. Use this property to make su
 
 **Example 2: Set the Top Left Cell to Be C11**
 
-<snippet id='codeblock-csu'/>
+<snippet id='libraries-spread-working-with-worksheets-view-state-2'/>
 
 ## SelectionState
 
@@ -39,7 +39,7 @@ Gets or sets the state of the selection inside the worksheet.
 
 **Example 3: Change the Selection**
 
-<snippet id='codeblock-csv'/>
+<snippet id='libraries-spread-working-with-worksheets-view-state-3'/>
 
 ![Selection state showing two selected ranges in a worksheet](images/ViewState_Selection.png)
 
@@ -53,7 +53,7 @@ Gets or sets a boolean value determining whether the gridlines are visualized wh
 
 **Example 4: Remove Grid Lines**
 
-<snippet id='codeblock-csw'/>
+<snippet id='libraries-spread-working-with-worksheets-view-state-4'/>
 
 ## ShowRowColHeaders
 
@@ -61,7 +61,7 @@ Determines whether the headers of the rows and columns are visualized when the d
 
 **Example 5: Remove Row and Column Headers**
 
-<snippet id='codeblock-csx'/>
+<snippet id='libraries-spread-working-with-worksheets-view-state-5'/>
 
 ![Worksheet with hidden row and column headers and grid lines](images/ViewState_HideLinesHeaders.png)
 
@@ -83,7 +83,7 @@ Sets the color of the worksheet tab.
 
 **Example 6: Change the Color of the Tab**
 
-<snippet id='codeblock-csy'/>
+<snippet id='libraries-spread-working-with-worksheets-view-state-6'/>
 
 ![Worksheet with green tab color](images/ViewState_TabColor.png)
 

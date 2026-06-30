@@ -50,7 +50,7 @@ The `MatrixPosition` class exposes a static `Default` property, which represents
 
 #### __Example 1: Transform MatrixPosition__
 
-<snippet id='pdf-matrix-position'/>
+<snippet id='libraries-pdf-concepts-position-matrix-position'/>
 
 The resulting matrix position is translated both horizontally and vertically by 50.
         
@@ -68,7 +68,7 @@ The `SimplePosition` class exposes a static `Default` property which represents 
         
 #### __Example 2: Transform SimplePosition__
 
-<snippet id='pdf-simple-position'/>
+<snippet id='libraries-pdf-concepts-position-simple-position'/>
 
 The resulting simple position is translated both horizontally and vertically by 30, because of the transformation overwriting.
         

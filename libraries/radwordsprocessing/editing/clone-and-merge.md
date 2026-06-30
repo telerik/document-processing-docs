@@ -21,7 +21,7 @@ position: 0
 
 #### **Example 1: Merge Two Instances of RadFlowDocument**
 
-<snippet id='codeblock-bn'/>
+<snippet id='libraries-flow-editing-clone-and-merge-1'/>
 
 The `Merge` method performs two distinct operations:
 
@@ -40,7 +40,7 @@ You can pass the `MergeOptions` parameter as an argument to the `Merge()` method
 
 #### **Example 2: Merge Documents with MergeOptions**
 
-<snippet id='codeblock-bo'/>
+<snippet id='libraries-flow-editing-clone-and-merge-2'/>
 
 >tip You can insert one document into another at a specified position using the `InsertDocument()` method of `RadFlowDocumentEditor`. For more information, refer to [Insert Documents]({%slug radwordsprocessing-editing-insert-documents%}).
 
@@ -50,7 +50,7 @@ You can pass the `MergeOptions` parameter as an argument to the `Merge()` method
 
 #### **Example 3: Clone a RadFlowDocument**
 
-<snippet id='codeblock-bp'/>
+<snippet id='libraries-flow-editing-clone-and-merge-3'/>
 
 ## Cloning Document Elements
 
@@ -73,7 +73,7 @@ The `Clone()` method has two overloads:
 
 #### **Example 4: Clone a Section**
 
-<snippet id='codeblock-bq'/>
+<snippet id='libraries-flow-editing-clone-and-merge-4'/>
 
 >tip With the `DocumentElementImporter` class you can import a document element from one document (source) and insert it into another (target). For more details, refer to [Import Document Element]({%slug radwordsprocessing-editing-import-document-element%}).
 

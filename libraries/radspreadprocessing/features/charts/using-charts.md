@@ -43,7 +43,7 @@ Once you have created a `FloatingChartShape`, you can insert it in the document 
 
 **Example 1: Create a Chart Through FloatingChartShape and Add It to a Worksheet**
 
-<snippet id='codeblock-cly'/>
+<snippet id='libraries-spread-features-charts-using-1'/>
 
 The result of executing the code in **Example 1** looks like **Figure 1**.
 
@@ -54,7 +54,7 @@ The `Chart` property of `FloatingChartShape` holds an object of type [DocumentCh
 
 **Example 2: Create a Combo (Column and Line) Chart Through FloatingChartShape and Add It to a Worksheet**
 
-<snippet id='codeblock-clz'/>
+<snippet id='libraries-spread-features-charts-using-2'/>
 
 The result of executing the code in **Example 2** looks like **Figure 2**.
 
@@ -67,7 +67,7 @@ The `FloatingChartShape` class exposes properties that allow you to customize th
 
 **Example 3: Customize the Fill and Outline of FloatingChartShape**
 
-<snippet id='codeblock-cma'/>
+<snippet id='libraries-spread-features-charts-using-3'/>
 
 The result of executing the code in **Example 3** over a cell range containing sample data looks like **Figure 3**.
 
@@ -94,13 +94,13 @@ You can create an empty `DocumentChart` object and then set the desired values m
 
 **Example 4: Create an Empty Chart and Set Its Values Manually**
 
-<snippet id='codeblock-cmb'/>
+<snippet id='libraries-spread-features-charts-using-4'/>
 
 You can then use the chart to replace the chart in an existing `FloatingChartShape`.
 
 **Example 5: Add the DocumentChart to a Worksheet**
 
-<snippet id='codeblock-cmc'/>
+<snippet id='libraries-spread-features-charts-using-5'/>
 
 >note For more information about series, see the [Series]({%slug radspreadprocessing-features-charts-series%}) article. For a description of the axes objects, see [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}).
 
@@ -112,4 +112,4 @@ You can access the `Charts` collection of the `Shapes` collection of the `Worksh
 
 **Example 6: Iterate All the Charts in a Worksheet**
 
-<snippet id='codeblock-cmd'/>
+<snippet id='libraries-spread-features-charts-using-6'/>

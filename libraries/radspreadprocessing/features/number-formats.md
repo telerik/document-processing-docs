@@ -56,35 +56,35 @@ The following examples demonstrate how to apply a predefined format to a `CellSe
 
 **Example 1: Apply General Format**
 
-<snippet id='codeblock-cjy'/>
+<snippet id='libraries-spread-features-number-formats-1'/>
 
 **Example 1** produces the following result:
 ![Rad Spread Processing Features Number Formatting 00](images/RadSpreadProcessing_Features_Number_Formatting_00.jpg)
 
 **Example 2: Apply Number Format**
 
-<snippet id='codeblock-cjz'/>
+<snippet id='libraries-spread-features-number-formats-2'/>
 
 **Example 2** produces the following result:
 ![Rad Spread Processing Features Number Formatting 01](images/RadSpreadProcessing_Features_Number_Formatting_01.jpg)
 
 **Example 3: Apply Currency Format**
 
-<snippet id='codeblock-cka'/>
+<snippet id='libraries-spread-features-number-formats-3'/>
 
 **Example 3** produces the following result:
 ![Rad Spread Processing Features Number Formatting 02](images/RadSpreadProcessing_Features_Number_Formatting_02.jpg)
 
 **Example 4: Apply Accounting Format**
 
-<snippet id='codeblock-ckb'/>
+<snippet id='libraries-spread-features-number-formats-4'/>
 
 **Example 4** produces the following result:
 ![Rad Spread Processing Features Number Formatting 3](images/RadSpreadProcessing_Features_Number_Formatting_03.jpg)
 
 **Example 5: Apply Date Format**
 
-<snippet id='codeblock-ckc'/>
+<snippet id='libraries-spread-features-number-formats-5'/>
 
 **Example 5** produces the following result:
 ![Rad Spread Processing Features Number Formatting 04](images/RadSpreadProcessing_Features_Number_Formatting_04.jpg)
@@ -93,7 +93,7 @@ To show **milliseconds** in **Date Format**, modify the predefined format as fol
 
 **Example 6: Apply Time Format**
 
-<snippet id='codeblock-ckd'/>
+<snippet id='libraries-spread-features-number-formats-6'/>
 
 **Example 6** produces the following result:
 ![Rad Spread Processing Features Number Formatting 05](images/RadSpreadProcessing_Features_Number_Formatting_05.jpg)
@@ -102,42 +102,42 @@ To show **milliseconds** in **Time Format**, modify the predefined format as fol
 
 **Example 7: Apply Percentage Format**
 
-<snippet id='codeblock-cke'/>
+<snippet id='libraries-spread-features-number-formats-7'/>
 
 **Example 7** produces the following result:
 ![Rad Spread Processing Features Number Formatting 06](images/RadSpreadProcessing_Features_Number_Formatting_06.jpg)
 
 **Example 8: Apply Fraction Format**
 
-<snippet id='codeblock-ckf'/>
+<snippet id='libraries-spread-features-number-formats-8'/>
 
 **Example 8** produces the following result:
 ![Rad Spread Processing Features Number Formatting 07](images/RadSpreadProcessing_Features_Number_Formatting_07.jpg)
 
 **Example 9: Apply Scientific Format**
 
-<snippet id='codeblock-ckg'/>
+<snippet id='libraries-spread-features-number-formats-9'/>
 
 **Example 9** produces the following result:
 ![Rad Spread Processing Features Number Formatting 08](images/RadSpreadProcessing_Features_Number_Formatting_08.jpg)
 
 **Example 10: Apply Text Format**
 
-<snippet id='codeblock-ckh'/>
+<snippet id='libraries-spread-features-number-formats-10'/>
 
 **Example 10** produces the following result:
 ![Rad Spread Processing Features Number Formatting 09](images/RadSpreadProcessing_Features_Number_Formatting_09.jpg)
 
 **Example 11: Apply Special Format**
 
-<snippet id='codeblock-cki'/>
+<snippet id='libraries-spread-features-number-formats-11'/>
 
 **Example 11** produces the following result:
 ![Rad Spread Processing Features Number Formatting 10](images/RadSpreadProcessing_Features_Number_Formatting_10.jpg)
 
 **Example 12: Apply Custom Format**
 
-<snippet id='codeblock-ckj'/>
+<snippet id='libraries-spread-features-number-formats-12'/>
 
 **Example 12** produces the following result:
 ![Rad Spread Processing Features Number Formatting 11](images/RadSpreadProcessing_Features_Number_Formatting_11.jpg)
@@ -156,6 +156,6 @@ You can retrieve the number format of any cell selection through the `GetFormat(
 
 **Example 13: Get Number Format**
 
-<snippet id='codeblock-ckk'/>
+<snippet id='libraries-spread-features-number-formats-13'/>
 
 

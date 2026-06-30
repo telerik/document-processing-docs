@@ -18,27 +18,27 @@ Use a `CellIndex` object to specify a single cell (identified by a row index and
 
 **Example 1: Create CellSelection Using CellIndex**
 
-<snippet id='codeblock-cpx'/>
+<snippet id='libraries-spread-working-with-cells-accessing-cells-of-worksheet-1'/>
 
 **Example 2: Create CellSelection Using CellRange**
 
-<snippet id='codeblock-cpy'/>
+<snippet id='libraries-spread-working-with-cells-accessing-cells-of-worksheet-2'/>
 
 **Example 3: Create CellSelection Using Multiple CellRange Objects**
 
-<snippet id='codeblock-cpz'/>
+<snippet id='libraries-spread-working-with-cells-accessing-cells-of-worksheet-3'/>
 
 **Example 4: Create CellSelection Using Two CellIndex Instances That Specify a CellRange**
 
-<snippet id='codeblock-cqa'/>
+<snippet id='libraries-spread-working-with-cells-accessing-cells-of-worksheet-4'/>
 
 **Example 5: Create CellSelection Using Two Integers That Indicate the CellIndex**
 
-<snippet id='codeblock-cqb'/>
+<snippet id='libraries-spread-working-with-cells-accessing-cells-of-worksheet-5'/>
 
 **Example 6: Create CellSelection Using Four Integers That Specify the CellRange**
 
-<snippet id='codeblock-cqc'/>
+<snippet id='libraries-spread-working-with-cells-accessing-cells-of-worksheet-6'/>
 
 Once you have a `CellSelection` object, you can get, set, and clear the properties of the selected cells. For more information about cell properties, see the [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) article.
         

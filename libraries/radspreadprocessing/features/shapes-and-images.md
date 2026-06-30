@@ -86,14 +86,14 @@ To create an instance of `FloatingImage`, you need the worksheet in which you wa
 
 **Example 1: Create FloatingImage**
 
-<snippet id='codeblock-ckm'/>
+<snippet id='libraries-spread-features-shapes-and-images-1'/>
 
 
 The next step is to configure the other properties of the image as needed.
 
 **Example 2: Configure Image Properties**
 
-<snippet id='codeblock-ckn'/>
+<snippet id='libraries-spread-features-shapes-and-images-2'/>
 
 
 
@@ -103,7 +103,7 @@ Insert the image into the collection of shapes of the worksheet. The worksheet m
 
 **Example 3: Add Image to Worksheet**
 
-<snippet id='codeblock-cko'/>
+<snippet id='libraries-spread-features-shapes-and-images-3'/>
 
 
 
@@ -115,7 +115,7 @@ To delete a shape from a worksheet, you need the instance of the shape. The coll
 
 **Example 4: Delete Shape**
 
-<snippet id='codeblock-ckp'/>
+<snippet id='libraries-spread-features-shapes-and-images-4'/>
 
 
 
@@ -127,13 +127,13 @@ After the initial values of the properties of the shapes have been assigned, you
 
 	**Example 5: Move Image**
 
-	<snippet id='codeblock-ckq'/>
+	<snippet id='libraries-spread-features-shapes-and-images-5'/>
 
 * Changing the width and height of the shape
 
 	**Example 6: Change Width and Height**
 
-	<snippet id='codeblock-ckr'/>
+	<snippet id='libraries-spread-features-shapes-and-images-6'/>
 
 	The `Width` and `Height` properties do not take the `LockAspectRatio` property into account. If you want more control on whether the aspect ratio of the shape is observed, you can also use the following methods:
 
@@ -143,7 +143,7 @@ After the initial values of the properties of the shapes have been assigned, you
 
 	**Example 7: Set Width and Whether Lock Aspect Ratio Is Respected**
 
-	<snippet id='codeblock-cks'/>
+	<snippet id='libraries-spread-features-shapes-and-images-7'/>
 
 	The following section explains these two methods in more detail.
 
@@ -151,7 +151,7 @@ After the initial values of the properties of the shapes have been assigned, you
 
 	**Example 8: Rotate**
 
-	<snippet id='codeblock-ckt'/>
+	<snippet id='libraries-spread-features-shapes-and-images-8'/>
 
 	The rotation angle of the shape can affect the `CellIndex` property and the offset. The following section describes the relationship between these properties in more detail.
 
@@ -159,7 +159,7 @@ After the initial values of the properties of the shapes have been assigned, you
 
 	**Example 9: Flip**
 
-	<snippet id='codeblock-cku'/>
+	<snippet id='libraries-spread-features-shapes-and-images-9'/>
 
 
 

@@ -26,7 +26,7 @@ The code snippet from **Example 1** creates and inserts a `Paragraph` in a `Sect
 
 **Example 1: Insert paragraph in section**
 
-<snippet id='codeblock-cu-cu'/>
+<snippet id='libraries-flow-model-paragraph-1'/>
 
 >tip The parent `BlockContainer` element (in this case, the section) must belong to the same document that is passed to the constructor of the `Paragraph`.
 
@@ -34,19 +34,19 @@ You can add a paragraph at a specific index in the `Blocks` collection of a `Blo
 
 **Example 2: Insert a paragraph at a specific position of the Blocks collection**
 
-<snippet id='codeblock-cv-cv'/>
+<snippet id='libraries-flow-model-paragraph-2'/>
 
 You can also use the `AddParagraph()` method of the `Blocks` collection of a `BlockContainer`. The method creates a new `Paragraph` instance, adds it to the container, and returns it.
 
 **Example 3: Create a new paragraph and add it to a section**
 
-<snippet id='codeblock-cw-cw'/>
+<snippet id='libraries-flow-model-paragraph-3'/>
 
 You can also insert a new `Paragraph` in the document with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
 
 **Example 4: Insert a paragraph using the RadFlowDocumentEditor**
 
-<snippet id='codeblock-cx-cx'/>
+<snippet id='libraries-flow-model-paragraph-4'/>
 
 ## Modifying a Paragraph
 
@@ -112,7 +112,7 @@ You can add inline elements to a `Paragraph` instance.
 
 **Example 5: Insert run in a paragraph**
 
-<snippet id='codeblock-cy-cy'/>
+<snippet id='libraries-flow-model-paragraph-5'/>
 
 For more information about the `Run` element, refer to the [Run]({%slug radwordsprocessing-model-run%}) article.
 
@@ -122,7 +122,7 @@ For more information about the `Run` element, refer to the [Run]({%slug radwords
 
 **Example 6: Insert image inline**
 
-<snippet id='codeblock-cz-cz'/>
+<snippet id='libraries-flow-model-paragraph-6'/>
 
 For more information about the `ImageInline` element, refer to the [ImageInline]({%slug radwordsprocessing-model-imageinline%}) article.
 
@@ -132,7 +132,7 @@ The code snippet from **Example 7** adds a floating image to an existing paragra
 
 **Example 7: Add floating image**
 
-<snippet id='codeblock-da-da'/>
+<snippet id='libraries-flow-model-paragraph-7'/>
 
 For more information about the `FloatingImage` element, refer to the [FloatingImage]({%slug radwordsprocessing-model-floatingimage%}) article.
 
@@ -143,7 +143,7 @@ For more information about the `FloatingImage` element, refer to the [FloatingIm
 
 **Example 8: Insert TabStop**
 
-<snippet id='codeblock-db-db'/>
+<snippet id='libraries-flow-model-paragraph-8'/>
 
 You can refer to the [TabStop]({%slug radwordsprocessing-concepts-tabstop%}) article for more details about this element.
 
@@ -153,7 +153,7 @@ You can refer to the [TabStop]({%slug radwordsprocessing-concepts-tabstop%}) art
 
 **Example 9: Setting Borders**
 
-<snippet id='codeblock-dc-dc'/>
+<snippet id='libraries-flow-model-paragraph-9'/>
 
 ## See Also
 

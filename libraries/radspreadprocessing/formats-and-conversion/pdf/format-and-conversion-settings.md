@@ -1,4 +1,4 @@
-﻿---
+---
 title: Settings
 description: Learn about the export settings available for the PdfFormatProvider in RadSpreadProcessing to customize PDF output.
 page_title: Settings
@@ -29,13 +29,13 @@ The following example shows how to export the Entire Workbook without ignoring t
 
 **Example 1: Export Entire Workbook**
 
-<snippet id='codeblock-coz'/>
+<snippet id='libraries-spread-formats-and-conversion-pdf-format-and-conversion-settings-1'/>
 
 The following example shows how to export only two selected ranges from the active worksheet, ignoring print areas and page breaks.
 
 **Example 2: Export Selection**
 
-<snippet id='codeblock-cpa'/>
+<snippet id='libraries-spread-formats-and-conversion-pdf-format-and-conversion-settings-2'/>
 
 >To specify file export settings to the `PdfFormatProvider`, you need to add both the Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export and Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export namespaces. In Example 3 the *Fixed* alias corresponds to the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export` namespace.
 
@@ -43,7 +43,7 @@ Another export option is to specify settings specific to the PDF format for the 
 
 **Example 3: Export PDF/A Compliant Document**
 
-<snippet id='codeblock-cpb'/>
+<snippet id='libraries-spread-formats-and-conversion-pdf-format-and-conversion-settings-3'/>
 
 ## See Also
 

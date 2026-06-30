@@ -18,7 +18,7 @@ The `TextSearch` class exposes methods for searching. Pass an instance of [RadFi
 
 **Example 1: Create a TextSearch Instance**
 
-<snippet id='search-find-all'/>
+<snippet id='libraries-pdf-features-search-find-all'/>
 
 ### Search Methods
 
@@ -43,7 +43,7 @@ All of the listed methods return one or more instances of the `SearchResult` cla
 
 **Example 2: Searching in a Document**
 
-<snippet id='search-highlight-results'/>
+<snippet id='libraries-pdf-features-search-highlight-results'/>
 
 ### TextSearchOptions
 

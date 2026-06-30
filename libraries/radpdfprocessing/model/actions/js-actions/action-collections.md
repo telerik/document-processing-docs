@@ -69,7 +69,7 @@ Use this collection when a calculation must run after the user enters values. A 
 
 A common case is restricting the user input, for example, when entering a date in a specific format:
 
-<snippet id='pdf-form-field-action-collection'/>
+<snippet id='libraries-pdf-model-actions-js-actions-action-collections-form-field-action-collection'/>
 
 The following image shows the result:
 
@@ -86,7 +86,7 @@ Represents a collection of `Action` objects associated with a [RadFixedPage]({%s
 
 The following example shows how to use the JavaScript Actions feature to show an alert when the second page in a document is closed:
 
-<snippet id='pdf-page-action-collection'/>
+<snippet id='libraries-pdf-model-actions-js-actions-action-collections-page-action-collection'/>
 
 ![JS Action Page result showing an alert on page close](images/js-action-page.gif)
 
