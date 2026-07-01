@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Learn about RadSpreadProcessing - a cross-platform library for creating, importing, and exporting XLSX, CSV, TXT, and PDF spreadsheets.
+description: Learn about RadSpreadProcessing, a cross-platform library for creating, importing, and exporting XLSX, CSV, TXT, and PDF spreadsheets.
 page_title: RadSpreadProcessing Library Overview
 slug: radspreadprocessing-overview
 tags: spread, processing, spreadsheet, excel, xlsx, csv, pdf, import, export
