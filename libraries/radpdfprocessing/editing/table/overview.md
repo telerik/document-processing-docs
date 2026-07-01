@@ -204,10 +204,10 @@ Starting with **Q3 2024**, RadPdfProcessing supports the `Dotted`, `Dashed`, and
 
 Continue with the article that matches your next task:
 
-* [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) and [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) - Customize row-level or cell-level behavior
-* [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%}) - Follow a focused document-editor workflow
-* [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%}) - Apply more advanced layout control
-* [Avoiding Table Splits Across Pages Using FixedContentEditor in RadPdfProcessing]({%slug avoid-table-splits-across-pages-radpdfprocessing%}) - Handle page-breaking scenarios
+* [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) and [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})&mdash;Customize row-level or cell-level behavior
+* [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})&mdash;Follow a focused document-editor workflow
+* [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})&mdash;Apply more advanced layout control
+* [Avoiding Table Splits Across Pages Using FixedContentEditor in RadPdfProcessing]({%slug avoid-table-splits-across-pages-radpdfprocessing%})&mdash;Handle page-breaking scenarios
 
 ## See Also
 
