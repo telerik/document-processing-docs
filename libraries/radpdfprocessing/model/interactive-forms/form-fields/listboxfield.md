@@ -24,7 +24,7 @@ The `ListBoxField` class provides the following properties:
 | `ShouldCommitOnSelectionChange` | Indicates whether to commit the selected value on selection change. |
 | `TopIndex` | Gets or sets the index of the choice that is displayed at the top of the list box viewport rectangle. |
 
-**Example 1: Create a ListBoxField and Add It to a Page**
+**Create a ListBoxField and Add It to a Page**
 
 <snippet id='pdf-listboxfield'/>
 

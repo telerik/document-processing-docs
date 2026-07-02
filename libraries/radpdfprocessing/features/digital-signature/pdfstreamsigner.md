@@ -32,7 +32,7 @@ The following example shows how to insert multiple [digital signatures]({%slug r
 
 <snippet id='libraries-pdf-features-digital-signature-pdfstreamsigner'/>
 
-![PdfProcessing Multiple Digital Signatures](images/radpdfprocessing-features-digital-signature-pdfstreamsigner.png)
+![Multiple Digital Signing with PdfStreamSigner](images/radpdfprocessing-features-digital-signature-pdfstreamsigner.png)
 
 ## See Also
 

@@ -48,7 +48,7 @@ Before you call `Import()`, verify these requirements:
 >
 > When the imported document contains images, keep the stream open instead of disposing it immediately. The [ImageSource API]({%slug radpdfprocessing-model-imagesource%}#methods) can continue to use the stream while the `RadFixedDocument` works with those images.
 
-### Example 1: Import a PDF File
+**Example 1: Import a PDF File**
 
 <snippet id='pdf-import-file'/>
 
@@ -72,7 +72,7 @@ Before you call `Export()`, verify these points:
 * The destination file path exists or can be created by your application.
 * If the document is digitally signed, the stream supports both reading and writing.
 
-### Example 2: Export a PDF File
+**Example 2: Export a PDF File**
 
 <snippet id='pdf-export-file'/>
 

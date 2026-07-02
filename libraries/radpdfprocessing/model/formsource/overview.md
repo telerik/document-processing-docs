@@ -56,7 +56,7 @@ After you generate the `FormSource` object and fill it with content, insert it i
 
 * The `FixedContentEditor` allows you to add a form to a container.
 
-    **Example 3: Add a FormSource to a document using FixedContentEditor**
+    **Add a FormSource to a document using FixedContentEditor**
 
     <snippet id='pdf-fixed-editor-add-content-to-form-source'/>
 

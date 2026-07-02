@@ -32,7 +32,7 @@ The constructor of the `TextFormatProviderSettings` class has two overloads:
 
 **Example 1** shows how to create and specify a particular setting.
 
-#### **Example 1: Create TextFormatProviderSettings**
+**Example 1: Create TextFormatProviderSettings**
 <snippet id='pdf-create-text-provider-settings'/>
 
 
@@ -41,7 +41,7 @@ The constructor of the `TextFormatProviderSettings` class has two overloads:
 The `Export()` method of `TextFormatProvider` accepts a `TextFormatProviderSettings` instance. **Example 2** shows how to apply the settings created in **Example 1** when exporting a `RadFixedDocument` to a string.
 
 
-#### **Example 2: Apply TextFormatProviderSettings**
+**Example 2: Apply TextFormatProviderSettings**
 
 <snippet id='pdf-apply-text-provider-settings'/>
 

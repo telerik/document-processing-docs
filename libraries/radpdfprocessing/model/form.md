@@ -39,14 +39,14 @@ The `Form` class exposes a default public constructor that allows you to create 
 
 **Example 1** shows how to initialize a `Form` object and add it to a previously defined container.
 
-#### **Example 1: Create a form and add it to an IContainerElement**
+**Example 1: Create a form and add it to an IContainerElement**
 
 <snippet id='pdf-create-form'/>
 
 
 **Example 2** demonstrates how to use one of the factory methods of the `ContentElementCollection` to create a new form and insert it into the respective container.
 
-#### **Example 2: Add a form to a container**
+**Example 2: Add a form to a container**
 
 <snippet id='pdf-form-to-container'/>
 
@@ -62,7 +62,7 @@ The `Form` class exposes a default public constructor that allows you to create 
 
 You can modify a `Form` element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.
 
-#### **Example 3: Modify Form properties**
+**Modify Form properties**
 
 <snippet id='pdf-modify-form'/>
 

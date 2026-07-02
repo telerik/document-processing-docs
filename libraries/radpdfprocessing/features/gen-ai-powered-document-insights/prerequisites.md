@@ -56,7 +56,7 @@ Before using the GenAI-powered Document Insights functionality, set up an AI pro
 
 >caution The following code snippet is valid for `Microsoft.Extensions.AI.OpenAI` 10.3. The specific `IChatClient` initialization may differ depending on the version.
 
-#### **Example 1: Setting Up Azure OpenAI**
+**Setting Up Azure OpenAI**
 
 <snippet id='libraries-pdf-features-gen-ai-setup-azure-open-ai'/>
 
@@ -65,7 +65,7 @@ Before using the GenAI-powered Document Insights functionality, set up an AI pro
 1. Create an OpenAI account.
 2. Get your API key from the OpenAI dashboard.
 
-#### **Example 2: Setting Up OpenAI**
+**Setting Up OpenAI**
 
 <snippet id='libraries-pdf-features-gen-ai-setup-open-ai'/>
 
@@ -77,7 +77,7 @@ Ollama allows you to run AI models locally on your machine. This is useful for d
 2. Pull the model you want to use.
 3. Start the Ollama server.
 
-#### **Example 3: Setting Up Ollama**
+**Setting Up Ollama**
 
 <snippet id='libraries-pdf-features-gen-ai-setup-ollama-ai'/>
 

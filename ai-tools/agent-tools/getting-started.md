@@ -56,11 +56,13 @@ The example includes multiple scenarios demonstrating various document operation
 
 ## Complete Example
 
-Below is a comprehensive example demonstrating the entire workflow from setup to execution:
+This section provides is a comprehensive example demonstrating the entire workflow from setup to execution.
 
 >warning **Security Consideration**: Documents may contain malicious instructions designed to manipulate AI behavior. See the [Security Considerations](#security-considerations) section below for important information about protecting your agent.
 
 >warning If you are building a multi-user application, see the [Multi-User AI Agent Sessions]({%slug agent-tools-multi-user-scenario%}) article for patterns on isolating document repositories per user and managing concurrent sessions safely.
+
+**Complete C# example that configures repositories, registers agent tools, and runs end-to-end document processing prompts**
 
 <snippet id='ai-tools-agent-tools-getting-started-complete-example'/>
 

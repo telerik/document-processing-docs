@@ -22,9 +22,9 @@ If your workflow relies on NuGet for package management, you can take advantage 
 >
 >Both versions are available as NuGet packages but with different names. The packages for **.NET Standard** do **not** contain the word **Windows** in their name.
 
->caption Package lists to use with .NET Standard (left) and .NET Framework (right)
+**Telerik Document Processing NuGet package lists for .NET Standard (left) and .NET Framework(right)**
 
-![The NuGet package lists for .NET Standard and .NET Framework](images/installation-nuget-packages000.png)
+![Telerik Document Processing NuGet package lists for .NET Standard and .NET Framework](images/installation-nuget-packages000.png)
 
 >important The .NET Standard packages are compatible with any .NET version (for example, .NET 9), even if there are no packages explicitly available for the specific versions. The same applies to the .NET Framework packages.
 

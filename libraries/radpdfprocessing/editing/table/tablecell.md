@@ -28,7 +28,7 @@ To add a cell to a `Table`, add it in the `TableCellCollection` of a `TableRow`.
 The code in **Example 1** shows how to create a table with a single row and add a cell in the first row.
         
 
-#### **Example 1: Create TableCell**
+**Example 1: Create TableCell**
 
 <snippet id='libraries-pdf-editing-table-tablecell-create-tablecell'/>
 
@@ -40,7 +40,7 @@ Use the `Blocks` property of `TableCell` to add one or several `IBlockElement` i
 **Example 2** shows how to create a cell with a single [Block]({%slug radpdfprocessing-editing-block%}) in it.
         
 
-#### **Example 2: Add content to TableCell**
+**Example 2: Add content to TableCell**
 
 <snippet id='libraries-pdf-editing-table-tablecell-add-content-to-tablecell'/>
 
@@ -70,14 +70,15 @@ You can change the cell presentation by using the following properties:
 **Example 3** demonstrates how to set the cell properties locally to a specific cell. This helps achieve a different appearance for this cell by changing its borders and background. Additionally, the cell spans two rows and two columns.
         
 
-#### **Example 3: Change TableCell appearance**
+**Example 3: Change TableCell appearance**
 
 <snippet id='libraries-pdf-editing-table-tablecell-change-tablecell-appearance'/>
 
-The result from **Example 3** is illustrated in **Figure 1**.
+The result from **Example 3** is illustrated in the following image.
 
-#### Figure 1: TableCell 
-![Rad Pdf Processing Editing Table Cell 01](images/RadPdfProcessing_Editing_TableCell_01.png)
+**TableCell**
+
+![RadPdfProcessing TableCell](images/RadPdfProcessing_Editing_TableCell_01.png)
 
 ## See Also
 

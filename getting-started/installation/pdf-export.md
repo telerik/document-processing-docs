@@ -56,7 +56,7 @@ In scenarios where you need to convert a document from another file format to PD
 
 **Example 1** demonstrates how you can convert an HTML string to a PDF document. The [HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%}) and [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) classes of [RadWordsProcessing]({%slug radwordsprocessing-overview%}) are used to import/export the [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) instance. 
 
-#### **Example 1: HTML to PDF Conversion**
+**Example 1: Convert an HTML string to a PDF document**
 
 ```csharp
 

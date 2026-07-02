@@ -38,7 +38,7 @@ These properties hold the current graphics control parameters. You can modify th
 
 * `StrokeLineCap`: The stroke line cap for graphic elements. The property is of type [LineCap](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Graphics.LineCap.html).
             
-#### **Example 1: Using GraphicProperties with FixedContentEditor**
+**Using GraphicProperties with FixedContentEditor**
 
 <snippet id='pdf-graphic-properties-editor'/>
 
@@ -80,7 +80,7 @@ These properties hold the parameters for text fragments. You can modify the foll
 
 * `VerticalAlignment`: The vertical positioning of the inserted text in the text block. The property is of type [VerticalAlignment](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Editing.Flow.VerticalAlignment.html).
             
-#### **Example 2: Using TextProperties with Block**
+**Using TextProperties with Block**
 
 <snippet id='pdf-text-properties-block'/>
 

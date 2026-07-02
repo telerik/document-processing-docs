@@ -44,13 +44,13 @@ position: 8
 
 **Example 1** shows how to create a `Path`, assign a predefined `Geometry` to it, and add it to a container.
 
-#### **Example 1: Create Path and add it to container**
+**Example 1: Create Path and add it to container**
 
 <snippet id='pdf-create-path'/>
 
 **Example 2** demonstrates how to use one of the factory methods of the `ContentElementCollection` to create a new path and insert it into the document.
 
-#### **Example 2: Add Path to container**
+**Example 2: Add Path to container**
 
 <snippet id='pdf-path-to-container'/>
 
@@ -60,7 +60,7 @@ position: 8
 
 You can modify a `Path` element using the properties the class exposes. The properties are listed in the [Public API](#public-api) section.
 
-#### **Example 3: Modifying Path properties**
+**Example 3: Modifying Path properties**
 
 <snippet id='pdf-modify-path'/>
 

@@ -48,7 +48,7 @@ The `MatrixPosition` class exposes a static `Default` property, which represents
 
 **Example 1** shows how transformations can be appended.
 
-#### __Example 1: Transform MatrixPosition__
+**Example 1: Transform MatrixPosition**
 
 <snippet id='pdf-matrix-position'/>
 
@@ -66,7 +66,7 @@ The `SimplePosition` class exposes a static `Default` property which represents 
 
 **Example 2** shows how transformations overwrite the previous transformations of the same type.
         
-#### __Example 2: Transform SimplePosition__
+**Example 2: Transform SimplePosition**
 
 <snippet id='pdf-simple-position'/>
 

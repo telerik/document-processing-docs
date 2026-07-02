@@ -46,11 +46,15 @@ Additional requirements:
 
 Install the MCP server as a global tool in your solution root (or another chosen path):
 
+**Install the Telerik DPL MCP Server as a global .NET tool**
+
 ````powershell
 dotnet tool install -g Telerik.DPL.MCP
 ````
 
 If updating:
+
+**Update the globally installed Telerik DPL MCP Server tool**
 
 ````powershell
 dotnet tool update -g Telerik.DPL.MCP
@@ -77,6 +81,8 @@ No manual install step is needed. The `dnx` command will download and execute th
 
 Add `.mcp.json` file to your solution root (or to `%USERPROFILE%` for global usage):
 
+**Sample `.mcp.json` configuration for a global .NET 8 or .NET 9 setup**
+
 ```json
     {
       "servers": {
@@ -96,6 +102,8 @@ Add `.mcp.json` file to your solution root (or to `%USERPROFILE%` for global usa
 ```
 
 For the **local** installation use the following `.mcp.json`:
+
+**Sample `.mcp.json` configuration for a local .NET 8 or .NET 9 setup**
 
 ```json
     {
@@ -119,6 +127,8 @@ For the **local** installation use the following `.mcp.json`:
 
 Use these settings when configuring the server in your MCP client:
 
+**Sample `.mcp.json` configuration for a .NET 10 `dnx` setup**
+
 ```json
     {
       "servers": {
@@ -141,7 +151,9 @@ You can substitute `TELERIK_LICENSE` instead of `TELERIK_LICENSE_PATH` (*see [Li
 
 After saving the file, restart Visual Studio and enable the `telerik-dpl-assistant` tool in the [Copilot Chat window's tool selection dropdown](https://learn.microsoft.com/visualstudio/ide/mcp-servers?view=vs-2022#configuration-example-with-github-mcp-server).
 
-![An image demonstrating how to enable the Telerik DPL MCP tool in Visual Studio](images/vs-enable-dpl-mcp-tool.png) 
+**Visual Studio example of enabling the Telerik DPL MCP Server tool in Copilot Chat**
+
+![Visual Studio Copilot Chat with the Telerik DPL MCP Server tool enabled](images/vs-enable-dpl-mcp-tool.png) 
 
 ### Global Setup
 
@@ -152,6 +164,8 @@ To enable the server globally for all projects, add the `.mcp.json` file to your
 Add your [Telerik license key]({%slug setting-up-license-key%}) using one of these options in the `env` section.
 
 **Option 1: License File Path (Recommended)**
+
+**License configuration example that uses the Telerik license file path**
 
 ````json
 "env": {
@@ -164,6 +178,8 @@ The `THE_PATH_TO_YOUR_LICENSE_FILE` should point to the `telerik-license.txt` fi
 `"TELERIK_LICENSE_PATH": "%appdata%/Telerik/telerik-license.txt"`
 
 **Option 2: Direct License Key**
+
+**License configuration example that uses the Telerik license key value directly**
 
 ````json
 "env": {

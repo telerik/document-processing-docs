@@ -32,7 +32,7 @@ The quality of the images affects the size of the PDF document. The higher the q
  
 To specify the default `ImageQuality` value when exporting to PDF, use the [PdfExportSettings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}).
 
-#### __Example 1: Set a default value for all images in a document__
+**Set a default value for all images in a document**
 
 <snippet id='pdf-image-quality'/>
 
@@ -42,7 +42,7 @@ To specify the default `ImageQuality` value when exporting to PDF, use the [PdfE
 
 If you need a particular image to be exported with a different `ImageQuality` value, specify this value in the constructor of [ImageSource]({%slug radpdfprocessing-model-imagesource%}) to override the default one.
 
-#### __Example 2: Set the image quality of an image__
+**Set the image quality of an image**
 
 <snippet id='pdf-image-source-quality'/>
 

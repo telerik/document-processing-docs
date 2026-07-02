@@ -36,15 +36,21 @@ To download these files, follow the steps below:
 
 1\. Log into [your Telerik account](https://www.telerik.com/account/) and click the **Downloads** option: 
 
-![Downloads in Your Account ><](images/downloads-account.png)  
+**Telerik account Downloads section**
+
+![Telerik account Downloads section with Telerik Document Processing available for download](images/downloads-account.png)  
 
 2\. Select **Telerik Document Processing**:
 
-![DPL Downloads in Your Account ><](images/dpl-downloads-account.png)  
+**Telerik account download page for Telerik Document Processing product files**
+
+![Telerik account download page for Telerik Document Processing product files](images/dpl-downloads-account.png)  
 
 3\. Select an asset you want to download: DLLs, PDB files, NuGet Packages, documentation files, or Source code:
 
-![DPL Product Files ><](images/dpl-product-files.png)   
+**Telerik Document Processing download options for binaries, NuGet packages, documentation, and source code**
+
+![Telerik Document Processing download options for binaries, NuGet packages, documentation, and source code](images/dpl-product-files.png)   
 
 4\. You can choose between official Public versions or Preview versions (if such exist) according to the activation date of your license. From the **Version** dropdown list, you can also select which specific version to download.
 

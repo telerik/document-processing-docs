@@ -25,7 +25,7 @@ The `ComboBoxField` class corresponds to the `FormFieldType.ComboBox` enum value
 | `HasEditableTextBox` | Indicates whether the dropdown provides an additional text box input, allowing you to enter a value different from the provided choices. |
 | `ShouldSpellCheck` | Indicates whether the text is spell checked during input. |
 
-**Example 1: Create a ComboBoxField and add it to a page**
+**Create a ComboBoxField and add it to a page**
 
 <snippet id='pdf-combobox-field'/>
 

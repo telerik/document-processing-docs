@@ -24,7 +24,7 @@ The `RadioButtonField` class corresponds to the `FormFieldType.RadioButton` enum
 | `AllowToggleOff` | Indicates whether radio buttons can be deselected by clicking an already-selected radio button. |
 | `ShouldUpdateRadiosInUnison` | Indicates whether all radio buttons sharing the same `RadioOption` value are selected in unison. When `false`, at most one radio button is selected even if multiple share the same option value. |
 
-**Example 1: Create RadioButtonFields and add them to a page**
+**Create RadioButtonFields and add them to a page**
 
 <snippet id='pdf-radio-button-field'/>
 

@@ -48,7 +48,7 @@ The following example shows how to validate a signature field:
 
 >note [PdfProcessing Validate Digital Signature Demo](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature)
 
-#### __Example 1: Validate a Field__
+**Validate a Field**
 
 <snippet id='pdf-validate-signature'/>
 

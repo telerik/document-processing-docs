@@ -20,7 +20,7 @@ The `Clipping` element exposes a single property:
 
 **Example 1** demonstrates how to create a `Clipping` element and assign a `RectangleGeometry` to its `Clip` property.
 
-#### __Example 1: Create Clipping__
+**Example 1: Create Clipping**
 
 <snippet id='pdf-clipping-geometry'/>
 
@@ -30,7 +30,7 @@ All inheritors of the `ContentElementBase` class expose a `Clipping` property. S
 
 **Example 2** demonstrates how to clip an image using the `Clipping` created in **Example 1**.
 
-#### __Example 2: Use Clipping__
+**Example 2: Use Clipping**
 
 <snippet id='pdf-image-clipping'/>
 

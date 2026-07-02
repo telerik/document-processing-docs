@@ -21,7 +21,7 @@ The `SignatureField` class provides the following properties:
 | `Signature` | Gets or sets the `Signature` value. Setting this property signs the document during export. Signing with multiple signatures is not supported. To validate a signature, use the `Validate()` and `TryValidate()` methods. Validation requires that the source stream is open and is performed against the document state at import time. See [Digital Signature]({%slug radpdfprocessing-features-digital-signature%}) for more details. |
 | `Widgets` | The collection of Widget annotations representing the field on the PDF pages. Widgets can be added using `AddWidget()` and removed using `Remove()`. Implements `IEnumerable`. |
 
-**Example 1: Create a SignatureField and Add It to a Page**
+**Create a SignatureField and Add It to a Page**
 
 <snippet id='pdf-signature-field'/>
 

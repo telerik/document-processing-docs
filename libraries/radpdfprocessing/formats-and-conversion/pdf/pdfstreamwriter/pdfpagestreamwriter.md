@@ -19,7 +19,7 @@ The `PdfPageStreamWriter` class provides an API that allows you to write and pos
 Obtain an instance of the `PdfPageStreamWriter` class by using the `BeginPage()` method of [`PdfStreamWriter`]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%}).
 
 
-#### **Example 1: Instantiate PdfPageStreamWriter**
+**Instantiate PdfPageStreamWriter**
 	
 <snippet id='pdf-page-stream-writer-instance'/>
 

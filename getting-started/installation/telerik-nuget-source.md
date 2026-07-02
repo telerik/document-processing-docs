@@ -65,7 +65,7 @@ The command below stores the password or NuGet API Key in plain text in the [glo
 
 The backslashes `\` below enable multi-line commands for better readability in terminals that support them.
 
->caption Use the .NET CLI to add the Telerik NuGet source
+**Use the .NET CLI to add the Telerik NuGet source**
 
 ````SH.skip-repl
 dotnet nuget add source https://nuget.telerik.com/v3/index.json \
@@ -77,7 +77,7 @@ dotnet nuget add source https://nuget.telerik.com/v3/index.json \
 
 If you have already stored the Telerik package source, you can update the configuration with the command below.
 
->caption Use the .NET CLI to update the Telerik NuGet source
+**Use the .NET CLI to update the Telerik NuGet source**
 
 ````SH.skip-repl
 dotnet nuget update source "TelerikOnlineFeed" \
@@ -146,7 +146,7 @@ The Document Processing Libraries NuGet packages and most of their dependencies 
 
 > Ensure that the `key` values in the `packageSourceMapping` section match the `key` values in the `packageSources` section. Otherwise, you get a "Package not found" error.
 
->caption packageSourceMapping configuration for Telerik Document Processing and other Telerik Packages
+**Package source mapping for Telerik Document Processing and other Telerik packages**
 
 <div class="skip-repl"></div>
 

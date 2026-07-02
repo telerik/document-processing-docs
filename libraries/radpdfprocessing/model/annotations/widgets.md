@@ -35,7 +35,7 @@ The `Widget` class inherits [Annotation]({%slug radpdfprocessing-model-annotatio
 
 All widgets are created through the `Widgets` collection of the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) class inheritors. Use the `AddWidget()` and `Remove()` methods to add or remove a widget from the collection. The widget collection implements the `IEnumerable` interface, so you can iterate all the widgets available in the `FormField` instance.
 
-**Example 1: Creating a widget**
+**Creating a widget**
 
 <snippet id='pdf-create-widget'/>
 
@@ -43,7 +43,7 @@ All widgets are created through the `Widgets` collection of the [FormField]({%sl
 
 **Example 2** demonstrates how to iterate the `Widgets` collection of a [TextBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-textboxfield%}) instance. Additionally, the code shows you how to add a widget to the `Annotations` collection of a `RadFixedPage`. You must add each widget to this collection so it can be visualized on the PDF page. Otherwise, the element does not appear on the page.
 
-**Example 2: Iterating the widgets in the FormField collection**
+**Iterating the widgets in the FormField collection**
 
 <snippet id='pdf-iterate-widgets'/>
 
