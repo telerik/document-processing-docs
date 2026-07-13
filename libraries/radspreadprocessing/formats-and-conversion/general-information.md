@@ -19,7 +19,7 @@ The following table lists the supported formats:
 | Format | Description |
 |---|---|
 | `Xlsx` | Rich text format that exports the whole content of a workbook: worksheets, formula values, formatting, hyperlinks, and more. |
-| `Xls` | Rich text format that exports the content of a workbook: worksheets, formula values, formatting, hyperlinks, and more. Supported in older applications. This format is not supported in Silverlight. |
+| `Xls` | Rich text format that exports the content of a workbook: worksheets, formula values, formatting, hyperlinks, and more. Supported in older applications. |
 | `Xlsm` | Rich text format that exports all that is included in the Xlsx format with the addition of macro instructions. |
 | `Pdf` *(export only)* | Fixed format that preserves the content of a workbook in a manner independent from software or hardware. |
 | `Csv` *(comma separated)* | Plain text format that saves the content of the cell in the active worksheet. The format strips all formatting and keeps only the result values of cells. These values are separated by a culture-dependent delimiter. |

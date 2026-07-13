@@ -18,8 +18,6 @@ Telerik Document Processing is licensed under the conditions of the product you 
 
 **UI for WinForms**: [https://www.telerik.com/purchase/license-agreement/winforms-dlw-s](https://www.telerik.com/purchase/license-agreement/winforms-dlw-s)
 
-**UI for Silverlight**: [https://www.telerik.com/purchase/license-agreement/silverlight-dlw-s](https://www.telerik.com/purchase/license-agreement/silverlight-dlw-s)
-
 **UI for WinUI**: [https://www.telerik.com/purchase/license-agreement/winui](https://www.telerik.com/purchase/license-agreement/winui)
 
 ## See Also
