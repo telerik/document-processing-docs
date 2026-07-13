@@ -66,9 +66,6 @@ To export a workbook, instantiate the [FormatProvider]({%slug radspreadprocessin
 
 <snippet id='codeblock-csb'/>
 
-
-For security purposes accessing files in *Silverlight* can be achieved only through user-initiated dialogs. That said, to save workbook's contents into a `csv` file, you need to use the `SaveFileDialog`. 
-
 **Example 4** passes the stream returned by the dialog and the current workbook to the `Export()` method of the [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider %}).
           
 

@@ -76,8 +76,6 @@ RadPdfProcessing exposes an extension method that allows you to convert every `B
 
 <snippet id='pdf-image-source-extensions'/>
 
-> The code from **Example 4** does not compile in Silverlight due to differences in the `BitmapImage` API for this platform. You can pass the image as a stream to the `SetSource()` method of `BitmapImage` instead.
-
 ## See Also
 
 * [Image]({%slug radpdfprocessing-model-image%})
