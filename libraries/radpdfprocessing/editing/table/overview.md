@@ -31,8 +31,7 @@ If you are new to the document editors, start with the editor choice in this art
 
 ## Defining Table Content 
 
-Each `Table` contains a collection of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instances, and each row contains a collection of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances. In practice, the workflow is straightforward: 
-to create a simple table, add the required cells and then assign content to each cell.
+Each `Table` contains a collection of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instances, and each row contains a collection of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances. To create a table, add the required cells and then assign content to each cell.
 
 1. Create a `Table` instance.
 2. Add rows and cells.
@@ -141,7 +140,7 @@ Example 7 creates a simple table with two cells.
 **Example 8** inserts the table from **Example 7** in a `RadFixedDocumentEditor` and specifies the table layout type to `AutoFit`.
         
 
-#### **Example 8: Insert `AutoFit` table**
+### Example 8: Insert an AutoFit Table
 
 <snippet id='libraries-pdf-editing-table-overview-insert-autofit-table'/>
 
@@ -201,24 +200,19 @@ Starting with **Q3 2024**, RadPdfProcessing supports the `Dotted`, `Dashed`, and
 | `Dashed` | ![Preview of a dashed PDF table border](images/pdf-dashed-border.png) |
 | `DashSmallGap` | ![Preview of a dash-small-gap PDF table border](images/pdf-dash-small-gap-border.png) |
 
-## Typical Next Steps
+## Next Steps
 
 Continue with the article that matches your next task:
 
-1. Use [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) and [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) when you want to customize row-level or cell-level behavior.
-2. Review [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%}) for a focused document-editor workflow.
-3. Review [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%}) if you need more advanced layout control.
-4. Use [Avoiding Table Splits Across Pages Using FixedContentEditor in RadPdfProcessing]({%slug avoid-table-splits-across-pages-radpdfprocessing%}) when page breaking is the main concern.
+* [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) and [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})&mdash;Customize row-level or cell-level behavior
+* [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})&mdash;Follow a focused document-editor workflow
+* [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})&mdash;Apply more advanced layout control
+* [Avoiding Table Splits Across Pages Using FixedContentEditor in RadPdfProcessing]({%slug avoid-table-splits-across-pages-radpdfprocessing%})&mdash;Handle page-breaking scenarios
 
 ## See Also
 
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
 * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
-* [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
-* [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
 * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
-* [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})
 * [Implementing Column Span in RadPdfProcessing Tables]({%slug table-column-span-radpdfprocessing%})
-* [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})
-* [Avoiding Table Splits Across Pages Using FixedContentEditor in RadPdfProcessing]({%slug avoid-table-splits-across-pages-radpdfprocessing%})
 * [How to Achieve Alternating Row Color for Tables in PdfProcessing]({%slug alternating-row-color-in-pdf-tables%})

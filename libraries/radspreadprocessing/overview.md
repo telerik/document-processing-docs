@@ -1,7 +1,7 @@
 ---
 title: Overview
-description: RadSpreadProcessing is a cross-platform library for creating, importing, and exporting spreadsheet documents in XLSX, CSV, TXT, and PDF formats with support for 200+ functions.
-page_title: Overview
+description: Learn about RadSpreadProcessing, a cross-platform library for creating, importing, and exporting XLSX, CSV, TXT, and PDF spreadsheets.
+page_title: RadSpreadProcessing Library Overview
 slug: radspreadprocessing-overview
 tags: spread, processing, spreadsheet, excel, xlsx, csv, pdf, import, export
 published: True
@@ -12,28 +12,15 @@ position: 0
 
 **Telerik SpreadProcessing Library** allows you to generate and convert documents to XLSX, CSV, TXT, and PDF. **RadSpreadProcessing** ships with built-in support for the computation of more than 200 functions, like SUM, AVERAGE, and more. You can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
 
-![SpreadProcessing](images/spread-processing-overview.jpg) 
+![Diagram showing RadSpreadProcessing converting between XLSX, CSV, and TXT formats](images/spread-processing-overview.jpg)
 
-In this article, we list the library's most popular features. If you want to start using the library right away, see [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%}).
+This article lists the most popular features of the library. To start using RadSpreadProcessing right away, see [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%}).
 
-![Rad Spread Processing Overview 01](images/RadSpreadProcessing_Overview_01.png)
+![A sample spreadsheet showing a Monthly Report with product data in columns for ID, Product, and Quantity](images/RadSpreadProcessing_Overview_01.png)
 
 >note If you still do not have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
 
 ## Key Features
-
-* Create from scratch and modify existing documents from spreadsheet formats: XLSX and CSV.
-* Export to PDF.
-* Convert between the different formats.
-* Extract and populate cells with data.
-* Built-in support for computation of more than 200 functions, like SUM, AVERAGE, and more.
-* Add custom functions as well.
-* Protection from editing operations using passwords or removing such passwords.
-* Most of the important Excel features are supported:
-    * Data validation - restrict the types of input to cells (for example, allow only numbers).
-    * Grouping to organize data (for example, collapse some rows/columns).
-    * Filtering, sorting, freeze panes, hidden rows, and more.
-* GenAI-powered Document Insights
 
 The following table describes the most popular features of the `RadSpreadProcessing` library.
 
@@ -41,7 +28,7 @@ The following table describes the most popular features of the `RadSpreadProcess
 |---------|-------------|
 | [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | API for insertion, positioning and deletion of images in worksheets. Starting with Q3 2024, RadSpreadProcessing provides support for SVG FormSource (vector graphics image format). |
 | [**Charts**]({%slug radspreadprocessing-features-charts%}) | Add, remove and manipulate chart objects in your spreadsheet documents. |
-| [**Conditional Formatting**]({%slug radspreadprocessing-features-conditional-formatting%}) |Make it easy to analyze data, find critical issues, patterns and trends by representing the data inside in a user-friendly manner. |
+| [**Conditional Formatting**]({%slug radspreadprocessing-features-conditional-formatting%}) | Make it easy to analyze data, find critical issues, patterns and trends by representing the data inside in a user-friendly manner. |
 | [**Hyperlinks**]({%slug radspreadprocessing-features-hyperlink%}) | The API enables you to add, remove, edit and search for hyperlinks in the worksheets of the document. |
 | [**Workbook Protection**]({%slug radspreadprocessing-features-protection-workbook%}) | Prevents the users from modifying the workbook by adding, removing, renaming or reordering sheets. |
 | [**Worksheet protection**]({%slug radspreadprocessing-features-protection-worksheet%}) | Restricts the user from modifying the content and structure of the worksheet. Additionally, the model offers protection options that let you choose a set of commands that will be available to the user when protection is enabled. |
@@ -52,11 +39,11 @@ The following table describes the most popular features of the `RadSpreadProcess
 | [**Theming**]({%slug radspreadprocessing-features-styling-document-themes%}) | The document model comes with predefined themes called Document themes. They enable you to specify colors, fonts and a variety of graphic effects in a document and affect the look and feel of the whole workbook. |
 | [**Resizing**]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%}) | Auto fit or resize rows and columns. |
 | [**Number Formats**]({%slug radspreadprocessing-features-number-formats%}) | Enable you to format the data in the cells so it can be easily readable. The document model exposes the following categories of predefined formats: **General**, **Number**, **Currency**, **Accounting**, **Date**, **Time**, **Percentage**, **Fraction**, **Scientific**, **Text**, **Special** and also allows you to create **custom** formats. |
-| **Copy/Paste** | Add or [copy worksheets]({%slug radspreadprocessing-working-with-worksheets-copy-worksheet%}) within or across workbooks. Of course, [copying and pasting of cells]({%slug radspreadprocessing-features-clipboard-support%}) is supported as well. |
+| **Copy/Paste** | Add or [copy worksheets]({%slug radspreadprocessing-working-with-worksheets-copy-worksheet%}) within or across workbooks. [Copying and pasting of cells]({%slug radspreadprocessing-features-clipboard-support%}) is also supported. |
 | [**Data Validation**]({%slug radspreadprocessing-features-data-validation%}) | Enables you to control the type of data or the values that users enter into a cell. Different data validation rules are available, including list, number, date, text length or custom rules. |
 | [**Filtering**]({%slug radspreadprocessing-features-filtering%}) | Filter worksheet data. |
 | [**Sorting**]({%slug radspreadprocessing-features-sorting%}) | Sort data in the worksheet. |
-| [**Find and replace data**]({%slug radspreadprocessing-features-find-and-replace%}). | Find, find all, replace and replace all functionalities |
+| [**Find and replace data**]({%slug radspreadprocessing-features-find-and-replace%}) | Find, find all, replace and replace all functionalities. |
 | [**Freeze Panes**]({%slug radspreadprocessing-features-freeze-panes%}) | Keep part of the worksheet visible at all times when scrolling. |
 | [**Hidden rows and columns**]({%slug radspreadprocessing-working-with-rows-and-columns-hiding%}) | The API of the workbook model allows you to set the hidden state of each row or column. |
 | [**Merge and unmerge cells**]({%slug radspreadprocessing-features-merge-unmerge-cells%}) | You have the ability to merge two or more adjacent cells into a single cell that spans over multiple rows and columns. |
