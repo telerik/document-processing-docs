@@ -30,7 +30,7 @@ By default, the `WorkbookHistory` class does not record all changes introduced t
 **Example 1** enables the history of a workbook.
         
 
-**Example 1: Enable History**
+**Example 1: Enable workbook history tracking**
 
 <snippet id='codeblock-civ'/>
 
@@ -44,7 +44,7 @@ Once the history is enabled you can invoke its `Undo()` and `Redo()` methods to 
 **Example 2** creates a new workbook with a single worksheet and sets the value of cell *A1* twice. Further, the snippet performs the undo and redo actions.
         
 
-**Example 2: Perform Undo and Redo**
+**Example 2: Perform undo and redo operations**
 
 <snippet id='codeblock-ciw'/>
 
@@ -58,7 +58,7 @@ The `Workbook` history offers a friendly API that allows grouping multiple chang
 **Example 3** demonstrates how to create an undo group.
         
 
-**Example 3: Create Undo Group**
+**Example 3: Group multiple changes into one undo step**
 
 <snippet id='codeblock-cix'/>
 
@@ -72,7 +72,7 @@ To clear the history, call the `Clear()` method of the `WorkbookHistory` class. 
 **Example 4** clears the history of a workbook.
         
 
-**Example 4: Clear History**
+**Example 4: Clear the workbook history stack**
 
 <snippet id='codeblock-ciy'/>
 

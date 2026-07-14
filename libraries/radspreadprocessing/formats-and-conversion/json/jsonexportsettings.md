@@ -72,6 +72,8 @@ The [JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-
 
 The following example shows how to create a `JsonExportSettings` instance with the desired settings while exporting a [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%}) to JSON format:
 
+**Import a workbook, configure JsonExportSettings, and export formatted JSON output**
+
 <snippet id='libraries-spread-formats-and-conversion-json-jsonexportsettings-apply'/>
 
 ## See Also

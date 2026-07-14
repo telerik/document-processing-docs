@@ -21,11 +21,11 @@ If you need to comply with the FIPS 140-2 standard, you can disable the forbidde
 >Enforcing FIPS compliance might cause exceptions when importing documents which use any of the forbidden algorithms.
 
 
-**Example 1: Enforce FIPS**
+**Example 1: Enforce FIPS 140-2 by disabling noncompliant hashing algorithms**
 
 <snippet id='codeblock-cna'/>
 
-Enforce the FIPS compliance before using the Protection feature.
+Call this API before using document protection features in a FIPS-restricted environment.
 
 
 ## See Also

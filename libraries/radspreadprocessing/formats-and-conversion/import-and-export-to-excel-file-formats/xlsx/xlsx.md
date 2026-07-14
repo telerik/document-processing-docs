@@ -17,6 +17,6 @@ XLSX, a part of [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML)
 
 XLSX File Unzipped
 
-![Rad Spread Processing Formats and Conversion Xlsx 01](images/RadSpreadProcessing_Formats_and_Conversion_Xlsx_01.png)
+![Expanded XLSX package in File Explorer, showing XML parts such as workbook.xml, sharedStrings.xml, styles.xml, and worksheet folders](images/RadSpreadProcessing_Formats_and_Conversion_Xlsx_01.png)
 
 `XlsxFormatProvider` is compliant with the latest Office Open XML standard - [ECMA-376](https://www.ecma-international.org/publications/standards/Ecma-376.htm) 4th edition, December 2012.

@@ -73,7 +73,7 @@ The `ConditionalFormattingDxfRule` class is a base class for all rules that supp
 
 The `Formatting` property can be used for all rules listed in **Table 1** except `ColorScaleRule`, `IconSetRule`, and `DataBarRule`. Due to their specificity, these three rules inherit directly from `ConditionalFormattingRule` and **do not** expose the `Formatting` property. Their styling options are directly inside the rule class. 
 
-**Example 1: Create Formatting**
+**Example 1: Create formatting for a conditional rule**
 
 <snippet id='codeblock-cgr'/>
 
@@ -82,43 +82,48 @@ The `Formatting` property can be used for all rules listed in **Table 1** except
 
 Each of the classes listed in **Table 1** exposes constructors that enable you to instantiate the specific rule. The constructors of these classes take a `string` parameter that allows you to specify the values and conditions the rule must work with. You can pass any cell value for the parameter, including formulas.
 
-**Example 2: Create a Between Rule**
+**Example 2: Create a Between conditional formatting rule**
 
 <snippet id='codeblock-cgs'/>
 
-#### Between rule applied on a range of values
-![Between rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_Between.png)
+**Between rule applied to worksheet Load values within the selected range**
 
-**Example 3: Create a GreaterThanOrEqualTo Rule**
+![Telerik Document Processing RadSpreadProcessing Between rule highlighting worksheet Load values within a selected range](images/RadSpreadProcessing_Features_ConditionalFormatting_Between.png)
+
+**Example 3: Create a GreaterThanOrEqualTo conditional formatting rule**
 
 <snippet id='codeblock-cgt'/>
 
-#### GreaterThanOrEqualTo rule applied on a range of values
-![GreaterThanOrEqualTo rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_GreaterThanOrEqualTo.png)
+**GreaterThanOrEqualTo rule applied to worksheet Load values at or above the threshold**
 
-**Example 4: Create a ColorScale Rule**
+![Telerik Document Processing RadSpreadProcessing GreaterThanOrEqualTo rule highlighting worksheet Load values at or above a threshold](images/RadSpreadProcessing_Features_ConditionalFormatting_GreaterThanOrEqualTo.png)
+
+**Example 4: Create a ColorScale conditional formatting rule**
 
 <snippet id='codeblock-cgu'/>
 
 >note Depending on the exact number of colors you want to apply for the `ColorScaleRule`, you can choose between `TwoColorScaleValueContext` and `ThreeColorScaleValueContext` classes.
 
-#### ColorScale rule applied on a range of values
-![ColorScale rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_ColorScale.png)
+**ColorScale rule applied to worksheet Load values with a green-to-red gradient**
 
-**Example 5: Create a DataBar Rule**
+![Telerik Document Processing RadSpreadProcessing ColorScale rule showing worksheet Load values with a green-to-red gradient](images/RadSpreadProcessing_Features_ConditionalFormatting_ColorScale.png)
+
+**Example 5: Create a DataBar conditional formatting rule**
 
 <snippet id='codeblock-cgv'/>
 
-#### DataBar rule applied on a range of values
-![DataBar rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_DataBar.png)
+**DataBar rule applied to worksheet Load values with in-cell bars**
+
+![Telerik Document Processing RadSpreadProcessing DataBar rule displaying worksheet Load values with in-cell bars](images/RadSpreadProcessing_Features_ConditionalFormatting_DataBar.png)
 
 
-**Example 6: Create an IconSet Rule**
+**Example 6: Create an IconSet conditional formatting rule**
 
 <snippet id='codeblock-cgw'/>
 
-#### IconSet rule applied on a range of values
-![IconSet rule applied on a range of values](images/RadSpreadProcessing_Features_ConditionalFormatting_IconSet.png)
+**IconSet rule applied to worksheet Load values with directional status arrows**
+
+![Telerik Document Processing RadSpreadProcessing IconSet rule displaying worksheet Load values with directional status arrows](images/RadSpreadProcessing_Features_ConditionalFormatting_IconSet.png)
 
 The `PresetIconSet` enum exposes multiple definitions for predefined sets of icons. You can also use custom icons through the other constructor of `IconSetRule`. This overload accepts an object of type `IconSetValueContextBase` whose implementations allow you to register three, four, or five icons: `ThreeIconSetValueContext`, `FourIconSetValueContext`, `FiveIconSetValueContext`.
 
@@ -143,7 +148,7 @@ The following list shows all implementations of `IRangeValue` that you can use:
 
 Any previously applied formatting can be obtained through the `GetConditionalFormattings` method of `CellSelection`. This method returns a collection of `ConditionalFormattingRange` objects representing the formattings applied to the selection and the `CellRange` each formatting applies to.
 
-**Example 7: Get the Conditional Formatting**
+**Example 7: Get conditional formatting from a cell selection**
 
 <snippet id='codeblock-cgx'/>
 
@@ -151,7 +156,7 @@ Any previously applied formatting can be obtained through the `GetConditionalFor
 
 Through the `CellSelection`, you can also remove the formatting from the selected cells.
 
-**Example 8: Remove the Conditional Formatting**
+**Example 8: Remove conditional formatting from selected cells**
 
 <snippet id='codeblock-cgy'/>
 
@@ -161,7 +166,7 @@ Each of the formatting rule classes gives you the ability to evaluate the rule a
 
 For the rules that apply on all the values in the range, the return value is **between 0 and 1**, depending on where that value is positioned in the range of all values. Such rules are `ColorScaleRule`, `DataBarRule`, and `IconSetRule`. For all other rules, the result of `Resolve` is **0 or 1**, depending on whether the specific cell value meets the rule requirements.
 
-**Example 9: Resolve a Conditional Formatting Rule**
+**Example 9: Resolve a conditional formatting rule result**
 
 <snippet id='codeblock-cgz'/>
 
@@ -169,7 +174,7 @@ For the rules that apply on all the values in the range, the return value is **b
 
 If you want to change the rule used by a `ConditionalFormatting` object, use the `UpdateRule()` method.
 
-**Example 10: Change the Rule for Existing Conditional Formatting**
+**Example 10: Change the rule for existing conditional formatting**
 
 <snippet id='codeblock-cha'/>
 

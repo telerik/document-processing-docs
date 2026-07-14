@@ -28,43 +28,43 @@ position: 10
 
 Calculating the layout is an operation that computes the width of each column, the height of each row, the size of the text contained in the cells, and many other elements used for positioning the UI. The layout update triggers each time a property changes and is a fairly heavy operation.
 
-Internally there are many mechanisms used to lower the number of calculations, but sometimes they are not enough. For example, if you want to generate a document and then show it, you do not need to trigger any layout updates other than the one after you finish creating the document. The following code snippet shows how to suspend and then resume layout updates after document generation is completed.
+Internally there are many mechanisms used to lower the number of calculations, but sometimes they are not enough. For example, if you want to generate a document and then show it, you do not need to trigger any layout updates other than the one after you finish creating the document. The following code snippet suspends layout updates during document generation and resumes them afterward.
 
-**Example 1: Suspend Layout Updates**
+**Example 1: Suspend layout updates during document generation**
 
 <snippet id='codeblock-cfv'/>
 
-If an exception is thrown between the two method calls, the resuming of the layout update will not execute and the UI will stop updating. You can ensure the layout update resumes regardless of exceptions by using `UpdateScope`. The following code snippet demonstrates how to use it.
+If an exception is thrown between the two method calls, the resuming of the layout update will not execute and the UI will stop updating. You can ensure the layout update resumes regardless of exceptions by using `UpdateScope`. The following code snippet shows this approach.
 
-**Example 2: Suspend Layout Updates in UpdateScope**
+**Example 2: Suspend layout updates with UpdateScope**
 
 <snippet id='codeblock-cfw'/>
 
 ## Reduce the Number of Undo Steps
 
-Preserving information about the steps in the undo stack is usually not a time consuming operation, but even the lightest operation performed thousands of times may slow down your application. If you do not need to preserve each step in the document generation process as a separate undo step, you can combine a series of actions into one undo step. For example, if you want to set background color to the even rows in your table, you have to set the fill for each row separately. This way each background setting is preserved as a separate undo step. To combine them in a single undo step, use the following code.
+Preserving information about the steps in the undo stack is usually not a time consuming operation, but even the lightest operation performed thousands of times may slow down your application. If you do not need to preserve each step in the document generation process as a separate undo step, you can combine a series of actions into one undo step. For example, if you want to set background color to the even rows in your table, you have to set the fill for each row separately. This way each background setting is preserved as a separate undo step. The following code combines those actions into a single undo group.
 
-**Example 3: Combine Steps in Undo Group**
+**Example 3: Combine multiple changes in one undo group**
 
 <snippet id='codeblock-cfx'/>
 
-If an exception is thrown between the two method calls, the ending of the undo group will not execute. All the following actions will not be added to the history and the UI will stop updating. You can ensure the undo group closes regardless of exceptions by using `UpdateScope`. The following code snippet demonstrates how to use it.
+If an exception is thrown between the two method calls, the ending of the undo group will not execute. All the following actions will not be added to the history and the UI will stop updating. You can ensure the undo group closes regardless of exceptions by using `UpdateScope`. The following code snippet shows how to do that.
 
-**Example 4: Combine Steps in Undo Group Using UpdateScope**
+**Example 4: Combine undo operations with UpdateScope**
 
 <snippet id='codeblock-cfy'/>
 
 ## Disabling History
 
-As described in the [Reduce the Number of Undo Steps section](#reduce-the-number-of-undo-steps), preserving the history steps can lower the performance of `RadSpreadProcessing`. If you do not want to preserve History while generating your document, you can turn the feature off. Switch it on and off through the `IsEnabled` Boolean property of the history as shown in the following example.
+As described in the [Reduce the Number of Undo Steps section](#reduce-the-number-of-undo-steps), preserving the history steps can lower the performance of `RadSpreadProcessing`. If you do not want to preserve History while generating your document, you can turn the feature off. The following example toggles the `IsEnabled` Boolean property of the history.
 
-**Example 5: Disable History**
+**Example 5: Disable history while generating a workbook**
 
 <snippet id='codeblock-cfz'/>
 
 If an exception is thrown before enabling the history, it will not be enabled and the subsequent history steps will not be preserved. To ensure that the history is enabled, use the `UpdateScope` class. The following example shows how to achieve this.
 
-**Example 6: Disable and Enable History Using UpdateScope**
+**Example 6: Disable and restore history with UpdateScope**
 
 <snippet id='codeblock-cga'/>
 

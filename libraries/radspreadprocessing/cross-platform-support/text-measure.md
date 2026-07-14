@@ -46,7 +46,7 @@ This implementation uses PdfProcessing to obtain the size of the text and provid
 
 >important To use the `SpreadFixedTextMeasurer` class, you must add a reference to **Telerik.Documents.Fixed**.
 
-**Example 1: Set the SpreadFixedTextMeasurer as a text measurer**
+**Example 1: Set SpreadFixedTextMeasurer as the text measurer**
 
 <snippet id='codeblock-cgf'/>
 
@@ -75,7 +75,7 @@ If you prefer to reference assemblies directly, you need:
 |**Telerik.Text.Skia.dll**|Required dependency of Telerik.Documents.TextMeasurer.Skia.|
 |**SkiaSharp.HarfBuzz.dll** (version {{site.harfbuzzsharp}}) (and all of its dependencies)|Required dependency of Telerik.Text.Skia.dll, along with all its dependencies|
 
-**Example 2: Set the SkiaTextMeasurer as a text measurer**
+**Example 2: Set SkiaTextMeasurer as the text measurer**
 
 <snippet id='libraries-spread-crossplatform-textmeasuring-setskiatextmeasurer'/>
 
@@ -83,11 +83,11 @@ If you prefer to reference assemblies directly, you need:
 
 You can assign any `SpreadTextMeasurerBase` implementation to the `SpreadExtensibilityManager.TextMeasurer` property. Inherit the abstract `SpreadTextMeasurerBase` class, implement the required members, and set the new implementation to the `TextMeasurer` property.
 
-**Example 3: Create a custom implementation inheriting the SpreadTextMeasurerBase abstract class**
+**Example 3: Create a custom SpreadTextMeasurerBase implementation**
 
 <snippet id='codeblock-cgg'/>
 
-**Example 4: Set the custom implementation as a text measurer**
+**Example 4: Register a custom text measurer implementation**
 
 <snippet id='codeblock-cgh'/>
 

@@ -52,7 +52,7 @@ The twelve color types are used for creating `ThemableColor` objects. They deter
 
 **Example 1** demonstrates how to create a `ThemeColorScheme` object. The example passes a name and twelve colors to the constructor. Every color has a comment next to it, so you can see its corresponding `ThemeColorType`.
 
-**Example 1: Create ThemeColorScheme**
+**Example 1: Create a custom ThemeColorScheme with explicit colors for each theme slot**
 
 <snippet id='codeblock-cnl'/>
 
@@ -72,7 +72,7 @@ To create colors that depend on the current document theme, you need to use `The
 
 **Example 2** shows how you can create a `ThemableColor`.
 
-**Example 2: Create ThemableColor**
+**Example 2: Create a ThemableColor bound to the Accent1 theme color**
 
 <snippet id='codeblock-cnm'/>
 
@@ -102,7 +102,7 @@ When you need to create a font that depends on the current document theme, use t
 
 **Example 4** shows how to create a `ThemableFontFamily`.
 
-**Example 4: Create ThemableFontFamily**
+**Example 4: Create a ThemableFontFamily that uses the theme's major font**
 
 <snippet id='codeblock-cno'/>
 
@@ -112,7 +112,7 @@ Now that you have a color and a font scheme, you can create a new `DocumentTheme
 
 **Example 5** demonstrates how to create a `DocumentTheme` using the color scheme from **Example 1** and the font scheme from **Example 3**.
 
-**Example 5: Create DocumentTheme**
+**Example 5: Combine the custom color and font schemes into a DocumentTheme**
 
 <snippet id='codeblock-cnp'/>
 
@@ -120,7 +120,7 @@ In the predefined static class `PredefinedThemeSchemes`, you can find several pr
 
 **Example 6** shows how you can create a document theme using the predefined color and font schemes.
 
-**Example 6: Create DocumentTheme from Predefined Schemes**
+**Example 6: Create a DocumentTheme from predefined color and font schemes**
 
 <snippet id='codeblock-cnq'/>
 
@@ -128,7 +128,7 @@ To change the current document theme, set a single property:
 
 **Example 7** changes the theme of a newly created workbook.
 
-**Example 7: Change DocumentTheme**
+**Example 7: Apply the custom document theme to a workbook**
 
 <snippet id='codeblock-cnr'/>
 
@@ -136,11 +136,11 @@ To change the current document theme, set a single property:
 
 To get the actual value from `ThemableColor` or `ThemableFontFamily`, call the `GetActualValue()` method on the corresponding object.
 
-**Example 8: Get Actual Color**
+**Example 8: Resolve the actual color value for a ThemableColor in a specific theme**
 
 <snippet id='codeblock-cns'/>
 
-**Example 9: Get Actual Font**
+**Example 9: Resolve the actual font family for a ThemableFontFamily in a specific theme**
 
 <snippet id='codeblock-cnt'/>
 

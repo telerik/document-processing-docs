@@ -22,7 +22,7 @@ There are two available options when hiding sheets. The first option is to set t
 | `Hidden` | The sheet is hidden. Designed for UI purposes. |
 | `VeryHidden` | The sheet is very hidden. Can only be set through the API. |
 
-**Example 1: Set the SheetVisibility to Hidden or VeryHidden**
+**Example 1: Hide the active sheet or the first worksheet by setting SheetVisibility directly**
 
 <snippet id='codeblock-csp'/>
 
@@ -32,7 +32,7 @@ The other option is to use the `Hide` method exposed by both the `SheetCollectio
 * A specified sheet
 * An active sheet (available on `SheetCollection` only)
 
-**Example 2: Hide Sheets Using the Hide Method**
+**Example 2: Hide the first worksheet by passing the worksheet instance to Hide()**
 
 <snippet id='codeblock-csq'/>
 
@@ -43,7 +43,7 @@ As with hiding, you can unhide sheets both through setting the sheet `Visibility
 
 The following code snippets show the two approaches.
 
-**Example 3: Set the SheetVisibility to Visible**
+**Example 3: Make the first sheet visible again by setting SheetVisibility to Visible**
 
 <snippet id='codeblock-csr'/>
 
@@ -52,7 +52,7 @@ The `Unhide` method provides two overloads and supports unhiding a sheet by:
 * A sheet at the specified index
 * A specified sheet
 
-**Example 4: Unhide Sheets Using the Unhide Method**
+**Example 4: Unhide the first worksheet by index or by worksheet instance**
 
 <snippet id='codeblock-css'/>
 

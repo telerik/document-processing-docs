@@ -20,13 +20,13 @@ To use the `DataTableFormatProvider`, reference the `Telerik.Windows.Documents.S
 
 The following example shows how to import a `DataTable`. The sample creates a `DataTableFormatProvider` instance and passes the table to its `Import` method.
 
-**Example 1: Import DataTable**
+**Example 1: Import a DataTable and create a new workbook from it**
 
 <snippet id='codeblock-con'/>
 
 You can also import the data from a `DataTable` to an existing worksheet.
 
-**Example 2: Import DataTable to an Existing Worksheet**
+**Example 2: Import a DataTable into an existing worksheet**
 
 <snippet id='codeblock-coo'/>
 
@@ -34,7 +34,7 @@ You can also import the data from a `DataTable` to an existing worksheet.
 
 The following example demonstrates how to export an existing worksheet to a `DataTable`. The snippet assumes that you already have a workbook with some data.
 
-**Example 3: Export Worksheet to a DataTable**
+**Example 3: Export the active worksheet from an existing workbook to a DataTable**
 
 <snippet id='codeblock-cop'/>
 

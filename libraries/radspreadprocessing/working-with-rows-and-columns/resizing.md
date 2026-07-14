@@ -36,7 +36,7 @@ The `SetHeight()` method changes the height of rows. It takes a single argument 
 **Example 1** shows how to get and change the height of several rows.
         
 
-**Example 1: Change Row Height**
+**Example 1: Read the current height of rows 6 through 8 and increase it by 50 DIPs**
 
 <snippet id='codeblock-crq'/>
 
@@ -47,7 +47,7 @@ The `SetHeight()` method changes the height of rows. It takes a single argument 
 The autofit feature offers a handy approach for resizing multiple rows so that each of them chooses a height that fits its content. To autofit the height of rows, create a `RowSelection` instance that contains the rows that need to be resized and invoke the `AutoFitHeight()` method of the `RowSelection` object. **Example 2** shows how to fit the height of rows with indexes 6, 7, and 8.
         
 
-**Example 2: Fit Height of Rows**
+**Example 2: Auto-fit the height of rows 6 through 8**
 
 <snippet id='codeblock-crr'/>
 
@@ -75,7 +75,7 @@ The `SetWidth()` method changes the width of columns. It takes a single argument
 **Example 3** shows how to get and change the width of several columns.
         
 
-**Example 3: Change Columns Width**
+**Example 3: Read the current width of columns F through H and increase it by 50 DIPs**
 
 <snippet id='codeblock-crs'/>
 
@@ -84,7 +84,7 @@ The `SetWidth()` method changes the width of columns. It takes a single argument
 The autofit feature offers a handy approach for resizing multiple columns so that each of them chooses a width that fits its content. To autofit the columns, create a `ColumnSelection` instance that holds the columns to be resized, and invoke its `AutoFitWidth()` method. **Example 4** shows how to fit the column width of columns F to H.
         
 
-**Example 4: Fit Width of Columns**
+**Example 4: Auto-fit the width of columns F through H**
 
 <snippet id='codeblock-crt'/>
 
@@ -92,7 +92,7 @@ The autofit feature offers a handy approach for resizing multiple columns so tha
 Another way to auto fit column widths is to use the `ExpandToFitNumberValuesWidth()` method. It affects cells that contain only number values and have a `ColumnWidth` with `IsCustom` property set to `true`. **Example 5** demonstrates the alternative way to fit the column width.
         
 
-**Example 5: Fit with ExpandToFitNumberValuesWidth()**
+**Example 5: Expand columns F through H to fit numeric values only**
 
 <snippet id='codeblock-cru'/>
 
@@ -109,13 +109,13 @@ Another way to auto fit column widths is to use the `ExpandToFitNumberValuesWidt
 
 **Example 6** shows how to convert and set from pixel to MS Excel column width.    
 
-**Example 6: Convert from Pixel Column Width to MS Excel Column Width**
+**Example 6: Convert a 57-pixel width to Excel column width and apply it to column A**
 
 <snippet id='codeblock-crv'/>
 
 **Example 7** shows how to convert and set from MS Excel to pixel column width.    
 
-**Example 7: Convert from MS Excel Column Width to Pixel Column Width**
+**Example 7: Convert an Excel width of 8.11 to pixels and apply it to column A**
 
 <snippet id='codeblock-crw'/>
 
@@ -133,13 +133,13 @@ The [LayoutHelper](https://docs.telerik.com/devtools/document-processing/api/tel
 
 **Example 8** shows how to get the size of the cell content.
 
-**Example 8: Get the Size of the Cell Content**
+**Example 8: Calculate the rendered content size of a single cell**
 
 <snippet id='codeblock-crx'/>
 
 **Example 9** shows how to get the cell layout box.
 
-**Example 9: Get the Cell Layout Box**
+**Example 9: Calculate the layout box of a single cell**
 
 <snippet id='codeblock-cry'/>
 

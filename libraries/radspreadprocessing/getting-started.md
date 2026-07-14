@@ -22,25 +22,25 @@ You can find the required references in the [SpreadProcessing NuGet packages]({%
 
 The document model allows you to instantiate a new [workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%}) and populate it with any data you want.
 
-The following example shows how to create a workbook and add a new worksheet to it.
+The following example creates a workbook and adds a worksheet to it.
 
-**Example 1: Create Workbook**
+**Example 1: Create a workbook and add a worksheet**
 
 <snippet id='codeblock-cfs'/>
 
-You can then create a [CellSelection]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and set any value to the selected cells. The following example shows how to create a cell and set a string value to it.
+You can then create a [CellSelection]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and set a value for the selected cells. The following example creates a cell and assigns a string value to it.
 
-**Example 2: Set Value of Cell**
+**Example 2: Create a cell and set a string value**
 
 <snippet id='codeblock-cft'/>
 
 ## Exporting
 
-The `RadSpreadProcessing` library supports a variety of formats to which you can export the contents of a workbook using [FormatProviders]({%slug radspreadprocessing-formats-and-conversion-general-information%}). The following example shows how to export the previously created workbook to `.xlsx` format.
+The `RadSpreadProcessing` library supports a variety of formats to which you can export the contents of a workbook using [FormatProviders]({%slug radspreadprocessing-formats-and-conversion-general-information%}). The following example exports the previously created workbook to `.xlsx` format.
 
 For more examples and application scenarios of importing and exporting a Workbook to various formats, check the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
 
-**Example 3: Export to Xlsx**
+**Example 3: Export a workbook to XLSX**
 
 <snippet id='codeblock-cfu'/>
 

@@ -42,13 +42,13 @@ To use `PdfFormatProvider`, add references to the following packages:
 
 **Example 1** shows how to use `PdfFormatProvider` to export a Workbook to a file.
 
-**Example 1: PdfFormatProvider Export Example**
+**Example 1: Export a workbook to a PDF file stream**
 
 <snippet id='codeblock-cpc'/>
 
 The result from the export method is a document that you can open in any application that supports PDF documents.
 
-**Example 2: Export to RadFixedDocument**
+**Example 2: Export a workbook directly to a RadFixedDocument instance**
 
 <snippet id='codeblock-cpd'/>
 

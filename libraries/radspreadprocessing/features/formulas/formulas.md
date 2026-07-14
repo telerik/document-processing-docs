@@ -36,7 +36,7 @@ To set the value of a cell to a formula, use the `SetValue()` method of the [Cel
 **Example 1** creates a workbook from scratch and adds a worksheet. The code then assigns the value =3+4 to cell A1.
         
 
-**Example 1: Set Formula**
+**Example 1: Set a formula value in a worksheet cell**
 
 <snippet id='codeblock-cmx'/>
 
@@ -48,7 +48,7 @@ In addition to entering formulas in cells, you can retrieve and inspect formula 
 A closer look at the value of cell A1 reveals that the two methods `GetValueAsString()` and `GetResultValueAsString()` return the original string of the expression and the string of the computed result, respectively. Similarly, `FormulaCellValue` offers information about the `CellValueType` of its value and result value through the `ValueType` and `ResultValueType` properties.
         
 
-**Example 2: Get Formula Value**
+**Example 2: Inspect the formula expression and result value**
 
 <snippet id='codeblock-cmy'/>
 

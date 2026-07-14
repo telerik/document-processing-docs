@@ -33,7 +33,7 @@ The following example shows how to export the Entire Workbook without ignoring t
 
 The following example shows how to export only two selected ranges from the active worksheet, ignoring print areas and page breaks.
 
-**Example 2: Export Selection**
+**Example 2: Export two explicit cell ranges from the active worksheet**
 
 <snippet id='codeblock-cpa'/>
 
@@ -41,7 +41,7 @@ The following example shows how to export only two selected ranges from the acti
 
 Another export option is to specify settings specific to the PDF format for the exported document. The following example demonstrates how to use the `PdfFileSettings` property to export a PDF/A-compliant document.
 
-**Example 3: Export PDF/A Compliant Document**
+**Example 3: Configure PdfFileSettings to export a PDF/A-2b compliant document**
 
 <snippet id='codeblock-cpb'/>
 

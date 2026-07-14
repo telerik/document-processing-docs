@@ -24,6 +24,8 @@ To use the `JsonFormatProvider` class, you need to reference the following NuGet
 
 The following example demonstrates how to import an existing [Workbook]({%slug radspreadprocessing-working-with-workbooks-what-is-workbook%}) and export it to a JSON file using the default settings.
 
+**Import an XLSX workbook and export it to JSON with the default provider settings**
+
 <snippet id='libraries-spread-formats-and-conversion-json-jsonformatprovider'/>
 
 ## See Also

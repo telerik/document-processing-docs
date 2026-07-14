@@ -60,7 +60,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 
 >caution The following code snippet is valid for Microsoft.Extensions.AI.OpenAI 10.3. The specific **IChatClient** initialization may be different according to the specific version.
 
-**Example 1: Setting Up Azure OpenAI**
+**Example 1: Configure an Azure OpenAI chat client with the endpoint, key, and deployment name**
 
 <snippet id='libraries-spread-features-gen-ai-setup-azure-open-ai'/>
 
@@ -69,7 +69,7 @@ Before using the GenAI-powered Document Insights functionality, you need to set 
 1. Create an OpenAI account.
 2. Get your API key from the OpenAI dashboard.
 
-**Example 2: Setting Up OpenAI**
+**Example 2: Configure an OpenAI chat client with the API key and model ID**
 
 <snippet id='libraries-spread-features-gen-ai-setup-open-ai'/>
 
@@ -81,7 +81,7 @@ Ollama allows you to run AI models locally on your machine. This is useful for d
 2. Pull the model you want to use.
 3. Start the Ollama server.
 
-**Example 3: Setting Up Ollama**
+**Example 3: Configure an Ollama chat client for a locally hosted model**
 
 <snippet id='libraries-spread-features-gen-ai-setup-ollama-ai'/>
 

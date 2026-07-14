@@ -41,12 +41,12 @@ The following example demonstrates how to export an existing workbook to an XLSM
 
 >Exporting a workbook created with RadSpreadProcessing produces a file with empty macros (VBA Project).
 
-**Example 2: Export Spreadsheet Document to XLSM (Excel Workbook) File**
+**Example 2: Create a workbook and export it to an XLSM file stream**
 
 <snippet id='codeblock-cou'/>
 
 
-**Example 3: Export Spreadsheet Document to a Stream and byte[]**
+**Example 3: Export a workbook to a memory stream and capture the XLSM bytes**
 
 <snippet id='codeblock-cov'/> 
 

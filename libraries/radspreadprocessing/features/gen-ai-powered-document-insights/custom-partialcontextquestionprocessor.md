@@ -54,6 +54,8 @@ The example constructs a custom `PartialContextQuestionProcessor` by supplying a
 
 >note `DefaultEmbedder` is only available on **net8-windows** and higher. On other target frameworks you must supply your own `IEmbedder` (as shown with [CustomOpenAIEmbedder]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder)).
 
+**Configure PartialContextQuestionProcessor with a custom context retriever pipeline**
+
 <snippet id='libraries-spread-features-gen-ai-custom-partial-processor'/>
 
 ## See Also

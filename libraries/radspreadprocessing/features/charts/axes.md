@@ -19,11 +19,11 @@ If the `SeriesGroup` object implements the `ISupportAxes` interface, it can indi
 
 Refer to the scenario from **Figure 1**. The chart shown there has two axes: a date (horizontal, category) axis and a value (vertical, value) axis. The respective objects can be found in the `PrimaryAxes` property of the chart. The `BarSeriesGroup` object `AxisGroupName` property has value `AxisGroupName.Primary`. The properties of the axes are listed in **Example 1**.
 
-**Figure 1: Sample Data**
+**Figure 1: Column chart with yearly income values and primary axes**
 
-![Sample data for chart axes](images/SpreadProcessing-Features-Charts-Axes_1.png)
+![Telerik Document Processing RadSpreadProcessing worksheet showing yearly income data and a column chart with primary category and value axes](images/SpreadProcessing-Features-Charts-Axes_1.png)
 
-**Example 1: Axes Properties**
+**Example 1: Inspect chart axis properties**
 
 <snippet id='codeblock-clh'/>
 
@@ -31,7 +31,7 @@ Refer to the scenario from **Figure 1**. The chart shown there has two axes: a d
 
 RadSpreadProcessing allows you to replace the axis of a chart with a new object. This is achieved through the `PrimaryAxes` and `SecondaryAxes` properties of `DocumentChart`.
 
-**Example 2: Replace Axis**
+**Example 2: Replace a chart axis**
 
 <snippet id='codeblock-cli'/>
 
@@ -40,10 +40,10 @@ RadSpreadProcessing allows you to replace the axis of a chart with a new object.
 
 You can customize the way the axes in the chart look. The API of SpreadProcessing enables you to change the fill and width of the outline of an axis and its major gridlines.
 
-**Example 3: Customize the Major Gridlines and Outline of an Axis**
+**Example 3: Customize axis gridlines and outline**
 
 <snippet id='codeblock-clj'/>
 
-**Figure 2: Custom Appearance**
+**Chart with customized axis outline and major gridlines**
 
-![Custom axis appearance](images/SpreadProcessing-Features-Charts-Axes_3.png)
+![Telerik Document Processing RadSpreadProcessing category chart showing customized axis outline styling and major gridlines](images/SpreadProcessing-Features-Charts-Axes_3.png)

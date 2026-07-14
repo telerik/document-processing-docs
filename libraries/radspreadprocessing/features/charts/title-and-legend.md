@@ -17,18 +17,18 @@ You can manipulate the legend and the title of a chart.
 
 You can access and set the `Title` property of the `DocumentChart` object, which is of type `Title`. The `Title` property is exposed in both the `DocumentChart` and `SeriesBase` classes. Similar to the series of the chart, the title can be a simple string value or a reference to data. The reference is not to a `CellIndex`, but to a `CellRange`. If the `CellRange` contains more than one cell, the values of the cells are concatenated.
 
-**Example 1: Setting the Title of a Chart to a String**
+**Example 1: Set the chart title from a string**
 
 <snippet id='codeblock-clv'/>
 
 
-**Example 2: Setting the Title of a Series to a CellRange**
+**Example 2: Set a series title from a cell range**
 
 <snippet id='codeblock-clw'/>
 
-**Figure 1: Chart Title**
+**Figure 1: Pie chart with a text-based chart title**
 
-![Chart title example](images/SpreadProcessing-Features-ChartTitle_1.png)
+![Telerik Document Processing RadSpreadProcessing pie chart showing a text title above the chart and category values from the worksheet](images/SpreadProcessing-Features-ChartTitle_1.png)
 
 
 ## Legend
@@ -37,10 +37,10 @@ The charts use a legend to help users understand the data plotted on the chart.
 
 You can add or edit the legend of the chart through the `Legend` property of the `DocumentChart` object. The property is of type `Legend`. The `Legend` type contains one property: `LegendPosition` of type `LegendPosition`, which is an enumeration with four members: `Top`, `Bottom`, `Left`, and `Right`. The actual entries of the legend are constructed by the titles of the series.
 
-**Example 3: Adding a Chart Legend**
+**Example 3: Add and position a chart legend**
 
 <snippet id='codeblock-clx'/>
 
-**Figure 2: Chart Legend**
+**Figure 2: Pie chart with a legend built from the series titles**
 
-![Chart legend example](images/SpreadProcessing-Features-ChartLegend_1.png)
+![Telerik Document Processing RadSpreadProcessing pie chart showing a legend with Series1 and Series2 entries next to the chart](images/SpreadProcessing-Features-ChartLegend_1.png)

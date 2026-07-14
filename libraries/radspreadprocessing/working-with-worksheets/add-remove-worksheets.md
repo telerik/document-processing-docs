@@ -18,7 +18,7 @@ To add a new worksheet to a workbook, use its `Worksheets` collection. The colle
 
 **Example 1** creates a workbook from scratch and adds a single worksheet to it. Since this is the first worksheet in the workbook, it is also set as the active worksheet. All worksheets added after it do not become active.
 
-**Example 1: Create a Workbook and Add a Worksheet to It**
+**Example 1: Create a workbook and add a new worksheet through the Worksheets collection**
 
 <snippet id='codeblock-cse'/>
 
@@ -30,7 +30,7 @@ The `Worksheets` collection of the workbook offers two methods for removing work
 
 **Example 2** creates a workbook and adds four worksheets. All worksheets have their default names: Sheet1, Sheet2, Sheet3, and Sheet4. The code further demonstrates how to remove three worksheets using the remove methods listed previously.
 
-**Example 2: Add and Remove Worksheets**
+**Example 2: Add four worksheets and remove them by index, name, and worksheet instance**
 
 <snippet id='codeblock-csf'/>
 
@@ -39,6 +39,6 @@ The `Worksheets` collection of the workbook offers two methods for removing work
 
 To change the order in which worksheets appear inside the workbook, use the `Move()` method of the `Sheets` collection. The method allows you to move one or more consecutive sheets to a specified position. **Example 3** shows how to insert four sheets and move the last one to the first position in the collection. When the workbook is visualized, the fourth sheet is the first one visible in the sheet tabs.
 
-**Example 3: Add and Reorder Worksheets**
+**Example 3: Add four worksheets and move the fourth sheet to the first position**
 
 <snippet id='codeblock-csg'/>

@@ -15,15 +15,15 @@ The .NET Standard specification does not define APIs for getting image propertie
 
 >note The **Telerik.Documents.ImageUtils** package provides a default implementation of the `ImagePropertiesResolver` class that you can use when exporting the document.
 
-**Example 1: Set the default implementation of the ImagePropertiesResolver class**
+**Example 1: Set the default ImagePropertiesResolver implementation**
 
 <snippet id='codeblock-cgc'/>
 
-**Example 2: Create a custom implementation inheriting the ImagePropertiesResolverBase abstract class (Windows)**
+**Example 2: Create a custom ImagePropertiesResolver implementation for Windows**
 
 <snippet id='codeblock-cgd'/>
 
-**Example 3: Set the custom implementation inheriting the ImagePropertiesResolverBase abstract class**
+**Example 3: Register a custom ImagePropertiesResolver implementation**
 
 <snippet id='codeblock-cge'/>
 

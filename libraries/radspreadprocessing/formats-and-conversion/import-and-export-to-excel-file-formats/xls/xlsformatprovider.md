@@ -44,7 +44,7 @@ The following example demonstrates how to export an existing workbook to an XLS 
 <snippet id='codeblock-cor'/>
 
 
-**Example 3: Export Spreadsheet Document to a Stream and byte[]**
+**Example 3: Export a workbook to a memory stream and capture the XLS bytes**
 
 <snippet id='codeblock-cos'/>
 

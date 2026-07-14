@@ -41,15 +41,15 @@ RadSpreadProcessing supports working with notes. Notes are used for making annot
 
 To add a note, specify the cell index to which the note relates, the position where the note appears, the author, and the text content. The position is optional. By default, the note is placed next to the related cell.
 
-**Example 1: Add Note**
+**Example 1: Add a note to cell B2**
 
 <snippet id='codeblock-cjv'/>
 
-The previous snippet adds a note in cell B2 with a position on cell F6.
+The previous example adds a note to cell B2 and positions the note shape at cell F6.
 
 ### Removing Notes
 
-**Example 2: Remove Note**
+**Example 2: Remove a note from the worksheet**
 
 <snippet id='codeblock-cjw'/>
 
@@ -63,7 +63,7 @@ You can use one of the following methods to show or hide single or all notes:
 * `Hide(SpreadsheetNote note)`: Hides the specified note from the collection.
 * `Show(SpreadsheetNote note)`: Shows the specified note from the collection.
 
-**Example 3: Hide Note**
+**Example 3: Hide a note in the worksheet**
 
 <snippet id='codeblock-cjx'/>
 

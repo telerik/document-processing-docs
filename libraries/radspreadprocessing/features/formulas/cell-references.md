@@ -26,7 +26,7 @@ To display the sum of cells A1 and B1 in cell C1, invoke the `SetValue()` method
 **Example 1** creates a workbook with a single worksheet before setting the value of C1.
         
 
-**Example 1: Set Reference Value**
+**Example 1: Set a formula that references cells in the same worksheet**
 
 <snippet id='codeblock-cmn'/>
 
@@ -38,7 +38,7 @@ References may optionally specify the worksheet of the referenced cell or range.
 **Example 2** adds a worksheet to the workbook and renames the newly created instance. The example also sets the value of cell A1 in *Sheet1* to refer to cell B2 in the new sheet.
         
 
-**Example 2: Set Reference Value from Another Sheet**
+**Example 2: Set a formula that references a cell in another worksheet**
 
 <snippet id='codeblock-cmo'/>
 
@@ -51,7 +51,7 @@ References to whole rows or columns must always contain a colon separating the s
 **Example 3** demonstrates how to add a reference to a cell range.
         
 
-**Example 3: Set Reference to Cell Range**
+**Example 3: Set a formula that references a cell range**
 
 <snippet id='codeblock-cmp'/>
 
@@ -91,11 +91,11 @@ SpreadProcessing supports references to whole columns and whole rows. You can us
 * Can refer to a single or to multiple rows and columns. Even for a single row or column, define the reference as a range (for example, use A:A to refer to column A).
 * Can be absolute, relative, or mixed references.
 
-**Example 4: Use Reference to a Column**
+**Example 4: Use a reference to a whole column**
 
 <snippet id='codeblock-cmq'/>
 
-**Example 5: Use Reference to Multiple Rows**
+**Example 5: Use a reference to multiple rows**
 
 <snippet id='codeblock-cmr'/>
 

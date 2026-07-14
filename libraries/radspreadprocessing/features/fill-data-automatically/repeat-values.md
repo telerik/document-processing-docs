@@ -26,7 +26,7 @@ To repeat the values, first create a [CellSelection]({%slug radspreadprocessing-
 
 **Example 1** illustrates how the contents of column *A* can be copied to the rest of the columns in the range *A1:D4*. The code creates a new worksheet and populates the cells *A1*, *A2*, *A3*, and *A4* with the values 5, 8, 13, and 21 respectively. It then invokes the `FillData()` method for the specified range with `FillDirection.Right`.
 
-#### __Example 1: Fill Right__
+**Example 1: Fill values to the right across a selected range**
 
 <snippet id='codeblock-cme'/>
 
@@ -34,14 +34,15 @@ To repeat the values, first create a [CellSelection]({%slug radspreadprocessing-
 
 **Figure 1** demonstrates the result of **Example 1**.
 
-#### Figure 1: Data filled right
-![Data filled right using FillDirection.Right](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Repeat_Values_01.png)
+**Figure 1: Column A values repeated across columns A through D**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing values 5, 8, 13, and 21 copied from column A across adjacent columns](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Repeat_Values_01.png)
 
 Similarly, you can automatically copy the values of a row to its adjacent rows.
 
 **Example 2** invokes the `FillData()` method with `FillDirection.Down` for the range *B2:D4*. The sample code creates an empty worksheet and enters values in the range *B2:D2*. These values are propagated to the rest of the rows in the specified region.
 
-#### __Example 2: Fill Down__
+**Example 2: Fill values down across a selected range**
 
 <snippet id='codeblock-cmf'/>
 
@@ -49,8 +50,9 @@ Similarly, you can automatically copy the values of a row to its adjacent rows.
 
 **Figure 2** demonstrates the result of **Example 2**.
 
-#### Figure 2: Data filled down
-![Data filled down using FillDirection.Down](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Repeat_Values_02.png)
+**Figure 2: Row 2 values repeated down through the selected rows**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing values 34, 55, and 89 copied from row 2 down to lower rows](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Repeat_Values_02.png)
 
 ## See Also
 

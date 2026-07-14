@@ -49,7 +49,7 @@ The `SummarizationProcessorSettings` class defines configuration options for the
 | `ModelMaxInputTokenLimit` | The maximum input token limit for the model. |
 | `PromptAddition` | An addition for the prompt used for summarization. You can use it for clarification purposes. |
 
-**Example 1: Configuring SummarizationProcessorSettings**
+**Example 1: Create SummarizationProcessorSettings with a token limit and prompt guidance**
 
 <snippet id='libraries-spread-features-gen-ai-summarize-configure'/>
 
@@ -67,7 +67,7 @@ For large documents that exceed the token limit of the model, `SummarizationProc
 
 This approach allows the processor to handle documents of any size efficiently, but it increases the number of API calls required. The `SummaryResourcesCalculated` event provides information about the expected resource usage, allowing you to decide whether to proceed with the operation.
 
-**Example 2: Using SummarizationProcessor**
+**Example 2: Import a workbook, convert it to plain text, and generate a summary with resource checks**
 
 <snippet id='libraries-spread-features-gen-ai-summarize-document'/>
 

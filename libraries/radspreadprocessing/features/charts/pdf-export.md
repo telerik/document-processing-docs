@@ -29,13 +29,13 @@ The `ChartModelToImageConverter` object is available in the **Telerik.Windows.Co
 
 The [`PdfFormatProvider`]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) instance accepts a renderer in its settings. The renderer needs to implement the `IPdfChartRenderer` interface and the `RenderChart()` method this interface defines. The method takes a [`FixedContentEditor`]({%slug radpdfprocessing-editing-fixedcontenteditor%}) in its parameters, which draws the chart, and the other parameters contain the information necessary to draw it. The `WpfPdfChartImageRenderer` implemented in **Example 1** is an example implementation that uses the Telerik.Windows.Controls.Spreadsheet and Telerik.Windows.Controls.Chart [Xaml assemblies](https://docs.telerik.com/devtools/wpf/styling-and-appearance/xaml-vs-noxaml) to draw the chart.
 
-**Example 1: Implementing a Renderer**
+**Example 1: Implement a PDF chart renderer**
 
 <snippet id='codeblock-cll'/>
 
 When you have the renderer implemented, you need to assign it to the `PdfFormatProvider` instance through the `ChartRenderer` property of its [ExportSettings]({%slug radspreadprocessing-format-and-conversion-pdf-settings%}).
 
-**Example 2: Registering the Renderer**
+**Example 2: Register the renderer in PdfFormatProvider**
 
 <snippet id='codeblock-clm'/>
 

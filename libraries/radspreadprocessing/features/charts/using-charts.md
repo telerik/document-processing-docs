@@ -41,38 +41,41 @@ Once you have created a `FloatingChartShape`, you can insert it in the document 
 
 >Ensure that you have set the size of the `FloatingChartShape` object. Otherwise, it is inserted in the worksheet with zero size and is invisible.
 
-**Example 1: Create a Chart Through FloatingChartShape and Add It to a Worksheet**
+**Example 1: Create a chart through FloatingChartShape and add it to a worksheet**
 
 <snippet id='codeblock-cly'/>
 
 The result of executing the code in **Example 1** looks like **Figure 1**.
 
-#### Figure 1: Chart added to a worksheet
-![Chart created through FloatingChartShape and added to a worksheet](images/SpreadProcessing-Features-UsingCharts_1.png)
+**Figure 1: Column chart added to a worksheet from year and income data**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing a column chart titled Income created from year and income data](images/SpreadProcessing-Features-UsingCharts_1.png)
 
 The `Chart` property of `FloatingChartShape` holds an object of type [DocumentChart](#documentchart).
 
-**Example 2: Create a Combo (Column and Line) Chart Through FloatingChartShape and Add It to a Worksheet**
+**Example 2: Create a combo column and line chart through FloatingChartShape**
 
 <snippet id='codeblock-clz'/>
 
 The result of executing the code in **Example 2** looks like **Figure 2**.
 
-#### Figure 2: Combo chart added to a worksheet
-![Combo chart with Column and Line series added to a worksheet](images/SpreadProcessing-Features-UsingCharts_3.png)
+**Figure 2: Combo chart with line and column series added to a worksheet**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing a combo chart with Data1 and Data2 lines and Data3 columns by month](images/SpreadProcessing-Features-UsingCharts_3.png)
 
 ### Changing the Appearance of FloatingChartShape
 
 The `FloatingChartShape` class exposes properties that allow you to customize the shape appearance. You can control the outline of the shape and its fill.
 
-**Example 3: Customize the Fill and Outline of FloatingChartShape**
+**Example 3: Customize the fill and outline of FloatingChartShape**
 
 <snippet id='codeblock-cma'/>
 
 The result of executing the code in **Example 3** over a cell range containing sample data looks like **Figure 3**.
 
-#### Figure 3: Customized FloatingChartShape
-![FloatingChartShape with customized fill and outline](images/SpreadProcessing-Features-UsingCharts_2.png)
+**Figure 3: Chart shape with customized background fill and outline styling**
+
+![Telerik Document Processing RadSpreadProcessing chart with a light background and customized outline around the chart area](images/SpreadProcessing-Features-UsingCharts_2.png)
 
 >note The series are styled using the colors defined in the [Document Theme]({%slug radspreadprocessing-features-styling-document-themes%}).
 
@@ -92,13 +95,13 @@ The class also exposes a `Clone()` method, which creates a deep copy of the obje
 
 You can create an empty `DocumentChart` object and then set the desired values manually.
 
-**Example 4: Create an Empty Chart and Set Its Values Manually**
+**Example 4: Create an empty DocumentChart and set its values manually**
 
 <snippet id='codeblock-cmb'/>
 
 You can then use the chart to replace the chart in an existing `FloatingChartShape`.
 
-**Example 5: Add the DocumentChart to a Worksheet**
+**Example 5: Add the DocumentChart to a worksheet**
 
 <snippet id='codeblock-cmc'/>
 
@@ -110,6 +113,6 @@ The initial data and the resulting chart are shown in **Figure 1**.
 
 You can access the `Charts` collection of the `Shapes` collection of the `Worksheet` instance and enumerate the charts.
 
-**Example 6: Iterate All the Charts in a Worksheet**
+**Example 6: Iterate all charts in a worksheet**
 
 <snippet id='codeblock-cmd'/>

@@ -30,7 +30,7 @@ position: 2
 
 **Example 1** shows how to create and specify a particular setting to a `TxtFormatProvider`.
 
-**Example 1: Use TxtSettings**
+**Example 1: Configure TxtSettings with a custom delimiter, quote, and header row**
 
 <snippet id='codeblock-cpe'/>
 

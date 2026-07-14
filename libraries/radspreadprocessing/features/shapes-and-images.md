@@ -84,14 +84,14 @@ To insert an image into a worksheet, do the following:
 
 To create an instance of `FloatingImage`, you need the worksheet in which you want to insert the image, the cell index, and the offset.
 
-**Example 1: Create FloatingImage**
+**Example 1: Create a FloatingImage instance**
 
 <snippet id='codeblock-ckm'/>
 
 
 The next step is to configure the other properties of the image as needed.
 
-**Example 2: Configure Image Properties**
+**Example 2: Configure image properties**
 
 <snippet id='codeblock-ckn'/>
 
@@ -101,7 +101,7 @@ Insert the image into the collection of shapes of the worksheet. The worksheet m
 
 >important When using the **.NET Standard** version of the RadSpreadProcessing packages, to **export to PDF** format documents containing images different than Jpeg and Jpeg2000 or ImageQuality different than High, the **JpegImageConverter** property inside the **FixedExtensibilityManager** has to be set. For more information check the FixedExtensibilityManager in the [PdfProcessing Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
 
-**Example 3: Add Image to Worksheet**
+**Example 3: Add the image to the worksheet**
 
 <snippet id='codeblock-cko'/>
 
@@ -113,7 +113,7 @@ To delete a shape from a worksheet, you need the instance of the shape. The coll
 
 **Example 4** demonstrates how you can remove the image added in **Example 3**.
 
-**Example 4: Delete Shape**
+**Example 4: Delete a shape from the worksheet**
 
 <snippet id='codeblock-ckp'/>
 
@@ -125,13 +125,13 @@ After the initial values of the properties of the shapes have been assigned, you
 
 * Repositioning the shape
 
-	**Example 5: Move Image**
+	**Example 5: Move an image in the worksheet**
 
 	<snippet id='codeblock-ckq'/>
 
 * Changing the width and height of the shape
 
-	**Example 6: Change Width and Height**
+	**Example 6: Change the image width and height**
 
 	<snippet id='codeblock-ckr'/>
 
@@ -141,7 +141,7 @@ After the initial values of the properties of the shapes have been assigned, you
 
 	* void SetHeight(bool respectLockAspectRatio, double height, bool adjustCellIndex = false)
 
-	**Example 7: Set Width and Whether Lock Aspect Ratio Is Respected**
+	**Example 7: Set the width while respecting LockAspectRatio**
 
 	<snippet id='codeblock-cks'/>
 
@@ -149,7 +149,7 @@ After the initial values of the properties of the shapes have been assigned, you
 
 * Rotating the shape
 
-	**Example 8: Rotate**
+	**Example 8: Rotate an image**
 
 	<snippet id='codeblock-ckt'/>
 
@@ -157,7 +157,7 @@ After the initial values of the properties of the shapes have been assigned, you
 
 * Flipping the shape
 
-	**Example 9: Flip**
+	**Example 9: Flip an image horizontally or vertically**
 
 	<snippet id='codeblock-cku'/>
 
@@ -167,13 +167,13 @@ After the initial values of the properties of the shapes have been assigned, you
 
 The `CellIndex` of the shape and the cell index where the top left corner of the shape is visually located do not necessarily coincide when rotation is applied. Consider the following image which has `CellIndex` B8.
 
-#### Figure 1: Image in a Worksheet
-![Rad Spread Processing Features Shapes And Images 01](images/RadSpreadProcessing_Features_Shapes_And_Images_01.png)
+**Image positioned in worksheet cells before rotation**
+![Telerik Document Processing RadSpreadProcessing worksheet showing a Spreadsheet for WPF image placed across cells B8 through H10 before rotation](images/RadSpreadProcessing_Features_Shapes_And_Images_01.png)
 
 If you increase the rotation angle of the image, it is visualized differently.
 
-#### Figure 2: Image with Bigger Rotation Angle
-![Rad Spread Processing Features Shapes And Images 02](images/RadSpreadProcessing_Features_Shapes_And_Images_02.png)
+**Image rotated to a larger angle while its underlying CellIndex remains unchanged**
+![Telerik Document Processing RadSpreadProcessing worksheet showing the Spreadsheet for WPF image rotated diagonally while keeping its original CellIndex](images/RadSpreadProcessing_Features_Shapes_And_Images_02.png)
 
 It appears that the top left cell index is B5. However, the `CellIndex` property of the image remains unchanged at B8, as does the offset.
 
@@ -181,11 +181,13 @@ This setup is convenient as it allows more intuitive rotation of the shapes. How
 
 The following images illustrate this:
 
-![Rad Spread Processing Features Shapes And Images 03](images/RadSpreadProcessing_Features_Shapes_And_Images_03.png)
+**Image rotated so the top-left visual corner shifts to a new worksheet area**
+![Telerik Document Processing RadSpreadProcessing worksheet showing the rotated Spreadsheet for WPF image after its visual top-left corner shifts toward cells D1 through G16](images/RadSpreadProcessing_Features_Shapes_And_Images_03.png)
 
 At this point, the `CellIndex` property of the shape is D1 and the offset is also recalculated accordingly.
 
-![Rad Spread Processing Features Shapes And Images 04](images/RadSpreadProcessing_Features_Shapes_And_Images_04.png)
+**Image rotated to a vertical orientation with recalculated CellIndex and offset**
+![Telerik Document Processing RadSpreadProcessing worksheet showing the Spreadsheet for WPF image rotated vertically with a recalculated top-left position](images/RadSpreadProcessing_Features_Shapes_And_Images_04.png)
 
 As rotation increases, the `CellIndex` of the shape switches between B8 and D1, depending on what is closer to the visual top left corner of the shape. The result is the following:
 

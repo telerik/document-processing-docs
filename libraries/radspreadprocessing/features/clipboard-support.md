@@ -16,9 +16,9 @@ The document model offers a way to copy and paste multiple values. The library p
 
 To copy values from your worksheet, create a `CellSelection` for the desired cell region and invoke its `Copy()` method. The method returns a `WorksheetFragment` instance that holds the copied values. The `WorksheetFragment` is a piece of worksheet designed to keep the data and its properties. You can later pass the worksheet fragment to the `Paste()` method to get the values pasted in another worksheet.
 
-**Example 1** creates a new workbook with a single worksheet and assigns sample values to the A1:B3 region. The code then creates a selection for the cell region and calls its `Copy()` method. The returned `WorksheetFragment` can later be used for pasting.
+**Example 1** creates a new workbook with a single worksheet, assigns sample values to the A1:B3 region, selects that range, and calls `Copy()`. The returned `WorksheetFragment` can later be used for pasting.
 
-#### __Example 1: Copy Selected Cells__
+**Example 1: Copy the selected cell range**
 
 <snippet id='codeblock-cgi'/>
 
@@ -42,27 +42,27 @@ The document model provides control over the content and the formatting included
 
 * `Formatting`: Pastes only the formatting of the copied cells to the pasted cells.
 
-**Example 2** creates a new workbook with an empty worksheet. It sets the `Value` of cell *A1* to =CONCATENATE("Rad" ,"Spreadsheet") and its `ForeColor` to green. The code copies the contents of *A1* and pastes it in *A2* using the `All` PasteType.
+**Example 2** creates a new workbook with an empty worksheet. It sets the `Value` of cell *A1* to =CONCATENATE("Rad" ,"Spreadsheet") and its `ForeColor` to green. The code then copies the contents of *A1* and pastes them into *A2* by using the `All` paste type.
 
-#### __Example 2: Copy All__
+**Example 2: Paste all copied cell content and formatting**
 
 <snippet id='codeblock-cgj'/>
 
 
 
-Using a different `PasteType` produces different output. **Example 3** pastes the contents of *A1* with `Values` PasteType, which results in a value "RadSpreadsheet" instead of =CONCATENATE("Rad" ,"Spreadsheet") and a default `ForeColor` instead of green:
+Using a different `PasteType` produces different output. **Example 3** pastes the contents of *A1* with the `Values` paste type, which results in the value "RadSpreadsheet" instead of =CONCATENATE("Rad" ,"Spreadsheet") and uses the default `ForeColor` instead of green.
 
-#### __Example 3: Paste Using PasteType.Values__
+**Example 3: Paste only the calculated cell values**
 
 <snippet id='codeblock-cgk'/>
 
 
 
-If you want to paste the formula contained in *A1* (not only its result) and keep its formatting, combine the `Values` and `Formats` paste types:
+If you want to paste the formula contained in *A1* rather than only its result and keep its formatting, combine the `Values` and `Formats` paste types.
 
-**Example 4** combines the Value and Formats paste types and preserves both the contents and formatting of the copied cell selection.
+**Example 4** combines the Values and Formats paste types to preserve both the contents and formatting of the copied cell selection.
 
-#### __Example 4: Combine Values and Formats PasteType__
+**Example 4: Combine Values and Formats paste types**
 
 <snippet id='codeblock-cgl'/>
 

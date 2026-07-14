@@ -51,18 +51,22 @@ All of the listed providers implement the `IWorkbookFormatProvider` and `IBinary
 
 ### IWorkbookFormatProvider Interface Methods
 
+**IWorkbookFormatProvider: Stream-based import and export members**
+
 <snippet id='codeblock-cnu'/>
 
-**Example: Use the Import() and Export() Methods with Stream**
+**Example: Import a workbook from a stream and export it back to XLSX**
 
 <snippet id='codeblock-cnv'/>
 
 
 ### IBinaryWorkbookFormatProvider Interface Methods
 
+**IBinaryWorkbookFormatProvider: byte[] import and export members**
+
 <snippet id='codeblock-cnw'/>
 
-**Example: Use the Import() and Export() Methods with byte[] Array**
+**Example: Import a workbook from a byte array and export it back to byte[]**
 
 <snippet id='codeblock-cnx'/>
 

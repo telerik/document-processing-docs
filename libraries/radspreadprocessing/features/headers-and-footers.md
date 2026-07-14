@@ -31,7 +31,7 @@ The following subsections describe the Headers and Footers API in **RadSpreadPro
 `HeaderFooterSettings` is the class that defines how the headers and footers of a worksheet look. An instance of this class can be obtained through the properties of [WorksheetPageSetup]({%slug radspreadprocessing-features-worksheetpagesetup%}#worksheetpagesetup-properties). 
 
 
-**Example 1: Get HeaderFooterSettings**
+**Example 1: Get the worksheet HeaderFooterSettings**
 <snippet id='codeblock-cir'/>
 
 
@@ -71,15 +71,15 @@ The `HeaderFooterSection` class defines the content of a particular header/foote
 
 **Example 2** shows how to set sample content to header and footer sections. The code demonstrates how to insert a "*Date*" field in the right section of the header and a "*Page*" and a "*Number of pages*" fields in the center section of the footer.
 
-**Example 2: Set Content to a Header/Footer Section**
+**Example 2: Set content for header and footer sections**
 
 <snippet id='codeblock-cis'/>
 
 The header and footer of the first page in the worksheet from the snippet will be evaluated and rendered as shown in **Figure 1**.
 
 
-**Figure 1: Text in Header and Footer of a Spreadsheet Document**
-![Text in header and footer of a spreadsheet document](images/RadSpreadProcessing_Features_Headers_and_Footers_01.png)
+**Figure 1: Printed worksheet with custom header text and footer text**
+![Telerik Document Processing RadSpreadProcessing printed worksheet showing custom header text, a date field, and footer text](images/RadSpreadProcessing_Features_Headers_and_Footers_01.png)
 
 
 
@@ -112,14 +112,14 @@ The following table describes all valid uses of the ampersand symbol sequences. 
 
 **Example 3** demonstrates how to insert a date field in the header and a page number field combined with a number of pages field in the footer of a worksheet.
 
-**Example 3: Insert Fields in Header/Footer**
+**Example 3: Insert dynamic fields in the header and footer**
 
 <snippet id='codeblock-cit'/>
 
 **Figure 2** shows how the document looks after applying the settings demonstrated in **Example 3**.
 
-**Figure 2: Evaluated Fields in Header and Footer**
-![Evaluated fields in header and footer](images/RadSpreadProcessing_Features_Headers_and_Footers_02.png)
+**Figure 2: Printed worksheet with evaluated date and page number fields**
+![Telerik Document Processing RadSpreadProcessing printed worksheet showing evaluated date, current page, and total page count fields](images/RadSpreadProcessing_Features_Headers_and_Footers_02.png)
 
 
 
@@ -135,7 +135,7 @@ To control the vertical positioning of the headers and footers on the page, use 
 **Example 4** shows how to set the margins of a worksheet using the predefined `NormalMargins` of `PageMargins` for the page margins, 0 inches for the footer margin, and 1 inch for the header.
 
 
-**Example 4: Setting Margins to Header/Footer**
+**Example 4: Set header and footer margins**
 
 <snippet id='codeblock-ciu'/>
 

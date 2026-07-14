@@ -32,7 +32,7 @@ To access cell properties, create a `CellSelection` object that contains the reg
 
 **Example 1** creates a selection for cells in the range A1:F6.
 
-**Example 1: Create CellSelection**
+**Example 1: Create a CellSelection for the range A1:F6**
 
 <snippet id='codeblock-cqx'/>
 
@@ -94,7 +94,7 @@ As already mentioned, the `CellSelection` class exposes methods that get, set, a
 
 **Example 2** illustrates how to use these methods on the region A1:F6.
 
-**Example 2: Use GetIsBold(), SetIsBold() and ClearIsBold() Methods**
+**Example 2: Set bold formatting, read it back, and clear it for the selected range**
 
 <snippet id='codeblock-cqy'/>
 
@@ -104,11 +104,11 @@ Using the previous approach you can set the value of almost all cell properties.
  
 **Example 3** demonstrates how to apply basic text formatting to worksheet cells. The first cell applies a strikethrough effect, while the following cells illustrate vertical text alignment by rendering text as superscript and subscript respectively.
 
-**Example 3: Using SetIsStrikethrough and SetVerticalTextAlignment**
+**Example 3: Apply strikethrough, superscript, and subscript text formatting to three cells**
 
 <snippet id='codeblock-strikethrough'/>
 
-<img style="border: 1px solid gray;" src="images/set-strikethrough-superscript-subscript-text.png" alt="Set Strikethrough Superscript Subscript-text" /> 
+<img style="border: 1px solid gray;" src="images/set-strikethrough-superscript-subscript-text.png" alt="Worksheet cells showing strikethrough text in A1, superscript text in A2, and subscript text in A3" /> 
 
 ## Value Property
 
@@ -118,7 +118,7 @@ The `GetValue()` method retrieves the value of the property and returns an insta
 
 **Example 4** illustrates how to retrieve the value of cell B2.
 
-**Example 4: Retrieve Value of Cell**
+**Example 4: Read the ICellValue stored in cell B2**
 
 <snippet id='codeblock-cqz'/>
 
@@ -128,7 +128,7 @@ As the document model supports different types of cell values, the `CellSelectio
 
 **Example 5** demonstrates how to set the value of a given selection.
 
-**Example 5: Set Value of CellSelection**
+**Example 5: Set the selected cell to DateTime, number, copied value, text, and formula inputs**
 
 <snippet id='codeblock-cra'/>
 
@@ -140,7 +140,7 @@ The `Borders` property uses a `CellBorders` object for getting and setting its p
 
 **Example 6** demonstrates how to set the value of the Borders of the regions B2:C4 and E2:F4.
 
-**Example 6: Set Value of Borders**
+**Example 6: Apply dotted purple borders to one region and multi-edge blue and purple borders to another**
 
 <snippet id='codeblock-crb'/>
 
@@ -149,7 +149,7 @@ The `Borders` property uses a `CellBorders` object for getting and setting its p
 The result of **Example 6** is demonstrated in the following figure.
 
 #### Figure 1: Resulting Borders
-![Rad Spread Processing Working With Cells Get Set Clear Properties 01](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_01.png)
+![Worksheet showing one cell block with dotted purple borders and a second block with thick dark blue outer borders and thin purple inner borders](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_01.png)
 
 ## Fill Property
 
@@ -159,7 +159,7 @@ As its name suggests, the `PatternFill` object fills the background of a region 
 
 **Example 7** creates two `PatternFill` objects with a DiagonalStripe and Solid PatternType respectively.
 
-**Example 7: Create and Set PatternFill**
+**Example 7: Apply a diagonal stripe fill to the first row and a solid green fill below it**
 
 <snippet id='codeblock-crc'/>
 
@@ -168,13 +168,13 @@ As its name suggests, the `PatternFill` object fills the background of a region 
 The result of **Example 7** is illustrated in the following figure.
 
 #### Figure 2: Applied PatternFill
-![Rad Spread Processing Working With Cells Get Set Clear Properties 02](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_02.png)
+![Worksheet showing a yellow and orange diagonal stripe fill across A1:F1 and a solid green fill across A2:F6](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_02.png)
 
 The `GradientFill` sets the background of a region of cells to a gradual blending of two colors. To create a `GradientFill`, specify a [GradientType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.GradientType.html) and the two colors that blend.
 
 **Example 8** assigns the region A1:F1 a smooth horizontal green gradient.
 
-**Example 8: Create and Set GradientFill**
+**Example 8: Apply a horizontal green gradient fill to the range A1:F1**
 
 <snippet id='codeblock-crd'/>
 
@@ -182,14 +182,15 @@ The `GradientFill` sets the background of a region of cells to a gradual blendin
 
 The result of **Example 8** is illustrated in the following figure.
 
-#### Figure 3: Applied GradientFill
-![Rad Spread Processing Working With Cells Get Set Clear Properties 03](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_03.png)
+**Figure 3: Applied GradientFill**
+
+![Worksheet showing the first row filled with a horizontal green gradient from lighter green to darker green](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_03.png)
 
 ## Indent Property
 
 In addition to the `GetIndent()`, `SetIndent()`, and `ClearIndent()` methods, `CellSelection` offers two more methods that increase and decrease the value of the `Indent` property. Those methods are `IncreaseIndent()` and `DecreaseIndent()` and neither of them takes arguments. **Example 9** shows how to use the methods.
 
-**Example 9: Increase and Decrease Indent**
+**Example 9: Increase and then decrease the indentation for the selected range**
 
 <snippet id='codeblock-cre'/>
 

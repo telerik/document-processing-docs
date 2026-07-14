@@ -87,7 +87,7 @@ The document model has support only for Defined Names.
 **Example 1** demonstrates how to add and use defined names. The code creates a workbook with one worksheet containing four values. Further, the example adds one global name called CorporateTax containing a constant value of 16 percent and a local GrossProfit name referring to the four values stored in Sheet1. Also, the cell A5 is assigned a value that uses both GrossProfit and CorporateTax names.
         
 
-**Example 1: Add and Use Names**
+**Example 1: Add and use workbook and worksheet names**
 
 <snippet id='codeblock-cjt'/>
 
@@ -104,7 +104,7 @@ The `NameCollection` class exposes a `Remove()` method that takes a string param
 **Example 2** shows how to remove one of the names added in **Example 1**.
         
 
-**Example 2: Remove Name**
+**Example 2: Remove a defined name**
 
 <snippet id='codeblock-cju'/>
 

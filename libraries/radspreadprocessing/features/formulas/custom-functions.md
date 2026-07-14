@@ -42,7 +42,7 @@ Additionally, each custom function needs to be registered through the `FunctionM
 
 **Example 1** shows how to register a function class `ArgumentsFunction`, an inheritor of `FunctionBase`.
 
-**Example 1: Register Custom Function**
+**Example 1: Register a custom function with FunctionManager**
 
 <snippet id='codeblock-cms'/>
 
@@ -54,9 +54,9 @@ The document model provides an inheritance tree of classes that offer ready-to-u
 
 **Figure 1** shows the base abstract function classes.
 
-**Figure 1: Functions Inheritance**
+**Figure 1: Custom function inheritance hierarchy for FunctionBase and typed function helpers**
 
-![Functions inheritance diagram](images/RadSpreadProcessing_Features_Formulas_Custom_Functions_01.png)
+![Telerik Document Processing RadSpreadProcessing custom function inheritance diagram showing FunctionBase, FunctionWithArguments, FunctionWithSameTypeArguments<T>, StringsInFunction, NumbersInFunction, and BooleansInFunction](images/RadSpreadProcessing_Features_Formulas_Custom_Functions_01.png)
 
 * `FunctionBase`: Provides the base function properties (`Name`, `FunctionInfo`, `ArgumentConversionRules`). Also provides the logic of the `IsArgumentNumberValid()` method which handles the scenario when an invalid arguments count is passed by the user. By inheriting `FunctionBase` you must override the `EvaluateOverride(RadExpression[] arguments)` method, so you need to handle the full logic of converting `RadExpression` arguments to function arguments.
 
@@ -99,7 +99,7 @@ The values of these properties come from the [ArgumentInterpretation](https://do
 
 **Example 2** creates an instance of `ArgumentConversionRules`:
 
-**Example 2: Create ArgumentConversionRules**
+**Example 2: Create ArgumentConversionRules for custom function inputs**
 
 <snippet id='codeblock-cmt'/>
 
@@ -147,7 +147,7 @@ The `FunctionInfo` class provides properties that describe the purpose of the fu
 
 **Example 3** shows how to create an instance of the `FunctionInfo` class.
 
-**Example 3: Create FunctionInfo**
+**Example 3: Create FunctionInfo metadata for a custom function**
 
 <snippet id='codeblock-cmu'/>
 
@@ -161,7 +161,7 @@ The result of the function calculations is the number of arguments passed to the
 
 **Example 4** shows how to create the "ARGUMENTS" function.
 
-**Example 4: Create ARGUMENTS Function**
+**Example 4: Create the ARGUMENTS custom function**
 
 <snippet id='codeblock-cmv'/>
 
@@ -171,7 +171,7 @@ The following example defines a custom function named "E" that inherits from the
 
 **Example 5** shows how to create the "E" function.
 
-**Example 5: Create E Function**
+**Example 5: Create a custom function that returns Napier's constant**
 
 <snippet id='codeblock-cmw'/>
 

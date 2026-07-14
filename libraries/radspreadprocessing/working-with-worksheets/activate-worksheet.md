@@ -18,7 +18,7 @@ The `Workbook` class exposes an `ActiveWorksheet` property that gets and sets th
 
 **Example 1** creates a new workbook from scratch and subscribes to its `ActiveSheetChanged` event. Further, the code adds two worksheets. When the first worksheet is added, it is automatically selected as the active worksheet because it is the only worksheet in the workbook. Adding the first worksheet also fires the `ActiveSheetChanged` event. When the second worksheet is added, the active worksheet does not change. The event does not fire. Later, the snippet sets the second worksheet to be the active one, which fires the `ActiveSheetChanged` event.
 
-**Example 1: Change Active Sheet**
+**Example 1: Subscribe to ActiveSheetChanged, add two worksheets, and activate the second sheet**
 
 <snippet id='codeblock-csd'/>
 

@@ -12,4 +12,4 @@ position: 0
 
 [JavaScript Object Notation](https://www.json.org/json-en.html) (JSON) is a lightweight, text-based data format used to store and exchange structured information. It represents data as key–value pairs (objects) and ordered lists (arrays). JSON is language-independent but closely resembles JavaScript syntax, making it easy for both humans to read and machines to parse.
 
-![SpreadProcessing JSON format conversion overview](images/spreadprocessing-formats-and-conversion-json.png)
+![Example of exported workbook JSON showing workbook metadata, active sheet name, used range, rows, and numeric cell values](images/spreadprocessing-formats-and-conversion-json.png)

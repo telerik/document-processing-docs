@@ -56,7 +56,7 @@ The example includes multiple scenarios demonstrating various document operation
 
 ## Complete Example
 
-This section provides is a comprehensive example demonstrating the entire workflow from setup to execution.
+This section provides a comprehensive example demonstrating the entire workflow from setup to execution.
 
 >warning **Security Consideration**: Documents may contain malicious instructions designed to manipulate AI behavior. See the [Security Considerations](#security-considerations) section below for important information about protecting your agent.
 

@@ -20,7 +20,7 @@ You can access only the cells that are used in a worksheet and iterate through t
 The [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) class allows you to get all the cells that are used. A cell is considered used when it has any property applied to it, no matter whether it is a value or a foreground. The `UsedCellRange` property of the `Worksheet` class returns a cell range that starts from cell `A1` and holds all cells containing data or formatting. **Example 1** shows how to get this range of cells and iterate through it.
 
 
-**Example 1: Iterate UsedCellRange**
+**Example 1: Iterate through every cell inside Worksheet.UsedCellRange**
 
 <snippet id='codeblock-crh'/>
 
@@ -29,7 +29,7 @@ The [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-works
 
 You can get only the cells that have a particular property applied and ignore the others. Often, the property you need is the value of a cell. With the `GetUsedCellRange()` method of [Worksheet]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%}) you can pass an IEnumerable&lt;[IPropertyDefinition](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.PropertySystem.IPropertyDefinition-1.html)&gt; object to get the used cell range holding only the cells with specific property definitions. **Example 2** shows how to get the used cell range of cells with a value and iterate through it to process each value.
 
-**Example 2: Obtain and Iterate a Filtered UsedCellRange**
+**Example 2: Iterate only the used cells that contain values**
 
 <snippet id='codeblock-cri'/>
 

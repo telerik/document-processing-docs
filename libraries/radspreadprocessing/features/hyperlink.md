@@ -55,7 +55,7 @@ You can create instances of each of those types using the static methods of the 
 **Example 1** creates a hyperlink to a web address.
         
 
-**Example 1: Create Link to Web Address**
+**Example 1: Create a hyperlink to a web address**
 
 <snippet id='codeblock-ciz'/>
 
@@ -64,7 +64,7 @@ You can create instances of each of those types using the static methods of the 
 **Example 2** creates a hyperlink to a cell range somewhere in the document.
         
 
-**Example 2: Create Link to Place in the Document**
+**Example 2: Create a hyperlink to a location in the workbook**
 
 <snippet id='codeblock-cja'/>
 
@@ -72,7 +72,7 @@ You can create instances of each of those types using the static methods of the 
 **Example 3** creates a hyperlink to a cell in another worksheet of the document.
 
 
-**Example 3: Create Link to a Cell in Another Worksheet of the Document**
+**Example 3: Create a hyperlink to a cell in another worksheet**
 
 <snippet id='codeblock-cjb'/>
 
@@ -81,7 +81,7 @@ You can create instances of each of those types using the static methods of the 
 **Example 4** shows how to create a hyperlink to an email address.
         
 
-**Example 4: Create Link to Email Address**
+**Example 4: Create a hyperlink to an email address**
 
 <snippet id='codeblock-cjc'/>
 
@@ -95,7 +95,7 @@ To add a hyperlink, you need to specify a cell range that contains the hyperlink
 **Example 5** assigns the hyperlink created in **Example 1** to A1.
         
 
-**Example 5: Add Hyperlink**
+**Example 5: Add a hyperlink to cell A1**
 
 <snippet id='codeblock-cjd'/>
 
@@ -109,7 +109,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
 **Example 6** defines two indexes and then a cell range out of those indexes.
         
 
-**Example 6: Define Cell Range**
+**Example 6: Define a cell range for hyperlink searches**
 
 <snippet id='codeblock-cje'/>
 
@@ -118,7 +118,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
  **Example 7** gets all hyperlinks the ranges of which are contained in the cell range from **Example 5**.
             
 
-**Example 7: Get Hyperlinks in Cell Range**
+**Example 7: Get hyperlinks contained in a cell range**
 
 <snippet id='codeblock-cjf'/>
 
@@ -130,7 +130,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
  **Example 8** gets all hyperlinks the ranges of which intersect with the cell range from **Example 5**.
             
 
-**Example 8: Get Hyperlinks Intersecting with Cell Range**
+**Example 8: Get hyperlinks intersecting a cell range**
 
 <snippet id='codeblock-cjg'/>
 
@@ -139,7 +139,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
  **Example 9** gets the last added hyperlink that intersects with the cell range from **Example 5**.
             
 
-**Example 9: Get Last Hyperlink Intersecting with Cell Range**
+**Example 9: Get the last hyperlink intersecting a cell range**
 
 <snippet id='codeblock-cjh'/>
 
@@ -151,7 +151,7 @@ There are several ways you can retrieve hyperlinks from the `HyperlinkCollection
  **Example 10** gets the hyperlink which range matches the cell range from **Example 5**.
             
 
-**Example 10: Get Hyperlink Exactly Matching Cell Range**
+**Example 10: Get a hyperlink exactly matching a cell range**
 
 <snippet id='codeblock-cji'/>
 
@@ -165,7 +165,7 @@ To remove a hyperlink you need to retrieve a `SpreadsheetHyperlink` object and t
 **Example 11** removes a hyperlink.
         
 
-**Example 11: Remove Hyperlink**
+**Example 11: Remove a hyperlink from the worksheet**
 
 <snippet id='codeblock-cjj'/>
 

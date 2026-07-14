@@ -70,7 +70,7 @@ In addition to the members of the `IFilter` interface, the `ValuesCollectionFilt
 
 **Example 1** shows how to create a `ValuesCollectionFilter`.
 
-#### __Example 1: Create ValuesCollectionFilter__
+**Example 1: Create a ValuesCollectionFilter**
 
 <snippet id='codeblock-chm'/>
 
@@ -114,7 +114,7 @@ The criteria is represented by the `CustomFilterCriteria` class. Each criteria c
 
 **Example 2** shows how to create a custom filter.
 
-#### __Example 2: Create CustomFilter__
+**Example 2: Create a CustomFilter**
 
 <snippet id='codeblock-chn'/>
 
@@ -142,7 +142,7 @@ In addition to the members of the `IFilter` interface, the `TopFilter` class exp
 
 **Example 3** shows how to create a top filter.
 
-#### __Example 3: Create TopFilter__
+**Example 3: Create a TopFilter**
 
 <snippet id='codeblock-cho'/>
 
@@ -160,7 +160,7 @@ In addition to the members of the `IFilter` interface, the `DynamicFilter` class
 
 **Example 4** demonstrates how to create a dynamic filter.
 
-#### __Example 4: Create DynamicFilter__
+**Example 4: Create a DynamicFilter**
 
 <snippet id='codeblock-chp'/>
 
@@ -177,7 +177,7 @@ In addition to the members of the `IFilter` interface, the `ForeColorFilter` cla
 
 **Example 5** demonstrates how to create a fore color filter.
 
-#### __Example 5: Create ForeColorFilter__
+**Example 5: Create a ForeColorFilter**
 
 <snippet id='codeblock-chq'/>
 
@@ -195,7 +195,7 @@ In addition to the members of the `IFilter` interface, the `FillColorFilter` cla
 
 **Example 6** shows how to create a fill color filter.
 
-#### __Example 6: Create FillColorFilter__
+**Example 6: Create a FillColorFilter**
 
 <snippet id='codeblock-chr'/>
 
@@ -210,7 +210,7 @@ To set a filter on a range, follow these steps:
 * Set the filter range.
 	 									           
 	
-	#### __Example 7: Set FilterRange__
+	**Example 7: Set the FilterRange**
 	
 	<snippet id='codeblock-chs'/>
 
@@ -219,7 +219,7 @@ To set a filter on a range, follow these steps:
 * Create a filter.
             
 	
-	#### __Example 8: Create DynamicFilter__
+	**Example 8: Create a DynamicFilter for the second filtered column**
 	
 	<snippet id='codeblock-cht'/>
 	
@@ -229,21 +229,21 @@ To set a filter on a range, follow these steps:
 * Set the filter on the necessary column.
             
 
-	#### __Example 9: Set Filter__
+	**Example 9: Apply the filter to the filtered range**
 	
 	<snippet id='codeblock-chu'/>
 	
 	
 	**Figure 2** demonstrates the result of the filtering when applied on the values 1–9 in column B and 11–19 in column C.
 	
-    #### Figure 2: Result of the filtering
-    ![Filtering result applied on columns B and C](images/RadSpreadProcessing_Features_Filtering_01.png)
+	**Filtering result showing only rows that satisfy the applied column filters**
+	![Telerik Document Processing RadSpreadProcessing filtering result showing remaining worksheet rows after filters are applied to columns B and C](images/RadSpreadProcessing_Features_Filtering_01.png)
 	
 	
 	Alternatively, you can set the filter through the cell selection as in **Example 10**. This approach automatically sets the filter range anew.
         
 
-	#### __Example 10: Set Filter Through Selection__
+	**Example 10: Apply a filter through the cell selection**
 	
 	<snippet id='codeblock-chv'/>
 
@@ -258,7 +258,7 @@ To set a filter on a range, follow these steps:
 
 When a filter is set, it is automatically applied. The application of a filter happens only once. If the values or properties of the filtered column change afterwards, the filter needs to be reapplied. Use the overloads of the `ReapplyFilter()` method. The first overload reapplies a filter by the relative index of the column it applies to. The second overload reapplies by an `IFilter` instance.
 
-#### __Example 11: Reapply a Filter__
+**Example 11: Reapply an existing filter**
 
 <snippet id='codeblock-chw'/>
 
@@ -278,7 +278,7 @@ Remove and clear filters using the following methods exposed by the `AutoFilter`
 
 As with the `ReapplyFilter()` method, you can remove a filter by instance and by relative index of the column it applies to.
 
-#### __Example 12: Remove Filter__
+**Example 12: Remove a filter from the range**
 
 <snippet id='codeblock-chx'/>
 

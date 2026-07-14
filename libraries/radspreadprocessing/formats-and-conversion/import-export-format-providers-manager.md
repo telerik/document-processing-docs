@@ -18,13 +18,13 @@ The `WorkbookFormatProvidersManager` class contains two methods that allow you t
 
 > Some Format Providers require additional package references. Check the full list of the FormatProviders' additional reference requirements in [Format Providers - Additional package references]({%slug radspreadprocessing-formats-and-conversion-general-information%}#additional-package-references).
 
-**Example 1: Register Provider**
+**Example 1: Register an XlsxFormatProvider with WorkbookFormatProvidersManager**
 
 <snippet id='codeblock-coa'/>
 
 You can also unregister format providers using the `UnregisterFormatProvider()` method. **Example 2** demonstrates how to unregister the [TxtFormatProvider]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider %}).
 
-**Example 2: Unregister Provider**
+**Example 2: Find the registered TxtFormatProvider and unregister it**
 
 <snippet id='codeblock-coc'/>
 
@@ -41,7 +41,7 @@ The method tries to find a registered format provider that can handle the extens
 
 **Example 3** demonstrates how to present the user with an `OpenFileDialog` and try to import the selected file. You can use the `GetOpenFileDialogFilter()` method of the `FileDialogHelper` class to construct the correct filter for all registered format providers.
 
-**Example 3: Import a File Using OpenFileDialog**
+**Example 3: Open a file dialog, detect the extension, and import through the manager**
 
 <snippet id='codeblock-coe'/>
 
@@ -63,7 +63,7 @@ The method attempts to find a provider that can handle a file of the specified e
 
 **Example 4** illustrates how to use the `Export()` method to save a file. The sample code presents the user with the SaveFileDialog. You can use the `GetOpenFileDialogFilter()` method of the `FileDialogHelper` class to construct the correct filter for all registered format providers.
 
-**Example 4: Save a File Using SaveFileDialog**
+**Example 4: Save a workbook by routing the selected extension through the manager**
 
 <snippet id='codeblock-cog'/>
 

@@ -20,7 +20,7 @@ The following sections describe the concepts of rows and columns in the RadSprea
 
 Similarly, a **column** is a group of cells that are vertically stacked and appear on the same **vertical line**. Columns in `RadSpreadProcessing` are identified by a letter or a combination of letters. For example, the first column is called A, the second is B, and the last column is XFD.
         
-![Rows and columns in a spreadsheet](images/RowAndColumn.png)
+![Spreadsheet example with row 9 highlighted horizontally and column B highlighted vertically to illustrate how rows and columns are identified](images/RowAndColumn.png)
 
 ## Row Height
 

@@ -16,9 +16,9 @@ position: 6
 
 Frozen panes are a method to keep part of the worksheet visible at all times when scrolling. 
    
-**Figure 1: A document with frozen top rows and first left column**
+**Worksheet with frozen top rows and the first left column**
 
-![A document with frozen top rows and first left column](images/RadSpreadProcessing_Features_Freeze_Panes_01.png)
+![Telerik Document Processing RadSpreadProcessing worksheet with frozen top rows and the first left column kept visible while scrolling](images/RadSpreadProcessing_Features_Freeze_Panes_01.png)
 
 ## Types of Panes
 
@@ -32,9 +32,9 @@ There are four types of panes, as marked on the following image:
 3.	Vertical scrollable
 4.	Scrollable
 
-**Figure 2: Types of panes**
+**Four worksheet pane types in a frozen panes layout**
 
-![Types of panes in a worksheet](images/RadSpreadProcessing_Features_Freeze_Panes_02.png)
+![Telerik Document Processing RadSpreadProcessing worksheet showing fixed, horizontal scrollable, vertical scrollable, and scrollable panes](images/RadSpreadProcessing_Features_Freeze_Panes_02.png)
 
 When the panes are split only horizontally the panes present are horizontal scrollable and scrollable. When the panes are split vertically, the two panes are vertical scrollable and scrollable.
 
@@ -50,9 +50,9 @@ To fully describe the state of the frozen panes, you need to specify the followi
 
 * **Top left cell index of the scrollable pane**: This property determines the scroll position of the scrollable pane. In **Figure 3** this is I6. This index is different from the topmost and leftmost point of the scrollable pane.
 
-**Figure 3: Panes positioning**
+**Pane positioning with fixed and scrollable worksheet regions**
 
-![Panes positioning in a worksheet](images/RadSpreadProcessing_Features_Freeze_Panes_03.png)
+![Telerik Document Processing RadSpreadProcessing worksheet showing fixed pane and scrollable pane positioning after freezing rows and columns](images/RadSpreadProcessing_Features_Freeze_Panes_03.png)
 
 ## Freezing Panes
 
@@ -68,7 +68,7 @@ If the top left cell indices of the fixed pane and of the scrollable pane are no
 
 The result illustrated in **Figure 3** can be achieved with the code from **Example 1**.
 
-**Example 1: Freezing Panes**
+**Example 1: Freeze rows and columns in a worksheet**
 
 <snippet id='codeblock-cia'/>
 
@@ -76,15 +76,15 @@ The result illustrated in **Figure 3** can be achieved with the code from **Exam
 
 If you want to create a vertical or horizontal split, set either the row count or the column count to zero.
 
-**Example 2: Vertical Split**
+**Example 2: Create a vertical pane split**
 
 <snippet id='codeblock-cib'/>
 
-The result from **Example 2** is shown in **Figure 4**.
+The result from **Example 2** is shown in the following figure.
 
-**Figure 4: Vertical split**
+**Vertical pane split with scrollable columns and no frozen rows**
 
-![Vertical split in a worksheet](images/RadSpreadProcessing_Features_Freeze_Panes_04.png)
+![Telerik Document Processing RadSpreadProcessing worksheet with a vertical pane split and scrollable columns](images/RadSpreadProcessing_Features_Freeze_Panes_04.png)
 
 Because the two panes present are only vertical scrollable and scrollable, columns A and B remain unreachable. However, you can scroll to the first two rows. Even though there are two rows from the start of the document at the time of freezing, the document is not split horizontally.
 
@@ -105,7 +105,7 @@ Another option to freeze the panes in a worksheet is to use the `Pane` property 
 The state from **Figure 3** can be achieved with the code from **Example 3**.
 
 
-**Example 3: Freeze Panes Through the Pane Class**
+**Example 3: Freeze panes by configuring the Pane class**
 
 <snippet id='codeblock-cic'/>
 
@@ -116,13 +116,13 @@ The state from **Figure 3** can be achieved with the code from **Example 3**.
 To unfreeze the panes of the worksheet, use the same methods described previously but specify zero for the number of frozen rows and columns.
 
 
-**Example 4: Unfreezing Panes**
+**Example 4: Unfreeze worksheet panes**
 
 <snippet id='codeblock-cid'/>
 
 Another option is to set the `Pane` property of the `ViewState` to `null`.
 
-**Example 5: Unfreezing Panes Through the Pane Class**
+**Example 5: Unfreeze panes through the Pane class**
 
 <snippet id='codeblock-cie'/>
 

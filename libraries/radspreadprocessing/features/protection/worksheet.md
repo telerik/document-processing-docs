@@ -22,7 +22,7 @@ The `Worksheet` class exposes a `Protect()` method that takes two parameters: th
 
 **Example 1** sets the `IsLocked` property of cell A1 to false and protects the worksheet with a password and the default protection options. By default all cells are locked. After the sheet is protected, the user can edit the value only in cell A1 as it is explicitly marked as unlocked.
 
-**Example 1: Protect a Worksheet**
+**Example 1: Unlock cell A1 and protect the worksheet with the default options**
 
 <snippet id='codeblock-cnd'/>
 
@@ -32,7 +32,7 @@ Use the `Unprotect(string)` method of the `Worksheet` class to remove the protec
 
 **Example 2** demonstrates how to unprotect a worksheet.
 
-**Example 2: Unprotect a Worksheet**
+**Example 2: Remove worksheet protection by passing the existing password**
 
 <snippet id='codeblock-cne'/>
 
@@ -46,7 +46,7 @@ To achieve that, pass a `WorksheetProtectionOptions` instance as the second argu
 
 **Example 3** demonstrates how to protect a worksheet with `WorksheetProtectionOptions`.
 
-**Example 3: Protect Worksheet with WorksheetProtectionOptions**
+**Example 3: Allow row insertion and deletion while protecting the worksheet**
 
 <snippet id='codeblock-cnf'/>
 
