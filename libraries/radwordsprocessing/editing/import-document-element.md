@@ -29,7 +29,7 @@ The constructor of the `DocumentElementImporter` class accepts the following par
 
 <a name="example1"><a/>
 
-**Example 1: Create DocumentElementImporter**
+**Example 1: Create a DocumentElementImporter that keeps the target style when conflicts occur**
 
 <snippet id='codeblock-br'/>
 
@@ -39,7 +39,7 @@ The constructor of the `DocumentElementImporter` class accepts the following par
 
 The `DocumentElementImporter` class exposes the `Import<T>()` method, which prepares a document element from the source document for import into the target document. **Example 2** demonstrates how you can work with this method, using the `DocumentElementImporter` instance created in [Example 1](#example1).
 
-**Example 2: Import a Document Element**
+**Example 2: Import a Run from the source document into the target document context**
 
 <snippet id='codeblock-bs'/>
 

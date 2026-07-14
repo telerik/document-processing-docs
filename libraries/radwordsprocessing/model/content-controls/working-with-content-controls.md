@@ -79,7 +79,7 @@ Removing a content control is useful when you need to clean up document template
 
 >caption Figure 1: Examples of correct and incorrect content control placement
 
-![Diagram showing valid and invalid ways to nest or place content controls](images/working-with-content-controls001.png)
+![Diagram comparing correct and incorrect content control placement, showing a rich text control properly wrapping two nested rich text controls and two invalid cases where plain text or overlapping ranges are used instead](images/working-with-content-controls001.png)
 
 <snippet id='codeblock-dtdt'/>
 

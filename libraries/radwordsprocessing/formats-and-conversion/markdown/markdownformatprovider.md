@@ -56,7 +56,7 @@ The `MarkdownFormatProvider` supports the following document elements during imp
 
 To import a Markdown file, create a `MarkdownFormatProvider` instance and call its `Import` method with a `Stream` to the `.md` file.
 
-**Example 1: Import from a File**
+**Example 1: Open an input.md file stream and import it into a RadFlowDocument**
 
 <snippet id='markdownformatprovider-import'/>
 
@@ -66,7 +66,7 @@ The provider parses the Markdown content and builds a `RadFlowDocument` with the
 
 To export a `RadFlowDocument` to Markdown, create a `MarkdownFormatProvider` instance and call `Export`, passing the document and an output stream.
 
-**Example 2: Export to a File**
+**Example 2: Export a RadFlowDocument to an output.md file stream**
 
 <snippet id='markdownformatprovider-export'/>
 

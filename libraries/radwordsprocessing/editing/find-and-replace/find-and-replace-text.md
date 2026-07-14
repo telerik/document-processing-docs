@@ -35,7 +35,7 @@ Both methods return a collection of `FindResult` instances, which in turn expose
 
 **Example 1** shows how to create a `RadFlowDocumentEditor` instance and use it to find all matches of the word "code".
 
-**Example 1: Find Text**
+**Example 1: Find all whole-word, case-sensitive matches for the target text in an imported DOCX document**
 
 <snippet id='codeblock-bmbm'/>
 
@@ -52,7 +52,7 @@ To find all instances of a string and replace it with another one, you can use t
 **Example 2** shows how to create a `RadFlowDocumentEditor` instance and use it to replace all matches of the word "code" with the phrase "source code".
 
 
-**Example 2: Replace Text**
+**Example 2: Replace all whole-word, case-sensitive matches of old text with new text**
 
 <snippet id='codeblock-bnbn'/>
 
@@ -71,7 +71,7 @@ To find all instances of a string and replace it with another one, you can use t
 **Example 3** shows how to apply a red highlight color to all occurrences of the word "alert".
 
 
-**Example 3: Replace Character Properties**
+**Example 3: Highlight all matches of the word text with a red highlight color**
 
 <snippet id='codeblock-bobo'/>
 

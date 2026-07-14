@@ -16,7 +16,7 @@ position: 1
 
 The code from **Example 1** shows how you can create a new `RadFlowDocument`.
 
-**Example 1: Create RadFlowDocument**
+**Example 1: Create a new empty RadFlowDocument instance**
 
 <snippet id='codeblock-dh'/>
 
@@ -43,7 +43,7 @@ You can execute different actions with the help of the `RadFlowDocument` element
 
 You can create a `RadFlowDocument` from scratch and add Sections to it as follows:
 
-**Example 2: Add a Section to a RadFlowDocument**
+**Example 2: Create a RadFlowDocument and add a section through the Sections collection**
 
 <snippet id='codeblock-di'/>
 
@@ -51,7 +51,7 @@ The `Sections` property of the document is of type `SectionCollection` and allow
 
 Alternatively, you can create a section by passing to its constructor the document it is associated with.
 
-**Example 3: Create a section**
+**Example 3: Create a Section associated with an existing RadFlowDocument**
 
 <snippet id='codeblock-dj'/>
 
@@ -59,7 +59,7 @@ Alternatively, you can create a section by passing to its constructor the docume
 
 You can merge a `RadFlowDocument` within another document by using the `Merge()` method and passing the source document as a parameter:
 
-**Example 4: Merge documents**
+**Example 4: Merge a source document into a target RadFlowDocument**
 
 <snippet id='codeblock-dk'/>
 
@@ -70,7 +70,7 @@ You can also specify the `MergeOptions` that control the merge operation:
     * `UseTargetStyle`: If a conflict between styles with the same IDs appears, the style of the **target** document is used.
     * `RenameSourceStyle`: If a conflict between styles with the same IDs appears, the style of the **source** document is renamed and used.
 
-**Example 5: Merge documents using MergeOptions**
+**Example 5: Merge a source document while renaming conflicting source styles**
 
 <snippet id='codeblock-dl'/>
 
@@ -80,7 +80,7 @@ You can also specify the `MergeOptions` that control the merge operation:
 
 The snippet from **Example 6** shows how to update all fields in a document simultaneously.
 
-**Example 6: Update all fields in a document**
+**Example 6: Update all fields in a RadFlowDocument at once**
 
 <snippet id='codeblock-dm'/>
 

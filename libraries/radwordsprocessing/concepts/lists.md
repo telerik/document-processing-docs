@@ -78,7 +78,7 @@ To add one of the list templates to the document, pass a `ListTemplateType` valu
 
 The following example adds a default bulleted list to a predefined `RadFlowDocument`.
 
-**Example 1: Add List Template**
+**Example 1: Add the built-in BulletDefault list template to a document**
 
 <snippet id='codeblock-m'/>
 
@@ -90,7 +90,7 @@ The following tutorial walks you through the creation of a list.
 
 1. Define a new `RadFlowDocument` and add a `Section` in it.
 
-	**Step 1: Create RadFlowDocument**
+	**Step 1: Create a RadFlowDocument and add a Section**
 	
 	<snippet id='codeblock-n'/>
 
@@ -98,7 +98,7 @@ The following tutorial walks you through the creation of a list.
 
 1. Create a `List` object and associate it with the document by adding it to the `Lists` collection.
 
-	**Step 2: Create List**
+	**Step 2: Create a List instance and add it to the document list collection**
 	
 	<snippet id='codeblock-o'/>
 	
@@ -106,7 +106,7 @@ The following tutorial walks you through the creation of a list.
 
 1. Iterate over the collection of `Levels` the list has.
 
-	**Step 3: Iterate Levels**
+	**Step 3: Iterate through all available list levels**
 	
 	<snippet id='codeblock-p'/>
 
@@ -114,7 +114,7 @@ The following tutorial walks you through the creation of a list.
 
 1. Specify some properties for each level.
 
-	**Step 4: Customize List Levels**
+	**Step 4: Alternate decimal and bullet numbering styles and set level indentation**
 	
 	<snippet id='codeblock-q'/>
 	
@@ -126,7 +126,7 @@ The tutorial in the [previous section](#create-a-list) demonstrates how you can 
 
 The following example demonstrates how you can apply the list created in Steps 1–4.
 
-**Example 6: Apply List**
+**Example 6: Create paragraphs for each list level and apply the configured list**
 
 <snippet id='codeblock-r'/>
 
@@ -134,7 +134,7 @@ The following example demonstrates how you can apply the list created in Steps 1
 
 **Figure 1: Result of Example 6**
 
-![Rad Words Processing Concepts Lists 01](images/RadWordsProcessing_Concepts_Lists_01.png)
+![Telerik RadWordsProcessing nested multilevel list showing alternating decimal and bullet numbering across nine list levels](images/RadWordsProcessing_Concepts_Lists_01.png)
 
 ## See Also
 

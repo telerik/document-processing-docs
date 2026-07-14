@@ -37,7 +37,7 @@ You can insert this field through the [RadFlowDocumentEditor]({%slug radwordspro
 
 **Example 1** demonstrates how you can insert a TC field.
 
-**Example 1: Insert TC Field**
+**Example 1: Insert a TC field entry for Item1 with type and level switches**
 
 ```C#
     editor.InsertText("Text before ");

@@ -33,7 +33,7 @@ The code snippet in **Example 1** shows how to create a `PdfFormatProvider` inst
 
 >The `PdfFormatProvider` class of RadWordsProcessing is located in the `Telerik.Windows.Documents.Flow.FormatProviders.Pdf` namespace.
 
-**Example 1: Export to PDF File**
+**Example 1: Create a PdfFormatProvider and export a RadFlowDocument to a sample.pdf file stream**
 
 <snippet id='codeblock-cc'/>
 
@@ -41,7 +41,7 @@ The result from the method is a document that you can open in any application th
 
 **Example 2** demonstrates how to export the contents of a `RadFlowDocument` to a `RadFixedDocument`.
 
-**Example 2: Export to RadFixedDocument**
+**Example 2: Export a RadFlowDocument directly to a RadFixedDocument instance**
 
 <snippet id='codeblock-cd'/>
 

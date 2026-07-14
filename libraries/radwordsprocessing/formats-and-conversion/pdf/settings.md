@@ -20,7 +20,7 @@ The `PdfExportSettings` class derives from the `Telerik.Windows.Documents.Fixed.
 
 >tip To specify export settings to the `PdfFormatProvider`, you need to add both the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export` and `Telerik.Windows.Documents.Flow.FormatProviders.Pdf.Export` namespaces. In **Example 1** the *Fixed* alias corresponds to the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf.Export` namespace.
 
-**Example 1: Export PDF/A Compliant Document**
+**Example 1: Apply PdfExportSettings with PdfA2B compliance before exporting the document to PDF**
 
 <snippet id='codeblock-ce'/>
 
@@ -34,7 +34,7 @@ The `ExtensibilityManager` property of the `PdfExportSettings` class allows you 
 
 **Example 2** shows how to register a custom `ChineseCountingConverter` class instance that converts a number with `NumberingStyle.ChineseCounting`.
 
-**Example 2: Register Numbering Style Converter**
+**Example 2: Register a custom ChineseCounting numbering-style converter through the export extensibility manager**
 
 <snippet id='codeblock-cf'/>
 

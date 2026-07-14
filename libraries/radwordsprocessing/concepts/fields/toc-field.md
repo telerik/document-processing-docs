@@ -61,7 +61,7 @@ Insert this field through the [RadFlowDocumentEditor]({%slug radwordsprocessing-
 
 **Example 1** demonstrates how to insert a TOC field.
 
-#### **Example 1: Insert TOC Field**
+#### **Example 1: Insert a TOC field that builds entries from TC fields with the a identifier**
 
 ```C#
     var document = new RadFlowDocument();

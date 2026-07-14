@@ -26,7 +26,7 @@ You can insert this field through the `InsertField()` method of [RadFlowDocument
 
 **Example 1** demonstrates how to insert a NumPages field.
 
-**Example 1: Insert a NumPages field**
+**Example 1: Insert PAGE and NUMPAGES fields to show the current page and total page count**
 
 <snippet id='codeblock-bh'/>
 

@@ -20,7 +20,7 @@ position: 0
 * Technical instructions
 * Formatting text for web publishing
 
-<img style="border: 1px solid gray;" src="images/radwordsprocessing-formats-md.png" alt="Markdown format" />
+<img style="border: 1px solid gray;" src="images/radwordsprocessing-formats-md.png" alt="Sample Markdown document showing a Project Documentation heading, overview and getting started sections, a numbered setup list, and a bash code block with git clone and npm commands" />
 
 ## See Also
 

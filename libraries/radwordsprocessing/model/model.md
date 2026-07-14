@@ -16,14 +16,14 @@ position: 0
 
 `RadFlowDocument` can contain various types of document elements, all of them inheriting the [DocumentElementBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.DocumentElementBase.html) abstract class. The hierarchy is presented in the following diagram, where abstract classes are denoted in blue:
 
-![Rad Words Processing Model 04](images/RadWordsProcessing_Model_04.png)
+![Inheritance diagram for the RadWordsProcessing document model showing DocumentElementBase as the root, with BlockContainerBase, BlockBase, and InlineBase leading to sections, paragraphs, tables, runs, image elements, field characters, bookmarks, comments, and permission range markers](images/RadWordsProcessing_Model_04.png)
 
 Every document element is associated with an instance of `RadFlowDocument` since its creation. This link is permanent, and attempts to move document elements from one document to another result in an exception. Use [cloning]({%slug radwordsprocessing-editing-clone-and-merge%}) to create a deep copy of an element associated to another instance of `RadFlowDocument`. The current associated document is stored in the [Document](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.DocumentElementBase.html#collapsible-Telerik_Windows_Documents_Flow_Model_DocumentElementBase_Document) property.
 
 ## Composition of Document Elements
 
 `RadFlowDocument` represents a tree of document elements containing each other through a set of properties and collections. Possible containments are described in the following diagram, where document elements are denoted in black, collections in orange, and properties in green:
-![Rad Words Processing Model 05](images/RadWordsProcessing_Model_05.png)
+![Containment diagram for the RadWordsProcessing document model showing RadFlowDocument containing sections, sections containing blocks and header or footer collections, paragraphs containing inline elements and annotation ranges, and tables containing rows and cells](images/RadWordsProcessing_Model_05.png)
 
 * `RadFlowDocument` contains a collection of [Sections](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.RadFlowDocument.html#collapsible-Telerik_Windows_Documents_Flow_Model_RadFlowDocument_Sections).
 

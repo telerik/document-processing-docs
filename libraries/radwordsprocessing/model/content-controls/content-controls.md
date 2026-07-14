@@ -79,7 +79,7 @@ You can visualize the toggle states with any characters specified in the propert
 
 <snippet id='codeblock-dmdm'/>
 
-![Insert CheckBoxes](images/insert-checkboxes.gif)
+![Animated example showing two checkbox content controls inserted into a document, one rendered as Checked with the custom checked glyph and one rendered as UnChecked with the custom unchecked glyph](images/insert-checkboxes.gif)
 
 ### ComboBox and DropDownList
 

@@ -14,7 +14,7 @@ position: 0
 
 This overview explains what the library does, which document elements it supports, which formats you can work with, and where to continue next based on your scenario.
 
-![Diagram showing the RadWordsProcessing document workflow from creation to export](images/words-processing-overview.jpg)
+![Telerik RadWordsProcessing workflow diagram showing DOCX, RTF, and TXT document formats moving through the Word-processing engine for document creation and conversion](images/words-processing-overview.jpg)
 
 >note
 >
@@ -24,7 +24,7 @@ This overview explains what the library does, which document elements it support
 >
 > For a step-by-step first project, see [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%}).
 
-![Illustration of the RadWordsProcessing document object model](images/RadWordsProcessing_Overview_01.png)
+![Telerik RadWordsProcessing sample document showing formatted text, highlighted inline styling, and a signature block generated through the RadFlowDocument model](images/RadWordsProcessing_Overview_01.png)
 
 ## Key Features
 

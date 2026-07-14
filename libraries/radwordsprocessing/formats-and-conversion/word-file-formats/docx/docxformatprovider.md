@@ -29,13 +29,13 @@ To import a DOCX document, use the `Import()` method of `DocxFormatProvider`.
 
 The following code shows how to use `DocxFormatProvider` to import a DOCX document from a file.
 
-**Example 1: Import document from a file**
+**Example 1: Open a Sample.docx file stream and import it into a RadFlowDocument**
 
 <snippet id='codeblock-cr'/>
 
 You can also import a document from a byte array containing the DOCX document:
 
-**Example 2: Import document from a byte array**
+**Example 2: Read a Sample.docx file into a byte array and import it into a RadFlowDocument**
 
 <snippet id='codeblock-cs'/>
 
@@ -47,13 +47,13 @@ To export a document to DOCX, use the `Export()` method of `DocxFormatProvider`.
 
 The following code shows how to use `DocxFormatProvider` to export a `RadFlowDocument` to a file.
 
-**Example 3: Export a document to a file**
+**Example 3: Export a RadFlowDocument to a Sample.docx file stream**
 
 <snippet id='codeblock-ct'/>
 
 You can also export the document to a byte array and preserve it in a database.
 
-**Example 4: Export a document to a byte array**
+**Example 4: Export a RadFlowDocument directly to a DOCX byte array**
 
 <snippet id='codeblock-cu'/>
 

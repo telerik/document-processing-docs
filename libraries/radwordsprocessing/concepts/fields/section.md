@@ -27,7 +27,7 @@ You can insert a `Section` field through the [RadFlowDocumentEditor]({%slug radw
 
 **Example 1** demonstrates how you can insert a `Section` field.
 
-**Example 1: Insert Section Field**
+**Example 1: Insert PAGE and SECTION fields to display the current page and section number together**
 
 <snippet id='codeblock-bkm'/>
 

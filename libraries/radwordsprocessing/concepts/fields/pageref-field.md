@@ -40,7 +40,7 @@ You can insert this field through the [RadFlowDocumentEditor]({%slug radwordspro
 
 **Example 1** demonstrates how you can insert a `PageRef` field.
 
-**Example 1: Insert PageRef field**
+**Example 1: Insert a PAGEREF field that displays the page number of the mybookmark bookmark**
 
 <snippet id='codeblock-bj'/>
 

@@ -21,13 +21,13 @@ position: 6
 
 You can use the code snippet from **Example 1** to create a `TableRow` and add it in a `Table`.
 
-**Example 1: Create a TableRow and add it to a table**
+**Example 1: Create a TableRow associated with the document and add it to a table**
 
 <snippet id='codeblock-dede'/>
 
 To create a `TableRow` and add it in the document tree at the same time, you can use the `AddTableRow()` method of the [Rows](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Table.html#collapsible-Telerik_Windows_Documents_Flow_Model_Table_Rows) collection property of the table.
 
-**Example 2: Create a TableRow and add it to a table at the same time**
+**Example 2: Create and add a TableRow with the AddTableRow helper method**
 
 <snippet id='codeblock-dfdf'/>
 
@@ -59,7 +59,7 @@ The `TableRow` element exposes several properties that allow you to customize it
 
 **Example 3** shows how to add a number of `TableCell` elements in a `TableRow`.
 
-**Example 3: Add TableCell objects to a TableRow**
+**Example 3: Add cells to a table row based on the table grid column count**
 
 <snippet id='codeblock-dgdg'/>
 

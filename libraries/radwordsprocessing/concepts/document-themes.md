@@ -41,7 +41,7 @@ The twelve color types listed previously are used for creating `ThemableColor` o
 
 The following example demonstrates how to create a `ThemeColorScheme` object. Note that the example passes a name and twelve colors to the constructor. Every color has a comment next to it, so you can see its corresponding `ThemeColorType`.
 
-**Example 1: Create a ThemeColorScheme Object**
+**Example 1: Create a custom ThemeColorScheme with explicit colors for all theme slots**
 
 <snippet id='codeblock-d'/>
 
@@ -61,7 +61,7 @@ There are several ways to create a `ThemableColor` object:
 
 To create colors that depend on the current document theme, use `ThemableColor` objects.
 
-**Example 2: Create a ThemableColor Object**
+**Example 2: Create a ThemableColor bound to the Accent1 theme color**
 
 <snippet id='codeblock-e'/>
 
@@ -77,7 +77,7 @@ A font scheme is represented by the `ThemeFontScheme` class. Every font scheme c
 
 The code in the following example illustrates how to create a `ThemeFontScheme` object. A name and two font family names are passed to the font scheme constructor. The former font family name corresponds to the Major `ThemeFontType` and the latter to the Minor.
 
-**Example 3: Create a ThemeFontScheme**
+**Example 3: Create a ThemeFontScheme with custom major and minor fonts**
 
 <snippet id='codeblock-f'/>
 
@@ -91,7 +91,7 @@ To use the document theme fonts, you need to use `ThemableFontFamily` objects. T
 
 When you need to create a font that depends on the current document theme, use `ThemableFontFamily` objects.
 
-**Example 4: Create a ThemableFontFamily Object**
+**Example 4: Create a ThemableFontFamily that uses the major theme font**
 
 <snippet id='codeblock-g'/>
 
@@ -101,19 +101,19 @@ When you need to create a font that depends on the current document theme, use `
 
 Now that you have a color and a font scheme, you can create a new `DocumentTheme`. Specify a name and pass the already created color and font schemes.
 
-**Example 5: Create a DocumentTheme Object**
+**Example 5: Combine the custom color and font schemes into a DocumentTheme**
 
 <snippet id='codeblock-h'/>
 
 There are a number of predefined color and font schemes. You can find them in a static class called [PredefinedThemeSchemes](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Theming.PredefinedThemeSchemes.html). The class exposes the properties `ColorSchemes` and `FontSchemes` that hold all predefined schemes.
 
-**Example 6: Using a Predefined Scheme**
+**Example 6: Create a DocumentTheme from predefined color and font schemes**
 
 <snippet id='codeblock-i'/>
 
 Changing the current document theme requires setting a single property.
 
-**Example 7: Change the Document Theme**
+**Example 7: Assign the custom theme to a RadFlowDocument**
 
 <snippet id='codeblock-j'/>
 
@@ -222,12 +222,12 @@ RadWordsProcessing offers a set of predefined ThemeFontSchemes listed in the tab
 
 To get the actual value from `ThemableColor` or `ThemableFontFamily`, call the `GetActualValue()` method on the corresponding object.
 
-**Example 8: Get Actual Value from ThemableColor**
+**Example 8: Resolve the actual color value from a ThemableColor and theme**
 
 <snippet id='codeblock-k'/>
 
 
-**Example 9: Get Actual Value from ThemableFont**
+**Example 9: Resolve the actual font family from a ThemableFontFamily and theme**
 
 <snippet id='codeblock-l'/>
 

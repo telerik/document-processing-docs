@@ -20,14 +20,14 @@ position: 2
 
 You can use the code snippet from **Example 1** to create a `Section` element and add it to a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}).
 
-**Example 1: Create a section and add it to a RadFlowDocument**
+**Example 1: Create a Section and add it to a RadFlowDocument manually**
 
 <snippet id='codeblock-dr'/>
 
 
 You can also use the `AddSection()` method of the `Sections` collection of a document. The method creates a new `Section` element, adds it to the document, and returns it.
 
-**Example 2: Create a section and add it to a RadFlowDocument**
+**Example 2: Create and add a Section with the AddSection helper method**
 
 <snippet id='codeblock-ds'/>
 
@@ -38,27 +38,27 @@ The `Section` exposes several properties that allow you to customize the layout 
 
 * `PageMargins`: Represents the margin towards the edges of the page.
 
-	**Example 3: Change margins of a section**
+	**Example 3: Set explicit page margins for a section**
 	
 	<snippet id='codeblock-dt'/>
 
 * `PageOrientation`: Specifies whether the pages in the section are in `Portrait` or in `Landscape` orientation. This property determines the actual size of the paper to use on the printer and does not reflect the document visualization. To affect the `Section` appearance, change the `PageSize` and `PageMargin` properties, or use the [Rotate method](#rotating-a-section), which changes them according to the desired page orientation.
 
-	**Example 4: Change orientation of a section**
+	**Example 4: Change a section to landscape orientation**
 	
 	<snippet id='codeblock-du'/>
 
 
 * `PageSize`: Specifies the size of the pages in the section. The width and height are in device independent pixels (1/96 inch). The `PaperTypeConverter` class and the [PaperTypes](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Model.PaperTypes.html) enumeration provide a convenient API and predefined sizes.
 	
-	**Example 5: Change page size of a section**
+	**Example 5: Set the section page size to A4**
 	
 	<snippet id='codeblock-dv'/>
 
 
 * **Headers and Footers**: Each `Section` has three Headers and three Footers—**Default** (used all through the section), **First** (used on the first page of the section), and **Even** (used on even pages of the document). The three Headers are contained in the `Headers` class accessible through the `Section.Headers` property. The three Footers are contained in the `Footers` class accessible through the `Section.Footers` property. **Example 6** shows how to create a default Header.
 
-	**Example 6: Create a header of a section**
+	**Example 6: Create a default header with right-aligned sample text**
 	
 	<snippet id='codeblock-dw'/>
 
@@ -100,7 +100,7 @@ The `Section` exposes several properties that allow you to customize the layout 
 
 `Section` derives from [BlockContainerBase](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.BlockContainerBase.html), inheriting the `Blocks` property of `BlockCollection` type. You can add [Paragraph]({%slug radwordsprocessing-model-paragraph%}) and [Table]({%slug radwordsprocessing-model-table%}) objects to that collection.
 
-**Example 7: Add elements to a section**
+**Example 7: Add a paragraph and a table to a section block collection**
 
 <snippet id='codeblock-dx'/>
 
@@ -109,7 +109,7 @@ The `Section` exposes several properties that allow you to customize the layout 
 
 You can rotate the `Section` to visualize its pages in Portrait or Landscape mode.
 
-**Example 8: Rotate a section**
+**Example 8: Rotate a section to landscape with the Rotate method**
 
 <snippet id='codeblock-dy'/>
 

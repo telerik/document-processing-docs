@@ -12,7 +12,7 @@ position: 0
 
 Plain text is the content of an ordinary sequential document readable as textual material without additional processing.
 
-![Rad Words Processing Formats And Conversion Txt 02](images/RadWordsProcessing_Formats_And_Conversion_Txt_02.png)
+![Plain-text export preview showing a Telerik RadWordsProcessing letter with greeting, product description paragraphs, closing, and signature rendered without rich formatting](images/RadWordsProcessing_Formats_And_Conversion_Txt_02.png)
 
 The `TxtFormatProvider` allows you to extract the text content of a document.
 

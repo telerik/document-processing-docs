@@ -61,14 +61,14 @@ Document elements expose sets of style properties through the `Properties` prope
 
 **Example 1** demonstrates how to get a value with CLR property and style property.
 
-**Example 1: Get a value**
+**Example 1: Read a paragraph style property through the shorthand API and GetActualValue()**
 
 <snippet id='codeblock-s'/>
 
 
 **Example 2** demonstrates how to set a value with CLR property and style property.
 
-**Example 2: Set a value**
+**Example 2: Set KeepOnOnePage as a local value through both property access patterns**
 
 <snippet id='codeblock-t'/>
 
@@ -80,7 +80,7 @@ The style properties in a style are accessible through the following property se
 
 **Example 3** illustrates how to get the local value of a style property in a style.
 
-**Example 3: Get the local value**
+**Example 3: Read the local KeepOnOnePage value from a style paragraph property**
 
 <snippet id='codeblock-u'/>
 
@@ -88,7 +88,7 @@ The style properties in a style are accessible through the following property se
 
 **Example 4** shows how to get the actual value of a style property in a style.
 
-**Example 4: Get the actual value**
+**Example 4: Resolve the actual KeepOnOnePage value from a style property**
 
 <snippet id='codeblock-v'/>
 
@@ -100,7 +100,7 @@ The default values of all style properties are available in their [StyleProperty
 
 The code in **Example 5** illustrates how to get the default value for a style property.
 
-**Example 5: Get the default value**
+**Example 5: Read the default KeepOnOnePage value from the property definition**
 
 <snippet id='codeblock-w'/>
 

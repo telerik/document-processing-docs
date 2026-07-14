@@ -24,7 +24,7 @@ Paragraphs can be added as a child of a [BlockContainer](https://docs.telerik.co
 
 The code snippet from **Example 1** creates and inserts a `Paragraph` in a `Section`.
 
-**Example 1: Insert paragraph in section**
+**Example 1: Create a paragraph and add it to a section block collection**
 
 <snippet id='codeblock-cu-cu'/>
 
@@ -32,19 +32,19 @@ The code snippet from **Example 1** creates and inserts a `Paragraph` in a `Sect
 
 You can add a paragraph at a specific index in the `Blocks` collection of a `BlockContainer` using the `Insert()` method. **Example 2** demonstrates how to add a paragraph at the beginning of a section.
 
-**Example 2: Insert a paragraph at a specific position of the Blocks collection**
+**Example 2: Insert a paragraph at the beginning of a section block collection**
 
 <snippet id='codeblock-cv-cv'/>
 
 You can also use the `AddParagraph()` method of the `Blocks` collection of a `BlockContainer`. The method creates a new `Paragraph` instance, adds it to the container, and returns it.
 
-**Example 3: Create a new paragraph and add it to a section**
+**Example 3: Create and add a paragraph with the AddParagraph method**
 
 <snippet id='codeblock-cw-cw'/>
 
 You can also insert a new `Paragraph` in the document with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
 
-**Example 4: Insert a paragraph using the RadFlowDocumentEditor**
+**Example 4: Insert a new paragraph with RadFlowDocumentEditor**
 
 <snippet id='codeblock-cx-cx'/>
 
@@ -110,7 +110,7 @@ You can add inline elements to a `Paragraph` instance.
 
 **Example 5** illustrates how to add a run to an existing paragraph.
 
-**Example 5: Insert run in a paragraph**
+**Example 5: Add a new run to an existing paragraph**
 
 <snippet id='codeblock-cy-cy'/>
 
@@ -120,7 +120,7 @@ For more information about the `Run` element, refer to the [Run]({%slug radwords
 
 **Example 6** adds an inline image to an existing paragraph.
 
-**Example 6: Insert image inline**
+**Example 6: Add an inline image to an existing paragraph**
 
 <snippet id='codeblock-cz-cz'/>
 
@@ -130,7 +130,7 @@ For more information about the `ImageInline` element, refer to the [ImageInline]
 
 The code snippet from **Example 7** adds a floating image to an existing paragraph.
 
-**Example 7: Add floating image**
+**Example 7: Add a floating image to an existing paragraph**
 
 <snippet id='codeblock-da-da'/>
 
@@ -141,7 +141,7 @@ For more information about the `FloatingImage` element, refer to the [FloatingIm
 
 **Example 8** demonstrates how to add a tab stop to the paragraph's collection.
 
-**Example 8: Insert TabStop**
+**Example 8: Insert a centered tab stop with a hyphen leader at 2 inches**
 
 <snippet id='codeblock-db-db'/>
 
@@ -151,7 +151,7 @@ You can refer to the [TabStop]({%slug radwordsprocessing-concepts-tabstop%}) art
 
 **Example 9** shows how to create borders and set them to a `Paragraph`.
 
-**Example 9: Setting Borders**
+**Example 9: Apply black and red single-line borders to a paragraph**
 
 <snippet id='codeblock-dc-dc'/>
 

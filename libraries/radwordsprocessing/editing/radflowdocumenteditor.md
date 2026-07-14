@@ -21,7 +21,7 @@ Although `RadFlowDocument` can be created and modified by using the style proper
 
 `RadFlowDocumentEditor` is always associated with a single document, which it takes as a constructor parameter when it is created.
 
-**Example 1: Create a RadFlowDocumentEditor**
+**Example 1: Create a RadFlowDocumentEditor for an existing document**
 
 <snippet id='codeblock-baba'/>
 
@@ -35,13 +35,13 @@ The editor maintains an internal position inside the document. This position poi
 
 The code from **Example 2** demonstrates how to position the editor after the second inline in the first paragraph of the document.
 
-**Example 2: Change the Position of RadFlowDocumentEditor**
+**Example 2: Move the editor after the second inline in the first paragraph**
 
 <snippet id='codeblock-bbbb'/>
 
 You can create a `RadFlowDocumentEditor` for an empty document (one with no sections). In this case, a section and a paragraph are automatically created when you call an insert method. **Example 3** creates a document with one section, containing one paragraph with the text "Hello word!".
 
-**Example 3: Insert Text in a Document**
+**Example 3: Create an empty document and insert Hello word! text through the editor**
 
 <snippet id='codeblock-bcbc'/>
 
@@ -62,14 +62,14 @@ Both methods return the newly inserted `Run` element. If there are new lines in 
 
 The code in **Example 4** inserts a run containing a new line.
 
-**Example 4: Insert a Run with a New Line**
+**Example 4: Insert text with a newline so the editor creates two lines**
 
 <snippet id='codeblock-bdbd'/>
 
 The result looks like **Figure 1** shows.
 
 **Figure 1**
-![RadFlowDocumentEditor insert text result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_01.png)
+![Telerik RadWordsProcessing RadFlowDocumentEditor result showing two inserted lines labeled First and Second](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_01.png)
 
 >The current [CharacterFormatting](#changing-current-styles) and [ParagraphFormatting](#changing-current-styles) is applied for each `Run` and `Paragraph` that is created.
 
@@ -78,14 +78,14 @@ The result looks like **Figure 1** shows.
 
 You can start a new [Paragraph]({%slug radwordsprocessing-model-paragraph%}) with the `InsertParagraph()` method. The current `ParagraphFormatting` is applied to the new paragraph and the paragraph is returned.
 
-**Example 5: Insert a Paragraph**
+**Example 5: Insert a second paragraph after writing the first paragraph text**
 
 <snippet id='codeblock-bebe'/>
 
 **Figure 2** shows the result from **Example 5**.
 
 **Figure 2: The Content Inserted in Example 5**
-![RadFlowDocumentEditor insert paragraph result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_02.png)
+![Telerik RadWordsProcessing RadFlowDocumentEditor result showing two inserted paragraphs labeled First paragraph and Second paragraph](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_02.png)
 
 If you call the `InsertParagraph()` method while the editor is positioned in the middle of a paragraph, all the inlines after the position are moved inside the new paragraph. The effect is the same as pressing `Enter` while the cursor is in the middle of a paragraph in a text editor application.
 
@@ -93,7 +93,7 @@ If you call the `InsertParagraph()` method while the editor is positioned in the
 
 You can insert [Section]({%slug radwordsprocessing-model-section%}) elements with the `InsertSection()` method. A paragraph with the new section's properties is added and the new `Section` element is returned.
 
-**Example 6: Insert a Section**
+**Example 6: Insert a new section at the current editor position**
 <snippet id='codeblock-bfbf'/>
 
 >If you call the `InsertSection()` method while the editor is positioned in a `TableCell`, the `Table` is split at the current row. This means that if the table contains three rows, and the editor is positioned in a cell which is on the second row, the table is split into two tables—one with one row, which is added to the previous section, and one with two rows (containing the `TableCell` where the editor position was). The latter is added to the newly inserted `Section`.
@@ -108,12 +108,12 @@ public Hyperlink InsertHyperlink(string text, string uri, bool isAnchor, string 
 
 It automatically applies the "Hyperlink" built-in style to the inserted hyperlink if there is no explicitly set style in the `CharacterFormatting` options of the editor.
 
-**Example 7: Insert a Hyperlink**
+**Example 7: Insert a hyperlink to telerik.com with a tooltip**
 
 <snippet id='codeblock-bgbg'/>
 
 **Figure 3: Hyperlink**
-![RadFlowDocumentEditor hyperlink result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_03.png)
+![Telerik RadWordsProcessing RadFlowDocumentEditor hyperlink result showing a blue underlined telerik link with a Telerik site tooltip](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_03.png)
 
 ### Inserting Code Fields
 
@@ -125,12 +125,12 @@ public Field InsertField(string code, string result)
 
 **Example 8** shows how to add page numbering in the header of a document:
 
-**Example 8: Add Page Numbering in a Header**
+**Example 8: Add PAGE and NUMPAGES fields to a document header for page numbering**
 
 <snippet id='codeblock-bhbh'/>
 
 **Figure 4: The Page Numbering Inserted in Example 8**
-![RadFlowDocumentEditor page numbering result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_04.png)
+![Telerik RadWordsProcessing RadFlowDocumentEditor page numbering result showing Page 3 of 5 centered in the document header](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_04.png)
 
 In this case the result is automatically updated when a document is opened in MS Word, because the page fields are in the header of the document.
 
@@ -148,12 +148,12 @@ In this case the result is automatically updated when a document is opened in MS
 
 **Example 9** shows how to insert an image using a stream:
 
-**Example 9: Insert an Image from a Stream**
+**Example 9: Insert the Telerik logo as an inline image from a PNG stream**
 
 <snippet id='codeblock-bibi'/>
 
 **Figure 5: The Image Inserted in Example 9**
-![RadFlowDocumentEditor insert image result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_05.png)
+![Telerik RadWordsProcessing RadFlowDocumentEditor image insertion result showing the text Image followed by the Telerik logo](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_05.png)
 
 
 
@@ -171,13 +171,13 @@ Use the following methods to insert a [Table]({%slug radwordsprocessing-model-ta
 
 The following example inserts a table with the "TableGrid" built-in style:
 
-**Example 10: Insert a Table with a Style**
+**Example 10: Apply the TableGrid style and insert a 2 by 4 table between surrounding text**
 
 <snippet id='codeblock-bjbj'/>
 
 
 **Figure 6: The Table in the Document**
-![RadFlowDocumentEditor table result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_06.png)
+![Telerik RadWordsProcessing RadFlowDocumentEditor table insertion result showing a small grid table between Before table and After table text](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_06.png)
 
 >tip The `DocumentElementImporter` class allows you to import a document element from one document into another. For more information, refer to [Import Document Element]({%slug radwordsprocessing-editing-import-document-element%}).
 
@@ -194,17 +194,17 @@ When you use the insert methods of `RadFlowDocumentEditor`, the editor creates d
 
 Formatting options are most useful when inserting multiple elements that must have consistent styling. For example, the code from **Example 11** inserts multiple paragraphs with no spacing between them and with text (`Run` elements) in "Consolas" font:
 
-**Example 11: Insert Content with Specified Styles**
+**Example 11: Apply Consolas font and zero paragraph spacing before inserting code-like lines**
 
 <snippet id='codeblock-bkbk'/>
 
 
 **Figure 7: The Content Inserted in Example 11**
-![RadFlowDocumentEditor styled content result](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_07.png)
+![Telerik RadWordsProcessing RadFlowDocumentEditor styled content result showing a short Console.WriteLine code block formatted in Consolas](images/RadWordsProcessing_Editing_RadFlowDocumentEditor_07.png)
 
 ## Deleting Content
 
-**Example 12: Delete Content Between Existing Elements**
+**Example 12: Delete the content between the Start and End runs while keeping the boundary elements**
 
 <snippet id='codeblock-blbl'/>
 

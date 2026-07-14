@@ -40,14 +40,14 @@ To create a watermark through the constructor of the class, pass an object of ty
 **Example 1** demonstrates the creation of a text watermark.
 
 
-**Example 1: Create text watermark**
+**Example 1: Create a red DRAFT text watermark with custom size, angle, and opacity**
 
 <snippet id='codeblock-iia'/>
 
 
 Creating an image watermark is similar to creating a text one. **Example 2** shows how to create an image watermark.
 
-**Example 2: Create image watermark**
+**Example 2: Create an image watermark from a JPEG stream with custom size and rotation**
 
 <snippet id='codeblock-jja'/>
 
@@ -59,7 +59,7 @@ Watermarks are preserved in the header of the section to which the watermark is 
 
 **Example 3** demonstrates how you can add the watermark created in **Example 1** to a `RadFlowDocument` by creating a `Header` for its first `Section`.
 
-**Example 3: Add watermark to header**
+**Example 3: Add the text watermark to the default header of the first section**
 
 <snippet id='codeblock-kka'/>
 
@@ -71,7 +71,7 @@ You can also set a watermark in a document through the [`RadFlowDocumentEditor`]
 **Example 4** demonstrates how to set the watermark created in **Example 2** through `RadFlowDocumentEditor` to the first page of a section. The method creates the `Header` element for you, and you only need to specify its type.
 
 
-**Example 4: Set watermark with RadFlowDocumentEditor**
+**Example 4: Apply the image watermark to the first-page header of a section with RadFlowDocumentEditor**
 
 <snippet id='codeblock-lla'/>
 

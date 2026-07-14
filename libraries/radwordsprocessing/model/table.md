@@ -23,7 +23,7 @@ When creating an instance of the `Table` class, pass the document that the table
 
 The code snippet from **Example 1** creates and inserts a `Table` to a `Section`.
 
-**Example 1: Create and insert a table to a section**
+**Example 1: Create an empty table and a 10 by 5 table and add them to a section**
 
 <snippet id='codeblock-dz'/>
 
@@ -31,19 +31,19 @@ The code snippet from **Example 1** creates and inserts a `Table` to a `Section`
 
 You can add a table at a specific index in the `Blocks` collection of a `BlockContainer` by using the `Insert()` method. **Example 2** shows how to add a table at the beginning of a section.
 
-**Example 2: Insert a table at a specific index**
+**Example 2: Insert a 10 by 5 table at the beginning of a section block collection**
 
 <snippet id='codeblock-dada'/>
 
 You can also use the `AddTable()` method of the `Blocks` collection of a `BlockContainer`. The method creates a new `Table` instance, adds it to the container, and returns it.
 
-**Example 3: Insert a new table to a container**
+**Example 3: Create and add a table with the AddTable method**
 
 <snippet id='codeblock-dbdb'/>
 
 You can also insert a new `Table` in the document with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class.
 
-**Example 4: Insert a table using RadFlowDocumentEditor**
+**Example 4: Insert a 5 by 3 table with RadFlowDocumentEditor**
 
 <snippet id='codeblock-dcdc'/>
 
@@ -97,7 +97,7 @@ The `Table` element exposes several properties that allow you to customize the l
 
 **Example 5** demonstrates how to add a `Table` with 5 rows and 10 columns to a `RadFlowDocument`.
 
-**Example 5: Create a table with content and add it to a RadFlowDocument**
+**Example 5: Build a 5-row by 10-column table with styled cells and text content**
 
 <snippet id='codeblock-dddd'/>
 

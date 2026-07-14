@@ -45,7 +45,7 @@ Text that results when the comparison is true (TrueText) or false (FalseText). I
 
 You can insert an If field through the `InsertField()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method accepts code as first argument and result as second argument.
 
-**Example 1: Insert an If field**
+**Example 1: Insert a Money bookmark and an IF field that shows a minimum amount message when the value is below 100**
 
 <snippet id='codeblock-bb'/>
 
@@ -53,7 +53,7 @@ The result of the above snippet is illustrated in **Figure 1**.
 
 **Figure 1: If field in a document**
 
-![RadWordsProcessing Concepts Fields If Field 01](images/RadWordsProcessing_Concepts_Fields_If_Field_01.png)
+![Telerik RadWordsProcessing IF field example showing Wallet value 99 and the resulting The minimum required amount is 100 message](images/RadWordsProcessing_Concepts_Fields_If_Field_01.png)
 
 ## See Also
 

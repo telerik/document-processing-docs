@@ -19,7 +19,7 @@ position: 0
 
 **RadWordsProcessing** allows you to merge two `RadFlowDocument` instances using the `Merge()` method overloads. The document to which you wish to add content is called *target* and the document from which you wish to take the content is called *source*.
 
-#### **Example 1: Merge Two Instances of RadFlowDocument**
+#### **Example 1: Import two DOCX files and merge the source document into the target document**
 
 <snippet id='codeblock-bn'/>
 
@@ -38,7 +38,7 @@ You can pass the `MergeOptions` parameter as an argument to the `Merge()` method
 
 **Example 2** shows how to merge documents by specifying the `MergeOptions` parameter.
 
-#### **Example 2: Merge Documents with MergeOptions**
+#### **Example 2: Merge documents while renaming conflicting source styles**
 
 <snippet id='codeblock-bo'/>
 
@@ -48,7 +48,7 @@ You can pass the `MergeOptions` parameter as an argument to the `Merge()` method
 
 `RadFlowDocument` provides a `Clone()` method, which creates a deep copy of the whole document structure, including all document elements and styles:
 
-#### **Example 3: Clone a RadFlowDocument**
+#### **Example 3: Create a deep clone of an entire RadFlowDocument**
 
 <snippet id='codeblock-bp'/>
 
@@ -71,7 +71,7 @@ The `Clone()` method has two overloads:
 * `Clone()`: Creates a deep copy of the document element and associates it with the same document.
 * `Clone(RadFlowDocument)`: Creates a deep copy of the element and associates it with the provided `RadFlowDocument`. This allows cloned elements to be added to the element tree of the provided document at a later time and is convenient if you want to move an element from one document to another.
 
-#### **Example 4: Clone a Section**
+#### **Example 4: Clone a Section and associate the copy with a document**
 
 <snippet id='codeblock-bq'/>
 

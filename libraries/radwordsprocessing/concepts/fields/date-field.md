@@ -37,7 +37,7 @@ You can insert a Date Field through the [RadFlowDocumentEditor]({%slug radwordsp
 
 **Example 1** demonstrates how to insert a date field.
 
-**Example 1: Insert date field**
+**Example 1: Insert a DATE field with a day-month-year picture switch**
 
 <snippet id='codeblock-nn'/>
 

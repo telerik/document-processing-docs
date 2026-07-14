@@ -32,7 +32,7 @@ The `AutoUpdateFields` setting indicates whether fields update automatically whe
 
 The following code shows how to create and specify particular export settings for `DocxFormatProvider`.
 
-**Example 1: Create DocxExportSettings**
+**Example 1: Create DocxExportSettings that auto-update fields and throw on invalid document structure**
 
 <snippet id='codeblock-cv'/>
 

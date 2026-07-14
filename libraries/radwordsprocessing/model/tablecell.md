@@ -16,7 +16,7 @@ The `TableCell` element is a `BlockContainer` element and defines a cell of cont
 
 You can use the code snippet from **Example 1** to create a `TableCell` and add it in a [TableRow]({%slug radwordsprocessing-model-tablerow%}).
 
-**Example 1: Create a TableCell object and add it to a TableRow**
+**Example 1: Create a TableCell associated with the document and add it to an existing table row**
 
 ```csharp
 RadFlowDocument radFlowDocument = new RadFlowDocument();
@@ -94,7 +94,7 @@ cell.TextDirection = TextDirection.LeftToRightTopToBottom;
 
 **Example 3** demonstrates how to add a `Paragraph` to a `TableCell`.
 
-**Example 3: Add a paragraph to a TableCell**
+**Example 3: Add a paragraph block to a table cell**
 
 ```csharp
 Paragraph paragraph = cell.Blocks.AddParagraph();

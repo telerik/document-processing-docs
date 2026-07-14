@@ -39,7 +39,7 @@ If your export code writes the result to disk, also add the .NET namespaces requ
 
 The following example creates a new document instance and inserts sample content. Use it as the starting point for the rest of this tutorial.
 
-### Example 1: Create a RadFlowDocument Programmatically
+**Example 1: Create a RadFlowDocument, initialize a RadFlowDocumentEditor, and insert sample text**
 
 <snippet id='codeblock-b'/>
 
@@ -51,7 +51,7 @@ Use the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-do
 
 The next example creates a provider instance and exports the document:
 
-### Example 2: Export a RadFlowDocument to DOCX
+**Example 2: Export the populated RadFlowDocument to a DOCX file with DocxFormatProvider**
 
 <snippet id='codeblock-c'/>
 

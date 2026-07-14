@@ -38,7 +38,7 @@ You can insert this field through the `InsertField()` method of [RadFlowDocument
 
 **Example 1** demonstrates how to insert a Page field.
 
-**Example 1: Insert a Page field**
+**Example 1: Insert PAGE and NUMPAGES fields to display the current page inside a page count label**
 
 <snippet id='codeblock-bi'/>
 
