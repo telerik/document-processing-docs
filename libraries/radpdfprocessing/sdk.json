@@ -124,23 +124,12 @@
     "Name": "Export UI Element",
     "ExampleInfo": {
       "Name": "Export UI Element",
-      "DirectoryName": "ExportUIElement(Silverlight)",
-      "ExampleFileNames": [ "ExportUIElement_SL.csproj", "App_SL.xaml", "App_SL.xaml.cs", "Example.xaml", "Example.xaml.cs", "MainPage.xaml", "MainPage.xaml.cs", "Models\\PlotInfo.cs", "PdfExport\\ExportHelper.cs", "PdfExport\\PdfRenderer.cs", "PdfExport\\ConcreteRenderers\\BorderRenderer.cs", "PdfExport\\ConcreteRenderers\\EllipseRenderer.cs", "PdfExport\\ConcreteRenderers\\FrameworkElementRenderer.cs", "PdfExport\\ConcreteRenderers\\ImageRenderer.cs", "PdfExport\\ConcreteRenderers\\LineRenderer.cs", "PdfExport\\ConcreteRenderers\\PanelRenderer.cs", "PdfExport\\ConcreteRenderers\\PathRenderer.cs", "PdfExport\\ConcreteRenderers\\RectangleRenderer.cs", "PdfExport\\ConcreteRenderers\\TextBlockRenderer.cs", "PdfExport\\ConcreteRenderers\\TextBoxRenderer.cs", "PdfExport\\ConcreteRenderers\\TextRenderer.cs", "PdfExport\\ConcreteRenderers\\UIElementRendererBase.cs", "PdfExport\\Miscellaneous\\CompositeDisposableObject.cs", "PdfExport\\Miscellaneous\\DisposableOpacity.cs", "PdfExport\\Miscellaneous\\MathHelper.cs", "PdfExport\\Miscellaneous\\PdfColorHelper.cs", "PdfExport\\Miscellaneous\\PdfGeometryHelper.cs", "PdfExport\\Miscellaneous\\PdfRenderContext.cs", "ViewModels\\MainViewModel.cs" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/xaml-sdk/contents/PdfProcessing/ExportUIElement/",
-    "Description": "This sample demonstrates how RadPdfProcessing can be used to convert WPF (Silverlight) UI elements to PDF format.",
-    "KeyWords": "Export UI Element,  xaml,pdf"
-  },
-  {
-    "Name": "Export UI Element",
-    "ExampleInfo": {
-      "Name": "Export UI Element",
       "DirectoryName": "ExportUIElement",
       "ExampleFileNames": [ "ExportUIElement_WPF.csproj", "App.xaml", "App.xaml.cs", "Example.xaml", "Example.xaml.cs", "MainWindow.xaml", "MainWindow.xaml.cs", "Models\\PlotInfo.cs", "PdfExport\\ExportHelper.cs", "PdfExport\\PdfRenderer.cs", "PdfExport\\ConcreteRenderers\\BorderRenderer.cs", "PdfExport\\ConcreteRenderers\\EllipseRenderer.cs", "PdfExport\\ConcreteRenderers\\FrameworkElementRenderer.cs", "PdfExport\\ConcreteRenderers\\ImageRenderer.cs", "PdfExport\\ConcreteRenderers\\LineRenderer.cs", "PdfExport\\ConcreteRenderers\\PanelRenderer.cs", "PdfExport\\ConcreteRenderers\\RectangleRenderer.cs", "PdfExport\\ConcreteRenderers\\ShapeRenderer.cs", "PdfExport\\ConcreteRenderers\\TextBlockRenderer.cs", "PdfExport\\ConcreteRenderers\\TextBoxRenderer.cs", "PdfExport\\ConcreteRenderers\\TextRenderer.cs", "PdfExport\\ConcreteRenderers\\UIElementRendererBase.cs", "PdfExport\\Miscellaneous\\CompositeDisposableObject.cs", "PdfExport\\Miscellaneous\\DisposableOpacity.cs", "PdfExport\\Miscellaneous\\MathHelper.cs", "PdfExport\\Miscellaneous\\PdfColorHelper.cs", "PdfExport\\Miscellaneous\\PdfGeometryHelper.cs", "PdfExport\\Miscellaneous\\PdfRenderContext.cs", "ViewModels\\MainViewModel.cs" ]
     },
     "GitHubPath": "https://api.github.com/repos/telerik/xaml-sdk/contents/PdfProcessing/ExportUIElement/",
-    "Description": "This sample demonstrates how RadPdfProcessing can be used to convert WPF (Silverlight) UI elements to PDF format.",
-    "KeyWords": "Export UI Element,  xaml,pdf"
+    "Description": "This sample demonstrates how RadPdfProcessing can be used to convert WPF UI elements to PDF format.",
+    "KeyWords": "Export UI Element,  xaml, pdf"
   },
   {
     "Name": "Generate Document",
@@ -158,18 +147,7 @@
     "ExampleInfo": {
       "Name": "Generate Document",
       "DirectoryName": "GenerateDocument(.NET Standard)",
-      "ExampleFileNames": [ "GenerateDocument_NetStandard.csproj", "App_SL.xaml", "App_SL.xaml.cs", "DelegateCommand.cs", "ExampleViewModel_SL.cs", "FileHelper.cs", "GenerateDocument.csproj", "GenerateDocument_NetStandard.csproj", "MainPage.xaml", "MainPage.xaml.cs", "SampleData\\barChart.PNG", "SampleData\\documentSilverlight.PNG", "SampleData\\documentWpf.PNG" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/xaml-sdk/contents/PdfProcessing/GenerateDocument/",
-    "Description": "This project demonstrates how to use RadPdfProcessing to create a PDF document.",
-    "KeyWords": "Generate Document,  create,scratch,prepare,data"
-  },
-  {
-    "Name": "Generate Document",
-    "ExampleInfo": {
-      "Name": "Generate Document",
-      "DirectoryName": "GenerateDocument(Silverlight)",
-      "ExampleFileNames": [ "GenerateDocument_SL.csproj", "App_SL.xaml", "App_SL.xaml.cs", "DelegateCommand.cs", "ExampleViewModel_SL.cs", "FileHelper.cs", "MainPage.xaml", "MainPage.xaml.cs", "ReadMe.md", "SampleData\\documentSilverlight.PNG" ]
+      "ExampleFileNames": [ "GenerateDocument_NetStandard.csproj", "App_SL.xaml", "App_SL.xaml.cs", "DelegateCommand.cs", "ExampleViewModel_SL.cs", "FileHelper.cs", "GenerateDocument.csproj", "GenerateDocument_NetStandard.csproj", "MainPage.xaml", "MainPage.xaml.cs", "SampleData\\barChart.PNG", "SampleData\\documentWpf.PNG" ]
     },
     "GitHubPath": "https://api.github.com/repos/telerik/xaml-sdk/contents/PdfProcessing/GenerateDocument/",
     "Description": "This project demonstrates how to use RadPdfProcessing to create a PDF document.",
@@ -251,17 +229,6 @@
     "GitHubPath": "https://api.github.com/repos/telerik/xaml-sdk/contents/PdfProcessing/PdfStreamWriterPerformance/",
     "Description": "This project demonstrates the performance of PdfStreamWriter class. The example takes some single-paged PDF document and merges its page into a new document 10000 times. The new PDF file with 10000 pages is generated in less than a second with minimal memory footprint thanks to the perfomance and memory efficiency of PdfStreamWriter class. Additionally, due to maximized reuse of PDF objects the result file size is only 10 times bigger that the original file, despite the fact that the result file has 10000 times more pages.",
     "KeyWords": "PdfStreamWriter Performance,  PdfStreamWriter,PDF,stream,processing,performance,memory,efficiency,file size,optimization"
-  },
-  {
-    "Name": "Pdf Viewer Integration",
-    "ExampleInfo": {
-      "Name": "Pdf Viewer Integration",
-      "DirectoryName": "PdfViewerIntegration(Silverlight)",
-      "ExampleFileNames": [ "PdfViewerIntegration_SL.csproj", "App_SL.xaml", "App_SL.xaml.cs", "ExampleViewModel.cs", "MainPage.xaml", "MainPage.xaml.cs", "ReadMe.md" ]
-    },
-    "GitHubPath": "https://api.github.com/repos/telerik/xaml-sdk/contents/PdfProcessing/PdfViewerIntegration/",
-    "Description": "This project demonstrates how to integrate RadPdfProcessing with RadPdfViewer",
-    "KeyWords": "Pdf Viewer Integration,  show,preview,combine,combination"
   },
   {
     "Name": "Pdf Viewer Integration",

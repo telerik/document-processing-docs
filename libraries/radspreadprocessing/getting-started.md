@@ -50,7 +50,7 @@ For more complete examples, go to the [Developer Focused Examples]({%slug radspr
 
 ## Using RadSpreadsheet
 
-`RadSpreadsheet` is a UI control part of the Telerik UI for WPF/Silverlight suites. The document model explained in this section of the documentation and all its features are shared between the `RadSpreadProcessing` library and `RadSpreadsheet`. [This help section](https://docs.telerik.com/devtools/wpf/controls/radspreadsheet/overview.html) contains information about all UI-specific features of `RadSpreadsheet`.
+`RadSpreadsheet` is a UI control part of the Telerik UI for WPF suite. The document model explained in this section of the documentation and all its features are shared between the `RadSpreadProcessing` library and `RadSpreadsheet`. [This help section](https://docs.telerik.com/devtools/wpf/controls/radspreadsheet/overview.html) contains information about all UI-specific features of `RadSpreadsheet`.
 
 ## See Also
 

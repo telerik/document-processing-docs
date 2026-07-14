@@ -45,8 +45,6 @@ The method tries to find a registered format provider that can handle the extens
 
 <snippet id='codeblock-coe'/>
 
-> The OpenFileDialog class exposes a different API in Silverlight. The name of the file could be obtained through the File.Name property of `OpenFileDialog` and the stream you can get using `File.OpenRead()`.
-
 You can achieve the same result through using the `OpenFile` command. The command executes exactly the same code as the previous example. Verify that you register the format providers you want to use before using the command.
 
 ## Export

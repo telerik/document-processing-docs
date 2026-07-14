@@ -135,8 +135,6 @@ If you want to use a font that is not part of the standard ones, register it usi
 
 You can create fonts that are not explicitly registered. Creating a font that is not registered in the repository with the code from **Example 2** tries to find the font from the ones installed on the machine. 
 
->caution Due to security limitations in Silverlight, creating a font that is not present in the repository with the code from **Example 2** is expected to fail because the application does not have the permissions to get the font from the file system.
-
 ## See Also
  * [Cross-Platform Support for Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
  * [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html)

@@ -25,7 +25,6 @@ The fastest way to get an overview of how to use the Telerik Document Processing
 |[Telerik UI for ASP.NET MVC](https://demos.telerik.com/aspnet-mvc/)|[Telerik UI for WinForms](https://telerik-winforms-demos.s3.amazonaws.com/TelerikWinFormsExamplesLauncher.exe)||
 |[Telerik UI for ASP.NET Core](https://demos.telerik.com/aspnet-core/)|[Telerik UI for WinUI](https://demos.telerik.com/winui/?_ga=2.172224931.145105266.1615285037-1571667030.1570715481)||
 |[Telerik UI for Blazor](https://demos.telerik.com/blazor-ui)|||
-|[Telerik UI for Silverlight](http://demos.telerik.com/silverlight/)|||
 
 ## Developer-Focused Examples
 

@@ -30,12 +30,6 @@ Telerik Document Processing is part of several Telerik bundles and can be upgrad
 
 [Upgrading Telerik UI for WinForms project](https://docs.telerik.com/devtools/winforms/visual-studio-integration/visual-studio-extensions/upgrade-project)
 
-## UI for Silverlight
-
-[Upgrading Telerik UI for Silverlight](https://docs.telerik.com/devtools/silverlight/installation-and-deployment/upgrading-instructions/installation-upgrading-from-trial-to-developer-license.html)
-
->important Due to the specifics of Telerik Document Processing, a project that uses only packages of this product cannot be upgraded with the Upgrade Wizard of Visual Studio Extensions. You can manually replace the packages with the new ones or change the project references to point to the location of the new version.
-
 ## See Also
 
 * [Telerik.Licensing NuGet Package Information]({%slug dpl-telerik-licensing-nuget-feed%})
