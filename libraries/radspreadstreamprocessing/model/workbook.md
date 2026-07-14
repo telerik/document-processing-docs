@@ -31,7 +31,7 @@ You can get an instance of `IWorkbookExporter` through the `CreateWorkbookExport
 
 The code from **Example 1** creates an empty workbook and exports it to an XLSX file.
 
-**Example 1: Create IWorkbookExporter**
+**Example 1: Create an XLSX workbook exporter and add an empty worksheet with one row**
 
 <snippet id='codeblock-dlu'/>
 
@@ -39,7 +39,7 @@ The code from **Example 1** creates an empty workbook and exports it to an XLSX 
 
 The `CreateWorkbookExporter` method creates a new workbook which overrides the content of the document contained in the stream if it is not empty. You can change that by using the second overload of the `CreateWorkbookExporter` method and pass the export mode explicitly. Pass the export mode through the last parameter of the method (`exportMode`) which is of type `SpreadExportMode`. `SpreadExportMode` is an enum that exposes two constants—`Create` and `Append`. The default export mode is `Create`, which overrides the stream content. If you set the export mode to `Append`, an existing workbook from the stream opens if there is any content in it. Then you can append the new content to the already existing document.
 
-**Example 2: Create IWorkbookExporter and Append the Content from the Stream**
+**Example 2: Open an XLSX stream in append mode with CreateWorkbookExporter**
 
 <snippet id='codeblock-dlv'/>
 
@@ -47,7 +47,7 @@ The `CreateWorkbookExporter` method creates a new workbook which overrides the c
 
 In the spreadsheet documents, the names of the sheets are unique. If you try to add a sheet with a name that is already present in the workbook, you get an `ArgumentException`. This is where the `GetSheetInfos()` method comes in handy. The method returns information about the sheets currently present in the workbook (imported or added). You can use it to check whether a particular sheet name is available (not already present) when appending a worksheet to an existing workbook. **Example 3** demonstrates how to use it.
 
-**Example 3: Using IWorkbookExporter.GetSheetInfos()**
+**Example 3: Read existing sheet names with IWorkbookExporter.GetSheetInfos()**
 
 <snippet id='codeblock-dlw'/>
 

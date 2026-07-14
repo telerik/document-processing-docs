@@ -36,7 +36,7 @@ To read the data from a file, parse the desired elements in sequence keeping the
 
 5. Read Cells
 
-**Example 1: Read Data from a Document**
+**Example 1: Open an XLSX file and iterate through every worksheet, row, and cell importer**
 
 <snippet id='codeblock-dkp'/>
 

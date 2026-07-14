@@ -56,7 +56,7 @@ One of the overloads of `GetCellContentSize` enables you to get the size needed 
 
 The following example shows how to create a spreadsheet document, measure the content of the cells, and apply width to the columns so that these columns auto fit their content.
 
-**Example 1: Create Spreadsheet with Auto Fit Columns Width**
+**Example 1: Measure the widest formatted cell value and apply that width to the exported column**
 
 <snippet id='codeblock-dkv'/>
 

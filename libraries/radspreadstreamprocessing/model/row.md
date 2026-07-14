@@ -27,7 +27,7 @@ To read a row and its properties, use the [`IRowImporter` interface](https://doc
 
 You can create a concrete instance of `IRowExporter` through the `CreateRowExporter()` method of [IWorksheetExporter]({%slug radspreadstreamprocessing-model-worksheet%}). **Example 1** demonstrates how to add a row to a worksheet.
 
-**Example 1: Create IRowExporter**
+**Example 1: Create an IRowExporter for the next worksheet row**
 
 
 <snippet id='codeblock-dlq'/>
@@ -44,7 +44,7 @@ To customize the way a row appears, use one of the following methods:
 | `SetHidden()` | Sets a boolean value indicating whether the row is hidden. |
 
 
-**Example 2: Set Properties to IRowExporter**
+**Example 2: Set the exported row height to 200 pixels**
 
 <snippet id='codeblock-dlr'/>
 
@@ -56,7 +56,7 @@ The rows in a document are exported one by one from top to bottom starting from 
 
 In some cases you may need to skip several rows and start filling the data in the next one. The [`IWorksheetExporter`]({%slug  radspreadstreamprocessing-model-worksheet%}) interface declares a method that allows you to implement such a scenario. **Example 3** shows how to skip 5 rows.
 
-**Example 3: Skip Rows**
+**Example 3: Skip five rows and hide the sixth row**
 
 <snippet id='codeblock-dls'/>
 
@@ -66,7 +66,7 @@ In some cases you may need to skip several rows and start filling the data in th
 
 You can get a concrete instance of `IRowImporter` through the `Rows` collection of [IWorksheetImporter]({%slug radspreadstreamprocessing-model-worksheet%}). **Example 4** demonstrates how to start reading a row from a worksheet.
 
-**Example 4: Create IRowImporter**
+**Example 4: Iterate imported worksheet rows with IRowImporter**
 
 <snippet id='codeblock-dlt'/>
 

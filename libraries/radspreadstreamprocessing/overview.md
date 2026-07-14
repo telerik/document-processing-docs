@@ -12,13 +12,13 @@ position: 0
 
 The Telerik SpreadStream Processing Library allows you to generate large spreadsheet documents with great performance and minimal memory footprint in your .NET applications. It is specialized for fast generation of large (even 1M+ rows) XLSX and CSV documents. The document model has no external dependencies on third-party software or UI. You can process Microsoft Excel supported documents without having Microsoft Excel, Microsoft Office, or any other external library installed on the client or server.
 
-![SpreadStreamProcessing](images/spread-stream-processing-overview.jpg)  
+![Telerik RadSpreadStreamProcessing overview diagram showing streaming spreadsheet processing between CSV input and XLSX output](images/spread-stream-processing-overview.jpg)  
 
 To skip this introductory article and directly start using SpreadStreamProcessing, see the [Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%}) topic.
 
 >note If you still do not have Telerik Document Processing installed, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can get the packages through the different suites with Telerik controls.
 
-![SpreadStreamProcessing code example](images/SpreadStreamProcessing-Overview_01.png)
+![Telerik RadSpreadStreamProcessing worksheet example showing an Orders Log report with filters, shipping values, discounts, and color-coded status cells](images/SpreadStreamProcessing-Overview_01.png)
 
 >tip You can find the code example from the previous image in the [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/SpreadStreamProcessing/GenerateDocument). This repository contains many examples that cover all Document Processing libraries.
 
