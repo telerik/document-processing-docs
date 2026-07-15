@@ -25,13 +25,13 @@ To use `DocFormatProvider`, add references to the following packages:
 
 To import a DOC or DOT file, use the `Import()` method of `DocFormatProvider`.
 
-**Example 1: Import document from a file**
+**Example 1: Open a Sample.doc file stream and import it into a RadFlowDocument**
 
 <snippet id='codeblock-cp'/>
 
 You can also import a document from a byte array containing the document:
 
-**Example 2: Import document from a byte array**
+**Example 2: Read a Sample.doc file into a byte array and import it into a RadFlowDocument**
 
 <snippet id='codeblock-cq'/>
 

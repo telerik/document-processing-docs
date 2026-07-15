@@ -82,7 +82,7 @@ When you apply a style to a cell with locally set properties, the end result is 
 
 **Example 1** shows what including the `Number` group looks like.
 
-**Example 1: Include Number Group in CellStyle**
+**Example 1: Enable the Number group on the built-in Bad style**
 
 <snippet id='codeblock-cng'/>
 
@@ -94,7 +94,7 @@ To create a new style, invoke the `Add()` method of the workbook `Styles` collec
 
 **Example 2** creates a new style and applies it to cell *A1*.
 
-**Example 2: Create a Style**
+**Example 2: Create a custom style with borders, fill, alignment, and apply it to cell A1**
 
 <snippet id='codeblock-cnh'/>
 
@@ -104,7 +104,7 @@ To modify a style, retrieve it from the `Styles` collection and set the properti
 
 **Example 3** obtains the *Bad* style from the styles collection of a workbook and modifies it.
 
-**Example 3: Modify a Style**
+**Example 3: Update the built-in Bad style with a pattern fill, larger font, and font color**
 
 <snippet id='codeblock-cni'/>
 
@@ -112,7 +112,7 @@ To modify a style, retrieve it from the `Styles` collection and set the properti
 
 The API enables you to copy the properties of an existing style so you can modify it according to your preferences while keeping the original style untouched.
 
-**Example 4: Copy an Existing Style and Modify Its Properties**
+**Example 4: Copy the Good style into a custom style and replace its fill**
 
 <snippet id='codeblock-cnj'/>
 
@@ -120,7 +120,7 @@ The API enables you to copy the properties of an existing style so you can modif
 
 You can also remove a style from the `Styles` collection. Invoke the `Remove()` method, which returns a Boolean value. If such a style exists in the collection, the method returns *true*.
 
-**Example 5: Remove a Style**
+**Example 5: Remove the Bad style from the workbook styles collection**
 
 <snippet id='codeblock-cnk'/>
 

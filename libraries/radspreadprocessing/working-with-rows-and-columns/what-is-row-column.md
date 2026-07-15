@@ -20,7 +20,9 @@ A worksheet organizes cells into rows and columns. **Rows** are groups of cells 
 
 A cell sits at the intersection of one row and one column, and its address combines the column letter and row number. For example, `B3` refers to the cell in column B, row 3.
 
-![A spreadsheet grid showing labeled rows (numbers on the left) and columns (letters at the top)](images/RowAndColumn.png)
+Similarly, a **column** is a group of cells that are vertically stacked and appear on the same **vertical line**. Columns in `RadSpreadProcessing` are identified by a letter or a combination of letters. For example, the first column is called A, the second is B, and the last column is XFD.
+        
+![Spreadsheet example with row 9 highlighted horizontally and column B highlighted vertically to illustrate how rows and columns are identified](images/RowAndColumn.png)
 
 ## Row Height
 

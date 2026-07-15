@@ -22,7 +22,7 @@ The `CombTextBoxField` class corresponds to the `FormFieldType.CombTextBox` enum
 | `Widgets` | The collection of Widget annotations representing the field on the PDF pages. Widgets are created with `AddWidget()` and can be removed with `Remove()`. Implements `IEnumerable`. |
 | `MaxLengthOfInputCharacters` | Specifies the number of characters that can be entered. |
 
-**Example 1: Create a CombTextBoxField and add it to a page**
+**Create a CombTextBoxField and add it to a page**
 
 <snippet id='pdf-combtetbox-field'/>
 

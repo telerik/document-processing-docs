@@ -24,7 +24,7 @@ The `PageSetupExporter` allows you to export the page settings for printing. The
 
 You must place the `PageSetupExporter` after the code for exporting all cells on the sheet. The following example demonstrates how to create the `PageSetupExporter` and where to place it.
 
-**Example 1: Using PageSetupExporter**
+**Example 1: Create a page setup exporter and configure fit, order, orientation, paper size, and scale settings**
 
 <snippet id='codeblock-dku'/>
 

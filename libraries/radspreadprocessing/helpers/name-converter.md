@@ -36,7 +36,7 @@ The following table lists the available methods:
 
 The `ConvertRowIndexToName` method converts the row index to a name.
 
-**Example 1: Convert Row Index to Name**
+**Example 1: Convert row index 0 to its worksheet row name**
 
 <snippet id='codeblock-cph'/>
 
@@ -44,7 +44,7 @@ The `ConvertRowIndexToName` method converts the row index to a name.
 
 The `ConvertRowNameToIndex` method converts the row name to an index.
 
-**Example 2: Convert Row Name to Index**
+**Example 2: Convert row name 1 to its zero-based row index**
 
 <snippet id='codeblock-cpi'/>
 
@@ -52,7 +52,7 @@ The `ConvertRowNameToIndex` method converts the row name to an index.
 
 The `ConvertColumnIndexToName` method converts the column index to a name.
 
-**Example 3: Convert Column Index to Name**
+**Example 3: Convert column index 0 to its worksheet column name**
 
 <snippet id='codeblock-cpj'/>
 
@@ -60,7 +60,7 @@ The `ConvertColumnIndexToName` method converts the column index to a name.
 
 The `ConvertColumnNameToIndex` method converts the column name to an index.
 
-**Example 4: Convert Column Name to Index**
+**Example 4: Convert column name A to its zero-based column index**
 
 <snippet id='codeblock-cpk'/>
 
@@ -68,11 +68,11 @@ The `ConvertColumnNameToIndex` method converts the column name to an index.
 
 The `ConvertCellIndexToName` method converts the cell index to a name. This method exposes two overloads.
 
-**Example 5: First Overload**
+**Example 5: Convert a CellIndex for row 0, column 0 to cell name A1**
 
 <snippet id='codeblock-cpl'/>
 
-**Example 5: Second Overload**
+**Example 6: Convert row 0 and column 0 directly to cell name A1**
 
 <snippet id='codeblock-cpm'/>
 
@@ -80,7 +80,7 @@ The `ConvertCellIndexToName` method converts the cell index to a name. This meth
 
 The `TryConvertNamesToCellReferenceRangeExpression` method tries to convert the cell range names to cell reference ranges.
 
-**Example 6: Convert Names to Cell Reference Range Expression**
+**Example 7: Convert the range name A1:F11 to a CellReferenceRangeExpression**
 
 <snippet id='codeblock-cpn'/>
 
@@ -88,7 +88,7 @@ The `TryConvertNamesToCellReferenceRangeExpression` method tries to convert the 
 
 The `ConvertCellReferenceToName` method converts the cell reference to a name.
 
-**Example 7: Convert Cell Reference to Name**
+**Example 8: Convert the from and to cell references from a range expression back to names**
 
 <snippet id='codeblock-cpo'/>
 
@@ -96,7 +96,7 @@ The `ConvertCellReferenceToName` method converts the cell reference to a name.
 
 The `ConvertCellRangeToName` method converts the cell range to a name.
 
-**Example 8: Convert Cell Range to Name**
+**Example 9: Convert two CellIndex values into the range name A1:F11**
 
 <snippet id='codeblock-cpp'/>
 
@@ -104,7 +104,7 @@ The `ConvertCellRangeToName` method converts the cell range to a name.
 
 The `TryConvertNameToCellRange` method converts the name to a cell range.
 
-**Example 9: Convert Name to Cell Range**
+**Example 10: Convert the range name A1:F11 back to a CellRange**
 
 <snippet id='codeblock-cpq'/>
 
@@ -112,7 +112,7 @@ The `TryConvertNameToCellRange` method converts the name to a cell range.
 
 The `ConvertCellIndexesToName` method converts the cell indexes to a name.
 
-**Example 10: Convert Cell Indexes to Name**
+**Example 11: Convert four cell indexes directly into the range name A1:F11**
 
 <snippet id='codeblock-cpr'/>
 
@@ -120,11 +120,11 @@ The `ConvertCellIndexesToName` method converts the cell indexes to a name.
 
 The `ConvertCellNameToIndex` method converts the cell name to a cell index. This method exposes two overloads.
 
-**Example 11: First Overload**
+**Example 12: Convert cell name A1 to row and column indexes**
 
 <snippet id='codeblock-cps'/>
 
-**Example 11: Second Overload**
+**Example 13: Convert cell name A1 and capture absolute row and column flags**
 
 <snippet id='codeblock-cpt'/>
 
@@ -132,11 +132,11 @@ The `ConvertCellNameToIndex` method converts the cell name to a cell index. This
 
 The `TryConvertCellNameToIndex` method tries to convert the cell name to an index. This method exposes two overloads.
 
-**Example 12: First Overload**
+**Example 14: Try to convert cell name A1 to row and column indexes**
 
 <snippet id='codeblock-cpu'/>
 
-**Example 12: Second Overload**
+**Example 15: Try to convert cell name A1 and capture absolute row and column flags**
 
 <snippet id='codeblock-cpv'/>
 
@@ -144,7 +144,7 @@ The `TryConvertCellNameToIndex` method tries to convert the cell name to an inde
 
 The `IsValidA1CellName` method determines whether the name of the cell is valid.
 
-**Example 13: Validate A1 Cell Name**
+**Example 16: Check whether B2 is a valid A1-style cell name**
 
 <snippet id='codeblock-cpw'/>
 

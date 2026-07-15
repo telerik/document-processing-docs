@@ -22,7 +22,7 @@ The inlines between the start and separate field characters form the code fragme
 
 Here is how a simple page field looks inside the document:
 
-![Rad Words Processing Concepts Fields 01](images/RadWordsProcessing_Concepts_Fields_01.png)
+![Telerik RadWordsProcessing field structure diagram showing PAGE field code and result fragments separated by Start, Separate, and End FieldCharacter inlines](images/RadWordsProcessing_Concepts_Fields_01.png)
 
 In the document object model, fields are represented by the [Field](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Fields.Field.html) abstract class. This class holds references to the `Start`, `Separate`, and `End` field characters that are related to the field.
 
@@ -75,14 +75,14 @@ In the document object model, fields are represented by the [Field](https://docs
 
 The recommended way to insert a field is to use the `InsertField()` method of the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class. It takes care of creating and inserting the code and result fragments as well as placing the appropriate field character inlines to separate them. The `InsertField()` method returns an instance of the `FieldInfo` class. It holds references to the start, separate, and end field characters and also provides an API for getting the code and result fragments and updating the field.
 
-**Example 1: Create a document containing a Date field using RadFlowDocumentEditor**
+**Example 1: Create a document and insert a DATE field with RadFlowDocumentEditor**
 
 <snippet id='codeblock-ss'/>
 
 
 You can also create and insert all the parts of the field manually by creating a `FieldInfo` instance and adding all the inlines to the document structure. **Example 2** demonstrates how to achieve the same result as in **Example 1**.
 
-**Example 2: Create a document containing a Date field using the RadDocument model and FieldInfo**
+**Example 2: Manually construct an AUTHOR field with FieldInfo and explicit field characters**
 
 <snippet id='codeblock-tt'/>
 
@@ -107,7 +107,7 @@ If the field type is not one of the above, the result is not updated and the `Fi
 
 You can update a single field with the `UpdateField()` method of the `FieldInfo` class as demonstrated in **Example 3**.
 
-**Example 3: Update a field**
+**Example 3: Update a single DATE field and read its recalculated result**
 
 <snippet id='codeblock-uu'/>
 
@@ -116,7 +116,7 @@ You can update a single field with the `UpdateField()` method of the `FieldInfo`
 
 You can update all fields in the document by using the `UpdateFields()` method of `RadFlowDocument`. **Example 4** shows how to use this method.
 
-**Example 4: Update all fields in a document**
+**Example 4: Update all fields in a document after inserting a DATE field**
 
 <snippet id='codeblock-vv'/>
 
@@ -128,7 +128,7 @@ Starting with R3 2022, the above fields were introduced. Their evaluation requir
 
 You can register the provider with the following code:
 
-**Example 5: Register the default NumberingFieldsProvider**
+**Example 5: Register the default NumberingFieldsProvider for layout-dependent fields**
 
 <snippet id='codeblock-ww'/>
 
@@ -158,7 +158,7 @@ The syntax of a field code is as follows:
 
 Below is an example of field code:
        
-![Rad Words Processing Concepts Custom Code Field 01](images/RadWordsProcessing_Concepts_CustomCodeField_01.png)
+![Telerik RadWordsProcessing HYPERLINK field syntax diagram showing the field type, URI argument, and tooltip switch segments](images/RadWordsProcessing_Concepts_CustomCodeField_01.png)
 
 ## Nested Fields
 
@@ -166,11 +166,11 @@ Fields can also be nested in each other. If there are nested fields inside the c
 
 **Example 6** creates a field, which is evaluated to an appropriate greeting based on the time of the day.
 
-**Example 6: Create a nested field**
+**Example 6: Create an IF field that contains a nested TIME field in its code fragment**
 
 <snippet id='codeblock-xx'/>
 
-![Rad Words Processing Concepts Fields 02](images/RadWordsProcessing_Concepts_Fields_02.png)
+![Telerik RadWordsProcessing nested field diagram showing an outer IF field that contains an inner TIME field within its code fragment](images/RadWordsProcessing_Concepts_Fields_02.png)
 
 When you call the `UpdateField()` method, all nested fields inside the code fragment of the field are also updated. This is also true when using the `UpdateFields()` method of `RadFlowDocument`.
 

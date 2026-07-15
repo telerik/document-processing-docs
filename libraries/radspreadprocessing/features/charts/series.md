@@ -17,7 +17,7 @@ A series is a set of data—a line or a set of columns, for example. All data pl
 
 There are several base classes used to unite the different kinds of series and values they work with.
 
-![Structure of classes defining series](images/SpreadProcessing-Features-Charts-WorkingWithSeries_7.png)
+![Telerik Document Processing RadSpreadProcessing class diagram showing SeriesBase, CategorySeriesBase, PointSeriesBase, and their concrete chart series types](images/SpreadProcessing-Features-Charts-WorkingWithSeries_7.png)
 
 ### SeriesBase Class
 
@@ -77,21 +77,21 @@ Add new series through the `SeriesCollection` `Add()` method overloads and remov
 
 To better illustrate how you can change the series of a chart, consider the sample data and chart from **Figure 1**.
 
-**Figure 1: Initial State of a Chart**
+**Figure 1: Initial chart with a single Income series from worksheet data**
 
-![Initial state of a chart](images/SpreadProcessing-Features-Charts-WorkingWithSeries_1.png)
+![Telerik Document Processing RadSpreadProcessing worksheet showing Year, Income, and Employees data with a column chart for the Income series](images/SpreadProcessing-Features-Charts-WorkingWithSeries_1.png)
 
-**Example 1: Add and Remove Series from a Chart**
+**Example 1: Add and remove series from a chart**
 
 <snippet id='codeblock-cln'/>
 
-**Figure 2: Modified Series of a Chart**
+**Figure 2: Modified chart after changing the displayed series**
 
-![Modified series of a chart](images/SpreadProcessing-Features-Charts-WorkingWithSeries_2.png)
+![Telerik Document Processing RadSpreadProcessing worksheet showing the chart updated to display the Employees series instead of Income](images/SpreadProcessing-Features-Charts-WorkingWithSeries_2.png)
 
 The same methods for adding and removing series can be accessed through the concrete `SeriesCollection` of the concrete `SeriesGroup`, and they return concrete Series objects.
 
-**Example 2: Add Series to a Chart Using Concrete SeriesGroup Object**
+**Example 2: Add a series through a concrete SeriesGroup**
 
 <snippet id='codeblock-clo'/>
 
@@ -100,7 +100,7 @@ The same methods for adding and removing series can be accessed through the conc
 
 You can access the `Series` property of the `SeriesGroup` object contained in the `SeriesGroups` property of the `Chart` object and iterate the `SeriesBase` objects in it.
 
-**Example 3: Iterate Series**
+**Example 3: Iterate the chart series collection**
 
 <snippet id='codeblock-clp'/>
 
@@ -108,7 +108,7 @@ You can access the `Series` property of the `SeriesGroup` object contained in th
 
 You can modify the properties of the base class for all series—`SeriesBase`.
 
-**Example 4: Change Series**
+**Example 4: Change common series properties**
 
 <snippet id='codeblock-clq'/>
 
@@ -166,7 +166,7 @@ The `ScatterStyle` enumeration supports the following values:
 | `Smooth` | Points on the scatter chart are connected with smoothed lines but markers are not drawn. |
 | `SmoothMarker` | Points on the scatter chart are connected with smoothed lines and markers are drawn. |
 
-**Example 5: Customize the Appearance of ScatterSeries**
+**Example 5: Customize the appearance of a ScatterSeries**
 
 <snippet id='codeblock-clr'/>
 
@@ -175,32 +175,32 @@ The `ScatterStyle` enumeration supports the following values:
 
 Some series groups (Bar, Line, and Area) implement the `ISupportGrouping` interface. It defines the `Grouping` property which is of type `SeriesGrouping` enum. The enum contains the following members: `SeriesGrouping.Standard`, `SeriesGrouping.Stacked`, and `SeriesGrouping.PercentStacked`. For the Bar chart, the Standard grouping results in a clustered chart. See the following examples for what the results of different grouping look like.
 
-**Figure 3: Sample Data**
+**Figure 3: Sample category and value data used for series grouping examples**
 
-![Sample data for series grouping](images/SpreadProcessing-Features-Charts-WorkingWithSeries_3.png)
+![Telerik Document Processing RadSpreadProcessing worksheet showing sample categories test 1 through test 4 with two value columns for series grouping examples](images/SpreadProcessing-Features-Charts-WorkingWithSeries_3.png)
 
-**Example 6: Creating Standard/Clustered Bar Chart with Vertical Orientation**
+**Example 6: Create a standard clustered chart with vertical bars**
 
 <snippet id='codeblock-cls'/>
 
-**Figure 4: Standard/Clustered Bar Chart with Vertical Orientation**
+**Figure 4: Standard clustered chart with two separate value series per category**
 
-![Standard clustered bar chart with vertical orientation](images/SpreadProcessing-Features-Charts-WorkingWithSeries_4.png)
+![Telerik Document Processing RadSpreadProcessing clustered vertical bar chart showing separate blue and orange series for test 1 through test 4](images/SpreadProcessing-Features-Charts-WorkingWithSeries_4.png)
 
-**Example 7: Creating Stacked Bar Chart with Vertical Orientation**
+**Example 7: Create a stacked chart with vertical bars**
 
 <snippet id='codeblock-clt'/>
 
-**Figure 5: Stacked Bar Chart with Vertical Orientation**
+**Figure 5: Stacked chart with both series combined in each category**
 
-![Stacked bar chart with vertical orientation](images/SpreadProcessing-Features-Charts-WorkingWithSeries_5.png)
+![Telerik Document Processing RadSpreadProcessing stacked vertical bar chart showing combined blue and orange series values for test 1 through test 4](images/SpreadProcessing-Features-Charts-WorkingWithSeries_5.png)
 
 
-**Example 8: Creating Percent-Stacked Bar Chart with Vertical Orientation**
+**Example 8: Create a percent-stacked chart with vertical bars**
 
 <snippet id='codeblock-clu'/>
 
-**Figure 6: Percent-Stacked Bar Chart with Vertical Orientation**
+**Figure 6: Percent-stacked chart normalized to 100 percent for each category**
 
-![Percent-stacked bar chart with vertical orientation](images/SpreadProcessing-Features-Charts-WorkingWithSeries_6.png)
+![Telerik Document Processing RadSpreadProcessing percent-stacked vertical bar chart showing proportional blue and orange series values for test 1 through test 4](images/SpreadProcessing-Features-Charts-WorkingWithSeries_6.png)
 

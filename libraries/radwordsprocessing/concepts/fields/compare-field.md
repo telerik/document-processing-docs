@@ -41,7 +41,7 @@ The following table lists all comparison operators.
 
 You can insert a Compare Field through the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s `InsertField()` method. It accepts code as the first argument and result as the second argument.
 
-**Example 1: Insert a CompareField**
+**Example 1: Insert a COMPARE field that checks whether CustomerNumber is different from 1**
 
 <snippet id='codeblock-mm'/>
 

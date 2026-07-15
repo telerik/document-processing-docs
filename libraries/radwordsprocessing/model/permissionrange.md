@@ -34,10 +34,10 @@ Creating a `PermissionRange` requires passing an instance of the `PermissionRang
 
 >important The credentials you specify to a permission range are used by the consumer of the generated document and it is responsible for enforcing them when the document is protected. A protected document can still be edited with the API of `RadWordsProcessing`.
 
-**Example 1** demonstrates how to create permission credentials for a single user specified by email and a permission range in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
+**Example 1** demonstrates how to create permission credentials for the Everyone editing group and insert a permission range for a table cell.
 
 
-**Example 1: Add PermissionRange to paragraph**
+**Example 1: Insert a permission range for a table cell that everyone can edit**
 
 <snippet id='codeblock-dd'/>
 
@@ -46,9 +46,9 @@ The paragraph must belong to the same document that is passed to the constructor
 
 You can also insert a `PermissionRange` in the document through [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). Since a permission range refers to a specific document element or a range of elements, there are several overloads for the `InsertPermissionRange()` method—accepting a `TableCell`, `TableRow`, or two inline elements representing the start and end of the range.
 
-**Example 2** demonstrates how to specify that a `TableCell` can be edited by everyone when protection is enforced.
+**Example 2** demonstrates how to use the `InsertPermissionRange()` overload that targets a `TableCell`.
 
-**Example 2: Insert PermissionRange for TableCell**
+**Example 2: Insert a permission range with the TableCell overload**
 
 <snippet id='codeblock-de'/>
 
@@ -69,7 +69,7 @@ Including permission ranges in a document is not enough to protect them from edi
 
 **Example 3** shows how to protect and unprotect a document using the various overloads of the methods.
 
-**Example 3: Protect and unprotect document through RadFlowDocumentEditor**
+**Example 3: Protect a document, unprotect it, and reapply protection with the AllowComments mode**
 
 <snippet id='codeblock-df'/>
 
@@ -80,7 +80,7 @@ Including permission ranges in a document is not enough to protect them from edi
 
 `RadFlowDocument` exposes a property of type `ProtectionSettings`—`ProtectionSettings`. You can enforce protection directly through the document by setting the `Enforced` property as demonstrated in **Example 4**.
 
-**Example 4: Enforce protection through RadFlowDocument**
+**Example 4: Enforce document protection directly through ProtectionSettings**
 
 <snippet id='codeblock-dg'/>
 

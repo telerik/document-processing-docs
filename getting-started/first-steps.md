@@ -40,11 +40,11 @@ This guide uses a console application because Telerik Document Processing is UI-
 
 Open Microsoft Visual Studio and create a new console project. The sample can use a .NET Framework, .NET Standard, or {{site.dotnetversions}} target framework.
 
-### Figure 1: Create a Console Project in Visual Studio
+**Visual Studio create console project workflow for a Telerik Document Processing sample**
 
 Use the Visual Studio path shown in the following image to create the console application.
 
-![Create Console Project](images/VisualStudio_NewProject_Console3.gif "Create new Console Project")
+![Visual Studio create console project workflow for a Telerik Document Processing sample](images/VisualStudio_NewProject_Console3.gif)
 
 ## Step 3: Add the Required Telerik Document Processing Packages
 
@@ -74,7 +74,7 @@ You can find the complete Telerik Document Processing package list in [Available
 
 Use the following snippet to create the `RadFlowDocument` instance that the sample exports later.
 
-#### **Example 1: Create a RadFlowDocument**
+**Create a RadFlowDocument and insert the initial text content**
 
 <snippet id='first-steps-create-document'/>
 
@@ -82,7 +82,7 @@ Use the following snippet to create the `RadFlowDocument` instance that the samp
 
 Use this optional step if you want to start from an existing DOCX file instead of building the document content entirely in code.
 
-### Example 2: Import a DOCX File
+**Import an existing DOCX file into a RadFlowDocument**
 
 <snippet id='first-steps-import-docx'/>
 
@@ -93,7 +93,7 @@ Use this optional step if you want to start from an existing DOCX file instead o
 Use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) to save the `RadFlowDocument` as a DOCX file. The following snippet creates the provider instance and exports the generated document to the `bin` folder of the current project.
         
 
-### Example 3: Export a RadFlowDocument to DOCX
+**Export a RadFlowDocument to a DOCX file**
 
 <snippet id='first-steps-export-docx'/>
 
@@ -101,7 +101,7 @@ Use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-d
 
 Use [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the same `RadFlowDocument` to a PDF file.
         
-### Example 4: Export a RadFlowDocument to PDF
+**Export a RadFlowDocument to a PDF file**
 
 <snippet id='first-steps-export-pdf'/>
 
@@ -109,9 +109,9 @@ Use [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdffo
 
 Run the console application and verify that the `bin` folder contains the generated DOCX and PDF files.
 
-### Figure 2: Generated DOCX and PDF Files
+**Generated DOCX and PDF files in the Telerik Document Processing sample output folder**
 
-![Exported files](images/FinalResult.png "Exported files")
+![Generated DOCX and PDF files in the Telerik Document Processing sample output folder](images/FinalResult.png)
 
 ## Next Steps
 

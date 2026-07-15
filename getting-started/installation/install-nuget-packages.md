@@ -181,20 +181,28 @@ Use a local feed when you need offline development, an internal mirror, or contr
 
 1. Download the `.nupkg` files for the Telerik suite or distribution that includes Telerik Document Processing from your Telerik account.
 
-![Download Telerik Document Processing NuGet packages from your Telerik account](images/install-using-nuget001.png)
+**Telerik account download page for Telerik Document Processing NuGet packages**
+
+![Telerik account download page for Telerik Document Processing NuGet packages](images/install-using-nuget001.png)
 
 2. Copy the `.nupkg` files to a local or network folder that will act as the package source.
 3. In Visual Studio, open **Manage NuGet Packages...** and then select the **Settings** icon.
 
-![Open NuGet package source settings in Visual Studio](images/installation-nuget-packages001.png)
+**Visual Studio NuGet package manager settings for package source configuration**
+
+![Visual Studio NuGet package manager settings for package source configuration](images/installation-nuget-packages001.png)
 
 4. Add a new package source. Set **Source** to the folder that contains the `.nupkg` files.
 
-![Add a local NuGet package source in Visual Studio](images/install-using-nuget002.png)
+**Visual Studio dialog for adding a local NuGet package source for Telerik Document Processing**
+
+![Visual Studio dialog for adding a local NuGet package source for Telerik Document Processing](images/install-using-nuget002.png)
 
 5. Select the local package source and install the required Telerik Document Processing packages.
 
-![Install Telerik Document Processing packages from a local NuGet feed](images/install-using-nuget003.png)
+**Visual Studio package manager installing Telerik Document Processing packages from a local NuGet feed**
+
+![Visual Studio package manager installing Telerik Document Processing packages from a local NuGet feed](images/install-using-nuget003.png)
 
 If you also restore from NuGet.org or another feed, configure `NuGet.Config` so your local feed is used intentionally rather than accidentally.
 
@@ -223,19 +231,27 @@ https://nuget.telerik.com/v3/index.json
 
 1. In Solution Explorer, right-click the project, select **Manage NuGet Packages...**, and then select the **Settings** icon.
 
-![Open NuGet package source settings for the Telerik feed](images/installation-nuget-packages001.png)
+**Visual Studio NuGet package source settings for the Telerik feed**
+
+![Visual Studio NuGet package source settings for the Telerik feed](images/installation-nuget-packages001.png)
 
 2. Select **+** to add a new package source. Enter `https://nuget.telerik.com/v3/index.json` in **Source** and use a descriptive name such as **Telerik NuGet Server**.
 
-![Add the Telerik NuGet server as a package source in Visual Studio](images/installation-nuget-packages002.png)
+**Visual Studio dialog for adding the Telerik NuGet server package source**
+
+![Visual Studio dialog for adding the Telerik NuGet server package source](images/installation-nuget-packages002.png)
 
 3. Select **Telerik NuGet Server** from **Package source** and authenticate with your Telerik account or API-key-based configuration.
 
-![Authenticate to the Telerik NuGet server in Visual Studio](images/installation-nuget-packages003.png)
+**Visual Studio authentication prompt for the Telerik NuGet server**
+
+![Visual Studio authentication prompt for the Telerik NuGet server](images/installation-nuget-packages003.png)
 
 4. Select and install the required NuGet packages.
 
-![Install Telerik Document Processing packages from the Telerik NuGet server](images/installation-nuget-packages004.png)
+**Visual Studio package manager installing Telerik Document Processing packages from the Telerik NuGet server**
+
+![Visual Studio package manager installing Telerik Document Processing packages from the Telerik NuGet server](images/installation-nuget-packages004.png)
 
 ### How to Reset Stored Telerik Feed Credentials
 

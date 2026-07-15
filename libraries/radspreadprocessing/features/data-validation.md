@@ -81,56 +81,56 @@ The `AnyValueDataValidationRuleContext` class exposes the following properties:
 
 The any value data validation rule is the default rule. It applies to all cells and does not perform any data validation. You can specify an input message. The error message is never shown because all values are considered valid input in this rule.
 
-**Example 1** shows how to create an any value validation rule and set it to a cell.
+**Example 1** shows how to create an any value validation rule and apply it to a cell.
 
-#### __Example 1: Apply Any Value Rule__
+**Example 1: Apply an any value data validation rule**
 
 <snippet id='codeblock-chb'/>
 
 The result from the code snippet in **Example 1** is shown in **Figure 1**.
 
-#### Figure 1: Any value rule
+**Any value rule input message displayed for the selected cell**
 
-![Any Value Rule Result](images/RadSpreadProcessing_Features_Data_Validation_01.png)
+![Telerik Document Processing RadSpreadProcessing any value data validation input message shown for a selected worksheet cell](images/RadSpreadProcessing_Features_Data_Validation_01.png)
 
 ## Whole Number Rule
 
 The whole number data validation rule allows you to restrict user input to whole numbers in a certain range. The range is specified using two arguments and a comparison operator. In some cases (for example, when restricting input to the range between 0 and 100) both arguments are used. In other cases (for example, restricting input to numbers greater than 100) only one argument is used. An option to ignore blank values is turned on by default.
 
-The code snippet in **Example 2** shows how to create a whole number data validation rule that restricts user input to the range between 0 and 100 and considers blank values as not valid.
+The code snippet in **Example 2** shows how to create a whole number data validation rule that restricts user input to the range between 0 and 100 and treats blank values as invalid.
 
-#### __Example 2: Apply Whole Number Rule with Two Arguments__
+**Example 2: Apply a whole number rule with two arguments**
 
 <snippet id='codeblock-chc'/>
 
 The result from **Example 2** is shown in **Figure 2**.
 
-#### Figure 2: Whole number rule
+**Whole number rule input message displayed for values between 0 and 100**
 
-![Whole Number Rule](images/RadSpreadProcessing_Features_Data_Validation_02.png)
+![Telerik Document Processing RadSpreadProcessing whole number data validation input message for values between 0 and 100](images/RadSpreadProcessing_Features_Data_Validation_02.png)
 
 The result from entering value *"test"* in the cell containing the data validation rule is shown in **Figure 3**.
 
-#### Figure 3: Whole number rule not valid result
+**Whole number rule error dialog shown after entering invalid text input**
 
-![Whole Number Rule Invalid Result](images/RadSpreadProcessing_Features_Data_Validation_03.png)
+![Telerik Document Processing RadSpreadProcessing whole number data validation error dialog after invalid text input](images/RadSpreadProcessing_Features_Data_Validation_03.png)
 
 The code snippet in **Example 3** shows how to create a whole number data validation rule that restricts user input with one argument to numbers greater than 100.
 
-#### __Example 3: Apply Whole Number Rule with One Argument__
+**Example 3: Apply a whole number rule with one argument**
 
 <snippet id='codeblock-chd'/>
 
-You can enter any valid [formula]({%slug radspreadprocessing-features-formulas-general-information%}) as a rule argument that returns a number. **Example 4** shows how to restrict user input to the values less than the sum of the values in cells A1 and B1.
+You can enter any valid [formula]({%slug radspreadprocessing-features-formulas-general-information%}) as a rule argument that returns a number. **Example 4** shows how to restrict user input to values less than the sum of the values in cells A1 and B1.
 
-#### __Example 4: Apply Whole Number Rule with Formula__
+**Example 4: Apply a whole number rule with a formula**
 
 <snippet id='codeblock-che'/>
 
 
-#### Figure 4: Whole number rule based on formula
+**Whole number rule configured with a formula-based minimum value**
 
-![Whole Number Rule Invalid Result](images/RadSpreadProcessing_Features_Data_Validation_04.png)
+![Telerik Document Processing RadSpreadProcessing data validation dialog using a formula-based minimum value for a whole number rule](images/RadSpreadProcessing_Features_Data_Validation_04.png)
 
 >Note that the cell index passed to the constructor of the `NumberDataValidationRuleContext` is the cell for which the rule is created. Consider the case in which an area from A2 to C5 is selected through the UI and the active cell is A2. You create the same rule as in **Example 4** but apply it for the cell range A2:C5. The formula "=SUM(A1+B1)" contains two relative cell references – A1 and B1. If you select the cell C5 and open the data validation dialog box, the formula that specifies the minimum value is "=SUM(C4+D4)" instead of "=SUM(A1+B1)". The relative references in the formula are translated relatively to the cell passed in the constructor of the data validation rule context.
 
@@ -140,8 +140,7 @@ The decimal data validation rule allows you to restrict user input to decimal nu
 
 **Example 5** demonstrates how to create a decimal data validation rule that restricts user input to values outside the range between 0 and 100.
 
-
-#### __Example 5: Apply Decimal Rule__
+**Example 5: Apply a decimal data validation rule**
 
 <snippet id='codeblock-chf'/>
 
@@ -151,15 +150,13 @@ The list data validation rule allows you to restrict user input to a predefined 
 
 **Example 6** shows the creation of a list data validation rule that restricts user input to a day of the week.
 
-#### __Example 6: Apply List Rule__
+**Example 6: Apply a list data validation rule**
 
 <snippet id='codeblock-chg'/>
 
-**Figure 5** shows the result from **Example 6**.
+**List rule dropdown showing weekday options in the worksheet cell**
 
-#### Figure 5: List rule
-
-![List Rule Result](images/RadSpreadProcessing_Features_Data_Validation_05.png)
+![Telerik Document Processing RadSpreadProcessing list data validation dropdown showing weekday options in a worksheet cell](images/RadSpreadProcessing_Features_Data_Validation_05.png)
 
 ## Date Rule
 
@@ -167,7 +164,7 @@ The date rule allows you to restrict user input to a certain range of dates spec
 
 **Example 7** shows how to restrict user input to the dates in the range between 12 February 2013 and 22 May 2017.
 
-#### __Example 7: Apply Date Rule__
+**Example 7: Apply a date data validation rule**
 
 <snippet id='codeblock-chh'/>
 
@@ -175,9 +172,9 @@ The date rule allows you to restrict user input to a certain range of dates spec
 
 The time rule allows you to restrict user input to a certain range of times specified using two arguments and a comparison operator.
 
-The code snippet in **Example 8** shows how to restrict user input to the range between 10:25 AM and 3:45 PM:
+The code snippet in **Example 8** shows how to restrict user input to the range between 10:25 AM and 3:45 PM.
 
-#### __Example 8: Apply Time Rule__
+**Example 8: Apply a time data validation rule**
 
 <snippet id='codeblock-chi'/>
 
@@ -185,9 +182,9 @@ The code snippet in **Example 8** shows how to restrict user input to the range 
 
 The text length rule allows you to restrict user input to text with a length in a certain range specified using two arguments and a comparison operator.
 
-**Example 9** shows how to restrict user input to text with a length between 5 and 10 symbols.
+**Example 9** shows how to restrict user input to text with a length between 5 and 10 characters.
 
-#### __Example 9: Apply Text Length Rule__
+**Example 9: Apply a text length data validation rule**
 
 <snippet id='codeblock-chj'/>
 
@@ -197,7 +194,7 @@ The custom rule allows you to restrict user input with a custom condition specif
 
 The code snippet in **Example 10** shows how to restrict user input to values greater than or equal to the sum of the values in cells A1 and B1.
 
-#### __Example 10: Apply Custom Rule__
+**Example 10: Apply a custom data validation rule**
 
 <snippet id='codeblock-chk'/>
 
@@ -205,9 +202,9 @@ The code snippet in **Example 10** shows how to restrict user input to values gr
 
 To check if a cell value satisfies a rule, evaluate the rule using the desired cell value. Each data validation rule implements the `IDataValidationRule` interface, which exposes the `Evaluate()` method. The method receives as parameters the worksheet in which the value is located, the cell index in which the value is placed or contained, and the value itself.
 
-**Example 11** demonstrates how to evaluate a rule using the `Evaluate()` method.
+**Example 11** demonstrates how to evaluate a rule by using the `Evaluate()` method.
 
-#### __Example 11: Evaluate Rule__
+**Example 11: Evaluate a data validation rule**
 <snippet id='codeblock-chl'/>
 
 

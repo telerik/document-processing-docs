@@ -21,9 +21,9 @@ To use `TextFormatProvider`, add references to the following packages:
 
 To export a document to plain text, use the `Export()` method of `TextFormatProvider`.
 
-**Example 1** shows how to use `TextFormatProvider` to export a `RadFixedDocument` to a string.
+The following example shows how to use `TextFormatProvider` to export a `RadFixedDocument` to a string.
 
-#### **Example 1: Export RadFixedDocument to string**
+**Export RadFixedDocument to string**
 
 <snippet id='pdf-export-to-text'/>
 

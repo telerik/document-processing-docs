@@ -92,7 +92,7 @@ Specifies the display of a numeric result. This switch is called a "picture" swi
 
 You can insert an Expression field through the `InsertField()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method accepts code as first argument and result as second argument.
 
-**Example 1: Insert an Expression field**
+**Example 1: Insert Sales and Expenses bookmarks and calculate the Net value with a currency symbol**
 
 <snippet id='codeblock-rr'/>
 
@@ -100,7 +100,7 @@ The result is shown in **Figure 1**.
 
 **Figure 1: Expression field and bookmarks in a document**
 
-![RadWordsProcessing Concepts Fields Expression Field 01](images/RadWordsProcessing_Concepts_Fields_Expression_Field_01.png)
+![Telerik RadWordsProcessing expression field example showing Initial Amount and Expenses bookmarks and the Net result updated from Calculate to $70,000.00](images/RadWordsProcessing_Concepts_Fields_Expression_Field_01.png)
 
 ## See Also
 

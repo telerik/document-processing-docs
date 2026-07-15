@@ -38,7 +38,7 @@ Both `Workbook` and `Worksheet` classes expose methods that search their content
 
 **Example 1** creates a new workbook with two empty worksheets and assigns sample values to the sheets. The `FindOptions` instance specifies that the search covers the whole workbook and starts from cell A1 of the first worksheet. The snippet shows how to use the `Find()` and `FindAll()` methods.
 
-**Example 1: Perform Find and Find All**
+**Example 1: Find the first match and all matches in a workbook**
 
 <snippet id='codeblock-chy'/>
 
@@ -50,7 +50,7 @@ In addition to the `Find()` and `FindAll()` methods, the `Workbook` and `Workshe
 
 **Example 2** creates a workbook from scratch with two empty worksheets and adds sample values. The `ReplaceOptions` instance specifies that the replace covers the whole workbook and includes formula values. The operation starts from cell A1 of the first worksheet and the search proceeds by columns.
 
-**Example 2: Perform Replace and Replace All**
+**Example 2: Replace the first match and all matches in a workbook**
 
 <snippet id='codeblock-chz'/>
 

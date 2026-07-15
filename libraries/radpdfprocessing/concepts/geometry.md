@@ -39,7 +39,7 @@ This article covers the supported geometry types:
 
 **Example 1** shows how to create a `RectangleGeometry`.
 
-#### __Example 1: Create RectangleGeometry__
+**Example 1: Create RectangleGeometry**
 
 <snippet id='pdf-create-rectangle-geometry'/>
 
@@ -58,7 +58,7 @@ This article covers the supported geometry types:
 
 **Example 2** shows how to create a `PathGeometry` that consists of line segments and Bezier segments.
 
-#### __Example 2: Create PathGeometry__
+**Example 2: Create PathGeometry**
 
 <snippet id='pdf-create-path-geometry'/>
 

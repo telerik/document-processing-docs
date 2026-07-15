@@ -47,7 +47,7 @@ The supported formats follow different output patterns, so you must choose the e
 >
 > Starting with **R3 2017**, the encoding used to export CSV documents is **UTF-8 with BOM**.
 
-### Example 1: Specify the Export Format
+**Example 1: Create an IWorkbookExporter that writes CSV content to the target stream**
 
 <snippet id='codeblock-dkm'/>
 

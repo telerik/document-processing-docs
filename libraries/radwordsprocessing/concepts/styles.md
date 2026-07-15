@@ -55,7 +55,7 @@ A style can contain one or more of five different sets of style properties, depe
 
 A style must be added to the `RadFlowDocument` style repository to be further applied to elements and participate in style properties evaluation process. For example, the code from **Example 1** creates a table style and adds it to the style repository.
 
-**Example 1: Create a table style and add it to the style repository**
+**Example 1: Create a table style with borders and alignment and add it to the style repository**
 
 <snippet id='codeblock-x'/>
 
@@ -64,7 +64,7 @@ A style must be added to the `RadFlowDocument` style repository to be further ap
 
 To apply a style to a specific element, set its `StyleId` property.
 
-**Example 2: Apply a custom style to an element**
+**Example 2: Apply the custom table style to a new table before adding it to the section**
 
 <snippet id='codeblock-y'/>
 
@@ -80,7 +80,7 @@ Default style is a style which, according to its style type, is applied to objec
 
  You can change the default styling properties for a document through the `DefaultStyle` property of `RadFlowDocument`. **Example 3** shows how you can do that for the font-family, and similar code can be used for the other styling properties for the runs and paragraphs inside a document.
 
-**Example 3: Set a default font-family**
+**Example 3: Set the document default font family to Verdana**
 
 <snippet id='codeblock-z'/>
 
@@ -91,7 +91,7 @@ Built-in styles are commonly used styles, which are predefined for convenience. 
 
 [`BuiltInStyleNames`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.BuiltInStyleNames.html) static class contains properties and methods for getting the IDs of all built-in styles. **Example 4** shows how to get the ID of the "Heading 1" built-in style.
 
-**Example 4: Get the ID of a built-in style**
+**Example 4: Add the built-in Heading 1 style to the style repository by ID**
 
 <snippet id='codeblock-aab'/>
 

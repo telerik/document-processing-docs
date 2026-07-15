@@ -30,7 +30,7 @@ The `IWorksheetViewExporter` interface allows you to manipulate the way the expo
 
 You can create an instance of the `IWorksheetViewExporter` interface through the corresponding method of [IWorksheetExporter]({%slug radspreadstreamprocessing-model-worksheet%}).
 
-**Example 1: Create IWorksheetViewExporter Instance**
+**Example 1: Create an IWorksheetViewExporter from a worksheet exporter**
 
 <snippet id='codeblock-dkw'/>
 
@@ -53,12 +53,12 @@ With the `IWorksheetViewExporter` interface you can set the first visible cell. 
 
 `IWorksheetViewExporter` defines methods that allow you to apply selection to the exported document so that it contains selection ranges when visualized. You can also change the position of the active cell in the selection.
 
-**Example 3: Export a Document with Applied Multiple Selection Ranges**
+**Example 3: Add multiple selection ranges to the exported worksheet view**
 
 <snippet id='codeblock-dky'/>
 
 
-**Example 4: Export a Document with Selection Range and Specified Active Cell of the Selection**
+**Example 4: Add a selection range and set D4 as its active cell**
 
 <snippet id='codeblock-dkz'/>
 
@@ -70,7 +70,7 @@ With the `IWorksheetViewExporter` interface you can set the first visible cell. 
 You can apply a scale factor to the exported document.
 
 
-**Example 5: Set Scale Factor**
+**Example 5: Scale the worksheet view to 50 percent**
 
 <snippet id='codeblock-dla'/>
 
@@ -79,7 +79,7 @@ You can apply a scale factor to the exported document.
 
 `IWorksheetViewExporter` enables you to set whether the resultant document is visualized with grid lines and headers. **Example 6** demonstrates how to hide both grid lines and row/column headers.
 
-**Example 6: Hide Grid Lines and Row/Column Headers**
+**Example 6: Hide grid lines and row and column headers in the worksheet view**
 
 <snippet id='codeblock-dlb'/>
 
@@ -88,7 +88,7 @@ You can apply a scale factor to the exported document.
 
 You can freeze panes in the spreadsheet document through the `SetFreezePanes()` method.
 
-**Example 7: Set Freeze Panes**
+**Example 7: Freeze the top four rows and leftmost six columns**
 
 <snippet id='codeblock-dlc'/>
 
@@ -97,7 +97,7 @@ You can freeze panes in the spreadsheet document through the `SetFreezePanes()` 
 
 An overload of the `SetFreezePanes()` method enables you to change the first visible cell of the scrollable pane (the right-bottom pane).
 
-**Example 8: Set Freeze Panes and Change the First Visible Cell of the Scrollable Pane**
+**Example 8: Freeze panes and make K11 the first visible cell in the scrollable pane**
 
 <snippet id='codeblock-dld'/>
 

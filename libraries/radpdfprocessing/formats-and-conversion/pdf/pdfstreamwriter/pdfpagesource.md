@@ -1,4 +1,4 @@
-﻿---
+---
 title: PdfPageSource
 description: Learn how to use the PdfPageSource class in RadPdfProcessing to represent and work with individual pages from an existing PDF file.
 page_title: PdfPageSource
@@ -18,7 +18,7 @@ The `PdfPageSource` class represents the page content of an existing PDF file.
 
 Obtain an instance of the `PdfPageSource` class by using the `Pages` property of [`PdfFileSource`]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdffilesource%}).
 
-#### **Example 1: Obtain an instance of PdfPageSource**
+**Obtain an instance of PdfPageSource**
 
 <snippet id='pdf-obtain-page-source'/>
 
@@ -33,9 +33,9 @@ Obtain an instance of the `PdfPageSource` class by using the `Pages` property of
 | `Size` | Property of type `Size` representing the size of the page. Its value is determined by the width and height of the `MediaBox`. |
 | `Rotation` | Property of type [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) representing the page rotation. |
 
-**Example 2** shows how you can use `PdfPageSource` to merge the pages of several documents into a single one.
+The following example shows how you can use `PdfPageSource` to merge the pages of several documents into a single one.
 
-#### **Example 2: Merge the pages of several documents**
+**Merge the pages of several documents**
 
 <snippet id='pdf-merge-documents-with-page-source'/>
 

@@ -39,18 +39,18 @@ RadSpreadProcessing supports working with comments. Comments mark information ab
 
 To add a comment, specify the cell index to which the comment relates, the author, the text content, and the creation date. The creation date is optional and defaults to the current date and time.
 
-**Example 1: Add a Comment**
+**Example 1: Add a comment to cell B2**
 
 <snippet id='codeblock-cgm'/>
 
-The previous snippet adds a comment in cell B2.
+The previous example adds a comment to cell B2.
 
 
 ### Removing Comments
 
 To remove a comment, specify the comment instance. You can obtain this instance from the `CommentCollection`.
 
-**Example 2: Remove a Comment**
+**Example 2: Remove a comment from the worksheet**
 
 <snippet id='codeblock-cgn'/>
 
@@ -73,7 +73,7 @@ Each comment can be replied to, forming a thread of information. All replies are
 * `CopyTo`: Copies the entire `ReplySortedCollection` to a compatible one-dimensional array, starting at the specified index of the target array.
 
 
-**Example 3: Working with Replies**
+**Example 3: Work with replies in a comment thread**
 
 <snippet id='codeblock-cgo'/>
 
@@ -90,11 +90,11 @@ The two events for both collections use similar enumeration types for event argu
 * `Add`: Used when adding a comment or reply.
 * `Remove`: Used when removing a comment or reply.
 
-**Example 4: Change the Author of a Comment upon Adding It to the CommentCollection Using the Changing Event**
+**Example 4: Change a comment author in the Changing event**
 
 <snippet id='codeblock-cgp'/>
 
-**Example 5: Change the Author of a Reply upon Adding It to the ReplySortedCollection Using the Changing Event**
+**Example 5: Change a reply author in the Changing event**
 
 <snippet id='codeblock-cgq'/>
 

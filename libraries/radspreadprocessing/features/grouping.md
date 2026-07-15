@@ -29,8 +29,8 @@ Grouping is a mechanism to organize data in sections, to show and hide the relev
 
 Each row or column which is part of a group is assigned an outline level, which determines the level of grouping and which rows or columns it is grouped with. 
 
-**Figure 1: Grouping**
-![Grouping example showing outline levels](images/RadSpreadProcessing_Features_Grouping_01.png)
+**Figure 1: Grouped worksheet rows with nested outline levels**
+![Telerik Document Processing RadSpreadProcessing worksheet showing grouped rows with nested outline levels and expand-collapse controls](images/RadSpreadProcessing_Features_Grouping_01.png)
 
 In **Figure 1**, the rows 1, 2, 4, and 8 have outline level value of 1. Rows 5, 6, and 7 have outline level 2. Rows 3 and 9 do not participate in the grouping and have the default value of 0.
 
@@ -41,20 +41,20 @@ The maximum outline level is 7.
 
 There are two available options when grouping. The first option is to assign the outline level property of the rows or columns:
 
-**Example 1: Grouping Columns Using Outline Level**
+**Example 1: Group columns by setting the outline level**
 
 <snippet id='codeblock-cif'/>
 
 The other option is to use the `Group` method exposed by the row/column selection classes.
 
-**Example 2: Grouping Columns Using the Group Method**
+**Example 2: Group columns by using the Group method**
 
 <snippet id='codeblock-cih'/>
 
 **Figure 2** shows the result of both approaches.
 
-**Figure 2: Result from Grouping**
-![Result of grouping columns](images/RadSpreadProcessing_Features_Grouping_02.png)
+**Grouped worksheet columns created through both grouping approaches**
+![Telerik Document Processing RadSpreadProcessing worksheet showing grouped columns with outline controls after applying column grouping](images/RadSpreadProcessing_Features_Grouping_02.png)
 
 ## Ungrouping Rows or Columns
 
@@ -62,17 +62,17 @@ As with grouping, you can ungroup both through setting the outline level propert
 
 The following code snippets show the two approaches to make these changes in a file.
 
-**Figure 3: Ungrouping Result**
-![Result of ungrouping columns](images/RadSpreadProcessing_Features_Grouping_03.png)
+**Ungrouping result after removing a nested worksheet group**
+![Telerik Document Processing RadSpreadProcessing worksheet before and after ungrouping nested row groups](images/RadSpreadProcessing_Features_Grouping_03.png)
 
 
-**Example 3: Ungrouping Columns Using the Ungroup Method**
+**Example 3: Ungroup columns by using the Ungroup method**
 
 <snippet id='codeblock-cij'/>
 
 You can achieve the same result with the code in **Example 4**.
 
-**Example 4: Ungrouping Columns Using Outline Level**
+**Example 4: Ungroup columns by resetting the outline level**
 
 <snippet id='codeblock-cil'/>
 
@@ -81,7 +81,7 @@ You can achieve the same result with the code in **Example 4**.
 You can get the outline level of a row/column or a group of rows/columns using the code in **Example 5**:
 
 
-**Example 5: Getting the OutlineLevel**
+**Example 5: Get the current outline level**
 
 <snippet id='codeblock-cin'/>
 
@@ -90,8 +90,8 @@ You can get the outline level of a row/column or a group of rows/columns using t
 
 When you group a selection of rows, the row immediately below them is automatically designated to be a summary row for this group. In the context of the grouping feature, this means that the plus/minus outline symbol aligns with this row. The same applies to columns, whose summary column is automatically placed to the right of the group.
 
-**Figure 4: Summary Row**
-![Summary row example](images/RadSpreadProcessing_Features_Grouping_04.png)
+**Figure 4: Summary rows positioned below grouped worksheet rows**
+![Telerik Document Processing RadSpreadProcessing worksheet showing summary rows positioned below grouped row sections](images/RadSpreadProcessing_Features_Grouping_04.png)
 
 In **Figure 4**, the summary row for the group of rows 1 to 4 is row 5 and for rows 7 to 10 it is row 11.
 
@@ -103,12 +103,12 @@ If you want to change the placement of the summary row or column, use the `Group
 
 Both properties have a default value of `true`. The following snippet shows how to set the value of the `SummaryColumnIsToRight` property and what result to expect in the produced file.
 
-**Example 6: Setting the Position of the Summary Column to Left**
+**Example 6: Place the summary column to the left of the group**
 
 <snippet id='codeblock-cip'/>
 
-**Figure 5: Left Summary Column**
-![Left summary column example](images/RadSpreadProcessing_Features_Grouping_05.png)
+**Summary column moved to the left of grouped worksheet columns**
+![Telerik Document Processing RadSpreadProcessing worksheet showing the summary column positioned to the left of grouped columns](images/RadSpreadProcessing_Features_Grouping_05.png)
 
 ## See Also
 

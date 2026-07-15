@@ -41,7 +41,7 @@ PdfProcessing provides a default implementation called `ImagePropertiesResolver`
 
 >note View the implementation [Requirements](#requirements).
 
-#### **Example 1: Set the default implementation of the ImagePropertiesResolver class**
+**Set the default implementation of the ImagePropertiesResolver class**
 
 <snippet id='pdf-image-property-resolver'/>
 
@@ -65,7 +65,7 @@ The **Telerik.Documents.ImageUtils** package provides a default implementation o
 
 >note View the implementation [Requirements](#requirements).
 
-#### **Example 2: Set the default implementation of the JpegImageConverter class**
+**Set the default implementation of the JpegImageConverter class**
 
 <snippet id='pdf-jpeg-image-converter'/>
 
@@ -86,11 +86,11 @@ The following `using`/`imports` statements are required in the project:
 * using SixLabors.ImageSharp.PixelFormats;
 * using SixLabors.ImageSharp.Processing;
 
-#### **Example 3: Create a custom implementation inheriting the JpegImageConverterBase abstract class**
+**Create a custom implementation inheriting the JpegImageConverterBase abstract class**
 
 <snippet id='pdf-custom-sixlabors-imagesharp-converter'/>
 
-#### **Example 4: Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
+**Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
 
 <snippet id='pdf-set-custom-image-converter'/>
 

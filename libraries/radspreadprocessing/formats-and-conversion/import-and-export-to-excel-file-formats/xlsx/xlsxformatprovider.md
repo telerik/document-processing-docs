@@ -33,11 +33,11 @@ The following example shows how to import an XLSX file using a FileStream. The c
 
 The following example demonstrates how to export an existing Workbook to an XLSX file. The snippet creates a new workbook with a single worksheet. It then creates an `XlsxFormatProvider` and calls its `Export()` method. The `Export()` method accepts a parameter of type `Stream` so you can work with any of its inheritors.
 
-**Example 2: Export Spreadsheet Document to XLSX (Excel Workbook) File**
+**Example 2: Create a workbook and export it to an XLSX file stream**
 
 <snippet id='codeblock-cox'/>
 
-**Example 3: Export Spreadsheet Document to a Stream and Byte Array**
+**Example 3: Export a workbook to a memory stream and capture the XLSX bytes**
 
 <snippet id='codeblock-coy'/>
 

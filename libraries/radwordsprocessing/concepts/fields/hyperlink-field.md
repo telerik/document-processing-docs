@@ -21,7 +21,7 @@ The following table shows the syntax of a Hyperlink field:
 | { **HYPERLINK** "_Filename_" [_Switches_ ] } |
 
 
-![Rad Words Processing Concepts Custom Code Field 01](images/RadWordsProcessing_Concepts_CustomCodeField_01.png)
+![Telerik RadWordsProcessing HYPERLINK field syntax diagram showing the field type, URL argument, and tooltip switch](images/RadWordsProcessing_Concepts_CustomCodeField_01.png)
 
 ### "Filename"
 The destination you want to navigate to.
@@ -58,7 +58,7 @@ You can insert a Hyperlink field through the [RadFlowDocumentEditor]({%slug radw
 
 * `InsertHyperlink()` method: Accepts the hyperlink text, URI, IsAnchor value, and tooltip as parameters.
 
-	**Example 1: Insert a Hyperlink using the InsertHyperlink method**
+	**Example 1: Insert a hyperlink to telerik.com with display text and a tooltip by using InsertHyperlink**
 
 	<snippet id='codeblock-yy'/>
 
@@ -66,13 +66,13 @@ You can insert a Hyperlink field through the [RadFlowDocumentEditor]({%slug radw
 
 	**Figure 1: Hyperlink inserted in a document**
 
-	![Rad Words Processing Concepts Hyperlinks 01](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_01.png)
+	![Telerik RadWordsProcessing hyperlink example showing a blue underlined telerik link with a Telerik site tooltip in the document](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_01.png)
 
 	>tip The `InsertHyperlink()` method also automatically applies the Hyperlink style to the result fragment of the inserted field. More information about styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
 
 * `InsertField()` method: Accepts code as first argument and result as second argument.
 
-	**Example 2: Insert a Hyperlink field using the InsertField method**
+	**Example 2: Insert a HYPERLINK field manually with InsertField and a tooltip switch**
 
 	<snippet id='codeblock-zz'/>
 
@@ -80,12 +80,12 @@ You can insert a Hyperlink field through the [RadFlowDocumentEditor]({%slug radw
 
 	**Figure 2: Hyperlink inserted in a document**
 
-	![Rad Words Processing Concepts Hyperlinks 02](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_02.png)
+	![Telerik RadWordsProcessing hyperlink field result showing the telerik text with a Telerik site tooltip after insertion through InsertField](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_02.png)
           
 
 Hyperlinks can also point to a [Bookmark]({%slug radwordsprocessing-model-bookmark%}) inside the document. **Example 3** shows how to create a document containing a bookmark and a hyperlink pointing to that bookmark.
 
-**Example 3: Insert a hyperlink pointing to a bookmark**
+**Example 3: Create a bookmark and insert a hyperlink that navigates to it inside the document**
 
 <snippet id='codeblock-ba'/>
 
@@ -93,7 +93,7 @@ The result of the above snippet is illustrated in **Figure 3**.
 
 **Figure 3: Hyperlink and bookmark in a document**
 
-![Rad Words Processing Concepts Hyperlinks 03](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_03.png)
+![Telerik RadWordsProcessing bookmark hyperlink example showing a Go to start link that points to the DocumentStart bookmark with a tooltip](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_03.png)
 
 ## See Also
 

@@ -58,6 +58,8 @@ This example implements a production-ready ASP.NET Core controller that addresse
 
 The implementation provides three HTTP endpoints: `POST /chat` for processing messages, `GET /documents` for listing user documents, and `DELETE /documents` for clearing user data. The `[Authorize]` attribute ensures all endpoints require authentication.
 
+**ASP.NET Core controller example with per-user document repository isolation**
+
 ```csharp
 using System.Collections.Concurrent;
 using System.Security.Claims;
@@ -312,6 +314,8 @@ This example implements a self-contained multi-user agent system that addresses 
 * **Handling Concurrent Access**: The `ConcurrentDictionary<string, UserAgentSession>` in `MultiUserAgentApplication` ensures thread-safe session management. Multiple users can interact with their sessions simultaneously, and the `FunctionInvokingChatClient` wrapper handles tool execution safely.
 
 The `UserAgentSession` class encapsulates the complete agent experience: repositories, conversation history (system message + all interactions), and tools. It provides both synchronous (`ChatAsync`) and streaming (`ChatStreamingAsync`) interaction methods, making it suitable for rich conversational applications. The `GetHistory()` and `ClearHistory()` methods give applications control over conversation context management.
+
+**Multi-user agent session example with isolated repositories and conversation history**
 
 ```csharp
 using System.Collections.Concurrent;

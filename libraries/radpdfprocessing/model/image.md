@@ -35,17 +35,17 @@ You can edit an `Image` element using the properties the class exposes. The prop
 
 **Example 1** shows how to initialize an `Image` object, assign an `ImageSource` to it, and add it to a previously defined container (page).
 
-#### **Example 1: Create image**
+**Example 1: Create image**
 
 <snippet id='pdf-create-image'/>
 
 Once you [export]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) the `RadFixedDocument`, the following document with an image is created:
 
-![Image in RadFixedPage](images/pdf-processing-image.png)
+![RadPdfProcessing Image in RadFixedPage](images/pdf-processing-image.png)
 
 **Example 2** demonstrates how to use one of the factory methods of the `ContentElementCollection` to create a new image and insert it into the respective container.
 
-#### **Example 2: Add image to container**
+**Example 2: Add image to container**
 
 <snippet id='pdf-image-source'/>
 
@@ -55,7 +55,7 @@ The `Image` class also exposes the `GetBitmapSource()` method, which allows you 
 
 > The `GetBitmapSource()` method is not available in the .NET Standard version of the PdfProcessing packages.
 
-#### **Example 3: Obtain BitmapSource**
+**Obtain BitmapSource**
 
 <snippet id='pdf-obtain-botmap-source'/>
 

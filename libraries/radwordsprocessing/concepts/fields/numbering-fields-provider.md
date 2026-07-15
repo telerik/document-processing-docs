@@ -20,7 +20,7 @@ To use the default implementation of the `NumberingFieldsProvider`, reference th
 
 Set the default provider with the following code:
 
-**Example 1: Register the default NumberingFieldsProvider**
+**Example 1: Register the default PDF-based NumberingFieldsProvider**
 
 <snippet id='codeblock-bf'/>
 
@@ -28,7 +28,7 @@ Set the default provider with the following code:
 
 The `RegisterNumberingStyleConverter` method allows you to register a custom numbering style converter.
 
-**Example 2: Register a custom NumberingStyleConverter**
+**Example 2: Register a custom numbering style converter for ChineseCounting**
 
 <snippet id='codeblock-bg'/>
 

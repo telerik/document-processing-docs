@@ -27,7 +27,7 @@ You can insert a `SectionPages` field through the [RadFlowDocumentEditor]({%slug
 
 **Example 1** demonstrates how you can insert a `SectionPages` field.
 
-**Example 1: Insert SectionPages Field**
+**Example 1: Insert PAGE and SECTIONPAGES fields to display the current page within the current section total**
 
 <snippet id='codeblock-bl'/>
 

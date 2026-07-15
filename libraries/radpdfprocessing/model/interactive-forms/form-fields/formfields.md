@@ -37,7 +37,7 @@ The `FormField` class provides the following properties:
 
 You can recognize each field type from the `FormField` base class by getting the value from its `FieldType` property. This allows you to convert the field to its inheritor type by casting to one of the `FormField` class inheritors.
 
-**Example 1: Obtain fields from a document**
+**Obtain fields from a document**
 
 <snippet id='pdf-obtain-fields-from-document'/>
 
@@ -56,7 +56,7 @@ The following list shows all the inheritors of the `FormField` class:
 
 Starting with R2 2020, the `Rename` method allows you to rename form fields. Pass the existing field name and the new name.
 
-**Example 2: Rename form fields**
+**Rename form fields**
 
 <snippet id='pdf-rename-form-field'/>
 
@@ -64,7 +64,7 @@ Starting with R2 2020, the `Rename` method allows you to rename form fields. Pas
 
 When merging documents that contain form fields, you must ensure that each field in the document has a unique name. Use the `MergedFieldNameResolving` event to achieve this. This event gives you access to all used field names and allows you to change the current field name if it is already in use.
 
-**Example 3: Merge files with form fields**
+**Merge files with form fields**
 
 <snippet id='pdf-fields-merge'/>
 

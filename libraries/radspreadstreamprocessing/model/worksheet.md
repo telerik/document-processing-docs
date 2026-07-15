@@ -33,7 +33,7 @@ In `RadSpreadStreamProcessing`, a worksheet can be exported through the [`IWorks
 
 You can create a concrete instance of `IWorksheetExporter` through the `CreateWorksheetExporter()` method of [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}). **Example 1** demonstrates how to add a worksheet to a workbook.
 
-**Example 1: Create IWorksheetExporter**
+**Example 1: Create a worksheet exporter named My sheet**
 
 <snippet id='codeblock-dlx'/>
 

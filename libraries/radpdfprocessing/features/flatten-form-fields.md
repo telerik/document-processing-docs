@@ -17,7 +17,7 @@ Two methods are available for flattening. One flattens all fields and the other 
 
 The `FlattenFormFields` method does not take any parameters and flattens all fields inside the document.
 
-**Example 1: Flatten All Fields**
+**Flatten All Fields**
 
 <snippet id='pdf-flatten-all-fields'/>
 
@@ -25,7 +25,7 @@ The `FlattenFormFields` method does not take any parameters and flattens all fie
 
 The `FlattenFormField` method takes the field that you want to flatten as a parameter. The field must belong to the same document.
 
-**Example 2: Flatten a Single Field**
+**Flatten a Single Field**
 
 <snippet id='pdf-flatten-single-field'/>
 

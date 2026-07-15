@@ -35,7 +35,7 @@ Use the `Unprotect(string)` method of the `Workbook` class to remove the workboo
 
 **Example 2** demonstrates how to unprotect a workbook.
 
-**Example 2: Unprotect a Workbook**
+**Example 2: Remove workbook protection by supplying the current password**
 
 <snippet id='codeblock-cnc'/>
 

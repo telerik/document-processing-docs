@@ -35,7 +35,7 @@ The `SetHidden()` method changes the hidden state of the rows and columns. It ta
 
 **Example 1** shows how to get and change the hidden state of several rows using the `RowSelection` class. The code checks if all the rows in the selection are visible and only then hides them. If the selection contains any hidden rows, the hidden state is cleared which makes all rows visible.
 
-**Example 1: Change Row Hidden State**
+**Example 1: Hide rows 6 through 8 when they are visible, or clear the hidden state otherwise**
 
 <snippet id='codeblock-crj'/>
 
@@ -46,7 +46,7 @@ When the hidden state property of a `RowSelection` or a `ColumnSelection` is set
 
 **Example 2** shows how you can set the width of a group of columns without affecting the hidden state.
 
-**Example 2: Change Column Width**
+**Example 2: Set the width of columns F through H to zero without changing their hidden state**
 
 <snippet id='codeblock-crk'/>
 
@@ -56,7 +56,7 @@ Like setting the height or width through the `SetHeight()` and `SetWidth()` meth
 
 **Example 3** demonstrates this by hiding a row, autofitting it, and then checking its hidden state.
 
-**Example 3: Auto Fit on Hidden Rows**
+**Example 3: Auto-fit a hidden row and verify that its hidden state stays unchanged**
 
 <snippet id='codeblock-crl'/>
 

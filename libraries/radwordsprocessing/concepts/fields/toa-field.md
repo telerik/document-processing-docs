@@ -37,7 +37,7 @@ You can insert this field through the [RadFlowDocumentEditor]({%slug radwordspro
 
 **Example 1** demonstrates how you can insert a TOA field.
 
-**Example 1: Insert TOA Field**
+**Example 1: Insert a Table of Authorities (TOA) field for category 3 with heading and passim/page-number formatting  switches**
 
 ```C#
     var document = new RadFlowDocument();

@@ -53,7 +53,7 @@ Starting with R3 2021, `SpreadStreamProcessing` exposes the `BuiltInNumberFormat
 
 The following example demonstrates how you can get a specific format and set it when exporting a cell.
 
-**Example 1: Using the BuiltInNumberFormats Class**
+**Example 1: Apply a culture-specific fraction format to an exported cell value**
 
 <snippet id='codeblock-dkt'/>
 

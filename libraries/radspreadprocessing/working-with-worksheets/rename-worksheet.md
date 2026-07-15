@@ -44,7 +44,7 @@ The name of the worksheet cannot exceed 31 characters.
 
 **Example 1** creates a new workbook, adds a single worksheet to it, and renames the newly added worksheet.
 
-**Example 1: Create and Rename a Worksheet**
+**Example 1: Add a worksheet and rename it to Sam's Worksheet**
 
 <snippet id='codeblock-csn'/>
 
@@ -52,7 +52,7 @@ The name of the worksheet cannot exceed 31 characters.
 
 **Example 2** creates a new workbook and adds two worksheets to it. The snippet illustrates how to rename the worksheet with index 0 to "July's Worksheet". To ensure name uniqueness, the sample code checks if the workbook already contains a worksheet with the desired name.
 
-**Example 2: Rename a Worksheet**
+**Example 2: Rename the first worksheet only if the target name is not already used**
 
 <snippet id='codeblock-cso'/>
 

@@ -22,7 +22,7 @@ The `CheckBoxField` class corresponds to the `FormFieldType.CheckBox` enum value
 | `Widgets` | The collection of Widget annotations representing the field on the PDF pages. You can add widgets with `AddWidget()` and remove them with `Remove()`. Implements `IEnumerable`. |
 | `ExportValue` | Gets or sets the value of the field when exporting the interactive form. The default export value is `"Yes"`. |
 
-**Example 1: Create a CheckBoxField and add it to a page**
+**Create a CheckBoxField and add it to a page**
 
 <snippet id='pdf-checkbox-field'/>
 

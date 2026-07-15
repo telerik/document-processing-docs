@@ -34,7 +34,9 @@ To use **Document Processing Libraries Configuration Wizard** from the **VS Code
 
  2\. Select the `Telerik UI for .NET MAUI: Add Document Processing Libraries`.
 
-  ![Configure Document Processing Wizard, Context Menu](images/DPLMAUI_ContextMenu.png)  
+  **VS Code file explorer context menu for adding Telerik Document Processing Libraries in a .NET MAUI project**
+
+  ![VS Code file explorer context menu for adding Telerik Document Processing Libraries in a .NET MAUI project](images/DPLMAUI_ContextMenu.png)  
 
 ### Using the Code Editor Command Palette
 
@@ -44,11 +46,15 @@ To use **Document Processing Libraries Configuration Wizard** from the **VS Code
 
  2\. Select `Telerik UI for Maui: Add Document Processing Libraries`.
 
- ![Configure Document Processing Wizard, Command Palette](images/DPLMAUI_Pallete.png)  
+ **VS Code command palette command for adding Telerik Document Processing Libraries in a .NET MAUI project**
+
+ ![VS Code command palette command for adding Telerik Document Processing Libraries in a .NET MAUI project](images/DPLMAUI_Pallete.png)  
 
 After you execute one of the options, the wizard appears: 
 
- ![Configure Document Processing Wizard](images/Configure_Document_Processing_Wizard_MAUI.png) 
+ **VS Code Telerik Document Processing Configuration Wizard for selecting libraries and target project**
+
+ ![VS Code Telerik Document Processing Configuration Wizard for selecting libraries and target project](images/Configure_Document_Processing_Wizard_MAUI.png) 
 
 The **Telerik Document Processing Configuration wizard** lets you select which libraries your project uses. You can choose the license and the `.csproj` file in which to install the packages. This option is useful when you have many opened projects in the workspace. If a library you selected has any dependencies, they are automatically checked. The following table lists the packages that are selected for each library:
 

@@ -12,7 +12,7 @@ position: 18
 
 `RadSpreadProcessing` allows you to set a culture that differs from the current thread culture. Create a new `CultureHelper` to achieve this.
 
-**Setting the Culture**
+**Set a workbook culture with CultureHelper**
 
 <snippet id='codeblock-ckl'/>
 

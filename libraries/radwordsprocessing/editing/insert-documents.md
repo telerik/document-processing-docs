@@ -29,7 +29,7 @@ The [`InsertDocumentOptions`](https://docs.telerik.com/devtools/document-process
 
 **Example 1** demonstrates how to use the `InsertDocument()` method.
 
-**Example 1: Insert Source Document into Target Document**
+**Example 1: Insert a source document into a target document with explicit insert options**
 
 <snippet id='codeblock-bt'/>
 

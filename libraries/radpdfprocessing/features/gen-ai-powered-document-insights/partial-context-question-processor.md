@@ -67,13 +67,13 @@ The settings are created only through the `EmbeddingSettingsFactory` `CreateSett
 
 ## Usage Examples
 
-#### **Example 1: Using PartialContextQuestionProcessor with Default Embedding**
+**Using PartialContextQuestionProcessor with Default Embedding**
 
 This example demonstrates how to use the `PartialContextQuestionProcessor` with the built-in embedding on .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows). To set up the AI client, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context'/>
 
-#### **Example 2: Using PartialContextQuestionProcessor with Custom IEmbedder**
+**Using PartialContextQuestionProcessor with Custom IEmbedder**
 
 This example demonstrates how to use the `PartialContextQuestionProcessor` with a custom `IEmbedder` implementation as described in the [Implementing Custom IEmbedder]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section:
 
@@ -91,7 +91,7 @@ The following code snippet shows a sample custom `CustomOpenAIEmbedder` implemen
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-partial-context-custom-openai-embedder'/>
 
-#### **Example 3: Processing Specific Pages**
+**Processing Specific Pages**
 
 <snippet id='libraries-pdf-features-gen-ai-summarize-process-specific-pages'/>
 

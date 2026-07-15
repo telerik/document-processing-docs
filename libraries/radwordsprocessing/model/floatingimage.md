@@ -16,7 +16,7 @@ position: 9
 
 **Example 1** shows how to create a `FloatingImage` and add it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
 
-**Example 1: Create a Floating Image and Insert It in a Paragraph**
+**Example 1: Create a FloatingImage instance and append it to a paragraph**
 
 <snippet id='codeblock-chch'/>
 
@@ -24,19 +24,19 @@ position: 9
 
 You can add an image at a specific index in the `Inlines` collection of a paragraph using the `Insert()` method. The following example shows how to add a `FloatingImage` at the beginning of a paragraph:
 
-**Example 2: Add a Floating Image to a Specific Position**
+**Example 2: Assign an image source and insert the floating image at the beginning of a paragraph**
 
 <snippet id='codeblock-cici'/>
 
 You can also use the `AddFloatingImage()` method of the `Inlines` collection of a paragraph. The method creates a new `FloatingImage`, adds it to the paragraph, and returns it.
 
-**Example 3: Using the AddFloatingImage Method**
+**Example 3: Create and add a floating image with the AddFloatingImage method**
 
 <snippet id='codeblock-cjcj'/>
 
 You can also insert a `FloatingImage` element in a `RadFlowDocument` with [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
 
-**Example 4: Insert a Floating Image Using RadFlowDocumentEditor**
+**Example 4: Insert a floating PNG image from a stream with RadFlowDocumentEditor**
 
 <snippet id='codeblock-ckck'/>
 

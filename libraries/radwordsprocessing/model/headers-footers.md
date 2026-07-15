@@ -41,13 +41,13 @@ Create headers and footers through the section properties for the required `Head
 
 Use the following example to create a header:
 
-### Example: Create a header
+### Example: Create default, first-page, and even-page headers for a section
 
 <snippet id='codeblock-clcl'/>
 
 Use the following example to create a footer:
 
-### Example: Create a footer
+### Example: Create default, first-page, and even-page footers for a section
 
 <snippet id='codeblock-cmcm'/>
 
@@ -59,13 +59,13 @@ You can access the headers and footers of a section through the `Default`, `Even
 
 The following example gets the default header of a section:
 
-### Example: Get the default header of a section
+### Example: Get the default header from a section
 
 <snippet id='codeblock-cncn'/>
 
 The following example gets the default footer of a section:
 
-### Example: Get the default footer of a section
+### Example: Get the default footer from a section
 
 <snippet id='codeblock-coco'/>
 
@@ -73,7 +73,7 @@ The following example gets the default footer of a section:
 
 The following example adds different headers for odd and even pages:
 
-### Example: Add headers for even and odd pages
+### Example: Add different default and even-page headers to the document
 
 <snippet id='codeblock-cpcp'/>
 

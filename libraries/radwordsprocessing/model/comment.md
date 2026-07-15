@@ -19,7 +19,7 @@ A `Comment` holds annotation markers, which specify the range of document elemen
 
 **Example 1** shows how to create a `Comment` and add its `CommentRangeStart` and `CommentRangeEnd` elements in a paragraph.
 
-**Example 1: Add a Comment to a Paragraph**
+**Example 1: Create a comment and place its start and end markers around a run in a paragraph**
 
 <snippet id='codeblock-cdcd'/>
 
@@ -27,13 +27,13 @@ The `AddComment()` method of the `Comments` collection of a document creates a n
 
 **Example 2** shows how to insert a previously created `Comment` object in a document by using [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The `InsertComment()` method inserts the comment start and end elements.
 
-**Example 2: Insert a Previously Created Comment**
+**Example 2: Insert a previously created comment with RadFlowDocumentEditor**
 
 <snippet id='codeblock-cece'/>
 
 **Example 3** demonstrates how to use another overload of the `InsertComment()` method of `RadFlowDocumentEditor`. In this case, a string representing the text of the `Comment` and two inline elements are passed. The two inline elements specify the element before which the `CommentRangeStart` is added and the element after which the `CommentRangeEnd` is added.
 
-**Example 3: Insert a Comment Around a Run**
+**Example 3: Insert a text comment around a run with RadFlowDocumentEditor**
 
 <snippet id='codeblock-cfcf'/>
 
@@ -51,7 +51,7 @@ The `Comment` class exposes several properties that allow you to customize infor
 
 **Example 4** shows how to add a `Table` to a `Comment`.
 
-**Example 4: Add Blocks to a Comment**
+**Example 4: Add a paragraph and a table to a comment body**
 
 <snippet id='codeblock-cgcg'/>
 

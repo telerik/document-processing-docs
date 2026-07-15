@@ -28,6 +28,6 @@ position: 2
 
 **Example 1** shows how to create and specify a particular setting to a `CsvFormatProvider`.
 
-**Example 1: Use CsvSettings**
+**Example 1: Configure CsvSettings with a custom delimiter, quote, header row, and UTF-8 encoding**
 
 <snippet id='codeblock-cok'/>

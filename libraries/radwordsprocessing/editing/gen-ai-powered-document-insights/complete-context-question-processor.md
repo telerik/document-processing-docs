@@ -58,7 +58,7 @@ The `CompleteContextProcessorSettings` class defines configuration options for t
 
 The following example demonstrates how to use the `CompleteContextQuestionProcessor` to ask questions about a Word document, including working with specific document pages. For setting up the AI client as shown in this example, see the [AI Provider Setup]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
-**Example 1: Using CompleteContextQuestionProcessor**
+**Example 1: Load a DOCX file, configure Azure OpenAI, and ask full-document questions with CompleteContextQuestionProcessor**
 
 <snippet id='libraries-flow-features-gen-ai-ask-questions-using-complete-context'/>
 

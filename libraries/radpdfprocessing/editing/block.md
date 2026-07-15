@@ -24,7 +24,7 @@ The most common usage of `Block` is to draw flowing content. Similarly to [Fixed
 
 Insert [TextFragments]({%slug radpdfprocessing-model-textfragment%}) with one of the overloads of the `Insert()` method. **Example 1** shows all the overloads which allow specifying the styles and font family.
             
-#### **Example 1: Insert text**
+**Example 1: Insert text**
 
 <snippet id='pdf-block-insert-text'/>
 
@@ -37,7 +37,7 @@ Insert [TextFragments]({%slug radpdfprocessing-model-textfragment%}) with one of
 Inserting a line break results in the next element starting on a new line. Use the `InsertLineBreak()` method as shown in **Example 2**.
             
 
-#### **Example 2: Break the line**
+**Example 2: Break the line**
 
 <snippet id='pdf-block-line-break'/>
 
@@ -52,7 +52,7 @@ Inserting a line break results in the next element starting on a new line. Use t
 * block.InsertImage(imageSource, width, height);
 * block.InsertImage(stream, width, height);
                 
-#### **Example 3: Inserting an image**
+**Example 3: Inserting an image**
 
 <snippet id='pdf-block-insert-image'/>
 
@@ -69,7 +69,7 @@ Information on images in the context of the library is available in the [ImageSo
 * block.`InsertPath`(geometry);
 * block.`InsertRectangle`(rectangle);
                 
-#### **Example 4: Inserting a geometry**
+**Example 4: Inserting a geometry**
 
 <snippet id='pdf-block-insert-geometry'/>
 
@@ -77,7 +77,7 @@ Information on images in the context of the library is available in the [ImageSo
 
 The Form (also known as Form-XObject) is an object that can contain PDF content and can be shared among the document. The `Block` class exposes the `InsertForm()` method that allows you to insert a `FormSource` object in the document. 
 
-#### **Example 5: Insert a form**
+**Example 5: Insert a form**
 
 <snippet id='pdf-block-insert-form'/>
 
@@ -90,7 +90,7 @@ There are two more overloads of `InsertForm()` that allow you to pass the size t
 
 The following example shows how to insert a link inside the text:
 
-#### **Example: Insert a text link**
+**Example 6: Insert a text link**
 
 <snippet id='pdf-block-text-link'/>
 
@@ -161,17 +161,17 @@ The `Block` class has properties and methods that affect how it is rendered:
 * `Clear()`: Clears all elements in the block.
                 
 
-#### **Example 6: Change Block properties**
+**Example 7: Change Block properties**
 
 <snippet id='pdf-block-change-properties'/>
 
-![Block Properties Result](images/radpdfprocessing-editing-block_5_result.png)
+![RadPdfProcessing Block Properties Result](images/radpdfprocessing-editing-block_5_result.png)
 
 ## Drawing a Block
 
 A Block can be drawn to the content using the `Draw()` method. The method accepts as a parameter a `Rectangle`, specifying the desired size and position relative to the editor of the element.
         
-#### **Example 7: Draw block**
+**Example 8: Draw block**
 
 <snippet id='pdf-draw-block'/>
 
@@ -184,30 +184,32 @@ Measuring a `Block` can be achieved with one of the two overloads of the `Measur
 
 Invoking the method without a parameter returns the desired size of the block elements and sets it as the block `DesiredSize` property. The method is handy when you want to determine what size the `Block` needs depending on its content. 
 
-**Example 8** creates a `Block` with text, measures the text, and sets the block size to match the content size.
+**Example 9** creates a `Block` with text, measures the text, and sets the block size to match the content size.
         
 <snippet id='libraries-pdf-editing-block-measure-without-parameter'/>
 
-#### Example 8 Result
-![Rad Pdf Processing Measuring Block 01](images/RadPdfProcessing_Measuring_Block_01.png)
+**Example 9 Result**
+
+![RadPdfProcessing Block Example 9 Result](images/RadPdfProcessing_Measuring_Block_01.png)
         
 The second overload accepts an available `Size`. Calling it measures the block content as if the `Block` was in that specific size. Additionally, it sets the `PendingElements` property with a collection of the elements that could not fit in the available size.
         
-**Example 9** creates a `Block` with text and draws it with a specific size using the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}). The block content auto-fits to the dimensions of the `Block`. The size of the auto-fitted content can then be measured.
+**Example 10** creates a `Block` with text and draws it with a specific size using the [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}). The block content auto-fits to the dimensions of the `Block`. The size of the auto-fitted content can then be measured.
 
 <snippet id='libraries-pdf-editing-block-measure-with-parameter'/>
 
-#### Example 9 Result
-![Rad Pdf Processing Measuring Block 02](images/RadPdfProcessing_Measuring_Block_02.png)
+**Example 10 Result**
+
+![RadPdfProcessing Block Example 10 Result](images/RadPdfProcessing_Measuring_Block_02.png)
 
 ## Splitting a Block
 
 The `Split()` method of a Block returns a new Block with the same properties. The resulting block contains all pending elements that do not fit in the current block, based on the result of the last measure call.
         
 
-The code in **Example 10** splits a block in two. The first contains text "Hello" and the second contains "RadPdfProcessing!".
+The code in **Example 11** splits a block in two. The first contains text "Hello" and the second contains "RadPdfProcessing!".
         
-#### **Example 10: Split block**
+**Example 11: Split block**
 
 <snippet id='pdf-block-split'/>
 

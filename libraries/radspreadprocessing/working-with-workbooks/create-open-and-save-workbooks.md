@@ -28,7 +28,7 @@ The fact that RadSpreadProcessing is completely decoupled from UI enables numero
 **Example 1** creates a new workbook and adds its first worksheet, which also becomes the `ActiveWorksheet` of the workbook.
         
 
-**Example 1: Create a Workbook and Add a Worksheet to It**
+**Example 1: Create a workbook and add its first worksheet**
 
 <snippet id='codeblock-crz'/>
 
@@ -43,7 +43,7 @@ To import a workbook, instantiate a specific [FormatProvider]({%slug radspreadpr
 **Example 2** uses a `WebClient` to download a `xlsx` file stored on a server. The code then creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public Workbook Import(Stream stream)` method.
         
 
-**Example 2: Download and Import XLSX File**
+**Example 2: Download an XLSX file with WebClient and import it through XlsxFormatProvider**
 
 <snippet id='codeblock-csa'/>
 
@@ -62,14 +62,14 @@ To export a workbook, instantiate the [FormatProvider]({%slug radspreadprocessin
 **Example 3** demonstrates how to export an existing `Workbook` to a `XLSX` file. The snippet creates a new workbook with a single worksheet. It then creates a [XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}) object and invokes its `public void Export(Workbook workbook, Stream output)` method. Saving to the other formats works the same way with a different format provider class.
           
 
-**Example 3: Save XLSX File**
+**Example 3: Create a workbook and export it to an XLSX file stream**
 
 <snippet id='codeblock-csb'/>
 
 **Example 4** passes the stream returned by the dialog and the current workbook to the `Export()` method of the [CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider %}).
           
 
-**Example 4: Save CSV File Using SaveFileDialog**
+**Example 4: Export a workbook to CSV by using a SaveFileDialog stream**
 
 <snippet id='codeblock-csc'/>
 

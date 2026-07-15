@@ -113,11 +113,11 @@ If you want to use a font that is not part of the standard ones, register it usi
          
 **Example 1** demonstrates how to use the `RegisterFont()` method.
             
-#### __Example 1: Register font in .NET Framework application__
+**Example 1: Register font in .NET Framework application**
 
 <snippet id='pdf-register-font-net-framework'/>
 
-#### __Example 1: Register font in .NET Standard application__
+**Register font in .NET Standard application**
 
 <snippet id='pdf-register-font-net-standard'/>
 
@@ -129,7 +129,7 @@ If you want to use a font that is not part of the standard ones, register it usi
 
 **Example 2** shows how to create a font using `FontsRepository`.
             
-#### __Example 2: Create FontBase__
+**Example 2: Create FontBase**
 
 <snippet id='pdf-bool-font-creation'/>
 

@@ -18,7 +18,7 @@ The following sections describe the members of the `WorksheetViewState` class.
 
 Gets or sets the current scale factor of the worksheet. Use this property to zoom in or out according to your needs. The values you can apply are between 0.5 and 4, corresponding to 50% and 400% respectively.
 
-**Example 1: Set the Zoom Level of a Worksheet to 50%**
+**Example 1: Set the worksheet zoom level to 50 percent**
 
 <snippet id='codeblock-cst'/>
 
@@ -27,7 +27,7 @@ Gets or sets the current scale factor of the worksheet. Use this property to zoo
 
 Determines the top left cell visible on the screen. Use this property to make sure that the data you want to visualize when the worksheet is opened is in the user viewport.
 
-**Example 2: Set the Top Left Cell to Be C11**
+**Example 2: Scroll the worksheet so cell C11 becomes the top-left visible cell**
 
 <snippet id='codeblock-csu'/>
 
@@ -37,11 +37,11 @@ Gets or sets the state of the selection inside the worksheet.
 
 **Example 3** demonstrates how you can create two selection ranges (one from B3 to E9 and one from D6 to G13) and change the active cell inside that selection.
 
-**Example 3: Change the Selection**
+**Example 3: Set two selection ranges and make C6 the active cell**
 
 <snippet id='codeblock-csv'/>
 
-![Selection state showing two selected ranges in a worksheet](images/ViewState_Selection.png)
+![Worksheet showing two selected ranges, B3:E9 and D6:G13, with cell C6 as the active cell](images/ViewState_Selection.png)
 
 ## IsSelected
 
@@ -51,7 +51,7 @@ Gets or sets a value indicating whether the sheet is selected.
 
 Gets or sets a boolean value determining whether the gridlines are visualized when the document is rendered.
 
-**Example 4: Remove Grid Lines**
+**Example 4: Hide worksheet gridlines in the rendered view**
 
 <snippet id='codeblock-csw'/>
 
@@ -59,11 +59,11 @@ Gets or sets a boolean value determining whether the gridlines are visualized wh
 
 Determines whether the headers of the rows and columns are visualized when the document is rendered.
 
-**Example 5: Remove Row and Column Headers**
+**Example 5: Hide the row and column headers in the rendered view**
 
 <snippet id='codeblock-csx'/>
 
-![Worksheet with hidden row and column headers and grid lines](images/ViewState_HideLinesHeaders.png)
+![Worksheet view with row and column headers hidden and gridlines turned off, leaving only the active cell visible](images/ViewState_HideLinesHeaders.png)
 
 ## Pane
 
@@ -81,11 +81,11 @@ Allows you to freeze panes. For more information about this feature and its usag
 
 Sets the color of the worksheet tab.
 
-**Example 6: Change the Color of the Tab**
+**Example 6: Set the worksheet tab color to green**
 
 <snippet id='codeblock-csy'/>
 
-![Worksheet with green tab color](images/ViewState_TabColor.png)
+![Workbook with Sheet1 displayed using a green tab color while Sheet2 remains uncolored](images/ViewState_TabColor.png)
 
 ## IsInvalidated
 

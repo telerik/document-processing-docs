@@ -36,9 +36,9 @@ The following methods allow you to construct a form field and add it to the coll
 
 * `AddSignature()`: Creates a [Signature]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) field and adds it to the collection. Returns the created field.
 
-**Example 1** shows how to use the previous methods to generate a form field and add it to the collection.
+The following example shows how to use the previous methods to generate a form field and add it to the collection.
 
-**Example 1: Create a Form Field**
+**Create a Form Field**
 
 <snippet id='pdf-form-field-creation'/>
 
@@ -50,7 +50,7 @@ You can also use the following methods to modify the collection of form fields i
 
 * `Contains()`: Accepts a string representing the form field name. Returns `true` when a field with such a name is present in the collection, otherwise `false`.
 
-**Example 2: Use the Methods of FormFieldCollection**
+**Use the Methods of FormFieldCollection**
 
 <snippet id='pdf-form-field-collection-methods'/>
 

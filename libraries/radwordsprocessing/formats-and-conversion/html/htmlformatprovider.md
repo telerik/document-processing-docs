@@ -21,7 +21,7 @@ To import an HTML document, use the overloads of the `HtmlFormatProvider.Import(
 
 **Example 1** shows how to use `HtmlFormatProvider` to import an HTML document from a file.
 
-**Example 1: Import HTML file**
+**Example 1: Open an HTML file stream and import it into a RadFlowDocument**
 
 <snippet id='codeblock-bubu'/>
 
@@ -29,7 +29,7 @@ To import an HTML document, use the overloads of the `HtmlFormatProvider.Import(
 
 **Example 2** shows how to import an HTML string.
 
-**Example 2: Import HTML string**
+**Example 2: Import an HTML string containing a paragraph into a RadFlowDocument**
 
 <snippet id='codeblock-bvbv'/>
 
@@ -43,7 +43,7 @@ To export a document to HTML, use the overloads of the `HtmlFormatProvider.Expor
 
 **Example 3** shows how to use the `HtmlFormatProvider` to export an instance of `RadFlowDocument` to a file:
 
-**Example 3: Export HTML to file**
+**Example 3: Export a RadFlowDocument to an HTML file stream**
 
 <snippet id='codeblock-bwbw'/>
 
@@ -51,7 +51,7 @@ To export a document to HTML, use the overloads of the `HtmlFormatProvider.Expor
 
 You can also export the document to a string variable as shown in **Example 4**.
 
-**Example 4: Export HTML to string**
+**Example 4: Export a RadFlowDocument directly to an HTML string**
 
 <snippet id='codeblock-bxbx'/>
 

@@ -56,13 +56,13 @@ The `TextFragment` class in [RadPdfProcessing]({%slug radpdfprocessing-overview%
 
 Both methods return the actual `TextFragment` instance so you can modify it.
 
-#### **Example 1: Create TextFragments and Add Them to a Page**
+**Create TextFragments and Add Them to a Page**
 
 <snippet id='libraries-pdf-model-text-fragment-create'/>
 
->caption Figure 1: Inserted TextFragments
+**Inserted TextFragments**
 
-![TextFragments in PdfProcessing](images/radpdfprocessing-model-textfragment.png)
+![RadPdfProcessing Inserted TextFragments](images/radpdfprocessing-model-textfragment.png)
 
 >tip `TextFragment` represents a single line of text. To make your text flow in a document, verify that all fragments you add can fit in a line, or use [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 
@@ -72,13 +72,13 @@ Both methods return the actual `TextFragment` instance so you can modify it.
 
 Modify a `TextFragment` element with the properties listed in the [Public API](#public-api) section.
 
-#### **Example 2: Modify TextFragment Properties**
+**Modify TextFragment Properties**
 
 <snippet id='libraries-pdf-model-text-fragment-modify'/>
 
->caption Figure 2: Modified TextFragments
+**Modified TextFragments**
 
-![Modified TextFragments in PdfProcessing](images/radpdfprocessing-model-modified-textfragments.png)
+![RadPdfProcessing Modified TextFragments](images/radpdfprocessing-model-modified-textfragments.png)
 
 ## See Also
 

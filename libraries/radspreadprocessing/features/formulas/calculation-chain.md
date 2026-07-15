@@ -39,7 +39,7 @@ The calculation chain addresses common performance issues when you work with wor
 
 When you modify cell values or formulas in bulk, use the `SuspendLayoutUpdate` and `ResumeLayoutUpdate` methods on the `Workbook` to avoid triggering layout recalculations on every individual change.
 
-**Example 1: Batch-Modify Cell Values with Suspended Layout Updates**
+**Example 1: Batch-modify cell values with suspended layout updates**
 
 <snippet id='calculation-chain-batch-modify-suspended-layout'/>
 

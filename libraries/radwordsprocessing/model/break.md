@@ -22,7 +22,7 @@ All inline-level elements in a `RadFlowDocument` must be placed within another e
 
 **Example 1** shows how to create a `Break` element and add it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
 
-**Example 1: Create a Break**
+**Example 1: Create a line break and add it to a paragraph**
 
 <snippet id='codeblock-cz'/>
 
@@ -30,7 +30,7 @@ The paragraph must belong to the same document that is passed to the constructor
 
 **Example 2** shows how to change the type of the break created in **Example 1**.
 
-**Example 2: Change the BreakType**
+**Example 2: Change an existing break from the default line break to a page break**
 
 <snippet id='codeblock-caca'/>
 
@@ -38,7 +38,7 @@ You can also insert a break in the document with the `InsertBreak()` method of t
 
 **Example 3** shows how to insert a break through `RadFlowDocumentEditor`.
 
-**Example 3: Insert a Break Using RadFlowDocumentEditor**
+**Example 3: Insert a page break with RadFlowDocumentEditor**
 
 <snippet id='codeblock-cbcb'/>
 
@@ -55,7 +55,7 @@ The `Break` element exposes several properties that allow you to customize it:
 
 **Example 4** shows how to insert a `Break` through `RadFlowDocumentEditor` and modify it later.
 
-**Example 4: Customize a Break**
+**Example 4: Modify an inserted break to use line-break wrapping at the next full line**
 
 <snippet id='codeblock-cccc'/>
 

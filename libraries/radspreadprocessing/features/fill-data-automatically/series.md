@@ -34,7 +34,7 @@ The `FillDataSeriesLinear()` method of the `CellSelection` class constructs line
 
 **Example 1** creates a new worksheet that has the value *1* in cell *A1* and *3* in *B1*. The `FillDataSeriesLinear()` method is invoked for the cell region *A1:F1*. The values *1, 3, 5, 7, 9, and 11* appear in the range *A1:F1*.
 
-#### __Example 1: Fill Linear Series__
+**Example 1: Fill a linear series**
 
 <snippet id='codeblock-cmg'/>
 
@@ -42,8 +42,9 @@ The `FillDataSeriesLinear()` method of the `CellSelection` class constructs line
 
 **Figure 1** demonstrates the result of **Example 1**.
 
-#### Figure 1: Linear series
-![Linear series filled in a worksheet](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_01.png)
+**Figure 1: Linear series extended from 1 and 3 to 11 across the row**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing a linear numeric series extended from 1 and 3 to 5, 7, 9, and 11](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_01.png)
 
 ## Linear Trend Series
 
@@ -51,7 +52,7 @@ The `FillDataSeriesLinearTrend()` method produces series using a linear fitting 
 
 **Example 2** shows how to use `FillDataSeriesLinearTrend()` to continue series values *1, 5* from the range *A1:B1*. The result is the series *1, 5, 9, 13, 17, 21* in the range *A1:F1*.
 
-#### __Example 2: Fill Linear Trend Series__
+**Example 2: Fill a linear trend series**
 
 <snippet id='codeblock-cmh'/>
 
@@ -59,13 +60,15 @@ The `FillDataSeriesLinearTrend()` method produces series using a linear fitting 
 
 **Figure 2** demonstrates the result of **Example 2**.
 
-#### Figure 2: Linear trend series
-![Linear trend series filled in a worksheet](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_02.png)
+**Figure 2: Linear trend series generated from uneven starting values**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing a best-fit linear trend extended from uneven starting values across the row](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_02.png)
 
 **Figure 3** illustrates the difference between the initial values and the result. Note that the result values construct the best fit line for the initial data.
 
-#### Figure 3: Differences Between Initial Values and Linear Trend
-![Differences between initial values and linear trend result](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_03.png)
+**Figure 3: Chart comparing the initial values with the computed linear trend**
+
+![Telerik Document Processing RadSpreadProcessing chart comparing irregular initial values with the resulting linear trend line](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_03.png)
 
 ## Exponential Series
 
@@ -73,7 +76,7 @@ The `FillDataSeriesExponential()` method calculates the values of each cell afte
 
 **Example 3** shows how to use the `FillDataSeriesExponential()` method to continue series with initial values *1 and 3* that appear in cells *A1 and B1* respectively. After the method is invoked, the region *A1:F1* contains the following values: *1, 4, 16, 64, 256, and 1024*.
 
-#### __Example 3: Fill Exponential Series__
+**Example 3: Fill an exponential series**
 
 <snippet id='codeblock-cmi'/>
 
@@ -81,8 +84,9 @@ The `FillDataSeriesExponential()` method calculates the values of each cell afte
 
 **Figure 4** demonstrates the result of **Example 3**.
 
-#### Figure 4: Exponential series
-![Exponential series filled in a worksheet](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_04.png)
+**Figure 4: Exponential series extended from 1 and 3 to 1024 across the row**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing an exponential series that grows from 1 and 3 to 4, 16, 64, 256, and 1024](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_04.png)
 
 ## Exponential Trend Series
 
@@ -90,7 +94,7 @@ The `FillDataSeriesExponentialTrend()` method calculates the values of the serie
 
 **Example 4** shows how to use the `FillDataSeriesExponentialTrend()` method to continue series with initial values *1 and 5* that appear in cells *A1 and B1* respectively. After the exponential trend is applied, the range *A1:F1* holds the following values: *1, 5, 25, 125, 625, and 3125*.
 
-#### __Example 4: Exponential Trend Series__
+**Example 4: Fill an exponential trend series**
 
 <snippet id='codeblock-cmj'/>
 
@@ -98,13 +102,15 @@ The `FillDataSeriesExponentialTrend()` method calculates the values of the serie
 
 **Figure 5** demonstrates the result of **Example 4**.
 
-#### Figure 5: Exponential trend series
-![Exponential trend series filled in a worksheet](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_05.png)
+**Figure 5: Exponential trend series generated from the initial values**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing an exponential trend extended from the initial values across the row](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_05.png)
 
 **Figure 6** plots two series that contain the initial and result values respectively. Note that the result values form the best fit exponential curve for the initial data.
 
-#### Figure 6: Differences Between Initial Values and Exponential Trend
-![Differences between initial values and exponential trend result](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_06.png)
+**Figure 6: Chart comparing the initial values with the computed exponential trend**
+
+![Telerik Document Processing RadSpreadProcessing chart comparing the initial values with the resulting exponential trend curve](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_06.png)
 
 ## Date Series
 
@@ -112,7 +118,7 @@ The `FillDataSeriesDate()` method fills date values incrementally using a specif
 
 **Example 5** shows how to construct series that use *5/28/2013* as a starting point and add two weekdays for each consecutive value.
 
-#### __Example 5: Fill Date Series__
+**Example 5: Fill a date series using weekdays**
 
 <snippet id='codeblock-cmk'/>
 
@@ -120,8 +126,9 @@ The `FillDataSeriesDate()` method fills date values incrementally using a specif
 
 **Figure 7** demonstrates the result of **Example 5**.
 
-#### Figure 7: Date series
-![Date series filled in a worksheet](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_07.png)
+**Figure 7: Weekday date series extended from May 28, 2013 in two-day workday steps**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing a weekday date series extended from 5/28/2013 to 6/11/2013 in two-workday increments](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_07.png)
 
 A closer look at the result shows that 5/28/2013 is *Tuesday*, 5/30/2013 is *Thursday*, 6/3/2013 is *Monday*, 6/5/2013 is *Wednesday*, 6/7/2013 is *Friday*, and 6/11/2013 is *Tuesday*. All of the result dates are weekdays and the step between them is exactly two workdays.
 
@@ -191,7 +198,7 @@ Similarly to the other auto fill methods, `FillDataSeriesAuto()` takes three arg
 
 **Example 6** shows how to use the `FillDataSeriesAuto()` method for the initial value *1st* set in cell *A1*. The resulting series filled in the range *A1:F1* are: *1st, 2nd, 3rd, 4th, 5th, and 6th*.
 
-#### __Example 6: Auto Fill__
+**Example 6: Continue an automatic ordinal series**
 
 <snippet id='codeblock-cml'/>
 
@@ -199,12 +206,13 @@ Similarly to the other auto fill methods, `FillDataSeriesAuto()` takes three arg
 
 **Figure 8** demonstrates the result of **Example 6**.
 
-#### Figure 8: Auto fill
-![Auto fill series result in a worksheet](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_08.png)
+**Figure 8: Auto fill extends ordinal text from 1st to 6th**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing automatic fill extending ordinal values from 1st through 6th across the row](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_08.png)
 
 **Example 7** demonstrates the behavior of the `FillDataSeriesAuto()` method. This time, the initial value *6th* appears in cell *F1* and the applied auto fill is with reversed direction. Note that the constructed `CellRange` is *F1:A1*, instead of *A1:F1*. The resulting series are: *11th, 12th, 9th, 8th, 7th, and 6th*.
 
-#### __Example 7: Auto Fill Reversed Direction__
+**Example 7: Continue an automatic ordinal series in reversed direction**
 
 <snippet id='codeblock-cmm'/>
 
@@ -212,8 +220,9 @@ Similarly to the other auto fill methods, `FillDataSeriesAuto()` takes three arg
 
 **Figure 9** demonstrates the result of **Example 7**.
 
-#### Figure 9: Auto fill reversed direction
-![Auto fill with reversed direction result in a worksheet](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_09.png)
+**Figure 9: Auto fill reverses the ordinal series from 11th down to 6th**
+
+![Telerik Document Processing RadSpreadProcessing worksheet showing automatic fill in reversed direction from 11th down to 6th](images/RadSpreadProcessing_Features_Fill_Data_Automatically_Series_09.png)
 
 ## See Also
 

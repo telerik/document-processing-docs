@@ -49,15 +49,15 @@ The possible switches for a Merge field are:
 
 You can insert a Merge field through the `InsertField()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method accepts code as the first argument and result as the second argument.
 
-**Example 1: Insert a Merge field**
+**Example 1: Insert a MERGEFIELD that targets the First_Name data field**
 
 <snippet id='codeblock-bc'/>
 
-**Example 2: Insert a Merge field with switches**
+**Example 2: Insert a MERGEFIELD with prefix and suffix text switches**
 
 <snippet id='codeblock-bd'/>
 
-**Example 3: Insert a Merge field with a Date-Time format switch**
+**Example 3: Insert a MERGEFIELD that formats a date value with a date-time picture switch**
 
 <snippet id='codeblock-be'/>
 

@@ -25,7 +25,7 @@ When you perform a cell insertion, all values that appear to the right or below 
 
 The `CellSelection` class exposes an `Insert()` method that takes one argument which indicates the direction of the shift. Also, the class offers a `CanInsertOrRemove()` method that determines if the insertion is possible. **Example 1** shows how to insert cells using these methods.
 
-**Example 1: Insert Cells**
+**Example 1: Insert cells in B2:K11 by shifting the existing content to the right**
 
 <snippet id='codeblock-crf'/>
 
@@ -37,7 +37,7 @@ When you remove cells, all values that appear to the right or below the `CellSel
 
 The `CellSelection` class exposes a `Remove()` method that takes one argument which indicates the direction of the shift. The class also offers a `CanInsertOrRemove()` method that determines if the removal is possible. **Example 2** shows how to remove cells using these methods.
 
-**Example 2: Remove Cells**
+**Example 2: Remove cells in B2:K11 by shifting the remaining content upward**
 
 <snippet id='codeblock-crg'/>
 

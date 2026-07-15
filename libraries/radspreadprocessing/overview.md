@@ -12,11 +12,11 @@ position: 0
 
 **Telerik SpreadProcessing Library** allows you to generate and convert documents to XLSX, CSV, TXT, and PDF. **RadSpreadProcessing** ships with built-in support for the computation of more than 200 functions, like SUM, AVERAGE, and more. You can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
 
-![Diagram showing RadSpreadProcessing converting between XLSX, CSV, and TXT formats](images/spread-processing-overview.jpg)
+![Telerik Document Processing RadSpreadProcessing document conversion between XLSX, CSV, and TXT formats](images/spread-processing-overview.jpg) 
 
 This article lists the most popular features of the library. To start using RadSpreadProcessing right away, see [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%}).
 
-![A sample spreadsheet showing a Monthly Report with product data in columns for ID, Product, and Quantity](images/RadSpreadProcessing_Overview_01.png)
+![Telerik Document Processing RadSpreadProcessing workbook with a monthly report worksheet and product quantity data](images/RadSpreadProcessing_Overview_01.png)
 
 >note If you still do not have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
 

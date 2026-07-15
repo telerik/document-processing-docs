@@ -17,15 +17,21 @@ Access the wizard through:
 
 * The **Telerik** menu in Visual Studio
 
-![DPL Configure Wizard](../images/configure_wizard_telerik_menu_access.png)
+**Visual Studio Telerik menu entry for the Telerik Document Processing Configuration Wizard**
+
+![Visual Studio Telerik menu entry for the Telerik Document Processing Configuration Wizard](../images/configure_wizard_telerik_menu_access.png)
 
 * The context menu when you right-click the project you want to configure
 
-![DPL Configure Wizard](../images/configure_wizard_context_menu_access.png)
+**Visual Studio project context menu entry for the Telerik Document Processing Configuration Wizard**
+
+![Visual Studio project context menu entry for the Telerik Document Processing Configuration Wizard](../images/configure_wizard_context_menu_access.png)
 
 The Telerik Document Processing Configuration wizard lets you select which libraries your project uses. If a library you selected has any dependencies, they are automatically checked.
 
-![DPL Configure Wizard Main Page](../images/dpl_configure_wizard.png)
+**Visual Studio Telerik Document Processing Configuration Wizard library selection page**
+
+![Visual Studio Telerik Document Processing Configuration Wizard library selection page](../images/dpl_configure_wizard.png)
 
 Packages are pre-selected based on the component you have launched the wizard through. Following is a list of the packages that will be selected for each library.
 

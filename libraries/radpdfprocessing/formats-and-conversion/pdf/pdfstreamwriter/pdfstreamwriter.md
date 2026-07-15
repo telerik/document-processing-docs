@@ -28,7 +28,7 @@ The **PdfStreamWriter** class enables you to write file content directly to a st
 
 To create a `PdfStreamWriter` instance, pass the stream of the file you want to work with as a constructor parameter.
 
-#### **Example 1: Instantiate PdfStreamWriter**
+**Instantiate PdfStreamWriter**
 
 <snippet id='pdf-stream-writer-instance'/>
 
@@ -46,7 +46,7 @@ The constructor of `PdfStreamWriter` accepts any class inheriting from `Stream`.
 > * All the data is flushed into the stream when disposing `PdfStreamWriter`. Dispose the object before further processing the `MemoryStream` to ensure all the required document data is saved.
 
 
-#### **Example 2: Instantiate PdfStreamWriter with MemoryStream**
+**Instantiate PdfStreamWriter with MemoryStream**
 
 <snippet id='pdf-stream-writer-instance-memory'/>
 
@@ -56,13 +56,13 @@ The members of the class allow you to set several properties of the document and
 
 * `BeginPage()`: Returns an instance of the `PdfPageStreamWriter` class, which draws the content of the page. For more information, see the [PdfPageStreamWriter article]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter%}). The overloads of `BeginPage()` allow you to pass the size and the [Rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) of the page.
 	
-	#### **Example 3: Insert a new page into a document**
+	**Insert a new page into a document**
 	
 	<snippet id='pdf-stream-writer-insert-new-page'/>
 
 * `WritePage()`: Enables you to pass an already constructed page object. With the different overloads, you can pass an instance of [`RadFixedPage`]({%slug radpdfprocessing-model-radfixedpage%}) or [`PdfPageStreamWriter`]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagestreamwriter%}).
 	
-	#### **Example 4: Insert an already generated page into a document**
+	**Insert an already generated page into a document**
 	
 	<snippet id='pdf-insert-generated-page-in-doc'/>
 

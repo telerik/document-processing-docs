@@ -36,7 +36,7 @@ The workbook has several important characteristics:
 | Protection | Lets you prevent users from modifying the structure of the workbook (adding, removing, renaming, or reordering sheets). See [Workbook Protection]({%slug radspreadprocessing-features-protection-workbook%}). |
 | `DocumentInfo` | Enables you to set and obtain document metadata. Of type `DocumentInfo`, it exposes `Author`, `Title`, `Subject`, `Keywords`, and `Description` properties. |
 
-![Rad Spreadsheet Model Working with Excel Workbooks What is Workbook](images/RadSpreadsheet_Model_Working_with_Workbooks_What_is_Workbook_02.png)
+![Hierarchy diagram showing Workbook at the top with child collections and related types for Worksheets, Theme, Styles with CellStyle, and Names with ISpreadsheetName](images/RadSpreadsheet_Model_Working_with_Workbooks_What_is_Workbook_02.png)
 
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft® Corporation.

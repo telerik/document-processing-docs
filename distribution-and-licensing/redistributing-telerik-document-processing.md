@@ -37,7 +37,7 @@ For the purpose of this example, the source distribution ZIP file is extracted i
             
 2\. Uncomment the following line:
 
-#### Before
+**Original `IsValid()` implementation before enabling passphrase validation**
 
 ```csharp
 	public static bool IsValid()
@@ -48,7 +48,7 @@ For the purpose of this example, the source distribution ZIP file is extracted i
     }
 ```
 
-#### After
+**Updated `IsValid()` implementation with passphrase validation enabled**
 
 ```csharp
 	public static bool IsValid()
@@ -60,13 +60,13 @@ For the purpose of this example, the source distribution ZIP file is extracted i
 
 3\. Change the `ApplicationName` constant to match the name of your application:
 
-#### Before
+**Original `ApplicationName` constant value**
 
 ```csharp
 	internal const string ApplicationName = "MyApp";
 ```
 
-#### After
+**Updated `ApplicationName` constant with your application name**
 
 ```csharp
 	internal const string ApplicationName = "Sample Application Name v2.0 (tm)";

@@ -76,7 +76,7 @@ When you apply a style to a cell with locally set properties, the result is an a
 
 **Example 1** shows what applying the Number group looks like.
 
-**Example 1: Get a Built-In Style and Apply a Number Group**
+**Example 1: Retrieve the built-in Good style and enable its number-format group**
 
 <snippet id='codeblock-dkq'/>
 
@@ -89,7 +89,7 @@ Through the API you can add, modify, or remove styles from the `CellStyles` coll
 
 To create a new style, invoke the `Add()` method of the workbook `CellStyles` collection. The method returns an object of type `SpreadCellStyle`, which you can manipulate. 
 
-**Example 2: Create SpreadCellStyle and Apply It to a Cell**
+**Example 2: Create a custom cell style with borders, fill, font settings, and alignment, then apply it to a cell**
 
 <snippet id='codeblock-dkr'/>
 
@@ -99,7 +99,7 @@ To modify a style, retrieve it from the `CellStyles` collection and set the prop
 
 **Example 3** obtains the Bad style from the cell styles collection of a workbook and modifies it.
 
-**Example 3: Modify a Built-In Style**
+**Example 3: Retrieve the built-in Bad style and make it bold**
 
 <snippet id='codeblock-dks'/>
 

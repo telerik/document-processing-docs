@@ -54,19 +54,21 @@ Through the `Worksheet` `WorksheetPageSetup` property you can change the followi
 
 **Figures 1 and 2** show an example of the worksheet page setup usage. In the example, the spreadsheet data has bigger width than height. Previewing the print pages with the default settings shows that the content does not fit well as the print content is split into two pages.
 
-#### Figure 1: Initial print preview of data
-![Print preview without settings](images/RadSpreadProcessing_Features_WorksheetPageSetup_01.png)
+**Figure 1: Initial print preview with worksheet data split across two portrait pages**
+
+![Telerik Document Processing RadSpreadProcessing print preview showing worksheet data split across two portrait A4 pages before page setup changes](images/RadSpreadProcessing_Features_WorksheetPageSetup_01.png)
 
 To fit the print content better, use the worksheet page setup and change the page orientation, the scale factor, and some additional print settings. **Example 1** shows the code that needs to be executed.
 
-#### __Example 1: Use WorksheetPageSetup__
+**Example 1: Configure the worksheet page setup**
 
 <snippet id='codeblock-cld'/>
 
 As a result, the data fits into a single page with size A4 as shown in **Figure 2**.
 
-#### Figure 2: Result after page setup
-![Print preview after setting the worksheet page setup settings](images/RadSpreadProcessing_Features_WorksheetPageSetup_02.png)
+**Figure 2: Print preview after page setup fits the worksheet onto one landscape page**
+
+![Telerik Document Processing RadSpreadProcessing print preview showing the worksheet fitted onto one landscape A4 page after page setup changes](images/RadSpreadProcessing_Features_WorksheetPageSetup_02.png)
 
 
 ## Using Print Area
@@ -85,14 +87,15 @@ Through the `WorksheetPageSetup` `PrintArea` property you can access the print a
 
 The example shown in **Figure 3** demonstrates how to use the worksheet print area. In this example, a big table with data exists and you want to print only two specific ranges. To achieve that, set the print area with these cell ranges in the code snippet from **Example 2**.
 
-#### __Example 2: Set PrintArea__
+**Example 2: Set a worksheet print area**
 
 <snippet id='codeblock-cle'/>
 
 
 
-#### Figure 3: Resulting PrintArea preview
-![Resulting PrintArea preview](images/RadSpreadProcessing_Features_WorksheetPageSetup_03.png)
+**Figure 3: Print preview showing two noncontiguous worksheet ranges included in the print area**
+
+![Telerik Document Processing RadSpreadProcessing print preview showing two separate worksheet ranges included in the print area](images/RadSpreadProcessing_Features_WorksheetPageSetup_03.png)
 
 ## Using Page Breaks
 
@@ -116,12 +119,13 @@ Through the `WorksheetPageSetup` `PageBreaks` property you can manipulate the pa
 
 **Figure 4** shows a preview of a large amount of data.
 
-#### Figure 4: Initial preview of data
-![Print preview without changing settings](images/RadSpreadProcessing_Features_WorksheetPageSetup_04.png)
+**Figure 4: Initial print preview of a large worksheet before inserting page breaks**
+
+![Telerik Document Processing RadSpreadProcessing print preview showing a large worksheet on a single page before manual page breaks are added](images/RadSpreadProcessing_Features_WorksheetPageSetup_04.png)
 
 To separate the print data semantically onto several pages, place horizontal page breaks at the positions where you need the splitting to happen. **Example 3** shows how to achieve this.
 
-#### __Example 3: Insert PageBreaks__
+**Example 3: Insert page breaks into the worksheet**
 
 <snippet id='codeblock-clf'/>
 
@@ -129,8 +133,9 @@ To separate the print data semantically onto several pages, place horizontal pag
 
 As a result of inserting these horizontal page breaks, you have eight pages to print. The first one is shown in **Figure 5**.
 
-#### Figure 5: Result of PageBreaks
-![Print preview after inserting page breaks](images/RadSpreadProcessing_Features_WorksheetPageSetup_05.png)
+**Figure 5: Print preview after page breaks split the worksheet into multiple pages**
+
+![Telerik Document Processing RadSpreadProcessing print preview showing the first of eight pages after inserting horizontal page breaks](images/RadSpreadProcessing_Features_WorksheetPageSetup_05.png)
 
 ## Repeating Rows/Columns
 
@@ -140,7 +145,7 @@ The `PrintTitles` property of `WorksheetPageSetup` enables you to set rows or co
 * `RepeatedRows`: Gets or sets a value of type `RowRange` that represents the range of rows that are repeated.
 
 
-#### __Example 4: Repeat the first two rows and two columns of the worksheet on each page__
+**Example 4: Repeat the first two rows and first two columns on each page**
 
 <snippet id='codeblock-clg'/>
 

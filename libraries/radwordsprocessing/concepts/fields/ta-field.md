@@ -39,7 +39,7 @@ You can insert this field through the [RadFlowDocumentEditor]({%slug radwordspro
 
 **Example 1** demonstrates how you can insert a TA field.
 
-**Example 1: Insert TA Field**
+**Example 1: Insert a TA field entry for Item with the bold page-number switch**
 
 ```C#
     var document = new RadFlowDocument();

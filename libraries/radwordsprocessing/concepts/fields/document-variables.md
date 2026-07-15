@@ -16,7 +16,7 @@ position: 4
 
 [`RadFlowDocument`]({%slug radwordsprocessing-model-radflowdocument%}) has a `DocumentVariableCollection` property, which holds document variable records. The collection maps string keys to string values. You can add a record through an indexer or with the collection's `Add()` method. **Example 1** demonstrates both approaches.
 
-**Example 1: Add document variable record**
+**Example 1: Add Name and Job records to the document variable collection**
 
 <snippet id='codeblock-oo'/>
 
@@ -28,7 +28,7 @@ You can use the same two methods to modify the value of an existing variable in 
 
 To remove defined variables, use the `Remove()` method of the variables collection. It accepts the name of the variable as a parameter.
 
-**Example 2: Remove document variable record**
+**Example 2: Remove the Job document variable from the collection**
 
 <snippet id='codeblock-pp'/>
 
@@ -44,14 +44,14 @@ To remove defined variables, use the `Remove()` method of the variables collecti
 The syntax of a document variable field code is demonstrated in **Figure 1**.
 
 **Figure 1: Document variable field code syntax**
-![Rad Words Processing Concepts Document Variables 01](images/RadWordsProcessing_Concepts_Document_Variables_01.png)
+![Telerik RadWordsProcessing DOCVARIABLE field syntax diagram showing the DOCVARIABLE field type and the Name argument that maps to a document variable](images/RadWordsProcessing_Concepts_Document_Variables_01.png)
 
 ## Inserting
 
 You can insert a `DocumentVariableField` through the [`RadFlowDocumentEditor`]({%slug radwordsprocessing-editing-radflowdocumenteditor%})'s `InsertField()` method.
 **Example 3** shows insertion of the field created in **Example 1**.
 
-**Example 3: Insert document variable field**
+**Example 3: Insert a DOCVARIABLE field that displays the Name document variable value**
 
 <snippet id='codeblock-qq'/>
 

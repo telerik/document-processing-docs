@@ -12,6 +12,6 @@ position: 0
 
 The [Rich Text Format](https://en.wikipedia.org/wiki/Rich_Text_Format) (RTF) is a proprietary document file format developed by Microsoft for creating cross-platform documents. Most word processing applications can read this format.
 
-![Diagram showing RTF format support in RadWordsProcessing](images/RadWordsProcessing_Formats_And_Conversion_Rtf_02.png)
+![Raw RTF document preview showing RTF control words, formatted text commands, and an embedded hyperlink exported by Telerik RadWordsProcessing](images/RadWordsProcessing_Formats_And_Conversion_Rtf_02.png)
 
 `RtfFormatProvider` is compliant with [Rich Text Format (RTF) specification version 1.9](https://coolthingoftheday.blogspot.com/2007/01/rtf-19-specification-word-2007.html).

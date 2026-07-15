@@ -31,7 +31,7 @@ The `NamedDestinations` collection is exposed by `RadFixedDocument` and allows y
 
 You can create `NamedDestination` objects through the `Add()` method of the `NamedDestinations` collection exposed by `RadFixedDocument`.
 
-#### **Example 1: Create NamedDestination with Destination of type Link**
+**Create NamedDestination with Destination of type Link**
 
 <snippet id='pdf-create-named-destination'/>
 
@@ -39,7 +39,7 @@ You can create `NamedDestination` objects through the `Add()` method of the `Nam
 
 You can remove a named destination as you do with any item in a collection.
 
-#### **Example 2: Remove NamedDestination**
+**Remove NamedDestination**
 
 <snippet id='pdf-remove-named-destination'/>
 
@@ -47,7 +47,7 @@ You can remove a named destination as you do with any item in a collection.
 
 In addition to the `Name` property of the `NamedDestination` class, which has a setter, you can use the `Rename()` method of the `RadFixedDocument.NamedDestinations` collection.
 
-#### **Example 3: Rename NamedDestination**
+**Rename NamedDestination**
 
 <snippet id='pdf-rename-named-destination'/>
 
@@ -55,7 +55,7 @@ In addition to the `Name` property of the `NamedDestination` class, which has a 
 
 The `NamedDestinations` collection provides the `ContainsName()` method. Use it to check whether a name is already applied to a `NamedDestination` or whether the `NamedDestination` you are searching for exists.
 
-#### **Example 4: Check if a NamedDestination already exists**
+**Check if a NamedDestination already exists**
 
 <snippet id='pdf-exist-named-destination'/>
 

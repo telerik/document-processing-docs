@@ -31,7 +31,7 @@ To insert rows, create a `RowSelection` instance that indicates where the new ro
 The `RowSelection` class exposes `CanInsert()` and `Insert()` methods that indicate whether the insert is possible and perform the insert operation respectively. **Example 1** shows how to insert rows using the two methods.
         
 
-**Example 1: Insert Rows**
+**Example 1: Insert rows 3 through 6 when the worksheet can accommodate three new rows**
 
 <snippet id='codeblock-crm'/>
 
@@ -45,7 +45,7 @@ To remove rows, create a `RowSelection` instance that specifies the region of ro
 The `RowSelection` class exposes a `Remove()` method that performs the removal of the selected rows. **Example 2** shows how to remove rows.
         
 
-**Example 2: Remove Rows**
+**Example 2: Remove rows 3 through 5 from the worksheet**
 
 <snippet id='codeblock-crn'/>
 
@@ -59,7 +59,7 @@ To insert columns, create a `ColumnSelection` instance that specifies where the 
 The `ColumnSelection` class exposes `CanInsert()` and `Insert()` methods that indicate whether the insert is possible and perform the insert operation respectively. **Example 3** shows how to insert columns using the two methods.
         
 
-**Example 3: Insert Columns**
+**Example 3: Insert columns C through F when the worksheet can accommodate three new columns**
 
 <snippet id='codeblock-cro'/>
 
@@ -73,7 +73,7 @@ To remove columns, create a `ColumnSelection` instance that indicates the region
 The `ColumnSelection` class exposes a `Remove()` method that executes the removal of the selected columns. **Example 4** shows how to remove columns.
         
 
-**Example 4: Remove Columns**
+**Example 4: Remove columns C through E from the worksheet**
 
 <snippet id='codeblock-crp'/>
 

@@ -38,9 +38,9 @@ Find the complete list of all SDK examples for `RadWordsProcessing` in the [Word
 
 The **documentation** provides a section for each library that contains help articles **on distinct features and API reference**.
 
->caption Figure 1: Typical library documentation structure
+**Telerik Document Processing library documentation structure**
 
-![Typical library documentation structure](images/typical-library-docs-structure.png "Typical library documentation structure")
+![Telerik Document Processing library documentation structure with feature navigation and article sections](images/typical-library-docs-structure.png)
 
 ## Next Steps
 

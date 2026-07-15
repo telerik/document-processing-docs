@@ -28,7 +28,7 @@ If you need to read the cell data and its properties, use the [`ICellImporter` i
 You can create a concrete instance of `ICellExporter` through the `CreateCellExporter()` method of [IRowExporter]({%slug radspreadstreamprocessing-model-rows%}). **Example 1** demonstrates how to add a cell to a row.
 
 
-**Example 1: Using ICellExporter**
+**Example 1: Create an ICellExporter for the current row**
 
 
 <snippet id='codeblock-dle'/>
@@ -49,7 +49,7 @@ The `SetValue()` method exposes several overloads that allow you to set values f
 
 > To visualize a value as a date or time, you need to set an appropriate number format of the cell. Otherwise, it is treated as a number.
 
-**Example 2: Setting a Value to a Cell**
+**Example 2: Write a numeric value to a cell**
 
 <snippet id='codeblock-dlf'/>
 
@@ -58,7 +58,7 @@ The `SetValue()` method exposes several overloads that allow you to set values f
 
 To allow you to set a formula as a value of a cell, `ICellExporter` defines the `SetFormula()` method. This method accepts a string that represents the formula as a parameter. **Example 3** shows how to use it.
 
-**Example 3: Setting a Formula to a Cell**
+**Example 3: Assign a SUM formula to a cell**
 
 <snippet id='codeblock-dlg'/>
 
@@ -81,7 +81,7 @@ The cells in a document are exported one by one from left to right starting from
 
 In some cases you may need to skip several cells and start filling the data in the next one. The [`IRowExporter`]({%slug radspreadstreamprocessing-model-rows%}) interface declares a method that allows you to implement such a scenario. **Example 5** shows how to skip 5 cells and set a value and a vertical alignment to the sixth one.
 
-**Example 5: Skip Cells**
+**Example 5: Skip five cells and write a vertically centered value to the sixth cell**
 
 <snippet id='codeblock-dlh'/>
 
@@ -89,7 +89,7 @@ In some cases you may need to skip several cells and start filling the data in t
 
 **Example 6** shows how to merge several cells into a single one through [IWorksheetExporter]({%slug  radspreadstreamprocessing-model-worksheet%}).
 
-**Example 6: Merge Cells**
+**Example 6: Merge the D4:K11 cell range in a worksheet**
 
 <snippet id='codeblock-dli'/>
 
@@ -121,13 +121,13 @@ Another method exposed by `ICellExporter`—`SetFormat()`—enables you to chang
 | `DiagonalUpBorder` | Gets or sets the diagonal up border. Of type [`SpreadBorder`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html). |
 | `DiagonalDownBorder` | Gets or sets the diagonal down border. Of type [`SpreadBorder`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadBorder.html). |
 
-**Example 7: Format Cells**
+**Example 7: Apply borders, fill, font, and alignment settings with SpreadCellFormat**
 
 <snippet id='codeblock-dlj'/>
 
 In addition to the listed properties, the `SpreadCellFormat` class allows you to set a style to a cell. For more information on cell styles, see the [Cell Styles]({%slug radspreadstreamprocessing-features-styling-cell-styles%}) topic.
 
-**Example 8: Set the Value Format to String, Date, or a Number**
+**Example 8: Apply string, date, and number formats to exported cell values**
 
 <snippet id='codeblock-dlk'/>
 
@@ -139,7 +139,7 @@ You can apply a `SpreadCellFormat` instance on multiple cells. However, if a pro
 
 You can get a concrete instance of `ICellImporter` through the `Cells` collection of [IRowImporter]({%slug radspreadstreamprocessing-model-rows%}). **Example 9** demonstrates how to read the cells of a row.
 
-**Example 9: Create ICellImporter**
+**Example 9: Iterate imported cells and read each value, format, and style**
 
 <snippet id='codeblock-dll'/>
 

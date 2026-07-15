@@ -26,7 +26,7 @@ To read a column and its properties, use the [`IColumnImporter` interface](https
 
 You can create a concrete instance of `IColumnExporter` through the `CreateColumnExporter()` method of [IWorksheetExporter]({%slug radspreadstreamprocessing-model-worksheet%}). **Example 1** demonstrates how to add a column to a worksheet.
 
-**Example 1: Create IColumnExporter**
+**Example 1: Create an IColumnExporter for the next worksheet column**
 
 
 <snippet id='codeblock-dlm'/>
@@ -43,7 +43,7 @@ To customize the way a column appears, use one of the following methods:
 | `SetHidden()` | Sets a boolean value indicating whether the column is hidden. |
 
 
-**Example 2: Set Properties to IColumnExporter**
+**Example 2: Set the exported column width to 100 pixels**
 
 <snippet id='codeblock-dln'/>
 
@@ -55,7 +55,7 @@ The columns in a document are exported one by one from left to right starting fr
 
 In some cases you may need to skip several columns and start filling the data in the next one. The [`IWorksheetExporter`]({%slug radspreadstreamprocessing-model-worksheet%}) interface declares a method that allows you to implement such a scenario. **Example 3** shows how to skip 5 columns.
 
-**Example 3: Skip Columns**
+**Example 3: Skip five columns and hide the sixth column**
 
 <snippet id='codeblock-dlo'/>
 
@@ -65,7 +65,7 @@ In some cases you may need to skip several columns and start filling the data in
 
 You can get a concrete instance of `IColumnImporter` through the `Columns` collection of [IWorksheetImporter]({%slug radspreadstreamprocessing-model-worksheet%}). **Example 4** demonstrates how to start reading a column from a worksheet.
 
-**Example 4: Create IColumnImporter**
+**Example 4: Iterate imported worksheet columns with IColumnImporter**
 
 <snippet id='codeblock-dlp'/>
 

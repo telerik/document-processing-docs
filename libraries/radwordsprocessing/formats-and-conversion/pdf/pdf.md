@@ -12,7 +12,7 @@ position: 0
 
 [Portable Document Format](https://en.wikipedia.org/wiki/Portable_Document_Format) (PDF) is a file format used to present documents in a manner independent of application software, hardware, and operating system. Each PDF file encapsulates a complete description of a fixed-layout flat document, including text, fonts, graphics, and other information needed to display it.
 
-![Rad Words Processing Formats And Conversion Pdf 01](images/RadWordsProcessing_Formats_And_Conversion_Pdf_01.png)
+![Editor view of a generated PDF file showing the %PDF-1.5 header, object declarations, and compressed stream data produced by Telerik RadWordsProcessing PDF export](images/RadWordsProcessing_Formats_And_Conversion_Pdf_01.png)
 
 `PdfFormatProvider` is compliant with the latest [PDF Reference 1.7](https://www.adobe.com/content/dam/Adobe/en/devnet/acrobat/pdfs/pdf_reference_1-7.pdf).
 

@@ -35,7 +35,7 @@ A [FontsProvider](https://docs.telerik.com/devtools/document-processing/librarie
 
 To convert document pages to images, use the `Export` method. The `Export` method does not accept a document but a page. Iterate all pages and save each page in a separate file.
 
-#### __Example 1: Export RadFixedDocument to Image__
+**Export RadFixedDocument to Image**
 
 <snippet id='pdf-export-to-image'/>
 
@@ -43,7 +43,7 @@ To convert document pages to images, use the `Export` method. The `Export` metho
 
 The `ExportAsync` method allows you to perform the conversion asynchronously.
 
-#### __Example 2: Export RadFixedDocument to Image Async__
+**Export RadFixedDocument to Image Async**
 
 <snippet id='pdf-async-export-to-image'/>
 

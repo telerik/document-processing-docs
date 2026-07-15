@@ -18,13 +18,13 @@ Merge fields are a type of [Fields]({%slug radwordsprocessing-concepts-fields%})
 
 The code snippet in **Example 1** shows how to initialize a `RadFlowDocumentEditor` instance and insert a merge field.
 
-**Example 1: Insert a Merge Field**
+**Example 1: Create a RadFlowDocumentEditor and insert a MERGEFIELD for FirstName**
 
 <snippet id='codeblock-bu'/>
 
 Additionally, you can add a field to a `Paragraph` manually by creating a `FieldInfo` instance and placing its start, code, separator, result, and end in the block. **Example 2** shows the manual approach for adding a merge field.
 
-**Example 2: Add a Merge Field Manually**
+**Example 2: Manually construct a MERGEFIELD for LastName with FieldInfo**
 
 <snippet id='codeblock-bv'/>
 
@@ -36,13 +36,13 @@ During the operation, each `MergeField` is replaced with the corresponding infor
 
 **Example 3** shows a sample data source.
 
-**Example 3: Sample Data Source**
+**Example 3: Define a sample mail-merge data source with FirstName and LastName values**
 
 <snippet id='codeblock-bw'/>
 
 **Example 4** performs the mail merge operation over a previously defined template document using the data source from **Example 3**.
 
-**Example 4: Perform Mail Merge**
+**Example 4: Run MailMerge over the template document with the sample data source**
 
 <snippet id='codeblock-bx'/>
 
@@ -61,23 +61,23 @@ All tag pairs work equally and more than one option exists to improve the readab
 
 >caption A single cell (spanning the whole row) with TableStart/TableEnd tags:
 
-![Mail merge single cell row with TableStart and TableEnd tags](images/RadWordsProcessing_MailMerge_SingleCellRow_01.png)
+![Telerik RadWordsProcessing nested mail merge example showing TableStart and TableEnd tags in a single table cell that expand into separate output rows](images/RadWordsProcessing_MailMerge_SingleCellRow_01.png)
 
 >caption A single cell (spanning the whole row) with a tag group different than TableStart/TableEnd:
 
-![Mail merge single cell row with alternative group tags](images/RadWordsProcessing_MailMerge_SingleCellRow_02.png)
+![Telerik RadWordsProcessing nested mail merge example showing RangeStart and RangeEnd tags in a single table cell that expand into one row with multiple item values](images/RadWordsProcessing_MailMerge_SingleCellRow_02.png)
 
 The following example demonstrates how to use nested mail merge.
 
 First, define a data source that contains an `IEnumerable` of objects.
 
-**Example 5: Nested Mail Merge Data Source**
+**Example 5: Define a nested mail-merge data source with teams and player collections**
 
 <snippet id='codeblock-by'/>
 
 Then, add the fields using the specific supported names. In this example, the fields are added to the table using the TableStart/TableEnd tags. This is not mandatory and you can use a tag of your choosing.
 
-**Example 6: Perform Nested Mail Merge**
+**Example 6: Build a table-based nested mail-merge template and merge team and player data**
 
 <snippet id='codeblock-bz'/>
 
@@ -87,13 +87,13 @@ With the nested mail merge feature, you can add all items to a single line. Add 
 
 >caption Figure 1: Mail merge on a single row and the results
 
-![Mail merge on a single row and the results](images/RadWordsProcessing_MailMerge_01.png)
+![Telerik RadWordsProcessing nested mail merge result showing RangeStart and RangeEnd tags on one paragraph that produce a single comma-separated row of item values](images/RadWordsProcessing_MailMerge_01.png)
 
 To separate the items into several rows, close the group on the next row.
 
 >caption Figure 2: Mail merge on multiple rows and the results
 
-![Mail merge on multiple rows and the results](images/RadWordsProcessing_MailMerge_02.png)
+![Telerik RadWordsProcessing nested mail merge result showing group tags split across rows so each merged item appears on its own line](images/RadWordsProcessing_MailMerge_02.png)
 
 ## See Also
 

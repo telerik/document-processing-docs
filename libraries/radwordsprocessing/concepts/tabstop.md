@@ -59,7 +59,7 @@ Excluding the default constructor, the `TabStopCollection` class exposes an over
 
 <a name="example1"></a>
 
-**Example 1: Create a TabStopCollection**
+**Example 1: Create a TabStopCollection with left, center, right, and bar tab stops**
 
 <snippet id='codeblock-bba'/>
 
@@ -68,7 +68,7 @@ Excluding the default constructor, the `TabStopCollection` class exposes an over
 
 **Example 2** demonstrates how to insert items in the `TabStopCollection` created in [Example 1](#example1). Keep in mind that this collection is immutable, so the `Insert()` method returns a **new instance** of the class.
 
-**Example 2: Insert item in a TabStopCollection**
+**Example 2: Insert two additional tab stops into the immutable TabStopCollection**
 <snippet id='codeblock-cca'/>
 
 
@@ -76,7 +76,7 @@ Excluding the default constructor, the `TabStopCollection` class exposes an over
 
 The following snippet shows how to remove an item from the `TabStopCollection` created in [Example 1](#example1). Keep in mind that this collection is immutable, so the `Remove()` method returns a new instance of the class.
 
-**Example 3: Remove item from a TabStopCollection**
+**Example 3: Remove the first tab stop from the TabStopCollection**
 <snippet id='codeblock-dda'/>
 
 
@@ -91,7 +91,7 @@ The code from **Example 4** demonstrates how to create a tab stop.
 
 <a name="example4"></a>
 
-**Example 4: Create a TabStop**
+**Example 4: Create a centered tab stop positioned at two inches**
 
 <snippet id='codeblock-eea'/>
 
@@ -99,7 +99,7 @@ The code from **Example 4** demonstrates how to create a tab stop.
 
 **Example 5** shows how to add the tab stop created in [Example 1](#example1) to an existing `Paragraph` through the `TabStops` property of type `TabStopCollection`.
 
-**Example 5: Insert a TabStop**
+**Example 5: Insert the tab stop into a paragraph TabStops collection**
 
 <snippet id='codeblock-ffa'/>
 
@@ -107,7 +107,7 @@ The code from **Example 4** demonstrates how to create a tab stop.
 
 The following code-snippet shows how to remove the tab stop created in [Example 4](#example4):
 
-**Example 6: Remove a TabStop**
+**Example 6: Remove the tab stop from the paragraph TabStops collection**
 
 <snippet id='codeblock-gga'/>
 
@@ -115,7 +115,7 @@ The following code-snippet shows how to remove the tab stop created in [Example 
 
 Once you have applied the desired tab stops to a paragraph, insert tabs (\t) so that the content aligns to the specified tab stops. The code in **Example 7** inserts tab stops at three positions with different properties. It then aligns three words on the tab stop positions using tabs.
 
-**Example 7: Add tabs to align to the tab stops**
+**Example 7: Define three tab stops and align left, center, and right text with tab characters**
 
 <snippet id='codeblock-hha'/>
 

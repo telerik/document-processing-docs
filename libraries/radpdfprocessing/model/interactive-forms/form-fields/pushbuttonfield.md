@@ -15,7 +15,7 @@ The `PushButtonField` class corresponds to the `FormFieldType.PushButton` enum v
 
 `PushButtonField` provides a single property called `Widgets`. It represents the collection of Widget annotations, which visualize the field on the PDF pages. You can add and remove widgets from the collection with the `AddWidget()` and `Remove()` methods. The widget collection implements the `IEnumerable` interface, so you can iterate the available widget instances.
 
-**Example 1: Create a PushButtonField and add it to a page**
+**Create a PushButtonField and add it to a page**
 
 <snippet id='pdf-push-button-field'/>
 

@@ -16,7 +16,7 @@ The `CopyFrom(Worksheet source)` method of a worksheet copies the passed *source
 
 **Example 1** illustrates how to copy a specific worksheet from a source workbook into a new sheet in the desired target workbook.
 
-**Example 1: Copy Worksheet**
+**Example 1: Add a new target worksheet and copy the source worksheet into it**
 
 <snippet id='codeblock-csh'/>
 
@@ -26,7 +26,7 @@ You can copy a worksheet both into a newly created worksheet and an existing one
 
 **Example 2** demonstrates a more complex scenario in which a sheet is copied into an existing workbook. If the workbook contains a worksheet with the same name, the sheet to clone is copied into it. Otherwise, a new worksheet is created and its `Name` is copied from the source document.
 
-**Example 2: Copy to Existing Workbook**
+**Example 2: Copy a worksheet into an existing workbook, reusing a matching sheet name when available**
 
 <snippet id='codeblock-csj'/>
 

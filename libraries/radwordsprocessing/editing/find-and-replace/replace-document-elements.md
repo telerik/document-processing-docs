@@ -26,11 +26,11 @@ You can search and replace text using [RadFlowDocumentEditor]({%slug radwordspro
 * `ReplaceText(Regex regex, InlineBase inline)`: Replaces all matches of the passed `Regex` with a single inline.
 * `ReplaceText(Regex regex, IEnumerable<InlineBase> inlines)`: Replaces all matches of the passed `Regex` with multiple inlines.
 
-**Example 1: Replace Text with a Single Inline**
+**Example 1: Replace matched text with a single Run containing New Content**
 
 <snippet id='codeblock-bpbp'/>
 
-**Example 2: Replace Text with Multiple Inlines**
+**Example 2: Replace matched text with a Run followed by an inline image**
 
 <snippet id='codeblock-bqbq'/>
 
@@ -41,11 +41,11 @@ You can search and replace text using [RadFlowDocumentEditor]({%slug radwordspro
 * `ReplaceText(Regex regex, BlockBase block)`: Replaces all matches of the passed `Regex` with a single block.
 * `ReplaceText(Regex regex, IEnumerable<BlockBase> blocks)`: Replaces all matches of the passed `Regex` with multiple blocks.
 
-**Example 3: Replace Text with a Single Block**
+**Example 3: Replace matched text with a single table block**
 
 <snippet id='codeblock-brbr'/>
 
-**Example 4: Replace Text with Multiple Blocks**
+**Example 4: Replace matched text with multiple table and paragraph blocks**
 
 <snippet id='codeblock-bsbs'/>
 

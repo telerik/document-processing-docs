@@ -16,9 +16,9 @@ position: 11
 
 A number format can contain up to four sections. Each section defines a format for different values as shown in **Figure 1**.
 
-**Figure 1: Number format sections**
+**Figure 1: Number format sections for positive, negative, zero, and text values**
 
-![Number format sections diagram](images/RadSpreadProcessing-Features-Format-Codes_01.png)
+![Telerik Document Processing RadSpreadProcessing number format code sections for positive numbers, negative numbers, zeros, and text values](images/RadSpreadProcessing-Features-Format-Codes_01.png)
 
 These sections are not required and can be omitted. If only one section is specified, its code is used for all numbers. If two sections are specified, the first one is used for positive numbers and zeros and the second one for negative numbers.
 

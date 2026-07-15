@@ -31,7 +31,7 @@ The default value, for example, specifies that `b` elements are imported with `f
 
 You can set the value of the property to any valid CSS document. **Example 1** shows how you can add styling besides the default styles.
 
-**Example 1: Add CSS to the DefaultStyleSheet**
+**Example 1: Append a custom paragraph color rule to the default import stylesheet**
 
 <snippet id='codeblock-css-default'/>
 
@@ -53,7 +53,7 @@ The `LoadImageFromUri` event uses the `LoadImageFromUriEventArgs` object which e
 
 **Example 2** shows how to use the `LoadImageFromUri` event to download an image.
 
-**Example 2: Use the LoadImageFromUri**
+**Example 2: Handle LoadImageFromUri and download the referenced image bytes before import**
 <snippet id='codeblock-load-image-from-uri'/>
 
 The `LoadStyleSheetFromUri` event uses the `LoadStyleSheetFromUriEventArgs` object which exposes the following properties:
@@ -63,7 +63,7 @@ The `LoadStyleSheetFromUri` event uses the `LoadStyleSheetFromUriEventArgs` obje
 
 **Example 3** shows how to use the `LoadStyleSheetFromUri` event.
 
-**Example 3: Use the LoadStyleSheetFromUri event**
+**Example 3: Handle LoadStyleSheetFromUri and load external CSS content from disk**
 <snippet id='codeblock-load-stylesheet-from-uri'/>
 
 ## UriImageSource Class
@@ -83,7 +83,7 @@ When importing HTML that contains images with URI source, the `HtmlFormatProvide
 
 The provider always exports `UriImageSource` objects as images with URI as their source, regardless of the export settings. If you need to export this object as an embedded or external image, convert the `UriImageSource` to an `ImageSource` object.
 
-**Example 4: Convert UriImageSource to ImageSource**
+**Example 4: Convert a UriImageSource on an imported image to an in-memory ImageSource**
 
 <snippet id='codeblock-ca'/>
 
@@ -164,7 +164,7 @@ The event is only raised when the `StylesExportMode` property is set to `Externa
 
 **Example 5** shows how to create export settings.
 
-**Example 5: Create HtmlExportSettings**
+**Example 5: Configure HtmlExportSettings for fragment export, indentation, and custom image metadata**
 
 <snippet id='codeblock-cb'/>
 

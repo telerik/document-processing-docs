@@ -32,7 +32,7 @@ The `CellImportedEventArgs` contains information about the current cell:
 * `worksheet`: The worksheet where the data is imported.
 
 
-**Example 1: Using the CellImported Event to Format the Cells**
+**Example 1: Using the CellImported event to color imported cells in the second column**
 
 <snippet id='codeblock-col'/>
 
@@ -52,7 +52,7 @@ The `ColumnExportingEventArgs` object contains the current column instance and i
 * `DataColumn`: Gets the [DataColumn](https://learn.microsoft.com/en-us/dotnet/api/system.data.datacolumn?view=net-6.0) that is being exported.
 * `ColumnIndex`: Gets the index of the exported column.
 
-**Example 2: Using the ColumnExporting Event to Set the AllowDBNull Property**
+**Example 2: Using the ColumnExporting event to allow null values in the fourth exported column**
 
 <snippet id='codeblock-com'/>
 

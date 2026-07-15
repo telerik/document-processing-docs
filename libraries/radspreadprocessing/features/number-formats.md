@@ -54,93 +54,93 @@ The number format is represented by the `CellValueFormat` class. You can set it 
 
 The following examples demonstrate how to apply a predefined format to a `CellSelection`:
 
-**Example 1: Apply General Format**
+**Example 1: Apply the General number format**
 
 <snippet id='codeblock-cjy'/>
 
 **Example 1** produces the following result:
-![Rad Spread Processing Features Number Formatting 00](images/RadSpreadProcessing_Features_Number_Formatting_00.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a value with the General number format](images/RadSpreadProcessing_Features_Number_Formatting_00.jpg)
 
-**Example 2: Apply Number Format**
+**Example 2: Apply a Number format**
 
 <snippet id='codeblock-cjz'/>
 
 **Example 2** produces the following result:
-![Rad Spread Processing Features Number Formatting 01](images/RadSpreadProcessing_Features_Number_Formatting_01.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a numeric value with decimal places in the Number format](images/RadSpreadProcessing_Features_Number_Formatting_01.jpg)
 
-**Example 3: Apply Currency Format**
+**Example 3: Apply a Currency format**
 
 <snippet id='codeblock-cka'/>
 
 **Example 3** produces the following result:
-![Rad Spread Processing Features Number Formatting 02](images/RadSpreadProcessing_Features_Number_Formatting_02.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a currency value with a dollar symbol](images/RadSpreadProcessing_Features_Number_Formatting_02.jpg)
 
-**Example 4: Apply Accounting Format**
+**Example 4: Apply an Accounting format**
 
 <snippet id='codeblock-ckb'/>
 
 **Example 4** produces the following result:
-![Rad Spread Processing Features Number Formatting 3](images/RadSpreadProcessing_Features_Number_Formatting_03.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying an accounting value with an aligned currency symbol](images/RadSpreadProcessing_Features_Number_Formatting_03.jpg)
 
-**Example 5: Apply Date Format**
+**Example 5: Apply a Date format**
 
 <snippet id='codeblock-ckc'/>
 
 **Example 5** produces the following result:
-![Rad Spread Processing Features Number Formatting 04](images/RadSpreadProcessing_Features_Number_Formatting_04.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a serial value formatted as a date](images/RadSpreadProcessing_Features_Number_Formatting_04.jpg)
 
 To show **milliseconds** in **Date Format**, modify the predefined format as follows: _"m/d/yyyy HH:mm:ss.SSS"_. For more information on how to create your own number format or modify one of the predefined types, see the [Format Codes]({%slug radspreadprocessing-features-format-codes%}) article.
 
-**Example 6: Apply Time Format**
+**Example 6: Apply a Time format**
 
 <snippet id='codeblock-ckd'/>
 
 **Example 6** produces the following result:
-![Rad Spread Processing Features Number Formatting 05](images/RadSpreadProcessing_Features_Number_Formatting_05.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a serial value formatted as a time](images/RadSpreadProcessing_Features_Number_Formatting_05.jpg)
 
 To show **milliseconds** in **Time Format**, modify the predefined format as follows: _"HH:mm:ss.SSS"_. For more information on how to create your own number format or modify one of the predefined types, see the [Format Codes]({%slug radspreadprocessing-features-format-codes%}) article.
 
-**Example 7: Apply Percentage Format**
+**Example 7: Apply a Percentage format**
 
 <snippet id='codeblock-cke'/>
 
 **Example 7** produces the following result:
-![Rad Spread Processing Features Number Formatting 06](images/RadSpreadProcessing_Features_Number_Formatting_06.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a percentage value](images/RadSpreadProcessing_Features_Number_Formatting_06.jpg)
 
-**Example 8: Apply Fraction Format**
+**Example 8: Apply a Fraction format**
 
 <snippet id='codeblock-ckf'/>
 
 **Example 8** produces the following result:
-![Rad Spread Processing Features Number Formatting 07](images/RadSpreadProcessing_Features_Number_Formatting_07.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a decimal value formatted as a fraction](images/RadSpreadProcessing_Features_Number_Formatting_07.jpg)
 
-**Example 9: Apply Scientific Format**
+**Example 9: Apply a Scientific format**
 
 <snippet id='codeblock-ckg'/>
 
 **Example 9** produces the following result:
-![Rad Spread Processing Features Number Formatting 08](images/RadSpreadProcessing_Features_Number_Formatting_08.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a number in scientific notation](images/RadSpreadProcessing_Features_Number_Formatting_08.jpg)
 
-**Example 10: Apply Text Format**
+**Example 10: Apply a Text format**
 
 <snippet id='codeblock-ckh'/>
 
 **Example 10** produces the following result:
-![Rad Spread Processing Features Number Formatting 09](images/RadSpreadProcessing_Features_Number_Formatting_09.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying content preserved with the Text format](images/RadSpreadProcessing_Features_Number_Formatting_09.jpg)
 
-**Example 11: Apply Special Format**
+**Example 11: Apply a Special format**
 
 <snippet id='codeblock-cki'/>
 
 **Example 11** produces the following result:
-![Rad Spread Processing Features Number Formatting 10](images/RadSpreadProcessing_Features_Number_Formatting_10.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a value formatted as a postal code with the Special format](images/RadSpreadProcessing_Features_Number_Formatting_10.jpg)
 
-**Example 12: Apply Custom Format**
+**Example 12: Apply a Custom format**
 
 <snippet id='codeblock-ckj'/>
 
 **Example 12** produces the following result:
-![Rad Spread Processing Features Number Formatting 11](images/RadSpreadProcessing_Features_Number_Formatting_11.jpg)
+![Telerik Document Processing RadSpreadProcessing worksheet cell displaying a value with a custom number format](images/RadSpreadProcessing_Features_Number_Formatting_11.jpg)
 
 For more information on how to create your own number format or modify one of the predefined types, see the [Format Codes]({%slug radspreadprocessing-features-format-codes%}) article.
 
@@ -154,7 +154,7 @@ You can retrieve the number format of any cell selection through the `GetFormat(
 
 **Example 13** demonstrates how to get the number format of cell *A1*:
 
-**Example 13: Get Number Format**
+**Example 13: Get the number format from a cell selection**
 
 <snippet id='codeblock-ckk'/>
 

@@ -47,7 +47,7 @@ The possible switches for a `Sequence` field are:
 
 You can insert SEQ fields when adding numbers to tables, figures, and other items in a document.
 
-**Example 1: Insert Sequence Field**
+**Example 1: Insert a SEQ field for figure numbering with the Image sequence identifier**
 
 The suggested approach for inserting code fields is to use [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The `InsertField()` method accepts code as the first argument and the result as the second argument.
 

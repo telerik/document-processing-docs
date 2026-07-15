@@ -22,7 +22,7 @@ Column/bar charts display values as sets of vertical columns, grouped by categor
 
 | Clustered column        | Stacked column | 100% stacked column |
 | ----------------------- |:--------------:| -------------------:|
-| ![Clustered column chart](images/SpreadProcessing-Features-Charts_1.png) | ![Stacked column chart](images/SpreadProcessing-Features-Charts_2.png) | ![100% stacked column chart](images/SpreadProcessing-Features-Charts_3.png)|
+| ![Telerik Document Processing RadSpreadProcessing clustered column chart](images/SpreadProcessing-Features-Charts_1.png) | ![Telerik Document Processing RadSpreadProcessing stacked column chart](images/SpreadProcessing-Features-Charts_2.png) | ![Telerik Document Processing RadSpreadProcessing 100 percent stacked column chart](images/SpreadProcessing-Features-Charts_3.png)|
 
 
 ### Bar Charts
@@ -32,7 +32,7 @@ Bar charts are analogical to the column charts, except for the orientation of th
 
 | Clustered bar           | Stacked bar    | 100% stacked bar    |
 | ----------------------- |:--------------:| -------------------:|
-| ![Clustered bar chart](images/SpreadProcessing-Features-Charts_4.png) | ![Stacked bar chart](images/SpreadProcessing-Features-Charts_5.png) | ![100% stacked bar chart](images/SpreadProcessing-Features-Charts_6.png)|
+| ![Telerik Document Processing RadSpreadProcessing clustered bar chart](images/SpreadProcessing-Features-Charts_4.png) | ![Telerik Document Processing RadSpreadProcessing stacked bar chart](images/SpreadProcessing-Features-Charts_5.png) | ![Telerik Document Processing RadSpreadProcessing 100 percent stacked bar chart](images/SpreadProcessing-Features-Charts_6.png)|
 
 
 
@@ -43,7 +43,7 @@ The line chart shows the category data distributed on the horizontal axis and al
 
 | Clustered line          | Stacked line   | 100% stacked line   |
 | ----------------------- |:--------------:| -------------------:|
-| ![Clustered line chart](images/SpreadProcessing-Features-Charts_7.png) | ![Stacked line chart](images/SpreadProcessing-Features-Charts_8.png) | ![100% stacked line chart](images/SpreadProcessing-Features-Charts_9.png)|
+| ![Telerik Document Processing RadSpreadProcessing clustered line chart](images/SpreadProcessing-Features-Charts_7.png) | ![Telerik Document Processing RadSpreadProcessing stacked line chart](images/SpreadProcessing-Features-Charts_8.png) | ![Telerik Document Processing RadSpreadProcessing 100 percent stacked line chart](images/SpreadProcessing-Features-Charts_9.png)|
 
 ### Scatter and Bubble Charts
 
@@ -53,7 +53,7 @@ In a bubble chart, a third numeric field determines the size of the data points 
 
 | Scatter     | Bubble    | 
 | ----------- |:----------| 
-| ![Scatter chart](images/SpreadProcessing-Features-Charts_19.png) | ![Bubble chart](images/SpreadProcessing-Features-Charts_18.png) |
+| ![Telerik Document Processing RadSpreadProcessing scatter chart](images/SpreadProcessing-Features-Charts_19.png) | ![Telerik Document Processing RadSpreadProcessing bubble chart](images/SpreadProcessing-Features-Charts_18.png) |
 
 ### Pie and Doughnut Charts
 
@@ -62,7 +62,7 @@ Pie charts are useful for comparing the values of different points in a single s
 
 | Pie         | Doughnut  | 
 | ----------- |:----------| 
-| ![Pie chart](images/SpreadProcessing-Features-Charts_10.png) | ![Doughnut chart](images/SpreadProcessing-Features-Charts_11.png) |
+| ![Telerik Document Processing RadSpreadProcessing pie chart](images/SpreadProcessing-Features-Charts_10.png) | ![Telerik Document Processing RadSpreadProcessing doughnut chart](images/SpreadProcessing-Features-Charts_11.png) |
 
 
 
@@ -72,7 +72,7 @@ Area charts can be used to plot change over time and draw attention to the total
 
 | Clustered area          | Stacked area   | 100% stacked area   |
 | ----------------------- |:--------------:| -------------------:|
-| ![Clustered area chart](images/SpreadProcessing-Features-Charts_12.png) | ![Stacked area chart](images/SpreadProcessing-Features-Charts_13.png) | ![100% stacked area chart](images/SpreadProcessing-Features-Charts_14.png)|
+| ![Telerik Document Processing RadSpreadProcessing clustered area chart](images/SpreadProcessing-Features-Charts_12.png) | ![Telerik Document Processing RadSpreadProcessing stacked area chart](images/SpreadProcessing-Features-Charts_13.png) | ![Telerik Document Processing RadSpreadProcessing 100 percent stacked area chart](images/SpreadProcessing-Features-Charts_14.png)|
 
 
 
@@ -82,7 +82,7 @@ Combo charts combine two or more chart types to make the data easy to understand
 
 | Clustered column and Line| Line and Area  |Doughnut and line    |
 | ------------------------ |:--------------:| -------------------:|
-| ![Clustered column and line combo chart](images/SpreadProcessing-Features-Charts_15.png) | ![Line and area combo chart](images/SpreadProcessing-Features-Charts_16.png) | ![Doughnut and line combo chart](images/SpreadProcessing-Features-Charts_17.png)|
+| ![Telerik Document Processing RadSpreadProcessing clustered column and line combo chart](images/SpreadProcessing-Features-Charts_15.png) | ![Telerik Document Processing RadSpreadProcessing line and area combo chart](images/SpreadProcessing-Features-Charts_16.png) | ![Telerik Document Processing RadSpreadProcessing doughnut and line combo chart](images/SpreadProcessing-Features-Charts_17.png)|
 
 >note For more details on the implementation of the charts and the properties you can use with them, check the [Using Charts]({%slug radspreadprocessing-features-charts-using-charts%}) topic.
 

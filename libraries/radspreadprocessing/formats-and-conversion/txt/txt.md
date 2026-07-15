@@ -14,4 +14,4 @@ position: 0
 
 Plain text is the contents of an ordinary sequential document readable as textual material without much processing.
 
-![Rad Spread Processing Formats and Conversion Txt 01](images/RadSpreadProcessing_Formats_and_Conversion_Txt_01.png)
+![Plain-text balance sheet opened in a text editor, showing tab-aligned asset, liability, and equity columns without spreadsheet formatting](images/RadSpreadProcessing_Formats_and_Conversion_Txt_01.png)

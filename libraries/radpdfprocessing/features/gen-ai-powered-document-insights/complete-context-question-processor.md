@@ -58,7 +58,7 @@ The `CompleteContextProcessorSettings` class defines configuration options for t
 
 The following example demonstrates how to use the `CompleteContextQuestionProcessor` to ask questions about a PDF document, including working with specific document pages. To set up the AI client as shown in this example, see the [AI Provider Setup]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
-#### **Example 1: Using CompleteContextQuestionProcessor**
+**Using CompleteContextQuestionProcessor**
 
 <snippet id='libraries-pdf-features-gen-ai-ask-questions-using-complete-context'/>
 

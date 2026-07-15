@@ -41,9 +41,9 @@ RadPdfProcessing allows you to embed file streams into the document. The content
 
 >important `DuplicatedEmbeddedFileNameException` is thrown when you add an embedded file with a name that already exists in the collection.
 
-#### Attachments Section in Adobe 
+**Attachments Section in Adobe**
 
-![Embedded Files in a PDF document](images/embedded_files_0.png)
+![RadPdfProcessing Embedded File Streams - Overview Attachments Section in Adobe](images/embedded_files_0.png)
 
 ### Specifying the MIME Type
 
@@ -51,6 +51,8 @@ RadPdfProcessing allows you to embed file streams into the document. The content
 |----|----|
 
 RadPdfProcessing allows you to set the correct MIME type when embedding the file into the PDF. This is especially important for standards like PDF/A-3 and Factur-X, which require strict metadata and MIME type declarations for embedded files.
+
+**Set the MIME Type**
 
 <snippet id='pdf-set-mime-type'/>
 
@@ -68,12 +70,12 @@ The `MergedEmbeddedFileNameResolving` event occurs when trying to resolve confli
 |`NewName`|Gets or sets the new embedded file name.|
 |`UsedNames`|Gets the names that are already used for embedded files in the same `RadFixedDocument`.|
 
-#### Resolving Duplicated Names
+**Resolving Duplicated Names**
 
 <snippet id='pdf-duplicated-file-names'/>
 
-#### Resolved Duplicated Names 
-![Resolving duplicated Names in Embedded Files](images/embedded_files_1.png) 
+**Resolved Duplicated Names**
+![RadPdfProcessing Embedded File Streams - Overview Resolved Duplicated Names](images/embedded_files_1.png) 
 
 ### Using the PdfImportSettings.DuplicatedEmbeddedFileNameResolving Event 
 

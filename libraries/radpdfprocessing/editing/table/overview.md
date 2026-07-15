@@ -14,7 +14,7 @@ Use the `Table` class to generate tabular content in PDF documents with RadPdfPr
 
 This overview explains the table building blocks, the main layout properties, and the different ways to insert or draw a table so you can choose the right workflow for your document scenario.
 
-![Diagram of the RadPdfProcessing table model with rows and cells](images/RadPdfProcessing_Editing_Table_01.png)
+![RadPdfProcessing table model diagram showing rows and cells](images/RadPdfProcessing_Editing_Table_01.png)
 
 Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instances each of which contains a series of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances. To define a simple table, generate the table cells and add some content to them.
         
@@ -39,16 +39,17 @@ Each `Table` contains a collection of [TableRow]({%slug radpdfprocessing-editing
 4. Apply layout and styling properties.
 5. Insert or draw the table with the appropriate editor.
 
-Example 1 creates a table with two rows and three columns and fills each cell with sample text.
+The following snippet creates a table with two rows and three columns and fills each cell with sample text.
 
-### Example 1: Create a Simple Table
+**Create a Simple Table**
 
 <snippet id='libraries-pdf-editing-table-overview-create-simple-table'/>
 
-The result is shown in Figure 1.
+The result is shown in the following image.
 
-#### Figure 1: Table
-![Simple two-row and three-column PDF table](images/RadPdfProcessing_Editing_Table_02.png)
+**Table**
+
+![RadPdfProcessing simple table with two rows and three columns](images/RadPdfProcessing_Editing_Table_02.png)
 
 ## Using DefaultCellProperties
 
@@ -62,18 +63,18 @@ The most common default cell properties are:
 | `Borders` | Of type `TableCellBorders`. Specifies the borders of a single cell. The available borders are left, right, top, bottom, diagonal up, and diagonal down. |
 | `Background` | Specifies the background of the cell. |
 
-**Example 2** shows how to use the `DefaultCellProperties` of a table.
+The following snippet shows how to use the `DefaultCellProperties` of a table.
         
 
-### Example 2: Use `DefaultCellProperties` on a Table
+**Use DefaultCellProperties on a Table**
 
 <snippet id='libraries-pdf-editing-table-overview-use-default-cell-properties-of-table'/>
 
-The result of the snippet in **Example 2** is demonstrated in **Figure 2**.
+The result of the snippet is demonstrated in the following image.
         
 
-#### Figure 2: Result of DefaultCellProperties modification
-![Table with shared background, padding, and border styling](images/RadPdfProcessing_Editing_Table_03.png)
+**Result of DefaultCellProperties modification**
+![RadPdfProcessing table with modified default cell properties](images/RadPdfProcessing_Editing_Table_03.png)
 
 ## Modifying a Table
 
@@ -96,83 +97,87 @@ Several table properties affect measurement, spacing, and rendering behavior:
 	* **Collapse**: The distance between borders is measured from the middle lines of the borders.
 	* **Separate**: The distance between borders is measured from the outer border contour.
 
-Examples 3 through 6 show how border calculations change when you switch the `BorderCollapse` option. Example 3 creates an empty table and applies default cell padding and a red table border with thickness `10`.
+The following snippets show how border calculations change when you switch the `BorderCollapse` option. The first snippet creates an empty table and applies default cell padding and a red table border with thickness `10`.
 
-### Example 3: Create a Table with a Red Border
+**Create a Table with a Red Border**
 
 <snippet id='libraries-pdf-editing-table-overview-create-table-with-red-border'/>
 
-Example 4 adds a single row with two cells to the table from Example 3. The first cell has a green border with thickness `5`, and the second cell has a blue border with thickness `3`.
+The next snippet adds a single row with two cells to the table from the previous example. The first cell has a green border with thickness `5`, and the second cell has a blue border with thickness `3`.
 
-### Example 4: Add Green and Blue Cells
+**Add Green and Blue Cells**
 
 <snippet id='libraries-pdf-editing-table-overview-add-green-and-blue-cells-to-table'/>
 
-**Figure 3** shows the table from Example 3 and 4 with the `BorderCollapse` property set to `Collapse`. All borders are drawn so that their middle lines coincide.
+The following image shows the table with the `BorderCollapse` property set to `Collapse`. All borders are drawn so that their middle lines coincide.
         
 
-### Example 5: Collapse Borders
+**Collapse Borders**
 
 <snippet id='libraries-pdf-editing-table-overview-collapse-table-border'/>
 
-#### Figure 3: Collapsed border
-![Table with collapsed borders where the border middle lines coincide](images/RadPdfProcessing_Editing_Table_04.png)
+**Collapsed border**
 
-Figure 4 shows the same table with `BorderCollapse` set to `Separate`, so the outer border contours coincide.
+![RadPdfProcessing table with collapsed borders](images/RadPdfProcessing_Editing_Table_04.png)
 
-### Example 6: Separate Borders
+The following image shows the same table with `BorderCollapse` set to `Separate`, so the outer border contours coincide.
+
+**Separate Borders**
 
 <snippet id='libraries-pdf-editing-table-overview-separate-table-border'/>
 
-#### Figure 4: Separated border
-![Table with separate borders and visible border spacing](images/RadPdfProcessing_Editing_Table_05.png)
+**Separated border**
+![RadPdfProcessing table with separated borders](images/RadPdfProcessing_Editing_Table_05.png)
 
 ## Drawing Table with RadFixedDocumentEditor
 
 Use `RadFixedDocumentEditor.InsertTable()` when you want the editor to place the table in the document flow and split it across pages when needed. This is the easier option for standard document-generation scenarios.
 
-Example 7 creates a simple table with two cells.
+The following snippet creates a simple table with two cells.
 
-### Example 7: Create a Table
+**Create a Table**
 
 <snippet id='libraries-pdf-editing-table-overview-create-table'/>
 
-**Example 8** inserts the table from **Example 7** in a `RadFixedDocumentEditor` and specifies the table layout type to `AutoFit`.
+The following snippet inserts the table in a `RadFixedDocumentEditor` and specifies the table layout type to `AutoFit`.
         
 
-### Example 8: Insert an AutoFit Table
+**Insert AutoFit table**
 
 <snippet id='libraries-pdf-editing-table-overview-insert-autofit-table'/>
 
-The result is that the table width is exactly as needed for fitting the cell content as visible in **Figure 5**.
+The result is that the table width is exactly as needed for fitting the cell content, as visible in the following image.
         
 
-#### Figure 5: AutoFit table
-![AutoFit table sized to its cell content](images/RadPdfProcessing_Editing_Table_06.png)
+**AutoFit table**
+
+![RadPdfProcessing AutoFit table sized to its cell content](images/RadPdfProcessing_Editing_Table_06.png)
 
 Using `FixedWidth` produces different results because the editor fits the table to the available measuring width.
 
-### Example 9: Insert a `FixedWidth` Table
+**Insert a `FixedWidth` Table**
 
 <snippet id='libraries-pdf-editing-table-overview-insert-fixed-width-table'/>
 
-#### Figure 6: FixedWidth table
-![FixedWidth table stretched to the available width](images/RadPdfProcessing_Editing_Table_07.png)
+**FixedWidth table**
+
+![RadPdfProcessing FixedWidth table stretched to the available width](images/RadPdfProcessing_Editing_Table_07.png)
 
 ## Drawing Table with FixedContentEditor
 
 Use `FixedContentEditor.DrawTable()` when you need lower-level drawing control, such as custom positioning, transforms, or rotation.
 
-Example 10 draws a rotated table with `FixedContentEditor`.
+The following snippet draws a rotated table with `FixedContentEditor`.
 
-### Example 10: Draw a Rotated Table
+**Draw a Rotated Table**
 
 <snippet id='libraries-pdf-editing-table-overview-draw-rotated-table'/>
 
-Figure 7 shows a 45-degree rotated table similar to the one in Figure 5.
+The following image shows a 45-degree rotated table similar to the AutoFit example.
 
-#### Figure 7: Rotated table
-![Rotated PDF table drawn with FixedContentEditor](images/RadPdfProcessing_Editing_Table_08.png)
+**Rotated table**
+
+![RadPdfProcessing rotated table drawn with FixedContentEditor](images/RadPdfProcessing_Editing_Table_08.png)
 
 ## Measuring a Table
 
@@ -183,9 +188,9 @@ Use one of these overloads:
 * `Measure(CancellationToken)`: Measures the table against an infinite available size and returns the resulting `Size`.
 * `Measure(Size, CancellationToken)`: Measures the table against a constrained available size when the table must fit within a known width or height.
 
-Example 11 demonstrates both measurement approaches.
+The following snippet demonstrates both measurement approaches.
 
-### Example 11: Measure a Table
+**Measure a Table**
 
 <snippet id='libraries-pdf-editing-table-overview-measure-table'/>
 
@@ -195,10 +200,10 @@ Starting with **Q3 2024**, RadPdfProcessing supports the `Dotted`, `Dashed`, and
 
 | BorderStyle | Border design |
 |----|----|
-| `Single` | ![Preview of a single-line PDF table border](images/pdf-single-border.png) |
-| `Dotted` | ![Preview of a dotted PDF table border](images/pdf-dotted-border.png) |
-| `Dashed` | ![Preview of a dashed PDF table border](images/pdf-dashed-border.png) |
-| `DashSmallGap` | ![Preview of a dash-small-gap PDF table border](images/pdf-dash-small-gap-border.png) |
+| `Single` | ![RadPdfProcessing RadPdfProcessing Table Overview Preview of a single-line PDF table border](images/pdf-single-border.png) |
+| `Dotted` | ![RadPdfProcessing RadPdfProcessing Table Overview Preview of a dotted PDF table border](images/pdf-dotted-border.png) |
+| `Dashed` | ![RadPdfProcessing RadPdfProcessing Table Overview Preview of a dashed PDF table border](images/pdf-dashed-border.png) |
+| `DashSmallGap` | ![RadPdfProcessing RadPdfProcessing Table Overview Preview of a dash-small-gap PDF table border](images/pdf-dash-small-gap-border.png) |
 
 ## Next Steps
 

@@ -20,7 +20,7 @@ position: 4
 
 The code in **Example 1** creates a `Run` element and adds it to a [Paragraph]({%slug radwordsprocessing-model-paragraph%}).
 
-**Example 1: Create and add a run to a paragraph**
+**Example 1: Create an empty Run and add it to a paragraph**
 
 <snippet id='codeblock-dn'/>
 
@@ -28,19 +28,19 @@ The code in **Example 1** creates a `Run` element and adds it to a [Paragraph]({
 
 You can add a run at a specific index in the `Inlines` collection of a paragraph using the `Insert()` method. **Example 2** demonstrates how to add a run at the beginning of a paragraph.
 
-**Example 2: Create and add a run at a specific index of a paragraph's Inlines collection**
+**Example 2: Insert an empty Run at the beginning of a paragraph**
 
 <snippet id='codeblock-do'/>
 
 You can also use the `AddRun()` method of the `Inlines` collection of a paragraph. The method creates a new `Run` instance, adds it to the container, and returns it:
 
-**Example 3: Create and add a run to a paragraph**
+**Example 3: Add an empty run and a text-filled run with the AddRun overloads**
 
 <snippet id='codeblock-dp'/>
 
 You can also insert text in the document with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class:
 
-**Example 4: Insert a run using RadFlowDocumentEditor**
+**Example 4: Insert text and a new paragraph line with RadFlowDocumentEditor**
 
 <snippet id='codeblock-dq'/>
 

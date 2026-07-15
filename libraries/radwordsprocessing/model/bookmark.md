@@ -19,7 +19,7 @@ A `Bookmark` refers to a location in the document and has a unique name, which i
 
 **Example 1** shows how to create a `Bookmark` and add its `BookmarkRangeStart` and `BookmarkRangeEnd` elements in a [Paragraph]({%slug radwordsprocessing-model-paragraph%}):
 
-**Example 1: Add a Bookmark to a Paragraph**
+**Example 1: Create a bookmark and place its start and end markers around a run in a paragraph**
 
 <snippet id='codeblock-cw'/>
 
@@ -27,7 +27,7 @@ The paragraph must belong to the same document that is passed to the constructor
 
 You can also insert a `Bookmark` in the document with the [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) class as shown in **Example 2**:
 
-**Example 2: Insert a Bookmark Using RadFlowDocumentEditor**
+**Example 2: Insert a bookmark named MyBookmark with RadFlowDocumentEditor**
 
 <snippet id='codeblock-cx'/>
 
@@ -39,7 +39,7 @@ You can remove an inserted `Bookmark` by using the `DeleteBookmark()` method of 
 
 **Example 3** demonstrates how to delete the bookmark created in **Example 2**.
 
-**Example 3: Delete a Bookmark Using RadFlowDocumentEditor**
+**Example 3: Delete a bookmark by name with RadFlowDocumentEditor**
 
 <snippet id='codeblock-cy'/>
 

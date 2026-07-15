@@ -27,11 +27,11 @@ The `FormulaChartData` type is abstract and it is implemented by the `WorkbookFo
 
 * Workbook `Workbook`: Gets the workbook that the formula refers to for the chart data.
 
-**Example 1: Using IChartData**
+**Example 1: Create chart data from numeric and string values**
 
 <snippet id='codeblock-clk'/> 
 
->caption Using Chart Data in RadSpreadProcessing
+**RadSpreadProcessing column chart created from numeric and string chart data**
 
-![Spread Chart Data](images/spread-chart-data.png)    
+![Telerik Document Processing RadSpreadProcessing column chart comparing Team 1 and Team 2 values across New, In Progress, Ready for Test, Done, and Declined categories](images/spread-chart-data.png)    
 

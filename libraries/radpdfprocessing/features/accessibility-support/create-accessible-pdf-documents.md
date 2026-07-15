@@ -33,10 +33,10 @@ When exporting the document, specify the [TaggingStrategy]({%slug radpdfprocessi
 <table style="width:100%;">
 <th width=45%>PDF Accessibility Checker tool</th><th>Logical Structure</th>
 <tr>
-    <td rowspan="2"><img src="images/accessible-pdf-validity.png" alt="Validate with PDF Accessibility Checker"/></td>
-    <td><img src="images/accessible-pdf-logical-structure.png" alt="Logical Structure of PDF"/></td>
+    <td rowspan="2"><img src="images/accessible-pdf-validity.png" alt="RadPdfProcessing Creating Accessible PDF Documents Validate with PDF Accessibility Checker"/></td>
+    <td><img src="images/accessible-pdf-logical-structure.png" alt="RadPdfProcessing Creating Accessible PDF Documents Logical Structure of PDF"/></td>
 </tr>
-<tr><td><img src="images/accessible-pdf-logical-structure-properties.png" alt="Properties"/></td></tr>
+<tr><td><img src="images/accessible-pdf-logical-structure-properties.png" alt="RadPdfProcessing Creating Accessible PDF Documents Properties"/></td></tr>
 </table>
 
 ## Creating Accessible PDF Documents with Auto-Tagging

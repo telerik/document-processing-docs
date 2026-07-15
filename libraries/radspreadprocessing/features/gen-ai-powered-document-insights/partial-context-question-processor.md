@@ -65,17 +65,19 @@ The settings are created only through `EmbeddingSettingsFactory`'s `CreateSettin
 | `ProduceJsonFormattedContext` | Whether the context should be formatted as JSON. Default is `false`. |
 | `TotalContextTokenLimit` | The total token limit for the context sent to the answering model. Default is `null` (takes half of the max limit). |
 
+**Example 1: Create IEmbeddingSettings for PartialContextQuestionProcessor**
+
 <snippet id='libraries-spread-features-gen-ai-partial-context-create-iembeddingsettings'/>
 
 ## Usage Examples
 
-**Example 1: Using PartialContextQuestionProcessor with Default Embedding**
+**Example 2: Use PartialContextQuestionProcessor with the built-in embedder**
 
 This example demonstrates how to use the `PartialContextQuestionProcessor` with the built-in embedding on .NET {{site.mindotnetversion}}+ (Target OS Windows) + [Packages for .NET {{site.mindotnetversion}} and .NET {{site.maxdotnetversion}} for Windows]({%slug available-nuget-packages%}#packages-for-net-framework-and-net-{{site.mindotnetversion}}-and-net-{{site.maxdotnetversion}}-for-windows). For setting up the AI client, see the [AI Provider Setup]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup) section:
 
 <snippet id='libraries-spread-features-gen-ai-ask-questions-using-partial-context'/>
 
-**Example 2: Using PartialContextQuestionProcessor with Custom IEmbedder**
+**Example 3: Use PartialContextQuestionProcessor with a custom IEmbedder**
 
 This example demonstrates how to use the `PartialContextQuestionProcessor` with a custom `IEmbedder` implementation as described in the [Implementing Custom IEmbedder]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder) section:
 
@@ -90,6 +92,8 @@ A sample custom `CustomOpenAIEmbedder` implementation for the `IEmbedder` is sho
 > * **Microsoft.Extensions.AI.OpenAI** (v9.3)
 > * **Telerik.Windows.Documents.AIConnector**
 > * **Telerik.Windows.Documents.Spreadsheet**
+
+**Example 4: Implement a custom OpenAI embedder for PartialContextQuestionProcessor**
 
 <snippet id='libraries-spread-features-gen-ai-ask-questions-using-partial-context-custom-openai-embedder'/>
 

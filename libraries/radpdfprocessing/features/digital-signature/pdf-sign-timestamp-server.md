@@ -22,7 +22,7 @@ The `TimeStampServer` class encapsulates the details needed to communicate with 
 
 The produced result document indicates a valid embedded timestamp:
 
-![Signed PDF with a TimeStamp Server ><](images/radpdfprocessing-features-digital-signature-timestamp.png) 
+![RadPdfProcessing Signing a PDF using a TimeStamp Server Signed PDF with a TimeStamp Server](images/radpdfprocessing-features-digital-signature-timestamp.png) 
 
 ## Creating TimeStampServer with Credentials
 

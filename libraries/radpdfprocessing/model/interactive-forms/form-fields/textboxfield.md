@@ -27,7 +27,7 @@ The `TextBoxField` class exposes the following properties:
 | `AllowScroll` | Indicates whether scrolling is allowed for larger text content. When `false`, the maximum text input is restricted to the Widget annotation rectangle. |
 | `MaxLengthOfInputCharacters` | Gets or sets the maximum length of the entered text. When `null`, the text length is unrestricted. |
 
-**Example 1: Create a TextBoxField and Add It to a Page**
+**Create a TextBoxField and Add It to a Page**
 
 <snippet id='pdf-textbox-field'/>
 

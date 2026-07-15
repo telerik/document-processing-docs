@@ -14,6 +14,6 @@ position: 0
 
 The following image shows a PDF file opened in a text editor:
 
-![PDF file structure opened in a text editor](images/RadSpreadProcessing_Formats_and_Conversion_Pdf_01.png)
+![PDF file contents in a text editor, showing the PDF header, object definitions, page references, and a compressed stream block](images/RadSpreadProcessing_Formats_and_Conversion_Pdf_01.png)
 
 `PdfFormatProvider` is compliant with the latest [PDF Reference 1.7](https://opensource.adobe.com/dc-acrobat-sdk-docs/pdfstandards/PDF32000_2008.pdf).

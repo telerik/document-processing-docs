@@ -24,7 +24,7 @@ The default value for this setting is `false`.
 
 The following code demonstrates how to create and specify particular export settings for `RtfFormatProvider`.
 
-**Example 1: Create RtfExportSettings**
+**Example 1: Create RtfExportSettings and enable image export in compatibility mode**
 
 <snippet id='codeblock-co'/>
 

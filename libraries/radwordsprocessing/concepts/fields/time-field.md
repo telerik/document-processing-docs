@@ -37,7 +37,7 @@ You can insert a `Time` field through the [RadFlowDocumentEditor]({%slug radword
 
 **Example 1** demonstrates how you can insert a `Time` field.
 
-**Example 1: Insert Time Field**
+**Example 1: Insert a TIME field with an hours-minutes-seconds picture switch**
 
 ```C#  
 	editor.InsertField("TIME \\@ \"h:mm:ss am/pm\"", "«to be updated»");

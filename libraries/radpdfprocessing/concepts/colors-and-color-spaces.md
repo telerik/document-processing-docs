@@ -65,7 +65,7 @@ Represents a CMYK (cyan, magenta, yellow, key) color. The `CmykColor` class was 
 
 <snippet id='pdf-create-cmyk-color'/>
 
-![CMYK Color](images/cmyk-color.png) 
+![RadPdfProcessing Colors and Color Spaces CMYK Color](images/cmyk-color.png) 
 
 >note The difference between the RGB and CMYK color spaces is an essential aspect of color management in the design industry. While CMYK is used for traditional print, the RGB color space is used for screen-based media. 
 
@@ -92,15 +92,15 @@ The `Gradient` class is inherited by the following classes:
             
 	**Example 2** shows how to create a `LinearGradient` and assign it as the `FillColor` of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
             
-	#### **Example 2: Create LinearGradient**
+	**Create LinearGradient**
 	
 	<snippet id='pdf-create-linear-gradient'/>
 	
 The gradient created in **Example 2** is shown in **Figure 1**.
 	            
-#### Figure 1: LinearGradient	
+**Figure 1: LinearGradient**
 
-![Rad Pdf Processing Concepts Colors And Color Spaces 01](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
+![RadPdfProcessing Colors and Color Spaces LinearGradient](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_01.png)
     
 * `RadialGradient`: Defines a blend between two circles, optionally extended beyond the boundary circles by continuing the boundary colors. The `RadialGradient` class exposes the following additional properties:
 
@@ -111,15 +111,15 @@ The gradient created in **Example 2** is shown in **Figure 1**.
               
 **Example 3** demonstrates how to create a `RadialGradient` and assign it as the `FillColor` of a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}).
 	
-#### **Example 3: Create RadialGradient**
+**Example 3: Create RadialGradient**
 	
 <snippet id='pdf-create-linear-gradient'/>
 	
 The result from **Example 3** is shown in **Figure 2**.
 	
-#### Figure 2: RadialGradient
+**Figure 2: RadialGradient**
 	
-![Rad Pdf Processing Concepts Colors And Color Spaces 03](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_03.png)
+![RadPdfProcessing Colors and Color Spaces RadialGradient](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_03.png)
 
 ### Tiling Pattern
 
@@ -144,14 +144,15 @@ The `TilingBase` class is inherited by the following classes:
 
 Because the `TilingBase` class implements the `IContentRootElement` interface like [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}), you can modify the content of the tiling using the `FixedContentEditor` class. **Example 4** shows how to create a tiling pattern.
 
-#### __Example 4: Create Tiling__
+**Example 4: Create Tiling**
 
 <snippet id='pdf-create-tiling'/>
 
 The tiling created in **Example 4** is shown in **Figure 3**.
 
-#### Figure 3: Tiling
-![Rad Pdf Processing Concepts Colors And Color Spaces 02](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_02.png)
+**Figure 3: Tiling**
+
+![RadPdfProcessing Colors and Color Spaces Tiling](images/RadPdfProcessing_Concepts_Colors_And_Color_Spaces_02.png)
 
 ## LabColor
 

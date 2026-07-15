@@ -20,7 +20,7 @@ Telerik **RadPdfProcessing** provides an API that allows you to:
 * [Verify existing signed PDF documents]({%slug radpdfprocessing-features-digital-signature-validation%}).
 * [Multiple Digital Signing with PdfStreamSigner]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%}). 
 
-![Overview of Signed PDF](images/radpdfprocessing-features-digital-signature-overview.png) 
+![RadPdfProcessing Overview of Signed PDF](images/radpdfprocessing-features-digital-signature-overview.png) 
 
 ## Online Demos
 

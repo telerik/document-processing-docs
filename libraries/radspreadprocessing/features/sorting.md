@@ -64,8 +64,9 @@ All sorting conditions which can be applied to the sorted range implement the `I
 
 The diagram in **Figure 1** shows the different types of conditions, which inherit the `ISortCondition` interface, and the classes which implement them.
 
-#### Figure 1: Types of Conditions
-![Rad Spread Processing Features Sorting 01](images/RadSpreadProcessing_Features_Sorting_01.png)
+**Figure 1: Sorting condition type hierarchy for worksheet sorting APIs**
+
+![Telerik Document Processing RadSpreadProcessing diagram showing the ISortCondition hierarchy with ValuesSortCondition, CustomValuesSortCondition, ForeColorSortCondition, and FillColorSortCondition](images/RadSpreadProcessing_Features_Sorting_01.png)
 
 ## OrderedSortCondition
 
@@ -85,7 +86,7 @@ The values sort condition is a condition which uses the values of the cells to s
 
 **Example 1** shows how to create a `ValuesSortCondition`.
 
-**Example 1: Create ValuesSortCondition**
+**Example 1: Create a ValuesSortCondition**
 
 <snippet id='codeblock-ckv'/>
 
@@ -93,8 +94,9 @@ The values sort condition is a condition which uses the values of the cells to s
 
 This condition uses a predefined comparer to sort the values of the cells in the selected range in an intuitive ascending order. The result is visible in **Figure 2**.
 
-#### Figure 2: Values Sort Result
-![Rad Spread Processing Features Sorting 02](images/RadSpreadProcessing_Features_Sorting_02.png)
+**Figure 2: ID column sorted in ascending numeric order**
+
+![Telerik Document Processing RadSpreadProcessing worksheet column showing ID values sorted in ascending numeric order](images/RadSpreadProcessing_Features_Sorting_02.png)
 
 ## CustomValuesSortCondition
 
@@ -102,14 +104,15 @@ Sometimes the behavior of the predefined comparers is not sufficient. In this ca
 
 **Example 2** shows how to create a `CustomValuesSortCondition`.
 
-**Example 2: Create CustomValuesSortCondition**
+**Example 2: Create a CustomValuesSortCondition**
 
 <snippet id='codeblock-ckw'/>
 
 
 
-#### Figure 3: Custom Value Sort Result
-![Rad Spread Processing Features Sorting 03](images/RadSpreadProcessing_Features_Sorting_03.png)
+**Figure 3: Shipping column sorted by a custom value order**
+
+![Telerik Document Processing RadSpreadProcessing worksheet column showing Shipping values sorted by a custom order with regular before one-day, two-day, and express entries](images/RadSpreadProcessing_Features_Sorting_03.png)
 
 ## ForeColorSortCondition
 
@@ -117,7 +120,7 @@ A fore color sort condition orders the cells according to the color of the text 
 
 **Example 3** demonstrates how to create a `ForeColorSortCondition`. This condition sorts the range by putting all cells with a red fore color on the top.
 
-**Example 3: Create ForeColorSortCondition**
+**Example 3: Create a ForeColorSortCondition**
 
 <snippet id='codeblock-ckx'/>
 
@@ -129,7 +132,7 @@ A fill color sort condition orders the cells according to their fill color. Each
 
 **Example 4** shows how to create a `FillColorSortCondition`.
 
-**Example 4: Create FillColorSortCondition**
+**Example 4: Create a FillColorSortCondition**
 
 <snippet id='codeblock-cky'/>
 
@@ -137,8 +140,9 @@ A fill color sort condition orders the cells according to their fill color. Each
 
 **Figure 4** shows that this condition sorts the range by putting all cells with a red color on the top.
 
-#### Figure 4: Fill Color Sort Result
-![Rad Spread Processing Features Sorting 04](images/RadSpreadProcessing_Features_Sorting_04.png)
+**Figure 4: Status cells sorted by fill color with red values placed first**
+
+![Telerik Document Processing RadSpreadProcessing worksheet column showing status cells sorted by fill color with red rows at the top](images/RadSpreadProcessing_Features_Sorting_04.png)
 
 ## Setting Sorting Conditions
 
@@ -148,7 +152,7 @@ Unlike the case with [Filtering]({%slug radspreadprocessing-features-filtering%}
 
 **Example 5** shows how to create three sorting conditions.
 
-**Example 5: Create Conditions**
+**Example 5: Create multiple sorting conditions**
 
 <snippet id='codeblock-ckz'/>
 
@@ -156,7 +160,7 @@ Unlike the case with [Filtering]({%slug radspreadprocessing-features-filtering%}
 
 **Example 6** shows how to apply the sorting conditions through the `SortState` property.
 
-**Example 6: Set Conditions Through SortState**
+**Example 6: Apply sorting conditions through SortState**
 
 <snippet id='codeblock-cla'/>
 
@@ -164,7 +168,7 @@ Unlike the case with [Filtering]({%slug radspreadprocessing-features-filtering%}
 
 Alternatively, **Example 7** shows how to apply the sorting conditions through the cell selection property.
 
-**Example 7: Set Conditions Through Selection**
+**Example 7: Apply sorting conditions through the cell selection**
 
 <snippet id='codeblock-clb'/>
 
@@ -172,8 +176,9 @@ Alternatively, **Example 7** shows how to apply the sorting conditions through t
 
 Whichever option you choose, the result is the same. The conditions are applied in the order you set them. In **Figure 5** you can see that in this example the rows are rearranged first by the custom list given for column F. After that the red color is placed on top and the green color is placed after it in each section formed by the rows with same values in column F.
 
-#### Figure 5: Set Conditions Result
-![Rad Spread Processing Features Sorting 05](images/RadSpreadProcessing_Features_Sorting_05.png)
+**Figure 5: Orders log sorted by custom shipping order and status colors**
+
+![Telerik Document Processing RadSpreadProcessing orders log worksheet before and after sorting by shipping values and colored status cells](images/RadSpreadProcessing_Features_Sorting_05.png)
 
 ## Clearing the Sorting
 
@@ -181,7 +186,7 @@ To clear the sorting, use the `Clear()` method of the `SortState` property. Ther
 
 **Example 8** shows how to clear the sorting.
 
-**Example 8: Clear Sorting**
+**Example 8: Clear sorting from the worksheet**
 
 <snippet id='codeblock-clc'/>
 
