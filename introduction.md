@@ -97,11 +97,11 @@ Telerik Document Processing features the following libraries:
 |**Convenient API**|Add document processing capabilities to your applications quickly by using the convenient APIs. Create, edit, and convert documents with a few lines of code.|
 |**Performance and Speed**|The libraries are decoupled from UI and deliver great performance in different cases, especially when you work with large Excel files.|
 |**Any Document. Any Business.**|Telerik Document Processing is suitable for various business cases and scenarios where document creation or manipulation is required.|
-|**Support for a Variety of File Formats**|Telerik Document Processing includes five libraries for manipulating [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML) file formats and PDF documents in your application.|
-|**Timeout Mechanism**|[Timeout Mechanism]({%slug timeout-mechanism-in-dpl%}) for importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory `TimeSpan?` timeout parameter after which the operation is cancelled.|
-|**GenAI-powered Document Insights**|Extract insights from PDF documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content. [[Read More]]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
-|**AI Coding Assistant**|Provides specialized context to AI models, enabling them to produce higher-quality code samples. [[Read More]]({%slug ai-coding-assistant%})|
-|**Automatic Output Stream Clearing on Export**|Automatically clears the output stream before writing new content. [[Read More]]({%slug common-export-output-stream-clearing%})|
+|**Support for a Variety of File Formats**|Telerik Document Processing includes five libraries for manipulating <a href="https://en.wikipedia.org/wiki/Office_Open_XML" target="_blank" rel="noopener noreferrer" title="https://en.wikipedia.org/wiki/Office_Open_XML">Office Open XML document formats</a> and PDF documents in your application.|
+|**Timeout Mechanism**|The [document import and export timeout mechanism]({%slug timeout-mechanism-in-dpl%}) applies to importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory `TimeSpan?` timeout parameter after which the operation is cancelled.|
+|**GenAI-powered Document Insights**|Extract insights from PDF documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content. [Explore GenAI-powered PDF document insights]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
+|**AI Coding Assistant**|Provides specialized context to AI models, enabling them to produce higher-quality code samples. [Learn about the Document Processing AI Coding Assistant]({%slug ai-coding-assistant%})|
+|**Automatic Output Stream Clearing on Export**|Automatically clears the output stream before writing new content. [Review automatic output stream clearing during export]({%slug common-export-output-stream-clearing%})|
 
 For more details about the benefits of using Telerik Document Processing, see the [Telerik Document Processing product overview page](https://www.telerik.com/document-processing-libraries).
 
@@ -143,15 +143,15 @@ The Telerik Document Processing libraries are available in **.NET Framework**, *
 |[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for Blazor](https://www.telerik.com/blazor-ui)|
 |[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
 
-You can find all packages in the [Available NuGet Packages]({%slug available-nuget-packages%}) article.
+You can find all packages in the [complete list of available NuGet packages]({%slug available-nuget-packages%}) article.
 
 ## Getting Started
 
-To start using the libraries right away, see the [First Steps]({%slug getting-started-first-steps%}) topic that demonstrates how to create a sample application that uses the Document Processing libraries.
+To start using the libraries right away, follow the [Document Processing first steps tutorial]({%slug getting-started-first-steps%}) to create a sample application that uses the libraries.
 
 ## Trial Version and Commercial License
 
-Telerik Document Processing is a commercial library. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to [purchase a license](https://www.telerik.com/purchase.aspx). Review the Telerik [License Agreement](https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s) to get acquainted with the full terms of use.	
+Telerik Document Processing is a commercial library. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to <a href="https://www.telerik.com/purchase.aspx" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/purchase.aspx">purchase a Telerik license</a>. Review the Telerik <a href="https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s">commercial license agreement</a> to get acquainted with the full terms of use.	
 
 >Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for WPF**, **UI for WinForms**. The libraries are subject to the license under which you have obtained the packages.
 
@@ -159,16 +159,16 @@ Telerik Document Processing is a commercial library. You are welcome to explore 
 
 For any issues you might encounter while working with Telerik Document Processing, use any of the available support channels:
 
-* License holders and active trialists can take advantage of our outstanding customer support delivered by the developers building the library. To submit a support ticket, use the [dedicated support system](https://www.telerik.com/account/support-tickets?pid=1886&supcId=daf62541-57e0-b84c-8b5e-da9851c61873&fbp=false). Learn [How to Get the Most Out of the Telerik Document Processing Support]({%slug submit-support-tickets%}).
-* Our [forums](https://www.telerik.com/forums/telerik-document-processing) are part of the free support you can get from the community and from the team on all kinds of general issues.
-* Our [feedback portal](https://feedback.telerik.com/document-processing) provides information on the features/bugs in discussion and also the planned ones for release.
-* You may still need a tailor-made solution for your project. In such cases, go straight to [Progress Services](https://www.progress.com/services).
+* License holders and active trialists can take advantage of our outstanding customer support delivered by the developers building the library. To submit a support ticket, use the <a href="https://www.telerik.com/account/support-tickets?pid=1886&supcId=daf62541-57e0-b84c-8b5e-da9851c61873&fbp=false" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/account/support-tickets?pid=1886&supcId=daf62541-57e0-b84c-8b5e-da9851c61873&fbp=false">Telerik Document Processing support ticket system</a>. Learn [how to get the most out of Document Processing support]({%slug submit-support-tickets%}).
+* Our <a href="https://www.telerik.com/forums/telerik-document-processing" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/forums/telerik-document-processing">Telerik Document Processing forums</a> are part of the free support you can get from the community and from the team on all kinds of general issues.
+* Our <a href="https://feedback.telerik.com/document-processing" target="_blank" rel="noopener noreferrer" title="https://feedback.telerik.com/document-processing">Document Processing feedback portal</a> provides information on the features/bugs in discussion and also the planned ones for release.
+* You may still need a tailor-made solution for your project. In such cases, go straight to <a href="https://www.progress.com/services" target="_blank" rel="noopener noreferrer" title="https://www.progress.com/services">Progress professional services</a>.
 
 ## Learning Resources
 
-* [Online Demo application](https://demos.telerik.com/document-processing)
-* [Knowledge Base](https://docs.telerik.com/devtools/document-processing/knowledge-base)
-* [Virtual Classroom](https://www.telerik.com/account/support/virtual-classroom)
+* <a href="https://demos.telerik.com/document-processing" target="_blank" rel="noopener noreferrer" title="https://demos.telerik.com/document-processing">Document Processing online demos</a>
+* <a href="https://docs.telerik.com/devtools/document-processing/knowledge-base" target="_blank" rel="noopener noreferrer" title="https://docs.telerik.com/devtools/document-processing/knowledge-base">Document Processing Knowledge Base</a>
+* <a href="https://www.telerik.com/account/support/virtual-classroom" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/account/support/virtual-classroom">Telerik Document Processing virtual classroom</a>
 
 ## Help Us Improve the Telerik Document Processing Documentation
 
@@ -176,15 +176,15 @@ The documentation for a product is at its best when the content is a collaborati
 
 * **Submit a New Issue at GitHub**
 
-If you find an issue with our docs that needs to be addressed, the best way to let us know is by creating an issue in our [Github repository](https://github.com/telerik/document-processing-docs/issues). When creating an issue, provide a descriptive title, be as specific as possible, and link to the documentation in question. If you can provide a link to the closest anchor to the issue, that is even better.
+If you find an issue with our docs that needs to be addressed, the best way to let us know is by creating an issue in the <a href="https://github.com/telerik/document-processing-docs/issues" target="_blank" rel="noopener noreferrer" title="https://github.com/telerik/document-processing-docs/issues">Telerik Document Processing documentation issue tracker</a>. When creating an issue, provide a descriptive title, be as specific as possible, and link to the documentation in question. If you can provide a link to the closest anchor to the issue, that is even better.
 
 * **Update the Documentation at GitHub**
 
-Creating an issue is great, but what we really love are pull requests. This is the most direct method. So, if you find an issue in the docs, or even feel like creating new content, we are happy to have your contributions! The basic steps are that you fork our documentation and submit a pull request. That way you may contribute to exactly where you found the error. After that, our technical writing team just needs to approve your change request. Use only standard markdown. For more detailed instructions, follow [the contribution instructions](https://github.com/telerik/document-processing-docs/blob/master/README.md) published on GitHub.
+Creating an issue is great, but what we really love are pull requests. This is the most direct method. So, if you find an issue in the docs, or even feel like creating new content, we are happy to have your contributions! The basic steps are that you fork our documentation and submit a pull request. That way you may contribute to exactly where you found the error. After that, our technical writing team just needs to approve your change request. Use only standard markdown. For more detailed instructions, follow the <a href="https://github.com/telerik/document-processing-docs/blob/master/README.md" target="_blank" rel="noopener noreferrer" title="https://github.com/telerik/document-processing-docs/blob/master/README.md">GitHub documentation contribution instructions</a>.
 
 * **Forums**
 
-You can visit the [Telerik Document Processing forum](https://www.telerik.com/forums/telerik-document-processing) and leave feedback. This method takes a bit longer to reach the documentation team. However, if you need a fast reply from the support team, leaving feedback in the forum guarantees a support number for your suggestions, and that we will follow up on it.
+You can visit the <a href="https://www.telerik.com/forums/telerik-document-processing" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/forums/telerik-document-processing">Telerik Document Processing community forum</a> and leave feedback. This method takes a bit longer to reach the documentation team. However, if you need a fast reply from the support team, leaving feedback in the forum guarantees a support number for your suggestions, and that we will follow up on it.
 
 Thank you for your contribution to the Telerik Document Processing documentation!
 

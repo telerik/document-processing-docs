@@ -20,7 +20,7 @@ Install `Telerik.Licensing` in the same project where you add the Telerik Docume
 
 Telerik Document Processing is available with several Telerik UI component bundles, so the libraries may already be present on your machine. If you already installed one of the supported Telerik UI suites, use the following table to find the installation instructions and the default package location for that suite.
 
->tip For new development, the recommended installation path is NuGet. For current feed options and setup steps, see [Install using NuGet Packages]({%slug installation-nuget-packages%}).
+>tip For new development, the recommended installation path is NuGet. For current feed options and setup steps, see the [NuGet package installation guide]({%slug installation-nuget-packages%}).
 
 | UI Components suite | Installation instructions | Default location of the Document Processing packages |
 |--------------------|---------------------------|------------------------------------------------|
@@ -68,7 +68,7 @@ This sample uses [RadWordsProcessing]({%slug radwordsprocessing-overview%}) to c
 	For a .NET Standard or {{site.dotnetversions}} project:
 	* `Telerik.Documents.Flow.FormatProviders.Pdf`
 
-You can find the complete Telerik Document Processing package list in [Available NuGet Packages]({%slug available-nuget-packages%}).
+You can find the complete Telerik Document Processing package list in the [available NuGet packages reference]({%slug available-nuget-packages%}).
 
 ## Step 4: Create a RadFlowDocument
 
@@ -90,7 +90,7 @@ Use this optional step if you want to start from an existing DOCX file instead o
 
 ### Export the RadFlowDocument to DOCX
 
-Use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) to save the `RadFlowDocument` as a DOCX file. The following snippet creates the provider instance and exports the generated document to the `bin` folder of the current project.
+Use the [DocxFormatProvider for DOCX export]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) to save the `RadFlowDocument` as a DOCX file. The following snippet creates the provider instance and exports the generated document to the `bin` folder of the current project.
         
 
 **Export a RadFlowDocument to a DOCX file**
@@ -99,7 +99,7 @@ Use [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-d
 
 ### Export the RadFlowDocument to PDF
 
-Use [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the same `RadFlowDocument` to a PDF file.
+Use the [PdfFormatProvider for PDF export]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the same `RadFlowDocument` to a PDF file.
         
 **Export a RadFlowDocument to a PDF file**
 
@@ -117,12 +117,12 @@ Run the console application and verify that the `bin` folder contains the genera
 
 After you complete this first sample, continue with the following articles to explore editing, merging, inserting, and other document-processing tasks.
 
-* [Explore Features]({%slug getting-started-explore-features%})
-* [Further Information]({%slug getting-started-next-steps%})
+* [Explore Document Processing features and examples]({%slug getting-started-explore-features%})
+* [Find additional Document Processing guidance]({%slug getting-started-next-steps%})
 
 ## See Also
 
-* [System Requirements]({%slug installation-system-requirements%})
-* [Installing on your computer]({%slug installation-installing-on-your-computer%})
-* [Document Processing SDK Examples](https://github.com/telerik/document-processing-sdk)
-* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [Review Document Processing system requirements]({%slug installation-system-requirements%})
+* [Install Telerik Document Processing on your computer]({%slug installation-installing-on-your-computer%})
+* [Browse Telerik Document Processing SDK examples](https://github.com/telerik/document-processing-sdk)
+* [Review Document Processing library distribution across .NET versions]({%slug distribute-telerik-document-processing-libraries-net-versions%})

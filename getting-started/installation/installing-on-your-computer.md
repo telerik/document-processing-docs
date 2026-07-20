@@ -22,45 +22,45 @@ Telerik Document Processing is part of several Telerik bundles and is installed 
 
 ## UI for ASP.NET Core
 
-[Download and Installation of Document Processing Libraries](https://docs.telerik.com/aspnet-core/getting-started/installation/document-processing)
+[Install Document Processing libraries with ASP.NET Core](https://docs.telerik.com/aspnet-core/getting-started/installation/document-processing)
 
 The libraries can be used through the available NuGet packages.
 
 ## UI for ASP.NET AJAX
 
-[Installing Telerik UI for ASP.NET AJAX](https://docs.telerik.com/devtools/aspnet-ajax/installation/which-file-do-i-need-to-install)
+[Install Telerik UI for ASP.NET AJAX](https://docs.telerik.com/devtools/aspnet-ajax/installation/which-file-do-i-need-to-install)
 
 When the installation completes, the Telerik Document Processing packages are available in the *AdditionalLibraries* sub-folder.
 
 ## UI for ASP.NET MVC
 
-[Installing Telerik UI for ASP.NET MVC](https://docs.telerik.com/aspnet-mvc/getting-started/installation/overview)
+[Review the ASP.NET MVC installation overview](https://docs.telerik.com/aspnet-mvc/getting-started/installation/overview)
 
 When the installation completes, the Telerik Document Processing packages are available in the *spreadsheet* sub-folder.
 
 ## UI for Blazor
 
-[Download and Installation of Document Processing Libraries](https://docs.telerik.com/blazor-ui/integrations/document-processing-libraries)
+[Install Document Processing libraries with Blazor](https://docs.telerik.com/blazor-ui/integrations/document-processing-libraries)
 
 The libraries can be used through the available NuGet packages.
 
 ## UI for WPF
 
-[Installing Telerik UI for WPF](https://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
+[Install Telerik UI for WPF](https://docs.telerik.com/devtools/wpf/installation-and-deployment/installing-telerik-ui-on-your-computer/installation-installing-which-file-do-i-need.html)
 
 
 ## UI for WinForms
 
-[Installing Telerik UI for WinForms](https://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer)
+[Install Telerik UI for WinForms](https://docs.telerik.com/devtools/winforms/installation-deployment-and-distribution/installing-on-your-computer)
 
 ## UI for WinUI
 
-[Installing Telerik UI for WinUI](https://docs.telerik.com/devtools/winui/installation-and-deployment/installationsteps)
+[Review the WinUI installation steps](https://docs.telerik.com/devtools/winui/installation-and-deployment/installationsteps)
 
 ## UI for .NET MAUI
 
-[Installing Telerik UI for .NET MAUI](https://docs.telerik.com/devtools/maui/installation/download-product-files)
+[Install Telerik UI for .NET MAUI](https://docs.telerik.com/devtools/maui/installation/download-product-files)
 
 ## See Also
 
-* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [Review Document Processing library distribution across .NET versions]({%slug distribute-telerik-document-processing-libraries-net-versions%})

@@ -14,13 +14,13 @@ The libraries included in **Telerik Document Processing** allow you to create, m
 
 Depending on the scenario, you can take advantage of the different features each library provides. This article describes the most common approaches for creating a PDF document and how to achieve the desired goal using **Telerik Document Processing**.
 
-* [Create a PDF Document From Scratch](#create-a-pdf-document-from-scratch)
+* [Create a PDF document from scratch](#create-a-pdf-document-from-scratch)
 
-* [Convert a Document to PDF](#convert-a-document-to-pdf)
+* [Convert a document to PDF](#convert-a-document-to-pdf)
 
-* [Convert a Spreadsheet Document to PDF](#convert-a-spreadsheet-document-to-pdf)
+* [Convert a spreadsheet document to PDF](#convert-a-spreadsheet-document-to-pdf)
 
->important The **.NET Standard** specification does not define APIs for getting specific fonts. `PdfFormatProvider` needs to have access to the font data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you must provide an implementation of the `FontsProviderBase` abstract class and set this implementation to the `FontsProvider` property of `FixedExtensibilityManager`. For detailed information, check the [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%}) article.
+>important The **.NET Standard** specification does not define APIs for getting specific fonts. `PdfFormatProvider` needs to have access to the font data so that it can read it and add it to the PDF file. That is why, to allow the library to create and use fonts, you must provide an implementation of the `FontsProviderBase` abstract class and set this implementation to the `FontsProvider` property of `FixedExtensibilityManager`. For detailed information, check the [cross-platform font and PDF support requirements]({%slug radpdfprocessing-cross-platform%}).
 
 ## Create a PDF Document From Scratch
 
@@ -36,13 +36,13 @@ Depending on the scenario, you can take advantage of the different features each
 
 You can import and export a document through the respective methods of the `PdfFormatProvider` class.
 
->The `PdfFormatProvider` class of RadPdfProcessing resides in the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf` namespace. For more information on how to work with this provider, read the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) topic.
+>The `PdfFormatProvider` class of RadPdfProcessing resides in the `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf` namespace. For more information on how to work with this provider, read the [RadPdfProcessing PdfFormatProvider reference]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
 ## Convert a Document to PDF
 
-In scenarios where you need to convert a document from another file format to PDF, you can take advantage of the capabilities of **RadWordsProcessing**. This library allows you to import documents from the most common rich text formats (DOCX, HTML, RTF) and plain text and export them to PDF. All the supported document formats and the corresponding format providers are listed in the [Formats and Conversion section]({%slug radwordsprocessing-formats-and-conversion%}). 
+In scenarios where you need to convert a document from another file format to PDF, you can take advantage of the capabilities of **RadWordsProcessing**. This library allows you to import documents from the most common rich text formats (DOCX, HTML, RTF) and plain text and export them to PDF. All the supported document formats and the corresponding format providers are listed in the [RadWordsProcessing format providers and conversion options]({%slug radwordsprocessing-formats-and-conversion%}). 
 
->The `PdfFormatProvider` class of RadWordsProcessing resides in the `Telerik.Windows.Documents.Flow.FormatProviders.Pdf` namespace. For more information on how to work with this provider, read the [PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) topic.
+>The `PdfFormatProvider` class of RadWordsProcessing resides in the `Telerik.Windows.Documents.Flow.FormatProviders.Pdf` namespace. For more information on how to work with this provider, read the [RadWordsProcessing PdfFormatProvider reference]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
 ### Convert HTML to PDF
 
@@ -82,13 +82,13 @@ In scenarios where you need to convert a document from another file format to PD
 * **.NET Standard 2.0 ({{site.dotnetversions}})** 
     * Telerik.Documents.Spreadsheet.FormatProviders.Pdf
 
-While the previously discussed libraries allow working with text documents, with RadSpreadProcessing you can create, import, and export tabular data. This library supports the most common file formats for storing spreadsheet documents - XLSX, CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
+While the previously discussed libraries allow working with text documents, with RadSpreadProcessing you can create, import, and export tabular data. This library supports the most common file formats for storing spreadsheet documents - XLSX, CSV. All format providers are listed and described in the corresponding [RadSpreadProcessing spreadsheet format providers]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}). 
 
->The `PdfFormatProvider` class of RadSpreadProcessing resides in the `Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf` namespace. For more information on how to work with this provider, read the [PdfFormatProvider]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) topic.
+>The `PdfFormatProvider` class of RadSpreadProcessing resides in the `Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf` namespace. For more information on how to work with this provider, read the [RadSpreadProcessing PdfFormatProvider reference]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
 ## See Also
 
-* [Getting Started with Telerik Document Processing]({%slug getting-started%})
-* [RadPdfProcessing]({%slug radpdfprocessing-overview%})
-* [RadWordsProcessing]({%slug radwordsprocessing-overview%})
-* [RadSpreadProcessing]({%slug radspreadprocessing-overview%})
+* [Get started with Telerik Document Processing libraries]({%slug getting-started%})
+* [Create and export fixed-layout PDFs with RadPdfProcessing]({%slug radpdfprocessing-overview%})
+* [Convert text documents with RadWordsProcessing]({%slug radwordsprocessing-overview%})
+* [Process spreadsheets with RadSpreadProcessing]({%slug radspreadprocessing-overview%})

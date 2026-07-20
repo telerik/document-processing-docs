@@ -30,7 +30,7 @@ This topic describes the system requirements needed by Telerik Document Processi
 
 * [Windows Server 2003 (excluding IA-64)](https://learn.microsoft.com/en-us/dotnet/framework/get-started/system-requirements#server-operating-systems)
 
->note For a complete list of the supported operating systems, check the [.NET Framework system requirements](https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies?source=recommendations#net-framework-462) article.
+>note For a complete list of the supported operating systems, check the [.NET Framework 4.6.2 system requirements](https://learn.microsoft.com/en-us/dotnet/framework/migration-guide/versions-and-dependencies?source=recommendations#net-framework-462).
 
 ## Development Environment
 
@@ -43,7 +43,7 @@ Supported Development Tools and Environments:
 * **.NET Standard 2.0** 
 	* [.NET {{site.mindotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.mindotnetversion}}.0) to [.NET {{site.maxdotnetversion}}](https://dotnet.microsoft.com/download/dotnet/{{site.maxdotnetversion}}.0) 
 
-* **Microsoft Visual Studio 2010/2012/2013/2015/2019/2022/2026** - download from the [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/) page.
+* **Microsoft Visual Studio 2010/2012/2013/2015/2019/2022/2026** - download from the [Visual Studio product downloads page](https://visualstudio.microsoft.com/downloads/).
   
 ## Hardware Environment
 
@@ -56,7 +56,7 @@ Supported Development Tools and Environments:
 
 ## See Also
 
- * [Installing Telerik Document Processing]({%slug installation-installing-on-your-computer%})
+ * [Install Telerik Document Processing on your computer]({%slug installation-installing-on-your-computer%})
 
- * [Getting Started]({%slug getting-started%})
+ * [Get started with Telerik Document Processing]({%slug getting-started%})
 

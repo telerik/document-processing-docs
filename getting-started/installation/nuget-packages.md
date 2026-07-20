@@ -54,14 +54,14 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Documents.CMapUtils</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">Provides a default implementation for getting the data of a predefined CMap table by a given name. The package is optional and you will need to include a reference to it only if you need to process documents with <a href="{%slug radpdfprocessing-concepts-cmap-tables%}">CMap tables</a>.</td>
+		<td colspan="2">Provides a default implementation for getting the data of a predefined CMap table by a given name. The package is optional and you will need to include a reference to it only if you need to process documents with <a href="{%slug radpdfprocessing-concepts-cmap-tables%}">PDF CMap table data</a>.</td>
 	</tr>
 	<tr>
 		<td><b><em>N/A</em></b></td>
 		<td><b>Telerik.Documents.ImageUtils</b>
 	</tr>
 	<tr>
-		<td colspan="2">This package is required when exporting to <code>PDF</code> format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the <a href="{%slug radpdfprocessing-cross-platform%}">PdfProcessing Cross-Platform Support</a> article. The package also depends on SkiaSharp. To use it, you need to add a reference to SkiaSharp.
+		<td colspan="2">This package is required when exporting to <code>PDF</code> format a document containing images different than Jpeg and Jpeg2000 or ImageQuality different than High. For more information check the <a href="{%slug radpdfprocessing-cross-platform%}">PdfProcessing cross-platform support requirements</a>. The package also depends on SkiaSharp. To use it, you need to add a reference to SkiaSharp.
         </td>
 	</tr>
 	<tr>
@@ -131,7 +131,7 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Documents.Fixed.FormatProviders.Image.Skia</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">The package is required for the cross-platform <a href="{%slug radspreadprocessing-cross-platform-text-measure%}#skiatextmeasurer">SkiaTextMeasurer</a>. The package depends on SkiaSharp. To use this package, you need to add a reference to SkiaSharp. The SkiaSharp.NativeAssets.* NuGet package is required as well. This package may differ according to the used platform. There are versions for Windows, MacOS, Linux, WebAssembly, Android, iOS, and others.</td>
+		<td colspan="2">The package is required for the cross-platform <a href="{%slug radspreadprocessing-cross-platform-text-measure%}#skiatextmeasurer">SkiaTextMeasurer text-measurement service</a>. The package depends on SkiaSharp. To use this package, you need to add a reference to SkiaSharp. The SkiaSharp.NativeAssets.* NuGet package is required as well. This package may differ according to the used platform. There are versions for Windows, MacOS, Linux, WebAssembly, Android, iOS, and others.</td>
 	</tr>
 	<tr>
 		<td><b><em>N/A</em></b></td>
@@ -145,14 +145,14 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b>Telerik.Documents.Fixed.FormatProviders.Ocr</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">This package is needed for the <a href="{%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}">Optical Character Recognition (OCR)</a> feature. This reference is recommended to always be in the form of a NuGet package, as it adds the required Tesseract references and files automatically. Otherwise, a manual intervention might be required.</td>
+		<td colspan="2">This package is needed for the <a href="{%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}">PDF Optical Character Recognition (OCR) feature</a>. This reference is recommended to always be in the form of a NuGet package, as it adds the required Tesseract references and files automatically. Otherwise, a manual intervention might be required.</td>
 	</tr>
 	<tr>
 		<td><b>Telerik.Windows.Documents.TesseractOcr</b></td>
 		<td><b>Telerik.Documents.TesseractOcr</b></td>
 	</tr>
 	<tr>
-		<td colspan="2">This package is needed for the <a href="{%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}">Optical Character Recognition (OCR)</a> functionality.</td>
+		<td colspan="2">This package is needed for <a href="{%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}">PDF Optical Character Recognition (OCR)</a>.</td>
 	</tr>
 	<tr>
 		<td><b>Telerik.Documents.AI.Tools.Fixed.Core</b></td>
@@ -323,14 +323,14 @@ The following tables represent the available NuGet packages for the Document Pro
 		<td><b><em>N/A</em></b></td>
 	</tr>
 	<tr>
-		<td colspan="2">Extends <b>Telerik.Windows.Zip</b> package with additional helper methods (<a href="{%slug radziplibrary-zipextensions%}">Zip Extensions</a>). The package provides methods for working with files and platform specific operations.</td>
+		<td colspan="2">Extends <b>Telerik.Windows.Zip</b> package with additional helper methods (<a href="{%slug radziplibrary-zipextensions%}">file and platform-specific Zip Extensions</a>). The package provides methods for working with files and platform specific operations.</td>
 	</tr>
 </tbody>
 </table>
 
 ## See Also
 
- * [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
- * [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
- * [Resolving Namespace Conflicts in Telerik Document Processing Libraries]({%slug radspreadprocessing-resolving-namespace-conflicts%})
- * [Telerik.Windows.Documents.* vs Telerik.Documents.*]({%slug telerik-windows-documents-vs-telerik-documents-namespace%})
+ * [Restore Telerik NuGet packages in CI workflows]({%slug using-nuget-keys%})
+ * [Distribute Document Processing libraries across .NET versions]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+ * [Resolve namespace conflicts between Document Processing libraries]({%slug radspreadprocessing-resolving-namespace-conflicts%})
+ * [Compare Telerik.Windows.Documents.* and Telerik.Documents.* namespaces]({%slug telerik-windows-documents-vs-telerik-documents-namespace%})

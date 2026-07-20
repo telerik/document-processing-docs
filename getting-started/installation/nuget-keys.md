@@ -24,26 +24,26 @@ As the Telerik NuGet server requires authentication, the first step is to [obtai
 
 To protect the NuGet Key, store it as a secret environment variable. The exact steps depend on your workflow:
 
-* In GitHub Actions, save the key as a [GitHub Actions Secret](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions). Go to **Settings** > **Security** > **Secrets** > **Actions** > **Add new secret**.
+* In GitHub Actions, save the key as a [GitHub Actions repository secret](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions). Go to **Settings** > **Security** > **Secrets** > **Actions** > **Add new secret**.
 
-* In Azure DevOps, save the key as a [secret Azure DevOps pipeline variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/set-secret-variables). If you use an Azure DevOps Service connection instead of secret environment variables, enter `api-key` in the username field and the API key as the password in the **New NuGet service connection** form editor.
+* In Azure DevOps, save the key as an [Azure DevOps secret pipeline variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/set-secret-variables). If you use an Azure DevOps Service connection instead of secret environment variables, enter `api-key` in the username field and the API key as the password in the **New NuGet service connection** form editor.
 
 * In Azure DevOps YAML pipelines, save the key as a secret variable as well. Click the YAML editor's **Variables** button and complete the **New variable** form.
 
 * In Docker images, save the key as a [Docker secret](https://docs.docker.com/tags/secrets/).
 
-For more details on storing and protecting your API key, check the [Announcing NuGet Keys](https://www.telerik.com/blogs/announcing-nuget-keys) blog post by Lance McCarthy.
+For more details on storing and protecting your API key, review the [Telerik guide to announcing NuGet Keys](https://www.telerik.com/blogs/announcing-nuget-keys) by Lance McCarthy.
 The examples below assume that the secret environment variable name is `TELERIK_NUGET_KEY`.
 
 ## Using a NuGet API Key
 
 There are two popular ways to use the Telerik NuGet server in a build:
 
-* [Using a nuget.config file with your projects](#using-a-nugetconfig-file-with-your-projects)
+* [Configure NuGet credentials in a nuget.config file](#using-a-nugetconfig-file-with-your-projects)
 
-* [Using only CLI commands](#using-only-cli-commands)
+* [Configure NuGet credentials with CLI commands](#using-only-cli-commands)
 
-For more information on how to use NuGet keys in a build, check the [Announcing NuGet Keys](https://www.telerik.com/blogs/announcing-nuget-keys) blog post by Lance McCarthy.
+For more information on how to use NuGet keys in a build, see the [NuGet key build-automation guidance](https://www.telerik.com/blogs/announcing-nuget-keys) by Lance McCarthy.
 
 The examples below assume that the secret environment variable name is `TELERIK_NUGET_KEY`.
 
@@ -70,7 +70,7 @@ The examples below assume that the secret environment variable name is `TELERIK_
 
 1. Set the `TELERIK_NUGET_KEY` environment variable by using the value of your pipeline/workflow secret.
 
-The exact steps to set the `TELERIK_NUGET_KEY` environment variable depend on your workflow. For more details, refer to the [Announcing NuGet Keys](https://www.telerik.com/blogs/announcing-nuget-keys) blog post by Lance McCarthy.
+The exact steps to set the `TELERIK_NUGET_KEY` environment variable depend on your workflow. For more details, refer to the [NuGet key environment-variable guidance](https://www.telerik.com/blogs/announcing-nuget-keys) by Lance McCarthy.
 
 ### Using Only CLI Commands
 
@@ -92,6 +92,6 @@ You can use the CLI `add source` (or `update source`) command to set the credent
 
 If you are starting to use the Telerik NuGet server in your CI or inter-department workflows, check the two blog posts below. You will learn about the various use cases and find practical implementation details.
 
-* [Azure DevOps and Telerik NuGet Packages (Blog Post)](https://www.telerik.com/blogs/azure-devops-and-telerik-nuget-packages)
+* [Automate Telerik NuGet package restores with Azure DevOps](https://www.telerik.com/blogs/azure-devops-and-telerik-nuget-packages)
 
-* [Announcing NuGet Keys (Blog Post)](https://www.telerik.com/blogs/announcing-nuget-keys)
+* [Manage NuGet API keys for authenticated package restores](https://www.telerik.com/blogs/announcing-nuget-keys)
