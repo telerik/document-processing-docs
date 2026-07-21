@@ -8,8 +8,6 @@ tags: radflowdocumenteditor, radfixeddocumenteditor, fixedcontenteditor, radword
 res_type: kb
 ---
 
-# Choosing Between RadFlowDocumentEditor, RadFixedDocumentEditor, and FixedContentEditor
-
 ## Environment
 
 | Version | Product | Author |
@@ -18,7 +16,7 @@ res_type: kb
 
 ## Description
 
-You need to decide between `RadFlowDocumentEditor`, `RadFixedDocumentEditor`, and `FixedContentEditor` for document generation in Progress® Telerik® Document Processing. The three editors serve different layout models, come from different libraries, and offer different levels of control and convenience.
+You need to decide between `RadFlowDocumentEditor`, `RadFixedDocumentEditor`, and `FixedContentEditor` for document generation with the [Document Processing Libraries]({%slug introduction%}). The three editors serve different layout models, come from different libraries, and offer different levels of control and convenience.
 
 ## Solution
 
