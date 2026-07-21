@@ -262,3 +262,4 @@ There is an additional overload of `InsertFormInline()` that allows you to pass 
 * [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
 * [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})
 * [Generating a PDF Product Catalog]({%slug generating-pdf-product-catalog%})
+* [Choosing Between Word and PDF Editors for Document Generation]({%slug choose-right-editor-radflowdocumenteditor-radfixeddocumenteditor-fixedcontenteditor%})
