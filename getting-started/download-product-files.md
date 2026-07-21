@@ -16,13 +16,13 @@ img[alt$="><"] {
 
 # Download Product Files
 
-Starting with **Q2 2025**, the [Telerik Document Processing]({%slug introduction%}) libraries are available as a separate distribution in the **Downloads** section of your [Telerik account](https://www.telerik.com/account/).
+Starting with **Q2 2025**, the [Telerik Document Processing libraries]({%slug introduction%}) are available as a separate distribution in the **Downloads** section of your [Telerik account](https://www.telerik.com/account/).
 
-The **Telerik Document Processing** libraries are part of several [Telerik bundles](https://www.telerik.com/purchase.aspx) and follow the installation steps for the suite with which you have obtained the product. When you purchase a Telerik license, you can download the following files:
+The **Telerik Document Processing** libraries are part of several [Telerik product bundles](https://www.telerik.com/purchase.aspx) and follow the installation steps for the suite with which you have obtained the product. When you purchase a Telerik license, you can download the following files:
 
 * Latest Public version
 
-* Latest [Preview version]({%slug obtain-use-latest-internal-build-version%})
+* Latest [Preview version of the Document Processing libraries]({%slug obtain-use-latest-internal-build-version%})
 
 * Assemblies available as NuGet packages
 
@@ -58,6 +58,6 @@ To download these files, follow the steps below:
 
 ## See Also
 
-* [What Versions of Document Processing Libraries are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
-* [Latest Internal Build (Preview Version)]({%slug obtain-use-latest-internal-build-version%})
-* [Release History]({%slug dpl-release-history%})
+* [Review the Document Processing library versions included with Telerik products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [Download the latest internal preview build]({%slug obtain-use-latest-internal-build-version%})
+* [Review the Document Processing release history]({%slug dpl-release-history%})

@@ -12,23 +12,23 @@ position: 3
 
 If you are getting started, you can find guidance in the following articles:
 
-* [First Steps]({%slug getting-started-first-steps%})
-* [Explore features]({% slug getting-started-explore-features %})
+* [Complete the Document Processing first steps tutorial]({%slug getting-started-first-steps%})
+* [Explore Document Processing features and examples]({% slug getting-started-explore-features %})
 
 ## More Learning Resources
 
 You do not need all of this immediately, but you can use this list as a starting point for future reference. 
 
 Installation, Distribution and Licensing
-* [System Requirements]({%slug installation-system-requirements%})
-* [Installing On Your Computer]({%slug installation-installing-on-your-computer%})
+* [Review Document Processing system requirements]({%slug installation-system-requirements%})
+* [Install Telerik Document Processing on your computer]({%slug installation-installing-on-your-computer%})
 
 Integration and Upgrades
-* [Integration with Visual Studio]({% slug integration-with-visual-studio %})
-* [Upgrade Instructions]({% slug installation-upgrade-instructions %})
+* [Integrate Telerik Document Processing with Visual Studio]({% slug integration-with-visual-studio %})
+* [Follow the Telerik Document Processing upgrade instructions]({% slug installation-upgrade-instructions %})
 
 Additional Tools and Resources
-* [Document Processing SDK examples](https://github.com/telerik/document-processing-sdk)
+* [Browse Telerik Document Processing SDK examples](https://github.com/telerik/document-processing-sdk)
 
 Getting started articles
 

@@ -10,13 +10,13 @@ position: 7
 
 # Install Telerik Document Processing with NuGet Packages
 
-This article explains how to install Telerik Document Processing with NuGet packages, choose the correct package source, and add the package references that your application needs. For the full package list, see [Available NuGet Packages]({%slug available-nuget-packages%}).
+This article explains how to install Telerik Document Processing with NuGet packages, choose the correct package source, and add the package references that your application needs. For the full package list, see the [available NuGet packages reference]({%slug available-nuget-packages%}).
 
 Use one of the following installation paths:
 
-* [How to install from NuGet.org](#how-to-install-telerik-document-processing-from-nugetorg)
-* [How to install from a local NuGet feed](#how-to-install-from-a-local-nuget-feed)
-* [How to install from the Telerik NuGet server](#how-to-install-from-the-telerik-nuget-server)
+* [Install Document Processing from NuGet.org](#how-to-install-telerik-document-processing-from-nugetorg)
+* [Install Document Processing from a local NuGet feed](#how-to-install-from-a-local-nuget-feed)
+* [Install Document Processing from the Telerik NuGet server](#how-to-install-from-the-telerik-nuget-server)
 
 ## How to Choose the Right NuGet Installation Path
 
@@ -28,7 +28,7 @@ Use the **Telerik NuGet server** only when you need older package versions that 
 
 ## Use Explicit PackageReference Entries
 
-Add the package references in the application project that generates, imports, or exports documents. Install `Telerik.Licensing` in the same project, keep all Telerik Document Processing packages on the same release version, and do not mix `Telerik.Documents.*` with `Telerik.Windows.Documents.*` in the same application. For the full package inventory, see [Available NuGet Packages]({%slug available-nuget-packages%}), and for package-family guidance, see [Telerik.Windows.Documents.* vs Telerik.Documents.*]({%slug telerik-windows-documents-vs-telerik-documents-namespace%}).
+Add the package references in the application project that generates, imports, or exports documents. Install `Telerik.Licensing` in the same project, keep all Telerik Document Processing packages on the same release version, and do not mix `Telerik.Documents.*` with `Telerik.Windows.Documents.*` in the same application. For the full package inventory, see the [NuGet package inventory]({%slug available-nuget-packages%}), and for package-family guidance, see the [cross-platform and Windows package namespace comparison]({%slug telerik-windows-documents-vs-telerik-documents-namespace%}).
 
 ### Cross-Platform PackageReference Example
 
@@ -97,7 +97,7 @@ If an agent or build script installs packages automatically, verify the package 
 
 ## How to Install Telerik Document Processing from NuGet.org
 
-As of **Q2 2026**, Telerik Document Processing packages are available on [NuGet.org](https://www.nuget.org/). This is the recommended installation path for new development because both Visual Studio and the .NET CLI use NuGet.org by default.
+As of **Q2 2026**, Telerik Document Processing packages are available on [NuGet.org package hosting](https://www.nuget.org/). This is the recommended installation path for new development because both Visual Studio and the .NET CLI use NuGet.org by default.
 
 ### How to Install from NuGet.org in Visual Studio
 
@@ -130,7 +130,7 @@ Install-Package Telerik.Documents.Core -Version 2026.1.210
 Install-Package Telerik.Documents.Fixed -Version 2026.1.210
 ```
 
->tip You can find the exact package names and supported combinations in [Available NuGet Packages]({%slug available-nuget-packages%}).
+>tip You can find the exact package names and supported combinations in the [available NuGet packages reference]({%slug available-nuget-packages%}).
 
 ## How to Choose NuGet Setup for Your Environment
 
@@ -165,13 +165,13 @@ For PDF processing in Blazor WebAssembly, start with the following package refer
 </ItemGroup>
 ```
 
-If the application exports PDF content that contains non-JPEG images or uses image quality settings other than `High`, also add the image-processing dependencies described in [Images]({%slug radpdfprocessing-cross-platform-images%}).
+If the application exports PDF content that contains non-JPEG images or uses image quality settings other than `High`, also add the image-processing dependencies described in the [cross-platform PDF image support guide]({%slug radpdfprocessing-cross-platform-images%}).
 
 ### How to Configure CI/CD and Build Agents
 
 For CI/CD pipelines and self-hosted build agents, prefer NuGet.org for current releases because it removes the need to configure private-feed credentials. Commit package references and, when needed, a repository-level `NuGet.Config` file, but keep any secrets outside source control.
 
-If your pipeline must restore from the Telerik NuGet server or another authenticated feed, store the API key or credentials in the pipeline secret store and inject them during restore. For CI-specific guidance, see [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%}).
+If your pipeline must restore from the Telerik NuGet server or another authenticated feed, store the API key or credentials in the pipeline secret store and inject them during restore. For CI-specific guidance, see the [CI workflow NuGet restore guide]({%slug using-nuget-keys%}).
 
 When you automate restores, add one validation step that checks package-family consistency before build. For example, fail the build if the project file contains both `Telerik.Documents.` and `Telerik.Windows.Documents.` package references.
 
@@ -219,7 +219,7 @@ Before you add the Telerik NuGet server, make sure that you have:
 
 ### How to Generate a Telerik NuGet API Key
 
-Create an API key as described in [Generate API Keys]({%slug generating-api-keys%}). Use the API key instead of a password when you configure the Telerik feed in automation, in `NuGet.Config`, or in command-line restore steps.
+Create an API key as described in the [Telerik NuGet API key generation guide]({%slug generating-api-keys%}). Use the API key instead of a password when you configure the Telerik feed in automation, in `NuGet.Config`, or in command-line restore steps.
 
 ### How to Add the Telerik NuGet Server to Visual Studio
 
@@ -267,14 +267,14 @@ dotnet nuget remove source "Telerik NuGet Server"
 ```
 
 4. Check `%AppData%\NuGet\NuGet.Config` for persisted Telerik credentials and remove them if they are no longer valid.
-5. If Visual Studio still does not prompt for new credentials, follow the steps in [Force NuGet to ask for authentication again](https://stackoverflow.com/questions/43550797/how-to-force-nuget-to-ask-for-authentication-when-connecting-to-a-private-feed).
+5. If Visual Studio still does not prompt for new credentials, follow the [steps to force NuGet to request authentication again](https://stackoverflow.com/questions/43550797/how-to-force-nuget-to-ask-for-authentication-when-connecting-to-a-private-feed).
 6. Restart Visual Studio.
 7. Add the Telerik NuGet package source again. If you use the Telerik feed in automated restore or .NET applications, configure the API key in [NuGet.Config]({%slug telerik-nuget-source%}#edit-the-nugetconfig-file).
 
 ## See Also
 
-* [Available NuGet Packages]({%slug available-nuget-packages%})
-* [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
-* [How to Obtain Telerik Document Processing Libraries for .NET Framework, .NET Standard, {{site.dotnetversions}}]({%slug distribute-telerik-document-processing-libraries-net-versions%})
-* [Handling the "No packages found" Message when Using the Telerik NuGet Server]({%slug handle-no-nuget-packages-found-message%})
-* [Telerik CLI]({%slug dpl-telerik-cli%})
+* [Review the available NuGet packages]({%slug available-nuget-packages%})
+* [Restore NuGet packages in a CI workflow]({%slug using-nuget-keys%})
+* [Review Document Processing library distribution across .NET versions]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [Resolve the "No packages found" message from the Telerik NuGet server]({%slug handle-no-nuget-packages-found-message%})
+* [Use the Telerik CLI for package workflows]({%slug dpl-telerik-cli%})

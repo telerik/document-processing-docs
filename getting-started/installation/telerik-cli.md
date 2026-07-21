@@ -31,7 +31,7 @@ The following table lists all Telerik CLI commands with their purpose and usage.
 
 ## How to Install the Telerik CLI
 
-The [Telerik CLI NuGet](https://www.nuget.org/packages/Telerik.CLI) package is hosted on `nuget.org`. 
+The [Telerik.CLI package](https://www.nuget.org/packages/Telerik.CLI) is hosted on `nuget.org`. 
 
 To install the Telerik CLI .NET tool globally on your machine, run the following command in your preferred command shell:
 
@@ -67,7 +67,7 @@ To uninstall the Telerik CLI:
 dotnet tool uninstall -g Telerik.CLI 
 ```
 
->note The Telerik CLI requires .NET SDK 6.0 or later. Download the .NET SDK from <a href="https://dotnet.microsoft.com/download" target="_blank">the official .NET website</a>.
+>note The Telerik CLI requires .NET SDK 6.0 or later. Download the SDK from the <a href="https://dotnet.microsoft.com/download" target="_blank">.NET SDK download page</a>.
 
 
 ## Log In to Your Telerik Account
@@ -156,7 +156,7 @@ To add the Telerik NuGet server to your package sources, use the `nuget config` 
 telerik nuget config
 ```
 
-By default, the `nuget config` command updates your [global `NuGet.Config` file](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior). The newly added Telerik NuGet feed name is `TelerikNuGetV3`. The command generates a new API key that you can delete and revoke from the [API Keys page in your Telerik account](https://www.telerik.com/account/downloads/api-keys).
+By default, the `nuget config` command updates your [global `NuGet.Config` file according to NuGet configuration rules](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior). The newly added Telerik NuGet feed name is `TelerikNuGetV3`. The command generates a new API key that you can delete and revoke from the [API key management page in your Telerik account](https://www.telerik.com/account/downloads/api-keys).
 
 >important Telerik NuGet API keys expire in two years.
 
@@ -182,6 +182,6 @@ The following table lists the requirements to run the Telerik CLI.
 
 ## See Also
 
-* [Telerik NuGet Source]({%slug telerik-nuget-source%})
-* [Setting Up Your Telerik Document Processing Libraries License Key]({%slug setting-up-license-key%})
-* [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
+* [Configure the Telerik NuGet package source]({%slug telerik-nuget-source%})
+* [Set up a Telerik Document Processing license key]({%slug setting-up-license-key%})
+* [Restore Telerik NuGet packages in CI workflows]({%slug using-nuget-keys%})

@@ -12,7 +12,7 @@ position: 2
 
 # Explore Features
 
-Once you have your [first project working]({%slug getting-started-first-steps%}), it is time to explore additional features. This article provides a short overview of the available functionality and how to use it in your projects.
+Once you have completed the [Document Processing first steps tutorial]({%slug getting-started-first-steps%}), it is time to explore additional features. This article provides a short overview of the available functionality and how to use it in your projects.
 
 ## Demos
 
@@ -21,18 +21,18 @@ The fastest way to get an overview of how to use the Telerik Document Processing
 ||||
 |----|----|----|
 |Web|Desktop|Mobile|
-|[Telerik UI for ASP.NET AJAX](https://demos.telerik.com/aspnet-ajax/)|[Telerik UI for WPF](http://demos.telerik.com/wpf)|[Telerik UI for .NET MAUI](https://www.telerik.com/support/demos#mobile)|
-|[Telerik UI for ASP.NET MVC](https://demos.telerik.com/aspnet-mvc/)|[Telerik UI for WinForms](https://telerik-winforms-demos.s3.amazonaws.com/TelerikWinFormsExamplesLauncher.exe)||
-|[Telerik UI for ASP.NET Core](https://demos.telerik.com/aspnet-core/)|[Telerik UI for WinUI](https://demos.telerik.com/winui/?_ga=2.172224931.145105266.1615285037-1571667030.1570715481)||
-|[Telerik UI for Blazor](https://demos.telerik.com/blazor-ui)|||
+|[Explore ASP.NET AJAX demos](https://demos.telerik.com/aspnet-ajax/)|[Explore WPF demos](http://demos.telerik.com/wpf)|[Explore .NET MAUI  demos](https://www.telerik.com/support/demos#mobile)|
+|[Explore ASP.NET MVC demos](https://demos.telerik.com/aspnet-mvc/)|[Download the WinForms demo launcher](https://telerik-winforms-demos.s3.amazonaws.com/TelerikWinFormsExamplesLauncher.exe)||
+|[Explore ASP.NET Core demos](https://demos.telerik.com/aspnet-core/)|[Explore WinUI demos](https://demos.telerik.com/winui/?_ga=2.172224931.145105266.1615285037-1571667030.1570715481)||
+|[Explore Blazor demos](https://demos.telerik.com/blazor-ui)|||
 
 ## Developer-Focused Examples
 
-The [Telerik SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/) provides additional demos for the document processing libraries. The examples demonstrate many specific use-case scenarios that can help you get started quickly.
+The [Telerik Document Processing SDK repository](https://github.com/telerik/document-processing-sdk/tree/master/) provides additional demos for the document processing libraries. The examples demonstrate many specific use-case scenarios that can help you get started quickly.
 
 ### List of All RadWordsProcessing SDK Examples
 
-Find the complete list of all SDK examples for `RadWordsProcessing` in the [WordsProcessing SDK examples](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing) repository.
+Find the complete list of all SDK examples for `RadWordsProcessing` in the [RadWordsProcessing SDK examples repository](https://github.com/telerik/document-processing-sdk/tree/master/WordsProcessing).
 
 ## Documentation
 
@@ -46,8 +46,8 @@ The **documentation** provides a section for each library that contains help art
 
 Explore the following resources for additional guidance:
 
-* [Further Information]({%slug getting-started-next-steps%})
+* [Find additional Document Processing getting-started guidance]({%slug getting-started-next-steps%})
 
 ## See Also
 
-* [First Steps]({%slug getting-started-first-steps%})
+* [Complete the Document Processing first steps tutorial]({%slug getting-started-first-steps%})

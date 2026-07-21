@@ -12,7 +12,7 @@ position: 9
 
 Using API Keys provides a secure way to authenticate. This method does not require you to provide your Telerik credentials anywhere. Unlike your Telerik credentials, an API key has a **limited scope** and can be used only with the Telerik NuGet server. If any of your API Keys is compromised, you can quickly delete it and create a new one.
 
-1. Go to the [API Keys](https://www.telerik.com/account/downloads/api-keys) page in your Telerik account.
+1. Go to the [Telerik account API key management page](https://www.telerik.com/account/downloads/api-keys).
 
 1. Click **Generate New Key +**.
 
@@ -46,5 +46,5 @@ Using API Keys provides a secure way to authenticate. This method does not requi
  
 ## See Also
 
-* [Restoring NuGet Packages in Your CI Workflow]({%slug using-nuget-keys%})
-* [Install using NuGet Packages]({%slug installation-nuget-packages%})
+* [Restore NuGet packages in a CI workflow]({%slug using-nuget-keys%})
+* [Configure NuGet package installation]({%slug installation-nuget-packages%})
