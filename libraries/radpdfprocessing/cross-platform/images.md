@@ -100,3 +100,4 @@ The following `using`/`imports` statements are required in the project:
 
 * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
 * [Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
+* [Converting DOCX with TIFF Images to PDF in .NET Standard]({%slug docx-tiff-pdf-telerik-wordsprocessing%})

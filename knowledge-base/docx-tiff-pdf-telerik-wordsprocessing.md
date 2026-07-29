@@ -1,10 +1,9 @@
-```markdown
 ---
 title: Handling TIFF Images for DOCX to PDF Conversion in Telerik WordsProcessing
 description: Learn how to address the issue of TIFF image conversion failure in DOCX to PDF conversion using Telerik WordsProcessing in .NET Standard.
 type: how-to
-page_title: Converting DOCX with TIFF Images to PDF in Telerik WordsProcessing
-meta_title: Converting DOCX with TIFF Images to PDF in Telerik WordsProcessing
+page_title: Converting DOCX with TIFF Images to PDF in .NET Standard
+meta_title: Converting DOCX with TIFF Images to PDF in .NET Standard
 slug: docx-tiff-pdf-telerik-wordsprocessing
 tags: tiff, pdf, docx, telerik wordsprocessing, .net standard, imagepropertiesresolver
 res_type: kb
@@ -19,20 +18,25 @@ ticketid: 1717245
 
 ## Description
 
-When converting DOCX files containing TIFF images to PDF using [Telerik WordsProcessing](https://www.telerik.com/document-processing-libraries/documentation/libraries/radwordsprocessing/model/imageinline), a `NotSupportedImageFormatException` may occur. This issue arises because the .NET Standard version of the library does not natively support certain image formats like TIFF. 
+DOCX to PDF conversion can fail with a `NotSupportedImageFormatException` in .NET Standard when the source document contains TIFF images. This article shows how to handle that limitation in [Telerik WordsProcessing]({%slug radwordsprocessing-overview%}) with a custom [ImagePropertiesResolver]({%slug radpdfprocessing-cross-platform-images%}).
+
+<img style="border: 1px solid gray;" src="images/docx-tiff-pdf-telerik-wordsprocessing.png" alt="Side-by-side PDF viewer comparison showing a missing TIFF image on the left and a successfully rendered TIFF image on the right after applying the custom image resolver." />
 
 This knowledge base article also answers the following questions:
 - How to handle TIFF images in Telerik WordsProcessing for PDF export?
-- Why does Telerik WordsProcessing throw NotSupportedImageFormatException for TIFF?
+- Why does the PdfFormatProvider throw NotSupportedImageFormatException for TIFF?
 - How to convert DOCX with unsupported images to PDF in .NET Standard?
 
 ## Solution
 
-To resolve this issue, preprocess the DOCX file to convert all TIFF images into a supported format like JPEG or PNG before performing the conversion to PDF. Use a custom `ImagePropertiesResolver` to handle TIFF images manually. Follow the steps below:
+DOCX to PDF conversion with TIFF images works differently in .NET Framework and .NET Standard. In .NET Framework, RadPdfProcessing includes built-in image conversion support. In .NET Standard, you must configure custom image handling through `FixedExtensibilityManager.ImagePropertiesResolver` or `FixedExtensibilityManager.JpegImageConverter`, but those extensibility points do not add native TIFF support on their own. As a result, TIFF images can still trigger `NotSupportedImageFormatException` unless you provide a custom resolver that reads the TIFF data explicitly.
+
+To resolve this issue, register a custom `ImagePropertiesResolver` that detects TIFF images and provides the raw image data needed during PDF export. Follow the steps below:
 
 1. Implement a custom `ImagePropertiesResolver` to handle TIFF images:
 
-```csharp
+```C#
+using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
@@ -123,7 +127,7 @@ public sealed class TiffOnlyImagePropertiesResolver : ImagePropertiesResolverBas
 
 2. Configure the custom resolver in your application:
 
-```csharp
+```C#
 using Telerik.Windows.Documents.Extensibility;
 
 FixedExtensibilityManager.ImagePropertiesResolver = new TiffOnlyImagePropertiesResolver();
@@ -131,7 +135,7 @@ FixedExtensibilityManager.ImagePropertiesResolver = new TiffOnlyImagePropertiesR
 
 3. Convert the DOCX file to PDF:
 
-```csharp
+```C#
 using System.IO;
 using Telerik.Windows.Documents.Flow.FormatProviders.Docx;
 using Telerik.Windows.Documents.Flow.FormatProviders.Pdf;
@@ -155,10 +159,9 @@ using (FileStream outputStream = File.Create(outputPath))
 }
 ```
 
-This approach will convert any TIFF images to a supported format during the DOCX-to-PDF conversion process.
+This approach lets the export process read TIFF image data during DOCX to PDF conversion without failing on unsupported image formats.
 
 ## See Also
-- [Telerik WordsProcessing Documentation: ImageInline](https://www.telerik.com/document-processing-libraries/documentation/libraries/radwordsprocessing/model/imageinline)
-- [Telerik Document Processing Libraries Overview](https://www.telerik.com/document-processing-libraries)
-- [SkiaSharp Documentation](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/)
-```
+- [Images in Cross-Platform PDF scenarios]({%slug radpdfprocessing-cross-platform-images%})
+- [Handling Exceptions in PdfProcessing]({%slug radpdfprocessing-handling-exceptions%})
+
