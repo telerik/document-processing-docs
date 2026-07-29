@@ -73,3 +73,4 @@ Some features require additional settings:
 * [What is a Worksheet?]({%slug radspreadprocessing-working-with-worksheets-what-is-worksheet%})
 * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
 * [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
+* [Troubleshooting Cross-Platform Excel and PDF Export Differences]({%slug spreadprocessing-cross-platform%})
