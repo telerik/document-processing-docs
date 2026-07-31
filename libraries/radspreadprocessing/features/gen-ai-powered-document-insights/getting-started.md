@@ -27,7 +27,7 @@ When you run this code, the AI processes your document, generates a summary, and
 
 ## See Also
 
-* [Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [GenAI-powered Document Insights Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
 * [SummarizationProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
 * [PartialContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
 * [Custom IEmbedder Implementation]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#implementing-custom-iembedder)

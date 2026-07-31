@@ -74,5 +74,5 @@ The exporter traverses the document structure and writes the equivalent Markdown
 
 ## See Also
 
-* [Settings]({%slug radwordsprocessing-markdownformatprovider-settings%})
+* [Markdown Format Provider Settings]({%slug radwordsprocessing-markdownformatprovider-settings%})
 

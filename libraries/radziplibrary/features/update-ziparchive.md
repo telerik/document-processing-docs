@@ -12,7 +12,7 @@ position: 0
 
 With **RadZipLibrary** you can update an existing ZIP archive to add new entries to it, delete entries, or update existing ones.
 
-The `ZipArchive` class provides three modes: `Read`, `Create`, and `Update`. More information on creating and reading an archive is available in the [Getting Started]({%slug radziplibrary-gettingstarted%}) article.
+The `ZipArchive` class provides three modes: `Read`, `Create`, and `Update`. More information on creating and reading an archive is available in the [RadZipLibrary Getting Started]({%slug radziplibrary-gettingstarted%}) article.
 
 The code snippet from **Example 1** opens a ZIP archive in update mode using the `ZipArchive` class.
 
@@ -78,4 +78,4 @@ This method ensures that the operation does not hang indefinitely. It is useful 
 
 ## See Also
 
-* [Getting Started]({%slug radziplibrary-gettingstarted%})
+* [RadZipLibrary Getting Started]({%slug radziplibrary-gettingstarted%})

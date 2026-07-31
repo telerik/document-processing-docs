@@ -14,7 +14,7 @@ position: 4
 
 ## Inserting Merge Fields
 
-Merge fields are a type of [Fields]({%slug radwordsprocessing-concepts-fields%}) and can be added in a template document through the `InsertField()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method requires the code representation of the field and the result which is shown in the template before the document is mail-merged.
+Merge fields are a type of [field element described in the Fields article]({%slug radwordsprocessing-concepts-fields%}) and can be added in a template document through the `InsertField()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method requires the code representation of the field and the result which is shown in the template before the document is mail-merged.
 
 The code snippet in **Example 1** shows how to initialize a `RadFlowDocumentEditor` instance and insert a merge field.
 
@@ -97,7 +97,7 @@ To separate the items into several rows, close the group on the next row.
 
 ## See Also
 
-* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Working with Fields]({%slug radwordsprocessing-concepts-fields%})
 * [Merge Field]({%slug radwordsprocessing-concepts-merge-field%})
 * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
 * [Hiding MailMerge Line in Output Word Document If Blank]({%slug hide-mailmerge-line-output-word-document-if-blank%})

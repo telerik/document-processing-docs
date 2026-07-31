@@ -16,7 +16,7 @@ res_type: kb
 
 ## Description
 
-Learn how to generate a Word (.DOCX) document that contains a [Table]({%slug radwordsprocessing-model-table%}) with a header row and an item row merge field. When you pass a collection of records, the merge operation automatically creates and populates the data rows. 
+Learn how to generate a Word (.DOCX) document that contains a [WordsProcessing table]({%slug radwordsprocessing-model-table%}) with a header row and an item row merge field. When you pass a collection of records, the merge operation automatically creates and populates the data rows. 
 
 ## Solution
 
@@ -109,4 +109,4 @@ If you skip the `MailMerge` step, the following template is produced:
 ## See Also
 
 * [Nested Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
-* [Table]({%slug radwordsprocessing-model-table%})
+* [WordsProcessing Table Model]({%slug radwordsprocessing-model-table%})

@@ -74,7 +74,7 @@ Use inline elements to control the content that appears inside paragraphs:
 |----|----|
 | [Runs]({%slug radwordsprocessing-model-run%}) | Hold text with specific character formatting. |
 | [Inline images]({%slug radwordsprocessing-model-imageinline%}) and [floating images]({%slug radwordsprocessing-model-floatingimage%}) | Insert pictures that flow with text or float independently on the page. |
-| [Fields]({%slug radwordsprocessing-concepts-fields%}) | Insert merge fields, document variables, and custom code fields. |
+| [Working with Fields]({%slug radwordsprocessing-concepts-fields%}) | Insert merge fields, document variables, and custom code fields. |
 | [Breaks]({%slug radwordsprocessing-model-break%}) | Control line, page, and other document breaks. |
 | [Bookmarks]({%slug radwordsprocessing-model-bookmark%}) | Add named locations that you can target from other content. |
 | [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlink-field%}) | Link to websites or bookmarks inside the same document. |
@@ -86,7 +86,7 @@ Use these features to extend formatting and document behavior:
 
 | Feature | Description |
 |----|----|
-| [Styles]({%slug radwordsprocessing-concepts-styles%}) | Define reusable character, paragraph, and table styles, including [list styles]({%slug radwordsprocessing-concepts-lists%}). |
+| [Document Styles]({%slug radwordsprocessing-concepts-styles%}) | Define reusable character, paragraph, and table styles, including [list styles]({%slug radwordsprocessing-concepts-lists%}). |
 | [Content controls]({%slug wordsprocessing-model-content-controls%}) | Add Structured Document Tags (SDT) such as checkboxes and combo boxes and apply editing constraints. |
 | [Shapes]({%slug radwordsprocessing-shapes-shapes%}) | Add visual elements that highlight or emphasize content. |
 

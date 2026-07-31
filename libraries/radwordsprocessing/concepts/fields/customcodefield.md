@@ -10,7 +10,7 @@ position: 2
 
 # Custom Code Field
 
-Fields in `RadFlowDocument` consist of a code fragment and a result fragment as explained in the [Fields]({%slug radwordsprocessing-concepts-fields%}) article. Some fields have a direct representation in the document model, for example, [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlink-field%}). For all other fields, you can use the [`CustomCodeField`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.customcodefield) class. You need some knowledge of how to correctly form the code of the field.
+Fields in `RadFlowDocument` consist of a code fragment and a result fragment as explained in the [Working with Fields]({%slug radwordsprocessing-concepts-fields%}) article. Some fields have a direct representation in the document model, for example, [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlink-field%}). For all other fields, you can use the [`CustomCodeField`](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.flow.model.fields.customcodefield) class. You need some knowledge of how to correctly form the code of the field.
 
 ## Field Syntax
 
@@ -25,7 +25,7 @@ Here is the basic syntax of a field code:
 
 * *argument*: The argument of the field. This is optional because some of the fields do not require an argument.
 
-* *switches*: Additional properties of the field. More information on the topic is available in the [Fields]({%slug radwordsprocessing-concepts-fields%}) article.
+* *switches*: Additional properties of the field. More information on the topic is available in the [Working with Fields]({%slug radwordsprocessing-concepts-fields%}) article.
 
 
 ## Inserting
@@ -101,6 +101,6 @@ The `IsDirty` property is set so that the TOC field is updated when the document
 
 ## See Also
 
-* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Working with Fields]({%slug radwordsprocessing-concepts-fields%})
 * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

@@ -32,7 +32,7 @@ The `ComboBoxField` class corresponds to the `FormFieldType.ComboBox` enum value
 ## See Also
 
 * [Form Field]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
-* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
+* [PDF Annotation Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 * [CombTextBoxField]({%slug radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield%})
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms)

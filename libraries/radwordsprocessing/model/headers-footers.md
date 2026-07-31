@@ -91,14 +91,14 @@ For more information about supported watermark types and usage patterns, see [Wa
 
 ## Adding Fields to Header/Footer
 
-You can add `PAGE`, `DATE`, and other fields to headers and footers so the content updates automatically as the document changes. For implementation details, see [Fields]({%slug radwordsprocessing-concepts-fields%}).
+You can add `PAGE`, `DATE`, and other fields to headers and footers so the content updates automatically as the document changes. For implementation details, see [Working with Fields]({%slug radwordsprocessing-concepts-fields%}).
 
 ## See Also
 
 * [HeaderFooterBase API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.HeaderFooterBase.html)
-* [Document model]({%slug radwordsprocessing-model%})
+* [Document Model]({%slug radwordsprocessing-model%})
 * [Section]({%slug radwordsprocessing-model-section%})
-* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Working with Fields]({%slug radwordsprocessing-concepts-fields%})
 * [Watermark]({%slug radwordsprocessing-concepts-watermark%})
 * [Draw Header/Footer in RadFixedDocument](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/DrawHeaderFooter)
 * [Create headers with left, center, and right text or images in exported PDF documents]({%slug customize-headers-pdf-radwordsprocessing%})

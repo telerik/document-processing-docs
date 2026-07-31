@@ -172,6 +172,6 @@ The event is only raised when the `StylesExportMode` property is set to `Externa
 
 ## See Also
 
-* [Styles]({%slug radwordsprocessing-concepts-styles%})
+* [Document Styles]({%slug radwordsprocessing-concepts-styles%})
 * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})
 * [Handling Local Path Images When Importing HTML Documents in Telerik WordsProcessing]({%slug handling-local-path-images-html%})

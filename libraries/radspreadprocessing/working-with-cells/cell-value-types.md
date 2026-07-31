@@ -179,7 +179,7 @@ Both methods create `FormulaCellValue` only when the current `CellValueFormat` i
 
 After this code runs, the value of cell `A1` matches the value of cell `A2`. When `A2` changes, `A1` updates automatically.
 
-An expression can also contain a built-in function. For the full list of available functions, see [Functions]({%slug radspreadprocessing-features-formulas-functions%}). If the current `CellValueFormat` is `Text` (`@`), the method produces `TextCellValue` instead of `FormulaCellValue`.
+An expression can also contain a built-in function. For the full list of available functions, see [Formula Functions]({%slug radspreadprocessing-features-formulas-functions%}). If the current `CellValueFormat` is `Text` (`@`), the method produces `TextCellValue` instead of `FormulaCellValue`.
 
 ### Example 12: Use a Built-In Function
 
@@ -237,7 +237,7 @@ Continue with the article that matches your next task:
 
 1. Read [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%}) to work with `CellSelection` objects.
 2. Read [Number Formatting]({%slug radspreadprocessing-features-number-formats%}) to control how numeric and date values are displayed.
-3. Read [Functions]({%slug radspreadprocessing-features-formulas-functions%}) to build more advanced formulas.
+3. Read [Formula Functions]({%slug radspreadprocessing-features-formulas-functions%}) to build more advanced formulas.
 
 ## See Also
 

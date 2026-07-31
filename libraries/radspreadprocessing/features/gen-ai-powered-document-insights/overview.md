@@ -20,7 +20,7 @@ The GenAI-powered Document Insights feature enables you to extract insights from
 * **Extract Document Insights**: Quickly understand the key points of lengthy documents.
 * **Efficient Information Retrieval**: Ask specific questions about your documents and receive accurate answers.
 * **Token Optimization**: Reduce token usage by only sending relevant portions of the document to the AI model as shown in the [PartialContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%}#when-to-use-partialcontextquestionprocessor) section.
-* **Multiple LLM Support**: Compatible with different AI providers including Azure OpenAI, OpenAI, and Ollama as described in the [Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup).
+* **Multiple LLM Support**: Compatible with different AI providers including Azure OpenAI, OpenAI, and Ollama as described in the [AI Provider Setup Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%}#ai-provider-setup).
 
 The GenAI-powered Document Insights feature includes three main components:
 
@@ -32,7 +32,7 @@ The GenAI-powered Document Insights feature includes three main components:
 
 ## See Also
 
-* [Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [GenAI-powered Document Insights Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
 * [Getting Started]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-getting-started%})
 * [SummarizationProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
 * [PartialContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})

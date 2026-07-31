@@ -29,7 +29,7 @@ Future releases plan to add support for text in shapes, shape insertion and edit
 
 ## See Also
 
-* [Model]({%slug radwordsprocessing-model%})
+* [Document Model]({%slug radwordsprocessing-model%})
 * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
 * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
 * [Creating Colored Squares in RadFlowDocument]({%slug creating-colored-squares-radflowdocument%})

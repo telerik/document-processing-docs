@@ -116,4 +116,4 @@ using (Stream output = File.OpenWrite(@"..\..\exported.pdf"))
 
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) 
 * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
-* [Images]({%slug radpdfprocessing-model-image%}) 
+* [PDF Images]({%slug radpdfprocessing-model-image%}) 

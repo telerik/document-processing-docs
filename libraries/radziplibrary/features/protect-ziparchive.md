@@ -48,7 +48,7 @@ To open a password-protected `ZipArchive`, pass a `DefaultEncryptionSettings` ob
 
 ## See Also
 
-* [Getting Started]({%slug radziplibrary-gettingstarted%})
+* [RadZipLibrary Getting Started]({%slug radziplibrary-gettingstarted%})
 * [Update ZipArchive]({%slug radziplibrary-update-ziparchive%})
 * [ZipLibrary Archive Protection Demo](https://demos.telerik.com/document-processing/ziplibrary/archive_protection)
 * [How to Read Folder's Content from a Protected Archive Using Telerik ZipLibrary]({%slug read-folder-encrypted-archive%})

@@ -25,4 +25,4 @@ position: 0
 ## See Also
 
 * [Using MarkdownFormatProvider]({%slug radwordsprocessing-formats-markdownformatprovider%})
-* [Settings]({%slug radwordsprocessing-markdownformatprovider-settings%})
+* [Markdown Format Provider Settings]({%slug radwordsprocessing-markdownformatprovider-settings%})

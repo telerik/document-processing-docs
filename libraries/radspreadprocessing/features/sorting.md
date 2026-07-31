@@ -194,4 +194,4 @@ To clear the sorting, use the `Clear()` method of the `SortState` property. Ther
 
 ## See Also
 
-* [Filtering]({%slug radspreadprocessing-features-filtering%})
+* [Filtering Feature]({%slug radspreadprocessing-features-filtering%})

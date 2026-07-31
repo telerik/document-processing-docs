@@ -101,6 +101,6 @@ Check these common issues if import or export does not behave as expected:
 
 ## See Also
 
-* [Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})
+* [PDF Format Provider Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})

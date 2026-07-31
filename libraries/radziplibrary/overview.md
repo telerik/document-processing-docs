@@ -34,7 +34,7 @@ The following list shows the key features of **RadZipLibrary**:
 
 >note If you do not have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can get the packages through the different suites.
 
->note For details on the **usage of the library**, go to the **[Getting Started]({%slug radziplibrary-gettingstarted%})** article.
+>note For details on the **usage of the library**, go to the **[RadZipLibrary Getting Started]({%slug radziplibrary-gettingstarted%})** article.
 
 ## Online Demos
 
