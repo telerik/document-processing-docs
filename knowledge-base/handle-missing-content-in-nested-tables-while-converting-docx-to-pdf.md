@@ -27,7 +27,7 @@ This article shows how to achieve strict alignment for nested tables in both DOC
 To achieve strict alignment in both DOCX and PDF, set the table layout type to `TableLayoutType.FixedWidth`. Define column widths explicitly to ensure consistent rendering across formats. Follow these steps:
 
 1. Create a [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}) and initialize a [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}).
-2. Insert a main [WordsProcessing table]({%slug radwordsprocessing-model-table%}) with predefined column widths and set the layout type to `TableLayoutType.FixedWidth`.
+2. Insert a main [Table]({%slug radwordsprocessing-model-table%}) with predefined column widths and set the layout type to `TableLayoutType.FixedWidth`.
 3. For each cell in the main table, add a nested table with explicitly defined column widths.
 4. Define equal column widths in the nested table using `TableWidthUnitType.Fixed`.
 5. Adjust page margins and dimensions for uniform rendering in PDF.
@@ -140,5 +140,5 @@ Below is a sample code snippet illustrating the solution:
 ## See Also
 
 - [WordsProcessing]({%slug radwordsprocessing-overview%})
-* [WordsProcessing Table Model]({%slug radwordsprocessing-model-table%})
+- [Table]({%slug radwordsprocessing-model-table%})
 - [PDF Export in WordsProcessing]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%})
