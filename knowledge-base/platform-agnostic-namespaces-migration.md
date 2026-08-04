@@ -16,7 +16,7 @@ res_type: kb
 
 ## Description
 
-Starting with the **Q3 2026** release, the Telerik Document Processing Libraries use platform-agnostic namespaces in both the .NET Framework and .NET Standard package variants. All namespaces no longer contain the word `Windows`. This is a breaking change that affects any project that references the old `Telerik.Windows.Documents.*` namespaces.
+Starting with the **Q3 2026** release, the Telerik Document Processing Libraries use platform-agnostic namespaces in both the .NET Framework and .NET Standard package variants. All namespaces no longer contain the word `Windows`. This is a breaking change that affects any project that references the old `Telerik.Windows.Documents.*` or `Telerik.Windows.Zip` namespaces.
 
 This article also answers the following questions:
 
@@ -31,7 +31,7 @@ The Telerik Document Processing Libraries have always been distributed in two pa
 * **.NET Framework packages**: These packages target Windows and have the word `Windows` in their assembly and NuGet package names (for example, `Telerik.Windows.Documents.Core`, `Telerik.Windows.Documents.Fixed`).
 * **.NET Standard packages**: These packages are cross-platform and do not contain `Windows` in their names (for example, `Telerik.Documents.Core`, `Telerik.Documents.Fixed`).
 
-Despite this naming difference, both package variants used the same `Telerik.Windows.Documents.*` namespace hierarchy. This meant that regardless of the package you referenced, all `using` directives and fully qualified type names had to include the word `Windows`. For example:
+Despite this naming difference, both package variants used the same `Telerik.Windows.Documents.*` namespace hierarchy in most of the classes. This meant that regardless of the package you referenced, all `using` directives and fully qualified type names had to include the word `Windows`. For example:
 
 ```csharp
 using Telerik.Windows.Documents.Fixed.Model;
@@ -56,6 +56,7 @@ The following table shows examples of how namespaces have changed:
 | `Telerik.Windows.Documents.Fixed.FormatProviders.Pdf` | `Telerik.Documents.Fixed.FormatProviders.Pdf` |
 | `Telerik.Windows.Documents.Flow.FormatProviders.Docx` | `Telerik.Documents.Flow.FormatProviders.Docx` |
 | `Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx` | `Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx` |
+| `Telerik.Windows.Zip` | `Telerik.Zip` |
 
 >note The package and assembly names remain unchanged. Only the namespaces have changed. The .NET Framework packages still have `Windows` in their names (for example, `Telerik.Windows.Documents.Core`), and the .NET Standard packages still do not (for example, `Telerik.Documents.Core`).
 
@@ -70,13 +71,13 @@ error CS0234: The type or namespace name 'Windows' does not exist in the namespa
 
 The impact covers:
 
-* All `using` directives that reference `Telerik.Windows.Documents.*`.
+* All `using` directives that reference `Telerik.Windows.Documents.*` and `Telerik.Windows.Zip`.
 * All fully qualified type names in code, such as `Telerik.Windows.Documents.Fixed.Model.RadFixedDocument`.
 * Any string-based type references, such as those in XML configuration or reflection calls.
 
 ## Solution
 
-To resolve the compiler errors, replace all occurrences of `Telerik.Windows.Documents.` with `Telerik.Documents.` in your source code.
+To resolve the compiler errors, replace all occurrences of `Telerik.Windows.Documents.` or `Telerik.Windows.Zip` with `Telerik.Documents.` and `Telerik.Zip` respectively in your source code.
 
 ### Using Find and Replace
 
