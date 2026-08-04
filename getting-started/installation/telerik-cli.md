@@ -6,6 +6,7 @@ slug: dpl-telerik-cli
 tags: telerik, cli, command, line, dotnet, tool, nuget, setup, install, create, update, dpl, getting, started, environment, new
 published: True
 position: 1
+tag: new
 ---
 
 # Telerik CLI
