@@ -24,6 +24,8 @@ The following sections describe the possible approaches for creating a custom fu
 
 * [Custom Function Examples](#custom-function-examples)
 
+* [Array Lifting](#array-lifting)
+
 ## Inheriting FunctionBase Abstract Class
 
 The document model provides a powerful API for creating custom functions. All functions must inherit from the abstract `FunctionBase` class, which provides basic methods and properties for each function instance.
@@ -37,6 +39,10 @@ The following are the basic `FunctionBase` members:
 * `ArgumentConversionRules`: Property describing how different argument types are interpreted. The functions API works with five argument types (Logical, Number, Text, Reference, and Array) and each function may interpret each of these argument types differently. For more information, see [ArgumentConversionRules](#argumentconversionrules).
 
 * `Evaluate` and `EvaluateOverride` methods: The methods where the function calculations take place. To define a custom function, override the `EvaluateOverride` method so that you can later obtain the function calculation value through the `Evaluate` method.
+
+* `LiftsOverArrays`: Virtual property of type `bool`. When `true`, `FunctionBase` automatically evaluates the function **element-wise** over any multi-element array argument and returns a spilled array result. Override and return `true` for pure scalar functions where pointwise lifting matches dynamic-array behavior. For more information, see [Custom Functions and Array Lifting](#custom-functions-and-array-lifting).
+
+* `IsSpillingArgument(int argumentIndex, RadExpression argument)`: Virtual method that determines whether the argument at `argumentIndex` can cause the function to return a multi-element array and therefore spill. The default implementation returns `true` only when the argument itself can return a multi-element array. Override this method to restrict spilling to specific argument positions. For more information, see [Custom Functions and Array Lifting](#custom-functions-and-array-lifting).
 
 Additionally, each custom function needs to be registered through the `FunctionManager` class. Pass an instance of the function class to the static `Register()` method.
 
@@ -58,7 +64,7 @@ The document model provides an inheritance tree of classes that offer ready-to-u
 
 ![Telerik Document Processing RadSpreadProcessing custom function inheritance diagram showing FunctionBase, FunctionWithArguments, FunctionWithSameTypeArguments<T>, StringsInFunction, NumbersInFunction, and BooleansInFunction](images/RadSpreadProcessing_Features_Formulas_Custom_Functions_01.png)
 
-* `FunctionBase`: Provides the base function properties (`Name`, `FunctionInfo`, `ArgumentConversionRules`). Also provides the logic of the `IsArgumentNumberValid()` method which handles the scenario when an invalid arguments count is passed by the user. By inheriting `FunctionBase` you must override the `EvaluateOverride(RadExpression[] arguments)` method, so you need to handle the full logic of converting `RadExpression` arguments to function arguments.
+* `FunctionBase`: Provides the base function properties (`Name`, `FunctionInfo`, `ArgumentConversionRules`). Also provides the logic of the `IsArgumentNumberValid()` method which handles the scenario when an invalid arguments count is passed by the user. By inheriting `FunctionBase` you must override the `EvaluateOverride(FunctionEvaluationContext<RadExpression> context)` method, so you need to handle the full logic of converting `RadExpression` arguments to function arguments. Arguments are accessed via `context.Arguments`.
 
 * `FunctionWithArguments`: Handles the basic logic of converting a `RadExpression` value to another value type corresponding to the `ArgumentType` defined in the `FunctionInfo` property. By inheriting from this class, you need to override the `EvaluateOverride(object[] arguments)` method and handle an array of already converted function argument values.
 
@@ -180,8 +186,71 @@ The following example defines a custom function named "E" that inherits from the
 >tip You can download a runnable project with the previous and several other custom function examples from the [SDK repository on GitHub](https://github.com/telerik/xaml-sdk/tree/master/Spreadsheet/WPF/CustomFunctions).
           
 
+## Array Lifting
+
+You can control how your custom function interacts with dynamic array formulas through two `FunctionBase` members: `LiftsOverArrays` and `IsSpillingArgument`.
+
+### LiftsOverArrays
+
+Override `LiftsOverArrays` and return `true` to make the `FunctionBase` infrastructure automatically evaluate your function **element-wise** over any multi-element array argument. The results are collected into a result array that the formula engine then spills into the worksheet.
+
+Use this for pure scalar functions where applying the function to each element individually produces the correct result. For example, a custom `DOUBLE` function that doubles a number would naturally lift: `=DOUBLE({1;2;3})` returns `{2;4;6}` and spills into three cells.
+
+**Example 6: Implementing a custom function with array lifting**
+
+```csharp
+public class DoubleFunction : FunctionBase
+{
+    public static readonly string FunctionName = "DOUBLE";
+    private static readonly FunctionInfo DoubleInfo;
+
+    static DoubleFunction()
+    {
+        string description = "Returns the number multiplied by two.";
+        IEnumerable<ArgumentInfo> requiredArguments = new[]
+        {
+            new ArgumentInfo("number", "The number to multiply by two.", ArgumentType.Number)
+        };
+        DoubleInfo = new FunctionInfo(FunctionName, FunctionCategory.MathTrig, description, requiredArguments);
+    }
+
+    public override string Name => FunctionName;
+    public override FunctionInfo FunctionInfo => DoubleInfo;
+    public override bool LiftsOverArrays => true;
+
+    protected override RadExpression EvaluateOverride(FunctionEvaluationContext<RadExpression> context)
+    {
+        double value = ((NumberExpression)context.Arguments[0]).Value;
+        return new NumberExpression(value * 2);
+    }
+}
+```
+
+Register the function as usual:
+
+```csharp
+FunctionManager.RegisterFunction(new DoubleFunction());
+```
+
+Entering `=DOUBLE({1;2;3})` in a cell now spills the values 2, 4, and 6 into three cells.
+
+### IsSpillingArgument
+
+Override `IsSpillingArgument(int argumentIndex, RadExpression argument)` to restrict which arguments can drive the function to produce a multi-element result. The default implementation returns `true` for arguments that can potentially produce a multi-element array (such as range references), and `false` for scalar constants. Override this when only specific argument positions should trigger element-wise evaluation:
+
+```csharp
+public override bool IsSpillingArgument(int argumentIndex, RadExpression argument)
+{
+    // Only the first argument (index 0) can cause the function to return an array.
+    return argumentIndex == 0;
+}
+```
+
+For the full description of spill behavior and the dynamic array model, see [Dynamic Array Formulas]({%slug radspreadprocessing-features-formulas-dynamic-array-formulas%}).
+
 ## See Also
 
+* [Dynamic Array Formulas]({%slug radspreadprocessing-features-formulas-dynamic-array-formulas%})
 * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
 * [ArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArgumentInterpretation.html)
 * [ArrayArgumentInterpretation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Expressions.Functions.ArrayArgumentInterpretation.html)

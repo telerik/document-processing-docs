@@ -1,9 +1,9 @@
 ---
 title: Operator
-description: Learn about the arithmetic, comparison, text concatenation, and reference operators supported in RadSpreadProcessing formulas.
+description: Learn about the arithmetic, comparison, text concatenation, reference, and dynamic array operators supported in RadSpreadProcessing formulas.
 page_title: Operator
 slug: radspreadprocessing-features-formulas-operators
-tags: operators, formulas, spreadsheet, radspreadprocessing, arithmetic, comparison, text, reference, spread, xlsx
+tags: operators, formulas, spreadsheet, radspreadprocessing, arithmetic, comparison, text, reference, spread, xlsx, dynamic, array, spill, implicit, intersection
 published: True
 position: 1
 ---
@@ -14,7 +14,7 @@ position: 1
 
 ## Supported Operators
 
-The document model supports four groups of operators: arithmetic, comparison, text, and reference.
+The document model supports four groups of operators: arithmetic, comparison, text, reference, and dynamic array.
         
 <table><tr><th>
 
@@ -144,3 +144,22 @@ Concatenates two strings</td></tr><tr><td>
 Comparison operators</td></tr></table>
 
 Use parentheses to change the order of operations within an expression.
+
+## Dynamic Array Operators
+
+Two additional operators support dynamic array formulas. For a full description of dynamic array behavior, see [Dynamic Array Formulas]({%slug radspreadprocessing-features-formulas-dynamic-array-formulas%}).
+
+<table><tr><th>Dynamic Array Operator</th><th></th></tr><tr><td>
+
+@ (At sign)</td><td>
+
+<b>Implicit intersection operator.</b> Unary prefix operator with the highest precedence. Resolves an array or range expression to a single value based on the row and column position of the formula cell. Example: <i>=@A1:A10</i> returns the value in the row that intersects the formula cell. In XLSX, stored as <code>_xlfn.SINGLE(inner)</code>.</td></tr><tr><td>
+
+# (Hash sign)</td><td>
+
+<b>Spill range operator.</b> Postfix operator that follows a cell reference. Resolves to the entire spill range owned by the anchor cell at that reference. Example: <i>=SUM(A1#)</i> sums the spill range starting at A1. Returns <i>#REF!</i> if the referenced cell is not a spill anchor. In XLSX, stored as <code>_xlfn.ANCHORARRAY(inner)</code>.</td></tr></table>
+
+## See Also
+
+* [Dynamic Array Formulas]({%slug radspreadprocessing-features-formulas-dynamic-array-formulas%})
+* [Errors]({%slug radspreadprocessing-features-formulas-errors%})

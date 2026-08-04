@@ -40,6 +40,7 @@ The following table summarizes the main tasks that you can perform on a workshee
 | Protection | Restrict editing and control which actions remain available. | [Worksheet Protection]({%slug radspreadprocessing-features-protection-worksheet%}) |
 | View state | Control frozen panes, active cell, selection, and zoom. | [View State]({%slug radspreadprocessing-working-with-worksheets-view-state%}) |
 | Visibility | Hide worksheets without removing them from the workbook. | [Sheets Visibility]({%slug radspreadprocessing-working-with-worksheets-sheets-visibility%}) |
+| Dynamic array formulas | Inspect spill ranges produced by dynamic array formulas through the `WorksheetSpillState` property. | [Dynamic Array Formulas]({%slug radspreadprocessing-features-formulas-dynamic-array-formulas%}) |
 
 Each worksheet also exposes several features that help you organize and query spreadsheet content:
 
