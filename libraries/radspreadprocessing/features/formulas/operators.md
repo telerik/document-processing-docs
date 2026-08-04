@@ -155,7 +155,7 @@ Two additional operators support dynamic array formulas. For a full description 
 
 <b>Implicit intersection operator.</b> Unary prefix operator with the highest precedence. Resolves an array or range expression to a single value based on the row and column position of the formula cell. Example: <i>=@A1:A10</i> returns the value in the row that intersects the formula cell. In XLSX, stored as <code>_xlfn.SINGLE(inner)</code>.</td></tr><tr><td>
 
-# (Hash sign)</td><td>
+\# (Hash sign)</td><td>
 
 <b>Spill range operator.</b> Postfix operator that follows a cell reference. Resolves to the entire spill range owned by the anchor cell at that reference. Example: <i>=SUM(A1#)</i> sums the spill range starting at A1. Returns <i>#REF!</i> if the referenced cell is not a spill anchor. In XLSX, stored as <code>_xlfn.ANCHORARRAY(inner)</code>.</td></tr></table>
 
