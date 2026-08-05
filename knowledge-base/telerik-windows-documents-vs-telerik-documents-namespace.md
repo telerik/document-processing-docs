@@ -51,4 +51,6 @@ Use `Telerik.Windows.Documents.*` when:
 
 ## See Also
 
-* [Available NuGet Packages]({%slug available-nuget-packages%}) 
+* [Available NuGet Packages]({%slug available-nuget-packages%})
+* [What Versions of Document Processing Libraries Are Distributed with the Telerik Products]({%slug distribute-telerik-document-processing-libraries-net-versions%})
+* [Migrating to Platform-Agnostic Namespaces]({%slug platform-agnostic-namespaces-migration%})
