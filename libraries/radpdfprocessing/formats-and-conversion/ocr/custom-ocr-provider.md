@@ -44,7 +44,7 @@ After iterating all images in the specified folder (which contain content in dif
 
 ## See Also
 
-* [Prerequisites]({%slug radpdfprocessing-formats-and-conversion-ocr-prerequisites%})
+* [OCR Provider Prerequisites]({%slug radpdfprocessing-formats-and-conversion-ocr-prerequisites%})
 * [Using OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%})
 * [Cross-Platform Support - Images]({%slug radpdfprocessing-cross-platform-images%})
 * [What is Azure AI Vision?](https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/overview)

@@ -33,6 +33,6 @@ Widget annotations visualize the form fields data on the PDF pages. Each field c
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
-* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
+* [PDF Annotation Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
 * [PdfProcessing Form Fields Reading and Writing Demo](https://demos.telerik.com/document-processing/pdfprocessing/read_write_form_fields)

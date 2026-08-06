@@ -47,9 +47,9 @@ The following table describes the most popular features of the `RadSpreadProcess
 | [**Freeze Panes**]({%slug radspreadprocessing-features-freeze-panes%}) | Keep part of the worksheet visible at all times when scrolling. |
 | [**Hidden rows and columns**]({%slug radspreadprocessing-working-with-rows-and-columns-hiding%}) | The API of the workbook model allows you to set the hidden state of each row or column. |
 | [**Merge and unmerge cells**]({%slug radspreadprocessing-features-merge-unmerge-cells%}) | You have the ability to merge two or more adjacent cells into a single cell that spans over multiple rows and columns. |
-| **[Auto fill]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}) and [Series]({%slug radspreadprocessing-features-fill-data-automatically-series%})** | Fill cells automatically with data following a specific pattern. |
+| **[Auto fill]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}) and [Auto Fill Series]({%slug radspreadprocessing-features-fill-data-automatically-series%})** | Fill cells automatically with data following a specific pattern. |
 | [**Page Setup**]({%slug radspreadprocessing-features-worksheetpagesetup%}) | Set and get header and footer settings and apply various page setup options like paper size, orientation, automatic scaling, margins, breaks, and print settings. |
-| [**History**]({%slug radspreadprocessing-features-history%}) | The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. Each worksheet has its own history stack. |
+| [**Workbook History**]({%slug radspreadprocessing-features-history%}) | The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. Each worksheet has its own history stack. |
 | [**Comments**]({%slug radspreadprocessing-features-comments%}) | You can leave comments and replies on cells, which allows for easier team communication. |
 | [**Notes**]({%slug radspreadprocessing-features-notes%}) | Note important information in your worksheet.|
 |[**GenAI-powered Document Insights**]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})| Extract insights from Excel documents using Large Language Models (LLMs). |

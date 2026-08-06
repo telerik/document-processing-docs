@@ -39,7 +39,7 @@ The following sections summarize the new features introduced in each release wit
 
 ## What Is New in 2014 Q2
 
-* [Filtering]({%slug radspreadprocessing-features-filtering%})
+* [Filtering Feature]({%slug radspreadprocessing-features-filtering%})
 * [Sorting]({%slug radspreadprocessing-features-sorting%})
 * [Export to PDF]({%slug radspreadprocessing-formats-and-conversion-pdf-pdf%})
 * Error cell value

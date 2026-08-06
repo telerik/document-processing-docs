@@ -102,7 +102,7 @@ More information about cell value types is available in the [Cell Value Types]({
 
 ## See Also
 
-* [History]({%slug radspreadprocessing-features-history%})
+* [Workbook History]({%slug radspreadprocessing-features-history%})
 * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
 * [Shapes and Images]({%slug radspreadprocessing-features-shapes-and-images%})
 * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})

@@ -65,6 +65,6 @@ The following example demonstrates how to use the `CompleteContextQuestionProces
 ## See Also
 
 * [GenAI-powered Document Insights Overview]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})
-* [Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [GenAI-powered Document Insights Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
 * [SummarizationProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
 * [PartialContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})

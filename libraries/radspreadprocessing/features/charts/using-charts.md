@@ -105,7 +105,7 @@ You can then use the chart to replace the chart in an existing `FloatingChartSha
 
 <snippet id='codeblock-cmc'/>
 
->note For more information about series, see the [Series]({%slug radspreadprocessing-features-charts-series%}) article. For a description of the axes objects, see [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}).
+>note For more information about series, see the [Chart Series]({%slug radspreadprocessing-features-charts-series%}) article. For a description of the axes objects, see [Working with Axes]({%slug radspreadprocessing-features-charts-axes%}).
 
 The initial data and the resulting chart are shown in **Figure 1**.
 

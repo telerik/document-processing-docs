@@ -40,7 +40,7 @@ The following example demonstrates how to export an existing worksheet to a `Dat
 
 ## See Also
 
-* [Settings]({%slug radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings%})
+* [Data Table Format Provider Settings]({%slug radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings%})
 * [Converting PDF Table Content to DataTable]({%slug convert-pdf-table-to-datatable%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Processing Decimal Columns as Double when Importing a DataTable into a Workbook using RadSpreadProcessing]({%slug processing-decimal-columns-as-double-from-datatable%})

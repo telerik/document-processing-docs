@@ -23,4 +23,4 @@ The following limitations apply to digital signatures in RadPdfProcessing:
 * [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})
 * [SignatureField]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
-* [Digital Signature]({%slug radpdfprocessing-features-digital-signature%})
+* [Digital Signature Feature Overview]({%slug radpdfprocessing-features-digital-signature%})

@@ -109,4 +109,4 @@ If you skip the `MailMerge` step, the following template is produced:
 ## See Also
 
 * [Nested Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
-* [Table]({%slug radwordsprocessing-model-table%})
+* [WordsProcessing Table Model]({%slug radwordsprocessing-model-table%})

@@ -15,7 +15,7 @@ res_type: kb
 
 ## Description
 
-This article shows how to create a PDF document containing a [Table]({%slug radpdfprocessing-editing-table-overview%}) with [images]({%slug radpdfprocessing-model-image%}).
+This article shows how to create a PDF document containing a [table]({%slug radpdfprocessing-editing-table-overview%}) with [images]({%slug radpdfprocessing-model-image%}).
 
 ## Solution
 
@@ -85,5 +85,5 @@ Adjust the code according to your specific requirements and environment.
 ## See Also
 
 * [RadPdfProcessing]({%slug radpdfprocessing-overview%})
-* [Table]({%slug radpdfprocessing-editing-table-overview%})
-* [Images]({%slug radpdfprocessing-model-image%})
+* [PDF Table]({%slug radpdfprocessing-editing-table-overview%})
+* [PDF Images]({%slug radpdfprocessing-model-image%})

@@ -30,7 +30,7 @@ The following example shows how to create a PDF document and add a `LaunchAction
 
 ## See Also
 
-* [Links]({%slug radpdfprocessing-model-annotations-links%})
-* [Actions]({%slug radpdfprocessing-model-actions%})
-* [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
+* [PDF Link Annotations]({%slug radpdfprocessing-model-annotations-links%})
+* [PDF Actions Overview]({%slug radpdfprocessing-model-actions%})
+* [PDF Annotations Overview]({%slug radpdfprocessing-model-annotations-overview%})
 * [GoToRAction]({%slug radpdfprocessing-model-actions-gotor%})

@@ -112,7 +112,7 @@ Both properties have a default value of `true`. The following snippet shows how 
 
 ## See Also
 
-* [Filtering]({%slug radspreadprocessing-features-filtering%})
+* [Filtering Feature]({%slug radspreadprocessing-features-filtering%})
 * [Sorting]({%slug radspreadprocessing-features-sorting%})
 * [Grouping Data Example Using RadSpreadProcessing]({%slug grouping-data-using-radspreadprocessing%})
 

@@ -65,7 +65,7 @@ After updating the field, the result is "05/13/21".
 
 ## See Also
 
-* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Working with Fields]({%slug radwordsprocessing-concepts-fields%})
 * [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
 

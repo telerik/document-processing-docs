@@ -57,4 +57,4 @@ Similarly, you can automatically copy the values of a row to its adjacent rows.
 ## See Also
 
 * [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
-* [Series]({%slug radspreadprocessing-features-fill-data-automatically-series%})
+* [Automatically Fill Series]({%slug radspreadprocessing-features-fill-data-automatically-series%})

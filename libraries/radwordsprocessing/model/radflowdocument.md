@@ -28,9 +28,9 @@ The code from **Example 1** shows how you can create a new `RadFlowDocument`.
 | `ViewType` | An enumeration that specifies how the document should be laid out when displayed. Whether this property is respected depends on the application used to open the document. |
 | `Theme` | Specifies the theme applied to the document. The document theme enables you to specify colors, fonts, and graphic effects that affect the look of the whole document. More information is available in the [Document Themes]({%slug radwordsprocessing-concepts-document-themes%}) article. |
 | `StyleRepository` | Represents the document's `StyleRepository`. The repository allows you to add, remove, or enumerate the styles of the document. |
-| `DefaultStyle` | The default styles used for `Paragraph` and `Run` elements. More information on default styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article. |
+| `DefaultStyle` | The default styles used for `Paragraph` and `Run` elements. More information on default styles is available in the [Document Styles]({%slug radwordsprocessing-concepts-styles%}) article. |
 | `HasDifferentEvenOddPageHeadersFooters` | Gets or sets whether pages in this document have different headers and footers for even and odd pages. |
-| `ListCollection` | Represents the collection of [Lists]({%slug radwordsprocessing-concepts-lists%}) in the document. |
+| `ListCollection` | Represents the collection of [Document Lists]({%slug radwordsprocessing-concepts-lists%}) in the document. |
 | `CommentCollection` | Represents the collection of [Comments]({%slug radwordsprocessing-model-comment%}) in the document. |
 | `ProtectionSettings` | Corresponds to the settings used when the document is protected. More information is available in the [PermissionRange]({%slug radwordsprocessing-model-permissionrange%}) article. |
 | `DefaultTabStopWidth` | The distance between automatic [TabStops]({%slug radwordsprocessing-concepts-tabstop%}). |
@@ -76,7 +76,7 @@ You can also specify the `MergeOptions` that control the merge operation:
 
 ### Update Fields
 
-`RadFlowDocument` exposes an `UpdateFields()` method that allows you to update all fields in the document. More information about fields is available in the [Fields]({%slug radwordsprocessing-concepts-fields%}) article.
+`RadFlowDocument` exposes an `UpdateFields()` method that allows you to update all fields in the document. More information about fields is available in the [Working with Fields]({%slug radwordsprocessing-concepts-fields%}) article.
 
 The snippet from **Example 6** shows how to update all fields in a document simultaneously.
 
@@ -89,4 +89,4 @@ The snippet from **Example 6** shows how to update all fields in a document simu
 * [RadFlowDocument API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.RadFlowDocument.html)
 * [Document Model]({%slug radwordsprocessing-model%})
 * [Section]({%slug radwordsprocessing-model-section%})
-* [Styles]({%slug radwordsprocessing-concepts-styles%})
+* [Document Styles]({%slug radwordsprocessing-concepts-styles%})
