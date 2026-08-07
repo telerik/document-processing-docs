@@ -11,17 +11,33 @@ position: 1
 
 # Fonts
 
-Unlike the .NET Framework and .NET (Target OS: *Windows*) version, the RadPdfProcessing **.NET Standard** and **.NET (Target OS: *None*)** version does not offer a default mechanism for reading fonts. The `FixedExtensibilityManager` class is exposed to help you implement this functionality.
+RadPdfProcessing automatically discovers installed system fonts in cross-platform **.NET Standard** and **.NET (Target OS: *None*)** applications. The `FixedExtensibilityManager` class also lets you provide font data explicitly when your application needs fonts that are not installed on the host system.
 
 ## Setting and Exporting Fonts
 
-RadPdfProcessing needs access to the font data so that it can read it and add it to the PDF file. To allow the library to create and use fonts, provide an implementation of the `FontsProviderBase` abstract class and set this implementation to the `FontsProvider` property of the `FixedExtensibilityManager`.
+RadPdfProcessing loads font data when it creates text and exports a PDF. On cross-platform targets, the first access to `FixedExtensibilityManager.FontsProvider` automatically activates the system-font provider. You do not need to register a provider for fonts that are installed in a supported system font directory.
 
-You can find a detailed `FixedExtensibilityManager` and `FontsProvider` description and implementation in the [How to implement a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) article.
+The system-font provider searches the following locations. The provider scans directories recursively and uses supported `.ttf`, `.otf`, and `.ttc` files that it can access and parse.
 
->important If the `FontsProvider` property is not set, a default font is used when exporting the document in cross-platform applications.
+| Platform | Default font locations |
+|---|---|
+| Windows | The Windows `Fonts` directory and the current user's `Microsoft\Windows\Fonts` directory. |
+| Linux | `/usr/share/fonts`, `/usr/local/share/fonts`, `/var/lib/flatpak/exports/share/fonts`, the user's `~/.fonts` directory, and the user's `~/.local/share/fonts` directory. |
+| macOS | `/System/Library/Fonts`, `/Library/Fonts`, and the current user's `~/Library/Fonts` directory. |
+| iOS | `/System/Library/Fonts` and `/Library/Fonts`. |
+| Android | `/system/fonts`, `/system/product/fonts`, and `/product/fonts`. |
 
->important When converting a document (for example, DOCX, HTML) to PDF format in **.NET Standard** and **.NET (Target OS: *None*)** projects, fonts from the original document are not automatically maintained in the PDF unless you explicitly provide the font data. This is especially important when the original document uses non-standard or custom fonts. The PdfProcessing library requires access to the actual font files to embed them in the PDF. If font data is not provided, the PDF model substitutes the missing fonts with standard ones, resulting in a mismatch between the original document and the exported PDF file.
+The provider builds its font index lazily. If a directory does not exist, a font file is inaccessible, a file is larger than 50 MB, or a font file is corrupted or unsupported, the provider skips that item. The provider returns no data for a font family that is not found, so the resulting document can use font substitution according to the PDF and application settings.
+
+When you assign a custom provider to `FixedExtensibilityManager.FontsProvider`, the custom provider takes precedence. Use a custom provider when you need to:
+
+* Bundle fonts with your application instead of relying on fonts installed on the host system.
+* Use fonts stored in an application-specific location or another data source.
+* Control font resolution for repeatable output across machines, containers, or mobile devices.
+
+You can find a detailed `FixedExtensibilityManager` and `FontsProvider` implementation in the [How to implement a FontsProvider]({%slug pdfprocessing-implement-fontsprovider%}) article.
+
+>important When converting a document (for example, DOCX or HTML) to PDF format, the system-font provider can resolve a font only when the matching font is installed in a directory that the provider searches. Fonts embedded in the source document, fonts stored in another application location, and custom fonts that are not installed require a custom provider that returns the font data. If the requested font cannot be resolved, the PDF model can substitute another font, which may change the document's appearance or text layout.
 
 ## Implementing a FontsProviderBase
 

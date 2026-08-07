@@ -18,7 +18,7 @@ position: 5
 
 >note Starting with **Q2 2024** RadPdfProcessing offers support for OTF (OpenType Font) font file format.
 
->important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
+>important In **.NET Standard/.NET (Target OS: None)** environments, the cross-platform system-font provider can resolve fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) when the fonts are installed in a supported system directory. Use a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) for fonts that are not installed in those directories or when you need explicit, repeatable font deployment.
 
 ## Supported Font Types
 
