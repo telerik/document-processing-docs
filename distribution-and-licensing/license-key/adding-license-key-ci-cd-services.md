@@ -10,23 +10,21 @@ position: 1
 
 # Adding the License Key to CI/CD Services
 
-Use this article to activate your [license key](https://www.telerik.com/account/your-licenses/license-keys) in CI/CD services such as GitHub Actions and Azure Pipelines. The goal is to make the `Telerik.Licensing` package available during automated builds so your build agents can validate the license without manual intervention.
+This article describes how to set up and activate your Telerik Document Processing license across a few popular CI/CD services by using deployment keys. This article covers the recommended environment-variable approach, the Azure DevOps secure-file alternative, and the `TelerikLicensing.Register()` method for AWS Lambda scenarios.
 
-This article covers the recommended environment-variable approach, the Azure DevOps secure-file alternative, and the `TelerikLicensing.Register()` method for AWS Lambda scenarios.
+Deployment keys are a dedicated type of license key for build pipelines. They're tied to a specific application and the set of products that the application uses. Deployment keys cannot be used for application development.
 
 ## Before You Start
 
-Before you configure a CI/CD service, make sure that you have:
+To activate your license in a CI/CD environment:
 
-1. Downloaded a license key from your [Telerik account](https://www.telerik.com/account/).
-2. Added the `Telerik.Licensing` package to the project that uses Telerik Document Processing.
-3. Decided whether you will provide the license through `TELERIK_LICENSE`, through `TELERIK_LICENSE_PATH`, or through `TelerikLicensing.Register()`.
-
-The license activation process in a CI/CD environment involves the following steps:
-
-1. [Download](https://www.telerik.com/account/your-licenses/license-keys) a license key from your [Telerik account](https://www.telerik.com/account/).
-2. [Create an environment variable](#creating-an-environment-variable) named `TELERIK_LICENSE` and add your license key as a value.
-3. If you use Azure DevOps and the key is too large for your chosen variable storage, use the [secure-files approach](#using-secure-files-on-azure-devops) instead.
+1. Navigate to the [Deployment Keys](https://www.telerik.com/account/downloads/deployment-keys) page.
+2. Click **Add Application**. In the form that opens:
+   * Add the application name.
+   * Select the type of application—public or private.
+   * Select the set of products used in the application.
+   * Copy the key value and store it securely.
+3. [Create an environment variable](#creating-an-environment-variable) named `TELERIK_LICENSE` and set it to the obtained key value. Alternatively, the key can be stored in a `telerik-license.txt` file, for example when using the [Azure Secure files approach](#using-secure-files-on-azure-devops).
 4. If you run in an AWS Lambda or similar hosted function scenario, use [`TelerikLicensing.Register()`](#using-teleriklicensingregister-on-aws-lambda) when that model is a better fit.
 
 ## Choose a License Delivery Approach
@@ -50,7 +48,7 @@ The recommended way to provide the license key to the `Telerik.Licensing` NuGet 
 Use a GitHub secret to store the license key and map it to the `TELERIK_LICENSE` environment variable during the workflow run.
 
 1. Create a new [Repository Secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-a-repository) or an [Organization Secret](https://docs.github.com/en/actions/reference/encrypted-secrets#creating-encrypted-secrets-for-an-organization).
-2. Set the secret name to `TELERIK_LICENSE` and paste the contents of the license key file as the value.
+2. Set the secret name to `TELERIK_LICENSE` and paste the deployment key value.
 3. In the workflow YAML, expose that secret as an environment variable for the build step or job.
 
 ```yaml
@@ -65,7 +63,7 @@ After the environment variable is available to the process that restores, builds
 Use a secret pipeline variable when the value fits inside the supported size limits.
 
 1. Create a new [secret variable](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch#secret-variables) named _TELERIK\_LICENSE_.
-2. Paste the contents of the license key file as the variable value.
+2. Paste the deployment key value.
 
 >important
 >
