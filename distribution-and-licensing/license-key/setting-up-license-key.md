@@ -41,9 +41,9 @@ The [Progress Control Panel](https://www.telerik.com/download-trial-file/v2/cont
 
 ## Activating the Document Processing Libraries
 
-Use this workflow for every project that references Telerik Document Processing through NuGet packages::
+Use this workflow for every project that references Telerik Document Processing through NuGet packages:
 
-1. Copy the [downloaded](#how-to-download-the-license-key) `telerik-license.txt` file to one of the following locations:
+1. Copy the [downloaded](#downloading-the-license-key) `telerik-license.txt` file to one of the following locations:
   1. For Windows: `%AppData%\Telerik\telerik-license.txt`
   1. For macOS and Linux: `~/.telerik/telerik-license.txt`
   1. Alternatively, copy `telerik-license.txt` to the project root when you want the license key to apply only to a single project.
@@ -57,7 +57,15 @@ Use this workflow for every project that references Telerik Document Processing 
 
 When you build the project, the `Telerik.Licensing` NuGet package automatically locates the license file and uses it to activate the product.
 
->important If the project does not use NuGet packages, use the script-key workflow in [How to Add a License Key without NuGet References](#how-to-add-a-license-key-without-nuget-references).
+3. (Optional) Add the `TelerikLicensingStrict` property to your project to make sure Release builds fail in case of licensing issues:
+
+```xml
+<PropertyGroup>
+  <TelerikLicensingStrict Condition="$(Configuration) == 'Release'">true</TelerikLicensingStrict>
+</PropertyGroup>
+```
+
+>important If the project does not use NuGet packages, use the script-key workflow in [How to Add a License Key without NuGet References](#adding-a-license-key-to-projects-without-nuget-references).
 
 ## How to Configure Licensing for Each Environment
 
@@ -76,12 +84,12 @@ For local development:
 
 ### CI/CD Workflow
 
-Use a secure secret store in the CI/CD system and make the license key available during the build. Do not commit the key file to source control.
+Use deployment keys and a secure secret store in the CI/CD system to make the license key available during the build. Do not commit the key to source control.
 
 For CI/CD:
 
-1. Store the contents of `telerik-license.txt` in the CI/CD secret store.
-2. Restore the file during the pipeline run and place it in the home directory of the build agent or in the repository root before build.
+1. Obtain a deployment key from the [Deployment Keys](https://www.telerik.com/account/downloads/deployment-keys) page in your Telerik account.
+2. Store the deployment key in the CI/CD secret store as the `TELERIK_LICENSE` environment variable.
 3. Make sure the application project references `Telerik.Licensing`.
 4. Build the project and review the build log for licensing warnings.
 
