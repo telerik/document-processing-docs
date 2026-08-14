@@ -233,5 +233,5 @@ The following snippet shows how to manipulate the position of the inserted conte
 * [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
 * [Resizing Large Images to Fit in the PDF Page]({%slug resize-images-radpdfprocessing%})
 * [Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
-* [Drawing Rectangles with Text and Image Contant with RadPdfProcessing]({%slug draw-rectangles-text-images-radpdfprocessing%})
+* [Drawing Rectangles with Text and Image Content with RadPdfProcessing]({%slug draw-rectangles-text-images-radpdfprocessing%})
 * [Positioning Centered and Right-Aligned Text on the Same Line in PDF]({%slug aligning-centered-right-margin-text-pdf-telerik-document-processing%})
