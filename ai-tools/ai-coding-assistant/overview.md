@@ -16,7 +16,7 @@ position: 0
 
 The **AI Coding Assistant** is available through the following tool:
 
-* [MCP server]({%slug ai-mcp-server%})&mdash;A powerful tool for running complex or multi-step prompts that integrates with any MCP-enabled client.
+* [MCP server]({%slug ai-mcp-server-as-a-nuget%})&mdash;A powerful tool for running complex or multi-step prompts that integrates with any MCP-enabled client.
 
 ### Key Features
 
@@ -90,7 +90,7 @@ Access to the Telerik Document Processing AI Coding Assistant depends on your [T
 
 </p>
 
-> All Telerik AI tools share a single request limit for your Telerik account. For example, the [Telerik MCP server]({%slug ai-mcp-server%}) takes up from the same usage quota.
+> All Telerik AI tools share a single request limit for your Telerik account. For example, the [Telerik MCP server]({%slug ai-mcp-server-as-a-nuget%}) takes up from the same usage quota.
 > When using the Telerik Document Processing MCP server, one prompt may trigger several requests, depending on the prompt complexity.
 
 ## Privacy
@@ -107,5 +107,5 @@ Review the terms and privacy policy of your selected AI model and AI client.
  
 ## Next Steps
 
-* Configure the [Telerik Document Processing MCP Server]({%slug ai-mcp-server%})
+* Configure the [Telerik Document Processing MCP Server]({%slug ai-mcp-server-as-a-nuget%})
 * Explore the [Telerik Document Processing Prompt Library]({%slug ai-prompt-library%}).
