@@ -57,29 +57,7 @@ Starting with **2026 Q3**, when you open a password-protected archive and supply
 
 **Example 3: Handle an incorrect password**
 
-```csharp
-DecryptionSettings decryptionSettings = EncryptionSettings.CreateDecryptionSettings();
-decryptionSettings.PasswordRequired += (s, a) => a.Password = "wrongPassword";
-
-try
-{
-    using (Stream stream = File.Open("test.zip", FileMode.Open))
-    using (ZipArchive zipArchive = ZipArchive.Read(stream, null, null, decryptionSettings))
-    {
-        foreach (ZipArchiveEntry entry in zipArchive.Entries)
-        {
-            using (Stream entryStream = entry.Open())
-            {
-                entryStream.CopyTo(destinationStream);
-            }
-        }
-    }
-}
-catch (InvalidPasswordException ex)
-{
-    Console.WriteLine("Invalid password: " + ex.Message);
-}
-```
+<snippet id='libraries-zip-features-protectziparchive-handleinvalidpassword'/>
 
 ## See Also
 

@@ -198,39 +198,11 @@ Use this for pure scalar functions where applying the function to each element i
 
 **Example 6: Implementing a custom function with array lifting**
 
-```csharp
-public class DoubleFunction : FunctionBase
-{
-    public static readonly string FunctionName = "DOUBLE";
-    private static readonly FunctionInfo DoubleInfo;
-
-    static DoubleFunction()
-    {
-        string description = "Returns the number multiplied by two.";
-        IEnumerable<ArgumentInfo> requiredArguments = new[]
-        {
-            new ArgumentInfo("number", "The number to multiply by two.", ArgumentType.Number)
-        };
-        DoubleInfo = new FunctionInfo(FunctionName, FunctionCategory.MathTrig, description, requiredArguments);
-    }
-
-    public override string Name => FunctionName;
-    public override FunctionInfo FunctionInfo => DoubleInfo;
-    public override bool LiftsOverArrays => true;
-
-    protected override RadExpression EvaluateOverride(FunctionEvaluationContext<RadExpression> context)
-    {
-        double value = ((NumberExpression)context.Arguments[0]).Value;
-        return new NumberExpression(value * 2);
-    }
-}
-```
+<snippet id='libraries-spread-features-customfunctions-custom-array-lifting'/>
 
 Register the function as usual:
 
-```csharp
-FunctionManager.RegisterFunction(new DoubleFunction());
-```
+<snippet id='libraries-spread-features-customfunctions-register-custom-array-lifting'/>
 
 Entering `=DOUBLE({1;2;3})` in a cell now spills the values 2, 4, and 6 into three cells.
 
@@ -238,13 +210,7 @@ Entering `=DOUBLE({1;2;3})` in a cell now spills the values 2, 4, and 6 into thr
 
 Override `IsSpillingArgument(int argumentIndex, RadExpression argument)` to restrict which arguments can drive the function to produce a multi-element result. The default implementation returns `true` for arguments that can potentially produce a multi-element array (such as range references), and `false` for scalar constants. Override this when only specific argument positions should trigger element-wise evaluation:
 
-```csharp
-public override bool IsSpillingArgument(int argumentIndex, RadExpression argument)
-{
-    // Only the first argument (index 0) can cause the function to return an array.
-    return argumentIndex == 0;
-}
-```
+<snippet id='libraries-spread-features-customfunctions-isspillingargument'/>
 
 For the full description of spill behavior and the dynamic array model, see [Dynamic Array Formulas]({%slug radspreadprocessing-features-formulas-dynamic-array-formulas%}).
 

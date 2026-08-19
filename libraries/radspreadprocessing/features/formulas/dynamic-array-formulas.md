@@ -42,21 +42,7 @@ Every `Worksheet` exposes a `WorksheetSpillState` property that provides access 
 
 **Example 1: Enumerate all spill ranges in a worksheet**
 
-```csharp
-Workbook workbook = new Workbook();
-Worksheet worksheet = workbook.Worksheets.Add();
-
-// … set up formulas that produce spill ranges …
-
-WorksheetSpillState spillState = worksheet.WorksheetSpillState;
-
-foreach (SpillRange spillRange in spillState.SpillRanges)
-{
-    Console.WriteLine($"Anchor: {spillRange.AnchorIndex}");
-    Console.WriteLine($"State:  {spillRange.State}");
-    Console.WriteLine($"Range:  {spillRange.ActiveCellRange}");
-}
-```
+<snippet id='libraries-spreadprocessing-features-formulas-dyamicarrayformulas-enumerateworksheetspillranges'/>
 
 ## SpillRange and SpillRangeState
 
@@ -79,16 +65,7 @@ The `SpillRangeState` enumeration has four values:
 
 **Example 2: Check whether a specific cell is blocked**
 
-```csharp
-foreach (SpillRange spillRange in worksheet.WorksheetSpillState.SpillRanges)
-{
-    if (spillRange.State == SpillRangeState.Blocked)
-    {
-        CellIndex anchor = spillRange.AnchorIndex;
-        Console.WriteLine($"Spill blocked at {anchor.RowIndex}, {anchor.ColumnIndex}");
-    }
-}
-```
+<snippet id='libraries-spreadprocessing-features-formulas-dyamicarrayformulas-checkcellisblocked'/>
 
 ## Dynamic Array Operators
 
@@ -114,13 +91,7 @@ In the XLSX format, the spill range operator is stored as `_xlfn.ANCHORARRAY(inn
 
 **Example 3: Using the `#` operator in a formula**
 
-```csharp
-Worksheet worksheet = workbook.Worksheets[0];
-
-// Assume A1 contains a formula that spills into A1:A5.
-// Set B1 to sum the entire spill range.
-worksheet.Cells[0, 1].SetValue("=SUM(A1#)");
-```
+<snippet id='libraries-spreadprocessing-features-formulas-dyamicarrayformulas-usingspillrangeoperator'/>
 
 The following table summarizes both operators:
 
@@ -139,34 +110,13 @@ Override the `LiftsOverArrays` property and return `true` to make the `FunctionB
 
 Use this for pure scalar functions where applying the function pointwise matches the expected dynamic-array behavior. For example, a custom `DOUBLE` function that multiplies a number by two would naturally lift: `=DOUBLE({1;2;3})` would return `{2;4;6}` and spill into three cells.
 
-```csharp
-public class DoubleFunction : FunctionBase
-{
-    public override string Name => "DOUBLE";
-    public override bool LiftsOverArrays => true;
-
-    // … FunctionInfo and ArgumentConversionRules …
-
-    protected override RadExpression EvaluateOverride(FunctionEvaluationContext<RadExpression> context)
-    {
-        // Called with a single scalar value when LiftsOverArrays is true.
-        double value = ((NumberExpression)context.Arguments[0]).Value;
-        return new NumberExpression(value * 2);
-    }
-}
-```
+<snippet id='libraries-spreadprocessing-features-formulas-dyamicarrayformulas-liftsoverarrays'/>
 
 ### `IsSpillingArgument`
 
 Override `IsSpillingArgument(int argumentIndex, RadExpression argument)` to control which arguments can cause the function to produce a multi-element array result. The default implementation returns `true` for arguments that can potentially produce a multi-element array (such as range references), and `false` for scalar constants. Override this method when only specific arguments drive spilling and others should always be treated as scalars:
 
-```csharp
-public override bool IsSpillingArgument(int argumentIndex, RadExpression argument)
-{
-    // Only the first argument (index 0) can cause spilling.
-    return argumentIndex == 0;
-}
-```
+<snippet id='libraries-spread-features-customfunctions-isspillingargument'/>
 
 For a full guide on creating custom functions, see [Custom Functions]({%slug radspreadprocessing-features-formulas-custom-functions%}).
 
