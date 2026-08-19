@@ -5,7 +5,7 @@ description: Learn how to add and use the Telerik Document Processing MCP Server
 slug: ai-mcp-server
 tags: mcp, server, ai, dotnet, telerik, coding, assistant, npm
 published: True
-position: 2
+position: 3
 ---
 <style>
 img[alt$="><"] {
@@ -19,7 +19,9 @@ The Telerik Document Processing [MCP (Model Context Protocol) server](https://mo
 
 >warning Known Issue: Hanging tool calls in Visual Studio, see ([Troubleshooting]({%slug ai-mcp-server%}#troubleshooting)).
 
->tip The MCP server can be [installed also as a NuGet package]({%slug ai-mcp-server-as-a-nuget%}), instead of using **Node.js** and `npm` commands as shown below.
+>warning The npm package `@progress/telerik-dpl-mcp` is deprecated. For current installations and updates, migrate to the NuGet package [`Telerik.DPL.MCP`]({%slug ai-mcp-server-as-a-nuget%}).
+
+>tip The recommended way to install the MCP server is through the [NuGet package]({%slug ai-mcp-server-as-a-nuget%}). The Node.js/npm-based approach documented below is deprecated.
 
 ## Supported Libraries
 
@@ -77,6 +79,8 @@ Use the `dnx` script (.NET 10 or later only) or the `dotnet` CLI (.NET {{site.mi
 
 ### Using npm
 
+>warning **Deprecated**: The npm package `@progress/telerik-dpl-mcp` is deprecated. Migrate to the NuGet package [`Telerik.DPL.MCP`]({%slug ai-mcp-server-as-a-nuget%}) for the current installation and configuration flow.
+
 Use the documentation of your AI-powered MCP client to add the [Telerik Document Processing MCP server](https://www.npmjs.com/package/@progress/telerik-dpl-mcp) to a specific workspace or globally. You can see installation tips and examples for some popular MCP clients below.
 
 **npm command that installs the Telerik DPL MCP Server package**
@@ -101,13 +105,13 @@ To configure the Telerik DPL MCP server, configure the license and `mcp.json` as
 
 Use the settings in the following table to configure the Telerik DPL MCP server in the [`mcp.json` file](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) of your code editor. Select the correct value based on your development environment:
 
-| Setting Name | .NET 10 Value | .NET 8 / .NET 9 Value | Node.js Value |
-|---------|---------------|-----------------------|---------------|
-| Package Name | `"Telerik.DPL.MCP"` | `"Telerik.DPL.MCP"` | `"@progress/telerik-dpl-mcp"` |
-| Type | `"stdio"` | `"stdio"` | `"stdio"` |
-| Command | `"dnx"` | `"dotnet"` | `"npx"` |
-| Arguments | `"Telerik.DPL.MCP", "--yes"` | `"tool", "run", "telerik-dpl-mcp"` | `"-y"` |
-| Server Name | `"telerik-dpl-assistant"` | `"telerik-dpl-assistant"` | `"telerik-dpl-assistant"` |
+| Setting Name | .NET 10 Value | .NET 8 / .NET 9 Value | Node.js Value (Deprecated) |
+|---------|---------------|-----------------------|----------------------------|
+| Package Name | `"Telerik.DPL.MCP"` | `"Telerik.DPL.MCP"` | `"@progress/telerik-dpl-mcp"` *(deprecated)* |
+| Type | `"stdio"` | `"stdio"` | `"stdio"` *(deprecated)* |
+| Command | `"dnx"` | `"dotnet"` | `"npx"` *(deprecated)* |
+| Arguments | `"Telerik.DPL.MCP", "--yes"` | `"tool", "run", "telerik-dpl-mcp"` | `"-y"` *(deprecated)* |
+| Server Name | `"telerik-dpl-assistant"` | `"telerik-dpl-assistant"` | `"telerik-dpl-assistant"` *(deprecated)* |
 
 ### License Configuration
 
@@ -237,6 +241,8 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
 
   * In Node.js:
 
+    >warning **Deprecated**: Node.js/npm-based setup uses deprecated package `@progress/telerik-dpl-mcp`. Use the NuGet-based setup from [Telerik DPL MCP Server as a NuGet Package]({%slug ai-mcp-server-as-a-nuget%}) for new and updated configurations.
+
     **Visual Studio `.mcp.json` example for a Node.js Telerik DPL MCP Server setup**
 
     ```json
@@ -320,6 +326,8 @@ The basic setup in Visual Studio Code involves the following steps:
     ```
 
   * In Node.js:
+
+    >warning **Deprecated**: Node.js/npm-based setup uses deprecated package `@progress/telerik-dpl-mcp`. Use the NuGet-based setup from [Telerik DPL MCP Server as a NuGet Package]({%slug ai-mcp-server-as-a-nuget%}) for new and updated configurations.
 
     **Visual Studio Code `mcp.json` example for a Node.js Telerik DPL MCP Server setup**
 
@@ -409,6 +417,8 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 
 * In Node.js:
 
+    >warning **Deprecated**: Node.js/npm-based setup uses deprecated package `@progress/telerik-dpl-mcp`. Use the NuGet-based setup from [Telerik DPL MCP Server as a NuGet Package]({%slug ai-mcp-server-as-a-nuget%}) for new and updated configurations.
+
     **Cursor `mcp.json` example for a Node.js Telerik DPL MCP Server setup**
 
     ```json
@@ -429,7 +439,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
     }
     ```
 
-## Usage
+## Usages
 
 By default, MCP clients do not call MCP tools in a deterministic way. Some MCP clients such as VS Code allow you to explicitly reference the desired MCP tool in your prompt.
 
