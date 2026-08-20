@@ -26,7 +26,7 @@ Before you sign a document, make sure you have the required inputs and document 
 
 ### Load a PKCS#12 Certificate from a File
 
-In .NET 10, use the [`X509CertificateLoader.LoadPkcs12FromFile`](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificateloader.loadpkcs12fromfile?view=net-10.0) method to load a PKCS#12 (`.pfx` or `.p12`) certificate from disk. The method returns an `X509Certificate2` object that you can pass to the `Signature` constructor:
+In .NET 9 and later, use the [`X509CertificateLoader.LoadPkcs12FromFile`](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificateloader.loadpkcs12fromfile?view=net-10.0) method to load a PKCS#12 (`.pfx` or `.p12`) certificate from disk. The method returns an `X509Certificate2` object that you can pass to the `Signature` constructor:
 
 ```csharp
 using System.Security.Cryptography.X509Certificates;
