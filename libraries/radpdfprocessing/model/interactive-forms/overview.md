@@ -30,6 +30,10 @@ Starting with R2 2021, you can flatten the form fields. Flattening removes the f
 
 Widget annotations visualize the form fields data on the PDF pages. Each field can have several widget annotations that display its information on the same or on several PDF pages. Each widget can specify its dynamic appearance differently by using different properties for its color, geometry, and text representation.
 
+## XFA Forms
+
+XFA packets are separate from AcroForm fields. RadPdfProcessing can import and preserve XFA packet data; see [XFA forms and export limitations]({%slug radpdfprocessing-features-interactive-forms-xfa%}) for packet inspection, `ShouldExportXfa`, and the limits of XFA authoring support.
+
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
