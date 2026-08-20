@@ -212,6 +212,35 @@ Override `IsSpillingArgument(int argumentIndex, RadExpression argument)` to rest
 
 <snippet id='libraries-spread-features-customfunctions-isspillingargument'/>
 
+### Access the first range in a custom function
+
+To access the first range, use the public `CellReferenceRanges` collection and convert the first `CellReferenceRange` to a `CellRange`:
+
+```csharp
+CellReferenceRangeExpression referenceExpression = context.Arguments[0] as CellReferenceRangeExpression;
+if (referenceExpression == null || referenceExpression.CellReferenceRanges.Count == 0)
+{
+    return ErrorExpressions.ValueError;
+}
+
+CellReferenceRange firstRange = referenceExpression.CellReferenceRanges[0];
+CellRange cellRange = firstRange.ToCellRange();
+```
+
+If you need the evaluated values instead of the range coordinates, evaluate the expression and inspect the first nested `ArrayExpression`:
+
+```csharp
+ArrayExpression rangesValue = referenceExpression.GetValue() as ArrayExpression;
+if (rangesValue == null || rangesValue.RowCount == 0 || rangesValue.ColumnCount == 0)
+{
+    return ErrorExpressions.ValueError;
+}
+
+ArrayExpression firstRangeArray = rangesValue[0, 0] as ArrayExpression;
+```
+
+`ArrayExpression` exposes `RowCount`, `ColumnCount`, and an indexer for reading the evaluated expressions.
+
 For the full description of spill behavior and the dynamic array model, see [Dynamic Array Formulas]({%slug radspreadprocessing-features-formulas-dynamic-array-formulas%}).
 
 ## See Also

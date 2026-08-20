@@ -1,15 +1,17 @@
 ---
 title: Overview
-description: The digital signature feature in RadPdfProcessing enables you to sign and validate PDF documents using X509 certificates and signature fields.
+description: The digital signature feature in RadPdfProcessing enables you to sign and validate PDF documents using X509 certificates, PKI certificate chains, and signature fields.
 page_title: Digital Signature - Overview
 slug: radpdfprocessing-features-digital-signature
-tags: digital, signature, pdf, signing, validation, radpdfprocessing, x509, certificates, overview
+tags: digital, signature, pdf, signing, validation, radpdfprocessing, x509, certificates, pki, public-key-infrastructure, overview
 position: 0
 ---
 
 # Overview
 
 The **digital signature** feature enables you to sign and validate a PDF document. A signature confirms that the document content originated from the signer and has not been modified. A signed document is considered valid when it has not been changed after signing, and all of its certificates have a valid trusted root certificate.
+
+In a **Public Key Infrastructure (PKI)** workflow, RadPdfProcessing uses X.509 certificates, certificate chains, trusted roots, and revocation checks for PDF signing and validation. Certificate issuance and certificate-authority management are outside the library's scope.
 
 <a name="signing-a-document"><a/>
 
