@@ -1,7 +1,7 @@
 ---
-title: Accessibility Conformance Report 1
+title: Accessibility
 description: Accessibility conformance information for Telerik Document Processing Libraries across PDF, DOCX, XLSX, RTF, HTML, and ZIP output.
-page_title: Accessibility Conformance Report 2
+page_title: Accessibility Conformance Report
 slug: accessibility-conformance-report
 tags: accessibility, vpat, wcag, section-508, en-301-549, document-processing
 published: True
