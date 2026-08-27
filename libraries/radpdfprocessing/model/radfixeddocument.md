@@ -103,12 +103,6 @@ You can merge PDF documents with the `Merge()` method of `RadFixedDocument`. Thi
 
 The code from **Example 5** merges the document created in [**Example 1**](#example1) with another `RadFixedDocument`.
 
-### Fixed Content and Paragraphs
-
-`RadFixedDocument` does not expose a paragraph collection. A fixed document contains [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) instances, and each page exposes a `Content` collection of positioned content elements such as [TextFragment]({%slug radpdfprocessing-model-textfragment%}) objects. To inspect text in a fixed document, enumerate the pages and their content elements.
-
-`TextFragment` represents a fixed-layout text run. It does not retain flow paragraph boundaries, heading styles, or `StyleId` values. If you need paragraph or heading metadata, retain it while creating the document with [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}), before the flow content is rendered into fixed page content. For text that already exists in a PDF, use the [search API]({%slug radpdfprocessing-features-search%}) or public text-position APIs to locate known text rather than looking for `Paragraph` objects.
-
 ## Document Information
 
 `RadFixedDocument` exposes a `DocumentInfo` property of type [RadFixedDocumentInfo]({%slug radpdfprocessing-model-radfixeddocumentinfo%}), intended to hold additional information about the document.
