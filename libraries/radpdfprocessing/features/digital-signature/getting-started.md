@@ -24,6 +24,14 @@ Before you sign a document, make sure you have the required inputs and document 
 3. Choose whether the signature will be visible or invisible in the document.
 4. Prepare a stream that supports both reading and writing for the export operation.
 
+### Load a PKCS#12 Certificate from a File
+
+In .NET 9 and later, use the [`X509CertificateLoader.LoadPkcs12FromFile`](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificateloader.loadpkcs12fromfile?view=net-10.0) method to load a PKCS#12 (`.pfx` or `.p12`) certificate from disk. The method returns an `X509Certificate2` object that you can pass to the `Signature` constructor:
+
+<snippet id='libraries-pdf-features-digital-signature-gettingstarted-pkcs12-signing'/>
+
+The certificate must contain the private key required for signing. For target frameworks other than .NET 10, use a certificate-loading approach supported by the target framework to create the required `X509Certificate2` instance.
+
 ## Signing a Document
 
 Use this workflow to sign a PDF document:
