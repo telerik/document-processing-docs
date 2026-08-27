@@ -28,13 +28,7 @@ Before you sign a document, make sure you have the required inputs and document 
 
 In .NET 10, use the [`X509CertificateLoader.LoadPkcs12FromFile`](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.x509certificates.x509certificateloader.loadpkcs12fromfile?view=net-10.0) method to load a PKCS#12 (`.pfx` or `.p12`) certificate from disk. The method returns an `X509Certificate2` object that you can pass to the `Signature` constructor:
 
-```csharp
-using System.Security.Cryptography.X509Certificates;
-using Telerik.Documents.Fixed.Model.DigitalSignatures;
-
-X509Certificate2 certificate = X509CertificateLoader.LoadPkcs12FromFile("certificate.pfx", "password");
-Signature signature = new Signature(certificate);
-```
+<snippet id='libraries-pdf-features-digital-signature-gettingstarted-pkcs12-signing'/>
 
 The certificate must contain the private key required for signing. For target frameworks other than .NET 10, use a certificate-loading approach supported by the target framework to create the required `X509Certificate2` instance.
 

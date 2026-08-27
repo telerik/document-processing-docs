@@ -250,28 +250,11 @@ public override bool IsSpillingArgument(int argumentIndex, RadExpression argumen
 
 To access the first range, use the public `CellReferenceRanges` collection and convert the first `CellReferenceRange` to a `CellRange`:
 
-```csharp
-CellReferenceRangeExpression referenceExpression = context.Arguments[0] as CellReferenceRangeExpression;
-if (referenceExpression == null || referenceExpression.CellReferenceRanges.Count == 0)
-{
-    return ErrorExpressions.ValueError;
-}
-
-CellReferenceRange firstRange = referenceExpression.CellReferenceRanges[0];
-CellRange cellRange = firstRange.ToCellRange();
-```
+<snippet id='libraries-spread-features-customfunctions-access-first-range'/>
 
 If you need the evaluated values instead of the range coordinates, evaluate the expression and inspect the first nested `ArrayExpression`:
 
-```csharp
-ArrayExpression rangesValue = referenceExpression.GetValue() as ArrayExpression;
-if (rangesValue == null || rangesValue.RowCount == 0 || rangesValue.ColumnCount == 0)
-{
-    return ErrorExpressions.ValueError;
-}
-
-ArrayExpression firstRangeArray = rangesValue[0, 0] as ArrayExpression;
-```
+<snippet id='libraries-spread-features-customfunctions-get-evaluated-value'/>
 
 `ArrayExpression` exposes `RowCount`, `ColumnCount`, and an indexer for reading the evaluated expressions.
 
