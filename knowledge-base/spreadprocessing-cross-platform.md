@@ -3,7 +3,7 @@ title: How to resolve SpreadProcessing Cross-Platform Differences Due To Limitat
 description: Resolve layout, font, and image differences when you process Excel files with RadSpreadProcessing and/or export to PDF with RadPdfProcessing in Cross-Platform Apps.
 type: troubleshooting
 page_title: Resolve Cross-Platform Excel and PDF Export Differences | Telerik Document Processing
-slug: spreadprocessing-cross-platform
+slug: spreadprocessing-cross-platform-requirements
 tags: spreadprocessing, pdfprocessing, crossplatform, xlsx, pdf, fonts, textmeasuring, images, pagesetup, export
 res_type: kb
 ---
@@ -49,7 +49,7 @@ SpreadExtensibilityManager.TextMeasurer = fixedTextMeasurer;
 
 Text measuring affects both XLSX-only and XLSX to PDF workflows.
 
-### Configure Fonts for XLSX to PDF Export
+### Configure Fonts for Both Scenarios
 
 Set a [`FontsProviderBase`]({%slug radpdfprocessing-cross-platform-fonts%}) implementation to [`FixedExtensibilityManager`]({%slug radpdfprocessing-cross-platform%}) so the exporter can read and embed document fonts:
 
@@ -60,7 +60,7 @@ FixedExtensibilityManager.FontsProvider = fontsProvider;
 
 If fonts are not resolved, the PDF export pipeline falls back to standard PDF fonts and the result differs from the original XLSX file.
 
->important When you use `SpreadFixedTextMeasurer` for PDF export, also configure `FixedExtensibilityManager.FontsProvider` to avoid font fallback.
+>important When you use `SpreadFixedTextMeasurer`, ensure that `FixedExtensibilityManager.FontsProvider` is configured. The `SpreadFixedTextMeasurer` performs calcualtions against the used fonts, so if the correct fonts are not provided it falls back to a deafult font and resutls in icorrect calculations and measurements.
 
 ### Configure Image Processing for XLSX to PDF Export
 
