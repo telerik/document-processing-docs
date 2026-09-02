@@ -30,7 +30,7 @@ Use `PdfFormatProvider` to inspect the number, names, and byte sizes of the XFA 
 
 ## Preserve XFA packets during export
 
-Set `PdfExportSettings.ShouldExportXfa` to `true` before exporting when the output PDF must include the imported XFA packets. The property defaults to `false`, so the default export omits XFA content.
+Set `PdfExportSettings.ShouldExportXfa` to `true` before exporting when the output PDF must include the imported XFA packets. The property defaults to `false`, so the default export strips XFA content.
 
 <snippet id='libraries-pdf-model-interactiveforms-xfa-forms-preserve'/>
 
@@ -38,7 +38,7 @@ Set `PdfExportSettings.ShouldExportXfa` to `true` before exporting when the outp
 
 | `ShouldExportXfa` value | Imported XFA packets | Export behavior |
 |---|---|---|
-| `false` (default) | Present | XFA packets are omitted. AcroForm fields are exported when present. |
+| `false` (default) | Present | XFA packets are stripped. AcroForm fields are exported when present. |
 | `true` | Present | XFA packets are included in the exported PDF. AcroForm fields are also exported when present. |
 | `false` or `true` | None | No XFA content is exported. |
 
@@ -48,7 +48,7 @@ The `XfaCollection` provides limited packet-level access for imported XFA data. 
 
 <snippet id='libraries-pdf-model-interactiveforms-xfa-forms-work'/>
 
-The public API does not provide methods to create a new XFA packet, replace a packet as XML, or edit XFA data through semantic objects. Use a dedicated XFA authoring or processing tool when your workflow requires changes to XFA templates, datasets, scripts, calculations, data binding, or dynamic form layout.
+The public API does not provide methods to create a new XFA packet, replace a packet as XML, or edit XFA data through semantic objects. 
 
 ## Important limitations and compliance notes
 
