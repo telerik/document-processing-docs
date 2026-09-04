@@ -55,6 +55,33 @@ The `TextSearchOptions` class exposes the following properties for setting the s
 | `CaseSensitive` | Gets or sets a value indicating whether the search is case sensitive. |
 | `WholeWordsOnly` | Gets or sets a value indicating whether only whole words are matched. |
 
+### Regular Expression and Multi-Word Search
+
+To search for patterns or multi-word phrases, set `UseRegularExpression = true` on `TextSearchOptions`. When using regular expressions, keep `WholeWordsOnly = false` so that internal delimiter wrappers do not conflict with your pattern.
+
+During text extraction:
+* Words on the same line are separated by a single space (`" "`).
+* Line breaks within the page are normalized to a single space (`" "`) using `TextSearchOptions.TextSearchLinesSeparator`.
+* Text search is evaluated per page; phrases that span across page boundaries are not matched.
+* In PDF documents, spaces are determined by glyph positioning (`Delta = 1.15`). If text fragments lack sufficient visual displacement, words may be extracted contiguously.
+
+```csharp
+TextSearch search = new TextSearch(document);
+TextSearchOptions options = new TextSearchOptions
+{
+    UseRegularExpression = true,
+    CaseSensitive = false,
+    WholeWordsOnly = false
+};
+
+// Matches phrases starting with "lorem" followed by a word starting with "a" across spaces or line wraps within the page
+IEnumerable<SearchResult> results = search.FindAll(@"lorem\s+a\w*", options);
+foreach (SearchResult result in results)
+{
+    Console.WriteLine($"Found on page {result.GetResultPage().PageNumber}: {result.Result}");
+}
+```
+
 ## See Also
 
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
