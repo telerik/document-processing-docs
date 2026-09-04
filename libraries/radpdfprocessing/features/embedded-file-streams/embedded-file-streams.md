@@ -50,11 +50,57 @@ RadPdfProcessing allows you to embed file streams into the document. The content
 |Minimum Version|Q1 2026|
 |----|----|
 
-RadPdfProcessing allows you to set the correct MIME type when embedding the file into the PDF. This is especially important for standards like PDF/A-3 and Factur-X, which require strict metadata and MIME type declarations for embedded files.
+RadPdfProcessing allows you to set the MIME type when embedding a file into a PDF document via the `MimeType` property of `EmbeddedFile`. The `MimeType` property accepts any standard IANA MIME type string. If not explicitly specified, the default value is `"application/octet-stream"`.
+
+Declaring the correct MIME type along with the proper file extension in the `Name` property ensures that PDF viewers (such as Adobe Acrobat) correctly identify the attachment format, associate it with the right host application, and meet requirements for standards like PDF/A-3 and Factur-X.
 
 **Set the MIME Type**
 
 <snippet id='pdf-set-mime-type'/>
+
+#### Common Supported MIME Types
+
+The following table lists common MIME types used when embedding attachments:
+
+| File Format | File Extension | MIME Type |
+|---|---|---|
+| PDF Document | `.pdf` | `application/pdf` |
+| OpenXML Word Document | `.docx` | `application/vnd.openxmlformats-officedocument.wordprocessingml.document` |
+| Microsoft Word 97–2003 | `.doc` | `application/msword` |
+| OpenXML Excel Spreadsheet | `.xlsx` | `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet` |
+| Microsoft Excel 97–2003 | `.xls` | `application/vnd.ms-excel` |
+| Plain Text | `.txt` | `text/plain` |
+| XML Document | `.xml` | `application/xml` or `text/xml` |
+| CSV Spreadsheet | `.csv` | `text/csv` |
+| PNG Image | `.png` | `image/png` |
+| JPEG Image | `.jpg`, `.jpeg` | `image/jpeg` |
+| Generic Binary Data (Default) | *any* | `application/octet-stream` |
+
+>important Notice the distinction between Office Open XML formats and legacy binary formats:
+>* `.docx` uses `application/vnd.openxmlformats-officedocument.wordprocessingml.document`, while legacy `.doc` uses `application/msword`.
+>* `.xlsx` uses `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`, while legacy `.xls` uses `application/vnd.ms-excel`.
+>Assigning `application/msword` to a `.docx` file or omitting the extension in the `Name` property may cause PDF viewers to fail when launching the attachment.
+
+**Example: Embedding Files with Different MIME Types**
+
+```csharp
+RadFixedDocument document = new RadFixedDocument();
+
+// Embed a PDF file
+byte[] pdfBytes = File.ReadAllBytes("sample.pdf");
+EmbeddedFile pdfAttachment = document.EmbeddedFiles.Add("sample.pdf", pdfBytes);
+pdfAttachment.MimeType = "application/pdf";
+
+// Embed a DOCX file
+byte[] docxBytes = File.ReadAllBytes("report.docx");
+EmbeddedFile docxAttachment = document.EmbeddedFiles.Add("report.docx", docxBytes);
+docxAttachment.MimeType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+
+// Embed a TXT file
+byte[] txtBytes = File.ReadAllBytes("notes.txt");
+EmbeddedFile txtAttachment = document.EmbeddedFiles.Add("notes.txt", txtBytes);
+txtAttachment.MimeType = "text/plain";
+```
 
 ### Creating an Embedded Electronic (ZUGFeRD) Invoice
 
