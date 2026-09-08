@@ -97,6 +97,8 @@ Several table properties affect measurement, spacing, and rendering behavior:
 	* **Collapse**: The distance between borders is measured from the middle lines of the borders.
 	* **Separate**: The distance between borders is measured from the outer border contour.
 
+* **Row and Line Spacing**: You can explicitly set individual row heights via the `Height` property of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) using `HeightType` (`Auto`, `Exact`, `AtLeast`). Within cell blocks, vertical line spacing can be configured using `LineSpacing` and `LineSpacingType` on [Block]({%slug radpdfprocessing-editing-block%}).
+
 The following snippets show how border calculations change when you switch the `BorderCollapse` option. The first snippet creates an empty table and applies default cell padding and a red table border with thickness `10`.
 
 **Create a Table with a Red Border**
@@ -216,6 +218,9 @@ Continue with the article that matches your next task:
 
 ## See Also
 
+* [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
+* [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
+* [Block]({%slug radpdfprocessing-editing-block%})
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
 * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
 * [How to Generate a Table with Images with PdfProcessing]({%slug generate-table-with-images-pdf-processing%})

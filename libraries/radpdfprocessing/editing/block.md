@@ -105,10 +105,10 @@ The `Block` class has properties and methods that affect how it is rendered:
 * `SpacingAfter`: Represents the spacing after.
                 
 
-* `LineSpacing`: The spacing between the lines.
+* `LineSpacing`: The spacing between the lines. See [Line Spacing and Line Spacing Type](#line-spacing-and-line-spacing-type) for details.
 
 
-* `LineSpacingType`: Specifies how to interpret the line spacing.
+* `LineSpacingType`: Specifies how to interpret the line spacing (`HeightType.Auto`, `HeightType.Exact`, or `HeightType.AtLeast`).
                 
 
 * `FirstLineIndent`: The indent for the first line.
@@ -166,6 +166,34 @@ The `Block` class has properties and methods that affect how it is rendered:
 <snippet id='pdf-block-change-properties'/>
 
 ![RadPdfProcessing Block Properties Result](images/radpdfprocessing-editing-block_5_result.png)
+
+### Line Spacing and Line Spacing Type
+
+Use `LineSpacing` and `LineSpacingType` to control the vertical space between lines of text within a `Block`:
+
+* `LineSpacing`: Numeric value representing either a line-height multiplier or an exact/minimum height in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs), depending on the `LineSpacingType`. The default value is `1.0`.
+* `LineSpacingType`: Specifies how to calculate the line spacing using the `HeightType` enumeration:
+  * `HeightType.Auto`: (Default) Line height is automatically determined based on the font metrics. `LineSpacing` acts as a multiplier (for example, `1.0` is standard single spacing, `1.5` is 1.5x line height).
+  * `HeightType.Exact`: Forces the line height to be an exact numeric value specified by `LineSpacing` in DIPs, regardless of font metrics. This can be used to achieve compact vertical spacing or align text to fixed-height grid lines and table rows.
+  * `HeightType.AtLeast`: Sets a minimum line height in DIPs. The line height is at least this value, but expands if larger content requires it.
+
+The following example configures exact line spacing on a `Block`:
+
+```csharp
+Block high_block = new Block();
+high_block.LineSpacingType = HeightType.Exact;
+high_block.LineSpacing = 44;
+high_block.BackgroundColor = new RgbColor(100, 255, 0, 0);
+high_block.InsertText("Sample text with exact line height.");
+
+Block short_block = new Block();
+short_block.LineSpacingType = HeightType.Exact;
+short_block.LineSpacing = 14;
+short_block.BackgroundColor = new RgbColor(100, 125, 125, 0);
+short_block.InsertText("Another sample text with exact line height.");
+```
+
+![RadPdfProcessing Block exact line spacing comparison](images/block-line-spacing.png)
 
 ## Drawing a Block
 
