@@ -3,7 +3,7 @@ title: Using DataTableFormatProvider
 page_title: Using DataTableFormatProvider
 description: Learn how to convert a DataTable to a worksheet and export a worksheet to a DataTable by using the DataTableFormatProvider in RadSpreadProcessing.
 slug: radspreadprocessing-formats-and-conversion-using-data-table-format-provider
-tags: data, table, spreadsheet, radspreadprocessing, worksheet, conversion, import, export, provider, spread
+tags: data, table, spreadsheet, radspreadprocessing, worksheet, conversion, import, export, provider, spread, list, ienumerable, manual
 published: True
 position: 1
 ---
@@ -41,6 +41,8 @@ The following example demonstrates how to export an existing worksheet to a `Dat
 ## See Also
 
 * [Data Table Format Provider Settings]({%slug radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings%})
+* [Populate Worksheet from DataTable Without DataTableFormatProvider]({%slug populate-worksheet-from-datatable-without-datatableformatprovider%})
+* [Generating Excel Documents from IEnumerable Collections]({%slug generate-excel-files-from-ienumerable-collections%})
 * [Converting PDF Table Content to DataTable]({%slug convert-pdf-table-to-datatable%})
 * [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Processing Decimal Columns as Double when Importing a DataTable into a Workbook using RadSpreadProcessing]({%slug processing-decimal-columns-as-double-from-datatable%})
