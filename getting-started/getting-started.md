@@ -10,15 +10,15 @@ position: 0
 
 # Getting Started with Telerik Document Processing
 
-This article explains how to install **Telerik Document Processing**, choose the correct package family, and add the required NuGet packages for common .NET application types. Telerik Document Processing includes cross-platform libraries for importing, exporting, and working with different [supported document formats]({%slug introduction%}#supported-formats) and archive files. The required references come with the installation files of several Telerik suites and are also available in the internal builds of the same Telerik suites. Learn which products include Telerik Document Processing in the [Telerik product bundles](https://www.telerik.com/purchase.aspx?filter=web).
+This article explains how to install **Telerik Document Processing**, choose the correct package family, and add the required NuGet packages for common .NET application types. Telerik Document Processing includes cross-platform libraries for importing, exporting, and working with different [supported document formats]({%slug introduction%}#supported-formats) and archive files. You can get the required references through several Telerik product bundles or install them directly from NuGet. Learn which products include Telerik Document Processing in the [Telerik product bundles](https://www.telerik.com/purchase.aspx?filter=web).
 
 >tip More information about the suites that include Telerik Document Processing and how to install them is available in the [Telerik suite installation guide]({%slug installation-installing-on-your-computer%}).
 
 ## Install the Base Packages
 
-For new development, install Telerik Document Processing as NuGet packages. As of Q2 2026, the recommended source is NuGet.org, so you usually do not need to configure an additional feed. For the full installation options, see the [NuGet package installation guide]({%slug installation-nuget-packages%}).
+For new development, install Telerik Document Processing as NuGet packages. As of Q2 2026, the recommended source is NuGet.org, so you usually do not need to configure an additional feed. For full installation options, see the [NuGet package installation guide]({%slug installation-nuget-packages%}).
 
-Start by adding the package references to the project file of the app that will generate or process documents. Place the references inside an `ItemGroup` in the `.csproj` file.
+Start by adding package references to the project file of the app that will generate or process documents. Place the references inside an `ItemGroup` in the `.csproj` file.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -34,13 +34,13 @@ Start by adding the package references to the project file of the app that will 
 </Project>
 ```
 
->important Install **Telerik.Licensing** in the same project where you add the Telerik Document Processing packages. Keep all `Telerik.Documents.*` or all `Telerik.Windows.Documents.*` references on the same release version. Understand the difference between the [cross-platform and Windows package namespaces]({%slug telerik-windows-documents-vs-telerik-documents-namespace%}).
+>important Install **Telerik.Licensing** in the same project where you add the Telerik Document Processing packages. Keep all `Telerik.Documents.*` or all `Telerik.Windows.Documents.*` references on the same release version. Review the difference between the [cross-platform and Windows package namespaces]({%slug telerik-windows-documents-vs-telerik-documents-namespace%}).
 
 You can find the full package inventory in the [available NuGet packages reference]({%slug available-nuget-packages%}).
 
 ## Choose the Correct Package Family
 
-Use the following matrix to choose the correct package family for your application type. Each row identifies the recommended package namespace, the minimum starting packages, and the versioning rule for that scenario.
+Use the following matrix to choose the correct package family for your application type. Each row shows the recommended package namespace, the minimum starting packages, and the versioning rule for that scenario.
 
 | Scenario | Package family | Required starting packages | Version guidance | Notes |
 | --- | --- | --- | --- | --- |
@@ -50,7 +50,7 @@ Use the following matrix to choose the correct package family for your applicati
 
 ### Package Selection by Library
 
-Start with `Telerik.Licensing` and the matching `Core` package, then add the library-specific package for the document type you work with.
+Start with `Telerik.Licensing` and the matching `Core` package, then add the library-specific package for the document type you use.
 
 | You want to... | Cross-platform / Blazor / modern .NET | .NET Framework / Windows |
 | --- | --- | --- |
@@ -112,7 +112,7 @@ dotnet add package Telerik.Documents.Core --version 2026.1.210
 dotnet add package Telerik.Documents.Fixed --version 2026.1.210
 ```
 
-If the Blazor WebAssembly app exports PDF content that contains non-JPEG images or uses image quality different from `High`, also add the image-processing dependencies described in the [cross-platform PDF image support guide]({%slug radpdfprocessing-cross-platform-images%}). For Blazor WebAssembly, this includes `Telerik.Documents.ImageUtils`, `SkiaSharp.Views.Blazor`, and `wasm-tools`.
+If the Blazor WebAssembly app exports PDF content that contains non-JPEG images or uses image quality other than `High`, also add the image-processing dependencies described in the [cross-platform PDF image support guide]({%slug radpdfprocessing-cross-platform-images%}). For Blazor WebAssembly, this includes `Telerik.Documents.ImageUtils`, `SkiaSharp.Views.Blazor`, and `wasm-tools`.
 
 ### .NET Framework: Create DOCX and Export to PDF
 
@@ -152,7 +152,7 @@ Use this table to diagnose the most common Telerik Document Processing installat
 
 ## Next Steps by Scenario
 
-Choose the next article based on the document type or application type you are working with.
+Choose the next article based on the document type or application type you are using.
 
 * **Blazor, ASP.NET Core, console, services**: Start with the [Document Processing first steps tutorial]({%slug getting-started-first-steps%}) and use the `Telerik.Documents.*` package family.
 

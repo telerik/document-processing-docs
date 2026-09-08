@@ -24,7 +24,7 @@ img[alt$="><"] {
 
 # Welcome to Telerik Document Processing Libraries
 
-**Telerik Document Processing** is a bundle of **UI-independent**, *cross-platform* libraries that let you process the most commonly used flow, fixed, and spreadsheet document formats for web and desktop. The Document Processing libraries allow you to create, import, modify, and export documents without relying on external dependencies like Adobe Acrobat or Microsoft Office.
+**Telerik Document Processing** is a bundle of **UI-independent**, *cross-platform* libraries that let you process common flow, fixed, and spreadsheet document formats in desktop, web, mobile, and cloud applications. The libraries let you create, import, modify, and export documents without requiring Adobe Acrobat or Microsoft Office.
 
 {% if site.has_cta_panels == true %}
 {% include cta-panel-introduction.html %}
@@ -32,7 +32,7 @@ img[alt$="><"] {
 
 ## Libraries
 
-Telerik Document Processing features the following libraries:
+Telerik Document Processing includes the following libraries and AI tooling:
 
 <article-card-container>
   <article-card
@@ -41,7 +41,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/pdfprocessing-banner.png"
         title="RadPdfProcessing"
         subTitle="Document Processing"
-        description="Enables the creation, edit and export of PDF files in your .NET applications. The library supports interactive forms and form filling, as well as digital signatures.">
+        description="Enables the creation, editing, and export of PDF files in your .NET applications. The library supports interactive forms, form filling, and digital signatures.">
   </article-card>
   <article-card
         href="slug://radspreadprocessing-overview"
@@ -49,7 +49,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/spreadprocessing-banner.jpg"
         title="RadSpreadProcessing"
         subTitle="Document Processing"
-        description="Enables you to work with spreadsheet documents – create ones from scratch, modify existing documents or convert between the most common spreadsheet formats.">
+        description="Enables you to work with spreadsheet documents, create them from scratch, modify existing documents, or convert between the most common spreadsheet formats.">
   </article-card>
   <article-card
         href="slug://radspreadstreamprocessing-overview"
@@ -65,7 +65,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/wordsprocessing-banner.png"
         title="RadWordsProcessing"
         subTitle="Document Processing"
-        description="Allows Word-like document manipulations in .NET applications and enables end-users to create, modify and export documents to various formats.">
+        description="Enables Word-like document processing in .NET applications and lets end users create, modify, and export documents to various formats.">
   </article-card>
   <article-card
         href="slug://radziplibrary-overview"
@@ -73,7 +73,7 @@ Telerik Document Processing features the following libraries:
         darkSrc="./images/ziplibrary-banner.png"
         title="RadZipLibrary"
         subTitle="Document Processing"
-        description="Can compress data like images, DOCX, PDF, or any other type of files and send them over the wire. Thus, you will achieve fast and secure transactions.">
+        description="Lets you compress data such as images, DOCX, PDF, and other file types for fast, secure transfer and storage.">
   </article-card>
     <article-card
         href="slug://agent-tools-overview"
@@ -92,29 +92,29 @@ Telerik Document Processing features the following libraries:
 
 |Feature|Description|
 |----|----|
-|**UI-Independent**|The libraries are UI-Independent and cover all .NET technologies, from desktop and web to mobile, and can be deployed in client, server-side and cloud apps.|
-|**No Need for Third-Party Software - No Server Deployment Fees**|Enable document manipulation within your application without relying on third-party software such as Microsoft Office or Adobe Acrobat Reader.|
+|**UI-Independent**|The libraries are UI-independent and support .NET applications across desktop, web, mobile, client-side, server-side, and cloud environments.|
+|**No Third-Party Software or Server Deployment Fees**|Process documents in your application without third-party software such as Microsoft Office or Adobe Acrobat Reader.|
 |**Convenient API**|Add document processing capabilities to your applications quickly by using the convenient APIs. Create, edit, and convert documents with a few lines of code.|
-|**Performance and Speed**|The libraries are decoupled from UI and deliver great performance in different cases, especially when you work with large Excel files.|
+|**Performance and Speed**|The libraries are decoupled from UI and deliver strong performance, especially when you work with large Excel files.|
 |**Any Document. Any Business.**|Telerik Document Processing is suitable for various business cases and scenarios where document creation or manipulation is required.|
-|**Support for a Variety of File Formats**|Telerik Document Processing includes five libraries for manipulating <a href="https://en.wikipedia.org/wiki/Office_Open_XML" target="_blank" rel="noopener noreferrer" title="https://en.wikipedia.org/wiki/Office_Open_XML">Office Open XML document formats</a> and PDF documents in your application.|
+|**Support for a Variety of File Formats**|Telerik Document Processing includes libraries for working with <a href="https://en.wikipedia.org/wiki/Office_Open_XML" target="_blank" rel="noopener noreferrer" title="https://en.wikipedia.org/wiki/Office_Open_XML">Office Open XML document formats</a>, PDF documents, and ZIP archives in your application.|
 |**Timeout Mechanism**|The [document import and export timeout mechanism]({%slug timeout-mechanism-in-dpl%}) applies to importing and exporting documents. The **Import** and **Export** methods of all FormatProviders have a mandatory `TimeSpan?` timeout parameter after which the operation is cancelled.|
-|**GenAI-powered Document Insights**|Extract insights from PDF documents using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content. [Explore GenAI-powered PDF document insights]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})|
-|**AI Coding Assistant**|Provides specialized context to AI models, enabling them to produce higher-quality code samples. [Learn about the Document Processing AI Coding Assistant]({%slug ai-coding-assistant%})|
-|**Automatic Output Stream Clearing on Export**|Automatically clears the output stream before writing new content. [Review automatic output stream clearing during export]({%slug common-export-output-stream-clearing%})|
+|**GenAI-powered Document Insights**|Extract insights from PDF documents by using Large Language Models (LLMs). This feature lets you summarize document content and ask questions about it, with the AI providing relevant answers based on the document content. [Explore GenAI-powered PDF document insights]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%}).|
+|**AI Coding Assistant**|Provides specialized context to AI models so they can generate higher-quality code samples. [Learn about the Document Processing AI Coding Assistant]({%slug ai-coding-assistant%}).|
+|**Automatic Output Stream Clearing on Export**|Automatically clears the output stream before writing new content. [Review automatic output stream clearing during export]({%slug common-export-output-stream-clearing%}).|
 
 For more details about the benefits of using Telerik Document Processing, see the [Telerik Document Processing product overview page](https://www.telerik.com/document-processing-libraries).
 
 ## Supported Formats
 
-The Telerik Document Processing libraries support the following file formats:
+Telerik Document Processing supports the following file formats:
 
 ![Ninja Looking ><](images/ninja_looking.png)  
 
 |Format|Library|Provider|
 |----|----|----|
 |**DOCX (Word Document)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%})|
-|**DOC (Word 97-2003 Document)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) <sup>Import only</sup>|[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%})|
+|**DOC (Word 97-2003 Document)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) <sup>Import only</sup>|
 |**DOT (Word 97-2003 Template)**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[DocFormatProvider]({%slug radwordsprocessing-formats-and-conversion-doc-docformatprovider%}) <sup>Import only</sup>|
 |**HTML**|[RadWordsProcessing]({%slug radwordsprocessing-overview%})|[HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})|
 |**PDF**|[RadWordsProcessing]({%slug radwordsprocessing-overview%}) <br> [RadPdfProcessing]({%slug radpdfprocessing-overview%}) <br> [RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[PdfFormatProvider in RadWordsProcessing]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}) <sup>Export only</sup> <br> [PdfFormatProvider in RadPdfProcessing]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) <br> [PdfFormatProvider in RadSpreadProcessing]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) <sup>Export only</sup>|
@@ -125,7 +125,7 @@ The Telerik Document Processing libraries support the following file formats:
 |**XLS (Excel 97-2003 Workbook)**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[XlsFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})|
 |**XLSM (macro-enabled spreadsheet created by Microsoft Excel)** <sup>Macros are only preserved during import and export. They cannot be executed or changed in the code.</sup>|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[XlsmFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider%})|
 |**CSV**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%}) <br> [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%})|[CsvFormatProvider]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%})|
-|**JSON**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[JsonFormatProvider ]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider%}) <sup>Export only</sup> |
+|**JSON**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[JsonFormatProvider]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider%}) <sup>Export only</sup>|
 |**DataTable**|[RadSpreadProcessing]({%slug radspreadprocessing-overview%})|[DataTableFormatProvider]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})|
 |**ZIP**|[RadZipLibrary]({%slug radziplibrary-overview%})|[ZipArchive]({%slug radziplibrary-gettingstarted%})|
 |**Image**|[RadPdfProcessing]({%slug radpdfprocessing-overview%})|[SkiaImageFormatProvider]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider%}) <sup>Export only</sup> <br> [OcrFormatProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}) <sup>Import only</sup> |
@@ -134,7 +134,7 @@ The Telerik Document Processing libraries support the following file formats:
 
 ## Distribution
 
-The Telerik Document Processing libraries are available in **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows and **.NET Standard 2.0 (Support for {{site.dotnetversions}})** compatible versions. You can download the references for the libraries from the following products:
+Telerik Document Processing is available for **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows, and **.NET Standard 2.0** compatible applications. You can get the libraries through the following products:
 
 |.NET Framework Products|{{site.dotnetversions}} *for Windows*|.NET Standard|
 |----|----|----|
@@ -143,7 +143,7 @@ The Telerik Document Processing libraries are available in **.NET Framework**, *
 |[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for WPF](https://www.telerik.com/products/wpf/overview.aspx)|[UI for Blazor](https://www.telerik.com/blazor-ui)|
 |[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinForms](https://www.telerik.com/products/winforms.aspx)|[UI for WinUI](https://www.telerik.com/winui)|
 
-You can find all packages in the [complete list of available NuGet packages]({%slug available-nuget-packages%}) article.
+You can find all packages in the [available NuGet packages reference]({%slug available-nuget-packages%}).
 
 ## Getting Started
 
@@ -151,13 +151,13 @@ To start using the libraries right away, follow the [Document Processing first s
 
 ## Trial Version and Commercial License
 
-Telerik Document Processing is a commercial library. You are welcome to explore its full functionality and get technical support from the team when you register for a free 30-day trial. To use it commercially, you need to <a href="https://www.telerik.com/purchase.aspx" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/purchase.aspx">purchase a Telerik license</a>. Review the Telerik <a href="https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s">commercial license agreement</a> to get acquainted with the full terms of use.	
+Telerik Document Processing is a commercial library. You can explore its full functionality and get technical support when you register for a free 30-day trial. To use it commercially, you need to <a href="https://www.telerik.com/purchase.aspx" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/purchase.aspx">purchase a Telerik license</a>. Review the Telerik <a href="https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/purchase/license-agreement/devcraft-complete-dlw-s">commercial license agreement</a> to learn the full terms of use.
 
->Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for WPF**, **UI for WinForms**. The libraries are subject to the license under which you have obtained the packages.
+>note Telerik Document Processing is available as part of **DevCraft**, **UI for ASP.NET Core**, **UI for ASP.NET MVC**, **UI for ASP.NET AJAX**, **UI for Blazor**, **UI for .NET MAUI**, **UI for WPF**, and **UI for WinForms**. The libraries are subject to the license under which you obtained the packages.
 
 ## Support Options
 
-For any issues you might encounter while working with Telerik Document Processing, use any of the available support channels:
+If you encounter issues while you work with Telerik Document Processing, use one of the following support channels:
 
 * License holders and active trialists can take advantage of our outstanding customer support delivered by the developers building the library. To submit a support ticket, use the <a href="https://www.telerik.com/account/support-tickets?pid=1886&supcId=daf62541-57e0-b84c-8b5e-da9851c61873&fbp=false" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/account/support-tickets?pid=1886&supcId=daf62541-57e0-b84c-8b5e-da9851c61873&fbp=false">Telerik Document Processing support ticket system</a>. Learn [how to get the most out of Document Processing support]({%slug submit-support-tickets%}).
 * Our <a href="https://www.telerik.com/forums/telerik-document-processing" target="_blank" rel="noopener noreferrer" title="https://www.telerik.com/forums/telerik-document-processing">Telerik Document Processing forums</a> are part of the free support you can get from the community and from the team on all kinds of general issues.
@@ -172,7 +172,7 @@ For any issues you might encounter while working with Telerik Document Processin
 
 ## Help Us Improve the Telerik Document Processing Documentation
 
-The documentation for a product is at its best when the content is a collaboration between the builders and consumers of that product. Everybody can play a role in making the documentation better and we encourage you to help with that task in the way that you choose:
+Documentation is strongest when product teams and users improve it together. You can help in the following ways:
 
 * **Submit a New Issue at GitHub**
 

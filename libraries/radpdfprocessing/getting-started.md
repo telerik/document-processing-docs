@@ -10,7 +10,7 @@ position: 1
 
 # Getting Started
 
-This article helps you get started with the `RadPdfProcessing` library.
+This article shows how to create a PDF document with **RadPdfProcessing**.
 
 >note If you still don't have **Telerik Document Processing** installed, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can obtain the packages through the different suites. 
 
@@ -22,13 +22,13 @@ You can find the required references in the [PdfProcessing NuGet packages]({%slu
 
 [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) is the root element in the library. It consists of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) objects and instructions for annotations and destinations in the document. **Example 1** shows how to create a document and add a page to it.
 
-**Example 1: Create RadFixedDocument**
+#### __Example 1: Create a RadFixedDocument__
 
 <snippet id='pdf-create-fixed'/>
 
 The page can then be edited through a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) instance. **Example 2** creates an editor and adds a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) to the page object created in **Example 1**.
 
-**Example 2: Add text**
+#### __Example 2: Add text__
 
 <snippet id='pdf-create-editor'/>
 
@@ -37,11 +37,11 @@ The page can then be edited through a [FixedContentEditor]({%slug radpdfprocessi
 Exporting to PDF format can be achieved with the `PdfFormatProvider` class. **Example 3** shows how to export the `RadFixedDocument` created in **Examples 1 and 2** to a file.
         
 
-**Example 3: Export to PDF**
+#### __Example 3: Export to PDF__
 
 <snippet id='pdf-export'/>
 
-For more complete examples head to the [Developer Focused Examples]({%slug radpdfprocessing-sdk-examples%}) section of the library.
+For more complete examples, see the [developer-focused examples]({%slug radpdfprocessing-sdk-examples%}) for the library.
 
 ## See Also
 

@@ -1,6 +1,6 @@
 ---
 title: Using SkiaImageFormatProvider
-description: Learn how to convert PDF pages to images using the SkiaImageFormatProvider in the .NET Standard version of RadPdfProcessing.
+description: Learn how to convert PDF pages to images with SkiaImageFormatProvider in cross-platform .NET Standard and .NET versions of RadPdfProcessing.
 page_title: Using SkiaImageFormatProvider
 slug: radpdfprocessing-formats-and-conversion-image-using-skiaimageformatprovider
 tags: skiaimageformatprovider, pdf, image, skiasharp, radpdfprocessing, conversion, dotnet, export
@@ -10,14 +10,14 @@ position: 0
 
 # Using SkiaImageFormatProvider
 
-|Minimum Version|R3 2022|
+| Minimum Version | R3 2022 |
 |----|----|
-|Target Framework|.NET Standard / .NET (Target OS: None)|
+| Target Framework | .NET Standard / .NET (Target OS: None) |
 
-RadPdfProcessing supports converting entire documents to images through the third-party library [SkiaSharp](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/graphics/skiasharp/). You can convert to various formats with synchronous or asynchronous export.
+Use `SkiaImageFormatProvider` to export `RadFixedPage` objects to `.png`, `.jpg`, `.jpeg`, or `.webp` images through the third-party [SkiaSharp](https://learn.microsoft.com/en-us/previous-versions/xamarin/xamarin-forms/user-interface/graphics/skiasharp/) library. To export a full PDF document, iterate its pages and save each page as a separate image.
 
->important This feature is available only in the .NET Standard version of the suite. For other versions, refer to the following articles:
->* [ThumbnailFactory](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/features/export-fixedpage-to-image)
+>important This feature is available for cross-platform `.NET Standard` and `.NET` targets that use `Target OS: None`. For WPF and WinForms-specific alternatives, refer to these articles:
+>* [ThumbnailFactory](https://docs.telerik.com/devtools/wpf/controls/radpdfviewer/export-fixedpage-to-image)
 >* [How to Export Each Page as an Image in PDF Documents](https://docs.telerik.com/devtools/winforms/knowledge-base/pdfviewer-export-page-images-with-no-ui)
 >
 
@@ -29,11 +29,11 @@ To enable the image export functionality in your application, add references to 
 * The `SkiaSharp` NuGet package.
 * The `SkiaSharp.NativeAssets.*` NuGet package. This package may differ depending on the target platform. Versions are available for Windows, macOS, Linux, WebAssembly, Android, iOS, and others.
 
-A [FontsProvider](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/cross-platform/fonts#setting-and-exporting-fonts) implementation is required to read the document fonts and draw the image.
+Set up a [FontsProvider implementation]({%slug radpdfprocessing-cross-platform-fonts%}#setting-and-exporting-fonts) so the renderer can read document fonts and draw the image correctly.
 
-## Using the SkiaImageFormatProvider
+## Exporting Pages to Images
 
-To convert document pages to images, use the `Export` method. The `Export` method does not accept a document but a page. Iterate all pages and save each page in a separate file.
+To convert document pages to images, use the `Export()` method. `SkiaImageFormatProvider` exports `RadFixedPage` objects, not `RadFixedDocument` objects. Iterate the pages of a PDF document and save each page in a separate file.
 
 **Export RadFixedDocument to Image**
 
@@ -41,7 +41,7 @@ To convert document pages to images, use the `Export` method. The `Export` metho
 
 ## Exporting Asynchronously
 
-The `ExportAsync` method allows you to perform the conversion asynchronously.
+Use `ExportAsync()` when you want to perform the conversion asynchronously.
 
 **Export RadFixedDocument to Image Async**
 
@@ -49,7 +49,7 @@ The `ExportAsync` method allows you to perform the conversion asynchronously.
 
 ## Export Settings
 
-The `SkiaImageFormatProvider` exposes the [SkiaImageExportSettings]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageexportsettings%}), which allow you to control the export options.
+The `SkiaImageFormatProvider` exposes [SkiaImageExportSettings]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageexportsettings%}) so you can control the image format, quality, scaling, and antialiasing.
 
 ## See Also
 
