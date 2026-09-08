@@ -86,7 +86,7 @@ Several table properties affect measurement, spacing, and rendering behavior:
             
 * **LayoutType**: Specifies the algorithm used to layout table contents. Two options are available in the `TableLayoutType` enumeration:
 	
-	* **AutoFit** – The table width fits the content unless the needed width is bigger than the available measuring width.
+	* **AutoFit** (Default) – The table width fits the content unless the needed width is bigger than the available measuring width. Under `AutoFit`, columns expand to prevent text wrapping as long as the total table width fits within the available measuring space.
 	* **FixedWidth** – The table width always fits the available measuring width.
 
 * **HorizontalAlignment**: Specifies the alignment of the table inside the page.
