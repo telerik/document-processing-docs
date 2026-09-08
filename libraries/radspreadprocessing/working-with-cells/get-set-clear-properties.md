@@ -3,7 +3,7 @@ title: Get, Set and Clear Cell Properties
 description: Learn how to get, set, and clear cell properties such as values, borders, fill, format, and styles in RadSpreadProcessing.
 page_title: Get, Set and Clear Cell Properties
 slug: radspreadprocessing-working-with-cells-get-set-clear-properties
-tags: cells, spreadsheet, radspreadprocessing, properties, formatting, values, borders, fill, xlsx, spread, workbook
+tags: cells, spreadsheet, radspreadprocessing, properties, formatting, values, borders, fill, xlsx, spread, workbook, themablefontfamily, fontfamily, font
 published: True
 position: 4
 ---
@@ -25,6 +25,8 @@ Cells are the atomic parts of a worksheet and its basic data units. Each cell ca
 * [Fill Property](#fill-property)
 
 * [Indent Property](#indent-property)
+
+* [FontFamily Property](#fontfamily-property)
 
 ## Get, Set and Clear Methods
 
@@ -194,11 +196,40 @@ In addition to the `GetIndent()`, `SetIndent()`, and `ClearIndent()` methods, `C
 
 <snippet id='codeblock-cre'/>
 
+## FontFamily Property
 
+The `FontFamily` property uses an instance of `ThemableFontFamily` to retrieve and change the font of worksheet cells. `ThemableFontFamily` allows you to set either a static, explicit font family or a dynamic font family that adapts when the workbook theme changes.
+
+>note In cross-platform applications (such as **.NET Core**, **.NET 6+**, and **Blazor**), `ThemableFontFamily` resides in the `Telerik.Documents.Common.Model` namespace (included in the `Telerik.Documents.Core` package). In .NET Framework applications, it is in `Telerik.Documents.Spreadsheet.Model`.
+
+You can initialize `ThemableFontFamily` using:
+* A `string` containing the font name (for example, `"Arial"`, `"Calibri"`).
+* A `FontFamily` instance (`Telerik.Documents.Core.Fonts.FontFamily` in cross-platform, or `System.Windows.Media.FontFamily` in WPF).
+* A `ThemeFontType` enum value (`ThemeFontType.Major` or `ThemeFontType.Minor`) to bind the font to the current document theme.
+
+The following example demonstrates how to set and retrieve cell font families:
+
+```csharp
+// Static font family by name
+worksheet.Cells[0, 0].SetFontFamily(new ThemableFontFamily("Calibri"));
+
+// Theme-dependent font family (updates automatically if workbook theme changes)
+worksheet.Cells[1, 0].SetFontFamily(new ThemableFontFamily(ThemeFontType.Major));
+
+// Retrieve the font family
+RangePropertyValue<ThemableFontFamily> fontProperty = worksheet.Cells[0, 0].GetFontFamily();
+if (!fontProperty.IsIndeterminate)
+{
+    ThemableFontFamily themableFont = fontProperty.Value;
+    // Inspect whether the font comes from a theme or is static
+    bool isFromTheme = themableFont.IsFromTheme;
+}
+```
 
 ## See Also
 
 * [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
 * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
+* [Document Themes]({%slug radspreadprocessing-features-styling-document-themes%})
 * [PatternType Enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.PatternType.html)
 * [GradientType Enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.GradientType.html)
