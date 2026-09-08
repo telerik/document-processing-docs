@@ -3,7 +3,7 @@ title: Conditional Formatting
 description: Learn how to use conditional formatting in RadSpreadProcessing to visually highlight data based on rules and conditions.
 page_title: Conditional Formatting
 slug: radspreadprocessing-features-conditional-formatting
-tags: conditional, formatting, spreadsheet, spreadprocessing, cells, rules, formatting, styles, data, excel, xlsx
+tags: conditional, formatting, spreadsheet, spreadprocessing, cells, rules, formatting, styles, data, excel, xlsx, formularule, formula
 published: True
 position: 7
 platforms: mvc, ajax, blazor, wpf, winforms, winui, core
@@ -127,6 +127,27 @@ Each of the classes listed in **Table 1** exposes constructors that enable you t
 
 The `PresetIconSet` enum exposes multiple definitions for predefined sets of icons. You can also use custom icons through the other constructor of `IconSetRule`. This overload accepts an object of type `IconSetValueContextBase` whose implementations allow you to register three, four, or five icons: `ThreeIconSetValueContext`, `FourIconSetValueContext`, `FiveIconSetValueContext`.
 
+### Create a FormulaRule
+
+The `FormulaRule` allows you to apply conditional formatting based on a custom formula expression that evaluates to a Boolean or numeric result.
+
+>note Formulas in `FormulaRule` must always use standard **A1 reference style** (such as `=$J1<>$E1`). **R1C1 / RC reference style is not supported**. In accordance with the OpenXML spreadsheet specification, the formula must be written relative to the top-left cell of the target cell range. Use absolute column references (`$`) if you want the comparison to remain fixed to specific columns as the rule is evaluated across rows.
+
+**Example 7: Create a FormulaRule comparing two columns**
+
+```csharp
+DifferentialFormatting formatting = new DifferentialFormatting();
+formatting.ForeColor = new ThemableColor(Colors.Orange);
+
+// Compare column J and column E for each row, written relative to row 1 (the top-left cell of the range):
+FormulaRule rule = new FormulaRule("=$J1<>$E1", formatting);
+
+ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
+
+// Apply the rule to column 10 (index 9) for rows 1 to 100:
+worksheet.Cells[0, 9, 99, 9].AddConditionalFormatting(conditionalFormatting);
+```
+
 ### Working with IRangeValue
 
 Some of the rules enable you to set values for their ranges. Examples for similar rules are `DataBarRule` and `ColorScaleRule`. Their contexts accept `IRangeValue` objects that define the type for the minimum, middle (if present), and maximum values. These values can be numbers, percentages, or automatically calculated values for the specific range.
@@ -148,7 +169,7 @@ The following list shows all implementations of `IRangeValue` that you can use:
 
 Any previously applied formatting can be obtained through the `GetConditionalFormattings` method of `CellSelection`. This method returns a collection of `ConditionalFormattingRange` objects representing the formattings applied to the selection and the `CellRange` each formatting applies to.
 
-**Example 7: Get conditional formatting from a cell selection**
+**Example 8: Get conditional formatting from a cell selection**
 
 <snippet id='codeblock-cgx'/>
 
@@ -156,7 +177,7 @@ Any previously applied formatting can be obtained through the `GetConditionalFor
 
 Through the `CellSelection`, you can also remove the formatting from the selected cells.
 
-**Example 8: Remove conditional formatting from selected cells**
+**Example 9: Remove conditional formatting from selected cells**
 
 <snippet id='codeblock-cgy'/>
 
@@ -166,7 +187,7 @@ Each of the formatting rule classes gives you the ability to evaluate the rule a
 
 For the rules that apply on all the values in the range, the return value is **between 0 and 1**, depending on where that value is positioned in the range of all values. Such rules are `ColorScaleRule`, `DataBarRule`, and `IconSetRule`. For all other rules, the result of `Resolve` is **0 or 1**, depending on whether the specific cell value meets the rule requirements.
 
-**Example 9: Resolve a conditional formatting rule result**
+**Example 10: Resolve a conditional formatting rule result**
 
 <snippet id='codeblock-cgz'/>
 
@@ -174,7 +195,7 @@ For the rules that apply on all the values in the range, the return value is **b
 
 If you want to change the rule used by a `ConditionalFormatting` object, use the `UpdateRule()` method.
 
-**Example 10: Change the rule for existing conditional formatting**
+**Example 11: Change the rule for existing conditional formatting**
 
 <snippet id='codeblock-cha'/>
 
