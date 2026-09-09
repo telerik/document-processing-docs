@@ -16,7 +16,7 @@ Use this article to understand what `RadFixedPage` controls, when to work with i
 
 ## What Is RadFixedPage
 
-Every PDF document in the RadPdfProcessing model starts with a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}). That document contains one or more `RadFixedPage` instances, and each page hosts the visible content and interactive elements for a single page in the final PDF.
+Every PDF document in the RadPdfProcessing model starts with a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}). The document contains `RadFixedPage` instances, and each page hosts the visible content and interactive elements for one page in the exported PDF.
 
 `RadFixedPage` implements `IContentRootElement`, which makes it the content root for all fixed content elements placed on the page. For a broader view of how pages fit into the document model, see the [RadPdfProcessing model overview]({%slug radpdfprocessing-model-general-information%}).
 
@@ -43,7 +43,7 @@ The following properties and methods define most page-level tasks:
 | `MediaBox` | Defines the physical page boundaries. Content outside this box is not part of the printable page area. |
 | `CropBox` | Defines the visible or printable region of the page. By default, it matches the `MediaBox`. |
 | `Size` | Gets the page size in points, based on the `MediaBox` width and height. For example, `Size(612, 792)` corresponds to US Letter size, which is `8.5 x 11` inches. |
-| `Rotation` | Gets or sets the page [rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html). |
+| `Rotation` | Gets or sets the page [rotation](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Data.Rotation.html) in 90-degree increments. |
 | `Actions` | Gets the page [actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) collection. |
 | `Clone()` | Creates a deep copy of the page, including its content, annotations, and associated form fields. |
 
@@ -57,7 +57,7 @@ Create a `RadFixedPage` when you build a document programmatically and need to a
 
 The following example creates a new page and adds it to a document:
 
-#### Example: Create RadFixedPage and add it to a document
+#### __Example 1: Create a RadFixedPage and add it to a document__
 
 <snippet id='add-radfixedpage'/>
 
@@ -67,7 +67,7 @@ Use the `Content` collection when you want to place fixed elements on a specific
 
 The following example adds a previously created content element to a page:
 
-#### Example: Add a content element to RadFixedPage
+#### __Example 2: Add a content element to a RadFixedPage__
 
 <snippet id='add-link-annotation-in-radfixedpage'/>
 
@@ -81,7 +81,7 @@ Use the `Annotations` collection when you need to attach interactive elements su
 
 The following example adds a previously created annotation to a page:
 
-#### Example: Add an annotation to RadFixedPage
+#### __Example 3: Add an annotation to a RadFixedPage__
 
 <snippet id='add-annotation-to-radfixedpage'/>
 
@@ -93,7 +93,7 @@ Change page properties when you need to adjust layout, orientation, or the visib
 
 The following example changes the `Rotation` and `Size` properties of a page:
 
-#### Example: Change RadFixedPage properties
+#### __Example 4: Change RadFixedPage properties__
 
 <snippet id='modify-radfixedpage-properties'/>
 

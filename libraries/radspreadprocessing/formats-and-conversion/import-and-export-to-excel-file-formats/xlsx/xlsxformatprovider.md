@@ -1,7 +1,7 @@
 ---
 title: Using XlsxFormatProvider
 page_title: Import and Export to Excel File Format Using XlsxFormatProvider
-description: Learn how to import and export XLSX Excel Workbook files using the XlsxFormatProvider class in RadSpreadProcessing with code examples.
+description: Learn how to import and export XLSX workbook files by using the XlsxFormatProvider class in RadSpreadProcessing, with code examples for common scenarios.
 slug: radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider
 tags: xlsx, format, provider, xlsx, spreadsheet, radspreadprocessing, excel, import, export, workbook
 published: True
@@ -10,34 +10,36 @@ position: 2
 
 # Using XlsxFormatProvider
 
-`XlsxFormatProvider` makes it easy to import and export XLSX (Excel Workbook) files. An XLSX file is a group of zipped files that conform to the Office Open XML schema. The format allows you to export all parts of a workbook: worksheets, formula values, formatting, hyperlinks, and more.
+`XlsxFormatProvider` imports and exports XLSX workbook files in `RadSpreadProcessing`. An XLSX file is a ZIP package that follows the Office Open XML specification. The provider preserves workbook data such as worksheets, formula values, formatting, and hyperlinks.
 
->Unlike the CSV and TXT format providers, the `XlsxFormatProvider` requires references to the following package:
->* Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml
+To use `XlsxFormatProvider`, reference one of the following packages:
+
+* `Telerik.Documents.Spreadsheet.FormatProviders.OpenXml` for cross-platform projects.
+* `Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml` for Windows-only projects.
 
 >note Starting with **Q2 2025** the Zip Library is no longer used as an internal dependency in the rest of the Document Processing Libraries - PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It is replaced by the System.IO.Compression. The Telerik Zip Library continues to ship as a standalone library so clients can still use it separately.
 
-Once you reference the required package, create an instance of `XlsxFormatProvider` to import and export XLSX (Excel Workbook) files. This provider appears in the `Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx` namespace. `XlsxFormatProvider` implements the `IWorkbookFormatProvider` interface, which in turn appears in the `Telerik.Windows.Documents.Spreadsheet.FormatProviders` namespace. Depending on whether you want to work with the concrete class or the interface, you need to include either the first or both namespaces.
+After you reference the required package, create an instance of `XlsxFormatProvider` to import and export XLSX files. The provider is in the `Telerik.Documents.Spreadsheet.FormatProviders.OpenXml.Xlsx` namespace. `XlsxFormatProvider` implements the `IWorkbookFormatProvider` interface from the `Telerik.Documents.Spreadsheet.FormatProviders` namespace. The class also exposes `ImportSettings` and `ExportSettings` properties of type `XlsxImportSettings` and `XlsxExportSettings`.
 
->note For more examples and application scenarios of importing and exporting a workbook to various formats using a format provider, check out the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
+>note For more examples and end-to-end scenarios, see [how to import, export, save, and load `RadSpreadProcessing` workbooks]({%slug import-export-save-load-workbook%}).
 
 ## Import
 
-The following example shows how to import an XLSX file using a FileStream. The code verifies that a file with the specified name exists. The sample then creates an `XlsxFormatProvider` instance and passes a FileStream to its `Import()` method.
+The following example shows how to import an XLSX file through a `FileStream`. The code verifies that a file with the specified name exists. The sample then creates an `XlsxFormatProvider` instance and passes the `FileStream` to its `Import()` method.
 
-**Example 1: Import XLSX (Excel Workbook) File**
+#### __Example 1: Import an XLSX Workbook__
 
 <snippet id='codeblock-cow'/>
 
 ## Export
 
-The following example demonstrates how to export an existing Workbook to an XLSX file. The snippet creates a new workbook with a single worksheet. It then creates an `XlsxFormatProvider` and calls its `Export()` method. The `Export()` method accepts a parameter of type `Stream` so you can work with any of its inheritors.
+The following example shows how to export an existing `Workbook` to an XLSX file. The snippet creates a new workbook with a single worksheet. It then creates an `XlsxFormatProvider` instance and calls its `Export()` method. The `Export()` method accepts a `Stream`, so you can use any `Stream` implementation.
 
-**Example 2: Create a workbook and export it to an XLSX file stream**
+#### __Example 2: Create a Workbook and Export It to an XLSX File Stream__
 
 <snippet id='codeblock-cox'/>
 
-**Example 3: Export a workbook to a memory stream and capture the XLSX bytes**
+#### __Example 3: Export a Workbook to a Memory Stream__
 
 <snippet id='codeblock-coy'/>
 

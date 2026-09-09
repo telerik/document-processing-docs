@@ -158,4 +158,3 @@ Whenever you purchase a new license or renew an existing one, always [download a
 * [Telerik License Approaches](https://github.com/LanceMcCarthy/DevOpsExamples?tab=readme-ov-file#telerik-license-approaches)
 * [How to Download a Script Key]({%slug download-script-key%})
 * [Resolving Trial Watermark Issues with the Generated Documents in MFC applications]({%slug resolving-trial-watermark-mfc-application%})
-

@@ -12,7 +12,7 @@ position: 1
 
 Use `PdfFormatProvider` to import a PDF file into a `RadFixedDocument` or export a `RadFixedDocument` to PDF. This article explains the required packages, the stream requirements for import and export, and the common points to verify before you integrate the provider into your application.
 
-`PdfFormatProvider` preserves the document structure and formatting that RadPdfProcessing supports. After import, you work with the resulting [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in the same way as a code-generated document.
+`PdfFormatProvider` imports the PDF features that RadPdfProcessing supports into a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}). After import, you can inspect and modify the document model before exporting it again.
 
 To use the format provider, add references to these packages:
 
@@ -23,8 +23,8 @@ The `PdfFormatProvider` class is in the `Telerik.Windows.Documents.Fixed.FormatP
 
 Use this article when you need to:
 
-* Open an existing PDF file as a `RadFixedDocument`.
-* Save a `RadFixedDocument` to a PDF stream or file.
+* Import an existing PDF file to a `RadFixedDocument`.
+* Export a `RadFixedDocument` to a PDF stream or file.
 * Understand which stream capabilities the import and export APIs require.
 * Avoid common issues such as disposing a stream too early.
 
@@ -80,9 +80,9 @@ Before you call `Export()`, verify these points:
 >
 > When you export a digitally signed document, pass a stream that supports both reading and writing. Otherwise, the export throws `NotSupportedException` with the message `Stream does not support reading.` For example, create the output stream with `new FileStream("signed.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite)`.
 
-After export, you can open the resulting document in any application that supports PDF files.
+After export, open the resulting document in a PDF viewer or another application that supports PDF files.
 
-In most applications, the PdfFormatProvider workflow looks like this:
+In most applications, the `PdfFormatProvider` workflow looks like this:
 
 1. Create a `PdfFormatProvider` instance.
 2. Open a readable and seekable stream to import a PDF file, or prepare a writable stream to export one.

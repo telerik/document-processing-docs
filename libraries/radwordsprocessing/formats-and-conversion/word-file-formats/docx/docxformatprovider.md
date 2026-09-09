@@ -1,7 +1,7 @@
 ---
 title: Using DocxFormatProvider
 page_title: Using DocxFormatProvider
-description: Learn how to import and export RadFlowDocument to and from DOCX format using the DocxFormatProvider in RadWordsProcessing.
+description: Learn how to import DOCX files into RadFlowDocument instances and export RadFlowDocument content to DOCX with DocxFormatProvider.
 slug: radwordsprocessing-formats-and-conversion-docx-docxformatprovider
 tags: format, provider, docx, flow, docx, import, export, word, document, openxml
 published: True
@@ -10,18 +10,16 @@ position: 1
 
 # Using DocxFormatProvider
 
-DOCX, a part of [Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML), is a zipped, XML-based file format developed by Microsoft for representing word processing documents. `RadWordsProcessing` supports this format. DOCX is the default target format for Microsoft Word starting with Microsoft Office 2007.
+DOCX is part of Office Open XML, a zipped, XML-based format that Microsoft uses for word-processing documents. `RadWordsProcessing` supports this format. DOCX is the default format in Microsoft Word starting with Microsoft Office 2007.
 
-`DocxFormatProvider` is compliant with the latest Office Open XML standard—[ECMA-376](https://www.ecma-international.org/publications/standards/Ecma-376.htm) 4th edition, December 2012.
+`DocxFormatProvider` follows the Office Open XML `ECMA-376` specification. Use it to import DOCX documents into `RadFlowDocument` instances and export `RadFlowDocument` instances to DOCX files. The provider preserves the document structure and formatting that both `RadWordsProcessing` and DOCX support.
 
-`DocxFormatProvider` allows you to import and export a `RadFlowDocument` to/from DOCX format. The provider preserves the entire document structure and formatting.
+To use `DocxFormatProvider`, add references to these packages:
 
-To use `DocxFormatProvider`, add references to the following packages:
+* `Telerik.(Windows).Documents.Core`
+* `Telerik.(Windows).Documents.Flow`
 
-* Telerik.Windows.Documents.Core
-* Telerik.Windows.Documents.Flow
-
->note Starting with **Q2 2025** the Zip Library is no longer used as an internal dependency in the rest of the Document Processing Libraries—PdfProcessing, WordsProcessing, SpreadProcessing, SpreadStreamProcessing. It is replaced by System.IO.Compression. The Telerik Zip Library continues to ship as a standalone library so you can still use it separately.
+>note Starting with **Q2 2025**, Telerik Document Processing no longer uses the [Zip Library]({%slug radziplibrary-overview%}) as an internal dependency in PdfProcessing, WordsProcessing, SpreadProcessing, and SpreadStreamProcessing. The libraries use `System.IO.Compression` instead. Telerik Zip Library still ships as a standalone library.
 
 ## Import
 
@@ -33,13 +31,13 @@ The following code shows how to use `DocxFormatProvider` to import a DOCX docume
 
 <snippet id='codeblock-cr'/>
 
-You can also import a document from a byte array containing the DOCX document:
+You can also import a document from a byte array that contains the DOCX file:
 
 **Example 2: Read a Sample.docx file into a byte array and import it into a RadFlowDocument**
 
 <snippet id='codeblock-cs'/>
 
-The resulting `RadFlowDocument` can be manipulated like any code-generated document.
+The resulting `RadFlowDocument` can be modified like any document that you create in code.
 
 ## Export
 
@@ -51,15 +49,17 @@ The following code shows how to use `DocxFormatProvider` to export a `RadFlowDoc
 
 <snippet id='codeblock-ct'/>
 
-You can also export the document to a byte array and preserve it in a database.
+You can also export the document to a byte array and store it in a database.
 
 **Example 4: Export a RadFlowDocument directly to a DOCX byte array**
 
 <snippet id='codeblock-cu'/>
 
-The resulting documents can be opened in any application that supports DOCX documents.
+The resulting documents can be opened in applications that support DOCX files.
 
 ## See Also
 
-* [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
-* [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})
+* [Review DOCX settings]({%slug radwordsprocessing-formats-and-conversion-docx-settings%})
+* [Check supported DOCX features]({%slug radwordsprocessing-formats-and-conversion-docx-features%})
+* [Learn about timeout handling]({%slug timeout-mechanism-in-dpl%})
+* [Understand output stream clearing on export]({%slug common-export-output-stream-clearing%})

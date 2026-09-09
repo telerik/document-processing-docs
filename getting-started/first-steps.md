@@ -10,9 +10,9 @@ position: 1
 
 # Create Your First DOCX-to-PDF App with Telerik Document Processing
 
-This getting started guide shows how to create a simple application that uses Telerik Document Processing to generate a DOCX document and then export the same document to PDF.
+This getting started guide shows how to create a simple application that uses **Telerik Document Processing** to generate a DOCX document and then export the same document to PDF.
 
-The Telerik Document Processing libraries in this guide are UI-independent and work across .NET desktop, web, mobile, client-side, server-side, and cloud applications. The example uses RadWordsProcessing to create the document content and a PDF format provider to export it.
+The Telerik Document Processing libraries in this guide are UI-independent and work across .NET desktop, web, mobile, client-side, server-side, and cloud applications. The example uses `RadWordsProcessing` to create the document content and `PdfFormatProvider` to export it.
 
 ## Step 1: Locate or Install Telerik Document Processing
 
@@ -48,15 +48,15 @@ Use the Visual Studio path shown in the following image to create the console ap
 
 ## Step 3: Add the Required Telerik Document Processing Packages
 
-This sample uses [RadWordsProcessing]({%slug radwordsprocessing-overview%}) to create the DOCX file. Add the required packages to the console project before you insert the sample code.
+This sample uses [RadWordsProcessing]({%slug radwordsprocessing-overview%}) to create the DOCX file. Add the required packages to the console project before you add the sample code.
 
-1. Add the packages that provide the RadWordsProcessing document model and DOCX functionality.
+1. Add the packages that provide the `RadWordsProcessing` document model and DOCX functionality.
 
 	For a .NET Framework project:
 	* `Telerik.Windows.Documents.Core`
 	* `Telerik.Windows.Documents.Flow`
 
-	For a .NET Standard or {{site.dotnetversions}} project:
+	For a cross-platform .NET project:
 	* `Telerik.Documents.Core`
 	* `Telerik.Documents.Flow`
 
@@ -65,7 +65,7 @@ This sample uses [RadWordsProcessing]({%slug radwordsprocessing-overview%}) to c
 	For a .NET Framework project:
 	* `Telerik.Windows.Documents.Flow.FormatProviders.Pdf`
 
-	For a .NET Standard or {{site.dotnetversions}} project:
+	For a cross-platform .NET project:
 	* `Telerik.Documents.Flow.FormatProviders.Pdf`
 
 You can find the complete Telerik Document Processing package list in the [available NuGet packages reference]({%slug available-nuget-packages%}).
@@ -80,7 +80,7 @@ Use the following snippet to create the `RadFlowDocument` instance that the samp
 
 ## Step 5: Import an Existing DOCX File
 
-Use this optional step if you want to start from an existing DOCX file instead of building the document content entirely in code.
+Use this optional step if you want to start from an existing DOCX file instead of building all document content in code.
 
 **Import an existing DOCX file into a RadFlowDocument**
 
@@ -90,7 +90,7 @@ Use this optional step if you want to start from an existing DOCX file instead o
 
 ### Export the RadFlowDocument to DOCX
 
-Use the [DocxFormatProvider for DOCX export]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) to save the `RadFlowDocument` as a DOCX file. The following snippet creates the provider instance and exports the generated document to the `bin` folder of the current project.
+Use the [DocxFormatProvider for DOCX export]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) to export the `RadFlowDocument` as a DOCX file. The following snippet creates the provider instance and exports the generated document to the `bin` folder of the current project.
         
 
 **Export a RadFlowDocument to a DOCX file**

@@ -1,6 +1,6 @@
 ---
 title: Using HtmlFormatProvider
-description: Learn how to import and export RadFlowDocument to and from HTML format using the HtmlFormatProvider in RadWordsProcessing.
+description: Learn how to import HTML to RadFlowDocument and export RadFlowDocument to HTML by using the HtmlFormatProvider class in RadWordsProcessing.
 page_title: Using HtmlFormatProvider
 slug: radwordsprocessing-formats-and-conversion-html-htmlformatprovider
 tags: html, format, provider, word, flow, docx, import, export, document, web
@@ -10,10 +10,14 @@ position: 3
 
 # Using HtmlFormatProvider
 
-`HtmlFormatProvider` allows you to import and export `RadFlowDocument` to/from HTML format, preserving as much as possible of the document structure and formatting. To use `HtmlFormatProvider`, add references to the following packages:
+Telerik Document Processing includes the `HtmlFormatProvider` class in **RadWordsProcessing** for importing HTML to `RadFlowDocument` and exporting `RadFlowDocument` to HTML. The provider maps supported HTML elements and CSS properties to the flow document model. The class is in the `Telerik.Documents.Flow.FormatProviders.Html` namespace. To use `HtmlFormatProvider`, reference the following packages:
 
-* `Telerik.Windows.Documents.Core`
-* `Telerik.Windows.Documents.Flow`
+* `Telerik.Documents.Core`
+* `Telerik.Documents.Flow`
+
+If your project uses the Windows-only package family, use the corresponding `Telerik.Windows.Documents.*` package names instead.
+
+`HtmlFormatProvider` exposes [`ImportSettings`]({%slug radwordsprocessing-formats-and-conversion-html-settings%}#import-settings) and [`ExportSettings`]({%slug radwordsprocessing-formats-and-conversion-html-settings%}#export-settings) properties. Use `HtmlImportSettings` to handle external images and stylesheets through the `LoadImageFromUri` and `LoadStyleSheetFromUri` events. Use `HtmlExportSettings` to control options such as `ImagesExportMode`, `StylesExportMode`, and `DocumentExportLevel`.
 
 ## Import
 
@@ -21,21 +25,17 @@ To import an HTML document, use the overloads of the `HtmlFormatProvider.Import(
 
 **Example 1** shows how to use `HtmlFormatProvider` to import an HTML document from a file.
 
-**Example 1: Open an HTML file stream and import it into a RadFlowDocument**
+#### __Example 1: Import an HTML File__
 
 <snippet id='codeblock-bubu'/>
 
-
-
 **Example 2** shows how to import an HTML string.
 
-**Example 2: Import an HTML string containing a paragraph into a RadFlowDocument**
+#### __Example 2: Import an HTML String__
 
 <snippet id='codeblock-bvbv'/>
 
-
-
-The resulting `RadFlowDocument` can be used like any code-generated document.
+The resulting `RadFlowDocument` works like any document that you create in code.
 
 ## Export
 
@@ -43,18 +43,15 @@ To export a document to HTML, use the overloads of the `HtmlFormatProvider.Expor
 
 **Example 3** shows how to use the `HtmlFormatProvider` to export an instance of `RadFlowDocument` to a file:
 
-**Example 3: Export a RadFlowDocument to an HTML file stream**
+#### __Example 3: Export a RadFlowDocument to an HTML File__
 
 <snippet id='codeblock-bwbw'/>
 
-
-
 You can also export the document to a string variable as shown in **Example 4**.
 
-**Example 4: Export a RadFlowDocument directly to an HTML string**
+#### __Example 4: Export a RadFlowDocument to an HTML String__
 
 <snippet id='codeblock-bxbx'/>
-
 
 ## See Also
 

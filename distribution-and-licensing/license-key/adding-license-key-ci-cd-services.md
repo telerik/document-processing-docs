@@ -10,7 +10,7 @@ position: 1
 
 # Adding the License Key to CI/CD Services
 
-This article describes how to set up and activate your Telerik Document Processing license across a few popular CI/CD services by using deployment keys. This article covers the recommended environment-variable approach, the Azure DevOps secure-file alternative, and the `TelerikLicensing.Register()` method for AWS Lambda scenarios.
+This article explains how to activate your Telerik Document Processing license in CI/CD services with deployment keys. It covers environment variables, Azure DevOps secure files, and `TelerikLicensing.Register()` for AWS Lambda scenarios.
 
 Deployment keys are a dedicated type of license key for build pipelines. They're tied to a specific application and the set of products that the application uses. Deployment keys cannot be used for application development.
 
@@ -92,16 +92,16 @@ With a YAML pipeline, use the [DownloadSecureFile@1](https://learn.microsoft.com
     displayName: 'Download Telerik License Key File'
     inputs:
       secureFile: 'telerik-license.txt'
-  - task: MSBuild@1
-    displayName: 'Build Project'
-    inputs:
-      solution: 'myapp.csproj'
-      platform: Any CPU
-      configuration: Release
-      msbuildArguments: '/p:RestorePackages=false'
-    env:
-      # use the name.secureFilePath value to set TELERIK_LICENSE_PATH
-      TELERIK_LICENSE_PATH: $(DownloadTelerikLicenseFile.secureFilePath)
+- task: MSBuild@1
+  displayName: 'Build Project'
+  inputs:
+    solution: 'myapp.csproj'
+    platform: Any CPU
+    configuration: Release
+    msbuildArguments: '/p:RestorePackages=false'
+  env:
+    # Use the name.secureFilePath value to set TELERIK_LICENSE_PATH.
+    TELERIK_LICENSE_PATH: $(DownloadTelerikLicenseFile.secureFilePath)
 ```
 
 ### Classic Pipeline
@@ -195,4 +195,3 @@ Check these common issues when activation does not work as expected:
 * [Telerik License Approaches](https://github.com/LanceMcCarthy/DevOpsExamples?tab=readme-ov-file#telerik-license-approaches)
 * [How to Download a Script Key]({%slug download-script-key%})
 * [Resolving Trial Watermark Issues with the Generated Documents in MFC applications]({%slug resolving-trial-watermark-mfc-application%})
-
