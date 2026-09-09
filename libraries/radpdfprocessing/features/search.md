@@ -65,22 +65,7 @@ During text extraction:
 * Text search is evaluated per page; phrases that span across page boundaries are not matched.
 * In PDF documents, spaces are determined by glyph positioning (`Delta = 1.15`). If text fragments lack sufficient visual displacement, words may be extracted contiguously.
 
-```csharp
-TextSearch search = new TextSearch(document);
-TextSearchOptions options = new TextSearchOptions
-{
-    UseRegularExpression = true,
-    CaseSensitive = false,
-    WholeWordsOnly = false
-};
-
-// Matches phrases starting with "lorem" followed by a word starting with "a" across spaces or line wraps within the page
-IEnumerable<SearchResult> results = search.FindAll(@"lorem\s+a\w*", options);
-foreach (SearchResult result in results)
-{
-    Console.WriteLine($"Found on page {result.GetResultPage().PageNumber}: {result.Result}");
-}
-```
+<snippet id='regex-and-multiword-search'/>
 
 ## See Also
 
