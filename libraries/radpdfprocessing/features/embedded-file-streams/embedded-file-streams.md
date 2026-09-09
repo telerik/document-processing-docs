@@ -54,10 +54,6 @@ RadPdfProcessing allows you to set the MIME type when embedding a file into a PD
 
 Declaring the correct MIME type along with the proper file extension in the `Name` property ensures that PDF viewers (such as Adobe Acrobat) correctly identify the attachment format, associate it with the right host application, and meet requirements for standards like PDF/A-3 and Factur-X.
 
-**Set the MIME Type**
-
-<snippet id='pdf-set-mime-type'/>
-
 #### Common Supported MIME Types
 
 The following table lists common MIME types used when embedding attachments:
@@ -83,24 +79,7 @@ The following table lists common MIME types used when embedding attachments:
 
 **Example: Embedding Files with Different MIME Types**
 
-```csharp
-RadFixedDocument document = new RadFixedDocument();
-
-// Embed a PDF file
-byte[] pdfBytes = File.ReadAllBytes("sample.pdf");
-EmbeddedFile pdfAttachment = document.EmbeddedFiles.Add("sample.pdf", pdfBytes);
-pdfAttachment.MimeType = "application/pdf";
-
-// Embed a DOCX file
-byte[] docxBytes = File.ReadAllBytes("report.docx");
-EmbeddedFile docxAttachment = document.EmbeddedFiles.Add("report.docx", docxBytes);
-docxAttachment.MimeType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
-
-// Embed a TXT file
-byte[] txtBytes = File.ReadAllBytes("notes.txt");
-EmbeddedFile txtAttachment = document.EmbeddedFiles.Add("notes.txt", txtBytes);
-txtAttachment.MimeType = "text/plain";
-```
+<snippet id='pdf-set-mime-type'/>
 
 ### Creating an Embedded Electronic (ZUGFeRD) Invoice
 
