@@ -10,23 +10,7 @@ position: 4
 
 # Get, Set and Clear Cell Properties
 
-
-
 Cells are the atomic parts of a worksheet and its basic data units. Each cell can be assigned a value, borders, fill, format, style, and much more. The following sections describe the properties offered by cells and demonstrate how to retrieve and change them.
-
-* [Get, Set and Clear Methods](#get,-set-and-clear-methods)
-
-* [Cell Properties](#cell-properties)
-
-* [Value Property](#value-property)
-
-* [Borders Property](#borders-property)
-
-* [Fill Property](#fill-property)
-
-* [Indent Property](#indent-property)
-
-* [FontFamily Property](#fontfamily-property)
 
 ## Get, Set and Clear Methods
 
@@ -37,8 +21,6 @@ To access cell properties, create a `CellSelection` object that contains the reg
 **Example 1: Create a CellSelection for the range A1:F6**
 
 <snippet id='codeblock-cqx'/>
-
-
 
 Once you have a `CellSelection` instance, you can set and retrieve the properties of its cells. Each property is manipulated through three methods that get, set, and clear the value of the property, respectively. Typically, the set methods take a single argument, which indicates the value to be set. Similarly, the clear methods have no parameters and reset the properties to their default values. The get methods, however, require more attention.
 
@@ -124,8 +106,6 @@ The `GetValue()` method retrieves the value of the property and returns an insta
 
 <snippet id='codeblock-cqz'/>
 
-
-
 As the document model supports different types of cell values, the `CellSelection` class offers multiple overloads of the `SetValue()` method that allow you to produce different types of values. For example, if you choose the method that accepts a double instance, the `Value` of the cell is an instance of `NumberCellValue`. The `SetValue()` method has three more overloads that take `DateTime`, string, and `ICellValue`, respectively.
 
 **Example 5** demonstrates how to set the value of a given selection.
@@ -133,8 +113,6 @@ As the document model supports different types of cell values, the `CellSelectio
 **Example 5: Set the selected cell to DateTime, number, copied value, text, and formula inputs**
 
 <snippet id='codeblock-cra'/>
-
-
 
 ## Borders Property
 
@@ -145,8 +123,6 @@ The `Borders` property uses a `CellBorders` object for getting and setting its p
 **Example 6: Apply dotted purple borders to one region and multi-edge blue and purple borders to another**
 
 <snippet id='codeblock-crb'/>
-
-
 
 The result of **Example 6** is demonstrated in the following figure.
 
@@ -165,8 +141,6 @@ As its name suggests, the `PatternFill` object fills the background of a region 
 
 <snippet id='codeblock-crc'/>
 
-
-
 The result of **Example 7** is illustrated in the following figure.
 
 #### Figure 2: Applied PatternFill
@@ -179,8 +153,6 @@ The `GradientFill` sets the background of a region of cells to a gradual blendin
 **Example 8: Apply a horizontal green gradient fill to the range A1:F1**
 
 <snippet id='codeblock-crd'/>
-
-
 
 The result of **Example 8** is illustrated in the following figure.
 
@@ -209,22 +181,7 @@ You can initialize `ThemableFontFamily` using:
 
 The following example demonstrates how to set and retrieve cell font families:
 
-```csharp
-// Static font family by name
-worksheet.Cells[0, 0].SetFontFamily(new ThemableFontFamily("Calibri"));
-
-// Theme-dependent font family (updates automatically if workbook theme changes)
-worksheet.Cells[1, 0].SetFontFamily(new ThemableFontFamily(ThemeFontType.Major));
-
-// Retrieve the font family
-RangePropertyValue<ThemableFontFamily> fontProperty = worksheet.Cells[0, 0].GetFontFamily();
-if (!fontProperty.IsIndeterminate)
-{
-    ThemableFontFamily themableFont = fontProperty.Value;
-    // Inspect whether the font comes from a theme or is static
-    bool isFromTheme = themableFont.IsFromTheme;
-}
-```
+<snippet id='libraries-spread-working-with-cells-get-set-clear-fontfamily'/>
 
 ## See Also
 
