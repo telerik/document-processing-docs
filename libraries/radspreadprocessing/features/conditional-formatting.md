@@ -135,18 +135,7 @@ The `FormulaRule` allows you to apply conditional formatting based on a custom f
 
 **Example 7: Create a FormulaRule comparing two columns**
 
-```csharp
-DifferentialFormatting formatting = new DifferentialFormatting();
-formatting.ForeColor = new ThemableColor(Colors.Orange);
-
-// Compare column J and column E for each row, written relative to row 1 (the top-left cell of the range):
-FormulaRule rule = new FormulaRule("=$J1<>$E1", formatting);
-
-ConditionalFormatting conditionalFormatting = new ConditionalFormatting(rule);
-
-// Apply the rule to column 10 (index 9) for rows 1 to 100:
-worksheet.Cells[0, 9, 99, 9].AddConditionalFormatting(conditionalFormatting);
-```
+<snippet id='libraries-spread-features-conditional-formatting-formularule'/>
 
 ### Working with IRangeValue
 
