@@ -93,6 +93,16 @@ The following image shows the result of the nested MailMerge operation:
 
 ![Nested mail merge result](images/nested-mail-merge-result.png)
 
+## Troubleshooting
+
+### NullReferenceException with Newlines in Table Group Cells
+
+When you execute a nested `MailMerge` over a table group (`TableStart:GroupName` and `TableEnd:GroupName`) that spans multiple rows, multiple paragraphs or hard newlines (`\r\n`) in intermediate cells can cause a `NullReferenceException`.
+
+**Workaround:**
+* Use soft line breaks (Shift+Enter in Word or `\v` / `BreakType.LineBreak` in code) instead of hard paragraph breaks (`\r\n`) inside intermediate cells so the cell content remains within a single `Paragraph`.
+* Alternatively, place multi-paragraph merge fields in the last row of the table group, or split the content across separate single-paragraph table rows.
+
 ## See Also
 
 * [MailMerge]({%slug radwordsprocessing-editing-mail-merge%})
