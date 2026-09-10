@@ -39,13 +39,13 @@ When you create a document with **RadSpreadStreamProcessing**, the order in whic
 
 **Example 1** shows how to create a simple document.
 
-**Example 1: Create an XLSX document with skipped rows and columns, formatted cells, and a merged cell range**
+#### __Example 1: Create an XLSX Document with Skipped Rows and Columns__
 
 <snippet id='codeblock-dkn'/>
 
 **Figure 1** shows the result of executing the code from **Example 1**.
 
-#### Figure 1: The document created in Example 1
+**Figure 1: The document created in Example 1**
 ![Telerik RadSpreadStreamProcessing worksheet showing a merged centered cell, a numeric value, and a bold date value created through the streaming exporter](images/SpreadStreamProcessing-GettingStarted_01.png)
 
 
@@ -66,13 +66,13 @@ When you read a document with **RadSpreadStreamProcessing**, the order of parsin
 
 **Example 2** demonstrates how to read the data from an existing document.
 
-**Example 2: Import an XLSX document and iterate through its worksheets, rows, and cells**
+#### __Example 2: Import an XLSX Document and Read Its Cells__
 
 <snippet id='codeblock-dko'/>
 
 For more complete examples, go to the [Developer Focused Examples]({%slug radspreadstreamprocessing-sdk-examples%}) section of the library.
 
-## See Also 
+## See Also
 
 * [Using Telerik Document Processing First Steps]({%slug getting-started-first-steps%})
 * [Rows]({%slug radspreadstreamprocessing-model-rows%})

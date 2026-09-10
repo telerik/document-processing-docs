@@ -10,12 +10,12 @@ position: 1
 
 # Using OcrFormatProvider
 
-| Minimum version | Q1 2025 |
+| Minimum Version | Q1 2025 |
 |----|----|
 
 Use `OcrFormatProvider` to recognize text in scanned images and turn that image content into searchable PDF content. The provider imports an image, runs an Optical Character Recognition (OCR) engine over it, and returns a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) that you can place in a PDF document.
 
-By default, `OcrFormatProvider` works with `TesseractOcrProvider`, which uses the third-party [Tesseract OCR engine](https://github.com/tesseract-ocr/tesseract). If the default provider does not match your platform or deployment model, you can plug in a [custom OCR provider implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}) instead.
+The most common setup pairs `OcrFormatProvider` with `TesseractOcrProvider`, which uses the third-party [Tesseract OCR engine](https://github.com/tesseract-ocr/tesseract). If that provider does not match your platform or deployment model, plug in a [custom OCR provider implementation]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}) instead.
 
 >note
 >
@@ -33,7 +33,7 @@ Use this article when you need to:
 
 ## Supported Platforms
 
-The default `TesseractOcrProvider` implementation is supported on **Windows** and **Linux**. If your application runs on a platform where the default Tesseract integration is unavailable, use a [custom OCR provider]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}).
+`OcrFormatProvider` itself is provider-based and platform-agnostic. The Telerik-supplied `TesseractOcrProvider` implementation is supported on **Windows** and **Linux**. If your application runs on a platform where the Tesseract integration is unavailable, use a [custom OCR provider]({%slug radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider%}).
 
 For **Blazor WebAssembly**, do not assume that the default Tesseract-based provider is available. Review the package guidance in [OCR prerequisites]({%slug radpdfprocessing-formats-and-conversion-ocr-prerequisites%}) and use a custom provider when your deployment model cannot use the default native Tesseract integration.
 
@@ -70,8 +70,8 @@ Use these members to control how the default OCR engine behaves:
 | `TesseractOcrProvider(string dataPath)` | Initializes the provider with the path to the parent directory that contains the `tessdata` folder. |
 | `LanguageCodes` | Sets the language codes for the Tesseract OCR engine. The default value is `eng`. Download the required trained data files from the [Tesseract tessdata repository](https://github.com/tesseract-ocr/tessdata). |
 | `CorrectVerticalPosition` | Tries to correct the vertical position of the recognized text. This option is not available in .NET Framework. |
-| `DataPath` | Gets or sets the path to the parent directory that contains the `tessdata` folder. |
-| `ParseLevel` | Controls whether OCR parsing returns text by line or by word through `OcrParseLevel.Line` or `OcrParseLevel.Word`. |
+| `DataPath` | Gets or sets the path to the parent directory that contains the `tessdata` folder. The provider ignores this value when the `TESSDATA_PREFIX` environment variable is set. |
+| `ParseLevel` | Controls whether OCR parsing returns text by line or by word through `OcrParseLevel.Line` or `OcrParseLevel.Word`. The default value is `OcrParseLevel.Line`. |
 | `GetAllTextFromImage` | Extracts all recognized text from an image and returns it as a single string. |
 | `GetTextFromImage` | Extracts recognized text and returns words together with their bounding rectangles. |
 

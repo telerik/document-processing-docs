@@ -10,18 +10,16 @@ position: 0
 
 # What is a Row? What is a Column?
 
-Rows and columns are the structural units of every RadSpreadProcessing worksheet. Use this article to understand how rows and columns are identified, what sizing options they provide, and which related APIs help you work with them in code.
+Rows and columns are the structural units of every **RadSpreadProcessing** worksheet. Use this article to understand how rows and columns are identified, what sizing options they provide, and which related APIs help you work with them in code.
 
 ## Row and Column Addressing
 
-A worksheet organizes cells into rows and columns. **Rows** are groups of cells on the same horizontal line. Each row is identified by a number - the first row has index 1 and the last row is 1048576.
+A worksheet organizes cells into rows and columns. **Rows** are groups of cells on the same horizontal line. Excel addresses rows from 1 through 1,048,576. The row and column indexes that the API uses are zero-based.
 
-**Columns** are groups of cells stacked on the same vertical line. Each column is identified by a letter or combination of letters - the first column is A and the last column is XFD.
+**Columns** are groups of cells stacked on the same vertical line. Excel addresses columns from A through XFD.
 
-A cell sits at the intersection of one row and one column, and its address combines the column letter and row number. For example, `B3` refers to the cell in column B, row 3.
+A cell sits at the intersection of one row and one column, and its address combines the column letter and row number. For example, `B3` refers to the cell in column B, row 3. In the API, `CellIndex(2, 1)` refers to the same cell because the row and column indexes start at zero.
 
-Similarly, a **column** is a group of cells that are vertically stacked and appear on the same **vertical line**. Columns in `RadSpreadProcessing` are identified by a letter or a combination of letters. For example, the first column is called A, the second is B, and the last column is XFD.
-        
 ![Spreadsheet example with row 9 highlighted horizontally and column B highlighted vertically to illustrate how rows and columns are identified](images/RowAndColumn.png)
 
 ## Row Height

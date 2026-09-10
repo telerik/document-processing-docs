@@ -10,11 +10,7 @@ position: 1
 
 # RadFixedDocument
 
-`RadFixedDocument` is a core class in the Telerik Document Processing libraries, specifically within the PdfProcessing model.
-
-* [What Is RadFixedDocument](#what-is-radfixeddocument)
-* [Operating with RadFixedDocument](#operating-with-radfixeddocument)
-* [Document Information](#document-information)
+`RadFixedDocument` is the root object in the **RadPdfProcessing** document model. It contains pages and document-level objects such as annotations, form fields, bookmarks, and metadata.
 
 ## What Is RadFixedDocument
 
@@ -53,7 +49,7 @@ position: 1
 |`MergedJavaScriptNameResolving`|Occurs when trying to resolve conflicts between the JavaScript names while merging `RadFixedDocument` instances.|
 
 
-`RadFixedDocument` is typically used when:
+Use `RadFixedDocument` when you need to:
 
 * Creating a PDF document from scratch programmatically. A complete example is available in the [PdfProcessing Basic Usage demo](https://demos.telerik.com/document-processing/pdfprocessing).
 * Extracting or manipulating content from existing PDF documents. First import any existing PDF documents with the help of the [PdfFormatProvider]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
@@ -65,7 +61,7 @@ position: 1
 
 <a name="example1"><a/>
 
-**Example 1: Create RadFixedDocument**
+#### __Example 1: Create a RadFixedDocument__
 
 <snippet id='pdf-create-fixed-document'/>
 
@@ -75,7 +71,7 @@ You can execute different actions with the help of `RadFixedDocument`. For examp
 
 **Example 2** adds a page to the document created in [**Example 1**](#example1).
 
-**Example 2: Add Page to RadFixedDocument**
+#### __Example 2: Add a page to a RadFixedDocument__
 
 <snippet id='pdf-create-fixed-page'/>
 
@@ -84,20 +80,20 @@ Alternatively, you can create a new `RadFixedPage` and add it to the `Pages` col
 
 **Example 3** creates a page and adds it to the document created in [**Example 1**](#example1).
 
-**Example 3: Create and Add a Page to RadFixedDocument**
+#### __Example 3: Create and add a page to a RadFixedDocument__
 
 <snippet id='pdf-add-fixed-page'/>
 
 **Example 4** shows how to obtain a copy of a `RadFixedDocument`.
 
-**Example 4: Clone a Document**
+#### __Example 4: Clone a document__
 
 <snippet id='pdf-clone-document'/>
 
 
 You can merge PDF documents with the `Merge()` method of `RadFixedDocument`. This method clones the source document and appends it to the current instance of `RadFixedDocument`.
 
-**Example 5: Merge Documents**
+#### __Example 5: Merge documents__
 
 <snippet id='pdf-merge-fixed-documents'/>
 
@@ -109,7 +105,6 @@ The code from **Example 5** merges the document created in [**Example 1**](#exam
 
 ## See Also
 
-* [RadFixedDocument API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.RadFixedDocument.html)
 * [Model]({%slug radpdfprocessing-model-general-information%})
 * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
 * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})

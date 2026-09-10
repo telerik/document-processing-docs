@@ -3,28 +3,14 @@ title: Get, Set and Clear Cell Properties
 description: Learn how to get, set, and clear cell properties such as values, borders, fill, format, and styles in RadSpreadProcessing.
 page_title: Get, Set and Clear Cell Properties
 slug: radspreadprocessing-working-with-cells-get-set-clear-properties
-tags: cells, spreadsheet, radspreadprocessing, properties, formatting, values, borders, fill, xlsx, spread, workbook
+tags: cells, spreadsheet, radspreadprocessing, properties, formatting, values, borders, fill, xlsx, spread, workbook, themablefontfamily, fontfamily, font
 published: True
 position: 4
 ---
 
 # Get, Set and Clear Cell Properties
 
-
-
 Cells are the atomic parts of a worksheet and its basic data units. Each cell can be assigned a value, borders, fill, format, style, and much more. The following sections describe the properties offered by cells and demonstrate how to retrieve and change them.
-
-* [Get, Set and Clear Methods](#get,-set-and-clear-methods)
-
-* [Cell Properties](#cell-properties)
-
-* [Value Property](#value-property)
-
-* [Borders Property](#borders-property)
-
-* [Fill Property](#fill-property)
-
-* [Indent Property](#indent-property)
 
 ## Get, Set and Clear Methods
 
@@ -35,8 +21,6 @@ To access cell properties, create a `CellSelection` object that contains the reg
 **Example 1: Create a CellSelection for the range A1:F6**
 
 <snippet id='codeblock-cqx'/>
-
-
 
 Once you have a `CellSelection` instance, you can set and retrieve the properties of its cells. Each property is manipulated through three methods that get, set, and clear the value of the property, respectively. Typically, the set methods take a single argument, which indicates the value to be set. Similarly, the clear methods have no parameters and reset the properties to their default values. The get methods, however, require more attention.
 
@@ -122,8 +106,6 @@ The `GetValue()` method retrieves the value of the property and returns an insta
 
 <snippet id='codeblock-cqz'/>
 
-
-
 As the document model supports different types of cell values, the `CellSelection` class offers multiple overloads of the `SetValue()` method that allow you to produce different types of values. For example, if you choose the method that accepts a double instance, the `Value` of the cell is an instance of `NumberCellValue`. The `SetValue()` method has three more overloads that take `DateTime`, string, and `ICellValue`, respectively.
 
 **Example 5** demonstrates how to set the value of a given selection.
@@ -131,8 +113,6 @@ As the document model supports different types of cell values, the `CellSelectio
 **Example 5: Set the selected cell to DateTime, number, copied value, text, and formula inputs**
 
 <snippet id='codeblock-cra'/>
-
-
 
 ## Borders Property
 
@@ -143,8 +123,6 @@ The `Borders` property uses a `CellBorders` object for getting and setting its p
 **Example 6: Apply dotted purple borders to one region and multi-edge blue and purple borders to another**
 
 <snippet id='codeblock-crb'/>
-
-
 
 The result of **Example 6** is demonstrated in the following figure.
 
@@ -163,8 +141,6 @@ As its name suggests, the `PatternFill` object fills the background of a region 
 
 <snippet id='codeblock-crc'/>
 
-
-
 The result of **Example 7** is illustrated in the following figure.
 
 #### Figure 2: Applied PatternFill
@@ -177,8 +153,6 @@ The `GradientFill` sets the background of a region of cells to a gradual blendin
 **Example 8: Apply a horizontal green gradient fill to the range A1:F1**
 
 <snippet id='codeblock-crd'/>
-
-
 
 The result of **Example 8** is illustrated in the following figure.
 
@@ -194,11 +168,25 @@ In addition to the `GetIndent()`, `SetIndent()`, and `ClearIndent()` methods, `C
 
 <snippet id='codeblock-cre'/>
 
+## FontFamily Property
 
+The `FontFamily` property uses an instance of `ThemableFontFamily` to retrieve and change the font of worksheet cells. `ThemableFontFamily` allows you to set either a static, explicit font family or a dynamic font family that adapts when the workbook theme changes.
+
+>note In cross-platform applications (such as **.NET Core**, **.NET 6+**, and **Blazor**), `ThemableFontFamily` resides in the `Telerik.Documents.Common.Model` namespace (included in the `Telerik.Documents.Core` package). In .NET Framework applications, it is in `Telerik.Documents.Spreadsheet.Model`.
+
+You can initialize `ThemableFontFamily` using:
+* A `string` containing the font name (for example, `"Arial"`, `"Calibri"`).
+* A `FontFamily` instance (`Telerik.Documents.Core.Fonts.FontFamily` in cross-platform, or `System.Windows.Media.FontFamily` in WPF).
+* A `ThemeFontType` enum value (`ThemeFontType.Major` or `ThemeFontType.Minor`) to bind the font to the current document theme.
+
+The following example demonstrates how to set and retrieve cell font families:
+
+<snippet id='libraries-spread-working-with-cells-get-set-clear-fontfamily'/>
 
 ## See Also
 
 * [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
 * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})
+* [Document Themes]({%slug radspreadprocessing-features-styling-document-themes%})
 * [PatternType Enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.PatternType.html)
 * [GradientType Enumeration](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.GradientType.html)

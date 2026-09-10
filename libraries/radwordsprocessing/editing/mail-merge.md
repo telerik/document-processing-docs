@@ -1,6 +1,6 @@
 ---
 title: Mail Merge
-description: Learn how to use mail merge in RadWordsProcessing to produce personalized documents from a template with merge fields and a data source.
+description: Learn how to use mail merge in RadWordsProcessing to create personalized documents from a template, merge fields, and a data source.
 page_title: Mail Merge
 slug: radwordsprocessing-editing-mail-merge
 tags: mail, merge, word, flow, docx, document, template, fields, data, source, personalization, editing
@@ -10,11 +10,11 @@ position: 4
 
 # Mail Merge
 
-[Mail merge](https://en.wikipedia.org/wiki/Mail_merge) is a feature that produces personalized documents from a template holding fixed content and variables. The variables are called [Merge Fields]({%slug radwordsprocessing-concepts-merge-field%}) and are replaced through the merge process with content from a specified data source.
+Mail merge produces personalized documents from a template that contains fixed content and placeholders. The placeholders are [merge fields]({%slug radwordsprocessing-concepts-merge-field%}). During the merge process, `RadWordsProcessing` replaces each placeholder with content from a data source.
 
 ## Inserting Merge Fields
 
-Merge fields are a type of [field element described in the Fields article]({%slug radwordsprocessing-concepts-fields%}) and can be added in a template document through the `InsertField()` method of [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method requires the code representation of the field and the result which is shown in the template before the document is mail-merged.
+Merge fields are [field elements]({%slug radwordsprocessing-concepts-fields%}) that you can add to a template document through the `InsertField()` method of [`RadFlowDocumentEditor`]({%slug radwordsprocessing-editing-radflowdocumenteditor%}). The method requires the field code and the result that is shown in the template before you run mail merge.
 
 The code snippet in **Example 1** shows how to initialize a `RadFlowDocumentEditor` instance and insert a merge field.
 
@@ -22,7 +22,7 @@ The code snippet in **Example 1** shows how to initialize a `RadFlowDocumentEdit
 
 <snippet id='codeblock-bu'/>
 
-Additionally, you can add a field to a `Paragraph` manually by creating a `FieldInfo` instance and placing its start, code, separator, result, and end in the block. **Example 2** shows the manual approach for adding a merge field.
+You can also add a field to a `Paragraph` manually. Create a `FieldInfo` instance, then place its start, code, separator, result, and end in the block. **Example 2** shows this approach.
 
 **Example 2: Manually construct a MERGEFIELD for LastName with FieldInfo**
 
@@ -30,9 +30,9 @@ Additionally, you can add a field to a `Paragraph` manually by creating a `Field
 
 ## Performing Mail Merge
 
-You can perform mail merge over a template document containing merge fields. For this action, use the `MailMerge()` method of [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%}). The method accepts a collection of elements as a parameter.
+To perform mail merge, call the `MailMerge()` method of [`RadFlowDocument`]({%slug radwordsprocessing-model-radflowdocument%}). The method accepts an `IEnumerable` collection of data records.
 
-During the operation, each `MergeField` is replaced with the corresponding information from the data source record in a new `RadFlowDocument` instance. Every subsequent entry in the data source is appended to a single resulting document which is returned by the method. The original template stays unmodified.
+During the operation, each `MergeField` is replaced with the corresponding value from the current data record in a new `RadFlowDocument` instance. If the data source contains multiple records, the method appends each result to the returned document. The original template remains unchanged.
 
 **Example 3** shows a sample data source.
 
@@ -48,16 +48,16 @@ During the operation, each `MergeField` is replaced with the corresponding infor
 
 ## Nested Mail Merge
 
-The nested mail merge feature is supported starting with R1 2022. It allows you to merge data sources that contain nested data. For example, your business object can contain a list of other objects and this feature allows you to access the properties of the underlying objects. To use the underlying objects, you need to declare a group. The following group tags are supported:
+The nested mail merge feature is available starting with R1 2022. Use it when your data source contains nested data. For example, a business object can contain a collection of child objects, and nested mail merge lets you access their properties. To reference the child objects, declare one of these group tag pairs:
 
-* BeginGroup/EndGroup
-* TableStart/TableEnd
-* RangeStart/RangeEnd
-* GroupStart/GroupEnd
+* `BeginGroup`/`EndGroup`
+* `TableStart`/`TableEnd`
+* `RangeStart`/`RangeEnd`
+* `GroupStart`/`GroupEnd`
 
-All tag pairs work equally and more than one option exists to improve the readability of the documents.
+All tag pairs work the same way. Multiple options exist to improve document readability.
 
-> **Exception**: When a table row has only one cell, using the TableStart/TableEnd tags over the whole content of that cell creates a new row for each value. Every other pair of tags (BeginGroup/EndGroup, RangeStart/RangeEnd, GroupStart/GroupEnd) are interchangeable and put the values on the same row inside that cell.
+>important When a table row has only one cell, using `TableStart`/`TableEnd` around the whole cell content creates a new row for each value. The other tag pairs keep the values on the same row inside that cell.
 
 >caption A single cell (spanning the whole row) with TableStart/TableEnd tags:
 
@@ -67,21 +67,21 @@ All tag pairs work equally and more than one option exists to improve the readab
 
 ![Telerik RadWordsProcessing nested mail merge example showing RangeStart and RangeEnd tags in a single table cell that expand into one row with multiple item values](images/RadWordsProcessing_MailMerge_SingleCellRow_02.png)
 
-The following example demonstrates how to use nested mail merge.
+The following example shows how to use nested mail merge.
 
-First, define a data source that contains an `IEnumerable` of objects.
+First, define a data source that contains an `IEnumerable` collection of objects.
 
 **Example 5: Define a nested mail-merge data source with teams and player collections**
 
 <snippet id='codeblock-by'/>
 
-Then, add the fields using the specific supported names. In this example, the fields are added to the table using the TableStart/TableEnd tags. This is not mandatory and you can use a tag of your choosing.
+Then, add the fields by using one of the supported group tag pairs. In this example, the fields are added to the table with `TableStart`/`TableEnd`. This is not required, and you can use any supported tag pair.
 
 **Example 6: Build a table-based nested mail-merge template and merge team and player data**
 
 <snippet id='codeblock-bz'/>
 
-### One Row vs Multiline Mail Merge
+### Single-Row and Multiline Mail Merge
 
 With the nested mail merge feature, you can add all items to a single line. Add the group and regular fields to a single paragraph.
 

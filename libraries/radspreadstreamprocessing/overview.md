@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: RadSpreadStreamProcessing is a high-performance .NET library for generating large XLSX and CSV spreadsheet documents with minimal memory footprint.
+description: Learn about RadSpreadStreamProcessing, the Telerik Document Processing library for importing and exporting large XLSX and CSV spreadsheet files with a low memory footprint.
 page_title: Overview
 slug: radspreadstreamprocessing-overview
 tags: spread, stream, processing, spreadsheet, xlsx, csv, streaming, export, performance, memory
@@ -10,81 +10,73 @@ position: 0
 
 # Overview
 
-The Telerik SpreadStream Processing Library allows you to generate large spreadsheet documents with great performance and minimal memory footprint in your .NET applications. It is specialized for fast generation of large (even 1M+ rows) XLSX and CSV documents. The document model has no external dependencies on third-party software or UI. You can process Microsoft Excel supported documents without having Microsoft Excel, Microsoft Office, or any other external library installed on the client or server.
+Telerik Document Processing includes the **RadSpreadStreamProcessing** library for importing and exporting large spreadsheet files with a low memory footprint. Use the `SpreadExporter` and `SpreadImporter` APIs to process XLSX and CSV documents sequentially. The library has no dependency on Microsoft Excel, Microsoft Office, or third-party UI components.
 
 ![Telerik RadSpreadStreamProcessing overview diagram showing streaming spreadsheet processing between CSV input and XLSX output](images/spread-stream-processing-overview.jpg)  
 
-To skip this introductory article and directly start using SpreadStreamProcessing, see the [Getting Started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%}) topic.
+To skip this introductory article, see [how to get started with RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%}).
 
->note If you still do not have Telerik Document Processing installed, check the [First Steps]({%slug getting-started-first-steps%}) topic to learn how you can get the packages through the different suites with Telerik controls.
+>note If you do not yet have Telerik Document Processing installed, see [the first steps for installation]({%slug getting-started-first-steps%}).
 
 ![Telerik RadSpreadStreamProcessing worksheet example showing an Orders Log report with filters, shipping values, discounts, and color-coded status cells](images/SpreadStreamProcessing-Overview_01.png)
 
->tip You can find the code example from the previous image in the [SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/SpreadStreamProcessing/GenerateDocument). This repository contains many examples that cover all Document Processing libraries.
+>tip You can find the code sample from the previous image in the [Document Processing SDK repository on GitHub](https://github.com/telerik/document-processing-sdk/tree/master/SpreadStreamProcessing/GenerateDocument).
 
 
 ## What Is Spread Streaming
 
-Spread streaming is a document processing paradigm that allows you to create or read large spreadsheet documents with great performance and minimal memory footprint.
+Spread streaming is a document-processing approach that lets you create or read large spreadsheet documents with high performance and low memory use.
 
-The key for the memory efficiency is that the spread streaming library writes the spreadsheet content directly to a stream without creating and preserving the spreadsheet document model in memory. Each time an exporter object is disposed, the set values are written into the stream. This allows you to create large documents with excellent performance.
+The library saves memory by writing spreadsheet content directly to a stream instead of keeping a full workbook model in memory. Exporters write content as you create worksheets, rows, and cells, and finalize the file when you dispose them.
 
-While reading, `RadSpreadStreamProcessing` parses only the required chunk of information. This ensures minimal use of application resources.
+During import, `RadSpreadStreamProcessing` parses only the required data chunk. This approach helps keep CPU and memory use low.
 
 ## Key Features
 
-The following list describes the features you can take advantage of:
+The library supports the following features:
 
-* Specialized for fast generation of large (even 1M+ rows) XLSX and CSV documents.
-
-* Create a document from scratch or append new sheets to an existing document.
-
-* Faster than SpreadProcessing and with minimal memory footprint.
-
-* [Export to XLSX or CSV files]({%slug radspreadstreamprocessing-export%}).
-
-* [Import from XLSX or CSV files]({%slug radspreadstreamprocessing-import%}).
-
-* Write directly into a stream, or parse only required data.
+* Generate large XLSX and CSV documents (1M+ rows).
+* Create documents from scratch, or append worksheets to existing workbooks.
+* [Export to XLSX and CSV files]({%slug radspreadstreamprocessing-export%}).
+* [Import from XLSX and CSV files]({%slug radspreadstreamprocessing-import%}).
+* Write directly to a stream, or read only the required data.
+* Use less memory than [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) for large-file scenarios.
 
 * **Append** new worksheets to an existing workbook.
 
-* **Grouping**: Organize data in sections and show or hide the currently relevant chunks.
+* **Grouping**: Organize data in sections, and show or hide the relevant ranges.
+* Hidden [rows]({%slug radspreadstreamprocessing-model-rows%}) and [columns]({%slug radspreadstreamprocessing-model-columns%}): Set the hidden state of each row or column.
+* [AutoFilter]({%slug radspreadstreamprocessing-features-autofilter%}): Show or hide rows based on column values. `AutoFilter` supports value, custom comparison, top or bottom N, and dynamic date filters.
+* [Cell formatting]({%slug radspreadstreamprocessing-model-cells%}#set-a-format): Apply the required appearance to cells.
+* [Cell styles]({%slug radspreadstreamprocessing-features-styling-cell-styles%}): Apply multiple format options in one step and keep formatting consistent.
+* [Merge cells]({%slug radspreadstreamprocessing-model-cells%}#merge-cells): Merge adjacent cells across multiple rows and columns.
 
-* **Hidden [rows]({%slug radspreadstreamprocessing-model-rows%}) and [columns]({%slug radspreadstreamprocessing-model-columns%})**: The API allows you to set the hidden state of each row or column.
+You can also control the view state of a sheet:
 
-* [**AutoFilter**]({%slug radspreadstreamprocessing-features-autofilter%}): Set AutoFilters to show or hide rows based on column values. Supports value, custom comparison, top/bottom N, and dynamic date filters.
-
-* [**Cell formatting**]({%slug radspreadstreamprocessing-model-cells%}#set-a-format): Several properties enable you to apply the desired look to a cell.
-
-* [**Cell styles**]({%slug radspreadstreamprocessing-features-styling-cell-styles%}): Cell styles allow you to apply multiple format options in one step and achieve consistency in cell formatting.
-
-* [**Merge cells**]({%slug radspreadstreamprocessing-model-cells%}#merge-cells): Merge two or more adjacent cells into a single cell that spans over multiple rows and columns.
-
-* **Controlling the view state of a sheet:**
-	* [Setting scale factor]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#scale-a-document)
-	* [Control over the selection and the active cell]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#add-selection-to-a-document)
-	* [Show/hide gridlines]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#hide-grid-lines-and-row-or-column-headers)
-	* [Show/hide row and column headers]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#ide-grid-lines-and-row-or-column-headers)
-	* [Freezing panes]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#freeze-panes): Keep part of the worksheet always visible while scrolling.
-	* [Changing the first visible cell]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#change-the-first-visible-cell): Show a particular part of the sheet to the user when opening the document in a viewer.
-	
+* [Set the scale factor]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#scale-a-document).
+* [Control the selection and active cell]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#add-selection-to-a-document).
+* [Show or hide gridlines]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#hide-grid-lines-and-row-or-column-headers).
+* [Show or hide row and column headers]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#hide-grid-lines-and-row-or-column-headers).
+* [Freeze panes]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#freeze-panes) to keep part of the worksheet visible while scrolling.
+* [Change the first visible cell]({%slug radspreadstreamprocessing-features-worksheetviewexporter%}#change-the-first-visible-cell) to control the part of the sheet that appears when a viewer opens the document.
 
 ## RadSpreadStreamProcessing versus RadSpreadProcessing
 
 The main differences between the two spreadsheet processing libraries include:
 
-* `RadSpreadStreamProcessing` writes directly into a stream, while [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) creates models for the elements in the document. This is why the spread streaming library uses significantly less memory than `RadSpreadProcessing`.
-* `RadSpreadStreamProcessing` does not perform any formula or other layout-related calculations, which makes its file generation performance much better compared to `RadSpreadProcessing`.
+* `RadSpreadStreamProcessing` writes directly to a stream, while [RadSpreadProcessing]({%slug radspreadprocessing-overview%}) builds an in-memory document model. As a result, the streaming library uses much less memory.
+* **RadSpreadStreamProcessing** does not run formula or layout-related calculations, so file generation is faster than with **RadSpreadProcessing**.
 
 ## When to Use RadSpreadStreamProcessing
 
-You can use the `RadSpreadStreamProcessing` library to create or read large amounts of data with a low memory footprint and great performance. You can also append data to an already existing document stream. The generated document can be exported directly to a file on the file system or to a stream (for example, to send it to the client).
+Use the `RadSpreadStreamProcessing` library when you need to create or read large datasets with low memory use. You can also append data to an existing document stream. Export the generated document directly to a file or stream, for example, to send it to a client.
 
 ## Online Demos
 
+The following demos show common `RadSpreadStreamProcessing` scenarios:
+
 | Demo | Description |
-|------|-------------|
+|---|---|
 | [SpreadStreamProcessing Large Document Export](https://demos.telerik.com/document-processing/spreadstreamprocessing) | With the SpreadStreamProcessing APIs, you can generate large XLSX and CSV files. |
 | [SpreadStreamProcessing Import Document](https://demos.telerik.com/document-processing/spreadstreamprocessing/import_document) | This example shows how you can retrieve data from XLSX or CSV files using the SpreadStreamProcessing library. |
 

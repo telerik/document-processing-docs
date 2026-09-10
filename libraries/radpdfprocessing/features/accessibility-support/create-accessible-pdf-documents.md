@@ -1,6 +1,6 @@
 ---
 title: Creating Accessible PDF Documents
-description: Learn how to generate an accessible PDF document using Telerik Document Processing Libraries.
+description: Learn how to create accessible PDF documents with RadPdfProcessing by using PDF/A or PDF/UA compliance, tagging strategies, and structure trees.
 page_title: How to Create Accessible PDF Documents with RadPdfProcessing
 slug: create-accessible-pdf-documents
 tags: accessibility, pdf, tagged, marked, content, radpdfprocessing
@@ -14,19 +14,19 @@ position: 1
 |----|----|
 |Related Feature:|[Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})|
 
-The following example shows how to generate an accessible PDF document using Telerik Document Processing. 
+Use `RadPdfProcessing` of Telerik Document Processing to generate accessible PDF documents. This article shows how to export accessible output by using compliance settings, tagging strategies, and structure trees.
 
-To take advantage of the accessibility feature, the document must be **PDF/A-1a**, **PDF/A-2a**, **PDF/A-3a**, or **PDF/UA-1** compliant. To achieve this, set the [PdfComplianceLevel]({%slug radpdfprocessing-concepts-comply-with-pdfa-standard%}#accessibility-compliance) and [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}) properties of the `PdfFormatProvider` `PdfExportSettings` accordingly.
+To export accessible output, the document must target **PDF/A-1a**, **PDF/A-2a**, **PDF/A-3a**, or **PDF/UA-1** compliance. To achieve this, configure `PdfFormatProvider.ExportSettings.ComplianceLevel` and `PdfFormatProvider.ExportSettings.TaggingStrategy` as described in [PdfComplianceLevel]({%slug radpdfprocessing-concepts-comply-with-pdfa-standard%}#accessibility-compliance) and [Tagged PDF]({%slug radpdfprocessing-model-tagged-pdf%}).
 
-`RadFixedDocument` offers a constructor that allows you to specify the `AutoTag` property value which is `false` by default. You can choose whether to build the [StructureTree]({%slug radpdfprocessing-model-structure-tree%}) from scratch or leave the library to auto-tag the elements.
+`RadFixedDocument` provides a constructor overload with an `autoTag` parameter. The `AutoTag` property is `false` by default. You can either build the `StructureTree` yourself or let the library tag elements automatically.
 
->note Refer to the [PdfProcessing Accessibility Demo](https://demos.telerik.com/document-processing/pdfprocessing/accessibility) which shows how to create accessible PDF documents programmatically, ensuring compliance with standards such as PDF/UA by supporting features like tagged content, document structure, and metadata. Downloaded documents adhere to the selected compliance level.
+>note Refer to the [PdfProcessing Accessibility Demo](https://demos.telerik.com/document-processing/pdfprocessing/accessibility). It shows how to create accessible PDF documents programmatically and export files that match the selected compliance level.
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
-## Creating Accessible PDF Documents and Building the StructureTree
+## Creating Accessible PDF Documents with an Existing Structure Tree
 
-When exporting the document, specify the [TaggingStrategy]({%slug radpdfprocessing-model-tagged-pdf%}#tagging-strategy) so the document is not tagged automatically and uses the existing StructureTree:
+When you already have a `StructureTree`, export the document with [`TaggingStrategyType.UseExisting`]({%slug radpdfprocessing-model-tagged-pdf%}#tagging-strategy) so the existing structure is preserved:
 
 <snippet id='libraries-pdf-features-accessible-pdf'/>
 
@@ -41,7 +41,7 @@ When exporting the document, specify the [TaggingStrategy]({%slug radpdfprocessi
 
 ## Creating Accessible PDF Documents with Auto-Tagging
 
-The following example shows how to add content to a PDF document and leave the PdfProcessing engine to build the [StructureTree]({%slug radpdfprocessing-model-structure-tree%}) automatically:
+The following example adds content to a PDF document and lets `RadPdfProcessing` build the `StructureTree` automatically by using `TaggingStrategyType.Build`:
 
 <snippet id='libraries-pdf-features-accessible-pdf-with-auto-tagging'/>
 

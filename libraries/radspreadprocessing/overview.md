@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: Learn about RadSpreadProcessing, a cross-platform library for creating, importing, and exporting XLSX, CSV, TXT, and PDF spreadsheets.
+description: Learn about RadSpreadProcessing, the Telerik Document Processing library for creating, importing, exporting, and converting XLSX, XLSM, XLS, CSV, TXT, JSON, and PDF spreadsheets.
 page_title: RadSpreadProcessing Library Overview
 slug: radspreadprocessing-overview
 tags: spread, processing, spreadsheet, excel, xlsx, csv, pdf, import, export
@@ -10,15 +10,15 @@ position: 0
 
 # Overview
 
-**Telerik SpreadProcessing Library** allows you to generate and convert documents to XLSX, CSV, TXT, and PDF. **RadSpreadProcessing** ships with built-in support for the computation of more than 200 functions, like SUM, AVERAGE, and more. You can create spreadsheets from scratch, modify existing documents or convert between the most common spreadsheet formats. You can save the generated workbook to a local file, stream, or stream it to the client browser.
+Telerik Document Processing includes the **RadSpreadProcessing** library for creating, importing, exporting, and converting spreadsheet documents. **RadSpreadProcessing** supports XLSX, XLSM, XLS, CSV, TXT, and JSON files, as well as PDF export. It includes more than 200 built-in functions, such as `SUM` and `AVERAGE`. Create workbooks from scratch, modify existing files, convert between common spreadsheet formats, and save the result to a file or stream.
 
-![Telerik Document Processing RadSpreadProcessing document conversion between XLSX, CSV, and TXT formats](images/spread-processing-overview.jpg) 
+![Telerik Document Processing RadSpreadProcessing document conversion between XLSX, CSV, and TXT formats](images/spread-processing-overview.jpg)
 
-This article lists the most popular features of the library. To start using RadSpreadProcessing right away, see [Getting Started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%}).
+This article lists the most popular features of the library. To start right away, see [how to get started with RadSpreadProcessing]({%slug radspreadprocessing-getting-started%}).
 
 ![Telerik Document Processing RadSpreadProcessing workbook with a monthly report worksheet and product quantity data](images/RadSpreadProcessing_Overview_01.png)
 
->note If you still do not have **Telerik Document Processing installed**, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how to obtain the packages through the different suites with Telerik controls.
+>note If you do not yet have Telerik Document Processing installed, see [the first steps for installation]({%slug getting-started-first-steps%}).
 
 ## Key Features
 
@@ -26,54 +26,58 @@ The following table describes the most popular features of the `RadSpreadProcess
 
 | Feature | Description |
 |---------|-------------|
-| [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | API for insertion, positioning and deletion of images in worksheets. Starting with Q3 2024, RadSpreadProcessing provides support for SVG FormSource (vector graphics image format). |
-| [**Charts**]({%slug radspreadprocessing-features-charts%}) | Add, remove and manipulate chart objects in your spreadsheet documents. |
-| [**Conditional Formatting**]({%slug radspreadprocessing-features-conditional-formatting%}) | Make it easy to analyze data, find critical issues, patterns and trends by representing the data inside in a user-friendly manner. |
-| [**Hyperlinks**]({%slug radspreadprocessing-features-hyperlink%}) | The API enables you to add, remove, edit and search for hyperlinks in the worksheets of the document. |
-| [**Workbook Protection**]({%slug radspreadprocessing-features-protection-workbook%}) | Prevents the users from modifying the workbook by adding, removing, renaming or reordering sheets. |
-| [**Worksheet protection**]({%slug radspreadprocessing-features-protection-worksheet%}) | Restricts the user from modifying the content and structure of the worksheet. Additionally, the model offers protection options that let you choose a set of commands that will be available to the user when protection is enabled. |
-| [**Grouping**]({%slug radspreadprocessing-features-grouping%}) | Helps you organize data in sections, to be able to show and hide the currently relevant chunks. |
-| [**Formulas**]({%slug radspreadprocessing-features-formulas-general-information%}) | The library comes with more than 200 built-in functions. The API enables you to easily plug custom ones as well. |
-| [**Named ranges**]({%slug radspreadprocessing-features-named-ranges%}) | You can use the named ranges on workbook and worksheet levels. |
-| [**Styling**]({%slug radspreadprocessing-features-styling-cell-styles%}) | You can apply styles to the cells. The API allows you to duplicate one of the predefined styles or create a new one according to your preferences. |
-| [**Theming**]({%slug radspreadprocessing-features-styling-document-themes%}) | The document model comes with predefined themes called Document themes. They enable you to specify colors, fonts and a variety of graphic effects in a document and affect the look and feel of the whole workbook. |
-| [**Resizing**]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%}) | Auto fit or resize rows and columns. |
-| [**Number Formats**]({%slug radspreadprocessing-features-number-formats%}) | Enable you to format the data in the cells so it can be easily readable. The document model exposes the following categories of predefined formats: **General**, **Number**, **Currency**, **Accounting**, **Date**, **Time**, **Percentage**, **Fraction**, **Scientific**, **Text**, **Special** and also allows you to create **custom** formats. |
-| **Copy/Paste** | Add or [copy worksheets]({%slug radspreadprocessing-working-with-worksheets-copy-worksheet%}) within or across workbooks. [Copying and pasting of cells]({%slug radspreadprocessing-features-clipboard-support%}) is also supported. |
-| [**Data Validation**]({%slug radspreadprocessing-features-data-validation%}) | Enables you to control the type of data or the values that users enter into a cell. Different data validation rules are available, including list, number, date, text length or custom rules. |
+| [**Shapes and Images**]({%slug radspreadprocessing-features-shapes-and-images%}) | Insert, position, and delete images in worksheets. **RadSpreadProcessing** also supports SVG `FormSource` content. |
+| [**Charts**]({%slug radspreadprocessing-features-charts%}) | Add, remove, and manipulate chart objects in spreadsheet documents. |
+| [**Conditional Formatting**]({%slug radspreadprocessing-features-conditional-formatting%}) | Analyze data more easily by highlighting values, patterns, and trends. |
+| [**Hyperlinks**]({%slug radspreadprocessing-features-hyperlink%}) | Add, remove, edit, and search for hyperlinks in worksheets. |
+| [**Workbook Protection**]({%slug radspreadprocessing-features-protection-workbook%}) | Prevent users from adding, removing, renaming, or reordering sheets. |
+| [**Worksheet Protection**]({%slug radspreadprocessing-features-protection-worksheet%}) | Restrict changes to worksheet content and structure, and choose which commands remain available. |
+| [**Grouping**]({%slug radspreadprocessing-features-grouping%}) | Organize data in sections, and show or hide the relevant ranges. |
+| [**Formulas**]({%slug radspreadprocessing-features-formulas-general-information%}) | Use more than 200 built-in functions, and register custom functions. |
+| [**Named Ranges**]({%slug radspreadprocessing-features-named-ranges%}) | Use named ranges at the workbook and worksheet levels. |
+| [**Styling**]({%slug radspreadprocessing-features-styling-cell-styles%}) | Apply styles to cells, duplicate predefined styles, or create custom styles. |
+| [**Theming**]({%slug radspreadprocessing-features-styling-document-themes%}) | Apply predefined document themes to control colors, fonts, and graphic effects across the workbook. |
+| [**Resizing**]({%slug radspreadprocessing-working-with-rows-and-columns-resizing%}) | Autofit or resize rows and columns. |
+| [**Number Formats**]({%slug radspreadprocessing-features-number-formats%}) | Format cell data with predefined categories such as **General**, **Number**, **Currency**, **Accounting**, **Date**, **Time**, **Percentage**, **Fraction**, **Scientific**, **Text**, and **Special**, or create custom formats. |
+| **Copy and Paste** | Add or [copy worksheets]({%slug radspreadprocessing-working-with-worksheets-copy-worksheet%}) within or across workbooks. [Copy and paste cells]({%slug radspreadprocessing-features-clipboard-support%}) as well. |
+| [**Data Validation**]({%slug radspreadprocessing-features-data-validation%}) | Control the data or values that users can enter in a cell. Available rules include list, number, date, text length, and custom validation. |
 | [**Filtering**]({%slug radspreadprocessing-features-filtering%}) | Filter worksheet data. |
 | [**Sorting**]({%slug radspreadprocessing-features-sorting%}) | Sort data in the worksheet. |
-| [**Find and replace data**]({%slug radspreadprocessing-features-find-and-replace%}) | Find, find all, replace and replace all functionalities. |
+| [**Find and Replace Data**]({%slug radspreadprocessing-features-find-and-replace%}) | Find, find all, replace, and replace all values. |
 | [**Freeze Panes**]({%slug radspreadprocessing-features-freeze-panes%}) | Keep part of the worksheet visible at all times when scrolling. |
-| [**Hidden rows and columns**]({%slug radspreadprocessing-working-with-rows-and-columns-hiding%}) | The API of the workbook model allows you to set the hidden state of each row or column. |
-| [**Merge and unmerge cells**]({%slug radspreadprocessing-features-merge-unmerge-cells%}) | You have the ability to merge two or more adjacent cells into a single cell that spans over multiple rows and columns. |
+| [**Hidden Rows and Columns**]({%slug radspreadprocessing-working-with-rows-and-columns-hiding%}) | Set the hidden state of each row or column in the workbook model. |
+| [**Merge and Unmerge Cells**]({%slug radspreadprocessing-features-merge-unmerge-cells%}) | Merge adjacent cells into one cell that spans multiple rows and columns, or split them again. |
 | **[Auto fill]({%slug radspreadprocessing-features-fill-data-automatically-repeat-values%}) and [Auto Fill Series]({%slug radspreadprocessing-features-fill-data-automatically-series%})** | Fill cells automatically with data following a specific pattern. |
-| [**Page Setup**]({%slug radspreadprocessing-features-worksheetpagesetup%}) | Set and get header and footer settings and apply various page setup options like paper size, orientation, automatic scaling, margins, breaks, and print settings. |
-| [**Workbook History**]({%slug radspreadprocessing-features-history%}) | The document model provides the possibility to maintain a history stack that tracks all changes to the content of the workbook. Each worksheet has its own history stack. |
-| [**Comments**]({%slug radspreadprocessing-features-comments%}) | You can leave comments and replies on cells, which allows for easier team communication. |
-| [**Notes**]({%slug radspreadprocessing-features-notes%}) | Note important information in your worksheet.|
-|[**GenAI-powered Document Insights**]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})| Extract insights from Excel documents using Large Language Models (LLMs). |
+| [**Page Setup**]({%slug radspreadprocessing-features-worksheetpagesetup%}) | Configure headers, footers, paper size, orientation, scaling, margins, page breaks, and print settings. |
+| [**Workbook History**]({%slug radspreadprocessing-features-history%}) | Track workbook changes through history stacks. Each worksheet maintains its own history stack. |
+| [**Comments**]({%slug radspreadprocessing-features-comments%}) | Add comments and replies to cells for easier collaboration. |
+| [**Notes**]({%slug radspreadprocessing-features-notes%}) | Add notes to cells to highlight important information. |
+| [**GenAI-Powered Document Insights**]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%}) | Extract insights from Excel documents by using large language models (LLMs). |
 
 ## Supported Formats
 
-* Excel formats: [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [**XLS**]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%})
+The library supports the following formats:
 
-* Text formats: [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [**Plain text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}), [**JSON**]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider%}) (export only)
+* Excel formats: [**XLSX**]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%}), [**XLSM**]({%slug radspreadprocessing-formats-and-conversion-xlsm-xlsmformatprovider%}), and [**XLS**]({%slug radspreadprocessing-formats-and-conversion-xls-xlsformatprovider%}).
+* Text formats: [**CSV**]({%slug radspreadprocessing-formats-and-conversion-csv-csvformatprovider%}), [**Plain Text**]({%slug radspreadprocessing-formats-and-conversion-txt-txtformatprovider%}), and [**JSON**]({%slug radspreadprocessing-formats-and-conversion-json-jsonformatprovider%}) for export.
+* Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) for export.
 
-* Other formats: [**PDF**]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}) (export only), [`DataTable`]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%})
+To populate a workbook from a .NET `DataTable`, see [importing data from a `DataTable`]({%slug radspreadprocessing-formats-and-conversion-using-data-table-format-provider%}).
 
 *This documentation is neither affiliated with, nor authorized, sponsored, or approved by, Microsoft Corporation.
 
 ## Online Demos
 
-|Demo|Description|
-|----|----|
-|[SpreadProcessing Basic Usage](https://demos.telerik.com/document-processing/spreadprocessing)|With RadSpreadProcessing, you can convert spreadsheet documents between various formats, including XLSX, CSV, XLSM, and TXT. Additionally, you can export any of these formats to PDF.|
-|[SpreadProcessing Document Generation](https://demos.telerik.com/document-processing/spreadprocessing/generate_documents)|RadSpreadProcessing allows you to create a document from scratch using only code. This is particularly convenient when you need to export large amount of data to one of the supported formats - XLSX, CSV, TXT, XLSM.|
-|[SpreadProcessing Grid Integration](https://demos.telerik.com/document-processing/spreadprocessing/grid_integration)|This example illustrates integration between Telerik SpreadProcessing and the Kendo ASP.NET Core Grid component. You can visualize data in Grid and easily export it to XLSX, CSV, XLSM or TXT format.|
-|[SpreadProcessing Chart Generation](https://demos.telerik.com/document-processing/spreadprocessing/charts)|RadSpreadProcessing allows you to create a document with a chart from scratch using only code.|
-|[SpreadProcessing Add Notes](https://demos.telerik.com/document-processing/spreadprocessing/notes)|With RadSpreadProcessing, you can insert a Note related to a cell on a specific document position. The current example demonstrates how you can add notes with custom Author and Text while generating a document, and then export it to Xlsx format.|
-|[SpreadProcessing Add Comments](https://demos.telerik.com/document-processing/spreadprocessing/comments)|With RadSpreadProcessing, you can insert a Comment related to a cell on a specific document position. The current example demonstrates how you can add comments with custom Author and Text while generating a document, and then export it to Xlsx format.|
+The following demos show common `RadSpreadProcessing` scenarios:
+
+| Demo | Description |
+|---|---|
+| [SpreadProcessing Basic Usage](https://demos.telerik.com/document-processing/spreadprocessing) | Convert spreadsheet documents between formats such as XLSX, CSV, XLSM, and TXT. You can also export these formats to PDF. |
+| [SpreadProcessing Document Generation](https://demos.telerik.com/document-processing/spreadprocessing/generate_documents) | Create documents entirely in code. This demo is useful when you need to export large amounts of data to XLSX, CSV, TXT, or XLSM. |
+| [SpreadProcessing Grid Integration](https://demos.telerik.com/document-processing/spreadprocessing/grid_integration) | Integrate `RadSpreadProcessing` with the Kendo UI for ASP.NET Core Grid to export grid data to XLSX, CSV, XLSM, or TXT. |
+| [SpreadProcessing Chart Generation](https://demos.telerik.com/document-processing/spreadprocessing/charts) | Create spreadsheet documents with charts entirely in code. |
+| [SpreadProcessing Add Notes](https://demos.telerik.com/document-processing/spreadprocessing/notes) | Add notes to cells while you generate a document, and then export the result to XLSX. |
+| [SpreadProcessing Add Comments](https://demos.telerik.com/document-processing/spreadprocessing/comments) | Add comments to cells while you generate a document, and then export the result to XLSX. |
 
 ## See Also
 

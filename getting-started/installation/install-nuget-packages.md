@@ -38,7 +38,7 @@ Use the following `PackageReference` entries for ASP.NET Core, Blazor, console a
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <TelerikDocumentProcessingVersion>2026.1.210</TelerikDocumentProcessingVersion>
+        <TelerikDocumentProcessingVersion>2026.3.826</TelerikDocumentProcessingVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -57,7 +57,7 @@ Use the following `PackageReference` entries for .NET Framework or other Windows
 ```xml
 <Project>
     <PropertyGroup>
-        <TelerikDocumentProcessingVersion>2026.1.210</TelerikDocumentProcessingVersion>
+        <TelerikDocumentProcessingVersion>2026.3.826</TelerikDocumentProcessingVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -97,7 +97,7 @@ If an agent or build script installs packages automatically, verify the package 
 
 ## How to Install Telerik Document Processing from NuGet.org
 
-As of **Q2 2026**, Telerik Document Processing packages are available on [NuGet.org package hosting](https://www.nuget.org/). This is the recommended installation path for new development because both Visual Studio and the .NET CLI use NuGet.org by default.
+Current Telerik Document Processing packages are available on <a href="https://www.nuget.org/" target="_blank">NuGet.org</a>. This is the recommended installation path for new development because both Visual Studio and the .NET CLI use NuGet.org by default.
 
 ### How to Install from NuGet.org in Visual Studio
 
@@ -112,8 +112,8 @@ Use the .NET CLI when you want repeatable setup steps for local development, con
 
 ```bash
 dotnet add package Telerik.Licensing
-dotnet add package Telerik.Documents.Core --version 2026.1.210
-dotnet add package Telerik.Documents.Fixed --version 2026.1.210
+dotnet add package Telerik.Documents.Core --version 2026.3.826
+dotnet add package Telerik.Documents.Fixed --version 2026.3.826
 ```
 
 To install a different library, replace `Telerik.Documents.Fixed` with the package that matches your document type.
@@ -126,8 +126,8 @@ Use the Visual Studio Package Manager Console when you manage packages inside Vi
 
 ```powershell
 Install-Package Telerik.Licensing
-Install-Package Telerik.Documents.Core -Version 2026.1.210
-Install-Package Telerik.Documents.Fixed -Version 2026.1.210
+Install-Package Telerik.Documents.Core -Version 2026.3.826
+Install-Package Telerik.Documents.Fixed -Version 2026.3.826
 ```
 
 >tip You can find the exact package names and supported combinations in the [available NuGet packages reference]({%slug available-nuget-packages%}).
@@ -145,9 +145,9 @@ For example, a Blazor Web App that creates DOCX files and exports them to PDF ty
 ```xml
 <ItemGroup>
     <PackageReference Include="Telerik.Licensing" Version="1.*" />
-    <PackageReference Include="Telerik.Documents.Core" Version="2026.1.210" />
-    <PackageReference Include="Telerik.Documents.Flow" Version="2026.1.210" />
-    <PackageReference Include="Telerik.Documents.Flow.FormatProviders.Pdf" Version="2026.1.210" />
+    <PackageReference Include="Telerik.Documents.Core" Version="2026.3.826" />
+    <PackageReference Include="Telerik.Documents.Flow" Version="2026.3.826" />
+    <PackageReference Include="Telerik.Documents.Flow.FormatProviders.Pdf" Version="2026.3.826" />
 </ItemGroup>
 ```
 
@@ -160,8 +160,8 @@ For PDF processing in Blazor WebAssembly, start with the following package refer
 ```xml
 <ItemGroup>
     <PackageReference Include="Telerik.Licensing" Version="1.*" />
-    <PackageReference Include="Telerik.Documents.Core" Version="2026.1.210" />
-    <PackageReference Include="Telerik.Documents.Fixed" Version="2026.1.210" />
+    <PackageReference Include="Telerik.Documents.Core" Version="2026.3.826" />
+    <PackageReference Include="Telerik.Documents.Fixed" Version="2026.3.826" />
 </ItemGroup>
 ```
 
@@ -208,7 +208,7 @@ If you also restore from NuGet.org or another feed, configure `NuGet.Config` so 
 
 ## How to Install from the Telerik NuGet Server
 
->note As of Q2 2026, NuGet.org is the recommended source for current Telerik Document Processing packages. Use the Telerik NuGet server for backward compatibility, for older releases, or when your organization requires the Telerik private feed.
+>note NuGet.org is the recommended source for current Telerik Document Processing packages. Use the Telerik NuGet server for backward compatibility, older releases, or when your organization requires the Telerik private feed.
 
 The Telerik NuGet server provides authenticated access to Telerik packages and older versions that may not be part of your standard NuGet.org-based workflow.
 
