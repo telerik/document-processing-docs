@@ -83,9 +83,9 @@ Like sections, paragraphs have their own properties that control appearance.
 
 * `SpacingAfter`: The spacing after the paragraph.
 
-* `LineSpacing`: The spacing between lines.
+* `LineSpacing`: The spacing between lines. Defaults to `1.15`. When `LineSpacingType` is `Auto`, this acts as a line height multiplier. When `LineSpacingType` is `Exact` or `AtLeast`, this specifies the line height in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).
 
-* `LineSpacingType`: Specifies how to interpret the line spacing.
+* `LineSpacingType`: Specifies how to interpret the line spacing using the `HeightType` enumeration (`Auto`, `Exact`, `AtLeast`). Defaults to `Auto`.
 
 * `FirstLineIndent`: The indent for the first line.
 
