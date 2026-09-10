@@ -4,7 +4,7 @@ description: Learn how to create Excel files from IEnumerable collections by ite
 type: how-to
 page_title: How to generate Excel Documents from IEnumerable Collections 
 slug: generate-excel-files-from-ienumerable-collections
-tags: radspreadprocessing, excel, xlsx, datatable, ienumerable, document, processing, spreadsheet
+tags: radspreadprocessing, excel, xlsx, datatable, ienumerable, document, processing, spreadsheet, list, collection
 res_type: kb
 category: knowledge-base
 ticketid: 1653503
