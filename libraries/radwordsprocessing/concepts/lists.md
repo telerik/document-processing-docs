@@ -139,6 +139,6 @@ The following example demonstrates how you can apply the list created in Steps 1
 ## See Also
 
 * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
-* [Styles]({%slug radwordsprocessing-concepts-styles%})
+* [Document Styles]({%slug radwordsprocessing-concepts-styles%})
 * [Style Properties]({%slug radwordsprocessing-concepts-style-properties%})
 * [Setting Bullet List Indents in RadWordsProcessing]({%slug set-bullet-list-indents-radwordsprocessing%})

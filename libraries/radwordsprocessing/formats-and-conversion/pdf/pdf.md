@@ -19,5 +19,5 @@ position: 0
 ## See Also
 
 * [Using PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-* [Settings]({%slug radwordsprocessing-formats-and-conversion-pdf-settings%})
+* [PDF Format Provider Settings]({%slug radwordsprocessing-formats-and-conversion-pdf-settings%})
 

@@ -15,7 +15,7 @@ res_type: kb
 
 ## Description
 
-[RadPdfProcessing]({%slug radpdfprocessing-overview%}) allows you to create [Tables]({%slug radpdfprocessing-editing-table-overview%}). A common requirement is to have a header row for the table. This article shows how to simulate this feature.
+[RadPdfProcessing]({%slug radpdfprocessing-overview%}) allows you to create [PDF tables]({%slug radpdfprocessing-editing-table-overview%}). A common requirement is to have a header row for the table. This article shows how to simulate this feature.
 
 ## Solution
 
@@ -72,8 +72,8 @@ Add a table header row as a standard `TableRow` with bold text.
 
 ## See Also
 
-* [How to implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
-* [Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
+* [How to Implement FontsProvider]({%slug pdfprocessing-implement-fontsprovider%})
+* [PDF Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
 * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
-* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [PDF Table Overview]({%slug radpdfprocessing-editing-table-overview%})
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})

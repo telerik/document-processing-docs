@@ -100,7 +100,7 @@ You can insert [Section]({%slug radwordsprocessing-model-section%}) elements wit
 
 ### Inserting Hyperlinks
 
-Hyperlinks in the `RadFlowDocument` model are [Fields]({%slug radwordsprocessing-concepts-fields%}), which means they have code and result parts separated by [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}) inlines. The `RadFlowDocumentEditor.InsertHyperlink()` method simplifies inserting hyperlinks:
+Hyperlinks in the `RadFlowDocument` model are [field elements described in the Fields article]({%slug radwordsprocessing-concepts-fields%}), which means they have code and result parts separated by [FieldCharacter]({%slug radwordsprocessing-model-fieldcharacter%}) inlines. The `RadFlowDocumentEditor.InsertHyperlink()` method simplifies inserting hyperlinks:
 
 ```csharp
 public Hyperlink InsertHyperlink(string text, string uri, bool isAnchor, string toolTip)

@@ -27,5 +27,5 @@ These are the possible `FieldCharacterTypes`:
 ## See Also
 
 * [FieldCharacter API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Fields.FieldCharacter.html)
-* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Working with Fields]({%slug radwordsprocessing-concepts-fields%})
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

@@ -10,7 +10,7 @@ position: 1
 
 # Getting Started with RadWordsProcessing
 
-Use this article to build a small RadWordsProcessing sample that creates a `RadFlowDocument` in code and exports it to a `.docx` file. By the end of the tutorial, you will have a working project, the required namespaces, and a document that you can open in Microsoft Word or another compatible editor.
+Use this article to build a small **RadWordsProcessing** sample that creates a `RadFlowDocument` in code and exports it to a `.docx` file. By the end of the tutorial, you will have a working project, the required packages and namespaces, and a document that you can open in Microsoft Word or another compatible editor.
 
 >note
 >
@@ -24,12 +24,12 @@ Before you add code, make sure that your environment is ready:
 
 This article focuses on the fastest path to a first successful export. For package details and version guidance, use the NuGet packages article as the reference source.
 
-## How to Add the Required Package References
+## Add the Required Package References
 
-After you install the required packages, add the namespaces that you need for document creation and editing:
+Install the `Telerik.Documents.Flow` package for cross-platform projects or the `Telerik.Windows.Documents.Flow` package for Windows-only projects. After you install the required package, add the namespaces that you need for document creation and editing:
 
-* `Telerik.Windows.Documents.Flow.Model`
-* `Telerik.Windows.Documents.Flow.Model.Editing`
+* `Telerik.Documents.Flow.Model`
+* `Telerik.Documents.Flow.Model.Editing`
 
 If your export code writes the result to disk, also add the .NET namespaces required by your sample, such as `System.IO`.
 
@@ -39,7 +39,7 @@ If your export code writes the result to disk, also add the .NET namespaces requ
 
 The following example creates a new document instance and inserts sample content. Use it as the starting point for the rest of this tutorial.
 
-**Example 1: Create a RadFlowDocument, initialize a RadFlowDocumentEditor, and insert sample text**
+#### __Example 1: Create a RadFlowDocument and Insert Sample Text__
 
 <snippet id='codeblock-b'/>
 
@@ -51,7 +51,7 @@ Use the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-do
 
 The next example creates a provider instance and exports the document:
 
-**Example 2: Export the populated RadFlowDocument to a DOCX file with DocxFormatProvider**
+#### __Example 2: Export a RadFlowDocument to a DOCX File__
 
 <snippet id='codeblock-c'/>
 

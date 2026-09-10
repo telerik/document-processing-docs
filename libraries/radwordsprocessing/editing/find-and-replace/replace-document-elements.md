@@ -54,3 +54,4 @@ You can search and replace text using [RadFlowDocumentEditor]({%slug radwordspro
 * [Find and Replace Text and Style]({%slug radwordsprocessing-editing-find-and-replace%})
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})
 * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
+* [Replace Placeholder Text with Images in Telerik WordsProcessing]({%slug replace-text-placeholder-with-image-telerik-wordsprocessing%})

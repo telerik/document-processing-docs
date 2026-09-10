@@ -98,6 +98,6 @@ The following code snippet shows a sample custom `CustomOpenAIEmbedder` implemen
 ## See Also
 
 * [GenAI-powered Document Insights Overview]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-overview%})
-* [Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [GenAI-powered Document Insights Prerequisites]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites%})
 * [SummarizationProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
 * [CompleteContextQuestionProcessor]({%slug radpdfprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})

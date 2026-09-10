@@ -43,7 +43,7 @@ This article shows examples of the most common scenarios for converting document
 
 When you need to convert a document from another file format to PDF, use the capabilities of **WordsProcessing**. This library allows you to import documents from the most common rich text formats (DOCX, DOC, HTML, RTF) and plain text, and export them to PDF. All the supported document formats and the corresponding format providers are listed in the [Formats and Conversion section]({%slug radwordsprocessing-formats-and-conversion%}).
 
->note To use the **PdfFormatProvider** of **WordsProcessing**, add a reference to the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf** assembly. For the full list of dependencies required by WordsProcessing, check the [Getting Started]({%slug radwordsprocessing-getting-started%}) topic.
+>note To use the **PdfFormatProvider** of **WordsProcessing**, add a reference to the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf** assembly. For the full list of dependencies required by WordsProcessing, check the [WordsProcessing Getting Started]({%slug radwordsprocessing-getting-started%}) topic.
 
 >The **PdfFormatProvider** class of WordsProcessing resides in the **Telerik.Windows.Documents.Flow.FormatProviders.Pdf namespace**. For more information on how to work with this provider, read [the PdfFormatProvider documentation]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
@@ -137,7 +137,7 @@ When you need to convert a document from another file format to PDF, use the cap
 
 While the previously discussed libraries work with text documents, **SpreadProcessing** allows you to create, import, and export tabular data. This library supports the most common file formats for storing spreadsheet documents: XLSX, XLS, XLSM, and CSV. All format providers are listed and described in the corresponding [Formats and Conversion section]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
->note To enable the export to PDF in SpreadProcessing, add a reference to the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf** assembly. For the full list of dependencies required by SpreadProcessing, check the [Getting Started]({%slug radspreadprocessing-getting-started%}) topic.
+>note To enable the export to PDF in SpreadProcessing, add a reference to the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf** assembly. For the full list of dependencies required by SpreadProcessing, check the [SpreadProcessing Getting Started]({%slug radspreadprocessing-getting-started%}) topic.
 
 >The **PdfFormatProvider** class of SpreadProcessing resides in the **Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf namespace**. For more information on how to work with this provider, read [the SpreadProcessing PdfFormatProvider documentation]({%slug radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 

@@ -9,23 +9,23 @@ position: 5
 
 # Merge PDF Documents
 
-**RadPdfProcessing** supports merging multiple PDF documents into one using the following approaches:
+**RadPdfProcessing** supports merging multiple PDF documents into one with these approaches:
 
 >note See the [PdfProcessing Content Merging, Splitting, and Adding Demo](https://demos.telerik.com/document-processing/pdfprocessing/merge_split_add_content) for a live example.
 
-## Using the RadFixedDocument.Merge Method
+## Merging with RadFixedDocument
 
-You can merge PDF documents with the `Merge` method of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}). This method clones the source document and appends it to the current instance of `RadFixedDocument`:
+Use the `Merge()` method of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) when you want to merge fully imported PDF documents. The method clones the source document and appends its supported content to the current `RadFixedDocument`, including pages and document-level data such as bookmarks, form fields, and destinations:
 
 <snippet id='libraries-pdf-features-merge-documents-with-radfixeddocument'/>
 
-## Using the PdfStreamWriter
+## Merging with PdfStreamWriter
 
-An alternative approach is to use the [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) to merge pages from different PDF documents:
+Use [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) when you want a low-memory merge flow that streams pages from source PDF files into a new output file:
  
 <snippet id='libraries-pdf-features-merge-documents-with-pdfstreamwriter'/>
 
->note The following SDK example demonstrates this topic: [Manipulate Pages SDK Demo](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages).
+>note The [Manipulate Pages SDK demo](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) shows this approach end to end.
 
 ## See Also
 

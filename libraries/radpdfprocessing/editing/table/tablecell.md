@@ -91,5 +91,6 @@ The result from **Example 3** is illustrated in the following image.
 * [Creating a PDF Table with Form Fields Inside the Cells]({%slug insert-form-xobject-elements-pdf-table-cell%})
 * [Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
 * [How To Rotate Cell Content]({%slug pdfprocessing-rotate-cell-content%})
+* [How to Clip Text in a Table Cell and Wrap Text in Another Cell]({%slug clip-text-in-table-cell-radpdfprocessing%})
 
 

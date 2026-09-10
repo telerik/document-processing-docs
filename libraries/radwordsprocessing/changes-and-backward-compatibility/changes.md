@@ -55,7 +55,7 @@ The following sections summarize the new features introduced in the library. Eac
 ## What Is New in 2014 Q2
 
 * [HTML Import/Export]({%slug radwordsprocessing-formats-and-conversion-html%})
-* [Lists]({%slug radwordsprocessing-concepts-lists%})
+* [Document Lists]({%slug radwordsprocessing-concepts-lists%})
 * [Break]({%slug radwordsprocessing-model-break%})
 * [Bookmark]({%slug radwordsprocessing-model-bookmark%})
 * [Comment]({%slug radwordsprocessing-model-comment%})

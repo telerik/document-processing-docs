@@ -124,7 +124,7 @@ The following example includes all the properties discussed in the previous sect
 
 ## See Also
 
-* [Getting Started]({%slug radziplibrary-gettingstarted%})
+* [RadZipLibrary Getting Started]({%slug radziplibrary-gettingstarted%})
 * [Update ZipArchive]({%slug radziplibrary-update-ziparchive%})
 * [Protect ZipArchive]({%slug radziplibrary-protect-ziparchive%})
 * [Compress Stream]({%slug radziplibrary-compress-stream%})

@@ -80,6 +80,6 @@ The `PushButtonAppearanceCharacteristics` class inherits `ButtonAppearanceCharac
 
 ## See Also
 
-* [Widgets]({%slug radpdfprocessing-model-annotations-widgets %})
+* [PDF Annotation Widgets]({%slug radpdfprocessing-model-annotations-widgets %})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
 * [FormSource]({%slug radpdfprocessing-model-formsource-overview%})

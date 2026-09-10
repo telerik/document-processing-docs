@@ -49,7 +49,7 @@ A style can contain one or more of five different sets of style properties, depe
 
 * **Table styles**: Contain properties of a [Table]({%slug radwordsprocessing-model-table%}) and table-related document elements ([TableRow]({%slug radwordsprocessing-model-tablerow%}) and [TableCell]({%slug radwordsprocessing-model-tablecell%})), such as borders, background, alignment, padding, etc. Styles of this type contain `TableProperties`, `TableRowProperties`, `TableCellProperties`, `ParagraphProperties`, and `CharacterProperties` sets of style properties, where table row and table cell properties format child `TableRow` and `TableCell` elements, and paragraph and character properties format the `Paragraph` and `Run` elements in the styled table.
 
-* **Numbering styles**: Represent [Lists]({%slug radwordsprocessing-concepts-lists%}) in the user interface of an application. A style with this type cannot be referenced directly by document elements. It holds only information about the associated list.
+* **Numbering styles**: Represent [Document Lists]({%slug radwordsprocessing-concepts-lists%}) in the user interface of an application. A style with this type cannot be referenced directly by document elements. It holds only information about the associated list.
 
 ## Creating New Styles
 
@@ -186,4 +186,4 @@ Linked styles can be based on other linked styles or on paragraph styles.
 * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
 * [Table]({%slug radwordsprocessing-model-table%})
 * [`BuiltInStyleNames` API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.BuiltInStyleNames.html)
-* [Lists]({%slug radwordsprocessing-concepts-lists%})
+* [Document Lists]({%slug radwordsprocessing-concepts-lists%})

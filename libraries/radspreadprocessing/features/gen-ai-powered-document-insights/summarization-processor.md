@@ -74,6 +74,6 @@ This approach allows the processor to handle documents of any size efficiently, 
 ## See Also
 
 * [GenAI-powered Document Insights Overview]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})
-* [Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [GenAI-powered Document Insights Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
 * [PartialContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-partial-context-question-processor%})
 * [CompleteContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})

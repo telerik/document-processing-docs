@@ -158,6 +158,6 @@ private static void AddRowToTable(Telerik.Windows.Documents.Fixed.Model.Editing.
 
 ## See Also
 
-* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [PDF Table Overview]({%slug radpdfprocessing-editing-table-overview%})
 * [TableRow]({%slug radpdfprocessing-editing-table-tablerow%})
 * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})

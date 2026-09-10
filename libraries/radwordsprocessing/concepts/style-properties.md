@@ -12,7 +12,7 @@ position: 5
 
 
 
-*Style property* is part of the style system, used to hold information about a formatting value of the document elements. You can use it to check if the value is local or inherited from a base style. Information about how the style system works and how values are inherited from base styles is available in the Style Evaluation and Inheritance section of the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
+*Style property* is part of the style system, used to hold information about a formatting value of the document elements. You can use it to check if the value is local or inherited from a base style. Information about how the style system works and how values are inherited from base styles is available in the Style Evaluation and Inheritance section of the [Document Styles]({%slug radwordsprocessing-concepts-styles%}) article.
 
 * [Style Property Implementation Overview](#style-property-implementation-overview)
 
@@ -31,7 +31,7 @@ Style properties are exposed through the [`IStyleProperty<T>` interface](https:/
 
 * `HasLocalValue`: Returns a value indicating whether the style property has a local value.
 
-* `GetActualValue()`: Returns the actual value of the property. The style system evaluates this value on every call using the evaluation rules described in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
+* `GetActualValue()`: Returns the actual value of the property. The style system evaluates this value on every call using the evaluation rules described in the [Document Styles]({%slug radwordsprocessing-concepts-styles%}) article.
 
 * `ClearValue()`: Clears the local value.
 
@@ -610,7 +610,7 @@ Following is a list of all available style properties and their default values:
 
 ## See Also
 
-* [Styles]({%slug radwordsprocessing-concepts-styles%})
+* [Document Styles]({%slug radwordsprocessing-concepts-styles%})
 * [`IStyleProperty<T>` API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStyleProperty-1.html)
 * [`IStylePropertyDefinition` API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Flow.Model.Styles.Core.IStylePropertyDefinition.html)
 * [Setting Bullet List Indents in RadWordsProcessing]({%slug set-bullet-list-indents-radwordsprocessing%})

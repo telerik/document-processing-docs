@@ -19,7 +19,7 @@ This article shows how to add a dashed line border in a table by using [RadPdfPr
 
 ## Solution
 
-To create a dashed line border for a [Table]({%slug radpdfprocessing-editing-table-overview%}) in RadPdfProcessing, follow these steps:
+To create a dashed line border for a [PDF Table]({%slug radpdfprocessing-editing-table-overview%}) in RadPdfProcessing, follow these steps:
 
 1. Set the desired font style properties for the table.
 2. Create a `Border` object with the desired thickness, style, and color.
@@ -82,7 +82,7 @@ table.DefaultCellProperties.Borders = new TableCellBorders(null, null, null,b);
 ## See Also
 
 * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
-* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [PDF Table]({%slug radpdfprocessing-editing-table-overview%})
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
 * [Supported Border Styles]({%slug radpdfprocessing-editing-table-overview%})
 

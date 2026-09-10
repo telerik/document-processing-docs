@@ -74,3 +74,4 @@ Some features require additional settings:
 * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
 * [Using XlsxFormatProvider]({%slug radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider%})
 * [Troubleshooting Cross-Platform Excel and PDF Export Differences]({%slug spreadprocessing-cross-platform-requirements%})
+* [Migrating to Platform-Agnostic Namespaces]({%slug platform-agnostic-namespaces-migration%})

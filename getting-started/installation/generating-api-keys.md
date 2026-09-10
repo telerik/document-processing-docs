@@ -1,16 +1,16 @@
 ---
-title: Generating API Keys
-page_title: Generating API Keys
-description: Learn how to use API Keys to authenticate with the Telerik NuGet server and restore Telerik Document Processing packages in your CI or desktop environment.
+title: Generating Telerik NuGet API Keys
+page_title: Generating Telerik NuGet API Keys
+description: Generating a Telerik NuGet API key to authenticate with the Telerik NuGet server in CI/CD and local development environments.
 slug: generating-api-keys
 tags: api, key, nuget, authentication, ci, telerik, security, packages
 published: True
 position: 9
 ---
  
-# Generating API Keys
+# Generating Telerik NuGet API Keys
 
-Using API Keys provides a secure way to authenticate. This method does not require you to provide your Telerik credentials anywhere. Unlike your Telerik credentials, an API key has a **limited scope** and can be used only with the Telerik NuGet server. If any of your API Keys is compromised, you can quickly delete it and create a new one.
+Use a Telerik NuGet API key to authenticate with the Telerik NuGet server without sharing your Telerik account password. An API key has limited scope and works only with the Telerik NuGet server. Delete a compromised key and generate a replacement.
 
 1. Go to the [Telerik account API key management page](https://www.telerik.com/account/downloads/api-keys).
 
@@ -40,9 +40,9 @@ Using API Keys provides a secure way to authenticate. This method does not requi
 
     ![Telerik account API Keys page showing a newly generated NuGet API key entry](images/generatee-api-key.png)  
 
-    >important The validity of the API key is 2 years.
+    >important The API key is valid for two years.
 
-1. Store the generated NuGet API key as you will need it in the next steps. Whenever you need to authenticate your system with the Telerik NuGet server, use api-key as the username and your generated API key as the password.
+1. Store the generated NuGet API key securely. To authenticate with the Telerik NuGet server, use `api-key` as the username and the API key as the password.
  
 ## See Also
 

@@ -14,7 +14,7 @@ This article summarizes the new functionality introduced in the library and prov
 
 ## What Is New in 2024 Q1
 
-The strong AES encryption algorithm was introduced. RadZipLibrary now supports only reading and extracting AES-protected archives. [Read more]({%slug radziplibrary-protect-ziparchive%}).
+The strong AES encryption algorithm was introduced. RadZipLibrary now supports only reading and extracting AES-protected archives. [Read and Extract AES-Protected Archives]({%slug radziplibrary-protect-ziparchive%}).
 
 ## What Is New in 2014 Q1 - 2014.1.0226
 

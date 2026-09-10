@@ -298,4 +298,4 @@ The section provides examples of general questions related to [RadZipLibrary]({%
 ## See Also
 
 * [AI Coding Assistant Overview]({%slug ai-coding-assistant%})
-* [Telerik DPL MCP Server]({%slug ai-mcp-server%})
+* [Telerik DPL MCP Server]({%slug ai-mcp-server-as-a-nuget%})

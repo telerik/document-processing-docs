@@ -1,19 +1,19 @@
 ---
 title: Overview
-description: The digital signature feature in RadPdfProcessing enables you to sign and validate PDF documents using X509 certificates and signature fields.
+description: Learn how the digital signature feature in RadPdfProcessing signs and validates PDF documents with X.509 certificates, PKI chains, and signature fields.
 page_title: Digital Signature - Overview
 slug: radpdfprocessing-features-digital-signature
-tags: digital, signature, pdf, signing, validation, radpdfprocessing, x509, certificates, overview
+tags: digital, signature, pdf, signing, validation, radpdfprocessing, x509, certificates, pki, public-key-infrastructure, overview
 position: 0
 ---
 
 # Overview
 
-The **digital signature** feature enables you to sign and validate a PDF document. A signature confirms that the document content originated from the signer and has not been modified. A signed document is considered valid when it has not been changed after signing, and all of its certificates have a valid trusted root certificate.
+The **digital signature** feature in `RadPdfProcessing`, part of Telerik Document Processing, lets you sign and validate PDF documents. A digital signature confirms that the document content came from the signer and has not been modified. A signed document remains valid when the content stays unchanged after signing and the certificate chain resolves to a trusted root certificate.
 
+In a *public key infrastructure* (PKI) workflow, `RadPdfProcessing` uses X.509 certificates, certificate chains, trusted roots, and revocation checks for PDF signing and validation. Certificate issuance and certificate-authority management are outside the library scope.
 <a name="signing-a-document"><a/>
-
-Telerik **RadPdfProcessing** provides an API that allows you to:
+With `RadPdfProcessing`, you can:
 
 * [Create a PDF document from scratch and add a signature field]({%slug radpdfprocessing-features-digital-signature-getting-started%}). 
 * [Sign PDF documents that contain a predefined signature field](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document).
@@ -24,11 +24,13 @@ Telerik **RadPdfProcessing** provides an API that allows you to:
 
 ## Online Demos
 
-|Demo|Description|
+The following demos show common signing scenarios:
+
+| Demo | Description |
 |----|----|
-|[PdfProcessing Digitally Sign Document](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document)|Demonstrates how to digitally sign a PDF.|
-|[PdfProcessing Validate Digital Signature](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature)|Demonstrates how to validate a digitally signed PDF.|
-|[PdfProcessing Multiple Digital Signatures](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)|Demonstrates how to digitally sign a PDF without invalidating existing signatures.|
+| [PdfProcessing Digitally Sign Document](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document) | Demonstrates how to digitally sign a PDF. |
+| [PdfProcessing Validate Digital Signature](https://demos.telerik.com/document-processing/pdfprocessing/validate_digital_signature) | Demonstrates how to validate a digitally signed PDF. |
+| [PdfProcessing Multiple Digital Signatures](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures) | Demonstrates how to digitally sign a PDF without invalidating existing signatures. |
 
 
 ## See Also

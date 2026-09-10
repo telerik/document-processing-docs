@@ -40,6 +40,7 @@ The following table summarizes the main tasks that you can perform on a workshee
 | Protection | Restrict editing and control which actions remain available. | [Worksheet Protection]({%slug radspreadprocessing-features-protection-worksheet%}) |
 | View state | Control frozen panes, active cell, selection, and zoom. | [View State]({%slug radspreadprocessing-working-with-worksheets-view-state%}) |
 | Visibility | Hide worksheets without removing them from the workbook. | [Sheets Visibility]({%slug radspreadprocessing-working-with-worksheets-sheets-visibility%}) |
+| Dynamic array formulas | Inspect spill ranges produced by dynamic array formulas through the `WorksheetSpillState` property. | [Dynamic Array Formulas]({%slug radspreadprocessing-features-formulas-dynamic-array-formulas%}) |
 
 Each worksheet also exposes several features that help you organize and query spreadsheet content:
 
@@ -79,7 +80,7 @@ After you understand the role of a worksheet, continue with the article that mat
 
 ## See Also
 
-* [What is a Cell?]({%slug radspreadprocessing-working-with-cells-what-is-cell%})
+* [What Is a Cell?]({%slug radspreadprocessing-working-with-cells-what-is-cell%})
 * [Working with Rows and Columns]({%slug radspreadprocessing-working-with-rows-and-columns-what-is-row-column%})
 * [Iterating Used Cells]({%slug radspreadprocessing-working-with-cells-iterating-used-cells%})
 * [Named Ranges]({%slug radspreadprocessing-features-named-ranges%})

@@ -28,17 +28,17 @@ This depends on your license type.
   * A watermark appears on application startup.
   * A modal dialog appears on application startup.
   * A warning message is logged in the build log.
-    See the [Invalid License]({%slug activation-errors-and-warnings%}#invalid-license) section for more information.
+    See the [Invalid License activation details]({%slug activation-errors-and-warnings%}#invalid-license) section for more information.
 * **Subscription licenses** used in deployed applications will continue to function normally. However, the following happens if you rebuild the application with an expired subscription license:
   * A watermark appears on application startup.
   * A modal dialog appears on application startup.
   * A warning message is logged in the build log.
-    See the [Invalid License]({%slug activation-errors-and-warnings%}#invalid-license) section for more information.
+    See the [Invalid License activation details]({%slug activation-errors-and-warnings%}#invalid-license) section for more information.
 * **Trial licenses** prevent the applications from functioning normally once the trial period has expired. The following happens if you try to build or run the application:
   * A watermark appears on application startup.
   * A modal dialog appears on application startup.
   * A warning message similar to the following is logged in the build log.
-    See the [Invalid License]({%slug activation-errors-and-warnings%}#invalid-license) section for more information.
+    See the [Invalid License activation details]({%slug activation-errors-and-warnings%}#invalid-license) section for more information.
 
 ## I Updated the Version of the Product Packages in My Project and the Invalid License Errors Have Appeared. What Is the Cause of This Behavior?
 The most likely cause is that the newly installed product version was released after the expiration date of your current license. To fix this issue:

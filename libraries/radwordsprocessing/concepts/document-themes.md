@@ -234,4 +234,4 @@ To get the actual value from `ThemableColor` or `ThemableFontFamily`, call the `
 ## See Also
 
 * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})
-* [Styles]({%slug radwordsprocessing-concepts-styles%})
+* [Document Styles]({%slug radwordsprocessing-concepts-styles%})

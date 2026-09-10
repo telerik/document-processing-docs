@@ -27,7 +27,7 @@ Creating [tables]({%slug radpdfprocessing-editing-table-overview%}) with varying
 
 To correctly implement column spanning in tables using RadPdfProcessing, follow these steps:
 
-1. Create a new [Table]({%slug radpdfprocessing-editing-table-overview%}) and configure its properties, such as `LayoutType` and `DefaultCellProperties`.
+1. Create a new [PDF Table]({%slug radpdfprocessing-editing-table-overview%}) and configure its properties, such as `LayoutType` and `DefaultCellProperties`.
 
 2. When adding cells to a row that includes a column span, adjust the number of added cells accordingly. For a row with cells that should span across multiple columns, reduce the number of total cells in that row by the span amount minus one.
 

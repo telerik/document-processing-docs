@@ -68,7 +68,7 @@ You can insert a Hyperlink field through the [RadFlowDocumentEditor]({%slug radw
 
 	![Telerik RadWordsProcessing hyperlink example showing a blue underlined telerik link with a Telerik site tooltip in the document](images/RadWordsProcessing_Concepts_Fields_Hyperlink_Field_01.png)
 
-	>tip The `InsertHyperlink()` method also automatically applies the Hyperlink style to the result fragment of the inserted field. More information about styles is available in the [Styles]({%slug radwordsprocessing-concepts-styles%}) article.
+	>tip The `InsertHyperlink()` method also automatically applies the Hyperlink style to the result fragment of the inserted field. More information about styles is available in the [Document Styles]({%slug radwordsprocessing-concepts-styles%}) article.
 
 * `InsertField()` method: Accepts code as first argument and result as second argument.
 
@@ -97,6 +97,6 @@ The result of the above snippet is illustrated in **Figure 3**.
 
 ## See Also
 
-* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Working with Fields]({%slug radwordsprocessing-concepts-fields%})
 * [Bookmark]({%slug radwordsprocessing-model-bookmark%})
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

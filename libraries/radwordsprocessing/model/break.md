@@ -61,6 +61,6 @@ The `Break` element exposes several properties that allow you to customize it:
 
 ## See Also
 
-* [Model]({%slug radwordsprocessing-model%})
+* [Document Model]({%slug radwordsprocessing-model%})
 * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
 * [RadFlowDocument]({%slug radwordsprocessing-model-radflowdocument%})

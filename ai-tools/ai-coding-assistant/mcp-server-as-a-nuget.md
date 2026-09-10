@@ -10,7 +10,7 @@ position: 2
 
 # Telerik DPL MCP Server (NuGet)
 
-The Telerik Document Processing [MCP (Model Context Protocol) server](https://modelcontextprotocol.io/introduction) is also available as a NuGet package. This NuGet distribution exposes the same AI Coding Assistant functionality as the npm package. 
+The Telerik Document Processing [MCP (Model Context Protocol) server](https://modelcontextprotocol.io/introduction) is available as a NuGet package and is the current **recommended** distribution. The npm package `@progress/telerik-dpl-mcp` is deprecated, and users should migrate to `Telerik.DPL.MCP`.
 
 Starting with **.NET 10**, you can execute it directly through the `dnx` command. For **.NET 8 and .NET 9** (where `dnx` is not available), you can [install it as a global dotnet tool](https://learn.microsoft.com/dotnet/core/tools/dotnet-tool-install) and invoke its executable.
 
@@ -202,4 +202,3 @@ After configuration and restart:
 
 * [AI Coding Assistant Overview]({%slug ai-coding-assistant%})
 * [Telerik Document Processing Prompt Library]({%slug ai-prompt-library%})
-* [npm-based Telerik DPL MCP Server]({%slug ai-mcp-server%})

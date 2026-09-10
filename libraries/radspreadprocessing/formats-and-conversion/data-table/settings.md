@@ -3,7 +3,7 @@ title: Settings
 page_title: Settings
 description: Learn how to configure the DataTableFormatProvider import and export settings for converting between DataTable and spreadsheet formats.
 slug: radspreadprocessing-formats-and-conversion-data-table-formatprovider-settings
-tags: data, table, settings, spreadsheet, radspreadprocessing, worksheet, conversion, import, export, spread
+tags: data, table, settings, spreadsheet, radspreadprocessing, worksheet, conversion, import, export, spread, datetime, format, preferreddatetimeformat
 published: True
 position: 2
 ---
@@ -15,9 +15,11 @@ The `DataTableFormatProvider` exposes import and export settings that allow you 
 
 ## Import Settings
 
-* `PreferredDateTimeFormat`: Gets or sets the default format string when importing DateTime columns.
+* `PreferredDateTimeFormat`: Gets or sets the default format string when importing DateTime columns. When null, the current culture's short date pattern is used.
 * `ShouldImportColumnHeaders`: Controls whether the column headers are imported.
 * `StartCellIndex`: Gets or sets the index where the table starts in the Worksheet.
+
+<snippet id='libraries-spread-formats-datatable-apply-import-settings'/>
 
 ### The CellImported Event
 
@@ -32,7 +34,7 @@ The `CellImportedEventArgs` contains information about the current cell:
 * `worksheet`: The worksheet where the data is imported.
 
 
-**Example 1: Using the CellImported event to color imported cells in the second column**
+**Using the CellImported event to color imported cells in the second column**
 
 <snippet id='codeblock-col'/>
 
@@ -52,7 +54,7 @@ The `ColumnExportingEventArgs` object contains the current column instance and i
 * `DataColumn`: Gets the [DataColumn](https://learn.microsoft.com/en-us/dotnet/api/system.data.datacolumn?view=net-6.0) that is being exported.
 * `ColumnIndex`: Gets the index of the exported column.
 
-**Example 2: Using the ColumnExporting event to allow null values in the fourth exported column**
+**Using the ColumnExporting event to allow null values in the fourth exported column**
 
 <snippet id='codeblock-com'/>
 

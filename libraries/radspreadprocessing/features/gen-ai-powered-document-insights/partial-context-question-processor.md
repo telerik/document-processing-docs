@@ -100,6 +100,6 @@ A sample custom `CustomOpenAIEmbedder` implementation for the `IEmbedder` is sho
 ## See Also
 
 * [GenAI-powered Document Insights Overview]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-overview%})
-* [Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
+* [GenAI-powered Document Insights Prerequisites]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-prerequisites%})
 * [SummarizationProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-summarization-processor%})
 * [CompleteContextQuestionProcessor]({%slug radspreadprocessing-features-gen-ai-powered-document-insights-complete-context-question-processor%})

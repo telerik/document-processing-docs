@@ -48,6 +48,6 @@ You can insert a Compare Field through the [RadFlowDocumentEditor]({%slug radwor
 
 ## See Also
 
-* [Fields]({%slug radwordsprocessing-concepts-fields%})
+* [Working with Fields]({%slug radwordsprocessing-concepts-fields%})
 * [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%})
 * [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%})

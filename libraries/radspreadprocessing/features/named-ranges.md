@@ -112,5 +112,5 @@ The `NameCollection` class exposes a `Remove()` method that takes a string param
 ## See Also
 
 * [Data Validation]({%slug radspreadprocessing-features-data-validation%})
-* [Sorting]({%slug radspreadprocessing-features-sorting%})
-* [Filtering]({%slug radspreadprocessing-features-filtering%})
+* [Sorting Feature]({%slug radspreadprocessing-features-sorting%})
+* [Filtering Feature]({%slug radspreadprocessing-features-filtering%})

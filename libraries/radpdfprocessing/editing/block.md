@@ -105,10 +105,10 @@ The `Block` class has properties and methods that affect how it is rendered:
 * `SpacingAfter`: Represents the spacing after.
                 
 
-* `LineSpacing`: The spacing between the lines.
+* `LineSpacing`: The spacing between lines. Defaults to `1.15`. When `LineSpacingType` is `Auto`, this acts as a line height multiplier. When `LineSpacingType` is `Exact` or `AtLeast`, this specifies the line height in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).
 
 
-* `LineSpacingType`: Specifies how to interpret the line spacing.
+* `LineSpacingType`: Specifies how to interpret the line spacing using the `HeightType` enumeration (`Auto`, `Exact`, `AtLeast`). Defaults to `Auto`.
                 
 
 * `FirstLineIndent`: The indent for the first line.
@@ -160,7 +160,6 @@ The `Block` class has properties and methods that affect how it is rendered:
 
 * `Clear()`: Clears all elements in the block.
                 
-
 **Example 7: Change Block properties**
 
 <snippet id='pdf-block-change-properties'/>

@@ -24,7 +24,7 @@ A formula is an algebraic expression that contains values, operators, functions,
 * **Cell references**: Formulas can contain references to cells or ranges of cells. For example, the expression *=B1+B2* adds the values of cells B1 and B2 of the current worksheet, while the formula *=SUM(B1:B5)* sums up the values of all cells between B1 and B5. For more information about cell references, see the [Cell References]({%slug radspreadprocessing-features-formulas-cell-references%}) article.
           
 
-* **Built-in functions**: You can use a large set of predefined functions that can be directly included in expressions. Examples of formulas that use built-in functions are: *=ABS(-5), =COS(PI()), =AND(B1, B2)<>OR(C1, C2)*. You can find the full list in the [Functions]({%slug radspreadprocessing-features-formulas-functions%}) article.
+* **Built-in functions**: You can use a large set of predefined functions that can be directly included in expressions. Examples of formulas that use built-in functions are: *=ABS(-5), =COS(PI()), =AND(B1, B2)<>OR(C1, C2)*. You can find the full list in the [Formula Functions]({%slug radspreadprocessing-features-formulas-functions%}) article.
           
 
 ## Get and Set Formulas in Cells

@@ -47,6 +47,8 @@ To insert a bookmark in a document, add it to the `Bookmarks` collection. The fo
 
 <snippet id='pdf-add-bookmark-to-document'/>
 
+>tip To open the PDF with the bookmarks pane selected in a viewer application, set the document-level `PageMode` property to `PageMode.UseBookmarks`.
+
 To remove a bookmark, use the same collection. In the following example, the second bookmark inside the document is removed:
 
 <snippet id='pdf-remove-bookmark-from-document'/>

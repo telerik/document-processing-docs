@@ -17,7 +17,7 @@ The **.NET Framework** version of the RadPdfProcessing library provides built-in
 
 To reduce file size, PDF supports only a limited set of compression filters such as JPEG and JPEG2000 compression of color and grayscale images. To allow the library to export images other than JPEG and JPEG2000, you must process these images before export. The **.NET Standard** specification does not define APIs for converting or processing images or scaling their quality. To export images other than JPEG and JPEG2000, or to use `ImageQuality` other than High, PdfProcessing exposes two extensibility points through the static `FixedExtensibilityManager` class: `ImagePropertiesResolver` and `JpegImageConverter`.
 
->important If neither `ImagePropertiesResolver` nor `JpegImageConverter` is set, an `InvalidOperationException` is thrown during export of the document.
+>important On cross-platform targets, set `ImagePropertiesResolver` or `JpegImageConverter` before export. If both properties are `null`, export throws an `InvalidOperationException`.
 
 ## Requirements
 
@@ -25,15 +25,14 @@ To export images other than JPEG and JPEG2000, or to use `ImageQuality` other th
 
 |NuGet package|Description|
 |----|----|
-|**Telerik.Documents.ImageUtils**||
+|**Telerik.Documents.ImageUtils**|Provides default image resolver and JPEG converter implementations.|
 |**SkiaSharp.NativeAssets.*** (version {{site.skiasharpversion}})|May differ according to the used platform. For **Linux** use **SkiaSharp.NativeAssets.Linux.NoDependencies**.|
 |**SkiaSharp.Views.Blazor** and **wasm-tools**|For Blazor WebAssembly.|
 
->important With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2), SkiaSharp replaced ImageSharp as the required dependency.
 
 ## ImagePropertiesResolver
 
-The `ImagePropertiesResolver` property allows you to set a resolver implementation that parses the image raw data to separate its colors and alpha channel. While you can use this implementation for any type of supported image, it is required when working with PNG images so their transparency is preserved in the generated PDF document. The resolver gets the image bytes as they are and does not take into consideration the [Image Quality](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#imagequality) set through the [Export Settings](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/formats-and-conversion/pdf/pdfformatprovider/settings#export-settings).
+The `ImagePropertiesResolver` property accepts a resolver that parses image data into color and alpha information. On cross-platform targets, the resolver is required for formats such as PNG when you need transparency preserved in the exported PDF. The resolver reads the image bytes and does not apply the `ImageQuality` value from the [export settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings).
 
 ### Default Implementation for ImagePropertiesResolver
 
@@ -41,7 +40,7 @@ PdfProcessing provides a default implementation called `ImagePropertiesResolver`
 
 >note View the implementation [Requirements](#requirements).
 
-**Set the default implementation of the ImagePropertiesResolver class**
+#### __Example 1: Set the default ImagePropertiesResolver implementation__
 
 <snippet id='pdf-image-property-resolver'/>
 
@@ -49,7 +48,7 @@ PdfProcessing provides a default implementation called `ImagePropertiesResolver`
 
 If you have specific requirements and the default `ImagePropertiesResolver` does not fit them, you can implement custom logic. To achieve this:
 
-1. Inherit the `Telerik.Windows.Documents.Core.Imaging.ImagePropertiesResolverBase` class.
+1. Inherit the `Telerik.Documents.Core.Imaging.ImagePropertiesResolverBase` class.
 2. Implement its members.
 3. Assign an instance of the custom implementation to the `FixedExtensibilityManager.ImagePropertiesResolver` property.
 
@@ -65,7 +64,7 @@ The **Telerik.Documents.ImageUtils** package provides a default implementation o
 
 >note View the implementation [Requirements](#requirements).
 
-**Set the default implementation of the JpegImageConverter class**
+#### __Example 2: Set the default JpegImageConverter implementation__
 
 <snippet id='pdf-jpeg-image-converter'/>
 
@@ -73,7 +72,7 @@ The **Telerik.Documents.ImageUtils** package provides a default implementation o
 
 The following example demonstrates how to implement a custom image converter. It depends on the [SixLabors.ImageSharp](https://www.nuget.org/packages/sixlabors.imagesharp/) library. You can follow this approach with other image processing libraries according to your specific requirements.
 
-#### Required NuGet Packages
+### Required NuGet Packages
 
 * SixLabors.ImageSharp - version **3.1.12**
 * SixLabors.ImageSharp.Drawing - version **2.1.7**
@@ -86,11 +85,11 @@ The following `using`/`imports` statements are required in the project:
 * using SixLabors.ImageSharp.PixelFormats;
 * using SixLabors.ImageSharp.Processing;
 
-**Create a custom implementation inheriting the JpegImageConverterBase abstract class**
+#### __Example 3: Create a custom JpegImageConverterBase implementation__
 
 <snippet id='pdf-custom-sixlabors-imagesharp-converter'/>
 
-**Set the custom implementation to the JpegImageConverter property of the FixedExtensibilityManager**
+#### __Example 4: Assign a custom image converter__
 
 <snippet id='pdf-set-custom-image-converter'/>
 
@@ -100,3 +99,4 @@ The following `using`/`imports` statements are required in the project:
 
 * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
 * [Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
+* [Converting DOCX with TIFF Images to PDF in .NET Standard]({%slug docx-tiff-pdf-telerik-wordsprocessing%})

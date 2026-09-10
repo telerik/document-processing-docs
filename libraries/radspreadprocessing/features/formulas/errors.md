@@ -3,7 +3,7 @@ title: Errors
 description: Learn about formula error values in RadSpreadProcessing and what causes specific errors such as invalid expressions or missing references.
 page_title: Errors
 slug: radspreadprocessing-features-formulas-errors
-tags: errors, formulas, spreadsheet, radspreadprocessing, div, ref, value, calculation, spread, xlsx
+tags: errors, formulas, spreadsheet, radspreadprocessing, div, ref, value, calculation, spread, xlsx, spill, calc, dynamic, array
 published: True
 position: 4
 ---
@@ -18,6 +18,18 @@ In some cases formula values may return errors. For example, you might have ente
 The following table contains information about all supported errors.
         
 <table><tr><td>
+
+#SPILL!
+              </td><td>
+
+<b>Spill Error</b> occurs when a dynamic array formula cannot spill its results because one or more of the target cells are occupied by non-empty content that the formula does not own. To resolve the error, clear or move the blocking cells. The error is represented by the <code>ErrorExpressions.SpillError</code> constant. See <a href="{%slug radspreadprocessing-features-formulas-dynamic-array-formulas%}">Dynamic Array Formulas</a> for more information.
+              </td></tr><tr><td>
+
+#CALC!
+              </td><td>
+
+<b>Calculation Error</b> occurs when the calculation engine cannot determine the size of the array result. This typically happens when the array dimensions are infinite or cannot be resolved because of unbounded or circular dependencies. The error is represented by the <code>ErrorExpressions.CalcError</code> constant.
+              </td></tr><tr><td>
 
 #DIV/0!
               </td><td>
@@ -70,3 +82,8 @@ The following table contains information about all supported errors.
 <b>Null Error</b> occurs when the two cell ranges passed to an intersection operator do not intersect. For example, the value
                 =A1:A2 B1:B2 returns a null error because the two ranges do not have cells in common.
               </td></tr></table>
+
+## See Also
+
+* [Dynamic Array Formulas]({%slug radspreadprocessing-features-formulas-dynamic-array-formulas%})
+* [Formulas — General Information]({%slug radspreadprocessing-features-formulas-general-information%})

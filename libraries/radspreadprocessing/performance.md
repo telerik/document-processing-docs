@@ -1,6 +1,6 @@
 ---
 title: Performance Tips and Tricks
-description: Tips and best practices for maximizing the performance of RadSpreadProcessing when working with large amounts of spreadsheet data.
+description: Improve RadSpreadProcessing performance by using recommended practices for layout updates, history, range operations, images, and cell values in large workbooks.
 page_title: Performance Tips and Tricks
 slug: radspreadprocessing-performance
 tags: performance, spread, processing, spreadsheet, optimization, tips, memory, large, workbook, excel, xlsx
@@ -10,31 +10,28 @@ position: 10
 
 # Performance Tips and Tricks
 
-`RadSpreadProcessing` allows you to prepare and modify tabular data. Even though the library was built with performance in mind, working with large amounts of data slows it down. The following tips help you get the most from the component in terms of performance.
+`RadSpreadProcessing` lets you prepare and modify tabular data. The library is optimized for performance, but large datasets can still slow workbook operations. The following tips help you improve speed and lower resource use.
+
+Use the following techniques when you work with large workbooks:
 
 * [Reduce Layout Updates Frequency](#reduce-layout-updates-frequency)
-
 * [Reduce the Number of Undo Steps](#reduce-the-number-of-undo-steps)
-
 * [Disabling History](#disabling-history)
-
 * [Apply Values or Formatting on Large Range at Once](#apply-values-or-formatting-on-large-range-at-once)
-
 * [Avoid Using the Additional Calculations Options Provided by the Shapes and Images](#avoid-using-the-additional-calculations-options-provided-by-the-shapes-and-images)
-
 * [Avoid Cell Value Type Parsing](#avoid-cell-value-type-parsing)
 
 ## Reduce Layout Updates Frequency
 
-Calculating the layout is an operation that computes the width of each column, the height of each row, the size of the text contained in the cells, and many other elements used for positioning the UI. The layout update triggers each time a property changes and is a fairly heavy operation.
+Layout calculation determines column widths, row heights, text size, and other values that affect document layout. A layout update runs after each property change, and it can be expensive.
 
-Internally there are many mechanisms used to lower the number of calculations, but sometimes they are not enough. For example, if you want to generate a document and then show it, you do not need to trigger any layout updates other than the one after you finish creating the document. The following code snippet suspends layout updates during document generation and resumes them afterward.
+`RadSpreadProcessing` reduces layout recalculations internally, but large batch updates can still trigger extra work. If you generate a document before you display or export it, suspend layout updates until the batch operation ends. The following code snippet shows this approach.
 
 **Example 1: Suspend layout updates during document generation**
 
 <snippet id='codeblock-cfv'/>
 
-If an exception is thrown between the two method calls, the resuming of the layout update will not execute and the UI will stop updating. You can ensure the layout update resumes regardless of exceptions by using `UpdateScope`. The following code snippet shows this approach.
+If an exception occurs between the two method calls, `ResumeLayoutUpdate()` will not run. Use `UpdateScope` to make sure layout updates resume even when an exception occurs.
 
 **Example 2: Suspend layout updates with UpdateScope**
 
@@ -42,13 +39,13 @@ If an exception is thrown between the two method calls, the resuming of the layo
 
 ## Reduce the Number of Undo Steps
 
-Preserving information about the steps in the undo stack is usually not a time consuming operation, but even the lightest operation performed thousands of times may slow down your application. If you do not need to preserve each step in the document generation process as a separate undo step, you can combine a series of actions into one undo step. For example, if you want to set background color to the even rows in your table, you have to set the fill for each row separately. This way each background setting is preserved as a separate undo step. The following code combines those actions into a single undo group.
+Tracking undo steps is usually inexpensive, but repeated operations can still affect performance. If you do not need each change as a separate undo action, group related changes into one undo step. For example, when you set a background color for all even rows, you can save all changes in a single undo group.
 
 **Example 3: Combine multiple changes in one undo group**
 
 <snippet id='codeblock-cfx'/>
 
-If an exception is thrown between the two method calls, the ending of the undo group will not execute. All the following actions will not be added to the history and the UI will stop updating. You can ensure the undo group closes regardless of exceptions by using `UpdateScope`. The following code snippet shows how to do that.
+If an exception occurs between the two method calls, `EndUndoGroup()` will not run. Use `UpdateScope` to make sure the undo group closes correctly.
 
 **Example 4: Combine undo operations with UpdateScope**
 
@@ -56,13 +53,13 @@ If an exception is thrown between the two method calls, the ending of the undo g
 
 ## Disabling History
 
-As described in the [Reduce the Number of Undo Steps section](#reduce-the-number-of-undo-steps), preserving the history steps can lower the performance of `RadSpreadProcessing`. If you do not want to preserve History while generating your document, you can turn the feature off. The following example toggles the `IsEnabled` Boolean property of the history.
+As described in [Reduce the Number of Undo Steps](#reduce-the-number-of-undo-steps), history tracking can lower performance in large-generation scenarios. If you do not need history while you generate a document, turn it off temporarily. The following example toggles the `IsEnabled` Boolean property.
 
 **Example 5: Disable history while generating a workbook**
 
 <snippet id='codeblock-cfz'/>
 
-If an exception is thrown before enabling the history, it will not be enabled and the subsequent history steps will not be preserved. To ensure that the history is enabled, use the `UpdateScope` class. The following example shows how to achieve this.
+If an exception occurs before you enable history again, later changes will not be recorded. Use `UpdateScope` to restore the previous state reliably.
 
 **Example 6: Disable and restore history with UpdateScope**
 
@@ -70,13 +67,11 @@ If an exception is thrown before enabling the history, it will not be enabled an
 
 ## Apply Values or Formatting on Large Range at Once
 
-Setting the same values to thousands of cells one by one takes more time than setting the same values to an entire cell range. Create a `CellRange` using the row and column indices of the start and end cells.
-
-`public CellRange(int fromRowIndex, int fromColumnIndex, int toRowIndex, int toColumnIndex)`
+Applying the same value or formatting to thousands of cells one by one takes more time than updating a full range. Create a `CellRange` by using the row and column indexes of the start and end cells through the `CellRange(int fromRowIndex, int fromColumnIndex, int toRowIndex, int toColumnIndex)` constructor.
 
 ## Avoid Using the Additional Calculations Options Provided by the Shapes and Images
 
-When setting the properties of an image you have created, keep in mind that some of the members may cause recalculation of other properties to make the images more convenient to use in a UI context. You can read more about what calculations are performed in the [Shapes and Images]({%slug radspreadprocessing-features-shapes-and-images%}) article. If you are generating a document from scratch, the recalculation of other properties will most likely be an unnecessary burden for your application. In this case, use the properties of the shape classes:
+When you set properties on an image, some members recalculate other values to improve UI-oriented behavior. For details, see [how shapes and images work]({%slug radspreadprocessing-features-shapes-and-images%}). If you generate a document from scratch, these extra calculations are usually unnecessary. In this case, use the following properties of the shape classes:
 
 * `Width`
 
@@ -84,7 +79,7 @@ When setting the properties of an image you have created, keep in mind that some
 
 * `RotationAngle`
 
-Avoid using the methods for setting the same properties with the `adjustCellIndex` parameter set to `true`:
+Avoid the following methods when the `adjustCellIndex` parameter is `true`:
 
 * `SetWidth()`
 
@@ -94,15 +89,15 @@ Avoid using the methods for setting the same properties with the `adjustCellInde
 
 ## Avoid Cell Value Type Parsing
 
-When setting values to cells, the cell value type is determined by an internal parsing mechanism. If you are sure what cell value type the passed value must produce, set it specifically. This bypasses the parsing and increases the performance of the application.
+When you set a value in a cell, an internal parser determines the cell value type. If you already know the target type, set it explicitly. This bypasses parsing and improves performance.
 
-The easiest way to achieve this is by using the `SetValue()` overload with the respective CLR type (`DateTime`, `Double`, and others) or in the case of formula value type and text value type, the `SetValueAsFormula()` and `SetValueAsText()` methods respectively.
+The easiest way to do this is to use a `SetValue()` overload with the matching CLR type, such as `DateTime` or `double`. For formulas and text values, use `SetValueAsFormula()` and `SetValueAsText()`.
 
-More information about cell value types is available in the [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%}) article.
+For more information, see [how cell value types work]({%slug radspreadprocessing-working-with-cells-cell-value-types%}).
 
 ## See Also
 
-* [History]({%slug radspreadprocessing-features-history%})
+* [Workbook History]({%slug radspreadprocessing-features-history%})
 * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
 * [Shapes and Images]({%slug radspreadprocessing-features-shapes-and-images%})
 * [Cell Value Types]({%slug radspreadprocessing-working-with-cells-cell-value-types%})

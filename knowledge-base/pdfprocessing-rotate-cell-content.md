@@ -25,7 +25,7 @@ When working with [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocum
 
 ## Solution
 
-The [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library does not natively support rotated content inside [Table]({%slug radpdfprocessing-editing-table-overview%}) cells. However, you can achieve this by creating a custom `RotatedBlock` class that implements the `IBlockElement` interface and wraps an inner [Block]({%slug radpdfprocessing-editing-block%}) instance.
+The [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library does not natively support rotated content inside [PDF Table]({%slug radpdfprocessing-editing-table-overview%}) cells. However, you can achieve this by creating a custom `RotatedBlock` class that implements the `IBlockElement` interface and wraps an inner [Block]({%slug radpdfprocessing-editing-block%}) instance.
 
 ![PdfProcessing Rotate Cell Content](images/pdf-processing-rotate-cell-content.png)
 
@@ -193,7 +193,7 @@ namespace Rotate_Table_Cell
 }
 ```
 
-**Step 2:** Use the `RotatedBlock` inside a [Table]({%slug radpdfprocessing-editing-table-overview%}) and insert it into the document via [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}):
+**Step 2:** Use the `RotatedBlock` inside a [PDF Table]({%slug radpdfprocessing-editing-table-overview%}) and insert it into the document via [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}):
 
 ```csharp
 using Rotate_Table_Cell;
@@ -245,6 +245,6 @@ static void DrawTableWithRotatedBlocks(RadFixedDocument document)
 ## See Also
 
 * [Block]({%slug radpdfprocessing-editing-block%})
-* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [PDF Table Overview]({%slug radpdfprocessing-editing-table-overview%})
 * [TableCell]({%slug radpdfprocessing-editing-table-tablecell%})
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})

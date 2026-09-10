@@ -57,6 +57,6 @@ You can also use the following methods to modify the collection of form fields i
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
-* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
+* [PDF Annotation Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform %})
 * [Extracting Data from PDF Form Fields Using RadPdfProcessing]({%slug extract-pdf-form-fields-data-radpdfprocessing%})

@@ -36,7 +36,7 @@ The following example shows how to insert multiple [digital signatures]({%slug r
 
 ## See Also
 
-* [Digital Signature]({%slug radpdfprocessing-features-digital-signature%})
+* [Digital Signature Feature Overview]({%slug radpdfprocessing-features-digital-signature%})
 * [Signature Field]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
 * [Multiple Digital Signatures Demo](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)
 * [Using a TimeStamp Server]({%slug pdf-sign-timestamp-server%})

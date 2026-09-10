@@ -10,7 +10,7 @@ position: 4
 
 # FixedContentEditor
 
-`FixedContentEditor` is intended to simplify the process of creating and editing the content of a PDF page, also known as `IContentRootElement` or [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
+`FixedContentEditor` simplifies creating and editing content on a PDF page or another `IContentRootElement`, such as a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
       
 >note Unlike [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which manages the document content in a flow-like manner and allows you to insert all desired elements one after another without calculating the element position, `FixedContentEditor` requires managing the Position at which the document elements are drawn. This gives you the possibility to draw the respective element at a fixed position. However, you must be careful about the available remaining space on the page and the space needed for the element to be drawn. A complete example of how to create a PDF document from scratch is available in the [How to Generate a PDF Document with Logo and Text using FixedContentEditor]({%slug create-pdf-document-with-logo-and-text-using-fixedcontenteditor%}) KB article.
 
@@ -18,31 +18,31 @@ position: 4
 
 |Method/Property|Description|
 |----|----|
-|**[Position]({%slug radpdfprocessing-concepts-position%})**|Gets or sets the current position of the editor.|
-|**[Clipping]({%slug radpdfprocessing-concepts-clipping%})**|Defines the outline of other content elements like [Image]({%slug radpdfprocessing-model-image%}) and [Path]({%slug radpdfprocessing-model-path%}).|
-|**PushClipping**|Inserts a new clipping defined from the specified object depending on the overload.|
-|**PopClipping**|Pops the last clipping, which was inserted with the editor.|
-|**DrawText**|Draws text as a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) at the current position and with size depending on the overload.|
-|**DrawImage**|Draws an [Image]({%slug radpdfprocessing-model-image%}) at the current position and with size depending on the overload.|
-|**DrawForm**|Draws a [Form]({%slug radpdfprocessing-model-form%}) at the current position and with size depending on the overload.|
-|**DrawWidget**|Creates a [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) with different type and size depending on the overload.|
-|**DrawStampAnnotation**|Creates a new [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}) and draws it with a specified size and name.|
-|**DrawTextAnnotation**|Creates a new [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}) and draws it with a specified size and text.|
-|**DrawLineAnnotation**|Creates a new [LineAnnotation]({%slug radpdfprocessing-model-annotations-line%}) with starting point the current point of the editor and end point the current point of the editor plus the given distances.|
-|**DrawLine**|Draws a line from point A to point B.|
-|**DrawRectangle**|Draws a rectangle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|**DrawEllipse**|Draws an ellipse ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|**DrawCircle**|Draws a circle ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|**DrawPath**|Draws a path ([Geometry]({%slug radpdfprocessing-concepts-geometry%})).|
-|**DrawTable**|Draws a [Table]({%slug radpdfprocessing-editing-table-overview%}) with size depending on the overload.|
-|**DrawBlock**|Draws a [Block]({%slug radpdfprocessing-editing-block%}) with size depending on the overload.|
-|**Draw**|Draws the specified element.|
+|`Position`|Gets or sets the current position of the editor.|
+|`Clipping`|Gets the current clipping region.|
+|`PushClipping`|Adds a clipping region and returns an `IDisposable` that removes it when disposed.|
+|`PopClipping`|Removes and returns the last clipping region.|
+|`DrawText`|Draws text as a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) at the current position.|
+|`DrawImage`|Draws an [Image]({%slug radpdfprocessing-model-image%}) at the current position.|
+|`DrawForm`|Draws a [Form]({%slug radpdfprocessing-model-form%}) at the current position.|
+|`DrawWidget`|Creates and draws a [Widget]({%slug radpdfprocessing-model-annotations-widgets%}).|
+|`DrawStampAnnotation`|Creates and draws a [StampAnnotation]({%slug radpdfprocessing-model-annotations-stamp%}).|
+|`DrawTextAnnotation`|Creates and draws a [TextAnnotation]({%slug radpdfprocessing-model-annotations-text%}).|
+|`DrawLineAnnotation`|Creates and draws a [LineAnnotation]({%slug radpdfprocessing-model-annotations-line%}).|
+|`DrawLine`|Draws a line between two points.|
+|`DrawRectangle`|Draws a rectangle [geometry]({%slug radpdfprocessing-concepts-geometry%}).|
+|`DrawEllipse`|Draws an ellipse [geometry]({%slug radpdfprocessing-concepts-geometry%}).|
+|`DrawCircle`|Draws a circle [geometry]({%slug radpdfprocessing-concepts-geometry%}).|
+|`DrawPath`|Draws a path [geometry]({%slug radpdfprocessing-concepts-geometry%}).|
+|`DrawTable`|Draws a [Table]({%slug radpdfprocessing-editing-table-overview%}).|
+|`DrawBlock`|Draws a [Block]({%slug radpdfprocessing-editing-block%}).|
+|`Draw`|Draws the specified element.|
 
 ## Creating FixedContentEditor with a Specified Position
 
 `FixedContentEditor` is always associated with a single [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) (also known as `IContentRootElement`) which it takes as a constructor parameter when created. The following snippet shows how to create an editor.
 
-**Create a FixedContentEditor for a RadFixedPage**
+#### __Example 1: Create a FixedContentEditor for a RadFixedPage__
 
  <snippet id='libraries-pdf-editing-fixedcontenteditor-create-fixedcontenteditor'/>
  
@@ -50,7 +50,7 @@ The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-pos
 
 The following snippet demonstrates how to create a `FixedContentEditor` with a specific initial [Position]({%slug radpdfprocessing-concepts-position%}).
         
-**Create a FixedContentEditor with a specific initial position**
+#### __Example 2: Create a FixedContentEditor with an initial position__
 
  <snippet id='libraries-pdf-editing-fixedcontenteditor-set-fixedcontenteditor-position'/>
 
@@ -62,7 +62,7 @@ Composing a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
 
 Insert a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) with the `public void DrawText(string text)` method. The following snippet inserts a fragment with content "First text fragment.".     
 
-**Insert a TextFragment with DrawText**
+#### __Example 3: Insert a TextFragment with DrawText__
 
 <snippet id='fixed-content-editor-insert-text-fragment'/>
 
@@ -70,13 +70,13 @@ Insert a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) with the `
 
 ![RadPdfProcessing FixedContentEditor output showing a drawn TextFragment](images/RadPdfProcessing_Editing_FixedContentEditor_01.png)
 
->The '\r' and '\n' characters do not have the usual meaning of "go to next line" when inserted into a PDF document, and you cannot insert text containing these characters to produce multiline text. Instead, split the text and insert it line by line.
+>note The `\r` and `\n` characters do not create line breaks when you insert text into a PDF document. Split multiline text and insert each line separately.
 
 ### Inserting Paragraph
 
 The following snippet shows how to use the `Block` object to draw a paragraph.         
 
-**Insert a paragraph with a Block**
+#### __Example 4: Insert a paragraph with a Block__
 
 <snippet id='fixed-content-editor-insert-paragraph'/>
 
@@ -90,16 +90,16 @@ The following snippet shows how to use the `Block` object to draw a paragraph.
 
 `FixedContentEditor` provides several overloads for inserting an [Image]({%slug radpdfprocessing-model-image%}):       
 
-* public void DrawImage(Stream stream); 
-* public void DrawImage(Stream stream, double width, double height);
-* public void DrawImage(Stream stream, Size size);
-* public void DrawImage(ImageSource source);
-* public void DrawImage(ImageSource source, Size size);
-* public void DrawImage(ImageSource source, double width, double height);
+* `DrawImage(Stream stream)`
+* `DrawImage(Stream stream, double width, double height)`
+* `DrawImage(Stream stream, Size size)`
+* `DrawImage(ImageSource source)`
+* `DrawImage(ImageSource source, Size size)`
+* `DrawImage(ImageSource source, double width, double height)`
 
 The following snippet shows how to add an image created from a Stream.
             
-**Insert an image from a Stream**
+#### __Example 5: Insert an image from a stream__
 
 <snippet id='fixed-content-editor-insert-image'/>
 
@@ -111,15 +111,15 @@ The following snippet shows how to add an image created from a Stream.
 
 The following methods can be used to insert different [Geometries]({%slug radpdfprocessing-concepts-geometry%}) in the document:          
 
-* public void `DrawLine`(Point point1, Point point2): Inserts a line between the specified points.
-* public void `DrawRectangle`(Rect rectangle): Inserts a rectangle.
-* public void `DrawEllipse`(Point center, double radiusX, double radiusY): Inserts an ellipse.
-* public void `DrawCircle`(Point center, double radius): Inserts a circle.
-* public void `DrawPath`(PathGeometry pathGeometry): Inserts a custom path geometry.
+* `DrawLine(Point point1, Point point2)`: Inserts a line between the specified points.
+* `DrawRectangle(Rect rectangle)`: Inserts a rectangle.
+* `DrawEllipse(Point center, double radiusX, double radiusY)`: Inserts an ellipse.
+* `DrawCircle(Point center, double radius)`: Inserts a circle.
+* `DrawPath(PathGeometry pathGeometry)`: Inserts a custom path geometry.
           
 The following snippet shows how to add an ellipse using one of the `FixedContentEditor` methods.
             
-**Insert an ellipse with FixedContentEditor**
+#### __Example 6: Insert an ellipse with FixedContentEditor__
 
 <snippet id='fixed-content-editor-insert-ellipse'/>
 
@@ -127,15 +127,15 @@ The following snippet shows how to add an ellipse using one of the `FixedContent
 
 `FixedContentEditor` exposes a `Clipping` property, which defines the [Clipping]({%slug radpdfprocessing-concepts-clipping%}) to be used for the inserted content elements. The following methods can be used to push and pop clippings:         
 
-* public IDisposable `PushClipping`(GeometryBase clip): Inserts a new clipping defined from the specified geometry.
-* public IDisposable `PushClipping`(Rect clip): Inserts a new clipping defined from the specified rectangle.
-* public Clipping `PopClipping`(): Pops the last clipping, which was inserted with the editor.
+* `PushClipping(GeometryBase clip)`: Inserts a new clipping defined from the specified geometry.
+* `PushClipping(Rect clip)`: Inserts a new clipping defined from the specified rectangle.
+* `PopClipping()`: Removes the last clipping added to the editor.
             
 When the returned `IDisposable` object from the `PushClipping()` method is disposed, the clipping is popped from the clippings in the editor.          
 
 When a new clipping is pushed, it is set as a clipping to the current clipping in the editor. The following snippet shows how to push a clipping.
             
-**Push a clipping region before drawing text**
+#### __Example 7: Push a clipping region before drawing text__
 
  <snippet id='libraries-pdf-editing-fixedcontenteditor-push-clipping'/>
 
@@ -149,7 +149,7 @@ When a new clipping is pushed, it is set as a clipping to the current clipping i
             
 The following snippet generates a table and draws it in a fixed size.          
 
-**Insert a table with a fixed size**
+#### __Example 8: Insert a table with a fixed size__
 
 <snippet id='fixed-content-editor-insert-table'/>
 
@@ -163,12 +163,12 @@ More detailed information about tables is available in the [Table]({%slug radpdf
 
 With the `FixedContentEditor` class you can insert a Form (Form-XObject) element. 
 
-**Insert a form XObject with FixedContentEditor**
+#### __Example 9: Insert a form XObject with FixedContentEditor__
 <snippet id='fixed-content-editor-insert-form'/>
 
 There are two more overloads of `DrawForm()` that allow you to pass the size that should be used for the form.
 
->For more information on how to create a form, see the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) articles.
+>note For more information about creating forms, see the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) articles.
 
 ### Inserting Widgets
 
@@ -176,13 +176,13 @@ The Widget annotations allow you to visualize the content of a FormField. With t
 
 * **DrawWidget&lt;T&gt;(FormField&lt;T&gt; parentField, Size annotationSize)**: Creates a new [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) representing the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instance passed as a parameter and draws the widget with the specified annotation size. This method adds a widget only in cases when the root of the FixedContentEditor supports annotations. 
 
-	**Insert a PushButtonField widget with DrawWidget**
+	#### __Example 10: Insert a PushButtonField widget with DrawWidget__
 	
 	<snippet id='fixed-content-editor-insert-pushbuttonfield'/>
 
 * **DrawWidget(RadioButtonField parentField, RadioOption option, Size annotationSize)**: Creates a new [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets%}#radiobuttonwidget-class) and draws the widget with the specified annotation size. This method adds a widget only in cases when the root of the FixedContentEditor supports annotations. The second parameter represents the option that the widget visualizes.
 	
-	**Insert RadioButtonField widgets with DrawWidget**
+	#### __Example 11: Insert RadioButtonField widgets with DrawWidget__
 	
 	<snippet id='fixed-content-editor-insert-radiobuttonfield'/>
 
@@ -192,7 +192,7 @@ The [Position]({%slug radpdfprocessing-concepts-position%}) property exposed by 
 
 The following snippet shows how to manipulate the position of the inserted content elements.     
 
-**Scale and rotate inserted content**
+#### __Example 12: Scale and rotate inserted content__
 
 <snippet id='fixed-content-editor-scale-rotate'/>
 
@@ -233,5 +233,5 @@ The following snippet shows how to manipulate the position of the inserted conte
 * [Splitting a Large Image Across Multiple PDF Pages]({%slug split-export-large-image-multiple-pdf-pages-radpdfprocessing%})
 * [Resizing Large Images to Fit in the PDF Page]({%slug resize-images-radpdfprocessing%})
 * [Inserting HTML Content into PDF TableCell with RadPdfProcessing]({%slug insert-html-content-into-pdf-tablecell-radpdfprocessing%})
-* [Drawing Rectangles with Text and Image Contant with RadPdfProcessing]({%slug draw-rectangles-text-images-radpdfprocessing%})
+* [Drawing Rectangles with Text and Image Content with RadPdfProcessing]({%slug draw-rectangles-text-images-radpdfprocessing%})
 * [Positioning Centered and Right-Aligned Text on the Same Line in PDF]({%slug aligning-centered-right-margin-text-pdf-telerik-document-processing%})

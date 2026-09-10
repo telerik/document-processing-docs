@@ -24,6 +24,6 @@ The `PushButtonField` class corresponds to the `FormFieldType.PushButton` enum v
 ## See Also
 
 * [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
-* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
+* [PDF Annotation Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms)

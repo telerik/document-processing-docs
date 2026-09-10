@@ -70,7 +70,7 @@ When merging documents that contain form fields, you must ensure that each field
 
 ## See Also
 
-* [Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
+* [PDF Annotation Widgets]({%slug radpdfprocessing-model-annotations-widgets%})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})
 * [Create Interactive Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CreateInteractiveForms)
 * [Modifying Forms SDK example](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ModifyForms)

@@ -91,4 +91,4 @@ Measure the table and calculate the remaining page height. For precise positioni
 ## See Also
 
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
-* [Tables]({%slug radpdfprocessing-editing-table-overview%})
+* [PDF Tables]({%slug radpdfprocessing-editing-table-overview%})

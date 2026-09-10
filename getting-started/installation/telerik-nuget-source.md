@@ -10,9 +10,7 @@ position: 8
 
 # Telerik NuGet Source
 
-This article explains how to add the Telerik NuGet package feed to your environment. You can use it to get the Telerik Document Processing libraries instead of [manually configuring a local NuGet feed]({%slug installation-nuget-packages%}#how-to-install-from-a-local-nuget-feed).
-
-The benefit of using an online NuGet source is that you receive notifications for later component versions.
+This article explains how to add the Telerik NuGet package feed to your environment. Use it for older releases or when your organization requires the private feed. For current releases, install packages from [NuGet.org]({%slug installation-nuget-packages%}#how-to-install-telerik-document-processing-from-nugetorg).
 
 You can set up the remote Telerik NuGet feed in the following ways:
 
@@ -131,7 +129,7 @@ To edit a `NuGet.Config` file and add the Telerik feed, you need to:
 There are two ways to authenticate with the Telerik NuGet server when you add the Telerik NuGet source [using the .NET CLI](#use-the-net-cli) or [editing the `NuGet.Config` file manually](#edit-the-nuget-config-file):
 
 * Use your Telerik account email as the username, and your Telerik password.
-* Use `api-key` (**recommended**) as the **username** and your personal [Telerik NuGet API key]({%slug using-nuget-keys%}) as the password.
+* Use `api-key` (**recommended**) as the **username** and your personal [Telerik NuGet API key]({%slug generating-api-keys%}) as the password.
 
 >important Using an API key minimizes the risk of exposing client credentials when configuring NuGet access. User credentials grant full access to the user account, while the API key limits access to the NuGet feed only. 
 

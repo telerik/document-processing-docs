@@ -84,3 +84,4 @@ When importing HTML with images that are not included in the file and need to be
 * [Section]({%slug radwordsprocessing-model-section%})
 * [Paragraph]({%slug radwordsprocessing-model-paragraph%})
 * [Run]({%slug radwordsprocessing-model-run%})
+* [Migrating to Platform-Agnostic Namespaces]({%slug platform-agnostic-namespaces-migration%})

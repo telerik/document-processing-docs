@@ -10,19 +10,15 @@ position: 0
 
 # RadWordsProcessing Overview
 
-**RadWordsProcessing** is the Telerik Document Processing library for creating, editing, importing, converting, and exporting Word-processing documents in .NET applications. Use it when you need programmatic control over document content, formatting, document structure, and format conversion without automating Microsoft Word.
+**RadWordsProcessing** is part of Telerik Document Processing. Use this library to create, edit, import, convert, and export word-processing documents in .NET applications without automating Microsoft Word.
 
 This overview explains what the library does, which document elements it supports, which formats you can work with, and where to continue next based on your scenario.
 
 ![Telerik RadWordsProcessing workflow diagram showing DOCX, RTF, and TXT document formats moving through the Word-processing engine for document creation and conversion](images/words-processing-overview.jpg)
 
->note
->
-> If you still need to install **Telerik Document Processing**, see [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%}) for the available installation options.
+>note If you still need to install **Telerik Document Processing**, see [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%}) for the available installation options.
 
->note
->
-> For a step-by-step first project, see [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%}).
+>note For a step-by-step first project, see [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%}).
 
 ![Telerik RadWordsProcessing sample document showing formatted text, highlighted inline styling, and a signature block generated through the RadFlowDocument model](images/RadWordsProcessing_Overview_01.png)
 
@@ -48,9 +44,9 @@ The following table summarizes the main capabilities that users typically need f
 | [Import document elements]({%slug radwordsprocessing-editing-import-document-element%}) | Reuse specific elements from one document inside another document. |
 | [Clone documents and elements]({%slug radwordsprocessing-editing-clone-and-merge%}) | Duplicate documents or individual elements before further processing. |
 | [Find and replace]({%slug radwordsprocessing-editing-find-and-replace%}) | Search for text in a `RadFlowDocument` and replace the matches or update their formatting. |
-| [RadFlowDocumentEditor]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) | Create and modify document content with a higher-level API that reduces manual element management. |
+| [`RadFlowDocumentEditor`]({%slug radwordsprocessing-editing-radflowdocumenteditor%}) | Create and modify document content with a higher-level API that reduces manual element management. |
 | Formatting support | Apply character, paragraph, table, and section formatting to control the appearance and layout of document content. |
-| [GenAI-powered Document Insights]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-overview%}) | Summarize document content and ask questions about a Word document by using Large Language Models (LLMs). |
+| [GenAI-powered Document Insights]({%slug radwordsprocessing-features-gen-ai-powered-document-insights-overview%}) | Summarize document content and ask questions about a Word document by using large language models (LLMs). |
 
 ## Document Model Overview
 
@@ -74,7 +70,7 @@ Use inline elements to control the content that appears inside paragraphs:
 |----|----|
 | [Runs]({%slug radwordsprocessing-model-run%}) | Hold text with specific character formatting. |
 | [Inline images]({%slug radwordsprocessing-model-imageinline%}) and [floating images]({%slug radwordsprocessing-model-floatingimage%}) | Insert pictures that flow with text or float independently on the page. |
-| [Fields]({%slug radwordsprocessing-concepts-fields%}) | Insert merge fields, document variables, and custom code fields. |
+| [Working with Fields]({%slug radwordsprocessing-concepts-fields%}) | Insert merge fields, document variables, and custom code fields. |
 | [Breaks]({%slug radwordsprocessing-model-break%}) | Control line, page, and other document breaks. |
 | [Bookmarks]({%slug radwordsprocessing-model-bookmark%}) | Add named locations that you can target from other content. |
 | [Hyperlinks]({%slug radwordsprocessing-concepts-hyperlink-field%}) | Link to websites or bookmarks inside the same document. |
@@ -86,7 +82,7 @@ Use these features to extend formatting and document behavior:
 
 | Feature | Description |
 |----|----|
-| [Styles]({%slug radwordsprocessing-concepts-styles%}) | Define reusable character, paragraph, and table styles, including [list styles]({%slug radwordsprocessing-concepts-lists%}). |
+| [Document Styles]({%slug radwordsprocessing-concepts-styles%}) | Define reusable character, paragraph, and table styles, including [list styles]({%slug radwordsprocessing-concepts-lists%}). |
 | [Content controls]({%slug wordsprocessing-model-content-controls%}) | Add Structured Document Tags (SDT) such as checkboxes and combo boxes and apply editing constraints. |
 | [Shapes]({%slug radwordsprocessing-shapes-shapes%}) | Add visual elements that highlight or emphasize content. |
 
@@ -109,10 +105,10 @@ Use the corresponding format providers when you need to open an existing documen
 
 Most users continue with one of these paths:
 
-1. Start with [RadWordsProcessing Getting Started with DOCX Export]({%slug radwordsprocessing-getting-started%}) if you want a first working sample.
-2. Review [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}) if you need to import or export a specific file format.
-3. Explore the [RadWordsProcessing Model]({%slug radwordsprocessing-model%}) if you plan to build or edit documents in code.
-4. Browse [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%}) if you want larger end-to-end scenarios.
+1. Start with [Getting Started with RadWordsProcessing]({%slug radwordsprocessing-getting-started%}) to create and export your first document.
+2. Review [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}) to import or export a specific file format.
+3. Explore the [RadWordsProcessing Model]({%slug radwordsprocessing-model%}) to build or edit documents in code.
+4. Browse [Developer Focused Examples]({%slug radwordsprocessing-sdk-examples%}) for larger end-to-end scenarios.
 
 ## Online Demos
 
@@ -128,7 +124,7 @@ Review these demos to see the library in action:
 
 ## See Also
 
-- [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
-- [First Steps in Using Telerik Document Processing]({%slug getting-started-first-steps%})
-- [RadWordsProcessing Getting Started with DOCX Export]({%slug radwordsprocessing-getting-started%})
-- [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%})
+* [Install on your computer]({%slug installation-installing-on-your-computer%})
+* [Review first steps]({%slug getting-started-first-steps%})
+* [Start with DOCX export]({%slug radwordsprocessing-getting-started%})
+* [Explore formats and conversion]({%slug radwordsprocessing-formats-and-conversion%})

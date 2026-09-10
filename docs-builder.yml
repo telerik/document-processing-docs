@@ -313,6 +313,9 @@ meta:
   common-information:
     title: Common Information
     position: 98
+  accessibility:
+    title: Accessibility
+    position: 1
   troubleshooting:
     title: Troubleshooting
     position: 99
@@ -487,7 +490,6 @@ redirects:
 - from: "^/ai-coding-assistant$"
   to: "/ai-tools/ai-coding-assistant"
   type: Permanent
-
 
 
 

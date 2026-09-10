@@ -102,7 +102,7 @@ The following image shows the result:
 
 * [RadPdfProcessing]({%slug radpdfprocessing-overview%})
 * [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
-* [Table]({%slug radpdfprocessing-editing-table-overview%})
+* [PDF Table Overview]({%slug radpdfprocessing-editing-table-overview%})
 * [Creating Custom Layout Tables with RadPdfProcessing]({%slug customize-table-layout-radpdfprocessing%})
 * [Generating a Table with Images Using PdfProcessing]({%slug generate-table-with-images-pdf-processing%})
  

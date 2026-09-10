@@ -10,11 +10,11 @@ position: 0
 
 # Overview
 
-With **RadZipLibrary**, you can compress and archive images, DOCX, or PDF files. You can create and edit new ZIP files or load and extract data from existing ZIP archives. The library includes support for large files, encryption, and more.
+**Telerik Document Processing** includes **RadZipLibrary** for compressing and archiving images, DOCX files, PDF files, and other content. You can create and edit new ZIP files or load and extract data from existing ZIP archives. The library includes support for large files, encryption, and more.
 
 ![ZipLibrary](images/zip-library-overview.png)
 
-You can compress data like images, DOCX, or PDF files and send them over the wire to achieve fast and secure transactions.
+You can compress data such as images, DOCX files, and PDF files before you transfer or store it.
 
 ![Zip Library Overview 01](images/ziplibrary-overview.gif)
 
@@ -28,13 +28,11 @@ The following list shows the key features of **RadZipLibrary**:
 
 * [**Compress a stream**]({%slug radziplibrary-compress-stream%}): **RadZipLibrary** can help you compress a stream, for example, to send it over the internet.
 
-* **Support for large files**: The **ZipLibrary** works with large files (over 4 GB).
+* **Support for large files**: **RadZipLibrary** works with files that are larger than 4 GB.
 
-* **Support for [encryption]({%slug radziplibrary-protect-ziparchive%})**: You can protect your ZIP file with a password for more security.
+* **Support for [encryption]({%slug radziplibrary-protect-ziparchive%})**: Protect ZIP files with passwords for more security.
 
->note If you do not have **Telerik Document Processing** installed, check the **[First Steps]({%slug getting-started-first-steps%})** topic to learn how you can get the packages through the different suites.
-
->note For details on the **usage of the library**, go to the **[Getting Started]({%slug radziplibrary-gettingstarted%})** article.
+>note If you do not have Telerik Document Processing installed, see [the first steps tutorial]({%slug getting-started-first-steps%}) to learn how to get the packages through the available suites. For usage details, see [how to get started with RadZipLibrary]({%slug radziplibrary-gettingstarted%}).
 
 ## Online Demos
 
@@ -45,3 +43,9 @@ The following table lists the available online demos:
 | [ZipLibrary Basic Usage](https://demos.telerik.com/document-processing/ziplibrary) | The ZipLibrary allows your application to read all the data from a ZIP file simultaneously and display the information about the compressed files in a grid. |
 | [ZipLibrary Stream Compression](https://demos.telerik.com/document-processing/ziplibrary/compress_stream) | This example shows how to compress streams with the preferred compression level. |
 | [ZipLibrary Archive Protection](https://demos.telerik.com/document-processing/ziplibrary/archive_protection) | The ZipLibrary lets you password-protect and open a ZIP archive with a password. |
+
+## See Also
+
+* [Get started with RadZipLibrary]({%slug radziplibrary-gettingstarted%})
+* [Use Zip extension methods]({%slug radziplibrary-zipextensions%})
+* [Protect ZIP archives with passwords]({%slug radziplibrary-protect-ziparchive%})

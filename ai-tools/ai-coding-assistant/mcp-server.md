@@ -1,11 +1,11 @@
 ---
 title: MCP Server
 page_title: DPL MCP Server
-description: Learn how to add and use the Telerik Document Processing MCP Server as a .NET Document Processing AI coding assistant and code generator for better developer productivity. The Telerik Document Processing MCP server provides proprietary context about Telerik UI for .NET Document Processing to AI-powered software.
+description: Learn how to install and configure the Telerik Document Processing MCP Server for .NET 8, .NET 9, and .NET 10 clients, including licensing and supported IDEs.
 slug: ai-mcp-server
 tags: mcp, server, ai, dotnet, telerik, coding, assistant, npm
 published: True
-position: 2
+position: 3
 ---
 <style>
 img[alt$="><"] {
@@ -15,11 +15,13 @@ img[alt$="><"] {
 
 # MCP Server
 
-The Telerik Document Processing [MCP (Model Context Protocol) server](https://modelcontextprotocol.io/introduction) lets you interact with AI and reach new levels of developer productivity. The MCP server provides proprietary context to AI-powered IDEs, apps, and tools. You can use the MCP server for Document Processing code generation and successfully prompt more complex questions and tasks, and generate tailored code that includes the [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries).
+The Telerik Document Processing [MCP (Model Context Protocol) server](https://modelcontextprotocol.io/introduction) provides Document Processing context to AI-powered IDEs, apps, and tools. Use it to generate tailored code and complete complex tasks with the [Telerik Document Processing Libraries](https://www.telerik.com/document-processing-libraries).
 
->warning Known Issue: Hanging tool calls in Visual Studio, see ([Troubleshooting]({%slug ai-mcp-server%}#troubleshooting)).
+>important Visual Studio can hang during tool calls. See [Troubleshooting]({%slug ai-mcp-server%}#troubleshooting).
 
->tip The MCP server can be [installed also as a NuGet package]({%slug ai-mcp-server-as-a-nuget%}), instead of using **Node.js** and `npm` commands as shown below.
+>important The npm package `@progress/telerik-dpl-mcp` is deprecated. For current installations and updates, migrate to the [NuGet package `Telerik.DPL.MCP`]({%slug ai-mcp-server-as-a-nuget%}).
+
+>tip The recommended way to install the MCP server is through the [NuGet package]({%slug ai-mcp-server-as-a-nuget%}). The Node.js/npm-based approach documented below is deprecated.
 
 ## Supported Libraries
 
@@ -41,7 +43,7 @@ To use the Telerik Document Processing Libraries (DPL) MCP Server, you need:
 
 ## Installation
 
-Depending on your environment, install the Telerik DPL MCP server by using either the .NET tooling or Node.js.
+Install the Telerik DPL MCP server with the .NET tooling. The legacy Node.js package remains available for existing setups but is deprecated.
 
 ### Install with Telerik CLI (Recommended)
 
@@ -77,7 +79,9 @@ Use the `dnx` script (.NET 10 or later only) or the `dotnet` CLI (.NET {{site.mi
 
 ### Using npm
 
-Use the documentation of your AI-powered MCP client to add the [Telerik Document Processing MCP server](https://www.npmjs.com/package/@progress/telerik-dpl-mcp) to a specific workspace or globally. You can see installation tips and examples for some popular MCP clients below.
+>important **Deprecated**: The npm package `@progress/telerik-dpl-mcp` is deprecated. Migrate to the [NuGet package `Telerik.DPL.MCP`]({%slug ai-mcp-server-as-a-nuget%}) for the current installation and configuration flow.
+
+Use your AI-powered MCP client's documentation to add the legacy [Telerik Document Processing MCP server package](https://www.npmjs.com/package/@progress/telerik-dpl-mcp) to a workspace or global configuration.
 
 **npm command that installs the Telerik DPL MCP Server package**
 
@@ -101,13 +105,13 @@ To configure the Telerik DPL MCP server, configure the license and `mcp.json` as
 
 Use the settings in the following table to configure the Telerik DPL MCP server in the [`mcp.json` file](https://code.visualstudio.com/docs/copilot/customization/mcp-servers) of your code editor. Select the correct value based on your development environment:
 
-| Setting Name | .NET 10 Value | .NET 8 / .NET 9 Value | Node.js Value |
-|---------|---------------|-----------------------|---------------|
-| Package Name | `"Telerik.DPL.MCP"` | `"Telerik.DPL.MCP"` | `"@progress/telerik-dpl-mcp"` |
-| Type | `"stdio"` | `"stdio"` | `"stdio"` |
-| Command | `"dnx"` | `"dotnet"` | `"npx"` |
-| Arguments | `"Telerik.DPL.MCP", "--yes"` | `"tool", "run", "telerik-dpl-mcp"` | `"-y"` |
-| Server Name | `"telerik-dpl-assistant"` | `"telerik-dpl-assistant"` | `"telerik-dpl-assistant"` |
+| Setting Name | .NET 10 Value | .NET 8 / .NET 9 Value | Node.js Value (Deprecated) |
+|---------|---------------|-----------------------|----------------------------|
+| Package Name | `"Telerik.DPL.MCP"` | `"Telerik.DPL.MCP"` | `"@progress/telerik-dpl-mcp"` *(deprecated)* |
+| Type | `"stdio"` | `"stdio"` | `"stdio"` *(deprecated)* |
+| Command | `"dnx"` | `"dotnet"` | `"npx"` *(deprecated)* |
+| Arguments | `"Telerik.DPL.MCP", "--yes"` | `"tool", "run", "telerik-dpl-mcp"` | `"-y"` *(deprecated)* |
+| Server Name | `"telerik-dpl-assistant"` | `"telerik-dpl-assistant"` | `"telerik-dpl-assistant"` *(deprecated)* |
 
 ### License Configuration
 
@@ -137,7 +141,7 @@ An active Document Processing license is required to use the Telerik DPL MCP ser
   }
   ```
 
-> Using a license file path is recommended unless you share settings across different systems. Remember to [update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
+>tip A license file path is recommended unless you share settings across different systems. [Update your license key]({%slug setting-up-license-key%}#updating-your-license-key) when necessary.
 
 >note Usually, the `.mcp.json` file is expected to be found in the user's directory: %USERPROFILE%
  
@@ -182,7 +186,7 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
 
     * Global Installation 
 
-      1. Run `dotnet tool install --global(-g) Telerik.DPL.MCP` in the Terminal.
+      1. Run `dotnet tool install --global Telerik.DPL.MCP` in the Terminal.
 
       2. Update global MCP config: %userprofile%.mcp.json with following configuration:
 
@@ -237,6 +241,8 @@ The steps below describe the sample procedure for configuring the Telerik DPL MC
 
   * In Node.js:
 
+    >important **Deprecated**: Node.js/npm-based setup uses deprecated package `@progress/telerik-dpl-mcp`. Use the NuGet-based setup from [Telerik DPL MCP Server as a NuGet Package]({%slug ai-mcp-server-as-a-nuget%}) for new and updated configurations.
+
     **Visual Studio `.mcp.json` example for a Node.js Telerik DPL MCP Server setup**
 
     ```json
@@ -267,8 +273,9 @@ Add the `.mcp.json` file to your user directory (`%USERPROFILE%`, for example, `
 
 For complete setup instructions, see [Use MCP servers in Visual Studio Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
 
-> Visual Studio Code 1.102.1 or later is required to use the Telerik MCP Server.
-> * For complete setup instructions, see [Use MCP servers in Visual Studio Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
+>important Visual Studio Code 1.102.1 or later is required to use the Telerik MCP Server.
+
+For complete setup instructions, see [Use MCP servers in Visual Studio Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
 
 The basic setup in Visual Studio Code involves the following steps:
 
@@ -320,6 +327,8 @@ The basic setup in Visual Studio Code involves the following steps:
     ```
 
   * In Node.js:
+
+    >important **Deprecated**: Node.js/npm-based setup uses deprecated package `@progress/telerik-dpl-mcp`. Use the NuGet-based setup from [Telerik DPL MCP Server as a NuGet Package]({%slug ai-mcp-server-as-a-nuget%}) for new and updated configurations.
 
     **Visual Studio Code `mcp.json` example for a Node.js Telerik DPL MCP Server setup**
 
@@ -409,6 +418,8 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
 
 * In Node.js:
 
+    >important **Deprecated**: Node.js/npm-based setup uses deprecated package `@progress/telerik-dpl-mcp`. Use the NuGet-based setup from [Telerik DPL MCP Server as a NuGet Package]({%slug ai-mcp-server-as-a-nuget%}) for new and updated configurations.
+
     **Cursor `mcp.json` example for a Node.js Telerik DPL MCP Server setup**
 
     ```json
@@ -429,7 +440,7 @@ Create `.cursor/mcp.json` in your workspace root (or user folder for global setu
     }
     ```
 
-## Usage
+## Using the MCP Server
 
 By default, MCP clients do not call MCP tools in a deterministic way. Some MCP clients such as VS Code allow you to explicitly reference the desired MCP tool in your prompt.
 
@@ -448,7 +459,7 @@ To use the Telerik DPL MCP server:
    * Visual Studio Code: `Running telerik-dpl-assistant`
    * Cursor: `Calling MCP tool telerik-dpl-assistant`
 
-3. If the MCP server is not used even though it's installed and enabled, double-check the server name in your configuration and try rephrasing your prompt.
+3. If the MCP server is not used even though it is installed and enabled, verify the server name in your configuration and rephrase your prompt.
 
 4. Grant permissions when prompted (per session, workspace, or always).
 
@@ -500,20 +511,6 @@ You can use the Telerik DPL MCP server with local large language models (LLMs):
 
 This setup allows you to use the Telerik AI Coding Assistant without cloud-based AI models.
 
-## Troubleshooting
-
->warning **Known Issue: Hanging tool calls in Visual Studio**
-> 
->When using Telerik AI tools in Visual Studio, GitHub Copilot may:
->* **Hang** during tool invocation.
->* Show UI for a successful tool response, but actually **fail silently**.
->* Continue generation without waiting for **parallel tool calls**.
->In these cases, the response may be generated but not provided to the Copilot Agent UI.
->This is a known issue in Visual Studio Copilot, not related to Telerik MCP servers or AI tools, and does not reproduce in VS Code.
->For more details, see the related Visual Studio Developer Community issue:  
->https://developercommunity.visualstudio.com/t/Copilot-stopped-working-after-latest-upd/10936456
->
->Microsoft has acknowledged the issue and marked it as **Fixed - Pending Release**. A future Visual Studio update is expected to resolve it.
 
 ## See Also
 

@@ -17,6 +17,8 @@ position: 6
 
 ## How the Calculation Chain Works
 
+RadSpreadProcessing does not recalculate all formulas in all open workbooks, regardless of whether they need recalculation. Instead, the value of each formula is recalculated only when the user requests it, and it has been invalidated by a dependency before that.
+
 When a cell value changes, **RadSpreadProcessing** needs to recalculate every formula that directly or indirectly references that cell. The calculation chain maintains a directed dependency graph of all formula cells in the workbook. The library uses this graph to determine the minimal set of formulas that require recalculation and the correct order in which to evaluate them.
 
 The calculation chain covers the following scenarios:
