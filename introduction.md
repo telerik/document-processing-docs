@@ -35,6 +35,14 @@ img[alt$="><"] {
 Telerik Document Processing includes the following libraries and AI tooling:
 
 <article-card-container>
+    <article-card
+        href="slug://agent-tools-overview"
+        src="./images/agent-tools-banner.png"
+        darkSrc="./images/agent-tools-banner.png"
+        title="AI Tools"
+        subTitle="Agent Tools"
+        description="Provides document processing capabilities designed to be exposed to AI agents.">
+  </article-card>
   <article-card
         href="slug://radpdfprocessing-overview"
         src="./images/pdfprocessing-banner.png"
@@ -74,14 +82,6 @@ Telerik Document Processing includes the following libraries and AI tooling:
         title="RadZipLibrary"
         subTitle="Document Processing"
         description="Lets you compress data such as images, DOCX, PDF, and other file types for fast, secure transfer and storage.">
-  </article-card>
-    <article-card
-        href="slug://agent-tools-overview"
-        src="./images/agent-tools-banner.png"
-        darkSrc="./images/agent-tools-banner.png"
-        title="AI Tools"
-        subTitle="Agent Tools"
-        description="Provides document processing capabilities designed to be exposed to AI agents.">
   </article-card>
 </article-card-container>
 
