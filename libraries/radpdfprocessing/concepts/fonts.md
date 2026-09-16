@@ -127,19 +127,7 @@ Use the `RegisterFont()` overload that accepts a `Stream` to avoid loading an en
 
 RadPdfProcessing starts reading at the stream's current position and reads font data lazily.
 
-```csharp
-using (FileStream fontStream = File.OpenRead("some-font.ttf"))
-{
-    FontsRepository.RegisterFont(
-        new Telerik.Documents.Core.Fonts.FontFamily("Some Font"),
-        Telerik.Documents.Core.Fonts.FontStyles.Normal,
-        Telerik.Documents.Core.Fonts.FontWeights.Normal,
-        fontStream,
-        true);
-
-    // Create and use documents that use Some Font here.
-}
-```
+<snippet id='pdf-register-font-stream'/>
 
 The example retains ownership of `fontStream` and disposes it after it no longer uses the registered font.
 

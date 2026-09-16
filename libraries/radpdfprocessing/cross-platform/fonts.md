@@ -51,22 +51,7 @@ To provide fonts stored outside system font directories, override `FontsProvider
 
 This approach lets RadPdfProcessing read font data lazily instead of requiring the provider to load the complete font into a `byte[]`.
 
-```csharp
-public override byte[] GetFontData(Telerik.Documents.Core.Fonts.FontProperties fontProperties)
-{
-    return null;
-}
-
-public override Stream GetFontStream(Telerik.Documents.Core.Fonts.FontProperties fontProperties)
-{
-    if (fontProperties.FontFamilyName == "Some Font")
-    {
-        return File.OpenRead("some-font.ttf");
-    }
-
-    return null;
-}
-```
+<snippet id='libraries-pdf-cross-platform-fonts-providing-font-streams'/>
 
 Override `GetFontData()` because it is abstract. Return `null` when the provider serves all fonts through `GetFontStream()`.
 
