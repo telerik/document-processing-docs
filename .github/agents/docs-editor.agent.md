@@ -10,11 +10,8 @@ description: >
   a local snippet source root, applies targeted edits, and writes a standalone
   markdown summary that explains every change made.
 argument-hint: >
-  A plain-language description of the customer feedback or requested change,
-  e.g. "Users say the NuGet setup section is hard to follow — rewrite it with
-  clearer step numbers and an example" or "Add a warning that Telerik.Licensing
-  must be installed in the same project". Optionally append
-  `--snippets-root <local-folder-path>` when the article uses external snippet
+  Description of the customer feedback, optionally append
+ `--snippets-root <local-folder-path>` for external snippet
   placeholders such as `<snippet id='...'/>'` or `{{source=... region=...}}`.
 tools: ['read', 'edit', 'search', 'agent']
 ---
