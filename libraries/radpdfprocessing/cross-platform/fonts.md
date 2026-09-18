@@ -45,6 +45,20 @@ You can find a detailed `FixedExtensibilityManager` and `FontsProvider` implemen
 
 <snippet id='libraries-pdf-cross-platform-fonts-set-fontsprovider'/>
 
+### Providing Font Streams
+
+To provide fonts stored outside system font directories, override `FontsProviderBase.GetFontStream(FontProperties)`. The method must return a readable, seekable stream.
+
+This approach lets RadPdfProcessing read font data lazily instead of requiring the provider to load the complete font into a `byte[]`.
+
+<snippet id='libraries-pdf-cross-platform-fonts-providing-font-streams'/>
+
+Override `GetFontData()` because it is abstract. Return `null` when the provider serves all fonts through `GetFontStream()`.
+
+RadPdfProcessing owns the stream that `GetFontStream()` returns. Return a new stream for every request. Do not dispose the stream after returning it.
+
+Providers that override only `GetFontData(FontProperties)` remain supported. The base `GetFontStream()` method creates a stream from the returned byte array.
+
 ## See Also
 
 * [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%})
@@ -56,4 +70,3 @@ You can find a detailed `FixedExtensibilityManager` and `FontsProvider` implemen
 * [Validating Fonts when Using Telerik Document Processing]({%slug validating-fonts-pdf-document-processing%})
 * [Preserving Original Bold, Italic and Regular Fonts When Exporting PDF Documents Using PdfProcessing in .NET Standard]({%slug pdfprocessing-prevent-font-conversion-embedding-fonts%})
 * [Resolving Font Differences Between Client and Server-Side PDF Generation in Telerik Document Processing]({%slug consistent-pdf-font-formatting%})
-

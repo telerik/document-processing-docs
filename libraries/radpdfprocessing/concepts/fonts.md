@@ -109,7 +109,7 @@ All fonts that are not included in the 14 standard ones must be **embedded** in 
 
 ### Registering a Font
 
-If you want to use a font that is not part of the standard ones, register it using the `RegisterFont()` method of the `FontRepository` static class. The method requires four parameters: `FontFamily`, `FontStyle`, and `FontWeight` objects describing the font, and a byte array containing the raw font data.
+If you want to use a font that is not part of the standard ones, register it using the `RegisterFont()` method of the `FontsRepository` static class. The method requires four parameters: `FontFamily`, `FontStyle`, and `FontWeight` objects describing the font, and a byte array containing the raw font data.
          
 **Example 1** demonstrates how to use the `RegisterFont()` method.
             
@@ -120,6 +120,23 @@ If you want to use a font that is not part of the standard ones, register it usi
 **Register font in .NET Standard application**
 
 <snippet id='pdf-register-font-net-standard'/>
+
+### Registering a Font from a Stream
+
+Use the `RegisterFont()` overload that accepts a `Stream` to avoid loading an entire font file into a `byte[]`. The stream must be readable and seekable.
+
+RadPdfProcessing starts reading at the stream's current position and reads font data lazily.
+
+<snippet id='pdf-register-font-stream'/>
+
+The example retains ownership of `fontStream` and disposes it after it no longer uses the registered font.
+
+Use the `leaveOpen` parameter to control stream ownership:
+
+* Set `true` to retain stream ownership. Keep stream open and usable while registered fonts are in use.
+* Set `false` to transfer stream ownership to RadPdfProcessing. Do not use or dispose stream after registration.
+
+>important `ClearRegisteredFonts()` clears the registered font cache. Font objects created before the call remain usable. The method buffers required data and closes library-owned streams.
 
 ### Creating a Font
 
