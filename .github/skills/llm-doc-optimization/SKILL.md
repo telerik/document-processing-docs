@@ -163,7 +163,7 @@ The rules below are designed to prevent those failure modes.
 |---|---|---|
 | Bold marks UI elements or key terms only | `**…**` used for UI labels and introduced terms, not general emphasis | `**Note that** you must restart` (emphasis, not a UI label) |
 | Inline code marks exact identifiers | `` `…` `` used for code, file names, and system values — not regular words | `` `simply` `` or `` `important` `` styled as code for visual effect |
-| Callouts use a consistent pattern | Notes, warnings, tips use a consistent block format (`> **Note:**`) | Mixing `> Note:`, `**Note:**`, `NOTE:`, and plain paragraphs |
+| Callouts use a consistent pattern | Notes, warnings, tips, important notices, and cautions use the repository's consistent block formats (`>note`, `>warning`, `>important`, `>caution`, `>tip`) | Mixing repository callouts with `> Note:`, `**Note:**`, `NOTE:`, and plain paragraphs |
 | No all-caps for emphasis | Capitalized words used only for acronyms or proper names | `Do NOT run this command` — `NOT` in all-caps for stress |
 
 **Scoring guide:**

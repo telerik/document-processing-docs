@@ -31,7 +31,8 @@ Use two skill sources in this workflow:
   folder.
 - The shared scoring skills listed below.
 
-When both sources are available, repo-specific skills have the highest
+When both sources are available, the applicable skills under
+`.github/skills/telerik-documentation-style-guide/` have the highest
 priority. Use them first for product, repo, and article-type conventions, and
 use the shared scoring skills for editorial quality scoring and cross-cutting
 documentation checks only when they do not conflict with applicable repo-
@@ -45,7 +46,7 @@ violations from different skill sources conflict, resolve in this order:
 
 | Priority | Skill | File | Evaluates |
 |---|---|---|---|
-| 1 (highest) | `style-guide-scoring` | `.github/skills/style-guide-scoring/SKILL.md` | Grammar, tone, formatting per the Progress DevTools Style Guide |
+| 1 (highest) | `telerik-documentation-style-guide` | `.github/skills/telerik-documentation-style-guide/` | Grammar, tone, formatting, metadata, structure, and terminology per the repository style guide |
 | 2 | `accessibility-doc-optimization` | `.github/skills/accessibility-doc-optimization/SKILL.md` | WCAG 2.1 AA compliance: headings, alt text, link text, tables, plain language, callouts, code blocks |
 | 3 | `seo-doc-optimization` | `.github/skills/seo-doc-optimization/SKILL.md` | Google Search ranking signals: metadata, keywords, headings, links, slug, structured data |
 | 4 (lowest) | `llm-doc-optimization` | `.github/skills/llm-doc-optimization/SKILL.md` | Structure, self-containment, terminology, chunking for LLM/agent consumption |
@@ -246,14 +247,14 @@ rules as stable. Specifically:
   Edits must resolve a violation or fulfill the user's feedback — not
   express a stylistic preference between two valid alternatives.
 - If the article already has a properly formatted `## See Also`,
-  `## Next Steps`, description within 100–150 characters, or consistent
+  `## Next Steps`, description within 120–150 characters, or consistent
   heading verb forms, confirm compliance and move on without rewriting.
 
 Follow these editorial constraints:
 
 - Preserve existing YAML frontmatter fields; update `title`, `description`, or
   `page_title` when the feedback or a metadata violation requires it.
-- The `description` field must be between 100 and 150 characters inclusive.
+- The `description` field must be between 120 and 150 characters inclusive.
   Never exceed 150 characters. This is a high-priority rule — if the existing
   description violates this limit, fix it regardless of whether the feedback
   targets metadata.
@@ -281,7 +282,7 @@ Follow these editorial constraints:
   the same verb form (prefer `-ing` (gerund)). This is a
   high-priority formatting rule.
 - Do not remove code blocks, images, or admonition callouts (`>tip`, `>note`,
-  `>important`) unless the feedback explicitly says to.
+  `>important`, `>caution`, `>warning`) unless the feedback explicitly says to.
 - Use plain imperative prose. Avoid phrases like "it is worth noting" or
   "please be advised".
 - Never allow two sections that deliver similar value to the reader. If two
@@ -311,11 +312,9 @@ Follow these editorial constraints:
 - Add a language tag to every fenced code block that lacks one (fixes a common
   LLM and structured-data violation).
 - When referring to programming languages in prose, headings, or code-block
-  labels (such as tab headers or bold introductions), always use **C#** and
-  **VB.NET** as the display names. Do not use alternative forms such as
-  "csharp", "CSharp", "C Sharp", "vb", "VB", "Visual Basic", or "VB.Net".
-  The fenced-code-block language identifier must also follow this rule:
-  use ` ```C# ` and ` ```VB.NET ` instead of ` ```csharp ` or ` ```vb `.
+labels (such as tab headers or bold introductions), always use **C#** and
+**VB.NET** as the display names. Fenced code blocks may use either
+`csharp`/`vb` or the equivalent `C#`/`VB.NET` language identifiers.
 - Replace non-descriptive image alt text (e.g. `image001`) with a concise
   description of what the image shows (fixes a common SEO violation).
 - Replace non-descriptive link text (`click here`, `here`, `this article`,
@@ -323,7 +322,7 @@ Follow these editorial constraints:
   WCAG 2.4.4 and SEO violations simultaneously).
 - Replace any callout that uses inconsistent syntax (mixed `> **Note:**`,
   `**NOTE:**`, plain `Note:`) with the platform's designated admonition pattern
-  (`>note`, `>warning`, `>important`, `>tip`).
+  (`>note`, `>warning`, `>important`, `>caution`, `>tip`).
 - Ensure that critical warnings are expressed with a `>warning` or `>important`
   callout block, not bold text alone.
 - Do not add introductory sentences, descriptions, or any other text between a

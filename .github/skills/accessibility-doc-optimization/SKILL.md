@@ -129,7 +129,7 @@ Information must never rely solely on color, bold, italic, or other visual forma
 | Check | Pass condition | Violation examples |
 |---|---|---|
 | Color alone does not convey meaning | No instruction requires the reader to interpret color to understand content | "The red items require action" with no other distinguishing marker |
-| Bold is not the only signal for warnings | Critical information uses a callout block (`>note`, `>warning`, `>important`) in addition to or instead of bold text | "**Do not run this command on production.**" without a callout admonition |
+| Bold is not the only signal for warnings | Critical information uses a callout block (`>note`, `>warning`, `>important`, or `>caution`) in addition to or instead of bold text | "**Do not run this command on production.**" without a callout admonition |
 | Formatting does not substitute for structure | Information structured through visual formatting (indentation, spacing, italic) also has semantic structure | A pseudo-list created with manual em-dash indentation instead of a markdown list |
 | Underlines are reserved for hyperlinks | Underlined text is not used for emphasis since it signals a link to most readers | Underlined text used for emphasis in a context without any link |
 
@@ -142,11 +142,11 @@ Information must never rely solely on color, bold, italic, or other visual forma
 
 ### 7. Callout and Admonition Structure — weight 5 %
 
-Callout blocks (notes, warnings, tips, important notices) must use a consistent semantic pattern so that assistive technologies and downstream rendering tools can identify and announce them appropriately.
+Callout blocks (notes, warnings, tips, important notices, and cautions) must use a consistent semantic pattern so that assistive technologies and downstream rendering tools can identify and announce them appropriately. This repository supports `>note`, `>important`, `>caution`, `>warning`, and `>tip`.
 
 | Check | Pass condition | Violation examples |
 |---|---|---|
-| Callouts use a consistent pattern | Notes, warnings, tips, and important notices use the platform's designated syntax (`>note`, `>warning`, `>important`, `>tip`) | Mixing `> **Note:**`, `**NOTE:**`, `NOTE:` plain text, and `>note` in the same article |
+| Callouts use a consistent pattern | Notes, warnings, tips, important notices, and cautions use the platform's designated syntax (`>note`, `>warning`, `>important`, `>caution`, `>tip`) | Mixing `> **Note:**`, `**NOTE:**`, `NOTE:` plain text, and repository callouts in the same article |
 | Callout type matches severity | Notes convey supplemental information; warnings convey risk; important notices convey required actions | A `>note` callout used for a destructive operation warning |
 | Callouts are not overused | Callouts appear only for genuinely exceptional or critical information | Every other paragraph wrapped in a `>note` block |
 | Callout content is complete | Every callout contains at least one full sentence that is meaningful without surrounding prose | A callout containing only "See above." |

@@ -69,14 +69,14 @@ Source rules: front matter `description` field.
 | Check | Pass condition | Violation examples |
 |---|---|---|
 | `description` is present | Field exists in front matter | Field is absent |
-| Length is 100–150 characters (hard limit — never exceed 150) | Fits Google's display window without truncation while providing sufficient context | 60 chars (too short, wastes SERP space) or 160 chars (exceeds the 150-character cap) |
+| Length is 120–150 characters (hard limit — never exceed 150) | Fits Google's display window without truncation while providing sufficient context | 100 chars (too short, wastes SERP space) or 160 chars (exceeds the 150-character cap) |
 | Describes the specific outcome or task | Answers "what will the reader learn or accomplish?" | `"This article is about the Grid component"` — states subject, not value |
 | Contains the primary keyword naturally | Core term appears in the description without stuffing | Description never mentions the component or feature name |
 | Unique across sibling articles | No two articles share the same description | Two feature articles both say `"Configures the Grid component"` |
 | Includes an implicit call to action | Phrased to invite the click, e.g. "Learn how to…", "Discover…", "Find out…" | Flat declarative sentence with no engagement signal |
 
 **Scoring guide:**
-- 5: 120–155 chars, task-oriented, keyword-natural, unique, click-inviting.
+- 5: 120–150 chars, task-oriented, keyword-natural, unique, click-inviting.
 - 3: Present and unique but too short/long or purely declarative.
 - 1: Absent or a copy of another article's description.
 
