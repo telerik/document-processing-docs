@@ -43,7 +43,7 @@ The `TextFragment` class in [RadPdfProcessing]({%slug radpdfprocessing-overview%
 |-----------------------|-------------------------------------------------------------------------------------------------|
 | **Clone** (*Introduced in Q2 2025*)            | Creates a deep copy of this document element.                                                  |
 
->note To use a font that is not part of the [standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts), register it with the [RegisterFont()]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font) method of the `FontRepository` static class.
+>note To use a font that is not part of the [standard fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts), register it with the [RegisterFont()]({%slug radpdfprocessing-concepts-fonts%}#registering-a-font) method of the `FontsRepository` static class.
 
 >important In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
