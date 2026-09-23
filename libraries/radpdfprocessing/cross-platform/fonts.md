@@ -53,7 +53,7 @@ This approach lets RadPdfProcessing read font data lazily instead of requiring t
 
 <snippet id='libraries-pdf-cross-platform-fonts-providing-font-streams'/>
 
-Override `GetFontData()` because it is abstract. Return `null` when the provider serves all fonts through `GetFontStream()`.
+Override `GetFontData(FontProperties)` because it is abstract. Return `null` when the provider serves all fonts through `GetFontStream()`.
 
 RadPdfProcessing owns the stream that `GetFontStream()` returns. Return a new stream for every request. Do not dispose the stream after returning it.
 
