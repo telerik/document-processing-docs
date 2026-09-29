@@ -11,6 +11,15 @@ position: 6
 
 The validation runs for the current field and checks against the state of the document at the moment of import. Because it depends on the file bytes, the source stream must remain open.
 
+RadPdfProcessing validates detached CMS signatures that use the `adbe.pkcs7.detached` or `ETSI.CAdES.detached` subfilter. Use the `SignatureSubFilterNames.ETSI_CADES_DETACHED` constant to identify CAdES detached signatures.
+
+The following table lists the supported detached signature subfilters:
+
+| Subfilter | Constant | Validation |
+|---|---|---|
+| `adbe.pkcs7.detached` | `SignatureSubFilterNames.ADBE_PKCS7_DETACHED` | Validates the detached CMS signature and the signed document content. |
+| `ETSI.CAdES.detached` | `SignatureSubFilterNames.ETSI_CADES_DETACHED` | Validates the detached CAdES signature, signer certificate binding, signed attributes, and document byte ranges. |
+
 The `Signature` class exposes two methods for validating a signature:
 
 | Method | Description |
