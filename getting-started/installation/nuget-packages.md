@@ -65,6 +65,13 @@ The following tables represent the available NuGet packages for the Document Pro
         </td>
 	</tr>
 	<tr>
+		<td><b>Telerik.Windows.Documents.JpxDecodeUtils</b></td>
+		<td><b>Telerik.Documents.JpxDecodeUtils</b></td>
+	</tr>
+	<tr>
+		<td colspan="2">Provides the optional JPEG 2000 decoder for PDF images that use the JPXDecode filter. Register the decoder through <code>FixedExtensibilityManager.JpxImageDecoder</code>. For setup details, see <a href="{%slug radpdfprocessing-cross-platform-images%}#decoding-jpeg-2000-images">JPEG 2000 image decoding</a>.</td>
+	</tr>
+	<tr>
 		<td><b>Telerik.Windows.Documents.AIConnector</b></td>
 		<td><b>Telerik.Documents.AIConnector</b></td>
 	</tr>
