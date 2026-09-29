@@ -135,9 +135,9 @@ FixedExtensibilityManager.JpxImageDecoder = decoder;
 
 You can also create a custom decoder by inheriting `JpxImageDecoderBase` and implementing `TryDecodeJpxImageData()`. Return the decoded samples and image metadata through `JpxImageDecodeResult`.
 
-If JPX processing requires a decoder and none is registered, RadPdfProcessing throws `JpxImageDecoderNotConfiguredException`. Handle the exception through the applicable `DocumentUnhandledException` event to skip unsupported JPX image content and continue processing other document content.
+If JPX processing requires a decoder and none is registered, RadPdfProcessing throws `JpxImageDecoderNotConfiguredException`. Attach the same handler to the import and export exception events to skip unsupported JPX images. Leave other exceptions unhandled.
 
-#### __Example 7: Handle a missing decoder during import__
+#### __Example 7: Handle a missing decoder during import and export__
 
 ```csharp
 using System;
@@ -147,7 +147,7 @@ using Telerik.Documents.Fixed.FormatProviders.Pdf;
 using Telerik.Documents.Fixed.Model;
 
 PdfFormatProvider provider = new PdfFormatProvider();
-provider.ImportSettings.DocumentUnhandledException += (sender, args) =>
+EventHandler<DocumentUnhandledExceptionEventArgs> skipMissingDecoder = (sender, args) =>
 {
     if (args.Exception is JpxImageDecoderNotConfiguredException)
     {
@@ -155,35 +155,13 @@ provider.ImportSettings.DocumentUnhandledException += (sender, args) =>
     }
 };
 
+provider.ImportSettings.DocumentUnhandledException += skipMissingDecoder;
+provider.ExportSettings.DocumentUnhandledException += skipMissingDecoder;
+
 using (FileStream input = File.OpenRead("input.pdf"))
 {
     RadFixedDocument document =
         provider.Import(input, TimeSpan.FromSeconds(10));
-}
-```
-
-When the handler marks the exception as handled, import skips the JPX image and keeps the remaining document content.
-
-#### __Example 8: Handle a missing decoder during export__
-
-```csharp
-using System;
-using System.IO;
-using Telerik.Documents.Fixed.Exceptions;
-using Telerik.Documents.Fixed.FormatProviders.Pdf;
-using Telerik.Documents.Fixed.Model;
-
-static void ExportDocument(RadFixedDocument document)
-{
-    PdfFormatProvider provider = new PdfFormatProvider();
-    provider.ExportSettings.DocumentUnhandledException += (sender, args) =>
-    {
-        if (args.Exception is JpxImageDecoderNotConfiguredException)
-        {
-            args.Handled = true;
-        }
-    };
-
     using (FileStream output = File.OpenWrite("output.pdf"))
     {
         provider.Export(document, output, TimeSpan.FromSeconds(10));
@@ -191,7 +169,7 @@ static void ExportDocument(RadFixedDocument document)
 }
 ```
 
-When the handler marks the exception as handled, export omits the JPX image and writes the remaining document content. Leave other exception types unhandled.
+When the handler marks the exception as handled, import skips the JPX image or export omits it. The remaining document content stays available.
 
 ## See Also
 
