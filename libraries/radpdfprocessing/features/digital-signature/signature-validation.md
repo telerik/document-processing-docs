@@ -11,14 +11,16 @@ position: 6
 
 The validation runs for the current field and checks against the state of the document at the moment of import. Because it depends on the file bytes, the source stream must remain open.
 
-RadPdfProcessing validates detached CMS signatures that use the `adbe.pkcs7.detached` or `ETSI.CAdES.detached` subfilter. Use the `SignatureSubFilterNames.ETSI_CADES_DETACHED` constant to identify CAdES detached signatures.
+The `SignatureSubFilterNames` class defines constants for the supported PDF signature subfilters. RadPdfProcessing registers a validation handler for each subfilter by default.
 
-The following table lists the supported detached signature subfilters:
+The following table lists all `SignatureSubFilterNames` constants and their values:
 
-| Subfilter | Constant | Validation |
+| Constant | Subfilter value | Signature encoding |
 |---|---|---|
-| `adbe.pkcs7.detached` | `SignatureSubFilterNames.ADBE_PKCS7_DETACHED` | Validates the detached CMS signature and the signed document content. |
-| `ETSI.CAdES.detached` | `SignatureSubFilterNames.ETSI_CADES_DETACHED` | Validates the detached CAdES signature, signer certificate binding, signed attributes, and document byte ranges. |
+| `SignatureSubFilterNames.ADBE_X509_RSA_SHA1` | `adbe.x509.rsa_sha1` | X.509 RSA signature with SHA-1. |
+| `SignatureSubFilterNames.ADBE_PKCS7_SHA1` | `adbe.pkcs7.sha1` | PKCS#7 (CMS) signature with an embedded SHA-1 digest. |
+| `SignatureSubFilterNames.ADBE_PKCS7_DETACHED` | `adbe.pkcs7.detached` | Detached PKCS#7 (CMS) signature. |
+| `SignatureSubFilterNames.ETSI_CADES_DETACHED` | `ETSI.CAdES.detached` | Detached CAdES signature encoded as CMS SignedData. Validation checks the signer certificate binding, signed attributes, and document byte ranges. |
 
 The `Signature` class exposes two methods for validating a signature:
 
