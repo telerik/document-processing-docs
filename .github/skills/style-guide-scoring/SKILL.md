@@ -1,30 +1,28 @@
 ---
 name: style-guide-scoring
-description: "Scores a single markdown article against the Progress DevTools Style Guide. Use when reviewing documentation quality, evaluating articles for style compliance, or running the docs-scoring agent. Returns a structured JSON block with per-dimension scores (1-5), rationale, and violations."
+description: "Scores a single markdown article against the repository style rules in .github/skills/telerik-documentation-style-guide/. Use when reviewing documentation quality, evaluating articles for style compliance, or running the docs-scoring agent. Returns a structured JSON block with per-dimension scores (1-5), rationale, and violations."
 argument-hint: "Path to the markdown article to score, e.g. C:\\docs\\articles\\overview.md"
 ---
 
 # Style Guide Scoring
 
-You are an expert technical documentation reviewer. Evaluate the provided markdown article against the **Progress DevTools Style Guide** and produce a structured JSON score.
+You are an expert technical documentation reviewer. Evaluate the provided markdown article against the repository style rules in `.github/skills/telerik-documentation-style-guide/` and produce a structured JSON score.
 
 ## Source
 
-Use the scoring rules defined in this skill as the default source of truth. Do not read `C:\HelpMigration\tech-docs-style-guide` unless the prompt explicitly instructs you to consult that folder or a specific file in it.
+Use only the resources in `.github/skills/telerik-documentation-style-guide/` as the source of truth. Do not consult external or legacy style-guide folders, and do not apply a rule unless it is represented by those local resources.
 
-The full style guide lives at `C:\HelpMigration\tech-docs-style-guide` for optional deeper review only. When the prompt explicitly requires it, read only the specific source file or files needed for the requested check instead of scanning the whole folder.
+Every check below is derived from those resources. Keep a check only while it stays consistent with them: if a resource in `.github/skills/telerik-documentation-style-guide/` changes and contradicts a check, the resource wins and the conflicting check must not be scored.
 
-## Additional Guide Coverage
+## Local Style Guide Coverage
 
 Apply the following cross-cutting rules under the closest existing scoring dimension. Do not add extra JSON dimensions unless the prompt explicitly asks for them.
 
 Only apply artifact-specific checks when the article actually contains that artifact or scenario. For example, do not penalize an article for missing image-caption rules when it has no images.
 
-* Numbers (`numbers.md`): Spell out integers from zero to nine unless the text refers to a product name, version number, or a space-constrained element such as a table. Use digits for 10 and above. Use period-separated decimals (`10.6`). Use an en dash for ranges (`1&ndash;15`) with no spaces. Do not begin sentences, titles, headings, or captions with numerals.
-* Vocabulary and terminology (`vocabulary.md`, `brandnames.md`, `click-tap-select.md`, `personal-pronouns.md`): Prefer `checkbox`; use `click X` and `tap X`; use `hover over` as the verb and `hover` or `hovering` as the noun or adjective; prefer `unavailable` over `disabled` or `grayed out` for irrelevant UI state; use `earlier` and `later` for versions; use `starting with` instead of `since` or `as of` for version introductions; preserve official company, product, and third-party spelling; prefer gender-neutral pronouns or rewrite to avoid unnecessary gendering.
-* Programming language display names: In prose, headings, and code-block labels (tab headers, bold introductions), always write **C#** and **VB.NET**. Do not use alternative forms such as "csharp", "CSharp", "C Sharp", "vb", "VB", "Visual Basic", or "VB.Net". The fenced-code-block language tag must also follow this rule: use ` ```C# ` and ` ```VB.NET ` instead of ` ```csharp ` or ` ```vb `.
-* Links and cross-references (`cross-references.md`): Use descriptive anchor text that explains the destination or purpose. Vary repeated anchor text when citing the same resource often. Paraphrase internal documentation titles instead of quoting them exactly. Cite exact external resource titles and authors. When HTML syntax is available, prefer opening external links in a new tab.
-* Images, tables, and captions (`screenshots.md`, `tables-figures-code.md`): Require descriptive alt text for images. Captions, when used, should be bold, descriptive, in sentence case, and positioned before the element. Do not leave table cells blank; use `N/A`, `Not applicable`, or `None` when needed. Flag screenshots that expose sensitive data or visibly ignore default/light UI guidance.
+* Numbers, vocabulary, terminology, and inclusive language: Apply the corresponding rules in `.github/skills/telerik-documentation-style-guide/style-grammar-words/` and `.github/skills/telerik-documentation-style-guide/style-brand-terms/`.
+* Programming language display names: In prose, headings, and code-block labels (tab headers, bold introductions), always write **C#** and **VB.NET**. As `.github/skills/telerik-documentation-style-guide/style-formatting/SKILL.md` states, fenced code blocks may use either ` ```csharp ` / ` ```vb ` or ` ```C# ` / ` ```VB.NET `; treat `csharp` and `C#` as equivalent, and likewise treat `vb` and `VB.NET` as equivalent. Never flag one spelling in favor of the other.
+* Links, cross-references, images, tables, and captions: Apply the corresponding rules in `.github/skills/telerik-documentation-style-guide/style-metadata-links/`, `style-formatting/`, and `style-structure/`.
 
 ---
 
@@ -36,22 +34,22 @@ When a rule from the "Additional Guide Coverage" section applies, score it under
 
 ### 1. Metadata & Front Matter — weight 15 %
 
-Source: `metadata.md`
+Source: `.github/skills/telerik-documentation-style-guide/style-metadata-links/SKILL.md`
 
 | Check | Pass condition |
 |---|---|
 | YAML front matter present | Article starts with `---` block |
 | `title` field | Present and non-empty |
 | `meta_title` or `page_title` | Present; ≤ 70 characters recommended |
-| `description` | Present; **must be 100–150 characters (hard limit — never exceed 150)** |
+| `description` | Present; **must be 120–150 characters (hard limit — never exceed 150)** |
 | `slug` | Present and URL-safe (lowercase, hyphens only) |
 | Meta title quality | Front-loads the article topic/context; uses clear dash-separated parts when needed; includes component or product context when applicable |
-| Meta description quality | Accurate, specific, action-oriented, and non-templated; must be 100–150 characters with no exceptions; avoids filler and generic phrases |
+| Meta description quality | Accurate, specific, action-oriented, and non-templated; must be 120–150 characters with no exceptions; avoids filler and generic phrases |
 | Redirect metadata when applicable | `previous_url` is present when the article clearly represents moved, renamed, or redirected content |
 
 ### 2. Titles and Headings — weight 15 %
 
-Source: `titles-and-headings.md`
+Source: `.github/skills/telerik-documentation-style-guide/style-structure/SKILL.md`
 
 | Check | Pass condition |
 |---|---|
@@ -71,7 +69,7 @@ Source: `titles-and-headings.md`
 
 ### 3. Tone and Voice — weight 15 %
 
-Source: `tone-and-voice.md`, `cheat-sheet.md`, `using-simple-non-ambiguous-language.md`, `personal-pronouns.md`
+Source: `.github/skills/telerik-documentation-style-guide/style-writing-tone/SKILL.md` and `style-grammar-words/SKILL.md`
 
 | Check | Violation signal |
 |---|---|
@@ -90,7 +88,7 @@ Source: `tone-and-voice.md`, `cheat-sheet.md`, `using-simple-non-ambiguous-langu
 
 ### 4. Grammar and Language — weight 15 %
 
-Source: `basic-rules-and-guidelines.md`, `using-simple-non-ambiguous-language.md`, `contractions.md`, `numbers.md`, `vocabulary.md`
+Source: `.github/skills/telerik-documentation-style-guide/style-grammar-words/SKILL.md` and its references
 
 | Check | Pass condition |
 |---|---|
@@ -98,7 +96,7 @@ Source: `basic-rules-and-guidelines.md`, `using-simple-non-ambiguous-language.md
 | Active voice preference | Passive constructions (`was sent`, `is created`, etc.) kept to a minimum |
 | Sentence length | Sentences ≤ 25 words as a rule of thumb |
 | Paragraph length | 2–4 sentences, ≤ 6 lines |
-| No ambiguous contractions | Only safe contractions (`aren't`, `can't`, `don't`, `doesn't`, `haven't`, `didn't`, `shouldn't`, `couldn't`) used; disallowed forms (`you'll`, `it's` for "it has", `that's`, `there's`, `who's`, etc.) absent |
+| No ambiguous contractions | Only the contractions the style guide marks acceptable (`aren't`, `can't`, `didn't`, `don't`, `doesn't`, `haven't`, `hasn't`, `hadn't`, `isn't`, `wasn't`, `weren't`, `shouldn't`, `couldn't`, `wouldn't`, `I'm`) are used; the forms it marks unacceptable (`you'll`, `you're`, `you'd`, `you've`, `what's`, `where's`, `when's`, `how's`, `won't`, `I'll`, `I've`, `I'd`, `it's`, `that's`, `there's`, `here's`, `they'll`, `they've`, `they'd`, `we'll`, `we're`, `we've`, `we'd`) are absent |
 | Imperative mood | Direct instructions use imperative mood, not gerund or passive |
 | Present simple preference | Uses present simple where possible; future, past, and perfect tenses appear only when needed for clarity |
 | Precise modality | Uses imperative, `must`, `need to`, or `have to` for obligation; avoids ambiguous `should`, `could`, and `would` where `can`, `will`, or direct instruction is clearer |
@@ -109,7 +107,7 @@ Source: `basic-rules-and-guidelines.md`, `using-simple-non-ambiguous-language.md
 
 ### 5. Formatting Conventions — weight 15 %
 
-Source: `element-formatting.md`, `tables-figures-code.md`, `screenshots.md`
+Source: `.github/skills/telerik-documentation-style-guide/style-formatting/SKILL.md`
 
 | Check | Pass condition |
 |---|---|
@@ -125,7 +123,7 @@ Source: `element-formatting.md`, `tables-figures-code.md`, `screenshots.md`
 
 ### 6. Lists — weight 10 %
 
-Source: `lists.md`
+Source: `.github/skills/telerik-documentation-style-guide/style-structure/SKILL.md`
 
 | Check | Pass condition |
 |---|---|
@@ -144,23 +142,25 @@ Source: `lists.md`
 
 ### 7. Punctuation — weight 10 %
 
-Source: `punctuation.md`
+Source: `.github/skills/telerik-documentation-style-guide/style-grammar-words/SKILL.md`
 
 | Check | Pass condition |
 |---|---|
 | No space before punctuation | No ` .`, ` ,`, ` ?`, ` !`, ` :`, ` ;` |
 | Single space after punctuation | Only one space after `.`, `,`, `;`, `:`, `?`, `!` |
 | No space inside brackets | `( text )` is wrong; `(text)` is correct |
-| Hyphens/dashes not surrounded by spaces | `word - word` is wrong; `word&mdash;word` or `word-word` is correct |
+| Hyphens and dashes used for their documented purpose | Hyphens join compound modifiers before a noun (`read-only property`); en dashes mark number ranges without spaces (`pages 10–25`, `&ndash;` in HTML); em dashes are reserved for parenthetical statements and used sparingly |
 | No punctuation at end of headings | Headings do not end with `.`, `!`, `?` |
 | Bracket spacing and punctuation | Uses correct spaces before `(` and after `)`; punctuation placement inside/outside brackets matches sentence structure |
 | Serial comma in series | Uses the Oxford comma in series of three or more when needed for clarity |
 | "For example" and "that is" punctuation | Uses commas correctly around these phrases |
-| Range punctuation | Uses an en dash for numeric ranges; avoids hyphens and em dashes |
+| Range punctuation | Uses an en dash without surrounding spaces for numeric ranges; does not use hyphens or em dashes for ranges |
+| Semicolons avoided | Sentences joined by semicolons are split into separate sentences |
+| Quotation marks | Straight double quotes are used; periods and commas sit inside the closing quotes, colons and semicolons outside |
 
 ### 8. Structure and Completeness — weight 5 %
 
-Source: `basic-rules-and-guidelines.md`, `cross-references.md`, `tables-figures-code.md`, `screenshots.md`
+Source: `.github/skills/telerik-documentation-style-guide/style-structure/SKILL.md`, `style-metadata-links/SKILL.md`, and `style-formatting/SKILL.md`
 
 | Check | Pass condition |
 |---|---|
