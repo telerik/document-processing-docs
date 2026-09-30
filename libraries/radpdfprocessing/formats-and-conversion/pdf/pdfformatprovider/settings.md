@@ -31,6 +31,7 @@ The `PdfFormatProvider` class exposes the `ImportSettings` property, which allow
 |----|----|
 |`ReadingMode`|Gets or sets the mode for loading the document pages content on import. *Introduced in R2 2020*.<ul><li>**ReadAllAtOnce**: All document pages content is loaded on import. This is the default behavior.</li><li>**OnDemand**: The document pages content is loaded on demand. This mode is designed for use with PdfViewers and only the currently visible page is loaded. </td></tr></ul> The **OnDemand** mode must be applied when used with viewers only.|
 |`CopyStream`|Gets or sets whether to copy the document stream on import. When false and ReadingMode is OnDemand, the original stream must be kept open while the document is in use. When true, the original stream can be disposed after import, regardless of the reading mode.|
+|`IgnoreMarkedContent`|When `true`, imports the content inside marked-content containers without preserving the containers and skips the document structure tree. The default is `false`, which preserves marked content and imports the structure tree.|
 
 |Event|Description|
 |----|----|
