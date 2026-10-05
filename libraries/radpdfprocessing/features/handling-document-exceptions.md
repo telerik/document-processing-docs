@@ -80,6 +80,7 @@ Starting with **Q1 2025**, the [PdfExportSettings]({%slug radpdfprocessing-forma
 | `NotSupportedXObjectTypeException`| Represents an exception for a document with an XObject type that is not supported.|
 |`DuplicatedJavaScriptNameException`|Represents an exception for JavaScript with a duplicated name.|
 |`NotSupportedImageFormatException`|Represents an exception thrown when attempting to use an image format that is not supported by the library.|
+|`JpxImageDecoderNotConfiguredException`|Represents an exception thrown when JPX image processing requires a decoder that is not registered through `FixedExtensibilityManager.JpxImageDecoder`. You can handle it through `DocumentUnhandledException` to skip the JPX image content.|
 |`InvalidAnnotationException`|Represents an exception for an annotation that is not valid.|
 |`NotSupportedAnnotationException`|Represents an exception for an annotation that is not supported.|
 |`InvalidImageDataException`|Represents an exception for importing invalid image data.|

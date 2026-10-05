@@ -1,6 +1,6 @@
 ---
 title: Images
-description: Discover how to work with images in Telerik RadPdfProcessing for cross-platform .NET applications.
+description: Learn how to configure image conversion and JPEG 2000 decoding in Telerik RadPdfProcessing for cross-platform .NET applications.
 page_title: Images
 slug: radpdfprocessing-cross-platform-images
 tags: images, crossplatform, pdf, jpeg, skiasharp, imagesharp, radpdfprocessing, dotnet
@@ -11,7 +11,7 @@ position: 2
 
 # Images
 
-The **.NET Framework** version of the RadPdfProcessing library provides built-in functionality for converting images and scaling their quality. The **.NET Standard** version does not provide such functionality and requires manual configuration. The `FixedExtensibilityManager` class is exposed to address this need. The code samples later in this article demonstrate how to configure it.
+The **.NET Framework** version of the RadPdfProcessing library provides built-in functionality for converting images and scaling their quality. The **.NET Standard** version does not provide such functionality and requires manual configuration. The `FixedExtensibilityManager` class exposes extensibility points for image conversion and JPEG 2000 decoding.
 
 ## Exporting Images
 
@@ -28,7 +28,6 @@ To export images other than JPEG and JPEG2000, or to use `ImageQuality` other th
 |**Telerik.Documents.ImageUtils**|Provides default image resolver and JPEG converter implementations.|
 |**SkiaSharp.NativeAssets.*** (version {{site.skiasharpversion}})|May differ according to the used platform. For **Linux** use **SkiaSharp.NativeAssets.Linux.NoDependencies**.|
 |**SkiaSharp.Views.Blazor** and **wasm-tools**|For Blazor WebAssembly.|
-
 
 ## ImagePropertiesResolver
 
@@ -95,8 +94,86 @@ The following `using`/`imports` statements are required in the project:
 
 >note A complete SDK example of a custom `JpegImageConverterBase` implementation is available on the [GitHub repository](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/CustomJpegImageConverter).
 
+## Decoding JPEG 2000 Images
+
+PDF files can store JPEG 2000 image data with the JPXDecode filter. To decode these images, add the optional decoder package that matches your target:
+
+| Target | NuGet package |
+|---|---|
+| .NET Standard and cross-platform .NET | **Telerik.Documents.JpxDecodeUtils** |
+| .NET Framework and .NET for Windows | **Telerik.Windows.Documents.JpxDecodeUtils** |
+
+Register one `JpxImageDecoder` instance before you import, render, or export PDF documents that require JPX decoding. The `FixedExtensibilityManager.JpxImageDecoder` property is global, so configure it once during application startup.
+
+### __Example 5: Register the JPX decoder__
+
+```csharp
+using Telerik.Documents.Extensibility;
+using Telerik.Documents.JpxDecodeUtils;
+
+if (FixedExtensibilityManager.JpxImageDecoder == null)
+{
+    FixedExtensibilityManager.JpxImageDecoder = new JpxImageDecoder();
+}
+```
+
+The decoder limits estimated peak memory for each image to 256 MB by default. Set `JpxImageDecoder.MaximumDecodedBytes` to a positive value when your application needs a different limit.
+
+#### __Example 6: Configure the JPX decoded-memory limit__
+
+```csharp
+using Telerik.Documents.Extensibility;
+using Telerik.Documents.JpxDecodeUtils;
+
+JpxImageDecoder decoder = new JpxImageDecoder
+{
+    MaximumDecodedBytes = 128L * 1024L * 1024L
+};
+
+FixedExtensibilityManager.JpxImageDecoder = decoder;
+```
+
+You can also create a custom decoder by inheriting `JpxImageDecoderBase` and implementing `TryDecodeJpxImageData()`. Return the decoded samples and image metadata through `JpxImageDecodeResult`.
+
+If JPX processing requires a decoder and none is registered, RadPdfProcessing throws `JpxImageDecoderNotConfiguredException`. Attach the same handler to the import and export exception events to skip unsupported JPX images. Leave other exceptions unhandled.
+
+#### __Example 7: Handle a missing decoder during import and export__
+
+```csharp
+using System;
+using System.IO;
+using Telerik.Documents.Fixed.Exceptions;
+using Telerik.Documents.Fixed.FormatProviders.Pdf;
+using Telerik.Documents.Fixed.Model;
+
+PdfFormatProvider provider = new PdfFormatProvider();
+EventHandler<DocumentUnhandledExceptionEventArgs> skipMissingDecoder = (sender, args) =>
+{
+    if (args.Exception is JpxImageDecoderNotConfiguredException)
+    {
+        args.Handled = true;
+    }
+};
+
+provider.ImportSettings.DocumentUnhandledException += skipMissingDecoder;
+provider.ExportSettings.DocumentUnhandledException += skipMissingDecoder;
+
+using (FileStream input = File.OpenRead("input.pdf"))
+{
+    RadFixedDocument document =
+        provider.Import(input, TimeSpan.FromSeconds(10));
+    using (FileStream output = File.Create("output.pdf"))
+    {
+        provider.Export(document, output, TimeSpan.FromSeconds(10));
+    }
+}
+```
+
+When the handler marks the exception as handled, import skips the JPX image or export omits it. The remaining document content stays available.
+
 ## See Also
 
 * [Cross-Platform Support]({%slug radpdfprocessing-cross-platform%})
 * [Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
+* [Handling Document Exceptions]({%slug radpdfprocessing-handling-exceptions%})
 * [Converting DOCX with TIFF Images to PDF in .NET Standard]({%slug docx-tiff-pdf-telerik-wordsprocessing%})
