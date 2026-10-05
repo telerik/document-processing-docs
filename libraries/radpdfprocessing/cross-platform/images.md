@@ -105,7 +105,7 @@ PDF files can store JPEG 2000 image data with the JPXDecode filter. To decode th
 
 Register one `JpxImageDecoder` instance before you import, render, or export PDF documents that require JPX decoding. The `FixedExtensibilityManager.JpxImageDecoder` property is global, so configure it once during application startup.
 
-#### __Example 5: Register the JPX decoder__
+### __Example 5: Register the JPX decoder__
 
 ```csharp
 using Telerik.Documents.Extensibility;
