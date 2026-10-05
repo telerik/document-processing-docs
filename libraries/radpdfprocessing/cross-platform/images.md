@@ -162,7 +162,7 @@ using (FileStream input = File.OpenRead("input.pdf"))
 {
     RadFixedDocument document =
         provider.Import(input, TimeSpan.FromSeconds(10));
-    using (FileStream output = File.OpenWrite("output.pdf"))
+    using (FileStream output = File.Create("output.pdf"))
     {
         provider.Export(document, output, TimeSpan.FromSeconds(10));
     }
