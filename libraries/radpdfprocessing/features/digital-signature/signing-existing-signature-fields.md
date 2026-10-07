@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-signing-existing-signature-fields
 tags: pdf, processing, digital, signature, signing, incremental, update, field
 published: True
 position: 5
+components: [pdfprocessing]
 ---
 
 # Signing Existing Signature Fields

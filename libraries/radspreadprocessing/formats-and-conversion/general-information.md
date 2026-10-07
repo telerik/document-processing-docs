@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-general-information
 tags: formats, conversion, spreadsheet, radspreadprocessing, providers, csv, import, xlsx, spread
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # General Information

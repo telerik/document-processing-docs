@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-txt-txtformatprovider
 tags: txt, format, provider, spreadsheet, radspreadprocessing, plaintext, import, export, workbook
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Using TxtFormatProvider

@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-format-providers-manager
 tags: format, providers, spreadsheet, radspreadprocessing, manager, import, export, workbook, registration, xlsx, spread
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Format Providers Manager

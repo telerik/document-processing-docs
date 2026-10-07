@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-general-information
 tags: model, pdf, radfixeddocument, radpdfprocessing, hierarchy, elements, content, structure
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # General Information

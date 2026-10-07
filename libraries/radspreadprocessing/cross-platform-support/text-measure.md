@@ -7,6 +7,7 @@ tags: textmeasuring, crossplatform, pdf, spreadsheet, radspreadprocessing, expor
 platforms: blazor, core, winui, maui
 published: True
 position: 1
+components: [pdfprocessing, spreadprocessing]
 ---
 
 # Text Measuring

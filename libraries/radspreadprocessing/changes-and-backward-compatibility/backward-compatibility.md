@@ -6,6 +6,7 @@ slug: radspreadprocessing-backwards-compatibility
 tags: migration, compatibility, radspreadprocessing, breaking, spreadsheet, excel, versions, upgrade
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Backward Compatibility

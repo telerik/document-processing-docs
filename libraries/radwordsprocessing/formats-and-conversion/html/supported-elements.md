@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-html-supported-elements
 tags: html, format, provider, elements, word, flow, docx, import, export, supported, tags
 published: True
 position: 2
+components: [wordsprocessing]
 ---
 
 # Supported Html Elements

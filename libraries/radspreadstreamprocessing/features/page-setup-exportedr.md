@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-features-page-setup-exporter
 tags: pagesetup, spread, stream, processing, spreadsheet, print, export, worksheet, margins, headers
 published: True
 position: 3
+components: [spreadstreamprocessing]
 ---
 
 # Page Setup Exporter

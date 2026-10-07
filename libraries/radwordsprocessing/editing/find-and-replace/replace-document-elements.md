@@ -6,6 +6,7 @@ slug: radwordsprocessing-editing-replace-document-elements
 tags: replace, word, flow, docx, editing, document, elements, text, search
 published: True
 position: 6
+components: [wordsprocessing]
 ---
 
 # Replace Text with Document Elements

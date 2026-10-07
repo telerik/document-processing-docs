@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-interactive-forms-form-fields
 tags: formfield, pdf, interactive, radpdfprocessing, acroform, model, types, input
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # FormField

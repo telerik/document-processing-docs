@@ -5,6 +5,7 @@ page_title: Bookmarks (Outlines)
 slug: radpdfprocessing-features-bookmarks
 tags: bookmarks, outlines, pdf, navigation, radpdfprocessing, document, hierarchy, links
 position: 1
+components: [pdfprocessing]
 ---
 
 # Bookmarks (Outlines) 

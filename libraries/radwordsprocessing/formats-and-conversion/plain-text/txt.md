@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-txt
 tags: plain, word, flow, docx, export, document, text, format, extraction, txt
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Plain Text

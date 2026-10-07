@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-section
 tags: section, word, docx, document, flow, model, layout, headers, footers
 published: True
 position: 2
+components: [wordsprocessing]
 ---
 
 # Section

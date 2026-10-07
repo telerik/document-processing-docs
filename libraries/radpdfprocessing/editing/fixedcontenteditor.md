@@ -6,6 +6,7 @@ slug: radpdfprocessing-editing-fixedcontenteditor
 tags: fixedcontenteditor, pdf, editing, annotations, drawing, radpdfprocessing, widgets, position
 published: True
 position: 4
+components: [pdfprocessing]
 ---
 
 # FixedContentEditor

@@ -7,6 +7,7 @@ tags: images, crossplatform, pdf, spreadsheet, radspreadprocessing, export, dotn
 platforms: core, blazor, winui, maui
 published: True
 position: 2
+components: [pdfprocessing, spreadprocessing]
 ---
 
 # Exporting Images in .NET Standard

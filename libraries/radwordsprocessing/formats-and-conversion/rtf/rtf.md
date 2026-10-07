@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-rtf
 tags: rtf, word, flow, docx, import, export, document, richtext, format, conversion
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Rtf

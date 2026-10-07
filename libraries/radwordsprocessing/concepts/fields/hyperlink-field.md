@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-hyperlink-field
 tags: hyperlink, word, flow, docx, fields, document, links, url, navigation, model
 published: True
 position: 6
+components: [wordsprocessing]
 ---
 
 # Hyperlink Field

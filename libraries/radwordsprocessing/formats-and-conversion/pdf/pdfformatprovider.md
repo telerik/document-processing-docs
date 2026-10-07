@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider
 tags: format, provider, pdf, word, flow, docx, export, document, conversion, rendering
 published: True
 position: 2
+components: [pdfprocessing, wordsprocessing]
 ---
 
 # Using PdfFormatProvider

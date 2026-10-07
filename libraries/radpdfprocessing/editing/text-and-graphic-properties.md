@@ -6,6 +6,7 @@ slug: radpdfprocessing-editing-text-and-graphic-properties
 tags: text, properties, graphic, pdf, font, colors, radpdfprocessing, rendering, editing
 published: True
 position: 5
+components: [pdfprocessing]
 ---
 
 # Text and Graphic Properties

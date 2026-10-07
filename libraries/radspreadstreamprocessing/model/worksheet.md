@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-model-worksheet
 tags: worksheet, spread, stream, processing, spreadsheet, model, rows, cells, workbook, export
 published: True
 position: 2
+components: [spreadstreamprocessing]
 ---
 
 # Worksheet

@@ -6,6 +6,7 @@ slug: radwordsprocessing-markdownformatprovider-settings
 tags: wordsprocessing, markdown, format, provider, import, export, md
 published: True
 position: 2
+components: [wordsprocessing]
 ---
 
 # Settings

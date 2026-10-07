@@ -6,6 +6,7 @@ slug: radziplibrary-protect-ziparchive
 tags: protection, archive, radziplibrary, zip, password, encryption, aes, pkware, invalidpasswordexception
 published: True
 position: 1
+components: [ziplibrary]
 ---
 
 # Protect ZipArchive

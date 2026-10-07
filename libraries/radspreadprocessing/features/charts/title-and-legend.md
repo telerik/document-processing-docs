@@ -7,6 +7,7 @@ tags: chart, legend, charts, spreadsheet, radspreadprocessing, title, legend, co
 published: True
 position: 6
 platforms: ajax, mvc, wpf, winforms
+components: [spreadprocessing]
 ---
 
 # Title and Legend

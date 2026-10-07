@@ -5,6 +5,7 @@ page_title: Digital Signature - Overview
 slug: radpdfprocessing-features-digital-signature
 tags: digital, signature, pdf, signing, validation, radpdfprocessing, x509, certificates, pki, public-key-infrastructure, overview
 position: 0
+components: [pdfprocessing]
 ---
 
 # Overview

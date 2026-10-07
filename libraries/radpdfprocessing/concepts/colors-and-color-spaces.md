@@ -6,6 +6,7 @@ slug: radpdfprocessing-concepts-colors-and-color-spaces
 tags: colors, colorspaces, pdf, rgb, gray, cmyk, gradient, radpdfprocessing, pattern
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # Colors and Color Spaces

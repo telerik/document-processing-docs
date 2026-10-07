@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-interactive-forms-acroform
 tags: acroform, pdf, formfields, radpdfprocessing, interactive, model, forms, widgets
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # AcroForm 

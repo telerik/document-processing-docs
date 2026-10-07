@@ -7,6 +7,7 @@ tags: cross, platform, word, processing, dotnet, standard, nuget, blazor, maui, 
 platforms: core, blazor, winui, maui
 published: True
 position: 2
+components: [pdfprocessing, wordsprocessing]
 ---
 
 # Cross-Platform Support

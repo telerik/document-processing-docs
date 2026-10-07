@@ -6,6 +6,7 @@ slug: radpdfprocessing-concepts-comply-with-pdfa-standard
 tags: pdfa, compliance, archiving, pdf, iso, accessibility, radpdfprocessing, standard
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # How to Comply with PDF/A Standard

@@ -6,6 +6,7 @@ slug: radwordsprocessing-overview
 tags: radwordsprocessing, word, processing, docx, rtf, html, pdf, import, export
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # RadWordsProcessing Overview

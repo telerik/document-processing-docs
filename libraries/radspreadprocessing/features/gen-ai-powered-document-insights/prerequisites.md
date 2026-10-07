@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-gen-ai-powered-document-insights-prerequisite
 tags: genai, prerequisites, spreadsheet, radspreadprocessing, llm, nuget, setup, ai, analysis, excel, xlsx, spread, processing
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Prerequisites

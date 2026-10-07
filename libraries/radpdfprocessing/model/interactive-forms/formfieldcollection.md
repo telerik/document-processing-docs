@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-interactive-forms-formfieldcollection
 tags: formfieldcollection, pdf, formfields, radpdfprocessing, acroform, collection, interactive, api, form, fieldc, ollection
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # FormFieldCollection

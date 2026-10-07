@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-rows-and-columns-insert-and-remove
 tags: rows, columns, spreadsheet, radspreadprocessing, insert, remove, worksheet, shift, xlsx, spread
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Insert and Remove Rows and Columns

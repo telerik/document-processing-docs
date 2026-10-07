@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-rtf-features
 tags: format, provider, features, rtf, word, flow, docx, import, export, document, supported
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # Features

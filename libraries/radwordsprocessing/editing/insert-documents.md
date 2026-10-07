@@ -6,6 +6,7 @@ slug: radwordsprocessing-editing-insert-documents
 tags: insert, word, flow, docx, editing, merge, document, position, combine
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # Insert Documents

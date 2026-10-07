@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-gen-ai-powered-document-insights-getting-star
 tags: genai, spreadsheet, excel, radspreadprocessing, llm, ai, summarization, started, genai, insights
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 # Getting Started

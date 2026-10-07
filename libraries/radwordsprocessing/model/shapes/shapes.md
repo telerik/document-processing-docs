@@ -6,6 +6,7 @@ slug: radwordsprocessing-shapes-shapes
 tags: shapes, word, flow, document, docx, model, text, containers, drawing
 published: True
 position: 12
+components: [wordsprocessing]
 ---
 
 # Shapes

@@ -6,6 +6,7 @@ slug: radpdfprocessing-getting-started
 tags: pdf, radpdfprocessing, nuget, document, export, fixed, content, editor, text, fragment, radfixeddocument
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # Getting Started

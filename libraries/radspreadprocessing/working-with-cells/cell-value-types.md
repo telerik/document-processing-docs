@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-cells-cell-value-types
 tags: cell, values, spreadsheet, radspreadprocessing, types, numeric, text, formula, boolean
 published: True
 position: 5
+components: [spreadprocessing]
 ---
 
 # Cell Value Types

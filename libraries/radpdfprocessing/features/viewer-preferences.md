@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-viewer-preferences
 tags: viewer, preferences, pdf, display, print, radpdfprocessing, settings, behavior
 published: True
 position: 7
+components: [pdfprocessing]
 ---
 
 # Viewer Preferences

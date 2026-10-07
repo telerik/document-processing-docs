@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-interactive-forms-resetting-form-fields
 tags: resetformaction, pdf, form, fields, radpdfprocessing, acroform, interactive, reset, action
 published: True
 position: 9
+components: [pdfprocessing]
 ---
 # Resetting Form Fields
 

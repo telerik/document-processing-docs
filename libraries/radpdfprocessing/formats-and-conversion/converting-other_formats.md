@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-converting-other-formats-to-pdf
 tags: pdf, conversion, docx, rtf, xlsx, html, radpdfprocessing, formats
 published: True
 position: 3
+components: [pdfprocessing, wordsprocessing, spreadprocessing]
 ---
 
 # Convert from Other Formats to PDF

@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-radfixeddocumentinfo
 tags: fixed, document, info, pdf, metadata, radpdfprocessing, author, title, creator, producer
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # RadFixedDocumentInfo

@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-doc-docformatprovider
 tags: format, provider, doc, word, flow, docx, import, word, legacy, document, binary
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # Using DocFormatProvider

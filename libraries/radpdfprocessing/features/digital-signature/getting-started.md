@@ -5,6 +5,7 @@ page_title: Digital Signatures in RadPdfProcessing Getting Started
 slug: radpdfprocessing-features-digital-signature-getting-started
 tags: digital, signature, pdf, signing, certificates, radpdfprocessing, x509, validation, started
 position: 1
+components: [pdfprocessing]
 ---
 
 # Getting Started with Digital Signature

@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-formsource-barcode
 tags: barcode, pdf, formsource, radpdfprocessing, qrcode, code128, model, graphics
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # Barcode FormSource

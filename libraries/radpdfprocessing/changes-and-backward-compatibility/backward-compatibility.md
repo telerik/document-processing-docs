@@ -6,6 +6,7 @@ slug: radpdfprocessing-backward-compatibility
 tags: migration, compatibility, radpdfprocessing, pdf, breaking, skiasharp, imagesharp, fontembedding
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # Backward Compatibility

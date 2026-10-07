@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-permissionrange
 tags: permission, range, word, docx, document, flow, model, protection, restricted, access
 published: True
 position: 15
+components: [wordsprocessing]
 ---
 
 # PermissionRange

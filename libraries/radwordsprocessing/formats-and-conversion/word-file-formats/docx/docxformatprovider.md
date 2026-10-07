@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-docx-docxformatprovider
 tags: format, provider, docx, flow, docx, import, export, word, document, openxml
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # Using DocxFormatProvider

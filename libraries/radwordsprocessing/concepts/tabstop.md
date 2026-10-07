@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-tabstop
 tags: tab, stop, word, flow, docx, alignment, paragraphs, text, document, indentation
 published: True
 position: 3
+components: [wordsprocessing]
 ---
 
 # TabStop

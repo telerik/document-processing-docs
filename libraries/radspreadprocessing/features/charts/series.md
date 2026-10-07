@@ -7,6 +7,7 @@ tags: series, charts, spreadsheet, radspreadprocessing, insert, remove, data, ex
 published: True
 position: 4
 platforms: ajax, mvc, wpf, winforms
+components: [spreadprocessing]
 ---
 
 # Series

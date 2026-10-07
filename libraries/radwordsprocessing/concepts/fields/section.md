@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-section-field
 tags: sectionfield, word, flow, docx, fields, document, section, number, model, numbering
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Section Field

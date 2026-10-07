@@ -6,6 +6,7 @@ slug: radwordsprocessing-editing-find-and-replace
 tags: find, replace, word, flow, docx, editing, document, text, search, style
 published: True
 position: 5
+components: [wordsprocessing]
 ---
 
 # Find and Replace Text and Style

@@ -6,6 +6,7 @@ slug: radwordsprocessing-features-gen-ai-powered-document-insights-summarization
 tags: summarization, genai, word, flow, docx, document, llm, ai, processor
 published: True
 position: 3
+components: [wordsprocessing]
 ---
 <style>
 table, th, td {

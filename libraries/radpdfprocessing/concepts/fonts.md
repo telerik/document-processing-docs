@@ -6,6 +6,7 @@ slug: radpdfprocessing-concepts-fonts
 tags: fonts, pdf, embedding, truetype, opentype, radpdfprocessing, encoding, glyphs
 published: True
 position: 5
+components: [pdfprocessing]
 ---
 
 # Fonts

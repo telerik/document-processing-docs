@@ -6,6 +6,7 @@ slug: radpdfprocessing-concepts-position
 tags: position, pdf, matrix, transformation, coordinates, radpdfprocessing, rotation, scaling
 published: True
 position: 8
+components: [pdfprocessing]
 ---
 
 # Position

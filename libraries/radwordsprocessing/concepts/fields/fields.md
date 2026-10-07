@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-fields
 tags: fields, word, flow, docx, document, merge, dynamic, content, model, overview
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Fields

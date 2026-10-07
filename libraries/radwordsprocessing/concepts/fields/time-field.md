@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-time-field
 tags: timefield, word, flow, docx, field, document, time, current, model, display
 published: True
 position: 10
+components: [wordsprocessing]
 ---
 
 # Time Field

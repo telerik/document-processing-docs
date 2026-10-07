@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-bookmark
 tags: bookmark, word, docx, document, flow, model, navigation, named, reference
 published: True
 position: 13
+components: [wordsprocessing]
 ---
 
 # Bookmark

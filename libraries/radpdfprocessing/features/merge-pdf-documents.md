@@ -5,6 +5,7 @@ page_title: How to Merge PDF Documents
 slug: merge-pdf-documents
 tags: merge, pdf, documents, radpdfprocessing, combine, pages, radfixeddocument, export
 position: 5
+components: [pdfprocessing]
 ---
 
 # Merge PDF Documents

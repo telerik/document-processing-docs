@@ -6,6 +6,7 @@ slug: radpdfprocessing-changes
 tags: changes, radpdfprocessing, pdf, releases, fontembedding, opentype, import, export
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # Changes

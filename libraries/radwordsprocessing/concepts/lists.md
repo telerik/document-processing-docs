@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-lists
 tags: lists, word, processing, bullets, numbered, paragraphs, document, formatting, levels, docx
 published: True
 position: 6
+components: [wordsprocessing]
 ---
 
 # Lists

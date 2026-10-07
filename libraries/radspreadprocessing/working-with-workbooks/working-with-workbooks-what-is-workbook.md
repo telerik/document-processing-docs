@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-workbooks-what-is-workbook
 tags: workbook, spreadsheet, radspreadprocessing, excel, model, concept, worksheets, structure, xlsx, spread
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # What is a Workbook?

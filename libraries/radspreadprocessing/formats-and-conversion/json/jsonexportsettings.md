@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-json-jsonexportsettings
 tags: json, export, settings, spreadsheet, radspreadprocessing, configuration, workbook
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 <style>

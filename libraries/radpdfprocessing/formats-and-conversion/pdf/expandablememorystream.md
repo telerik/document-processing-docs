@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-pdf-expandablememorystream
 tags: expandablememorystream, pdf, memory, stream, radpdfprocessing, performance, segments, large
 published: True
 position: 3
+components: [pdfprocessing]
 ---
 
 # ExpandableMemoryStream

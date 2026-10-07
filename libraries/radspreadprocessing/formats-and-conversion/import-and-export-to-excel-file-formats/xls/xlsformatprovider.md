@@ -7,6 +7,7 @@ tags: xls, format, provider, xls, spreadsheet, radspreadprocessing, excel, impor
 published: True
 position: 2
 platforms: core, mvc, ajax, blazor, wpf, winforms, winui
+components: [spreadprocessing]
 ---
 
 # Using XlsFormatProvider

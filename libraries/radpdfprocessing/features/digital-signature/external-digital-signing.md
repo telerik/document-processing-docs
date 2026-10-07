@@ -6,6 +6,7 @@ slug: external-digital-signing
 tags: external, signing, pdf, hash, radpdfprocessing, digitalsignature, hsm, pkcs, certificates, sign
 published: True
 position: 3
+components: [pdfprocessing]
 ---
 <style> img[alt$="><"] { border: 1px solid lightgrey; } </style>
 

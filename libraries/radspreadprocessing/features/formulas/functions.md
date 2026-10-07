@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-formulas-functions
 tags: functions, formulas, spreadsheet, radspreadprocessing, builtin, math, date, financial, spread, xlsx
 published: True
 position: 3
+components: [spreadprocessing]
 ---
 
 # Functions

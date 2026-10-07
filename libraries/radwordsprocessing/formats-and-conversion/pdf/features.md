@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-pdf-features
 tags: pdf, format, provider, features, word, flow, docx, export, document, supported
 published: True
 position: 1
+components: [pdfprocessing, wordsprocessing]
 ---
 
 # Features

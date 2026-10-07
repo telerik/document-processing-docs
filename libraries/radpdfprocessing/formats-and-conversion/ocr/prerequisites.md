@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-ocr-prerequisites
 tags: ocr, prerequisites, pdf, radpdfprocessing, recognition, images, nuget, setup
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # Prerequisites

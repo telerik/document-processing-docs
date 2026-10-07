@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-annotations-stamp
 tags: stamp, pdf, annotations, radpdfprocessing, graphics, text, model
 published: True
 position: 6
+components: [pdfprocessing]
 ---
 
 # Stamp Annotation

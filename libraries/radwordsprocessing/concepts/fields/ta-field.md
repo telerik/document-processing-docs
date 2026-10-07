@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-ta-field
 tags: tafield, word, flow, docx, fields, toa, authorities, document, model, reference
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # TA (Table of Authorities Entry) Field

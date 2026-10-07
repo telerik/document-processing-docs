@@ -7,6 +7,7 @@ slug: radspreadprocessing-sdk-examples
 tags: sdk, examples, demos, radspreadprocessing, spreadsheet, telerik, repository, developer, excel, xlsx
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 # Developer Focused Examples

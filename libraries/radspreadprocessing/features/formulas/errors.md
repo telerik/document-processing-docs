@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-formulas-errors
 tags: errors, formulas, spreadsheet, radspreadprocessing, div, ref, value, calculation, spread, xlsx, spill, calc, dynamic, array
 published: True
 position: 4
+components: [spreadprocessing]
 ---
 
 # Errors

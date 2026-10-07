@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-gen-ai-powered-document-insights-summarizatio
 tags: summarization, genai, spreadsheet, excel, radspreadprocessing, llm, ai, workbook, analysis, summary, xls, csv, workbook, worksheet
 published: True
 position: 3
+components: [spreadprocessing]
 ---
 <style>
 

@@ -6,6 +6,7 @@ slug: radpdfprocessing-concepts-imagequality
 tags: image, quality, pdf, jpeg, compression, export, radpdfprocessing, images, lossless
 published: True
 position: 7
+components: [pdfprocessing]
 ---
 
 # ImageQuality 

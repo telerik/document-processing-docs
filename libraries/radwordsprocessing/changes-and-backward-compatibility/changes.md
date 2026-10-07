@@ -6,6 +6,7 @@ slug: radwordsprocessing-changes
 tags: changes, flow, releases, docx, word, document, features, new
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Changes

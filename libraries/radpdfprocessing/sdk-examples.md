@@ -7,6 +7,7 @@ slug: radpdfprocessing-sdk-examples
 tags: sdk, examples, demos, radpdfprocessing, pdf, telerik, repository, developer
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # Developer Focused Examples

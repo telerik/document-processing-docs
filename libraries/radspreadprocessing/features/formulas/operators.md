@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-formulas-operators
 tags: operators, formulas, spreadsheet, radspreadprocessing, arithmetic, comparison, text, reference, spread, xlsx, dynamic, array, spill, implicit, intersection
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Operator

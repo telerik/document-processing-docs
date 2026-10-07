@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-json-jsonformatprovider
 tags: json, format, provider, spreadsheet, radspreadprocessing, export, workbook, data, serialization
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Using JsonFormatProvider

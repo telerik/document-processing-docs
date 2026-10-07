@@ -6,6 +6,7 @@ slug: radpdfprocessing-editing-table-overview
 tags: table, pdf, tablerow, tablecell, radpdfprocessing, borders, padding, layout
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # RadPdfProcessing Table Overview

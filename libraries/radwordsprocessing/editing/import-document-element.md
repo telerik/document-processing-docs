@@ -6,6 +6,7 @@ slug: radwordsprocessing-editing-import-document-element
 tags: import, word, flow, docx, editing, document, element, copy, transfer
 published: True
 position: 2
+components: [wordsprocessing]
 ---
 
 # Import Document Element

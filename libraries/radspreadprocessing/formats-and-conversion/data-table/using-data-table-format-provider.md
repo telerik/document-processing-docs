@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-using-data-table-format-provide
 tags: data, table, spreadsheet, radspreadprocessing, worksheet, conversion, import, export, provider, spread, list, ienumerable, manual
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Using the DataTableFormatProvider

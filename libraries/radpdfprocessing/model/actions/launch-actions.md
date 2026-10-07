@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-actions-launch
 tags: launchactions, pdf, actions, radpdfprocessing, model, execution, commands, launch
 published: True
 position: 3
+components: [pdfprocessing]
 ---
 
 # Launch Actions

@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-run
 tags: run, word, docx, document, flow, model, text, inline, formatting
 published: True
 position: 4
+components: [wordsprocessing]
 ---
 
 # Run

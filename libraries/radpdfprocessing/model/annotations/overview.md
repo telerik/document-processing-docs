@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-annotations-overview
 tags: annotations, pdf, radpdfprocessing, overview, model, types, links, widgets
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # Annotations Overview

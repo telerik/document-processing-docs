@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-freeze-panes
 tags: freeze, panes, spreadsheet, radspreadprocessing, worksheet, rows, columns, headers, scroll, spread, xlsx
 published: True
 position: 6
+components: [spreadprocessing]
 ---
 
 # Freeze Panes

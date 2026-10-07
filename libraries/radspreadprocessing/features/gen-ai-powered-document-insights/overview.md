@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-gen-ai-powered-document-insights-overview
 tags: genai, spreadsheet, excel, radspreadprocessing, llm, ai, insights, overview, analysis, insights, xlsx, csv, xls
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # GenAI-powered Document Insights Overview <sup>(Preview)</sup>

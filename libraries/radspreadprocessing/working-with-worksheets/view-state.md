@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-worksheets-view-state
 tags: view, state, spreadsheet, radspreadprocessing, zoom, scroll, gridlines, worksheet, headers
 published: True
 position: 5
+components: [spreadprocessing]
 ---
 
 # Manage View State

@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfpagesource
 tags: pdfpagesource, pdf, page, stream, radpdfprocessing, source, existing, access
 published: True
 position: 5
+components: [pdfprocessing]
 ---
 
 # PdfPageSource

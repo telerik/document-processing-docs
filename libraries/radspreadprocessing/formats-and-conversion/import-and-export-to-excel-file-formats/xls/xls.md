@@ -7,6 +7,7 @@ tags: xls, spreadsheet, radspreadprocessing, excel, legacy, import, export, form
 published: True
 position: 0
 platforms: core, mvc, ajax, blazor, wpf, winforms, winui
+components: [spreadprocessing]
 ---
 
 # Xls

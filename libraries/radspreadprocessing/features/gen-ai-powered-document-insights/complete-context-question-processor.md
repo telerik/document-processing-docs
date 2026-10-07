@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-gen-ai-powered-document-insights-complete-con
 tags: questionprocessor, genai, spreadsheet, excel, radspreadprocessing, ai, context, llm, spread, xlsx
 published: True
 position: 5
+components: [spreadprocessing]
 ---
 <style>
 table th:first-of-type {

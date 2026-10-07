@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-rows-and-columns-what-is-row-column
 tags: rows, columns, spreadsheet, radspreadprocessing, worksheet, model, concept, structure, xlsx, spread, workbook
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # What is a Row? What is a Column?

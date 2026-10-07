@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-gen-ai-powered-document-insights-custom-partialc
 tags: customization, genai, pdf, embeddings, radpdfprocessing, retriever, ai, tokenizer
 published: True
 position: 6
+components: [pdfprocessing]
 ---
 
 # Custom PartialContextQuestionProcessor

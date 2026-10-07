@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-pageref-field
 tags: pageref, word, flow, docx, field, document, bookmark, pagenumber, model, reference
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # PageRef Field

@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-rows-and-columns-hiding
 tags: hidden, rows, columns, spreadsheet, radspreadprocessing, visibility, worksheet, display, xlsx, spread
 published: True
 position: 3
+components: [spreadprocessing]
 ---
 
 # Hidden Rows and Columns

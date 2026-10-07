@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-textfragment
 tags: textfragment, pdf, text, radpdfprocessing, singleline, font, content, model
 published: True
 position: 3
+components: [pdfprocessing]
 ---
 
 # TextFragment

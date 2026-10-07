@@ -5,6 +5,7 @@ page_title: RadioButtonField
 slug: radpdfprocessing-model-interactive-forms-form-fields-radiobuttonfield
 tags: radiobuttonfield, pdf, formfields, radpdfprocessing, acroform, interactive, radiobutton, model
 published: True
+components: [pdfprocessing]
 ---
 
 # RadioButtonField Class

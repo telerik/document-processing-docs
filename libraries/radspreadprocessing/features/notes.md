@@ -7,6 +7,7 @@ tags: notes, xlsx, spreadsheet, radspreadprocessing, cells, annotations, workshe
 published: True
 position: 23
 platforms: mvc, ajax, blazor, wpf, winforms, winui, core
+components: [spreadprocessing]
 ---
 
 

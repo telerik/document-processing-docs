@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-md
 tags: wordsprocessing, markdown, format, md
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Markdown

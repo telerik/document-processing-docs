@@ -5,6 +5,7 @@ page_title: CombTextBoxField
 slug: radpdfprocessing-model-interactive-forms-form-fields-combtextboxfield
 tags: combtextboxfield, pdf, formfields, radpdfprocessing, acroform, interactive, comb, model
 published: True
+components: [pdfprocessing]
 ---
 
 # CombTextBoxField Class

@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-worksheets-iterate-through-worksheets
 tags: worksheet, spreadsheet, radspreadprocessing, iterate, workbook, collection, loop, sheets
 published: True
 position: 4
+components: [spreadprocessing]
 ---
 
 # Iterate Through Worksheets

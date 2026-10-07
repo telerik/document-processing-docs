@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-floatingimage
 tags: floating, image, word, docx, document, flow, model, anchor, layout
 published: True
 position: 9
+components: [wordsprocessing]
 ---
 
 # FloatingImage

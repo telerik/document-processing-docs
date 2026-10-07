@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-csv-settings
 tags: csv, format, provider, settings, spreadsheet, radspreadprocessing, csv, import, export, configuration, spread
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 # Settings

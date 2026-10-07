@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-protection-worksheet
 tags: worksheet, protection, spreadsheet, radspreadprocessing, password, cells, security, xlsx, spread
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Worksheet Protection

@@ -7,6 +7,7 @@ tags: crossplatform, pdf, blazor, maui, nuget, dotnet, radpdfprocessing, standar
 platforms: blazor, core, winui, maui
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # Cross-Platform Support

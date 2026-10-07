@@ -7,6 +7,7 @@ tags: xlsm, format, provider, xlsm, spreadsheet, radspreadprocessing, excel, imp
 published: True
 position: 1
 
+components: [spreadprocessing]
 ---
 
 # Using XlsmFormatProvider

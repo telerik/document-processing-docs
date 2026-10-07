@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-plain-text-settings
 tags: textformatprovider, settings, pdf, plaintext, radpdfprocessing, export, separators, configuration
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 

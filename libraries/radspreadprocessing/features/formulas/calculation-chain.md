@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-calculation-chain
 tags: spread, processing, formulas, calculation, performance, dependency, recalculation
 published: True
 position: 6
+components: [spreadprocessing]
 ---
 
 # Calculation Chain (Reference Map)

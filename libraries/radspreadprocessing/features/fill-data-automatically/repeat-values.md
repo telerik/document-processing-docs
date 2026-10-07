@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-fill-data-automatically-repeat-values
 tags: auto, fill, repeat, spreadsheet, radspreadprocessing, cells, values, rows, columns, spread, xlsx
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # Repeat Values

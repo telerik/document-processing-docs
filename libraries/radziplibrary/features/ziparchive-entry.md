@@ -7,6 +7,7 @@ tags: ziparchiveentry, radziplibrary, zip, archive, entry, compressed, stream, f
 published: True
 position: 2
 platforms: ajax, mvc, wpf, winforms
+components: [ziplibrary]
 ---
 
 # ZipArchive Entry

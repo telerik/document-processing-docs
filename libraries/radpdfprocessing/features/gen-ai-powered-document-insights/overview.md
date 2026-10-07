@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-gen-ai-powered-document-insights-overview
 tags: genai, pdf, insights, radpdfprocessing, llm, ai, documents, overview
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # GenAI-powered Document Insights Overview

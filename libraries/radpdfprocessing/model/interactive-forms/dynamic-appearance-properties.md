@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-interactive-forms-dynamic-appearance-properties
 tags: dynamicappearance, pdf, widgets, radpdfprocessing, formfields, appearance, properties, dynamic
 published: True
 position: 5
+components: [pdfprocessing]
 ---
 
 # Dynamic Appearance Properties

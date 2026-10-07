@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-date-field
 tags: datefield, word, flow, docx, fields, document, date, time, model, display
 published: True
 position: 3
+components: [wordsprocessing]
 ---
 
 # Date Field

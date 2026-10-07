@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-worksheets-rename-worksheet
 tags: worksheet, spreadsheet, radspreadprocessing, rename, workbook, name, tab, organization
 published: True
 position: 3
+components: [spreadprocessing]
 ---
 
 # Rename a Worksheet

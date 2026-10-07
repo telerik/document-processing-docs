@@ -6,6 +6,7 @@ slug: radziplibrary-gettingstarted
 tags: radziplibrary, zip, archive, started, nuget, create, extract, dotnet
 published: True
 position: 1
+components: [ziplibrary]
 ---
 
 # Getting Started

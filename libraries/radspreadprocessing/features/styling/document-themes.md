@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-styling-document-themes
 tags: themes, spreadsheet, radspreadprocessing, colors, fonts, styles, workbook, formatting, xlsx, spread
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Document Themes

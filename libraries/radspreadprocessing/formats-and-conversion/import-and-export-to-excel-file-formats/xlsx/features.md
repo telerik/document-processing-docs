@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-xlsx-features
 tags: xlsx, format, provider, features, xlsx, spreadsheet, radspreadprocessing, excel, import, export
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Features

@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-toc-field
 tags: toc, word, flow, docx, fields, contents, document, table, model, navigation
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Table of Contents Field

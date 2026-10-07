@@ -6,6 +6,7 @@ slug: radziplibrary-compression-settings
 tags: compression, settings, radziplibrary, zip, deflate, algorithm, level, zlib, archive
 published: True
 position: 4
+components: [ziplibrary, compression]
 ---
 
 # Compression Settings

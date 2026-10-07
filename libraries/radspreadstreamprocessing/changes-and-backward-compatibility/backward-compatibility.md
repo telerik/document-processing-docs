@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-backward-compatibility
 tags: migration, compatibility, radspreadstreamprocessing, breaking, spreadsheet, versions, upgrade, streaming
 published: True
 position: 1
+components: [spreadstreamprocessing]
 ---
 
 # Backward Compatibility

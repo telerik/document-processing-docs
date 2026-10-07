@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-radflowdocument
 tags: word, flow, docx, document, root, sections, model, container
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # RadFlowDocument

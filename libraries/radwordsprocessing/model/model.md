@@ -6,6 +6,7 @@ slug: radwordsprocessing-model
 tags: model, word, flow, docx, document, sections, paragraphs, overview, structure
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Model

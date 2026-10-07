@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-pdf-settings
 tags: pdfformatprovider, settings, pdf, import, export, radpdfprocessing, encryption, compliance
 published: True
 position: 3
+components: [pdfprocessing]
 ---
 <style>
 table, th, td {

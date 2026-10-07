@@ -7,6 +7,7 @@ tags: conditional, formatting, spreadsheet, spreadprocessing, cells, rules, form
 published: True
 position: 7
 platforms: mvc, ajax, blazor, wpf, winforms, winui, core
+components: [spreadprocessing]
 ---
 
 # Conditional Formatting

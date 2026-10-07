@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-if-field
 tags: iffield, word, flow, docx, fields, document, conditional, comparison, model, logic
 published: True
 position: 7
+components: [wordsprocessing]
 ---
 
 # If Field

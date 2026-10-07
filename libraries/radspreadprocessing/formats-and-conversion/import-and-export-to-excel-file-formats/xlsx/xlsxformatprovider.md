@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-xlsx-xlsxformatprovider
 tags: xlsx, format, provider, xlsx, spreadsheet, radspreadprocessing, excel, import, export, workbook
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 # Using XlsxFormatProvider

@@ -6,6 +6,7 @@ slug: radpdfprocessing-editing-table-tablecell
 tags: tablecell, pdf, row, borders, padding, radpdfprocessing, span, layout
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # TableCell

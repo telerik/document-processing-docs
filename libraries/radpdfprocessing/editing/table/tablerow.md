@@ -6,6 +6,7 @@ slug: radpdfprocessing-editing-table-tablerow
 tags: tablerow, pdf, tablecell, height, radpdfprocessing, table, pixels, layout
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # TableRow

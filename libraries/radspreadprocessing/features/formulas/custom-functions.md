@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-formulas-custom-functions
 tags: custom, functions, formulas, spreadsheet, radspreadprocessing, extension, plugin, calculation, spread, xlsx
 published: True
 position: 5
+components: [spreadprocessing]
 ---
 
 # Custom Functions

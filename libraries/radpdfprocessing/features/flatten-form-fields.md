@@ -5,6 +5,7 @@ page_title: Flatten Form Fields
 slug: radpdfprocessing-flatten-form-fields
 tags: flatten, form, fields, pdf, acroform, radpdfprocessing, readonly, interactive, forms
 position: 5
+components: [pdfprocessing]
 ---
 
 # Flatten Form Fields

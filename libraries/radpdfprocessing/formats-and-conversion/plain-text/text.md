@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-plain-text-text
 tags: plaintext, pdf, text, radpdfprocessing, extraction, content, format, export
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # Plain text

@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-javascript-actions
 tags: javascript, pdf, actions, js, radpdfprocessing, triggers, events, model, scripting
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # JavaScript Actions

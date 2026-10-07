@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-worksheetpagesetup
 tags: page, setup, spreadsheet, radspreadprocessing, print, worksheet, headers, footers, margins, pdf, export, xlsx
 published: True
 position: 14
+components: [spreadprocessing]
 ---
 
 # Worksheet Page Setup

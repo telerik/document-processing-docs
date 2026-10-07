@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-pdf-features
 tags: pdf, format, provider, features, spreadsheet, radspreadprocessing, export, charts, print
 published: True
 position: 1
+components: [pdfprocessing, spreadprocessing]
 ---
 
 # Features

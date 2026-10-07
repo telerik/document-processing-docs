@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-imagesource
 tags: imagesource, pdf, pixels, radpdfprocessing, jpeg, bitmap, images, source
 published: True
 position: 5
+components: [pdfprocessing]
 ---
 
 # ImageSource

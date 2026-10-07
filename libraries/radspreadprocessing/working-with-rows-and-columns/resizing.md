@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-rows-and-columns-resizing
 tags: resizing, rows, columns, spreadsheet, radspreadprocessing, width, height, autofit, xlsx, spread, workbook
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 # Resizing Rows and Columns

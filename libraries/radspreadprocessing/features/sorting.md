@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-sorting
 tags: sorting, spreadsheet, radspreadprocessing, data, worksheet, rows, order, columns, spread, xlsx
 published: True
 position: 17
+components: [spreadprocessing]
 ---
 
 # Sorting

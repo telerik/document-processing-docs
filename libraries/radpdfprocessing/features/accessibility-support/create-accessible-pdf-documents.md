@@ -6,6 +6,7 @@ slug: create-accessible-pdf-documents
 tags: accessibility, pdf, tagged, marked, content, radpdfprocessing
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # Creating Accessible PDF Documents 

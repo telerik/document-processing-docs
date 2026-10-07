@@ -5,6 +5,7 @@ page_title: PDF Portfolio
 slug: radpdfprocessing-pdf-portfolio-overview
 tags: pdfportfolio, pdf, collection, embedded, radpdfprocessing, schema, sorting, metadata
 position: 0
+components: [pdfprocessing]
 ---
 
 # PDF Portfolio - Overview

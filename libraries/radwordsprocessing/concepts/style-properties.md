@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-style-properties
 tags: style, properties, word, flow, docx, formatting, inheritance, document, styles, character, paragraph
 published: True
 position: 5
+components: [wordsprocessing]
 ---
 
 # Style Properties

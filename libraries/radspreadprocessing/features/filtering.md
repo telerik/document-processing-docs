@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-filtering
 tags: filtering, spreadsheet, radspreadprocessing, worksheet, data, autofilter, rows, columns, excel, xlsx
 published: True
 position: 15
+components: [spreadprocessing]
 ---
 
 # Filtering

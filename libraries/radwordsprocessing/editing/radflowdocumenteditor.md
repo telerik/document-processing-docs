@@ -6,6 +6,7 @@ slug: radwordsprocessing-editing-radflowdocumenteditor
 tags: document, editor, word, docx, editing, insert, flow, content, builder
 published: True
 position: 3
+components: [wordsprocessing]
 ---
 
 # RadFlowDocumentEditor

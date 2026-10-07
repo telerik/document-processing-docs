@@ -7,6 +7,7 @@ tags: charts, spreadsheet, radspreadprocessing, insert, remove, floating, chart,
 published: True
 position: 2
 platforms: ajax, mvc, wpf, winforms
+components: [spreadprocessing]
 ---
 
 # Using Charts

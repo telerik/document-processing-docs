@@ -7,6 +7,7 @@ tags: fonts, crossplatform, pdf, embedding, provider, radpdfprocessing, dotnet, 
 platforms: blazor, core, winui, maui
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # Fonts

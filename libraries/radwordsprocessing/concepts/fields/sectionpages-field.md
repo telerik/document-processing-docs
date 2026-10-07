@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-sectionpages-field
 tags: sectionpages, word, flow, docx, fields, document, section, pages, model, total
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # SectionPages Field

@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-cells-accessing-cells-of-worksheet
 tags: cells, spreadsheet, radspreadprocessing, cell, selection, worksheet, access, index, range
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 # Accessing Cells of a Worksheet

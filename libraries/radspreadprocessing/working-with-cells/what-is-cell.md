@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-cells-what-is-cell
 tags: cells, spreadsheet, radspreadprocessing, worksheet, model, concept, structure, properties, xlsx, spread
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # What is a Cell?

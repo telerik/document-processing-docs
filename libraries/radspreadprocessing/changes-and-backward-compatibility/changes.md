@@ -6,6 +6,7 @@ slug: radspreadprocessing-changes
 tags: changes, radspreadprocessing, releases, spreadsheet, excel, xlsx, features, new
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # Changes

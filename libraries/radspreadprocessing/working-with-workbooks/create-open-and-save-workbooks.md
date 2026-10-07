@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-workbooks-create-open-and-save-workbooks
 tags: workbook, spreadsheet, radspreadprocessing, create, open, save, xlsx, formats
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Create, Open and Save Workbooks
