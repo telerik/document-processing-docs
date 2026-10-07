@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-pdf-numbering-fields-provider
 tags: numbering, word, flow, docx, fields, pages, layout, provider, document, calculation
 published: True
 position: 20
+components: [wordsprocessing]
 ---
 
 # Using NumberingFieldsProvider

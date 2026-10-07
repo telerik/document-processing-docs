@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-plain-text-textformatprovider
 tags: textformatprovider, pdf, plaintext, radpdfprocessing, export, text, document, extraction
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # Using TextFormatProvider

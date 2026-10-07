@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-watermark
 tags: watermark, word, flow, docx, document, image, text, section, background, header
 published: True
 position: 6
+components: [wordsprocessing]
 ---
 
 # Watermark

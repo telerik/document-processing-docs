@@ -5,6 +5,7 @@ description: Learn how to find, insert, update, position, and remove content con
 slug: wordsprocessing-model-working-with-content-controls
 tags: content, controls, word, flow, document, docx, editing, sdt, access, api
 published: True
+components: [wordsprocessing]
 ---
 
 # Working with Content Controls

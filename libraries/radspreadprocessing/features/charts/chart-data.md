@@ -7,6 +7,7 @@ tags: chart, data, charts, spreadsheet, radspreadprocessing, series, formulas, n
 published: True
 position: 3
 platforms: ajax, mvc, wpf, winforms
+components: [spreadprocessing]
 ---
 
 # Chart Data

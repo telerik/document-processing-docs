@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-clipboard-support
 tags: clipboard, paste, spreadsheet, radspreadprocessing, cells, copy, formatting, values, excel, xlsx
 published: True
 position: 4
+components: [spreadprocessing]
 ---
 
 # Clipboard Support

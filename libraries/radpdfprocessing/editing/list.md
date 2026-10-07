@@ -6,6 +6,7 @@ slug: radpdfprocessing-editing-list
 tags: list, pdf, bullets, numbered, radpdfprocessing, listlevel, paragraphs, editing
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # List

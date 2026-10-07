@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-styling-cell-styles
 tags: cell, styles, spreadsheet, radspreadprocessing, formatting, cells, appearance, styles, workbook, xlsx, spread
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # Cell Styles

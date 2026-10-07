@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-shapes-and-images
 tags: shapes, images, spreadsheet, radspreadprocessing, floating, drawing, worksheet, graphics, spread, xlsx
 published: True
 position: 13
+components: [spreadprocessing]
 ---
 
 # Shapes and Images

@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-pdf-features
 tags: pdfformatprovider, features, pdf, import, export, radpdfprocessing, encryption, signatures
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # Features

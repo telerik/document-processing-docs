@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-marked-content
 tags: marked, content, pdf, tagged, radpdfprocessing, accessibility, stream, structure, labels
 published: True
 position: 7
+components: [pdfprocessing]
 ---
 
 # Marked Content

@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-structure-tree
 tags: structuretree, pdf, accessibility, radpdfprocessing, tagged, hierarchy, elements, structure
 published: True
 position: 7
+components: [pdfprocessing]
 ---
 
 # StructureTree

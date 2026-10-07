@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-tagged-pdf
 tags: taggedpdf, pdf, accessibility, radpdfprocessing, structuretree, markedcontent, tagged
 published: True
 position: 7
+components: [pdfprocessing]
 ---
 
 # Tagged PDF

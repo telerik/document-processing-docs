@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-document-variables
 tags: documentvariables, word, flow, docx, fields, document, variables, values, model, dynamic
 published: True
 position: 4
+components: [wordsprocessing]
 ---
 
 # Document Variables

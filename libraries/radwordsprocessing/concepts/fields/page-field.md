@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-page-field
 tags: page, word, flow, docx, field, document, pagenumber, model, numbering, display
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Page Field

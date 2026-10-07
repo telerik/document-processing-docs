@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-html-htmlformatprovider
 tags: html, format, provider, word, flow, docx, import, export, document, web
 published: True
 position: 3
+components: [wordsprocessing]
 ---
 
 # Using HtmlFormatProvider

@@ -6,6 +6,7 @@ slug: radwordsprocessing-features-search
 tags: search, pdf, text, radpdfprocessing, find, pattern, document, results
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # Search

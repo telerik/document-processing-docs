@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-imageinline
 tags: image, inline, word, docx, document, flow, model, embedded
 published: True
 position: 8
+components: [wordsprocessing]
 ---
 
 # ImageInline

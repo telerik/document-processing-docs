@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-cells-get-set-clear-properties
 tags: cells, spreadsheet, radspreadprocessing, properties, formatting, values, borders, fill, xlsx, spread, workbook, themablefontfamily, fontfamily, font
 published: True
 position: 4
+components: [spreadprocessing]
 ---
 
 # Get, Set and Clear Cell Properties

@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-formulas-general-information
 tags: formulas, spreadsheet, radspreadprocessing, expressions, operators, functions, cells, calculation, spread, xlsx
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # General Information

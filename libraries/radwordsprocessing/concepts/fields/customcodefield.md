@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-customcodefield
 tags: custom, code, field, word, flow, docx, fields, document, model, extension
 published: True
 position: 2
+components: [wordsprocessing]
 ---
 
 # Custom Code Field

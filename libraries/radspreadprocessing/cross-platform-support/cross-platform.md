@@ -7,6 +7,7 @@ tags: crossplatform, spreadsheet, dotnet, standard, radspreadprocessing, pdf, ex
 platforms: core, blazor, winui, maui
 published: True
 position: 0
+components: [pdfprocessing, spreadprocessing]
 ---
 
 # Cross-Platform Support

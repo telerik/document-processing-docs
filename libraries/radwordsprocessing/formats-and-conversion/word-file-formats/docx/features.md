@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-docx-features
 tags: format, provider, features, docx, flow, import, export, word, supported
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Features

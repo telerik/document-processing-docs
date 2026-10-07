@@ -7,6 +7,7 @@ slug: radspreadstreamprocessing-sdk-examples
 tags: sdk, examples, demos, spread, stream, processing, spreadsheet, telerik, repository, developer
 published: True
 position: 2
+components: [spreadstreamprocessing]
 ---
 
 # Developer Focused Examples

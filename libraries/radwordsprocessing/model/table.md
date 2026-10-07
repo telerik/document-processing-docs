@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-table
 tags: table, word, docx, document, flow, model, rows, cells, layout
 published: True
 position: 5
+components: [wordsprocessing]
 ---
 
 # Table

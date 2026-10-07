@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-path
 tags: path, pdf, vector, radpdfprocessing, geometry, graphics, lines, curves
 published: True
 position: 8
+components: [pdfprocessing]
 ---
 
 # Path

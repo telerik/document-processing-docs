@@ -7,6 +7,7 @@ tags: comments, xlsx, spreadsheet, radspreadprocessing, cells, annotations, work
 published: True
 position: 23
 platforms: mvc, ajax, blazor, wpf, winforms, winui, core
+components: [spreadprocessing]
 ---
 
 

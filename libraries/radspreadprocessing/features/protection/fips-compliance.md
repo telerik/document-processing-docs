@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-protection-fips-compliance
 tags: fips, protection, spreadsheet, radspreadprocessing, compliance, encryption, workbook, security
 published: True
 position: 3
+components: [spreadprocessing]
 ---
 
 # FIPS Compliance

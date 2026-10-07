@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-actions-gotor
 tags: gotoractions, gotor, action, pdf, radpdfprocessing, navigation, remote, destinations, model
 published: True
 position: 4
+components: [pdfprocessing]
 ---
 
 # GoToR Actions

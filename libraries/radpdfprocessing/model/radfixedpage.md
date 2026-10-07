@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-radfixedpage
 tags: radfixedpage, pdf, page, radpdfprocessing, size, rotation, content, layout
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # RadFixedPage

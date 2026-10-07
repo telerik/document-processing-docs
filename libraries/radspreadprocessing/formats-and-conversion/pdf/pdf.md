@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-pdf-pdf
 tags: pdf, spreadsheet, radspreadprocessing, export, format, conversion, print, document
 published: True
 position: 0
+components: [pdfprocessing, spreadprocessing]
 ---
 
 # Pdf

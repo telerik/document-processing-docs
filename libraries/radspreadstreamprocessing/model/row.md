@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-model-rows
 tags: rows, spread, stream, processing, spreadsheet, model, properties, height, worksheet, export
 published: True
 position: 4
+components: [spreadstreamprocessing]
 ---
 
 # Rows

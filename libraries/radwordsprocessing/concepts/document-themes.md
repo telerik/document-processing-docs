@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-document-themes
 tags: themes, word, processing, colors, fonts, styles, document, scheme, formatting, flow
 published: True
 position: 3
+components: [wordsprocessing]
 ---
 
 # Document Themes

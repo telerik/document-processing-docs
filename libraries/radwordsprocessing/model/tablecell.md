@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-tablecell
 tags: table, cell, word, docx, document, flow, model, content, container
 published: True
 position: 7
+components: [wordsprocessing]
 ---
 
 # TableCell

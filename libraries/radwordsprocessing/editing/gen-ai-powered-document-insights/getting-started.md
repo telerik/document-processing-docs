@@ -6,6 +6,7 @@ slug: radwordsprocessing-features-gen-ai-powered-document-insights-getting-start
 tags: genai, word, flow, docx, document, llm, ai, summarization, started
 published: True
 position: 2
+components: [wordsprocessing]
 ---
 
 # Getting Started

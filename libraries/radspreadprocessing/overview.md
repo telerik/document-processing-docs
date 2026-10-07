@@ -6,6 +6,7 @@ slug: radspreadprocessing-overview
 tags: spread, processing, spreadsheet, excel, xlsx, csv, pdf, import, export
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # Overview

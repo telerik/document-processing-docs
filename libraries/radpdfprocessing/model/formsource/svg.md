@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-formsource-svg
 tags: svg, pdf, formsource, radpdfprocessing, vector, graphics, model, images
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # SVG FormSource

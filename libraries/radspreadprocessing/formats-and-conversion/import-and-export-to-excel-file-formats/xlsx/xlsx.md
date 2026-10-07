@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-xlsx-xlsx
 tags: xlsx, spreadsheet, radspreadprocessing, excel, import, export, openxml, format
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # Xlsx

@@ -5,6 +5,7 @@ page_title: PortfolioCollection
 slug: radpdfprocessing-pdf-portfolio-portfoliocollection
 tags: portfoliocollection, pdf, schema, sorting, radpdfprocessing, api, portfolio, items
 position: 1
+components: [pdfprocessing]
 ---
 
 # PortfolioCollection

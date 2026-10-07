@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-annotations-line
 tags: line, pdf, annotations, radpdfprocessing, drawing, graphics, shape, model
 published: True
 position: 5
+components: [pdfprocessing]
 ---
 
 # Line Annotation

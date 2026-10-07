@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-paragraph
 tags: paragraph, word, flow, docx, document, model, inline, text, runs
 published: True
 position: 3
+components: [wordsprocessing]
 ---
 
 # Paragraph

@@ -6,6 +6,7 @@ slug: radwordsprocessing-backward-compatibility
 tags: migration, compatibility, docx, processing, breaking, document, versions, upgrade, word, flow
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # Backward Compatibility

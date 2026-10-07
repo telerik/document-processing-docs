@@ -5,6 +5,7 @@ page_title: Handling Exceptions
 slug: radpdfprocessing-handling-exceptions
 tags: exceptions, handling, pdf, import, export, radpdfprocessing, events, errors
 position: 4
+components: [pdfprocessing]
 ---
 # Handling Exceptions
 

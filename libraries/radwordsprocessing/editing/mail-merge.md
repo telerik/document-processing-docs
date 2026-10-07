@@ -6,6 +6,7 @@ slug: radwordsprocessing-editing-mail-merge
 tags: mail, merge, word, flow, docx, document, template, fields, data, source, personalization, editing
 published: True
 position: 4
+components: [wordsprocessing]
 ---
 
 # Mail Merge

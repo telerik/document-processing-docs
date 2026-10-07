@@ -6,6 +6,7 @@ slug: radziplibrary-update-ziparchive
 tags: ziparchive, update, radziplibrary, zip, entries, add, delete, archive
 published: True
 position: 0
+components: [ziplibrary]
 ---
 
 # Update ZipArchive

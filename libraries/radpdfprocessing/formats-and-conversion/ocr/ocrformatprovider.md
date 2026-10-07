@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider
 tags: ocrformatprovider, pdf, ocr, radpdfprocessing, recognition, image, conversion, scanned
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # Using OcrFormatProvider

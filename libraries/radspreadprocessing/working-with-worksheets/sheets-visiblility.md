@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-worksheets-sheets-visibility
 tags: worksheet, spreadsheet, radspreadprocessing, visibility, hidden, show, hide, sheets, grouping
 published: True
 position: 6
+components: [spreadprocessing]
 ---
 
 # Sheets Visibility

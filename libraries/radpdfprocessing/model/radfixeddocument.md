@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-radfixeddocument
 tags: radfixeddocument, pdf, document, radpdfprocessing, pages, merge, create, root
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # RadFixedDocument

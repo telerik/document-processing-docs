@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-gen-ai-powered-document-insights-getting-started
 tags: genai, pdf, summarization, radpdfprocessing, llm, ai, insights, started
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # Getting Started

@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-numpages-field
 tags: numpages, word, flow, docx, fields, document, pages, total, model, numbering
 published: True
 position: 6
+components: [wordsprocessing]
 ---
 
 # NumPages Field

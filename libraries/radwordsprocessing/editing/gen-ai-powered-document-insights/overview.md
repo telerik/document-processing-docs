@@ -6,6 +6,7 @@ slug: radwordsprocessing-features-gen-ai-powered-document-insights-overview
 tags: genai, word, flow, docx, document, llm, ai, insights, overview, analysis
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # GenAI-powered Document Insights Overview

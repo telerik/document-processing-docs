@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-form
 tags: formxobject, pdf, reusable, radpdfprocessing, content, model, xobject, composite
 published: True
 position: 6
+components: [pdfprocessing]
 ---
 
 # Form

@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-getting-started
 tags: spread, stream, processing, spreadsheet, xlsx, nuget, started, streaming, workbook, export
 published: True
 position: 1
+components: [spreadstreamprocessing]
 ---
 
 # Getting Started

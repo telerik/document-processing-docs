@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-compare-field
 tags: compare, field, word, flow, docx, fields, document, comparison, values, model, logic
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # Compare Field

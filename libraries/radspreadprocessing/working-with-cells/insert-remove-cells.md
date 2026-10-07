@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-cells-insert-remove-cells
 tags: cells, spreadsheet, radspreadprocessing, insert, remove, shift, worksheet, range, xlsx, spread
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Insert and Remove Cells

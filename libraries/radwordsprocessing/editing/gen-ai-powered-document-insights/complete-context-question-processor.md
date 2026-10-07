@@ -6,6 +6,7 @@ slug: radwordsprocessing-features-gen-ai-powered-document-insights-complete-cont
 tags: question, processor, genai, word, flow, docx, document, ai, context, complete, llm
 published: True
 position: 5
+components: [wordsprocessing]
 ---
 <style>
 table, th, td {

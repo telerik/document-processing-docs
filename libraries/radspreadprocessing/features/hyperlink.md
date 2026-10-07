@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-hyperlink
 tags: hyperlink, spreadsheet, radspreadprocessing, links, url, cells, navigation, email, spread, xlsx
 published: True
 position: 8
+components: [spreadprocessing]
 ---
 
 # Hyperlink

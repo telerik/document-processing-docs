@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-csv-csv
 tags: csv, spreadsheet, radspreadprocessing, import, export, tabular, delimiter, format, spread
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # Csv

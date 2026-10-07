@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-worksheets-add-remove-worksheets
 tags: worksheet, spreadsheet, radspreadprocessing, add, remove, reorder, workbook, move
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Add, Remove and Reorder Worksheets

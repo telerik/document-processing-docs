@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-rtf-settings
 tags: format, provider, settings, rtf, word, flow, docx, import, export, configuration, document
 published: True
 position: 3
+components: [wordsprocessing]
 ---
 
 # Settings

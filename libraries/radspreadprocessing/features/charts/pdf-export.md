@@ -7,6 +7,7 @@ tags: charts, pdf, export, spreadsheet, radspreadprocessing, wpf, renderer, exce
 published: True
 position: 7
 platforms: wpf
+components: [pdfprocessing, spreadprocessing]
 ---
 
 # Export Chart to PDF

@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-annotations-text
 tags: text, pdf, annotations, radpdfprocessing, stickynote, note, comment, model
 published: True
 position: 3
+components: [pdfprocessing]
 ---
 
 # Text Annotation

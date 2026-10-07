@@ -6,6 +6,7 @@ slug: radziplibrary-backward-compatibility
 tags: migration, compatibility, radziplibrary, zip, breaking, versions, upgrade, archive
 published: True
 position: 1
+components: [ziplibrary]
 ---
 
 # Backward Compatibility

@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-merge-unmerge-cells
 tags: merge, unmerge, cells, spreadsheet, radspreadprocessing, rows, columns, worksheet, spread, xlsx
 published: True
 position: 9
+components: [spreadprocessing]
 ---
 
 # Merge and Unmerge Cells

@@ -6,6 +6,7 @@ slug: pdfprocessing-feature-accessibility-support
 tags: accessibility, pdf, tagged, structure, radpdfprocessing, overview, compliance
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # Accessibility Support - Overview

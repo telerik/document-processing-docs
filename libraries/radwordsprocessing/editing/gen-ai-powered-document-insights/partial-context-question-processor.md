@@ -6,6 +6,7 @@ slug: radwordsprocessing-features-gen-ai-powered-document-insights-partial-conte
 tags: question, processor, genai, radwordsprocessing, document, embeddings, ai, retrieval, context, analysis
 published: True
 position: 4
+components: [wordsprocessing]
 ---
 <style>
 table, th, td {

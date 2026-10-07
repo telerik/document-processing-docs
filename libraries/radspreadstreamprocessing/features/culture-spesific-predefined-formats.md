@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-features-culture-spesific-predefined-formats
 tags: culture, formats, spread, stream, processing, spreadsheet, number, currency, localization, predefined
 published: True
 position: 4
+components: [spreadstreamprocessing]
 ---
 
 # Culture Specific Predefined Formats 

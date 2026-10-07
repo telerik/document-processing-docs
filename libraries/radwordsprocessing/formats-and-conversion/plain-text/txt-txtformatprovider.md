@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-txt-txtformatprovider
 tags: format, provider, txt, word, flow, docx, import, export, document, plaintext
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # Using TxtFormatProvider

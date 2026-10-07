@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-interactive-forms-xfa
 tags: xfa, forms, acroform, pdf, import, export, radpdfprocessing
 published: True
 position: 3
+components: [pdfprocessing]
 ---
 
 # XFA Forms

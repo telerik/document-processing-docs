@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-gen-ai-powered-document-insights-custom-parti
 tags: ai, context, retriever, embeddings, customization, spread, document, partial, processor, question, insights, xlsx, excel, workbook
 published: True
 position: 6
+components: [spreadprocessing]
 ---
 
 # Custom PartialContextQuestionProcessor <sup>(Preview)</sup>

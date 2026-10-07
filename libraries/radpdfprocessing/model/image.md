@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-image
 tags: image, pdf, imagesource, radpdfprocessing, content, model, graphics, embedded
 published: True
 position: 4
+components: [pdfprocessing]
 ---
 
 # Image

@@ -7,6 +7,7 @@ tags: charts, spreadsheet, radspreadprocessing, excel, xlsx, worksheet, visualiz
 published: True
 position: 1
 platforms: ajax, mvc, wpf, winforms
+components: [spreadprocessing]
 ---
 
 # Overview

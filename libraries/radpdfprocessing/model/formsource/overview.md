@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-formsource-overview
 tags: formsource, pdf, svg, radpdfprocessing, barcode, content, model, overview
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # FormSource

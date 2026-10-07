@@ -6,6 +6,7 @@ slug: radpdfprocessing-concepts-clipping
 tags: clipping, pdf, geometry, image, path, radpdfprocessing, outline, rectangle
 published: True
 position: 3
+components: [pdfprocessing]
 ---
 
 # Clipping

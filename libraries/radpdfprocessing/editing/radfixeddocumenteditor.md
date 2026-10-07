@@ -6,6 +6,7 @@ slug: radpdfprocessing-editing-radfixeddocumenteditor
 tags: radfixeddocumenteditor, pdf, editing, sections, tables, radpdfprocessing, flowlayout, paragraphs
 published: True
 position: 6
+components: [pdfprocessing]
 ---
 
 # RadFixedDocumentEditor

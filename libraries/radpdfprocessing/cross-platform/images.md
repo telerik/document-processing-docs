@@ -7,6 +7,7 @@ tags: images, crossplatform, pdf, jpeg, skiasharp, imagesharp, radpdfprocessing,
 platforms: blazor, core, winui, maui
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # Images

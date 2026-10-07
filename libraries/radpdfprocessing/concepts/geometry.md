@@ -6,6 +6,7 @@ slug: radpdfprocessing-concepts-geometry
 tags: geometry, pdf, shapes, path, clipping, radpdfprocessing, rectangle, bezier
 published: True
 position: 6
+components: [pdfprocessing]
 ---
 
 # Geometry

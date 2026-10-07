@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-txt-txt
 tags: txt, spreadsheet, radspreadprocessing, plaintext, import, export, tabdelimited, format
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # Txt

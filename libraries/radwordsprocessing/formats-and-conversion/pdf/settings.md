@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-pdf-settings
 tags: format, provider, settings, pdf, word, flow, docx, export, document, configuration
 published: True
 position: 3
+components: [pdfprocessing, wordsprocessing]
 ---
 
 # Settings

@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-actions-named-actions
 tags: named, actions, pdf, actions, radpdfprocessing, navigation, document, model, goto
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # Named Actions

@@ -5,6 +5,7 @@ page_title: Limitations
 slug: radpdfprocessing-features-digital-signature-limitations
 tags: digital, signature, limitations, pdf, radpdfprocessing, signing, constraints, certificates, forms
 position: 7
+components: [pdfprocessing]
 ---
 
 # Limitations

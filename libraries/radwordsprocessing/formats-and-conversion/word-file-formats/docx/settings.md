@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-docx-settings
 tags: docx, format, provider, settings, flow, import, export, configuration, word
 published: True
 position: 2
+components: [wordsprocessing]
 ---
 
 # Settings

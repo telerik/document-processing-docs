@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-features-autofilter
 tags: autofilter, filter, spread, stream, processing, spreadsheet, export, import, columns, xlsx, values, custom, dynamic
 published: True
 position: 4
+components: [spreadstreamprocessing]
 ---
 
 # AutoFilter

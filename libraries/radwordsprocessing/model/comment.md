@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-comment
 tags: comment, word, docx, document, flow, model, annotation, review, inline
 published: True
 position: 14
+components: [wordsprocessing]
 ---
 
 # Comment

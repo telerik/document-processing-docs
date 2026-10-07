@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-worksheets-activate-worksheet
 tags: worksheet, spreadsheet, radspreadprocessing, activate, workbook, active, selection, tab, xlsx, spread
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 # Activate a Worksheet

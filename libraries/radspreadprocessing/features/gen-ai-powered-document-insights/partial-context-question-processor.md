@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-gen-ai-powered-document-insights-partial-cont
 tags: ai, document, analysis, question, processor, partial, context, embeddings, excel, spread, xlsx, xls, csv, workbook, worksheet
 published: True
 position: 4
+components: [spreadprocessing]
 ---
 <style>
 

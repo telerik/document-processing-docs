@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-find-and-replace
 tags: find, replace, spreadsheet, radspreadprocessing, search, text, workbook, cells, spread, xlsx
 published: True
 position: 5
+components: [spreadprocessing]
 ---
 
 # Find and Replace

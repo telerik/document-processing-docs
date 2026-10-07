@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-pdf
 tags: pdf, word, flow, docx, export, document, conversion, format, output
 published: True
 position: 0
+components: [pdfprocessing, wordsprocessing]
 ---
 
 # Pdf

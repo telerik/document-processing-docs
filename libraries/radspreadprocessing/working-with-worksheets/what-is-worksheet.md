@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-worksheets-what-is-worksheet
 tags: worksheet, spreadsheet, radspreadprocessing, model, concept, excel, structure, workbook
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # What is a Worksheet?

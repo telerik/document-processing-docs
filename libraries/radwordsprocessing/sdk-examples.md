@@ -7,6 +7,7 @@ slug: radwordsprocessing-sdk-examples
 tags: sdk, examples, demos, word, processing, document, telerik, repository, developer
 published: True
 position: 2
+components: [wordsprocessing]
 ---
 
 # Developer Focused Examples

@@ -6,6 +6,7 @@ slug: radspreadprocessing-getting-started
 tags: spread, processing, spreadsheet, nuget, workbook, excel, started, worksheet, xlsx
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Getting Started

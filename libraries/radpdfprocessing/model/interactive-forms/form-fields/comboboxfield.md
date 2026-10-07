@@ -5,6 +5,7 @@ page_title: ComboBoxField
 slug: radpdfprocessing-model-interactive-forms-form-fields-comboboxfield
 tags: comboboxfield, pdf, formfields, radpdfprocessing, acroform, interactive, dropdown, model
 published: True
+components: [pdfprocessing]
 ---
 
 # ComboBoxField Class

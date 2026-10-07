@@ -6,6 +6,7 @@ slug: radziplibrary-changes
 tags: changes, radziplibrary, zip, releases, aes, encryption, compression, new
 published: True
 position: 0
+components: [ziplibrary]
 ---
 
 # Changes

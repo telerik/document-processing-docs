@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-number-formats
 tags: number, formats, spreadsheet, radspreadprocessing, cells, formatting, numeric, display, codes, spread, xlsx, formatting
 published: True
 position: 11
+components: [spreadprocessing]
 ---
 
 

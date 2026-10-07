@@ -6,6 +6,7 @@ slug: radwordsprocessing-features-gen-ai-powered-document-insights-prerequisites
 tags: genai, prerequisites, word, flow, docx, document, llm, nuget, setup, ai
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # GenAI-powered Document Insights Prerequisites

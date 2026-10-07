@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-fill-data-automatically-series
 tags: series, auto, fill, spreadsheet, radspreadprocessing, cells, linear, growth, dates, spread, xlsx
 published: True
 position: 1
+components: [spreadprocessing]
 ---
 
 # Series

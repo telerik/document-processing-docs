@@ -5,6 +5,7 @@ page_title: Signature Validation
 slug: radpdfprocessing-features-digital-signature-validation
 tags: signature, validation, pdf, certificates, radpdfprocessing, x509, revocation, chain
 position: 6
+components: [pdfprocessing]
 ---
 
 # Signature Validation

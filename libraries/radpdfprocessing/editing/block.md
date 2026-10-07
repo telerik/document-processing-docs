@@ -6,6 +6,7 @@ slug: radpdfprocessing-editing-block
 tags: block, pdf, layout, textfragment, images, radpdfprocessing, flowlayout, drawing
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # Block

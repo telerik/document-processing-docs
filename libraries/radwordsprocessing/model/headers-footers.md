@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-headers-footers
 tags: headers, footers, word, docx, document, flow, model, sections, pages
 published: True
 position: 10
+components: [wordsprocessing]
 ---
 
 # Headers and Footers

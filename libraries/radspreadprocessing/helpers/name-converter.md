@@ -6,6 +6,7 @@ slug: radspreadprocessing-name-converter
 tags: name, converter, cells, spreadsheet, radspreadprocessing, index, reference, utility, conversion
 published: True
 position: 0
+components: [spreadprocessing]
 ---
 
 # Name Converter

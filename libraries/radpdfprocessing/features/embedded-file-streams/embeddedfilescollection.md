@@ -5,6 +5,7 @@ page_title: EmbeddedFilesCollection
 slug: radpdfprocessing-embeddedfilescollection
 tags: embedded, files, collection, pdf, streams, radpdfprocessing, attachments, api
 position: 1
+components: [pdfprocessing]
 ---
 
 # EmbeddedFilesCollection

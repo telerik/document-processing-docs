@@ -6,6 +6,7 @@ slug: radwordsprocessing-features-gen-ai-powered-document-insights-custom-partia
 tags: customization, genai, word, flow, docx, embeddings, retriever, ai, tokenizer, document
 published: True
 position: 6
+components: [wordsprocessing]
 ---
 
 # Custom PartialContextQuestionProcessor

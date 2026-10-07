@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-model-columns
 tags: columns, spread, stream, processing, spreadsheet, model, properties, width, worksheet, export
 published: True
 position: 3
+components: [spreadstreamprocessing]
 ---
 
 # Columns

@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-gen-ai-powered-document-insights-prerequisites
 tags: genai, prerequisites, pdf, radpdfprocessing, llm, nuget, setup, ai
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # GenAI-powered Document Insights Prerequisites

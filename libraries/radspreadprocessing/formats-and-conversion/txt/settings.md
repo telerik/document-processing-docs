@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-txt-settings
 tags: txt, format, provider, settings, spreadsheet, radspreadprocessing, import, export, configuration
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 # Settings

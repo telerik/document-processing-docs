@@ -6,6 +6,7 @@ slug: radwordsprocessing-getting-started
 tags: radwordsprocessing, document, started, nuget, docx, flow, import, export, word
 published: True
 position: 1
+components: [wordsprocessing]
 ---
 
 # Getting Started with RadWordsProcessing

@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-formulas-cell-references
 tags: references, formulas, spreadsheet, radspreadprocessing, cells, ranges, worksheet, absolute, spread, xlsx
 published: True
 position: 2
+components: [spreadprocessing]
 ---
 
 # Reference Ranges

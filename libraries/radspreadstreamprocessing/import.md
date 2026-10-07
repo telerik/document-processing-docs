@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-import
 tags: import, spread, stream, processing, xlsx, csv, spreadsheet, streaming, read, parse
 published: True
 position: 4
+components: [spreadstreamprocessing]
 ---
 
 # Import

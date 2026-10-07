@@ -5,6 +5,7 @@ page_title: Overview
 slug: radpdfprocessing-embedded-file-streams-overview
 tags: embeddedfiles, pdf, streams, radpdfprocessing, attachments, portfolio, filestreams, overview, embedded
 position: 0
+components: [pdfprocessing]
 ---
 
 # Embedded File Streams - Overview

@@ -7,6 +7,7 @@ tags: text, measuring, spread, stream, processing, spreadsheet, cells, width, he
 platforms: core,blazor,winui, wpf, ajax, mvc
 published: True
 position: 1
+components: [spreadprocessing, spreadstreamprocessing]
 ---
 
 # Get Cell Content Size

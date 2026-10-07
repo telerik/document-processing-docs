@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-sequence-field
 tags: sequencefield, word, flow, docx, fields, document, sequence, numbering, model, series
 published: True
 position: 8
+components: [wordsprocessing]
 ---
 
 # Sequence Field

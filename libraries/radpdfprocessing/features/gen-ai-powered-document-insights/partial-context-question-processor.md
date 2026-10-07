@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-gen-ai-powered-document-insights-partial-context
 tags: questionprocessor, genai, pdf, embeddings, radpdfprocessing, ai, retrieval, context
 published: True
 position: 4
+components: [pdfprocessing]
 ---
 <style>
 table, th, td {

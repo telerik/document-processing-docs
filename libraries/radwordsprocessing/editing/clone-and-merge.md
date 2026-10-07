@@ -6,6 +6,7 @@ slug: radwordsprocessing-editing-clone-and-merge
 tags: clone, merge, word, flow, docx, editing, document, copy, combine
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # Clone and Merge

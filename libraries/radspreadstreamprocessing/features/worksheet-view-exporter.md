@@ -6,6 +6,7 @@ slug: radspreadstreamprocessing-features-worksheetviewexporter
 tags: view, exporter, spread, stream, processing, spreadsheet, worksheet, freeze, panes, grid, lines, viewport, export
 published: True
 position: 2
+components: [spreadstreamprocessing]
 ---
 
 # Worksheet View Exporter

@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-annotations-links
 tags: links, pdf, annotations, radpdfprocessing, hyperlinks, destinations, actions, navigation
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # Links

@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-merge-field
 tags: merge, word, flow, docx, fields, document, mailmerge, data, model, template
 published: True
 position: 8
+components: [wordsprocessing]
 ---
 
 # MergeField Field

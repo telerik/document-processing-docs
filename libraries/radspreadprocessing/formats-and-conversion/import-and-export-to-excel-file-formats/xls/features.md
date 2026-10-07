@@ -7,6 +7,7 @@ tags: xls, format, provider, features, xls, spreadsheet, radspreadprocessing, ex
 published: True
 position: 1
 platforms: core, mvc, ajax, blazor, wpf, winforms, winui
+components: [spreadprocessing]
 ---
 
 # Features

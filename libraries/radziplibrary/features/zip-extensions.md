@@ -7,6 +7,7 @@ tags: extensions, radziplibrary, zip, zipfile, extract, create, dotnet, helpers
 published: True
 position: 6
 platforms: ajax, mvc, wpf, winforms
+components: [ziplibrary]
 ---
 
 # Zip Extensions

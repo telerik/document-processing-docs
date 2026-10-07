@@ -5,6 +5,7 @@ page_title: CheckBoxField
 slug: radpdfprocessing-model-interactive-forms-form-fields-checkboxfield
 tags: checkboxfield, pdf, formfields, radpdfprocessing, acroform, interactive, checkbox, model
 published: True
+components: [pdfprocessing]
 ---
 
 # CheckBoxField Class

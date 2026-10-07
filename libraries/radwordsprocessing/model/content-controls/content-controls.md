@@ -5,6 +5,7 @@ description: Learn which content controls are supported in the WordsProcessing l
 slug: wordsprocessing-model-content-controls
 tags: content, controls, word, flow, document, docx, model, sdt, structured, tags
 published: True
+components: [wordsprocessing]
 ---
 
 # Content Controls (Structured Document Tags)

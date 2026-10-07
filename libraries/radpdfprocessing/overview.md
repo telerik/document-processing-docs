@@ -6,6 +6,7 @@ slug: radpdfprocessing-overview
 tags: pdf, radpdfprocessing, processing, documents, export, import, forms, signatures
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # RadPdfProcessing Overview

@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-fieldcharacter
 tags: field, character, word, docx, document, flow, model, fields, inline, delimiter
 published: True
 position: 11
+components: [wordsprocessing]
 ---
 
 # FieldCharacter

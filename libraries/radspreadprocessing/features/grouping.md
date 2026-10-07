@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-grouping
 tags: grouping, spreadsheet, radspreadprocessing, rows, columns, worksheet, outline, collapse, spread, xlsx
 published: True
 position: 16
+components: [spreadprocessing]
 ---
 
 # Grouping

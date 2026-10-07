@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-headers-and-footers
 tags: headers, footers, spreadsheet, radspreadprocessing, print, pages, worksheet, export, spread, xlsx
 published: True
 position: 7
+components: [spreadprocessing]
 ---
 
 # Headers and Footers

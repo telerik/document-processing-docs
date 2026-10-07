@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-actions
 tags: actions, pdf, radpdfprocessing, overview, model, types, javascript, navigation
 published: True
 position: 0
+components: [pdfprocessing]
 ---
 
 # Actions Overview

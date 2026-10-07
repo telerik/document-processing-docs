@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-annotations-widgets
 tags: widgets, pdf, annotations, radpdfprocessing, form, fields, interactive, appearance, model
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # Widgets

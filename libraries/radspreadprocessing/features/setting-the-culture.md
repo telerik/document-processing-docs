@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-setting-the-culture
 tags: culture, spreadsheet, radspreadprocessing, workbook, localization, numberformat, date, globalization, spread, xlsx
 published: True
 position: 18
+components: [spreadprocessing]
 ---
 
 # Setting the Culture

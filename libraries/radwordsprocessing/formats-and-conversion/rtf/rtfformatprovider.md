@@ -6,6 +6,7 @@ slug: radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider
 tags: format, provider, rtf, word, flow, docx, import, export, document, richtext
 published: True
 position: 2
+components: [wordsprocessing]
 ---
 
 # Using RtfFormatProvider

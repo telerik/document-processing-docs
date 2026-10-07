@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-annotations-popup
 tags: popup, pdf, annotations, radpdfprocessing, comments, notes, window, model
 published: True
 position: 7
+components: [pdfprocessing]
 ---
 
 # Popup Annotation

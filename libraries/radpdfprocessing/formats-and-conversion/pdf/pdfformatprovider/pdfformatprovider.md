@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider
 tags: pdfformatprovider, pdf, import, export, radpdfprocessing, stream, document, serialization
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # Using PdfFormatProvider in RadPdfProcessing

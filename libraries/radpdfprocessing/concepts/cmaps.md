@@ -6,6 +6,7 @@ slug: radpdfprocessing-concepts-cmap-tables
 tags: cmap, font, encoding, characters, pdf, radpdfprocessing, unicode, predefined
 published: True
 position: 4
+components: [pdfprocessing]
 ---
 
 # CMap Tables

@@ -7,6 +7,7 @@ tags: axes, charts, spreadsheet, radspreadprocessing, primary, secondary, config
 published: True
 position: 5
 platforms: ajax, mvc, wpf, winforms
+components: [spreadprocessing]
 ---
 
 # Axes

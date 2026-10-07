@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-tc-field
 tags: tcfield, word, flow, docx, fields, toc, contents, document, model, entry
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # TC (Table of Contents Entry) Field

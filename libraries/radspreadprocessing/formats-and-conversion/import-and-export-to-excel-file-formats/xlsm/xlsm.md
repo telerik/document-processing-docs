@@ -8,6 +8,7 @@ published: True
 position: 0
 platforms: core, mvc, ajax, blazor, wpf, winforms, winui
 
+components: [spreadprocessing]
 ---
 
 # Xlsm

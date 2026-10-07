@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-named-ranges
 tags: named, ranges, spreadsheet, radspreadprocessing, cells, names, references, workbook, formulas, spread, xlsx
 published: True
 position: 10
+components: [spreadprocessing]
 ---
 
 # Names (Named Ranges)

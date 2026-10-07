@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-toa-field
 tags: toa, word, flow, docx, fields, authorities, document, table, model, index
 published: True
 position: 0
+components: [wordsprocessing]
 ---
 
 # TOA (Table of Authorities) Field

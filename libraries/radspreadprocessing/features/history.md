@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-history
 tags: history, spreadsheet, radspreadprocessing, undo, redo, workbook, changes, stack, spread, xlsx
 published: True
 position: 7
+components: [spreadprocessing]
 ---
 
 # History

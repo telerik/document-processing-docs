@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-named-destinations
 tags: nameddestinations, pdf, navigation, radpdfprocessing, links, destinations, bookmarks, references
 published: True
 position: 10
+components: [pdfprocessing]
 ---
 
 # Named Destinations

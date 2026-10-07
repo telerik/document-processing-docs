@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-action-collections
 tags: actioncollections, pdf, javascript, radpdfprocessing, actions, triggers, model, events, collection
 published: True
 position: 1
+components: [pdfprocessing]
 ---
 
 # Action Collections

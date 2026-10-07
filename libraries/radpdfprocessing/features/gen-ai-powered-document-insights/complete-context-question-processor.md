@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-gen-ai-powered-document-insights-complete-contex
 tags: questionprocessor, genai, pdf, context, radpdfprocessing, ai, complete, llm
 published: True
 position: 5
+components: [pdfprocessing]
 ---
 <style>
 table, th, td {

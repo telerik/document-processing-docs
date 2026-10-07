@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-data-validation
 tags: data, validation, spreadsheet, radspreadprocessing, cells, rules, input, worksheet, excel, xlsx
 published: True
 position: 18
+components: [spreadprocessing]
 ---
 
 # Data Validation

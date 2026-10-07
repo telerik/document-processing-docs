@@ -6,6 +6,7 @@ slug: radziplibrary-compress-stream
 tags: compression, stream, radziplibrary, zip, compressedstream, decompress, dotnet, archive
 published: True
 position: 3
+components: [ziplibrary, compression]
 ---
 
 # Compressing a Stream

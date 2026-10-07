@@ -6,6 +6,7 @@ slug: radwordsprocessing-model-break
 tags: break, word, docx, document, flow, model, inline, page, column
 published: True
 position: 12
+components: [wordsprocessing]
 ---
 
 # Break

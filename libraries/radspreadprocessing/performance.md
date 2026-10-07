@@ -6,6 +6,7 @@ slug: radspreadprocessing-performance
 tags: performance, spread, processing, spreadsheet, optimization, tips, memory, large, workbook, excel, xlsx
 published: True
 position: 10
+components: [spreadprocessing]
 ---
 
 # Performance Tips and Tricks

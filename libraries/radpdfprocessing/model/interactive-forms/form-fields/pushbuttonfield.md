@@ -5,6 +5,7 @@ page_title: PushButtonField
 slug: radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield
 tags: pushbuttonfield, pdf, formfields, radpdfprocessing, acroform, interactive, button, model
 published: True
+components: [pdfprocessing]
 ---
 
 # PushButtonField Class

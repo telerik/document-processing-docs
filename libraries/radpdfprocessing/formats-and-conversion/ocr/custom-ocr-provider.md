@@ -6,6 +6,7 @@ slug: radpdfprocessing-formats-and-conversion-ocr-custom-ocrprovider
 tags: ocr, customprovider, pdf, radpdfprocessing, iocr, recognition, plugin, implementation
 published: True
 position: 2
+components: [pdfprocessing]
 ---
 
 # Implementing a Custom IOcrProvider

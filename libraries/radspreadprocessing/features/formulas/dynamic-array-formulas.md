@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-formulas-dynamic-array-formulas
 tags: dynamic, array, formulas, spill, spreadsheet, radspreadprocessing, xlsx, excel, operators, functions, calculation
 published: True
 position: 6
+components: [spreadprocessing]
 ---
 
 # Dynamic Array Formulas

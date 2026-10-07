@@ -6,6 +6,7 @@ slug: radspreadprocessing-working-with-worksheets-copy-worksheet
 tags: worksheet, spreadsheet, radspreadprocessing, copy, workbook, clone, transfer, move
 published: True
 position: 5
+components: [spreadprocessing]
 ---
 
 # Copy a Worksheet

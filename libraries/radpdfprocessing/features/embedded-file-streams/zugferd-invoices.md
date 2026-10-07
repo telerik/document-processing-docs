@@ -5,6 +5,7 @@ page_title: ZUGFeRD and XRechnung Invoices
 slug: radpdfprocessing-embedded-file-streams-zugferd-invoices
 tags: zugferd, xrechnung, invoice, pdf, xml, radpdfprocessing, embedded, finance, ereceiving
 position: 1
+components: [pdfprocessing]
 ---
 
 # ZUGFeRD and XRechnung Invoices

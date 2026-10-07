@@ -7,6 +7,7 @@ slug: radziplibrary-sdk-examples
 tags: sdk, examples, demos, radziplibrary, zip, telerik, repository, developer
 published: True
 position: 2
+components: [ziplibrary]
 ---
 
 # Developer Focused Examples

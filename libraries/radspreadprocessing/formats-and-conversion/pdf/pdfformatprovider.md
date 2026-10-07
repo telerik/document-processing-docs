@@ -6,6 +6,7 @@ slug: radspreadprocessing-formats-and-conversion-pdf-pdfformatprovider
 tags: pdf, format, provider, spreadsheet, radspreadprocessing, export, workbook, document, conversion
 published: True
 position: 2
+components: [pdfprocessing, spreadprocessing]
 ---
 
 # Using PdfFormatProvider

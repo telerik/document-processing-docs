@@ -6,6 +6,7 @@ slug: radwordsprocessing-concepts-expression-field
 tags: expression, word, flow, docx, fields, document, formula, math, calculation, model
 published: True
 position: 5
+components: [wordsprocessing]
 ---
 
 # Expression Field

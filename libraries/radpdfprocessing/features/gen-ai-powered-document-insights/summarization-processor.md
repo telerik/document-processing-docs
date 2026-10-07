@@ -6,6 +6,7 @@ slug: radpdfprocessing-features-gen-ai-powered-document-insights-summarization-p
 tags: summarization, genai, pdf, llm, radpdfprocessing, processor, ai, documents
 published: True
 position: 3
+components: [pdfprocessing]
 ---
 
 # SummarizationProcessor

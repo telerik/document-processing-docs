@@ -6,6 +6,7 @@ slug: radpdfprocessing-model-annotations-text-markup
 tags: textmarkup, pdf, annotations, radpdfprocessing, highlight, underline, strikeout, markup
 published: True
 position: 4
+components: [pdfprocessing]
 ---
 
 # TextMarkup

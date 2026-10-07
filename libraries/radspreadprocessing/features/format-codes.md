@@ -6,6 +6,7 @@ slug: radspreadprocessing-features-format-codes
 tags: formatcodes, spreadsheet, radspreadprocessing, number, formatting, cells, custom, formats, codes, spread, xlsx
 published: True
 position: 11
+components: [spreadprocessing]
 ---
 
 # Format Codes
