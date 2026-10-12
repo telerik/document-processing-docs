@@ -10,10 +10,8 @@ description: >
   resolved code content in chat as soon as each placeholder is processed, and
   use it in the review.
 argument-hint: >
-  A question or review task about the current markdown article, for example:
-  "Explain this article and its placeholder snippets", "Verify that the
-  documented snippet matches the article claims", or "Review the article and
-  resolve all referenced snippet ids from the local code repository".
+  Review the current markdown article, explain content, verify documented
+  snippets, validate examples, or resolve snippet IDs from the local repository.
 tools: ['read', 'search']
 ---
 

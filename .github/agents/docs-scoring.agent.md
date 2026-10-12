@@ -8,11 +8,8 @@ description: >
   the path to the folder that contains the markdown articles you want to score.
   Optionally include a local folder path for external snippet source lookup.
 argument-hint: >
-  Pass either `score` to evaluate the active markdown article, or
-  `<docs-folder-path>` to score a folder. Optionally append
-  `--snippets-root <local-folder-path>` when the markdown uses external snippet
-  placeholders. Example: score --snippets-root C:\MyProduct\examples or
-  C:\MyProduct\docs\articles --snippets-root C:\MyProduct\examples
+  Use `score` for the current article or a docs folder path to score a folder.
+  Add `--snippets-root <path>` when external snippet placeholders are used.
 tools: ['read', 'edit', 'search', 'agent']
 ---
 
