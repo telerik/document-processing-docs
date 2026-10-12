@@ -1,7 +1,7 @@
 ---
 title: RadFixedDocumentEditor
 page_title: RadFixedDocumentEditor
-description: Learn how to use RadFixedDocumentEditor to create PDF documents in a flow-like manner with automatic page management, sections, paragraphs, tables, and lists.
+description: Learn how RadFixedDocumentEditor creates flow-based PDF documents and manages pages, sections, paragraphs, tables, images, runs, lists, and forms.
 slug: radpdfprocessing-editing-radfixeddocumenteditor
 tags: radfixeddocumenteditor, pdf, editing, sections, tables, radpdfprocessing, flowlayout, paragraphs
 published: True
@@ -11,7 +11,7 @@ components: [pdfprocessing]
 
 # RadFixedDocumentEditor
 
-`RadFixedDocumentEditor` of [PdfProcessing]({%slug radpdfprocessing-overview%}) lets you create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in a flow-like way and insert elements one after another. During layout, the editor calculates element size automatically and moves content to new pages when needed.
+Use `RadFixedDocumentEditor` from [RadPdfProcessing]({%slug radpdfprocessing-overview%}) to create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) by inserting elements in sequence. The editor calculates element sizes and lays out content, moving it to new pages as needed.
 
 
 ## Creating RadFixedDocumentEditor
@@ -23,7 +23,7 @@ components: [pdfprocessing]
 
 <snippet id='pdf-create-fixed-document-editor'/>
 
->important `RadFixedDocumentEditor` implements `IDisposable`, so you must dispose it after you finish building the document. Otherwise, some content may not be finalized and may not appear in the exported PDF file.
+>important `RadFixedDocumentEditor` implements `IDisposable`. Dispose it after you finish building the document. Otherwise, some content may not be finalized and may not appear in the exported PDF file.
           
 
 ## Sections
@@ -54,7 +54,7 @@ The section properties control the page size, margins, and orientation of the pa
 
 The first section starts as soon as you insert content in the editor. If you set the section properties before you insert any content, the automatically created first section uses these values.
 
-Add another section with the `InsertSectionBreak()` method, as shown in **Example 2**.
+Add another section with the `InsertSectionBreak()` method, as shown in **Example 3**.
              
 #### __Example 3: Start a section__
 
@@ -84,9 +84,9 @@ Like sections, paragraphs have their own properties that control appearance.
 
 * `SpacingAfter`: The spacing after the paragraph.
 
-* `LineSpacing`: The spacing between lines. Defaults to `1.15`. When `LineSpacingType` is `Auto`, this acts as a line height multiplier. When `LineSpacingType` is `Exact` or `AtLeast`, this specifies the line height in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).
+* `LineSpacing`: The spacing between lines. The default value is `1.15`. When `LineSpacingType` is `Auto`, the value acts as a line-height multiplier. When `LineSpacingType` is `Exact` or `AtLeast`, it specifies line height in [Device Independent Pixels]({%slug device-independent-pixels%}) (DIPs).
 
-* `LineSpacingType`: Specifies how to interpret the line spacing using the `HeightType` enumeration (`Auto`, `Exact`, `AtLeast`). Defaults to `Auto`.
+* `LineSpacingType`: Specifies how to interpret line spacing through the `HeightType` values: `Auto`, `Exact`, and `AtLeast`. The default value is `Auto`.
 
 * `FirstLineIndent`: The indent for the first line.
 
@@ -110,13 +110,13 @@ Like sections, paragraphs have their own properties that control appearance.
 
 The first paragraph starts as soon as you insert content in the editor. If you set paragraph properties before you insert content, the automatically created first paragraph uses these values.
 
-To start a new paragraph, use the code in **Example 4**.           
+To start a new paragraph, use the code in **Example 6**.
 
 #### __Example 6: Start a paragraph__
 
 <snippet id='pdf-create-fixed-document-editor-start-paragraph'/>
 
-This method starts a new paragraph and uses the current paragraph properties. Property changes do not apply until a new paragraph starts.
+Starting a new paragraph uses the current paragraph properties. Changes to those properties take effect only when you start another paragraph.
 
 ## Inlines
 
@@ -140,18 +140,18 @@ The following character properties control the appearance of runs:
 
 * `HighlightColor`: The highlight color.
 
-* `BaselineAlignment`: Describes how the baseline for a text-based element is positioned on the vertical axis, relative to the established baseline for text.
+* `BaselineAlignment`: Describes how the baseline for a text-based element is positioned on the vertical axis, relative to the established baseline for text:
 	* `Baseline`: A baseline that is aligned at the actual baseline of the containing box.
 	* `Subscript`: A baseline that is aligned at the subscript position of the containing box.
 	* `Superscript`: A baseline that is aligned at the superscript position of the containing box.
 
-* `UnderlinePattern`: The underline pattern. Two patterns are supported.
+* `UnderlinePattern`: The underline pattern. The following two patterns are supported:
 	* `None`: There is no underline. This is the default value.
 	* `Single`: The underline is a single line.
 
 * `UnderlineColor`: The color of the underline.
 
-* `StrikethroughPattern`: The strikethrough pattern. Two patterns are supported.
+* `StrikethroughPattern`: The strikethrough pattern. The following two patterns are supported:
 	* `None`: There is no strikethrough. This is the default value.
 	* `Single`: The strikethrough is a single line.
 
@@ -186,8 +186,6 @@ The code in **Example 9** inserts a new run and a line break after it.
 
 An image inline is a combination of an [ImageSource]({%slug radpdfprocessing-model-imagesource%}) object and its desired size.
                 
-### Inserting an Image
-
 You can insert an image inline using one of the following methods:
          
 #### __Example 10: Insert an image__
@@ -196,7 +194,7 @@ You can insert an image inline using one of the following methods:
 
 ## Tables
 
-The `Table` class implements the `IBlockElement` interface, so you can insert a table as a new block in the document. Insert it with the `InsertTable()` method, as shown in **Example 11**. `RadFixedDocumentEditor` handles positioning, measuring, and splitting the table across pages.
+The `Table` class implements the `IBlockElement` interface. Call `InsertTable()` to insert a table as a block in the document. `RadFixedDocumentEditor` positions and measures the table, then splits it across pages when needed. Example 11 shows how to insert a table:
         
 
 #### __Example 11: Insert a table__
@@ -207,7 +205,7 @@ For more detailed information on tables, see the [Table]({%slug radpdfprocessing
         
 ## Block Elements
 
-The [`IBlockElement`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.Fixed.Model.Editing.Flow.IBlockElement) interface lets you draw and split block content across pages. The [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table-overview%}) classes implement this interface. Add a block element instance with `RadFixedDocumentEditor` by using the `InsertBlock()` method, as shown in **Example 12**.
+The <a href="https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.Fixed.Model.Editing.Flow.IBlockElement" target="_blank">`IBlockElement` API reference</a> describes the interface that lets the editor draw and split block content across pages. The [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table-overview%}) classes implement this interface. Call `InsertBlock()` to add a block element to `RadFixedDocumentEditor`, as shown in Example 12:
 
 #### __Example 12: Insert a block element__
 
@@ -215,15 +213,15 @@ The [`IBlockElement`](https://docs.telerik.com/devtools/document-processing/api/
 
 ## Lists
 
-You can insert list items with `RadFixedDocumentEditor`. First, add a `List` to the editor `ListCollection` through the `Lists` property. Then, each time you want to add a list item, set the `ListId` and `ListLevel` values through `RadFixedDocumentEditor.ParagraphProperties`. Each new paragraph becomes a new list item.
+To insert list items with `RadFixedDocumentEditor`, add a `List` to its `ListCollection` through the `Lists` property. For each list item, set `ListId` and `ListLevel` through `RadFixedDocumentEditor.ParagraphProperties`. Each new paragraph becomes a list item.
 
-The following code snippet shows how to add a new list to the `RadFixedDocumentEditor` `ListCollection` and then insert a paragraph with the corresponding list properties:
+The following example adds a list and inserts a paragraph with the corresponding list properties:
 
 #### __Example 13: Insert a list__
 
 <snippet id='pdf-fixed-document-editor-insert-list'/>
 
-More detailed information about lists is available in the [list article]({%slug radpdfprocessing-editing-list%}).
+For more information, see the [RadPdfProcessing list documentation]({%slug radpdfprocessing-editing-list%}).
 
 ## Forms
 
