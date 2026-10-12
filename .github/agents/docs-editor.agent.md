@@ -11,7 +11,7 @@ description: >
   markdown summary that explains every change made.
 argument-hint: >
   Description of the customer feedback, optionally append
- `--snippets-root <local-folder-path>` for external snippet
+  `--snippets-root <local-folder-path>` for external snippet
   placeholders such as `<snippet id='...'/>'` or `{{source=... region=...}}`.
 tools: ['read', 'edit', 'search', 'agent']
 ---
