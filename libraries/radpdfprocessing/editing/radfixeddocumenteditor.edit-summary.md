@@ -3,7 +3,7 @@
 **Snippet resolution:** External snippet placeholders are present. No `--snippets-root` was supplied, so `docs-code-reader` was not used and the snippets remain unresolved; code-dependent claims were not rewritten.
 **Sections changed:** Metadata, article introduction, Creating RadFixedDocumentEditor, Paragraphs, Inlines, Tables, Block Elements, Lists
 **What changed and why:**
-- Metadata: Shortened the description to 137 characters and included the article's key topics to meet the repository's search-description limit.
+- Metadata: Shortened the description to 146 characters and included the article's key topics to meet the repository's search-description limit.
 - Article introduction: Rewrote the opening to state the editor's purpose and flow-based layout behavior in shorter, direct sentences.
 - Creating RadFixedDocumentEditor: Split the disposal requirement into clearer sentences and corrected the section example reference from Example 2 to Example 3.
 - Paragraphs: Simplified the line-spacing explanation, corrected the paragraph example reference from Example 4 to Example 6, and replaced a snippet-dependent pronoun with a self-contained explanation.
@@ -25,7 +25,7 @@
 Style Guide details:
 | Dimension | Pre-edit | Post-edit | Why this score was assigned |
 |---|---:|---:|---|
-| Metadata & Front Matter | 3 | 5 | All required fields and a single frontmatter block were present; the 159-character description exceeded the hard limit and was reduced to 137 characters. |
+| Metadata & Front Matter | 3 | 5 | All required fields and a single frontmatter block were present; the 158-character description exceeded the hard limit and was reduced to 146 characters. |
 | Titles and Headings | 4 | 4 | The article has one matching H1 and descriptive topic headings; H4 example captions directly follow some H2 sections as required by DPL conventions, despite the general preference for sequential levels. |
 | Tone and Voice | 4 | 4 | The prose is professional and direct; the introduction and several explanations became clearer, while API-reference language remains necessarily technical. |
 | Grammar and Language | 3 | 4 | The article had dense sentences and an incorrect example reference; the prose was simplified and both references were corrected, though technical terms remain. |
@@ -52,7 +52,7 @@ SEO Optimization details:
 | Dimension | Pre-edit | Post-edit | Why this score was assigned |
 |---|---:|---:|---|
 | Title and Meta Title Optimization | 3 | 3 | The title names the API clearly and leads with the topic, but `page_title` is shorter than the scorer's preferred 40-70 characters; repository rules make other metadata read-only during optimization. |
-| Meta Description Quality | 2 | 5 | The original description was 159 characters; the new 137-character sentence is task-oriented and includes the primary keyword and related topics. |
+| Meta Description Quality | 2 | 5 | The original description was 158 characters; the new 146-character sentence is task-oriented and includes the primary keyword and related topics. |
 | Keyword Placement | 4 | 4 | RadFixedDocumentEditor appears in the H1, opening paragraph, and body; topic-focused H2 headings already support relevant searches. |
 | Content Depth and Completeness | 5 | 5 | The article covers sections, paragraphs, inlines, tables, blocks, lists, and forms with examples; external example code was not independently checked. |
 | Heading Structure for Featured Snippets | 3 | 3 | The section labels identify their topics, but some are broad and required H4 example captions can skip a heading level. |
