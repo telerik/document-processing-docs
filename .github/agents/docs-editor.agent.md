@@ -7,8 +7,8 @@ description: >
   confusing — simplify them" or "Customers report they cannot find the Blazor
   package names". The agent reads the active file, interprets the feedback as an
   editorial prompt, optionally resolves external code snippet placeholders from
-  a local snippet source root, applies targeted edits, and writes a standalone
-  markdown summary that explains every change made.
+  a local snippet source root, applies targeted edits, and reports the changes
+  and quality results in the agent session without creating a separate summary file.
 argument-hint: >
   Description of the customer feedback, optionally append
   `--snippets-root <local-folder-path>` for external snippet
@@ -372,19 +372,9 @@ Before you finish, also verify that the edited markdown article remains valid:
 
 ### Step 6 — Explain the Changes
 
-Create a standalone markdown summary file after you finish the edit and
-verification steps.
-
-Save the summary as a sibling file next to the active article by using this
-file name pattern:
-
-- `<active-article-base-name>.edit-summary.md`
-
-Example:
-
-- `what-is-cell.md` → `what-is-cell.edit-summary.md`
-
-Write the detailed but concise summary to that file in the following format:
+After you finish the edit and verification steps, provide the detailed but
+concise summary directly in the agent session using the following format. Do
+not create or update a separate summary file:
 
 ```
 **Feedback interpreted as:** <one sentence>
@@ -450,21 +440,21 @@ When you fill in this summary:
 - If a score is less than `5`, explain what still prevents a perfect score.
 - For every `Average` row, state that it is the weighted average of the dimension scores and identify the dimensions that most influenced the result.
 
-After you create or update the standalone markdown summary file, send a brief
-chat response that:
+In the agent session, provide the summary in the format above. The response:
 
 - Confirms that you updated the article.
-- Names the generated summary file path.
 - Gives a short 1-2 sentence recap of the main edits.
-- Does not duplicate the full markdown report in chat unless the user asks for it.
+- Includes the score tables, score explanations, snippet-resolution status, and
+  remaining violations from the summary format above.
+- Does not create a separate summary file.
 
 Do not reproduce the full file content in the explanation. Only describe
 what changed relative to the original.
 
 ## Rules
 
-- Edit only the active file, except for the standalone summary file required in
-  Step 6. Do not modify any other file in the workspace.
+- Edit only the active file. Do not create a separate edit-summary file or
+  modify any other file in the workspace.
 - Make no change if the feedback cannot be mapped to a specific section or
   claim in the article, and no scoring violations exist; instead, ask the user
   to clarify.
@@ -499,5 +489,4 @@ what changed relative to the original.
   justified only when it resolves a concrete violation or addresses new user
   feedback. Re-running the agent on an article with no new feedback and no
   remaining violations must produce zero file changes.
-- Do not score or edit files other than the currently active markdown article,
-  except for creating or updating the standalone summary file in Step 6.
+- Do not score or edit files other than the currently active markdown article.
