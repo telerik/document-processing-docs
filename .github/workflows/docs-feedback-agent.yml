@@ -22,16 +22,11 @@ jobs:
     steps:
       - name: Start docs-editor agent
         env:
-          GH_TOKEN: ${{ secrets.COPILOT_ASSIGNMENT_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           TARGET_REPOSITORY: ${{ github.repository }}
           BASE_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
-          if [ -z "$GH_TOKEN" ]; then
-            echo "::error::Configure COPILOT_ASSIGNMENT_TOKEN with a user PAT authorized for this repository and Copilot. Use a classic PAT with repo scope, or a fine-grained PAT with Metadata read and Actions, Contents, Issues, and Pull requests read/write. GITHUB_TOKEN cannot assign Copilot."
-            exit 1
-          fi
-
           jq -n \
             --arg target_repository "$TARGET_REPOSITORY" \
             --arg base_branch "$BASE_BRANCH" \
@@ -47,6 +42,5 @@ jobs:
             gh api \
               --method POST \
               -H "Accept: application/vnd.github+json" \
-              -H "X-GitHub-Api-Version: 2022-11-28" \
               "/repos/$TARGET_REPOSITORY/issues/$ISSUE_NUMBER/assignees" \
               --input -
