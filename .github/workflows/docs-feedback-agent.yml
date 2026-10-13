@@ -44,4 +44,3 @@ jobs:
               -H "Accept: application/vnd.github+json" \
               "/repos/$TARGET_REPOSITORY/issues/$ISSUE_NUMBER/assignees" \
               --input -
-``
