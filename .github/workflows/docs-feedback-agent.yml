@@ -5,6 +5,11 @@ on:
     types:
       - opened
       - labeled
+      
+permissions:
+  issues: write
+  contents: write
+  pull-requests: write
 
 jobs:
   trigger-agent:
