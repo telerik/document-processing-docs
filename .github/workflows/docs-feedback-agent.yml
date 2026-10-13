@@ -20,14 +20,25 @@ jobs:
       github.event.label.name == 'Docs Feedback'
 
     steps:
-      - name: Invoke docs-editor
+      - name: Assign issue to Copilot
         env:
           GITHUB_TOKEN: ${{ secrets.COPILOT_ASSIGNMENT_TOKEN }}
-          ISSUE_NUMBER: ${{ github.event.issue.number }}
-          TARGET_REPOSITORY: ${{ github.repository }}
-          BASE_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          gh api \
+            repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/assignees \
+            -f assignees[]=copilot
+
+      - name: Tell Copilot to use docs-editor
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_ASSIGNMENT_TOKEN }}
         run: |
           gh issue comment \
             "${{ github.event.issue.number }}" \
             --repo "${{ github.repository }}" \
-            --body "@docs-editor Please review this documentation feedback and create a PR with the required updates."
+            --body "@copilot
+
+          Use the custom agent 'docs-editor' defined in:
+
+          .github/agents/docs-editor.agent.md
+
+          Review this documentation feedback, implement the required documentation updates, and create a pull request."
