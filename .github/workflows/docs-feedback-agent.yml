@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Invoke docs-editor
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.COPILOT_ASSIGNMENT_TOKEN }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           TARGET_REPOSITORY: ${{ github.repository }}
           BASE_BRANCH: ${{ github.event.repository.default_branch }}
