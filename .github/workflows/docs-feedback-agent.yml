@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Assign issue to Copilot
         env:
-          GITHUB_TOKEN: ${{ secrets.COPILOT_ASSIGNMENT_TOKEN }}
+          GH_TOKEN: ${{ secrets.COPILOT_ASSIGNMENT_TOKEN }}
         run: |
           gh api \
             repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/assignees \
