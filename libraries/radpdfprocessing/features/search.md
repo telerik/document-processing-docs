@@ -66,6 +66,19 @@ During text extraction:
 * Text search is evaluated per page; phrases that span across page boundaries are not matched.
 * In PDF documents, spaces are determined by glyph positioning (`Delta = 1.15`). If text fragments lack sufficient visual displacement, words may be extracted contiguously.
 
+For example, the following searches for the longer phrase `quarterly financial report`. The second pattern also matches the phrase when the extracted text contains one or more spaces or line breaks between the words:
+
+```csharp
+TextSearchOptions options = new TextSearchOptions
+{
+    UseRegularExpression = true,
+    WholeWordsOnly = false
+};
+
+var exactPhraseResults = search.FindAll(@"quarterly financial report", options);
+var flexibleSpacingResults = search.FindAll(@"quarterly\s+financial\s+report", options);
+```
+
 <snippet id='regex-and-multiword-search'/>
 
 ## See Also
