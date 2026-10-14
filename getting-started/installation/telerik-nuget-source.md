@@ -52,6 +52,8 @@ Refer to the [Microsoft guide to installing and using NuGet packages in Visual S
 1. Your project should now build and restore all packages - including those from nuget.org and from Telerik.
     * If you experience issues, see how to [resolve Telerik NuGet restore problems]({%slug troubleshooting-telerik-nuget%}).
 
+>important If a license warning or modal dialog still appears, activate Telerik Document Processing with a trial or commercial license key. Follow the [license key setup instructions]({%slug setting-up-license-key%}) to add `Telerik.Licensing` and place the `telerik-license.txt` file in the required location.
+
 
 ## Use the .NET CLI
 
