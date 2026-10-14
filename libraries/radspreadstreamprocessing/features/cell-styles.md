@@ -20,7 +20,9 @@ A cell style is represented by the `SpreadCellStyle` class. The properties of th
 
 * Number group
 	
-	* `NumberFormat`: Gets or sets the number format.
+	* `NumberFormat`: Gets or sets the number format. The format code is interpreted according to the current culture.
+
+	* `InvariantNumberFormat`: Gets or sets the number format using invariant Excel syntax, independently of the current culture. For more information, see [Invariant Number Formats]({%slug radspreadstreamprocessing-features-culture-spesific-predefined-formats%}#invariant-number-formats).
 
 * Alignment group
 	
