@@ -66,6 +66,35 @@ The following example shows how to validate a signature field:
 
 >tip To evaluate a certificate as trusted, add it to the [trusted certificates on your machine](https://learn.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
 
+## Signing Time and Time Zone
+
+The `Signature.Properties` object (of type `SignatureDataProperties`) exposes the signing time through the following properties:
+
+| Property | Type | Description |
+|---|---|---|
+| `TimeOfSigning` | `DateTime` | The time of signing. When imported from a PDF, the instant is converted to the local time zone configured on the current machine, so the value does not necessarily represent the signer's time zone. If the conversion to local time cannot preserve the instant, the value is returned in UTC. When signing, a `Local` value is written with the machine's UTC offset and any other kind is written as UTC (`Z`). |
+| `TimeOfSigningOffset` | `TimeSpan?` | Read-only. The numeric UTC offset recorded in the signing date of an imported signature, for example, `+03:00`. It is `null` for signatures created in code, in which case the `TimeOfSigning` encoding described above is used. |
+
+When a signature is imported, `TimeOfSigningOffset` is populated from the PDF date string (`D:YYYYMMDDHHmmSSOHH'mm'`). A date with `Z` or without an offset is reported as `TimeSpan.Zero`. A date that cannot be parsed (for example, an invalid offset) is ignored, and both properties keep their default values. When an imported document is exported again, the original offset is written back to the signing date.
+
+>note PDF date strings store numeric UTC offsets, not time zone identifiers such as `Europe/Sofia`, so the time zone name cannot be recovered. Offsets use whole-minute increments from -23:59 through +23:59.
+
+The following example shows how to obtain the original signing time, including its UTC offset, from an imported signature:
+
+```csharp
+foreach (SignatureField signatureField in document.AcroForm.FormFields.OfType<SignatureField>())
+{
+    SignatureDataProperties properties = signatureField.Signature.Properties;
+
+    TimeSpan? offset = properties.TimeOfSigningOffset;
+    if (offset.HasValue)
+    {
+        DateTimeOffset signedAt = new DateTimeOffset(properties.TimeOfSigning.ToUniversalTime().Add(offset.Value).Ticks, offset.Value);
+        Debug.WriteLine("Signed on: " + signedAt.ToString("yyyy-MM-dd HH:mm:ss zzz"));
+    }
+}
+```
+
 
 
 ## See Also

@@ -27,7 +27,7 @@ To verify digital signatures in a PDF document and extract their signing dates, 
 
 2. Check if the document is [digitally signed]({%slug radpdfprocessing-features-digital-signature%}) by searching for [`SignatureField`]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}) objects in the [`AcroForm`]({%slug radpdfprocessing-model-interactive-forms-acroform %}) of the document. 
 
-3. For each `SignatureField` found, access the `Signature` property and then the `Properties` to retrieve the `TimeOfSigning`.
+3. For each `SignatureField` found, access the `Signature` property and then the `Properties` to retrieve the `TimeOfSigning`. To get the UTC offset the signing time was recorded with, use the `TimeOfSigningOffset` property. For details, see [Signing Time and Time Zone]({%slug radpdfprocessing-features-digital-signature-validation%}#signing-time-and-time-zone).
 
 Here is a code snippet that demonstrates these steps and includes creating a document with a digital signature:
 
