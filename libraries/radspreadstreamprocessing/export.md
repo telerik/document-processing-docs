@@ -54,6 +54,48 @@ The supported formats follow different output patterns, so you must choose the e
 
 Creating `IWorkbookExporter` starts writing the file by using the `Stream` instance that you pass to the `CreateWorkbookExporter()` method. Writing finishes when the [IWorkbookExporter]({%slug radspreadstreamprocessing-model-workbook%}) instance is disposed.
 
+## Configuring CSV Export Settings
+
+By default, the CSV export separates the values with a comma (`,`). To use a different delimiter, for example, the semicolon (`;`) that is common in cultures where the comma is the decimal separator, pass a `SpreadCsvExportSettings` instance to the `SpreadExporter.CreateCsvExporter()` method.
+
+| Member | Description |
+|---|---|
+| `SpreadCsvExportSettings.Delimiter` | Gets or sets the character that separates the fields in each record. The default value is a comma (`,`). |
+| `SpreadExporter.CreateCsvExporter(Stream, SpreadCsvExportSettings, SpreadExportMode)` | Creates an `IWorkbookExporter` that writes CSV content by using the specified settings. The `SpreadExportMode` parameter is optional and defaults to `SpreadExportMode.Create`. When you pass `null` for the settings, the defaults are used. |
+
+The delimiter is applied to the separators between the values of each row, including the separators for skipped cells. Values that contain the delimiter, a double quote (`"`), or a line break are enclosed in double quotes. The quote character is not configurable.
+
+**Example 2: Export a CSV document that uses a semicolon as a delimiter**
+
+```csharp
+SpreadCsvExportSettings settings = new SpreadCsvExportSettings
+{
+    Delimiter = ';'
+};
+
+using (Stream stream = File.Open("output.csv", FileMode.Create, FileAccess.ReadWrite))
+using (IWorkbookExporter workbook = SpreadExporter.CreateCsvExporter(stream, settings))
+{
+    using (IWorksheetExporter worksheet = workbook.CreateWorksheetExporter("Sheet1"))
+    {
+        using (IRowExporter row = worksheet.CreateRowExporter())
+        {
+            using (ICellExporter cell = row.CreateCellExporter())
+            {
+                cell.SetValue("Name");
+            }
+
+            using (ICellExporter cell = row.CreateCellExporter())
+            {
+                cell.SetValue("Price; USD");
+            }
+        }
+    }
+}
+```
+
+The previous code produces the line `Name;"Price; USD"`.
+
 ## What to Verify After Export
 
 After the export finishes, verify these points:

@@ -58,6 +58,33 @@ The following example demonstrates how you can get a specific format and set it 
 
 <snippet id='codeblock-dkt'/>
 
+## Invariant Number Formats
+
+By default, the `NumberFormat` property of `SpreadCellFormat` and `SpreadCellStyle` accepts a format code that is interpreted according to the current culture. To set the format code exactly as it appears in the Open XML model, regardless of the current culture, use the `InvariantNumberFormat` property.
+
+The following rules apply to `InvariantNumberFormat`:
+
+* The value is an invariant Excel format code (for example, `#,##0.00` or `yyyy-mm-dd`), not a .NET format string.
+* The following canonical numeric codes are exported as built-in formats with their fixed IDs: `0`, `0.00`, `#,##0`, `#,##0.00`, `0%`, `0.00%`, `0.00E+00`, `# ?/?`, `# ??/??`, `#,##0_);(#,##0)`, `#,##0_);[Red](#,##0)`, `#,##0.00_);(#,##0.00)`, `#,##0.00_);[Red](#,##0.00)`, and `##0.0E+0`.
+* Any other code is preserved unchanged as a custom format.
+* An empty string applies the General format, and `null` clears the override.
+* `NumberFormat` and `InvariantNumberFormat` are mutually exclusive. The last assignment to either property determines which one is used, even when the string is unchanged. The inactive property returns `null`.
+
+**Example 2: Apply an invariant number format to an exported cell**
+
+```csharp
+using (ICellExporter cell = row.CreateCellExporter())
+{
+    SpreadCellFormat format = new SpreadCellFormat
+    {
+        InvariantNumberFormat = "#,##0.00"
+    };
+
+    cell.SetFormat(format);
+    cell.SetValue(1234.5);
+}
+```
+
 ## See Also
 
 * [Cells]({%slug radspreadstreamprocessing-model-cells%})

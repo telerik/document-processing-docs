@@ -104,7 +104,8 @@ Another method exposed by `ICellExporter`—`SetFormat()`—enables you to chang
 
 | Property | Description |
 |---|---|
-| `NumberFormat` | Gets or sets the number format. |
+| `NumberFormat` | Gets or sets the number format. The format code is interpreted according to the current culture. |
+| `InvariantNumberFormat` | Gets or sets a number format using invariant Excel syntax, independently of the current culture. For more information, see [Invariant Number Formats]({%slug radspreadstreamprocessing-features-culture-spesific-predefined-formats%}#invariant-number-formats). |
 | `HorizontalAlignment` | Gets or sets the horizontal alignment. Of type [`SpreadHorizontalAlignment`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadHorizontalAlignment.html). |
 | `VerticalAlignment` | Gets or sets the vertical alignment. Of type [`SpreadVerticalAlignment`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadVerticalAlignment.html). |
 | `Indent` | Gets or sets the indent. |
