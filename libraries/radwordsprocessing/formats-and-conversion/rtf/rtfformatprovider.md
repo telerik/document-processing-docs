@@ -72,9 +72,11 @@ The four examples in this article show the complete file- and string-based impor
 * Columns
 * Floating tables
 * Conditional table styles
+* Built-in styles
 * Themes
 * Protection
 * Track changes
+* Bookmarks
 
 Verify the feature matrix before relying on one of these features. Features that the matrix marks as partially supported can also lose information during conversion.
 
