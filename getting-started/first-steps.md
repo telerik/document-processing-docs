@@ -66,9 +66,11 @@ This sample uses [RadWordsProcessing]({%slug radwordsprocessing-overview%}) to c
 
 	For a .NET Framework project:
 	* `Telerik.Windows.Documents.Flow.FormatProviders.Pdf`
+	* `Telerik.Windows.Documents.Fixed`
 
 	For a cross-platform .NET project:
 	* `Telerik.Documents.Flow.FormatProviders.Pdf`
+	* `Telerik.Documents.Fixed`
 
 You can find the complete Telerik Document Processing package list in the [available NuGet packages reference]({%slug available-nuget-packages%}).
 
