@@ -118,7 +118,7 @@ Use the [PdfFormatProvider for PDF export]({%slug radpdfprocessing-formats-and-c
 
 Run the console application and verify that the `bin` folder contains the generated DOCX and PDF files.
 
->note If the build reports license errors or warnings, or the generated files contain watermarks, review the [license activation errors and warnings]({%slug activation-errors-and-warnings%}).
+>note Trial licenses add a copyright message to generated documents. If you use a commercial license and the build reports license errors or warnings, or the generated files contain unexpected watermarks, review the [license activation errors and warnings]({%slug activation-errors-and-warnings%}).
 
 **Generated DOCX and PDF files in the Telerik Document Processing sample output folder**
 
