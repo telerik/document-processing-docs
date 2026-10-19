@@ -67,9 +67,16 @@ The four examples in this article show the complete file- and string-based impor
 
 ## Known Limitations
 
-`RtfFormatProvider` is compliant with Rich Text Format (RTF) specification version 1.9. The RTF articles do not list individual unsupported RTF features, so verify feature support against the available format documentation before relying on a specific RTF feature.
+`RtfFormatProvider` is compliant with Rich Text Format (RTF) specification version 1.9. The [RTF feature matrix]({%slug radwordsprocessing-formats-and-conversion-rtf-features%}) does not mark support for the following features:
 
-This article does not document provider-specific exception types or exception messages. Use the troubleshooting checks below to verify the documented setup and operation before investigating an exception.
+* Columns
+* Floating tables
+* Conditional table styles
+* Themes
+* Protection
+* Track changes
+
+Verify the feature matrix before relying on one of these features. Features that the matrix marks as partially supported can also lose information during conversion.
 
 ## Troubleshooting
 
@@ -78,13 +85,15 @@ When an RTF import or export does not work as expected, check the following:
 * Confirm that the project references `Telerik.Windows.Documents.Core` and `Telerik.Windows.Documents.Flow`.
 * Confirm that the operation uses `RtfFormatProvider.Import()` for input and `RtfFormatProvider.Export()` for output.
 * Confirm that the selected example matches the data source or destination: use a file stream for a file and a string for RTF markup stored as text.
-* If a required RTF feature is not available, check the documented RTF specification and format support information. This article does not identify unsupported features by name.
+* If an operation throws an exception, inspect the input or output source first. Confirm that the input contains RTF markup, the file stream points to an accessible file, and the output stream supports writing.
+* If a required RTF feature is not available, check the [RTF feature matrix]({%slug radwordsprocessing-formats-and-conversion-rtf-features%}) before changing the document.
 
 ## See Also
 
 * [RadFlowDocument model and document content]({%slug radwordsprocessing-model-radflowdocument%})
 * [Insert one RadFlowDocument into another document]({%slug radwordsprocessing-editing-insert-documents%})
 * [RadWordsProcessing formats and conversion overview]({%slug radwordsprocessing-formats-and-conversion%})
+* [RTF feature support]({%slug radwordsprocessing-formats-and-conversion-rtf-features%})
 * [Plain text]({%slug radwordsprocessing-formats-and-conversion-txt%})
 * [Using HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
 * [Using PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%})
