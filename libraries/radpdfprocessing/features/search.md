@@ -2,7 +2,7 @@
 title: Search
 page_title: Search
 description: Learn how to use the TextSearch class in RadPdfProcessing to find text in PDF documents with plain text or regular expression patterns.
-slug: radwordsprocessing-features-search
+slug: radpdfprocessing-features-search
 tags: search, pdf, text, radpdfprocessing, find, pattern, document, results
 published: True
 position: 0
@@ -63,8 +63,10 @@ To search for patterns or multi-word phrases, set `UseRegularExpression = true` 
 During text extraction:
 * Words on the same line are separated by a single space (`" "`).
 * Line breaks within the page are normalized to a single space (`" "`) using `TextSearchOptions.TextSearchLinesSeparator`.
-* Text search is evaluated per page; phrases that span across page boundaries are not matched.
+* Text search is evaluated per page. Phrases that span page boundaries are not matched.
 * In PDF documents, spaces are determined by glyph positioning (`Delta = 1.15`). If text fragments lack sufficient visual displacement, words may be extracted contiguously.
+
+**Search with Regular Expressions and Multi-Word Phrases**
 
 <snippet id='regex-and-multiword-search'/>
 
