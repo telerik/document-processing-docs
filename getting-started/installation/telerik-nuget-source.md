@@ -1,7 +1,7 @@
 ---
 title: Telerik NuGet Source
 page_title: Telerik NuGet Feed
-description: Explore the different ways to add the Telerik NuGet feed to your system, and start using NuGet packages to install the Telerik Document Processing libraries.
+description: Learn how to configure the Telerik NuGet feed in Visual Studio, the .NET CLI, or NuGet.Config for package installation and restore.
 slug: telerik-nuget-source
 tags: nuget, feed, installation, telerik, authentication, cli, configuration, api
 published: True
@@ -10,17 +10,19 @@ position: 8
 
 # Telerik NuGet Source
 
-This article explains how to add the Telerik NuGet package feed to your environment. Use it for older releases or when your organization requires the private feed. For current releases, install packages from [NuGet.org]({%slug installation-nuget-packages%}#how-to-install-telerik-document-processing-from-nugetorg).
+This article explains how to add the Telerik NuGet package feed to your environment. Use it for earlier releases or when your organization requires the private feed. For current releases, install packages from [NuGet.org]({%slug installation-nuget-packages%}#how-to-install-telerik-document-processing-from-nugetorg).
 
-You can set up the remote Telerik NuGet feed in the following ways:
+Choose one of the following methods to set up the remote Telerik NuGet feed:
 
-* [Configure the feed in Visual Studio](#use-visual-studio)
-* [Configure the feed with the .NET CLI](#use-the-net-cli)
-* [Edit the NuGet.Config file manually](#edit-the-nuget-config-file)
+* [Configure the feed in Visual Studio](#use-visual-studio) if you use the Visual Studio interface on Windows.
+* [Configure the feed with the .NET CLI](#use-the-net-cli) for command-line or automated workflows.
+* [Edit the NuGet.Config file manually](#edit-the-nuget-config-file) when you need direct control over the configuration.
 
->tip When working with the .NET CLI or editing the `NuGet.Config` manually, you can use your Telerik account credentials or a [Telerik NuGet API key](#use-nuget-api-key). If you are logging in to telerik.com through single sign-on (SSO), use a [Telerik NuGet API key for authentication](#use-nuget-api-key).
+All methods in this article use the current NuGet v3 URL. The NuGet v2 URL is no longer available.
 
->warning Never hard-code Telerik account credentials or NuGet API keys in a `NuGet.Config` file in a GitHub repository, Docker image, or any location that may be accessed by unauthorized parties. A NuGet key is valuable, and bad actors can use it to access the NuGet packages that are licensed under your account. A credentials abuse can lead to a review of the affected Telerik account.
+>tip When you use the .NET CLI or edit `NuGet.Config` manually, authenticate with your Telerik account credentials or a [Telerik NuGet API key](#use-nuget-api-key). If you use single sign-on (SSO) to access telerik.com, use a [Telerik NuGet API key for authentication](#use-nuget-api-key).
+
+>warning Never hard-code Telerik account credentials or NuGet API keys in a `NuGet.Config` file in a GitHub repository, Docker image, or any location that unauthorized parties can access. Exposed credentials can allow access to packages licensed under your account and may trigger a security review of the affected Telerik account.
 
 For NuGet-related issues, see [troubleshoot Telerik NuGet feed issues]({%slug troubleshooting-telerik-nuget%}).
 
@@ -29,7 +31,7 @@ For information on automated builds, CI, and CD, see [restore Telerik NuGet pack
 
 ## Use Visual Studio
 
-When adding NuGet sources in Visual Studio, the credentials are encrypted and stored outside the `NuGet.Config` file.
+When you add a NuGet source in Visual Studio, Visual Studio encrypts the credentials and stores them outside the `NuGet.Config` file.
 
 Refer to the [Microsoft guide to installing and using NuGet packages in Visual Studio](https://learn.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio), or follow the steps below for Visual Studio on Windows.
 
@@ -55,11 +57,11 @@ Refer to the [Microsoft guide to installing and using NuGet packages in Visual S
 
 ## Use the .NET CLI
 
-When adding NuGet sources from the .NET CLI, the credentials are stored in the `NuGet.Config` file. The [Windows encrypted-password limitations](#store-encrypted-credentials) apply. You can use a plain text password, but for better security, [generate a Telerik NuGet API key](#use-nuget-api-key), and use it with the .NET CLI instead of a password.
+When you add a NuGet source with the .NET CLI, the credentials are stored in the `NuGet.Config` file. The [Windows encrypted-password limitations](#store-encrypted-credentials) apply. You can use a plain-text password, but [generate a Telerik NuGet API key](#use-nuget-api-key) for better security.
 
 To add the Telerik NuGet package source with the .NET CLI, use the [`dotnet nuget add source` command](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-nuget-add-source). This command creates or updates a `NuGet.Config` file for you, so you do not have to [edit the configuration file manually](#edit-the-nuget-config-file).
 
-The command below stores the password or NuGet API Key in plain text in the [global NuGet configuration file](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior#config-file-locations-and-uses).
+The command below stores the password or NuGet API key in plain text in the [global NuGet configuration file](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior#config-file-locations-and-uses).
 
 The backslashes `\` below enable multi-line commands for better readability in terminals that support them.
 
@@ -89,9 +91,9 @@ dotnet nuget update source "TelerikOnlineFeed" \
 
 The .NET CLI supports NuGet password encryption only on the Windows platform. The [encrypted `NuGet.Config` password is limited to one user and one machine](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesourcecredentials).
 
-If you [configure the Telerik package source in Visual Studio](#use-visual-studio), the credentials will be encrypted and stored in the Windows Credential Manager on Windows and in the Keychain on macOS.
+Visual Studio encrypts credentials and stores them in the Windows Credential Manager on Windows and in the Keychain on macOS.
 
-You can read more about the options provided by the NuGet tooling in the Microsoft article about the <a href="https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesourcecredentials" target="_blank">packageSourceCredentials section of the NuGet.Config reference</a>. The `password` and `cleartextpassword` options behave differently. 
+Read about the NuGet tooling options in the Microsoft [packageSourceCredentials section of the NuGet.Config reference](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#packagesourcecredentials). The `password` and `cleartextpassword` options behave differently.
 
 
 ## Edit the NuGet.Config File
@@ -135,14 +137,14 @@ There are two ways to authenticate with the Telerik NuGet server when you add th
 
 You can [generate a Telerik NuGet API key in your Telerik account](https://www.telerik.com/account/downloads/nuget-keys). Read more about [restoring Telerik NuGet packages in CI workflows]({%slug using-nuget-keys%}).
 
-> Always use the NuGet API Key in plain text.
+>important Always use the NuGet API key in plain text.
 
 
 ### Package Source Mapping
 
-The Document Processing Libraries NuGet packages and most of their dependencies are on `nuget.telerik.com`. The [`Telerik.Licensing` package and license setup]({%slug setting-up-license-key%}) is on `nuget.org`. The correct [NuGet package source mapping configuration](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) should be similar to the one below.
+The Document Processing libraries NuGet packages and most dependencies are on `nuget.telerik.com`. The [`Telerik.Licensing` package and license setup]({%slug setting-up-license-key%}) is on `nuget.org`. Use the [NuGet package source mapping configuration](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) below as a model.
 
-> Ensure that the `key` values in the `packageSourceMapping` section match the `key` values in the `packageSources` section. Otherwise, you get a "Package not found" error.
+>note Match the `key` values in the `packageSourceMapping` section to the `key` values in the `packageSources` section. Otherwise, NuGet returns a "Package not found" error.
 
 **Package source mapping for Telerik Document Processing and other Telerik packages**
 
@@ -171,21 +173,21 @@ The Document Processing Libraries NuGet packages and most of their dependencies 
 
 ### Access NuGet Packages behind Firewall
 
-To access the Telerik NuGet feed behind a firewall that restricts outgoing requests, you may need to allow the following domains:
+If a firewall restricts outgoing requests, allow requests to the following domains:
 
 * `nuget.telerik.com`, which provides authentication and license verification
 * `downloads.cdn.telerik.com`, which hosts the NuGet packages
 
-The firewall must allow some of the requests to be redirected from `nuget.telerik.com` to `downloads.cdn.telerik.com`.
+The firewall must also allow requests that redirect from `nuget.telerik.com` to `downloads.cdn.telerik.com`.
 
 ### Obsolete Telerik NuGet URL
 
-The NuGet v2 server at `https://nuget.telerik.com/nuget` was sunset in November 2024 and is no longer available. The v3 protocol offers faster package searches and restores, improved security, and more reliable infrastructure. To redirect your feed to the NuGet v3 protocol, change your NuGet package source URL to `https://nuget.telerik.com/v3/index.json`.
+Telerik ended the NuGet v2 server at `https://nuget.telerik.com/nuget` in November 2024. The server is no longer available. The v3 protocol offers faster package searches and restores, improved security, and more reliable infrastructure. If your configuration uses the obsolete URL, replace it with `https://nuget.telerik.com/v3/index.json`.
 
 
 ### Troubleshooting
 
-See the [Telerik NuGet feed troubleshooting guide]({%slug dpl-troubleshooting-nuget%}) for tips about common pitfalls when working with the Telerik NuGet feed.
+See the [Telerik NuGet feed troubleshooting guide]({%slug troubleshooting-telerik-nuget%}) for tips about common pitfalls when working with the Telerik NuGet feed.
 
 ## See Also
 
