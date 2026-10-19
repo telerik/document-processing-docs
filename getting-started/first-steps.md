@@ -40,7 +40,7 @@ This guide uses a console application because Telerik Document Processing is UI-
 
 Before you begin, install Visual Studio with the .NET development tools and confirm that your project can restore NuGet packages and write files to its output folder.
 
-Open Microsoft Visual Studio and create a new console project. Create the project with a .NET Framework, .NET Standard, or {{site.dotnetversions}} target framework supported by Telerik Document Processing.
+Open Microsoft Visual Studio and create a new console project. Create the project with a .NET Framework or {{site.dotnetversions}} target framework supported by Telerik Document Processing. For cross-platform projects, use the .NET Standard package variants described in [Install using NuGet Packages]({%slug installation-nuget-packages%}).
 
 **Visual Studio create console project workflow for a Telerik Document Processing sample**
 
