@@ -10,7 +10,7 @@ position: 1
 
 # Create Your First DOCX-to-PDF App with Telerik Document Processing
 
-This getting started guide shows how to create a simple application that uses **Progress® Telerik® Document Processing** to generate a DOCX document and then export the same document to PDF.
+This getting started guide shows how to create a simple application that uses **Telerik Document Processing** to generate a DOCX document and then export the same document to PDF.
 
 The Telerik Document Processing libraries in this guide are UI-independent and work across .NET desktop, web, mobile, client-side, server-side, and cloud applications. The example uses `RadWordsProcessing` to create the document content and `PdfFormatProvider` to export it.
 
