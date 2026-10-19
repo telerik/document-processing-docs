@@ -1,6 +1,6 @@
 ---
 title: Using RtfFormatProvider
-description: Learn how to import and export RadFlowDocument to and from RTF format using the RtfFormatProvider in RadWordsProcessing.
+description: Learn how to import and export RadFlowDocument instances to and from RTF format using RtfFormatProvider in RadWordsProcessing.
 page_title: Using RtfFormatProvider
 slug: radwordsprocessing-formats-and-conversion-rtf-rtfformatprovider
 tags: format, provider, rtf, word, flow, docx, import, export, document, richtext
@@ -11,12 +11,12 @@ components: [wordsprocessing]
 
 # Using RtfFormatProvider
 
-`RtfFormatProvider` allows you to import and export a `RadFlowDocument` to/from RTF format. The provider preserves the entire document structure and formatting.
+Use `RtfFormatProvider` to import and export a `RadFlowDocument` in RTF format.
 
-To use `RtfFormatProvider`, add references to the following packages:
+Before you use `RtfFormatProvider`, add references to the following packages:
 
-* Telerik.Windows.Documents.Core
-* Telerik.Windows.Documents.Flow
+* `Telerik.Windows.Documents.Core`
+* `Telerik.Windows.Documents.Flow`
 
 ## Import
 
@@ -52,7 +52,7 @@ You can also export the document to a string and preserve it in a database.
 
 <snippet id='codeblock-cn'/>
 
-The resulting documents can be opened in any application that supports RTF documents.
+The exported documents can be opened in applications that support RTF documents.
 
 ## See Also
 
