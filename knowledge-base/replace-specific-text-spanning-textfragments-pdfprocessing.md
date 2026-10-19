@@ -140,4 +140,4 @@ private static void ReplaceTextInPage(RadFixedPage page, string textToRemove, st
 ## See Also
 
 * [TextFragment]({%slug radpdfprocessing-model-textfragment%}) 
-* [TextSearch]({%slug radwordsprocessing-features-search%})
+* [TextSearch]({%slug radpdfprocessing-features-search%})
