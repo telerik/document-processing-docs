@@ -142,7 +142,7 @@ You can [generate a Telerik NuGet API key in your Telerik account](https://www.t
 
 ### Package Source Mapping
 
-The Document Processing libraries NuGet packages and most dependencies are on `nuget.telerik.com`. The [`Telerik.Licensing` package and license setup]({%slug setting-up-license-key%}) is on `nuget.org`. Use the [NuGet package source mapping configuration](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) below as a model.
+The Document Processing Libraries NuGet packages and most dependencies are on `nuget.telerik.com`. The [`Telerik.Licensing` package and license setup]({%slug setting-up-license-key%}) is on `nuget.org`. Use the [NuGet package source mapping configuration](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) below as a model.
 
 >note Match the `key` values in the `packageSourceMapping` section to the `key` values in the `packageSources` section. Otherwise, NuGet returns a "Package not found" error.
 
