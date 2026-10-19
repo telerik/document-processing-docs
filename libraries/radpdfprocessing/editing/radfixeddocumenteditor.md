@@ -1,7 +1,7 @@
 ---
 title: RadFixedDocumentEditor
 page_title: RadFixedDocumentEditor
-description: Learn how to use RadFixedDocumentEditor to create PDF documents in a flow-like manner with automatic page management, sections, paragraphs, tables, and lists.
+description: Learn how to use RadFixedDocumentEditor to create flow-like PDF documents with automatic page management, sections, paragraphs, tables, and lists.
 slug: radpdfprocessing-editing-radfixeddocumenteditor
 tags: radfixeddocumenteditor, pdf, editing, sections, tables, radpdfprocessing, flowlayout, paragraphs
 published: True
@@ -11,7 +11,7 @@ components: [pdfprocessing]
 
 # RadFixedDocumentEditor
 
-`RadFixedDocumentEditor` of [PdfProcessing]({%slug radpdfprocessing-overview%}) lets you create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in a flow-like way and insert elements one after another. During layout, the editor calculates element size automatically and moves content to new pages when needed.
+The `RadFixedDocumentEditor` class in [PdfProcessing]({%slug radpdfprocessing-overview%}) lets you create a [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) in a flow-like way and insert elements one after another. During layout, the editor calculates element size automatically and moves content to new pages when needed.
 
 
 ## Creating RadFixedDocumentEditor
@@ -54,7 +54,7 @@ The section properties control the page size, margins, and orientation of the pa
 
 The first section starts as soon as you insert content in the editor. If you set the section properties before you insert any content, the automatically created first section uses these values.
 
-Add another section with the `InsertSectionBreak()` method, as shown in **Example 2**.
+Add another section with the `InsertSectionBreak()` method, as shown in **Example 3**.
              
 #### __Example 3: Start a section__
 
@@ -110,7 +110,7 @@ Like sections, paragraphs have their own properties that control appearance.
 
 The first paragraph starts as soon as you insert content in the editor. If you set paragraph properties before you insert content, the automatically created first paragraph uses these values.
 
-To start a new paragraph, use the code in **Example 4**.           
+To start a new paragraph, use the code in **Example 6**.
 
 #### __Example 6: Start a paragraph__
 
