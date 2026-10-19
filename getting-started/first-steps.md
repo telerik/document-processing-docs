@@ -1,6 +1,6 @@
 ---
 title: Create Your First DOCX-to-PDF App with Telerik Document Processing
-description: Learn how to create a console app with Telerik Document Processing, add the required NuGet packages for RadWordsProcessing, generate a DOCX file, and export the same document to PDF.
+description: Learn how to create a console app with Telerik Document Processing, add NuGet packages, generate a DOCX file, and export it to PDF.
 page_title: Create Your First DOCX-to-PDF App with Telerik Document Processing
 slug: getting-started-first-steps
 tags: document, processing, installation, nuget, docx, pdf, radwordsprocessing, application
@@ -14,9 +14,17 @@ This getting started guide shows how to create a simple application that uses **
 
 The Telerik Document Processing libraries in this guide are UI-independent and work across .NET desktop, web, mobile, client-side, server-side, and cloud applications. The example uses `RadWordsProcessing` to create the document content and `PdfFormatProvider` to export it.
 
+## Prerequisites
+
+Before you start, verify that you have the following:
+
+* Microsoft Visual Studio.
+* A trial or commercial license key. See [how to set up the Telerik Document Processing license key]({%slug setting-up-license-key%}).
+* Access to a NuGet package source. See [how to install Telerik Document Processing with NuGet packages]({%slug installation-nuget-packages%}).
+
 ## Step 1: Locate or Install Telerik Document Processing
 
-Install `Telerik.Licensing` in the same project where you add the Telerik Document Processing packages.
+Install `Telerik.Licensing` in the same project where you add the Telerik Document Processing packages, and activate your license key by following the [license key setup instructions]({%slug setting-up-license-key%}).
 
 Telerik Document Processing is available with several Telerik UI component bundles, so the libraries may already be present on your machine. If you already installed one of the supported Telerik UI suites, use the following table to find the installation instructions and the default package location for that suite.
 
@@ -68,6 +76,8 @@ This sample uses [RadWordsProcessing]({%slug radwordsprocessing-overview%}) to c
 	For a cross-platform .NET project:
 	* `Telerik.Documents.Flow.FormatProviders.Pdf`
 
+Use the same release version for all Telerik Document Processing packages. Do not mix `Telerik.Documents.*` packages with `Telerik.Windows.Documents.*` packages in the same project. For more information, see [how to install Telerik Document Processing with NuGet packages]({%slug installation-nuget-packages%}).
+
 You can find the complete Telerik Document Processing package list in the [available NuGet packages reference]({%slug available-nuget-packages%}).
 
 ## Step 4: Create a RadFlowDocument
@@ -91,7 +101,6 @@ Use this optional step if you want to start from an existing DOCX file instead o
 ### Export the RadFlowDocument to DOCX
 
 Use the [DocxFormatProvider for DOCX export]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}) to export the `RadFlowDocument` as a DOCX file. The following snippet creates the provider instance and exports the generated document to the `bin` folder of the current project.
-        
 
 **Export a RadFlowDocument to a DOCX file**
 
@@ -100,7 +109,7 @@ Use the [DocxFormatProvider for DOCX export]({%slug radwordsprocessing-formats-a
 ### Export the RadFlowDocument to PDF
 
 Use the [PdfFormatProvider for PDF export]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}) to export the same `RadFlowDocument` to a PDF file.
-        
+
 **Export a RadFlowDocument to a PDF file**
 
 <snippet id='first-steps-export-pdf'/>
@@ -108,6 +117,8 @@ Use the [PdfFormatProvider for PDF export]({%slug radpdfprocessing-formats-and-c
 ## Step 7: Run the Project and Verify the Output
 
 Run the console application and verify that the `bin` folder contains the generated DOCX and PDF files.
+
+>note If the build reports license errors or warnings, or the generated files contain watermarks, review the [license activation errors and warnings]({%slug activation-errors-and-warnings%}).
 
 **Generated DOCX and PDF files in the Telerik Document Processing sample output folder**
 
@@ -124,5 +135,6 @@ After you complete this first sample, continue with the following articles to ex
 
 * [Review Document Processing system requirements]({%slug installation-system-requirements%})
 * [Install Telerik Document Processing on your computer]({%slug installation-installing-on-your-computer%})
+* [Set up the Telerik Document Processing license key]({%slug setting-up-license-key%})
 * [Browse Telerik Document Processing SDK examples](https://github.com/telerik/document-processing-sdk)
 * [Review Document Processing library distribution across .NET versions]({%slug distribute-telerik-document-processing-libraries-net-versions%})
