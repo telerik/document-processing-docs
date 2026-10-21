@@ -6,7 +6,7 @@
 
 ## Executive Summary
 
-This source-level audit reviewed the repository's documentation against the accessibility criteria in the repository skill, including heading hierarchy, image alternatives, link purpose, tables, code blocks, callouts, plain language, and motion content. The review covered 654 Markdown files outside `.github/`, with targeted inspection of the authoring guidance and repository configuration.
+This source-level audit reviewed the repository's documentation against the accessibility criteria in the repository skill, including heading hierarchy, image alternatives, link purpose, tables, code blocks, callouts, plain language, and motion content. The review covered 655 Markdown files outside `.github/`, with targeted inspection of the authoring guidance and repository configuration.
 
 The documentation has several strong practices: image alternatives are generally present, most links describe their destinations, and examples use descriptive headings, tables, and semantic callouts. The confirmed issues are uneven heading hierarchy, a small number of vague or empty links, ambiguous blank table cells, one untagged code example, an alt-text styling marker, and animated GIFs that may not provide a way to stop motion. The repository has accessibility guidance, but no automated accessibility checks were found in the publishing workflows.
 
@@ -14,7 +14,7 @@ The most useful immediate actions are to correct the confirmed heading and link 
 
 ## Scope and Method
 
-- Reviewed the repository's accessibility skill and scanned 654 Markdown files outside `.github/`.
+- Reviewed the repository's accessibility skill and scanned 655 Markdown files outside `.github/`.
 - Inspected representative pages and searched for heading-level skips, image alternatives, weak links, blank table cells, untagged code blocks, callout patterns, and media.
 - Checked `README.md` and repository workflow/configuration files for authoring guidance and automated accessibility validation.
 - Treated source scans as indicators, not proof of rendered behavior. Potentially intentional spreadsheet blanks and platform-specific syntax are identified as requiring context-sensitive review.
@@ -28,7 +28,7 @@ The most useful immediate actions are to correct the confirmed heading and link 
 **Severity:** Medium
 
 **Description**  
-An automated heading scan found 40 heading-level jumps in Markdown content, including headings that move directly from H1 to H3 or H2 to H4. For example, `ai-tools/agent-tools/multi-user-scenario.md` starts an H3 section at “Risks and Mitigation” after its H1, and `getting-started/installation/pdf-export.md` contains H4 subsections directly under H2 sections. YAML frontmatter titles are not counted as rendered H1 headings.
+An automated heading scan found 44 heading-level jumps in Markdown content, including headings that move directly from H1 to H3 or H2 to H4. For example, `ai-tools/agent-tools/multi-user-scenario.md` starts an H3 section at “Risks and Mitigation” after its H1, and `getting-started/installation/pdf-export.md` contains H4 subsections directly under H2 sections. YAML frontmatter titles are not counted as rendered H1 headings.
 
 **Affected Files**
 
