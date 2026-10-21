@@ -137,13 +137,13 @@ The section provides examples of general questions related to [RadSpreadProcessi
 
 <table>
 		<tr>
-			<th>Create a Spreadsheet with random data</th>
+			<th>Create a Spreadsheet with note</th>
       <th>Import a Spreadsheet and read the content</th>
 		</tr>
     <tr>  
       <td>
         <pre><code>
-#telerik-dpl-assistant create a new spreadsheet file with random data inside.
+#telerik-dpl-assistant create a new spreadsheet file with a note in the first cell.
 			  </code></pre>
       </td>
             <td>
