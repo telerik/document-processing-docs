@@ -221,7 +221,7 @@ The section provides examples of general questions related to [RadWordsProcessin
     <tr>  
       <td>
         <pre><code>
-#telerik-dpl-assistant  create a new Word document with text "Test".
+#telerik-dpl-assistant  create a new Word document and insert the text 'Test'.
 			  </code></pre>
       </td>
             <td>
