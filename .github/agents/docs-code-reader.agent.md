@@ -104,13 +104,9 @@ resolution workflow.
 If one or more placeholder snippets are present, do not guess where the code
 lives.
 
-Use this canonical snippet source:
+Use the canonical snippet source specified by the DOCS_CODE_ROOT_URL environment variable.
 
-https://github.com/telerik/document-processing-docs-tasks/tree/main/DPL_Documentation_Code
-
-- Repository: `telerik/document-processing-docs-tasks`.
-- Branch: `main`.
-- Search root: `DPL_Documentation_Code`.
+The variable contains the GitHub URL that points to the DPL_Documentation_Code root folder on main.
 
 Do not ask for a local clone before attempting to resolve snippets from this
 GitHub folder. Use web tools to read the repository tree and source files on
