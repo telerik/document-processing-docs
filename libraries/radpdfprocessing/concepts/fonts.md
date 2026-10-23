@@ -111,6 +111,8 @@ All fonts that are not included in the 14 standard ones must be **embedded** in 
 ### Registering a Font
 
 If you want to use a font that is not part of the standard ones, register it using the `RegisterFont()` method of the `FontsRepository` static class. The method requires four parameters: `FontFamily`, `FontStyle`, and `FontWeight` objects describing the font, and a byte array containing the raw font data.
+
+>tip To render in RadPdfViewer an imported PDF that does not embed a font, make the matching font data available before importing the PDF. On Windows, install the font or register its data with `FontsRepository.RegisterFont()` using the family, style, and weight requested by the PDF. Then import the PDF. On .NET Standard or .NET (Target OS: None), use the system-font provider for installed fonts or a custom `FontsProvider` for other font sources. See the [cross-platform font guidance]({%slug radpdfprocessing-cross-platform-fonts%}). If RadPdfProcessing cannot resolve the font, it may use a substitute, which can change glyph appearance or text layout.
          
 **Example 1** demonstrates how to use the `RegisterFont()` method.
             
