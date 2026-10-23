@@ -31,5 +31,5 @@ Use the [`PdfStreamWriter` overview]({%slug radpdfprocessing-formats-and-convers
 ## See Also
 
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
-* [PdfStreamWriter API reference]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%})
+* [PdfStreamWriter class]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%})
 * [Create a Table of Contents for Merged PDF Documents]({%slug create-toc-for-merged-pdf-radpdfprocessing%})
