@@ -402,6 +402,7 @@ The `ChartToImageConverter` class:
 
 * The rendered chart image is a **simplified column/bar chart**. Other chart types (line, pie, scatter, and so on) are not currently supported by the converter.
 * The visual output is an approximation—font rendering, exact spacing, and styling may differ from the native Excel chart rendering.
+* Cropping alone does not export a native `FloatingChartShape`. The cross-platform workflow in this article draws a simplified chart representation with `FixedContentEditor` and exports that drawing to PNG. It does not crop Excel's native chart rendering.
 * Theme color resolution requires passing the `DocumentTheme`. If the theme is unavailable, the converter falls back to `ThemableColor.LocalValue`.
 
 ## See Also
