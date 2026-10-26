@@ -23,6 +23,10 @@ components: [pdfprocessing]
 * Processing text for purposes such as searching, indexing, and spell-checking
 * Conversion to other common file formats with document structure and basic styling information preserved
 
+## Importing Tagged PDF Documents
+
+Use `PdfImportSettings.InvalidStructureTreeHandling` to control how import handles malformed structure-tree entries. The default `Continue` option skips invalid entries without repairing them, so the imported structure tree may be incomplete. Set `Throw` for strict import unless an event handler handles the exception. For details, see [handling invalid structure trees]({%slug radpdfprocessing-handling-exceptions%}#handling-invalid-structure-trees).
+
 ## Tagging Strategy
 
 The tagging strategy represents how tagging is handled in PDF documents. The available options are:

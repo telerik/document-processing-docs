@@ -26,7 +26,7 @@ When the events are raised, the `DocumentUnhandledExceptionEventArgs` argument i
 | Property | Description |
 |---|---|
 | `Exception` | Gets the document exception. |
-| `Handled` | Gets or sets whether the exception is handled. The default value is `false`. |
+| `Handled` | Gets or sets whether the exception is handled. The initial value is `false`, except for `InvalidStructureTreeException` when `PdfImportSettings.InvalidStructureTreeHandling` is `Continue`. In that case, the initial value is `true`. |
 
 >note The exception handling mechanism handles exceptions at the very beginning of the import as well. In such a case, the event is raised and an empty document instance is returned. The exception handling mechanism **does not handle** exceptions while parsing **fonts glyph data** or parsing **images** during document rendering in the UI viewers.
 
@@ -35,6 +35,19 @@ When the events are raised, the `DocumentUnhandledExceptionEventArgs` argument i
 To use this functionality, handle the `PdfImportSettings.DocumentUnhandledException` event. The `Handled` property in the event arguments indicates whether the exception is handled by the code in the event handler or the exception is thrown.
 
 <snippet id='libraries-pdf-features-handling-exceptions-import-settings'/>
+
+## Handling Invalid Structure Trees
+
+The structure tree describes the logical structure of a tagged PDF document. Use `PdfImportSettings.InvalidStructureTreeHandling` to control how import responds to malformed structure-tree entries.
+
+The `InvalidStructureTreeHandling` enum provides two options:
+
+* `Continue` (default): Reports `InvalidStructureTreeException` through `PdfImportSettings.DocumentUnhandledException` with `Handled` initially `true`. Import skips invalid entries and continues, even without an event handler.
+* `Throw`: Reports the exception through the same event with `Handled` initially `false`. Import throws the exception unless an event handler sets `Handled` to `true`.
+
+The provider reports only the first `InvalidStructureTreeException` per document import, not one event for every skipped entry. If `IgnoreMarkedContent` is `true`, import skips the structure tree entirely.
+
+>important Import does not repair invalid entries. The imported structure tree may be incomplete even when page content imports successfully.
 
 ## Using RadFixedDocument.DocumentUnhandledException
 
@@ -86,11 +99,12 @@ Starting with **Q1 2025**, the [PdfExportSettings]({%slug radpdfprocessing-forma
 |`NotSupportedAnnotationException`|Represents an exception for an annotation that is not supported.|
 |`InvalidImageDataException`|Represents an exception for importing invalid image data.|
 |`NotSupportedPdfPrimitivesConversionException`|Represents an exception thrown when attempting to convert unsupported PDF primitive types.|
-|`InvalidStructureTreeException`|Thrown when the PDF structure tree contains invalid or malformed elements during import. This exception wraps lower-level errors such as invalid page references or object references encountered while parsing the document logical structure.|
+|`InvalidStructureTreeException`|Reports malformed structure-tree entries during import, such as invalid page, object, or marked-content references. `PdfImportSettings.InvalidStructureTreeHandling` and the event handler control whether import throws the exception or continues.|
 |`InvalidObjectReferenceException`|Thrown when a PDF object reference is invalid during import or processing. This occurs when a structure element object reference points to an unrecognized object type.|
 |`InvalidPageReferenceException`|Thrown when a PDF page reference is invalid during import or processing. This occurs when a structure element Page property references a non-page object.|
 
 ## See Also
 
 * [RadPdfProcessing Overview]({%slug radpdfprocessing-overview%})
+* [PDF import and export settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})
 * [SkiaImageExportSettings]({%slug radpdfprocessing-formats-and-conversion-image-using-skiaimageexportsettings%})
