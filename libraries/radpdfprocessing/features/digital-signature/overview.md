@@ -13,13 +13,13 @@ components: [pdfprocessing]
 The **digital signature** feature in `RadPdfProcessing`, part of Telerik Document Processing, lets you sign and validate PDF documents. A digital signature confirms that the document content came from the signer and has not been modified. A signed document remains valid when the content stays unchanged after signing and the certificate chain resolves to a trusted root certificate.
 
 In a *public key infrastructure* (PKI) workflow, `RadPdfProcessing` uses X.509 certificates, certificate chains, trusted roots, and revocation checks for PDF signing and validation. Certificate issuance and certificate-authority management are outside the library scope.
-<a name="signing-a-document"><a/>
 With `RadPdfProcessing`, you can:
 
 * [Create a PDF document from scratch and add a signature field]({%slug radpdfprocessing-features-digital-signature-getting-started%}). 
 * [Sign PDF documents that contain a predefined signature field](https://demos.telerik.com/document-processing/pdfprocessing/digitally_sign_document).
 * [Verify existing signed PDF documents]({%slug radpdfprocessing-features-digital-signature-validation%}).
 * [Multiple Digital Signing with PdfStreamSigner]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%}). 
+* [Lock all or selected form fields after a signature]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}#locking-fields-after-signing).
 
 ![RadPdfProcessing Overview of Signed PDF](images/radpdfprocessing-features-digital-signature-overview.png) 
 
