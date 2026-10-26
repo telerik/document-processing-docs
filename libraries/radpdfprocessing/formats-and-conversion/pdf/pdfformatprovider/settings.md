@@ -33,13 +33,26 @@ The `PdfFormatProvider` class exposes the `ImportSettings` property, which allow
 |`ReadingMode`|Gets or sets the mode for loading the document pages content on import. *Introduced in R2 2020*.<ul><li>**ReadAllAtOnce**: All document pages content is loaded on import. This is the default behavior.</li><li>**OnDemand**: The document pages content is loaded on demand. This mode is designed for use with PdfViewers and only the currently visible page is loaded. </td></tr></ul> The **OnDemand** mode must be applied when used with viewers only.|
 |`CopyStream`|Gets or sets whether to copy the document stream on import. When false and ReadingMode is OnDemand, the original stream must be kept open while the document is in use. When true, the original stream can be disposed after import, regardless of the reading mode.|
 |`IgnoreMarkedContent`|When `true`, imports the content inside marked-content containers without preserving the containers and skips the document structure tree. The default is `false`, which preserves marked content and imports the structure tree.|
+|`InvalidStructureTreeHandling`|Controls how import handles malformed structure-tree entries. `Continue` (default) skips invalid entries and continues import. `Throw` throws `InvalidStructureTreeException` unless an event handler handles it. See [structure-tree exception handling]({%slug radpdfprocessing-handling-exceptions%}#handling-invalid-structure-trees) for event behavior and limitations.|
+|`MaxDecodedStreamSize`|Gets or sets the maximum decoded output, in bytes, for one PDF stream or filter stage. The default is 256 MiB.|
+|`MaxTotalDecodedStreamSize`|Gets or sets the maximum cumulative decoded output, in bytes, for one document. The default is 1 GiB. Intermediate filter output and deferred image decoding count toward this limit. Repeated decoding charges only output that was not counted before.|
+|`MaxImagePixelCount`|Gets or sets the maximum number of pixels decoded for one CCITT image. The default is 64 million pixels.|
+|`MaxJbig2ImagePixelCount`|Gets or sets the maximum number of pixels in one JBIG2 page, region, or intermediate bitmap. The default is 640 million pixels. Decoded-output limits and the implementation limit of `int.MaxValue` pixels also apply.|
+|`MaxNestingDepth`|Gets or sets the maximum depth of recursive PDF object conversion. The default is 256. This limit applies to color spaces, decode parameters, streams, Form XObjects, image masks, stitching functions, marked content, and clipping paths. Exceeding the limit raises `NestingDepthExceededException`.|
+|`MaxTreeDepth`|Gets or sets the maximum depth of PDF trees and linked-object chains. The default is 1,024. This limit applies to page trees, outlines, field parents, actions, name and ID trees, structure elements, indirect-object forwarding, and cross-reference sections. Exceeding the limit raises `NestingDepthExceededException`.|
+|`MaxOptionalContentNodeCount`|Gets or sets the maximum expanded node count for imported optional-content properties. The default is 1,000,000 nodes. Shared subtrees count once per logical occurrence. Exceeding the limit raises `InvalidDataException`.|
+|`MaxStructureElementCount`|Gets or sets the maximum number of structure elements materialized per document. The default is 1,000,000 elements. Shared branches count once per emitted occurrence. Exceeding the limit raises `InvalidDataException`.|
+
+Use separate provider and settings instances for concurrent imports, and do not mutate one settings instance concurrently.
+
+All numeric limits must be positive. Remaining execution-stack checks can reject recursion before `MaxNestingDepth` or `MaxTreeDepth` is reached. Cycle detection remains active independently of these limits. Circular references raise `InvalidDataException` or `NestingDepthExceededException`, depending on the traversal path.
 
 |Event|Description|
 |----|----|
 |`UserPasswordNeeded`|The event fires when a *user* password is needed to open the document. The password can be set in the `PasswordNeededEventArgs.Password` property.|
 |`OwnerPasswordNeeded`|The event fires when an *owner* password is needed to open the document. The password can be set in the `PasswordNeededEventArgs.Password` property.|
 |`DuplicatedEmbeddedFileNameResolving`|The event fires when the provider resolves conflicts between [embedded file names]({%slug radpdfprocessing-embedded-file-streams-overview%}) with the same names.|
-|`DocumentUnhandledException`|Raised when an unhandled exception occurs during document import. Provides error details for logging or recovery.|
+|`DocumentUnhandledException`|Raised when an exception occurs during document import. Provides error details and a chance to handle it. For `InvalidStructureTreeException`, the initial `Handled` value depends on `InvalidStructureTreeHandling`.|
         
 The following example shows how to create a `PdfImportSettings` object with the desired settings and handle the offered events:
 
