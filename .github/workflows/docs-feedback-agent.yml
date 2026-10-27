@@ -1,3 +1,16 @@
+name: Docs Feedback Agent
+
+on:
+  issues:
+    types:
+      - opened
+      - labeled
+
+permissions:
+  issues: write
+  contents: write
+  pull-requests: write
+
 jobs:
   trigger-agent:
     runs-on: ubuntu-latest
