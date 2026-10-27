@@ -1,0 +1,718 @@
+Documentation Accessibility Audit
+Telerik Document Processing documentation — issue #875
+Audit date: 2026-10-27
+Source revision: a398df43ad46a8198c9bd92dad5e28fe49c7939b
+
+# Executive Summary
+
+Assessment: The documentation has established authoring conventions, but their
+accessibility application is inconsistent. The most serious verified barriers are
+color-only reference data, screenshot-only navigation instructions, and resource
+tables with empty headers. Repeated filename-like image alternatives and skipped
+heading levels are the clearest recurring authoring defects.
+
+Estimated content-quality maturity: established practices with uneven enforcement,
+not a measured maturity-model certification. Many articles have useful headings,
+descriptive links, introductory prose, and labeled examples. Existing guidance
+already covers descriptive image alternatives, table headers, and heading order;
+the gaps concern both implementation and validation.
+
+This report contains 18 consolidated findings: 3 High, 9 Medium, and 6 Low.
+No Critical finding was established. Finding counts denote distinct finding IDs,
+not the number of affected cells, screenshots, or repeated occurrences.
+
+Scope is exclusively Markdown documentation, authoring guidance, and referenced
+documentation assets. No product functionality, generated-document accessibility,
+viewer/designer behavior, runtime keyboard support, or product accessibility claim
+was evaluated. Even the article about creating accessible PDFs is assessed only
+for its documentation markup.
+
+## Method and Coverage
+
+Authority:
+/home/runner/work/document-processing-docs/document-processing-docs/.github/skills/accessibility-doc-optimization/SKILL.md
+
+All eight skill dimensions guided the review: heading structure (20%), alternative
+text (20%), links (15%), tables (10%), plain language (15%), formatting independence
+(10%), callouts (5%), and code blocks (5%). Embedded media and repository guidance
+were reviewed as additional issue-request categories. Appendix B supplies an
+article-level JSON score using those weights, not a repository-wide average.
+
+Population: git ls-files '*.md' identified 679 tracked Markdown files. The
+public-source census covers 652 files after excluding 25 .github authoring/tooling
+files, README.md, and _assetsApi/api/index.md. These exclusions follow the
+public-article/tooling distinction and the README/_assetsApi exclusions in:
+/home/runner/work/document-processing-docs/document-processing-docs/_config.yml:4-6
+The README and relevant style resources were separately inspected for contributor
+guidance. The population is source candidates, not a count of deployed pages.
+
+The 652 sources comprise libraries (338), knowledge-base (257), getting-started
+(14), ai-tools (11), release-notes (9), distribution-and-licensing (8),
+common-information (3), integration (3), troubleshooting (3), security (2),
+upgrade (1), and four root articles.
+
+Repository-wide structural screening used Python's standard library and tracked
+file inventory, followed by manual review of representative and flagged sources.
+Screening excluded YAML frontmatter and fenced code; image totals also exclude
+HTML comments. Fence state distinguished opening fences from closing fences.
+HTML image elements were inspected separately from Markdown images. No scan tools,
+dependencies, production changes, or authoring rules were installed.
+
+Source-pattern census, with the 652 public sources as its denominator:
+- 44 forward heading-level skips across 27 files; see Appendix A.
+- 257 files without an explicit source H1, all knowledge-base articles.
+  Their templates may generate H1 from metadata; see the verification queue.
+  No multiple explicit H1 headings were detected.
+- 506 active Markdown image occurrences across 215 files; none has empty alt
+  syntax. Nonempty alternatives are not necessarily meaningful.
+- 25 HTML image elements across 17 files; 7 omit alt attributes (F02).
+- 16 filename-like Markdown alternatives in two verified articles (F03).
+- Two verified "here" anchors (F09). Three candidate "Link" anchors were excluded
+  because they name a documented type.
+- Seven URL-as-label links across four files (F11).
+- 680 Markdown table delimiter rows across 431 files. This is a table-candidate
+  inventory, not 680 confirmed inaccessible tables; raw HTML tables are separate.
+- 445 fenced examples; one opening fence has no language label (F15).
+- 64 fenced examples contain at least 70 content lines. Length is a review
+  trigger, not automatically a failure; F08 gives a contextual example.
+- 941 external snippet references across 258 files. Snippet bodies were not
+  available in this repository and were not graded as if resolved.
+- No iframe, video, audio, YouTube, or Vimeo candidates were found outside code
+  by the source-pattern search. GIF illustrations require separate review (F16).
+
+Limitations: Pattern screening is not a complete Markdown/Liquid parser.
+Reference links, indented code, multiline HTML, generated content, and downstream
+transformations require additional validation. Qualitative checks were sampled,
+not an exhaustive semantic review of every sentence and image. Only the NuGet
+configuration screenshot in F04 was visually inspected; other images were
+assessed through markup/context and asset existence, and three GIFs through
+animation metadata. No published DOM, screen-reader session, keyboard session,
+contrast measurement, media controls, or Flesch-Kincaid grade was tested.
+Consequently this is not a WCAG conformance declaration or a clean bill of health
+for unreported content.
+
+Severity:
+- Critical: a widespread barrier preventing understanding; none established.
+- High: materially blocks documented information or task navigation.
+- Medium: reduces usability, reading equivalence, or structural predictability.
+- Low: localized best-practice or navigation improvement.
+Source concerns and conditional rendering risks are identified explicitly.
+
+# Immediate Action Required
+
+Ordered by highest finding severity. Counts below are finding IDs applying to the
+listed article, not exhaustive defect counts for that article.
+
+1. High — 1 finding (F01)
+   /home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/concepts/document-themes.md
+   Risk: 504 reference values exist only as CSS color swatches.
+   Immediate action: expose hexadecimal values as readable text, then reduce
+   the 13-column matrix into manageable reference tables.
+
+2. High — 2 findings (F04, F13)
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/telerik-ui-for-blazor-nuget-restore-missing-dependencies.md
+   Risk: a configuration step depends on screenshot annotations; undefined DPL
+   adds reading effort.
+   Immediate action: write the two depicted navigation actions as substeps and
+   expand the acronym on first use.
+
+3. High — 2 findings (F05, F17)
+   /home/runner/work/document-processing-docs/document-processing-docs/getting-started/next-steps.md
+   Risk: empty-header layout table and non-navigable subsection labels.
+   Immediate action: replace the resource grid with a list; promote group labels
+   to descriptive H3 headings under More Learning Resources.
+
+4. High — 1 finding (F05)
+   /home/runner/work/document-processing-docs/document-processing-docs/getting-started/explore-features.md
+   Risk: Web/Desktop/Mobile labels are data cells beneath blank headers.
+   Immediate action: put the actual category labels in the header row, or use
+   grouped lists instead.
+
+5. Medium — 2 findings (F02, F08)
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/saving-data-from-datagridview-to-xlsx-file-in-csharp.md
+   Risk: missing screenshot alternative and a 228-line monolithic example.
+   Immediate action: describe the illustrated result and add navigable explanation
+   of the example's setup, export, and result.
+
+6. Medium — 1 finding each (F02)
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/alternating-row-color-in-pdf-tables.md
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/changing-date-format-exported-excel-blazor-grid.md
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/generate-expense-pdf-report.md
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/handle-missing-content-in-nested-tables-while-converting-docx-to-pdf.md
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/handling-empty-cells-when-reading-excel-rows-using-radspreadstreamprocessing.md
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/handling-local-path-images-html.md
+   Risk: informational images omit alternatives.
+   Immediate action: inspect each image and supply contextual alt text plus any
+   detailed comparison needed in prose.
+
+7. Medium — 1 finding each (F03)
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/submit-support-tickets.md
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/upgrade-trial-to-licensed-version.md
+   Risk: six and ten screenshots respectively have filename-like alternatives.
+   Immediate action: replace ordinal labels with each screenshot's purpose/state.
+
+8. Medium — 2 findings (F06, F16)
+   /home/runner/work/document-processing-docs/document-processing-docs/ai-tools/ai-coding-assistant/mcp-server.md
+   Risk: screenshot layout tables and a long looping walkthrough.
+   Immediate action: use sequential figures and verify published pause/reduced-
+   motion behavior; offer a static alternative.
+
+9. Medium — 1 finding (F08)
+   /home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/export-spreadsheet-with-chart-net-standard.md
+   Risk: a 241-line converter block has only a class-name lead-in.
+   Immediate action: add explanatory sections and a compact workflow map.
+
+Other remediation targets, including lower-severity issues, are identified below
+and in Appendix A. These priorities do not replace the repository-wide backlog.
+
+# Detailed Findings
+
+## F01 — High — Color/Formatting Independence and Tables
+
+File:
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/concepts/document-themes.md:123-168
+
+Evidence: line 123 promises "corresponding color values". The 13-column table
+starts at line 125. Lines 127-168 contain 42 rows with 12 empty styled spans each,
+for 504 color-data cells. Example at line 127:
+<span style="display:inline-block;width:12px;height:12px;background-color:#FFFFFF;border:1px solid #ccc;margin-left:4px;"></span>
+
+Impact: screen-reader/text-only readers cannot obtain the documented values.
+Disabling CSS or printing without backgrounds removes the data. A lead-in and
+valid header row already exist; missing introductory context is not the defect.
+
+Remediation: print each hex value as text; keep the swatch only as a visual
+supplement marked aria-hidden="true". Split the wide reference by theme/category.
+Example cell: `#FFFFFF` followed by an optional decorative swatch.
+This concerns reference content, not accessibility of the themes in the product.
+
+## F02 — Medium — Missing Image Alternatives
+
+Evidence: these seven informational HTML images omit alt entirely:
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/alternating-row-color-in-pdf-tables.md:25
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/changing-date-format-exported-excel-blazor-grid.md:23
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/generate-expense-pdf-report.md:23
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/handle-missing-content-in-nested-tables-while-converting-docx-to-pdf.md:23
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/handling-empty-cells-when-reading-excel-rows-using-radspreadstreamprocessing.md:23
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/handling-local-path-images-html.md:22
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/saving-data-from-datagridview-to-xlsx-file-in-csharp.md:22
+
+Representative source:
+<img style="border: 1px solid gray;" src="images/pdf-expense-report.png" />
+All seven referenced assets exist relative to their articles.
+
+Impact: assistive readers receive no authored equivalent for the illustration;
+surrounding topic descriptions do not establish complete visual equivalence.
+Remediation: inspect each image, describe its relevant result/state, and explain
+critical comparisons in adjacent prose. Use alt="" only after verifying that an
+image is decorative or fully redundant. Do not copy filenames or mechanically
+duplicate the caption. No generated HTML inside code samples is counted here.
+
+## F03 — Medium — Filename-Like Image Alternatives
+
+Files and evidence:
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/submit-support-tickets.md:45,49,53,57,61,65
+Example: ![submit-support-tickets 000](images/submit-support-tickets000.png)
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/upgrade-trial-to-licensed-version.md:26,34,38,42,48,62,64,74,78,82
+Example: ![upgrade-trial-to-licensed-version 003](images/upgrade-trial-to-licensed-version003.png)
+
+Impact: all 16 alternatives identify numbered files rather than workflow states.
+Nearby written steps mitigate the barrier but do not make these useful image
+labels in assistive image navigation.
+Remediation: describe the relevant dialog, selection, or verification result for
+each image. Example pattern: "Support Center with [named option] selected", using
+the actual inspected label. Retain complete instructions in text, not just alt.
+
+## F04 — High — Screenshot-Only Navigation
+
+File:
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/telerik-ui-for-blazor-nuget-restore-missing-dependencies.md:42-44
+Evidence: "2. Configure the Telerik NuGet server as a package source in Visual
+Studio:" is followed by an image with alt="Configure NuGet Server".
+Inspected asset:
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/images/configure-nuget.png
+Its numbered annotations identify "Manage NuGet Packages..." in the project
+context menu and then the settings gear beside Package source. Neither action
+appears in the written step or its alternative.
+
+Impact: readers who cannot inspect the image miss the actual navigation sequence.
+Remediation: add explicit substeps naming Manage NuGet Packages and the package-
+source settings control; verify the latter's accessible label before naming it.
+Keep the screenshot supplemental. This evaluates the instructions, not Visual
+Studio keyboard support or package restore behavior.
+
+## F05 — High — Empty Headers and Resource Layout Tables
+
+Files and evidence:
+/home/runner/work/document-processing-docs/document-processing-docs/getting-started/next-steps.md:35-38
+The table begins with "||||||" and five delimiter cells. Library links appear
+in the next row and their descriptions in another row.
+/home/runner/work/document-processing-docs/document-processing-docs/getting-started/explore-features.md:21-27
+The table begins with "||||"; "Web|Desktop|Mobile" follows the delimiter row.
+
+Impact: table navigation encounters empty headers and requires readers to infer
+link/category relationships from position. The next-steps grid is resource-card
+layout rather than tabular data, on an important introductory route.
+Remediation: replace next-steps with a list of library links and descriptions.
+For explore-features, prefer grouped lists or move Web/Desktop/Mobile above the
+delimiter row and explain genuinely unused cells. Bold alone is not a table-
+header repair; the Markdown header/delimiter relationship matters.
+
+## F06 — Medium — Screenshot Layout Tables
+
+Files and evidence:
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/features/accessibility-support/create-accessible-pdf-documents.md:34-40
+An HTML table uses <td rowspan="2"> to arrange three screenshots.
+/home/runner/work/document-processing-docs/document-processing-docs/ai-tools/ai-coding-assistant/mcp-server.md:489-491
+Headers "Copilot calling the DPL MCP Server in VS Code" and "Copilot final answer
+in VS Code" sit above two screenshot cells.
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/remove-mergefields-retain-values-radwordsprocessing.md:76-78
+A "Before|After" table contains two images.
+
+Impact: visual figure layout adds unnecessary table relationships and navigation
+overhead; rowspans further complicate linear reading order.
+Remediation: present figures sequentially with descriptive captions and contextual
+alternatives. Explain the before/after differences in prose. No PDF accessibility
+capability or checker result described by these articles was evaluated.
+
+## F07 — Medium — Skipped Heading Levels
+
+Evidence: 44 forward skips across the 27 articles in Appendix A.
+Examples:
+/home/runner/work/document-processing-docs/document-processing-docs/getting-started/installation/pdf-export.md:25-27,75-77
+H2 sections jump directly to "#### Required packages".
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/getting-started.md:22-26
+"## Creating a Document" jumps to "#### __Example 1: Create a RadFixedDocument__".
+
+Impact: the outline implies missing levels and makes heading-level navigation
+unpredictable. Repeated H4 example captions are a systemic source pattern.
+Remediation: use H3 beneath H2, or ordinary captions for examples that are not
+sections. Review the full outline and generated anchors before bulk edits.
+Do not treat parent headings with child content as automatically empty sections.
+
+## F08 — Medium — Long Code Without Navigable Explanation
+
+Files and evidence:
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/export-spreadsheet-with-chart-net-standard.md:145-389
+"The `ChartToImageConverter` class:" introduces a 241-line block at lines 147-389.
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/saving-data-from-datagridview-to-xlsx-file-in-csharp.md:32-263
+"The following example shows the complete implementation:" introduces a
+228-line block at lines 34-263.
+
+Impact: readers must traverse large listings to locate individual phases.
+Both articles have useful earlier workflow summaries; the issue is navigation
+and explanation within the large implementation, not missing all context.
+Remediation: add named sections explaining setup, key methods, and expected
+results. Where practical, present focused excerpts plus a complete listing or
+sample link. Preserve an understandable reading order and do not rely on syntax
+colors to distinguish changed lines. The 64 long-block candidates require review;
+they are not all established defects.
+
+## F09 — Low — Generic Link Labels
+
+Files and evidence:
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/formats-and-conversion/formats-and-conversion.md:367
+"More information is available [here]" links to custom code fields.
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/formats-and-conversion/pdf/settings.md:28
+"listed [here]" links to the fonts concept article.
+
+Impact: link-list navigation loses destination purpose, although surrounding
+sentences provide some context.
+Remediation: use "custom code fields" and "14 standard PDF fonts" respectively
+as anchor text. This is a skill best-practice finding, not a rendered WCAG verdict.
+
+## F10 — Low — Identical Link Labels for Different Destinations
+
+File:
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/model/general-information.md:65,71
+Evidence: two [Actions] links target pageactioncollection and document actions.
+The distinguishing PageActionCollection/DocumentActionCollection text is outside
+the links.
+Impact: links-list users lose the page/document distinction supplied by nesting
+and surrounding text.
+Remediation: use "Page actions" and "Document actions" as the anchor labels.
+Do not globally rename legitimate API/type-name links without context review.
+
+## F11 — Low — URL-Only Link Labels
+
+Files:
+/home/runner/work/document-processing-docs/document-processing-docs/distribution-and-licensing/license-agreement.md:15,17,19,21
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/dpl-troubleshooting-nuget.md:44
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/concepts/cmaps.md:16
+/home/runner/work/document-processing-docs/document-processing-docs/troubleshooting/telerik-nuget.md:69
+Evidence: seven inline links display their full https:// destination as the label.
+Example: [https://www.telerik.com/purchase/license-agreement/winui](https://www.telerik.com/purchase/license-agreement/winui)
+
+Impact: spoken URLs are verbose; adjacent product/topic labels are unavailable
+in an isolated links list.
+Remediation: use labels such as "WinUI license agreement", "Telerik service
+status", and "Adobe CMap resources". Preserve literal URLs when readers actually
+need to copy a feed, endpoint, or command value; those are not this finding.
+
+## F12 — Medium — Ambiguous Empty Table Cells
+
+Files and evidence:
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/concepts/fields/hyperlink-field.md:48-53
+Rows such as '|        | \t "_top" | Whole page |' leave the switch column blank.
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadprocessing/cross-platform-support/cross-platform.md:25-26
+Two package rows have empty Notes cells.
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadstreamprocessing/features/culture-spesific-predefined-formats.md:50
+The GetScientific2 row has an empty final description cell.
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/implementing-transpose-array-function-in-spreadprocessing.md:24-35
+Input/output grids have blank headers; the output also has an empty third column.
+
+Impact: cell-by-cell reading cannot establish whether a blank repeats a previous
+value, means not applicable, or is omitted information.
+Remediation: repeat grouped switch labels, provide missing explanations, and use
+"Not applicable" only when accurate. Give worksheet examples explicit coordinate
+headers or explain their coordinates in an adjacent text representation. Remove
+unused output columns. No calculation or library behavior was evaluated.
+
+## F13 — Medium — Dense Prose and Undefined Abbreviations
+
+Files and evidence:
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/editing/fixedcontenteditor.md:16
+"Unlike [RadFixedDocumentEditor] ... which manages the document content in a
+flow-like manner and allows you to insert all desired elements one after another
+without calculating the element position, `FixedContentEditor` requires managing
+the Position at which the document elements are drawn."
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/telerik-ui-for-blazor-nuget-restore-missing-dependencies.md:32
+"It contains all necessary DPL assemblies:" uses DPL without expansion.
+
+Impact: long comparisons increase working-memory demands; unexplained
+abbreviations force readers to infer terms or leave the page.
+Remediation: lead with the actionable distinction and use short sentences.
+Example: "Set each element's position when you use FixedContentEditor.
+RadFixedDocumentEditor positions elements in a flow instead."
+Expand "Document Processing Libraries (DPL)" on first use. Treat readability
+metrics as review aids; API identifiers and necessary technical terms are not
+automatically jargon defects.
+
+## F14 — Medium — Required Actions Presented as Tips or Ordinary Prose
+
+Files and evidence:
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadprocessing/features/filtering.md:256,268
+">tip The filter cannot be set before the range. Attempting to do so causes an exception."
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadstreamprocessing/model/worksheet.md:43
+">tip A worksheet must contain at least one row. Otherwise, an exception is thrown."
+/home/runner/work/document-processing-docs/document-processing-docs/getting-started/installation/telerik-nuget-source.md:64-75
+The plain-text paragraph states that the following command stores the password
+or API key in plain text; the command includes --store-password-in-clear-text.
+
+Impact: readers who skim tips as optional, or navigate directly to commands, may
+miss a required action or consequential caution.
+Remediation: use >important for prerequisites and >caution for the credential-
+storage notice, keeping the existing safer-storage guidance. Example:
+>important Set the filter range before you set the filter. Reversing this order causes an exception.
+This is warning-presentation review, not product/tool security testing, a new
+security vulnerability finding, or validation of the described runtime behavior.
+
+## F15 — Low — Unlabeled Diagnostic Code Block
+
+File:
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/platform-agnostic-namespaces-migration.md:65-70
+Evidence: the opening fence at line 67 has no language; the block shows compiler
+errors CS0246 and CS0234. Its introductory explanation is already present.
+Impact: language-aware tools must guess whether the content is code or output.
+Remediation: label this fence text. Do not label diagnostic output csharp merely
+because it describes a C# compilation problem.
+
+## F16 — Medium — Looping Illustrations Need Motion Alternatives
+
+Files, assets, and verified metadata:
+/home/runner/work/document-processing-docs/document-processing-docs/ai-tools/ai-coding-assistant/mcp-server.md:98
+/home/runner/work/document-processing-docs/document-processing-docs/ai-tools/ai-coding-assistant/images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif
+778 frames, 92.20 seconds per loop, infinite looping.
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radziplibrary/overview.md:20
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radziplibrary/images/ziplibrary-overview.gif
+106 frames, 11.48 seconds per loop, infinite looping.
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/apostrophe-character-replaced-copyright-symbol-acroform.md:30
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/images/apostrophe-character-replaced-copyright-symbol-acroform.gif
+54 frames, 6.64 seconds per loop, infinite looping.
+
+Evidence: each is an ordinary Markdown image reference; the source authors no
+pause mechanism. Asset metadata establishes animation duration/looping, not
+flashing or motion sensitivity severity.
+Impact: prolonged motion can distract readers and interfere with sustained
+reading. Published-template controls and reduced-motion behavior are unverified;
+this is a source-authored media risk, not a confirmed rendered WCAG 2.2.2 failure.
+Remediation: offer static annotated steps or user-started, controllable media
+with equivalent text. Verify the published pause/reduced-motion experience.
+If video/audio is introduced later, require captions/transcripts and descriptions
+of instructional visual information; no current missing-caption finding is made.
+
+## F17 — Low — Visual Group Labels Are Not Navigable Headings
+
+File:
+/home/runner/work/document-processing-docs/document-processing-docs/getting-started/next-steps.md:22,26,30,33
+Evidence: "Installation, Distribution and Licensing", "Integration and Upgrades",
+"Additional Tools and Resources", and "Getting started articles" are ordinary
+paragraphs introducing groups.
+Impact: the visible content groups cannot be reached through heading navigation.
+Remediation: use H3 subsection headings under More Learning Resources, preserving
+the associated lists and avoiding skipped levels.
+
+## F18 — Low — Conflicting Callout Authoring Guidance
+
+Files:
+/home/runner/work/document-processing-docs/document-processing-docs/.github/skills/accessibility-doc-optimization/SKILL.md:143-152
+/home/runner/work/document-processing-docs/document-processing-docs/.github/skills/telerik-documentation-style-guide/style-formatting/SKILL.md:100-108
+Evidence: the accessibility skill explicitly specifies >note, while the
+formatting guide demonstrates an ordinary '> A note provides additional context'
+and says it renders with a Note label.
+
+Impact: authors/reviewers receive conflicting source conventions; automated
+scoring can penalize a pattern another guide endorses.
+Remediation: document one renderer-tested pattern and align the guides, examples,
+and scoring rules. Until verified, record ordinary blockquotes as a source-style
+inconsistency, not proof that assistive technology misses them. The accessibility
+skill remains the rubric for this audit.
+
+# Repository-Wide Patterns
+
+- Heading skips recur across all four document-processing library areas and
+  installation guides, frequently because H4 is used to style an example caption.
+  Appendix A supports an outline-aware bulk remediation pass.
+- Image coverage differs by syntax: all 506 active Markdown alternatives are
+  nonempty, yet seven HTML images omit alt. A Markdown-only image rule misses
+  this entire confirmed missing-alt group.
+- Nonempty alternatives are not sufficient: two workflows repeat filename-like
+  labels for every screenshot. UI labels alone can also omit depicted actions.
+  F04 requires text instructions, not simply a longer image label.
+- Resource-card grids and screenshot comparisons use table semantics for layout.
+  Genuine reference tables also contain implied/repeated or color-only values.
+- Labeled code is comparatively consistent (444 of 445 fenced openings have
+  labels), but long implementations and external snippets need different checks.
+  Do not misclassify closing fences, snippet placeholders, or <img> strings inside
+  examples as accessibility failures of the documentation page.
+- Context can repair comprehension but not isolated navigation: "here", repeated
+  "Actions", raw URLs, and plain-text section labels lose useful distinctions in
+  links/heading lists.
+- Source warnings are generally textual, but optional-tip labels can conceal
+  prerequisites. Guidance should standardize meaning as well as appearance.
+- Color words in code, API names, or a diagram explanation are not by themselves
+  color-only instructions. F01 is different: the actual reference values have no
+  readable text equivalent.
+
+## Verification Queue — Not Established Defects
+
+- All 257 KB files lack an explicit source H1. Verify the KB template emits
+  exactly one meaningful H1 from title metadata before adding headings in bulk;
+  otherwise a source-only fix could introduce duplicate H1s.
+- No rendered landmark structure was inspected. Verify that article templates
+  expose main/navigation landmarks and a coherent reading order; do not infer
+  missing ARIA landmarks merely because Markdown has none.
+- External snippet bodies, language annotations after expansion, code copy
+  controls, and long-line behavior require the real documentation pipeline.
+- Confirm generated table-header associations, callout labels, and motion
+  controls with assistive technology. Source evidence does not establish their
+  complete rendered accessibility behavior.
+- No high-confidence truly empty sections, decorative-image misclassification,
+  or current video-caption defect was established. Generic labels, redundant
+  captions, directional references, and screenshot-only content remain semantic
+  review targets; keyword matches alone do not prove these defects.
+
+# Recommendations
+
+## Immediate (0-30 Days)
+
+1. Documentation maintainers: repair F01's missing text values and F04's missing
+   navigation steps; verify equivalent understanding without images or CSS.
+2. Getting-started owners: replace/repair F05's empty-header resource tables.
+3. Article owners: address the seven missing alternatives and the 16 filename-like
+   alternatives, inspecting the actual assets rather than generating alt from
+   filenames.
+4. Accessibility reviewer: verify KB H1 generation and the published motion
+   controls; record these outcomes separately from confirmed source defects.
+5. Track work by finding ID and article path; close a finding only after checking
+   the text-only reading experience and relevant rendered behavior.
+
+## Short Term (1-3 Months)
+
+1. Repair the 27 heading outlines with anchor compatibility checks. Refactor
+   screenshot layout tables and ambiguous blank cells.
+2. Review the 64 long-code candidates; add task-oriented explanation, focused
+   examples, and expected results where needed.
+3. Clarify callout severity, unify note syntax, expand undefined acronyms, and
+   simplify dense sentences during normal article maintenance.
+4. Pilot change-scoped source checks and human review checklists. Baseline
+   existing issues so new violations can be blocked without hiding old debt.
+5. Validate representative rendered articles using heading/link/table navigation,
+   screen-reader reading order, zoom/reflow, and reduced-motion settings. These
+   are documentation-site checks, not product UI tests.
+
+## Long Term (3+ Months)
+
+1. Expand semantic review to all images and remaining prose, prioritizing
+   installation, migration, and high-traffic KB workflows.
+2. Integrate external snippet expansion into documentation validation so the
+   content users receive, not just placeholders, is checked.
+3. Maintain accessible article templates, media alternatives, and review examples.
+4. Measure closure of findings and new violations by category, plus percentage
+   of changed articles receiving human accessibility review. Do not substitute
+   one average quality score for resolution of blocking defects.
+
+# Authoring Guideline Improvements
+
+Recommended updates only; this audit does not silently change existing policy.
+
+- Structure guidance:
+  /home/runner/work/document-processing-docs/document-processing-docs/.github/skills/telerik-documentation-style-guide/style-structure/SKILL.md:52-58
+  Add an explicit KB-template H1 rule after rendering verification. Distinguish
+  example captions from sections and provide valid H2-to-H3 examples. Require
+  group labels intended for navigation to be semantic headings.
+- Formatting guidance:
+  /home/runner/work/document-processing-docs/document-processing-docs/.github/skills/telerik-documentation-style-guide/style-formatting/SKILL.md:178-218
+  Retain existing descriptive-alt, text-plus-screenshot, and table-header rules;
+  add HTML image examples, an intentional-decoration test, prohibition of layout
+  tables, a blank-cell policy, text values beside color swatches, and sequential
+  figure examples. Require each numbered image annotation in prose as well.
+- Callouts: reconcile F18, provide required-action versus optional-tip examples,
+  and state that warnings must remain understandable without color or styling.
+- Code: require a sentence describing purpose, language or text labels, explicit
+  placeholder substitutions, and an expected result where relevant. Recommend
+  navigable explanation for long code without imposing an arbitrary hard limit.
+- Links: show contextual anchor rewrites, distinguish page/document destinations,
+  and preserve literal endpoint URLs only when the literal value is necessary.
+- Media: document static alternatives for animation, user-controlled playback,
+  transcripts/captions for future audiovisual content, and equivalent written
+  steps for interactive demonstrations.
+- Contributor instructions:
+  /home/runner/work/document-processing-docs/document-processing-docs/README.md:15-65
+  Add a short accessibility checklist and direct links to the local authoritative
+  resources, alongside the existing Wiki reference. Include an accessibility
+  review item in contribution/PR review policy.
+- Review process: require evidence of a text-only walkthrough and an asset review
+  for screenshot-heavy changes. Human reviewers should judge equivalent meaning,
+  not simply the presence of alt syntax or a passing numeric score.
+
+# Automation Opportunities
+
+No new lint/test infrastructure is included in this report-only change. The
+README describes bundle install/jekyll serve, but this checkout has no Gemfile,
+package manifest, Markdown lint configuration, or local documentation test suite
+identified during inspection. Site generation depends on the documentation
+pipeline. The inspected publishing workflow does not provide an accessibility
+content gate:
+/home/runner/work/document-processing-docs/document-processing-docs/.github/workflows/publish-kb.yml
+
+Suggested implementation, in priority order:
+
+1. Markdown linting: enforce sequential headings and fenced language labels.
+   Configure single-H1 checks by verified template type, not a blanket rule for
+   KB source. Parse Markdown rather than regex-matching code/comments as prose.
+2. Documentation validation: inspect both Markdown images and raw HTML img tags;
+   reject missing alt, and flag filename-like alternatives for human review.
+   Allow intentionally decorative images only with documented context.
+3. Table checks: flag blank header cells, empty data cells, and color-only spans;
+   warn on wide tables and image-only table cells. Do not require bold text where
+   a valid Markdown delimiter already creates headers.
+4. Link checks: flag generic anchors and URL labels, report identical labels with
+   different normalized destinations within a page, and resolve slug syntax.
+   Exempt genuine API names only after contextual review; do not auto-rewrite.
+5. Code checks: lint expanded snippets as well as local fences. Treat length,
+   missing introductions, placeholders, and absent outcomes as review signals,
+   not proof that the example is unusable.
+6. Asset checks: validate relative assets exist and inspect GIF duration/looping.
+   Route animations to a static-alternative and published-control review.
+   Future video/audio additions should require captions/transcript metadata.
+7. CI/CD: run change-scoped checks on pull requests and a scheduled full inventory.
+   Return file/line diagnostics and preserve a reviewed baseline of existing debt.
+   Validate generated article HTML for H1 count, table headers, callout text, and
+   heading outlines once the real renderer/snippet expansion is available.
+8. Repository policy: assign an article owner and reviewer for exceptions, require
+   reasons and re-review dates, and keep human checks for equivalent image meaning,
+   plain language, warning severity, media controls, and linear reading order.
+
+Success measures: no new missing alternatives or heading skips; all F01 reference
+values readable without CSS; F04 completable without its screenshot; no empty
+headers on the introductory routes; and documented outcomes for the verification
+queue. Automated checks supplement, not replace, assistive-technology review.
+
+# Appendix A — Heading-Skip Remediation Inventory
+
+These are source line numbers at the audited revision. Each listed line increases
+heading depth by more than one from the preceding source heading.
+
+/home/runner/work/document-processing-docs/document-processing-docs/ai-tools/agent-tools/multi-user-scenario.md:22
+/home/runner/work/document-processing-docs/document-processing-docs/getting-started/installation/pdf-export.md:27,77
+/home/runner/work/document-processing-docs/document-processing-docs/getting-started/installation/telerik-cli.md:48,92
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/wordsprocessing-add-different-images-when-mailmerging.md:26
+/home/runner/work/document-processing-docs/document-processing-docs/knowledge-base/wordsprocessing-fit-image.md:27
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/concepts/colors-and-color-spaces.md:162
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/concepts/fonts.md:89
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/editing/fixedcontenteditor.md:46,196
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/editing/radfixeddocumenteditor.md:22,202,212,222,232
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/formats-and-conversion/ocr/prerequisites.md:106
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/getting-started.md:26,41
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/model/actions/gotor-actions.md:29
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/model/actions/js-actions/javascript-actions.md:39
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/model/actions/launch-actions.md:24
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/model/actions/named-actions.md:74
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radpdfprocessing/model/radfixeddocument.md:65,75
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadprocessing/features/filtering.md:56
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadprocessing/formats-and-conversion/import-and-export-to-excel-file-formats/xlsx/xlsxformatprovider.md:31,39
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadprocessing/getting-started.md:28,44
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadprocessing/working-with-cells/get-set-clear-properties.md:130,147
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadprocessing/working-with-worksheets/what-is-worksheet.md:65
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadstreamprocessing/features/autofilter.md:210
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radspreadstreamprocessing/getting-started.md:43,70
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/concepts/fields/toc-field.md:65
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/editing/clone-and-merge.md:23,52,75
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/formats-and-conversion/html/htmlformatprovider.md:29,47
+/home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/getting-started.md:43,55
+
+# Appendix B — Skill-Format Article Score
+
+This JSON is a source-level score for one inspected article, not an aggregate
+repository grade. A high average can conceal a serious individual barrier (F01).
+External snippet bodies and rendered behavior are explicitly outside this score.
+Calculation: 4×0.20 + 5×0.20 + 5×0.15 + 1×0.10 + 3×0.15 + 1×0.10
+             + 5×0.05 + 5×0.05 = 3.7.
+
+{
+  "file": "/home/runner/work/document-processing-docs/document-processing-docs/libraries/radwordsprocessing/concepts/document-themes.md",
+  "overall_score": "3.7",
+  "dimensions": {
+    "heading_structure": {
+      "score": 4,
+      "rationale": "The article has one H1 and no skipped heading levels. The font-scheme reference is nested under the color-scheme reference instead of being its peer.",
+      "violations": ["Line 171: Predefined ThemeFontSchemes is H3 beneath the H2 Predefined ThemeColorSchemes at line 121."]
+    },
+    "alternative_text": {
+      "score": 5,
+      "rationale": "The article contains no Markdown images or HTML img elements. CSS swatches are assessed under tables and formatting independence.",
+      "violations": []
+    },
+    "link_text_clarity": {
+      "score": 5,
+      "rationale": "Links use descriptive topic or API names. No generic here links or bare URL labels were identified in this article.",
+      "violations": []
+    },
+    "table_accessibility": {
+      "score": 1,
+      "rationale": "The reference tables have valid headers and introductions. All 504 color-data cells in the 13-column color table lack textual values.",
+      "violations": ["Lines 125-168: 42 rows contain 12 color cells each with only empty styled spans.", "The wide reference matrix requires substantial cross-column navigation."]
+    },
+    "plain_language": {
+      "score": 3,
+      "rationale": "The article introduces its central concepts but uses long explanations and indirect references. Shorter sentences and explicit parameter names would reduce working-memory demand.",
+      "violations": ["Line 14 combines colors, fonts, graphic effects, and document appearance in one long sentence.", "Line 79 uses former and latter instead of repeating parameter names.", "Line 91 combines constructor alternatives with their consequences."]
+    },
+    "formatting_independence": {
+      "score": 1,
+      "rationale": "The color reference supplies its actual data solely through CSS background colors. Hexadecimal values occur in style attributes rather than readable text.",
+      "violations": ["Lines 127-168: empty colored spans have no textual color values or accessible labels."]
+    },
+    "callout_structure": {
+      "score": 5,
+      "rationale": "No inconsistent callout or warning-label pattern was identified in this article.",
+      "violations": []
+    },
+    "code_block_accessibility": {
+      "score": 5,
+      "rationale": "The local source has no fenced code blocks and its nine external snippets have descriptive captions. This score covers local presentation only, not unresolved snippet bodies.",
+      "violations": []
+    }
+  }
+}
