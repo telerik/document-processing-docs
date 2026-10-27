@@ -28,7 +28,7 @@ The `Signature` class exposes two methods for validating a signature:
 | Method | Description |
 |---|---|
 | `Validate()` | Accepts a `SignatureValidationProperties` parameter and validates the signature using those properties. Returns a [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html). |
-| `TryValidate()` | Returns a `bool` indicating whether validation succeeded. The first overload accepts an `out` parameter containing a [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html); the second overload also accepts `SignatureValidationProperties`. |
+| `TryValidate()` | Returns `true` if validation completes without an exception. This does not mean the signature is valid. Check the returned [SignatureValidationResult](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.DigitalSignatures.SignatureValidationResult.html) through the `out` parameter. An overload also accepts `SignatureValidationProperties`. |
 
 ## Validation Properties
 
@@ -49,10 +49,11 @@ The `Validate()` and `TryValidate()` methods return a `SignatureValidationResult
 |---|---|---|
 | `FieldName` | `string` | The name of the signature form field associated with this result. |
 | `IsDocumentModified` | `bool` | Indicates whether the signed byte ranges were altered after signing. |
-| `IsCertificateValid` | `bool` | Indicates whether the signing certificate builds a valid chain. Check `CertificatesChainElements` for details when the certificate is invalid. |
+| `CoversWholeDocument` | `bool` | Read-only. Shows whether the signature covers the entire current PDF, except for its own signature bytes. |
+| `IsCertificateValid` | `bool` | Shows whether the signing certificate passes your certificate-validation settings. Check `CertificatesChainElements` for details when the certificate is not valid. |
 | `Certificates` | `X509Certificate2Collection` | The certificates included with the signature, used to validate the chain. |
 | `CertificatesChainElements` | `X509ChainElementCollection` | Chain elements produced during validation that describe any issues with the certificate path. |
-| `SignerInformation` | `string` | Signer information, typically the name or entity extracted from the signature. |
+| `SignerInformation` | `string` | Built-in handlers return the signing certificate's full `Subject`, not the PDF `Name`. Custom handlers can return different signer information. |
 | `HashAlgorithm` | `Oid` | The hash algorithm OID used to compute the message digest for this signature. |
 | `HashAlgorithmName` | `string` | The friendly name of the hash algorithm (for example, `SHA1` or `SHA256`), falling back to the OID value string when no friendly name is available. Returns `null` when `HashAlgorithm` is not set. |
 
@@ -65,6 +66,60 @@ The following example shows how to validate a signature field:
 <snippet id='pdf-validate-signature'/>
 
 >tip To evaluate a certificate as trusted, add it to the [trusted certificates on your machine](https://learn.microsoft.com/en-us/dotnet/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in).
+
+## Whole-Document Coverage
+
+Use `CoversWholeDocument` to check whether a signature covers the entire current PDF. Only the matching hexadecimal `/Contents` value, which holds the signature bytes, is excluded. Validation calculates this read-only value for built-in and custom handlers. `SignatureValidationResultBuilder` has no method to set it.
+
+Coverage does not prove that a signature is valid or its certificate is trusted. A signature can cover the whole PDF even if its signed bytes have changed. In that case, both `CoversWholeDocument` and `IsDocumentModified` can be `true`.
+
+An *incremental update* adds a new PDF revision without changing earlier signed bytes. An earlier signature can then report `IsDocumentModified == false` and `CoversWholeDocument == false`: its signed bytes are unchanged, but later content is not covered.
+
+>important Partial coverage does not mean later changes are unauthorized. A later signature, timestamp, or Document Security Store (DSS) update can also cause partial coverage. Validation does not check whether document or field permissions (`DocMDP` or `FieldMDP`) allow those changes.
+
+For an imported, signed `signatureField`, check all three results together. Keep the original source stream open during validation.
+
+```csharp
+using System;
+using System.Security.Cryptography.X509Certificates;
+using Telerik.Documents.Fixed.Model.DigitalSignatures;
+
+var validationProperties = new SignatureValidationProperties
+{
+    ChainStatusFlags = (X509ChainStatusFlags)~0
+};
+
+using (X509Chain chain = validationProperties.Chain)
+{
+    chain.ChainPolicy.VerificationFlags = X509VerificationFlags.NoFlag;
+    chain.ChainPolicy.RevocationMode = X509RevocationMode.Online;
+    chain.ChainPolicy.UrlRetrievalTimeout = TimeSpan.FromSeconds(10);
+
+    SignatureValidationResult result = signatureField.Signature.Validate(validationProperties);
+
+    bool signedCurrentSource = !result.IsDocumentModified
+        && result.IsCertificateValid
+        && result.CoversWholeDocument;
+
+    Console.WriteLine("Current PDF passes all three checks: " + signedCurrentSource);
+}
+```
+
+The example rejects all reported certificate-chain errors. Online revocation checks can fail without network access. Even when all three checks pass, they do not check modification permissions.
+
+Default certificate settings have not changed. They do not reject expired certificates, unknown or offline revocation status, or usage errors. Set `ChainStatusFlags` and `Chain.ChainPolicy` to match your trust requirements.
+
+## Signer Identity
+
+`Signature.Properties.Name` is a name stored in the PDF, not proof of the signer's identity. Use the certificate-based `SignerInformation` from built-in handlers instead. Custom handlers define their own identity rules.
+
+Before trusting the identity, check `IsDocumentModified` and `IsCertificateValid`. Also check `CoversWholeDocument` if you require a signature for the entire current PDF.
+
+## Concurrent Validation
+
+A shared validation handler processes one call at a time. If a call starts another validation on the same thread, the first call's state is restored afterward, even after an exception.
+
+For concurrent validation, use separate `SignatureValidationProperties` and `X509Chain` instances. Different handlers do not coordinate access to shared source streams or certificate chains.
 
 ## Signing Time and Time Zone
 

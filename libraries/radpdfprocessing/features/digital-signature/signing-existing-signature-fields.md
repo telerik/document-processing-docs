@@ -69,8 +69,17 @@ The helper method below builds a visual appearance that displays the signer name
 
 Each call to `SignExistingField` with a `FormSource` replaces the widget appearance of the target field. Pass `null` for the `appearance` parameter to preserve the existing widget appearance.
 
+## Applying Existing Field Locks
+
+`SignExistingField` honors the target signature field's lock settings stored in the input PDF. It adds the field-lock rule to the signature and marks the affected form fields as read-only in the output.
+
+To prepare these settings, use `SignatureField.LockAllFields()`, `LockFields(...)`, or `LockAllFieldsExcept(...)` before you export the unsigned PDF. For configuration examples and lock modes, see [signature-field lock settings]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%}#locking-fields-after-signing).
+
+>important A lock can include other signature fields. Leave fields required for later signatures outside the lock. `LockAllFields()` locks every form field, including unsigned signature fields.
+
 ## See Also
 
 * [Digital Signature in RadPdfProcessing]({%slug radpdfprocessing-features-digital-signature%})
 * [Interactive Forms]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})
+* [Signature Fields and Lock Configuration]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
