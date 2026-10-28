@@ -33,7 +33,7 @@ Use Telerik Document Processing [RadSpreadProcessing]({%slug radspreadprocessing
 2. Add a button to trigger the export functionality.
 3. Use RadSpreadProcessing to export data from the DataGridView to an Excel file.
 
-The example is divided into consecutive parts of the same `Form1` class. Combine the C# blocks in order; individual blocks are not standalone examples. Navigate to the part you need:
+The example is divided into consecutive parts of the same `Form1` class. Combine the C# blocks in order. Individual blocks are not standalone examples. Navigate to the part you need:
 
 * [Initializing the form](#initializing-the-form)
 * [Loading sample data](#loading-sample-data)

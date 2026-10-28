@@ -77,7 +77,9 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 
 This method removes the `MERGEFIELD` effectively, leaving only the value in the document.
 
-Before replacement, the document contains `MERGEFIELD` entries for the first and last names. For an optional visual demonstration, [view the animated merge-field example before replacement](images/mergeFields.gif).
+Before replacement, the document contains `MERGEFIELD` entries for the first and last names:
+
+![Merge Fields Before](images/mergeFields.gif)
 
 After replacement, the document contains the plain-text values `John` and `Smith`:
 

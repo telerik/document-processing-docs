@@ -95,7 +95,7 @@ Next, verify your [MCP configuration](#configuration), then [configure your Tele
 
 Use the [installation instructions](#installation), then follow the [Visual Studio Code configuration steps](#visual-studio-code) to enable the server.
 
-For an optional visual demonstration, [view the animated walkthrough of MCP server setup in Visual Studio Code](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif).
+For an optional visual demonstration, view the animated walkthrough of MCP server setup in Visual Studio Code: ![Visual Studio Code walkthrough for installing and configuring the Telerik DPL MCP Server](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif)   
 
 ## Configuration
 

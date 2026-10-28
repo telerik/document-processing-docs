@@ -34,15 +34,15 @@ When you already have a `StructureTree`, export the document with [`TaggingStrat
 
 The following screenshots show the validation and structure views for the generated PDF.
 
-**PDF Accessibility Checker validation**
+>caption PDF Accessibility Checker validation
 
 ![Accessible PDF validation in PDF Accessibility Checker.](images/accessible-pdf-validity.png)
 
-**Logical structure**
+>caption Logical structure
 
 ![Logical structure of the generated PDF.](images/accessible-pdf-logical-structure.png)
 
-**Logical structure properties**
+>caption Logical structure properties
 
 ![Properties associated with the PDF logical structure.](images/accessible-pdf-logical-structure-properties.png)
 

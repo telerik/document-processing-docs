@@ -53,7 +53,7 @@ The `GetValue()` method provides the value that the `ShouldShowValue()` method u
 
 The diagram in **Figure 1** shows the different types of filters that inherit the `IFilter` interface and the classes that implement them:
 
-**Figure 1: Filter types**
+>caption Figure 1: Filter types
 
 ![Filter types class diagram](images/RadSpreadProcessing_Filtering_01.png)
 

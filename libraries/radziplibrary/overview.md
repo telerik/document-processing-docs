@@ -17,7 +17,7 @@ components: [ziplibrary]
 
 You can compress data such as images, DOCX files, and PDF files before you transfer or store it.
 
-Use the library to create ZIP archives or extract files from existing archives, as described in [Getting Started with RadZipLibrary]({%slug radziplibrary-gettingstarted%}). For an optional visual demonstration, [view the animated RadZipLibrary overview](images/ziplibrary-overview.gif).
+Use the library to create ZIP archives or extract files from existing archives, as described in [Getting Started with RadZipLibrary]({%slug radziplibrary-gettingstarted%}). For a visual demonstration, view the animated RadZipLibrary overview ![RadZipLibrary sample app with seven selectable text files, controls to save a ZIP file, read an archive, or clear the current ZIP, and a table for file names, uncompressed sizes, and compressed sizes](images/ziplibrary-overview.gif).
 
 ## Key Features
 
