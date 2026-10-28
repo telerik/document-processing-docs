@@ -1,5 +1,5 @@
 ---
-title: Handling Local Path Images When Importing HTML Documents in Telerik WordsProcessing
+title: Handling Local Image Paths When Importing HTML with RadWordsProcessing
 description: Learn how to resolve the issue of local path images not rendering in DocX files when converting HTML using Telerik WordsProcessing.
 type: how-to
 page_title: Resolving Local Path Image Rendering Issue When Importing HTML Documents
@@ -10,7 +10,7 @@ res_type: kb
 ticketid: 1699078
 ---
 
-# Handling Local Path Images When Importing HTML Documents in Telerik WordsProcessing
+# Handling Local Image Paths When Importing HTML with RadWordsProcessing
 
 Load local images during HTML import with the WordsProcessing `LoadImageFromUri` event.
 

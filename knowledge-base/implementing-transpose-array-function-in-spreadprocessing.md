@@ -1,16 +1,16 @@
 ---
-title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
+title: Implementing the TRANSPOSE Function in RadSpreadProcessing
 description: Learn how to implement the TRANSPOSE(cells range) function in Telerik Document Processing Libraries.
 type: how-to
-page_title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
-meta_title: Implementing TRANSPOSE(cells range) Function in SpreadProcessing
+page_title: Implementing the TRANSPOSE Function in RadSpreadProcessing
+meta_title: Implementing the TRANSPOSE Function in RadSpreadProcessing
 slug: implementing-transpose-array-function-in-spreadprocessing
 tags: radspreadprocessing, excel, formula, function, transpose, array, document, processing
 res_type: kb
 ticketid: 1710562
 ---
 
-# Implementing TRANSPOSE(cells range) Function in SpreadProcessing
+# Implementing the TRANSPOSE Function in RadSpreadProcessing
 
 ## Environment
 

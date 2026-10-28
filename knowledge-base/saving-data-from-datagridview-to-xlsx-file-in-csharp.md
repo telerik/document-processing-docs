@@ -1,5 +1,5 @@
 ---
-title: Exporting Data from DataGridView Control to Excel File
+title: Exporting Data from a DataGridView Control to an Excel File
 description: Learn how to save data from a DataGridView control to an Excel file using Telerik Document Processing and C# in a Windows Forms application.
 type: how-to
 page_title: Saving Data from DataGridView to XLSX File in C# Windows Forms
@@ -10,7 +10,7 @@ res_type: kb
 ticketid: 1707838
 ---
 
-# Exporting Data from DataGridView Control to Excel File
+# Exporting Data from a DataGridView Control to an Excel File
 
 Export Windows Forms grid data and column headers to an XLSX workbook with RadSpreadProcessing.
 

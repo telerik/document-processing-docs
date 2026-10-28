@@ -50,7 +50,7 @@ In scenarios where you need to convert a document from another file format to PD
 
 Use the following packages and example to convert HTML content to PDF.
 
-#### Required packages
+**Required packages:**
 
 * **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows 
     * Telerik.Windows.Documents.Flow.FormatProviders.Pdf

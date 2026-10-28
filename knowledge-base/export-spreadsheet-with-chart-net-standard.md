@@ -1,8 +1,8 @@
 ---
-title: Exporting Spreadsheet with Bar Charts in .NET Standard
+title: Exporting Spreadsheets with Bar Charts in .NET Standard
 description: Learn how to export a spreadsheet containing a chart to PDF format in a .NET Standard application using Telerik Document Processing libraries.
 type: how-to
-page_title: Export Spreadsheet with Bar Charts in .NET Standard
+page_title: Exporting Spreadsheets with Bar Charts in .NET Standard
 meta_title: Export Spreadsheet with Bar Charts in .NET Standard
 slug: export-spreadsheet-with-chart-net-standard
 tags: radspreadprocessing, spreadsheet, charts, pdf, export, images, netstandard, conversion
@@ -10,7 +10,7 @@ res_type: kb
 ticketid: 1663021
 ---
 
-# Exporting Spreadsheet with Bar Charts in .NET Standard
+# Exporting Spreadsheets with Bar Charts in .NET Standard
 
 Convert spreadsheet charts to images before exporting the workbook to PDF in .NET Standard.
 

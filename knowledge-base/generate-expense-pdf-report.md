@@ -1,8 +1,8 @@
 ---
-title: Generate PDF Expense Report
+title: Generating a PDF Expense Report
 description: Learn how to generate a PDF expense report with image and PDF attachments using the RadPdfProcessing library from Telerik Document Processing.
 type: how-to
-page_title: How to generate an expense report
+page_title: Generating a PDF Expense Report
 meta_title: How to generate an expense report
 slug: generate-expense-pdf-report
 tags: radpdfprocessing, pdf, report, expense, attachment, document, processing, telerik
@@ -10,7 +10,7 @@ res_type: kb
 ticketid: 1710179
 ---
 
-# Generate PDF Expense Report
+# Generating a PDF Expense Report
 
 Create an expense report with receipt images and PDF attachments using RadPdfProcessing.
 

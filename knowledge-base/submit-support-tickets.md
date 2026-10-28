@@ -1,15 +1,15 @@
 ---
-title: How to Get the Most Out of the Telerik Document Processing Support 
+title: Getting Support for Telerik Document Processing
 description: Learn how to get the most out of the Telerik Document Processing Support by submitting effective support tickets with the right information and resources.
 type: how-to
-page_title: How to Get the Most Out of the Telerik Document Processing Support   
+page_title: Getting Support for Telerik Document Processing
 slug: submit-support-tickets
 position: 0
 tags: support, telerik, document, processing, ticket, help, community, forum
 res_type: kb
 ---
 
-# How to Get the Most Out of the Telerik Document Processing Support
+# Getting Support for Telerik Document Processing
 
 Find support resources and prepare a Telerik Document Processing support request with the information needed to investigate your issue.
 

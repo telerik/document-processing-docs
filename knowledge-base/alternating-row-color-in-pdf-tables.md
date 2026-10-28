@@ -1,16 +1,16 @@
 ---
-title: How to Achieve Alternating Row Color for Tables in PdfProcessing
+title: Adding Alternating Row Colors to PDF Tables with RadPdfProcessing
 description: Learn how to create alternating row color styles for PDF tables with styled headers using Telerik RadPdfProcessing.
 type: how-to
-page_title: How to Achieve Alternating Row Color for Tables in PdfProcessing
-meta_title: How to Achieve Alternating Row Color for Tables in PdfProcessing
+page_title: Adding Alternating Row Colors to PDF Tables with RadPdfProcessing
+meta_title: Adding Alternating Row Colors to PDF Tables with RadPdfProcessing
 slug: alternating-row-color-in-pdf-tables
 tags: radpdfprocessing, pdf, table, style, border, alternating, row, color, header
 res_type: kb
 ticketid: 1700632
 ---
 
-# How to Achieve Alternating Row Color for Tables in PdfProcessing
+# Adding Alternating Row Colors to PDF Tables with RadPdfProcessing
 
 Use RadPdfProcessing to style table headers and alternate the background colors of data rows.
 

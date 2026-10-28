@@ -1,15 +1,15 @@
 ---
-title: Populate RadFlowDocument with different Images when performing a Mail Merge
+title: Adding Different Images to a RadFlowDocument During Mail Merge
 description: Learn how to populate a RadFlowDocument with different images while performing a mail merge with RadWordsProcessing.
 type: how-to
-page_title: Populate RadFlowDocument with different Images when performing a Mail Merge
+page_title: Adding Different Images to a RadFlowDocument During Mail Merge
 slug: wordsprocessing-add-different-images-when-mailmerging
 position: 0
 tags: radwordsprocessing, mailmerge, image, radflowdocument, word, document, processing, docx
 res_type: kb
 ---
 
-# Populate RadFlowDocument with different Images when performing a Mail Merge
+# Adding Different Images to a RadFlowDocument During Mail Merge
 
 Use a mail merge to populate a document with different images for each person.
 

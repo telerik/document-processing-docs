@@ -1,15 +1,15 @@
 ---
-title: How to Upgrade Trial to Licensed Version
+title: Upgrading Telerik Document Processing from Trial to Licensed Version
 description: Learn how to upgrade from a Telerik Document Processing trial version to a licensed version by replacing assemblies or NuGet packages in your project.
 type: how-to
-page_title: How to Upgrade Trial to Licensed Version
+page_title: Upgrading Telerik Document Processing from Trial to Licensed Version
 slug: upgrade-trial-to-licensed-version
 position: 0
 tags: telerik, license, trial, upgrade, document, processing, purchase, commercial
 res_type: kb
 ---
 
-# How to Upgrade Trial to Licensed Version
+# Upgrading Telerik Document Processing from Trial to Licensed Version
 
 Replace trial assemblies or NuGet packages with licensed versions for releases before Q2 2025.
 

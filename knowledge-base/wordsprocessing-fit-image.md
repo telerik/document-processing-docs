@@ -1,8 +1,8 @@
 ---
-title: How do I add an image using WordsProcessing with the correct aspect ratio?
+title: Fitting Images to the Correct Aspect Ratio in RadWordsProcessing
 description: Learn how you can resize an image to fit into a page while keeping its aspect ratio.
 type: how-to
-page_title: Fit image to page using WordsProcessing
+page_title: Fitting Images to the Correct Aspect Ratio in RadWordsProcessing
 slug: wordsprocessing-fit-image
 position: 0
 tags: radwordsprocessing, docx, image, aspect, ratio, resize, document, processing
@@ -10,7 +10,7 @@ ticketid: 1531113
 res_type: kb
 ---
 
-# How do I add an image using WordsProcessing with the correct aspect ratio?
+# Fitting Images to the Correct Aspect Ratio in RadWordsProcessing
 
 Resize an image to fit a document page while preserving its aspect ratio.
 

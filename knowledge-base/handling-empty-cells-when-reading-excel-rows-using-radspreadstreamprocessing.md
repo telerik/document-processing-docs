@@ -1,8 +1,8 @@
 ---
-title: Traversing Documents with Empty Cells When Reading Excel Rows Using RadSpreadStreamProcessing
+title: Reading Excel Rows with Empty Cells in RadSpreadStreamProcessing
 description: Learn how to handle empty cells when reading Excel rows using RadSpreadStreamProcessing to maintain data alignment with the Excel file.
 type: how-to
-page_title: Traversing Documents with Empty Cells When Reading Excel Rows Using RadSpreadStreamProcessing
+page_title: Reading Excel Rows with Empty Cells in RadSpreadStreamProcessing
 meta_title: Traversing Documents with Empty Cells When Reading Excel Rows Using RadSpreadStreamProcessing
 slug: handling-empty-cells-when-reading-excel-rows-using-radspreadstreamprocessing
 tags: spread,stream,processing, telerik, document, excel, rows, empty, cells, datatable
@@ -10,7 +10,7 @@ res_type: kb
 ticketid: 1680377
 ---
 
-# Traversing Documents with Empty Cells When Reading Excel Rows Using RadSpreadStreamProcessing
+# Reading Excel Rows with Empty Cells in RadSpreadStreamProcessing
 
 Preserve column alignment when importing Excel rows with empty cells into a `DataTable`.
 

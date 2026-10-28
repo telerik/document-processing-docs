@@ -1,15 +1,15 @@
 ---
-title: How to Remove a MERGEFIELD While Replacing the Placeholders with Values in RadWordsProcessing
+title: Removing MERGEFIELD Codes While Replacing Placeholders with Values in RadWordsProcessing
 description: Learn how to remove a MERGEFIELD from a document while replacing the placeholders with actual values using the MailMerge process in RadWordsProcessing.
 type: how-to
-page_title: How to Remove a MERGEFIELD While Replacing the Placeholders with Values in RadWordsProcessing
+page_title: Removing MERGEFIELD Codes While Replacing Placeholders with Values in RadWordsProcessing
 slug: remove-mergefields-retain-values-radwordsprocessing
 tags: radwordsprocessing, mailmerge, fields, docx, word, document, processing, template
 res_type: kb
 ticketid: 1667593
 ---
 
-# How to Remove a MERGEFIELD While Replacing the Placeholders with Values in RadWordsProcessing
+# Removing MERGEFIELD Codes While Replacing Placeholders with Values in RadWordsProcessing
 
 Remove merge-field codes and replace their placeholders with plain-text values in a Word document.
 
