@@ -144,8 +144,6 @@ Information must never rely solely on color, bold, italic, or other visual forma
 
 Callout blocks (notes, warnings, tips, important notices, and cautions) must use a consistent semantic pattern so that assistive technologies and downstream rendering tools can identify and announce them appropriately. This repository supports `>note`, `>important`, `>caution`, `>warning`, and `>tip`.
 
-Use the explicit type markers described in the [formatting guidance](../telerik-documentation-style-guide/style-formatting/SKILL.md#admonitions-notes-tips-cautions), including `>note` for notes. A plain `>` blockquote does not explicitly identify its callout type.
-
 | Check | Pass condition | Violation examples |
 |---|---|---|
 | Callouts use a consistent pattern | Notes, warnings, tips, important notices, and cautions use the platform's designated syntax (`>note`, `>warning`, `>important`, `>caution`, `>tip`) | Mixing `> **Note:**`, `**NOTE:**`, `NOTE:` plain text, and repository callouts in the same article |
