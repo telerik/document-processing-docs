@@ -19,20 +19,30 @@ If you are getting started, you can find guidance in the following articles:
 
 You do not need all of this immediately, but you can use this list as a starting point for future reference. 
 
-Installation, Distribution and Licensing
+### Installation, Distribution and Licensing
+
+Review the requirements and installation steps:
+
 * [Review Document Processing system requirements]({%slug installation-system-requirements%})
 * [Install Telerik Document Processing on your computer]({%slug installation-installing-on-your-computer%})
 
-Integration and Upgrades
+### Integration and Upgrades
+
+Follow the integration and upgrade guides:
+
 * [Integrate Telerik Document Processing with Visual Studio]({% slug integration-with-visual-studio %})
 * [Follow the Telerik Document Processing upgrade instructions]({% slug installation-upgrade-instructions %})
 
-Additional Tools and Resources
-* [Browse Telerik Document Processing SDK examples](https://github.com/telerik/document-processing-sdk)
+### Additional Tools and Resources
 
-Getting started articles
+[Browse Telerik Document Processing SDK examples](https://github.com/telerik/document-processing-sdk) for additional scenarios.
 
-||||||
-|----|----|----|----|----|
-|[RadPdfProcessing]({%slug radpdfprocessing-getting-started%})|[RadSpreadProcessing]({%slug radspreadprocessing-getting-started%})|[RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})|[RadWordsProcessing]({%slug radwordsprocessing-getting-started%})|[RadZipLibrary]({%slug radziplibrary-gettingstarted%})|
-|Create, import and export PDF documents.|Create, import and export XLSX, CSV and TXT spreadsheet documents, and export them to PDF.|Export large XLSX and CSV spreadsheet documents with low memory footprint and great performance.|Create, import and export DOCX, HTML, RTF and TXT documents, and export them to PDF.|Compress and decompress ZIP files.|
+### Getting Started Articles
+
+Choose a library to follow its getting-started guide:
+
+* [RadPdfProcessing]({%slug radpdfprocessing-getting-started%})—Create, import, and export PDF documents.
+* [RadSpreadProcessing]({%slug radspreadprocessing-getting-started%})—Create, import, and export XLSX, CSV, and TXT spreadsheet documents, and export them to PDF.
+* [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-getting-started%})—Export large XLSX and CSV spreadsheet documents with a low memory footprint.
+* [RadWordsProcessing]({%slug radwordsprocessing-getting-started%})—Create, import, and export DOCX, HTML, RTF, and TXT documents, and export them to PDF.
+* [RadZipLibrary]({%slug radziplibrary-gettingstarted%})—Compress and decompress ZIP files.

@@ -17,6 +17,8 @@ img[alt$="><"] {
 
 </style>
 
+Correct substituted apostrophe characters in filled PDF form fields by updating their font.
+
 ## Environment
 
 | Version | Product | Author | 
@@ -27,7 +29,9 @@ img[alt$="><"] {
 
 Learn how to address the issue where a special symbol (for example, apostrophe character) is replaced by a copyright (or other) symbol in a filled PDF AcroForm using RadPdfProcessing. When the form is opened for editing in a viewer (like Adobe Acrobat), the character appears correctly as an apostrophe in the editor itself. 
 
-![apostrophe-character-replaced-copyright-symbol-acroform ><](images/apostrophe-character-replaced-copyright-symbol-acroform.gif)  
+View the animation comparing the apostrophe in editing mode with the substituted symbol in the filled form: 
+
+![Animation comparing an apostrophe in a PDF AcroForm field during editing with its substituted copyright symbol in the filled form](images/apostrophe-character-replaced-copyright-symbol-acroform.gif).
 
 >note This behavior can occur with other symbols as well, not only with the apostrophe character. Usually, such behavior may occur with XFA forms. However, starting with PDF 2.0 (ISO 32000-2), XFA forms are deprecated.
 

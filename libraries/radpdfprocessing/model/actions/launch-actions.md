@@ -21,7 +21,7 @@ RadPdfProcessing supports **Launch actions** that PDF viewer applications are ex
 |`File`|Gets or sets the remote file for the action.|
 |`OpenInNewWindow`|Gets or sets a value indicating whether to open the destination document in a new window. Set to `true` to open in a new window, or `false` otherwise.|
 
-### Adding a Launch Action to a Document
+## Adding a Launch Action to a Document
 
 The following example shows how to create a PDF document and add a `LaunchAction` to a [Link annotation]({%slug radpdfprocessing-model-annotations-links%}) that opens another PDF document in a new window:
 

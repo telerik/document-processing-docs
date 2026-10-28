@@ -91,7 +91,7 @@ Tables must communicate the relationship between cells and headers. Without prop
 |---|---|---|
 | Data tables have header rows | The first row of every data table uses header-level formatting in markdown | Table with no bold or distinguished first row |
 | Tables are not used for layout | Tables contain data with genuine row-column relationships | A two-column table used only to place an image next to text |
-| No empty cells in data tables | Every cell has a value; blanks are replaced with `N/A`, `Not applicable`, or `None` | Empty cells that leave relationships ambiguous |
+| No ambiguous empty cells in data tables | Every cell has a meaningful value; use `Not applicable` or `None` only when accurate. Label intentional blanks in example data and explain their meaning | Empty cells that leave relationships ambiguous |
 | Complex tables have a lead-in sentence | A sentence immediately before a complex table explains its structure | A six-column table dropped in with no introductory sentence |
 | Tables are not used to replicate prose | Information expressible as a list or paragraph is not forced into table form | A two-row, two-column table that could be a single sentence |
 
@@ -129,7 +129,7 @@ Information must never rely solely on color, bold, italic, or other visual forma
 | Check | Pass condition | Violation examples |
 |---|---|---|
 | Color alone does not convey meaning | No instruction requires the reader to interpret color to understand content | "The red items require action" with no other distinguishing marker |
-| Bold is not the only signal for warnings | Critical information uses a callout block (`>note`, `>warning`, `>important`, or `>caution`) in addition to or instead of bold text | "**Do not run this command on production.**" without a callout admonition |
+| Bold is not the only signal for warnings | Critical information uses a severity-appropriate callout (`>warning`, `>important`, or `>caution`) in addition to or instead of bold text; reserve `>note` for supplemental information | "**Do not run this command on production.**" without a callout admonition |
 | Formatting does not substitute for structure | Information structured through visual formatting (indentation, spacing, italic) also has semantic structure | A pseudo-list created with manual em-dash indentation instead of a markdown list |
 | Underlines are reserved for hyperlinks | Underlined text is not used for emphasis since it signals a link to most readers | Underlined text used for emphasis in a context without any link |
 
@@ -168,11 +168,16 @@ Code blocks must be annotated so that syntax-highlighting tools, screen reader e
 | Code is introduced in surrounding prose | At least one sentence before each block describes what it does or what it contains | Code block dropped in with no introductory sentence |
 | Variable placeholders are clearly distinguished | Placeholders use a consistent notation such as `<placeholder>` or `[placeholder]` so readers know what to substitute | A code block containing `YOUR_API_KEY` mixed with literal values, with no explanation |
 | Commands show expected outcome when relevant | For CLI commands, the expected output or result is shown or described | `dotnet run` with no indication of whether the command succeeds silently or prints output |
+| Long examples are navigable | Long code examples have a task overview and descriptive headings or logical chunks, without changing code behavior | A long block with no explanation of its stages |
 
 **Scoring guide:**
 - 5: All code blocks have language tags, are introduced in prose, and placeholders are clearly marked.
 - 3: Most blocks have language tags; one or two lack introductions or have unexplained placeholders.
 - 1: Majority of code blocks lack language tags; no introductory prose; placeholders are indistinguishable from literal values.
+
+### Animated Media Review
+
+Review animated images as part of alternative text and formatting independence. Provide equivalent written steps or results so that motion is not the only source of information. If readers cannot pause or stop playback, use a static image or a descriptive link to an optional animation instead of an automatically playing embed.
 
 ---
 

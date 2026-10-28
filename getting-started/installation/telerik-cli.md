@@ -45,7 +45,7 @@ The `dotnet tool install` command provides a few ways for you to install .NET to
 * To install the Telerik CLI in a custom location, use the `--tool-path` option.
 * To install the Telerik CLI in the current folder only, omit the `-g` and `--tool-path` options.
 
-#### Verify Telerik CLI Installation
+### Verify Telerik CLI Installation
 
 To verify the installation:
 
@@ -53,14 +53,14 @@ To verify the installation:
 dotnet tool list -g
 ```
 
-#### Update Telerik CLI
+### Update Telerik CLI
 
 To update to the latest version:
 
 ```powershell
 dotnet tool update -g Telerik.CLI
 ```
-#### Uninstall Telerik CLI
+### Uninstall Telerik CLI
 
 To uninstall the Telerik CLI:
 
@@ -89,7 +89,7 @@ The Telerik CLI stores a session token in:
 | macOS / Linux | `~/.telerik` |
 The session token is valid for one month.
 
-#### Check Login State
+### Check Login State
 
 To see which Telerik user is logged in the CLI, use the `whoami` command:
 
@@ -99,7 +99,7 @@ telerik whoami
 
 The CLI will output your Telerik user account email.
 
-#### Log Out from Your Telerik Account
+### Log Out from Your Telerik Account
 
 To log out from the Telerik CLI, use the `logout` command.
 

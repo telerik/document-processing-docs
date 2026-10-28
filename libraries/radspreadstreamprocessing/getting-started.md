@@ -40,7 +40,7 @@ When you create a document with **RadSpreadStreamProcessing**, the order in whic
 
 **Example 1** shows how to create a simple document.
 
-#### __Example 1: Create an XLSX Document with Skipped Rows and Columns__
+### __Example 1: Create an XLSX Document with Skipped Rows and Columns__
 
 <snippet id='codeblock-dkn'/>
 
@@ -67,7 +67,7 @@ When you read a document with **RadSpreadStreamProcessing**, the order of parsin
 
 **Example 2** demonstrates how to read the data from an existing document.
 
-#### __Example 2: Import an XLSX Document and Read Its Cells__
+### __Example 2: Import an XLSX Document and Read Its Cells__
 
 <snippet id='codeblock-dko'/>
 

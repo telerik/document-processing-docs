@@ -65,7 +65,7 @@ Use the `dnx` script (.NET 10 or later only) or the `dotnet` CLI (.NET {{site.mi
 
   **Command that runs the Telerik DPL MCP Server with `dnx`**
 
-  ```json
+  ```powershell
     dnx Telerik.DPL.MCP
   ```
 
@@ -73,7 +73,7 @@ Use the `dnx` script (.NET 10 or later only) or the `dotnet` CLI (.NET {{site.mi
 
   **Command that installs the Telerik DPL MCP Server with `dotnet tool`**
 
-  ```json
+  ```powershell
     dotnet tool install Telerik.DPL.MCP
   ```
 
@@ -89,13 +89,13 @@ Use your AI-powered MCP client's documentation to add the legacy [Telerik Docume
 npm i @progress/telerik-dpl-mcp
 ```
 
-Next, verify that the configuration in your `mcp.json` is [correct](#configuring-mcp-json), and then [add your Telerik license](#configuring-your-license).
+Next, verify your [MCP configuration](#configuration), then [configure your Telerik license](#license-configuration).
 
 ### Installing in VS Code
 
-**Visual Studio Code example of installing and configuring the Telerik DPL MCP Server**
+Use the [installation instructions](#installation), then follow the [Visual Studio Code configuration steps](#visual-studio-code) to enable the server.
 
-![Visual Studio Code walkthrough for installing and configuring the Telerik DPL MCP Server](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif)   
+For an optional visual demonstration, view the animated walkthrough of MCP server setup in Visual Studio Code: ![Visual Studio Code walkthrough for installing and configuring the Telerik DPL MCP Server](images/setup-and-use-dpl-mcp-server-in-vs-code-full.gif)   
 
 ## Configuration
 
@@ -274,8 +274,6 @@ Add the `.mcp.json` file to your user directory (`%USERPROFILE%`, for example, `
 For complete setup instructions, see [Use MCP servers in Visual Studio Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
 
 >important Visual Studio Code 1.102.1 or later is required to use the Telerik MCP Server.
-
-For complete setup instructions, see [Use MCP servers in Visual Studio Code](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
 
 The basic setup in Visual Studio Code involves the following steps:
 
@@ -486,9 +484,13 @@ The following examples demonstrate useful prompts for the Telerik Document Proce
 
 **Visual Studio Code example of the MCP tool call and generated result for the sample PDF prompt**
 
-|Copilot calling the DPL MCP Server in VS Code|Copilot final answer in VS Code|
-|----|----| 
-|![Visual Studio Code Copilot Chat invoking the Telerik DPL MCP Server for the sample PDF prompt](images/running-sample-prompt-dpl-mcp-server-in-vs-code.png)|![Visual Studio Code Copilot Chat response showing the generated code result from the Telerik DPL MCP Server](images/result-sample-prompt-dpl-mcp-server-in-vs-code.png)|    
+Copilot first invokes the MCP server for the PDF prompt:
+
+![Visual Studio Code Copilot Chat invoking the Telerik DPL MCP Server for the sample PDF prompt](images/running-sample-prompt-dpl-mcp-server-in-vs-code.png)
+
+Copilot then displays its final answer with the generated code:
+
+![Visual Studio Code Copilot Chat response showing the generated code result from the Telerik DPL MCP Server](images/result-sample-prompt-dpl-mcp-server-in-vs-code.png)
 
 
 * "`#telerik-dpl-assistant` create a PDF file with a link to "http://telerik.com" in it"

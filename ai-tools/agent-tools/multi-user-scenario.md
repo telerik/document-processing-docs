@@ -19,7 +19,7 @@ In single-user applications, you can create document repositories once and use t
 * Concurrent requests from multiple users are handled safely
 * Resources are properly managed and cleaned up
 
-### Risks and Mitigation
+## Risks and Mitigation
 
 Multi-user document processing systems face several critical risks:
 
@@ -31,7 +31,7 @@ Multi-user document processing systems face several critical risks:
 
 * **Concurrent Access Issues**: Multiple simultaneous requests from the same user or different users require thread-safe repository management. This is handled using thread-safe collection types like `ConcurrentDictionary` for session storage.
 
-### Approaches Covered
+## Approaches Covered
 
 1. **[Per-User Isolated Storage](#per-user-isolated-storage)**: A stateful controller pattern for web APIs where each authenticated user gets persistent document repositories that survive across multiple HTTP requests within their session.
 

@@ -1,13 +1,15 @@
 ---
-title: Populate RadFlowDocument with different Images when performing a Mail Merge
+title: Adding Different Images to a RadFlowDocument During Mail Merge
 description: Learn how to populate a RadFlowDocument with different images while performing a mail merge with RadWordsProcessing.
 type: how-to
-page_title: Populate RadFlowDocument with different Images when performing a Mail Merge
+page_title: Adding Different Images to a RadFlowDocument During Mail Merge
 slug: wordsprocessing-add-different-images-when-mailmerging
 position: 0
 tags: radwordsprocessing, mailmerge, image, radflowdocument, word, document, processing, docx
 res_type: kb
 ---
+
+Use a mail merge to populate a document with different images for each person.
 
 ## Environment
 
@@ -23,7 +25,7 @@ This article shows how to populate a [RadFlowDocument]({%slug radwordsprocessing
 
 The following example demonstrates how to import a document template with the [DocxFormatProvider]({%slug radwordsprocessing-formats-and-conversion-docx-docxformatprovider%}). It then iterates an array of custom `Person` elements and inserts different images in the `RadFlowDocument` header ([Headers and Footers]({%slug radspreadprocessing-features-headers-and-footers%})) according to the person's account type while performing a [Mail Merge]({%slug radwordsprocessing-editing-mail-merge%}).
 
-#### __Add Different Images While Mailmerging__
+### __Add Different Images While Mailmerging__
 
 ```csharp
 
@@ -80,7 +82,7 @@ The following example demonstrates how to import a document template with the [D
 	}
 ```
 
-#### __Person Class__
+### __Person Class__
 
 ```csharp
 

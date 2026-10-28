@@ -133,6 +133,8 @@ The following table lists the available `SpreadDynamicFilterType` values.
 
 ## Exporting AutoFilter
 
+Export an AutoFilter range alone or include filter definitions to control row visibility.
+
 ### Setting an AutoFilter Range
 
 To add AutoFilter drop-down arrows to a header row without defining filter rules, call `SetAutoFilter` with the row and column indices. You must call this method after all rows in the worksheet have been exported.
@@ -207,7 +209,7 @@ After iterating all rows of an imported worksheet, read the `AutoFilter` propert
 
 >important Access the `AutoFilter` property only after all rows of the worksheet have been consumed. The property returns `null` when no AutoFilter is defined.
 
-#### __Example 7: Read AutoFilter on Import__
+### __Example 7: Read AutoFilter on Import__
 
 <snippet id='libraries-spreadstream-features-autofilter-13'/>
 

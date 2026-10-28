@@ -1,13 +1,15 @@
 ---
-title: How to Upgrade Trial to Licensed Version
+title: Upgrading Telerik Document Processing from Trial to Licensed Version
 description: Learn how to upgrade from a Telerik Document Processing trial version to a licensed version by replacing assemblies or NuGet packages in your project.
 type: how-to
-page_title: How to Upgrade Trial to Licensed Version
+page_title: Upgrading Telerik Document Processing from Trial to Licensed Version
 slug: upgrade-trial-to-licensed-version
 position: 0
 tags: telerik, license, trial, upgrade, document, processing, purchase, commercial
 res_type: kb
 ---
+
+Replace trial assemblies or NuGet packages with licensed versions for releases before Q2 2025.
 
 | Version | Product | Author | 
 | --- | --- | ---- | 
@@ -23,7 +25,7 @@ Start with a trial version installed on your machine and a project that referenc
 
 >caption Access to the Trial version of product files in the Downloads section of your Telerik account
 
-![upgrade-trial-to-licensed-version 001](images/upgrade-trial-to-licensed-version001.png) 
+![Trial product downloads in a Telerik account.](images/upgrade-trial-to-licensed-version001.png)
 
 >note Telerik Document Processing is a part of several Telerik bundles and is installed following the steps for installing the suite with which you have obtained the product: [Installing on Your Computer]({%slug installation-installing-on-your-computer%})
 
@@ -31,55 +33,55 @@ If you expand the **References** in the Solution Explorer in Visual Studio, you 
 
 >caption Trial Assemblies referred in the project 
 
-![upgrade-trial-to-licensed-version 002](images/upgrade-trial-to-licensed-version002.png)  
+![Trial assembly references in Visual Studio Solution Explorer.](images/upgrade-trial-to-licensed-version002.png)
 
 Navigate to the project's folder and right-click the `.dll` to open the Properties dialog box to check if the **Trial** `.dll` is added.
 
-![upgrade-trial-to-licensed-version 003](images/upgrade-trial-to-licensed-version003.png)   
+![DLL properties used to identify a trial assembly.](images/upgrade-trial-to-licensed-version003.png)
 
 >note The only difference between the license and trial versions of the assemblies is that trial assemblies add a copyright message to the produced documents:
 
-![upgrade-trial-to-licensed-version 005](images/upgrade-trial-to-licensed-version005.png)  
+![Copyright message added to a generated document by trial assemblies.](images/upgrade-trial-to-licensed-version005.png)
 
 ## Solution
 
 Once you purchase a Telerik license, you will have access to the *Purchase* **License Type** in your Telerik account:
 
-![upgrade-trial-to-licensed-version 006](images/upgrade-trial-to-licensed-version006.png) 
+![Purchase license type available in a Telerik account.](images/upgrade-trial-to-licensed-version006.png)
 
 Depending on the Telerik product with which you have obtained the Telerik Document Processing, the libraries can be used either through the [available NuGet packages]({%slug installation-nuget-packages%}) or through the assemblies available in the installation folder of the Telerik product.
 
 ## Upgrade the Trial Assemblies
 
-1\. **Download** the `.msi` file for the *Purchase* version.
+1. **Download** the `.msi` file for the *Purchase* version.
 
-2\. **Uninstall** the already installed *Trial* version, for example, from the Windows Control Panel >> Programs and Features.
+2. **Uninstall** the already installed *Trial* version, for example, from **Control Panel** > **Programs and Features**.
 
-3\. **Install** the downloaded `.msi` file in step 1.
+3. **Install** the downloaded `.msi` file in step 1.
 
-4\. Update the references in your project with the assemblies from the licensed installation. Delete the old trial assemblies first and then add the licensed ones:
+4. Update the references in your project with the assemblies from the licensed installation. Delete the old trial assemblies first and then add the licensed ones:
 
-![upgrade-trial-to-licensed-version 004](images/upgrade-trial-to-licensed-version004.png)  
+    ![Updating project references from trial to licensed assemblies.](images/upgrade-trial-to-licensed-version004.png)
 
-![upgrade-trial-to-licensed-version 007](images/upgrade-trial-to-licensed-version007.png)  
+    ![Selecting licensed assemblies to reference in the project.](images/upgrade-trial-to-licensed-version007.png)
 
-5\. **Delete** the `license.licx` file (if such file exists). 
+5. **Delete** the `license.licx` file (if such file exists).
 
-6\. **Rebuild** your project, close Visual Studio, and open it again to ensure that no references are kept in the memory by Visual Studio. 
+6. **Rebuild** your project, close Visual Studio, and open it again to ensure that no references are kept in the memory by Visual Studio.
 
 ## Upgrade the Trial NuGet Packages
 
-1\. Open the **NuGet Package Manager**, for example, select the Manage NuGet Packages... option
+1. Open the **NuGet Package Manager**, for example, select the **Manage NuGet Packages...** option.
 
-![upgrade-trial-to-licensed-version 008](images/upgrade-trial-to-licensed-version008.png)
+    ![Manage NuGet Packages option in Visual Studio.](images/upgrade-trial-to-licensed-version008.png)
 
-2\. Uninstall any **Trial** Telerik NuGet packages:
+2. Uninstall any **Trial** Telerik NuGet packages:
 
-![upgrade-trial-to-licensed-version 009](images/upgrade-trial-to-licensed-version009.png)
+    ![Uninstalling trial Telerik NuGet packages.](images/upgrade-trial-to-licensed-version009.png)
 
-3\. Install the respective **Purchase** version of the NuGet packages, without the word "Trial" in its name:
+3. Install the respective **Purchase** version of the NuGet packages, without the word "Trial" in its name:
 
-![upgrade-trial-to-licensed-version 010](images/upgrade-trial-to-licensed-version010.png)
+    ![Installing Telerik NuGet packages without Trial in their names.](images/upgrade-trial-to-licensed-version010.png)
 
 ## See Also
 

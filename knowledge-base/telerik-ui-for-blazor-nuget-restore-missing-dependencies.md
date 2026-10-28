@@ -12,14 +12,18 @@ ticketid: 1712515
 
 ## Environment
 
-| Version | Product | Author | 
-| ---- | ---- | ---- | 
-| 2026.1.210| Telerik Document Processing|[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
-|13.1.0 (Trial)|Telerik.UI.for.Blazor||
+The issue applies to the following product versions:
+
+| Version | Product |
+| ---- | ---- |
+| 2026.1.210 | Telerik Document Processing |
+| 13.1.0 (Trial) | Telerik.UI.for.Blazor |
+
+Author: [Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova).
 
 ## Description
 
-When you have an active Blazor **trial** license and attempt to restore the `Telerik.UI.for.Blazor` package, the process may fail due to missing dependencies in Telerik Document Processing libraries, such as `Telerik.Documents.Spreadsheet`, `Telerik.Documents.SpreadsheetStreaming`, and `Telerik.Zip`. 
+With an active Blazor trial license, a restore of the `Telerik.UI.for.Blazor` package may fail because Telerik Document Processing dependencies are missing. Examples include `Telerik.Documents.Spreadsheet`, `Telerik.Documents.SpreadsheetStreaming`, and `Telerik.Zip`.
 
 ## Solution
 
@@ -27,27 +31,27 @@ Activate a [trial for DevCraft](https://www.telerik.com/download). This enables 
 
 Alternatively, instead of using the NuGet packages, download the zip (for example, `telerik.ui.for.blazor.13.1.0.zip`) from your Telerik account:
 
-<img style="border: 1px solid gray;" src="images/blazor-zip.png" alt="Blazor Zip" /> 
+<img style="border: 1px solid gray;" src="images/blazor-zip.png" alt="Telerik UI for Blazor downloads page with the ZIP archive listed under Other Setup Files" />
 
-It contains all necessary DPL assemblies:
+The ZIP archive contains all necessary Telerik Document Processing assemblies:
 
-<img style="border: 1px solid gray;" src="images/all-assemblies.png" alt="All assemblies" />  
+<img style="border: 1px solid gray;" src="images/all-assemblies.png" alt="Extracted archive with the Telerik Document Processing assembly files" />
 
 To ensure that the Telerik NuGet server is set up correctly on your machine, follow the steps:
 
-1. Generate a new NuGet API Key from your Telerik account. Use this key for authenticating with the trial account. An API key instead of a password is a more secure approach:
+1. Generate a new NuGet application programming interface (API) key from your Telerik account. Use this key instead of a password to authenticate with the trial account:
 
-    <img style="border: 1px solid gray;" src="images/generate-api-key.png" alt="Generate API key" />    
+    <img style="border: 1px solid gray;" src="images/generate-api-key.png" alt="Telerik account controls for generating a NuGet API key" />
 
 2. Configure the Telerik NuGet server as a package source in Visual Studio:
 
-    <img style="border: 1px solid gray;" src="images/configure-nuget.png" alt="Configure NuGet Server" />  
+    <img style="border: 1px solid gray;" src="images/configure-nuget.png" alt="Visual Studio NuGet package source settings" />
 
 3. Delete any existing package sources that contain Telerik NuGet packages. Add a new package source and enter `https://nuget.telerik.com/v3/index.json` in the **Source** field:
 
-    <img style="border: 1px solid gray;" src="images/add-package-source.png" alt="Add package Source" />   
+    <img style="border: 1px solid gray;" src="images/add-package-source.png" alt="NuGet package source entry with the Telerik feed address in the Source field" />
 
-4. Specify the credentials by using the generated API key in the NuGet Config File:
+4. Specify the credentials in the NuGet configuration file. Replace `Your API KEY` in the following example with your generated API key:
    ```xml
    <?xml version="1.0" encoding="utf-8"?>
    <configuration>

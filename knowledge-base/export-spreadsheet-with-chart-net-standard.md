@@ -1,14 +1,16 @@
 ---
-title: Exporting Spreadsheet with Bar Charts in .NET Standard
+title: Exporting Spreadsheets with Bar Charts in .NET Standard
 description: Learn how to export a spreadsheet containing a chart to PDF format in a .NET Standard application using Telerik Document Processing libraries.
 type: how-to
-page_title: Export Spreadsheet with Bar Charts in .NET Standard
+page_title: Exporting Spreadsheets with Bar Charts in .NET Standard
 meta_title: Export Spreadsheet with Bar Charts in .NET Standard
 slug: export-spreadsheet-with-chart-net-standard
 tags: radspreadprocessing, spreadsheet, charts, pdf, export, images, netstandard, conversion
 res_type: kb
 ticketid: 1663021
 ---
+
+Convert spreadsheet charts to images before exporting the workbook to PDF in .NET Standard.
 
 ## Environment
 
@@ -33,7 +35,24 @@ The provided solution follows these steps:
 
 >note The `ChartToImageConverter` class is the core of the custom implementation. It uses the **Telerik Fixed Document API** (`RadFixedDocument`, `FixedContentEditor`) to draw a visual representation of the chart, then exports the rendered page to PNG using `SkiaImageFormatProvider`.
 
-The `Program` class:
+The example is divided into consecutive C# blocks. Combine the blocks in order: the first three form the `Program` class, and the remaining blocks form `ChartToImageConverter`. Individual blocks are not standalone examples.
+
+Use these links to navigate the implementation:
+
+* [Generating and exporting the workbook](#generating-and-exporting-the-workbook)
+* [Creating the chart](#creating-the-chart)
+* [Replacing charts with images](#replacing-charts-with-images)
+* [Preparing the chart image](#preparing-the-chart-image)
+* [Reading the series data](#reading-the-series-data)
+* [Calculating axis bounds](#calculating-axis-bounds)
+* [Resolving series colors](#resolving-series-colors)
+* [Drawing axes and grid lines](#drawing-axes-and-grid-lines)
+* [Drawing bars and category labels](#drawing-bars-and-category-labels)
+* [Drawing the legend and exporting PNG](#drawing-the-legend-and-exporting-png)
+
+### Generating and Exporting the Workbook
+
+Begin the `Program` class with `Main`, which exports the sample workbook to XLSX, replaces charts with images, and exports to PDF:
 
 ```csharp
     internal class Program
@@ -66,6 +85,13 @@ The `Program` class:
             Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecute = true });
         }
 
+```
+
+### Creating the Chart
+
+Continue the `Program` class with `GenerateWorkbookWithChart`, which creates the worksheet and its two-series column chart:
+
+```csharp
         private static Workbook GenerateWorkbookWithChart()
         {
             Workbook workbook = new Workbook();
@@ -104,6 +130,13 @@ The `Program` class:
             return workbook;
         }
 
+```
+
+### Replacing Charts with Images
+
+Finish the `Program` class with `ReplaceChartWithImages`, which renders each chart and adds a `FloatingImage` in its place:
+
+```csharp
         private static void ReplaceChartWithImages(Workbook workbook)
         {
             // Iterate all charts in all worksheets, generate images, and replace charts with images
@@ -142,7 +175,10 @@ The `Program` class:
         }
     }
 ```
-The `ChartToImageConverter` class:
+
+### Preparing the Chart Image
+
+Begin the `ChartToImageConverter` class and its `ConvertChartToImage` method by creating a PDF page and defining the chart area:
 
 ```csharp
     internal static class ChartToImageConverter
@@ -175,6 +211,13 @@ The `ChartToImageConverter` class:
             double chartAreaWidth = width - marginLeft - marginRight;
             double chartAreaHeight = height - marginTop - marginBottom;
 
+```
+
+### Reading the Series Data
+
+Continue inside `ConvertChartToImage` to collect the series titles, values, and category labels:
+
+```csharp
             // Collect all series data
             var allSeriesData = new List<(string title, List<double> values)>();
             var categoryLabels = new List<string>();
@@ -215,6 +258,13 @@ The `ChartToImageConverter` class:
             int categoryCount = categoryLabels.Count > 0 ? categoryLabels.Count : allSeriesData.Max(s => s.values.Count);
             int seriesCount = allSeriesData.Count;
 
+```
+
+### Calculating Axis Bounds
+
+Continue inside `ConvertChartToImage` to read the axis limits or calculate a rounded maximum from the data:
+
+```csharp
             // Use axis min/max from the chart's ValueAxis when available
             double dataMax = allSeriesData.SelectMany(s => s.values).DefaultIfEmpty(0).Max();
 
@@ -250,6 +300,13 @@ The `ChartToImageConverter` class:
                 maxValue = Math.Ceiling(dataMax / niceInterval) * niceInterval;
             }
 
+```
+
+### Resolving Series Colors
+
+Continue inside `ConvertChartToImage` to resolve the series fill colors, using fallback colors when needed:
+
+```csharp
             // Extract original fill colors from each series
             var seriesColors = new List<RgbColor>();
             RgbColor[] fallbackColors = new RgbColor[]
@@ -279,6 +336,13 @@ The `ChartToImageConverter` class:
                 }
             }
 
+```
+
+### Drawing Axes and Grid Lines
+
+Continue inside `ConvertChartToImage` to draw the axes, horizontal grid lines, and value labels:
+
+```csharp
             // Draw axes
             editor.GraphicProperties.StrokeColor = new RgbColor(180, 180, 180);
             editor.GraphicProperties.StrokeThickness = 0.75;
@@ -311,6 +375,13 @@ The `ChartToImageConverter` class:
                 editor.RestorePosition();
             }
 
+```
+
+### Drawing Bars and Category Labels
+
+Continue inside `ConvertChartToImage` to draw each series value as a bar and add the category labels:
+
+```csharp
             // Draw bars
             double groupWidth = chartAreaWidth / categoryCount;
             double barGap = 4;
@@ -349,6 +420,13 @@ The `ChartToImageConverter` class:
                 }
             }
 
+```
+
+### Drawing the Legend and Exporting PNG
+
+Finish `ConvertChartToImage` by drawing the legend and exporting the page as PNG bytes. This block also closes the `ChartToImageConverter` class:
+
+```csharp
             // Draw legend
             double legendX = marginLeft;
             double legendY = 5;
@@ -412,4 +490,3 @@ The `ChartToImageConverter` class:
 * [Export Chart to PDF]({%slug radspreadprocessing-features-charts-pdf-export%})
 * [Exporting Images to PDF format in .NET Standard]({%slug radpdfprocessing-cross-platform-images%})
 * [How to Eliminate Formatting Issues when Exporting XLSX to PDF Format]({%slug exporting-xlsx-to-pdf-formatting-issues%})
-

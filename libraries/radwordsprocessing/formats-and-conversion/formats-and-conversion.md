@@ -39,6 +39,8 @@ Below you can see a feature / format matrix that describes supported features by
 </style>
 
 
+A check mark (✔) indicates support; numbered notes describe limitations. “Not specified” means this matrix does not state the support status. It does not mean the feature is unsupported. Section headings span all columns and do not represent support statuses.
+
 <table><thead><tr><th>Feature</th>
 <th>Docx Import</th>
 <th>Docx Export</th>
@@ -49,7 +51,7 @@ Below you can see a feature / format matrix that describes supported features by
 <th>Html Export</th>
 <th>PDF Export</th></tr></thead>
 <tbody>
-<tr><td><b>Text Formatting</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+<tr><th colspan="9">Text Formatting</th></tr><tr><td>
 Font Properties</td><td>
 ✔</td><td>
 ✔</td><td class="partially-supported">
@@ -76,8 +78,7 @@ Baseline Alignment</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
-✔</td></tr><tr><td>
-<b>Paragraph Options</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+✔</td></tr><tr><th colspan="9">Paragraph Options</th></tr><tr><td>
 Text Alignment</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -113,7 +114,7 @@ Shading</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td>
-<td></td></tr><tr><td>
+<td>Not specified</td></tr><tr><td>
 Borders</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -122,8 +123,7 @@ Borders</td><td>
 ✔</td><td class="not-applicable">
 n/a</td><td class="not-applicable">
 n/a</td>
-<td></td></tr><tr><td>
-<b>Page/Section options</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+<td>Not specified</td></tr><tr><th colspan="9">Page/Section options</th></tr><tr><td>
 Page Size and Position</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -147,7 +147,7 @@ Page Breaks</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
-✔</td><td></td><td></td><td>
+✔</td><td>Not specified</td><td>Not specified</td><td>
 ✔</td></tr><tr><td>
 Section Breaks</td><td>
 ✔</td><td>
@@ -158,7 +158,7 @@ Section Breaks</td><td>
 n/a</td><td class="not-applicable">
 n/a</td><td>
 ✔</td></tr><tr><td>
-Columns</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+Columns</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td></tr><tr><td>
 Watermark</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -173,7 +173,7 @@ Headers/Footers</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
-✔</td><td></td><td></td><td>
+✔</td><td>Not specified</td><td>Not specified</td><td>
 ✔</td></tr><tr><td>
 Section Vertical Alignment</td><td>
 ✔</td><td>
@@ -182,7 +182,7 @@ Section Vertical Alignment</td><td>
 ✔</td><td>
 ✔</td><td class="not-applicable">
 n/a</td><td class="not-applicable">
-n/a</td><td></td></tr><tr><td>
+n/a</td><td>Not specified</td></tr><tr><td>
 Page Numbering Settings</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -191,8 +191,7 @@ Page Numbering Settings</td><td>
 ✔</td><td class="not-applicable">
 n/a</td><td class="not-applicable">
 n/a</td><td>
-✔</td></tr><tr><td>
-<b>Tables</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+✔</td></tr><tr><th colspan="9">Tables</th></tr><tr><td>
 Table Support</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -205,8 +204,7 @@ Table Support</td><td>
 <tr><td>
 Nested Tables</td><td>
 ✔</td><td>
-✔</td><td>
-</td><td>
+✔</td><td>Not specified</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -221,8 +219,7 @@ Merged Cells</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td></tr><tr><td>
-Floating Tables</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
-<b>Images</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+Floating Tables</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td></tr><tr><th colspan="9">Images</th></tr><tr><td>
 Inline Images</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -234,14 +231,12 @@ Inline Images</td><td>
 ✔</td></tr><tr><td>
 Floating Images</td><td>
 ✔</td><td>
-✔</td><td>
-</td><td>
+✔</td><td>Not specified</td><td>
 ✔</td><td>
 ✔</td><td class="partially-supported">
 ✔<sup>2</sup></td><td class="partially-supported">
 ✔<sup>2</sup></td><td>
-✔</td></tr><tr><td>
-<b>Styles</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+✔</td></tr><tr><th colspan="9">Styles</th></tr><tr><td>
 Styles Support</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -263,14 +258,11 @@ Built-in Styles</td><td>
 Themes</td><td>
 ✔</td><td>
 ✔</td><td>
-✔</td><td>
-</td><td>
-</td><td>
+✔</td><td>Not specified</td><td>Not specified</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td></tr><tr><td>
-Conditional Table Styles</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
-<b>Lists</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+Conditional Table Styles</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td></tr><tr><th colspan="9">Lists</th></tr><tr><td>
 Lists Support</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -288,8 +280,7 @@ List Styles</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
-✔</td></tr><tr><td>
-<b>Fields</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+✔</td></tr><tr><th colspan="9">Fields</th></tr><tr><td>
 Hyperlinks</td><td>
 ✔</td><td>
 ✔</td><td>
@@ -328,8 +319,7 @@ n/a</td><td class="partially-supported">
 ✔<sup>3</sup></td></tr><tr><td>
 Document Variables</td><td>
 ✔</td><td>
-✔</td><td>
-</td><td>
+✔</td><td>Not specified</td><td>
 ✔</td><td>
 ✔</td><td class="not-applicable">
 n/a</td><td class="partially-supported">
@@ -337,31 +327,28 @@ n/a</td><td class="partially-supported">
 ✔<sup>3</sup></td></tr><tr><td>
 Other fields</td><td class="partially-supported">
 ✔<sup>4</sup></td><td class="partially-supported">
-✔<sup>4</sup></td><td>
-</td><td class="partially-supported">
+✔<sup>4</sup></td><td>Not specified</td><td class="partially-supported">
 ✔<sup>4</sup></td><td class="partially-supported">
 ✔<sup>4</sup></td><td class="not-applicable">
 n/a</td><td class="partially-supported">
 ✔<sup>3</sup></td><td class="partially-supported">
-✔<sup>3</sup></td></tr><tr><td>
-<b>Review</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+✔<sup>3</sup></td></tr><tr><th colspan="9">Review</th></tr><tr><td>
 Comments</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
-✔</td><td></td><td></td><td></td></tr><tr><td>
-Protection</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="not-applicable">n/a</td></tr><tr><td>
-Track Changes</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
-<b>Other Elements</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>
+✔</td><td>Not specified</td><td>Not specified</td><td>Not specified</td></tr><tr><td>
+Protection</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td class="not-applicable">n/a</td></tr><tr><td>
+Track Changes</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td><td>Not specified</td></tr><tr><th colspan="9">Other Elements</th></tr><tr><td>
 Bookmarks</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
 ✔</td><td>
-✔</td><td></td><td></td><td></td></tr></tbody></table>
+✔</td><td>Not specified</td><td>Not specified</td><td>Not specified</td></tr></tbody></table>
 
 >1. Double Strikethrough is currently not supported.
 >2. Floating images are treated as inline images when importing/exporting HTML.
 >3. The result of the fields is exported as text.
->4. All fields are supported through custom code fields. More information is available [here]({%slug radwordsprocessing-concepts-customcodefield%}).
+>4. All fields are supported through custom code fields. See [custom code fields]({%slug radwordsprocessing-concepts-customcodefield%}) for more information.

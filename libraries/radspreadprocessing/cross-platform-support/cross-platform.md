@@ -22,8 +22,8 @@ To use the model of `RadSpreadProcessing` in your cross-platform project, add re
 
 | Package Name                            | Notes                                    |
 |------------------------------------------|------------------------------------------|
-| **Telerik.Documents.Core**           |                                          |
-| **Telerik.Documents.Spreadsheet**    |                                          |
+| **Telerik.Documents.Core**           | Required for the document model.         |
+| **Telerik.Documents.Spreadsheet**    | Required for the spreadsheet model.      |
 | **Telerik.Documents.Spreadsheet.FormatProviders.OpenXml** | Required for working with XLSX files.    |
 | **Telerik.Documents.Spreadsheet.FormatProviders.Xls** | Required for working with XLS files.     |
 | **Telerik.Documents.Fixed**          | Required for exporting to PDF files.     |
@@ -35,7 +35,7 @@ To use the model of `RadSpreadProcessing` in your cross-platform project, add re
 
 >note The **Telerik.Documents.ImageUtils** package depends on **SkiaSharp**. To use this package, add a reference to [SkiaSharp](https://www.nuget.org/packages/SkiaSharp/). With the [R2 2023 changes](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/changes-and-backward-compatibility/backward-compatibility#whats-different-in-2023-r2), SkiaSharp replaced ImageSharp as the required dependency.
 
-> Note that for .NET Framework, {{site.dotnetversions}} with Windows Compatibility Pack projects, the references contain "Windows" in their names (for example, **Telerik.Windows.Documents.Core**)
+>note For .NET Framework, {{site.dotnetversions}} with Windows Compatibility Pack projects, the references contain "Windows" in their names (for example, **Telerik.Windows.Documents.Core**).
 
 ## Differences Between .NET Framework and .NET Standard Versions of SpreadProcessing
 

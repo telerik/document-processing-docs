@@ -24,7 +24,9 @@ Depending on the scenario, you can take advantage of the different features each
 
 ## Create a PDF Document From Scratch
 
-#### Required packages
+Use RadPdfProcessing to create a PDF document from scratch.
+
+### Required packages
 
 * **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows 
     * Telerik.Windows.Documents.Fixed
@@ -46,7 +48,9 @@ In scenarios where you need to convert a document from another file format to PD
 
 ### Convert HTML to PDF
 
-#### Required packages
+Use the following packages and example to convert HTML content to PDF.
+
+**Required packages:**
 
 * **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows 
     * Telerik.Windows.Documents.Flow.FormatProviders.Pdf
@@ -74,7 +78,9 @@ In scenarios where you need to convert a document from another file format to PD
 
 ## Convert a Spreadsheet Document to PDF
 
-#### Required packages
+Use RadSpreadProcessing to convert a spreadsheet document to PDF.
+
+### Required packages
 
 * **.NET Framework**, **{{site.dotnetversions}}** (or newer) for Windows 
     * Telerik.Windows.Documents.Spreadsheet.FormatProviders.Pdf

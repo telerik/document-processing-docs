@@ -28,7 +28,7 @@ After you reference the required package, create an instance of `XlsxFormatProvi
 
 The following example shows how to import an XLSX file through a `FileStream`. The code verifies that a file with the specified name exists. The sample then creates an `XlsxFormatProvider` instance and passes the `FileStream` to its `Import()` method.
 
-#### __Example 1: Import an XLSX Workbook__
+### __Example 1: Import an XLSX Workbook__
 
 <snippet id='codeblock-cow'/>
 
@@ -36,11 +36,11 @@ The following example shows how to import an XLSX file through a `FileStream`. T
 
 The following example shows how to export an existing `Workbook` to an XLSX file. The snippet creates a new workbook with a single worksheet. It then creates an `XlsxFormatProvider` instance and calls its `Export()` method. The `Export()` method accepts a `Stream`, so you can use any `Stream` implementation.
 
-#### __Example 2: Create a Workbook and Export It to an XLSX File Stream__
+### __Example 2: Create a Workbook and Export It to an XLSX File Stream__
 
 <snippet id='codeblock-cox'/>
 
-#### __Example 3: Export a Workbook to a Memory Stream__
+### __Example 3: Export a Workbook to a Memory Stream__
 
 <snippet id='codeblock-coy'/>
 

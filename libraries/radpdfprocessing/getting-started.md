@@ -23,13 +23,13 @@ You can find the required references in the [PdfProcessing NuGet packages]({%slu
 
 [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) is the root element in the library. It consists of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) objects and instructions for annotations and destinations in the document. **Example 1** shows how to create a document and add a page to it.
 
-#### __Example 1: Create a RadFixedDocument__
+### __Example 1: Create a RadFixedDocument__
 
 <snippet id='pdf-create-fixed'/>
 
 The page can then be edited through a [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%}) instance. **Example 2** creates an editor and adds a [TextFragment]({%slug radpdfprocessing-model-textfragment%}) to the page object created in **Example 1**.
 
-#### __Example 2: Add text__
+### __Example 2: Add text__
 
 <snippet id='pdf-create-editor'/>
 
@@ -38,7 +38,7 @@ The page can then be edited through a [FixedContentEditor]({%slug radpdfprocessi
 Exporting to PDF format can be achieved with the `PdfFormatProvider` class. **Example 3** shows how to export the `RadFixedDocument` created in **Examples 1 and 2** to a file.
         
 
-#### __Example 3: Export to PDF__
+### __Example 3: Export to PDF__
 
 <snippet id='pdf-export'/>
 

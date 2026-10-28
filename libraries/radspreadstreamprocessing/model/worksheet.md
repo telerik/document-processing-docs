@@ -38,9 +38,9 @@ You can create a concrete instance of `IWorksheetExporter` through the `CreateWo
 
 <snippet id='codeblock-dlx'/>
 
->`IWorksheetExporter` inherits from [`IDisposable`](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Ensure the object is disposed when you are done with it. Otherwise, the content will not be written in the exported file. The best way to ensure this is handled properly is to wrap it in a *using* statement.
+>important `IWorksheetExporter` inherits from [`IDisposable`](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable). Dispose of the object when you are done with it so that its content is written to the exported file. Use a `using` statement to ensure disposal.
 
->tip A worksheet must contain at least one row. Otherwise, an exception is thrown.
+>important A worksheet must contain at least one row. Otherwise, an exception is thrown.
 
 ## See Also
 

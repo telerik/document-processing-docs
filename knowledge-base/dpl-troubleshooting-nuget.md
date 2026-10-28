@@ -41,7 +41,7 @@ As an alternative, you can [reset your Telerik NuGet Feed credentials from the W
 
 ## Issue: Unable to load the service index for source https://nuget.telerik.com/v3/index.json
 
-Make sure that the Telerik NuGet Feed is live at [https://status.telerik.com/](https://status.telerik.com/).
+Check the Telerik NuGet feed availability on the [Telerik service status page](https://status.telerik.com/).
 
 ## Issue: Resetting Telerik Nuget Credentials
 

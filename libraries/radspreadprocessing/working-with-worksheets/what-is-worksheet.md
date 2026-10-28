@@ -62,7 +62,7 @@ The `GetUsedCellRange()` overload accepts an `IEnumerable<`[`IPropertyDefinition
 
 The following example gets the used cell range for cells that contain a value.
 
-#### Example 1: Get the used cell range filtered to cells that contain values
+### Example 1: Get the used cell range filtered to cells that contain values
 
 <snippet id='codeblock-csz'/>
 

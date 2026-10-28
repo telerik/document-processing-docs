@@ -8,6 +8,8 @@ tags: namespace, migration, windows, platform, netstandard, netframework, breaki
 res_type: kb
 ---
 
+Update namespace references after upgrading to the Q3 2026 Telerik Document Processing Libraries.
+
 ## Environment
 
 | Version | Product | Author |
@@ -64,7 +66,7 @@ The following table shows examples of how namespaces have changed:
 
 Any code that uses the old `Telerik.Windows.Documents.*` namespaces will produce compiler errors after you upgrade. The errors typically look like this:
 
-```
+```text
 error CS0246: The type or namespace name 'Telerik' could not be found
 error CS0234: The type or namespace name 'Windows' does not exist in the namespace 'Telerik'
 ```

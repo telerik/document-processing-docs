@@ -102,7 +102,7 @@ Admonitions highlight important information that stands apart from the main text
 Use for supplementary information the reader should be aware of:
 
 ```markdown
-> A note provides additional context that may be useful but is not critical to the task.
+>note A note provides additional context that may be useful but is not critical to the task.
 ```
 
 Renders with a blue "Note" label.
@@ -134,6 +134,7 @@ Renders with an orange/red "Important" label.
 - Keep admonition text concise — one to three sentences.
 - Do not use admonitions for routine information that belongs in the main text.
 - A note that applies to every reader is probably not a note — it is main content.
+- Use explicit type markers: `>note`, `>tip`, `>important`, `>caution`, or `>warning`. A plain `>` blockquote does not explicitly identify its callout type.
 
 ## Code Blocks
 
@@ -202,6 +203,7 @@ The **Export** dialog box provides options for the output format and file locati
 
 - Place screenshots **after** the text that describes them.
 - Use descriptive alt text that explains what the screenshot shows.
+- For animated media, provide equivalent written steps or results. Use a static image or a descriptive link to an optional animation when playback cannot be paused or stopped.
 - Store screenshot files in an `images/` subdirectory relative to the article.
 
 ## Tables
@@ -213,6 +215,8 @@ Use tables for structured data with two or more columns and three or more rows. 
 ### Table Formatting
 
 - Include a header row with descriptive column names.
+- Do not use tables to lay out images or unrelated links. Use headings, lists, and paragraphs instead.
+- Replace ambiguous empty cells with meaningful text. If a blank is part of the example data, label and explain it without changing its meaning.
 - Align content to the left (default).
 - Keep cell content concise — avoid long paragraphs in table cells.
 - Introduce every table with a sentence ending in a colon or period.
@@ -238,7 +242,7 @@ When reviewing an article for formatting, verify:
 - [ ] New terms are in *italic* on first occurrence only
 - [ ] Keyboard shortcuts use `Key`+`Key` format in monospace
 - [ ] Menu sequences use **Menu** > **Item** format
-- [ ] Notes use `>` syntax, tips use `>tip`, important items use `>important`, cautions use `>caution`, and warnings use `>warning`
+- [ ] Notes use `>note`, tips use `>tip`, important items use `>important`, cautions use `>caution`, and warnings use `>warning`
 - [ ] Admonitions follow related text, are concise, and are not stacked
 - [ ] Code blocks specify the language identifier
 - [ ] Code comments are English, ≤80 chars, full sentences

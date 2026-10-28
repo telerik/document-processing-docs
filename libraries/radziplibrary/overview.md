@@ -13,11 +13,11 @@ components: [ziplibrary]
 
 **Telerik Document Processing** includes **RadZipLibrary** for compressing and archiving images, DOCX files, PDF files, and other content. You can create and edit new ZIP files or load and extract data from existing ZIP archives. The library includes support for large files, encryption, and more.
 
-![ZipLibrary](images/zip-library-overview.png)
+![RadZipLibrary overview illustration.](images/zip-library-overview.png)
 
 You can compress data such as images, DOCX files, and PDF files before you transfer or store it.
 
-![Zip Library Overview 01](images/ziplibrary-overview.gif)
+Use the library to create ZIP archives or extract files from existing archives, as described in [Getting Started with RadZipLibrary]({%slug radziplibrary-gettingstarted%}). For a visual demonstration, view the animated RadZipLibrary overview ![RadZipLibrary sample app with seven selectable text files, controls to save a ZIP file, read an archive, or clear the current ZIP, and a table for file names, uncompressed sizes, and compressed sizes](images/ziplibrary-overview.gif).
 
 ## Key Features
 

@@ -13,9 +13,13 @@ components: [pdfprocessing]
 
 `FixedContentEditor` simplifies creating and editing content on a PDF page or another `IContentRootElement`, such as a [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}).
       
->note Unlike [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}) which manages the document content in a flow-like manner and allows you to insert all desired elements one after another without calculating the element position, `FixedContentEditor` requires managing the Position at which the document elements are drawn. This gives you the possibility to draw the respective element at a fixed position. However, you must be careful about the available remaining space on the page and the space needed for the element to be drawn. A complete example of how to create a PDF document from scratch is available in the [How to Generate a PDF Document with Logo and Text using FixedContentEditor]({%slug create-pdf-document-with-logo-and-text-using-fixedcontenteditor%}) KB article.
+>note Unlike [RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}), which arranges content automatically, `FixedContentEditor` requires you to set the `Position` of each element. Ensure that the page has enough remaining space for the element.
+
+For a complete example, see the [knowledge base article on creating a PDF document with a logo and text]({%slug create-pdf-document-with-logo-and-text-using-fixedcontenteditor%}).
 
 ## Public API
+
+The public application programming interface (API) includes the following methods and properties:
 
 |Method/Property|Description|
 |----|----|
@@ -43,7 +47,7 @@ components: [pdfprocessing]
 
 `FixedContentEditor` is always associated with a single [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) (also known as `IContentRootElement`) which it takes as a constructor parameter when created. The following snippet shows how to create an editor.
 
-#### __Example 1: Create a FixedContentEditor for a RadFixedPage__
+### Example 1: Create a FixedContentEditor for a RadFixedPage
 
  <snippet id='libraries-pdf-editing-fixedcontenteditor-create-fixedcontenteditor'/>
  
@@ -51,7 +55,7 @@ The editor maintains an internal [Position]({%slug radpdfprocessing-concepts-pos
 
 The following snippet demonstrates how to create a `FixedContentEditor` with a specific initial [Position]({%slug radpdfprocessing-concepts-position%}).
         
-#### __Example 2: Create a FixedContentEditor with an initial position__
+### Example 2: Create a FixedContentEditor with an initial position
 
  <snippet id='libraries-pdf-editing-fixedcontenteditor-set-fixedcontenteditor-position'/>
 
@@ -162,7 +166,7 @@ More detailed information about tables is available in the [Table]({%slug radpdf
 
 ### Inserting Forms
 
-With the `FixedContentEditor` class you can insert a Form (Form-XObject) element. 
+With the `FixedContentEditor` class you can insert a Form external object (Form-XObject) element.
 
 #### __Example 9: Insert a form XObject with FixedContentEditor__
 <snippet id='fixed-content-editor-insert-form'/>
@@ -175,13 +179,13 @@ There are two more overloads of `DrawForm()` that allow you to pass the size tha
 
 The Widget annotations allow you to visualize the content of a FormField. With the API of `FixedContentEditor`, you can create and insert widgets to the PDF document. The `DrawWidget()` method has two overloads:
 
-* **DrawWidget&lt;T&gt;(FormField&lt;T&gt; parentField, Size annotationSize)**: Creates a new [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) representing the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) instance passed as a parameter and draws the widget with the specified annotation size. This method adds a widget only in cases when the root of the FixedContentEditor supports annotations. 
+* **DrawWidget&lt;T&gt;(FormField&lt;T&gt; parentField, Size annotationSize)**: Creates a new [Widget]({%slug radpdfprocessing-model-annotations-widgets%}) for the [FormField]({%slug radpdfprocessing-model-interactive-forms-form-fields%}) parameter. It draws the widget with the specified annotation size. The root of the `FixedContentEditor` must support annotations.
 
 	#### __Example 10: Insert a PushButtonField widget with DrawWidget__
 	
 	<snippet id='fixed-content-editor-insert-pushbuttonfield'/>
 
-* **DrawWidget(RadioButtonField parentField, RadioOption option, Size annotationSize)**: Creates a new [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets%}#radiobuttonwidget-class) and draws the widget with the specified annotation size. This method adds a widget only in cases when the root of the FixedContentEditor supports annotations. The second parameter represents the option that the widget visualizes.
+* **DrawWidget(RadioButtonField parentField, RadioOption option, Size annotationSize)**: Creates a new [RadioButtonWidget]({%slug radpdfprocessing-model-annotations-widgets%}#radiobuttonwidget-class) and draws it with the specified annotation size. The root of the `FixedContentEditor` must support annotations. The second parameter represents the option that the widget visualizes.
 	
 	#### __Example 11: Insert RadioButtonField widgets with DrawWidget__
 	
@@ -193,7 +197,7 @@ The [Position]({%slug radpdfprocessing-concepts-position%}) property exposed by 
 
 The following snippet shows how to manipulate the position of the inserted content elements.     
 
-#### __Example 12: Scale and rotate inserted content__
+### Example 12: Scale and rotate inserted content
 
 <snippet id='fixed-content-editor-scale-rotate'/>
 

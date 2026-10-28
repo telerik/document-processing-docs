@@ -43,15 +43,15 @@ Switches are a way for the code fragment to specify formatting for the result of
 
 The possible switches for a Hyperlink field are:
 
-| Switch | Subtype      | Description                                                                                 |
-| :---   |  :---        | :---                                                                                        |
-| \o     |              | Specifies the tooltip text for the hyperlink                                                |
-| \t     |              | Specifies the target that the link should be redirected into                                |
-|        | \t "_top"    | Whole page                                                                                  |
-|        | \t "_self"   | Same frame                                                                                  |
-|        | \t "_blank"  | New window                                                                                  |
-|        | \t "_parent" | Parent frame                                                                                |
-| \l     |              | Specifies a location in the file, such as a bookmark, where this hyperlink will navigate to |
+| Switch | Description |
+| :--- | :--- |
+| \o | Specifies the tooltip text for the hyperlink |
+| \t | Specifies the target that the link should be redirected into |
+| \t "_top" | Whole page |
+| \t "_self" | Same frame |
+| \t "_blank" | New window |
+| \t "_parent" | Parent frame |
+| \l | Specifies a location in the file, such as a bookmark, where this hyperlink will navigate to |
 
 ## Inserting
 
