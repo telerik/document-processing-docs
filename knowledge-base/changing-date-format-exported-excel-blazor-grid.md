@@ -10,6 +10,10 @@ res_type: kb
 ticketid: 1702751
 ---
 
+# Changing Date Format of Exported Excel File from UI Grid components
+
+Apply a custom date format to grid data exported to Excel with RadSpreadProcessing.
+
 ## Environment
 
 | Version | Product | Author | 
@@ -20,7 +24,7 @@ ticketid: 1702751
 
 Learn how to apply a custom date format (for example, "yyyy-MM-dd") to the relevant columns in the exported Excel file generated from UI Grid components offered by the Telerik family.
 
-<img style="border: 1px solid gray;" src="images/changing-date-format-exported-excel-blazor-grid.png" /> 
+<img style="border: 1px solid gray;" src="images/changing-date-format-exported-excel-blazor-grid.png" alt="Excel Date column before and after formatting: 4/13/07 12:00 AM becomes 2007-04-13." />
 
 ## Solution
 

@@ -71,7 +71,7 @@ RadPdfProcessing also supports the following *NonStandard* `NamedAction` types:
 |`ZoomDragMenuItem`|Activate the zoom drag tool menu item.|
 |`Scan`|Initiate a scan operation.|
 
-### Adding a Named Action to a PushButtonField
+## Adding a Named Action to a PushButtonField
 
 The following example demonstrates how to create a PDF document with a [PushButtonField]({%slug radpdfprocessing-model-interactive-forms-form-fields-pushbuttonfield%}) that triggers a printing action when displayed in a viewer and the user presses the button:
 

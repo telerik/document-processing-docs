@@ -10,6 +10,10 @@ res_type: kb
 ticketid: 1707838
 ---
 
+# Exporting Data from DataGridView Control to Excel File
+
+Export Windows Forms grid data and column headers to an XLSX workbook with RadSpreadProcessing.
+
 ## Environment
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
@@ -19,7 +23,7 @@ ticketid: 1707838
 
 Export the data from a [WinForms DataGridView](https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridview?view=windowsdesktop-10.0) control to an Excel file in XLSX format, including header information. You can achieve this with Telerik Document Processing RadSpreadProcessing in a Visual Studio C# Windows Forms application.
 
-<img style="border: 1px solid gray;" src="images/saving-data-from-datagridview-to-xlsx-file-in-csharp.png" />
+<img style="border: 1px solid gray;" src="images/saving-data-from-datagridview-to-xlsx-file-in-csharp.png" alt="Example of DataGridView data exported to an Excel workbook." />
 
 ## Solution
 
@@ -29,7 +33,18 @@ Use Telerik Document Processing [RadSpreadProcessing]({%slug radspreadprocessing
 2. Add a button to trigger the export functionality.
 3. Use RadSpreadProcessing to export data from the DataGridView to an Excel file.
 
-The following example shows the complete implementation:
+The example is divided into consecutive parts of the same `Form1` class. Combine the C# blocks in order; individual blocks are not standalone examples. Navigate to the part you need:
+
+* [Initializing the form](#initializing-the-form)
+* [Loading sample data](#loading-sample-data)
+* [Handling the export button](#handling-the-export-button)
+* [Creating the workbook and headers](#creating-the-workbook-and-headers)
+* [Writing data rows](#writing-data-rows)
+* [Saving the workbook](#saving-the-workbook)
+
+### Initializing the Form
+
+The class fields and constructor create the grid and connect the export button to its handler:
 
 ```csharp
     public partial class Form1 : Form
@@ -69,6 +84,13 @@ The following example shows the complete implementation:
             LoadSampleData();
 
         }
+```
+
+### Loading Sample Data
+
+Continue the `Form1` class with the method that populates the grid:
+
+```csharp
         private void LoadSampleData()
         {
             // Create a simple DataTable with mixed types
@@ -89,6 +111,13 @@ The following example shows the complete implementation:
             _grid.DataSource = table;
         }
 
+```
+
+### Handling the Export Button
+
+Add the click handler to prompt for an output path, call the export method, and offer to open the result:
+
+```csharp
         private void OnExportClick(object sender, EventArgs e)
         {
             if (_grid.DataSource == null)
@@ -126,6 +155,13 @@ The following example shows the complete implementation:
             }
         }
 
+```
+
+### Creating the Workbook and Headers
+
+Begin `ExportGridToXlsx` by creating the workbook, setting up the page, and writing the column headers:
+
+```csharp
         private void ExportGridToXlsx(string filePath)
         {
             // Build a workbook in memory
@@ -163,6 +199,13 @@ The following example shows the complete implementation:
                 worksheet.Columns[c].SetWidth(new ColumnWidth(100, true)); // 100 pixels approx.
             }
 
+```
+
+### Writing Data Rows
+
+Continue inside `ExportGridToXlsx` to write the grid values and apply formats based on their types:
+
+```csharp
             // Write data rows
             for (int r = 0; r < rowCount; r++)
             {
@@ -229,6 +272,13 @@ The following example shows the complete implementation:
                 }
             }
 
+```
+
+### Saving the Workbook
+
+Finish `ExportGridToXlsx` by adding borders, freezing the header row, and saving the XLSX file. This block also closes the `Form1` class:
+
+```csharp
             // Add table borders (optional): apply thin border to used range
             var used = worksheet.UsedCellRange;
             if (used != null)

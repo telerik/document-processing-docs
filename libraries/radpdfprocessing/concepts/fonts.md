@@ -86,11 +86,11 @@ There are 14 *Type 1* fonts, known as the standard 14 fonts, that are not embedd
 
 RadPdfProcessing introduced a suitable API for replacing the predefined Standard Fonts in **R2 2023**. The public static method `ReplaceStandardFont(StandardFontNames name, byte[] data)` offered by `FontsRepository` replaces the provided standard font with the passed font data:
 
-#### Replace a Standard Font
+### Replace a Standard Font
 
 <snippet id='pdf-replace-standard-font'/>
 
-#### Set a Fallback Font
+### Set a Fallback Font
 
 You can configure fallback fonts for the standard fonts to ensure proper rendering when a standard font needs to be substituted with another font.
 

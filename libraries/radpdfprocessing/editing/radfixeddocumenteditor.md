@@ -19,7 +19,7 @@ The `RadFixedDocumentEditor` class in [PdfProcessing]({%slug radpdfprocessing-ov
 **Example 1** demonstrates how to create a `RadFixedDocumentEditor` instance.
         
 
-#### __Example 1: Create a RadFixedDocumentEditor__
+### __Example 1: Create a RadFixedDocumentEditor__
 
 <snippet id='pdf-create-fixed-document-editor'/>
 
@@ -199,7 +199,7 @@ You can insert an image inline using one of the following methods:
 The `Table` class implements the `IBlockElement` interface, so you can insert a table as a new block in the document. Insert it with the `InsertTable()` method, as shown in **Example 11**. `RadFixedDocumentEditor` handles positioning, measuring, and splitting the table across pages.
         
 
-#### __Example 11: Insert a table__
+### __Example 11: Insert a table__
 
 <snippet id='pdf-fixed-document-editor-insert-table'/>     
 
@@ -209,7 +209,7 @@ For more detailed information on tables, see the [Table]({%slug radpdfprocessing
 
 The [`IBlockElement`](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.Fixed.Model.Editing.Flow.IBlockElement) interface lets you draw and split block content across pages. The [Block]({%slug radpdfprocessing-editing-block%}) and [Table]({%slug radpdfprocessing-editing-table-overview%}) classes implement this interface. Add a block element instance with `RadFixedDocumentEditor` by using the `InsertBlock()` method, as shown in **Example 12**.
 
-#### __Example 12: Insert a block element__
+### __Example 12: Insert a block element__
 
 <snippet id='pdf-fixed-document-editor-insert-block-element'/>
 
@@ -219,7 +219,7 @@ You can insert list items with `RadFixedDocumentEditor`. First, add a `List` to 
 
 The following code snippet shows how to add a new list to the `RadFixedDocumentEditor` `ListCollection` and then insert a paragraph with the corresponding list properties:
 
-#### __Example 13: Insert a list__
+### __Example 13: Insert a list__
 
 <snippet id='pdf-fixed-document-editor-insert-list'/>
 
@@ -229,7 +229,7 @@ More detailed information about lists is available in the [list article]({%slug 
 
 With `RadFixedDocumentEditor`, you can insert a form (`Form XObject`) element.
 
-#### __Example 14: Insert a form__
+### __Example 14: Insert a form__
 <snippet id='pdf-fixed-document-editor-insert-form'/>
 
 There is an additional overload of `InsertFormInline()` that lets you pass the size to use for the form.

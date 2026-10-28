@@ -103,7 +103,7 @@ Create a "**tessdata**" folder and populate it with the desired languages. The l
 
 The "**tessdata**" folder placement is determined by the user. The `DataPath` property of the [TesseractOcrProvider]({%slug radpdfprocessing-formats-and-conversion-ocr-ocrformatprovider%}#tesseractocrprovider-public-api) points to the parent folder that contains "**tessdata**", which allows the provider to locate and use it.
 
-#### "tessdata" Structure:
+### "tessdata" Structure:
 
 ```plaintext
 tessdata

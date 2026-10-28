@@ -10,10 +10,14 @@ ticketid: 1531113
 res_type: kb
 ---
 
+# How do I add an image using WordsProcessing with the correct aspect ratio?
+
+Resize an image to fit a document page while preserving its aspect ratio.
+
 ## Environment
 
 | Version | Product | 
-| ---- | ---- | ---- | 
+| ---- | ---- |
 | 2021.2.728.1| RadWordsProcessing |
 
 ## Description
@@ -24,7 +28,7 @@ This article shows how to insert an image in a [RadFlowDocument]({%slug radwords
 
 Create an image and compare its size with the size available on the page. If the image is bigger, decrease its size:
 
-#### __Insert and Resize Image__
+### __Insert and Resize Image__
 
 ```csharp
 

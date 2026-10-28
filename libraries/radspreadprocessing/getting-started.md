@@ -25,13 +25,13 @@ The document model allows you to instantiate a new [workbook]({%slug radspreadpr
 
 The following example creates a workbook and adds a worksheet to it.
 
-#### __Example 1: Create a Workbook and Add a Worksheet__
+### __Example 1: Create a Workbook and Add a Worksheet__
 
 <snippet id='codeblock-cfs'/>
 
 You can then create a [CellSelection]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%}) and set a value for the selected cells. The following example creates a cell and assigns a string value to it.
 
-#### __Example 2: Create a Cell and Set a String Value__
+### __Example 2: Create a Cell and Set a String Value__
 
 <snippet id='codeblock-cft'/>
 
@@ -41,7 +41,7 @@ The `RadSpreadProcessing` library supports a variety of formats to which you can
 
 For more examples and application scenarios of importing and exporting a Workbook to various formats, check the [Import/Load and Export/Save RadSpreadProcessing Workbook]({%slug import-export-save-load-workbook%}) knowledge base article.
 
-#### __Example 3: Export a Workbook to XLSX__
+### __Example 3: Export a Workbook to XLSX__
 
 <snippet id='codeblock-cfu'/>
 

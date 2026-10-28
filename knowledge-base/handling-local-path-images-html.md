@@ -10,6 +10,10 @@ res_type: kb
 ticketid: 1699078
 ---
 
+# Handling Local Path Images When Importing HTML Documents in Telerik WordsProcessing
+
+Load local images during HTML import with the WordsProcessing `LoadImageFromUri` event.
+
 ## Environment
 
 | Version | Product | Author | 
@@ -19,7 +23,7 @@ ticketid: 1699078
 ## Description
 
 When importing an HTML document using Telerik WordsProcessing, images with local file paths (for example, "C:\temp\image.png") may fail to load. This leads to missing image content once the document is exported. Blank placeholders appear in the media section of the exported document because external resources are not handled during the import process. Embedding images as base64-encoded data in the HTML works, but a more flexible solution uses the `HtmlImportSettings` with the `LoadImageFromUri` event.
-<img style="border: 1px solid gray;" src="images/handling-local-path-images-html.png" /> 
+<img style="border: 1px solid gray;" src="images/handling-local-path-images-html.png" alt="Missing image content after importing HTML with local image paths." />
 
 This knowledge base article also answers the following questions:
 

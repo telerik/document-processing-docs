@@ -25,7 +25,7 @@ The `PdfExportSettings` class derives from the `Telerik.Windows.Documents.Fixed.
 
 <snippet id='codeblock-ce'/>
 
->The PDF/A standard requires documents to contain all fonts used in them within the document. RadPdfProcessing does not support embedding of the standard 14 fonts used in PDF documents listed [here]({%slug radpdfprocessing-concepts-fonts%}). Using these fonts prevents the document from complying with the standard.
+>important The PDF/A standard requires documents to contain all fonts used in them within the document. RadPdfProcessing does not support embedding of the [standard 14 PDF fonts]({%slug radpdfprocessing-concepts-fonts%}). Using these fonts prevents the document from complying with the standard.
 
 ## Extensibility Manager
 

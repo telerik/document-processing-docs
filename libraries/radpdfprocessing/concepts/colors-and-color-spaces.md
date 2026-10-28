@@ -159,7 +159,7 @@ The tiling created in **Example 4** is shown in **Figure 3**.
 
 The **LAB** color space is device-independent. **L** represents lightness or brightness, **A** represents the red-green axis, and **B** represents the yellow-blue axis.
 
-#### **Create LabColor**
+### **Create LabColor**
 
 <snippet id='pdf-create-lab-color'/>
 

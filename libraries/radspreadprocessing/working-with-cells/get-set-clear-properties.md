@@ -127,7 +127,10 @@ The `Borders` property uses a `CellBorders` object for getting and setting its p
 
 The result of **Example 6** is demonstrated in the following figure.
 
-#### Figure 1: Resulting Borders
+<a id="figure-1-resulting-borders"></a>
+
+**Figure 1: Resulting Borders**
+
 ![Worksheet showing one cell block with dotted purple borders and a second block with thick dark blue outer borders and thin purple inner borders](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_01.png)
 
 ## Fill Property
@@ -144,7 +147,10 @@ As its name suggests, the `PatternFill` object fills the background of a region 
 
 The result of **Example 7** is illustrated in the following figure.
 
-#### Figure 2: Applied PatternFill
+<a id="figure-2-applied-patternfill"></a>
+
+**Figure 2: Applied PatternFill**
+
 ![Worksheet showing a yellow and orange diagonal stripe fill across A1:F1 and a solid green fill across A2:F6](images/RadSpreadProcessing_Working_With_Cells_Get_Set_Clear_Properties_02.png)
 
 The `GradientFill` sets the background of a region of cells to a gradual blending of two colors. To create a `GradientFill`, specify a [GradientType](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Spreadsheet.Model.GradientType.html) and the two colors that blend.

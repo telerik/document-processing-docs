@@ -10,6 +10,10 @@ res_type: kb
 ticketid: 1710179
 ---
 
+# Generate PDF Expense Report
+
+Create an expense report with receipt images and PDF attachments using RadPdfProcessing.
+
 ## Environment
 
 | Version | Product | Author | 
@@ -20,7 +24,7 @@ ticketid: 1710179
 
 This article shows how to generate a PDF expense report. The report contains receipt images (for example, gas, toll, meal) or PDF attachments of receipts.
 
-<img style="border: 1px solid gray;" src="images/pdf-expense-report.png" /> 
+<img style="border: 1px solid gray;" src="images/pdf-expense-report.png" alt="Sample PDF expense report with receipts." />
 
 ## Solution
 

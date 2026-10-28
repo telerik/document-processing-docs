@@ -10,6 +10,8 @@ res_type: kb
 ticketid: 1710562
 ---
 
+# Implementing TRANSPOSE(cells range) Function in SpreadProcessing
+
 ## Environment
 
 | Version | Product | Author | 
@@ -20,15 +22,18 @@ ticketid: 1710562
 
 This article demonstrates a sample approach for implementing a custom function that simulates the [TRANSPOSE](https://support.microsoft.com/en-us/office/transpose-function-ed039415-ed8a-4a81-93e9-4b6dfac76027)(A1:C1) functionality.
 
-If your original data is:
-||||
+The following table shows the original data in worksheet columns A, B, and C. The header row identifies worksheet columns and is not part of the sample input:
+
+|A|B|C|
 |----|----|----|
 |Apple|Banana|Cherry|
 |1|2|3|
 
 then `=TRANSPOSE(A1:C1)` will produce: 
 
-||||
+The following table shows the illustrated result. Blank cells in column C contain no sample output values; they are not missing data:
+
+|A|B|C|
 |----|----|----|
 |Apple|1||
 |Banana|2||

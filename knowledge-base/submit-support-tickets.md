@@ -9,6 +9,10 @@ tags: support, telerik, document, processing, ticket, help, community, forum
 res_type: kb
 ---
 
+# How to Get the Most Out of the Telerik Document Processing Support
+
+Find support resources and prepare a Telerik Document Processing support request with the information needed to investigate your issue.
+
 ## Environment
 
 | Version | Product | Author | 
@@ -42,27 +46,27 @@ If none of the listed resources helped, follow these steps to contact the Teleri
 1. Log into your Telerik.com account and navigate to the [Support Center - Contact Us](https://www.telerik.com/account/support-center/contact-us) page.
 2. Select the [Get Technical Support](https://www.telerik.com/account/support-center/contact-us/technical-support) option for technical help (use the [Get Licensing Support](https://www.telerik.com/account/support-center/contact-us/licensing-support) option for product license questions).
 
-    ![submit-support-tickets 000](images/submit-support-tickets000.png)
+    ![Technical support and licensing support options in the Telerik Support Center.](images/submit-support-tickets000.png)
 
 3. Next, select the product **Telerik Document Processing**: 
 
-	![submit-support-tickets 001](images/submit-support-tickets001.png)
+    ![Telerik Document Processing product selection for a support request.](images/submit-support-tickets001.png)
 
 4. Pick the **Document Processing Library** for which you need assistance, for example, **PdfProcessing**:
 
-	![submit-support-tickets 002](images/submit-support-tickets002.png)
+    ![PdfProcessing library selection for a support request.](images/submit-support-tickets002.png)
 
 5. Try to search for a possible solution for your inquiry, for example, *"how to change the page size"*
 
-	![submit-support-tickets 003](images/submit-support-tickets003.png)
+    ![Support search for a question about changing the page size.](images/submit-support-tickets003.png)
 
 6. Have a look at the found results. You may find a suitable solution for your question:
 
-	![submit-support-tickets 004](images/submit-support-tickets004.png)
+    ![Search results for the page-size question.](images/submit-support-tickets004.png)
 
 7. If you do not find what you are looking for, click the **Contact Support** button at the bottom to contact the Support engineers. The important part is what to include in the support ticket so that the assigned agent understands what you are trying to achieve.
 
-	![submit-support-tickets 005](images/submit-support-tickets005.png)
+    ![Contact Support option after reviewing search results.](images/submit-support-tickets005.png)
 
 
 ## General Tips when Submitting a Support Ticket

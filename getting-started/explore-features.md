@@ -18,13 +18,26 @@ Once you have completed the [Document Processing first steps tutorial]({%slug ge
 
 The fastest way to get an overview of how to use the Telerik Document Processing libraries with the Telerik UI products is to explore the Live Demos:
 
-||||
-|----|----|----|
-|Web|Desktop|Mobile|
-|[Explore ASP.NET AJAX demos](https://demos.telerik.com/aspnet-ajax/)|[Explore WPF demos](http://demos.telerik.com/wpf)|[Explore .NET MAUI  demos](https://www.telerik.com/support/demos#mobile)|
-|[Explore ASP.NET MVC demos](https://demos.telerik.com/aspnet-mvc/)|[Download the WinForms demo launcher](https://telerik-winforms-demos.s3.amazonaws.com/TelerikWinFormsExamplesLauncher.exe)||
-|[Explore ASP.NET Core demos](https://demos.telerik.com/aspnet-core/)|[Explore WinUI demos](https://demos.telerik.com/winui/?_ga=2.172224931.145105266.1615285037-1571667030.1570715481)||
-|[Explore Blazor demos](https://demos.telerik.com/blazor-ui)|||
+### Web Demos
+
+Explore demos for web applications:
+
+* [Explore ASP.NET AJAX demos](https://demos.telerik.com/aspnet-ajax/)
+* [Explore ASP.NET MVC demos](https://demos.telerik.com/aspnet-mvc/)
+* [Explore ASP.NET Core demos](https://demos.telerik.com/aspnet-core/)
+* [Explore Blazor demos](https://demos.telerik.com/blazor-ui)
+
+### Desktop Demos
+
+Explore demos for desktop applications:
+
+* [Explore WPF demos](http://demos.telerik.com/wpf)
+* [Download the WinForms demo launcher](https://telerik-winforms-demos.s3.amazonaws.com/TelerikWinFormsExamplesLauncher.exe)
+* [Explore WinUI demos](https://demos.telerik.com/winui/?_ga=2.172224931.145105266.1615285037-1571667030.1570715481)
+
+### Mobile Demos
+
+[Explore .NET MAUI demos](https://www.telerik.com/support/demos#mobile) for mobile applications.
 
 ## Developer-Focused Examples
 

@@ -10,6 +10,10 @@ res_type: kb
 ticketid: 1680377
 ---
 
+# Traversing Documents with Empty Cells When Reading Excel Rows Using RadSpreadStreamProcessing
+
+Preserve column alignment when importing Excel rows with empty cells into a `DataTable`.
+
 ## Environment
 
 | Version | Product | Author | 
@@ -20,7 +24,7 @@ ticketid: 1680377
 
 When you use [RadSpreadStreamProcessing]({%slug radspreadstreamprocessing-overview%}) to read an Excel file, unexpected results occur when reading rows that contain **empty** cells. Empty cells are skipped, which causes misalignment of data with columns. For example, when a row has blank values in the first columns, the value of the subsequent column with data shifts to the wrong column index.
 
-<img style="border: 1px solid gray;" src="images/handling-empty-cells-when-reading-excel-rows-using-radspreadstreamprocessing.png" /> 
+<img style="border: 1px solid gray;" src="images/handling-empty-cells-when-reading-excel-rows-using-radspreadstreamprocessing.png" alt="Example of column misalignment when empty Excel cells are skipped during import." />
 
 This leads to unexpected results if you need to traverse the data rows stored in the Excel document and populate a `DataTable`. 
 

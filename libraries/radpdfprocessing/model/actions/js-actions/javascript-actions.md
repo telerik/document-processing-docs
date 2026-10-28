@@ -36,7 +36,7 @@ You can add JS actions by using the public `Actions` property of the following c
 
 \* The existing `Action` property is obsolete.
 
-### Adding a JavaScript Action to a TextBoxField
+## Adding a JavaScript Action to a TextBoxField
 
 The following example demonstrates how to create a PDF document with three `TextBoxField` instances where the third field calculates the sum of the values entered in the first two widgets:
 
@@ -44,7 +44,7 @@ The following example demonstrates how to create a PDF document with three `Text
 
 <snippet id='pdf-js-action-sum'/>
 
-### Using the MergedJavaScriptNameResolving Event
+## Using the MergedJavaScriptNameResolving Event
 
 The `MergedJavaScriptNameResolving` event fires when resolving conflicts between JavaScript names while merging `RadFixedDocument` instances.
 

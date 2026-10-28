@@ -10,6 +10,10 @@ res_type: kb
 ticketid: 1705627
 ---
 
+# How To Handle Missing Content in Nested Tables While  Converting DOCX to PDF Format
+
+Use fixed table layouts in WordsProcessing to align nested tables in DOCX and PDF output.
+
 ## Environment
 
 | Version | Product | Author | 
@@ -20,7 +24,7 @@ ticketid: 1705627
 
 This article shows how to achieve strict alignment for nested tables in both DOCX and PDF output using Telerik [WordsProcessing]({%slug radwordsprocessing-overview%}). The generated DOCX document meets the desired layout, but the PDF output does not match due to differences in format rendering. The following approach demonstrates how to achieve consistent table layout in exported documents.
 
-<img style="border: 1px solid gray;" src="images/handle-missing-content-in-nested-tables-while-converting-docx-to-pdf.png" />
+<img style="border: 1px solid gray;" src="images/handle-missing-content-in-nested-tables-while-converting-docx-to-pdf.png" alt="Nested-table layout illustrating alignment differences between DOCX and PDF output." />
 
 ## Solution 
 

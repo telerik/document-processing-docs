@@ -60,9 +60,9 @@ Use `RadFixedDocument` when you need to:
 
 **Example 1** shows how to create a new `RadFixedDocument` instance.
 
-<a name="example1"><a/>
+<a name="example1"></a>
 
-#### __Example 1: Create a RadFixedDocument__
+### __Example 1: Create a RadFixedDocument__
 
 <snippet id='pdf-create-fixed-document'/>
 
@@ -72,7 +72,7 @@ You can execute different actions with the help of `RadFixedDocument`. For examp
 
 **Example 2** adds a page to the document created in [**Example 1**](#example1).
 
-#### __Example 2: Add a page to a RadFixedDocument__
+### __Example 2: Add a page to a RadFixedDocument__
 
 <snippet id='pdf-create-fixed-page'/>
 
@@ -81,20 +81,20 @@ Alternatively, you can create a new `RadFixedPage` and add it to the `Pages` col
 
 **Example 3** creates a page and adds it to the document created in [**Example 1**](#example1).
 
-#### __Example 3: Create and add a page to a RadFixedDocument__
+### __Example 3: Create and add a page to a RadFixedDocument__
 
 <snippet id='pdf-add-fixed-page'/>
 
 **Example 4** shows how to obtain a copy of a `RadFixedDocument`.
 
-#### __Example 4: Clone a document__
+### __Example 4: Clone a document__
 
 <snippet id='pdf-clone-document'/>
 
 
 You can merge PDF documents with the `Merge()` method of `RadFixedDocument`. This method clones the source document and appends it to the current instance of `RadFixedDocument`.
 
-#### __Example 5: Merge documents__
+### __Example 5: Merge documents__
 
 <snippet id='pdf-merge-fixed-documents'/>
 

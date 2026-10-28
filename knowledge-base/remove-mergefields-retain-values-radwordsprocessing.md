@@ -9,6 +9,10 @@ res_type: kb
 ticketid: 1667593
 ---
 
+# How to Remove a MERGEFIELD While Replacing the Placeholders with Values in RadWordsProcessing
+
+Remove merge-field codes and replace their placeholders with plain-text values in a Word document.
+
 ## Environment
 
 | Version | Product | Author | 
@@ -73,9 +77,11 @@ Process.Start(new ProcessStartInfo() { FileName = outputFilePath, UseShellExecut
 
 This method removes the `MERGEFIELD` effectively, leaving only the value in the document.
 
-|Before|After|
-|----|----|
-|![Merge Fields Before](images/mergeFields.gif)|![Merge Fields After](images/replacedMergeFields.png)|
+Before replacement, the document contains `MERGEFIELD` entries for the first and last names. For an optional visual demonstration, [view the animated merge-field example before replacement](images/mergeFields.gif).
+
+After replacement, the document contains the plain-text values `John` and `Smith`:
+
+![Document after replacing the first-name and last-name merge fields with John Smith.](images/replacedMergeFields.png)
 
 ## See Also
 

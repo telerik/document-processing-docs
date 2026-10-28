@@ -11,11 +11,12 @@ components: [pdfprocessing]
 
 # Creating Accessible PDF Documents 
 
-|Minimum Version|Q3 2025|
-|----|----|
-|Related Feature:|[Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})|
-
 Use `RadPdfProcessing` of Telerik Document Processing to generate accessible PDF documents. This article shows how to export accessible output by using compliance settings, tagging strategies, and structure trees.
+
+Feature availability and related documentation:
+
+* Minimum version: Q3 2025
+* Related feature: [Accessibility Support]({%slug pdfprocessing-feature-accessibility-support%})
 
 To export accessible output, the document must target **PDF/A-1a**, **PDF/A-2a**, **PDF/A-3a**, or **PDF/UA-1** compliance. To achieve this, configure `PdfFormatProvider.ExportSettings.ComplianceLevel` and `PdfFormatProvider.ExportSettings.TaggingStrategy` as described in [PdfComplianceLevel]({%slug radpdfprocessing-concepts-comply-with-pdfa-standard%}#accessibility-compliance) and [Tagged PDF]({%slug radpdfprocessing-model-tagged-pdf%}).
 
@@ -31,14 +32,19 @@ When you already have a `StructureTree`, export the document with [`TaggingStrat
 
 <snippet id='libraries-pdf-features-accessible-pdf'/>
 
-<table style="width:100%;">
-<th width=45%>PDF Accessibility Checker tool</th><th>Logical Structure</th>
-<tr>
-    <td rowspan="2"><img src="images/accessible-pdf-validity.png" alt="RadPdfProcessing Creating Accessible PDF Documents Validate with PDF Accessibility Checker"/></td>
-    <td><img src="images/accessible-pdf-logical-structure.png" alt="RadPdfProcessing Creating Accessible PDF Documents Logical Structure of PDF"/></td>
-</tr>
-<tr><td><img src="images/accessible-pdf-logical-structure-properties.png" alt="RadPdfProcessing Creating Accessible PDF Documents Properties"/></td></tr>
-</table>
+The following screenshots show the validation and structure views for the generated PDF.
+
+**PDF Accessibility Checker validation**
+
+![Accessible PDF validation in PDF Accessibility Checker.](images/accessible-pdf-validity.png)
+
+**Logical structure**
+
+![Logical structure of the generated PDF.](images/accessible-pdf-logical-structure.png)
+
+**Logical structure properties**
+
+![Properties associated with the PDF logical structure.](images/accessible-pdf-logical-structure-properties.png)
 
 ## Creating Accessible PDF Documents with Auto-Tagging
 

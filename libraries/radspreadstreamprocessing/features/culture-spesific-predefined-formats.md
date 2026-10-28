@@ -43,11 +43,11 @@ Starting with R3 2021, `SpreadStreamProcessing` exposes the `BuiltInNumberFormat
 |`GetNumber5`|#,##0_);\[Red](#,##0)|Generates a Currency number format string with no decimal places, a thousand separator, and positive and negative format with red digits patterns and alignment.|
 |`GetNumber6`|#,##0.00_);(#,##0.00)|Generates a Currency number format string with two decimal places, a thousand separator, and positive and negative format pattern and alignment.|
 |`GetNumber7`|#,##0.00_);\[Red](#,##0.00)|Generates a Currency number format string with two decimal places, a thousand separator, and positive and negative format with red digits patterns and alignment.|
-|`GetCurrency4`|_(*#,##0_);_(*(#,##0);_(* "-"_);_(@_)||
-|`GetCurrency5`|_($*#,##0_);_($*(#,##0);_($* "-"_);_(@_)||
-|`GetCurrency6`|_(*#,##0.00_);_(*(#,##0.00);_(*"-"??_);_(@_)||
-|`GetCurrency7`|_($*#,##0.00_);_($*(#,##0.00);_($*\"-\"??_);_(@_)||
-|`GetScientific2`|##0.0E+0||
+|`GetCurrency4`|_(*#,##0_);_(*(#,##0);_(* "-"_);_(@_)|Generates a Currency number format string with no decimal places and no currency symbol.|
+|`GetCurrency5`|_($*#,##0_);_($*(#,##0);_($* "-"_);_(@_)|Generates a Currency number format string with no decimal places and a currency symbol.|
+|`GetCurrency6`|_(*#,##0.00_);_(*(#,##0.00);_(*"-"??_);_(@_)|Generates a Currency number format string with two decimal places and no currency symbol.|
+|`GetCurrency7`|_($*#,##0.00_);_($*(#,##0.00);_($*\"-\"??_);_(@_)|Generates a Currency number format string with two decimal places and a currency symbol.|
+|`GetScientific2`|##0.0E+0|Generates a Scientific number format string with the displayed exponent pattern.|
 
 
 ## Working with the BuiltInNumberFormats Class

@@ -37,7 +37,7 @@ The `AutoFilter` class exposes the following public members:
 
 * `void ReapplyFilter(int relativeColumnIndex)`: Reapplies the filter applied to the column with the specified index.
 
->The column indices used to work with the filters are zero-based and relative to the filtered range.
+>note The column indices used to work with the filters are zero-based and relative to the filtered range.
 
 ## IFilter
 
@@ -53,7 +53,7 @@ The `GetValue()` method provides the value that the `ShouldShowValue()` method u
 
 The diagram in **Figure 1** shows the different types of filters that inherit the `IFilter` interface and the classes that implement them:
 
-#### Figure 1: Filter types
+**Figure 1: Filter types**
 
 ![Filter types class diagram](images/RadSpreadProcessing_Filtering_01.png)
 
@@ -251,9 +251,9 @@ To set a filter on a range, follow these steps:
 
 
 
->The first row of the `FilterRange` is reserved for column headers and is not included in the actual filtering.
+>note The first row of the `FilterRange` is reserved for column headers and is not included in the actual filtering.
 
->tip The filter cannot be set before the range. Attempting to do so causes an exception.
+>important The filter cannot be set before the range. Attempting to do so causes an exception.
 
 ## Reapplying a Filter
 
@@ -265,7 +265,7 @@ When a filter is set, it is automatically applied. The application of a filter h
 
 
 
->tip Attempting to reapply a filter on a column that is not filtered causes an exception.
+>important Attempting to reapply a filter on a column that is not filtered causes an exception.
 
 ## Removing and Clearing Filters
 

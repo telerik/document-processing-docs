@@ -55,18 +55,20 @@ If your password contains a special character, those characters need to be escap
 * Change the password so that it only includes characters that do not need to be escaped.
 * HTML encode the password so the special characters are escaped (for example, `my§uper&P@§§word` becomes `my&sect;uper&amp;P@&sect;&sect;word`).
 
-Do **not** enter your password into an online encoder utility. Use PowerShell instead:
+>warning Do not enter your password into an online encoder utility.
+
+Use PowerShell instead:
 
 ```powershell
 Add-Type -AssemblyName System.Web
 [System.Web.HttpUtility]::HtmlEncode('my§uper&P@§§word') 
 ```
 
-![PowerShell Encoding](images/nuget-troubleshooting-powershell-encoding.png)
+![PowerShell command that HTML-encodes special characters in a sample password](images/nuget-troubleshooting-powershell-encoding.png)
 
 ## Issue: Unable to Load the Service Index for Source https://nuget.telerik.com/v3/index.json
 
-Verify that the Telerik NuGet Feed is live at [https://status.telerik.com/](https://status.telerik.com/).
+Check the Telerik NuGet feed availability on the [Telerik service status page](https://status.telerik.com/).
 
 ## Issue: Resetting Telerik NuGet Credentials
 
@@ -88,7 +90,7 @@ Alternatively, use Windows Credentials Manager to remove the saved credentials:
     * `nuget.telerik.com`
     * `VSCredentials_nuget.telerik.com`
 
-    ![Manage your credentials](images/windows-credential-manager.png "Manage your credentials")  
+    ![Windows Credential Manager entries for saved Telerik NuGet credentials](images/windows-credential-manager.png "Manage your credentials")
 1. Add the Telerik NuGet Feed again, and then enter the correct credentials. For more details, see the [Available NuGet Packages]({%slug installation-nuget-packages%}) article.
 1. If desired, verify the NuGet credentials by inspecting the `NuGet.config` file located in `%AppData%\NuGet\NuGet.config`.
 
@@ -96,7 +98,7 @@ Alternatively, use Windows Credentials Manager to remove the saved credentials:
 
 Another common problem is that your machine (PC, GitHub Actions runner, or Azure DevOps agent) is behind a proxy. To check if you are experiencing a networking issue, open the following URL in your web browser:
 
-* https://nuget.telerik.com/v3/index.json
+* [Telerik NuGet v3 service index](https://nuget.telerik.com/v3/index.json) (`https://nuget.telerik.com/v3/index.json`)
 
 If the URL loads successfully, the Telerik NuGet feed is reachable from your machine. If it does not load, contact your network administrator to verify proxy and firewall settings.
 

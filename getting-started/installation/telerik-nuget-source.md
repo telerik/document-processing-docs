@@ -20,7 +20,9 @@ Choose one of the following methods to set up the remote Telerik NuGet feed:
 
 All methods in this article use the current NuGet v3 URL. The NuGet v2 URL is no longer available.
 
->tip When you use the .NET CLI or edit `NuGet.Config` manually, authenticate with your Telerik account credentials or a [Telerik NuGet API key](#use-nuget-api-key). If you use single sign-on (SSO) to access telerik.com, use a [Telerik NuGet API key for authentication](#use-nuget-api-key).
+When you use the .NET CLI or edit `NuGet.Config` manually, authenticate with your Telerik account credentials or a [Telerik NuGet API key](#use-nuget-api-key).
+
+>important If you use single sign-on (SSO) to access telerik.com, use a [Telerik NuGet API key for authentication](#use-nuget-api-key).
 
 >warning Never hard-code Telerik account credentials or NuGet API keys in a `NuGet.Config` file in a GitHub repository, Docker image, or any location that unauthorized parties can access. Exposed credentials can allow access to packages licensed under your account and may trigger a security review of the affected Telerik account.
 
@@ -144,7 +146,7 @@ You can [generate a Telerik NuGet API key in your Telerik account](https://www.t
 
 The Document Processing Libraries NuGet packages and most dependencies are on `nuget.telerik.com`. The [`Telerik.Licensing` package and license setup]({%slug setting-up-license-key%}) is on `nuget.org`. Use the [NuGet package source mapping configuration](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) below as a model.
 
->note Match the `key` values in the `packageSourceMapping` section to the `key` values in the `packageSources` section. Otherwise, NuGet returns a "Package not found" error.
+>important Match the `key` values in the `packageSourceMapping` section to the `key` values in the `packageSources` section. Otherwise, NuGet returns a "Package not found" error.
 
 **Package source mapping for Telerik Document Processing and other Telerik packages**
 

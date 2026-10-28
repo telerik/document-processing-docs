@@ -57,18 +57,18 @@ The RadPdfProcessing document model defines a hierarchy of elements that represe
 
 ## Composition of Document Elements
 
-`RadFixedDocument` represents a tree of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) instances where the fixed content is hosted. The following diagram describes the composition of the fixed content. Document elements are denoted in black and collections in orange.
+`RadFixedDocument` represents a tree of [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%}) instances where the fixed content is hosted. The following nested list describes the composition of the fixed content. Indentation indicates which elements or collections belong to each parent.
 
  * RadFixedDocument
    * [Pages]({%slug radpdfprocessing-model-radfixedpage%})
      * [Annotations]({%slug radpdfprocessing-model-annotations-overview%})
-     * [Actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) (PageActionCollection)
+     * [Page Actions]({%slug radpdfprocessing-model-action-collections%}#pageactioncollection) (PageActionCollection)
    * [NamedDestinations]({%slug radpdfprocessing-model-named-destinations%})
    * [EmbeddedFiles]({%slug radpdfprocessing-embedded-file-streams-overview%})
    * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})
       * [FormFields]({%slug radpdfprocessing-model-interactive-forms-form-fields %})
    * [Bookmarks]({%slug radpdfprocessing-features-bookmarks%})
-   * [Actions]({%slug radpdfprocessing-model-actions%}) (DocumentActionCollection)
+   * [Document Actions]({%slug radpdfprocessing-model-actions%}) (DocumentActionCollection)
 
 <!-- ![Rad Pdf Processing Model 02](images/RadPdfProcessing_Model_02.png) -->
 

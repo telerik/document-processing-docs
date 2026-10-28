@@ -13,7 +13,7 @@ components: [pdfprocessing]
 
 A CMap specifies the mapping from character codes to character selectors and serves the role of a font encoding. 
 
-CMaps are usually fully embedded into the PDF document and obtained from it during reading. A CMap can also be defined by a PDF name object, where the name identifies a well-known predefined CMap. The list of predefined CMaps is available at [https://github.com/adobe-type-tools/cmap-resources](https://github.com/adobe-type-tools/cmap-resources).
+CMaps are usually fully embedded into the PDF document and obtained from it during reading. A CMap can also be defined by a PDF name object, where the name identifies a well-known predefined CMap. The list of predefined CMaps is available in the [Adobe CMap resources repository](https://github.com/adobe-type-tools/cmap-resources).
 
 ## Working with Documents Containing Predefined CMap Tables
 
@@ -23,7 +23,7 @@ RadPdfProcessing enables you to use a default implementation for the known prede
 
 The **Telerik[.Windows].Documents.CMapUtils** package provides a default implementation for obtaining the data of a predefined CMap table by a given name. The class that contains implementations for all the CMap tables defined by the PDF Format Specification is called `PredefinedCMapsProvider`. To register an instance of the default implementation, use the `FixedExtensibilityManager` class.
 
->To use this feature, you must add a reference to the **Telerik[.Windows].Documents.CMapUtils package**.
+>important To use this feature, you must add a reference to the **Telerik[.Windows].Documents.CMapUtils package**.
 
 **Register Default CMapsProvider**
 <snippet id='pdf-cmaps'/>
@@ -42,4 +42,3 @@ The default implementation covers the majority of the scenarios but in some rare
 ## See Also
  * [FontsRepository API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html)
  * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
-

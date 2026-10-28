@@ -12,13 +12,13 @@ position: 2
 
 Telerik Document Processing is licensed under the conditions of the product you have obtained the libraries with. You can find the End-User License Agreements for the products on the following pages:
 
-**UI for ASP.NET AJAX** : [https://www.telerik.com/purchase/license-agreement/aspnet-ajax](https://www.telerik.com/purchase/license-agreement/aspnet-ajax)
+* [UI for ASP.NET AJAX license agreement](https://www.telerik.com/purchase/license-agreement/aspnet-ajax)
 
-**UI for WPF**: [https://www.telerik.com/purchase/license-agreement/wpf-dlw-s](https://www.telerik.com/purchase/license-agreement/wpf-dlw-s)
+* [UI for WPF license agreement](https://www.telerik.com/purchase/license-agreement/wpf-dlw-s)
 
-**UI for WinForms**: [https://www.telerik.com/purchase/license-agreement/winforms-dlw-s](https://www.telerik.com/purchase/license-agreement/winforms-dlw-s)
+* [UI for WinForms license agreement](https://www.telerik.com/purchase/license-agreement/winforms-dlw-s)
 
-**UI for WinUI**: [https://www.telerik.com/purchase/license-agreement/winui](https://www.telerik.com/purchase/license-agreement/winui)
+* [UI for WinUI license agreement](https://www.telerik.com/purchase/license-agreement/winui)
 
 ## See Also
 

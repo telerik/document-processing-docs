@@ -26,7 +26,7 @@ RadPdfProcessing provides **partial** support for **GoToR actions**. A *remote g
 
 >note Remote go-to actions cannot be used with embedded files.
 
-### Adding a GoToR Action to a Document
+## Adding a GoToR Action to a Document
 
 The following example shows how to create a PDF document and add a `GoToRAction` to a [Link annotation]({%slug radpdfprocessing-model-annotations-links%}) that opens another PDF document in a new window:
 
