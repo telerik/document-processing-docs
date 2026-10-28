@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1700632
 ---
 
-# Adding Alternating Row Colors to PDF Tables with RadPdfProcessing
-
 Use RadPdfProcessing to style table headers and alternate the background colors of data rows.
 
 ## Environment

@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1705627
 ---
 
-# Handling Missing Content in Nested Tables When Converting DOCX to PDF
-
 Use fixed table layouts in WordsProcessing to align nested tables in DOCX and PDF output.
 
 ## Environment

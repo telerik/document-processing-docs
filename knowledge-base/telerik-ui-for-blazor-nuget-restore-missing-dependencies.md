@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1712515
 ---
 
-# Resolving Telerik UI for Blazor NuGet Restore Failures Due to Missing Dependencies
-
 ## Environment
 
 The issue applies to the following product versions:

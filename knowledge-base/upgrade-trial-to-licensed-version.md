@@ -9,8 +9,6 @@ tags: telerik, license, trial, upgrade, document, processing, purchase, commerci
 res_type: kb
 ---
 
-# Upgrading Telerik Document Processing from Trial to Licensed Version
-
 Replace trial assemblies or NuGet packages with licensed versions for releases before Q2 2025.
 
 | Version | Product | Author | 

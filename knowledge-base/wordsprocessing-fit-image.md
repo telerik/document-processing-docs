@@ -10,8 +10,6 @@ ticketid: 1531113
 res_type: kb
 ---
 
-# Fitting Images to the Correct Aspect Ratio in RadWordsProcessing
-
 Resize an image to fit a document page while preserving its aspect ratio.
 
 ## Environment

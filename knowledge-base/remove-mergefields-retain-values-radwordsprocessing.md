@@ -9,8 +9,6 @@ res_type: kb
 ticketid: 1667593
 ---
 
-# Removing MERGEFIELD Codes While Replacing Placeholders with Values in RadWordsProcessing
-
 Remove merge-field codes and replace their placeholders with plain-text values in a Word document.
 
 ## Environment

@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1710179
 ---
 
-# Generating a PDF Expense Report
-
 Create an expense report with receipt images and PDF attachments using RadPdfProcessing.
 
 ## Environment

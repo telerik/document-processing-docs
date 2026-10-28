@@ -9,8 +9,6 @@ res_type: kb
 ticketid: 1671187
 ---
 
-# Troubleshooting Telerik NuGet
-
 ## Environment
 
 | Version | Product | Author | 

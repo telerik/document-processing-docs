@@ -8,8 +8,6 @@ tags: namespace, migration, windows, platform, netstandard, netframework, breaki
 res_type: kb
 ---
 
-# Migrating to Platform-Agnostic Namespaces
-
 Update namespace references after upgrading to the Q3 2026 Telerik Document Processing Libraries.
 
 ## Environment

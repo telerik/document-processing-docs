@@ -17,8 +17,6 @@ img[alt$="><"] {
 
 </style>
 
-# Resolving Apostrophe Character Being Replaced with Copyright Symbol in Filled PDF AcroForm
-
 Correct substituted apostrophe characters in filled PDF form fields by updating their font.
 
 ## Environment

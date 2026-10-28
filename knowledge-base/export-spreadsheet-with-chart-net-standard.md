@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1663021
 ---
 
-# Exporting Spreadsheets with Bar Charts in .NET Standard
-
 Convert spreadsheet charts to images before exporting the workbook to PDF in .NET Standard.
 
 ## Environment

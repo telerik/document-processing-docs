@@ -9,8 +9,6 @@ tags: support, telerik, document, processing, ticket, help, community, forum
 res_type: kb
 ---
 
-# Getting Support for Telerik Document Processing
-
 Find support resources and prepare a Telerik Document Processing support request with the information needed to investigate your issue.
 
 ## Environment

@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1710562
 ---
 
-# Implementing the TRANSPOSE Function in RadSpreadProcessing
-
 ## Environment
 
 | Version | Product | Author | 

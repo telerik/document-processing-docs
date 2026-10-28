@@ -9,8 +9,6 @@ tags: radwordsprocessing, mailmerge, image, radflowdocument, word, document, pro
 res_type: kb
 ---
 
-# Adding Different Images to a RadFlowDocument During Mail Merge
-
 Use a mail merge to populate a document with different images for each person.
 
 ## Environment

@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1707838
 ---
 
-# Exporting Data from a DataGridView Control to an Excel File
-
 Export Windows Forms grid data and column headers to an XLSX workbook with RadSpreadProcessing.
 
 ## Environment

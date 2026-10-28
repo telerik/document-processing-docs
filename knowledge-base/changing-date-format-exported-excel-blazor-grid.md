@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1702751
 ---
 
-# Changing the Date Format in Excel Files Exported from UI Grid Components
-
 Apply a custom date format to grid data exported to Excel with RadSpreadProcessing.
 
 ## Environment

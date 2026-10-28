@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1699078
 ---
 
-# Handling Local Image Paths When Importing HTML with RadWordsProcessing
-
 Load local images during HTML import with the WordsProcessing `LoadImageFromUri` event.
 
 ## Environment

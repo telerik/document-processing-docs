@@ -10,8 +10,6 @@ res_type: kb
 ticketid: 1680377
 ---
 
-# Reading Excel Rows with Empty Cells in RadSpreadStreamProcessing
-
 Preserve column alignment when importing Excel rows with empty cells into a `DataTable`.
 
 ## Environment
