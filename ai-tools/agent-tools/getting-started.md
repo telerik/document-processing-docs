@@ -52,7 +52,7 @@ The complete example below illustrates the following workflow:
 
 7. **Process Prompts**: Send user prompts to the agent. The AI model analyzes the request, determines which tools to call, executes them in the correct sequence, and returns the results.
 
-The example includes multiple scenarios demonstrating various document operations, from simple spreadsheet creation to complex multi-document workflows combining Excel and PDF processing. You can find complete implementations in the [Agent Tools SDK examples](https://github.com/telerik/document-processing-sdk/tree/master/AITools).
+The example includes multiple scenarios demonstrating various document operations, from simple spreadsheet creation to complex multi-document workflows combining Excel and PDF processing. You can find complete implementations in the [Developer Focused Examples]({%slug agent-tools-sdk-examples%}) section of Agent Tools.
 
 ## Complete Example
 
@@ -88,3 +88,4 @@ By combining the built-in tool warnings with explicit system prompt instructions
 ## See Also
 
 * [Overview]({%slug agent-tools-overview%})
+* [Explore Agent Tools developer focused examples]({%slug agent-tools-sdk-examples%})
