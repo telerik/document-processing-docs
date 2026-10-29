@@ -24,8 +24,6 @@ The feature is available starting with `Q4 2025`.
 
 >note Only a single XML invoice attachment is allowed according to the ZUGFeRD standard.
 
-For PDF/A-3B compliance, meet the following font requirement:
-
 >important To comply with the PDF/A-3B standard, all the fonts in the documents must be embedded. Avoid using [Standard Fonts]({%slug radpdfprocessing-concepts-fonts%}) because they are not embedded in the document. In **.NET Standard/.NET (Target OS: None)** environments, fonts beyond the [14 standard ones]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts) require a [FontsProvider implementation]({%slug pdfprocessing-implement-fontsprovider%}) to be resolved correctly.
 
 ### Removing a ZUGFeRD Invoice
