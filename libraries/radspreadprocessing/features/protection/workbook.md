@@ -11,18 +11,18 @@ components: [spreadprocessing]
 
 # Workbook Protection
 
-In certain cases when you present a workbook to the users, you may want to prevent them from adding, removing, renaming, or reordering sheets. This is where workbook protection comes in. The feature allows you to lock the structure of your workbook with or without a password. You can always unprotect the workbook as needed. You can also let the user remove the protection by entering the correct password. Once protection is removed, the user can add, remove, rename, and reorder sheets.
+Workbook protection in RadSpreadProcessing prevents users from adding, removing, renaming, or reordering worksheets. You can protect the workbook with or without a password and remove the protection when needed.
 
-Workbook protection in the context of the document model is an entirely user-oriented feature. When a workbook is protected, the UI does not allow the user to add, delete, reorder, or rename sheets. You as a developer have full access to the sheets collection of the workbook and can perform any modifications through code behind.
+Workbook protection affects the user interface only. When a workbook is protected, the user interface does not allow users to add, delete, reorder, or rename worksheets. As a developer, you retain full access to the workbook's sheets collection and can modify it in code.
 
 
 ## How to Protect a Workbook
 
-To protect a workbook, use the `Protect(string)` method of the `Workbook` class. The method takes one string parameter that specifies the password used for enforcing protection.
+To protect a workbook, call the `Protect(string)` method of the `Workbook` class. The method accepts a password string.
 
 **Example 1** illustrates how to create a workbook from scratch and protect it with a password.
 
->The protection functionality protects the workbook structure from editing. If you need to protect the document so that it can be opened only after providing a password, you must encrypt it. The encryption functionality is not yet supported in SpreadProcessing and you can vote for its implementation through the [public request](https://feedback.telerik.com/document-processing/1356022-spreadprocessing-implement-encryption-of-workbook).
+>important Workbook protection protects the workbook structure from editing. To require a password before users can open the document, you must encrypt it. SpreadProcessing does not support encryption yet.
 
 **Example 1: Password-Protect a Workbook**
 
@@ -32,7 +32,7 @@ To protect a workbook, use the `Protect(string)` method of the `Workbook` class.
 
 ## How to Unprotect a Workbook
 
-Use the `Unprotect(string)` method of the `Workbook` class to remove the workbook protection. The method returns a Boolean value that indicates whether the workbook is successfully unprotected.
+To remove workbook protection, call the `Unprotect(string)` method of the `Workbook` class. The method returns a `Boolean` value that indicates whether the workbook is successfully unprotected.
 
 **Example 2** demonstrates how to unprotect a workbook.
 
