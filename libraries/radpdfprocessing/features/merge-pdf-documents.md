@@ -10,26 +10,26 @@ components: [pdfprocessing]
 
 # Merge PDF Documents
 
-**RadPdfProcessing** supports merging multiple PDF documents into one with these approaches:
+Use `RadFixedDocument.Merge()` to merge imported PDF documents into a document model, or use `PdfStreamWriter` to stream pages directly to a new PDF with minimal memory use.
 
->note See the [PdfProcessing Content Merging, Splitting, and Adding Demo](https://demos.telerik.com/document-processing/pdfprocessing/merge_split_add_content) for a live example.
+>note See the <a href="https://demos.telerik.com/document-processing/pdfprocessing/merge_split_add_content" target="_blank">PdfProcessing Content Merging, Splitting, and Adding Demo</a> for a live example.
 
 ## Merging with RadFixedDocument
 
-Use the `Merge()` method of [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}) when you want to merge fully imported PDF documents. The method clones the source document and appends its supported content to the current `RadFixedDocument`, including pages and document-level data such as bookmarks, form fields, and destinations:
+Use `RadFixedDocument.Merge()` with [the `RadFixedDocument` model]({%slug radpdfprocessing-model-radfixeddocument%}) when you need a full document model and document-level content. The method clones the source document and appends its supported content to the current `RadFixedDocument`, including pages, bookmarks, form fields, and destinations:
 
 <snippet id='libraries-pdf-features-merge-documents-with-radfixeddocument'/>
 
 ## Merging with PdfStreamWriter
 
-Use [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) when you want a low-memory merge flow that streams pages from source PDF files into a new output file:
+Use the [`PdfStreamWriter` overview]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-overview%}) when you need a low-memory merge flow. It streams page content from source PDF files directly into a new output file without preserving the PDF document model in memory:
  
 <snippet id='libraries-pdf-features-merge-documents-with-pdfstreamwriter'/>
 
->note The [Manipulate Pages SDK demo](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) shows this approach end to end.
+>note The <a href="https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages" target="_blank">Manipulate Pages SDK demo</a> shows this approach end to end.
 
 ## See Also
 
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
-* [PdfStreamWriter]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%})
+* [PdfStreamWriter class]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter%})
 * [Create a Table of Contents for Merged PDF Documents]({%slug create-toc-for-merged-pdf-radpdfprocessing%})
