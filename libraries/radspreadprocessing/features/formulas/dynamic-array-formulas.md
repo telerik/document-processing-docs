@@ -31,7 +31,6 @@ When a formula evaluates to an array result, the engine attempts to write each e
 
 * **Available cells**: If all target cells are empty (or already owned by this anchor), the values are written and the anchor's spill range becomes *Active*.
 * **Blocked cells**: If any target cell contains a value that was not written by this anchor, the engine does not overwrite that cell. Instead, the anchor cell returns a `#SPILL!` error and the spill range becomes *Blocked*.
-* **Size unknown**: If the engine cannot determine the dimensions of the result (for example, because the formula produces an infinite or circularly dependent sequence), the anchor returns a `#CALC!` error.
 
 When a spill range **shrinks** on recalculation (for example, because fewer rows of data now satisfy a condition), the cells that are no longer part of the range are automatically cleared.
 
@@ -131,17 +130,6 @@ Two new error values are introduced together with dynamic array support:
 | `#CALC!` | `ErrorExpressions.CalcError` | The calculation engine cannot determine the result size, for example because the dimensions are infinite or unbounded. |
 
 Both error values behave like the existing errors in `ErrorExpressions` and can appear as the result value of a `FormulaCellValue`. For the full list of errors, see [Errors]({%slug radspreadprocessing-features-formulas-errors%}).
-
-## Import and Export (XLSX)
-
-SpreadProcessing reads and writes the OOXML attributes that represent dynamic array formulas:
-
-* The `t="array"` attribute on the `<f>` element marks a formula as an array formula.
-* The `ref` attribute on `<f>` specifies the anchor cell of the array formula.
-* The `cm` attribute on `<c>` elements stores cell metadata index values used for dynamic arrays.
-* The cell metadata records that `cm` points to are round-tripped without data loss.
-
-When you import an XLSX file that was saved by Excel with dynamic array formulas, SpreadProcessing preserves the full formula structure, including spill ownership information, and recalculates spill ranges on the next calculation pass.
 
 ## Limits
 

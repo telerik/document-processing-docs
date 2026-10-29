@@ -16,7 +16,11 @@ Once you have completed the [Document Processing first steps tutorial]({%slug ge
 
 ## Demos
 
-The fastest way to get an overview of how to use the Telerik Document Processing libraries with the Telerik UI products is to explore the Live Demos:
+The fastest way to get an overview of how to use the Telerik Document Processing libraries, on their own or with the Telerik UI products, is to explore the Live Demos:
+
+### Document Processing Demos
+
+[Explore the Document Processing demos](https://demos.telerik.com/document-processing/) for the RadPdfProcessing, RadSpreadProcessing, RadSpreadStreamProcessing, RadWordsProcessing, and RadZipLibrary libraries.
 
 ### Web Demos
 

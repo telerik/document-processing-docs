@@ -17,7 +17,7 @@ tags: dip, pixels, measurement, unit, radspreadprocessing, radpdfprocessing, rad
 
 ## UnitHelper Class
 
-The [UnitHelper](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.spreadsheet.utilities.unithelper) class provides several methods for converting from DIPs to other measurement units and vice versa (for example, points, picas, centimeters, and inches).
+The [UnitHelper](https://www.telerik.com/document-processing-libraries/documentation/api/telerik.documents.spreadsheet.utilities.unithelper) class provides several methods for converting from DIPs to other measurement units and vice versa (for example, points, picas, centimeters, and inches).
 
 ### Convert from DIP to Unit
 
@@ -61,7 +61,7 @@ The following example shows how to obtain row height as DIPs and convert it to p
 	var rowHeightInPoints = UnitHelper.DipToPoint(rowHeightInDips);
 ```
 
-The `DipToUnit` and `UnitToDip` methods accept not only the units but also the [UnitType](https://docs.telerik.com/devtools/document-processing/api/telerik.windows.documents.media.unittype) as a parameter:
+The `DipToUnit` and `UnitToDip` methods accept not only the units but also the [UnitType](https://www.telerik.com/document-processing-libraries/documentation/api/telerik.documents.media.unittype) as a parameter:
 
 The following example shows how to convert from points to DIPs and set the row height.
 

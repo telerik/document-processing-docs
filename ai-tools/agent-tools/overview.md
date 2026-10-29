@@ -62,3 +62,4 @@ The following extension methods are available for registering repositories with 
 * [Get started with DPL Agent Tools]({%slug agent-tools-getting-started%})
 * [Use spreadsheet agent tools]({%slug agent-tools-spreadsheet-document-api%})
 * [Use PDF agent tools]({%slug agent-tools-pdf-document-api%})
+* [Explore Agent Tools developer focused examples]({%slug agent-tools-sdk-examples%})
