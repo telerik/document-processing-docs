@@ -22,7 +22,7 @@ To protect a workbook, call the `Protect(string)` method of the `Workbook` class
 
 **Example 1** illustrates how to create a workbook from scratch and protect it with a password.
 
->important Workbook protection protects the workbook structure from editing. To require a password before users can open the document, you must encrypt it. SpreadProcessing does not support encryption yet. You can vote for this feature in the [workbook encryption public request](https://feedback.telerik.com/document-processing/1356022-spreadprocessing-implement-encryption-of-workbook).
+>important Workbook protection protects the workbook structure from editing. To require a password before users can open the document, you must encrypt it. SpreadProcessing does not support encryption yet.
 
 **Example 1: Password-Protect a Workbook**
 
