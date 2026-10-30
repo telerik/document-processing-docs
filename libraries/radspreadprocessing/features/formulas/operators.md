@@ -104,7 +104,7 @@ Intersection operator. Returns a reference to the cells that two ranges have in 
 
 If you combine multiple operators in a single formula, the document model evaluates the expression in the order determined by the precedence of the operators. If two operators have equal precedence, the document model evaluates them from left to right. The following table contains all operators sorted by precedence in descending order:
         
-<table><tr><td>
+<table><tr><th scope="col">Operator</th><th scope="col">Description</th></tr><tr><td>
 
 : (Colon) , (Space)</td><td>
 

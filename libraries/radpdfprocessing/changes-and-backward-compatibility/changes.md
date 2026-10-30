@@ -15,7 +15,7 @@ The following sections summarize the new functionality introduced in the library
 
 ## What Is New in 2024 Q4
 
-* Introduced a timeout mechanism for import and export of documents. The new `Import` and `Export` methods for all format providers have a mandatory timeout parameter. [Read more.]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%})
+* Introduced a timeout mechanism for import and export of documents. The new `Import` and `Export` methods for all format providers have a mandatory timeout parameter. See [PdfFormatProvider import and export timeout requirements]({%slug radpdfprocessing-formats-and-conversion-pdf-pdfformatprovider%}).
 
 ## What Is New in 2024 Q2
 
@@ -26,11 +26,11 @@ The following sections summarize the new functionality introduced in the library
 
 **New Features**
 
-* `RadFixedDocumentEditor` class which creates fixed content in a flow-like manner. [Read more.]({%slug radpdfprocessing-editing-radfixeddocumenteditor%})
+* `RadFixedDocumentEditor` class which creates fixed content in a flow-like manner. See [how to create fixed content with RadFixedDocumentEditor]({%slug radpdfprocessing-editing-radfixeddocumenteditor%}).
 
-* Introduced a Tables generator that allows easy export of tabular data content. [Read more.]({%slug radpdfprocessing-editing-table-overview%})
+* Introduced a Tables generator that allows easy export of tabular data content. See [how to generate tables for tabular data]({%slug radpdfprocessing-editing-table-overview%}).
 
-* Exposed `Block` class that allows you to draw and split groups of text, images, and shapes into parts. [Read more.]({%slug radpdfprocessing-editing-block%})
+* Exposed `Block` class that allows you to draw and split groups of text, images, and shapes into parts. See [how to draw and split content with the Block class]({%slug radpdfprocessing-editing-block%}).
 
 * Introduced hyperlink concept that combines Link annotation and fixed content.
 

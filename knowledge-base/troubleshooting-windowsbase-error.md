@@ -14,15 +14,15 @@ res_type: kb
 <table>
 	<tbody>
 		<tr>
-			<td>Product Version</td>
+			<th scope="row">Product Version</th>
 			<td>N/A</td>
 		</tr>
 		<tr>
-			<td>Product</td>
+			<th scope="row">Product</th>
 			<td>Telerik Document Processing</td>
 		</tr>
 		<tr>
-			<td>Used with</td>
+			<th scope="row">Used with</th>
 			<td>UI for Blazor, UI for Xamarin, UI for WinUI, UI for ASP.NET Core, UI for .NET MAUI</td>
 		</tr>
 	</tbody>
