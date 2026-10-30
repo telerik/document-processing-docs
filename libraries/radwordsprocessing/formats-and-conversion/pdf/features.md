@@ -15,9 +15,9 @@ Below you can find a list of all the features that the `PdfFormatProvider` suppo
 
 <table>
 <tr>
-<td>Feature</td>
-<td>Supported </td>
-<td>Comment</td>
+<th scope="col">Feature</th>
+<th scope="col">Supported </th>
+<th scope="col">Comment</th>
 </tr>
 <tr>
 <td><b>Text Formatting</b></td>

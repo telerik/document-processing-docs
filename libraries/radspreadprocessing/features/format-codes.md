@@ -61,33 +61,7 @@ You can display a combination of text and numbers in a cell by enclosing the tex
 > If the format code consists only of an ‘@’ sign, the value in the cell will be visualized as it is typed.
 
 
-Some characters like the percentage sign (%) do not require quotation marks when you include them in a format code. The following table lists them.
-
-**Table 2**
-<table>
-	<tr>
-		<td>$</td>
-		<td>+</td>
-		<td>- (Minus sign)</td>
-		<td>/</td>
-		<td>(</td>
-		<td>)</td>
-		<td>:</td>
-		<td>!</td>
-		<td>^</td>
-	</tr>
-	<tr>
-		<td>&</td>
-		<td>`</td>
-		<td>~</td>
-		<td>{</td>
-		<td>}</td>
-		<td><</td>
-		<td>></td>
-		<td>=</td>
-		<td> (Space character)</td>
-	</tr>
-</table>
+Other characters that do not require quotation marks in a format code include: `$`, `+`, `-` (minus sign), `/`, `(`, `)`, `:`, `!`, `^`, `&`, `` ` ``, `~`, `{`, `}`, `<`, `>`, `=`, and space.
 
 
 ## Decimal Places and Spaces
@@ -193,11 +167,7 @@ The name of the color must be defined as the first item in a section and enclose
 The number formats can be applied according to conditions. Each condition is enclosed in square brackets and consists of a comparison operator and a value. For example, the following number format displays numbers less than or equal to 50 in a red font and numbers greater than 50 in a blue font.
 
 
-<table>
-<tr><td>
-	[Red][<=50];[Blue][>50]
-</tr></td>
-</table>
+`[Red][<=50];[Blue][>50]`
 
 ## Currency, Percentages, and Scientific Notation
 

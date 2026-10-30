@@ -18,7 +18,7 @@ In some cases formula values may return errors. For example, you might have ente
 
 The following table contains information about all supported errors.
         
-<table><tr><td>
+<table><tr><th scope="col">Error</th><th scope="col">Description</th></tr><tr><td>
 
 #SPILL!
               </td><td>

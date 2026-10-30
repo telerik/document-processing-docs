@@ -14,13 +14,15 @@ res_type: kb
 <table>
 	<tbody>
 		<tr>
-			<td>Product Version</td>
+			<th scope="row">Product Version</th>
 			<td>2021.3.1109</td>
-			<td>Author</td>
 		</tr>
 		<tr>
-			<td>Product</td>
+			<th scope="row">Product</th>
 			<td>RadPdfProcessing</td>
+		</tr>
+		<tr>
+			<th scope="row">Author</th>
 			<td><a href="https://www.telerik.com/blogs/author/dimitar-karamfilov">Dimitar Karamfilov</a></td>
 		</tr>
 	</tbody>

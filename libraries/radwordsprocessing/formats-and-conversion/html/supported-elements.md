@@ -107,11 +107,11 @@ a</td></tr><tr><td>
 img</td></tr><tr><td>
 
 div</td></tr></table></td><td>
-<table><tr><td>
+<table><tr><th scope="col">
 
-<b>Import</b></td><td>
+<b>Import</b></th><th scope="col">
 
-<b>Export</b></td></tr><tr><td>
+<b>Export</b></th></tr><tr><td>
 
 Yes</td><td>
 
@@ -284,7 +284,7 @@ Yes</td></tr><tr><td>
 Yes</td><td>
 
 No</td></tr></table></td><td>
-<table><tr><td>
+<table><tr><th scope="col">Comment</th></tr><tr><td>
 
 -</td></tr><tr><td>
 
