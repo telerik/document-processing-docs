@@ -21,7 +21,7 @@ Before you start any significant task, you MUST complete these steps in order:
 3. **Locate all relevant skills.** Search `.github/skills/` recursively, including `telerik-documentation-style-guide/` and its sub-skills. You MUST NOT stop at the first match; collect every skill whose triggers fit the task.
 4. **Read each matching `SKILL.md` in full.** You MUST NOT act on a skill's name or description alone.
 5. **Read referenced files.** You MUST read every file a matching skill references, including its `references/` folder (for example, `style-grammar-words/references/word-replacements.md` and `style-brand-terms/references/vocabulary.md`).
-6. **Apply the skill workflow exactly.** You MUST follow the step order, scope rules, and output formats the skill defines. You MUST NOT substitute an ad hoc process when a skill defines one.
+6. **Apply the relevant workflow or convention section.** Execute a skill's full workflow only when the request matches that workflow's trigger, preserving its step order, scope rules, and output format. When routing selects only a convention or reference section, apply that section without running the skill's unrelated link-fetching, branch-management, or reporting steps.
 7. **Resolve conflicts.** When skills disagree, you MUST apply the [Precedence Rules](#precedence-rules) and the [Multi-Skill Execution Order](#multi-skill-execution-order).
 8. **Report the skills used.** You MUST report skills as defined in [Skill Reporting](#skill-reporting).
 
