@@ -55,7 +55,7 @@ Additional rules:
 
 ### Skill Reporting
 
-Report the skills you applied in the final response according to the output type:
+Report the skills you applied in the final response according to the output type below, except when the selected workflow requires JSON-only output. For JSON-only workflows, preserve the prescribed schema and omit the skill report.
 
 | Output Type | Skill Reporting |
 |---|---|
