@@ -22,9 +22,9 @@ You need to decide between `RadFlowDocumentEditor`, `RadFixedDocumentEditor`, an
 
 Use this rule first:
 
-* Choose `RadFlowDocumentEditor` when your source model is Word-like flow content (`RadFlowDocument`), and you need high-level editing.
-* Choose `RadFixedDocumentEditor` when your output is PDF, and you need flow-like authoring with automatic pagination.
-* Choose `FixedContentEditor` when your output is PDF, and you need precise, coordinate-based placement.
+* Choose `RadFlowDocumentEditor` when your source model is Word-like flow content (`RadFlowDocument`) and you need high-level editing.
+* Choose `RadFixedDocumentEditor` when your output is PDF and you need flow-like authoring with automatic pagination.
+* Choose `FixedContentEditor` when your output is PDF and you need precise, coordinate-based placement.
 
 ### Library and Model Differences
 
