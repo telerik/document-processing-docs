@@ -22,9 +22,9 @@ You need to decide between `RadFlowDocumentEditor`, `RadFixedDocumentEditor`, an
 
 Use this rule first:
 
-* Choose `RadFlowDocumentEditor` when your source model is Word-like flow content (`RadFlowDocument`) and you need high-level editing.
-* Choose `RadFixedDocumentEditor` when your output is PDF and you need flow-like authoring with automatic pagination.
-* Choose `FixedContentEditor` when your output is PDF and you need precise, coordinate-based placement.
+* Choose `RadFlowDocumentEditor` when your source model is Word-like flow content (`RadFlowDocument`), and you need high-level editing.
+* Choose `RadFixedDocumentEditor` when your output is PDF, and you need flow-like authoring with automatic pagination.
+* Choose `FixedContentEditor` when your output is PDF, and you need precise, coordinate-based placement.
 
 ### Library and Model Differences
 
@@ -47,7 +47,7 @@ If you create content similar to a Word document, start with `RadFlowDocumentEdi
 If you create a PDF directly and need easier layout flow, use `RadFixedDocumentEditor`.
 If exact XY placement is mandatory, use `FixedContentEditor`.
 
-For Word-to-PDF conversion scenarios, RadWordsProcessing exports PDF based on its supported feature matrix. If a source document uses unsupported or partially supported features, visual differences can appear in exported PDF. Review [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}) for details.
+For Word-to-PDF conversion scenarios, RadWordsProcessing exports PDF based on its supported feature matrix. If a source document uses unsupported or partially supported features, visual differences can appear in the exported PDF. Review [Formats and Conversion]({%slug radwordsprocessing-formats-and-conversion%}) for details.
 
 ## See Also
 
