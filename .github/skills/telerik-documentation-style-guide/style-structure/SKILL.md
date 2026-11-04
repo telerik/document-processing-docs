@@ -51,7 +51,7 @@ Content here.
 
 ### Structural Rules
 
-1. **One H1 per article** — The H1 (`#`) heading must appear exactly once and match the article's `title` metadata. When they differ, adjust the H1 to match the existing `title` value (do not modify the `title` metadata).
+1. **H1 usage** — Standard documentation articles must contain exactly one H1 (`#`) heading, and it must match the article's `title` metadata. If multiple H1 headings appear, convert each additional H1 to the appropriate lower-level heading in the document hierarchy. Never add a second H1. KB articles must not contain an H1; see the `style-kb-faq` skill. When a standard article's H1 differs from its `title`, adjust the H1 without modifying the metadata.
 2. **Text between heading and subheadings** — Always write at least one sentence between a heading and its first subheading. This gives readers context before they dive into subsections.
 3. **Minimum two subheadings** — If a section has subheadings, it must have at least two. A single subheading under a heading is a sign the content should be merged with the parent.
 4. **Heading levels do not skip** — Go from H2 to H3, not from H2 to H4. Every heading level must be one deeper than its parent.
@@ -211,23 +211,22 @@ The library supports the following formats:
 
 When inserting figures (images, diagrams, charts):
 
-1. Introduce the figure in the preceding text.
+1. Introduce each figure immediately before the image with a concise sentence or caption block that briefly describes its purpose or content. Do not use a heading or bold text as the introduction; follow the image requirements in the `style-formatting` skill.
 2. Use descriptive alt text in the image tag.
-3. If the figure needs additional explanation, add a caption as italic text immediately after the image.
+3. Keep any additional explanation concise and preserve it alongside the required introduction.
 
 ```markdown
 The following diagram shows the document processing pipeline:
 
 ![Document processing pipeline showing import, transformation, and export stages](images/pipeline-diagram.png)
-
-*Figure 1: The document processing pipeline processes documents through three stages.*
 ```
 
 ## Quick Checklist
 
 When reviewing an article for structure, verify:
 
-- [ ] Exactly one H1 heading that matches the title metadata (adjust the H1 if they differ; do not change the metadata)
+- [ ] Standard articles have exactly one H1 matching the title metadata; KB articles have no H1
+- [ ] Additional H1 headings in standard articles are converted to the appropriate lower-level heading; no second H1 is added
 - [ ] Text between every heading and its first subheading
 - [ ] At least two subheadings per section (or none)
 - [ ] Heading levels do not skip (H2→H3, never H2→H4)
@@ -239,3 +238,4 @@ When reviewing an article for structure, verify:
 - [ ] List items use parallel grammatical structure
 - [ ] No single-item lists
 - [ ] Lists nested no deeper than three levels
+- [ ] Every image has an immediate introductory sentence or caption block before it; headings and bold text are not used as introductions

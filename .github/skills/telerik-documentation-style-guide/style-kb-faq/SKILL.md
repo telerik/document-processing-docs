@@ -7,6 +7,10 @@ description: "Use this skill when writing, editing, or reviewing Knowledge Base 
 
 This skill defines how to write Knowledge Base (KB) articles and FAQ sections in Progress DevTools documentation. KB articles address specific user problems or tasks; FAQs answer common questions concisely.
 
+## KB Heading Rule
+
+KB articles must not contain an H1 (`#`) heading. Never add an H1 when creating or editing a KB article. When reviewing or validating one, report any existing H1 and replace it with the appropriate lower-level heading when providing remediation; do not change the `title` metadata.
+
 ## KB Article Types
 
 There are three types of KB articles, each with a distinct purpose and structure.
@@ -32,8 +36,6 @@ page_title: Export Document to PDF with Custom Settings | Telerik Document Proce
 slug: kb-export-pdf-custom-settings
 tags: pdf, export, page-settings
 ---
-
-# Exporting a Document to PDF with Custom Page Settings
 
 ## Environment
 
@@ -87,8 +89,6 @@ page_title: Fix OutOfMemoryException in PDF Export | Telerik Document Processing
 slug: kb-pdf-export-oom-exception
 tags: pdf, export, outofmemoryexception, troubleshooting
 ---
-
-# PdfFormatProvider Throws OutOfMemoryException for Large Documents
 
 ## Environment
 
@@ -212,6 +212,7 @@ FAQ sections answer common questions concisely within a feature article or as st
 When reviewing a KB or FAQ article, verify:
 
 - [ ] Article type matches the content (how-to, troubleshooting, or CVE)
+- [ ] KB article contains no H1 heading; report and replace any existing H1 with the appropriate lower-level heading without changing the title metadata
 - [ ] Title uses the correct format (-ing form for how-to, problem statement for troubleshooting)
 - [ ] All required sections are present (Environment, Description, Solution/Cause)
 - [ ] Article is self-sufficient — no mandatory external dependencies

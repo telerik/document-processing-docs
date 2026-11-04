@@ -178,7 +178,7 @@ page.Size = new Size(842, 595);
 
 ## Screenshots
 
-Screenshots complement text but do not replace it. Always describe the action or result in text before or after the screenshot.
+Images complement text but do not replace it. Introduce every image immediately before it with a concise sentence or caption block that briefly describes its purpose or content.
 
 ### Screenshot Requirements
 
@@ -201,7 +201,16 @@ The **Export** dialog box provides options for the output format and file locati
 ![Export dialog box with format options highlighted](images/export-dialog.png)
 ```
 
-- Place screenshots **after** the text that describes them.
+- A caption block uses the `>caption` marker and appears immediately before the image:
+
+  ```markdown
+  >caption The Export dialog box provides options for the output format and file location.
+
+  ![Export dialog box with format options highlighted](images/export-dialog.png)
+  ```
+
+- Do not introduce an image with a heading or standalone bold text.
+- Preserve valid introductions. If an introduction is missing or uses a heading or bold text, replace it with a concise sentence or caption block while preserving surrounding content and formatting.
 - Use descriptive alt text that explains what the screenshot shows.
 - For animated media, provide equivalent written steps or results. Use a static image or a descriptive link to an optional animation when playback cannot be paused or stopped.
 - Store screenshot files in an `images/` subdirectory relative to the article.
