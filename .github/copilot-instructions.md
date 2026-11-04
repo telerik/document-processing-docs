@@ -142,7 +142,7 @@ If a step cannot be completed (for example, a required external skill or reposit
 
 Every created or edited Markdown article must be evaluated against the relevant skills for:
 
-- **Markdown quality and structure** — exactly one H1 matching `title`, no skipped heading levels, `#### __Example N: ...__` for example headings, `## See Also` as the last H2 (`style-structure`, `dpl-docs-article-from-links`).
+- **Markdown quality and structure** — exactly one H1 matching `title` except in KB articles, which must not contain an H1; no skipped heading levels; `#### __Example N: ...__` for example headings; `## See Also` as the last H2 (`style-structure`, `style-kb-faq`, `dpl-docs-article-from-links`).
 - **Metadata** — complete frontmatter for the article type, 120–150 character `description`, unique kebab-case `slug` following the library pattern (`style-metadata-links`, `dpl-docs-article-from-links`).
 - **Links** — internal links use `{%slug ...%}`, external links use HTML anchors with `target="_blank"`, descriptive anchor text, no "click here" (`style-metadata-links`, `accessibility-doc-optimization`).
 - **Style and tone** — active voice, imperative instructions, present tense, approved contractions only, American English (`style-writing-tone`, `style-grammar-words`).
