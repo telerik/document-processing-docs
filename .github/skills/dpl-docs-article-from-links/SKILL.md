@@ -166,8 +166,6 @@ Slugs are unique, lowercase, and hyphen-separated. Match the pattern used by nei
 **Knowledge Base article:**
 
 ```
-# <Title>
-
 ## Environment
 | Version | Product | Author |
 | --- | --- | --- |
@@ -188,6 +186,7 @@ KB title conventions: use the `-ing` form for how-to topics ("Signing Multiple S
 ### 4. Headings
 
 - Exactly one H1, immediately after the frontmatter, matching the `title` field.
+- KB articles are an exception: they must not contain an H1.
 - H4 (`####`) is reserved for example headings and is wrapped in double underscores: `#### __Example 1: <Description>__`.
 - Never skip heading levels.
 
@@ -274,7 +273,7 @@ Use `RadPdfProcessing`, `RadWordsProcessing`, `RadSpreadProcessing`, and `RadSpr
 
 ### 12. Output Requirements
 
-Every created or updated article must start with the frontmatter block, contain exactly one H1 matching `title`, follow the matching template from Section 3, end with `## See Also`, use LF line endings, and have no trailing blank lines.
+Every created or updated article must start with the frontmatter block, contain exactly one H1 matching `title` unless it is a KB article (which must not contain an H1), follow the matching template from Section 3, end with `## See Also`, use LF line endings, and have no trailing blank lines.
 
 ## Rules
 
