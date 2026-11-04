@@ -211,7 +211,7 @@ The library supports the following formats:
 
 When inserting figures (images, diagrams, charts):
 
-1. Introduce each figure immediately before the image with a concise sentence or caption block that briefly describes its purpose or content. Do not use a heading or bold text as the introduction; follow the image requirements in the `style-formatting` skill.
+1. Introduce each figure immediately before the image with a concise sentence or caption block that briefly describes its purpose or content. Do not use a heading or standalone introduction formatted entirely in bold; preserve inline bold UI labels in introductory sentences. Follow the image requirements in the `style-formatting` skill.
 2. Use descriptive alt text in the image tag.
 3. Keep any additional explanation concise and preserve it alongside the required introduction.
 
@@ -238,4 +238,4 @@ When reviewing an article for structure, verify:
 - [ ] List items use parallel grammatical structure
 - [ ] No single-item lists
 - [ ] Lists nested no deeper than three levels
-- [ ] Every image has an immediate introductory sentence or caption block before it; headings and bold text are not used as introductions
+- [ ] Every image has an immediate introductory sentence or caption block before it; headings and standalone introductions formatted entirely in bold are not used, and inline bold UI labels are preserved

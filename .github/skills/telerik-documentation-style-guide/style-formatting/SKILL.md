@@ -209,8 +209,8 @@ The **Export** dialog box provides options for the output format and file locati
   ![Export dialog box with format options highlighted](images/export-dialog.png)
   ```
 
-- Do not introduce an image with a heading or standalone bold text.
-- Preserve valid introductions. If an introduction is missing or uses a heading or bold text, replace it with a concise sentence or caption block while preserving surrounding content and formatting.
+- Do not introduce an image with a heading or standalone text formatted entirely in bold.
+- Preserve valid introductions, including sentences with inline bold UI labels. If an introduction is missing, is a heading, or is standalone text formatted entirely in bold, replace it with a concise sentence or caption block while preserving surrounding content and formatting.
 - Use descriptive alt text that explains what the screenshot shows.
 - For animated media, provide equivalent written steps or results. Use a static image or a descriptive link to an optional animation when playback cannot be paused or stopped.
 - Store screenshot files in an `images/` subdirectory relative to the article.
