@@ -1,6 +1,6 @@
 ---
 title: Multiple Digital Signatures
-description: Learn how to add multiple Digital Signatures to a PDF document using PdfStreamSigner.
+description: Learn how to add multiple digital signatures to PDFs with PdfStreamSigner and configure PAdES profiles and timestamps in RadPdfProcessing.
 page_title: Multiple Digital Signatures
 slug: radpdfprocessing-features-digital-signature-pdfstreamsigner
 tags: pdfstreamsigner, digital, signature, pdf, multiple, radpdfprocessing, incremental, stream, signing
@@ -9,7 +9,7 @@ position: 3
 components: [pdfprocessing]
 ---
 
-# Multiple Digital Signing with PdfStreamSigner
+# Multiple Digital Signatures
 
 |Minimum Version|Q2 2025|
 |----|----|
@@ -24,6 +24,8 @@ RadPdfProcessing introduces the `PdfStreamSigner` class. The `SignDocument` meth
 |`SignDocument(Stream originalStream, SignatureField signatureField, int pageIndex, TimeSpan? timeout)`|Adds a [digital signature]({%slug radpdfprocessing-features-digital-signature%}) to the PDF document.|
 
 >note Starting with **Q1 2026**, the `PdfStreamSigner` supports the [TimeStamp server]({%slug pdf-sign-timestamp-server%}). The `SignatureField` used for signing the document preserves all of its [SignatureSettings]({%slug radpdfprocessing-features-digital-signature-getting-started%}#signature-settings) including the `TimeStampServer`.
+
+To create a PAdES signature, set `signatureField.Signature.Settings.SignatureProfile` to `SignatureProfile.PAdESBaselineB` or `SignatureProfile.PAdESBaselineT` before calling `SignDocument()`. B-T requires `signatureField.Signature.Settings.TimeStampServer`, whereas B-B rejects a configured timestamp server; see [PAdES profile requirements]({%slug radpdfprocessing-features-digital-signature-getting-started%}#pades-baseline-profiles).
 
 The following example shows how to insert multiple [digital signatures]({%slug radpdfprocessing-features-digital-signature%}) into a PDF document using the `PdfStreamSigner`:
 

@@ -10,12 +10,14 @@ components: [pdfprocessing]
 ---
 <style> img[alt$="><"] { border: 1px solid lightgrey; } </style>
 
-# Signing a PDF using a TimeStamp Server
+# Using a TimeStamp Server
 
 |Minimum Version|Q4 2025|
 |----|----|
 
 The `TimeStampServer` class encapsulates the details needed to communicate with an external Timestamp Authority (TSA), including the endpoint URL, optional authentication credentials, and timeout for requests. Set the `TimeStampServer` through the [SignatureSettings]({%slug radpdfprocessing-features-digital-signature-getting-started%}#signature-settings).
+
+For a PAdES B-T signature, set `Settings.SignatureProfile` to `SignatureProfile.PAdESBaselineT` and configure `Settings.TimeStampServer` on the `Signature` instance before signing. See [PAdES profile details]({%slug radpdfprocessing-features-digital-signature-getting-started%}#pades-baseline-profiles).
 
 >note [PdfProcessing Add Digital Signature External Demo](https://demos.telerik.com/document-processing/pdfprocessing/external_digitally_sign_document)
 

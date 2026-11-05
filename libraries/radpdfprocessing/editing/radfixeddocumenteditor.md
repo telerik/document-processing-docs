@@ -1,7 +1,7 @@
 ---
 title: RadFixedDocumentEditor
 page_title: RadFixedDocumentEditor
-description: Learn how to use RadFixedDocumentEditor to create flow-like PDF documents with automatic page management, sections, paragraphs, tables, and lists.
+description: Learn how to create PDF documents with RadFixedDocumentEditor, including pagination, headers, footers, sections, paragraphs, tables, and lists.
 slug: radpdfprocessing-editing-radfixeddocumenteditor
 tags: radfixeddocumenteditor, pdf, editing, sections, tables, radpdfprocessing, flowlayout, paragraphs
 published: True
@@ -237,11 +237,72 @@ There is an additional overload of `InsertFormInline()` that lets you pass the s
 >note For more information about creating forms, see the [Form]({%slug radpdfprocessing-model-form%}) and [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) articles.
 
 
+## Headers and Footers
+
+Use `RadFixedDocumentEditor` to add headers and footers that repeat on generated pages. The editor measures their height and reserves space for body content.
+
+### Creating Headers and Footers
+
+Call `AddHeader()` or `AddFooter()` to set the current section's default content. Use `AddFirstPageHeader()`, `AddFirstPageFooter()`, `AddEvenPageHeader()`, and `AddEvenPageFooter()` for alternate content. The following example sets each variant and adds text across multiple pages:
+
+#### __Example 15: Configure Headers and Footers__
+
+```csharp
+using Telerik.Documents.Fixed.Model;
+using Telerik.Documents.Fixed.Model.Editing;
+
+RadFixedDocument document = new RadFixedDocument();
+
+using (RadFixedDocumentEditor editor = new RadFixedDocumentEditor(document))
+{
+    editor.SectionProperties.HeaderTopMargin = 36;
+    editor.SectionProperties.FooterBottomMargin = 36;
+
+    editor.AddHeader().Blocks.AddBlock().InsertText("Default header");
+    editor.AddFooter().Blocks.AddBlock().InsertText("Default footer");
+
+    editor.SectionProperties.DifferentFirstPageHeaderFooter = true;
+    editor.AddFirstPageHeader().Blocks.AddBlock().InsertText("First-page header");
+    editor.AddFirstPageFooter().Blocks.AddBlock().InsertText("First-page footer");
+
+    editor.DifferentOddAndEvenPages = true;
+    editor.AddEvenPageHeader().Blocks.AddBlock().InsertText("Even-page header");
+    editor.AddEvenPageFooter().Blocks.AddBlock().InsertText("Even-page footer");
+
+    const int paragraphCount = 60;
+    for (int paragraphIndex = 0; paragraphIndex < paragraphCount; paragraphIndex++)
+    {
+        editor.InsertParagraph();
+        editor.InsertRun("This paragraph demonstrates repeated headers and footers across generated pages.");
+    }
+}
+```
+
+Each method returns a `HeaderFooter` object and assigns it to the matching `SectionProperties` property. Add `Block` or `Table` elements to the returned object's `Blocks` collection.
+
+### Choosing Page Variants
+
+`SectionProperties` stores default content in `Header` and `Footer`, first-page variants in `FirstPageHeader` and `FirstPageFooter`, and even-page variants in `EvenPageHeader` and `EvenPageFooter`. Set these options to choose page variants:
+
+* First-page variants: Set `SectionProperties.DifferentFirstPageHeaderFooter` to `true` to use alternate content on each section's first page.
+* Even-page variants: Set `RadFixedDocumentEditor.DifferentOddAndEvenPages` to `true` to use alternate content on even-numbered pages.
+* Default variants: The editor uses default content on odd pages and when alternate variants are not enabled. If an alternate variant is enabled but unset, the editor renders no content and does not fall back.
+* Section breaks: Set replacement variants before `InsertSectionBreak()` to pass them to the new section. The new section reuses the same `HeaderFooter` objects by reference. The editor leaves existing pages unchanged.
+
+### Controlling Layout and Accessibility
+
+The editor applies these layout and accessibility rules:
+
+* Margins: Use `SectionProperties.HeaderTopMargin` and `SectionProperties.FooterBottomMargin` to set the distance from each page edge to its header or footer. Both values use device-independent pixels (DIPs) and default to 48. The editor compares each page margin with the configured edge distance plus measured content height, then uses the greater value. It leaves `PageSize` and `PageMargins` unchanged.
+* Content limits: Each header or footer can contain only `Block` or `Table` elements and cannot exceed 40% of the page height. The editor throws `InvalidOperationException` if content uses an unsupported element, cannot be measured, produces an invalid height, or exceeds the limit. It also throws `InvalidOperationException` if reserved areas leave no room for body content.
+* Tagged PDF: During tagged PDF export, the editor marks headers and footers as *pagination artifacts* outside the structure tree. It tags body content normally.
+
 ## See Also
 
 * [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%})
 * [RadFixedPage]({%slug radpdfprocessing-model-radfixedpage%})
 * [ImageSource]({%slug radpdfprocessing-model-imagesource%})
+* [Tagging PDF Content]({%slug radpdfprocessing-model-tagged-pdf%})
 * [Table]({%slug radpdfprocessing-editing-table-overview%})
 * [How to Generate a PDF Document from Images with RadFixedDocumentEditor]({%slug pdf-from-images-with-radfixeddocumenteditor%})
 * [Generating a Table with RadFixedDocumentEditor]({%slug generate-table-with-radfixeddocumenteditor%})
