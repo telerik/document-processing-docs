@@ -1,6 +1,6 @@
 ---
 title: Multiple Digital Signatures
-description: Learn how to add multiple digital signatures to PDF documents with PdfStreamSigner, including PAdES profiles and timestamp settings in RadPdfProcessing.
+description: Learn how to add multiple digital signatures to PDFs with PdfStreamSigner and configure PAdES profiles and timestamps in RadPdfProcessing.
 page_title: Multiple Digital Signatures
 slug: radpdfprocessing-features-digital-signature-pdfstreamsigner
 tags: pdfstreamsigner, digital, signature, pdf, multiple, radpdfprocessing, incremental, stream, signing
