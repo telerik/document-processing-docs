@@ -1,6 +1,6 @@
 ---
 title: Tagged PDF
-description: Learn how to identify a portion of a PDF content stream as a marked-content element with the PdfProcessing library.
+description: Learn how to tag PDF content and build structure trees with RadPdfProcessing.
 page_title: Tagged PDF
 slug: radpdfprocessing-model-tagged-pdf
 tags: taggedpdf, pdf, accessibility, radpdfprocessing, structuretree, markedcontent, tagged
@@ -56,6 +56,20 @@ The following sections demonstrate how to tag the different elements of a `RadFi
 ### Tagging a Table
 
 <snippet id='libraries-pdf-tagged-pdf-table'/>
+
+`TableHeaderStructureElement.Scope` identifies the cells to which a table header applies. Set it to `TableScopeAttribute.Row`, `TableScopeAttribute.Column`, or `TableScopeAttribute.Both`. Set it to `null` to omit the PDF `/Scope` attribute.
+
+For PDF/UA-1, set `TableHeaderStructureElement.Scope` when the PDF `/Headers` and `/ID` attributes do not identify table relationships. The following example creates a table row and adds a header with column scope:
+
+```csharp
+using Telerik.Documents.Fixed.Model;
+
+RadFixedDocument document = new RadFixedDocument();
+StructureElement table = document.StructureTree.ChildElements.AddStructureElement(StructureTagType.Table);
+StructureElement row = table.ChildElements.AddStructureElement(StructureTagType.TableRow);
+TableHeaderStructureElement header = row.ChildElements.AddTableHeaderStructureElement();
+header.Scope = TableScopeAttribute.Column;
+```
 
 ### Tagging a List
 
