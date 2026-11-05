@@ -1,7 +1,7 @@
 ---
 title: RadFixedDocumentEditor
 page_title: RadFixedDocumentEditor
-description: Learn how to create PDF documents with RadFixedDocumentEditor, including automatic pagination, sections, headers, footers, paragraphs, tables, and lists.
+description: Learn how to create PDF documents with RadFixedDocumentEditor, including pagination, headers, footers, sections, paragraphs, tables, and lists.
 slug: radpdfprocessing-editing-radfixeddocumenteditor
 tags: radfixeddocumenteditor, pdf, editing, sections, tables, radpdfprocessing, flowlayout, paragraphs
 published: True
