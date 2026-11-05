@@ -1,6 +1,6 @@
 ---
 title: Tagged PDF
-description: Learn how to tag PDF content and build structure trees with RadPdfProcessing.
+description: Learn how to tag PDF content with RadPdfProcessing, build structure trees, and define table header scope for accessible PDF documents.
 page_title: Tagged PDF
 slug: radpdfprocessing-model-tagged-pdf
 tags: taggedpdf, pdf, accessibility, radpdfprocessing, structuretree, markedcontent, tagged
