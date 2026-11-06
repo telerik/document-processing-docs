@@ -11,12 +11,12 @@ components: [wordsprocessing]
 
 # Using RtfFormatProvider
 
-`RtfFormatProvider` allows you to import and export a `RadFlowDocument` to/from RTF format. The provider preserves the entire document structure and formatting.
+`RtfFormatProvider` allows you to import and export a `RadFlowDocument` to and from RTF format. The provider preserves the document structure and formatting supported by RTF.
 
 To use `RtfFormatProvider`, add references to the following packages:
 
-* Telerik.Windows.Documents.Core
-* Telerik.Windows.Documents.Flow
+* `Telerik.Windows.Documents.Core`
+* `Telerik.Windows.Documents.Flow`
 
 ## Import
 
@@ -59,5 +59,4 @@ The resulting documents can be opened in any application that supports RTF docum
 * [Plain text]({%slug radwordsprocessing-formats-and-conversion-txt%})
 * [Using HtmlFormatProvider]({%slug radwordsprocessing-formats-and-conversion-html-htmlformatprovider%})
 * [Using PdfFormatProvider]({%slug radwordsprocessing-formats-and-conversion-pdf-pdfformatprovider%})
-* [Timeout Mechanism]({%slug timeout-mechanism-in-dpl%})
 * [Automatic Output Stream Clearing on Export]({%slug common-export-output-stream-clearing%})

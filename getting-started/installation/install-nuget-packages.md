@@ -1,7 +1,7 @@
 ---
 title: Install with NuGet Packages
 page_title: Install Telerik Document Processing with NuGet Packages
-description: Learn how to install Telerik Document Processing with NuGet.org, a local feed, or the Telerik NuGet server, with PackageReference examples and Blazor guidance.
+description: Learn how to install Telerik Document Processing with NuGet.org, local feeds, or the Telerik NuGet server using PackageReference examples.
 slug: installation-nuget-packages
 tags: nuget, packages, telerik, document, processing, installation, feed, server
 published: True
@@ -14,7 +14,7 @@ This article explains how to install Telerik Document Processing with NuGet pack
 
 Use one of the following installation paths:
 
-* [Install Document Processing from NuGet.org](#how-to-install-telerik-document-processing-from-nuget-org)
+* [Install Document Processing from NuGet.org](#how-to-install-telerik-document-processing-from-nugetorg)
 * [Install Document Processing from a local NuGet feed](#how-to-install-from-a-local-nuget-feed)
 * [Install Document Processing from the Telerik NuGet server](#how-to-install-from-the-telerik-nuget-server)
 
