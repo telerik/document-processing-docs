@@ -1,11 +1,12 @@
 ---
 title: Getting Started with Digital Signature
-description: Learn how to add, configure, and validate digital signatures in PDF documents with RadPdfProcessing by using certificates, widgets, and signature settings.
+description: Learn how to add and validate digital signatures in PDF documents with RadPdfProcessing by using certificates, widgets, and signature settings.
 page_title: Digital Signatures in RadPdfProcessing Getting Started
 slug: radpdfprocessing-features-digital-signature-getting-started
 tags: digital, signature, pdf, signing, certificates, radpdfprocessing, x509, validation, started
 position: 1
 components: [pdfprocessing]
+published: True
 ---
 
 # Getting Started with Digital Signature
