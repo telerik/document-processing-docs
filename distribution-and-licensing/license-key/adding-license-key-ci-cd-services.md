@@ -25,7 +25,7 @@ To activate your license in a CI/CD environment:
    * Select the set of products used in the application.
    * Copy the key value and store it securely.
 3. [Create an environment variable](#creating-an-environment-variable) named `TELERIK_LICENSE` and set it to the obtained key value. Alternatively, the key can be stored in a `telerik-license.txt` file, for example when using the [Azure Secure files approach](#using-secure-files-on-azure-devops).
-4. If you run in an AWS Lambda or similar hosted function scenario, use [`TelerikLicensing.Register()`](#using-teleriklicensingregister-method-on-aws-lambdas) when that model is a better fit.
+4. If you run in an AWS Lambda or similar hosted function scenario, use [`TelerikLicensing.Register()`](#using-teleriklicensing-register-method-on-aws-lambdas) when that model is a better fit.
 
 ## Choose a License Delivery Approach
 
