@@ -36,13 +36,13 @@ To ensure proper license validation and eliminate trial messages, follow the ste
 
 * **Verify Assemblies**: Confirm that **no trial** versions of Telerik assemblies are referenced in any project. Replace [trial assemblies]({%slug upgrade-trial-to-licensed-version%}) with licensed ones if any exist.
 
-* **Enable Diagnostics**: Add the following property to your `.csproj` file to enable detailed licensing diagnostics during build and runtime:
+* **Enable Diagnostics**: Add the following property to your `.csproj` file to enable detailed licensing diagnostics during build:
    ```xml
    <PropertyGroup>
        <TelerikLicensingVerbosity>diagnostic</TelerikLicensingVerbosity>
    </PropertyGroup>
    ```
-   Review the diagnostic output for clues about license validation issues.
+   Review the diagnostic output for clues about license validation issues. See [license message verbosity values and package sources]({%slug telerik-trial-version-message-diagnostic-options%}#license-message-verbosity-values-and-sources) for the default and alternative presets. For runtime investigations, see the separate [runtime licensing diagnostics workflow]({%slug runtime-licensing-diagnostics%}).
 
 * **Avoid Environment Variables**: Use only the `telerik-license.txt` file for license delivery instead of environment variables, which can cause issues due to length limitations.
 
