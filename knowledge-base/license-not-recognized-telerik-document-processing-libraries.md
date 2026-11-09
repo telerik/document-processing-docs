@@ -42,7 +42,7 @@ To ensure proper license validation and eliminate trial messages, follow the ste
        <TelerikLicensingVerbosity>diagnostic</TelerikLicensingVerbosity>
    </PropertyGroup>
    ```
-   Review the diagnostic output for clues about license validation issues. See [license message verbosity values and package sources]({%slug telerik-trial-version-message-diagnostic-options%}#license-message-verbosity-values-and-sources) for the default and alternative presets. For runtime investigations, see the separate [runtime licensing diagnostics workflow]({%slug runtime-licensing-diagnostics%}).
+   Review the diagnostic output for clues about license validation issues. See [licensing message verbosity values]({%slug telerik-trial-version-message-diagnostic-options%}#verbosity-values) for the default and alternative presets. For runtime investigations, see the separate [runtime licensing diagnostics workflow]({%slug runtime-licensing-diagnostics%}).
 
 * **Avoid Environment Variables**: Use only the `telerik-license.txt` file for license delivery instead of environment variables, which can cause issues due to length limitations.
 
