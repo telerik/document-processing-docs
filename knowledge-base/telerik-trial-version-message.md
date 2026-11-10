@@ -165,6 +165,8 @@ The following sample build output shows license lookup and resolution messages d
 ========== Rebuild completed at 12:28 PM and took 22.470 seconds ==========
 ```
 
+The following sections explain the sample build output above. License locations, entitlements, expiration dates, and resolution results can differ in your environment.
+
 ### License Discovery
 
 During the **Provision Licensing** phase, the build searches for a Telerik license key in supported locations, including environment variables, project folders, parent directories, and the Telerik user profile directory. After checking multiple locations, a valid license file is found at: C:\Users\MyUserName\AppData\Roaming\Telerik\telerik-license.txt. This confirms that licensing is configured through the standard Telerik user-profile location rather than through environment variables or a repository-local license file.
