@@ -51,6 +51,10 @@ You can use your personal license key in multiple pipelines, builds, and environ
 
 However, each individual developer must use a unique personal license key.
 
+## Is There a Limit to the Number of License Files per Account?
+
+There is no limit to the number of Telerik Document Processing license key files (`telerik-license.txt`) you can generate for your account.
+
 ## Do I Need an Internet Connection to Activate the License?
 
 No, the license activation and validation are performed entirely offline.
