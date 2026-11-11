@@ -51,15 +51,13 @@ Consider the following recommendations when working with the AI Coding Assistant
 
 ## Usage Limits
 
-Access to the Telerik Document Processing AI Coding Assistant depends on your <a href="https://www.telerik.com/purchase/faq/licensing-purchasing" target="_blank">Telerik license type</a>:
+Access to the Telerik Document Processing AI Coding Assistant requires an active subscription license for DevCraft or a Telerik product that includes Telerik Document Processing. Telerik offers Document Processing only with other Telerik products, not as a standalone license. The following table summarizes access by license type:
 
 | License Type | Access | Details |
 |---|---|---|
-| Subscription License | Yes | Subscription licenses provide full access to the AI Coding Assistant. They include a virtually unlimited number of requests with a fair use threshold of 300 requests per day. |
-| Trial License | Yes | Reactivating the same trial for a new release does not grant more requests. Use trial access to evaluate the feature before purchase. |
-| Perpetual License | No* | Perpetual licenses do not include the AI Coding Assistant. Start a trial to use the AI tools. |
-
-*All AI tools are available with a <a href="https://www.telerik.com/mcp-servers-document-processing/thank-you" target="_blank">30-day AI Tools trial</a> or <a href="https://www.telerik.com/try/devcraft-ultimate" target="_blank">a Telerik UI trial</a>.*
+| Subscription License | Yes | Subscription licenses provide full access to the AI Coding Assistant, with a fair-use threshold of 300 requests per day. |
+| Trial License | No | Trial licenses do not provide access to the AI Coding Assistant. |
+| Perpetual License | No | Perpetual licenses do not provide access to the AI Coding Assistant. |
 
 >note All Telerik AI tools share a single request limit for your Telerik account. For example, the [Telerik DPL MCP Server]({%slug ai-mcp-server-as-a-nuget%}) counts against the same usage quota. One prompt can trigger several requests, depending on prompt complexity.
 
