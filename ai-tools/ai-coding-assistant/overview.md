@@ -51,13 +51,13 @@ Consider the following recommendations when working with the AI Coding Assistant
 
 ## Usage Limits
 
-Access to the Telerik Document Processing AI Coding Assistant requires an active subscription license for DevCraft or a Telerik product that includes Telerik Document Processing. Telerik offers Document Processing only with other Telerik products, not as a standalone license. The following table summarizes access by license type:
+Access to the Telerik Document Processing AI Coding Assistant requires an active product trial or subscription license for a Telerik product that includes Document Processing. Telerik offers Document Processing only with other Telerik products, not as a standalone license. The following table summarizes access by license type:
 
-| License Type | Access | Details |
+| License or trial type | Access | Details |
 |---|---|---|
 | Subscription License | Yes | Subscription licenses provide full access to the AI Coding Assistant, with a fair-use threshold of 300 requests per day. |
-| Trial License | No | Trial licenses do not provide access to the AI Coding Assistant. |
-| Perpetual License | No | Perpetual licenses do not provide access to the AI Coding Assistant. |
+| Product Trial | Yes | Activating a trial for a Telerik product that includes Document Processing also activates the Telerik DPL MCP server trial. Trial users can make a limited number of requests per year. |
+| Perpetual License | No | A perpetual license alone does not provide access to the AI Coding Assistant. |
 
 >note All Telerik AI tools share a single request limit for your Telerik account. For example, the [Telerik DPL MCP Server]({%slug ai-mcp-server-as-a-nuget%}) counts against the same usage quota. One prompt can trigger several requests, depending on prompt complexity.
 
