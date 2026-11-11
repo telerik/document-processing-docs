@@ -36,7 +36,7 @@ The Telerik Document Processing [MCP (Model Context Protocol) server](https://mo
 To use the Telerik Document Processing Libraries (DPL) MCP Server, you need:
 
 * A [Telerik user account](https://www.telerik.com/account/).
-* An active [subscription license for DevCraft or another Telerik product that includes Telerik Document Processing](https://www.telerik.com/purchase.aspx?filter=web).
+* An active product trial or [subscription license for DevCraft or another Telerik product that includes Telerik Document Processing](https://www.telerik.com/purchase.aspx?filter=web).
 * An application that uses the Telerik [Document Processing Libraries]({%slug introduction%}).
 * [.NET](https://learn.microsoft.com/dotnet/core/whats-new/dotnet-8/overview) {{site.mindotnetversion}} or later, or [Node.js](https://nodejs.org/en) 18 or later.
 * An [MCP-compatible client (IDE, code editor, or app)](https://modelcontextprotocol.io/clients) that supports MCP tools (use the latest version). For example, the latest [Visual Studio Code](https://code.visualstudio.com/).
@@ -115,7 +115,7 @@ Use the settings in the following table to configure the Telerik DPL MCP server 
 
 ### License Configuration
 
-An active subscription license for DevCraft or a Telerik product that includes Telerik Document Processing is required to use the Telerik DPL MCP server.
+An active product trial or subscription license for DevCraft or a Telerik product that includes Telerik Document Processing is required to use the Telerik DPL MCP server.
 
 * When installing the MCP server by using the .NET tooling (`dnx` or `dotnet tool install`), the [Telerik license key]({%slug setting-up-license-key%}) is retrieved automatically if it is present in the default directory on your system (`%AppData%\Telerik\telerik-license.txt` on Windows and `~/.telerik/telerik-license.txt` on Linux). No additional action is required.
 * When using the .NET tooling, but your [license key file]({%slug setting-up-license-key%}) is not in the default directory, use one of the options below to configure your license.
@@ -501,7 +501,7 @@ Copilot then displays its final answer with the generated code:
 
 ## Usage Limits
 
-An active subscription license for DevCraft or a Telerik product that includes Telerik Document Processing is required to access the Telerik DPL AI Coding Assistant. The AI Coding Assistant supports a virtually unlimited number of requests, with a fair-use threshold of 300 requests per day. Perpetual licenses and trial licenses do not provide access.
+An active product trial or subscription license for DevCraft or a Telerik product that includes Telerik Document Processing is required to access the Telerik DPL AI Coding Assistant. Subscription licenses provide a virtually unlimited number of requests, with a fair-use threshold of 300 requests per day. Trial users can make a [limited number of requests per year]({%slug ai-coding-assistant%}#usage-limits). A perpetual license alone does not provide access.
 
 ## Local AI Model Integration
 

@@ -24,7 +24,7 @@ Starting with **.NET 10**, you can execute it directly through the `dnx` command
 Additional requirements:
 
 * A [Telerik user account](https://www.telerik.com/account/).
-* An active [subscription license for DevCraft or another Telerik product that includes Telerik Document Processing](https://www.telerik.com/purchase.aspx?filter=web).
+* An active product trial or [subscription license for DevCraft or another Telerik product that includes Telerik Document Processing](https://www.telerik.com/purchase.aspx?filter=web).
 * An application that uses the Telerik [Document Processing Libraries]({%slug introduction%}).
 
 ## Summary of Installation Approaches
