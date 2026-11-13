@@ -1,7 +1,7 @@
 ---
-title: Telerik.Licensing NuGet package is not available on the Telerik NuGet feed
-description: Learn why Telerik.Licensing is not on the Telerik NuGet feed and how to configure NuGet sources so Telerik Document Processing packages restore correctly.
-type: how-to
+title: Telerik.Licensing NuGet Package Is Not Available on the Telerik NuGet Feed
+description: Learn why Telerik.Licensing is not on the Telerik NuGet feed and configure sources so Document Processing packages restore correctly.
+type: troubleshooting
 page_title: Fix Telerik.Licensing NuGet Feed Configuration
 slug: dpl-telerik-licensing-nuget-feed
 tags: telerik, nuget, licensing, feed, document, processing, configuration, packages
@@ -15,13 +15,17 @@ ticketid: 1679127
 |---|---|---|
 | Q1 2025 | Telerik Document Processing | [Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova) |
 
-## Problem
+## Description
 
-Starting with [Q1 2025]({%slug release-notes-2025-1-205%}), Telerik Document Processing projects need both the Telerik product packages and the `Telerik.Licensing` package. This article explains why `Telerik.Licensing` is not available from the Telerik NuGet feed and how to configure package sources so restore works reliably in local and CI environments.
+Starting with [Q1 2025]({%slug release-notes-2025-1-205%}), Telerik Document Processing projects need both the Telerik product packages and the `Telerik.Licensing` package. This article explains how to configure package sources so restore works in local and CI environments.
 
-You may expect all Telerik-related packages to restore from the Telerik NuGet feed. However, the `Telerik.Licensing` package is distributed through `nuget.org`, not through the Telerik feed.
+You may expect all Telerik-related packages to restore from the Telerik NuGet feed.
 
 If your `NuGet.config` points Telerik packages only to the Telerik feed, package restore can fail or your build can miss the licensing dependency.
+
+## Cause
+
+The `Telerik.Licensing` package is distributed through `nuget.org`, not through the Telerik feed.
 
 ## Solution
 
@@ -63,7 +67,7 @@ For CI environments, make sure the agent can reach both package sources:
 * The Telerik feed for Telerik Document Processing packages.
 * `nuget.org` for `Telerik.Licensing`.
 
-If the CI environment cannot access external feeds directly, consider [manually downloading the NuGet packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages) and hosting them in an internal or local feed that the build agent can reach.
+If the CI environment cannot access external feeds directly, consider [manually downloading the NuGet packages]({%slug installation-nuget-packages%}#how-to-install-from-a-local-nuget-feed) and hosting them in an internal or local feed that the build agent can reach.
 
 ## How to Verify the Configuration
 
@@ -81,6 +85,6 @@ This configuration is expected behavior, not a packaging defect. The important r
 ## See Also
 
 * [Set up the Telerik Document Processing license key]({%slug setting-up-license-key%})
-* [Download Telerik NuGet packages]({%slug installation-nuget-packages%}#manually-download-nuget-packages)
+* [Download Telerik NuGet packages]({%slug installation-nuget-packages%}#how-to-install-from-a-local-nuget-feed)
 * [Q1 2025 release notes]({%slug release-notes-2025-1-205%})
 * [Telerik.Licensing NuGet package](https://www.nuget.org/packages/Telerik.Licensing)
