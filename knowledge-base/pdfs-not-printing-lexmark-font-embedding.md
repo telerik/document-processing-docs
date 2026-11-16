@@ -1,7 +1,6 @@
-```markdown
 ---
 title: PDFs Not Printing with Lexmark Printers Due to Font Embedding
-description: Solve the issue of PDFs not printing on Lexmark printers by ensuring all fonts are fully embedded.
+description: Learn how to fix Lexmark PDF printing failures by embedding all fonts, including watermark fonts, in PDFs created with RadPdfProcessing.
 type: troubleshooting
 page_title: Resolving PDF Printing Issues with Lexmark Printers
 meta_title: Resolving PDF Printing Issues with Lexmark Printers
@@ -12,43 +11,45 @@ ticketid: 1715820
 ---
 
 ## Environment
-<table>
-<tbody>
-<tr>
-<td> Product </td>
-<td>PdfProcessing for Telerik Document Processing</td>
-</tr>
-<tr>
-<td> Version </td>
-<td>Current</td>
-</tr>
-</tbody>
-</table>
+
+The following table lists the product, version, and author:
+
+| Version | Product | Author |
+| --- | --- | --- |
+| 2026.4.1109 | Telerik Document Processing (RadPdfProcessing) | Yoan Karamanov |
 
 ## Description
-I encountered an issue where PDFs created using Telerik [PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview) would not print on Lexmark printers, specifically the Lexmark M3350 model. These PDFs printed successfully on other printers. The problem persisted despite setting font embedding to "full" and registering TrueType fonts during application startup.
+
+PDF exports from [RadPdfProcessing]({%slug radpdfprocessing-overview%}) can fail to print on some Lexmark printers. This can happen even when an application sets `FontEmbeddingType.Full` and registers TrueType fonts.
 
 ## Cause
-Lexmark printers enforce strict type-checking for fonts used in PDFs. If any font in the document is not fully embedded, Lexmark printers may fail to print the PDF. In this case, the issue arose from using embedded Arial for the main PDF content while using the out-of-the-box Helvetica font from Telerik for a watermark. Helvetica was not fully embedded, causing the printer to reject the PDF.
+
+Some Lexmark printers can reject PDF files that contain non-embedded fonts. RadPdfProcessing does not embed [the 14 standard PDF fonts]({%slug radpdfprocessing-concepts-fonts%}#standard-fonts), including Helvetica. If a PDF uses embedded Arial for its main content but standard Helvetica for a watermark, Lexmark printers can reject the output.
 
 ## Solution
-To resolve the issue, ensure all fonts used in the PDF are fully embedded. Follow these steps:
 
-1. Use the same embedded font for all content in the PDF, including watermarks.
-2. Replace the default Telerik font (such as Helvetica) with an embedded font, like Arial, to ensure compliance with Lexmark printers.
+Embed every font used in a PDF, including fonts used for watermarks:
 
-Example for setting the watermark to use the embedded Arial font:
+1. Use an embedded font for every text element, including watermarks.
+2. Replace standard Helvetica in each watermark with an embedded font, such as registered Arial.
+
+After you register the font, pass its `FontBase` object to the method that draws the watermark:
+
 ```csharp
-// Example of setting the watermark font to Arial
-var watermarkText = new TextBlock();
-watermarkText.Text = "Confidential";
-watermarkText.Font = FontsRepository.FindFont("Arial"); // Use an embedded Arial font
-```
+private static void AddWatermark(
+    Telerik.Documents.Fixed.Model.RadFixedPage page,
+    Telerik.Documents.Fixed.Model.Fonts.FontBase embeddedFont)
+{
+    Telerik.Documents.Fixed.Model.Editing.FixedContentEditor editor =
+        new Telerik.Documents.Fixed.Model.Editing.FixedContentEditor(page);
 
-This approach ensures that all fonts in the PDF are embedded, meeting Lexmark printers' requirements and resolving the issue.
+    editor.TextProperties.Font = embeddedFont;
+    editor.DrawText("Watermark text");
+}
+```
 
 ## See Also
-- [PdfProcessing Documentation Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview)
-- [PdfProcessing Fonts Overview](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/features/fonts)
-- [Telerik Document Processing Release History](https://www.telerik.com/support/whats-new/telerik-document-processing/release-history)
-```
+
+* [RadPdfProcessing overview]({%slug radpdfprocessing-overview%})
+* [Font registration and embedding in PDF documents]({%slug radpdfprocessing-concepts-fonts%})
+* [PDF export settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%})
