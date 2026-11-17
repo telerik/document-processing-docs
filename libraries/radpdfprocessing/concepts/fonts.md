@@ -157,6 +157,7 @@ You can create fonts that are not explicitly registered. Creating a font that is
 
 ## See Also
  * [Cross-Platform Support for Fonts]({%slug radpdfprocessing-cross-platform-fonts%})
+ * [PDF printing on Lexmark printers]({%slug pdfs-not-printing-lexmark-font-embedding%})
  * [FontsRepository](https://docs.telerik.com/devtools/document-processing/api/Telerik.Windows.Documents.Fixed.Model.Fonts.FontsRepository.html)
  * [TextFragment]({%slug radpdfprocessing-model-textfragment%})
  * [Preserving the Font in PDF Export from Excel]({%slug preserve-font-boldness-pdf-export-radspreadprocessing%})
