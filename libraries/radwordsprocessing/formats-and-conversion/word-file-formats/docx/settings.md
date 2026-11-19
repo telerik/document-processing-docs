@@ -23,7 +23,7 @@ This setting defines the action to take when the exported `RadFlowDocument` does
 
 * `None`: The provider exports the `RadFlowDocument` as is without running validation. This can result in a document that is not valid and may not open correctly.
 
-* `ThrowAnException`: `DocxFormatProvider` validates the document before export. If the document is not valid, the provider throws an `InvalidDocumentException` that contains the list of validation errors. This is useful when you want to verify that you build valid DOCX documents.
+* `ThrowException`: `DocxFormatProvider` validates the document before export. If the document is not valid, the provider throws an `InvalidDocumentException` that contains the list of validation errors. This is useful when you want to verify that you build valid DOCX documents.
 
 * `Repair`: `DocxFormatProvider` validates the document before export. If validation fails, the provider tries to repair the document. The result is a valid DOCX document, but the method changes the structure of the input document.
 
