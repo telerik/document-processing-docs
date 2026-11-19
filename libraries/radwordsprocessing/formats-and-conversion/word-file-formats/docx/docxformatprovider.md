@@ -61,6 +61,7 @@ The resulting documents can be opened in applications that support DOCX files.
 ## See Also
 
 * [Review DOCX settings]({%slug radwordsprocessing-formats-and-conversion-docx-settings%})
+* [Selecting DOCX Export Validation Behavior]({%slug wordsprocessing-selecting-docx-export-validation-repair-or-no-validation%})
 * [Check supported DOCX features]({%slug radwordsprocessing-formats-and-conversion-docx-features%})
 * [Learn about timeout handling]({%slug timeout-mechanism-in-dpl%})
 * [Understand output stream clearing on export]({%slug common-export-output-stream-clearing%})
