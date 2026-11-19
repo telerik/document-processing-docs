@@ -35,6 +35,9 @@ To append a worksheet, follow these steps:
 The following example adds a `Summary` worksheet to an existing workbook:
 
 ```csharp
+using System.IO;
+using Telerik.Documents.SpreadsheetStreaming;
+
 string filePath = "existing-workbook.xlsx";
 string worksheetName = "Summary";
 
