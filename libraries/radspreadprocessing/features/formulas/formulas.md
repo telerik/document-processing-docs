@@ -59,3 +59,4 @@ A closer look at the value of cell A1 reveals that the two methods `GetValueAsSt
 
 * [Accessing Cells of a Worksheet]({%slug radspreadprocessing-working-with-cells-accessing-cells-of-worksheet%})
 * [Get, Set and Clear Cell Properties]({%slug radspreadprocessing-working-with-cells-get-set-clear-properties%})
+* [Getting Calculated Results from Formula Cells]({%slug spreadprocessing-getting-evaluated-results-from-spreadsheet-formula-cells%})

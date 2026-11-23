@@ -65,4 +65,5 @@ The `IWorkbookImporter` interface is the entry point for reading a document and 
 
 * [Import]({%slug radspreadstreamprocessing-import%})
 * [Worksheets]({%slug radspreadstreamprocessing-model-worksheet%})
+* [Appending a Worksheet to an Existing XLSX Workbook]({%slug appending-worksheet-to-existing-xlsx-spreadstreamprocessing%})
 * [SpreadCellStyle API Reference](https://docs.telerik.com/devtools/document-processing/api/Telerik.Documents.SpreadsheetStreaming.SpreadCellStyle.html)
