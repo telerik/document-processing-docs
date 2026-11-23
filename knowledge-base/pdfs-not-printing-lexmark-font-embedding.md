@@ -33,9 +33,33 @@ Embed every font used in a PDF, including fonts used for watermarks:
 1. Use an embedded font for every text element, including watermarks.
 2. Replace standard Helvetica in each watermark with an embedded font, such as registered Arial.
 
-After you register the font, pass its `FontBase` object to the method that draws the watermark:
+Place an Arial TrueType font file named `arial.ttf` in the application's working directory. Register the font data, create a `FontBase` object, and pass it to the method that draws the watermark:
 
 ```csharp
+private static void AddWatermarkToPage(
+    Telerik.Documents.Fixed.Model.RadFixedPage page)
+{
+    byte[] fontData = System.IO.File.ReadAllBytes("arial.ttf");
+    var fontFamily = new Telerik.Documents.Core.Fonts.FontFamily("Arial");
+    var fontStyle = Telerik.Documents.Core.Fonts.FontStyles.Normal;
+    var fontWeight = Telerik.Documents.Core.Fonts.FontWeights.Normal;
+
+    Telerik.Documents.Fixed.Model.Fonts.FontsRepository.RegisterFont(
+        fontFamily, fontStyle, fontWeight, fontData);
+
+    Telerik.Documents.Fixed.Model.Fonts.FontBase embeddedFont;
+    bool fontCreated =
+        Telerik.Documents.Fixed.Model.Fonts.FontsRepository.TryCreateFont(
+            fontFamily, fontStyle, fontWeight, out embeddedFont);
+
+    if (!fontCreated)
+    {
+        throw new System.InvalidOperationException("Could not create the Arial font.");
+    }
+
+    AddWatermark(page, embeddedFont);
+}
+
 private static void AddWatermark(
     Telerik.Documents.Fixed.Model.RadFixedPage page,
     Telerik.Documents.Fixed.Model.Fonts.FontBase embeddedFont)
