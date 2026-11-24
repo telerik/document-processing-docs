@@ -14,7 +14,7 @@ ticketid: 1719101
 
 | Version | Product | Author | 
 | ---- | ---- | ---- | 
-| 2026.3.923| RadPdfProcessing |[Desislava Yordanova](https://www.telerik.com/blogs/author/desislava-yordanova)| 
+| 2026.3.923 | RadPdfProcessing | <a href="https://www.telerik.com/blogs/author/desislava-yordanova" target="_blank">Desislava Yordanova</a> |
 
 ## Description
 
