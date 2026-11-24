@@ -18,7 +18,7 @@ ticketid: 1719101
 
 ## Description
 
-When exporting PDFs using the [PdfProcessing](https://docs.telerik.com/devtools/document-processing/libraries/radpdfprocessing/overview) library in a multithreaded environment, font corruption may occur. This issue is caused by a race condition during the font subsetting process where multiple threads attempt to access the font cache simultaneously.
+When exporting PDFs using the [RadPdfProcessing]({%slug radpdfprocessing-overview%}) library in a multithreaded environment, font corruption may occur. This issue is caused by a race condition during the font subsetting process where multiple threads attempt to access the font cache simultaneously.
 
 The issue manifests when generating PDFs in parallel, such as in an ASP.NET application handling multiple requests concurrently. Corruption may appear as missing or garbled characters in the exported PDF. 
 
