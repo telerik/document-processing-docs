@@ -67,7 +67,7 @@ public class PdfExportHandler
 ```
 
 ### Additional Notes
-- Changing the `FixedFontEmbeddingType` to `Full` or `None` does not reliably fix the issue.release.
+- Changing `PdfFormatProvider.ExportSettings.FontEmbeddingType` to `Full` or `None` does not reliably fix the issue.
 
 
 ## See Also
