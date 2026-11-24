@@ -33,7 +33,7 @@ An invalid license can be caused by any of the following:
 ## License Warnings and Errors
 When you use the product in a project with an expired or missing license, the `Telerik.Licensing` build task reports the following conditions:
 
-|**Condition or message**|**Code**|**Resolution**|
+|Condition or message|Code|Resolution|
 |----|----|----|
 |`No Telerik or Kendo UI product references detected in project.`|TKL001|<ul><li>If you use Telerik products and see this message, update the Telerik.Licensing package to version 1.4.9 or later.</li><li>If you do not use Telerik products, remove the Telerik.Licensing NuGet reference from your project.</li></ul>|
 |`No Telerik and Kendo UI License file found.`|TKL002|[Install a license key]({%slug setting-up-license-key%}) to activate the UI components and remove the error message.|

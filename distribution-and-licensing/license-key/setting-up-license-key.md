@@ -1,6 +1,6 @@
 ﻿---
 title: Set Up the Telerik Document Processing License Key
-description: Learn how to set up the Telerik Document Processing license key for local development, CI/CD, and production deployments, and validate the licensing setup.
+description: Learn how to set up Telerik Document Processing licensing for local development, CI/CD, and production deployments, and verify the setup.
 page_title: Set Up the Telerik Document Processing License Key
 slug: setting-up-license-key
 tags: license, key, telerik, document, processing, activation, setup, libraries
@@ -26,12 +26,12 @@ Use the following decision flow before you configure licensing:
 
 ## Downloading the License Key
 
-Telerik Document Processing is distributed as part of several Telerik bundles and is licensed according to the terms of the bundle under which you obtained it. The [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page contains the bundle-specific download instructions.
+Telerik Document Processing is included in several Telerik bundles. Your license terms depend on the bundle you purchased. The [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page contains the download instructions for each bundle.
 
 To download a license key, you must have either a developer license or a trial license. If you are new, you can sign up for a [free trial](https://www.telerik.com/account/trials) first, and then follow the steps below.
 
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
-1. Click the **Download License Key** button.
+2. Click the **Download License Key** button.
 
 **Telerik account page for downloading the Telerik Document Processing license key**
 
@@ -53,7 +53,7 @@ Use this workflow for every project that references Telerik Document Processing 
 <PackageReference Include="Telerik.Licensing" Version="1.*" />
 ```
 
->important The `Telerik.Licensing` verifies the DevSeat association at the time your classlib is built, and also provisions at runtime licenses in the Root app. When you have a setup such as **"Root app -> classlib -> Telerik UI"**, the Telerik UI will execute and verify the licensing for the classlib, but will not be applied transitively in the Root app. That is why you **need to add the Telerik.Licensing NuGet package reference to Root app manually**.
+>important The `Telerik.Licensing` package verifies the DevSeat association when your class library is built and provisions runtime licenses in the root app. If your setup is **"Root app -> classlib -> Telerik UI"**, add the `Telerik.Licensing` NuGet package reference to the root app manually because the reference is not applied transitively.
 
 When you build the project, the `Telerik.Licensing` NuGet package automatically locates the license file and uses it to activate the product.
 
@@ -115,14 +115,14 @@ Telerik strongly recommends the use of NuGet packages whenever possible. Include
 If you are not using NuGet packages in your project, add the license as a code snippet:
 
 1. Go to the [License Keys](https://www.telerik.com/account/your-licenses/license-keys) page in your Telerik account.
-1. On the corresponding product row, click the **Script Key** link in the **SCRIPT KEY** column.
+2. On the corresponding product row, click the **Script Key** link in the **SCRIPT KEY** column.
 
 **Telerik account page showing the Script Key download option for Telerik Document Processing**
 
 ![Telerik account page showing the Script Key download option for Telerik Document Processing](images/download-product-key.png)
-1. Copy the C# code snippet into a new file, for example, TelerikLicense.cs.
-1. Add the TelerikLicense.cs file to your project.
-1. Add an assembly reference to `Telerik.Licensing.Runtime.dll`.
+3. Copy the C# code snippet into a new file, for example, `TelerikLicense.cs`.
+4. Add the `TelerikLicense.cs` file to your project.
+5. Add an assembly reference to `Telerik.Licensing.Runtime.dll`.
 
 >caution Do not publish the license key code snippet in publicly accessible repositories. This is your personal license key.
 

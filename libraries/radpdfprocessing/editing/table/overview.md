@@ -1,5 +1,5 @@
 ---
-title: Overview
+title: RadPdfProcessing Table Overview
 description: Learn how to create, style, measure, and draw tables in PDF documents with RadPdfProcessing by using the Table API and editors.
 page_title: RadPdfProcessing Table Overview
 slug: radpdfprocessing-editing-table-overview
@@ -17,7 +17,7 @@ This overview explains the table building blocks, the main layout properties, an
 
 ![RadPdfProcessing table model diagram showing rows and cells](images/RadPdfProcessing_Editing_Table_01.png)
 
-Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instances each of which contains a series of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances. To define a simple table, generate the table cells and add some content to them.
+Each table contains a series of [TableRow]({%slug radpdfprocessing-editing-table-tablerow%}) instances, each of which contains a series of [TableCell]({%slug radpdfprocessing-editing-table-tablecell%}) instances. To define a simple table, generate the table cells and add some content to them.
         
 Use this article when you need to:
 
