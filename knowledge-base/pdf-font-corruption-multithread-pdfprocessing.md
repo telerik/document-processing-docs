@@ -59,7 +59,7 @@ public class PdfExportHandler
         {
             using (var outputStream = new FileStream(outputPath, FileMode.Create))
             {
-                pdfFormatProvider.Export(document, outputStream);
+                pdfFormatProvider.Export(document, outputStream, TimeSpan.FromSeconds(10));
             }
         }
     }
