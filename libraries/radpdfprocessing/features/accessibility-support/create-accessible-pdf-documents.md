@@ -59,4 +59,5 @@ The following example adds content to a PDF document and lets `RadPdfProcessing`
 * [Marked Content]({%slug radpdfprocessing-model-marked-content%})
 * [StructureTree]({%slug radpdfprocessing-model-structure-tree%})
 * [Export Settings]({%slug radpdfprocessing-formats-and-conversion-pdf-settings%}#export-settings)
+* [Building a Tagged Structure for PDF/UA Export]({%slug building-tagged-structure-pdf-ua-export%})
 * [PdfProcessing Accessibility Demo](https://demos.telerik.com/document-processing/pdfprocessing/accessibility)
