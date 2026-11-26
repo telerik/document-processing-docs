@@ -3,7 +3,7 @@ title: Applying PDF User Permissions Only When Encryption Is Enabled
 description: Learn how to restrict printing, changes, and copying in exported PDFs by enabling encryption and configuring RadPdfProcessing user access permissions.
 type: how-to
 page_title: Applying User Permissions to Encrypted PDFs | RadPdfProcessing
-slug: pdfprocessing-applying-user-permissions-only-when-encryption-is-enabled
+slug: applying-pdf-user-permissions-only-when-encryption-is-enabled
 tags: radpdfprocessing, pdf, encryption, user, permissions, export, fixed
 res_type: kb
 ---
