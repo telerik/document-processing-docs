@@ -3,7 +3,7 @@ title: Building Tagged Structure for PDF/UA Export
 description: Learn how to build tagged PDF/UA structure during export and verify metadata, alternate text, reading order, and tab order in RadPdfProcessing.
 type: how-to
 page_title: Building Tagged Structure for PDF/UA Export | RadPdfProcessing
-slug: pdfprocessing-building-tagged-structure-ua-export
+slug: building-tagged-structure-pdf-ua-export
 tags: radpdfprocessing, pdf, ua, accessibility, tagging, export, fixed
 res_type: kb
 ---
