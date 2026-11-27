@@ -9,7 +9,7 @@ position: 1
 components: [pdfprocessing]
 ---
 
-# Using PdfFormatProvider in RadPdfProcessing
+# Using PdfFormatProvider
 
 Use `PdfFormatProvider` to import a PDF file into a `RadFixedDocument` or export a `RadFixedDocument` to PDF. This article explains the required packages, the stream requirements for import and export, and the common points to verify before you integrate the provider into your application.
 
@@ -71,7 +71,7 @@ Before you call `Export()`, verify these points:
 
 * The output stream is writable.
 * The destination file path exists or can be created by your application.
-* If the document is digitally signed, the stream supports both reading and writing.
+* For signed PDFs, the stream meets the selected signature profile requirements.
 
 **Example 2: Export a PDF File**
 
@@ -79,7 +79,7 @@ Before you call `Export()`, verify these points:
 
 >important
 >
-> When you export a digitally signed document, pass a stream that supports both reading and writing. Otherwise, the export throws `NotSupportedException` with the message `Stream does not support reading.` For example, create the output stream with `new FileStream("signed.pdf", FileMode.OpenOrCreate, FileAccess.ReadWrite)`.
+> Signed PDF exports have [profile-specific stream requirements]({%slug radpdfprocessing-features-digital-signature-getting-started%}).
 
 After export, open the resulting document in a PDF viewer or another application that supports PDF files.
 
@@ -97,7 +97,7 @@ Check these common issues if import or export does not behave as expected:
 
 * Import fails on stream access: Confirm that the input stream supports read and seek operations.
 * Imported images are missing later: Make sure that you do not dispose the underlying stream too early.
-* Export of signed PDFs fails: Use a stream with both read and write access.
+* Export of signed PDFs fails: Verify the stream requirements for the selected signature profile.
 * Imported content differs from the original file: Confirm whether the source PDF uses features outside the supported RadPdfProcessing export surface.
 
 ## See Also

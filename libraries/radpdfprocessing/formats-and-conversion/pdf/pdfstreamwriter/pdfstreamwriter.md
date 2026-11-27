@@ -1,6 +1,6 @@
 ---
 title: PdfStreamWriter
-description: Learn how to use the PdfStreamWriter class in RadPdfProcessing to write high-performance, low-memory PDF files directly to a stream.
+description: Write and merge PDF documents with PdfStreamWriter in RadPdfProcessing and reuse identical embedded fonts to reduce output file size.
 page_title: PdfStreamWriter
 slug: radpdfprocessing-formats-and-conversion-pdf-pdfstreamwriter-pdfstreamwriter
 tags: pdfstreamwriter, pdf, stream, radpdfprocessing, performance, document, lowmemory, creation
@@ -78,6 +78,7 @@ Through the `Settings` property of `PdfStreamWriter`, you can control how the do
 |`ImageCompression`|Gets or sets the image compression type. The possible values are: <br> * **None**: No compression is applied. <br> * **Default**: The image compression is preserved as it is in the original document. <br> * **FlateDecode**: The images are encoded with a FlateDecode filter. <br> * **DCTDecode**: Compresses data using a DCT (discrete cosine transform) technique based on the JPEG standard.|
 |`WriteAnnotations`|A Boolean property indicating whether the annotations are included in the exported document.|
 |`StreamCompression`|Gets or sets the content stream compression type. Possible values are: <br> * **None**: The content streams are not encoded. <br> * **FlateDecode**: Compresses data using the zlib/deflate compression method.|
+|`ReuseEmbeddedFonts`|Gets or sets whether identical embedded font-program streams are reused when copying imported PDF pages. Defaults to `false`. Introduced in **Q4 2026**.|
 
 When merging document pages with `PdfStreamWriter`, the form fields may be duplicated. Starting with **Q2 2025**, the `PdfStreamWriterSettings` class offers the `MergedFieldNameResolving` event. This event occurs when resolving conflicts between field names while merging instances with duplicated names:
 
@@ -88,6 +89,11 @@ When merging document pages with `PdfStreamWriter`, the form fields may be dupli
 > * The [PdfStreamWriterPerformance](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/PdfStreamWriterPerformance) sample shows the performance you can achieve with `PdfStreamWriter`.
 > * The [Manipulate Pages](https://github.com/telerik/document-processing-sdk/tree/master/PdfProcessing/ManipulatePages) example shows different use cases of `PdfStreamWriter`.
 
+## Reusing Embedded Fonts
+
+Set `PdfStreamWriter.Settings.ReuseEmbeddedFonts` to `true` before `WritePage()` in the [PDF merge workflow]({%slug merge-pdf-documents%}). Reuse requires identical font-program data and compatible stream properties, not matching font names.
+
+Only font-program streams are shared. Font dictionaries and encodings remain separate, and different programs or subsets are not combined.
 
 ## See Also
 

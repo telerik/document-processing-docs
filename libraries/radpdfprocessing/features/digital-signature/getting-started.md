@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Digital Signature
-description: Learn how to add and validate digital signatures in PDF documents with RadPdfProcessing by using certificates, widgets, and signature settings.
+description: Learn how to sign PDFs with RadPdfProcessing and configure PAdES profiles, trusted timestamps, and long-term validation evidence.
 page_title: Digital Signatures in RadPdfProcessing Getting Started
 slug: radpdfprocessing-features-digital-signature-getting-started
 tags: digital, signature, pdf, signing, certificates, radpdfprocessing, x509, validation, started
@@ -24,7 +24,7 @@ Before you sign a document, make sure you have the required inputs and document 
 1. Prepare an [X509Certificate2](https://learn.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate2) instance that contains the private key used for signing.
 2. Decide whether you will sign a newly created document or an imported [RadFixedDocument]({%slug radpdfprocessing-model-radfixeddocument%}).
 3. Choose whether the signature will be visible or invisible in the document.
-4. Prepare a stream that supports both reading and writing for the export operation.
+4. Prepare an output stream that supports the selected [signature profile](#pades-baseline-profiles).
 
 ### Load a PKCS#12 Certificate from a File
 
@@ -43,9 +43,9 @@ Use this workflow to sign a PDF document:
 3. If you need a visible signature, create a [SignatureWidget]({%slug radpdfprocessing-model-annotations-widgets%}) and associate it with the `SignatureField`.
 4. Assign a [FormSource]({%slug radpdfprocessing-model-formsource-overview%}) to the widget `Content.NormalContentSource` property.
 5. Use `FixedContentEditor` to draw the visual content that will appear in the signature area.
-6. Export the document to a readable and writable stream.
+6. Export the document to a stream that supports the selected signature profile.
 
->caution When you export a digitally signed document, pass a stream that supports both reading and writing. Otherwise, `RadPdfProcessing` throws `NotSupportedException` with the message `Stream does not support reading.`
+>caution Ordinary, B-B, and B-T signature exports require a readable and writable stream. Otherwise, `RadPdfProcessing` throws `NotSupportedException` with the message `Stream does not support reading.`
 
 The following example signs a newly created document:
 
@@ -71,12 +71,13 @@ Use `SignatureSettings`, available through `Signature.Settings`, to control how 
 | `SignatureProfile` | Gets or sets the profile. Defaults to `SignatureProfile.Default`, which preserves the existing `adbe.pkcs7.detached` behavior. |
 | `TimeStampServer` | Gets or sets the [timestamp server]({%slug pdf-sign-timestamp-server%}) settings used to obtain a trusted timestamp for the signature. |
 | `CertificateChainIncludeOption` | Gets or sets the option that determines which certificates are included in the certificate chain. Available values: `None` (no chain info), `ExcludeRoot` (entire chain except root), `EndCertOnly` (only the end certificate), `WholeChain` (entire chain). [Introduced in Q1 2026] |
+| `ValidationInformationSettings` | Gets the [evidence retrieval settings]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%}#validation-information-settings) for B-LT and B-LTA signatures. Introduced in **Q4 2026**. |
 
 Choose `Sha256` for most scenarios. Move to `Sha384` or `Sha512` only when your security policy, certificate type, or archival requirements call for a stronger hash.
 
 ## PAdES Baseline Profiles
 
-Use `SignatureSettings.SignatureProfile` to choose a baseline profile for PDF Advanced Electronic Signatures (PAdES). Both profiles use `ETSI.CAdES.detached` and embed the signer certificate and `signingCertificateV2` signed attribute in CMS. They omit the CMS `signing-time` attribute; the PDF `/M` entry stores the claimed signing time.
+Use `SignatureSettings.SignatureProfile` to choose a baseline profile for PDF Advanced Electronic Signatures (PAdES). All baseline profiles use `ETSI.CAdES.detached` and embed the signer certificate and `signingCertificateV2` signed attribute in CMS. They omit the CMS `signing-time` attribute. The PDF `/M` entry stores the claimed signing time.
 
 ### Choosing a Profile
 
@@ -87,8 +88,10 @@ The following table lists the available profiles and their timestamp requirement
 | `SignatureProfile.Default` | Uses `adbe.pkcs7.detached` and preserves existing signing behavior. |
 | `SignatureProfile.PAdESBaselineB` | Produces a B-B signature and rejects a configured `TimeStampServer`. |
 | `SignatureProfile.PAdESBaselineT` | Produces a B-T signature and requires `TimeStampServer` to add an RFC 3161 timestamp token. |
+| `SignatureProfile.PAdESBaselineLT` | Requires `TimeStampServer` and embeds certificate and revocation evidence in the *Document Security Store* (DSS). Introduced in **Q4 2026**. |
+| `SignatureProfile.PAdESBaselineLTA` | Requires `TimeStampServer` and appends an invisible RFC 3161 document timestamp after B-LT evidence. Introduced in **Q4 2026**. |
 
-Both profiles require the signer certificate in CMS. Built-in signing throws `InvalidOperationException` if `CertificateChainIncludeOption` is `None`.
+All baseline profiles require the signer certificate in CMS. Built-in signing throws `InvalidOperationException` if `CertificateChainIncludeOption` is `None`.
 
 ### Configuring a B-T Profile
 
@@ -108,9 +111,17 @@ signature.Settings.TimeStampServer = new TimeStampServer(
 
 Replace the URL with your timestamp server endpoint. See [timestamp server configuration]({%slug pdf-sign-timestamp-server%}) for credentials and timeout options.
 
+### Long-Term Profile Requirements
+
+For B-LT or B-LTA, adapt the [B-T configuration example](#configuring-a-b-t-profile). Configure `Signature.Settings.ValidationInformationSettings` for your certificate infrastructure.
+
+These profiles support certificate-based and external signatures through full export and the [incremental signing APIs]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%}). Missing, untrusted, or policy-blocked evidence causes signing to fail instead of falling back to B-T.
+
+>important For B-LT or B-LTA, `PdfFormatProvider.Export()` accepts write-only output but supports exactly one signable signature field across all profiles. Add further signatures incrementally.
+
 ### Using an External Signer
 
-An `IExternalSigner` must return detached CMS `SignedData` with exactly one signer, the signer certificate, a `signingCertificateV2` signed attribute, and no CMS `signing-time` attribute. The signing pipeline validates the CMS structure and adds the configured B-T timestamp after the external signer returns.
+An `IExternalSigner` must return detached CMS `SignedData` with exactly one signer, the signer certificate, a `signingCertificateV2` signed attribute, and no CMS `signing-time` attribute. The signing pipeline validates the CMS structure. For B-T, B-LT, and B-LTA, it adds the configured signature timestamp after the external signer returns.
 
 ## Signature Encodings
 
@@ -154,13 +165,15 @@ After you export the document, validate the result in a PDF viewer and in your a
 Use these checks when the exported document does not appear signed or the signing process fails:
 
 * Verify that the certificate includes a private key and is valid for digital signing.
-* Verify that the export stream supports both reading and writing.
+* Verify that the export stream supports the selected signature profile.
 * Verify that `AcroForm.ViewersShouldRecalculateWidgetAppearances` is set to `false` for imported documents.
 * Verify that the `System.Security.Cryptography.Pkcs` package is referenced when you target **.NET Standard** or **.NET**.
 * Verify that the PDF viewer you use supports digital signature validation and widget appearance rendering.
 
 ## See Also
 
+* [Incremental Signatures and Long-Term Evidence]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%})
+* [Signature and Document Timestamp Validation]({%slug radpdfprocessing-features-digital-signature-validation%})
 * [Form]({%slug radpdfprocessing-model-form%})
 * [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})
