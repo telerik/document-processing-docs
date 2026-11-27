@@ -24,8 +24,8 @@ The following table lists the constructor and operations for signing and long-te
 |----|----|
 |`PdfStreamSigner(Stream outputStream)`|Creates a new instance of the `PdfStreamSigner` and specifies the output stream where the signed document is written.|
 |`SignDocument(Stream originalStream, SignatureField signatureField, int pageIndex, TimeSpan? timeout)`|Adds a [digital signature]({%slug radpdfprocessing-features-digital-signature%}) to the PDF document.|
-|`EmbedValidationInformation(Stream originalStream)`|Embeds certificate and revocation evidence through an incremental DSS update.|
-|`RenewDocumentTimestamp(Stream originalStream, TimeStampServer timeStampServer, DigestAlgorithmType digestAlgorithm = DigestAlgorithmType.Sha256)`|Refreshes evidence and appends an RFC 3161 document timestamp.|
+|`EmbedValidationInformation(Stream originalStream)`|Embeds certificate and revocation evidence through an incremental DSS update. Introduced in **Q4 2026**.|
+|`RenewDocumentTimestamp(Stream originalStream, TimeStampServer timeStampServer, DigestAlgorithmType digestAlgorithm = DigestAlgorithmType.Sha256)`|Refreshes evidence and appends an RFC 3161 document timestamp. Introduced in **Q4 2026**.|
 
 >note Starting with **Q1 2026**, the `PdfStreamSigner` supports the [TimeStamp server]({%slug pdf-sign-timestamp-server%}). The `SignatureField` used for signing the document preserves all of its [SignatureSettings]({%slug radpdfprocessing-features-digital-signature-getting-started%}#signature-settings) including the `TimeStampServer`.
 

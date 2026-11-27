@@ -78,7 +78,7 @@ Through the `Settings` property of `PdfStreamWriter`, you can control how the do
 |`ImageCompression`|Gets or sets the image compression type. The possible values are: <br> * **None**: No compression is applied. <br> * **Default**: The image compression is preserved as it is in the original document. <br> * **FlateDecode**: The images are encoded with a FlateDecode filter. <br> * **DCTDecode**: Compresses data using a DCT (discrete cosine transform) technique based on the JPEG standard.|
 |`WriteAnnotations`|A Boolean property indicating whether the annotations are included in the exported document.|
 |`StreamCompression`|Gets or sets the content stream compression type. Possible values are: <br> * **None**: The content streams are not encoded. <br> * **FlateDecode**: Compresses data using the zlib/deflate compression method.|
-|`ReuseEmbeddedFonts`|Gets or sets whether identical embedded font-program streams are reused when copying imported PDF pages. Defaults to `false`.|
+|`ReuseEmbeddedFonts`|Gets or sets whether identical embedded font-program streams are reused when copying imported PDF pages. Defaults to `false`. Introduced in **Q4 2026**.|
 
 When merging document pages with `PdfStreamWriter`, the form fields may be duplicated. Starting with **Q2 2025**, the `PdfStreamWriterSettings` class offers the `MergedFieldNameResolving` event. This event occurs when resolving conflicts between field names while merging instances with duplicated names:
 

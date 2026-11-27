@@ -22,7 +22,7 @@ The following table lists all `SignatureSubFilterNames` constants and their valu
 | `SignatureSubFilterNames.ADBE_PKCS7_SHA1` | `adbe.pkcs7.sha1` | PKCS#7 (CMS) signature with an embedded SHA-1 digest. |
 | `SignatureSubFilterNames.ADBE_PKCS7_DETACHED` | `adbe.pkcs7.detached` | Detached PKCS#7 (CMS) signature. |
 | `SignatureSubFilterNames.ETSI_CADES_DETACHED` | `ETSI.CAdES.detached` | Detached CAdES signature encoded as CMS SignedData. Validation checks the signer certificate binding, signed attributes, and document byte ranges. |
-| `SignatureSubFilterNames.ETSI_RFC3161` | `ETSI.RFC3161` | RFC 3161 document timestamp. Checks the token signature, message imprint, and PDF byte ranges. Validates the timestamp authority's certificate chain offline at the authenticated timestamp time, without certificate downloads. Certificate lifetime errors cannot be ignored. Does not validate complete B-LT/B-LTA archive history. |
+| `SignatureSubFilterNames.ETSI_RFC3161` | `ETSI.RFC3161` | RFC 3161 document timestamp. Checks the token signature, message imprint, and PDF byte ranges. Validates the timestamp authority's certificate chain offline at the authenticated timestamp time, without certificate downloads. Certificate lifetime errors cannot be ignored. Does not validate complete B-LT/B-LTA archive history. Introduced in **Q4 2026**. |
 
 The `Signature` class exposes two methods for validating a signature:
 

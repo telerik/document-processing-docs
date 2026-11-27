@@ -71,7 +71,7 @@ Use `SignatureSettings`, available through `Signature.Settings`, to control how 
 | `SignatureProfile` | Gets or sets the profile. Defaults to `SignatureProfile.Default`, which preserves the existing `adbe.pkcs7.detached` behavior. |
 | `TimeStampServer` | Gets or sets the [timestamp server]({%slug pdf-sign-timestamp-server%}) settings used to obtain a trusted timestamp for the signature. |
 | `CertificateChainIncludeOption` | Gets or sets the option that determines which certificates are included in the certificate chain. Available values: `None` (no chain info), `ExcludeRoot` (entire chain except root), `EndCertOnly` (only the end certificate), `WholeChain` (entire chain). [Introduced in Q1 2026] |
-| `ValidationInformationSettings` | Gets the [evidence retrieval settings]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%}#validation-information-settings) for B-LT and B-LTA signatures. |
+| `ValidationInformationSettings` | Gets the [evidence retrieval settings]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%}#validation-information-settings) for B-LT and B-LTA signatures. Introduced in **Q4 2026**. |
 
 Choose `Sha256` for most scenarios. Move to `Sha384` or `Sha512` only when your security policy, certificate type, or archival requirements call for a stronger hash.
 
@@ -88,8 +88,8 @@ The following table lists the available profiles and their timestamp requirement
 | `SignatureProfile.Default` | Uses `adbe.pkcs7.detached` and preserves existing signing behavior. |
 | `SignatureProfile.PAdESBaselineB` | Produces a B-B signature and rejects a configured `TimeStampServer`. |
 | `SignatureProfile.PAdESBaselineT` | Produces a B-T signature and requires `TimeStampServer` to add an RFC 3161 timestamp token. |
-| `SignatureProfile.PAdESBaselineLT` | Requires `TimeStampServer` and embeds certificate and revocation evidence in the *Document Security Store* (DSS). |
-| `SignatureProfile.PAdESBaselineLTA` | Requires `TimeStampServer` and appends an invisible RFC 3161 document timestamp after B-LT evidence. |
+| `SignatureProfile.PAdESBaselineLT` | Requires `TimeStampServer` and embeds certificate and revocation evidence in the *Document Security Store* (DSS). Introduced in **Q4 2026**. |
+| `SignatureProfile.PAdESBaselineLTA` | Requires `TimeStampServer` and appends an invisible RFC 3161 document timestamp after B-LT evidence. Introduced in **Q4 2026**. |
 
 All baseline profiles require the signer certificate in CMS. Built-in signing throws `InvalidOperationException` if `CertificateChainIncludeOption` is `None`.
 
