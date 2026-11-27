@@ -1,6 +1,6 @@
 ---
 title: Signature Validation
-description: Learn how to validate digital signatures in PDF documents using the Signature class methods and SignatureValidationProperties in RadPdfProcessing.
+description: Validate PDF signatures and RFC 3161 document timestamps with RadPdfProcessing and check certificate trust, integrity, and revision coverage.
 page_title: Signature Validation
 slug: radpdfprocessing-features-digital-signature-validation
 tags: signature, validation, pdf, certificates, radpdfprocessing, x509, revocation, chain
@@ -10,7 +10,7 @@ components: [pdfprocessing]
 
 # Signature Validation
 
-The validation runs for the current field and checks against the state of the document at the moment of import. Because it depends on the file bytes, the source stream must remain open.
+The validation runs for the current field and checks against the state of the document at the moment of import. Because it depends on the file bytes, the source stream must remain open, readable, and seekable.
 
 The `SignatureSubFilterNames` class defines constants for the supported PDF signature subfilters. RadPdfProcessing registers a validation handler for each subfilter by default.
 
@@ -22,6 +22,7 @@ The following table lists all `SignatureSubFilterNames` constants and their valu
 | `SignatureSubFilterNames.ADBE_PKCS7_SHA1` | `adbe.pkcs7.sha1` | PKCS#7 (CMS) signature with an embedded SHA-1 digest. |
 | `SignatureSubFilterNames.ADBE_PKCS7_DETACHED` | `adbe.pkcs7.detached` | Detached PKCS#7 (CMS) signature. |
 | `SignatureSubFilterNames.ETSI_CADES_DETACHED` | `ETSI.CAdES.detached` | Detached CAdES signature encoded as CMS SignedData. Validation checks the signer certificate binding, signed attributes, and document byte ranges. |
+| `SignatureSubFilterNames.ETSI_RFC3161` | `ETSI.RFC3161` | RFC 3161 document timestamp. Checks the token signature, message imprint, and PDF byte ranges. Validates the timestamp authority's certificate chain offline at the authenticated timestamp time, without certificate downloads. Certificate lifetime errors cannot be ignored. Does not validate complete B-LT/B-LTA archive history. |
 
 The `Signature` class exposes two methods for validating a signature:
 
@@ -107,7 +108,7 @@ using (X509Chain chain = validationProperties.Chain)
 
 The example rejects all reported certificate-chain errors. Online revocation checks can fail without network access. Even when all three checks pass, they do not check modification permissions.
 
-Default certificate settings have not changed. They do not reject expired certificates, unknown or offline revocation status, or usage errors. Set `ChainStatusFlags` and `Chain.ChainPolicy` to match your trust requirements.
+Default certificate settings for ordinary approval signatures have not changed. They do not reject expired certificates, unknown or offline revocation status, or usage errors. Set `ChainStatusFlags` and `Chain.ChainPolicy` to match your trust requirements.
 
 ## Signer Identity
 
@@ -154,6 +155,8 @@ foreach (SignatureField signatureField in document.AcroForm.FormFields.OfType<Si
 
 ## See Also
 
+* [PAdES Profiles and Signing Options]({%slug radpdfprocessing-features-digital-signature-getting-started%}#pades-baseline-profiles)
+* [Long-Term Evidence and Timestamp Renewal]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%})
 * [Form]({%slug radpdfprocessing-model-form%})
 * [Form Fields]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [AcroForm]({%slug radpdfprocessing-model-interactive-forms-acroform%})

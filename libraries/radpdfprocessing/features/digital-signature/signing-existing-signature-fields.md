@@ -1,6 +1,6 @@
 ---
 title: Signing Existing Signature Fields
-description: Learn how to sign multiple pre-existing signature fields in a PDF document using incremental updates with the PdfStreamSigner class in RadPdfProcessing.
+description: Sign existing PDF signature fields with PdfStreamSigner incremental updates and configure PAdES long-term profiles in RadPdfProcessing.
 page_title: Signing Existing Signature Fields
 slug: radpdfprocessing-features-signing-existing-signature-fields
 tags: pdf, processing, digital, signature, signing, incremental, update, field
@@ -53,6 +53,8 @@ The following example imports an existing PDF that contains unsigned signature f
 
 The code first imports the document to discover the names of all unsigned `SignatureField` instances. It then iterates over the field names and calls `SignExistingField` for each one. Because each call produces an incremental update, previously applied signatures remain valid in the final output.
 
+To sign with B-LT or B-LTA, configure `signature.Settings` according to the [long-term profile requirements]({%slug radpdfprocessing-features-digital-signature-getting-started%}#long-term-profile-requirements).
+
 ## Signing with Custom Appearance
 
 When a PDF contains empty (unsigned) signature fields, you can generate and apply a visual appearance during signing. Create a `FormSource`, draw content into it with `FixedContentEditor`, and pass it to the `SignExistingField` overload that accepts an `appearance` parameter. Each signing step produces an incremental update, so previously applied signatures remain valid.
@@ -79,6 +81,7 @@ To prepare these settings, use `SignatureField.LockAllFields()`, `LockFields(...
 
 ## See Also
 
+* [Long-Term Evidence and Renewal Operations]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%})
 * [Digital Signature in RadPdfProcessing]({%slug radpdfprocessing-features-digital-signature%})
 * [Interactive Forms]({%slug radpdfprocessing-model-interactive-forms-form-fields%})
 * [FixedContentEditor]({%slug radpdfprocessing-editing-fixedcontenteditor%})

@@ -8,16 +8,17 @@ published: True
 position: 2
 components: [pdfprocessing]
 ---
-<style> img[alt$="><"] { border: 1px solid lightgrey; } </style>
 
 # Using a TimeStamp Server
 
 |Minimum Version|Q4 2025|
 |----|----|
 
+<style> img[alt$="><"] { border: 1px solid lightgrey; } </style>
+
 The `TimeStampServer` class encapsulates the details needed to communicate with an external Timestamp Authority (TSA), including the endpoint URL, optional authentication credentials, and timeout for requests. Set the `TimeStampServer` through the [SignatureSettings]({%slug radpdfprocessing-features-digital-signature-getting-started%}#signature-settings).
 
-For a PAdES B-T signature, set `Settings.SignatureProfile` to `SignatureProfile.PAdESBaselineT` and configure `Settings.TimeStampServer` on the `Signature` instance before signing. See [PAdES profile details]({%slug radpdfprocessing-features-digital-signature-getting-started%}#pades-baseline-profiles).
+For PAdES B-T, B-LT, or B-LTA, configure `Settings.TimeStampServer` on the `Signature` instance before signing. See [profile requirements]({%slug radpdfprocessing-features-digital-signature-getting-started%}#pades-baseline-profiles).
 
 >note [PdfProcessing Add Digital Signature External Demo](https://demos.telerik.com/document-processing/pdfprocessing/external_digitally_sign_document)
 
@@ -35,6 +36,7 @@ The following example shows how to initialize a new instance of the `TimeStampSe
 
 ## See Also
 
+* [Archival Document Timestamp Renewal]({%slug radpdfprocessing-features-digital-signature-pdfstreamsigner%}#renewing-document-timestamps)
 * [Digital Signature Feature Overview]({%slug radpdfprocessing-features-digital-signature%})
 * [Signature Field]({%slug radpdfprocessing-model-interactive-forms-form-fields-signaturefield%})
 * [Multiple Digital Signatures Demo](https://demos.telerik.com/document-processing/pdfprocessing/multiple_digital_signatures)
